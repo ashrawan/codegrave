@@ -1,0 +1,48 @@
+{
+  "id": "ibm-simon",
+  "category": "phones",
+  "names": [
+    {
+      "name": "IBM Simon",
+      "from": "1994"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "A phone with a touchscreen, a calendar, email and apps, more than a decade before the iPhone. It is often called the first smartphone, though the word did not exist yet. It was heavy, the battery lasted about an hour, and it was on sale for only a few months.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1992",
+      "precision": "year",
+      "note": "IBM shows the design."
+    },
+    {
+      "type": "born",
+      "date": "1994",
+      "precision": "year",
+      "note": "The Simon goes on sale in the United States."
+    },
+    {
+      "type": "ended",
+      "date": "1995-02",
+      "precision": "month",
+      "note": "Sales end."
+    }
+  ],
+  "status": "dead",
+  "cause": "Sold poorly and was withdrawn after a few months.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: IBM Simon",
+      "url": "https://en.wikipedia.org/wiki/IBM_Simon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

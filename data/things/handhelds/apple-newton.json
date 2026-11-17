@@ -1,0 +1,42 @@
+{
+  "id": "apple-newton",
+  "category": "handhelds",
+  "names": [
+    {
+      "name": "Apple Newton",
+      "from": "1993-08-02"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's handheld organiser, for which the term “personal digital assistant” was coined. You wrote on its screen with a pen and it tried to read your handwriting, which at first it did badly enough to be mocked. Its ideas returned years later in the iPhone and iPad.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-08-02",
+      "precision": "day",
+      "note": "The first Newton MessagePad goes on sale."
+    },
+    {
+      "type": "ended",
+      "date": "1998-02-27",
+      "precision": "day",
+      "note": "Apple ends the Newton."
+    }
+  ],
+  "status": "dead",
+  "cause": "Cancelled by Apple as it cut back to a few products.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Apple Newton",
+      "url": "https://en.wikipedia.org/wiki/Apple_Newton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

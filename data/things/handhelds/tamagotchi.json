@@ -1,0 +1,35 @@
+{
+  "id": "tamagotchi",
+  "category": "handhelds",
+  "names": [
+    {
+      "name": "Tamagotchi",
+      "from": "1996"
+    }
+  ],
+  "maker": "Bandai",
+  "summary": "An egg-shaped toy with three buttons and a digital pet that had to be fed and cleaned or it would die. It was a worldwide craze in 1997, and schools banned it.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year",
+      "note": "Released in Japan; the rest of the world follows in 1997."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Tamagotchi",
+      "url": "https://en.wikipedia.org/wiki/Tamagotchi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

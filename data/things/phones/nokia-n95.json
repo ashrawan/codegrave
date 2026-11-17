@@ -1,0 +1,48 @@
+{
+  "id": "nokia-n95",
+  "category": "phones",
+  "names": [
+    {
+      "name": "Nokia N95",
+      "from": "2007-03"
+    }
+  ],
+  "maker": "Nokia",
+  "summary": "Nokia's do-everything phone: a good camera, GPS, Wi-Fi, music and the web in one sliding handset. It reached shops three months before the first iPhone and was, on paper, the better device.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2006-09",
+      "precision": "month",
+      "note": "Nokia announces the N95."
+    },
+    {
+      "type": "born",
+      "date": "2007-03",
+      "precision": "month",
+      "note": "It goes on sale."
+    },
+    {
+      "type": "ended",
+      "date": "2009",
+      "precision": "year",
+      "note": "Nokia discontinues the N95."
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by touchscreen smartphones.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Nokia N95",
+      "url": "https://en.wikipedia.org/wiki/Nokia_N95",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

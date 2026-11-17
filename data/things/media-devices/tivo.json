@@ -1,0 +1,42 @@
+{
+  "id": "tivo",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "TiVo",
+      "from": "1999-03-31"
+    }
+  ],
+  "maker": "TiVo Inc.",
+  "summary": "The box that let you pause live television, record a whole series with one button and skip the advertisements. For a while “to TiVo” a programme was a verb.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-03-31",
+      "precision": "day",
+      "note": "The first TiVo recorders ship."
+    },
+    {
+      "type": "ended",
+      "date": "2025-10-01",
+      "precision": "day",
+      "note": "The TiVo recorders are discontinued."
+    }
+  ],
+  "status": "dead",
+  "cause": "Streaming services replaced recording from broadcast television.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: TiVo",
+      "url": "https://en.wikipedia.org/wiki/TiVo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

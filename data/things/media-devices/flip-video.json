@@ -1,0 +1,49 @@
+{
+  "id": "flip-video",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "Flip Video",
+      "from": "2006-05-01"
+    }
+  ],
+  "maker": "Pure Digital Technologies, then Cisco",
+  "summary": "A pocket video camera with one red button and a USB plug that flipped out of its side. It made shooting and sharing video simple just before phones did the same thing better.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-05-01",
+      "precision": "day",
+      "note": "First sold as the Pure Digital Point & Shoot camcorder."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2009-03",
+      "precision": "month",
+      "label": "Cisco",
+      "note": "Cisco buys Pure Digital."
+    },
+    {
+      "type": "ended",
+      "date": "2011-04-12",
+      "precision": "day",
+      "note": "Cisco announces that it is closing the Flip business."
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed by Cisco as phone cameras took over.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Flip Video",
+      "url": "https://en.wikipedia.org/wiki/Flip_Video",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

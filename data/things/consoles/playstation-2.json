@@ -1,0 +1,42 @@
+{
+  "id": "playstation-2",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "PlayStation 2",
+      "from": "2000-03-04"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "One of the best-selling video game consoles ever made. It also played DVD films, which for many families made it their first DVD player, and it stayed in production for almost thirteen years.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-03-04",
+      "precision": "day",
+      "note": "Released in Japan."
+    },
+    {
+      "type": "ended",
+      "date": "2013-01-04",
+      "precision": "day",
+      "note": "Sony ends production."
+    }
+  ],
+  "status": "dead",
+  "cause": "Discontinued after almost thirteen years, two generations after its launch.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: PlayStation 2",
+      "url": "https://en.wikipedia.org/wiki/PlayStation_2",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

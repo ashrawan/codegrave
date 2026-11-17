@@ -1,0 +1,42 @@
+{
+  "id": "nintendo-64",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Nintendo 64",
+      "from": "1996-06-23"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's console for 3D games, named for its 64-bit processor. Its controller made the analogue stick a standard part of game controllers.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-06-23",
+      "precision": "day",
+      "note": "Released in Japan."
+    },
+    {
+      "type": "ended",
+      "date": "2002",
+      "precision": "year",
+      "note": "Nintendo discontinues the console."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the GameCube.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Nintendo 64",
+      "url": "https://en.wikipedia.org/wiki/Nintendo_64",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

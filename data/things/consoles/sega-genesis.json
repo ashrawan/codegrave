@@ -1,0 +1,53 @@
+{
+  "id": "sega-genesis",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Mega Drive",
+      "from": "1988-10-29"
+    },
+    {
+      "name": "Sega Genesis",
+      "from": "1989-08"
+    }
+  ],
+  "maker": "Sega",
+  "summary": "Sega's 16-bit console, called the Mega Drive outside North America, and the home of Sonic the Hedgehog. Its rivalry with the Super Nintendo is the original “console war”.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-10-29",
+      "precision": "day",
+      "note": "Released in Japan as the Mega Drive."
+    },
+    {
+      "type": "milestone",
+      "date": "1989-08",
+      "precision": "month",
+      "label": "Genesis",
+      "note": "Released in North America as the Genesis."
+    },
+    {
+      "type": "ended",
+      "date": "1997",
+      "precision": "year",
+      "note": "Sega stops making the console."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Sega’s later consoles.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Sega Genesis",
+      "url": "https://en.wikipedia.org/wiki/Sega_Genesis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

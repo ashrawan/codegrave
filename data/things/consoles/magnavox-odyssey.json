@@ -1,0 +1,42 @@
+{
+  "id": "magnavox-odyssey",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Magnavox Odyssey",
+      "from": "1972-09"
+    }
+  ],
+  "maker": "Magnavox (designed at Sanders Associates)",
+  "summary": "The first video game console for the home. It could draw three square dots and a line, so players stuck plastic overlays on the television screen to make a tennis court or a haunted house.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-09",
+      "precision": "month",
+      "note": "Released in the United States."
+    },
+    {
+      "type": "ended",
+      "date": "1975",
+      "precision": "year",
+      "note": "Magnavox discontinues it."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by newer Odyssey models.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Magnavox Odyssey",
+      "url": "https://en.wikipedia.org/wiki/Magnavox_Odyssey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
