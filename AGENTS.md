@@ -103,8 +103,11 @@ How the page is put together:
 - The panel list is grouped "Community views" (ranked: the order of
   `featured` in `data/editors-choice.json`, then by name), then "Classical
   views" (the domain views and Everything, by name; `tabOf()` returns `featured` for them). Each group shows
-  three rows and scrolls the rest (`GROUP_ROWS`); both fold (`openGroups`). "Propose a view" at the end of Community views links to the
-  README's guide (`PROPOSE`); views arrive as pull requests, not from a form.
+  three rows and scrolls the rest (`GROUP_ROWS`); both fold (`openGroups`). "Propose a view" at the end of Community views opens the
+  "Propose a view" issue form with the current link filled in; an editor or
+  the proposer then adds the view file by pull request. When the top search
+  matches no thing in the data, it offers "Suggest …", which opens the
+  "New thing" form with the name filled in.
   The bookmark icon saves the timeline as "Your view" in
   this browser (`cg-mine`, one slot; saving again replaces it), and the
   page opens on it when the link names no views.

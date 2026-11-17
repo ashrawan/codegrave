@@ -8,7 +8,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
 
   const REPO = 'https://github.com/ashrawan/codegrave';
   // How to propose a view: build it, then open a pull request with the file and a screenshot.
-  const PROPOSE = REPO + '#propose-a-view';
   const MAX_VIEWS = 8;
   const LEVELS = [
     { name: 'Landmarks', pct: 10 }, { name: 'Notable', pct: 30 },
@@ -605,6 +604,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
         if (v) hits.push({ t, away: v });
       }
     }
+    // Nothing in the data has this name: offer to suggest it, so a failed
+    // search tells the editors what people came looking for.
+    if (q.length > 1 && !/^\d+$/.test(q) && !things.some((t) => t.search.some((n) => n.includes(q)))) hits.push({ suggest: $('q').value.trim() });
     hit = hits.length ? 0 : -1;
     drawHits(q);
   }
@@ -617,6 +619,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     box.innerHTML = !hits.length ? '<li class="none" role="presentation">Nothing matches. Try a name, an event or a year.</li>'
       : hits.map((h, i) => {
         let main, sub, cls = 'k-year', st = '', pre = '';
+        if (h.suggest) {
+          return `<li class="sep" role="presentation">Not here yet</li><li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b>Suggest \u201c${esc(h.suggest)}\u201d</b><small>Tell us about it on GitHub; no code needed</small></span><span class="add">${ICON.plus}</span></li>`;
+        }
         if (h.away) {
           if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
           return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b>${mark(h.t.name, q)}</b><small>In ${esc(h.away.name)} · ${yearOf(h.t.bornEv.date)}${h.t.endEv ? '–' + yearOf(h.t.endEv.date) : ' to today'}</small></span><span class="add">${ICON.plus}</span></li>`;
@@ -631,6 +636,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   }
   function goHit(i) {
     const h = hits[i];
+    if (h && h.suggest) return void window.open(`${REPO}/issues/new?template=new-thing.yml&title=${encodeURIComponent('Add: ' + h.suggest)}&name=${encodeURIComponent(h.suggest)}`, '_blank', 'noopener');
     if (!h) return;
     $('q').value = ''; drawHits(''); $('q').blur();
     if (h.year) return flashYear(h.year);
@@ -799,7 +805,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       }
       let name, sub, box = '', attrs = '';
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(id)?.name).filter(Boolean).join(', '); box = `<span class="ck go">${ICON.save}</span>`; }
-      else if (f.propose) { name = 'Propose a view'; sub = 'How to build one and send it on GitHub'; box = `<span class="ck go">${ICON.plus}</span>`; }
+      else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; box = `<span class="ck go">${ICON.plus}</span>`; }
       else if (f.t) { name = mark(f.t.name, q); sub = `${esc(f.t.cat.name)} · ${yearOf(f.t.bornEv.date)}${f.t.endEv ? '–' + yearOf(f.t.endEv.date) : ' to today'}`; box = `<span class="ck go">${ICON.dot}</span>`; }
       else {
         const v = f.v, on = state.views.includes(v.id);
@@ -817,7 +823,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     if (!f) return;
     if (f.head) { if (openGroups.has(f.kind)) openGroups.delete(f.kind); else openGroups.add(f.kind); active = i; return runSearch(); }
     if (f.mine) return loadMine(f.mine);
-    if (f.propose) return void window.open(PROPOSE, '_blank', 'noopener');
+    if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
     if (f.t) { $('vq').value = ''; state.pinned.add(f.t.id); runSearch(); return openThing(f.t.id, { scroll: true }); }
     if (state.views.includes(f.v.id)) { removeView(f.v.id); return changed(); }
     if (addView(f.v.id)) changed();
