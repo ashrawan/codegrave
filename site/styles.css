@@ -342,17 +342,28 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 .s-born2 { fill: var(--surf); stroke: var(--line); stroke-width: 1.5; }
 .s-fill2 { fill: var(--line); }
 .s-dim2 { stroke: var(--faint); }
-#scrim { position: fixed; inset: 52px 0 0 0; z-index: 15; background: rgba(0, 0, 0, .5); }
 
+/* Tablets: a narrower panel, still beside the timeline. */
+@media (max-width: 1100px) { :root { --side: 340px; } }
 @media (max-width: 860px) {
-  :root { --side: min(100vw, 400px); }
-  body.side-open #stage { margin-right: 0; }
-  body.side-open #axisbar { right: 0; }
   #info { right: 12px; left: 12px; width: auto; z-index: 26; }
   .top { padding-left: 16px; }
   .logo span { display: none; }
   .tsearch { left: 56px; right: 130px; width: auto; transform: none; }
   .tsearch kbd { display: none; }
+}
+/* Phones: the panel is a sheet over the lower half. The timeline and its axis
+   move up above it, so both stay in sight and can still be used. */
+@media (max-width: 699px) {
+  :root { --sheet: 50vh; --sheet: 50dvh; }
+  #side { top: auto; left: 0; width: auto; height: var(--sheet); border-left: 0; border-top: 1px solid var(--rule2); border-radius: 14px 14px 0 0; box-shadow: 0 -12px 32px rgba(0, 0, 0, .18); }
+  body.side-open #stage { margin-right: 0; }
+  body.side-open #axisbar { right: 0; bottom: var(--sheet); }
+  body.side-open { padding-bottom: calc(var(--sheet) + 48px); }
+  body.side-open #rguide { right: 16px; }
+  #p-views > #vlist { height: 24vh; }
+  .filters { position: static; margin-top: 16px !important; }
+  .pane-foot { padding-bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 #pills > .fine { padding: 9px 10px; }

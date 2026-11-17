@@ -69,7 +69,10 @@ is `onScroll()`, which only moves names so they stay in sight.
 How the page is put together:
 
 - The timeline fills the page. The panel is hidden until its button or a
-  line is clicked. It has three panes: views, the history of one thing, and
+  line is clicked. It never covers the timeline: on wide screens and tablets
+  it sits beside it and the timeline narrows; on phones (under 700 px) it is a
+  sheet over the lower half and the timeline and axis move up above it
+  (`sheetH()`). It has three panes: views, the history of one thing, and
   one era.
 - `state.views` is the list of views on the timeline. Each owns a block of
   rows (a section) under its coloured heading line. A thing in two views is

@@ -35,6 +35,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   const EVENT_TITLES = { released: 'Release', changed_hands: 'Changed hands', milestone: 'Milestone', deprecated: 'End announced' };
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const TOP = 52, AXIS = 48;   // heights of the fixed top bar and the axis along the bottom
+  // On a phone the open panel is a sheet over the lower half; what is drawn fits above it.
+  const PHONE = '(max-width: 699px)';
+  const sheetH = () => (!$('side').hidden && matchMedia(PHONE).matches ? $('side').offsetHeight : 0);
 
   const today = new Date();
   const NOW_YEAR = today.getFullYear();
@@ -329,7 +332,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       c.rows = c.ordered.filter((t) => keep.has(t)); c.used = used;
     };
     if (state.fit) {
-      const room = innerHeight - TOP - AXIS - (eraH + 6) - (narrow ? 48 : 12) - secs.reduce((n, c) => n + c.head + 24, 0);
+      const room = innerHeight - sheetH() - TOP - AXIS - (eraH + 6) - (narrow ? 48 : 12) - secs.reduce((n, c) => n + c.head + 24, 0);
       let pool = room, open = [];
       for (const c of secs) {
         const want = state.sizes.get(c.g.id);
@@ -375,7 +378,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       grp.end = y + 6;
       y += 18;
     }
-    const height = Math.max(Math.round(y + 12), innerHeight - TOP - AXIS);
+    const height = Math.max(Math.round(y + 12), innerHeight - sheetH() - TOP - AXIS);
     L = { W, SW, narrow, height, ppy, tMin, tMax, fitMin, fitMax, xOf, tOf, newest, shown, groups, eras, eraH,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), total: groupsOf.size };
     return L;
@@ -553,7 +556,8 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   function scrollToThing(id) {
     const p = L && L.at.get(id);
     if (!p) return;
-    const top = p.y < scrollY + 120 || p.y > scrollY + innerHeight - AXIS - 120 ? Math.max(0, p.y - innerHeight * 0.35) : scrollY;
+    const seen = innerHeight - sheetH() - TOP - AXIS;
+    const top = p.y < scrollY + 60 || p.y > scrollY + seen - 60 ? Math.max(0, p.y - seen * 0.4) : scrollY;
     const left = L.W > L.SW && (p.xL < scrollX || p.xL > scrollX + L.SW - 120) ? Math.max(0, p.xL - 80) : scrollX;
     scrollTo({ top, left, behavior: 'smooth' });
   }
@@ -563,8 +567,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const p = L && L.at.get(id);
     if (!p) return;
     const t = clamp(at, p.t.lead ?? p.t.born, p.t.end ?? NOW), x = L.xOf(t);
-    if (matchMedia('(max-width: 860px)').matches) showSide(false);
-    scrollTo({ top: Math.max(0, p.y - innerHeight * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
+    scrollTo({ top: Math.max(0, p.y - (innerHeight - sheetH() - TOP - AXIS) * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
     $('lines').querySelector('.flash')?.remove();
     $('lines').insertAdjacentHTML('beforeend', `<circle class="flash" cx="${x}" cy="${p.y}" r="4"/>`);
   }
@@ -669,7 +672,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     $('side').hidden = !on;
     document.body.classList.toggle('side-open', on);
     $('toggle-side').setAttribute('aria-expanded', on);
-    $('scrim').hidden = !(on && matchMedia('(max-width: 860px)').matches);
     if (!on) $('info').hidden = true;
     if (was !== on && state.views.length) render();
   }
@@ -979,7 +981,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
 
   function startPlay(fromYear) {
     if (!L) return;
-    if (matchMedia('(max-width: 860px)').matches) showSide(false);
+    if (matchMedia(PHONE).matches) showSide(false);
     if (fromYear != null) play.t = clamp(Number(fromYear), L.tMin, L.tMax);
     else if (atEnd()) play.t = L.tMin;
     play.on = true;
@@ -1052,7 +1054,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       clearTimeout(rt);
       rt = setTimeout(() => {
         if (innerWidth !== lastW || Math.abs(innerHeight - lastH) > 120) { lastW = innerWidth; lastH = innerHeight; if (state.views.length) render(); }
-        $('scrim').hidden = !(!$('side').hidden && matchMedia('(max-width: 860px)').matches);
       }, 150);
     });
 
@@ -1123,7 +1124,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       if (zoom) {
         const [a, b] = zoom.dataset.zoom.split('-').map(Number);
         state.span = [a, b];
-        if (matchMedia('(max-width: 860px)').matches) showSide(false);
+        if (matchMedia(PHONE).matches) showSide(false);
         return changed();
       }
       const playFrom = el('[data-play-from]');
@@ -1155,7 +1156,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       play.t = t >= L.tMax ? null : t; drawPlay();
     });
     $('reverse').addEventListener('click', () => { state.order = state.order === 'new' ? 'old' : 'new'; drawReverse(); changed(); });
-    $('scrim').addEventListener('click', () => showSide(false));
     $('info-btn').addEventListener('click', () => {
       const on = $('info').hidden;
       if (on) drawInfo();
