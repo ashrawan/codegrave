@@ -16,8 +16,8 @@ dates, sources, official links and images.
 
 <table>
   <tr>
-    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: two views as coloured sections with their own eras, and the history of Adobe Flash open in the side panel"></td>
-    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme, scrolled to the recent years"></td>
+    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: the five generations of computers drawn as eras, with the history of ENIAC open in the side panel"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: the history of AI, scrolled to the recent years"></td>
   </tr>
   <tr>
     <td align="center"><sub>Wide screen, light theme</sub></td>
