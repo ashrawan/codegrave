@@ -1,0 +1,35 @@
+{
+  "id": "alexnet",
+  "category": "ai",
+  "names": [
+    {
+      "name": "AlexNet",
+      "from": "2012-09-30"
+    }
+  ],
+  "maker": "University of Toronto (Alex Krizhevsky, Ilya Sutskever, Geoffrey Hinton)",
+  "summary": "The neural network that won the 2012 ImageNet picture-recognition contest by a wide margin. It showed that deep neural networks trained on graphics chips beat every other method, and it set off the deep learning boom that led to today's AI.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-09-30",
+      "precision": "day",
+      "note": "Entered in the ImageNet contest, which it wins with a top-5 error of 15.3%."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: AlexNet",
+      "url": "https://en.wikipedia.org/wiki/AlexNet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

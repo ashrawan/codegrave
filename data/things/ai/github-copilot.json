@@ -1,0 +1,35 @@
+{
+  "id": "github-copilot",
+  "category": "ai",
+  "names": [
+    {
+      "name": "GitHub Copilot",
+      "from": "2021-06-29"
+    }
+  ],
+  "maker": "GitHub and OpenAI",
+  "summary": "An AI assistant inside the code editor that suggests the next lines of a program as you type. It was the first AI coding tool to be widely used by working programmers.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-06-29",
+      "precision": "day",
+      "note": "GitHub announces Copilot as a technical preview."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: GitHub Copilot",
+      "url": "https://en.wikipedia.org/wiki/GitHub_Copilot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

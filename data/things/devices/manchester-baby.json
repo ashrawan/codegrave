@@ -1,0 +1,46 @@
+{
+  "id": "manchester-baby",
+  "category": "devices",
+  "names": [
+    {
+      "name": "Manchester Baby",
+      "from": "1948-06-21"
+    }
+  ],
+  "maker": "University of Manchester (Frederic Williams, Tom Kilburn, Geoff Tootill)",
+  "summary": "The first computer to run a program held in its own electronic memory, the way every computer has worked since. It was a small test machine, built to try out a new kind of memory, and was soon rebuilt into a larger, practical computer.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-06-21",
+      "precision": "day",
+      "note": "Runs its first program."
+    },
+    {
+      "type": "ended",
+      "date": "1949",
+      "precision": "circa",
+      "note": "By April 1949 its successor, the Manchester Mark 1, is working."
+    },
+    {
+      "type": "afterlife",
+      "note": "A working replica built in 1998 is at the Science and Industry Museum in Manchester."
+    }
+  ],
+  "status": "dead",
+  "cause": "A test machine, developed into the Manchester Mark 1.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Manchester Baby",
+      "url": "https://en.wikipedia.org/wiki/Manchester_Baby",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

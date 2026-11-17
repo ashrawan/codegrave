@@ -1,0 +1,56 @@
+{
+  "id": "ibm-watson",
+  "category": "ai",
+  "names": [
+    {
+      "name": "IBM Watson",
+      "from": "2011"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "IBM's question-answering computer, built to play the quiz show Jeopardy!, where it beat two of the show's greatest champions in 2011. IBM then tried to turn it into a business, above all in medicine, with disappointing results.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2005",
+      "precision": "year",
+      "note": "IBM Research takes up the idea of playing Jeopardy!"
+    },
+    {
+      "type": "born",
+      "date": "2011",
+      "precision": "year",
+      "note": "Wins at Jeopardy! against champions Ken Jennings and Brad Rutter."
+    },
+    {
+      "type": "milestone",
+      "date": "2014-01-09",
+      "precision": "day",
+      "label": "Business unit",
+      "note": "IBM creates a business unit around Watson."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2022",
+      "precision": "year",
+      "label": "Health sold",
+      "note": "IBM sells the Watson Health division."
+    }
+  ],
+  "status": "fading",
+  "note": "Most of its early applications were discontinued and its health division was sold in 2022.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: IBM Watson",
+      "url": "https://en.wikipedia.org/wiki/IBM_Watson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

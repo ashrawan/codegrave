@@ -1,0 +1,35 @@
+{
+  "id": "midjourney",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Midjourney",
+      "from": "2022-07-12"
+    }
+  ],
+  "maker": "Midjourney, Inc.",
+  "summary": "An image generator used by typing a description into a chat. Its painterly pictures spread across social media in 2022 and started a wide argument about AI and art.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-07-12",
+      "precision": "day",
+      "note": "Midjourney opens its public beta."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Midjourney",
+      "url": "https://en.wikipedia.org/wiki/Midjourney",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

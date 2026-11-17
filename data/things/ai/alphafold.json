@@ -1,0 +1,56 @@
+{
+  "id": "alphafold",
+  "category": "ai",
+  "names": [
+    {
+      "name": "AlphaFold",
+      "from": "2018-12"
+    }
+  ],
+  "maker": "DeepMind",
+  "summary": "DeepMind's program for predicting the 3D shape of a protein from its sequence, a problem biologists had worked on for fifty years. Its predictions for nearly every known protein are free for any scientist to use.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-12",
+      "precision": "month",
+      "note": "AlphaFold 1 comes first in the CASP13 protein-structure contest."
+    },
+    {
+      "type": "released",
+      "date": "2020-11",
+      "precision": "month",
+      "label": "AlphaFold 2",
+      "note": "AlphaFold 2 wins CASP14 with far more accurate predictions."
+    },
+    {
+      "type": "milestone",
+      "date": "2021-07-22",
+      "precision": "day",
+      "label": "Open database",
+      "note": "The AlphaFold Protein Structure Database opens, free to use."
+    },
+    {
+      "type": "released",
+      "date": "2024-05-08",
+      "precision": "day",
+      "label": "AlphaFold 3",
+      "note": "AlphaFold 3 is announced."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: AlphaFold",
+      "url": "https://en.wikipedia.org/wiki/AlphaFold",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

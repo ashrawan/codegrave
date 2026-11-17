@@ -1,0 +1,49 @@
+{
+  "id": "ibm-650",
+  "category": "devices",
+  "names": [
+    {
+      "name": "IBM 650",
+      "from": "1954"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "The first computer to be mass-produced: almost 2,000 were made, when earlier machines sold in ones and twos. It kept its memory on a spinning magnetic drum, and it was the most popular computer of the 1950s. Many universities got their first computer because of it.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954",
+      "precision": "year",
+      "note": "The first one is installed."
+    },
+    {
+      "type": "deprecated",
+      "date": "1962",
+      "precision": "year",
+      "label": "Last built",
+      "note": "IBM builds the last 650."
+    },
+    {
+      "type": "ended",
+      "date": "1969",
+      "precision": "year",
+      "note": "IBM withdraws support."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by transistor machines such as the IBM 1401; IBM ended support.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: IBM 650",
+      "url": "https://en.wikipedia.org/wiki/IBM_650",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

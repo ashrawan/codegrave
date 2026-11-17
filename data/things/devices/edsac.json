@@ -1,0 +1,42 @@
+{
+  "id": "edsac",
+  "category": "devices",
+  "names": [
+    {
+      "name": "EDSAC",
+      "from": "1949-05-06"
+    }
+  ],
+  "maker": "University of Cambridge Mathematical Laboratory (Maurice Wilkes)",
+  "summary": "One of the first stored-program computers, built at Cambridge to give the university's scientists a regular computing service. Its team wrote the first textbook on programming and built up a shared library of subroutines, habits that every programmer has followed since.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-05-06",
+      "precision": "day",
+      "note": "Runs its first programs."
+    },
+    {
+      "type": "ended",
+      "date": "1958-07-11",
+      "precision": "day",
+      "note": "Shut down after EDSAC 2 takes over its work."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by its successor, EDSAC 2.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: EDSAC",
+      "url": "https://en.wikipedia.org/wiki/EDSAC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

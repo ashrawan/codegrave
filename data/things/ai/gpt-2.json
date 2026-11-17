@@ -1,0 +1,42 @@
+{
+  "id": "gpt-2",
+  "category": "ai",
+  "names": [
+    {
+      "name": "GPT-2",
+      "from": "2019-02-14"
+    }
+  ],
+  "maker": "OpenAI",
+  "summary": "OpenAI's second language model, trained on eight million web pages. It wrote text good enough that OpenAI at first held back the full model, saying it could be misused. It is the direct ancestor of GPT-3 and ChatGPT, and its code and weights are still free to download.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-02-14",
+      "precision": "day",
+      "note": "OpenAI announces GPT-2 and releases a small version."
+    },
+    {
+      "type": "milestone",
+      "date": "2019-11-05",
+      "precision": "day",
+      "label": "Full release",
+      "note": "The full 1.5-billion-parameter model is released."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: GPT-2",
+      "url": "https://en.wikipedia.org/wiki/GPT-2",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

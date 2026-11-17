@@ -1,0 +1,56 @@
+{
+  "id": "cortana",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Cortana",
+      "from": "2014-04-02"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's voice assistant, named after a character in the Halo games. It was built into Windows Phone and then Windows 10, never caught up with its rivals, and was removed in stages in favour of Copilot.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-04-02",
+      "precision": "day",
+      "note": "Microsoft shows Cortana for Windows Phone."
+    },
+    {
+      "type": "milestone",
+      "date": "2021-03-31",
+      "precision": "day",
+      "label": "Phone apps end",
+      "note": "The Cortana apps for iOS and Android are shut down."
+    },
+    {
+      "type": "deprecated",
+      "date": "2023-06-02",
+      "precision": "day",
+      "label": "Notice",
+      "note": "Microsoft says the Cortana app on Windows will stop being supported."
+    },
+    {
+      "type": "ended",
+      "date": "2023",
+      "precision": "year",
+      "note": "Support for the Cortana app on Windows ends late in the year."
+    }
+  ],
+  "status": "dead",
+  "cause": "Dropped by Microsoft in favour of Copilot.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Cortana (virtual assistant)",
+      "url": "https://en.wikipedia.org/wiki/Cortana_(virtual_assistant)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

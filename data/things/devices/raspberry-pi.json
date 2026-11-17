@@ -1,0 +1,35 @@
+{
+  "id": "raspberry-pi",
+  "category": "devices",
+  "names": [
+    {
+      "name": "Raspberry Pi",
+      "from": "2012-02-29"
+    }
+  ],
+  "maker": "Raspberry Pi Foundation",
+  "summary": "A computer on a single small board, sold at about the price of a textbook. It was made to help schools teach computing, and became a favourite of hobbyists and of industry as well.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-02-29",
+      "precision": "day",
+      "note": "The first Raspberry Pi goes on sale."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Raspberry Pi",
+      "url": "https://en.wikipedia.org/wiki/Raspberry_Pi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,42 @@
+{
+  "id": "imac-g3",
+  "category": "devices",
+  "names": [
+    {
+      "name": "iMac G3",
+      "from": "1998-08-15"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "The colourful, see-through all-in-one computer that brought Apple back from the edge. It dropped the floppy disk drive, used USB, and was built to get people onto the internet quickly.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-08-15",
+      "precision": "day",
+      "note": "The iMac goes on sale."
+    },
+    {
+      "type": "ended",
+      "date": "2003-03",
+      "precision": "month",
+      "note": "Apple stops selling the iMac G3."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by flat-screen iMacs.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: IMac G3",
+      "url": "https://en.wikipedia.org/wiki/IMac_G3",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

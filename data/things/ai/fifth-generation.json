@@ -1,0 +1,42 @@
+{
+  "id": "fifth-generation",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Fifth Generation Computer Systems",
+      "from": "1982"
+    }
+  ],
+  "maker": "Japan’s Ministry of International Trade and Industry",
+  "summary": "Japan's ten-year national project to leap past the microprocessor and build a “fifth generation” of computers: massively parallel machines that would reason with logic and support artificial intelligence. It alarmed rival countries into funding their own AI programmes, but its machines found no market.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982",
+      "precision": "year",
+      "note": "The ten-year project is launched."
+    },
+    {
+      "type": "ended",
+      "date": "1992",
+      "precision": "circa",
+      "note": "The ten years run out."
+    }
+  ],
+  "status": "dead",
+  "cause": "Its ten years ended without a commercial success.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Fifth Generation Computer Systems",
+      "url": "https://en.wikipedia.org/wiki/Fifth_Generation_Computer_Systems",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
