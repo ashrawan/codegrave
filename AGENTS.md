@@ -99,8 +99,8 @@ How the page is put together:
   theme switch opens the repository. The panel's search
   finds views to add.
 - The panel list is grouped Featured (open) and Community (folded,
-  `openGroups`). Featured is every view by codegrave, the editors' picks
-  first, then the category views. "Propose a view" at the end of Community links to the
+  `openGroups`). Featured is the category views and Everything; Community
+  is every story view, codegrave's own included. "Propose a view" at the end of Community links to the
   README's guide (`PROPOSE`); views arrive as pull requests, not from a form.
   The bookmark icon saves the timeline as "Your view" in
   this browser (`cg-mine`, one slot; saving again replaces it), and the

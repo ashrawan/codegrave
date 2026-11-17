@@ -764,10 +764,10 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const i = q ? text.toLowerCase().indexOf(q) : -1;
     return i < 0 ? esc(text) : esc(text.slice(0, i)) + '<mark>' + esc(text.slice(i, i + q.length)) + '</mark>' + esc(text.slice(i + q.length));
   }
-  // Featured views are made by codegrave, the editors' picks first, then one
-  // view per category; community views come from anyone through a pull request.
+  // Featured: one view per category, and everything. Community: every view that
+  // tells a story, whoever made it, added through a pull request.
   function tabOf(v) {
-    return v.author && v.author !== 'codegrave' ? 'community' : 'featured';
+    return (v.tags || []).some((t) => t === 'category' || t === 'all') ? 'featured' : 'community';
   }
   function drawResults() {
     const q = $('vq').value.trim().toLowerCase();
