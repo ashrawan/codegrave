@@ -1,0 +1,91 @@
+{
+  "id": "rails",
+  "category": "frameworks",
+  "names": [
+    {
+      "name": "Ruby on Rails",
+      "from": "2004-07"
+    }
+  ],
+  "maker": "David Heinemeier Hansson (37signals)",
+  "summary": "The web framework David Heinemeier Hansson pulled out of the Basecamp app. Convention over configuration let small teams build sites fast, and it launched GitHub, Shopify and Twitter's first version.",
+  "website": "https://rubyonrails.org/",
+  "icon": {
+    "src": "icons/rubyonrails.svg",
+    "alt": "Ruby on Rails logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=rubyonrails"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/82/David_Heinemeier_Hansson.jpg",
+    "alt": "David Heinemeier Hansson, who created Ruby on Rails",
+    "credit": "James Duncan Davidson / O'Reilly Media",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:David_Heinemeier_Hansson.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-07",
+      "precision": "month",
+      "note": "Released as open source, extracted from Basecamp."
+    },
+    {
+      "type": "released",
+      "date": "2005-12-13",
+      "precision": "day",
+      "label": "1.0",
+      "note": "Rails 1.0 is released."
+    },
+    {
+      "type": "milestone",
+      "date": "2006-08",
+      "precision": "month",
+      "label": "In Mac OS X",
+      "note": "Apple announces it will ship Rails with Mac OS X Leopard."
+    },
+    {
+      "type": "released",
+      "date": "2010-08-29",
+      "precision": "day",
+      "label": "Rails 3",
+      "note": "Merges with the rival Merb framework."
+    },
+    {
+      "type": "released",
+      "date": "2016-06-30",
+      "precision": "day",
+      "label": "Rails 5",
+      "note": "Adds Action Cable and an API-only mode."
+    },
+    {
+      "type": "released",
+      "date": "2024-11-07",
+      "precision": "day",
+      "label": "Rails 8",
+      "note": "Built so apps can be deployed without a platform-as-a-service.",
+      "url": "https://rubyonrails.org/2024/11/7/rails-8-no-paas-required"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Ruby on Rails",
+      "url": "https://en.wikipedia.org/wiki/Ruby_on_Rails",
+      "kind": "secondary"
+    },
+    {
+      "title": "rubyonrails.org",
+      "url": "https://rubyonrails.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A view of the codegrave timeline",
+  "description": "One file per view at data/views/<id>.json. Rules: docs/VIEWS.md. scripts/build.mjs is the authority; this schema is for editor hints.",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "description",
+    "author",
+    "categories",
+    "level"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$",
+      "description": "Same as the file name. Never changes once merged."
+    },
+    "name": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "author": {
+      "type": "string",
+      "description": "A GitHub user name."
+    },
+    "tags": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      }
+    },
+    "categories": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      },
+      "description": "Category ids whose things the view holds. Empty means every category."
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 100
+    },
+    "year": {
+      "type": "integer",
+      "description": "The year to open on."
+    },
+    "order": {
+      "enum": [
+        "new",
+        "old"
+      ]
+    },
+    "things": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "Hand-picked thing ids. When present the view shows exactly these."
+    },
+    "checkpoints": {
+      "type": "array",
+      "description": "The view's own eras. They must not overlap.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "name",
+          "from",
+          "to"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 60
+          },
+          "from": {
+            "type": "integer"
+          },
+          "to": {
+            "type": "integer"
+          },
+          "note": {
+            "type": "string",
+            "maxLength": 400
+          }
+        }
+      }
+    }
+  }
+}

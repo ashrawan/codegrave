@@ -1,0 +1,95 @@
+{
+  "id": "swift",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Swift",
+      "from": "2014-09-09"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's replacement for Objective-C. Announced as a surprise at WWDC 2014, it became the main language for iPhone, iPad and Mac apps, and was open-sourced a year later.",
+  "website": "https://www.swift.org/",
+  "icon": {
+    "src": "icons/swift.svg",
+    "alt": "Swift logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=swift"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Chris_Lattner_at_FOSDEM_2011_%28colorized%2C_cropped%29.jpg",
+    "alt": "Chris Lattner, who started Swift",
+    "credit": "Waldyrious",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chris_Lattner_at_FOSDEM_2011_(colorized,_cropped).jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2014-06-02",
+      "precision": "day",
+      "note": "Announced at Apple’s WWDC as a beta for developers."
+    },
+    {
+      "type": "born",
+      "date": "2014-09-09",
+      "precision": "day",
+      "note": "Swift 1.0 ships with Xcode 6."
+    },
+    {
+      "type": "milestone",
+      "date": "2015-12-03",
+      "precision": "day",
+      "label": "Open source",
+      "note": "Apple releases Swift as open source under the Apache 2.0 licence.",
+      "url": "https://www.swift.org/"
+    },
+    {
+      "type": "released",
+      "date": "2016-09-13",
+      "precision": "day",
+      "label": "Swift 3",
+      "note": "A large release that reworks much of the syntax."
+    },
+    {
+      "type": "released",
+      "date": "2019-03-25",
+      "precision": "day",
+      "label": "Swift 5",
+      "note": "A stable binary interface lets the runtime ship inside Apple’s systems."
+    },
+    {
+      "type": "released",
+      "date": "2024-09-16",
+      "precision": "day",
+      "label": "Swift 6",
+      "note": "Adds compile-time checks against data races."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "objective-c"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Swift (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Swift_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "swift.org",
+      "url": "https://www.swift.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

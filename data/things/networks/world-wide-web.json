@@ -1,0 +1,76 @@
+{
+  "id": "world-wide-web",
+  "category": "networks",
+  "names": [
+    {
+      "name": "World Wide Web",
+      "from": "1991-08-06"
+    }
+  ],
+  "maker": "Tim Berners-Lee, CERN",
+  "summary": "Tim Berners-Lee's system of linked pages, built at CERN to share physics papers. CERN made it royalty-free in 1993, which let it spread to everyone, and it became how most people use the internet.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/The_world%E2%80%99s_first_web_server%2C_exhibited_at_CERN_in_Geneva._DSC03299.jpg/960px-The_world%E2%80%99s_first_web_server%2C_exhibited_at_CERN_in_Geneva._DSC03299.jpg",
+    "alt": "Tim Berners-Lee’s NeXT computer, the first web server, at CERN",
+    "credit": "Peter Arnold",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_world%E2%80%99s_first_web_server,_exhibited_at_CERN_in_Geneva._DSC03299.jpg"
+  },
+  "website": "https://www.w3.org/",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1989-03",
+      "precision": "month",
+      "note": "Tim Berners-Lee submits his proposal for an information system to CERN.",
+      "url": "https://www.w3.org/History/1989/proposal.html"
+    },
+    {
+      "type": "milestone",
+      "date": "1990",
+      "precision": "year",
+      "label": "First site",
+      "note": "By the end of 1990 the first browser and web server run at CERN."
+    },
+    {
+      "type": "born",
+      "date": "1991-08-06",
+      "precision": "day",
+      "note": "The project is announced publicly and opened to everyone."
+    },
+    {
+      "type": "milestone",
+      "date": "1993-04-30",
+      "precision": "day",
+      "label": "Royalty-free",
+      "note": "CERN puts the Web’s software in the public domain."
+    },
+    {
+      "type": "milestone",
+      "date": "1994",
+      "precision": "year",
+      "label": "W3C",
+      "note": "Berners-Lee founds the World Wide Web Consortium."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: World Wide Web",
+      "url": "https://en.wikipedia.org/wiki/World_Wide_Web",
+      "kind": "secondary"
+    },
+    {
+      "title": "CERN: The birth of the Web",
+      "url": "https://home.cern/science/computing/birth-web",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

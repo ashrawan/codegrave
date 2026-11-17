@@ -1,0 +1,105 @@
+{
+  "id": "objective-c",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Objective-C",
+      "from": "1984"
+    }
+  ],
+  "maker": "Brad Cox and Tom Love, then NeXT and Apple",
+  "summary": "C with Smalltalk-style messages, created by Brad Cox and Tom Love. NeXT made it the language of its system, and through NeXT it became the language of Mac OS X and the first iPhone apps, until Swift took over.",
+  "website": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/",
+  "icon": {
+    "src": "icons/objectivec-dv.svg",
+    "alt": "Objective-C logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/NeXTcube_computer_%281990%29_-_Computer_History_Museum.jpg/960px-NeXTcube_computer_%281990%29_-_Computer_History_Museum.jpg",
+    "alt": "A NeXTcube computer, whose software was written in Objective-C",
+    "credit": "Michael Hicks from Saint Paul, MN, USA",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:NeXTcube_computer_(1990)_-_Computer_History_Museum.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1984",
+      "precision": "year",
+      "note": "Brad Cox and Tom Love create Objective-C at their company, Productivity Products International."
+    },
+    {
+      "type": "changed_hands",
+      "date": "1988",
+      "precision": "year",
+      "label": "NeXT",
+      "note": "NeXT licenses Objective-C and builds its operating system on it.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/NEXT_Cube-IMG_7154.jpg/960px-NEXT_Cube-IMG_7154.jpg",
+        "alt": "A NeXT Cube computer",
+        "caption": "NeXT licensed Objective-C for its NeXTSTEP system.",
+        "credit": "Rama & Musée Bolo",
+        "licence": "CC BY-SA 2.0 fr",
+        "source": "https://commons.wikimedia.org/wiki/File:NEXT_Cube-IMG_7154.jpg"
+      }
+    },
+    {
+      "type": "changed_hands",
+      "date": "1996",
+      "precision": "year",
+      "label": "Apple",
+      "note": "Apple buys NeXT, and Objective-C becomes the language of Mac OS X."
+    },
+    {
+      "type": "released",
+      "date": "2007",
+      "precision": "year",
+      "label": "Objective-C 2.0",
+      "note": "Ships with Mac OS X 10.5, adding garbage collection and properties."
+    },
+    {
+      "type": "milestone",
+      "date": "2014",
+      "precision": "year",
+      "label": "Swift arrives",
+      "note": "Apple introduces Swift, which gradually replaces Objective-C."
+    }
+  ],
+  "status": "fading",
+  "note": "Still supported by Apple, but new Apple code is written in Swift.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "smalltalk"
+    },
+    {
+      "type": "influenced_by",
+      "to": "c"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "swift"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Objective-C",
+      "url": "https://en.wikipedia.org/wiki/Objective-C",
+      "kind": "secondary"
+    },
+    {
+      "title": "Apple: Programming with Objective-C",
+      "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

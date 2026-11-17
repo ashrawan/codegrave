@@ -1,0 +1,66 @@
+{
+  "id": "yui",
+  "category": "frameworks",
+  "names": [
+    {
+      "name": "YUI",
+      "from": "2006-02"
+    }
+  ],
+  "maker": "Yahoo!",
+  "summary": "Yahoo's User Interface library, one of the first big open-source JavaScript toolkits. It set early standards for widgets and loaders, then Yahoo stopped work on it as jQuery, Node.js and new frameworks took over.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2005",
+      "precision": "year",
+      "note": "Development begins inside Yahoo!."
+    },
+    {
+      "type": "born",
+      "date": "2006-02-13",
+      "precision": "day",
+      "note": "Released for public use."
+    },
+    {
+      "type": "released",
+      "date": "2009-09",
+      "precision": "month",
+      "label": "YUI 3",
+      "note": "A ground-up rebuild of the library."
+    },
+    {
+      "type": "ended",
+      "date": "2014-08-29",
+      "precision": "day",
+      "note": "Yahoo announces that active development has ended.",
+      "url": "https://yahooeng.tumblr.com/post/96098168666/important-announcement-regarding-yui"
+    },
+    {
+      "type": "afterlife",
+      "note": "One final release, 3.18.1, after the announcement.",
+      "until": "2014-10-22"
+    }
+  ],
+  "status": "dead",
+  "cause": "Yahoo stopped development as the industry moved to newer tools.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: YUI Library",
+      "url": "https://en.wikipedia.org/wiki/YUI_Library",
+      "kind": "secondary"
+    },
+    {
+      "title": "Yahoo Engineering: Important announcement regarding YUI",
+      "url": "https://yahooeng.tumblr.com/post/96098168666/important-announcement-regarding-yui",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

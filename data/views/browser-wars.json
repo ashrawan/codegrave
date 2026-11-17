@@ -1,0 +1,33 @@
+{
+  "id": "browser-wars",
+  "name": "The browser wars",
+  "description": "Netscape against Internet Explorer, and the languages that grew up around them.",
+  "author": "codegrave",
+  "tags": [
+    "browsers",
+    "web",
+    "1990s"
+  ],
+  "categories": [
+    "browsers",
+    "languages"
+  ],
+  "level": 60,
+  "year": 2001,
+  "checkpoints": [
+    {
+      "id": "first-war",
+      "name": "The first browser war",
+      "from": 1995,
+      "to": 2001,
+      "note": "Internet Explorer arrives in August 1995 and, bundled with Windows, overtakes Netscape. By the time Internet Explorer 6 ships in 2001 the war is over."
+    },
+    {
+      "id": "second-war",
+      "name": "The second browser war",
+      "from": 2004,
+      "to": 2015,
+      "note": "Firefox 1.0 (2004) and then Chrome (2008) win users back from a stalled Internet Explorer, until Microsoft replaces it with Edge in Windows 10 in 2015."
+    }
+  ]
+}

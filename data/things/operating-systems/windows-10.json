@@ -1,0 +1,81 @@
+{
+  "id": "windows-10",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows 10",
+      "from": "2015-07-29"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "The Windows offered as a free upgrade and run as a service with updates twice a year. It ran on more than a billion devices, and many were still using it when support ended because Windows 11 needed newer hardware.",
+  "icon": {
+    "src": "icons/windows8-dv.svg",
+    "alt": "Windows 10 logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/%E3%83%89%E3%82%B9%E3%83%91%E3%83%A9_%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97_Windows_10_DSP%E7%89%88_%E7%99%BA%E5%A3%B2%E8%A8%98%E5%BF%B5%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88_01_%2820760022526%29.jpg/960px-%E3%83%89%E3%82%B9%E3%83%91%E3%83%A9_%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97_Windows_10_DSP%E7%89%88_%E7%99%BA%E5%A3%B2%E8%A8%98%E5%BF%B5%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88_01_%2820760022526%29.jpg",
+    "alt": "Windows 10 launch night at a shop in Akihabara, Tokyo",
+    "credit": "Ryo FUKAsawa from Tokyo, Japan",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%E3%83%89%E3%82%B9%E3%83%91%E3%83%A9_%E7%A7%8B%E8%91%89%E5%8E%9F%E6%9C%AC%E5%BA%97_Windows_10_DSP%E7%89%88_%E7%99%BA%E5%A3%B2%E8%A8%98%E5%BF%B5%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88_01_(20760022526).jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2014-09-30",
+      "precision": "day",
+      "note": "Microsoft announces Windows 10."
+    },
+    {
+      "type": "born",
+      "date": "2015-07-29",
+      "precision": "day",
+      "note": "Released, and offered free to users of Windows 7 and 8.1."
+    },
+    {
+      "type": "milestone",
+      "date": "2021",
+      "precision": "year",
+      "label": "Windows 11",
+      "note": "Microsoft announces Windows 11 as its successor on newer hardware."
+    },
+    {
+      "type": "ended",
+      "date": "2025-10-14",
+      "precision": "day",
+      "note": "Support ends for the Home and Pro editions.",
+      "url": "https://learn.microsoft.com/lifecycle/products/windows-10-home-and-pro"
+    },
+    {
+      "type": "afterlife",
+      "note": "Paid Extended Security Updates continue, and the long-term LTSC editions are supported until January 2032.",
+      "until": "2032-01-13",
+      "url": "https://learn.microsoft.com/lifecycle/products/windows-10-home-and-pro"
+    }
+  ],
+  "status": "dead",
+  "cause": "Reached the end of free support; Windows 11 replaces it.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Windows 10",
+      "url": "https://en.wikipedia.org/wiki/Windows_10",
+      "kind": "secondary"
+    },
+    {
+      "title": "Microsoft lifecycle: Windows 10 Home and Pro",
+      "url": "https://learn.microsoft.com/lifecycle/products/windows-10-home-and-pro",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

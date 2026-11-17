@@ -1,0 +1,87 @@
+{
+  "id": "iphone-os",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "iPhone OS",
+      "from": "2007-06-29"
+    },
+    {
+      "name": "iOS",
+      "from": "2010-06"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "The iPhone's operating system, a version of Mac OS X built for touch. Opening it to outside apps in 2008 created the app economy; it was renamed iOS in 2010 and also runs, in versions of its own, on the iPad, Watch and TV.",
+  "website": "https://www.apple.com/ios/",
+  "icon": {
+    "src": "icons/ios.svg",
+    "alt": "iOS logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=ios"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Apple_iPhone_2G_8GB_%2816%29.jpg/960px-Apple_iPhone_2G_8GB_%2816%29.jpg",
+    "alt": "An original iPhone running iPhone OS",
+    "credit": "Sevela.p",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_iPhone_2G_8GB_(16).jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-06-29",
+      "precision": "day",
+      "note": "Ships on the first iPhone."
+    },
+    {
+      "type": "milestone",
+      "date": "2008",
+      "precision": "year",
+      "label": "App Store",
+      "note": "A software kit for developers and the App Store open the iPhone to outside apps."
+    },
+    {
+      "type": "released",
+      "date": "2013",
+      "precision": "year",
+      "label": "iOS 7",
+      "note": "A flat redesign of the whole interface."
+    },
+    {
+      "type": "milestone",
+      "date": "2019",
+      "precision": "year",
+      "label": "iPadOS",
+      "note": "The iPad gets its own version, iPadOS."
+    },
+    {
+      "type": "released",
+      "date": "2025-06-09",
+      "precision": "day",
+      "label": "iOS 26",
+      "note": "Version numbers switch to the year."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: IOS",
+      "url": "https://en.wikipedia.org/wiki/IOS",
+      "kind": "secondary"
+    },
+    {
+      "title": "apple.com/ios",
+      "url": "https://www.apple.com/ios/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

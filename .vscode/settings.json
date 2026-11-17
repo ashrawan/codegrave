@@ -1,0 +1,6 @@
+{
+  "json.schemas": [
+    { "fileMatch": ["data/things/**/*.json"], "url": "./schema/thing.schema.json" },
+    { "fileMatch": ["data/views/**/*.json"], "url": "./schema/view.schema.json" }
+  ]
+}

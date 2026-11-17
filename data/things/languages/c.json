@@ -1,0 +1,102 @@
+{
+  "id": "c",
+  "category": "languages",
+  "names": [
+    {
+      "name": "C",
+      "from": "1972"
+    }
+  ],
+  "maker": "Dennis Ritchie, Bell Labs",
+  "summary": "A small, fast systems language written to build Unix. Nearly every operating system, database and language runtime still rests on C, and most later languages borrowed its syntax.",
+  "website": "https://www.open-std.org/jtc1/sc22/wg14/",
+  "icon": {
+    "src": "icons/c.svg",
+    "alt": "C logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=c"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Hello_World_Brian_Kernighan_1978.jpg/960px-Hello_World_Brian_Kernighan_1978.jpg",
+    "alt": "Brian Kernighan’s handwritten “hello, world” in C",
+    "credit": "Brian Kernighan",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hello_World_Brian_Kernighan_1978.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1972",
+      "precision": "year",
+      "note": "Dennis Ritchie creates C at Bell Labs as a successor to the B language."
+    },
+    {
+      "type": "milestone",
+      "date": "1973-11",
+      "precision": "month",
+      "label": "Unix in C",
+      "note": "Version 4 Unix ships with its kernel largely rewritten in C."
+    },
+    {
+      "type": "milestone",
+      "date": "1978",
+      "precision": "year",
+      "label": "K&R book",
+      "note": "Kernighan and Ritchie publish \"The C Programming Language\", the informal standard for a decade."
+    },
+    {
+      "type": "released",
+      "date": "1989",
+      "precision": "year",
+      "label": "ANSI C",
+      "note": "ANSI ratifies the first standard, X3.159-1989, known as C89."
+    },
+    {
+      "type": "released",
+      "date": "1999",
+      "precision": "year",
+      "label": "C99",
+      "note": "C99 adds inline functions and variable-length arrays."
+    },
+    {
+      "type": "released",
+      "date": "2011-12",
+      "precision": "month",
+      "label": "C11",
+      "note": "C11 adds threads and atomic operations."
+    },
+    {
+      "type": "released",
+      "date": "2024-10",
+      "precision": "month",
+      "label": "C23",
+      "note": "C23 adds new keywords and type inference with auto."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "algol"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: C (programming language)",
+      "url": "https://en.wikipedia.org/wiki/C_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "ISO C working group (WG14)",
+      "url": "https://www.open-std.org/jtc1/sc22/wg14/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

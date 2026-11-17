@@ -1,0 +1,81 @@
+{
+  "id": "java-applets",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "Java applets",
+      "from": "1995-05-23"
+    }
+  ],
+  "maker": "Sun Microsystems, then Oracle",
+  "summary": "Small Java programs that ran inside a web page, launched with Java in 1995. They promised rich apps in the browser years before JavaScript could deliver, but were slow to start and a constant security risk, and browsers stopped running them.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/25/Java_applet.png",
+    "alt": "A Java applet running in a web page",
+    "credit": "Audrius Meskauskas",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Java_applet.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-05-23",
+      "precision": "day",
+      "note": "Introduced with the first release of Java."
+    },
+    {
+      "type": "milestone",
+      "date": "2013",
+      "precision": "year",
+      "label": "Plug-ins go",
+      "note": "Major browsers begin removing the plug-in system applets need."
+    },
+    {
+      "type": "deprecated",
+      "date": "2017-09-21",
+      "precision": "day",
+      "label": "Deprecated",
+      "note": "Java 9 deprecates the applet API.",
+      "url": "https://openjdk.org/jeps/289"
+    },
+    {
+      "type": "ended",
+      "date": "2018-09",
+      "precision": "month",
+      "note": "Java 11 removes the appletviewer tool, so the JDK can no longer run applets.",
+      "url": "https://openjdk.org/jeps/504"
+    },
+    {
+      "type": "afterlife",
+      "note": "The unused Applet API stays in Java until JDK 26 removes it.",
+      "until": "2026-03-17",
+      "url": "https://openjdk.org/jeps/504"
+    }
+  ],
+  "status": "dead",
+  "cause": "Browsers dropped plug-ins, and the applet launcher was removed from Java.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "version_of",
+      "to": "java"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Java applet",
+      "url": "https://en.wikipedia.org/wiki/Java_applet",
+      "kind": "secondary"
+    },
+    {
+      "title": "OpenJDK JEP 504: Remove the Applet API",
+      "url": "https://openjdk.org/jeps/504",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

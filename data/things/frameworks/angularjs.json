@@ -1,0 +1,76 @@
+{
+  "id": "angularjs",
+  "category": "frameworks",
+  "names": [
+    {
+      "name": "AngularJS",
+      "from": "2010-10-20"
+    }
+  ],
+  "maker": "Google (Miško Hevery)",
+  "summary": "Google's first big JavaScript framework, which made single-page web apps mainstream with two-way data binding. Google rewrote it from scratch as Angular, kept the original on long-term support, and ended it at the close of 2021.",
+  "website": "https://angularjs.org/",
+  "icon": {
+    "src": "icons/angularjs-dv.svg",
+    "alt": "AngularJS logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-10-20",
+      "precision": "day",
+      "note": "AngularJS is first released."
+    },
+    {
+      "type": "milestone",
+      "date": "2014-01",
+      "precision": "month",
+      "label": "Rewrite news",
+      "note": "Google announces Angular 2, a rewrite that will not be compatible."
+    },
+    {
+      "type": "deprecated",
+      "date": "2018-06-30",
+      "precision": "day",
+      "label": "LTS begins",
+      "note": "Active development stops and version 1.7 moves to long-term support.",
+      "url": "https://blog.angular.dev/stable-angularjs-and-long-term-support-7e077635ee9c"
+    },
+    {
+      "type": "ended",
+      "date": "2021-12-31",
+      "precision": "day",
+      "note": "Long-term support ends; Google no longer fixes security or browser issues.",
+      "url": "https://docs.angularjs.org/misc/version-support-status"
+    }
+  ],
+  "status": "dead",
+  "cause": "Rewritten from scratch as Angular; the original reached end of support.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "angular"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: AngularJS",
+      "url": "https://en.wikipedia.org/wiki/AngularJS",
+      "kind": "secondary"
+    },
+    {
+      "title": "AngularJS version support status",
+      "url": "https://docs.angularjs.org/misc/version-support-status",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

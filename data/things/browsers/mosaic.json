@@ -1,0 +1,69 @@
+{
+  "id": "mosaic",
+  "category": "browsers",
+  "names": [
+    {
+      "name": "NCSA Mosaic",
+      "from": "1993-01-23"
+    }
+  ],
+  "maker": "NCSA, University of Illinois (Marc Andreessen, Eric Bina)",
+  "summary": "The browser from the University of Illinois that showed images next to text and made the web popular. Its team went on to found Netscape, and Microsoft built Internet Explorer on licensed Mosaic code.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/NCSA_Mosaic_Browser_Screenshot.png",
+    "alt": "NCSA Mosaic for X showing a web page",
+    "credit": "Charles Severance",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:NCSA_Mosaic_Browser_Screenshot.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1992",
+      "precision": "year",
+      "note": "Development starts at NCSA."
+    },
+    {
+      "type": "born",
+      "date": "1993-01-23",
+      "precision": "day",
+      "note": "The first release, for Unix with the X Window System."
+    },
+    {
+      "type": "released",
+      "date": "1993-09",
+      "precision": "month",
+      "label": "Windows and Mac",
+      "note": "Versions for Windows and the Macintosh."
+    },
+    {
+      "type": "changed_hands",
+      "date": "1995",
+      "precision": "year",
+      "label": "Spyglass deal",
+      "note": "Microsoft licenses Spyglass Mosaic to create Internet Explorer."
+    },
+    {
+      "type": "ended",
+      "date": "1997-01-07",
+      "precision": "day",
+      "note": "The final release, 3.0; NCSA ends development."
+    }
+  ],
+  "status": "dead",
+  "cause": "Outpaced by Netscape and Internet Explorer, both built by or on the work of its own team.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Mosaic (web browser)",
+      "url": "https://en.wikipedia.org/wiki/Mosaic_(web_browser)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,34 @@
+name: New thing
+description: Something is missing from the timeline.
+title: "Add: "
+labels: ["data", "new thing"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      description: For example languages, browsers, frameworks, devices, operating-systems. The list is in data/categories.json.
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs
+      description: What it was, and why it matters in the history of computing.
+    validations:
+      required: true
+  - type: textarea
+    id: dates
+    attributes:
+      label: Key dates and sources
+      description: First public release, official end if any, and links that back them up.
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Adding it yourself?
+      options:
+        - label: I would like to open the pull request for this.

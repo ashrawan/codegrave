@@ -1,0 +1,84 @@
+{
+  "id": "safari",
+  "category": "browsers",
+  "names": [
+    {
+      "name": "Safari",
+      "from": "2003-01-07"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's browser, built on the open-source WebKit engine. It became the browser of the iPhone, which made it the second most used browser in the world, and every iPhone browser must use its engine.",
+  "website": "https://www.apple.com/safari/",
+  "icon": {
+    "src": "icons/safari.svg",
+    "alt": "Safari logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=safari"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Safari_12_on_Mojave.png/960px-Safari_12_on_Mojave.png",
+    "alt": "Safari 12 on macOS Mojave in dark mode",
+    "credit": "Apple Inc.",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Safari_12_on_Mojave.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-01-07",
+      "precision": "day",
+      "note": "Steve Jobs announces Safari at Macworld and a beta is released the same day."
+    },
+    {
+      "type": "released",
+      "date": "2003-06-23",
+      "precision": "day",
+      "label": "1.0",
+      "note": "Safari 1.0 is released."
+    },
+    {
+      "type": "milestone",
+      "date": "2005-06",
+      "precision": "month",
+      "label": "WebKit open",
+      "note": "Apple releases its WebKit engine as open source.",
+      "url": "https://webkit.org/"
+    },
+    {
+      "type": "milestone",
+      "date": "2007-06-29",
+      "precision": "day",
+      "label": "On iPhone",
+      "note": "Ships as the browser of the first iPhone."
+    },
+    {
+      "type": "milestone",
+      "date": "2012",
+      "precision": "year",
+      "label": "Windows ends",
+      "note": "The Windows version stops at 5.1.7."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Safari (web browser)",
+      "url": "https://en.wikipedia.org/wiki/Safari_(web_browser)",
+      "kind": "secondary"
+    },
+    {
+      "title": "webkit.org",
+      "url": "https://webkit.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

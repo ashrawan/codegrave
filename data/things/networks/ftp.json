@@ -1,0 +1,64 @@
+{
+  "id": "ftp",
+  "category": "networks",
+  "names": [
+    {
+      "name": "FTP",
+      "from": "1971-04-16"
+    }
+  ],
+  "maker": "Abhay Bhushan (MIT), then the IETF",
+  "summary": "The File Transfer Protocol, one of the oldest internet protocols, older than TCP/IP itself. For decades it was how files moved between computers and onto websites, until browsers dropped it as insecure.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/30/FileZilla.png",
+    "alt": "The FileZilla FTP client",
+    "credit": "Tim Kosse / FileZilla-Project",
+    "licence": "GPL",
+    "source": "https://commons.wikimedia.org/wiki/File:FileZilla.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-04-16",
+      "precision": "day",
+      "note": "RFC 114, the first FTP specification.",
+      "url": "https://www.rfc-editor.org/rfc/rfc114"
+    },
+    {
+      "type": "released",
+      "date": "1985-10",
+      "precision": "month",
+      "label": "RFC 959",
+      "note": "The specification still in use today.",
+      "url": "https://www.rfc-editor.org/rfc/rfc959"
+    },
+    {
+      "type": "milestone",
+      "date": "2021",
+      "precision": "year",
+      "label": "Browsers drop it",
+      "note": "Chrome 88 and Firefox 90 remove FTP support."
+    }
+  ],
+  "status": "fading",
+  "note": "Still used between servers, but browsers no longer support it.",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: File Transfer Protocol",
+      "url": "https://en.wikipedia.org/wiki/File_Transfer_Protocol",
+      "kind": "secondary"
+    },
+    {
+      "title": "RFC 959",
+      "url": "https://www.rfc-editor.org/rfc/rfc959",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

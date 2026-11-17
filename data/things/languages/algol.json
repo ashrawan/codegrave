@@ -1,0 +1,69 @@
+{
+  "id": "algol",
+  "category": "languages",
+  "names": [
+    {
+      "name": "ALGOL",
+      "from": "1958"
+    }
+  ],
+  "maker": "International committee (ACM and GAMM)",
+  "summary": "The algorithmic language designed by a joint European and American committee. It was rarely used to build commercial programs, but its block structure and the way it was specified shaped Pascal, C and nearly every language after them.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c8/1965_ALGOL-20_A_Language_Manual%2C_Fierst_et_al_-_cover.jpg",
+    "alt": "Cover of a 1965 ALGOL language manual",
+    "credit": "Zvezdica2816",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1965_ALGOL-20_A_Language_Manual,_Fierst_et_al_-_cover.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year",
+      "note": "ALGOL 58 is designed at a committee meeting at ETH Zurich."
+    },
+    {
+      "type": "released",
+      "date": "1960",
+      "precision": "year",
+      "label": "ALGOL 60",
+      "note": "The ALGOL 60 report, edited by Peter Naur, defines the language most people mean by ALGOL."
+    },
+    {
+      "type": "milestone",
+      "date": "1963",
+      "precision": "year",
+      "label": "Revised report",
+      "note": "A revised ALGOL 60 report is published."
+    },
+    {
+      "type": "released",
+      "date": "1968",
+      "precision": "year",
+      "label": "ALGOL 68",
+      "note": "A far larger successor that is poorly received."
+    }
+  ],
+  "status": "fading",
+  "note": "No official end. Its block structure shaped Pascal, C and most languages after it.",
+  "signals": {
+    "adoption": 3,
+    "standard": 1,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: ALGOL",
+      "url": "https://en.wikipedia.org/wiki/ALGOL",
+      "kind": "secondary"
+    },
+    {
+      "title": "Revised Report on the Algorithmic Language ALGOL 60",
+      "url": "https://www.masswerk.at/algol60/report.htm",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

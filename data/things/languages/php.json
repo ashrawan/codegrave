@@ -1,0 +1,110 @@
+{
+  "id": "php",
+  "category": "languages",
+  "names": [
+    {
+      "name": "PHP Tools",
+      "from": "1995-06-08"
+    },
+    {
+      "name": "PHP",
+      "from": "1997"
+    }
+  ],
+  "maker": "Rasmus Lerdorf, then the PHP community",
+  "summary": "The language that built much of the dynamic web. Rasmus Lerdorf wrote it to run his own home page; it went on to power WordPress, Wikipedia and Facebook's early years.",
+  "website": "https://www.php.net/",
+  "icon": {
+    "src": "icons/php.svg",
+    "alt": "PHP logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=php"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b5/PHP_7.1_-_Example_phpinfo%28%29_Screen.png",
+    "alt": "The phpinfo() page from PHP 7.1",
+    "credit": "DirkDouse",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:PHP_7.1_-_Example_phpinfo()_Screen.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-06-08",
+      "precision": "day",
+      "note": "Rasmus Lerdorf announces \"Personal Home Page Tools\" on Usenet."
+    },
+    {
+      "type": "released",
+      "date": "1998-06-06",
+      "precision": "day",
+      "label": "PHP 3",
+      "note": "A rewrite by Zeev Suraski and Andi Gutmans; the name becomes \"PHP: Hypertext Preprocessor\"."
+    },
+    {
+      "type": "released",
+      "date": "2000-05-22",
+      "precision": "day",
+      "label": "PHP 4",
+      "note": "Runs on the new Zend Engine."
+    },
+    {
+      "type": "released",
+      "date": "2004-07-01",
+      "precision": "day",
+      "label": "PHP 5",
+      "note": "Adds a new object model and exceptions."
+    },
+    {
+      "type": "milestone",
+      "date": "2010-03",
+      "precision": "month",
+      "label": "PHP 6 dropped",
+      "note": "The Unicode rewrite planned as PHP 6 is abandoned; the next version is 7."
+    },
+    {
+      "type": "released",
+      "date": "2015-12-03",
+      "precision": "day",
+      "label": "PHP 7",
+      "note": "Roughly twice as fast, on Zend Engine 3."
+    },
+    {
+      "type": "released",
+      "date": "2020-11-26",
+      "precision": "day",
+      "label": "PHP 8",
+      "note": "Adds a JIT compiler.",
+      "url": "https://www.php.net/releases/8.0/en.php"
+    },
+    {
+      "type": "changed_hands",
+      "date": "2021-11-26",
+      "precision": "day",
+      "label": "PHP Foundation",
+      "note": "JetBrains and others set up the PHP Foundation to pay core developers.",
+      "url": "https://thephp.foundation/"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: PHP",
+      "url": "https://en.wikipedia.org/wiki/PHP",
+      "kind": "secondary"
+    },
+    {
+      "title": "php.net",
+      "url": "https://www.php.net/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

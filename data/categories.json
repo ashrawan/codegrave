@@ -1,0 +1,14 @@
+{
+ "categories": [
+  { "id": "languages", "name": "Languages", "short": "LANGUAGE", "examples": "Python, Java, COBOL" },
+  { "id": "platforms", "name": "Platforms & plug-ins", "short": "PLATFORM", "examples": "Flash, Silverlight, Java applets" },
+  { "id": "browsers", "name": "Browsers", "short": "BROWSER", "examples": "Netscape, Internet Explorer" },
+  { "id": "frameworks", "name": "Frameworks & libraries", "short": "FRAMEWORK", "examples": "AngularJS, jQuery, React" },
+  { "id": "runtimes", "name": "Runtimes & tools", "short": "TOOL", "examples": "Node.js, npm, Git" },
+  { "id": "operating-systems", "name": "Operating systems", "short": "OS", "examples": "Unix, Windows, Linux" },
+  { "id": "devices", "name": "Computers & devices", "short": "DEVICE", "examples": "ENIAC, IBM PC, iPhone" },
+  { "id": "ai", "name": "AI systems", "short": "AI", "examples": "Deep Blue, ChatGPT" },
+  { "id": "networks", "name": "Networks & protocols", "short": "NETWORK", "examples": "ARPANET, Gopher, the Web" },
+  { "id": "formats", "name": "Formats & standards", "short": "FORMAT", "examples": "ASCII, GIF, MP3" }
+ ]
+}

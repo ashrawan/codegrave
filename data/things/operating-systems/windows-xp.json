@@ -1,0 +1,87 @@
+{
+  "id": "windows-xp",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows XP",
+      "from": "2001-10-25"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "The Windows that joined the consumer and business lines on the NT core. Stable and long-lived after Vista's poor reception, it stayed in use for over a decade and outlived its own support.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Windows_XP_Professional_installation_CD.jpg/960px-Windows_XP_Professional_installation_CD.jpg",
+    "alt": "A Windows XP Professional installation CD",
+    "credit": "GlaasG50",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Windows_XP_Professional_installation_CD.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2001-08-24",
+      "precision": "day",
+      "note": "Build 2600 is released to manufacturing."
+    },
+    {
+      "type": "born",
+      "date": "2001-10-25",
+      "precision": "day",
+      "note": "Goes on sale."
+    },
+    {
+      "type": "released",
+      "date": "2004-08-25",
+      "precision": "day",
+      "label": "SP2",
+      "note": "Service Pack 2 adds a firewall and many security fixes."
+    },
+    {
+      "type": "milestone",
+      "date": "2008-06-30",
+      "precision": "day",
+      "label": "Sales end",
+      "note": "Microsoft stops selling it to PC makers and in shops."
+    },
+    {
+      "type": "deprecated",
+      "date": "2009-04-14",
+      "precision": "day",
+      "label": "Mainstream ends",
+      "note": "Microsoft ends mainstream support."
+    },
+    {
+      "type": "ended",
+      "date": "2014-04-08",
+      "precision": "day",
+      "note": "Extended support ends.",
+      "url": "https://learn.microsoft.com/lifecycle/products/windows-xp"
+    },
+    {
+      "type": "afterlife",
+      "note": "An embedded version for tills and kiosks gets updates until April 2019.",
+      "until": "2019-04"
+    }
+  ],
+  "status": "dead",
+  "cause": "Reached the end of its support life after twelve years.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Windows XP",
+      "url": "https://en.wikipedia.org/wiki/Windows_XP",
+      "kind": "secondary"
+    },
+    {
+      "title": "Microsoft lifecycle: Windows XP",
+      "url": "https://learn.microsoft.com/lifecycle/products/windows-xp",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,69 @@
+{
+  "id": "bower",
+  "category": "runtimes",
+  "names": [
+    {
+      "name": "Bower",
+      "from": "2012-09-04"
+    }
+  ],
+  "maker": "Twitter",
+  "summary": "A package manager for the web front end, released by Twitter. It was popular before npm handled browser code well; its own site now recommends other tools for new projects.",
+  "website": "https://bower.io/",
+  "icon": {
+    "src": "icons/bower.svg",
+    "alt": "Bower logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=bower"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-09-04",
+      "precision": "day",
+      "note": "Version 0.1.0 is published to npm.",
+      "url": "https://www.npmjs.com/package/bower?activeTab=versions"
+    },
+    {
+      "type": "released",
+      "date": "2013-07-23",
+      "precision": "day",
+      "label": "1.0",
+      "note": "Bower 1.0 is published."
+    },
+    {
+      "type": "released",
+      "date": "2022-03-14",
+      "precision": "day",
+      "label": "1.8.14",
+      "note": "The latest release so far."
+    }
+  ],
+  "status": "fading",
+  "note": "Its site says: \"While Bower is maintained, we recommend using Yarn and Vite for front-end projects.\"",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Bower (software)",
+      "url": "https://en.wikipedia.org/wiki/Bower_(software)",
+      "kind": "secondary"
+    },
+    {
+      "title": "bower.io",
+      "url": "https://bower.io/",
+      "kind": "primary"
+    },
+    {
+      "title": "npm registry: bower",
+      "url": "https://www.npmjs.com/package/bower",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

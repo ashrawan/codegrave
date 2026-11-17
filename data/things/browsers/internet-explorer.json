@@ -1,0 +1,116 @@
+{
+  "id": "internet-explorer",
+  "category": "browsers",
+  "names": [
+    {
+      "name": "Internet Explorer",
+      "from": "1995-08-24"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's browser, built on licensed Mosaic code and given away with Windows. It won the first browser war with about 95% of users, then stalled on standards and security, and Microsoft retired it in favour of Edge.",
+  "icon": {
+    "src": "icons/ie10-dv.svg",
+    "alt": "Internet Explorer logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Wikipedia_frontpage_in_Monobook_rendered_by_Internet_Explorer_6.png",
+    "alt": "Internet Explorer 6 showing Wikipedia",
+    "credit": "Mardus",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wikipedia_frontpage_in_Monobook_rendered_by_Internet_Explorer_6.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-08-24",
+      "precision": "day",
+      "note": "Internet Explorer 1 ships in the Plus! pack for Windows 95."
+    },
+    {
+      "type": "released",
+      "date": "2001-08-24",
+      "precision": "day",
+      "label": "IE 6",
+      "note": "Becomes the default browser of Windows XP and then stands still for five years."
+    },
+    {
+      "type": "milestone",
+      "date": "2002",
+      "precision": "year",
+      "label": "95% share",
+      "note": "At its peak, about 95% of web users browse with Internet Explorer."
+    },
+    {
+      "type": "released",
+      "date": "2006-10-18",
+      "precision": "day",
+      "label": "IE 7",
+      "note": "Adds tabs, under pressure from Firefox."
+    },
+    {
+      "type": "released",
+      "date": "2013-10-17",
+      "precision": "day",
+      "label": "IE 11",
+      "note": "The last major version, in Windows 8.1."
+    },
+    {
+      "type": "milestone",
+      "date": "2015-07",
+      "precision": "month",
+      "label": "Edge",
+      "note": "Microsoft Edge replaces it as the default in Windows 10."
+    },
+    {
+      "type": "deprecated",
+      "date": "2021-05-19",
+      "precision": "day",
+      "label": "End set",
+      "note": "Microsoft announces that the desktop app will retire in June 2022.",
+      "url": "https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"
+    },
+    {
+      "type": "ended",
+      "date": "2022-06-15",
+      "precision": "day",
+      "note": "Support ends for the desktop app on most versions of Windows 10.",
+      "url": "https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"
+    },
+    {
+      "type": "afterlife",
+      "note": "Lives on as IE mode inside Edge, for old company sites.",
+      "until": "2029",
+      "url": "https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"
+    }
+  ],
+  "status": "dead",
+  "cause": "Fell behind on web standards and security, and was replaced by Edge.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "mosaic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Internet Explorer",
+      "url": "https://en.wikipedia.org/wiki/Internet_Explorer",
+      "kind": "secondary"
+    },
+    {
+      "title": "Windows blog: The future of Internet Explorer",
+      "url": "https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

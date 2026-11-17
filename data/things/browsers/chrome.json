@@ -1,0 +1,84 @@
+{
+  "id": "chrome",
+  "category": "browsers",
+  "names": [
+    {
+      "name": "Chrome",
+      "from": "2008-09-02"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's browser, launched with a comic book and a promise of speed, security and a minimal window. It overtook Internet Explorer within four years, and its open-source base, Chromium, now powers Edge, Opera, Brave and most other browsers.",
+  "website": "https://www.google.com/chrome/",
+  "icon": {
+    "src": "icons/googlechrome.svg",
+    "alt": "Chrome logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=googlechrome"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Chrome_Split_View_feature.png/960px-Google_Chrome_Split_View_feature.png",
+    "alt": "Google Chrome showing two pages in split view",
+    "credit": "TealComet",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Google_Chrome_Split_View_feature.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-09-02",
+      "precision": "day",
+      "note": "A beta for Windows launches in 43 languages."
+    },
+    {
+      "type": "released",
+      "date": "2008-12-11",
+      "precision": "day",
+      "label": "Stable",
+      "note": "The first stable release."
+    },
+    {
+      "type": "milestone",
+      "date": "2009-06-04",
+      "precision": "day",
+      "label": "Mac and Linux",
+      "note": "First developer previews for Mac and Linux."
+    },
+    {
+      "type": "milestone",
+      "date": "2013-04-03",
+      "precision": "day",
+      "label": "Blink",
+      "note": "Google forks WebKit and builds its own engine, Blink.",
+      "url": "https://blog.chromium.org/2013/04/blink-rendering-engine-for-chromium.html"
+    },
+    {
+      "type": "milestone",
+      "date": "2018-10",
+      "precision": "month",
+      "label": "Manifest V3",
+      "note": "Google announces a new extension platform that later limits ad blockers."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Google Chrome",
+      "url": "https://en.wikipedia.org/wiki/Google_Chrome",
+      "kind": "secondary"
+    },
+    {
+      "title": "Chromium blog",
+      "url": "https://blog.chromium.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

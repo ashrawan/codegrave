@@ -1,0 +1,84 @@
+{
+  "id": "csharp",
+  "category": "languages",
+  "names": [
+    {
+      "name": "C#",
+      "from": "2002"
+    }
+  ],
+  "maker": "Microsoft (Anders Hejlsberg)",
+  "summary": "Microsoft's main language for the .NET platform, led by Anders Hejlsberg. It started as Microsoft's answer to Java and grew into an open-source, cross-platform language used for business software, games in Unity, and cloud services.",
+  "website": "https://learn.microsoft.com/dotnet/csharp/",
+  "icon": {
+    "src": "icons/csharp-dv.svg",
+    "alt": "C# logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Anders_Hejlsberg_at_PDC2008.jpg/960px-Anders_Hejlsberg_at_PDC2008.jpg",
+    "alt": "Anders Hejlsberg, lead designer of C#",
+    "credit": "DBegley",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Anders_Hejlsberg_at_PDC2008.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2000-07",
+      "precision": "month",
+      "note": "Announced with the .NET project at Microsoft’s Professional Developers Conference."
+    },
+    {
+      "type": "born",
+      "date": "2002-01",
+      "precision": "month",
+      "note": "C# 1.0 ships with .NET Framework 1.0."
+    },
+    {
+      "type": "released",
+      "date": "2007-11",
+      "precision": "month",
+      "label": "C# 3.0",
+      "note": "Adds LINQ, lambda expressions and extension methods."
+    },
+    {
+      "type": "released",
+      "date": "2025-11",
+      "precision": "month",
+      "label": "C# 14",
+      "note": "The current version, shipping with .NET 10."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "java"
+    },
+    {
+      "type": "influenced_by",
+      "to": "cpp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: C Sharp (programming language)",
+      "url": "https://en.wikipedia.org/wiki/C_Sharp_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "Microsoft Learn: C#",
+      "url": "https://learn.microsoft.com/dotnet/csharp/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

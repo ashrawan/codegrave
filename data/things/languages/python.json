@@ -1,0 +1,98 @@
+{
+  "id": "python",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Python",
+      "from": "1991-02-20"
+    }
+  ],
+  "maker": "Guido van Rossum, then the Python Software Foundation",
+  "summary": "A general-purpose language built for readable code. Guido van Rossum started it as a holiday project at CWI in the Netherlands, and it grew into the most widely taught language and the main language of data science and machine learning.",
+  "website": "https://www.python.org/",
+  "icon": {
+    "src": "icons/python.svg",
+    "alt": "Python logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=python"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Guido-portrait-2014.jpg/960px-Guido-portrait-2014.jpg",
+    "alt": "Guido van Rossum, who created Python",
+    "credit": "Daniel Stroud",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Guido-portrait-2014.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1989-12",
+      "precision": "month",
+      "note": "Guido van Rossum starts writing Python at CWI as a successor to the ABC language."
+    },
+    {
+      "type": "born",
+      "date": "1991-02-20",
+      "precision": "day",
+      "note": "Version 0.9.0 is posted to the alt.sources newsgroup."
+    },
+    {
+      "type": "released",
+      "date": "2000-10-16",
+      "precision": "day",
+      "label": "Python 2.0",
+      "note": "Adds list comprehensions and a cycle-detecting garbage collector."
+    },
+    {
+      "type": "released",
+      "date": "2008-12-03",
+      "precision": "day",
+      "label": "Python 3",
+      "note": "A clean-up release that breaks backward compatibility; the move from Python 2 takes twelve years.",
+      "url": "https://www.python.org/download/releases/3.0/"
+    },
+    {
+      "type": "milestone",
+      "date": "2017-01",
+      "precision": "month",
+      "label": "Moves to GitHub",
+      "note": "Development moves from a self-hosted Mercurial repository to GitHub."
+    },
+    {
+      "type": "milestone",
+      "date": "2018-07-12",
+      "precision": "day",
+      "label": "BDFL steps down",
+      "note": "Guido van Rossum steps down as \"Benevolent Dictator for Life\"."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2019-01",
+      "precision": "month",
+      "label": "Steering Council",
+      "note": "A five-member Steering Council elected by core developers takes over leadership.",
+      "url": "https://peps.python.org/pep-0013/"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Python (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Python_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "python.org",
+      "url": "https://www.python.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

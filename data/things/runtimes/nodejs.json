@@ -1,0 +1,91 @@
+{
+  "id": "nodejs",
+  "category": "runtimes",
+  "names": [
+    {
+      "name": "Node.js",
+      "from": "2009-05-27"
+    }
+  ],
+  "maker": "Ryan Dahl, then the OpenJS Foundation",
+  "summary": "JavaScript outside the browser. Ryan Dahl built it on Chrome's V8 engine with non-blocking input and output, which made JavaScript a server language and gave rise to npm, the largest package registry.",
+  "website": "https://nodejs.org/",
+  "icon": {
+    "src": "icons/nodedotjs.svg",
+    "alt": "Node.js logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=nodedotjs"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Ryan_Dahl.jpg/960px-Ryan_Dahl.jpg",
+    "alt": "Ryan Dahl, who created Node.js",
+    "credit": "David Calhoun",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ryan_Dahl.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-05-27",
+      "precision": "day",
+      "note": "First release by Ryan Dahl."
+    },
+    {
+      "type": "milestone",
+      "date": "2009-11-08",
+      "precision": "day",
+      "label": "JSConf EU",
+      "note": "Ryan Dahl presents Node.js at JSConf EU."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2012-01",
+      "precision": "month",
+      "label": "New lead",
+      "note": "Dahl hands the project to Isaac Schlueter."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2015-02",
+      "precision": "month",
+      "label": "Foundation",
+      "note": "The Node.js Foundation is announced to govern the project."
+    },
+    {
+      "type": "released",
+      "date": "2015-09",
+      "precision": "month",
+      "label": "Node 4.0",
+      "note": "The release that reunites Node.js with the io.js fork."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2019",
+      "precision": "year",
+      "label": "OpenJS",
+      "note": "The Node.js and JS Foundations merge into the OpenJS Foundation.",
+      "url": "https://openjsf.org/"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Node.js",
+      "url": "https://en.wikipedia.org/wiki/Node.js",
+      "kind": "secondary"
+    },
+    {
+      "title": "nodejs.org",
+      "url": "https://nodejs.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

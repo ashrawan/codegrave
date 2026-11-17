@@ -1,0 +1,92 @@
+{
+  "id": "classic-mac-os",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "System Software",
+      "from": "1984-01-24"
+    },
+    {
+      "name": "Mac OS",
+      "from": "1996"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "The system software of the Macintosh from 1984, which brought windows, icons and the mouse to a mass audience. It never gained modern memory protection, and Apple replaced it with the Unix-based Mac OS X.",
+  "icon": {
+    "src": "icons/apple.svg",
+    "alt": "Apple logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=apple"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Macintosh_128k_transparency.png",
+    "alt": "A Macintosh running the Finder",
+    "credit": "w:User:Grm wnr",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Macintosh_128k_transparency.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-01-24",
+      "precision": "day",
+      "note": "System 1 ships with the first Macintosh."
+    },
+    {
+      "type": "released",
+      "date": "1991-05-13",
+      "precision": "day",
+      "label": "System 7",
+      "note": "A major update with virtual memory."
+    },
+    {
+      "type": "released",
+      "date": "1997-07-26",
+      "precision": "day",
+      "label": "Mac OS 8",
+      "note": "Mac OS 8 is released."
+    },
+    {
+      "type": "released",
+      "date": "1999-10-23",
+      "precision": "day",
+      "label": "Mac OS 9",
+      "note": "The last major version."
+    },
+    {
+      "type": "milestone",
+      "date": "2001",
+      "precision": "year",
+      "label": "Mac OS X",
+      "note": "Mac OS X replaces it as Apple’s system."
+    },
+    {
+      "type": "ended",
+      "date": "2001-12-05",
+      "precision": "day",
+      "note": "The last release, Mac OS 9.2.2."
+    },
+    {
+      "type": "afterlife",
+      "note": "In May 2002 Steve Jobs holds a mock funeral for Mac OS 9 at WWDC; old apps keep running inside Mac OS X for a few more years."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Mac OS X, built on a Unix foundation.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Classic Mac OS",
+      "url": "https://en.wikipedia.org/wiki/Classic_Mac_OS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

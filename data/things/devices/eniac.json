@@ -1,0 +1,101 @@
+{
+  "id": "eniac",
+  "category": "devices",
+  "names": [
+    {
+      "name": "ENIAC",
+      "from": "1946-02-15"
+    }
+  ],
+  "maker": "University of Pennsylvania (J. Presper Eckert, John Mauchly) for the US Army",
+  "summary": "The first programmable, general-purpose electronic digital computer, built at the University of Pennsylvania for the US Army to calculate artillery tables. It filled a room with 17,000 vacuum tubes and was programmed by six women who rewired it by hand.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Two_women_operating_ENIAC_%28full_resolution%29.jpg/960px-Two_women_operating_ENIAC_%28full_resolution%29.jpg",
+    "alt": "Two programmers setting up ENIAC’s panels in 1946",
+    "credit": "Unidentified U.S. Army photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Two_women_operating_ENIAC_(full_resolution).jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1943-06-05",
+      "precision": "day",
+      "note": "The Army signs the contract to build it."
+    },
+    {
+      "type": "milestone",
+      "date": "1945-12-10",
+      "precision": "day",
+      "label": "First use",
+      "note": "Runs its first real job, calculations for Los Alamos."
+    },
+    {
+      "type": "born",
+      "date": "1946-02-15",
+      "precision": "day",
+      "note": "Formally dedicated at the University of Pennsylvania."
+    },
+    {
+      "type": "milestone",
+      "date": "1947-07-29",
+      "precision": "day",
+      "label": "Aberdeen",
+      "note": "Switched back on after moving to the Army’s Aberdeen Proving Ground.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg/960px-Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg",
+        "alt": "Glen Beck and Betty Snyder programming ENIAC at the Ballistic Research Laboratory",
+        "caption": "ENIAC in building 328 of the Ballistic Research Laboratory.",
+        "credit": "U.S. Army photo",
+        "licence": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
+      }
+    },
+    {
+      "type": "milestone",
+      "date": "1948-04",
+      "precision": "month",
+      "label": "Stored program",
+      "note": "First runs as a stored-program computer."
+    },
+    {
+      "type": "ended",
+      "date": "1955-10-02",
+      "precision": "day",
+      "note": "Switched off for good."
+    },
+    {
+      "type": "afterlife",
+      "note": "Parts of it are on display at the University of Pennsylvania and in museums.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/ENIAC_Penn1.jpg/960px-ENIAC_Penn1.jpg",
+        "alt": "Two ENIAC panels on display at the University of Pennsylvania",
+        "caption": "Panels on display at Penn’s Moore School.",
+        "credit": "TexasDex",
+        "licence": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:ENIAC_Penn1.jpg"
+      }
+    }
+  ],
+  "status": "dead",
+  "cause": "Switched off for good after nearly ten years of service.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: ENIAC",
+      "url": "https://en.wikipedia.org/wiki/ENIAC",
+      "kind": "secondary"
+    },
+    {
+      "title": "Penn Engineering: ENIAC",
+      "url": "https://www.engineering.upenn.edu/about/history-heritage/eniac/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

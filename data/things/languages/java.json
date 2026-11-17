@@ -1,0 +1,109 @@
+{
+  "id": "java",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Java",
+      "from": "1995-05-23"
+    }
+  ],
+  "maker": "Sun Microsystems, then Oracle",
+  "summary": "A language and virtual machine built to run the same compiled code anywhere. Sun Microsystems launched it in 1995; it became the language of enterprise servers and Android apps, and passed to Oracle when Oracle bought Sun.",
+  "website": "https://www.oracle.com/java/",
+  "icon": {
+    "src": "icons/java-dv.svg",
+    "alt": "Java logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Duke_%28Java_mascot%29_waving.svg/960px-Duke_%28Java_mascot%29_waving.svg.png",
+    "alt": "Duke, the Java mascot",
+    "credit": "sbmehta",
+    "licence": "BSD",
+    "source": "https://commons.wikimedia.org/wiki/File:Duke_(Java_mascot)_waving.svg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1991-06",
+      "precision": "month",
+      "note": "James Gosling, Mike Sheridan and Patrick Naughton start the project at Sun, first named Oak."
+    },
+    {
+      "type": "born",
+      "date": "1995-05-23",
+      "precision": "day",
+      "note": "Sun announces Java publicly."
+    },
+    {
+      "type": "released",
+      "date": "1996-01-23",
+      "precision": "day",
+      "label": "JDK 1.0",
+      "note": "The first public Java Development Kit, promising \"write once, run anywhere\"."
+    },
+    {
+      "type": "released",
+      "date": "1998-12-08",
+      "precision": "day",
+      "label": "Java 2",
+      "note": "J2SE 1.2 splits Java into editions for desktops, servers and devices."
+    },
+    {
+      "type": "released",
+      "date": "2004-09-30",
+      "precision": "day",
+      "label": "Java 5",
+      "note": "J2SE 5.0 adds generics to the language."
+    },
+    {
+      "type": "milestone",
+      "date": "2006-11-13",
+      "precision": "day",
+      "label": "Open source",
+      "note": "Sun releases the Java virtual machine as free software under the GPL.",
+      "url": "https://openjdk.org/"
+    },
+    {
+      "type": "changed_hands",
+      "date": "2010-01-27",
+      "precision": "day",
+      "label": "Oracle",
+      "note": "Oracle completes its purchase of Sun and takes over Java."
+    },
+    {
+      "type": "released",
+      "date": "2017-09-21",
+      "precision": "day",
+      "label": "Java 9",
+      "note": "Java 9 ships with a module system and deprecates the applet API."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "cpp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Java (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Java_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "OpenJDK",
+      "url": "https://openjdk.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

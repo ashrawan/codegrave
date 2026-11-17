@@ -1,0 +1,29 @@
+name: Idea or proposal
+description: Suggest a change to the page, the data rules, a featured view, a category or an era, and discuss it before anyone writes code.
+title: "Proposal: "
+labels: ["proposal"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      description: Who is it for, and what is hard or missing today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What would change. Sketches, mock-ups or screenshots help a lot.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Other ways you considered
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Building it yourself?
+      options:
+        - label: I would like to open the pull request once we agree on the approach.

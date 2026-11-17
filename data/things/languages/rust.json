@@ -1,0 +1,96 @@
+{
+  "id": "rust",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Rust",
+      "from": "2012-01"
+    }
+  ],
+  "maker": "Graydon Hoare, then Mozilla, then the Rust Foundation",
+  "summary": "A systems language that guarantees memory safety without a garbage collector. It began as Graydon Hoare's personal project, grew up at Mozilla, and is now used in browsers, cloud infrastructure and the Linux kernel.",
+  "website": "https://www.rust-lang.org/",
+  "icon": {
+    "src": "icons/rust.svg",
+    "alt": "Rust logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=rust"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Cargo_clippy_hello_world_example.png",
+    "alt": "Cargo clippy checking a Rust hello-world program",
+    "credit": "Caleb Stanford",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cargo_clippy_hello_world_example.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2006",
+      "precision": "year",
+      "note": "Graydon Hoare starts Rust as a personal project."
+    },
+    {
+      "type": "born",
+      "date": "2012-01-20",
+      "precision": "day",
+      "note": "Rust 0.1, the first public release, for Windows, Linux and macOS."
+    },
+    {
+      "type": "released",
+      "date": "2015-05-15",
+      "precision": "day",
+      "label": "1.0",
+      "note": "The first stable release, with a promise of backward compatibility.",
+      "url": "https://blog.rust-lang.org/2015/05/15/Rust-1.0.html"
+    },
+    {
+      "type": "milestone",
+      "date": "2020-08",
+      "precision": "month",
+      "label": "Mozilla layoffs",
+      "note": "Mozilla lays off 250 staff and disbands the Servo team, many of them Rust contributors."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2021-02-08",
+      "precision": "day",
+      "label": "Foundation",
+      "note": "AWS, Huawei, Microsoft and Mozilla form the Rust Foundation to steward the language.",
+      "url": "https://foundation.rust-lang.org/"
+    },
+    {
+      "type": "milestone",
+      "date": "2022",
+      "precision": "year",
+      "label": "In Linux",
+      "note": "Linux 6.1 adds experimental support for drivers written in Rust."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "cpp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Rust (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Rust_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "rust-lang.org",
+      "url": "https://www.rust-lang.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

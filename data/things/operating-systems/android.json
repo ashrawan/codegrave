@@ -1,0 +1,94 @@
+{
+  "id": "android",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Android",
+      "from": "2008-09-23"
+    }
+  ],
+  "maker": "Android Inc., then Google",
+  "summary": "The phone operating system from a start-up Google bought, built on Linux and given to phone makers for free. It became the most used operating system in the world.",
+  "website": "https://www.android.com/",
+  "icon": {
+    "src": "icons/android.svg",
+    "alt": "Android logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=android"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1f/HTC_Android_T-Mobile_G1.jpg",
+    "alt": "The T-Mobile G1 (HTC Dream), the first Android phone",
+    "credit": "Luis Alberto Arjona Chin",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:HTC_Android_T-Mobile_G1.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2003-10",
+      "precision": "month",
+      "note": "Andy Rubin and Chris White found Android Inc. in Palo Alto."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2005",
+      "precision": "year",
+      "label": "Google",
+      "note": "Google buys Android Inc."
+    },
+    {
+      "type": "milestone",
+      "date": "2007-11-05",
+      "precision": "day",
+      "label": "Alliance",
+      "note": "Google and partners unveil the Open Handset Alliance."
+    },
+    {
+      "type": "born",
+      "date": "2008-09-23",
+      "precision": "day",
+      "note": "Android 1.0 is released; the HTC Dream (T-Mobile G1) is the first phone."
+    },
+    {
+      "type": "milestone",
+      "date": "2011",
+      "precision": "year",
+      "label": "Most used",
+      "note": "Becomes the most used smartphone system worldwide."
+    },
+    {
+      "type": "milestone",
+      "date": "2025-03",
+      "precision": "month",
+      "label": "Goes inward",
+      "note": "Google moves Android development to internal branches."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "linux"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Android (operating system)",
+      "url": "https://en.wikipedia.org/wiki/Android_(operating_system)",
+      "kind": "secondary"
+    },
+    {
+      "title": "android.com",
+      "url": "https://www.android.com/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,84 @@
+{
+  "id": "ecmascript",
+  "category": "formats",
+  "names": [
+    {
+      "name": "ECMAScript",
+      "from": "1997-06"
+    }
+  ],
+  "maker": "Ecma International (TC39)",
+  "summary": "The standard behind JavaScript, kept by Ecma International's TC39 committee. Since 2015 a new edition comes out every June.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Brendan_Eich_Mozilla_Foundation_official_photo.jpg/960px-Brendan_Eich_Mozilla_Foundation_official_photo.jpg",
+    "alt": "Brendan Eich, who created JavaScript",
+    "credit": "Darcy Padilla",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Brendan_Eich_Mozilla_Foundation_official_photo.jpg"
+  },
+  "website": "https://tc39.es/ecma262/",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997-06",
+      "precision": "month",
+      "note": "The first edition of ECMA-262 is adopted.",
+      "url": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
+    },
+    {
+      "type": "released",
+      "date": "1999-12",
+      "precision": "month",
+      "label": "ES3",
+      "note": "The third edition, the base of the web for a decade."
+    },
+    {
+      "type": "milestone",
+      "date": "2008",
+      "precision": "year",
+      "label": "ES4 dropped",
+      "note": "The ambitious fourth edition is abandoned."
+    },
+    {
+      "type": "released",
+      "date": "2009-12",
+      "precision": "month",
+      "label": "ES5",
+      "note": "Adds strict mode and JSON."
+    },
+    {
+      "type": "released",
+      "date": "2015-06",
+      "precision": "month",
+      "label": "ES2015",
+      "note": "A major update; yearly editions follow every June."
+    },
+    {
+      "type": "released",
+      "date": "2025-06",
+      "precision": "month",
+      "label": "ES2025",
+      "note": "The sixteenth edition."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: ECMAScript",
+      "url": "https://en.wikipedia.org/wiki/ECMAScript",
+      "kind": "secondary"
+    },
+    {
+      "title": "TC39: ECMA-262",
+      "url": "https://tc39.es/ecma262/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

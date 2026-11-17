@@ -1,0 +1,74 @@
+{
+  "id": "actionscript",
+  "category": "languages",
+  "names": [
+    {
+      "name": "ActionScript",
+      "from": "2000"
+    }
+  ],
+  "maker": "Macromedia, then Adobe",
+  "summary": "The scripting language of Flash, a cousin of JavaScript. It powered a decade of web games, animations and video players, and died with Flash.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-09",
+      "precision": "month",
+      "note": "Flash 5 introduces the name ActionScript."
+    },
+    {
+      "type": "released",
+      "date": "2003-09",
+      "precision": "month",
+      "label": "ActionScript 2",
+      "note": "Arrives with Flash MX 2004, adding classes and type checks."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2005",
+      "precision": "year",
+      "label": "Adobe",
+      "note": "Adobe buys Macromedia."
+    },
+    {
+      "type": "released",
+      "date": "2006-06",
+      "precision": "month",
+      "label": "ActionScript 3",
+      "note": "A rewrite on a new virtual machine in Flash Player 9."
+    },
+    {
+      "type": "ended",
+      "date": "2020-12-31",
+      "precision": "day",
+      "note": "Adobe ends support for Flash Player, the main place ActionScript ran.",
+      "url": "https://www.adobe.com/products/flashplayer/end-of-life.html"
+    }
+  ],
+  "status": "dead",
+  "cause": "It ran inside Flash, and ended with it.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "standardised_as",
+      "to": "ecmascript"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: ActionScript",
+      "url": "https://en.wikipedia.org/wiki/ActionScript",
+      "kind": "secondary"
+    },
+    {
+      "title": "Adobe: Flash Player end of life",
+      "url": "https://www.adobe.com/products/flashplayer/end-of-life.html",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

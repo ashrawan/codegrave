@@ -1,0 +1,85 @@
+{
+  "id": "smalltalk",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Smalltalk",
+      "from": "1972"
+    }
+  ],
+  "maker": "Xerox PARC (Alan Kay, Dan Ingalls, Adele Goldberg)",
+  "summary": "The language and environment from Xerox PARC where everything is an object. Its windows, browsers and live programming shaped the graphical user interface, object-oriented programming and later languages such as Ruby and Objective-C.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Squeak_System_Browser_Fraction.png/960px-Squeak_System_Browser_Fraction.png",
+    "alt": "The Squeak Smalltalk system browser",
+    "credit": "Eliotmiranda",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Squeak_System_Browser_Fraction.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-10",
+      "precision": "month",
+      "note": "Dan Ingalls writes the first Smalltalk-72 interpreter."
+    },
+    {
+      "type": "milestone",
+      "date": "1973-04",
+      "precision": "month",
+      "label": "On the Alto",
+      "note": "Smalltalk-72 is ported to the Xerox Alto."
+    },
+    {
+      "type": "released",
+      "date": "1980",
+      "precision": "year",
+      "label": "Smalltalk-80",
+      "note": "The first version made available outside Xerox."
+    },
+    {
+      "type": "milestone",
+      "date": "1981-08",
+      "precision": "month",
+      "label": "Byte issue",
+      "note": "A special issue of Byte magazine brings Smalltalk to a wide audience."
+    },
+    {
+      "type": "milestone",
+      "date": "1998",
+      "precision": "year",
+      "label": "ANSI",
+      "note": "ANSI Smalltalk is ratified as the standard."
+    }
+  ],
+  "status": "fading",
+  "note": "Lives on in Pharo and Squeak, but few new projects use it.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "simula"
+    },
+    {
+      "type": "influenced_by",
+      "to": "lisp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Smalltalk",
+      "url": "https://en.wikipedia.org/wiki/Smalltalk",
+      "kind": "secondary"
+    },
+    {
+      "title": "Byte, August 1981 (Internet Archive)",
+      "url": "https://archive.org/details/byte-magazine-1981-08",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

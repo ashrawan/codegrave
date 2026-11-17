@@ -1,0 +1,64 @@
+codegrave is under two licences: one for the code, one for the content.
+
+Copyright (c) 2026 ashrawan (https://github.com/ashrawan) and codegrave contributors
+
+| Part of the repository | Licence |
+| --- | --- |
+| Code, components and build tools: `site/` (HTML, CSS, JavaScript), `scripts/`, `tests/`, `schema/`, and configuration files such as `netlify.toml` | MIT License (Part 1) |
+| Written content, data and diagrams: `data/` (things, views, categories, checkpoints and their text), `docs/`, every Markdown file (`*.md`), and diagrams wherever they are kept | CC BY-NC-SA 4.0 (Part 2) |
+
+When a file is not named above, code is under Part 1 and prose or data is
+under Part 2.
+
+Third-party media keep their own licences and are not covered by either part:
+images hot-linked from Wikimedia Commons (each one's author, licence and
+Commons page are recorded beside it in `data/`) and the icons in
+`data/media/icons/` (see `data/media/icons/README.md`).
+
+
+================================================================================
+Part 1. MIT License (code)
+================================================================================
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+================================================================================
+Part 2. Creative Commons Attribution-NonCommercial-ShareAlike 4.0
+International (content)
+================================================================================
+
+The content named above is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International License
+(CC BY-NC-SA 4.0).
+
+You are free to share (copy and redistribute in any medium or format) and
+adapt (remix, transform and build upon) the content, under these terms:
+
+- Attribution: give appropriate credit to codegrave (https://codegrave.com),
+  link to the licence, and indicate if changes were made.
+- NonCommercial: you may not use the content for commercial purposes.
+- ShareAlike: if you remix, transform or build upon the content, you must
+  distribute your contributions under the same licence as the original.
+- No additional restrictions: you may not apply legal terms or technological
+  measures that legally restrict others from doing anything the licence
+  permits.
+
+This summary is not the licence. The full legal code, which governs, is at:
+https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode

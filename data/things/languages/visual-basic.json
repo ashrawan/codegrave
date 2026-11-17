@@ -1,0 +1,98 @@
+{
+  "id": "visual-basic",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Visual Basic",
+      "from": "1991-05"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's drag-and-drop way to build Windows programs, descended from BASIC. It brought millions of people into programming; Microsoft replaced it with the very different Visual Basic .NET, and the classic version's tools lost support in 2008.",
+  "website": "https://learn.microsoft.com/previous-versions/visualstudio/visual-basic-6/visual-basic-6.0-documentation",
+  "icon": {
+    "src": "icons/visualbasic-dv.svg",
+    "alt": "Visual Basic logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Visual_Basic_function.PNG",
+    "alt": "A Visual Basic function in the code editor",
+    "credit": "Michael Billington",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Visual_Basic_function.PNG"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-05",
+      "precision": "month",
+      "note": "Visual Basic 1.0 for Windows is released."
+    },
+    {
+      "type": "released",
+      "date": "1993",
+      "precision": "year",
+      "label": "VB 3.0",
+      "note": "Ships in Standard and Professional editions and becomes hugely popular."
+    },
+    {
+      "type": "released",
+      "date": "1998",
+      "precision": "year",
+      "label": "VB 6.0",
+      "note": "The last classic version."
+    },
+    {
+      "type": "deprecated",
+      "date": "2005-03-31",
+      "precision": "day",
+      "label": "Mainstream ends",
+      "note": "Microsoft ends mainstream support for Visual Basic 6.0."
+    },
+    {
+      "type": "ended",
+      "date": "2008-04-08",
+      "precision": "day",
+      "note": "The Visual Basic 6.0 development tools are no longer supported.",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/announcements/visual-basic-6-support-announcement"
+    },
+    {
+      "type": "afterlife",
+      "note": "Programs built with it still run: the VB6 runtime ships with Windows 10 and 11 and is supported for their lifetime.",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/announcements/visual-basic-6-support-announcement"
+    }
+  ],
+  "status": "dead",
+  "cause": "Microsoft moved developers to .NET and ended support for the classic line.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "basic"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "csharp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Visual Basic (classic)",
+      "url": "https://en.wikipedia.org/wiki/Visual_Basic_(classic)",
+      "kind": "secondary"
+    },
+    {
+      "title": "Microsoft: Visual Basic 6.0 support announcement",
+      "url": "https://learn.microsoft.com/en-us/lifecycle/announcements/visual-basic-6-support-announcement",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

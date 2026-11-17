@@ -1,0 +1,68 @@
+{
+  "id": "basic",
+  "category": "languages",
+  "names": [
+    {
+      "name": "BASIC",
+      "from": "1964-05-01"
+    }
+  ],
+  "maker": "John Kemeny and Thomas Kurtz, Dartmouth College",
+  "summary": "Beginner's All-purpose Symbolic Instruction Code, made at Dartmouth so every student could program. Microsoft's version for the Altair started the company, and BASIC came built into almost every home computer of the late 1970s and 1980s.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d1/IBM_Cassette_BASIC.png",
+    "alt": "IBM Cassette BASIC start-up screen",
+    "credit": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:IBM_Cassette_BASIC.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-05-01",
+      "precision": "day",
+      "note": "The first BASIC programs run on Dartmouth’s time-sharing system."
+    },
+    {
+      "type": "milestone",
+      "date": "1975",
+      "precision": "year",
+      "label": "Altair BASIC",
+      "note": "Microsoft’s first product, a BASIC for the Altair 8800."
+    },
+    {
+      "type": "milestone",
+      "date": "1977",
+      "precision": "year",
+      "label": "Home computers",
+      "note": "The TRS-80, Commodore PET and Apple II ship with BASIC built in."
+    },
+    {
+      "type": "milestone",
+      "date": "1991",
+      "precision": "year",
+      "label": "Visual Basic",
+      "note": "Microsoft pairs BASIC with a visual form designer."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: BASIC",
+      "url": "https://en.wikipedia.org/wiki/BASIC",
+      "kind": "secondary"
+    },
+    {
+      "title": "Dartmouth: BASIC at 50",
+      "url": "https://www.dartmouth.edu/basicfifty/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

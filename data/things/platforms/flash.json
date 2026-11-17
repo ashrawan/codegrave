@@ -1,0 +1,102 @@
+{
+  "id": "flash",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "FutureSplash Animator",
+      "from": "1996-05"
+    },
+    {
+      "name": "Macromedia Flash",
+      "from": "1996-12"
+    },
+    {
+      "name": "Adobe Flash",
+      "from": "2005-12-03"
+    }
+  ],
+  "maker": "FutureWave, then Macromedia, then Adobe",
+  "summary": "The plug-in that brought animation, games and video to the web. It began as FutureSplash Animator, became Macromedia Flash and then Adobe Flash, carried YouTube's first videos, and was retired after the iPhone refused it and HTML5 took over its jobs.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/QWOP_screenshot.jpg",
+    "alt": "QWOP, a Flash browser game",
+    "credit": "Bennett Foddy",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:QWOP_screenshot.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-05",
+      "precision": "month",
+      "note": "FutureWave releases FutureSplash Animator."
+    },
+    {
+      "type": "milestone",
+      "date": "2005",
+      "precision": "year",
+      "label": "YouTube",
+      "note": "YouTube launches, playing its videos in Flash Player."
+    },
+    {
+      "type": "milestone",
+      "date": "2010-04",
+      "precision": "month",
+      "label": "No iPhone",
+      "note": "Steve Jobs publishes \"Thoughts on Flash\", explaining why the iPhone will not run it.",
+      "url": "https://web.archive.org/web/20100501010616/http://www.apple.com/hotnews/thoughts-on-flash/"
+    },
+    {
+      "type": "milestone",
+      "date": "2011-11",
+      "precision": "month",
+      "label": "Mobile stops",
+      "note": "Adobe stops developing Flash for phones."
+    },
+    {
+      "type": "deprecated",
+      "date": "2017-07",
+      "precision": "month",
+      "label": "End set",
+      "note": "Adobe announces that Flash will end in 2020.",
+      "url": "https://blog.adobe.com/en/publish/2017/07/25/adobe-flash-update"
+    },
+    {
+      "type": "ended",
+      "date": "2020-12-31",
+      "precision": "day",
+      "note": "Adobe ends support; from 12 January 2021 Flash Player refuses to run content.",
+      "url": "https://www.adobe.com/products/flashplayer/end-of-life.html"
+    },
+    {
+      "type": "afterlife",
+      "note": "A licensed version lives on in mainland China"
+    }
+  ],
+  "status": "dead",
+  "cause": "Security problems, no support on the iPhone, and open web standards that came to do the same job.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "contains",
+      "to": "actionscript"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Adobe Flash",
+      "url": "https://en.wikipedia.org/wiki/Adobe_Flash",
+      "kind": "secondary"
+    },
+    {
+      "title": "Adobe: Flash Player end of life",
+      "url": "https://www.adobe.com/products/flashplayer/end-of-life.html",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

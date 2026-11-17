@@ -1,0 +1,293 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A thing on the codegrave timeline",
+  "description": "One file per thing at data/things/<category>/<id>.json. Rules: docs/DATA_RULES.md. scripts/build.mjs is the authority; this schema is for editor hints.",
+  "type": "object",
+  "required": [
+    "id",
+    "category",
+    "names",
+    "events",
+    "status",
+    "sources"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "date": {
+      "type": "string",
+      "pattern": "^\\d{4}(-(0[1-9]|1[0-2])(-(0[1-9]|[12]\\d|3[01]))?)?$"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "media": {
+      "type": "object",
+      "required": [
+        "src",
+        "alt",
+        "credit",
+        "licence",
+        "source"
+      ],
+      "additionalProperties": false,
+      "description": "A file under data/media/ that we are allowed to show.",
+      "properties": {
+        "src": {
+          "type": "string",
+          "description": "A path under data/media/, or an https://upload.wikimedia.org/wikipedia/commons/ address."
+        },
+        "alt": {
+          "type": "string"
+        },
+        "credit": {
+          "type": "string"
+        },
+        "licence": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "pattern": "^https://"
+        },
+        "caption": {
+          "type": "string",
+          "maxLength": 200
+        }
+      }
+    }
+  },
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/id",
+      "description": "Same as the file name. Never changes once merged."
+    },
+    "category": {
+      "type": "string",
+      "description": "Same as the folder name. One of the ids in data/categories.json."
+    },
+    "maker": {
+      "type": "string",
+      "description": "The organisation that made it. Not an entry about a person."
+    },
+    "status": {
+      "enum": [
+        "alive",
+        "fading",
+        "dead"
+      ]
+    },
+    "cause": {
+      "type": "string",
+      "description": "One line. Required when status is dead."
+    },
+    "note": {
+      "type": "string",
+      "description": "Required in spirit when status is fading: say why."
+    },
+    "names": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "from"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "from": {
+            "$ref": "#/$defs/date"
+          }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "type"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "enum": [
+              "project_start",
+              "born",
+              "released",
+              "changed_hands",
+              "milestone",
+              "deprecated",
+              "ended",
+              "afterlife"
+            ]
+          },
+          "date": {
+            "$ref": "#/$defs/date"
+          },
+          "precision": {
+            "enum": [
+              "day",
+              "month",
+              "year",
+              "circa"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "until": {
+            "$ref": "#/$defs/date"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 16,
+            "description": "Short text written on the line."
+          },
+          "image": {
+            "$ref": "#/$defs/media"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://",
+            "description": "Official announcement or record of this event."
+          }
+        }
+      }
+    },
+    "signals": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "adoption": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "standard": {
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "editor": {
+          "type": "number",
+          "minimum": -2,
+          "maximum": 2
+        }
+      }
+    },
+    "links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "type",
+          "to"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "type": {
+            "enum": [
+              "succeeded_by",
+              "forked_from",
+              "merged_into",
+              "spun_off_from",
+              "open_sourced_as",
+              "contains",
+              "standardised_as",
+              "version_of",
+              "influenced_by",
+              "extends",
+              "built_on"
+            ]
+          },
+          "to": {
+            "$ref": "#/$defs/id"
+          },
+          "date": {
+            "$ref": "#/$defs/date",
+            "description": "When the link belongs, if not at the birth (a branch) or the end (a handover)."
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "title",
+          "url"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          },
+          "kind": {
+            "enum": [
+              "primary",
+              "secondary"
+            ]
+          }
+        }
+      }
+    },
+    "verified": {
+      "type": "boolean",
+      "description": "true only after every date was checked against a listed source."
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 600,
+      "description": "One short paragraph that opens the history."
+    },
+    "icon": {
+      "$ref": "#/$defs/media"
+    },
+    "image": {
+      "$ref": "#/$defs/media"
+    },
+    "website": {
+      "type": "string",
+      "pattern": "^https://",
+      "description": "The official site."
+    },
+    "official": {
+      "type": "array",
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https://"
+          }
+        }
+      },
+      "description": "Other official links, shown at the top of the history."
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "rss",
+  "category": "formats",
+  "names": [
+    {
+      "name": "RSS",
+      "from": "1999-03-15"
+    }
+  ],
+  "maker": "Netscape, then Dave Winer and others",
+  "summary": "A simple format for publishing a feed of new posts, started by Netscape. Blogs and podcasts were built on it; it faded from view when Google Reader closed, but it still carries every podcast.",
+  "icon": {
+    "src": "icons/rss.svg",
+    "alt": "RSS logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=rss"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Tiny_Tiny_RSS_English_Interface.png/960px-Tiny_Tiny_RSS_English_Interface.png",
+    "alt": "Tiny Tiny RSS, a web feed reader",
+    "credit": "MRosetree",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tiny_Tiny_RSS_English_Interface.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-03-15",
+      "precision": "day",
+      "note": "Netscape releases RSS 0.9 for its My Netscape portal."
+    },
+    {
+      "type": "released",
+      "date": "2000-12",
+      "precision": "month",
+      "label": "RSS 1.0",
+      "note": "A working group releases RSS 1.0, based on RDF."
+    },
+    {
+      "type": "released",
+      "date": "2002-09",
+      "precision": "month",
+      "label": "RSS 2.0",
+      "note": "Dave Winer releases RSS 2.0, \"Really Simple Syndication\".",
+      "url": "https://www.rssboard.org/rss-specification"
+    },
+    {
+      "type": "changed_hands",
+      "date": "2003-07",
+      "precision": "month",
+      "label": "Harvard",
+      "note": "The RSS 2.0 specification is given to Harvard’s Berkman Center."
+    },
+    {
+      "type": "milestone",
+      "date": "2013",
+      "precision": "year",
+      "label": "Reader closes",
+      "note": "Google shuts down Google Reader."
+    }
+  ],
+  "status": "fading",
+  "note": "Less visible since Google Reader closed, but still the way podcasts are distributed.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: RSS",
+      "url": "https://en.wikipedia.org/wiki/RSS",
+      "kind": "secondary"
+    },
+    {
+      "title": "RSS 2.0 specification",
+      "url": "https://www.rssboard.org/rss-specification",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

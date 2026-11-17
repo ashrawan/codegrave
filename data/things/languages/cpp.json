@@ -1,0 +1,109 @@
+{
+  "id": "cpp",
+  "category": "languages",
+  "names": [
+    {
+      "name": "C with Classes",
+      "from": "1979"
+    },
+    {
+      "name": "C++",
+      "from": "1983-12"
+    }
+  ],
+  "maker": "Bjarne Stroustrup, Bell Labs",
+  "summary": "C with classes, templates and much more. Bjarne Stroustrup began it at Bell Labs to add object-oriented programming to C without giving up speed; it runs browsers, games, databases and trading systems.",
+  "website": "https://isocpp.org/",
+  "icon": {
+    "src": "icons/cplusplus.svg",
+    "alt": "C++ logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=cplusplus"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/C%2B%2B_Standards_Committee_meeting_-_July_1996_Stockholm_-_Wednesday_general_session.jpg/960px-C%2B%2B_Standards_Committee_meeting_-_July_1996_Stockholm_-_Wednesday_general_session.jpg",
+    "alt": "The ISO C++ standards committee meeting in Stockholm, 1996",
+    "credit": "Jonathan Schilling",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:C%2B%2B_Standards_Committee_meeting_-_July_1996_Stockholm_-_Wednesday_general_session.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1979",
+      "precision": "year",
+      "note": "Bjarne Stroustrup starts work on \"C with Classes\" at Bell Labs."
+    },
+    {
+      "type": "born",
+      "date": "1985-10",
+      "precision": "month",
+      "note": "The first commercial release, alongside the first edition of \"The C++ Programming Language\"."
+    },
+    {
+      "type": "released",
+      "date": "1989",
+      "precision": "year",
+      "label": "C++ 2.0",
+      "note": "Adds multiple inheritance and abstract classes."
+    },
+    {
+      "type": "released",
+      "date": "1998",
+      "precision": "year",
+      "label": "C++98",
+      "note": "The first ISO standard, ISO/IEC 14882:1998."
+    },
+    {
+      "type": "released",
+      "date": "2011",
+      "precision": "year",
+      "label": "C++11",
+      "note": "A major update: lambdas, auto, move semantics and a memory model."
+    },
+    {
+      "type": "released",
+      "date": "2020-12",
+      "precision": "month",
+      "label": "C++20",
+      "note": "Adds concepts, modules, ranges and coroutines."
+    },
+    {
+      "type": "released",
+      "date": "2024-10",
+      "precision": "month",
+      "label": "C++23",
+      "note": "Published by ISO as ISO/IEC 14882:2024."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "c"
+    },
+    {
+      "type": "influenced_by",
+      "to": "simula"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: C%2B%2B",
+      "url": "https://en.wikipedia.org/wiki/C%2B%2B",
+      "kind": "secondary"
+    },
+    {
+      "title": "Standard C++ Foundation",
+      "url": "https://isocpp.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,92 @@
+{
+  "id": "perl",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Perl",
+      "from": "1987-12-18"
+    }
+  ],
+  "maker": "Larry Wall",
+  "summary": "Larry Wall's “duct tape of the internet”. Perl ruled text processing, system administration and early web CGI scripts in the 1990s; its planned successor split off as Raku, and Perl 5 carries on with a smaller community.",
+  "website": "https://www.perl.org/",
+  "icon": {
+    "src": "icons/perl.svg",
+    "alt": "Perl logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=perl"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Larry_Wall_YAPC_2007.jpg",
+    "alt": "Larry Wall, who created Perl",
+    "credit": "Randal Schwartz from Portland, OR, USA",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Larry_Wall_YAPC_2007.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-12-18",
+      "precision": "day",
+      "note": "Larry Wall releases Perl 1.0 as a Unix scripting language for reports."
+    },
+    {
+      "type": "released",
+      "date": "1991-03",
+      "precision": "month",
+      "label": "Perl 4",
+      "note": "Ships alongside the \"Camel Book\", which becomes the reference."
+    },
+    {
+      "type": "released",
+      "date": "1994-10-17",
+      "precision": "day",
+      "label": "Perl 5",
+      "note": "A near-complete rewrite adding objects, references and modules."
+    },
+    {
+      "type": "milestone",
+      "date": "1995-10-26",
+      "precision": "day",
+      "label": "CPAN",
+      "note": "The CPAN archive of Perl modules launches.",
+      "url": "https://www.cpan.org/"
+    },
+    {
+      "type": "milestone",
+      "date": "2000",
+      "precision": "year",
+      "label": "Perl 6 begins",
+      "note": "A community redesign called Perl 6 is announced; it later becomes Raku."
+    },
+    {
+      "type": "milestone",
+      "date": "2020-06-24",
+      "precision": "day",
+      "label": "Perl 7 plan",
+      "note": "Perl 7 is announced as the next version, then the plan is dropped."
+    }
+  ],
+  "status": "fading",
+  "note": "Still maintained, but used far less than in its 1990s peak.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Perl",
+      "url": "https://en.wikipedia.org/wiki/Perl",
+      "kind": "secondary"
+    },
+    {
+      "title": "perl.org",
+      "url": "https://www.perl.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

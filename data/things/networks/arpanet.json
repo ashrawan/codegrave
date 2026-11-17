@@ -1,0 +1,105 @@
+{
+  "id": "arpanet",
+  "category": "networks",
+  "names": [
+    {
+      "name": "ARPANET",
+      "from": "1969-10-29"
+    }
+  ],
+  "maker": "ARPA (US Department of Defense), built by BBN",
+  "summary": "The US defence research network that first linked computers by packet switching. Email was invented on it, it adopted TCP/IP in 1983, and it grew into the internet before it was switched off.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Arpanet_logical_map%2C_march_1977.png/960px-Arpanet_logical_map%2C_march_1977.png",
+    "alt": "Logical map of the ARPANET in March 1977",
+    "credit": "ARPANET",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Arpanet_logical_map,_march_1977.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1966",
+      "precision": "year",
+      "note": "ARPA approves funding after Bob Taylor argues for a network.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/A_sketch_of_the_ARPANET_in_December_1969.png/960px-A_sketch_of_the_ARPANET_in_December_1969.png",
+        "alt": "Hand-drawn sketch of the four-node ARPANET",
+        "caption": "The ARPANET as sketched in December 1969.",
+        "credit": "DARPA",
+        "licence": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:A_sketch_of_the_ARPANET_in_December_1969.png"
+      }
+    },
+    {
+      "type": "born",
+      "date": "1969-10-29",
+      "precision": "day",
+      "note": "The first message goes from UCLA to SRI; the system crashes after two letters.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/e/e4/First-arpanet-imp-log.jpg",
+        "alt": "Logbook entry for the first ARPANET message",
+        "caption": "The IMP log of the first message, UCLA to SRI.",
+        "credit": "Charles S. Kline",
+        "licence": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:First-arpanet-imp-log.jpg"
+      }
+    },
+    {
+      "type": "milestone",
+      "date": "1971",
+      "precision": "year",
+      "label": "Email",
+      "note": "Ray Tomlinson at BBN sends the first network email."
+    },
+    {
+      "type": "milestone",
+      "date": "1972-10",
+      "precision": "month",
+      "label": "Demo",
+      "note": "A public demonstration at a computer communications conference."
+    },
+    {
+      "type": "milestone",
+      "date": "1983-01-01",
+      "precision": "day",
+      "label": "TCP/IP",
+      "note": "Flag day: the whole network switches to TCP/IP.",
+      "url": "https://www.rfc-editor.org/rfc/rfc801"
+    },
+    {
+      "type": "milestone",
+      "date": "1984-09",
+      "precision": "month",
+      "label": "MILNET",
+      "note": "Military sites move to a separate network, MILNET."
+    },
+    {
+      "type": "ended",
+      "date": "1990-02-28",
+      "precision": "day",
+      "note": "Formally decommissioned."
+    }
+  ],
+  "status": "dead",
+  "cause": "Decommissioned once the internet it gave rise to had taken over.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: ARPANET",
+      "url": "https://en.wikipedia.org/wiki/ARPANET",
+      "kind": "secondary"
+    },
+    {
+      "title": "RFC 801: NCP/TCP transition plan",
+      "url": "https://www.rfc-editor.org/rfc/rfc801",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

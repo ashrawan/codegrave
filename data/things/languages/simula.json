@@ -1,0 +1,76 @@
+{
+  "id": "simula",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Simula",
+      "from": "1965"
+    }
+  ],
+  "maker": "Ole-Johan Dahl and Kristen Nygaard, Norwegian Computing Center",
+  "summary": "The language that invented classes, objects and inheritance, made by Ole-Johan Dahl and Kristen Nygaard in Norway to write simulations. Smalltalk, C++ and Java all grew from its ideas.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Pages_from_DECsystem-10_SIMULA_Language_Handbook.jpg/960px-Pages_from_DECsystem-10_SIMULA_Language_Handbook.jpg",
+    "alt": "Pages from a SIMULA language handbook",
+    "credit": "Jonathan Schilling",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pages_from_DECsystem-10_SIMULA_Language_Handbook.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1962",
+      "precision": "year",
+      "note": "Dahl and Nygaard start designing a language for simulation."
+    },
+    {
+      "type": "born",
+      "date": "1965-01",
+      "precision": "month",
+      "note": "SIMULA I becomes fully operational on a UNIVAC 1107."
+    },
+    {
+      "type": "released",
+      "date": "1968-02",
+      "precision": "month",
+      "label": "Simula 67",
+      "note": "Simula 67, with classes and inheritance, is formally standardised."
+    },
+    {
+      "type": "milestone",
+      "date": "1986",
+      "precision": "year",
+      "label": "Last standard",
+      "note": "Simula Standard 1986 is the final revision."
+    },
+    {
+      "type": "milestone",
+      "date": "2002-04",
+      "precision": "month",
+      "label": "Turing Award",
+      "note": "Dahl and Nygaard receive the 2001 Turing Award for Simula.",
+      "url": "https://amturing.acm.org/award_winners/nygaard_5916220.cfm"
+    }
+  ],
+  "status": "fading",
+  "note": "Little used, but the origin of classes and objects.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Simula",
+      "url": "https://en.wikipedia.org/wiki/Simula",
+      "kind": "secondary"
+    },
+    {
+      "title": "ACM Turing Award 2001",
+      "url": "https://amturing.acm.org/award_winners/nygaard_5916220.cfm",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

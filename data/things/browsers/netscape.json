@@ -1,0 +1,72 @@
+{
+  "id": "netscape",
+  "category": "browsers",
+  "names": [
+    {
+      "name": "Mosaic Netscape",
+      "from": "1994-10-13"
+    },
+    {
+      "name": "Netscape Navigator",
+      "from": "1994-12-15"
+    }
+  ],
+  "maker": "Netscape Communications, then AOL",
+  "summary": "The browser that brought the web to the public and set off the dot-com boom with its 1995 share offering. It lost the first browser war to Internet Explorer, but its released source code became Mozilla and Firefox.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Netscape_Navigator_1.1_for_Macintosh_Install_Disk.jpg/960px-Netscape_Navigator_1.1_for_Macintosh_Install_Disk.jpg",
+    "alt": "Netscape Navigator 1.1 install disk for the Macintosh",
+    "credit": "Kevin van Haaren",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Netscape_Navigator_1.1_for_Macintosh_Install_Disk.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-10-13",
+      "precision": "day",
+      "note": "Mosaic Netscape 0.9 beta, free for non-commercial use."
+    },
+    {
+      "type": "milestone",
+      "date": "1998-03",
+      "precision": "month",
+      "label": "Opened",
+      "note": "Netscape releases its browser source code, which starts the Mozilla project."
+    },
+    {
+      "type": "deprecated",
+      "date": "2007-12-28",
+      "precision": "day",
+      "label": "End set",
+      "note": "AOL cancels Navigator development."
+    },
+    {
+      "type": "ended",
+      "date": "2008-03-01",
+      "precision": "day",
+      "note": "AOL ends support."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost the first browser war to Internet Explorer, which shipped free with Windows.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "mosaic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Netscape Navigator",
+      "url": "https://en.wikipedia.org/wiki/Netscape_Navigator",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,99 @@
+{
+  "id": "ruby",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Ruby",
+      "from": "1995-12-21"
+    }
+  ],
+  "maker": "Yukihiro \"Matz\" Matsumoto",
+  "summary": "A language designed to make programmers happy, created by Yukihiro Matsumoto in Japan. Ruby on Rails made it the language of web start-ups in the 2000s.",
+  "website": "https://www.ruby-lang.org/",
+  "icon": {
+    "src": "icons/ruby.svg",
+    "alt": "Ruby logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=ruby"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/Yukihiro_Matsumoto.JPG",
+    "alt": "Yukihiro Matsumoto, who created Ruby",
+    "credit": "Cep21",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Yukihiro_Matsumoto.JPG"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1993-02-24",
+      "precision": "day",
+      "note": "Matsumoto conceives Ruby and picks its name."
+    },
+    {
+      "type": "born",
+      "date": "1995-12-21",
+      "precision": "day",
+      "note": "Ruby 0.95 is announced on Japanese newsgroups."
+    },
+    {
+      "type": "released",
+      "date": "2003-08",
+      "precision": "month",
+      "label": "Ruby 1.8",
+      "note": "A long-lived release that carries Ruby through the Rails boom."
+    },
+    {
+      "type": "released",
+      "date": "2013-02-24",
+      "precision": "day",
+      "label": "Ruby 2.0",
+      "note": "Released with only five known incompatibilities with 1.9.3."
+    },
+    {
+      "type": "released",
+      "date": "2020-12-25",
+      "precision": "day",
+      "label": "Ruby 3.0",
+      "note": "Aims to be three times faster than Ruby 2.0.",
+      "url": "https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/"
+    },
+    {
+      "type": "released",
+      "date": "2025-12-25",
+      "precision": "day",
+      "label": "Ruby 4.0",
+      "note": "Adds the experimental ZJIT compiler and Ruby Box."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "perl"
+    },
+    {
+      "type": "influenced_by",
+      "to": "smalltalk"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ruby (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Ruby_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "ruby-lang.org",
+      "url": "https://www.ruby-lang.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

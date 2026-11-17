@@ -1,0 +1,97 @@
+{
+  "id": "react",
+  "category": "frameworks",
+  "names": [
+    {
+      "name": "React",
+      "from": "2013-05-29"
+    }
+  ],
+  "maker": "Meta (Facebook), then the React Foundation",
+  "summary": "Facebook's library for building user interfaces from components. Its virtual DOM and one-way data flow changed how web front ends are written, and React Native carried the model to phone apps.",
+  "website": "https://react.dev/",
+  "icon": {
+    "src": "icons/react.svg",
+    "alt": "React logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=react"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/VirtualDOM_with_respect_to_realDOM.png/960px-VirtualDOM_with_respect_to_realDOM.png",
+    "alt": "Diagram of React’s virtual DOM and the real DOM",
+    "credit": "Moderateasneeded",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:VirtualDOM_with_respect_to_realDOM.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2011",
+      "precision": "year",
+      "note": "Facebook first uses React on its News Feed."
+    },
+    {
+      "type": "born",
+      "date": "2013-05-29",
+      "precision": "day",
+      "note": "Open-sourced at JSConf US."
+    },
+    {
+      "type": "milestone",
+      "date": "2015-03",
+      "precision": "month",
+      "label": "React Native",
+      "note": "React Native is open-sourced for phone apps."
+    },
+    {
+      "type": "milestone",
+      "date": "2017-09-23",
+      "precision": "day",
+      "label": "MIT licence",
+      "note": "Facebook relicenses React under the MIT licence after a patent dispute."
+    },
+    {
+      "type": "released",
+      "date": "2019-02-16",
+      "precision": "day",
+      "label": "Hooks",
+      "note": "React 16.8 introduces Hooks."
+    },
+    {
+      "type": "released",
+      "date": "2024-12-05",
+      "precision": "day",
+      "label": "React 19",
+      "note": "Adds Actions and Server Components.",
+      "url": "https://react.dev/blog/2024/12/05/react-19"
+    },
+    {
+      "type": "changed_hands",
+      "date": "2026-02-24",
+      "precision": "day",
+      "label": "Foundation",
+      "note": "The React Foundation launches under the Linux Foundation."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: React (software)",
+      "url": "https://en.wikipedia.org/wiki/React_(software)",
+      "kind": "secondary"
+    },
+    {
+      "title": "react.dev",
+      "url": "https://react.dev/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

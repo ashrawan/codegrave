@@ -1,0 +1,100 @@
+{
+  "id": "coffeescript",
+  "category": "languages",
+  "names": [
+    {
+      "name": "CoffeeScript",
+      "from": "2009-12"
+    }
+  ],
+  "maker": "Jeremy Ashkenas",
+  "summary": "A small language that compiles to JavaScript, with a cleaner Ruby- and Python-like syntax. It shaped modern JavaScript, which later adopted many of its ideas, and then faded as developers moved to ES6 and TypeScript.",
+  "website": "https://coffeescript.org/",
+  "icon": {
+    "src": "icons/coffeescript.svg",
+    "alt": "CoffeeScript logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=coffeescript"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Jeremy_Ashkenas_%284576218518%29.jpg/960px-Jeremy_Ashkenas_%284576218518%29.jpg",
+    "alt": "Jeremy Ashkenas, who created CoffeeScript",
+    "credit": "JS Conf",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeremy_Ashkenas_(4576218518).jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-12-13",
+      "precision": "day",
+      "note": "Jeremy Ashkenas makes the first commit, with a compiler written in Ruby."
+    },
+    {
+      "type": "milestone",
+      "date": "2010-02-21",
+      "precision": "day",
+      "label": "Self-hosting",
+      "note": "Version 0.5 replaces the Ruby compiler with one written in CoffeeScript."
+    },
+    {
+      "type": "released",
+      "date": "2010-12-24",
+      "precision": "day",
+      "label": "1.0",
+      "note": "The stable 1.0 release."
+    },
+    {
+      "type": "milestone",
+      "date": "2011-04-13",
+      "precision": "day",
+      "label": "In Rails",
+      "note": "Ruby on Rails 3.1 includes CoffeeScript by default."
+    },
+    {
+      "type": "milestone",
+      "date": "2017",
+      "precision": "year",
+      "label": "Dropbox leaves",
+      "note": "Dropbox moves its browser code from CoffeeScript to TypeScript."
+    },
+    {
+      "type": "released",
+      "date": "2017-09-18",
+      "precision": "day",
+      "label": "2.0",
+      "note": "Version 2 outputs modern JavaScript."
+    }
+  ],
+  "status": "fading",
+  "note": "Still released, but few new projects choose it now that JavaScript has its features.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "ruby"
+    },
+    {
+      "type": "influenced_by",
+      "to": "javascript"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: CoffeeScript",
+      "url": "https://en.wikipedia.org/wiki/CoffeeScript",
+      "kind": "secondary"
+    },
+    {
+      "title": "coffeescript.org",
+      "url": "https://coffeescript.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

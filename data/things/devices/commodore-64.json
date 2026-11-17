@@ -1,0 +1,76 @@
+{
+  "id": "commodore-64",
+  "category": "devices",
+  "names": [
+    {
+      "name": "Commodore 64",
+      "from": "1982-08"
+    }
+  ],
+  "maker": "Commodore International",
+  "summary": "The best-selling single desktop computer model of all time, according to Guinness World Records. Cheap, with strong sound and graphics for its price, it was the first computer for a generation of programmers and game makers.",
+  "icon": {
+    "src": "icons/commodore.svg",
+    "alt": "Commodore 64 logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=commodore"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Commodore-64-Computer-FL.jpg/960px-Commodore-64-Computer-FL.jpg",
+    "alt": "A Commodore 64 home computer",
+    "credit": "Evan-Amos",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Commodore-64-Computer-FL.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1982-01",
+      "precision": "month",
+      "note": "Shown for the first time at the Consumer Electronics Show in Las Vegas."
+    },
+    {
+      "type": "born",
+      "date": "1982-08",
+      "precision": "month",
+      "note": "Ships in volume at US$595."
+    },
+    {
+      "type": "released",
+      "date": "1986",
+      "precision": "year",
+      "label": "64C",
+      "note": "A cheaper, redesigned case."
+    },
+    {
+      "type": "deprecated",
+      "date": "1994-03",
+      "precision": "month",
+      "label": "End set",
+      "note": "Commodore announces at CeBIT that the C64 will be discontinued in 1995."
+    },
+    {
+      "type": "ended",
+      "date": "1994-04",
+      "precision": "month",
+      "note": "Commodore files for bankruptcy and production stops."
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when Commodore went bankrupt.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Commodore 64",
+      "url": "https://en.wikipedia.org/wiki/Commodore_64",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

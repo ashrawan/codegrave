@@ -1,0 +1,102 @@
+{
+  "id": "linux",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Linux",
+      "from": "1991-09-17"
+    }
+  ],
+  "maker": "Linus Torvalds and contributors",
+  "summary": "The free Unix-like kernel Linus Torvalds started as a student hobby. Shared under the GPL and built by thousands, it runs most servers, every top supercomputer, Android phones and countless devices.",
+  "website": "https://www.kernel.org/",
+  "icon": {
+    "src": "icons/linux.svg",
+    "alt": "Linux logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=linux"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Fedora_Linux_40_KDE_Plasma.png/960px-Fedora_Linux_40_KDE_Plasma.png",
+    "alt": "Fedora Linux with the KDE Plasma desktop",
+    "credit": "Allman",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fedora_Linux_40_KDE_Plasma.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1991-08-25",
+      "precision": "day",
+      "note": "Torvalds announces \"just a hobby\" operating system on the comp.os.minix newsgroup."
+    },
+    {
+      "type": "born",
+      "date": "1991-09-17",
+      "precision": "day",
+      "note": "Version 0.01 is released on the internet."
+    },
+    {
+      "type": "milestone",
+      "date": "1992-02-01",
+      "precision": "day",
+      "label": "GPL",
+      "note": "From version 0.12 Linux is licensed under the GNU GPL.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Linux_0_12.jpg/960px-Linux_0_12.jpg",
+        "alt": "Floppy disks of Linux 0.12",
+        "caption": "Linux 0.12, the first version under the GPL.",
+        "credit": "Shermozle (talk)",
+        "licence": "CC BY-SA 3.0",
+        "source": "https://commons.wikimedia.org/wiki/File:Linux_0_12.jpg"
+      }
+    },
+    {
+      "type": "released",
+      "date": "1994",
+      "precision": "year",
+      "label": "1.0",
+      "note": "Torvalds judges the kernel complete enough for 1.0."
+    },
+    {
+      "type": "released",
+      "date": "1996",
+      "precision": "year",
+      "label": "2.0",
+      "note": "Adds support for multiple processors."
+    },
+    {
+      "type": "milestone",
+      "date": "2017-11",
+      "precision": "month",
+      "label": "All TOP500",
+      "note": "Runs on all of the world’s 500 fastest supercomputers."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "unix"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Linux",
+      "url": "https://en.wikipedia.org/wiki/Linux",
+      "kind": "secondary"
+    },
+    {
+      "title": "kernel.org",
+      "url": "https://www.kernel.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

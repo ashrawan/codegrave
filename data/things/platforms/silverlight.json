@@ -1,0 +1,75 @@
+{
+  "id": "silverlight",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "Silverlight",
+      "from": "2007-09-05"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's answer to Flash, a browser plug-in for video and rich apps. Netflix and the 2008 Olympics streamed with it, but browsers dropped plug-ins and Microsoft moved to HTML5.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2007-04-16",
+      "precision": "day",
+      "note": "Microsoft launches the Silverlight name for its plug-in, code-named WPF/E."
+    },
+    {
+      "type": "born",
+      "date": "2007-09-05",
+      "precision": "day",
+      "note": "Silverlight 1.0 is released."
+    },
+    {
+      "type": "milestone",
+      "date": "2008",
+      "precision": "year",
+      "label": "Olympics",
+      "note": "NBC streams its Beijing Olympics coverage with Silverlight."
+    },
+    {
+      "type": "released",
+      "date": "2011-12-09",
+      "precision": "day",
+      "label": "Silverlight 5",
+      "note": "The final major version."
+    },
+    {
+      "type": "milestone",
+      "date": "2015-09",
+      "precision": "month",
+      "label": "Chrome drops it",
+      "note": "Chrome stops supporting the plug-in."
+    },
+    {
+      "type": "ended",
+      "date": "2021-10-12",
+      "precision": "day",
+      "note": "Microsoft ends support.",
+      "url": "https://learn.microsoft.com/lifecycle/products/silverlight-5"
+    }
+  ],
+  "status": "dead",
+  "cause": "Browsers dropped plug-ins, and Microsoft backed HTML5 instead.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Microsoft Silverlight",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Silverlight",
+      "kind": "secondary"
+    },
+    {
+      "title": "Microsoft lifecycle: Silverlight 5",
+      "url": "https://learn.microsoft.com/lifecycle/products/silverlight-5",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

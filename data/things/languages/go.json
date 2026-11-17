@@ -1,0 +1,82 @@
+{
+  "id": "go",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Go",
+      "from": "2009-11-10"
+    }
+  ],
+  "maker": "Google (Robert Griesemer, Rob Pike, Ken Thompson)",
+  "summary": "A simple, compiled language from Google for large networked software. Its quick builds and built-in concurrency made it the language of cloud tools such as Docker and Kubernetes.",
+  "website": "https://go.dev/",
+  "icon": {
+    "src": "icons/go.svg",
+    "alt": "Go logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=go"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Golang.png/960px-Golang.png",
+    "alt": "The Go gopher mascot",
+    "credit": "Renée French",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Golang.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2007",
+      "precision": "year",
+      "note": "Griesemer, Pike and Thompson start designing Go at Google."
+    },
+    {
+      "type": "born",
+      "date": "2009-11-10",
+      "precision": "day",
+      "note": "Google releases Go publicly as open source."
+    },
+    {
+      "type": "released",
+      "date": "2012-03",
+      "precision": "month",
+      "label": "Go 1.0",
+      "note": "Go 1 ships with a promise that programs will keep compiling for the life of Go 1.",
+      "url": "https://go.dev/doc/go1compat"
+    },
+    {
+      "type": "released",
+      "date": "2022-03-15",
+      "precision": "day",
+      "label": "Generics",
+      "note": "Go 1.18 adds generics, the most requested change.",
+      "url": "https://go.dev/blog/go1.18"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "c"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Go (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Go_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "go.dev",
+      "url": "https://go.dev/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

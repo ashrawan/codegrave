@@ -1,0 +1,62 @@
+{
+  "id": "iojs",
+  "category": "runtimes",
+  "names": [
+    {
+      "name": "io.js",
+      "from": "2015-01-13"
+    }
+  ],
+  "maker": "Node.js contributors (Fedor Indutny and others)",
+  "summary": "A fork of Node.js by core contributors frustrated with its slow pace under Joyent. It shipped faster releases for nine months, then merged back, and Node.js 4.0 carried on from it.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2014-12",
+      "precision": "month",
+      "note": "Fedor Indutny and other contributors fork Node.js."
+    },
+    {
+      "type": "born",
+      "date": "2015-01",
+      "precision": "month",
+      "note": "The first io.js release."
+    },
+    {
+      "type": "ended",
+      "date": "2015-09",
+      "precision": "month",
+      "note": "Merged back: Node.js 4.0 combines the two lines."
+    }
+  ],
+  "status": "dead",
+  "cause": "Not a failure: it merged back into Node.js as version 4.0.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "forked_from",
+      "to": "nodejs"
+    },
+    {
+      "type": "merged_into",
+      "to": "nodejs"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Node.js",
+      "url": "https://en.wikipedia.org/wiki/Node.js",
+      "kind": "secondary"
+    },
+    {
+      "title": "GitHub: nodejs/io.js",
+      "url": "https://github.com/nodejs/io.js",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

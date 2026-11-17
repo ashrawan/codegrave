@@ -1,0 +1,63 @@
+{
+  "id": "backbone",
+  "category": "frameworks",
+  "names": [
+    {
+      "name": "Backbone.js",
+      "from": "2010-10-13"
+    }
+  ],
+  "maker": "Jeremy Ashkenas",
+  "summary": "A small library by Jeremy Ashkenas that gave early single-page apps models, views and events. It was a stepping stone to the bigger frameworks that replaced it, and is still maintained with occasional releases.",
+  "website": "https://backbonejs.org/",
+  "icon": {
+    "src": "icons/backbonedotjs.svg",
+    "alt": "Backbone.js logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=backbonedotjs"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Jeremy_Ashkenas_%284575590175%29.jpg/960px-Jeremy_Ashkenas_%284575590175%29.jpg",
+    "alt": "Jeremy Ashkenas, who created Backbone.js",
+    "credit": "JS Conf",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jeremy_Ashkenas_(4575590175).jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-10-13",
+      "precision": "day",
+      "note": "First release."
+    },
+    {
+      "type": "released",
+      "date": "2024-02",
+      "precision": "month",
+      "label": "1.6",
+      "note": "A maintenance release, fourteen years on."
+    }
+  ],
+  "status": "fading",
+  "note": "Still maintained, but few new projects start with it.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Backbone.js",
+      "url": "https://en.wikipedia.org/wiki/Backbone.js",
+      "kind": "secondary"
+    },
+    {
+      "title": "backbonejs.org",
+      "url": "https://backbonejs.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

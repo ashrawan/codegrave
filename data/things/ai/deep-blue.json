@@ -1,0 +1,73 @@
+{
+  "id": "deep-blue",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Deep Blue",
+      "from": "1996-02-10"
+    }
+  ],
+  "maker": "IBM (Feng-hsiung Hsu, Murray Campbell)",
+  "summary": "IBM's chess machine, the first computer to beat a reigning world champion in a match. After winning the 1997 rematch against Garry Kasparov it was retired, and its two racks went to museums.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/be/Deep_Blue.jpg",
+    "alt": "One of the two Deep Blue cabinets",
+    "credit": "James the photographer",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Deep_Blue.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1985",
+      "precision": "year",
+      "note": "Begins at Carnegie Mellon University as ChipTest; the team joins IBM in 1989."
+    },
+    {
+      "type": "born",
+      "date": "1996-02-10",
+      "precision": "day",
+      "note": "Wins its first game against Kasparov; it loses that match 4 to 2."
+    },
+    {
+      "type": "ended",
+      "date": "1997-05-11",
+      "precision": "day",
+      "note": "Wins the rematch 3½ to 2½ and is retired by IBM.",
+      "url": "https://www.ibm.com/history/deep-blue",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/IBM_Deep_Blue_at_Computer_History_Museum_%289361685537%29.jpg/960px-IBM_Deep_Blue_at_Computer_History_Museum_%289361685537%29.jpg",
+        "alt": "A Deep Blue cabinet at the Computer History Museum",
+        "caption": "Deep Blue at the Computer History Museum.",
+        "credit": "Anton Chiang from Cupertino, CA, USA",
+        "licence": "CC BY 2.0",
+        "source": "https://commons.wikimedia.org/wiki/File:IBM_Deep_Blue_at_Computer_History_Museum_(9361685537).jpg"
+      }
+    },
+    {
+      "type": "afterlife",
+      "note": "One rack is at the Computer History Museum, the other at the Smithsonian’s National Museum of American History."
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired after winning its rematch against the world chess champion.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Deep Blue (chess computer)",
+      "url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)",
+      "kind": "secondary"
+    },
+    {
+      "title": "IBM: Deep Blue",
+      "url": "https://www.ibm.com/history/deep-blue",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

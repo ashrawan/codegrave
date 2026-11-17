@@ -1,0 +1,82 @@
+{
+  "id": "gif",
+  "category": "formats",
+  "names": [
+    {
+      "name": "GIF",
+      "from": "1987-06-15"
+    }
+  ],
+  "maker": "CompuServe (Steve Wilhite)",
+  "summary": "CompuServe's image format, small enough for slow modems. A patent dispute nearly killed it and led to PNG, but its simple animation made it the Web's favourite loop, and Oxford named “GIF” word of the year in 2012.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Rotating_earth_%28large%29.gif",
+    "alt": "An animated GIF of the rotating Earth",
+    "credit": "Marvel",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rotating_earth_(large).gif"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-06-15",
+      "precision": "day",
+      "note": "CompuServe introduces GIF."
+    },
+    {
+      "type": "released",
+      "date": "1989",
+      "precision": "year",
+      "label": "GIF89a",
+      "note": "Adds animation timing and transparency."
+    },
+    {
+      "type": "milestone",
+      "date": "1994-12-24",
+      "precision": "day",
+      "label": "Patent row",
+      "note": "Unisys and CompuServe announce licence fees for the compression GIF uses."
+    },
+    {
+      "type": "milestone",
+      "date": "1995",
+      "precision": "year",
+      "label": "PNG",
+      "note": "PNG is created as a patent-free replacement."
+    },
+    {
+      "type": "milestone",
+      "date": "2003-06-20",
+      "precision": "day",
+      "label": "Patent ends",
+      "note": "The US patent on its compression expires."
+    },
+    {
+      "type": "milestone",
+      "date": "2012",
+      "precision": "year",
+      "label": "Word of year",
+      "note": "Oxford University Press names \"GIF\" word of the year."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: GIF",
+      "url": "https://en.wikipedia.org/wiki/GIF",
+      "kind": "secondary"
+    },
+    {
+      "title": "W3C: GIF89a specification",
+      "url": "https://www.w3.org/Graphics/GIF/spec-gif89a.txt",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

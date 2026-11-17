@@ -1,0 +1,14 @@
+# The site is plain files in site/. The build checks data/ and bundles it into site/data/,
+# so a broken dataset fails the deploy instead of reaching the live site.
+[build]
+  publish = "site"
+  command = "node scripts/build.mjs --quiet"
+
+# Pinned here so an old setting on the Netlify site cannot pick the version.
+[build.environment]
+  NODE_VERSION = "22"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

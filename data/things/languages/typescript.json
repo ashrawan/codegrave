@@ -1,0 +1,108 @@
+{
+  "id": "typescript",
+  "category": "languages",
+  "names": [
+    {
+      "name": "TypeScript",
+      "from": "2012-10-01"
+    }
+  ],
+  "maker": "Microsoft (Anders Hejlsberg)",
+  "summary": "JavaScript with a type system added. Microsoft released it in 2012 so large codebases could catch mistakes before running; it compiles to plain JavaScript, so it runs anywhere JavaScript does, and it became the default for big web projects.",
+  "website": "https://www.typescriptlang.org/",
+  "icon": {
+    "src": "icons/typescript.svg",
+    "alt": "TypeScript logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=typescript"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Anders_Hejlsberg.jpg/960px-Anders_Hejlsberg.jpg",
+    "alt": "Anders Hejlsberg, lead designer of TypeScript",
+    "credit": "DBegley",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Anders_Hejlsberg.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-10-01",
+      "precision": "day",
+      "note": "Microsoft releases version 0.8 publicly."
+    },
+    {
+      "type": "released",
+      "date": "2014-04-12",
+      "precision": "day",
+      "label": "1.0",
+      "note": "TypeScript 1.0 is released."
+    },
+    {
+      "type": "milestone",
+      "date": "2014-07",
+      "precision": "month",
+      "label": "Moves to GitHub",
+      "note": "The source code moves from CodePlex to GitHub.",
+      "url": "https://github.com/microsoft/TypeScript"
+    },
+    {
+      "type": "released",
+      "date": "2016-09-22",
+      "precision": "day",
+      "label": "2.0",
+      "note": "Adds optional null safety."
+    },
+    {
+      "type": "released",
+      "date": "2023-03-16",
+      "precision": "day",
+      "label": "5.0",
+      "note": "Adds standard decorators."
+    },
+    {
+      "type": "milestone",
+      "date": "2025-03-11",
+      "precision": "day",
+      "label": "Go port",
+      "note": "Anders Hejlsberg announces a port of the compiler to Go for large speed-ups."
+    },
+    {
+      "type": "released",
+      "date": "2026-07-08",
+      "precision": "day",
+      "label": "7.0",
+      "note": "The first release with the native Go compiler."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "extends",
+      "to": "javascript",
+      "note": "JavaScript with types. TypeScript code compiles to plain JavaScript."
+    },
+    {
+      "type": "influenced_by",
+      "to": "csharp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: TypeScript",
+      "url": "https://en.wikipedia.org/wiki/TypeScript",
+      "kind": "secondary"
+    },
+    {
+      "title": "typescriptlang.org",
+      "url": "https://www.typescriptlang.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

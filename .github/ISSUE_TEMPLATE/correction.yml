@@ -1,0 +1,32 @@
+name: Correction
+description: A date, name or fact on the timeline is wrong.
+title: "Correction: "
+labels: ["data", "correction"]
+body:
+  - type: input
+    id: thing
+    attributes:
+      label: Which thing
+      description: Its name, or its link such as codegrave.com/#flash
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What is wrong
+      description: What the timeline says now, and what it should say.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: A link that supports the correction. An official announcement or document is best.
+    validations:
+      required: true
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Fixing it yourself?
+      options:
+        - label: I would like to open the pull request for this.

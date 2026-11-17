@@ -1,0 +1,82 @@
+{
+  "id": "gpt-3",
+  "category": "ai",
+  "names": [
+    {
+      "name": "GPT-3",
+      "from": "2020-06-11"
+    }
+  ],
+  "maker": "OpenAI",
+  "summary": "OpenAI's 175-billion-parameter language model, which showed that a large enough model can do new tasks from a few examples. Offered only through an API, it was the base of ChatGPT's first model and was switched off as newer models replaced it.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2020-05-28",
+      "precision": "day",
+      "note": "OpenAI publishes the GPT-3 paper, \"Language Models are Few-Shot Learners\".",
+      "url": "https://arxiv.org/abs/2005.14165"
+    },
+    {
+      "type": "born",
+      "date": "2020-06-11",
+      "precision": "day",
+      "note": "OpenAI opens a waiting list for its API, the only way to use GPT-3."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2020-09-22",
+      "precision": "day",
+      "label": "Microsoft",
+      "note": "Microsoft gets an exclusive licence to the model itself."
+    },
+    {
+      "type": "milestone",
+      "date": "2022-01-27",
+      "precision": "day",
+      "label": "InstructGPT",
+      "note": "Models tuned to follow instructions become the API default."
+    },
+    {
+      "type": "deprecated",
+      "date": "2023-07-06",
+      "precision": "day",
+      "label": "Notice",
+      "note": "OpenAI gives notice that the original GPT-3 models will shut down.",
+      "url": "https://developers.openai.com/api/docs/deprecations"
+    },
+    {
+      "type": "ended",
+      "date": "2024-01-04",
+      "precision": "day",
+      "note": "The original ada, babbage, curie and davinci models are shut down.",
+      "url": "https://developers.openai.com/api/docs/deprecations"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its original models were switched off in favour of newer ones.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: GPT-3",
+      "url": "https://en.wikipedia.org/wiki/GPT-3",
+      "kind": "secondary"
+    },
+    {
+      "title": "OpenAI API deprecations",
+      "url": "https://developers.openai.com/api/docs/deprecations",
+      "kind": "primary"
+    },
+    {
+      "title": "arXiv: Language Models are Few-Shot Learners",
+      "url": "https://arxiv.org/abs/2005.14165",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

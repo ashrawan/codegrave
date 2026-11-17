@@ -1,0 +1,83 @@
+{
+  "id": "jquery",
+  "category": "frameworks",
+  "names": [
+    {
+      "name": "jQuery",
+      "from": "2006-08-26"
+    }
+  ],
+  "maker": "John Resig, then the jQuery Foundation",
+  "summary": "John Resig's library that made JavaScript work the same in every browser, with a short way to find and change page elements. It ran on most of the web for a decade; modern browsers now do most of what it was needed for.",
+  "website": "https://jquery.com/",
+  "icon": {
+    "src": "icons/jquery.svg",
+    "alt": "jQuery logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=jquery"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/John_Resig_%284586826039%29_%28cropped%29.jpg/960px-John_Resig_%284586826039%29_%28cropped%29.jpg",
+    "alt": "John Resig, who created jQuery",
+    "credit": "JS Conf",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Resig_(4586826039)_(cropped).jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2006-01",
+      "precision": "month",
+      "note": "John Resig shows jQuery at BarCamp NYC."
+    },
+    {
+      "type": "born",
+      "date": "2006-08-26",
+      "precision": "day",
+      "note": "Version 1.0, the first stable release."
+    },
+    {
+      "type": "released",
+      "date": "2013-04-18",
+      "precision": "day",
+      "label": "2.0",
+      "note": "Drops support for Internet Explorer 6, 7 and 8."
+    },
+    {
+      "type": "released",
+      "date": "2016-06-09",
+      "precision": "day",
+      "label": "3.0",
+      "note": "Adds standard Promises."
+    },
+    {
+      "type": "released",
+      "date": "2026-01-17",
+      "precision": "day",
+      "label": "4.0",
+      "note": "Drops Internet Explorer 10 and older."
+    }
+  ],
+  "status": "fading",
+  "note": "Still on a huge share of sites, but browsers now do most of what it was needed for.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: JQuery",
+      "url": "https://en.wikipedia.org/wiki/JQuery",
+      "kind": "secondary"
+    },
+    {
+      "title": "jquery.com",
+      "url": "https://jquery.com/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

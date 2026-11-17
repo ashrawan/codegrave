@@ -1,0 +1,82 @@
+{
+  "id": "git",
+  "category": "runtimes",
+  "names": [
+    {
+      "name": "Git",
+      "from": "2005-04-07"
+    }
+  ],
+  "maker": "Linus Torvalds, then Junio Hamano",
+  "summary": "The version control system Linus Torvalds wrote in a few weeks after Linux lost free use of BitKeeper. Distributed and fast, it became the way nearly all software is stored and shared, helped by GitHub.",
+  "website": "https://git-scm.com/",
+  "icon": {
+    "src": "icons/git.svg",
+    "alt": "Git logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=git"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Git_gui.png",
+    "alt": "The git gui commit tool",
+    "credit": "Git Open Source",
+    "licence": "GPL",
+    "source": "https://commons.wikimedia.org/wiki/File:Git_gui.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2005-04-03",
+      "precision": "day",
+      "note": "Linus Torvalds starts writing Git after BitKeeper’s free licence is withdrawn."
+    },
+    {
+      "type": "born",
+      "date": "2005-04-07",
+      "precision": "day",
+      "note": "Git manages its own source code."
+    },
+    {
+      "type": "milestone",
+      "date": "2005-04-18",
+      "precision": "day",
+      "label": "First merge",
+      "note": "The first merge of multiple branches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2005-07-26",
+      "precision": "day",
+      "label": "Junio Hamano",
+      "note": "Torvalds hands maintenance to Junio Hamano, who still leads it."
+    },
+    {
+      "type": "released",
+      "date": "2005-12-21",
+      "precision": "day",
+      "label": "1.0",
+      "note": "Git 1.0 is released."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Git",
+      "url": "https://en.wikipedia.org/wiki/Git",
+      "kind": "secondary"
+    },
+    {
+      "title": "git-scm.com",
+      "url": "https://git-scm.com/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

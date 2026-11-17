@@ -1,0 +1,69 @@
+{
+  "id": "windows-95",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows 95",
+      "from": "1995-08-24"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "The Windows that introduced the Start button and taskbar, launched with a huge campaign and the Rolling Stones' “Start Me Up”. It merged DOS and Windows into one product and set the look of Windows for decades.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Disquetes_y_CD-ROM_de_instalacion_de_Windows_95.jpg/960px-Disquetes_y_CD-ROM_de_instalacion_de_Windows_95.jpg",
+    "alt": "Windows 95 installation floppy disks and CD-ROM",
+    "credit": "яіску ѕнояє",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Disquetes_y_CD-ROM_de_instalacion_de_Windows_95.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1995-07-14",
+      "precision": "day",
+      "note": "Released to manufacturing."
+    },
+    {
+      "type": "born",
+      "date": "1995-08-24",
+      "precision": "day",
+      "note": "Goes on sale worldwide."
+    },
+    {
+      "type": "released",
+      "date": "1996-08-30",
+      "precision": "day",
+      "label": "OSR2",
+      "note": "A service release adds the FAT32 file system."
+    },
+    {
+      "type": "deprecated",
+      "date": "2000-12-31",
+      "precision": "day",
+      "label": "Mainstream ends",
+      "note": "Microsoft ends mainstream support."
+    },
+    {
+      "type": "ended",
+      "date": "2001-12-31",
+      "precision": "day",
+      "note": "Extended support ends."
+    }
+  ],
+  "status": "dead",
+  "cause": "Reached the end of its support life.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Windows 95",
+      "url": "https://en.wikipedia.org/wiki/Windows_95",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

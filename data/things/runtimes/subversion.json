@@ -1,0 +1,76 @@
+{
+  "id": "subversion",
+  "category": "runtimes",
+  "names": [
+    {
+      "name": "Subversion",
+      "from": "2000-10-20"
+    }
+  ],
+  "maker": "CollabNet, then the Apache Software Foundation",
+  "summary": "Version control built as a better CVS, started by CollabNet. It was the standard for open-source and company code in the 2000s, until Git replaced it almost everywhere.",
+  "website": "https://subversion.apache.org/",
+  "icon": {
+    "src": "icons/subversion.svg",
+    "alt": "Subversion logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=subversion"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/41/TortoiseSVN.png",
+    "alt": "TortoiseSVN, a Subversion client for Windows",
+    "credit": "Enoch Lau",
+    "licence": "GPL",
+    "source": "https://commons.wikimedia.org/wiki/File:TortoiseSVN.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2000",
+      "precision": "year",
+      "note": "CollabNet starts the Subversion project."
+    },
+    {
+      "type": "born",
+      "date": "2000-10-20",
+      "precision": "day",
+      "note": "First release."
+    },
+    {
+      "type": "released",
+      "date": "2004-02",
+      "precision": "month",
+      "label": "1.0",
+      "note": "Subversion 1.0 is released."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2010-02-17",
+      "precision": "day",
+      "label": "Apache",
+      "note": "Becomes a top-level Apache project."
+    }
+  ],
+  "status": "fading",
+  "note": "Still maintained, but rarely chosen for new projects.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Apache Subversion",
+      "url": "https://en.wikipedia.org/wiki/Apache_Subversion",
+      "kind": "secondary"
+    },
+    {
+      "title": "subversion.apache.org",
+      "url": "https://subversion.apache.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "napster",
+  "category": "networks",
+  "names": [
+    {
+      "name": "Napster",
+      "from": "1999-06-01"
+    }
+  ],
+  "maker": "Shawn Fanning and Sean Parker",
+  "summary": "The peer-to-peer file-sharing service Shawn Fanning and Sean Parker launched from a dorm room. Millions swapped MP3s through it until record companies and artists sued it out of existence, and it changed the music business for good.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-06-01",
+      "precision": "day",
+      "note": "Launches as a free music file-sharing app."
+    },
+    {
+      "type": "milestone",
+      "date": "2000-04",
+      "precision": "month",
+      "label": "Metallica sues",
+      "note": "Metallica files a copyright lawsuit, followed by others."
+    },
+    {
+      "type": "milestone",
+      "date": "2001-02",
+      "precision": "month",
+      "label": "26.4 million",
+      "note": "Peak of 26.4 million users worldwide."
+    },
+    {
+      "type": "ended",
+      "date": "2001-07",
+      "precision": "month",
+      "note": "A court injunction forces Napster to shut down its network."
+    },
+    {
+      "type": "afterlife",
+      "note": "Napster files for bankruptcy in June 2002; Roxio buys the name, which lives on in unrelated music services."
+    }
+  ],
+  "status": "dead",
+  "cause": "Shut down by court order over copyright.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Napster",
+      "url": "https://en.wikipedia.org/wiki/Napster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

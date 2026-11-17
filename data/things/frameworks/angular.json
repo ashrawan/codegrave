@@ -1,0 +1,82 @@
+{
+  "id": "angular",
+  "category": "frameworks",
+  "names": [
+    {
+      "name": "Angular",
+      "from": "2016-09-14"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's rewrite of AngularJS as a full TypeScript framework, built for large applications. It shares a name with its predecessor but little code, and moved to a regular six-month release cycle.",
+  "website": "https://angular.dev/",
+  "icon": {
+    "src": "icons/angular.svg",
+    "alt": "Angular logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=angular"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Architecture_of_an_Angular_2_application.png",
+    "alt": "Diagram of the building blocks of an Angular application",
+    "credit": "Google",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Architecture_of_an_Angular_2_application.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2014-01",
+      "precision": "month",
+      "note": "Announced at ng-conf 2014 as Angular 2."
+    },
+    {
+      "type": "born",
+      "date": "2016-09-14",
+      "precision": "day",
+      "note": "Angular 2.0 final is released."
+    },
+    {
+      "type": "released",
+      "date": "2020-02-06",
+      "precision": "day",
+      "label": "Ivy",
+      "note": "Version 9 turns on the new Ivy compiler and renderer by default."
+    },
+    {
+      "type": "released",
+      "date": "2022-06-02",
+      "precision": "day",
+      "label": "Standalone",
+      "note": "Version 14 adds standalone components without NgModules."
+    },
+    {
+      "type": "released",
+      "date": "2025-11-19",
+      "precision": "day",
+      "label": "Angular 21",
+      "note": "Adds experimental signal-based forms."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Angular (web framework)",
+      "url": "https://en.wikipedia.org/wiki/Angular_(web_framework)",
+      "kind": "secondary"
+    },
+    {
+      "title": "angular.dev",
+      "url": "https://angular.dev/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

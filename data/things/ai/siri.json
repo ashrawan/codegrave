@@ -1,0 +1,60 @@
+{
+  "id": "siri",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Siri",
+      "from": "2011-10-14"
+    }
+  ],
+  "maker": "Siri Inc. (from SRI International), then Apple",
+  "summary": "The voice assistant that came out of an SRI International research project. Apple bought it and made it a headline feature of the iPhone 4S, putting a talking assistant in millions of pockets years before chatbots.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2010-04",
+      "precision": "month",
+      "note": "Apple buys Siri Inc., which had spun out of SRI International."
+    },
+    {
+      "type": "born",
+      "date": "2011-10-14",
+      "precision": "day",
+      "note": "Launches on the iPhone 4S, labelled beta."
+    },
+    {
+      "type": "milestone",
+      "date": "2024",
+      "precision": "year",
+      "label": "ChatGPT link",
+      "note": "iOS 18 adds language-model features and a link to ChatGPT."
+    },
+    {
+      "type": "milestone",
+      "date": "2026",
+      "precision": "year",
+      "label": "Gemini Siri",
+      "note": "A Siri built on Google’s Gemini models is unveiled at WWDC."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Siri",
+      "url": "https://en.wikipedia.org/wiki/Siri",
+      "kind": "secondary"
+    },
+    {
+      "title": "Apple: Siri",
+      "url": "https://www.apple.com/siri/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

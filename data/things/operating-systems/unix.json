@@ -1,0 +1,90 @@
+{
+  "id": "unix",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Unix",
+      "from": "1971-11"
+    }
+  ],
+  "maker": "Bell Labs (Ken Thompson, Dennis Ritchie)",
+  "summary": "The operating system Ken Thompson and Dennis Ritchie built at Bell Labs after Multics. Rewritten in C, licensed to universities and copied everywhere, its ideas live on in Linux, macOS, iOS and Android.",
+  "website": "https://www.opengroup.org/unix",
+  "icon": {
+    "src": "icons/unix-dv.svg",
+    "alt": "Unix logo",
+    "credit": "Devicon",
+    "licence": "MIT (the mark itself belongs to its owner)",
+    "source": "https://devicon.dev/"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Version_7_Unix_SIMH_PDP11_Emulation_DMR.png",
+    "alt": "Version 7 Unix running in a PDP-11 simulator",
+    "credit": "Huihermit",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Version_7_Unix_SIMH_PDP11_Emulation_DMR.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1969",
+      "precision": "year",
+      "note": "Development starts at Bell Labs on a PDP-7, in assembly language."
+    },
+    {
+      "type": "born",
+      "date": "1971-11",
+      "precision": "month",
+      "note": "The First Edition and its manual."
+    },
+    {
+      "type": "milestone",
+      "date": "1973",
+      "precision": "year",
+      "label": "In C",
+      "note": "Version 4 is rewritten in C, so it can move to new machines."
+    },
+    {
+      "type": "milestone",
+      "date": "1975",
+      "precision": "year",
+      "label": "Universities",
+      "note": "The first source licence goes to the University of Illinois; BSD follows at Berkeley."
+    },
+    {
+      "type": "released",
+      "date": "1983",
+      "precision": "year",
+      "label": "System V",
+      "note": "AT&T releases UNIX System V."
+    },
+    {
+      "type": "changed_hands",
+      "date": "1993",
+      "precision": "year",
+      "label": "Trademark",
+      "note": "The UNIX trademark moves to X/Open, now The Open Group, which certifies systems."
+    }
+  ],
+  "status": "alive",
+  "note": "Lives on as a family of systems rather than one product.",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Unix",
+      "url": "https://en.wikipedia.org/wiki/Unix",
+      "kind": "secondary"
+    },
+    {
+      "title": "The Open Group: UNIX",
+      "url": "https://www.opengroup.org/unix",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,73 @@
+{
+  "id": "xhtml",
+  "category": "formats",
+  "names": [
+    {
+      "name": "XHTML",
+      "from": "2000-01-26"
+    }
+  ],
+  "maker": "W3C",
+  "summary": "HTML rewritten as strict XML by the W3C, meant to be the future of the Web. Browsers and authors never fully followed, the WHATWG's HTML5 won instead, and the W3C retired XHTML's recommendations in 2018.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-01-26",
+      "precision": "day",
+      "note": "XHTML 1.0 becomes a W3C Recommendation.",
+      "url": "https://www.w3.org/TR/xhtml1/"
+    },
+    {
+      "type": "released",
+      "date": "2001-05-31",
+      "precision": "day",
+      "label": "XHTML 1.1",
+      "note": "XHTML 1.1 becomes a Recommendation."
+    },
+    {
+      "type": "milestone",
+      "date": "2005",
+      "precision": "year",
+      "label": "WHATWG",
+      "note": "Browser makers work on HTML separately, at the WHATWG."
+    },
+    {
+      "type": "deprecated",
+      "date": "2009-07-02",
+      "precision": "day",
+      "label": "XHTML 2 ends",
+      "note": "The W3C lets the XHTML 2 working group close."
+    },
+    {
+      "type": "ended",
+      "date": "2018-03-27",
+      "precision": "day",
+      "note": "The W3C retires the XHTML 1.0 and 1.1 recommendations."
+    },
+    {
+      "type": "afterlife",
+      "note": "HTML still has an XML syntax, so XHTML-style pages keep working."
+    }
+  ],
+  "status": "dead",
+  "cause": "HTML5 won, and the W3C retired the XHTML recommendations.",
+  "signals": {
+    "adoption": 3,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: XHTML",
+      "url": "https://en.wikipedia.org/wiki/XHTML",
+      "kind": "secondary"
+    },
+    {
+      "title": "W3C: XHTML 1.0",
+      "url": "https://www.w3.org/TR/xhtml1/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

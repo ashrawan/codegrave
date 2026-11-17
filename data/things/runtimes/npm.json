@@ -1,0 +1,71 @@
+{
+  "id": "npm",
+  "category": "runtimes",
+  "names": [
+    {
+      "name": "npm",
+      "from": "2010-01-12"
+    }
+  ],
+  "maker": "Isaac Schlueter, then npm, Inc., then GitHub",
+  "summary": "The package manager that ships with Node.js and the registry behind it, now the largest collection of open-source code in the world. Its scale made it a target, and its incidents shaped how the industry thinks about supply-chain risk.",
+  "website": "https://www.npmjs.com/",
+  "icon": {
+    "src": "icons/npm.svg",
+    "alt": "npm logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=npm"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-01-12",
+      "precision": "day",
+      "note": "First release, a small package manager for Node.js."
+    },
+    {
+      "type": "milestone",
+      "date": "2016-03",
+      "precision": "month",
+      "label": "left-pad",
+      "note": "An eleven-line package is unpublished and breaks thousands of builds; npm changes its rules.",
+      "url": "https://blog.npmjs.org/post/141577284765/kik-left-pad-and-npm"
+    },
+    {
+      "type": "changed_hands",
+      "date": "2020-03",
+      "precision": "month",
+      "label": "GitHub",
+      "note": "GitHub, part of Microsoft, buys npm, Inc.",
+      "url": "https://github.blog/news-insights/company-news/npm-is-joining-github/"
+    },
+    {
+      "type": "milestone",
+      "date": "2025-09",
+      "precision": "month",
+      "label": "Phished",
+      "note": "Popular packages are hijacked after maintainers are phished, and ship malware."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Npm",
+      "url": "https://en.wikipedia.org/wiki/Npm",
+      "kind": "secondary"
+    },
+    {
+      "title": "npmjs.com",
+      "url": "https://www.npmjs.com/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

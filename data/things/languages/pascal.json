@@ -1,0 +1,81 @@
+{
+  "id": "pascal",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Pascal",
+      "from": "1970"
+    }
+  ],
+  "maker": "Niklaus Wirth, ETH Zurich",
+  "summary": "Niklaus Wirth's small, strict language for teaching good structure. It was the teaching language of a generation, Apple wrote the Lisa and early Mac software in it, and Turbo Pascal and Delphi carried it into the PC era.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/22/Niklaus_Wirth%2C_UrGU_%28cropped%29.jpg",
+    "alt": "Niklaus Wirth, who designed Pascal",
+    "credit": "Tyomitch",
+    "licence": "Copyrighted free use",
+    "source": "https://commons.wikimedia.org/wiki/File:Niklaus_Wirth,_UrGU_(cropped).jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1970",
+      "precision": "year",
+      "note": "Niklaus Wirth publishes Pascal, building on his ALGOL W work."
+    },
+    {
+      "type": "released",
+      "date": "1979",
+      "precision": "year",
+      "label": "Apple Pascal",
+      "note": "Apple ships Pascal for the Apple II, based on UCSD Pascal."
+    },
+    {
+      "type": "milestone",
+      "date": "1983",
+      "precision": "year",
+      "label": "ISO 7185",
+      "note": "Pascal is standardised as ISO 7185."
+    },
+    {
+      "type": "released",
+      "date": "1985",
+      "precision": "year",
+      "label": "Object Pascal",
+      "note": "Apple adds objects for the Mac’s MacApp framework."
+    },
+    {
+      "type": "released",
+      "date": "1989",
+      "precision": "year",
+      "label": "Turbo Pascal 5.5",
+      "note": "Borland adds Object Pascal to Turbo Pascal."
+    }
+  ],
+  "status": "fading",
+  "note": "Still alive through Delphi and Free Pascal, but rarely taught or chosen now.",
+  "signals": {
+    "adoption": 4,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "algol"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Pascal (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Pascal_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "ISO 7185:1990 Pascal",
+      "url": "https://www.iso.org/standard/13802.html",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

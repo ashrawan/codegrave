@@ -1,0 +1,87 @@
+{
+  "id": "python-2",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Python 2",
+      "from": "2000-10-16"
+    }
+  ],
+  "summary": "The second major line of Python. It brought the language into the mainstream, then lived on for twelve years beside Python 3 because so much code depended on it, until support finally ended in 2020.",
+  "website": "https://www.python.org/doc/sunset-python-2/",
+  "icon": {
+    "src": "icons/python.svg",
+    "alt": "Python 2 logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=python"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Guido_van_Rossum_in_PyConUS24.jpg/960px-Guido_van_Rossum_in_PyConUS24.jpg",
+    "alt": "Guido van Rossum at PyCon US 2024",
+    "credit": "Kushal Das",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Guido_van_Rossum_in_PyConUS24.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-10-16",
+      "precision": "day",
+      "note": "Python 2.0 is released."
+    },
+    {
+      "type": "released",
+      "date": "2010-07-03",
+      "precision": "day",
+      "label": "Python 2.7",
+      "note": "The last release line of Python 2, meant as a bridge to Python 3."
+    },
+    {
+      "type": "deprecated",
+      "date": "2014-11",
+      "precision": "month",
+      "label": "End set 2020",
+      "note": "The core team announces that Python 2.7 will be supported until 2020.",
+      "url": "https://peps.python.org/pep-0373/"
+    },
+    {
+      "type": "ended",
+      "date": "2020-01-01",
+      "precision": "day",
+      "note": "Support ends and the 2.7 branch is frozen.",
+      "url": "https://www.python.org/doc/sunset-python-2/"
+    },
+    {
+      "type": "afterlife",
+      "note": "One final release, 2.7.18, ships with the last fixes.",
+      "until": "2020-04-20"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sunset in favour of Python 3 after a twelve-year overlap.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "version_of",
+      "to": "python"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: History of Python",
+      "url": "https://en.wikipedia.org/wiki/History_of_Python",
+      "kind": "secondary"
+    },
+    {
+      "title": "Python: Sunsetting Python 2",
+      "url": "https://www.python.org/doc/sunset-python-2/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

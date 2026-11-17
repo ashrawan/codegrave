@@ -1,0 +1,84 @@
+{
+  "id": "lisp",
+  "category": "languages",
+  "names": [
+    {
+      "name": "LISP",
+      "from": "1958"
+    }
+  ],
+  "maker": "John McCarthy, MIT",
+  "summary": "The second-oldest high-level language still in use, created by John McCarthy for artificial intelligence research. It gave the world garbage collection, the REPL and code written as data, and lives on in Common Lisp, Scheme and Clojure.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/LISP_machine.jpg/960px-LISP_machine.jpg",
+    "alt": "A Lisp machine at the MIT Museum",
+    "credit": "Jszigetvari",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LISP_machine.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year",
+      "note": "John McCarthy begins developing Lisp at MIT."
+    },
+    {
+      "type": "milestone",
+      "date": "1960",
+      "precision": "year",
+      "label": "The paper",
+      "note": "McCarthy publishes Lisp’s design in Communications of the ACM.",
+      "url": "https://doi.org/10.1145/367177.367199"
+    },
+    {
+      "type": "milestone",
+      "date": "1962",
+      "precision": "year",
+      "label": "Compiler",
+      "note": "Tim Hart and Mike Levin write the first complete Lisp compiler, in Lisp."
+    },
+    {
+      "type": "released",
+      "date": "1975",
+      "precision": "year",
+      "label": "Scheme",
+      "note": "The Scheme dialect appears."
+    },
+    {
+      "type": "released",
+      "date": "1984",
+      "precision": "year",
+      "label": "Common Lisp",
+      "note": "\"Common Lisp the Language\" unifies the main dialects."
+    },
+    {
+      "type": "milestone",
+      "date": "1994",
+      "precision": "year",
+      "label": "ANSI standard",
+      "note": "ANSI publishes the Common Lisp standard."
+    }
+  ],
+  "status": "alive",
+  "note": "Lives on through dialects such as Scheme, Common Lisp and Clojure.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Lisp (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Lisp_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "McCarthy (1960), Recursive Functions of Symbolic Expressions",
+      "url": "https://doi.org/10.1145/367177.367199",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

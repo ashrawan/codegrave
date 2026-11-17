@@ -1,0 +1,63 @@
+{
+  "id": "raku",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Perl 6",
+      "from": "2015-12-25"
+    },
+    {
+      "name": "Raku",
+      "from": "2019-10"
+    }
+  ],
+  "maker": "Larry Wall and the Raku community",
+  "summary": "The redesign of Perl that took fifteen years to arrive and then left Perl's name behind. It is a separate language with grammars, gradual typing and concurrency built in.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/FOSDEM_2015_Larry_Wall_and_Camelia_the_Perl6_logo.jpg/960px-FOSDEM_2015_Larry_Wall_and_Camelia_the_Perl6_logo.jpg",
+    "alt": "Larry Wall announcing Perl 6 with its Camelia logo at FOSDEM 2015",
+    "credit": "Klapi",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FOSDEM_2015_Larry_Wall_and_Camelia_the_Perl6_logo.jpg"
+  },
+  "website": "https://raku.org/",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2000-07-19",
+      "precision": "day",
+      "note": "Larry Wall announces the Perl 6 design effort at his \"State of the Onion\" talk."
+    },
+    {
+      "type": "born",
+      "date": "2015-12-25",
+      "precision": "day",
+      "note": "The first stable release, nicknamed \"Christmas\"."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spun_off_from",
+      "to": "perl"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Raku (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Raku_(programming_language)",
+      "kind": "secondary"
+    },
+    {
+      "title": "raku.org",
+      "url": "https://raku.org/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

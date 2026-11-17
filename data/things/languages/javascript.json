@@ -1,0 +1,121 @@
+{
+  "id": "javascript",
+  "category": "languages",
+  "names": [
+    {
+      "name": "LiveScript",
+      "from": "1995-09"
+    },
+    {
+      "name": "JavaScript",
+      "from": "1995-12-04"
+    }
+  ],
+  "maker": "Netscape (Brendan Eich)",
+  "summary": "The scripting language of the web browser. Netscape built it in 1995 to make pages interactive, it was standardised as ECMAScript two years later, and it now runs in every browser and, through Node.js, on servers too.",
+  "website": "https://ecma-international.org/publications-and-standards/standards/ecma-262/",
+  "icon": {
+    "src": "icons/javascript.svg",
+    "alt": "JavaScript logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=javascript"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/JavaScript_code.png",
+    "alt": "JavaScript code in an editor",
+    "credit": "Lionel Rowe",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:JavaScript_code.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1995",
+      "precision": "year",
+      "note": "Brendan Eich designs the language at Netscape, first called Mocha."
+    },
+    {
+      "type": "born",
+      "date": "1995-09",
+      "precision": "month",
+      "note": "Ships in a Netscape Navigator beta under the name LiveScript."
+    },
+    {
+      "type": "milestone",
+      "date": "1996-11",
+      "precision": "month",
+      "label": "Sent to Ecma",
+      "note": "Netscape submits the language to Ecma International to become a standard."
+    },
+    {
+      "type": "milestone",
+      "date": "1997-06",
+      "precision": "month",
+      "label": "Standard",
+      "note": "The first ECMAScript specification is published.",
+      "url": "https://ecma-international.org/publications-and-standards/standards/ecma-262/"
+    },
+    {
+      "type": "released",
+      "date": "1999-12",
+      "precision": "month",
+      "label": "ES3",
+      "note": "ECMAScript 3 adds regular expressions and try/catch; it defines the language for a decade."
+    },
+    {
+      "type": "released",
+      "date": "2009-12",
+      "precision": "month",
+      "label": "ES5",
+      "note": "ECMAScript 5 adds strict mode and JSON support."
+    },
+    {
+      "type": "released",
+      "date": "2015-06",
+      "precision": "month",
+      "label": "ES6",
+      "note": "ECMAScript 2015 adds classes, modules, promises and arrow functions; yearly editions follow."
+    },
+    {
+      "type": "milestone",
+      "date": "2024-09",
+      "precision": "month",
+      "label": "Free the name",
+      "note": "An open letter asks Oracle to release the JavaScript trademark it inherited from Sun."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "standardised_as",
+      "to": "ecmascript"
+    },
+    {
+      "type": "influenced_by",
+      "to": "java"
+    },
+    {
+      "type": "influenced_by",
+      "to": "lisp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: JavaScript",
+      "url": "https://en.wikipedia.org/wiki/JavaScript",
+      "kind": "secondary"
+    },
+    {
+      "title": "Ecma International: ECMA-262",
+      "url": "https://ecma-international.org/publications-and-standards/standards/ecma-262/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

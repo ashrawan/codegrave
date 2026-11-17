@@ -1,0 +1,105 @@
+{
+  "id": "firefox",
+  "category": "browsers",
+  "names": [
+    {
+      "name": "Phoenix",
+      "from": "2002-09-23"
+    },
+    {
+      "name": "Firebird",
+      "from": "2003-04-14"
+    },
+    {
+      "name": "Firefox",
+      "from": "2004-02-09"
+    }
+  ],
+  "maker": "Mozilla",
+  "summary": "The open-source browser that grew out of Netscape's released code. Firefox broke Internet Explorer's hold in the 2000s and remains the main browser not built on Google's or Apple's engine.",
+  "website": "https://www.firefox.com/",
+  "icon": {
+    "src": "icons/firefoxbrowser.svg",
+    "alt": "Firefox logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=firefoxbrowser"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Firefox_146.0.1_on_Windows_11_screenshot.webp/960px-Firefox_146.0.1_on_Windows_11_screenshot.webp",
+    "alt": "Firefox on Windows 11 showing Wikipedia",
+    "credit": "VulcanSphere (screenshot), Mozilla",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Firefox_146.0.1_on_Windows_11_screenshot.webp"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2002-09-23",
+      "precision": "day",
+      "note": "Phoenix 0.1 is released by Mozilla contributors.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Phoenix_0.1.png",
+        "alt": "Phoenix 0.1, the first release of what became Firefox",
+        "caption": "Phoenix 0.1 on Windows XP.",
+        "credit": "Fsf02",
+        "licence": "MPL 1.1",
+        "source": "https://commons.wikimedia.org/wiki/File:Phoenix_0.1.png"
+      }
+    },
+    {
+      "type": "released",
+      "date": "2004-11-09",
+      "precision": "day",
+      "label": "1.0",
+      "note": "Firefox 1.0; a fundraising ad in the New York Times follows."
+    },
+    {
+      "type": "milestone",
+      "date": "2011-04",
+      "precision": "month",
+      "label": "Rapid release",
+      "note": "Mozilla moves to a new version every six weeks."
+    },
+    {
+      "type": "released",
+      "date": "2017-11",
+      "precision": "month",
+      "label": "Quantum",
+      "note": "Firefox 57 brings a much faster engine with parts written in Rust."
+    },
+    {
+      "type": "milestone",
+      "date": "2020",
+      "precision": "year",
+      "label": "Servo team cut",
+      "note": "Mozilla lays off the Servo engine team."
+    }
+  ],
+  "status": "alive",
+  "note": "Grew out of the Mozilla project, which began when Netscape opened its source code in 1998.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spun_off_from",
+      "to": "netscape"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Firefox",
+      "url": "https://en.wikipedia.org/wiki/Firefox",
+      "kind": "secondary"
+    },
+    {
+      "title": "mozilla.org: Firefox",
+      "url": "https://www.mozilla.org/firefox/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}
