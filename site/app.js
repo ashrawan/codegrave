@@ -724,7 +724,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   // The list: every view, ticked when it is on the timeline. Search narrows it
   // to views by their own words and by the things they hold, then things and years.
   let found = [], active = -1;
-  const KINDS = [['featured', 'Featured'], ['community', 'Community']];
+  const KINDS = [['featured', 'Classical views'], ['community', 'Community views']];
   const openGroups = new Set(['featured']);   // which groups of the list are unfolded
   function runSearch() {
     const q = $('vq').value.trim().toLowerCase();

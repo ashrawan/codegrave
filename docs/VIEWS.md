@@ -13,9 +13,9 @@ ordinary views, one per category, kept in `data/views/` like any other.
 The panel has a search box that finds views and things, and one list of every
 view, ticked when it is on the timeline, in two groups:
 
-- **Featured**: one view per category (tagged `category`) and "Everything"
+- **Classical views**: one view per category (tagged `category`) and "Everything"
   (tagged `all`), in the order of `featured` in `data/editors-choice.json`.
-- **Community**: every view that tells a story, such as "The browser wars",
+- **Community views**: every view that tells a story, such as "The browser wars",
   whoever made it. A new view lands here.
 
 Below the list, "Showing" has one row per view on the timeline: drag to
@@ -91,7 +91,7 @@ under the first.
 
 `default` is what a new visitor sees: one view id, or a list of up to eight
 shown side by side. It can be any view, from either group. `featured` sets
-the order of the Featured group. Only editors change this file.
+the order of the Classical views group. Only editors change this file.
 
 ## What makes a good view
 

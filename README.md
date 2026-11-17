@@ -104,7 +104,7 @@ point it at [`AGENTS.md`](AGENTS.md) and [`docs/VIEWS.md`](docs/VIEWS.md).
    why it is worth having, and where the facts come from.
 
 The community reviews the pull request. Once it is merged, the view appears
-under "Community" in the panel and anyone can add it beside other views.
+under "Community views" in the panel and anyone can add it beside other views.
 
 ## Layout of this repository
 
