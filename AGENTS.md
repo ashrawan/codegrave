@@ -72,7 +72,8 @@ How the page is put together:
   line is clicked. It has three panes: views, the history of one thing, and
   one era.
 - `state.views` is the list of views on the timeline. Each owns a block of
-  rows (a section) under its coloured heading line. A view's own eras
+  rows (a section) under its coloured heading line. A thing in two views is
+  drawn in both sections; `L.at` maps an id to its first row. A view's own eras
   (`checkpoints`) are drawn inside its section in its colour; there is no
   timeline-wide strip of eras (`data/checkpoints.json` is not drawn). The
   grip under a section drags it shorter or taller (`state.sizes`, pixels; a
@@ -84,7 +85,7 @@ How the page is put together:
   removes it, and shuffle mixes the colours (`?c=` in the link).
   There is no category control; categories only exist as views.
   The views pane is search, then one ticked list of every view (grouped
-  Classical, Featured, Community by `tabOf()`), then a sentence naming what
+  Featured, Community by `tabOf()`), then a sentence naming what
   is on the timeline, then the filters at the bottom: the year range
   (`state.span`) and how much to show (`state.level`).
 - Play sits at the bottom left of the axis and reverse (`state.order`) at
@@ -97,8 +98,9 @@ How the page is put together:
   view that holds it (the category view first). The GitHub icon next to the
   theme switch opens the repository. The panel's search
   finds views to add.
-- The panel list is grouped Featured (open), Classical, Community (folded,
-  `openGroups`). "Propose a view" at the end of Community links to the
+- The panel list is grouped Featured (open) and Community (folded,
+  `openGroups`). Featured is every view by codegrave, the editors' picks
+  first, then the category views. "Propose a view" at the end of Community links to the
   README's guide (`PROPOSE`); views arrive as pull requests, not from a form.
   The bookmark icon saves the timeline as "Your view" in
   this browser (`cg-mine`, one slot; saving again replaces it), and the

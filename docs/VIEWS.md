@@ -10,13 +10,19 @@ has its own link, `codegrave.com/?views=<id>`, and a link can name several:
 There are no categories on the page. "Languages", "Browsers" and the rest are
 ordinary views, one per category, kept in `data/views/` like any other.
 
-The panel lists the views on the timeline, each with a minus button to take
-it off. Below, a search box finds views and things, and three tabs list views
-to add with a plus button:
+The panel has a search box that finds views and things, and one list of every
+view, ticked when it is on the timeline, in two groups:
 
-- **Classical**: views by `codegrave` tagged `classical` (one per category) or `all`.
-- **Featured**: the other views by `codegrave`, with those in `featured` first.
+- **Featured**: the views by `codegrave`. Those named in `featured` in
+  `data/editors-choice.json` come first, in that order, then the rest by name,
+  such as the one view per category (tagged `category`) and "Everything".
 - **Community**: every view whose `author` is someone else.
+
+Below the list, "Showing" has one row per view on the timeline: drag to
+reorder, the dot picks its colour, the cross takes it off.
+
+A thing that is in two views on the timeline is drawn in both sections, so
+every view always shows all of its own things.
 
 A view only chooses what to show. It never changes a fact. Dates, names,
 causes and ranks come from `data/things/` and are the same in every view.

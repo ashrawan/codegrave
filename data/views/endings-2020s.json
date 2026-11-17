@@ -1,18 +1,23 @@
 {
   "id": "endings-2020s",
   "name": "Endings of the 2020s",
-  "description": "What reached its official end in this decade, among languages, platforms and browsers.",
+  "description": "Hand-picked: what reached its official end in this decade, from Flash and Internet Explorer to Python 2 and Windows 10.",
   "author": "codegrave",
   "tags": [
     "endings",
-    "recent"
+    "recent",
+    "hand-picked"
   ],
   "categories": [
     "languages",
     "platforms",
-    "browsers"
+    "browsers",
+    "frameworks",
+    "devices",
+    "operating-systems",
+    "ai"
   ],
-  "level": 30,
+  "level": 100,
   "checkpoints": [
     {
       "id": "switch-off",
@@ -21,5 +26,17 @@
       "to": 2022,
       "note": "Three years in which long-dying technology is finally turned off: Python 2 and Flash in 2020, Silverlight and AngularJS in 2021, Internet Explorer in 2022."
     }
+  ],
+  "year": 2020,
+  "things": [
+    "flash",
+    "actionscript",
+    "python-2",
+    "internet-explorer",
+    "silverlight",
+    "angularjs",
+    "ipod",
+    "gpt-3",
+    "windows-10"
   ]
 }

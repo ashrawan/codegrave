@@ -226,22 +226,33 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   // ---------------------------------------------------------------- layout
   // Time runs left to right with the years along the bottom. Each view on the
   // timeline owns a block of rows, one row per thing. A thing that is in two
-  // views is drawn once, under the first.
+  // views is drawn in both, so every view shows all of its own things.
   const PAD_L = 84, PAD_PHONE = 72;  // room at the ends of the axis for play and reverse
   function layout() {
     const SW = $('stage').clientWidth;
     const narrow = SW < 700;
     const newest = state.order === 'new';
 
-    const groupOf = new Map();
+    const groupsOf = new Map();   // thing -> the views on the timeline that hold it
     const selected = state.views.map((id) => viewById.get(id));
-    for (const v of selected) for (const t of membersOf(v, state.level)) if (!groupOf.has(t)) groupOf.set(t, v);
+    const join = (t, v) => { const gs = groupsOf.get(t); if (!gs) groupsOf.set(t, [v]); else if (!gs.includes(v)) gs.push(v); };
+    for (const v of selected) for (const t of membersOf(v, state.level)) join(t, v);
     for (const id of state.pinned) {
       const t = byId.get(id);
-      if (!groupOf.has(t)) groupOf.set(t, selected.find((v) => v.cats.has(t.category)) || selected[selected.length - 1]);
+      if (!groupsOf.has(t)) join(t, selected.find((v) => v.cats.has(t.category)) || selected[selected.length - 1]);
     }
     // Rows are capped so the page stays fast at any data size: the best ranked come first.
-    const all = [...groupOf.keys()].sort((a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score)).slice(0, MAX_ROWS);
+    // The cap counts rows, so a thing drawn in two views counts twice.
+    const ranked = [...groupsOf.keys()].sort((a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score));
+    const rowsOf = new Map(selected.map((v) => [v, new Set()]));
+    let rowCount = 0;
+    const all = [];
+    for (const t of ranked) {
+      if (rowCount >= MAX_ROWS) break;
+      const gs = groupsOf.get(t).slice(0, MAX_ROWS - rowCount);
+      for (const v of gs) rowsOf.get(v).add(t);
+      rowCount += gs.length; all.push(t);
+    }
 
     // The years: fitted to what is shown, from a little before the first birth
     // to today, or to the last end when everything shown has ended. The
@@ -288,7 +299,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const byRank = (a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score);
     const secs = [];
     for (const g of selected) {
-      const mine = all.filter((t) => groupOf.get(t) === g && inSpan(t)).sort((a, b) => (catIndex(a) - catIndex(b)) || (a.born - b.born));
+      const mine = all.filter((t) => rowsOf.get(g).has(t) && inSpan(t)).sort((a, b) => (catIndex(a) - catIndex(b)) || (a.born - b.born));
       if (!mine.length) continue;
       const set = new Set(mine), seen = new Set(), ordered = [];
       const near = (t) => [
@@ -318,7 +329,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       c.rows = c.ordered.filter((t) => keep.has(t)); c.used = used;
     };
     if (state.fit) {
-      const room = innerHeight - TOP - AXIS - (eraH + 6) - 12 - secs.reduce((n, c) => n + c.head + 24, 0);
+      const room = innerHeight - TOP - AXIS - (eraH + 6) - (narrow ? 48 : 12) - secs.reduce((n, c) => n + c.head + 24, 0);
       let pool = room, open = [];
       for (const c of secs) {
         const want = state.sizes.get(c.g.id);
@@ -366,7 +377,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     }
     const height = Math.max(Math.round(y + 12), innerHeight - TOP - AXIS);
     L = { W, SW, narrow, height, ppy, tMin, tMax, fitMin, fitMax, xOf, tOf, newest, shown, groups, eras, eraH,
-      at: new Map(shown.map((p) => [p.t.id, p])), total: groupOf.size };
+      at: new Map([...shown].reverse().map((p) => [p.t.id, p])), total: groupsOf.size };
     return L;
   }
 
@@ -426,7 +437,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const covers = (p, t) => t >= p.t.born - 0.01 && t <= (p.t.end ?? NOW) + 0.01;
     for (const p of shown) {
       for (const l of p.t.links || []) {
-        const o = L.at.get(l.to);
+        const o = shown.find((q) => q.t.id === l.to && q.group === p.group);
         if (!o || o === p) continue;
         const branch = BRANCH.includes(l.type);
         if (!branch && !HANDOVER.includes(l.type)) continue;
@@ -444,7 +455,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
         if (Math.abs(p.y - o.y) >= 50) labs += `<span class="link-lab${hot ? ' open' : ''}" style="left:${x + 5}px;top:${(p.y + o.y) / 2 - 7}px">${LINK_LABELS[l.type]}</span>`;
       }
     }
-    for (const p of shown) {
+    shown.forEach((p, k) => {
       const { t, y } = p;
       const cls = 'thing' + (p.major ? ' major' : '') + (p.alive ? '' : ' dead') + (state.open === t.id ? ' open' : '');
       const cvar = `--c:var(--p${state.colors.get(p.group.id) % 8})`;
@@ -484,13 +495,13 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       const open = state.open === t.id ? ' open' : '';
       const x0 = newest ? Math.max(p.xR, t.lead != null ? xOf(t.lead) : p.xR) : Math.max(4, Math.min(p.xL, t.lead != null ? xOf(t.lead) : p.xL));
       if (p.major) {
-        labs += `<button type="button" class="card${open}" data-id="${t.id}" style="${cvar};left:${x0}px;top:${y - 36}px">` +
+        labs += `<button type="button" class="card${open}" data-id="${t.id}" data-k="${k}" style="${cvar};left:${x0}px;top:${y - 36}px">` +
           `<span class="tile">${tileIcon(t)}</span><b>${esc(t.name)}</b><small>${years}</small></button>`;
       } else {
-        labs += `<button type="button" class="nm${p.alive ? '' : ' dead'}${open}" data-id="${t.id}" style="${cvar};left:${x0}px;top:${y - 19}px" title="${esc(t.name)}, ${years}">` +
+        labs += `<button type="button" class="nm${p.alive ? '' : ' dead'}${open}" data-id="${t.id}" data-k="${k}" style="${cvar};left:${x0}px;top:${y - 19}px" title="${esc(t.name)}, ${years}">` +
           `${esc(t.name)}<small>${years}</small></button>`;
       }
-    }
+    });
     const el = $('lines');
     el.setAttribute('viewBox', `0 0 ${W} ${height}`);
     el.setAttribute('width', W); el.setAttribute('height', height);
@@ -498,7 +509,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     $('labels').innerHTML = labs;
     // A name near the right edge would run off the page, so it ends at the edge instead.
     for (const c of $('labels').querySelectorAll('.card, .nm')) {
-      const p = L.at.get(c.dataset.id);
+      const p = L.shown[c.dataset.k];
       p.nameEl = c; p.nameW = c.offsetWidth; p.nameX = parseFloat(c.style.left);
       if (newest) { p.nameX = Math.max(4, p.nameX - p.nameW); c.style.left = p.nameX + 'px'; }
       if (p.nameX + p.nameW > W - 6) { p.nameX = Math.max(4, W - 6 - p.nameW); c.style.left = p.nameX + 'px'; }
@@ -574,9 +585,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     hits = [];
     if (q && L) {
       if (/^\d{4}$/.test(q) && Number(q) >= Math.ceil(L.tMin) && Number(q) <= Math.floor(L.tMax)) hits.push({ year: Number(q) });
-      for (const p of L.shown) if (p.t.search.some((n) => n.includes(q))) hits.push({ p, s: p.t.search.some((n) => n === q) ? 3 : p.t.search.some((n) => n.startsWith(q)) ? 2 : 1 });
+      for (const p of L.at.values()) if (p.t.search.some((n) => n.includes(q))) hits.push({ p, s: p.t.search.some((n) => n === q) ? 3 : p.t.search.some((n) => n.startsWith(q)) ? 2 : 1 });
       for (const e of [...L.eras, ...L.groups.flatMap((g) => g.eras)]) if (e.c.name.toLowerCase().includes(q)) hits.push({ era: e.c });
-      for (const p of L.shown) for (const m of p.t.marks) {
+      for (const p of L.at.values()) for (const m of p.t.marks) {
         if (m.label && (m.label.toLowerCase().includes(q) || m.note.toLowerCase().includes(q) || m.date.includes(q))) hits.push({ p, m });
       }
       hits.sort((a, b) => (!!b.year - !!a.year) || ((b.s || 0) - (a.s || 0)) || (!!b.era - !!a.era) || (!!a.m - !!b.m) || ((a.p && !a.m ? a.p.t.name.length : 0) - (b.p && !b.m ? b.p.t.name.length : 0)) || ((a.p ? a.p.t.rank : 0) - (b.p ? b.p.t.rank : 0)));
@@ -589,7 +600,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       hits = hits.slice(0, away.length ? 6 : 9);
       for (const t of away) {
         const holders = views.views.filter((v) => inView(v, t, 101));
-        const v = holders.find((x) => (x.tags || []).includes('classical')) || holders.find((x) => !(x.tags || []).includes('all')) || holders[0];
+        const v = holders.find((x) => (x.tags || []).includes('category')) || holders.find((x) => !(x.tags || []).includes('all')) || holders[0];
         if (v) hits.push({ t, away: v });
       }
     }
@@ -664,7 +675,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
 
   function renderSide() {
     // What is on the timeline: one small pill per view, each with a cross.
-    const n = L ? L.shown.length : 0, more = L && L.total > MAX_ROWS ? ` of ${L.total}` : '';
+    const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
     $('shown-n').textContent = state.views.length ? `${n}${more} ${n === 1 && !more ? 'thing' : 'things'}` : '';
     $('pills').innerHTML = !state.views.length ? '<span class="fine">Nothing yet. Tick a view above.</span>' : state.views.map((id) => {
       const v = viewById.get(id);
@@ -713,7 +724,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   // The list: every view, ticked when it is on the timeline. Search narrows it
   // to views by their own words and by the things they hold, then things and years.
   let found = [], active = -1;
-  const KINDS = [['featured', 'Featured'], ['classical', 'Classical'], ['community', 'Community']];
+  const KINDS = [['featured', 'Featured'], ['community', 'Community']];
   const openGroups = new Set(['featured']);   // which groups of the list are unfolded
   function runSearch() {
     const q = $('vq').value.trim().toLowerCase();
@@ -753,12 +764,10 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const i = q ? text.toLowerCase().indexOf(q) : -1;
     return i < 0 ? esc(text) : esc(text.slice(0, i)) + '<mark>' + esc(text.slice(i, i + q.length)) + '</mark>' + esc(text.slice(i + q.length));
   }
-  // Classical views are one kind of thing each; featured ones are picked by the
-  // editors; community views come from anyone through a pull request.
+  // Featured views are made by codegrave, the editors' picks first, then one
+  // view per category; community views come from anyone through a pull request.
   function tabOf(v) {
-    if (v.author && v.author !== 'codegrave') return 'community';
-    if ((v.tags || []).includes('classical') || (v.tags || []).includes('all')) return 'classical';
-    return 'featured';
+    return v.author && v.author !== 'codegrave' ? 'community' : 'featured';
   }
   function drawResults() {
     const q = $('vq').value.trim().toLowerCase();
