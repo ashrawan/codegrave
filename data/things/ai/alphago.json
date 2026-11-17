@@ -1,0 +1,49 @@
+{
+  "id": "alphago",
+  "category": "ai",
+  "names": [
+    {
+      "name": "AlphaGo",
+      "from": "2015-10"
+    }
+  ],
+  "maker": "DeepMind",
+  "summary": "The program that beat the world's best players at Go, a board game so vast that experts had expected computers to need another decade. Its win over Lee Sedol in 2016 was watched by millions and convinced many people that modern AI was real.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-10",
+      "precision": "month",
+      "note": "Beats the European champion Fan Hui 5 to 0, the first win by a program over a professional on a full board."
+    },
+    {
+      "type": "milestone",
+      "date": "2016-03",
+      "precision": "month",
+      "label": "Beats Lee Sedol",
+      "note": "Wins a five-game match against Lee Sedol, one of the strongest players in the world."
+    },
+    {
+      "type": "ended",
+      "date": "2017-05",
+      "precision": "month",
+      "note": "Beats the top-ranked player Ke Jie at the Future of Go Summit, then retires from competition."
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired from competition after beating the world’s top-ranked player; followed by AlphaGo Zero and AlphaZero.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: AlphaGo",
+      "url": "https://en.wikipedia.org/wiki/AlphaGo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

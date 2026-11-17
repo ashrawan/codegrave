@@ -1,0 +1,96 @@
+{
+  "id": "iphone",
+  "category": "phones",
+  "names": [
+    {
+      "name": "iPhone",
+      "from": "2007-06-29"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's phone that put a full web browser and a multi-touch screen in a pocket. With the App Store a year later it turned phones into computers, ended plug-ins such as Flash on the mobile web, and became the most profitable product in history.",
+  "website": "https://www.apple.com/iphone/",
+  "icon": {
+    "src": "icons/apple.svg",
+    "alt": "Apple logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=apple"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/First_iPhone_Macworld_2007_DSCF1286.agr.jpg/960px-First_iPhone_Macworld_2007_DSCF1286.agr.jpg",
+    "alt": "The first iPhone on show at Macworld 2007",
+    "credit": "ArnoldReinhold",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:First_iPhone_Macworld_2007_DSCF1286.agr.jpg"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2007-01-09",
+      "precision": "day",
+      "note": "Steve Jobs announces \"an iPod, a phone and an internet communicator\" at Macworld."
+    },
+    {
+      "type": "born",
+      "date": "2007-06-29",
+      "precision": "day",
+      "note": "The first iPhone goes on sale in the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "2008-07-11",
+      "precision": "day",
+      "label": "App Store",
+      "note": "The App Store opens with the iPhone 3G."
+    },
+    {
+      "type": "released",
+      "date": "2010-06-07",
+      "precision": "day",
+      "label": "iPhone 4",
+      "note": "Introduces the Retina display."
+    },
+    {
+      "type": "milestone",
+      "date": "2016-07-27",
+      "precision": "day",
+      "label": "1 billion",
+      "note": "Apple announces it has sold its billionth iPhone."
+    },
+    {
+      "type": "released",
+      "date": "2017-09-12",
+      "precision": "day",
+      "label": "iPhone X",
+      "note": "Drops the home button for Face ID."
+    },
+    {
+      "type": "released",
+      "date": "2023-09-12",
+      "precision": "day",
+      "label": "USB-C",
+      "note": "The iPhone 15 switches from Lightning to USB-C."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: IPhone",
+      "url": "https://en.wikipedia.org/wiki/IPhone",
+      "kind": "secondary"
+    },
+    {
+      "title": "apple.com/iphone",
+      "url": "https://www.apple.com/iphone/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

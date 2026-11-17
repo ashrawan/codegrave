@@ -7,16 +7,32 @@ view on the timeline gets its own block of rows under its name. Every view
 has its own link, `codegrave.com/?views=<id>`, and a link can name several:
 `?views=languages,browsers`.
 
-There are no categories on the page. "Languages", "Browsers" and the rest are
-ordinary views, one per category, kept in `data/views/` like any other.
+Things are filed on one map, `data/categories.json`: seven domains (Machines,
+Parts, Devices, Software, Networks, Online, AI), each holding several kinds
+(the `categories`, such as phones or browsers). A thing is filed by what it
+is, never by who made it or who uses it. On the page the map appears only as
+views: one view per domain, kept in `data/views/` like any other.
 
-The panel lists the views on the timeline, each with a minus button to take
-it off. Below, a search box finds views and things, and three tabs list views
-to add with a plus button:
+The panel has a search box that finds views and things, and one list of every
+view, ticked when it is on the timeline, in two groups:
 
-- **Classical**: views by `codegrave` tagged `classical` (one per category) or `all`.
-- **Featured**: the other views by `codegrave`, with those in `featured` first.
-- **Community**: every view whose `author` is someone else.
+- **Community views**: every view that tells a story, such as "The browser wars",
+  whoever made it, in rank order: those named in `featured` in
+  `data/editors-choice.json` first, then the rest by name. A new view lands here.
+- **Classical views**: one view per domain (tagged `domain`) and "Everything"
+  (tagged `all`), by name. Each shows all it holds. A domain with no things
+  yet is not listed.
+
+A view of a single kind, such as "Browsers", is tagged `kind`. It is in
+neither group; the search finds it and its link works.
+
+Each group shows three rows at a time and scrolls the rest.
+
+Below the list, "Showing" has one row per view on the timeline: drag to
+reorder, the dot picks its colour, the cross takes it off.
+
+A thing that is in two views on the timeline is drawn in both sections, so
+every view always shows all of its own things.
 
 A view only chooses what to show. It never changes a fact. Dates, names,
 causes and ranks come from `data/things/` and are the same in every view.
@@ -51,7 +67,8 @@ Create one file, `data/views/<id>.json`. The file name is the `id`.
 | `description` | yes | One or two sentences, at most 200 characters. |
 | `author` | yes | Your GitHub user name. |
 | `tags` | no | Up to 8 words people might search for. |
-| `categories` | yes | The categories whose things the view holds, at most 8. Empty means every category. |
+| `categories` | yes | The kinds whose things the view holds, at most 8. Empty means every kind. |
+| `domains` | no | Domain ids. The view also holds every kind in these domains, including kinds added later. |
 | `level` | yes | How much to show, from 5 to 100. 10 is landmarks, 30 notable, 60 most, 100 all. |
 | `year` | no | The year to centre on when the timeline is wider than the screen. |
 | `order` | no | `"old"` (the default, oldest on the left) or `"new"` (newest on the left). |
@@ -80,13 +97,12 @@ under the first.
 `data/editors-choice.json` is the one place that decides what is featured:
 
 ```json
-{ "default": ["languages", "platforms", "browsers"], "featured": ["endings-2020s", "browser-wars", "machines"] }
+{ "default": ["endings-2020s", "browser-wars"], "featured": ["endings-2020s", "browser-wars"] }
 ```
 
 `default` is what a new visitor sees: one view id, or a list of up to eight
-shown side by side. `featured` views come first in the Featured tab, in
-this order. Only editors change this file. A popular community view
-is promoted by adding its id here; its own file does not change.
+shown side by side. It can be any view, from either group. `featured` ranks
+the Community views: the views it names come first, in that order. Only editors change this file.
 
 ## What makes a good view
 

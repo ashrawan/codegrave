@@ -1,0 +1,35 @@
+{
+  "id": "cyc",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Cyc",
+      "from": "1984-07"
+    }
+  ],
+  "maker": "MCC, then Cycorp (Douglas Lenat)",
+  "summary": "A project to write down, by hand, the millions of everyday facts and rules that people take for granted, so that a computer could reason with common sense. It has run for more than forty years, which makes it one of the longest-running projects in AI, and a symbol of the rule-based approach that machine learning later overtook.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-07",
+      "precision": "month",
+      "note": "The project starts at MCC in Austin, Texas."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Cyc",
+      "url": "https://en.wikipedia.org/wiki/Cyc",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

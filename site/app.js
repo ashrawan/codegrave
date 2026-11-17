@@ -8,7 +8,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
 
   const REPO = 'https://github.com/ashrawan/codegrave';
   // How to propose a view: build it, then open a pull request with the file and a screenshot.
-  const PROPOSE = REPO + '#propose-a-view';
   const MAX_VIEWS = 8;
   const LEVELS = [
     { name: 'Landmarks', pct: 10 }, { name: 'Notable', pct: 30 },
@@ -36,6 +35,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   const EVENT_TITLES = { released: 'Release', changed_hands: 'Changed hands', milestone: 'Milestone', deprecated: 'End announced' };
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const TOP = 52, AXIS = 48;   // heights of the fixed top bar and the axis along the bottom
+  // On a phone the open panel is a sheet over the lower half; what is drawn fits above it.
+  const PHONE = '(max-width: 699px)';
+  const sheetH = () => (!$('side').hidden && matchMedia(PHONE).matches ? $('side').offsetHeight : 0);
 
   const today = new Date();
   const NOW_YEAR = today.getFullYear();
@@ -85,7 +87,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   }
 
   // ---------------------------------------------------------------- data
-  let things = [], byId = new Map(), cats = [], catById = new Map(), checkpoints = [], views = null, viewById = new Map(), release = '';
+  let things = [], byId = new Map(), cats = [], b0 = {}, catById = new Map(), checkpoints = [], views = null, viewById = new Map(), release = '';
 
   function initials(name) {
     const caps = name.match(/[A-Z0-9#+]/g) || [];
@@ -126,6 +128,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     for (const v of views.views) {
       v.set = v.things ? new Set(v.things) : null;
       v.cats = new Set(v.categories);
+      for (const c of cats) if ((v.domains || []).includes(c.domain)) v.cats.add(c.id);
       v.count = membersOf(v, v.level).size;
       v.hay = [v.name, v.description, v.author, ...(v.tags || [])].join(' ').toLowerCase();
     }
@@ -226,22 +229,33 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   // ---------------------------------------------------------------- layout
   // Time runs left to right with the years along the bottom. Each view on the
   // timeline owns a block of rows, one row per thing. A thing that is in two
-  // views is drawn once, under the first.
+  // views is drawn in both, so every view shows all of its own things.
   const PAD_L = 84, PAD_PHONE = 72;  // room at the ends of the axis for play and reverse
   function layout() {
     const SW = $('stage').clientWidth;
     const narrow = SW < 700;
     const newest = state.order === 'new';
 
-    const groupOf = new Map();
+    const groupsOf = new Map();   // thing -> the views on the timeline that hold it
     const selected = state.views.map((id) => viewById.get(id));
-    for (const v of selected) for (const t of membersOf(v, state.level)) if (!groupOf.has(t)) groupOf.set(t, v);
+    const join = (t, v) => { const gs = groupsOf.get(t); if (!gs) groupsOf.set(t, [v]); else if (!gs.includes(v)) gs.push(v); };
+    for (const v of selected) for (const t of membersOf(v, state.level)) join(t, v);
     for (const id of state.pinned) {
       const t = byId.get(id);
-      if (!groupOf.has(t)) groupOf.set(t, selected.find((v) => v.cats.has(t.category)) || selected[selected.length - 1]);
+      if (!groupsOf.has(t)) join(t, selected.find((v) => v.cats.has(t.category)) || selected[selected.length - 1]);
     }
     // Rows are capped so the page stays fast at any data size: the best ranked come first.
-    const all = [...groupOf.keys()].sort((a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score)).slice(0, MAX_ROWS);
+    // The cap counts rows, so a thing drawn in two views counts twice.
+    const ranked = [...groupsOf.keys()].sort((a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score));
+    const rowsOf = new Map(selected.map((v) => [v, new Set()]));
+    let rowCount = 0;
+    const all = [];
+    for (const t of ranked) {
+      if (rowCount >= MAX_ROWS) break;
+      const gs = groupsOf.get(t).slice(0, MAX_ROWS - rowCount);
+      for (const v of gs) rowsOf.get(v).add(t);
+      rowCount += gs.length; all.push(t);
+    }
 
     // The years: fitted to what is shown, from a little before the first birth
     // to today, or to the last end when everything shown has ended. The
@@ -288,7 +302,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const byRank = (a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score);
     const secs = [];
     for (const g of selected) {
-      const mine = all.filter((t) => groupOf.get(t) === g && inSpan(t)).sort((a, b) => (catIndex(a) - catIndex(b)) || (a.born - b.born));
+      const mine = all.filter((t) => rowsOf.get(g).has(t) && inSpan(t)).sort((a, b) => (catIndex(a) - catIndex(b)) || (a.born - b.born));
       if (!mine.length) continue;
       const set = new Set(mine), seen = new Set(), ordered = [];
       const near = (t) => [
@@ -318,7 +332,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       c.rows = c.ordered.filter((t) => keep.has(t)); c.used = used;
     };
     if (state.fit) {
-      const room = innerHeight - TOP - AXIS - (eraH + 6) - 12 - secs.reduce((n, c) => n + c.head + 24, 0);
+      const room = innerHeight - sheetH() - TOP - AXIS - (eraH + 6) - (narrow ? 48 : 12) - secs.reduce((n, c) => n + c.head + 24, 0);
       let pool = room, open = [];
       for (const c of secs) {
         const want = state.sizes.get(c.g.id);
@@ -364,9 +378,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       grp.end = y + 6;
       y += 18;
     }
-    const height = Math.max(Math.round(y + 12), innerHeight - TOP - AXIS);
+    const height = Math.max(Math.round(y + 12), innerHeight - sheetH() - TOP - AXIS);
     L = { W, SW, narrow, height, ppy, tMin, tMax, fitMin, fitMax, xOf, tOf, newest, shown, groups, eras, eraH,
-      at: new Map(shown.map((p) => [p.t.id, p])), total: groupOf.size };
+      at: new Map([...shown].reverse().map((p) => [p.t.id, p])), total: groupsOf.size };
     return L;
   }
 
@@ -426,7 +440,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const covers = (p, t) => t >= p.t.born - 0.01 && t <= (p.t.end ?? NOW) + 0.01;
     for (const p of shown) {
       for (const l of p.t.links || []) {
-        const o = L.at.get(l.to);
+        const o = shown.find((q) => q.t.id === l.to && q.group === p.group);
         if (!o || o === p) continue;
         const branch = BRANCH.includes(l.type);
         if (!branch && !HANDOVER.includes(l.type)) continue;
@@ -444,7 +458,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
         if (Math.abs(p.y - o.y) >= 50) labs += `<span class="link-lab${hot ? ' open' : ''}" style="left:${x + 5}px;top:${(p.y + o.y) / 2 - 7}px">${LINK_LABELS[l.type]}</span>`;
       }
     }
-    for (const p of shown) {
+    shown.forEach((p, k) => {
       const { t, y } = p;
       const cls = 'thing' + (p.major ? ' major' : '') + (p.alive ? '' : ' dead') + (state.open === t.id ? ' open' : '');
       const cvar = `--c:var(--p${state.colors.get(p.group.id) % 8})`;
@@ -484,13 +498,13 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       const open = state.open === t.id ? ' open' : '';
       const x0 = newest ? Math.max(p.xR, t.lead != null ? xOf(t.lead) : p.xR) : Math.max(4, Math.min(p.xL, t.lead != null ? xOf(t.lead) : p.xL));
       if (p.major) {
-        labs += `<button type="button" class="card${open}" data-id="${t.id}" style="${cvar};left:${x0}px;top:${y - 36}px">` +
+        labs += `<button type="button" class="card${open}" data-id="${t.id}" data-k="${k}" style="${cvar};left:${x0}px;top:${y - 36}px">` +
           `<span class="tile">${tileIcon(t)}</span><b>${esc(t.name)}</b><small>${years}</small></button>`;
       } else {
-        labs += `<button type="button" class="nm${p.alive ? '' : ' dead'}${open}" data-id="${t.id}" style="${cvar};left:${x0}px;top:${y - 19}px" title="${esc(t.name)}, ${years}">` +
+        labs += `<button type="button" class="nm${p.alive ? '' : ' dead'}${open}" data-id="${t.id}" data-k="${k}" style="${cvar};left:${x0}px;top:${y - 19}px" title="${esc(t.name)}, ${years}">` +
           `${esc(t.name)}<small>${years}</small></button>`;
       }
-    }
+    });
     const el = $('lines');
     el.setAttribute('viewBox', `0 0 ${W} ${height}`);
     el.setAttribute('width', W); el.setAttribute('height', height);
@@ -498,7 +512,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     $('labels').innerHTML = labs;
     // A name near the right edge would run off the page, so it ends at the edge instead.
     for (const c of $('labels').querySelectorAll('.card, .nm')) {
-      const p = L.at.get(c.dataset.id);
+      const p = L.shown[c.dataset.k];
       p.nameEl = c; p.nameW = c.offsetWidth; p.nameX = parseFloat(c.style.left);
       if (newest) { p.nameX = Math.max(4, p.nameX - p.nameW); c.style.left = p.nameX + 'px'; }
       if (p.nameX + p.nameW > W - 6) { p.nameX = Math.max(4, W - 6 - p.nameW); c.style.left = p.nameX + 'px'; }
@@ -542,7 +556,8 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   function scrollToThing(id) {
     const p = L && L.at.get(id);
     if (!p) return;
-    const top = p.y < scrollY + 120 || p.y > scrollY + innerHeight - AXIS - 120 ? Math.max(0, p.y - innerHeight * 0.35) : scrollY;
+    const seen = innerHeight - sheetH() - TOP - AXIS;
+    const top = p.y < scrollY + 60 || p.y > scrollY + seen - 60 ? Math.max(0, p.y - seen * 0.4) : scrollY;
     const left = L.W > L.SW && (p.xL < scrollX || p.xL > scrollX + L.SW - 120) ? Math.max(0, p.xL - 80) : scrollX;
     scrollTo({ top, left, behavior: 'smooth' });
   }
@@ -552,8 +567,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const p = L && L.at.get(id);
     if (!p) return;
     const t = clamp(at, p.t.lead ?? p.t.born, p.t.end ?? NOW), x = L.xOf(t);
-    if (matchMedia('(max-width: 860px)').matches) showSide(false);
-    scrollTo({ top: Math.max(0, p.y - innerHeight * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
+    scrollTo({ top: Math.max(0, p.y - (innerHeight - sheetH() - TOP - AXIS) * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
     $('lines').querySelector('.flash')?.remove();
     $('lines').insertAdjacentHTML('beforeend', `<circle class="flash" cx="${x}" cy="${p.y}" r="4"/>`);
   }
@@ -574,9 +588,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     hits = [];
     if (q && L) {
       if (/^\d{4}$/.test(q) && Number(q) >= Math.ceil(L.tMin) && Number(q) <= Math.floor(L.tMax)) hits.push({ year: Number(q) });
-      for (const p of L.shown) if (p.t.search.some((n) => n.includes(q))) hits.push({ p, s: p.t.search.some((n) => n === q) ? 3 : p.t.search.some((n) => n.startsWith(q)) ? 2 : 1 });
+      for (const p of L.at.values()) if (p.t.search.some((n) => n.includes(q))) hits.push({ p, s: p.t.search.some((n) => n === q) ? 3 : p.t.search.some((n) => n.startsWith(q)) ? 2 : 1 });
       for (const e of [...L.eras, ...L.groups.flatMap((g) => g.eras)]) if (e.c.name.toLowerCase().includes(q)) hits.push({ era: e.c });
-      for (const p of L.shown) for (const m of p.t.marks) {
+      for (const p of L.at.values()) for (const m of p.t.marks) {
         if (m.label && (m.label.toLowerCase().includes(q) || m.note.toLowerCase().includes(q) || m.date.includes(q))) hits.push({ p, m });
       }
       hits.sort((a, b) => (!!b.year - !!a.year) || ((b.s || 0) - (a.s || 0)) || (!!b.era - !!a.era) || (!!a.m - !!b.m) || ((a.p && !a.m ? a.p.t.name.length : 0) - (b.p && !b.m ? b.p.t.name.length : 0)) || ((a.p ? a.p.t.rank : 0) - (b.p ? b.p.t.rank : 0)));
@@ -589,10 +603,13 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       hits = hits.slice(0, away.length ? 6 : 9);
       for (const t of away) {
         const holders = views.views.filter((v) => inView(v, t, 101));
-        const v = holders.find((x) => (x.tags || []).includes('classical')) || holders.find((x) => !(x.tags || []).includes('all')) || holders[0];
+        const v = holders.find((x) => (x.tags || []).includes('kind')) || holders.find((x) => (x.tags || []).includes('domain')) || holders.find((x) => !(x.tags || []).includes('all')) || holders[0];
         if (v) hits.push({ t, away: v });
       }
     }
+    // Nothing in the data has this name: offer to suggest it, so a failed
+    // search tells the editors what people came looking for.
+    if (q.length > 1 && !/^\d+$/.test(q) && !things.some((t) => t.search.some((n) => n.includes(q)))) hits.push({ suggest: $('q').value.trim() });
     hit = hits.length ? 0 : -1;
     drawHits(q);
   }
@@ -605,6 +622,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     box.innerHTML = !hits.length ? '<li class="none" role="presentation">Nothing matches. Try a name, an event or a year.</li>'
       : hits.map((h, i) => {
         let main, sub, cls = 'k-year', st = '', pre = '';
+        if (h.suggest) {
+          return `<li class="sep" role="presentation">Not here yet</li><li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b>Suggest \u201c${esc(h.suggest)}\u201d</b><small>Tell us about it on GitHub; no code needed</small></span><span class="add">${ICON.plus}</span></li>`;
+        }
         if (h.away) {
           if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
           return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b>${mark(h.t.name, q)}</b><small>In ${esc(h.away.name)} · ${yearOf(h.t.bornEv.date)}${h.t.endEv ? '–' + yearOf(h.t.endEv.date) : ' to today'}</small></span><span class="add">${ICON.plus}</span></li>`;
@@ -619,6 +639,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   }
   function goHit(i) {
     const h = hits[i];
+    if (h && h.suggest) return void window.open(`${REPO}/issues/new?template=new-thing.yml&title=${encodeURIComponent('Add: ' + h.suggest)}&name=${encodeURIComponent(h.suggest)}`, '_blank', 'noopener');
     if (!h) return;
     $('q').value = ''; drawHits(''); $('q').blur();
     if (h.year) return flashYear(h.year);
@@ -651,7 +672,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     $('side').hidden = !on;
     document.body.classList.toggle('side-open', on);
     $('toggle-side').setAttribute('aria-expanded', on);
-    $('scrim').hidden = !(on && matchMedia('(max-width: 860px)').matches);
     if (!on) $('info').hidden = true;
     if (was !== on && state.views.length) render();
   }
@@ -664,7 +684,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
 
   function renderSide() {
     // What is on the timeline: one small pill per view, each with a cross.
-    const n = L ? L.shown.length : 0, more = L && L.total > MAX_ROWS ? ` of ${L.total}` : '';
+    const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
     $('shown-n').textContent = state.views.length ? `${n}${more} ${n === 1 && !more ? 'thing' : 'things'}` : '';
     $('pills').innerHTML = !state.views.length ? '<span class="fine">Nothing yet. Tick a view above.</span>' : state.views.map((id) => {
       const v = viewById.get(id);
@@ -713,21 +733,24 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   // The list: every view, ticked when it is on the timeline. Search narrows it
   // to views by their own words and by the things they hold, then things and years.
   let found = [], active = -1;
-  const KINDS = [['featured', 'Featured'], ['classical', 'Classical'], ['community', 'Community']];
-  const openGroups = new Set(['featured']);   // which groups of the list are unfolded
+  const KINDS = [['community', 'Community views'], ['featured', 'Classical views']];
+  const openGroups = new Set(['featured', 'community']);   // which groups of the list are unfolded
+  const GROUP_ROWS = 3;   // rows a group shows before it scrolls
   function runSearch() {
     const q = $('vq').value.trim().toLowerCase();
     found = [];
     if (!q) {
+      // Classical views by name; community views by rank (the editors' order, then by name).
       const rank = (v) => { const i = views.featured.indexOf(v.id); return i < 0 ? 100 : i; };
+      const order = { featured: (a, b) => a.name.localeCompare(b.name), community: (a, b) => (rank(a) - rank(b)) || a.name.localeCompare(b.name) };
       const mine = myView();
       if (mine) found.push({ mine });
       for (const [kind, title] of KINDS) {
-        const list = views.views.filter((v) => tabOf(v) === kind).sort((a, b) => (rank(a) - rank(b)) || a.name.localeCompare(b.name));
+        const list = views.views.filter((v) => tabOf(v) === kind && v.count > 0).sort(order[kind]);   // a domain with nothing in it yet is not listed
         const open = openGroups.has(kind);
         found.push({ head: title, kind, open, n: list.length, on: list.filter((v) => state.views.includes(v.id)).length });
         if (!open) continue;
-        found.push(...list.map((v) => ({ v })));
+        found.push(...list.map((v) => ({ v, grp: kind })));
         if (kind === 'community') found.push({ propose: true });
       }
       active = -1;
@@ -753,24 +776,38 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const i = q ? text.toLowerCase().indexOf(q) : -1;
     return i < 0 ? esc(text) : esc(text.slice(0, i)) + '<mark>' + esc(text.slice(i, i + q.length)) + '</mark>' + esc(text.slice(i + q.length));
   }
-  // Classical views are one kind of thing each; featured ones are picked by the
-  // editors; community views come from anyone through a pull request.
+  // Classical ('featured'): one view per domain, and everything. Community: every
+  // view that tells a story, added through a pull request. A view of one kind
+  // (tagged `kind`) is in neither list; search finds it.
   function tabOf(v) {
-    if (v.author && v.author !== 'codegrave') return 'community';
-    if ((v.tags || []).includes('classical') || (v.tags || []).includes('all')) return 'classical';
-    return 'featured';
+    const tags = v.tags || [];
+    if (tags.includes('domain') || tags.includes('all')) return 'featured';
+    return tags.includes('kind') ? 'kind' : 'community';
   }
   function drawResults() {
     const q = $('vq').value.trim().toLowerCase();
     const full = state.views.length >= MAX_VIEWS;
-    $('vlist').innerHTML = found.map((f, i) => {
+    // The rows of a group sit in their own box, which scrolls past GROUP_ROWS rows.
+    let html = '', inGrp = null;
+    found.forEach((f, i) => {
+      if (f.grp !== inGrp) {
+        if (inGrp) html += '</ul></li>';
+        if (f.grp) html += `<li class="gbody" role="presentation"><ul role="group" style="--rows:${GROUP_ROWS}">`;
+        inGrp = f.grp || null;
+      }
+      html += row(f, i);
+    });
+    if (inGrp) html += '</ul></li>';
+    $('vlist').innerHTML = html;
+    if (!q && full) $('vnote').textContent = `${MAX_VIEWS} views is the most at once. Untick one to add another.`;
+    function row(f, i) {
       if (f.head) {
         return `<li class="grp" role="option" aria-expanded="${f.open}" aria-selected="${i === active}" data-i="${i}">${ICON.chev}<span>${f.head}</span>` +
           `<small>${f.on ? f.on + ' on · ' : ''}${f.n}</small></li>`;
       }
       let name, sub, box = '', attrs = '';
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(id)?.name).filter(Boolean).join(', '); box = `<span class="ck go">${ICON.save}</span>`; }
-      else if (f.propose) { name = 'Propose a view'; sub = 'How to build one and send it on GitHub'; box = `<span class="ck go">${ICON.plus}</span>`; }
+      else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; box = `<span class="ck go">${ICON.plus}</span>`; }
       else if (f.t) { name = mark(f.t.name, q); sub = `${esc(f.t.cat.name)} · ${yearOf(f.t.bornEv.date)}${f.t.endEv ? '–' + yearOf(f.t.endEv.date) : ' to today'}`; box = `<span class="ck go">${ICON.dot}</span>`; }
       else {
         const v = f.v, on = state.views.includes(v.id);
@@ -781,15 +818,14 @@ import { WEIGHTS, parseDate, score } from './rank.js';
         attrs = ` aria-checked="${on}"${!on && full ? ' aria-disabled="true"' : ''}`;
       }
       return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${box}<span class="r-txt"><b>${name}</b><small>${sub}</small></span></li>`;
-    }).join('');
-    if (!q && full) $('vnote').textContent = `${MAX_VIEWS} views is the most at once. Untick one to add another.`;
+    }
   }
   function pick(i) {
     const f = found[i];
     if (!f) return;
     if (f.head) { if (openGroups.has(f.kind)) openGroups.delete(f.kind); else openGroups.add(f.kind); active = i; return runSearch(); }
     if (f.mine) return loadMine(f.mine);
-    if (f.propose) return void window.open(PROPOSE, '_blank', 'noopener');
+    if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
     if (f.t) { $('vq').value = ''; state.pinned.add(f.t.id); runSearch(); return openThing(f.t.id, { scroll: true }); }
     if (state.views.includes(f.v.id)) { removeView(f.v.id); return changed(); }
     if (addView(f.v.id)) changed();
@@ -945,7 +981,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
 
   function startPlay(fromYear) {
     if (!L) return;
-    if (matchMedia('(max-width: 860px)').matches) showSide(false);
+    if (matchMedia(PHONE).matches) showSide(false);
     if (fromYear != null) play.t = clamp(Number(fromYear), L.tMin, L.tMax);
     else if (atEnd()) play.t = L.tMin;
     play.on = true;
@@ -1018,7 +1054,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       clearTimeout(rt);
       rt = setTimeout(() => {
         if (innerWidth !== lastW || Math.abs(innerHeight - lastH) > 120) { lastW = innerWidth; lastH = innerHeight; if (state.views.length) render(); }
-        $('scrim').hidden = !(!$('side').hidden && matchMedia('(max-width: 860px)').matches);
       }, 150);
     });
 
@@ -1089,7 +1124,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       if (zoom) {
         const [a, b] = zoom.dataset.zoom.split('-').map(Number);
         state.span = [a, b];
-        if (matchMedia('(max-width: 860px)').matches) showSide(false);
+        if (matchMedia(PHONE).matches) showSide(false);
         return changed();
       }
       const playFrom = el('[data-play-from]');
@@ -1121,7 +1156,6 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       play.t = t >= L.tMax ? null : t; drawPlay();
     });
     $('reverse').addEventListener('click', () => { state.order = state.order === 'new' ? 'old' : 'new'; drawReverse(); changed(); });
-    $('scrim').addEventListener('click', () => showSide(false));
     $('info-btn').addEventListener('click', () => {
       const on = $('info').hidden;
       if (on) drawInfo();
@@ -1283,13 +1317,14 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const get = (f) => fetch('data/' + f).then((r) => { if (!r.ok) throw new Error(f + ' ' + r.status); return r.json(); });
     try {
       const [a, b, c, d] = await Promise.all([get('things.json'), get('categories.json'), get('checkpoints.json'), get('views.json')]);
-      things = a.things; release = a.release; cats = b.categories; checkpoints = c.checkpoints; views = d;
+      things = a.things; release = a.release; cats = b.categories; b0 = b; checkpoints = c.checkpoints; views = d;
     } catch (e) {
       $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
       return;
     }
     byId = new Map(things.map((t) => [t.id, t]));
     catById = new Map(cats.map((c) => [c.id, c]));
+    for (const c of cats) c.domainName = (b0.domains || []).find((d) => d.id === c.domain)?.name;
     viewById = new Map(views.views.map((v) => [v.id, v]));
     prepare();
     if (!readUrl()) {

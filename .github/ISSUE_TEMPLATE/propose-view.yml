@@ -1,0 +1,46 @@
+name: Propose a view
+description: A timeline you would like to see or share, such as "The console wars". No code needed.
+title: "View: "
+labels: ["view", "proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the view and an editor will build it, or you can build it yourself by following the README. Give a thumbs-up to proposals you want to see: the most wanted are built first and ranked highest.
+  - type: input
+    id: name
+    attributes:
+      label: Name of the view
+      placeholder: The console wars
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What question does it answer?
+      description: One or two sentences. Who would enjoy it or find it useful?
+    validations:
+      required: true
+  - type: textarea
+    id: things
+    attributes:
+      label: Things it should show
+      description: A list of names. It is fine if some are not on the timeline yet; say so and add a source link if you have one.
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link to the timeline, if you built it on the page
+      description: Filled in when you come from the "Propose a view" button.
+  - type: textarea
+    id: eras
+    attributes:
+      label: Eras to draw, if any
+      description: Named periods with their years, such as "The first browser war, 1995 to 2001".
+  - type: checkboxes
+    id: pr
+    attributes:
+      label: Building it yourself?
+      options:
+        - label: I would like to open the pull request for this.

@@ -211,10 +211,10 @@ body.side-open #rguide { right: calc(var(--side) + 16px); }
 .search input { flex: 1; min-width: 0; padding: 0; border: 0; outline: 0; background: transparent; font-size: 13.5px; color: var(--text); }
 .search input::-webkit-search-cancel-button { display: none; }
 /* the list keeps its own scroll and never takes more than 40% of the panel */
-#p-views > #vlist { margin-top: 8px; height: calc((100vh - 52px) * .4); overflow-y: auto; overscroll-behavior: contain; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); }
+#p-views > #vlist { margin-top: 8px; overflow: hidden; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); }
 #vlist li { display: flex; align-items: center; gap: 10px; padding: 7px 12px; border-top: 1px solid var(--rule); color: var(--muted); cursor: pointer; }
 #vlist li:hover, #vlist li[aria-selected="true"] { background: var(--raised); color: var(--text); }
-#vlist li.grp { position: sticky; top: 0; z-index: 1; gap: 8px; padding: 9px 12px; font-size: 10.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
+#vlist li.grp { gap: 8px; padding: 9px 12px; font-size: 10.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
 #vlist li.grp:first-child { border-top: 0; }
 #vlist li.grp span { flex: 1; }
 #vlist li.grp small { font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--faint); }
@@ -224,6 +224,10 @@ body.side-open #rguide { right: calc(var(--side) + 16px); }
 #vlist li.none { font-size: 12px; color: var(--faint); cursor: default; }
 #vlist li.none:hover { background: none; }
 #vlist li[aria-disabled="true"] { opacity: .45; cursor: default; }
+/* a group's rows: a few in sight, the rest scroll inside the group */
+#vlist li.gbody { display: block; padding: 0; border-top: 0; cursor: default; }
+#vlist li.gbody:hover { background: none; }
+#vlist li.gbody > ul { max-height: calc(var(--rows) * 52px); overflow-y: auto; overscroll-behavior: contain; }
 .ck { flex: none; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; color: var(--bg); border: 1.5px solid var(--rule2); border-radius: 4px; }
 .ck.on { background: var(--c); border-color: var(--c); }
 .ck.go { color: var(--faint); border-color: transparent; }
@@ -338,18 +342,28 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 .s-born2 { fill: var(--surf); stroke: var(--line); stroke-width: 1.5; }
 .s-fill2 { fill: var(--line); }
 .s-dim2 { stroke: var(--faint); }
-#scrim { position: fixed; inset: 52px 0 0 0; z-index: 15; background: rgba(0, 0, 0, .5); }
 
+/* Tablets: a narrower panel, still beside the timeline. */
+@media (max-width: 1100px) { :root { --side: 340px; } }
 @media (max-width: 860px) {
-  :root { --side: min(100vw, 400px); }
-  body.side-open #stage { margin-right: 0; }
-  body.side-open #axisbar { right: 0; }
   #info { right: 12px; left: 12px; width: auto; z-index: 26; }
   .top { padding-left: 16px; }
   .logo span { display: none; }
   .tsearch { left: 56px; right: 130px; width: auto; transform: none; }
   .tsearch kbd { display: none; }
-  #p-views > #vlist { height: 34vh; }
+}
+/* Phones: the panel is a sheet over the lower half. The timeline and its axis
+   move up above it, so both stay in sight and can still be used. */
+@media (max-width: 699px) {
+  :root { --sheet: 50vh; --sheet: 50dvh; }
+  #side { top: auto; left: 0; width: auto; height: var(--sheet); border-left: 0; border-top: 1px solid var(--rule2); border-radius: 14px 14px 0 0; box-shadow: 0 -12px 32px rgba(0, 0, 0, .18); }
+  body.side-open #stage { margin-right: 0; }
+  body.side-open #axisbar { right: 0; bottom: var(--sheet); }
+  body.side-open { padding-bottom: calc(var(--sheet) + 48px); }
+  body.side-open #rguide { right: 16px; }
+  #p-views > #vlist { height: 24vh; }
+  .filters { position: static; margin-top: 16px !important; }
+  .pane-foot { padding-bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 #pills > .fine { padding: 9px 10px; }

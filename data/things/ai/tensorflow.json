@@ -1,0 +1,42 @@
+{
+  "id": "tensorflow",
+  "category": "ai",
+  "names": [
+    {
+      "name": "TensorFlow",
+      "from": "2015-11-09"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's software library for building and training neural networks, first written for its own teams and then given away as open source. It put the tools of deep learning in the hands of any programmer.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-11-09",
+      "precision": "day",
+      "note": "Google releases TensorFlow as open source."
+    },
+    {
+      "type": "released",
+      "date": "2019-09",
+      "precision": "month",
+      "label": "2.0",
+      "note": "TensorFlow 2.0 is released."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: TensorFlow",
+      "url": "https://en.wikipedia.org/wiki/TensorFlow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

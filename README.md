@@ -86,8 +86,18 @@ screenshots. The full guide is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 ## Propose a view
 
 A view is a named way of looking at the timeline, such as "The browser wars".
-Anyone can propose one, and an AI coding assistant can do most of the work:
-point it at [`AGENTS.md`](AGENTS.md) and [`docs/VIEWS.md`](docs/VIEWS.md).
+Anyone can propose one.
+
+**Without code:** press "Propose a view" in the panel, or open the
+[Propose a view](../../issues/new?template=propose-view.yml) form, and
+describe it. To ask for a single missing thing, use the
+[New thing](../../issues/new?template=new-thing.yml) form; the search offers
+it when it finds nothing. Give a thumbs-up to the proposals you want: the
+most wanted are built first, and editors use the votes to rank the
+Community views.
+
+**With code:** an AI coding assistant can do most of the work. Point it at
+[`AGENTS.md`](AGENTS.md) and [`docs/VIEWS.md`](docs/VIEWS.md).
 
 1. **Fork this repository** and run the page locally (see Quick start).
 2. **Build the view.** Add one file, `data/views/<id>.json`. Copy an existing
@@ -104,7 +114,7 @@ point it at [`AGENTS.md`](AGENTS.md) and [`docs/VIEWS.md`](docs/VIEWS.md).
    why it is worth having, and where the facts come from.
 
 The community reviews the pull request. Once it is merged, the view appears
-under "Community" in the panel and anyone can add it beside other views.
+under "Community views" in the panel and anyone can add it beside other views.
 
 ## Layout of this repository
 

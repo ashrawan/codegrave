@@ -7,7 +7,9 @@ enforces the ones a script can check.
 
 Each thing is one file: `data/things/<category>/<id>.json`. The file name is
 the `id` and the folder is the `category`. Ids are unique across all
-categories. One file per thing means two people adding two things never
+categories. Each category is one kind of thing and belongs to a `domain`;
+both lists are in `data/categories.json`. File a thing by what it is, not by
+who made it or who uses it. One file per thing means two people adding two things never
 touch the same file.
 
 ## What belongs
@@ -166,7 +168,7 @@ the page shows the top share of each category and decade.
 
 The score becomes a percentile among peers of the same category and decade
 of birth. With fewer than five peers the comparison widens to the whole
-category, then to everything. The "How much to show" control sets the cut.
+category, then to its domain, then to everything. The "How much to show" control sets the cut.
 What passes the cut but does not fit on the screen is left out from the
 lowest rank up, and the panel says how many fit.
 

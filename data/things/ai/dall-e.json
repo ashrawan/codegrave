@@ -1,0 +1,57 @@
+{
+  "id": "dall-e",
+  "category": "ai",
+  "names": [
+    {
+      "name": "DALL-E",
+      "from": "2021-01-05"
+    }
+  ],
+  "maker": "OpenAI",
+  "summary": "OpenAI's models that draw a picture from a written description. The first version made the idea famous; DALL-E 2 and 3 made the pictures realistic and put them inside ChatGPT, until a newer image model took over there in 2025.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-01-05",
+      "precision": "day",
+      "note": "OpenAI announces the first DALL-E."
+    },
+    {
+      "type": "released",
+      "date": "2022",
+      "precision": "year",
+      "label": "DALL-E 2",
+      "note": "DALL-E 2 is released."
+    },
+    {
+      "type": "released",
+      "date": "2023-10",
+      "precision": "month",
+      "label": "DALL-E 3",
+      "note": "DALL-E 3 arrives inside ChatGPT."
+    },
+    {
+      "type": "milestone",
+      "date": "2025-03",
+      "precision": "month",
+      "label": "Replaced",
+      "note": "ChatGPT switches from DALL-E 3 to a newer built-in image model."
+    }
+  ],
+  "status": "fading",
+  "note": "Replaced inside ChatGPT in March 2025; no end date has been announced for the models themselves.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: DALL-E",
+      "url": "https://en.wikipedia.org/wiki/DALL-E",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

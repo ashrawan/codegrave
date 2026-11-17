@@ -1,19 +1,35 @@
 {
   "id": "browser-wars",
   "name": "The browser wars",
-  "description": "Netscape against Internet Explorer, and the languages that grew up around them.",
+  "description": "Hand-picked: Netscape against Internet Explorer, the browsers that came after, and the web languages and plug-ins they fought over.",
   "author": "codegrave",
   "tags": [
     "browsers",
     "web",
-    "1990s"
+    "1990s",
+    "hand-picked"
   ],
   "categories": [
     "browsers",
-    "languages"
+    "languages",
+    "formats",
+    "platforms"
   ],
-  "level": 60,
+  "level": 100,
   "year": 2001,
+  "things": [
+    "mosaic",
+    "netscape",
+    "internet-explorer",
+    "firefox",
+    "safari",
+    "chrome",
+    "javascript",
+    "ecmascript",
+    "java-applets",
+    "flash",
+    "xhtml"
+  ],
   "checkpoints": [
     {
       "id": "first-war",

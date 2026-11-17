@@ -30,14 +30,16 @@ export function score(things, NOW) {
     t.score = Object.keys(WEIGHTS).reduce((sum, k) => sum + WEIGHTS[k] * parts[k], 0);
     t.decade = Math.floor(t.born / 10) * 10;
   }
-  // Rank against peers: same category and decade. Small groups widen so a
-  // lone entry is not automatically "top of its class".
+  // Rank against peers: same category and decade. Small groups widen (to the
+  // category, then its domain, then everything) so a lone entry is not
+  // automatically "top of its class".
   const groups = new Map();
   const add = (key, t) => { if (!groups.has(key)) groups.set(key, []); groups.get(key).push(t); };
-  for (const t of things) { add(t.category + '|' + t.decade, t); add(t.category, t); add('*', t); }
+  for (const t of things) { add(t.category + '|' + t.decade, t); add(t.category, t); if (t.cat.domain) add('@' + t.cat.domain, t); add('*', t); }
   for (const t of things) {
     let key = t.category + '|' + t.decade, peers = `${t.cat.name.toLowerCase()} first released in the ${t.decade}s`;
     if (groups.get(key).length < 5) { key = t.category; peers = `all ${t.cat.name.toLowerCase()}`; }
+    if (groups.get(key).length < 5 && t.cat.domain) { key = '@' + t.cat.domain; peers = `everything in ${t.cat.domainName || t.cat.domain}`; }
     if (groups.get(key).length < 5) { key = '*'; peers = 'everything on the timeline'; }
     const g = groups.get(key);
     if (!g.sorted) { g.sort((a, b) => b.score - a.score); g.sorted = true; }

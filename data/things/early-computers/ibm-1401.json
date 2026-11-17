@@ -1,0 +1,47 @@
+{
+  "id": "ibm-1401",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "IBM 1401",
+      "from": "1959-10-05"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "A transistor computer for ordinary business work such as payroll and billing, which replaced rooms of punched-card machines. It sold in the thousands and was, for a time, the most common computer in the world. IBM has called it the Model T of the computer industry.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-10-05",
+      "precision": "day",
+      "note": "IBM announces the 1401."
+    },
+    {
+      "type": "ended",
+      "date": "1971-02-08",
+      "precision": "day",
+      "note": "IBM withdraws the 1401 from sale."
+    }
+  ],
+  "status": "dead",
+  "cause": "Withdrawn after the System/360 took over its work.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "system-360"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: IBM 1401",
+      "url": "https://en.wikipedia.org/wiki/IBM_1401",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,42 @@
+{
+  "id": "osborne-1",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "Osborne 1",
+      "from": "1981-04-03"
+    }
+  ],
+  "maker": "Osborne Computer Corporation",
+  "summary": "The first portable computer to sell well. It weighed about 11 kg, had a 5-inch screen, needed a wall socket, and came with a bundle of software worth nearly its price. The company collapsed two years later, and its name lives on in the “Osborne effect”: announcing the next model too early and killing sales of the current one.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-04-03",
+      "precision": "day",
+      "note": "The Osborne 1 goes on sale."
+    },
+    {
+      "type": "ended",
+      "date": "1983",
+      "precision": "year",
+      "note": "Production stops as the company goes bankrupt."
+    }
+  ],
+  "status": "dead",
+  "cause": "Its maker went bankrupt.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Osborne 1",
+      "url": "https://en.wikipedia.org/wiki/Osborne_1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

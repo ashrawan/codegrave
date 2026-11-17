@@ -27,7 +27,7 @@ node scripts/new.mjs view <id> "<Name>"
 | A fact about a thing | `data/things/<category>/<id>.json` (one file) | `site/data/` (generated) |
 | A view | `data/views/<id>.json` (one file) | another person's view |
 | Featured or default views | `data/editors-choice.json` | |
-| Categories, named eras | `data/categories.json`, `data/checkpoints.json` | |
+| The map (7 domains, each with kinds, which are the `category` folders), named eras | `data/categories.json`, `data/checkpoints.json` | |
 | An icon or image | `data/media/`, then name it on the thing or event | `site/data/media/` (generated) |
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
@@ -69,10 +69,14 @@ is `onScroll()`, which only moves names so they stay in sight.
 How the page is put together:
 
 - The timeline fills the page. The panel is hidden until its button or a
-  line is clicked. It has three panes: views, the history of one thing, and
+  line is clicked. It never covers the timeline: on wide screens and tablets
+  it sits beside it and the timeline narrows; on phones (under 700 px) it is a
+  sheet over the lower half and the timeline and axis move up above it
+  (`sheetH()`). It has three panes: views, the history of one thing, and
   one era.
 - `state.views` is the list of views on the timeline. Each owns a block of
-  rows (a section) under its coloured heading line. A view's own eras
+  rows (a section) under its coloured heading line. A thing in two views is
+  drawn in both sections; `L.at` maps an id to its first row. A view's own eras
   (`checkpoints`) are drawn inside its section in its colour; there is no
   timeline-wide strip of eras (`data/checkpoints.json` is not drawn). The
   grip under a section drags it shorter or taller (`state.sizes`, pixels; a
@@ -82,9 +86,11 @@ How the page is put together:
   In the panel, "Showing" lists the views as rows: drag a row to reorder
   the sections, its dot (left) picks the view's colour, its cross (right)
   removes it, and shuffle mixes the colours (`?c=` in the link).
-  There is no category control; categories only exist as views.
+  There is no category control; the map only exists as views: one per
+  domain (a view with `domains`, tagged `domain`). Views of one kind are
+  tagged `kind` and are found by search only.
   The views pane is search, then one ticked list of every view (grouped
-  Classical, Featured, Community by `tabOf()`), then a sentence naming what
+  Community views, then Classical views, by `tabOf()`), then a sentence naming what
   is on the timeline, then the filters at the bottom: the year range
   (`state.span`) and how much to show (`state.level`).
 - Play sits at the bottom left of the axis and reverse (`state.order`) at
@@ -94,12 +100,17 @@ How the page is put together:
 - The search in the top bar (`findOnTimeline()`) finds things, events,
   eras and years among what is drawn and goes there. Below a divider it
   lists matching things that are not on the timeline; picking one adds a
-  view that holds it (the category view first). The GitHub icon next to the
+  view that holds it (its kind view first, else its domain view). The GitHub icon next to the
   theme switch opens the repository. The panel's search
   finds views to add.
-- The panel list is grouped Featured (open), Classical, Community (folded,
-  `openGroups`). "Propose a view" at the end of Community links to the
-  README's guide (`PROPOSE`); views arrive as pull requests, not from a form.
+- The panel list is grouped "Community views" (ranked: the order of
+  `featured` in `data/editors-choice.json`, then by name), then "Classical
+  views" (the domain views and Everything, by name; `tabOf()` returns `featured` for them). Each group shows
+  three rows and scrolls the rest (`GROUP_ROWS`); both fold (`openGroups`). "Propose a view" at the end of Community views opens the
+  "Propose a view" issue form with the current link filled in; an editor or
+  the proposer then adds the view file by pull request. When the top search
+  matches no thing in the data, it offers "Suggest …", which opens the
+  "New thing" form with the name filled in.
   The bookmark icon saves the timeline as "Your view" in
   this browser (`cg-mine`, one slot; saving again replaces it), and the
   page opens on it when the link names no views.
