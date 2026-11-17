@@ -1,0 +1,47 @@
+{
+  "id": "game-boy",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Game Boy",
+      "from": "1989-04-21"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's handheld console with swappable games. Its grey-green screen was weaker than its rivals', but it was cheap, its batteries lasted, and it came with Tetris.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-04-21",
+      "precision": "day",
+      "note": "Released in Japan."
+    },
+    {
+      "type": "ended",
+      "date": "2003-03-31",
+      "precision": "day",
+      "note": "Nintendo discontinues the Game Boy."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Game Boy Advance.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "game-boy-advance"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Game Boy",
+      "url": "https://en.wikipedia.org/wiki/Game_Boy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

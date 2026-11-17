@@ -1,0 +1,42 @@
+{
+  "id": "nokia-1100",
+  "category": "phones",
+  "names": [
+    {
+      "name": "Nokia 1100",
+      "from": "2003"
+    }
+  ],
+  "maker": "Nokia",
+  "summary": "A plain, tough, cheap phone with a torch, made for people buying their first mobile. More than 250 million were sold, which made it the best-selling phone in the world, and for many people in Asia and Africa it was the first phone they owned.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003",
+      "precision": "year",
+      "note": "Announced on 27 August and launched before the end of the year."
+    },
+    {
+      "type": "ended",
+      "date": "2010",
+      "precision": "year",
+      "note": "Nokia discontinues the 1100."
+    }
+  ],
+  "status": "dead",
+  "cause": "Discontinued as even basic phones moved on.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Nokia 1100",
+      "url": "https://en.wikipedia.org/wiki/Nokia_1100",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

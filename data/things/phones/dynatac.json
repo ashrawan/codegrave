@@ -1,0 +1,48 @@
+{
+  "id": "dynatac",
+  "category": "phones",
+  "names": [
+    {
+      "name": "Motorola DynaTAC",
+      "from": "1984"
+    }
+  ],
+  "maker": "Motorola",
+  "summary": "The first handheld mobile phone anyone could buy. It weighed about 800 grams, took ten hours to charge for thirty minutes of talk, and cost nearly $4,000. Its shape gave it a nickname that stuck: the brick.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1983-03-06",
+      "precision": "day",
+      "note": "Motorola unveils the DynaTAC."
+    },
+    {
+      "type": "born",
+      "date": "1984",
+      "precision": "year",
+      "note": "It goes on sale."
+    },
+    {
+      "type": "ended",
+      "date": "1994",
+      "precision": "year",
+      "note": "Motorola stops making the DynaTAC series."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by smaller, cheaper phones.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: DynaTAC",
+      "url": "https://en.wikipedia.org/wiki/DynaTAC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

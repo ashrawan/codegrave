@@ -1,0 +1,53 @@
+{
+  "id": "discman",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "Discman",
+      "from": "1984"
+    },
+    {
+      "name": "CD Walkman",
+      "from": "2000"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "Sony's portable CD player: your music collection on shiny discs, in a coat pocket, as long as you did not jog.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984",
+      "precision": "year",
+      "note": "Sony launches the first Discman, the D-50."
+    },
+    {
+      "type": "milestone",
+      "date": "2000",
+      "precision": "year",
+      "label": "CD Walkman",
+      "note": "Sony drops the Discman name for CD Walkman."
+    },
+    {
+      "type": "ended",
+      "date": "2010",
+      "precision": "circa",
+      "note": "Sony stops making portable CD players around this time."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by MP3 players and then by phones.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Discman",
+      "url": "https://en.wikipedia.org/wiki/Discman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

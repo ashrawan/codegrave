@@ -1,0 +1,47 @@
+{
+  "id": "playstation",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "PlayStation",
+      "from": "1994-12-03"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "Sony's first console, begun after a joint project with Nintendo fell apart. It put games on CDs, aimed them at adults as well as children, and made Sony the leader of the industry.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-12-03",
+      "precision": "day",
+      "note": "Released in Japan."
+    },
+    {
+      "type": "ended",
+      "date": "2006-03-23",
+      "precision": "day",
+      "note": "Sony discontinues the PlayStation."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the PlayStation 2 and 3.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "playstation-2"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: PlayStation (console)",
+      "url": "https://en.wikipedia.org/wiki/PlayStation_(console)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

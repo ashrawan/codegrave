@@ -1,0 +1,60 @@
+{
+  "id": "super-nintendo",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Super Famicom",
+      "from": "1990-11-21"
+    },
+    {
+      "name": "Super Nintendo",
+      "from": "1991-08-23"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's 16-bit console, the Super Famicom in Japan, which fought the Sega Genesis for the living rooms of the early 1990s.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-11-21",
+      "precision": "day",
+      "note": "Released in Japan as the Super Famicom."
+    },
+    {
+      "type": "milestone",
+      "date": "1991-08-23",
+      "precision": "day",
+      "label": "Super NES",
+      "note": "Released in North America as the Super NES."
+    },
+    {
+      "type": "deprecated",
+      "date": "1999",
+      "precision": "year",
+      "label": "Ends in the US",
+      "note": "Production stops in North America."
+    },
+    {
+      "type": "ended",
+      "date": "2003-09-25",
+      "precision": "day",
+      "note": "Production of the Super Famicom ends in Japan."
+    }
+  ],
+  "status": "dead",
+  "cause": "Discontinued after newer Nintendo consoles replaced it.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Super Nintendo Entertainment System",
+      "url": "https://en.wikipedia.org/wiki/Super_Nintendo_Entertainment_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

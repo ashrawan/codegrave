@@ -1,0 +1,42 @@
+{
+  "id": "blackberry-curve",
+  "category": "phones",
+  "names": [
+    {
+      "name": "BlackBerry Curve",
+      "from": "2007"
+    }
+  ],
+  "maker": "Research In Motion",
+  "summary": "The BlackBerry for everyone, where earlier models were for business. With its small keyboard and BBM messaging it was, for a few years, the phone teenagers and office workers alike could not put down.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007",
+      "precision": "year",
+      "note": "The first Curve goes on sale."
+    },
+    {
+      "type": "ended",
+      "date": "2013",
+      "precision": "year",
+      "note": "The last Curve models are made."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost its users to the iPhone and Android.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: BlackBerry Curve",
+      "url": "https://en.wikipedia.org/wiki/BlackBerry_Curve",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
