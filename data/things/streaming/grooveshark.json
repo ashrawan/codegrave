@@ -1,0 +1,42 @@
+{
+  "id": "grooveshark",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Grooveshark",
+      "from": "2007-09"
+    }
+  ],
+  "maker": "Escape Media Group",
+  "summary": "A website that let you play almost any song for free, because its users had uploaded them. The record companies sued, and it closed with a public apology.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-09",
+      "precision": "month",
+      "note": "Grooveshark opens in beta."
+    },
+    {
+      "type": "ended",
+      "date": "2015-04-30",
+      "precision": "day",
+      "note": "Grooveshark shuts down as part of a settlement with the record companies."
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed in a legal settlement with the major record companies.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Grooveshark",
+      "url": "https://en.wikipedia.org/wiki/Grooveshark",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

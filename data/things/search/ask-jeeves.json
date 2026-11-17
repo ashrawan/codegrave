@@ -1,0 +1,60 @@
+{
+  "id": "ask-jeeves",
+  "category": "search",
+  "names": [
+    {
+      "name": "Ask Jeeves",
+      "from": "1997-06-01"
+    },
+    {
+      "name": "Ask.com",
+      "from": "2006-02"
+    }
+  ],
+  "maker": "Ask Jeeves",
+  "summary": "A search engine you could ask in plain English, with a butler called Jeeves as its face. It was one of the best-known names of the early web. It dropped the butler in 2006, stopped building its own search in 2010 and closed in 2026.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997-06-01",
+      "precision": "day",
+      "note": "Ask Jeeves launches after a beta in April."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2005-07",
+      "precision": "month",
+      "label": "IAC",
+      "note": "IAC buys Ask Jeeves."
+    },
+    {
+      "type": "milestone",
+      "date": "2006-02",
+      "precision": "month",
+      "label": "Renamed Ask",
+      "note": "The Jeeves name is dropped."
+    },
+    {
+      "type": "ended",
+      "date": "2026-05-01",
+      "precision": "day",
+      "note": "Ask.com shuts down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost to Google; its owner closed it after nearly thirty years.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Ask.com",
+      "url": "https://en.wikipedia.org/wiki/Ask.com",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

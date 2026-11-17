@@ -1,0 +1,47 @@
+{
+  "id": "mt-gox",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "Mt. Gox",
+      "from": "2010"
+    }
+  ],
+  "maker": "Mt. Gox",
+  "summary": "For a time the exchange that handled most of the world's Bitcoin trades. It collapsed after about 850,000 bitcoins went missing, most of them stolen.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010",
+      "precision": "year",
+      "note": "Mt. Gox starts trading Bitcoin."
+    },
+    {
+      "type": "ended",
+      "date": "2014-02",
+      "precision": "month",
+      "note": "It stops trading, closes its website and files for bankruptcy."
+    }
+  ],
+  "status": "dead",
+  "cause": "Hundreds of thousands of bitcoins were stolen and it went bankrupt.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "built_on",
+      "to": "bitcoin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mt. Gox",
+      "url": "https://en.wikipedia.org/wiki/Mt._Gox",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "youtube",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "YouTube",
+      "from": "2005-04-23"
+    }
+  ],
+  "maker": "YouTube, later Google",
+  "summary": "The place where anyone can post a video and anyone can watch it. It is the second most visited website in the world.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2005-02-14",
+      "precision": "day",
+      "note": "The address youtube.com is registered."
+    },
+    {
+      "type": "born",
+      "date": "2005-04-23",
+      "precision": "day",
+      "note": "The first video, “Me at the zoo”, is uploaded."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2006",
+      "precision": "year",
+      "label": "Google",
+      "note": "Google buys YouTube for $1.65 billion."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: YouTube",
+      "url": "https://en.wikipedia.org/wiki/YouTube",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

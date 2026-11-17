@@ -1,0 +1,46 @@
+{
+  "id": "ebay",
+  "category": "websites",
+  "names": [
+    {
+      "name": "AuctionWeb",
+      "from": "1995-09-03"
+    },
+    {
+      "name": "eBay",
+      "from": "1997-09"
+    }
+  ],
+  "maker": "eBay",
+  "summary": "An auction site where anyone can sell anything to anyone. It showed that strangers would trust each other with money online if they could see each other's ratings.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-09-03",
+      "precision": "day",
+      "note": "Pierre Omidyar starts it as AuctionWeb."
+    },
+    {
+      "type": "milestone",
+      "date": "1997-09",
+      "precision": "month",
+      "label": "Renamed eBay",
+      "note": "AuctionWeb is renamed eBay."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: EBay",
+      "url": "https://en.wikipedia.org/wiki/EBay",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

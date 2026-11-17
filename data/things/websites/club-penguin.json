@@ -1,0 +1,49 @@
+{
+  "id": "club-penguin",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Club Penguin",
+      "from": "2005-10-24"
+    }
+  ],
+  "maker": "New Horizon Interactive, later Disney",
+  "summary": "An online world for children where you played as a cartoon penguin, chatted with friends and decorated your igloo. More than 200 million accounts were made.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-10-24",
+      "precision": "day",
+      "note": "Club Penguin opens to the public."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2007-08",
+      "precision": "month",
+      "label": "Disney",
+      "note": "Disney buys the company for $350 million."
+    },
+    {
+      "type": "ended",
+      "date": "2017-03-30",
+      "precision": "day",
+      "note": "Club Penguin closes and is replaced by an app, Club Penguin Island."
+    }
+  ],
+  "status": "dead",
+  "cause": "Disney closed it in favour of a phone app.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Club Penguin",
+      "url": "https://en.wikipedia.org/wiki/Club_Penguin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": "duckduckgo",
+  "category": "search",
+  "names": [
+    {
+      "name": "DuckDuckGo",
+      "from": "2008-09-25"
+    }
+  ],
+  "maker": "DuckDuckGo",
+  "summary": "A search engine built on a promise not to track the people who use it.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-09-25",
+      "precision": "day",
+      "note": "DuckDuckGo launches."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: DuckDuckGo",
+      "url": "https://en.wikipedia.org/wiki/DuckDuckGo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

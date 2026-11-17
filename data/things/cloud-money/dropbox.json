@@ -1,0 +1,41 @@
+{
+  "id": "dropbox",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "Dropbox",
+      "from": "2008"
+    }
+  ],
+  "maker": "Dropbox",
+  "summary": "A folder that keeps your files the same on every device. It made cloud storage something ordinary people used.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2007",
+      "precision": "year",
+      "note": "The company is founded."
+    },
+    {
+      "type": "born",
+      "date": "2008",
+      "precision": "year",
+      "note": "Dropbox launches to the public."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Dropbox",
+      "url": "https://en.wikipedia.org/wiki/Dropbox",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

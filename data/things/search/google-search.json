@@ -1,0 +1,41 @@
+{
+  "id": "google-search",
+  "category": "search",
+  "names": [
+    {
+      "name": "Google Search",
+      "from": "1997"
+    }
+  ],
+  "maker": "Google",
+  "summary": "The search engine that became a verb. It ranked pages by how many other pages linked to them, which gave better answers than anything before it, and it has been the most visited website in the world for most of this century.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1995",
+      "precision": "year",
+      "note": "Larry Page and Sergey Brin build the first prototype at Stanford."
+    },
+    {
+      "type": "born",
+      "date": "1997",
+      "precision": "year",
+      "note": "The search engine launches in its final form."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Google Search",
+      "url": "https://en.wikipedia.org/wiki/Google_Search",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

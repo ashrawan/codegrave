@@ -1,0 +1,35 @@
+{
+  "id": "bing",
+  "category": "search",
+  "names": [
+    {
+      "name": "Bing",
+      "from": "2009-06-03"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's search engine, the successor to MSN Search and Live Search. It has stayed a distant second to Google.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-06-03",
+      "precision": "day",
+      "note": "Bing goes live, replacing Live Search."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Microsoft Bing",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Bing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

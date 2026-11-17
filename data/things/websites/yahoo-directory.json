@@ -1,0 +1,42 @@
+{
+  "id": "yahoo-directory",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Yahoo Directory",
+      "from": "1994-01"
+    }
+  ],
+  "maker": "Yahoo",
+  "summary": "Yahoo's first product: a list of websites sorted by hand into categories, which was how many people found their way around the early web. Search engines made it unnecessary.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-01",
+      "precision": "month",
+      "note": "Starts as “Jerry and David’s Guide to the World Wide Web”."
+    },
+    {
+      "type": "ended",
+      "date": "2014-12-26",
+      "precision": "day",
+      "note": "Yahoo closes the directory."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by search engines.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Yahoo! Directory",
+      "url": "https://en.wikipedia.org/wiki/Yahoo!_Directory",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

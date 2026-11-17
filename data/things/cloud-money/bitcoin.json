@@ -1,0 +1,41 @@
+{
+  "id": "bitcoin",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "Bitcoin",
+      "from": "2009"
+    }
+  ],
+  "maker": "Satoshi Nakamoto",
+  "summary": "The first digital money that works with no bank or company in the middle. A shared public record, the blockchain, keeps track of who owns what.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2008",
+      "precision": "year",
+      "note": "The paper describing Bitcoin is published."
+    },
+    {
+      "type": "born",
+      "date": "2009",
+      "precision": "year",
+      "note": "The software is released and Bitcoin is first used."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Bitcoin",
+      "url": "https://en.wikipedia.org/wiki/Bitcoin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "msn-messenger",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "MSN Messenger",
+      "from": "1999-07-22"
+    },
+    {
+      "name": "Windows Live Messenger",
+      "from": "2005-12-13"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's instant messenger, later called Windows Live Messenger. With its nudges, winks and custom status lines it was the main way young people chatted online in much of the world in the 2000s.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-07-22",
+      "precision": "day",
+      "note": "MSN Messenger is released."
+    },
+    {
+      "type": "milestone",
+      "date": "2005-12-13",
+      "precision": "day",
+      "label": "Windows Live",
+      "note": "It is renamed Windows Live Messenger."
+    },
+    {
+      "type": "ended",
+      "date": "2013-04-08",
+      "precision": "day",
+      "note": "Microsoft starts moving users to Skype and retires the service. It stayed on in mainland China until 31 October 2014."
+    }
+  ],
+  "status": "dead",
+  "cause": "Microsoft replaced it with Skype.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "skype"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: MSN Messenger",
+      "url": "https://en.wikipedia.org/wiki/MSN_Messenger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

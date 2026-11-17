@@ -1,0 +1,42 @@
+{
+  "id": "mapquest",
+  "category": "websites",
+  "names": [
+    {
+      "name": "MapQuest",
+      "from": "1996-02-06"
+    }
+  ],
+  "maker": "GeoSystems Global",
+  "summary": "The first popular website for maps and driving directions. For years people printed its turn-by-turn pages before a trip. Google Maps and phones took its place, though the site is still running.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-02-06",
+      "precision": "day",
+      "note": "MapQuest launches on the web."
+    },
+    {
+      "type": "changed_hands",
+      "date": "1999-12",
+      "precision": "month",
+      "label": "AOL",
+      "note": "AOL agrees to buy MapQuest for $1.1 billion."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: MapQuest",
+      "url": "https://en.wikipedia.org/wiki/MapQuest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

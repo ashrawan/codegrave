@@ -1,0 +1,42 @@
+{
+  "id": "excite",
+  "category": "search",
+  "names": [
+    {
+      "name": "Excite",
+      "from": "1995-10"
+    }
+  ],
+  "maker": "Excite",
+  "summary": "A web portal and search engine that was among the ten busiest sites on the web in 1997. It went bankrupt when the dot-com bubble burst and lived on for twenty-five years as a quiet page, until it was switched off in 2026.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-10",
+      "precision": "month",
+      "note": "Excite launches."
+    },
+    {
+      "type": "ended",
+      "date": "2026-08",
+      "precision": "month",
+      "note": "Excite.com is shut down, following Ask.com."
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined after the dot-com crash; closed by its owner.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Excite (web portal)",
+      "url": "https://en.wikipedia.org/wiki/Excite_(web_portal)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

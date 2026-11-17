@@ -1,0 +1,42 @@
+{
+  "id": "pandora",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Pandora",
+      "from": "2005"
+    }
+  ],
+  "maker": "Pandora Media",
+  "summary": "Internet radio that picks the next song for you based on what you like.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005",
+      "precision": "year",
+      "note": "Pandora launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2019",
+      "precision": "year",
+      "label": "Sirius XM",
+      "note": "Sirius XM buys Pandora."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Pandora (service)",
+      "url": "https://en.wikipedia.org/wiki/Pandora_(service)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

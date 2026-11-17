@@ -1,0 +1,41 @@
+{
+  "id": "spotify",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Spotify",
+      "from": "2008-10-07"
+    }
+  ],
+  "maker": "Spotify",
+  "summary": "Nearly all recorded music, streamed for a monthly fee or free with adverts. It made owning music files unnecessary for most listeners.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2006-04",
+      "precision": "month",
+      "note": "Spotify is founded in Stockholm."
+    },
+    {
+      "type": "born",
+      "date": "2008-10-07",
+      "precision": "day",
+      "note": "Spotify launches."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Spotify",
+      "url": "https://en.wikipedia.org/wiki/Spotify",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
