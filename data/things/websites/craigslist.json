@@ -1,0 +1,41 @@
+{
+  "id": "craigslist",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Craigslist",
+      "from": "1996"
+    }
+  ],
+  "maker": "Craigslist",
+  "summary": "Plain pages of classified adverts: flats, jobs, furniture, lost cats. It barely changed its look in thirty years, and it took away much of the advertising income that local newspapers lived on.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1995",
+      "precision": "year",
+      "note": "Craig Newmark starts an email list of events in San Francisco."
+    },
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year",
+      "note": "It becomes a website."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Craigslist",
+      "url": "https://en.wikipedia.org/wiki/Craigslist",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

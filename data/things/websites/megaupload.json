@@ -1,0 +1,46 @@
+{
+  "id": "megaupload",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Megaupload",
+      "from": "2005"
+    }
+  ],
+  "maker": "Megaupload Limited",
+  "summary": "A site for storing and sharing large files, used heavily for films and music that people had no right to share. At its peak it was one of the busiest sites on the internet.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005",
+      "precision": "year",
+      "note": "Megaupload is founded."
+    },
+    {
+      "type": "ended",
+      "date": "2012-01-19",
+      "precision": "day",
+      "note": "The United States Department of Justice seizes its domain names and shuts it down."
+    },
+    {
+      "type": "afterlife",
+      "note": "Its founder launched a successor, Mega, one year later."
+    }
+  ],
+  "status": "dead",
+  "cause": "Shut down by the United States government over copyright infringement.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Megaupload",
+      "url": "https://en.wikipedia.org/wiki/Megaupload",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

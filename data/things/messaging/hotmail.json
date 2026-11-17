@@ -1,0 +1,53 @@
+{
+  "id": "hotmail",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Hotmail",
+      "from": "1996-07-04"
+    },
+    {
+      "name": "Outlook.com",
+      "from": "2013-05"
+    }
+  ],
+  "maker": "Hotmail",
+  "summary": "One of the first free email services you could read from any web browser. Microsoft bought it within eighteen months and, after several renames, turned it into Outlook.com.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-07-04",
+      "precision": "day",
+      "note": "Hotmail launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "1997-12",
+      "precision": "month",
+      "label": "Microsoft",
+      "note": "Microsoft buys Hotmail."
+    },
+    {
+      "type": "milestone",
+      "date": "2013-05",
+      "precision": "month",
+      "label": "Outlook.com",
+      "note": "Hotmail is fully replaced by Outlook.com."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Outlook.com",
+      "url": "https://en.wikipedia.org/wiki/Outlook.com",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

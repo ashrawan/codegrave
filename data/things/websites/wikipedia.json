@@ -1,0 +1,35 @@
+{
+  "id": "wikipedia",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Wikipedia",
+      "from": "2001-01-15"
+    }
+  ],
+  "maker": "Wikimedia Foundation",
+  "summary": "A free encyclopedia that anyone can edit, written by volunteers in more than 300 languages. It was expected to fail and instead became the place the world looks things up.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-01-15",
+      "precision": "day",
+      "note": "Wikipedia goes online."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Wikipedia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

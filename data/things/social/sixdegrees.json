@@ -1,0 +1,42 @@
+{
+  "id": "sixdegrees",
+  "category": "social",
+  "names": [
+    {
+      "name": "SixDegrees",
+      "from": "1997"
+    }
+  ],
+  "maker": "MacroView",
+  "summary": "Often called the first social network: you made a profile, listed your friends and could see friends of friends. It arrived before most people were online enough for that to be useful.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997",
+      "precision": "year",
+      "note": "SixDegrees.com launches."
+    },
+    {
+      "type": "ended",
+      "date": "2000-12-30",
+      "precision": "day",
+      "note": "The site shuts down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Too early: too few people were online, and it ran out of money.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: SixDegrees.com",
+      "url": "https://en.wikipedia.org/wiki/SixDegrees.com",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": "aws",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "AWS",
+      "from": "2006-03-14"
+    }
+  ],
+  "maker": "Amazon",
+  "summary": "Computers and storage rented over the internet by the hour. It started the cloud computing business, and a large share of the websites and apps people use now run on it.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-03-14",
+      "precision": "day",
+      "note": "The storage service S3 launches, the first AWS service open to all."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Amazon Web Services",
+      "url": "https://en.wikipedia.org/wiki/Amazon_Web_Services",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

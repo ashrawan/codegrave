@@ -1,0 +1,42 @@
+{
+  "id": "limewire",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "LimeWire",
+      "from": "2000-05-03"
+    }
+  ],
+  "maker": "Lime Wire LLC",
+  "summary": "A free program for swapping music and other files with strangers. After Napster closed it was how millions of people got songs without paying.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-05-03",
+      "precision": "day",
+      "note": "LimeWire is released."
+    },
+    {
+      "type": "ended",
+      "date": "2010-10-26",
+      "precision": "day",
+      "note": "A United States court orders LimeWire to stop its file-sharing service."
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed by a court order after record companies sued.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: LimeWire",
+      "url": "https://en.wikipedia.org/wiki/LimeWire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

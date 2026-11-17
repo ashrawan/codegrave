@@ -1,0 +1,49 @@
+{
+  "id": "altavista",
+  "category": "search",
+  "names": [
+    {
+      "name": "AltaVista",
+      "from": "1995-12-15"
+    }
+  ],
+  "maker": "Digital Equipment Corporation",
+  "summary": "The first search engine that seemed to know the whole web. It was fast, it searched the full text of pages, and for a few years it was where most people started. Google arrived with better results and a cleaner page, and AltaVista faded into a name Yahoo owned.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-12-15",
+      "precision": "day",
+      "note": "AltaVista opens to the public."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2003",
+      "precision": "year",
+      "label": "Overture, Yahoo",
+      "note": "Overture buys AltaVista, and Yahoo buys Overture the same year."
+    },
+    {
+      "type": "ended",
+      "date": "2013-07-08",
+      "precision": "day",
+      "note": "Yahoo shuts AltaVista down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost to Google; its owner Yahoo closed it.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: AltaVista",
+      "url": "https://en.wikipedia.org/wiki/AltaVista",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

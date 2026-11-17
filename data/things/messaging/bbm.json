@@ -1,0 +1,42 @@
+{
+  "id": "bbm",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "BBM",
+      "from": "2005-08-01"
+    }
+  ],
+  "maker": "Research In Motion",
+  "summary": "The messenger built into BlackBerry phones. It was fast, free between BlackBerry owners and showed when a message had been read, years before other apps did.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-08-01",
+      "precision": "day",
+      "note": "BBM is released."
+    },
+    {
+      "type": "ended",
+      "date": "2019-05-31",
+      "precision": "day",
+      "note": "The consumer service shuts down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Its users moved to WhatsApp and other phone apps.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: BlackBerry Messenger",
+      "url": "https://en.wikipedia.org/wiki/BlackBerry_Messenger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

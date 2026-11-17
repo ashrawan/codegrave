@@ -1,0 +1,35 @@
+{
+  "id": "baidu",
+  "category": "search",
+  "names": [
+    {
+      "name": "Baidu",
+      "from": "2000-01"
+    }
+  ],
+  "maker": "Baidu",
+  "summary": "The main search engine in China, used by hundreds of millions of people.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-01",
+      "precision": "month",
+      "note": "Baidu is founded in Beijing."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Baidu",
+      "url": "https://en.wikipedia.org/wiki/Baidu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

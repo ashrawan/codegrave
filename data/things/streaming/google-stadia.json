@@ -1,0 +1,48 @@
+{
+  "id": "google-stadia",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Google Stadia",
+      "from": "2019-11-19"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's service for playing big video games over the internet with no console. The technology worked, but too few people signed up.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-11-19",
+      "precision": "day",
+      "note": "Stadia launches."
+    },
+    {
+      "type": "deprecated",
+      "date": "2022-09",
+      "precision": "month",
+      "note": "Google announces the shutdown and refunds purchases."
+    },
+    {
+      "type": "ended",
+      "date": "2023-01-18",
+      "precision": "day",
+      "note": "Stadia shuts down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Too few players; Google closed it and refunded purchases.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Google Stadia",
+      "url": "https://en.wikipedia.org/wiki/Google_Stadia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

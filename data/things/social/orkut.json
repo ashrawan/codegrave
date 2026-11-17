@@ -1,0 +1,42 @@
+{
+  "id": "orkut",
+  "category": "social",
+  "names": [
+    {
+      "name": "Orkut",
+      "from": "2004-01-24"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's first social network, named after the engineer who built it. It never caught on in the United States but was the social network in Brazil and India for years.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-01-24",
+      "precision": "day",
+      "note": "Orkut launches."
+    },
+    {
+      "type": "ended",
+      "date": "2014-09-30",
+      "precision": "day",
+      "note": "Google shuts Orkut down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost its users to Facebook; Google closed it.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Orkut",
+      "url": "https://en.wikipedia.org/wiki/Orkut",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

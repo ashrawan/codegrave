@@ -1,0 +1,43 @@
+{
+  "id": "digg",
+  "category": "social",
+  "names": [
+    {
+      "name": "Digg",
+      "from": "2004-12-05"
+    }
+  ],
+  "maker": "Digg",
+  "summary": "A news site where readers voted stories up or down. A badly received redesign in 2010 sent most of its users to Reddit.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-12-05",
+      "precision": "day",
+      "note": "Digg launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2012",
+      "precision": "year",
+      "label": "Betaworks",
+      "note": "Betaworks buys Digg."
+    }
+  ],
+  "status": "fading",
+  "note": "Still online after several relaunches, but most of its readers left for Reddit after 2010.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Digg",
+      "url": "https://en.wikipedia.org/wiki/Digg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

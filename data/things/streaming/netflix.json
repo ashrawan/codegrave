@@ -1,0 +1,55 @@
+{
+  "id": "netflix",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Netflix",
+      "from": "1998-04-14"
+    }
+  ],
+  "maker": "Netflix",
+  "summary": "It began by posting DVDs to people's homes and then moved to streaming films and series over the internet, which changed how the world watches television.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1997-08-29",
+      "precision": "day",
+      "note": "Netflix is founded."
+    },
+    {
+      "type": "born",
+      "date": "1998-04-14",
+      "precision": "day",
+      "note": "The website opens for DVD rental by post."
+    },
+    {
+      "type": "milestone",
+      "date": "2007-01-16",
+      "precision": "day",
+      "label": "Streaming",
+      "note": "Netflix starts streaming video."
+    },
+    {
+      "type": "milestone",
+      "date": "2023-09-29",
+      "precision": "day",
+      "label": "Last DVD",
+      "note": "The DVD-by-post service ends."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Netflix",
+      "url": "https://en.wikipedia.org/wiki/Netflix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": "itunes-store",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "iTunes Store",
+      "from": "2003-04-28"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "A shop that sold single songs for 99 cents. It persuaded people to pay for music online when most were downloading it for free.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-04-28",
+      "precision": "day",
+      "note": "The iTunes Music Store opens."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: ITunes Store",
+      "url": "https://en.wikipedia.org/wiki/ITunes_Store",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

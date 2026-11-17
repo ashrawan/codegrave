@@ -1,0 +1,42 @@
+{
+  "id": "whatsapp",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "WhatsApp",
+      "from": "2009-05"
+    }
+  ],
+  "maker": "Meta",
+  "summary": "A phone messenger that uses the internet in place of paid text messages. More than two billion people use it, and in many countries it is simply how people talk.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-05",
+      "precision": "month",
+      "note": "WhatsApp launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2014",
+      "precision": "year",
+      "label": "Facebook",
+      "note": "Facebook buys WhatsApp for about $19 billion."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: WhatsApp",
+      "url": "https://en.wikipedia.org/wiki/WhatsApp",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

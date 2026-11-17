@@ -1,0 +1,48 @@
+{
+  "id": "google-plus",
+  "category": "social",
+  "names": [
+    {
+      "name": "Google+",
+      "from": "2011-06-28"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's answer to Facebook. People were signed up through their other Google accounts, but few stayed to use it.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-06-28",
+      "precision": "day",
+      "note": "Google+ launches."
+    },
+    {
+      "type": "deprecated",
+      "date": "2018-10-08",
+      "precision": "day",
+      "note": "Google announces the consumer version will close."
+    },
+    {
+      "type": "ended",
+      "date": "2019-04-02",
+      "precision": "day",
+      "note": "Google+ shuts down for the public."
+    }
+  ],
+  "status": "dead",
+  "cause": "Low use and two security flaws; Google closed it.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Google+",
+      "url": "https://en.wikipedia.org/wiki/Google+",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

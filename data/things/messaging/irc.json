@@ -1,0 +1,35 @@
+{
+  "id": "irc",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "IRC",
+      "from": "1988-08"
+    }
+  ],
+  "maker": "Jarkko Oikarinen",
+  "summary": "Live group chat in text, organised in channels. It was the internet's chat room for twenty years and still runs today.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-08",
+      "precision": "month",
+      "note": "The first IRC server runs in Finland."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 1,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: IRC",
+      "url": "https://en.wikipedia.org/wiki/IRC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
