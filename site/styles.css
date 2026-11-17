@@ -204,8 +204,13 @@ body.side-open #rguide { right: calc(var(--side) + 16px); }
 .lab { font-size: 12.5px; font-weight: 500; color: var(--muted); }
 .lnk { padding: 0; font-size: inherit; font-weight: 600; color: var(--text); background: none; border: 0; text-decoration: underline; text-decoration-color: var(--rule2); text-underline-offset: 3px; }
 .lnk:hover { text-decoration-color: var(--text); }
-.back { display: inline-flex; align-items: center; gap: 4px; margin-left: -6px; padding: 6px 8px 6px 4px; font-size: 12.5px; color: var(--muted); background: none; border: 0; border-radius: 6px; }
-.back:hover { color: var(--text); background: var(--raised); }
+.crumbs { flex: 1; min-width: 0; display: flex; align-items: center; gap: 2px; margin-left: -6px; font-size: 12.5px; color: var(--muted); white-space: nowrap; }
+.crumbs .crumb { display: block; flex: 0 1 auto; min-width: 2.5em; max-width: 12em; overflow: hidden; text-overflow: ellipsis; padding: 6px 6px; color: var(--muted); background: none; border: 0; border-radius: 6px; font-size: inherit; }
+.crumbs .crumb > svg { flex: none; margin-left: -2px; }
+.crumbs button.crumb:hover { color: var(--text); background: var(--raised); }
+.crumbs .crumb.cur { flex: 0 0 auto; max-width: 55%; color: var(--text); font-weight: 500; }
+.crumbs button.crumb:first-child { display: inline-flex; align-items: center; gap: 4px; flex: none; }
+.crumbs .sep, .crumbs .more { flex: none; color: var(--faint); }
 .search { display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 10px; color: var(--faint); background: var(--bg); border: 1px solid var(--rule2); border-radius: 6px; cursor: text; }
 .search:focus-within { border-color: var(--text); }
 .search input { flex: 1; min-width: 0; padding: 0; border: 0; outline: 0; background: transparent; font-size: 13.5px; color: var(--text); }
