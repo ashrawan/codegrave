@@ -41,3 +41,17 @@ test('links pointing at a thing raise its score', () => {
   score([a, b], 2026);
   assert.ok(b.score > a.score);
 });
+
+test('a small kind widens to its domain before everything', () => {
+  const phones = { name: 'Phones', domain: 'devices', domainName: 'Devices' };
+  const consoles = { name: 'Game consoles', domain: 'devices', domainName: 'Devices' };
+  const things = [
+    { ...thing('phone', 2007, 5), category: 'phones', cat: phones },
+    ...[1, 2, 3, 4].map((a) => ({ ...thing('c' + a, 1980 + a, a), category: 'consoles', cat: consoles })),
+    ...[1, 2, 3, 4, 5].map((a) => thing('l' + a, 1990 + a, 5)),
+  ];
+  score(things, 2026);
+  const phone = things.find((t) => t.id === 'phone');
+  assert.equal(phone.peers, 'everything in Devices');
+  assert.equal(phone.rank, 0);
+});

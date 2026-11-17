@@ -1,0 +1,46 @@
+{
+  "id": "shakey",
+  "category": "robots",
+  "names": [
+    {
+      "name": "Shakey",
+      "from": "1966"
+    }
+  ],
+  "maker": "Stanford Research Institute",
+  "summary": "The first mobile robot that could reason about its own actions: given a goal, it worked out the steps itself, looked around with a camera, and rolled off to do them. The project produced methods still used in route finding and computer vision, including the A* search algorithm.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "circa",
+      "note": "Development starts at about this time."
+    },
+    {
+      "type": "ended",
+      "date": "1972",
+      "precision": "circa",
+      "note": "The project ends."
+    },
+    {
+      "type": "afterlife",
+      "note": "Shakey is on display at the Computer History Museum in California."
+    }
+  ],
+  "status": "dead",
+  "cause": "A research project that ran its course.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Shakey the robot",
+      "url": "https://en.wikipedia.org/wiki/Shakey_the_robot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

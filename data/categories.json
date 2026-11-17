@@ -1,14 +1,286 @@
 {
- "categories": [
-  { "id": "languages", "name": "Languages", "short": "LANGUAGE", "examples": "Python, Java, COBOL" },
-  { "id": "platforms", "name": "Platforms & plug-ins", "short": "PLATFORM", "examples": "Flash, Silverlight, Java applets" },
-  { "id": "browsers", "name": "Browsers", "short": "BROWSER", "examples": "Netscape, Internet Explorer" },
-  { "id": "frameworks", "name": "Frameworks & libraries", "short": "FRAMEWORK", "examples": "AngularJS, jQuery, React" },
-  { "id": "runtimes", "name": "Runtimes & tools", "short": "TOOL", "examples": "Node.js, npm, Git" },
-  { "id": "operating-systems", "name": "Operating systems", "short": "OS", "examples": "Unix, Windows, Linux" },
-  { "id": "devices", "name": "Computers & devices", "short": "DEVICE", "examples": "ENIAC, IBM PC, iPhone" },
-  { "id": "ai", "name": "AI systems", "short": "AI", "examples": "Deep Blue, ChatGPT" },
-  { "id": "networks", "name": "Networks & protocols", "short": "NETWORK", "examples": "ARPANET, Gopher, the Web" },
-  { "id": "formats", "name": "Formats & standards", "short": "FORMAT", "examples": "ASCII, GIF, MP3" }
- ]
+  "domains": [
+    {
+      "id": "machines",
+      "name": "Machines",
+      "description": "The computers themselves, from room-sized mainframes to the laptop."
+    },
+    {
+      "id": "parts",
+      "name": "Parts",
+      "description": "What machines are made of: chips, memory and storage, screens and add-ons."
+    },
+    {
+      "id": "devices",
+      "name": "Devices",
+      "description": "What people carry and plug in: phones, handhelds, consoles and players."
+    },
+    {
+      "id": "software",
+      "name": "Software",
+      "description": "What runs on all of them: operating systems, languages, tools, apps and games."
+    },
+    {
+      "id": "networks",
+      "name": "Networks",
+      "description": "How things connect: networks, protocols, formats and standards."
+    },
+    {
+      "id": "online",
+      "name": "Online",
+      "description": "The places people go: websites, search, social networks, messaging and streaming."
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "description": "Machines that reason and learn: programs, models, assistants and robots."
+    }
+  ],
+  "categories": [
+    {
+      "id": "early-computers",
+      "domain": "machines",
+      "name": "Early computers & mainframes",
+      "short": "COMPUTER",
+      "examples": "ENIAC, UNIVAC I, IBM System/360"
+    },
+    {
+      "id": "minicomputers",
+      "domain": "machines",
+      "name": "Minicomputers & workstations",
+      "short": "COMPUTER",
+      "examples": "PDP-11, NeXT Computer"
+    },
+    {
+      "id": "personal-computers",
+      "domain": "machines",
+      "name": "Personal computers",
+      "short": "COMPUTER",
+      "examples": "Apple II, IBM PC, Macintosh"
+    },
+    {
+      "id": "laptops-tablets",
+      "domain": "machines",
+      "name": "Laptops & tablets",
+      "short": "COMPUTER",
+      "examples": "Osborne 1, ThinkPad, iPad"
+    },
+    {
+      "id": "supercomputers",
+      "domain": "machines",
+      "name": "Supercomputers",
+      "short": "COMPUTER",
+      "examples": "CDC 6600, Cray-1"
+    },
+    {
+      "id": "chips",
+      "domain": "parts",
+      "name": "Processors & chips",
+      "short": "CHIP",
+      "examples": "The transistor, Intel 4004, ARM"
+    },
+    {
+      "id": "storage",
+      "domain": "parts",
+      "name": "Memory & storage media",
+      "short": "STORAGE",
+      "examples": "Punched card, floppy disk, CD, USB drive"
+    },
+    {
+      "id": "screens-input",
+      "domain": "parts",
+      "name": "Screens & input",
+      "short": "PART",
+      "examples": "The mouse, CRT monitor, touchscreen"
+    },
+    {
+      "id": "peripherals",
+      "domain": "parts",
+      "name": "Printers, modems & add-ons",
+      "short": "PART",
+      "examples": "Dot-matrix printer, dial-up modem"
+    },
+    {
+      "id": "phones",
+      "domain": "devices",
+      "name": "Phones",
+      "short": "PHONE",
+      "examples": "Motorola DynaTAC, Nokia 3310, iPhone"
+    },
+    {
+      "id": "handhelds",
+      "domain": "devices",
+      "name": "Handhelds & wearables",
+      "short": "DEVICE",
+      "examples": "Palm Pilot, Kindle, Apple Watch"
+    },
+    {
+      "id": "consoles",
+      "domain": "devices",
+      "name": "Game consoles",
+      "short": "CONSOLE",
+      "examples": "Atari 2600, Game Boy, PlayStation"
+    },
+    {
+      "id": "media-devices",
+      "domain": "devices",
+      "name": "Music, photo & video devices",
+      "short": "DEVICE",
+      "examples": "iPod, digital cameras, DVD players"
+    },
+    {
+      "id": "operating-systems",
+      "domain": "software",
+      "name": "Operating systems",
+      "short": "OS",
+      "examples": "Unix, Windows, Linux"
+    },
+    {
+      "id": "languages",
+      "domain": "software",
+      "name": "Programming languages",
+      "short": "LANGUAGE",
+      "examples": "Python, Java, COBOL"
+    },
+    {
+      "id": "frameworks",
+      "domain": "software",
+      "name": "Frameworks & libraries",
+      "short": "FRAMEWORK",
+      "examples": "AngularJS, jQuery, React"
+    },
+    {
+      "id": "runtimes",
+      "domain": "software",
+      "name": "Developer tools",
+      "short": "TOOL",
+      "examples": "Node.js, npm, Git"
+    },
+    {
+      "id": "browsers",
+      "domain": "software",
+      "name": "Browsers",
+      "short": "BROWSER",
+      "examples": "Netscape, Internet Explorer"
+    },
+    {
+      "id": "platforms",
+      "domain": "software",
+      "name": "Platforms & plug-ins",
+      "short": "PLATFORM",
+      "examples": "Flash, Silverlight, Java applets"
+    },
+    {
+      "id": "applications",
+      "domain": "software",
+      "name": "Applications",
+      "short": "APP",
+      "examples": "VisiCalc, Photoshop, Winamp"
+    },
+    {
+      "id": "games",
+      "domain": "software",
+      "name": "Games",
+      "short": "GAME",
+      "examples": "Spacewar!, Doom, Minecraft"
+    },
+    {
+      "id": "malware",
+      "domain": "software",
+      "name": "Viruses & worms",
+      "short": "MALWARE",
+      "examples": "Morris worm, ILOVEYOU"
+    },
+    {
+      "id": "networks",
+      "domain": "networks",
+      "name": "Networks & the internet",
+      "short": "NETWORK",
+      "examples": "ARPANET, the Web, Wi-Fi"
+    },
+    {
+      "id": "mobile-networks",
+      "domain": "networks",
+      "name": "Mobile networks",
+      "short": "NETWORK",
+      "examples": "GSM, 3G, 5G"
+    },
+    {
+      "id": "protocols",
+      "domain": "networks",
+      "name": "Protocols",
+      "short": "PROTOCOL",
+      "examples": "FTP, Gopher, HTTP"
+    },
+    {
+      "id": "formats",
+      "domain": "networks",
+      "name": "Formats & standards",
+      "short": "FORMAT",
+      "examples": "ASCII, GIF, MP3"
+    },
+    {
+      "id": "websites",
+      "domain": "online",
+      "name": "Websites & services",
+      "short": "WEBSITE",
+      "examples": "GeoCities, Wikipedia, Google Maps"
+    },
+    {
+      "id": "search",
+      "domain": "online",
+      "name": "Search",
+      "short": "SEARCH",
+      "examples": "Yahoo, AltaVista, Google"
+    },
+    {
+      "id": "social",
+      "domain": "online",
+      "name": "Social networks",
+      "short": "SOCIAL",
+      "examples": "Friendster, MySpace, Orkut"
+    },
+    {
+      "id": "messaging",
+      "domain": "online",
+      "name": "Messaging & communities",
+      "short": "MESSAGING",
+      "examples": "Usenet, ICQ, MSN Messenger"
+    },
+    {
+      "id": "streaming",
+      "domain": "online",
+      "name": "Streaming & media",
+      "short": "MEDIA",
+      "examples": "Napster, YouTube, Spotify"
+    },
+    {
+      "id": "cloud-money",
+      "domain": "online",
+      "name": "Cloud & digital money",
+      "short": "SERVICE",
+      "examples": "Amazon Web Services, PayPal, Bitcoin"
+    },
+    {
+      "id": "ai",
+      "domain": "ai",
+      "name": "AI programs & models",
+      "short": "AI",
+      "examples": "Deep Blue, AlphaGo, GPT-3"
+    },
+    {
+      "id": "assistants",
+      "domain": "ai",
+      "name": "Assistants & chatbots",
+      "short": "ASSISTANT",
+      "examples": "ELIZA, Siri, ChatGPT"
+    },
+    {
+      "id": "robots",
+      "domain": "ai",
+      "name": "Robots",
+      "short": "ROBOT",
+      "examples": "Shakey, ASIMO, Roomba"
+    }
+  ]
 }

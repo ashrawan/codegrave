@@ -85,7 +85,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   }
 
   // ---------------------------------------------------------------- data
-  let things = [], byId = new Map(), cats = [], catById = new Map(), checkpoints = [], views = null, viewById = new Map(), release = '';
+  let things = [], byId = new Map(), cats = [], b0 = {}, catById = new Map(), checkpoints = [], views = null, viewById = new Map(), release = '';
 
   function initials(name) {
     const caps = name.match(/[A-Z0-9#+]/g) || [];
@@ -126,6 +126,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     for (const v of views.views) {
       v.set = v.things ? new Set(v.things) : null;
       v.cats = new Set(v.categories);
+      for (const c of cats) if ((v.domains || []).includes(c.domain)) v.cats.add(c.id);
       v.count = membersOf(v, v.level).size;
       v.hay = [v.name, v.description, v.author, ...(v.tags || [])].join(' ').toLowerCase();
     }
@@ -600,7 +601,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       hits = hits.slice(0, away.length ? 6 : 9);
       for (const t of away) {
         const holders = views.views.filter((v) => inView(v, t, 101));
-        const v = holders.find((x) => (x.tags || []).includes('category')) || holders.find((x) => !(x.tags || []).includes('all')) || holders[0];
+        const v = holders.find((x) => (x.tags || []).includes('kind')) || holders.find((x) => (x.tags || []).includes('domain')) || holders.find((x) => !(x.tags || []).includes('all')) || holders[0];
         if (v) hits.push({ t, away: v });
       }
     }
@@ -737,7 +738,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       const mine = myView();
       if (mine) found.push({ mine });
       for (const [kind, title] of KINDS) {
-        const list = views.views.filter((v) => tabOf(v) === kind).sort(order[kind]);
+        const list = views.views.filter((v) => tabOf(v) === kind && v.count > 0).sort(order[kind]);   // a domain with nothing in it yet is not listed
         const open = openGroups.has(kind);
         found.push({ head: title, kind, open, n: list.length, on: list.filter((v) => state.views.includes(v.id)).length });
         if (!open) continue;
@@ -767,10 +768,13 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const i = q ? text.toLowerCase().indexOf(q) : -1;
     return i < 0 ? esc(text) : esc(text.slice(0, i)) + '<mark>' + esc(text.slice(i, i + q.length)) + '</mark>' + esc(text.slice(i + q.length));
   }
-  // Featured: one view per category, and everything. Community: every view that
-  // tells a story, whoever made it, added through a pull request.
+  // Classical ('featured'): one view per domain, and everything. Community: every
+  // view that tells a story, added through a pull request. A view of one kind
+  // (tagged `kind`) is in neither list; search finds it.
   function tabOf(v) {
-    return (v.tags || []).some((t) => t === 'category' || t === 'all') ? 'featured' : 'community';
+    const tags = v.tags || [];
+    if (tags.includes('domain') || tags.includes('all')) return 'featured';
+    return tags.includes('kind') ? 'kind' : 'community';
   }
   function drawResults() {
     const q = $('vq').value.trim().toLowerCase();
@@ -1307,13 +1311,14 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const get = (f) => fetch('data/' + f).then((r) => { if (!r.ok) throw new Error(f + ' ' + r.status); return r.json(); });
     try {
       const [a, b, c, d] = await Promise.all([get('things.json'), get('categories.json'), get('checkpoints.json'), get('views.json')]);
-      things = a.things; release = a.release; cats = b.categories; checkpoints = c.checkpoints; views = d;
+      things = a.things; release = a.release; cats = b.categories; b0 = b; checkpoints = c.checkpoints; views = d;
     } catch (e) {
       $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
       return;
     }
     byId = new Map(things.map((t) => [t.id, t]));
     catById = new Map(cats.map((c) => [c.id, c]));
+    for (const c of cats) c.domainName = (b0.domains || []).find((d) => d.id === c.domain)?.name;
     viewById = new Map(views.views.map((v) => [v.id, v]));
     prepare();
     if (!readUrl()) {

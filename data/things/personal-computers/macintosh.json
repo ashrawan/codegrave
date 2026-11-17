@@ -1,0 +1,96 @@
+{
+  "id": "macintosh",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "Macintosh",
+      "from": "1984-01-24"
+    },
+    {
+      "name": "Mac",
+      "from": "1999"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's computer line, launched with the “1984” Super Bowl advert. It brought the mouse and graphical interface to a mass market, survived Apple's near collapse, and has moved through four processor families.",
+  "website": "https://www.apple.com/mac/",
+  "icon": {
+    "src": "icons/apple.svg",
+    "alt": "Apple logo",
+    "credit": "Simple Icons",
+    "licence": "CC0 1.0 (the mark itself belongs to its owner)",
+    "source": "https://simpleicons.org/?q=apple"
+  },
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Apple_Museum_%28Prague%29_Macintosh_128K_%281984%29_-_1.jpg/960px-Apple_Museum_%28Prague%29_Macintosh_128K_%281984%29_-_1.jpg",
+    "alt": "An original Macintosh 128K from 1984",
+    "credit": "Benoît Prieur",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple_Museum_(Prague)_Macintosh_128K_(1984)_-_1.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-01-24",
+      "precision": "day",
+      "note": "The original Macintosh goes on sale, two days after its Super Bowl advert.",
+      "image": {
+        "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Steve_Jobs_and_Macintosh_computer%2C_January_1984%2C_by_Bernard_Gotfryd_-_edited.jpg/960px-Steve_Jobs_and_Macintosh_computer%2C_January_1984%2C_by_Bernard_Gotfryd_-_edited.jpg",
+        "alt": "Steve Jobs with the first Macintosh, January 1984",
+        "caption": "Steve Jobs with the Macintosh, January 1984.",
+        "credit": "Bernard Gotfryd",
+        "licence": "Public domain",
+        "source": "https://commons.wikimedia.org/wiki/File:Steve_Jobs_and_Macintosh_computer,_January_1984,_by_Bernard_Gotfryd_-_edited.jpg"
+      }
+    },
+    {
+      "type": "milestone",
+      "date": "1994",
+      "precision": "year",
+      "label": "PowerPC",
+      "note": "The Power Macintosh begins the move from Motorola 68000 chips to PowerPC."
+    },
+    {
+      "type": "released",
+      "date": "1998",
+      "precision": "year",
+      "label": "iMac",
+      "note": "The iMac G3 revives the line."
+    },
+    {
+      "type": "milestone",
+      "date": "2006",
+      "precision": "year",
+      "label": "Intel",
+      "note": "Macs move to Intel processors."
+    },
+    {
+      "type": "milestone",
+      "date": "2020-11-10",
+      "precision": "day",
+      "label": "Apple silicon",
+      "note": "Apple announces the M1, its own chip for the Mac.",
+      "url": "https://www.apple.com/newsroom/2020/11/apple-unleashes-m1/"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Mac (computer)",
+      "url": "https://en.wikipedia.org/wiki/Mac_(computer)",
+      "kind": "secondary"
+    },
+    {
+      "title": "apple.com/mac",
+      "url": "https://www.apple.com/mac/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

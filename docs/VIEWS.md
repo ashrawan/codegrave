@@ -7,8 +7,11 @@ view on the timeline gets its own block of rows under its name. Every view
 has its own link, `codegrave.com/?views=<id>`, and a link can name several:
 `?views=languages,browsers`.
 
-There are no categories on the page. "Languages", "Browsers" and the rest are
-ordinary views, one per category, kept in `data/views/` like any other.
+Things are filed on one map, `data/categories.json`: seven domains (Machines,
+Parts, Devices, Software, Networks, Online, AI), each holding several kinds
+(the `categories`, such as phones or browsers). A thing is filed by what it
+is, never by who made it or who uses it. On the page the map appears only as
+views: one view per domain, kept in `data/views/` like any other.
 
 The panel has a search box that finds views and things, and one list of every
 view, ticked when it is on the timeline, in two groups:
@@ -16,8 +19,12 @@ view, ticked when it is on the timeline, in two groups:
 - **Community views**: every view that tells a story, such as "The browser wars",
   whoever made it, in rank order: those named in `featured` in
   `data/editors-choice.json` first, then the rest by name. A new view lands here.
-- **Classical views**: one view per category (tagged `category`) and "Everything"
-  (tagged `all`), by name.
+- **Classical views**: one view per domain (tagged `domain`) and "Everything"
+  (tagged `all`), by name. Each shows all it holds. A domain with no things
+  yet is not listed.
+
+A view of a single kind, such as "Browsers", is tagged `kind`. It is in
+neither group; the search finds it and its link works.
 
 Each group shows three rows at a time and scrolls the rest.
 
@@ -60,7 +67,8 @@ Create one file, `data/views/<id>.json`. The file name is the `id`.
 | `description` | yes | One or two sentences, at most 200 characters. |
 | `author` | yes | Your GitHub user name. |
 | `tags` | no | Up to 8 words people might search for. |
-| `categories` | yes | The categories whose things the view holds, at most 8. Empty means every category. |
+| `categories` | yes | The kinds whose things the view holds, at most 8. Empty means every kind. |
+| `domains` | no | Domain ids. The view also holds every kind in these domains, including kinds added later. |
 | `level` | yes | How much to show, from 5 to 100. 10 is landmarks, 30 notable, 60 most, 100 all. |
 | `year` | no | The year to centre on when the timeline is wider than the screen. |
 | `order` | no | `"old"` (the default, oldest on the left) or `"new"` (newest on the left). |

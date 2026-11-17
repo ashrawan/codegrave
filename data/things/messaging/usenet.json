@@ -1,0 +1,76 @@
+{
+  "id": "usenet",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Usenet",
+      "from": "1980"
+    }
+  ],
+  "maker": "Tom Truscott and Jim Ellis (Duke University)",
+  "summary": "The worldwide discussion system of the early internet, made of newsgroups copied from server to server. Much of internet culture began there, and it faded as forums, blogs and social networks replaced it.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Tin-threading.png",
+    "alt": "Threaded Usenet news in the tin newsreader",
+    "credit": "Tedickey at English Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tin-threading.png"
+  },
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1979",
+      "precision": "year",
+      "note": "Tom Truscott and Jim Ellis conceive Usenet."
+    },
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year",
+      "note": "Usenet goes into public use."
+    },
+    {
+      "type": "milestone",
+      "date": "1986",
+      "precision": "year",
+      "label": "NNTP",
+      "note": "RFC 977 defines how news moves over the internet.",
+      "url": "https://www.rfc-editor.org/rfc/rfc977"
+    },
+    {
+      "type": "milestone",
+      "date": "2010-05",
+      "precision": "month",
+      "label": "Duke closes",
+      "note": "Duke University, where it began, shuts down its server."
+    },
+    {
+      "type": "milestone",
+      "date": "2024-02-22",
+      "precision": "day",
+      "label": "Google leaves",
+      "note": "Google Groups stops carrying new Usenet posts."
+    }
+  ],
+  "status": "fading",
+  "note": "Still runs, mostly for file sharing and a few active groups.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Usenet",
+      "url": "https://en.wikipedia.org/wiki/Usenet",
+      "kind": "secondary"
+    },
+    {
+      "title": "RFC 977: Network News Transfer Protocol",
+      "url": "https://www.rfc-editor.org/rfc/rfc977",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

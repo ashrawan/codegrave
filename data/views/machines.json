@@ -1,31 +1,14 @@
 {
   "id": "machines",
-  "name": "Machines and their systems",
-  "description": "Computers and devices next to the operating systems that ran on them.",
+  "name": "Machines",
+  "description": "The computers themselves, from room-sized mainframes to the laptop.",
   "author": "codegrave",
   "tags": [
-    "hardware",
-    "operating systems"
+    "domain"
   ],
-  "categories": [
-    "devices",
-    "operating-systems"
+  "categories": [],
+  "domains": [
+    "machines"
   ],
-  "level": 60,
-  "checkpoints": [
-    {
-      "id": "mainframes",
-      "name": "The mainframe era",
-      "from": 1964,
-      "to": 1976,
-      "note": "IBM's System/360 (1964) gives business one family of compatible computers. Room-sized machines run banks, airlines and governments, and computing means a terminal on someone else's computer."
-    },
-    {
-      "id": "home-computers",
-      "name": "The home computer boom",
-      "from": 1977,
-      "to": 1984,
-      "note": "The Apple II, Commodore 64 and IBM PC bring computers into homes and offices by the million, most with BASIC built in."
-    }
-  ]
+  "level": 100
 }

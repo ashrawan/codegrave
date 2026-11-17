@@ -1,0 +1,77 @@
+{
+  "id": "gopher",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "Gopher",
+      "from": "1991"
+    }
+  ],
+  "maker": "University of Minnesota",
+  "summary": "A menu-based way to browse documents across the internet, from the University of Minnesota. It was more popular than the Web at first, until the university announced licence fees and the free Web took over.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/15/Gopher_in_Firefox_1.5.png",
+    "alt": "Firefox browsing a Gopher menu",
+    "credit": "Kbolino",
+    "licence": "GPL",
+    "source": "https://commons.wikimedia.org/wiki/File:Gopher_in_Firefox_1.5.png"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year",
+      "note": "Created at the University of Minnesota."
+    },
+    {
+      "type": "milestone",
+      "date": "1993-02",
+      "precision": "month",
+      "label": "Licence fees",
+      "note": "The university announces fees for its server software."
+    },
+    {
+      "type": "milestone",
+      "date": "1993-03",
+      "precision": "month",
+      "label": "RFC 1436",
+      "note": "The protocol is described in RFC 1436.",
+      "url": "https://www.rfc-editor.org/rfc/rfc1436"
+    },
+    {
+      "type": "milestone",
+      "date": "2000-09",
+      "precision": "month",
+      "label": "GPL",
+      "note": "The university re-licenses Gopher as free software."
+    },
+    {
+      "type": "milestone",
+      "date": "2002-08",
+      "precision": "month",
+      "label": "IE drops it",
+      "note": "Internet Explorer disables Gopher support."
+    }
+  ],
+  "status": "fading",
+  "note": "A small community still runs Gopher servers.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Gopher (protocol)",
+      "url": "https://en.wikipedia.org/wiki/Gopher_(protocol)",
+      "kind": "secondary"
+    },
+    {
+      "title": "RFC 1436",
+      "url": "https://www.rfc-editor.org/rfc/rfc1436",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

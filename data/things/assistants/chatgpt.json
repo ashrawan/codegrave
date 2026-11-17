@@ -1,0 +1,82 @@
+{
+  "id": "chatgpt",
+  "category": "assistants",
+  "names": [
+    {
+      "name": "ChatGPT",
+      "from": "2022-11-30"
+    }
+  ],
+  "maker": "OpenAI",
+  "summary": "OpenAI's chat assistant, released as a “research preview”. It reached 100 million users in about two months, the fastest of any app at the time, and set off the race to build assistants on large language models.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/ChatGPT_essay_draft.png/960px-ChatGPT_essay_draft.png",
+    "alt": "A ChatGPT conversation drafting an essay",
+    "credit": "ChatGPT",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ChatGPT_essay_draft.png"
+  },
+  "website": "https://chatgpt.com/",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-11-30",
+      "precision": "day",
+      "note": "Released as a free research preview, built on a GPT-3.5 model.",
+      "url": "https://openai.com/index/chatgpt/"
+    },
+    {
+      "type": "released",
+      "date": "2023-03",
+      "precision": "month",
+      "label": "GPT-4",
+      "note": "GPT-4 arrives for paying users."
+    },
+    {
+      "type": "released",
+      "date": "2024-05",
+      "precision": "month",
+      "label": "GPT-4o",
+      "note": "A model that handles text, images and voice together."
+    },
+    {
+      "type": "released",
+      "date": "2025-08",
+      "precision": "month",
+      "label": "GPT-5",
+      "note": "GPT-5 becomes the default model."
+    },
+    {
+      "type": "milestone",
+      "date": "2026-02",
+      "precision": "month",
+      "label": "900 million",
+      "note": "Reaches 900 million weekly users."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "gpt-3"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: ChatGPT",
+      "url": "https://en.wikipedia.org/wiki/ChatGPT",
+      "kind": "secondary"
+    },
+    {
+      "title": "OpenAI: Introducing ChatGPT",
+      "url": "https://openai.com/index/chatgpt/",
+      "kind": "primary"
+    }
+  ],
+  "verified": true
+}

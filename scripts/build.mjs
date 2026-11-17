@@ -78,6 +78,11 @@ const categories = readJson(join(dataDir, 'categories.json'))?.categories || [];
 const checkpoints = readJson(join(dataDir, 'checkpoints.json'))?.checkpoints || [];
 const choice = readJson(join(dataDir, 'editors-choice.json')) || {};
 
+const domains = readJson(join(dataDir, 'categories.json'))?.domains || [];
+const domainIds = new Set(domains.map((d) => d.id));
+if (domainIds.size !== domains.length) err('data/categories.json', 'duplicate domain id');
+for (const d of domains) if (!ID.test(d.id || '') || !d.name || !d.description) err('data/categories.json', `domain "${d.id}" needs an id, a name and a description`);
+for (const c of categories) if (!domainIds.has(c.domain)) err('data/categories.json', `category "${c.id}" needs a "domain" from the domains list`);
 const catIds = new Set(categories.map((c) => c.id));
 if (catIds.size !== categories.length) err('data/categories.json', 'duplicate category id');
 
@@ -237,6 +242,8 @@ for (const v of views) {
   if (!Array.isArray(v.categories)) err(at, 'needs a "categories" list (it may be empty)');
   for (const c of v.categories || []) if (!catIds.has(c)) err(at, `unknown category "${c}"`);
   if ((v.categories || []).length > 8) err(at, 'at most 8 categories');
+  if (v.domains != null && !(Array.isArray(v.domains) && v.domains.length > 0)) err(at, '"domains" must be a non-empty list of domain ids, or be left out');
+  for (const d of v.domains || []) if (!domainIds.has(d)) err(at, `unknown domain "${d}"`);
   if (!(Number.isInteger(v.level) && v.level >= 5 && v.level <= 100)) err(at, '"level" must be a whole number from 5 to 100');
   if (v.year != null && !Number.isInteger(v.year)) err(at, '"year" must be a whole year');
   if (v.order != null && !['new', 'old'].includes(v.order)) err(at, '"order" must be "new" or "old"');
@@ -246,7 +253,7 @@ for (const v of views) {
   }
   if (v.checkpoints != null) checkEras(at, v.checkpoints);
   // A view only chooses what to show, and may name its own eras. It can never change the facts.
-  const allowed = ['id', 'name', 'description', 'author', 'tags', 'categories', 'level', 'year', 'order', 'things', 'checkpoints', '_at'];
+  const allowed = ['id', 'name', 'description', 'author', 'tags', 'categories', 'domains', 'level', 'year', 'order', 'things', 'checkpoints', '_at'];
   for (const k of Object.keys(v)) if (!allowed.includes(k)) err(at, `unknown field "${k}"`);
 }
 const featured = choice.featured || [];
@@ -265,7 +272,7 @@ for (const w of warnings) {
 }
 if (!quiet) for (const [k, n] of Object.entries(byKind)) console.log(`warning (${n}×): ${k}`);
 for (const e of errors) console.error(`ERROR ${e}`);
-console.log(`${things.length} things, ${categories.length} categories, ${checkpoints.length} checkpoints, ` +
+console.log(`${things.length} things, ${domains.length} domains, ${categories.length} categories, ${checkpoints.length} checkpoints, ` +
   `${views.length} views · ${errors.length} errors, ${warnings.length} warnings`);
 if (errors.length) process.exit(1);
 
@@ -277,7 +284,7 @@ if (!process.argv.includes('--check')) {
   things.sort((a, b) => a.id.localeCompare(b.id));
   views.sort((a, b) => a.id.localeCompare(b.id));
   write('things.json', { release: new Date().toISOString().slice(0, 10), things: things.map(strip) });
-  write('categories.json', { categories });
+  write('categories.json', { domains, categories });
   write('checkpoints.json', { checkpoints });
   write('views.json', { default: defaults, featured, views: views.map(strip) });
   rmSync(join(outDir, 'media'), { recursive: true, force: true });

@@ -27,7 +27,7 @@ node scripts/new.mjs view <id> "<Name>"
 | A fact about a thing | `data/things/<category>/<id>.json` (one file) | `site/data/` (generated) |
 | A view | `data/views/<id>.json` (one file) | another person's view |
 | Featured or default views | `data/editors-choice.json` | |
-| Categories, named eras | `data/categories.json`, `data/checkpoints.json` | |
+| The map (7 domains, each with kinds, which are the `category` folders), named eras | `data/categories.json`, `data/checkpoints.json` | |
 | An icon or image | `data/media/`, then name it on the thing or event | `site/data/media/` (generated) |
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
@@ -83,7 +83,9 @@ How the page is put together:
   In the panel, "Showing" lists the views as rows: drag a row to reorder
   the sections, its dot (left) picks the view's colour, its cross (right)
   removes it, and shuffle mixes the colours (`?c=` in the link).
-  There is no category control; categories only exist as views.
+  There is no category control; the map only exists as views: one per
+  domain (a view with `domains`, tagged `domain`). Views of one kind are
+  tagged `kind` and are found by search only.
   The views pane is search, then one ticked list of every view (grouped
   Community views, then Classical views, by `tabOf()`), then a sentence naming what
   is on the timeline, then the filters at the bottom: the year range
@@ -95,12 +97,12 @@ How the page is put together:
 - The search in the top bar (`findOnTimeline()`) finds things, events,
   eras and years among what is drawn and goes there. Below a divider it
   lists matching things that are not on the timeline; picking one adds a
-  view that holds it (the category view first). The GitHub icon next to the
+  view that holds it (its kind view first, else its domain view). The GitHub icon next to the
   theme switch opens the repository. The panel's search
   finds views to add.
 - The panel list is grouped "Community views" (ranked: the order of
   `featured` in `data/editors-choice.json`, then by name), then "Classical
-  views" (the category views and Everything, by name). Each group shows
+  views" (the domain views and Everything, by name; `tabOf()` returns `featured` for them). Each group shows
   three rows and scrolls the rest (`GROUP_ROWS`); both fold (`openGroups`). "Propose a view" at the end of Community views links to the
   README's guide (`PROPOSE`); views arrive as pull requests, not from a form.
   The bookmark icon saves the timeline as "Your view" in

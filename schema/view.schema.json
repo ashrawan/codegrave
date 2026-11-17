@@ -101,6 +101,14 @@
           }
         }
       }
+    },
+    "domains": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      },
+      "description": "Domain ids from data/categories.json. The view also holds every kind in these domains."
     }
   }
 }

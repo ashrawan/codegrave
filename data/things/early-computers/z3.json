@@ -1,0 +1,52 @@
+{
+  "id": "z3",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "Z3",
+      "from": "1941-05-12"
+    }
+  ],
+  "maker": "Konrad Zuse",
+  "summary": "Konrad Zuse's relay computer, finished in Berlin in 1941. It is widely counted as the first working programmable, fully automatic digital computer. It used about 2,600 telephone relays rather than electronics and read its programs from punched film. The only one built was destroyed in an air raid.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1938",
+      "precision": "year",
+      "note": "Zuse designs the machine."
+    },
+    {
+      "type": "born",
+      "date": "1941-05-12",
+      "precision": "day",
+      "note": "Zuse shows the finished machine in Berlin."
+    },
+    {
+      "type": "ended",
+      "date": "1943-12-21",
+      "precision": "day",
+      "note": "Destroyed when Berlin is bombed."
+    },
+    {
+      "type": "afterlife",
+      "note": "A working replica built in the 1960s is in the Deutsches Museum in Munich."
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed in a wartime air raid on Berlin.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Z3 (computer)",
+      "url": "https://en.wikipedia.org/wiki/Z3_(computer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -12,8 +12,8 @@ body:
   - type: input
     id: category
     attributes:
-      label: Category
-      description: For example languages, browsers, frameworks, devices, operating-systems. The list is in data/categories.json.
+      label: What kind of thing is it?
+      description: For example a phone, a game console, a website, a programming language, an AI assistant. A guess is fine; the full list is in data/categories.json.
   - type: textarea
     id: why
     attributes:
