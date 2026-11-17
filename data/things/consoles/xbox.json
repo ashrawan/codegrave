@@ -1,0 +1,51 @@
+{
+  "id": "xbox",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Xbox",
+      "from": "2001-11-15"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's first console, built like a PC with a hard disk inside. With the game Halo and the Xbox Live service it made online play on a console normal.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-11-15",
+      "precision": "day",
+      "note": "Released in North America."
+    },
+    {
+      "type": "ended",
+      "date": "2006",
+      "precision": "year",
+      "note": "Microsoft discontinues the console."
+    },
+    {
+      "type": "afterlife",
+      "note": "Its online service, Xbox Live, kept running for original Xbox games until April 2010."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Xbox 360.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "xbox-360"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Xbox (console)",
+      "url": "https://en.wikipedia.org/wiki/Xbox_(console)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

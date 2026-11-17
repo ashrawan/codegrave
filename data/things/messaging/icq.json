@@ -1,0 +1,56 @@
+{
+  "id": "icq",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "ICQ",
+      "from": "1996-11-15"
+    }
+  ],
+  "maker": "Mirabilis",
+  "summary": "The first instant messenger used around the world. Everyone had a number, and its “uh-oh” sound announced each new message.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-11-15",
+      "precision": "day",
+      "note": "ICQ is released."
+    },
+    {
+      "type": "changed_hands",
+      "date": "1998-06",
+      "precision": "month",
+      "label": "AOL",
+      "note": "AOL buys Mirabilis."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2010-04",
+      "precision": "month",
+      "label": "Mail.Ru",
+      "note": "AOL sells ICQ to the Russian company now called VK."
+    },
+    {
+      "type": "ended",
+      "date": "2024-06-26",
+      "precision": "day",
+      "note": "ICQ shuts down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Long overtaken by phone messaging apps; its owner closed it.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: ICQ",
+      "url": "https://en.wikipedia.org/wiki/ICQ",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

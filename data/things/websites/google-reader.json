@@ -1,0 +1,48 @@
+{
+  "id": "google-reader",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Google Reader",
+      "from": "2005-10-07"
+    }
+  ],
+  "maker": "Google",
+  "summary": "A page that gathered new posts from all the blogs and news sites you followed. It had a small but devoted audience, and its closure is still the example people give when they say Google ends things people love.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-10-07",
+      "precision": "day",
+      "note": "Google Reader launches."
+    },
+    {
+      "type": "deprecated",
+      "date": "2013-03-13",
+      "precision": "day",
+      "note": "Google announces it will close."
+    },
+    {
+      "type": "ended",
+      "date": "2013-07-01",
+      "precision": "day",
+      "note": "Google Reader shuts down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Google said usage had declined and closed it.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Google Reader",
+      "url": "https://en.wikipedia.org/wiki/Google_Reader",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

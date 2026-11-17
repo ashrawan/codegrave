@@ -1,0 +1,41 @@
+{
+  "id": "amazon",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Amazon",
+      "from": "1995-07-16"
+    }
+  ],
+  "maker": "Amazon",
+  "summary": "It started as a bookshop on the web and grew into the shop that sells nearly everything, changing how people buy things in much of the world.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1994-07-05",
+      "precision": "day",
+      "note": "Jeff Bezos founds the company."
+    },
+    {
+      "type": "born",
+      "date": "1995-07-16",
+      "precision": "day",
+      "note": "The Amazon.com website opens, selling books."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Amazon (company)",
+      "url": "https://en.wikipedia.org/wiki/Amazon_(company)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

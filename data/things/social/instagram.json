@@ -1,0 +1,42 @@
+{
+  "id": "instagram",
+  "category": "social",
+  "names": [
+    {
+      "name": "Instagram",
+      "from": "2010-10-06"
+    }
+  ],
+  "maker": "Meta",
+  "summary": "A phone app for sharing photographs, later video, with filters that made ordinary pictures look good. Facebook bought it when it had thirteen employees.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-10-06",
+      "precision": "day",
+      "note": "Instagram launches on the iPhone."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2012-04",
+      "precision": "month",
+      "label": "Facebook",
+      "note": "Facebook agrees to buy Instagram for about $1 billion."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Instagram",
+      "url": "https://en.wikipedia.org/wiki/Instagram",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

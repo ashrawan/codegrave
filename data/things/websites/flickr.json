@@ -1,0 +1,49 @@
+{
+  "id": "flickr",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Flickr",
+      "from": "2004-02-10"
+    }
+  ],
+  "maker": "Ludicorp",
+  "summary": "A place to post photographs and look at other people's. It introduced tags and public photo streams before social networks made sharing pictures ordinary.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-02-10",
+      "precision": "day",
+      "note": "Flickr launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2005",
+      "precision": "year",
+      "label": "Yahoo",
+      "note": "Yahoo buys Flickr."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2018",
+      "precision": "year",
+      "label": "SmugMug",
+      "note": "SmugMug buys Flickr from Yahoo's owner."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Flickr",
+      "url": "https://en.wikipedia.org/wiki/Flickr",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

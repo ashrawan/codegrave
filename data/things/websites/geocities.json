@@ -1,0 +1,53 @@
+{
+  "id": "geocities",
+  "category": "websites",
+  "names": [
+    {
+      "name": "GeoCities",
+      "from": "1994-11"
+    }
+  ],
+  "maker": "Beverly Hills Internet",
+  "summary": "Free home pages for anyone, arranged in “neighbourhoods” by topic. Millions of people made their first website here, with animated pictures, visitor counters and bright backgrounds. Yahoo bought it at the height of the dot-com boom and closed it ten years later.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-11",
+      "precision": "month",
+      "note": "Founded as Beverly Hills Internet."
+    },
+    {
+      "type": "changed_hands",
+      "date": "1999",
+      "precision": "year",
+      "label": "Yahoo",
+      "note": "Yahoo buys GeoCities."
+    },
+    {
+      "type": "ended",
+      "date": "2009-10-26",
+      "precision": "day",
+      "note": "Yahoo closes GeoCities in the United States."
+    },
+    {
+      "type": "afterlife",
+      "note": "GeoCities Japan stayed open until 31 March 2019. Volunteers saved copies of many pages before the closure."
+    }
+  ],
+  "status": "dead",
+  "cause": "Yahoo closed it as people moved to blogs and social networks.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: GeoCities",
+      "url": "https://en.wikipedia.org/wiki/GeoCities",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

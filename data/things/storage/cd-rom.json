@@ -1,0 +1,36 @@
+{
+  "id": "cd-rom",
+  "category": "storage",
+  "names": [
+    {
+      "name": "CD-ROM",
+      "from": "1985"
+    }
+  ],
+  "maker": "Philips and Sony",
+  "summary": "The music CD adapted to hold 650 megabytes of data, hundreds of floppy disks' worth. It brought encyclopedias, games and software installers to the home PC.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year",
+      "note": "The CD-ROM format is released."
+    }
+  ],
+  "status": "fading",
+  "note": "Still readable, but software and data now arrive over the internet.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: CD-ROM",
+      "url": "https://en.wikipedia.org/wiki/CD-ROM",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

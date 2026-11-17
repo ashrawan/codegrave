@@ -1,0 +1,42 @@
+{
+  "id": "hayes-smartmodem",
+  "category": "peripherals",
+  "names": [
+    {
+      "name": "Hayes Smartmodem",
+      "from": "1981"
+    }
+  ],
+  "maker": "Hayes Microcomputer Products",
+  "summary": "The modem whose commands, starting with “AT”, became the standard every dial-up modem understood. It connected home computers to bulletin boards and, later, the internet.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981",
+      "precision": "year",
+      "note": "The 300 bit/s Smartmodem is introduced."
+    },
+    {
+      "type": "ended",
+      "date": "1999",
+      "precision": "year",
+      "note": "Hayes goes out of business."
+    }
+  ],
+  "status": "dead",
+  "cause": "Undercut by cheaper modems; Hayes went bankrupt.",
+  "signals": {
+    "adoption": 4,
+    "standard": 1,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Hayes Microcomputer Products",
+      "url": "https://en.wikipedia.org/wiki/Hayes_Microcomputer_Products",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

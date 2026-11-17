@@ -1,0 +1,53 @@
+{
+  "id": "stumbleupon",
+  "category": "websites",
+  "names": [
+    {
+      "name": "StumbleUpon",
+      "from": "2001-11"
+    }
+  ],
+  "maker": "StumbleUpon",
+  "summary": "One button that took you to a random web page it thought you would like. For a while it sent more visitors to websites than any social network except Facebook.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-11",
+      "precision": "month",
+      "note": "StumbleUpon is founded."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2007-05-30",
+      "precision": "day",
+      "label": "eBay",
+      "note": "eBay buys StumbleUpon for over $75 million."
+    },
+    {
+      "type": "ended",
+      "date": "2018-06-30",
+      "precision": "day",
+      "note": "StumbleUpon shuts down."
+    },
+    {
+      "type": "afterlife",
+      "note": "Accounts were moved to Mix, a new service from one of the founders."
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed by its founders, who moved users to a new service.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: StumbleUpon",
+      "url": "https://en.wikipedia.org/wiki/StumbleUpon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

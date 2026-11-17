@@ -1,0 +1,49 @@
+{
+  "id": "tumblr",
+  "category": "social",
+  "names": [
+    {
+      "name": "Tumblr",
+      "from": "2007"
+    }
+  ],
+  "maker": "Tumblr",
+  "summary": "A blogging site built for short posts, pictures and passing things on. It was the home of many online fan communities.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007",
+      "precision": "year",
+      "note": "Tumblr launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2013",
+      "precision": "year",
+      "label": "Yahoo",
+      "note": "Yahoo buys Tumblr for $1.1 billion."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2019",
+      "precision": "year",
+      "label": "Automattic",
+      "note": "Automattic, the company behind WordPress.com, buys it."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Tumblr",
+      "url": "https://en.wikipedia.org/wiki/Tumblr",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

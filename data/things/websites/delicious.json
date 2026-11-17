@@ -1,0 +1,49 @@
+{
+  "id": "delicious",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Delicious",
+      "from": "2003-09"
+    }
+  ],
+  "maker": "Delicious",
+  "summary": "A place to save your bookmarks online and see what other people had saved. It made tagging popular and was one of the first social websites.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-09",
+      "precision": "month",
+      "note": "Delicious launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2005",
+      "precision": "year",
+      "label": "Yahoo",
+      "note": "Yahoo buys Delicious."
+    },
+    {
+      "type": "ended",
+      "date": "2017-06-01",
+      "precision": "day",
+      "note": "Pinboard buys Delicious and closes it to new bookmarks."
+    }
+  ],
+  "status": "dead",
+  "cause": "Passed between owners as it declined, then closed.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Delicious (website)",
+      "url": "https://en.wikipedia.org/wiki/Delicious_(website)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

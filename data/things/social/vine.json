@@ -1,0 +1,48 @@
+{
+  "id": "vine",
+  "category": "social",
+  "names": [
+    {
+      "name": "Vine",
+      "from": "2013-01-24"
+    }
+  ],
+  "maker": "Twitter",
+  "summary": "Six-second videos that played in a loop. It lasted four years and started a style of short comedy that TikTok later made enormous.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-01-24",
+      "precision": "day",
+      "note": "Vine launches."
+    },
+    {
+      "type": "deprecated",
+      "date": "2016-10-27",
+      "precision": "day",
+      "note": "Twitter announces it will close the app."
+    },
+    {
+      "type": "ended",
+      "date": "2017-01-17",
+      "precision": "day",
+      "note": "The Vine app is shut down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Twitter closed it as creators moved to Instagram and YouTube.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Vine (service)",
+      "url": "https://en.wikipedia.org/wiki/Vine_(service)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,42 @@
+{
+  "id": "google-maps",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Google Maps",
+      "from": "2005-02-08"
+    }
+  ],
+  "maker": "Google",
+  "summary": "A map of the world that you can drag, zoom and ask for directions. With Street View and live traffic it replaced the paper map and the road atlas for most people.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-02-08",
+      "precision": "day",
+      "note": "Google Maps launches."
+    },
+    {
+      "type": "milestone",
+      "date": "2007-05-25",
+      "precision": "day",
+      "label": "Street View",
+      "note": "Street View is added."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Google Maps",
+      "url": "https://en.wikipedia.org/wiki/Google_Maps",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -173,7 +173,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     views: [],                // ids of the views on the timeline, in the order they were added
     colors: new Map(),        // view id -> palette index
     level: 100, order: 'old',  // everything that fits, oldest at the top
-    pinned: new Set(), open: null, pane: 'views', era: null,
+    pinned: new Set(), open: null, pane: 'views', era: null, trail: [],
     span: null,               // [from, to] years when the reader narrows the timeline
     sizes: new Map(),         // view id -> height in pixels the reader dragged its section's rows to
     fit: true,                // sections share the height of the screen; false: each takes what it needs
@@ -863,9 +863,41 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     return `<figure class="${cls}"><img src="${esc(mediaUrl(m.src))}" alt="${esc(m.alt)}" loading="lazy"><figcaption>${m.caption ? esc(m.caption) + ' ' : ''}<a href="${esc(m.source)}" target="_blank" rel="noopener">${esc(m.credit)}</a> · ${esc(m.licence)}</figcaption></figure>`;
   }
 
+  // The way back: Timeline / an era / a thing / another thing. Opening something
+  // from inside the panel adds a step; opening it from the timeline starts over.
+  function step(kind, key, opts) {
+    const i = state.trail.findIndex((s) => s.kind === kind && s.key === key);
+    if (i >= 0) state.trail.length = i + 1;
+    else if (opts.push && state.pane !== 'views') state.trail.push({ kind, key });
+    else state.trail = [{ kind, key }];
+  }
+  function crumbName(s) { return s.kind === 'thing' ? byId.get(s.key)?.name : erasNow().find((e) => e.key === s.key)?.name; }
+  function crumbs() {
+    const tr = state.trail, last = tr.length - 1;
+    // Long trails keep the first and last two steps.
+    const keep = (i) => tr.length <= 4 || i === 0 || i >= last - 1;
+    let out = `<button type="button" class="crumb" data-crumb="-1">${ICON.back}Timeline</button>`;
+    tr.forEach((s, i) => {
+      if (!keep(i)) { if (i === 1) out += '<span class="sep" aria-hidden="true">/</span><span class="more">…</span>'; return; }
+      out += '<span class="sep" aria-hidden="true">/</span>' + (i === last
+        ? `<span class="crumb cur" aria-current="page">${esc(crumbName(s) || '')}</span>`
+        : `<button type="button" class="crumb" data-crumb="${i}" title="${esc(crumbName(s) || '')}">${esc(crumbName(s) || '')}</button>`);
+    });
+    return `<nav class="crumbs" aria-label="Where you are in the panel">${out}</nav>`;
+  }
+  function goCrumb(i) {
+    if (i < 0 || !state.trail[i]) return closeThing();
+    const s = state.trail[i];
+    state.trail.length = i + 1;
+    if (s.kind === 'thing') return openThing(s.key, { scroll: true, keep: true });
+    if (state.open) { state.open = null; history_replace(''); render(); }
+    openEra(s.key, { keep: true });
+  }
+
   function openThing(id, opts = {}) {
     const t = byId.get(id);
     if (!t) return;
+    if (!opts.keep) step('thing', id, opts);
     state.open = id;
     if (!L || !L.at.has(id)) state.pinned.add(id);
     const years = (t.end ?? NOW) - t.born;
@@ -912,7 +944,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const onLine = L && L.at.get(id);
     $('p-thing').style.setProperty('--c', onLine ? `var(--p${state.colors.get(onLine.group.id) % 8})` : 'var(--acc)');
     $('p-thing').innerHTML = `
-      <div class="pane-head"><button type="button" class="back" data-back>${ICON.back} Timeline</button><span class="grow"></span><button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
+      <div class="pane-head">${crumbs()}<button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
       <div class="th-head"><span class="tile big">${icon}</span><div><h2 id="thing-title" tabindex="-1">${esc(t.name)}</h2><p class="meta">${meta}</p></div></div>
       ${figure(t.image, 'lead-img')}
       ${text ? `<p class="summary">${esc(text)}</p>` : ''}
@@ -935,7 +967,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   function history_replace(hash) { history.replaceState(null, '', location.pathname + location.search + hash); }
   function closeThing() {
     if (!state.open && state.pane === 'views') return;
-    state.open = null; state.era = null;
+    state.open = null; state.era = null; state.trail = [];
     showPane('views');
     history_replace('');
     if (state.views.length) render();
@@ -943,9 +975,10 @@ import { WEIGHTS, parseDate, score } from './rank.js';
 
   // ---------------------------------------------------------------- panel: one era
   // What began and what ended in an era, among the things of the views on the timeline.
-  function openEra(key) {
+  function openEra(key, opts = {}) {
     const c = erasNow().find((e) => e.key === key);
     if (!c) return;
+    if (!opts.keep) step('era', key, opts);
     state.era = key;
     const from = c.from, to = c.to + 1;
     const pool = things.filter((t) => state.views.some((id) => inView(viewById.get(id), t, 101)));
@@ -956,7 +989,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const lived = pool.filter((t) => t.born < from && (t.end ?? NOW) >= to).sort((a, b) => a.rank - b.rank).slice(0, 8);
     const list = (title, arr, date) => arr.length ? `<section><h3 class="cap">${title} · ${arr.length}</h3><ul class="era-list">${arr.map((t) => row(t, date(t))).join('')}</ul></section>` : '';
     $('p-era').innerHTML = `
-      <div class="pane-head"><button type="button" class="back" data-back>${ICON.back} Timeline</button><span class="grow"></span><button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
+      <div class="pane-head">${crumbs()}<button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
       <div><h2 class="serif" id="era-title" tabindex="-1">${esc(c.name)}</h2><p class="era-years">${c.from}–${c.to} · ${c.to - c.from + 1} years${c.view ? ' · from the view ' + esc(c.view.name) : ''}</p></div>
       ${c.note ? `<p class="summary">${esc(c.note)}</p>` : ''}
       ${list('Born in these years', born, (t) => fmtDate(t.bornEv.date, t.bornEv.precision))}
@@ -1109,7 +1142,8 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     document.addEventListener('click', (e) => {
       const el = (sel) => e.target.closest(sel);
       if (el('[data-hide-side]')) return showSide(false);
-      if (el('[data-back]')) return closeThing();
+      const crumb = el('[data-crumb]');
+      if (crumb) return goCrumb(Number(crumb.dataset.crumb));
       if (el('[data-info-close]')) { $('info').hidden = true; $('info-btn').setAttribute('aria-expanded', false); return; }
       const copy = el('[data-copy]');
       if (copy) {
@@ -1136,7 +1170,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       const li = el('#vlist [data-i]');
       if (li) return pick(Number(li.dataset.i));
       const thing = el('[data-id]');
-      if (thing) return openThing(thing.dataset.id, { scroll: !!thing.closest('#side') });
+      if (thing) return openThing(thing.dataset.id, { scroll: !!thing.closest('#side'), push: !!thing.closest('#side') });
     });
 
     $('toggle-side').addEventListener('click', () => showSide($('side').hidden));
@@ -1288,7 +1322,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       if (e.key !== 'Escape') return;
       if (L && (!atEnd() || play.on)) stopPlay();
       else if (!$('info').hidden) { $('info').hidden = true; $('info-btn').setAttribute('aria-expanded', false); }
-      else if (state.pane !== 'views') closeThing();
+      else if (state.pane !== 'views') goCrumb(state.trail.length - 2);
       else showSide(false);
     });
     addEventListener('hashchange', () => followHash(true));

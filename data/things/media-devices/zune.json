@@ -1,0 +1,42 @@
+{
+  "id": "zune",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "Zune",
+      "from": "2006-11"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's answer to the iPod: a music player with its own shop and subscription service. It arrived five years after the iPod and never came close.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-11",
+      "precision": "month",
+      "note": "The first Zune goes on sale."
+    },
+    {
+      "type": "ended",
+      "date": "2012-06",
+      "precision": "month",
+      "note": "Microsoft discontinues the Zune brand."
+    }
+  ],
+  "status": "dead",
+  "cause": "Never caught the iPod, and phones replaced music players.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Zune",
+      "url": "https://en.wikipedia.org/wiki/Zune",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

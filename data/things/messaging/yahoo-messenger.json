@@ -1,0 +1,46 @@
+{
+  "id": "yahoo-messenger",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Yahoo Pager",
+      "from": "1998-03-09"
+    },
+    {
+      "name": "Yahoo Messenger",
+      "from": "1999"
+    }
+  ],
+  "maker": "Yahoo",
+  "summary": "Yahoo's instant messenger, with chat rooms, emoticons and a “buzz” that shook your friend's window.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-03-09",
+      "precision": "day",
+      "note": "Launched as Yahoo Pager."
+    },
+    {
+      "type": "ended",
+      "date": "2018-07-17",
+      "precision": "day",
+      "note": "Yahoo Messenger shuts down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost its users to phone messaging apps.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Yahoo Messenger",
+      "url": "https://en.wikipedia.org/wiki/Yahoo_Messenger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

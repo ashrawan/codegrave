@@ -1,0 +1,35 @@
+{
+  "id": "wechat",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "WeChat",
+      "from": "2011-01-21"
+    }
+  ],
+  "maker": "Tencent",
+  "summary": "China's everything app: messages, payments, shopping and official services in one place, used by more than a billion people.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-01-21",
+      "precision": "day",
+      "note": "Released in China as Weixin."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: WeChat",
+      "url": "https://en.wikipedia.org/wiki/WeChat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

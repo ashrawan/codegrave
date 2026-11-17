@@ -1,0 +1,50 @@
+{
+  "id": "myspace",
+  "category": "social",
+  "names": [
+    {
+      "name": "Myspace",
+      "from": "2003-08-01"
+    }
+  ],
+  "maker": "eUniverse",
+  "summary": "The biggest social network in the world before Facebook. You could decorate your page any way you liked, choose your top eight friends and find new bands. The site still exists, with a small fraction of the visitors it once had.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-08-01",
+      "precision": "day",
+      "note": "Myspace launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2005-07",
+      "precision": "month",
+      "label": "News Corp",
+      "note": "News Corporation buys Myspace for $580 million."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2011-06",
+      "precision": "month",
+      "label": "Specific Media",
+      "note": "News Corporation sells it for about $35 million."
+    }
+  ],
+  "status": "fading",
+  "note": "Still online, but most users left for Facebook around 2008 to 2011.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Myspace",
+      "url": "https://en.wikipedia.org/wiki/Myspace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

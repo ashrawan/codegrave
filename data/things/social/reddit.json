@@ -1,0 +1,35 @@
+{
+  "id": "reddit",
+  "category": "social",
+  "names": [
+    {
+      "name": "Reddit",
+      "from": "2005-06"
+    }
+  ],
+  "maker": "Reddit",
+  "summary": "A huge collection of discussion boards, one for every interest, where votes decide what rises to the top.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-06",
+      "precision": "month",
+      "note": "Reddit launches."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Reddit",
+      "url": "https://en.wikipedia.org/wiki/Reddit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

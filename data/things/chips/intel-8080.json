@@ -1,0 +1,36 @@
+{
+  "id": "intel-8080",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Intel 8080",
+      "from": "1974-04"
+    }
+  ],
+  "maker": "Intel",
+  "summary": "The 8-bit chip inside the Altair 8800 and many of the first hobby computers. The CP/M system and early Microsoft BASIC were written for it.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974-04",
+      "precision": "month",
+      "note": "Intel releases the 8080."
+    }
+  ],
+  "status": "fading",
+  "note": "Out of the mainstream for decades, though a small firm was still making it in 2017.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Intel 8080",
+      "url": "https://en.wikipedia.org/wiki/Intel_8080",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

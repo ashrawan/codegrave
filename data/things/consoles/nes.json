@@ -1,0 +1,60 @@
+{
+  "id": "nes",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Famicom",
+      "from": "1983-07-15"
+    },
+    {
+      "name": "Nintendo Entertainment System",
+      "from": "1985-10-18"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's first console with swappable games, sold in Japan as the Family Computer, or Famicom. It brought Super Mario Bros. and The Legend of Zelda into homes around the world.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-07-15",
+      "precision": "day",
+      "note": "Released in Japan as the Family Computer."
+    },
+    {
+      "type": "milestone",
+      "date": "1985-10-18",
+      "precision": "day",
+      "label": "NES in the US",
+      "note": "First sold in the United States as the NES."
+    },
+    {
+      "type": "deprecated",
+      "date": "1995-08-14",
+      "precision": "day",
+      "label": "Ends in the West",
+      "note": "Discontinued in North America and Europe."
+    },
+    {
+      "type": "ended",
+      "date": "2003-09-25",
+      "precision": "day",
+      "note": "The last Famicom is made in Japan."
+    }
+  ],
+  "status": "dead",
+  "cause": "Discontinued after twenty years in production.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Nintendo Entertainment System",
+      "url": "https://en.wikipedia.org/wiki/Nintendo_Entertainment_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,41 @@
+{
+  "id": "tiktok",
+  "category": "social",
+  "names": [
+    {
+      "name": "TikTok",
+      "from": "2017-09"
+    }
+  ],
+  "maker": "ByteDance",
+  "summary": "An endless feed of short videos chosen for you by software. It grew faster than any social app before it.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2016-09-20",
+      "precision": "day",
+      "note": "ByteDance launches the app in China, soon named Douyin."
+    },
+    {
+      "type": "born",
+      "date": "2017-09",
+      "precision": "month",
+      "note": "TikTok launches for the rest of the world."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: TikTok",
+      "url": "https://en.wikipedia.org/wiki/TikTok",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

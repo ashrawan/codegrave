@@ -1,0 +1,55 @@
+{
+  "id": "paypal",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "PayPal",
+      "from": "1999"
+    }
+  ],
+  "maker": "PayPal",
+  "summary": "A way to pay or be paid online with just an email address. It grew up alongside eBay and became the first widely used online wallet.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1998-12",
+      "precision": "month",
+      "note": "The company that becomes PayPal is founded."
+    },
+    {
+      "type": "born",
+      "date": "1999",
+      "precision": "year",
+      "note": "The first version of PayPal launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2002-10-03",
+      "precision": "day",
+      "label": "eBay",
+      "note": "eBay buys PayPal for $1.5 billion."
+    },
+    {
+      "type": "milestone",
+      "date": "2015",
+      "precision": "year",
+      "label": "Independent",
+      "note": "eBay spins PayPal off as its own company."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: PayPal",
+      "url": "https://en.wikipedia.org/wiki/PayPal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,46 @@
+{
+  "id": "wii",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Wii",
+      "from": "2006-11-19"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "The console you played by swinging its controller like a racket or a bowling ball. Nintendo aimed it at people who had never played video games, and it sold more than 100 million.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-11-19",
+      "precision": "day",
+      "note": "Released in North America."
+    },
+    {
+      "type": "ended",
+      "date": "2013-10",
+      "precision": "month",
+      "note": "Nintendo ends production of the Wii."
+    },
+    {
+      "type": "afterlife",
+      "note": "The smaller Wii Mini was made for a few years longer, and the Wii Shop stayed open until January 2019."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Wii U.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Wii",
+      "url": "https://en.wikipedia.org/wiki/Wii",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

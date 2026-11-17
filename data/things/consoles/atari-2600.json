@@ -1,0 +1,46 @@
+{
+  "id": "atari-2600",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Atari VCS",
+      "from": "1977-09"
+    },
+    {
+      "name": "Atari 2600",
+      "from": "1982"
+    }
+  ],
+  "maker": "Atari",
+  "summary": "The console that made swappable game cartridges, and home video games, popular. It was sold for fifteen years.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-09",
+      "precision": "circa",
+      "note": "Released in North America as the Atari Video Computer System."
+    },
+    {
+      "type": "ended",
+      "date": "1992",
+      "precision": "year",
+      "note": "Atari discontinues the console."
+    }
+  ],
+  "status": "dead",
+  "cause": "Discontinued long after newer consoles had replaced it.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Atari 2600",
+      "url": "https://en.wikipedia.org/wiki/Atari_2600",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

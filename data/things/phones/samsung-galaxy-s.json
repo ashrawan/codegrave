@@ -1,0 +1,40 @@
+{
+  "id": "samsung-galaxy-s",
+  "category": "phones",
+  "names": [
+    {
+      "name": "Samsung Galaxy S",
+      "from": "2010-06-04"
+    }
+  ],
+  "maker": "Samsung",
+  "summary": "Samsung's top line of Android phones, and the iPhone's main rival since 2010.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-06-04",
+      "precision": "day",
+      "note": "The first Galaxy S goes on sale."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "built_on",
+      "to": "android"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Samsung Galaxy S series",
+      "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_S_series",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,42 @@
+{
+  "id": "nokia-3310",
+  "category": "phones",
+  "names": [
+    {
+      "name": "Nokia 3310",
+      "from": "2000-09-01"
+    }
+  ],
+  "maker": "Nokia",
+  "summary": "The phone a generation remembers as unbreakable, with a battery that lasted for days and the game Snake built in. Nokia sold 126 million of them.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-09-01",
+      "precision": "day",
+      "note": "Nokia announces the 3310; it is in shops by the end of the year."
+    },
+    {
+      "type": "ended",
+      "date": "2005-12",
+      "precision": "month",
+      "note": "Mass production stops."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by newer Nokia models.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Nokia 3310",
+      "url": "https://en.wikipedia.org/wiki/Nokia_3310",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

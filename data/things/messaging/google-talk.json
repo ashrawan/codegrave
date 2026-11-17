@@ -1,0 +1,42 @@
+{
+  "id": "google-talk",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Google Talk",
+      "from": "2005-08-24"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's first chat service, built into Gmail. It was the first of a long line of Google messaging apps that replaced each other.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-08-24",
+      "precision": "day",
+      "note": "Google Talk is released."
+    },
+    {
+      "type": "ended",
+      "date": "2017-06-26",
+      "precision": "day",
+      "note": "The Android app and the chat in Gmail stop working. Third-party apps could still connect until 2022."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Hangouts and then Google Chat.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Google Talk",
+      "url": "https://en.wikipedia.org/wiki/Google_Talk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

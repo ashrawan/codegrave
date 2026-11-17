@@ -1,0 +1,41 @@
+{
+  "id": "webcam",
+  "category": "peripherals",
+  "names": [
+    {
+      "name": "Webcam",
+      "from": "1994-08"
+    }
+  ],
+  "maker": "",
+  "summary": "A small camera that shows live video over the internet. The first watched a coffee pot in Cambridge; now one sits above almost every laptop screen.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1991",
+      "precision": "year",
+      "note": "A camera is pointed at the Trojan Room coffee pot at Cambridge University."
+    },
+    {
+      "type": "born",
+      "date": "1994-08",
+      "precision": "month",
+      "note": "The QuickCam, the first widely sold webcam, goes on sale."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Webcam",
+      "url": "https://en.wikipedia.org/wiki/Webcam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

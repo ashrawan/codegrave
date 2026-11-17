@@ -73,7 +73,10 @@ How the page is put together:
   it sits beside it and the timeline narrows; on phones (under 700 px) it is a
   sheet over the lower half and the timeline and axis move up above it
   (`sheetH()`). It has three panes: views, the history of one thing, and
-  one era.
+  one era. The thing and era panes head with a trail back (`state.trail`,
+  `crumbs()`): Timeline / an era / a thing / another thing. Opening
+  something from inside the panel adds a step, opening it from the timeline
+  starts over, and Escape goes back one step.
 - `state.views` is the list of views on the timeline. Each owns a block of
   rows (a section) under its coloured heading line. A thing in two views is
   drawn in both sections; `L.at` maps an id to its first row. A view's own eras

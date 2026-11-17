@@ -1,0 +1,42 @@
+{
+  "id": "linkedin",
+  "category": "social",
+  "names": [
+    {
+      "name": "LinkedIn",
+      "from": "2003-05-05"
+    }
+  ],
+  "maker": "LinkedIn",
+  "summary": "A social network for work: your profile is your CV and your contacts are colleagues. Microsoft has owned it since 2016.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-05-05",
+      "precision": "day",
+      "note": "LinkedIn launches."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2016-12",
+      "precision": "month",
+      "label": "Microsoft",
+      "note": "Microsoft completes its purchase of LinkedIn."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: LinkedIn",
+      "url": "https://en.wikipedia.org/wiki/LinkedIn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,40 @@
+{
+  "id": "apple-m1",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Apple M1",
+      "from": "2020-11"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's own chip for the Mac, built on ARM. It was faster and used far less power than the Intel chips it replaced, and it showed that ARM could run full computers.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-11",
+      "precision": "month",
+      "note": "The M1 is introduced."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "built_on",
+      "to": "arm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Apple M1",
+      "url": "https://en.wikipedia.org/wiki/Apple_M1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

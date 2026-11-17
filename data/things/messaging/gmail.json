@@ -1,0 +1,35 @@
+{
+  "id": "gmail",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Gmail",
+      "from": "2004-04-01"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's email service. It launched with a gigabyte of free storage, hundreds of times more than its rivals, on a date that made people think it was a joke.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-04-01",
+      "precision": "day",
+      "note": "Gmail is announced and opens by invitation."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Gmail",
+      "url": "https://en.wikipedia.org/wiki/Gmail",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": "kindle",
+  "category": "handhelds",
+  "names": [
+    {
+      "name": "Kindle",
+      "from": "2007-11-19"
+    }
+  ],
+  "maker": "Amazon",
+  "summary": "Amazon's e-reader. Its paper-like screen and built-in bookshop, which could deliver a book in a minute with no computer, made electronic books ordinary.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-11-19",
+      "precision": "day",
+      "note": "The first Kindle goes on sale."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Amazon Kindle",
+      "url": "https://en.wikipedia.org/wiki/Amazon_Kindle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

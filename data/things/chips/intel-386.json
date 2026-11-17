@@ -1,0 +1,42 @@
+{
+  "id": "intel-386",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Intel 80386",
+      "from": "1985-10"
+    }
+  ],
+  "maker": "Intel",
+  "summary": "Intel's first 32-bit PC chip. It made it practical to run several programs at once on a PC and was the chip Windows grew up on.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-10",
+      "precision": "month",
+      "note": "First samples go to developers; mass production starts in June 1986."
+    },
+    {
+      "type": "ended",
+      "date": "2007",
+      "precision": "year",
+      "note": "Intel stops making it for embedded use."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the 486 and later chips.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: I386",
+      "url": "https://en.wikipedia.org/wiki/I386",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

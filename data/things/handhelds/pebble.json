@@ -1,0 +1,52 @@
+{
+  "id": "pebble",
+  "category": "handhelds",
+  "names": [
+    {
+      "name": "Pebble",
+      "from": "2013-01-23"
+    }
+  ],
+  "maker": "Pebble Technology",
+  "summary": "A smartwatch paid for by its future owners: its 2012 Kickstarter campaign was the most funded the site had seen. Its e-paper screen ran for days on one charge.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "2012",
+      "precision": "year",
+      "note": "Funded through Kickstarter."
+    },
+    {
+      "type": "born",
+      "date": "2013-01-23",
+      "precision": "day",
+      "note": "The first Pebble ships."
+    },
+    {
+      "type": "ended",
+      "date": "2016-12-07",
+      "precision": "day",
+      "note": "Pebble shuts down."
+    },
+    {
+      "type": "afterlife",
+      "note": "Pebble watches have been sold again since 2025 by a new company, Core Devices."
+    }
+  ],
+  "status": "dead",
+  "cause": "The company ran out of money and closed.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Pebble (watch)",
+      "url": "https://en.wikipedia.org/wiki/Pebble_(watch)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

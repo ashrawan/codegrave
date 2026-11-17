@@ -1,0 +1,42 @@
+{
+  "id": "chromecast",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "Chromecast",
+      "from": "2013-07"
+    }
+  ],
+  "maker": "Google",
+  "summary": "A small, cheap stick that plugs into a television so a phone can send video to it. It made an ordinary television a streaming one.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-07",
+      "precision": "month",
+      "note": "Google launches the Chromecast."
+    },
+    {
+      "type": "ended",
+      "date": "2024-08-06",
+      "precision": "day",
+      "note": "Google discontinues the Chromecast line."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Google TV Streamer.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Chromecast",
+      "url": "https://en.wikipedia.org/wiki/Chromecast",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

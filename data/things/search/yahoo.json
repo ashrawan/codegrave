@@ -1,0 +1,56 @@
+{
+  "id": "yahoo",
+  "category": "search",
+  "names": [
+    {
+      "name": "Yahoo",
+      "from": "1994-01"
+    }
+  ],
+  "maker": "Yahoo",
+  "summary": "It began as two students' hand-made list of good websites and became the front page of the internet for the 1990s: a directory, then search, mail, news and chat in one place. Google took search from it, and it has been sold twice since.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-01",
+      "precision": "month",
+      "note": "Jerry Yang and David Filo start their list of websites at Stanford."
+    },
+    {
+      "type": "milestone",
+      "date": "1995-03-02",
+      "precision": "day",
+      "label": "Company",
+      "note": "Yahoo is incorporated."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2017-06-13",
+      "precision": "day",
+      "label": "Verizon",
+      "note": "Verizon completes its purchase of Yahoo's internet business."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2021-09-01",
+      "precision": "day",
+      "label": "Apollo",
+      "note": "Apollo Global Management completes its purchase from Verizon."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Yahoo",
+      "url": "https://en.wikipedia.org/wiki/Yahoo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

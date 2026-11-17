@@ -1,0 +1,46 @@
+{
+  "id": "facebook",
+  "category": "social",
+  "names": [
+    {
+      "name": "TheFacebook",
+      "from": "2004-02-04"
+    },
+    {
+      "name": "Facebook",
+      "from": "2005"
+    }
+  ],
+  "maker": "Meta",
+  "summary": "The social network that connected about three billion people. It started as a site for students at one university and became, for many, the place to keep up with family, friends, news and local life.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-02-04",
+      "precision": "day",
+      "note": "Launched at Harvard as TheFacebook, for its students only."
+    },
+    {
+      "type": "milestone",
+      "date": "2005",
+      "precision": "year",
+      "label": "Facebook",
+      "note": "Drops \"The\" from its name after buying the facebook.com address."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Facebook",
+      "url": "https://en.wikipedia.org/wiki/Facebook",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": "apple-watch",
+  "category": "handhelds",
+  "names": [
+    {
+      "name": "Apple Watch",
+      "from": "2015-04-24"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's smartwatch, which soon became the best-selling wearable device in the world. It turned the watch into something that counts steps, measures the heart and shows messages.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-04-24",
+      "precision": "day",
+      "note": "The first Apple Watch goes on sale."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Apple Watch",
+      "url": "https://en.wikipedia.org/wiki/Apple_Watch",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

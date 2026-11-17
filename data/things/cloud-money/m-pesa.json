@@ -1,0 +1,35 @@
+{
+  "id": "m-pesa",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "M-Pesa",
+      "from": "2007-03"
+    }
+  ],
+  "maker": "Safaricom and Vodafone",
+  "summary": "Money sent by text message on the simplest mobile phone. It gave millions of people in Kenya, and then across Africa, a way to pay and save without a bank account.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-03",
+      "precision": "month",
+      "note": "M-Pesa launches in Kenya."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: M-Pesa",
+      "url": "https://en.wikipedia.org/wiki/M-Pesa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

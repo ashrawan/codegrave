@@ -1,0 +1,42 @@
+{
+  "id": "twitch",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Twitch",
+      "from": "2011-06-06"
+    }
+  ],
+  "maker": "Twitch Interactive",
+  "summary": "Live video of people playing games, with a chat running alongside. Amazon bought it in 2014.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-06-06",
+      "precision": "day",
+      "note": "Twitch launches as a spin-off of Justin.tv."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2014-08-25",
+      "precision": "day",
+      "label": "Amazon",
+      "note": "Amazon buys Twitch for $970 million."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Twitch (service)",
+      "url": "https://en.wikipedia.org/wiki/Twitch_(service)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

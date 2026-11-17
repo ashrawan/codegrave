@@ -1,0 +1,58 @@
+{
+  "id": "twitter",
+  "category": "social",
+  "names": [
+    {
+      "name": "Twitter",
+      "from": "2006-07-15"
+    },
+    {
+      "name": "X",
+      "from": "2023-07"
+    }
+  ],
+  "maker": "Twitter, later X Corp.",
+  "summary": "Short public messages that anyone could read and pass on. It became where news broke first and where politicians, journalists and celebrities spoke directly to everyone. It was bought by Elon Musk in 2022 and renamed X the next year.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-07-15",
+      "precision": "day",
+      "note": "Twitter opens to the public."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2022-10-27",
+      "precision": "day",
+      "label": "Elon Musk",
+      "note": "Elon Musk completes his purchase of the company."
+    },
+    {
+      "type": "milestone",
+      "date": "2023-07",
+      "precision": "month",
+      "label": "Renamed X",
+      "note": "Twitter is renamed X."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: X (social network)",
+      "url": "https://en.wikipedia.org/wiki/X_(social_network)",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Acquisition of Twitter by Elon Musk",
+      "url": "https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

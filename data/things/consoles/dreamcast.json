@@ -1,0 +1,42 @@
+{
+  "id": "dreamcast",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Dreamcast",
+      "from": "1998-11-27"
+    }
+  ],
+  "maker": "Sega",
+  "summary": "Sega's last console. It was ahead of its time, with a modem built in for online play, but it could not survive the arrival of the PlayStation 2, and Sega stopped making consoles for good.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-11-27",
+      "precision": "day",
+      "note": "Released in Japan."
+    },
+    {
+      "type": "ended",
+      "date": "2001-03-31",
+      "precision": "day",
+      "note": "Sega discontinues the Dreamcast and leaves the console business."
+    }
+  ],
+  "status": "dead",
+  "cause": "Sega could not compete with the PlayStation 2 and stopped making consoles.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Dreamcast",
+      "url": "https://en.wikipedia.org/wiki/Dreamcast",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

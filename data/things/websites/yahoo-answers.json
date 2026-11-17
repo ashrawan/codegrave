@@ -1,0 +1,48 @@
+{
+  "id": "yahoo-answers",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Yahoo Answers",
+      "from": "2005-12-08"
+    }
+  ],
+  "maker": "Yahoo",
+  "summary": "A site where anyone could ask a question and anyone could answer it. It produced real help, homework shortcuts and some of the internet's most quoted strange questions.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-12-08",
+      "precision": "day",
+      "note": "Yahoo Answers opens to the public."
+    },
+    {
+      "type": "deprecated",
+      "date": "2021-04-05",
+      "precision": "day",
+      "note": "Yahoo announces the closure."
+    },
+    {
+      "type": "ended",
+      "date": "2021-05-04",
+      "precision": "day",
+      "note": "Yahoo shuts the site down."
+    }
+  ],
+  "status": "dead",
+  "cause": "Yahoo closed it, saying it had become less popular.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Yahoo Answers",
+      "url": "https://en.wikipedia.org/wiki/Yahoo_Answers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

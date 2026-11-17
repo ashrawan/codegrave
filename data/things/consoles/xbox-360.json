@@ -1,0 +1,42 @@
+{
+  "id": "xbox-360",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Xbox 360",
+      "from": "2005-11-22"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's second console, which made online play, downloaded games and films part of an ordinary console.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-11-22",
+      "precision": "day",
+      "note": "Released in the United States and Canada."
+    },
+    {
+      "type": "ended",
+      "date": "2016-04-20",
+      "precision": "day",
+      "note": "Microsoft ends production."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Xbox One.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Xbox 360",
+      "url": "https://en.wikipedia.org/wiki/Xbox_360",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

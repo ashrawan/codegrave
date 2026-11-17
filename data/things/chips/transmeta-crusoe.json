@@ -1,0 +1,42 @@
+{
+  "id": "transmeta-crusoe",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Transmeta Crusoe",
+      "from": "2000-01-19"
+    }
+  ],
+  "maker": "Transmeta",
+  "summary": "A low-power chip for laptops that translated x86 programs in software as they ran. It was a bold idea that never found a big enough market.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-01-19",
+      "precision": "day",
+      "note": "The Crusoe is launched."
+    },
+    {
+      "type": "ended",
+      "date": "2009",
+      "precision": "year",
+      "note": "Transmeta closes."
+    }
+  ],
+  "status": "dead",
+  "cause": "Too few sales; the company was sold and closed.",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Transmeta",
+      "url": "https://en.wikipedia.org/wiki/Transmeta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,42 @@
+{
+  "id": "internet-archive",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Internet Archive",
+      "from": "1996"
+    }
+  ],
+  "maker": "Internet Archive",
+  "summary": "A library that keeps copies of the web. Its Wayback Machine lets you see a website as it looked years ago, and is often the only place a dead site can still be read.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year",
+      "note": "Brewster Kahle founds the Internet Archive and it starts saving web pages."
+    },
+    {
+      "type": "milestone",
+      "date": "2001",
+      "precision": "year",
+      "label": "Wayback Machine",
+      "note": "The Wayback Machine opens to the public."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Internet Archive",
+      "url": "https://en.wikipedia.org/wiki/Internet_Archive",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

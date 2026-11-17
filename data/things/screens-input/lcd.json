@@ -1,0 +1,42 @@
+{
+  "id": "lcd",
+  "category": "screens-input",
+  "names": [
+    {
+      "name": "LCD screen",
+      "from": "1972"
+    }
+  ],
+  "maker": "",
+  "summary": "The thin, flat screen that replaced the bulky glass tube. It started in watches and calculators, then laptops, and outsold tube televisions from the end of 2007.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972",
+      "precision": "year",
+      "note": "The first wristwatch with an LCD goes on sale."
+    },
+    {
+      "type": "milestone",
+      "date": "2007",
+      "precision": "year",
+      "label": "Beats the CRT",
+      "note": "LCD televisions outsell tube televisions for the first time."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Liquid-crystal display",
+      "url": "https://en.wikipedia.org/wiki/Liquid-crystal_display",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

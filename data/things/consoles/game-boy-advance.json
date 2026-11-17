@@ -1,0 +1,42 @@
+{
+  "id": "game-boy-advance",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Game Boy Advance",
+      "from": "2001-03-21"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "The 32-bit successor to the Game Boy, with a wide colour screen, which could still play the older Game Boy games.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-03-21",
+      "precision": "day",
+      "note": "Released in Japan."
+    },
+    {
+      "type": "ended",
+      "date": "2010",
+      "precision": "year",
+      "note": "Nintendo discontinues the Game Boy Advance."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Nintendo DS.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Game Boy Advance",
+      "url": "https://en.wikipedia.org/wiki/Game_Boy_Advance",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

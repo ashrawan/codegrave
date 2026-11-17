@@ -1,0 +1,48 @@
+{
+  "id": "zilog-z80",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Zilog Z80",
+      "from": "1976"
+    }
+  ],
+  "maker": "Zilog",
+  "summary": "An 8-bit chip that ran the ZX Spectrum, the TRS-80, the Game Boy and countless machines in factories and offices. It stayed in production for 48 years.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976",
+      "precision": "year",
+      "note": "Zilog releases the Z80."
+    },
+    {
+      "type": "deprecated",
+      "date": "2024-04-15",
+      "precision": "day",
+      "note": "Zilog announces the end of the Z80."
+    },
+    {
+      "type": "ended",
+      "date": "2024-06-14",
+      "precision": "day",
+      "note": "Last day to order."
+    }
+  ],
+  "status": "dead",
+  "cause": "Discontinued by Zilog after 48 years.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Zilog Z80",
+      "url": "https://en.wikipedia.org/wiki/Zilog_Z80",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
