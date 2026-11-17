@@ -1,0 +1,35 @@
+{
+  "id": "ssd",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Solid-state drive",
+      "from": "1991"
+    }
+  ],
+  "maker": "SanDisk",
+  "summary": "Storage with no moving parts, built from flash memory. It made computers start in seconds and replaced the hard disk in most laptops.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year",
+      "note": "SanDisk releases a 20 MB flash drive for IBM laptops."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Solid-state drive",
+      "url": "https://en.wikipedia.org/wiki/Solid-state_drive",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

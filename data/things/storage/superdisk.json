@@ -1,0 +1,42 @@
+{
+  "id": "superdisk",
+  "category": "storage",
+  "names": [
+    {
+      "name": "SuperDisk",
+      "from": "1996"
+    }
+  ],
+  "maker": "Imation",
+  "summary": "A drive that read ordinary floppy disks and its own 120-megabyte disks. It was meant to replace the floppy and lost to the Zip drive and the CD.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year",
+      "note": "SuperDisk is created by Imation."
+    },
+    {
+      "type": "ended",
+      "date": "2003",
+      "precision": "year",
+      "note": "Manufacturing ends worldwide."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost to the Zip drive, CDs and USB drives.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: SuperDisk",
+      "url": "https://en.wikipedia.org/wiki/SuperDisk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

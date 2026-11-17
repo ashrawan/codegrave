@@ -1,0 +1,35 @@
+{
+  "id": "sd-card",
+  "category": "storage",
+  "names": [
+    {
+      "name": "SD card",
+      "from": "1999-08"
+    }
+  ],
+  "maker": "SanDisk, Panasonic and Toshiba",
+  "summary": "The small memory card in most cameras, drones and many phones and game consoles.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-08",
+      "precision": "month",
+      "note": "The Secure Digital format is introduced."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: SD card",
+      "url": "https://en.wikipedia.org/wiki/SD_card",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

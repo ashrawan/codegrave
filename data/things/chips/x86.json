@@ -1,0 +1,42 @@
+{
+  "id": "x86",
+  "category": "chips",
+  "names": [
+    {
+      "name": "x86",
+      "from": "1978-06"
+    }
+  ],
+  "maker": "Intel",
+  "summary": "The family of processors that runs most desktop and laptop PCs. It began with Intel's 8086; a cheaper version, the 8088, went into the IBM PC, and every Intel and AMD PC chip since can still run its programs.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-06",
+      "precision": "month",
+      "note": "Intel introduces the 8086."
+    },
+    {
+      "type": "milestone",
+      "date": "1979",
+      "precision": "year",
+      "label": "8088",
+      "note": "The 8088, a cheaper version, is released; IBM picks it for the IBM PC."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Intel 8086",
+      "url": "https://en.wikipedia.org/wiki/Intel_8086",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

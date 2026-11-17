@@ -1,0 +1,53 @@
+{
+  "id": "3dfx-voodoo",
+  "category": "chips",
+  "names": [
+    {
+      "name": "3dfx Voodoo",
+      "from": "1994"
+    }
+  ],
+  "maker": "3dfx",
+  "summary": "The graphics cards that brought smooth 3D games to the PC in the late 1990s. 3dfx led the field, then fell behind Nvidia and collapsed.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994",
+      "precision": "year",
+      "note": "3dfx is founded."
+    },
+    {
+      "type": "changed_hands",
+      "date": "2000-12-15",
+      "precision": "day",
+      "label": "Nvidia",
+      "note": "Nvidia buys most of 3dfx's assets."
+    },
+    {
+      "type": "ended",
+      "date": "2001-02-15",
+      "precision": "day",
+      "note": "3dfx stops supporting its cards."
+    },
+    {
+      "type": "afterlife",
+      "note": "The company filed for bankruptcy on 15 October 2002."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost to Nvidia; its assets were sold and the company went bankrupt.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: 3dfx",
+      "url": "https://en.wikipedia.org/wiki/3dfx",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

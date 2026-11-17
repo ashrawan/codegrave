@@ -1,0 +1,36 @@
+{
+  "id": "compactflash",
+  "category": "storage",
+  "names": [
+    {
+      "name": "CompactFlash",
+      "from": "1994"
+    }
+  ],
+  "maker": "SanDisk",
+  "summary": "A small flash memory card, used above all in digital cameras. Professional cameras used it for years after smaller cards appeared.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994",
+      "precision": "year",
+      "note": "SanDisk specifies and makes the first cards."
+    }
+  ],
+  "status": "fading",
+  "note": "Replaced in most new cameras by SD cards and newer formats.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: CompactFlash",
+      "url": "https://en.wikipedia.org/wiki/CompactFlash",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

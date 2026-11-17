@@ -1,0 +1,53 @@
+{
+  "id": "hd-dvd",
+  "category": "storage",
+  "names": [
+    {
+      "name": "HD DVD",
+      "from": "2006-03-31"
+    }
+  ],
+  "maker": "Toshiba",
+  "summary": "Toshiba's high-definition disc, which fought a format war with Blu-ray and lost within two years.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-03-31",
+      "precision": "day",
+      "note": "HD DVD is released."
+    },
+    {
+      "type": "deprecated",
+      "date": "2008-02-19",
+      "precision": "day",
+      "note": "Toshiba announces it is abandoning the format."
+    },
+    {
+      "type": "ended",
+      "date": "2008-03-28",
+      "precision": "day",
+      "note": "Discontinued."
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost the format war to Blu-ray.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "blu-ray"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: HD DVD",
+      "url": "https://en.wikipedia.org/wiki/HD_DVD",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

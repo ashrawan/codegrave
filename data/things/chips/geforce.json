@@ -1,0 +1,41 @@
+{
+  "id": "geforce",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Nvidia GeForce",
+      "from": "1999-10-11"
+    }
+  ],
+  "maker": "Nvidia",
+  "summary": "Nvidia's line of graphics chips. The first, the GeForce 256, was sold as the first “GPU”. Its descendants now also train most of the world's AI.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1999-08-31",
+      "precision": "day",
+      "note": "The GeForce 256 is announced."
+    },
+    {
+      "type": "born",
+      "date": "1999-10-11",
+      "precision": "day",
+      "note": "The GeForce 256 goes on sale."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: GeForce 256",
+      "url": "https://en.wikipedia.org/wiki/GeForce_256",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

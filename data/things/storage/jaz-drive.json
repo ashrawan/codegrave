@@ -1,0 +1,42 @@
+{
+  "id": "jaz-drive",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Iomega Jaz",
+      "from": "1995-12"
+    }
+  ],
+  "maker": "Iomega",
+  "summary": "A removable hard disk holding 1 gigabyte, later 2, used for large graphics and video files.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-12",
+      "precision": "month",
+      "note": "First shipped to computer makers."
+    },
+    {
+      "type": "ended",
+      "date": "2002",
+      "precision": "year",
+      "note": "Iomega stops selling it."
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by cheaper and larger storage.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Jaz drive",
+      "url": "https://en.wikipedia.org/wiki/Jaz_drive",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

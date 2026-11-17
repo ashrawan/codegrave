@@ -1,0 +1,43 @@
+{
+  "id": "motorola-68000",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Motorola 68000",
+      "from": "1979-09"
+    }
+  ],
+  "maker": "Motorola",
+  "summary": "The chip behind the first Macintosh, the Amiga, the Atari ST and the Sega Genesis. It was far more powerful than the 8-bit chips before it.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-09",
+      "precision": "month",
+      "note": "Motorola introduces the 68000; chips are on sale from November 1980."
+    },
+    {
+      "type": "milestone",
+      "date": "1996-06-01",
+      "precision": "day",
+      "label": "HMOS ends",
+      "note": "Motorola stops making the original version."
+    }
+  ],
+  "status": "fading",
+  "note": "Motorola stopped the original chip in 1996; a few later versions were made for years after.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Motorola 68000",
+      "url": "https://en.wikipedia.org/wiki/Motorola_68000",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

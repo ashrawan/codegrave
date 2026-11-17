@@ -1,0 +1,35 @@
+{
+  "id": "blu-ray",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Blu-ray",
+      "from": "2006-06-20"
+    }
+  ],
+  "maker": "Blu-ray Disc Association",
+  "summary": "The high-definition successor to the DVD. It won the format war against HD DVD, helped by the PlayStation 3, just as streaming began to make discs less needed.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-06-20",
+      "precision": "day",
+      "note": "Blu-ray is released."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Blu-ray",
+      "url": "https://en.wikipedia.org/wiki/Blu-ray",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

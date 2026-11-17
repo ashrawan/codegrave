@@ -1,0 +1,42 @@
+{
+  "id": "touchscreen",
+  "category": "screens-input",
+  "names": [
+    {
+      "name": "Touchscreen",
+      "from": "1983"
+    }
+  ],
+  "maker": "",
+  "summary": "A screen you control by touching it. It was used in shops and kiosks for decades before phones made it how most people use a computer.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983",
+      "precision": "year",
+      "note": "The HP-150 is one of the first computers sold with a touchscreen."
+    },
+    {
+      "type": "milestone",
+      "date": "2007",
+      "precision": "year",
+      "label": "Phones",
+      "note": "The first phones with capacitive touchscreens appear."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Touchscreen",
+      "url": "https://en.wikipedia.org/wiki/Touchscreen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

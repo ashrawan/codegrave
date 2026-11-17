@@ -1,0 +1,36 @@
+{
+  "id": "mos-6502",
+  "category": "chips",
+  "names": [
+    {
+      "name": "MOS 6502",
+      "from": "1975-09"
+    }
+  ],
+  "maker": "MOS Technology",
+  "summary": "A cheap, simple 8-bit chip that made home computers affordable. It ran the Apple II, the Commodore 64, the Atari 2600 and the Nintendo Entertainment System.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-09",
+      "precision": "month",
+      "note": "MOS Technology launches the 6502."
+    }
+  ],
+  "status": "fading",
+  "note": "No longer made in its first form; the exact end of production is not recorded.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: MOS Technology 6502",
+      "url": "https://en.wikipedia.org/wiki/MOS_Technology_6502",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

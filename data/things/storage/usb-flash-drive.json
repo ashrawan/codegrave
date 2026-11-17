@@ -1,0 +1,35 @@
+{
+  "id": "usb-flash-drive",
+  "category": "storage",
+  "names": [
+    {
+      "name": "USB flash drive",
+      "from": "2000"
+    }
+  ],
+  "maker": "",
+  "summary": "Flash memory on a key ring that plugs into any computer. It finished off the floppy disk and the writable CD.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000",
+      "precision": "year",
+      "note": "First offered for sale late in the year."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: USB flash drive",
+      "url": "https://en.wikipedia.org/wiki/USB_flash_drive",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

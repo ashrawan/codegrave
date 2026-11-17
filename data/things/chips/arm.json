@@ -1,0 +1,35 @@
+{
+  "id": "arm",
+  "category": "chips",
+  "names": [
+    {
+      "name": "ARM",
+      "from": "1985"
+    }
+  ],
+  "maker": "Acorn, later Arm",
+  "summary": "A low-power processor design that started in a British home computer and now runs almost every phone in the world. More than 230 billion ARM chips have been made.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year",
+      "note": "The first ARM design appears."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 1,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: ARM architecture family",
+      "url": "https://en.wikipedia.org/wiki/ARM_architecture_family",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

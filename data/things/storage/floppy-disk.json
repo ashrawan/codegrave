@@ -1,0 +1,49 @@
+{
+  "id": "floppy-disk",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Floppy disk",
+      "from": "1971"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "The removable disk that carried software and homework for three decades, first at 8 inches, then 5¼, then the hard-cased 3½-inch disk that lives on as the “save” icon.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971",
+      "precision": "year",
+      "note": "IBM makes the first 8-inch floppy disks."
+    },
+    {
+      "type": "milestone",
+      "date": "1983",
+      "precision": "year",
+      "label": "3½-inch",
+      "note": "A 3½-inch design based on Sony's is widely adopted."
+    },
+    {
+      "type": "ended",
+      "date": "2011-03",
+      "precision": "month",
+      "note": "Sony, the last big maker, ends sales of 3½-inch disks."
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by CDs, USB drives and the internet.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Floppy disk",
+      "url": "https://en.wikipedia.org/wiki/Floppy_disk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
