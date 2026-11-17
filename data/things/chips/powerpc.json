@@ -1,0 +1,49 @@
+{
+  "id": "powerpc",
+  "category": "chips",
+  "names": [
+    {
+      "name": "PowerPC",
+      "from": "1992-10"
+    }
+  ],
+  "maker": "Apple, IBM and Motorola",
+  "summary": "A processor design made by an alliance of Apple, IBM and Motorola to challenge Intel. It ran Macs from 1994 to 2006 and the GameCube, Xbox 360 and PlayStation 3.",
+  "events": [
+    {
+      "type": "project_start",
+      "date": "1991",
+      "precision": "year",
+      "note": "Apple, IBM and Motorola form the alliance."
+    },
+    {
+      "type": "born",
+      "date": "1992-10",
+      "precision": "month",
+      "note": "The first PowerPC is introduced."
+    },
+    {
+      "type": "milestone",
+      "date": "2006",
+      "precision": "year",
+      "label": "Apple leaves",
+      "note": "Apple moves the Mac to Intel."
+    }
+  ],
+  "status": "fading",
+  "note": "Left the PC after Apple moved to Intel in 2006; it lives on in embedded systems and as the Power ISA.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: PowerPC",
+      "url": "https://en.wikipedia.org/wiki/PowerPC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

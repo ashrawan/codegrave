@@ -1,0 +1,43 @@
+{
+  "id": "model-m",
+  "category": "screens-input",
+  "names": [
+    {
+      "name": "IBM Model M",
+      "from": "1985"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "A heavy keyboard with buckling springs under each key that click loudly. Built to last decades, many still do, and it is still copied and loved.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year",
+      "note": "Production begins."
+    },
+    {
+      "type": "milestone",
+      "date": "1996-04",
+      "precision": "month",
+      "label": "Lexmark stops",
+      "note": "Lexmark stops making keyboards; IBM carries on in Scotland until 1999."
+    }
+  ],
+  "status": "fading",
+  "note": "IBM and Lexmark stopped making it in the 1990s; Unicomp has kept making versions of it.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Model M keyboard",
+      "url": "https://en.wikipedia.org/wiki/Model_M_keyboard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

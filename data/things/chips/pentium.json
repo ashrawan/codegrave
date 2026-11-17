@@ -1,0 +1,54 @@
+{
+  "id": "pentium",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Pentium",
+      "from": "1993"
+    }
+  ],
+  "maker": "Intel",
+  "summary": "Intel's best-known chip name, made famous by its five-note jingle. It was Intel's top line for over a decade, then a budget line, and was retired in 2023.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993",
+      "precision": "year",
+      "note": "The first Pentium is released."
+    },
+    {
+      "type": "milestone",
+      "date": "2006",
+      "precision": "year",
+      "label": "Core arrives",
+      "note": "Intel Core replaces it as the top line."
+    },
+    {
+      "type": "ended",
+      "date": "2023",
+      "precision": "year",
+      "note": "Intel retires the Pentium name."
+    }
+  ],
+  "status": "dead",
+  "cause": "Intel dropped the name.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [
+    {
+      "type": "built_on",
+      "to": "x86"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Pentium",
+      "url": "https://en.wikipedia.org/wiki/Pentium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

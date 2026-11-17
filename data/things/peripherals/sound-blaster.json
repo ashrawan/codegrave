@@ -1,0 +1,35 @@
+{
+  "id": "sound-blaster",
+  "category": "peripherals",
+  "names": [
+    {
+      "name": "Sound Blaster",
+      "from": "1989"
+    }
+  ],
+  "maker": "Creative",
+  "summary": "The sound card that gave PC games music and speech. For years it was the standard every game supported, and in 1995 seven out of ten sound cards sold were Sound Blasters.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989",
+      "precision": "year",
+      "note": "The first Sound Blaster is introduced."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Sound Blaster",
+      "url": "https://en.wikipedia.org/wiki/Sound_Blaster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": "hard-disk-drive",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Hard disk drive",
+      "from": "1956"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "Spinning metal disks that store data magnetically. IBM's first, the 350, was the size of two refrigerators and held about 5 megabytes. For fifty years nearly every computer kept its files on one.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956",
+      "precision": "year",
+      "note": "IBM introduces the 350 disk storage unit for the RAMAC computer."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Hard disk drive",
+      "url": "https://en.wikipedia.org/wiki/Hard_disk_drive",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

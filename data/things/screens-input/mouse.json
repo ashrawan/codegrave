@@ -1,0 +1,49 @@
+{
+  "id": "mouse",
+  "category": "screens-input",
+  "names": [
+    {
+      "name": "Computer mouse",
+      "from": "1968"
+    }
+  ],
+  "maker": "",
+  "summary": "A small device you slide on the desk to move a pointer on the screen. It was shown publicly in 1968 but stayed rare until the Macintosh made it ordinary in 1984.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968",
+      "precision": "year",
+      "note": "First shown in public, and offered for sale with one computer system the same year."
+    },
+    {
+      "type": "milestone",
+      "date": "1981",
+      "precision": "year",
+      "label": "Xerox Star",
+      "note": "Ships with the Xerox Star office computer."
+    },
+    {
+      "type": "milestone",
+      "date": "1984",
+      "precision": "year",
+      "label": "Macintosh",
+      "note": "The Macintosh brings the mouse to the mainstream."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 2
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Computer mouse",
+      "url": "https://en.wikipedia.org/wiki/Computer_mouse",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

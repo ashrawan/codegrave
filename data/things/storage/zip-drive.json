@@ -1,0 +1,42 @@
+{
+  "id": "zip-drive",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Iomega Zip",
+      "from": "1995"
+    }
+  ],
+  "maker": "Iomega",
+  "summary": "A removable disk that held 100 megabytes, seventy times a floppy. For a few years every design studio and school lab had one, along with the infamous “click of death”.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995",
+      "precision": "year",
+      "note": "Iomega releases the Zip drive."
+    },
+    {
+      "type": "ended",
+      "date": "2003",
+      "precision": "year",
+      "note": "Iomega stops selling it."
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by writable CDs and USB flash drives.",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Zip drive",
+      "url": "https://en.wikipedia.org/wiki/Zip_drive",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

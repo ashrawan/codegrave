@@ -1,0 +1,43 @@
+{
+  "id": "memory-stick",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Memory Stick",
+      "from": "1998"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "Sony's own memory card, used only in Sony cameras, phones and the PlayStation Portable. Sony gave up and added SD card slots around 2010.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998",
+      "precision": "year",
+      "note": "Sony launches the Memory Stick."
+    },
+    {
+      "type": "milestone",
+      "date": "2010",
+      "precision": "year",
+      "label": "SD wins",
+      "note": "Sony starts putting SD card slots in its products."
+    }
+  ],
+  "status": "fading",
+  "note": "Sony stopped developing it seriously after moving to SD cards around 2010.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Memory Stick",
+      "url": "https://en.wikipedia.org/wiki/Memory_Stick",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

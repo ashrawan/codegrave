@@ -1,0 +1,43 @@
+{
+  "id": "itanium",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Itanium",
+      "from": "2001-06"
+    }
+  ],
+  "maker": "Intel and HP",
+  "summary": "Intel and HP's bet on a new kind of server chip to replace x86. It arrived late and slow, AMD's 64-bit x86 won instead, and critics nicknamed it “Itanic”.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-06",
+      "precision": "month",
+      "note": "Itanium launches."
+    },
+    {
+      "type": "milestone",
+      "date": "2020",
+      "precision": "year",
+      "label": "Last systems",
+      "note": "Sales of the last Itanium-based servers end."
+    }
+  ],
+  "status": "fading",
+  "note": "Kept alive only for existing servers; sales of the last systems ended in 2020.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Itanium",
+      "url": "https://en.wikipedia.org/wiki/Itanium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

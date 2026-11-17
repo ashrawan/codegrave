@@ -1,0 +1,36 @@
+{
+  "id": "dvd",
+  "category": "storage",
+  "names": [
+    {
+      "name": "DVD",
+      "from": "1996-11-01"
+    }
+  ],
+  "maker": "DVD Forum",
+  "summary": "The disc that replaced the video tape. It held a whole film in good quality, and later became the standard way to install games and software.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-11-01",
+      "precision": "day",
+      "note": "DVDs go on sale in Japan."
+    }
+  ],
+  "status": "fading",
+  "note": "Still sold, but most people now stream films.",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: DVD",
+      "url": "https://en.wikipedia.org/wiki/DVD",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

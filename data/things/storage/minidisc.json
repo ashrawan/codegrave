@@ -1,0 +1,49 @@
+{
+  "id": "minidisc",
+  "category": "storage",
+  "names": [
+    {
+      "name": "MiniDisc",
+      "from": "1992-11"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "Sony's small recordable music disc in a plastic case. It was a hit in Japan and parts of Europe but was overtaken by MP3 players.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-11",
+      "precision": "month",
+      "note": "MiniDisc goes on sale in Japan."
+    },
+    {
+      "type": "milestone",
+      "date": "2013-03",
+      "precision": "month",
+      "label": "Last players",
+      "note": "Sony sells the last of its players."
+    },
+    {
+      "type": "ended",
+      "date": "2025-02",
+      "precision": "month",
+      "note": "Sony ends production of blank discs."
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by MP3 players and the iPod.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 1
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: MiniDisc",
+      "url": "https://en.wikipedia.org/wiki/MiniDisc",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
