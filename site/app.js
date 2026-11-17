@@ -724,21 +724,24 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   // The list: every view, ticked when it is on the timeline. Search narrows it
   // to views by their own words and by the things they hold, then things and years.
   let found = [], active = -1;
-  const KINDS = [['featured', 'Classical views'], ['community', 'Community views']];
-  const openGroups = new Set(['featured']);   // which groups of the list are unfolded
+  const KINDS = [['community', 'Community views'], ['featured', 'Classical views']];
+  const openGroups = new Set(['featured', 'community']);   // which groups of the list are unfolded
+  const GROUP_ROWS = 3;   // rows a group shows before it scrolls
   function runSearch() {
     const q = $('vq').value.trim().toLowerCase();
     found = [];
     if (!q) {
+      // Classical views by name; community views by rank (the editors' order, then by name).
       const rank = (v) => { const i = views.featured.indexOf(v.id); return i < 0 ? 100 : i; };
+      const order = { featured: (a, b) => a.name.localeCompare(b.name), community: (a, b) => (rank(a) - rank(b)) || a.name.localeCompare(b.name) };
       const mine = myView();
       if (mine) found.push({ mine });
       for (const [kind, title] of KINDS) {
-        const list = views.views.filter((v) => tabOf(v) === kind).sort((a, b) => (rank(a) - rank(b)) || a.name.localeCompare(b.name));
+        const list = views.views.filter((v) => tabOf(v) === kind).sort(order[kind]);
         const open = openGroups.has(kind);
         found.push({ head: title, kind, open, n: list.length, on: list.filter((v) => state.views.includes(v.id)).length });
         if (!open) continue;
-        found.push(...list.map((v) => ({ v })));
+        found.push(...list.map((v) => ({ v, grp: kind })));
         if (kind === 'community') found.push({ propose: true });
       }
       active = -1;
@@ -772,7 +775,20 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   function drawResults() {
     const q = $('vq').value.trim().toLowerCase();
     const full = state.views.length >= MAX_VIEWS;
-    $('vlist').innerHTML = found.map((f, i) => {
+    // The rows of a group sit in their own box, which scrolls past GROUP_ROWS rows.
+    let html = '', inGrp = null;
+    found.forEach((f, i) => {
+      if (f.grp !== inGrp) {
+        if (inGrp) html += '</ul></li>';
+        if (f.grp) html += `<li class="gbody" role="presentation"><ul role="group" style="--rows:${GROUP_ROWS}">`;
+        inGrp = f.grp || null;
+      }
+      html += row(f, i);
+    });
+    if (inGrp) html += '</ul></li>';
+    $('vlist').innerHTML = html;
+    if (!q && full) $('vnote').textContent = `${MAX_VIEWS} views is the most at once. Untick one to add another.`;
+    function row(f, i) {
       if (f.head) {
         return `<li class="grp" role="option" aria-expanded="${f.open}" aria-selected="${i === active}" data-i="${i}">${ICON.chev}<span>${f.head}</span>` +
           `<small>${f.on ? f.on + ' on · ' : ''}${f.n}</small></li>`;
@@ -790,8 +806,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
         attrs = ` aria-checked="${on}"${!on && full ? ' aria-disabled="true"' : ''}`;
       }
       return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${box}<span class="r-txt"><b>${name}</b><small>${sub}</small></span></li>`;
-    }).join('');
-    if (!q && full) $('vnote').textContent = `${MAX_VIEWS} views is the most at once. Untick one to add another.`;
+    }
   }
   function pick(i) {
     const f = found[i];

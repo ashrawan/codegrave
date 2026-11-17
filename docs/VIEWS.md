@@ -13,10 +13,13 @@ ordinary views, one per category, kept in `data/views/` like any other.
 The panel has a search box that finds views and things, and one list of every
 view, ticked when it is on the timeline, in two groups:
 
-- **Classical views**: one view per category (tagged `category`) and "Everything"
-  (tagged `all`), in the order of `featured` in `data/editors-choice.json`.
 - **Community views**: every view that tells a story, such as "The browser wars",
-  whoever made it. A new view lands here.
+  whoever made it, in rank order: those named in `featured` in
+  `data/editors-choice.json` first, then the rest by name. A new view lands here.
+- **Classical views**: one view per category (tagged `category`) and "Everything"
+  (tagged `all`), by name.
+
+Each group shows three rows at a time and scrolls the rest.
 
 Below the list, "Showing" has one row per view on the timeline: drag to
 reorder, the dot picks its colour, the cross takes it off.
@@ -86,12 +89,12 @@ under the first.
 `data/editors-choice.json` is the one place that decides what is featured:
 
 ```json
-{ "default": ["endings-2020s", "browser-wars"], "featured": ["languages", "browsers", "everything"] }
+{ "default": ["endings-2020s", "browser-wars"], "featured": ["endings-2020s", "browser-wars"] }
 ```
 
 `default` is what a new visitor sees: one view id, or a list of up to eight
-shown side by side. It can be any view, from either group. `featured` sets
-the order of the Classical views group. Only editors change this file.
+shown side by side. It can be any view, from either group. `featured` ranks
+the Community views: the views it names come first, in that order. Only editors change this file.
 
 ## What makes a good view
 
