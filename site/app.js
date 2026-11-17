@@ -586,20 +586,22 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   function findOnTimeline() {
     const q = $('q').value.trim().toLowerCase();
     hits = [];
-    if (q && L) {
-      if (/^\d{4}$/.test(q) && Number(q) >= Math.ceil(L.tMin) && Number(q) <= Math.floor(L.tMax)) hits.push({ year: Number(q) });
-      for (const p of L.at.values()) if (p.t.search.some((n) => n.includes(q))) hits.push({ p, s: p.t.search.some((n) => n === q) ? 3 : p.t.search.some((n) => n.startsWith(q)) ? 2 : 1 });
-      for (const e of [...L.eras, ...L.groups.flatMap((g) => g.eras)]) if (e.c.name.toLowerCase().includes(q)) hits.push({ era: e.c });
-      for (const p of L.at.values()) for (const m of p.t.marks) {
+    if (q) {
+      // With no view on the timeline nothing is drawn (L is null), and every match is "not on the timeline".
+      const at = L ? [...L.at.values()] : [], eras = L ? [...L.eras, ...L.groups.flatMap((g) => g.eras)] : [];
+      if (L && /^\d{4}$/.test(q) && Number(q) >= Math.ceil(L.tMin) && Number(q) <= Math.floor(L.tMax)) hits.push({ year: Number(q) });
+      for (const p of at) if (p.t.search.some((n) => n.includes(q))) hits.push({ p, s: p.t.search.some((n) => n === q) ? 3 : p.t.search.some((n) => n.startsWith(q)) ? 2 : 1 });
+      for (const e of eras) if (e.c.name.toLowerCase().includes(q)) hits.push({ era: e.c });
+      for (const p of at) for (const m of p.t.marks) {
         if (m.label && (m.label.toLowerCase().includes(q) || m.note.toLowerCase().includes(q) || m.date.includes(q))) hits.push({ p, m });
       }
       hits.sort((a, b) => (!!b.year - !!a.year) || ((b.s || 0) - (a.s || 0)) || (!!b.era - !!a.era) || (!!a.m - !!b.m) || ((a.p && !a.m ? a.p.t.name.length : 0) - (b.p && !b.m ? b.p.t.name.length : 0)) || ((a.p ? a.p.t.rank : 0) - (b.p ? b.p.t.rank : 0)));
       // Things in views that are not on the timeline: listed after a divider,
       // and picking one adds a view that holds it.
-      const onPage = new Set(L.shown.map((p) => p.t.id));
+      const onPage = new Set(L ? L.shown.map((p) => p.t.id) : []);
       const away = things.filter((t) => !onPage.has(t.id) && t.search.some((n) => n.includes(q)))
         .sort((a, b) => (b.search.some((n) => n.startsWith(q)) - a.search.some((n) => n.startsWith(q))) || (a.rank - b.rank))
-        .slice(0, 4);
+        .slice(0, L ? 4 : 8);
       hits = hits.slice(0, away.length ? 6 : 9);
       for (const t of away) {
         const holders = views.views.filter((v) => inView(v, t, 101));
