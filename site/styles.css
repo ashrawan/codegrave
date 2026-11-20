@@ -76,15 +76,16 @@ body { padding-bottom: 48px; }
 #stage { position: relative; min-height: calc(100vh - 100px); }
 body.side-open #stage { margin-right: var(--side); }
 #canvas { position: relative; overflow: hidden; }
+#bands { position: absolute; inset: 0; }
 #lines { position: absolute; left: 0; top: 0; }
 #labels { position: absolute; inset: 0; pointer-events: none; }
 #labels > button, #labels > .mark-lab, #labels > .grip { pointer-events: auto; }
-/* play: what lies ahead of the marker is not drawn yet */
-body.revealing #lines, body.revealing #labels {
+/* play: what lies ahead of the marker is not drawn yet, eras included */
+body.revealing #bands, body.revealing #lines, body.revealing #labels {
   -webkit-mask-image: linear-gradient(to right, #000 calc(var(--reveal, 0px) - 24px), transparent var(--reveal, 0px));
   mask-image: linear-gradient(to right, #000 calc(var(--reveal, 0px) - 24px), transparent var(--reveal, 0px));
 }
-body.revealing.play-rev #lines, body.revealing.play-rev #labels {
+body.revealing.play-rev #bands, body.revealing.play-rev #lines, body.revealing.play-rev #labels {
   -webkit-mask-image: linear-gradient(to left, #000 calc(var(--reveal, 0px) - 24px), transparent var(--reveal, 0px));
   mask-image: linear-gradient(to left, #000 calc(var(--reveal, 0px) - 24px), transparent var(--reveal, 0px));
 }
