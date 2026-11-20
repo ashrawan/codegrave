@@ -86,16 +86,23 @@ How the page is put together:
   shorter section keeps its best-ranked rows), redrawing once a frame.
   `state.fit` (the button above reverse, bottom right; `?h=expand` turns it off) makes the
   sections share the screen height; Expand lets each take what it needs.
-  In the panel, "Showing" lists the views as rows: drag a row to reorder
-  the sections, its dot (left) picks the view's colour, its cross (right)
-  removes it, and shuffle mixes the colours (`?c=` in the link).
+  The views on the timeline sit as pills in a strip under the years
+  (`#dock`): drag a pill to reorder the sections, its dot picks the view's
+  colour, its cross removes it, "Add view" opens the panel, and shuffle
+  mixes the colours (`?c=` in the link). On a phone the strip hides while
+  the panel is open.
   There is no category control; the map only exists as views: one per
   domain (a view with `domains`, tagged `domain`). Views of one kind are
   tagged `kind` and are found by search only.
-  The views pane is search, then one ticked list of every view (grouped
-  Community views, then Classical views, by `tabOf()`), then a sentence naming what
-  is on the timeline, then the filters at the bottom: the year range
-  (`state.span`) and how much to show (`state.level`).
+  The views pane is search, then one list of every view (community views in
+  the order of `featured` in `data/editors-choice.json`, then classical views,
+  the domain views and Everything, by name; `tabOf()` returns `featured` for
+  them). A small icon on each row says community or classical. Each row has
+  a thumbnail, made by the build (`scripts/thumb.mjs`): the view's `image`,
+  or a miniature of its lines. The thumbnail is the switch: a view on the
+  timeline draws it in its own colour with a faint wash behind the row.
+  The filters sit at the bottom of the pane: the year range (`state.span`)
+  and how much to show (`state.level`, four buttons).
 - Play sits at the bottom left of the axis and reverse (`state.order`) at
   the bottom right. A marker on the axis (`play.t`, null at the far end)
   can be dragged at any time; the timeline shows only what had happened by
@@ -106,10 +113,7 @@ How the page is put together:
   view that holds it (its kind view first, else its domain view). The GitHub icon next to the
   theme switch opens the repository. The panel's search
   finds views to add.
-- The panel list is grouped "Community views" (ranked: the order of
-  `featured` in `data/editors-choice.json`, then by name), then "Classical
-  views" (the domain views and Everything, by name; `tabOf()` returns `featured` for them). Each group shows
-  three rows and scrolls the rest (`GROUP_ROWS`); both fold (`openGroups`). "Propose a view" at the end of Community views opens the
+- "Propose a view" at the end of the list opens the
   "Propose a view" issue form with the current link filled in; an editor or
   the proposer then adds the view file by pull request. When the top search
   matches no thing in the data, it offers "Suggest …", which opens the

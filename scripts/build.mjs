@@ -10,6 +10,7 @@
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, cpSync, rmSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, basename } from 'node:path';
+import { timelineThumb } from './thumb.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = join(root, 'data');
@@ -252,8 +253,9 @@ for (const v of views) {
     for (const id of v.things || []) if (!ids.has(id)) err(at, `lists unknown thing "${id}"`);
   }
   if (v.checkpoints != null) checkEras(at, v.checkpoints);
+  if (v.image != null) checkMedia(at, '"image"', v.image, true);
   // A view only chooses what to show, and may name its own eras. It can never change the facts.
-  const allowed = ['id', 'name', 'description', 'author', 'tags', 'categories', 'domains', 'level', 'year', 'order', 'things', 'checkpoints', '_at'];
+  const allowed = ['id', 'name', 'description', 'author', 'tags', 'categories', 'domains', 'level', 'year', 'order', 'things', 'checkpoints', 'image', '_at'];
   for (const k of Object.keys(v)) if (!allowed.includes(k)) err(at, `unknown field "${k}"`);
 }
 const featured = choice.featured || [];
@@ -283,6 +285,21 @@ if (!process.argv.includes('--check')) {
   mkdirSync(outDir, { recursive: true });
   things.sort((a, b) => a.id.localeCompare(b.id));
   views.sort((a, b) => a.id.localeCompare(b.id));
+  // Each view's thumbnail is made here, once, so the page only draws two short paths per view.
+  const nowYear = new Date().getFullYear();
+  const yearOf = (d) => { const [y, m] = String(d).split('-').map(Number); return y + (m ? (m - 1) / 12 : 0); };
+  const domainOf = new Map(categories.map((c) => [c.id, c.domain]));
+  for (const v of views) {
+    if (v.image) { v.thumb = { image: v.image.src }; continue; }
+    const cats = new Set(v.categories);
+    const hand = v.things ? new Set(v.things) : null;
+    const members = things.filter((t) => hand ? hand.has(t.id)
+      : (cats.size === 0 && !(v.domains || []).length) || cats.has(t.category) || (v.domains || []).includes(domainOf.get(t.category)));
+    v.thumb = timelineThumb(members.map((t) => {
+      const born = t.events.find((e) => e.type === 'born'), end = t.events.find((e) => e.type === 'ended');
+      return { born: yearOf(born.date), end: end ? yearOf(end.date) : null, weight: t.events.length + (t.links || []).length };
+    }), nowYear);
+  }
   write('things.json', { release: new Date().toISOString().slice(0, 10), things: things.map(strip) });
   write('categories.json', { domains, categories });
   write('checkpoints.json', { checkpoints });

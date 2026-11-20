@@ -34,7 +34,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   const HANDOVER = ['succeeded_by', 'merged_into', 'open_sourced_as'];
   const EVENT_TITLES = { released: 'Release', changed_hands: 'Changed hands', milestone: 'Milestone', deprecated: 'End announced' };
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-  const TOP = 52, AXIS = 48;   // heights of the fixed top bar and the axis along the bottom
+  const TOP = 52;   // height of the fixed top bar
+  // Height of what is fixed along the bottom: the axis, and the strip of views under it (hidden on a phone while the panel is open).
+  const bottomH = () => $('axisbar').offsetHeight + $('dock').offsetHeight;
   // On a phone the open panel is a sheet over the lower half; what is drawn fits above it.
   const PHONE = '(max-width: 699px)';
   const sheetH = () => (!$('side').hidden && matchMedia(PHONE).matches ? $('side').offsetHeight : 0);
@@ -51,6 +53,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode: carry on */ } },
   };
   const ICON = {
+    // Community views are written by someone (a pen nib); classical views are part of the map (a folded map).
+    community: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5 6.5 12 12 3l5.5 9z"/><path d="M12 13.5v8"/><circle cx="12" cy="11.5" r="1.6"/></svg>',
+    classical: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6.5 9 4.5l6 2 5.5-2v13l-5.5 2-6-2-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></svg>',
     x: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>',
     back: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 6l-6 6 6 6"/></svg>',
     plus: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>',
@@ -332,7 +337,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       c.rows = c.ordered.filter((t) => keep.has(t)); c.used = used;
     };
     if (state.fit) {
-      const room = innerHeight - sheetH() - TOP - AXIS - (eraH + 6) - (narrow ? 48 : 12) - secs.reduce((n, c) => n + c.head + 24, 0);
+      const room = innerHeight - sheetH() - TOP - bottomH() - (eraH + 6) - (narrow ? 48 : 12) - secs.reduce((n, c) => n + c.head + 24, 0);
       let pool = room, open = [];
       for (const c of secs) {
         const want = state.sizes.get(c.g.id);
@@ -378,7 +383,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       grp.end = y + 6;
       y += 18;
     }
-    const height = Math.max(Math.round(y + 12), innerHeight - sheetH() - TOP - AXIS);
+    const height = Math.max(Math.round(y + 12), innerHeight - sheetH() - TOP - bottomH());
     L = { W, SW, narrow, height, ppy, tMin, tMax, fitMin, fitMax, xOf, tOf, newest, shown, groups, eras, eraH,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), total: groupsOf.size };
     return L;
@@ -556,7 +561,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   function scrollToThing(id) {
     const p = L && L.at.get(id);
     if (!p) return;
-    const seen = innerHeight - sheetH() - TOP - AXIS;
+    const seen = innerHeight - sheetH() - TOP - bottomH();
     const top = p.y < scrollY + 60 || p.y > scrollY + seen - 60 ? Math.max(0, p.y - seen * 0.4) : scrollY;
     const left = L.W > L.SW && (p.xL < scrollX || p.xL > scrollX + L.SW - 120) ? Math.max(0, p.xL - 80) : scrollX;
     scrollTo({ top, left, behavior: 'smooth' });
@@ -567,7 +572,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     const p = L && L.at.get(id);
     if (!p) return;
     const t = clamp(at, p.t.lead ?? p.t.born, p.t.end ?? NOW), x = L.xOf(t);
-    scrollTo({ top: Math.max(0, p.y - (innerHeight - sheetH() - TOP - AXIS) * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
+    scrollTo({ top: Math.max(0, p.y - (innerHeight - sheetH() - TOP - bottomH()) * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
     $('lines').querySelector('.flash')?.remove();
     $('lines').insertAdjacentHTML('beforeend', `<circle class="flash" cx="${x}" cy="${p.y}" r="4"/>`);
   }
@@ -685,23 +690,22 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   }
 
   function renderSide() {
-    // What is on the timeline: one small pill per view, each with a cross.
+    // The views on the timeline: one pill each in the strip under the years.
     const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
     $('shown-n').textContent = state.views.length ? `${n}${more} ${n === 1 && !more ? 'thing' : 'things'}` : '';
-    $('pills').innerHTML = !state.views.length ? '<span class="fine">Nothing yet. Tick a view above.</span>' : state.views.map((id) => {
+    $('pills').innerHTML = `<button type="button" class="padd" data-add>${ICON.plus}<span>Add view</span></button>` + state.views.map((id) => {
       const v = viewById.get(id);
       return `<div class="pill" data-pill="${id}" style="--c:var(--p${state.colors.get(id) % 8})" title="Drag to reorder">` +
-        `<span class="handle" aria-hidden="true">${ICON.drag}</span>` +
-        `<button type="button" class="dot" data-colour="${id}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span class="nm-txt">${esc(v.name)}</span>` +
+        `<button type="button" class="dot" data-colour="${id}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
         `<button type="button" data-remove="${id}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button></div>`;
     }).join('');
     $('save-mine').disabled = !state.views.length;
     $('shuffle').disabled = state.views.length < 2;
     $('swatches').hidden = true;
 
-    $('level').value = state.level;
-    $('level').style.setProperty('--fill', ((state.level - 5) / 95) * 100 + '%');
-    $('level-out').textContent = levelName(state.level);
+    // How much to show: the nearest of the four named levels is marked.
+    const near = LEVELS.reduce((a, l) => Math.abs(l.pct - state.level) < Math.abs(a.pct - state.level) ? l : a);
+    for (const b of $('level').querySelectorAll('[data-lv]')) b.setAttribute('aria-checked', Number(b.dataset.lv) === near.pct);
     drawYears();
     runSearch();
   }
@@ -735,26 +739,19 @@ import { WEIGHTS, parseDate, score } from './rank.js';
   // The list: every view, ticked when it is on the timeline. Search narrows it
   // to views by their own words and by the things they hold, then things and years.
   let found = [], active = -1;
-  const KINDS = [['community', 'Community views'], ['featured', 'Classical views']];
-  const openGroups = new Set(['featured', 'community']);   // which groups of the list are unfolded
-  const GROUP_ROWS = 3;   // rows a group shows before it scrolls
   function runSearch() {
     const q = $('vq').value.trim().toLowerCase();
     found = [];
     if (!q) {
-      // Classical views by name; community views by rank (the editors' order, then by name).
+      // One list: community views in the editors' order, then classical views by name.
+      // A small icon on each row says which is which.
       const rank = (v) => { const i = views.featured.indexOf(v.id); return i < 0 ? 100 : i; };
-      const order = { featured: (a, b) => a.name.localeCompare(b.name), community: (a, b) => (rank(a) - rank(b)) || a.name.localeCompare(b.name) };
       const mine = myView();
       if (mine) found.push({ mine });
-      for (const [kind, title] of KINDS) {
-        const list = views.views.filter((v) => tabOf(v) === kind && v.count > 0).sort(order[kind]);   // a domain with nothing in it yet is not listed
-        const open = openGroups.has(kind);
-        found.push({ head: title, kind, open, n: list.length, on: list.filter((v) => state.views.includes(v.id)).length });
-        if (!open) continue;
-        found.push(...list.map((v) => ({ v, grp: kind })));
-        if (kind === 'community') found.push({ propose: true });
-      }
+      const listed = (kind) => views.views.filter((v) => tabOf(v) === kind && v.count > 0);   // a domain with nothing in it yet is not listed
+      found.push(...listed('community').sort((a, b) => (rank(a) - rank(b)) || a.name.localeCompare(b.name)).map((v) => ({ v })));
+      found.push(...listed('featured').sort((a, b) => a.name.localeCompare(b.name)).map((v) => ({ v })));
+      found.push({ propose: true });
       active = -1;
       $('vnote').textContent = '';
     } else {
@@ -786,46 +783,36 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     if (tags.includes('domain') || tags.includes('all')) return 'featured';
     return tags.includes('kind') ? 'kind' : 'community';
   }
+  // A view's thumbnail, made by the build: its own picture, or a miniature of its lines.
+  function thumb(v) {
+    const t = v.thumb || {};
+    if (t.image) return `<img src="${esc(mediaUrl(t.image))}" alt="" loading="lazy">`;
+    return `<svg class="th" viewBox="0 0 64 40" aria-hidden="true"><path class="dead" d="${t.dead || ''}"/><path d="${t.live || ''}"/></svg>`;
+  }
+  // The thumbnail is the switch: a view on the timeline draws it in its own colour.
   function drawResults() {
     const q = $('vq').value.trim().toLowerCase();
     const full = state.views.length >= MAX_VIEWS;
-    // The rows of a group sit in their own box, which scrolls past GROUP_ROWS rows.
-    let html = '', inGrp = null;
-    found.forEach((f, i) => {
-      if (f.grp !== inGrp) {
-        if (inGrp) html += '</ul></li>';
-        if (f.grp) html += `<li class="gbody" role="presentation"><ul role="group" style="--rows:${GROUP_ROWS}">`;
-        inGrp = f.grp || null;
-      }
-      html += row(f, i);
-    });
-    if (inGrp) html += '</ul></li>';
-    $('vlist').innerHTML = html;
-    if (!q && full) $('vnote').textContent = `${MAX_VIEWS} views is the most at once. Untick one to add another.`;
+    $('vlist').innerHTML = found.map(row).join('');
+    if (!q && full) $('vnote').textContent = `${MAX_VIEWS} views is the most at once. Remove one to add another.`;
     function row(f, i) {
-      if (f.head) {
-        return `<li class="grp" role="option" aria-expanded="${f.open}" aria-selected="${i === active}" data-i="${i}">${ICON.chev}<span>${f.head}</span>` +
-          `<small>${f.on ? f.on + ' on · ' : ''}${f.n}</small></li>`;
-      }
-      let name, sub, box = '', attrs = '';
-      if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(id)?.name).filter(Boolean).join(', '); box = `<span class="ck go">${ICON.save}</span>`; }
-      else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; box = `<span class="ck go">${ICON.plus}</span>`; }
-      else if (f.t) { name = mark(f.t.name, q); sub = `${esc(f.t.cat.name)} · ${yearOf(f.t.bornEv.date)}${f.t.endEv ? '–' + yearOf(f.t.endEv.date) : ' to today'}`; box = `<span class="ck go">${ICON.dot}</span>`; }
+      let name, sub, tb, attrs = '';
+      if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(id)?.name).filter(Boolean).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
+      else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; tb = `<span class="tb icon">${ICON.plus}</span>`; }
+      else if (f.t) { name = mark(f.t.name, q); sub = `${esc(f.t.cat.name)} · ${yearOf(f.t.bornEv.date)}${f.t.endEv ? '–' + yearOf(f.t.endEv.date) : ' to today'}`; tb = `<span class="tb icon">${ICON.dot}</span>`; }
       else {
-        const v = f.v, on = state.views.includes(v.id);
-        name = mark(v.name, q);
-        sub = f.why ? mark(f.why, q) : esc(v.description || '');
-        const c = on ? ` style="--c:var(--p${state.colors.get(v.id) % 8})"` : '';
-        box = `<span class="ck${on ? ' on' : ''}"${c}>${on ? ICON.check : ''}</span>`;
-        attrs = ` aria-checked="${on}"${!on && full ? ' aria-disabled="true"' : ''}`;
+        const v = f.v, on = state.views.includes(v.id), kind = tabOf(v) === 'featured' ? 'classical' : 'community';
+        name = `<span>${mark(v.name, q)}</span><i title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i>`;
+        sub = (on ? '<span class="st">On the timeline</span> · ' : '') + (f.why ? mark(f.why, q) : `${v.count} things · ${esc(v.description || '')}`);
+        tb = `<span class="tb">${thumb(v)}<span class="go">${ICON.plus}</span></span>`;
+        attrs = ` aria-checked="${on}"${on ? ` style="--c:var(--p${state.colors.get(v.id) % 8})"` : ''}${!on && full ? ' aria-disabled="true"' : ''}`;
       }
-      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${box}<span class="r-txt"><b>${name}</b><small>${sub}</small></span></li>`;
+      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${name}</b><small>${sub}</small></span></li>`;
     }
   }
   function pick(i) {
     const f = found[i];
     if (!f) return;
-    if (f.head) { if (openGroups.has(f.kind)) openGroups.delete(f.kind); else openGroups.add(f.kind); active = i; return runSearch(); }
     if (f.mine) return loadMine(f.mine);
     if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
     if (f.t) { $('vq').value = ''; state.pinned.add(f.t.id); runSearch(); return openThing(f.t.id, { scroll: true }); }
@@ -1227,8 +1214,10 @@ import { WEIGHTS, parseDate, score } from './rank.js';
     });
 
     // The bars redraw as they move, and record the link once let go.
-    $('level').addEventListener('input', (e) => { state.level = Number(e.target.value); render(); });
-    $('level').addEventListener('change', writeUrl);
+    $('level').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-lv]');
+      if (b) { state.level = Number(b.dataset.lv); changed(); }
+    });
     const years = () => {
       let a = Number($('y-from').value), b = Number($('y-to').value);
       if (a > b - 2) { if (document.activeElement === $('y-from')) a = b - 2; else b = a + 2; }
@@ -1252,6 +1241,7 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       changed();
     });
     $('pills').addEventListener('click', (e) => {
+      if (e.target.closest('[data-add]')) { showPane('views'); showSide(true); $('vq').focus(); return; }
       const dot = e.target.closest('[data-colour]');
       if (!dot) return;
       e.stopPropagation();
@@ -1262,9 +1252,9 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       sw.innerHTML = [0, 1, 2, 3, 4, 5, 6, 7].map((n) =>
         `<button type="button" role="option" data-swatch="${n}" aria-selected="${n === mine}" style="--c:var(--p${n})" aria-label="Colour ${n + 1}"></button>`).join('');
       sw.hidden = false;
-      const box = $('pills').parentElement.getBoundingClientRect(), r = dot.getBoundingClientRect();
-      sw.style.left = Math.max(0, r.left - box.left - 6) + 'px';
-      sw.style.top = (r.bottom - box.top + 6) + 'px';
+      // The colours open just above the dot, kept inside the strip.
+      const box = $('dock').getBoundingClientRect(), r = dot.getBoundingClientRect();
+      sw.style.left = clamp(r.left - box.left - 6, 4, box.width - sw.offsetWidth - 4) + 'px';
     });
     $('swatches').addEventListener('click', (e) => {
       const b = e.target.closest('[data-swatch]');
@@ -1291,12 +1281,12 @@ import { WEIGHTS, parseDate, score } from './rank.js';
       const { pill } = pillDrag;
       if (!pillDrag.moved && Math.hypot(e.clientX - pillDrag.x0, e.clientY - pillDrag.y0) < 4) return;
       pillDrag.moved = true; pill.classList.add('dragging');
-      // Move the row above, or below, the row under the pointer.
+      // Move the pill before, or after, the pill under the pointer.
       for (const o of $('pills').querySelectorAll('[data-pill]')) {
         if (o === pill) continue;
         const r = o.getBoundingClientRect();
-        if (e.clientY < r.top || e.clientY > r.bottom) continue;
-        const before = e.clientY < r.top + r.height / 2;
+        if (e.clientX < r.left || e.clientX > r.right) continue;
+        const before = e.clientX < r.left + r.width / 2;
         if (before && o.previousElementSibling !== pill) o.before(pill);
         else if (!before && o.nextElementSibling !== pill) o.after(pill);
         break;

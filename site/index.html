@@ -58,7 +58,7 @@
   <!-- What is on the timeline, how to move through it, and what to add -->
   <div id="p-views" class="pane">
     <div class="pane-head">
-      <h2>Timeline</h2>
+      <h2>Views</h2>
       <button id="info-btn" class="ibtn" type="button" aria-label="How to read the timeline" aria-expanded="false" aria-controls="info">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></svg>
       </button>
@@ -72,13 +72,6 @@
     </label>
     <ul id="vlist" role="listbox" aria-label="Views" aria-multiselectable="true"></ul>
     <p id="vnote" class="fine"></p>
-    <section class="chosen" aria-live="polite">
-      <div class="row"><span class="lab">Showing <span id="shown-n" class="fine"></span></span>
-        <span class="row-btns"><button id="shuffle" class="ibtn sm" type="button" aria-label="Shuffle colours" title="Shuffle colours"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5c4 0 6 10 10 10H21M18 14l3 3-3 3M3 17h3.5c1.6 0 2.8-1.6 3.9-3.6M13.6 9.6C14.7 8.1 15.8 7 16.5 7H21M18 4l3 3-3 3"/></svg></button>
-        <button id="save-mine" class="ibtn sm" type="button" aria-label="Save as your view" title="Save as your view"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z"/></svg></button></span></div>
-      <div id="pills"></div>
-      <div id="swatches" role="listbox" aria-label="Colour" hidden></div>
-    </section>
     <section class="filters" aria-label="Filters">
       <div class="field">
         <div class="row"><span class="lab" id="years-cap">Years</span><span class="row-r"><button id="years-reset" class="lnk" type="button" hidden>Show all years</button><output id="years-out"></output></span></div>
@@ -90,9 +83,10 @@
         <div class="row ticks" id="year-ticks" aria-hidden="true"></div>
       </div>
       <div class="field">
-        <div class="row"><label class="lab" for="level">How much to show</label><output id="level-out" for="level"></output></div>
-        <input id="level" class="lvbar" type="range" min="5" max="100" step="5" aria-describedby="level-ticks">
-        <div class="row ticks" id="level-ticks"><span>Landmarks</span><span>Notable</span><span>Most</span><span>All</span></div>
+        <div class="row"><span class="lab" id="level-cap">How much to show</span><output id="shown-n"></output></div>
+        <div id="level" class="seg" role="radiogroup" aria-labelledby="level-cap">
+          <button type="button" role="radio" data-lv="10">Landmarks</button><button type="button" role="radio" data-lv="30">Notable</button><button type="button" role="radio" data-lv="60">Most</button><button type="button" role="radio" data-lv="100">All</button>
+        </div>
       </div>
     </section>
   </div>
@@ -116,6 +110,16 @@
       </button>
     <button id="reverse" class="abtn" type="button" aria-label="Show newest on the left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"/></svg></button>
   </div>
+</div>
+
+<!-- The views on the timeline, one pill each, under the years -->
+<div id="dock" role="group" aria-label="Views on the timeline">
+  <div id="pills"></div>
+  <span class="dock-tools">
+    <button id="shuffle" class="ibtn sm" type="button" aria-label="Shuffle colours" title="Shuffle colours"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5c4 0 6 10 10 10H21M18 14l3 3-3 3M3 17h3.5c1.6 0 2.8-1.6 3.9-3.6M13.6 9.6C14.7 8.1 15.8 7 16.5 7H21M18 4l3 3-3 3"/></svg></button>
+    <button id="save-mine" class="ibtn sm" type="button" aria-label="Save as your view" title="Save as your view"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z"/></svg></button>
+  </span>
+  <div id="swatches" role="listbox" aria-label="Colour" hidden></div>
 </div>
 
 <div id="rguide" hidden></div>

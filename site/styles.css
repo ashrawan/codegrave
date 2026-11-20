@@ -72,7 +72,7 @@ ul, ol { list-style: none; }
 .btn:disabled, .btn.off { opacity: .4; pointer-events: none; }
 
 /* stage: time runs left to right, the axis is fixed along the bottom */
-body { padding-bottom: 48px; }
+body { padding-bottom: 92px; }
 #stage { position: relative; min-height: calc(100vh - 100px); }
 body.side-open #stage { margin-right: var(--side); }
 #canvas { position: relative; overflow: hidden; }
@@ -91,6 +91,7 @@ body.revealing.play-rev #lines, body.revealing.play-rev #labels {
 .status { padding: 80px 24px; text-align: center; color: var(--muted); }
 
 #axisbar { user-select: none; -webkit-user-select: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; height: 48px; background: var(--bg); border-top: 1px solid var(--rule2); }
+#axisbar { bottom: 44px; }
 body.side-open #axisbar { right: var(--side); }
 #axis { position: absolute; inset: 0; overflow: hidden; cursor: ew-resize; touch-action: none; outline-offset: -3px; }
 
@@ -215,62 +216,63 @@ body.side-open #rguide { right: calc(var(--side) + 16px); }
 .search:focus-within { border-color: var(--text); }
 .search input { flex: 1; min-width: 0; padding: 0; border: 0; outline: 0; background: transparent; font-size: 13.5px; color: var(--text); }
 .search input::-webkit-search-cancel-button { display: none; }
-/* the list keeps its own scroll and never takes more than 40% of the panel */
-#p-views > #vlist { margin-top: 8px; overflow: hidden; border: 1px solid var(--rule); border-radius: 6px; background: var(--bg); }
-#vlist li { display: flex; align-items: center; gap: 10px; padding: 7px 12px; border-top: 1px solid var(--rule); color: var(--muted); cursor: pointer; }
+/* the list of views fills the panel between the search and the filters, and scrolls on its own */
+#p-views { height: 100%; min-height: 0; }
+#p-views > #vlist { flex: 1 1 0; min-height: 140px; margin: 10px -12px 0; padding: 0 0 12px; overflow-y: auto; overscroll-behavior: contain; }
+#vlist li { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 8px; color: var(--muted); cursor: pointer; }
 #vlist li:hover, #vlist li[aria-selected="true"] { background: var(--raised); color: var(--text); }
-#vlist li.grp { gap: 8px; padding: 9px 12px; font-size: 10.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
-#vlist li.grp:first-child { border-top: 0; }
-#vlist li.grp span { flex: 1; }
-#vlist li.grp small { font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--faint); }
-#vlist li.grp .chev { transition: transform .15s; }
-#vlist li.grp[aria-expanded="true"] .chev { transform: rotate(90deg); }
-#vlist li.grp:hover, #vlist li.grp[aria-selected="true"] { color: var(--text); background: var(--raised); }
+#vlist li[aria-disabled="true"] { opacity: .45; cursor: default; }
+/* the thumbnail is the switch: a view on the timeline draws its lines in its own colour */
+.tb { position: relative; flex: none; width: 56px; height: 36px; display: flex; align-items: center; justify-content: center; overflow: hidden; color: var(--faint); background: var(--bg); border: 1px solid var(--rule); border-radius: 5px; }
+.tb svg.th { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
+.tb .th .dead { opacity: .45; }
+.tb img { width: 100%; height: 100%; object-fit: cover; }
+.tb .go { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; color: var(--text); background: color-mix(in srgb, var(--bg) 72%, transparent); }
+.tb.icon { color: var(--faint); }
+#vlist li:hover .tb .go, #vlist li[aria-selected="true"] .tb .go { display: flex; }
+#vlist li[aria-checked="true"] { background: color-mix(in srgb, var(--c) 8%, var(--surf)); }
+#vlist li[aria-checked="true"]:hover, #vlist li[aria-checked="true"][aria-selected="true"] { background: color-mix(in srgb, var(--c) 14%, var(--surf)); }
+#vlist li[aria-checked="true"] .tb { color: var(--c); border-color: var(--c); }
+#vlist li[aria-checked="true"] .tb .go { display: none; }
+#vlist li[aria-checked="true"] .r-txt b { color: var(--c); }
+#vlist li[aria-checked="true"] .st { color: var(--c); font-weight: 600; }
 #vlist li.none { font-size: 12px; color: var(--faint); cursor: default; }
 #vlist li.none:hover { background: none; }
-#vlist li[aria-disabled="true"] { opacity: .45; cursor: default; }
-/* a group's rows: a few in sight, the rest scroll inside the group */
-#vlist li.gbody { display: block; padding: 0; border-top: 0; cursor: default; }
-#vlist li.gbody:hover { background: none; }
-#vlist li.gbody > ul { max-height: calc(var(--rows) * 52px); overflow-y: auto; overscroll-behavior: contain; }
-.ck { flex: none; width: 18px; height: 18px; display: inline-flex; align-items: center; justify-content: center; color: var(--bg); border: 1.5px solid var(--rule2); border-radius: 4px; }
-.ck.on { background: var(--c); border-color: var(--c); }
-.ck.go { color: var(--faint); border-color: transparent; }
 .r-txt { flex: 1; min-width: 0; }
-.r-txt b { display: block; font-size: 13.5px; font-weight: 400; color: var(--text); }
+.r-txt b { display: flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 500; color: var(--text); }
+.r-txt b span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.r-txt b svg { flex: none; color: var(--faint); }
 .r-txt small { display: block; font-size: 12px; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 mark { background: none; color: var(--text); font-weight: 600; text-decoration: underline; text-decoration-color: var(--bandtext); text-underline-offset: 3px; }
 #p-views > #vnote { margin-top: 8px; }
 #vnote:empty { display: none; }
-/* what is on the timeline: small pills, each with a cross */
-.chosen { display: flex; flex-direction: column; gap: 8px; }
-.chosen .lab .fine { margin-left: 6px; font-weight: 400; }
-.ibtn.sm { width: 30px; height: 30px; margin: -4px -6px -4px 0; }
+.ibtn.sm { width: 30px; height: 30px; }
 .ibtn.done { color: var(--acc); }
-#pills { display: flex; flex-direction: column; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
-.pill { display: flex; align-items: center; gap: 8px; height: 34px; padding: 0 4px 0 6px; font-size: 13px; color: var(--text); background: var(--bg); border-bottom: 1px solid var(--rule); cursor: grab; touch-action: none; user-select: none; }
-.pill:last-child { border-bottom: 0; }
-.pill .nm-txt { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pill .handle { display: inline-flex; color: var(--faint); opacity: .55; }
-.pill:hover .handle { opacity: 1; }
-.pill .dot { flex: none; width: 14px; height: 14px; padding: 0; border-radius: 50%; background: var(--c); border: 3.5px solid var(--bg); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 45%, transparent); cursor: pointer; }
+/* the views on the timeline: a strip of pills under the years */
+#dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; height: 44px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; background: var(--surf); border-top: 1px solid var(--rule); }
+body.side-open #dock { right: var(--side); }
+#pills { display: flex; align-items: center; gap: 6px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+#pills::-webkit-scrollbar { display: none; }
+.dock-tools { flex: none; display: inline-flex; align-items: center; gap: 2px; padding-left: 8px; margin-left: 2px; border-left: 1px solid var(--rule); }
+.pill { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 4px 0 6px; font-size: 12.5px; color: var(--text); white-space: nowrap; background: var(--bg); border: 1px solid var(--rule2); border-radius: 14px; cursor: grab; touch-action: none; user-select: none; }
+.pill .dot { flex: none; width: 16px; height: 16px; padding: 0; border-radius: 50%; background: var(--c); border: 4px solid var(--bg); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 45%, transparent); cursor: pointer; }
 .pill .dot:hover { box-shadow: 0 0 0 1.5px var(--c); }
-.pill.dragging { cursor: grabbing; background: var(--surf); box-shadow: inset 3px 0 0 var(--c), 0 4px 14px rgba(0, 0, 0, .14); position: relative; z-index: 2; }
-.chosen { position: relative; }
-.row-btns { display: inline-flex; gap: 2px; }
-#swatches { position: absolute; z-index: 20; display: grid; grid-template-columns: repeat(8, 22px); gap: 6px; padding: 8px; background: var(--surf); border: 1px solid var(--rule2); border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); }
+.pill.dragging { cursor: grabbing; background: var(--surf); border-color: var(--c); box-shadow: 0 4px 14px rgba(0, 0, 0, .14); position: relative; z-index: 2; }
+.pill button:not(.dot) { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; padding: 0; color: var(--faint); background: none; border: 0; border-radius: 50%; }
+.pill button:not(.dot):hover { color: var(--bg); background: var(--text); }
+.padd { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; font-size: 12.5px; color: var(--text); background: transparent; border: 1px dashed var(--rule2); border-radius: 14px; }
+.padd:hover { border-style: solid; background: var(--bg); }
+#swatches { position: absolute; bottom: 40px; z-index: 20; display: grid; grid-template-columns: repeat(8, 22px); gap: 6px; padding: 8px; background: var(--surf); border: 1px solid var(--rule2); border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); }
 #swatches[hidden] { display: none; }
 #swatches button { width: 22px; height: 22px; padding: 0; border-radius: 50%; background: var(--c); border: 2px solid var(--surf); box-shadow: 0 0 0 1px var(--rule2); cursor: pointer; }
 #swatches button[aria-selected="true"] { box-shadow: 0 0 0 2px var(--text); }
 #swatches button:hover { transform: scale(1.12); }
-.pill button { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; padding: 0; color: var(--faint); background: none; border: 0; border-radius: 50%; }
-.pill button:hover { color: var(--bg); background: var(--text); }
 /* the filters sit at the bottom of the panel, whatever is above them */
 .filters { position: sticky; bottom: 0; z-index: 2; display: flex; flex-direction: column; gap: 18px; margin: auto -20px 0 !important; padding: 16px 20px 20px; background: var(--surf); border-top: 1px solid var(--rule); }
 .field { display: flex; flex-direction: column; gap: 7px; }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .row-r { display: flex; align-items: baseline; gap: 12px; font-size: 12px; }
-#years-out, #level-out { font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
+#years-out { font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .yearbar { position: relative; height: 34px; border-bottom: 1px solid var(--rule2); }
 #hist { position: absolute; inset: 0 0 1px; display: flex; align-items: flex-end; gap: 2px; }
 #hist i { flex: 1; background: var(--rule2); }
@@ -281,12 +283,11 @@ mark { background: none; color: var(--text); font-weight: 600; text-decoration: 
 .yearbar input::-moz-range-track { height: 100%; background: transparent; }
 .yearbar input::-webkit-slider-thumb { -webkit-appearance: none; width: 10px; height: 40px; margin-top: -3px; border-radius: 3px; background: var(--bg); border: 2px solid var(--text); pointer-events: auto; cursor: ew-resize; }
 .yearbar input::-moz-range-thumb { width: 6px; height: 36px; border-radius: 3px; background: var(--bg); border: 2px solid var(--text); pointer-events: auto; cursor: ew-resize; }
-.lvbar { width: 100%; height: 22px; margin: 0; appearance: none; -webkit-appearance: none; background: transparent; cursor: pointer; }
-.lvbar::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: linear-gradient(to right, var(--text) var(--fill, 100%), var(--raised) var(--fill, 100%)); }
-.lvbar::-moz-range-track { height: 6px; border-radius: 3px; background: var(--raised); }
-.lvbar::-moz-range-progress { height: 6px; border-radius: 3px; background: var(--text); }
-.lvbar::-webkit-slider-thumb { -webkit-appearance: none; width: 18px; height: 18px; margin-top: -6px; border-radius: 50%; background: var(--bg); border: 2px solid var(--text); }
-.lvbar::-moz-range-thumb { width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 2px solid var(--text); }
+.seg { display: flex; padding: 2px; background: var(--raised); border-radius: 7px; }
+.seg button { flex: 1; height: 30px; padding: 0 4px; font-size: 12.5px; color: var(--muted); background: transparent; border: 0; border-radius: 5px; }
+.seg button:hover { color: var(--text); }
+.seg button[aria-checked="true"] { font-weight: 600; color: var(--text); background: var(--bg); box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
+#shown-n { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .ticks { font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; }
 .field.form { gap: 6px; }
 
@@ -366,8 +367,16 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
   body.side-open #axisbar { right: 0; bottom: var(--sheet); }
   body.side-open { padding-bottom: calc(var(--sheet) + 48px); }
   body.side-open #rguide { right: 16px; }
-  #p-views > #vlist { height: 24vh; }
-  .filters { position: static; margin-top: 16px !important; }
+  #p-views > #vlist { min-height: 0; }
+  body.side-open #dock { display: none; }
+  #dock { justify-content: flex-start; padding: 0 8px; }
+  .filters { gap: 12px; padding: 12px 20px 14px; }
+  .filters .yearbar { height: 22px; }
+  .filters #hist i { max-height: 100%; }
+  .filters #year-ticks { display: none; }
+  .yearbar input::-webkit-slider-thumb { height: 28px; }
+  .yearbar input::-moz-range-thumb { height: 24px; }
+  .tb { width: 48px; height: 32px; }
   .pane-foot { padding-bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
