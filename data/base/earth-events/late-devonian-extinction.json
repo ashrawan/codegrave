@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Late Devonian Extinction",
-      "from": "-372200000"
+      "from": "-372000000"
     }
   ],
   "summary": "A series of extinctions about 372 to 359 million years ago that hit shallow-sea life hard, especially reef builders and armoured fish. Its causes are debated, with falling ocean oxygen a leading idea.",
@@ -16,12 +16,12 @@
   "events": [
     {
       "type": "born",
-      "date": "-372200000",
+      "date": "-372000000",
       "precision": "circa"
     },
     {
       "type": "ended",
-      "date": "-372200000",
+      "date": "-359000000",
       "precision": "circa"
     }
   ],
@@ -49,5 +49,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

@@ -15,13 +15,13 @@
   "events": [
     {
       "type": "born",
-      "date": "1918-10-24",
-      "precision": "day"
+      "date": "1918",
+      "precision": "year"
     },
     {
       "type": "ended",
-      "date": "1918-11-04",
-      "precision": "day"
+      "date": "1919",
+      "precision": "year"
     }
   ],
   "status": "dead",
@@ -52,5 +52,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

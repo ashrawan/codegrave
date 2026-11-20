@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Cambrian Explosion",
-      "from": "-543000000"
+      "from": "-538800000"
     }
   ],
   "summary": "A burst of evolution over some tens of millions of years when most major animal groups first appear as fossils. Famous fossil beds such as the Burgess Shale in Canada and Chengjiang in China record it.",
@@ -21,12 +21,12 @@
   "events": [
     {
       "type": "born",
-      "date": "-543000000",
+      "date": "-538800000",
       "precision": "circa"
     },
     {
       "type": "ended",
-      "date": "-543000000",
+      "date": "-520000000",
       "precision": "circa"
     }
   ],
@@ -54,5 +54,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }
