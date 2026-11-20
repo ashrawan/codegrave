@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Homer",
-      "from": "-0900"
+      "from": "-0750"
     }
   ],
   "summary": "Ancient Greek poet traditionally credited with the Iliad and the Odyssey, the oldest great works of European literature. Little is known about his life, and scholars still debate whether one person composed both.",
@@ -20,12 +20,12 @@
   "events": [
     {
       "type": "born",
-      "date": "-0900",
+      "date": "-0750",
       "precision": "circa"
     },
     {
       "type": "ended",
-      "date": "-0800",
+      "date": "-0700",
       "precision": "circa"
     }
   ],
@@ -48,5 +48,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }
