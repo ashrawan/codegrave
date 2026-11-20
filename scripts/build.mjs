@@ -55,6 +55,17 @@ function jsonFiles(dir, prefix = '') {
 // there is no year zero). The same form holds deep time: -66000000.
 const DATE = /^(-\d{4,11}|\d{4})(-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?)?$/;
 const isDate = (s) => typeof s === 'string' && DATE.test(s) && yearOf(s) !== 0;
+// Is date a before date b, as far as both are written? "2010-04-15" is before
+// "2010-04-20", and "2010-04" is before "2010-07-15"; "2010" is not before
+// "2010-04", because a bare year may mean any day in it.
+const dateParts = (s) => { const [y, m, d] = s.replace(/^-/, '').split('-').map(Number); return [yearOf(s), m || 0, d || 0]; };
+function isBefore(a, b) {
+  const [ay, am, ad] = dateParts(a), [by, bm, bd] = dateParts(b);
+  if (ay !== by) return ay < by;
+  if (!am || !bm) return false;
+  if (am !== bm) return am < bm;
+  return !!ad && !!bd && ad < bd;
+}
 const ID = /^[a-z0-9][a-z0-9-]*$/;
 const OWNER = /^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/;   // a GitHub name, lower case
 const PRECISIONS = ['day', 'month', 'year', 'circa'];
@@ -270,10 +281,10 @@ for (const t of entries) {
     if (e.image != null) checkMedia(at, `${e.type} image`, e.image, true);
     if (e.url != null && !URL_OK(e.url)) err(at, `${e.type} "url" must be an https link`);
     // Events may fall in the years of work before birth, but not before that work began.
-    if (isDate(first?.date) && isDate(e.date) && e.type !== 'project_start' && yearOf(e.date) < yearOf(first.date)) {
+    if (isDate(first?.date) && isDate(e.date) && e.type !== 'project_start' && !(e.type === 'ended' && first === born[0]) && isBefore(e.date, first.date)) {
       err(at, `${e.type} is dated before the thing was born${first === born[0] ? '' : ' or work on it began'}`);
     }
-    if (isDate(ended[0]?.date) && isDate(e.date) && yearOf(e.date) > yearOf(ended[0].date)) {
+    if (isDate(ended[0]?.date) && isDate(e.date) && e.type !== 'born' && isBefore(ended[0].date, e.date)) {
       err(at, `${e.type} is dated after the thing ended`);
     }
   }
@@ -286,7 +297,7 @@ for (const t of entries) {
   for (const o of t.official || []) if (!o.title || !URL_OK(o.url)) err(at, 'every "official" link needs a title and an https url');
   if ((t.official || []).length > 6) err(at, 'at most 6 "official" links');
   if (t.image != null) checkMedia(at, 'image', t.image, true);
-  if (isDate(born[0]?.date) && isDate(ended[0]?.date) && yearOf(ended[0].date) < yearOf(born[0].date)) err(at, 'ended before it was born');
+  if (isDate(born[0]?.date) && isDate(ended[0]?.date) && isBefore(ended[0].date, born[0].date)) err(at, 'ended before it was born');
   if (isDate(born[0]?.date) && isDate(t.names?.[0]?.from) && yearOf(t.names[0].from) !== yearOf(born[0].date)) {
     warn(at, 'first name does not start in the year of birth');
   }

@@ -133,18 +133,55 @@ What counts as the start and the end:
 | Life, Earth & space | First appearance or formation | Extinction or disappearance |
 | Technology | First release or introduction | Withdrawal, end of support or shutdown |
 
+The start means one thing within a kind. Where a kind needs a closer rule:
+
+| Kind | The start is | Notes |
+| --- | --- | --- |
+| Present-day countries | The year the present state began: its independence, republic or current constitution (France 1958, India 1947). | Earlier states on the same land are their own entries (Kingdom of France, Weimar Republic). |
+| States named after a dynasty | The state, filed under countries (Han, Tang, Ming, Qing). | `dynasties` holds ruling families (House of Habsburg, Ottoman dynasty). A state and its ruling family may both have entries; they are two things. |
+| Buildings and artworks | Completion. | |
+| Laws and treaties | Signing or enactment; say in a note when it came into force. | An end only if repealed, annulled or replaced. |
+| Ships | Launch; the end is when it left service or was lost. | |
+| Languages | First attested in writing, or when it took its recognised form. | `circa`. |
+| Festivals and customs | First recorded or instituted. | `circa`. |
+| Species | When the species (or, if that is all that is known, its genus or family) first appears in the fossil or genetic record. `circa`, and the note names the basis. | Never a round placeholder. When no estimate can be sourced, date the entry from its first scientific description, give the `born` event the label `Described` or `Discovered`, and say so in the note. |
+| Breeds and crops | Domestication. | `circa`. |
+| Diseases | When first clearly described or identified. | |
+| Stars, planets and moons | Formation, `circa`, with a note. | The discovery is a `milestone` with the label `Discovered`. |
+| Continents, rivers, seas and mountains | When they took roughly their present form, from a published estimate, `circa`, with the basis in the summary or a note. | With no estimate, leave the entry out rather than guess. |
+| Two people in one entry | The first birth and the last death, with a note. | Prefer one entry per person. |
+
+Filing where two kinds could hold a thing:
+
+- A single crewed flight is an expedition (Vostok 1, Apollo 11, Apollo 13).
+  Craft, rockets, stations, probes and programmes are spaceflight.
+- An eruption, earthquake or flood remembered for what it did to people is a
+  disaster (Vesuvius in 79, Krakatoa, Mount St. Helens, Pinatubo).
+  `earth-events` is for the Earth's own history: impacts, extinctions, ice
+  ages and prehistoric eruptions.
+- The plant or animal is a crop or breed (rice, wheat, the dog); the prepared
+  food or drink is food and drink (coffee, tea, bread).
+- A treaty is a law, not a political event.
+- A museum is filed with schools and libraries.
+- Home video formats sit with the other storage media in Computing.
+
 A rename is not an event. Add the new name to `names` and the page draws a
 diamond at its date.
 
 An event may fall in the years between `project_start` and `born`, but never
-before `project_start` and never after `ended`.
+before `project_start` and never after `ended`. The build compares dates as
+far as both are written: the year, then the month, then the day. An end on
+15 April is refused for a start on 20 April of the same year; an end given
+only as that year is accepted.
 
 Any event may carry three more fields:
 
 - `label`: at most 16 characters, such as `"IE 6"` or `"Nobel Prize"`. An
   event with a label is written on the line of an entry that has a card.
   Without a label the event is a bare tick, and its `note` is read in the
-  history.
+  history. On the `born` event a label replaces the branch's word for the
+  start in the history, for a start that is not what the branch word says
+  (`"Described"` for a species dated from its first description).
 - `image`: a picture for the history, in the form described under Icons and
   images.
 - `url`: an `https` link to the official announcement or record of that
@@ -258,9 +295,16 @@ an entry feeds only the order of search results (`docs/BUILD.md`).
 - Set `"verified": true` only after each date in the entry has been checked
   against a source listed on it. Unverified entries are labelled on the page.
 - Wikidata may be used for identity and for dates, and then it is listed as
-  a source. An entry whose start and end both agree with its Wikidata item
-  counts as checked. Where an editor's year and Wikidata's differ, the entry
-  stays unverified until someone settles it from a better source.
+  a source. An entry counts as checked only when its start and its end both
+  agree with a start and an end date on its Wikidata item that are given to
+  the year or finer. A decade, a century or a millennium there is not a
+  check, and neither is a "point in time" standing in for an end date. Where
+  an editor's year and Wikidata's differ, the entry stays unverified until
+  someone settles it from a better source, and a note on the `born` event
+  says which figure was chosen and why.
+- `verified` is about dates. It says nothing about the summary: check every
+  fact in a summary against a listed source before you write it, and leave
+  out what you cannot check.
 - Never copy text. Summaries, notes and causes are written in your own words;
   Wikipedia and other references are sources to cite, not text to reuse.
 

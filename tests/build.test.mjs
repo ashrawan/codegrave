@@ -68,6 +68,14 @@ test('dates before the common era are accepted, year zero and an end before the 
     t.events.push({ type: 'ended', date: '-0100', precision: 'year' });
   });
   assert.match(build(copy, '--check'), /ended before it was born/);
+  // Within one year the month and the day count too, as far as both dates give them.
+  edit(file, (t) => {
+    born(t).date = '2010-04-20'; born(t).precision = 'day'; t.names[0].from = '2010';
+    t.events.find((e) => e.type === 'ended').date = '2010-04-15';
+  });
+  assert.match(build(copy, '--check'), /ended before it was born/);
+  edit(file, (t) => { t.events.find((e) => e.type === 'ended').date = '2010'; });
+  assert.match(build(copy, '--check'), / 0 errors/);
 });
 
 test('the build rejects an unknown label, a second entry for one Wikidata item, and a view that lists a missing entry', () => {

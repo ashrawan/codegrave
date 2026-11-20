@@ -1414,7 +1414,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     // Every dated thing we know, in date order.
     const rows = [];
     if (t.startEv) rows.push({ at: t.lead - 1e-6, kind: 'dot', title: 'Work begins', date: fmtDate(t.startEv.date, t.startEv.precision), note: t.startEv.note, url: t.startEv.url });
-    rows.push({ at: t.born, kind: 'born', title: w.born + (t.names.length > 1 ? ' as ' + t.names[0].name : ''), date: fmtDate(t.bornEv.date, t.bornEv.precision),
+    rows.push({ at: t.born, kind: 'born', title: (t.bornEv.label || w.born) + (t.names.length > 1 ? ' as ' + t.names[0].name : ''), date: fmtDate(t.bornEv.date, t.bornEv.precision),
       note: t.bornEv.note || (t.maker ? 'By ' + t.maker + '.' : ''), image: t.bornEv.image, url: t.bornEv.url });
     for (const r of t.renames) rows.push({ at: r.t, kind: 'ren', title: 'Renamed ' + r.name, date: fmtDate(r.from), note: 'Until then it was ' + r.prev + '.' });
     for (const e of t.events.filter((x) => EVENT_TITLES[x.type] && x.date)) {
