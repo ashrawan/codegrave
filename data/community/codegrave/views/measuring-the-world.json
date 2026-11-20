@@ -1,0 +1,75 @@
+{
+  "id": "measuring-the-world",
+  "name": "Measuring the World: Units, Scales and Standards",
+  "description": "From the cubit to the satellite: how people agreed on lengths, temperatures, positions and times, and the instruments that made precise measurement possible.",
+  "category": "knowledge",
+  "labels": [
+    "engineering",
+    "exploration"
+  ],
+  "tags": [
+    "measurement",
+    "metric system",
+    "navigation",
+    "compass",
+    "units",
+    "thermometer",
+    "gps"
+  ],
+  "entries": [
+    "cubit",
+    "astrolabe",
+    "compass",
+    "portolan-chart",
+    "thermometer",
+    "slide-rule",
+    "barometer",
+    "celsius-scale",
+    "marine-chronometer",
+    "sextant",
+    "metric-system",
+    "imperial-units",
+    "standard-time",
+    "prime-meridian",
+    "gyrocompass",
+    "radar",
+    "loran",
+    "atomic-clock",
+    "coordinated-universal-time",
+    "si-units",
+    "global-positioning-system",
+    "jacobs-staff",
+    "geiger-counter",
+    "quartz-clock"
+  ],
+  "checkpoints": [
+    {
+      "id": "body-and-sky",
+      "name": "Body and sky",
+      "from": -3000,
+      "to": 1299,
+      "note": "Early measures were drawn from the body, like the cubit, the length of a forearm. Sailors and astronomers used the astrolabe to find the heights of stars, and the compass helped travellers keep direction."
+    },
+    {
+      "id": "instruments-age",
+      "name": "The age of instruments",
+      "from": 1300,
+      "to": 1750,
+      "note": "Navigators used portolan charts and the cross-staff, and scientists invented the thermometer and the barometer. Celsius proposed his temperature scale in 1742, and the slide rule helped calculation."
+    },
+    {
+      "id": "standards",
+      "name": "Standards for a new age",
+      "from": 1751,
+      "to": 1899,
+      "note": "The sextant and the marine chronometer let ships find latitude and longitude. After the French Revolution the metric system offered a common standard, the British kept imperial units, and railways led to standard time and a prime meridian."
+    },
+    {
+      "id": "precision",
+      "name": "Precision from the atom",
+      "from": 1900,
+      "to": 2025,
+      "note": "Gyrocompasses, radar and Loran helped navigation, and the Geiger counter measured radiation. Quartz and atomic clocks and the SI system made time and units exact, UTC set the world's clocks, and GPS put a precise position in millions of pockets."
+    }
+  ]
+}

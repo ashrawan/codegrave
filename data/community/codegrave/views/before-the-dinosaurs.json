@@ -1,0 +1,84 @@
+{
+  "id": "before-the-dinosaurs",
+  "name": "Before the Dinosaurs: Life in the Ancient Seas and Swamps",
+  "description": "From the soft-bodied Ediacaran to trilobites, armoured fish, coal forests and the great dying: the strange animals and plants of the Paleozoic.",
+  "category": "life",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "tags": [
+    "cambrian",
+    "trilobite",
+    "devonian",
+    "coal forests",
+    "extinction",
+    "fossils",
+    "paleozoic"
+  ],
+  "entries": [
+    "ediacaran",
+    "cambrian-explosion",
+    "cambrian",
+    "trilobite",
+    "anomalocaris",
+    "hallucigenia",
+    "ordovician",
+    "ordovician-silurian-extinction",
+    "horseshoe-crab",
+    "silurian",
+    "cooksonia",
+    "prototaxites",
+    "devonian",
+    "archaeopteris",
+    "dunkleosteus",
+    "tiktaalik",
+    "late-devonian-extinction",
+    "coelacanth",
+    "carboniferous",
+    "lepidodendron",
+    "arthropleura",
+    "pangaea",
+    "permian",
+    "dimetrodon",
+    "siberian-traps",
+    "permian-triassic-extinction"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-animals",
+      "name": "Soft bodies and shells",
+      "from": -635000000,
+      "to": -500000000,
+      "note": "The Ediacaran world held soft-bodied creatures. In the Cambrian, animals with hard parts appeared quickly: trilobites crawled the sea floor, and Anomalocaris and the odd Hallucigenia show how strange early animals could be."
+    },
+    {
+      "id": "seas-and-first-land",
+      "name": "Reefs and first plants on land",
+      "from": -499999999,
+      "to": -419300000,
+      "note": "The Ordovician and Silurian seas teemed with life, and a mass extinction ended the Ordovician. Horseshoe crabs appeared, and Cooksonia and the tall Prototaxites showed life taking hold on land."
+    },
+    {
+      "id": "age-of-fishes",
+      "name": "The age of fishes",
+      "from": -419200000,
+      "to": -358900001,
+      "note": "The Devonian was the age of fishes: the armoured Dunkleosteus hunted, Archaeopteris formed early forests, and Tiktaalik had limb-like fins. A Late Devonian extinction hit sea life; the coelacanth lineage survived."
+    },
+    {
+      "id": "coal-forests",
+      "name": "The coal forests",
+      "from": -358900000,
+      "to": -298900000,
+      "note": "Giant club-mosses like Lepidodendron grew in swamps, and their buried remains became coal. Huge arthropods such as Arthropleura crawled the forest floor, and Pangaea began to form."
+    },
+    {
+      "id": "great-dying",
+      "name": "The Great Dying",
+      "from": -298899999,
+      "to": -251000000,
+      "note": "In the Permian, synapsids such as Dimetrodon ruled land. The Siberian Traps erupted, and the Permian-Triassic extinction, the worst mass extinction known, wiped out most species on Earth."
+    }
+  ]
+}

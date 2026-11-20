@@ -1,0 +1,86 @@
+{
+  "id": "questions-before-answers",
+  "name": "Questions Before Answers: The Greek Thinkers",
+  "description": "Thales to Hypatia: the Greek and Hellenistic thinkers who asked what the world is made of, how to live well, and whether we can know anything for certain.",
+  "category": "knowledge",
+  "labels": [
+    "philosophy"
+  ],
+  "tags": [
+    "greek philosophy",
+    "socrates",
+    "plato",
+    "aristotle",
+    "stoics",
+    "athens",
+    "hellenistic"
+  ],
+  "entries": [
+    "greek-alphabet",
+    "delphi",
+    "thales",
+    "pythagorean-theorem",
+    "hippocrates",
+    "socrates",
+    "parthenon",
+    "peloponnesian-war",
+    "plague-of-athens",
+    "plato",
+    "platonic-academy",
+    "aristotle",
+    "aristotelian-physics",
+    "alexander-the-great",
+    "hellenistic-period",
+    "alexandria",
+    "euclid",
+    "epicurus",
+    "epicureanism",
+    "zeno-of-citium",
+    "stoicism",
+    "pyrrhonism",
+    "library-of-alexandria",
+    "archimedes",
+    "heliocentrism",
+    "marcus-aurelius",
+    "neoplatonism",
+    "hypatia",
+    "school-of-athens"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-thinkers",
+      "name": "The first thinkers",
+      "from": -900,
+      "to": -501,
+      "note": "Greeks adopted an alphabet and consulted the oracle at Delphi. Thales of Miletus sought natural causes for what happened in the world, and the geometry linked to the name of Pythagoras showed that reasoning could prove surprising facts."
+    },
+    {
+      "id": "athens",
+      "name": "Athens asks",
+      "from": -500,
+      "to": -323,
+      "note": "Socrates questioned his fellow citizens, Plato founded the Academy, and Aristotle studied everything from logic to animals. They lived through the Parthenon's building, the Peloponnesian War and the plague of Athens, and Aristotle tutored Alexander the Great."
+    },
+    {
+      "id": "hellenistic",
+      "name": "Schools of the Hellenistic world",
+      "from": -322,
+      "to": -30,
+      "note": "After Alexander, Greek culture spread across the Near East. Epicurus and Zeno of Citium founded rival schools, Pyrrhonists doubted certainty, and the Library of Alexandria drew scholars such as Euclid and Archimedes."
+    },
+    {
+      "id": "rome-and-after",
+      "name": "Rome and late antiquity",
+      "from": 1,
+      "to": 600,
+      "note": "Stoicism guided Roman figures such as Marcus Aurelius, Neoplatonism blended Plato with religion, and Hypatia taught in Alexandria. The Platonic Academy closed in 529."
+    },
+    {
+      "id": "echoes",
+      "name": "Echoes",
+      "from": 601,
+      "to": 1600,
+      "note": "Greek thought lived on in Arabic and Latin translation, and Aristotle's physics dominated until the Scientific Revolution. Raphael's fresco The School of Athens, painted in the Vatican between about 1509 and 1511, imagines the great thinkers together."
+    }
+  ]
+}

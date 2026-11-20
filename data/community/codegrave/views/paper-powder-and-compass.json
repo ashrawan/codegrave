@@ -1,0 +1,88 @@
+{
+  "id": "paper-powder-and-compass",
+  "name": "Paper, Powder and Compass: China's Inventive Age",
+  "description": "Rice paddies, silk, paper, printing, gunpowder, the compass and giant ships: the Chinese inventions that spread along the Silk Road and the sea, to the Moon.",
+  "category": "technology",
+  "labels": [
+    "engineering",
+    "firsts"
+  ],
+  "tags": [
+    "china",
+    "chinese inventions",
+    "paper",
+    "printing",
+    "gunpowder",
+    "compass",
+    "silk road"
+  ],
+  "entries": [
+    "paddy-field",
+    "silkworm",
+    "chinese-calendar",
+    "great-wall-of-china",
+    "grand-canal-china",
+    "crossbow",
+    "tea",
+    "chinese-junk",
+    "paper",
+    "silk-road",
+    "han-dynasty",
+    "acupuncture",
+    "cai-lun",
+    "porcelain",
+    "tang-dynasty",
+    "woodblock-printing",
+    "gunpowder",
+    "fire-lance",
+    "song-dynasty",
+    "movable-type",
+    "compass",
+    "ming-dynasty",
+    "zheng-he",
+    "treasure-ship",
+    "artemisinin",
+    "tu-youyou",
+    "shenzhou-5",
+    "three-gorges-dam",
+    "shanghai-maglev-train",
+    "chang-e-4"
+  ],
+  "checkpoints": [
+    {
+      "id": "farms-and-silk",
+      "name": "Rice, silk and calendars",
+      "from": -5000,
+      "to": -300,
+      "note": "Farmers flooded the paddy field to grow rice, and silkworm rearing produced a fabric the world wanted. The Chinese calendar tracked the seasons, and the first stretches of the Great Wall and the Grand Canal date from this early age, as does the crossbow."
+    },
+    {
+      "id": "han-ingenuity",
+      "name": "Han ingenuity",
+      "from": -299,
+      "to": 600,
+      "note": "Under the Han dynasty paper spread, and Cai Lun is traditionally credited with improving it. Traders carried silk along the Silk Road, tea and acupuncture became part of life, the junk sailed rivers and coasts, and porcelain took shape."
+    },
+    {
+      "id": "print-and-powder",
+      "name": "Print, powder and the needle",
+      "from": 601,
+      "to": 1300,
+      "note": "Under the Tang and Song dynasties, woodblock printing made texts cheap, and later movable type was tried. Gunpowder gave the fire lance, and a magnetic compass became a tool for finding direction at sea."
+    },
+    {
+      "id": "ships-of-the-ming",
+      "name": "Treasure ships",
+      "from": 1301,
+      "to": 1700,
+      "note": "In the early fifteenth century the Ming dynasty sent Zheng He and his huge treasure ships across the Indian Ocean. The voyages ended, but they remain a sign of how far Chinese shipbuilding had come."
+    },
+    {
+      "id": "modern-china",
+      "name": "Dams, trains and rockets",
+      "from": 1701,
+      "to": 2025,
+      "note": "Tu Youyou isolated artemisinin and won a Nobel Prize for the malaria drug. China later built the Three Gorges Dam and the Shanghai maglev train, sent a crew up in Shenzhou 5, and landed Chang'e 4 on the Moon's far side."
+    }
+  ]
+}

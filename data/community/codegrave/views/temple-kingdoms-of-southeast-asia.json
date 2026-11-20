@@ -1,0 +1,95 @@
+{
+  "id": "temple-kingdoms-of-southeast-asia",
+  "name": "Temple Kingdoms of Southeast Asia",
+  "description": "From the stone temples of Angkor and Bagan to trading ports and the wars of the twentieth century: how faiths, kings and empires shaped Southeast Asia.",
+  "category": "places",
+  "labels": [
+    "architecture",
+    "religion",
+    "exploration"
+  ],
+  "tags": [
+    "angkor",
+    "khmer",
+    "borobudur",
+    "bagan",
+    "southeast asia",
+    "temples",
+    "vietnam"
+  ],
+  "entries": [
+    "buddhism",
+    "hinduism",
+    "srivijaya",
+    "khmer-empire",
+    "angkor",
+    "borobudur",
+    "bagan",
+    "angkor-wat",
+    "majapahit",
+    "ayutthaya-kingdom",
+    "zheng-he",
+    "treasure-voyages",
+    "ferdinand-magellan",
+    "magellan-elcano-circumnavigation",
+    "philippines",
+    "dutch-east-india-company",
+    "dutch-east-indies",
+    "singapore",
+    "french-indochina",
+    "ho-chi-minh",
+    "sukarno",
+    "first-indochina-war",
+    "battle-of-dien-bien-phu",
+    "vietnam-war",
+    "pol-pot",
+    "indonesia",
+    "thailand",
+    "myanmar",
+    "vietnam"
+  ],
+  "checkpoints": [
+    {
+      "id": "faiths-from-india",
+      "name": "Faiths from India",
+      "from": -1500,
+      "to": 649,
+      "note": "Hinduism and Buddhism travelled from India along the sea routes and took root in the lands of Southeast Asia. Kings borrowed their ideas, titles and art, and later built the great temples."
+    },
+    {
+      "id": "temples-of-stone",
+      "name": "Temples of stone",
+      "from": 650,
+      "to": 1149,
+      "note": "Srivijaya controlled sea trade from Sumatra, Borobudur rose in Java as a Buddhist monument, and the Khmer Empire made Angkor its capital. In Myanmar the kings of Bagan covered a plain with shrines."
+    },
+    {
+      "id": "age-of-great-kingdoms",
+      "name": "Great kingdoms and sea lanes",
+      "from": 1150,
+      "to": 1499,
+      "note": "Angkor Wat was raised in the Khmer heartland, Majapahit rose in Java, and Ayutthaya became a power in Siam. In the early 1400s the treasure voyages of Zheng He called at the region's ports."
+    },
+    {
+      "id": "arrival-of-europeans",
+      "name": "Europeans arrive",
+      "from": 1500,
+      "to": 1886,
+      "note": "Ferdinand Magellan's ships reached the Philippines in 1521, and Spain later settled them. Other Europeans set up trading posts. The Dutch East India Company gave way to the Dutch East Indies, and Singapore was founded in 1819."
+    },
+    {
+      "id": "colonial-rule-and-resistance",
+      "name": "Colonial rule and resistance",
+      "from": 1887,
+      "to": 1954,
+      "note": "France joined its holdings into French Indochina. Ho Chi Minh led the movement for independence, and the First Indochina War ended with the Vietnamese victory at Dien Bien Phu in 1954. Sukarno led Indonesia's fight."
+    },
+    {
+      "id": "war-and-new-nations",
+      "name": "War and new nations",
+      "from": 1955,
+      "to": 2025,
+      "note": "The Vietnam War divided Vietnam until 1975. In Cambodia, Pol Pot ruled through the Khmer Rouge. Indonesia, Thailand, Myanmar and Vietnam took their modern forms, with the old temples now guarded as heritage."
+    }
+  ]
+}

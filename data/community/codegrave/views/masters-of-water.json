@@ -1,0 +1,84 @@
+{
+  "id": "masters-of-water",
+  "name": "Masters of Water: Engineers Who Moved Rivers",
+  "description": "Shadufs, qanats and Roman aqueducts to the Suez and Panama canals, the Hoover Dam and the Three Gorges: how people learned to carry water where they wanted it.",
+  "category": "technology",
+  "labels": [
+    "engineering",
+    "environment"
+  ],
+  "tags": [
+    "water",
+    "irrigation",
+    "canals",
+    "dams",
+    "aqueduct",
+    "suez canal",
+    "panama canal",
+    "hoover dam"
+  ],
+  "entries": [
+    "irrigation",
+    "paddy-field",
+    "shaduf",
+    "ancient-egypt",
+    "qanat",
+    "grand-canal-china",
+    "noria",
+    "archimedes",
+    "archimedes-screw",
+    "watermill",
+    "roman-concrete",
+    "pont-du-gard",
+    "chinampa",
+    "tenochtitlan",
+    "canal-du-midi",
+    "erie-canal",
+    "suez-canal",
+    "ferdinand-de-lesseps",
+    "hydroelectricity",
+    "panama-canal",
+    "hoover-dam",
+    "dust-bowl",
+    "aswan-high-dam",
+    "aral-sea",
+    "three-gorges-dam"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-ditches",
+      "name": "The first ditches",
+      "from": -6000,
+      "to": -501,
+      "note": "Farmers dug irrigation channels and flooded the paddy field. In Ancient Egypt the shaduf lifted water from the Nile, and in Persia the qanat carried it underground for long distances."
+    },
+    {
+      "id": "wheels-and-aqueducts",
+      "name": "Wheels and aqueducts",
+      "from": -500,
+      "to": 1099,
+      "note": "The noria and the Archimedes screw lifted water, and the watermill used its flow for power. Romans mixed Roman concrete and built the Pont du Gard, and in China the Grand Canal tied river basins together."
+    },
+    {
+      "id": "gardens-and-locks",
+      "name": "Floating gardens and locks",
+      "from": 1100,
+      "to": 1799,
+      "note": "In the Valley of Mexico farmers built chinampas near Tenochtitlan. In France the Canal du Midi joined the Atlantic and the Mediterranean, an early triumph of locks and summit-level engineering."
+    },
+    {
+      "id": "canal-age",
+      "name": "The canal age",
+      "from": 1800,
+      "to": 1913,
+      "note": "The Erie Canal opened a route west in 1825, and Ferdinand de Lesseps led the Suez Canal to its opening in 1869. Hydroelectricity, which makes power from falling water, dates from 1878."
+    },
+    {
+      "id": "giant-dams",
+      "name": "Giant works",
+      "from": 1914,
+      "to": 2025,
+      "note": "The Panama Canal opened in 1914, and the Hoover Dam and the Aswan High Dam tamed great rivers. The Dust Bowl showed how dry land fails without water, the shrinking Aral Sea shows the cost of diverting rivers, and the Three Gorges Dam is among the largest power stations ever built."
+    }
+  ]
+}

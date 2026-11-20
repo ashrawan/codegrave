@@ -1,0 +1,87 @@
+{
+  "id": "fire-arrows-to-falcons",
+  "name": "Fire Arrows to Falcons: The Story of the Rocket",
+  "description": "Gunpowder tubes in China, the V-2, Sputnik, Saturn V, the Shuttle and reusable boosters: a thousand years of rockets, and the people who built them.",
+  "category": "technology",
+  "labels": [
+    "engineering",
+    "space-race",
+    "firsts"
+  ],
+  "tags": [
+    "rockets",
+    "space",
+    "saturn v",
+    "falcon 9",
+    "sputnik",
+    "von braun",
+    "korolev",
+    "spacex"
+  ],
+  "entries": [
+    "gunpowder",
+    "fire-lance",
+    "v-2-rocket",
+    "wernher-von-braun",
+    "sergei-korolev",
+    "intercontinental-ballistic-missile",
+    "sputnik-1",
+    "explorer-1",
+    "nasa",
+    "soviet-space-program",
+    "vostok-1",
+    "yuri-gagarin",
+    "saturn-v",
+    "n1-rocket",
+    "apollo-program",
+    "soyuz-spacecraft",
+    "space-shuttle",
+    "space-shuttle-challenger",
+    "ariane-5",
+    "columbia-disaster",
+    "shenzhou-5",
+    "falcon-9",
+    "elon-musk",
+    "chang-e-4",
+    "starlink",
+    "james-webb-space-telescope",
+    "chandrayaan-3"
+  ],
+  "checkpoints": [
+    {
+      "id": "powder-and-pipes",
+      "name": "Powder and pipes",
+      "from": 900,
+      "to": 1943,
+      "note": "Gunpowder was made in China, and weapons such as the fire lance used it to throw flame. This power, packed into tubes, was the root of the rocket, and for centuries rockets stayed small and weapon-like."
+    },
+    {
+      "id": "war-rockets",
+      "name": "War rockets",
+      "from": 1944,
+      "to": 1956,
+      "note": "Germany's V-2 was the first long-range ballistic missile. Wernher von Braun later worked for the United States, while Sergei Korolev led the Soviet rocket effort."
+    },
+    {
+      "id": "space-race",
+      "name": "Race to orbit",
+      "from": 1957,
+      "to": 1975,
+      "note": "A Soviet rocket built as an intercontinental ballistic missile launched Sputnik 1, and Explorer 1 and NASA answered. The Soviet space program raced on. Yuri Gagarin flew on Vostok 1, the N1 failed, and Saturn V carried the Apollo program to the Moon. The Soyuz capsule became a workhorse."
+    },
+    {
+      "id": "shuttles-and-europe",
+      "name": "Shuttles and Ariane",
+      "from": 1976,
+      "to": 1999,
+      "note": "The Space Shuttle reused its orbiter from 1981, and the loss of Challenger in 1986 shook the program. Europe's Ariane 5 first flew in 1996, aimed at launching satellites for customers."
+    },
+    {
+      "id": "new-space",
+      "name": "A new space age",
+      "from": 2000,
+      "to": 2025,
+      "note": "The Columbia disaster in 2003 led to the Shuttle's end, while China launched a crew in Shenzhou 5. SpaceX's Falcon 9, from Elon Musk's company, landed boosters for reuse and Starlink grew into a huge fleet. China's Chang'e 4 and India's Chandrayaan-3 showed new players at the Moon, and an Ariane 5 launched the James Webb Space Telescope in 2021."
+    }
+  ]
+}

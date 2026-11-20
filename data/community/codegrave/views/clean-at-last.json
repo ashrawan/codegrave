@@ -1,0 +1,81 @@
+{
+  "id": "clean-at-last",
+  "name": "Clean at Last: Soap, Water and Germs",
+  "description": "Soap, flush toilets, the cholera map, pasteurisation and germ theory: the quiet inventions and ideas that cleaned up cities and saved more lives than any wonder drug.",
+  "category": "technology",
+  "labels": [
+    "medicine",
+    "engineering"
+  ],
+  "tags": [
+    "hygiene",
+    "soap",
+    "toilet",
+    "cholera",
+    "germ theory",
+    "pasteur",
+    "sanitation",
+    "public health"
+  ],
+  "entries": [
+    "soap",
+    "pont-du-gard",
+    "black-death",
+    "toothbrush",
+    "flush-toilet",
+    "great-plague-of-london",
+    "smallpox",
+    "edward-jenner",
+    "smallpox-vaccine",
+    "second-cholera-pandemic",
+    "florence-nightingale",
+    "broad-street-cholera",
+    "cholera",
+    "louis-pasteur",
+    "pasteurization",
+    "robert-koch",
+    "tuberculosis",
+    "safety-razor",
+    "vacuum-cleaner",
+    "washing-machine",
+    "refrigerator",
+    "oral-rehydration-therapy"
+  ],
+  "checkpoints": [
+    {
+      "id": "soap-and-stench",
+      "name": "Soap and stench",
+      "from": -2800,
+      "to": 1599,
+      "note": "People made soap and the Romans carried clean water over the Pont du Gard, yet cities were foul. The Black Death killed millions, the toothbrush spread, and the flush toilet appeared as an idea in 1596."
+    },
+    {
+      "id": "plague-and-pox",
+      "name": "Plague and pox",
+      "from": 1600,
+      "to": 1828,
+      "note": "The Great Plague of London hit in 1665, and smallpox was the great killer. Edward Jenner's smallpox vaccine of 1798 was the first step toward a world without it."
+    },
+    {
+      "id": "cholera-and-germs",
+      "name": "Cholera and germs",
+      "from": 1829,
+      "to": 1899,
+      "note": "The second cholera pandemic swept through crowded cities. Florence Nightingale pressed for clean hospitals, and the Broad Street outbreak of 1854 was traced to one water pump. Louis Pasteur's work on microbes led to pasteurization in the 1860s, Pasteur and Robert Koch went on to show that germs cause disease, and Koch identified the germ of tuberculosis in 1882."
+    },
+    {
+      "id": "home-appliances",
+      "name": "Cleaner homes",
+      "from": 1900,
+      "to": 1939,
+      "note": "Safety razors and vacuum cleaners, then the washing machine and the refrigerator, moved cleaning and food storage into the home, saving time as well as helping health."
+    },
+    {
+      "id": "simple-victories",
+      "name": "Simple cures",
+      "from": 1940,
+      "to": 2025,
+      "note": "Oral rehydration therapy, a drink of water, salt and sugar, saved millions of children from cholera and other diarrhoeal illness. Smallpox was finally declared eradicated by the World Health Organization in 1980."
+    }
+  ]
+}

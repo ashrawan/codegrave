@@ -1,0 +1,87 @@
+{
+  "id": "bedroom-coders",
+  "name": "Bedroom Coders: The Home Computer Boom",
+  "description": "The Commodore 64, ZX Spectrum, BBC Micro, Amstrad CPC, Atari ST and Amiga: the cheap machines that taught a generation to program, play and pirate.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "games",
+    "media"
+  ],
+  "tags": [
+    "home computers",
+    "commodore 64",
+    "zx spectrum",
+    "bbc micro",
+    "amiga",
+    "atari st",
+    "8-bit",
+    "retro"
+  ],
+  "entries": [
+    "altair-8800",
+    "mos-6502",
+    "zilog-z80",
+    "apple-ii",
+    "trs-80",
+    "commodore-pet",
+    "zork",
+    "vic-20",
+    "zx81",
+    "ibm-pc",
+    "bbc-micro",
+    "osborne-1",
+    "commodore-64",
+    "zx-spectrum",
+    "elk-cloner",
+    "pc-98",
+    "msx",
+    "macintosh",
+    "amstrad-cpc",
+    "elite",
+    "amiga-1000",
+    "atari-st",
+    "tetris",
+    "brain-virus",
+    "atari-inc",
+    "commodore-international",
+    "raspberry-pi"
+  ],
+  "checkpoints": [
+    {
+      "id": "kits-and-pioneers",
+      "name": "Kits and pioneers",
+      "from": 1975,
+      "to": 1980,
+      "note": "The Altair 8800 arrived as a kit, and cheap chips such as the MOS 6502 and Zilog Z80 made small computers possible. The Apple II, TRS-80 and Commodore PET followed, and text games such as Zork ran on them."
+    },
+    {
+      "id": "the-boom",
+      "name": "The home computer boom",
+      "from": 1981,
+      "to": 1983,
+      "note": "The VIC-20, ZX81, BBC Micro, Commodore 64 and ZX Spectrum put a computer in many bedrooms. The IBM PC and the portable Osborne 1 aimed at offices, and Elk Cloner showed that a program could spread by disk."
+    },
+    {
+      "id": "machines-of-many-lands",
+      "name": "Many machines",
+      "from": 1984,
+      "to": 1987,
+      "note": "The Amstrad CPC, MSX, Amiga 1000 and Atari ST competed, while Japan's PC-98 led at home. Elite, Tetris and the Mac showed what software could do, and the Brain virus appeared on PCs in 1986."
+    },
+    {
+      "id": "the-fall",
+      "name": "The fall of the 8-bit",
+      "from": 1988,
+      "to": 2011,
+      "note": "The original Atari was split up and sold in 1984, and the Atari that made the ST and Commodore International both struggled as the IBM PC and its clones won the market. Commodore went bankrupt in 1994, but many people who coded as teenagers on these machines built the later industry."
+    },
+    {
+      "id": "the-heirs",
+      "name": "The heirs",
+      "from": 2012,
+      "to": 2025,
+      "note": "The Raspberry Pi, a small, cheap board from a British charity, is often seen as the heir to the BBC Micro, and again invites young people to learn by tinkering."
+    }
+  ]
+}

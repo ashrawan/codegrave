@@ -1,0 +1,88 @@
+{
+  "id": "from-einstein-to-the-big-bang",
+  "name": "From Einstein to the Big Bang",
+  "description": "How astronomers and physicists went from a sun-centred sky to an expanding universe with a beginning, and the instruments and ideas that got them there.",
+  "category": "knowledge",
+  "labels": [
+    "astronomy",
+    "physics"
+  ],
+  "tags": [
+    "big bang",
+    "einstein",
+    "relativity",
+    "cosmology",
+    "hubble",
+    "universe",
+    "black hole"
+  ],
+  "entries": [
+    "heliocentrism",
+    "nicolaus-copernicus",
+    "galileo-galilei",
+    "telescope",
+    "johannes-kepler",
+    "kepler-laws",
+    "isaac-newton",
+    "universal-gravitation",
+    "special-relativity",
+    "general-relativity",
+    "albert-einstein",
+    "henrietta-leavitt",
+    "cecilia-payne-gaposchkin",
+    "subrahmanyan-chandrasekhar",
+    "edwin-hubble",
+    "expansion-of-the-universe",
+    "big-bang",
+    "dark-matter",
+    "steady-state-theory",
+    "radio-telescope",
+    "cosmic-microwave-background",
+    "jocelyn-bell-burnell",
+    "psr-b1919",
+    "cygnus-x-1",
+    "vera-rubin",
+    "a-brief-history-of-time",
+    "hubble-space-telescope",
+    "first-gravitational-wave-detection",
+    "ligo",
+    "james-webb-space-telescope"
+  ],
+  "checkpoints": [
+    {
+      "id": "a-moving-earth",
+      "name": "A moving Earth",
+      "from": -270,
+      "to": 1700,
+      "note": "An ancient Greek idea of a sun-centred sky was revived by Copernicus. Galileo and the telescope showed it was plausible, Kepler found the laws of planetary motion, and Newton explained them with universal gravitation."
+    },
+    {
+      "id": "new-physics",
+      "name": "Relativity and the stars",
+      "from": 1701,
+      "to": 1928,
+      "note": "Einstein published special relativity in 1905 and general relativity in 1916. Meanwhile Henrietta Leavitt gave astronomers a way to measure distance, and Cecilia Payne-Gaposchkin and Chandrasekhar worked out what stars are made of and how they end."
+    },
+    {
+      "id": "expanding",
+      "name": "An expanding universe",
+      "from": 1929,
+      "to": 1964,
+      "note": "Edwin Hubble showed that distant galaxies recede from us, so space itself is growing. The big bang and steady-state theories competed, dark matter was first suggested, and radio telescopes opened a new window; the cosmic microwave background settled the contest."
+    },
+    {
+      "id": "new-eyes",
+      "name": "Pulsars and black holes",
+      "from": 1965,
+      "to": 2014,
+      "note": "Jocelyn Bell Burnell spotted the pulsar PSR B1919+21 in 1967, Cygnus X-1 became a leading black hole candidate, and Vera Rubin found galaxies spin as if wrapped in unseen matter. Stephen Hawking explained such ideas to a mass audience, and the Hubble Space Telescope followed."
+    },
+    {
+      "id": "ripples",
+      "name": "Ripples and first light",
+      "from": 2015,
+      "to": 2025,
+      "note": "LIGO detected gravitational waves in 2015, confirming a prediction of general relativity, and the James Webb Space Telescope began observing in 2022, looking back at some of the earliest galaxies."
+    }
+  ]
+}

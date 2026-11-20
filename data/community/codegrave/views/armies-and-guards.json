@@ -1,0 +1,78 @@
+{
+  "id": "armies-and-guards",
+  "name": "Armies and Guards That Changed History",
+  "description": "Clay soldiers, emperor-makers, steppe horsemen, slave sultans, papal guards, Zulu regiments and the Red Army: how great forces were made and unmade.",
+  "category": "organisations",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "tags": [
+    "armies",
+    "praetorian guard",
+    "janissaries",
+    "mongols",
+    "red army",
+    "zulu",
+    "samurai"
+  ],
+  "entries": [
+    "qin-shi-huang",
+    "terracotta-army",
+    "praetorian-guard",
+    "genghis-khan",
+    "subutai",
+    "mongol-empire",
+    "mamluk-sultanate",
+    "mongol-invasions-of-japan",
+    "samurai",
+    "janissaries",
+    "swiss-guard",
+    "zulu-kingdom",
+    "shaka-zulu",
+    "anglo-zulu-war",
+    "red-army",
+    "operation-barbarossa",
+    "battle-of-stalingrad",
+    "battle-of-kursk",
+    "georgy-zhukov"
+  ],
+  "checkpoints": [
+    {
+      "id": "clay-and-guards",
+      "name": "Clay soldiers and guards",
+      "from": -221,
+      "to": 312,
+      "note": "Qin Shi Huang united China in 221 BCE and was buried with thousands of life-size clay soldiers, the Terracotta Army. In Rome the Praetorian Guard, set up under Augustus, protected emperors and at times chose them; it was dissolved in 312."
+    },
+    {
+      "id": "steppe-and-slave-soldiers",
+      "name": "Steppe and slave soldiers",
+      "from": 1206,
+      "to": 1362,
+      "note": "Genghis Khan united the Mongol tribes in 1206, and with generals such as Subutai the Mongol Empire grew across Asia; its western part became the Golden Horde. In Egypt the Mamluk Sultanate was ruled by former slave soldiers. Samurai helped beat back the Mongol invasions of Japan in 1274 and 1281."
+    },
+    {
+      "id": "elite-corps",
+      "name": "Elite corps",
+      "from": 1363,
+      "to": 1815,
+      "note": "The Ottoman Janissaries, formed in the 1360s as the sultan's infantry, lasted until 1826. The Swiss Guard has protected the pope since 1506. The samurai, once a warrior class, served the Tokugawa peace as officials in later centuries, until their status ended in 1876."
+    },
+    {
+      "id": "zulu-regiments",
+      "name": "Zulu regiments",
+      "from": 1816,
+      "to": 1879,
+      "note": "Under Shaka the Zulu Kingdom organised its warriors in age regiments with short stabbing spears. In 1879 a Zulu army defeated British troops at Isandlwana in the Anglo-Zulu War, though Britain won the war and ended Zulu independence."
+    },
+    {
+      "id": "the-red-army",
+      "name": "The Red Army",
+      "from": 1918,
+      "to": 1946,
+      "note": "The Red Army was created in 1918 during the Russian civil war. After Germany's invasion in Operation Barbarossa in 1941, it won at Stalingrad and Kursk under commanders such as Georgy Zhukov, and in 1946 it was renamed the Soviet Army."
+    }
+  ],
+  "year": 1900
+}

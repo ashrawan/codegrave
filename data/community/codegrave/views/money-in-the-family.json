@@ -1,0 +1,80 @@
+{
+  "id": "money-in-the-family",
+  "name": "Money in the Family: Banking and Business Dynasties",
+  "description": "The Medici, Fuggers, Rothschilds, Tatas and others: families and firms that lent to kings, built industries and sometimes collapsed.",
+  "category": "organisations",
+  "labels": [
+    "business",
+    "economics"
+  ],
+  "tags": [
+    "banks",
+    "medici",
+    "rothschild",
+    "tata",
+    "fugger",
+    "dynasty",
+    "finance"
+  ],
+  "entries": [
+    "hanseatic-league",
+    "florin",
+    "venetian-ducat",
+    "house-of-medici",
+    "medici-bank",
+    "jakob-fugger",
+    "bank-of-england",
+    "barings-bank",
+    "mayer-amschel-rothschild",
+    "krupp",
+    "siemens",
+    "jamsetji-tata",
+    "tata-group",
+    "john-d-rockefeller",
+    "standard-oil",
+    "j-p-morgan",
+    "de-beers",
+    "cecil-rhodes",
+    "konosuke-matsushita",
+    "ratan-tata",
+    "lehman-brothers"
+  ],
+  "checkpoints": [
+    {
+      "id": "florence-venice-hansa",
+      "name": "Florence, Venice and the Hansa",
+      "from": 1241,
+      "to": 1499,
+      "note": "The Hanseatic League linked merchant towns of the Baltic and North Sea, while Florence and Venice minted trusted gold coins, the florin and the ducat. The Medici Bank, founded in 1397, made the House of Medici rich and powerful, though the bank itself closed before 1500."
+    },
+    {
+      "id": "lenders-to-kings",
+      "name": "Lenders to kings",
+      "from": 1500,
+      "to": 1799,
+      "note": "Jakob Fugger of Augsburg lent huge sums to the Habsburgs and became one of the richest men in Europe. In 1694 the Bank of England was set up to lend to the government, and in 1762 the merchant house of Barings began in London."
+    },
+    {
+      "id": "houses-across-borders",
+      "name": "Houses across borders",
+      "from": 1800,
+      "to": 1869,
+      "note": "Mayer Amschel Rothschild of Frankfurt sent his sons to open banks in other European capitals. In Germany the Krupp steelworks and the telegraph firm Siemens grew into industrial giants, and in India Jamsetji Tata began trading in 1868, founding what became the Tata Group."
+    },
+    {
+      "id": "the-age-of-tycoons",
+      "name": "The age of tycoons",
+      "from": 1870,
+      "to": 1913,
+      "note": "John D. Rockefeller built Standard Oil, which was broken up in 1911. Cecil Rhodes helped found De Beers, which came to dominate diamonds. J. P. Morgan's bank financed railways and steel and helped steady American finance in the panic of 1907."
+    },
+    {
+      "id": "survival-and-collapse",
+      "name": "Survival and collapse",
+      "from": 1914,
+      "to": 2024,
+      "note": "Konosuke Matsushita built a Japanese electrical empire from a small workshop, and Ratan Tata led the Tata Group's expansion abroad. Others fell: Barings collapsed in 1995 after a trader's hidden losses, and Lehman Brothers failed in 2008."
+    }
+  ],
+  "year": 1500
+}

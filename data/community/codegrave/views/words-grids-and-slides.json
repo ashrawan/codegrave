@@ -1,0 +1,89 @@
+{
+  "id": "words-grids-and-slides",
+  "name": "Words, Grids and Slides: Software of the Office Desk",
+  "description": "Typewriters, WordStar, VisiCalc, Lotus 1-2-3, Word, Excel and PowerPoint, then Gmail, Slack and Teams: the programs that rebuilt the office and the working day.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "business",
+    "media"
+  ],
+  "tags": [
+    "office software",
+    "spreadsheet",
+    "word processor",
+    "visicalc",
+    "excel",
+    "powerpoint",
+    "microsoft office",
+    "lotus"
+  ],
+  "entries": [
+    "typewriter",
+    "cp-m",
+    "apple-ii",
+    "wordstar",
+    "visicalc",
+    "dbase",
+    "wordperfect",
+    "ibm-pc",
+    "ms-dos",
+    "lotus-1-2-3",
+    "autocad",
+    "microsoft-word",
+    "hp-laserjet",
+    "macintosh",
+    "adobe-pagemaker",
+    "microsoft-excel",
+    "hypercard",
+    "powerpoint",
+    "microsoft",
+    "bill-gates",
+    "microsoft-office",
+    "windows-3-1",
+    "adobe-photoshop",
+    "adobe-acrobat",
+    "windows-95",
+    "gmail",
+    "dropbox",
+    "slack",
+    "microsoft-teams"
+  ],
+  "checkpoints": [
+    {
+      "id": "typewriter-to-micro",
+      "name": "From typewriter to micro",
+      "from": 1868,
+      "to": 1977,
+      "note": "The typewriter shaped office work for a century. The operating system CP/M and the Apple II gave small computers a chance to do real tasks, and the first programs for writing and counting were written for them."
+    },
+    {
+      "id": "killer-apps",
+      "name": "The killer apps",
+      "from": 1978,
+      "to": 1983,
+      "note": "WordStar, dBase and WordPerfect handled words and records. VisiCalc made the Apple II a business tool, and then the IBM PC with MS-DOS brought Lotus 1-2-3, AutoCAD and Microsoft Word."
+    },
+    {
+      "id": "desktop-publishing",
+      "name": "Desktop publishing",
+      "from": 1984,
+      "to": 1989,
+      "note": "The HP LaserJet and the Macintosh with PageMaker, made by Aldus in 1985 and sold to Adobe only in 1994, started desktop publishing. Microsoft Excel and PowerPoint appeared in these years, and HyperCard let ordinary users build linked stacks of cards."
+    },
+    {
+      "id": "the-suite-years",
+      "name": "The suite years",
+      "from": 1990,
+      "to": 1999,
+      "note": "Microsoft Office bundled Word, Excel and PowerPoint, and Windows 3.1 and Windows 95 from Microsoft, which Bill Gates co-founded, carried it to most desks. Adobe Photoshop and Adobe Acrobat changed images and documents."
+    },
+    {
+      "id": "into-the-cloud",
+      "name": "Into the cloud",
+      "from": 2000,
+      "to": 2025,
+      "note": "Gmail offered email on the web, and Dropbox shared files between machines. Slack and Microsoft Teams moved office talk from meetings and inboxes to chat channels."
+    }
+  ]
+}

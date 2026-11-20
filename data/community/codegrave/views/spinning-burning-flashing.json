@@ -1,0 +1,84 @@
+{
+  "id": "spinning-burning-flashing",
+  "name": "Spinning, Burning, Flashing: A History of Storage",
+  "description": "Hard disks, floppies, cassettes, VHS, CDs, Zip drives, flash cards and the cloud: how we kept our data, and why so many formats came and went.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "media",
+    "lost"
+  ],
+  "tags": [
+    "storage",
+    "floppy disk",
+    "hard drive",
+    "cd-rom",
+    "dvd",
+    "usb",
+    "flash",
+    "cloud"
+  ],
+  "entries": [
+    "ibm",
+    "hard-disk-drive",
+    "compact-cassette",
+    "floppy-disk",
+    "vhs",
+    "betamax",
+    "laserdisc",
+    "compact-disc",
+    "cd-rom",
+    "minidisc",
+    "ssd",
+    "compactflash",
+    "zip-drive",
+    "jaz-drive",
+    "superdisk",
+    "dvd",
+    "internet-archive",
+    "memory-stick",
+    "sd-card",
+    "usb-flash-drive",
+    "aws",
+    "blu-ray",
+    "hd-dvd",
+    "dropbox"
+  ],
+  "checkpoints": [
+    {
+      "id": "iron-platters",
+      "name": "Iron platters and tape",
+      "from": 1956,
+      "to": 1972,
+      "note": "IBM built the first hard disk drive in 1956, and it was a huge machine. The compact cassette arrived in 1963 for music and later let home computers load programs from audio tape, and the floppy disk appeared in 1971."
+    },
+    {
+      "id": "floppies-and-discs",
+      "name": "Floppies, tapes and discs",
+      "from": 1973,
+      "to": 1985,
+      "note": "Floppy disks became the standard way to carry software. VHS beat Betamax in video, LaserDisc offered discs for film, and the compact disc and CD-ROM carried music and data."
+    },
+    {
+      "id": "cards-and-cartridges",
+      "name": "Cards, cartridges and discs",
+      "from": 1986,
+      "to": 1999,
+      "note": "MiniDisc, Zip, Jaz and SuperDisk tried to replace the floppy. DVD held films, CompactFlash, Memory Stick and the SD card went into cameras, and the Internet Archive began saving the web."
+    },
+    {
+      "id": "flash-and-format-wars",
+      "name": "Flash and format wars",
+      "from": 2000,
+      "to": 2010,
+      "note": "The USB flash drive replaced the floppy for carrying files. Blu-ray beat HD DVD in a format war over high-definition discs, and Amazon's AWS and Dropbox pointed to storage on the internet."
+    },
+    {
+      "id": "end-of-the-disc",
+      "name": "The end of the disc",
+      "from": 2011,
+      "to": 2025,
+      "note": "Solid-state drives replaced spinning disks in many laptops. The floppy disk stopped production in 2011, VHS and Betamax tapes had faded by 2016, MiniDisc was also retired, and the cloud held more of our files."
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "green-relics-and-giants",
+  "name": "Green Relics and Giants: Plants and Fungi Through Time",
+  "description": "The first land plants, coal-age forests, living fossils like the ginkgo, record-breaking giants, and the blights that brought down crops and trees.",
+  "category": "life",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "tags": [
+    "plants",
+    "fungi",
+    "ginkgo",
+    "redwood",
+    "forests",
+    "blight",
+    "flowers"
+  ],
+  "entries": [
+    "cooksonia",
+    "prototaxites",
+    "archaeopteris",
+    "lepidodendron",
+    "wollemi-pine",
+    "ginkgo",
+    "flowering-plants",
+    "welwitschia",
+    "ergot",
+    "coast-redwood",
+    "giant-sequoia",
+    "american-chestnut",
+    "death-cap",
+    "titan-arum",
+    "rafflesia",
+    "honey-fungus",
+    "venus-flytrap",
+    "silphium",
+    "carl-linnaeus",
+    "kew-gardens",
+    "gros-michel-banana",
+    "cavendish-banana",
+    "potato-blight",
+    "chestnut-blight"
+  ],
+  "checkpoints": [
+    {
+      "id": "green-land",
+      "name": "Plants take the land",
+      "from": -433000000,
+      "to": -300000000,
+      "note": "Cooksonia was among the first plants to stand on land, and the tall Prototaxites towered above them. Archaeopteris formed early forests and Lepidodendron grew in the coal swamps."
+    },
+    {
+      "id": "seed-plants",
+      "name": "Survivors of the dinosaur age",
+      "from": -299999999,
+      "to": -99999999,
+      "note": "The ginkgo and the Wollemi pine belong to lineages known from the age of dinosaurs, flowering plants spread, and Welwitschia lives in the Namib desert. Redwoods and sequoias trace back here, and ergot is a fungus of grasses."
+    },
+    {
+      "id": "modern-oddities",
+      "name": "Oddities of the modern world",
+      "from": -99999998,
+      "to": -1000000,
+      "note": "Lineages of the American chestnut, death cap mushroom, titan arum, Rafflesia, honey fungus and Venus flytrap reach back millions of years. They include the largest single flower and one of the biggest known organisms."
+    },
+    {
+      "id": "naming-and-losing",
+      "name": "Naming and losing",
+      "from": -700,
+      "to": 1753,
+      "note": "Silphium, a prized plant of ancient Cyrene, probably vanished in antiquity. In the eighteenth century Carl Linnaeus gave plants their modern naming system."
+    },
+    {
+      "id": "blights",
+      "name": "Gardens and blights",
+      "from": 1754,
+      "to": 2025,
+      "note": "Kew Gardens collected plants from around the world. In the 1840s potato blight helped cause the Irish famine, Panama disease later ruined the Gros Michel banana, replaced by the Cavendish, and chestnut blight killed American chestnuts from 1904."
+    }
+  ]
+}

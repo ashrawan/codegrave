@@ -2,8 +2,8 @@
 
 Views on codegrave are books: a title, a hand-picked set of entries and
 chapters that tell the story (`docs/VIEWS.md`). This is a backlog of
-1,008 subjects that would make good ones and have no book yet, gathered while
-the first 183 were written. Pick one, or bring your own.
+939 subjects that would make good ones and have no book yet, gathered while
+the first 255 were written. Pick one, or bring your own.
 
 How to use the list:
 
@@ -15,13 +15,9 @@ How to use the list:
 - When you publish a book from this list, remove its line in the same pull
   request.
 
-## People (95)
+## People (84)
 
-- **Abolitionists.** Wilberforce, Douglass, Tubman and the people who fought to end slavery.
-- **Admirals Who Ruled the Waves.** Nelson, Drake, Yi Sun-sin and the commanders of the great sea battles.
 - **African Explorers and Travellers.** Ibn Battuta, Mansa Musa's pilgrimage and the travellers and traders who linked Africa to the wider world.
-- **Anti-Apartheid Heroes.** Mandela, Biko, Tutu, Sisulu and the long fight against racial rule in South Africa.
-- **Assassinated Leaders.** Caesar, Lincoln, Gandhi, Kennedy and the killings that changed politics.
 - **Byzantine Emperors.** A thousand years of rule from Constantinople.
 - **Civil Rights and Freedom Movements.** From abolitionists and suffragettes to Rosa Parks, Martin Luther King and the marches that changed laws.
 - **Civil Rights Leaders and Their Faith.** Tutu, King, Gandhi and others whose religious belief led them to struggle for justice.
@@ -53,7 +49,6 @@ How to use the list:
 - **The Caesars: Rome's First Dynasty.** Augustus to Nero in the family that turned a republic into an empire.
 - **The Chancellors of Germany.** From Bismarck to Merkel: leaders of the German states.
 - **The Chinese Emperors.** Qin to Qing: two thousand years of dynasties, rebellions and imperial courts.
-- **The Cold War Leaders.** Truman, Stalin, Khrushchev, Kennedy, Brezhnev and Reagan: the men who held the nuclear button.
 - **The Commanders of the Second World War.** Eisenhower, Zhukov, Montgomery, Rommel, Yamamoto and the generals who decided the biggest war in history.
 - **The Cosmonauts.** The Soviet space pioneers and their hidden programme.
 - **The Crusaders and Their Rivals.** Richard, Saladin, Louis IX and the leaders of the wars for the Holy Land.
@@ -64,15 +59,10 @@ How to use the list:
 - **The Founding Mothers of Feminism.** Wollstonecraft, Beauvoir and the many women who argued for education, votes and equal rights.
 - **The Generals of Rome.** Scipio, Marius, Sulla, Pompey and Caesar: the soldiers who made and broke the Republic.
 - **The Generals of the American Civil War.** Grant, Lee, Sherman, Jackson and the battlefield commanders of the Union and Confederacy.
-- **The Great Directors.** Hitchcock, Kubrick, Kurosawa, Ray and others whose vision shaped film.
 - **The Great Generals of Antiquity.** Alexander, Hannibal, Caesar and Sun Tzu: the commanders ancient armies followed.
-- **The Great Inventors Who Changed Their World.** Edison, Tesla, Bell and the lesser-known makers behind them.
 - **The Great Polymaths.** Leonardo, Avicenna, Humboldt and others who worked across art, science and thought.
 - **The Greek Statesmen.** Solon, Pericles, Themistocles and the leaders of Athens and Sparta.
-- **The Habsburgs.** The family that ruled Austria, Spain and half of Europe for centuries.
-- **The Kings and Queens of France.** From Clovis to Louis XVI: a thousand years of French monarchy.
 - **The Kings of Scotland.** From Kenneth MacAlpin to the Union: a thousand years of Scottish rulers.
-- **The Last Emperors.** Puyi, Nicholas II, Haile Selassie and the end of the world's great monarchies.
 - **The Mongol Khans.** Genghis, Ogedei, Kublai and the grandsons who ruled from Korea to Hungary.
 - **The Mountaineers: Climbing the World's Highest Peaks.** The climbers and Sherpas who reached the great summits, and the stories of success and loss.
 - **The Mughal Emperors.** Babur to Bahadur Shah: the dynasty of the Taj Mahal and the Red Fort.
@@ -82,7 +72,6 @@ How to use the list:
 - **The Pharaohs of Egypt.** Three thousand years of rulers from Narmer to Cleopatra, with their pyramids, wars and tombs.
 - **The Philosophers of Ancient China.** Confucius, Laozi, Mencius and their rivals in the age of a hundred schools, and the ideas that still shape East Asia.
 - **The Pioneers of Computing.** From Babbage and Lovelace to Turing, Hopper and Berners-Lee, the people who imagined, built and programmed the machines that changed the world.
-- **The Plantagenets.** Henry II, Richard the Lionheart, John and the family that ruled England for 300 years.
 - **The Popes Who Ruled.** Gregory the Great, Innocent III, Julius II and the popes who were also princes.
 - **The Popes: Two Thousand Years of the Papacy.** The bishops of Rome and their power, from the early Church to the modern Vatican.
 - **The Prime Ministers of Britain.** From Walpole to the present: the people who ran the country.
@@ -113,7 +102,7 @@ How to use the list:
 - **Women Who Explored the World.** Travellers, mountaineers and pioneers of the air and space whose journeys are often missing from the usual stories.
 - **Women Who Flew.** Pioneering aviators from Harriet Quimby to modern astronauts.
 
-## Places (131)
+## Places (120)
 
 - **Africa's Ancient Kingdoms in Stone.** Aksum, Great Zimbabwe, Kilwa and the cities of the Swahili coast.
 - **Alexander and His Successors.** The conquests of Alexander and the Greek kingdoms that followed him.
@@ -121,7 +110,6 @@ How to use the list:
 - **Ancient Egypt in Stone.** Karnak, Luxor, Abu Simbel and the Valley of the Kings.
 - **Ancient Nubia and Egypt.** Kush, the black pharaohs and the long neighbours of the Nile.
 - **Angkor and the Khmer.** The rise and decline of the temple empire of Cambodia.
-- **Apartheid and Its End.** South Africa from union to democracy.
 - **Atlas of Ghost Towns.** Mining camps, company towns and cities left to the desert across five continents.
 - **Australia and New Zealand: Founding Stories.** Colonies, dominions and the First Peoples.
 - **Canada: A Nation Made Slowly.** New France, British North America and the confederation of 1867.
@@ -149,28 +137,22 @@ How to use the list:
 - **Mountains of Stone: The Great Pyramids and Their Rivals.** Egypt, Mesoamerica, Sudan and Southeast Asia: the pyramid builders compared.
 - **Museums as Landmarks.** The Louvre, the British Museum and the buildings that keep humanity's treasures.
 - **Napoleon and the Remaking of Europe.** Wars, laws and a new map between 1799 and 1815.
-- **New York: Biography of a City.** From New Amsterdam to the skyscraper age.
-- **Paris: Biography of a City.** From a Gallic island to Haussmann's boulevards and the modern region.
-- **Persia: Five Empires.** Achaemenids, Parthians, Sasanians, Safavids and the long history of Iran.
 - **Places of Pilgrimage.** Mecca, Jerusalem, Santiago and Varanasi: the roads people walk for faith.
 - **Planned Cities from Babylon to Brasilia.** Grids, circles and garden suburbs: the dream of designing a city from nothing.
 - **Railway Stations as Cathedrals.** Grand Central, St Pancras and the age when stations looked like temples.
 - **Roman Britain.** Londinium, Hadrian's Wall, Bath and the island at the edge of the empire.
 - **Stadiums and Arenas.** The Colosseum, Maracana, Wembley and the buildings made for crowds.
-- **Temples of Southeast Asia.** Angkor, Borobudur, Bagan and Ayutthaya.
 - **The Amazon Expeditions.** Rubber barons, naturalists and the search for lost cities
 - **The Americas Before Columbus.** The Maya, Aztec, Inca and many other peoples before 1492.
 - **The Arab Caliphates.** From the first caliphs to Baghdad and Cordoba.
 - **The Balkans: A Meeting of Empires.** Ottomans, Habsburgs and Russians in the lands of south-eastern Europe.
 - **The Baltic Way.** Estonia, Latvia and Lithuania from Soviet rule to freedom.
 - **The Birth of Pakistan and Bangladesh.** Partition, a separation and the making of two states.
-- **The Byzantine Thousand Years.** The empire of Constantinople from Justinian to the Ottoman conquest.
 - **The Caribbean: Islands of Empire.** Sugar, pirates and the colonies of the Caribbean.
 - **The Castles of Wales and Scotland.** Edward's ring of castles, Edinburgh, Stirling and the fortresses of the Highlands.
 - **The Caucasus: Mountains and Empires.** Georgia, Armenia and Azerbaijan between great powers.
 - **The Central Asian Khanates.** Samarkand, Bukhara, Khiva and the steppe states of Central Asia.
 - **The Cities of Mesopotamia.** Ur, Uruk, Babylon, Nineveh and the first cities between two rivers.
-- **The Cities of Renaissance Italy.** Florence, Venice, Milan, Rome and the rivalry that made a golden age.
 - **The Cities of the Indus.** Harappa, Mohenjo-daro and the Bronze Age civilisation that built drains and left no kings.
 - **The City of London Through Two Thousand Years.** Londinium, fire, plague, bombs and the rebuilding of a capital.
 - **The Cold War Map.** How the world was split between two blocs after 1945.
@@ -195,9 +177,7 @@ How to use the list:
 - **The Great Museums.** The Louvre, the Prado and other houses of art and how they grew.
 - **The Great Walls of Africa and Asia.** Defences from Benin's earthworks to the walls of Chinese cities.
 - **The Greek Temples.** Delphi, Olympia, the Acropolis and the sanctuaries of the Greek world.
-- **The Habsburg Dynasty.** How one family ruled much of Europe for centuries.
 - **The Haitian Revolution and Latin American Independence.** How Bolivar, San Martin and Toussaint Louverture ended Iberian rule.
-- **The Holy Roman Empire.** An elected emperor, hundreds of states and a thousand years of German history.
 - **The Horn of Africa.** Kingdoms, colonies and independence in Somalia, Djibouti, Ethiopia and Eritrea.
 - **The Hundred Flags of India.** The princely states, kingdoms and empires of the subcontinent.
 - **The Iron Curtain Falls.** The year 1989 and the end of communist rule in Eastern Europe.
@@ -206,12 +186,10 @@ How to use the list:
 - **The Lighthouses.** From Pharos of Alexandria to Eddystone and the towers that guided ships.
 - **The Lost Cities of the Maya.** Tikal, Palenque, Copan and the jungle kingdoms that collapsed around 900 CE.
 - **The Making of Italy and Germany.** Two nations built in the nineteenth century by diplomacy and war.
-- **The Making of the Middle East.** From Ottoman provinces to modern states after 1918.
 - **The Mapping of Africa.** Nile sources, rivers and the explorers who followed them
 - **The Moai and the Mystery of Easter Island.** A remote island, giant statues and the story of its people.
 - **The Modern Skylines.** Shanghai, Dubai, Hong Kong and Singapore: cities built vertically in a generation.
 - **The Mongol Storm.** Genghis Khan and his heirs and how they remade Eurasia.
-- **The Mughal Age.** Emperors, monuments and the making of a dynasty in India.
 - **The Opium Wars and the Fall of the Qing.** How foreign pressure and revolt ended imperial China.
 - **The Ottoman World.** Six centuries of sultans, janissaries and a state that spanned three continents.
 - **The Pacific Kingdoms.** Tonga, Hawaii, Tahiti and other island states before colonisation.
@@ -247,16 +225,14 @@ How to use the list:
 - **Tunnels That Changed the World.** From the Thames Tunnel to Gotthard: digging under rivers, seas and mountains.
 - **Underground Cities.** Derinkuyu, Paris's catacombs, Cappadocia and the cities carved below the ground.
 
-## Organisations (58)
+## Organisations (51)
 
 - **Ancient Libraries and Archives.** Nineveh, Pergamon, Alexandria and Qumran: the lost collections of the ancient world.
-- **Armies That Changed History.** The legions, the Mongol horde, the Janissaries and the Red Army: how great forces were made and unmade.
 - **Banks That Broke the World.** From Baring to Lehman: the failures that spread across borders.
 - **British Invasion.** How the Beatles, Stones and Who conquered America in the 1960s.
 - **Business Dynasties Across the World.** The Rothschilds, Tatas, Fuggers and Matsushitas: families and firms that lasted for generations.
 - **Business Families of Japan.** Mitsui, Mitsubishi and Sumitomo: the zaibatsu from Edo to modern Japan.
 - **Car Makers Who Put the World on Wheels.** Ford, Toyota, Volkswagen and the rest: the firms that built the century of the car.
-- **Churches That Split the World.** From Rome and Constantinople to Wittenberg: the great divisions of Christianity.
 - **Colonial Companies and Their Legacy.** What the company empires left behind in Asia, Africa and the Americas.
 - **Comics Empires.** Marvel, DC, Shueisha and Dargaud: the firms behind the heroes of paper and screen.
 - **Dynasties of China.** From the Shang to the Qing: three thousand years of Chinese ruling houses.
@@ -267,9 +243,7 @@ How to use the list:
 - **International Courts and Tribunals.** From The Hague to Nuremberg to the ICC: the story of international justice.
 - **K-pop Machines.** The training systems, companies and fans behind South Korea's pop groups.
 - **Medieval Universities.** Bologna, Paris, Oxford and Salamanca: how Europe invented the university.
-- **Navies That Ruled the Waves.** From Athens and Venice to the Royal Navy and the US Navy: sea power and the empires it built.
 - **News Agencies and the Speed of News.** Reuters, Havas, AP and TASS: how telegraph wires made the world's news.
-- **Parties That Shaped Nations.** The Congress, the Republicans, the Kuomintang and the ANC: the movements that built modern states.
 - **Public Broadcasters.** BBC, NHK and the other public voices: how radio and TV came to belong to nations.
 - **Punk and Post-Punk Bands.** The Ramones, the Clash and Joy Division: three short years that changed the guitar.
 - **Revolutionary Clubs and Committees.** Jacobins, Bolsheviks, Carbonari and Young Turks: the groups behind revolutions.
@@ -284,9 +258,7 @@ How to use the list:
 - **The Fight for the Vote.** Suffragettes, Chartists and civil rights groups: the long campaigns to widen who may vote.
 - **The Gentlemen's Clubs of London.** From White's to the Athenaeum: the clubs where politics and business were quietly done.
 - **The Great Animation Studios.** Disney, Ghibli, Pixar and Toei: the studios that made cartoons into an art form.
-- **The Great Banking Dynasties.** Medici, Fugger, Rothschild and Barings: the families who lent to kings and shaped modern finance.
 - **The Great Banking Failures.** Bank runs and bailouts from the Medici to Lehman
-- **The Great Charities.** Red Cross, Oxfam, Amnesty and Medecins Sans Frontieres: how private groups took on public problems.
 - **The Great Libraries of the Modern World.** Library of Congress, British Library and others: collections that hold a nation's memory.
 - **The Great Merchant Families.** Fuggers, Medicis, Rothschilds and Tatas: business families across the centuries.
 - **The Great Publishing Houses.** Penguin, Oxford and Cambridge presses and Gallimard: those who put books in the world's hands.
@@ -298,7 +270,6 @@ How to use the list:
 - **The Jesuits and Their Missions.** How a Catholic order built schools and missions from Japan to Paraguay.
 - **The Monastic World.** From Benedict and Cluny to Shaolin and Mount Athos: lives of prayer, work and learning.
 - **The Oldest Companies on Earth.** Shops, breweries and builders that have traded for more than a thousand years.
-- **The Rise and Fall of the Hollywood Studios.** MGM, Paramount, Warner and RKO: how a handful of companies ran the dream factory.
 - **The Rise of Hip Hop Crews.** From the Bronx to Compton and Staten Island: the groups behind a new music.
 - **The Rock Gods of the Seventies.** Zeppelin, Queen, Floyd and Sabbath: the arena age of rock.
 - **The Royal Houses of Europe.** Capets, Bourbons, Habsburgs and Hohenzollerns: the families who ruled a continent.
@@ -308,7 +279,7 @@ How to use the list:
 - **Universities of the Islamic Golden Age.** Baghdad, Cordoba, Cairo and Fez: centres of learning from Spain to Persia.
 - **Workers' Movements and Unions.** From the Chartists to Solidarity: how working people organised for a share of power.
 
-## Events (128)
+## Events (123)
 
 - **Air Disasters and How Flying Got Safe.** How each crash led to a safer sky
 - **Alexander the Great's Campaigns.** From Macedon to the Indus.
@@ -330,7 +301,6 @@ How to use the list:
 - **Motor Racing Legends.** Le Mans, Indianapolis and the Grand Prix
 - **Nuclear Accidents.** Three Mile Island, Chernobyl and Fukushima, and the lessons learned
 - **Pandemic: A History.** Plagues and pandemics from Athens to COVID-19.
-- **Pearl Harbor to Hiroshima.** The Pacific War from the first strike to the atomic age.
 - **Polynesian Navigators.** How islanders crossed the largest ocean without instruments
 - **Pompeii: A City Frozen in Ash.** The last days of a Roman town and what its ruins tell us
 - **Reconstruction.** The fight over freedom and rights after the Civil War.
@@ -375,14 +345,12 @@ How to use the list:
 - **The Great Fires of History.** London, Chicago and Rome: how cities burned and were rebuilt
 - **The Great Irish Famine.** The potato blight and its effects.
 - **The Great Recession.** The crisis of 2008 told through those who lived it
-- **The Great Trials of History.** Courtroom dramas from Socrates to Nuremberg.
 - **The Great Voyages of Captain Cook.** Three voyages that charted the Pacific, from Tahiti and New Zealand to Australia and Hawaii.
 - **The Great War at Sea.** Dreadnoughts, submarines and blockades, 1914 to 1918.
 - **The Gulf Wars.** Iraq, Kuwait and the Middle East after 1980.
 - **The Haitian Revolution.** The only successful slave revolt that created a state.
 - **The History of the Marathon.** From a Greek legend to a mass event
 - **The Holocaust.** How it happened, who resisted and how the world responded.
-- **The Hundred Years' War.** England and France fight for a crown across five generations.
 - **The Indian Rebellion of 1857.** Mutiny, rising and the end of Company rule.
 - **The Interwar Years.** Hope, crisis and dictators between two wars.
 - **The Iranian Revolution.** How a monarchy fell and a republic began.
@@ -401,7 +369,6 @@ How to use the list:
 - **The Race to the Poles.** Ships, sledges and the heroes of polar exploration.
 - **The Race to the South Pole.** Amundsen, Scott and Shackleton on the ice: the great contest of polar exploration and the price some paid.
 - **The Reconquista.** Eight centuries of war and exchange in Iberia.
-- **The Reformation and the Wars of Religion.** Luther, Calvin, Henry VIII and the century of conflict that split European Christianity.
 - **The Rise and Fall of Japan Inc.** Japan boom, its bubble and its long aftermath
 - **The Russian Revolution.** From the last tsar to the first Soviet state.
 - **The Russo-Japanese War.** The first modern defeat of a European power by an Asian one.
@@ -422,7 +389,6 @@ How to use the list:
 - **The Titanic and Her Sisters.** The great Atlantic liners, the rivalry that built them and the night one sank.
 - **The Tour de France Story.** A hundred years of mountains, heroes and scandals
 - **The Troubles.** Thirty years of conflict in Northern Ireland.
-- **The Vietnam War.** Thirty years of war that divided a country and shaped a generation.
 - **The Viking Age.** Raiders, traders and settlers of the north.
 - **The Viking Voyagers.** Norse sailors who raided, traded and settled from Constantinople to Newfoundland.
 - **The Vikings and Their Ships.** Raiders, traders and settlers who crossed the North Atlantic in open boats.
@@ -439,17 +405,15 @@ How to use the list:
 - **Y2K: The Bug That Wasn't.** The millennium panic and the work that prevented it.
 - **Zheng He and the Ming Voyages.** The treasure fleets that sailed to Africa.
 
-## Arts & media (159)
+## Arts & media (152)
 
 - **African Art and Its Collectors.** Masks, bronzes and the debate on where they belong.
 - **African Art and Its Modern Admirers.** Benin bronzes, Ife heads and the masks that inspired Picasso.
 - **African Cinema.** Dakar, Lagos, Cairo and Ouagadougou: film from a continent of storytellers.
 - **African Literature.** Achebe, Soyinka, Ngugi and the storytelling traditions of the continent.
 - **Animated Worlds of Studio Ghibli.** Miyazaki and the films that made Japanese animation famous.
-- **Anime and Manga.** Japan's drawn worlds and how they reached the globe.
 - **Arabic Literature.** From pre-Islamic poetry to Naguib Mahfouz.
 - **Art and War.** How artists answered conflict, from Goya to Picasso.
-- **Art in Japan.** Screens, prints and temples through a thousand years.
 - **Art of the Ancient World.** Egypt, Greece, Persia and China through their art.
 - **Artists in Exile.** Painters, poets and musicians who fled war and dictatorship and changed the places that took them in.
 - **Asian Theatre Traditions.** Noh, Kabuki, Peking opera, Kathakali and shadow puppets.
@@ -515,7 +479,6 @@ How to use the list:
 - **Punk and Its Children.** From New York basements to new wave and indie.
 - **Punk and New Wave.** The Sex Pistols, the Ramones and the bands who stripped rock down to three chords.
 - **Reggae and the Caribbean Sound.** Jamaica's rhythms and their worldwide reach.
-- **Russian Giants.** Tolstoy, Dostoevsky, Chekhov and Pushkin: the golden age of Russian literature.
 - **Science Fiction on Screen.** Rockets, robots and aliens from Melies to modern blockbusters.
 - **Shakespeare's Rivals and Friends.** Marlowe, Jonson and the crowded London stage of the 1590s.
 - **Shakespeare's World.** The plays, the playhouses and the people of Elizabethan and Jacobean London.
@@ -544,7 +507,6 @@ How to use the list:
 - **The First Artists.** Cave paintings and early art by ice age people.
 - **The Golden Age of Comic Books.** Heroes, horror and crime comics of the 1940s and 1950s.
 - **The Great Cathedrals of Europe.** Stone, glass and ambition: the medieval builders of Chartres, Notre-Dame and Cologne.
-- **The Great Directors of World Cinema.** Kurosawa, Bergman, Fellini, Ray and Truffaut: the filmmakers who made cinema an art.
 - **The Great Libraries and Writers' Houses.** The places where authors lived, wrote and are remembered, from Haworth to Yasnaya Polyana.
 - **The Great Novels.** The novels every reader is told to read, from Don Quixote to Beloved, and why they last.
 - **The Great Opera Houses and Their Stars.** La Scala, the Met and Covent Garden, and the singers who filled them.
@@ -571,14 +533,12 @@ How to use the list:
 - **The Rock and Roll Revolution.** Elvis, Chuck Berry and the teenagers who changed the sound of the fifties.
 - **The Russian Greats.** Pushkin to Solzhenitsyn: the writers who made Russia the home of the big, serious novel.
 - **The Science Fiction Masters.** Verne, Wells, Asimov, Le Guin and the authors who imagined other worlds and futures.
-- **The Silent Film Era.** Chaplin, Keaton, Pickford and Méliès, and the years when film learned to tell stories without speaking.
 - **The Silk Road of Stories.** How tales traveled from India and Persia to Arabia and Europe.
 - **The Sixties Soundtrack.** Woodstock, Motown, the British Invasion and the protest songs that backed a decade of change.
 - **The Space Opera.** From Flash Gordon to Star Wars and Dune: tales across the galaxy.
 - **The Spy Novel.** Le Carre, Fleming and Buchan: the world of secret agents in print.
 - **The Story of Cartoons.** Mickey, Bugs Bunny and the Saturday morning age.
 - **The Story of Country Music.** From Appalachian ballads to Nashville.
-- **The Story of Manga.** Osamu Tezuka to One Piece: how Japan built the largest comics industry.
 - **The Story of Opera.** Singers, composers and scandals of the stage.
 - **The Story of Photography as Art.** From the daguerreotype to the gallery wall.
 - **The Story of Sculpture.** From Ice Age figures to modern steel.
@@ -596,16 +556,14 @@ How to use the list:
 - **War Correspondents.** The reporters who sent news from the front, from Crimea to Vietnam.
 - **Women Composers They Didn't Teach You.** Hildegard to Clara Schumann and beyond: the women whose music was kept out of the concert hall.
 - **Women of the Bronte Circle.** The Brontes and their world of moors, parsonages and pen names.
-- **Women Who Wrote the Novel.** From Murasaki and Austen to Woolf and Morrison: women at the heart of fiction.
 - **Woodstock and the Music Festivals.** Three days of music and the festivals that followed
 - **World Music Voices.** Fela Kuti, Nusrat Fateh Ali Khan, Cesária Évora and the artists who put their traditions on the world stage.
 - **Writers of the Harlem Renaissance.** Langston Hughes, Zora Neale Hurston and the poets and novelists of Black New York in the 1920s.
 
-## Knowledge & belief (77)
+## Knowledge & belief (72)
 
 - **Alchemists and Their Dreams.** Gold, elixirs and the roots of chemistry.
 - **Ancient DNA.** How genes from old bones rewrote human history.
-- **Ancient Greek Philosophers.** Thales to Aristotle: the first thinkers to ask what the world is made of and how to live.
 - **Anti-colonial Thought.** Fanon, Gandhi, Nkrumah and the ideas behind independence.
 - **Calendars of the World.** Lunar, solar and ritual calendars from Babylon to Beijing.
 - **Cholera and the Birth of Public Health.** John Snow, sewers and clean water
@@ -627,7 +585,6 @@ How to use the list:
 - **Medieval Universities and the Rise of Learning.** Bologna, Paris and Oxford and the schools that built European scholarship.
 - **Myths of the Ancient World.** Gilgamesh, Zeus and Osiris: the stories that early civilisations told about the gods.
 - **New Religious Movements.** Mormonism, Scientology, Caodaism and others: how new faiths are born.
-- **Philosophers of Ancient China.** Confucius, Laozi, Mozi and Han Fei and the hundred schools of thought.
 - **Philosophy of India.** The Upanishads, Buddhist debate and the six schools of Indian thought.
 - **Philosophy of the Twentieth Century.** Phenomenology, existentialism, analytic philosophy and the linguistic turn.
 - **Pseudoscience and Hoaxes.** Piltdown Man, cold fusion and other mistakes and deceptions in science.
@@ -656,11 +613,9 @@ How to use the list:
 - **The History of Money.** From shells to Bitcoin
 - **The History of Printing and the Book.** From block prints to Gutenberg and the spread of reading.
 - **The History of the Alphabet.** One invention in the Near East that became a hundred scripts.
-- **The Hunt for the Big Bang.** Hubble, the microwave background and the history of the cosmos.
 - **The Indo-European Family.** How scholars found that Sanskrit, Latin and English share a common ancestor.
 - **The Jewish Diaspora.** Exile, communities and learning from Babylon to modern times.
 - **The Long Search for the Atom.** From Greek philosophers to quarks: how we came to know what matter is made of.
-- **The Many Faces of Christianity.** Orthodox, Catholic, Protestant and Pentecostal: how one faith became many churches.
 - **The Metric Revolution.** How the French Revolution measured the world with a metre.
 - **The Mystics: Seekers of the Inner Life.** Sufi poets, Christian visionaries, Zen masters and Hindu saints who sought direct experience of the divine.
 - **The Origins of Language.** Theories of how human speech began and how languages grow apart.
@@ -668,7 +623,6 @@ How to use the list:
 - **The Philosophers of the Islamic World.** Al-Kindi, Al-Farabi, Avicenna, Averroes and Ibn Khaldun: thinkers who joined Greek ideas with Islamic learning.
 - **The Philosophy of Mind.** Descartes to neuroscience: what is consciousness?
 - **The Quantum Pioneers.** Planck, Bohr, Heisenberg, Schrödinger and the strange new physics.
-- **The Reformation.** Luther, Calvin and the break-up of Western Christianity.
 - **The Rosetta Stone and the Race to Read Egypt.** How a slab of stone unlocked an ancient civilisation.
 - **The Scientific Revolution.** How Copernicus, Galileo, Newton and others remade the way Europe saw the world.
 - **The Spread of Buddhism.** From a Gangetic kingdom to Sri Lanka, China, Japan and Tibet over two thousand years.
@@ -681,7 +635,7 @@ How to use the list:
 - **Women Philosophers and Scientists.** The thinkers history left out, from Hypatia to Emmy Noether.
 - **Writing Systems of the World.** Syllabaries, abjads, alphabets and logograms compared.
 
-## Society & daily life (99)
+## Society & daily life (96)
 
 - **A History of Beer.** Mesopotamian brewers, monastic ales and the lager revolution.
 - **A History of Chocolate.** From Mesoamerican cacao drinks to the modern bar.
@@ -708,10 +662,8 @@ How to use the list:
 - **Prohibition and the War on Drink.** Why governments banned alcohol, and what happened next.
 - **Quarantine: A History.** From Venetian islands to modern lockdowns
 - **Spices, Sugar and Salt.** How food crops built empires.
-- **Sport and Politics.** Boycotts, protests and propaganda in the stadium
 - **Street Food Around the World.** The cheap, quick dishes that feed the cities of every continent.
 - **Sugar and Slavery.** How a sweet crop shaped empires, plantations and the modern diet.
-- **The Abolition of Slavery.** Laws, revolts and campaigns that ended legal slavery.
 - **The Banana's Last Stand.** The threat to the world's most popular fruit.
 - **The Baseball Hall of Fame.** Ruth, Robinson, Aaron and the story of America's pastime.
 - **The Basketball Revolution.** From Naismith's peach baskets to Jordan, James and the global NBA.
@@ -773,7 +725,6 @@ How to use the list:
 - **The Story of Wine.** From the Caucasus to every continent on Earth.
 - **The Trade in Silver.** How American silver changed the economies of Asia and Europe.
 - **The Trades of the Middle Ages.** Smiths, weavers, guilds and apprentices.
-- **The Women Who Changed Sport.** Billie Jean King, Wilma Rudolph and the athletes who fought for equal chances on the field.
 - **Trade Wars and Tariffs.** Corn laws, navigation acts and the quarrels over free trade.
 - **Uniforms and Power.** How armies, schools and governments dress people alike.
 - **Video Games That Made a Hobby.** Arcades, consoles and the long rise of play on screens.
@@ -783,7 +734,7 @@ How to use the list:
 - **Women at Work.** The jobs women did, were barred from and won.
 - **Zoos Through Time.** From royal menageries to conservation centres.
 
-## Life (43)
+## Life (41)
 
 - **Animals in War.** Dogs, horses and pigeons that served in conflicts.
 - **Apes and Us.** Chimpanzees, gorillas and what they tell us about people.
@@ -799,10 +750,8 @@ How to use the list:
 - **Insects: The Hidden Majority.** The most successful animals on Earth.
 - **Islands of Extinction.** Why islands lose species first, from Mauritius to New Zealand.
 - **Kings of the Savanna.** Lions, elephants and the wildlife of Africa.
-- **Life Before the Dinosaurs.** From the Cambrian explosion to the coal forests and the Permian extinction.
 - **Living Fossils.** The coelacanth, horseshoe crab and ginkgo: survivors from deep time.
 - **Microbes: The Invisible Rulers.** Bacteria, viruses and fungi and how they shape life.
-- **Monsters of the Deep Past.** The sea monsters of the Mesozoic.
 - **Mosquito: The Deadliest Animal.** Malaria, yellow fever and dengue through history.
 - **Mushrooms and Moulds.** Fungi, from food to medicine.
 - **Neanderthals: The Other Humans.** What we know of our closest cousins.
@@ -829,10 +778,9 @@ How to use the list:
 - **Whales From Land to Sea.** How a four-legged land animal turned into the blue whale.
 - **Wolves Return.** The story of wolves in Yellowstone.
 
-## Earth & space (69)
+## Earth & space (64)
 
 - **Antarctica: The Last Continent.** From a lost forest world to ice cap, and the explorers who reached the pole.
-- **Asteroids: Worlds That Could Hit Us.** The belt, near-Earth objects and the programmes watching and testing deflection.
 - **Black Holes: The Dark Heart of the Universe.** From a 1783 thought experiment to the first picture of a black hole.
 - **Caves and Underground Worlds.** Limestone caverns, lava tubes and the life and art found in the dark.
 - **Climate Through the Ages.** Hothouse and icehouse Earth, and what the past tells us about warming today.
@@ -866,7 +814,6 @@ How to use the list:
 - **The Andes from Rock to Empire.** How a mountain range shaped the Inca and everything after.
 - **The Arctic: A Frozen Ocean's History.** Ice, whales, explorers and a warming sea.
 - **The Astronomers: Mapping the Heavens.** From Babylonian skywatchers to Hubble and Rubin, how humans learned the size and age of the universe.
-- **The Big Bang and the Birth of the Universe.** How astronomers found the universe is expanding and began 13.8 billion years ago.
 - **The Birth of the Atlantic.** How the ocean opened over 180 million years and what lies on its ridge.
 - **The Black Sea Flood Debate.** Did a great flood about 7,500 years ago drown a shore and inspire flood stories?
 - **The Cambrian Explosion.** The strange early animals of the Burgess Shale and Chengjiang and the burst of animal life.
@@ -879,10 +826,8 @@ How to use the list:
 - **The Dust Bowl and Other Climate Disasters.** Droughts, floods and famines driven by weather over the last thousand years.
 - **The Five Great Extinctions.** Five times life on Earth nearly ended, and what rose after.
 - **The Great Deserts of the World.** The Sahara, the Gobi, the Atacama and the Namib, and the life and trade that crossed them.
-- **The Great Earthquakes.** Lisbon, San Francisco, Tokyo and Sendai: quakes and the cities they broke
 - **The Great Lakes of Africa.** The Rift Valley lakes, their fishes and the peoples who live around them.
 - **The Great Rivers and the Civilizations Beside Them.** The Nile, Tigris, Indus, Yellow River and others, and the first cities that grew on their banks.
-- **The Highest Mountains and the People Who Climbed Them.** Everest, K2 and the other giants, and the history of mountaineering.
 - **The Living Planet: Oxygen and the Origin of Complex Life.** How microbes changed the air and prepared the way for animals.
 - **The Mediterranean Before History.** Dry sea, flood and the first sailors of the Mediterranean basin.
 - **The Milky Way and Its Neighbours.** Our galaxy, its companions and the great collision to come.
@@ -895,15 +840,13 @@ How to use the list:
 - **The Story of Salt.** Evaporated seas, salt mines and the history of a mineral that shaped trade.
 - **The Telescope: Four Centuries of Looking Up.** From Galileo's tube to Webb: how bigger eyes revealed new universes.
 - **The Voyager Story.** Two probes, the grand tour of the outer planets and the edge of the solar system.
-- **The Wandering Continents.** From Pangaea to the Atlantic: how plate tectonics tore the supercontinents apart and why Wegener was proved right.
 - **Time in Stone: How Geologists Learned the Age of the Earth.** Hutton, Lyell, radiometric dating and the discovery of deep time.
 - **Tsunamis: Waves That Crossed Oceans.** From Storegga to Sumatra, the great waves and the warning systems built after them.
 - **Volcanoes That Changed the Climate.** Tambora, Krakatoa and the years without summers
 - **Women Who Mapped the Sky.** Leavitt, Payne-Gaposchkin, Bell Burnell and others who changed astronomy.
 
-## Technology (103)
+## Technology (96)
 
-- **A History of Hygiene.** Soap, sewers, toilets and handwashing: the quiet inventions that doubled life expectancy.
 - **African Innovation Before Colonial Rule.** Ironworking, farming and trade technology across the continent.
 - **Airpower: Bombers, Fighters and Drones.** How war moved into the sky and then onto a screen.
 - **Anaesthesia and the End of Surgical Pain.** How ether, chloroform and later drugs made the modern operating theatre possible.
@@ -912,7 +855,6 @@ How to use the list:
 - **Cars and Computers: The Self-Driving Dream.** From DARPA's Grand Challenge to robotaxis.
 - **Castles and Siege Warfare.** Walls, trebuchets and gunpowder in the long contest between attackers and defenders.
 - **China’s Road to Space.** From fireworks to Shenzhou and the lunar far side.
-- **Chinese Inventions That Changed the World.** Paper, printing, gunpowder and the compass in a thousand years of ingenuity.
 - **Clocks and the Measurement of Time.** Sundials, church clocks, pendulums and atomic clocks: the long search for a precise second.
 - **Coal: The Black Rock That Built the Modern World.** Mining, steam and the cost of the coal age.
 - **Codes, Ciphers and Secret Messages.** Enigma, Morse, invisible ink and the machines that hid and read secrets.
@@ -932,17 +874,14 @@ How to use the list:
 - **How the Telephone, Telegraph and Radio Connected the World.** Morse, Bell, Marconi and others who made messages travel faster than any messenger.
 - **India in Space.** Aryabhata, Mangalyaan and Chandrayaan.
 - **Inventions of the Islamic Golden Age.** Astrolabes, clocks, surgical tools and paper mills of the medieval Muslim world.
-- **Living in Space.** From Salyut to the ISS: the people and stations that made orbit a home.
 - **Medicine of the Ancient World.** Egyptian papyri, Greek physicians, Ayurveda and Chinese medicine compared.
 - **Naval Weapons From Rams to Missiles.** Triremes, broadsides, torpedoes and the carrier age.
-- **Oil: The Story of Black Gold.** From Drake’s well to the global petroleum economy.
 - **Pirates and the Age of Sail.** Warships, privateers and the sailors of the seventeenth and eighteenth centuries.
 - **Plastic: The Material That Ate the World.** Its invention, uses and the problem of waste.
 - **Polio: The Disease and Its Defeat.** Iron lungs, a nationwide fear and a global vaccine campaign.
 - **Quack Medicine and Patent Remedies.** Snake oil, radium water and the long fight for honest labels.
 - **Renewable Power.** Water, wind and sun and the long road to clean electricity.
 - **Rice and the Civilisations It Fed.** Paddies, terraces and the machines of Asian farming.
-- **Rockets from Fireworks to the Falcon.** A history of rocketry from China to SpaceX.
 - **Rubber and Empire.** Rubber trees, plantations and the tyre.
 - **Samurai Swords and Eastern Weapons.** The arms and armour of Japan, China, India and South East Asia.
 - **Steel and the Skyscraper.** How cheap steel raised the modern city.
@@ -996,10 +935,8 @@ How to use the list:
 - **The Story of Digital Photography.** Sensors, phones and the end of film.
 - **The Story of Photography.** From the camera obscura to the daguerreotype, film and the digital sensor: how people learned to freeze a moment.
 - **The Story of Plastic.** From Bakelite to bottles: a material that made modern life and a modern problem.
-- **The Story of Recorded Sound.** From cylinder to vinyl, tape, disc and stream: how music was captured.
 - **The Story of the Plough.** The tool that started cities, and the farmers who used it from China to Ethiopia.
 - **The War of the Currents.** Edison, Tesla and Westinghouse and the fight over electric power.
-- **The Water Engineers.** Aqueducts, qanats, dams and pumps that brought water to cities and fields.
 - **The Weather Watchers.** Barometers, thermometers, balloons and satellites in the study of weather.
 - **The Wonder Drugs.** Penicillin, insulin, aspirin and the medicines that rewrote what a diagnosis meant.
 - **The Wright Brothers and the Invention of Flight.** Two bicycle makers and the problem of control.
@@ -1007,12 +944,10 @@ How to use the list:
 - **Typewriters to Word Processors.** How writing machines turned into software.
 - **Weapons of the Ancient Greeks and Romans.** Phalanx, legion, ballista and the equipment of Mediterranean armies.
 
-## Computing (46)
+## Computing (40)
 
-- **Apple: Three Lives.** Garage start-up, near collapse and the return that made it the most valuable company.
 - **British Computing Pioneers.** Colossus, EDSAC, the Manchester Baby, Acorn and ARM.
 - **China's Digital Giants.** Baidu, Alibaba, Tencent and the world's largest online market.
-- **Chips That Changed Everything.** From the transistor to the Intel 4004, ARM and the M1.
 - **Computing in Africa and India.** M-Pesa, IT outsourcing and a new tech generation.
 - **Cryptocurrency from Bitcoin to Collapse.** Bitcoin, Ethereum, exchanges and their crashes.
 - **Cryptography Goes Public.** From secret codes to RSA, PGP and the encryption in every browser.
@@ -1026,11 +961,8 @@ How to use the list:
 - **Microsoft from BASIC to Cloud.** Bill Gates, Windows and the company's reinvention.
 - **Nokia, Ericsson and the Rise of Mobile Europe.** How Europe led the first mobile age.
 - **Open Worlds: The History of Role-Playing Games.** From Dungeons & Dragons to massive online worlds.
-- **Retro Computers of the 1980s.** Commodore, Sinclair, Acorn and Atari: the bedroom coders' machines.
 - **Robots in the Home.** From toy robots to Roomba and companion devices.
 - **Silicon Valley Origins.** How orchards became the world's technology capital: Fairchild, Intel, Apple and Google.
-- **Storage Through the Ages.** Punched cards, tapes, floppies, CDs and the cloud.
-- **Supercomputers: The Race for Speed.** From the CDC 6600 to exascale machines.
 - **The Arcade Age.** Pinball halls, neon cabinets and the coins that built the video game industry.
 - **The Birth of the Video Game Industry.** Atari, Nintendo and Sega in the first decades.
 - **The Cloud Giants.** Amazon Web Services, Azure, Google Cloud and the data centre race.
@@ -1045,7 +977,6 @@ How to use the list:
 - **The Rise of Open Source.** Richard Stallman, Linus Torvalds and the free software that runs the internet.
 - **The Rise of the Podcast and Online Video.** Creators, channels and a new media.
 - **The Search Engine Wars.** Yahoo, AltaVista, Google and the battle to organise the web.
-- **The Smartphone Revolution.** From the Simon to the iPhone and Android: how the phone became a computer.
 - **The Story of the Mouse and the Graphical Interface.** Engelbart, Xerox PARC, Apple and Microsoft.
 - **The Telephone Network and the Hackers Who Loved It.** Phone phreaking, the Blue Box and the origins of Apple.
 - **The Unix Family Tree.** Bell Labs, Berkeley, Linux, macOS and Android: the system that took over.

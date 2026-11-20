@@ -1,0 +1,81 @@
+{
+  "id": "fastest-machines-on-earth",
+  "name": "The Fastest Machines on Earth: Supercomputers",
+  "description": "From ENIAC and the CDC 6600 to Cray-1, Deep Blue, Fugaku and El Capitan: the race to build the fastest computer, and the weather, science and games it was built for.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "engineering",
+    "rivalries"
+  ],
+  "tags": [
+    "supercomputers",
+    "cray",
+    "fugaku",
+    "exascale",
+    "deep blue",
+    "watson",
+    "top500",
+    "speed"
+  ],
+  "entries": [
+    "eniac",
+    "whirlwind-i",
+    "cdc-6600",
+    "illiac-iv",
+    "cray-1",
+    "fifth-generation",
+    "deep-blue",
+    "geforce",
+    "earth-simulator",
+    "blue-gene",
+    "roadrunner",
+    "k-computer",
+    "ibm-watson",
+    "titan-supercomputer",
+    "alphago",
+    "sunway-taihulight",
+    "summit-supercomputer",
+    "arm",
+    "fugaku",
+    "frontier-supercomputer",
+    "el-capitan"
+  ],
+  "checkpoints": [
+    {
+      "id": "giant-ancestors",
+      "name": "Giant ancestors",
+      "from": 1946,
+      "to": 1963,
+      "note": "ENIAC filled a room with valves and calculated artillery tables, and Whirlwind I was built to run in real time. They were the early giants from which supercomputers grew."
+    },
+    {
+      "id": "the-cray-era",
+      "name": "Cray and the vector age",
+      "from": 1964,
+      "to": 1981,
+      "note": "The CDC 6600 is widely seen as the first supercomputer. Cray-1 later became famous for its look and for vector processing, while ILLIAC IV tried a different route with many processors working in parallel."
+    },
+    {
+      "id": "ambition-and-chess",
+      "name": "Ambition and chess",
+      "from": 1982,
+      "to": 2001,
+      "note": "Japan's Fifth Generation project aimed at machines that reasoned, but fell short of its goals. IBM's Deep Blue beat the world chess champion in 1997, and the GeForce made graphics chips that scientists later borrowed."
+    },
+    {
+      "id": "petaflops",
+      "name": "The petaflop race",
+      "from": 2002,
+      "to": 2010,
+      "note": "Japan's Earth Simulator led the world in 2002 and was built for climate and earth science. IBM's Blue Gene and then Roadrunner reached new heights, and Roadrunner was the first to pass one petaflop."
+    },
+    {
+      "id": "exascale",
+      "name": "Towards exascale",
+      "from": 2011,
+      "to": 2025,
+      "note": "Japan's K computer and America's Titan, which used graphics chips, led in turn, while IBM Watson and AlphaGo showed the power of AI. China's Sunway TaihuLight, Summit, Fugaku with ARM chips, Frontier, the first exascale, and El Capitan followed."
+    }
+  ]
+}

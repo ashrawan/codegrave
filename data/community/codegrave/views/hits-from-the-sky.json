@@ -1,0 +1,79 @@
+{
+  "id": "hits-from-the-sky",
+  "name": "Hits from the Sky: Comets, Asteroids and Craters",
+  "description": "The belt of rocks between Mars and Jupiter, comets from the cold edge of the system, and the impacts that scarred planets and reshaped life.",
+  "category": "earth-space",
+  "labels": [
+    "astronomy",
+    "environment"
+  ],
+  "tags": [
+    "asteroids",
+    "comets",
+    "meteorite",
+    "impact",
+    "halley",
+    "crater",
+    "tunguska"
+  ],
+  "entries": [
+    "asteroid-belt",
+    "kuiper-belt",
+    "ceres",
+    "theia",
+    "moon",
+    "late-heavy-bombardment",
+    "vredefort-impact",
+    "sudbury-basin",
+    "chicxulub-impact",
+    "cretaceous-paleogene-extinction",
+    "meteor-crater",
+    "halleys-comet",
+    "edmond-halley",
+    "biela-comet",
+    "tunguska-event",
+    "galileo-spacecraft",
+    "shoemaker-levy-9",
+    "hale-bopp",
+    "comet-67p",
+    "rosetta-spacecraft",
+    "jupiter-planet"
+  ],
+  "checkpoints": [
+    {
+      "id": "leftovers",
+      "name": "Leftovers of creation",
+      "from": -4600000000,
+      "to": -3800000000,
+      "note": "The asteroid belt, Ceres and the Kuiper Belt are leftovers of the solar system's formation. A planet-sized body, Theia, is thought to have hit the young Earth and made the Moon, and the Late Heavy Bombardment may have pelted both."
+    },
+    {
+      "id": "scars",
+      "name": "Scars on Earth",
+      "from": -3799999999,
+      "to": -64999999,
+      "note": "Vredefort and the Sudbury Basin are huge ancient impact structures. About 66 million years ago the Chicxulub impact led to the Cretaceous-Paleogene extinction."
+    },
+    {
+      "id": "watching-comets",
+      "name": "Watching comets",
+      "from": -50000,
+      "to": 1799,
+      "note": "Meteor Crater in Arizona was formed about 50,000 years ago. Halley's Comet was recorded for centuries, and Edmond Halley showed that comets could return on a regular orbit."
+    },
+    {
+      "id": "impacts-seen",
+      "name": "Impacts seen",
+      "from": 1800,
+      "to": 1999,
+      "note": "Biela's comet broke apart, the 1908 Tunguska event flattened Siberian forest, and in 1994 fragments of Shoemaker-Levy 9 struck Jupiter, watched by the Galileo spacecraft. Comet Hale-Bopp was a bright sight in 1997."
+    },
+    {
+      "id": "landing-on-a-comet",
+      "name": "Landing on a comet",
+      "from": 2000,
+      "to": 2025,
+      "note": "The Rosetta spacecraft reached Comet 67P in 2014 and put a lander on its surface, giving close views of how a comet is made and what it contains. Jupiter and the Moon, scarred by impacts, show how common such hits have been."
+    }
+  ]
+}

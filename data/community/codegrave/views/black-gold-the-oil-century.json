@@ -1,0 +1,88 @@
+{
+  "id": "black-gold-the-oil-century",
+  "name": "Black Gold: The Century Powered by Oil",
+  "description": "From the first oil lamps to the Drake Well, Rockefeller and OPEC shocks: how petroleum fuelled engines, wars and plastics, and why the world is now trying to leave it.",
+  "category": "technology",
+  "labels": [
+    "energy",
+    "economics",
+    "environment"
+  ],
+  "tags": [
+    "oil",
+    "petroleum",
+    "rockefeller",
+    "opec",
+    "energy crisis",
+    "climate",
+    "engines"
+  ],
+  "entries": [
+    "oil-lamp",
+    "drake-well",
+    "internal-combustion-engine",
+    "standard-oil",
+    "john-d-rockefeller",
+    "benz-patent-motorwagen",
+    "diesel-engine",
+    "ford-model-t",
+    "henry-ford",
+    "texas",
+    "saudi-arabia",
+    "polyethylene",
+    "container-ship",
+    "suez-crisis",
+    "oil-crisis-1973",
+    "iranian-revolution",
+    "oil-crisis-1979",
+    "iran-iraq-war",
+    "gulf-war",
+    "exxon-valdez-spill",
+    "ipcc",
+    "kyoto-protocol",
+    "toyota-prius",
+    "lithium-ion-battery",
+    "deepwater-horizon-spill",
+    "paris-agreement",
+    "tesla-roadster",
+    "solar-cell",
+    "wind-turbine"
+  ],
+  "checkpoints": [
+    {
+      "id": "lamps-and-wells",
+      "name": "Lamps and the first well",
+      "from": -70000,
+      "to": 1869,
+      "note": "People burned oil in simple lamps for ages. In 1859 the Drake Well in Pennsylvania showed oil could be pumped from the ground, and the internal combustion engine soon gave it a purpose beyond lighting."
+    },
+    {
+      "id": "rockefeller-and-the-car",
+      "name": "Rockefeller and the car",
+      "from": 1870,
+      "to": 1929,
+      "note": "John D. Rockefeller built Standard Oil into a giant until it was broken up in 1911. Benz's Patent-Motorwagen, the diesel engine and Henry Ford's Model T put engines on the road, and Texas became a boom land."
+    },
+    {
+      "id": "oil-and-plastic",
+      "name": "Oil power and plastic",
+      "from": 1930,
+      "to": 1972,
+      "note": "Saudi Arabia became a state in 1932 and oil later made it rich. Polyethylene opened the age of cheap plastics, and the container ship and the Suez Crisis of 1956 showed how much trade and politics ran on fuel."
+    },
+    {
+      "id": "shocks-and-spills",
+      "name": "Shocks and spills",
+      "from": 1973,
+      "to": 1996,
+      "note": "The 1973 oil crisis sent prices soaring, and the Iranian Revolution brought a second shock in 1979. The Iran-Iraq War and the Gulf War followed, the Exxon Valdez ran aground in Alaska in 1989, and the IPCC was set up in 1988 to assess climate change."
+    },
+    {
+      "id": "after-oil",
+      "name": "After oil?",
+      "from": 1997,
+      "to": 2025,
+      "note": "The Kyoto Protocol and later the Paris Agreement tried to curb emissions, and the Deepwater Horizon spill in 2010 showed the risks. The Toyota Prius, lithium-ion batteries, the Tesla Roadster, solar cells and wind turbines pointed to other fuels."
+    }
+  ]
+}

@@ -127,7 +127,11 @@ How the page is put together:
   every loaded entry as a single object in `byId`. A view that fails to load
   leaves a note and the page keeps working. An old address is answered by
   the build's redirect file and the link is rewritten to the new id.
-- **The timeline** fills the page. The panel is hidden until its button or a
+- **The timeline** fills the page and scrolls inside `#stage`, both ways;
+  the page itself never scrolls, so it always lays out at the width of the
+  screen. Read and set the scroll with `sx()`, `sy()` and `stageTo()`, never
+  `scrollX` or `scrollTo`. A fade with a chevron (`#edge-l`, `#edge-r`) shows
+  where the timeline goes on. The panel is hidden until its button or a
   line is clicked. It never covers the timeline: on wide screens and tablets
   it sits beside it and the timeline narrows; on phones (under 700 px) it is
   a sheet over the lower half and the timeline and axis move up above it
@@ -139,7 +143,11 @@ How the page is put together:
   block of rows (a section) under its coloured heading line. An entry in two
   views is drawn in both sections; `L.at` maps an id to its first row. A
   view's chapters (`checkpoints`) are drawn inside its section in its
-  colour. The grip under a section drags it shorter or taller
+  colour. A community view reads as a story: its rows are in order of time
+  and it opens at its first chapter or first line (`viewStartX()`,
+  `scrollToView()`); a classical view groups by kind and opens on its
+  busiest stretch. A view's name stays at the left of its section while the
+  timeline scrolls sideways. The grip under a section drags it shorter or taller
   (`state.sizes`; a shorter section keeps its best-ranked rows). `state.fit`
   makes the sections share the screen height; Expand lets each take what it
   needs. The views on the timeline sit as pills in a strip under the years
@@ -171,8 +179,11 @@ How the page is put together:
 - **The top search** (`findOnTimeline()`) finds entries, events, chapters
   and years among what is drawn and goes there; it understands `44 BCE` and
   `66 ma`. Below a divider it lists matches from the search index that are
-  not on the timeline, ordered by how well the name matches, then base
-  before community, then rank, then popularity. Picking one (`bringIn()`)
+  not on the timeline, ordered by how well the name matches (a match in the
+  name always beats a match in another name), then base before community,
+  then rank, then popularity. For a year that is not drawn it lists what
+  began or ended in that year (`entriesInYear()`), and the panel's search
+  does the same. Picking one (`bringIn()`)
   fetches the entry, adds its home view and opens it. When nothing matches
   it offers "Suggest …", which opens the "New entry" issue form.
 - **The entry pane** shows the kind and branch, labels, other names, every
