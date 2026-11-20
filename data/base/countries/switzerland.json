@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Switzerland",
-      "from": "1848"
+      "from": "1291"
     }
   ],
   "summary": "A neutral federation of cantons in the Alps whose origins are traced to a pact of 1291. Its present federal state with a constitution dates from 1848, and it has four national languages.",
@@ -20,8 +20,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1291",
+      "precision": "year",
+      "note": "Dated from the Federal Charter of 1291, the alliance of three valleys that tradition counts as the founding of the Confederation."
+    },
+    {
+      "type": "milestone",
       "date": "1848-09-12",
-      "precision": "day"
+      "precision": "day",
+      "label": "Federal state",
+      "note": "The federal constitution turned the league of cantons into one state."
     }
   ],
   "status": "alive",

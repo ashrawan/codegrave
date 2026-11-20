@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Ukraine",
-      "from": "1991"
+      "from": "1917"
     }
   ],
   "summary": "A large country in Eastern Europe, independent from the Soviet Union in 1991. Its capital is Kyiv, and it has rich farmland and a long history from Kievan Rus' onward.",
@@ -20,8 +20,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1917",
+      "precision": "year",
+      "note": "Dated from the Ukrainian People's Republic, proclaimed in 1917, the first modern Ukrainian state. Kievan Rus', which Ukraine, Russia and Belarus all count as a forerunner, has its own entry. Ukraine was a Soviet republic from 1922 to 1991."
+    },
+    {
+      "type": "milestone",
       "date": "1991-08-24",
-      "precision": "day"
+      "precision": "day",
+      "label": "Independence",
+      "note": "Ukraine declared independence from the Soviet Union."
     }
   ],
   "status": "alive",

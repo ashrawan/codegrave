@@ -4,10 +4,10 @@
   "names": [
     {
       "name": "Saudi Arabia",
-      "from": "1932"
+      "from": "1727"
     }
   ],
-  "summary": "A kingdom that covers most of the Arabian Peninsula, founded by Ibn Saud in 1932. It holds the holy cities of Mecca and Medina and has some of the largest oil reserves in the world.",
+  "summary": "A kingdom that covers most of the Arabian Peninsula. The Saud family first ruled a state in central Arabia in 1727, and Ibn Saud united the present kingdom in 1932. It holds the holy cities of Mecca and Medina and has some of the largest oil reserves in the world.",
   "labels": [
     "religion",
     "economics"
@@ -20,8 +20,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1727",
+      "precision": "year",
+      "note": "Dated from 1727, when the Saud family began to rule Diriyah, which the kingdom marks as its founding. That first state fell in 1818, and Ibn Saud rebuilt the family's rule from 1902."
+    },
+    {
+      "type": "milestone",
       "date": "1932",
-      "precision": "year"
+      "precision": "year",
+      "label": "Kingdom unified",
+      "note": "Ibn Saud joined his lands as the Kingdom of Saudi Arabia."
     }
   ],
   "status": "alive",
@@ -64,5 +72,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": true
 }

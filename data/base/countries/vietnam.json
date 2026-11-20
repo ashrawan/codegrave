@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Vietnam",
-      "from": "1945"
+      "from": "0939"
     }
   ],
   "summary": "A country of Southeast Asia, where Ho Chi Minh declared independence from France in 1945. After a long war the country was reunified under communist rule in 1976.",
@@ -22,8 +22,23 @@
   "events": [
     {
       "type": "born",
+      "date": "0939",
+      "precision": "year",
+      "note": "Dated from 939, when Ngô Quyền made himself king after defeating a Chinese fleet, ending a thousand years of Chinese rule. France ruled from the 1880s to 1945."
+    },
+    {
+      "type": "milestone",
       "date": "1945-09-02",
-      "precision": "day"
+      "precision": "day",
+      "label": "Independence",
+      "note": "Ho Chi Minh declared independence from France."
+    },
+    {
+      "type": "milestone",
+      "date": "1976-07-02",
+      "precision": "day",
+      "label": "Reunified",
+      "note": "North and South became one state after the war."
     }
   ],
   "status": "alive",
@@ -70,5 +85,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

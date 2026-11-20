@@ -137,7 +137,7 @@ The start means one thing within a kind. Where a kind needs a closer rule:
 
 | Kind | The start is | Notes |
 | --- | --- | --- |
-| Present-day countries | The year the present state began: its independence, republic or current constitution (France 1958, India 1947). | Earlier states on the same land are their own entries (Kingdom of France, Weimar Republic). |
+| Present-day countries | The first founding of the state the country descends from (France 843, Spain 1479, China 221 BCE, Ukraine 1917). Where the earlier states on the land were different states, the country starts at independence (India 1947, Egypt 1922). | The present republic or constitution is a `milestone` with a `label` ("Fifth Republic", "Constitution"). The born `note` says what the date is and what came before. Never a legendary date (not 660 BCE for Japan); use `circa` when no founding year is recorded. A regime with its own end keeps its own entry (Kingdom of France, Weimar Republic, Soviet Union), and the country's line runs alongside it. |
 | States named after a dynasty | The state, filed under countries (Han, Tang, Ming, Qing). | `dynasties` holds ruling families (House of Habsburg, Ottoman dynasty). A state and its ruling family may both have entries; they are two things. |
 | Buildings and artworks | Completion. | |
 | Laws and treaties | Signing or enactment; say in a note when it came into force. | An end only if repealed, annulled or replaced. |

@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Poland",
-      "from": "1918"
+      "from": "0966"
     }
   ],
   "summary": "A central European country that regained independence in 1918 after more than a century of partition. It was occupied in the Second World War and became democratic again after 1989.",
@@ -18,8 +18,16 @@
   "events": [
     {
       "type": "born",
+      "date": "0966",
+      "precision": "circa",
+      "note": "Dated from 966, when Duke Mieszko I was baptised, the event taken as the founding of the Polish state. Poland was partitioned out of existence from 1795 to 1918. The Polish-Lithuanian Commonwealth has its own entry."
+    },
+    {
+      "type": "milestone",
       "date": "1918-11-11",
-      "precision": "day"
+      "precision": "day",
+      "label": "Independence",
+      "note": "Poland returned to the map after 123 years of partition."
     }
   ],
   "status": "alive",
@@ -74,5 +82,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

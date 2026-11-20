@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Serbia",
-      "from": "2006"
+      "from": "1217"
     }
   ],
   "summary": "A Balkan country with its capital at Belgrade, the largest nation of former Yugoslavia. It became fully independent in 2006 after Montenegro left their union.",
@@ -19,8 +19,23 @@
   "events": [
     {
       "type": "born",
+      "date": "1217",
+      "precision": "year",
+      "note": "Dated from 1217, when Stefan Nemanjić was crowned the first king of Serbia. A Serbian principality is known from about the eighth century. The Ottomans ruled from 1459, and a new Serbian state arose after the uprising of 1804."
+    },
+    {
+      "type": "milestone",
+      "date": "1878",
+      "precision": "year",
+      "label": "Independence",
+      "note": "The Congress of Berlin recognised Serbia as independent."
+    },
+    {
+      "type": "milestone",
       "date": "2006",
-      "precision": "year"
+      "precision": "year",
+      "label": "Union dissolved",
+      "note": "Serbia stood alone again when Montenegro left their union."
     }
   ],
   "status": "alive",
@@ -55,5 +70,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

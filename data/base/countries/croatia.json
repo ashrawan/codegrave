@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Croatia",
-      "from": "1991"
+      "from": "0925"
     }
   ],
   "summary": "A country on the Adriatic coast that declared independence from Yugoslavia in 1991. A war followed, ending in 1995, and Croatia joined the European Union in 2013.",
@@ -19,8 +19,16 @@
   "events": [
     {
       "type": "born",
+      "date": "0925",
+      "precision": "circa",
+      "note": "Dated from about 925, when Tomislav is counted as the first king of Croatia. The kingdom was joined to Hungary in 1102 and later to the Habsburg lands and Yugoslavia."
+    },
+    {
+      "type": "milestone",
       "date": "1991-06-25",
-      "precision": "day"
+      "precision": "day",
+      "label": "Independence",
+      "note": "Croatia declared independence from Yugoslavia."
     }
   ],
   "status": "alive",
@@ -67,5 +75,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

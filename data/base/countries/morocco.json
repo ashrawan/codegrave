@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Morocco",
-      "from": "1956"
+      "from": "0789"
     }
   ],
   "summary": "A kingdom in north-western Africa that became independent from France and Spain in 1956. Its royal line goes back centuries, and it has the Atlas Mountains and old cities like Fez and Marrakesh.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "0789",
+      "precision": "circa",
+      "note": "Dated from the Idrisid dynasty, founded in 788 or 789 and counted as the first Moroccan state. The present Alawi dynasty has ruled since the 1600s."
+    },
+    {
+      "type": "milestone",
       "date": "1956-04-07",
-      "precision": "day"
+      "precision": "day",
+      "label": "Independence",
+      "note": "France and then Spain ended their protectorates."
     }
   ],
   "status": "alive",
@@ -66,5 +74,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

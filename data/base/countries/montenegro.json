@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Montenegro",
-      "from": "2006"
+      "from": "1852"
     }
   ],
   "summary": "A small mountainous country on the Adriatic that voted for independence from its union with Serbia in 2006. It was once a medieval principality and is a member of NATO.",
@@ -18,8 +18,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1852",
+      "precision": "year",
+      "note": "Dated from 1852, when its ruling prince-bishop made Montenegro a secular principality. Its independence was recognised in 1878, and from 1918 it was part of Yugoslavia and then of a union with Serbia."
+    },
+    {
+      "type": "milestone",
       "date": "2006-06-03",
-      "precision": "day"
+      "precision": "day",
+      "label": "Independence",
+      "note": "Independence was declared after a referendum."
     }
   ],
   "status": "alive",
@@ -62,5 +70,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

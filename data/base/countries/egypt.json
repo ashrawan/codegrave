@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Egypt",
-      "from": "1953"
+      "from": "1922"
     }
   ],
   "summary": "A country of north-eastern Africa on the Nile and the site of the pyramids. The monarchy ended in 1952 and the republic was proclaimed in 1953; the Suez Canal is among its important assets.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1922-02-28",
+      "precision": "day",
+      "note": "Dated from 28 February 1922, when Britain recognised Egypt as an independent kingdom. Ancient Egypt has its own entry."
+    },
+    {
+      "type": "milestone",
       "date": "1953",
-      "precision": "year"
+      "precision": "year",
+      "label": "Republic",
+      "note": "The monarchy was abolished a year after the revolution of 1952."
     }
   ],
   "status": "alive",
@@ -66,5 +74,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": true
 }

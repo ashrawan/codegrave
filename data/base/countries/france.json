@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "France",
-      "from": "1958"
+      "from": "0843"
     }
   ],
   "summary": "A republic in western Europe and home to a long monarchy before the Revolution of 1789. Its present Fifth Republic dates from 1958 under Charles de Gaulle, with a strong president.",
@@ -18,8 +18,16 @@
   "events": [
     {
       "type": "born",
+      "date": "0843",
+      "precision": "year",
+      "note": "Dated from the Treaty of Verdun in 843, which set apart the western Frankish kingdom that became France. Some count from Clovis, who united the Franks around 481. The Kingdom of France, which ended with the Revolution, has its own entry."
+    },
+    {
+      "type": "milestone",
       "date": "1958",
-      "precision": "year"
+      "precision": "year",
+      "label": "Fifth Republic",
+      "note": "The present constitution, written under Charles de Gaulle, came into force."
     }
   ],
   "status": "alive",
@@ -66,5 +74,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": true
 }

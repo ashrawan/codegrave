@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Austria",
-      "from": "1945"
+      "from": "0976"
     }
   ],
   "summary": "A central European country that was once the heart of the Habsburg empire. Its Second Republic was restored in 1945 after the Second World War, and it became fully independent in 1955.",
@@ -18,8 +18,23 @@
   "events": [
     {
       "type": "born",
+      "date": "0976",
+      "precision": "circa",
+      "note": "Dated from 976, when the Babenbergs were given the march on the Danube that grew into Austria. The name is first recorded in 996, and it became a duchy in 1156. The Austrian Empire and Austria-Hungary have entries of their own."
+    },
+    {
+      "type": "milestone",
+      "date": "1918-11-12",
+      "precision": "day",
+      "label": "Republic",
+      "note": "The republic was proclaimed as the Habsburg empire fell apart."
+    },
+    {
+      "type": "milestone",
       "date": "1945",
-      "precision": "year"
+      "precision": "year",
+      "label": "Second Republic",
+      "note": "Austria was restored after seven years as part of Nazi Germany."
     }
   ],
   "status": "alive",

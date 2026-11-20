@@ -4,10 +4,10 @@
   "names": [
     {
       "name": "Czech Republic",
-      "from": "1993"
+      "from": "0870"
     }
   ],
-  "summary": "A central European country, formed on 1 January 1993 when Czechoslovakia split. Its capital Prague is among Europe's best-preserved old cities, and it also uses the short name Czechia.",
+  "summary": "A central European country, heir to the medieval kingdom of Bohemia and a state of its own since 1 January 1993, when Czechoslovakia split. Its capital Prague is among Europe's best-preserved old cities, and it also uses the short name Czechia.",
   "labels": [
     "independence"
   ],
@@ -19,8 +19,16 @@
   "events": [
     {
       "type": "born",
+      "date": "0870",
+      "precision": "circa",
+      "note": "Dated from the duchy of Bohemia, which took shape around 870. It became a kingdom in 1198 and was part of Czechoslovakia from 1918 to 1992."
+    },
+    {
+      "type": "milestone",
       "date": "1993-01-01",
-      "precision": "day"
+      "precision": "day",
+      "label": "Czech Republic",
+      "note": "Czechoslovakia split peacefully into two states."
     }
   ],
   "status": "alive",
@@ -71,5 +79,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

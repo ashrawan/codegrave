@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Germany",
-      "from": "1949"
+      "from": "1871"
     }
   ],
   "summary": "The country at the centre of Europe, with a federal republic that dates from 1949 in the west and was joined by the east in 1990. It has the largest economy in the European Union.",
@@ -22,8 +22,23 @@
   "events": [
     {
       "type": "born",
+      "date": "1871-01-18",
+      "precision": "day",
+      "note": "Dated from the proclamation of the German Empire on 18 January 1871, the first German nation state. The Holy Roman Empire and the German Empire have entries of their own."
+    },
+    {
+      "type": "milestone",
       "date": "1949-05-23",
-      "precision": "day"
+      "precision": "day",
+      "label": "Federal Republic",
+      "note": "The Basic Law came into force in the west."
+    },
+    {
+      "type": "milestone",
+      "date": "1990-10-03",
+      "precision": "day",
+      "label": "Reunification",
+      "note": "East Germany joined the Federal Republic."
     }
   ],
   "status": "alive",
@@ -82,5 +97,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

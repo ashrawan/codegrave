@@ -4,10 +4,10 @@
   "names": [
     {
       "name": "United Kingdom",
-      "from": "1801"
+      "from": "1707"
     }
   ],
-  "summary": "The island state made of England, Scotland, Wales and Northern Ireland. It was formed by the union with Ireland in 1801 and took its present shape in 1922, when most of Ireland left; it was the centre of the largest empire in history.",
+  "summary": "The island state made of England, Scotland, Wales and Northern Ireland. England and Scotland united as Great Britain in 1707, Ireland joined in 1801 and most of it left in 1922. It was the centre of the largest empire in history.",
   "labels": [
     "politics"
   ],
@@ -22,8 +22,23 @@
   "events": [
     {
       "type": "born",
+      "date": "1707-05-01",
+      "precision": "day",
+      "note": "Dated from the union of England and Scotland as Great Britain on 1 May 1707. The kingdoms of England and Scotland have entries of their own."
+    },
+    {
+      "type": "milestone",
       "date": "1801",
-      "precision": "year"
+      "precision": "year",
+      "label": "United Kingdom",
+      "note": "Union with Ireland created the United Kingdom of Great Britain and Ireland."
+    },
+    {
+      "type": "milestone",
+      "date": "1922",
+      "precision": "year",
+      "label": "Present borders",
+      "note": "Most of Ireland left as the Irish Free State."
     }
   ],
   "status": "alive",

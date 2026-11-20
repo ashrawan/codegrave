@@ -4,10 +4,10 @@
   "names": [
     {
       "name": "China",
-      "from": "1949"
+      "from": "-0221"
     }
   ],
-  "summary": "The People's Republic of China, proclaimed by Mao Zedong in 1949 after the civil war, a one-party state governed by the Communist Party. It is the world's second most populous country and a global manufacturing power.",
+  "summary": "Country in East Asia and one of the world's oldest states, first united as an empire in 221 BCE and ruled by dynasties until 1912. The People's Republic, proclaimed by Mao Zedong in 1949, is a one-party state governed by the Communist Party and a global manufacturing power.",
   "labels": [
     "politics"
   ],
@@ -22,8 +22,23 @@
   "events": [
     {
       "type": "born",
+      "date": "-0221",
+      "precision": "year",
+      "note": "Dated from 221 BCE, when the Qin first united China as one empire. The Shang and Zhou before it and the great dynasties after it have entries of their own, as does the Republic of China."
+    },
+    {
+      "type": "milestone",
+      "date": "1912-01-01",
+      "precision": "day",
+      "label": "Republic",
+      "note": "The Republic of China was founded as the last dynasty fell."
+    },
+    {
+      "type": "milestone",
       "date": "1949-10-01",
-      "precision": "day"
+      "precision": "day",
+      "label": "PRC proclaimed",
+      "note": "Mao Zedong proclaimed the People's Republic in Beijing."
     }
   ],
   "status": "alive",
@@ -74,5 +89,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

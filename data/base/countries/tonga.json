@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Tonga",
-      "from": "1970"
+      "from": "1845"
     }
   ],
   "summary": "Polynesian kingdom of about 170 islands in the South Pacific, with Nukuʻalofa as its capital. It was never fully colonised and became fully independent of British protection in 1970.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1845",
+      "precision": "year",
+      "note": "Dated from 1845, when Tāufaʻāhau united the islands as King George Tupou I. A constitution followed in 1875, and Tonga was under British protection from 1900."
+    },
+    {
+      "type": "milestone",
       "date": "1970",
-      "precision": "year"
+      "precision": "year",
+      "label": "Protection ends",
+      "note": "Tonga became fully independent of Britain."
     }
   ],
   "status": "alive",
@@ -62,5 +70,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

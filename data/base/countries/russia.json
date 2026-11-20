@@ -4,10 +4,10 @@
   "names": [
     {
       "name": "Russia",
-      "from": "1991"
+      "from": "1263"
     }
   ],
-  "summary": "The largest country in the world by area, stretching from Eastern Europe across Siberia to the Pacific. It became an independent state as the Russian Federation when the Soviet Union ended in 1991.",
+  "summary": "The largest country in the world by area, stretching from Eastern Europe across Siberia to the Pacific. It grew from the medieval principality of Moscow into an empire, and became the Russian Federation when the Soviet Union ended in 1991.",
   "labels": [
     "politics"
   ],
@@ -18,8 +18,23 @@
   "events": [
     {
       "type": "born",
+      "date": "1263",
+      "precision": "circa",
+      "note": "Dated from the principality of Moscow, founded about 1263, from which the Russian state grew. Kievan Rus', which Russia, Ukraine and Belarus all count as a forerunner, has its own entry, as do the Russian Empire and the Soviet Union."
+    },
+    {
+      "type": "milestone",
+      "date": "1547",
+      "precision": "year",
+      "label": "Tsardom",
+      "note": "Ivan IV was crowned the first tsar."
+    },
+    {
+      "type": "milestone",
       "date": "1991-12-25",
-      "precision": "day"
+      "precision": "day",
+      "label": "Federation",
+      "note": "The Soviet Union ended and Russia became the Russian Federation."
     }
   ],
   "status": "alive",
@@ -54,5 +69,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

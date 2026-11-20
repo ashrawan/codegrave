@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Lithuania",
-      "from": "1990"
+      "from": "1253"
     }
   ],
   "summary": "The largest of the Baltic states, once part of a great grand duchy. In March 1990 it was the first Soviet republic to declare independence, and it joined the EU and NATO in 2004.",
@@ -18,8 +18,23 @@
   "events": [
     {
       "type": "born",
+      "date": "1253",
+      "precision": "year",
+      "note": "Dated from 1253, when Mindaugas was crowned king, which Lithuania marks as the founding of its state. It was joined with Poland for centuries and under Russia from 1795."
+    },
+    {
+      "type": "milestone",
+      "date": "1918-02-16",
+      "precision": "day",
+      "label": "Independence",
+      "note": "The Act of Independence was signed in Vilnius."
+    },
+    {
+      "type": "milestone",
       "date": "1990-03-11",
-      "precision": "day"
+      "precision": "day",
+      "label": "Restored",
+      "note": "Lithuania was the first Soviet republic to declare its independence restored."
     }
   ],
   "status": "alive",
@@ -66,5 +81,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

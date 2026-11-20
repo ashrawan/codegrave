@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Netherlands",
-      "from": "1815"
+      "from": "1581"
     }
   ],
   "summary": "A low-lying country of north-western Europe that broke from Spanish rule in the 1500s and became a rich trading power. It has been a kingdom since 1815.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1581-07-26",
+      "precision": "day",
+      "note": "Dated from the Act of Abjuration of 26 July 1581, by which the northern provinces renounced the king of Spain. Spain recognised the Dutch Republic in 1648."
+    },
+    {
+      "type": "milestone",
       "date": "1815",
-      "precision": "year"
+      "precision": "year",
+      "label": "Kingdom",
+      "note": "The Kingdom of the Netherlands was founded after the fall of Napoleon."
     }
   ],
   "status": "alive",

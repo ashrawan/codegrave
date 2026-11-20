@@ -4,10 +4,10 @@
   "names": [
     {
       "name": "Philippines",
-      "from": "1946"
+      "from": "1898"
     }
   ],
-  "summary": "A country of more than seven thousand islands in Southeast Asia, under Spain and then the United States before independence in 1946. It is largely Christian with a mix of Asian and Spanish heritage.",
+  "summary": "A country of more than seven thousand islands in Southeast Asia. It declared independence from Spain in 1898, was ruled by the United States until 1946, and is largely Christian with a mix of Asian and Spanish heritage.",
   "labels": [
     "independence"
   ],
@@ -21,8 +21,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1898-06-12",
+      "precision": "day",
+      "note": "Dated from the declaration of independence from Spain on 12 June 1898, which the Philippines marks as its independence day. The United States then ruled the islands until 1946."
+    },
+    {
+      "type": "milestone",
       "date": "1946-07-04",
-      "precision": "day"
+      "precision": "day",
+      "label": "US rule ends",
+      "note": "The United States recognised the independence of the Philippines."
     }
   ],
   "status": "alive",
@@ -69,5 +77,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

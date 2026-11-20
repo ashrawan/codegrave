@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Sweden",
-      "from": "1523"
+      "from": "0995"
     }
   ],
   "summary": "A Scandinavian country that became an independent kingdom under Gustav Vasa in 1523. It was once a regional great power and has stayed out of wars for two centuries.",
@@ -20,8 +20,16 @@
   "events": [
     {
       "type": "born",
+      "date": "0995",
+      "precision": "circa",
+      "note": "Dated from about 995, when Olof Skötkonung became the first king known to rule both the Svear and the Götar. No founding year is recorded."
+    },
+    {
+      "type": "milestone",
       "date": "1523",
-      "precision": "year"
+      "precision": "year",
+      "label": "Gustav Vasa",
+      "note": "Gustav Vasa was elected king and Sweden left the Kalmar Union with Denmark and Norway."
     }
   ],
   "status": "alive",

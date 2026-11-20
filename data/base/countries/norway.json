@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Norway",
-      "from": "1814"
+      "from": "0872"
     }
   ],
   "summary": "Nordic country on the west of the Scandinavian peninsula, with Oslo as its capital. It adopted its constitution in 1814 and became fully independent from Sweden in 1905. It is a constitutional monarchy.",
@@ -19,8 +19,23 @@
   "events": [
     {
       "type": "born",
+      "date": "0872",
+      "precision": "circa",
+      "note": "Dated from the traditional year 872, when Harald Fairhair is said to have united Norway at the battle of Hafrsfjord. Historians place the battle a little later. Norway was under Danish and then Swedish kings from 1380 to 1905."
+    },
+    {
+      "type": "milestone",
       "date": "1814-05-17",
-      "precision": "day"
+      "precision": "day",
+      "label": "Constitution",
+      "note": "The constitution was signed at Eidsvoll."
+    },
+    {
+      "type": "milestone",
+      "date": "1905",
+      "precision": "year",
+      "label": "Independence",
+      "note": "The union with Sweden was dissolved."
     }
   ],
   "status": "alive",
@@ -55,5 +70,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Azerbaijan",
-      "from": "1991"
+      "from": "1918"
     }
   ],
   "summary": "A Caucasus country on the Caspian Sea, rich in oil and gas around its capital Baku. It became independent from the Soviet Union in 1991.",
@@ -18,8 +18,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1918-05-28",
+      "precision": "day",
+      "note": "Dated from the Azerbaijan Democratic Republic, declared on 28 May 1918. It was a Soviet republic from 1920 to 1991."
+    },
+    {
+      "type": "milestone",
       "date": "1991",
-      "precision": "year"
+      "precision": "year",
+      "label": "Restored",
+      "note": "Independence was restored as the Soviet Union broke up."
     }
   ],
   "status": "alive",
@@ -54,5 +62,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

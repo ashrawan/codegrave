@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Afghanistan",
-      "from": "1919"
+      "from": "1747"
     }
   ],
   "summary": "A mountainous landlocked country of Central and South Asia that regained control of its foreign affairs from Britain in 1919. It has been crossed by invaders and trade routes for thousands of years.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1747",
+      "precision": "year",
+      "note": "Dated from 1747, when Ahmad Shah Durrani was chosen king and founded the Afghan state."
+    },
+    {
+      "type": "milestone",
       "date": "1919",
-      "precision": "year"
+      "precision": "year",
+      "label": "Independence",
+      "note": "Britain gave up control of Afghan foreign affairs."
     }
   ],
   "status": "alive",
@@ -58,5 +66,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": true
 }

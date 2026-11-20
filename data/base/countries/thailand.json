@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Thailand",
-      "from": "1932"
+      "from": "1238"
     }
   ],
   "summary": "A Southeast Asian kingdom, called Siam until 1939, that was never colonised by a European power. It became a constitutional monarchy in 1932 after a revolution against absolute rule.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1238",
+      "precision": "year",
+      "note": "Dated from the Sukhothai kingdom, founded in 1238 by tradition and counted as the first Thai state. Ayutthaya followed in 1351 and the present dynasty in 1782. The Sukhothai and Ayutthaya kingdoms have entries of their own."
+    },
+    {
+      "type": "milestone",
       "date": "1932",
-      "precision": "year"
+      "precision": "year",
+      "label": "Constitution",
+      "note": "A revolution ended absolute rule and made Siam a constitutional monarchy."
     }
   ],
   "status": "alive",
@@ -66,5 +74,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": true
 }

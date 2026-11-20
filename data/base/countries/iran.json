@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Iran",
-      "from": "1979"
+      "from": "1501"
     }
   ],
   "summary": "The country on the Iranian plateau that was once the heart of Persia. After a revolution in 1979 the monarchy was replaced by an Islamic Republic led by a supreme leader.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "1501",
+      "precision": "year",
+      "note": "Dated from 1501, when the Safavids reunited Iran as one state, the first since the Arab conquest. Safavid Iran and the ancient Persian empires have entries of their own."
+    },
+    {
+      "type": "milestone",
       "date": "1979-04-01",
-      "precision": "day"
+      "precision": "day",
+      "label": "Islamic Republic",
+      "note": "After the revolution a referendum replaced the monarchy with an Islamic Republic."
     }
   ],
   "status": "alive",

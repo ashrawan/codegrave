@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Denmark",
-      "from": "1849"
+      "from": "0936"
     }
   ],
   "summary": "Nordic country made up of the Jutland peninsula and many islands, with Copenhagen as its capital. It became a constitutional monarchy in 1849 and is a member of the European Union and NATO.",
@@ -22,8 +22,16 @@
   "events": [
     {
       "type": "born",
+      "date": "0936",
+      "precision": "circa",
+      "note": "Dated from about 936, the reign of Gorm the Old, from whom the Danish monarchy counts its line. His son Harald Bluetooth claimed to have won all Denmark."
+    },
+    {
+      "type": "milestone",
       "date": "1849",
-      "precision": "year"
+      "precision": "year",
+      "label": "Constitution",
+      "note": "The first constitution ended absolute monarchy."
     }
   ],
   "status": "alive",
