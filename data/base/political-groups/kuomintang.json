@@ -1,0 +1,58 @@
+{
+  "id": "kuomintang",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Kuomintang",
+      "from": "1912"
+    }
+  ],
+  "summary": "Chinese nationalist party formed after the fall of the Qing, which governed China in the 1930s and 1940s. After losing the civil war it moved to Taiwan, where it ruled for decades.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Guomindang",
+    "KMT",
+    "GMD",
+    "Nationalist Party of China",
+    "National Party of China"
+  ],
+  "wikidata": "Q31113",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sun-yat-sen"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kuomintang (Q31113)",
+      "url": "https://www.wikidata.org/wiki/Q31113",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kuomintang",
+      "url": "https://en.wikipedia.org/wiki/Kuomintang",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,95 @@
+{
+  "id": "vietnam-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Vietnam War",
+      "from": "1955"
+    }
+  ],
+  "summary": "A long war between communist North Vietnam, with allies, and South Vietnam, backed by the United States. US troops left in 1973, and the war ended when Saigon fell in 1975 and Vietnam was reunited.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Second Indochina War",
+    "American War in Vietnam",
+    "Resistance War against America",
+    "Resistance War against Communists"
+  ],
+  "wikidata": "Q8740",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-11-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "in",
+      "to": "vietnam"
+    },
+    {
+      "type": "in",
+      "to": "south-vietnam"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "south-korea"
+    },
+    {
+      "type": "related",
+      "to": "thailand"
+    },
+    {
+      "type": "related",
+      "to": "philippines"
+    },
+    {
+      "type": "related",
+      "to": "new-zealand"
+    },
+    {
+      "type": "related",
+      "to": "china"
+    },
+    {
+      "type": "related",
+      "to": "north-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vietnam War (Q8740)",
+      "url": "https://www.wikidata.org/wiki/Q8740",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vietnam War",
+      "url": "https://en.wikipedia.org/wiki/Vietnam_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

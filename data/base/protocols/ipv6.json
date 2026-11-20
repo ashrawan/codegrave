@@ -1,0 +1,45 @@
+{
+  "id": "ipv6",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "IPv6",
+      "from": "1996"
+    }
+  ],
+  "summary": "Newer version of the internet's addressing system, made to replace IPv4 when the older system ran short of addresses. It allows an enormous number of addresses, and its adoption has been slow and gradual.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Internet Protocol version 6"
+  ],
+  "wikidata": "Q2551624",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: IPv6 (Q2551624)",
+      "url": "https://www.wikidata.org/wiki/Q2551624",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IPv6",
+      "url": "https://en.wikipedia.org/wiki/IPv6",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

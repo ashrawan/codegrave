@@ -1,0 +1,72 @@
+{
+  "id": "turkey",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Turkey",
+      "from": "1923"
+    }
+  ],
+  "summary": "The republic founded by Mustafa Kemal Ataturk in 1923 on the ruins of the Ottoman Empire. It lies across Europe and Asia, with Istanbul as its largest city and Ankara as the capital.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "aliases": [
+    "Republic of Türkiye",
+    "Republic of Turkey"
+  ],
+  "wikidata": "Q43",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-10-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Turkey (Q43)",
+      "url": "https://www.wikidata.org/wiki/Q43",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Turkey",
+      "url": "https://en.wikipedia.org/wiki/Turkey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "age-of-discovery",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Age of Discovery",
+      "from": "1400"
+    }
+  ],
+  "summary": "The period in which European ships crossed the oceans, linking the Americas, Africa and Asia. It brought trade, colonies, new foods and disease, and the exploitation of peoples overseas.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Age of Exploration",
+    "Contact Period"
+  ],
+  "wikidata": "Q133641",
+  "events": [
+    {
+      "type": "born",
+      "date": "1400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Age of Discovery (Q133641)",
+      "url": "https://www.wikidata.org/wiki/Q133641",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Age of Discovery",
+      "url": "https://en.wikipedia.org/wiki/Age_of_Discovery",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

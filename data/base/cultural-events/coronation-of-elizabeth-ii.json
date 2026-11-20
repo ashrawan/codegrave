@@ -1,0 +1,64 @@
+{
+  "id": "coronation-of-elizabeth-ii",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Coronation of Elizabeth II",
+      "from": "1953"
+    }
+  ],
+  "summary": "The crowning of Queen Elizabeth II at Westminster Abbey in London. It was the first coronation shown on television, and millions watched it live in Britain and abroad.",
+  "labels": [
+    "media",
+    "politics"
+  ],
+  "aliases": [
+    "coronation of Queen Elizabeth II"
+  ],
+  "wikidata": "Q3797766",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-06-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1953-06-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "westminster-abbey"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "about",
+      "to": "elizabeth-ii"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: coronation of Elizabeth II (Q3797766)",
+      "url": "https://www.wikidata.org/wiki/Q3797766",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coronation of Elizabeth II",
+      "url": "https://en.wikipedia.org/wiki/Coronation_of_Elizabeth_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

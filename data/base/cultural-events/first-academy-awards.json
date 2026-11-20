@@ -1,0 +1,59 @@
+{
+  "id": "first-academy-awards",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "1st Academy Awards",
+      "from": "1929"
+    }
+  ],
+  "summary": "The first Academy Awards, held at a private dinner in a Hollywood hotel, honoured films of the first years of the 1920s. The ceremony was short, as the winners had been announced months before.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "The 1st Academy Awards"
+  ],
+  "wikidata": "Q109886",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-05-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1929-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "academy-awards"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1st Academy Awards (Q109886)",
+      "url": "https://www.wikidata.org/wiki/Q109886",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1st Academy Awards",
+      "url": "https://en.wikipedia.org/wiki/1st_Academy_Awards",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

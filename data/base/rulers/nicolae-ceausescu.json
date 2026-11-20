@@ -1,0 +1,64 @@
+{
+  "id": "nicolae-ceausescu",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Nicolae Ceausescu",
+      "from": "1918"
+    }
+  ],
+  "summary": "Communist leader of Romania from 1965. His government pursued severe austerity and surveillance, and he was overthrown in the revolution of December 1989 and executed after a short trial.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Ceaușescu",
+    "Genius of the Carpathians"
+  ],
+  "wikidata": "Q80504",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-01-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-12-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "kim-il-sung"
+    },
+    {
+      "type": "influenced_by",
+      "to": "mao-zedong"
+    },
+    {
+      "type": "influenced_by",
+      "to": "joseph-stalin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nicolae Ceaușescu (Q80504)",
+      "url": "https://www.wikidata.org/wiki/Q80504",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nicolae Ceaușescu",
+      "url": "https://en.wikipedia.org/wiki/Nicolae_Ceau%C8%99escu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

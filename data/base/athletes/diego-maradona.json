@@ -1,0 +1,60 @@
+{
+  "id": "diego-maradona",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Diego Maradona",
+      "from": "1960"
+    }
+  ],
+  "summary": "Argentine footballer who captained Argentina to the 1986 World Cup, scoring two famous goals against England in the quarter-final. He also led Napoli to its first league titles.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q17515",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-10-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-11-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "world-cup-1994"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-1990"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-1986"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Diego Maradona (Q17515)",
+      "url": "https://www.wikidata.org/wiki/Q17515",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Diego Maradona",
+      "url": "https://en.wikipedia.org/wiki/Diego_Maradona",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

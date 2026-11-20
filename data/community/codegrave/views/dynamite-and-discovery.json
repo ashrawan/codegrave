@@ -1,0 +1,97 @@
+{
+  "id": "dynamite-and-discovery",
+  "name": "Dynamite and Discovery: The Nobel Prizes in Science",
+  "description": "One inventor's will created the world's best-known prizes. Follow the laureates in physics, chemistry and medicine and the discoveries that earned them.",
+  "category": "people",
+  "labels": [
+    "nobel-prize",
+    "physics",
+    "medicine"
+  ],
+  "tags": [
+    "nobel",
+    "laureates",
+    "physics",
+    "chemistry",
+    "medicine",
+    "prize"
+  ],
+  "entries": [
+    "alfred-nobel",
+    "nobel-prize",
+    "nobel-prize-physics",
+    "nobel-prize-chemistry",
+    "nobel-prize-medicine",
+    "radioactivity",
+    "henri-becquerel",
+    "pierre-curie",
+    "marie-curie",
+    "jj-thomson",
+    "ernest-rutherford",
+    "max-planck",
+    "haber-process",
+    "fritz-haber",
+    "albert-einstein",
+    "niels-bohr",
+    "insulin",
+    "erwin-schrodinger",
+    "paul-dirac",
+    "werner-heisenberg",
+    "penicillin",
+    "alexander-fleming",
+    "james-chadwick",
+    "enrico-fermi",
+    "dorothy-hodgkin",
+    "dna-double-helix",
+    "barbara-mcclintock",
+    "rita-levi-montalcini",
+    "subrahmanyan-chandrasekhar",
+    "richard-feynman",
+    "norman-borlaug",
+    "nobel-peace-prize",
+    "artemisinin",
+    "tu-youyou",
+    "crispr-gene-editing",
+    "jennifer-doudna",
+    "higgs-boson",
+    "first-gravitational-wave-detection"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-will-and-first-prizes",
+      "name": "The will and the first prizes",
+      "from": 1896,
+      "to": 1913,
+      "note": "Alfred Nobel died in 1896 and left his fortune for prizes. The first went to Rontgen, and the Curies and Becquerel won in 1903. Thomson, Rutherford, Planck and Haber were soon honoured too."
+    },
+    {
+      "id": "quantum-years",
+      "name": "The quantum years",
+      "from": 1914,
+      "to": 1932,
+      "note": "Einstein won for the photoelectric effect and Bohr for the atom's structure. Schrodinger, Dirac and Heisenberg built quantum mechanics, and the medicine prize honoured insulin."
+    },
+    {
+      "id": "war-and-after",
+      "name": "War and after",
+      "from": 1933,
+      "to": 1959,
+      "note": "Chadwick's neutron and Fermi's neutron work were rewarded, as were Fleming's penicillin and the later chemistry of vitamins. Chandrasekhar's work on dying stars would be honoured later."
+    },
+    {
+      "id": "molecules-of-life",
+      "name": "Molecules of life",
+      "from": 1960,
+      "to": 1999,
+      "note": "Hodgkin and the DNA pair opened up biological structure, McClintock won for jumping genes, Levi-Montalcini for nerve growth, Feynman for quantum electrodynamics, and Borlaug the Peace Prize for crop breeding."
+    },
+    {
+      "id": "new-century",
+      "name": "A new century",
+      "from": 2000,
+      "to": 2026,
+      "note": "Tu Youyou won for artemisinin against malaria, Doudna for CRISPR gene editing, and teams for the Higgs boson and gravitational waves, showing big prizes now go to large collaborations."
+    }
+  ],
+  "year": 1950
+}

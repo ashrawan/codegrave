@@ -1,0 +1,59 @@
+{
+  "id": "ibn-al-haytham",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Ibn al-Haytham",
+      "from": "0965"
+    }
+  ],
+  "summary": "Scholar born in Basra who worked in Cairo and wrote a book on optics. He argued that we see because light enters the eye, and he tested ideas by experiment, which is why some call him a founder of the scientific method.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "Ptolemaeus Secundus",
+    "Alhacen",
+    "The Physicist",
+    "al-Baṣrī",
+    "al-Miṣrī"
+  ],
+  "wikidata": "Q11104",
+  "events": [
+    {
+      "type": "born",
+      "date": "0965",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1040",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ibn al-Haytham (Q11104)",
+      "url": "https://www.wikidata.org/wiki/Q11104",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ibn al-Haytham",
+      "url": "https://en.wikipedia.org/wiki/Ibn_al-Haytham",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

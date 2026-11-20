@@ -1,0 +1,73 @@
+{
+  "id": "averroes",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Averroes",
+      "from": "1126"
+    }
+  ],
+  "summary": "Philosopher and judge from Córdoba in al-Andalus, also known as Ibn Rushd, who wrote detailed commentaries on Aristotle. These were translated into Latin and were read closely by scholars in medieval Europe.",
+  "labels": [
+    "philosophy",
+    "law"
+  ],
+  "aliases": [
+    "Averrhoes",
+    "Ibn Rushd"
+  ],
+  "wikidata": "Q39837",
+  "events": [
+    {
+      "type": "born",
+      "date": "1126-04-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1198-12-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "muhammad"
+    },
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "al-ghazali"
+    },
+    {
+      "type": "influenced_by",
+      "to": "avicenna"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Averroes (Q39837)",
+      "url": "https://www.wikidata.org/wiki/Q39837",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Averroes",
+      "url": "https://en.wikipedia.org/wiki/Averroes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

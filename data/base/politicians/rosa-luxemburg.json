@@ -1,0 +1,50 @@
+{
+  "id": "rosa-luxemburg",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Rosa Luxemburg",
+      "from": "1871"
+    }
+  ],
+  "summary": "Polish-born German Marxist thinker and writer who opposed the First World War and helped found the Spartacist League. She was murdered in Berlin in January 1919 after a failed uprising.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Red Rosa Luxemburg"
+  ],
+  "wikidata": "Q7231",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-03-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1919-01-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Rosa Luxemburg (Q7231)",
+      "url": "https://www.wikidata.org/wiki/Q7231",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rosa Luxemburg",
+      "url": "https://en.wikipedia.org/wiki/Rosa_Luxemburg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

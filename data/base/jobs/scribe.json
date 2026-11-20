@@ -1,0 +1,49 @@
+{
+  "id": "scribe",
+  "category": "jobs",
+  "names": [
+    {
+      "name": "Scribe",
+      "from": "-3200"
+    }
+  ],
+  "summary": "A person trained to write, copy and keep records, in ancient Egypt, Mesopotamia, China and medieval monasteries. Scribes were among the few who could read and write, until printing spread.",
+  "labels": [
+    "literature",
+    "education"
+  ],
+  "wikidata": "Q916292",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the printing press and wider literacy",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: scribe (Q916292)",
+      "url": "https://www.wikidata.org/wiki/Q916292",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Scribe",
+      "url": "https://en.wikipedia.org/wiki/Scribe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

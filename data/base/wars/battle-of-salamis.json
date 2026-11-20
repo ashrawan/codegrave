@@ -1,0 +1,56 @@
+{
+  "id": "battle-of-salamis",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Salamis",
+      "from": "-0480"
+    }
+  ],
+  "summary": "A naval battle in a narrow strait near Athens in which the Greek fleet defeated a larger Persian fleet. It ended the immediate danger to Greece and showed the importance of sea power to Athens.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q178850",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0480-09-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0480-09-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    },
+    {
+      "type": "related",
+      "to": "achaemenid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Salamis (Q178850)",
+      "url": "https://www.wikidata.org/wiki/Q178850",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Salamis",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Salamis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

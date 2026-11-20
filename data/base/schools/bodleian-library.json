@@ -1,0 +1,52 @@
+{
+  "id": "bodleian-library",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Bodleian Library",
+      "from": "1602"
+    }
+  ],
+  "summary": "Main library of Oxford University, refounded by Thomas Bodley. It is a legal deposit library, which means it may claim a copy of every book published in the United Kingdom.",
+  "labels": [
+    "education",
+    "literature"
+  ],
+  "wikidata": "Q82133",
+  "events": [
+    {
+      "type": "born",
+      "date": "1602",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "university-of-oxford"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bodleian Library (Q82133)",
+      "url": "https://www.wikidata.org/wiki/Q82133",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bodleian Library",
+      "url": "https://en.wikipedia.org/wiki/Bodleian_Library",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

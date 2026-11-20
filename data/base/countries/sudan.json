@@ -1,0 +1,66 @@
+{
+  "id": "sudan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Sudan",
+      "from": "1956"
+    }
+  ],
+  "summary": "A north-east African country along the Nile, independent from Britain and Egypt since 1956. It was home to the ancient kingdom of Kush, and South Sudan split from it in 2011.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of the Sudan",
+    "as-Sūdān",
+    "sd",
+    "North Sudan",
+    "the Sudan"
+  ],
+  "wikidata": "Q1049",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sudan (Q1049)",
+      "url": "https://www.wikidata.org/wiki/Q1049",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sudan",
+      "url": "https://en.wikipedia.org/wiki/Sudan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

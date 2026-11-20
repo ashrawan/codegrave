@@ -1,0 +1,60 @@
+{
+  "id": "augustus",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Augustus",
+      "from": "-0063"
+    }
+  ],
+  "summary": "Born Octavian, the great-nephew and heir of Julius Caesar. He won the civil wars that followed Caesar's death and became the first Roman emperor, ending the Republic and bringing a long period of peace.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Gaius Julius Caesar",
+    "Gaius Caesar",
+    "Caesar Octavianus",
+    "Gaius Octavius Thurinus",
+    "Gaius Octavius Caepias"
+  ],
+  "wikidata": "Q1405",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0063-09-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0014-08-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "julius-caesar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Augustus (Q1405)",
+      "url": "https://www.wikidata.org/wiki/Q1405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Augustus",
+      "url": "https://en.wikipedia.org/wiki/Augustus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "haitian-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Haitian Revolution",
+      "from": "1791"
+    }
+  ],
+  "summary": "A revolt of enslaved people in the French colony of Saint-Domingue, led by figures such as Toussaint Louverture. It ended slavery there and created Haiti, the first independent Black republic.",
+  "labels": [
+    "independence",
+    "human-rights"
+  ],
+  "aliases": [
+    "haitská revoluce (1791-1804 : Haiti)"
+  ],
+  "wikidata": "Q689128",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-08-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1804-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "french-revolutionary-wars"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Haitian Revolution (Q689128)",
+      "url": "https://www.wikidata.org/wiki/Q689128",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Haitian Revolution",
+      "url": "https://en.wikipedia.org/wiki/Haitian_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

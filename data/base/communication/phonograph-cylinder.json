@@ -1,0 +1,60 @@
+{
+  "id": "phonograph-cylinder",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Phonograph cylinder",
+      "from": "1877"
+    }
+  ],
+  "maker": "Thomas Edison",
+  "summary": "A wax or plastic cylinder on which sound was recorded as a groove. Thomas Edison's phonograph was the first machine to record and play back sound, and cylinders were sold until flat discs won the market.",
+  "labels": [
+    "media",
+    "music",
+    "lost"
+  ],
+  "aliases": [
+    "phonograph record",
+    "cylinder"
+  ],
+  "wikidata": "Q691783",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1929",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by flat discs, which were easier to copy and store",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "thomas-edison"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: phonograph cylinder (Q691783)",
+      "url": "https://www.wikidata.org/wiki/Q691783",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Phonograph cylinder",
+      "url": "https://en.wikipedia.org/wiki/Phonograph_cylinder",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

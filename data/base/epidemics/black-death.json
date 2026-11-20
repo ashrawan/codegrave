@@ -1,0 +1,63 @@
+{
+  "id": "black-death",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Black Death",
+      "from": "1346"
+    }
+  ],
+  "summary": "A plague pandemic that crossed Asia, the Middle East and Europe and killed a large share of the people in the places it reached. The shock of so many deaths changed work, wages, religion and daily life.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Great Plague",
+    "Great Mortality",
+    "plague",
+    "Bubonic Plague",
+    "Great Pestilence"
+  ],
+  "wikidata": "Q42005",
+  "events": [
+    {
+      "type": "born",
+      "date": "1346",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1352",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    },
+    {
+      "type": "in",
+      "to": "azerbaijan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Black Death (Q42005)",
+      "url": "https://www.wikidata.org/wiki/Q42005",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Black Death",
+      "url": "https://en.wikipedia.org/wiki/Black_Death",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

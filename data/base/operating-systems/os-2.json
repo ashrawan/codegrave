@@ -1,0 +1,62 @@
+{
+  "id": "os-2",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "OS/2",
+      "from": "1987"
+    }
+  ],
+  "maker": "IBM and Microsoft",
+  "summary": "Operating system written by IBM and Microsoft as a successor to DOS. After the two companies fell out, Microsoft turned to Windows, and OS/2 stayed popular mainly in banks and cash machines.",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "aliases": [
+    "Operating System/2"
+  ],
+  "wikidata": "Q189794",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-12",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2006",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "IBM ended support after losing out to Windows",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    },
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: OS/2 (Q189794)",
+      "url": "https://www.wikidata.org/wiki/Q189794",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: OS/2",
+      "url": "https://en.wikipedia.org/wiki/OS%2F2",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

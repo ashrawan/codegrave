@@ -1,0 +1,64 @@
+{
+  "id": "fall-of-constantinople",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Fall of Constantinople",
+      "from": "1453"
+    }
+  ],
+  "summary": "The Ottoman army under Mehmed II captured Constantinople after a siege of about two months, ending the Byzantine Empire. The city became the Ottoman capital, later called Istanbul.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "conquest of Constantinople",
+    "capture of Constantinople"
+  ],
+  "wikidata": "Q160077",
+  "events": [
+    {
+      "type": "born",
+      "date": "1453-04-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1453-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "byzantine-empire"
+    },
+    {
+      "type": "in",
+      "to": "turkey"
+    },
+    {
+      "type": "related",
+      "to": "ottoman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fall of Constantinople (Q160077)",
+      "url": "https://www.wikidata.org/wiki/Q160077",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of Constantinople",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_Constantinople",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

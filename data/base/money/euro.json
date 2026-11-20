@@ -1,0 +1,52 @@
+{
+  "id": "euro",
+  "category": "money",
+  "names": [
+    {
+      "name": "Euro",
+      "from": "1999"
+    }
+  ],
+  "summary": "The common currency of much of the European Union. It began as an accounting unit in 1999, and notes and coins replaced national money such as the franc and the mark in 2002.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "wikidata": "Q4916",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    },
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: euro (Q4916)",
+      "url": "https://www.wikidata.org/wiki/Q4916",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Euro",
+      "url": "https://en.wikipedia.org/wiki/Euro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

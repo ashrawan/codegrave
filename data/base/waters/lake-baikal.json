@@ -1,0 +1,60 @@
+{
+  "id": "lake-baikal",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Lake Baikal",
+      "from": "-25000000"
+    }
+  ],
+  "summary": "The deepest and oldest lake in the world, in Siberia, holding about a fifth of the world's unfrozen fresh water. It lies in a rift valley, is home to the Baikal seal found nowhere else, and is a World Heritage site.",
+  "labels": [
+    "environment",
+    "record-holders",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Baikal",
+    "Baykal",
+    "Baikal Sea",
+    "Ozero Bajkal",
+    "Bajkal"
+  ],
+  "wikidata": "Q5513",
+  "events": [
+    {
+      "type": "born",
+      "date": "-25000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lake Baikal (Q5513)",
+      "url": "https://www.wikidata.org/wiki/Q5513",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lake Baikal",
+      "url": "https://en.wikipedia.org/wiki/Lake_Baikal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

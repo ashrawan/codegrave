@@ -1,0 +1,85 @@
+{
+  "id": "from-finches-to-genes",
+  "name": "From Finches to Genes: The Story of Evolution",
+  "description": "How a young naturalist on a survey ship, a rival in the Malay islands and a monk with his peas built the idea that explains the variety of life.",
+  "category": "life",
+  "labels": [
+    "biology",
+    "exploration",
+    "education"
+  ],
+  "tags": [
+    "darwin",
+    "evolution",
+    "natural selection",
+    "genetics",
+    "dna",
+    "fossils"
+  ],
+  "entries": [
+    "carl-linnaeus",
+    "james-hutton",
+    "charles-lyell",
+    "lamarckism",
+    "hms-beagle",
+    "beagle-voyage",
+    "galapagos-national-park",
+    "charles-darwin",
+    "alfred-russel-wallace",
+    "natural-selection",
+    "on-the-origin-of-species",
+    "gregor-mendel",
+    "mendelian-inheritance",
+    "mary-anning",
+    "archaeopteryx",
+    "tiktaalik",
+    "cambrian-explosion",
+    "neanderthals",
+    "homo-erectus",
+    "lucy-fossil",
+    "homo-sapiens",
+    "scopes-trial",
+    "dna-double-helix",
+    "rosalind-franklin",
+    "barbara-mcclintock",
+    "jane-goodall"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-darwin",
+      "name": "Before Darwin",
+      "from": 1707,
+      "to": 1830,
+      "note": "Linnaeus sorted living things into named groups, Hutton and Lyell opened up deep time, and Lamarck proposed that species change. Mary Anning's fossils showed that whole creatures had vanished."
+    },
+    {
+      "id": "voyage-and-idea",
+      "name": "The voyage and the idea",
+      "from": 1831,
+      "to": 1858,
+      "note": "Darwin sailed on HMS Beagle for five years and saw odd animals on the Galapagos. Years of private thought led him to natural selection, and a letter from Alfred Russel Wallace pushed him to publish."
+    },
+    {
+      "id": "the-book-and-battle",
+      "name": "The book and the battle",
+      "from": 1859,
+      "to": 1924,
+      "note": "On the Origin of Species made the case in 1859 and caused uproar. Mendel's pea work, found again around 1900, supplied the missing rules of heredity, while fossils such as Archaeopteryx filled in the record."
+    },
+    {
+      "id": "trial-and-synthesis",
+      "name": "Trial and synthesis",
+      "from": 1925,
+      "to": 1952,
+      "note": "The Scopes trial in Tennessee put the teaching of evolution in court. Biologists joined Darwin's idea to genetics, and McClintock found that genes can move about within a cell."
+    },
+    {
+      "id": "dna-and-human-origins",
+      "name": "DNA and our own origins",
+      "from": 1953,
+      "to": 2026,
+      "note": "Franklin's X-ray work helped reveal the double helix, giving heredity a physical basis. Fossils like Lucy, studies of Neanderthals and Goodall's chimpanzees now place Homo sapiens within the tree of life."
+    }
+  ],
+  "year": 1859
+}

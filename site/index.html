@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>codegrave — everything born here dies, or becomes something else</title>
-<meta name="description" content="One scrolling timeline of digital things: languages, browsers, machines and more, from first release to official end.">
+<meta name="description" content="One scrolling timeline of everything that begins and ends: people, places, wars, books, inventions, species and planets, from first to last.">
 <meta property="og:title" content="codegrave">
-<meta property="og:description" content="Nothing ships forever. One scrolling timeline of digital things.">
+<meta property="og:description" content="Nothing ships forever. One scrolling timeline of everything.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='6' fill='%23faf8f3' stroke='none'/%3E%3Cpath d='M3 27.5H29' stroke='%23121211' stroke-width='1.8'/%3E%3Cpath d='M6.5 27.5V12.5a6.5 6.5 0 0 1 13 0V27.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M21.5 27.5V20a3.5 3.5 0 0 1 7 0v7.5' stroke='%23121211' stroke-width='1.8' opacity='.55'/%3E%3Cpath d='M10 14.5l3 2.5-3 2.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M14 22.5h3.5' stroke='%239a6c00' stroke-width='2.6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,8 +68,9 @@
     </div>
     <label class="search">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
-      <input id="vq" type="search" placeholder="Search views, things or a year" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="vlist" aria-label="Search views, things or a year">
+      <input id="vq" type="search" placeholder="Search views, entries or a year" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="vlist" aria-label="Search views, entries or a year">
     </label>
+    <div id="branches" class="chips" role="radiogroup" aria-label="Show views about" hidden></div>
     <ul id="vlist" role="listbox" aria-label="Views" aria-multiselectable="true"></ul>
     <p id="vnote" class="fine"></p>
     <section class="filters" aria-label="Filters">
@@ -99,6 +100,7 @@
 
 <div id="axisbar" role="group" aria-label="Years">
   <div id="axis" tabindex="0" role="slider" aria-label="Move through time"><div id="axis-in"><div id="ticks"></div><div id="playhead"><span></span><i></i></div></div></div>
+  <span id="axis-unit" aria-live="polite" hidden></span>
   <div class="ends l">
     <button id="play" class="abtn solid" type="button" aria-label="Play the timeline"><svg width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg></button>
     <button id="stop" class="abtn" type="button" aria-label="Stop and show everything" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>

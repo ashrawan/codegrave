@@ -1,0 +1,70 @@
+{
+  "id": "china",
+  "category": "countries",
+  "names": [
+    {
+      "name": "China",
+      "from": "1949"
+    }
+  ],
+  "summary": "The People's Republic of China, proclaimed by Mao Zedong in 1949 after the civil war, a one-party state governed by the Communist Party. It is the world's second most populous country and a global manufacturing power.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "People's Republic of China",
+    "Red China",
+    "PR China",
+    "Communist China",
+    "China PR"
+  ],
+  "wikidata": "Q148",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "related",
+      "to": "qin-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: People's Republic of China (Q148)",
+      "url": "https://www.wikidata.org/wiki/Q148",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: China",
+      "url": "https://en.wikipedia.org/wiki/China",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,64 @@
+{
+  "id": "edward-vi",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Edward VI",
+      "from": "1537"
+    }
+  ],
+  "summary": "Son of Henry VIII, who became king at nine and died at fifteen. His advisers moved the English church further toward Protestant practice, including a new English Book of Common Prayer.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Edward VI of England",
+    "Edward VI, King of England",
+    "King Edward VI of England",
+    "Edward Tudor",
+    "Edward VI, King of England and Ireland"
+  ],
+  "wikidata": "Q83229",
+  "events": [
+    {
+      "type": "born",
+      "date": "1537-10-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1553-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "henry-viii"
+    },
+    {
+      "type": "part_of",
+      "to": "house-of-tudor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Edward VI of England (Q83229)",
+      "url": "https://www.wikidata.org/wiki/Q83229",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward VI",
+      "url": "https://en.wikipedia.org/wiki/Edward_VI",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

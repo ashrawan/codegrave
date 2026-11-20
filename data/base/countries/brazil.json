@@ -1,0 +1,66 @@
+{
+  "id": "brazil",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Brazil",
+      "from": "1822"
+    }
+  ],
+  "summary": "The largest country in South America, which became independent from Portugal in 1822. It is the largest Portuguese-speaking country and holds most of the Amazon rainforest.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Federative Republic of Brazil"
+  ],
+  "wikidata": "Q155",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822-09-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "in",
+      "to": "portuguese-empire"
+    },
+    {
+      "type": "related",
+      "to": "international-space-station"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brazil (Q155)",
+      "url": "https://www.wikidata.org/wiki/Q155",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brazil",
+      "url": "https://en.wikipedia.org/wiki/Brazil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

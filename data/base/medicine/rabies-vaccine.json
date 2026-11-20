@@ -1,0 +1,55 @@
+{
+  "id": "rabies-vaccine",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "Rabies vaccine",
+      "from": "1885"
+    }
+  ],
+  "maker": "Louis Pasteur",
+  "summary": "The first vaccine against a virus made in a laboratory for people. Louis Pasteur gave it to a boy bitten by a rabid dog in 1885, and rabies shots still protect people today.",
+  "labels": [
+    "medicine",
+    "firsts"
+  ],
+  "aliases": [
+    "rabies vaccines",
+    "HDCV",
+    "rabies virus vaccine",
+    "rabies virus vaccines"
+  ],
+  "wikidata": "Q4007169",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "louis-pasteur"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: rabies vaccine (Q4007169)",
+      "url": "https://www.wikidata.org/wiki/Q4007169",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rabies vaccine",
+      "url": "https://en.wikipedia.org/wiki/Rabies_vaccine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

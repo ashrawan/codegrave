@@ -1,0 +1,50 @@
+{
+  "id": "haruki-murakami",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Haruki Murakami",
+      "from": "1949"
+    }
+  ],
+  "summary": "Japanese novelist who ran a jazz bar before writing Norwegian Wood and Kafka on the Shore. His dreamlike stories, often with lonely narrators, are translated into dozens of languages.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Murakami Haruki"
+  ],
+  "wikidata": "Q134798",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-01-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "franz-kafka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Haruki Murakami (Q134798)",
+      "url": "https://www.wikidata.org/wiki/Q134798",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Haruki Murakami",
+      "url": "https://en.wikipedia.org/wiki/Haruki_Murakami",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "missoula-floods",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Missoula Floods",
+      "from": "-13000"
+    }
+  ],
+  "summary": "A series of huge floods at the end of the last ice age, when an ice dam holding back Glacial Lake Missoula in Montana repeatedly failed. The water carved deep channels across Washington state.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Spokane Floods",
+    "Bretz Floods"
+  ],
+  "wikidata": "Q371794",
+  "events": [
+    {
+      "type": "born",
+      "date": "-13000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-11000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Missoula Floods (Q371794)",
+      "url": "https://www.wikidata.org/wiki/Q371794",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Missoula floods",
+      "url": "https://en.wikipedia.org/wiki/Missoula_floods",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

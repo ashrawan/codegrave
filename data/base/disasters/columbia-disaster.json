@@ -1,0 +1,57 @@
+{
+  "id": "columbia-disaster",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Space Shuttle Columbia disaster",
+      "from": "2003"
+    }
+  ],
+  "summary": "The shuttle Columbia broke up while returning to Earth because of heat damage to its wing from a piece of foam that struck it at launch. All seven crew died, and the shuttle programme ended a few years later.",
+  "labels": [
+    "space-race",
+    "engineering"
+  ],
+  "wikidata": "Q580867",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-02-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003-02-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "texas"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Space Shuttle Columbia disaster (Q580867)",
+      "url": "https://www.wikidata.org/wiki/Q580867",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Space Shuttle Columbia disaster",
+      "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Columbia_disaster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,77 @@
+{
+  "id": "poets-of-the-world",
+  "name": "Poets of the World",
+  "description": "Three thousand years of verse from Greece, Persia, China, Japan, India, the Americas and Europe: the poets whose lines are still learned by heart.",
+  "category": "arts",
+  "labels": [
+    "literature"
+  ],
+  "tags": [
+    "poetry",
+    "poets",
+    "verse",
+    "epic",
+    "haiku",
+    "literature"
+  ],
+  "entries": [
+    "homer",
+    "iliad",
+    "sappho",
+    "virgil",
+    "ovid",
+    "li-bai",
+    "du-fu",
+    "murasaki-shikibu",
+    "ferdowsi",
+    "omar-khayyam",
+    "rumi",
+    "dante-alighieri",
+    "divine-comedy",
+    "hafez",
+    "geoffrey-chaucer",
+    "matsuo-basho",
+    "william-shakespeare",
+    "johann-wolfgang-von-goethe",
+    "alexander-pushkin",
+    "walt-whitman",
+    "emily-dickinson",
+    "rabindranath-tagore",
+    "federico-garcia-lorca",
+    "pablo-neruda",
+    "wislawa-szymborska",
+    "maya-angelou",
+    "bob-dylan"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-voices",
+      "name": "Ancient voices",
+      "from": -750,
+      "to": 17,
+      "note": "Homer sings of war and wandering, Sappho of desire, and Rome's Virgil and Ovid turn the Greek tradition into Latin verse."
+    },
+    {
+      "id": "the-golden-age-of-east-and-west",
+      "name": "The medieval masters",
+      "from": 18,
+      "to": 1400,
+      "note": "Tang poets Li Bai and Du Fu, Persia's Ferdowsi, Khayyam, Rumi and Hafez, Japan's Murasaki, and Dante and Chaucer in Europe make poetry of faith, love and the world."
+    },
+    {
+      "id": "early-modern-and-romantic",
+      "name": "Early modern and Romantic",
+      "from": 1401,
+      "to": 1859,
+      "note": "Shakespeare turns verse into drama, Bashō shrinks it to seventeen syllables, and Goethe and Pushkin carry a national language into the age of Romanticism."
+    },
+    {
+      "id": "modern-voices",
+      "name": "Modern voices",
+      "from": 1860,
+      "to": 2024,
+      "note": "Whitman, Dickinson, Tagore, Lorca, Neruda, Szymborska and Angelou write in the new free forms, and Dylan sets the poet's work to a guitar."
+    }
+  ],
+  "year": 1200
+}

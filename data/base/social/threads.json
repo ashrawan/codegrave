@@ -1,0 +1,55 @@
+{
+  "id": "threads",
+  "category": "social",
+  "names": [
+    {
+      "name": "Threads",
+      "from": "2023"
+    }
+  ],
+  "maker": "Meta",
+  "summary": "Text-based social network from Meta, launched in 2023 as a rival to Twitter. It is linked to Instagram accounts and gained a hundred million sign-ups in just a few days.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "Threads, an Instagram app",
+    "threads.net",
+    "Project 92",
+    "P92",
+    "Meta Threads"
+  ],
+  "wikidata": "Q120281745",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "meta-platforms"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Threads (Q120281745)",
+      "url": "https://www.wikidata.org/wiki/Q120281745",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Threads (social network)",
+      "url": "https://en.wikipedia.org/wiki/Threads_(social_network)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

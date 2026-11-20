@@ -1,0 +1,64 @@
+{
+  "id": "battle-of-berlin",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Berlin",
+      "from": "1945"
+    }
+  ],
+  "summary": "The final major battle in Europe, in which the Soviet Red Army surrounded and took Berlin. Hitler died by suicide in the city, and Germany surrendered a few days later.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Berlin Strategic Offensive Operation",
+    "Fall of Berlin"
+  ],
+  "wikidata": "Q154182",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-04-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-05-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "related",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Berlin (Q154182)",
+      "url": "https://www.wikidata.org/wiki/Q154182",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Berlin",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Berlin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

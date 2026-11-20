@@ -1,0 +1,78 @@
+{
+  "id": "the-legends-of-rock-and-pop",
+  "name": "The Legends of Rock and Pop",
+  "description": "Seventy years of the music that filled stadiums and radios: from Elvis and Chuck Berry to Beyoncé, the voices, bands and albums that shaped popular music.",
+  "category": "arts",
+  "labels": [
+    "music"
+  ],
+  "tags": [
+    "rock",
+    "pop",
+    "soul",
+    "beatles",
+    "elvis",
+    "album",
+    "guitar"
+  ],
+  "entries": [
+    "chuck-berry",
+    "little-richard",
+    "elvis-presley",
+    "the-beatles",
+    "the-rolling-stones",
+    "bob-dylan",
+    "aretha-franklin",
+    "jimi-hendrix",
+    "led-zeppelin",
+    "pink-floyd",
+    "bob-marley",
+    "david-bowie",
+    "queen-band",
+    "elton-john",
+    "stevie-wonder",
+    "bruce-springsteen",
+    "tina-turner",
+    "michael-jackson",
+    "thriller-album",
+    "madonna",
+    "prince",
+    "whitney-houston",
+    "nirvana",
+    "beyonce",
+    "taylor-swift",
+    "johnny-cash",
+    "ray-charles"
+  ],
+  "checkpoints": [
+    {
+      "id": "rock-and-roll",
+      "name": "Rock and roll",
+      "from": 1926,
+      "to": 1963,
+      "note": "Chuck Berry, Little Richard and Elvis blend blues, country and gospel into a sound for teenagers, while Ray Charles and Johnny Cash bring their own roots to the radio."
+    },
+    {
+      "id": "the-british-invasion",
+      "name": "The album age",
+      "from": 1964,
+      "to": 1979,
+      "note": "The Beatles, Stones and Dylan turn singles into albums and albums into statements, while Hendrix, Led Zeppelin, Pink Floyd, Marley and Bowie push sound and stagecraft."
+    },
+    {
+      "id": "the-video-era",
+      "name": "The video era",
+      "from": 1980,
+      "to": 1999,
+      "note": "MTV makes the image as important as the song. Michael Jackson's Thriller, Madonna and Prince rule the charts, and Queen's Live Aid set draws the world's eyes."
+    },
+    {
+      "id": "streaming-stars",
+      "name": "Streaming stars",
+      "from": 2000,
+      "to": 2024,
+      "note": "Beyoncé and Taylor Swift build huge careers in the download and streaming age, drawing on the soul, country and rock traditions the earlier stars had made."
+    }
+  ],
+  "year": 1975
+}

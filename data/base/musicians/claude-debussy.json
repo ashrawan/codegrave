@@ -1,0 +1,54 @@
+{
+  "id": "claude-debussy",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Claude Debussy",
+      "from": "1862"
+    }
+  ],
+  "summary": "French composer whose music, such as Clair de lune and the orchestral La mer, focuses on mood and colour rather than strict form. He is often linked to Impressionism, though he disliked the label.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Achille Claude Debussy",
+    "Claude-Achille Debussy",
+    "A. Cl. Debussy",
+    "Achille-Claude",
+    "C. Debussy"
+  ],
+  "wikidata": "Q4700",
+  "events": [
+    {
+      "type": "born",
+      "date": "1862-08-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Claude Debussy (Q4700)",
+      "url": "https://www.wikidata.org/wiki/Q4700",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Claude Debussy",
+      "url": "https://en.wikipedia.org/wiki/Claude_Debussy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

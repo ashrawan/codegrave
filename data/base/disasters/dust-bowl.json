@@ -1,0 +1,62 @@
+{
+  "id": "dust-bowl",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Dust Bowl",
+      "from": "1930"
+    }
+  ],
+  "summary": "Years of drought and farming methods that left bare soil caused huge dust storms across the southern American Plains. Many farm families left for the west, and the crisis led to new soil-saving practices.",
+  "labels": [
+    "environment",
+    "economics"
+  ],
+  "aliases": [
+    "Dirty thirty's",
+    "Dust Bowl Era",
+    "Dustbowl Era"
+  ],
+  "wikidata": "Q726501",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1936",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dust Bowl (Q726501)",
+      "url": "https://www.wikidata.org/wiki/Q726501",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dust Bowl",
+      "url": "https://en.wikipedia.org/wiki/Dust_Bowl",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

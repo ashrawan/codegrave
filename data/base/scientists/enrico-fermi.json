@@ -1,0 +1,61 @@
+{
+  "id": "enrico-fermi",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Enrico Fermi",
+      "from": "1901"
+    }
+  ],
+  "summary": "Italian physicist who developed the theory of beta decay and led the team that built the first nuclear reactor in Chicago in 1942. He won the 1938 Nobel Prize in Physics and later moved to the United States.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "wikidata": "Q8753",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-09-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1954-11-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "otto-hahn"
+    },
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Enrico Fermi (Q8753)",
+      "url": "https://www.wikidata.org/wiki/Q8753",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Enrico Fermi",
+      "url": "https://en.wikipedia.org/wiki/Enrico_Fermi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "salvador-dali",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Salvador Dalí",
+      "from": "1904"
+    }
+  ],
+  "summary": "Spanish painter and Surrealist who painted dreamlike scenes such as The Persistence of Memory, with its melting clocks. He was also known for his showy public image and moustache.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q5577",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-05-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-01-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "friedrich-nietzsche"
+    },
+    {
+      "type": "influenced_by",
+      "to": "pablo-picasso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Salvador Dalí (Q5577)",
+      "url": "https://www.wikidata.org/wiki/Q5577",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Salvador Dalí",
+      "url": "https://en.wikipedia.org/wiki/Salvador_Dal%C3%AD",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

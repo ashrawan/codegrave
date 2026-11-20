@@ -1,0 +1,44 @@
+{
+  "id": "gyrocompass",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Gyrocompass",
+      "from": "1908"
+    }
+  ],
+  "maker": "Hermann Anschütz-Kaempfe",
+  "summary": "A compass that uses a fast-spinning wheel to find true north rather than magnetic north. It works on steel ships and in submarines, where a magnetic compass is unreliable.",
+  "labels": [
+    "exploration",
+    "engineering"
+  ],
+  "wikidata": "Q921229",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: gyrocompass (Q921229)",
+      "url": "https://www.wikidata.org/wiki/Q921229",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gyrocompass",
+      "url": "https://en.wikipedia.org/wiki/Gyrocompass",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "quagga",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Quagga",
+      "from": "-200000"
+    }
+  ],
+  "summary": "A kind of zebra from South Africa with stripes on the front of its body and a plain brown rear. Settlers hunted it, and the last one died in the Amsterdam zoo. Its DNA has been studied.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Equus quagga quagga"
+  ],
+  "wikidata": "Q45969",
+  "events": [
+    {
+      "type": "born",
+      "date": "-200000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1883",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Shot for meat and hides and to make room for farm animals",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: quagga (Q45969)",
+      "url": "https://www.wikidata.org/wiki/Q45969",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quagga",
+      "url": "https://en.wikipedia.org/wiki/Quagga",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

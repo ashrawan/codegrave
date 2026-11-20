@@ -1,0 +1,63 @@
+{
+  "id": "pakistan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Pakistan",
+      "from": "1947"
+    }
+  ],
+  "summary": "A South Asian republic created in 1947 as a homeland for Muslims when British India was partitioned. Its eastern part broke away as Bangladesh in 1971, and it is among the most populous countries.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "aliases": [
+    "Islamic Republic of Pakistan",
+    "Republic of Pakistan",
+    "pk",
+    "Hồi Quốc",
+    "Tây Hồi"
+  ],
+  "wikidata": "Q843",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pakistan (Q843)",
+      "url": "https://www.wikidata.org/wiki/Q843",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pakistan",
+      "url": "https://en.wikipedia.org/wiki/Pakistan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

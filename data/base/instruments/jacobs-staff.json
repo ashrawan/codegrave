@@ -1,0 +1,56 @@
+{
+  "id": "jacobs-staff",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Jacob's staff",
+      "from": "1300"
+    }
+  ],
+  "maker": "Levi ben Gerson",
+  "summary": "A long wooden rod with a sliding cross piece, used by sailors to measure the angle between the horizon and a star or the Sun. It was used for finding latitude until better instruments arrived.",
+  "labels": [
+    "exploration",
+    "lost"
+  ],
+  "aliases": [
+    "cross-staff",
+    "ballastella",
+    "fore-staff",
+    "balestilha"
+  ],
+  "wikidata": "Q843239",
+  "events": [
+    {
+      "type": "born",
+      "date": "1300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the backstaff, quadrant and sextant",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Jacob's staff (Q843239)",
+      "url": "https://www.wikidata.org/wiki/Q843239",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jacob's staff",
+      "url": "https://en.wikipedia.org/wiki/Jacob's_staff",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

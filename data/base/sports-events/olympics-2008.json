@@ -1,0 +1,59 @@
+{
+  "id": "olympics-2008",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2008 Summer Olympics",
+      "from": "2008"
+    }
+  ],
+  "summary": "Beijing hosted the Games with a vast opening ceremony and a new Bird's Nest stadium. The swimmer Michael Phelps won eight gold medals, and the sprinter Usain Bolt set world records in the 100 and 200 metres.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Beijing 2008",
+    "Games of the XXIX Olympiad",
+    "The Games of the XXIX Olympiad",
+    "2008 Olympics",
+    "The Beijing Olympics"
+  ],
+  "wikidata": "Q8567",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-08-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2008-08-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2008 Summer Olympics (Q8567)",
+      "url": "https://www.wikidata.org/wiki/Q8567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2008 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/2008_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

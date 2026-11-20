@@ -1,0 +1,63 @@
+{
+  "id": "armenia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Armenia",
+      "from": "1991"
+    }
+  ],
+  "summary": "A mountainous country of the South Caucasus, with a claim to be the first nation to adopt Christianity as a state religion. It regained independence from the Soviet Union in 1991.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Armenia",
+    "Hayastani Hanrapetut’yun"
+  ],
+  "wikidata": "Q399",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Armenia (Q399)",
+      "url": "https://www.wikidata.org/wiki/Q399",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Armenia",
+      "url": "https://en.wikipedia.org/wiki/Armenia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

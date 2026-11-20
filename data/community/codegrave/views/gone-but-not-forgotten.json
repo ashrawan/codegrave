@@ -1,0 +1,76 @@
+{
+  "id": "gone-but-not-forgotten",
+  "name": "Gone but Not Forgotten: Dead Media and Lost Gadgets",
+  "description": "Beta tapes, MiniDiscs, teletext and typewriters: the formats, machines and cures that ruled their day and then vanished.",
+  "category": "technology",
+  "labels": [
+    "lost",
+    "failures"
+  ],
+  "tags": [
+    "dead media",
+    "obsolete",
+    "gadgets",
+    "vhs",
+    "betamax",
+    "retro",
+    "format war"
+  ],
+  "entries": [
+    "slide-rule",
+    "optical-telegraph",
+    "daguerreotype",
+    "penny-black",
+    "typewriter",
+    "phonograph-cylinder",
+    "linotype-machine",
+    "kinetoscope",
+    "rotary-dial",
+    "radithor",
+    "mechanical-television",
+    "iron-lung",
+    "kodachrome",
+    "loran",
+    "eight-track-tape",
+    "betamax",
+    "vhs",
+    "laserdisc",
+    "ceefax",
+    "walkman",
+    "minitel",
+    "f-117-nighthawk",
+    "minidisc",
+    "flavr-savr"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-electronics",
+      "name": "Before the electronic age",
+      "from": 1622,
+      "to": 1899,
+      "note": "The slide rule, signal towers, early photographs and one-penny stamps served well for a time. The typewriter, record cylinder and typesetting machine were soon replaced by better methods."
+    },
+    {
+      "id": "half-century",
+      "name": "The first half of the century",
+      "from": 1900,
+      "to": 1949,
+      "note": "Quack medicines such as radium tonics, the iron lung and the whirring spinning-disc television belonged to a world that moved quickly and left some inventions behind."
+    },
+    {
+      "id": "format-wars",
+      "name": "Tapes and format wars",
+      "from": 1950,
+      "to": 1979,
+      "note": "Eight-track tapes, Betamax, VHS and LaserDisc fought over the living room, and teletext brought text to television. Format wars left winners, losers and drawers full of tapes."
+    },
+    {
+      "id": "digital-takes-over",
+      "name": "The digital takeover",
+      "from": 1980,
+      "to": 2026,
+      "note": "Minitel, MiniDisc and cassette Walkmans, stealth jets and gene-modified tomatoes: some failed and some simply gave way to digital successors."
+    }
+  ],
+  "year": 1980
+}

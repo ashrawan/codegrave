@@ -1,0 +1,56 @@
+{
+  "id": "cubism",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Cubism",
+      "from": "1907"
+    }
+  ],
+  "summary": "Style developed in Paris by Pablo Picasso and Georges Braque, showing objects broken into shapes and seen from several angles at once. It broke with the single viewpoint used since the Renaissance and shaped abstract art.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q42934",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1920",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "influenced_by",
+      "to": "paul-cezanne"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: cubism (Q42934)",
+      "url": "https://www.wikidata.org/wiki/Q42934",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cubism",
+      "url": "https://en.wikipedia.org/wiki/Cubism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "belgian-antarctic-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Belgian Antarctic Expedition",
+      "from": "1897"
+    }
+  ],
+  "summary": "A Belgian-led expedition was the first to spend a winter south of the Antarctic Circle, when its ship became trapped in the ice. Roald Amundsen served as an officer, and the crew learned much about surviving polar winters.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q815478",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897-08-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1899-11-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "roald-amundsen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Belgian Antarctic Expedition (Q815478)",
+      "url": "https://www.wikidata.org/wiki/Q815478",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belgian Antarctic Expedition",
+      "url": "https://en.wikipedia.org/wiki/Belgian_Antarctic_Expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

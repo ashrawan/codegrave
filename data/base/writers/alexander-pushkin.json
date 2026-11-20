@@ -1,0 +1,71 @@
+{
+  "id": "alexander-pushkin",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Alexander Pushkin",
+      "from": "1799"
+    }
+  ],
+  "summary": "Russian poet and novelist who wrote Eugene Onegin in verse and the play Boris Godunov. He is seen as the founder of modern Russian literature and died after a duel in St Petersburg.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Aleksandr Serge'evich Pushkin",
+    "Aleksandr Sergeyevich Pushkin",
+    "Aleksandr Pushkin",
+    "Alexander Sergeyevich Pushkin",
+    "Pushkin"
+  ],
+  "wikidata": "Q7200",
+  "events": [
+    {
+      "type": "born",
+      "date": "1799-05-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1837-01-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "voltaire"
+    },
+    {
+      "type": "influenced_by",
+      "to": "dante-alighieri"
+    },
+    {
+      "type": "influenced_by",
+      "to": "johann-wolfgang-von-goethe"
+    },
+    {
+      "type": "influenced_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alexander Pushkin (Q7200)",
+      "url": "https://www.wikidata.org/wiki/Q7200",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexander Pushkin",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Pushkin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

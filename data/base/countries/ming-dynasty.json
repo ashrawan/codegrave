@@ -1,0 +1,61 @@
+{
+  "id": "ming-dynasty",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ming dynasty",
+      "from": "1368"
+    }
+  ],
+  "summary": "The Chinese dynasty that replaced Mongol rule and built much of the Great Wall as it stands. It sent Zheng He's large fleets across the Indian Ocean and built the Forbidden City in Beijing.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Empire of the Great Ming",
+    "Ming China",
+    "Ming Empire",
+    "Ming imperium",
+    "Ming-era"
+  ],
+  "wikidata": "Q9903",
+  "events": [
+    {
+      "type": "born",
+      "date": "1368",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1644",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Fell to peasant rebels and the Manchu invasion",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "qing-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ming dynasty (Q9903)",
+      "url": "https://www.wikidata.org/wiki/Q9903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ming dynasty",
+      "url": "https://en.wikipedia.org/wiki/Ming_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

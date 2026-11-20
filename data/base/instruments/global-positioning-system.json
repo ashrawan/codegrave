@@ -1,0 +1,53 @@
+{
+  "id": "global-positioning-system",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Global Positioning System",
+      "from": "1978"
+    }
+  ],
+  "maker": "United States Department of Defense",
+  "summary": "A network of satellites whose signals let a receiver on the ground find its position. Begun for the American military, it is now used in phones, cars, ships, aircraft and farming.",
+  "labels": [
+    "exploration",
+    "engineering"
+  ],
+  "aliases": [
+    "GPS",
+    "Global Positioning System, GPS"
+  ],
+  "wikidata": "Q18822",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Global Positioning System (Q18822)",
+      "url": "https://www.wikidata.org/wiki/Q18822",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Global Positioning System",
+      "url": "https://en.wikipedia.org/wiki/Global_Positioning_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

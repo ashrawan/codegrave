@@ -1,0 +1,67 @@
+{
+  "id": "story-of-the-world-cup",
+  "name": "Eleven Players and a Planet: The Story of the World Cup",
+  "description": "From thirteen teams in Montevideo to a worldwide festival: the football World Cup through upsets, heroes and heartbreak.",
+  "category": "events",
+  "labels": [
+    "sport"
+  ],
+  "tags": [
+    "world cup",
+    "football",
+    "soccer",
+    "fifa",
+    "pele",
+    "maradona"
+  ],
+  "entries": [
+    "world-cup-1930",
+    "world-cup-1934",
+    "world-cup-1950",
+    "world-cup-1954",
+    "world-cup-1958",
+    "pele",
+    "world-cup-1966",
+    "world-cup-1970",
+    "world-cup-1974",
+    "world-cup-1986",
+    "diego-maradona",
+    "world-cup-1990",
+    "world-cup-1994",
+    "world-cup-2002",
+    "world-cup-2010",
+    "world-cup-2014",
+    "world-cup-2022"
+  ],
+  "checkpoints": [
+    {
+      "id": "early-cups",
+      "name": "The early cups",
+      "from": 1930,
+      "to": 1954,
+      "note": "A small tournament in Uruguay turns into a global event. Home teams win, Brazil is stunned at the Maracana, and Germany shocks Hungary in Bern."
+    },
+    {
+      "id": "age-of-pele",
+      "name": "The age of Pele",
+      "from": 1958,
+      "to": 1974,
+      "note": "Television brings the Cup into homes across the world. Brazil wins three times, England wins once at Wembley, and the Dutch bring a new style of play."
+    },
+    {
+      "id": "television-age",
+      "name": "Stars and money",
+      "from": 1986,
+      "to": 1994,
+      "note": "Maradona leads Argentina to glory, and the tournament moves to Italy and then the United States, where it becomes a giant business."
+    },
+    {
+      "id": "global-cup",
+      "name": "A global game",
+      "from": 2002,
+      "to": 2022,
+      "note": "The Cup goes to Asia, Africa and the Middle East. Spain, Germany and Argentina win, and the final of 2022 is decided on penalties after an extraordinary match."
+    }
+  ],
+  "year": 1970
+}

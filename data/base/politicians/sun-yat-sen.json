@@ -1,0 +1,59 @@
+{
+  "id": "sun-yat-sen",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Sun Yat-sen",
+      "from": "1866"
+    }
+  ],
+  "summary": "Chinese physician and revolutionary who helped overthrow the Qing dynasty in 1911. He served as the first provisional president of the Republic of China and founded the Kuomintang.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Yahtsīn",
+    "Sun Zhongshan",
+    "Sun Yatsen",
+    "Sun Chung-san",
+    "Sūn Démíng"
+  ],
+  "wikidata": "Q8573",
+  "events": [
+    {
+      "type": "born",
+      "date": "1866-11-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1925-03-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sun Yat-sen (Q8573)",
+      "url": "https://www.wikidata.org/wiki/Q8573",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sun Yat-sen",
+      "url": "https://en.wikipedia.org/wiki/Sun_Yat-sen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "french-algeria",
+  "category": "regions",
+  "names": [
+    {
+      "name": "French Algeria",
+      "from": "1832"
+    }
+  ],
+  "summary": "The French rule of Algeria, begun with the invasion of 1830 and treated as part of France itself. It ended after the Algerian War of independence in the 1950s and early 1960s.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Colonial Algeria"
+  ],
+  "wikidata": "Q218272",
+  "events": [
+    {
+      "type": "born",
+      "date": "1832",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1962-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended by the Evian Accords and Algerian independence",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Algeria (Q218272)",
+      "url": "https://www.wikidata.org/wiki/Q218272",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Algeria",
+      "url": "https://en.wikipedia.org/wiki/French_Algeria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

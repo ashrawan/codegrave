@@ -1,0 +1,66 @@
+{
+  "id": "platonic-academy",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Platonic Academy",
+      "from": "-0387"
+    }
+  ],
+  "summary": "School founded by Plato in a grove near Athens, where Aristotle studied for twenty years. It lasted in various forms for about nine centuries and was closed under the Emperor Justinian.",
+  "labels": [
+    "education",
+    "philosophy"
+  ],
+  "aliases": [
+    "Academy of Plato",
+    "Plato's Academy"
+  ],
+  "wikidata": "Q193093",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0387",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0529",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed by Emperor Justinian",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "plato"
+    },
+    {
+      "type": "in",
+      "to": "athens"
+    },
+    {
+      "type": "in",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Platonic Academy (Q193093)",
+      "url": "https://www.wikidata.org/wiki/Q193093",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Platonic Academy",
+      "url": "https://en.wikipedia.org/wiki/Platonic_Academy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

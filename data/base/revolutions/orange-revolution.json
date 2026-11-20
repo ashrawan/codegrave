@@ -1,0 +1,52 @@
+{
+  "id": "orange-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Orange Revolution",
+      "from": "2004"
+    }
+  ],
+  "summary": "Mass protests in Ukraine against a rigged presidential election. The vote was repeated and Viktor Yushchenko won. Orange was the colour of the opposition.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q836386",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-11-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-01-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Orange Revolution (Q836386)",
+      "url": "https://www.wikidata.org/wiki/Q836386",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Orange Revolution",
+      "url": "https://en.wikipedia.org/wiki/Orange_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

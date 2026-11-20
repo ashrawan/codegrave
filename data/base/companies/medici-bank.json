@@ -1,0 +1,55 @@
+{
+  "id": "medici-bank",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Medici Bank",
+      "from": "1397"
+    }
+  ],
+  "maker": "Giovanni di Bicci de' Medici",
+  "summary": "Florentine bank founded by Giovanni di Bicci de' Medici that became one of the leading banks in Europe, with branches in many cities. Its wealth let the Medici family rule Florence and pay for Renaissance art.",
+  "labels": [
+    "business",
+    "economics"
+  ],
+  "wikidata": "Q806191",
+  "events": [
+    {
+      "type": "born",
+      "date": "1397",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1499",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Collapsed after bad loans and the family's expulsion from Florence",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "florence"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Medici Bank (Q806191)",
+      "url": "https://www.wikidata.org/wiki/Q806191",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Medici Bank",
+      "url": "https://en.wikipedia.org/wiki/Medici_Bank",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

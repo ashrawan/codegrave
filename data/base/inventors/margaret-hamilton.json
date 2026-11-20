@@ -1,0 +1,56 @@
+{
+  "id": "margaret-hamilton",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Margaret Hamilton",
+      "from": "1936"
+    }
+  ],
+  "summary": "American computer scientist who led the team that wrote the flight software for NASA's Apollo missions at MIT. She helped establish the field of software engineering, and her code's priority scheduling helped the Apollo 11 landing continue.",
+  "labels": [
+    "computing",
+    "space-race"
+  ],
+  "aliases": [
+    "Rope Mother"
+  ],
+  "wikidata": "Q11628",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-08-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2026-09-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "apollo-program"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Margaret Hamilton (Q11628)",
+      "url": "https://www.wikidata.org/wiki/Q11628",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Margaret Hamilton (software engineer)",
+      "url": "https://en.wikipedia.org/wiki/Margaret_Hamilton_(software_engineer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

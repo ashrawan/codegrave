@@ -1,0 +1,58 @@
+{
+  "id": "arsenal-fc",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Arsenal",
+      "from": "1886"
+    }
+  ],
+  "summary": "London football club that began as a workers' team at a royal arsenal in Woolwich. It moved north of the river in 1913 and won the league without a defeat in 2003-04.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "AFC",
+    "Arsenal Football Club",
+    "The Arsenal",
+    "The Ars",
+    "The Arsenal F.C."
+  ],
+  "wikidata": "Q9617",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Arsenal F.C. (Q9617)",
+      "url": "https://www.wikidata.org/wiki/Q9617",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Arsenal F.C.",
+      "url": "https://en.wikipedia.org/wiki/Arsenal_F.C.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

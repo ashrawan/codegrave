@@ -1,0 +1,73 @@
+{
+  "id": "the-animals-we-wiped-out",
+  "name": "The Animals We Wiped Out",
+  "description": "The dodo, the great auk, the thylacine and the passenger pigeon: how hunting, new predators and lost habitats ended species within living memory.",
+  "category": "life",
+  "labels": [
+    "extinct-by-humans",
+    "environment"
+  ],
+  "tags": [
+    "extinction",
+    "dodo",
+    "thylacine",
+    "passenger pigeon",
+    "conservation",
+    "endangered"
+  ],
+  "entries": [
+    "woolly-mammoth",
+    "megatherium",
+    "dire-wolf",
+    "aurochs",
+    "silphium",
+    "elephant-bird",
+    "moa",
+    "dodo",
+    "stellers-sea-cow",
+    "great-auk",
+    "quagga",
+    "passenger-pigeon",
+    "carolina-parakeet",
+    "thylacine",
+    "american-chestnut",
+    "golden-toad",
+    "pyrenean-ibex",
+    "western-black-rhinoceros",
+    "baiji",
+    "lonesome-george",
+    "quaternary-extinction",
+    "holocene-extinction"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-hunters",
+      "name": "The first hunters",
+      "from": -50000,
+      "to": -1,
+      "note": "After humans spread across the world, mammoths, giant sloths and many other large animals disappear, though climate change shares the blame."
+    },
+    {
+      "id": "islands-and-empires",
+      "name": "Islands and empires",
+      "from": 1,
+      "to": 1599,
+      "note": "Roman demand ends silphium, and the first settlers of Madagascar and New Zealand hunt the elephant birds and moa to extinction."
+    },
+    {
+      "id": "age-of-sail",
+      "name": "The age of sail and the gun",
+      "from": 1600,
+      "to": 1899,
+      "note": "Sailors kill off the dodo, the sea cow and the great auk, and market hunters shoot the passenger pigeon and the quagga."
+    },
+    {
+      "id": "modern-losses",
+      "name": "Modern losses",
+      "from": 1900,
+      "to": 2026,
+      "note": "The last passenger pigeon, thylacine and Pinta tortoise die, and more species go because of pollution, poaching, disease and habitat loss."
+    }
+  ],
+  "year": 1900
+}

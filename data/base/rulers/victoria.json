@@ -1,0 +1,59 @@
+{
+  "id": "victoria",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Queen Victoria",
+      "from": "1819"
+    }
+  ],
+  "summary": "Queen of the United Kingdom for over sixty-three years and Empress of India. Her reign saw rapid industrial change and the growth of the British Empire, and an age is named after her.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Victoria",
+    "Victoria, Queen of Great Britain",
+    "Alexandrina Victoria von Hannover",
+    "Princess Victoria of Kent",
+    "Queen of Great Britain Victoria"
+  ],
+  "wikidata": "Q9439",
+  "events": [
+    {
+      "type": "born",
+      "date": "1819-05-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1901-01-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Victoria (Q9439)",
+      "url": "https://www.wikidata.org/wiki/Q9439",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Queen Victoria",
+      "url": "https://en.wikipedia.org/wiki/Queen_Victoria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,97 @@
+{
+  "id": "from-napster-to-netflix",
+  "name": "From Napster to Netflix",
+  "description": "How music and film went from shelves of discs and tapes to a stream on your phone: the formats, the pirates, the players and the services that changed entertainment.",
+  "category": "computing",
+  "labels": [
+    "media",
+    "music",
+    "business"
+  ],
+  "tags": [
+    "music",
+    "streaming",
+    "napster",
+    "mp3",
+    "ipod",
+    "spotify",
+    "netflix",
+    "youtube"
+  ],
+  "entries": [
+    "walkman",
+    "compact-disc",
+    "vhs",
+    "betamax",
+    "laserdisc",
+    "discman",
+    "minidisc",
+    "mp3",
+    "quicktime",
+    "realplayer",
+    "winamp",
+    "dvd",
+    "napster",
+    "kazaa",
+    "limewire",
+    "bittorrent",
+    "the-pirate-bay",
+    "ipod",
+    "itunes-store",
+    "youtube",
+    "tivo",
+    "hd-dvd",
+    "blu-ray",
+    "zune",
+    "netflix",
+    "pandora",
+    "spotify",
+    "hulu",
+    "soundcloud",
+    "vimeo",
+    "twitch",
+    "flip-video",
+    "grooveshark",
+    "bandcamp",
+    "chromecast",
+    "apple-music"
+  ],
+  "checkpoints": [
+    {
+      "id": "tapes-and-discs",
+      "name": "Tapes and discs",
+      "from": 1975,
+      "to": 1989,
+      "note": "The Walkman takes music outside, and the VHS tape beats Betamax in a format war. The compact disc brings clean digital sound, and LaserDisc shows a taste for sharper film at home."
+    },
+    {
+      "id": "digital-formats",
+      "name": "Digital formats",
+      "from": 1990,
+      "to": 1998,
+      "note": "MP3 shrinks songs to a size computers can handle, and players such as QuickTime, RealPlayer and Winamp make them playable. The DVD replaces tapes, and a revolution waits for faster connections."
+    },
+    {
+      "id": "file-sharing",
+      "name": "The file-sharing years",
+      "from": 1999,
+      "to": 2004,
+      "note": "Napster, Kazaa and BitTorrent let anyone share songs, and the music industry sues. Apple answers with the iPod and the iTunes Store, which sell songs for a small price."
+    },
+    {
+      "id": "video-and-streaming",
+      "name": "Video and streaming",
+      "from": 2005,
+      "to": 2012,
+      "note": "YouTube, Netflix, Hulu and Spotify move entertainment from files on disks to streams. Blu-ray wins its war with HD DVD, just as discs begin to fade."
+    },
+    {
+      "id": "streaming-everywhere",
+      "name": "Streaming everywhere",
+      "from": 2013,
+      "to": 2026,
+      "note": "Subscriptions replace ownership. Apple Music and Spotify fight over listeners, Twitch brings live gaming to the screen, and artists look for direct ways to reach fans."
+    }
+  ],
+  "year": 2005
+}

@@ -1,0 +1,92 @@
+{
+  "id": "how-europes-map-was-drawn",
+  "name": "Lines on the Map: How Europe Was Drawn and Redrawn",
+  "description": "Kingdoms, empires and republics from Charlemagne to the Berlin Wall: how Europe took its shape through wars, marriages, treaties and revolutions.",
+  "category": "places",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "tags": [
+    "europe",
+    "map",
+    "borders",
+    "germany",
+    "italy",
+    "napoleon",
+    "versailles"
+  ],
+  "entries": [
+    "carolingian-empire",
+    "holy-roman-empire",
+    "kievan-rus",
+    "kingdom-of-france",
+    "kingdom-of-england",
+    "kingdom-of-scotland",
+    "kingdom-of-hungary",
+    "kingdom-of-bohemia",
+    "republic-of-venice",
+    "papal-states",
+    "kingdom-of-sicily",
+    "prussia",
+    "polish-lithuanian-commonwealth",
+    "peace-of-westphalia",
+    "russian-empire",
+    "first-french-empire",
+    "congress-of-vienna",
+    "austrian-empire",
+    "kingdom-of-sardinia",
+    "belgium",
+    "greece",
+    "italian-unification",
+    "unification-of-germany",
+    "german-empire",
+    "austria-hungary",
+    "alsace-lorraine",
+    "treaty-of-versailles",
+    "weimar-republic",
+    "czechoslovakia",
+    "free-city-of-danzig",
+    "nazi-germany",
+    "east-germany",
+    "fall-of-the-berlin-wall"
+  ],
+  "checkpoints": [
+    {
+      "id": "frankish-heirs",
+      "name": "Frankish heirs",
+      "from": 800,
+      "to": 1499,
+      "note": "Charlemagne's empire splits, and out of its pieces come the kingdoms of France and Germany. England, Scotland, Hungary, Bohemia and Kievan Rus take shape, while Venice and the pope hold power in Italy."
+    },
+    {
+      "id": "religion-and-monarchy",
+      "name": "Religion and monarchy",
+      "from": 1500,
+      "to": 1713,
+      "note": "Wars of religion and dynasty reshape the map. The Peace of Westphalia in 1648 sets rules for sovereign states, as Poland-Lithuania and Prussia rise and Russia grows."
+    },
+    {
+      "id": "revolution-and-napoleon",
+      "name": "Revolution and Napoleon",
+      "from": 1714,
+      "to": 1814,
+      "note": "The French Revolution and Napoleon sweep away old states, including the Holy Roman Empire and Venice. The Austrian Empire and the Russian Empire become great powers."
+    },
+    {
+      "id": "nations-made-by-iron",
+      "name": "Nations made by iron",
+      "from": 1815,
+      "to": 1913,
+      "note": "After the Congress of Vienna new nations form: Belgium and Greece first, then Italy and Germany. The German Empire is proclaimed in 1871 and Austria-Hungary tries to hold many peoples together."
+    },
+    {
+      "id": "broken-and-rebuilt",
+      "name": "Broken and rebuilt",
+      "from": 1914,
+      "to": 1991,
+      "note": "The First World War ends three empires and creates new states, such as Czechoslovakia. After the Second World War a divided Germany stands at the centre of the Cold War until the wall comes down."
+    }
+  ],
+  "year": 1815
+}

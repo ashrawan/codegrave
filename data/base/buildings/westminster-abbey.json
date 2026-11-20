@@ -1,0 +1,48 @@
+{
+  "id": "westminster-abbey",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Westminster Abbey",
+      "from": "0960"
+    }
+  ],
+  "summary": "Great church beside the Houses of Parliament in London. It has been the setting for coronations of English and British monarchs for nearly a thousand years and holds the tombs of many kings, poets and scientists.",
+  "labels": [
+    "architecture",
+    "religion"
+  ],
+  "wikidata": "Q5933",
+  "events": [
+    {
+      "type": "born",
+      "date": "0960",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Westminster Abbey (Q5933)",
+      "url": "https://www.wikidata.org/wiki/Q5933",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Westminster Abbey",
+      "url": "https://en.wikipedia.org/wiki/Westminster_Abbey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

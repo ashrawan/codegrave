@@ -1,0 +1,49 @@
+{
+  "id": "khufu-ship",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Khufu ship",
+      "from": "-2500"
+    }
+  ],
+  "maker": "Egyptians under Khufu",
+  "summary": "A cedar-wood ship about 43 metres long, buried in a pit beside the Great Pyramid of Giza for King Khufu. Found in 1954 and rebuilt from over a thousand pieces, it is one of the oldest large ships to survive.",
+  "labels": [
+    "transport",
+    "world-heritage"
+  ],
+  "wikidata": "Q1711677",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Khufu ship (Q1711677)",
+      "url": "https://www.wikidata.org/wiki/Q1711677",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Khufu ship",
+      "url": "https://en.wikipedia.org/wiki/Khufu_ship",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

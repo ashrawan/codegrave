@@ -1,0 +1,54 @@
+{
+  "id": "jesus",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Jesus",
+      "from": "-0005"
+    }
+  ],
+  "summary": "Jewish teacher from Galilee whose life and teachings are the basis of Christianity, in which he is believed to be the Son of God. He was crucified under the Roman governor Pontius Pilate. His dates are approximate.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Jesus Christ",
+    "Yeshua ben-Yosef",
+    "Jesus of Nazareth",
+    "God the Son",
+    "Yeshua"
+  ],
+  "wikidata": "Q302",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0005",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0030-04-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Jesus Christ (Q302)",
+      "url": "https://www.wikidata.org/wiki/Q302",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jesus",
+      "url": "https://en.wikipedia.org/wiki/Jesus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

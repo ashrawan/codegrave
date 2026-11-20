@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-dien-bien-phu",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Dien Bien Phu",
+      "from": "1954"
+    }
+  ],
+  "summary": "The decisive battle of the First Indochina War, in which Viet Minh forces besieged and overran a French base in north-west Vietnam. It ended French rule in Indochina.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Fall of Dien Bien Phu"
+  ],
+  "wikidata": "Q604897",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-03-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1954-05-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "first-indochina-war"
+    },
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Dien Bien Phu (Q604897)",
+      "url": "https://www.wikidata.org/wiki/Q604897",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Dien Bien Phu",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Dien_Bien_Phu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

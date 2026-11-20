@@ -1,0 +1,49 @@
+{
+  "id": "anno-domini",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Anno Domini",
+      "from": "0525"
+    }
+  ],
+  "summary": "The system of numbering years from the traditional year of the birth of Jesus, devised by the monk Dionysius Exiguus in 525. It spread across Europe and is now the common world way of dating years.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "AD",
+    "A.D.",
+    "in the Year of Our Lord",
+    "in the Year of the Lord",
+    "Christian Era"
+  ],
+  "wikidata": "Q159791",
+  "events": [
+    {
+      "type": "born",
+      "date": "0525",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Anno Domini (Q159791)",
+      "url": "https://www.wikidata.org/wiki/Q159791",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anno Domini",
+      "url": "https://en.wikipedia.org/wiki/Anno_Domini",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

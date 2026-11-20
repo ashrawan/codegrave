@@ -1,0 +1,58 @@
+{
+  "id": "world-trade-center-twin-towers",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "World Trade Center (twin towers)",
+      "from": "1973"
+    }
+  ],
+  "summary": "Pair of tall office towers in lower Manhattan, designed by Minoru Yamasaki. Each was briefly the tallest building in the world. They were destroyed in the terrorist attacks of 11 September 2001.",
+  "labels": [
+    "architecture",
+    "record-holders"
+  ],
+  "aliases": [
+    "World Trade Center",
+    "Original World Trade Center"
+  ],
+  "wikidata": "Q11235",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2001-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed in the attacks of 11 September 2001",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World Trade Center (Q11235)",
+      "url": "https://www.wikidata.org/wiki/Q11235",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World Trade Center (1973–2001)",
+      "url": "https://en.wikipedia.org/wiki/World_Trade_Center_(1973%E2%80%932001)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "first-opium-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Opium War",
+      "from": "1839"
+    }
+  ],
+  "summary": "A war between Britain and Qing China triggered by China's ban on the opium trade. China lost and signed the Treaty of Nanking, which gave Hong Kong to Britain and opened ports to trade.",
+  "labels": [
+    "war",
+    "business"
+  ],
+  "aliases": [
+    "Anglo-Chinese War",
+    "First Opium War, First Anglo-Chinese War"
+  ],
+  "wikidata": "Q191282",
+  "events": [
+    {
+      "type": "born",
+      "date": "1839-03-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1842-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "related",
+      "to": "qing-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Opium War (Q191282)",
+      "url": "https://www.wikidata.org/wiki/Q191282",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Opium War",
+      "url": "https://en.wikipedia.org/wiki/First_Opium_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

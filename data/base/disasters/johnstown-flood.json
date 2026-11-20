@@ -1,0 +1,55 @@
+{
+  "id": "johnstown-flood",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Johnstown Flood",
+      "from": "1889"
+    }
+  ],
+  "summary": "After days of heavy rain, a poorly maintained dam above Johnstown, Pennsylvania, broke and sent a wall of water through the town. The disaster brought one of the first big relief efforts by the American Red Cross.",
+  "labels": [
+    "engineering"
+  ],
+  "aliases": [
+    "Great Flood of 1889"
+  ],
+  "wikidata": "Q691404",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-05-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1889-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Johnstown Flood (Q691404)",
+      "url": "https://www.wikidata.org/wiki/Q691404",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Johnstown Flood",
+      "url": "https://en.wikipedia.org/wiki/Johnstown_Flood",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

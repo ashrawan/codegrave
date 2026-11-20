@@ -1,0 +1,79 @@
+{
+  "id": "second-punic-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Punic War",
+      "from": "-0218"
+    }
+  ],
+  "summary": "War in which the Carthaginian general Hannibal crossed the Alps and fought in Italy for years, while Rome struck back in Spain and Africa. Rome won and became the leading power in the western Mediterranean.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "The Carthaginian War",
+    "The Hannibalic War",
+    "The War Against Hannibal",
+    "Hannibalic war",
+    "2nd Punic War"
+  ],
+  "wikidata": "Q6271",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0218",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0201",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mediterranean-sea"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    },
+    {
+      "type": "related",
+      "to": "hannibal"
+    },
+    {
+      "type": "related",
+      "to": "scipio-africanus"
+    },
+    {
+      "type": "related",
+      "to": "roman-republic"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-macedon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Punic War (Q6271)",
+      "url": "https://www.wikidata.org/wiki/Q6271",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Punic War",
+      "url": "https://en.wikipedia.org/wiki/Second_Punic_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "farmville",
+  "category": "games",
+  "names": [
+    {
+      "name": "FarmVille",
+      "from": "2009"
+    }
+  ],
+  "maker": "Zynga",
+  "summary": "Farming game played inside Facebook, in which players plant crops, tend animals and ask friends for help. At its height it had tens of millions of players, and it popularised social games.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "aliases": [
+    "FarmVille 2",
+    "FarmVille 2: Country Escape"
+  ],
+  "wikidata": "Q719337",
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-10-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-12-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "The original game closed with the end of Adobe Flash support",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: FarmVille (Q719337)",
+      "url": "https://www.wikidata.org/wiki/Q719337",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: FarmVille",
+      "url": "https://en.wikipedia.org/wiki/FarmVille",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

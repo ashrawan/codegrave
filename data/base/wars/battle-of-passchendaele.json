@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-passchendaele",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Passchendaele",
+      "from": "1917"
+    }
+  ],
+  "summary": "A British-led offensive in Belgium in 1917, fought in rain and thick mud. It gained little ground for heavy losses and became a symbol of the suffering of the war.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Third Battle of Ypres"
+  ],
+  "wikidata": "Q426227",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-07-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1917-11-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-i"
+    },
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Third Battle of Ypres (Q426227)",
+      "url": "https://www.wikidata.org/wiki/Q426227",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Passchendaele",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Passchendaele",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

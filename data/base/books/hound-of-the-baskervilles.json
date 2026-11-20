@@ -1,0 +1,47 @@
+{
+  "id": "hound-of-the-baskervilles",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Hound of the Baskervilles",
+      "from": "1902"
+    }
+  ],
+  "summary": "Sherlock Holmes novel by Arthur Conan Doyle in which the detective investigates a family curse and a monstrous hound on Dartmoor. It is often named the best Holmes story.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q45192",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "arthur-conan-doyle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Hound of the Baskervilles (Q45192)",
+      "url": "https://www.wikidata.org/wiki/Q45192",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Hound of the Baskervilles",
+      "url": "https://en.wikipedia.org/wiki/The_Hound_of_the_Baskervilles",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "microsoft-office",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Microsoft Office",
+      "from": "1990"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Bundle of Microsoft's office programs, such as Word, Excel and PowerPoint, sold together at a lower price. It became the standard set of programs for offices and schools around the world.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "MSO"
+  ],
+  "wikidata": "Q11255",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-11-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft Office (Q11255)",
+      "url": "https://www.wikidata.org/wiki/Q11255",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft Office",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Office",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

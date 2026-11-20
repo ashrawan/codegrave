@@ -1,0 +1,61 @@
+{
+  "id": "symbian",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Symbian",
+      "from": "1998"
+    }
+  ],
+  "summary": "Operating system for mobile phones, used above all by Nokia, which led the market in the 2000s. Android and the iPhone overtook it, and Nokia moved to Windows Phone and stopped using it.",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "aliases": [
+    "Symbian OS"
+  ],
+  "wikidata": "Q483318",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2013",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by Android and iOS; Nokia dropped it",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nokia"
+    },
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Symbian (Q483318)",
+      "url": "https://www.wikidata.org/wiki/Q483318",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Symbian",
+      "url": "https://en.wikipedia.org/wiki/Symbian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,50 @@
+{
+  "id": "champagne",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Champagne",
+      "from": "1690"
+    }
+  ],
+  "summary": "A sparkling wine made in the Champagne region of France. Producers learned to control the second fermentation in the bottle, which gives it bubbles, and it became linked to celebration.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "French sparkling wine"
+  ],
+  "wikidata": "Q134862",
+  "events": [
+    {
+      "type": "born",
+      "date": "1690",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: champagne (Q134862)",
+      "url": "https://www.wikidata.org/wiki/Q134862",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Champagne",
+      "url": "https://en.wikipedia.org/wiki/Champagne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

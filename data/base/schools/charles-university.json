@@ -1,0 +1,54 @@
+{
+  "id": "charles-university",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Charles University",
+      "from": "1348"
+    }
+  ],
+  "summary": "University in Prague founded by Charles IV, king of Bohemia, the first in central Europe. The reformer Jan Hus taught there, and it remains the leading university of the Czech Republic.",
+  "labels": [
+    "education"
+  ],
+  "aliases": [
+    "Univerzita Karlova v Praze",
+    "Universitas Carolina",
+    "Univerzita Karlova",
+    "University of Prague",
+    "Karls-Universität Prag"
+  ],
+  "wikidata": "Q31519",
+  "events": [
+    {
+      "type": "born",
+      "date": "1348-04-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czech-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles University (Q31519)",
+      "url": "https://www.wikidata.org/wiki/Q31519",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles University",
+      "url": "https://en.wikipedia.org/wiki/Charles_University",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

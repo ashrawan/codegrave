@@ -1,0 +1,56 @@
+{
+  "id": "channel-tunnel",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Channel Tunnel",
+      "from": "1994"
+    }
+  ],
+  "summary": "Rail tunnel under the English Channel that links England and France. Trains take about thirty minutes to pass through, and it was the first fixed connection between Britain and the continent since the Ice Age.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "Chunnel",
+    "Tunnel sous la Manche"
+  ],
+  "wikidata": "Q10257",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-05-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Channel Tunnel (Q10257)",
+      "url": "https://www.wikidata.org/wiki/Q10257",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Channel Tunnel",
+      "url": "https://en.wikipedia.org/wiki/Channel_Tunnel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

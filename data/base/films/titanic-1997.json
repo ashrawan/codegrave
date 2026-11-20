@@ -1,0 +1,56 @@
+{
+  "id": "titanic-1997",
+  "category": "films",
+  "names": [
+    {
+      "name": "Titanic",
+      "from": "1997"
+    }
+  ],
+  "maker": "James Cameron",
+  "summary": "James Cameron's film of a love story aboard the liner that sank in 1912, mixing history with large-scale effects. It won eleven Oscars and for years was the highest-earning film ever.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q44578",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997-11-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "about",
+      "to": "rms-titanic"
+    },
+    {
+      "type": "about",
+      "to": "belle-epoque"
+    },
+    {
+      "type": "about",
+      "to": "sinking-of-the-titanic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Titanic (Q44578)",
+      "url": "https://www.wikidata.org/wiki/Q44578",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Titanic (1997 film)",
+      "url": "https://en.wikipedia.org/wiki/Titanic_(1997_film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

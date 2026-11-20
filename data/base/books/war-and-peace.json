@@ -1,0 +1,56 @@
+{
+  "id": "war-and-peace",
+  "category": "books",
+  "names": [
+    {
+      "name": "War and Peace",
+      "from": "1869"
+    }
+  ],
+  "summary": "Huge Russian novel by Leo Tolstoy that follows several families through the Napoleonic wars and Napoleon's invasion of Russia. It mixes private lives with history and thought.",
+  "labels": [
+    "literature",
+    "war"
+  ],
+  "aliases": [
+    "Voyna i mir",
+    "War & Peace"
+  ],
+  "wikidata": "Q161531",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "leo-tolstoy"
+    },
+    {
+      "type": "about",
+      "to": "french-invasion-of-russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: War and Peace (Q161531)",
+      "url": "https://www.wikidata.org/wiki/Q161531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: War and Peace",
+      "url": "https://en.wikipedia.org/wiki/War_and_Peace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

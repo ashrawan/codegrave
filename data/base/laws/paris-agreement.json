@@ -1,0 +1,60 @@
+{
+  "id": "paris-agreement",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Paris Agreement",
+      "from": "2015"
+    }
+  ],
+  "summary": "An international treaty on climate change in which countries promise to limit global warming and report on their efforts. Each country sets its own targets, which it must renew over time.",
+  "labels": [
+    "politics",
+    "environment"
+  ],
+  "aliases": [
+    "Paris Climate Accord",
+    "Paris Climate Agreement"
+  ],
+  "wikidata": "Q21707860",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-12-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "united-nations"
+    },
+    {
+      "type": "in",
+      "to": "paris"
+    },
+    {
+      "type": "in",
+      "to": "new-york-city"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paris Agreement (Q21707860)",
+      "url": "https://www.wikidata.org/wiki/Q21707860",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paris Agreement",
+      "url": "https://en.wikipedia.org/wiki/Paris_Agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

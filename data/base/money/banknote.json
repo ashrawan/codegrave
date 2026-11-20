@@ -1,0 +1,50 @@
+{
+  "id": "banknote",
+  "category": "money",
+  "names": [
+    {
+      "name": "Banknote",
+      "from": "1000"
+    }
+  ],
+  "summary": "Paper money, first used in China in the form of notes issued by merchants and then by the state. Light and easy to carry, it was a surprise to Europeans, who adopted it much later.",
+  "labels": [
+    "economics",
+    "business"
+  ],
+  "aliases": [
+    "bill",
+    "paper money",
+    "note",
+    "paper currency",
+    "bank note"
+  ],
+  "wikidata": "Q47433",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: banknote (Q47433)",
+      "url": "https://www.wikidata.org/wiki/Q47433",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Banknote",
+      "url": "https://en.wikipedia.org/wiki/Banknote",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,65 @@
+{
+  "id": "yalta-conference",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Yalta Conference",
+      "from": "1945"
+    }
+  ],
+  "summary": "A meeting in February 1945 of Churchill, Roosevelt and Stalin in Crimea to plan the end of the Second World War and the future of Europe. Its decisions about Poland and Germany were later disputed.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Crimea Conference",
+    "Argonaut Conference"
+  ],
+  "wikidata": "Q161227",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-02-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-02-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yalta Conference (Q161227)",
+      "url": "https://www.wikidata.org/wiki/Q161227",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yalta Conference",
+      "url": "https://en.wikipedia.org/wiki/Yalta_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

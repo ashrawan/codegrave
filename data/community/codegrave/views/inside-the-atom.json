@@ -1,0 +1,76 @@
+{
+  "id": "inside-the-atom",
+  "name": "Inside the Atom: From Rays in the Dark to the Chain Reaction",
+  "description": "The physicists who found the electron, the nucleus and fission, and the wartime project that turned their discoveries into the first atomic bombs.",
+  "category": "people",
+  "labels": [
+    "physics",
+    "war",
+    "nobel-prize"
+  ],
+  "tags": [
+    "atom",
+    "nuclear",
+    "fission",
+    "quantum",
+    "radioactivity",
+    "manhattan project",
+    "einstein"
+  ],
+  "entries": [
+    "henri-becquerel",
+    "pierre-curie",
+    "marie-curie",
+    "jj-thomson",
+    "ernest-rutherford",
+    "max-planck",
+    "albert-einstein",
+    "niels-bohr",
+    "james-chadwick",
+    "werner-heisenberg",
+    "erwin-schrodinger",
+    "paul-dirac",
+    "enrico-fermi",
+    "otto-hahn",
+    "fritz-strassmann",
+    "lise-meitner",
+    "leo-szilard",
+    "chicago-pile-1",
+    "manhattan-project",
+    "j-robert-oppenheimer",
+    "richard-feynman",
+    "chien-shiung-wu",
+    "nobel-prize"
+  ],
+  "checkpoints": [
+    {
+      "id": "rays-and-electrons",
+      "name": "Rays and electrons",
+      "from": 1852,
+      "to": 1914,
+      "note": "Becquerel and the Curies discover radioactivity, Thomson finds the electron, Planck introduces the quantum, Rutherford finds the nucleus and Einstein rewrites space and time."
+    },
+    {
+      "id": "the-quantum-atom",
+      "name": "The quantum atom",
+      "from": 1915,
+      "to": 1938,
+      "note": "Bohr, Heisenberg, Schrödinger and Dirac build quantum mechanics. Chadwick finds the neutron in 1932, and Fermi shows that neutrons can change atoms and make them radioactive."
+    },
+    {
+      "id": "fission-and-the-bomb",
+      "name": "Fission and the bomb",
+      "from": 1939,
+      "to": 1946,
+      "note": "Hahn and Strassmann split uranium in 1938, and Meitner explains it. Szilard warns the American president, Fermi starts a chain reaction in Chicago and Oppenheimer's laboratory builds the bombs."
+    },
+    {
+      "id": "after-the-bomb",
+      "name": "After the bomb",
+      "from": 1947,
+      "to": 1997,
+      "note": "Physicists return to peacetime work. Feynman reshapes quantum theory, and Wu's experiment shows that nature can tell left from right, while the prizes honour some and miss others."
+    }
+  ],
+  "year": 1939
+}

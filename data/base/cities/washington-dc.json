@@ -1,0 +1,62 @@
+{
+  "id": "washington-dc",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Washington, D.C.",
+      "from": "1790"
+    }
+  ],
+  "summary": "Capital of the United States, laid out on land between Maryland and Virginia after the Residence Act of 1790. Pierre L'Enfant drew its plan of wide avenues radiating from squares.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Washington, District of Columbia",
+    "D.C. Washington",
+    "The District",
+    "District of Columbia",
+    "City of Washington, D.C."
+  ],
+  "wikidata": "Q61",
+  "events": [
+    {
+      "type": "born",
+      "date": "1790-07-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "george-washington"
+    },
+    {
+      "type": "related",
+      "to": "christopher-columbus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Washington, D.C. (Q61)",
+      "url": "https://www.wikidata.org/wiki/Q61",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Washington, D.C.",
+      "url": "https://en.wikipedia.org/wiki/Washington,_D.C.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "sharpeville-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Sharpeville massacre",
+      "from": "1960"
+    }
+  ],
+  "summary": "Police in a South African township fired on a crowd protesting against the pass laws, killing dozens of people. The killing brought wide condemnation of apartheid abroad and led the government to ban the main anti-apartheid parties.",
+  "labels": [
+    "human-rights",
+    "politics"
+  ],
+  "wikidata": "Q518753",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-03-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-africa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sharpeville massacre (Q518753)",
+      "url": "https://www.wikidata.org/wiki/Q518753",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sharpeville massacre",
+      "url": "https://en.wikipedia.org/wiki/Sharpeville_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

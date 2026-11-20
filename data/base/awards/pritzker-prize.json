@@ -1,0 +1,47 @@
+{
+  "id": "pritzker-prize",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Pritzker Architecture Prize",
+      "from": "1979"
+    }
+  ],
+  "summary": "An annual international award for a living architect whose work has made a lasting contribution. It is often called the Nobel of architecture, and it includes a bronze medal.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q133160",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pritzker Architecture Prize (Q133160)",
+      "url": "https://www.wikidata.org/wiki/Q133160",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pritzker Architecture Prize",
+      "url": "https://en.wikipedia.org/wiki/Pritzker_Architecture_Prize",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

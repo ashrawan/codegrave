@@ -1,0 +1,47 @@
+{
+  "id": "mars-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Mars",
+      "from": "-4540000000"
+    }
+  ],
+  "summary": "The fourth planet, a cold desert world with polar ice caps, giant volcanoes and dry river valleys that show water once flowed there. Robot rovers and orbiters study it, and it is a goal for future crewed missions.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "aliases": [
+    "Planet Mars",
+    "Red Planet"
+  ],
+  "wikidata": "Q111",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4540000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Mars (Q111)",
+      "url": "https://www.wikidata.org/wiki/Q111",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mars",
+      "url": "https://en.wikipedia.org/wiki/Mars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

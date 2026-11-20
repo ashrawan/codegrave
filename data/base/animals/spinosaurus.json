@@ -1,0 +1,47 @@
+{
+  "id": "spinosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Spinosaurus",
+      "from": "-130030000"
+    }
+  ],
+  "summary": "A giant meat-eating dinosaur of North Africa with a tall sail on its back and a long, crocodile-like snout. It seems to have spent much of its time in water, catching fish.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q130966",
+  "events": [
+    {
+      "type": "born",
+      "date": "-130030000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-93500000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Spinosaurus (Q130966)",
+      "url": "https://www.wikidata.org/wiki/Q130966",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spinosaurus",
+      "url": "https://en.wikipedia.org/wiki/Spinosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

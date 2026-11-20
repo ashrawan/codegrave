@@ -1,0 +1,68 @@
+{
+  "id": "cuba",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Cuba",
+      "from": "1902"
+    }
+  ],
+  "summary": "The largest island nation of the Caribbean. It became independent from Spanish rule in 1902, and has been a single-party communist state since the revolution led by Fidel Castro in 1959.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "aliases": [
+    "Republic of Cuba",
+    "cu"
+  ],
+  "wikidata": "Q241",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "comecon"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cuba (Q241)",
+      "url": "https://www.wikidata.org/wiki/Q241",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cuba",
+      "url": "https://en.wikipedia.org/wiki/Cuba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

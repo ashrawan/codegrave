@@ -1,0 +1,75 @@
+{
+  "id": "jorge-luis-borges",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Jorge Luis Borges",
+      "from": "1899"
+    }
+  ],
+  "summary": "Argentine writer of short stories about labyrinths, mirrors and infinite libraries, collected in Ficciones. He became blind in later life and was long the director of Argentina's national library.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "J. L. Borges",
+    "Chorche Louis Borches",
+    "Horhe Luis Borhes",
+    "Jorge Luis Borges Acevedo",
+    "Khorkhe Luyis Borkhes"
+  ],
+  "wikidata": "Q909",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-08-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-06-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "virgil"
+    },
+    {
+      "type": "influenced_by",
+      "to": "edgar-allan-poe"
+    },
+    {
+      "type": "influenced_by",
+      "to": "oscar-wilde"
+    },
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "homer"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jorge Luis Borges (Q909)",
+      "url": "https://www.wikidata.org/wiki/Q909",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jorge Luis Borges",
+      "url": "https://en.wikipedia.org/wiki/Jorge_Luis_Borges",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "pacific-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Pacific Ocean",
+      "from": "-750000000"
+    }
+  ],
+  "summary": "The largest and deepest ocean, covering about a third of Earth's surface, with the Mariana Trench at its deepest. It is the remnant of the huge ocean that once surrounded the continents, and volcanoes and earthquakes ring its edge.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Pacific",
+    "Pacific Sea",
+    "the Pacific",
+    "Pacifick",
+    "Pacifick Ocean"
+  ],
+  "wikidata": "Q98",
+  "events": [
+    {
+      "type": "born",
+      "date": "-750000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pacific Ocean (Q98)",
+      "url": "https://www.wikidata.org/wiki/Q98",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pacific Ocean",
+      "url": "https://en.wikipedia.org/wiki/Pacific_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "pannotia",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Pannotia",
+      "from": "-600000000"
+    }
+  ],
+  "summary": "A proposed supercontinent that may have existed about 600 million years ago after Rodinia split, lasting only briefly before breaking again. Whether it truly existed as a single landmass is debated.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Vendian supercontinent",
+    "Greater Gondwana",
+    "Pan-African supercontinent"
+  ],
+  "wikidata": "Q208078",
+  "events": [
+    {
+      "type": "born",
+      "date": "-600000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-530000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broke into Laurentia, Baltica and Gondwana",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pannotia (Q208078)",
+      "url": "https://www.wikidata.org/wiki/Q208078",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pannotia",
+      "url": "https://en.wikipedia.org/wiki/Pannotia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

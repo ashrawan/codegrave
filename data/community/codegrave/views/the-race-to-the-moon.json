@@ -1,0 +1,81 @@
+{
+  "id": "the-race-to-the-moon",
+  "name": "The Race to the Moon",
+  "description": "From the German V-2 to the last Apollo flight: two superpowers turn rocketry into the greatest contest of the Cold War.",
+  "category": "technology",
+  "labels": [
+    "space-race",
+    "exploration"
+  ],
+  "tags": [
+    "moon",
+    "apollo",
+    "sputnik",
+    "space race",
+    "nasa",
+    "cold war"
+  ],
+  "entries": [
+    "v-2-rocket",
+    "wernher-von-braun",
+    "sergei-korolev",
+    "space-race",
+    "soviet-space-program",
+    "nasa",
+    "sputnik-1",
+    "explorer-1",
+    "vostok-1",
+    "yuri-gagarin",
+    "project-mercury",
+    "valentina-tereshkova",
+    "project-gemini",
+    "luna-9",
+    "apollo-program",
+    "saturn-v",
+    "n1-rocket",
+    "soyuz-spacecraft",
+    "apollo-11",
+    "neil-armstrong",
+    "apollo-13",
+    "salyut-1",
+    "skylab"
+  ],
+  "checkpoints": [
+    {
+      "id": "rockets-of-war",
+      "name": "Rockets of war",
+      "from": 1942,
+      "to": 1956,
+      "note": "The German V-2 shows that rockets can reach space. Its builders and its plans pass to the United States and the Soviet Union, which each begin building long-range missiles."
+    },
+    {
+      "id": "first-into-orbit",
+      "name": "First into orbit",
+      "from": 1957,
+      "to": 1960,
+      "note": "The Soviet Union launches Sputnik, the United States answers with Explorer 1 and founds NASA, and both begin to prepare for spaceflight with people aboard."
+    },
+    {
+      "id": "the-chase",
+      "name": "The chase",
+      "from": 1961,
+      "to": 1966,
+      "note": "Gagarin orbits Earth, Tereshkova follows, and Kennedy promises a Moon landing. Mercury and Gemini teach Americans to work in orbit while the Soviets land a probe on the Moon."
+    },
+    {
+      "id": "footprints",
+      "name": "Footprints",
+      "from": 1967,
+      "to": 1969,
+      "note": "Saturn V is ready, the Soviet N1 explodes, and in July 1969 Armstrong and Aldrin walk on the Moon."
+    },
+    {
+      "id": "after-the-landing",
+      "name": "After the landing",
+      "from": 1970,
+      "to": 1975,
+      "note": "Apollo 13 nearly ends in disaster, further Apollo missions explore the Moon, and the rivals turn to space stations before shaking hands in orbit in 1975."
+    }
+  ],
+  "year": 1969
+}

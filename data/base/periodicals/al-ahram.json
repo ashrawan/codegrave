@@ -1,0 +1,51 @@
+{
+  "id": "al-ahram",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Al-Ahram",
+      "from": "1876"
+    }
+  ],
+  "summary": "Egyptian daily newspaper founded in Alexandria by two Lebanese brothers. It is among the oldest and most widely read newspapers in the Arab world.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q286468",
+  "events": [
+    {
+      "type": "born",
+      "date": "1876-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cairo"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: الاهرام (Q286468)",
+      "url": "https://www.wikidata.org/wiki/Q286468",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Al-Ahram",
+      "url": "https://en.wikipedia.org/wiki/Al-Ahram",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

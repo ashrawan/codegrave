@@ -1,0 +1,53 @@
+{
+  "id": "great-pyramid-of-giza",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Great Pyramid of Giza",
+      "from": "-2560"
+    }
+  ],
+  "summary": "Tomb of the Egyptian king Khufu on the edge of Cairo. It was the tallest building in the world for thousands of years and is the only one of the Seven Wonders of the Ancient World still standing.",
+  "labels": [
+    "seven-wonders",
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Pyramid of Cheops",
+    "Pyramid of Khufu"
+  ],
+  "wikidata": "Q37200",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2560",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Pyramid of Giza (Q37200)",
+      "url": "https://www.wikidata.org/wiki/Q37200",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Pyramid of Giza",
+      "url": "https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "archean",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Archean",
+      "from": "-4031000000"
+    }
+  ],
+  "summary": "The eon from about four to 2.5 billion years ago, when the first continents grew and the oldest known life, simple single cells, appeared. The air held almost no free oxygen.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Archaean",
+    "Archaeozoic",
+    "Archeozoic",
+    "Archean Eon",
+    "Archæan"
+  ],
+  "wikidata": "Q104168",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4031000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2500000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Archean (Q104168)",
+      "url": "https://www.wikidata.org/wiki/Q104168",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Archean",
+      "url": "https://en.wikipedia.org/wiki/Archean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

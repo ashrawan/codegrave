@@ -1,0 +1,104 @@
+{
+  "id": "city-on-the-thames",
+  "name": "City on the Thames: A Biography of London",
+  "description": "Nearly two thousand years of London, from a Roman trading post to a world capital, through plague, fire, empire, bombs, pop and Brexit.",
+  "category": "places",
+  "labels": [
+    "architecture",
+    "politics",
+    "media"
+  ],
+  "tags": [
+    "london",
+    "thames",
+    "england",
+    "city",
+    "history",
+    "tower",
+    "plague",
+    "fire"
+  ],
+  "entries": [
+    "london",
+    "westminster-abbey",
+    "tower-of-london",
+    "magna-carta",
+    "black-death",
+    "william-shakespeare",
+    "globe-theatre-site",
+    "east-india-company",
+    "royal-society",
+    "great-plague-of-london",
+    "great-fire-of-london",
+    "samuel-pepys",
+    "st-pauls-cathedral",
+    "christopher-wren",
+    "bank-of-england",
+    "the-times",
+    "charles-dickens",
+    "victoria",
+    "thames-tunnel",
+    "great-exhibition-1851",
+    "broad-street-cholera",
+    "london-underground",
+    "sherlock-holmes",
+    "tower-bridge",
+    "peter-pan",
+    "emmeline-pankhurst",
+    "bbc",
+    "battle-of-britain",
+    "great-smog-of-london",
+    "coronation-of-elizabeth-ii",
+    "notting-hill-carnival",
+    "the-beatles",
+    "abbey-road",
+    "punk-rock",
+    "olympics-2012",
+    "brexit"
+  ],
+  "checkpoints": [
+    {
+      "id": "londinium",
+      "name": "From Londinium to the Normans",
+      "from": 47,
+      "to": 1065,
+      "note": "The Romans found Londinium by the Thames, and over the centuries the city becomes a trading port. By the end of the period a church is rising at Westminster, where kings will be crowned in Westminster Abbey."
+    },
+    {
+      "id": "medieval-city",
+      "name": "Medieval city",
+      "from": 1066,
+      "to": 1599,
+      "note": "The Normans raise the Tower of London, the barons force King John to sign Magna Carta, and the Black Death empties the streets. By Shakespeare's day plays are staged at the Globe."
+    },
+    {
+      "id": "fire-and-plague",
+      "name": "Plague, fire and rebuilding",
+      "from": 1600,
+      "to": 1799,
+      "note": "The East India Company and the Royal Society show London as a place of trade and science, the Great Plague and the Great Fire of London strike, and Samuel Pepys records them. Wren rebuilds St Paul's, and the Bank of England and The Times appear."
+    },
+    {
+      "id": "imperial-capital",
+      "name": "Imperial capital",
+      "from": 1800,
+      "to": 1913,
+      "note": "London becomes the biggest city in the world. Dickens writes of its poor, the Thames Tunnel, Underground, Great Exhibition and Tower Bridge show its ambition, the Broad Street cholera outbreak leads to cleaner water, and Sherlock Holmes and Peter Pan are born in its streets."
+    },
+    {
+      "id": "war-and-pop",
+      "name": "War, pop and carnival",
+      "from": 1914,
+      "to": 1999,
+      "note": "The BBC begins broadcasting, the Battle of Britain is fought overhead, and the Great Smog of 1952 hits. After Elizabeth II's coronation the Beatles at Abbey Road, punk and the Notting Hill Carnival remake its culture."
+    },
+    {
+      "id": "global-london",
+      "name": "Global London",
+      "from": 2000,
+      "to": 2025,
+      "note": "The 2012 Olympics show a diverse, confident capital, and the Brexit vote of 2016 sets a new relationship with Europe."
+    }
+  ],
+  "year": 1666
+}

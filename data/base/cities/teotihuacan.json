@@ -1,0 +1,60 @@
+{
+  "id": "teotihuacan",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Teotihuacan",
+      "from": "-0100"
+    }
+  ],
+  "summary": "Huge planned city near modern Mexico City, with the Pyramids of the Sun and Moon along a broad avenue. Its builders are unknown by name, and the Aztecs later gave it the name it still carries.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Place of Reeds",
+    "City of the Sun",
+    "City of the Gods",
+    "archeological site of Teotihuacan"
+  ],
+  "wikidata": "Q172613",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0100",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0550",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined and was partly burned, then abandoned",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Teotihuacan (Q172613)",
+      "url": "https://www.wikidata.org/wiki/Q172613",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Teotihuacan",
+      "url": "https://en.wikipedia.org/wiki/Teotihuacan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

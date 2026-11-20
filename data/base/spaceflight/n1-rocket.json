@@ -1,0 +1,55 @@
+{
+  "id": "n1-rocket",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "N1 rocket",
+      "from": "1969"
+    }
+  ],
+  "maker": "Sergei Korolev's design bureau",
+  "summary": "The giant Soviet rocket built to send cosmonauts to the Moon. All four test launches between 1969 and 1972 failed, and the programme was cancelled without ever flying a crew.",
+  "labels": [
+    "space-race",
+    "failures"
+  ],
+  "aliases": [
+    "N1",
+    "N-1",
+    "L3"
+  ],
+  "wikidata": "Q622762",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-02-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-05",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "cause": "Cancelled after four failed launches",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: N1 (Q622762)",
+      "url": "https://www.wikidata.org/wiki/Q622762",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: N1 (rocket)",
+      "url": "https://en.wikipedia.org/wiki/N1_(rocket)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

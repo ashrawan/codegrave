@@ -1,0 +1,63 @@
+{
+  "id": "covid-19-pandemic",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "COVID-19 pandemic",
+      "from": "2019"
+    }
+  ],
+  "summary": "A new coronavirus first identified in China spread worldwide in early 2020. Lockdowns, vaccines developed at record speed and large disruption to economies and schools followed. The global emergency was declared over in 2023.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "nCov-2019 outbreak",
+    "2019nCov outbreak",
+    "COVID-19 epidemic",
+    "nCov2019 outbreak",
+    "coronavirus pandemic"
+  ],
+  "wikidata": "Q81068910",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-12-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: COVID-19 pandemic (Q81068910)",
+      "url": "https://www.wikidata.org/wiki/Q81068910",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: COVID-19 pandemic",
+      "url": "https://en.wikipedia.org/wiki/COVID-19_pandemic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

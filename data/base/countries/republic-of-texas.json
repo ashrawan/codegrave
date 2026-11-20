@@ -1,0 +1,58 @@
+{
+  "id": "republic-of-texas",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Republic of Texas",
+      "from": "1836"
+    }
+  ],
+  "summary": "The independent nation Texas formed after breaking away from Mexico. Sam Houston served as its president, and it had its own money and army until it joined the United States.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Not Texas",
+    "Texas Republic"
+  ],
+  "wikidata": "Q170588",
+  "events": [
+    {
+      "type": "born",
+      "date": "1836-03-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1846-02-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Annexed by the United States as the 28th state",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "texas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Republic of Texas (Q170588)",
+      "url": "https://www.wikidata.org/wiki/Q170588",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Republic of Texas",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_Texas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

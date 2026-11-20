@@ -1,0 +1,55 @@
+{
+  "id": "edward-jenner",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Edward Jenner",
+      "from": "1749"
+    }
+  ],
+  "summary": "English country doctor who showed that infection with cowpox protected people from smallpox. He tested the idea in 1796 and promoted vaccination, and the word vaccine comes from the Latin for cow.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Jenner"
+  ],
+  "wikidata": "Q40852",
+  "events": [
+    {
+      "type": "born",
+      "date": "1749-05-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1823-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Edward Jenner (Q40852)",
+      "url": "https://www.wikidata.org/wiki/Q40852",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward Jenner",
+      "url": "https://en.wikipedia.org/wiki/Edward_Jenner",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

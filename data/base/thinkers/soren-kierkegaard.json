@@ -1,0 +1,72 @@
+{
+  "id": "soren-kierkegaard",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Søren Kierkegaard",
+      "from": "1813"
+    }
+  ],
+  "summary": "Danish philosopher who wrote about anxiety, choice and faith, stressing that each person must find meaning by living, not through abstract systems. He is often called the first existentialist.",
+  "labels": [
+    "philosophy",
+    "religion"
+  ],
+  "aliases": [
+    "Kierkegaard",
+    "Victor Eremita",
+    "Climacus",
+    "Anti-Climacus",
+    "Sören Aaby Kierkegaard"
+  ],
+  "wikidata": "Q6512",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813-05-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1855-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "martin-luther"
+    },
+    {
+      "type": "influenced_by",
+      "to": "georg-hegel"
+    },
+    {
+      "type": "influenced_by",
+      "to": "immanuel-kant"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Søren Kierkegaard (Q6512)",
+      "url": "https://www.wikidata.org/wiki/Q6512",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Søren Kierkegaard",
+      "url": "https://en.wikipedia.org/wiki/S%C3%B8ren_Kierkegaard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

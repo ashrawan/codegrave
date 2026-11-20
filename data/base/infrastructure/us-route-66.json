@@ -1,0 +1,64 @@
+{
+  "id": "us-route-66",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "U.S. Route 66",
+      "from": "1926"
+    }
+  ],
+  "summary": "Highway running from Chicago to Los Angeles, opened in 1926. Families heading west used it during the Dust Bowl, and it became a symbol of the open road before newer highways replaced it.",
+  "labels": [
+    "transport"
+  ],
+  "aliases": [
+    "the Mother Road",
+    "the Main Street of America",
+    "US 66",
+    "Rt. 66",
+    "US Highway 66"
+  ],
+  "wikidata": "Q79934",
+  "events": [
+    {
+      "type": "born",
+      "date": "1926-11-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-06-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Interstate highway system and removed from the US highway list",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "california"
+    },
+    {
+      "type": "in",
+      "to": "texas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: U.S. Route 66 (Q79934)",
+      "url": "https://www.wikidata.org/wiki/Q79934",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: U.S. Route 66",
+      "url": "https://en.wikipedia.org/wiki/U.S._Route_66",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

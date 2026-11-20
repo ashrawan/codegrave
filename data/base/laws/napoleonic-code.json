@@ -1,0 +1,54 @@
+{
+  "id": "napoleonic-code",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Napoleonic Code",
+      "from": "1804"
+    }
+  ],
+  "maker": "Napoleon Bonaparte",
+  "summary": "A civil code for France written under Napoleon that replaced old local laws with one clear set of rules on property, contracts and family. It spread with French armies and still shapes the law of many countries.",
+  "labels": [
+    "law",
+    "politics"
+  ],
+  "aliases": [
+    "Civil Code of the French",
+    "French civil Code",
+    "Code Napoléon"
+  ],
+  "wikidata": "Q151060",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "napoleon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Civil Code of the French (Q151060)",
+      "url": "https://www.wikidata.org/wiki/Q151060",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Napoleonic Code",
+      "url": "https://en.wikipedia.org/wiki/Napoleonic_Code",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

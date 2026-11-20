@@ -1,0 +1,63 @@
+{
+  "id": "rms-queen-mary",
+  "category": "ships",
+  "names": [
+    {
+      "name": "RMS Queen Mary",
+      "from": "1936"
+    }
+  ],
+  "maker": "Cunard White Star",
+  "summary": "A Cunard White Star liner that entered service on the Atlantic in 1936 and carried troops in the Second World War. She was retired in 1967 and is now a hotel and museum at Long Beach, California.",
+  "labels": [
+    "transport"
+  ],
+  "aliases": [
+    "Queen Mary",
+    "IMO 5287938",
+    "IMO 5528793"
+  ],
+  "wikidata": "Q752939",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1967",
+      "precision": "year"
+    },
+    {
+      "type": "afterlife",
+      "note": "Moored at Long Beach, California, as a hotel and museum."
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired from service and moved to Long Beach as a tourist attraction",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: RMS Queen Mary (Q752939)",
+      "url": "https://www.wikidata.org/wiki/Q752939",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: RMS Queen Mary",
+      "url": "https://en.wikipedia.org/wiki/RMS_Queen_Mary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

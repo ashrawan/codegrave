@@ -1,0 +1,52 @@
+{
+  "id": "stoicism",
+  "category": "philosophies",
+  "names": [
+    {
+      "name": "Stoicism",
+      "from": "-0301"
+    }
+  ],
+  "summary": "A Greek philosophy founded in Athens by Zeno of Citium, which teaches that we cannot control events, only our own judgements and actions, and that virtue brings a calm life. Seneca, Epictetus and Marcus Aurelius were among its voices.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "the porch",
+    "stoics",
+    "Stoa"
+  ],
+  "wikidata": "Q48235",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0301",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "zeno-of-citium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: stoicism (Q48235)",
+      "url": "https://www.wikidata.org/wiki/Q48235",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stoicism",
+      "url": "https://en.wikipedia.org/wiki/Stoicism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

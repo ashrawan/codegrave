@@ -1,0 +1,71 @@
+{
+  "id": "czech-republic",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Czech Republic",
+      "from": "1993"
+    }
+  ],
+  "summary": "A central European country, formed on 1 January 1993 when Czechoslovakia split. Its capital Prague is among Europe's best-preserved old cities, and it also uses the short name Czechia.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Czechia",
+    "the Czech Republic"
+  ],
+  "wikidata": "Q213",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "cern"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Czech Republic (Q213)",
+      "url": "https://www.wikidata.org/wiki/Q213",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Czech Republic",
+      "url": "https://en.wikipedia.org/wiki/Czech_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

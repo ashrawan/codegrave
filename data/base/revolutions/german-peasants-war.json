@@ -1,0 +1,58 @@
+{
+  "id": "german-peasants-war",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "German Peasants' War",
+      "from": "1524"
+    }
+  ],
+  "summary": "A large rising of farmers and townspeople in German-speaking lands, inspired partly by Reformation ideas, who demanded fairer treatment from lords. Armies of the princes crushed it, and tens of thousands died.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "aliases": [
+    "Bauernkrieg",
+    "Great Peasants' War",
+    "Great Peasants' Revolt"
+  ],
+  "wikidata": "Q154031",
+  "events": [
+    {
+      "type": "born",
+      "date": "1524",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1525",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "holy-roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German Peasants' War (Q154031)",
+      "url": "https://www.wikidata.org/wiki/Q154031",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German Peasants' War",
+      "url": "https://en.wikipedia.org/wiki/German_Peasants'_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

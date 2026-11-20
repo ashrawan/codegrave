@@ -1,0 +1,85 @@
+{
+  "id": "empires-that-ruled-the-world",
+  "name": "Empires That Ruled the World: How Superpowers Rise and Fall",
+  "description": "From Akkad and Persia to Rome, the Mongols and Britain: a long look at how great empires were built, held together and finally lost.",
+  "category": "places",
+  "labels": [
+    "politics",
+    "war",
+    "lost"
+  ],
+  "tags": [
+    "empire",
+    "rome",
+    "mongol",
+    "ottoman",
+    "british",
+    "conquest"
+  ],
+  "entries": [
+    "akkadian-empire",
+    "assyria",
+    "achaemenid-empire",
+    "carthage",
+    "kingdom-of-macedon",
+    "roman-republic",
+    "roman-empire",
+    "han-dynasty",
+    "maurya-empire",
+    "byzantine-empire",
+    "umayyad-caliphate",
+    "abbasid-caliphate",
+    "tang-dynasty",
+    "mongol-empire",
+    "ottoman-empire",
+    "mughal-empire",
+    "ming-dynasty",
+    "qing-dynasty",
+    "spanish-empire",
+    "portuguese-empire",
+    "russian-empire",
+    "first-french-empire",
+    "british-empire",
+    "german-empire",
+    "empire-of-japan",
+    "soviet-union"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-empires",
+      "name": "The first empires",
+      "from": -2334,
+      "to": -31,
+      "note": "Akkad, Assyria and Persia show that one ruler can govern many peoples through roads, governors and armies. Alexander and Carthage and Rome then fight over the Mediterranean world."
+    },
+    {
+      "id": "classical-giants",
+      "name": "Classical giants",
+      "from": -27,
+      "to": 750,
+      "note": "Rome, Han China and the Mauryas rule millions with law, coins and soldiers, while Byzantium carries Rome on in the east and the first caliphs build a new empire out of Arabia."
+    },
+    {
+      "id": "caliphs-and-khans",
+      "name": "Caliphs and khans",
+      "from": 751,
+      "to": 1450,
+      "note": "Baghdad, Tang China and the Mongols link continents by trade and conquest. The Mongols create the biggest land empire ever, and the Ottomans start their rise on the ruins of Byzantium."
+    },
+    {
+      "id": "gunpowder-and-oceans",
+      "name": "Gunpowder and oceans",
+      "from": 1451,
+      "to": 1800,
+      "note": "Gunpowder states such as the Ottomans, Mughals and Ming hold huge lands, while Portugal and Spain use ships to reach the Americas, Africa and Asia and start the first global empires."
+    },
+    {
+      "id": "last-empires",
+      "name": "The last empires",
+      "from": 1801,
+      "to": 1997,
+      "note": "Britain, Russia, Germany and Japan chase empire in the industrial age. Two world wars and the rise of national movements break them up, and the Soviet Union is the last to fall."
+    }
+  ],
+  "year": 1200
+}

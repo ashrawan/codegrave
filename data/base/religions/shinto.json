@@ -1,0 +1,63 @@
+{
+  "id": "shinto",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Shinto",
+      "from": "0600"
+    }
+  ],
+  "summary": "The native religion of Japan, centred on kami, the spirits found in nature, ancestors and special places. Its shrines, festivals and rituals of purification are part of Japanese life, and it developed alongside Buddhism.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Shintoism",
+    "Shindo"
+  ],
+  "wikidata": "Q812767",
+  "events": [
+    {
+      "type": "born",
+      "date": "0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "buddhism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "taoism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "confucianism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "hinduism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shinto (Q812767)",
+      "url": "https://www.wikidata.org/wiki/Q812767",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shinto",
+      "url": "https://en.wikipedia.org/wiki/Shinto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

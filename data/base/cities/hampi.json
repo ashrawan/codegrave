@@ -1,0 +1,65 @@
+{
+  "id": "hampi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Hampi (Vijayanagara)",
+      "from": "1336"
+    }
+  ],
+  "summary": "Capital of the Vijayanagara Empire in southern India, a wealthy city of temples and markets beside the Tungabhadra river. It was sacked by a coalition of Deccan sultanates and never rebuilt.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Hampi Group of Monuments",
+    "Group of Monuments at Hampi",
+    "Vijayanagara ruins",
+    "Bhaskara-kshetra",
+    "Kishkindha-kshetra"
+  ],
+  "wikidata": "Q26732",
+  "events": [
+    {
+      "type": "born",
+      "date": "1336",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1565",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sacked by a alliance of neighbouring sultanates",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "vijayanagara-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hampi (Q26732)",
+      "url": "https://www.wikidata.org/wiki/Q26732",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hampi",
+      "url": "https://en.wikipedia.org/wiki/Hampi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

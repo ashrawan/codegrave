@@ -1,0 +1,51 @@
+{
+  "id": "nuclear-weapon",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Nuclear weapon",
+      "from": "1945"
+    }
+  ],
+  "maker": "Manhattan Project",
+  "summary": "A bomb whose power comes from splitting or fusing atoms. The first was tested in New Mexico in July 1945 and two were used on Japanese cities in August, and the fear of more shaped the Cold War.",
+  "labels": [
+    "war",
+    "physics"
+  ],
+  "aliases": [
+    "nuke",
+    "atomic weapon",
+    "nuclear arms",
+    "nuclear weaponry",
+    "nuclear weapons"
+  ],
+  "wikidata": "Q12802",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: nuclear weapon (Q12802)",
+      "url": "https://www.wikidata.org/wiki/Q12802",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nuclear weapon",
+      "url": "https://en.wikipedia.org/wiki/Nuclear_weapon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

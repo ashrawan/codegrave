@@ -1,0 +1,64 @@
+{
+  "id": "roman-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Roman Empire",
+      "from": "-0027"
+    }
+  ],
+  "summary": "The state ruled by emperors from Augustus onward, reaching from Britain to Egypt and around the Mediterranean. It spread roads, law and Latin, and later split into a western and an eastern half.",
+  "labels": [
+    "lost",
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Imperium Romanum",
+    "Romanum imperium",
+    "Roman period"
+  ],
+  "wikidata": "Q2277",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0027-01",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "0476-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "The western half collapsed under invasions and civil strife; the east lasted as the Byzantine Empire",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "augustus"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "byzantine-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roman Empire (Q2277)",
+      "url": "https://www.wikidata.org/wiki/Q2277",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roman Empire",
+      "url": "https://en.wikipedia.org/wiki/Roman_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

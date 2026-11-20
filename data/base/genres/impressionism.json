@@ -1,0 +1,56 @@
+{
+  "id": "impressionism",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Impressionism",
+      "from": "1870"
+    }
+  ],
+  "summary": "French painting style that caught fleeting light and everyday scenes with short, visible brushstrokes, often outdoors. Its early members, including Monet, Renoir and Morisot, showed together in Paris from 1874 and changed modern art.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q40415",
+  "events": [
+    {
+      "type": "born",
+      "date": "1870",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1886",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "claude-monet"
+    },
+    {
+      "type": "related",
+      "to": "impression-sunrise"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Impressionism (Q40415)",
+      "url": "https://www.wikidata.org/wiki/Q40415",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Impressionism",
+      "url": "https://en.wikipedia.org/wiki/Impressionism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

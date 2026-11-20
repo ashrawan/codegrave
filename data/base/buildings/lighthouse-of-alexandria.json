@@ -1,0 +1,64 @@
+{
+  "id": "lighthouse-of-alexandria",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Lighthouse of Alexandria",
+      "from": "-0279"
+    }
+  ],
+  "summary": "Tall stone tower on the island of Pharos that guided ships into the harbour of Alexandria. Earthquakes damaged it over the centuries, and in the 1400s its remains were used for a fort.",
+  "labels": [
+    "seven-wonders",
+    "lost",
+    "engineering"
+  ],
+  "aliases": [
+    "Alexandria Lighthouse",
+    "Pharos of Alexandria",
+    "Lighthouse Wonder of the Ancient World"
+  ],
+  "wikidata": "Q43244",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0279",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1323",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Brought down by a series of earthquakes",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "alexandria"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lighthouse of Alexandria (Q43244)",
+      "url": "https://www.wikidata.org/wiki/Q43244",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lighthouse of Alexandria",
+      "url": "https://en.wikipedia.org/wiki/Lighthouse_of_Alexandria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

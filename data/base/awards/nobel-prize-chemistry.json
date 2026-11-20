@@ -1,0 +1,60 @@
+{
+  "id": "nobel-prize-chemistry",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Nobel Prize in Chemistry",
+      "from": "1901"
+    }
+  ],
+  "summary": "The prize given each year since 1901 for outstanding chemical discoveries. Marie Curie, Haber, Dorothy Hodgkin and Jennifer Doudna are among those honoured with it.",
+  "labels": [
+    "chemistry",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Nobelpriset i kemi",
+    "chemistry Nobel Prizes"
+  ],
+  "wikidata": "Q44585",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nobel-prize"
+    },
+    {
+      "type": "in",
+      "to": "sweden"
+    },
+    {
+      "type": "related",
+      "to": "alfred-nobel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nobel Prize in Chemistry (Q44585)",
+      "url": "https://www.wikidata.org/wiki/Q44585",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nobel Prize in Chemistry",
+      "url": "https://en.wikipedia.org/wiki/Nobel_Prize_in_Chemistry",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

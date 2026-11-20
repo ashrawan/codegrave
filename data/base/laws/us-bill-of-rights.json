@@ -1,0 +1,55 @@
+{
+  "id": "us-bill-of-rights",
+  "category": "laws",
+  "names": [
+    {
+      "name": "United States Bill of Rights",
+      "from": "1791"
+    }
+  ],
+  "summary": "The first ten amendments to the American Constitution. They protect freedoms such as speech, religion and the press, and guarantee fair trials, and they were added to win support for the new government.",
+  "labels": [
+    "law",
+    "human-rights"
+  ],
+  "aliases": [
+    "1st-10th Amendments",
+    "1 Stat. 97",
+    "US Bill of Rights",
+    "U.S. Bill of Rights",
+    "Bill of Rights"
+  ],
+  "wikidata": "Q862765",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "us-constitution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United States Bill of Rights (Q862765)",
+      "url": "https://www.wikidata.org/wiki/Q862765",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United States Bill of Rights",
+      "url": "https://en.wikipedia.org/wiki/United_States_Bill_of_Rights",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

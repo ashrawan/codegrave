@@ -1,0 +1,57 @@
+{
+  "id": "bronze-age",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Bronze Age",
+      "from": "-3300"
+    }
+  ],
+  "summary": "The period in which societies used bronze, an alloy of copper and tin, for tools and weapons. Writing, cities and trade networks grew. Dates differ by region and are rough.",
+  "labels": [
+    "firsts",
+    "engineering"
+  ],
+  "wikidata": "Q11761",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "holocene"
+    },
+    {
+      "type": "related",
+      "to": "bronze"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bronze Age (Q11761)",
+      "url": "https://www.wikidata.org/wiki/Q11761",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bronze Age",
+      "url": "https://en.wikipedia.org/wiki/Bronze_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

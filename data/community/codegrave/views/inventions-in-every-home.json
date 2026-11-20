@@ -1,0 +1,79 @@
+{
+  "id": "inventions-in-every-home",
+  "name": "The Inventions in Every Home",
+  "description": "Soap, spectacles, zips and microwaves: the small inventions that fill the rooms we live in, and who thought of them.",
+  "category": "technology",
+  "labels": [
+    "firsts",
+    "food"
+  ],
+  "tags": [
+    "home",
+    "household",
+    "inventions",
+    "kitchen",
+    "everyday",
+    "gadgets"
+  ],
+  "entries": [
+    "mirror",
+    "soap",
+    "candle",
+    "chopsticks",
+    "glasses",
+    "toothbrush",
+    "flush-toilet",
+    "pressure-cooker",
+    "match",
+    "wristwatch",
+    "sewing-machine",
+    "safety-pin",
+    "dishwasher",
+    "typewriter",
+    "zipper",
+    "vacuum-flask",
+    "vacuum-cleaner",
+    "safety-razor",
+    "air-conditioning",
+    "washing-machine",
+    "refrigerator",
+    "ballpoint-pen",
+    "microwave-oven",
+    "instant-camera",
+    "velcro",
+    "barcode",
+    "walkman",
+    "post-it-note"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-comforts",
+      "name": "Ancient comforts",
+      "from": -6000,
+      "to": 1499,
+      "note": "Polished stone and metal mirrors, soap, candles and chopsticks are some of the oldest household goods. Spectacles and the bristle toothbrush came later but are still old."
+    },
+    {
+      "id": "age-of-ingenuity",
+      "name": "The age of ingenuity",
+      "from": 1500,
+      "to": 1849,
+      "note": "Inventors brought the flush toilet, the pressure cooker, matches, the sewing machine and the safety pin into homes, and shops sold them to a growing urban middle class."
+    },
+    {
+      "id": "gadget-century",
+      "name": "Machines for the house",
+      "from": 1850,
+      "to": 1919,
+      "note": "Dishwashers, typewriters, zips, vacuum cleaners and fridges relieved housework and office work, while safety razors and flasks changed daily habits."
+    },
+    {
+      "id": "plastic-and-electric",
+      "name": "The electric and plastic age",
+      "from": 1920,
+      "to": 2026,
+      "note": "Ballpoint pens, microwaves, instant cameras and hook-and-loop fasteners filled drawers and kitchens. The Walkman and the sticky note turned small ideas into habits."
+    }
+  ],
+  "year": 1950
+}

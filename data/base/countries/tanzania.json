@@ -1,0 +1,69 @@
+{
+  "id": "tanzania",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Tanzania",
+      "from": "1964"
+    }
+  ],
+  "summary": "An East African country formed in 1964 when Tanganyika and the island of Zanzibar united. It is home to Mount Kilimanjaro and the Serengeti plains.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "United Republic of Tanzania",
+    "tz",
+    "tza",
+    "Tanzania, United Republic of"
+  ],
+  "wikidata": "Q924",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-04-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tanzania (Q924)",
+      "url": "https://www.wikidata.org/wiki/Q924",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tanzania",
+      "url": "https://en.wikipedia.org/wiki/Tanzania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

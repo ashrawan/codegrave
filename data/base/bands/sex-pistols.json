@@ -1,0 +1,76 @@
+{
+  "id": "sex-pistols",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Sex Pistols",
+      "from": "1975"
+    }
+  ],
+  "summary": "London punk band whose short career and angry songs, such as God Save the Queen, shocked the public. Their only studio album came out in 1977, and the band split in January 1978 during a tour of the United States.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "The Sex Pistols"
+  ],
+  "wikidata": "Q82545",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1978",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Split during a tour of the United States",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "david-bowie"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ramones"
+    },
+    {
+      "type": "influenced_by",
+      "to": "chuck-berry"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-velvet-underground"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-rolling-stones"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-who"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sex Pistols (Q82545)",
+      "url": "https://www.wikidata.org/wiki/Q82545",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sex Pistols",
+      "url": "https://en.wikipedia.org/wiki/Sex_Pistols",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

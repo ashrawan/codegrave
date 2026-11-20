@@ -1,0 +1,61 @@
+{
+  "id": "manchukuo",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Manchukuo",
+      "from": "1932"
+    }
+  ],
+  "summary": "A puppet state set up by Japan in Manchuria after its invasion in 1931, with the last Qing emperor Puyi as its figurehead. Most governments did not recognise it.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Manzhouguo",
+    "Manshu-koku",
+    "Manchu state",
+    "State of Manchuria",
+    "Empire of Manchuria"
+  ],
+  "wikidata": "Q30623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-03-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-08-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Collapsed when the Soviet Union invaded at the end of the Second World War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manchukuo (Q30623)",
+      "url": "https://www.wikidata.org/wiki/Q30623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manchukuo",
+      "url": "https://en.wikipedia.org/wiki/Manchukuo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,47 @@
+{
+  "id": "roger-federer",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Roger Federer",
+      "from": "1981"
+    }
+  ],
+  "summary": "Swiss tennis player who won twenty Grand Slam singles titles and spent over 300 weeks as the world number one. He retired in 2022 and is known for a smooth style of play.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1426",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-08-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-2000"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roger Federer (Q1426)",
+      "url": "https://www.wikidata.org/wiki/Q1426",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roger Federer",
+      "url": "https://en.wikipedia.org/wiki/Roger_Federer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

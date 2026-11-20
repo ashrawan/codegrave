@@ -1,0 +1,61 @@
+{
+  "id": "wars-of-the-roses",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Wars of the Roses",
+      "from": "1455"
+    }
+  ],
+  "summary": "Civil wars in England between the supporters of the houses of Lancaster and York for the throne. They ended when Henry Tudor won and founded the Tudor dynasty.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "wikidata": "Q127751",
+  "events": [
+    {
+      "type": "born",
+      "date": "1455-05-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1487-06-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "richard-iii"
+    },
+    {
+      "type": "related",
+      "to": "house-of-tudor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wars of the Roses (Q127751)",
+      "url": "https://www.wikidata.org/wiki/Q127751",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wars of the Roses",
+      "url": "https://en.wikipedia.org/wiki/Wars_of_the_Roses",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

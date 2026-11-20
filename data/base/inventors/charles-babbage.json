@@ -1,0 +1,57 @@
+{
+  "id": "charles-babbage",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Charles Babbage",
+      "from": "1791"
+    }
+  ],
+  "summary": "English mathematician who designed the Difference Engine and the Analytical Engine, a mechanical machine with a memory and a processor that could be programmed with punched cards. It was never finished in his lifetime.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q46633",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-12-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1871-10-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ada-lovelace"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles Babbage (Q46633)",
+      "url": "https://www.wikidata.org/wiki/Q46633",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles Babbage",
+      "url": "https://en.wikipedia.org/wiki/Charles_Babbage",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mary-shelley",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Mary Shelley",
+      "from": "1797"
+    }
+  ],
+  "summary": "English writer who began Frankenstein at nineteen during a summer holiday by Lake Geneva. Her story of a scientist and his creature is often called the first science fiction novel.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q47152",
+  "events": [
+    {
+      "type": "born",
+      "date": "1797-08-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1851-02-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "mary-wollstonecraft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mary Shelley (Q47152)",
+      "url": "https://www.wikidata.org/wiki/Q47152",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mary Shelley",
+      "url": "https://en.wikipedia.org/wiki/Mary_Shelley",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "hawaii",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Hawaii",
+      "from": "1959"
+    }
+  ],
+  "summary": "The island state in the central Pacific that was a kingdom, then a US territory after 1898, and became the fiftieth state in 1959. It has active volcanoes and a distinct native culture.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "State of Hawaii",
+    "Hawaii State",
+    "The Aloha State",
+    "Hawaii, United States",
+    "Kaimana Hila"
+  ],
+  "wikidata": "Q782",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-08-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-hawaii"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hawaii (Q782)",
+      "url": "https://www.wikidata.org/wiki/Q782",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hawaii",
+      "url": "https://en.wikipedia.org/wiki/Hawaii",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "the-x-files",
+  "category": "shows",
+  "names": [
+    {
+      "name": "The X-Files",
+      "from": "1993"
+    }
+  ],
+  "summary": "American series in which two FBI agents look into unexplained cases, with a long story of government secrets and aliens. It was a worldwide hit of the 1990s and helped make science-fiction thrillers a mainstream TV genre.",
+  "labels": [
+    "television"
+  ],
+  "aliases": [
+    "X-Files"
+  ],
+  "wikidata": "Q2744",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-09-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Original run ended after nine seasons; later revived",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "the-twilight-zone-1959"
+    },
+    {
+      "type": "about",
+      "to": "fbi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The X-Files (Q2744)",
+      "url": "https://www.wikidata.org/wiki/Q2744",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The X-Files",
+      "url": "https://en.wikipedia.org/wiki/The_X-Files",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

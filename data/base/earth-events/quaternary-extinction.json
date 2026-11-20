@@ -1,0 +1,60 @@
+{
+  "id": "quaternary-extinction",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Late Quaternary megafauna extinction",
+      "from": "-50000"
+    }
+  ],
+  "summary": "The loss of most of the world's largest land mammals, such as mammoths, ground sloths and sabre-toothed cats, at the end of the ice age. Climate change and human hunting are both blamed.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Quaternary extinction event",
+    "Pleistocene-Holocene extinction",
+    "Late Quaternary Extinctions",
+    "Quaternary Megafauna Extinction",
+    "LQE"
+  ],
+  "wikidata": "Q1759232",
+  "events": [
+    {
+      "type": "born",
+      "date": "-50000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "quaternary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Quaternary extinction event (Q1759232)",
+      "url": "https://www.wikidata.org/wiki/Q1759232",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Late Pleistocene extinctions",
+      "url": "https://en.wikipedia.org/wiki/Late_Pleistocene_extinctions",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

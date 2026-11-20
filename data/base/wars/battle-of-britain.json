@@ -1,0 +1,68 @@
+{
+  "id": "battle-of-britain",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Britain",
+      "from": "1940"
+    }
+  ],
+  "summary": "A campaign in the air in which the German Luftwaffe tried to defeat the Royal Air Force over southern England. Germany failed to win control of the sky, and a planned invasion was put off.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q154720",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-07-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1940-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "related",
+      "to": "canada"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Britain (Q154720)",
+      "url": "https://www.wikidata.org/wiki/Q154720",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Britain",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Britain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

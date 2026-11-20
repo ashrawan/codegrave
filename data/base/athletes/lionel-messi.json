@@ -1,0 +1,59 @@
+{
+  "id": "lionel-messi",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Lionel Messi",
+      "from": "1987"
+    }
+  ],
+  "summary": "Argentine footballer who spent most of his career at Barcelona and won the World Cup with Argentina in 2022. He has won the Ballon d'Or more times than any other player.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q615",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-06-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-2008"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-2014"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-2010"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-2022"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lionel Messi (Q615)",
+      "url": "https://www.wikidata.org/wiki/Q615",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lionel Messi",
+      "url": "https://en.wikipedia.org/wiki/Lionel_Messi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

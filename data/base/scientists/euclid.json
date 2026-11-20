@@ -1,0 +1,52 @@
+{
+  "id": "euclid",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Euclid",
+      "from": "-0323"
+    }
+  ],
+  "summary": "Greek mathematician who worked in Alexandria and wrote the Elements, a book that gathered the geometry of his day and built it up from a few basic assumptions. It was a standard textbook for over two thousand years.",
+  "labels": [
+    "mathematics"
+  ],
+  "aliases": [
+    "Euclid of Alexandria",
+    "Eukleides",
+    "Euclides"
+  ],
+  "wikidata": "Q8747",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0323",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0285",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Euclid (Q8747)",
+      "url": "https://www.wikidata.org/wiki/Q8747",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Euclid",
+      "url": "https://en.wikipedia.org/wiki/Euclid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

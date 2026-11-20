@@ -1,0 +1,71 @@
+{
+  "id": "united-states",
+  "category": "countries",
+  "names": [
+    {
+      "name": "United States",
+      "from": "1776"
+    }
+  ],
+  "summary": "A federal republic of fifty states in North America, founded when thirteen British colonies declared independence in 1776. It has the largest economy in the world and a written constitution dating from 1787.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "aliases": [
+    "the States",
+    "the United States of America",
+    "US of America",
+    "the US",
+    "the U.S."
+  ],
+  "wikidata": "Q30",
+  "events": [
+    {
+      "type": "born",
+      "date": "1776-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-bank"
+    },
+    {
+      "type": "member_of",
+      "to": "international-monetary-fund"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United States (Q30)",
+      "url": "https://www.wikidata.org/wiki/Q30",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United States",
+      "url": "https://en.wikipedia.org/wiki/United_States",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

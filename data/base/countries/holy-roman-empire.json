@@ -1,0 +1,65 @@
+{
+  "id": "holy-roman-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Holy Roman Empire",
+      "from": "0962"
+    }
+  ],
+  "summary": "A patchwork of German, Italian and Central European states under an elected emperor, beginning with Otto I. It lasted about eight hundred years but was a loose union rather than a single nation.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "First Reich",
+    "Reich",
+    "HRE",
+    "Roman-German Empire",
+    "Old Empire"
+  ],
+  "wikidata": "Q12548",
+  "events": [
+    {
+      "type": "born",
+      "date": "0962-02-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1806-08-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved by Francis II after defeats by Napoleon",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "austrian-empire"
+    },
+    {
+      "type": "related",
+      "to": "roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Holy Roman Empire (Q12548)",
+      "url": "https://www.wikidata.org/wiki/Q12548",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Holy Roman Empire",
+      "url": "https://en.wikipedia.org/wiki/Holy_Roman_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

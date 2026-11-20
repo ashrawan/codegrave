@@ -1,0 +1,58 @@
+{
+  "id": "the-last-supper",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "The Last Supper",
+      "from": "1498"
+    }
+  ],
+  "summary": "Wall painting by Leonardo da Vinci in a monastery in Milan, showing the moment Jesus tells his disciples one of them will betray him. The experimental paint began to flake soon after it was made.",
+  "labels": [
+    "visual-art",
+    "religion"
+  ],
+  "aliases": [
+    "Il Cenacolo",
+    "L'Ultima Cena",
+    "Cenacolo vinciano",
+    "Last Supper"
+  ],
+  "wikidata": "Q128910",
+  "events": [
+    {
+      "type": "born",
+      "date": "1498",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "leonardo-da-vinci"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Last Supper (Q128910)",
+      "url": "https://www.wikidata.org/wiki/Q128910",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Last Supper (Leonardo)",
+      "url": "https://en.wikipedia.org/wiki/The_Last_Supper_(Leonardo)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

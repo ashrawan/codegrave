@@ -1,0 +1,53 @@
+{
+  "id": "plague-of-athens",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Plague of Athens",
+      "from": "-0430"
+    }
+  ],
+  "summary": "A deadly disease struck Athens early in the Peloponnesian War, when people from the countryside crowded inside the city walls. It killed a large share of the population, including the leader Pericles, and weakened Athens.",
+  "labels": [
+    "medicine",
+    "war"
+  ],
+  "wikidata": "Q758173",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0430",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0426",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Plague of Athens (Q758173)",
+      "url": "https://www.wikidata.org/wiki/Q758173",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plague of Athens",
+      "url": "https://en.wikipedia.org/wiki/Plague_of_Athens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

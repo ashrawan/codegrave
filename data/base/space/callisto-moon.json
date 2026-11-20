@@ -1,0 +1,50 @@
+{
+  "id": "callisto-moon",
+  "category": "space",
+  "names": [
+    {
+      "name": "Callisto",
+      "from": "-4500000000"
+    }
+  ],
+  "summary": "The second largest moon of Jupiter, with one of the oldest and most heavily cratered surfaces in the solar system. It lies outside most of Jupiter's harsh radiation and may hide a deep salty ocean.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Jupiter IV"
+  ],
+  "wikidata": "Q3134",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "galileo-galilei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Callisto (Q3134)",
+      "url": "https://www.wikidata.org/wiki/Q3134",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Callisto (moon)",
+      "url": "https://en.wikipedia.org/wiki/Callisto_(moon)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

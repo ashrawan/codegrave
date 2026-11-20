@@ -1,0 +1,59 @@
+{
+  "id": "serbia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Serbia",
+      "from": "2006"
+    }
+  ],
+  "summary": "A Balkan country with its capital at Belgrade, the largest nation of former Yugoslavia. It became fully independent in 2006 after Montenegro left their union.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Serbia",
+    "RS"
+  ],
+  "wikidata": "Q403",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Serbia (Q403)",
+      "url": "https://www.wikidata.org/wiki/Q403",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Serbia",
+      "url": "https://en.wikipedia.org/wiki/Serbia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

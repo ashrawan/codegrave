@@ -1,0 +1,61 @@
+{
+  "id": "first-indochina-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Indochina War",
+      "from": "1946"
+    }
+  ],
+  "summary": "War between France and the Viet Minh, led by Ho Chi Minh, in Vietnam, Laos and Cambodia. It ended with the French defeat at Dien Bien Phu and the division of Vietnam.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Indochina War",
+    "Anti-French Resistance War"
+  ],
+  "wikidata": "Q748780",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-12-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1954-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "in",
+      "to": "french-indochina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Indochina War (Q748780)",
+      "url": "https://www.wikidata.org/wiki/Q748780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Indochina War",
+      "url": "https://en.wikipedia.org/wiki/First_Indochina_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

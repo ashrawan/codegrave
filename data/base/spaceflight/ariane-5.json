@@ -1,0 +1,53 @@
+{
+  "id": "ariane-5",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Ariane 5",
+      "from": "1996"
+    }
+  ],
+  "maker": "Arianespace and ESA",
+  "summary": "A European heavy-lift launch rocket that flew from French Guiana from 1996 to 2023. It launched the James Webb Space Telescope and many communications satellites.",
+  "labels": [
+    "engineering"
+  ],
+  "aliases": [
+    "Ariane V",
+    "Ariane 5 rocket"
+  ],
+  "wikidata": "Q18532",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-06-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired and replaced by Ariane 6",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ariane 5 (Q18532)",
+      "url": "https://www.wikidata.org/wiki/Q18532",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ariane 5",
+      "url": "https://en.wikipedia.org/wiki/Ariane_5",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

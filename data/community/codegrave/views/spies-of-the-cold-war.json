@@ -1,0 +1,74 @@
+{
+  "id": "spies-of-the-cold-war",
+  "name": "Spies of the Cold War",
+  "description": "The agencies, crises and walls of a secret war: CIA against KGB, MI6 against the Stasi, and the codebreakers who read messages meant to stay hidden.",
+  "category": "organisations",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "tags": [
+    "cia",
+    "kgb",
+    "spies",
+    "espionage",
+    "cold war",
+    "mi6",
+    "stasi",
+    "mossad"
+  ],
+  "entries": [
+    "office-of-strategic-services",
+    "venona-project",
+    "cold-war",
+    "cia",
+    "national-security-agency",
+    "gchq",
+    "mi5",
+    "secret-intelligence-service",
+    "mossad",
+    "kgb",
+    "stasi",
+    "securitate",
+    "inter-services-intelligence",
+    "federal-intelligence-service",
+    "fbi",
+    "u2-incident",
+    "berlin-wall",
+    "bay-of-pigs-invasion",
+    "cuban-missile-crisis",
+    "warsaw-pact",
+    "nato"
+  ],
+  "checkpoints": [
+    {
+      "id": "hot-to-cold",
+      "name": "From hot war to cold",
+      "from": 1942,
+      "to": 1953,
+      "note": "The OSS and Venona show how wartime spying carried on into peace. In 1947 the CIA was founded, the NSA followed, and Mossad, the Securitate and ISI began work as the blocs formed."
+    },
+    {
+      "id": "walls-and-flights",
+      "name": "Walls and spy planes",
+      "from": 1954,
+      "to": 1961,
+      "note": "The KGB took shape, West Germany set up its own service, and the Stasi watched East Germans. A U-2 was shot down in 1960, the Bay of Pigs failed in 1961, and the Berlin Wall went up."
+    },
+    {
+      "id": "missiles-and-moles",
+      "name": "Missiles and moles",
+      "from": 1962,
+      "to": 1979,
+      "note": "After the Cuban Missile Crisis, the services turned to spy satellites and signals, with MI5, MI6 and GCHQ tracking a Soviet network of agents."
+    },
+    {
+      "id": "last-years",
+      "name": "The last years",
+      "from": 1980,
+      "to": 1991,
+      "note": "The Stasi, the Securitate and the KGB were swept away as the Eastern bloc fell. The Warsaw Pact ended and NATO outlived it."
+    }
+  ],
+  "year": 1962
+}

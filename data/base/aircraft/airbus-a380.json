@@ -1,0 +1,54 @@
+{
+  "id": "airbus-a380",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Airbus A380",
+      "from": "2005"
+    }
+  ],
+  "maker": "Airbus",
+  "summary": "The largest passenger airliner ever built, with two full decks. It first flew in 2005 and entered service in 2007, but airlines preferred smaller twin-engine jets and production ended in 2021.",
+  "labels": [
+    "transport",
+    "record-holders"
+  ],
+  "aliases": [
+    "A380neo",
+    "A380plus"
+  ],
+  "wikidata": "Q5830",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-04-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Production ended because few airlines ordered it",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Airbus A380 (Q5830)",
+      "url": "https://www.wikidata.org/wiki/Q5830",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Airbus A380",
+      "url": "https://en.wikipedia.org/wiki/Airbus_A380",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

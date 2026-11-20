@@ -1,0 +1,54 @@
+{
+  "id": "quebec",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Quebec",
+      "from": "1867"
+    }
+  ],
+  "summary": "The largest province of Canada by area and the only one with French as its sole official language. It began as the heart of New France, and became a province of Canada in 1867.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "QC",
+    "Province of Quebec",
+    "Quebec Province",
+    "PQ",
+    "P.Q."
+  ],
+  "wikidata": "Q176",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Quebec (Q176)",
+      "url": "https://www.wikidata.org/wiki/Q176",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quebec",
+      "url": "https://en.wikipedia.org/wiki/Quebec",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

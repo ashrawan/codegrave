@@ -1,0 +1,56 @@
+{
+  "id": "tina-turner",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Tina Turner",
+      "from": "1939"
+    }
+  ],
+  "summary": "American-born singer who first became famous with her husband Ike Turner in the 1960s and then had a solo career from the 1980s with songs such as What's Love Got to Do with It. She later lived in Switzerland.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Tina Turner-Bullock",
+    "Martha Nell Bullock"
+  ],
+  "wikidata": "Q131814",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-11-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023-05-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tina Turner (Q131814)",
+      "url": "https://www.wikidata.org/wiki/Q131814",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tina Turner",
+      "url": "https://en.wikipedia.org/wiki/Tina_Turner",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

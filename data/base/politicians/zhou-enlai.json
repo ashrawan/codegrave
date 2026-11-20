@@ -1,0 +1,57 @@
+{
+  "id": "zhou-enlai",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Zhou Enlai",
+      "from": "1898"
+    }
+  ],
+  "summary": "Chinese Communist leader who served as premier of the People's Republic of China from its founding in 1949 until his death. He handled foreign relations and met President Nixon during his 1972 visit.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Enlai Zhou",
+    "Chou En-lai",
+    "Premier Zhou"
+  ],
+  "wikidata": "Q17410",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898-03-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "bandung-conference"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zhou Enlai (Q17410)",
+      "url": "https://www.wikidata.org/wiki/Q17410",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zhou Enlai",
+      "url": "https://en.wikipedia.org/wiki/Zhou_Enlai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

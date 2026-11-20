@@ -1,0 +1,88 @@
+{
+  "id": "friends-followers-and-failures",
+  "name": "Friends, Followers and Failures",
+  "description": "The social networks that connected the world, and the many that were forgotten: from SixDegrees to Threads, why some thrived and others vanished.",
+  "category": "computing",
+  "labels": [
+    "media",
+    "failures",
+    "business"
+  ],
+  "tags": [
+    "social media",
+    "facebook",
+    "myspace",
+    "twitter",
+    "instagram",
+    "tiktok",
+    "friendster"
+  ],
+  "entries": [
+    "sixdegrees",
+    "friendster",
+    "linkedin",
+    "myspace",
+    "orkut",
+    "facebook",
+    "mark-zuckerberg",
+    "meta-platforms",
+    "bebo",
+    "vk",
+    "digg",
+    "reddit",
+    "youtube",
+    "twitter",
+    "tumblr",
+    "flickr",
+    "instagram",
+    "pinterest",
+    "google-buzz",
+    "google-plus",
+    "snapchat",
+    "whatsapp",
+    "vine",
+    "wechat",
+    "tiktok",
+    "mastodon",
+    "threads",
+    "bluesky"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-attempts",
+      "name": "First attempts",
+      "from": 1997,
+      "to": 2002,
+      "note": "Sites such as SixDegrees try to put friendships on the web, but too few people are online and too few have broadband. The idea waits for the next wave."
+    },
+    {
+      "id": "friends-everywhere",
+      "name": "Friends everywhere",
+      "from": 2003,
+      "to": 2006,
+      "note": "Friendster, MySpace and Facebook show that millions of people will build profiles and add friends. MySpace grows fastest at first, while Facebook spreads from one university to the world."
+    },
+    {
+      "id": "the-smartphone-years",
+      "name": "The smartphone years",
+      "from": 2007,
+      "to": 2012,
+      "note": "Phones put a camera and a feed in every pocket. Twitter, Tumblr, Instagram and Pinterest arrive, Facebook buys its rivals, and Google tries and fails to make its own network."
+    },
+    {
+      "id": "short-and-fleeting",
+      "name": "Short, fast and fleeting",
+      "from": 2013,
+      "to": 2019,
+      "note": "Disappearing photos, six-second videos and algorithm-driven feeds take over. Vine rises and closes, Snapchat and TikTok attract the young, and Google+ is shut down."
+    },
+    {
+      "id": "after-the-giants",
+      "name": "After the giants",
+      "from": 2020,
+      "to": 2026,
+      "note": "Questions about control of the big platforms lead to open networks such as Mastodon and Bluesky, to Meta launching Threads, and to a new scramble for users from X."
+    }
+  ],
+  "year": 2010
+}

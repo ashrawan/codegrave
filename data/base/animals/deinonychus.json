@@ -1,0 +1,47 @@
+{
+  "id": "deinonychus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Deinonychus",
+      "from": "-115000000"
+    }
+  ],
+  "summary": "A fast, feathered meat-eater with a large claw on each foot. Its study in the 1960s changed scientists' view of dinosaurs from slow reptiles to active, bird-like animals.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q14405",
+  "events": [
+    {
+      "type": "born",
+      "date": "-115000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-108000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Deinonychus (Q14405)",
+      "url": "https://www.wikidata.org/wiki/Q14405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Deinonychus",
+      "url": "https://en.wikipedia.org/wiki/Deinonychus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

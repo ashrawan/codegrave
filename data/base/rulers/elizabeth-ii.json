@@ -1,0 +1,56 @@
+{
+  "id": "elizabeth-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Elizabeth II",
+      "from": "1926"
+    }
+  ],
+  "summary": "Queen of the United Kingdom and other realms from 1952 until her death. She reigned for over seventy years, longer than any other British monarch, and saw the end of the empire and the growth of the Commonwealth.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Elizabeth Windsor",
+    "Elizabeth Alexandra Mary Windsor"
+  ],
+  "wikidata": "Q9682",
+  "events": [
+    {
+      "type": "born",
+      "date": "1926-04-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-09-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Elizabeth II (Q9682)",
+      "url": "https://www.wikidata.org/wiki/Q9682",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elizabeth II",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

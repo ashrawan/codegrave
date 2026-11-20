@@ -1,0 +1,53 @@
+{
+  "id": "marine-chronometer",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Marine chronometer",
+      "from": "1736"
+    }
+  ],
+  "maker": "John Harrison",
+  "summary": "A very accurate clock that keeps time on a moving ship. Knowing the time at a fixed place lets a navigator work out longitude, and John Harrison's design solved a problem that had cost many lives.",
+  "labels": [
+    "exploration",
+    "firsts"
+  ],
+  "aliases": [
+    "marine clock",
+    "marine timepiece"
+  ],
+  "wikidata": "Q2307829",
+  "events": [
+    {
+      "type": "born",
+      "date": "1736",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "john-harrison"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: marine chronometer (Q2307829)",
+      "url": "https://www.wikidata.org/wiki/Q2307829",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marine chronometer",
+      "url": "https://en.wikipedia.org/wiki/Marine_chronometer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

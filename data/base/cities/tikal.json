@@ -1,0 +1,54 @@
+{
+  "id": "tikal",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tikal",
+      "from": "-0400"
+    }
+  ],
+  "summary": "One of the largest Maya cities, set in rainforest in Guatemala. Its temple pyramids rise above the trees, and its rulers fought and traded with other Maya kingdoms until the city was abandoned.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Yax Mutul",
+    "Mutul",
+    "Mutal"
+  ],
+  "wikidata": "Q181172",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned during the collapse of the southern Maya cities",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Tikal (Q181172)",
+      "url": "https://www.wikidata.org/wiki/Q181172",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tikal",
+      "url": "https://en.wikipedia.org/wiki/Tikal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

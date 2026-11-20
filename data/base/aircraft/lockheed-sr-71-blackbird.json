@@ -1,0 +1,55 @@
+{
+  "id": "lockheed-sr-71-blackbird",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "SR-71 Blackbird",
+      "from": "1964"
+    }
+  ],
+  "maker": "Lockheed Skunk Works",
+  "summary": "A high-flying American spy plane that first flew in 1964 and could fly at more than three times the speed of sound. It set speed records that remain unbeaten for crewed jets and left service in 1998.",
+  "labels": [
+    "record-holders",
+    "war"
+  ],
+  "aliases": [
+    "Blackbird",
+    "SR71 Blackbird",
+    "RS-71 Blackbird"
+  ],
+  "wikidata": "Q190114",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-12-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-10-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired as satellites and drones took over reconnaissance",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Lockheed SR-71 Blackbird (Q190114)",
+      "url": "https://www.wikidata.org/wiki/Q190114",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lockheed SR-71 Blackbird",
+      "url": "https://en.wikipedia.org/wiki/Lockheed_SR-71_Blackbird",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

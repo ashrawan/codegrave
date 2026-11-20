@@ -1,0 +1,54 @@
+{
+  "id": "cistercians",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Cistercians",
+      "from": "1098"
+    }
+  ],
+  "summary": "Monastic order that began at Citeaux in France as a return to strict living by the Rule of Saint Benedict. Its monks set up many farms and abbeys across Europe.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Cistercian Order",
+    "OCist",
+    "SOCist",
+    "White Monks",
+    "O.Cist."
+  ],
+  "wikidata": "Q166861",
+  "events": [
+    {
+      "type": "born",
+      "date": "1098",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cistercians (Q166861)",
+      "url": "https://www.wikidata.org/wiki/Q166861",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cistercians",
+      "url": "https://en.wikipedia.org/wiki/Cistercians",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

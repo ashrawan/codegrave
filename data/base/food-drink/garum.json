@@ -1,0 +1,48 @@
+{
+  "id": "garum",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Garum",
+      "from": "-0400"
+    }
+  ],
+  "summary": "A salty sauce made by fermenting fish, used widely in Greek and Roman cooking in much the way soy sauce or fish sauce is used today. It was made in factories along the Mediterranean coast.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q950470",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Faded as the Roman trading world broke up",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: garum (Q950470)",
+      "url": "https://www.wikidata.org/wiki/Q950470",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Garum",
+      "url": "https://en.wikipedia.org/wiki/Garum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

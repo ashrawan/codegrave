@@ -1,0 +1,65 @@
+{
+  "id": "mithraism",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Mithraism",
+      "from": "0090"
+    }
+  ],
+  "summary": "A mystery religion of the Roman Empire, popular among soldiers, whose members met in small underground temples called mithraea. Its images show the god Mithras killing a bull, and its secret rites are known only from remains.",
+  "labels": [
+    "religion",
+    "lost"
+  ],
+  "aliases": [
+    "Mithraic mysteries",
+    "Roman Mithraism",
+    "Mysteries of Mithras",
+    "Mithras",
+    "Cult of Mithras"
+  ],
+  "wikidata": "Q219903",
+  "events": [
+    {
+      "type": "born",
+      "date": "0090",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined as Christianity gained imperial support and pagan rites were banned",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "ancient-roman-religion"
+    },
+    {
+      "type": "influenced_by",
+      "to": "zoroastrianism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mithraic mysteries (Q219903)",
+      "url": "https://www.wikidata.org/wiki/Q219903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mithraism",
+      "url": "https://en.wikipedia.org/wiki/Mithraism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

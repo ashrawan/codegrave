@@ -1,0 +1,52 @@
+{
+  "id": "simon-bolivar",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Simon Bolivar",
+      "from": "1783"
+    }
+  ],
+  "summary": "Venezuelan officer who led armies that freed much of northern South America from Spain. He led the creation of Gran Colombia and is honoured across the region as the Liberator.",
+  "labels": [
+    "war",
+    "independence",
+    "politics"
+  ],
+  "aliases": [
+    "Bolívar"
+  ],
+  "wikidata": "Q8605",
+  "events": [
+    {
+      "type": "born",
+      "date": "1783-07-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1830-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Simón Bolívar (Q8605)",
+      "url": "https://www.wikidata.org/wiki/Q8605",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Simón Bolívar",
+      "url": "https://en.wikipedia.org/wiki/Sim%C3%B3n_Bol%C3%ADvar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

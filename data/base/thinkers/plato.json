@@ -1,0 +1,57 @@
+{
+  "id": "plato",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Plato",
+      "from": "-0428"
+    }
+  ],
+  "summary": "Athenian philosopher, student of Socrates and teacher of Aristotle. He founded the Academy and wrote dialogues such as the Republic about justice, knowledge and the best way for a city to be governed.",
+  "labels": [
+    "philosophy",
+    "education"
+  ],
+  "wikidata": "Q859",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0428",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0348",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "socrates"
+    },
+    {
+      "type": "influenced_by",
+      "to": "homer"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Plato (Q859)",
+      "url": "https://www.wikidata.org/wiki/Q859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plato",
+      "url": "https://en.wikipedia.org/wiki/Plato",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

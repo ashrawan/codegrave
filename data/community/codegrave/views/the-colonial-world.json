@@ -1,0 +1,85 @@
+{
+  "id": "the-colonial-world",
+  "name": "The Colonial World: Ships, Companies and Conquests",
+  "description": "How a few European countries claimed lands across the globe, from the first Portuguese voyages to the last handovers in the 1990s.",
+  "category": "places",
+  "labels": [
+    "exploration",
+    "economics",
+    "politics"
+  ],
+  "tags": [
+    "colonialism",
+    "colonies",
+    "spain",
+    "portugal",
+    "britain",
+    "france"
+  ],
+  "entries": [
+    "age-of-discovery",
+    "treaty-of-tordesillas",
+    "portuguese-empire",
+    "spanish-empire",
+    "new-spain",
+    "new-france",
+    "colony-of-virginia",
+    "thirteen-colonies",
+    "dutch-east-indies",
+    "company-rule-in-india",
+    "british-raj",
+    "cape-colony",
+    "haiti",
+    "empire-of-brazil",
+    "french-algeria",
+    "berlin-conference",
+    "scramble-for-africa",
+    "congo-free-state",
+    "belgian-congo",
+    "german-east-africa",
+    "french-indochina",
+    "french-colonial-empire",
+    "british-empire",
+    "anglo-egyptian-sudan",
+    "british-hong-kong",
+    "decolonization"
+  ],
+  "checkpoints": [
+    {
+      "id": "conquest-and-gold",
+      "name": "Conquest and gold",
+      "from": 1415,
+      "to": 1599,
+      "note": "Portugal sails around Africa and Spain reaches the Americas. The Treaty of Tordesillas splits the new world between them, and New Spain's silver mines feed the world economy."
+    },
+    {
+      "id": "plantations-and-companies",
+      "name": "Plantations and companies",
+      "from": 1600,
+      "to": 1775,
+      "note": "Dutch, French and English companies set up trading posts, plantations and colonies. Millions of enslaved Africans are carried across the Atlantic, and Britain and France fight over North America and India."
+    },
+    {
+      "id": "revolts-and-new-empires",
+      "name": "Revolts and new empires",
+      "from": 1776,
+      "to": 1883,
+      "note": "The Americas break free from Europe, from the United States to Haiti and Brazil. Britain takes over rule in India and France invades Algeria, shifting the empires toward Asia and Africa."
+    },
+    {
+      "id": "the-scramble",
+      "name": "The scramble",
+      "from": 1884,
+      "to": 1945,
+      "note": "After the Berlin Conference Europe divides almost all of Africa. Leopold's Congo, French Indochina and German East Africa are examples of rule maintained by force and forced labour."
+    },
+    {
+      "id": "unwinding",
+      "name": "The unwinding",
+      "from": 1946,
+      "to": 1999,
+      "note": "Wars and negotiations end the colonial empires. France leaves Algeria in 1962, and the last big colony, Hong Kong, returns to China in 1997."
+    }
+  ],
+  "year": 1884
+}

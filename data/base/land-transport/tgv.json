@@ -1,0 +1,52 @@
+{
+  "id": "tgv",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "TGV",
+      "from": "1981"
+    }
+  ],
+  "maker": "SNCF and Alstom",
+  "summary": "The French high-speed rail service, whose first line between Paris and Lyon opened in 1981. TGV trains broke speed records and the network helped spread high-speed rail across Europe.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "Train à Grande Vitesse"
+  ],
+  "wikidata": "Q129337",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-09-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: TGV (Q129337)",
+      "url": "https://www.wikidata.org/wiki/Q129337",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: TGV",
+      "url": "https://en.wikipedia.org/wiki/TGV",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

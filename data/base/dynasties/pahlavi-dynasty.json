@@ -1,0 +1,57 @@
+{
+  "id": "pahlavi-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Pahlavi dynasty",
+      "from": "1925"
+    }
+  ],
+  "summary": "Last royal dynasty of Iran, founded by Reza Shah and continued by his son Mohammad Reza Pahlavi. It tried to modernise the country and was overthrown in the Iranian Revolution.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Pahlavi",
+    "House of Pahlavi"
+  ],
+  "wikidata": "Q207991",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-12-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-04-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown in the Iranian Revolution",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "iran"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pahlavi dynasty (Q207991)",
+      "url": "https://www.wikidata.org/wiki/Q207991",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pahlavi dynasty",
+      "url": "https://en.wikipedia.org/wiki/Pahlavi_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,64 @@
+{
+  "id": "reconquista",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Reconquista",
+      "from": "0722"
+    }
+  ],
+  "summary": "The long process in which Christian kingdoms of Spain and Portugal took back the Iberian Peninsula from Muslim rulers. It ended with the fall of Granada in 1492. The start date is traditional.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "aliases": [
+    "Fall of al-Andalus",
+    "Rise of feudal Hispanic Kingdoms",
+    "Fall of Islamic Spain",
+    "Fall of Muslim Spain",
+    "Rise of Catholic Spain"
+  ],
+  "wikidata": "Q79791",
+  "events": [
+    {
+      "type": "born",
+      "date": "0722",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1492-01-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "almohad-caliphate"
+    },
+    {
+      "type": "related",
+      "to": "umayyad-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Reconquista (Q79791)",
+      "url": "https://www.wikidata.org/wiki/Q79791",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reconquista",
+      "url": "https://en.wikipedia.org/wiki/Reconquista",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

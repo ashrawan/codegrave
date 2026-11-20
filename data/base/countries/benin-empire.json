@@ -1,0 +1,59 @@
+{
+  "id": "benin-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Benin Empire",
+      "from": "1180"
+    }
+  ],
+  "summary": "A West African kingdom in what is now southern Nigeria, ruled by an oba from Benin City. It is known for brass plaques and heads cast by guild artists, many of which were looted by the British in 1897.",
+  "labels": [
+    "lost",
+    "visual-art"
+  ],
+  "aliases": [
+    "Benin Kingdom",
+    "Benin polity",
+    "Benin"
+  ],
+  "wikidata": "Q171203",
+  "events": [
+    {
+      "type": "born",
+      "date": "1180",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1897",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by the British in the Benin Expedition",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benin Empire (Q171203)",
+      "url": "https://www.wikidata.org/wiki/Q171203",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Benin",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Benin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

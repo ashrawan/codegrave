@@ -1,0 +1,50 @@
+{
+  "id": "the-tempest",
+  "category": "stage",
+  "names": [
+    {
+      "name": "The Tempest",
+      "from": "1611"
+    }
+  ],
+  "summary": "Play by William Shakespeare about the exiled magician Prospero, who uses his powers on an island to bring his enemies before him. It is often thought to be among his last plays written alone.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Tempest"
+  ],
+  "wikidata": "Q86440",
+  "events": [
+    {
+      "type": "born",
+      "date": "1611",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Tempest (Q86440)",
+      "url": "https://www.wikidata.org/wiki/Q86440",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Tempest",
+      "url": "https://en.wikipedia.org/wiki/The_Tempest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

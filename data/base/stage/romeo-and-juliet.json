@@ -1,0 +1,50 @@
+{
+  "id": "romeo-and-juliet",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Romeo and Juliet",
+      "from": "1597"
+    }
+  ],
+  "summary": "Tragedy by William Shakespeare about two young lovers from feuding families in Verona whose deaths finally end the quarrel. It is among the most often performed and filmed plays.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "La tragedia de Romeo y Julieta"
+  ],
+  "wikidata": "Q83186",
+  "events": [
+    {
+      "type": "born",
+      "date": "1597",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Romeo and Juliet (Q83186)",
+      "url": "https://www.wikidata.org/wiki/Q83186",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Romeo and Juliet",
+      "url": "https://en.wikipedia.org/wiki/Romeo_and_Juliet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

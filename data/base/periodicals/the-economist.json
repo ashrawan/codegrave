@@ -1,0 +1,55 @@
+{
+  "id": "the-economist",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "The Economist",
+      "from": "1843"
+    }
+  ],
+  "summary": "Weekly British news magazine founded in London to argue for free trade. It now covers world news, business and science and is read in many countries.",
+  "labels": [
+    "economics",
+    "media"
+  ],
+  "aliases": [
+    "Economist"
+  ],
+  "wikidata": "Q180089",
+  "events": [
+    {
+      "type": "born",
+      "date": "1843",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Economist (Q180089)",
+      "url": "https://www.wikidata.org/wiki/Q180089",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Economist",
+      "url": "https://en.wikipedia.org/wiki/The_Economist",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

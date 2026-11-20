@@ -1,0 +1,88 @@
+{
+  "id": "cities-the-world-forgot",
+  "name": "Cities the World Forgot",
+  "description": "From Stone Age mounds to a Soviet atomic town: thirty-odd places that were once full of people, and what emptied them.",
+  "category": "places",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "tags": [
+    "lost cities",
+    "ruins",
+    "abandoned",
+    "archaeology",
+    "ghost towns",
+    "collapse"
+  ],
+  "entries": [
+    "gobekli-tepe",
+    "catalhoyuk",
+    "mohenjo-daro",
+    "nineveh",
+    "babylon",
+    "troy",
+    "persepolis-citie",
+    "carthage",
+    "ephesus",
+    "pompeii",
+    "vesuvius-79",
+    "tikal",
+    "teotihuacan",
+    "petra",
+    "chichen-itza",
+    "angkor",
+    "khmer-empire",
+    "bagan",
+    "great-zimbabwe",
+    "cahokia",
+    "hampi",
+    "tenochtitlan",
+    "aztec-empire",
+    "machu-picchu",
+    "inca-empire",
+    "roanoke-colony",
+    "fatehpur-sikri",
+    "hashima-island",
+    "kolmanskop",
+    "pripyat"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-writing",
+      "name": "Before the written word",
+      "from": -9500,
+      "to": -2000,
+      "note": "The oldest ruins belong to people who left no names. Hilltop pillars, mud-brick towns and the planned streets of the Indus cities were all abandoned, buried or lost, and archaeologists must read them from the ground."
+    },
+    {
+      "id": "the-bronze-age-falls",
+      "name": "Capitals of early empires",
+      "from": -1999,
+      "to": -500,
+      "note": "Babylon, Nineveh and Troy were famous in their own day. Their ruins sat under mounds in the desert until scholars of the 1800s dug them up and read their clay tablets."
+    },
+    {
+      "id": "classical-endings",
+      "name": "Classical endings",
+      "from": -499,
+      "to": 800,
+      "note": "Persepolis burned, Carthage was razed, Ephesus lost its harbour and Pompeii vanished under ash in a single day. In the Americas, Tikal and Teotihuacan emptied out for reasons still debated."
+    },
+    {
+      "id": "the-medieval-ghosts",
+      "name": "Medieval capitals",
+      "from": 801,
+      "to": 1500,
+      "note": "Angkor, Bagan, Cahokia and Great Zimbabwe each ruled a region and each was left behind as trade, climate or enemies shifted. Their stone and earth still stand in the forest and the fields."
+    },
+    {
+      "id": "modern-abandonment",
+      "name": "Gone in a lifetime",
+      "from": 1501,
+      "to": 2000,
+      "note": "Conquest ended Tenochtitlan and Machu Picchu, and a missing colony haunts American history. Modern emptiness is faster: a mining island, a desert diamond town and a nuclear town were left in a few days."
+    }
+  ],
+  "year": 1000
+}

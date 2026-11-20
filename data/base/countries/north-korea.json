@@ -1,0 +1,58 @@
+{
+  "id": "north-korea",
+  "category": "countries",
+  "names": [
+    {
+      "name": "North Korea",
+      "from": "1948"
+    }
+  ],
+  "summary": "The state in the northern half of the Korean peninsula, founded in 1948 under Kim Il Sung. It is a one-party state led by the Kim family and one of the most isolated countries in the world.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "kp",
+    "Democratic People's Republic of Korea",
+    "DPRK",
+    "N. Korea",
+    "DPR Korea"
+  ],
+  "wikidata": "Q423",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: North Korea (Q423)",
+      "url": "https://www.wikidata.org/wiki/Q423",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: North Korea",
+      "url": "https://en.wikipedia.org/wiki/North_Korea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

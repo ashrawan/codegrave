@@ -1,0 +1,53 @@
+{
+  "id": "warsaw-pact",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Warsaw Pact",
+      "from": "1955"
+    }
+  ],
+  "summary": "Military alliance of the Soviet Union and its eastern European allies, set up as a counterweight to NATO. It also held the bloc together, as when its troops entered Czechoslovakia in 1968.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Warsaw Treaty Organization",
+    "W.T.O."
+  ],
+  "wikidata": "Q41644",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved as communist governments fell in eastern Europe",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Warsaw Pact (Q41644)",
+      "url": "https://www.wikidata.org/wiki/Q41644",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Warsaw Pact",
+      "url": "https://en.wikipedia.org/wiki/Warsaw_Pact",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

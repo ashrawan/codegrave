@@ -1,0 +1,50 @@
+{
+  "id": "citroen-2cv",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Citroën 2CV",
+      "from": "1948"
+    }
+  ],
+  "maker": "Citroën",
+  "summary": "A cheap, simple French car launched in 1948 for farmers, with a soft suspension that could cross ploughed fields. It stayed in production for more than forty years and became a symbol of France.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "wikidata": "Q326015",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Production ended after more than forty years",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Citroën 2CV (Q326015)",
+      "url": "https://www.wikidata.org/wiki/Q326015",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Citroën 2CV",
+      "url": "https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "carboniferous",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Carboniferous",
+      "from": "-358900000"
+    }
+  ],
+  "summary": "The period from 359 to 299 million years ago, named for the coal formed from its swampy forests. Giant insects flew in air rich in oxygen, and early reptiles and amphibians spread across the land.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Carboniferous System",
+    "Carboniferous Period"
+  ],
+  "wikidata": "Q133738",
+  "events": [
+    {
+      "type": "born",
+      "date": "-358900000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-298900000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "paleozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carboniferous (Q133738)",
+      "url": "https://www.wikidata.org/wiki/Q133738",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carboniferous",
+      "url": "https://en.wikipedia.org/wiki/Carboniferous",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

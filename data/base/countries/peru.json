@@ -1,0 +1,65 @@
+{
+  "id": "peru",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Peru",
+      "from": "1821"
+    }
+  ],
+  "summary": "A South American country that was the heart of the Inca Empire and a Spanish viceroyalty. It declared independence in 1821 and is home to Machu Picchu and part of the Amazon.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "pe",
+    "Republic of Peru",
+    "Republica del Peru",
+    "per"
+  ],
+  "wikidata": "Q419",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peru (Q419)",
+      "url": "https://www.wikidata.org/wiki/Q419",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peru",
+      "url": "https://en.wikipedia.org/wiki/Peru",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

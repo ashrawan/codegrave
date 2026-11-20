@@ -1,0 +1,56 @@
+{
+  "id": "first-punic-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Punic War",
+      "from": "-0264"
+    }
+  ],
+  "summary": "The first of three wars between Rome and Carthage, fought mostly over Sicily and at sea. Rome built a large fleet for the first time, won, and gained its first overseas province.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q6286",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0264",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0241",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mediterranean-sea"
+    },
+    {
+      "type": "related",
+      "to": "roman-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Punic War (Q6286)",
+      "url": "https://www.wikidata.org/wiki/Q6286",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Punic War",
+      "url": "https://en.wikipedia.org/wiki/First_Punic_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

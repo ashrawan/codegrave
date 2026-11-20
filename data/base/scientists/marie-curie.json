@@ -1,0 +1,54 @@
+{
+  "id": "marie-curie",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Marie Curie",
+      "from": "1867"
+    }
+  ],
+  "summary": "Physicist and chemist who discovered polonium and radium with her husband Pierre and coined the word radioactivity. She is the only person to win Nobel Prizes in two different sciences, and her mobile X-ray units treated wounded soldiers in the First World War.",
+  "labels": [
+    "physics",
+    "chemistry",
+    "nobel-prize"
+  ],
+  "wikidata": "Q7186",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867-11-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1934-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "pierre-curie"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marie Curie (Q7186)",
+      "url": "https://www.wikidata.org/wiki/Q7186",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marie Curie",
+      "url": "https://en.wikipedia.org/wiki/Marie_Curie",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

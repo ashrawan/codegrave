@@ -1,0 +1,55 @@
+{
+  "id": "vk",
+  "category": "social",
+  "names": [
+    {
+      "name": "VK",
+      "from": "2006"
+    }
+  ],
+  "summary": "Russian social network that began in 2006 as a copy of Facebook for students. It became the most visited site in Russia and is also popular in nearby countries.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "vk.com",
+    "VKontakte"
+  ],
+  "wikidata": "Q116933",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saint-petersburg"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: VK (Q116933)",
+      "url": "https://www.wikidata.org/wiki/Q116933",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: VK (service)",
+      "url": "https://en.wikipedia.org/wiki/VK_(service)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

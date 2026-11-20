@@ -1,0 +1,61 @@
+{
+  "id": "nintendo-ds",
+  "category": "handhelds",
+  "names": [
+    {
+      "name": "Nintendo DS",
+      "from": "2004"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's folding handheld with two screens, one of them a touch screen. It sold well over a hundred million units and brought in many players with games such as Nintendogs and Brain Training.",
+  "labels": [
+    "games"
+  ],
+  "aliases": [
+    "Project Nitro",
+    "Nintendo Dual Screen",
+    "IiQue DS",
+    "iQue Dual Screen",
+    "N DS"
+  ],
+  "wikidata": "Q170323",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-11-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Nintendo 3DS",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nintendo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nintendo DS (Q170323)",
+      "url": "https://www.wikidata.org/wiki/Q170323",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nintendo DS",
+      "url": "https://en.wikipedia.org/wiki/Nintendo_DS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

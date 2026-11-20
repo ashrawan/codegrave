@@ -1,0 +1,58 @@
+{
+  "id": "alcatraz-penitentiary",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Alcatraz Federal Penitentiary",
+      "from": "1934"
+    }
+  ],
+  "summary": "Prison on a small island in San Francisco Bay, used to hold prisoners considered hard to manage elsewhere. Escape was thought almost impossible, and the prison closed in 1963 because it cost too much to run.",
+  "labels": [
+    "law"
+  ],
+  "aliases": [
+    "Alcatraz",
+    "The Rock",
+    "Alcatraz Prison"
+  ],
+  "wikidata": "Q1142661",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-08-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1963-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed because of high running costs",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alcatraz Federal Penitentiary (Q1142661)",
+      "url": "https://www.wikidata.org/wiki/Q1142661",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alcatraz Federal Penitentiary",
+      "url": "https://en.wikipedia.org/wiki/Alcatraz_Federal_Penitentiary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

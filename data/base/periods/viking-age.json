@@ -1,0 +1,48 @@
+{
+  "id": "viking-age",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Viking Age",
+      "from": "0793"
+    }
+  ],
+  "summary": "The period in which Norse seafarers from Scandinavia raided, traded and settled across Europe and beyond, reaching Iceland, Greenland and North America. It is dated from the raid on Lindisfarne.",
+  "labels": [
+    "exploration",
+    "war"
+  ],
+  "wikidata": "Q213649",
+  "events": [
+    {
+      "type": "born",
+      "date": "0793",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1066",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Viking Age (Q213649)",
+      "url": "https://www.wikidata.org/wiki/Q213649",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Viking Age",
+      "url": "https://en.wikipedia.org/wiki/Viking_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

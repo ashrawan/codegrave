@@ -1,0 +1,61 @@
+{
+  "id": "confederate-states",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Confederate States of America",
+      "from": "1861"
+    }
+  ],
+  "summary": "The breakaway government formed by eleven southern states that left the United States in 1860-61 in defence of slavery. Its capital was Richmond, and Jefferson Davis was its only president.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "CSA",
+    "C.S.A.",
+    "C.S.",
+    "CS",
+    "the rebellious States"
+  ],
+  "wikidata": "Q81931",
+  "events": [
+    {
+      "type": "born",
+      "date": "1861-02-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1865-05",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "cause": "Defeated by the Union in the American Civil War",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Confederate States of America (Q81931)",
+      "url": "https://www.wikidata.org/wiki/Q81931",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Confederate States of America",
+      "url": "https://en.wikipedia.org/wiki/Confederate_States_of_America",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

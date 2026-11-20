@@ -1,0 +1,60 @@
+{
+  "id": "dada",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Dada",
+      "from": "1916"
+    }
+  ],
+  "summary": "Anti-art movement begun in neutral Zurich during the First World War by artists and poets who rejected the values that they felt had led to war. It used nonsense, collage and found objects, and led the way to Surrealism.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Dadaism",
+    "Tabu-Dadaism"
+  ],
+  "wikidata": "Q6034",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1924",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "cubism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "expressionism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dada (Q6034)",
+      "url": "https://www.wikidata.org/wiki/Q6034",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dada",
+      "url": "https://en.wikipedia.org/wiki/Dada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

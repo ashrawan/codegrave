@@ -1,0 +1,74 @@
+{
+  "id": "vietnam",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Vietnam",
+      "from": "1945"
+    }
+  ],
+  "summary": "A country of Southeast Asia, where Ho Chi Minh declared independence from France in 1945. After a long war the country was reunified under communist rule in 1976.",
+  "labels": [
+    "independence",
+    "war"
+  ],
+  "aliases": [
+    "VIE",
+    "SRV",
+    "VNM",
+    "Socialist Republic of Viet Nam"
+  ],
+  "wikidata": "Q881",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "comecon"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vietnam (Q881)",
+      "url": "https://www.wikidata.org/wiki/Q881",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vietnam",
+      "url": "https://en.wikipedia.org/wiki/Vietnam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

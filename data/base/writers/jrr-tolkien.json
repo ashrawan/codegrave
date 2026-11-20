@@ -1,0 +1,61 @@
+{
+  "id": "jrr-tolkien",
+  "category": "writers",
+  "names": [
+    {
+      "name": "J. R. R. Tolkien",
+      "from": "1892"
+    }
+  ],
+  "summary": "English professor of Old English at Oxford who wrote The Hobbit and The Lord of the Rings. He invented languages and a whole history for Middle-earth, and his books helped create modern fantasy.",
+  "labels": [
+    "literature",
+    "language"
+  ],
+  "aliases": [
+    "John Tolkien",
+    "John R. R. Tolkien"
+  ],
+  "wikidata": "Q892",
+  "events": [
+    {
+      "type": "born",
+      "date": "1892-01-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "jules-verne"
+    },
+    {
+      "type": "influenced_by",
+      "to": "beowulf"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: J. R. R. Tolkien (Q892)",
+      "url": "https://www.wikidata.org/wiki/Q892",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: J. R. R. Tolkien",
+      "url": "https://en.wikipedia.org/wiki/J._R._R._Tolkien",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

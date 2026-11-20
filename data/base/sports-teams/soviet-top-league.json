@@ -1,0 +1,53 @@
+{
+  "id": "soviet-top-league",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Soviet Top League",
+      "from": "1936"
+    }
+  ],
+  "summary": "Top football league of the Soviet Union, won most often by Dynamo Kyiv and Spartak Moscow. It ended with the break-up of the country and was replaced by national leagues.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q490700",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-05-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by national leagues when the Soviet Union dissolved",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Soviet Top League (Q490700)",
+      "url": "https://www.wikidata.org/wiki/Q490700",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Soviet Top League",
+      "url": "https://en.wikipedia.org/wiki/Soviet_Top_League",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "taj-mahal",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Taj Mahal",
+      "from": "1653"
+    }
+  ],
+  "summary": "White marble tomb at Agra, built by the Mughal emperor Shah Jahan for his wife Mumtaz Mahal. It is regarded as a high point of Mughal architecture and is among the most visited monuments in India.",
+  "labels": [
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Crown of the Palace",
+    "the Taj Mahal"
+  ],
+  "wikidata": "Q9141",
+  "events": [
+    {
+      "type": "born",
+      "date": "1653",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "shah-jahan"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Taj Mahal (Q9141)",
+      "url": "https://www.wikidata.org/wiki/Q9141",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taj Mahal",
+      "url": "https://en.wikipedia.org/wiki/Taj_Mahal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "pet-sounds",
+  "category": "music",
+  "names": [
+    {
+      "name": "Pet Sounds",
+      "from": "1966"
+    }
+  ],
+  "maker": "The Beach Boys",
+  "summary": "Album by the Beach Boys, written and arranged mostly by Brian Wilson, using orchestral instruments and studio tricks to make a gentle, thoughtful pop record. Its approach pushed the Beatles to be more ambitious in the studio.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q212863",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "the-beach-boys"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pet Sounds (Q212863)",
+      "url": "https://www.wikidata.org/wiki/Q212863",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pet Sounds",
+      "url": "https://en.wikipedia.org/wiki/Pet_Sounds",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

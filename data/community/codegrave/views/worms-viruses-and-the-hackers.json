@@ -1,0 +1,89 @@
+{
+  "id": "worms-viruses-and-the-hackers",
+  "name": "Worms, Viruses and the Hackers Behind Them",
+  "description": "From a harmless prank on the ARPANET to ransomware that closed hospitals: the story of malicious code, the people who wrote it and those who fought it.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "tags": [
+    "virus",
+    "worm",
+    "hacker",
+    "malware",
+    "ransomware",
+    "security",
+    "botnet"
+  ],
+  "entries": [
+    "arpanet",
+    "creeper",
+    "elk-cloner",
+    "apple-ii",
+    "floppy-disk",
+    "brain-virus",
+    "morris-worm",
+    "robert-tappan-morris",
+    "chaos-computer-club",
+    "michelangelo-virus",
+    "kevin-mitnick",
+    "melissa-virus",
+    "iloveyou",
+    "hotmail",
+    "code-red-worm",
+    "sql-slammer",
+    "blaster-worm",
+    "sasser-worm",
+    "mydoom",
+    "windows-xp",
+    "anonymous-hackers",
+    "storm-worm",
+    "zeus-malware",
+    "conficker",
+    "stuxnet",
+    "bitcoin",
+    "mt-gox",
+    "cryptolocker",
+    "mirai-botnet",
+    "wannacry"
+  ],
+  "checkpoints": [
+    {
+      "id": "pranks-and-experiments",
+      "name": "Pranks and experiments",
+      "from": 1969,
+      "to": 1987,
+      "note": "The first self-copying programs are experiments and jokes, from Creeper on the ARPANET to Elk Cloner on floppy disks. Few people notice, but the idea of code that spreads has been born."
+    },
+    {
+      "id": "the-first-outbreaks",
+      "name": "The first outbreaks",
+      "from": 1988,
+      "to": 1998,
+      "note": "The Morris worm brings down much of the early internet, and boot-sector viruses such as Michelangelo cause alarm. Hacker clubs and lone intruders such as Kevin Mitnick make security a matter for the law."
+    },
+    {
+      "id": "mass-mailers-and-worms",
+      "name": "Mass mailers and worms",
+      "from": 1999,
+      "to": 2004,
+      "note": "Email worms such as Melissa and ILOVEYOU circle the world in hours, and Code Red, Slammer, Blaster and Sasser spread without any help from users, exposing weaknesses in Windows and in the internet itself."
+    },
+    {
+      "id": "crime-and-cyberweapons",
+      "name": "Crime and cyberweapons",
+      "from": 2005,
+      "to": 2012,
+      "note": "Botnets, bank thieves like Zeus and the Conficker worm turn malware into an industry, and Stuxnet shows that code can damage machinery. Bitcoin offers criminals a new way to be paid."
+    },
+    {
+      "id": "ransom-and-botnets",
+      "name": "Ransom and botnets",
+      "from": 2013,
+      "to": 2017,
+      "note": "Ransomware locks the files of ordinary people and then hospitals and firms, while Mirai turns cameras and routers into a weapon. WannaCry in 2017 shows how far a single flaw can reach."
+    }
+  ],
+  "year": 2003
+}

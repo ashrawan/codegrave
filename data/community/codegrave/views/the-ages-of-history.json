@@ -1,0 +1,103 @@
+{
+  "id": "the-ages-of-history",
+  "name": "The Ages of History, from Stone to Silicon",
+  "description": "A guided tour through the named eras of the human story, from the first stone tools to the Information Age.",
+  "category": "events",
+  "labels": [
+    "firsts"
+  ],
+  "tags": [
+    "ages",
+    "periods",
+    "history",
+    "stone age",
+    "middle ages",
+    "renaissance",
+    "industrial revolution"
+  ],
+  "entries": [
+    "paleolithic",
+    "neolithic",
+    "bronze-age",
+    "late-bronze-age-collapse",
+    "iron-age",
+    "classical-antiquity",
+    "warring-states-period",
+    "hellenistic-period",
+    "pax-romana",
+    "middle-ages",
+    "viking-age",
+    "islamic-golden-age",
+    "heian-period",
+    "renaissance",
+    "sengoku-period",
+    "age-of-discovery",
+    "protestant-reformation",
+    "scientific-revolution",
+    "age-of-enlightenment",
+    "industrial-revolution",
+    "age-of-revolution",
+    "victorian-era",
+    "scramble-for-africa",
+    "gilded-age",
+    "belle-epoque",
+    "roaring-twenties",
+    "interwar-period",
+    "atomic-age",
+    "cold-war",
+    "space-age",
+    "information-age"
+  ],
+  "checkpoints": [
+    {
+      "id": "stone",
+      "name": "The long Stone Age",
+      "from": -3300000,
+      "to": -10001,
+      "note": "For millions of years our ancestors make stone tools, master fire and spread across the world as hunters and gatherers. Art appears in caves late in this age."
+    },
+    {
+      "id": "metal",
+      "name": "Farms, metals and first states",
+      "from": -10000,
+      "to": -501,
+      "note": "Farming creates villages and then cities. Bronze and later iron change tools and war, and the first states, writing and trade networks grow."
+    },
+    {
+      "id": "classical",
+      "name": "The classical world",
+      "from": -500,
+      "to": 499,
+      "note": "Empires and philosophies spread from China to Rome. Greek culture reaches far under the Hellenistic kings, and Rome keeps order for centuries."
+    },
+    {
+      "id": "medieval",
+      "name": "Middle Ages and golden ages",
+      "from": 500,
+      "to": 1499,
+      "note": "After Rome falls, new powers rise: Viking raiders, scholars of the Islamic world, courts in Japan and the Church in Europe, and trade links the Old World."
+    },
+    {
+      "id": "early-modern",
+      "name": "The early modern world",
+      "from": 1500,
+      "to": 1799,
+      "note": "Ships link the continents, printing helps the Reformation, new science changes ideas of nature, and the Enlightenment questions kings."
+    },
+    {
+      "id": "industrial",
+      "name": "Machines and empires",
+      "from": 1800,
+      "to": 1944,
+      "note": "Factories and railways remake work, empires cover much of the globe, and two world wars end the old order."
+    },
+    {
+      "id": "modern",
+      "name": "Atomic to information",
+      "from": 1945,
+      "to": 2026,
+      "note": "Nuclear weapons, a Cold War, spaceflight and the computer give the modern world its shape, and information becomes central to daily life."
+    }
+  ],
+  "year": 1500
+}

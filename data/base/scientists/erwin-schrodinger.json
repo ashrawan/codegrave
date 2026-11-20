@@ -1,0 +1,57 @@
+{
+  "id": "erwin-schrodinger",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Erwin Schrödinger",
+      "from": "1887"
+    }
+  ],
+  "summary": "Austrian physicist who wrote the wave equation that describes how quantum systems change over time. He shared the 1933 Nobel Prize in Physics and is also known for his thought experiment of a cat in a sealed box.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Schrödinger",
+    "Erwin Schroedinger"
+  ],
+  "wikidata": "Q9130",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887-08-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1961-01-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Erwin Schrödinger (Q9130)",
+      "url": "https://www.wikidata.org/wiki/Q9130",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Erwin Schrödinger",
+      "url": "https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

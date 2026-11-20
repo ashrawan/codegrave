@@ -1,0 +1,63 @@
+{
+  "id": "elizabeth-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Elizabeth I",
+      "from": "1533"
+    }
+  ],
+  "summary": "Queen of England for 44 years who settled the Protestant church and never married. Her reign saw the defeat of the Spanish Armada, voyages of exploration, and the plays of Shakespeare.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Elizabeth I of England",
+    "Princess Elizabeth of England",
+    "Queen Bess",
+    "Good Queen Bess",
+    "Elizabeth Tudor"
+  ],
+  "wikidata": "Q7207",
+  "events": [
+    {
+      "type": "born",
+      "date": "1533-09-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1603-03-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "henry-viii"
+    },
+    {
+      "type": "part_of",
+      "to": "house-of-tudor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Elizabeth I of England (Q7207)",
+      "url": "https://www.wikidata.org/wiki/Q7207",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elizabeth I",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

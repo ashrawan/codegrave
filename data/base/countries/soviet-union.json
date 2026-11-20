@@ -1,0 +1,98 @@
+{
+  "id": "soviet-union",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Soviet Union",
+      "from": "1922"
+    }
+  ],
+  "summary": "The communist state formed after the Russian Revolution, made up of fifteen republics and led by the Communist Party. It fought the Second World War, led the Space Race and rivalled the United States in the Cold War.",
+  "labels": [
+    "lost",
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Union of Soviet Socialist Republics",
+    "USSR",
+    "U.S.S.R.",
+    "the Soviet Union",
+    "the Soviets"
+  ],
+  "wikidata": "Q15180",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-12-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-12-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved into fifteen independent states after economic crisis and reform",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "russia"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "ukraine"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "belarus"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "moldova"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "georgia"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "armenia"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "azerbaijan"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "kazakhstan"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "uzbekistan"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Soviet Union (Q15180)",
+      "url": "https://www.wikidata.org/wiki/Q15180",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Soviet Union",
+      "url": "https://en.wikipedia.org/wiki/Soviet_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

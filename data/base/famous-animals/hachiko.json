@@ -1,0 +1,50 @@
+{
+  "id": "hachiko",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Hachikō",
+      "from": "1923"
+    }
+  ],
+  "summary": "An Akita dog in Tokyo who waited every day at Shibuya station for years after his owner died. A statue of him stands at the station, and the dog became a symbol of loyalty in Japan.",
+  "labels": [
+    "lost"
+  ],
+  "aliases": [
+    "Hachi"
+  ],
+  "wikidata": "Q186486",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-11-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1935-03-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Hachikō (Q186486)",
+      "url": "https://www.wikidata.org/wiki/Q186486",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hachikō",
+      "url": "https://en.wikipedia.org/wiki/Hachik%C5%8D",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "kinetoscope",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Kinetoscope",
+      "from": "1889"
+    }
+  ],
+  "maker": "Thomas Edison and William Dickson",
+  "summary": "A cabinet in which one person at a time looked through a peephole to see a short film. Developed in Edison's laboratory, it was an early step toward cinema and was soon replaced by projectors.",
+  "labels": [
+    "film",
+    "lost"
+  ],
+  "wikidata": "Q669700",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by films shown on a screen to many people at once",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "thomas-edison"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: kinetoscope (Q669700)",
+      "url": "https://www.wikidata.org/wiki/Q669700",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kinetoscope",
+      "url": "https://en.wikipedia.org/wiki/Kinetoscope",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "younger-dryas",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Younger Dryas",
+      "from": "-10900"
+    }
+  ],
+  "summary": "A sudden return to near-glacial cold about 12,900 to 11,700 years ago, interrupting the warming that followed the last ice age. Its cause is debated; one idea is meltwater from North America slowing Atlantic currents.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Nahanagan Stadial",
+    "Loch Lomond Stadial",
+    "Loch Lomond Readvance",
+    "Younger Dryas Stadial",
+    "YD"
+  ],
+  "wikidata": "Q944279",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10900",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-9700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "pleistocene"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Younger Dryas (Q944279)",
+      "url": "https://www.wikidata.org/wiki/Q944279",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Younger Dryas",
+      "url": "https://en.wikipedia.org/wiki/Younger_Dryas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

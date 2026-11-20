@@ -1,0 +1,59 @@
+{
+  "id": "paddy-field",
+  "category": "farming",
+  "names": [
+    {
+      "name": "Paddy field",
+      "from": "-5000"
+    }
+  ],
+  "maker": "Early rice farmers in the Yangtze valley",
+  "summary": "A flooded field in which rice is grown. Built in East and South East Asia, with terraces on hill slopes, paddies feed a large share of the world's people.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "rice field",
+    "Kandam",
+    "Paadam",
+    "rice pad",
+    "rice paddy"
+  ],
+  "wikidata": "Q842623",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: paddy field (Q842623)",
+      "url": "https://www.wikidata.org/wiki/Q842623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paddy field",
+      "url": "https://en.wikipedia.org/wiki/Paddy_field",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

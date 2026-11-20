@@ -1,0 +1,73 @@
+{
+  "id": "republic-of-china-1912",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Republic of China (1912-1949)",
+      "from": "1912"
+    }
+  ],
+  "summary": "The Chinese republic set up after the fall of the Qing dynasty, led first by Sun Yat-sen. It was torn by warlords, war with Japan and a civil war between the Nationalists and the Communists.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Republic of China",
+    "Republic of China before 1949",
+    "ROC 1912–1949",
+    "China 1912–1949",
+    "ROC"
+  ],
+  "wikidata": "Q13426199",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1949-12-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost the civil war on the mainland; the government retreated to Taiwan",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sun-yat-sen"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "china"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "manchukuo"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Republic of China (Q13426199)",
+      "url": "https://www.wikidata.org/wiki/Q13426199",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Republic of China (1912–1949)",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_China_(1912%E2%80%931949)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

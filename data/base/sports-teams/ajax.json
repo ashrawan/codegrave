@@ -1,0 +1,51 @@
+{
+  "id": "ajax",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Ajax",
+      "from": "1900"
+    }
+  ],
+  "summary": "Dutch football club from Amsterdam, which won three European Cups in a row in the early 1970s with the style known as Total Football under Rinus Michels and Johan Cruyff.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Ajax Amsterdam",
+    "Amsterdamsche Football Club Ajax"
+  ],
+  "wikidata": "Q81888",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900-03-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "netherlands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: AFC Ajax (Q81888)",
+      "url": "https://www.wikidata.org/wiki/Q81888",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: AFC Ajax",
+      "url": "https://en.wikipedia.org/wiki/AFC_Ajax",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "iron-age",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Iron Age",
+      "from": "-1200"
+    }
+  ],
+  "summary": "The period when iron became the main metal for tools and weapons in much of the Old World. Cheaper iron spread farming tools and armies widely. The dates differ by region.",
+  "labels": [
+    "firsts",
+    "engineering"
+  ],
+  "aliases": [
+    "The Iron Age"
+  ],
+  "wikidata": "Q11764",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0550",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Iron Age (Q11764)",
+      "url": "https://www.wikidata.org/wiki/Q11764",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iron Age",
+      "url": "https://en.wikipedia.org/wiki/Iron_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

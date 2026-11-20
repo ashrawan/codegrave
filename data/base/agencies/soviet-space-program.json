@@ -1,0 +1,63 @@
+{
+  "id": "soviet-space-program",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Soviet space program",
+      "from": "1955"
+    }
+  ],
+  "summary": "The Soviet effort in spaceflight, which achieved the first satellite, the first person and the first woman in space and the first space station before the Soviet Union ended in 1991.",
+  "labels": [
+    "space-race",
+    "exploration"
+  ],
+  "aliases": [
+    "space program of the Soviet Union",
+    "Soviet space programme",
+    "Russian space flight"
+  ],
+  "wikidata": "Q849730",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1991",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved with the Soviet Union; its work passed to Russia and other states",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Soviet space program (Q849730)",
+      "url": "https://www.wikidata.org/wiki/Q849730",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Soviet space program",
+      "url": "https://en.wikipedia.org/wiki/Soviet_space_program",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

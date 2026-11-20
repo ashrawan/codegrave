@@ -1,0 +1,71 @@
+{
+  "id": "prince",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Prince",
+      "from": "1958"
+    }
+  ],
+  "summary": "American singer, songwriter and guitarist from Minneapolis who played most of the instruments on his own records. His album Purple Rain and its film made him famous, and his funk and rock blend was widely copied.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Jamie Starr",
+    "Christopher",
+    "Alexander Nevermind",
+    "The Purple One",
+    "Joey Coco"
+  ],
+  "wikidata": "Q7542",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-06-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "jimi-hendrix"
+    },
+    {
+      "type": "influenced_by",
+      "to": "little-richard"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-beatles"
+    },
+    {
+      "type": "influenced_by",
+      "to": "stevie-wonder"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Prince (Q7542)",
+      "url": "https://www.wikidata.org/wiki/Q7542",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prince (musician)",
+      "url": "https://en.wikipedia.org/wiki/Prince_(musician)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

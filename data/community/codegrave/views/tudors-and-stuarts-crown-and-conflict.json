@@ -1,0 +1,82 @@
+{
+  "id": "tudors-and-stuarts-crown-and-conflict",
+  "name": "Crown and Conflict: The Tudors and Stuarts",
+  "description": "Two centuries of English kings and queens, from Bosworth to Queen Anne, with plots, religion, civil war, regicide and revolution.",
+  "category": "people",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "tags": [
+    "tudors",
+    "stuarts",
+    "henry viii",
+    "elizabeth i",
+    "england",
+    "monarchy"
+  ],
+  "entries": [
+    "richard-iii",
+    "wars-of-the-roses",
+    "battle-of-bosworth-field",
+    "henry-vii",
+    "henry-viii",
+    "thomas-more",
+    "thomas-cromwell",
+    "edward-vi",
+    "lady-jane-grey",
+    "mary-i",
+    "elizabeth-i",
+    "mary-queen-of-scots",
+    "spanish-armada",
+    "james-i",
+    "guy-fawkes",
+    "gunpowder-plot",
+    "charles-i",
+    "english-civil-war",
+    "oliver-cromwell",
+    "charles-ii",
+    "james-ii",
+    "glorious-revolution",
+    "william-iii",
+    "mary-ii",
+    "anne-queen-of-great-britain"
+  ],
+  "checkpoints": [
+    {
+      "id": "end-of-the-roses",
+      "name": "Roses end at Bosworth",
+      "from": 1452,
+      "to": 1509,
+      "note": "Richard III dies at Bosworth in 1485 and Henry Tudor wins the crown, ending the Wars of the Roses and founding a dynasty that restores order."
+    },
+    {
+      "id": "henry-and-his-children",
+      "name": "Henry VIII and his heirs",
+      "from": 1510,
+      "to": 1558,
+      "note": "Henry VIII breaks with Rome and closes the monasteries. His son Edward VI pushes Protestant reform, Jane Grey reigns briefly, and Mary I turns back to Catholicism."
+    },
+    {
+      "id": "elizabethan-age",
+      "name": "The Elizabethan age",
+      "from": 1559,
+      "to": 1603,
+      "note": "Elizabeth I settles the church, sends Mary of Scotland to the block, beats the Spanish Armada and presides over a flowering of English drama and exploration."
+    },
+    {
+      "id": "early-stuarts-and-war",
+      "name": "Stuarts, war and republic",
+      "from": 1604,
+      "to": 1658,
+      "note": "James I unites the crowns and survives a gunpowder plot. His son Charles I loses a civil war and his head, and Oliver Cromwell rules England as Lord Protector."
+    },
+    {
+      "id": "restoration-and-revolution",
+      "name": "Restoration and revolution",
+      "from": 1659,
+      "to": 1714,
+      "note": "Charles II returns to the throne, James II is driven out in the Glorious Revolution, William and Mary accept the Bill of Rights, and Anne sees the union with Scotland."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "id": "fifa",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "FIFA",
+      "from": "1904"
+    }
+  ],
+  "summary": "International body that governs association football. Founded in Paris by seven European countries, it now has more than two hundred members and runs the men's and women's World Cups.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q253414",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: FIFA (Q253414)",
+      "url": "https://www.wikidata.org/wiki/Q253414",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: FIFA",
+      "url": "https://en.wikipedia.org/wiki/FIFA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

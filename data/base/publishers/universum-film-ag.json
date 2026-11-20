@@ -1,0 +1,57 @@
+{
+  "id": "universum-film-ag",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "UFA",
+      "from": "1917"
+    }
+  ],
+  "summary": "German film company founded during the First World War, which made silent classics such as Metropolis and The Cabinet of Dr. Caligari. It was taken over by the Nazi state in the 1930s.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Universum Film AG",
+    "Universum Film"
+  ],
+  "wikidata": "Q41468",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-12-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed down after the Second World War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: UFA (Q41468)",
+      "url": "https://www.wikidata.org/wiki/Q41468",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: UFA GmbH",
+      "url": "https://en.wikipedia.org/wiki/UFA_GmbH",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

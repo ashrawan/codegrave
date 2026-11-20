@@ -1,0 +1,53 @@
+{
+  "id": "mein-kampf",
+  "category": "books",
+  "names": [
+    {
+      "name": "Mein Kampf",
+      "from": "1925"
+    }
+  ],
+  "summary": "Book by Adolf Hitler that mixes autobiography with his political ideas, published in two volumes. It is restricted in some countries and is studied by historians of Nazism.",
+  "labels": [
+    "politics",
+    "banned"
+  ],
+  "aliases": [
+    "My Struggle",
+    "My Fight",
+    "My Battle"
+  ],
+  "wikidata": "Q48244",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-07-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "about",
+      "to": "adolf-hitler"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mein Kampf (Q48244)",
+      "url": "https://www.wikidata.org/wiki/Q48244",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mein Kampf",
+      "url": "https://en.wikipedia.org/wiki/Mein_Kampf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

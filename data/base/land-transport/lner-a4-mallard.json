@@ -1,0 +1,55 @@
+{
+  "id": "lner-a4-mallard",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Mallard",
+      "from": "1938"
+    }
+  ],
+  "maker": "Nigel Gresley",
+  "summary": "A British streamlined steam locomotive that set the world speed record for steam traction of 126 miles per hour on 3 July 1938. It was retired in 1963 and is kept at the National Railway Museum.",
+  "labels": [
+    "transport",
+    "record-holders"
+  ],
+  "wikidata": "Q1070761",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-03",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1963-04",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "cause": "Withdrawn as British Rail replaced steam with diesel and electric trains",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: LNER Class A4 4468 “Mallard” (Q1070761)",
+      "url": "https://www.wikidata.org/wiki/Q1070761",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: LNER Class A4 4468 Mallard",
+      "url": "https://en.wikipedia.org/wiki/LNER_Class_A4_4468_Mallard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

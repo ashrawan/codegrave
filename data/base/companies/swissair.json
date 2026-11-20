@@ -1,0 +1,60 @@
+{
+  "id": "swissair",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Swissair",
+      "from": "1931"
+    }
+  ],
+  "summary": "National airline of Switzerland, known for punctual service and once nicknamed the flying bank. Costly expansion and the fall in air travel after 2001 left it unable to pay its bills.",
+  "labels": [
+    "business",
+    "transport"
+  ],
+  "aliases": [
+    "Schweizerische Luftverkehr",
+    "Swiss Air Transport Company Limited",
+    "Schweizerische Luftverkehr-AG",
+    "S.A. Suisse pour la Navigation Aérienne"
+  ],
+  "wikidata": "Q694098",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-03-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Grounded by debt after a failed expansion and the 2001 downturn",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Swissair (Q694098)",
+      "url": "https://www.wikidata.org/wiki/Q694098",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Swissair",
+      "url": "https://en.wikipedia.org/wiki/Swissair",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

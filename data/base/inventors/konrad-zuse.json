@@ -1,0 +1,51 @@
+{
+  "id": "konrad-zuse",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Konrad Zuse",
+      "from": "1910"
+    }
+  ],
+  "summary": "German engineer who built some of the first programmable computers in Berlin, working almost alone, including the Z3 of 1941. He also designed an early programming language, Plankalkül, and ran a computer company after the war.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "aliases": [
+    "Zuse"
+  ],
+  "wikidata": "Q60093",
+  "events": [
+    {
+      "type": "born",
+      "date": "1910-06-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-12-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Konrad Zuse (Q60093)",
+      "url": "https://www.wikidata.org/wiki/Q60093",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Konrad Zuse",
+      "url": "https://en.wikipedia.org/wiki/Konrad_Zuse",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

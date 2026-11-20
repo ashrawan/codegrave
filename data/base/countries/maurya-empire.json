@@ -1,0 +1,52 @@
+{
+  "id": "maurya-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Maurya Empire",
+      "from": "-0322"
+    }
+  ],
+  "summary": "The first empire to unite most of the Indian subcontinent, founded by Chandragupta Maurya. Under Ashoka it spread Buddhism and carved rules for good conduct on stone pillars.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Mauryan Empire"
+  ],
+  "wikidata": "Q62943",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0322",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0185",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Weakened after Ashoka and ended when its last emperor was killed by his general",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Maurya empire (Q62943)",
+      "url": "https://www.wikidata.org/wiki/Q62943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maurya Empire",
+      "url": "https://en.wikipedia.org/wiki/Maurya_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

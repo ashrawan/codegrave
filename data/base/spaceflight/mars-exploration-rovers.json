@@ -1,0 +1,53 @@
+{
+  "id": "mars-exploration-rovers",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Mars Exploration Rovers",
+      "from": "2003"
+    }
+  ],
+  "summary": "The twin NASA rovers Spirit and Opportunity, landed on Mars in 2004. They found clear signs of past liquid water and far outlasted their planned three months, with Opportunity driving for fourteen years.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "aliases": [
+    "Mars Exploration Rover Mission",
+    "MER"
+  ],
+  "wikidata": "Q220827",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2019",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Opportunity fell silent in a global dust storm and the mission was declared over",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Mars Exploration Rover (Q220827)",
+      "url": "https://www.wikidata.org/wiki/Q220827",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mars Exploration Rover",
+      "url": "https://en.wikipedia.org/wiki/Mars_Exploration_Rover",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

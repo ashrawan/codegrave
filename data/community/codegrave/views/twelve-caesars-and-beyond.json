@@ -1,0 +1,84 @@
+{
+  "id": "twelve-caesars-and-beyond",
+  "name": "Emperors of Rome: From Augustus to Justinian",
+  "description": "Twenty-odd emperors, good and bad, who ran the largest state of the ancient world, and the generals, orators and rebels who shaped their age.",
+  "category": "people",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "tags": [
+    "rome",
+    "roman emperors",
+    "augustus",
+    "nero",
+    "constantine",
+    "caesar"
+  ],
+  "entries": [
+    "julius-caesar",
+    "cicero",
+    "augustus",
+    "tiberius",
+    "caligula",
+    "claudius",
+    "nero",
+    "vespasian",
+    "titus",
+    "domitian",
+    "nerva",
+    "trajan",
+    "hadrian",
+    "antoninus-pius",
+    "marcus-aurelius",
+    "commodus",
+    "septimius-severus",
+    "caracalla",
+    "diocletian",
+    "constantine-the-great",
+    "julian-the-apostate",
+    "theodosius-i",
+    "justinian-i",
+    "roman-empire",
+    "spartacus",
+    "scipio-africanus",
+    "hannibal"
+  ],
+  "checkpoints": [
+    {
+      "id": "republic-to-empire",
+      "name": "The Republic falls",
+      "from": -106,
+      "to": 14,
+      "note": "Rome's old republic breaks under civil war. Caesar crosses the Rubicon and is murdered, and his heir Octavian becomes Augustus, the first emperor."
+    },
+    {
+      "id": "julio-claudians",
+      "name": "Julio-Claudian emperors",
+      "from": 15,
+      "to": 68,
+      "note": "The family of Augustus holds the throne. Tiberius, Caligula, Claudius and Nero rule from Rome, with court plots, conquest in Britain and the great fire of Rome."
+    },
+    {
+      "id": "flavians-and-adoptives",
+      "name": "Flavians and the good emperors",
+      "from": 69,
+      "to": 192,
+      "note": "After a year of civil war, Vespasian founds a new line. A run of capable emperors from Nerva to Marcus Aurelius takes the empire to its widest reach and its calmest years."
+    },
+    {
+      "id": "soldier-emperors",
+      "name": "Severans and crisis",
+      "from": 193,
+      "to": 284,
+      "note": "Commodus is killed, soldiers make and unmake emperors, and Septimius Severus and Caracalla rely on the army while invasions and plague strain the state."
+    },
+    {
+      "id": "christian-empire",
+      "name": "A Christian empire",
+      "from": 285,
+      "to": 565,
+      "note": "Diocletian splits the government, Constantine founds Constantinople and favours Christianity, Theodosius makes it the state faith, and Justinian rules from the East."
+    }
+  ]
+}

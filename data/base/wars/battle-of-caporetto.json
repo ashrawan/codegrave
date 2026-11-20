@@ -1,0 +1,64 @@
+{
+  "id": "battle-of-caporetto",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Caporetto",
+      "from": "1917"
+    }
+  ],
+  "summary": "Austro-Hungarian and German forces broke through the Italian lines in northern Italy in October 1917. The Italian army retreated far, and British and French troops were sent to help.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q242644",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-10-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1917-11-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-i"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    },
+    {
+      "type": "related",
+      "to": "austria-hungary"
+    },
+    {
+      "type": "related",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Caporetto (Q242644)",
+      "url": "https://www.wikidata.org/wiki/Q242644",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Caporetto",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Caporetto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

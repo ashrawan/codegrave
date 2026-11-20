@@ -1,0 +1,65 @@
+{
+  "id": "house-of-wisdom",
+  "category": "schools",
+  "names": [
+    {
+      "name": "House of Wisdom",
+      "from": "0800"
+    }
+  ],
+  "summary": "Centre of translation and study in Baghdad under the Abbasid caliphs, where Greek, Persian and Indian works were put into Arabic. Scholars there worked on mathematics, astronomy and medicine.",
+  "labels": [
+    "education",
+    "lost"
+  ],
+  "aliases": [
+    "Bayt al-Ḥikmah",
+    "House of memories",
+    "Grand Library of Baghdad",
+    "Great Library of Baghdad",
+    "Library of Baghdad"
+  ],
+  "wikidata": "Q33018",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1258-02-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed when the Mongols sacked Baghdad",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "harun-al-rashid"
+    },
+    {
+      "type": "in",
+      "to": "abbasid-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: House of Wisdom (Q33018)",
+      "url": "https://www.wikidata.org/wiki/Q33018",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: House of Wisdom",
+      "url": "https://en.wikipedia.org/wiki/House_of_Wisdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,86 @@
+{
+  "id": "conquerors-who-changed-the-map",
+  "name": "Conquerors: Men Who Redrew the World Map",
+  "description": "From the Persian kings and Alexander to Genghis Khan and Napoleon: the generals and rulers whose armies changed borders and the course of history.",
+  "category": "people",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "tags": [
+    "conquerors",
+    "alexander the great",
+    "genghis khan",
+    "napoleon",
+    "empire",
+    "generals"
+  ],
+  "entries": [
+    "sargon-of-akkad",
+    "thutmose-iii",
+    "ramesses-ii",
+    "cyrus-the-great",
+    "darius-the-great",
+    "alexander-the-great",
+    "qin-shi-huang",
+    "hannibal",
+    "julius-caesar",
+    "attila",
+    "khalid-ibn-al-walid",
+    "charles-martel",
+    "charlemagne",
+    "william-the-conqueror",
+    "saladin",
+    "genghis-khan",
+    "subutai",
+    "kublai-khan",
+    "mongol-empire",
+    "timur",
+    "mehmed-ii",
+    "pachacuti",
+    "hernan-cortes",
+    "suleiman-the-magnificent",
+    "akbar",
+    "shaka-zulu",
+    "napoleon",
+    "napoleonic-wars",
+    "battle-of-waterloo"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-empires",
+      "name": "The first empires",
+      "from": -2334,
+      "to": -323,
+      "note": "Sargon, the Egyptian pharaohs, the Persian kings and Alexander show how one ruler and one army can bring many peoples under a single throne."
+    },
+    {
+      "id": "classical-conquests",
+      "name": "Rome, Huns and caliphs",
+      "from": -259,
+      "to": 742,
+      "note": "Qin Shi Huang unites China, Hannibal and Caesar fight for Rome and the Mediterranean, and Attila and Arab commanders challenge old powers."
+    },
+    {
+      "id": "medieval-conquerors",
+      "name": "Medieval conquerors",
+      "from": 743,
+      "to": 1405,
+      "note": "Charlemagne, William, Saladin and the Mongols under Genghis, Kublai and Timur build or break kingdoms across Europe and Asia."
+    },
+    {
+      "id": "gunpowder-empires",
+      "name": "Gunpowder and new worlds",
+      "from": 1406,
+      "to": 1620,
+      "note": "Mehmed, Cortes, the Inca, Suleiman and Akbar use cannon and discipline to create empires in the Middle East, the Americas and South Asia."
+    },
+    {
+      "id": "age-of-napoleon",
+      "name": "Shaka and Napoleon",
+      "from": 1621,
+      "to": 1828,
+      "note": "In Europe, Napoleon reshapes the continent in a decade of war ending at Waterloo, while in Africa Shaka builds the Zulu kingdom."
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "whisky",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Whisky",
+      "from": "1494"
+    }
+  ],
+  "summary": "A spirit distilled from grain mash and aged in wooden casks. Scotland has the first written record of it, from 1494, and it is now made in many countries.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "whiskey"
+  ],
+  "wikidata": "Q281",
+  "events": [
+    {
+      "type": "born",
+      "date": "1494",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: whisky (Q281)",
+      "url": "https://www.wikidata.org/wiki/Q281",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Whisky",
+      "url": "https://en.wikipedia.org/wiki/Whisky",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

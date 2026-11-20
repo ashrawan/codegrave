@@ -1,0 +1,52 @@
+{
+  "id": "shanghai-maglev-train",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Shanghai maglev train",
+      "from": "2004"
+    }
+  ],
+  "summary": "A magnetic-levitation train between Shanghai Pudong airport and the city, which opened in 2004. Floating above its track, it reaches about 430 kilometres per hour and is the fastest commercial train line.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "Shanghai Maglev",
+    "Maglev"
+  ],
+  "wikidata": "Q769591",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shanghai maglev train (Q769591)",
+      "url": "https://www.wikidata.org/wiki/Q769591",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shanghai maglev train",
+      "url": "https://en.wikipedia.org/wiki/Shanghai_maglev_train",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

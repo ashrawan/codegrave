@@ -1,0 +1,56 @@
+{
+  "id": "optical-telegraph",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Optical telegraph",
+      "from": "1792"
+    }
+  ],
+  "maker": "Claude Chappe",
+  "summary": "A line of towers with moving arms, each in sight of the next, that passed messages by changing the arms' positions. France built a national network in the 1790s, but the electric telegraph soon replaced it.",
+  "labels": [
+    "media",
+    "lost"
+  ],
+  "aliases": [
+    "semaphore line",
+    "semaphore tower",
+    "semaphore",
+    "semaphore telegraph"
+  ],
+  "wikidata": "Q378499",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1855",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the electric telegraph, which worked at night and in fog",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: semaphore line (Q378499)",
+      "url": "https://www.wikidata.org/wiki/Q378499",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Optical telegraph",
+      "url": "https://en.wikipedia.org/wiki/Optical_telegraph",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

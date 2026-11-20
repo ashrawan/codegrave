@@ -1,0 +1,79 @@
+{
+  "id": "presidents-of-the-united-states",
+  "name": "The American Presidents: From Washington to Obama",
+  "description": "Nineteen presidents who shaped the United States, from the founding generation and the Civil War to world wars, the Cold War and the modern era.",
+  "category": "people",
+  "labels": [
+    "politics"
+  ],
+  "tags": [
+    "presidents",
+    "united states",
+    "washington",
+    "lincoln",
+    "roosevelt",
+    "white house"
+  ],
+  "entries": [
+    "george-washington",
+    "john-adams",
+    "thomas-jefferson",
+    "james-madison",
+    "andrew-jackson",
+    "abraham-lincoln",
+    "ulysses-s-grant",
+    "theodore-roosevelt",
+    "woodrow-wilson",
+    "franklin-d-roosevelt",
+    "harry-s-truman",
+    "dwight-d-eisenhower",
+    "john-f-kennedy",
+    "lyndon-b-johnson",
+    "richard-nixon",
+    "ronald-reagan",
+    "jimmy-carter",
+    "bill-clinton",
+    "barack-obama",
+    "american-revolutionary-war",
+    "american-civil-war",
+    "robert-e-lee",
+    "eleanor-roosevelt"
+  ],
+  "checkpoints": [
+    {
+      "id": "founders",
+      "name": "The founders",
+      "from": 1732,
+      "to": 1836,
+      "note": "The generation of Washington, Adams, Jefferson and Madison wins independence, writes the Constitution and learns how a republic should be run."
+    },
+    {
+      "id": "union-and-division",
+      "name": "A nation divided",
+      "from": 1837,
+      "to": 1885,
+      "note": "Andrew Jackson widens the vote, Lincoln holds the Union together through civil war and ends slavery, and Grant presides over the early years of Reconstruction."
+    },
+    {
+      "id": "rise-to-world-power",
+      "name": "Rise to world power",
+      "from": 1886,
+      "to": 1945,
+      "note": "Theodore Roosevelt, Wilson and Franklin Roosevelt lead a country that grows into an industrial giant, fights two world wars and builds the New Deal."
+    },
+    {
+      "id": "cold-war",
+      "name": "The Cold War presidents",
+      "from": 1946,
+      "to": 1992,
+      "note": "Truman, Eisenhower, Kennedy, Johnson, Nixon, Carter and Reagan manage rivalry with the Soviet Union, civil rights at home and the war in Vietnam."
+    },
+    {
+      "id": "modern-era",
+      "name": "The modern era",
+      "from": 1993,
+      "to": 2026,
+      "note": "Clinton and Obama lead in an age of economic expansion, new technology, financial crisis and changing politics at home and abroad."
+    }
+  ]
+}

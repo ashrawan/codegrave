@@ -1,0 +1,55 @@
+{
+  "id": "gion-matsuri",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Gion Matsuri",
+      "from": "0869"
+    }
+  ],
+  "summary": "A month-long festival of the Yasaka Shrine in Kyoto, Japan, with processions of huge decorated floats. It began as a ritual to ward off an epidemic and is among the best known festivals in Japan.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Gion Festival",
+    "Kyoto Gion Matsuri"
+  ],
+  "wikidata": "Q979873",
+  "events": [
+    {
+      "type": "born",
+      "date": "0869",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kyoto"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gion Matsuri (Q979873)",
+      "url": "https://www.wikidata.org/wiki/Q979873",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gion Matsuri",
+      "url": "https://en.wikipedia.org/wiki/Gion_Matsuri",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

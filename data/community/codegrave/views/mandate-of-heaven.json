@@ -1,0 +1,100 @@
+{
+  "id": "mandate-of-heaven",
+  "name": "Mandate of Heaven: China, Dynasty by Dynasty",
+  "description": "Three thousand years of emperors, sages, inventors and rebels, and how a civilization rose and fell and rose again.",
+  "category": "events",
+  "labels": [
+    "politics",
+    "philosophy"
+  ],
+  "tags": [
+    "china",
+    "dynasty",
+    "emperor",
+    "confucius",
+    "great wall",
+    "ming"
+  ],
+  "entries": [
+    "chinese-characters",
+    "confucius",
+    "confucianism",
+    "tao-te-ching",
+    "sun-tzu",
+    "warring-states-period",
+    "qin-shi-huang",
+    "terracotta-army",
+    "great-wall-of-china",
+    "han-dynasty",
+    "paper",
+    "silk-road",
+    "battle-of-red-cliffs",
+    "romance-of-the-three-kingdoms",
+    "tang-dynasty",
+    "wu-zetian",
+    "li-bai",
+    "grand-canal-china",
+    "song-dynasty",
+    "movable-type",
+    "compass",
+    "neo-confucianism",
+    "yuan-dynasty",
+    "ming-dynasty",
+    "forbidden-city",
+    "zheng-he",
+    "journey-to-the-west",
+    "qing-dynasty",
+    "kangxi-emperor",
+    "first-opium-war",
+    "taiping-rebellion",
+    "boxer-rebellion",
+    "xinhai-revolution",
+    "sun-yat-sen",
+    "chinese-civil-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "sages",
+      "name": "Bronze, writing and sages",
+      "from": -1250,
+      "to": -222,
+      "note": "Chinese characters were already carved on bones when Confucius taught about duty and the Tao Te Ching spoke of the way. In the Warring States period armies grew, and Sun Tzu wrote on war."
+    },
+    {
+      "id": "first-empire",
+      "name": "The first emperors",
+      "from": -221,
+      "to": 220,
+      "note": "Qin Shi Huang unified China, with a terracotta army at his tomb and walls that became the Great Wall. The Han dynasty followed, opened the Silk Road and saw the invention of paper."
+    },
+    {
+      "id": "division-and-tang",
+      "name": "Division and the Tang",
+      "from": 221,
+      "to": 959,
+      "note": "After the Han came the Three Kingdoms and the battle of Red Cliffs, later told in a famous novel. The Tang dynasty brought poets such as Li Bai, the empress Wu Zetian and the Grand Canal."
+    },
+    {
+      "id": "song-yuan",
+      "name": "Song and Yuan",
+      "from": 960,
+      "to": 1367,
+      "note": "Song China had movable type, the compass and a new Confucian thought. Mongol conquest swept away the Song and brought the Yuan dynasty of Kublai Khan, who made Beijing his capital."
+    },
+    {
+      "id": "ming",
+      "name": "The Ming",
+      "from": 1368,
+      "to": 1643,
+      "note": "The Ming rebuilt the Great Wall and the Forbidden City in Beijing, sent Zheng He's fleets across the Indian Ocean, and enjoyed novels like Journey to the West."
+    },
+    {
+      "id": "qing-to-republic",
+      "name": "Qing, revolution and republic",
+      "from": 1644,
+      "to": 1949,
+      "note": "Manchu emperors such as Kangxi ruled the Qing dynasty until the Opium War, the Taiping and Boxer risings weakened it. Sun Yat-sen led the 1911 revolution, and civil war followed."
+    }
+  ],
+  "year": 220
+}

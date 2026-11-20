@@ -1,0 +1,56 @@
+{
+  "id": "centennial-exposition-1876",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Centennial Exposition",
+      "from": "1876"
+    }
+  ],
+  "summary": "The first official world's fair in the United States, held in Philadelphia to mark a hundred years since independence. Visitors saw the telephone and the typewriter shown to the public.",
+  "labels": [
+    "engineering"
+  ],
+  "aliases": [
+    "Centennial International Exhibition",
+    "Philadelphia exhibition"
+  ],
+  "wikidata": "Q984109",
+  "events": [
+    {
+      "type": "born",
+      "date": "1876-05-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1876-11-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Centennial Exposition (Q984109)",
+      "url": "https://www.wikidata.org/wiki/Q984109",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Centennial Exposition",
+      "url": "https://en.wikipedia.org/wiki/Centennial_Exposition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "neogene",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Neogene",
+      "from": "-23030000"
+    }
+  ],
+  "summary": "The period from 23 to about 2.6 million years ago, with grasslands spreading, apes diversifying and the climate cooling. Early human ancestors began walking upright in Africa during it.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Upper Tertiary",
+    "Neogene Period",
+    "Neogene System"
+  ],
+  "wikidata": "Q103924",
+  "events": [
+    {
+      "type": "born",
+      "date": "-23030000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2580000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cenozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Neogene (Q103924)",
+      "url": "https://www.wikidata.org/wiki/Q103924",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neogene",
+      "url": "https://en.wikipedia.org/wiki/Neogene",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

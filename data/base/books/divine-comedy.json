@@ -1,0 +1,55 @@
+{
+  "id": "divine-comedy",
+  "category": "books",
+  "names": [
+    {
+      "name": "Divine Comedy",
+      "from": "1320"
+    }
+  ],
+  "summary": "Italian poem by Dante in which he travels through Hell, Purgatory and Paradise, guided by the poet Virgil and by Beatrice. Written in Tuscan, it helped make that dialect the base of standard Italian.",
+  "labels": [
+    "literature",
+    "religion"
+  ],
+  "aliases": [
+    "The Divine Comedy",
+    "Divina Commedia",
+    "Divina Comedia",
+    "Commedia",
+    "Comedìa"
+  ],
+  "wikidata": "Q40185",
+  "events": [
+    {
+      "type": "born",
+      "date": "1320",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "dante-alighieri"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Divine Comedy (Q40185)",
+      "url": "https://www.wikidata.org/wiki/Q40185",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Divine Comedy",
+      "url": "https://en.wikipedia.org/wiki/Divine_Comedy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

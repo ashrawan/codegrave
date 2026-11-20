@@ -1,0 +1,48 @@
+{
+  "id": "blacksmith",
+  "category": "jobs",
+  "names": [
+    {
+      "name": "Blacksmith",
+      "from": "-1200"
+    }
+  ],
+  "summary": "A craftsperson who shapes iron by heating it and hammering it, making tools, weapons and horseshoes. The trade started in the Iron Age and is now mostly a specialist craft.",
+  "labels": [
+    "business"
+  ],
+  "aliases": [
+    "smith",
+    "ironsmith",
+    "ironworker",
+    "iron smith"
+  ],
+  "wikidata": "Q1639825",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: blacksmith (Q1639825)",
+      "url": "https://www.wikidata.org/wiki/Q1639825",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blacksmith",
+      "url": "https://en.wikipedia.org/wiki/Blacksmith",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "haber-process",
+  "category": "farming",
+  "names": [
+    {
+      "name": "Haber process",
+      "from": "1909"
+    }
+  ],
+  "maker": "Fritz Haber and Carl Bosch",
+  "summary": "A way to make ammonia from nitrogen in the air and hydrogen. The ammonia is turned into fertiliser, which helped farmers feed a much larger world population.",
+  "labels": [
+    "chemistry",
+    "food"
+  ],
+  "aliases": [
+    "Haber-Bosch process"
+  ],
+  "wikidata": "Q213669",
+  "events": [
+    {
+      "type": "born",
+      "date": "1909",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "fritz-haber"
+    },
+    {
+      "type": "in",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Haber-Bosch process (Q213669)",
+      "url": "https://www.wikidata.org/wiki/Q213669",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Haber process",
+      "url": "https://en.wikipedia.org/wiki/Haber_process",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

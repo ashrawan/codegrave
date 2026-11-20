@@ -1,0 +1,67 @@
+{
+  "id": "ephesus",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ephesus",
+      "from": "-1000"
+    }
+  ],
+  "summary": "Greek and later Roman city on the western coast of Turkey, home to the Temple of Artemis. Silting of its harbour cut it off from the sea and led to its slow decline and abandonment.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Efes",
+    "Ephesos",
+    "Mint of Ephesus"
+  ],
+  "wikidata": "Q47611",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Harbour silted up and trade left",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "delian-league"
+    },
+    {
+      "type": "in",
+      "to": "turkey"
+    },
+    {
+      "type": "in",
+      "to": "achaemenid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ephesus (Q47611)",
+      "url": "https://www.wikidata.org/wiki/Q47611",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ephesus",
+      "url": "https://en.wikipedia.org/wiki/Ephesus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

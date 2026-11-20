@@ -1,0 +1,50 @@
+{
+  "id": "archaeopteryx",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Archaeopteryx",
+      "from": "-150800000"
+    }
+  ],
+  "summary": "A crow-sized creature of the late Jurassic with feathers and wings but also teeth and a long bony tail. Found in Germany in 1861, it helped show that birds descend from dinosaurs.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Urvogel"
+  ],
+  "wikidata": "Q100196",
+  "events": [
+    {
+      "type": "born",
+      "date": "-150800000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-148500000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Archaeopteryx (Q100196)",
+      "url": "https://www.wikidata.org/wiki/Q100196",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Archaeopteryx",
+      "url": "https://en.wikipedia.org/wiki/Archaeopteryx",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

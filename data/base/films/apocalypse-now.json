@@ -1,0 +1,53 @@
+{
+  "id": "apocalypse-now",
+  "category": "films",
+  "names": [
+    {
+      "name": "Apocalypse Now",
+      "from": "1979"
+    }
+  ],
+  "maker": "Francis Ford Coppola",
+  "summary": "Francis Ford Coppola's film of a soldier sent up a river in the Vietnam War to find an officer who has gone rogue. Its making was long and troubled, and its dreamlike picture of war was loosely based on a novella by Joseph Conrad.",
+  "labels": [
+    "film",
+    "war"
+  ],
+  "wikidata": "Q182692",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-05-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "marlon-brando"
+    },
+    {
+      "type": "about",
+      "to": "vietnam-war"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apocalypse Now (Q182692)",
+      "url": "https://www.wikidata.org/wiki/Q182692",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apocalypse Now",
+      "url": "https://en.wikipedia.org/wiki/Apocalypse_Now",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

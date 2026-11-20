@@ -1,0 +1,96 @@
+{
+  "id": "leo-tolstoy",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Leo Tolstoy",
+      "from": "1828"
+    }
+  ],
+  "summary": "Russian writer and landowner who wrote War and Peace and Anna Karenina. Later in life he turned to Christian pacifism, and his ideas about nonviolence influenced Gandhi.",
+  "labels": [
+    "literature",
+    "philosophy"
+  ],
+  "aliases": [
+    "Tolstoĭ, Lev Nikolaevich, graf",
+    "Tolstoy, Leo, graf",
+    "Leo Tolstoi",
+    "Lev Nikolayevich Tolstoĭ",
+    "Count Lev Nikolayevich Tolstoy"
+  ],
+  "wikidata": "Q7243",
+  "events": [
+    {
+      "type": "born",
+      "date": "1828-08-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1910-11-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "alexander-pushkin"
+    },
+    {
+      "type": "influenced_by",
+      "to": "nikolai-gogol"
+    },
+    {
+      "type": "influenced_by",
+      "to": "fyodor-dostoevsky"
+    },
+    {
+      "type": "influenced_by",
+      "to": "stendhal"
+    },
+    {
+      "type": "influenced_by",
+      "to": "gautama-buddha"
+    },
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "george-eliot"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "jean-jacques-rousseau"
+    },
+    {
+      "type": "influenced_by",
+      "to": "charles-dickens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Leo Tolstoy (Q7243)",
+      "url": "https://www.wikidata.org/wiki/Q7243",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Leo Tolstoy",
+      "url": "https://en.wikipedia.org/wiki/Leo_Tolstoy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

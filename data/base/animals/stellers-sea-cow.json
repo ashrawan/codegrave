@@ -1,0 +1,52 @@
+{
+  "id": "stellers-sea-cow",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Steller's sea cow",
+      "from": "-1000000"
+    }
+  ],
+  "summary": "A gentle sea mammal, up to about eight metres long, that grazed on kelp in the cold waters of the Bering Sea. It was found in 1741 and had been hunted to extinction within about 30 years.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Hydrodamalis gigas"
+  ],
+  "wikidata": "Q187484",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1768",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Hunted for meat and fat by sailors and fur traders",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Steller’s sea cow (Q187484)",
+      "url": "https://www.wikidata.org/wiki/Q187484",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Steller's sea cow",
+      "url": "https://en.wikipedia.org/wiki/Steller's_sea_cow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

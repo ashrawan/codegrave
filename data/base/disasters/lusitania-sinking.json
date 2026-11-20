@@ -1,0 +1,64 @@
+{
+  "id": "lusitania-sinking",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Sinking of the Lusitania",
+      "from": "1915"
+    }
+  ],
+  "summary": "A German submarine torpedoed the British liner off the coast of Ireland during the First World War, and she sank within minutes. The loss of many civilians, including Americans, shifted opinion in the United States.",
+  "labels": [
+    "war",
+    "transport"
+  ],
+  "aliases": [
+    "sinking of the RMS Lusitania"
+  ],
+  "wikidata": "Q5551560",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915-05-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1915-05-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-i"
+    },
+    {
+      "type": "in",
+      "to": "ireland"
+    },
+    {
+      "type": "about",
+      "to": "rms-lusitania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: sinking of the RMS Lusitania (Q5551560)",
+      "url": "https://www.wikidata.org/wiki/Q5551560",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sinking of RMS Lusitania",
+      "url": "https://en.wikipedia.org/wiki/Sinking_of_RMS_Lusitania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

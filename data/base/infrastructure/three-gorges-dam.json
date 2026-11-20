@@ -1,0 +1,53 @@
+{
+  "id": "three-gorges-dam",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Three Gorges Dam",
+      "from": "2003"
+    }
+  ],
+  "summary": "Huge dam on the Yangtze River in China, the world's largest hydroelectric power station. It controls floods but displaced over a million people and changed the river's ecology.",
+  "labels": [
+    "engineering",
+    "energy",
+    "environment"
+  ],
+  "aliases": [
+    "3 Gorges Dam",
+    "Three Gorges"
+  ],
+  "wikidata": "Q12514",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Three Gorges Dam (Q12514)",
+      "url": "https://www.wikidata.org/wiki/Q12514",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Three Gorges Dam",
+      "url": "https://en.wikipedia.org/wiki/Three_Gorges_Dam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

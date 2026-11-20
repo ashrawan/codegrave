@@ -1,0 +1,63 @@
+{
+  "id": "age-of-enlightenment",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Age of Enlightenment",
+      "from": "1685"
+    }
+  ],
+  "summary": "An intellectual movement across Europe and America that stressed reason, science and individual rights. It influenced the American and French revolutions. The dates are conventional.",
+  "labels": [
+    "philosophy",
+    "politics"
+  ],
+  "aliases": [
+    "Enlightenment",
+    "European Enlightenment",
+    "Age of Reason",
+    "the Enlightenment"
+  ],
+  "wikidata": "Q12539",
+  "events": [
+    {
+      "type": "born",
+      "date": "1685",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1815",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "renaissance-humanism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "scientific-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Age of Enlightenment (Q12539)",
+      "url": "https://www.wikidata.org/wiki/Q12539",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Age of Enlightenment",
+      "url": "https://en.wikipedia.org/wiki/Age_of_Enlightenment",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

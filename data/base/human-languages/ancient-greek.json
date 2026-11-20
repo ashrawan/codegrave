@@ -1,0 +1,54 @@
+{
+  "id": "ancient-greek",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Ancient Greek",
+      "from": "-1500"
+    }
+  ],
+  "summary": "The language of Homer, Plato and the New Testament, spoken in Greece and across the eastern Mediterranean. It evolved into Medieval and Modern Greek. Its words are the roots of much scientific vocabulary.",
+  "labels": [
+    "language",
+    "literature"
+  ],
+  "aliases": [
+    "Old Greek",
+    "Old Greek language",
+    "Ancient Greek language"
+  ],
+  "wikidata": "Q35497",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Gradually changed into Medieval Greek",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ancient Greek (Q35497)",
+      "url": "https://www.wikidata.org/wiki/Q35497",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ancient Greek",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Greek",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

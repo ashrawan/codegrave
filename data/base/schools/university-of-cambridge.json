@@ -1,0 +1,53 @@
+{
+  "id": "university-of-cambridge",
+  "category": "schools",
+  "names": [
+    {
+      "name": "University of Cambridge",
+      "from": "1209"
+    }
+  ],
+  "summary": "English university founded when scholars left Oxford after a dispute. Its alumni include Newton, Darwin and many other scientists, and it is made up of colleges.",
+  "labels": [
+    "education"
+  ],
+  "aliases": [
+    "Cambridge University",
+    "Cambridge",
+    "Universitas Cantabrigiensis",
+    "The University of Cambridge"
+  ],
+  "wikidata": "Q35794",
+  "events": [
+    {
+      "type": "born",
+      "date": "1209",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: University of Cambridge (Q35794)",
+      "url": "https://www.wikidata.org/wiki/Q35794",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: University of Cambridge",
+      "url": "https://en.wikipedia.org/wiki/University_of_Cambridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

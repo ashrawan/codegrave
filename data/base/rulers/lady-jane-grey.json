@@ -1,0 +1,58 @@
+{
+  "id": "lady-jane-grey",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Lady Jane Grey",
+      "from": "1537"
+    }
+  ],
+  "summary": "Teenage noblewoman named queen of England in July 1553 after Edward VI's death. Her rule lasted about nine days before Mary I took the throne, and she was later executed. Her birth year is uncertain.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Lady Jane Greykjbh",
+    "Lady Jane Dudley",
+    "Queen Jane",
+    "The Nine Days' Queen"
+  ],
+  "wikidata": "Q162356",
+  "events": [
+    {
+      "type": "born",
+      "date": "1537-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1554-02-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "house-of-tudor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lady Jane Greykjbh (Q162356)",
+      "url": "https://www.wikidata.org/wiki/Q162356",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lady Jane Grey",
+      "url": "https://en.wikipedia.org/wiki/Lady_Jane_Grey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

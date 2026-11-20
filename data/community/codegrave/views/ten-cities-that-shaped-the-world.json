@@ -1,0 +1,83 @@
+{
+  "id": "ten-cities-that-shaped-the-world",
+  "name": "The Cities That Shaped the World",
+  "description": "Rome to Singapore: how crossroads, harbours and planned capitals became centres of trade, power and ideas.",
+  "category": "places",
+  "labels": [
+    "politics",
+    "economics",
+    "exploration"
+  ],
+  "tags": [
+    "cities",
+    "capitals",
+    "history",
+    "urban",
+    "trade",
+    "metropolis"
+  ],
+  "entries": [
+    "rome",
+    "samarkand",
+    "xian",
+    "alexandria",
+    "florence",
+    "paris",
+    "alexander-the-great",
+    "roman-empire",
+    "london",
+    "istanbul",
+    "justinian-i",
+    "baghdad",
+    "kyoto",
+    "cairo",
+    "timbuktu",
+    "ottoman-empire",
+    "venice",
+    "new-york-city",
+    "saint-petersburg",
+    "singapore",
+    "sydney",
+    "washington-dc",
+    "canberra",
+    "brasilia"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-centres",
+      "name": "Cities of the ancient world",
+      "from": -753,
+      "to": -1,
+      "note": "Rome rose from a river town to an empire. Alexandria, Chang'an and Samarkand sat on the roads where goods, scholars and religions met, and set the pattern of the capital city."
+    },
+    {
+      "id": "capitals-of-faith-and-empire",
+      "name": "Capitals of faith and empire",
+      "from": 1,
+      "to": 800,
+      "note": "London began as a Roman port, Constantinople as an emperor's new capital, and Baghdad as the seat of a caliphate. Kyoto was laid out by the Japanese court on a grid modelled on Chinese cities."
+    },
+    {
+      "id": "the-medieval-hubs",
+      "name": "Medieval hubs",
+      "from": 801,
+      "to": 1500,
+      "note": "Cairo, Timbuktu and Venice grew rich on trade in grain, gold and spices, while Florence turned banking wealth into art. Each drew scholars, merchants and rivals from far away."
+    },
+    {
+      "id": "the-age-of-sail",
+      "name": "Ports and new capitals",
+      "from": 1501,
+      "to": 1900,
+      "note": "European ships linked the continents. New cities such as New York, Saint Petersburg, Sydney and Singapore were built as ports or window-capitals, and Washington was laid out as a capital on paper first."
+    },
+    {
+      "id": "planned-capitals",
+      "name": "Cities on the drawing board",
+      "from": 1901,
+      "to": 2026,
+      "note": "Canberra and Brasilia were designed from nothing as capitals, with competitions and famous architects. Their success and shortcomings are still argued by planners."
+    }
+  ],
+  "year": 800
+}

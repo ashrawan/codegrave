@@ -1,0 +1,47 @@
+{
+  "id": "airbus-a320-family",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Airbus A320 family",
+      "from": "1987"
+    }
+  ],
+  "maker": "Airbus",
+  "summary": "A family of narrow-body jet airliners that first flew in 1987. It was the first airliner with digital fly-by-wire controls, and it is among the most widely flown airliners in the world.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "Airbus A318/319/320/321/ACJ"
+  ],
+  "wikidata": "Q6475",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Airbus A320 family (Q6475)",
+      "url": "https://www.wikidata.org/wiki/Q6475",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Airbus A320 family",
+      "url": "https://en.wikipedia.org/wiki/Airbus_A320_family",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

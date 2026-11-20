@@ -1,0 +1,52 @@
+{
+  "id": "plague",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Plague",
+      "from": "1894"
+    }
+  ],
+  "summary": "A disease caused by a bacterium carried by fleas on rats, responsible for the Black Death and earlier pandemics. It was identified in 1894 by Alexandre Yersin and is now treatable with antibiotics.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Yersinia pestis infectious disease",
+    "the Plague"
+  ],
+  "wikidata": "Q133780",
+  "events": [
+    {
+      "type": "born",
+      "date": "1894",
+      "precision": "year",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "black-death"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: plague (Q133780)",
+      "url": "https://www.wikidata.org/wiki/Q133780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plague (disease)",
+      "url": "https://en.wikipedia.org/wiki/Plague_(disease)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

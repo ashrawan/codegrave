@@ -1,0 +1,53 @@
+{
+  "id": "moscow-kremlin",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Moscow Kremlin",
+      "from": "1156"
+    }
+  ],
+  "maker": "Princes of Moscow and later Russian rulers",
+  "summary": "Walled fortress complex on a hill above the Moskva River in the heart of Moscow. It grew from a wooden fort into the seat of Russian rulers, with palaces, cathedrals and towers, and it is now the working base of the Russian president.",
+  "labels": [
+    "architecture",
+    "politics"
+  ],
+  "wikidata": "Q133274",
+  "events": [
+    {
+      "type": "born",
+      "date": "1156",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kremlin (Q133274)",
+      "url": "https://www.wikidata.org/wiki/Q133274",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kremlin",
+      "url": "https://en.wikipedia.org/wiki/Kremlin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

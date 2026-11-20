@@ -1,0 +1,50 @@
+{
+  "id": "holocene",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Holocene",
+      "from": "-9700"
+    }
+  ],
+  "summary": "The epoch that began about 11,700 years ago when the last ice age ended. In this warm, steady time farming, cities and all of recorded history developed.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Holocene Epoch"
+  ],
+  "wikidata": "Q25445",
+  "events": [
+    {
+      "type": "born",
+      "date": "-9700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "quaternary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Holocene (Q25445)",
+      "url": "https://www.wikidata.org/wiki/Q25445",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Holocene",
+      "url": "https://en.wikipedia.org/wiki/Holocene",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

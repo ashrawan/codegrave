@@ -1,0 +1,57 @@
+{
+  "id": "commodus",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Commodus",
+      "from": "0161"
+    }
+  ],
+  "summary": "Roman emperor and son of Marcus Aurelius, the first to inherit the throne from his father in a long time. He took part in the arena as a gladiator and was killed in a conspiracy.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Lucius Aelius Aurelius Gaius Augustus",
+    "Marcus Aurelius Gaius Antoninus",
+    "Lucius Aurelius Commodus Antoninus"
+  ],
+  "wikidata": "Q1434",
+  "events": [
+    {
+      "type": "born",
+      "date": "0161-08-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0192-12-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "marcus-aurelius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Commodus (Q1434)",
+      "url": "https://www.wikidata.org/wiki/Q1434",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Commodus",
+      "url": "https://en.wikipedia.org/wiki/Commodus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

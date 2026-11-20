@@ -1,0 +1,48 @@
+{
+  "id": "hulu",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Hulu",
+      "from": "2007"
+    }
+  ],
+  "summary": "American streaming service started by TV networks, which offered recent episodes online soon after they aired. It later added its own series and became part of Disney.",
+  "labels": [
+    "media",
+    "television"
+  ],
+  "wikidata": "Q1630304",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-03",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hulu (Q1630304)",
+      "url": "https://www.wikidata.org/wiki/Q1630304",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hulu",
+      "url": "https://en.wikipedia.org/wiki/Hulu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

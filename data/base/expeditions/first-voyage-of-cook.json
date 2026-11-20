@@ -1,0 +1,53 @@
+{
+  "id": "first-voyage-of-cook",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "First voyage of James Cook",
+      "from": "1768"
+    }
+  ],
+  "summary": "A British ship sailed to Tahiti to watch the transit of Venus and then charted the coasts of New Zealand and eastern Australia. The scientists aboard collected many plants and animals new to European science.",
+  "labels": [
+    "exploration",
+    "astronomy"
+  ],
+  "wikidata": "Q3178839",
+  "events": [
+    {
+      "type": "born",
+      "date": "1768",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1771",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "james-cook"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: first voyage of James Cook (Q3178839)",
+      "url": "https://www.wikidata.org/wiki/Q3178839",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First voyage of James Cook",
+      "url": "https://en.wikipedia.org/wiki/First_voyage_of_James_Cook",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

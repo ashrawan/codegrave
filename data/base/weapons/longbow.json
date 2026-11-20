@@ -1,0 +1,49 @@
+{
+  "id": "longbow",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Longbow",
+      "from": "1250"
+    }
+  ],
+  "maker": "English and Welsh archers",
+  "summary": "A tall bow, usually cut from yew, as long as the archer. It needed years of practice to draw, but English armies used volleys of arrows to win at Crecy and Agincourt before firearms took its place.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q10729167",
+  "events": [
+    {
+      "type": "born",
+      "date": "1250",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by firearms, which were easier to train soldiers to use",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: longbow (Q10729167)",
+      "url": "https://www.wikidata.org/wiki/Q10729167",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Longbow",
+      "url": "https://en.wikipedia.org/wiki/Longbow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

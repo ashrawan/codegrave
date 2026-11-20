@@ -1,0 +1,68 @@
+{
+  "id": "winston-churchill",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Winston Churchill",
+      "from": "1874"
+    }
+  ],
+  "summary": "British politician and writer who was prime minister during the Second World War and again in the 1950s. His speeches during the Battle of Britain became famous, and he won the Nobel Prize in Literature.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Colonel Warden",
+    "Mr Green",
+    "Winston Spencer Churchill",
+    "Sir Leonard Spencer",
+    "Charles Maurin"
+  ],
+  "wikidata": "Q8016",
+  "events": [
+    {
+      "type": "born",
+      "date": "1874-11-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-01-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "member_of",
+      "to": "society-of-the-cincinnati"
+    },
+    {
+      "type": "member_of",
+      "to": "order-of-the-garter"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Winston Churchill (Q8016)",
+      "url": "https://www.wikidata.org/wiki/Q8016",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Winston Churchill",
+      "url": "https://en.wikipedia.org/wiki/Winston_Churchill",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

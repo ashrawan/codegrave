@@ -1,0 +1,64 @@
+{
+  "id": "taiping-rebellion",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Taiping Rebellion",
+      "from": "1850"
+    }
+  ],
+  "summary": "A huge rebellion against the Qing dynasty led by Hong Xiuquan, who claimed to be the younger brother of Jesus. It held Nanjing for years and is one of the deadliest wars in history.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "aliases": [
+    "Taiping Revolution",
+    "Taiping Civil War",
+    "Taiping Revolt",
+    "Taiping Uprising",
+    "Taïping Insurrection"
+  ],
+  "wikidata": "Q192408",
+  "events": [
+    {
+      "type": "born",
+      "date": "1850-12",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1864-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qing-dynasty"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Taiping Rebellion (Q192408)",
+      "url": "https://www.wikidata.org/wiki/Q192408",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taiping Rebellion",
+      "url": "https://en.wikipedia.org/wiki/Taiping_Rebellion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

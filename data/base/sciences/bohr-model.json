@@ -1,0 +1,58 @@
+{
+  "id": "bohr-model",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Bohr model",
+      "from": "1913"
+    }
+  ],
+  "summary": "Niels Bohr's 1913 picture of the atom, with electrons moving around the nucleus in fixed orbits and jumping between them as they gain or lose energy. It explained hydrogen's light but was replaced by quantum mechanics.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "Rutherford–Bohr model",
+    "Bohr diagram",
+    "Bohr's model"
+  ],
+  "wikidata": "Q172948",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1925",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the fuller theory of quantum mechanics",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "niels-bohr"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bohr model (Q172948)",
+      "url": "https://www.wikidata.org/wiki/Q172948",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bohr model",
+      "url": "https://en.wikipedia.org/wiki/Bohr_model",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

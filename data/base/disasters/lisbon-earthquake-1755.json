@@ -1,0 +1,55 @@
+{
+  "id": "lisbon-earthquake-1755",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Lisbon earthquake of 1755",
+      "from": "1755"
+    }
+  ],
+  "summary": "A huge earthquake on All Saints' Day, followed by a tsunami and fires, destroyed much of the Portuguese capital. It shook European thinking about faith and nature and led to early scientific study of earthquakes.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Lisbon earthquake"
+  ],
+  "wikidata": "Q191055",
+  "events": [
+    {
+      "type": "born",
+      "date": "1755-11-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1755-11-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1755 Lisbon earthquake (Q191055)",
+      "url": "https://www.wikidata.org/wiki/Q191055",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1755 Lisbon earthquake",
+      "url": "https://en.wikipedia.org/wiki/1755_Lisbon_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

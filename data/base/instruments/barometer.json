@@ -1,0 +1,43 @@
+{
+  "id": "barometer",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Barometer",
+      "from": "1643"
+    }
+  ],
+  "maker": "Evangelista Torricelli",
+  "summary": "An instrument that measures the pressure of the air. Torricelli built the first from a tube of mercury, and changes in pressure became the key to forecasting the weather.",
+  "labels": [
+    "physics"
+  ],
+  "wikidata": "Q79757",
+  "events": [
+    {
+      "type": "born",
+      "date": "1643",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: barometer (Q79757)",
+      "url": "https://www.wikidata.org/wiki/Q79757",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Barometer",
+      "url": "https://en.wikipedia.org/wiki/Barometer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

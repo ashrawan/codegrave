@@ -1,0 +1,51 @@
+{
+  "id": "gondwana",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Gondwana",
+      "from": "-600000000"
+    }
+  ],
+  "summary": "The great southern supercontinent that joined South America, Africa, India, Australia and Antarctica. It had formed by about 550 million years ago and began to break up about 180 million years ago.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Gondwanaland"
+  ],
+  "wikidata": "Q80583",
+  "events": [
+    {
+      "type": "born",
+      "date": "-600000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-180000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broke apart as new oceans opened between its parts",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Gondwana (Q80583)",
+      "url": "https://www.wikidata.org/wiki/Q80583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gondwana",
+      "url": "https://en.wikipedia.org/wiki/Gondwana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

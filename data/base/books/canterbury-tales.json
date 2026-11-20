@@ -1,0 +1,47 @@
+{
+  "id": "canterbury-tales",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Canterbury Tales",
+      "from": "1400"
+    }
+  ],
+  "summary": "Collection of stories told by pilgrims on the road to Canterbury, written in Middle English by Geoffrey Chaucer and left unfinished when he died in 1400. It gives a lively picture of medieval society.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q191663",
+  "events": [
+    {
+      "type": "born",
+      "date": "1400",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "geoffrey-chaucer"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Canterbury Tales (Q191663)",
+      "url": "https://www.wikidata.org/wiki/Q191663",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Canterbury Tales",
+      "url": "https://en.wikipedia.org/wiki/The_Canterbury_Tales",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

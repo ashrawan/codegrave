@@ -1,0 +1,55 @@
+{
+  "id": "skylab",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Skylab",
+      "from": "1973"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "The first American space station, launched in 1973 and visited by three crews. It was abandoned in 1974 and fell to Earth in 1979, scattering pieces over Western Australia.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "wikidata": "Q190776",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-07-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Orbit decayed and it re-entered the atmosphere",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Skylab (Q190776)",
+      "url": "https://www.wikidata.org/wiki/Q190776",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Skylab",
+      "url": "https://en.wikipedia.org/wiki/Skylab",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

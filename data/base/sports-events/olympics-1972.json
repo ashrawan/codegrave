@@ -1,0 +1,57 @@
+{
+  "id": "olympics-1972",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1972 Summer Olympics",
+      "from": "1972"
+    }
+  ],
+  "summary": "The Munich Games were overshadowed when a Palestinian group took members of the Israeli team hostage in the Olympic village, and eleven Israelis were killed. After a pause, the Games continued.",
+  "labels": [
+    "sport",
+    "politics"
+  ],
+  "aliases": [
+    "Games of the XX Olympiad",
+    "Munich 1972"
+  ],
+  "wikidata": "Q8438",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-08-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1972-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1972 Summer Olympics (Q8438)",
+      "url": "https://www.wikidata.org/wiki/Q8438",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1972 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1972_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

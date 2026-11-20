@@ -1,0 +1,45 @@
+{
+  "id": "netbook",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "Netbook",
+      "from": "2007"
+    }
+  ],
+  "summary": "Small, cheap laptop with a modest processor, made for browsing the web and writing email. Netbooks sold fast around 2008 and 2009 before tablets and cheap laptops pushed them out.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "nettop"
+  ],
+  "wikidata": "Q178470",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: netbook (Q178470)",
+      "url": "https://www.wikidata.org/wiki/Q178470",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Netbook",
+      "url": "https://en.wikipedia.org/wiki/Netbook",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

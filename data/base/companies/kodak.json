@@ -1,0 +1,57 @@
+{
+  "id": "kodak",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Kodak",
+      "from": "1888"
+    }
+  ],
+  "maker": "George Eastman",
+  "summary": "American photography company whose simple camera and roll film made picture-taking common. It was slow to turn to digital cameras, which its own engineers had invented, and went bankrupt in 2012.",
+  "labels": [
+    "business",
+    "engineering"
+  ],
+  "wikidata": "Q486269",
+  "events": [
+    {
+      "type": "born",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "george-eastman"
+    },
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kodak (Q486269)",
+      "url": "https://www.wikidata.org/wiki/Q486269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kodak",
+      "url": "https://en.wikipedia.org/wiki/Kodak",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

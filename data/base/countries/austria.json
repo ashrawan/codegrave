@@ -1,0 +1,66 @@
+{
+  "id": "austria",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Austria",
+      "from": "1945"
+    }
+  ],
+  "summary": "A central European country that was once the heart of the Habsburg empire. Its Second Republic was restored in 1945 after the Second World War, and it became fully independent in 1955.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Republic of Austria"
+  ],
+  "wikidata": "Q40",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Austria (Q40)",
+      "url": "https://www.wikidata.org/wiki/Q40",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Austria",
+      "url": "https://en.wikipedia.org/wiki/Austria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

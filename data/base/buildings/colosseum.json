@@ -1,0 +1,63 @@
+{
+  "id": "colosseum",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Colosseum",
+      "from": "0081"
+    }
+  ],
+  "summary": "Vast oval amphitheatre in the centre of Rome, where gladiator contests and animal hunts were staged for crowds. Earthquakes and stone robbing damaged it, but much of it still stands.",
+  "labels": [
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Flavian Amphitheatre",
+    "Roman Colosseum",
+    "Roman Coliseum",
+    "Coliseum",
+    "Flavian Amphitheater"
+  ],
+  "wikidata": "Q10285",
+  "events": [
+    {
+      "type": "born",
+      "date": "0081",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "vespasian"
+    },
+    {
+      "type": "in",
+      "to": "rome"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colosseum (Q10285)",
+      "url": "https://www.wikidata.org/wiki/Q10285",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colosseum",
+      "url": "https://en.wikipedia.org/wiki/Colosseum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

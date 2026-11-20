@@ -1,0 +1,51 @@
+{
+  "id": "velociraptor",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Velociraptor",
+      "from": "-75000000"
+    }
+  ],
+  "summary": "A small, feathered meat-eating dinosaur from Mongolia, about the size of a turkey. Fossils show it was much smaller than the film version, and one famous find has it locked in combat with a Protoceratops.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Raptor",
+    "Velociraptors"
+  ],
+  "wikidata": "Q14403",
+  "events": [
+    {
+      "type": "born",
+      "date": "-75000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-71000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Velociraptor (Q14403)",
+      "url": "https://www.wikidata.org/wiki/Q14403",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Velociraptor",
+      "url": "https://en.wikipedia.org/wiki/Velociraptor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

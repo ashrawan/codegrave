@@ -1,0 +1,93 @@
+{
+  "id": "the-nuclear-century",
+  "name": "The Nuclear Century: Fear, Power and the Bomb",
+  "description": "From glowing rays in a Paris laboratory to the bomb, the reactor and the accidents that followed: how the splitting of the atom shaped the modern world.",
+  "category": "events",
+  "labels": [
+    "physics",
+    "energy",
+    "war"
+  ],
+  "tags": [
+    "atom",
+    "nuclear",
+    "radioactivity",
+    "bomb",
+    "chernobyl",
+    "manhattan project"
+  ],
+  "entries": [
+    "x-ray",
+    "radioactivity",
+    "henri-becquerel",
+    "pierre-curie",
+    "marie-curie",
+    "ernest-rutherford",
+    "bohr-model",
+    "niels-bohr",
+    "james-chadwick",
+    "otto-hahn",
+    "fritz-strassmann",
+    "lise-meitner",
+    "leo-szilard",
+    "albert-einstein",
+    "enrico-fermi",
+    "chicago-pile-1",
+    "manhattan-project",
+    "j-robert-oppenheimer",
+    "trinity-test",
+    "atomic-bombings-of-hiroshima-and-nagasaki",
+    "nuclear-weapon",
+    "atomic-age",
+    "thermonuclear-weapon",
+    "obninsk-nuclear-power-plant",
+    "cuban-missile-crisis",
+    "non-proliferation-treaty",
+    "godzilla-1954",
+    "three-mile-island",
+    "chernobyl-disaster",
+    "chernobyl-exclusion-zone",
+    "fukushima-accident",
+    "tokamak",
+    "iter",
+    "geiger-counter"
+  ],
+  "checkpoints": [
+    {
+      "id": "rays-in-the-dark",
+      "name": "Rays in the dark",
+      "from": 1895,
+      "to": 1911,
+      "note": "Rontgen's X-rays and Becquerel's accidental find of radioactivity set off a hunt in which Pierre and Marie Curie isolated new elements, and Rutherford began to show that atoms change and have an inner structure."
+    },
+    {
+      "id": "mapping-the-atom",
+      "name": "Mapping the atom",
+      "from": 1912,
+      "to": 1938,
+      "note": "Bohr's model and Chadwick's neutron gave the atom a nucleus that could be probed. Fermi bombarded uranium with neutrons, and in 1938 Hahn and Strassmann found a strange result that Meitner explained as fission."
+    },
+    {
+      "id": "race-for-the-bomb",
+      "name": "The race for the bomb",
+      "from": 1939,
+      "to": 1946,
+      "note": "Szilard and Einstein warned of a chain reaction. Fermi's pile in Chicago proved it, and the Manhattan Project under Oppenheimer built weapons, tested at Trinity and used on Hiroshima and Nagasaki."
+    },
+    {
+      "id": "fear-and-promise",
+      "name": "Fear and promise",
+      "from": 1947,
+      "to": 1978,
+      "note": "The Atomic Age brought hydrogen bombs, Cold War standoffs such as the Cuban Missile Crisis, a treaty to limit the spread of weapons, and the first reactor feeding a grid at Obninsk. Godzilla gave the fear a monster's face."
+    },
+    {
+      "id": "accidents-and-fusion",
+      "name": "Accidents and fusion dreams",
+      "from": 1979,
+      "to": 2026,
+      "note": "Three Mile Island, Chernobyl and Fukushima shook trust in nuclear power and left zones where people cannot live. Meanwhile tokamaks and ITER pursue fusion, the cleaner power of the stars."
+    }
+  ],
+  "year": 1945
+}

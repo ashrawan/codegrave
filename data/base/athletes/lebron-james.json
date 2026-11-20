@@ -1,0 +1,51 @@
+{
+  "id": "lebron-james",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "LeBron James",
+      "from": "1984"
+    }
+  ],
+  "summary": "American basketball player who has won four NBA titles with three different teams and became the league's all-time leading scorer in 2023. He also won Olympic gold medals.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q36159",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-12-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-2012"
+    },
+    {
+      "type": "related",
+      "to": "olympics-2008"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: LeBron James (Q36159)",
+      "url": "https://www.wikidata.org/wiki/Q36159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: LeBron James",
+      "url": "https://en.wikipedia.org/wiki/LeBron_James",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

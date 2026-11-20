@@ -1,0 +1,52 @@
+{
+  "id": "surrealism",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Surrealism",
+      "from": "1924"
+    }
+  ],
+  "summary": "Art and writing movement founded in Paris, led by the poet Andre Breton, that drew on dreams and the unconscious. Painters such as Dali, Magritte and Ernst created strange scenes, and the style spread into film and design.",
+  "labels": [
+    "visual-art",
+    "literature"
+  ],
+  "wikidata": "Q39427",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "dada"
+    },
+    {
+      "type": "influenced_by",
+      "to": "communism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: surrealism (Q39427)",
+      "url": "https://www.wikidata.org/wiki/Q39427",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Surrealism",
+      "url": "https://en.wikipedia.org/wiki/Surrealism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

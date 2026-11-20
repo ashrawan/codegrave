@@ -1,0 +1,50 @@
+{
+  "id": "ganymede-moon",
+  "category": "space",
+  "names": [
+    {
+      "name": "Ganymede",
+      "from": "-4500000000"
+    }
+  ],
+  "summary": "Jupiter's largest moon and the biggest moon in the solar system, larger than the planet Mercury. It has its own magnetic field and probably a deep ocean hidden beneath its icy crust.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Jupiter III"
+  ],
+  "wikidata": "Q3169",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "galileo-galilei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ganymede (Q3169)",
+      "url": "https://www.wikidata.org/wiki/Q3169",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ganymede (moon)",
+      "url": "https://en.wikipedia.org/wiki/Ganymede_(moon)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

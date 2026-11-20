@@ -1,0 +1,59 @@
+{
+  "id": "asimo",
+  "category": "robots",
+  "names": [
+    {
+      "name": "ASIMO",
+      "from": "2000"
+    }
+  ],
+  "maker": "Honda",
+  "summary": "Walking humanoid robot made by Honda, small enough to look a child in the eye. It could climb stairs, run and greet visitors, and was shown around the world before Honda stopped the programme.",
+  "labels": [
+    "engineering"
+  ],
+  "aliases": [
+    "Honda Asimo",
+    "A.S.I.M.O.",
+    "Advanced Step in Innovative MObility"
+  ],
+  "wikidata": "Q297769",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2022",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Honda ended its development and public appearances",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: ASIMO (Q297769)",
+      "url": "https://www.wikidata.org/wiki/Q297769",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: ASIMO",
+      "url": "https://en.wikipedia.org/wiki/ASIMO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

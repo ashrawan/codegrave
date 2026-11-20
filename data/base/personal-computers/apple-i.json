@@ -1,0 +1,67 @@
+{
+  "id": "apple-i",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "Apple I",
+      "from": "1976"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Circuit board computer designed by Steve Wozniak and sold by Steve Jobs to hobbyists. The buyer added a case, keyboard and display. About two hundred were made, and it launched Apple.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Apple Computer 1",
+    "Apple-1"
+  ],
+  "wikidata": "Q18981",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-04-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1977",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Apple II",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "steve-jobs"
+    },
+    {
+      "type": "made_by",
+      "to": "steve-wozniak"
+    },
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apple I (Q18981)",
+      "url": "https://www.wikidata.org/wiki/Q18981",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apple I",
+      "url": "https://en.wikipedia.org/wiki/Apple_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

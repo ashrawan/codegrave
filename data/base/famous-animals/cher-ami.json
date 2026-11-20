@@ -1,0 +1,47 @@
+{
+  "id": "cher-ami",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Cher Ami",
+      "from": "1918"
+    }
+  ],
+  "summary": "A carrier pigeon that delivered a message in October 1918 that helped save a trapped American battalion in France, even though she had been shot. She was awarded a French medal.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q391632",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-04-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1919-06-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Cher Ami (Q391632)",
+      "url": "https://www.wikidata.org/wiki/Q391632",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cher Ami",
+      "url": "https://en.wikipedia.org/wiki/Cher_Ami",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "louis-pasteur",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Louis Pasteur",
+      "from": "1822"
+    }
+  ],
+  "summary": "French chemist who showed that germs cause fermentation and disease and who made vaccines against rabies and anthrax. His work gave rise to pasteurisation and helped found modern microbiology.",
+  "labels": [
+    "biology",
+    "medicine",
+    "food"
+  ],
+  "wikidata": "Q529",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822-12-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1895-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Louis Pasteur (Q529)",
+      "url": "https://www.wikidata.org/wiki/Q529",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Louis Pasteur",
+      "url": "https://en.wikipedia.org/wiki/Louis_Pasteur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

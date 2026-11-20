@@ -1,0 +1,89 @@
+{
+  "id": "command-decisions",
+  "name": "Command Decisions: The Leaders of the Second World War",
+  "description": "The dictators, prime ministers, generals and admirals who steered the war from Munich to Berlin and Hiroshima, and the battles that tested them.",
+  "category": "people",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "tags": [
+    "world war ii",
+    "generals",
+    "churchill",
+    "hitler",
+    "eisenhower",
+    "roosevelt",
+    "stalin",
+    "commanders"
+  ],
+  "entries": [
+    "munich-agreement",
+    "adolf-hitler",
+    "benito-mussolini",
+    "hirohito",
+    "winston-churchill",
+    "franklin-d-roosevelt",
+    "joseph-stalin",
+    "world-war-ii",
+    "manhattan-project",
+    "heinz-guderian",
+    "battle-of-britain",
+    "charles-de-gaulle",
+    "operation-barbarossa",
+    "attack-on-pearl-harbor",
+    "isoroku-yamamoto",
+    "battle-of-midway",
+    "chester-nimitz",
+    "douglas-macarthur",
+    "erwin-rommel",
+    "bernard-montgomery",
+    "second-battle-of-el-alamein",
+    "battle-of-stalingrad",
+    "georgy-zhukov",
+    "chiang-kai-shek",
+    "josip-broz-tito",
+    "battle-of-kursk",
+    "dwight-d-eisenhower",
+    "george-s-patton",
+    "normandy-landings",
+    "battle-of-the-bulge",
+    "yalta-conference",
+    "battle-of-berlin",
+    "harry-s-truman",
+    "potsdam-conference",
+    "atomic-bombings-of-hiroshima-and-nagasaki",
+    "nuremberg-trials"
+  ],
+  "checkpoints": [
+    {
+      "id": "road-to-war",
+      "name": "The road to war",
+      "from": 1938,
+      "to": 1940,
+      "note": "Hitler and Mussolini test the democracies at Munich, then Hitler's invasion of Poland starts the Second World War. Guderian's tanks sweep through France, and Churchill leads Britain to a victory in the Battle of Britain."
+    },
+    {
+      "id": "war-widens",
+      "name": "The war widens",
+      "from": 1941,
+      "to": 1942,
+      "note": "Hitler attacks the Soviet Union in Operation Barbarossa and Japan strikes Pearl Harbor. Yamamoto's plan fails at Midway against Nimitz, Rommel is beaten at El Alamein by Montgomery, and Zhukov holds Stalingrad."
+    },
+    {
+      "id": "tide-turns",
+      "name": "The tide turns",
+      "from": 1943,
+      "to": 1944,
+      "note": "The Soviets win at Kursk, Tito's partisans tie down German troops, MacArthur advances in the Pacific, and Eisenhower commands the Normandy landings with Patton and Montgomery under him. The Battle of the Bulge is Germany's last attack."
+    },
+    {
+      "id": "victory-and-judgement",
+      "name": "Victory and judgement",
+      "from": 1945,
+      "to": 1946,
+      "note": "Roosevelt, Churchill and Stalin plan the peace at Yalta, Berlin falls, and Truman meets Stalin at Potsdam. The atomic bombs end the war with Japan, and the Nuremberg trials judge the surviving Nazi leaders."
+    }
+  ],
+  "year": 1943
+}

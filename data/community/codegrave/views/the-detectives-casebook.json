@@ -1,0 +1,71 @@
+{
+  "id": "the-detectives-casebook",
+  "name": "The Detective's Casebook",
+  "description": "Poe's first sleuth, Holmes on his foggy streets, Christie's clever puzzles and the hard-boiled eye of America: how the mystery story was invented and spread.",
+  "category": "arts",
+  "labels": [
+    "literature",
+    "media"
+  ],
+  "tags": [
+    "detective",
+    "mystery",
+    "crime",
+    "sherlock holmes",
+    "agatha christie",
+    "whodunit"
+  ],
+  "entries": [
+    "edgar-allan-poe",
+    "the-murders-in-the-rue-morgue",
+    "the-moonstone",
+    "arthur-conan-doyle",
+    "a-study-in-scarlet",
+    "sherlock-holmes",
+    "agatha-christie",
+    "the-strand-magazine",
+    "hound-of-the-baskervilles",
+    "hercule-poirot",
+    "nancy-drew",
+    "the-maltese-falcon",
+    "murder-on-the-orient-express",
+    "the-big-sleep",
+    "and-then-there-were-none",
+    "the-mousetrap",
+    "james-bond",
+    "detective-conan",
+    "death-note",
+    "the-da-vinci-code",
+    "girl-with-the-dragon-tattoo"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-detectives",
+      "name": "The first detectives",
+      "from": 1809,
+      "to": 1860,
+      "note": "Poe's Paris sleuth Dupin gave crime fiction its pattern: a baffling crime, a clever outsider and a surprising explanation, and Collins soon extended it to a full novel."
+    },
+    {
+      "id": "holmes-arrives",
+      "name": "Holmes arrives",
+      "from": 1861,
+      "to": 1900,
+      "note": "A Scottish doctor created Sherlock Holmes in 1887, and the Strand Magazine made him a worldwide celebrity, while Christie was born."
+    },
+    {
+      "id": "golden-age",
+      "name": "The golden age",
+      "from": 1901,
+      "to": 1939,
+      "note": "In Britain Christie perfected the puzzle with a closed circle of suspects, while American writers such as Hammett and Chandler took the detective into the city streets."
+    },
+    {
+      "id": "mystery-goes-global",
+      "name": "Mystery goes global",
+      "from": 1940,
+      "to": 2026,
+      "note": "Spies, boy detectives in Tokyo, a Swedish hacker and a Paris thriller show how the mystery spread to every corner of popular culture."
+    }
+  ]
+}

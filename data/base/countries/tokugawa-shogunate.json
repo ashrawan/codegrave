@@ -1,0 +1,66 @@
+{
+  "id": "tokugawa-shogunate",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Tokugawa shogunate",
+      "from": "1603"
+    }
+  ],
+  "summary": "Military government of Japan founded by Tokugawa Ieyasu, ruling from Edo in the name of the emperor. It gave Japan over two centuries of peace and limited contact with foreigners until it was overthrown in 1868.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Shogunate of Japan",
+    "Japan",
+    "Edo Japan"
+  ],
+  "wikidata": "Q205662",
+  "events": [
+    {
+      "type": "born",
+      "date": "1603-03-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1867-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown in the Meiji Restoration",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "tokugawa-ieyasu"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tokugawa shogunate (Q205662)",
+      "url": "https://www.wikidata.org/wiki/Q205662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tokugawa shogunate",
+      "url": "https://en.wikipedia.org/wiki/Tokugawa_shogunate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

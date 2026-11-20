@@ -1,0 +1,82 @@
+{
+  "id": "germany",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Germany",
+      "from": "1949"
+    }
+  ],
+  "summary": "The country at the centre of Europe, with a federal republic that dates from 1949 in the west and was joined by the east in 1990. It has the largest economy in the European Union.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Federal Republic of Germany",
+    "DE",
+    "DEU",
+    "FRG",
+    "BRD"
+  ],
+  "wikidata": "Q183",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-05-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-bank"
+    },
+    {
+      "type": "member_of",
+      "to": "international-monetary-fund"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Germany (Q183)",
+      "url": "https://www.wikidata.org/wiki/Q183",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Germany",
+      "url": "https://en.wikipedia.org/wiki/Germany",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

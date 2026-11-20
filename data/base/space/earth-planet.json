@@ -1,0 +1,59 @@
+{
+  "id": "earth-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Earth",
+      "from": "-4540000000"
+    }
+  ],
+  "summary": "The third planet from the Sun and the only place known to have life. It formed about 4.5 billion years ago, has liquid oceans and a protective magnetic field, and its surface is shaped by slowly moving plates of rock.",
+  "labels": [
+    "astronomy",
+    "environment"
+  ],
+  "aliases": [
+    "Planet Earth",
+    "World",
+    "Mother Earth",
+    "The Blue Planet",
+    "The Earth"
+  ],
+  "wikidata": "Q2",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4540000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "solar-system"
+    },
+    {
+      "type": "in",
+      "to": "milky-way"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Earth (Q2)",
+      "url": "https://www.wikidata.org/wiki/Q2",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Earth",
+      "url": "https://en.wikipedia.org/wiki/Earth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

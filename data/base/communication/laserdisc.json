@@ -1,0 +1,56 @@
+{
+  "id": "laserdisc",
+  "category": "communication",
+  "names": [
+    {
+      "name": "LaserDisc",
+      "from": "1978"
+    }
+  ],
+  "maker": "Philips and MCA",
+  "summary": "A large optical disc, about the size of a record, that held films with a clear picture. It was the first widely sold optical disc but stayed a niche product and ended when DVD arrived.",
+  "labels": [
+    "media",
+    "film",
+    "failures"
+  ],
+  "aliases": [
+    "laser disc",
+    "laser video disc",
+    "LD"
+  ],
+  "wikidata": "Q273309",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2009",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by DVD, which was smaller and cheaper",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: LaserDisc (Q273309)",
+      "url": "https://www.wikidata.org/wiki/Q273309",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: LaserDisc",
+      "url": "https://en.wikipedia.org/wiki/LaserDisc",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,49 @@
+{
+  "id": "delian-league",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Delian League",
+      "from": "-0478"
+    }
+  ],
+  "summary": "Alliance of Greek city-states led by Athens, formed to carry on the fight against Persia. Its treasury and fleet turned it into an Athenian empire, and it ended with Athens' defeat by Sparta.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q193235",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0478",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0403",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved after Athens lost the Peloponnesian War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Delian League (Q193235)",
+      "url": "https://www.wikidata.org/wiki/Q193235",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Delian League",
+      "url": "https://en.wikipedia.org/wiki/Delian_League",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

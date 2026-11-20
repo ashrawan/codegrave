@@ -1,0 +1,66 @@
+{
+  "id": "netherlands",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Netherlands",
+      "from": "1815"
+    }
+  ],
+  "summary": "A low-lying country of north-western Europe that broke from Spanish rule in the 1500s and became a rich trading power. It has been a kingdom since 1815.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Holland",
+    "the Netherlands",
+    "Nederland",
+    "Nederlanden",
+    "de Nederlanden"
+  ],
+  "wikidata": "Q55",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "cern"
+    },
+    {
+      "type": "member_of",
+      "to": "international-monetary-fund"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Netherlands (Q55)",
+      "url": "https://www.wikidata.org/wiki/Q55",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Netherlands",
+      "url": "https://en.wikipedia.org/wiki/Netherlands",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

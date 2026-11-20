@@ -1,0 +1,59 @@
+{
+  "id": "pantheon-rome",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Pantheon",
+      "from": "0128"
+    }
+  ],
+  "summary": "Roman temple with a great concrete dome and a round opening at the top, rebuilt under Hadrian. It has been used as a church since 609, and its dome was the largest of its kind for centuries.",
+  "labels": [
+    "architecture",
+    "religion"
+  ],
+  "aliases": [
+    "Pantheon (Rome, Italy)",
+    "Santa Maria ad Martyres",
+    "Basilica of Our Lady of the Martyrs",
+    "Basilica of Santa Maria ad Martyres",
+    "Basilica of Santa Maria"
+  ],
+  "wikidata": "Q99309",
+  "events": [
+    {
+      "type": "born",
+      "date": "0128",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rome"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pantheon (Q99309)",
+      "url": "https://www.wikidata.org/wiki/Q99309",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pantheon, Rome",
+      "url": "https://en.wikipedia.org/wiki/Pantheon,_Rome",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

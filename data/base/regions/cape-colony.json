@@ -1,0 +1,58 @@
+{
+  "id": "cape-colony",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Cape Colony",
+      "from": "1652"
+    }
+  ],
+  "summary": "The colony at the southern tip of Africa founded by the Dutch East India Company as a supply stop. Britain took it in the Napoleonic wars, and its settlers later moved inland in the Great Trek.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Cape of Good Hope",
+    "Cape Colony, South Africa"
+  ],
+  "wikidata": "Q370736",
+  "events": [
+    {
+      "type": "born",
+      "date": "1652",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1910-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Merged into the Union of South Africa",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cape Colony (Q370736)",
+      "url": "https://www.wikidata.org/wiki/Q370736",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cape Colony",
+      "url": "https://en.wikipedia.org/wiki/Cape_Colony",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "paraceratherium",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Paraceratherium",
+      "from": "-34000000"
+    }
+  ],
+  "summary": "The largest known land mammal, a hornless relative of rhinoceroses that stood taller than a giraffe. It browsed on tree leaves in Asia.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Indricotherium",
+    "Baluchitherium"
+  ],
+  "wikidata": "Q311212",
+  "events": [
+    {
+      "type": "born",
+      "date": "-34000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-23000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Paraceratherium (Q311212)",
+      "url": "https://www.wikidata.org/wiki/Q311212",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paraceratherium",
+      "url": "https://en.wikipedia.org/wiki/Paraceratherium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

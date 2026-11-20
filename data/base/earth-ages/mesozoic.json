@@ -1,0 +1,59 @@
+{
+  "id": "mesozoic",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Mesozoic",
+      "from": "-251902000"
+    }
+  ],
+  "summary": "The era from 252 to 66 million years ago, often called the age of reptiles, when dinosaurs ruled the land, marine reptiles swam the seas, and birds, flowers and mammals first appeared. It began and ended with mass extinctions.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Age of Reptiles",
+    "Age of Conifers",
+    "Mesozoic Era",
+    "Mesozoic Erathem"
+  ],
+  "wikidata": "Q83222",
+  "events": [
+    {
+      "type": "born",
+      "date": "-251902000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "phanerozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mesozoic (Q83222)",
+      "url": "https://www.wikidata.org/wiki/Q83222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mesozoic",
+      "url": "https://en.wikipedia.org/wiki/Mesozoic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

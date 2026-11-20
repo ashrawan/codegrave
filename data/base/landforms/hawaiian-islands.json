@@ -1,0 +1,54 @@
+{
+  "id": "hawaiian-islands",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Hawaiian Islands",
+      "from": "-5000000"
+    }
+  ],
+  "summary": "A chain of volcanic islands in the middle of the Pacific, built as the plate moved over a hot spot in the mantle. The Big Island, with the active volcanoes Kilauea and Mauna Loa, is the youngest of the main islands.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Sandwich Islands"
+  ],
+  "wikidata": "Q192626",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hawaii"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hawaiian Islands (Q192626)",
+      "url": "https://www.wikidata.org/wiki/Q192626",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hawaiian Islands",
+      "url": "https://en.wikipedia.org/wiki/Hawaiian_Islands",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

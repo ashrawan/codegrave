@@ -1,0 +1,62 @@
+{
+  "id": "roman-republic",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Roman Republic",
+      "from": "-0509"
+    }
+  ],
+  "summary": "The period when Rome was governed by elected magistrates and a senate rather than kings. It won control of Italy and then the Mediterranean, but civil wars between generals gradually ended it.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "res publica",
+    "Rome"
+  ],
+  "wikidata": "Q17167",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0509",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0027-01-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the rule of Augustus, the first emperor, after a series of civil wars",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "roman-empire"
+    },
+    {
+      "type": "part_of",
+      "to": "classical-antiquity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roman Republic (Q17167)",
+      "url": "https://www.wikidata.org/wiki/Q17167",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roman Republic",
+      "url": "https://en.wikipedia.org/wiki/Roman_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

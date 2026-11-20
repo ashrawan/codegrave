@@ -1,0 +1,58 @@
+{
+  "id": "mexico",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Mexico",
+      "from": "1821"
+    }
+  ],
+  "summary": "The largest Spanish-speaking country by population, independent from Spain since 1821. It is the home of the Aztec and Maya heritage and borders the United States to the north.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Mexican United States",
+    "Mexican Republic",
+    "US of M",
+    "United States of Mexico",
+    "mx"
+  ],
+  "wikidata": "Q96",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mexico (Q96)",
+      "url": "https://www.wikidata.org/wiki/Q96",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mexico",
+      "url": "https://en.wikipedia.org/wiki/Mexico",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

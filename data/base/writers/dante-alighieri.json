@@ -1,0 +1,68 @@
+{
+  "id": "dante-alighieri",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Dante Alighieri",
+      "from": "1265"
+    }
+  ],
+  "summary": "Florentine poet who wrote the Divine Comedy, a journey through hell, purgatory and paradise. He wrote it in Italian rather than Latin, which helped make Tuscan the standard form of the language.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q1067",
+  "events": [
+    {
+      "type": "born",
+      "date": "1265",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1321-09-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "virgil"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ovid"
+    },
+    {
+      "type": "influenced_by",
+      "to": "homer"
+    },
+    {
+      "type": "influenced_by",
+      "to": "thomas-aquinas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dante Alighieri (Q1067)",
+      "url": "https://www.wikidata.org/wiki/Q1067",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dante Alighieri",
+      "url": "https://en.wikipedia.org/wiki/Dante_Alighieri",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

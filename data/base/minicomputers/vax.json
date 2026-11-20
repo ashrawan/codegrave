@@ -1,0 +1,58 @@
+{
+  "id": "vax",
+  "category": "minicomputers",
+  "names": [
+    {
+      "name": "VAX",
+      "from": "1977"
+    }
+  ],
+  "maker": "Digital Equipment Corporation",
+  "summary": "Family of 32-bit computers from Digital Equipment Corporation, with a long run as the standard machine for universities, labs and companies. Its design influenced Unix on larger machines and made DEC a giant.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Virtual Address eXtension"
+  ],
+  "wikidata": "Q960616",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-10-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by newer chips and DEC's sale to Compaq",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "digital-equipment-corporation"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: VAX (Q960616)",
+      "url": "https://www.wikidata.org/wiki/Q960616",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: VAX",
+      "url": "https://en.wikipedia.org/wiki/VAX",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "toyota",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Toyota",
+      "from": "1937"
+    }
+  ],
+  "maker": "Kiichiro Toyoda",
+  "summary": "Japanese car maker that began as a spin-off of a loom company. Its production methods, built on removing waste, were copied by factories around the world, and it is among the biggest vehicle makers.",
+  "labels": [
+    "business",
+    "engineering",
+    "transport"
+  ],
+  "aliases": [
+    "TOYOTA JIDOSHA KABUSHIKI KAISHA",
+    "TOYOTA JIDOSHA KABUSHIKI KAISHA (Toyota)"
+  ],
+  "wikidata": "Q53268",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-08-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Toyota (Q53268)",
+      "url": "https://www.wikidata.org/wiki/Q53268",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Toyota",
+      "url": "https://en.wikipedia.org/wiki/Toyota",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

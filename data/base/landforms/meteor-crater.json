@@ -1,0 +1,55 @@
+{
+  "id": "meteor-crater",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Meteor Crater",
+      "from": "-50000"
+    }
+  ],
+  "summary": "A bowl-shaped crater in Arizona about 1.2 kilometres wide, made by an iron meteorite roughly 50,000 years ago. It is one of the best preserved impact craters on Earth and helped scientists learn what such scars look like.",
+  "labels": [
+    "astronomy",
+    "environment"
+  ],
+  "aliases": [
+    "Barringer Crater",
+    "Franklin's Hole",
+    "Meteorite Mountain",
+    "Coon Mountain",
+    "Coon Butte"
+  ],
+  "wikidata": "Q431381",
+  "events": [
+    {
+      "type": "born",
+      "date": "-50000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Meteor Crater (Q431381)",
+      "url": "https://www.wikidata.org/wiki/Q431381",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Meteor Crater",
+      "url": "https://en.wikipedia.org/wiki/Meteor_Crater",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "nhk",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "NHK",
+      "from": "1925"
+    }
+  ],
+  "summary": "Public broadcaster of Japan, paid for by fees from viewers. It runs radio and television, including international services, and it makes a large number of news and nature programmes.",
+  "labels": [
+    "media",
+    "television"
+  ],
+  "aliases": [
+    "Nippon Hōsō Kyōkai",
+    "Japan Broadcasting Corporation",
+    "nhk.or.jp",
+    "NHK Television"
+  ],
+  "wikidata": "Q212128",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: NHK (Q212128)",
+      "url": "https://www.wikidata.org/wiki/Q212128",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: NHK",
+      "url": "https://en.wikipedia.org/wiki/NHK",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

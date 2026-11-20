@@ -1,0 +1,52 @@
+{
+  "id": "chinese-new-year",
+  "category": "customs",
+  "names": [
+    {
+      "name": "Chinese New Year",
+      "from": "-1000"
+    }
+  ],
+  "summary": "The most important festival in the Chinese calendar, marking the start of a lunar year. Families gather for meals and give red envelopes, and the dates differ each year.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Spring Festival",
+    "Lunar New Year",
+    "CNY"
+  ],
+  "wikidata": "Q131772",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chinese New Year (Q131772)",
+      "url": "https://www.wikidata.org/wiki/Q131772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chinese New Year",
+      "url": "https://en.wikipedia.org/wiki/Chinese_New_Year",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

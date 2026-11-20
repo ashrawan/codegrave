@@ -1,0 +1,55 @@
+{
+  "id": "the-new-yorker",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "The New Yorker",
+      "from": "1925"
+    }
+  ],
+  "summary": "American weekly magazine known for its cartoons, essays, reporting and fiction. It has published many leading writers and is famous for its illustrated covers.",
+  "labels": [
+    "literature",
+    "media"
+  ],
+  "aliases": [
+    "New Yorker magazine"
+  ],
+  "wikidata": "Q217305",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The New Yorker (Q217305)",
+      "url": "https://www.wikidata.org/wiki/Q217305",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The New Yorker",
+      "url": "https://en.wikipedia.org/wiki/The_New_Yorker",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

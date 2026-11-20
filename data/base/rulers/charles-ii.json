@@ -1,0 +1,68 @@
+{
+  "id": "charles-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Charles II",
+      "from": "1630"
+    }
+  ],
+  "summary": "King restored to the throne of England in 1660 after years of exile and republican rule. His reign saw the Great Fire of London, the founding of the Royal Society, and a revival of theatres.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "The Merry Monarch",
+    "Merry Monarch"
+  ],
+  "wikidata": "Q122553",
+  "events": [
+    {
+      "type": "born",
+      "date": "1630-05-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1685-02-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "charles-i"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "james-ii"
+    },
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "member_of",
+      "to": "order-of-the-garter"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles II of England (Q122553)",
+      "url": "https://www.wikidata.org/wiki/Q122553",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles II of England",
+      "url": "https://en.wikipedia.org/wiki/Charles_II_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

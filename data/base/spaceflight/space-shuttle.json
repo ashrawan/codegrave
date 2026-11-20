@@ -1,0 +1,50 @@
+{
+  "id": "space-shuttle",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Space Shuttle",
+      "from": "1981"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "The American reusable spaceplane that flew 135 missions between 1981 and 2011. It launched satellites, carried the Hubble Telescope and built the International Space Station.",
+  "labels": [
+    "space-race",
+    "engineering"
+  ],
+  "wikidata": "Q48806",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-04-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired after the construction of the International Space Station",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Space Shuttle (Q48806)",
+      "url": "https://www.wikidata.org/wiki/Q48806",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Space Shuttle",
+      "url": "https://en.wikipedia.org/wiki/Space_Shuttle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

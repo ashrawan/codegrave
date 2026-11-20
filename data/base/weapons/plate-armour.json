@@ -1,0 +1,56 @@
+{
+  "id": "plate-armour",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Plate armour",
+      "from": "1300"
+    }
+  ],
+  "maker": "European armourers",
+  "summary": "Armour made of shaped steel plates that covered the whole body of a knight. It turned most blows from swords and arrows, and it declined as muskets and larger armies made it too costly and too weak.",
+  "labels": [
+    "war",
+    "fashion"
+  ],
+  "aliases": [
+    "suit of armour",
+    "plate",
+    "suit of armor",
+    "Bronze plate armour"
+  ],
+  "wikidata": "Q3391846",
+  "events": [
+    {
+      "type": "born",
+      "date": "1300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1650",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Firearms could pierce it, and it was too costly for the armies of the new age",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: plate armour (Q3391846)",
+      "url": "https://www.wikidata.org/wiki/Q3391846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plate armour",
+      "url": "https://en.wikipedia.org/wiki/Plate_armour",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

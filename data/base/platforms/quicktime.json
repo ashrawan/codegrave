@@ -1,0 +1,55 @@
+{
+  "id": "quicktime",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "QuickTime",
+      "from": "1991"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's technology for playing and editing video and sound. It brought movies to early computers, and its file format became the basis of MPEG-4. Apple dropped Windows support in 2016.",
+  "labels": [
+    "media",
+    "computing"
+  ],
+  "wikidata": "Q1243769",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Apple dropped Windows support and moved to newer tools",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: QuickTime (Q1243769)",
+      "url": "https://www.wikidata.org/wiki/Q1243769",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: QuickTime",
+      "url": "https://en.wikipedia.org/wiki/QuickTime",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "geocentric-model",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Geocentric model",
+      "from": "-0350"
+    }
+  ],
+  "summary": "The old view that the Earth sits at the centre of the universe with the Sun, Moon, planets and stars circling it. Ptolemy refined it into a detailed system that astronomers used for about fourteen centuries.",
+  "labels": [
+    "astronomy"
+  ],
+  "wikidata": "Q165800",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0350",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Sun-centred model after Copernicus, Kepler, Galileo and Newton",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "aristotle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: geocentric model (Q165800)",
+      "url": "https://www.wikidata.org/wiki/Q165800",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Geocentrism",
+      "url": "https://en.wikipedia.org/wiki/Geocentrism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

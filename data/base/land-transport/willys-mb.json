@@ -1,0 +1,62 @@
+{
+  "id": "willys-mb",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Willys MB",
+      "from": "1941"
+    }
+  ],
+  "maker": "Willys-Overland and Ford",
+  "summary": "A light four-wheel-drive military vehicle built in large numbers for the United States and its allies in the Second World War. Known as the Jeep, it inspired civilian off-road vehicles after the war.",
+  "labels": [
+    "transport",
+    "war"
+  ],
+  "aliases": [
+    "Ford GPW",
+    "Willys MB / Ford GPW",
+    "U.S. Army Truck",
+    "Command Reconnaissance",
+    "Willys Jeep"
+  ],
+  "wikidata": "Q495075",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Wartime production ended with the end of the war",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ford-motor-company"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Willys MB (Q495075)",
+      "url": "https://www.wikidata.org/wiki/Q495075",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Willys MB",
+      "url": "https://en.wikipedia.org/wiki/Willys_MB",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

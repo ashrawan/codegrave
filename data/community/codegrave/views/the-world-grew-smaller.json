@@ -1,0 +1,90 @@
+{
+  "id": "the-world-grew-smaller",
+  "name": "How Bridges, Canals and Rails Shrank the World",
+  "description": "The roads, canals, tunnels and railways that cut journeys from months to days, and the engineers who bet fortunes on them.",
+  "category": "places",
+  "labels": [
+    "transport",
+    "engineering",
+    "economics"
+  ],
+  "tags": [
+    "canals",
+    "bridges",
+    "railways",
+    "tunnels",
+    "engineering",
+    "trade",
+    "roads"
+  ],
+  "entries": [
+    "silk-road",
+    "grand-canal-china",
+    "appian-way",
+    "pont-du-gard",
+    "inca-road-system",
+    "stari-most",
+    "canal-du-midi",
+    "iron-bridge",
+    "isambard-kingdom-brunel",
+    "erie-canal",
+    "liverpool-and-manchester-railway",
+    "thames-tunnel",
+    "suez-canal",
+    "ferdinand-de-lesseps",
+    "first-transcontinental-railroad",
+    "brooklyn-bridge",
+    "forth-bridge",
+    "tower-bridge",
+    "panama-canal",
+    "trans-siberian-railway",
+    "hoover-dam",
+    "sydney-harbour-bridge",
+    "golden-gate-bridge",
+    "us-route-66",
+    "aswan-high-dam",
+    "seikan-tunnel",
+    "channel-tunnel",
+    "akashi-kaikyo-bridge",
+    "gotthard-base-tunnel",
+    "three-gorges-dam"
+  ],
+  "checkpoints": [
+    {
+      "id": "old-roads",
+      "name": "Roads and waterways of empire",
+      "from": -486,
+      "to": 1000,
+      "note": "Rome paved its roads and carried water over valleys on arches, while Chinese rulers dug a canal to link their river basins. Caravans on the Silk Road tied distant empires together."
+    },
+    {
+      "id": "before-steam",
+      "name": "Stone bridges and early canals",
+      "from": 1001,
+      "to": 1700,
+      "note": "Ottoman builders threw an arch across the Neretva at Mostar, Inca engineers strung rope bridges and roads over the Andes, and French engineers dug a canal to link two seas."
+    },
+    {
+      "id": "iron-and-steam",
+      "name": "Iron, steam and canals",
+      "from": 1701,
+      "to": 1850,
+      "note": "The Industrial Revolution brought cast iron, locomotives and canal booms. The first iron bridge, the first steam railway between two cities and the first tunnel under a river all appeared within about sixty years."
+    },
+    {
+      "id": "the-big-connections",
+      "name": "Continents connected",
+      "from": 1851,
+      "to": 1930,
+      "note": "Rails crossed America and Siberia, the Suez Canal joined two seas, and the Panama Canal cut through a continent. Steel bridges in New York, Scotland and London became wonders of the age."
+    },
+    {
+      "id": "modern-megaprojects",
+      "name": "Modern megaprojects",
+      "from": 1931,
+      "to": 2026,
+      "note": "Concrete dams, deep tunnels and record-length bridges tied nations together. Highways like Route 66 changed travel, and long tunnels now link islands and mountain regions."
+    }
+  ],
+  "year": 1869
+}

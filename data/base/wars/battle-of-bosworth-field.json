@@ -1,0 +1,63 @@
+{
+  "id": "battle-of-bosworth-field",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Bosworth Field",
+      "from": "1485"
+    }
+  ],
+  "summary": "Battle in Leicestershire where Henry Tudor defeated and killed King Richard III. Henry took the crown as Henry VII and began the Tudor dynasty.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Bosworth"
+  ],
+  "wikidata": "Q222013",
+  "events": [
+    {
+      "type": "born",
+      "date": "1485-08-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1485-08-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "wars-of-the-roses"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Bosworth Field (Q222013)",
+      "url": "https://www.wikidata.org/wiki/Q222013",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Bosworth Field",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Bosworth_Field",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

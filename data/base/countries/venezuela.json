@@ -1,0 +1,72 @@
+{
+  "id": "venezuela",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Venezuela",
+      "from": "1811"
+    }
+  ],
+  "summary": "A South American country on the Caribbean coast, home of Simon Bolivar, which declared independence in 1811. It holds some of the largest oil reserves known in the world.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Bolivarian Republic of Venezuela",
+    "BR Venezuela",
+    "Republic of Venezuela"
+  ],
+  "wikidata": "Q717",
+  "events": [
+    {
+      "type": "born",
+      "date": "1811-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "related",
+      "to": "simon-bolivar"
+    },
+    {
+      "type": "related",
+      "to": "venice"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Venezuela (Q717)",
+      "url": "https://www.wikidata.org/wiki/Q717",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venezuela",
+      "url": "https://en.wikipedia.org/wiki/Venezuela",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

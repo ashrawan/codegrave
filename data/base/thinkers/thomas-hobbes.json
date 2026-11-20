@@ -1,0 +1,65 @@
+{
+  "id": "thomas-hobbes",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Thomas Hobbes",
+      "from": "1588"
+    }
+  ],
+  "summary": "English philosopher whose book Leviathan argued that without a strong government life would be a war of all against all, so people agree to obey a ruler for safety. It is a founding work of social contract theory.",
+  "labels": [
+    "philosophy",
+    "politics"
+  ],
+  "aliases": [
+    "Thomas Hobbes of Malflutry",
+    "Thomas Hobbsted"
+  ],
+  "wikidata": "Q37621",
+  "events": [
+    {
+      "type": "born",
+      "date": "1588-04-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1679-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "francis-bacon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thomas Hobbes (Q37621)",
+      "url": "https://www.wikidata.org/wiki/Q37621",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thomas Hobbes",
+      "url": "https://en.wikipedia.org/wiki/Thomas_Hobbes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

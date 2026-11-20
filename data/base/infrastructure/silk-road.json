@@ -1,0 +1,56 @@
+{
+  "id": "silk-road",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Silk Road",
+      "from": "-0130"
+    }
+  ],
+  "summary": "Network of overland and sea trade routes linking China with Central Asia, India, Persia and the Mediterranean. Silk, spices, religions and inventions travelled along it, as did diseases such as the plague.",
+  "labels": [
+    "economics",
+    "exploration"
+  ],
+  "aliases": [
+    "The Silk Road",
+    "Silk Route",
+    "Ruta de la Seka",
+    "Great Silk Road",
+    "Silk Highway"
+  ],
+  "wikidata": "Q36288",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0130",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1450",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overland trade declined as sea routes opened and states closed borders",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Silk Road (Q36288)",
+      "url": "https://www.wikidata.org/wiki/Q36288",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Silk Road",
+      "url": "https://en.wikipedia.org/wiki/Silk_Road",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

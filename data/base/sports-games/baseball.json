@@ -1,0 +1,45 @@
+{
+  "id": "baseball",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Baseball",
+      "from": "1845"
+    }
+  ],
+  "summary": "A bat and ball game in which a batter tries to hit a pitched ball and run round four bases. Written rules appeared in New York in the 1840s, and it spread widely in the Americas and East Asia.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "America's pastime"
+  ],
+  "wikidata": "Q5369",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: baseball (Q5369)",
+      "url": "https://www.wikidata.org/wiki/Q5369",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baseball",
+      "url": "https://en.wikipedia.org/wiki/Baseball",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

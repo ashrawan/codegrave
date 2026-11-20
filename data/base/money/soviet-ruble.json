@@ -1,0 +1,61 @@
+{
+  "id": "soviet-ruble",
+  "category": "money",
+  "names": [
+    {
+      "name": "Soviet ruble",
+      "from": "1923"
+    }
+  ],
+  "summary": "The money of the Soviet Union, which could not be freely exchanged abroad. It was managed by the state alongside fixed prices and plans, and was replaced by new national currencies.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "aliases": [
+    "SUR"
+  ],
+  "wikidata": "Q615640",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1991-12-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolution of the Soviet Union",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Soviet ruble (Q615640)",
+      "url": "https://www.wikidata.org/wiki/Q615640",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Soviet ruble",
+      "url": "https://en.wikipedia.org/wiki/Soviet_ruble",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

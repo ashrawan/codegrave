@@ -1,0 +1,60 @@
+{
+  "id": "james-chadwick",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "James Chadwick",
+      "from": "1891"
+    }
+  ],
+  "summary": "English physicist who discovered the neutron in 1932, a particle without electric charge that proved ideal for splitting heavy atoms. He won the 1935 Nobel Prize in Physics and later led the British team on the atomic bomb project.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Sir James Chadwick"
+  ],
+  "wikidata": "Q80884",
+  "events": [
+    {
+      "type": "born",
+      "date": "1891-10-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-07-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James Chadwick (Q80884)",
+      "url": "https://www.wikidata.org/wiki/Q80884",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Chadwick",
+      "url": "https://en.wikipedia.org/wiki/James_Chadwick",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

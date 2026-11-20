@@ -1,0 +1,61 @@
+{
+  "id": "the-illustrated-london-news",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "The Illustrated London News",
+      "from": "1842"
+    }
+  ],
+  "summary": "The world's first illustrated weekly newspaper, using wood-engraved pictures of events to bring news to readers. It covered the Victorian era and the world wars in pictures.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "Illustrated London News",
+    "ILN"
+  ],
+  "wikidata": "Q856192",
+  "events": [
+    {
+      "type": "born",
+      "date": "1842-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ceased publication after long decline",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Illustrated London News (Q856192)",
+      "url": "https://www.wikidata.org/wiki/Q856192",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Illustrated London News",
+      "url": "https://en.wikipedia.org/wiki/The_Illustrated_London_News",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

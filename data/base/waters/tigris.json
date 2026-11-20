@@ -1,0 +1,55 @@
+{
+  "id": "tigris",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Tigris",
+      "from": "-5000000"
+    }
+  ],
+  "summary": "River rising in the mountains of Turkey and flowing through Iraq to the Persian Gulf. With the Euphrates it watered Mesopotamia, and cities such as Nineveh and Baghdad stood on its banks.",
+  "labels": [
+    "environment",
+    "exploration"
+  ],
+  "aliases": [
+    "Tigris River"
+  ],
+  "wikidata": "Q35591",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tigris (Q35591)",
+      "url": "https://www.wikidata.org/wiki/Q35591",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tigris",
+      "url": "https://en.wikipedia.org/wiki/Tigris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

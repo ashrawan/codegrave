@@ -1,0 +1,84 @@
+{
+  "id": "seven-years-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Seven Years' War",
+      "from": "1756"
+    }
+  ],
+  "summary": "A global war between two groups of European powers, led by Britain and Prussia on one side and France, Austria and Russia on the other. Fought in Europe, North America and Asia, it left Britain with a large empire.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q33143",
+  "events": [
+    {
+      "type": "born",
+      "date": "1756-05-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1763-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "related",
+      "to": "new-france"
+    },
+    {
+      "type": "related",
+      "to": "holy-roman-empire"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    },
+    {
+      "type": "related",
+      "to": "spanish-empire"
+    },
+    {
+      "type": "related",
+      "to": "mughal-empire"
+    },
+    {
+      "type": "related",
+      "to": "maria-theresa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seven Years' War (Q33143)",
+      "url": "https://www.wikidata.org/wiki/Q33143",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seven Years' War",
+      "url": "https://en.wikipedia.org/wiki/Seven_Years'_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

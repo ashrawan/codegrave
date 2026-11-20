@@ -1,0 +1,52 @@
+{
+  "id": "ogham",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Ogham",
+      "from": "0350"
+    }
+  ],
+  "summary": "An early medieval alphabet from Ireland and Britain, in which letters are strokes cut along the edge of a standing stone. About four hundred ogham stones survive, mostly with names.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Ogam"
+  ],
+  "wikidata": "Q184661",
+  "events": [
+    {
+      "type": "born",
+      "date": "0350",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Latin alphabet after the spread of Christianity",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ogham (Q184661)",
+      "url": "https://www.wikidata.org/wiki/Q184661",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ogham",
+      "url": "https://en.wikipedia.org/wiki/Ogham",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

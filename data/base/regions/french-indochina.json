@@ -1,0 +1,62 @@
+{
+  "id": "french-indochina",
+  "category": "regions",
+  "names": [
+    {
+      "name": "French Indochina",
+      "from": "1887"
+    }
+  ],
+  "summary": "The French colonial union of Vietnam, Cambodia and Laos in Southeast Asia. Plantations and mines were run for France, and nationalist movements, including that of Ho Chi Minh, grew there.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Indochinese Union",
+    "Indochinese Federation"
+  ],
+  "wikidata": "Q185682",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1954",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when France lost the First Indochina War and left after the Geneva Accords",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "french-colonial-empire"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Indochina (Q185682)",
+      "url": "https://www.wikidata.org/wiki/Q185682",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Indochina",
+      "url": "https://en.wikipedia.org/wiki/French_Indochina",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

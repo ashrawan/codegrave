@@ -1,0 +1,53 @@
+{
+  "id": "quaternary",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Quaternary",
+      "from": "-2580000"
+    }
+  ],
+  "summary": "The most recent period, from about 2.6 million years ago to today, marked by repeated ice ages and the rise of modern humans. It is divided into the Pleistocene and the Holocene.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Anthropogene",
+    "Quaternary Period",
+    "Quaternary System",
+    "Pleistogene"
+  ],
+  "wikidata": "Q26185",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2580000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cenozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Quaternary (Q26185)",
+      "url": "https://www.wikidata.org/wiki/Q26185",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quaternary",
+      "url": "https://en.wikipedia.org/wiki/Quaternary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

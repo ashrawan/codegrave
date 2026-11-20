@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-sicily",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Kingdom of Sicily",
+      "from": "1130"
+    }
+  ],
+  "summary": "The Mediterranean kingdom founded by the Normans in 1130, a meeting place of Greek, Arab and Latin cultures. Under Frederick II it was a centre of learning and law.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Kingdom of Trinacria"
+  ],
+  "wikidata": "Q188586",
+  "events": [
+    {
+      "type": "born",
+      "date": "1130",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1816",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Merged with the Kingdom of Naples to form the Kingdom of the Two Sicilies",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Sicily (Q188586)",
+      "url": "https://www.wikidata.org/wiki/Q188586",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Sicily",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Sicily",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

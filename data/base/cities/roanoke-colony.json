@@ -1,0 +1,58 @@
+{
+  "id": "roanoke-colony",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Roanoke Colony",
+      "from": "1584"
+    }
+  ],
+  "summary": "Early English settlement on the coast of what is now North Carolina. When a supply ship returned in 1590 the settlers had gone, leaving only the word Croatoan carved on a post, and their fate is unknown.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Lost Colony",
+    "The Lost Colony"
+  ],
+  "wikidata": "Q59222",
+  "events": [
+    {
+      "type": "born",
+      "date": "1584",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1590",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "The settlers disappeared and their fate is unknown",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roanoke Colony (Q59222)",
+      "url": "https://www.wikidata.org/wiki/Q59222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roanoke Colony",
+      "url": "https://en.wikipedia.org/wiki/Roanoke_Colony",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

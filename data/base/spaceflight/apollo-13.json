@@ -1,0 +1,61 @@
+{
+  "id": "apollo-13",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Apollo 13",
+      "from": "1970"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "An American Moon mission in April 1970 that was cut short when an oxygen tank exploded. The crew looped around the Moon and returned safely after improvised repairs, and it became a famous rescue.",
+  "labels": [
+    "space-race",
+    "failures"
+  ],
+  "aliases": [
+    "Apollo XIII"
+  ],
+  "wikidata": "Q182252",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-04-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "apollo-program"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apollo 13 (Q182252)",
+      "url": "https://www.wikidata.org/wiki/Q182252",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apollo 13",
+      "url": "https://en.wikipedia.org/wiki/Apollo_13",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

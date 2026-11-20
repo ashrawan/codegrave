@@ -1,0 +1,56 @@
+{
+  "id": "pravda",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Pravda",
+      "from": "1912"
+    }
+  ],
+  "summary": "Russian newspaper founded by the Bolsheviks before the 1917 revolution. It became the official paper of the Soviet Communist Party until 1991, and a paper with the name still appears.",
+  "labels": [
+    "media",
+    "politics"
+  ],
+  "wikidata": "Q183644",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "vladimir-lenin"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    },
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pravda (Q183644)",
+      "url": "https://www.wikidata.org/wiki/Q183644",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pravda",
+      "url": "https://en.wikipedia.org/wiki/Pravda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

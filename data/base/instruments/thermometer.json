@@ -1,0 +1,47 @@
+{
+  "id": "thermometer",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Thermometer",
+      "from": "1600"
+    }
+  ],
+  "maker": "Galileo, Santorio and others",
+  "summary": "An instrument that measures temperature. Early versions used expanding air or liquid in a glass tube, and Fahrenheit's mercury thermometer and the Celsius scale made measurements comparable.",
+  "labels": [
+    "physics",
+    "medicine"
+  ],
+  "aliases": [
+    "temperature sensor"
+  ],
+  "wikidata": "Q646",
+  "events": [
+    {
+      "type": "born",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: thermometer (Q646)",
+      "url": "https://www.wikidata.org/wiki/Q646",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thermometer",
+      "url": "https://en.wikipedia.org/wiki/Thermometer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

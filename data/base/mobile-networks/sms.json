@@ -1,0 +1,48 @@
+{
+  "id": "sms",
+  "category": "mobile-networks",
+  "names": [
+    {
+      "name": "SMS",
+      "from": "1992"
+    }
+  ],
+  "summary": "Short text messages sent between mobile phones, limited to 160 characters. The first one is said to have been sent in 1992. Texting became a main way for young people to talk and a big source of income for networks.",
+  "labels": [
+    "computing",
+    "media",
+    "firsts"
+  ],
+  "aliases": [
+    "Short Message Service",
+    "Short Messaging Service"
+  ],
+  "wikidata": "Q43024",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: SMS (Q43024)",
+      "url": "https://www.wikidata.org/wiki/Q43024",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SMS",
+      "url": "https://en.wikipedia.org/wiki/SMS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

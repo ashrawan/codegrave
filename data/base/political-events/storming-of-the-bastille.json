@@ -1,0 +1,60 @@
+{
+  "id": "storming-of-the-bastille",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Storming of the Bastille",
+      "from": "1789"
+    }
+  ],
+  "summary": "On 14 July 1789 a Paris crowd attacked the Bastille fortress and prison, a symbol of royal power. The event is seen as the start of the French Revolution and is France's national day.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q6539",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-07-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1789-07-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "french-revolution"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Storming of the Bastille (Q6539)",
+      "url": "https://www.wikidata.org/wiki/Q6539",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Storming of the Bastille",
+      "url": "https://en.wikipedia.org/wiki/Storming_of_the_Bastille",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

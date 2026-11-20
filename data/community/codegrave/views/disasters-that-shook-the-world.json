@@ -1,0 +1,82 @@
+{
+  "id": "disasters-that-shook-the-world",
+  "name": "Ten Thousand Ways the Ground Gave Way: Great Disasters",
+  "description": "Volcanoes, quakes, fires, floods and failures of human design: the catastrophes that changed how people build, plan and remember.",
+  "category": "events",
+  "labels": [
+    "environment",
+    "engineering"
+  ],
+  "tags": [
+    "disaster",
+    "earthquake",
+    "volcano",
+    "fire",
+    "flood",
+    "accident"
+  ],
+  "entries": [
+    "minoan-eruption",
+    "vesuvius-79",
+    "great-fire-of-london",
+    "lisbon-earthquake-1755",
+    "tambora-1815",
+    "krakatoa-1883",
+    "tay-bridge-disaster",
+    "johnstown-flood",
+    "great-chicago-fire",
+    "galveston-hurricane-1900",
+    "pelee-eruption-1902",
+    "san-francisco-earthquake-1906",
+    "tunguska-event",
+    "sinking-of-the-titanic",
+    "halifax-explosion",
+    "great-kanto-earthquake",
+    "hindenburg-disaster",
+    "dust-bowl",
+    "great-smog-of-london",
+    "valdivia-earthquake-1960",
+    "alaska-earthquake-1964",
+    "aberfan-disaster",
+    "tenerife-airport-disaster",
+    "three-mile-island",
+    "bhopal-disaster",
+    "challenger-disaster",
+    "chernobyl-disaster",
+    "indian-ocean-tsunami-2004",
+    "hurricane-katrina",
+    "tohoku-earthquake-2011",
+    "fukushima-accident"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-fire-and-ash",
+      "name": "Fire and ash",
+      "from": -1600,
+      "to": 1700,
+      "note": "Volcanoes and city fires dominate the early record. Vesuvius buries Pompeii, and the Great Fire of London burns the old city and leads to a rebuilt, more stony capital."
+    },
+    {
+      "id": "age-of-science",
+      "name": "Nature meets science",
+      "from": 1701,
+      "to": 1912,
+      "note": "Earthquakes, eruptions and floods are now written about across the world, and engineers learn from collapsing bridges and dams. Lisbon, Krakatoa and Galveston shape the first modern ideas of preparing for disaster."
+    },
+    {
+      "id": "age-of-machines",
+      "name": "The machine age",
+      "from": 1913,
+      "to": 1975,
+      "note": "Ships, airships and chemical works fail on a huge scale, and giant quakes in Chile and Alaska help prove plate tectonics. Governments begin to write new safety rules after each disaster."
+    },
+    {
+      "id": "age-of-risk",
+      "name": "The age of risk",
+      "from": 1976,
+      "to": 2011,
+      "note": "Nuclear plants, spacecraft and chemical factories bring risks no earlier century knew, while the world watches tsunamis and storms on live television and learns the cost of weak warnings."
+    }
+  ],
+  "year": 1900
+}

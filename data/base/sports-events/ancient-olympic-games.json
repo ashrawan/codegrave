@@ -1,0 +1,50 @@
+{
+  "id": "ancient-olympic-games",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Ancient Olympic Games",
+      "from": "-0776"
+    }
+  ],
+  "summary": "A festival of athletic contests held at Olympia in Greece in honour of Zeus, first recorded in the eighth century BCE. It took place every four years, and cities agreed to pause fighting during it.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Olympic Games"
+  ],
+  "wikidata": "Q188468",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0776",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0393",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: ancient Olympic Games (Q188468)",
+      "url": "https://www.wikidata.org/wiki/Q188468",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ancient Olympic Games",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Olympic_Games",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

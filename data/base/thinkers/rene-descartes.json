@@ -1,0 +1,61 @@
+{
+  "id": "rene-descartes",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "René Descartes",
+      "from": "1596"
+    }
+  ],
+  "summary": "French philosopher and mathematician who tried to rebuild knowledge on certainty, summed up in the phrase I think, therefore I am. He also linked algebra and geometry through coordinates.",
+  "labels": [
+    "philosophy",
+    "mathematics"
+  ],
+  "wikidata": "Q9191",
+  "events": [
+    {
+      "type": "born",
+      "date": "1596-03-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1650-02-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "thomas-aquinas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: René Descartes (Q9191)",
+      "url": "https://www.wikidata.org/wiki/Q9191",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: René Descartes",
+      "url": "https://en.wikipedia.org/wiki/Ren%C3%A9_Descartes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

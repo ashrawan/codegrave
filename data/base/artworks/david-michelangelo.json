@@ -1,0 +1,62 @@
+{
+  "id": "david-michelangelo",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "David",
+      "from": "1504"
+    }
+  ],
+  "maker": "Michelangelo",
+  "summary": "Marble statue of the biblical hero David as a standing nude youth, carved by Michelangelo from a single block of stone in Florence. The city saw it as a symbol of its freedom, and it now stands in the Galleria dell'Accademia.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "David of Michelangelo",
+    "Michelangelo's David",
+    "Michaelangelo's David",
+    "David by Michelangelo"
+  ],
+  "wikidata": "Q179900",
+  "events": [
+    {
+      "type": "born",
+      "date": "1504-07-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "michelangelo"
+    },
+    {
+      "type": "in",
+      "to": "florence"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: David (Q179900)",
+      "url": "https://www.wikidata.org/wiki/Q179900",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David (Michelangelo)",
+      "url": "https://en.wikipedia.org/wiki/David_(Michelangelo)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

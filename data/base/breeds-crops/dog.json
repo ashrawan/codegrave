@@ -1,0 +1,46 @@
+{
+  "id": "dog",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Domestic dog",
+      "from": "-15000"
+    }
+  ],
+  "summary": "The first animal people tamed, bred from wolves at least 15,000 years ago, and the ancestor of all dog breeds. Dogs have been used for hunting, herding, guarding and company in nearly every human culture.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "domestic dogs",
+    "dogs"
+  ],
+  "wikidata": "Q144",
+  "events": [
+    {
+      "type": "born",
+      "date": "-15000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: dog (Q144)",
+      "url": "https://www.wikidata.org/wiki/Q144",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dog",
+      "url": "https://en.wikipedia.org/wiki/Dog",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

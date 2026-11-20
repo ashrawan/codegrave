@@ -1,0 +1,68 @@
+{
+  "id": "franco-prussian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Franco-Prussian War",
+      "from": "1870"
+    }
+  ],
+  "summary": "War in which Prussia and its German allies defeated France and captured Napoleon III. It led to the proclamation of the German Empire and the end of the French Second Empire.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Franco-German War",
+    "War of 1870"
+  ],
+  "wikidata": "Q46083",
+  "events": [
+    {
+      "type": "born",
+      "date": "1870-07-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1871-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "unification-of-germany"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-bavaria"
+    },
+    {
+      "type": "related",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Franco-Prussian War (Q46083)",
+      "url": "https://www.wikidata.org/wiki/Q46083",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franco-Prussian War",
+      "url": "https://en.wikipedia.org/wiki/Franco-Prussian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

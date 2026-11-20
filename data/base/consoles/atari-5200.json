@@ -1,0 +1,50 @@
+{
+  "id": "atari-5200",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Atari 5200",
+      "from": "1982"
+    }
+  ],
+  "maker": "Atari",
+  "summary": "Atari's successor to the 2600, with better graphics but unreliable controllers and no way of playing 2600 games without an adapter. It sold less than hoped and was dropped after two years.",
+  "labels": [
+    "games",
+    "failures"
+  ],
+  "wikidata": "Q743222",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-11",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1984-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Poor sales after the video game crash",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Atari 5200 (Q743222)",
+      "url": "https://www.wikidata.org/wiki/Q743222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atari 5200",
+      "url": "https://en.wikipedia.org/wiki/Atari_5200",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

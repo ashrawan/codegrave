@@ -1,0 +1,61 @@
+{
+  "id": "league-of-nations",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "League of Nations",
+      "from": "1919"
+    }
+  ],
+  "summary": "First worldwide organisation meant to keep the peace, set up after World War I with its seat in Geneva. It settled some disputes but could not stop the aggression of the 1930s, and it passed its work to the United Nations.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "LR"
+  ],
+  "wikidata": "Q38130",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1946-04-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the United Nations after it failed to prevent World War II",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "united-nations"
+    },
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: League of Nations (Q38130)",
+      "url": "https://www.wikidata.org/wiki/Q38130",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: League of Nations",
+      "url": "https://en.wikipedia.org/wiki/League_of_Nations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,64 @@
+{
+  "id": "switzerland",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Switzerland",
+      "from": "1848"
+    }
+  ],
+  "summary": "A neutral federation of cantons in the Alps whose origins are traced to a pact of 1291. Its present federal state with a constitution dates from 1848, and it has four national languages.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Swiss Confederation",
+    "Swiss",
+    "Confoederatio Helvetica"
+  ],
+  "wikidata": "Q39",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Switzerland (Q39)",
+      "url": "https://www.wikidata.org/wiki/Q39",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Switzerland",
+      "url": "https://en.wikipedia.org/wiki/Switzerland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

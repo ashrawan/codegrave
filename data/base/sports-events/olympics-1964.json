@@ -1,0 +1,57 @@
+{
+  "id": "olympics-1964",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1964 Summer Olympics",
+      "from": "1964"
+    }
+  ],
+  "summary": "Tokyo hosted the first Olympic Games in Asia, and used them to show the modern Japan that had rebuilt after the war. The high-speed Shinkansen train opened just before the event.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Tokyo 1964",
+    "Games of the XVIII Olympiad",
+    "Games of the 18th Olympiad"
+  ],
+  "wikidata": "Q8420",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-10-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1964 Summer Olympics (Q8420)",
+      "url": "https://www.wikidata.org/wiki/Q8420",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1964 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1964_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

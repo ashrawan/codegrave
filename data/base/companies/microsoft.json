@@ -1,0 +1,55 @@
+{
+  "id": "microsoft",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Microsoft",
+      "from": "1975"
+    }
+  ],
+  "summary": "American software company founded by Bill Gates and Paul Allen to write BASIC for the Altair. Its MS-DOS and Windows ran most personal computers, and it also makes Office, Xbox and cloud services.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "microsoft.com"
+  ],
+  "wikidata": "Q2283",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "bill-gates"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft (Q2283)",
+      "url": "https://www.wikidata.org/wiki/Q2283",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft",
+      "url": "https://en.wikipedia.org/wiki/Microsoft",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

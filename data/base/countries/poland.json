@@ -1,0 +1,78 @@
+{
+  "id": "poland",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Poland",
+      "from": "1918"
+    }
+  ],
+  "summary": "A central European country that regained independence in 1918 after more than a century of partition. It was occupied in the Second World War and became democratic again after 1989.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Poland"
+  ],
+  "wikidata": "Q36",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "international-monetary-fund"
+    },
+    {
+      "type": "member_of",
+      "to": "warsaw-pact"
+    },
+    {
+      "type": "member_of",
+      "to": "comecon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Poland (Q36)",
+      "url": "https://www.wikidata.org/wiki/Q36",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Poland",
+      "url": "https://en.wikipedia.org/wiki/Poland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

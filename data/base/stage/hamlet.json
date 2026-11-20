@@ -1,0 +1,52 @@
+{
+  "id": "hamlet",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Hamlet",
+      "from": "1602"
+    }
+  ],
+  "summary": "Tragedy by William Shakespeare in which a Danish prince seeks revenge on his uncle, who killed his father. It is among the most performed plays ever, and has the famous line To be, or not to be.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "The Tragedy of Hamlet, Prince of Denmark",
+    "Hamlet, Prince of Denmark",
+    "Tragedy of Hamlet"
+  ],
+  "wikidata": "Q41567",
+  "events": [
+    {
+      "type": "born",
+      "date": "1602",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hamlet (Q41567)",
+      "url": "https://www.wikidata.org/wiki/Q41567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hamlet",
+      "url": "https://en.wikipedia.org/wiki/Hamlet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "carl-lewis",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Carl Lewis",
+      "from": "1961"
+    }
+  ],
+  "summary": "American sprinter and long jumper who won nine Olympic gold medals between 1984 and 1996, including the long jump four times in a row.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q131237",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-1992"
+    },
+    {
+      "type": "related",
+      "to": "olympics-1984"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carl Lewis (Q131237)",
+      "url": "https://www.wikidata.org/wiki/Q131237",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carl Lewis",
+      "url": "https://en.wikipedia.org/wiki/Carl_Lewis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

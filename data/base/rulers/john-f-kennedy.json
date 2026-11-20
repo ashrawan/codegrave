@@ -1,0 +1,52 @@
+{
+  "id": "john-f-kennedy",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "John F. Kennedy",
+      "from": "1917"
+    }
+  ],
+  "summary": "Thirty-fifth president and the youngest elected. He faced the Cuban Missile Crisis in 1962 and set the goal of landing on the Moon. He was assassinated in Dallas in November 1963.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Kennedy",
+    "President Kennedy",
+    "JF Kennedy"
+  ],
+  "wikidata": "Q9696",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-05-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1963-11-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John F. Kennedy (Q9696)",
+      "url": "https://www.wikidata.org/wiki/Q9696",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John F. Kennedy",
+      "url": "https://en.wikipedia.org/wiki/John_F._Kennedy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

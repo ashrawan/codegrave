@@ -1,0 +1,70 @@
+{
+  "id": "voyages-that-opened-the-world",
+  "name": "Sails Over the Edge: The Great Voyages of Discovery",
+  "description": "Treasure fleets, caravels and survey ships: the voyages that linked every ocean and every continent, and what they cost the people they met.",
+  "category": "events",
+  "labels": [
+    "exploration"
+  ],
+  "tags": [
+    "voyage",
+    "exploration",
+    "navigation",
+    "columbus",
+    "magellan",
+    "cook",
+    "ocean"
+  ],
+  "entries": [
+    "zheng-he",
+    "treasure-voyages",
+    "vasco-da-gama",
+    "da-gama-first-voyage",
+    "christopher-columbus",
+    "ferdinand-magellan",
+    "magellan-elcano-circumnavigation",
+    "great-northern-expedition",
+    "james-cook",
+    "hms-endeavour",
+    "first-voyage-of-cook",
+    "mutiny-on-the-bounty",
+    "lewis-and-clark-expedition",
+    "beagle-voyage",
+    "hms-beagle",
+    "franklin-lost-expedition",
+    "burke-and-wills-expedition",
+    "challenger-expedition",
+    "kon-tiki-expedition"
+  ],
+  "checkpoints": [
+    {
+      "id": "treasure-fleets",
+      "name": "Treasure fleets",
+      "from": 1405,
+      "to": 1496,
+      "note": "The Ming fleets of Zheng He cross the Indian Ocean, while Portuguese ships creep down the African coast. Two different empires test what the ocean can offer."
+    },
+    {
+      "id": "age-of-discovery",
+      "name": "Round the world",
+      "from": 1497,
+      "to": 1732,
+      "note": "Da Gama reaches India, Columbus reaches the Caribbean and Magellan's fleet closes the circle. The seas become a single network, with lasting harm to the peoples of the lands reached."
+    },
+    {
+      "id": "age-of-survey",
+      "name": "The age of survey",
+      "from": 1733,
+      "to": 1850,
+      "note": "Navies send scientists to chart coasts, watch the sky and gather plants and animals. Cook and the Beagle's voyage change maps, and Darwin's ideas, and inland parties follow the rivers."
+    },
+    {
+      "id": "last-blank-spaces",
+      "name": "The last blank spaces",
+      "from": 1851,
+      "to": 1947,
+      "note": "Explorers fill in the final gaps on land and in the sea. Expeditions probe the deep ocean and the Australian interior, and a raft crosses the Pacific to test a theory."
+    }
+  ],
+  "year": 1520
+}

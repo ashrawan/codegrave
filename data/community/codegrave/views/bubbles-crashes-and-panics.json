@@ -1,0 +1,76 @@
+{
+  "id": "bubbles-crashes-and-panics",
+  "name": "Fortunes Lost on Paper: Bubbles, Crashes and Panics",
+  "description": "Tulips, Mississippi shares, railways and dot-coms: the stories of manias and crises, and what they teach about money and human hope.",
+  "category": "events",
+  "labels": [
+    "economics"
+  ],
+  "tags": [
+    "bubble",
+    "crash",
+    "panic",
+    "depression",
+    "inflation",
+    "financial crisis"
+  ],
+  "entries": [
+    "price-revolution",
+    "tulip-mania",
+    "panic-of-1837",
+    "railway-mania",
+    "california-gold-rush",
+    "panic-of-1857",
+    "long-depression",
+    "klondike-gold-rush",
+    "panic-of-1907",
+    "weimar-hyperinflation",
+    "wall-street-crash-1929",
+    "great-depression",
+    "nixon-shock",
+    "oil-crisis-1973",
+    "oil-crisis-1979",
+    "latin-american-debt-crisis",
+    "black-monday-1987",
+    "japanese-asset-bubble",
+    "black-wednesday",
+    "asian-financial-crisis",
+    "russian-financial-crisis-1998",
+    "dot-com-bubble",
+    "argentine-crisis-2001",
+    "financial-crisis-of-2007-2008",
+    "zimbabwe-hyperinflation",
+    "european-debt-crisis"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-manias",
+      "name": "The first manias",
+      "from": 1500,
+      "to": 1750,
+      "note": "Silver floods into Europe and prices climb. In Holland, France and Britain, people pay wild sums for tulips and shares, and learn the hard way how a bubble ends."
+    },
+    {
+      "id": "railways-and-panics",
+      "name": "Railways, gold and panics",
+      "from": 1751,
+      "to": 1913,
+      "note": "Banks and railways spread across the world, and so do their panics. Gold rushes turn the hopeful into prospectors, while crises in 1837, 1857, 1873 and 1907 shake the United States."
+    },
+    {
+      "id": "slump-and-inflation",
+      "name": "Slump and inflation",
+      "from": 1914,
+      "to": 1971,
+      "note": "German money turns to paper, and Wall Street crashes. The Great Depression follows, and governments take on the duty of managing the economy."
+    },
+    {
+      "id": "global-crises",
+      "name": "Global crises",
+      "from": 1972,
+      "to": 2014,
+      "note": "Oil shocks, debt crises and bursting bubbles in Japan, Asia and the internet era lead up to the crash of 2008, when the whole world's banks seemed to shake at once."
+    }
+  ],
+  "year": 1929
+}

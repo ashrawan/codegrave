@@ -1,0 +1,50 @@
+{
+  "id": "asterix",
+  "category": "comics",
+  "names": [
+    {
+      "name": "Asterix",
+      "from": "1959"
+    }
+  ],
+  "summary": "French comic series by Rene Goscinny and Albert Uderzo about a Gaulish village that holds out against the Romans thanks to a magic potion. It has been translated into over a hundred languages.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "The Adventures of Asterix"
+  ],
+  "wikidata": "Q42490",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-10-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Asterix (Q42490)",
+      "url": "https://www.wikidata.org/wiki/Q42490",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Asterix",
+      "url": "https://en.wikipedia.org/wiki/Asterix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

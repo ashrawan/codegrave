@@ -1,0 +1,50 @@
+{
+  "id": "james-dean",
+  "category": "performers",
+  "names": [
+    {
+      "name": "James Dean",
+      "from": "1931"
+    }
+  ],
+  "summary": "American actor who starred in East of Eden and Rebel Without a Cause, playing troubled young men. He died in a car crash at twenty-four, before two of his three major films were released.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "James Byron Dean"
+  ],
+  "wikidata": "Q83359",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-02-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1955-09-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: James Dean (Q83359)",
+      "url": "https://www.wikidata.org/wiki/Q83359",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Dean",
+      "url": "https://en.wikipedia.org/wiki/James_Dean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

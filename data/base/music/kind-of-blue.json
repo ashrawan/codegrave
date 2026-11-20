@@ -1,0 +1,51 @@
+{
+  "id": "kind-of-blue",
+  "category": "music",
+  "names": [
+    {
+      "name": "Kind of Blue",
+      "from": "1959"
+    }
+  ],
+  "maker": "Miles Davis",
+  "summary": "Album by the trumpeter Miles Davis and a band of leading players, built on a few simple scales rather than fast chord changes. Recorded in two sessions in New York, it is often named the best-selling jazz record ever.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "KoB"
+  ],
+  "wikidata": "Q283221",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-08-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "miles-davis"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kind of Blue (Q283221)",
+      "url": "https://www.wikidata.org/wiki/Q283221",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kind of Blue",
+      "url": "https://en.wikipedia.org/wiki/Kind_of_Blue",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

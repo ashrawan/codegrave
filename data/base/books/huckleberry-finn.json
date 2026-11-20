@@ -1,0 +1,52 @@
+{
+  "id": "huckleberry-finn",
+  "category": "books",
+  "names": [
+    {
+      "name": "Adventures of Huckleberry Finn",
+      "from": "1884"
+    }
+  ],
+  "summary": "Novel by Mark Twain about a boy who floats down the Mississippi River with an escaped slave named Jim. It is a landmark of American writing and has often been challenged over its language.",
+  "labels": [
+    "literature",
+    "banned"
+  ],
+  "aliases": [
+    "Huckleberry Finn",
+    "The Adventures of Huckleberry Finn"
+  ],
+  "wikidata": "Q215410",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mark-twain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Adventures of Huckleberry Finn (Q215410)",
+      "url": "https://www.wikidata.org/wiki/Q215410",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Adventures of Huckleberry Finn",
+      "url": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

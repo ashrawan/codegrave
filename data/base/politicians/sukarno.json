@@ -1,0 +1,59 @@
+{
+  "id": "sukarno",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Sukarno",
+      "from": "1901"
+    }
+  ],
+  "summary": "Leader of Indonesia's independence movement who declared independence in 1945 and became the first president. His government hosted the Bandung Conference in 1955 and was replaced by Suharto in the 1960s.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Kusno Sosrodihardjo",
+    "Achmed Soekarno",
+    "Ir. Soekarno",
+    "Bung Karno"
+  ],
+  "wikidata": "Q76127",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-06-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-06-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "bandung-conference"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sukarno (Q76127)",
+      "url": "https://www.wikidata.org/wiki/Q76127",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sukarno",
+      "url": "https://en.wikipedia.org/wiki/Sukarno",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

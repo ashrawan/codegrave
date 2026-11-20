@@ -1,0 +1,58 @@
+{
+  "id": "pdp-10",
+  "category": "minicomputers",
+  "names": [
+    {
+      "name": "PDP-10",
+      "from": "1966"
+    }
+  ],
+  "maker": "Digital Equipment Corporation",
+  "summary": "Large time-sharing computer from DEC, popular in universities and research labs. The early internet, many programming languages and early games and hacker culture grew up on these machines.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "DEC-10",
+    "decstation-10"
+  ],
+  "wikidata": "Q1568240",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1983",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "DEC cancelled its line in favour of the VAX",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "digital-equipment-corporation"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: PDP-10 (Q1568240)",
+      "url": "https://www.wikidata.org/wiki/Q1568240",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PDP-10",
+      "url": "https://en.wikipedia.org/wiki/PDP-10",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

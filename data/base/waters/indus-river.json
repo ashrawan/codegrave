@@ -1,0 +1,59 @@
+{
+  "id": "indus-river",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Indus River",
+      "from": "-45000000"
+    }
+  ],
+  "summary": "Great river rising in Tibet and flowing through Pakistan to the Arabian Sea. Its flood plain fed the cities of the Indus Valley, and it is still the main source of irrigation water for Pakistan.",
+  "labels": [
+    "environment",
+    "exploration"
+  ],
+  "aliases": [
+    "Sindhu River",
+    "Sindh River",
+    "Mehran River",
+    "River Indus",
+    "Indus R."
+  ],
+  "wikidata": "Q7348",
+  "events": [
+    {
+      "type": "born",
+      "date": "-45000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Indus River (Q7348)",
+      "url": "https://www.wikidata.org/wiki/Q7348",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indus River",
+      "url": "https://en.wikipedia.org/wiki/Indus_River",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

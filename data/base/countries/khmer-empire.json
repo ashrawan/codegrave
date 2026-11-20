@@ -1,0 +1,53 @@
+{
+  "id": "khmer-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Khmer Empire",
+      "from": "0802"
+    }
+  ],
+  "summary": "The Southeast Asian empire based around Angkor in Cambodia. Its kings built hundreds of temples, among them Angkor Wat, and a large system of reservoirs and canals to water rice fields.",
+  "labels": [
+    "lost",
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Khmer"
+  ],
+  "wikidata": "Q201705",
+  "events": [
+    {
+      "type": "born",
+      "date": "0802",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1431",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Weakened by wars with Ayutthaya, ending in the fall of Angkor",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Khmer Empire (Q201705)",
+      "url": "https://www.wikidata.org/wiki/Q201705",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Khmer Empire",
+      "url": "https://en.wikipedia.org/wiki/Khmer_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "hirohito",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Hirohito",
+      "from": "1901"
+    }
+  ],
+  "summary": "Emperor of Japan from 1926 to 1989, the longest reign in Japanese history. He announced Japan's surrender in 1945 and afterward became a symbolic monarch under a new constitution.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Emperor Showa",
+    "Emperor Hirohito",
+    "Prince Michi",
+    "Showa"
+  ],
+  "wikidata": "Q34479",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-04-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-01-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hirohito (Q34479)",
+      "url": "https://www.wikidata.org/wiki/Q34479",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hirohito",
+      "url": "https://en.wikipedia.org/wiki/Hirohito",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "ibm-rs-6000",
+  "category": "minicomputers",
+  "names": [
+    {
+      "name": "IBM RS/6000",
+      "from": "1990"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "IBM's line of Unix workstations and servers using the POWER chip. It was well regarded for speed, and it was renamed in 2000 when the line was folded into IBM's server brand.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "RS/6000"
+  ],
+  "wikidata": "Q941021",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Renamed and merged into IBM eServer pSeries",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: RS/6000 (Q941021)",
+      "url": "https://www.wikidata.org/wiki/Q941021",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IBM RS/6000",
+      "url": "https://en.wikipedia.org/wiki/IBM_RS%2F6000",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

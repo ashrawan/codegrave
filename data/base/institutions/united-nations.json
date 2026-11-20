@@ -1,0 +1,59 @@
+{
+  "id": "united-nations",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "United Nations",
+      "from": "1945"
+    }
+  ],
+  "summary": "International organisation of states founded after World War II to keep peace and encourage cooperation. It has a General Assembly of all members and a Security Council, and its agencies work on health, food and refugees.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "United Nations Organization",
+    "United Nations Organisation",
+    "UN",
+    "the UN",
+    "the U.N."
+  ],
+  "wikidata": "Q1065",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Nations (Q1065)",
+      "url": "https://www.wikidata.org/wiki/Q1065",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Nations",
+      "url": "https://en.wikipedia.org/wiki/United_Nations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

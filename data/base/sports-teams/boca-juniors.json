@@ -1,0 +1,52 @@
+{
+  "id": "boca-juniors",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Boca Juniors",
+      "from": "1905"
+    }
+  ],
+  "summary": "Argentine football club from the port district of La Boca in Buenos Aires. Its matches against River Plate, the Superclasico, are among the best known in the world.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "CABJ",
+    "Club Atletico Boca Juniors",
+    "CA Boca Juniors"
+  ],
+  "wikidata": "Q170703",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-04-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Boca Juniors (Q170703)",
+      "url": "https://www.wikidata.org/wiki/Q170703",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boca Juniors",
+      "url": "https://en.wikipedia.org/wiki/Boca_Juniors",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "st-helens-eruption",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Mount St. Helens Eruption of 1980",
+      "from": "1980"
+    }
+  ],
+  "summary": "A May 1980 eruption in Washington state that began with the largest landslide in recorded history. It blew off the mountain's north side, killed 57 people and has been closely studied by volcanologists since.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Mount St. Helens eruption, 1980"
+  ],
+  "wikidata": "Q778218",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-05-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-02-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mount-st-helens"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1980 eruption of Mount St. Helens (Q778218)",
+      "url": "https://www.wikidata.org/wiki/Q778218",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1980 eruption of Mount St. Helens",
+      "url": "https://en.wikipedia.org/wiki/1980_eruption_of_Mount_St._Helens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

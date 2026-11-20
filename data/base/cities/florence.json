@@ -1,0 +1,57 @@
+{
+  "id": "florence",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Florence",
+      "from": "-0059"
+    }
+  ],
+  "summary": "Tuscan city on the Arno that was the birthplace of the Renaissance. Banking families such as the Medici paid for artists, architects and thinkers, including Michelangelo and Brunelleschi.",
+  "labels": [
+    "visual-art",
+    "architecture"
+  ],
+  "aliases": [
+    "Florence, Italy",
+    "Florence, Tuscany",
+    "Florence Municipality"
+  ],
+  "wikidata": "Q2044",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0059",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Florence (Q2044)",
+      "url": "https://www.wikidata.org/wiki/Q2044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Florence",
+      "url": "https://en.wikipedia.org/wiki/Florence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

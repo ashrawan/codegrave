@@ -1,0 +1,48 @@
+{
+  "id": "book-of-optics",
+  "category": "books",
+  "names": [
+    {
+      "name": "Book of Optics",
+      "from": "1021"
+    }
+  ],
+  "summary": "Seven-volume work by Ibn al-Haytham which showed that we see because light enters the eye from objects, and used experiments to test ideas. Its Latin version shaped European science and art.",
+  "labels": [
+    "physics",
+    "literature"
+  ],
+  "wikidata": "Q264562",
+  "events": [
+    {
+      "type": "born",
+      "date": "1021",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibn-al-haytham"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Book of Optics (Q264562)",
+      "url": "https://www.wikidata.org/wiki/Q264562",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Book of Optics",
+      "url": "https://en.wikipedia.org/wiki/Book_of_Optics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

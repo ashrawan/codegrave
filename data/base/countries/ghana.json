@@ -1,0 +1,71 @@
+{
+  "id": "ghana",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ghana",
+      "from": "1957"
+    }
+  ],
+  "summary": "The West African country that in 1957 became the first in sub-Saharan Africa to win independence from European rule. Its first leader Kwame Nkrumah inspired other independence movements.",
+  "labels": [
+    "independence"
+  ],
+  "wikidata": "Q117",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "in",
+      "to": "portuguese-empire"
+    },
+    {
+      "type": "related",
+      "to": "ghana-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ghana (Q117)",
+      "url": "https://www.wikidata.org/wiki/Q117",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ghana",
+      "url": "https://en.wikipedia.org/wiki/Ghana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

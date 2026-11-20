@@ -1,0 +1,84 @@
+{
+  "id": "seeing-the-unseen",
+  "name": "Seeing the Unseen: Instruments That Opened the Universe",
+  "description": "Lenses, rays, magnets and lasers: how scientists built tools to see the very far and the very small, and what those tools found.",
+  "category": "technology",
+  "labels": [
+    "physics",
+    "astronomy",
+    "engineering"
+  ],
+  "tags": [
+    "telescope",
+    "microscope",
+    "accelerator",
+    "detector",
+    "particles",
+    "observatory"
+  ],
+  "entries": [
+    "astrolabe",
+    "ibn-al-haytham",
+    "microscope",
+    "telescope",
+    "thermometer",
+    "galileo-galilei",
+    "antonie-van-leeuwenhoek",
+    "robert-hooke",
+    "barometer",
+    "cell-theory",
+    "x-ray",
+    "geiger-counter",
+    "electron-microscope",
+    "cyclotron",
+    "radio-telescope",
+    "cern",
+    "cosmic-microwave-background",
+    "jocelyn-bell-burnell",
+    "psr-b1919",
+    "higgs-boson",
+    "hubble-space-telescope",
+    "ligo",
+    "large-hadron-collider",
+    "first-gravitational-wave-detection",
+    "james-webb-space-telescope"
+  ],
+  "checkpoints": [
+    {
+      "id": "old-tools",
+      "name": "Old tools",
+      "from": -200,
+      "to": 1599,
+      "note": "The astrolabe measured the heights of stars, Ibn al-Haytham worked out how the eye and lenses behave, and lens grinders in Europe made the first spectacles and, around 1590, microscopes."
+    },
+    {
+      "id": "lens-revolution",
+      "name": "The lens revolution",
+      "from": 1600,
+      "to": 1799,
+      "note": "Galileo turned a telescope to the sky, Leeuwenhoek and Hooke found tiny living things and cells with microscopes, and the thermometer and barometer made weather and heat measurable."
+    },
+    {
+      "id": "rays-and-cells",
+      "name": "Rays and cells",
+      "from": 1800,
+      "to": 1899,
+      "note": "Cell theory made the microscope central to biology. In 1895 X-rays showed bones through flesh, a hint that unseen radiation could be harnessed."
+    },
+    {
+      "id": "particles-and-radio-skies",
+      "name": "Particles and radio skies",
+      "from": 1900,
+      "to": 1969,
+      "note": "Geiger counters, electron microscopes and cyclotrons probed atoms. Radio telescopes found pulsars, found by Jocelyn Bell, and the cosmic microwave background, and CERN gave Europe a shared accelerator."
+    },
+    {
+      "id": "giant-machines",
+      "name": "Giant machines",
+      "from": 1970,
+      "to": 2026,
+      "note": "The Hubble and James Webb telescopes look back to early galaxies, the Large Hadron Collider found the Higgs boson, and LIGO's detectors heard gravitational waves from colliding black holes."
+    }
+  ],
+  "year": 1990
+}

@@ -1,0 +1,56 @@
+{
+  "id": "fukushima-accident",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Fukushima nuclear accident",
+      "from": "2011"
+    }
+  ],
+  "summary": "After a huge earthquake and tsunami hit Japan, the Fukushima Daiichi nuclear plant lost power for cooling and several reactors melted down. Large areas were evacuated, and the plant took many years to clean up.",
+  "labels": [
+    "energy",
+    "environment"
+  ],
+  "aliases": [
+    "Fukushima Daiichi nuclear disaster"
+  ],
+  "wikidata": "Q171178",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-03-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-03-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fukushima Daiichi nuclear disaster (Q171178)",
+      "url": "https://www.wikidata.org/wiki/Q171178",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fukushima nuclear accident",
+      "url": "https://en.wikipedia.org/wiki/Fukushima_nuclear_accident",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

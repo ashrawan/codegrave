@@ -1,0 +1,50 @@
+{
+  "id": "electrical-telegraph",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Electric telegraph",
+      "from": "1837"
+    }
+  ],
+  "maker": "Cooke, Wheatstone and Morse",
+  "summary": "A way of sending messages along wires as pulses of electric current. It cut the time for news to cross continents from days to minutes and was the first step toward modern telecommunication.",
+  "labels": [
+    "media",
+    "firsts"
+  ],
+  "wikidata": "Q6501061",
+  "events": [
+    {
+      "type": "born",
+      "date": "1837",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2013",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by telephones, email and mobile messaging; India closed its public telegram service",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: electrical telegraph (Q6501061)",
+      "url": "https://www.wikidata.org/wiki/Q6501061",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Electrical telegraph",
+      "url": "https://en.wikipedia.org/wiki/Electrical_telegraph",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

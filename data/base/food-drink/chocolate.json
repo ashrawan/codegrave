@@ -1,0 +1,42 @@
+{
+  "id": "chocolate",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Chocolate",
+      "from": "-1750"
+    }
+  ],
+  "summary": "A food made from cacao seeds, first prepared as a bitter drink in Mesoamerica. Europeans added sugar and later made solid chocolate, which became a popular sweet.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q195",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1750",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: chocolate (Q195)",
+      "url": "https://www.wikidata.org/wiki/Q195",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chocolate",
+      "url": "https://en.wikipedia.org/wiki/Chocolate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "toyota-prius",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Toyota Prius",
+      "from": "1997"
+    }
+  ],
+  "maker": "Toyota",
+  "summary": "The first mass-produced hybrid car, which combines a petrol engine with an electric motor. Toyota launched it in Japan in 1997, and it led many drivers to consider cars that burn less fuel.",
+  "labels": [
+    "transport",
+    "environment"
+  ],
+  "aliases": [
+    "Prius"
+  ],
+  "wikidata": "Q213115",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997-12",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "toyota"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Toyota Prius (Q213115)",
+      "url": "https://www.wikidata.org/wiki/Q213115",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Toyota Prius",
+      "url": "https://en.wikipedia.org/wiki/Toyota_Prius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

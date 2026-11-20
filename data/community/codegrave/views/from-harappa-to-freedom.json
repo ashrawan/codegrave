@@ -1,0 +1,100 @@
+{
+  "id": "from-harappa-to-freedom",
+  "name": "From Harappa to Freedom: The Story of India",
+  "description": "Cities, scriptures, emperors and prophets of the subcontinent, from the Indus valley through the Mughals and the Raj to independence.",
+  "category": "events",
+  "labels": [
+    "religion",
+    "independence"
+  ],
+  "tags": [
+    "india",
+    "hinduism",
+    "buddhism",
+    "mughal",
+    "gandhi",
+    "independence"
+  ],
+  "entries": [
+    "indus-script",
+    "mohenjo-daro",
+    "vedic-religion",
+    "rigveda",
+    "mahabharata",
+    "ramayana",
+    "gautama-buddha",
+    "jainism",
+    "maurya-empire",
+    "ashoka",
+    "edicts-of-ashoka",
+    "arthashastra",
+    "gupta-empire",
+    "aryabhata",
+    "chess",
+    "nalanda",
+    "delhi-sultanate",
+    "vijayanagara-empire",
+    "guru-nanak",
+    "mughal-empire",
+    "akbar",
+    "taj-mahal",
+    "golden-temple",
+    "east-india-company",
+    "battle-of-plassey",
+    "indian-rebellion-of-1857",
+    "british-raj",
+    "indian-national-congress",
+    "rabindranath-tagore",
+    "mahatma-gandhi",
+    "salt-march",
+    "jawaharlal-nehru",
+    "bengal-famine-1943",
+    "partition-of-india",
+    "constitution-of-india"
+  ],
+  "checkpoints": [
+    {
+      "id": "indus-and-vedas",
+      "name": "Indus cities and Vedic hymns",
+      "from": -2800,
+      "to": -322,
+      "note": "Cities like Mohenjo-daro used a script no one can read yet. The Rigveda and later epics such as the Mahabharata and Ramayana were composed, and the Buddha and Mahavira taught new paths."
+    },
+    {
+      "id": "empires",
+      "name": "Mauryas and Guptas",
+      "from": -321,
+      "to": 550,
+      "note": "Ashoka, of the Maurya Empire, carved his edicts on pillars, and the Arthashastra set out statecraft. Under the Gupta Empire came mathematics by Aryabhata, chess, and the learning of Nalanda."
+    },
+    {
+      "id": "sultans-and-kingdoms",
+      "name": "Sultans, kingdoms and saints",
+      "from": 551,
+      "to": 1525,
+      "note": "The Delhi Sultanate ruled in the north while Vijayanagara flourished in the south. Guru Nanak began the Sikh faith, whose teachings spread in Punjab, and Hampi and other cities were built."
+    },
+    {
+      "id": "mughals",
+      "name": "The Mughal age",
+      "from": 1526,
+      "to": 1756,
+      "note": "Akbar built a tolerant empire and the Mughals raised the Taj Mahal. Sikhs completed the Golden Temple at Amritsar, while the English East India Company arrived to trade on the coasts."
+    },
+    {
+      "id": "company-and-raj",
+      "name": "Company rule and the Raj",
+      "from": 1757,
+      "to": 1946,
+      "note": "Victory at Plassey began the Company's rule. After the 1857 rebellion the British Raj began, Congress and Tagore gave India a voice, and Gandhi led the Salt March in 1930."
+    },
+    {
+      "id": "freedom",
+      "name": "Freedom and partition",
+      "from": 1947,
+      "to": 1950,
+      "note": "India became free in 1947, but partition split the land. Nehru was the first prime minister, the Bengal famine had shown the cost of the old rule, and a new constitution came in 1949."
+    }
+  ],
+  "year": 1600
+}

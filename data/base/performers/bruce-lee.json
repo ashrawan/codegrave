@@ -1,0 +1,47 @@
+{
+  "id": "bruce-lee",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Bruce Lee",
+      "from": "1940"
+    }
+  ],
+  "summary": "Hong Kong-American martial artist and actor who starred in Hong Kong films such as Fist of Fury and Enter the Dragon. He founded his own style, Jeet Kune Do, and died at thirty-two.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q16397",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-11-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-07-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Bruce Lee (Q16397)",
+      "url": "https://www.wikidata.org/wiki/Q16397",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bruce Lee",
+      "url": "https://en.wikipedia.org/wiki/Bruce_Lee",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "zealandia",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Zealandia",
+      "from": "-83000000"
+    }
+  ],
+  "summary": "A mostly submerged continent beneath the south-west Pacific, with New Zealand and New Caledonia as its high points. It split from Gondwana about 83 million years ago and is recognised by many geologists as a continent.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "wikidata": "Q150408",
+  "events": [
+    {
+      "type": "born",
+      "date": "-83000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zealandia (Q150408)",
+      "url": "https://www.wikidata.org/wiki/Q150408",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zealandia",
+      "url": "https://en.wikipedia.org/wiki/Zealandia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

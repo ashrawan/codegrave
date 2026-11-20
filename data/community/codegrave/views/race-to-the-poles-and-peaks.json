@@ -1,0 +1,73 @@
+{
+  "id": "race-to-the-poles-and-peaks",
+  "name": "Frostbite and Glory: The Race to the Poles and the Peaks",
+  "description": "Ice, sledges, dogs and thin air: the expeditions that fought for the ends of the Earth and the tops of its highest mountains.",
+  "category": "events",
+  "labels": [
+    "exploration",
+    "firsts"
+  ],
+  "tags": [
+    "antarctic",
+    "arctic",
+    "everest",
+    "south pole",
+    "mountaineering",
+    "k2"
+  ],
+  "entries": [
+    "franklin-lost-expedition",
+    "jeannette-expedition",
+    "greely-expedition",
+    "belgian-antarctic-expedition",
+    "discovery-expedition",
+    "younghusband-expedition",
+    "nimrod-expedition",
+    "amundsen-south-pole-expedition",
+    "terra-nova-expedition",
+    "roald-amundsen",
+    "robert-falcon-scott",
+    "imperial-trans-antarctic-expedition",
+    "ernest-shackleton",
+    "endurance",
+    "everest-1924-expedition",
+    "annapurna-1950-expedition",
+    "everest-1953-expedition",
+    "edmund-hillary",
+    "tenzing-norgay",
+    "k2-1954-expedition",
+    "commonwealth-trans-antarctic-expedition",
+    "everest-1996-disaster"
+  ],
+  "checkpoints": [
+    {
+      "id": "arctic-failures",
+      "name": "The Arctic's toll",
+      "from": 1845,
+      "to": 1884,
+      "note": "British and American parties push into the northern ice and many never return. Franklin's lost ships and the Jeannette show how little the age's best equipment could do against the cold."
+    },
+    {
+      "id": "heroic-age",
+      "name": "The heroic age",
+      "from": 1897,
+      "to": 1917,
+      "note": "Antarctica becomes the stage for a race, from Belgian and British winter camps to Amundsen and Scott at the Pole. Shackleton shows that bringing a crew home can be a victory too."
+    },
+    {
+      "id": "mountains-and-ice",
+      "name": "Mountains and ice",
+      "from": 1924,
+      "to": 1958,
+      "note": "The focus moves to the highest peaks: Mallory and Irvine vanish on Everest, and the great summits of Annapurna, Everest and K2 are climbed within four years. Tractors cross Antarctica."
+    },
+    {
+      "id": "crowded-summit",
+      "name": "The crowded summit",
+      "from": 1996,
+      "to": 1996,
+      "note": "Commercial guiding brings many climbers to Everest, and one storm shows how thin the margin remains."
+    }
+  ],
+  "year": 1912
+}

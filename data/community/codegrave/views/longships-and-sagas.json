@@ -1,0 +1,77 @@
+{
+  "id": "longships-and-sagas",
+  "name": "Longships and Sagas: The Viking World",
+  "description": "Raiders, traders and settlers from Scandinavia sailed to Britain, Russia, Iceland and North America, and left laws, poems and a few kings behind.",
+  "category": "events",
+  "labels": [
+    "exploration",
+    "war"
+  ],
+  "tags": [
+    "vikings",
+    "norse",
+    "longship",
+    "raiders",
+    "iceland",
+    "sagas"
+  ],
+  "entries": [
+    "norse-paganism",
+    "runes",
+    "beowulf",
+    "viking-age",
+    "longship",
+    "alfred-the-great",
+    "old-english",
+    "kievan-rus",
+    "althing",
+    "kingdom-of-england",
+    "erik-the-red",
+    "leif-erikson",
+    "l-anse-aux-meadows",
+    "byzantine-empire",
+    "harald-hardrada",
+    "battle-of-stamford-bridge",
+    "battle-of-hastings",
+    "william-the-conqueror",
+    "poetic-edda"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-raids",
+      "name": "Gods, runes and old tales",
+      "from": 150,
+      "to": 792,
+      "note": "Scandinavians honoured Odin, Thor and other Norse gods and carved runes. Songs such as Beowulf, written in Old English, remembered a time when sea kings fought monsters."
+    },
+    {
+      "id": "raiders",
+      "name": "The raiders arrive",
+      "from": 793,
+      "to": 899,
+      "note": "A raid on a monastery in 793 began the Viking Age. Fast longships carried fleets to England, France and Russia, where Kievan Rus grew, while Alfred the Great fought the invaders."
+    },
+    {
+      "id": "settlers",
+      "name": "Settlers across the sea",
+      "from": 900,
+      "to": 1000,
+      "note": "Norse farmers settled Iceland and held their Althing, and Erik the Red led settlers to Greenland. His son Leif Erikson reached the coast of North America, and the kings of England took shape."
+    },
+    {
+      "id": "end-of-age",
+      "name": "The Viking Age ends",
+      "from": 1001,
+      "to": 1100,
+      "note": "Vikings left traces at L'Anse aux Meadows, and Norse guards served in Byzantium. Harald Hardrada's death at Stamford Bridge in 1066 ended the age, and the Normans won at Hastings."
+    },
+    {
+      "id": "afterlife",
+      "name": "Sagas and poems",
+      "from": 1101,
+      "to": 1300,
+      "note": "In Iceland scribes wrote the old stories down, including the Poetic Edda. Through these books, written long after the raids, the world of the Vikings and their gods reached later readers."
+    }
+  ],
+  "year": 900
+}

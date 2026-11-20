@@ -1,0 +1,56 @@
+{
+  "id": "alessandro-volta",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Alessandro Volta",
+      "from": "1745"
+    }
+  ],
+  "summary": "Italian physicist who built the first chemical battery, a stack of metal discs, in 1800. It gave science the first steady flow of electric current to work with, and the volt is named after him.",
+  "labels": [
+    "physics",
+    "energy"
+  ],
+  "aliases": [
+    "Alessandrino Volta"
+  ],
+  "wikidata": "Q680",
+  "events": [
+    {
+      "type": "born",
+      "date": "1745-02-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1827-03-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alessandro Volta (Q680)",
+      "url": "https://www.wikidata.org/wiki/Q680",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alessandro Volta",
+      "url": "https://en.wikipedia.org/wiki/Alessandro_Volta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

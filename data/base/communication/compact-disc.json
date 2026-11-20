@@ -1,0 +1,53 @@
+{
+  "id": "compact-disc",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Compact disc",
+      "from": "1979"
+    }
+  ],
+  "maker": "Philips and Sony",
+  "summary": "An optical disc holding sound as tiny pits read by a laser. It gave clean music that did not wear out and ruled recorded music for twenty years before downloads and streaming.",
+  "labels": [
+    "media",
+    "music"
+  ],
+  "aliases": [
+    "CD",
+    "music CD"
+  ],
+  "wikidata": "Q34467",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sony"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: compact disc (Q34467)",
+      "url": "https://www.wikidata.org/wiki/Q34467",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Compact disc",
+      "url": "https://en.wikipedia.org/wiki/Compact_disc",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tls",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "TLS",
+      "from": "1999"
+    }
+  ],
+  "summary": "Protocol that encrypts traffic between a browser and a website, shown as a padlock and the letters HTTPS. It grew out of Netscape's SSL and protects payments, passwords and private messages.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "SSL"
+  ],
+  "wikidata": "Q206494",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Transport Layer Security (Q206494)",
+      "url": "https://www.wikidata.org/wiki/Q206494",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Transport Layer Security",
+      "url": "https://en.wikipedia.org/wiki/Transport_Layer_Security",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

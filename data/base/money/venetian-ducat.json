@@ -1,0 +1,49 @@
+{
+  "id": "venetian-ducat",
+  "category": "money",
+  "names": [
+    {
+      "name": "Venetian ducat",
+      "from": "1284"
+    }
+  ],
+  "summary": "A gold coin of the Republic of Venice that was valued across the Mediterranean for its purity. It was minted for several centuries and imitated by many other states.",
+  "labels": [
+    "economics",
+    "business"
+  ],
+  "wikidata": "Q202018",
+  "events": [
+    {
+      "type": "born",
+      "date": "1284",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1797",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Minting ended when Napoleon ended the Venetian Republic",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: ducat (Q202018)",
+      "url": "https://www.wikidata.org/wiki/Q202018",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ducat",
+      "url": "https://en.wikipedia.org/wiki/Ducat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

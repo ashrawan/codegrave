@@ -1,0 +1,55 @@
+{
+  "id": "shahnameh",
+  "category": "books",
+  "names": [
+    {
+      "name": "Shahnameh",
+      "from": "1011"
+    }
+  ],
+  "summary": "Persian epic poem of about fifty thousand couplets by Ferdowsi, telling the story of Iran from myth to the Arab conquest. It helped keep the Persian language alive and is a national classic.",
+  "labels": [
+    "literature",
+    "language"
+  ],
+  "aliases": [
+    "Shahnama",
+    "Shahname",
+    "Book of Kings",
+    "King of Books",
+    "Shahnamah"
+  ],
+  "wikidata": "Q8279",
+  "events": [
+    {
+      "type": "born",
+      "date": "1011",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ferdowsi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shahnameh (Q8279)",
+      "url": "https://www.wikidata.org/wiki/Q8279",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shahnameh",
+      "url": "https://en.wikipedia.org/wiki/Shahnameh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

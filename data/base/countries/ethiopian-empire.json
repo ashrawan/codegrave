@@ -1,0 +1,61 @@
+{
+  "id": "ethiopian-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ethiopian Empire",
+      "from": "1270"
+    }
+  ],
+  "summary": "The Christian monarchy of the Ethiopian highlands, ruled by emperors who claimed descent from Solomon. It defeated Italy at Adwa in 1896, one of the few African states to resist colonisation.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Kingdom of Abyssinia",
+    "Abyssinia",
+    "Abisinia",
+    "Abissinia",
+    "Abyssinian Empire"
+  ],
+  "wikidata": "Q207521",
+  "events": [
+    {
+      "type": "born",
+      "date": "1270",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1975-03-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Haile Selassie was deposed by a military committee, the Derg",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ethiopian Empire (Q207521)",
+      "url": "https://www.wikidata.org/wiki/Q207521",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ethiopian Empire",
+      "url": "https://en.wikipedia.org/wiki/Ethiopian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

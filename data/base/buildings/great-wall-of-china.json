@@ -1,0 +1,60 @@
+{
+  "id": "great-wall-of-china",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Great Wall of China",
+      "from": "-0700"
+    }
+  ],
+  "summary": "Long system of walls, towers and forts built by different Chinese states and dynasties to guard the northern frontier. The best-known stretches date from the Ming dynasty.",
+  "labels": [
+    "architecture",
+    "world-heritage",
+    "war"
+  ],
+  "aliases": [
+    "Great Wall",
+    "Chinese Wall",
+    "Changcheng",
+    "Wanli Changcheng",
+    "The Great Wall of China"
+  ],
+  "wikidata": "Q12501",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "qin-shi-huang"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Wall of China (Q12501)",
+      "url": "https://www.wikidata.org/wiki/Q12501",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Wall of China",
+      "url": "https://en.wikipedia.org/wiki/Great_Wall_of_China",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

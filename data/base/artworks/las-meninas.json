@@ -1,0 +1,58 @@
+{
+  "id": "las-meninas",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Las Meninas",
+      "from": "1656"
+    }
+  ],
+  "maker": "Diego Velazquez",
+  "summary": "Painting by Diego Velazquez of a young Spanish princess, her attendants and the painter himself at work in the royal palace in Madrid. Its play with viewpoint and mirrors has made it one of the most discussed paintings in Europe.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "The Ladies-in-Waiting",
+    "The Maids of Honor",
+    "Las Meninas (The Maids of Honor)",
+    "Las Meninas Diego Velazquez"
+  ],
+  "wikidata": "Q208758",
+  "events": [
+    {
+      "type": "born",
+      "date": "1656",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "diego-velazquez"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Las Meninas (Q208758)",
+      "url": "https://www.wikidata.org/wiki/Q208758",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Las Meninas",
+      "url": "https://en.wikipedia.org/wiki/Las_Meninas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

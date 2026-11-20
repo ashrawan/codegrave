@@ -1,0 +1,64 @@
+{
+  "id": "deutsche-mark",
+  "category": "money",
+  "names": [
+    {
+      "name": "Deutsche Mark",
+      "from": "1948"
+    }
+  ],
+  "summary": "The currency of West Germany and then of united Germany. Its stable value became a symbol of the country's post-war recovery, and it was one of the most trusted currencies in Europe.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "D-Mark",
+    "German mark",
+    "DM",
+    "Deutschmark",
+    "DEM"
+  ],
+  "wikidata": "Q16068",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-06-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the euro",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "euro"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Deutsche Mark (Q16068)",
+      "url": "https://www.wikidata.org/wiki/Q16068",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Deutsche Mark",
+      "url": "https://en.wikipedia.org/wiki/Deutsche_Mark",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

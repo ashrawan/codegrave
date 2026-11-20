@@ -1,0 +1,49 @@
+{
+  "id": "bavarian-illuminati",
+  "category": "societies",
+  "names": [
+    {
+      "name": "Bavarian Illuminati",
+      "from": "1776"
+    }
+  ],
+  "summary": "Secret society of reformers in Bavaria founded by Adam Weishaupt, who promoted reason over religion. It was banned by the ruler, and its name later attached itself to conspiracy theories.",
+  "labels": [
+    "philosophy",
+    "politics"
+  ],
+  "wikidata": "Q133957",
+  "events": [
+    {
+      "type": "born",
+      "date": "1776-05-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1785-03",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "cause": "Banned by the Bavarian ruler Charles Theodore",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Illuminati (Q133957)",
+      "url": "https://www.wikidata.org/wiki/Q133957",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Illuminati",
+      "url": "https://en.wikipedia.org/wiki/Illuminati",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "gilded-age",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Gilded Age",
+      "from": "1870"
+    }
+  ],
+  "summary": "The era in the United States of rapid industrial growth, great fortunes and political corruption. The name comes from a novel by Mark Twain and Charles Dudley Warner.",
+  "labels": [
+    "economics",
+    "business"
+  ],
+  "aliases": [
+    "Gilded USA"
+  ],
+  "wikidata": "Q1753636",
+  "events": [
+    {
+      "type": "born",
+      "date": "1870",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gilded Age (Q1753636)",
+      "url": "https://www.wikidata.org/wiki/Q1753636",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gilded Age",
+      "url": "https://en.wikipedia.org/wiki/Gilded_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

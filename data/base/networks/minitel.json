@@ -1,0 +1,57 @@
+{
+  "id": "minitel",
+  "category": "networks",
+  "names": [
+    {
+      "name": "Minitel",
+      "from": "1980"
+    }
+  ],
+  "summary": "French online service that gave households a small terminal for directories, shopping, banking and chat years before the web. It was popular but could not compete with the internet and closed in 2012.",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "aliases": [
+    "TELETEL"
+  ],
+  "wikidata": "Q1133476",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2012-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by the web and switched off by France Télécom",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Minitel (Q1133476)",
+      "url": "https://www.wikidata.org/wiki/Q1133476",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Minitel",
+      "url": "https://en.wikipedia.org/wiki/Minitel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

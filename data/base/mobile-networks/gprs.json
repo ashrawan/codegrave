@@ -1,0 +1,45 @@
+{
+  "id": "gprs",
+  "category": "mobile-networks",
+  "names": [
+    {
+      "name": "GPRS",
+      "from": "2000"
+    }
+  ],
+  "summary": "Data service added to GSM networks that sent information in packets, so users could be connected to the internet all the time and pay by the amount of data. It made email and simple web pages possible on phones.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "General Packet Radio Service"
+  ],
+  "wikidata": "Q79708",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: General Packet Radio Service (Q79708)",
+      "url": "https://www.wikidata.org/wiki/Q79708",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: GPRS",
+      "url": "https://en.wikipedia.org/wiki/GPRS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

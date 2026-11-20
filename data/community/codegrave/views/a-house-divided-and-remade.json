@@ -1,0 +1,83 @@
+{
+  "id": "a-house-divided-and-remade",
+  "name": "A House Divided and Remade",
+  "description": "Cotton, conscience and conflict: how slavery split the United States, how the Civil War was fought and won, and how freedom was won and then contested.",
+  "category": "events",
+  "labels": [
+    "war",
+    "human-rights",
+    "politics"
+  ],
+  "tags": [
+    "american civil war",
+    "slavery",
+    "lincoln",
+    "emancipation",
+    "reconstruction",
+    "confederacy"
+  ],
+  "entries": [
+    "cotton-gin",
+    "atlantic-slave-trade",
+    "sojourner-truth",
+    "frederick-douglass",
+    "harriet-tubman",
+    "uncle-toms-cabin",
+    "harriet-beecher-stowe",
+    "republican-party-us",
+    "john-browns-raid",
+    "abraham-lincoln",
+    "confederate-states",
+    "american-civil-war",
+    "robert-e-lee",
+    "ulysses-s-grant",
+    "battle-of-gettysburg",
+    "emancipation-proclamation",
+    "gettysburg-address",
+    "thirteenth-amendment",
+    "reconstruction-era",
+    "fourteenth-amendment",
+    "civil-rights-act-1964",
+    "rosa-parks",
+    "martin-luther-king-jr",
+    "voting-rights-act-1965"
+  ],
+  "checkpoints": [
+    {
+      "id": "cotton-and-chains",
+      "name": "Cotton and chains",
+      "from": 1793,
+      "to": 1852,
+      "note": "The cotton gin makes slave-grown cotton hugely profitable and ties the South to the Atlantic slave trade. Sojourner Truth, Frederick Douglass and Harriet Tubman fight slavery, and Uncle Tom's Cabin turns it into a national cause."
+    },
+    {
+      "id": "road-to-war",
+      "name": "The road to war",
+      "from": 1853,
+      "to": 1860,
+      "note": "The new Republican Party opposes the spread of slavery, John Brown's raid terrifies the South, and the election of Abraham Lincoln leads Southern states to leave the Union."
+    },
+    {
+      "id": "the-war",
+      "name": "The war",
+      "from": 1861,
+      "to": 1865,
+      "note": "The Confederate States fight the Union under Robert E. Lee and Ulysses S. Grant. Gettysburg turns the war, the Emancipation Proclamation and Gettysburg Address give it a new purpose, and the Thirteenth Amendment ends slavery."
+    },
+    {
+      "id": "rebuilding",
+      "name": "Reconstruction",
+      "from": 1866,
+      "to": 1877,
+      "note": "Reconstruction tries to give freed people citizenship through the Fourteenth Amendment, but it ends when federal troops leave the South."
+    },
+    {
+      "id": "unfinished-freedom",
+      "name": "The unfinished work",
+      "from": 1878,
+      "to": 1965,
+      "note": "Segregation holds for nearly a century, until Rosa Parks, Martin Luther King Jr. and a mass movement win the Civil Rights Act and the Voting Rights Act."
+    }
+  ],
+  "year": 1863
+}

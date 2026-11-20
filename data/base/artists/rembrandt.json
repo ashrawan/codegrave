@@ -1,0 +1,54 @@
+{
+  "id": "rembrandt",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Rembrandt",
+      "from": "1606"
+    }
+  ],
+  "summary": "Dutch painter and etcher of Amsterdam, known for The Night Watch and for more than eighty self-portraits. He used strong light and shadow, and he went bankrupt late in life despite early success.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Rembrat",
+    "Rembraud",
+    "R. van Rijn",
+    "Rembrandt van Ryn",
+    "Rembrands"
+  ],
+  "wikidata": "Q5598",
+  "events": [
+    {
+      "type": "born",
+      "date": "1606-07-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1669-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Rembrandt (Q5598)",
+      "url": "https://www.wikidata.org/wiki/Q5598",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rembrandt",
+      "url": "https://en.wikipedia.org/wiki/Rembrandt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

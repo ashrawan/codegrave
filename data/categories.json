@@ -1,42 +1,806 @@
 {
   "domains": [
     {
+      "id": "people",
+      "name": "People",
+      "description": "Real individuals, living or dead.",
+      "words": {
+        "born": "Born",
+        "ended": "Died",
+        "alive": "Living",
+        "dead": "Dead",
+        "from": "born in"
+      }
+    },
+    {
+      "id": "places",
+      "name": "Places",
+      "description": "Countries, cities, buildings and other places people made or named.",
+      "words": {
+        "born": "Founded",
+        "ended": "Ended",
+        "alive": "Still there",
+        "dead": "Gone",
+        "from": "founded in"
+      }
+    },
+    {
+      "id": "organisations",
+      "name": "Organisations",
+      "description": "Companies, institutions, bands, teams and other groups of people.",
+      "words": {
+        "born": "Founded",
+        "ended": "Dissolved",
+        "alive": "Active",
+        "dead": "Dissolved",
+        "from": "founded in"
+      }
+    },
+    {
+      "id": "events",
+      "name": "Events",
+      "description": "Things that happened: wars, disasters, discoveries, ages and periods.",
+      "words": {
+        "born": "Began",
+        "ended": "Ended",
+        "alive": "Ongoing",
+        "dead": "Over",
+        "from": "that began in"
+      }
+    },
+    {
+      "id": "arts",
+      "name": "Arts & media",
+      "description": "Books, pictures, music, films and shows, and the styles they belong to.",
+      "words": {
+        "born": "First appeared",
+        "ended": "Ended",
+        "alive": "Still with us",
+        "dead": "Ended",
+        "from": "from"
+      }
+    },
+    {
+      "id": "knowledge",
+      "name": "Knowledge & belief",
+      "description": "What people know and believe: religions, philosophies, sciences and languages.",
+      "words": {
+        "born": "First appeared",
+        "ended": "Died out",
+        "alive": "Living",
+        "dead": "Died out",
+        "from": "from"
+      }
+    },
+    {
+      "id": "society",
+      "name": "Society & daily life",
+      "description": "How people live together: laws, money, games, customs, food and work.",
+      "words": {
+        "born": "Introduced",
+        "ended": "Ended",
+        "alive": "In use",
+        "dead": "Gone",
+        "from": "from"
+      }
+    },
+    {
+      "id": "life",
+      "name": "Life",
+      "description": "Living things other than individual people: animals, plants and diseases.",
+      "words": {
+        "born": "Appeared",
+        "ended": "Extinct",
+        "alive": "Living",
+        "dead": "Extinct",
+        "from": "that appeared in"
+      }
+    },
+    {
+      "id": "earth-space",
+      "name": "Earth & space",
+      "description": "Nature that is not alive: stars, planets, ages of the Earth, mountains and seas.",
+      "words": {
+        "born": "Formed",
+        "ended": "Ended",
+        "alive": "Still there",
+        "dead": "Gone",
+        "from": "that formed in"
+      }
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "description": "Inventions, from the hand axe to the computer.",
+      "words": {
+        "born": "Introduced",
+        "ended": "Retired",
+        "alive": "In use",
+        "dead": "Retired",
+        "from": "introduced in"
+      }
+    },
+    {
+      "id": "computing",
+      "parent": "technology",
+      "name": "Computing",
+      "description": "Digital things, from the first computers to the models that write and draw.",
+      "words": {
+        "born": "Born",
+        "ended": "Ended",
+        "alive": "Alive",
+        "dead": "Ended",
+        "from": "first released in"
+      },
+      "cause": "required"
+    },
+    {
       "id": "machines",
+      "parent": "computing",
       "name": "Machines",
       "description": "The computers themselves, from room-sized mainframes to the laptop."
     },
     {
       "id": "parts",
+      "parent": "computing",
       "name": "Parts",
       "description": "What machines are made of: chips, memory and storage, screens and add-ons."
     },
     {
       "id": "devices",
+      "parent": "computing",
       "name": "Devices",
       "description": "What people carry and plug in: phones, handhelds, consoles and players."
     },
     {
       "id": "software",
+      "parent": "computing",
       "name": "Software",
       "description": "What runs on all of them: operating systems, languages, tools, apps and games."
     },
     {
       "id": "networks",
+      "parent": "computing",
       "name": "Networks",
       "description": "How things connect: networks, protocols, formats and standards."
     },
     {
       "id": "online",
+      "parent": "computing",
       "name": "Online",
       "description": "The places people go: websites, search, social networks, messaging and streaming."
     },
     {
       "id": "ai",
+      "parent": "computing",
       "name": "AI",
       "description": "Machines that reason and learn: programs, models, assistants and robots."
     }
   ],
   "categories": [
+    {
+      "id": "rulers",
+      "domain": "people",
+      "name": "Rulers & heads of state",
+      "short": "RULER",
+      "examples": "Ashoka, Elizabeth I, Abraham Lincoln"
+    },
+    {
+      "id": "politicians",
+      "domain": "people",
+      "name": "Politicians & activists",
+      "short": "ACTIVIST",
+      "examples": "Mahatma Gandhi, Martin Luther King Jr., Nelson Mandela"
+    },
+    {
+      "id": "military-leaders",
+      "domain": "people",
+      "name": "Military leaders",
+      "short": "COMMANDER",
+      "examples": "Hannibal, Joan of Arc, Georgy Zhukov"
+    },
+    {
+      "id": "scientists",
+      "domain": "people",
+      "name": "Scientists & mathematicians",
+      "short": "SCIENTIST",
+      "examples": "Isaac Newton, Marie Curie, Albert Einstein"
+    },
+    {
+      "id": "inventors",
+      "domain": "people",
+      "name": "Inventors, engineers & programmers",
+      "short": "INVENTOR",
+      "examples": "Thomas Edison, Grace Hopper, Tim Berners-Lee"
+    },
+    {
+      "id": "thinkers",
+      "domain": "people",
+      "name": "Philosophers & scholars",
+      "short": "THINKER",
+      "examples": "Confucius, Socrates, Ibn Khaldun"
+    },
+    {
+      "id": "religious-figures",
+      "domain": "people",
+      "name": "Religious figures",
+      "short": "RELIGIOUS FIGURE",
+      "examples": "Gautama Buddha, Francis of Assisi, Guru Nanak"
+    },
+    {
+      "id": "writers",
+      "domain": "people",
+      "name": "Writers & poets",
+      "short": "WRITER",
+      "examples": "William Shakespeare, Jane Austen, Rabindranath Tagore"
+    },
+    {
+      "id": "artists",
+      "domain": "people",
+      "name": "Artists & architects",
+      "short": "ARTIST",
+      "examples": "Leonardo da Vinci, Frida Kahlo, Zaha Hadid"
+    },
+    {
+      "id": "musicians",
+      "domain": "people",
+      "name": "Musicians & composers",
+      "short": "MUSICIAN",
+      "examples": "Wolfgang Amadeus Mozart, Bob Marley, Freddie Mercury"
+    },
+    {
+      "id": "performers",
+      "domain": "people",
+      "name": "Actors, directors & entertainers",
+      "short": "PERFORMER",
+      "examples": "Charlie Chaplin, Marilyn Monroe, Akira Kurosawa"
+    },
+    {
+      "id": "athletes",
+      "domain": "people",
+      "name": "Athletes",
+      "short": "ATHLETE",
+      "examples": "Pelé, Muhammad Ali, Serena Williams"
+    },
+    {
+      "id": "founders",
+      "domain": "people",
+      "name": "Founders & business people",
+      "short": "FOUNDER",
+      "examples": "Henry Ford, Coco Chanel, Steve Jobs"
+    },
+    {
+      "id": "explorers",
+      "domain": "people",
+      "name": "Explorers & astronauts",
+      "short": "EXPLORER",
+      "examples": "Ibn Battuta, Tenzing Norgay, Yuri Gagarin"
+    },
+    {
+      "id": "countries",
+      "domain": "places",
+      "name": "Countries & empires",
+      "short": "COUNTRY",
+      "examples": "Roman Empire, Soviet Union, Nepal"
+    },
+    {
+      "id": "regions",
+      "domain": "places",
+      "name": "Regions, states & colonies",
+      "short": "REGION",
+      "examples": "Prussia, British India, California"
+    },
+    {
+      "id": "cities",
+      "domain": "places",
+      "name": "Cities & settlements",
+      "short": "CITY",
+      "examples": "Rome, Pompeii, Kathmandu"
+    },
+    {
+      "id": "buildings",
+      "domain": "places",
+      "name": "Buildings & monuments",
+      "short": "BUILDING",
+      "examples": "Great Pyramid of Giza, Berlin Wall, World Trade Center"
+    },
+    {
+      "id": "infrastructure",
+      "domain": "places",
+      "name": "Roads, bridges & canals",
+      "short": "INFRASTRUCTURE",
+      "examples": "Silk Road, Suez Canal, Channel Tunnel"
+    },
+    {
+      "id": "sites",
+      "domain": "places",
+      "name": "Parks, sites & venues",
+      "short": "SITE",
+      "examples": "Yellowstone National Park, the old Wembley Stadium, Chernobyl Exclusion Zone"
+    },
+    {
+      "id": "companies",
+      "domain": "organisations",
+      "name": "Companies & brands",
+      "short": "COMPANY",
+      "examples": "East India Company, Kodak, Nokia"
+    },
+    {
+      "id": "institutions",
+      "domain": "organisations",
+      "name": "Governments & international bodies",
+      "short": "INSTITUTION",
+      "examples": "League of Nations, United Nations, European Union"
+    },
+    {
+      "id": "political-groups",
+      "domain": "organisations",
+      "name": "Parties & movements",
+      "short": "MOVEMENT",
+      "examples": "Chartists, Indian National Congress, Solidarity"
+    },
+    {
+      "id": "agencies",
+      "domain": "organisations",
+      "name": "Agencies & armed forces",
+      "short": "AGENCY",
+      "examples": "Royal Navy, NASA, KGB"
+    },
+    {
+      "id": "schools",
+      "domain": "organisations",
+      "name": "Schools, universities & libraries",
+      "short": "SCHOOL",
+      "examples": "Nalanda, University of Bologna, Library of Alexandria"
+    },
+    {
+      "id": "religious-bodies",
+      "domain": "organisations",
+      "name": "Religious organisations",
+      "short": "RELIGIOUS BODY",
+      "examples": "Knights Templar, Jesuits, Church of England"
+    },
+    {
+      "id": "sports-teams",
+      "domain": "organisations",
+      "name": "Sports teams & leagues",
+      "short": "TEAM",
+      "examples": "Brooklyn Dodgers, Manchester United, Soviet Top League"
+    },
+    {
+      "id": "bands",
+      "domain": "organisations",
+      "name": "Bands & ensembles",
+      "short": "BAND",
+      "examples": "Vienna Philharmonic, The Beatles, Queen"
+    },
+    {
+      "id": "publishers",
+      "domain": "organisations",
+      "name": "Publishers, studios & broadcasters",
+      "short": "PUBLISHER",
+      "examples": "Penguin Books, MGM, BBC"
+    },
+    {
+      "id": "societies",
+      "domain": "organisations",
+      "name": "Charities, clubs & societies",
+      "short": "SOCIETY",
+      "examples": "Royal Society, Red Cross, Boy Scouts"
+    },
+    {
+      "id": "dynasties",
+      "domain": "organisations",
+      "name": "Dynasties & families",
+      "short": "DYNASTY",
+      "examples": "House of Habsburg, Ming dynasty, Shah dynasty of Nepal"
+    },
+    {
+      "id": "wars",
+      "domain": "events",
+      "name": "Wars & battles",
+      "short": "WAR",
+      "examples": "Punic Wars, Battle of Hastings, World War II"
+    },
+    {
+      "id": "revolutions",
+      "domain": "events",
+      "name": "Revolutions, coups & uprisings",
+      "short": "REVOLUTION",
+      "examples": "French Revolution, Russian Revolution, Arab Spring"
+    },
+    {
+      "id": "political-events",
+      "domain": "events",
+      "name": "Elections, summits & political events",
+      "short": "POLITICAL EVENT",
+      "examples": "Congress of Vienna, Partition of India, Brexit"
+    },
+    {
+      "id": "disasters",
+      "domain": "events",
+      "name": "Disasters & accidents",
+      "short": "DISASTER",
+      "examples": "Eruption of Vesuvius in 79, sinking of the Titanic, Chernobyl disaster"
+    },
+    {
+      "id": "epidemics",
+      "domain": "events",
+      "name": "Epidemics & pandemics",
+      "short": "EPIDEMIC",
+      "examples": "Black Death, 1918 flu pandemic, COVID-19 pandemic"
+    },
+    {
+      "id": "expeditions",
+      "domain": "events",
+      "name": "Expeditions & voyages",
+      "short": "EXPEDITION",
+      "examples": "Magellan's circumnavigation, Lewis and Clark Expedition, first ascent of Everest"
+    },
+    {
+      "id": "economic-events",
+      "domain": "events",
+      "name": "Booms, crashes & crises",
+      "short": "ECONOMIC EVENT",
+      "examples": "Tulip mania, Great Depression, 2008 financial crisis"
+    },
+    {
+      "id": "sports-events",
+      "domain": "events",
+      "name": "Sporting events",
+      "short": "SPORTING EVENT",
+      "examples": "1896 Summer Olympics, 1930 World Cup, Rumble in the Jungle"
+    },
+    {
+      "id": "cultural-events",
+      "domain": "events",
+      "name": "Festivals, fairs & ceremonies",
+      "short": "CULTURAL EVENT",
+      "examples": "Great Exhibition of 1851, Woodstock, Live Aid"
+    },
+    {
+      "id": "trials",
+      "domain": "events",
+      "name": "Crimes, trials & scandals",
+      "short": "TRIAL",
+      "examples": "Salem witch trials, Nuremberg trials, Watergate"
+    },
+    {
+      "id": "periods",
+      "domain": "events",
+      "name": "Ages & periods",
+      "short": "PERIOD",
+      "examples": "Bronze Age, Renaissance, Cold War"
+    },
+    {
+      "id": "books",
+      "domain": "arts",
+      "name": "Books & writing",
+      "short": "BOOK",
+      "examples": "Epic of Gilgamesh, Don Quixote, the printed Encyclopaedia Britannica"
+    },
+    {
+      "id": "periodicals",
+      "domain": "arts",
+      "name": "Newspapers & magazines",
+      "short": "PERIODICAL",
+      "examples": "The Times, Life, News of the World"
+    },
+    {
+      "id": "artworks",
+      "domain": "arts",
+      "name": "Paintings & sculpture",
+      "short": "ARTWORK",
+      "examples": "Colossus of Rhodes, Mona Lisa, Buddhas of Bamiyan"
+    },
+    {
+      "id": "music",
+      "domain": "arts",
+      "name": "Songs, albums & compositions",
+      "short": "MUSIC",
+      "examples": "Beethoven's Ninth Symphony, Thriller, Bohemian Rhapsody"
+    },
+    {
+      "id": "films",
+      "domain": "arts",
+      "name": "Films",
+      "short": "FILM",
+      "examples": "A Trip to the Moon, Casablanca, Star Wars"
+    },
+    {
+      "id": "shows",
+      "domain": "arts",
+      "name": "TV & radio shows",
+      "short": "SHOW",
+      "examples": "I Love Lucy, Friends, The Simpsons"
+    },
+    {
+      "id": "stage",
+      "domain": "arts",
+      "name": "Plays, operas & dance",
+      "short": "STAGE WORK",
+      "examples": "Hamlet, The Magic Flute, Swan Lake"
+    },
+    {
+      "id": "comics",
+      "domain": "arts",
+      "name": "Comics & animation",
+      "short": "COMIC",
+      "examples": "Peanuts, The Adventures of Tintin, Dragon Ball"
+    },
+    {
+      "id": "characters",
+      "domain": "arts",
+      "name": "Characters & fictional worlds",
+      "short": "CHARACTER",
+      "examples": "Sherlock Holmes, Mickey Mouse, Middle-earth"
+    },
+    {
+      "id": "genres",
+      "domain": "arts",
+      "name": "Styles, genres & movements",
+      "short": "GENRE",
+      "examples": "Impressionism, jazz, disco"
+    },
+    {
+      "id": "religions",
+      "domain": "knowledge",
+      "name": "Religions & belief systems",
+      "short": "RELIGION",
+      "examples": "Zoroastrianism, Buddhism, Norse religion"
+    },
+    {
+      "id": "philosophies",
+      "domain": "knowledge",
+      "name": "Philosophies & ideologies",
+      "short": "PHILOSOPHY",
+      "examples": "Stoicism, liberalism, Marxism"
+    },
+    {
+      "id": "sciences",
+      "domain": "knowledge",
+      "name": "Sciences, theories & discoveries",
+      "short": "SCIENCE",
+      "examples": "Alchemy, phlogiston theory, general relativity"
+    },
+    {
+      "id": "mathematics",
+      "domain": "knowledge",
+      "name": "Mathematics & logic",
+      "short": "MATHEMATICS",
+      "examples": "Zero, calculus, Fermat's Last Theorem"
+    },
+    {
+      "id": "human-languages",
+      "domain": "knowledge",
+      "name": "Languages & writing systems",
+      "short": "LANGUAGE",
+      "examples": "Cuneiform, Latin, Esperanto"
+    },
+    {
+      "id": "measures",
+      "domain": "knowledge",
+      "name": "Calendars, units & standards",
+      "short": "MEASURE",
+      "examples": "Julian calendar, the cubit, metric system"
+    },
+    {
+      "id": "laws",
+      "domain": "society",
+      "name": "Laws, treaties & constitutions",
+      "short": "LAW",
+      "examples": "Code of Hammurabi, Magna Carta, Prohibition in the United States"
+    },
+    {
+      "id": "money",
+      "domain": "society",
+      "name": "Money & currencies",
+      "short": "MONEY",
+      "examples": "Roman denarius, gold standard, Deutsche Mark"
+    },
+    {
+      "id": "sports-games",
+      "domain": "society",
+      "name": "Sports & games",
+      "short": "GAME",
+      "examples": "Gladiator games, chess, association football"
+    },
+    {
+      "id": "customs",
+      "domain": "society",
+      "name": "Customs, holidays & traditions",
+      "short": "CUSTOM",
+      "examples": "Duelling, Dashain, Halloween"
+    },
+    {
+      "id": "food-drink",
+      "domain": "society",
+      "name": "Food & drink",
+      "short": "FOOD",
+      "examples": "Garum, pizza, Coca-Cola"
+    },
+    {
+      "id": "fashion",
+      "domain": "society",
+      "name": "Clothing & fashion",
+      "short": "FASHION",
+      "examples": "Toga, corset, blue jeans"
+    },
+    {
+      "id": "awards",
+      "domain": "society",
+      "name": "Awards & honours",
+      "short": "AWARD",
+      "examples": "Order of the Garter, Nobel Prize, Academy Awards"
+    },
+    {
+      "id": "jobs",
+      "domain": "society",
+      "name": "Jobs & trades",
+      "short": "JOB",
+      "examples": "Scribe, lamplighter, switchboard operator"
+    },
+    {
+      "id": "animals",
+      "domain": "life",
+      "name": "Animals",
+      "short": "ANIMAL",
+      "examples": "Tyrannosaurus rex, woolly mammoth, dodo"
+    },
+    {
+      "id": "plants-fungi",
+      "domain": "life",
+      "name": "Plants & fungi",
+      "short": "PLANT",
+      "examples": "Silphium, ginkgo, American chestnut"
+    },
+    {
+      "id": "diseases",
+      "domain": "life",
+      "name": "Diseases & microbes",
+      "short": "DISEASE",
+      "examples": "Smallpox, rinderpest, HIV"
+    },
+    {
+      "id": "human-origins",
+      "domain": "life",
+      "name": "Human origins",
+      "short": "HUMAN ANCESTOR",
+      "examples": "Australopithecus afarensis, Homo erectus, Neanderthals"
+    },
+    {
+      "id": "breeds-crops",
+      "domain": "life",
+      "name": "Breeds & crops",
+      "short": "BREED",
+      "examples": "The dog, wheat, Gros Michel banana"
+    },
+    {
+      "id": "famous-animals",
+      "domain": "life",
+      "name": "Famous animals",
+      "short": "FAMOUS ANIMAL",
+      "examples": "Laika, Hachiko, Dolly the sheep"
+    },
+    {
+      "id": "space",
+      "domain": "earth-space",
+      "name": "The universe, stars & planets",
+      "short": "SPACE",
+      "examples": "The Sun, Halley's Comet, Comet Shoemaker-Levy 9"
+    },
+    {
+      "id": "earth-ages",
+      "domain": "earth-space",
+      "name": "Ages of the Earth",
+      "short": "AGE",
+      "examples": "Cambrian, Jurassic, Pangaea"
+    },
+    {
+      "id": "earth-events",
+      "domain": "earth-space",
+      "name": "Impacts, extinctions & ice ages",
+      "short": "EARTH EVENT",
+      "examples": "Chicxulub impact, Permian extinction, Last Glacial Maximum"
+    },
+    {
+      "id": "landforms",
+      "domain": "earth-space",
+      "name": "Mountains, islands & landforms",
+      "short": "LANDFORM",
+      "examples": "Himalayas, Doggerland, Krakatoa"
+    },
+    {
+      "id": "waters",
+      "domain": "earth-space",
+      "name": "Oceans, lakes & rivers",
+      "short": "WATER",
+      "examples": "Tethys Ocean, Lake Agassiz, Aral Sea"
+    },
+    {
+      "id": "tools-materials",
+      "domain": "technology",
+      "name": "Tools & materials",
+      "short": "MATERIAL",
+      "examples": "Hand axe, bronze, Bakelite"
+    },
+    {
+      "id": "energy",
+      "domain": "technology",
+      "name": "Energy & engines",
+      "short": "ENERGY",
+      "examples": "Watermill, steam engine, incandescent light bulb"
+    },
+    {
+      "id": "land-transport",
+      "domain": "technology",
+      "name": "Cars, trains & carriages",
+      "short": "VEHICLE",
+      "examples": "Stagecoach, Ford Model T, Shinkansen"
+    },
+    {
+      "id": "ships",
+      "domain": "technology",
+      "name": "Ships & boats",
+      "short": "SHIP",
+      "examples": "Trireme, Mayflower, RMS Titanic"
+    },
+    {
+      "id": "aircraft",
+      "domain": "technology",
+      "name": "Aircraft",
+      "short": "AIRCRAFT",
+      "examples": "Wright Flyer, Hindenburg, Concorde"
+    },
+    {
+      "id": "spaceflight",
+      "domain": "technology",
+      "name": "Rockets, spacecraft & missions",
+      "short": "SPACECRAFT",
+      "examples": "Sputnik 1, Apollo program, Space Shuttle"
+    },
+    {
+      "id": "weapons",
+      "domain": "technology",
+      "name": "Weapons & defences",
+      "short": "WEAPON",
+      "examples": "Longbow, Greek fire, Maginot Line"
+    },
+    {
+      "id": "communication",
+      "domain": "technology",
+      "name": "Print, telegraph, radio & TV",
+      "short": "COMMUNICATION",
+      "examples": "Printing press, electric telegraph, analogue television"
+    },
+    {
+      "id": "medicine",
+      "domain": "technology",
+      "name": "Medicines & medical devices",
+      "short": "MEDICINE",
+      "examples": "Smallpox vaccine, penicillin, iron lung"
+    },
+    {
+      "id": "farming",
+      "domain": "technology",
+      "name": "Farming & food technology",
+      "short": "FARMING",
+      "examples": "The plough, canning, DDT"
+    },
+    {
+      "id": "instruments",
+      "domain": "technology",
+      "name": "Clocks & instruments",
+      "short": "INSTRUMENT",
+      "examples": "Sundial, astrolabe, slide rule"
+    },
+    {
+      "id": "everyday",
+      "domain": "technology",
+      "name": "Home & everyday products",
+      "short": "PRODUCT",
+      "examples": "Sewing machine, typewriter, Polaroid camera"
+    },
     {
       "id": "early-computers",
       "domain": "machines",

@@ -1,0 +1,61 @@
+{
+  "id": "charles-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Charles I",
+      "from": "1600"
+    }
+  ],
+  "summary": "King of England who believed that kings ruled by divine right and clashed with Parliament. He lost the civil war that followed and was tried and beheaded, after which England became a republic.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "King Charles the Martyr",
+    "Charles the 1st",
+    "King Charles I"
+  ],
+  "wikidata": "Q81506",
+  "events": [
+    {
+      "type": "born",
+      "date": "1600-11-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1649-01-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "james-i"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "charles-ii"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles I of England (Q81506)",
+      "url": "https://www.wikidata.org/wiki/Q81506",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles I of England",
+      "url": "https://en.wikipedia.org/wiki/Charles_I_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

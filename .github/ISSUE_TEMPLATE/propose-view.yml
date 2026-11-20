@@ -1,5 +1,5 @@
 name: Propose a view
-description: A timeline you would like to see or share, such as "The console wars". No code needed.
+description: A book-like timeline you would like to see or share, such as "The race to the Moon". No code needed.
 title: "View: "
 labels: ["view", "proposal"]
 body:
@@ -11,7 +11,7 @@ body:
     id: name
     attributes:
       label: Name of the view
-      placeholder: The console wars
+      placeholder: The race to the Moon
     validations:
       required: true
   - type: textarea
@@ -24,8 +24,8 @@ body:
   - type: textarea
     id: things
     attributes:
-      label: Things it should show
-      description: A list of names. It is fine if some are not on the timeline yet; say so and add a source link if you have one.
+      label: Entries it should show
+      description: A list of names (people, places, events, works, things). It is fine if some are not in the encyclopedia yet; say so and add a source link if you have one.
     validations:
       required: true
   - type: input
@@ -36,8 +36,8 @@ body:
   - type: textarea
     id: eras
     attributes:
-      label: Eras to draw, if any
-      description: Named periods with their years, such as "The first browser war, 1995 to 2001".
+      label: Chapters, if any
+      description: Named periods with their years, such as "First into orbit, 1957 to 1961".
   - type: checkboxes
     id: pr
     attributes:

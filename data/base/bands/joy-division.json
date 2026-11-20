@@ -1,0 +1,53 @@
+{
+  "id": "joy-division",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Joy Division",
+      "from": "1976"
+    }
+  ],
+  "summary": "Band from Manchester whose dark, spare sound helped shape post-punk. It ended when its singer Ian Curtis died, and the other members continued as New Order.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q172763",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1980",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended after the death of singer Ian Curtis",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "sex-pistols"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Joy Division (Q172763)",
+      "url": "https://www.wikidata.org/wiki/Q172763",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Joy Division",
+      "url": "https://en.wikipedia.org/wiki/Joy_Division",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

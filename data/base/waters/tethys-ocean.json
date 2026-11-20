@@ -1,0 +1,54 @@
+{
+  "id": "tethys-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Tethys Ocean",
+      "from": "-250000000"
+    }
+  ],
+  "summary": "An ancient ocean that lay between the northern and southern continents for much of the Mesozoic. Its closing, as Africa and India hit Eurasia, raised the Alps and the Himalayas, and the Mediterranean is one of its remnants.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "aliases": [
+    "Tethys",
+    "Tethys Sea",
+    "Neotethys"
+  ],
+  "wikidata": "Q208136",
+  "events": [
+    {
+      "type": "born",
+      "date": "-250000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-20000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed as Africa, Arabia and India collided with Eurasia",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Tethys Ocean (Q208136)",
+      "url": "https://www.wikidata.org/wiki/Q208136",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tethys Ocean",
+      "url": "https://en.wikipedia.org/wiki/Tethys_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

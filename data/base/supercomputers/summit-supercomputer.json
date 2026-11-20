@@ -1,0 +1,59 @@
+{
+  "id": "summit-supercomputer",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "Summit",
+      "from": "2018"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "IBM supercomputer at Oak Ridge National Laboratory that took the lead in the world rankings in 2018. It was used for research on climate, materials, medicine and artificial intelligence.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q22073261",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2024-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired after newer machines replaced it",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Summit (Q22073261)",
+      "url": "https://www.wikidata.org/wiki/Q22073261",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Summit (supercomputer)",
+      "url": "https://en.wikipedia.org/wiki/Summit_(supercomputer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

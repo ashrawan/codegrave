@@ -1,0 +1,47 @@
+{
+  "id": "bossa-nova",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Bossa nova",
+      "from": "1958"
+    }
+  ],
+  "summary": "Brazilian music from Rio de Janeiro of the late 1950s that blends samba with cool jazz harmonies and soft, close singing. Joao Gilberto and Antonio Carlos Jobim shaped it, and it became popular in the United States in the 1960s.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q486263",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "jazz"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: bossa nova (Q486263)",
+      "url": "https://www.wikidata.org/wiki/Q486263",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bossa nova",
+      "url": "https://en.wikipedia.org/wiki/Bossa_nova",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

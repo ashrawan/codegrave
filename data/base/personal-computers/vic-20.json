@@ -1,0 +1,62 @@
+{
+  "id": "vic-20",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "VIC-20",
+      "from": "1980"
+    }
+  ],
+  "maker": "Commodore",
+  "summary": "Cheap colour home computer from Commodore, advertised by William Shatner. It was the first computer to sell a million units, and it led the way for the Commodore 64.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Commodore VIC-20",
+    "VIC20",
+    "VC-20",
+    "VIC-1001",
+    "Video Interface Computer-20"
+  ],
+  "wikidata": "Q918232",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1985",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Commodore 64",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "commodore-international"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Commodore VIC-20 (Q918232)",
+      "url": "https://www.wikidata.org/wiki/Q918232",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: VIC-20",
+      "url": "https://en.wikipedia.org/wiki/VIC-20",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

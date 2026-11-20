@@ -1,0 +1,47 @@
+{
+  "id": "anomalocaris",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Anomalocaris",
+      "from": "-515000000"
+    }
+  ],
+  "summary": "One of the first big hunters in the sea, from the Cambrian, with grasping arms at the front and a round mouth. It could be up to about a metre long, huge for its time.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q37395",
+  "events": [
+    {
+      "type": "born",
+      "date": "-515000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-500000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Anomalocaris (Q37395)",
+      "url": "https://www.wikidata.org/wiki/Q37395",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anomalocaris",
+      "url": "https://en.wikipedia.org/wiki/Anomalocaris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

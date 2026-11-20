@@ -1,0 +1,69 @@
+{
+  "id": "weimar-republic",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Weimar Republic",
+      "from": "1918"
+    }
+  ],
+  "summary": "The democratic German state set up after the First World War. It faced hyperinflation, political violence and the Great Depression, while Berlin flourished in art, film and science.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "German Reich",
+    "Weimar Germany",
+    "Germany",
+    "German Republic",
+    "Republic of Germany"
+  ],
+  "wikidata": "Q41304",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-11-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1933",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Nazi rule after Hitler became chancellor",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "free-city-of-danzig"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Weimar Republic (Q41304)",
+      "url": "https://www.wikidata.org/wiki/Q41304",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Weimar Republic",
+      "url": "https://en.wikipedia.org/wiki/Weimar_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

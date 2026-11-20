@@ -1,0 +1,54 @@
+{
+  "id": "frank-sinatra",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Frank Sinatra",
+      "from": "1915"
+    }
+  ],
+  "summary": "American singer from New Jersey who rose to fame in the 1940s, then reinvented himself with concept albums in the 1950s. He also won an Academy Award for acting in From Here to Eternity.",
+  "labels": [
+    "music",
+    "film"
+  ],
+  "aliases": [
+    "Francis Albert Sinatra",
+    "Old Blue Eyes",
+    "Sinatra",
+    "Ol' Blue Eyes"
+  ],
+  "wikidata": "Q40912",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915-12-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1998-05-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Frank Sinatra (Q40912)",
+      "url": "https://www.wikidata.org/wiki/Q40912",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Frank Sinatra",
+      "url": "https://en.wikipedia.org/wiki/Frank_Sinatra",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,89 @@
+{
+  "id": "ai-history",
+  "name": "The history of AI",
+  "description": "Hand-picked: seventy years of artificial intelligence, from the first chatbot through two AI winters to the assistants and image makers of today.",
+  "category": "computing",
+  "author": "codegrave",
+  "tags": [
+    "ai",
+    "history",
+    "hand-picked"
+  ],
+  "categories": [
+    "assistants",
+    "robots",
+    "ai"
+  ],
+  "level": 100,
+  "year": 2015,
+  "things": [
+    "eliza",
+    "shakey",
+    "cyc",
+    "fifth-generation",
+    "deep-blue",
+    "ibm-watson",
+    "siri",
+    "alexnet",
+    "amazon-alexa",
+    "cortana",
+    "tensorflow",
+    "alphago",
+    "tay",
+    "google-assistant",
+    "alphafold",
+    "gpt-2",
+    "gpt-3",
+    "dall-e",
+    "github-copilot",
+    "midjourney",
+    "stable-diffusion",
+    "chatgpt",
+    "claude",
+    "gemini"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-wave",
+      "name": "The first wave",
+      "from": 1956,
+      "to": 1973,
+      "note": "The field gets its name at a summer workshop at Dartmouth College in 1956. Early programs prove theorems, hold simple conversations and steer robots, and researchers predict a thinking machine within a generation."
+    },
+    {
+      "id": "first-winter",
+      "name": "The first AI winter",
+      "from": 1974,
+      "to": 1980,
+      "note": "The promises are not kept. By 1974 funders in the United States and Britain have cut their support, and AI research goes quiet."
+    },
+    {
+      "id": "expert-systems",
+      "name": "The expert systems boom",
+      "from": 1981,
+      "to": 1986,
+      "note": "Programs that hold the rules of a human expert make money for companies. Japan launches its Fifth Generation project in 1982 and other countries hurry to answer it."
+    },
+    {
+      "id": "second-winter",
+      "name": "The second AI winter",
+      "from": 1987,
+      "to": 2000,
+      "note": "The market for special AI computers collapses in 1987 and expert systems prove costly to keep up. Funding falls away again, and for years researchers avoid even the name AI."
+    },
+    {
+      "id": "deep-learning",
+      "name": "Deep learning",
+      "from": 2012,
+      "to": 2021,
+      "note": "In 2012 a neural network, AlexNet, wins a picture-recognition contest by a wide margin. Networks trained on huge amounts of data go on to beat people at Go, power voice assistants and predict the shapes of proteins."
+    },
+    {
+      "id": "generative-ai",
+      "name": "The generative AI boom",
+      "from": 2022,
+      "to": 2026,
+      "note": "Image generators and then ChatGPT put AI that writes and draws in front of the public. ChatGPT passes 100 million users within two months of its release in late 2022."
+    }
+  ]
+}

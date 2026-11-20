@@ -1,0 +1,58 @@
+{
+  "id": "cambrian-explosion",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Cambrian Explosion",
+      "from": "-543000000"
+    }
+  ],
+  "summary": "A burst of evolution over some tens of millions of years when most major animal groups first appear as fossils. Famous fossil beds such as the Burgess Shale in Canada and Chengjiang in China record it.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Cambrian radiation",
+    "Cambrian diversification",
+    "Biological Big Bang",
+    "Big Bang of life"
+  ],
+  "wikidata": "Q32919",
+  "events": [
+    {
+      "type": "born",
+      "date": "-543000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-543000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cambrian"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cambrian explosion (Q32919)",
+      "url": "https://www.wikidata.org/wiki/Q32919",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cambrian explosion",
+      "url": "https://en.wikipedia.org/wiki/Cambrian_explosion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

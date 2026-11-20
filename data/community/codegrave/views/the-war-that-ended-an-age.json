@@ -1,0 +1,77 @@
+{
+  "id": "the-war-that-ended-an-age",
+  "name": "The War That Ended an Age",
+  "description": "How a murder in Sarajevo grew into four years of trenches, four fallen empires and a peace treaty that planted the seeds of the next war.",
+  "category": "events",
+  "labels": [
+    "war"
+  ],
+  "tags": [
+    "world war 1",
+    "ww1",
+    "great war",
+    "trenches",
+    "verdun",
+    "somme"
+  ],
+  "entries": [
+    "franco-prussian-war",
+    "belle-epoque",
+    "russo-japanese-war",
+    "assassination-of-franz-ferdinand",
+    "world-war-i",
+    "first-battle-of-the-marne",
+    "battle-of-tannenberg-1914",
+    "gallipoli-campaign",
+    "battle-of-verdun",
+    "battle-of-the-somme",
+    "battle-of-jutland",
+    "battle-of-passchendaele",
+    "battle-of-caporetto",
+    "russian-revolution",
+    "treaty-of-brest-litovsk",
+    "german-revolution-of-1918-1919",
+    "armistice-of-11-november-1918",
+    "treaty-of-versailles",
+    "interwar-period",
+    "new-imperialism"
+  ],
+  "checkpoints": [
+    {
+      "id": "powder-keg",
+      "name": "Europe's powder keg",
+      "from": 1870,
+      "to": 1913,
+      "note": "After 1870 Europe grows rich and builds huge armies and rival alliances. Wars such as the Franco-Prussian War and the Russo-Japanese War show what modern weapons can do, but the Belle Époque ignores the warning."
+    },
+    {
+      "id": "summer-1914",
+      "name": "The summer of 1914",
+      "from": 1914,
+      "to": 1914,
+      "note": "A shooting in Sarajevo sets off ultimatums and mobilisations. Within weeks the great powers are at war, the German advance is stopped at the Marne, and both sides dig in for what becomes a long war."
+    },
+    {
+      "id": "deadlock",
+      "name": "Deadlock in the trenches",
+      "from": 1915,
+      "to": 1916,
+      "note": "On the Western Front, huge offensives at Verdun and the Somme cost vast numbers of lives and gain little ground. Gallipoli fails and the war at sea reaches its climax at Jutland."
+    },
+    {
+      "id": "breaking-point",
+      "name": "The breaking point",
+      "from": 1917,
+      "to": 1917,
+      "note": "Revolution in Russia knocks the largest Allied army out of the war while mud at Passchendaele and defeat at Caporetto test the Allies. The United States enters the war on their side."
+    },
+    {
+      "id": "peace-and-after",
+      "name": "Armistice and the peace",
+      "from": 1918,
+      "to": 1939,
+      "note": "Germany signs the armistice on 11 November 1918 after revolution at home. The Treaty of Versailles redraws Europe, but its terms leave bitterness that shapes the interwar years."
+    }
+  ],
+  "year": 1916
+}

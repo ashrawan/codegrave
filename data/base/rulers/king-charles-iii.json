@@ -1,0 +1,58 @@
+{
+  "id": "king-charles-iii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Charles III",
+      "from": "1948"
+    }
+  ],
+  "summary": "King of the United Kingdom and other realms since 2022, after the death of his mother Elizabeth II. He was Prince of Wales for over sixty years and is known for his work on charities and the environment.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "His Majesty",
+    "Prince Charles",
+    "King Charles III",
+    "Prince Charles, Prince of Wales",
+    "HM King Charles III"
+  ],
+  "wikidata": "Q43274",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-11-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "elizabeth-ii"
+    },
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles III (Q43274)",
+      "url": "https://www.wikidata.org/wiki/Q43274",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles III",
+      "url": "https://en.wikipedia.org/wiki/Charles_III",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

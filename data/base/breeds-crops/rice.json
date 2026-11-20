@@ -1,0 +1,42 @@
+{
+  "id": "rice",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Rice",
+      "from": "-8000"
+    }
+  ],
+  "summary": "A grass grown for its grain, first farmed in the Yangtze valley of China. It is the main food of billions of people, and growing it in flooded fields shaped many Asian landscapes.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q5090",
+  "events": [
+    {
+      "type": "born",
+      "date": "-8000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: rice (Q5090)",
+      "url": "https://www.wikidata.org/wiki/Q5090",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rice",
+      "url": "https://en.wikipedia.org/wiki/Rice",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dodo",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Dodo",
+      "from": "-8000000"
+    }
+  ],
+  "summary": "A large flightless bird that lived only on the island of Mauritius in the Indian Ocean. Soon after sailors arrived in the late 1500s it was gone, and it has become a symbol of extinction.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "dodo bird"
+  ],
+  "wikidata": "Q43502",
+  "events": [
+    {
+      "type": "born",
+      "date": "-8000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1690",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Hunted by sailors and killed off by the animals they brought",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Dodo (Q43502)",
+      "url": "https://www.wikidata.org/wiki/Q43502",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dodo",
+      "url": "https://en.wikipedia.org/wiki/Dodo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

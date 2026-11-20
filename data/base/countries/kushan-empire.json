@@ -1,0 +1,59 @@
+{
+  "id": "kushan-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kushan Empire",
+      "from": "0030"
+    }
+  ],
+  "summary": "A state spanning Central Asia and northern India on the Silk Road. Its rulers minted gold coins with Greek, Persian and Indian gods and supported Buddhism, helping it spread to China.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Guishuang",
+    "Kuṣāṇa Empire",
+    "Kushana Empire"
+  ],
+  "wikidata": "Q25979",
+  "events": [
+    {
+      "type": "born",
+      "date": "0030",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0375",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Weakened by Sasanian conquests and eventually absorbed by rising Gupta and other powers",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "gupta-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kushan Empire (Q25979)",
+      "url": "https://www.wikidata.org/wiki/Q25979",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kushan Empire",
+      "url": "https://en.wikipedia.org/wiki/Kushan_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

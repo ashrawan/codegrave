@@ -1,0 +1,60 @@
+{
+  "id": "society-of-jesus",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Jesuits",
+      "from": "1540"
+    }
+  ],
+  "maker": "Ignatius of Loyola",
+  "summary": "Catholic order founded by Ignatius of Loyola. Jesuits became known for their schools and universities, for missions in Asia and the Americas, and for their service to the Pope.",
+  "labels": [
+    "religion",
+    "education"
+  ],
+  "aliases": [
+    "Society of Jesus",
+    "Societas Iesu",
+    "S.J.",
+    "SJ",
+    "Societas Jesu"
+  ],
+  "wikidata": "Q36380",
+  "events": [
+    {
+      "type": "born",
+      "date": "1540-09-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ignatius-of-loyola"
+    },
+    {
+      "type": "related",
+      "to": "jesus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Society of Jesus (Q36380)",
+      "url": "https://www.wikidata.org/wiki/Q36380",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jesuits",
+      "url": "https://en.wikipedia.org/wiki/Jesuits",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

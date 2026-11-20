@@ -1,0 +1,57 @@
+{
+  "id": "devonian",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Devonian",
+      "from": "-419200000"
+    }
+  ],
+  "summary": "The period from 419 to 359 million years ago, called the age of fishes. Armoured fish and sharks ruled the water, the first forests grew, and some fish developed limbs and began to move onto land.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Devonian Period",
+    "Devonian System"
+  ],
+  "wikidata": "Q65955",
+  "events": [
+    {
+      "type": "born",
+      "date": "-419200000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-358900000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "paleozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Devonian (Q65955)",
+      "url": "https://www.wikidata.org/wiki/Q65955",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Devonian",
+      "url": "https://en.wikipedia.org/wiki/Devonian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

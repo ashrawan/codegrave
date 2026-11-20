@@ -1,0 +1,51 @@
+{
+  "id": "julius-caesar",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Julius Caesar",
+      "from": "-0100"
+    }
+  ],
+  "summary": "Roman general who conquered Gaul, crossed the Rubicon and won a civil war to become dictator of Rome. He was murdered by a group of senators on the Ides of March in 44 BCE.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Divine Julius"
+  ],
+  "wikidata": "Q1048",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0100-07",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "-0044-03-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Julius Caesar (Q1048)",
+      "url": "https://www.wikidata.org/wiki/Q1048",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Julius Caesar",
+      "url": "https://en.wikipedia.org/wiki/Julius_Caesar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

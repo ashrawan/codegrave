@@ -1,0 +1,54 @@
+{
+  "id": "shinkansen",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Shinkansen",
+      "from": "1964"
+    }
+  ],
+  "maker": "Japanese National Railways",
+  "summary": "Japan's network of high-speed trains, the first of its kind, which opened between Tokyo and Osaka in 1964 just before the Olympic Games. It has an exceptional record for punctuality and safety.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "bullet train",
+    "high-speed rail in Japan",
+    "Sinkansen"
+  ],
+  "wikidata": "Q164338",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shinkansen (Q164338)",
+      "url": "https://www.wikidata.org/wiki/Q164338",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shinkansen",
+      "url": "https://en.wikipedia.org/wiki/Shinkansen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,67 @@
+{
+  "id": "kenya",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kenya",
+      "from": "1963"
+    }
+  ],
+  "summary": "An East African country that won independence from Britain in 1963 after the Mau Mau uprising. Its first president was Jomo Kenyatta, and it is known for safaris and long-distance runners.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Kenya",
+    "ke"
+  ],
+  "wikidata": "Q114",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kenya (Q114)",
+      "url": "https://www.wikidata.org/wiki/Q114",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kenya",
+      "url": "https://en.wikipedia.org/wiki/Kenya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

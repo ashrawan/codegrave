@@ -1,0 +1,94 @@
+{
+  "id": "thinkers-and-tinkers",
+  "name": "Thinkers and Tinkers: The Pioneers of Computing",
+  "description": "From a mathematician's mechanical dreams to wartime machines and the founders of the personal computer: the people who built computing, and their machines.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "engineering",
+    "firsts"
+  ],
+  "tags": [
+    "pioneers",
+    "turing",
+    "babbage",
+    "hopper",
+    "eniac",
+    "programming"
+  ],
+  "entries": [
+    "gottfried-leibniz",
+    "charles-babbage",
+    "ada-lovelace",
+    "analytical-engine",
+    "boolean-algebra",
+    "alan-turing",
+    "z1-computer",
+    "konrad-zuse",
+    "atanasoff-berry-computer",
+    "z3",
+    "colossus",
+    "harvard-mark-i",
+    "eniac",
+    "grace-hopper",
+    "manchester-baby",
+    "edsac",
+    "univac-i",
+    "whirlwind-i",
+    "john-backus",
+    "fortran",
+    "lisp",
+    "cobol",
+    "apollo-guidance-computer",
+    "margaret-hamilton",
+    "unix",
+    "dennis-ritchie",
+    "c",
+    "steve-wozniak",
+    "steve-jobs",
+    "bill-gates",
+    "bob-kahn",
+    "vint-cerf",
+    "tim-berners-lee",
+    "linus-torvalds",
+    "guido-van-rossum"
+  ],
+  "checkpoints": [
+    {
+      "id": "dreams-of-engines",
+      "name": "Dreams of engines",
+      "from": 1646,
+      "to": 1935,
+      "note": "Leibniz imagined calculating machines, Babbage designed an Analytical Engine, and Ada Lovelace saw that it could do more than arithmetic. Boole's algebra of logic would later underpin digital circuits."
+    },
+    {
+      "id": "war-and-first-programs",
+      "name": "War and the first programs",
+      "from": 1936,
+      "to": 1950,
+      "note": "Zuse's relay machines, Colossus at Bletchley Park, the Harvard Mark I and ENIAC arose under wartime pressure. Turing described what any computer can do, and Manchester and EDSAC ran stored programs."
+    },
+    {
+      "id": "big-machines-new-languages",
+      "name": "Big machines, new languages",
+      "from": 1951,
+      "to": 1970,
+      "note": "UNIVAC sold computers to business, Backus led Fortran, Hopper pushed toward COBOL, and McCarthy's LISP shaped AI. Hamilton wrote the software that helped land Apollo, run on its small guidance computer."
+    },
+    {
+      "id": "unix-and-the-personal-computer",
+      "name": "Unix and the personal computer",
+      "from": 1971,
+      "to": 1989,
+      "note": "Thompson and Ritchie made Unix and the C language, Wozniak and Jobs built the Apple, Gates wrote software for it all, and Kahn and Cerf designed the shared protocols of the network."
+    },
+    {
+      "id": "web-and-open-source",
+      "name": "The web and open source",
+      "from": 1990,
+      "to": 2026,
+      "note": "Berners-Lee gave the internet a web. Torvalds released Linux for anyone to use and improve, and van Rossum created Python, which became popular with beginners and scientists."
+    }
+  ],
+  "year": 1950
+}

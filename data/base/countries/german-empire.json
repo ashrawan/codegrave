@@ -1,0 +1,61 @@
+{
+  "id": "german-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "German Empire",
+      "from": "1871"
+    }
+  ],
+  "summary": "The German nation-state proclaimed at Versailles in 1871 under the Prussian king Wilhelm I and the chancellor Bismarck. It became an industrial and military power and fought the First World War.",
+  "labels": [
+    "lost",
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "German Reich",
+    "Imperial Germany",
+    "Second Reich",
+    "German Empire (1871-1918)"
+  ],
+  "wikidata": "Q43287",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Collapsed after defeat in the First World War and the abdication of Wilhelm II",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "weimar-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German Empire (Q43287)",
+      "url": "https://www.wikidata.org/wiki/Q43287",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German Empire",
+      "url": "https://en.wikipedia.org/wiki/German_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

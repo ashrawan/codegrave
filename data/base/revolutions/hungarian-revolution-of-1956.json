@@ -1,0 +1,56 @@
+{
+  "id": "hungarian-revolution-of-1956",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Hungarian Revolution of 1956",
+      "from": "1956"
+    }
+  ],
+  "summary": "A nationwide revolt against Hungary's Soviet-backed government that began with student protests in Budapest. Soviet tanks crushed it within weeks, and many Hungarians fled abroad.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Hungarian Uprising",
+    "1956 Hungarian Revolution"
+  ],
+  "wikidata": "Q164348",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-10-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1956-11-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hungarian Revolution of 1956 (Q164348)",
+      "url": "https://www.wikidata.org/wiki/Q164348",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hungarian Revolution of 1956",
+      "url": "https://en.wikipedia.org/wiki/Hungarian_Revolution_of_1956",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

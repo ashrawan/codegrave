@@ -1,0 +1,43 @@
+{
+  "id": "potato-blight",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Potato blight",
+      "from": "1845"
+    }
+  ],
+  "summary": "A water mould that rots potato plants, which destroyed Ireland's potato crop in 1845 and 1846. The failed harvest led to the Great Famine, with a million deaths and mass emigration.",
+  "labels": [
+    "food",
+    "environment"
+  ],
+  "wikidata": "Q149072",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Phytophthora infestans (Q149072)",
+      "url": "https://www.wikidata.org/wiki/Q149072",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Phytophthora infestans",
+      "url": "https://en.wikipedia.org/wiki/Phytophthora_infestans",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

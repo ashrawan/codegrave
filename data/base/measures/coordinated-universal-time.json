@@ -1,0 +1,49 @@
+{
+  "id": "coordinated-universal-time",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Coordinated Universal Time",
+      "from": "1960"
+    }
+  ],
+  "summary": "The international time standard on which the world's clocks are based, kept by atomic clocks and sometimes adjusted by a leap second to match the Earth's rotation. It replaced Greenwich Mean Time for most purposes.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "UTC",
+    "CUT",
+    "Universal Coordinated Time",
+    "Universal Time Coordinated",
+    "Etc/UTC"
+  ],
+  "wikidata": "Q1536",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: UTC (Q1536)",
+      "url": "https://www.wikidata.org/wiki/Q1536",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coordinated Universal Time",
+      "url": "https://en.wikipedia.org/wiki/Coordinated_Universal_Time",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

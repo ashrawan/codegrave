@@ -1,0 +1,58 @@
+{
+  "id": "nalanda",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Nalanda",
+      "from": "0427"
+    }
+  ],
+  "summary": "Great Buddhist monastery and centre of learning in what is now Bihar, India. Students came from across Asia, including the Chinese monk Xuanzang, to study there.",
+  "labels": [
+    "education",
+    "religion",
+    "lost"
+  ],
+  "aliases": [
+    "Mahavihara of Nalanda"
+  ],
+  "wikidata": "Q216243",
+  "events": [
+    {
+      "type": "born",
+      "date": "0427",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1197",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sacked by Turkic invaders under Bakhtiyar Khilji",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nalanda Mahavihara (Q216243)",
+      "url": "https://www.wikidata.org/wiki/Q216243",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nalanda mahavihara",
+      "url": "https://en.wikipedia.org/wiki/Nalanda_mahavihara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,71 @@
+{
+  "id": "croatia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Croatia",
+      "from": "1991"
+    }
+  ],
+  "summary": "A country on the Adriatic coast that declared independence from Yugoslavia in 1991. A war followed, ending in 1995, and Croatia joined the European Union in 2013.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Croatia",
+    "RH"
+  ],
+  "wikidata": "Q224",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Croatia (Q224)",
+      "url": "https://www.wikidata.org/wiki/Q224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Croatia",
+      "url": "https://en.wikipedia.org/wiki/Croatia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "vienna-philharmonic",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Vienna Philharmonic",
+      "from": "1842"
+    }
+  ],
+  "summary": "Orchestra of Vienna, founded by Otto Nicolai, and formed from players of the Vienna State Opera. It gives the New Year's Concert broadcast around the world and is run by its own musicians.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Wiener Philharmoniker",
+    "VPO",
+    "Vienna Philharmonic Orchestra"
+  ],
+  "wikidata": "Q154685",
+  "events": [
+    {
+      "type": "born",
+      "date": "1842",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vienna Philharmonic (Q154685)",
+      "url": "https://www.wikidata.org/wiki/Q154685",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vienna Philharmonic",
+      "url": "https://en.wikipedia.org/wiki/Vienna_Philharmonic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

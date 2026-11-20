@@ -1,0 +1,59 @@
+{
+  "id": "indira-gandhi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Indira Gandhi",
+      "from": "1917"
+    }
+  ],
+  "summary": "Daughter of Jawaharlal Nehru and prime minister of India for most of the years from 1966 to 1984. She led the country in the 1971 war with Pakistan, declared an Emergency in 1975, and was assassinated.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Indira Feroze Gandhi",
+    "Indira Priyadarshini Nehru",
+    "Indira Ghandi",
+    "Gandhi Indira",
+    "Indira Nehru"
+  ],
+  "wikidata": "Q1149",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-11-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1984-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "jawaharlal-nehru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Indira Gandhi (Q1149)",
+      "url": "https://www.wikidata.org/wiki/Q1149",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indira Gandhi",
+      "url": "https://en.wikipedia.org/wiki/Indira_Gandhi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

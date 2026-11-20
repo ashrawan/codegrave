@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-cannae",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Cannae",
+      "from": "-0216"
+    }
+  ],
+  "summary": "Hannibal's army surrounded and destroyed a much larger Roman force in southern Italy. It is one of the worst defeats in Roman history and is still studied in military schools for its tactics.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q179591",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0216-08-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0216-08-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "second-punic-war"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    },
+    {
+      "type": "related",
+      "to": "hannibal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Cannae (Q179591)",
+      "url": "https://www.wikidata.org/wiki/Q179591",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Cannae",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Cannae",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

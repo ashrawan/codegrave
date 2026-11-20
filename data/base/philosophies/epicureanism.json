@@ -1,0 +1,47 @@
+{
+  "id": "epicureanism",
+  "category": "philosophies",
+  "names": [
+    {
+      "name": "Epicureanism",
+      "from": "-0307"
+    }
+  ],
+  "summary": "A philosophy begun by Epicurus in Athens, which holds that the aim of life is lasting calm and freedom from fear, reached through modest pleasures and friendship. It taught that the world is made of atoms and the gods do not interfere.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q179541",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0307",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "epicurus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Epicureanism (Q179541)",
+      "url": "https://www.wikidata.org/wiki/Q179541",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Epicureanism",
+      "url": "https://en.wikipedia.org/wiki/Epicureanism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

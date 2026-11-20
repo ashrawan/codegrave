@@ -1,0 +1,76 @@
+{
+  "id": "american-revolutionary-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "American Revolutionary War",
+      "from": "1775"
+    }
+  ],
+  "summary": "The war in which thirteen British colonies in North America fought for independence from Britain. With French help they won, and the Treaty of Paris recognised the United States.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "American War of Independence",
+    "United States Revolutionary War",
+    "War of American Independence",
+    "Revolutionary War",
+    "U.S. Revolutionary War"
+  ],
+  "wikidata": "Q40949",
+  "events": [
+    {
+      "type": "born",
+      "date": "1775-04-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1783-09-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "american-revolution"
+    },
+    {
+      "type": "in",
+      "to": "mediterranean-sea"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "related",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: American Revolutionary War (Q40949)",
+      "url": "https://www.wikidata.org/wiki/Q40949",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: American Revolutionary War",
+      "url": "https://en.wikipedia.org/wiki/American_Revolutionary_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

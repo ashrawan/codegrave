@@ -1,0 +1,51 @@
+{
+  "id": "archimedes-screw",
+  "category": "farming",
+  "names": [
+    {
+      "name": "Archimedes' screw",
+      "from": "-0250"
+    }
+  ],
+  "maker": "Attributed to Archimedes",
+  "summary": "A screw inside a tube that lifts water when it is turned. Used to drain mines and fields and to irrigate land, the same design is still used in pumps and in moving grain.",
+  "labels": [
+    "engineering"
+  ],
+  "aliases": [
+    "water screw"
+  ],
+  "wikidata": "Q189155",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0250",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "archimedes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Archimedes' screw (Q189155)",
+      "url": "https://www.wikidata.org/wiki/Q189155",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Archimedes' screw",
+      "url": "https://en.wikipedia.org/wiki/Archimedes'_screw",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

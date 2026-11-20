@@ -1,0 +1,67 @@
+{
+  "id": "haiti",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Haiti",
+      "from": "1804"
+    }
+  ],
+  "summary": "The first country to be founded by an uprising of enslaved people, which won independence from France in 1804 under Toussaint Louverture and Jean-Jacques Dessalines.",
+  "labels": [
+    "independence",
+    "human-rights"
+  ],
+  "aliases": [
+    "Republic of Haiti",
+    "ht",
+    "Hayti",
+    "Haitian Republic",
+    "Ayiti"
+  ],
+  "wikidata": "Q790",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Haiti (Q790)",
+      "url": "https://www.wikidata.org/wiki/Q790",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Haiti",
+      "url": "https://en.wikipedia.org/wiki/Haiti",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

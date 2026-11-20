@@ -1,0 +1,50 @@
+{
+  "id": "basilosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Basilosaurus",
+      "from": "-41300000"
+    }
+  ],
+  "summary": "An early whale with a long, snake-like body and tiny hind legs that lived in warm seas. Its bones were once mistaken for those of a sea reptile, hence the name.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Zeuglodon"
+  ],
+  "wikidata": "Q134884",
+  "events": [
+    {
+      "type": "born",
+      "date": "-41300000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-33900000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Basilosaurus (Q134884)",
+      "url": "https://www.wikidata.org/wiki/Q134884",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Basilosaurus",
+      "url": "https://en.wikipedia.org/wiki/Basilosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": "battle-of-waterloo",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Waterloo",
+      "from": "1815"
+    }
+  ],
+  "summary": "Napoleon's last battle, in what is now Belgium, where his army was defeated by British-led forces under Wellington and the Prussians under Blücher. He was exiled to Saint Helena.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Waterloo"
+  ],
+  "wikidata": "Q48314",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815-06-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1815-06-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belgium"
+    },
+    {
+      "type": "related",
+      "to": "first-french-empire"
+    },
+    {
+      "type": "related",
+      "to": "prussia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Waterloo (Q48314)",
+      "url": "https://www.wikidata.org/wiki/Q48314",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Waterloo",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Waterloo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

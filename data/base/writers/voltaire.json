@@ -1,0 +1,85 @@
+{
+  "id": "voltaire",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Voltaire",
+      "from": "1694"
+    }
+  ],
+  "summary": "French writer who wrote plays, histories, satires and thousands of letters. He argued for freedom of speech and religious tolerance, mocked church and state abuses, and became the best known voice of the Enlightenment.",
+  "labels": [
+    "literature",
+    "philosophy"
+  ],
+  "wikidata": "Q9068",
+  "events": [
+    {
+      "type": "born",
+      "date": "1694-11-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1778-05-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    },
+    {
+      "type": "influenced_by",
+      "to": "cicero"
+    },
+    {
+      "type": "influenced_by",
+      "to": "confucius"
+    },
+    {
+      "type": "influenced_by",
+      "to": "miguel-de-cervantes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "william-shakespeare"
+    },
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "john-locke"
+    },
+    {
+      "type": "influenced_by",
+      "to": "isaac-newton"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Voltaire (Q9068)",
+      "url": "https://www.wikidata.org/wiki/Q9068",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Voltaire",
+      "url": "https://en.wikipedia.org/wiki/Voltaire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

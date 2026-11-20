@@ -1,0 +1,57 @@
+{
+  "id": "ediacaran",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Ediacaran",
+      "from": "-635000000"
+    }
+  ],
+  "summary": "The last period of the Proterozoic, about 635 to 539 million years ago, with the earliest large complex life: soft-bodied, frond-like and disc-shaped creatures known from fossil beds such as the Ediacara Hills of South Australia.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Ediacaran Period",
+    "Ediacaran System"
+  ],
+  "wikidata": "Q188654",
+  "events": [
+    {
+      "type": "born",
+      "date": "-635000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-538800000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ediacaran (Q188654)",
+      "url": "https://www.wikidata.org/wiki/Q188654",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ediacaran",
+      "url": "https://en.wikipedia.org/wiki/Ediacaran",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "pepper-robot",
+  "category": "robots",
+  "names": [
+    {
+      "name": "Pepper",
+      "from": "2014"
+    }
+  ],
+  "maker": "SoftBank Robotics",
+  "summary": "Humanoid robot on wheels with a chest screen, made to talk with people in shops, banks and homes. It was sold in Japan and abroad until its maker paused production.",
+  "labels": [
+    "engineering",
+    "business"
+  ],
+  "wikidata": "Q17190252",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-06-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Production was paused because of weak demand",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pepper (Q17190252)",
+      "url": "https://www.wikidata.org/wiki/Q17190252",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pepper (robot)",
+      "url": "https://en.wikipedia.org/wiki/Pepper_(robot)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

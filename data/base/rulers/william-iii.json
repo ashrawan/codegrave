@@ -1,0 +1,60 @@
+{
+  "id": "william-iii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "William III of England",
+      "from": "1650"
+    }
+  ],
+  "summary": "Dutch prince who was invited to take the English crown in 1688 and ruled with his wife Mary II. He led armies against Louis XIV and accepted a Bill of Rights limiting royal power.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "William II and III",
+    "William II of Scotland",
+    "William III and II",
+    "King William",
+    "William"
+  ],
+  "wikidata": "Q129987",
+  "events": [
+    {
+      "type": "born",
+      "date": "1650-11-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1702-03-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "mary-ii"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: William III of England (Q129987)",
+      "url": "https://www.wikidata.org/wiki/Q129987",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: William III of England",
+      "url": "https://en.wikipedia.org/wiki/William_III_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

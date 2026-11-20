@@ -1,0 +1,48 @@
+{
+  "id": "domestic-cat",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Domestic cat",
+      "from": "-8000"
+    }
+  ],
+  "summary": "A small hunting animal that began living near farmers in the Near East when grain stores drew mice. Cats were kept in Cyprus and Egypt thousands of years ago and later spread worldwide.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "house cat",
+    "housecat",
+    "puss",
+    "pet cat"
+  ],
+  "wikidata": "Q146",
+  "events": [
+    {
+      "type": "born",
+      "date": "-8000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cat (Q146)",
+      "url": "https://www.wikidata.org/wiki/Q146",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cat",
+      "url": "https://en.wikipedia.org/wiki/Cat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

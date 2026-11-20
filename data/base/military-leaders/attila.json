@@ -1,0 +1,52 @@
+{
+  "id": "attila",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Attila",
+      "from": "0400"
+    }
+  ],
+  "summary": "Ruler of the Huns who led raids on the Eastern and Western Roman Empires. He invaded Gaul and Italy in the 450s and died in 453 on his wedding night. His birth year is approximate.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "the Hun Attila",
+    "King of the Huns Attila",
+    "Attyla"
+  ],
+  "wikidata": "Q36724",
+  "events": [
+    {
+      "type": "born",
+      "date": "0400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0453",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Attila (Q36724)",
+      "url": "https://www.wikidata.org/wiki/Q36724",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Attila",
+      "url": "https://en.wikipedia.org/wiki/Attila",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

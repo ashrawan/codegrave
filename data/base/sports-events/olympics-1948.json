@@ -1,0 +1,60 @@
+{
+  "id": "olympics-1948",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1948 Summer Olympics",
+      "from": "1948"
+    }
+  ],
+  "summary": "The first Games after the Second World War were held in a damaged and rationed London with few new venues. Germany and Japan were not invited, and the event was nicknamed the Austerity Games.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Games of the XIV Olympiad",
+    "London 1948"
+  ],
+  "wikidata": "Q8403",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-07-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "old-wembley-stadium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1948 Summer Olympics (Q8403)",
+      "url": "https://www.wikidata.org/wiki/Q8403",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1948 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1948_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

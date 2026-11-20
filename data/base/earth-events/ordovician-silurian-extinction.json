@@ -1,0 +1,62 @@
+{
+  "id": "ordovician-silurian-extinction",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Ordovician-Silurian Extinction",
+      "from": "-443800000"
+    }
+  ],
+  "summary": "The first of the five big mass extinctions, about 445 to 443 million years ago, which killed most of the species in the sea. A glaciation that lowered sea levels, followed by warming, is the usual explanation.",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "aliases": [
+    "Ordovician–Silurian extinction event",
+    "LOME",
+    "end-Ordovician mass extinction"
+  ],
+  "wikidata": "Q1065985",
+  "events": [
+    {
+      "type": "born",
+      "date": "-443800000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-443800000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "ordovician"
+    },
+    {
+      "type": "related",
+      "to": "silurian"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ordovician–Silurian extinction event (Q1065985)",
+      "url": "https://www.wikidata.org/wiki/Q1065985",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Late Ordovician mass extinction",
+      "url": "https://en.wikipedia.org/wiki/Late_Ordovician_mass_extinction",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

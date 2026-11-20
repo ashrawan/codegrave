@@ -1,0 +1,60 @@
+{
+  "id": "zimbabwean-dollar",
+  "category": "money",
+  "names": [
+    {
+      "name": "Zimbabwean dollar",
+      "from": "1980"
+    }
+  ],
+  "summary": "The currency of Zimbabwe, which suffered some of the worst inflation in history in the 2000s. Notes with ever larger values were printed until they lost meaning.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "ZWD",
+    "ZWN",
+    "ZWR",
+    "ZWL",
+    "Zimdollar"
+  ],
+  "wikidata": "Q182803",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-04-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-04-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned after hyperinflation, and replaced by foreign currencies",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zimbabwean dollar (Q182803)",
+      "url": "https://www.wikidata.org/wiki/Q182803",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zimbabwean dollar (1980–2009)",
+      "url": "https://en.wikipedia.org/wiki/Zimbabwean_dollar_(1980%E2%80%932009)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

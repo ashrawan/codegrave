@@ -1,0 +1,63 @@
+{
+  "id": "carthage",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Carthage",
+      "from": "-0814"
+    }
+  ],
+  "summary": "Phoenician colony on the coast of what is now Tunisia that grew into a rich sea power. It fought three wars against Rome, the last of which ended with the city being razed and its people sold or scattered.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Carthago",
+    "Colonia Julia Carthago",
+    "Mint of Carthage"
+  ],
+  "wikidata": "Q6343",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0814",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0146",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by Rome at the end of the Third Punic War",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "roman-empire"
+    },
+    {
+      "type": "in",
+      "to": "byzantine-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carthage (Q6343)",
+      "url": "https://www.wikidata.org/wiki/Q6343",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carthage",
+      "url": "https://en.wikipedia.org/wiki/Carthage",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

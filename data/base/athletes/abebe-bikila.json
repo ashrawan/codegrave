@@ -1,0 +1,60 @@
+{
+  "id": "abebe-bikila",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Abebe Bikila",
+      "from": "1932"
+    }
+  ],
+  "summary": "Ethiopian runner who won the marathon at the 1960 Rome Olympics running barefoot and won it again in Tokyo in 1964. He was the first African to win an Olympic gold medal in the event.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q52596",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-08-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-10-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-1968"
+    },
+    {
+      "type": "related",
+      "to": "olympics-1964"
+    },
+    {
+      "type": "related",
+      "to": "olympics-1960"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abebe Bikila (Q52596)",
+      "url": "https://www.wikidata.org/wiki/Q52596",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abebe Bikila",
+      "url": "https://en.wikipedia.org/wiki/Abebe_Bikila",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

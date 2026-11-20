@@ -1,0 +1,64 @@
+{
+  "id": "saudi-arabia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Saudi Arabia",
+      "from": "1932"
+    }
+  ],
+  "summary": "A kingdom that covers most of the Arabian Peninsula, founded by Ibn Saud in 1932. It holds the holy cities of Mecca and Medina and has some of the largest oil reserves in the world.",
+  "labels": [
+    "religion",
+    "economics"
+  ],
+  "aliases": [
+    "Kingdom of Saudi Arabia",
+    "Saudi"
+  ],
+  "wikidata": "Q851",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saudi Arabia (Q851)",
+      "url": "https://www.wikidata.org/wiki/Q851",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saudi Arabia",
+      "url": "https://en.wikipedia.org/wiki/Saudi_Arabia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

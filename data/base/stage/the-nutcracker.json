@@ -1,0 +1,50 @@
+{
+  "id": "the-nutcracker",
+  "category": "stage",
+  "names": [
+    {
+      "name": "The Nutcracker",
+      "from": "1892"
+    }
+  ],
+  "summary": "Ballet with music by Tchaikovsky based on a tale by E. T. A. Hoffmann, about a girl who is given a toy nutcracker at Christmas. It is performed by ballet companies around the world each December.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Nutcracker"
+  ],
+  "wikidata": "Q193705",
+  "events": [
+    {
+      "type": "born",
+      "date": "1892",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "pyotr-ilyich-tchaikovsky"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Nutcracker (Q193705)",
+      "url": "https://www.wikidata.org/wiki/Q193705",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Nutcracker",
+      "url": "https://en.wikipedia.org/wiki/The_Nutcracker",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

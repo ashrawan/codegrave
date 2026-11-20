@@ -1,0 +1,58 @@
+{
+  "id": "republican-party-us",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Republican Party (United States)",
+      "from": "1854"
+    }
+  ],
+  "summary": "American political party founded to oppose the spread of slavery into new territories. Abraham Lincoln was its first president, and today it is one of the two main parties of the United States.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Republican Party",
+    "Republican Party of the United States",
+    "Republicans",
+    "United States Republican Party",
+    "American Republican Party"
+  ],
+  "wikidata": "Q29468",
+  "events": [
+    {
+      "type": "born",
+      "date": "1854-03-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Republican Party (Q29468)",
+      "url": "https://www.wikidata.org/wiki/Q29468",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Republican Party (United States)",
+      "url": "https://en.wikipedia.org/wiki/Republican_Party_(United_States)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,46 @@
+{
+  "id": "chrome-os",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "ChromeOS",
+      "from": "2012"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Google's light operating system built around the Chrome browser, which runs on Chromebooks. It updates itself, starts quickly and is widely used in schools.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Google Chrome OS"
+  ],
+  "wikidata": "Q79531",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-06-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: ChromeOS (Q79531)",
+      "url": "https://www.wikidata.org/wiki/Q79531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: ChromeOS",
+      "url": "https://en.wikipedia.org/wiki/ChromeOS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

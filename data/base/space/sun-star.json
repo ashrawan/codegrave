@@ -1,0 +1,48 @@
+{
+  "id": "sun-star",
+  "category": "space",
+  "names": [
+    {
+      "name": "The Sun",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The star at the centre of the solar system, a ball of hot gas that makes energy by fusing hydrogen into helium. Its light drives Earth's weather and life. It is about halfway through its life and will one day swell into a red giant.",
+  "labels": [
+    "astronomy",
+    "physics"
+  ],
+  "wikidata": "Q525",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "solar-system"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sun (Q525)",
+      "url": "https://www.wikidata.org/wiki/Q525",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sun",
+      "url": "https://en.wikipedia.org/wiki/Sun",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "zanclean-flood",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Zanclean Flood",
+      "from": "-5330000"
+    }
+  ],
+  "summary": "A proposed enormous flood about 5.3 million years ago, when the Atlantic broke through at the Strait of Gibraltar and refilled the dried Mediterranean basin, perhaps within months to a couple of years.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q3612703",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5330000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-5330000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mediterranean-sea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zanclean flood (Q3612703)",
+      "url": "https://www.wikidata.org/wiki/Q3612703",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zanclean flood",
+      "url": "https://en.wikipedia.org/wiki/Zanclean_flood",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

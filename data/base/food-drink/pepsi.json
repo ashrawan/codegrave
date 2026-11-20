@@ -1,0 +1,51 @@
+{
+  "id": "pepsi",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Pepsi",
+      "from": "1893"
+    }
+  ],
+  "summary": "A cola drink first made by a pharmacist in North Carolina and named Pepsi-Cola in 1898. It became the main rival of Coca-Cola and is sold in nearly every country.",
+  "labels": [
+    "food",
+    "business"
+  ],
+  "aliases": [
+    "Brad's Drink"
+  ],
+  "wikidata": "Q47719",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pepsi (Q47719)",
+      "url": "https://www.wikidata.org/wiki/Q47719",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pepsi",
+      "url": "https://en.wikipedia.org/wiki/Pepsi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

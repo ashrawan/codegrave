@@ -1,0 +1,59 @@
+{
+  "id": "bhagavad-gita",
+  "category": "books",
+  "names": [
+    {
+      "name": "Bhagavad Gita",
+      "from": "-0200"
+    }
+  ],
+  "summary": "A conversation on a battlefield between the prince Arjuna and Krishna, set inside the Mahabharata. It discusses duty, action and devotion and is one of the most widely read Hindu scriptures.",
+  "labels": [
+    "religion",
+    "philosophy"
+  ],
+  "aliases": [
+    "Gita",
+    "Bhagavadgita",
+    "Isvara Gita",
+    "Ananta Gita",
+    "Hari Gita"
+  ],
+  "wikidata": "Q46802",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "mahabharata"
+    },
+    {
+      "type": "about",
+      "to": "hinduism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bhagavad Gita (Q46802)",
+      "url": "https://www.wikidata.org/wiki/Q46802",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bhagavad Gita",
+      "url": "https://en.wikipedia.org/wiki/Bhagavad_Gita",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "paul-the-apostle",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Paul the Apostle",
+      "from": "0005"
+    }
+  ],
+  "summary": "Jewish-born Roman citizen who became a leading missionary of early Christianity, founded churches around the Mediterranean and wrote letters now in the New Testament. Tradition says he was put to death in Rome.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Paulus of Tarsus",
+    "Šā'ûl",
+    "St. Paul",
+    "Paulos",
+    "Apostle Paul"
+  ],
+  "wikidata": "Q9200",
+  "events": [
+    {
+      "type": "born",
+      "date": "0005",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0064",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "jesus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paul the Apostle (Q9200)",
+      "url": "https://www.wikidata.org/wiki/Q9200",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paul the Apostle",
+      "url": "https://en.wikipedia.org/wiki/Paul_the_Apostle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

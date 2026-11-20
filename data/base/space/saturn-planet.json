@@ -1,0 +1,46 @@
+{
+  "id": "saturn-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Saturn",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The second largest planet, a gas giant famous for its broad rings made mostly of pieces of ice. It has scores of moons, including Titan, and is so light for its size that it is less dense than water.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Sol VI",
+    "Sol 6"
+  ],
+  "wikidata": "Q193",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Saturn (Q193)",
+      "url": "https://www.wikidata.org/wiki/Q193",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saturn",
+      "url": "https://en.wikipedia.org/wiki/Saturn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

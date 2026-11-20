@@ -1,0 +1,68 @@
+{
+  "id": "beagle-voyage",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Voyage of HMS Beagle",
+      "from": "1831"
+    }
+  ],
+  "summary": "A British survey ship sailed around the world, charting coasts of South America and the Pacific. Its young naturalist Charles Darwin gathered the observations that later led to his theory of evolution.",
+  "labels": [
+    "exploration",
+    "biology"
+  ],
+  "aliases": [
+    "voyage of the Beagle",
+    "second voyage of the Beagle",
+    "second Beagle expedition",
+    "Beagle expedition",
+    "HMS Beagle expedition"
+  ],
+  "wikidata": "Q1564366",
+  "events": [
+    {
+      "type": "born",
+      "date": "1831-12-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1836-10-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    },
+    {
+      "type": "in",
+      "to": "cape-colony"
+    },
+    {
+      "type": "related",
+      "to": "charles-darwin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second voyage of HMS Beagle (Q1564366)",
+      "url": "https://www.wikidata.org/wiki/Q1564366",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second voyage of HMS Beagle",
+      "url": "https://en.wikipedia.org/wiki/Second_voyage_of_HMS_Beagle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "rome",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Rome",
+      "from": "-0753"
+    }
+  ],
+  "summary": "City on the Tiber that grew from a small settlement into the capital of a Mediterranean empire. It later became the seat of the Catholic papacy and is today the capital of Italy, with ruins and churches from every age.",
+  "labels": [
+    "politics",
+    "architecture"
+  ],
+  "aliases": [
+    "The Eternal City",
+    "Rome, Italy",
+    "City of Seven Hills",
+    "Eternal City",
+    "The City of Marble"
+  ],
+  "wikidata": "Q220",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0753",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "papal-states"
+    },
+    {
+      "type": "in",
+      "to": "roman-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rome (Q220)",
+      "url": "https://www.wikidata.org/wiki/Q220",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rome",
+      "url": "https://en.wikipedia.org/wiki/Rome",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

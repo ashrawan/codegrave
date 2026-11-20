@@ -1,0 +1,65 @@
+{
+  "id": "troy",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Troy",
+      "from": "-3000"
+    }
+  ],
+  "summary": "Fortified city in north-western Anatolia, setting of the Trojan War in Homer's poems. Archaeologists found a mound with many layers of settlement there, built one on top of another over thousands of years.",
+  "labels": [
+    "lost",
+    "literature"
+  ],
+  "aliases": [
+    "Ancient Troy",
+    "City of Troy",
+    "Ilion",
+    "Ilium",
+    "Teukroi"
+  ],
+  "wikidata": "Q22647",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Shrank and was abandoned in late antiquity",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    },
+    {
+      "type": "in",
+      "to": "ottoman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Troy (Q22647)",
+      "url": "https://www.wikidata.org/wiki/Q22647",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Troy",
+      "url": "https://en.wikipedia.org/wiki/Troy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

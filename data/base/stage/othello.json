@@ -1,0 +1,52 @@
+{
+  "id": "othello",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Othello",
+      "from": "1604"
+    }
+  ],
+  "summary": "Tragedy by William Shakespeare about a Moorish general in Venice, destroyed by the lies of his ensign Iago, who makes him falsely believe his wife is unfaithful.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Othello, the Moor of Venice",
+    "The Tragedy of Othello",
+    "Tragedy of Othello"
+  ],
+  "wikidata": "Q26833",
+  "events": [
+    {
+      "type": "born",
+      "date": "1604",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Othello (Q26833)",
+      "url": "https://www.wikidata.org/wiki/Q26833",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Othello",
+      "url": "https://en.wikipedia.org/wiki/Othello",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

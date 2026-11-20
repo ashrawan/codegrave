@@ -1,0 +1,91 @@
+{
+  "id": "all-the-worlds-a-stage",
+  "name": "All the World's a Stage",
+  "description": "From Greek tragedy and Shakespeare's Globe to opera houses, Swan Lake and Broadway: how plays, operas and dances became the world's great live shows.",
+  "category": "arts",
+  "labels": [
+    "literature",
+    "music"
+  ],
+  "tags": [
+    "theatre",
+    "shakespeare",
+    "opera",
+    "ballet",
+    "drama",
+    "plays",
+    "musical"
+  ],
+  "entries": [
+    "oedipus-rex",
+    "antigone",
+    "abhijnanashakuntalam",
+    "noh",
+    "william-shakespeare",
+    "romeo-and-juliet",
+    "a-midsummer-nights-dream",
+    "globe-theatre",
+    "hamlet",
+    "kabuki",
+    "othello",
+    "macbeth",
+    "king-lear",
+    "the-tempest",
+    "first-folio",
+    "tartuffe",
+    "the-marriage-of-figaro",
+    "don-giovanni",
+    "the-magic-flute",
+    "la-traviata",
+    "carmen",
+    "the-ring-cycle",
+    "swan-lake",
+    "a-dolls-house",
+    "the-nutcracker",
+    "the-importance-of-being-earnest",
+    "rite-of-spring",
+    "death-of-a-salesman",
+    "the-mousetrap",
+    "waiting-for-godot",
+    "les-miserables-musical",
+    "the-phantom-of-the-opera-musical",
+    "hamilton-musical"
+  ],
+  "checkpoints": [
+    {
+      "id": "greek-theatre",
+      "name": "Greek theatre",
+      "from": -450,
+      "to": -400,
+      "note": "In Athens, playwrights such as Sophocles wrote tragedies for religious festivals, setting the questions of fate, law and guilt that later drama kept asking."
+    },
+    {
+      "id": "before-the-globe",
+      "name": "Before the Globe",
+      "from": 400,
+      "to": 1594,
+      "note": "Sanskrit court plays and Japanese Noh show that theatre grew in many places. In England a glover's son named Shakespeare was born in 1564."
+    },
+    {
+      "id": "shakespeares-london",
+      "name": "Shakespeare's London",
+      "from": 1595,
+      "to": 1623,
+      "note": "Across a few busy years Shakespeare's company staged tragedies, comedies and romances at the Globe, while kabuki began in Japan. Friends later collected the plays in the First Folio."
+    },
+    {
+      "id": "opera-and-ballet",
+      "name": "Opera and ballet",
+      "from": 1624,
+      "to": 1900,
+      "note": "Moliere's comedies, Mozart's operas, Verdi and Wagner, Tchaikovsky's ballets and Ibsen's realistic plays filled the grand theatres of the nineteenth century."
+    },
+    {
+      "id": "modern-stage",
+      "name": "The modern stage",
+      "from": 1901,
+      "to": 2026,
+      "note": "Stravinsky's riot, Beckett's waiting men, the longest-running murder mystery and big musicals from Paris to Broadway changed what a theatre could be."
+    }
+  ]
+}

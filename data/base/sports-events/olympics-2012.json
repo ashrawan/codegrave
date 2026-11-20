@@ -1,0 +1,63 @@
+{
+  "id": "olympics-2012",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2012 Summer Olympics",
+      "from": "2012"
+    }
+  ],
+  "summary": "London became the first city to host the Summer Games three times. For the first time every nation sent women athletes, and women's boxing was added to the programme.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "London 2012",
+    "Games of the XXX Olympiad",
+    "2012 Olympics",
+    "2012 London Olympics",
+    "London Olympics"
+  ],
+  "wikidata": "Q8577",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-07-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012-08-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2012 Summer Olympics (Q8577)",
+      "url": "https://www.wikidata.org/wiki/Q8577",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2012 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/2012_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

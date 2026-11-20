@@ -1,0 +1,55 @@
+{
+  "id": "hinduism",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Hinduism",
+      "from": "-1500"
+    }
+  ],
+  "summary": "A family of traditions that grew out of South Asia over thousands of years, with many gods, shared ideas of duty, rebirth and liberation, and sacred texts such as the Vedas and the Bhagavad Gita. It is the main religion of India and Nepal.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Hindu Dharma",
+    "Hindu religion"
+  ],
+  "wikidata": "Q9089",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "vedic-religion"
+    },
+    {
+      "type": "related",
+      "to": "indus-river"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hinduism (Q9089)",
+      "url": "https://www.wikidata.org/wiki/Q9089",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hinduism",
+      "url": "https://en.wikipedia.org/wiki/Hinduism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

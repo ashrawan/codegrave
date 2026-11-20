@@ -1,0 +1,63 @@
+{
+  "id": "battle-of-talas",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Talas",
+      "from": "0751"
+    }
+  ],
+  "summary": "Clash beside the Talas River in Central Asia between a Tang Chinese army and the Abbasid Caliphate with its allies. Tang influence in the west faded afterwards, and tradition says papermaking passed to the Islamic world.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Artlakh"
+  ],
+  "wikidata": "Q492415",
+  "events": [
+    {
+      "type": "born",
+      "date": "0751-05",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "0751-09",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kazakhstan"
+    },
+    {
+      "type": "related",
+      "to": "abbasid-caliphate"
+    },
+    {
+      "type": "related",
+      "to": "tang-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Talas (Q492415)",
+      "url": "https://www.wikidata.org/wiki/Q492415",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Talas",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Talas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

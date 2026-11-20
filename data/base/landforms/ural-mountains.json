@@ -1,0 +1,55 @@
+{
+  "id": "ural-mountains",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Ural Mountains",
+      "from": "-320000000"
+    }
+  ],
+  "summary": "A long, low mountain range running north to south through Russia and Kazakhstan, traditionally the boundary between Europe and Asia. It rose as continents collided about 300 million years ago and is among the oldest ranges.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Urals",
+    "the Urals"
+  ],
+  "wikidata": "Q35600",
+  "events": [
+    {
+      "type": "born",
+      "date": "-320000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ural Mountains (Q35600)",
+      "url": "https://www.wikidata.org/wiki/Q35600",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ural Mountains",
+      "url": "https://en.wikipedia.org/wiki/Ural_Mountains",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

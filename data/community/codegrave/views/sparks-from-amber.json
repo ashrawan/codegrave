@@ -1,0 +1,85 @@
+{
+  "id": "sparks-from-amber",
+  "name": "Sparks from Amber: How Electricity Lit the World",
+  "description": "Rubbed amber, kites in thunderstorms, rival currents and giant dams: the long road from a curious spark to the power grid that runs everything.",
+  "category": "technology",
+  "labels": [
+    "physics",
+    "energy",
+    "engineering"
+  ],
+  "tags": [
+    "electricity",
+    "power",
+    "edison",
+    "tesla",
+    "grid",
+    "battery"
+  ],
+  "entries": [
+    "electricity",
+    "thales",
+    "benjamin-franklin",
+    "alessandro-volta",
+    "voltaic-pile",
+    "michael-faraday",
+    "electric-motor",
+    "electrical-telegraph",
+    "samuel-morse",
+    "transatlantic-telegraph-cable",
+    "maxwells-equations",
+    "alexander-graham-bell",
+    "telephone",
+    "thomas-edison",
+    "incandescent-light-bulb",
+    "hydroelectricity",
+    "pearl-street-station",
+    "steam-turbine",
+    "wind-turbine",
+    "nikola-tesla",
+    "war-of-the-currents",
+    "guglielmo-marconi",
+    "hoover-dam",
+    "solar-cell",
+    "lithium-ion-battery",
+    "three-gorges-dam"
+  ],
+  "checkpoints": [
+    {
+      "id": "amber-and-lightning",
+      "name": "Amber and lightning",
+      "from": -600,
+      "to": 1799,
+      "note": "Thales is said to have noticed that rubbed amber attracts feathers. Two thousand years later Franklin showed that lightning is the same force and invented the lightning rod, while Volta's pile gave the first steady current."
+    },
+    {
+      "id": "batteries-magnets-wires",
+      "name": "Batteries, magnets and wires",
+      "from": 1800,
+      "to": 1865,
+      "note": "Faraday found that magnets can make current and so pointed to motors and generators. The telegraph and Morse's code sent signals along wires, a cable crossed the Atlantic, and Maxwell tied electricity and light together."
+    },
+    {
+      "id": "lights-and-currents",
+      "name": "Lights and currents",
+      "from": 1866,
+      "to": 1900,
+      "note": "Bell's telephone and Edison's lamp were followed by the first power stations. Edison backed direct current, Tesla and Westinghouse backed alternating current, and the war of the currents was decided by distance."
+    },
+    {
+      "id": "the-grid",
+      "name": "The grid",
+      "from": 1901,
+      "to": 1960,
+      "note": "Marconi's radio and big dams such as Hoover tied whole countries to electric power. Steam turbines and wires carried it far, and the first solar cell in 1954 hinted at a different source."
+    },
+    {
+      "id": "new-sources",
+      "name": "New sources",
+      "from": 1961,
+      "to": 2026,
+      "note": "Batteries made lithium-ion packs for phones and cars, wind and sunlight began to feed grids, and projects such as the Three Gorges Dam show electricity still shaping rivers and nations."
+    }
+  ],
+  "year": 1882
+}

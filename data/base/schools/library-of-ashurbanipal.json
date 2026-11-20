@@ -1,0 +1,59 @@
+{
+  "id": "library-of-ashurbanipal",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Library of Ashurbanipal",
+      "from": "-0668"
+    }
+  ],
+  "summary": "Royal collection of clay tablets at Nineveh, gathered by the Assyrian king Ashurbanipal. It held works such as the Epic of Gilgamesh, which survived because the burned city buried the tablets.",
+  "labels": [
+    "education",
+    "lost",
+    "literature"
+  ],
+  "wikidata": "Q856544",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0668",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0612",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost when Nineveh was sacked by Babylonians and Medes",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nineveh"
+    },
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Library of Ashurbanipal (Q856544)",
+      "url": "https://www.wikidata.org/wiki/Q856544",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Library of Ashurbanipal",
+      "url": "https://en.wikipedia.org/wiki/Library_of_Ashurbanipal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

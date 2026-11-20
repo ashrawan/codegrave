@@ -1,0 +1,53 @@
+{
+  "id": "sikhism",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Sikhism",
+      "from": "1499"
+    }
+  ],
+  "summary": "A monotheistic religion founded in the Punjab by Guru Nanak and developed by nine more gurus. Sikhs follow the Guru Granth Sahib, stress honest work, sharing and equality, and gather for worship and communal meals in gurdwaras.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Sikhi",
+    "Sikh",
+    "Gurmat",
+    "Nanakism"
+  ],
+  "wikidata": "Q9316",
+  "events": [
+    {
+      "type": "born",
+      "date": "1499",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "guru-nanak"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sikhism (Q9316)",
+      "url": "https://www.wikidata.org/wiki/Q9316",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sikhism",
+      "url": "https://en.wikipedia.org/wiki/Sikhism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tuatara",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Tuatara",
+      "from": "-240000000"
+    }
+  ],
+  "summary": "A lizard-like reptile that survives only on islands of New Zealand. It belongs to an ancient group that was around in the age of the dinosaurs, and it grows and lives very slowly.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Sphenodon"
+  ],
+  "wikidata": "Q163283",
+  "events": [
+    {
+      "type": "born",
+      "date": "-240000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: tuatara (Q163283)",
+      "url": "https://www.wikidata.org/wiki/Q163283",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tuatara",
+      "url": "https://en.wikipedia.org/wiki/Tuatara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

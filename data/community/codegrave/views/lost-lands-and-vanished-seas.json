@@ -1,0 +1,75 @@
+{
+  "id": "lost-lands-and-vanished-seas",
+  "name": "Drowned Lands and Vanished Seas",
+  "description": "Oceans that closed, lakes that drained and lands that sank: the lost geography of Earth, from ancient supercontinents to Doggerland and the shrinking Aral Sea.",
+  "category": "earth-space",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "tags": [
+    "lost lands",
+    "vanished sea",
+    "doggerland",
+    "continents",
+    "ancient oceans",
+    "lakes"
+  ],
+  "entries": [
+    "columbia-supercontinent",
+    "rodinia",
+    "pannotia",
+    "iapetus-ocean",
+    "gondwana",
+    "rheic-ocean",
+    "pangaea",
+    "tethys-ocean",
+    "western-interior-seaway",
+    "zealandia",
+    "mediterranean-sea",
+    "messinian-salinity-crisis",
+    "zanclean-flood",
+    "lake-pannon",
+    "lake-bonneville",
+    "glacial-lake-missoula",
+    "lake-agassiz",
+    "beringia",
+    "doggerland",
+    "storegga-slide",
+    "mount-mazama",
+    "vulcan-planet",
+    "aral-sea",
+    "alfred-wegener"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-supercontinents",
+      "name": "Continents come and go",
+      "from": -1800000000,
+      "to": -300000000,
+      "note": "Rodinia, Pannotia and Gondwana gather and break up as oceans such as the Iapetus and the Rheic open and then close for ever."
+    },
+    {
+      "id": "mesozoic-seas",
+      "name": "The seas of the dinosaurs",
+      "from": -299999999,
+      "to": -600000,
+      "note": "Pangaea splits, Tethys closes, a shallow seaway divides North America, the Mediterranean dries and refills, and Lake Pannon fills up with mud."
+    },
+    {
+      "id": "ice-age-lakes",
+      "name": "Ice-age lands and lakes",
+      "from": -599999,
+      "to": -5000,
+      "note": "As the last ice age ends, giant lakes burst their dams, rising seas flood Doggerland, and a landslide off Norway sends a tsunami across the North Sea."
+    },
+    {
+      "id": "human-made-loss",
+      "name": "Seas we have lost",
+      "from": -4999,
+      "to": 2026,
+      "note": "In the last century a sea has been drained by human hand: the Aral Sea shrank to a fraction of its size when rivers were diverted for farming."
+    }
+  ],
+  "year": -6000
+}

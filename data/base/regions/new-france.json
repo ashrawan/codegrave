@@ -1,0 +1,62 @@
+{
+  "id": "new-france",
+  "category": "regions",
+  "names": [
+    {
+      "name": "New France",
+      "from": "1534"
+    }
+  ],
+  "summary": "The French colonies in North America, stretching from Quebec down the Mississippi River to Louisiana. Their economy depended on the fur trade and alliances with many Native peoples.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Vice-royauté de Nouvelle-France",
+    "Viceroyalty of New France"
+  ],
+  "wikidata": "Q170604",
+  "events": [
+    {
+      "type": "born",
+      "date": "1534",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1763",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ceded to Britain and Spain after the Seven Years' War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "french-colonial-empire"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New France (Q170604)",
+      "url": "https://www.wikidata.org/wiki/Q170604",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New France",
+      "url": "https://en.wikipedia.org/wiki/New_France",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

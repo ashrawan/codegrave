@@ -1,0 +1,42 @@
+{
+  "id": "death-cap",
+  "category": "plants-fungi",
+  "names": [
+    {
+      "name": "Death cap",
+      "from": "-30000000"
+    }
+  ],
+  "summary": "A pale mushroom that causes most deadly mushroom poisonings in the world. It looks much like edible kinds and its toxins damage the liver, with no way to cook them out.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q188643",
+  "events": [
+    {
+      "type": "born",
+      "date": "-30000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Amanita phalloides (Q188643)",
+      "url": "https://www.wikidata.org/wiki/Q188643",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amanita phalloides",
+      "url": "https://en.wikipedia.org/wiki/Amanita_phalloides",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

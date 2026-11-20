@@ -1,0 +1,66 @@
+{
+  "id": "united-kingdom",
+  "category": "countries",
+  "names": [
+    {
+      "name": "United Kingdom",
+      "from": "1801"
+    }
+  ],
+  "summary": "The island state made of England, Scotland, Wales and Northern Ireland. Its present form dates from the union with Ireland in 1801, and it was the centre of the largest empire in history.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "U K",
+    "G B",
+    "Great Britain",
+    "Great Britain and Northern Ireland",
+    "the UK"
+  ],
+  "wikidata": "Q145",
+  "events": [
+    {
+      "type": "born",
+      "date": "1801",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "part_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Kingdom (Q145)",
+      "url": "https://www.wikidata.org/wiki/Q145",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Kingdom",
+      "url": "https://en.wikipedia.org/wiki/United_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,68 @@
+{
+  "id": "pele",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Pelé",
+      "from": "1940"
+    }
+  ],
+  "summary": "Brazilian footballer who played in the 1958 World Cup at seventeen and won the tournament three times with Brazil. He scored well over a thousand goals in his career, mostly for Santos.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Edson Arantes do Nascimento",
+    "O Rei"
+  ],
+  "wikidata": "Q12897",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-10-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-12-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "thomas-edison"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-1970"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-1966"
+    },
+    {
+      "type": "related",
+      "to": "world-cup-1958"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pelé (Q12897)",
+      "url": "https://www.wikidata.org/wiki/Q12897",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pelé",
+      "url": "https://en.wikipedia.org/wiki/Pel%C3%A9",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

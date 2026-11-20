@@ -1,0 +1,56 @@
+{
+  "id": "frederic-chopin",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Frédéric Chopin",
+      "from": "1810"
+    }
+  ],
+  "summary": "Polish composer and pianist who moved to Paris in 1831 and wrote almost entirely for the piano, including nocturnes, waltzes and mazurkas inspired by Polish dances. He died of illness at thirty-nine.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q1268",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810-03-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1849-10-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "johann-sebastian-bach"
+    },
+    {
+      "type": "influenced_by",
+      "to": "wolfgang-amadeus-mozart"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Frédéric Chopin (Q1268)",
+      "url": "https://www.wikidata.org/wiki/Q1268",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Frédéric Chopin",
+      "url": "https://en.wikipedia.org/wiki/Fr%C3%A9d%C3%A9ric_Chopin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

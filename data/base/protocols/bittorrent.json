@@ -1,0 +1,49 @@
+{
+  "id": "bittorrent",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "BitTorrent",
+      "from": "2001"
+    }
+  ],
+  "maker": "Bram Cohen",
+  "summary": "Peer-to-peer file sharing protocol in which a file is split into pieces that users fetch from one another at once. It makes large downloads cheap for the sender and has been used for both free and pirated content.",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "aliases": [
+    "BT",
+    "Bit Torrent",
+    "Torrent"
+  ],
+  "wikidata": "Q133862",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: BitTorrent (Q133862)",
+      "url": "https://www.wikidata.org/wiki/Q133862",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: BitTorrent",
+      "url": "https://en.wikipedia.org/wiki/BitTorrent",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

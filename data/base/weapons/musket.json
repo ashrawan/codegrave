@@ -1,0 +1,49 @@
+{
+  "id": "musket",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Musket",
+      "from": "1500"
+    }
+  ],
+  "maker": "European armies",
+  "summary": "A long smoothbore gun fired from the shoulder. Muskets put firearms in the hands of ordinary foot soldiers, ended the age of the armoured knight and shaped the way armies lined up for battle for about three centuries.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q178243",
+  "events": [
+    {
+      "type": "born",
+      "date": "1500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1860",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by rifled guns that loaded from the back and shot farther",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: musket (Q178243)",
+      "url": "https://www.wikidata.org/wiki/Q178243",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Musket",
+      "url": "https://en.wikipedia.org/wiki/Musket",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

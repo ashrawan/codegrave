@@ -1,0 +1,52 @@
+{
+  "id": "protestant-reformation",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Protestant Reformation",
+      "from": "1517"
+    }
+  ],
+  "summary": "The movement, begun by Martin Luther's challenge to the Church in 1517, that split Western Christianity into Catholic and Protestant churches. It led to wars of religion across Europe.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q12562",
+  "events": [
+    {
+      "type": "born",
+      "date": "1517-10-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1648",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "martin-luther"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Protestant Reformation (Q12562)",
+      "url": "https://www.wikidata.org/wiki/Q12562",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reformation",
+      "url": "https://en.wikipedia.org/wiki/Reformation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

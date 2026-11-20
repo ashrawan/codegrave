@@ -1,0 +1,57 @@
+{
+  "id": "ottoman-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Ottoman dynasty",
+      "from": "1299"
+    }
+  ],
+  "summary": "Ruling family of the Ottoman Empire, descended from Osman I, whose members held the title of sultan for more than six centuries. The sultanate was abolished after the First World War.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "House of Osman",
+    "Osmanlis"
+  ],
+  "wikidata": "Q193383",
+  "events": [
+    {
+      "type": "born",
+      "date": "1299",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1922",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sultanate abolished by the Turkish national government",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ottoman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ottoman dynasty (Q193383)",
+      "url": "https://www.wikidata.org/wiki/Q193383",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ottoman dynasty",
+      "url": "https://en.wikipedia.org/wiki/Ottoman_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,81 @@
+{
+  "id": "hollywoods-golden-age",
+  "name": "Hollywood's Golden Age",
+  "description": "The studio years, from silent comedy to Technicolor: the stars and directors who made the American film factory the world's main window on the movies.",
+  "category": "arts",
+  "labels": [
+    "film"
+  ],
+  "tags": [
+    "hollywood",
+    "movies",
+    "actors",
+    "directors",
+    "oscars",
+    "silent film",
+    "studio"
+  ],
+  "entries": [
+    "mary-pickford",
+    "charlie-chaplin",
+    "buster-keaton",
+    "greta-garbo",
+    "marlene-dietrich",
+    "humphrey-bogart",
+    "clark-gable",
+    "cary-grant",
+    "katharine-hepburn",
+    "bette-davis",
+    "vivien-leigh",
+    "hattie-mcdaniel",
+    "anna-may-wong",
+    "ingrid-bergman",
+    "judy-garland",
+    "fred-astaire",
+    "ginger-rogers",
+    "orson-welles",
+    "alfred-hitchcock",
+    "john-ford",
+    "frank-capra",
+    "billy-wilder",
+    "john-wayne",
+    "james-stewart",
+    "marilyn-monroe",
+    "audrey-hepburn",
+    "elizabeth-taylor",
+    "marlon-brando",
+    "james-dean",
+    "sidney-poitier"
+  ],
+  "checkpoints": [
+    {
+      "id": "silent-stars",
+      "name": "Silent stars",
+      "from": 1889,
+      "to": 1928,
+      "note": "Pickford, Chaplin and Keaton make a worldwide audience laugh without a word, and found studios of their own."
+    },
+    {
+      "id": "sound-and-the-studios",
+      "name": "Sound and the studios",
+      "from": 1929,
+      "to": 1945,
+      "note": "Talkies arrive and the big studios sign stars such as Garbo, Bogart, Gable and Bette Davis, while Hitchcock, Ford and Capra make a name for their directing."
+    },
+    {
+      "id": "postwar-glamour",
+      "name": "Postwar glamour",
+      "from": 1946,
+      "to": 1960,
+      "note": "Colour, widescreen and television bring change. Monroe, Audrey Hepburn and Taylor are the new stars, and Wilder and Hitchcock make some of their most famous films."
+    },
+    {
+      "id": "the-method-and-after",
+      "name": "The method and after",
+      "from": 1961,
+      "to": 1997,
+      "note": "Brando and Dean bring a more raw style of acting, and Sidney Poitier opens doors for Black actors as the old studio system breaks up."
+    }
+  ],
+  "year": 1945
+}

@@ -1,0 +1,68 @@
+{
+  "id": "animals-that-became-famous",
+  "name": "Animals That Became Famous",
+  "description": "A space dog, a cloned sheep, a loyal Akita and a circus elephant: individual animals whose lives made headlines and whose statues still stand.",
+  "category": "life",
+  "labels": [
+    "media",
+    "firsts"
+  ],
+  "tags": [
+    "famous animals",
+    "laika",
+    "dolly",
+    "hachiko",
+    "dogs",
+    "horses",
+    "space"
+  ],
+  "entries": [
+    "old-billy",
+    "jumbo-the-elephant",
+    "greyfriars-bobby",
+    "togo-sled-dog",
+    "sergeant-stubby",
+    "cher-ami",
+    "rin-tin-tin",
+    "hachiko",
+    "balto",
+    "seabiscuit",
+    "laika",
+    "ham-the-chimp",
+    "secretariat",
+    "koko",
+    "dolly-the-sheep",
+    "lonesome-george"
+  ],
+  "checkpoints": [
+    {
+      "id": "beasts-of-the-age",
+      "name": "Beasts of the age",
+      "from": 1760,
+      "to": 1899,
+      "note": "A canal horse, a circus elephant and a faithful terrier become famous, helped by newspapers and showmen."
+    },
+    {
+      "id": "war-and-screen",
+      "name": "War heroes and screen stars",
+      "from": 1900,
+      "to": 1949,
+      "note": "Dogs and birds serve in war, sled dogs race medicine to Nome and Rin Tin Tin and Seabiscuit are fans' favourites."
+    },
+    {
+      "id": "space-and-science",
+      "name": "Space and science",
+      "from": 1950,
+      "to": 1999,
+      "note": "Laika and Ham go into space, Secretariat wins the Triple Crown and Dolly the sheep is the first cloned mammal."
+    },
+    {
+      "id": "last-of-kind",
+      "name": "Last of their kind",
+      "from": 2000,
+      "to": 2018,
+      "note": "The deaths of Lonesome George and Koko draw wide attention to conservation and animal minds."
+    }
+  ],
+  "year": 1950
+}

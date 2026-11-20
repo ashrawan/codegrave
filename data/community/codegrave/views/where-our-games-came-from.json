@@ -1,0 +1,87 @@
+{
+  "id": "where-our-games-came-from",
+  "name": "Where Our Games Came From",
+  "description": "Chessboards in India, ball courts in Mexico, schoolyards in England: the origin stories of the games and sports the world plays.",
+  "category": "society",
+  "labels": [
+    "sport",
+    "games"
+  ],
+  "tags": [
+    "sports",
+    "games",
+    "origins",
+    "chess",
+    "football",
+    "olympics"
+  ],
+  "entries": [
+    "backgammon",
+    "mesoamerican-ballgame",
+    "polo",
+    "ancient-olympic-games",
+    "gladiatorial-combat",
+    "go-game",
+    "pachisi",
+    "chess",
+    "sumo",
+    "playing-cards",
+    "real-tennis",
+    "golf",
+    "cricket",
+    "lacrosse",
+    "rugby-union",
+    "baseball",
+    "association-football",
+    "american-football",
+    "mahjong",
+    "tennis",
+    "badminton",
+    "snooker",
+    "table-tennis",
+    "judo",
+    "basketball",
+    "volleyball",
+    "ice-hockey",
+    "monopoly",
+    "dungeons-and-dragons"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-play",
+      "name": "Games of the ancient world",
+      "from": -3000,
+      "to": -1,
+      "note": "Dice races in the Near East, ball courts in Mexico, polo on the Central Asian plains, and Greek athletes at Olympia show that organised play is very old. Rome added combat as spectacle."
+    },
+    {
+      "id": "games-travel",
+      "name": "Games travel the roads",
+      "from": 1,
+      "to": 1399,
+      "note": "Chess and pachisi spread out of India, playing cards moved from China across Asia and Europe, and in Japan sumo grew into a sport tied up with ritual."
+    },
+    {
+      "id": "clubs-and-courts",
+      "name": "Courts, greens and pitches",
+      "from": 1400,
+      "to": 1799,
+      "note": "Scots played golf on links beside the sea, the English played cricket on village greens, and Jesuits in North America wrote of lacrosse, which Native nations had played for generations."
+    },
+    {
+      "id": "rules-on-paper",
+      "name": "The age of rulebooks",
+      "from": 1800,
+      "to": 1899,
+      "note": "Schools and clubs wrote rules for football, rugby and baseball, and sports spread by railway, empire and newspapers. Judo, basketball and volleyball followed in the late nineteenth century."
+    },
+    {
+      "id": "modern-play",
+      "name": "Sports and games for the world",
+      "from": 1900,
+      "to": 2026,
+      "note": "Radio, television and mass travel made sports global businesses. Board games such as Monopoly and fantasy role-playing games were new kinds of play that grew into large industries."
+    }
+  ],
+  "year": 1863
+}

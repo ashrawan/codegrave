@@ -1,0 +1,48 @@
+{
+  "id": "henry-ford",
+  "category": "founders",
+  "names": [
+    {
+      "name": "Henry Ford",
+      "from": "1863"
+    }
+  ],
+  "summary": "American industrialist who founded the Ford Motor Company and introduced the moving assembly line, which made the Model T cheap enough for ordinary families. His methods changed manufacturing around the world.",
+  "labels": [
+    "business",
+    "transport"
+  ],
+  "wikidata": "Q8768",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-07-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-04-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Henry Ford (Q8768)",
+      "url": "https://www.wikidata.org/wiki/Q8768",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henry Ford",
+      "url": "https://en.wikipedia.org/wiki/Henry_Ford",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

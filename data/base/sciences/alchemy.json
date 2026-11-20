@@ -1,0 +1,48 @@
+{
+  "id": "alchemy",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Alchemy",
+      "from": "-0300"
+    }
+  ],
+  "summary": "A very old practice in Egypt, China, the Islamic world and Europe that sought to change base metals into gold and to find an elixir of life. Its experiments and equipment helped lay the groundwork for chemistry.",
+  "labels": [
+    "chemistry"
+  ],
+  "wikidata": "Q39689",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Gave way to modern chemistry as experiments with careful measurement spread",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: alchemy (Q39689)",
+      "url": "https://www.wikidata.org/wiki/Q39689",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alchemy",
+      "url": "https://en.wikipedia.org/wiki/Alchemy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

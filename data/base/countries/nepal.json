@@ -1,0 +1,66 @@
+{
+  "id": "nepal",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Nepal",
+      "from": "1768"
+    }
+  ],
+  "summary": "A Himalayan country with eight of the world's fourteen highest mountains, including Everest. It was unified by Prithvi Narayan Shah in 1768 and became a republic in 2008.",
+  "labels": [
+    "world-heritage"
+  ],
+  "aliases": [
+    "Federal Democratic Republic of Nepal",
+    "Nipal",
+    "Nekbal",
+    "Nehpal",
+    "Palpou"
+  ],
+  "wikidata": "Q837",
+  "events": [
+    {
+      "type": "born",
+      "date": "1768-09-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nepal (Q837)",
+      "url": "https://www.wikidata.org/wiki/Q837",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nepal",
+      "url": "https://en.wikipedia.org/wiki/Nepal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

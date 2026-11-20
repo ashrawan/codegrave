@@ -1,0 +1,63 @@
+{
+  "id": "ss-great-britain",
+  "category": "ships",
+  "names": [
+    {
+      "name": "SS Great Britain",
+      "from": "1843"
+    }
+  ],
+  "maker": "Isambard Kingdom Brunel",
+  "summary": "A ship designed by Isambard Kingdom Brunel and launched in 1843, the first large iron ship driven by a screw propeller to cross the Atlantic. She is preserved at Bristol, where she was built.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "wikidata": "Q744086",
+  "events": [
+    {
+      "type": "born",
+      "date": "1843",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1937",
+      "precision": "year"
+    },
+    {
+      "type": "afterlife",
+      "note": "Raised in 1970 and brought home to Bristol, where it is a museum ship."
+    }
+  ],
+  "status": "dead",
+  "cause": "Scuttled in the Falkland Islands after years as a storage hulk.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "isambard-kingdom-brunel"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: SS Great Britain (Q744086)",
+      "url": "https://www.wikidata.org/wiki/Q744086",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SS Great Britain",
+      "url": "https://en.wikipedia.org/wiki/SS_Great_Britain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

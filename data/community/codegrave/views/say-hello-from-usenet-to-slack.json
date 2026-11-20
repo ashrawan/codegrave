@@ -1,0 +1,87 @@
+{
+  "id": "say-hello-from-usenet-to-slack",
+  "name": "Say Hello: From Usenet to Slack",
+  "description": "Fifty years of chatting across wires: email, newsgroups, chat rooms, instant messengers, texting, WhatsApp and the workplace apps that followed.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "tags": [
+    "chat",
+    "messaging",
+    "email",
+    "usenet",
+    "irc",
+    "icq",
+    "whatsapp",
+    "slack"
+  ],
+  "entries": [
+    "email",
+    "bulletin-board-system",
+    "usenet",
+    "nntp",
+    "the-well",
+    "compuserve",
+    "irc",
+    "icq",
+    "aim",
+    "yahoo-messenger",
+    "msn-messenger",
+    "hotmail",
+    "skype",
+    "google-talk",
+    "gmail",
+    "sms",
+    "bbm",
+    "whatsapp",
+    "facebook-messenger",
+    "imessage",
+    "line-app",
+    "wechat",
+    "telegram",
+    "signal-app",
+    "slack",
+    "discord",
+    "microsoft-teams"
+  ],
+  "checkpoints": [
+    {
+      "id": "mail-and-news",
+      "name": "Mail and news",
+      "from": 1969,
+      "to": 1987,
+      "note": "Email appears on the ARPANET, bulletin boards and Usenet let strangers share news and arguments by modem, and communities such as The WELL show that people can feel at home online."
+    },
+    {
+      "id": "chat-rooms",
+      "name": "Chat rooms",
+      "from": 1988,
+      "to": 1995,
+      "note": "IRC brings live conversation to the net, while services such as CompuServe and AOL bring the public online. Chat rooms become a new place to meet people from anywhere."
+    },
+    {
+      "id": "instant-messengers",
+      "name": "Instant messengers",
+      "from": 1996,
+      "to": 2003,
+      "note": "ICQ, AIM, Yahoo and MSN Messenger give everyone a buddy list and a way to know who is online. Hotmail makes email free, and teenagers spend evenings talking in tiny windows."
+    },
+    {
+      "id": "texts-and-voices",
+      "name": "Texts and voices",
+      "from": 2004,
+      "to": 2010,
+      "note": "Gmail, Skype and Google Talk make mail and calls free, while text messages and the BlackBerry's BBM spread among phone users. Facebook adds its own chat."
+    },
+    {
+      "id": "apps-for-everything",
+      "name": "Apps for everything",
+      "from": 2011,
+      "to": 2026,
+      "note": "WhatsApp, WeChat, Line, Telegram and iMessage put chat on every phone, Discord and Slack bring it into games and work, and privacy tools such as Signal offer encrypted talk."
+    }
+  ],
+  "year": 2005
+}

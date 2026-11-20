@@ -1,0 +1,51 @@
+{
+  "id": "ivan-the-terrible",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Ivan the Terrible",
+      "from": "1530"
+    }
+  ],
+  "summary": "First ruler of Russia to be crowned tsar. He conquered the Tatar khanates of Kazan and Astrakhan, but his later years were marked by harsh rule and a long, costly war in the west.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Ivan IV Vasilyevich",
+    "Ivan IV"
+  ],
+  "wikidata": "Q7996",
+  "events": [
+    {
+      "type": "born",
+      "date": "1530-08-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1584-03-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ivan the Terrible (Q7996)",
+      "url": "https://www.wikidata.org/wiki/Q7996",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ivan the Terrible",
+      "url": "https://en.wikipedia.org/wiki/Ivan_the_Terrible",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,72 @@
+{
+  "id": "battle-of-lepanto",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Lepanto",
+      "from": "1571"
+    }
+  ],
+  "summary": "A large naval battle off western Greece in which a fleet of the Holy League, led by Spain and Venice, defeated the Ottoman navy. It was among the last big battles fought with oared galleys.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Naupactus",
+    "Battle of Nafpaktos"
+  ],
+  "wikidata": "Q165425",
+  "events": [
+    {
+      "type": "born",
+      "date": "1571-10-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1571-10-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    },
+    {
+      "type": "related",
+      "to": "ottoman-empire"
+    },
+    {
+      "type": "related",
+      "to": "papal-states"
+    },
+    {
+      "type": "related",
+      "to": "republic-of-venice"
+    },
+    {
+      "type": "related",
+      "to": "knights-hospitaller"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Lepanto (Q165425)",
+      "url": "https://www.wikidata.org/wiki/Q165425",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Lepanto",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Lepanto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

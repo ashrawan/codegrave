@@ -1,0 +1,66 @@
+{
+  "id": "al-andalus",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Al-Andalus",
+      "from": "0711"
+    }
+  ],
+  "summary": "The Muslim-ruled parts of the Iberian Peninsula, which were home to Muslims, Christians and Jews. Cities such as Cordoba and Granada were centres of science, poetry and architecture, including the Alhambra.",
+  "labels": [
+    "lost",
+    "religion",
+    "architecture"
+  ],
+  "aliases": [
+    "Muslim Spain",
+    "Muslim Iberia",
+    "Islamic Iberia",
+    "Iberian Peninsula under Islamic rule",
+    "Islamic Spain"
+  ],
+  "wikidata": "Q123559",
+  "events": [
+    {
+      "type": "born",
+      "date": "0711",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1492-01-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Last emirate, Granada, conquered by Castile and Aragon",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "umayyad-caliphate"
+    },
+    {
+      "type": "in",
+      "to": "almohad-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: al-Andalus (Q123559)",
+      "url": "https://www.wikidata.org/wiki/Q123559",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Al-Andalus",
+      "url": "https://en.wikipedia.org/wiki/Al-Andalus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

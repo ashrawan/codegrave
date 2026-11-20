@@ -1,0 +1,90 @@
+{
+  "id": "women-who-changed-science",
+  "name": "Women Who Changed Science",
+  "description": "From Hypatia in Alexandria to the Nobel winners of today, women who made major discoveries, often against the odds and without the credit they deserved.",
+  "category": "people",
+  "labels": [
+    "biology",
+    "physics",
+    "education"
+  ],
+  "tags": [
+    "women",
+    "science",
+    "curie",
+    "franklin",
+    "lovelace",
+    "hypatia",
+    "nobel prize"
+  ],
+  "entries": [
+    "hypatia",
+    "emilie-du-chatelet",
+    "caroline-herschel",
+    "mary-anning",
+    "ada-lovelace",
+    "mary-somerville",
+    "sofya-kovalevskaya",
+    "henrietta-leavitt",
+    "marie-curie",
+    "emmy-noether",
+    "lise-meitner",
+    "cecilia-payne-gaposchkin",
+    "barbara-mcclintock",
+    "rachel-carson",
+    "dorothy-hodgkin",
+    "rosalind-franklin",
+    "chien-shiung-wu",
+    "grace-hopper",
+    "katherine-johnson",
+    "rita-levi-montalcini",
+    "vera-rubin",
+    "jane-goodall",
+    "margaret-hamilton",
+    "tu-youyou",
+    "jocelyn-bell-burnell",
+    "stephanie-kwolek",
+    "maryam-mirzakhani",
+    "jennifer-doudna",
+    "sally-ride",
+    "valentina-tereshkova"
+  ],
+  "checkpoints": [
+    {
+      "id": "closed-doors",
+      "name": "Before the doors opened",
+      "from": 360,
+      "to": 1799,
+      "note": "Hypatia teaches in Alexandria, and centuries later Émilie du Châtelet and Caroline Herschel find ways to do real science in a world that kept women out of universities and societies."
+    },
+    {
+      "id": "the-long-century",
+      "name": "The long century",
+      "from": 1800,
+      "to": 1899,
+      "note": "Mary Anning digs fossils, Mary Somerville explains science to the public, Ada Lovelace imagines what a computer could do and Sofya Kovalevskaya wins a professorship in mathematics."
+    },
+    {
+      "id": "labs-and-observatories",
+      "name": "Labs and observatories",
+      "from": 1900,
+      "to": 1949,
+      "note": "Marie Curie wins two Nobel Prizes, Leavitt measures the stars, Noether proves a deep link between symmetry and physics and Meitner explains fission, while many women still work without a proper title."
+    },
+    {
+      "id": "the-double-helix-era",
+      "name": "The double helix era",
+      "from": 1950,
+      "to": 1989,
+      "note": "Franklin's X-rays reveal DNA, and Wu, McClintock, Hodgkin, Carson and Goodall change physics, genetics, chemistry, ecology and primatology. Hopper and Johnson shape computing and spaceflight."
+    },
+    {
+      "id": "new-frontiers",
+      "name": "New frontiers",
+      "from": 1990,
+      "to": 2025,
+      "note": "Tu Youyou finds a malaria cure, Mirzakhani wins the Fields Medal and Doudna helps invent gene editing. Bell Burnell and Rubin find pulsars and dark matter, and women now fly in space."
+    }
+  ],
+  "year": 1950
+}

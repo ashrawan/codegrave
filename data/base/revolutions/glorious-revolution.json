@@ -1,0 +1,52 @@
+{
+  "id": "glorious-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Glorious Revolution",
+      "from": "1688"
+    }
+  ],
+  "summary": "The overthrow of King James II of England by Parliament and William of Orange, who landed with an army. It led to the Bill of Rights and a monarchy limited by Parliament.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q189508",
+  "events": [
+    {
+      "type": "born",
+      "date": "1688-12-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1689",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Glorious Revolution (Q189508)",
+      "url": "https://www.wikidata.org/wiki/Q189508",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Glorious Revolution",
+      "url": "https://en.wikipedia.org/wiki/Glorious_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

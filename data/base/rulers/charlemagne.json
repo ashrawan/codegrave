@@ -1,0 +1,55 @@
+{
+  "id": "charlemagne",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Charlemagne",
+      "from": "0747"
+    }
+  ],
+  "summary": "King of the Franks who conquered much of western and central Europe. He was crowned emperor by the Pope in 800 and supported scholars and schools. His birth year is uncertain.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Charles I",
+    "Charles the Great",
+    "Karl the Great",
+    "Emperor Charlemagne",
+    "Charlemagne the Franc"
+  ],
+  "wikidata": "Q3044",
+  "events": [
+    {
+      "type": "born",
+      "date": "0747",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0814-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Charlemagne (Q3044)",
+      "url": "https://www.wikidata.org/wiki/Q3044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charlemagne",
+      "url": "https://en.wikipedia.org/wiki/Charlemagne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

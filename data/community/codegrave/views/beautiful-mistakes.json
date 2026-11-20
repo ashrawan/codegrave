@@ -1,0 +1,73 @@
+{
+  "id": "beautiful-mistakes",
+  "name": "Beautiful Mistakes: The Theories Science Threw Away",
+  "description": "Phlogiston, the aether, humours and N rays: the ideas that once seemed obvious, how they were tested, and what replaced them.",
+  "category": "knowledge",
+  "labels": [
+    "lost",
+    "physics",
+    "medicine"
+  ],
+  "tags": [
+    "wrong theories",
+    "discarded science",
+    "alchemy",
+    "phlogiston",
+    "aether",
+    "phrenology",
+    "pseudoscience"
+  ],
+  "entries": [
+    "geocentric-model",
+    "aristotelian-physics",
+    "humorism",
+    "miasma-theory",
+    "spontaneous-generation",
+    "alchemy",
+    "phlogiston-theory",
+    "luminiferous-aether",
+    "caloric-theory",
+    "phrenology",
+    "lamarckism",
+    "vulcan-planet",
+    "germ-theory",
+    "plum-pudding-model",
+    "n-rays",
+    "special-relativity",
+    "bohr-model",
+    "quantum-mechanics",
+    "steady-state-theory",
+    "cosmic-microwave-background"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-certainties",
+      "name": "Ancient certainties",
+      "from": -400,
+      "to": 1599,
+      "note": "The Earth at the centre of the sky, four humours in the body and a world of heavy and light things seeking their place: these ideas seemed to fit what everyone saw, and they were taught for centuries."
+    },
+    {
+      "id": "age-of-fluids",
+      "name": "The age of invisible fluids",
+      "from": 1600,
+      "to": 1799,
+      "note": "Chemists blame phlogiston for fire, physicists fill space with aether and heat with caloric, and skull-readers claim to map the mind. Each fluid explained a great deal until careful experiments challenged it."
+    },
+    {
+      "id": "nineteenth-century-corrections",
+      "name": "Evidence strikes back",
+      "from": 1800,
+      "to": 1899,
+      "note": "Lamarck's inherited habits give way to natural selection, spontaneous generation is refuted, bad air loses to germs, and astronomers search in vain for a planet called Vulcan."
+    },
+    {
+      "id": "twentieth-century-revisions",
+      "name": "Models replaced by better models",
+      "from": 1900,
+      "to": 1965,
+      "note": "Relativity makes the aether unnecessary, quantum mechanics replaces the Bohr atom, N rays turn out to be wishful seeing, and the glow of the Big Bang ends the Steady State."
+    }
+  ],
+  "year": 1800
+}

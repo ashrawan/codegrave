@@ -1,0 +1,46 @@
+{
+  "id": "geiger-counter",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Geiger counter",
+      "from": "1928"
+    }
+  ],
+  "maker": "Hans Geiger and Walther Müller",
+  "summary": "A device that detects radiation and clicks when particles pass through a gas-filled tube. It is used to check for radioactivity in mines, laboratories and after nuclear accidents.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "Geiger-Müller counter"
+  ],
+  "wikidata": "Q48171",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Geiger counter (Q48171)",
+      "url": "https://www.wikidata.org/wiki/Q48171",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Geiger counter",
+      "url": "https://en.wikipedia.org/wiki/Geiger_counter",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

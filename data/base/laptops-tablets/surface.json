@@ -1,0 +1,53 @@
+{
+  "id": "surface",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "Microsoft Surface",
+      "from": "2012"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's line of tablets and laptops, the first computers it designed itself. The first Surface was a tablet with a cover that worked as a keyboard, made to show what Windows could do on touch screens.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Surface",
+    "MS Surface",
+    "MSFT Surface"
+  ],
+  "wikidata": "Q471806",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft Surface (Q471806)",
+      "url": "https://www.wikidata.org/wiki/Q471806",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft Surface",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Surface",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

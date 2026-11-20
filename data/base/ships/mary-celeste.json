@@ -1,0 +1,52 @@
+{
+  "id": "mary-celeste",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Mary Celeste",
+      "from": "1861"
+    }
+  ],
+  "summary": "A merchant ship found drifting in the Atlantic in December 1872 with her crew gone and her cargo intact. What happened to the crew is still unknown. She was later wrecked deliberately in 1885.",
+  "labels": [
+    "lost"
+  ],
+  "aliases": [
+    "Marie Céleste",
+    "Amazon"
+  ],
+  "wikidata": "Q33209",
+  "events": [
+    {
+      "type": "born",
+      "date": "1861",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1885",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Run aground on purpose in an insurance fraud",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Mary Celeste (Q33209)",
+      "url": "https://www.wikidata.org/wiki/Q33209",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mary Celeste",
+      "url": "https://en.wikipedia.org/wiki/Mary_Celeste",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

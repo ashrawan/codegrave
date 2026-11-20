@@ -1,0 +1,53 @@
+{
+  "id": "jackie-robinson",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Jackie Robinson",
+      "from": "1919"
+    }
+  ],
+  "summary": "American baseball player who in 1947 became the first Black player in modern Major League Baseball when he joined the Brooklyn Dodgers. He faced abuse but won the first Rookie of the Year award.",
+  "labels": [
+    "sport",
+    "human-rights"
+  ],
+  "wikidata": "Q221048",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-01-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1972-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "theodore-roosevelt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jackie Robinson (Q221048)",
+      "url": "https://www.wikidata.org/wiki/Q221048",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jackie Robinson",
+      "url": "https://en.wikipedia.org/wiki/Jackie_Robinson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

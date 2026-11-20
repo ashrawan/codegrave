@@ -1,0 +1,48 @@
+{
+  "id": "fascism",
+  "category": "philosophies",
+  "names": [
+    {
+      "name": "Fascism",
+      "from": "1919"
+    }
+  ],
+  "summary": "A far-right authoritarian ideology that stresses extreme nationalism, a single leader and the state over the individual. It arose in Italy under Mussolini after the First World War and influenced regimes elsewhere in Europe.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q6223",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "french-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: fascism (Q6223)",
+      "url": "https://www.wikidata.org/wiki/Q6223",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fascism",
+      "url": "https://en.wikipedia.org/wiki/Fascism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

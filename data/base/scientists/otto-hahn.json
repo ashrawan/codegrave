@@ -1,0 +1,57 @@
+{
+  "id": "otto-hahn",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Otto Hahn",
+      "from": "1879"
+    }
+  ],
+  "summary": "German chemist who found with Fritz Strassmann in 1938 that uranium atoms split when struck by neutrons. He alone received the 1944 Nobel Prize in Chemistry; Lise Meitner, who explained the result, was left out.",
+  "labels": [
+    "chemistry",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "O. Hahn",
+    "Otto Emil Hahn"
+  ],
+  "wikidata": "Q57065",
+  "events": [
+    {
+      "type": "born",
+      "date": "1879-03-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Otto Hahn (Q57065)",
+      "url": "https://www.wikidata.org/wiki/Q57065",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Otto Hahn",
+      "url": "https://en.wikipedia.org/wiki/Otto_Hahn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

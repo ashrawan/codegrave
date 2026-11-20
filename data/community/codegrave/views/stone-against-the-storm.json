@@ -1,0 +1,81 @@
+{
+  "id": "stone-against-the-storm",
+  "name": "Stone Against the Storm: Walls and Fortresses",
+  "description": "The long story of building a barrier: from the first city walls to the Great Wall, from castle keeps to the Berlin Wall, and why walls never quite win.",
+  "category": "places",
+  "labels": [
+    "war",
+    "architecture"
+  ],
+  "tags": [
+    "wall",
+    "fortress",
+    "castle",
+    "siege",
+    "defence"
+  ],
+  "entries": [
+    "jericho",
+    "troy",
+    "great-wall-of-china",
+    "qin-shi-huang",
+    "hadrians-wall",
+    "walls-of-constantinople",
+    "fall-of-constantinople",
+    "alhambra",
+    "krak-des-chevaliers",
+    "tower-of-london",
+    "trebuchet",
+    "gunpowder",
+    "siege-of-baghdad-1258",
+    "battle-of-vienna",
+    "forbidden-city",
+    "himeji-castle",
+    "plate-armour",
+    "musket",
+    "great-zimbabwe",
+    "maginot-line",
+    "berlin-wall",
+    "cold-war",
+    "fall-of-the-berlin-wall",
+    "german-reunification"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-walls",
+      "name": "The first walls",
+      "from": -3000,
+      "to": 121,
+      "note": "Jericho and Troy show that cities have long been walled. Qin Shi Huang links older defences into the Great Wall of China, and the Romans later build Hadrian's Wall."
+    },
+    {
+      "id": "stone-and-siege",
+      "name": "Stone and siege",
+      "from": 122,
+      "to": 1300,
+      "note": "Hadrian's Wall marks the edge of Roman rule, and the Walls of Constantinople hold for a thousand years. Krak des Chevaliers, the Tower of London and Great Zimbabwe show stone power on three continents, the Alhambra rises in Spain, and the Mongols break through at the Siege of Baghdad."
+    },
+    {
+      "id": "gunpowder-changes-all",
+      "name": "Gunpowder changes all",
+      "from": 1301,
+      "to": 1927,
+      "note": "The trebuchet gives way to gunpowder, and the fall of Constantinople in 1453 shows high walls can be beaten, though at the Battle of Vienna in 1683 the defenders hold. The Forbidden City and Himeji Castle show fortress and palace growing together, and plate armour gives way to the musket."
+    },
+    {
+      "id": "lines-of-concrete",
+      "name": "Lines of concrete",
+      "from": 1928,
+      "to": 1960,
+      "note": "France builds the Maginot Line along its border with Germany in the 1930s, a chain of forts meant to stop another invasion, but in 1940 the German army goes round it."
+    },
+    {
+      "id": "the-wall-that-divided",
+      "name": "The wall that divided",
+      "from": 1961,
+      "to": 2026,
+      "note": "The Berlin Wall splits a city in the Cold War, until its fall in 1989 helps lead to German reunification."
+    }
+  ],
+  "year": 1500
+}

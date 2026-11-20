@@ -1,0 +1,56 @@
+{
+  "id": "cairo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Cairo",
+      "from": "0969"
+    }
+  ],
+  "summary": "Capital of Egypt, founded by the Fatimid dynasty beside the Nile. It grew into a major centre of Islamic learning, with the al-Azhar mosque and university, and is among the largest cities in Africa.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Qahira",
+    "Cairo, Egypt",
+    "ghahere"
+  ],
+  "wikidata": "Q85",
+  "events": [
+    {
+      "type": "born",
+      "date": "0969-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    },
+    {
+      "type": "in",
+      "to": "mamluk-sultanate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cairo (Q85)",
+      "url": "https://www.wikidata.org/wiki/Q85",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cairo",
+      "url": "https://en.wikipedia.org/wiki/Cairo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

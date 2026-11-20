@@ -1,0 +1,51 @@
+{
+  "id": "cdc-6600",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "CDC 6600",
+      "from": "1964"
+    }
+  ],
+  "maker": "Control Data Corporation",
+  "summary": "Computer designed by Seymour Cray at Control Data and widely seen as the first supercomputer. It was several times faster than any other machine of its time and was bought by laboratories and universities.",
+  "labels": [
+    "computing",
+    "engineering",
+    "firsts"
+  ],
+  "wikidata": "Q683851",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1977",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by faster CDC models",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: CDC 6600 (Q683851)",
+      "url": "https://www.wikidata.org/wiki/Q683851",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: CDC 6600",
+      "url": "https://en.wikipedia.org/wiki/CDC_6600",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

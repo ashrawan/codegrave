@@ -1,0 +1,58 @@
+{
+  "id": "xian",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Xi'an",
+      "from": "-0202"
+    }
+  ],
+  "summary": "City in central China, known in ancient times as Chang'an, capital of the Han and Tang dynasties. It was the eastern end of the Silk Road, and the Terracotta Army lies near it.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Xian",
+    "Xi’an City",
+    "Xi’an, China",
+    "Sian",
+    "Hsian"
+  ],
+  "wikidata": "Q5826",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0202",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Xi'an (Q5826)",
+      "url": "https://www.wikidata.org/wiki/Q5826",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Xi'an",
+      "url": "https://en.wikipedia.org/wiki/Xi'an",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "tour-de-france",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Tour de France",
+      "from": "1903"
+    }
+  ],
+  "summary": "The world's best-known cycling race, run over several weeks across France and nearby countries. Founded by a newspaper to boost its sales, it has been held every year apart from breaks for the two world wars.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Le Tour de France",
+    "La Grande Boucle",
+    "Le Tour",
+    "Souvenir Henri Desgrange"
+  ],
+  "wikidata": "Q33881",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tour de France (Q33881)",
+      "url": "https://www.wikidata.org/wiki/Q33881",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tour de France",
+      "url": "https://en.wikipedia.org/wiki/Tour_de_France",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

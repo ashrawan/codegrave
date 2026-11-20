@@ -1,0 +1,52 @@
+{
+  "id": "edith-piaf",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Édith Piaf",
+      "from": "1915"
+    }
+  ],
+  "summary": "French singer born in a poor district of Paris, known for songs such as La Vie en rose and Non, je ne regrette rien. Her strong voice made her a national symbol of France.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "The Little Sparrow",
+    "La môme Piaf",
+    "La Señora Piaf"
+  ],
+  "wikidata": "Q1631",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915-12-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1963-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Édith Piaf (Q1631)",
+      "url": "https://www.wikidata.org/wiki/Q1631",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Édith Piaf",
+      "url": "https://en.wikipedia.org/wiki/%C3%89dith_Piaf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "art-nouveau",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Art Nouveau",
+      "from": "1890"
+    }
+  ],
+  "summary": "International style of around 1890 to 1910 that used flowing, plant-like lines in buildings, posters, glass and furniture. It was popular in Paris, Brussels, Vienna, Barcelona and Prague, and fell out of fashion before the First World War.",
+  "labels": [
+    "visual-art",
+    "architecture"
+  ],
+  "aliases": [
+    "jugend",
+    "Art Nouveaustijl"
+  ],
+  "wikidata": "Q34636",
+  "events": [
+    {
+      "type": "born",
+      "date": "1890",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1910",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Art Nouveau (Q34636)",
+      "url": "https://www.wikidata.org/wiki/Q34636",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Art Nouveau",
+      "url": "https://en.wikipedia.org/wiki/Art_Nouveau",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

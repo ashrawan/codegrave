@@ -1,0 +1,62 @@
+{
+  "id": "z1-computer",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "Z1",
+      "from": "1936"
+    }
+  ],
+  "maker": "Konrad Zuse",
+  "summary": "Mechanical computer built by Konrad Zuse in his parents' flat in Berlin, using binary numbers and sheets of metal for memory. It was unreliable, but it led to his later working machines such as the Z3.",
+  "labels": [
+    "computing",
+    "firsts"
+  ],
+  "aliases": [
+    "Zuse Z1"
+  ],
+  "wikidata": "Q230810",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1943",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed in an air raid on Berlin",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "konrad-zuse"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Z1 (Q230810)",
+      "url": "https://www.wikidata.org/wiki/Q230810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Z1 (computer)",
+      "url": "https://en.wikipedia.org/wiki/Z1_(computer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

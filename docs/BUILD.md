@@ -1,0 +1,70 @@
+# What the build writes
+
+`node scripts/build.mjs` checks everything under `data/` and writes the files
+the page loads into `site/data/`. The page never loads the whole dataset. It
+asks for small ready-made files with fixed names, so every action costs one
+request and never a chain of lookups, however large the data grows.
+
+| File | Holds | Loaded when |
+| --- | --- | --- |
+| `boot.json` | The map (branches and kinds, with each branch's words), the labels, the community views the panel lists, the default and featured views, the 12 most-referenced entries, and how the detail and search files are keyed. | Always, once. |
+| `home.json` | The default views, ready to draw. | The link names no views and the reader has saved none. Fetched at the same time as `boot.json`. |
+| `v/<view-id>.json` | One view and everything it shows: its details, its eras, and the full entries it holds (at most 200, best ranked first; `view.count` is how many it really holds). A community view is `v/<owner>/<id>.json`. | A view is put on the timeline. One request each, fetched together. |
+| `d/<key>.json` | Full entries by id. `key` is the first hex digits of a hash of the id (`shardOf` in `site/keys.js`). | A link or a search result points at an entry that is not loaded. |
+| `s/all.json` | The search index: one short line per entry and per view. | A search box is first used. |
+| `c/<owner>.json` | One community folder: its profile, its views and its own entries. | A page about one contributor (not built yet). |
+| `media/` | A copy of `data/media/`. | An icon or picture is shown. |
+
+Old addresses keep working at the same cost: a view that moved (listed in
+`data/redirects.json`) also gets its file under the old name, with the new id
+inside it.
+
+## What the build works out
+
+So that the page does not have to hold everything to know what matters, the
+build adds to each entry:
+
+- `rank`, `score`, `topPct`, `peers` and `parts`: the ranking in
+  `site/rank.js`, run once over all entries.
+- `inbound`: the links other entries make to it (the best 40), and on every
+  link the name of the entry at the other end (`n`), so the panel can show a
+  link without loading that entry.
+- `home`: the classical view that shows it, for "show this on the timeline".
+- `tier`: `base` or `community`, and `owner` for a community entry.
+- `pop`: how much the community leans on it (see below).
+
+Each view gets its thumbnail (`scripts/thumb.mjs`) and its `count`.
+
+## The search index
+
+The index is its own file, used for nothing but searching. One line per
+entry: `[id, name, kind, born year, end year, rank, popularity, tier, other
+names]`; one line per view: `[id, name, type, count, description and tags]`.
+The kind is its position in `boot.json`'s `categories`.
+
+Lines are ordered by popularity, a number the build works out from what the
+community itself does:
+
+```
+popularity = log2(1 + links pointing at it)
+           + log2(1 + community views that list it)
+           + 2 × log2(1 + different people who wrote those views)
+```
+
+So an entry that many separate people reach for outranks one that a single
+person lists many times. A community entry counts the same way as a base
+entry. The page orders results by how well the name matches, then base before
+community, then rank, then popularity.
+
+While the index is small it is one file. Past 20,000 lines the build splits it
+by the first two letters of every word (`s/cu.json` holds everything with a
+word that starts "cu"), and `boot.json` says which form is in use
+(`search.mode`). The page handles both.
+
+## Sizes to expect
+
+Measured on 3,500 entries and 250 views: the build takes about 0.3 seconds;
+`boot.json` is about 30 KB compressed, a hand-picked view 5 to 12 KB, the
+largest classical view about 60 KB, the search index about 90 KB. Detail files
+hold at most about 64 entries each: the build uses more hex digits of the hash
+as the data grows (`detail.chars` in `boot.json`).

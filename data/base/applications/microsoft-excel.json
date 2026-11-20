@@ -1,0 +1,57 @@
+{
+  "id": "microsoft-excel",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Microsoft Excel",
+      "from": "1985"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Spreadsheet program from Microsoft, first made for the Macintosh and then for Windows. It replaced Lotus 1-2-3 in offices and is used for accounts, lists, charts and simple programming.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Microsoft 365 Excel",
+    "Office Excel"
+  ],
+  "wikidata": "Q11272",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-09-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    },
+    {
+      "type": "part_of",
+      "to": "microsoft-office"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft Excel (Q11272)",
+      "url": "https://www.wikidata.org/wiki/Q11272",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft Excel",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Excel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

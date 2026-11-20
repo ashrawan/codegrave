@@ -1,0 +1,67 @@
+{
+  "id": "indus-valley-civilisation",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Indus Valley Civilisation",
+      "from": "-3300"
+    }
+  ],
+  "summary": "Bronze Age society of what is now Pakistan and north-west India, known for planned cities such as Mohenjo-daro, drains, standard weights and a script that nobody has read. It faded without leaving written history.",
+  "labels": [
+    "exploration",
+    "education"
+  ],
+  "aliases": [
+    "Indus Valley Civilization",
+    "IVC",
+    "Harappan Civilization"
+  ],
+  "wikidata": "Q42534",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1300",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Cities declined over centuries, possibly as monsoons weakened and rivers shifted",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "bronze-age"
+    },
+    {
+      "type": "in",
+      "to": "pakistan"
+    },
+    {
+      "type": "related",
+      "to": "indus-river"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Indus Valley Civilization (Q42534)",
+      "url": "https://www.wikidata.org/wiki/Q42534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indus Valley Civilisation",
+      "url": "https://en.wikipedia.org/wiki/Indus_Valley_Civilisation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

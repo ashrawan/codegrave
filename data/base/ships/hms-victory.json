@@ -1,0 +1,52 @@
+{
+  "id": "hms-victory",
+  "category": "ships",
+  "names": [
+    {
+      "name": "HMS Victory",
+      "from": "1765"
+    }
+  ],
+  "maker": "Royal Navy",
+  "summary": "The flagship of Admiral Nelson at the Battle of Trafalgar in 1805. Launched in 1765, she is the oldest commissioned warship in the world and is preserved in dry dock at Portsmouth.",
+  "labels": [
+    "war",
+    "exploration"
+  ],
+  "aliases": [
+    "Victory"
+  ],
+  "wikidata": "Q213958",
+  "events": [
+    {
+      "type": "born",
+      "date": "1765",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: HMS Victory (Q213958)",
+      "url": "https://www.wikidata.org/wiki/Q213958",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HMS Victory",
+      "url": "https://en.wikipedia.org/wiki/HMS_Victory",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

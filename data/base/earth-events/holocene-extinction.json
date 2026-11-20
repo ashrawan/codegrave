@@ -1,0 +1,47 @@
+{
+  "id": "holocene-extinction",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Holocene Extinction",
+      "from": "-10000"
+    }
+  ],
+  "summary": "The current mass extinction, in which species are dying out far faster than normal, mostly because of human activity such as hunting, habitat loss, invasive species and climate change. It is sometimes called the sixth extinction.",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "aliases": [
+    "Anthropocene extinction",
+    "sixth extinction"
+  ],
+  "wikidata": "Q796140",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Holocene extinction (Q796140)",
+      "url": "https://www.wikidata.org/wiki/Q796140",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Holocene extinction",
+      "url": "https://en.wikipedia.org/wiki/Holocene_extinction",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

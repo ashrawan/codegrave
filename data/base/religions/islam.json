@@ -1,0 +1,62 @@
+{
+  "id": "islam",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Islam",
+      "from": "0610"
+    }
+  ],
+  "summary": "A monotheistic religion whose followers, called Muslims, believe the Quran was revealed by God to the Prophet Muhammad in Arabia. It teaches submission to one God and is practised through the Five Pillars. It is the second largest religion in the world.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Muslim religion",
+    "al-’islām",
+    "religion of the Muslims",
+    "Mohammedanism",
+    "Islamic religion"
+  ],
+  "wikidata": "Q432",
+  "events": [
+    {
+      "type": "born",
+      "date": "0610",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "muhammad"
+    },
+    {
+      "type": "influenced_by",
+      "to": "judaism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "christianity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Islam (Q432)",
+      "url": "https://www.wikidata.org/wiki/Q432",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Islam",
+      "url": "https://en.wikipedia.org/wiki/Islam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

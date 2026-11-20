@@ -1,0 +1,53 @@
+{
+  "id": "falcon-9",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Falcon 9",
+      "from": "2010"
+    }
+  ],
+  "maker": "SpaceX",
+  "summary": "A two-stage rocket made by SpaceX, first launched in 2010. It was the first orbital rocket to land its first stage and be flown again, which lowered the cost of reaching space.",
+  "labels": [
+    "engineering",
+    "business"
+  ],
+  "aliases": [
+    "Falcon 9 rocket",
+    "Falcon 9 booster"
+  ],
+  "wikidata": "Q249091",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Falcon 9 (Q249091)",
+      "url": "https://www.wikidata.org/wiki/Q249091",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Falcon 9",
+      "url": "https://en.wikipedia.org/wiki/Falcon_9",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

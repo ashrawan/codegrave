@@ -1,0 +1,73 @@
+{
+  "id": "albert-einstein",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Albert Einstein",
+      "from": "1879"
+    }
+  ],
+  "summary": "German-born physicist who developed the theories of special and general relativity and explained the photoelectric effect. His equation linking energy and mass is among the best known in science, and he won the 1921 Nobel Prize in Physics.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "wikidata": "Q937",
+  "events": [
+    {
+      "type": "born",
+      "date": "1879-03-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1955-04-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "fyodor-dostoevsky"
+    },
+    {
+      "type": "influenced_by",
+      "to": "baruch-spinoza"
+    },
+    {
+      "type": "influenced_by",
+      "to": "mahatma-gandhi"
+    },
+    {
+      "type": "influenced_by",
+      "to": "isaac-newton"
+    },
+    {
+      "type": "influenced_by",
+      "to": "david-hume"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Albert Einstein (Q937)",
+      "url": "https://www.wikidata.org/wiki/Q937",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Albert Einstein",
+      "url": "https://en.wikipedia.org/wiki/Albert_Einstein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,89 @@
+{
+  "id": "the-hours-we-invented",
+  "name": "The Hours We Invented: A History of Keeping Time",
+  "description": "Shadows, dripping water, swinging weights and vibrating atoms: how humans learned to count the days and divide them, from Stonehenge to satellites.",
+  "category": "knowledge",
+  "labels": [
+    "astronomy",
+    "engineering",
+    "firsts"
+  ],
+  "tags": [
+    "time",
+    "calendar",
+    "clock",
+    "longitude",
+    "watch",
+    "standard time"
+  ],
+  "entries": [
+    "stonehenge",
+    "egyptian-calendar",
+    "sundial",
+    "water-clock",
+    "chinese-calendar",
+    "roman-calendar",
+    "maya-calendar",
+    "antikythera-mechanism",
+    "julian-calendar",
+    "anno-domini",
+    "hebrew-calendar",
+    "islamic-calendar",
+    "verge-escapement",
+    "hourglass",
+    "galileo-galilei",
+    "gregorian-calendar",
+    "christiaan-huygens",
+    "pendulum-clock",
+    "john-harrison",
+    "marine-chronometer",
+    "wristwatch",
+    "french-republican-calendar",
+    "metric-system",
+    "standard-time",
+    "prime-meridian",
+    "quartz-clock",
+    "atomic-clock",
+    "si-units",
+    "coordinated-universal-time",
+    "global-positioning-system"
+  ],
+  "checkpoints": [
+    {
+      "id": "sun-moon-and-water",
+      "name": "Sun, moon and water",
+      "from": -3000,
+      "to": -1,
+      "note": "Stonehenge and the Egyptian and Maya calendars followed the sky, sundials and water clocks split the day, and Rome's calendar was tidied by Caesar into the Julian year."
+    },
+    {
+      "id": "sacred-and-mechanical",
+      "name": "Sacred and mechanical",
+      "from": 1,
+      "to": 1299,
+      "note": "Calendars of faith, such as the Hebrew and Islamic, were fixed, Dionysius proposed counting from Christ's birth, and the verge escapement made mechanical clocks possible."
+    },
+    {
+      "id": "pendulum-and-reform",
+      "name": "Pendulum and reform",
+      "from": 1300,
+      "to": 1699,
+      "note": "Hourglasses and clocks spread through towns. Galileo studied the pendulum, Huygens built the first accurate pendulum clock, and a papal reform created the Gregorian calendar."
+    },
+    {
+      "id": "longitude-and-order",
+      "name": "Longitude and order",
+      "from": 1700,
+      "to": 1899,
+      "note": "Harrison's marine chronometer solved the problem of finding longitude at sea. The French tried decimal time, the metric system arrived, and railways forced standard time and a prime meridian."
+    },
+    {
+      "id": "atoms-and-satellites",
+      "name": "Atoms and satellites",
+      "from": 1900,
+      "to": 2026,
+      "note": "Quartz clocks, then atomic clocks, set a steadier beat than the Earth itself. The SI second, Coordinated Universal Time and GPS satellites now keep the whole planet in step."
+    }
+  ],
+  "year": 1700
+}

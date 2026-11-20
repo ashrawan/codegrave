@@ -1,0 +1,52 @@
+{
+  "id": "gabriel-garcia-marquez",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Gabriel García Márquez",
+      "from": "1927"
+    }
+  ],
+  "summary": "Colombian author of One Hundred Years of Solitude and Love in the Time of Cholera. His style, in which magical events appear as ordinary, made him the best-known writer of Latin American magic realism.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q5878",
+  "events": [
+    {
+      "type": "born",
+      "date": "1927-03-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-04-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "virginia-woolf"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gabriel García Márquez (Q5878)",
+      "url": "https://www.wikidata.org/wiki/Q5878",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gabriel García Márquez",
+      "url": "https://en.wikipedia.org/wiki/Gabriel_Garc%C3%ADa_M%C3%A1rquez",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

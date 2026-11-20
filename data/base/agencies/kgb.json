@@ -1,0 +1,61 @@
+{
+  "id": "kgb",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "KGB",
+      "from": "1954"
+    }
+  ],
+  "summary": "Soviet security and intelligence service that handled spying abroad, counter-intelligence and the watching of citizens at home. It was a main opponent of Western agencies in the Cold War.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Committee for State Security",
+    "Committee for State Security of the USSR",
+    "CSS of the USSR",
+    "State Security Committee of the USSR",
+    "SSC of the USSR"
+  ],
+  "wikidata": "Q80919",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-03-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-12-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved after the failed 1991 coup and the end of the Soviet Union",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: KGB (Q80919)",
+      "url": "https://www.wikidata.org/wiki/Q80919",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: KGB",
+      "url": "https://en.wikipedia.org/wiki/KGB",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

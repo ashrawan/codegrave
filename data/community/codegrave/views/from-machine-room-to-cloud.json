@@ -1,0 +1,91 @@
+{
+  "id": "from-machine-room-to-cloud",
+  "name": "From Machine Room to Cloud: How Computing Moved",
+  "description": "Computers once filled rooms and belonged to firms. Then they moved to desks, laps, pockets and finally to data centres we reach over the network.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "business",
+    "engineering"
+  ],
+  "tags": [
+    "mainframe",
+    "cloud",
+    "personal computer",
+    "smartphone",
+    "internet",
+    "aws"
+  ],
+  "entries": [
+    "ibm",
+    "univac-i",
+    "ibm-650",
+    "system-360",
+    "cdc-6600",
+    "pdp-8",
+    "digital-equipment-corporation",
+    "multics",
+    "unix",
+    "pdp-11",
+    "intel-4004",
+    "cray-1",
+    "altair-8800",
+    "apple-ii",
+    "vax",
+    "ibm-pc",
+    "ms-dos",
+    "microsoft",
+    "macintosh",
+    "arpanet",
+    "internet-protocol-suite",
+    "world-wide-web",
+    "windows-95",
+    "dot-com-bubble",
+    "netflix",
+    "aws",
+    "iphone",
+    "android",
+    "dropbox",
+    "chromebook",
+    "raspberry-pi",
+    "frontier-supercomputer"
+  ],
+  "checkpoints": [
+    {
+      "id": "big-iron",
+      "name": "Big iron",
+      "from": 1911,
+      "to": 1963,
+      "note": "IBM and UNIVAC sold huge, costly computers that sat in climate-controlled rooms and were tended by specialists. Businesses and governments ran payrolls and statistics through them in batches."
+    },
+    {
+      "id": "sharing-and-minis",
+      "name": "Sharing and minicomputers",
+      "from": 1964,
+      "to": 1974,
+      "note": "IBM's System/360 unified a product line, the PDP-8 and PDP-11 brought smaller machines, and Multics and Unix let many people share a computer at once. ARPANET began to link them."
+    },
+    {
+      "id": "computers-for-everyone",
+      "name": "Computers for everyone",
+      "from": 1975,
+      "to": 1990,
+      "note": "Altair, Apple II, IBM PC and Macintosh moved computing onto desks and into homes. Microsoft's MS-DOS and later Windows made software, not hardware, the centre of the business."
+    },
+    {
+      "id": "the-network-and-the-web",
+      "name": "The network and the web",
+      "from": 1991,
+      "to": 2005,
+      "note": "TCP/IP and the web tied the machines together. Windows 95 spread the PC, the dot-com bubble raised and lost fortunes, and Netflix began renting discs by post before it streamed."
+    },
+    {
+      "id": "cloud-and-pocket",
+      "name": "Cloud and pocket",
+      "from": 2006,
+      "to": 2026,
+      "note": "Amazon Web Services rented computing by the hour, phones such as the iPhone and Android carried it everywhere, and data stored in the cloud followed the user. Supercomputers like Frontier show the big machines are still here."
+    }
+  ],
+  "year": 1995
+}

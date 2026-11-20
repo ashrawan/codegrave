@@ -1,0 +1,50 @@
+{
+  "id": "belisarius",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Belisarius",
+      "from": "0505"
+    }
+  ],
+  "summary": "General of the Byzantine emperor Justinian I who defeated the Persians and recaptured North Africa from the Vandals. He also fought in Italy against the Ostrogoths. His birth year is approximate.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Flavius Belisarius"
+  ],
+  "wikidata": "Q174943",
+  "events": [
+    {
+      "type": "born",
+      "date": "0505",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0565-03-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Belisarius (Q174943)",
+      "url": "https://www.wikidata.org/wiki/Q174943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belisarius",
+      "url": "https://en.wikipedia.org/wiki/Belisarius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

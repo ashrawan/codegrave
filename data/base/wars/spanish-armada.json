@@ -1,0 +1,50 @@
+{
+  "id": "spanish-armada",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Spanish Armada",
+      "from": "1588"
+    }
+  ],
+  "summary": "Fleet sent by Philip II of Spain to invade England. English ships and bad weather defeated it, and many Spanish vessels were lost on the voyage home around Scotland and Ireland.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Armada"
+  ],
+  "wikidata": "Q179684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1588-04-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1588-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish Armada (Q179684)",
+      "url": "https://www.wikidata.org/wiki/Q179684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish Armada",
+      "url": "https://en.wikipedia.org/wiki/Spanish_Armada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

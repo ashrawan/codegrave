@@ -1,0 +1,61 @@
+{
+  "id": "everest-1953-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "1953 British Mount Everest expedition",
+      "from": "1953"
+    }
+  ],
+  "summary": "A large British team led by John Hunt made the first confirmed ascent of Mount Everest, the highest mountain on Earth. Edmund Hillary and Tenzing Norgay stood on the summit on 29 May.",
+  "labels": [
+    "exploration",
+    "firsts"
+  ],
+  "wikidata": "Q4567715",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1953-06",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "edmund-hillary"
+    },
+    {
+      "type": "related",
+      "to": "tenzing-norgay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1953 British Mount Everest Expedition (Q4567715)",
+      "url": "https://www.wikidata.org/wiki/Q4567715",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1953 British Mount Everest expedition",
+      "url": "https://en.wikipedia.org/wiki/1953_British_Mount_Everest_expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

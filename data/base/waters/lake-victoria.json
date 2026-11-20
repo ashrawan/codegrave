@@ -1,0 +1,59 @@
+{
+  "id": "lake-victoria",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Lake Victoria",
+      "from": "-400000"
+    }
+  ],
+  "summary": "Africa's largest lake by area, shared by Uganda, Kenya and Tanzania, and the source of the White Nile. It is shallow and fairly young, and many of its colourful cichlid fish have been hit by the introduction of Nile perch.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Victoria Nyanza",
+    "Lake Nyanza"
+  ],
+  "wikidata": "Q5505",
+  "events": [
+    {
+      "type": "born",
+      "date": "-400000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    },
+    {
+      "type": "in",
+      "to": "uganda"
+    },
+    {
+      "type": "related",
+      "to": "victoria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lake Victoria (Q5505)",
+      "url": "https://www.wikidata.org/wiki/Q5505",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lake Victoria",
+      "url": "https://en.wikipedia.org/wiki/Lake_Victoria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

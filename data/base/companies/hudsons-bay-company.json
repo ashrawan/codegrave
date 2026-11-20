@@ -1,0 +1,60 @@
+{
+  "id": "hudsons-bay-company",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Hudson's Bay Company",
+      "from": "1670"
+    }
+  ],
+  "maker": "Prince Rupert and London investors",
+  "summary": "English company chartered to trade furs in the lands draining into Hudson Bay, which it governed as a huge territory for about two centuries. It later became a chain of department stores in Canada.",
+  "labels": [
+    "business",
+    "exploration"
+  ],
+  "aliases": [
+    "HBC",
+    "Hudson Bay Company",
+    "The Bay"
+  ],
+  "wikidata": "Q76039",
+  "events": [
+    {
+      "type": "born",
+      "date": "1670-05-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Entered creditor protection and closed its remaining stores.",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hudson's Bay Company (Q76039)",
+      "url": "https://www.wikidata.org/wiki/Q76039",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hudson's Bay Company",
+      "url": "https://en.wikipedia.org/wiki/Hudson's_Bay_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

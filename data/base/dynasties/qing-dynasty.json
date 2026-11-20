@@ -1,0 +1,60 @@
+{
+  "id": "qing-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Qing dynasty",
+      "from": "1636"
+    }
+  ],
+  "summary": "Last imperial dynasty of China, founded by the Manchus. It expanded the empire to its greatest size, was weakened by wars and rebellions in the 19th century and ended with the 1911 revolution.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Empire of the Great Qing",
+    "Great Qing",
+    "Qing Empire",
+    "Qing China",
+    "Manchu China"
+  ],
+  "wikidata": "Q8733",
+  "events": [
+    {
+      "type": "born",
+      "date": "1636",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1912",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown in the Xinhai Revolution",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Qing dynasty (Q8733)",
+      "url": "https://www.wikidata.org/wiki/Q8733",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qing dynasty",
+      "url": "https://en.wikipedia.org/wiki/Qing_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "swedish-east-india-company",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Swedish East India Company",
+      "from": "1731"
+    }
+  ],
+  "summary": "Swedish company that sent ships from Gothenburg to Canton for tea, porcelain and silk. Its voyages enriched the port, and one of its ships, the Gotheborg, was later rebuilt as a working replica.",
+  "labels": [
+    "business",
+    "exploration"
+  ],
+  "wikidata": "Q605901",
+  "events": [
+    {
+      "type": "born",
+      "date": "1731-06-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1813-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its final charter ran out in 1813",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Swedish East India Company (Q605901)",
+      "url": "https://www.wikidata.org/wiki/Q605901",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Swedish East India Company",
+      "url": "https://en.wikipedia.org/wiki/Swedish_East_India_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

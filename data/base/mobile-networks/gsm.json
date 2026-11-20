@@ -1,0 +1,50 @@
+{
+  "id": "gsm",
+  "category": "mobile-networks",
+  "names": [
+    {
+      "name": "GSM",
+      "from": "1990"
+    }
+  ],
+  "summary": "Digital mobile phone standard agreed by European countries and used around the world. It brought text messages, roaming across borders and SIM cards, and became the most widely used mobile system in history.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "aliases": [
+    "Global System for Mobile Communications",
+    "Groupe Spécial Mobile",
+    "2G",
+    "Mobile phone base stations",
+    "GSM mobile phone base station"
+  ],
+  "wikidata": "Q46904",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Global System for Mobile Communications (Q46904)",
+      "url": "https://www.wikidata.org/wiki/Q46904",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: GSM",
+      "url": "https://en.wikipedia.org/wiki/GSM",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

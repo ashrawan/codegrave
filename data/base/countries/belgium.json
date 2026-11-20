@@ -1,0 +1,62 @@
+{
+  "id": "belgium",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Belgium",
+      "from": "1830"
+    }
+  ],
+  "summary": "A country in western Europe that broke away from the Netherlands in the revolution of 1830. It has Dutch, French and German speakers, and Brussels hosts major European institutions.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Kingdom of Belgium"
+  ],
+  "wikidata": "Q31",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Belgium (Q31)",
+      "url": "https://www.wikidata.org/wiki/Q31",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belgium",
+      "url": "https://en.wikipedia.org/wiki/Belgium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

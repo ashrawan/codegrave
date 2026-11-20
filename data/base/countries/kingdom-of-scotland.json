@@ -1,0 +1,53 @@
+{
+  "id": "kingdom-of-scotland",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kingdom of Scotland",
+      "from": "0843"
+    }
+  ],
+  "summary": "The independent Scottish monarchy, which resisted English invasion under leaders like Robert the Bruce. Its crown passed to the Stuart king James VI, who also became king of England in 1603.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Scotland",
+    "The Kingdom of Scotland"
+  ],
+  "wikidata": "Q230791",
+  "events": [
+    {
+      "type": "born",
+      "date": "0843",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1707-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "United with England under the Acts of Union",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Scotland (Q230791)",
+      "url": "https://www.wikidata.org/wiki/Q230791",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Scotland",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Scotland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

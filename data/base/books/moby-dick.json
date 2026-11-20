@@ -1,0 +1,52 @@
+{
+  "id": "moby-dick",
+  "category": "books",
+  "names": [
+    {
+      "name": "Moby-Dick",
+      "from": "1851"
+    }
+  ],
+  "summary": "Novel by Herman Melville about Captain Ahab's obsessive hunt for a white whale, told by the sailor Ishmael. It sold poorly at first but is now ranked among the great American novels.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "The Whale",
+    "Moby Dick by Herman Melville",
+    "The White Whale"
+  ],
+  "wikidata": "Q174596",
+  "events": [
+    {
+      "type": "born",
+      "date": "1851-10-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "herman-melville"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moby-Dick (Q174596)",
+      "url": "https://www.wikidata.org/wiki/Q174596",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moby-Dick",
+      "url": "https://en.wikipedia.org/wiki/Moby-Dick",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

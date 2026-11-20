@@ -1,0 +1,70 @@
+{
+  "id": "olympic-games-from-olympia-to-the-world",
+  "name": "Fire, Flags and Records: The Story of the Olympic Games",
+  "description": "From a sacred festival in ancient Greece to a global spectacle: the Olympics through war, boycotts, protest and triumph.",
+  "category": "events",
+  "labels": [
+    "sport"
+  ],
+  "tags": [
+    "olympics",
+    "olympic games",
+    "athletics",
+    "sport",
+    "paralympics",
+    "medals"
+  ],
+  "entries": [
+    "ancient-olympic-games",
+    "olympics-1896",
+    "olympics-1912",
+    "winter-olympics-1924",
+    "olympics-1936",
+    "jesse-owens",
+    "olympics-1948",
+    "olympics-1956",
+    "olympics-1960",
+    "paralympics-1960",
+    "olympics-1964",
+    "olympics-1968",
+    "olympics-1972",
+    "olympics-1980",
+    "olympics-1984",
+    "olympics-1992",
+    "olympics-2000",
+    "olympics-2008",
+    "olympics-2012",
+    "miracle-on-ice"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-games",
+      "name": "The ancient games",
+      "from": -776,
+      "to": 393,
+      "note": "Every four years Greek cities pause their wars to gather at Olympia and race, wrestle and throw in honour of Zeus. The festival lasts for over a thousand years."
+    },
+    {
+      "id": "rebirth",
+      "name": "The games reborn",
+      "from": 1896,
+      "to": 1936,
+      "note": "The Games return in Athens in 1896 and grow with the Winter Games and fuller programmes. Berlin in 1936 shows how a state can use the Games and how an athlete can answer it."
+    },
+    {
+      "id": "cold-war-games",
+      "name": "Cold War Games",
+      "from": 1948,
+      "to": 1992,
+      "note": "Politics follows athletes onto the field: boycotts, protests and a terrible attack at Munich. Television and sponsors turn the Games into a giant business."
+    },
+    {
+      "id": "global-games",
+      "name": "The global games",
+      "from": 1993,
+      "to": 2012,
+      "note": "Almost every country takes part, and women compete in every sport. Host cities use the Games to remake themselves, from Barcelona to Beijing and London."
+    }
+  ],
+  "year": 1950
+}

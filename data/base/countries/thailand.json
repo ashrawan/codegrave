@@ -1,0 +1,70 @@
+{
+  "id": "thailand",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Thailand",
+      "from": "1932"
+    }
+  ],
+  "summary": "A Southeast Asian kingdom, called Siam until 1939, that was never colonised by a European power. It became a constitutional monarchy in 1932 after a revolution against absolute rule.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Kingdom of Thailand",
+    "th",
+    "Kingdom of Siam",
+    "The Kingdom of Thailand",
+    "The Kingdom of Siam"
+  ],
+  "wikidata": "Q869",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thailand (Q869)",
+      "url": "https://www.wikidata.org/wiki/Q869",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thailand",
+      "url": "https://en.wikipedia.org/wiki/Thailand",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

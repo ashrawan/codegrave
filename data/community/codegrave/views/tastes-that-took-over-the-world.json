@@ -1,0 +1,80 @@
+{
+  "id": "tastes-that-took-over-the-world",
+  "name": "Tastes That Took Over the World",
+  "description": "Bread, tea, coffee, chocolate, pizza and cola: how the foods and drinks of one place ended up on every table.",
+  "category": "society",
+  "labels": [
+    "food"
+  ],
+  "tags": [
+    "food",
+    "drink",
+    "tea",
+    "coffee",
+    "chocolate",
+    "cuisine"
+  ],
+  "entries": [
+    "bread",
+    "mead",
+    "wine",
+    "cheese",
+    "beer",
+    "chocolate",
+    "noodle",
+    "tea",
+    "garum",
+    "japanese-tea-ceremony",
+    "sushi",
+    "kimchi",
+    "pasta",
+    "coffee",
+    "vodka",
+    "whisky",
+    "champagne",
+    "pizza",
+    "coca-cola",
+    "pepsi",
+    "hamburger",
+    "instant-noodles",
+    "bubble-tea"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-foods",
+      "name": "The first kitchens",
+      "from": -12000,
+      "to": -1000,
+      "note": "Farmers learned to bake bread, ferment grain and fruit into beer and wine, and turn milk into cheese. Cacao was drunk in Mesoamerica, and noodles were made in northern China."
+    },
+    {
+      "id": "ancient-tables",
+      "name": "Trade and taste",
+      "from": -999,
+      "to": 1000,
+      "note": "Tea became a drink of China, and Romans fermented fish into a sauce sold across the Mediterranean. Japanese cooks developed fermented rice dishes that led to sushi."
+    },
+    {
+      "id": "spices-and-spirits",
+      "name": "Spirits and pasta",
+      "from": 1001,
+      "to": 1700,
+      "note": "Kimchi, pasta and coffee took shape in Korea, Italy and Arabia, and distillers in Poland, Scotland and Russia made strong drinks. Champagne's bubbles came at the end of the period."
+    },
+    {
+      "id": "industry-and-fizz",
+      "name": "Factories and fizz",
+      "from": 1701,
+      "to": 1900,
+      "note": "Pizza grew in Naples and pharmacists in the United States created drinks that were sold as cures. Bottling, railways and cheaper sugar gave them a mass market in towns and cities."
+    },
+    {
+      "id": "fast-world",
+      "name": "The fast food age",
+      "from": 1901,
+      "to": 2000,
+      "note": "Hamburgers, instant noodles and cola travelled with chains, ships and advertising, and Taiwan's bubble tea joined them near the end, carried by migrants and the internet."
+    }
+  ],
+  "year": 1900
+}

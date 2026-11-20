@@ -1,0 +1,66 @@
+{
+  "id": "house-of-plantagenet",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "House of Plantagenet",
+      "from": "1154"
+    }
+  ],
+  "summary": "English royal house that began with Henry II and ruled for more than three centuries. It produced Richard the Lionheart and signed Magna Carta, and ended in the Wars of the Roses.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Plantagenet dynasty",
+    "Angevin dynasty",
+    "Plantagenets"
+  ],
+  "wikidata": "Q106151",
+  "events": [
+    {
+      "type": "born",
+      "date": "1154",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1485",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when Richard III was defeated at Bosworth Field",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "house-of-tudor"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: House of Plantagenet (Q106151)",
+      "url": "https://www.wikidata.org/wiki/Q106151",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: House of Plantagenet",
+      "url": "https://en.wikipedia.org/wiki/House_of_Plantagenet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "pleistocene",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Pleistocene",
+      "from": "-2580000"
+    }
+  ],
+  "summary": "The epoch from about 2.6 million to 11,700 years ago, the main age of ice ages, with mammoths, sabre-toothed cats and giant ground sloths. Modern humans evolved and spread across the world during it.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Pleistocene Epoch",
+    "Pleistocene Series"
+  ],
+  "wikidata": "Q25546",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2580000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-9700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "quaternary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pleistocene (Q25546)",
+      "url": "https://www.wikidata.org/wiki/Q25546",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pleistocene",
+      "url": "https://en.wikipedia.org/wiki/Pleistocene",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

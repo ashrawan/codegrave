@@ -1,0 +1,72 @@
+{
+  "id": "aristotle",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Aristotle",
+      "from": "-0384"
+    }
+  ],
+  "summary": "Greek philosopher who studied under Plato, tutored Alexander the Great and founded the Lyceum. He wrote about logic, ethics, politics, physics and animals, and his works shaped thought in Europe and the Islamic world for centuries.",
+  "labels": [
+    "philosophy",
+    "biology"
+  ],
+  "aliases": [
+    "the Stagirite",
+    "Arisṭāṭṭil",
+    "Aristo",
+    "Aristote",
+    "Aristotel"
+  ],
+  "wikidata": "Q868",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0384",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0322",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "socrates"
+    },
+    {
+      "type": "influenced_by",
+      "to": "epicurus"
+    },
+    {
+      "type": "influenced_by",
+      "to": "hippocrates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aristotle (Q868)",
+      "url": "https://www.wikidata.org/wiki/Q868",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aristotle",
+      "url": "https://en.wikipedia.org/wiki/Aristotle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

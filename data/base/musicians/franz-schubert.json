@@ -1,0 +1,50 @@
+{
+  "id": "franz-schubert",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Franz Schubert",
+      "from": "1797"
+    }
+  ],
+  "summary": "Austrian composer who wrote about six hundred songs, including Erlkönig, as well as symphonies and chamber music. He died at thirty-one, and much of his music was published or played only after his death.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Schubert"
+  ],
+  "wikidata": "Q7312",
+  "events": [
+    {
+      "type": "born",
+      "date": "1797-01-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1828-11-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Franz Schubert (Q7312)",
+      "url": "https://www.wikidata.org/wiki/Q7312",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franz Schubert",
+      "url": "https://en.wikipedia.org/wiki/Franz_Schubert",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "rivonia-trial",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Rivonia Trial",
+      "from": "1963"
+    }
+  ],
+  "summary": "Nelson Mandela and other African National Congress leaders were tried in South Africa for sabotage. Mandela's speech from the dock became famous, and he was sentenced to life in prison.",
+  "labels": [
+    "law",
+    "human-rights"
+  ],
+  "wikidata": "Q1639868",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-10-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-06-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-africa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rivonia Trial (Q1639868)",
+      "url": "https://www.wikidata.org/wiki/Q1639868",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rivonia Trial",
+      "url": "https://en.wikipedia.org/wiki/Rivonia_Trial",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

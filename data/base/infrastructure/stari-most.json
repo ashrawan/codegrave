@@ -1,0 +1,64 @@
+{
+  "id": "stari-most",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Stari Most",
+      "from": "1566"
+    }
+  ],
+  "summary": "Ottoman stone arch bridge over the Neretva river in Mostar, Bosnia and Herzegovina. Shelling destroyed it in 1993 during the Bosnian War, and a faithful copy opened in 2004.",
+  "labels": [
+    "engineering",
+    "world-heritage",
+    "war"
+  ],
+  "aliases": [
+    "Old Bridge",
+    "Mostar bridge",
+    "Mostar Köprüsü"
+  ],
+  "wikidata": "Q188528",
+  "events": [
+    {
+      "type": "born",
+      "date": "1566",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1993",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by shelling in the Bosnian War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mimar-sinan"
+    },
+    {
+      "type": "in",
+      "to": "bosnia-and-herzegovina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stari Most (Q188528)",
+      "url": "https://www.wikidata.org/wiki/Q188528",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stari Most",
+      "url": "https://en.wikipedia.org/wiki/Stari_Most",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,64 @@
+{
+  "id": "moldova",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Moldova",
+      "from": "1991"
+    }
+  ],
+  "summary": "A small country in Eastern Europe between Romania and Ukraine. It declared independence from the Soviet Union in 1991, and the region of Transnistria has run itself separately since then.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Moldova",
+    "Moldavia",
+    "Republica Moldova"
+  ],
+  "wikidata": "Q217",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-08-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moldova (Q217)",
+      "url": "https://www.wikidata.org/wiki/Q217",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moldova",
+      "url": "https://en.wikipedia.org/wiki/Moldova",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

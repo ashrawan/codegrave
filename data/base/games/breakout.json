@@ -1,0 +1,53 @@
+{
+  "id": "breakout",
+  "category": "games",
+  "names": [
+    {
+      "name": "Breakout",
+      "from": "1976"
+    }
+  ],
+  "maker": "Atari",
+  "summary": "Arcade game where a player bounces a ball off a paddle to knock out rows of bricks. Steve Wozniak and Steve Jobs worked on it at Atari, and its idea shaped many later brick-breaking games.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "wikidata": "Q177491",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-05-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "atari-inc"
+    },
+    {
+      "type": "made_by",
+      "to": "steve-wozniak"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Breakout (Q177491)",
+      "url": "https://www.wikidata.org/wiki/Q177491",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Breakout (video game)",
+      "url": "https://en.wikipedia.org/wiki/Breakout_(video_game)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

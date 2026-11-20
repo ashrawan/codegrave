@@ -1,0 +1,51 @@
+{
+  "id": "cave-bear",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Cave bear",
+      "from": "-250000"
+    }
+  ],
+  "summary": "A large bear of ice age Europe that spent the winter sleeping in caves, where many of its bones are found. It mostly ate plants, and people sometimes used the same caves.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Ursus spelaeus"
+  ],
+  "wikidata": "Q188851",
+  "events": [
+    {
+      "type": "born",
+      "date": "-250000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-27000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost as the climate cooled and people competed for caves",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ursus spelaeus (Q188851)",
+      "url": "https://www.wikidata.org/wiki/Q188851",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cave bear",
+      "url": "https://en.wikipedia.org/wiki/Cave_bear",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

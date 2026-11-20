@@ -1,0 +1,80 @@
+{
+  "id": "the-ice-ages",
+  "name": "When Ice Ruled the World",
+  "description": "Snowball Earth, the long Cenozoic cooling, mammoths, giant floods and the little ice age: a history of Earth's deep freezes and the people who discovered them.",
+  "category": "earth-space",
+  "labels": [
+    "environment"
+  ],
+  "tags": [
+    "ice age",
+    "glaciers",
+    "climate",
+    "snowball earth",
+    "mammoth",
+    "sea level"
+  ],
+  "entries": [
+    "huronian-glaciation",
+    "cryogenian",
+    "snowball-earth",
+    "ordovician-silurian-extinction",
+    "southern-ocean",
+    "quaternary-glaciation",
+    "pleistocene",
+    "louis-agassiz",
+    "last-glacial-maximum",
+    "beringia",
+    "doggerland",
+    "lake-bonneville",
+    "glacial-lake-missoula",
+    "missoula-floods",
+    "lake-agassiz",
+    "younger-dryas",
+    "great-lakes",
+    "holocene",
+    "storegga-slide",
+    "crater-lake",
+    "little-ice-age",
+    "tambora-1815",
+    "year-without-a-summer"
+  ],
+  "checkpoints": [
+    {
+      "id": "deep-freezes",
+      "name": "The deepest freezes",
+      "from": -2400000000,
+      "to": -443000000,
+      "note": "Long before animals, rising oxygen and shifting continents bring ice ages that may have frozen the planet, and a short sharp one hits near the end of the Ordovician."
+    },
+    {
+      "id": "cooling-world",
+      "name": "A cooling world",
+      "from": -442999999,
+      "to": -2600000,
+      "note": "Ice returns when Antarctica is isolated by the Southern Ocean and the climate cools, setting the stage for the ice ages of our own geological period."
+    },
+    {
+      "id": "pleistocene-ice",
+      "name": "The great ice sheets",
+      "from": -2599999,
+      "to": -12000,
+      "note": "Ice sheets grow and shrink in cycles, lowering the sea and opening land bridges such as Beringia and Doggerland, while giant lakes and floods reshape North America."
+    },
+    {
+      "id": "after-the-ice",
+      "name": "After the ice",
+      "from": -11999,
+      "to": 1299,
+      "note": "The Younger Dryas cold snap gives way to the warm Holocene. Lakes drain, the Great Lakes form, and rising seas drown old lands."
+    },
+    {
+      "id": "little-ice-age",
+      "name": "A smaller chill",
+      "from": 1300,
+      "to": 2026,
+      "note": "A cooler spell grips Europe and North America, deepened by Tambora's eruption in 1815, while Louis Agassiz and others work out that ice once covered much of the world."
+    }
+  ],
+  "year": -20000
+}

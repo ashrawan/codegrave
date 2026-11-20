@@ -1,0 +1,48 @@
+{
+  "id": "walt-disney",
+  "category": "founders",
+  "names": [
+    {
+      "name": "Walt Disney",
+      "from": "1901"
+    }
+  ],
+  "summary": "American animator and producer who co-founded the Disney studio, created Mickey Mouse and made the first full-length animated feature with sound and colour. He also opened Disneyland in California in 1955.",
+  "labels": [
+    "film",
+    "business"
+  ],
+  "wikidata": "Q8704",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-12-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1966-12-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Walt Disney (Q8704)",
+      "url": "https://www.wikidata.org/wiki/Q8704",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Walt Disney",
+      "url": "https://en.wikipedia.org/wiki/Walt_Disney",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

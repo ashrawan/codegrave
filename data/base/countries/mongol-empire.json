@@ -1,0 +1,58 @@
+{
+  "id": "mongol-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Mongol Empire",
+      "from": "1206"
+    }
+  ],
+  "summary": "Founded by Genghis Khan, the largest connected land empire in history, running from Korea to Eastern Europe. It linked Asia and Europe by trade and post roads but also destroyed many cities.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Mongolian Empire",
+    "Great Mongol Nation"
+  ],
+  "wikidata": "Q12557",
+  "events": [
+    {
+      "type": "born",
+      "date": "1206",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1368",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Split into separate khanates that were conquered or absorbed over time",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "ming-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mongol Empire (Q12557)",
+      "url": "https://www.wikidata.org/wiki/Q12557",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mongol Empire",
+      "url": "https://en.wikipedia.org/wiki/Mongol_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

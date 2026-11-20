@@ -1,0 +1,105 @@
+{
+  "id": "tsars-commissars-and-presidents",
+  "name": "Tsars, Commissars and Presidents",
+  "description": "Five centuries of Russian power, from Ivan the Terrible's Kremlin to Peter's new capital, the revolutions of 1917, the Soviet superpower and the Russia that came after.",
+  "category": "places",
+  "labels": [
+    "politics",
+    "exploration"
+  ],
+  "tags": [
+    "russia",
+    "soviet union",
+    "tsar",
+    "lenin",
+    "stalin",
+    "kremlin",
+    "revolution",
+    "cold war"
+  ],
+  "entries": [
+    "ivan-the-terrible",
+    "house-of-romanov",
+    "moscow-kremlin",
+    "peter-the-great",
+    "saint-petersburg",
+    "russian-empire",
+    "catherine-the-great",
+    "alexander-pushkin",
+    "french-invasion-of-russia",
+    "war-and-peace",
+    "leo-tolstoy",
+    "fyodor-dostoevsky",
+    "pyotr-ilyich-tchaikovsky",
+    "swan-lake",
+    "emancipation-reform-1861",
+    "crimean-war",
+    "trans-siberian-railway",
+    "nicholas-ii",
+    "russian-revolution-of-1905",
+    "russian-revolution",
+    "vladimir-lenin",
+    "russian-civil-war",
+    "soviet-union",
+    "leon-trotsky",
+    "battleship-potemkin",
+    "joseph-stalin",
+    "moscow-trials",
+    "battle-of-stalingrad",
+    "sputnik-1",
+    "yuri-gagarin",
+    "nikita-khrushchev",
+    "cuban-missile-crisis",
+    "soviet-afghan-war",
+    "chernobyl-disaster",
+    "mikhail-gorbachev",
+    "dissolution-of-the-soviet-union",
+    "russia",
+    "vladimir-putin"
+  ],
+  "checkpoints": [
+    {
+      "id": "muscovy-to-empire",
+      "name": "From Muscovy to empire",
+      "from": 1530,
+      "to": 1796,
+      "note": "Ivan the Terrible rules from the Moscow Kremlin, the House of Romanov takes the throne in 1613, Peter the Great builds Saint Petersburg and the Russian Empire, and Catherine the Great pushes its borders south and west."
+    },
+    {
+      "id": "empire-of-writers",
+      "name": "Empire of writers and reform",
+      "from": 1797,
+      "to": 1904,
+      "note": "Napoleon's French invasion of Russia fails. Pushkin, Tolstoy with War and Peace, Dostoevsky and Tchaikovsky make Russian art famous, the Emancipation reform frees the serfs, the Crimean War shames the army and the Trans-Siberian Railway links the empire."
+    },
+    {
+      "id": "end-of-the-tsars",
+      "name": "The end of the tsars",
+      "from": 1905,
+      "to": 1921,
+      "note": "Under Nicholas II the 1905 revolution and the film Battleship Potemkin show the old order cracking. In 1917 the Russian Revolution brings Lenin to power, and the Russian Civil War decides who will rule."
+    },
+    {
+      "id": "stalins-union",
+      "name": "Stalin's Soviet Union",
+      "from": 1922,
+      "to": 1953,
+      "note": "The Soviet Union is founded. Stalin outmanoeuvres Trotsky, rules by terror including the Moscow trials, and survives the Battle of Stalingrad, which turns the tide of the Second World War."
+    },
+    {
+      "id": "superpower",
+      "name": "Superpower and decline",
+      "from": 1954,
+      "to": 1991,
+      "note": "Khrushchev launches Sputnik and sends Gagarin into orbit, then faces the Cuban Missile Crisis. After the Afghan War and Chernobyl, Gorbachev reforms the system and the Soviet Union dissolves."
+    },
+    {
+      "id": "russia-after",
+      "name": "Russia after the Soviets",
+      "from": 1992,
+      "to": 2025,
+      "note": "A new Russia emerges from the collapse, with years of hardship, and under Vladimir Putin the country reasserts itself at home and abroad."
+    }
+  ],
+  "year": 1917
+}

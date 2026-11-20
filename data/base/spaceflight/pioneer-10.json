@@ -1,0 +1,58 @@
+{
+  "id": "pioneer-10",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Pioneer 10",
+      "from": "1973"
+    }
+  ],
+  "summary": "American probe launched in 1972 that was the first to cross the asteroid belt and the first to fly past Jupiter. It carried a plaque for any finder and sent its last signal in 2003, still heading out of the Solar System.",
+  "labels": [
+    "astronomy",
+    "exploration",
+    "firsts"
+  ],
+  "aliases": [
+    "Pioneer F"
+  ],
+  "wikidata": "Q59103",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-03-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its power source faded until signals became too weak to hear",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pioneer 10 (Q59103)",
+      "url": "https://www.wikidata.org/wiki/Q59103",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pioneer 10",
+      "url": "https://en.wikipedia.org/wiki/Pioneer_10",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

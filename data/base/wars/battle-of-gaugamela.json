@@ -1,0 +1,63 @@
+{
+  "id": "battle-of-gaugamela",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Gaugamela",
+      "from": "-0331"
+    }
+  ],
+  "summary": "Decisive battle in which Alexander the Great defeated Darius III of Persia on an open plain in what is now Iraq. It opened the way to the Persian heartland and the fall of the Achaemenid Empire.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Arbela"
+  ],
+  "wikidata": "Q179670",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0331-10-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0331-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "achaemenid-empire"
+    },
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-macedon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Gaugamela (Q179670)",
+      "url": "https://www.wikidata.org/wiki/Q179670",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Gaugamela",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Gaugamela",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

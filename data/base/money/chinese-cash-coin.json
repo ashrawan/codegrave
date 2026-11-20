@@ -1,0 +1,52 @@
+{
+  "id": "chinese-cash-coin",
+  "category": "money",
+  "names": [
+    {
+      "name": "Chinese cash coin",
+      "from": "-0221"
+    }
+  ],
+  "summary": "A round bronze coin with a square hole, strung together in bundles. First standardised under the Qin dynasty, versions of it were the main small money of China for over two thousand years.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "cash",
+    "Chinese cash"
+  ],
+  "wikidata": "Q8572111",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0221",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1912",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by modern machine-struck coins and the yuan",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cash (Q8572111)",
+      "url": "https://www.wikidata.org/wiki/Q8572111",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cash (Chinese coin)",
+      "url": "https://en.wikipedia.org/wiki/Cash_(Chinese_coin)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

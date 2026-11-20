@@ -1,0 +1,53 @@
+{
+  "id": "beringia",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Beringia",
+      "from": "-30000"
+    }
+  ],
+  "summary": "The land bridge that joined Siberia and Alaska when sea level was low in the last ice age, a grassy plain over a thousand kilometres wide. Animals and early people crossed it into the Americas before it flooded.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "aliases": [
+    "Bering Isthmus",
+    "Bering land bridge"
+  ],
+  "wikidata": "Q190927",
+  "events": [
+    {
+      "type": "born",
+      "date": "-30000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-9000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Flooded by rising seas as the ice sheets melted",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Beringia (Q190927)",
+      "url": "https://www.wikidata.org/wiki/Q190927",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Beringia",
+      "url": "https://en.wikipedia.org/wiki/Beringia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

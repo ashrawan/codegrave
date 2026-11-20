@@ -1,0 +1,87 @@
+{
+  "id": "computer-generations",
+  "name": "The five generations of computers",
+  "description": "Hand-picked: the computers that mark each generation, from vacuum tubes and transistors to chips, microprocessors and machines built for AI.",
+  "category": "computing",
+  "author": "codegrave",
+  "tags": [
+    "computers",
+    "generations",
+    "history",
+    "hand-picked"
+  ],
+  "categories": [
+    "early-computers",
+    "minicomputers",
+    "personal-computers",
+    "laptops-tablets",
+    "phones",
+    "ai"
+  ],
+  "level": 100,
+  "year": 1975,
+  "things": [
+    "z3",
+    "colossus",
+    "eniac",
+    "manchester-baby",
+    "edsac",
+    "univac-i",
+    "ibm-650",
+    "ibm-1401",
+    "ibm-7090",
+    "pdp-1",
+    "system-360",
+    "pdp-11",
+    "apple-ii",
+    "trs-80",
+    "ibm-pc",
+    "osborne-1",
+    "zx-spectrum",
+    "commodore-64",
+    "macintosh",
+    "amiga-1000",
+    "next-computer",
+    "imac-g3",
+    "iphone",
+    "raspberry-pi",
+    "fifth-generation"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-generation",
+      "name": "First generation: vacuum tubes",
+      "from": 1940,
+      "to": 1955,
+      "note": "Computers switch with vacuum tubes (valves). They fill a room, run hot and fail often, and each one is built by hand. Colossus, ENIAC, EDSAC and UNIVAC I belong here; the Z3, built from relays, is a step just before."
+    },
+    {
+      "id": "second-generation",
+      "name": "Second generation: transistors",
+      "from": 1956,
+      "to": 1963,
+      "note": "The transistor replaces the tube: smaller, cooler, cheaper and far more reliable. Computers such as the IBM 1401 and 7090 move from laboratories into ordinary businesses, and languages like FORTRAN and COBOL arrive."
+    },
+    {
+      "id": "third-generation",
+      "name": "Third generation: integrated circuits",
+      "from": 1964,
+      "to": 1970,
+      "note": "Many transistors are made together on one chip. IBM's System/360 gives business a family of compatible machines, and minicomputers bring a computer within reach of a single department."
+    },
+    {
+      "id": "fourth-generation",
+      "name": "Fourth generation: microprocessors",
+      "from": 1971,
+      "to": 2009,
+      "note": "From 1971 a whole processor fits on one chip, and the computer becomes personal: on the desk, then on the lap, then in the pocket. Textbooks differ on where this generation ends; many say it has not."
+    },
+    {
+      "id": "fifth-generation",
+      "name": "Fifth generation: AI and parallel machines",
+      "from": 2010,
+      "to": 2026,
+      "note": "Computers built to learn and reason, using many processors at once. Japan set out to build them in 1982 and fell short. There is no agreed start date: textbooks say \"the present and beyond\", so the line drawn here at 2010 is only a guide."
+    }
+  ]
+}

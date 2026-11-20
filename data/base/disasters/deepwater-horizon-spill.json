@@ -1,0 +1,64 @@
+{
+  "id": "deepwater-horizon-spill",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Deepwater Horizon oil spill",
+      "from": "2010"
+    }
+  ],
+  "summary": "An explosion on a drilling rig in the Gulf of Mexico killed workers and let oil gush from the seabed for months. It was one of the largest marine oil spills ever and harmed wildlife and fishing along the coast.",
+  "labels": [
+    "energy",
+    "environment"
+  ],
+  "aliases": [
+    "BP oil spill",
+    "BP oil disaster",
+    "Gulf of Mexico oil spill",
+    "Macondo blowout",
+    "Deepwater Horizon disaster"
+  ],
+  "wikidata": "Q4735638",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-04-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2010-04-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gulf-of-mexico"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Deepwater Horizon oil spill (Q4735638)",
+      "url": "https://www.wikidata.org/wiki/Q4735638",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Deepwater Horizon oil spill",
+      "url": "https://en.wikipedia.org/wiki/Deepwater_Horizon_oil_spill",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

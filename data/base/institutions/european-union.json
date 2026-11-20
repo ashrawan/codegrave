@@ -1,0 +1,48 @@
+{
+  "id": "european-union",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "European Union",
+      "from": "1993"
+    }
+  ],
+  "summary": "Political and economic union of European states, created by the Maastricht Treaty out of earlier European communities. Its members share a single market, many use the euro, and it has its own parliament and court.",
+  "labels": [
+    "politics",
+    "economics"
+  ],
+  "wikidata": "Q458",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-11-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: European Union (Q458)",
+      "url": "https://www.wikidata.org/wiki/Q458",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: European Union",
+      "url": "https://en.wikipedia.org/wiki/European_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,83 @@
+{
+  "id": "volcanoes-that-changed-history",
+  "name": "Fire Mountains: Volcanoes That Changed History",
+  "description": "From the lava floods that nearly ended life to Vesuvius, Krakatoa and Tambora: the eruptions that cooled the climate, buried towns and shaped our world.",
+  "category": "earth-space",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "tags": [
+    "volcano",
+    "eruption",
+    "lava",
+    "vesuvius",
+    "krakatoa",
+    "ash",
+    "caldera"
+  ],
+  "entries": [
+    "siberian-traps",
+    "deccan-traps",
+    "hawaiian-islands",
+    "mount-kilimanjaro",
+    "ngorongoro-crater",
+    "yellowstone-caldera",
+    "mount-etna",
+    "mount-fuji",
+    "mount-vesuvius",
+    "toba-eruption",
+    "mount-st-helens",
+    "mount-mazama",
+    "crater-lake",
+    "minoan-eruption",
+    "samalas-eruption",
+    "tambora-1815",
+    "year-without-a-summer",
+    "krakatoa-1883",
+    "anak-krakatau",
+    "pelee-eruption-1902",
+    "surtsey",
+    "st-helens-eruption",
+    "pinatubo-eruption",
+    "eyjafjallajokull-eruption"
+  ],
+  "checkpoints": [
+    {
+      "id": "floods-of-lava",
+      "name": "Floods of lava",
+      "from": -252000000,
+      "to": -60000000,
+      "note": "The biggest eruptions in Earth's history pour out lava over Siberia and India, poisoning the air and helping to drive mass extinctions."
+    },
+    {
+      "id": "ancient-giants",
+      "name": "The giants of the Ice Age",
+      "from": -59999999,
+      "to": -10000,
+      "note": "Volcanoes such as Etna, Fuji and Yellowstone build up and blow, and the huge Toba eruption shakes the whole planet."
+    },
+    {
+      "id": "bronze-age-blast",
+      "name": "Collapse and rebirth",
+      "from": -9999,
+      "to": 1,
+      "note": "Mount Mazama collapses to form Crater Lake and Thera explodes, burying Akrotiri and shaking the Aegean, while Vesuvius and Etna remain close neighbours of human settlements."
+    },
+    {
+      "id": "age-of-eruptions",
+      "name": "Eruptions that changed history",
+      "from": 2,
+      "to": 1914,
+      "note": "Samalas, Tambora and Krakatoa darken skies and cool the climate, causing crop failures, tsunamis and tens of thousands of deaths, and Pelée destroys Saint-Pierre."
+    },
+    {
+      "id": "watched-eruptions",
+      "name": "Eruptions we watch",
+      "from": 1915,
+      "to": 2026,
+      "note": "Satellites and seismometers let scientists watch Surtsey, St. Helens, Pinatubo and Eyjafjallajökull, saving lives and showing how new land and ash clouds behave."
+    }
+  ],
+  "year": 1883
+}

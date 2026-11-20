@@ -1,0 +1,50 @@
+{
+  "id": "europa-moon",
+  "category": "space",
+  "names": [
+    {
+      "name": "Europa",
+      "from": "-4500000000"
+    }
+  ],
+  "summary": "An ice-covered moon of Jupiter with a salty ocean of liquid water under its crust. It is one of the best places to look for life beyond Earth, and NASA's Europa Clipper mission was launched in 2024 to study it.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Jupiter II"
+  ],
+  "wikidata": "Q3143",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "galileo-galilei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Europa (Q3143)",
+      "url": "https://www.wikidata.org/wiki/Q3143",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Europa (moon)",
+      "url": "https://en.wikipedia.org/wiki/Europa_(moon)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

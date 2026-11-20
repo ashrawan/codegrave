@@ -1,0 +1,58 @@
+{
+  "id": "olympics-1980",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1980 Summer Olympics",
+      "from": "1980"
+    }
+  ],
+  "summary": "The Moscow Games were boycotted by the United States and many other countries after the Soviet invasion of Afghanistan. They were the first Summer Olympics held in a socialist country.",
+  "labels": [
+    "sport",
+    "politics"
+  ],
+  "aliases": [
+    "Juegos de la XXII Olimpiada",
+    "1980 Moscow",
+    "Moscow 1980"
+  ],
+  "wikidata": "Q8450",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-07-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-08-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1980 Summer Olympics (Q8450)",
+      "url": "https://www.wikidata.org/wiki/Q8450",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1980 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1980_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

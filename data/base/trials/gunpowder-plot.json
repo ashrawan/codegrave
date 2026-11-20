@@ -1,0 +1,61 @@
+{
+  "id": "gunpowder-plot",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Gunpowder Plot",
+      "from": "1605"
+    }
+  ],
+  "summary": "A plan by a group of English Catholics, including Guy Fawkes, to blow up the House of Lords and kill King James I. It was discovered in 1605 and the plotters were tried and executed.",
+  "labels": [
+    "politics",
+    "law"
+  ],
+  "aliases": [
+    "Gunpowder Treason Plot",
+    "Jesuit Treason"
+  ],
+  "wikidata": "Q45810",
+  "events": [
+    {
+      "type": "born",
+      "date": "1605-11-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1605-11-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "guy-fawkes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gunpowder Plot (Q45810)",
+      "url": "https://www.wikidata.org/wiki/Q45810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gunpowder Plot",
+      "url": "https://en.wikipedia.org/wiki/Gunpowder_Plot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

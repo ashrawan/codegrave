@@ -1,0 +1,79 @@
+{
+  "id": "the-world-at-war-1939-1945",
+  "name": "The World at War, 1939 to 1945",
+  "description": "From the broken peace of 1919 to the courtrooms of Nuremberg: the battles, leaders and decisions of the deadliest war in history.",
+  "category": "events",
+  "labels": [
+    "war"
+  ],
+  "tags": [
+    "world war 2",
+    "ww2",
+    "hitler",
+    "allies",
+    "d-day",
+    "pearl harbor"
+  ],
+  "entries": [
+    "interwar-period",
+    "treaty-of-versailles",
+    "spanish-civil-war",
+    "munich-agreement",
+    "world-war-ii",
+    "battle-of-britain",
+    "operation-barbarossa",
+    "attack-on-pearl-harbor",
+    "battle-of-midway",
+    "battle-of-stalingrad",
+    "second-battle-of-el-alamein",
+    "battle-of-kursk",
+    "normandy-landings",
+    "battle-of-the-bulge",
+    "battle-of-berlin",
+    "atomic-bombings-of-hiroshima-and-nagasaki",
+    "yalta-conference",
+    "potsdam-conference",
+    "nuremberg-trials",
+    "tokyo-war-crimes-trials",
+    "winston-churchill",
+    "joseph-stalin"
+  ],
+  "checkpoints": [
+    {
+      "id": "broken-peace",
+      "name": "A peace that did not hold",
+      "from": 1919,
+      "to": 1938,
+      "note": "The Treaty of Versailles and the hard years of the interwar period leave grievances and weak democracies. Dictators rise, Spain falls into civil war, and at Munich Europe tries to buy peace with a neighbour's land."
+    },
+    {
+      "id": "blitz-and-barbarossa",
+      "name": "Germany on the offensive",
+      "from": 1939,
+      "to": 1941,
+      "note": "War begins in Poland in 1939. Germany overruns western Europe, loses the air fight over Britain, then attacks the Soviet Union, and Japan's strike on Pearl Harbor turns a European war into a world war."
+    },
+    {
+      "id": "turning-point",
+      "name": "The tide turns",
+      "from": 1942,
+      "to": 1943,
+      "note": "Midway, Stalingrad and El Alamein stop the Axis advance on three fronts. At Kursk the Soviet Red Army shows it can beat the German army in the open, and the Allies begin to take the lead."
+    },
+    {
+      "id": "road-to-victory",
+      "name": "Road to victory",
+      "from": 1944,
+      "to": 1945,
+      "note": "Allied troops land in Normandy, Germany's last offensive fails in the Ardennes, and the Red Army storms Berlin. The leaders meet at Yalta and Potsdam, and atomic bombs end the war in Asia."
+    },
+    {
+      "id": "judgement",
+      "name": "Judgement and aftermath",
+      "from": 1946,
+      "to": 1948,
+      "note": "Judges in Nuremberg and Tokyo try leaders of the defeated Axis powers for war crimes, setting rules of international law that the world still uses."
+    }
+  ],
+  "year": 1942
+}

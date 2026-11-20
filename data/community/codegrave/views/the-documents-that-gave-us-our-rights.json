@@ -1,0 +1,85 @@
+{
+  "id": "the-documents-that-gave-us-our-rights",
+  "name": "The Documents That Gave Us Our Rights",
+  "description": "From the pillar of Hammurabi to the Universal Declaration, the laws, charters and declarations that limited rulers and spread rights.",
+  "category": "society",
+  "labels": [
+    "law",
+    "human-rights"
+  ],
+  "tags": [
+    "rights",
+    "constitution",
+    "law",
+    "freedom",
+    "charter",
+    "declaration"
+  ],
+  "entries": [
+    "code-of-hammurabi",
+    "twelve-tables",
+    "edicts-of-ashoka",
+    "edict-of-milan",
+    "corpus-juris-civilis",
+    "constitution-of-medina",
+    "magna-carta",
+    "edict-of-nantes",
+    "habeas-corpus-act-1679",
+    "bill-of-rights-1689",
+    "us-declaration-of-independence",
+    "declaration-of-the-rights-of-man",
+    "us-constitution",
+    "us-bill-of-rights",
+    "napoleonic-code",
+    "slavery-abolition-act-1833",
+    "treaty-of-waitangi",
+    "geneva-conventions",
+    "emancipation-proclamation",
+    "thirteenth-amendment",
+    "weimar-constitution",
+    "nineteenth-amendment",
+    "un-charter",
+    "universal-declaration-of-human-rights",
+    "german-basic-law",
+    "constitution-of-india",
+    "civil-rights-act-1964"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-law",
+      "name": "Law on stone",
+      "from": -1800,
+      "to": 700,
+      "note": "The earliest laws were carved in public so everyone could see them. Babylon, Rome, the Mauryan empire and Byzantium each wrote down rules, though rights in the modern sense were still rare."
+    },
+    {
+      "id": "limits-on-kings",
+      "name": "Limits on kings",
+      "from": 1200,
+      "to": 1700,
+      "note": "Charters and acts slowly forced rulers to follow rules. Magna Carta, tolerance in France, habeas corpus and the English Bill of Rights set out what a crown could not do."
+    },
+    {
+      "id": "age-of-revolutions",
+      "name": "Rights for citizens",
+      "from": 1776,
+      "to": 1865,
+      "note": "American and French revolutionaries wrote that people are born with rights. The ideas spread through codes, charters and later campaigns against slavery, which ended in law in several countries."
+    },
+    {
+      "id": "rights-under-strain",
+      "name": "Rights under strain",
+      "from": 1866,
+      "to": 1945,
+      "note": "Votes for women and new constitutions arrived alongside racist laws and war. The Geneva Conventions tried to protect victims of war, and the Nazi years showed how quickly rights could be removed."
+    },
+    {
+      "id": "after-the-war",
+      "name": "A world of declarations",
+      "from": 1946,
+      "to": 2000,
+      "note": "After 1945 states wrote rights into a global declaration and new constitutions in Germany and India. Civil rights laws in the United States opened courts and schools to those excluded."
+    }
+  ],
+  "year": 1948
+}

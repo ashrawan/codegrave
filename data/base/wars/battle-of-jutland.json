@@ -1,0 +1,68 @@
+{
+  "id": "battle-of-jutland",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Jutland",
+      "from": "1916"
+    }
+  ],
+  "summary": "The largest naval battle of the First World War, fought between the British Grand Fleet and the German High Seas Fleet in the North Sea. Britain lost more ships but kept its control of the sea.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Skagerrak",
+    "Skagerrakschlacht"
+  ],
+  "wikidata": "Q156554",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-05-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1916-06-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-i"
+    },
+    {
+      "type": "related",
+      "to": "canada"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    },
+    {
+      "type": "related",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Jutland (Q156554)",
+      "url": "https://www.wikidata.org/wiki/Q156554",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Jutland",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Jutland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

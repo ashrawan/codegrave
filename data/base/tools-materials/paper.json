@@ -1,0 +1,53 @@
+{
+  "id": "paper",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Paper",
+      "from": "-0141"
+    }
+  ],
+  "maker": "Traditionally Cai Lun",
+  "summary": "A thin sheet made from pressed plant fibres. Court official Cai Lun is traditionally credited with improving it in China around 105 CE, and its spread along trade routes to the Islamic world and Europe changed writing and learning.",
+  "labels": [
+    "firsts",
+    "media"
+  ],
+  "wikidata": "Q11472",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0141",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "cai-lun"
+    },
+    {
+      "type": "related",
+      "to": "papyrus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: paper (Q11472)",
+      "url": "https://www.wikidata.org/wiki/Q11472",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paper",
+      "url": "https://en.wikipedia.org/wiki/Paper",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

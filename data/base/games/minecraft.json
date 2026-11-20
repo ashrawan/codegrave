@@ -1,0 +1,49 @@
+{
+  "id": "minecraft",
+  "category": "games",
+  "names": [
+    {
+      "name": "Minecraft",
+      "from": "2009"
+    }
+  ],
+  "maker": "Markus Persson, later Mojang",
+  "summary": "Sandbox game in which players mine blocks, build structures and survive in a world made of cubes. Begun by one programmer, it became one of the best-selling video games and a favourite in classrooms.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "wikidata": "Q49740",
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-05-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Minecraft (Q49740)",
+      "url": "https://www.wikidata.org/wiki/Q49740",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Minecraft",
+      "url": "https://en.wikipedia.org/wiki/Minecraft",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,66 @@
+{
+  "id": "wright-flyer",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Wright Flyer",
+      "from": "1903"
+    }
+  ],
+  "maker": "Wright brothers",
+  "summary": "The aeroplane built by Wilbur and Orville Wright that made the first powered, controlled flights on 17 December 1903 at Kitty Hawk, North Carolina. The longest flight that day lasted 59 seconds.",
+  "labels": [
+    "firsts",
+    "transport"
+  ],
+  "aliases": [
+    "Flyer I",
+    "1903 Flyer",
+    "Wright Flyer 1903",
+    "1903 Wright Flyer",
+    "Wright Flyer No. 1"
+  ],
+  "wikidata": "Q688605",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903-12-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1903-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Damaged by wind after its fourth flight and never flown again",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "wright-brothers"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Flyer I (Q688605)",
+      "url": "https://www.wikidata.org/wiki/Q688605",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wright Flyer",
+      "url": "https://en.wikipedia.org/wiki/Wright_Flyer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

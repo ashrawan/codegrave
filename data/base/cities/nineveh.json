@@ -1,0 +1,60 @@
+{
+  "id": "nineveh",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Nineveh",
+      "from": "-6000"
+    }
+  ],
+  "summary": "Great city on the Tigris that became the capital of the Assyrian Empire. Its royal library of clay tablets survived and gave scholars much of what is known about Mesopotamian writing and myth.",
+  "labels": [
+    "lost"
+  ],
+  "aliases": [
+    "Mint of Nineveh"
+  ],
+  "wikidata": "Q5680",
+  "events": [
+    {
+      "type": "born",
+      "date": "-6000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0612",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sacked by a Babylonian and Median army",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "in",
+      "to": "sasanian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nineveh (Q5680)",
+      "url": "https://www.wikidata.org/wiki/Q5680",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nineveh",
+      "url": "https://en.wikipedia.org/wiki/Nineveh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

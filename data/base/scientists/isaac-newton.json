@@ -1,0 +1,57 @@
+{
+  "id": "isaac-newton",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Isaac Newton",
+      "from": "1643"
+    }
+  ],
+  "summary": "English mathematician and physicist who set out the laws of motion and universal gravity in his Principia and developed calculus. He also showed that white light is made of many colours and later ran the Royal Mint.",
+  "labels": [
+    "physics",
+    "mathematics"
+  ],
+  "wikidata": "Q935",
+  "events": [
+    {
+      "type": "born",
+      "date": "1643-01-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1727-03-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "rene-descartes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Isaac Newton (Q935)",
+      "url": "https://www.wikidata.org/wiki/Q935",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Isaac Newton",
+      "url": "https://en.wikipedia.org/wiki/Isaac_Newton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

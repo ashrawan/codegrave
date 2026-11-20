@@ -1,0 +1,53 @@
+{
+  "id": "powerpoint",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Microsoft PowerPoint",
+      "from": "1987"
+    }
+  ],
+  "maker": "Forethought, then Microsoft",
+  "summary": "Program for making slide shows with text, pictures and charts. First written for the Macintosh, it was bought by Microsoft and became the usual tool for business and school presentations.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "wikidata": "Q11266",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    },
+    {
+      "type": "part_of",
+      "to": "microsoft-office"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft PowerPoint (Q11266)",
+      "url": "https://www.wikidata.org/wiki/Q11266",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft PowerPoint",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_PowerPoint",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

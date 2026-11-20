@@ -1,0 +1,60 @@
+{
+  "id": "kingdom-of-jerusalem",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kingdom of Jerusalem",
+      "from": "1099"
+    }
+  ],
+  "summary": "The Crusader state founded in the Holy Land after the First Crusade. It lost Jerusalem to Saladin in 1187 but survived on the coast for another century, with Acre as its capital.",
+  "labels": [
+    "lost",
+    "religion",
+    "war"
+  ],
+  "aliases": [
+    "Latin Kingdom of Jerusalem",
+    "Jerusalem",
+    "Crusader Kingdom"
+  ],
+  "wikidata": "Q55502",
+  "events": [
+    {
+      "type": "born",
+      "date": "1099-07-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1291-05-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "The last stronghold, Acre, fell to the Mamluk Sultanate",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "mamluk-sultanate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Jerusalem (Q55502)",
+      "url": "https://www.wikidata.org/wiki/Q55502",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Jerusalem",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Jerusalem",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "french-new-wave",
+  "category": "genres",
+  "names": [
+    {
+      "name": "French New Wave",
+      "from": "1958"
+    }
+  ],
+  "summary": "Group of young French film makers, including Godard and Truffaut, who in the late 1950s made low-cost, fast, free-form films shot on location. They broke the rules of editing and storytelling and inspired directors worldwide.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Nouvelle Vague",
+    "la Nouvelle Vague"
+  ],
+  "wikidata": "Q193541",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1964",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French New Wave (Q193541)",
+      "url": "https://www.wikidata.org/wiki/Q193541",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French New Wave",
+      "url": "https://en.wikipedia.org/wiki/French_New_Wave",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

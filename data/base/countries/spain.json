@@ -1,0 +1,70 @@
+{
+  "id": "spain",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Spain",
+      "from": "1978"
+    }
+  ],
+  "summary": "A country of the Iberian Peninsula that once ruled a vast empire. After the dictatorship of Franco ended, it became a parliamentary monarchy under the constitution of 1978.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Kingdom of Spain"
+  ],
+  "wikidata": "Q29",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-12-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "part_of",
+      "to": "spanish-empire"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spain (Q29)",
+      "url": "https://www.wikidata.org/wiki/Q29",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spain",
+      "url": "https://en.wikipedia.org/wiki/Spain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

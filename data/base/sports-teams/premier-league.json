@@ -1,0 +1,54 @@
+{
+  "id": "premier-league",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Premier League",
+      "from": "1992"
+    }
+  ],
+  "summary": "Top division of English football, formed in 1992 when the leading clubs broke away from the Football League. Large television deals made it the richest and most watched league in the world.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "English Premier League",
+    "Premiership",
+    "English Premiership",
+    "England Premier League",
+    "Premier League of England"
+  ],
+  "wikidata": "Q9448",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-02-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Premier League (Q9448)",
+      "url": "https://www.wikidata.org/wiki/Q9448",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Premier League",
+      "url": "https://en.wikipedia.org/wiki/Premier_League",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

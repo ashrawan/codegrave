@@ -1,0 +1,70 @@
+{
+  "id": "when-steam-ruled-the-rails",
+  "name": "When Steam Ruled the Rails",
+  "description": "How coal, iron and a kettle that learned to pull turned slow roads into railways, and what came after the steam locomotive.",
+  "category": "technology",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "tags": [
+    "railway",
+    "steam",
+    "locomotive",
+    "train",
+    "shinkansen"
+  ],
+  "entries": [
+    "stagecoach",
+    "newcomen-engine",
+    "steam-engine",
+    "james-watt",
+    "locomotion-no-1",
+    "george-stephenson",
+    "stephensons-rocket",
+    "tram",
+    "isambard-kingdom-brunel",
+    "london-underground",
+    "bessemer-process",
+    "first-transcontinental-railroad",
+    "trans-siberian-railway",
+    "orient-express",
+    "steam-turbine",
+    "electric-motor",
+    "lner-a4-mallard",
+    "shinkansen",
+    "tgv",
+    "shanghai-maglev-train"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-rails",
+      "name": "Before the rails",
+      "from": 1610,
+      "to": 1799,
+      "note": "Coaches and wagons crawl along muddy roads while Newcomen and Watt teach steam to pump and turn. A steam wagon in France shows that an engine can move itself, if slowly."
+    },
+    {
+      "id": "iron-roads",
+      "name": "The first iron roads",
+      "from": 1800,
+      "to": 1869,
+      "note": "Stephenson's Locomotion and Rocket prove that steam locomotives can carry people and goods. Cities build tram lines and the first underground, and America links its coasts by rail in 1869."
+    },
+    {
+      "id": "empires-of-steel",
+      "name": "Empires of steel",
+      "from": 1870,
+      "to": 1938,
+      "note": "Cheap steel lets railways cross continents. The Trans-Siberian and the Orient Express become romantic journeys, and the Mallard sets a speed record for steam in 1938."
+    },
+    {
+      "id": "speed-reborn",
+      "name": "Speed reborn",
+      "from": 1939,
+      "to": 2026,
+      "note": "Diesel and electric trains replace steam. Japan opens the Shinkansen in 1964, France follows with the TGV, and China runs a magnetic levitation line at over four hundred kilometres per hour."
+    }
+  ],
+  "year": 1850
+}

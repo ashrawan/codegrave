@@ -1,0 +1,60 @@
+{
+  "id": "september-11-attacks",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "September 11 attacks",
+      "from": "2001"
+    }
+  ],
+  "summary": "Four planes were hijacked by al-Qaeda members on 11 September 2001. Two struck the World Trade Center towers in New York, one hit the Pentagon and one crashed in Pennsylvania, killing nearly 3,000 people.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "September 11",
+    "11 September",
+    "11 September 2001",
+    "September 11, 2001",
+    "11 September Attacks"
+  ],
+  "wikidata": "Q10806",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-09-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: September 11 attacks (Q10806)",
+      "url": "https://www.wikidata.org/wiki/Q10806",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: September 11 attacks",
+      "url": "https://en.wikipedia.org/wiki/September_11_attacks",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

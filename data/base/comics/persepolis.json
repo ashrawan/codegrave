@@ -1,0 +1,47 @@
+{
+  "id": "persepolis",
+  "category": "comics",
+  "names": [
+    {
+      "name": "Persepolis",
+      "from": "2000"
+    }
+  ],
+  "summary": "Autobiographical graphic novel by Marjane Satrapi about growing up in Iran during and after the 1979 revolution. It was published in French and has been translated widely.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q756604",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "persepolis-citie"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Persepolis (Q756604)",
+      "url": "https://www.wikidata.org/wiki/Q756604",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Persepolis (comics)",
+      "url": "https://en.wikipedia.org/wiki/Persepolis_(comics)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

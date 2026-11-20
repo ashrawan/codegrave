@@ -1,0 +1,58 @@
+{
+  "id": "alps",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Alps",
+      "from": "-65000000"
+    }
+  ],
+  "summary": "Europe's great mountain range, running through France, Switzerland, Italy, Austria and other countries. It rose as Africa pushed into Europe, and its glaciers carved famous valleys and peaks such as Mont Blanc and the Matterhorn.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "European Alps",
+    "Central European Alps",
+    "Alpine",
+    "Alpeia",
+    "Alpeis"
+  ],
+  "wikidata": "Q1286",
+  "events": [
+    {
+      "type": "born",
+      "date": "-65000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alps (Q1286)",
+      "url": "https://www.wikidata.org/wiki/Q1286",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alps",
+      "url": "https://en.wikipedia.org/wiki/Alps",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

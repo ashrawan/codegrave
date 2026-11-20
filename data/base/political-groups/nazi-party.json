@@ -1,0 +1,62 @@
+{
+  "id": "nazi-party",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Nazi Party",
+      "from": "1920"
+    }
+  ],
+  "summary": "German far-right party led by Adolf Hitler, which ruled Germany as a one-party state from 1933 to 1945. Its racist ideology led to a war in Europe and the Holocaust.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "National Socialist German Workers' Party",
+    "National Socialists"
+  ],
+  "wikidata": "Q7320",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-02-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Banned by the Allies after Germany's defeat",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "weimar-republic"
+    },
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nazi Party (Q7320)",
+      "url": "https://www.wikidata.org/wiki/Q7320",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nazi Party",
+      "url": "https://en.wikipedia.org/wiki/Nazi_Party",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

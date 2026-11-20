@@ -1,0 +1,57 @@
+{
+  "id": "space-race",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Space Race",
+      "from": "1957"
+    }
+  ],
+  "summary": "The rivalry between the United States and the Soviet Union to achieve firsts in spaceflight, from the launch of Sputnik in 1957 to the joint Apollo-Soyuz flight in 1975. It was a part of the Cold War.",
+  "labels": [
+    "space-race",
+    "politics"
+  ],
+  "wikidata": "Q1932",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-10-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-07",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "soviet-union"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: space race (Q1932)",
+      "url": "https://www.wikidata.org/wiki/Q1932",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Space Race",
+      "url": "https://en.wikipedia.org/wiki/Space_Race",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

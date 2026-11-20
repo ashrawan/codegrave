@@ -1,0 +1,90 @@
+{
+  "id": "builders-of-the-skyline",
+  "name": "Builders of the Skyline: Architects and Their Towers",
+  "description": "From Brunelleschi's dome to the Burj Khalifa: the architects who dared to build higher, stranger and more beautiful, and the buildings that became symbols of their cities.",
+  "category": "arts",
+  "labels": [
+    "architecture",
+    "engineering"
+  ],
+  "tags": [
+    "architect",
+    "skyscraper",
+    "cathedral",
+    "skyline",
+    "tower"
+  ],
+  "entries": [
+    "filippo-brunelleschi",
+    "michelangelo",
+    "st-peters-basilica",
+    "andrea-palladio",
+    "mimar-sinan",
+    "christopher-wren",
+    "palace-of-versailles",
+    "gustave-eiffel",
+    "eiffel-tower",
+    "great-chicago-fire",
+    "louis-sullivan",
+    "home-insurance-building",
+    "elevator",
+    "antoni-gaudi",
+    "sagrada-familia",
+    "frank-lloyd-wright",
+    "le-corbusier",
+    "mies-van-der-rohe",
+    "chrysler-building",
+    "empire-state-building",
+    "world-trade-center-twin-towers",
+    "sydney-opera-house",
+    "willis-tower",
+    "cn-tower",
+    "pritzker-prize",
+    "im-pei",
+    "petronas-towers",
+    "taipei-101",
+    "frank-gehry",
+    "zaha-hadid",
+    "burj-khalifa",
+    "shanghai-tower",
+    "tokyo-skytree"
+  ],
+  "checkpoints": [
+    {
+      "id": "domes-and-basilicas",
+      "name": "Domes and basilicas",
+      "from": 1377,
+      "to": 1699,
+      "note": "Brunelleschi crowns Florence with a dome, Michelangelo reshapes St. Peter's Basilica, Palladio designs villas, Sinan builds mosques for Ottoman sultans, and Christopher Wren rebuilds London after fire. Versailles shows royal architecture on the largest scale."
+    },
+    {
+      "id": "iron-and-steel",
+      "name": "Iron and steel",
+      "from": 1700,
+      "to": 1899,
+      "note": "After the Great Chicago Fire the city rebuilds in steel, Louis Sullivan helps make the skyscraper, and the Home Insurance Building is often called the first skyscraper. The elevator makes tall buildings workable, and Gustave Eiffel's Eiffel Tower proves iron can rise higher than stone."
+    },
+    {
+      "id": "masters-of-modernism",
+      "name": "Masters of modernism",
+      "from": 1900,
+      "to": 1960,
+      "note": "Gaudí's Sagrada Família grows slowly in Barcelona while Frank Lloyd Wright, Le Corbusier and Mies van der Rohe invent a modern style. In New York the Chrysler Building and Empire State Building race to the top."
+    },
+    {
+      "id": "icons-and-records",
+      "name": "Icons and records",
+      "from": 1961,
+      "to": 1999,
+      "note": "The twin towers of the World Trade Center, the Willis Tower and the CN Tower break height records, while the Sydney Opera House shows the shape of a city can be art. The Pritzker Prize honours architects such as I. M. Pei, and the Petronas Towers rise in Kuala Lumpur."
+    },
+    {
+      "id": "towers-of-asia-and-the-gulf",
+      "name": "Towers of Asia and the Gulf",
+      "from": 2000,
+      "to": 2026,
+      "note": "Taipei 101, the Burj Khalifa, the Shanghai Tower and the Tokyo Skytree move the record to Asia and the Gulf, while Frank Gehry and Zaha Hadid show that a building can take any shape, even a curve."
+    }
+  ],
+  "year": 1930
+}

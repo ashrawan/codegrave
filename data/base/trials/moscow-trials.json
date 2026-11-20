@@ -1,0 +1,53 @@
+{
+  "id": "moscow-trials",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Moscow trials",
+      "from": "1936"
+    }
+  ],
+  "summary": "Show trials in the Soviet Union in which Stalin's opponents, including old Bolshevik leaders, confessed to crimes they had not committed. Most were executed during the Great Purge.",
+  "labels": [
+    "law",
+    "politics"
+  ],
+  "wikidata": "Q117320",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-08-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1938-03",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moscow Trials (Q117320)",
+      "url": "https://www.wikidata.org/wiki/Q117320",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moscow trials",
+      "url": "https://en.wikipedia.org/wiki/Moscow_trials",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

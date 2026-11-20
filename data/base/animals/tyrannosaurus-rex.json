@@ -1,0 +1,48 @@
+{
+  "id": "tyrannosaurus-rex",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Tyrannosaurus rex",
+      "from": "-68000000"
+    }
+  ],
+  "summary": "One of the largest meat-eating land animals ever, a two-legged dinosaur of western North America with a huge skull and very strong bite. It lived in the last few million years before the dinosaurs died out.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q14332",
+  "events": [
+    {
+      "type": "born",
+      "date": "-68000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Wiped out in the mass extinction at the end of the Cretaceous",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Tyrannosaurus (Q14332)",
+      "url": "https://www.wikidata.org/wiki/Q14332",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tyrannosaurus",
+      "url": "https://en.wikipedia.org/wiki/Tyrannosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

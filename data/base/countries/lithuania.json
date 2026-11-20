@@ -1,0 +1,70 @@
+{
+  "id": "lithuania",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Lithuania",
+      "from": "1990"
+    }
+  ],
+  "summary": "The largest of the Baltic states, once part of a great grand duchy. In March 1990 it was the first Soviet republic to declare independence, and it joined the EU and NATO in 2004.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Lithuania"
+  ],
+  "wikidata": "Q37",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-03-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lithuania (Q37)",
+      "url": "https://www.wikidata.org/wiki/Q37",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lithuania",
+      "url": "https://en.wikipedia.org/wiki/Lithuania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

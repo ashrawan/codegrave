@@ -1,0 +1,43 @@
+{
+  "id": "cholera",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Cholera",
+      "from": "1854"
+    }
+  ],
+  "summary": "A disease spread by dirty water that causes severe diarrhoea. In 1854 John Snow traced a London outbreak to a single pump, one of the founding studies of public health.",
+  "labels": [
+    "medicine"
+  ],
+  "wikidata": "Q12090",
+  "events": [
+    {
+      "type": "born",
+      "date": "1854",
+      "precision": "year",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cholera (Q12090)",
+      "url": "https://www.wikidata.org/wiki/Q12090",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cholera",
+      "url": "https://en.wikipedia.org/wiki/Cholera",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

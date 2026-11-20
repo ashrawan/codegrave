@@ -1,0 +1,58 @@
+{
+  "id": "ss-great-eastern",
+  "category": "ships",
+  "names": [
+    {
+      "name": "SS Great Eastern",
+      "from": "1858"
+    }
+  ],
+  "maker": "Isambard Kingdom Brunel",
+  "summary": "A huge iron steamship designed by Brunel and launched in 1858, the largest ship in the world for decades. She later laid the first lasting telegraph cable across the Atlantic.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "Great Eastern"
+  ],
+  "wikidata": "Q733293",
+  "events": [
+    {
+      "type": "born",
+      "date": "1858",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1889",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broken up for scrap after commercial failure",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "isambard-kingdom-brunel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: SS Great Eastern (Q733293)",
+      "url": "https://www.wikidata.org/wiki/Q733293",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SS Great Eastern",
+      "url": "https://en.wikipedia.org/wiki/SS_Great_Eastern",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

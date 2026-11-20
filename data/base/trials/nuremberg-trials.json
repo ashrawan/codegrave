@@ -1,0 +1,56 @@
+{
+  "id": "nuremberg-trials",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Nuremberg trials",
+      "from": "1945"
+    }
+  ],
+  "summary": "Military tribunals held in Nuremberg in which Allied judges tried leading Nazi officials for war crimes and crimes against humanity. They helped create modern international criminal law.",
+  "labels": [
+    "law",
+    "human-rights"
+  ],
+  "aliases": [
+    "Nürnberg trials"
+  ],
+  "wikidata": "Q80130",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-11-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1946-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nuremberg trials (Q80130)",
+      "url": "https://www.wikidata.org/wiki/Q80130",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nuremberg trials",
+      "url": "https://en.wikipedia.org/wiki/Nuremberg_trials",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

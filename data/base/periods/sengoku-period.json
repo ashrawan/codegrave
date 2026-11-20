@@ -1,0 +1,62 @@
+{
+  "id": "sengoku-period",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Sengoku period",
+      "from": "1467"
+    }
+  ],
+  "summary": "Called the Warring States period of Japan, a century and a half of fighting between regional lords. It ended in unification under Oda Nobunaga, Toyotomi Hideyoshi and Tokugawa Ieyasu.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Warring States period",
+    "Age of Warring States",
+    "Japanese Warring States",
+    "Sengoku"
+  ],
+  "wikidata": "Q204023",
+  "events": [
+    {
+      "type": "born",
+      "date": "1467",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1615",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    },
+    {
+      "type": "related",
+      "to": "warring-states-period"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sengoku period (Q204023)",
+      "url": "https://www.wikidata.org/wiki/Q204023",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sengoku period",
+      "url": "https://en.wikipedia.org/wiki/Sengoku_period",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

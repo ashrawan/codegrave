@@ -1,0 +1,60 @@
+{
+  "id": "storm-on-the-sea-of-galilee",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "The Storm on the Sea of Galilee",
+      "from": "1633"
+    }
+  ],
+  "maker": "Rembrandt",
+  "summary": "Dramatic seascape by Rembrandt of Jesus and his followers in a boat tossed by waves. It was his only seascape. It was one of thirteen works stolen from a Boston museum in 1990 and has not been seen in public since.",
+  "labels": [
+    "visual-art",
+    "lost"
+  ],
+  "aliases": [
+    "St. Pieters scheepje",
+    "Storm on the Sea of Galilee"
+  ],
+  "wikidata": "Q2246489",
+  "events": [
+    {
+      "type": "born",
+      "date": "1633",
+      "precision": "year"
+    },
+    {
+      "type": "milestone",
+      "date": "1990",
+      "precision": "year",
+      "label": "Stolen",
+      "note": "Taken from the Isabella Stewart Gardner Museum in Boston. It has not been recovered."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "rembrandt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Storm on the Sea of Galilee (Q2246489)",
+      "url": "https://www.wikidata.org/wiki/Q2246489",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Storm on the Sea of Galilee",
+      "url": "https://en.wikipedia.org/wiki/The_Storm_on_the_Sea_of_Galilee",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

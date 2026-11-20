@@ -1,0 +1,57 @@
+{
+  "id": "royal-african-company",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Royal African Company",
+      "from": "1660"
+    }
+  ],
+  "summary": "English company given a monopoly of trade on the west coast of Africa, dealing in gold, ivory and enslaved people. It carried many thousands of Africans across the Atlantic before losing its monopoly in 1698.",
+  "labels": [
+    "business",
+    "economics"
+  ],
+  "aliases": [
+    "RAC"
+  ],
+  "wikidata": "Q769519",
+  "events": [
+    {
+      "type": "born",
+      "date": "1660",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1752-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by a new regulated company after years of losses",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Royal African Company (Q769519)",
+      "url": "https://www.wikidata.org/wiki/Q769519",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Royal African Company",
+      "url": "https://en.wikipedia.org/wiki/Royal_African_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "impression-sunrise",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Impression, Sunrise",
+      "from": "1872"
+    }
+  ],
+  "maker": "Claude Monet",
+  "summary": "Quick, hazy painting by Claude Monet of boats in the harbour at Le Havre at dawn. A critic mocked its loose style in a review of an 1874 show, and the insult gave Impressionism its name.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Impression soleil levant"
+  ],
+  "wikidata": "Q328523",
+  "events": [
+    {
+      "type": "born",
+      "date": "1872",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "claude-monet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Impression, Sunrise (Q328523)",
+      "url": "https://www.wikidata.org/wiki/Q328523",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Impression, Sunrise",
+      "url": "https://en.wikipedia.org/wiki/Impression,_Sunrise",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

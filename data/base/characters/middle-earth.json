@@ -1,0 +1,54 @@
+{
+  "id": "middle-earth",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Middle-earth",
+      "from": "1937"
+    }
+  ],
+  "summary": "The imaginary world created by J. R. R. Tolkien, home of hobbits, elves, dwarves and orcs. Complete with maps, histories and languages, it set the standard for fantasy worlds.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Endor",
+    "Hither Lands",
+    "Great Lands",
+    "Ennor",
+    "Ennorath"
+  ],
+  "wikidata": "Q79734",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jrr-tolkien"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Middle-earth (Q79734)",
+      "url": "https://www.wikidata.org/wiki/Q79734",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Middle-earth",
+      "url": "https://en.wikipedia.org/wiki/Middle-earth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "washington-monument",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Washington Monument",
+      "from": "1885"
+    }
+  ],
+  "summary": "Tall stone obelisk in Washington, D.C., honouring the first American president. Work stopped for years during the Civil War, and when it was done it was the tallest structure in the world.",
+  "labels": [
+    "architecture",
+    "record-holders"
+  ],
+  "aliases": [
+    "WAMO",
+    "Washington National Monument"
+  ],
+  "wikidata": "Q178114",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "george-washington"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Washington Monument (Q178114)",
+      "url": "https://www.wikidata.org/wiki/Q178114",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Washington Monument",
+      "url": "https://en.wikipedia.org/wiki/Washington_Monument",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

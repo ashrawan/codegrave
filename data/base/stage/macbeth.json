@@ -1,0 +1,53 @@
+{
+  "id": "macbeth",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Macbeth",
+      "from": "1606"
+    }
+  ],
+  "summary": "Tragedy by William Shakespeare in which a Scottish general, urged on by three witches and his wife, murders the king to take the crown. It is the shortest of his tragedies.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "The Scottish Play",
+    "The Bard's Play",
+    "The Tragedy of Macbeth",
+    "Tragedy of Macbeth"
+  ],
+  "wikidata": "Q130283",
+  "events": [
+    {
+      "type": "born",
+      "date": "1606",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Macbeth (Q130283)",
+      "url": "https://www.wikidata.org/wiki/Q130283",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Macbeth",
+      "url": "https://en.wikipedia.org/wiki/Macbeth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "scheme",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Scheme",
+      "from": "1975"
+    }
+  ],
+  "summary": "Small, elegant dialect of Lisp created at MIT. It was widely used to teach programming, and its ideas influenced JavaScript and other languages.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q187560",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "lisp"
+    },
+    {
+      "type": "influenced_by",
+      "to": "algol"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Scheme (Q187560)",
+      "url": "https://www.wikidata.org/wiki/Q187560",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Scheme (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Scheme_(programming_language)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

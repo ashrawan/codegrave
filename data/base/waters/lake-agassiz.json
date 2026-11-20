@@ -1,0 +1,65 @@
+{
+  "id": "lake-agassiz",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Lake Agassiz",
+      "from": "-11000"
+    }
+  ],
+  "summary": "A vast glacial lake that covered parts of Manitoba, Ontario, Saskatchewan and the northern US, larger than all of today's Great Lakes together, held in by the retreating ice sheet. Its sudden draining may have chilled the North Atlantic.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "aliases": [
+    "glacial Lake Agassiz"
+  ],
+  "wikidata": "Q390804",
+  "events": [
+    {
+      "type": "born",
+      "date": "-11000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-6400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Drained as the ice dam melted away",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "louis-agassiz"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lake Agassiz (Q390804)",
+      "url": "https://www.wikidata.org/wiki/Q390804",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lake Agassiz",
+      "url": "https://en.wikipedia.org/wiki/Lake_Agassiz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

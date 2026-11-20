@@ -1,0 +1,43 @@
+{
+  "id": "chinese-junk",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Junk",
+      "from": "-0200"
+    }
+  ],
+  "summary": "A Chinese sailing ship with a flat bottom, watertight compartments and battened sails. Junks were used for coastal and ocean trade for many centuries and were among the best ships of their time.",
+  "labels": [
+    "transport",
+    "exploration"
+  ],
+  "wikidata": "Q205011",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: junk (Q205011)",
+      "url": "https://www.wikidata.org/wiki/Q205011",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Junk (ship)",
+      "url": "https://en.wikipedia.org/wiki/Junk_(ship)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

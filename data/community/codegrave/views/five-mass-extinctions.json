@@ -1,0 +1,80 @@
+{
+  "id": "five-mass-extinctions",
+  "name": "Five Times Life Nearly Ended",
+  "description": "The five great extinctions in Earth's past, what caused them, who survived, and why scientists fear a sixth is under way today.",
+  "category": "earth-space",
+  "labels": [
+    "biology",
+    "environment",
+    "lost"
+  ],
+  "tags": [
+    "mass extinction",
+    "dinosaurs",
+    "great dying",
+    "asteroid",
+    "volcanoes",
+    "fossils"
+  ],
+  "entries": [
+    "cambrian-explosion",
+    "ordovician",
+    "ordovician-silurian-extinction",
+    "devonian",
+    "late-devonian-extinction",
+    "permian",
+    "siberian-traps",
+    "permian-triassic-extinction",
+    "pangaea",
+    "triassic",
+    "triassic-jurassic-extinction",
+    "jurassic",
+    "cretaceous",
+    "deccan-traps",
+    "chicxulub-impact",
+    "cretaceous-paleogene-extinction",
+    "western-interior-seaway",
+    "paleocene-eocene-thermal-maximum",
+    "cenozoic",
+    "holocene-extinction",
+    "anthropocene"
+  ],
+  "checkpoints": [
+    {
+      "id": "shells-and-ice",
+      "name": "Shells, then ice",
+      "from": -539000000,
+      "to": -443000000,
+      "note": "Animals burst into variety in the Cambrian seas. Then the first great extinction strikes as ice spreads and the sea falls, killing much of the life in shallow waters."
+    },
+    {
+      "id": "forests-and-fish",
+      "name": "The fall of the fish age",
+      "from": -442999999,
+      "to": -359000000,
+      "note": "Armoured fish dominate the Devonian seas and forests spread on land, but a long series of extinctions hits reefs and sea life hard."
+    },
+    {
+      "id": "great-dying",
+      "name": "The Great Dying",
+      "from": -358999999,
+      "to": -250000000,
+      "note": "Siberian lava floods, a greenhouse world and starved oceans bring the worst extinction known, about 252 million years ago, ending most life on Earth."
+    },
+    {
+      "id": "dinosaur-world",
+      "name": "Dinosaurs rise and fall",
+      "from": -249999999,
+      "to": -56000000,
+      "note": "Dinosaurs benefit from a Triassic extinction, rule for 135 million years, and lose out to a huge asteroid impact and volcanic eruptions, while small mammals survive."
+    },
+    {
+      "id": "sixth-extinction",
+      "name": "Is a sixth under way?",
+      "from": -55999999,
+      "to": 2026,
+      "note": "After warming spikes and cooler ages, humans arrive, and many scientists say hunting, habitat loss and climate change are driving species out faster than normal."
+    }
+  ],
+  "year": -66000000
+}

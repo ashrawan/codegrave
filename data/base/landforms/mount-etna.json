@@ -1,0 +1,54 @@
+{
+  "id": "mount-etna",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Mount Etna",
+      "from": "-300000"
+    }
+  ],
+  "summary": "The tallest active volcano in Europe, on the island of Sicily, and one of the most active in the world. Its eruptions have been recorded since ancient times, and farmers have long grown crops on its fertile soil.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Mount Aetna",
+    "Aetna",
+    "Etna",
+    "Èttena",
+    "Èttina"
+  ],
+  "wikidata": "Q16990",
+  "events": [
+    {
+      "type": "born",
+      "date": "-300000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mount Etna (Q16990)",
+      "url": "https://www.wikidata.org/wiki/Q16990",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mount Etna",
+      "url": "https://en.wikipedia.org/wiki/Mount_Etna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

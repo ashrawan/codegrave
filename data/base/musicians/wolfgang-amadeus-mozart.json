@@ -1,0 +1,63 @@
+{
+  "id": "wolfgang-amadeus-mozart",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Wolfgang Amadeus Mozart",
+      "from": "1756"
+    }
+  ],
+  "summary": "Austrian composer who played in public as a young child and wrote more than six hundred works, including the operas The Marriage of Figaro and The Magic Flute. He died in Vienna at thirty-five.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Wolfgang Amadè Mozart",
+    "Apollo Mozzart",
+    "Wolfgango Amadeo Mozart",
+    "Volphnkank Amedaios Motsart",
+    "Mozhate"
+  ],
+  "wikidata": "Q254",
+  "events": [
+    {
+      "type": "born",
+      "date": "1756-01-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1791-12-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    },
+    {
+      "type": "influenced_by",
+      "to": "johann-sebastian-bach"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wolfgang Amadeus Mozart (Q254)",
+      "url": "https://www.wikidata.org/wiki/Q254",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wolfgang Amadeus Mozart",
+      "url": "https://en.wikipedia.org/wiki/Wolfgang_Amadeus_Mozart",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

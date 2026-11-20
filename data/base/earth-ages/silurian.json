@@ -1,0 +1,57 @@
+{
+  "id": "silurian",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Silurian",
+      "from": "-443100000"
+    }
+  ],
+  "summary": "The period from 444 to 419 million years ago, when life recovered from the Ordovician extinction. Reefs spread, jawed fish became common, and the first simple plants and small arthropods lived on land.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Silurian Period",
+    "Silurian System"
+  ],
+  "wikidata": "Q62412",
+  "events": [
+    {
+      "type": "born",
+      "date": "-443100000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-419620000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "paleozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Silurian (Q62412)",
+      "url": "https://www.wikidata.org/wiki/Q62412",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Silurian",
+      "url": "https://en.wikipedia.org/wiki/Silurian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

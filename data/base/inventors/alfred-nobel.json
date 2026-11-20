@@ -1,0 +1,52 @@
+{
+  "id": "alfred-nobel",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Alfred Nobel",
+      "from": "1833"
+    }
+  ],
+  "summary": "Swedish chemist and industrialist who invented dynamite and held many other patents. His will left most of his fortune to fund prizes in physics, chemistry, medicine, literature and peace.",
+  "labels": [
+    "chemistry",
+    "business",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Alfred B. Nobel"
+  ],
+  "wikidata": "Q23810",
+  "events": [
+    {
+      "type": "born",
+      "date": "1833-10-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1896-12-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Alfred Nobel (Q23810)",
+      "url": "https://www.wikidata.org/wiki/Q23810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alfred Nobel",
+      "url": "https://en.wikipedia.org/wiki/Alfred_Nobel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

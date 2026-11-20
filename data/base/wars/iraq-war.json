@@ -1,0 +1,95 @@
+{
+  "id": "iraq-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Iraq War",
+      "from": "2003"
+    }
+  ],
+  "summary": "The 2003 invasion of Iraq by a US-led coalition removed Saddam Hussein's government. It was followed by years of insurgency and sectarian violence, and US forces withdrew in 2011.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Operation Iraqi Freedom",
+    "Iraqi Freedom",
+    "Invasion of Iraq",
+    "Iraq Invasion",
+    "Occupation of Iraq"
+  ],
+  "wikidata": "Q545449",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-03-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-12-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "poland"
+    },
+    {
+      "type": "related",
+      "to": "spain"
+    },
+    {
+      "type": "related",
+      "to": "armenia"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    },
+    {
+      "type": "related",
+      "to": "azerbaijan"
+    },
+    {
+      "type": "related",
+      "to": "bosnia-and-herzegovina"
+    },
+    {
+      "type": "related",
+      "to": "czech-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iraq War (Q545449)",
+      "url": "https://www.wikidata.org/wiki/Q545449",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iraq War",
+      "url": "https://en.wikipedia.org/wiki/Iraq_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "dead-sea-scrolls",
+  "category": "books",
+  "names": [
+    {
+      "name": "Dead Sea Scrolls",
+      "from": "-0250"
+    }
+  ],
+  "summary": "Hundreds of Jewish manuscripts found from 1947 in caves near the Dead Sea. They include the oldest known copies of books of the Hebrew Bible and were mostly written between the third century BCE and the first century CE.",
+  "labels": [
+    "religion",
+    "lost"
+  ],
+  "aliases": [
+    "Qumran manuscripts"
+  ],
+  "wikidata": "Q145780",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0250",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "judaism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dead Sea scrolls (Q145780)",
+      "url": "https://www.wikidata.org/wiki/Q145780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dead Sea Scrolls",
+      "url": "https://en.wikipedia.org/wiki/Dead_Sea_Scrolls",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

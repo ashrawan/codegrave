@@ -1,0 +1,49 @@
+{
+  "id": "battleship-potemkin",
+  "category": "films",
+  "names": [
+    {
+      "name": "Battleship Potemkin",
+      "from": "1925"
+    }
+  ],
+  "maker": "Sergei Eisenstein",
+  "summary": "Soviet silent film by Sergei Eisenstein about a mutiny on a Russian warship in 1905. Its massacre scene on the Odesa steps, built from fast cuts, made it a landmark in editing and in political filmmaking.",
+  "labels": [
+    "film",
+    "politics"
+  ],
+  "wikidata": "Q152350",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-12-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "dmitri-shostakovich"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battleship Potemkin (Q152350)",
+      "url": "https://www.wikidata.org/wiki/Q152350",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battleship Potemkin",
+      "url": "https://en.wikipedia.org/wiki/Battleship_Potemkin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

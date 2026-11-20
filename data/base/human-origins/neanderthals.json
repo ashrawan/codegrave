@@ -1,0 +1,51 @@
+{
+  "id": "neanderthals",
+  "category": "human-origins",
+  "names": [
+    {
+      "name": "Neanderthals",
+      "from": "-400000"
+    }
+  ],
+  "summary": "A close human relative that lived in Europe and western Asia in the ice age. They made tools, controlled fire and buried their dead, and many people today carry a little of their DNA.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Homo neanderthalensis"
+  ],
+  "wikidata": "Q40171",
+  "events": [
+    {
+      "type": "born",
+      "date": "-400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-40000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Disappeared as modern humans spread; climate and small populations likely played a part",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Neanderthal (Q40171)",
+      "url": "https://www.wikidata.org/wiki/Q40171",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neanderthal",
+      "url": "https://en.wikipedia.org/wiki/Neanderthal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "aeneid",
+  "category": "books",
+  "names": [
+    {
+      "name": "Aeneid",
+      "from": "-0019"
+    }
+  ],
+  "summary": "Latin epic poem by Virgil about Aeneas, a Trojan who escapes the fall of Troy and sails to Italy, where his descendants will found Rome. It was written for Emperor Augustus and left unfinished at the poet's death.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Aenēis",
+    "Eneid",
+    "Æneid",
+    "Verg. A."
+  ],
+  "wikidata": "Q60220",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0019",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "virgil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aeneid (Q60220)",
+      "url": "https://www.wikidata.org/wiki/Q60220",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aeneid",
+      "url": "https://en.wikipedia.org/wiki/Aeneid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "niels-bohr",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Niels Bohr",
+      "from": "1885"
+    }
+  ],
+  "summary": "Danish physicist who pictured electrons moving between fixed energy levels around the nucleus, giving off light as they jump. He won the 1922 Nobel Prize in Physics and led the Copenhagen institute where quantum theory was debated.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "N. H. D. Bohr"
+  ],
+  "wikidata": "Q7085",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885-10-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-11-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Niels Bohr (Q7085)",
+      "url": "https://www.wikidata.org/wiki/Q7085",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Niels Bohr",
+      "url": "https://en.wikipedia.org/wiki/Niels_Bohr",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

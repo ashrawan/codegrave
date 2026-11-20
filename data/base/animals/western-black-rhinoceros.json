@@ -1,0 +1,54 @@
+{
+  "id": "western-black-rhinoceros",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Western black rhinoceros",
+      "from": "-1000000"
+    }
+  ],
+  "summary": "A subspecies of black rhinoceros that lived in the savannas of West Africa. Poaching drove it down, and it was declared extinct in 2011.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Diceros bicornis longipes",
+    "west african black rhino",
+    "West African black rhinoceros"
+  ],
+  "wikidata": "Q2089396",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "2011",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Killed by poachers for its horn",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Western black rhinoceros (Q2089396)",
+      "url": "https://www.wikidata.org/wiki/Q2089396",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Western black rhinoceros",
+      "url": "https://en.wikipedia.org/wiki/Western_black_rhinoceros",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

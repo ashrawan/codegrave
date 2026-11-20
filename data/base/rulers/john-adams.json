@@ -1,0 +1,50 @@
+{
+  "id": "john-adams",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "John Adams",
+      "from": "1735"
+    }
+  ],
+  "summary": "Massachusetts lawyer who argued for independence in the Continental Congress and served as the second president. He died on the same day as Thomas Jefferson, 4 July 1826, exactly fifty years after the Declaration.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "J. Adams"
+  ],
+  "wikidata": "Q11806",
+  "events": [
+    {
+      "type": "born",
+      "date": "1735-10-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1826-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Adams (Q11806)",
+      "url": "https://www.wikidata.org/wiki/Q11806",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Adams",
+      "url": "https://en.wikipedia.org/wiki/John_Adams",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "manhattan-project",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Manhattan Project",
+      "from": "1939"
+    }
+  ],
+  "maker": "United States, with the United Kingdom and Canada",
+  "summary": "Secret research programme run by the United States with the United Kingdom and Canada that built the first atomic bombs during the Second World War. Labs at Los Alamos, Oak Ridge and Hanford employed many thousands of people.",
+  "labels": [
+    "physics",
+    "war",
+    "engineering"
+  ],
+  "wikidata": "Q127050",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1946",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Handed to the new Atomic Energy Commission after the war",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manhattan Project (Q127050)",
+      "url": "https://www.wikidata.org/wiki/Q127050",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manhattan Project",
+      "url": "https://en.wikipedia.org/wiki/Manhattan_Project",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

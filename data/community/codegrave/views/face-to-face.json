@@ -1,0 +1,96 @@
+{
+  "id": "face-to-face",
+  "name": "Face to Face: Great Rivalries in History",
+  "description": "Two generals, two inventors, two clubs, two superpowers: the rivalries that drove people and nations to do their best, and sometimes their worst.",
+  "category": "society",
+  "labels": [
+    "rivalries"
+  ],
+  "tags": [
+    "rivalry",
+    "competition",
+    "enemies",
+    "race",
+    "duel"
+  ],
+  "entries": [
+    "peloponnesian-war",
+    "hannibal",
+    "scipio-africanus",
+    "wars-of-the-roses",
+    "elizabeth-i",
+    "mary-queen-of-scots",
+    "isaac-newton",
+    "gottfried-leibniz",
+    "napoleon",
+    "duke-of-wellington",
+    "battle-of-waterloo",
+    "charles-darwin",
+    "alfred-russel-wallace",
+    "thomas-edison",
+    "nikola-tesla",
+    "rangers-fc",
+    "celtic-fc",
+    "the-ashes",
+    "coca-cola",
+    "pepsi",
+    "joseph-pulitzer",
+    "william-randolph-hearst",
+    "real-madrid",
+    "fc-barcelona",
+    "roald-amundsen",
+    "robert-falcon-scott",
+    "pablo-picasso",
+    "henri-matisse",
+    "cold-war",
+    "space-race",
+    "sputnik-1",
+    "apollo-11",
+    "boeing-747",
+    "airbus-a380",
+    "steve-jobs",
+    "bill-gates",
+    "netscape",
+    "internet-explorer",
+    "sega-genesis",
+    "super-nintendo"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-and-medieval-enemies",
+      "name": "Ancient and medieval enemies",
+      "from": -431,
+      "to": 1500,
+      "note": "Athens and Sparta fight the Peloponnesian War, Hannibal and Scipio Africanus settle Rome and Carthage in battle, and the houses of York and Lancaster fight the Wars of the Roses."
+    },
+    {
+      "id": "crowns-and-theories",
+      "name": "Crowns and theories",
+      "from": 1501,
+      "to": 1815,
+      "note": "Elizabeth I faces her cousin Mary, Queen of Scots, Isaac Newton and Gottfried Leibniz quarrel over who invented calculus, and Napoleon meets the Duke of Wellington at last on the field of Waterloo."
+    },
+    {
+      "id": "the-age-of-competition",
+      "name": "The age of competition",
+      "from": 1816,
+      "to": 1913,
+      "note": "Charles Darwin and Alfred Russel Wallace share a great idea, Thomas Edison and Nikola Tesla fight over electricity, Pulitzer and Hearst fight for newspaper readers, and Coca-Cola and Pepsi fight for thirst. Rangers and Celtic, England and Australia in the Ashes, Real Madrid and FC Barcelona fight for glory, and Roald Amundsen beats Robert Falcon Scott to the Pole."
+    },
+    {
+      "id": "superpowers-and-sprints",
+      "name": "Superpowers and sprints",
+      "from": 1914,
+      "to": 1969,
+      "note": "Picasso and Matisse spur each other as painters. The Cold War between the United States and the Soviet Union becomes the Space Race, from Sputnik 1 to Apollo 11, while Boeing's 747 sets a standard for airliners."
+    },
+    {
+      "id": "the-business-wars",
+      "name": "The business wars",
+      "from": 1970,
+      "to": 2026,
+      "note": "Steve Jobs and Bill Gates compete for the desktop, Netscape and Internet Explorer fight the browser war, Sega Genesis and Super Nintendo split the playground, and Airbus builds the A380 against the 747."
+    }
+  ],
+  "year": 1960
+}

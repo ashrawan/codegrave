@@ -1,0 +1,54 @@
+{
+  "id": "juventus",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Juventus",
+      "from": "1897"
+    }
+  ],
+  "summary": "Football club from Turin, begun by school pupils, and the most successful in Italy by league titles. It plays in black and white stripes and is owned by the Agnelli family.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Juventus Turin",
+    "Juventus of Turin",
+    "Juventus F.C.",
+    "JuventusFC",
+    "J.F.C."
+  ],
+  "wikidata": "Q1422",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897-11-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Juventus FC (Q1422)",
+      "url": "https://www.wikidata.org/wiki/Q1422",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Juventus FC",
+      "url": "https://en.wikipedia.org/wiki/Juventus_FC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,67 @@
+{
+  "id": "avicenna",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Avicenna",
+      "from": "0980"
+    }
+  ],
+  "summary": "Persian scholar, also known as Ibn Sina, who was a physician and philosopher. His Canon of Medicine was a standard textbook in the Islamic world and Europe for centuries, and his philosophy influenced later Muslim and Christian thinkers.",
+  "labels": [
+    "philosophy",
+    "medicine"
+  ],
+  "aliases": [
+    "Abitianus",
+    "Ibn Sīnā",
+    "Aboû Alî al-Hosain ibn Abdallâh ibn Sînâ",
+    "Pūr-i Sīnā"
+  ],
+  "wikidata": "Q8011",
+  "events": [
+    {
+      "type": "born",
+      "date": "0980",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1037-06-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "muhammad"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "hippocrates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Avicenna (Q8011)",
+      "url": "https://www.wikidata.org/wiki/Q8011",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Avicenna",
+      "url": "https://en.wikipedia.org/wiki/Avicenna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

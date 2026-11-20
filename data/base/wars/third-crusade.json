@@ -1,0 +1,51 @@
+{
+  "id": "third-crusade",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Third Crusade",
+      "from": "1189"
+    }
+  ],
+  "summary": "Expedition led by Richard I of England and Philip II of France, after Frederick Barbarossa drowned on the way. It did not retake Jerusalem but recovered coastal cities and ended with a truce with Saladin.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "aliases": [
+    "Cruzada de reyes"
+  ],
+  "wikidata": "Q51655",
+  "events": [
+    {
+      "type": "born",
+      "date": "1189",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1192-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Third Crusade (Q51655)",
+      "url": "https://www.wikidata.org/wiki/Q51655",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Third Crusade",
+      "url": "https://en.wikipedia.org/wiki/Third_Crusade",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

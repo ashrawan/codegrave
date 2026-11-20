@@ -1,0 +1,59 @@
+{
+  "id": "kingdom-of-france",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kingdom of France",
+      "from": "0987"
+    }
+  ],
+  "summary": "The French monarchy under the Capetian kings and later Bourbons, which grew from a small domain around Paris into a great European power. Louis XIV's court at Versailles became a model for other rulers.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Kingdom of France and Navarre",
+    "França e Navarra",
+    "French kingdom"
+  ],
+  "wikidata": "Q70972",
+  "events": [
+    {
+      "type": "born",
+      "date": "0987",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1791-09-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "The monarchy was abolished during the French Revolution",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of France (Q70972)",
+      "url": "https://www.wikidata.org/wiki/Q70972",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of France",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_France",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "ac-milan",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "AC Milan",
+      "from": "1899"
+    }
+  ],
+  "summary": "Italian football club from Milan, founded by English expatriates. It has won the European Cup several times and was led for years by the businessman Silvio Berlusconi.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Associazione Calcio Milan",
+    "Association Football Milan",
+    "ACMilan",
+    "Milan",
+    "A.C. Milan"
+  ],
+  "wikidata": "Q1543",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-12-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: AC Milan (Q1543)",
+      "url": "https://www.wikidata.org/wiki/Q1543",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: AC Milan",
+      "url": "https://en.wikipedia.org/wiki/AC_Milan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

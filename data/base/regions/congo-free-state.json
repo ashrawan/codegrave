@@ -1,0 +1,59 @@
+{
+  "id": "congo-free-state",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Congo Free State",
+      "from": "1885"
+    }
+  ],
+  "summary": "The private colony of King Leopold II of Belgium in central Africa. Forced labour for rubber and ivory killed very large numbers of people, and international protest led to its takeover by Belgium.",
+  "labels": [
+    "lost",
+    "human-rights"
+  ],
+  "aliases": [
+    "État indépendant du Congo",
+    "Independent State of Congo",
+    "Independent State of the Congo"
+  ],
+  "wikidata": "Q76048",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1908-04-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Annexed by the Belgian state after international outcry",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "belgian-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Congo Free State (Q76048)",
+      "url": "https://www.wikidata.org/wiki/Q76048",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Congo Free State",
+      "url": "https://en.wikipedia.org/wiki/Congo_Free_State",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

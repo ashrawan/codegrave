@@ -1,0 +1,50 @@
+{
+  "id": "mickey-mouse",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Mickey Mouse",
+      "from": "1928"
+    }
+  ],
+  "summary": "Cartoon mouse created by Walt Disney and Ub Iwerks, who became famous in the sound cartoon Steamboat Willie. He became the mascot of the Disney company.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Mickey"
+  ],
+  "wikidata": "Q11934",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-11-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "walt-disney"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mickey Mouse (Q11934)",
+      "url": "https://www.wikidata.org/wiki/Q11934",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mickey Mouse",
+      "url": "https://en.wikipedia.org/wiki/Mickey_Mouse",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

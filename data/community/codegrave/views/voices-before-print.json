@@ -1,0 +1,80 @@
+{
+  "id": "voices-before-print",
+  "name": "Voices Before Print",
+  "description": "Epics, hymns and scriptures from Mesopotamia, India, China, Greece and Arabia, composed to be recited and passed on long before the printing press.",
+  "category": "arts",
+  "labels": [
+    "literature",
+    "religion"
+  ],
+  "tags": [
+    "epic",
+    "ancient",
+    "scripture",
+    "sacred texts",
+    "mythology",
+    "homer"
+  ],
+  "entries": [
+    "epic-of-gilgamesh",
+    "rigveda",
+    "iliad",
+    "odyssey",
+    "bible",
+    "mahabharata",
+    "ramayana",
+    "art-of-war",
+    "analects",
+    "tao-te-ching",
+    "oedipus-rex",
+    "antigone",
+    "dead-sea-scrolls",
+    "bhagavad-gita",
+    "aeneid",
+    "abhijnanashakuntalam",
+    "quran",
+    "one-thousand-and-one-nights",
+    "beowulf",
+    "shahnameh",
+    "tale-of-genji",
+    "popol-vuh",
+    "gutenberg-bible"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-stories",
+      "name": "The first stories",
+      "from": -2200,
+      "to": -1000,
+      "note": "The oldest known stories come from clay tablets in Mesopotamia and from Vedic hymns in India, kept alive by memory and by priests."
+    },
+    {
+      "id": "age-of-epics",
+      "name": "The age of epics",
+      "from": -999,
+      "to": -400,
+      "note": "Greek singers, Indian poets and Chinese sages created works that became the base of their cultures: Homer's wars, the great Indian epics and the sayings of Confucius and Laozi."
+    },
+    {
+      "id": "classical-world",
+      "name": "The classical world",
+      "from": -399,
+      "to": 99,
+      "note": "Scrolls spread across empires. Rome's poets imitated Greece, and Jewish scribes by the Dead Sea copied the texts that would form scripture."
+    },
+    {
+      "id": "faith-and-courts",
+      "name": "Faith and courts",
+      "from": 100,
+      "to": 1000,
+      "note": "Sanskrit drama, the Quran, Arabian tales and Old English verse show how writing carried both faith and entertainment across Asia, Arabia and Europe."
+    },
+    {
+      "id": "manuscripts-to-print",
+      "name": "Manuscripts to print",
+      "from": 1001,
+      "to": 1558,
+      "note": "Persian and Japanese courts produced their great classics by hand, in the Americas Maya stories were written down, and in Mainz a printer made the first great printed book."
+    }
+  ]
+}

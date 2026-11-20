@@ -1,0 +1,58 @@
+{
+  "id": "zoroastrianism",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Zoroastrianism",
+      "from": "-1200"
+    }
+  ],
+  "summary": "An ancient Iranian religion that centres on the god Ahura Mazda and a struggle between truth and falsehood. It was the faith of several Persian empires and still has followers in Iran and India, where they are known as Parsis.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Zarathustraism",
+    "Mazdanism",
+    "Magianism",
+    "The Good Religion",
+    "Mazdayasna"
+  ],
+  "wikidata": "Q9601",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "iran"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zoroastrianism (Q9601)",
+      "url": "https://www.wikidata.org/wiki/Q9601",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zoroastrianism",
+      "url": "https://en.wikipedia.org/wiki/Zoroastrianism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

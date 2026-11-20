@@ -1,0 +1,82 @@
+{
+  "id": "boom-bubble-bust",
+  "name": "Boom, Bubble, Bust",
+  "description": "The dot-com years, when anything with a web address could raise millions: the winners that grew into giants, the flops that became legends and the crash between them.",
+  "category": "computing",
+  "labels": [
+    "business",
+    "failures",
+    "economics"
+  ],
+  "tags": [
+    "dot-com",
+    "bubble",
+    "startups",
+    "amazon",
+    "netscape",
+    "pets.com",
+    "crash",
+    "internet boom"
+  ],
+  "entries": [
+    "world-wide-web",
+    "mosaic",
+    "netscape",
+    "yahoo",
+    "yahoo-directory",
+    "amazon",
+    "ebay",
+    "altavista",
+    "lycos",
+    "excite",
+    "aol",
+    "geocities",
+    "craigslist",
+    "ask-jeeves",
+    "google-search",
+    "paypal",
+    "napster",
+    "internet-explorer",
+    "flash",
+    "dot-com-bubble",
+    "pets-com",
+    "webvan",
+    "boo-com",
+    "kozmo-com",
+    "friendster",
+    "wikipedia",
+    "aws",
+    "netflix"
+  ],
+  "checkpoints": [
+    {
+      "id": "gold-rush-begins",
+      "name": "The gold rush begins",
+      "from": 1993,
+      "to": 1995,
+      "note": "Mosaic and then Netscape show how simple the web can be. Netscape's share sale in 1995 sets off a wave of investment in anything with a website."
+    },
+    {
+      "id": "mania",
+      "name": "Mania",
+      "from": 1996,
+      "to": 1999,
+      "note": "Yahoo, Amazon, eBay and AltaVista grow quickly, while shares in companies with no profits soar. Pets, groceries and fashion are all sold online with money that seems to have no end."
+    },
+    {
+      "id": "the-crash",
+      "name": "The crash",
+      "from": 2000,
+      "to": 2002,
+      "note": "In 2000 share prices fall sharply. Pets.com, Webvan, Boo.com and Kozmo close within months, thousands of staff lose their jobs, and investors become wary of the web."
+    },
+    {
+      "id": "survivors",
+      "name": "Survivors",
+      "from": 2003,
+      "to": 2006,
+      "note": "Amazon, eBay, Google and PayPal prove that the web can pay. Wikipedia, Friendster and Amazon's cloud begin a second wave built on lessons learned from the crash."
+    }
+  ],
+  "year": 2000
+}

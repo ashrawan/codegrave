@@ -1,0 +1,81 @@
+{
+  "id": "berlin-conference",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Berlin Conference",
+      "from": "1884"
+    }
+  ],
+  "summary": "A meeting in Berlin of European powers, with the United States and the Ottoman Empire, that set rules for claiming land in Africa. No African leaders took part, and it speeded the division of Africa.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "West Africa Conference",
+    "Afrikanische Konferenz",
+    "Congo Conference"
+  ],
+  "wikidata": "Q13582",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1885-02-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "scramble-for-africa"
+    },
+    {
+      "type": "in",
+      "to": "german-empire"
+    },
+    {
+      "type": "related",
+      "to": "austria-hungary"
+    },
+    {
+      "type": "related",
+      "to": "netherlands"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    },
+    {
+      "type": "related",
+      "to": "ottoman-empire"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Berlin Conference (Q13582)",
+      "url": "https://www.wikidata.org/wiki/Q13582",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Berlin Conference",
+      "url": "https://en.wikipedia.org/wiki/Berlin_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

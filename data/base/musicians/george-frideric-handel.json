@@ -1,0 +1,66 @@
+{
+  "id": "george-frideric-handel",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "George Frideric Handel",
+      "from": "1685"
+    }
+  ],
+  "summary": "German-born composer who settled in London, wrote operas for the English stage and then oratorios such as Messiah. He also composed Water Music for a royal river party on the Thames.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "George Frideric",
+    "G. F. Händel",
+    "George Frederick Handel",
+    "Handel"
+  ],
+  "wikidata": "Q7302",
+  "events": [
+    {
+      "type": "born",
+      "date": "1685-02-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1759-04-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "germany"
+    },
+    {
+      "type": "influenced_by",
+      "to": "italy"
+    },
+    {
+      "type": "influenced_by",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: George Frideric Handel (Q7302)",
+      "url": "https://www.wikidata.org/wiki/Q7302",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George Frideric Handel",
+      "url": "https://en.wikipedia.org/wiki/George_Frideric_Handel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

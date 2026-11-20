@@ -1,0 +1,68 @@
+{
+  "id": "why-giants-fall",
+  "name": "Why Giants Fall",
+  "description": "Banks, airlines, trusts and film studios that seemed too big to fail, and the debts, frauds, rivals and new technologies that brought them down.",
+  "category": "organisations",
+  "labels": [
+    "business",
+    "economics",
+    "failures"
+  ],
+  "tags": [
+    "bankruptcy",
+    "collapse",
+    "scandal",
+    "crash",
+    "antitrust",
+    "enron",
+    "lehman"
+  ],
+  "entries": [
+    "medici-bank",
+    "east-india-company",
+    "dutch-east-india-company",
+    "krupp",
+    "standard-oil",
+    "bell-system",
+    "universum-film-ag",
+    "rko-pictures",
+    "wall-street-crash-1929",
+    "pan-am",
+    "swissair",
+    "barings-bank",
+    "digital-equipment-corporation",
+    "emi",
+    "blockbuster-llc",
+    "enron",
+    "arthur-andersen",
+    "dot-com-bubble",
+    "lehman-brothers",
+    "financial-crisis-of-2007-2008",
+    "nokia",
+    "kodak"
+  ],
+  "checkpoints": [
+    {
+      "id": "old-houses",
+      "name": "Old houses fall",
+      "from": 1397,
+      "to": 1899,
+      "note": "Even the oldest firms were fragile. The Medici bank failed through bad lending and politics, and the great East India companies sank under debt, corruption and the end of their monopolies."
+    },
+    {
+      "id": "century-of-trusts",
+      "name": "Crashes and break-ups",
+      "from": 1900,
+      "to": 1979,
+      "note": "Governments and markets cut giants down. The Supreme Court split Standard Oil, the Wall Street crash of 1929 ruined banks and speculators, and film studios and airlines struggled once the world around them changed."
+    },
+    {
+      "id": "digital-shock",
+      "name": "Fraud, debt and digital shocks",
+      "from": 1980,
+      "to": 2026,
+      "note": "Hidden losses sank Barings, fraud ended Enron and Arthur Andersen, and bad debts felled Lehman. Meanwhile new technology left Blockbuster, DEC, Kodak and Nokia behind."
+    }
+  ],
+  "year": 2001
+}

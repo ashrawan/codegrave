@@ -1,0 +1,47 @@
+{
+  "id": "sherlock-holmes",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Sherlock Holmes",
+      "from": "1887"
+    }
+  ],
+  "summary": "Fictional London detective created by Arthur Conan Doyle, who solves crimes with logic and observation, helped by Dr Watson. He is among the most often portrayed characters in film.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q4653",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "arthur-conan-doyle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sherlock Holmes (Q4653)",
+      "url": "https://www.wikidata.org/wiki/Q4653",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sherlock Holmes",
+      "url": "https://en.wikipedia.org/wiki/Sherlock_Holmes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,70 @@
+{
+  "id": "attack-on-pearl-harbor",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Attack on Pearl Harbor",
+      "from": "1941"
+    }
+  ],
+  "summary": "A surprise Japanese air attack on the US naval base in Hawaii on 7 December 1941. It brought the United States into the Second World War the next day.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Pearl Harbor attack",
+    "Bombing of Pearl Harbor",
+    "Hawaii Operation",
+    "Tour:USS Nevada- Pearl Harbor attack"
+  ],
+  "wikidata": "Q52418",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-12-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941-12-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "related",
+      "to": "isoroku-yamamoto"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Attack on Pearl Harbor (Q52418)",
+      "url": "https://www.wikidata.org/wiki/Q52418",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Attack on Pearl Harbor",
+      "url": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

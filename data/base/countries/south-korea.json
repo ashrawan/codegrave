@@ -1,0 +1,67 @@
+{
+  "id": "south-korea",
+  "category": "countries",
+  "names": [
+    {
+      "name": "South Korea",
+      "from": "1948"
+    }
+  ],
+  "summary": "The republic in the southern half of the Korean peninsula, founded in 1948. After the Korean War it grew from a poor country into a rich economy known for electronics, cars and pop culture.",
+  "labels": [
+    "independence",
+    "economics"
+  ],
+  "aliases": [
+    "Republic of Korea",
+    "Rep. Korea",
+    "S. Korea",
+    "Korea Republic",
+    "Hanguk"
+  ],
+  "wikidata": "Q884",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South Korea (Q884)",
+      "url": "https://www.wikidata.org/wiki/Q884",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South Korea",
+      "url": "https://en.wikipedia.org/wiki/South_Korea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

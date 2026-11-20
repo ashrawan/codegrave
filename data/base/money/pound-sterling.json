@@ -1,0 +1,54 @@
+{
+  "id": "pound-sterling",
+  "category": "money",
+  "names": [
+    {
+      "name": "Pound sterling",
+      "from": "0775"
+    }
+  ],
+  "summary": "The money of the United Kingdom, one of the oldest currencies still in use. Its name goes back to silver pennies of early medieval England, and it was once the main currency of world trade.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "GBP",
+    "British pound",
+    "pound",
+    "quid",
+    "sterling"
+  ],
+  "wikidata": "Q25224",
+  "events": [
+    {
+      "type": "born",
+      "date": "0775",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: pound sterling (Q25224)",
+      "url": "https://www.wikidata.org/wiki/Q25224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pound sterling",
+      "url": "https://en.wikipedia.org/wiki/Pound_sterling",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,74 @@
+{
+  "id": "singapore",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Singapore",
+      "from": "1819"
+    }
+  ],
+  "summary": "Island city-state at the tip of the Malay Peninsula. The British East India Company set up a trading post there in 1819, and it became independent in 1965 and a major port and financial centre.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "Republic of Singapore",
+    "sg",
+    "Singapore City",
+    "Lion City",
+    "Garden City"
+  ],
+  "wikidata": "Q334",
+  "events": [
+    {
+      "type": "born",
+      "date": "1819",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "in",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Singapore (Q334)",
+      "url": "https://www.wikidata.org/wiki/Q334",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Singapore",
+      "url": "https://en.wikipedia.org/wiki/Singapore",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

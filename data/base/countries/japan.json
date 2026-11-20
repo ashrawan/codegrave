@@ -1,0 +1,70 @@
+{
+  "id": "japan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Japan",
+      "from": "1947"
+    }
+  ],
+  "summary": "An island nation in East Asia with an emperor as symbol of the state. Its present constitution came into force in 1947 after the Second World War, and it is known for technology and its culture.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "State of Japan",
+    "Land of the Rising Sun",
+    "Nippon-koku",
+    "Nihon-koku",
+    "Iapan"
+  ],
+  "wikidata": "Q17",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-05-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Japan (Q17)",
+      "url": "https://www.wikidata.org/wiki/Q17",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Japan",
+      "url": "https://en.wikipedia.org/wiki/Japan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

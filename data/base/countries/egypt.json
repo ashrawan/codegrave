@@ -1,0 +1,70 @@
+{
+  "id": "egypt",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Egypt",
+      "from": "1953"
+    }
+  ],
+  "summary": "A country of north-eastern Africa on the Nile and the site of the pyramids. The monarchy ended in 1952 and the republic was proclaimed in 1953; the Suez Canal is among its important assets.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Republic of Egypt",
+    "Arab Republic of Egypt",
+    "Arab Rep. Egypt",
+    "Rep. Egypt",
+    "Misr"
+  ],
+  "wikidata": "Q79",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Egypt (Q79)",
+      "url": "https://www.wikidata.org/wiki/Q79",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Egypt",
+      "url": "https://en.wikipedia.org/wiki/Egypt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

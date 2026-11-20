@@ -1,0 +1,62 @@
+{
+  "id": "alexandria",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Alexandria",
+      "from": "-0331"
+    }
+  ],
+  "summary": "Mediterranean port in Egypt founded by Alexander the Great. Under the Ptolemies it held a famous library and lighthouse, and it was one of the largest and most learned cities of the ancient world.",
+  "labels": [
+    "education"
+  ],
+  "aliases": [
+    "Mediterranean's Bride",
+    "Pearl of the Mediterranean",
+    "Al Iskandariya",
+    "Iskandariyya",
+    "Alexandria, Egypt"
+  ],
+  "wikidata": "Q87",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0331",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    },
+    {
+      "type": "in",
+      "to": "roman-empire"
+    },
+    {
+      "type": "related",
+      "to": "alexander-the-great"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alexandria (Q87)",
+      "url": "https://www.wikidata.org/wiki/Q87",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexandria",
+      "url": "https://en.wikipedia.org/wiki/Alexandria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

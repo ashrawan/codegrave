@@ -1,0 +1,54 @@
+{
+  "id": "tibetan-plateau",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Tibetan Plateau",
+      "from": "-50000000"
+    }
+  ],
+  "summary": "The vast high plateau north of the Himalayas, often called the roof of the world, averaging over four kilometres above sea level. Its uplift from the India-Asia collision changed Asian weather and feeds many great rivers.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Qinghai-Tibetan plateau"
+  ],
+  "wikidata": "Q179842",
+  "events": [
+    {
+      "type": "born",
+      "date": "-50000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tibetan Plateau (Q179842)",
+      "url": "https://www.wikidata.org/wiki/Q179842",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tibetan Plateau",
+      "url": "https://en.wikipedia.org/wiki/Tibetan_Plateau",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

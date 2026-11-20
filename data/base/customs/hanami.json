@@ -1,0 +1,51 @@
+{
+  "id": "hanami",
+  "category": "customs",
+  "names": [
+    {
+      "name": "Hanami",
+      "from": "0800"
+    }
+  ],
+  "summary": "The Japanese custom of gathering to enjoy cherry blossoms in spring. It began among the court nobility and grew into picnics for people of all classes.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "flower viewing",
+    "cherry blossom viewing"
+  ],
+  "wikidata": "Q210150",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: hanami (Q210150)",
+      "url": "https://www.wikidata.org/wiki/Q210150",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hanami",
+      "url": "https://en.wikipedia.org/wiki/Hanami",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

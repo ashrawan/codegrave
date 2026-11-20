@@ -1,0 +1,77 @@
+{
+  "id": "estonia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Estonia",
+      "from": "1991"
+    }
+  ],
+  "summary": "The northernmost Baltic state, annexed by the Soviet Union in 1940 and independent again from 1991. It is known for its digital government services and for the singing revolution.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Estonia",
+    "Estland",
+    "ee",
+    "Eesti Vabariik"
+  ],
+  "wikidata": "Q191",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Estonia (Q191)",
+      "url": "https://www.wikidata.org/wiki/Q191",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Estonia",
+      "url": "https://en.wikipedia.org/wiki/Estonia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

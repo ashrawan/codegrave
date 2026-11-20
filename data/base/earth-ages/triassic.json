@@ -1,0 +1,57 @@
+{
+  "id": "triassic",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Triassic",
+      "from": "-251902000"
+    }
+  ],
+  "summary": "The first period of the Mesozoic, from 252 to 201 million years ago. Life rebuilt after the Permian extinction; the first dinosaurs, pterosaurs and small mammals appeared, and Pangaea began to split.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Triassic Period",
+    "Triassic System"
+  ],
+  "wikidata": "Q47158",
+  "events": [
+    {
+      "type": "born",
+      "date": "-251902000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-201400000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "mesozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Triassic (Q47158)",
+      "url": "https://www.wikidata.org/wiki/Q47158",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Triassic",
+      "url": "https://en.wikipedia.org/wiki/Triassic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

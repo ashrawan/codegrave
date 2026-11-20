@@ -1,0 +1,49 @@
+{
+  "id": "diesel-engine",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Diesel engine",
+      "from": "1893"
+    }
+  ],
+  "maker": "Rudolf Diesel",
+  "summary": "An engine in which air is compressed so hot that injected fuel ignites without a spark. Rudolf Diesel patented the idea in 1892 and built a working engine in 1893. It drives trucks, ships and trains.",
+  "labels": [
+    "energy",
+    "engineering"
+  ],
+  "aliases": [
+    "compression-ignition engine",
+    "diesel",
+    "diesel motor"
+  ],
+  "wikidata": "Q174174",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: diesel engine (Q174174)",
+      "url": "https://www.wikidata.org/wiki/Q174174",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Diesel engine",
+      "url": "https://en.wikipedia.org/wiki/Diesel_engine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

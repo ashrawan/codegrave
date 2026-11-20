@@ -1,0 +1,60 @@
+{
+  "id": "vincent-van-gogh",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Vincent van Gogh",
+      "from": "1853"
+    }
+  ],
+  "summary": "Dutch painter who made around two thousand artworks in about a decade, including Sunflowers and The Starry Night. He sold very few in his lifetime and died at thirty-seven.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q5582",
+  "events": [
+    {
+      "type": "born",
+      "date": "1853-03-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1890-07-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "paul-gauguin"
+    },
+    {
+      "type": "influenced_by",
+      "to": "paul-cezanne"
+    },
+    {
+      "type": "influenced_by",
+      "to": "katsushika-hokusai"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vincent van Gogh (Q5582)",
+      "url": "https://www.wikidata.org/wiki/Q5582",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vincent van Gogh",
+      "url": "https://en.wikipedia.org/wiki/Vincent_van_Gogh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

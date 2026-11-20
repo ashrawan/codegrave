@@ -1,0 +1,62 @@
+{
+  "id": "george-washington",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "George Washington",
+      "from": "1732"
+    }
+  ],
+  "summary": "Virginia planter who commanded the Continental Army in the American Revolution and presided over the convention that wrote the Constitution. He was the first president of the United States.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Father of the United States",
+    "American Fabius",
+    "American Cincinnatus"
+  ],
+  "wikidata": "Q23",
+  "events": [
+    {
+      "type": "born",
+      "date": "1732-02-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1799-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    },
+    {
+      "type": "member_of",
+      "to": "society-of-the-cincinnati"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: George Washington (Q23)",
+      "url": "https://www.wikidata.org/wiki/Q23",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George Washington",
+      "url": "https://en.wikipedia.org/wiki/George_Washington",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

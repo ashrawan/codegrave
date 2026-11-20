@@ -1,0 +1,65 @@
+{
+  "id": "harvard-mark-i",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "Harvard Mark I",
+      "from": "1944"
+    }
+  ],
+  "maker": "Howard Aiken and IBM",
+  "summary": "Huge electromechanical calculator built by IBM and Harvard that worked through long tapes of instructions. It was used for navy calculations in the Second World War, and Grace Hopper was one of its programmers.",
+  "labels": [
+    "computing",
+    "firsts"
+  ],
+  "aliases": [
+    "Automatic Sequence Controlled Calculator",
+    "ASCC",
+    "IBM ASCC",
+    "Mark I"
+  ],
+  "wikidata": "Q776823",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-08-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1959",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired as electronic computers took over",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harvard Mark I (Q776823)",
+      "url": "https://www.wikidata.org/wiki/Q776823",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harvard Mark I",
+      "url": "https://en.wikipedia.org/wiki/Harvard_Mark_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

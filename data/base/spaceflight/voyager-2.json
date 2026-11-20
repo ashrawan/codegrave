@@ -1,0 +1,56 @@
+{
+  "id": "voyager-2",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Voyager 2",
+      "from": "1977"
+    }
+  ],
+  "summary": "A NASA probe launched in 1977 and the only spacecraft to have flown past Uranus and Neptune, in 1986 and 1989. It later left the Sun's bubble of solar wind and still sends data from interstellar space.",
+  "labels": [
+    "astronomy",
+    "exploration",
+    "space-race"
+  ],
+  "aliases": [
+    "Mariner Jupiter/Saturn B",
+    "Outer Planets B",
+    "Mariner 77B",
+    "MJS 77B",
+    "Voyager 77-3"
+  ],
+  "wikidata": "Q48475",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-08-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "voyager-program"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Voyager 2 (Q48475)",
+      "url": "https://www.wikidata.org/wiki/Q48475",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Voyager 2",
+      "url": "https://en.wikipedia.org/wiki/Voyager_2",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

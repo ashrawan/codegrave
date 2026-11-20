@@ -1,0 +1,49 @@
+{
+  "id": "container-ship",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Container ship",
+      "from": "1956"
+    }
+  ],
+  "maker": "Malcom McLean",
+  "summary": "A cargo ship that carries goods in standard steel boxes. American trucker Malcom McLean began the first container shipping in 1956, and containers cut the cost of freight and changed global trade.",
+  "labels": [
+    "transport",
+    "business"
+  ],
+  "aliases": [
+    "containership",
+    "container carrier",
+    "boxship"
+  ],
+  "wikidata": "Q17210",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: container ship (Q17210)",
+      "url": "https://www.wikidata.org/wiki/Q17210",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Container ship",
+      "url": "https://en.wikipedia.org/wiki/Container_ship",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

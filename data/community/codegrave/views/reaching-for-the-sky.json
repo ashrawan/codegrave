@@ -1,0 +1,83 @@
+{
+  "id": "reaching-for-the-sky",
+  "name": "Reaching for the Sky",
+  "description": "From a pharaoh's tomb to Dubai's needle: five thousand years of builders competing to put the tallest thing on Earth.",
+  "category": "places",
+  "labels": [
+    "architecture",
+    "record-holders",
+    "engineering"
+  ],
+  "tags": [
+    "skyscrapers",
+    "tallest",
+    "towers",
+    "height",
+    "record",
+    "steel",
+    "architecture"
+  ],
+  "entries": [
+    "great-pyramid-of-giza",
+    "lighthouse-of-alexandria",
+    "leaning-tower-of-pisa",
+    "chartres-cathedral",
+    "st-peters-basilica",
+    "cologne-cathedral",
+    "washington-monument",
+    "home-insurance-building",
+    "gustave-eiffel",
+    "eiffel-tower",
+    "statue-of-liberty",
+    "new-york-city",
+    "chrysler-building",
+    "empire-state-building",
+    "world-trade-center-twin-towers",
+    "willis-tower",
+    "cn-tower",
+    "petronas-towers",
+    "taipei-101",
+    "burj-khalifa",
+    "shanghai-tower",
+    "tokyo-skytree",
+    "sagrada-familia"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-record",
+      "name": "Pyramids and spires",
+      "from": -2560,
+      "to": 1400,
+      "note": "For nearly four thousand years the Great Pyramid was the tallest thing anyone had made. Medieval churchmen then took the lead with towers and spires, and the Alexandria lighthouse and the Pisa belltower showed the limits of masonry."
+    },
+    {
+      "id": "stone-gives-way",
+      "name": "Stone gives way to iron",
+      "from": 1401,
+      "to": 1884,
+      "note": "Cathedral builders pushed the stone record upward until the Washington Monument, a plain obelisk of marble and granite, reached 169 metres. After that, new materials started to take over."
+    },
+    {
+      "id": "the-first-skyscrapers",
+      "name": "Steel frames",
+      "from": 1885,
+      "to": 1930,
+      "note": "A metal frame in Chicago made tall office blocks possible, and Paris's iron tower proved that great height could be a spectacle. Manhattan's Chrysler Building then took the title for one year."
+    },
+    {
+      "id": "the-new-york-century",
+      "name": "The American century",
+      "from": 1931,
+      "to": 1999,
+      "note": "The Empire State Building held the record for decades, followed by the World Trade Center, the Willis Tower and Toronto's CN Tower. Then the Petronas Towers carried the contest to Asia."
+    },
+    {
+      "id": "the-asian-race",
+      "name": "Needles in the east and Gulf",
+      "from": 2000,
+      "to": 2026,
+      "note": "Taipei 101 and the Burj Khalifa moved the record out of the United States, while Tokyo's Skytree and Shanghai's twisting tower showed how engineers now manage wind, quakes and crowds."
+    }
+  ],
+  "year": 1930
+}

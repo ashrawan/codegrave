@@ -1,0 +1,47 @@
+{
+  "id": "snowball-earth",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Snowball Earth",
+      "from": "-720000000"
+    }
+  ],
+  "summary": "The hypothesis that during the Cryogenian period ice reached the tropics and covered most of the planet at least once. The cold ended when volcanic carbon dioxide built up and warmed the world again.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q214689",
+  "events": [
+    {
+      "type": "born",
+      "date": "-720000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-635000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Snowball Earth (Q214689)",
+      "url": "https://www.wikidata.org/wiki/Q214689",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Snowball Earth",
+      "url": "https://en.wikipedia.org/wiki/Snowball_Earth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

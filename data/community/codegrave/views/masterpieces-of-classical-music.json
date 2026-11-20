@@ -1,0 +1,83 @@
+{
+  "id": "masterpieces-of-classical-music",
+  "name": "Four Centuries of Sound: The Classical Masterpieces",
+  "description": "A listener's guide to the works of Bach, Mozart, Beethoven and beyond, and to the three great periods of European music that produced them.",
+  "category": "arts",
+  "labels": [
+    "music"
+  ],
+  "tags": [
+    "classical",
+    "symphony",
+    "composer",
+    "baroque",
+    "orchestra",
+    "mozart",
+    "beethoven"
+  ],
+  "entries": [
+    "baroque-music",
+    "johann-sebastian-bach",
+    "brandenburg-concertos",
+    "well-tempered-clavier",
+    "st-matthew-passion",
+    "vivaldi-four-seasons",
+    "handel-messiah",
+    "classical-period-music",
+    "wolfgang-amadeus-mozart",
+    "eine-kleine-nachtmusik",
+    "mozart-requiem",
+    "ludwig-van-beethoven",
+    "moonlight-sonata",
+    "beethoven-symphony-5",
+    "beethoven-symphony-9",
+    "romantic-music",
+    "silent-night",
+    "new-world-symphony",
+    "overture-1812",
+    "gymnopedies",
+    "la-mer-debussy",
+    "rite-of-spring",
+    "rhapsody-in-blue",
+    "bolero-ravel",
+    "carmina-burana-orff"
+  ],
+  "checkpoints": [
+    {
+      "id": "baroque",
+      "name": "The Baroque",
+      "from": 1600,
+      "to": 1749,
+      "note": "Courts and churches pay composers for rich, ornate music, and Bach, Handel and Vivaldi write concertos, oratorios and fugues that are still played daily."
+    },
+    {
+      "id": "classical",
+      "name": "The Classical period",
+      "from": 1750,
+      "to": 1819,
+      "note": "Clear tunes and balanced forms dominate in Vienna, and Mozart and the young Beethoven turn the symphony and the sonata into serious art."
+    },
+    {
+      "id": "romantic",
+      "name": "The Romantic century",
+      "from": 1820,
+      "to": 1879,
+      "note": "Feeling takes first place. Orchestras grow larger, and composers write about nations, nature and the inner self, including Beethoven's last symphony."
+    },
+    {
+      "id": "modern-turn",
+      "name": "Towards the modern",
+      "from": 1880,
+      "to": 1913,
+      "note": "Composers look for new colours and rhythms. Debussy paints with sound and Stravinsky shocks a Paris crowd with a ballet score."
+    },
+    {
+      "id": "new-voices",
+      "name": "Jazz, ballet and the new century",
+      "from": 1914,
+      "to": 1937,
+      "note": "Jazz, dance and film change the concert hall, and works by Gershwin, Ravel and Orff reach an audience beyond it."
+    }
+  ],
+  "year": 1800
+}

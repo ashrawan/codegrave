@@ -1,0 +1,93 @@
+{
+  "id": "from-tally-marks-to-proof",
+  "name": "From Tally Marks to Proof: A Story of Number",
+  "description": "Babylonian sixties, an Indian zero, Greek proofs, calculus and unsolved riddles: how people built mathematics and who dared to push it further.",
+  "category": "knowledge",
+  "labels": [
+    "mathematics",
+    "education",
+    "firsts"
+  ],
+  "tags": [
+    "numbers",
+    "zero",
+    "algebra",
+    "geometry",
+    "calculus",
+    "proof"
+  ],
+  "entries": [
+    "sexagesimal",
+    "pi",
+    "pythagorean-theorem",
+    "euclid",
+    "euclids-elements",
+    "archimedes",
+    "prime-numbers",
+    "hypatia",
+    "aryabhata",
+    "hindu-arabic-numerals",
+    "zero",
+    "al-khwarizmi-scientist",
+    "algebra",
+    "logarithm",
+    "slide-rule",
+    "rene-descartes",
+    "fermats-last-theorem",
+    "probability-theory",
+    "isaac-newton",
+    "gottfried-leibniz",
+    "calculus",
+    "non-euclidean-geometry",
+    "boolean-algebra",
+    "four-color-theorem",
+    "riemann-hypothesis",
+    "set-theory",
+    "sofya-kovalevskaya",
+    "emmy-noether",
+    "srinivasa-ramanujan",
+    "godels-incompleteness-theorems",
+    "alan-turing",
+    "fields-medal",
+    "maryam-mirzakhani",
+    "poincare-conjecture"
+  ],
+  "checkpoints": [
+    {
+      "id": "counting-and-shape",
+      "name": "Counting and shape",
+      "from": -2000,
+      "to": -1,
+      "note": "Babylonians counted in sixties and worked out good values of pi. Greek thinkers added proof: Pythagoras, Euclid's Elements, Archimedes on circles, and the study of prime numbers."
+    },
+    {
+      "id": "zero-and-algebra",
+      "name": "Zero and algebra",
+      "from": 1,
+      "to": 1199,
+      "note": "Hypatia taught geometry in Alexandria, and Indian scholars such as Aryabhata gave the world the digits and the zero. Al-Khwarizmi's book on balancing equations gave algebra its name."
+    },
+    {
+      "id": "logarithms-chance-calculus",
+      "name": "Logarithms, chance and calculus",
+      "from": 1200,
+      "to": 1699,
+      "note": "Logarithms and the slide rule eased heavy sums, Descartes joined algebra to geometry, and Fermat and others began probability. Newton and Leibniz then built calculus, the mathematics of change."
+    },
+    {
+      "id": "new-worlds-of-thought",
+      "name": "New worlds of thought",
+      "from": 1700,
+      "to": 1899,
+      "note": "Mathematicians imagined curved, non-Euclidean spaces, turned logic into algebra with Boole, and tamed infinity with set theory. Riemann's hypothesis and the four colour problem posed new puzzles."
+    },
+    {
+      "id": "proof-and-its-limits",
+      "name": "Proof and its limits",
+      "from": 1900,
+      "to": 2026,
+      "note": "Noether and Ramanujan showed new depths. Godel proved that some truths cannot be proved, Turing turned calculation into computing, and Wiles, Perelman and Mirzakhani tackled long-standing problems."
+    }
+  ],
+  "year": 1650
+}

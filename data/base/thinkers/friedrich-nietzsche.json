@@ -1,0 +1,87 @@
+{
+  "id": "friedrich-nietzsche",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Friedrich Nietzsche",
+      "from": "1844"
+    }
+  ],
+  "summary": "German philosopher who questioned traditional morality and religion, wrote that God is dead, and called on people to create their own values. His striking, poetic books influenced art and thought in the twentieth century.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "Friedrich Wilhelm Nietzsche"
+  ],
+  "wikidata": "Q9358",
+  "events": [
+    {
+      "type": "born",
+      "date": "1844-10-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1900-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "charles-darwin"
+    },
+    {
+      "type": "influenced_by",
+      "to": "niccolo-machiavelli"
+    },
+    {
+      "type": "influenced_by",
+      "to": "richard-wagner"
+    },
+    {
+      "type": "influenced_by",
+      "to": "edgar-allan-poe"
+    },
+    {
+      "type": "influenced_by",
+      "to": "baruch-spinoza"
+    },
+    {
+      "type": "influenced_by",
+      "to": "epicurus"
+    },
+    {
+      "type": "influenced_by",
+      "to": "stendhal"
+    },
+    {
+      "type": "influenced_by",
+      "to": "johann-wolfgang-von-goethe"
+    },
+    {
+      "type": "influenced_by",
+      "to": "jean-jacques-rousseau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Friedrich Nietzsche (Q9358)",
+      "url": "https://www.wikidata.org/wiki/Q9358",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Friedrich Nietzsche",
+      "url": "https://en.wikipedia.org/wiki/Friedrich_Nietzsche",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

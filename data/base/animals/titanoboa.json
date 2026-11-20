@@ -1,0 +1,47 @@
+{
+  "id": "titanoboa",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Titanoboa",
+      "from": "-60000000"
+    }
+  ],
+  "summary": "A huge snake from the warm swamps of South America that lived soon after the dinosaurs died out. Its fossil bones, found in a Colombian coal mine, show it grew to well over ten metres long.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q131009",
+  "events": [
+    {
+      "type": "born",
+      "date": "-60000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-58000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Titanoboa (Q131009)",
+      "url": "https://www.wikidata.org/wiki/Q131009",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Titanoboa",
+      "url": "https://en.wikipedia.org/wiki/Titanoboa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

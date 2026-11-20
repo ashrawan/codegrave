@@ -1,0 +1,53 @@
+{
+  "id": "order-of-saint-benedict",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Benedictines",
+      "from": "0529"
+    }
+  ],
+  "maker": "Benedict of Nursia",
+  "summary": "Catholic monastic order that follows the Rule of Saint Benedict. Its monasteries kept learning alive in medieval Europe by copying manuscripts and running schools.",
+  "labels": [
+    "religion",
+    "education"
+  ],
+  "aliases": [
+    "Order of Saint Benedict",
+    "Black Monks"
+  ],
+  "wikidata": "Q131132",
+  "events": [
+    {
+      "type": "born",
+      "date": "0529",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benedictines (Q131132)",
+      "url": "https://www.wikidata.org/wiki/Q131132",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Benedictines",
+      "url": "https://en.wikipedia.org/wiki/Benedictines",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

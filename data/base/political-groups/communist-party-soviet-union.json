@@ -1,0 +1,68 @@
+{
+  "id": "communist-party-soviet-union",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Communist Party of the Soviet Union",
+      "from": "1912"
+    }
+  ],
+  "summary": "The only legal party of the Soviet Union for most of its history, growing out of Lenin's Bolsheviks. It controlled the state and economy until the union broke up.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "CPSU",
+    "Bolshevik Party",
+    "Russian Communist Party (Bolsheviks)",
+    "RCP(b)",
+    "All-Union Communist Party (Bolsheviks)"
+  ],
+  "wikidata": "Q79854",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1991-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Banned after the failed 1991 coup and the end of the Soviet Union",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "vladimir-lenin"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    },
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Communist Party of the Soviet Union (Q79854)",
+      "url": "https://www.wikidata.org/wiki/Q79854",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Communist Party of the Soviet Union",
+      "url": "https://en.wikipedia.org/wiki/Communist_Party_of_the_Soviet_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

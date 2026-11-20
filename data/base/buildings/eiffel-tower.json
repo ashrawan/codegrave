@@ -1,0 +1,55 @@
+{
+  "id": "eiffel-tower",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Eiffel Tower",
+      "from": "1889"
+    }
+  ],
+  "summary": "Wrought-iron lattice tower in Paris, built for the 1889 World's Fair. It was the tallest structure in the world until 1930, and it was nearly taken down after twenty years.",
+  "labels": [
+    "architecture",
+    "engineering"
+  ],
+  "aliases": [
+    "the Eiffel Tower"
+  ],
+  "wikidata": "Q243",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "gustave-eiffel"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eiffel Tower (Q243)",
+      "url": "https://www.wikidata.org/wiki/Q243",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eiffel Tower",
+      "url": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

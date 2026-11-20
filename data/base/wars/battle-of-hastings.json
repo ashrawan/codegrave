@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-hastings",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Hastings",
+      "from": "1066"
+    }
+  ],
+  "summary": "William of Normandy defeated the English king Harold Godwinson near Hastings and was crowned King of England. The Norman conquest changed English law, language, land ownership and the make-up of the nobility.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Senlac"
+  ],
+  "wikidata": "Q83224",
+  "events": [
+    {
+      "type": "born",
+      "date": "1066-10-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1066-10-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Hastings (Q83224)",
+      "url": "https://www.wikidata.org/wiki/Q83224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Hastings",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Hastings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

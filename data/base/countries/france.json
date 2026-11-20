@@ -1,0 +1,70 @@
+{
+  "id": "france",
+  "category": "countries",
+  "names": [
+    {
+      "name": "France",
+      "from": "1958"
+    }
+  ],
+  "summary": "A republic in western Europe and home to a long monarchy before the Revolution of 1789. Its present Fifth Republic dates from 1958 under Charles de Gaulle, with a strong president.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "French Republic"
+  ],
+  "wikidata": "Q142",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "cern"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: France (Q142)",
+      "url": "https://www.wikidata.org/wiki/Q142",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: France",
+      "url": "https://en.wikipedia.org/wiki/France",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

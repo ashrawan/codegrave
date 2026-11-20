@@ -1,0 +1,52 @@
+{
+  "id": "pinatubo-eruption",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Mount Pinatubo Eruption of 1991",
+      "from": "1991"
+    }
+  ],
+  "summary": "The second largest eruption of the 20th century, in the Philippines in June 1991. Timely warnings saved thousands of lives, and the sulphur it threw into the stratosphere cooled the planet by about half a degree for a year or two.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q31191031",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-04-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1991 eruption of Mount Pinatubo (Q31191031)",
+      "url": "https://www.wikidata.org/wiki/Q31191031",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1991 eruption of Mount Pinatubo",
+      "url": "https://en.wikipedia.org/wiki/1991_eruption_of_Mount_Pinatubo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

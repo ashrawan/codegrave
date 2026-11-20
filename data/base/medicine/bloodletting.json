@@ -1,0 +1,54 @@
+{
+  "id": "bloodletting",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "Bloodletting",
+      "from": "-0400"
+    }
+  ],
+  "maker": "Ancient Greek and other physicians",
+  "summary": "The practice of cutting a vein or using leeches to take blood from a patient in the belief that it would restore balance. It was used for over two thousand years and rarely helped, and could kill.",
+  "labels": [
+    "medicine",
+    "lost"
+  ],
+  "aliases": [
+    "blood letting",
+    "bleeding"
+  ],
+  "wikidata": "Q356405",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Shown to be harmful and replaced by methods tested in trials",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: bloodletting (Q356405)",
+      "url": "https://www.wikidata.org/wiki/Q356405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bloodletting",
+      "url": "https://en.wikipedia.org/wiki/Bloodletting",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

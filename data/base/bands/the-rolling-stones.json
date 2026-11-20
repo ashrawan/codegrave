@@ -1,0 +1,55 @@
+{
+  "id": "the-rolling-stones",
+  "category": "bands",
+  "names": [
+    {
+      "name": "The Rolling Stones",
+      "from": "1962"
+    }
+  ],
+  "summary": "English rock band formed in London that began by playing American blues songs. It became known for long tours and has kept going for more than sixty years.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q11036",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "the-beatles"
+    },
+    {
+      "type": "influenced_by",
+      "to": "chuck-berry"
+    },
+    {
+      "type": "related",
+      "to": "altamont-free-concert"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Rolling Stones (Q11036)",
+      "url": "https://www.wikidata.org/wiki/Q11036",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Rolling Stones",
+      "url": "https://en.wikipedia.org/wiki/The_Rolling_Stones",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

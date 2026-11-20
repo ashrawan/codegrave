@@ -1,0 +1,55 @@
+{
+  "id": "mediterranean-sea",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Mediterranean Sea",
+      "from": "-5330000"
+    }
+  ],
+  "summary": "The sea between Europe, Africa and Asia, home to the ancient Egyptian, Greek, Phoenician and Roman civilisations. It is a remnant of the Tethys Ocean and was refilled through the Strait of Gibraltar about 5.3 million years ago.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "The Mediterranean",
+    "the Mediterranean Sea"
+  ],
+  "wikidata": "Q4918",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5330000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mediterranean Sea (Q4918)",
+      "url": "https://www.wikidata.org/wiki/Q4918",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mediterranean Sea",
+      "url": "https://en.wikipedia.org/wiki/Mediterranean_Sea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

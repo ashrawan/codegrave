@@ -1,0 +1,55 @@
+{
+  "id": "athens",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Athens",
+      "from": "-3000"
+    }
+  ],
+  "summary": "City of Attica that gave its name to the goddess Athena and, in the fifth century BCE, became the home of democracy, drama and philosophy. It is now the capital of Greece and still crowned by the Acropolis.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Athens city",
+    "Athenae"
+  ],
+  "wikidata": "Q1524",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    },
+    {
+      "type": "in",
+      "to": "roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Athens (Q1524)",
+      "url": "https://www.wikidata.org/wiki/Q1524",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Athens",
+      "url": "https://en.wikipedia.org/wiki/Athens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

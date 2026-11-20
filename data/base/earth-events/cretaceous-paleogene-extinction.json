@@ -1,0 +1,64 @@
+{
+  "id": "cretaceous-paleogene-extinction",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Cretaceous-Paleogene Extinction",
+      "from": "-66000000"
+    }
+  ],
+  "summary": "The extinction about 66 million years ago that killed the non-bird dinosaurs, pterosaurs and many sea reptiles, along with about three quarters of all species. An asteroid impact in Mexico is the main cause.",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "aliases": [
+    "Cretaceous-Paleogene mass extinction",
+    "K-Pg mass extinction",
+    "end-Cretaceous extinction event",
+    "end-Cretaceous mass extinction event",
+    "end-Cretaceous extinction"
+  ],
+  "wikidata": "Q55811",
+  "events": [
+    {
+      "type": "born",
+      "date": "-66000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "cretaceous"
+    },
+    {
+      "type": "related",
+      "to": "paleogene"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cretaceous-Paleogene mass extinction (Q55811)",
+      "url": "https://www.wikidata.org/wiki/Q55811",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cretaceous–Paleogene extinction event",
+      "url": "https://en.wikipedia.org/wiki/Cretaceous%E2%80%93Paleogene_extinction_event",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

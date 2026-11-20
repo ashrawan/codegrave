@@ -1,0 +1,70 @@
+{
+  "id": "morocco",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Morocco",
+      "from": "1956"
+    }
+  ],
+  "summary": "A kingdom in north-western Africa that became independent from France and Spain in 1956. Its royal line goes back centuries, and it has the Atlas Mountains and old cities like Fez and Marrakesh.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Kingdom of Morocco",
+    "Marocco",
+    "al-Maġrib",
+    "Lmaġrib",
+    "Maroc"
+  ],
+  "wikidata": "Q1028",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-04-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Morocco (Q1028)",
+      "url": "https://www.wikidata.org/wiki/Q1028",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Morocco",
+      "url": "https://en.wikipedia.org/wiki/Morocco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

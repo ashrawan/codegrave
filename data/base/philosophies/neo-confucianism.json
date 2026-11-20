@@ -1,0 +1,47 @@
+{
+  "id": "neo-confucianism",
+  "category": "philosophies",
+  "names": [
+    {
+      "name": "Neo-Confucianism",
+      "from": "1000"
+    }
+  ],
+  "summary": "A revival of Confucian thought in Song-dynasty China that added ideas about the nature of the universe and the self. Zhu Xi's version became the basis of state examinations and spread to Korea, Japan and Vietnam.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q825754",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "confucianism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Neo-Confucianism (Q825754)",
+      "url": "https://www.wikidata.org/wiki/Q825754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neo-Confucianism",
+      "url": "https://en.wikipedia.org/wiki/Neo-Confucianism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

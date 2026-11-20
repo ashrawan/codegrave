@@ -1,0 +1,54 @@
+{
+  "id": "malaria",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Malaria",
+      "from": "1880"
+    }
+  ],
+  "summary": "A disease caused by tiny parasites spread by mosquitoes, long a main cause of death in warm regions. Alphonse Laveran saw the parasite in 1880, and Ronald Ross later showed how mosquitoes carry it.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Plasmodium infection",
+    "induced malaria",
+    "ague",
+    "marsh fever"
+  ],
+  "wikidata": "Q12156",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880",
+      "precision": "year",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "miasma-theory"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: malaria (Q12156)",
+      "url": "https://www.wikidata.org/wiki/Q12156",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malaria",
+      "url": "https://en.wikipedia.org/wiki/Malaria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

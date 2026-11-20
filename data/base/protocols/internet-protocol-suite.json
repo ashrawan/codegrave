@@ -1,0 +1,57 @@
+{
+  "id": "internet-protocol-suite",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "TCP/IP",
+      "from": "1975"
+    }
+  ],
+  "maker": "Vint Cerf and Bob Kahn",
+  "summary": "The pair of rules, TCP and IP, that break data into packets, route them across linked networks and reassemble them. They were designed in the 1970s and became the basis of the whole internet.",
+  "labels": [
+    "computing",
+    "firsts"
+  ],
+  "aliases": [
+    "IP suite",
+    "TCP/IP protocol suite"
+  ],
+  "wikidata": "Q81414",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "vint-cerf"
+    },
+    {
+      "type": "made_by",
+      "to": "bob-kahn"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Internet protocol suite (Q81414)",
+      "url": "https://www.wikidata.org/wiki/Q81414",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Internet protocol suite",
+      "url": "https://en.wikipedia.org/wiki/Internet_protocol_suite",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

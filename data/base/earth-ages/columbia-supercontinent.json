@@ -1,0 +1,52 @@
+{
+  "id": "columbia-supercontinent",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Columbia",
+      "from": "-1800000000"
+    }
+  ],
+  "summary": "One of the earliest proposed supercontinents, which may have assembled about 1.8 billion years ago and split up over the next few hundred million years. Evidence is patchy, so scientists still argue about its shape.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Nuna",
+    "Hudsonland"
+  ],
+  "wikidata": "Q870505",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1800000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1300000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Rifted apart over hundreds of millions of years",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Columbia (Q870505)",
+      "url": "https://www.wikidata.org/wiki/Q870505",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Columbia (supercontinent)",
+      "url": "https://en.wikipedia.org/wiki/Columbia_(supercontinent)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

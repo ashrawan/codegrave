@@ -1,0 +1,89 @@
+{
+  "id": "the-long-road-east",
+  "name": "The Long Road East: Silk, Faith and Caravans",
+  "description": "Camel trains, monks and merchants carried silk, paper, religions and plague across Asia for fifteen centuries, and changed every land they reached.",
+  "category": "places",
+  "labels": [
+    "exploration",
+    "economics"
+  ],
+  "tags": [
+    "silk road",
+    "caravan",
+    "trade",
+    "china",
+    "central asia",
+    "buddhism"
+  ],
+  "entries": [
+    "silk-road",
+    "zhang-qian",
+    "han-dynasty",
+    "silkworm",
+    "great-wall-of-china",
+    "parthian-empire",
+    "kushan-empire",
+    "buddhism",
+    "paper",
+    "cai-lun",
+    "manichaeism",
+    "mogao-caves",
+    "buddhas-of-bamiyan",
+    "tang-dynasty",
+    "xuanzang",
+    "samarkand",
+    "battle-of-talas",
+    "diamond-sutra",
+    "woodblock-printing",
+    "porcelain",
+    "tea",
+    "baghdad",
+    "gunpowder",
+    "compass",
+    "mongol-empire",
+    "genghis-khan",
+    "marco-polo",
+    "kublai-khan",
+    "ibn-battuta",
+    "black-death",
+    "zheng-he",
+    "fall-of-constantinople"
+  ],
+  "checkpoints": [
+    {
+      "id": "opening-the-road",
+      "name": "Opening the road",
+      "from": -140,
+      "to": 220,
+      "note": "Emperor Wu of the Han sent Zhang Qian west and found the lands beyond. Han soldiers guarded the route, silk reached Parthia and Rome, and Buddhism and the Kushan kingdom began to carry ideas east."
+    },
+    {
+      "id": "faith-on-the-road",
+      "name": "Faith on the road",
+      "from": 221,
+      "to": 617,
+      "note": "Monks travelled with traders. Buddhism and Manichaeism spread through oasis towns, caves like Mogao were painted, giant buddhas were carved at Bamiyan, and Chinese papermaking slowly spread."
+    },
+    {
+      "id": "tang-golden-age",
+      "name": "The Tang golden age",
+      "from": 618,
+      "to": 959,
+      "note": "Tang China was open to the world. Xuanzang went to India for texts, Samarkand grew rich, the Battle of Talas brought Abbasid and Chinese armies into conflict, and the Diamond Sutra was printed."
+    },
+    {
+      "id": "mongol-peace",
+      "name": "The Mongol peace",
+      "from": 960,
+      "to": 1368,
+      "note": "The Mongols joined the road under one rule. Travellers like Marco Polo and Ibn Battuta crossed it, the compass and gunpowder moved west, and in the end the Black Death followed the same routes."
+    },
+    {
+      "id": "sea-takes-over",
+      "name": "Sails replace camels",
+      "from": 1369,
+      "to": 1500,
+      "note": "Ming ships under Zheng He sailed the ocean routes, the Ottomans took Constantinople in 1453, and Europeans looked for sea ways to Asia, so the old land road faded."
+    }
+  ]
+}

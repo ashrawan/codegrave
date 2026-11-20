@@ -1,0 +1,48 @@
+{
+  "id": "moon",
+  "category": "space",
+  "names": [
+    {
+      "name": "The Moon",
+      "from": "-4527000000"
+    }
+  ],
+  "summary": "Earth's only natural satellite, thought to have formed after a Mars-sized body struck the young Earth. It raises the tides, steadies Earth's tilt and is the only other world on which humans have walked.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "aliases": [
+    "Earth I",
+    "Lua",
+    "Earth's satellite"
+  ],
+  "wikidata": "Q405",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4527000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Moon (Q405)",
+      "url": "https://www.wikidata.org/wiki/Q405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moon",
+      "url": "https://en.wikipedia.org/wiki/Moon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

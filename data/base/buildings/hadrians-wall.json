@@ -1,0 +1,59 @@
+{
+  "id": "hadrians-wall",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Hadrian's Wall",
+      "from": "0122"
+    }
+  ],
+  "summary": "Roman stone wall with forts and gates, built across northern England on the order of Emperor Hadrian. It marked the edge of the empire for many years, and long stretches of it can still be walked.",
+  "labels": [
+    "war",
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Vallum Aelium",
+    "Hadrians Wall",
+    "Picts' Wall",
+    "Roman Wall"
+  ],
+  "wikidata": "Q57357",
+  "events": [
+    {
+      "type": "born",
+      "date": "0122",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "hadrian"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hadrian's Wall (Q57357)",
+      "url": "https://www.wikidata.org/wiki/Q57357",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hadrian's Wall",
+      "url": "https://en.wikipedia.org/wiki/Hadrian's_Wall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "egyptian-hieroglyphs",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Egyptian hieroglyphs",
+      "from": "-3200"
+    }
+  ],
+  "summary": "The picture-based writing of ancient Egypt, using signs for sounds, whole words and meanings. It was carved on temples and tombs. Knowledge of how to read it was lost until Champollion's decipherment in 1822.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Egyptian hieroglyphic script",
+    "Egyptian hieroglyphics",
+    "Ancient Egyptian hieroglyphs"
+  ],
+  "wikidata": "Q132659",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when the temples closed and Greek and Coptic writing took over",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ancient-egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Egyptian hieroglyphs (Q132659)",
+      "url": "https://www.wikidata.org/wiki/Q132659",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Egyptian hieroglyphs",
+      "url": "https://en.wikipedia.org/wiki/Egyptian_hieroglyphs",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

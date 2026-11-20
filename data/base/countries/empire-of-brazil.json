@@ -1,0 +1,58 @@
+{
+  "id": "empire-of-brazil",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Empire of Brazil",
+      "from": "1822"
+    }
+  ],
+  "summary": "The monarchy created when Pedro I declared Brazil independent from Portugal. Its second emperor Pedro II ruled for almost fifty years and ended slavery in 1888 shortly before his fall.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Brazilian Empire",
+    "Imperio do Brazil"
+  ],
+  "wikidata": "Q217230",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822-09-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1889-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown by a military coup that proclaimed a republic",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Empire of Brazil (Q217230)",
+      "url": "https://www.wikidata.org/wiki/Q217230",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Empire of Brazil",
+      "url": "https://en.wikipedia.org/wiki/Empire_of_Brazil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "rocky-mountains",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Rocky Mountains",
+      "from": "-80000000"
+    }
+  ],
+  "summary": "North America's great western mountain range, running from Canada to New Mexico. It was lifted over tens of millions of years, beginning around 80 million years ago, and later carved by glaciers into peaks and valleys.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Rockies",
+    "The Rockies"
+  ],
+  "wikidata": "Q5463",
+  "events": [
+    {
+      "type": "born",
+      "date": "-80000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rocky Mountains (Q5463)",
+      "url": "https://www.wikidata.org/wiki/Q5463",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rocky Mountains",
+      "url": "https://en.wikipedia.org/wiki/Rocky_Mountains",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

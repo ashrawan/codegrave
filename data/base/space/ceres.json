@@ -1,0 +1,50 @@
+{
+  "id": "ceres",
+  "category": "space",
+  "names": [
+    {
+      "name": "Ceres",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The largest object in the asteroid belt and the only dwarf planet in the inner solar system. Giuseppe Piazzi found it in 1801 and it was first called a planet. The Dawn spacecraft orbited it and found bright salt deposits.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "(1) Ceres"
+  ],
+  "wikidata": "Q596",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "asteroid-belt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ceres (Q596)",
+      "url": "https://www.wikidata.org/wiki/Q596",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ceres (dwarf planet)",
+      "url": "https://en.wikipedia.org/wiki/Ceres_(dwarf_planet)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,87 @@
+{
+  "id": "from-ink-to-internet",
+  "name": "Ink to Internet: How Information Learned to Travel",
+  "description": "Clay, paper, type, wires, waves and packets: the machines that let ideas cross the world faster each century, and the people who built them.",
+  "category": "technology",
+  "labels": [
+    "media",
+    "computing",
+    "firsts"
+  ],
+  "tags": [
+    "printing",
+    "telegraph",
+    "telephone",
+    "internet",
+    "radio",
+    "web"
+  ],
+  "entries": [
+    "papyrus",
+    "cai-lun",
+    "woodblock-printing",
+    "movable-type",
+    "johannes-gutenberg",
+    "printing-press",
+    "penny-black",
+    "electrical-telegraph",
+    "samuel-morse",
+    "telephone",
+    "alexander-graham-bell",
+    "radio",
+    "guglielmo-marconi",
+    "television",
+    "telstar",
+    "sputnik-1",
+    "packet-switching",
+    "arpanet",
+    "internet-protocol-suite",
+    "bob-kahn",
+    "vint-cerf",
+    "tim-berners-lee",
+    "world-wide-web",
+    "mosaic",
+    "google-search",
+    "wikipedia",
+    "facebook",
+    "iphone"
+  ],
+  "checkpoints": [
+    {
+      "id": "pen-and-block",
+      "name": "Pen and block",
+      "from": -3000,
+      "to": 1438,
+      "note": "Egyptians wrote on papyrus, Cai Lun in China helped perfect paper, and printers there carved blocks of wood and later set movable type, ideas that spread slowly along trade routes."
+    },
+    {
+      "id": "the-press",
+      "name": "The press",
+      "from": 1439,
+      "to": 1836,
+      "note": "Gutenberg's press in Germany made books cheap and quick to copy. Pamphlets, newspapers and learned letters multiplied, and reading became part of ordinary life."
+    },
+    {
+      "id": "wires-and-waves",
+      "name": "Wires and waves",
+      "from": 1837,
+      "to": 1944,
+      "note": "The telegraph, Morse code, the telephone and the penny post sped messages up to the pace of the wire. Marconi's wireless radio then reached ships, homes and finally television audiences."
+    },
+    {
+      "id": "packets-and-satellites",
+      "name": "Packets and satellites",
+      "from": 1945,
+      "to": 1989,
+      "note": "Satellites such as Sputnik and Telstar beamed signals across the sky. Researchers invented packet switching, built ARPANET, and Kahn and Cerf devised the protocol that lets networks join together."
+    },
+    {
+      "id": "the-web-era",
+      "name": "The web era",
+      "from": 1990,
+      "to": 2026,
+      "note": "Tim Berners-Lee's World Wide Web and the Mosaic browser opened the internet to everyone. Search, Wikipedia, social networks and the iPhone then put it in every pocket."
+    }
+  ],
+  "year": 1991
+}

@@ -1,0 +1,48 @@
+{
+  "id": "world-trade-organization",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "World Trade Organization",
+      "from": "1995"
+    }
+  ],
+  "summary": "Body that sets the rules of trade between its member countries and settles their trade disputes. It replaced the older GATT system and has its seat in Geneva.",
+  "labels": [
+    "economics",
+    "law"
+  ],
+  "wikidata": "Q7825",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World Trade Organization (Q7825)",
+      "url": "https://www.wikidata.org/wiki/Q7825",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World Trade Organization",
+      "url": "https://en.wikipedia.org/wiki/World_Trade_Organization",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

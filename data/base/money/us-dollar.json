@@ -1,0 +1,54 @@
+{
+  "id": "us-dollar",
+  "category": "money",
+  "names": [
+    {
+      "name": "United States dollar",
+      "from": "1792"
+    }
+  ],
+  "summary": "The currency of the United States, set up by the Coinage Act in 1792. After the Second World War it became the main currency held by countries around the world.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "USD",
+    "American dollar",
+    "U.S. Dollar",
+    "dollar",
+    "dollars"
+  ],
+  "wikidata": "Q4917",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United States dollar (Q4917)",
+      "url": "https://www.wikidata.org/wiki/Q4917",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United States dollar",
+      "url": "https://en.wikipedia.org/wiki/United_States_dollar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

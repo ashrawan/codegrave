@@ -1,0 +1,50 @@
+{
+  "id": "explorer-1",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Explorer 1",
+      "from": "1958"
+    }
+  ],
+  "maker": "NASA and Jet Propulsion Laboratory",
+  "summary": "The first American satellite, launched on 31 January 1958. Its instruments found a belt of radiation around Earth, later named after James Van Allen.",
+  "labels": [
+    "space-race",
+    "astronomy"
+  ],
+  "wikidata": "Q49901",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-02-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Orbit decayed and it burned up in the atmosphere",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Explorer 1 (Q49901)",
+      "url": "https://www.wikidata.org/wiki/Q49901",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Explorer 1",
+      "url": "https://en.wikipedia.org/wiki/Explorer_1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

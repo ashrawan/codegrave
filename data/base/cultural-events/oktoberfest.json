@@ -1,0 +1,54 @@
+{
+  "id": "oktoberfest",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Oktoberfest",
+      "from": "1810"
+    }
+  ],
+  "summary": "A beer festival in Munich, Germany, that began as a public party for the wedding of a Bavarian prince. It draws millions of visitors each autumn and has inspired copies around the world.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "Beer fest",
+    "October fest",
+    "Münchner Oktoberfest",
+    "Zum Schichtl",
+    "October party"
+  ],
+  "wikidata": "Q102400",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810-10-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Oktoberfest (Q102400)",
+      "url": "https://www.wikidata.org/wiki/Q102400",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oktoberfest",
+      "url": "https://en.wikipedia.org/wiki/Oktoberfest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

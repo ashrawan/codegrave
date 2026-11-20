@@ -1,0 +1,55 @@
+{
+  "id": "greco-persian-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Greco-Persian Wars",
+      "from": "-0499"
+    }
+  ],
+  "summary": "A long series of conflicts between the Persian Empire and Greek city-states, starting with a revolt of Greek cities in Asia Minor. Greek victories at Marathon and Salamis kept mainland Greece out of Persian rule.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Persian Wars"
+  ],
+  "wikidata": "Q76026",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0499",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0449",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "achaemenid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Greco-Persian Wars (Q76026)",
+      "url": "https://www.wikidata.org/wiki/Q76026",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Greco-Persian Wars",
+      "url": "https://en.wikipedia.org/wiki/Greco-Persian_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

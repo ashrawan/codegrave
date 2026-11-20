@@ -1,0 +1,57 @@
+{
+  "id": "samarkand",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Samarkand",
+      "from": "-0700"
+    }
+  ],
+  "summary": "City in Uzbekistan on the Silk Road, one of the oldest continuously inhabited cities in Central Asia. Timur made it his capital and filled it with tiled mosques, tombs and an observatory.",
+  "labels": [
+    "exploration",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Samarqand",
+    "Samarcand",
+    "Summarkund"
+  ],
+  "wikidata": "Q5753",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "timurid-empire"
+    },
+    {
+      "type": "in",
+      "to": "uzbekistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samarkand (Q5753)",
+      "url": "https://www.wikidata.org/wiki/Q5753",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samarkand",
+      "url": "https://en.wikipedia.org/wiki/Samarkand",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "new-south-wales",
+  "category": "regions",
+  "names": [
+    {
+      "name": "New South Wales",
+      "from": "1788"
+    }
+  ],
+  "summary": "The first British colony in Australia, founded in 1788 with a settlement of convicts at Sydney Cove. It is now the most populous state of Australia.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "NSW",
+    "N.S.W.",
+    "State of New South Wales",
+    "AU-NSW"
+  ],
+  "wikidata": "Q3224",
+  "events": [
+    {
+      "type": "born",
+      "date": "1788",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New South Wales (Q3224)",
+      "url": "https://www.wikidata.org/wiki/Q3224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New South Wales",
+      "url": "https://en.wikipedia.org/wiki/New_South_Wales",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

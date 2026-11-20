@@ -1,0 +1,63 @@
+{
+  "id": "reconstruction-era",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Reconstruction era",
+      "from": "1863"
+    }
+  ],
+  "summary": "The years after the American Civil War when the United States tried to rebuild the South and give formerly enslaved people citizenship and the vote. It ended when federal troops left and Southern states brought in segregation.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Reconstruction era of the United States",
+    "Reconstruction of the Rebel States",
+    "Reconstruction of the South",
+    "Reconstruction of the Southern States"
+  ],
+  "wikidata": "Q623429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-12-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1877-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "texas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Reconstruction Era (Q623429)",
+      "url": "https://www.wikidata.org/wiki/Q623429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reconstruction era",
+      "url": "https://en.wikipedia.org/wiki/Reconstruction_era",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

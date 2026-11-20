@@ -1,0 +1,47 @@
+{
+  "id": "emily-dickinson",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Emily Dickinson",
+      "from": "1830"
+    }
+  ],
+  "summary": "American poet who lived quietly in Amherst, Massachusetts. She wrote nearly eighteen hundred short poems with unusual dashes and rhymes, and very few were printed while she lived.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q4441",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830-12-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1886-05-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Emily Dickinson (Q4441)",
+      "url": "https://www.wikidata.org/wiki/Q4441",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Emily Dickinson",
+      "url": "https://en.wikipedia.org/wiki/Emily_Dickinson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

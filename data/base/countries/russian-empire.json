@@ -1,0 +1,61 @@
+{
+  "id": "russian-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Russian Empire",
+      "from": "1721"
+    }
+  ],
+  "summary": "The state proclaimed by Peter the Great, ruled by tsars from Saint Petersburg. It expanded across Siberia and into Central Asia and Poland, becoming one of the largest empires on Earth.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Tsarist Russia",
+    "Imperial Russia",
+    "Russia",
+    "Empire of Russia",
+    "Moscovy"
+  ],
+  "wikidata": "Q34266",
+  "events": [
+    {
+      "type": "born",
+      "date": "1721-10-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1917-09-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown in the February Revolution during the First World War",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "peter-the-great"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russian Empire (Q34266)",
+      "url": "https://www.wikidata.org/wiki/Q34266",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russian Empire",
+      "url": "https://en.wikipedia.org/wiki/Russian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

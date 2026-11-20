@@ -1,0 +1,59 @@
+{
+  "id": "leif-erikson",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Leif Erikson",
+      "from": "0972"
+    }
+  ],
+  "summary": "Norse explorer from Iceland and Greenland who, according to the sagas, reached North America around the year 1000 and named the land Vinland. Archaeology has confirmed a Norse settlement at L'Anse aux Meadows.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Leif Eiricson",
+    "Leif Ericson",
+    "Leif Eriksson",
+    "Leifur Eríksson",
+    "Leifur Eiriksson"
+  ],
+  "wikidata": "Q42838",
+  "events": [
+    {
+      "type": "born",
+      "date": "0972",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1020",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "erik-the-red"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Leif Erikson (Q42838)",
+      "url": "https://www.wikidata.org/wiki/Q42838",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Leif Erikson",
+      "url": "https://en.wikipedia.org/wiki/Leif_Erikson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

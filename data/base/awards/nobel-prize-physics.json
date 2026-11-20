@@ -1,0 +1,59 @@
+{
+  "id": "nobel-prize-physics",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Nobel Prize in Physics",
+      "from": "1901"
+    }
+  ],
+  "summary": "The prize awarded each year since 1901 for the most important discovery or invention in physics. Winners include Röntgen, Marie Curie, Einstein, Bohr and the team behind the Higgs boson.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Physics Nobel Prize"
+  ],
+  "wikidata": "Q38104",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nobel-prize"
+    },
+    {
+      "type": "in",
+      "to": "sweden"
+    },
+    {
+      "type": "related",
+      "to": "alfred-nobel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nobel Prize in Physics (Q38104)",
+      "url": "https://www.wikidata.org/wiki/Q38104",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nobel Prize in Physics",
+      "url": "https://en.wikipedia.org/wiki/Nobel_Prize_in_Physics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

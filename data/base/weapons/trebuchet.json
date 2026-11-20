@@ -1,0 +1,50 @@
+{
+  "id": "trebuchet",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Trebuchet",
+      "from": "-0400"
+    }
+  ],
+  "maker": "Ancient Chinese engineers",
+  "summary": "A siege engine that throws heavy stones using a swinging arm. Early versions were pulled down by crews of people, and later ones used a heavy counterweight. It smashed castle walls until cannon took over.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "wikidata": "Q19776",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by gunpowder cannon that could break walls more reliably",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: trebuchet (Q19776)",
+      "url": "https://www.wikidata.org/wiki/Q19776",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trebuchet",
+      "url": "https://en.wikipedia.org/wiki/Trebuchet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

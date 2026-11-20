@@ -1,0 +1,76 @@
+{
+  "id": "johann-wolfgang-von-goethe",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Johann Wolfgang von Goethe",
+      "from": "1749"
+    }
+  ],
+  "summary": "German writer who wrote the play Faust, the novel The Sorrows of Young Werther and many poems. He also studied plants, colour and rocks, and worked as a minister at the court of Weimar.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q5879",
+  "events": [
+    {
+      "type": "born",
+      "date": "1749-08-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1832-03-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    },
+    {
+      "type": "influenced_by",
+      "to": "napoleon"
+    },
+    {
+      "type": "influenced_by",
+      "to": "hafez"
+    },
+    {
+      "type": "influenced_by",
+      "to": "voltaire"
+    },
+    {
+      "type": "influenced_by",
+      "to": "carl-linnaeus"
+    },
+    {
+      "type": "influenced_by",
+      "to": "william-shakespeare"
+    },
+    {
+      "type": "influenced_by",
+      "to": "baruch-spinoza"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Johann Wolfgang von Goethe (Q5879)",
+      "url": "https://www.wikidata.org/wiki/Q5879",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Johann Wolfgang von Goethe",
+      "url": "https://en.wikipedia.org/wiki/Johann_Wolfgang_von_Goethe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

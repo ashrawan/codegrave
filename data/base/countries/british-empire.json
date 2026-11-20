@@ -1,0 +1,58 @@
+{
+  "id": "british-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "British Empire",
+      "from": "1583"
+    }
+  ],
+  "summary": "The largest empire in history, made of colonies, protectorates and dominions on every continent. Its rule reached from North America and India to Africa and Australia, and it left English as a global language.",
+  "labels": [
+    "lost",
+    "politics",
+    "exploration"
+  ],
+  "aliases": [
+    "the British Empire"
+  ],
+  "wikidata": "Q8680",
+  "events": [
+    {
+      "type": "born",
+      "date": "1583",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1997",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved through decolonisation after the Second World War, ending symbolically with Hong Kong's handover",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Empire (Q8680)",
+      "url": "https://www.wikidata.org/wiki/Q8680",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Empire",
+      "url": "https://en.wikipedia.org/wiki/British_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

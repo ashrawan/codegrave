@@ -1,0 +1,49 @@
+{
+  "id": "domestic-pig",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Domestic pig",
+      "from": "-8500"
+    }
+  ],
+  "summary": "A farm animal bred from the wild boar in the Near East and independently in China. Pigs eat almost anything and breed quickly, so they became a main source of meat in many regions.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "Sus scrofa domesticus",
+    "swine",
+    "hog",
+    "Sus domesticus",
+    "Sus domestica"
+  ],
+  "wikidata": "Q787",
+  "events": [
+    {
+      "type": "born",
+      "date": "-8500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: pig (Q787)",
+      "url": "https://www.wikidata.org/wiki/Q787",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pig",
+      "url": "https://en.wikipedia.org/wiki/Pig",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

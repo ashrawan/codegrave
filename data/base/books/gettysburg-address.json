@@ -1,0 +1,60 @@
+{
+  "id": "gettysburg-address",
+  "category": "books",
+  "names": [
+    {
+      "name": "Gettysburg Address",
+      "from": "1863"
+    }
+  ],
+  "summary": "A very short speech given by Abraham Lincoln at the dedication of a soldiers' cemetery on the Gettysburg battlefield. It described the war as a test of whether a nation based on equality could last, and is among the best known speeches in American history.",
+  "labels": [
+    "literature",
+    "politics"
+  ],
+  "wikidata": "Q214524",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-11-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "abraham-lincoln"
+    },
+    {
+      "type": "part_of",
+      "to": "american-civil-war"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "about",
+      "to": "battle-of-gettysburg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gettysburg Address (Q214524)",
+      "url": "https://www.wikidata.org/wiki/Q214524",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gettysburg Address",
+      "url": "https://en.wikipedia.org/wiki/Gettysburg_Address",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,45 @@
+{
+  "id": "metric-system",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Metric system",
+      "from": "1795"
+    }
+  ],
+  "summary": "A decimal system of measurement, with units such as the metre and kilogram. France adopted it in 1795 after the Revolution, and it is now used in nearly every country.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "metric"
+  ],
+  "wikidata": "Q232405",
+  "events": [
+    {
+      "type": "born",
+      "date": "1795",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: metric system (Q232405)",
+      "url": "https://www.wikidata.org/wiki/Q232405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Metric system",
+      "url": "https://en.wikipedia.org/wiki/Metric_system",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

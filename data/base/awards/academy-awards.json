@@ -1,0 +1,51 @@
+{
+  "id": "academy-awards",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Academy Awards",
+      "from": "1929"
+    }
+  ],
+  "summary": "Annual American film prizes, known as the Oscars, voted by members of the film industry. They are given in categories from best picture to costume design.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "The Oscars",
+    "Oscars"
+  ],
+  "wikidata": "Q19020",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Academy Awards (Q19020)",
+      "url": "https://www.wikidata.org/wiki/Q19020",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Academy Awards",
+      "url": "https://en.wikipedia.org/wiki/Academy_Awards",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

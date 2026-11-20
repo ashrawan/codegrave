@@ -1,0 +1,61 @@
+{
+  "id": "babylonia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Babylonia",
+      "from": "-1894"
+    }
+  ],
+  "summary": "A Mesopotamian state centred on the city of Babylon, famous for the law code of Hammurabi and later for Nebuchadnezzar II, who rebuilt the city. Its astronomers kept careful records of the sky for centuries.",
+  "labels": [
+    "lost",
+    "law"
+  ],
+  "aliases": [
+    "Babylonian Kingdom"
+  ],
+  "wikidata": "Q47690",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1894",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0539",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by the Persian king Cyrus the Great",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "in",
+      "to": "iran"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Babylonia (Q47690)",
+      "url": "https://www.wikidata.org/wiki/Q47690",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Babylonia",
+      "url": "https://en.wikipedia.org/wiki/Babylonia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

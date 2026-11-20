@@ -1,0 +1,48 @@
+{
+  "id": "gold-standard",
+  "category": "money",
+  "names": [
+    {
+      "name": "Gold standard",
+      "from": "1821"
+    }
+  ],
+  "summary": "A system in which a currency can be exchanged for a fixed amount of gold. Britain adopted it in 1821 and many nations followed, but countries left it during the Great Depression and the last links ended in 1971.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q173509",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1971",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "The United States ended gold convertibility of the dollar",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: gold standard (Q173509)",
+      "url": "https://www.wikidata.org/wiki/Q173509",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gold standard",
+      "url": "https://en.wikipedia.org/wiki/Gold_standard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

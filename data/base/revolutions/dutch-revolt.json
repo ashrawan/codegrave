@@ -1,0 +1,53 @@
+{
+  "id": "dutch-revolt",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Dutch Revolt",
+      "from": "1568"
+    }
+  ],
+  "summary": "Also called the Eighty Years' War. The provinces of the Low Countries rose against Spanish Habsburg rule over taxes, religion and local rights. The northern provinces became the independent Dutch Republic.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "wikidata": "Q186336",
+  "events": [
+    {
+      "type": "born",
+      "date": "1568",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1648",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "spanish-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dutch Revolt (Q186336)",
+      "url": "https://www.wikidata.org/wiki/Q186336",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dutch Revolt",
+      "url": "https://en.wikipedia.org/wiki/Dutch_Revolt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

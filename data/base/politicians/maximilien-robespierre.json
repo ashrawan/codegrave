@@ -1,0 +1,59 @@
+{
+  "id": "maximilien-robespierre",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Maximilien Robespierre",
+      "from": "1758"
+    }
+  ],
+  "summary": "French lawyer and leading member of the Jacobin Club during the French Revolution. He helped lead the Committee of Public Safety during the Terror and was himself guillotined in 1794.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "The Incorruptible"
+  ],
+  "wikidata": "Q44197",
+  "events": [
+    {
+      "type": "born",
+      "date": "1758-05-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1794-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "jean-jacques-rousseau"
+    },
+    {
+      "type": "related",
+      "to": "french-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maximilien Robespierre (Q44197)",
+      "url": "https://www.wikidata.org/wiki/Q44197",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maximilien Robespierre",
+      "url": "https://en.wikipedia.org/wiki/Maximilien_Robespierre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

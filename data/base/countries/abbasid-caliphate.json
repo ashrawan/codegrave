@@ -1,0 +1,68 @@
+{
+  "id": "abbasid-caliphate",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Abbasid Caliphate",
+      "from": "0750"
+    }
+  ],
+  "summary": "The Islamic empire that moved its capital to Baghdad. Its House of Wisdom gathered scholars who translated Greek texts and advanced mathematics, medicine and astronomy.",
+  "labels": [
+    "lost",
+    "education"
+  ],
+  "aliases": [
+    "Abbasid Empire",
+    "Abbasid period",
+    "Abbasids",
+    "Abbasides"
+  ],
+  "wikidata": "Q12536",
+  "events": [
+    {
+      "type": "born",
+      "date": "0750",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1258-02-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Baghdad was sacked by the Mongols",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "mamluk-sultanate"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "ottoman-empire"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "fatimid-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abbasid Caliphate (Q12536)",
+      "url": "https://www.wikidata.org/wiki/Q12536",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abbasid Caliphate",
+      "url": "https://en.wikipedia.org/wiki/Abbasid_Caliphate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

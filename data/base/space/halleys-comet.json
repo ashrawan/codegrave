@@ -1,0 +1,51 @@
+{
+  "id": "halleys-comet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Halley's Comet",
+      "from": "-0240"
+    }
+  ],
+  "summary": "The best known comet, returning to the inner solar system about every 76 years. Edmond Halley showed in 1705 that sightings in 1531, 1607 and 1682 were one object. Chinese records from 240 BCE are its first firm sighting.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Comet Halley",
+    "1P/Halley"
+  ],
+  "wikidata": "Q23054",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0240",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "edmond-halley"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Halley's Comet (Q23054)",
+      "url": "https://www.wikidata.org/wiki/Q23054",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Halley's Comet",
+      "url": "https://en.wikipedia.org/wiki/Halley's_Comet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

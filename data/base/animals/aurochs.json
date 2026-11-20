@@ -1,0 +1,53 @@
+{
+  "id": "aurochs",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Aurochs",
+      "from": "-2000000"
+    }
+  ],
+  "summary": "A huge wild ox of Europe, Asia and North Africa and the ancestor of today's farm cattle. It appears in cave art and Roman writing, and the last one died in a Polish forest.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "aurochsen",
+    "Bos primigenius"
+  ],
+  "wikidata": "Q168903",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1627",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Hunted, and its pastures turned to farmland, until the last cow died in Poland",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: aurochs (Q168903)",
+      "url": "https://www.wikidata.org/wiki/Q168903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aurochs",
+      "url": "https://en.wikipedia.org/wiki/Aurochs",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "sydney-opera-house",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Sydney Opera House",
+      "from": "1973"
+    }
+  ],
+  "summary": "Performing arts centre on Sydney Harbour, known for its sail-shaped white roofs. Danish architect Jorn Utzon won the design competition, but he left the project before it opened in 1973.",
+  "labels": [
+    "architecture",
+    "music",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Sydney Opera",
+    "Opera House"
+  ],
+  "wikidata": "Q45178",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-10-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sydney"
+    },
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sydney Opera House (Q45178)",
+      "url": "https://www.wikidata.org/wiki/Q45178",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sydney Opera House",
+      "url": "https://en.wikipedia.org/wiki/Sydney_Opera_House",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

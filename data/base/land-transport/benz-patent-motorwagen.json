@@ -1,0 +1,56 @@
+{
+  "id": "benz-patent-motorwagen",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Benz Patent-Motorwagen",
+      "from": "1886"
+    }
+  ],
+  "maker": "Karl Benz",
+  "summary": "A three-wheeled vehicle built by Karl Benz in Mannheim and patented in 1886, usually seen as the first practical car with its own petrol engine. Bertha Benz made a long trip in it in 1888.",
+  "labels": [
+    "firsts",
+    "transport"
+  ],
+  "aliases": [
+    "Benz Patent of 1886"
+  ],
+  "wikidata": "Q326248",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886-01-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "karl-benz"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benz Patent-Motorwagen (Q326248)",
+      "url": "https://www.wikidata.org/wiki/Q326248",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Benz Patent-Motorwagen",
+      "url": "https://en.wikipedia.org/wiki/Benz_Patent-Motorwagen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

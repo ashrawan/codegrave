@@ -1,0 +1,58 @@
+{
+  "id": "anthropocene",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Anthropocene",
+      "from": "1950"
+    }
+  ],
+  "summary": "A proposed name for the time in which human activity has become a major force changing Earth's climate, soil, oceans and species. Its start date is debated, and a 2024 vote by geologists declined to make it a formal epoch.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "anthropocene epoch",
+    "geological anthropology",
+    "Anthropocene era",
+    "anthropocene period",
+    "era of anthropos"
+  ],
+  "wikidata": "Q26841",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "quaternary"
+    },
+    {
+      "type": "related",
+      "to": "homo-sapiens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: anthropocene (Q26841)",
+      "url": "https://www.wikidata.org/wiki/Q26841",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anthropocene",
+      "url": "https://en.wikipedia.org/wiki/Anthropocene",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

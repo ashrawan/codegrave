@@ -1,0 +1,73 @@
+{
+  "id": "a-wardrobe-through-time",
+  "name": "A Wardrobe Through Time",
+  "description": "Wrapped cloth, stiff collars, jeans and bikinis: what people wore and what clothes meant in different ages and places.",
+  "category": "society",
+  "labels": [
+    "fashion"
+  ],
+  "tags": [
+    "fashion",
+    "clothing",
+    "dress",
+    "textiles",
+    "style"
+  ],
+  "entries": [
+    "sari",
+    "toga",
+    "hanbok",
+    "kimono",
+    "foot-binding",
+    "corset",
+    "ruff",
+    "kente-cloth",
+    "high-heeled-shoe",
+    "necktie",
+    "crinoline",
+    "jeans",
+    "t-shirt",
+    "sneakers",
+    "qipao",
+    "bikini",
+    "miniskirt"
+  ],
+  "checkpoints": [
+    {
+      "id": "wrapped-and-draped",
+      "name": "Wrapped and draped",
+      "from": -1500,
+      "to": 600,
+      "note": "The oldest clothes were lengths of cloth. Roman citizens wore the toga, women in India draped the sari, and Korean dress took shapes later seen in tomb paintings."
+    },
+    {
+      "id": "robes-and-rules",
+      "name": "Robes and rules",
+      "from": 601,
+      "to": 1499,
+      "note": "Dress marked rank and custom. Japan developed the kimono, and in China foot binding turned a fashion for tiny feet into a painful practice that lasted for centuries among families who wanted status."
+    },
+    {
+      "id": "courts-and-collars",
+      "name": "Courts and collars",
+      "from": 1500,
+      "to": 1799,
+      "note": "European courts set fashions with corsets, ruffs, heels and neckties, while the Asante of Ghana wove kente cloth for royalty, with patterns that carried names and meanings."
+    },
+    {
+      "id": "industry-and-hoops",
+      "name": "Hoops and rivets",
+      "from": 1800,
+      "to": 1899,
+      "note": "Factories made cloth cheap, and fashions changed faster. Huge crinoline skirts swept through Europe and America, and Levi Strauss and Jacob Davis patented riveted work trousers."
+    },
+    {
+      "id": "casual-century",
+      "name": "The casual century",
+      "from": 1900,
+      "to": 1999,
+      "note": "Sportswear and underwear became daily clothes. T-shirts, sneakers and bikinis broke old rules, and the miniskirt and the qipao showed how fashion could be a statement."
+    }
+  ],
+  "year": 1873
+}

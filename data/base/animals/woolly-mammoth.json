@@ -1,0 +1,52 @@
+{
+  "id": "woolly-mammoth",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Woolly mammoth",
+      "from": "-400000"
+    }
+  ],
+  "summary": "An elephant relative with long curved tusks and a thick coat that roamed the cold plains of Europe, Asia and North America. People hunted it, and a small group lived on an Arctic island until about 4,000 years ago.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Mammuthus primigenius"
+  ],
+  "wikidata": "Q3699044",
+  "events": [
+    {
+      "type": "born",
+      "date": "-400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Climate warming and hunting; the last herds on Wrangel Island vanished",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Woolly Mammoth (Q3699044)",
+      "url": "https://www.wikidata.org/wiki/Q3699044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Woolly mammoth",
+      "url": "https://en.wikipedia.org/wiki/Woolly_mammoth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

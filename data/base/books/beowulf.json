@@ -1,0 +1,42 @@
+{
+  "id": "beowulf",
+  "category": "books",
+  "names": [
+    {
+      "name": "Beowulf",
+      "from": "1000"
+    }
+  ],
+  "summary": "Old English poem about a warrior who fights the monster Grendel, Grendel's mother and finally a dragon. It survives in a single manuscript, which was damaged in a fire in 1731.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q48328",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Beowulf (Q48328)",
+      "url": "https://www.wikidata.org/wiki/Q48328",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Beowulf",
+      "url": "https://en.wikipedia.org/wiki/Beowulf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

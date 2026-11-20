@@ -1,0 +1,59 @@
+{
+  "id": "andy-warhol",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Andy Warhol",
+      "from": "1928"
+    }
+  ],
+  "summary": "American artist of Pop Art who made silkscreen prints of soup cans and of celebrities such as Marilyn Monroe. He worked in a studio called the Factory and asked how art relates to fame and commerce.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Andrew Warhol",
+    "Andrej Varchol",
+    "Andrej Warhol",
+    "Andrew Warhola",
+    "Drella"
+  ],
+  "wikidata": "Q5603",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-08-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1987-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "marcel-duchamp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Andy Warhol (Q5603)",
+      "url": "https://www.wikidata.org/wiki/Q5603",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andy Warhol",
+      "url": "https://en.wikipedia.org/wiki/Andy_Warhol",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

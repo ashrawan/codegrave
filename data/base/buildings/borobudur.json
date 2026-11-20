@@ -1,0 +1,53 @@
+{
+  "id": "borobudur",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Borobudur",
+      "from": "0825"
+    }
+  ],
+  "summary": "Ninth-century Buddhist monument on the island of Java, built as a stepped mound with nine levels and hundreds of carved reliefs. It was buried by volcanic ash and jungle until it was cleared in the 1800s.",
+  "labels": [
+    "religion",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Borobudur Temple",
+    "Boro Budor",
+    "Candi Borobudur"
+  ],
+  "wikidata": "Q42798",
+  "events": [
+    {
+      "type": "born",
+      "date": "0825",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Borobudur Temple (Q42798)",
+      "url": "https://www.wikidata.org/wiki/Q42798",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Borobudur",
+      "url": "https://en.wikipedia.org/wiki/Borobudur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

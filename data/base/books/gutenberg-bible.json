@@ -1,0 +1,52 @@
+{
+  "id": "gutenberg-bible",
+  "category": "books",
+  "names": [
+    {
+      "name": "Gutenberg Bible",
+      "from": "1455"
+    }
+  ],
+  "summary": "The first major book printed in Europe with movable metal type, produced in Mainz by Johannes Gutenberg and his workshop. About fifty copies survive, and it marks the start of the age of printing in the West.",
+  "labels": [
+    "religion",
+    "media"
+  ],
+  "aliases": [
+    "Mazarin Bible",
+    "B42"
+  ],
+  "wikidata": "Q158075",
+  "events": [
+    {
+      "type": "born",
+      "date": "1455",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "johannes-gutenberg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gutenberg Bible (Q158075)",
+      "url": "https://www.wikidata.org/wiki/Q158075",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gutenberg Bible",
+      "url": "https://en.wikipedia.org/wiki/Gutenberg_Bible",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

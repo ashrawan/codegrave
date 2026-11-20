@@ -1,0 +1,61 @@
+{
+  "id": "turing-award",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Turing Award",
+      "from": "1966"
+    }
+  ],
+  "maker": "Association for Computing Machinery",
+  "summary": "Yearly prize from the Association for Computing Machinery for major lasting contributions to computer science. It is often called the Nobel Prize of computing and is named for Alan Turing.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "ACM Turing Award",
+    "A. M. Turing Award",
+    "ACM A. M. Turing Award"
+  ],
+  "wikidata": "Q185667",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "alan-turing"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Turing Award (Q185667)",
+      "url": "https://www.wikidata.org/wiki/Q185667",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Turing Award",
+      "url": "https://en.wikipedia.org/wiki/Turing_Award",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

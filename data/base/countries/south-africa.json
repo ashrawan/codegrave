@@ -1,0 +1,71 @@
+{
+  "id": "south-africa",
+  "category": "countries",
+  "names": [
+    {
+      "name": "South Africa",
+      "from": "1910"
+    }
+  ],
+  "summary": "The country at the southern tip of Africa, a union from 1910. Apartheid ended with the election of Nelson Mandela in 1994, and it has eleven official languages.",
+  "labels": [
+    "human-rights",
+    "independence"
+  ],
+  "aliases": [
+    "Republic of South Africa",
+    "RSA",
+    "SA",
+    "zaf",
+    "R.S.A."
+  ],
+  "wikidata": "Q258",
+  "events": [
+    {
+      "type": "born",
+      "date": "1910-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South Africa (Q258)",
+      "url": "https://www.wikidata.org/wiki/Q258",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South Africa",
+      "url": "https://en.wikipedia.org/wiki/South_Africa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

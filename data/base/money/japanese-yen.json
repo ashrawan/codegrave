@@ -1,0 +1,50 @@
+{
+  "id": "japanese-yen",
+  "category": "money",
+  "names": [
+    {
+      "name": "Japanese yen",
+      "from": "1871"
+    }
+  ],
+  "summary": "The currency of Japan, introduced as the country modernised under the Meiji government. It replaced a mix of older coins and became one of the most traded currencies in the world.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "yen"
+  ],
+  "wikidata": "Q8146",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-07",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: yen (Q8146)",
+      "url": "https://www.wikidata.org/wiki/Q8146",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Japanese yen",
+      "url": "https://en.wikipedia.org/wiki/Japanese_yen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

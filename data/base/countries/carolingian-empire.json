@@ -1,0 +1,57 @@
+{
+  "id": "carolingian-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Carolingian Empire",
+      "from": "0800"
+    }
+  ],
+  "summary": "The Frankish realm that Charlemagne ruled and was crowned emperor of in 800. It joined much of western Europe and supported a revival of learning, then was divided among his heirs.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Frankish Empire"
+  ],
+  "wikidata": "Q31929",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0887",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Split among Charlemagne's descendants into West Francia and East Francia",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "charlemagne"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carolingian Empire (Q31929)",
+      "url": "https://www.wikidata.org/wiki/Q31929",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carolingian Empire",
+      "url": "https://en.wikipedia.org/wiki/Carolingian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

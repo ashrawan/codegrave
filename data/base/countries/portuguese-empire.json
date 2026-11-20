@@ -1,0 +1,61 @@
+{
+  "id": "portuguese-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Portuguese Empire",
+      "from": "1415"
+    }
+  ],
+  "summary": "The first European global empire, built on trading posts along the coasts of Africa, India, Southeast Asia and Brazil. It began with the capture of Ceuta and ended with the return of Macau to China.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Portuguese Overseas",
+    "Portuguese Colonial Empire",
+    "colonial history of Portugal",
+    "Portuguese colonies",
+    "Portuguese colony"
+  ],
+  "wikidata": "Q200464",
+  "events": [
+    {
+      "type": "born",
+      "date": "1415-08-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-12-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Gradually lost colonies; Brazil in 1822, Africa in 1975, and Macau in 1999",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Portuguese Empire (Q200464)",
+      "url": "https://www.wikidata.org/wiki/Q200464",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portuguese Empire",
+      "url": "https://en.wikipedia.org/wiki/Portuguese_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

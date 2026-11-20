@@ -1,0 +1,57 @@
+{
+  "id": "romantic-music",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Romantic music",
+      "from": "1820"
+    }
+  ],
+  "summary": "European music of about 1820 to 1910 that stressed strong feeling, personal expression and sometimes folk or national themes. Chopin, Schumann, Verdi, Wagner and Tchaikovsky wrote in this style, often for larger orchestras.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "music of Romanticism",
+    "romantism in music",
+    "musical romantism"
+  ],
+  "wikidata": "Q207591",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1910",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "romanticism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Romantic music (Q207591)",
+      "url": "https://www.wikidata.org/wiki/Q207591",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Romantic music",
+      "url": "https://en.wikipedia.org/wiki/Romantic_music",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

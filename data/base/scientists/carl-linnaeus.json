@@ -1,0 +1,60 @@
+{
+  "id": "carl-linnaeus",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Carl Linnaeus",
+      "from": "1707"
+    }
+  ],
+  "summary": "Swedish naturalist who gave living things a two-part Latin name, such as Homo sapiens, and arranged them in a ranked system. This way of naming and sorting is still the base of biological classification.",
+  "labels": [
+    "biology",
+    "education"
+  ],
+  "aliases": [
+    "Carolo Linnaeo",
+    "Carl von Linnaeus",
+    "Carl Linnæus",
+    "Carolus a Linné",
+    "Karl von Linné"
+  ],
+  "wikidata": "Q1043",
+  "events": [
+    {
+      "type": "born",
+      "date": "1707-05-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1778-01-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carl Linnaeus (Q1043)",
+      "url": "https://www.wikidata.org/wiki/Q1043",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carl Linnaeus",
+      "url": "https://en.wikipedia.org/wiki/Carl_Linnaeus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

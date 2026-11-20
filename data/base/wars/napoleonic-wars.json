@@ -1,0 +1,55 @@
+{
+  "id": "napoleonic-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Napoleonic Wars",
+      "from": "1803"
+    }
+  ],
+  "summary": "A series of wars in which France under Napoleon fought coalitions of other European powers. They reshaped the borders of Europe and ended with Napoleon's defeat at Waterloo.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Napoleon Wars"
+  ],
+  "wikidata": "Q78994",
+  "events": [
+    {
+      "type": "born",
+      "date": "1803",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1815",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "napoleon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Napoleonic Wars (Q78994)",
+      "url": "https://www.wikidata.org/wiki/Q78994",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Napoleonic Wars",
+      "url": "https://en.wikipedia.org/wiki/Napoleonic_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

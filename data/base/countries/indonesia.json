@@ -1,0 +1,67 @@
+{
+  "id": "indonesia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Indonesia",
+      "from": "1945"
+    }
+  ],
+  "summary": "An island nation of Southeast Asia of thousands of islands, which declared independence from Dutch rule in 1945. It has the largest Muslim population of any country and hundreds of ethnic groups.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Indonesia",
+    "id"
+  ],
+  "wikidata": "Q252",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-08-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "part_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Indonesia (Q252)",
+      "url": "https://www.wikidata.org/wiki/Q252",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indonesia",
+      "url": "https://en.wikipedia.org/wiki/Indonesia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

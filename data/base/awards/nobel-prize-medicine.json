@@ -1,0 +1,60 @@
+{
+  "id": "nobel-prize-medicine",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Nobel Prize in Physiology or Medicine",
+      "from": "1901"
+    }
+  ],
+  "summary": "The prize given each year since 1901 for discoveries about life and health. Winners include Fleming for penicillin, McClintock for jumping genes, Levi-Montalcini for nerve growth and Tu Youyou for artemisinin.",
+  "labels": [
+    "medicine",
+    "biology",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Nobel Prize in Medicine"
+  ],
+  "wikidata": "Q80061",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nobel-prize"
+    },
+    {
+      "type": "in",
+      "to": "sweden"
+    },
+    {
+      "type": "related",
+      "to": "alfred-nobel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nobel Prize in Physiology or Medicine (Q80061)",
+      "url": "https://www.wikidata.org/wiki/Q80061",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nobel Prize in Physiology or Medicine",
+      "url": "https://en.wikipedia.org/wiki/Nobel_Prize_in_Physiology_or_Medicine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

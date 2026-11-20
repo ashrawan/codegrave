@@ -1,0 +1,70 @@
+{
+  "id": "wild-places-worth-keeping",
+  "name": "Wild Places Worth Keeping",
+  "description": "The first national parks and the reserves that followed, from Yellowstone to Virunga, and the lands left to nature after human disaster.",
+  "category": "places",
+  "labels": [
+    "environment",
+    "world-heritage",
+    "firsts"
+  ],
+  "tags": [
+    "national parks",
+    "wildlife",
+    "conservation",
+    "nature",
+    "reserves",
+    "wilderness"
+  ],
+  "entries": [
+    "hyde-park",
+    "kew-gardens",
+    "central-park",
+    "yellowstone-national-park",
+    "royal-national-park",
+    "banff-national-park",
+    "yosemite-national-park",
+    "grand-canyon-national-park",
+    "virunga-national-park",
+    "kruger-national-park",
+    "iguazu-national-park",
+    "serengeti-national-park",
+    "galapagos-national-park",
+    "chitwan-national-park",
+    "great-barrier-reef-marine-park",
+    "sagarmatha-national-park",
+    "pripyat",
+    "chernobyl-exclusion-zone"
+  ],
+  "checkpoints": [
+    {
+      "id": "parks-for-people",
+      "name": "Parks and gardens",
+      "from": 1637,
+      "to": 1870,
+      "note": "Before nature reserves there were parks for people. Hyde Park opened to the public, Kew collected plants from the empire, and New York built Central Park for crowded city dwellers."
+    },
+    {
+      "id": "first-national-parks",
+      "name": "The first national parks",
+      "from": 1871,
+      "to": 1925,
+      "note": "Yellowstone began the idea that land could be kept for everyone. Australia, Canada and the United States followed, and Africa's first reserve, in the Congo, came in 1925."
+    },
+    {
+      "id": "spreading-the-idea",
+      "name": "The idea goes global",
+      "from": 1926,
+      "to": 1960,
+      "note": "Africa and South America created parks for elephants, lions and waterfalls. The Serengeti and the Galapagos showed that parks could protect migrations and species found nowhere else."
+    },
+    {
+      "id": "conservation-today",
+      "name": "Conservation and recovery",
+      "from": 1961,
+      "to": 2026,
+      "note": "Rhinos recovered in Chitwan, a vast reef park was set up in Australia and the Himalayas gained protection. At Chernobyl, wildlife moved back into the land people left."
+    }
+  ],
+  "year": 1900
+}

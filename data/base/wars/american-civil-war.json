@@ -1,0 +1,64 @@
+{
+  "id": "american-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "American Civil War",
+      "from": "1861"
+    }
+  ],
+  "summary": "War between the United States and eleven southern states that had left it to form the Confederacy, mainly over slavery. The Union won, slavery was ended and the country stayed united.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "War Between the States",
+    "Civil War",
+    "The Civil War",
+    "U.S. Civil War",
+    "US Civil War"
+  ],
+  "wikidata": "Q8676",
+  "events": [
+    {
+      "type": "born",
+      "date": "1861-04-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1865-04-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "confederate-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: American Civil War (Q8676)",
+      "url": "https://www.wikidata.org/wiki/Q8676",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: American Civil War",
+      "url": "https://en.wikipedia.org/wiki/American_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,86 @@
+{
+  "id": "ten-blue-links",
+  "name": "Ten Blue Links: The Search Engine Wars",
+  "description": "Directories, portals and algorithms fought over the way we find things online. See how Google rose, who it beat, and what may replace the search box.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "business",
+    "rivalries"
+  ],
+  "tags": [
+    "search",
+    "google",
+    "yahoo",
+    "altavista",
+    "bing",
+    "browser wars"
+  ],
+  "entries": [
+    "html",
+    "world-wide-web",
+    "tim-berners-lee",
+    "gopher",
+    "mosaic",
+    "netscape",
+    "yahoo",
+    "yahoo-directory",
+    "lycos",
+    "excite",
+    "altavista",
+    "internet-explorer",
+    "ask-jeeves",
+    "google-search",
+    "dot-com-bubble",
+    "baidu",
+    "wikipedia",
+    "google-maps",
+    "internet-archive",
+    "chrome",
+    "duckduckgo",
+    "bing",
+    "siri",
+    "google-assistant",
+    "chatgpt",
+    "gemini",
+    "claude"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-the-engines",
+      "name": "Before the engines",
+      "from": 1989,
+      "to": 1994,
+      "note": "Berners-Lee's HTML and World Wide Web gave the internet pages. Gopher and Mosaic made it browsable, Netscape built a business on it, and Yahoo and Lycos began to list or crawl the growing mass of sites."
+    },
+    {
+      "id": "a-crowded-field",
+      "name": "A crowded field",
+      "from": 1995,
+      "to": 1998,
+      "note": "AltaVista, Excite, Ask Jeeves and Yahoo competed for the front-page spot while Microsoft bundled Internet Explorer. In 1997 a new engine called Google began to rank pages by who linked to them."
+    },
+    {
+      "id": "googles-decade",
+      "name": "Google's decade",
+      "from": 1999,
+      "to": 2007,
+      "note": "The dot-com bubble burst and many portals faded. Google grew into the default, added maps, and Baidu took the lead in China. Wikipedia and the Internet Archive became answers to the question of where to look."
+    },
+    {
+      "id": "beyond-the-box",
+      "name": "Beyond the box",
+      "from": 2008,
+      "to": 2020,
+      "note": "Chrome and Bing arrived, and DuckDuckGo offered privacy. Siri and Google Assistant let people ask by voice, shifting search from ten blue links toward direct answers."
+    },
+    {
+      "id": "asking-machines",
+      "name": "Asking the machines",
+      "from": 2021,
+      "to": 2026,
+      "note": "Chatbots such as ChatGPT, Gemini and Claude answer questions in sentences instead of listing pages, and search companies have rushed to add them, reopening a contest that seemed settled."
+    }
+  ],
+  "year": 2005
+}

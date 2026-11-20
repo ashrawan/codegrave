@@ -1,0 +1,60 @@
+{
+  "id": "blockbuster-llc",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Blockbuster",
+      "from": "1985"
+    }
+  ],
+  "summary": "American chain of shops that rented videotapes and DVDs, with thousands of stores around the world at its peak. Mail rental and streaming took its customers, and its last company-owned stores closed in 2014.",
+  "labels": [
+    "business",
+    "media"
+  ],
+  "aliases": [
+    "Blockbuster LLC",
+    "Blockbuster Video Entertainment, Inc.",
+    "Blockbuster Inc",
+    "Blockbuster Entertainment, Inc."
+  ],
+  "wikidata": "Q884711",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2014-01-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost customers to mail rental and streaming and closed its company stores",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Blockbuster LLC (Q884711)",
+      "url": "https://www.wikidata.org/wiki/Q884711",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blockbuster (retailer)",
+      "url": "https://en.wikipedia.org/wiki/Blockbuster_(retailer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

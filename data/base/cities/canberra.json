@@ -1,0 +1,51 @@
+{
+  "id": "canberra",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Canberra",
+      "from": "1913"
+    }
+  ],
+  "summary": "Capital of Australia, planned as a compromise between rivals Sydney and Melbourne. The design was chosen in an international competition won by the American architect Walter Burley Griffin.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Canberra, Australia",
+    "Canberra, Australian Capital Territory"
+  ],
+  "wikidata": "Q3114",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913-03-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Canberra (Q3114)",
+      "url": "https://www.wikidata.org/wiki/Q3114",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Canberra",
+      "url": "https://en.wikipedia.org/wiki/Canberra",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

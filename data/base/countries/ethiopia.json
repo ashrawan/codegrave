@@ -1,0 +1,63 @@
+{
+  "id": "ethiopia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ethiopia",
+      "from": "1995"
+    }
+  ],
+  "summary": "A landlocked country in the Horn of Africa and the second most populous in Africa. It was never colonised for long, and its present federal republic dates from 1995, after the fall of the Derg.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Federal Democratic Republic of Ethiopia",
+    "et"
+  ],
+  "wikidata": "Q115",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-08-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ethiopia (Q115)",
+      "url": "https://www.wikidata.org/wiki/Q115",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ethiopia",
+      "url": "https://en.wikipedia.org/wiki/Ethiopia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

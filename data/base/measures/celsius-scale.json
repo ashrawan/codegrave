@@ -1,0 +1,49 @@
+{
+  "id": "celsius-scale",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Celsius",
+      "from": "1742"
+    }
+  ],
+  "summary": "The temperature scale in which water freezes at 0 degrees and boils at 100 degrees at standard pressure. Anders Celsius described it in 1742, and it is used in nearly every country for daily temperatures.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "degree Celsius",
+    "centigrade",
+    "degree centigrade",
+    "degrees Celsius",
+    "degrees centigrade"
+  ],
+  "wikidata": "Q25267",
+  "events": [
+    {
+      "type": "born",
+      "date": "1742",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: degree Celsius (Q25267)",
+      "url": "https://www.wikidata.org/wiki/Q25267",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Celsius",
+      "url": "https://en.wikipedia.org/wiki/Celsius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,69 @@
+{
+  "id": "quantum-mechanics",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Quantum mechanics",
+      "from": "1925"
+    }
+  ],
+  "summary": "The theory of how matter and light behave at the scale of atoms, where energy comes in small packets and outcomes are described by probabilities. Developed in the 1920s, it underlies chemistry, lasers and computers.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "quantum theory",
+    "wave mechanical model",
+    "matrix mechanics",
+    "QM"
+  ],
+  "wikidata": "Q944",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "albert-einstein"
+    },
+    {
+      "type": "made_by",
+      "to": "max-planck"
+    },
+    {
+      "type": "made_by",
+      "to": "erwin-schrodinger"
+    },
+    {
+      "type": "made_by",
+      "to": "werner-heisenberg"
+    },
+    {
+      "type": "made_by",
+      "to": "paul-dirac"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: quantum mechanics (Q944)",
+      "url": "https://www.wikidata.org/wiki/Q944",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quantum mechanics",
+      "url": "https://en.wikipedia.org/wiki/Quantum_mechanics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
