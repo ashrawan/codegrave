@@ -68,6 +68,18 @@
       },
       "description": "Hand-picked thing ids. When present the view shows exactly these."
     },
+    "image": {
+      "type": "object",
+      "description": "The view's thumbnail: a picture under data/media/ or on Wikimedia Commons, with alt, credit and licence. Without it the build draws a small picture of the view's own lines.",
+      "required": ["src", "alt", "credit", "licence"],
+      "properties": {
+        "src": { "type": "string" },
+        "alt": { "type": "string" },
+        "credit": { "type": "string" },
+        "licence": { "type": "string" },
+        "source": { "type": "string" }
+      }
+    },
     "checkpoints": {
       "type": "array",
       "description": "The view's own eras. They must not overlap.",

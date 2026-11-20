@@ -74,13 +74,15 @@ Create one file, `data/views/<id>.json`. The file name is the `id`.
 | `order` | no | `"old"` (the default, oldest on the left) or `"new"` (newest on the left). |
 | `checkpoints` | no | The view's own eras, in the same shape as `data/checkpoints.json`: `id`, `name`, whole-year `from` and `to`, and an optional `note` (at most 400 characters). They are drawn inside the view's own section, in its colour. There is no shared strip of eras across the top. Eras of one view must not overlap. |
 | `things` | no | A hand-picked list of thing ids. When present, the view shows exactly these things. |
+| `image` | no | The view's thumbnail in the list: a picture with `src` (a file under `data/media/` or a Wikimedia Commons file), `alt`, `credit` and `licence`, as for a thing's image. Leave it out and the build makes one: a small drawing of the view's own lines, made once when the site is built, so the page never draws thumbnails from the whole dataset. |
 
 There are two kinds of view. Without `things`, the view is a set of
 categories and a level, and it grows by itself as new things are added.
 With `things`, it is a hand-picked list and shows only what it names.
 
 The page opens in the light theme, oldest on the left, with everything
-shown (level 100). The years run along the bottom and fit the things on
+shown (level 100). The views on the timeline sit as pills in a strip under
+the years. The years run along the bottom and fit the things on
 screen: from a little before the earliest of them to today, or to the last
 ending when all of them have ended. The year range in the panel narrows it;
 the link then carries `yr=<from>-<to>`, for example `?views=browsers&yr=1995-2001`.
