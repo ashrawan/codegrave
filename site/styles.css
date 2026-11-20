@@ -59,8 +59,11 @@ ul, ol { list-style: none; }
 #qlist li.away svg line { stroke-dasharray: 2 2; }
 #qlist li .add { margin-left: auto; display: inline-flex; color: var(--faint); }
 #qlist li.away:hover .add, #qlist li.away[aria-selected="true"] .add { color: var(--text); }
-.yflash { position: absolute; top: 0; bottom: 0; z-index: 1; background: var(--acc); opacity: 0; animation: yflash 2.2s ease-out; pointer-events: none; }
-@keyframes yflash { 0% { opacity: .35; } 100% { opacity: 0; } }
+/* the year the reader asked for: a marked column with the year on it, that fades after a few seconds */
+.yflash { position: absolute; top: 0; bottom: 0; z-index: 5; background: color-mix(in srgb, var(--acc) 22%, transparent); border-left: 2px solid var(--acc); border-right: 2px solid var(--acc); opacity: 0; animation: yflash 4.5s ease-out forwards; pointer-events: none; }
+.yflash b { position: absolute; left: 50%; transform: translateX(-50%); padding: 2px 9px; font-size: 12px; font-weight: 600; line-height: 16px; white-space: nowrap; color: var(--bg); background: var(--acc); border-radius: 9px; }
+@keyframes yflash { 0%, 70% { opacity: 1; } 100% { opacity: 0; } }
+#qlist .yw, #vlist .yw { font-weight: 600; color: var(--muted); }
 .ibtn .to-dark, [data-theme="light"] .ibtn .to-light { display: none; }
 [data-theme="light"] .ibtn .to-dark { display: block; }
 .ibtn { width: 36px; height: 36px; padding: 0; display: inline-flex; align-items: center; justify-content: center; color: var(--muted); background: transparent; border: 0; border-radius: 6px; }
@@ -72,11 +75,10 @@ ul, ol { list-style: none; }
 .btn:disabled, .btn.off { opacity: .4; pointer-events: none; }
 
 /* stage: time runs left to right, the axis is fixed along the bottom */
-body { padding-bottom: 92px; }
-#stage { position: relative; min-height: calc(100vh - 100px); }
-body.side-open #stage { margin-right: var(--side); }
-/* a timeline wider than the screen can still be scrolled all the way out from behind the panel */
-body.side-open #canvas { box-sizing: content-box; border-right: var(--side) solid transparent; }
+body { padding-bottom: 92px; overflow: hidden; }
+/* The timeline scrolls inside the stage, both ways; the page itself never scrolls sideways. */
+#stage { position: fixed; top: 52px; left: 0; right: 0; bottom: 92px; overflow: auto; overscroll-behavior: contain; scrollbar-width: thin; }
+body.side-open #stage { right: var(--side); }
 #canvas { position: relative; overflow: hidden; }
 #bands { position: absolute; inset: 0; }
 #lines { position: absolute; left: 0; top: 0; }
@@ -366,8 +368,7 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 @media (max-width: 699px) {
   :root { --sheet: 50vh; --sheet: 50dvh; }
   #side { top: auto; left: 0; width: auto; height: var(--sheet); border-left: 0; border-top: 1px solid var(--rule2); border-radius: 14px 14px 0 0; box-shadow: 0 -12px 32px rgba(0, 0, 0, .18); }
-  body.side-open #stage { margin-right: 0; }
-  body.side-open #canvas { border-right: 0; }
+  body.side-open #stage { right: 0; bottom: calc(var(--sheet) + 48px); }
   body.side-open #axisbar { right: 0; bottom: var(--sheet); }
   body.side-open { padding-bottom: calc(var(--sheet) + 48px); }
   body.side-open #rguide { right: 16px; }
@@ -387,13 +388,20 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 #pills > .fine { padding: 9px 10px; }
 
 /* the filter by branch above the list of views: one quiet row that scrolls sideways */
-.chips { display: flex; gap: 4px; margin: 10px -20px 0 !important; padding: 0 20px 2px; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 20px), transparent); mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 20px), transparent); }
+.chipbar { position: relative; margin: 10px -20px 0 !important; }
+.chipbar:has(> .chips[hidden]) { display: none; }
+.chipbar::before, .chipbar::after { content: ''; position: absolute; top: 0; bottom: 0; z-index: 1; width: 44px; pointer-events: none; opacity: 0; transition: opacity .15s; }
+.chipbar::before { left: 0; background: linear-gradient(to right, var(--surf) 30%, transparent); }
+.chipbar::after { right: 0; background: linear-gradient(to left, var(--surf) 30%, transparent); }
+.chipbar.more-l::before, .chipbar.more-r::after { opacity: 1; }
+.chips { display: flex; gap: 4px; padding: 0 20px 2px; overflow-x: auto; scrollbar-width: none; }
 .chips::-webkit-scrollbar { display: none; }
 .chips[hidden] { display: none; }
 .chips button { flex: none; height: 26px; padding: 0 10px; font-size: 12px; color: var(--muted); white-space: nowrap; background: transparent; border: 1px solid transparent; border-radius: 13px; }
 .chips button:hover { color: var(--text); border-color: var(--rule2); }
 .chips button[aria-checked="true"] { color: var(--text); font-weight: 600; background: var(--bg); border-color: var(--rule2); }
-#p-views > .chips + #vlist { margin-top: 6px; }
+#p-views > .chipbar + #vlist { margin-top: 6px; }
+#p-views > .scope { margin-top: 12px; margin-bottom: -6px; }
 /* who wrote a view, or where a classical view sits on the map */
 .r-txt small.by { margin-top: 1px; font-size: 11px; color: var(--faint); opacity: .85; }
 .st.bad { color: var(--p7); font-weight: 600; }
@@ -418,3 +426,16 @@ small > .ctag, small .ctag { margin-left: 0; }
 #axis-unit { position: absolute; left: 56px; bottom: 3px; z-index: 4; padding: 0 6px; font-size: 10px; line-height: 12px; color: var(--faint); background: var(--bg); pointer-events: none; white-space: nowrap; }
 #axis-unit[hidden] { display: none; }
 #qlist li.sep.wait { border-top: 0; text-transform: none; letter-spacing: 0; font-weight: 400; }
+/* a soft fade and a chevron where the timeline goes on past the edge of the screen */
+.edge { position: fixed; top: 52px; bottom: 92px; z-index: 15; width: 30px; display: flex; align-items: center; color: var(--faint); pointer-events: none; }
+.edge[hidden] { display: none; }
+.edge.l { left: 0; justify-content: flex-start; padding-left: 4px; background: linear-gradient(to right, var(--bg), transparent); }
+.edge.r { right: 0; justify-content: flex-end; padding-right: 4px; background: linear-gradient(to left, var(--bg), transparent); }
+body.side-open .edge.r { right: var(--side); }
+.head span { display: inline-block; will-change: transform; }
+.grip span { right: auto; }
+@media (max-width: 699px) {
+  body.side-open .edge.r { right: 0; }
+  body.side-open .edge { bottom: calc(var(--sheet) + 48px); }
+  .edge { width: 22px; }
+}

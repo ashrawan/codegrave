@@ -52,6 +52,11 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
   // On a phone the open panel is a sheet over the lower half; what is drawn fits above it.
   const PHONE = '(max-width: 699px)';
   const sheetH = () => (!$('side').hidden && matchMedia(PHONE).matches ? $('side').offsetHeight : 0);
+  // The timeline scrolls inside #stage, both ways, so the page itself always lays out at the width of the screen.
+  const S = () => $('stage');
+  const sx = () => S().scrollLeft, sy = () => S().scrollTop;
+  const viewH = () => S().clientHeight;
+  const stageTo = (o) => S().scrollTo(o);
 
   const today = new Date();
   const NOW_YEAR = today.getFullYear();
@@ -148,14 +153,19 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
   }
   // A year on the axis: plain years, BCE, then thousands (ka), millions (Ma)
   // and billions (Ga) of years ago for deep time.
-  function axisText(y) {
-    if (y > 0) return String(y);
+  // `step` (the years between ticks) sets how many decimals a deep-time label needs;
+  // `ce` marks the common era when the axis also shows years before it.
+  function axisText(y, step = 0, ce = false) {
+    if (y > 0) return ce ? y + ' CE' : String(y);
     const a = -y;
-    if (a < 1e4) return a + ' BCE';
-    if (a < 1e5) return group(a) + ' BCE';
-    if (a < 1e6) return sig(a / 1e3) + ' ka';
-    if (a < 1e9) return sig(a / 1e6) + ' Ma';
-    return sig(a / 1e9) + ' Ga';
+    const unit = a < 1e5 ? 0 : a < 1e6 ? 1e3 : a < 1e9 ? 1e6 : 1e9;
+    if (!unit) return (a < 1e4 ? a : group(a)) + ' BCE';
+    const name = { 1e3: 'ka', 1e6: 'Ma', 1e9: 'Ga' }[unit];
+    if (!step) return sig(a / unit) + ' ' + name;
+    const r = step / unit;
+    let d = 0;
+    while (d < 3 && Math.abs(r * 10 ** d - Math.round(r * 10 ** d)) > 1e-9) d++;
+    return Number((a / unit).toFixed(d)) + ' ' + name;
   }
   const AXIS_UNITS = { ka: 'thousand', Ma: 'million', Ga: 'billion' };
   // A year typed by the reader: "1969", "44 BCE", "-44", "500 bc", "66 ma", "4.6 billion years ago".
@@ -220,6 +230,14 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     for (const list of Object.values(b.labels || {})) for (const l of list) labelName.set(l.id, l.name);
     for (const o of b.owners || []) ownerTitle.set(o.id, o.title);
     for (const v of b.views || []) know(v);
+    sayScope();
+  }
+  // What the page holds, said with the real counts: in the top search and above the list of views.
+  function sayScope() {
+    if (!boot) return;
+    const n = group(boot.counts?.entries || 0), books = (boot.views || []).length;
+    $('q').placeholder = matchMedia(PHONE).matches ? `Search ${n} entries` : `Search ${n} entries: a person, a place, an event or a year`;
+    $('vscope').textContent = `${group(books)} community views · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.
   function lineage(id) {
@@ -336,14 +354,34 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     return v.text.replace(/\s+(all|domain|kind)$/, '');
   }
   // How well a name matches: exact, starts with it, a word starts with it, another name, anywhere.
+  // A match in the name always outranks a match in the other names.
   function matchScore(e, q) {
     if (!q) return 0;
-    if (e.f === q) return 5;
-    if (e.f.startsWith(q)) return 4;
-    if ((' ' + e.f).includes(' ' + q)) return 3;
+    if (e.f === q) return 6;
+    if (e.f.startsWith(q)) return 5;
+    if ((' ' + e.f).includes(' ' + q)) return 4;
+    if (e.f.includes(q)) return 3;
     if (e.o.some((o) => o === q || o.startsWith(q) || (' ' + o).includes(' ' + q))) return 2;
-    if (e.f.includes(q) || e.o.some((o) => o.includes(q))) return 1;
+    if (e.o.some((o) => o.includes(q))) return 1;
     return 0;
+  }
+  // Entries in the index that began or ended in a written year (near it, in deep time).
+  function entriesInYear(data, y, skip, n) {
+    const tol = y <= -1e5 ? Math.abs(y) * 0.02 : 0;
+    const near = (v) => v != null && Math.abs(v - y) <= tol;
+    const out = [];
+    for (const e of data.entries) {
+      if (skip && skip.has(e.id)) continue;
+      if (near(e.born)) out.push({ e, how: 'born' });
+      else if (near(e.end)) out.push({ e, how: 'ended' });
+    }
+    out.sort((a, b) => (a.e.tier - b.e.tier) || (a.e.rank - b.e.rank) || (b.e.pop - a.e.pop));
+    return out.slice(0, n);
+  }
+  // "began 44 BCE", in the words of the entry's branch: "born", "founded", "died".
+  function yearWord(e, how, y) {
+    const c = cats[e.kind], w = (c && domById.get(c.domain)?.words) || NEUTRAL;
+    return `${(how === 'born' ? w.born : w.ended).toLowerCase()} ${yearText(y)}`;
   }
   function searchEntries(data, q, skip, n) {
     const out = [];
@@ -439,7 +477,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     if (L || !state.views.length) drawResults();
     return loadView(real).then((got) => {
       pending.delete(real);
-      if (got && addView(got)) { if (done) done(got); else changed(); }
+      if (got && addView(got)) { if (done) done(got); else { changed(); scrollToView(got); } spansNote(); }
       else { if (!got) note(`“${viewById.get(real)?.name || real}” could not be loaded. Try again in a moment.`); drawResults(); }
       return got;
     });
@@ -557,7 +595,9 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     // A straight scale: short views fill the screen, middling ones get at least
     // 9 pixels a year, and long ones are fitted to a few screens at most.
     const avail = SW - 2 * pad, years = tMax - tMin;
-    const ppy = Math.max(avail / years, Math.min(narrow ? 10 : 9, (avail * (narrow ? MAX_SCREENS_PHONE : MAX_SCREENS)) / years));
+    // A view with few lines gets fewer screens, so it is not mostly empty years.
+    const screens = clamp(all.length / 10, 1.5, narrow ? MAX_SCREENS_PHONE : MAX_SCREENS);
+    const ppy = Math.max(avail / years, Math.min(narrow ? 10 : 9, (avail * screens) / years));
     const W = Math.round(2 * pad + years * ppy);
     const xOf = (t) => Math.round((pad + (newest ? tMax - clamp(t, tMin, tMax) : clamp(t, tMin, tMax) - tMin) * ppy) * 10) / 10;
     const tOf = (x) => clamp(newest ? tMax - (x - pad) / ppy : tMin + (x - pad) / ppy, tMin, tMax);
@@ -586,7 +626,9 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     const byRank = (a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score);
     const secs = [];
     for (const g of selected) {
-      const mine = all.filter((t) => rowsOf.get(g).has(t) && inSpan(t)).sort((a, b) => (a.cat.i - b.cat.i) || (a.born - b.born));
+      // A community view reads as a story, in order of time; a classical view groups by kind first.
+      const story = g.type !== 'classical';
+      const mine = all.filter((t) => rowsOf.get(g).has(t) && inSpan(t)).sort((a, b) => (story ? 0 : a.cat.i - b.cat.i) || ((a.lead ?? a.born) - (b.lead ?? b.born)));
       if (!mine.length) continue;
       const set = new Set(mine), seen = new Set(), ordered = [];
       const near = (t) => [
@@ -596,7 +638,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       const visit = (t) => { if (seen.has(t)) return; seen.add(t); ordered.push(t); near(t).forEach(visit); };
       mine.forEach(visit);
       const own = placeEras(viewEras(g));
-      const head = 30 + (own.list.length ? own.lines * 26 + 2 : 0);
+      const head = 30 + (own.list.length ? own.lines * 26 + 8 : 0);
       secs.push({ g, ordered, own, head, need: ordered.reduce((n, t) => n + rowH(t), 0) });
     }
 
@@ -616,7 +658,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       c.rows = c.ordered.filter((t) => keep.has(t)); c.used = used;
     };
     if (state.fit) {
-      const room = innerHeight - sheetH() - TOP - bottomH() - (eraH + 6) - (narrow ? 48 : 12) - secs.reduce((n, c) => n + c.head + 24, 0);
+      const room = viewH() - (eraH + 6) - 12 - secs.reduce((n, c) => n + c.head + 24, 0);
       let pool = room, open = [];
       for (const c of secs) {
         const want = state.sizes.get(c.g.id);
@@ -649,7 +691,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       const grp = { view: g, y, n: rows.length, total: ordered.length, eras: own.list };
       groups.push(grp);
       y += 30;
-      if (own.list.length) { grp.eraY = y - 4; y += own.lines * 26 + 2; }
+      if (own.list.length) { grp.eraY = y + 2; y += own.lines * 26 + 8; }
       grp.rowsY = y;
       for (const t of rows) {
         const major = t.rank < CARD_RANK;
@@ -670,7 +712,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       grp.end = y + 6;
       y += 18;
     }
-    const height = Math.max(Math.round(y + 12), innerHeight - sheetH() - TOP - bottomH());
+    const height = Math.max(Math.round(y + 12), viewH());
     L = { W, SW, narrow, height, ppy, tMin, tMax, fitMin, fitMax, autoMin, xOf, tOf, newest, shown, groups, eras, eraH,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), total: groupsOf.size };
     return L;
@@ -683,29 +725,30 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     const atNow = tMax >= NOW - 0.01;
     const yMin = writtenOf(tMin), yMax = writtenOf(tMax - 1e-9);
     const width = (s) => s.length * 7 + 18;
-    const widest = Math.max(width(axisText(yMin)), width(axisText(yMax)), width(axisText(Math.round((yMin + yMax) / 2))), 44);
+    const widest = Math.max(width(axisText(yMin)), width(axisText(yMax, 0, yMin < 0)), width(axisText(Math.round((yMin + yMax) / 2))), 44);
     // Steps grow 1, 2, 5, 10, 25, 50, 100, 250, 500, 1,000 … until labels have room.
     let step = niceStep(widest / ppy);
     if (!Number.isInteger(step)) step = Math.ceil(step / 5) * 5;
     // A minor tick between labels, where there is room for it.
     const minor = [5, 4, 2].map((d) => step / d).find((s) => Number.isInteger(s) && s * ppy >= 7) || 0;
     const ticks = [], marks = [];
+    const ce = yMin < 0 && yMax > 0;    // both eras on the axis: say which is which
     const first = Math.ceil(yMin / step) * step;
     const used = new Set();
     for (let y = first; y <= yMax; y += step) {
       if (y === 0) continue;   // there is no year zero
       ticks.push(y);
-      const m = /\s(ka|Ma|Ga)$/.exec(axisText(y));
+      const m = /\s(ka|Ma|Ga)$/.exec(axisText(y, step));
       if (m) used.add(m[1]);
     }
     if (minor) for (let y = Math.ceil(yMin / minor) * minor; y <= yMax; y += minor) if (y !== 0 && y % step !== 0) marks.push(y);
-    return { ticks, marks, atNow, widest, units: [...used] };
+    return { ticks, marks, atNow, widest, units: [...used], step, ce };
   }
 
   // ---------------------------------------------------------------- render
   function render(keepX) {
     if (!state.views.length) return renderEmpty();
-    const anchor = keepX ?? (L && L.W > L.SW ? L.tOf(scrollX + L.SW / 2) : null);
+    const anchor = keepX ?? (L && L.W > L.SW ? L.tOf(sx() + L.SW / 2) : null);
     layout();
     const { W, height, xOf, newest, shown, tMin, tMax, eras } = L;
     const dx = newest ? -1 : 1;                  // +1 when later times are further right
@@ -722,7 +765,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       const x = xOf(lineYear(yr));
       html += `<div class="rule" style="left:${x}px"></div>`;
       if (ax.atNow && Math.abs(x - xNow) < ax.widest * 0.75) { axis += `<i class="tk big" style="left:${x}px"></i>`; continue; }
-      axis += `<span class="yr" style="left:${x}px">${esc(axisText(yr))}</span>`;
+      axis += `<span class="yr" style="left:${x}px">${esc(axisText(yr, ax.step, ax.ce))}</span>`;
     }
     for (const yr of ax.marks) axis += `<i class="tk" style="left:${xOf(lineYear(yr))}px"></i>`;
     if (ax.atNow) { html += `<div class="rule now" style="left:${xNow}px"></div>`; axis += `<span class="yr now" style="left:${xNow}px">Today</span>`; }
@@ -830,6 +873,8 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     el.setAttribute('width', W); el.setAttribute('height', height);
     el.innerHTML = svg;
     $('labels').innerHTML = labs;
+    L.heads = [...$('labels').querySelectorAll('.head > span')];
+    L.mores = [...$('labels').querySelectorAll('.grip > span')];
     // A name near the right edge would run off the page, so it ends at the edge instead.
     for (const c of $('labels').querySelectorAll('.card, .nm')) {
       const p = L.shown[c.dataset.k];
@@ -841,7 +886,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     renderSide();
     $('status').hidden = true;
     drawPlay();
-    if (anchor != null && L.W > L.SW) scrollTo({ left: Math.max(0, L.xOf(anchor) - L.SW / 2), top: scrollY });
+    if (anchor != null && L.W > L.SW) stageTo({ left: Math.max(0, L.xOf(anchor) - L.SW / 2), top: sy() });
     onScroll();
   }
 
@@ -861,27 +906,61 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
   function onScroll() {
     ticking = false;
     if (!L) return;
-    $('axis-in').style.transform = `translateX(${-scrollX}px)`;
+    const x0 = sx();
+    $('axis-in').style.transform = `translateX(${-x0}px)`;
+    // A year label half under play or reverse would read as "Ma" or "70": it waits until it is clear.
+    if (!L.tickEls) {
+      L.tickEls = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, x: parseFloat(el.style.left), w: el.offsetWidth }));
+      L.endL = $('axisbar').querySelector('.ends.l').offsetWidth;
+      L.endR = $('axisbar').querySelector('.ends.r').offsetWidth;
+      L.axisW = $('axisbar').clientWidth;
+    }
+    for (const k of L.tickEls) {
+      const x = k.x - x0;
+      k.el.style.visibility = x - k.w / 2 < L.endL + 2 || x + k.w / 2 > L.axisW - L.endR - 2 ? 'hidden' : '';
+    }
+    // The timeline goes on past the edge of the screen: a soft fade says so.
+    const more = S().scrollWidth - S().clientWidth;
+    $('edge-l').hidden = !(x0 > 4);
+    $('edge-r').hidden = !(more - x0 > 4);
+    // Each view's name stays at the left of its section, and its "+N" at the right of the screen.
+    for (const h of L.heads || []) h.style.transform = `translateX(${clamp(x0, 0, Math.max(0, L.W - 40 - h.offsetWidth))}px)`;
+    for (const m of L.mores || []) m.style.left = clamp(x0 + L.SW - m.offsetWidth - 88, 0, L.W - m.offsetWidth - 48) + 'px';
     if (L.W <= L.SW + 1) return;
-    const edge = scrollX + 8;
+    const edge = x0 + 8;
     for (const p of L.shown) {
       if (!p.nameEl) continue;
       const room = Math.max(p.nameX, p.xR - p.nameW);
       p.nameEl.style.left = clamp(edge, p.nameX, room) + 'px';
     }
   }
+  // Where a view starts on the drawn timeline: its first chapter or its first line, whichever is earlier.
+  function viewStartX(id) {
+    const g = L && L.groups.find((x) => x.view.id === id);
+    if (!g) return null;
+    const xs = [...g.eras.map((e) => (L.newest ? e.x + e.w : e.x)), ...L.shown.filter((p) => p.group === g.view).map((p) => (L.newest ? p.xR : p.xL))];
+    if (!xs.length) return null;
+    return L.newest ? Math.max(...xs) : Math.min(...xs);
+  }
+  // Brings a view's section into sight: its start, and its heading.
+  function scrollToView(id, smooth = true) {
+    const g = L && L.groups.find((x) => x.view.id === id), x = viewStartX(id);
+    if (!g) return;
+    const left = x == null || L.W <= L.SW ? sx() : clamp(L.newest ? x - L.SW + 60 : x - 60, 0, L.W - L.SW);
+    stageTo({ left, top: Math.max(0, g.y - 4), behavior: smooth ? 'smooth' : 'auto' });
+  }
   // Takes the timeline to a moment on the line (a decimal year, as parseDate gives).
   function scrollToTime(t, smooth = true) {
     if (!L || L.W <= L.SW) return;
-    scrollTo({ left: Math.max(0, L.xOf(t) - L.SW / 2), top: scrollY, behavior: smooth ? 'smooth' : 'auto' });
+    stageTo({ left: Math.max(0, L.xOf(t) - L.SW / 2), top: sy(), behavior: smooth ? 'smooth' : 'auto' });
   }
   function scrollToThing(id) {
     const p = L && L.at.get(id);
     if (!p) return;
-    const seen = innerHeight - sheetH() - TOP - bottomH();
-    const top = p.y < scrollY + 60 || p.y > scrollY + seen - 60 ? Math.max(0, p.y - seen * 0.4) : scrollY;
-    const left = L.W > L.SW && (p.xL < scrollX || p.xL > scrollX + L.SW - 120) ? Math.max(0, p.xL - 80) : scrollX;
-    scrollTo({ top, left, behavior: 'smooth' });
+    const seen = viewH(), x0 = sx(), y0 = sy();
+    const top = p.y < y0 + 60 || p.y > y0 + seen - 60 ? Math.max(0, p.y - seen * 0.4) : y0;
+    const left = L.W > L.SW && (p.xL < x0 + 20 || p.xL > x0 + L.SW - 160) ? Math.max(0, p.xL - 80) : x0;
+    stageTo({ top, left, behavior: 'smooth' });
   }
 
   // Where a timeline wider than the screen opens: the screenful where the most
@@ -904,7 +983,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     const p = L && L.at.get(id);
     if (!p) return;
     const t = clamp(at, p.t.lead ?? p.t.born, p.t.end ?? NOW), x = clamp(L.xOf(t), p.xL, p.xR);
-    scrollTo({ top: Math.max(0, p.y - (innerHeight - sheetH() - TOP - bottomH()) * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
+    stageTo({ top: Math.max(0, p.y - viewH() * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
     $('lines').querySelector('.flash')?.remove();
     $('lines').insertAdjacentHTML('beforeend', `<circle class="flash" cx="${x}" cy="${p.y}" r="4"/>`);
   }
@@ -931,26 +1010,41 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       const at = L ? [...L.at.values()] : [], eras = L ? L.groups.flatMap((g) => g.eras) : [];
       const y = parseYearQuery(q);
       if (L && y != null && lineYear(y) + 1 > L.tMin && lineYear(y) < L.tMax) hits.push({ year: y });
-      for (const p of at) if (p.t.search.some((n) => n.includes(q))) hits.push({ p, s: p.t.search.some((n) => n === q) ? 3 : p.t.search.some((n) => n.startsWith(q)) ? 2 : 1 });
+      for (const p of at) { const s = drawnScore(p.t, q); if (s) hits.push({ p, s }); }
       for (const e of eras) if (fold(e.c.name).includes(q)) hits.push({ era: e.c });
       for (const p of at) for (const m of p.t.marks) {
         if (m.label && (fold(m.label).includes(q) || fold(m.note).includes(q) || fold(m.date).includes(q))) hits.push({ p, m });
       }
-      hits.sort((a, b) => (!!b.year - !!a.year) || ((b.s || 0) - (a.s || 0)) || (!!b.era - !!a.era) || (!!a.m - !!b.m) || ((a.p && !a.m ? a.p.t.name.length : 0) - (b.p && !b.m ? b.p.t.name.length : 0)) || ((a.p ? a.p.t.rank : 0) - (b.p ? b.p.t.rank : 0)));
+      // Best match first; within a class, the reviewed base before community entries, then rank, then popularity.
+      const tier = (h) => (h.p && h.p.t.tier === 'community' ? 1 : 0);
+      hits.sort((a, b) => (!!b.year - !!a.year) || ((b.s || 0) - (a.s || 0)) || (!!b.era - !!a.era) || (!!a.m - !!b.m) || (tier(a) - tier(b)) || ((a.p ? a.p.t.rank : 0) - (b.p ? b.p.t.rank : 0)) || ((b.p ? b.p.t.pop || 0 : 0) - (a.p ? a.p.t.pop || 0 : 0)));
       // Entries that are not drawn, from the search index, after a divider.
       // Picking one adds the view it belongs to.
       const data = qt ? indexFor(raw, () => { if (fold($('q').value.trim()) === q) findOnTimeline(); }) : { entries: [] };
       const onPage = new Set(L ? L.shown.map((p) => p.t.id) : []);
-      const away = data ? searchEntries(data, qt, onPage, L ? 5 : 8) : [];
+      // A year: what began or ended in it. Otherwise: names.
+      const away = !data ? [] : y != null ? entriesInYear(data, y, onPage, L ? 6 : 8) : searchEntries(data, qt, onPage, L ? 5 : 8).map((e) => ({ e }));
       waiting = !data;
       hits = hits.slice(0, away.length ? 6 : 9);
-      for (const e of away) hits.push({ e, away: true });
+      for (const a of away) hits.push({ e: a.e, how: a.how, y, away: true });
+      if (data && y != null && !hits.length) hits.push({ none: `Nothing on record began or ended in ${yearText(y)}.` });
       // Nothing in the data has this name: offer to suggest it, so a failed
       // search tells the editors what people came looking for.
       if (data && q.length > 1 && y == null && !away.length && !hits.some((h) => h.p && !h.m) && !searchEntries(data, qt, null, 1).length) hits.push({ suggest: raw });
     }
-    hit = hits.length ? 0 : -1;
+    hit = hits.findIndex((h) => !h.none);
     drawHits(q, waiting);
+  }
+  // How well an entry that is drawn matches: its name first, then its other names.
+  function drawnScore(t, q) {
+    const n = fold(t.name);
+    if (n === q) return 6;
+    if (n.startsWith(q)) return 5;
+    if ((' ' + n).includes(' ' + q)) return 4;
+    if (n.includes(q)) return 3;
+    const other = t.search.filter((o) => o !== n);
+    if (other.some((o) => o === q || o.startsWith(q) || (' ' + o).includes(' ' + q))) return 2;
+    return other.some((o) => o.includes(q)) ? 1 : 0;
   }
   function drawHits(q, waiting) {
     const box = $('qlist');
@@ -962,16 +1056,18 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     box.innerHTML = (!hits.length ? `<li class="none" role="presentation">${waiting ? 'Searching…' : 'Nothing matches. Try a name, an event or a year.'}</li>`
       : hits.map((h, i) => {
         let main, sub, cls = 'k-year', st = '', pre = '';
+        if (h.none) return `<li class="none" role="presentation">${esc(h.none)}</li>`;
         if (h.suggest) {
           return `<li class="sep" role="presentation">Not here yet</li><li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b>Suggest “${esc(h.suggest)}”</b><small>Tell us about it on GitHub; no code needed</small></span><span class="add">${ICON.plus}</span></li>`;
         }
         if (h.away) {
           if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
           const e = h.e, comm = e.tier === 2 ? ' · <span class="ctag">community</span>' : '';
-          return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b><span>${mk(e.name)}</span></b><small>${esc(kindName(e.kind))} · ${esc(lineSpan(e))}${comm}</small></span><span class="add">${ICON.plus}</span></li>`;
+          const when = h.how ? `<em class="yw">${esc(yearWord(e, h.how, h.how === 'born' ? e.born : e.end))}</em>` : esc(lineSpan(e));
+          return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b><span>${mk(e.name)}</span></b><small>${esc(kindName(e.kind))} · ${when}${comm}</small></span><span class="add">${ICON.plus}</span></li>`;
         }
         if (h.year != null) { main = esc(yearText(h.year)); sub = 'Year'; }
-        else if (h.era) { main = mk(h.era.name); sub = `Era · ${esc(h.era.years)}`; cls = 'k-era'; }
+        else if (h.era) { main = mk(h.era.name); sub = `Chapter of ${esc(h.era.view.name)} · ${esc(h.era.years)}`; cls = 'k-era'; }
         else if (h.m) { main = mk(h.m.label); sub = `${esc(h.p.t.name)} · ${esc(h.m.date)}`; cls = 'k-ev'; st = col(h.p); }
         else { main = mk(h.p.t.name); sub = `${esc(h.p.t.cat.name)} · ${esc(spanOf(h.p.t))}`; cls = 'k-thing'; st = col(h.p); }
         return `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="${cls}" style="${st}">${KIND_ICON[cls]}<span class="r-txt"><b><span>${main}</span></b><small>${sub}</small></span></li>`;
@@ -981,7 +1077,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
   function goHit(i) {
     const h = hits[i];
     if (h && h.suggest) return void window.open(`${REPO}/issues/new?template=new-thing.yml&title=${encodeURIComponent('Add: ' + h.suggest)}&name=${encodeURIComponent(h.suggest)}`, '_blank', 'noopener');
-    if (!h) return;
+    if (!h || h.none) return;
     $('q').value = ''; drawHits(''); $('q').blur();
     if (h.year != null) return flashYear(h.year);
     if (h.era) return openEra(h.era.key);
@@ -1007,9 +1103,9 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     if (!L) return;
     const a0 = lineYear(year);
     scrollToTime(a0 + 0.5);
-    const a = L.xOf(a0), b = L.xOf(a0 + 1);
+    const a = L.xOf(a0), b = L.xOf(a0 + 1), w = Math.max(4, Math.abs(b - a)), x = Math.min(a, b) - (Math.abs(b - a) < 4 ? 2 : 0);
     $('bands').querySelector('.yflash')?.remove();
-    $('bands').insertAdjacentHTML('beforeend', `<div class="yflash" style="left:${Math.min(a, b) - (Math.abs(b - a) < 3 ? 1 : 0)}px;width:${Math.max(3, Math.abs(b - a))}px"></div>`);
+    $('bands').insertAdjacentHTML('beforeend', `<div class="yflash" style="left:${x}px;width:${w}px"><b style="top:${sy() + 10}px">${esc(yearText(year))}</b></div>`);
   }
 
   // ---------------------------------------------------------------- panel: views
@@ -1028,17 +1124,33 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     if (name !== 'views') $('info').hidden = true;
   }
   let noteText = '', noteTimer = 0;
-  function note(text) {
+  function note(text, ms = 6000) {
     noteText = text;
     clearTimeout(noteTimer);
-    noteTimer = setTimeout(() => { noteText = ''; drawResults(); }, 6000);
+    noteTimer = setTimeout(() => { noteText = ''; drawResults(); }, ms);
     drawResults();
+  }
+  // Said once: views of very different lengths squeeze the shorter ones into a sliver.
+  let spansSaid = false;
+  function spansNote() {
+    if (spansSaid || state.views.length < 2) return;
+    const lengths = state.views.map((id) => {
+      const m = viewById.get(id).members;
+      if (!m || !m.length) return 0;
+      return Math.max(...m.map((t) => t.end ?? NOW)) - Math.min(...m.map((t) => t.lead ?? t.born));
+    }).filter((n) => n > 0);
+    if (lengths.length < 2 || Math.max(...lengths) < 50 * Math.max(1, Math.min(...lengths))) return;
+    spansSaid = true;
+    note('These views cover very different spans of time. To see the shorter one, narrow the years with the year range below, or open one of its chapters and choose "Only these years".', 20000);
   }
 
   function renderSide() {
     // The views on the timeline: one pill each in the strip under the years.
     const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
-    $('shown-n').textContent = state.views.length ? `${n}${more} ${n === 1 && !more ? 'entry' : 'entries'}` : '';
+    // How many fit on screen, and how to see the rest: nothing is filtered out here.
+    const phone = matchMedia(PHONE).matches;
+    $('shown-n').textContent = !state.views.length ? '' : !more ? `${n} ${n === 1 ? 'entry' : 'entries'}` : `${n}${more} fit on screen`;
+    $('fit-hint').hidden = !more || phone;
     $('pills').innerHTML = `<button type="button" class="padd" data-add>${ICON.plus}<span>Add view</span></button>` + state.views.map((id) => {
       const v = viewById.get(id);
       return `<div class="pill" data-pill="${esc(id)}" style="--c:var(--p${state.colors.get(id) % 8})" title="Drag to reorder">` +
@@ -1117,6 +1229,13 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     // Redrawn only when the branches change, so the row keeps its sideways scroll.
     if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'All') + list.map((d) => chip(d.id, d.name)).join(''); }
     else for (const b of box.querySelectorAll('[data-branch]')) b.setAttribute('aria-checked', b.dataset.branch === state.branch);
+    requestAnimationFrame(chipEdges);
+  }
+  // A fade at either end of the row of branches says it scrolls.
+  function chipEdges() {
+    const c = $('branches'), bar = $('chipbar');
+    bar.classList.toggle('more-l', c.scrollLeft > 2);
+    bar.classList.toggle('more-r', c.scrollLeft < c.scrollWidth - c.clientWidth - 2);
   }
 
   // The list: the community views, in the editors' order, narrowed by branch.
@@ -1146,7 +1265,10 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       if (data) for (const v of data.views) consider(v, v.f, v.hay);
       scored.sort((a, b) => b.s - a.s || (a.v.type === 'classical') - (b.v.type === 'classical') || a.v.name.localeCompare(b.v.name));
       found = scored.slice(0, 10);
-      if (data) found.push(...searchEntries(data, tokens(raw).join(' '), null, 5).map((e) => ({ e })));
+      // A year: jump to it when it is drawn, and list what began or ended in it.
+      const y = parseYearQuery(q);
+      if (y != null && L && lineYear(y) + 1 > L.tMin && lineYear(y) < L.tMax) found.unshift({ year: y });
+      if (data) found.push(...(y != null ? entriesInYear(data, y, null, 6) : searchEntries(data, tokens(raw).join(' '), null, 5).map((e) => ({ e }))).map((a) => ({ e: a.e, how: a.how, y })));
       if (!data) found.push({ wait: true });
       active = found.length && !found[0].wait ? 0 : -1;
     }
@@ -1184,7 +1306,8 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       if (f.wait) return '<li class="none" role="presentation">Searching every view…</li>';
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(alias.get(id) || id)?.name || id).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
       else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; tb = `<span class="tb icon">${ICON.plus}</span>`; }
-      else if (f.e) { name = mark(f.e.name, q); sub = `${esc(kindName(f.e.kind))} · ${esc(lineSpan(f.e))}${f.e.tier === 2 ? ' · community' : ''}`; tb = `<span class="tb icon">${ICON.dot}</span>`; }
+      else if (f.year != null) { name = 'Go to ' + esc(yearText(f.year)); sub = 'On the timeline'; tb = `<span class="tb icon">${ICON.dot}</span>`; }
+      else if (f.e) { name = mark(f.e.name, q); sub = `${esc(kindName(f.e.kind))} · ${f.how ? `<em class="yw">${esc(yearWord(f.e, f.how, f.how === 'born' ? f.e.born : f.e.end))}</em>` : esc(lineSpan(f.e))}${f.e.tier === 2 ? ' · community' : ''}`; tb = `<span class="tb icon">${ICON.dot}</span>`; }
       else {
         const v = f.v, on = state.views.includes(v.id), wait = pending.has(v.id), bad = broken.has(v.id);
         const kind = v.type === 'classical' ? 'classical' : 'community';
@@ -1202,6 +1325,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     if (!f || f.wait) return;
     if (f.mine) return loadMine(f.mine);
     if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
+    if (f.year != null) { $('vq').value = ''; runSearch(); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
     if (f.e) { $('vq').value = ''; runSearch(); return bringIn(f.e.id, { focus: true }); }
     if (pending.has(f.v.id)) return;
     if (state.views.includes(f.v.id)) { removeView(f.v.id); return changed(); }
@@ -1383,7 +1507,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     const n = c.to - c.from + 1 - (c.from < 0 && c.to > 0 ? 1 : 0);
     $('p-era').innerHTML = `
       <div class="pane-head">${crumbs()}<button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
-      <div><h2 class="serif" id="era-title" tabindex="-1">${esc(c.name)}</h2><p class="era-years">${esc(c.years)} · ${fmtSpan(n)}${c.view ? ' · from the view ' + esc(c.view.name) : ''}</p></div>
+      <div><h2 class="serif" id="era-title" tabindex="-1">${esc(c.name)}</h2><p class="era-years">${esc(c.years)} · ${fmtSpan(n)}${c.view ? ' · a chapter of ' + esc(c.view.name) : ''}</p></div>
       ${c.note ? `<p class="summary">${esc(c.note)}</p>` : ''}
       ${list(`${w.born} in these years`, born, (t) => fmtDate(t.bornEv.date, t.bornEv.precision))}
       ${list(`${w.ended} in these years`, ended, (t) => fmtDate(t.endEv.date, t.endEv.precision))}
@@ -1418,7 +1542,11 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     if (from != null) play.t = clamp(Number(from), L.tMin, L.tMax);
-    else if (atEnd()) play.t = L.tMin;
+    // From the start: just before the first line drawn, not through empty years.
+    else if (atEnd()) {
+      const first = L.shown.length ? Math.min(...L.shown.map((p) => Math.max(L.tMin, p.t.lead ?? p.t.born))) : L.tMin;
+      play.t = Math.max(L.tMin, first - (L.tMax - L.tMin) * 0.01);
+    }
     play.on = true;
     drawPlay();
     play.last = performance.now();
@@ -1434,7 +1562,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     // On a timeline wider than the screen, keep the marker in view.
     if (L.W > L.SW) {
       const x = L.xOf(play.t);
-      if (x > scrollX + L.SW * 0.7 || x < scrollX + L.SW * 0.2) scrollTo({ left: Math.max(0, x - L.SW / 2), top: scrollY });
+      if (x > sx() + L.SW * 0.7 || x < sx() + L.SW * 0.2) stageTo({ left: Math.max(0, x - L.SW / 2), top: sy() });
     }
     drawPlay();
     play.raf = requestAnimationFrame(tick);
@@ -1462,7 +1590,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
   // Dragging along the axis moves the marker, playing or not.
   function scrubTo(clientX) {
     if (!L) return;
-    const t = L.tOf(clientX + scrollX);
+    const t = L.tOf(clientX + sx());
     play.t = t >= L.tMax - (L.tMax - L.tMin) * 0.001 ? null : t;
     drawPlay();
   }
@@ -1487,12 +1615,12 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
 
   // ---------------------------------------------------------------- events
   function wire() {
-    addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+    S().addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
     let rt = null, lastW = innerWidth, lastH = innerHeight;
     addEventListener('resize', () => {
       clearTimeout(rt);
       rt = setTimeout(() => {
-        if (innerWidth !== lastW || Math.abs(innerHeight - lastH) > 120) { lastW = innerWidth; lastH = innerHeight; if (state.views.length) render(); }
+        if (innerWidth !== lastW || Math.abs(innerHeight - lastH) > 120) { lastW = innerWidth; lastH = innerHeight; sayScope(); if (state.views.length) render(); }
       }, 150);
     });
 
@@ -1521,7 +1649,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     const gripFrame = () => {
       grip.raf = 0;
       state.sizes.set(grip.id, Math.max(34, grip.h0 + grip.y - grip.y0));
-      render(L.tOf(scrollX + L.SW / 2));
+      render(L.tOf(sx() + L.SW / 2));
     };
     addEventListener('pointermove', (e) => {
       if (!grip) return;
@@ -1539,7 +1667,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     addEventListener('pointercancel', endGrip);
     $('canvas').addEventListener('dblclick', (e) => {
       const el = e.target.closest('[data-grip]');
-      if (el && state.sizes.delete(el.dataset.grip)) render(L.tOf(scrollX + L.SW / 2));
+      if (el && state.sizes.delete(el.dataset.grip)) render(L.tOf(sx() + L.SW / 2));
     });
     $('fit').addEventListener('click', () => { state.fit = !state.fit; state.sizes.clear(); drawFit(); changed(); });
 
@@ -1559,7 +1687,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
       const rm = el('[data-remove]');
       if (rm) { removeView(rm.dataset.remove); return changed(); }
       const br = el('[data-branch]');
-      if (br) { state.branch = br.dataset.branch; drawBranches(); runSearch(); $('vlist').scrollTop = 0; return; }
+      if (br) { state.branch = br.dataset.branch; drawBranches(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
       const era = el('[data-era]');
       if (era && !el('#side')) return openEra(era.dataset.era);
       const zoom = el('[data-zoom]');
@@ -1620,6 +1748,7 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     $('qlist').addEventListener('pointerdown', (e) => { const li = e.target.closest('[data-h]'); if (li) { e.preventDefault(); goHit(Number(li.dataset.h)); } });
     $('vq').addEventListener('input', () => { drawBranches(); runSearch(); });
     $('vq').addEventListener('focus', () => indexFor('a'));
+    $('branches').addEventListener('scroll', chipEdges, { passive: true });
     $('vq').addEventListener('keydown', (e) => {
       const ok = found.map((f, i) => i).filter((i) => !found[i].wait);
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
@@ -1800,10 +1929,13 @@ import { shardOf, fold, tokens, prefixOf } from './keys.js';
     if (!state.views.length) $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
     render(L ? undefined : null);
     if (ids.length) writeUrl();
-    const first = state.views.length === 1 ? viewById.get(state.views[0]) : null;
+    spansNote();
+    // A community view is a story: it opens at its beginning. A classical view opens on its busiest stretch.
+    const first = viewById.get(state.views[0]);
     if (!followHash(false)) {
-      if (first && first.year) scrollToTime(lineYear(first.year) + 0.5, false);
-      else scrollTo(busiest(), 0);
+      if (first && first.type !== 'classical') scrollToView(first.id, false);
+      else if (first && first.year) scrollToTime(lineYear(first.year) + 0.5, false);
+      else stageTo({ left: busiest(), top: 0 });
     }
   }
   start();
