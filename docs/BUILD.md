@@ -40,7 +40,9 @@ Each view gets its thumbnail (`scripts/thumb.mjs`) and its `count`.
 The index is its own file, used for nothing but searching. One line per
 entry: `[id, name, kind, born year, end year, rank, popularity, tier, other
 names]`; one line per view: `[id, name, type, count, description and tags]`.
-The kind is its position in `boot.json`'s `categories`.
+The kind is its position in `boot.json`'s `categories`. The tier is 0 for a
+verified base entry, 1 for a base entry not yet verified and 2 for a
+community entry. A view's type is 0 for community and 1 for classical.
 
 Lines are ordered by popularity, a number the build works out from what the
 community itself does:
@@ -63,8 +65,11 @@ word that starts "cu"), and `boot.json` says which form is in use
 
 ## Sizes to expect
 
-Measured on 3,500 entries and 250 views: the build takes about 0.3 seconds;
-`boot.json` is about 30 KB compressed, a hand-picked view 5 to 12 KB, the
-largest classical view about 60 KB, the search index about 90 KB. Detail files
-hold at most about 64 entries each: the build uses more hex digits of the hash
-as the data grows (`detail.chars` in `boot.json`).
+Measured on 3,800 entries and 320 views (183 of them community books): the
+build takes about half a second; `boot.json` is about 43 KB compressed, a book
+4 to 17 KB, the largest classical view about 64 KB, the search index about
+160 KB, a detail file about 5 KB. Detail files hold at most about 64 entries
+each: the build uses more hex digits of the hash as the data grows
+(`detail.chars` in `boot.json`). A classical view carries its 200 best-ranked
+entries however many it holds, so no file grows with the dataset except the
+search index, which splits itself.
