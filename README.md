@@ -24,8 +24,8 @@ a hand-picked set of entries and chapters that tell the story.
 
 <table>
   <tr>
-    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: the five generations of computers drawn as eras, with the history of ENIAC open in the side panel"></td>
-    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: the history of AI, scrolled to the recent years"></td>
+    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: a book on the rise and fall of Rome drawn as lines and chapters, with the entry for Julius Caesar open in the side panel"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: a book on the age of the dinosaurs, with its chapters and the years in millions"></td>
   </tr>
   <tr>
     <td align="center"><sub>Wide screen, light theme</sub></td>
