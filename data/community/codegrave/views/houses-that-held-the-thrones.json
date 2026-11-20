@@ -36,36 +36,44 @@
     "house-of-hanover",
     "house-of-windsor",
     "pahlavi-dynasty",
-    "house-of-saud"
+    "house-of-saud",
+    "shang-dynasty",
+    "zhou-dynasty",
+    "sasanian-empire",
+    "abbasid-caliphate",
+    "mughal-empire",
+    "joseon",
+    "house-of-bourbon",
+    "imperial-house-of-japan"
   ],
   "checkpoints": [
     {
       "id": "ancient-houses",
       "name": "Ancient lines",
-      "from": -305,
+      "from": -1600,
       "to": 400,
-      "note": "The first great dynasties set the pattern. Qin united China, the Han made its government last, Rome's Julio-Claudians ruled as emperors, and the Ptolemies governed Egypt as heirs of Alexander."
+      "note": "The first great dynasties set the pattern. The Shang and Zhou ruled early China, Qin united it and the Han made its government last. Rome's Julio-Claudians ruled as emperors, the Ptolemies governed Egypt, and the Sasanians ruled Persia."
     },
     {
       "id": "early-medieval",
       "name": "Dynasties of the middle ages",
       "from": 401,
       "to": 999,
-      "note": "In China the Tang held a golden age, while in western Europe the Carolingians built an empire under Charlemagne. Families, not states, held lands together."
+      "note": "In China the Tang held a golden age, while in western Europe the Carolingians built an empire under Charlemagne. The Abbasid caliphs ruled from Baghdad. Families, not states, held lands together."
     },
     {
       "id": "medieval-houses",
       "name": "Houses at their height",
       "from": 1000,
       "to": 1499,
-      "note": "The Habsburgs rose in central Europe, the Plantagenets ruled England and half of France, and the Mongol Yuan, then the Ming, held China. The Ottomans began as one family among many in Anatolia."
+      "note": "The Habsburgs rose in central Europe, the Plantagenets ruled England and half of France, and the Mongol Yuan, then the Ming, held China. Joseon began its long rule in Korea. The Ottomans began as one family among many in Anatolia."
     },
     {
       "id": "early-modern",
       "name": "Crowns of the early modern world",
       "from": 1500,
       "to": 1799,
-      "note": "Tudors ruled England, then Stuarts and Hanoverians ruled Britain, Safavids ruled Persia, the Romanovs took Russia, and the Manchu Qing conquered China and ruled it from Beijing. Wars and revolutions tested each of them."
+      "note": "Tudors ruled England, then Stuarts and Hanoverians ruled Britain, Safavids ruled Persia, the Mughals ruled much of India, the Romanovs took Russia, and the Manchu Qing conquered China and ruled it from Beijing. Wars and revolutions tested each of them."
     },
     {
       "id": "last-houses",

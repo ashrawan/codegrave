@@ -48,7 +48,12 @@
     "ak-47",
     "intercontinental-ballistic-missile",
     "f-117-nighthawk",
-    "mq-1-predator"
+    "mq-1-predator",
+    "chariot",
+    "submarine",
+    "hms-dreadnought",
+    "uss-monitor",
+    "boeing-b-29-superfortress"
   ],
   "checkpoints": [
     {
@@ -56,7 +61,7 @@
       "name": "Stone, bronze and string",
       "from": -400000,
       "to": -1001,
-      "note": "Hunters made spears, throwers and bows long before cities. When metal arrived, the sword and the strong composite bow helped build the first armies and empires."
+      "note": "Hunters made spears, throwers and bows long before cities. When metal arrived, the sword, the strong composite bow and the chariot helped build the first armies and empires."
     },
     {
       "id": "iron-and-siege",
@@ -77,14 +82,14 @@
       "name": "Industrial killing",
       "from": 1800,
       "to": 1913,
-      "note": "Factories gave armies revolvers, rapid-fire guns, machine guns and torpedoes. Weapons could now be made in huge numbers, and soldiers faced fire that no courage could cross."
+      "note": "Factories gave armies revolvers, rapid-fire guns, machine guns and torpedoes, and navies built ironclads such as the Monitor and then the Dreadnought. Weapons could now be made in huge numbers, and soldiers faced fire that no courage could cross."
     },
     {
       "id": "world-wars",
       "name": "The world wars",
       "from": 1914,
       "to": 1945,
-      "note": "Poison gas and tanks marked the First World War. In the Second, rockets, flamethrowers and napalm were used, and in 1945 the first nuclear weapons were used on two cities."
+      "note": "Poison gas, tanks and submarines marked the First World War. In the Second, rockets, flamethrowers and napalm were used, and in 1945 a B-29 bomber carried the first nuclear weapon used on a city."
     },
     {
       "id": "cold-war-and-after",

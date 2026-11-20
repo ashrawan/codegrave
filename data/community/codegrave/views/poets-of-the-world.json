@@ -22,7 +22,6 @@
     "ovid",
     "li-bai",
     "du-fu",
-    "murasaki-shikibu",
     "ferdowsi",
     "omar-khayyam",
     "rumi",
@@ -41,7 +40,13 @@
     "pablo-neruda",
     "wislawa-szymborska",
     "maya-angelou",
-    "bob-dylan"
+    "bob-dylan",
+    "john-milton",
+    "lord-byron",
+    "edgar-allan-poe",
+    "octavio-paz",
+    "haiku",
+    "t-s-eliot"
   ],
   "checkpoints": [
     {
@@ -56,21 +61,21 @@
       "name": "The medieval masters",
       "from": 18,
       "to": 1400,
-      "note": "Tang poets Li Bai and Du Fu, Persia's Ferdowsi, Khayyam, Rumi and Hafez, Japan's Murasaki, and Dante and Chaucer in Europe make poetry of faith, love and the world."
+      "note": "Tang poets Li Bai and Du Fu, Persia's Ferdowsi, Khayyam, Rumi and Hafez, and Dante and Chaucer in Europe make poetry of faith, love and the world."
     },
     {
       "id": "early-modern-and-romantic",
       "name": "Early modern and Romantic",
       "from": 1401,
       "to": 1859,
-      "note": "Shakespeare turns verse into drama, Bashō brings the seventeen-syllable haiku to its height, and Goethe and Pushkin carry a national language into the age of Romanticism."
+      "note": "Shakespeare turns verse into drama, Milton writes an epic of the Fall, Basho brings the seventeen-syllable haiku to its height, and Goethe, Pushkin, Byron and Poe carry poetry into the age of Romanticism."
     },
     {
       "id": "modern-voices",
       "name": "Modern voices",
       "from": 1860,
       "to": 2024,
-      "note": "Whitman, Dickinson, Tagore, Lorca, Neruda, Szymborska and Angelou write in the new free forms, and Dylan sets the poet's work to a guitar."
+      "note": "Whitman, Dickinson, Tagore, Lorca, Neruda, Paz, Szymborska and Angelou write in the new free forms, and Dylan sets the poet's work to a guitar."
     }
   ],
   "year": 1200

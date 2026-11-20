@@ -1,7 +1,7 @@
 {
   "id": "the-masters-of-the-renaissance",
   "name": "The Masters of the Renaissance",
-  "description": "From Giotto's first solid figures to Michelangelo's ceiling: the painters, sculptors and builders who remade European art between the 1300s and the 1500s.",
+  "description": "From Giotto's solid figures to Michelangelo's ceiling and El Greco's last works: the painters, sculptors and architects of the Renaissance in Italy and the north, and what they made.",
   "category": "arts",
   "labels": [
     "visual-art",
@@ -16,8 +16,6 @@
     "italy"
   ],
   "entries": [
-    "renaissance",
-    "house-of-medici",
     "giotto",
     "filippo-brunelleschi",
     "donatello",
@@ -35,7 +33,11 @@
     "titian",
     "andrea-palladio",
     "pieter-bruegel-the-elder",
-    "mimar-sinan"
+    "mimar-sinan",
+    "ghent-altarpiece",
+    "school-of-athens",
+    "garden-of-earthly-delights",
+    "el-greco"
   ],
   "checkpoints": [
     {
@@ -50,21 +52,21 @@
       "name": "Florence leads",
       "from": 1401,
       "to": 1470,
-      "note": "Brunelleschi raises the great dome, Donatello casts a bronze nude and Jan van Eyck perfects oil paint in the north. Bankers such as the Medici pay for it all."
+      "note": "Brunelleschi raises the great dome over Florence and works out linear perspective, and Donatello casts a bronze David. In the north Jan van Eyck finishes the Ghent Altarpiece in 1432, with oil paint of a new richness and detail."
     },
     {
       "id": "the-high-renaissance",
       "name": "The high Renaissance",
       "from": 1471,
       "to": 1520,
-      "note": "Leonardo, Michelangelo and Raphael work in Florence and Rome for popes and princes, and produce the Mona Lisa, the David and the Sistine ceiling."
+      "note": "Botticelli paints The Birth of Venus, Leonardo The Last Supper and the Mona Lisa, and Michelangelo carves the David and paints the Sistine ceiling, while Raphael paints The School of Athens. In the north Durer brings the new art to woodcut and engraving, and Bosch paints The Garden of Earthly Delights."
     },
     {
       "id": "venice-and-beyond",
       "name": "Venice and beyond",
       "from": 1521,
-      "to": 1600,
-      "note": "Titian's colour rules Venice, Palladio designs villas, Bruegel paints village life in the Low Countries and Sinan builds mosques for the Ottomans."
+      "to": 1614,
+      "note": "Titian's colour rules Venice, Palladio designs villas, Bruegel paints village life in the Low Countries and Sinan builds mosques for the Ottomans. El Greco, trained in Venice and Rome, carries the late style to Spain and works in Toledo until 1614."
     }
   ],
   "year": 1500

@@ -1,7 +1,7 @@
 {
   "id": "mughal-age-domes-dynasties-and-the-company",
   "name": "The Mughal Age: Domes, Dynasties and the Company",
-  "description": "Sultans, emperors and merchants: how India passed from Delhi's sultans to the Mughal court and the Taj Mahal, and then to the East India Company and the Raj.",
+  "description": "From Babur's victory at Panipat in 1526 to the end of the dynasty in 1858: the emperors, their cities and the Taj Mahal, their Maratha rivals, and the trading company that took their place.",
   "category": "places",
   "labels": [
     "architecture",
@@ -18,11 +18,7 @@
     "east india company"
   ],
   "entries": [
-    "delhi-sultanate",
-    "vijayanagara-empire",
     "hampi",
-    "guru-nanak",
-    "da-gama-first-voyage",
     "sikhism",
     "mughal-empire",
     "akbar",
@@ -34,48 +30,52 @@
     "battle-of-plassey",
     "company-rule-in-india",
     "indian-rebellion-of-1857",
-    "british-raj",
-    "indian-national-congress",
-    "mahatma-gandhi",
-    "partition-of-india",
-    "india",
-    "pakistan"
+    "safavid-iran",
+    "babur",
+    "first-battle-of-panipat",
+    "persian-language",
+    "dutch-east-india-company",
+    "delhi",
+    "mumbai",
+    "aurangzeb",
+    "shivaji",
+    "maratha-empire"
   ],
   "checkpoints": [
     {
       "id": "sultans-and-kingdoms",
-      "name": "Sultans and kingdoms",
-      "from": 1206,
-      "to": 1525,
-      "note": "The Delhi Sultanate ruled much of the north, while Vijayanagara and its capital Hampi stood in the south. Guru Nanak taught the faith that became Sikhism, and Vasco da Gama's ships reached India by sea in 1498."
+      "name": "Babur and Panipat",
+      "from": 1494,
+      "to": 1555,
+      "note": "Babur, a Timurid prince driven from Central Asia, took Kabul and in 1526 beat the sultan of Delhi at the First Battle of Panipat with cannon and muskets, founding the Mughal Empire. To the west Safavid Iran rose as a rival and a model, and Sikhism grew in Punjab."
     },
     {
       "id": "akbars-empire",
       "name": "The empire of Akbar",
-      "from": 1526,
+      "from": 1556,
       "to": 1606,
-      "note": "The Mughal Empire began in 1526. Akbar enlarged it, built the city of Fatehpur Sikri, and the Sikhs' Golden Temple at Amritsar dates from these years. In 1600 the English East India Company was founded."
+      "note": "Akbar became emperor in 1556, enlarged the empire across the north, built the city of Fatehpur Sikri and made Persian the language of government. Hampi, the capital of the southern kingdom, was sacked in 1565, the Sikhs' Golden Temple at Amritsar was begun, and in 1600 the English East India Company was founded."
     },
     {
       "id": "age-of-the-taj",
       "name": "The age of the Taj",
       "from": 1607,
+      "to": 1707,
+      "note": "Shah Jahan ruled in the empire's richest days and built the Taj Mahal for his wife and a new capital at Delhi. The Dutch East India Company and the English at Bombay traded on the coasts. Aurangzeb took the throne in 1658 and pushed the empire to its widest, but his long wars against Shivaji's Marathas drained it."
+    },
+    {
+      "id": "marathas-rise",
+      "name": "Marathas and invaders",
+      "from": 1708,
       "to": 1756,
-      "note": "Shah Jahan ruled in the empire's richest days and built the Taj Mahal in memory of his wife. Afterwards the Mughal emperors lost real power, and rival states and trading companies grew stronger."
+      "note": "After Aurangzeb's death in 1707 the emperors lost real power. The Maratha Empire spread across the centre and west of India, a Persian army sacked Delhi in 1739, and the European companies fortified their trading towns."
     },
     {
       "id": "company-rule",
       "name": "The Company takes control",
       "from": 1757,
-      "to": 1857,
-      "note": "After the Battle of Plassey in 1757 the East India Company became a ruling power, known as Company rule in India. In 1857 the Indian Rebellion shook it, and the Company's rule ended soon after."
-    },
-    {
-      "id": "raj-and-freedom",
-      "name": "The Raj and independence",
-      "from": 1858,
-      "to": 1947,
-      "note": "The Crown took over and the British Raj began. The Indian National Congress was founded in 1885, Mahatma Gandhi led mass campaigns, and in 1947 the Partition of India created India and Pakistan."
+      "to": 1858,
+      "note": "After the Battle of Plassey in 1757 the East India Company became a ruling power, known as Company rule in India. In 1857 the Indian Rebellion rallied around the last Mughal emperor in Delhi; after it was crushed the British exiled him, ended the Mughal Empire and in 1858 took India from the Company."
     }
   ]
 }

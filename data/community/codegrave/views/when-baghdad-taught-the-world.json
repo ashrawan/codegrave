@@ -1,7 +1,7 @@
 {
   "id": "when-baghdad-taught-the-world",
   "name": "When Baghdad Taught the World",
-  "description": "Five centuries when scholars from Spain to Persia translated, tested and improved the knowledge of earlier peoples, and built the cities, mosques and books we still admire.",
+  "description": "Eight centuries of Islamic history in which scholars from Spain to Persia translated, tested and improved the knowledge of earlier peoples and built cities, mosques and books.",
   "category": "knowledge",
   "labels": [
     "religion",
@@ -50,7 +50,10 @@
     "rumi",
     "alhambra",
     "siege-of-baghdad-1258",
-    "ibn-khaldun"
+    "ibn-khaldun",
+    "hindu-arabic-numerals",
+    "astrolabe",
+    "maimonides"
   ],
   "checkpoints": [
     {
@@ -72,21 +75,21 @@
       "name": "Baghdad rises",
       "from": 750,
       "to": 900,
-      "note": "The Abbasid caliphs built Baghdad. At the House of Wisdom scholars like al-Khwarizmi created algebra, under Harun al-Rashid the court was famed, and tales that became The Thousand and One Nights were gathered."
+      "note": "The Abbasid caliphs built Baghdad. At the House of Wisdom scholars like al-Khwarizmi created algebra and spread the Hindu-Arabic numerals, under Harun al-Rashid the court was famed, and tales that became The Thousand and One Nights were gathered."
     },
     {
       "id": "high-noon",
       "name": "Cairo, Cordoba and the great minds",
       "from": 901,
       "to": 1100,
-      "note": "Rival courts competed for scholars. Cairo got al-Azhar, Cordoba enlarged its great mosque, Ibn al-Haytham wrote on light, Avicenna on medicine and Omar Khayyam on mathematics and poems, and Ferdowsi composed the Shahnameh."
+      "note": "Rival courts competed for scholars. Cairo got al-Azhar, Cordoba enlarged its great mosque, Ibn al-Haytham wrote on light, Avicenna on medicine and Omar Khayyam on mathematics and poems, astronomers refined the astrolabe, and Ferdowsi composed the Shahnameh."
     },
     {
       "id": "afterglow",
       "name": "Late brilliance and the Mongol blow",
       "from": 1101,
       "to": 1406,
-      "note": "Averroes, al-Jazari and Rumi worked in a divided world. The Alhambra rose in Granada and Mongol troops destroyed Baghdad in 1258, yet Ibn Khaldun wrote a new theory of history afterwards."
+      "note": "Averroes, Maimonides, al-Jazari and Rumi worked in a divided world. The Alhambra rose in Granada and Mongol troops destroyed Baghdad in 1258, yet Ibn Khaldun wrote a new theory of history afterwards."
     }
   ],
   "year": 900

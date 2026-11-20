@@ -1,7 +1,7 @@
 {
   "id": "spies-of-the-cold-war",
-  "name": "Spies of the Cold War",
-  "description": "The agencies, crises and walls of a secret war: CIA against KGB, MI6 against the Stasi, and the codebreakers who read messages meant to stay hidden.",
+  "name": "The Secret Services of the Cold War",
+  "description": "The agencies, crises and walls of a secret war: CIA against KGB, MI6 against the Stasi, and the codebreakers and atomic secrets that shaped it.",
   "category": "organisations",
   "labels": [
     "politics",
@@ -38,15 +38,17 @@
     "bay-of-pigs-invasion",
     "cuban-missile-crisis",
     "warsaw-pact",
-    "nato"
+    "nato",
+    "manhattan-project",
+    "colossus"
   ],
   "checkpoints": [
     {
       "id": "hot-to-cold",
       "name": "From hot war to cold",
-      "from": 1942,
+      "from": 1939,
       "to": 1953,
-      "note": "The OSS and Venona show how wartime spying carried on into peace. In 1947 the CIA was founded, the NSA followed, and Mossad, the Securitate and ISI began work as the blocs formed."
+      "note": "The Manhattan Project and the codebreakers of Colossus show how wartime secrets carried on into peace, as do the OSS and Venona. In 1947 the CIA was founded, the NSA followed, and Mossad, the Securitate and ISI began work as the blocs formed."
     },
     {
       "id": "walls-and-flights",

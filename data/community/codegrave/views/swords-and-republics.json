@@ -24,7 +24,6 @@
     "battle-of-salamis",
     "pericles",
     "peloponnesian-war",
-    "trial-of-socrates",
     "alexander-the-great",
     "battle-of-gaugamela",
     "hellenistic-period",
@@ -44,7 +43,9 @@
     "roman-empire",
     "battle-of-the-teutoburg-forest",
     "pax-romana",
-    "bar-kokhba-revolt"
+    "bar-kokhba-revolt",
+    "sparta",
+    "kingdom-of-macedon"
   ],
   "checkpoints": [
     {
@@ -59,20 +60,20 @@
       "name": "Greeks against Persia",
       "from": -499,
       "to": -404,
-      "note": "The Persian Empire invades Greece. The Greeks win at Marathon, make a famous but losing stand at Thermopylae and win at sea at Salamis, and then Athens and Sparta turn on each other in the Peloponnesian War."
+      "note": "The Persian Empire invades Greece. The Greeks win at Marathon, Sparta makes a famous but losing stand at Thermopylae, Athens wins at sea at Salamis, and then Athens and Sparta turn on each other in the Peloponnesian War."
     },
     {
       "id": "alexander",
       "name": "Alexander and his heirs",
       "from": -403,
       "to": -265,
-      "note": "A Macedonian king beats Persia at Gaugamela and carries Greek culture to India. After his death his generals divide the empire in the Hellenistic period."
+      "note": "The king of Macedon beats Persia at Gaugamela and carries Greek culture to India. After his death his generals divide the empire in the Hellenistic period."
     },
     {
       "id": "rome-v-carthage",
       "name": "Rome against Carthage",
       "from": -264,
-      "to": -147,
+      "to": -146,
       "note": "Three wars with Carthage make Rome master of the western Mediterranean. Hannibal wins at Cannae but loses at Zama, and Carthage is destroyed in 146 BCE."
     },
     {

@@ -37,7 +37,12 @@
     "bohr-model",
     "quantum-mechanics",
     "steady-state-theory",
-    "cosmic-microwave-background"
+    "cosmic-microwave-background",
+    "antoine-lavoisier",
+    "ptolemy",
+    "galen",
+    "natural-selection",
+    "piltdown-man"
   ],
   "checkpoints": [
     {
@@ -45,14 +50,14 @@
       "name": "Ancient certainties",
       "from": -400,
       "to": 1599,
-      "note": "The Earth at the centre of the sky, four humours in the body and a world of heavy and light things seeking their place: these ideas seemed to fit what everyone saw, and they were taught for centuries."
+      "note": "The Earth at the centre of the sky, as Ptolemy set it out, four humours in the body, as Galen taught, and a world of heavy and light things seeking their place: these ideas seemed to fit what everyone saw, and they were taught for centuries."
     },
     {
       "id": "age-of-fluids",
       "name": "The age of invisible fluids",
       "from": 1600,
       "to": 1799,
-      "note": "Chemists blame phlogiston for fire, physicists fill space with aether and heat with caloric, and skull-readers claim to map the mind. Each fluid explained a great deal until careful experiments challenged it."
+      "note": "Chemists blame phlogiston for fire, physicists fill space with aether and heat with caloric, and skull-readers claim to map the mind. Each fluid explained a great deal until careful experiments, such as Antoine Lavoisier's on burning, challenged it."
     },
     {
       "id": "nineteenth-century-corrections",

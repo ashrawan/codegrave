@@ -1,7 +1,7 @@
 {
   "id": "albums-that-rewired-popular-music",
   "name": "Records That Rewired the Radio: Blues to Streaming",
-  "description": "The songs, albums and sounds, from the blues and jazz of the early 1900s to hip-hop, grunge and K-pop, that sent popular music in new directions.",
+  "description": "The songs, albums and sounds, from the blues and jazz of the early 1900s to reggae, hip-hop, K-pop and streaming, that sent popular music in new directions.",
   "category": "arts",
   "labels": [
     "music"
@@ -46,7 +46,12 @@
     "ok-computer",
     "miseducation-of-lauryn-hill",
     "gangnam-style",
-    "despacito-song"
+    "despacito-song",
+    "elvis-presley",
+    "bob-dylan",
+    "bob-marley",
+    "reggae",
+    "spotify"
   ],
   "checkpoints": [
     {
@@ -61,14 +66,14 @@
       "name": "Rock and roll",
       "from": 1950,
       "to": 1965,
-      "note": "Electric guitars, young listeners and radio create a teenage music, while jazz and Brazil explore calmer, subtler sounds."
+      "note": "Electric guitars, young listeners and radio create a teenage music, led by Elvis Presley, while jazz and Brazil explore calmer, subtler sounds."
     },
     {
       "id": "album-age",
       "name": "The album age",
       "from": 1966,
       "to": 1976,
-      "note": "Bands treat a whole record as one work, using the studio as an instrument, and music takes on war, race and politics."
+      "note": "Bands treat a whole record as one work, using the studio as an instrument. Bob Dylan's songs bring a new kind of lyric to the charts, reggae and Bob Marley carry Jamaican music abroad, and music takes on war, race and politics."
     },
     {
       "id": "punk-hip-hop",
@@ -82,7 +87,7 @@
       "name": "Global pop",
       "from": 1990,
       "to": 2017,
-      "note": "Grunge, hip-hop, Cuban and Korean music and online video break the barriers between countries and between charts."
+      "note": "Grunge, hip-hop, Cuban and Korean music and online video break the barriers between countries and between charts, and from 2008 streaming services such as Spotify change how people hear it all."
     }
   ],
   "year": 1967

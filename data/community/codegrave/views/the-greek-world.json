@@ -1,7 +1,7 @@
 {
   "id": "the-greek-world",
   "name": "The Greek Miracle: Cities, Gods and Ideas",
-  "description": "How a scatter of small cities around the Aegean produced democracy, drama, history, geometry and philosophy, and then spread them from Egypt to India.",
+  "description": "How a scatter of small cities around the Aegean produced citizen government, drama, history, geometry and philosophy, and then spread them from Egypt to India.",
   "category": "places",
   "labels": [
     "philosophy",
@@ -52,7 +52,16 @@
     "colossus-of-rhodes",
     "antikythera-mechanism",
     "venus-de-milo",
-    "hellenistic-period"
+    "hellenistic-period",
+    "sparta",
+    "thucydides",
+    "sophocles",
+    "minoan-civilization",
+    "mycenaean-greece",
+    "pythagoras",
+    "kingdom-of-macedon",
+    "battle-of-gaugamela",
+    "athenian-democracy"
   ],
   "checkpoints": [
     {
@@ -60,28 +69,28 @@
       "name": "Palaces and heroes",
       "from": -1600,
       "to": -1200,
-      "note": "On Crete and the mainland, palace kingdoms kept records in Linear B after a giant eruption shook the Aegean. Later poets sang of a great war at Troy, and the Trojan War became the main story of Greece."
+      "note": "The Minoan civilisation on Crete and Mycenaean Greece on the mainland built palace kingdoms that kept records in Linear B, after a giant eruption shook the Aegean. Later poets sang of a great war at Troy, and the Trojan War became the main story of Greece."
     },
     {
       "id": "poets-and-games",
       "name": "Poets, games and city-states",
       "from": -1199,
       "to": -501,
-      "note": "The Greeks borrowed an alphabet, and Homer's Iliad and Odyssey were set down. Cities met at the Olympic Games and the oracle at Delphi, honoured their gods, and produced Sappho the poet and Thales the first scientist."
+      "note": "The Greeks borrowed an alphabet, and Homer's Iliad and Odyssey were set down. Cities met at the Olympic Games and the oracle at Delphi, honoured their gods, and produced Sappho the poet, Thales, often called the first scientist, and Pythagoras."
     },
     {
       "id": "war-and-gold",
       "name": "War with Persia and the golden age",
       "from": -500,
       "to": -400,
-      "note": "Athens beat the Persians at Marathon, Spartans made their famous last stand at Thermopylae, and the Greek fleet won at Salamis. Under Pericles, Athens built the Parthenon and staged tragedies like Antigone, until the Peloponnesian War and a plague shattered it."
+      "note": "Athens beat the Persians at Marathon, Spartans made their famous last stand at Thermopylae, and the Greek fleet won at Salamis. Under Pericles Athens built the Parthenon and staged tragedies by Sophocles, until the Peloponnesian War, in which Sparta fought Athens, and a plague shattered it. Thucydides wrote its history."
     },
     {
       "id": "thinkers-and-macedon",
       "name": "Thinkers and a conqueror",
       "from": -399,
       "to": -323,
-      "note": "After the trial of Socrates his pupil Plato taught, and Aristotle taught Alexander the Great. Alexander then conquered an empire stretching to India and spread Greek language far from home."
+      "note": "After the trial of Socrates his pupil Plato taught, and Aristotle taught Alexander the Great. Alexander, king of Macedon, won at Gaugamela and conquered an empire stretching to India, spreading the Greek language far from home."
     },
     {
       "id": "hellenistic",

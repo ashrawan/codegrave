@@ -42,7 +42,9 @@
     "hoover-dam",
     "solar-cell",
     "lithium-ion-battery",
-    "three-gorges-dam"
+    "three-gorges-dam",
+    "obninsk-nuclear-power-plant",
+    "nuclear-reactor"
   ],
   "checkpoints": [
     {
@@ -71,7 +73,7 @@
       "name": "The grid",
       "from": 1901,
       "to": 1960,
-      "note": "Big dams such as Hoover and steam turbines feeding long wires tied whole regions to electric power, Marconi's radio sent signals without wires, and the first solar cell in 1954 hinted at a different source."
+      "note": "Big dams such as Hoover and steam turbines feeding long wires tied whole regions to electric power, and Marconi's radio sent signals without wires. In 1954 a small plant at Obninsk first fed a grid with nuclear power, and the first solar cell hinted at another source."
     },
     {
       "id": "new-sources",

@@ -18,8 +18,6 @@
   "entries": [
     "rome",
     "roman-forum",
-    "latin-language",
-    "ancient-roman-religion",
     "roman-republic",
     "twelve-tables",
     "appian-way",
@@ -39,11 +37,9 @@
     "virgil",
     "aeneid",
     "pax-romana",
-    "pliny-the-elder",
     "vesuvius-79",
     "pompeii",
     "colosseum",
-    "gladiatorial-combat",
     "trajan",
     "hadrian",
     "hadrians-wall",
@@ -55,7 +51,14 @@
     "edict-of-milan",
     "sack-of-rome-410",
     "attila",
-    "fall-of-the-western-roman-empire"
+    "fall-of-the-western-roman-empire",
+    "second-punic-war",
+    "cicero",
+    "battle-of-actium",
+    "cleopatra-vii",
+    "roman-senate",
+    "nero",
+    "theodosius-i"
   ],
   "checkpoints": [
     {
@@ -63,35 +66,35 @@
       "name": "A village on the Tiber",
       "from": -753,
       "to": -510,
-      "note": "Tradition says Rome began in 753 BCE. A market place that became the Roman Forum, a Latin tongue and a set of old gods grew into a town ruled by kings who were later expelled."
+      "note": "Tradition says Rome began in 753 BCE. A market place that became the Roman Forum grew into a town ruled by kings who were later expelled."
     },
     {
       "id": "republic",
       "name": "The Republic and the Punic Wars",
       "from": -509,
       "to": -134,
-      "note": "Rome wrote the Twelve Tables, built the Appian Way and fought Carthage three times. Hannibal won at Cannae, but Scipio Africanus beat him at Zama, and Roman concrete soon shaped a bigger city."
+      "note": "Rome wrote the Twelve Tables, built the Appian Way and was governed by its Senate. It fought Carthage three times; in the Second Punic War Hannibal won at Cannae, but Scipio Africanus beat him at Zama. Roman concrete soon shaped a bigger city."
     },
     {
       "id": "fall-of-republic",
       "name": "Strongmen and civil war",
       "from": -133,
       "to": -28,
-      "note": "Rich generals ruled the provinces and the poor wanted land. Spartacus led a slave revolt, Julius Caesar won Gaul and then the civil war, and his heir Augustus ended the Republic."
+      "note": "Rich generals ruled the provinces and the poor wanted land. Spartacus led a slave revolt, Cicero spoke for the Republic, Julius Caesar won Gaul and then the civil war, and at Actium Augustus defeated Cleopatra's fleet and ended the Republic."
     },
     {
       "id": "high-empire",
       "name": "Emperors and the Roman peace",
       "from": -27,
       "to": 192,
-      "note": "Under Augustus the Roman Empire began and Pax Romana followed. Virgil wrote the Aeneid, Vesuvius buried Pompeii, and Trajan, Hadrian and Marcus Aurelius ruled while the Colosseum, Pantheon and Hadrian's Wall went up."
+      "note": "Under Augustus the Roman Empire began and Pax Romana followed. Virgil wrote the Aeneid, Nero ruled, Vesuvius buried Pompeii, and Trajan, Hadrian and Marcus Aurelius ruled while the Colosseum, Pantheon and Hadrian's Wall went up."
     },
     {
       "id": "crisis-and-fall",
       "name": "Crisis, faith and fall",
       "from": 193,
       "to": 476,
-      "note": "Civil wars and invaders strained the state. Diocletian divided power, Constantine turned to Christianity and the Edict of Milan, and after Attila's raids and the sack of Rome the West ended in 476."
+      "note": "Civil wars and invaders strained the state. Diocletian divided power, Constantine turned to Christianity and the Edict of Milan, Theodosius made it the state religion in 380, and after Attila's raids and the sack of Rome the West ended in 476."
     }
   ],
   "year": -27

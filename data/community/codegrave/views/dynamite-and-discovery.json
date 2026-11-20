@@ -1,7 +1,7 @@
 {
   "id": "dynamite-and-discovery",
   "name": "Dynamite and Discovery: The Nobel Prizes in Science",
-  "description": "One inventor's will created the world's best-known prizes. Follow the laureates in physics, chemistry and medicine and the discoveries that earned them.",
+  "description": "One inventor's will created the best-known prizes in science. Follow the laureates in physics, chemistry and medicine, the discoveries that won, and the people the prizes passed over.",
   "category": "people",
   "labels": [
     "nobel-prize",
@@ -22,39 +22,39 @@
     "nobel-prize-physics",
     "nobel-prize-chemistry",
     "nobel-prize-medicine",
-    "radioactivity",
-    "henri-becquerel",
-    "pierre-curie",
     "marie-curie",
-    "jj-thomson",
     "ernest-rutherford",
-    "max-planck",
     "haber-process",
     "fritz-haber",
     "albert-einstein",
     "niels-bohr",
     "insulin",
-    "erwin-schrodinger",
-    "paul-dirac",
-    "werner-heisenberg",
     "penicillin",
     "alexander-fleming",
-    "james-chadwick",
-    "enrico-fermi",
     "dorothy-hodgkin",
     "dna-double-helix",
     "barbara-mcclintock",
     "rita-levi-montalcini",
     "subrahmanyan-chandrasekhar",
     "richard-feynman",
-    "norman-borlaug",
-    "nobel-peace-prize",
     "artemisinin",
     "tu-youyou",
     "crispr-gene-editing",
     "jennifer-doudna",
     "higgs-boson",
-    "first-gravitational-wave-detection"
+    "first-gravitational-wave-detection",
+    "svante-arrhenius",
+    "robert-koch",
+    "otto-hahn",
+    "lise-meitner",
+    "transistor",
+    "chien-shiung-wu",
+    "rosalind-franklin",
+    "francis-crick",
+    "james-watson",
+    "jocelyn-bell-burnell",
+    "graphene",
+    "lithium-ion-battery"
   ],
   "checkpoints": [
     {
@@ -62,35 +62,35 @@
       "name": "The will and the first prizes",
       "from": 1896,
       "to": 1913,
-      "note": "Alfred Nobel died in 1896 and left his fortune for prizes. The first physics prize went to Rontgen in 1901, and the Curies and Becquerel won in 1903. Thomson and Rutherford were soon honoured, while Planck's quantum and Haber's ammonia process won prizes later, in 1918."
+      "note": "Alfred Nobel, the inventor of dynamite, died in 1896 and left his fortune for prizes, first given in 1901. Early laureates included Svante Arrhenius in 1903, Robert Koch in 1905 for his work on tuberculosis, Ernest Rutherford in chemistry in 1908, and Marie Curie, who won in physics in 1903 and again in chemistry in 1911."
     },
     {
       "id": "quantum-years",
       "name": "The quantum years",
       "from": 1914,
       "to": 1932,
-      "note": "Einstein won for the photoelectric effect and Bohr for the atom's structure. Schrodinger, Dirac and Heisenberg built quantum mechanics, and the medicine prize honoured insulin."
+      "note": "Fritz Haber won for making ammonia from the air, a gift to farming that he also turned to poison gas. Albert Einstein won for the photoelectric effect and Niels Bohr for the structure of the atom, and the 1923 medicine prize went to the discovery of insulin."
     },
     {
       "id": "war-and-after",
       "name": "War and after",
       "from": 1933,
       "to": 1959,
-      "note": "Chadwick's neutron and Fermi's neutron work were rewarded, as were Fleming's penicillin and the later chemistry of vitamins. Chandrasekhar's work on dying stars would be honoured later."
+      "note": "Otto Hahn won the 1944 chemistry prize for fission, while Lise Meitner, who had explained it, was left out. Alexander Fleming shared the 1945 medicine prize for penicillin, and the 1956 physics prize honoured the transistor. Chien-Shiung Wu's experiment confirmed the theory that won the 1957 physics prize, but she was not among the winners."
     },
     {
       "id": "molecules-of-life",
       "name": "Molecules of life",
       "from": 1960,
       "to": 1999,
-      "note": "Hodgkin, and Watson, Crick and Wilkins for DNA, opened up biological structure. McClintock won for jumping genes, Levi-Montalcini for nerve growth, Feynman for quantum electrodynamics, and Borlaug the Peace Prize for crop breeding."
+      "note": "Watson and Crick shared the 1962 prize for the structure of DNA; Rosalind Franklin, whose X-ray images were key, had died in 1958, and prizes are not given after death. Dorothy Hodgkin, Feynman, McClintock, Chandrasekhar and Levi-Montalcini won, while Jocelyn Bell Burnell's discovery of pulsars brought a 1974 prize to her supervisor."
     },
     {
       "id": "new-century",
       "name": "A new century",
       "from": 2000,
       "to": 2026,
-      "note": "Tu Youyou won for artemisinin against malaria, Doudna and Charpentier for CRISPR gene editing, Englert and Higgs for predicting the Higgs boson, and three LIGO leaders for gravitational waves. These discoveries rested on huge teams, but no more than three people can share a prize."
+      "note": "Graphene won the 2010 physics prize and the lithium-ion battery the 2019 chemistry prize. Tu Youyou won for artemisinin against malaria and Jennifer Doudna for CRISPR gene editing, and prizes for the Higgs boson and for gravitational waves followed in 2013 and 2017. Such work rests on large teams, yet no more than three people can share a prize."
     }
   ],
   "year": 1950

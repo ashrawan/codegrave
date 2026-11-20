@@ -39,7 +39,8 @@
     "chichen-itza",
     "machu-picchu",
     "taj-mahal",
-    "shah-jahan"
+    "shah-jahan",
+    "christ-the-redeemer"
   ],
   "checkpoints": [
     {
@@ -53,7 +54,7 @@
       "id": "the-greek-list",
       "name": "Six marvels of the Greek world",
       "from": -600,
-      "to": -280,
+      "to": -279,
       "note": "Greek travellers counted the wonders they could see: gardens in Babylon, a temple at Ephesus, Zeus at Olympia, a tomb in Caria, a bronze giant at Rhodes and a lighthouse at Alexandria. Alexander's conquests opened the route to many of them."
     },
     {
@@ -69,6 +70,13 @@
       "from": 601,
       "to": 1700,
       "note": "Later generations drew up lists of their own that reached beyond the Mediterranean. Angkor Wat, Chichen Itza, Machu Picchu, the Great Wall and the Taj Mahal were all seen by outsiders only slowly."
+    },
+    {
+      "id": "new-seven",
+      "name": "The new seven wonders",
+      "from": 1701,
+      "to": 2007,
+      "note": "In 2007 a worldwide public vote named a new list of seven wonders: the Great Wall, Petra, Christ the Redeemer, Machu Picchu, Chichen Itza, the Colosseum and the Taj Mahal. Only the Great Pyramid, an honorary entry, joined it from the ancient list."
     }
   ],
   "year": -300

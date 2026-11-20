@@ -1,7 +1,7 @@
 {
   "id": "florence-venice-rome-cities-of-the-renaissance",
   "name": "Florence, Venice, Rome: Cities of the Renaissance",
-  "description": "Rival city-states in Italy paid for the painters, builders and thinkers who changed European art, and the cities themselves became the great works.",
+  "description": "Florence, Venice and Rome as seats of power: the banking families, doges and popes, the patrons and preachers, the buildings and the events that made Italy's Renaissance cities.",
   "category": "places",
   "labels": [
     "visual-art",
@@ -23,34 +23,36 @@
     "marco-polo",
     "carnival-of-venice",
     "florence",
-    "giotto",
     "dante-alighieri",
     "renaissance",
     "renaissance-humanism",
     "house-of-medici",
     "medici-bank",
     "filippo-brunelleschi",
-    "donatello",
     "vatican-library",
-    "sandro-botticelli",
-    "birth-of-venus",
-    "leonardo-da-vinci",
-    "the-last-supper",
     "michelangelo",
-    "david-michelangelo",
-    "raphael",
     "school-of-athens",
     "sistine-chapel-ceiling",
     "papal-states",
     "rome",
     "st-peters-basilica",
-    "titian",
     "niccolo-machiavelli",
     "galileo-galilei",
     "galileo-affair",
     "claudio-monteverdi",
     "antonio-vivaldi",
-    "vivaldi-four-seasons"
+    "vivaldi-four-seasons",
+    "petrarch",
+    "university-of-bologna",
+    "leaning-tower-of-pisa",
+    "florence-cathedral",
+    "fall-of-constantinople",
+    "printing-press",
+    "girolamo-savonarola",
+    "the-prince",
+    "charles-v",
+    "protestant-reformation",
+    "plague-of-1629-italy"
   ],
   "checkpoints": [
     {
@@ -58,35 +60,35 @@
       "name": "Old cities, new voices",
       "from": 421,
       "to": 1396,
-      "note": "Venice grew from a lagoon refuge into a sea power ruled by a doge, and its merchants, among them Marco Polo, travelled far to the east. In Florence, Giotto and Dante gave art and poetry fresh directions."
+      "note": "Venice grew from a lagoon refuge into a sea republic ruled by a doge, held its Carnival and sent merchants such as Marco Polo far to the east. Florence grew rich on cloth and banking, Dante and then Petrarch wrote poetry that revived old learning, Bologna's university drew students from all Europe, and Pisa finished its leaning bell tower."
     },
     {
       "id": "bankers-and-builders",
       "name": "Bankers and builders",
       "from": 1397,
       "to": 1464,
-      "note": "The House of Medici made a fortune through the Medici Bank and ruled Florence from behind the scenes. Their wealth paid for Filippo Brunelleschi and Donatello, while Renaissance humanism revived the study of classical writers."
+      "note": "The House of Medici made a fortune through the Medici Bank and ruled Florence from behind the scenes. Their city paid Filippo Brunelleschi to raise the dome of Florence Cathedral, and Renaissance humanism revived classical learning, helped by Greek scholars who fled after the fall of Constantinople in 1453."
     },
     {
       "id": "the-golden-decades",
       "name": "The golden decades",
       "from": 1465,
       "to": 1520,
-      "note": "Botticelli painted The Birth of Venus, and Leonardo da Vinci painted The Last Supper in Milan. In Florence Michelangelo carved David, and in Rome he painted the Sistine Chapel ceiling while Raphael painted The School of Athens for the popes."
+      "note": "Venice became Europe's busiest centre of the printing press, and in Florence the friar Savonarola ruled for four years until he was burned in 1498. Popes rebuilt Rome as a capital of art: the Vatican Library opened, Michelangelo painted the Sistine Chapel ceiling and The School of Athens was painted for the papal rooms."
     },
     {
       "id": "thinkers-and-trouble",
       "name": "Thinkers and trouble",
       "from": 1521,
       "to": 1642,
-      "note": "Machiavelli wrote about power and politics. Titian painted in Venice, and Galileo Galilei observed the heavens, but in 1633 he was tried by the Church in the Galileo affair. Claudio Monteverdi helped to create opera."
+      "note": "Troops of Charles V sacked Rome in 1527, the Protestant Reformation shook the popes' authority, and Machiavelli's The Prince appeared in 1532. St. Peter's Basilica rose with the dome Michelangelo designed, plague struck Venice in 1630, Galileo Galilei was tried by the Church in 1633, and Claudio Monteverdi helped to create opera."
     },
     {
       "id": "music-and-the-fall",
       "name": "Music and the fall of Venice",
       "from": 1643,
       "to": 1797,
-      "note": "Antonio Vivaldi wrote The Four Seasons in Venice, a city of festivals and carnival. In 1797 the Republic of Venice, which had lasted for more than a thousand years, ended when Napoleon's army arrived."
+      "note": "Antonio Vivaldi wrote The Four Seasons in Venice, a city of festivals and carnival. In 1797 the Republic of Venice, which had lasted for more than a thousand years, ended when French revolutionary armies arrived, while the Papal States held on in Rome until 1870."
     }
   ]
 }

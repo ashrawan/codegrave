@@ -43,7 +43,15 @@
     "mikhail-gorbachev",
     "vaclav-havel",
     "fall-of-the-berlin-wall",
-    "dissolution-of-the-soviet-union"
+    "dissolution-of-the-soviet-union",
+    "winston-churchill",
+    "dwight-d-eisenhower",
+    "charles-de-gaulle",
+    "josip-broz-tito",
+    "gamal-abdel-nasser",
+    "jimmy-carter",
+    "pope-john-paul-ii",
+    "leonid-brezhnev"
   ],
   "checkpoints": [
     {
@@ -51,28 +59,28 @@
       "name": "Two camps",
       "from": 1945,
       "to": 1953,
-      "note": "Truman and Stalin, allies against Germany, became rivals. The Marshall Plan, the Berlin Blockade and NATO split Europe in two. Mao Zedong won power in China in 1949, and Kim Il Sung's North Korea fought the Korean War against a UN force."
+      "note": "Truman and Stalin, allies against Germany, became rivals, and Winston Churchill spoke of an iron curtain in 1946. The Marshall Plan, the Berlin Blockade and NATO split Europe. Mao Zedong won power in China in 1949, and Kim Il Sung's North Korea fought the Korean War."
     },
     {
       "id": "brinkmanship",
       "name": "Brinkmanship",
       "from": 1954,
       "to": 1963,
-      "note": "After Stalin, Nikita Khrushchev led the Soviet side, and the Warsaw Pact answered NATO. Fidel Castro took power in Cuba, the Berlin Wall went up in 1961, and John F. Kennedy and Khrushchev faced off in the Cuban Missile Crisis, a standoff that frightened the world."
+      "note": "After Stalin, Nikita Khrushchev led the Soviet side and Dwight Eisenhower the American, and the Warsaw Pact answered NATO. De Gaulle kept France apart, Nasser and Tito led non-aligned states, Castro took Cuba, and Kennedy and Khrushchev faced off in the Cuban Missile Crisis."
     },
     {
       "id": "hot-wars-cold-talks",
       "name": "Hot wars, cold talks",
       "from": 1964,
       "to": 1979,
-      "note": "Lyndon B. Johnson sent large forces to the Vietnam War, where Ho Chi Minh's North Vietnam fought on. Richard Nixon opened talks with Moscow and visited China in 1972, and after Mao's death Deng Xiaoping steered China toward economic reform."
+      "note": "Lyndon B. Johnson sent large forces to the Vietnam War, where Ho Chi Minh's North Vietnam fought on. Richard Nixon opened talks with Moscow and visited China in 1972, Jimmy Carter followed him, and after Mao's death Deng Xiaoping steered China toward economic reform."
     },
     {
       "id": "the-thaw",
       "name": "The thaw and the end",
       "from": 1980,
       "to": 1991,
-      "note": "Margaret Thatcher and Ronald Reagan pressed the Western case while Lech Walesa's Solidarity challenged communist rule in Poland. Mikhail Gorbachev's reforms opened the way for change; Vaclav Havel became a leading voice, the Berlin Wall fell in 1989 and the Soviet Union dissolved in 1991."
+      "note": "Margaret Thatcher and Ronald Reagan pressed the Western case, Pope John Paul II and Lech Walesa's Solidarity challenged communist rule in Poland, and Mikhail Gorbachev's reforms opened the way for change. Vaclav Havel became a leading voice, the Berlin Wall fell in 1989 and the Soviet Union dissolved in 1991."
     }
   ],
   "year": 1962

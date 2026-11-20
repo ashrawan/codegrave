@@ -36,7 +36,9 @@
     "walls-of-constantinople",
     "francis-of-assisi",
     "mamluk-sultanate",
-    "battle-of-ain-jalut"
+    "battle-of-ain-jalut",
+    "reconquista",
+    "siege-of-acre-1291"
   ],
   "checkpoints": [
     {
@@ -44,7 +46,7 @@
       "name": "The call to arms",
       "from": 1071,
       "to": 1095,
-      "note": "After the Seljuk Turks beat the Byzantines at Manzikert, the emperor asked the West for help. At Clermont, Pope Urban II preached a pilgrimage in arms to the Holy Land."
+      "note": "After the Seljuk Turks beat the Byzantines at Manzikert, the emperor asked the West for help. Christian kingdoms in Spain were already fighting Muslim rulers in the Reconquista. At Clermont, Pope Urban II preached a pilgrimage in arms to the Holy Land."
     },
     {
       "id": "first-crusade",
@@ -72,7 +74,7 @@
       "name": "The last states fall",
       "from": 1250,
       "to": 1291,
-      "note": "The Mamluks of Egypt took power, and the Mongols were beaten at Ain Jalut. The fall of Acre in 1291 ended the crusader states on the coast, and the knightly orders had to find new homes."
+      "note": "The Mamluks of Egypt took power, and the Mongols were beaten at Ain Jalut. The last crusader cities on the coast fell by 1291, ending the crusader states, and the knightly orders had to find new homes."
     }
   ],
   "year": 1187

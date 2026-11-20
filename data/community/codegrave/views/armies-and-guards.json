@@ -35,7 +35,9 @@
     "operation-barbarossa",
     "battle-of-stalingrad",
     "battle-of-kursk",
-    "georgy-zhukov"
+    "georgy-zhukov",
+    "knights-templar",
+    "knights-hospitaller"
   ],
   "checkpoints": [
     {
@@ -44,6 +46,13 @@
       "from": -221,
       "to": 312,
       "note": "Qin Shi Huang united China in 221 BCE and was buried with thousands of life-size clay soldiers, the Terracotta Army. In Rome the Praetorian Guard, set up under Augustus, protected emperors and at times chose them; it was dissolved in 312."
+    },
+    {
+      "id": "soldier-monks",
+      "name": "Soldier-monks of the crusades",
+      "from": 313,
+      "to": 1205,
+      "note": "The crusades produced armies of soldier-monks. The Knights Hospitaller, who began by caring for pilgrims in Jerusalem, and the Knights Templar guarded the roads of the Holy Land and fought in its wars, answering to the pope rather than to any one king."
     },
     {
       "id": "steppe-and-slave-soldiers",

@@ -1,6 +1,6 @@
 {
   "id": "the-french-crown",
-  "name": "The French Crown: From Charlemagne to Louis XVI",
+  "name": "The French Crown: From Charlemagne to Napoleon",
   "description": "A thousand years of French kings: Frankish warlords, Capetian builders, a war with England, voyages to Canada, the Sun King and the fall of the monarchy.",
   "category": "people",
   "labels": [
@@ -34,13 +34,18 @@
     "french-revolution",
     "french-revolutionary-wars",
     "napoleon",
-    "first-french-empire"
+    "first-french-empire",
+    "edict-of-nantes",
+    "clovis-i",
+    "louis-ix",
+    "francis-i-of-france",
+    "henry-iv-of-france"
   ],
   "checkpoints": [
     {
       "id": "the-franks",
       "name": "The Frankish kings",
-      "from": 688,
+      "from": 466,
       "to": 986,
       "note": "Charles Martel strengthened Frankish power as mayor of the palace. His grandson Charlemagne was crowned emperor in 800 and ruled much of western Europe. The Carolingian dynasty's line of kings in the western lands ended in 987."
     },
@@ -63,7 +68,7 @@
       "name": "Voyages and the Sun King",
       "from": 1501,
       "to": 1715,
-      "note": "Jacques Cartier sailed to the St. Lawrence in 1534 for the French crown, the start of New France and a wider French colonial empire; Samuel de Champlain founded Quebec in 1608. Louis XIV, king for over seventy years, built the Palace of Versailles."
+      "note": "Jacques Cartier sailed to the St. Lawrence in 1534 for the French crown, the start of New France, and Samuel de Champlain founded Quebec in 1608. Henry IV ended the wars of religion with the Edict of Nantes in 1598, and Louis XIV, king for over seventy years, built the Palace of Versailles."
     },
     {
       "id": "revolution-and-empire",

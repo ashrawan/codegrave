@@ -45,7 +45,12 @@
     "chang-e-4",
     "starlink",
     "james-webb-space-telescope",
-    "chandrayaan-3"
+    "chandrayaan-3",
+    "apollo-11",
+    "neil-armstrong",
+    "international-space-station",
+    "robert-goddard",
+    "konstantin-tsiolkovsky"
   ],
   "checkpoints": [
     {
@@ -67,14 +72,14 @@
       "name": "Race to orbit",
       "from": 1957,
       "to": 1975,
-      "note": "A Soviet rocket built as an intercontinental ballistic missile launched Sputnik 1, and Explorer 1 and NASA answered. The Soviet space program raced on. Yuri Gagarin flew on Vostok 1, the N1 failed, and Saturn V carried the Apollo program to the Moon. The Soyuz capsule became a workhorse."
+      "note": "A Soviet rocket built as an intercontinental ballistic missile launched Sputnik 1, and Explorer 1 and NASA answered. Yuri Gagarin flew on Vostok 1, the N1 failed, and Saturn V carried the Apollo program to the Moon, where Neil Armstrong stepped out of Apollo 11 in 1969. The Soyuz capsule became a workhorse."
     },
     {
       "id": "shuttles-and-europe",
       "name": "Shuttles and Ariane",
       "from": 1976,
       "to": 1999,
-      "note": "The Space Shuttle reused its orbiter from 1981, and the loss of Challenger in 1986 shook the program. Europe's Ariane 5 first flew in 1996, aimed at launching satellites for customers."
+      "note": "The Space Shuttle reused its orbiter from 1981, and the loss of Challenger in 1986 shook the program. Europe's Ariane 5 first flew in 1996, aimed at launching satellites for customers, and in 1998 the first parts of the International Space Station went up."
     },
     {
       "id": "new-space",

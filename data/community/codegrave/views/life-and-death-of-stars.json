@@ -36,7 +36,14 @@
     "cecilia-payne-gaposchkin",
     "subrahmanyan-chandrasekhar",
     "jocelyn-bell-burnell",
-    "hubble-space-telescope"
+    "hubble-space-telescope",
+    "big-bang",
+    "black-hole",
+    "tycho-brahe",
+    "sirius",
+    "james-webb-space-telescope",
+    "hans-bethe",
+    "event-horizon-telescope"
   ],
   "checkpoints": [
     {
@@ -58,14 +65,14 @@
       "name": "Seeing stars die",
       "from": -999,
       "to": 1900,
-      "note": "Astronomers in several lands record a bright 'guest star' in 1054, and Tycho and Kepler watch new stars of 1572 and 1604 blaze up, showing the sky can change."
+      "note": "Astronomers in several lands record a bright guest star in 1054, and Tycho Brahe and Kepler watch the new stars of 1572 and 1604 blaze up, showing the sky can change."
     },
     {
       "id": "modern-astrophysics",
       "name": "Reading the light",
       "from": 1901,
       "to": 2026,
-      "note": "Leavitt, Hubble, Payne-Gaposchkin and Chandrasekhar work out cosmic distances, other galaxies, what stars are made of and how they die, and pulsars, black holes and supernova 1987A bear them out."
+      "note": "Leavitt, Hubble, Payne-Gaposchkin and Chandrasekhar work out cosmic distances, other galaxies, what stars are made of and how they die. Pulsars, black holes and supernova 1987A bear them out, and the James Webb Space Telescope looks back toward the first stars."
     }
   ],
   "year": 1987

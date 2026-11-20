@@ -1,6 +1,6 @@
 {
   "id": "imagined-worlds",
-  "name": "Imagined Worlds",
+  "name": "Imagined Worlds: Fantasy and Science Fiction",
   "description": "From the Monkey King and Camelot to Oz, Middle-earth and Hogwarts: how fantasy and science fiction built worlds readers could live in.",
   "category": "arts",
   "labels": [
@@ -41,7 +41,16 @@
     "a-game-of-thrones",
     "harry-potter-and-the-philosophers-stone",
     "harry-potter",
-    "the-hunger-games"
+    "the-hunger-games",
+    "mary-shelley",
+    "jules-verne",
+    "george-orwell",
+    "star-trek-original-series",
+    "star-wars-1977",
+    "blade-runner",
+    "the-matrix",
+    "ursula-k-le-guin",
+    "isaac-asimov"
   ],
   "checkpoints": [
     {
@@ -70,14 +79,14 @@
       "name": "The fantasy boom",
       "from": 1950,
       "to": 1979,
-      "note": "Narnia, The Lord of the Rings and Dune sold in the millions and turned fantasy and science fiction into big business."
+      "note": "Narnia, The Lord of the Rings and Dune sold in the millions, and Star Trek and Star Wars brought science fiction to the screen. Fantasy and science fiction became big business."
     },
     {
       "id": "worlds-without-end",
       "name": "Worlds without end",
       "from": 1980,
       "to": 2026,
-      "note": "Cyberspace, a comic Discworld, wizards in Scotland and arenas of teenagers made fantasy and science fiction the main fiction of the age."
+      "note": "Blade Runner, cyberspace and The Matrix, a comic Discworld, wizards in Scotland and arenas of teenagers made fantasy and science fiction the main fiction of the age."
     }
   ]
 }

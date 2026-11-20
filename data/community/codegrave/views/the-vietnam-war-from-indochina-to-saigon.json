@@ -34,8 +34,10 @@
     "watergate-scandal",
     "pol-pot",
     "apocalypse-now",
-    "cold-war",
-    "soviet-union"
+    "tet-offensive",
+    "khmer-rouge",
+    "gulf-of-tonkin-incident",
+    "fall-of-saigon"
   ],
   "checkpoints": [
     {
@@ -57,14 +59,14 @@
       "name": "The Americans arrive",
       "from": 1955,
       "to": 1964,
-      "note": "South Vietnam was founded, backed by the United States as part of the Cold War, while the Soviet Union supported the north. President John F. Kennedy sent more advisers, and the war grew."
+      "note": "South Vietnam was founded, backed by the United States in its Cold War contest with communism, while the north looked to communist allies. President John F. Kennedy sent more advisers, and the war grew."
     },
     {
       "id": "escalation",
       "name": "Escalation",
       "from": 1965,
       "to": 1972,
-      "note": "President Lyndon B. Johnson sent combat troops. American forces used B-52 bombers and napalm, while their opponents carried AK-47 rifles. The war divided opinion at home, and Richard Nixon began to withdraw troops."
+      "note": "President Lyndon B. Johnson sent combat troops. American forces used B-52 bombers and napalm, while their opponents carried AK-47 rifles. The Tet Offensive of 1968 shook American confidence, the war divided opinion at home, and Richard Nixon began to withdraw troops."
     },
     {
       "id": "the-aftermath",

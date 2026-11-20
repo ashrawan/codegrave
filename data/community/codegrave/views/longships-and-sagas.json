@@ -18,11 +18,9 @@
   "entries": [
     "norse-paganism",
     "runes",
-    "beowulf",
     "viking-age",
     "longship",
     "alfred-the-great",
-    "old-english",
     "kievan-rus",
     "althing",
     "kingdom-of-england",
@@ -34,7 +32,10 @@
     "battle-of-stamford-bridge",
     "battle-of-hastings",
     "william-the-conqueror",
-    "poetic-edda"
+    "poetic-edda",
+    "cnut",
+    "bayeux-tapestry",
+    "lindisfarne-raid"
   ],
   "checkpoints": [
     {
@@ -42,7 +43,7 @@
       "name": "Gods, runes and old tales",
       "from": 150,
       "to": 792,
-      "note": "Scandinavians honoured Odin, Thor and other Norse gods and carved runes. Songs such as Beowulf, written in Old English, remembered a time when sea kings fought monsters."
+      "note": "Scandinavians honoured Odin, Thor and other Norse gods and carved runes long before the first raids. Their world of sea kings and monsters lived on in poems and stories told by later writers."
     },
     {
       "id": "raiders",
@@ -63,7 +64,7 @@
       "name": "The Viking Age ends",
       "from": 1001,
       "to": 1100,
-      "note": "Vikings left traces at L'Anse aux Meadows, and Norse guards served in Byzantium. Harald Hardrada's death at Stamford Bridge in 1066 ended the age, and the Normans won at Hastings."
+      "note": "Vikings left traces at L'Anse aux Meadows, and Norse guards served in Byzantium. Cnut ruled England, Denmark and Norway for a time, Harald Hardrada's death at Stamford Bridge in 1066 ended the age, and the Normans won at Hastings, as the Bayeux Tapestry shows."
     },
     {
       "id": "afterlife",

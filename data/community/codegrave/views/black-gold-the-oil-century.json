@@ -27,8 +27,6 @@
     "diesel-engine",
     "ford-model-t",
     "henry-ford",
-    "texas",
-    "saudi-arabia",
     "polyethylene",
     "container-ship",
     "suez-crisis",
@@ -46,7 +44,10 @@
     "paris-agreement",
     "tesla-roadster",
     "solar-cell",
-    "wind-turbine"
+    "wind-turbine",
+    "opec",
+    "bakelite",
+    "nylon"
   ],
   "checkpoints": [
     {
@@ -61,21 +62,21 @@
       "name": "Rockefeller and the car",
       "from": 1870,
       "to": 1929,
-      "note": "John D. Rockefeller built Standard Oil into a giant until it was broken up in 1911. Benz's Patent-Motorwagen, the diesel engine and Henry Ford's Model T put engines on the road, and Texas became a boom land."
+      "note": "John D. Rockefeller built Standard Oil into a giant until it was broken up in 1911. Benz's Patent-Motorwagen, the diesel engine and Henry Ford's Model T put engines on the road, and Bakelite, from 1907, was the first fully man-made plastic."
     },
     {
       "id": "oil-and-plastic",
       "name": "Oil power and plastic",
       "from": 1930,
       "to": 1972,
-      "note": "Saudi Arabia became a state in 1932 and oil later made it rich. Polyethylene opened the age of cheap plastics, and the container ship and the Suez Crisis of 1956 showed how much trade and politics ran on fuel."
+      "note": "Polyethylene and nylon opened the age of cheap plastics and fibres, and the container ship and the Suez Crisis of 1956 showed how much trade and politics ran on fuel. In 1960 oil-exporting countries formed OPEC to coordinate their oil policies."
     },
     {
       "id": "shocks-and-spills",
       "name": "Shocks and spills",
       "from": 1973,
       "to": 1996,
-      "note": "The 1973 oil crisis sent prices soaring, and the Iranian Revolution brought a second shock in 1979. The Iran-Iraq War and the Gulf War followed, the Exxon Valdez ran aground in Alaska in 1989, and the IPCC was set up in 1988 to assess climate change."
+      "note": "The 1973 oil crisis, when Arab exporters cut supplies, sent prices soaring, and the Iranian Revolution brought a second shock in 1979. The Iran-Iraq War and the Gulf War followed, the Exxon Valdez ran aground in Alaska in 1989, and the IPCC was set up in 1988 to assess climate change."
     },
     {
       "id": "after-oil",

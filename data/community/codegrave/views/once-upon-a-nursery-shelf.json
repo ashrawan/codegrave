@@ -1,7 +1,7 @@
 {
   "id": "once-upon-a-nursery-shelf",
   "name": "Once Upon a Nursery Shelf: Children's Classics",
-  "description": "The fairy tales, bears, wizards and cartoon mice that grew up with generations of children, from the Brothers Grimm to Harry Potter and Pokémon.",
+  "description": "Fairy tales, bears, wizards and cartoon mice: the stories and characters that grew up with generations of children, from the Brothers Grimm to Harry Potter.",
   "category": "arts",
   "labels": [
     "literature",
@@ -22,9 +22,7 @@
     "wonderful-wizard-of-oz",
     "land-of-oz",
     "peter-pan",
-    "teddy-bear",
     "winnie-the-pooh-book",
-    "winnie-the-pooh",
     "mickey-mouse",
     "walt-disney",
     "donald-duck",
@@ -35,24 +33,20 @@
     "the-beano",
     "bugs-bunny",
     "the-little-prince",
-    "lego",
     "peanuts",
     "snoopy",
     "astro-boy",
-    "barbie",
     "asterix",
     "sesame-street",
     "doraemon",
     "hello-kitty",
     "the-muppet-show",
-    "super-mario-bros",
     "the-lion-king-1994",
     "toy-story-1995",
-    "tamagotchi",
-    "harry-potter",
     "harry-potter-and-the-philosophers-stone",
     "jk-rowling",
-    "pokemon-go"
+    "the-lion-the-witch-and-the-wardrobe",
+    "charlie-and-the-chocolate-factory"
   ],
   "checkpoints": [
     {
@@ -67,28 +61,21 @@
       "name": "Bears, wizards and mice",
       "from": 1900,
       "to": 1936,
-      "note": "The Wonderful Wizard of Oz opens the Land of Oz, Peter Pan refuses to grow up, and the Teddy bear becomes a child's friend. Winnie-the-Pooh, Mickey Mouse and Tintin follow in the 1920s, and Donald Duck quacks in 1934, as books, films and comics reach younger readers."
+      "note": "The Wonderful Wizard of Oz opens the Land of Oz and Peter Pan refuses to grow up. Winnie-the-Pooh, Mickey Mouse and Tintin follow in the 1920s, and Donald Duck quacks in 1934, as books, films and comics reach younger readers."
     },
     {
       "id": "the-golden-age-of-the-cartoon",
       "name": "The golden age of the cartoon",
       "from": 1937,
       "to": 1969,
-      "note": "Walt Disney makes Snow White and the Seven Dwarfs and The Wizard of Oz film follows in 1939, while Bugs Bunny and The Beano appear in cartoons and comics. The Hobbit and The Little Prince bring wonder to older readers, Peanuts and Snoopy charm millions, Lego bricks, Barbie and Asterix arrive, and Astro Boy and Doraemon lead Japan's cartoons."
+      "note": "Walt Disney makes Snow White and the Seven Dwarfs, and The Wizard of Oz film follows in 1939, while Bugs Bunny and The Beano appear. The Hobbit, The Little Prince and The Lion, the Witch and the Wardrobe bring wonder, Charlie and the Chocolate Factory adds mischief, and Peanuts, Snoopy, Asterix, Astro Boy and Doraemon charm readers."
     },
     {
       "id": "from-the-puppet-to-the-pixel",
       "name": "From puppet to pixel",
       "from": 1970,
-      "to": 1999,
-      "note": "Sesame Street, on air since late 1969, teaches by television and The Muppet Show makes puppets stars. Hello Kitty, Super Mario Bros. and the Tamagotchi make characters children carry in their pockets, Toy Story and The Lion King set new heights, and J. K. Rowling's Harry Potter and the Philosopher's Stone begins a wizard craze."
-    },
-    {
-      "id": "growing-up-with-the-screen",
-      "name": "Growing up with the screen",
-      "from": 2000,
       "to": 2026,
-      "note": "Harry Potter becomes a worldwide series of books and films, and children now play stories as well as read them, as Pokémon Go sends families out into the streets with phones in hand."
+      "note": "Sesame Street, on air since late 1969, teaches by television and The Muppet Show makes puppets stars. Hello Kitty becomes a pocket-sized star, Toy Story and The Lion King set new heights, and J. K. Rowling's Harry Potter and the Philosopher's Stone begins a wizard craze that runs into the new century."
     }
   ],
   "year": 1995

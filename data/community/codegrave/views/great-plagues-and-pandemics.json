@@ -35,29 +35,34 @@
     "swine-flu-2009",
     "ebola-epidemic-west-africa",
     "zika-epidemic",
-    "covid-19-pandemic"
+    "covid-19-pandemic",
+    "smallpox",
+    "measles",
+    "columbian-exchange",
+    "germ-theory",
+    "cocoliztli-epidemics"
   ],
   "checkpoints": [
     {
       "id": "ancient-plagues",
-      "name": "Plagues of the ancient world",
-      "from": -430,
-      "to": 749,
-      "note": "Great epidemics strike Athens, Rome and Constantinople. Writers describe the terror but not the cause, and the sickness weakens armies and states."
+      "name": "Plagues before the Black Death",
+      "from": -1200,
+      "to": 1345,
+      "note": "Great epidemics strike Athens, Rome and Constantinople. Writers describe the terror but not the cause, and the sickness weakens armies and states. In the centuries after, smallpox and measles are established killers of children across Eurasia."
     },
     {
       "id": "black-death-era",
       "name": "The Black Death and after",
       "from": 1346,
       "to": 1800,
-      "note": "Plague kills a huge share of people across Eurasia and then keeps returning to cities. Quarantine, health boards and new laws on burying the dead are the first public health response."
+      "note": "Plague kills a huge share of people across Eurasia and then keeps returning to cities. After 1492 smallpox and measles reach the Americas in the Columbian exchange. Quarantine, health boards and burial laws are the first public health response."
     },
     {
       "id": "cholera-century",
       "name": "The cholera century",
       "from": 1801,
       "to": 1917,
-      "note": "Trade, steamships and crowded industrial cities spread cholera, yellow fever and plague. John Snow's map of a London pump marks the start of modern epidemiology."
+      "note": "Trade, steamships and crowded industrial cities spread cholera, yellow fever and plague. John Snow's map of a London pump marks the start of modern epidemiology, and the germ theory soon explains such outbreaks."
     },
     {
       "id": "flu-and-virus-age",

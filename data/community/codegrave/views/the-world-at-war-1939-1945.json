@@ -1,7 +1,7 @@
 {
   "id": "the-world-at-war-1939-1945",
   "name": "The World at War, 1939 to 1945",
-  "description": "From the broken peace of 1919 to the courtrooms of Nuremberg: the battles, leaders and decisions of the deadliest war in history.",
+  "description": "The whole Second World War: the states and leaders, the turning-point battles on every front, the Holocaust, the codebreakers and the bomb, and the trials that followed.",
   "category": "events",
   "labels": [
     "war"
@@ -32,11 +32,28 @@
     "battle-of-berlin",
     "atomic-bombings-of-hiroshima-and-nagasaki",
     "yalta-conference",
-    "potsdam-conference",
     "nuremberg-trials",
     "tokyo-war-crimes-trials",
     "winston-churchill",
-    "joseph-stalin"
+    "joseph-stalin",
+    "nazi-germany",
+    "adolf-hitler",
+    "franklin-d-roosevelt",
+    "second-sino-japanese-war",
+    "kristallnacht",
+    "maginot-line",
+    "supermarine-spitfire",
+    "the-blitz",
+    "german-battleship-bismarck",
+    "holocaust",
+    "auschwitz",
+    "warsaw-ghetto-uprising",
+    "alan-turing",
+    "colossus",
+    "v-2-rocket",
+    "manhattan-project",
+    "united-nations",
+    "diary-of-a-young-girl"
   ],
   "checkpoints": [
     {
@@ -44,35 +61,35 @@
       "name": "A peace that did not hold",
       "from": 1919,
       "to": 1938,
-      "note": "The Treaty of Versailles and the hard years of the interwar period leave grievances and weak democracies. Dictators rise, Spain falls into civil war, and at Munich Europe tries to buy peace with a neighbour's land."
+      "note": "The Treaty of Versailles and the hard interwar years leave grievances and weak democracies. Hitler builds Nazi Germany, Japan opens a full war on China in 1937, Spain falls into civil war, Kristallnacht shows the violence aimed at Germany's Jews, and at Munich Europe tries to buy peace with a neighbour's land."
     },
     {
       "id": "blitz-and-barbarossa",
       "name": "Germany on the offensive",
       "from": 1939,
       "to": 1941,
-      "note": "War begins in Poland in 1939. Germany overruns western Europe, loses the air fight over Britain, then attacks the Soviet Union, and Japan's strike on Pearl Harbor turns a European war into a world war."
+      "note": "War begins in Poland in 1939. Germany goes around the Maginot Line and overruns France, Churchill's Britain wins the air fight with Spitfires and endures the Blitz, and the Bismarck is sunk in the Atlantic. Hitler attacks Stalin's Soviet Union, and Japan's strike on Pearl Harbor brings Roosevelt's United States into a world war."
     },
     {
       "id": "turning-point",
       "name": "The tide turns",
       "from": 1942,
       "to": 1943,
-      "note": "Midway, Stalingrad and El Alamein stop the Axis advance on three fronts. At Kursk the Soviet Red Army shows it can beat the German army in the open, and the Allies begin to take the lead."
+      "note": "Midway, Stalingrad and El Alamein stop the Axis on three fronts, and at Kursk the Red Army beats the German army in open battle. Behind the lines the Holocaust reaches its height: millions are murdered at Auschwitz and other camps, and in 1943 the Jews of the Warsaw Ghetto rise in revolt."
     },
     {
       "id": "road-to-victory",
       "name": "Road to victory",
       "from": 1944,
       "to": 1945,
-      "note": "Allied troops land in Normandy, Germany's last offensive fails in the Ardennes, and the Red Army storms Berlin. The leaders meet at Yalta and Potsdam, and atomic bombs end the war in Asia."
+      "note": "Allied troops land in Normandy, helped by codebreakers such as Alan Turing and by Colossus, which read German signals. V-2 rockets fall on London and Antwerp, Germany's last offensive fails in the Ardennes, and the Red Army storms Berlin. The leaders meet at Yalta, the Manhattan Project's atomic bombs end the war in Asia, and the United Nations is founded."
     },
     {
       "id": "judgement",
       "name": "Judgement and aftermath",
       "from": 1946,
       "to": 1948,
-      "note": "Judges in Nuremberg and Tokyo try leaders of the defeated Axis powers for war crimes, setting rules of international law that the world still uses."
+      "note": "The Nuremberg tribunal, which opened in November 1945, gives its verdicts on the Nazi leaders in 1946, and the Tokyo trials judge Japan's wartime leaders until 1948. Anne Frank's diary is published in 1947 and becomes one of the most read records of the Holocaust."
     }
   ],
   "year": 1942

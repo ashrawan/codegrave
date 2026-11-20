@@ -25,7 +25,6 @@
     "magna-carta",
     "black-death",
     "william-shakespeare",
-    "globe-theatre-site",
     "east-india-company",
     "royal-society",
     "great-plague-of-london",
@@ -54,7 +53,13 @@
     "abbey-road",
     "punk-rock",
     "olympics-2012",
-    "brexit"
+    "brexit",
+    "world-war-ii",
+    "winston-churchill",
+    "british-museum",
+    "crystal-palace",
+    "the-blitz",
+    "empire-windrush"
   ],
   "checkpoints": [
     {
@@ -76,21 +81,21 @@
       "name": "Plague, fire and rebuilding",
       "from": 1600,
       "to": 1799,
-      "note": "The East India Company and the Royal Society show London as a place of trade and science, the Great Plague and the Great Fire of London strike, and Samuel Pepys records them. Wren rebuilds St Paul's, and the Bank of England and The Times appear."
+      "note": "The East India Company, the Royal Society and the British Museum show London as a place of trade, science and learning. The Great Plague and the Great Fire of London strike, and Samuel Pepys records them. Wren rebuilds St Paul's, and the Bank of England and The Times appear."
     },
     {
       "id": "imperial-capital",
       "name": "Imperial capital",
       "from": 1800,
       "to": 1913,
-      "note": "London becomes the biggest city in the world. Dickens writes of its poor, the Thames Tunnel, Underground, Great Exhibition and Tower Bridge show its ambition, the Broad Street cholera outbreak leads to cleaner water, and Sherlock Holmes and Peter Pan are born in its streets."
+      "note": "London becomes the biggest city in the world. Dickens writes of its poor, the Thames Tunnel, Underground, Great Exhibition in the Crystal Palace and Tower Bridge show its ambition, the Broad Street cholera outbreak leads to cleaner water, and Sherlock Holmes and Peter Pan are born in its streets."
     },
     {
       "id": "war-and-pop",
       "name": "War, pop and carnival",
       "from": 1914,
       "to": 1999,
-      "note": "The BBC begins broadcasting, the Battle of Britain is fought overhead, and the Great Smog of 1952 hits. After Elizabeth II's coronation the Beatles at Abbey Road, punk and the Notting Hill Carnival remake its culture."
+      "note": "The BBC begins broadcasting, and in the Second World War London endures the Blitz and the Battle of Britain is fought overhead under Winston Churchill. The Great Smog of 1952 hits. After Elizabeth II's coronation the Beatles at Abbey Road, punk and the Notting Hill Carnival remake its culture."
     },
     {
       "id": "global-london",

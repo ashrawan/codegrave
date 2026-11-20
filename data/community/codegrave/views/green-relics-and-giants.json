@@ -40,7 +40,10 @@
     "gros-michel-banana",
     "cavendish-banana",
     "potato-blight",
-    "chestnut-blight"
+    "chestnut-blight",
+    "wheat",
+    "rice",
+    "coal"
   ],
   "checkpoints": [
     {
@@ -66,10 +69,10 @@
     },
     {
       "id": "naming-and-losing",
-      "name": "Naming and losing",
-      "from": -700,
+      "name": "Crops, names and losses",
+      "from": -12000,
       "to": 1753,
-      "note": "Silphium, a prized plant of ancient Cyrene, probably vanished in antiquity. In the eighteenth century Carl Linnaeus gave plants their modern naming system."
+      "note": "People begin to farm wheat and rice, the crops that now feed most of the world. Silphium, a prized plant of ancient Cyrene, probably vanished in antiquity, and in the eighteenth century Carl Linnaeus gave plants their modern naming system."
     },
     {
       "id": "blights",

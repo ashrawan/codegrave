@@ -1,6 +1,6 @@
 {
   "id": "books-that-sold-like-nothing-else",
-  "name": "Books That Sold Like Nothing Else",
+  "name": "The Great Bestsellers: Books Millions Have Read",
   "description": "From scriptures copied for centuries to wizard schools and hobbit holes: the books that reached more readers than any others, and why they kept selling.",
   "category": "arts",
   "labels": [
@@ -39,7 +39,11 @@
     "the-da-vinci-code",
     "the-hunger-games",
     "a-christmas-carol",
-    "dune"
+    "dune",
+    "uncle-toms-cabin",
+    "pilgrims-progress",
+    "war-and-peace",
+    "gone-with-the-wind-film"
   ],
   "checkpoints": [
     {
@@ -47,14 +51,14 @@
       "name": "Old favourites",
       "from": -800,
       "to": 1700,
-      "note": "Scripture, Arabian tales and one Spanish knight: books copied by hand and then printed for centuries, read aloud in homes and temples long before anyone counted sales."
+      "note": "Scripture, Arabian tales, one Spanish knight and an English pilgrim's allegory: books copied by hand and then printed for centuries, read aloud in homes and temples long before anyone counted sales."
     },
     {
       "id": "age-of-the-novel",
       "name": "The age of the novel",
       "from": 1701,
       "to": 1900,
-      "note": "Cheap printing, new schools and railway bookstalls made reading a mass habit. Fairy tales, Dickens and Wonderland found readers in the millions."
+      "note": "Cheap printing, new schools and railway bookstalls made reading a mass habit. Fairy tales, Dickens, Wonderland, Uncle Tom's Cabin and War and Peace found readers in the millions."
     },
     {
       "id": "paperback-century",

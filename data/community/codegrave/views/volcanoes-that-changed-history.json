@@ -20,8 +20,6 @@
     "siberian-traps",
     "deccan-traps",
     "hawaiian-islands",
-    "mount-kilimanjaro",
-    "ngorongoro-crater",
     "yellowstone-caldera",
     "mount-etna",
     "mount-fuji",
@@ -40,7 +38,10 @@
     "surtsey",
     "st-helens-eruption",
     "pinatubo-eruption",
-    "eyjafjallajokull-eruption"
+    "eyjafjallajokull-eruption",
+    "vesuvius-79",
+    "pompeii",
+    "laki-eruption"
   ],
   "checkpoints": [
     {
@@ -69,7 +70,7 @@
       "name": "Eruptions that changed history",
       "from": 2,
       "to": 1914,
-      "note": "Samalas, Tambora and Krakatoa darken skies and cool the climate, causing crop failures, tsunamis and tens of thousands of deaths, and Pelée destroys Saint-Pierre."
+      "note": "Vesuvius buries Pompeii in 79. Later Samalas, Tambora and Krakatoa darken skies and cool the climate, causing crop failures, tsunamis and tens of thousands of deaths, and Pelée destroys Saint-Pierre."
     },
     {
       "id": "watched-eruptions",

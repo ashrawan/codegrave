@@ -1,7 +1,7 @@
 {
   "id": "measuring-the-world",
   "name": "Measuring the World: Units, Scales and Standards",
-  "description": "From the cubit to the satellite: how people agreed on lengths, temperatures, positions and times, and the instruments that made precise measurement possible.",
+  "description": "From the cubit to the SI: how people agreed on lengths, weights and temperatures, mapped the Earth, and built the instruments that made precise measurement possible.",
   "category": "knowledge",
   "labels": [
     "engineering",
@@ -18,29 +18,25 @@
   ],
   "entries": [
     "cubit",
-    "astrolabe",
-    "compass",
     "portolan-chart",
     "thermometer",
     "slide-rule",
     "barometer",
     "celsius-scale",
-    "marine-chronometer",
-    "sextant",
     "metric-system",
     "imperial-units",
-    "standard-time",
     "prime-meridian",
-    "gyrocompass",
-    "radar",
-    "loran",
-    "atomic-clock",
-    "coordinated-universal-time",
     "si-units",
-    "global-positioning-system",
     "jacobs-staff",
     "geiger-counter",
-    "quartz-clock"
+    "sexagesimal",
+    "ptolemy",
+    "microscope",
+    "logarithm",
+    "daniel-fahrenheit",
+    "lord-kelvin",
+    "national-geographic-society",
+    "ligo"
   ],
   "checkpoints": [
     {
@@ -48,28 +44,28 @@
       "name": "Body and sky",
       "from": -3000,
       "to": 1299,
-      "note": "Early measures were drawn from the body, like the cubit, the length of a forearm. Sailors and astronomers used the astrolabe to find the heights of stars, and the compass helped travellers keep direction."
+      "note": "Early measures came from the body, like the cubit, the length of a forearm, and Babylonian counting in sixties gave the degree its minutes and seconds. Ptolemy mapped the known world with latitude and longitude, and portolan charts drew the coasts of the Mediterranean."
     },
     {
       "id": "instruments-age",
       "name": "The age of instruments",
       "from": 1300,
       "to": 1750,
-      "note": "Navigators used portolan charts and the cross-staff, and scientists invented the thermometer and the barometer. Celsius proposed his temperature scale in 1742, and the slide rule helped calculation."
+      "note": "Astronomers and surveyors measured angles with the Jacob's staff, the thermometer and the barometer gave numbers to heat and air pressure, and the microscope revealed tiny things. Logarithms and the slide rule eased calculation, Daniel Fahrenheit made a reliable mercury thermometer and scale, and Celsius proposed his temperature scale in 1742."
     },
     {
       "id": "standards",
       "name": "Standards for a new age",
       "from": 1751,
       "to": 1899,
-      "note": "The sextant and the marine chronometer let ships find latitude and longitude. After the French Revolution the metric system offered a common standard, the British kept imperial units, and railways led to standard time and a prime meridian."
+      "note": "After the French Revolution the metric system offered a common standard based on the size of the Earth, while Britain fixed its imperial units in 1824. Lord Kelvin set out an absolute scale of temperature, nations chose a prime meridian for the world's maps in 1884, and the National Geographic Society was founded in 1888."
     },
     {
       "id": "precision",
       "name": "Precision from the atom",
       "from": 1900,
       "to": 2025,
-      "note": "Gyrocompasses, radar and Loran helped navigation, and the Geiger counter measured radiation. Quartz and atomic clocks and the SI system made time and units exact, UTC set the world's clocks, and GPS put a precise position in millions of pockets."
+      "note": "The Geiger counter measured radiation, and the International System of Units of 1960 gave the world one set of units, which in 2019 were tied to fixed constants of nature. LIGO now measures changes in length far smaller than an atom."
     }
   ]
 }

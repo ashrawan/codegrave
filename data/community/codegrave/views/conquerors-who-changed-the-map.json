@@ -1,6 +1,6 @@
 {
   "id": "conquerors-who-changed-the-map",
-  "name": "Conquerors: Men Who Redrew the World Map",
+  "name": "Conquerors Who Redrew the World Map",
   "description": "From the Persian kings and Alexander to Genghis Khan and Napoleon: the generals and rulers whose armies changed borders and the course of history.",
   "category": "people",
   "labels": [
@@ -44,7 +44,10 @@
     "shaka-zulu",
     "napoleon",
     "napoleonic-wars",
-    "battle-of-waterloo"
+    "battle-of-waterloo",
+    "francisco-pizarro",
+    "maurya-empire",
+    "chandragupta-maurya"
   ],
   "checkpoints": [
     {
@@ -57,9 +60,9 @@
     {
       "id": "classical-conquests",
       "name": "Rome, Huns and caliphs",
-      "from": -259,
+      "from": -322,
       "to": 742,
-      "note": "Qin Shi Huang unites China, Hannibal leads Carthage against Rome and Caesar conquers Gaul for Rome, and Attila and Arab commanders challenge the old powers."
+      "note": "Qin Shi Huang unites China, the Maurya Empire spreads across India after Alexander's death, Hannibal leads Carthage against Rome and Caesar conquers Gaul for Rome, and Attila and Arab commanders challenge the old powers."
     },
     {
       "id": "medieval-conquerors",
@@ -73,7 +76,7 @@
       "name": "Gunpowder and new worlds",
       "from": 1406,
       "to": 1620,
-      "note": "Mehmed, Cortes, Suleiman and Akbar use cannon and discipline to build empires in the Middle East, the Americas and South Asia, while Pachacuti makes the Inca a great Andean empire without gunpowder."
+      "note": "Mehmed, Cortes, Pizarro, Suleiman and Akbar use cannon and discipline to build empires in the Middle East, the Americas and South Asia, while Pachacuti makes the Inca a great Andean empire without gunpowder."
     },
     {
       "id": "age-of-napoleon",

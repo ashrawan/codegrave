@@ -44,7 +44,10 @@
     "google-search",
     "wikipedia",
     "facebook",
-    "iphone"
+    "iphone",
+    "transatlantic-telegraph-cable",
+    "email",
+    "optical-fiber"
   ],
   "checkpoints": [
     {
@@ -66,14 +69,14 @@
       "name": "Wires and waves",
       "from": 1837,
       "to": 1944,
-      "note": "The telegraph, Morse code, the telephone and the penny post sped messages up to the pace of the wire. Marconi's wireless radio then reached ships and homes, and television followed in the 1920s and 1930s."
+      "note": "The telegraph, Morse code, the telephone and the penny post sped messages up to the pace of the wire, and a cable under the Atlantic joined two continents in 1858. Marconi's wireless radio reached ships and homes, and television followed in the 1920s and 1930s."
     },
     {
       "id": "packets-and-satellites",
       "name": "Packets and satellites",
       "from": 1945,
       "to": 1989,
-      "note": "Satellites such as Sputnik and Telstar beamed signals across the sky. Researchers invented packet switching, built ARPANET, and Kahn and Cerf devised the protocol that lets networks join together."
+      "note": "Satellites such as Sputnik and Telstar beamed signals across the sky and optical fibre began to carry light signals. Researchers invented packet switching, built ARPANET and sent the first email, and Kahn and Cerf devised the protocol that lets networks join together."
     },
     {
       "id": "the-web-era",

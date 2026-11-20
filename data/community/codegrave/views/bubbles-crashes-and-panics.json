@@ -17,6 +17,8 @@
   "entries": [
     "price-revolution",
     "tulip-mania",
+    "mississippi-company",
+    "south-sea-company",
     "panic-of-1837",
     "railway-mania",
     "california-gold-rush",
@@ -40,7 +42,8 @@
     "argentine-crisis-2001",
     "financial-crisis-of-2007-2008",
     "zimbabwe-hyperinflation",
-    "european-debt-crisis"
+    "european-debt-crisis",
+    "lehman-brothers"
   ],
   "checkpoints": [
     {
@@ -48,7 +51,7 @@
       "name": "The first manias",
       "from": 1500,
       "to": 1750,
-      "note": "Silver floods into Europe and prices climb. In Holland, France and Britain, people pay wild sums for tulips and shares, and learn the hard way how a bubble ends."
+      "note": "Silver floods into Europe and prices climb. In Holland people pay wild sums for tulips, and in France shares in the Mississippi Company soar and then collapse, teaching the hard way how a bubble ends."
     },
     {
       "id": "railways-and-panics",
@@ -69,7 +72,7 @@
       "name": "Global crises",
       "from": 1972,
       "to": 2014,
-      "note": "Oil shocks, debt crises and bursting bubbles in Japan, Asia and the internet era lead up to the crash of 2008, when the whole world's banks seemed to shake at once."
+      "note": "Oil shocks, debt crises and bursting bubbles in Japan, Asia and the internet era lead up to the crash of 2008, when the fall of Lehman Brothers made the whole world's banks seem to shake at once."
     }
   ],
   "year": 1929

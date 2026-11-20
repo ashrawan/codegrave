@@ -50,15 +50,22 @@
     "boxer-rebellion",
     "xinhai-revolution",
     "sun-yat-sen",
-    "chinese-civil-war"
+    "chinese-civil-war",
+    "shang-dynasty",
+    "zhou-dynasty",
+    "an-lushan-rebellion",
+    "du-fu",
+    "gunpowder",
+    "kublai-khan",
+    "dream-of-the-red-chamber"
   ],
   "checkpoints": [
     {
       "id": "sages",
       "name": "Bronze, writing and sages",
-      "from": -1250,
+      "from": -1600,
       "to": -222,
-      "note": "Chinese characters were already carved on bones when Confucius taught about duty and the Tao Te Ching spoke of the way. In the Warring States period armies grew, and Sun Tzu wrote on war."
+      "note": "The Shang dynasty carved characters on oracle bones, and the Zhou dynasty that followed gave China the idea of a mandate from Heaven. Confucius taught about duty and the Tao Te Ching spoke of the way. In the Warring States period armies grew, and Sun Tzu wrote on war."
     },
     {
       "id": "first-empire",
@@ -72,14 +79,14 @@
       "name": "Division and the Tang",
       "from": 221,
       "to": 959,
-      "note": "After the Han came the Three Kingdoms, later told in a famous novel. The short Sui dynasty reunited China and dug the Grand Canal, and the Tang dynasty that followed brought poets such as Li Bai and the empress Wu Zetian."
+      "note": "After the Han came the Three Kingdoms, later told in a famous novel. The Tang dynasty brought poets such as Li Bai and Du Fu and the empress Wu Zetian, and the An Lushan Rebellion of 755 shook it."
     },
     {
       "id": "song-yuan",
       "name": "Song and Yuan",
       "from": 960,
       "to": 1367,
-      "note": "Song China had movable type, the compass and a new Confucian thought. Mongol conquest swept away the Song and brought the Yuan dynasty of Kublai Khan, who made Beijing his capital."
+      "note": "Song China had movable type, the compass, gunpowder and a new Confucian thought. Mongol conquest swept away the Song and brought the Yuan dynasty of Kublai Khan, who made Beijing his capital."
     },
     {
       "id": "ming",
@@ -93,7 +100,7 @@
       "name": "Qing, revolution and republic",
       "from": 1644,
       "to": 1949,
-      "note": "Manchu emperors such as Kangxi made the Qing dynasty strong, but the Opium War and the Taiping and Boxer risings weakened it. Sun Yat-sen led the 1911 revolution that ended the empire, and civil war followed."
+      "note": "Manchu emperors such as Kangxi made the Qing dynasty strong, and Dream of the Red Chamber was written in this age. The Opium War and the Taiping and Boxer risings weakened it, Sun Yat-sen led the 1911 revolution that ended the empire, and civil war followed."
     }
   ],
   "year": 220

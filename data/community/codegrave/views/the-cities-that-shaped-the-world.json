@@ -1,5 +1,5 @@
 {
-  "id": "ten-cities-that-shaped-the-world",
+  "id": "the-cities-that-shaped-the-world",
   "name": "The Cities That Shaped the World",
   "description": "Rome to Singapore: how crossroads, harbours and planned capitals became centres of trade, power and ideas.",
   "category": "places",
@@ -23,16 +23,13 @@
     "alexandria",
     "florence",
     "paris",
-    "alexander-the-great",
     "roman-empire",
     "london",
     "istanbul",
-    "justinian-i",
     "baghdad",
     "kyoto",
     "cairo",
     "timbuktu",
-    "ottoman-empire",
     "venice",
     "new-york-city",
     "saint-petersburg",
@@ -40,7 +37,13 @@
     "sydney",
     "washington-dc",
     "canberra",
-    "brasilia"
+    "brasilia",
+    "athens",
+    "tenochtitlan",
+    "tokyo",
+    "shanghai",
+    "lagos",
+    "mexico-city"
   ],
   "checkpoints": [
     {
@@ -48,7 +51,7 @@
       "name": "Cities of the ancient world",
       "from": -753,
       "to": -1,
-      "note": "Rome rose from a river town to an empire. Alexandria, Chang'an and Samarkand sat on the roads where goods, scholars and religions met, and set the pattern of the capital city."
+      "note": "Athens became a school for the Mediterranean, and Rome rose from a river town to an empire. Alexandria, Chang'an and Samarkand sat on the roads where goods, scholars and religions met, and set the pattern of the capital city."
     },
     {
       "id": "capitals-of-faith-and-empire",
@@ -62,7 +65,7 @@
       "name": "Medieval hubs",
       "from": 801,
       "to": 1500,
-      "note": "Cairo, Timbuktu and Venice grew rich on trade in grain, gold and spices, while Florence turned banking wealth into art. Each drew scholars, merchants and rivals from far away."
+      "note": "Cairo, Timbuktu and Venice grew rich on trade in grain, gold and spices, while Florence turned banking wealth into art. Across the Atlantic the Aztec capital Tenochtitlan rose from a lake island, and each city drew scholars, merchants and rivals from far away."
     },
     {
       "id": "the-age-of-sail",
@@ -75,8 +78,15 @@
       "id": "planned-capitals",
       "name": "Cities on the drawing board",
       "from": 1901,
-      "to": 2026,
+      "to": 1960,
       "note": "Canberra and Brasilia were designed from nothing as capitals, with competitions and famous architects. Their success and shortcomings are still argued by planners."
+    },
+    {
+      "id": "megacities",
+      "name": "The age of megacities",
+      "from": 1961,
+      "to": 2026,
+      "note": "Tokyo, Shanghai, Mexico City and Lagos grow from regional centres into cities of tens of millions as farmers move to town, and the largest cities now shift toward Asia and Africa."
     }
   ],
   "year": 800

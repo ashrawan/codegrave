@@ -18,7 +18,8 @@
   "entries": [
     "hot-air-balloon",
     "zeppelin",
-    "wright-brothers",
+    "wilbur-wright",
+    "orville-wright",
     "wright-flyer",
     "bleriot-xi",
     "ilya-muromets",
@@ -45,7 +46,11 @@
     "airbus-a320-family",
     "antonov-an-225-mriya",
     "airbus-a380",
-    "boeing-787-dreamliner"
+    "boeing-787-dreamliner",
+    "helicopter",
+    "montgolfier-brothers",
+    "otto-lilienthal",
+    "bell-x-1"
   ],
   "checkpoints": [
     {
@@ -74,7 +79,7 @@
       "name": "War and the jet",
       "from": 1939,
       "to": 1957,
-      "note": "The Second World War brings radar, long-range bombers and the first jet aircraft. After it, jets begin to carry passengers, with early troubles."
+      "note": "The Second World War brings radar, long-range bombers, the first jet aircraft and the first practical helicopter. After it, jets begin to carry passengers, with early troubles."
     },
     {
       "id": "jumbos-and-supersonics",

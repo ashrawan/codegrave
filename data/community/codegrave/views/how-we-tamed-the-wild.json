@@ -37,7 +37,11 @@
     "dromedary",
     "coffee",
     "gros-michel-banana",
-    "cavendish-banana"
+    "cavendish-banana",
+    "sugar",
+    "cotton",
+    "tea",
+    "columbian-exchange"
   ],
   "checkpoints": [
     {
@@ -59,14 +63,14 @@
       "name": "Beasts of burden",
       "from": -5000,
       "to": 1000,
-      "note": "Llamas, horses and camels carry loads and people, silkworms give silk, and bananas spread across the tropics."
+      "note": "Llamas, horses and camels carry loads and people, silkworms give silk, tea is grown in China, and bananas spread across the tropics."
     },
     {
       "id": "global-crops",
       "name": "Global crops",
       "from": 1001,
       "to": 1900,
-      "note": "Coffee and new banana varieties spread across the world through trade and empire, and growing one variety everywhere makes crops easy prey for disease."
+      "note": "Coffee, sugar and cotton spread across the world through trade and empire, the Columbian exchange moves crops between the hemispheres, and growing one variety everywhere makes crops easy prey for disease."
     }
   ],
   "year": -8000

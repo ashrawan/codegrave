@@ -46,7 +46,14 @@
     "indian-ocean-tsunami-2004",
     "hurricane-katrina",
     "tohoku-earthquake-2011",
-    "fukushima-accident"
+    "fukushima-accident",
+    "shaanxi-earthquake-1556",
+    "yellow-river-flood-1887",
+    "china-floods-1931",
+    "bhola-cyclone",
+    "tangshan-earthquake",
+    "sichuan-earthquake-2008",
+    "haiti-earthquake-2010"
   ],
   "checkpoints": [
     {
@@ -54,28 +61,28 @@
       "name": "Fire and ash",
       "from": -1600,
       "to": 1700,
-      "note": "Volcanoes and city fires dominate the early record. Vesuvius buries Pompeii, and the Great Fire of London burns the old city and leads to a rebuilt, more stony capital."
+      "note": "Volcanoes, earthquakes and city fires dominate the early record. Vesuvius buries Pompeii, the 1556 Shaanxi earthquake in China is among the deadliest ever recorded, and the Great Fire of London burns the old city and leads to a rebuilt, more stony capital."
     },
     {
       "id": "age-of-science",
       "name": "Nature meets science",
       "from": 1701,
       "to": 1911,
-      "note": "Earthquakes, eruptions and floods are now written about across the world, and engineers learn from collapsing bridges and dams. Lisbon, Krakatoa and Galveston shape the first modern ideas of preparing for disaster."
+      "note": "Earthquakes, eruptions and floods are now written about across the world, and engineers learn from collapsing bridges and dams. Lisbon, Krakatoa and Galveston shape the first modern ideas of preparing for disaster, while the Yellow River flood of 1887 shows how rivers can kill on a vast scale."
     },
     {
       "id": "age-of-machines",
       "name": "The machine age",
       "from": 1912,
       "to": 1975,
-      "note": "Ships, airships and chemical works fail on a huge scale, and giant quakes in Chile and Alaska help prove plate tectonics. Governments begin to write new safety rules after each disaster."
+      "note": "Ships, airships and chemical works fail on a huge scale, and giant quakes in Chile and Alaska help prove plate tectonics. The great Chinese floods of 1931 and the Bhola cyclone of 1970 kill huge numbers. Governments begin to write new safety rules after each disaster."
     },
     {
       "id": "age-of-risk",
       "name": "The age of risk",
       "from": 1976,
       "to": 2011,
-      "note": "Nuclear plants, spacecraft and chemical factories bring risks no earlier century knew, while the world watches tsunamis and storms on live television and learns the cost of weak warnings."
+      "note": "Nuclear plants, spacecraft and chemical factories bring risks no earlier century knew, while the world watches tsunamis and storms on live television and learns the cost of weak warnings. The Tangshan quake of 1976 and the Sichuan and Haiti quakes of 2008 and 2010 show how weak buildings raise the toll."
     }
   ],
   "year": 1900

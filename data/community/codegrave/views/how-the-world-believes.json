@@ -32,7 +32,6 @@
     "jesus",
     "christianity",
     "bible",
-    "anno-domini",
     "muhammad",
     "islam",
     "quran",
@@ -44,8 +43,13 @@
     "haitian-vodou",
     "bahai-faith",
     "rastafari",
-    "sanskrit",
-    "arabic-alphabet"
+    "moses",
+    "protestant-reformation",
+    "catholic-church",
+    "eastern-orthodox-church",
+    "sunni-islam",
+    "shia-islam",
+    "pentecostalism"
   ],
   "checkpoints": [
     {
@@ -53,7 +57,7 @@
       "name": "Roots of belief",
       "from": -1500,
       "to": -501,
-      "note": "Priests in India chant the hymns of the Vedas, Persian teachers speak of one wise god, and the Hebrew people shape their law and stories. These are the oldest strands of belief still alive today."
+      "note": "Priests in India chant the hymns of the Vedas, Persian teachers speak of one wise god, and the Hebrew people shape their law and stories around Moses. These are the oldest strands of belief still alive today."
     },
     {
       "id": "teachers",
@@ -74,7 +78,7 @@
       "name": "Spread and reform",
       "from": 701,
       "to": 1800,
-      "note": "Faiths cross borders and divide. Buddhism travels across Asia, Shinto takes shape beside it, Sikhism begins in the Punjab, and enslaved Africans in the Caribbean blend memory with new ritual to create Vodou."
+      "note": "Faiths cross borders and divide. Islam splits into Sunni and Shia, Christianity into the Catholic and Orthodox churches and later the Protestant Reformation. Buddhism travels across Asia, Shinto takes shape beside it, Sikhism begins in the Punjab, and Vodou arises in the Caribbean."
     },
     {
       "id": "new-faiths",

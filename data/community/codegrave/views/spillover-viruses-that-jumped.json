@@ -1,6 +1,6 @@
 {
   "id": "spillover-viruses-that-jumped",
-  "name": "Spillover: Viruses That Jumped",
+  "name": "Viruses That Jumped: From Animals to People",
   "description": "From the first virus found in tobacco leaves to flu, Ebola, HIV, SARS and COVID-19: how infections cross between animals and people, and how we fought back.",
   "category": "life",
   "labels": [
@@ -28,7 +28,6 @@
     "smallpox",
     "hiv-aids",
     "hiv-aids-pandemic",
-    "bse",
     "rinderpest",
     "sars",
     "sars-outbreak-2003",
@@ -39,7 +38,8 @@
     "covid-19-pandemic",
     "mrna-vaccine",
     "polio-vaccine",
-    "oral-rehydration-therapy"
+    "influenza",
+    "rabies"
   ],
   "checkpoints": [
     {
@@ -54,14 +54,14 @@
       "name": "Flu waves and new viruses",
       "from": 1957,
       "to": 1980,
-      "note": "The Asian flu of 1957 and the Hong Kong flu of 1968 were pandemic influenza, and oral rehydration therapy saved children from diarrhoeal disease. Ebola was recognised in Africa in 1976, and smallpox, long a scourge, was driven out by vaccination, with global eradication declared in 1980."
+      "note": "The Asian flu of 1957 and the Hong Kong flu of 1968 were pandemic influenza. Ebola was recognised in Africa in 1976, and smallpox, long a scourge, was driven out by vaccination, with global eradication declared in 1980."
     },
     {
       "id": "hiv-era",
       "name": "The HIV era",
       "from": 1981,
       "to": 2001,
-      "note": "HIV/AIDS became a global pandemic. Mad cow disease (BSE) in British cattle, caused by a misfolded protein called a prion rather than a virus, was linked to a new human brain disease and showed how a farm disease could become a human one."
+      "note": "HIV/AIDS became a global pandemic after 1981. The virus is closely related to viruses found in African apes, and its spread showed how an infection that crosses between species can go round the world."
     },
     {
       "id": "new-outbreaks",

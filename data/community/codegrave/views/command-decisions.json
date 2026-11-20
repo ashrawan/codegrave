@@ -1,7 +1,7 @@
 {
   "id": "command-decisions",
   "name": "Command Decisions: The Leaders of the Second World War",
-  "description": "The dictators, prime ministers, generals and admirals who steered the war from Munich to Berlin and Hiroshima, and the battles that tested them.",
+  "description": "The dictators, prime ministers, generals and admirals of the Second World War, and the conferences and choices that turned on them, from Munich to Potsdam and Nuremberg.",
   "category": "people",
   "labels": [
     "war",
@@ -25,64 +25,60 @@
     "winston-churchill",
     "franklin-d-roosevelt",
     "joseph-stalin",
-    "world-war-ii",
     "manhattan-project",
     "heinz-guderian",
-    "battle-of-britain",
     "charles-de-gaulle",
-    "operation-barbarossa",
-    "attack-on-pearl-harbor",
     "isoroku-yamamoto",
-    "battle-of-midway",
     "chester-nimitz",
     "douglas-macarthur",
     "erwin-rommel",
     "bernard-montgomery",
-    "second-battle-of-el-alamein",
-    "battle-of-stalingrad",
     "georgy-zhukov",
     "chiang-kai-shek",
     "josip-broz-tito",
-    "battle-of-kursk",
     "dwight-d-eisenhower",
     "george-s-patton",
-    "normandy-landings",
-    "battle-of-the-bulge",
     "yalta-conference",
-    "battle-of-berlin",
     "harry-s-truman",
     "potsdam-conference",
     "atomic-bombings-of-hiroshima-and-nagasaki",
-    "nuremberg-trials"
+    "nuremberg-trials",
+    "neville-chamberlain",
+    "hideki-tojo",
+    "heinrich-himmler",
+    "wannsee-conference",
+    "haile-selassie",
+    "bretton-woods-system",
+    "un-charter"
   ],
   "checkpoints": [
     {
       "id": "road-to-war",
-      "name": "The road to war",
+      "name": "Appeasement and the fall of France",
       "from": 1938,
       "to": 1940,
-      "note": "Hitler and Mussolini test the democracies at Munich, then Hitler's invasion of Poland starts the Second World War. Guderian's tanks sweep through France, and Churchill leads Britain to a victory in the Battle of Britain."
+      "note": "Neville Chamberlain signs the Munich Agreement with Hitler and Mussolini in 1938, hoping to buy peace. Within a year Hitler's armies are at war, Guderian's tanks lead the sweep through France, de Gaulle refuses defeat from London, and Churchill replaces Chamberlain as Britain's leader. Roosevelt hears from scientists that a bomb may be possible."
     },
     {
       "id": "war-widens",
       "name": "The war widens",
       "from": 1941,
       "to": 1942,
-      "note": "Hitler attacks the Soviet Union in Operation Barbarossa and Japan strikes Pearl Harbor. Yamamoto's plan fails at Midway against Nimitz, Rommel is beaten at El Alamein by Montgomery, and Zhukov helps plan the counterattack that traps the Germans at Stalingrad."
+      "note": "Hitler turns on Stalin's Soviet Union, Haile Selassie returns to Ethiopia, and Tojo's government approves Yamamoto's plan to strike the American fleet. Nimitz takes the Pacific command and MacArthur leaves the Philippines, Rommel meets Montgomery in the desert, Zhukov plans the Soviet counterstroke, and Nazi officials at Wannsee plan the murder of Europe's Jews, carried out by Himmler's SS."
     },
     {
       "id": "tide-turns",
       "name": "The tide turns",
       "from": 1943,
       "to": 1944,
-      "note": "The Soviets win at Kursk, Tito's partisans tie down German troops, and MacArthur advances in the Pacific. Eisenhower commands the Normandy landings with Montgomery leading the ground forces, Patton's army breaks out that summer, and the Battle of the Bulge is Germany's last big attack in the west."
+      "note": "Tito's partisans tie down German divisions, Chiang Kai-shek keeps China in the war, and MacArthur and Nimitz split the Pacific advance. Eisenhower commands the Normandy landings, with Montgomery on the ground and Patton breaking out that summer. Rommel, linked to the plot against Hitler, is forced to kill himself, and Allied delegates at Bretton Woods design the post-war money system."
     },
     {
       "id": "victory-and-judgement",
       "name": "Victory and judgement",
       "from": 1945,
       "to": 1946,
-      "note": "Roosevelt, Churchill and Stalin plan the peace at Yalta, Berlin falls, and Truman meets Stalin at Potsdam. The atomic bombs end the war with Japan, and the Nuremberg trials judge the surviving Nazi leaders."
+      "note": "Roosevelt, Churchill and Stalin shape the peace at Yalta. Roosevelt dies in April 1945 and Truman inherits the war and the Manhattan Project's bomb. Hitler, Mussolini and Himmler die as their regimes fall, the UN Charter is signed, Truman meets Stalin at Potsdam, and after Hiroshima and Nagasaki Hirohito accepts surrender. The Nuremberg trials judge the surviving Nazi leaders."
     }
   ],
   "year": 1943

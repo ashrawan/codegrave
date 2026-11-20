@@ -39,36 +39,44 @@
     "rationalism",
     "utilitarianism",
     "existentialism",
-    "logical-positivism"
+    "logical-positivism",
+    "thales",
+    "laozi",
+    "augustine-of-hippo",
+    "thomas-aquinas",
+    "immanuel-kant",
+    "georg-hegel",
+    "friedrich-nietzsche",
+    "marxism"
   ],
   "checkpoints": [
     {
       "id": "axial-age",
       "name": "The age of questions",
-      "from": -563,
+      "from": -624,
       "to": -200,
-      "note": "In Athens, India and China, thinkers begin asking how we should live. Confucius, the Buddha, Socrates, Plato and Aristotle each propose answers, and their schools compete in the same few centuries."
+      "note": "In Greece, India and China, thinkers begin asking how we should live. Thales looks for natural causes, and Confucius, the Buddha, Laozi, Socrates, Plato and Aristotle each propose answers, their schools competing in the same few centuries."
     },
     {
       "id": "late-antiquity",
       "name": "Schools of the late ancient world",
       "from": -199,
       "to": 999,
-      "note": "Stoics, Epicureans and sceptics teach ways to find calm in uncertain times, while Neoplatonists reach for the One and Shankara in India argues that self and ultimate reality are the same."
+      "note": "Stoics, Epicureans and sceptics teach ways to find calm in uncertain times, while Neoplatonists reach for the One. Augustine joins Christian faith to Greek thought, and Shankara in India argues that self and ultimate reality are the same."
     },
     {
       "id": "medieval-to-early-modern",
       "name": "Faith, reason and the new learning",
       "from": 1000,
       "to": 1700,
-      "note": "Neo-Confucians in China, Scholastics in Europe and humanists in Italy reread the classics. Then thinkers turn to experience and to reason alone as the sources of certain knowledge."
+      "note": "Neo-Confucians in China, Scholastics in Europe, led by Thomas Aquinas, and humanists in Italy reread the classics. Then thinkers turn to experience and to reason alone as the sources of certain knowledge."
     },
     {
       "id": "modern-thought",
       "name": "Modern debates",
       "from": 1701,
       "to": 2026,
-      "note": "Philosophers weigh happiness, freedom and meaning. Utilitarians count consequences, existentialists stress choice, and logical positivists try to clear away statements that cannot be tested."
+      "note": "Kant and Hegel build vast systems, while Marx, utilitarians and Nietzsche test them. Philosophers weigh happiness, freedom and meaning, existentialists stress choice, and logical positivists try to clear away statements that cannot be tested."
     }
   ],
   "year": -400

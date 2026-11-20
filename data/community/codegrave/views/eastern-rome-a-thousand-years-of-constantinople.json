@@ -38,8 +38,12 @@
     "ottoman-empire",
     "mehmed-ii",
     "fall-of-constantinople",
-    "topkapi-palace",
-    "sultan-ahmed-mosque"
+    "theodosius-i",
+    "sasanian-empire",
+    "umayyad-caliphate",
+    "basil-ii",
+    "heraclius",
+    "theodora"
   ],
   "checkpoints": [
     {
@@ -47,7 +51,7 @@
       "name": "Constantine's new city",
       "from": 272,
       "to": 394,
-      "note": "Constantine the Great ended the persecution of Christians with the Edict of Milan, supported the Church of the Holy Sepulchre in Jerusalem, and founded a new capital on the Bosphorus in 330, the city later called Istanbul."
+      "note": "Constantine the Great ended the persecution of Christians with the Edict of Milan, supported the Church of the Holy Sepulchre in Jerusalem, and founded a new capital on the Bosphorus in 330, the city later called Istanbul. Theodosius I made Christianity the state religion in 380."
     },
     {
       "id": "age-of-justinian",
@@ -61,7 +65,7 @@
       "name": "Survival and fire",
       "from": 566,
       "to": 1070,
-      "note": "After Justinian the empire fought to survive against Persians, Arabs and others. Byzantine ships used Greek fire against attackers, and ties with Kievan Rus brought Orthodox Christianity to the Slavic lands."
+      "note": "After Justinian the empire fought to survive against Sasanian Persia and then the Arab caliphates, beginning with the Umayyads. Byzantine ships used Greek fire against attackers, and ties with Kievan Rus brought Orthodox Christianity to the Slavic lands."
     },
     {
       "id": "crusaders-and-turks",
@@ -74,8 +78,8 @@
       "id": "last-centuries",
       "name": "The last centuries",
       "from": 1261,
-      "to": 1700,
-      "note": "The Byzantines retook their capital in 1261 but never regained their strength. The Ottoman Empire grew, Mehmed II captured the city in 1453, and the sultans built Topkapi Palace and the Sultan Ahmed Mosque."
+      "to": 1453,
+      "note": "The Byzantines retook their capital in 1261 but never regained their strength. The Ottoman Empire grew around them, and in 1453 Mehmed II captured the city, ending the empire."
     }
   ]
 }

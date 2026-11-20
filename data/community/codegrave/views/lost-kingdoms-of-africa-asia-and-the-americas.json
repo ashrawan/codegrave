@@ -18,8 +18,6 @@
     "khmer"
   ],
   "entries": [
-    "elam",
-    "urartu",
     "kingdom-of-kush",
     "kushan-empire",
     "kingdom-of-aksum",
@@ -45,22 +43,28 @@
     "ashanti-empire",
     "zulu-kingdom",
     "ethiopian-empire",
-    "kingdom-of-hawaii"
+    "kingdom-of-hawaii",
+    "olmecs",
+    "silla",
+    "toltecs",
+    "chola-dynasty",
+    "tiwanaku",
+    "champa"
   ],
   "checkpoints": [
     {
       "id": "first-kingdoms",
       "name": "Early kingdoms",
-      "from": -2700,
+      "from": -2000,
       "to": 600,
-      "note": "Elam and Urartu rise in the highlands of Asia, Kush rules on the Nile, and Aksum trades across the Red Sea. In Mexico and Guatemala the Maya begin building their cities."
+      "note": "Kush rules on the Nile, Aksum trades across the Red Sea, the Kushan Empire spans Central Asia and India, and in Korea the kingdom of Silla begins. In Mexico and Guatemala the Olmecs and the Maya begin building their cities."
     },
     {
       "id": "golden-roads",
       "name": "Golden roads and temples",
       "from": 601,
       "to": 1300,
-      "note": "Ghana grows rich on gold and salt, Srivijaya controls the sea lanes of Southeast Asia, and Angkor raises its temples. Korea has its own kingdom of Goryeo while Benin and Ife make bronze art."
+      "note": "Ghana grows rich on gold and salt, Srivijaya controls the sea lanes of Southeast Asia, Angkor raises its temples and the Cholas rule south India. The Toltecs rise in Mexico, Korea has its own kingdom of Goryeo, and Benin and Ife make bronze art."
     },
     {
       "id": "courts-of-gold-and-sun",

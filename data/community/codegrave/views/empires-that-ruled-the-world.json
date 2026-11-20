@@ -21,7 +21,6 @@
     "assyria",
     "achaemenid-empire",
     "carthage",
-    "kingdom-of-macedon",
     "roman-republic",
     "roman-empire",
     "han-dynasty",
@@ -38,11 +37,15 @@
     "spanish-empire",
     "portuguese-empire",
     "russian-empire",
-    "first-french-empire",
     "british-empire",
     "german-empire",
     "empire-of-japan",
-    "soviet-union"
+    "soviet-union",
+    "inca-empire",
+    "aztec-empire",
+    "mali-empire",
+    "sasanian-empire",
+    "khmer-empire"
   ],
   "checkpoints": [
     {
@@ -57,14 +60,14 @@
       "name": "Classical giants",
       "from": -27,
       "to": 750,
-      "note": "Rome and Han China rule millions with law, coins and soldiers, while Byzantium carries Rome on in the east and the first caliphs build a new empire out of Arabia."
+      "note": "Rome and Han China rule millions with law, coins and soldiers, Sasanian Persia rivals Rome, Byzantium carries Rome on in the east, and the first caliphs build a new empire out of Arabia."
     },
     {
       "id": "caliphs-and-khans",
       "name": "Caliphs and khans",
       "from": 751,
       "to": 1450,
-      "note": "Baghdad, Tang China and the Mongols link continents by trade and conquest. The Mongols create the biggest land empire ever, and the Ottomans start their rise on the ruins of Byzantium."
+      "note": "Baghdad, Tang China and the Mongols link continents by trade and conquest. The Mongols create the biggest land empire ever, the Ottomans start their rise on the ruins of Byzantium, and far from Eurasia, Mali and the Khmer, and then the Aztec and Inca, build great empires."
     },
     {
       "id": "gunpowder-and-oceans",

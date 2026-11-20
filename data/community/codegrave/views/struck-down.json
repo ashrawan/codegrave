@@ -18,14 +18,12 @@
   ],
   "entries": [
     "julius-caesar",
-    "praetorian-guard",
     "caligula",
     "domitian",
     "commodus",
     "caracalla",
     "abraham-lincoln",
     "assassination-of-franz-ferdinand",
-    "world-war-i",
     "rosa-luxemburg",
     "michael-collins-politician",
     "leon-trotsky",
@@ -36,7 +34,11 @@
     "malcolm-x",
     "martin-luther-king-jr",
     "indira-gandhi",
-    "benazir-bhutto"
+    "benazir-bhutto",
+    "nicholas-ii",
+    "anwar-sadat",
+    "yitzhak-rabin",
+    "alexander-ii-of-russia"
   ],
   "checkpoints": [
     {
@@ -44,14 +46,14 @@
       "name": "Rome's knives",
       "from": -44,
       "to": 217,
-      "note": "Julius Caesar was stabbed by a group of senators in 44 BCE. Later emperors lived under the watch of the Praetorian Guard, whose officers had a hand in several killings: Caligula died in 41, Domitian in 96, Commodus in 192 and Caracalla in 217."
+      "note": "Julius Caesar was stabbed by a group of senators in 44 BCE. Later emperors lived under the threat of their own guards and courts: Caligula died in 41, Domitian in 96, Commodus in 192 and Caracalla in 217."
     },
     {
       "id": "shots-that-began-a-war",
       "name": "A shot that began a war",
       "from": 1865,
       "to": 1919,
-      "note": "John Wilkes Booth shot Abraham Lincoln in 1865, days after the Civil War's main fighting ended. In 1914 Gavrilo Princip shot Archduke Franz Ferdinand in Sarajevo, and within weeks Europe was at war in World War I. In January 1919 Rosa Luxemburg was killed in Berlin."
+      "note": "John Wilkes Booth shot Abraham Lincoln in 1865, days after the Civil War's main fighting ended. In 1914 Gavrilo Princip shot Archduke Franz Ferdinand in Sarajevo, and within weeks Europe was at war. The last tsar, Nicholas II, was shot with his family in 1918, and Rosa Luxemburg was killed in Berlin in January 1919."
     },
     {
       "id": "between-the-wars",

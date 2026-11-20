@@ -18,13 +18,11 @@
   "entries": [
     "lacrosse",
     "baseball",
-    "america-s-cup",
     "american-football",
     "ice-hockey",
     "brooklyn-dodgers",
     "jim-thorpe",
     "basketball",
-    "volleyball",
     "babe-ruth",
     "boston-marathon",
     "national-basketball-association",
@@ -38,7 +36,10 @@
     "lebron-james",
     "tiger-woods",
     "serena-williams",
-    "simone-biles"
+    "simone-biles",
+    "jesse-owens",
+    "national-football-league",
+    "major-league-baseball"
   ],
   "checkpoints": [
     {
@@ -46,21 +47,21 @@
       "name": "Games before leagues",
       "from": 1636,
       "to": 1869,
-      "note": "Lacrosse, a game with Native American roots, is already being played when settlers arrive. The Knickerbockers write down baseball rules in 1845, the America's Cup yacht race begins in 1851, and in 1869 Rutgers and Princeton play an early game of American football."
+      "note": "Lacrosse, a game with Native American roots, is already being played when settlers arrive. The Knickerbockers write down baseball rules in 1845, and in 1869 Rutgers and Princeton play an early game of American football."
     },
     {
       "id": "new-games-for-new-cities",
       "name": "New games for new cities",
       "from": 1870,
       "to": 1919,
-      "note": "Ice hockey is first played indoors in Montreal in 1875. The Brooklyn Dodgers form in 1884, James Naismith invents basketball in 1891 and volleyball follows in 1895. The Boston Marathon starts in 1897, and in 1912 Jim Thorpe wins Olympic gold medals, while Babe Ruth begins his baseball career."
+      "note": "Ice hockey is first played indoors in Montreal in 1875. Baseball's National League begins in 1876, the Brooklyn Dodgers form in 1884, and James Naismith invents basketball in 1891. The Boston Marathon starts in 1897, and in 1912 Jim Thorpe wins Olympic gold medals."
     },
     {
       "id": "big-leagues",
       "name": "Big leagues",
       "from": 1920,
       "to": 1959,
-      "note": "Babe Ruth becomes baseball's first superstar. The National Basketball Association is founded in 1946, Jackie Robinson plays for the Dodgers in 1947 and breaks baseball's colour line, and the Dodgers leave Brooklyn after the 1957 season."
+      "note": "Babe Ruth, who began pitching in 1914, becomes baseball's first superstar, and the National Football League takes shape in 1920. Jesse Owens wins four gold medals at the 1936 Olympics. The NBA is founded in 1946, Jackie Robinson breaks baseball's colour line in 1947, and the Dodgers leave Brooklyn after 1957."
     },
     {
       "id": "television-and-superstars",

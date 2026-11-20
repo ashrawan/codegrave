@@ -18,7 +18,6 @@
     "independence"
   ],
   "entries": [
-    "elizabeth-i",
     "virginia-company",
     "colony-of-virginia",
     "east-india-company",
@@ -34,10 +33,8 @@
     "first-opium-war",
     "british-hong-kong",
     "victoria",
-    "great-exhibition-1851",
     "indian-rebellion-of-1857",
     "british-raj",
-    "suez-canal",
     "david-livingstone",
     "scramble-for-africa",
     "cecil-rhodes",
@@ -50,7 +47,15 @@
     "suez-crisis",
     "mau-mau-rebellion",
     "ghana",
-    "kwame-nkrumah"
+    "kwame-nkrumah",
+    "australia",
+    "canada",
+    "new-zealand",
+    "treaty-of-waitangi",
+    "great-irish-famine",
+    "jawaharlal-nehru",
+    "muhammad-ali-jinnah",
+    "falklands-war"
   ],
   "checkpoints": [
     {
@@ -58,7 +63,7 @@
       "name": "Merchants and colonies",
       "from": 1583,
       "to": 1775,
-      "note": "Under Elizabeth I the East India Company is founded, and under James I the Virginia Company plants colonies. The Royal African Company feeds the Atlantic slave trade, and victory at Plassey and Cook's voyage widen Britain's reach."
+      "note": "The East India Company is founded in 1600, and under James I the Virginia Company plants colonies. The Royal African Company feeds the Atlantic slave trade, and victory at Plassey and Cook's voyage widen Britain's reach."
     },
     {
       "id": "war-and-abolition",
@@ -72,21 +77,21 @@
       "name": "The Victorian peak",
       "from": 1838,
       "to": 1900,
-      "note": "Under Queen Victoria the empire reaches its height. The Opium War gives Britain Hong Kong, the Great Exhibition shows off its industry, the 1857 rebellion leads to the Raj, and Rhodes and the Scramble for Africa bring new wars with the Zulu and Boers."
+      "note": "Under Queen Victoria the empire reaches its height. The Opium War gives Britain Hong Kong, the Treaty of Waitangi brings New Zealand under the Crown, the Great Famine devastates Ireland, Canada becomes a self-governing dominion in 1867, the 1857 rebellion leads to the Raj, and the Scramble for Africa brings wars with the Zulu and Boers."
     },
     {
       "id": "strain",
       "name": "Strain and awakening",
       "from": 1901,
       "to": 1945,
-      "note": "The empire is stretched by world wars while Indian nationalism grows. Gandhi's Salt March shows the power of mass protest, and the British Empire begins to lose its hold on its richest colony."
+      "note": "Australia and New Zealand become self-governing dominions and the empire is stretched by world wars while Indian nationalism grows. Gandhi's Salt March shows the power of mass protest, and Jinnah presses for a separate state for India's Muslims."
     },
     {
       "id": "end-of-empire",
       "name": "The flags come down",
       "from": 1946,
       "to": 1997,
-      "note": "India and Pakistan are born in the Partition of India, the Suez crisis exposes Britain's weakness, and the Mau Mau rebellion in Kenya shakes colonial rule. Nkrumah's Ghana is the first British colony in sub-Saharan Africa to win independence, and Hong Kong returns to China in 1997."
+      "note": "India and Pakistan are born in the Partition of India under Nehru and Jinnah, the Suez crisis exposes Britain's weakness, and the Mau Mau rebellion in Kenya shakes colonial rule. Nkrumah's Ghana is the first British colony in sub-Saharan Africa to win independence, Britain fights the Falklands War in 1982, and Hong Kong returns to China in 1997."
     }
   ],
   "year": 1880

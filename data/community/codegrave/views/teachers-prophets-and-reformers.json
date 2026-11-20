@@ -1,5 +1,5 @@
 {
-  "id": "the-founders-of-the-worlds-faiths",
+  "id": "teachers-prophets-and-reformers",
   "name": "Teachers, Prophets and Reformers of the World's Faiths",
   "description": "From Mahavira and the Buddha to the Reformation and the leaders of today, the religious figures who founded, renewed or reshaped great traditions.",
   "category": "people",
@@ -25,7 +25,6 @@
     "paul-the-apostle",
     "muhammad",
     "ali-ibn-abi-talib",
-    "augustine-of-hippo",
     "kukai",
     "adi-shankara",
     "hildegard-of-bingen",
@@ -33,28 +32,33 @@
     "rumi",
     "nichiren",
     "guru-nanak",
-    "ninety-five-theses",
     "martin-luther",
-    "huldrych-zwingli",
     "protestant-reformation",
     "john-calvin",
     "ignatius-of-loyola",
-    "teresa-of-avila",
     "john-wesley",
     "joseph-smith",
     "mother-teresa",
     "14th-dalai-lama",
-    "pope-john-paul-ii",
-    "desmond-tutu",
-    "pope-francis"
+    "moses",
+    "abraham",
+    "zoroaster",
+    "laozi"
   ],
   "checkpoints": [
+    {
+      "id": "first-prophets",
+      "name": "The first prophets",
+      "from": -2000,
+      "to": -600,
+      "note": "Abraham, honoured by Jews, Christians and Muslims, and Moses, who gave the law in Jewish tradition, are known mainly from sacred texts, and Zoroaster's dates are disputed and may lie well before 600 BCE. Their stories shaped three of the world's faiths."
+    },
     {
       "id": "age-of-teachers",
       "name": "The age of teachers",
       "from": -599,
       "to": -479,
-      "note": "In India and China, Mahavira, the Buddha and Confucius teach ways of living that shape huge parts of Asia. Their dates are traditional, and their words were written down by followers."
+      "note": "In India and China, Mahavira, the Buddha, Confucius and, by tradition, Laozi teach ways of living that shape huge parts of Asia. Their dates are traditional, and their words were written down by followers."
     },
     {
       "id": "new-faiths-spread",
@@ -75,14 +79,14 @@
       "name": "The Great Reformers",
       "from": 1469,
       "to": 1582,
-      "note": "Guru Nanak founds Sikhism, and Luther's challenge to Rome in 1517 begins the Reformation. Zwingli and Calvin build new churches, while Ignatius and Teresa renew the Catholic one."
+      "note": "Guru Nanak founds Sikhism, and Luther's challenge to Rome in 1517 begins the Reformation. Calvin builds a new church, while Ignatius renews the Catholic one."
     },
     {
       "id": "the-modern-world",
       "name": "Faith in the modern world",
       "from": 1703,
       "to": 2025,
-      "note": "Wesley, Joseph Smith, Mother Teresa, the Dalai Lama, two popes and Desmond Tutu show religion at work in preaching, new movements, charity, exile and the fight against apartheid."
+      "note": "Wesley, Joseph Smith, Mother Teresa and the Dalai Lama show religion at work in preaching, new movements, charity and exile."
     }
   ],
   "year": 1500

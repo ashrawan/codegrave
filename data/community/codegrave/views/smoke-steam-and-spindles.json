@@ -27,7 +27,6 @@
     "industrial-revolution",
     "iron-bridge",
     "wealth-of-nations",
-    "cotton-gin",
     "george-stephenson",
     "stephensons-rocket",
     "liverpool-and-manchester-railway",
@@ -43,8 +42,12 @@
     "bessemer-process",
     "transatlantic-telegraph-cable",
     "suez-canal",
-    "telephone",
-    "steam-turbine"
+    "steam-turbine",
+    "chartists",
+    "corn-laws",
+    "broad-street-cholera",
+    "krupp",
+    "meiji-restoration"
   ],
   "checkpoints": [
     {
@@ -59,28 +62,28 @@
       "name": "Iron and wealth",
       "from": 1776,
       "to": 1829,
-      "note": "The Iron Bridge shows what cast iron can do, Adam Smith's Wealth of Nations explains the new economy, and Stephenson's Rocket proves steam trains can work."
+      "note": "The Iron Bridge shows what cast iron can do, Adam Smith's Wealth of Nations explains the new economy, the Corn Laws of 1815 keep grain dear, and Stephenson's Rocket proves steam trains can work."
     },
     {
       "id": "railway-age",
       "name": "The railway age",
       "from": 1830,
       "to": 1850,
-      "note": "The Liverpool and Manchester Railway opens, telegraph wires follow the lines, and Brunel builds tunnels and ships. Railway Mania ruins investors, Dickens writes of the poor, and Marx publishes The Communist Manifesto."
+      "note": "The Liverpool and Manchester Railway opens, telegraph wires follow the lines, and Brunel builds tunnels and ships. Chartists march for the vote, Railway Mania ruins investors, Dickens writes of the poor, and Marx publishes The Communist Manifesto."
     },
     {
       "id": "workshop-of-the-world",
       "name": "Workshop of the world",
       "from": 1851,
       "to": 1879,
-      "note": "The Great Exhibition shows British industry to the world. The Bessemer process makes cheap steel, cables and the Suez Canal shrink distances, and the telephone arrives."
+      "note": "The Great Exhibition shows British industry to the world. The Bessemer process makes cheap steel, cables and the Suez Canal shrink distances, and the cholera outbreak of 1854 in Broad Street shows the cost of crowded cities."
     },
     {
       "id": "second-wave",
       "name": "The second wave",
       "from": 1880,
       "to": 1914,
-      "note": "Steam turbines, electricity and steel take over from the first generation, and the industrial revolution spreads to Germany, the United States and Japan."
+      "note": "Steam turbines, electricity and steel take over from the first generation, and industry spreads to Germany, where Krupp grows into a giant, and to Japan, which began to industrialise after the Meiji Restoration."
     }
   ],
   "year": 1800

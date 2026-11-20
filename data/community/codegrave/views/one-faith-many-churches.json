@@ -30,7 +30,6 @@
     "dominican-order",
     "thomas-aquinas",
     "gutenberg-bible",
-    "sistine-chapel-ceiling",
     "martin-luther",
     "protestant-reformation",
     "huldrych-zwingli",
@@ -44,10 +43,17 @@
     "latter-day-saints",
     "joseph-smith",
     "salvation-army",
-    "opus-dei",
     "mother-teresa",
     "pope-john-paul-ii",
-    "pope-francis"
+    "pope-francis",
+    "eastern-orthodox-church",
+    "catholic-church",
+    "byzantine-empire",
+    "hagia-sophia",
+    "first-crusade",
+    "saint-peter",
+    "east-west-schism",
+    "first-council-of-nicaea"
   ],
   "checkpoints": [
     {
@@ -55,21 +61,21 @@
       "name": "The first followers",
       "from": -5,
       "to": 312,
-      "note": "Jesus taught in Galilee and Judea, and after his death his followers spread the message through the Roman world. Paul the apostle carried it to Gentile cities and wrote letters that became part of the Christian scriptures."
+      "note": "Jesus taught in Galilee and Judea, and after his death his followers, among them Peter, spread the message through the Roman world. Paul the apostle carried it to Gentile cities and wrote letters that became part of the Christian scriptures."
     },
     {
       "id": "empire-and-monks",
       "name": "Empire, monks and friars",
       "from": 313,
       "to": 1400,
-      "note": "Constantine ended official persecution and Christianity grew with state support. Augustine shaped Western theology, Benedict gave monks a rule, Francis and the friars preached in towns, and Aquinas joined faith to philosophy. Lalibela in Ethiopia has churches carved from rock."
+      "note": "Constantine ended official persecution, and the empire's eastern half became Byzantium, whose church and Hagia Sophia led the Orthodox world. Augustine shaped Western theology, Benedict gave monks a rule, the First Crusade marched east, Francis and the friars preached in towns, Aquinas joined faith to philosophy, and Lalibela in Ethiopia has churches carved from rock."
     },
     {
       "id": "breaking-apart",
       "name": "The Western church divides",
       "from": 1401,
       "to": 1599,
-      "note": "Printing carried the Bible to new readers. Martin Luther sparked the Protestant Reformation, Zwingli and Calvin built reformed churches, Henry VIII created the Church of England, and Ignatius founded the Jesuits as Catholic reform gathered pace."
+      "note": "Printing carried the Bible to new readers. Martin Luther sparked the Protestant Reformation, Zwingli and Calvin built reformed churches, Henry VIII created the Church of England, and Ignatius founded the Jesuits as the Catholic Church gathered pace in reform."
     },
     {
       "id": "new-movements",
@@ -83,7 +89,7 @@
       "name": "A global faith",
       "from": 1900,
       "to": 2025,
-      "note": "Christianity became a worldwide religion with large communities on every continent. Figures such as Mother Teresa, Pope John Paul II and Pope Francis became known far beyond their own churches, and the Opus Dei movement grew within Catholicism."
+      "note": "Christianity became a worldwide religion with large communities on every continent. Figures such as Mother Teresa, Pope John Paul II and Pope Francis became known far beyond their own churches."
     }
   ]
 }

@@ -51,7 +51,16 @@
     "vint-cerf",
     "tim-berners-lee",
     "linus-torvalds",
-    "guido-van-rossum"
+    "guido-van-rossum",
+    "difference-engine",
+    "punched-card",
+    "turing-machine",
+    "xerox-alto",
+    "altair-8800",
+    "arpanet",
+    "world-wide-web",
+    "john-von-neumann",
+    "claude-shannon"
   ],
   "checkpoints": [
     {
@@ -59,7 +68,7 @@
       "name": "Dreams of engines",
       "from": 1646,
       "to": 1935,
-      "note": "Leibniz imagined calculating machines, Babbage designed an Analytical Engine, and Ada Lovelace saw that it could do more than arithmetic. Boole's algebra of logic would later underpin digital circuits."
+      "note": "Leibniz imagined calculating machines, Babbage designed the Difference Engine and then the Analytical Engine, and Ada Lovelace saw that it could do more than arithmetic. Punched cards, first used on looms, became a way to feed data to machines, and Boole's algebra of logic would later underpin digital circuits."
     },
     {
       "id": "war-and-first-programs",
@@ -80,7 +89,7 @@
       "name": "Unix and the personal computer",
       "from": 1971,
       "to": 1989,
-      "note": "Thompson and Ritchie made Unix and the C language, Wozniak and Jobs built the Apple, Gates wrote software for it all, and Kahn and Cerf designed the shared protocols of the network."
+      "note": "Thompson and Ritchie made Unix and the C language, the Xerox Alto showed a screen driven by a mouse, the Altair 8800 sparked the hobbyist market, Wozniak and Jobs built the Apple, Gates wrote software for it all, and Kahn and Cerf designed the shared protocols for ARPANET and the internet."
     },
     {
       "id": "web-and-open-source",

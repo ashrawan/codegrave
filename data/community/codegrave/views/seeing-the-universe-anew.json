@@ -48,7 +48,10 @@
     "plate-tectonics",
     "cosmic-microwave-background",
     "higgs-boson",
-    "first-gravitational-wave-detection"
+    "first-gravitational-wave-detection",
+    "antoine-lavoisier",
+    "electron",
+    "black-hole"
   ],
   "checkpoints": [
     {
@@ -63,14 +66,14 @@
       "name": "The scientific revolution",
       "from": 1600,
       "to": 1799,
-      "note": "Galileo turns a telescope to the sky, Kepler finds the shape of orbits, and Newton explains them with one law of gravity and a new kind of mathematics."
+      "note": "Galileo turns a telescope to the sky, Kepler finds the shape of orbits, and Newton explains them with one law of gravity and a new kind of mathematics. Lavoisier later shows that burning needs oxygen and lays the ground for modern chemistry."
     },
     {
       "id": "nineteenth-century",
       "name": "Matter, life and light",
       "from": 1800,
       "to": 1899,
-      "note": "Atoms, cells, inherited traits, evolution and the electromagnetic field enter science, though atoms and Mendel's laws win wide acceptance only after 1900. Chemists order the elements, doctors trace disease to germs, and Becquerel finds radioactivity."
+      "note": "Atoms, cells, inherited traits, evolution and the electromagnetic field enter science, though atoms and Mendel's laws win wide acceptance only after 1900. Chemists order the elements, doctors trace disease to germs, Becquerel finds radioactivity, and the electron is identified as the first particle smaller than an atom."
     },
     {
       "id": "modern-physics",
@@ -84,7 +87,7 @@
       "name": "Reading the cosmos and the cell",
       "from": 1950,
       "to": 2026,
-      "note": "The structure of DNA is solved, the continents are shown to drift and an echo of the Big Bang is heard. The Higgs boson confirms a prediction made in 1964, and gravitational waves confirm a theory a century old."
+      "note": "The structure of DNA is solved, the continents are shown to drift and an echo of the Big Bang is heard. The Higgs boson confirms a prediction made in 1964, black holes move from theory to observation, and gravitational waves confirm a theory a century old."
     }
   ],
   "year": 1687

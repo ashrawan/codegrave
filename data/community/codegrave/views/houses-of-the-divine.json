@@ -43,7 +43,10 @@
     "great-mosque-of-djenne",
     "cologne-cathedral",
     "sagrada-familia",
-    "antoni-gaudi"
+    "antoni-gaudi",
+    "kaaba",
+    "karnak",
+    "sultan-ahmed-mosque"
   ],
   "checkpoints": [
     {
@@ -51,7 +54,7 @@
       "name": "Stones, sun and pharaohs",
       "from": -9999,
       "to": -1000,
-      "note": "The earliest monuments line up with the sun and the dead. Hunter-gatherers raised pillars at Gobekli Tepe, farmers built Newgrange, and Egyptian kings carved temples and pyramids on a vast scale."
+      "note": "The earliest monuments line up with the sun and the dead. Hunter-gatherers raised pillars at Gobekli Tepe, farmers built Newgrange, and Egyptian kings carved temples and pyramids on a vast scale, as at Karnak."
     },
     {
       "id": "classical-temples",
@@ -65,7 +68,7 @@
       "name": "Domes and early mosques",
       "from": 401,
       "to": 1100,
-      "note": "The domed Hagia Sophia showed what Byzantine builders could do, and soon the Dome of the Rock and the Great Mosque of Cordoba set the form of Islamic architecture. In Java, Borobudur became a Buddhist mountain."
+      "note": "The domed Hagia Sophia showed what Byzantine builders could do, and the Kaaba in Mecca stood at the heart of Muslim worship. Soon the Dome of the Rock and the Great Mosque of Cordoba set the form of Islamic architecture. In Java, Borobudur became a Buddhist mountain."
     },
     {
       "id": "the-age-of-cathedrals",
@@ -79,7 +82,7 @@
       "name": "Baroque to the modern",
       "from": 1501,
       "to": 2026,
-      "note": "St. Peter's crowned Rome, the Golden Temple gave Sikhs a central shrine, and Djenne's mud mosque showed a Sahelian tradition. Cologne took six centuries and Sagrada Familia is still going."
+      "note": "St. Peter's crowned Rome, the Golden Temple gave Sikhs a central shrine, and the Sultan Ahmed Mosque raised the Ottoman dome. Djenne's mud mosque showed a Sahelian tradition, and Cologne took six centuries while Sagrada Familia is still going."
     }
   ],
   "year": 1200

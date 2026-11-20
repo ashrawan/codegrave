@@ -23,7 +23,6 @@
     "lamarckism",
     "hms-beagle",
     "beagle-voyage",
-    "galapagos-national-park",
     "charles-darwin",
     "alfred-russel-wallace",
     "natural-selection",
@@ -35,14 +34,19 @@
     "tiktaalik",
     "cambrian-explosion",
     "neanderthals",
-    "homo-erectus",
     "lucy-fossil",
     "homo-sapiens",
     "scopes-trial",
     "dna-double-helix",
     "rosalind-franklin",
     "barbara-mcclintock",
-    "jane-goodall"
+    "jane-goodall",
+    "galapagos-islands",
+    "francis-crick",
+    "james-watson",
+    "human-genome-project",
+    "thomas-henry-huxley",
+    "modern-synthesis"
   ],
   "checkpoints": [
     {
@@ -57,7 +61,7 @@
       "name": "The voyage and the idea",
       "from": 1831,
       "to": 1858,
-      "note": "Darwin sailed on HMS Beagle for five years and saw odd animals on the Galapagos. Years of private thought led him to natural selection, and a letter from Alfred Russel Wallace pushed him to publish."
+      "note": "Darwin sailed on HMS Beagle for five years and saw odd animals on the Galapagos Islands. Years of private thought led him to natural selection, and a letter from Alfred Russel Wallace pushed him to publish."
     },
     {
       "id": "the-book-and-battle",
@@ -78,7 +82,7 @@
       "name": "DNA and our own origins",
       "from": 1953,
       "to": 2026,
-      "note": "Franklin's X-ray work helped reveal the double helix, giving heredity a physical basis. Fossils like Lucy, studies of Neanderthals and Goodall's chimpanzees now place Homo sapiens within the tree of life."
+      "note": "Franklin's X-ray work helped Watson and Crick work out the double helix, giving heredity a physical basis. The Human Genome Project later read human DNA, and fossils like Lucy, Neanderthals and Goodall's chimpanzees place Homo sapiens within the tree of life."
     }
   ],
   "year": 1859

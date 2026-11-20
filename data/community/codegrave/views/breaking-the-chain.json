@@ -1,7 +1,7 @@
 {
   "id": "breaking-the-chain",
   "name": "Breaking the Chain: The Fight to End Slavery",
-  "description": "From the Atlantic trade to the Thirteenth Amendment: the rebels, writers and politicians who ended legal slavery, and the late endings that followed.",
+  "description": "From the Atlantic trade to the last abolitions: the enslaved rebels, campaigners, writers and lawmakers who ended legal slavery across the Atlantic world, and how it is remembered.",
   "category": "people",
   "labels": [
     "human-rights",
@@ -23,22 +23,26 @@
     "haitian-revolution",
     "toussaint-louverture",
     "haiti",
-    "cotton-gin",
     "slavery-abolition-act-1833",
     "frederick-douglass",
     "sojourner-truth",
     "harriet-tubman",
     "uncle-toms-cabin",
-    "john-browns-raid",
     "abraham-lincoln",
-    "american-civil-war",
     "emancipation-proclamation",
-    "gettysburg-address",
     "thirteenth-amendment",
-    "reconstruction-era",
-    "fourteenth-amendment",
     "empire-of-brazil",
-    "roots-miniseries"
+    "roots-miniseries",
+    "sugar",
+    "kingdom-of-kongo",
+    "kingdom-of-dahomey",
+    "ashanti-empire",
+    "olaudah-equiano",
+    "william-wilberforce",
+    "jean-jacques-dessalines",
+    "cotton",
+    "universal-declaration-of-human-rights",
+    "toni-morrison"
   ],
   "checkpoints": [
     {
@@ -46,35 +50,35 @@
       "name": "A trade in people",
       "from": 1500,
       "to": 1790,
-      "note": "From the early sixteenth century ships carried millions of enslaved Africans across the Atlantic, a trade in which firms such as the Royal African Company took part. The Quakers were among the first groups to condemn slavery and to refuse to own people."
+      "note": "From the early sixteenth century ships carried millions of enslaved Africans across the Atlantic to grow sugar. Dahomey and the Ashanti Empire sold captives, a king of Kongo protested to Portugal in vain, and firms such as the Royal African Company profited. The Quakers were among the first to condemn slavery, and Olaudah Equiano's life story of 1789 moved British readers."
     },
     {
       "id": "revolt-and-law",
       "name": "Revolt and law",
       "from": 1791,
       "to": 1833,
-      "note": "Enslaved people in Saint-Domingue rose in 1791. Toussaint Louverture led the revolution until the French seized him in 1802, and Jean-Jacques Dessalines declared Haiti independent in 1804. In the United States the cotton gin made cotton farming more profitable and tied it more firmly to slavery. Britain passed the Slavery Abolition Act in 1833."
+      "note": "Enslaved people in Saint-Domingue rose in 1791. Toussaint Louverture led the revolution until the French seized him in 1802, and Jean-Jacques Dessalines declared Haiti independent in 1804. In Britain William Wilberforce led the campaign that banned the slave trade in 1807, the Slavery Abolition Act followed in 1833, and in the United States cotton spread slavery west."
     },
     {
       "id": "voices-of-freedom",
       "name": "Voices of freedom",
       "from": 1834,
       "to": 1860,
-      "note": "Frederick Douglass, who had escaped slavery, became a leading speaker and writer. Sojourner Truth spoke for abolition, and Harriet Tubman helped others flee north. Uncle Tom's Cabin reached a wide public in 1852, and John Brown's raid in 1859 pushed the country nearer to war."
+      "note": "Frederick Douglass, who had escaped slavery, became a leading speaker and writer. Sojourner Truth spoke for abolition and for women's rights, and Harriet Tubman led others north to freedom. Uncle Tom's Cabin reached a wide public in 1852 and made slavery the question American politics could not avoid."
     },
     {
       "id": "war-and-amendments",
-      "name": "War and amendments",
+      "name": "Emancipation in America",
       "from": 1861,
-      "to": 1877,
-      "note": "After Abraham Lincoln's election the American Civil War began in 1861. His Emancipation Proclamation of 1863 declared enslaved people in rebel areas free, and the Gettysburg Address spoke of the cause. The Thirteenth Amendment ended slavery in 1865; the Fourteenth followed in 1868 in the Reconstruction era."
+      "to": 1865,
+      "note": "During the American Civil War, Abraham Lincoln's Emancipation Proclamation of 1863 declared enslaved people in rebel areas free, Harriet Tubman guided a Union raid that freed hundreds, and the Thirteenth Amendment ended slavery throughout the United States in 1865."
     },
     {
       "id": "late-endings-and-memory",
       "name": "Late endings and memory",
-      "from": 1878,
-      "to": 1977,
-      "note": "The Empire of Brazil ended slavery in 1888, the last country in the Americas to do so, the year before the monarchy fell. The 1977 television miniseries Roots followed one family from Africa through slavery and brought the history before millions of viewers."
+      "from": 1866,
+      "to": 2019,
+      "note": "The Empire of Brazil ended slavery in 1888, the last country in the Americas to do so, the year before its monarchy fell. In 1948 the Universal Declaration of Human Rights said that no one shall be held in slavery. The 1977 miniseries Roots and the novels of Toni Morrison brought the history of slavery before millions."
     }
   ],
   "year": 1863

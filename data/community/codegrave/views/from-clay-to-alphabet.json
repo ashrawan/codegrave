@@ -43,7 +43,9 @@
     "braille",
     "cherokee-syllabary",
     "jean-francois-champollion",
-    "esperanto"
+    "esperanto",
+    "rosetta-stone",
+    "papyrus"
   ],
   "checkpoints": [
     {
@@ -51,7 +53,7 @@
       "name": "Marks on clay and stone",
       "from": -3400,
       "to": -1001,
-      "note": "Scribes in Sumer, Egypt, the Indus Valley and China invent writing independently. Some scripts, like cuneiform and hieroglyphs, serve for thousands of years; others, like the Indus signs, stay silent."
+      "note": "Scribes in Sumer, Egypt, the Indus Valley and China invent writing independently. Some scripts, like cuneiform and hieroglyphs, serve for thousands of years, with Egyptians writing on papyrus; others, like the Indus signs, stay silent."
     },
     {
       "id": "alphabet-spreads",
@@ -79,7 +81,7 @@
       "name": "Lost scripts found again",
       "from": 1800,
       "to": 2026,
-      "note": "Champollion reads hieroglyphs, Ventris reads Linear B, and Sequoyah, Braille and Zamenhof show that new systems can be built by one person. Some scripts, like Linear A and the Indus script, still resist."
+      "note": "Using the Rosetta Stone, Champollion reads hieroglyphs in 1822, Ventris reads Linear B, and Sequoyah, Braille and Zamenhof show that new systems can be built by one person. Some scripts, like Linear A and the Indus script, still resist."
     }
   ],
   "year": -1000

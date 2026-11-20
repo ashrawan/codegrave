@@ -43,7 +43,14 @@
     "chernobyl-disaster",
     "lithium-ion-battery",
     "tokamak",
-    "iter"
+    "iter",
+    "michael-faraday",
+    "nikola-tesla",
+    "war-of-the-currents",
+    "industrial-revolution",
+    "opec",
+    "fukushima-accident",
+    "coal"
   ],
   "checkpoints": [
     {
@@ -58,14 +65,14 @@
       "name": "Wind, water and steam",
       "from": 1,
       "to": 1799,
-      "note": "Windmills and watermills spread, and in the early eighteenth century steam engines begin to pump mines. James Watt makes them efficient."
+      "note": "Windmills and watermills spread, and in the early eighteenth century steam engines begin to pump mines. James Watt makes them efficient, and steam power drives the Industrial Revolution."
     },
     {
       "id": "electric-century-dawn",
       "name": "Electricity arrives",
       "from": 1800,
       "to": 1899,
-      "note": "Batteries, motors and lamps appear. Edison builds a power station in New York, hydropower and wind turbines begin, and oil and diesel start a new age."
+      "note": "Faraday's discoveries lead to motors, and batteries and lamps appear. Edison builds a power station in New York, Tesla's alternating current wins the War of the Currents, hydropower and wind turbines begin, and oil and diesel start a new age."
     },
     {
       "id": "oil-and-the-atom",
@@ -79,7 +86,7 @@
       "name": "Atoms, sun and the fusion dream",
       "from": 1954,
       "to": 2026,
-      "note": "Nuclear plants, solar cells and lithium batteries spread, an accident at Chernobyl shows the risks, and scientists build giant machines to try to copy the Sun."
+      "note": "OPEC, formed in 1960, gives oil producers a shared voice. Nuclear plants, solar cells and lithium batteries spread, accidents at Chernobyl and Fukushima show the risks, and scientists build giant machines to try to copy the Sun."
     }
   ],
   "year": 1900

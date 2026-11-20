@@ -15,7 +15,6 @@
     "shinkansen"
   ],
   "entries": [
-    "stagecoach",
     "newcomen-engine",
     "steam-engine",
     "james-watt",
@@ -34,7 +33,9 @@
     "lner-a4-mallard",
     "shinkansen",
     "tgv",
-    "shanghai-maglev-train"
+    "shanghai-maglev-train",
+    "liverpool-and-manchester-railway",
+    "diesel-engine"
   ],
   "checkpoints": [
     {
@@ -42,14 +43,14 @@
       "name": "Before the rails",
       "from": 1610,
       "to": 1799,
-      "note": "Coaches and wagons crawl along muddy roads while Newcomen and Watt teach steam to pump and turn. A steam wagon in France shows that an engine can move itself, if slowly."
+      "note": "Wagons crawl along muddy roads while Newcomen and Watt teach steam to pump and turn. A steam wagon in France shows that an engine can move itself, if slowly."
     },
     {
       "id": "iron-roads",
       "name": "The first iron roads",
       "from": 1800,
       "to": 1869,
-      "note": "Stephenson's Locomotion and Rocket prove that steam locomotives can carry people and goods. Cities build tram lines and the first underground, and America links its coasts by rail in 1869."
+      "note": "Stephenson's Locomotion and Rocket prove that steam locomotives can carry people and goods, and the Liverpool and Manchester Railway opens in 1830 as the first between two cities. Cities build tram lines and the first underground, and America links its coasts by rail in 1869."
     },
     {
       "id": "empires-of-steel",

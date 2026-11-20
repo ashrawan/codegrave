@@ -48,7 +48,14 @@
     "dropbox",
     "chromebook",
     "raspberry-pi",
-    "frontier-supercomputer"
+    "frontier-supercomputer",
+    "eniac",
+    "transistor",
+    "xerox-alto",
+    "ethernet",
+    "linux",
+    "google-search",
+    "xerox-parc"
   ],
   "checkpoints": [
     {
@@ -56,14 +63,14 @@
       "name": "Big iron",
       "from": 1911,
       "to": 1963,
-      "note": "IBM and UNIVAC sold huge, costly computers that sat in climate-controlled rooms and were tended by specialists. Businesses and governments ran payrolls and statistics through them in batches."
+      "note": "ENIAC was among the first electronic computers, and the transistor later replaced its tubes. IBM and UNIVAC sold huge, costly computers that sat in climate-controlled rooms and were tended by specialists, running payrolls and statistics in batches."
     },
     {
       "id": "sharing-and-minis",
       "name": "Sharing and minicomputers",
       "from": 1964,
       "to": 1974,
-      "note": "IBM's System/360 unified a product line, the PDP-8 and PDP-11 brought smaller machines, and Multics and Unix let many people share a computer at once. ARPANET began to link them."
+      "note": "IBM's System/360 unified a product line, the PDP-8 and PDP-11 brought smaller machines, and Multics and Unix let many people share a computer at once. ARPANET began to link them, and Xerox's lab showed how personal machines could share an Ethernet."
     },
     {
       "id": "computers-for-everyone",
@@ -77,7 +84,7 @@
       "name": "The network and the web",
       "from": 1991,
       "to": 2005,
-      "note": "TCP/IP and the web tied the machines together. Windows 95 spread the PC, the dot-com bubble raised and lost fortunes, and Netflix began renting discs by post before it streamed."
+      "note": "TCP/IP and the web tied the machines together, Linux gave servers a free operating system and Google made the web easy to search. Windows 95 spread the PC, the dot-com bubble raised and lost fortunes, and Netflix began renting discs by post before it streamed."
     },
     {
       "id": "cloud-and-pocket",

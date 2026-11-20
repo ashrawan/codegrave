@@ -40,7 +40,11 @@
     "pepper-robot",
     "alphago",
     "sophia-robot",
-    "perseverance-rover"
+    "perseverance-rover",
+    "alan-turing",
+    "ibm-watson",
+    "isaac-asimov",
+    "rur-play"
   ],
   "checkpoints": [
     {
@@ -48,7 +52,7 @@
       "name": "Imagined machines",
       "from": 1927,
       "to": 1960,
-      "note": "The film Metropolis gave the screen a famous robot in 1927. Elektro, a tall walking showpiece built by Westinghouse, appeared at the 1939 New York World's Fair and showed the public what a robot might look like."
+      "note": "The word robot comes from a Czech play of 1920, and the film Metropolis gave the screen a famous robot in 1927. Elektro, a tall walking showpiece built by Westinghouse, appeared at the 1939 New York World's Fair, and in 1950 Alan Turing asked whether machines could think."
     },
     {
       "id": "factories-and-labs",
@@ -76,7 +80,7 @@
       "name": "Smarter machines",
       "from": 2011,
       "to": 2025,
-      "note": "Curiosity and Perseverance explored Mars, Baxter worked beside factory staff, and Atlas learned to run and jump. Pepper and Sophia tried to talk with people, while AlphaGo won at the board game Go."
+      "note": "Curiosity and Perseverance explored Mars, Baxter worked beside factory staff, and Atlas learned to run and jump. Pepper and Sophia tried to talk with people, IBM Watson won at quiz shows, and AlphaGo won at the board game Go."
     }
   ]
 }

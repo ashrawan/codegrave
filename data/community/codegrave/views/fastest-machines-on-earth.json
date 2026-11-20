@@ -31,15 +31,15 @@
     "blue-gene",
     "roadrunner",
     "k-computer",
-    "ibm-watson",
     "titan-supercomputer",
-    "alphago",
     "sunway-taihulight",
     "summit-supercomputer",
     "arm",
     "fugaku",
     "frontier-supercomputer",
-    "el-capitan"
+    "el-capitan",
+    "linux",
+    "seymour-cray"
   ],
   "checkpoints": [
     {
@@ -75,7 +75,7 @@
       "name": "Towards exascale",
       "from": 2011,
       "to": 2025,
-      "note": "Japan's K computer and America's Titan, which used graphics chips, led in turn, while IBM Watson and AlphaGo showed the power of AI. China's Sunway TaihuLight, Summit, Fugaku with ARM chips, Frontier, the first exascale, and El Capitan followed."
+      "note": "Japan's K computer and America's Titan, which used graphics chips, led in turn. China's Sunway TaihuLight, Summit, Fugaku with ARM chips, Frontier, the first exascale, and El Capitan followed, most of them running Linux."
     }
   ]
 }

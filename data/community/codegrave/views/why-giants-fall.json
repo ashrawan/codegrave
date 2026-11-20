@@ -1,7 +1,7 @@
 {
   "id": "why-giants-fall",
   "name": "Why Giants Fall",
-  "description": "Banks, airlines, trusts and film studios that seemed too big to fail, and the debts, frauds, rivals and new technologies that brought them down.",
+  "description": "Banks, studios, airlines, trading companies, dot-coms and gadgets that seemed too big or too good to fail, and the debts, frauds, rivals and new technologies that ended them.",
   "category": "organisations",
   "labels": [
     "business",
@@ -19,9 +19,7 @@
   ],
   "entries": [
     "medici-bank",
-    "east-india-company",
     "dutch-east-india-company",
-    "krupp",
     "standard-oil",
     "bell-system",
     "universum-film-ag",
@@ -39,7 +37,18 @@
     "lehman-brothers",
     "financial-crisis-of-2007-2008",
     "nokia",
-    "kodak"
+    "kodak",
+    "mississippi-company",
+    "concorde",
+    "betamax",
+    "commodore-international",
+    "netscape",
+    "pets-com",
+    "webvan",
+    "myspace",
+    "google-plus",
+    "mt-gox",
+    "blackberry-curve"
   ],
   "checkpoints": [
     {
@@ -47,21 +56,28 @@
       "name": "Old houses fall",
       "from": 1397,
       "to": 1899,
-      "note": "Even the oldest firms were fragile. The Medici bank failed through bad lending and politics, and the great East India companies sank under debt, corruption and the end of their monopolies."
+      "note": "Even the oldest firms were fragile. The Medici Bank failed through bad loans and politics in the 1490s, the Mississippi Company's share bubble burst in 1720, and the Dutch East India Company sank under debt and was wound up in 1799."
     },
     {
       "id": "century-of-trusts",
       "name": "Crashes and break-ups",
       "from": 1900,
       "to": 1979,
-      "note": "Governments and markets cut giants down. The Supreme Court split Standard Oil, the Wall Street crash of 1929 ruined banks and speculators, and film studios and airlines struggled once the world around them changed."
+      "note": "The Supreme Court split Standard Oil in 1911, the Wall Street crash of 1929 ruined banks and speculators, Germany's UFA studio ended with the Nazi state, and RKO stopped making films in the 1950s. Concorde flew faster than sound from 1969 but only two airlines ever flew it."
     },
     {
       "id": "digital-shock",
-      "name": "Fraud, debt and digital shocks",
+      "name": "Break-ups and hidden losses",
       "from": 1980,
+      "to": 1999,
+      "note": "The Bell System was broken up in 1984 and Betamax lost its format war. Pan Am went under in 1991, Commodore in 1994, and a single trader's hidden losses sank Barings in 1995. DEC, once a giant of computing, was sold off in 1998, and the dot-com bubble swelled toward its peak."
+    },
+    {
+      "id": "bubbles-and-rivals",
+      "name": "Bubbles, frauds and new rivals",
+      "from": 2000,
       "to": 2026,
-      "note": "Hidden losses sank Barings, fraud ended Enron and Arthur Andersen, and bad debts felled Lehman. Meanwhile new technology left Blockbuster, DEC, Kodak and Nokia behind."
+      "note": "The dot-com bust took Pets.com and Webvan, and Netscape faded. Fraud ended Enron and its auditor Arthur Andersen, Swissair was grounded, and Lehman Brothers' failure deepened the 2007-2008 financial crisis. Myspace, Google+, Mt. Gox, BlackBerry, Nokia's phones, Blockbuster, EMI and Kodak fell to rivals and new technology."
     }
   ],
   "year": 2001

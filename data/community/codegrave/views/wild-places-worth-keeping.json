@@ -17,9 +17,6 @@
     "wilderness"
   ],
   "entries": [
-    "hyde-park",
-    "kew-gardens",
-    "central-park",
     "yellowstone-national-park",
     "royal-national-park",
     "banff-national-park",
@@ -34,16 +31,13 @@
     "great-barrier-reef-marine-park",
     "sagarmatha-national-park",
     "pripyat",
-    "chernobyl-exclusion-zone"
+    "chernobyl-exclusion-zone",
+    "amazon-rainforest",
+    "antarctica",
+    "korean-dmz",
+    "antarctic-treaty"
   ],
   "checkpoints": [
-    {
-      "id": "parks-for-people",
-      "name": "Parks and gardens",
-      "from": 1637,
-      "to": 1870,
-      "note": "Before nature reserves there were parks for people. Hyde Park opened to the public, Kew collected plants from the empire, and New York built Central Park for crowded city dwellers."
-    },
     {
       "id": "first-national-parks",
       "name": "The first national parks",
@@ -63,7 +57,7 @@
       "name": "Conservation and recovery",
       "from": 1961,
       "to": 2026,
-      "note": "Rhinos recovered in Chitwan, a vast reef park was set up in Australia and the Himalayas gained protection. At Chernobyl, wildlife moved back into the land people left."
+      "note": "Rhinos recovered in Chitwan, a vast reef park was set up in Australia and the Himalayas gained protection. Antarctica and the Amazon rainforest became symbols of what needs saving, and at Chernobyl and in the Korean demilitarised zone wildlife moved back into land people left."
     }
   ],
   "year": 1900

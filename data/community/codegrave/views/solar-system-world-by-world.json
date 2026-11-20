@@ -1,7 +1,7 @@
 {
   "id": "solar-system-world-by-world",
   "name": "The Solar System, World by World",
-  "description": "A guided tour from the Sun to the Kuiper belt: every planet, the strangest moons, comets, lost worlds and the telescopes and probes that revealed them.",
+  "description": "A guided tour from the Sun out to Pluto and Eris: every planet, the strangest moons, a lost world that never was, and the telescopes and probes that revealed them.",
   "category": "earth-space",
   "labels": [
     "astronomy",
@@ -19,7 +19,6 @@
   "entries": [
     "solar-system",
     "sun-star",
-    "theia",
     "mercury-planet",
     "vulcan-planet",
     "venus-planet",
@@ -27,7 +26,6 @@
     "moon",
     "mars-planet",
     "ceres",
-    "asteroid-belt",
     "jupiter-planet",
     "io-moon",
     "europa-moon",
@@ -41,19 +39,22 @@
     "triton-moon",
     "pluto",
     "charon-moon",
-    "kuiper-belt",
-    "halleys-comet",
-    "shoemaker-levy-9",
-    "biela-comet",
-    "comet-67p",
     "galileo-galilei",
-    "edmond-halley",
     "urbain-le-verrier",
     "voyager-2",
     "galileo-spacecraft",
     "cassini-huygens",
-    "rosetta-spacecraft",
-    "new-horizons"
+    "new-horizons",
+    "nicolaus-copernicus",
+    "telescope",
+    "kepler-laws",
+    "eris-dwarf-planet",
+    "mariner-4",
+    "venera-7",
+    "viking-program",
+    "apollo-11",
+    "curiosity-rover",
+    "chang-e-4"
   ],
   "checkpoints": [
     {
@@ -61,28 +62,28 @@
       "name": "The birth of the planets",
       "from": -4600000000,
       "to": -1000,
-      "note": "A cloud of gas and dust collapses into the Sun and a disc of planets. Giant impacts shape Earth, the Moon and others, and the leftover rock and ice settle into belts."
+      "note": "A cloud of gas and dust collapses into the Sun and a disc of planets. Giant impacts shape the young Earth and its Moon, Ceres is left as the largest body between Mars and Jupiter, and icy Pluto, Charon and Eris circle far beyond Neptune."
     },
     {
       "id": "naked-eye-sky",
       "name": "Wanderers in the night sky",
       "from": -999,
       "to": 1608,
-      "note": "For thousands of years people track the five bright planets and the occasional comet by eye, record Halley's Comet, and argue over whether the Earth or the Sun is at the centre."
+      "note": "For thousands of years people track the five bright planets by eye and argue over whether the Earth or the Sun is at the centre, until Copernicus puts the Sun there in 1543. Early in the 1600s the telescope appears in the Netherlands."
     },
     {
       "id": "telescope-age",
       "name": "The telescope reveals new worlds",
       "from": 1609,
       "to": 1956,
-      "note": "Galileo sees moons around Jupiter, astronomers find Uranus and Neptune, comets break apart, and Pluto joins the list in 1930."
+      "note": "Galileo turns a telescope on Jupiter and finds four moons, and Kepler's laws describe how the planets move. Astronomers find Titan and Uranus, Le Verrier predicts Neptune from its pull and then a planet Vulcan that is not there, and Pluto joins the list in 1930."
     },
     {
       "id": "probe-age",
       "name": "Robots visit every planet",
       "from": 1957,
       "to": 2026,
-      "note": "Voyager, Galileo, Cassini, Rosetta and New Horizons fly past, orbit and land, revealing volcanoes on Io, oceans on icy moons, and a heart on Pluto."
+      "note": "Mariner 4 photographs Mars, Venera 7 lands on Venus and Viking reaches the Martian surface. Apollo 11 puts people on the Moon; Voyager, Galileo, Cassini and New Horizons reveal volcanoes on Io, oceans under icy moons and a heart on Pluto; the find of Eris makes Pluto a dwarf planet in 2006; and Curiosity and Chang'e 4 roam Mars and the Moon's far side."
     }
   ],
   "year": 1979

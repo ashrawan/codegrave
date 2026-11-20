@@ -1,7 +1,7 @@
 {
   "id": "temple-kingdoms-of-southeast-asia",
-  "name": "Temple Kingdoms of Southeast Asia",
-  "description": "From the stone temples of Angkor and Bagan to trading ports and the wars of the twentieth century: how faiths, kings and empires shaped Southeast Asia.",
+  "name": "Temples, Empires and Wars of Southeast Asia",
+  "description": "From the stone temples of Angkor and Bagan to trading ports and the wars of the twentieth century: how faiths, kings, empires and colonial rule shaped Southeast Asia.",
   "category": "places",
   "labels": [
     "architecture",
@@ -46,7 +46,10 @@
     "indonesia",
     "thailand",
     "myanmar",
-    "vietnam"
+    "vietnam",
+    "champa",
+    "prambanan",
+    "sukhothai-kingdom"
   ],
   "checkpoints": [
     {
@@ -60,13 +63,13 @@
       "id": "temples-of-stone",
       "name": "Temples of stone",
       "from": 650,
-      "to": 1149,
+      "to": 1100,
       "note": "Srivijaya controlled sea trade from Sumatra, Borobudur rose in Java as a Buddhist monument, and the Khmer Empire made Angkor its capital. In Myanmar the kings of Bagan covered a plain with shrines."
     },
     {
       "id": "age-of-great-kingdoms",
       "name": "Great kingdoms and sea lanes",
-      "from": 1150,
+      "from": 1101,
       "to": 1499,
       "note": "Angkor Wat was raised in the Khmer heartland, Majapahit rose in Java, and Ayutthaya became a power in Siam. In the early 1400s the treasure voyages of Zheng He called at the region's ports."
     },

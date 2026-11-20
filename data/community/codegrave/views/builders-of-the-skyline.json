@@ -1,7 +1,7 @@
 {
   "id": "builders-of-the-skyline",
-  "name": "Builders of the Skyline: Architects and Their Towers",
-  "description": "From Brunelleschi's dome to the Burj Khalifa: the architects who dared to build higher, stranger and more beautiful, and the buildings that became symbols of their cities.",
+  "name": "Builders of the Skyline: Architects, Engineers and Styles",
+  "description": "From Brunelleschi's dome to Zaha Hadid's curves: the architects and engineers who changed how buildings look and stand, the styles they led and the works that made their names.",
   "category": "arts",
   "labels": [
     "architecture",
@@ -34,20 +34,26 @@
     "le-corbusier",
     "mies-van-der-rohe",
     "chrysler-building",
-    "empire-state-building",
-    "world-trade-center-twin-towers",
     "sydney-opera-house",
-    "willis-tower",
-    "cn-tower",
     "pritzker-prize",
     "im-pei",
-    "petronas-towers",
-    "taipei-101",
     "frank-gehry",
     "zaha-hadid",
-    "burj-khalifa",
-    "shanghai-tower",
-    "tokyo-skytree"
+    "florence-cathedral",
+    "gian-lorenzo-bernini",
+    "baroque-art",
+    "st-pauls-cathedral",
+    "gothic-revival",
+    "joseph-paxton",
+    "crystal-palace",
+    "isambard-kingdom-brunel",
+    "bessemer-process",
+    "baron-haussmann",
+    "bauhaus",
+    "walter-gropius",
+    "fallingwater",
+    "oscar-niemeyer",
+    "louvre"
   ],
   "checkpoints": [
     {
@@ -55,35 +61,35 @@
       "name": "Domes and basilicas",
       "from": 1377,
       "to": 1699,
-      "note": "Brunelleschi crowns Florence with a dome, Michelangelo reshapes St. Peter's Basilica, Palladio designs villas, Sinan builds mosques for Ottoman sultans, and Christopher Wren rebuilds London after fire. Versailles shows royal architecture on the largest scale."
+      "note": "Brunelleschi crowns Florence Cathedral with a dome, Michelangelo designs the dome of St. Peter's Basilica and Bernini its colonnade, Palladio designs villas and Sinan builds mosques for the Ottoman sultans. The Baroque fills Europe with drama, Christopher Wren rebuilds St Paul's Cathedral after London's fire, and Versailles shows royal architecture on the largest scale."
     },
     {
       "id": "iron-and-steel",
       "name": "Iron and steel",
       "from": 1700,
       "to": 1899,
-      "note": "After the Great Chicago Fire the city rebuilds in steel, Louis Sullivan helps make the skyscraper, and the Home Insurance Building is often called the first skyscraper. The elevator makes tall buildings workable, and Gustave Eiffel's Eiffel Tower proves iron can rise higher than stone."
+      "note": "The Gothic Revival brings back pointed arches, Joseph Paxton's Crystal Palace and Brunel's bridges show what iron can do, and Haussmann rebuilds Paris. The Bessemer process makes steel cheap and the elevator makes height usable. After the Great Chicago Fire, Louis Sullivan and the Home Insurance Building begin the skyscraper, and Gustave Eiffel's tower rises over Paris."
     },
     {
       "id": "masters-of-modernism",
       "name": "Masters of modernism",
       "from": 1900,
       "to": 1960,
-      "note": "Gaudí's Sagrada Família grows slowly in Barcelona while Frank Lloyd Wright, Le Corbusier and Mies van der Rohe invent a modern style. In New York the Chrysler Building and Empire State Building race to the top."
+      "note": "Gaudi's Sagrada Familia grows slowly in Barcelona. Walter Gropius founds the Bauhaus, Le Corbusier and Mies van der Rohe invent a modern style, Frank Lloyd Wright builds Fallingwater over a waterfall, the Chrysler Building brings Art Deco to New York, and Oscar Niemeyer shapes Brasilia in concrete curves."
     },
     {
       "id": "icons-and-records",
-      "name": "Icons and records",
+      "name": "Icons and prizes",
       "from": 1961,
       "to": 1999,
-      "note": "The twin towers of the World Trade Center, the Willis Tower and the CN Tower break height records, while the Sydney Opera House shows the shape of a city can be art. The Pritzker Prize honours architects such as I. M. Pei, and the Petronas Towers rise in Kuala Lumpur."
+      "note": "The Sydney Opera House shows that the shape of a building can become the image of a city. The Pritzker Prize, first given in 1979, honours architects such as I. M. Pei, who adds a glass pyramid to the Louvre in 1989."
     },
     {
       "id": "towers-of-asia-and-the-gulf",
-      "name": "Towers of Asia and the Gulf",
+      "name": "Any shape at all",
       "from": 2000,
       "to": 2026,
-      "note": "Taipei 101, the Burj Khalifa, the Shanghai Tower and the Tokyo Skytree move the record to Asia and the Gulf, while Frank Gehry and Zaha Hadid show that a building can take any shape, even a curve."
+      "note": "Frank Gehry and Zaha Hadid use computers to design buildings that curve, fold and lean, and become the best-known architects of their age, with works on every continent."
     }
   ],
   "year": 1930

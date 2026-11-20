@@ -25,12 +25,10 @@
     "the-starry-night",
     "art-nouveau",
     "the-kiss-klimt",
-    "portrait-of-adele-bloch-bauer-i",
     "expressionism",
     "the-scream",
     "cubism",
     "pablo-picasso",
-    "the-thinker",
     "dada",
     "fountain-duchamp",
     "surrealism",
@@ -43,7 +41,15 @@
     "pop-art",
     "andy-warhol",
     "campbells-soup-cans",
-    "marilyn-diptych"
+    "marilyn-diptych",
+    "edouard-manet",
+    "paul-cezanne",
+    "paul-gauguin",
+    "pierre-auguste-renoir",
+    "henri-matisse",
+    "wassily-kandinsky",
+    "marcel-duchamp",
+    "salvador-dali"
   ],
   "checkpoints": [
     {
@@ -58,21 +64,21 @@
       "name": "Light and colour",
       "from": 1870,
       "to": 1904,
-      "note": "Impressionists and Post-Impressionists break with polished finish. Colour and feeling matter more than detail, and Art Nouveau spreads across design."
+      "note": "Manet, Renoir and the Impressionists break with polished finish, and Cezanne and Gauguin build on them with Van Gogh. Colour and feeling matter more than detail, and Art Nouveau spreads across design."
     },
     {
       "id": "isms",
       "name": "The age of isms",
       "from": 1905,
       "to": 1929,
-      "note": "Expressionism, Cubism and Dada each break a rule, from realistic colour and a single viewpoint to the very idea of what art is."
+      "note": "Matisse frees colour, Kandinsky moves toward abstraction, and Expressionism and Cubism break the single viewpoint. Duchamp's Fountain and Dada question the very idea of what art is."
     },
     {
       "id": "dreams-and-war",
       "name": "Dreams and disaster",
       "from": 1930,
       "to": 1954,
-      "note": "Surrealism, war and regional realism give painters new subjects, and Picasso paints a bombed town."
+      "note": "Surrealism, led by painters such as Dali, war and regional realism give painters new subjects, and Picasso paints a bombed town."
     },
     {
       "id": "pop-years",

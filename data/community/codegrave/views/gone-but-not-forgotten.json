@@ -1,7 +1,7 @@
 {
   "id": "gone-but-not-forgotten",
   "name": "Gone but Not Forgotten: Dead Media and Lost Gadgets",
-  "description": "Beta tapes, MiniDiscs, teletext and typewriters: the formats, machines and cures that ruled their day and then vanished.",
+  "description": "Betamax tapes, floppy disks, MiniDiscs, teletext and typewriters: the formats and machines that ruled their day, then faded or gave way to digital successors.",
   "category": "technology",
   "labels": [
     "lost",
@@ -26,9 +26,7 @@
     "linotype-machine",
     "kinetoscope",
     "rotary-dial",
-    "radithor",
     "mechanical-television",
-    "iron-lung",
     "kodachrome",
     "loran",
     "eight-track-tape",
@@ -38,9 +36,11 @@
     "ceefax",
     "walkman",
     "minitel",
-    "f-117-nighthawk",
     "minidisc",
-    "flavr-savr"
+    "floppy-disk",
+    "zip-drive",
+    "discman",
+    "geocities"
   ],
   "checkpoints": [
     {
@@ -55,7 +55,7 @@
       "name": "The first half of the century",
       "from": 1900,
       "to": 1949,
-      "note": "Quack medicines such as radium tonics, the iron lung and the whirring spinning-disc television belonged to a world that moved quickly and left some inventions behind."
+      "note": "Mechanical television with its spinning disc, Kodachrome colour film and Loran navigation belonged to a world that moved quickly and left some inventions behind."
     },
     {
       "id": "format-wars",
@@ -69,7 +69,7 @@
       "name": "The digital takeover",
       "from": 1980,
       "to": 2026,
-      "note": "Minitel and MiniDisc, stealth jets and gene-modified tomatoes: some failed and some simply gave way to digital successors, as phones and the internet absorbed what single machines once did."
+      "note": "Minitel, MiniDisc, floppy disks, Zip drives, the Discman and GeoCities: all failed or gave way to digital successors, as phones and the internet absorbed what single machines once did."
     }
   ],
   "year": 1980

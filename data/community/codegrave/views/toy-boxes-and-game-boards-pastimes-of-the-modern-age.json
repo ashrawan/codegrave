@@ -19,7 +19,6 @@
   "entries": [
     "nintendo",
     "teddy-bear",
-    "mickey-mouse",
     "monopoly",
     "lego",
     "barbie",
@@ -30,12 +29,15 @@
     "donkey-kong",
     "super-mario-bros",
     "tetris",
-    "toy-story-1995",
     "the-sims",
     "wii-sports",
     "minecraft",
     "angry-birds",
-    "pokemon-go"
+    "pokemon-go",
+    "legend-of-zelda",
+    "sonic-the-hedgehog",
+    "candy-crush-saga",
+    "rubiks-cube"
   ],
   "checkpoints": [
     {
@@ -43,7 +45,7 @@
       "name": "Cards and cuddly bears",
       "from": 1889,
       "to": 1949,
-      "note": "Nintendo begins in 1889 making playing cards. The teddy bear appears in 1902, named after President Theodore Roosevelt. Mickey Mouse debuts in 1928, Monopoly reaches shops in 1935, and in 1949 the Danish company Lego starts making interlocking plastic bricks."
+      "note": "Nintendo begins in 1889 making playing cards. The teddy bear appears in 1902, named after President Theodore Roosevelt. Monopoly reaches shops in 1935, and in 1949 the Danish company Lego starts making interlocking plastic bricks."
     },
     {
       "id": "dolls-dice-and-dungeons",
@@ -57,14 +59,14 @@
       "name": "Arcades and consoles",
       "from": 1980,
       "to": 1999,
-      "note": "Pac-Man (1980) and Donkey Kong (1981) fill arcades, and Super Mario Bros (1985) and Tetris (1985) travel home on consoles and handhelds. Toy Story (1995) becomes the first feature film made entirely with computer animation, about toys that come to life."
+      "note": "Pac-Man (1980) and Donkey Kong (1981) fill arcades, while Super Mario Bros and Tetris (1985) and The Legend of Zelda (1986) travel home on consoles and handhelds. Sonic the Hedgehog arrives in 1991 as a speedy rival to Mario."
     },
     {
       "id": "phones-blocks-and-birds",
       "name": "Phones, blocks and birds",
       "from": 2000,
       "to": 2026,
-      "note": "The Sims (2000) turns everyday life into a game, and Wii Sports (2006) gets families moving in the living room. Minecraft and Angry Birds both arrive in 2009, and Pokémon Go (2016) sends players outdoors with their phones."
+      "note": "The Sims (2000) turns everyday life into a game, and Wii Sports (2006) gets families moving in the living room. Minecraft and Angry Birds both arrive in 2009, Candy Crush Saga in 2012, and Pokémon Go (2016) sends players outdoors with their phones."
     }
   ],
   "year": 1985

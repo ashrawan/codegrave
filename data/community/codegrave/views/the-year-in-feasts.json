@@ -41,14 +41,21 @@
     "bastille-day",
     "mothers-day",
     "la-tomatina",
-    "cannes-film-festival",
     "edinburgh-fringe",
-    "eurovision-song-contest",
     "notting-hill-carnival",
     "woodstock",
     "glastonbury-festival",
-    "live-aid",
-    "burning-man"
+    "burning-man",
+    "easter",
+    "passover",
+    "ramadan",
+    "eid-al-adha",
+    "diwali",
+    "holi",
+    "vesak",
+    "mid-autumn-festival",
+    "kumbh-mela",
+    "rio-carnival"
   ],
   "checkpoints": [
     {
@@ -63,28 +70,28 @@
       "name": "Faith and the calendar",
       "from": 1,
       "to": 1000,
-      "note": "Christmas was set in the Julian calendar, Eid al-Fitr in the Islamic calendar, and Jewish feasts in the Hebrew calendar. The Maya had their own count, and in Japan Gion Matsuri and Hanami began as ways to honour spirits and blossoms."
+      "note": "Christmas was set in the Julian calendar and Easter became the main Christian feast. Ramadan, Eid al-Fitr and Eid al-Adha follow the Islamic calendar, and Passover and other Jewish feasts the Hebrew calendar. Diwali, Holi and Vesak mark seasons and faith in South Asia, the Maya kept their own count, and Gion Matsuri and Hanami began in Japan."
     },
     {
       "id": "feasts-and-masks",
       "name": "Feasts and masks",
       "from": 1001,
       "to": 1699,
-      "note": "The Gregorian calendar fixed the year in 1582. Carnival and the Carnival of Venice let people wear masks before Lent, Halloween grew from older autumn customs, and the Day of the Dead blended Aztec and Christian ideas. Valentine's Day was linked with romance in this age."
+      "note": "The Gregorian calendar fixed the year in 1582. Carnival and the Carnival of Venice let people wear masks before Lent, Halloween grew from older autumn customs, and the Day of the Dead blended Aztec and Christian ideas. Valentine's Day was linked with romance in this age, and the Kumbh Mela and the Mid-Autumn Festival drew crowds in Asia."
     },
     {
       "id": "nations-celebrate",
       "name": "Nations celebrate",
       "from": 1700,
       "to": 1944,
-      "note": "Revolutionary France briefly tried its own calendar. Oktoberfest started as a royal wedding party, and Thanksgiving, Bastille Day and Mother's Day became national or family days in the United States and France."
+      "note": "Revolutionary France briefly tried its own calendar. Oktoberfest started as a royal wedding party, and Thanksgiving, Bastille Day and Mother's Day became national or family days in the United States and France. Rio's Carnival grew into one of the biggest street festivals."
     },
     {
       "id": "the-festival-age",
       "name": "The festival age",
       "from": 1945,
       "to": 2026,
-      "note": "Cannes, Edinburgh's Fringe and Eurovision make culture a festival, La Tomatina and Notting Hill Carnival add street parties, and Woodstock, Glastonbury, Live Aid and Burning Man turn music and art into a gathering of tens of thousands."
+      "note": "Edinburgh's Fringe, La Tomatina and Notting Hill Carnival add street parties and stages, and Woodstock, Glastonbury and Burning Man turn music and art into a gathering of tens of thousands."
     }
   ],
   "year": 1950

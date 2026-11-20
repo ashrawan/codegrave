@@ -49,7 +49,15 @@
     "tu-youyou",
     "in-vitro-fertilisation",
     "crispr-gene-editing",
-    "mrna-vaccine"
+    "mrna-vaccine",
+    "hippocrates",
+    "galen",
+    "andreas-vesalius",
+    "william-harvey",
+    "antonie-van-leeuwenhoek",
+    "germ-theory",
+    "florence-nightingale",
+    "human-genome-project"
   ],
   "checkpoints": [
     {
@@ -57,14 +65,14 @@
       "name": "Healers and guesses",
       "from": -6500,
       "to": 1795,
-      "note": "For thousands of years healers drilled skulls, bled patients and used herbs, from Chinese needles to Andean bark. Some methods worked and many harmed; microscopes showed tiny life from the 1670s, but no one knew that germs caused disease."
+      "note": "For thousands of years healers drilled skulls, bled patients and used herbs, from Chinese needles to Andean bark. Hippocrates and Galen shaped Greek and Roman medicine, Vesalius mapped the body and Harvey the blood, and Leeuwenhoek saw tiny life in the 1670s, but no one knew that germs caused disease."
     },
     {
       "id": "germs-and-sleep",
       "name": "Germs, needles and sleep",
       "from": 1796,
       "to": 1899,
-      "note": "Jenner showed that cowpox prevents smallpox, anaesthesia let surgeons work slowly, and Pasteur and others proved that germs cause disease. X-rays and aspirin arrived at the end of the century."
+      "note": "Jenner showed that cowpox prevents smallpox, anaesthesia let surgeons work slowly, and Nightingale reformed nursing. Pasteur and Koch built the germ theory, which showed that germs cause disease. X-rays and aspirin arrived at the end of the century."
     },
     {
       "id": "wonder-drugs",
@@ -85,7 +93,7 @@
       "name": "Reading and editing life",
       "from": 1990,
       "to": 2026,
-      "note": "Medicine turned to genes and information. Gene editing with CRISPR promised cures for inherited disease, and mRNA vaccines were designed and approved within a year to fight a new virus in 2020."
+      "note": "Medicine turned to genes and information. The Human Genome Project read human DNA, gene editing with CRISPR promised cures for inherited disease, and mRNA vaccines were designed and approved within a year to fight a new virus in 2020."
     }
   ],
   "year": 1900

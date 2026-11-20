@@ -45,7 +45,10 @@
     "lighthouse-of-alexandria",
     "rosetta-stone",
     "cleopatra-vii",
-    "battle-of-actium"
+    "battle-of-actium",
+    "akhenaten",
+    "jean-francois-champollion",
+    "amarna"
   ],
   "checkpoints": [
     {
@@ -67,7 +70,7 @@
       "name": "Empire and splendour",
       "from": -1999,
       "to": -1071,
-      "note": "Middle Kingdom kings began the temple of Karnak. In the New Kingdom, Egyptian armies reached far beyond the Nile, Hatshepsut and Thutmose III ruled, kings were buried in the Valley of the Kings with the Book of the Dead, and Ramesses II fought at Kadesh and built Abu Simbel."
+      "note": "Middle Kingdom kings began the temple of Karnak. In the New Kingdom, Egyptian armies reached far beyond the Nile, Hatshepsut and Thutmose III ruled, Akhenaten promoted the sun disc Aten, kings were buried in the Valley of the Kings with the Book of the Dead, and Ramesses II fought at Kadesh and built Abu Simbel."
     },
     {
       "id": "late-kingdoms",
@@ -82,6 +85,13 @@
       "from": -331,
       "to": -30,
       "note": "Alexander founded Alexandria, and his general's family ruled as the Ptolemaic kingdom. They built the Library and the Lighthouse, put up the Rosetta Stone, and ended with Cleopatra, beaten at Actium by Rome."
+    },
+    {
+      "id": "reading-egypt-again",
+      "name": "Rome, silence and decoding",
+      "from": -29,
+      "to": 1832,
+      "note": "After Actium Egypt becomes a Roman province. Its hieroglyphs fall out of use, and the script is read again only after Jean-Francois Champollion works it out from the Rosetta Stone in 1822."
     }
   ]
 }

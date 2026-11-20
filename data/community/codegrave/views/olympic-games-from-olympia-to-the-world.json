@@ -1,7 +1,7 @@
 {
   "id": "olympic-games-from-olympia-to-the-world",
   "name": "Fire, Flags and Records: The Story of the Olympic Games",
-  "description": "From a sacred festival in ancient Greece to a global spectacle: the Olympics through war, boycotts, protest and triumph.",
+  "description": "From a sacred festival in ancient Greece to a global spectacle: the Olympic Games and their great athletes, through war, boycotts, protest and triumph, to Rio and beyond.",
   "category": "events",
   "labels": [
     "sport"
@@ -34,7 +34,20 @@
     "olympics-2000",
     "olympics-2008",
     "olympics-2012",
-    "miracle-on-ice"
+    "miracle-on-ice",
+    "statue-of-zeus-at-olympia",
+    "pierre-de-coubertin",
+    "international-olympic-committee",
+    "emil-zatopek",
+    "larisa-latynina",
+    "abebe-bikila",
+    "nadia-comaneci",
+    "carl-lewis",
+    "olympics-1988",
+    "michael-phelps",
+    "usain-bolt",
+    "simone-biles",
+    "eliud-kipchoge"
   ],
   "checkpoints": [
     {
@@ -42,28 +55,28 @@
       "name": "The ancient games",
       "from": -776,
       "to": 393,
-      "note": "Every four years Greek cities send athletes to Olympia under a sacred truce that protects travellers, to race, wrestle and throw in honour of Zeus. The festival lasts for over a thousand years."
+      "note": "Every four years Greek cities send athletes to Olympia under a sacred truce that protects travellers, to race, wrestle and throw in honour of Zeus, whose great gold-and-ivory statue stands in the temple there from about 435 BCE. The festival lasts for over a thousand years."
     },
     {
       "id": "rebirth",
       "name": "The games reborn",
-      "from": 1896,
+      "from": 1894,
       "to": 1936,
-      "note": "The Games return in Athens in 1896 and grow with the Winter Games and fuller programmes. Berlin in 1936 shows how a state can use the Games and how an athlete can answer it."
+      "note": "Pierre de Coubertin founds the International Olympic Committee in 1894, and the Games return in Athens in 1896. They grow with the Winter Games of 1924 and fuller programmes, and Berlin in 1936 shows how a state can use the Games and how an athlete, Jesse Owens, can answer it."
     },
     {
       "id": "cold-war-games",
       "name": "Cold War Games",
       "from": 1948,
       "to": 1991,
-      "note": "Politics follows athletes onto the field: boycotts, protests and a terrible attack at Munich. Television and sponsors turn the Games into a giant business."
+      "note": "Politics follows athletes onto the field. Zatopek wins three distance golds, Latynina rules gymnastics, Bikila runs barefoot to marathon gold in Rome, the first Paralympics are held, and protest, a terrible attack at Munich and boycotts follow. Nadia Comaneci scores a perfect ten in 1976, Carl Lewis wins four golds in 1984 and the Miracle on Ice stuns the Soviets."
     },
     {
       "id": "global-games",
       "name": "The global games",
       "from": 1992,
-      "to": 2012,
-      "note": "Almost every country takes part, and women compete in every sport. Host cities use the Games to remake themselves, from Barcelona to Beijing and London."
+      "to": 2026,
+      "note": "Almost every country takes part, and women compete in every sport. Host cities from Seoul and Barcelona to Beijing and London use the Games to remake themselves, Michael Phelps and Usain Bolt break records, and Simone Biles and Eliud Kipchoge star in Rio in 2016."
     }
   ],
   "year": 1950

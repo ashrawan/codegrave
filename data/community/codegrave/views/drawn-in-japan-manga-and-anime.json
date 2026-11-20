@@ -24,11 +24,8 @@
     "weekly-shonen-jump",
     "doraemon",
     "hello-kitty",
-    "yellow-magic-orchestra",
     "akira",
-    "nes",
     "dragon-ball",
-    "oshin",
     "studio-ghibli",
     "super-mario-bros",
     "sailor-moon",
@@ -37,9 +34,22 @@
     "naruto",
     "spirited-away",
     "death-note",
-    "pokemon-go"
+    "pokemon-go",
+    "manga",
+    "hayao-miyazaki",
+    "katsushika-hokusai",
+    "ukiyo-e",
+    "osamu-tezuka",
+    "pokemon"
   ],
   "checkpoints": [
+    {
+      "id": "woodblock-roots",
+      "name": "Woodblock roots",
+      "from": 1814,
+      "to": 1888,
+      "note": "Japanese printmakers of the floating world sold cheap, lively pictures to city crowds. In 1814 Katsushika Hokusai published the first volume of his sketchbooks titled Manga, a word that later came to mean Japanese comics."
+    },
     {
       "id": "cards-reels-monster",
       "name": "Cards, reels and a monster",
@@ -52,14 +62,14 @@
       "name": "Magazines and mascots",
       "from": 1960,
       "to": 1979,
-      "note": "Weekly Shonen Jump starts in 1968 and becomes a home for serial adventures read by millions of young people. Doraemon, a robot cat from the future, arrives in 1969, Hello Kitty appears in 1974, and Yellow Magic Orchestra brings synthesizer pop out of Tokyo in 1978."
+      "note": "Weekly Shonen Jump starts in 1968 and becomes a home for serial adventures read by millions of young people. Doraemon, a robot cat from the future, arrives in 1969, and Hello Kitty appears in 1974."
     },
     {
       "id": "consoles-epics",
       "name": "Consoles, epics and a studio",
       "from": 1980,
       "to": 1990,
-      "note": "Akira begins as a manga in 1982 and Dragon Ball in 1984. Nintendo's home console arrives in 1983 (as the NES abroad) and Super Mario Bros follows in 1985, the year Studio Ghibli is founded. Oshin, a long NHK morning drama, becomes a national favourite."
+      "note": "Akira begins as a manga in 1982 and Dragon Ball in 1984. Super Mario Bros arrives in 1985, the year Hayao Miyazaki and his colleagues found Studio Ghibli, whose films carry anime to world audiences."
     },
     {
       "id": "fans-everywhere",

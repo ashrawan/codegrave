@@ -36,8 +36,15 @@
     "barack-obama",
     "american-revolutionary-war",
     "american-civil-war",
-    "robert-e-lee",
-    "eleanor-roosevelt"
+    "us-constitution",
+    "louisiana-purchase",
+    "great-depression",
+    "watergate-scandal",
+    "september-11-attacks",
+    "iraq-war",
+    "george-w-bush",
+    "donald-trump",
+    "joe-biden"
   ],
   "checkpoints": [
     {
@@ -45,7 +52,7 @@
       "name": "The founders",
       "from": 1732,
       "to": 1828,
-      "note": "The generation of Washington, Adams, Jefferson and Madison wins independence, writes the Constitution and learns how a republic should be run."
+      "note": "The generation of Washington, Adams, Jefferson and Madison wins independence, writes the Constitution and learns how a republic should be run, and Jefferson doubles the country with the Louisiana Purchase."
     },
     {
       "id": "union-and-division",
@@ -59,21 +66,21 @@
       "name": "Rise to world power",
       "from": 1886,
       "to": 1945,
-      "note": "Theodore Roosevelt, Wilson and Franklin Roosevelt lead a country that grows into an industrial giant, fights two world wars and builds the New Deal."
+      "note": "Theodore Roosevelt, Wilson and Franklin Roosevelt lead a country that grows into an industrial giant, fights two world wars, and meets the Great Depression with the New Deal."
     },
     {
       "id": "cold-war",
       "name": "The Cold War presidents",
       "from": 1946,
       "to": 1992,
-      "note": "Truman, Eisenhower, Kennedy, Johnson, Nixon, Carter and Reagan manage rivalry with the Soviet Union, civil rights at home and the war in Vietnam."
+      "note": "Truman, Eisenhower, Kennedy, Johnson, Nixon, Carter and Reagan manage rivalry with the Soviet Union, civil rights at home and the war in Vietnam, and Nixon resigns over Watergate in 1974."
     },
     {
       "id": "modern-era",
       "name": "The modern era",
       "from": 1993,
-      "to": 2026,
-      "note": "Clinton and Obama lead in an age of economic expansion, new technology, financial crisis and changing politics at home and abroad."
+      "to": 2017,
+      "note": "Clinton and Obama lead in an age of economic expansion, new technology, the shock of the September 11 attacks, the Iraq War, financial crisis and changing politics at home and abroad."
     }
   ]
 }

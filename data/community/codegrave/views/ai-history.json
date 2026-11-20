@@ -17,6 +17,8 @@
   "level": 100,
   "year": 2015,
   "things": [
+    "alan-turing",
+    "dartmouth-workshop",
     "eliza",
     "shakey",
     "cyc",
@@ -31,6 +33,7 @@
     "alphago",
     "tay",
     "google-assistant",
+    "transformer-model",
     "alphafold",
     "gpt-2",
     "gpt-3",
@@ -70,6 +73,13 @@
       "from": 1987,
       "to": 2000,
       "note": "The market for special AI computers collapses in 1987 and expert systems prove costly to keep up. Funding falls away again, and for years researchers avoid even the name AI."
+    },
+    {
+      "id": "learning-from-data",
+      "name": "Learning from data",
+      "from": 2001,
+      "to": 2011,
+      "note": "Programs that learn from large amounts of data take over from hand-written rules. Statistical methods quietly improve search, translation and speech, and in 2011 IBM's Watson wins the quiz show Jeopardy! and Apple's Siri puts a voice assistant on a phone."
     },
     {
       "id": "deep-learning",

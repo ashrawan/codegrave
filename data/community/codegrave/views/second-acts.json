@@ -1,7 +1,7 @@
 {
   "id": "second-acts",
-  "name": "Second Acts: Things That Died and Came Back",
-  "description": "Languages spoken again, bridges rebuilt, nations restored and old ideas reborn: the history of coming back from the dead.",
+  "name": "Second Acts: Revivals and Comebacks",
+  "description": "Languages spoken again, bridges rebuilt, nations restored and old learning reborn: places, tongues and traditions that came back after being lost or broken.",
   "category": "knowledge",
   "labels": [
     "revivals"
@@ -15,8 +15,6 @@
   ],
   "entries": [
     "ancient-olympic-games",
-    "classical-antiquity",
-    "neoplatonism",
     "carolingian-renaissance",
     "neo-confucianism",
     "renaissance",
@@ -30,18 +28,12 @@
     "zionism",
     "poland",
     "israel",
-    "new-hollywood",
-    "doctor-who",
-    "the-dark-knight-returns",
     "manx-language",
     "german-reunification",
     "lithuania",
     "stari-most",
-    "apple-inc",
-    "steve-jobs",
-    "netscape",
-    "firefox",
-    "notre-dame-de-paris"
+    "notre-dame-de-paris",
+    "maori-language"
   ],
   "checkpoints": [
     {
@@ -49,7 +41,7 @@
       "name": "Echoes of antiquity",
       "from": -800,
       "to": 999,
-      "note": "The Ancient Olympic Games end in the 390s, but the world of Classical antiquity and the ideas of Neoplatonism remain alive. Under Charlemagne the Carolingian Renaissance copies old books and revives learning."
+      "note": "The Ancient Olympic Games end in the 390s, and the Carolingian Renaissance under Charlemagne copies old books and revives learning in the ninth century."
     },
     {
       "id": "learning-reborn",
@@ -67,17 +59,17 @@
     },
     {
       "id": "countries-and-stories-return",
-      "name": "Countries and stories return",
+      "name": "Countries and languages return",
       "from": 1900,
       "to": 1989,
-      "note": "Poland returns to the map in 1918, and Israel is founded in 1948. The Manx language loses its last native speaker in 1974, but is brought back by learners. New Hollywood and The Dark Knight Returns renew popular stories."
+      "note": "Poland returns to the map in 1918, and Israel is founded in 1948. The Manx language loses its last native speaker in 1974 but is brought back by learners, and the Maori language is revived through schools from the 1980s."
     },
     {
       "id": "the-comeback-age",
       "name": "The comeback age",
       "from": 1990,
       "to": 2026,
-      "note": "Germany is reunified and Lithuania regains independence in 1990, Doctor Who returns to television in 2005, Stari Most is rebuilt in Mostar in 2004, Steve Jobs returns to Apple, and the Netscape code lives on as Firefox. Notre-Dame de Paris reopens after its fire in 2019."
+      "note": "Germany is reunified and Lithuania regains independence in 1990, Stari Most is rebuilt in Mostar in 2004, and Notre-Dame de Paris reopens after its fire in 2019."
     }
   ],
   "year": 1990

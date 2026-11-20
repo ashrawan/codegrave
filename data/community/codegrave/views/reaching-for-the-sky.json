@@ -1,7 +1,7 @@
 {
   "id": "reaching-for-the-sky",
   "name": "Reaching for the Sky",
-  "description": "From a pharaoh's tomb to Dubai's needle: five thousand years of builders competing to put the tallest thing on Earth.",
+  "description": "From a pharaoh's tomb to Dubai's needle: the structures that each held the record as the tallest thing people had built, one after another, over more than four and a half thousand years.",
   "category": "places",
   "labels": [
     "architecture",
@@ -20,16 +20,11 @@
   "entries": [
     "great-pyramid-of-giza",
     "lighthouse-of-alexandria",
-    "leaning-tower-of-pisa",
     "chartres-cathedral",
-    "st-peters-basilica",
     "cologne-cathedral",
     "washington-monument",
     "home-insurance-building",
-    "gustave-eiffel",
     "eiffel-tower",
-    "statue-of-liberty",
-    "new-york-city",
     "chrysler-building",
     "empire-state-building",
     "world-trade-center-twin-towers",
@@ -40,29 +35,30 @@
     "burj-khalifa",
     "shanghai-tower",
     "tokyo-skytree",
-    "sagrada-familia"
+    "pyramid-of-djoser",
+    "lincoln-cathedral"
   ],
   "checkpoints": [
     {
       "id": "ancient-record",
       "name": "Pyramids and spires",
-      "from": -2560,
+      "from": -2640,
       "to": 1400,
-      "note": "For nearly four thousand years the Great Pyramid was the tallest thing anyone had made. Medieval churchmen then took the lead with towers and spires, and the Alexandria lighthouse and the Pisa belltower showed the limits of masonry."
+      "note": "Djoser's step pyramid and then the Great Pyramid of Giza made Egypt home to the tallest things on Earth, and the Great Pyramid held the record for nearly four thousand years. The Lighthouse of Alexandria rose high over its harbour, cathedral builders at Chartres raised stone spires, and in 1311 the spire of Lincoln Cathedral finally passed the pyramid."
     },
     {
       "id": "stone-gives-way",
       "name": "Stone gives way to iron",
       "from": 1401,
       "to": 1884,
-      "note": "Cathedral builders pushed the stone record upward until the Washington Monument, a plain obelisk of marble and granite, reached 169 metres. After that, new materials started to take over."
+      "note": "Lincoln's spire fell in 1548, and cathedral builders kept pushing stone upward. Cologne Cathedral, finished in 1880, was briefly the tallest building in the world, until in 1884 the Washington Monument, a plain obelisk of marble and granite, passed it at 169 metres."
     },
     {
       "id": "the-first-skyscrapers",
       "name": "Steel frames",
       "from": 1885,
       "to": 1930,
-      "note": "A metal frame in Chicago made tall office blocks possible, and Paris's iron tower proved that great height could be a spectacle. Manhattan's Chrysler Building then took the title for one year."
+      "note": "A metal frame in Chicago's Home Insurance Building made tall office blocks possible, and in 1889 the Eiffel Tower, at 300 metres, proved that great height could be a spectacle. Manhattan's Chrysler Building took the title in 1930 and held it for less than a year."
     },
     {
       "id": "the-new-york-century",

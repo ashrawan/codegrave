@@ -43,7 +43,13 @@
     "velcro",
     "barcode",
     "walkman",
-    "post-it-note"
+    "post-it-note",
+    "incandescent-light-bulb",
+    "telephone",
+    "television",
+    "elevator",
+    "bakelite",
+    "nylon"
   ],
   "checkpoints": [
     {
@@ -65,14 +71,14 @@
       "name": "Machines for the house",
       "from": 1850,
       "to": 1919,
-      "note": "Dishwashers, typewriters, zips, vacuum cleaners and fridges relieved housework and office work, while safety razors and flasks changed daily habits."
+      "note": "Light bulbs, telephones, dishwashers, typewriters, zips, vacuum cleaners and fridges relieved housework and office work, elevators lifted people into tall buildings, and Bakelite made the first plastic goods."
     },
     {
       "id": "plastic-and-electric",
       "name": "The electric and plastic age",
       "from": 1920,
       "to": 2026,
-      "note": "Ballpoint pens, microwaves, instant cameras and hook-and-loop fasteners filled drawers and kitchens. The Walkman and the sticky note turned small ideas into habits."
+      "note": "Television took over the living room, and nylon, ballpoint pens, microwaves, instant cameras and hook-and-loop fasteners filled drawers and kitchens. The Walkman and the sticky note turned small ideas into habits."
     }
   ],
   "year": 1950

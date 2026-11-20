@@ -32,14 +32,21 @@
     "un-charter",
     "non-proliferation-treaty",
     "maastricht-treaty",
-    "paris-agreement"
+    "paris-agreement",
+    "congress-of-vienna",
+    "berlin-conference",
+    "kellogg-briand-pact",
+    "camp-david-accords",
+    "good-friday-agreement",
+    "kyoto-protocol",
+    "sykes-picot-agreement"
   ],
   "checkpoints": [
     {
       "id": "old-treaties",
       "name": "Pacts of the old world",
       "from": -1300,
-      "to": 900,
+      "to": 1399,
       "note": "Rulers have written treaties for thousands of years. Egypt and the Hittites swore peace, and Charlemagne's grandsons split an empire that later became the core of France and Germany."
     },
     {
@@ -54,7 +61,7 @@
       "name": "Empires and new nations",
       "from": 1751,
       "to": 1900,
-      "note": "Britain recognised the United States, France sold Louisiana, and China and Japan were forced to open to foreign trade. In New Zealand, a treaty between the Crown and Maori chiefs left disputes that last today."
+      "note": "Britain recognised the United States, France sold Louisiana, the Congress of Vienna redrew Europe after Napoleon, and China and Japan were forced to open to foreign trade. At Berlin in 1884 European states set the rules for dividing Africa. In New Zealand, a treaty between the Crown and Maori chiefs left disputes that last today."
     },
     {
       "id": "after-the-great-war",
@@ -68,7 +75,7 @@
       "name": "Agreements for the whole world",
       "from": 1940,
       "to": 2026,
-      "note": "After the Second World War states created the United Nations, limited nuclear weapons, merged much of Europe in new unions and tried to act together on climate."
+      "note": "After the Second World War states created the United Nations and limited nuclear weapons. Camp David and the Good Friday Agreement settled old conflicts, Europe merged much of itself in new unions, and the Kyoto and Paris agreements tried to act together on climate."
     }
   ],
   "year": 1945

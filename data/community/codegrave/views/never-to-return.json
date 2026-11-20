@@ -1,7 +1,7 @@
 {
   "id": "never-to-return",
-  "name": "Never to Return: The Extinct, the Destroyed and the Vanished",
-  "description": "Mammoths and moas, wonders of the ancient world and a bridge in Bosnia: what we have lost for good, how it was lost and what remains to remember.",
+  "name": "Never to Return: The Destroyed and the Vanished",
+  "description": "Wonders of the ancient world, burned libraries, dead languages, razed cities and a bridge in Bosnia: the things people made and then lost for good, and how they went.",
   "category": "earth-space",
   "labels": [
     "lost",
@@ -15,8 +15,6 @@
     "vanished"
   ],
   "entries": [
-    "woolly-mammoth",
-    "doggerland",
     "sumerian-language",
     "babylon",
     "hanging-gardens-of-babylon",
@@ -30,66 +28,61 @@
     "carthage",
     "pompeii",
     "buddhas-of-bamiyan",
-    "elephant-bird",
-    "moa",
-    "aurochs",
     "globe-theatre",
-    "dodo",
-    "stellers-sea-cow",
-    "great-auk",
-    "quagga",
-    "passenger-pigeon",
-    "carolina-parakeet",
-    "thylacine",
     "crystal-palace",
     "lz-129-hindenburg",
     "amber-room",
     "storm-on-the-sea-of-galilee",
     "berlin-wall",
-    "golden-toad",
     "stari-most",
-    "pyrenean-ibex",
     "world-trade-center-twin-towers",
-    "baiji",
-    "western-black-rhinoceros",
-    "lonesome-george",
-    "antonov-an-225-mriya"
+    "antonov-an-225-mriya",
+    "nineveh",
+    "etruscan-language",
+    "nalanda",
+    "house-of-wisdom",
+    "cahokia",
+    "tenochtitlan",
+    "roanoke-colony",
+    "great-fire-of-london",
+    "manx-language",
+    "pripyat"
   ],
   "checkpoints": [
     {
       "id": "before-history",
-      "name": "Before history",
-      "from": -400000,
+      "name": "The ancient world",
+      "from": -3000,
       "to": -1,
-      "note": "Woolly mammoths die out and Doggerland sinks under the North Sea. Sumerian fades from speech, Babylon and its Hanging Gardens decay, the Library of Ashurbanipal burns with Nineveh and Rome razes Carthage. The Greek wonders, the Statue of Zeus at Olympia, the Mausoleum at Halicarnassus and the Colossus of Rhodes, are built to be seen and lost."
+      "note": "Sumerian and later Etruscan fade from speech, Babylon and its Hanging Gardens decay, the Library of Ashurbanipal is buried when Nineveh falls in 612 BCE, and Rome razes Carthage. The Mausoleum at Halicarnassus, the Statue of Zeus at Olympia and the Colossus of Rhodes are built as wonders; the Colossus falls in an earthquake within a lifetime."
     },
     {
       "id": "wonders-fall",
       "name": "Wonders fall",
       "from": 1,
       "to": 1599,
-      "note": "Pompeii lies under ash, the Library of Alexandria fades, and the Lighthouse of Alexandria and the Temple of Artemis fall to earthquake and mobs. People kill off the elephant bird and the moa, while the Buddhas of Bamiyan, carved in the 6th century, stand for another fourteen centuries."
+      "note": "Pompeii lies under ash in 79, the Library of Alexandria fades, and the Temple of Artemis and the Lighthouse of Alexandria fall. Nalanda and Baghdad's House of Wisdom are destroyed by invaders, Cahokia empties, Spanish conquerors raze Tenochtitlan in 1521 and the Roanoke colony vanishes. The Buddhas of Bamiyan, carved in the 6th century, still stand."
     },
     {
       "id": "the-age-of-the-gun-and-the-ship",
-      "name": "The age of the gun and the ship",
+      "name": "Fire and glass",
       "from": 1600,
       "to": 1899,
-      "note": "The last aurochs dies in a Polish forest in 1627, sailors kill the dodo and Steller's sea cow and the great auk, and the Globe Theatre burns. The quagga is lost in a zoo in 1883."
+      "note": "The Globe Theatre closes in 1642 and is soon pulled down, the Great Fire of London burns most of the old city in 1666, and the Amber Room is carried from Prussia to Russia. In 1851 London builds the Crystal Palace of iron and glass, while the painting The Storm on the Sea of Galilee passes between collectors."
     },
     {
       "id": "twentieth-century-losses",
       "name": "Twentieth-century losses",
       "from": 1900,
       "to": 1999,
-      "note": "The passenger pigeon and Carolina parakeet die in captivity, and the last thylacine in 1936. Fire takes the Crystal Palace and the airship Hindenburg, the Amber Room vanishes, and a painting is stolen, and the Berlin Wall, golden toad and Stari Most disappear."
+      "note": "Fire destroys the Crystal Palace in 1936 and the airship Hindenburg in 1937, and the Amber Room vanishes in the Second World War. The last native speaker of Manx dies in 1974, Pripyat is abandoned after the 1986 reactor disaster, the Berlin Wall falls, The Storm on the Sea of Galilee is stolen in Boston in 1990 and the Stari Most bridge is shelled down in 1993."
     },
     {
       "id": "the-last-of-their-kind",
-      "name": "The last of their kind",
+      "name": "The new century",
       "from": 2000,
       "to": 2026,
-      "note": "The Pyrenean ibex dies out in 2000, the twin towers fall in 2001, the Taliban blow up the Buddhas of Bamiyan, the baiji dolphin is lost, the western black rhinoceros declared extinct, Lonesome George dies and the Antonov An-225 Mriya is destroyed in war."
+      "note": "The twin towers of the World Trade Center fall in 2001, the Taliban blow up the Buddhas of Bamiyan the same year, and the Antonov An-225 Mriya, the largest aircraft ever flown, is destroyed at its airfield near Kyiv in 2022."
     }
   ],
   "year": 1700

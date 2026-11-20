@@ -1,7 +1,7 @@
 {
   "id": "garage-dreams",
   "name": "Garage Dreams",
-  "description": "How a hobbyist kit became a machine on every desk: the chips, the companies, the programs and the people behind the personal computer revolution.",
+  "description": "From Apple's garage to Facebook's dorm room: the chips, machines and companies that started small and built the personal computer and internet industries.",
   "category": "computing",
   "labels": [
     "computing",
@@ -20,7 +20,6 @@
   "entries": [
     "intel-8080",
     "mos-6502",
-    "zilog-z80",
     "altair-8800",
     "bill-gates",
     "microsoft",
@@ -29,60 +28,49 @@
     "apple-ii",
     "steve-jobs",
     "apple-inc",
-    "trs-80",
-    "commodore-pet",
-    "cp-m",
-    "visicalc",
-    "wordstar",
-    "ibm",
     "ibm-pc",
     "ms-dos",
-    "compaq-portable",
-    "compaq",
-    "osborne-1",
-    "commodore-64",
-    "commodore-international",
-    "zx-spectrum",
-    "bbc-micro",
-    "lotus-1-2-3",
     "apple-lisa",
     "macintosh",
-    "amiga-1000",
-    "atari-st",
-    "windows-3-1",
-    "hypercard",
-    "windows-95",
     "imac-g3",
-    "raspberry-pi"
+    "intel-4004",
+    "xerox-parc",
+    "xerox-alto",
+    "yahoo",
+    "amazon",
+    "jeff-bezos",
+    "google-search",
+    "mark-zuckerberg",
+    "facebook"
   ],
   "checkpoints": [
     {
       "id": "kits-and-garages",
       "name": "Kits and garages",
-      "from": 1974,
+      "from": 1970,
       "to": 1980,
-      "note": "Hobbyists build computers from kits such as the Altair, and two young friends in California start Apple. The Apple II, TRS-80 and PET of 1977 are among the first mass-market machines sold ready to use, and VisiCalc gives businesses a reason to buy."
+      "note": "Intel's 4004 and 8080 and the cheap MOS 6502 put a computer's brain on a chip, and at Xerox PARC the Alto showed a mouse and windows. Hobbyists built the Altair from a kit, Bill Gates left Harvard to start Microsoft, and in 1976 Steve Wozniak and Steve Jobs built the Apple I and founded Apple, whose Apple II of 1977 came ready to use."
     },
     {
       "id": "the-beige-box",
       "name": "The beige box",
       "from": 1981,
       "to": 1983,
-      "note": "IBM enters with the IBM PC and an open design that lets clones such as Compaq follow. MS-DOS and Lotus 1-2-3 dominate offices, while cheap home machines from Commodore and Sinclair fill children's bedrooms."
+      "note": "IBM enters with the IBM PC and Microsoft's MS-DOS, and the deal makes the small company that began in Albuquerque the most important name in software. Apple answers with the Lisa, built on ideas Jobs had seen at Xerox PARC."
     },
     {
       "id": "mouse-and-windows",
       "name": "Mouse and windows",
       "from": 1984,
       "to": 1994,
-      "note": "The Macintosh, Amiga and Atari ST bring pictures and sound, and Windows slowly turns DOS into a graphical system. Commodore collapses as the PC and the Mac settle in as the two main camps."
+      "note": "The Macintosh brings the mouse and windows to ordinary buyers in 1984, and Jobs is pushed out of Apple a year later. The PC and the Mac settle in as the two main camps, and in 1994 two Stanford students turn a list of websites into Yahoo."
     },
     {
       "id": "everyone-online",
       "name": "Everyone online",
       "from": 1995,
-      "to": 2012,
-      "note": "Windows 95 brings the PC to nearly every home and the internet makes it essential. Apple returns with the iMac, and the tiny Raspberry Pi brings the kit-computer spirit back for a new generation."
+      "to": 2026,
+      "note": "Jeff Bezos starts Amazon in his garage, two Stanford students build Google Search and rent their first office in a garage, and Jobs returns to Apple, where the iMac revives the company. In 2004 Mark Zuckerberg launches Facebook from his Harvard dorm room."
     }
   ],
   "year": 1981

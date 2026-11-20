@@ -1,6 +1,6 @@
 {
   "id": "beyond-the-edge-of-the-map",
-  "name": "Beyond the Edge of the Map: Marco Polo to Everest",
+  "name": "Beyond the Edge of the Map: Silk Road to Everest",
   "description": "Merchants, admirals, sailors and mountaineers who crossed oceans, found new lands and reached the poles and the highest summit.",
   "category": "people",
   "labels": [
@@ -51,9 +51,24 @@
     "imperial-trans-antarctic-expedition",
     "edmund-hillary",
     "tenzing-norgay",
-    "everest-1953-expedition"
+    "everest-1953-expedition",
+    "zhang-qian",
+    "xuanzang",
+    "leif-erikson",
+    "l-anse-aux-meadows",
+    "everest-1924-expedition",
+    "robert-peary",
+    "matthew-henson",
+    "fridtjof-nansen"
   ],
   "checkpoints": [
+    {
+      "id": "early-journeys",
+      "name": "Early journeys",
+      "from": -139,
+      "to": 1253,
+      "note": "Zhang Qian's mission west from China around 138 BCE opened routes later called the Silk Road, the monk Xuanzang walked to India and back in the 600s, and Leif Erikson's Norse crew reached North America around the year 1000, as the site at L'Anse aux Meadows shows."
+    },
     {
       "id": "travellers-by-land-and-sea",
       "name": "Travellers by land and sea",
@@ -79,15 +94,15 @@
       "id": "interiors-and-poles",
       "name": "Interiors and poles",
       "from": 1780,
-      "to": 1938,
+      "to": 1923,
       "note": "Humboldt, Lewis and Clark and Livingstone cross continents, while Amundsen, Scott and Shackleton race across the ice of Antarctica."
     },
     {
       "id": "the-last-summit",
       "name": "The last summit",
-      "from": 1939,
+      "from": 1924,
       "to": 2008,
-      "note": "Hillary and Tenzing stand on Everest in 1953, one of the last great feats of exploration on Earth."
+      "note": "In 1924 Mallory and Irvine vanished near the summit of Everest, and in 1953 Hillary and Tenzing stood on top, one of the last great feats of exploration on Earth."
     }
   ],
   "year": 1500

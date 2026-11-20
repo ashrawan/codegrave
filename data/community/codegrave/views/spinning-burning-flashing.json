@@ -42,15 +42,17 @@
     "aws",
     "blu-ray",
     "hd-dvd",
-    "dropbox"
+    "dropbox",
+    "punched-card",
+    "magnetic-tape"
   ],
   "checkpoints": [
     {
       "id": "iron-platters",
       "name": "Iron platters and tape",
-      "from": 1956,
+      "from": 1890,
       "to": 1972,
-      "note": "IBM built the first hard disk drive in 1956, and it was a huge machine. The compact cassette arrived in 1963 for music and later let home computers load programs from audio tape, and the floppy disk appeared in 1971."
+      "note": "Punched cards, first used for the 1890 US census, were an early way to store data. IBM built the first hard disk drive in 1956, and it was a huge machine. The compact cassette arrived in 1963 for music, and the floppy disk appeared in 1971."
     },
     {
       "id": "floppies-and-discs",

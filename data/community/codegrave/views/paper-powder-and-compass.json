@@ -1,7 +1,7 @@
 {
   "id": "paper-powder-and-compass",
-  "name": "Paper, Powder and Compass: China's Inventive Age",
-  "description": "Rice paddies, silk, paper, printing, gunpowder, the compass and giant ships: the Chinese inventions that spread along the Silk Road and the sea, to the Moon.",
+  "name": "Paper, Powder and Compass: Chinese Inventions",
+  "description": "Rice paddies, silk, paper, printing, gunpowder, the compass and treasure ships: the Chinese inventions that travelled the Silk Road and the sea, and where they led.",
   "category": "technology",
   "labels": [
     "engineering",
@@ -46,7 +46,11 @@
     "shenzhou-5",
     "three-gorges-dam",
     "shanghai-maglev-train",
-    "chang-e-4"
+    "chang-e-4",
+    "banknote",
+    "bi-sheng",
+    "zhang-heng",
+    "abacus"
   ],
   "checkpoints": [
     {
@@ -61,14 +65,14 @@
       "name": "Han ingenuity",
       "from": -299,
       "to": 600,
-      "note": "Under the Han dynasty paper spread, and Cai Lun is traditionally credited with improving it. Traders carried silk along the Silk Road, tea and acupuncture became part of life, the junk sailed rivers and coasts, and porcelain took shape."
+      "note": "Under the Han dynasty paper spread, and Cai Lun is traditionally credited with improving it. Zhang Heng built an early earthquake detector, the abacus came into use for counting, traders carried silk along the Silk Road, tea and acupuncture became part of life, the junk sailed rivers and coasts, and porcelain took shape."
     },
     {
       "id": "print-and-powder",
       "name": "Print, powder and the needle",
       "from": 601,
       "to": 1300,
-      "note": "Under the Tang and Song dynasties, woodblock printing made texts cheap, and later movable type was tried. Gunpowder gave the fire lance, and a magnetic compass became a tool for finding direction at sea."
+      "note": "Under the Tang and Song dynasties, woodblock printing made texts cheap, and Bi Sheng tried movable type. Banknotes eased trade, gunpowder gave the fire lance, and a magnetic compass became a tool for finding direction at sea."
     },
     {
       "id": "ships-of-the-ming",

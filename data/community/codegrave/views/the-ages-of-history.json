@@ -39,14 +39,16 @@
     "age-of-revolution",
     "victorian-era",
     "scramble-for-africa",
-    "gilded-age",
     "belle-epoque",
-    "roaring-twenties",
     "interwar-period",
     "atomic-age",
     "cold-war",
     "space-age",
-    "information-age"
+    "information-age",
+    "edo-period",
+    "qing-dynasty",
+    "tang-dynasty",
+    "decolonization"
   ],
   "checkpoints": [
     {
@@ -75,28 +77,28 @@
       "name": "Middle Ages and golden ages",
       "from": 500,
       "to": 1499,
-      "note": "After Rome falls, new powers rise: Viking raiders, scholars of the Islamic world, courts in Japan and the Church in Europe, and trade links the Old World."
+      "note": "After Rome falls, new powers rise: Viking raiders, scholars of the Islamic world, Tang China, courts in Japan and the Church in Europe, and trade links the Old World."
     },
     {
       "id": "early-modern",
       "name": "The early modern world",
       "from": 1500,
       "to": 1799,
-      "note": "Ships link the continents, printing helps the Reformation, new science changes ideas of nature, and the Enlightenment questions kings."
+      "note": "Ships link the continents, printing helps the Reformation, new science changes ideas of nature, the Enlightenment questions kings, and Japan's Edo period and China's Qing dynasty keep large states in order."
     },
     {
       "id": "industrial",
       "name": "Machines and empires",
       "from": 1800,
       "to": 1944,
-      "note": "Factories and railways remake work, empires cover much of the globe, and two world wars end the old order."
+      "note": "Factories and railways remake work, empires cover much of the globe, the Belle Epoque and the interwar years mark the end of the old order, and two world wars end it."
     },
     {
       "id": "modern",
       "name": "Atomic to information",
       "from": 1945,
       "to": 2026,
-      "note": "Nuclear weapons, a Cold War, spaceflight and the computer give the modern world its shape, and information becomes central to daily life."
+      "note": "Nuclear weapons, a Cold War, spaceflight and the computer give the modern world its shape, decolonisation redraws the map of Africa and Asia, and information becomes central to daily life."
     }
   ],
   "year": 1500

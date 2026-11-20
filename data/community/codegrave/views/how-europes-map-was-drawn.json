@@ -49,7 +49,16 @@
     "free-city-of-danzig",
     "nazi-germany",
     "east-germany",
-    "fall-of-the-berlin-wall"
+    "fall-of-the-berlin-wall",
+    "portugal",
+    "sweden",
+    "partitions-of-poland",
+    "yugoslavia",
+    "soviet-union",
+    "ottoman-empire",
+    "german-reunification",
+    "european-union",
+    "maastricht-treaty"
   ],
   "checkpoints": [
     {
@@ -64,14 +73,14 @@
       "name": "Religion and monarchy",
       "from": 1500,
       "to": 1713,
-      "note": "Wars of religion and dynasty reshape the map. The Peace of Westphalia in 1648 sets rules for sovereign states, as Poland-Lithuania and Prussia rise and Russia grows."
+      "note": "Wars of religion and dynasty reshape the map. The Peace of Westphalia in 1648 sets rules for sovereign states, as Poland-Lithuania, Prussia, Portugal and Sweden vie for position and Russia grows."
     },
     {
       "id": "revolution-and-napoleon",
       "name": "Revolution and Napoleon",
       "from": 1714,
       "to": 1814,
-      "note": "The French Revolution and Napoleon sweep away old states, including the Holy Roman Empire and Venice. The Austrian Empire and the Russian Empire become great powers."
+      "note": "The French Revolution and Napoleon sweep away old states, including the Holy Roman Empire and Venice, and Poland is partitioned out of existence. The Austrian Empire and the Russian Empire become great powers."
     },
     {
       "id": "nations-made-by-iron",
@@ -84,8 +93,8 @@
       "id": "broken-and-rebuilt",
       "name": "Broken and rebuilt",
       "from": 1914,
-      "to": 1991,
-      "note": "The First World War ends four empires and creates new states, such as Czechoslovakia. After the Second World War a divided Germany stands at the centre of the Cold War until the wall comes down."
+      "to": 1993,
+      "note": "The First World War ends four empires, including the Ottoman Empire, and creates new states, such as Czechoslovakia and Yugoslavia. After the Second World War a divided Germany stands at the centre of the Cold War until the wall falls, the Soviet Union ends and the European Union is founded."
     }
   ],
   "year": 1815

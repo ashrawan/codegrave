@@ -16,13 +16,10 @@
     "oil"
   ],
   "entries": [
-    "stagecoach",
     "bicycle",
     "vulcanization",
     "drake-well",
     "internal-combustion-engine",
-    "penny-farthing",
-    "rickshaw",
     "karl-benz",
     "benz-patent-motorwagen",
     "diesel-engine",
@@ -39,7 +36,11 @@
     "toyota-prius",
     "tata-nano",
     "tesla-roadster",
-    "electric-motor"
+    "electric-motor",
+    "toyota",
+    "general-motors",
+    "us-route-66",
+    "oil-crisis-1973"
   ],
   "checkpoints": [
     {
@@ -47,28 +48,28 @@
       "name": "Before the car",
       "from": 1610,
       "to": 1885,
-      "note": "Bicycles, rickshaws and stagecoaches move people while inventors tinker with steam wagons and gas engines. Rubber and oil, two future necessities, are found and made useful."
+      "note": "Bicycles move people and goods while inventors tinker with steam wagons and gas engines. Rubber and oil, two future necessities, are found and made useful."
     },
     {
       "id": "motoring-for-all",
       "name": "Motoring for all",
       "from": 1886,
       "to": 1929,
-      "note": "Benz patents a petrol car, Diesel builds his engine and Henry Ford brings the price of a Model T down until ordinary families can buy one."
+      "note": "Benz patents a petrol car, Diesel builds his engine and Henry Ford brings the price of a Model T down until ordinary families can buy one. General Motors grows into his great rival, and Route 66 opens in 1926 as a road for the new motorists."
     },
     {
       "id": "small-cars-and-scooters",
       "name": "Small cars and scooters",
       "from": 1930,
       "to": 1969,
-      "note": "After the war, cheap and clever small vehicles put Europe and Asia on the road: the Beetle, the 2CV, the Vespa, the Honda Super Cub and the Mini."
+      "note": "After the war, cheap and clever small vehicles put Europe and Asia on the road: the Beetle, the 2CV, the Vespa, the Honda Super Cub and the Mini, while Toyota grows from a Japanese loom-maker's car venture into a world carmaker."
     },
     {
       "id": "the-electric-turn",
       "name": "The electric turn",
       "from": 1970,
       "to": 2026,
-      "note": "Better batteries, hybrids and electric sports cars begin to challenge the petrol engine, while very cheap cars try to reach new buyers."
+      "note": "The 1973 oil crisis pushes buyers toward thrift. Better batteries, hybrids and electric sports cars then begin to challenge the petrol engine, while very cheap cars try to reach new buyers."
     }
   ],
   "year": 1910

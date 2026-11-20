@@ -37,7 +37,13 @@
     "pepsi",
     "hamburger",
     "instant-noodles",
-    "bubble-tea"
+    "bubble-tea",
+    "rice",
+    "potato",
+    "maize",
+    "columbian-exchange",
+    "sugar",
+    "curry"
   ],
   "checkpoints": [
     {
@@ -45,7 +51,7 @@
       "name": "The first kitchens",
       "from": -12000,
       "to": -1000,
-      "note": "Farmers learned to bake bread, ferment grain and fruit into beer and wine, and turn milk into cheese. Cacao was drunk in Mesoamerica, and noodles were made in northern China."
+      "note": "Farmers learned to bake bread, ferment grain and fruit into beer and wine, and turn milk into cheese. Rice was grown in flooded fields of Asia, cacao was drunk in Mesoamerica, and noodles were made in northern China."
     },
     {
       "id": "ancient-tables",
@@ -59,7 +65,7 @@
       "name": "Spirits and pasta",
       "from": 1001,
       "to": 1700,
-      "note": "Kimchi, pasta and coffee took shape in Korea, Italy and Arabia, and distillers in Poland, Scotland and Russia made strong drinks. Champagne's bubbles came at the end of the period."
+      "note": "Kimchi, pasta and coffee took shape in Korea, Italy and Arabia, and distillers made strong drinks. After 1492 the Columbian exchange carried maize and potatoes from the Americas to the Old World, and sugar grew into a mass commodity. Curry took shape as spices met local cooking in India."
     },
     {
       "id": "industry-and-fizz",

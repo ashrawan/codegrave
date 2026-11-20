@@ -1,7 +1,7 @@
 {
   "id": "the-hours-we-invented",
   "name": "The Hours We Invented: A History of Keeping Time",
-  "description": "Shadows, dripping water, swinging weights and vibrating atoms: how humans learned to count the days and divide them, from Stonehenge to satellites.",
+  "description": "Shadows, dripping water, swinging weights and vibrating atoms: how people learned to count the days, divide them and agree on the time, from Stonehenge to atomic clocks.",
   "category": "knowledge",
   "labels": [
     "astronomy",
@@ -24,7 +24,6 @@
     "chinese-calendar",
     "roman-calendar",
     "maya-calendar",
-    "antikythera-mechanism",
     "julian-calendar",
     "anno-domini",
     "hebrew-calendar",
@@ -39,14 +38,10 @@
     "marine-chronometer",
     "wristwatch",
     "french-republican-calendar",
-    "metric-system",
     "standard-time",
-    "prime-meridian",
     "quartz-clock",
     "atomic-clock",
-    "si-units",
-    "coordinated-universal-time",
-    "global-positioning-system"
+    "coordinated-universal-time"
   ],
   "checkpoints": [
     {
@@ -61,7 +56,7 @@
       "name": "Sacred and mechanical",
       "from": 1,
       "to": 1299,
-      "note": "Calendars of faith, such as the Hebrew and Islamic, were fixed, Dionysius proposed counting from Christ's birth, and the verge escapement made mechanical clocks possible."
+      "note": "Calendars of faith, such as the Hebrew and the Islamic, were fixed, the Anno Domini count of years from Christ's birth was proposed in 525, and the verge escapement made the first mechanical clocks possible."
     },
     {
       "id": "pendulum-and-reform",
@@ -75,14 +70,14 @@
       "name": "Longitude and order",
       "from": 1700,
       "to": 1899,
-      "note": "Harrison's marine chronometer solved the problem of finding longitude at sea. The French tried decimal time, the metric system arrived, and railways forced standard time and a prime meridian."
+      "note": "Harrison's marine chronometer solved the problem of finding longitude at sea. Wristwatches appeared, revolutionary France tried a calendar of ten-day weeks, and the railways forced towns to give up local time for standard time."
     },
     {
       "id": "atoms-and-satellites",
-      "name": "Atoms and satellites",
+      "name": "Quartz and atoms",
       "from": 1900,
       "to": 2026,
-      "note": "Quartz clocks, then atomic clocks, set a steadier beat than the Earth itself. The SI second, Coordinated Universal Time and GPS satellites now keep the whole planet in step."
+      "note": "Quartz clocks, then atomic clocks, set a steadier beat than the turning Earth itself, and since 1960 Coordinated Universal Time has kept the whole planet's clocks in step."
     }
   ],
   "year": 1700

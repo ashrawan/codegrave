@@ -1,7 +1,7 @@
 {
   "id": "a-house-divided-and-remade",
   "name": "A House Divided and Remade",
-  "description": "Cotton, conscience and conflict: how slavery split the United States, how the Civil War was fought and won, and how freedom was won and then contested.",
+  "description": "Cotton, conscience and conflict: how slavery split the United States, how the Civil War was fought and won, and how Reconstruction tried to remake the reunited country.",
   "category": "events",
   "labels": [
     "war",
@@ -18,10 +18,7 @@
   ],
   "entries": [
     "cotton-gin",
-    "atlantic-slave-trade",
-    "sojourner-truth",
     "frederick-douglass",
-    "harriet-tubman",
     "uncle-toms-cabin",
     "harriet-beecher-stowe",
     "republican-party-us",
@@ -37,10 +34,15 @@
     "thirteenth-amendment",
     "reconstruction-era",
     "fourteenth-amendment",
-    "civil-rights-act-1964",
-    "rosa-parks",
-    "martin-luther-king-jr",
-    "voting-rights-act-1965"
+    "battle-of-fort-sumter",
+    "dred-scott-decision",
+    "underground-railroad",
+    "battle-of-appomattox",
+    "uss-monitor",
+    "gatling-gun",
+    "walt-whitman",
+    "ku-klux-klan",
+    "first-transcontinental-railroad"
   ],
   "checkpoints": [
     {
@@ -48,7 +50,7 @@
       "name": "Cotton and chains",
       "from": 1793,
       "to": 1852,
-      "note": "The cotton gin makes slave-grown cotton hugely profitable and, although the US bans importing enslaved people in 1808, ties the South to slavery and a vast internal slave trade. Sojourner Truth, Frederick Douglass and Harriet Tubman fight slavery, and Uncle Tom's Cabin turns it into a national cause."
+      "note": "The cotton gin makes slave-grown cotton hugely profitable and, although the US bans importing enslaved people in 1808, ties the South to slavery and a vast internal slave trade. Frederick Douglass, who escaped slavery, becomes its fiercest critic, and Harriet Beecher Stowe's Uncle Tom's Cabin turns the issue into a national cause."
     },
     {
       "id": "road-to-war",
@@ -62,21 +64,14 @@
       "name": "The war",
       "from": 1861,
       "to": 1865,
-      "note": "The Confederate States fight the Union. Robert E. Lee leads the main Confederate army and Ulysses S. Grant rises to command the Union's. Gettysburg turns the war, the Emancipation Proclamation and Gettysburg Address give it a new purpose, and the Thirteenth Amendment ends slavery."
+      "note": "The Confederate States fight the Union. Robert E. Lee leads the main Confederate army and Ulysses S. Grant rises to command the Union's. The ironclad USS Monitor and the first Gatling guns show a new kind of war, Gettysburg turns the tide, the Emancipation Proclamation and the Gettysburg Address give the war a new purpose, and the Thirteenth Amendment ends slavery."
     },
     {
       "id": "rebuilding",
       "name": "Reconstruction",
       "from": 1866,
       "to": 1877,
-      "note": "Reconstruction tries to give freed people citizenship through the Fourteenth Amendment, but it ends when federal troops leave the South."
-    },
-    {
-      "id": "unfinished-freedom",
-      "name": "The unfinished work",
-      "from": 1878,
-      "to": 1965,
-      "note": "Segregation holds for nearly a century, until Rosa Parks, Martin Luther King Jr. and a mass movement win the Civil Rights Act and the Voting Rights Act."
+      "note": "Reconstruction tries to give freed people citizenship through the Fourteenth Amendment, while the Ku Klux Klan answers with terror. Walt Whitman mourns the war's dead, Grant is elected president in 1868, the transcontinental railroad joins the reunited country in 1869, and Reconstruction ends in 1877 when federal troops leave the South."
     }
   ],
   "year": 1863

@@ -32,7 +32,6 @@
     "beethoven-symphony-5",
     "beethoven-symphony-9",
     "romantic-music",
-    "silent-night",
     "new-world-symphony",
     "overture-1812",
     "gymnopedies",
@@ -40,7 +39,15 @@
     "rite-of-spring",
     "rhapsody-in-blue",
     "bolero-ravel",
-    "carmina-burana-orff"
+    "carmina-burana-orff",
+    "joseph-haydn",
+    "franz-schubert",
+    "frederic-chopin",
+    "johannes-brahms",
+    "richard-wagner",
+    "giuseppe-verdi",
+    "pyotr-ilyich-tchaikovsky",
+    "antonin-dvorak"
   ],
   "checkpoints": [
     {
@@ -55,14 +62,14 @@
       "name": "The Classical period",
       "from": 1750,
       "to": 1819,
-      "note": "Clear tunes and balanced forms dominate in Vienna, and Mozart and the young Beethoven turn the symphony and the sonata into serious art."
+      "note": "Clear tunes and balanced forms dominate in Vienna, and Haydn, Mozart and the young Beethoven turn the symphony and the sonata into serious art."
     },
     {
       "id": "romantic",
       "name": "The Romantic century",
       "from": 1820,
-      "to": 1879,
-      "note": "Feeling takes first place. Orchestras grow larger, and composers write about nations, nature and the inner self, including Beethoven's last symphony."
+      "to": 1899,
+      "note": "Feeling takes first place. Orchestras grow larger, and composers such as Schubert, Chopin, Verdi, Wagner, Brahms, Tchaikovsky and Dvorak write about nations, nature and the inner self, including Beethoven's last symphony."
     },
     {
       "id": "modern-turn",

@@ -17,9 +17,6 @@
   ],
   "entries": [
     "popol-vuh",
-    "mexico",
-    "argentina",
-    "brazil",
     "tango-music",
     "jorge-luis-borges",
     "pablo-neruda",
@@ -33,11 +30,19 @@
     "gabriel-garcia-marquez",
     "one-hundred-years-of-solitude",
     "the-alchemist",
-    "buena-vista-social-club",
     "buena-vista-social-club-album",
     "city-of-god-2002",
     "pans-labyrinth",
-    "despacito-song"
+    "despacito-song",
+    "sor-juana",
+    "jose-marti",
+    "diego-rivera",
+    "mexican-muralism",
+    "carlos-gardel",
+    "samba",
+    "octavio-paz",
+    "mario-vargas-llosa",
+    "magic-realism"
   ],
   "checkpoints": [
     {
@@ -45,28 +50,28 @@
       "name": "Old voices, new nations",
       "from": 1558,
       "to": 1909,
-      "note": "The Popol Vuh, a Maya story of creation, is set down in writing in the sixteenth century. In the 1800s Mexico, Argentina and Brazil become independent countries, and around 1880 the tango takes shape in the port cities of the Río de la Plata."
+      "note": "The Popol Vuh, a Maya story of creation, is set down in writing in the sixteenth century, and Sor Juana writes her poems in colonial Mexico in the 1600s. Around 1880 the tango takes shape in the port cities of the Rio de la Plata, and the Cuban poet Jose Marti writes for independence in the 1890s."
     },
     {
       "id": "revolution-and-verse",
       "name": "Revolution and verse",
       "from": 1910,
       "to": 1949,
-      "note": "The Mexican Revolution begins in 1910 and shapes Frida Kahlo's world; she paints The Two Fridas in 1939. Jorge Luis Borges in Buenos Aires and Pablo Neruda in Chile write works that change Spanish-language literature, and Celia Cruz, born in Cuba in 1925, grows up with the island's music."
+      "note": "The Mexican Revolution begins in 1910 and shapes the murals of Diego Rivera and the paintings of Frida Kahlo, who paints The Two Fridas in 1939. Borges in Buenos Aires, Neruda in Chile and Octavio Paz in Mexico write works that change Spanish-language literature, Carlos Gardel sings tango, and Celia Cruz grows up with Cuba's music."
     },
     {
       "id": "boom-and-bossa",
       "name": "Boom and bossa",
       "from": 1950,
       "to": 1969,
-      "note": "The Cuban Revolution triumphs in 1959, and Celia Cruz leaves the island in 1960. In Brazil, bossa nova (1958) and The Girl from Ipanema (1962) make a gentle samba famous worldwide. Gabriel García Márquez publishes One Hundred Years of Solitude in 1967, and Latin American fiction finds readers across the globe."
+      "note": "The Cuban Revolution triumphs in 1959, and Celia Cruz leaves the island in 1960. In Brazil, bossa nova (1958), a gentle offshoot of samba, and The Girl from Ipanema (1962) become famous worldwide. Gabriel Garcia Marquez publishes One Hundred Years of Solitude in 1967, and with Vargas Llosa and magic realism Latin American fiction finds readers across the globe."
     },
     {
       "id": "old-masters-new-readers",
       "name": "Old masters, new readers",
       "from": 1970,
       "to": 1999,
-      "note": "Pablo Neruda wins the Nobel Prize in Literature in 1971 and García Márquez in 1982. Paulo Coelho's The Alchemist (1988) becomes a world bestseller, and in the 1990s the veteran Cuban musicians of the Buena Vista Social Club record an album that reaches listeners far beyond Havana."
+      "note": "Pablo Neruda wins the Nobel Prize in Literature in 1971, Garcia Marquez in 1982 and Octavio Paz in 1990. Paulo Coelho's The Alchemist (1988) becomes a world bestseller, and in the 1990s the veteran Cuban musicians of the Buena Vista Social Club record an album that reaches listeners far beyond Havana."
     },
     {
       "id": "screens-and-streams",

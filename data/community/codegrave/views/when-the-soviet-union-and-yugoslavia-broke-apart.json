@@ -1,7 +1,7 @@
 {
   "id": "when-the-soviet-union-and-yugoslavia-broke-apart",
-  "name": "Fifteen Flags and Six Republics: The Eastern Bloc Breaks",
-  "description": "The end of the Soviet Union, Yugoslavia and Czechoslovakia and the birth of more than twenty new states in just a few years around 1991.",
+  "name": "Fifteen Flags and Six Republics: Federations Break Up",
+  "description": "The end of the Soviet Union and Yugoslavia, and the peaceful split of Czechoslovakia, told through the revolutions, wars and new states of 1989 to 2008.",
   "category": "places",
   "labels": [
     "independence",
@@ -25,29 +25,27 @@
     "east-germany",
     "fall-of-the-berlin-wall",
     "lithuania",
-    "latvia",
-    "estonia",
     "dissolution-of-the-soviet-union",
     "russia",
     "ukraine",
-    "belarus",
-    "moldova",
-    "georgia",
-    "armenia",
-    "azerbaijan",
-    "kazakhstan",
-    "uzbekistan",
     "slovenia",
     "croatia",
     "bosnia-and-herzegovina",
     "north-macedonia",
     "yugoslav-wars",
     "serbia-and-montenegro",
-    "slovakia",
     "czech-republic",
-    "montenegro",
     "serbia",
-    "kosovo"
+    "kosovo",
+    "revolutions-of-1989",
+    "velvet-revolution",
+    "solidarity-trade-union",
+    "mikhail-gorbachev",
+    "german-reunification",
+    "josip-broz-tito",
+    "nicolae-ceausescu",
+    "lech-walesa",
+    "warsaw-pact"
   ],
   "checkpoints": [
     {
@@ -55,18 +53,18 @@
       "name": "The old federations",
       "from": 1917,
       "to": 1988,
-      "note": "Soviet rule and Yugoslavia hold many nations in single states. In Poland, East Germany and Czechoslovakia, Soviet-backed governments rule, with growing unrest through the 1980s."
+      "note": "Soviet rule and Yugoslavia, held together under Tito, bind many nations in single states. In Poland, East Germany and Czechoslovakia, Soviet-backed governments in the Warsaw Pact rule, and Solidarity, led by Lech Walesa, shows the growing unrest of the 1980s."
     },
     {
       "id": "walls-fall",
       "name": "The walls fall",
       "from": 1989,
       "to": 1990,
-      "note": "The Berlin Wall opens in 1989, communist governments fall across Eastern Europe, and Germany reunites. In 1990 Lithuania becomes the first Soviet republic to declare independence."
+      "note": "The Berlin Wall opens in 1989 and the revolutions of 1989 topple communist governments across Eastern Europe, peacefully in Czechoslovakia's Velvet Revolution and violently in Romania. Germany reunites, and in 1990 Lithuania becomes the first Soviet republic to declare independence under Gorbachev."
     },
     {
       "id": "fifteen-flags",
-      "name": "Fifteen flags",
+      "name": "The republics leave",
       "from": 1991,
       "to": 1992,
       "note": "After the failed coup of August 1991 the republics leave one by one, and the Soviet Union is dissolved in December. Slovenia and Croatia declare independence, and war breaks out in the Balkans."

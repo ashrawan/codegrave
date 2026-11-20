@@ -40,14 +40,17 @@
     "immanuel-kant",
     "frederick-the-great",
     "catherine-the-great",
-    "wolfgang-amadeus-mozart",
     "wealth-of-nations",
     "us-declaration-of-independence",
     "american-revolution",
     "declaration-of-the-rights-of-man",
     "vindication-of-the-rights-of-woman",
     "mary-wollstonecraft",
-    "french-revolution"
+    "french-revolution",
+    "emilie-du-chatelet",
+    "thomas-jefferson",
+    "carl-linnaeus",
+    "thomas-paine"
   ],
   "checkpoints": [
     {
@@ -62,7 +65,7 @@
       "name": "Ideas on the move",
       "from": 1701,
       "to": 1750,
-      "note": "Montesquieu studies how laws and governments work, Hume tests the limits of human reason, and Swift's Gulliver's Travels mocks the age with satire."
+      "note": "Montesquieu studies how laws and governments work, Hume tests the limits of human reason, Swift's Gulliver's Travels mocks the age with satire, Émilie du Châtelet brings Newton's physics to French readers, and Linnaeus sets out a system to name every living thing."
     },
     {
       "id": "the-encyclopedia",
@@ -76,7 +79,7 @@
       "name": "Reason and revolution",
       "from": 1776,
       "to": 1799,
-      "note": "Smith explains the market, Kant asks what reason can know, and Franklin helps launch the American Revolution. In France the Declaration of the Rights of Man follows, and Wollstonecraft asks why women are left out."
+      "note": "Smith explains the market, Kant asks what reason can know, and Franklin and Jefferson help launch the American Revolution, Jefferson writing the Declaration of Independence. In France the Declaration of the Rights of Man follows, and Wollstonecraft asks why women are left out."
     }
   ],
   "year": 1760

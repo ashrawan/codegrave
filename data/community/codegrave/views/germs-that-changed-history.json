@@ -39,7 +39,12 @@
     "bse",
     "sars",
     "ebola",
-    "covid-19"
+    "covid-19",
+    "germ-theory",
+    "plague-of-justinian",
+    "columbian-exchange",
+    "influenza",
+    "typhus"
   ],
   "checkpoints": [
     {
@@ -47,21 +52,21 @@
       "name": "The old scourges",
       "from": -1200,
       "to": 1345,
-      "note": "Smallpox, measles and other ancient diseases shape life long before anyone knows what causes them."
+      "note": "Smallpox, measles and other ancient diseases shape life long before anyone knows what causes them, and the Plague of Justinian strikes the Byzantine world in 541."
     },
     {
       "id": "plague-and-pox",
       "name": "Plague and pox",
       "from": 1346,
       "to": 1799,
-      "note": "The Black Death kills millions, syphilis spreads through Europe and Edward Jenner tries the first vaccine."
+      "note": "The Black Death kills millions and syphilis spreads through Europe. After 1492 the Columbian exchange brings European diseases to the Americas, and Edward Jenner tries the first vaccine."
     },
     {
       "id": "germ-theory",
       "name": "The germ theory",
       "from": 1800,
       "to": 1899,
-      "note": "Cholera and the potato blight devastate whole countries, and Pasteur and Koch prove that germs cause disease."
+      "note": "Cholera and the potato blight devastate whole countries, and Pasteur and Koch prove through the germ theory that germs cause disease, as typhus and tuberculosis are traced to their causes."
     },
     {
       "id": "vaccines-and-pandemics",

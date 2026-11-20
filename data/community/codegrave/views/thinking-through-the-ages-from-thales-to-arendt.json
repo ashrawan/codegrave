@@ -1,5 +1,5 @@
 {
-  "id": "from-athens-to-today-the-great-thinkers",
+  "id": "thinking-through-the-ages-from-thales-to-arendt",
   "name": "Thinking Through the Ages: From Thales to Arendt",
   "description": "Nearly forty thinkers from Greece, China, India, the Islamic world and Europe who asked what is real, what is good and how we should live together.",
   "category": "people",
@@ -56,22 +56,28 @@
     "ludwig-wittgenstein",
     "jean-paul-sartre",
     "hannah-arendt",
-    "simone-de-beauvoir"
+    "simone-de-beauvoir",
+    "pythagoras",
+    "laozi",
+    "zhuangzi",
+    "adi-shankara",
+    "marcus-aurelius",
+    "mahatma-gandhi"
   ],
   "checkpoints": [
     {
       "id": "the-first-questions",
       "name": "The first questions",
       "from": -624,
-      "to": -262,
-      "note": "Thales looks for natural causes, Confucius and Mencius ask how to live well together, and in Athens Socrates questions everyone while Plato, Aristotle, Epicurus and Zeno found schools whose ideas outlast their cities."
+      "to": 149,
+      "note": "Thales looks for natural causes, Pythagoras finds number in nature, Laozi and Zhuangzi in China turn to the way of nature, Confucius and Mencius ask how to live well together, and in Athens Socrates questions everyone while Plato, Aristotle, Epicurus and Zeno found schools whose ideas outlast their cities."
     },
     {
       "id": "faith-and-reason",
       "name": "Faith and reason",
       "from": 150,
       "to": 1274,
-      "note": "Nagarjuna, Augustine, Avicenna, Al-Ghazali, Averroes, Maimonides and Aquinas ask how reason and revelation fit together, Zhu Xi remakes Confucian thought, and Greek ideas pass through the Islamic world into Europe."
+      "note": "The Stoic emperor Marcus Aurelius writes his private Meditations. Nagarjuna, Augustine, Adi Shankara, Avicenna, Al-Ghazali, Averroes, Maimonides and Aquinas ask how reason and revelation fit together, Zhu Xi remakes Confucian thought, and Greek ideas pass through the Islamic world into Europe."
     },
     {
       "id": "minds-and-states",
@@ -92,7 +98,7 @@
       "name": "The modern questions",
       "from": 1884,
       "to": 1986,
-      "note": "Nietzsche, Wittgenstein, Sartre, Arendt and Beauvoir ask what meaning is left after science, war and totalitarianism, and what freedom means for each person."
+      "note": "Nietzsche, Wittgenstein, Sartre, Arendt and Beauvoir ask what meaning is left after science, war and totalitarianism, and what freedom means for each person, while Gandhi's teaching of nonviolent resistance offers a different answer from India."
     }
   ],
   "year": 1700

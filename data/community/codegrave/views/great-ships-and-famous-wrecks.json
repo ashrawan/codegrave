@@ -42,7 +42,11 @@
     "japanese-battleship-yamato",
     "uss-nautilus-ssn-571",
     "container-ship",
-    "hovercraft"
+    "hovercraft",
+    "dhow",
+    "polynesian-voyaging-canoe",
+    "turtle-ship",
+    "hms-endeavour"
   ],
   "checkpoints": [
     {
@@ -50,14 +54,14 @@
       "name": "Oars and sails",
       "from": -2500,
       "to": 1491,
-      "note": "Egyptian barges, Greek triremes, Viking longships and Chinese treasure ships show how many cultures took to the water long before Columbus."
+      "note": "Egyptian barges, Greek triremes, Viking longships, Arab dhows, Polynesian voyaging canoes and Chinese treasure ships show how many cultures took to the water long before Columbus."
     },
     {
       "id": "age-of-sail",
       "name": "The age of sail",
       "from": 1492,
       "to": 1799,
-      "note": "Caravels and galleons cross oceans, and wrecks such as the Mary Rose and the Vasa remind us how risky early warships and voyages were."
+      "note": "Caravels and galleons cross oceans, Korea's turtle ship armours a navy and Cook's Endeavour explores the Pacific, while wrecks such as the Mary Rose and the Vasa remind us how risky early warships and voyages were."
     },
     {
       "id": "steam-and-iron",

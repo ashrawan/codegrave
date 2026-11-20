@@ -37,7 +37,13 @@
     "international-space-station",
     "columbia-disaster",
     "shenzhou-5",
-    "peggy-whitson"
+    "peggy-whitson",
+    "alexei-leonov",
+    "vostok-1",
+    "sergei-korolev",
+    "yang-liwei",
+    "tiangong-space-station",
+    "soyuz-11"
   ],
   "checkpoints": [
     {
@@ -45,7 +51,7 @@
       "name": "First flights",
       "from": 1957,
       "to": 1970,
-      "note": "Laika the dog went up in 1957, and NASA's Project Mercury and the Soviet programme followed. Yuri Gagarin became the first person in orbit in 1961, and Valentina Tereshkova the first woman in 1963."
+      "note": "Laika the dog went up in 1957, and NASA's Project Mercury and the Soviet programme followed, led by designer Sergei Korolev. Yuri Gagarin became the first person in orbit in 1961, Valentina Tereshkova the first woman in 1963, and Alexei Leonov made the first spacewalk in 1965."
     },
     {
       "id": "first-stations",
@@ -73,7 +79,7 @@
       "name": "The station years",
       "from": 2000,
       "to": 2025,
-      "note": "The International Space Station has hosted crews continuously since 2000, including Peggy Whitson. The Columbia disaster in 2003 grounded the shuttles, and China's Shenzhou 5 made it the third country to send a person into orbit."
+      "note": "The International Space Station has hosted crews continuously since 2000, including Peggy Whitson. The Columbia disaster in 2003 grounded the shuttles, and China's Shenzhou 5 carried Yang Liwei, making it the third country to send a person into orbit."
     }
   ]
 }

@@ -30,7 +30,6 @@
     "arthashastra",
     "gupta-empire",
     "aryabhata",
-    "chess",
     "nalanda",
     "delhi-sultanate",
     "vijayanagara-empire",
@@ -38,8 +37,6 @@
     "mughal-empire",
     "akbar",
     "taj-mahal",
-    "golden-temple",
-    "east-india-company",
     "battle-of-plassey",
     "indian-rebellion-of-1857",
     "british-raj",
@@ -50,50 +47,59 @@
     "jawaharlal-nehru",
     "bengal-famine-1943",
     "partition-of-india",
-    "constitution-of-india"
+    "constitution-of-india",
+    "indus-valley-civilisation",
+    "chandragupta-maurya",
+    "ajanta-caves",
+    "zero",
+    "chola-dynasty",
+    "maratha-empire",
+    "muslim-league",
+    "b-r-ambedkar",
+    "muhammad-ali-jinnah"
   ],
   "checkpoints": [
     {
       "id": "indus-and-vedas",
       "name": "Indus cities and Vedic hymns",
-      "from": -2800,
+      "from": -3300,
       "to": -322,
-      "note": "Cities like Mohenjo-daro used a script no one can read yet. The Rigveda and later epics such as the Mahabharata and Ramayana were composed, and the Buddha and Mahavira taught new paths."
+      "note": "The Indus Valley Civilisation built planned cities such as Mohenjo-daro and used a script no one can read yet. Later the hymns of the Rigveda shaped Vedic religion, the Mahabharata and Ramayana were composed, and the Buddha and Mahavira, the great teacher of Jainism, taught new paths."
     },
     {
       "id": "empires",
       "name": "Mauryas and Guptas",
       "from": -321,
       "to": 550,
-      "note": "Ashoka, of the Maurya Empire, carved his edicts on pillars, and the Arthashastra set out statecraft. Under the Gupta Empire came the mathematics of Aryabhata and the learning of Nalanda."
+      "note": "Chandragupta founded the Maurya Empire, his grandson Ashoka carved his edicts on pillars, and the Arthashastra set out statecraft. In the age of the Gupta Empire came the mathematics of Aryabhata, the painted caves of Ajanta and the learning of Nalanda."
     },
     {
       "id": "sultans-and-kingdoms",
       "name": "Sultans, kingdoms and saints",
       "from": 551,
       "to": 1525,
-      "note": "Chess took shape as chaturanga around 600. Later the Delhi Sultanate ruled in the north while Vijayanagara flourished in the south, with its capital at Hampi, and Guru Nanak began the Sikh faith, whose teachings spread in Punjab."
+      "note": "Indian mathematicians treated zero as a number by 628, and the Chola dynasty sent fleets across the Bay of Bengal. Later the Delhi Sultanate ruled the north while Vijayanagara flourished in the south, with its capital at Hampi, and Guru Nanak began the Sikh faith in Punjab."
     },
     {
       "id": "mughals",
       "name": "The Mughal age",
       "from": 1526,
       "to": 1756,
-      "note": "Akbar built a tolerant empire and the Mughals raised the Taj Mahal. Sikhs completed the Golden Temple at Amritsar, while the English East India Company arrived to trade on the coasts."
+      "note": "The Mughal Empire was founded in 1526, Akbar built a tolerant empire and his grandson raised the Taj Mahal. After 1700 the empire weakened and the Maratha Empire became the strongest power in India."
     },
     {
       "id": "company-and-raj",
       "name": "Company rule and the Raj",
       "from": 1757,
       "to": 1946,
-      "note": "Victory at Plassey began the Company's rule. After the 1857 rebellion the British Raj began, Congress and Tagore gave India a voice, and Gandhi led the Salt March in 1930."
+      "note": "Victory at Plassey began British rule in Bengal. After the 1857 rebellion the British Raj began, the Indian National Congress and Tagore gave India a voice, the Muslim League was founded in 1906, and Gandhi led the Salt March in 1930. The Bengal famine of 1943 showed the cost of colonial rule."
     },
     {
       "id": "freedom",
       "name": "Freedom and partition",
       "from": 1947,
       "to": 1950,
-      "note": "India became free in 1947, but partition split the land. Nehru was the first prime minister, the Bengal famine had shown the cost of the old rule, and a new constitution came in 1949."
+      "note": "India became independent in 1947, but partition split the land and Jinnah led the new Pakistan. Nehru became the first prime minister, and the Constitution of India, drafted under B. R. Ambedkar, was adopted in 1949."
     }
   ],
   "year": 1600

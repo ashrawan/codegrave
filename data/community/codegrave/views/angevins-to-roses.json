@@ -1,7 +1,7 @@
 {
   "id": "angevins-to-roses",
   "name": "Angevins to Roses: Three Centuries of Plantagenet Kings",
-  "description": "Henry II's sons, a charter wrung from a king, plague, the Hundred Years' War and the civil wars that ended with Richard III dead at Bosworth.",
+  "description": "The Plantagenet centuries: Henry II's Angevin empire, Magna Carta, Edward III and Henry V in the Hundred Years' War, the Black Death and the Wars of the Roses.",
   "category": "people",
   "labels": [
     "politics",
@@ -37,7 +37,16 @@
     "richard-iii",
     "battle-of-bosworth-field",
     "henry-vii",
-    "house-of-tudor"
+    "house-of-tudor",
+    "henry-ii-of-england",
+    "kingdom-of-england",
+    "kingdom-of-france",
+    "edward-iii",
+    "battle-of-crecy",
+    "cannon",
+    "windsor-castle",
+    "henry-v-of-england",
+    "battle-of-castillon"
   ],
   "checkpoints": [
     {
@@ -45,35 +54,35 @@
       "name": "Henry II and his sons",
       "from": 1154,
       "to": 1199,
-      "note": "Henry II's Plantagenet realm reached from the Scottish border to the Pyrenees, with his wife Eleanor of Aquitaine bringing great lands in France. Their son Richard the Lionheart led the Third Crusade, where he faced Saladin, and died in 1199."
+      "note": "Henry II, first of the House of Plantagenet, took the throne of the Kingdom of England in 1154. With the lands of his wife Eleanor of Aquitaine his realm reached from the Scottish border to the Pyrenees and rivalled the Kingdom of France. Their son Richard the Lionheart led the Third Crusade against Saladin and died in 1199."
     },
     {
       "id": "charter-and-abbey",
       "name": "Charter and abbey",
       "from": 1200,
       "to": 1272,
-      "note": "Under King John, who lost Normandy in 1204, rebel barons forced him in 1215 to seal Magna Carta, which limited royal power under law. Later Henry III began rebuilding Westminster Abbey in the new Gothic style."
+      "note": "Richard's brother and heir lost Normandy to the French king in 1204, and in 1215 rebel barons forced him to seal Magna Carta, which put royal power under the law. His son began rebuilding Westminster Abbey in the new Gothic style, and the Tower of London grew into a great royal fortress."
     },
     {
       "id": "war-and-plague",
       "name": "War and plague",
       "from": 1273,
       "to": 1399,
-      "note": "In 1337 Edward III claimed the French crown, beginning the Hundred Years' War, in which the longbow won famous victories. The Black Death killed a large share of England's people from 1348, the Peasants' Revolt came in 1381, and Geoffrey Chaucer wrote The Canterbury Tales."
+      "note": "In 1337 Edward III claimed the French crown and began the Hundred Years' War. His longbowmen won at Crecy in 1346, early cannon appeared, and he rebuilt Windsor Castle as a royal seat. The Black Death killed a large share of England's people from 1348, the Peasants' Revolt came in 1381, and Geoffrey Chaucer began The Canterbury Tales."
     },
     {
       "id": "agincourt-and-joan",
       "name": "Agincourt and Joan",
       "from": 1400,
       "to": 1453,
-      "note": "Henry V won at Agincourt in 1415 and came close to joining the English and French crowns. Joan of Arc then inspired French forces, was tried and executed in 1431, and by 1453 the war ended with England losing nearly all its French lands."
+      "note": "Henry V won at Agincourt in 1415 and came close to joining the English and French crowns. Joan of Arc then rallied French forces at Orleans in 1429, was tried by an English-backed church court and burned in 1431. French cannon won at Castillon in 1453, and England kept only Calais."
     },
     {
       "id": "wars-of-the-roses",
       "name": "The Wars of the Roses",
       "from": 1454,
       "to": 1509,
-      "note": "Rival branches, Lancaster and York, fought for the crown from 1455. Richard III took the throne in 1483, after his two nephews were last seen in the Tower of London. Henry Tudor beat him at Bosworth Field in 1485 and, as Henry VII, founded the House of Tudor."
+      "note": "Rival branches of the House of Plantagenet fought for the crown from 1455 in the Wars of the Roses. Richard III took the throne in 1483, after his two nephews were last seen in the Tower of London. Henry Tudor beat him at Bosworth Field in 1485 and, as Henry VII, founded the House of Tudor."
     }
   ],
   "year": 1215

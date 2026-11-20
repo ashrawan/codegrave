@@ -1,7 +1,7 @@
 {
   "id": "the-nuclear-century",
   "name": "The Nuclear Century: Fear, Power and the Bomb",
-  "description": "From glowing rays in a Paris laboratory to the bomb, the reactor and the accidents that followed: how the splitting of the atom shaped the modern world.",
+  "description": "From the first chain reaction to the bomb, the reactor, the arms race and the accidents that followed: how splitting the atom shaped the world after 1939.",
   "category": "events",
   "labels": [
     "physics",
@@ -17,18 +17,6 @@
     "manhattan project"
   ],
   "entries": [
-    "x-ray",
-    "radioactivity",
-    "henri-becquerel",
-    "pierre-curie",
-    "marie-curie",
-    "ernest-rutherford",
-    "bohr-model",
-    "niels-bohr",
-    "james-chadwick",
-    "otto-hahn",
-    "fritz-strassmann",
-    "lise-meitner",
     "leo-szilard",
     "albert-einstein",
     "enrico-fermi",
@@ -50,36 +38,26 @@
     "fukushima-accident",
     "tokamak",
     "iter",
-    "geiger-counter"
+    "hans-bethe",
+    "nuclear-reactor",
+    "uss-nautilus-ssn-571",
+    "intercontinental-ballistic-missile",
+    "cold-war"
   ],
   "checkpoints": [
-    {
-      "id": "rays-in-the-dark",
-      "name": "Rays in the dark",
-      "from": 1895,
-      "to": 1911,
-      "note": "Rontgen's X-rays and Becquerel's accidental find of radioactivity set off a hunt in which Pierre and Marie Curie isolated new elements, and Rutherford began to show that atoms change and have an inner structure."
-    },
-    {
-      "id": "mapping-the-atom",
-      "name": "Mapping the atom",
-      "from": 1912,
-      "to": 1938,
-      "note": "Bohr placed electrons in orbits around Rutherford's nucleus, and Chadwick found the neutron, a new tool for probing it. Fermi bombarded uranium with neutrons, and in 1938 Hahn and Strassmann found a strange result that Meitner and Frisch explained as fission."
-    },
     {
       "id": "race-for-the-bomb",
       "name": "The race for the bomb",
       "from": 1939,
       "to": 1946,
-      "note": "Szilard and Einstein warned of a chain reaction. Fermi's pile in Chicago proved it, and the Manhattan Project, led by General Groves with Oppenheimer directing the Los Alamos laboratory, built weapons tested at Trinity and used on Hiroshima and Nagasaki."
+      "note": "Szilard and Einstein warned of a chain reaction in 1939. Fermi's pile in Chicago proved it in 1942, and the Manhattan Project, with Oppenheimer directing the Los Alamos laboratory and Hans Bethe leading its theorists, built the weapons tested at Trinity and used on Hiroshima and Nagasaki."
     },
     {
       "id": "fear-and-promise",
       "name": "Fear and promise",
       "from": 1947,
       "to": 1978,
-      "note": "The Atomic Age brought hydrogen bombs, Cold War standoffs such as the Cuban Missile Crisis, a treaty to limit the spread of weapons, and the first reactor feeding a grid at Obninsk. Godzilla gave the fear a monster's face."
+      "note": "The Atomic Age and the Cold War brought hydrogen bombs, missiles that could cross oceans, standoffs such as the Cuban Missile Crisis, and in 1968 a treaty to limit the spread of weapons. Nuclear reactors fed a grid at Obninsk and drove the submarine Nautilus, and Godzilla gave the fear a monster's face."
     },
     {
       "id": "accidents-and-fusion",

@@ -17,28 +17,26 @@
   "entries": [
     "permian-triassic-extinction",
     "mesozoic",
-    "ichthyosaur",
-    "plesiosaur",
     "jurassic",
     "stegosaurus",
     "brachiosaurus",
     "diplodocus",
     "allosaurus",
     "archaeopteryx",
-    "pterodactylus",
     "iguanodon",
     "cretaceous",
     "deinonychus",
     "spinosaurus",
     "argentinosaurus",
-    "mosasaurus",
     "velociraptor",
     "tyrannosaurus-rex",
     "triceratops",
     "ankylosaurus",
     "quetzalcoatlus",
     "chicxulub-impact",
-    "cretaceous-paleogene-extinction"
+    "cretaceous-paleogene-extinction",
+    "pangaea",
+    "flowering-plants"
   ],
   "checkpoints": [
     {
@@ -46,7 +44,7 @@
       "name": "After the Great Dying",
       "from": -252000000,
       "to": -201400001,
-      "note": "Life recovers from the worst mass extinction, and the first dinosaurs and sea reptiles appear in a world of one supercontinent."
+      "note": "Life recovers from the worst mass extinction, and the first dinosaurs appear in a world of one supercontinent, Pangaea, which later breaks apart."
     },
     {
       "id": "jurassic-giants",
@@ -60,7 +58,7 @@
       "name": "The Cretaceous world",
       "from": -145000000,
       "to": -66000001,
-      "note": "Flowering plants appear and new dinosaurs spread. Tyrannosaurus, Triceratops and Quetzalcoatlus live in the last stage, while huge sea reptiles rule the oceans."
+      "note": "Flowering plants appear and new dinosaurs spread. Tyrannosaurus, Triceratops and Quetzalcoatlus live in the last stage, while the continents drift apart."
     },
     {
       "id": "the-end",

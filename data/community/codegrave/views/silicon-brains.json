@@ -41,9 +41,19 @@
     "itanium",
     "iphone",
     "raspberry-pi",
-    "apple-m1"
+    "apple-m1",
+    "transistor",
+    "integrated-circuit",
+    "tsmc"
   ],
   "checkpoints": [
+    {
+      "id": "before-the-micro",
+      "name": "Transistors and circuits",
+      "from": 1947,
+      "to": 1970,
+      "note": "The transistor, invented at Bell Labs in 1947, replaced the bulky vacuum tube, and the integrated circuit of the late 1950s put many transistors on one slice of silicon."
+    },
     {
       "id": "first-micros",
       "name": "The first microprocessors",
