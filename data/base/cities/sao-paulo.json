@@ -1,0 +1,56 @@
+{
+  "id": "sao-paulo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "São Paulo",
+      "from": "1554"
+    }
+  ],
+  "summary": "Largest city in Brazil and in the Southern Hemisphere. Jesuit priests founded it in 1554, and coffee wealth and later industry and immigration made it the country's main financial centre.",
+  "labels": [
+    "business"
+  ],
+  "aliases": [
+    "City of São Paulo",
+    "Saint Paul",
+    "St. Paul"
+  ],
+  "wikidata": "Q174",
+  "events": [
+    {
+      "type": "born",
+      "date": "1554-01-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    },
+    {
+      "type": "related",
+      "to": "paul-the-apostle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: São Paulo (Q174)",
+      "url": "https://www.wikidata.org/wiki/Q174",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: São Paulo",
+      "url": "https://en.wikipedia.org/wiki/S%C3%A3o_Paulo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

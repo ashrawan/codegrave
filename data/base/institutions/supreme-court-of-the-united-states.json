@@ -1,0 +1,59 @@
+{
+  "id": "supreme-court-of-the-united-states",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Supreme Court of the United States",
+      "from": "1789"
+    }
+  ],
+  "summary": "Highest court in the United States, set up by the Constitution and organised by the Judiciary Act of 1789. It decides cases on federal law and can strike down laws it finds contrary to the Constitution.",
+  "labels": [
+    "law",
+    "politics"
+  ],
+  "aliases": [
+    "SCOTUS",
+    "Supreme Court",
+    "United States Supreme Court",
+    "US Supreme Court",
+    "U.S. Supreme Court"
+  ],
+  "wikidata": "Q11201",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Supreme Court of the United States (Q11201)",
+      "url": "https://www.wikidata.org/wiki/Q11201",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Supreme Court of the United States",
+      "url": "https://en.wikipedia.org/wiki/Supreme_Court_of_the_United_States",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "underground-railroad",
+  "category": "societies",
+  "names": [
+    {
+      "name": "Underground Railroad",
+      "from": "1830"
+    }
+  ],
+  "summary": "A loose network of routes, hiding places and helpers that guided enslaved people from the American South to free states and Canada. It was secret and informal, and it operated until slavery ended in the United States.",
+  "labels": [
+    "human-rights",
+    "law"
+  ],
+  "wikidata": "Q868393",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1863",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Slavery was abolished in the United States",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Underground Railroad (Q868393)",
+      "url": "https://www.wikidata.org/wiki/Q868393",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Underground Railroad",
+      "url": "https://en.wikipedia.org/wiki/Underground_Railroad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "thucydides",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Thucydides",
+      "from": "-0460"
+    }
+  ],
+  "summary": "Athenian general and historian who wrote an account of the Peloponnesian War between Athens and Sparta. He sought causes in human motives and power rather than in the gods and wrote from evidence he gathered. Dates are approximate.",
+  "labels": [
+    "literature",
+    "war"
+  ],
+  "wikidata": "Q41683",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0460",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0395",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "homer"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thucydides (Q41683)",
+      "url": "https://www.wikidata.org/wiki/Q41683",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thucydides",
+      "url": "https://en.wikipedia.org/wiki/Thucydides",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

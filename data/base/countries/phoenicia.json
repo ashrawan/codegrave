@@ -1,0 +1,52 @@
+{
+  "id": "phoenicia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Phoenicia",
+      "from": "-1500"
+    }
+  ],
+  "summary": "Group of seafaring trading cities on the eastern Mediterranean coast, such as Tyre, Sidon and Byblos. Their merchants founded colonies like Carthage, and their alphabet became the ancestor of Greek and Latin letters.",
+  "labels": [
+    "exploration",
+    "language"
+  ],
+  "aliases": [
+    "Canaan"
+  ],
+  "wikidata": "Q41642",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0332",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Cities fell under Persian rule and then to Alexander the Great, who took Tyre in 332 BCE",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Phoenicia (Q41642)",
+      "url": "https://www.wikidata.org/wiki/Q41642",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Phoenicia",
+      "url": "https://en.wikipedia.org/wiki/Phoenicia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

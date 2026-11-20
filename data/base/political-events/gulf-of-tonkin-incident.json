@@ -1,0 +1,60 @@
+{
+  "id": "gulf-of-tonkin-incident",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Gulf of Tonkin incident",
+      "from": "1964"
+    }
+  ],
+  "summary": "Two reported clashes in August 1964 between North Vietnamese boats and United States destroyers off Vietnam. The second report was later found to be mistaken. The US Congress then passed the resolution that allowed wider American war action.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "USS Maddox-incident"
+  ],
+  "wikidata": "Q482402",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-08-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-08-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "vietnam-war"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gulf of Tonkin incident (Q482402)",
+      "url": "https://www.wikidata.org/wiki/Q482402",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gulf of Tonkin incident",
+      "url": "https://en.wikipedia.org/wiki/Gulf_of_Tonkin_incident",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

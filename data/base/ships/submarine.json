@@ -1,0 +1,46 @@
+{
+  "id": "submarine",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Submarine",
+      "from": "1620"
+    }
+  ],
+  "summary": "Vessel that can travel under water. Cornelis Drebbel, a Dutch inventor in England, is said to have built the first navigable one around 1620. Later designs powered by batteries and nuclear reactors made them effective warships.",
+  "labels": [
+    "engineering",
+    "war"
+  ],
+  "aliases": [
+    "sub"
+  ],
+  "wikidata": "Q2811",
+  "events": [
+    {
+      "type": "born",
+      "date": "1620",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: submarine (Q2811)",
+      "url": "https://www.wikidata.org/wiki/Q2811",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Submarine",
+      "url": "https://en.wikipedia.org/wiki/Submarine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

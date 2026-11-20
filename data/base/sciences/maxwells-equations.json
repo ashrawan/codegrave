@@ -29,7 +29,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "made_by",
+      "to": "james-clerk-maxwell"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Maxwell's equations (Q51501)",

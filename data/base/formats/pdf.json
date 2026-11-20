@@ -1,0 +1,50 @@
+{
+  "id": "pdf",
+  "category": "formats",
+  "names": [
+    {
+      "name": "PDF",
+      "from": "1993"
+    }
+  ],
+  "maker": "Adobe (John Warnock)",
+  "summary": "File format that keeps a document's layout the same on any device. Adobe released it in 1993, and it became an open ISO standard in 2008.",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "aliases": [
+    "PDF (Adobe)",
+    "PDF format",
+    "PDF (file format)",
+    "Adobe Portable Document Format"
+  ],
+  "wikidata": "Q42332",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-06",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: PDF (Q42332)",
+      "url": "https://www.wikidata.org/wiki/Q42332",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PDF",
+      "url": "https://en.wikipedia.org/wiki/PDF",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

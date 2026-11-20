@@ -1,0 +1,49 @@
+{
+  "id": "difference-engine",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "Difference Engine",
+      "from": "1822"
+    }
+  ],
+  "maker": "Charles Babbage",
+  "summary": "Mechanical calculator designed by Charles Babbage in 1822 to make tables of numbers. He never finished it, but a version built from his plans at London's Science Museum in 1991 worked.",
+  "labels": [
+    "computing",
+    "mathematics"
+  ],
+  "wikidata": "Q628007",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "charles-babbage"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: difference engine (Q628007)",
+      "url": "https://www.wikidata.org/wiki/Q628007",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Difference engine",
+      "url": "https://en.wikipedia.org/wiki/Difference_engine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

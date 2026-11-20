@@ -20,7 +20,15 @@
     {
       "type": "born",
       "date": "-4500000000",
-      "precision": "circa"
+      "precision": "circa",
+      "note": "An estimate: its age is debated, and it may be much younger than Saturn. The figure here is the age of the Solar System's early moons."
+    },
+    {
+      "type": "milestone",
+      "date": "1789",
+      "precision": "year",
+      "label": "Discovered",
+      "note": "Found by William Herschel in 1789."
     }
   ],
   "status": "alive",

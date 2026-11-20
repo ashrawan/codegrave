@@ -1,0 +1,47 @@
+{
+  "id": "hector-berlioz",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Hector Berlioz",
+      "from": "1803"
+    }
+  ],
+  "summary": "French Romantic composer known for the Symphonie fantastique, which tells a story through music, and for his large works for orchestra and voices. He also wrote an influential book on orchestration and worked as a critic.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q1151",
+  "events": [
+    {
+      "type": "born",
+      "date": "1803-12-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1869-03-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Hector Berlioz (Q1151)",
+      "url": "https://www.wikidata.org/wiki/Q1151",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hector Berlioz",
+      "url": "https://en.wikipedia.org/wiki/Hector_Berlioz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

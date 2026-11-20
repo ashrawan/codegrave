@@ -1,0 +1,68 @@
+{
+  "id": "papua-new-guinea",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Papua New Guinea",
+      "from": "1975"
+    }
+  ],
+  "summary": "Country on the eastern half of New Guinea and nearby islands, known for hundreds of languages. It became independent from Australia in 1975 and its capital is Port Moresby.",
+  "labels": [
+    "politics",
+    "independence",
+    "language"
+  ],
+  "aliases": [
+    "Independent State of Papua New Guinea"
+  ],
+  "wikidata": "Q691",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Papua New Guinea (Q691)",
+      "url": "https://www.wikidata.org/wiki/Q691",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Papua New Guinea",
+      "url": "https://en.wikipedia.org/wiki/Papua_New_Guinea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

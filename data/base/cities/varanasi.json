@@ -1,0 +1,56 @@
+{
+  "id": "varanasi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Varanasi",
+      "from": "-1200"
+    }
+  ],
+  "summary": "City on the Ganges in northern India, one of the oldest continuously inhabited places in the world. It is holy to Hindus, who bathe at its riverside steps, and nearby Sarnath is where the Buddha first taught.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Banaras",
+    "Kashi",
+    "Benaras"
+  ],
+  "wikidata": "Q79980",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "british-raj"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Varanasi (Q79980)",
+      "url": "https://www.wikidata.org/wiki/Q79980",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Varanasi",
+      "url": "https://en.wikipedia.org/wiki/Varanasi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Golden toad",
-      "from": "-1000000"
+      "from": "1964"
     }
   ],
   "summary": "A bright orange toad that lived only in a small cloud forest in Costa Rica. It was last seen in 1989 and is often named among the first species hit by climate change and disease.",
@@ -22,8 +22,10 @@
   "events": [
     {
       "type": "born",
-      "date": "-1000000",
-      "precision": "circa"
+      "date": "1964",
+      "precision": "year",
+      "label": "Discovered",
+      "note": "First found by scientists in 1964, in the cloud forest of Monteverde in Costa Rica. The species itself is older; no sourced estimate of its origin is given here."
     },
     {
       "type": "ended",

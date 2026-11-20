@@ -1,0 +1,56 @@
+{
+  "id": "joseph-fourier",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Joseph Fourier",
+      "from": "1768"
+    }
+  ],
+  "summary": "French mathematician and physicist who studied how heat moves through solids. His method of writing a function as a sum of sines and cosines, now called Fourier series, is used throughout science and engineering. He also took part in Napoleon's expedition to Egypt.",
+  "labels": [
+    "mathematics",
+    "physics"
+  ],
+  "aliases": [
+    "Baron Jean-Baptiste-Joseph Fourier"
+  ],
+  "wikidata": "Q8772",
+  "events": [
+    {
+      "type": "born",
+      "date": "1768-03-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1830-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Joseph Fourier (Q8772)",
+      "url": "https://www.wikidata.org/wiki/Q8772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Joseph Fourier",
+      "url": "https://en.wikipedia.org/wiki/Joseph_Fourier",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

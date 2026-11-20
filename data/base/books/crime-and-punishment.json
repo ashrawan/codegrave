@@ -1,0 +1,48 @@
+{
+  "id": "crime-and-punishment",
+  "category": "books",
+  "names": [
+    {
+      "name": "Crime and Punishment",
+      "from": "1866"
+    }
+  ],
+  "maker": "Fyodor Dostoevsky",
+  "summary": "Novel by Fyodor Dostoevsky in which a poor student in St Petersburg murders a pawnbroker and is tormented by guilt. It appeared in a magazine in monthly parts in 1866, and it explores crime, conscience and belief.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q165318",
+  "events": [
+    {
+      "type": "born",
+      "date": "1866",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "fyodor-dostoevsky"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Crime and Punishment (Q165318)",
+      "url": "https://www.wikidata.org/wiki/Q165318",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Crime and Punishment",
+      "url": "https://en.wikipedia.org/wiki/Crime_and_Punishment",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

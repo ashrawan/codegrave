@@ -1,0 +1,59 @@
+{
+  "id": "yangtze",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Yangtze",
+      "from": "-23000000"
+    }
+  ],
+  "summary": "The longest river in Asia, flowing from the Tibetan Plateau across China to the sea at Shanghai. Rice farming, great cities and much of China's trade grew along it, and the Three Gorges Dam now spans it. Studies of its sediments suggest it has run through to the East China Sea for about 23 million years.",
+  "labels": [
+    "environment",
+    "transport"
+  ],
+  "aliases": [
+    "Yangtze River",
+    "Chang Jiang",
+    "Changjiang",
+    "Yangzi",
+    "Changjiang River"
+  ],
+  "wikidata": "Q5413",
+  "events": [
+    {
+      "type": "born",
+      "date": "-23000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "shanghai"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yangtze River (Q5413)",
+      "url": "https://www.wikidata.org/wiki/Q5413",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yangtze",
+      "url": "https://en.wikipedia.org/wiki/Yangtze",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "edo-period",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Edo period",
+      "from": "1603"
+    }
+  ],
+  "summary": "The era in Japan when the Tokugawa shoguns ruled from Edo, now Tokyo. It was a time of internal peace, growing towns and trade, and strict limits on contact with foreigners. It ended with the Meiji Restoration of 1868.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Tokugawa period",
+    "Tokugawa Japan",
+    "Edo era",
+    "Yedo period"
+  ],
+  "wikidata": "Q184963",
+  "events": [
+    {
+      "type": "born",
+      "date": "1603",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1868",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Edo period (Q184963)",
+      "url": "https://www.wikidata.org/wiki/Q184963",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edo period",
+      "url": "https://en.wikipedia.org/wiki/Edo_period",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

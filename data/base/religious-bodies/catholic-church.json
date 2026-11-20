@@ -1,0 +1,56 @@
+{
+  "id": "catholic-church",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Catholic Church",
+      "from": "0033"
+    }
+  ],
+  "summary": "The largest Christian church, led by the Pope in Rome. Tradition traces it to the apostles in the first century. It formally split from the Eastern Orthodox Church in 1054. Dates here are traditional.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Roman Catholic Church",
+    "Roman Apostolic Catholic Church",
+    "Roman Rite Catholic Church"
+  ],
+  "wikidata": "Q9592",
+  "events": [
+    {
+      "type": "born",
+      "date": "0033",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jesus"
+    },
+    {
+      "type": "part_of",
+      "to": "christianity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Catholic Church (Q9592)",
+      "url": "https://www.wikidata.org/wiki/Q9592",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Catholic Church",
+      "url": "https://en.wikipedia.org/wiki/Catholic_Church",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

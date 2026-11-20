@@ -1,0 +1,68 @@
+{
+  "id": "mongolia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Mongolia",
+      "from": "1992"
+    }
+  ],
+  "summary": "Landlocked country between Russia and China, with Ulaanbaatar as its capital. It gained independence from Qing China in 1911 and became a communist state, and its current constitution took effect in 1992.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Mongol State",
+    "State of Mongolia"
+  ],
+  "wikidata": "Q711",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-02-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "comecon"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mongolia (Q711)",
+      "url": "https://www.wikidata.org/wiki/Q711",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mongolia",
+      "url": "https://en.wikipedia.org/wiki/Mongolia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

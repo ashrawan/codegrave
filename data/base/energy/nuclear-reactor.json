@@ -1,0 +1,47 @@
+{
+  "id": "nuclear-reactor",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Nuclear reactor",
+      "from": "1942"
+    }
+  ],
+  "maker": "Enrico Fermi and colleagues",
+  "summary": "Device that sustains a controlled nuclear chain reaction to release heat. The first one, Chicago Pile-1, built under Enrico Fermi, first reached a self-sustaining reaction on 2 December 1942.",
+  "labels": [
+    "physics",
+    "energy"
+  ],
+  "aliases": [
+    "atomic pile"
+  ],
+  "wikidata": "Q80877",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: nuclear reactor (Q80877)",
+      "url": "https://www.wikidata.org/wiki/Q80877",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nuclear reactor",
+      "url": "https://en.wikipedia.org/wiki/Nuclear_reactor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

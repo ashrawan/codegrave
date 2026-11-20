@@ -1,0 +1,51 @@
+{
+  "id": "uluru",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Uluru",
+      "from": "-550000000"
+    }
+  ],
+  "summary": "Huge red sandstone rock rising from the desert of central Australia. It is sacred to the Anangu people, and its rock layers were laid down roughly 550 million years ago, then tilted and eroded.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Ayers Rock",
+    "Uluru/Ayers Rock"
+  ],
+  "wikidata": "Q33910",
+  "events": [
+    {
+      "type": "born",
+      "date": "-550000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uluru (Q33910)",
+      "url": "https://www.wikidata.org/wiki/Q33910",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uluru",
+      "url": "https://en.wikipedia.org/wiki/Uluru",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

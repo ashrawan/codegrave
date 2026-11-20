@@ -1,0 +1,52 @@
+{
+  "id": "national-football-league",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "National Football League",
+      "from": "1920"
+    }
+  ],
+  "summary": "Top professional American football league. It was formed in Canton, Ohio, as the American Professional Football Association and took its present name in 1922. Its yearly final is called the Super Bowl.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "NFL",
+    "APFA",
+    "APFC"
+  ],
+  "wikidata": "Q1215884",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: National Football League (Q1215884)",
+      "url": "https://www.wikidata.org/wiki/Q1215884",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Football League",
+      "url": "https://en.wikipedia.org/wiki/National_Football_League",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

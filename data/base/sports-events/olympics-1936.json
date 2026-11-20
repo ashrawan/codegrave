@@ -36,7 +36,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "in",
+      "to": "berlin"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: 1936 Summer Olympics (Q8150)",

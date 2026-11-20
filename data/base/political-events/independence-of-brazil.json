@@ -1,0 +1,53 @@
+{
+  "id": "independence-of-brazil",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Independence of Brazil",
+      "from": "1822"
+    }
+  ],
+  "summary": "The separation of Brazil from Portugal. In September 1822 Prince Pedro declared independence and was later crowned emperor. Brazil remained a monarchy until 1889, and fighting with Portuguese forces continued into 1824.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "wikidata": "Q1548600",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822-09-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1822-09-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Independence of Brazil (Q1548600)",
+      "url": "https://www.wikidata.org/wiki/Q1548600",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Independence of Brazil",
+      "url": "https://en.wikipedia.org/wiki/Independence_of_Brazil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

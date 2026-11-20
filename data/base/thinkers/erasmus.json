@@ -1,0 +1,64 @@
+{
+  "id": "erasmus",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Erasmus",
+      "from": "1466"
+    }
+  ],
+  "summary": "Dutch priest and scholar who was the leading humanist of his age. He published the first printed Greek New Testament in 1516 and wrote The Praise of Folly. He urged reform of the Church but did not join the Reformation. Birth year is uncertain.",
+  "labels": [
+    "philosophy",
+    "literature",
+    "religion"
+  ],
+  "aliases": [
+    "Erasmus of Rotterdam",
+    "Desiderius Erasmus of Rotterdam",
+    "Erasmus Rotterdam",
+    "Erasmus Von Rotterdam Erasmus"
+  ],
+  "wikidata": "Q43499",
+  "events": [
+    {
+      "type": "born",
+      "date": "1466-10-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1536-07-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "epicureanism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "cicero"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Erasmus (Q43499)",
+      "url": "https://www.wikidata.org/wiki/Q43499",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Erasmus",
+      "url": "https://en.wikipedia.org/wiki/Erasmus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

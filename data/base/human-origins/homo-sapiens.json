@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Homo sapiens",
-      "from": "-200000"
+      "from": "-300000"
     }
   ],
   "summary": "Our own species, which appeared in Africa and spread to every continent. Fossils from Morocco show our features were forming by about 300,000 years ago.",
@@ -22,8 +22,9 @@
   "events": [
     {
       "type": "born",
-      "date": "-200000",
-      "precision": "circa"
+      "date": "-300000",
+      "precision": "circa",
+      "note": "From the oldest fossils assigned to the species, found at Jebel Irhoud in Morocco and about 300,000 years old."
     }
   ],
   "status": "alive",
@@ -45,5 +46,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

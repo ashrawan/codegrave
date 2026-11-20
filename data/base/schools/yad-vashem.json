@@ -1,0 +1,52 @@
+{
+  "id": "yad-vashem",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Yad Vashem",
+      "from": "1953"
+    }
+  ],
+  "summary": "Israel's official memorial and research centre for the victims of the Holocaust, in Jerusalem. It was established by law in 1953, and keeps archives, a museum and a database of the names of victims.",
+  "labels": [
+    "education",
+    "human-rights"
+  ],
+  "wikidata": "Q156591",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-08-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jerusalem"
+    },
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yad Vashem (Q156591)",
+      "url": "https://www.wikidata.org/wiki/Q156591",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yad Vashem",
+      "url": "https://en.wikipedia.org/wiki/Yad_Vashem",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

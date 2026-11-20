@@ -34,6 +34,10 @@
   },
   "links": [
     {
+      "type": "made_by",
+      "to": "phidias"
+    },
+    {
       "type": "in",
       "to": "greece"
     }
@@ -50,5 +54,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

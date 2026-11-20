@@ -24,11 +24,12 @@
     {
       "type": "born",
       "date": "2010-04-20",
-      "precision": "day"
+      "precision": "day",
+      "note": "The rig exploded on 20 April 2010. The end given here is 15 July 2010, when the leak was stopped; the well was declared sealed on 19 September 2010."
     },
     {
       "type": "ended",
-      "date": "2010-04-15",
+      "date": "2010-07-15",
       "precision": "day"
     }
   ],
@@ -60,5 +61,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

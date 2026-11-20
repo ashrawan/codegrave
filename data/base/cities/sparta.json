@@ -1,0 +1,53 @@
+{
+  "id": "sparta",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Sparta",
+      "from": "-0900"
+    }
+  ],
+  "summary": "Greek city-state in the Peloponnese known for its military training and rule by two kings. It led the Peloponnesian League and defeated Athens in the Peloponnesian War, but later lost power.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Lacedaemon",
+    "Lacedemon",
+    "Mint of Lacedaemon"
+  ],
+  "wikidata": "Q5690",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0900",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sparta (Q5690)",
+      "url": "https://www.wikidata.org/wiki/Q5690",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sparta",
+      "url": "https://en.wikipedia.org/wiki/Sparta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "cusco",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Cusco",
+      "from": "1100"
+    }
+  ],
+  "summary": "City in the Peruvian Andes that was the capital of the Inca Empire. Spanish conquerors built colonial churches on Inca stone walls, and nearby Machu Picchu draws many visitors.",
+  "labels": [
+    "politics",
+    "exploration"
+  ],
+  "aliases": [
+    "Rome of America",
+    "Imperial city of Cusco",
+    "Empire city of Cusco",
+    "Cultural heritage city of Peru",
+    "City of Cuzco"
+  ],
+  "wikidata": "Q5582862",
+  "events": [
+    {
+      "type": "born",
+      "date": "1100",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cusco (Q5582862)",
+      "url": "https://www.wikidata.org/wiki/Q5582862",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cusco",
+      "url": "https://en.wikipedia.org/wiki/Cusco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

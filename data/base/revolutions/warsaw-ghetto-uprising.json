@@ -1,0 +1,57 @@
+{
+  "id": "warsaw-ghetto-uprising",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Warsaw Ghetto Uprising",
+      "from": "1943"
+    }
+  ],
+  "summary": "An armed revolt in April and May 1943 by Jews held in the Warsaw Ghetto, who fought German forces to resist deportation to death camps. The uprising was crushed and the ghetto was destroyed, but it became a symbol of Jewish resistance.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "wikidata": "Q160161",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943-04-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "warsaw-ghetto"
+    },
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Warsaw Ghetto Uprising (Q160161)",
+      "url": "https://www.wikidata.org/wiki/Q160161",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Warsaw Ghetto Uprising",
+      "url": "https://en.wikipedia.org/wiki/Warsaw_Ghetto_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

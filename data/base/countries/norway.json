@@ -1,0 +1,59 @@
+{
+  "id": "norway",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Norway",
+      "from": "1814"
+    }
+  ],
+  "summary": "Nordic country on the west of the Scandinavian peninsula, with Oslo as its capital. It adopted its constitution in 1814 and became fully independent from Sweden in 1905. It is a constitutional monarchy.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Kingdom of Norway"
+  ],
+  "wikidata": "Q20",
+  "events": [
+    {
+      "type": "born",
+      "date": "1814-05-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Norway (Q20)",
+      "url": "https://www.wikidata.org/wiki/Q20",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Norway",
+      "url": "https://en.wikipedia.org/wiki/Norway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

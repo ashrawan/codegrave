@@ -1,0 +1,57 @@
+{
+  "id": "cyrus-cylinder",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Cyrus Cylinder",
+      "from": "-0539"
+    }
+  ],
+  "summary": "Baked clay cylinder with a text in Babylonian, written after Cyrus the Great of Persia took Babylon in 539 BCE. It describes his rule and the return of statues to their temples. It was found in 1879 and is kept in the British Museum.",
+  "labels": [
+    "politics",
+    "law"
+  ],
+  "wikidata": "Q405008",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0539",
+      "precision": "circa",
+      "note": "Made after Cyrus took Babylon in October 539 BCE, probably within a few years."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "cyrus-the-great"
+    },
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "british-museum"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cyrus cylinder (Q405008)",
+      "url": "https://www.wikidata.org/wiki/Q405008",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cyrus Cylinder",
+      "url": "https://en.wikipedia.org/wiki/Cyrus_Cylinder",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

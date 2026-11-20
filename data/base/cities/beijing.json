@@ -1,0 +1,58 @@
+{
+  "id": "beijing",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Beijing",
+      "from": "-1045"
+    }
+  ],
+  "summary": "Capital of China, a city of over twenty million people. It has been a capital under the Yuan, Ming and Qing dynasties, and it holds the Forbidden City, the Temple of Heaven and parts of the Great Wall.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Beiping",
+    "Peiping",
+    "Yanjing",
+    "Zhongdu",
+    "Khanbaliq"
+  ],
+  "wikidata": "Q956",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1045",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "yuan-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Beijing (Q956)",
+      "url": "https://www.wikidata.org/wiki/Q956",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Beijing",
+      "url": "https://en.wikipedia.org/wiki/Beijing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

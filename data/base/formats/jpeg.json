@@ -1,0 +1,49 @@
+{
+  "id": "jpeg",
+  "category": "formats",
+  "names": [
+    {
+      "name": "JPEG",
+      "from": "1992"
+    }
+  ],
+  "maker": "Joint Photographic Experts Group",
+  "summary": "Standard method for compressing photographs by discarding detail the eye is less likely to notice. The Joint Photographic Experts Group published it in 1992, and it is still the common image format on the web.",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "aliases": [
+    "continuous-tone still image encoding",
+    "continuous-tone still image decoding",
+    "JPEG 1"
+  ],
+  "wikidata": "Q2195",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: JPEG (Q2195)",
+      "url": "https://www.wikidata.org/wiki/Q2195",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: JPEG",
+      "url": "https://en.wikipedia.org/wiki/JPEG",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

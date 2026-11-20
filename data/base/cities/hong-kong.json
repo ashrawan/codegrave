@@ -1,0 +1,63 @@
+{
+  "id": "hong-kong",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Hong Kong",
+      "from": "1841"
+    }
+  ],
+  "summary": "Port city on China's south coast. Britain took the island in 1841 and it returned to Chinese rule in 1997 as a special administrative region, with its own legal and economic system.",
+  "labels": [
+    "business",
+    "politics"
+  ],
+  "aliases": [
+    "HKSAR",
+    "Hong Kong SAR",
+    "Hong Kong, China",
+    "Hong Kong SAR, China",
+    "Hong Kong Special Administrative Region"
+  ],
+  "wikidata": "Q8646",
+  "events": [
+    {
+      "type": "born",
+      "date": "1841-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "china"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "in",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hong Kong (Q8646)",
+      "url": "https://www.wikidata.org/wiki/Q8646",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hong Kong",
+      "url": "https://en.wikipedia.org/wiki/Hong_Kong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -27,7 +27,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "part_of",
+      "to": "galapagos-islands"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Galápagos National Park (Q112375)",

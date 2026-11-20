@@ -34,7 +34,15 @@
   "links": [
     {
       "type": "in",
+      "to": "europe"
+    },
+    {
+      "type": "in",
       "to": "russia"
+    },
+    {
+      "type": "influenced_by",
+      "to": "council-of-trent"
     }
   ],
   "sources": [
@@ -49,5 +57,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

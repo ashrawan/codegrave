@@ -1,0 +1,52 @@
+{
+  "id": "battle-of-sekigahara",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Sekigahara",
+      "from": "1600"
+    }
+  ],
+  "summary": "A battle in October 1600 in central Japan between the eastern army of Tokugawa Ieyasu and a western coalition. Ieyasu won, and three years later he became shogun, beginning the Tokugawa shogunate that ruled Japan for over 250 years.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q234188",
+  "events": [
+    {
+      "type": "born",
+      "date": "1600-10-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1600-10-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Sekigahara (Q234188)",
+      "url": "https://www.wikidata.org/wiki/Q234188",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Sekigahara",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Sekigahara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

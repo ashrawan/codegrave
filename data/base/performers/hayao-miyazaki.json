@@ -1,0 +1,55 @@
+{
+  "id": "hayao-miyazaki",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Hayao Miyazaki",
+      "from": "1941"
+    }
+  ],
+  "summary": "Japanese animator and director who co-founded Studio Ghibli. His films, such as My Neighbor Totoro, Spirited Away and Howl's Moving Castle, are hand-drawn fantasies. Spirited Away won the Academy Award for animated feature.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Miyazaki Hayao",
+    "Tsutomu Teruki"
+  ],
+  "wikidata": "Q55400",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-01-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "osamu-tezuka"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ursula-k-le-guin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hayao Miyazaki (Q55400)",
+      "url": "https://www.wikidata.org/wiki/Q55400",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hayao Miyazaki",
+      "url": "https://en.wikipedia.org/wiki/Hayao_Miyazaki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

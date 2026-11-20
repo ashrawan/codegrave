@@ -1,0 +1,55 @@
+{
+  "id": "mcdonalds",
+  "category": "companies",
+  "names": [
+    {
+      "name": "McDonald's",
+      "from": "1940"
+    }
+  ],
+  "maker": "Richard and Maurice McDonald",
+  "summary": "American fast-food chain that began as a drive-in restaurant in California run by two brothers. Under Ray Kroc it grew through franchising into one of the largest restaurant companies, with outlets in over a hundred countries.",
+  "labels": [
+    "food",
+    "business"
+  ],
+  "aliases": [
+    "McDonald's Restaurant",
+    "Mickey D's",
+    "Macca's",
+    "Maccas"
+  ],
+  "wikidata": "Q38076",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-05-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: McDonald's (Q38076)",
+      "url": "https://www.wikidata.org/wiki/Q38076",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: McDonald's",
+      "url": "https://en.wikipedia.org/wiki/McDonald's",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

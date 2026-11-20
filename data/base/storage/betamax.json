@@ -1,0 +1,55 @@
+{
+  "id": "betamax",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Betamax",
+      "from": "1975"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "A home video cassette format from Sony. Its picture was a little better than VHS but its tapes held less, and it lost to VHS in the home market though broadcasters kept using related formats.",
+  "labels": [
+    "media",
+    "failures"
+  ],
+  "wikidata": "Q690148",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-05-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost the format war to VHS, and Sony stopped selling the tapes in 2016",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sony"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Betamax (Q690148)",
+      "url": "https://www.wikidata.org/wiki/Q690148",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Betamax",
+      "url": "https://en.wikipedia.org/wiki/Betamax",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

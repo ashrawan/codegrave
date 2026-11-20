@@ -1,0 +1,46 @@
+{
+  "id": "coal",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Coal",
+      "from": "-300000000"
+    }
+  ],
+  "summary": "Black or brown rock made from buried plant remains that is burned for heat and electricity and used to make steel. Much of the world's coal formed in the Carboniferous period, about 300 million years ago. Burning it releases large amounts of carbon dioxide.",
+  "labels": [
+    "energy",
+    "environment"
+  ],
+  "aliases": [
+    "carbone"
+  ],
+  "wikidata": "Q24489",
+  "events": [
+    {
+      "type": "born",
+      "date": "-300000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: coal (Q24489)",
+      "url": "https://www.wikidata.org/wiki/Q24489",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coal",
+      "url": "https://en.wikipedia.org/wiki/Coal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

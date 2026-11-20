@@ -1,0 +1,52 @@
+{
+  "id": "pixar",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "Pixar",
+      "from": "1986"
+    }
+  ],
+  "summary": "American computer animation studio in California, which began as part of Lucasfilm and became independent under Steve Jobs. Toy Story was the first feature-length computer-animated film. Disney bought it in 2006.",
+  "labels": [
+    "film",
+    "computing"
+  ],
+  "aliases": [
+    "Pixar Studios",
+    "Graphics Group"
+  ],
+  "wikidata": "Q127552",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-02-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pixar (Q127552)",
+      "url": "https://www.wikidata.org/wiki/Q127552",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pixar",
+      "url": "https://en.wikipedia.org/wiki/Pixar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

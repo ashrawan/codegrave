@@ -1,0 +1,51 @@
+{
+  "id": "buenos-aires",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Buenos Aires",
+      "from": "1536"
+    }
+  ],
+  "summary": "Capital of Argentina, on the Río de la Plata. The Spanish founded it in 1536, abandoned it, and refounded it in 1580. Waves of European immigrants shaped its culture, including the tango.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Ciudad Autonoma de Buenos Aires",
+    "Ciudad de Buenos Aires"
+  ],
+  "wikidata": "Q1486",
+  "events": [
+    {
+      "type": "born",
+      "date": "1536",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Buenos Aires (Q1486)",
+      "url": "https://www.wikidata.org/wiki/Q1486",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Buenos Aires",
+      "url": "https://en.wikipedia.org/wiki/Buenos_Aires",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,49 @@
+{
+  "id": "chimpanzee",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Chimpanzee",
+      "from": "-6500000"
+    }
+  ],
+  "summary": "Great ape of African forests and our closest living relative with the bonobo. DNA studies place the split between the chimpanzee and human lines about six to seven million years ago.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Pan troglodytes",
+    "chimp",
+    "common chimpanzee",
+    "robust chimpanzee"
+  ],
+  "wikidata": "Q4126704",
+  "events": [
+    {
+      "type": "born",
+      "date": "-6500000",
+      "precision": "circa",
+      "note": "From DNA estimates of when the chimpanzee and human lines split, about six to seven million years ago."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: chimpanzee (Q4126704)",
+      "url": "https://www.wikidata.org/wiki/Q4126704",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chimpanzee",
+      "url": "https://en.wikipedia.org/wiki/Chimpanzee",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

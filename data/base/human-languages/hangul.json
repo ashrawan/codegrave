@@ -7,7 +7,7 @@
       "from": "1443"
     }
   ],
-  "summary": "The alphabet of Korea, designed under King Sejong the Great and announced in 1443. Its letters are grouped into syllable blocks and were made to be easy to learn. It is celebrated in Korea on Hangul Day.",
+  "summary": "The alphabet of Korea, created under King Sejong the Great in 1443 and made public in 1446. Its letters are grouped into syllable blocks and were made to be easy to learn. It is celebrated in Korea on Hangul Day.",
   "labels": [
     "language"
   ],
@@ -32,7 +32,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sejong-the-great"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Hangul (Q8222)",

@@ -34,7 +34,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "in",
+      "to": "antarctica"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Expedition Endurance (Q1162294)",

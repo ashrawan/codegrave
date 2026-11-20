@@ -1,0 +1,56 @@
+{
+  "id": "battle-of-castillon",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Castillon",
+      "from": "1453"
+    }
+  ],
+  "summary": "A battle in south-west France in which a French army with strong artillery defeated an English force led by John Talbot. It is usually taken as the last battle of the Hundred Years' War.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q932613",
+  "events": [
+    {
+      "type": "born",
+      "date": "1453-07-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1453-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "hundred-years-war"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Castillon (Q932613)",
+      "url": "https://www.wikidata.org/wiki/Q932613",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Castillon",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Castillon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

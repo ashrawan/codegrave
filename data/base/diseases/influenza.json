@@ -1,0 +1,49 @@
+{
+  "id": "influenza",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Influenza",
+      "from": "-0412"
+    }
+  ],
+  "summary": "Contagious lung infection caused by influenza viruses that returns in seasonal waves and sometimes pandemics. Descriptions of flu-like outbreaks go back to Hippocrates around 412 BCE.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "flu",
+    "influenza infection",
+    "Influenza with other manifestations",
+    "human influenza",
+    "influenza, human"
+  ],
+  "wikidata": "Q2840",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0412",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: influenza (Q2840)",
+      "url": "https://www.wikidata.org/wiki/Q2840",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Influenza",
+      "url": "https://en.wikipedia.org/wiki/Influenza",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

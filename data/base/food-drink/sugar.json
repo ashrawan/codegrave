@@ -1,0 +1,50 @@
+{
+  "id": "sugar",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Sugar",
+      "from": "0350"
+    }
+  ],
+  "summary": "Sweet food made from sugarcane or beets. People in India learned to make crystals from cane juice by about the fourth century. It spread west and later drove the Atlantic slave trade.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "sugars"
+  ],
+  "wikidata": "Q11002",
+  "events": [
+    {
+      "type": "born",
+      "date": "0350",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "bread"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: sugar (Q11002)",
+      "url": "https://www.wikidata.org/wiki/Q11002",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sugar",
+      "url": "https://en.wikipedia.org/wiki/Sugar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

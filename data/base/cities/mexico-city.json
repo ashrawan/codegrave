@@ -1,0 +1,57 @@
+{
+  "id": "mexico-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Mexico City",
+      "from": "1325"
+    }
+  ],
+  "summary": "Capital of Mexico, built on the site of the Aztec city Tenochtitlan on an island in Lake Texcoco. The Spanish rebuilt it after 1521, and it is now one of the largest cities in the world.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Mexico D.F.",
+    "City of Mexico",
+    "Mexico City, Mexico",
+    "Mexico"
+  ],
+  "wikidata": "Q1489",
+  "events": [
+    {
+      "type": "born",
+      "date": "1325-03-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-spain"
+    },
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mexico City (Q1489)",
+      "url": "https://www.wikidata.org/wiki/Q1489",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mexico City",
+      "url": "https://en.wikipedia.org/wiki/Mexico_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

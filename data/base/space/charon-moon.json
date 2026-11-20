@@ -21,7 +21,15 @@
     {
       "type": "born",
       "date": "-4500000000",
-      "precision": "circa"
+      "precision": "circa",
+      "note": "An estimate: Charon is thought to have formed from a collision early in the Solar System's history, about 4.5 billion years ago."
+    },
+    {
+      "type": "milestone",
+      "date": "1978",
+      "precision": "year",
+      "label": "Discovered",
+      "note": "Found by James Christy on photographs of Pluto in 1978."
     }
   ],
   "status": "alive",

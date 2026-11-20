@@ -1,0 +1,54 @@
+{
+  "id": "jackie-chan",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Jackie Chan",
+      "from": "1954"
+    }
+  ],
+  "summary": "Hong Kong actor, director and martial artist who trained at an opera school. He is known for fast fight scenes mixed with comedy, performed with his own stunts, in films such as Drunken Master and Police Story.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Sing Lung",
+    "Y'uen Lo",
+    "Pao Pao",
+    "Kong-sang Chan",
+    "Kung-Fu Master"
+  ],
+  "wikidata": "Q36970",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-04-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "bruce-lee"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jackie Chan (Q36970)",
+      "url": "https://www.wikidata.org/wiki/Q36970",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jackie Chan",
+      "url": "https://en.wikipedia.org/wiki/Jackie_Chan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

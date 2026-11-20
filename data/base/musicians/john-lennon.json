@@ -1,0 +1,52 @@
+{
+  "id": "john-lennon",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "John Lennon",
+      "from": "1940"
+    }
+  ],
+  "summary": "English singer and songwriter who co-founded the Beatles and wrote many of their songs with Paul McCartney. After the band split in 1970 he released solo albums and spoke for peace. He was shot dead in New York in 1980.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q1203",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-10-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "the-beatles"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Lennon (Q1203)",
+      "url": "https://www.wikidata.org/wiki/Q1203",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Lennon",
+      "url": "https://en.wikipedia.org/wiki/John_Lennon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

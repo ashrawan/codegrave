@@ -1,0 +1,62 @@
+{
+  "id": "pythagoras",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Pythagoras",
+      "from": "-0570"
+    }
+  ],
+  "summary": "Greek thinker from the island of Samos who founded a religious and philosophical community in southern Italy. The theorem about right triangles carries his name, though its origins are unclear. His dates are approximate.",
+  "labels": [
+    "mathematics",
+    "philosophy"
+  ],
+  "aliases": [
+    "Pythagoras from Samos",
+    "Samian Sage",
+    "Pythagoras of Samos"
+  ],
+  "wikidata": "Q10261",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0570",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0496",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "thales"
+    },
+    {
+      "type": "influenced_by",
+      "to": "zoroaster"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pythagoras (Q10261)",
+      "url": "https://www.wikidata.org/wiki/Q10261",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pythagoras",
+      "url": "https://en.wikipedia.org/wiki/Pythagoras",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

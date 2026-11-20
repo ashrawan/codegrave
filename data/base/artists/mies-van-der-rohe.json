@@ -37,7 +37,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "member_of",
+      "to": "bauhaus"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Ludwig Mies van der Rohe (Q41508)",

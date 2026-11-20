@@ -1,0 +1,47 @@
+{
+  "id": "stanley-kubrick",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Stanley Kubrick",
+      "from": "1928"
+    }
+  ],
+  "summary": "American film director who made only a small number of films but in many genres, including Dr. Strangelove, 2001: A Space Odyssey, A Clockwork Orange and The Shining. He lived in England from the 1960s.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q2001",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-03-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Stanley Kubrick (Q2001)",
+      "url": "https://www.wikidata.org/wiki/Q2001",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stanley Kubrick",
+      "url": "https://en.wikipedia.org/wiki/Stanley_Kubrick",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": "amazon-rainforest",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Amazon rainforest",
+      "from": "-55000000"
+    }
+  ],
+  "summary": "The largest tropical rainforest, in the Amazon basin of South America, home to a vast number of species. Fossil pollen shows tropical forest there about 55 million years ago.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Amazonas",
+    "Amazonian rainforest",
+    "Amazon rain forest",
+    "Amazonian rain forest",
+    "Amazon forest"
+  ],
+  "wikidata": "Q177567",
+  "events": [
+    {
+      "type": "born",
+      "date": "-55000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "south-america"
+    },
+    {
+      "type": "in",
+      "to": "peru"
+    },
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Amazon rainforest (Q177567)",
+      "url": "https://www.wikidata.org/wiki/Q177567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amazon rainforest",
+      "url": "https://en.wikipedia.org/wiki/Amazon_rainforest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

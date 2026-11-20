@@ -29,6 +29,10 @@
   "links": [
     {
       "type": "in",
+      "to": "british-museum"
+    },
+    {
+      "type": "in",
       "to": "france"
     }
   ],
@@ -44,5 +48,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

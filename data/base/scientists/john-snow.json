@@ -1,0 +1,48 @@
+{
+  "id": "john-snow",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "John Snow",
+      "from": "1813"
+    }
+  ],
+  "summary": "English physician who traced the 1854 cholera outbreak in Soho, London, to a water pump and argued that the disease spread through water. He is regarded as a founder of epidemiology. He also worked on anaesthesia.",
+  "labels": [
+    "medicine",
+    "environment"
+  ],
+  "wikidata": "Q356407",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813-03-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1858-06-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Snow (Q356407)",
+      "url": "https://www.wikidata.org/wiki/Q356407",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Snow",
+      "url": "https://en.wikipedia.org/wiki/John_Snow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

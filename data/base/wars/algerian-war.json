@@ -1,0 +1,67 @@
+{
+  "id": "algerian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Algerian War",
+      "from": "1954"
+    }
+  ],
+  "summary": "A war between France and Algerian nationalists, led by the National Liberation Front, fought in Algeria and in France. It ended with the Evian Accords and Algerian independence in 1962, and caused very heavy losses among civilians.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Algeria War",
+    "War of Algeria",
+    "Algerian War of Independence",
+    "Algerian Revolution"
+  ],
+  "wikidata": "Q200790",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-11-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "in",
+      "to": "french-algeria"
+    },
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Algerian War (Q200790)",
+      "url": "https://www.wikidata.org/wiki/Q200790",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Algerian War",
+      "url": "https://en.wikipedia.org/wiki/Algerian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

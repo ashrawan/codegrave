@@ -1,0 +1,53 @@
+{
+  "id": "kindertransport",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Kindertransport",
+      "from": "1938"
+    }
+  ],
+  "summary": "A rescue effort that brought about ten thousand mostly Jewish children from Nazi-controlled Europe to Britain, travelling without their parents. It began after Kristallnacht and stopped when the Second World War broke out in 1939.",
+  "labels": [
+    "human-rights",
+    "war"
+  ],
+  "wikidata": "Q683056",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1940",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kindertransport (Q683056)",
+      "url": "https://www.wikidata.org/wiki/Q683056",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kindertransport",
+      "url": "https://en.wikipedia.org/wiki/Kindertransport",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "europe",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Europe",
+      "from": "-55000000"
+    }
+  ],
+  "summary": "Continent forming the western end of Eurasia, with a long and broken coastline. The opening of the North Atlantic about 55 million years ago pulled it away from North America.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "European continent",
+    "The Old Continent",
+    "European Peninsula",
+    "Old Continent"
+  ],
+  "wikidata": "Q46",
+  "events": [
+    {
+      "type": "born",
+      "date": "-55000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Europe (Q46)",
+      "url": "https://www.wikidata.org/wiki/Q46",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Europe",
+      "url": "https://en.wikipedia.org/wiki/Europe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

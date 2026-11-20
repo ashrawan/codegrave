@@ -35,7 +35,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "spouse",
+      "to": "marie-antoinette"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Louis XVI of France (Q7732)",

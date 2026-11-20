@@ -38,7 +38,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "spouse",
+      "to": "theodora"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Justinian I (Q41866)",

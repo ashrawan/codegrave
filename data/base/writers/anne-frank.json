@@ -1,0 +1,53 @@
+{
+  "id": "anne-frank",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Anne Frank",
+      "from": "1929"
+    }
+  ],
+  "summary": "Jewish girl who kept a diary while her family hid from the Nazis in Amsterdam during the Second World War. They were found and sent to camps, and she died at Bergen-Belsen. Her father published the diary after the war.",
+  "labels": [
+    "literature",
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "Anne Maries Frank",
+    "Anna M Frank"
+  ],
+  "wikidata": "Q4583",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-06-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-02",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Anne Frank (Q4583)",
+      "url": "https://www.wikidata.org/wiki/Q4583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anne Frank",
+      "url": "https://en.wikipedia.org/wiki/Anne_Frank",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

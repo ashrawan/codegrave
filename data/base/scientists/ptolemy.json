@@ -1,0 +1,59 @@
+{
+  "id": "ptolemy",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Ptolemy",
+      "from": "0100"
+    }
+  ],
+  "summary": "Greek-speaking scholar of Roman Egypt who wrote the Almagest, a model of the heavens with the Earth at the centre that guided astronomy for over a thousand years. He also wrote a Geography and a work on optics. Dates are approximate.",
+  "labels": [
+    "astronomy",
+    "mathematics"
+  ],
+  "aliases": [
+    "Klaudios Ptolemaios",
+    "Claudius Ptolemaeus",
+    "Claudius Ptolemy",
+    "Claudius Ptolemeus"
+  ],
+  "wikidata": "Q34943",
+  "events": [
+    {
+      "type": "born",
+      "date": "0100",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0170",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ptolemy (Q34943)",
+      "url": "https://www.wikidata.org/wiki/Q34943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ptolemy",
+      "url": "https://en.wikipedia.org/wiki/Ptolemy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

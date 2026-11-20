@@ -38,6 +38,10 @@
   },
   "links": [
     {
+      "type": "parent",
+      "to": "lord-byron"
+    },
+    {
       "type": "influenced_by",
       "to": "charles-babbage"
     }

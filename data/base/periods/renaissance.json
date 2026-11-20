@@ -31,7 +31,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Renaissance (Q4692)",
@@ -44,5 +49,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

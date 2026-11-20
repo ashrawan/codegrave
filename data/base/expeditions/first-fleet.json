@@ -1,0 +1,51 @@
+{
+  "id": "first-fleet",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "First Fleet",
+      "from": "1787"
+    }
+  ],
+  "summary": "The eleven ships that sailed from Britain in 1787 to found a penal colony in New South Wales. They reached Botany Bay in January 1788 and settled at Sydney Cove, beginning British colonisation of Australia.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "The First Fleet"
+  ],
+  "wikidata": "Q1419429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1787-05-13",
+      "precision": "day",
+      "note": "Sailed from Portsmouth on 13 May 1787. The end given here is 26 January 1788, the landing at Sydney Cove."
+    },
+    {
+      "type": "ended",
+      "date": "1788-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: First Fleet (Q1419429)",
+      "url": "https://www.wikidata.org/wiki/Q1419429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Fleet",
+      "url": "https://en.wikipedia.org/wiki/First_Fleet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

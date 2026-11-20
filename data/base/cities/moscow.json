@@ -1,0 +1,58 @@
+{
+  "id": "moscow",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Moscow",
+      "from": "1147"
+    }
+  ],
+  "summary": "Capital of Russia, first recorded in 1147 and later the centre of the grand duchy that built the Russian state. It holds the Kremlin and Red Square, and was capital of the Soviet Union.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Moscow, Russia",
+    "Moskva Federal City, Russia",
+    "Moscow, USSR",
+    "Moskva, Russia",
+    "City of Moscow"
+  ],
+  "wikidata": "Q649",
+  "events": [
+    {
+      "type": "born",
+      "date": "1147-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moscow (Q649)",
+      "url": "https://www.wikidata.org/wiki/Q649",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moscow",
+      "url": "https://en.wikipedia.org/wiki/Moscow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "laki-eruption",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Laki eruption",
+      "from": "1783"
+    }
+  ],
+  "summary": "Long volcanic eruption along a fissure in Iceland from 1783 to 1784 that poured out huge amounts of lava and gas. A haze spread across Europe, and Iceland lost much of its livestock, leading to a famine that killed many people.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Lakagígar"
+  ],
+  "wikidata": "Q203726",
+  "events": [
+    {
+      "type": "born",
+      "date": "1783",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1784",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Laki (Q203726)",
+      "url": "https://www.wikidata.org/wiki/Q203726",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Laki",
+      "url": "https://en.wikipedia.org/wiki/Laki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

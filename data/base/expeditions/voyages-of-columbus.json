@@ -1,0 +1,56 @@
+{
+  "id": "voyages-of-columbus",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Voyages of Christopher Columbus",
+      "from": "1492"
+    }
+  ],
+  "summary": "Four Atlantic voyages made by Christopher Columbus for the Spanish crown. The first reached the Caribbean in 1492. They began lasting contact between Europe and the Americas, with large effects on the peoples already living there.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "voyages by Christopher Columbus",
+    "voyages of Columbus"
+  ],
+  "wikidata": "Q18578423",
+  "events": [
+    {
+      "type": "born",
+      "date": "1492",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1504",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "age-of-discovery"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: voyages by Christopher Columbus (Q18578423)",
+      "url": "https://www.wikidata.org/wiki/Q18578423",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Voyages of Christopher Columbus",
+      "url": "https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

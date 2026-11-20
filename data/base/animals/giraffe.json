@@ -1,0 +1,46 @@
+{
+  "id": "giraffe",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Giraffe",
+      "from": "-7000000"
+    }
+  ],
+  "summary": "Tallest land animal, an African grazer with a very long neck that feeds on tree leaves. Fossils of the giraffe genus go back about seven million years in Africa.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "giraffes",
+    "Giraffa"
+  ],
+  "wikidata": "Q862089",
+  "events": [
+    {
+      "type": "born",
+      "date": "-7000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: giraffe (Q862089)",
+      "url": "https://www.wikidata.org/wiki/Q862089",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Giraffe",
+      "url": "https://en.wikipedia.org/wiki/Giraffe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

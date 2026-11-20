@@ -32,7 +32,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "part_of",
+      "to": "orion-constellation"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Betelgeuse (Q12124)",

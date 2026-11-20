@@ -1,0 +1,57 @@
+{
+  "id": "shia-islam",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Shia Islam",
+      "from": "0632"
+    }
+  ],
+  "summary": "The second largest branch of Islam. It began after the death of Muhammad in 632, when Shia Muslims held that leadership belonged to his cousin and son-in-law Ali and his descendants.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Shiism",
+    "Shiah Islam",
+    "Shi'a Islam",
+    "Shia"
+  ],
+  "wikidata": "Q9585",
+  "events": [
+    {
+      "type": "born",
+      "date": "0632",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "islam"
+    },
+    {
+      "type": "related",
+      "to": "ali-ibn-abi-talib"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shia Islam (Q9585)",
+      "url": "https://www.wikidata.org/wiki/Q9585",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shia Islam",
+      "url": "https://en.wikipedia.org/wiki/Shia_Islam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

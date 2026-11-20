@@ -32,7 +32,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "made_by",
+      "to": "dmitri-mendeleev"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: periodic table (Q10693)",

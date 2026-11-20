@@ -1,0 +1,54 @@
+{
+  "id": "alexander-hamilton",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Alexander Hamilton",
+      "from": "1757"
+    }
+  ],
+  "summary": "American founding figure who served as Washington's aide in the Revolutionary War and the first Treasury Secretary. He helped write the Federalist Papers and set up the national bank. He died after a duel with Aaron Burr.",
+  "labels": [
+    "politics",
+    "economics",
+    "law"
+  ],
+  "aliases": [
+    "Hamilton",
+    "Publius",
+    "A. Ham"
+  ],
+  "wikidata": "Q178903",
+  "events": [
+    {
+      "type": "born",
+      "date": "1757-01-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1804-07-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Alexander Hamilton (Q178903)",
+      "url": "https://www.wikidata.org/wiki/Q178903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexander Hamilton",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Hamilton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

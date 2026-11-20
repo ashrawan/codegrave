@@ -1,0 +1,54 @@
+{
+  "id": "los-angeles-lakers",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Los Angeles Lakers",
+      "from": "1947"
+    }
+  ],
+  "summary": "American basketball team in the NBA. It began in 1947 as the Minneapolis Lakers and moved to Los Angeles in 1960. It has won many league titles, with stars including George Mikan, Magic Johnson and Kobe Bryant.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Minneapolis Lakers",
+    "LA Lakers",
+    "L.A. Lakers",
+    "Purple and Gold",
+    "The Lake Show"
+  ],
+  "wikidata": "Q121783",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Los Angeles Lakers (Q121783)",
+      "url": "https://www.wikidata.org/wiki/Q121783",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Los Angeles Lakers",
+      "url": "https://en.wikipedia.org/wiki/Los_Angeles_Lakers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -37,7 +37,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "parent",
+      "to": "akhenaten"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Tutankhamun (Q12154)",

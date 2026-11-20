@@ -1,0 +1,47 @@
+{
+  "id": "mariana-trench",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Mariana Trench",
+      "from": "-52000000"
+    }
+  ],
+  "summary": "Deepest known part of the ocean, in the western Pacific east of the Mariana Islands. It is where one tectonic plate sinks under another, a process that began there about 52 million years ago.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q510",
+  "events": [
+    {
+      "type": "born",
+      "date": "-52000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mariana Trench (Q510)",
+      "url": "https://www.wikidata.org/wiki/Q510",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mariana Trench",
+      "url": "https://en.wikipedia.org/wiki/Mariana_Trench",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

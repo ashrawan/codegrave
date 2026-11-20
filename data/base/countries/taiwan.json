@@ -1,0 +1,58 @@
+{
+  "id": "taiwan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Taiwan",
+      "from": "1949"
+    }
+  ],
+  "summary": "Island state in East Asia, officially the Republic of China, with Taipei as its seat of government. Its government moved there in 1949, and its political status is disputed by the People's Republic of China.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Taiwan ROC",
+    "The ROC",
+    "Republic of China (Taiwan)",
+    "Chunghwa Minkuo",
+    "Nationalist China"
+  ],
+  "wikidata": "Q865",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Taiwan (Q865)",
+      "url": "https://www.wikidata.org/wiki/Q865",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taiwan",
+      "url": "https://en.wikipedia.org/wiki/Taiwan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "parmenides",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Parmenides",
+      "from": "-0515"
+    }
+  ],
+  "summary": "Greek philosopher from Elea in southern Italy who wrote a poem arguing that what exists is single and unchanging, and that change is an illusion of the senses. The dates are approximate, as little is known of his life.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "Parmenides of Elea"
+  ],
+  "wikidata": "Q125551",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0515",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0470",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "heraclitus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Parmenides (Q125551)",
+      "url": "https://www.wikidata.org/wiki/Q125551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Parmenides",
+      "url": "https://en.wikipedia.org/wiki/Parmenides",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

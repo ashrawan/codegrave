@@ -1,0 +1,56 @@
+{
+  "id": "henrik-ibsen",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Henrik Ibsen",
+      "from": "1828"
+    }
+  ],
+  "summary": "Norwegian playwright who is often called the father of modern realist drama. In plays such as A Doll's House and Ghosts he put family life and social pressure on stage, which caused public argument when they first appeared.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Henrich Ibsen",
+    "Henrich Johan Ibsen"
+  ],
+  "wikidata": "Q36661",
+  "events": [
+    {
+      "type": "born",
+      "date": "1828-03-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1906-05-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "soren-kierkegaard"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Henrik Ibsen (Q36661)",
+      "url": "https://www.wikidata.org/wiki/Q36661",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henrik Ibsen",
+      "url": "https://en.wikipedia.org/wiki/Henrik_Ibsen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

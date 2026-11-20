@@ -1,0 +1,57 @@
+{
+  "id": "james-watson",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "James Watson",
+      "from": "1928"
+    }
+  ],
+  "summary": "American biologist who, with Francis Crick, proposed the double helix structure of DNA in 1953 and shared the 1962 Nobel Prize for it. He later led the early Human Genome Project and ran the Cold Spring Harbor Laboratory.",
+  "labels": [
+    "biology",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "James Dewey Watson",
+    "James D. Watson"
+  ],
+  "wikidata": "Q83333",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-04-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-11-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James Watson (Q83333)",
+      "url": "https://www.wikidata.org/wiki/Q83333",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Watson",
+      "url": "https://en.wikipedia.org/wiki/James_Watson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

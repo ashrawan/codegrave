@@ -1,0 +1,57 @@
+{
+  "id": "toltecs",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Toltecs",
+      "from": "0900"
+    }
+  ],
+  "summary": "Culture of central Mexico centred on the city of Tula, which flourished after the fall of Teotihuacan. Later Aztec writers remembered the Toltecs as great builders and artists, and linked them to the god Quetzalcoatl.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Tolteca"
+  ],
+  "wikidata": "Q187897",
+  "events": [
+    {
+      "type": "born",
+      "date": "0900",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1150",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Tula was destroyed and abandoned around 1150 after internal conflict and outside attack",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tolteca (Q187897)",
+      "url": "https://www.wikidata.org/wiki/Q187897",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Toltec",
+      "url": "https://en.wikipedia.org/wiki/Toltec",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

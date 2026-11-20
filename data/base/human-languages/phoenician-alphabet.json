@@ -37,7 +37,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "in",
+      "to": "phoenicia"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Phoenician script (Q26752)",

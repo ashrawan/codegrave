@@ -1,0 +1,54 @@
+{
+  "id": "dead-sea",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Dead Sea",
+      "from": "-20000000"
+    }
+  ],
+  "summary": "Very salty lake between Israel, Jordan and the West Bank, whose shore is the lowest dry land on Earth. It lies in a rift valley that began opening about 20 million years ago.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Lake Asphaltitis",
+    "The Dead Sea",
+    "Sea of Lot",
+    "Asphaltic Lake",
+    "Lake Asphaltites"
+  ],
+  "wikidata": "Q23883",
+  "events": [
+    {
+      "type": "born",
+      "date": "-20000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dead Sea (Q23883)",
+      "url": "https://www.wikidata.org/wiki/Q23883",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dead Sea",
+      "url": "https://en.wikipedia.org/wiki/Dead_Sea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

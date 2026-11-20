@@ -1,0 +1,55 @@
+{
+  "id": "bengali",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Bengali",
+      "from": "1000"
+    }
+  ],
+  "summary": "Indo-Aryan language of Bangladesh and the Indian state of West Bengal. Its first written work is the Charyapada, a collection of poems dated roughly between the tenth and twelfth centuries.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Bangla",
+    "Bangla language"
+  ],
+  "wikidata": "Q9610",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bangladesh"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bangla (Q9610)",
+      "url": "https://www.wikidata.org/wiki/Q9610",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bengali language",
+      "url": "https://en.wikipedia.org/wiki/Bengali_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

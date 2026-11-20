@@ -1,0 +1,61 @@
+{
+  "id": "zhou-dynasty",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Zhou dynasty",
+      "from": "-1046"
+    }
+  ],
+  "summary": "Long Chinese dynasty that replaced the Shang and ruled in two periods, Western and Eastern. Its kings claimed a Mandate of Heaven. Confucius and other early thinkers lived in its later, divided centuries.",
+  "labels": [
+    "politics",
+    "philosophy"
+  ],
+  "aliases": [
+    "Zhou",
+    "Chou",
+    "Chew",
+    "Chou Dynasty",
+    "Chew Dynasty"
+  ],
+  "wikidata": "Q35216",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1046",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0256",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Last king deposed as the state of Qin conquered the remaining territory",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "qin-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zhou dynasty (Q35216)",
+      "url": "https://www.wikidata.org/wiki/Q35216",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zhou dynasty",
+      "url": "https://en.wikipedia.org/wiki/Zhou_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -22,8 +22,8 @@
   "events": [
     {
       "type": "born",
-      "date": "1930",
-      "precision": "year"
+      "date": "1930-03-12",
+      "precision": "day"
     },
     {
       "type": "ended",
@@ -55,5 +55,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

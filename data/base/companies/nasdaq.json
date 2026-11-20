@@ -1,0 +1,56 @@
+{
+  "id": "nasdaq",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Nasdaq",
+      "from": "1971"
+    }
+  ],
+  "summary": "American stock market that began as the first electronic exchange, run by the National Association of Securities Dealers. It lists many technology companies and now operates exchanges in several countries.",
+  "labels": [
+    "economics",
+    "business"
+  ],
+  "aliases": [
+    "Nasdaq Stock Market",
+    "NASDAQ - All Markets"
+  ],
+  "wikidata": "Q82059",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-02-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nasdaq (Q82059)",
+      "url": "https://www.wikidata.org/wiki/Q82059",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nasdaq",
+      "url": "https://en.wikipedia.org/wiki/Nasdaq",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

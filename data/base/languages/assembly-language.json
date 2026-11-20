@@ -1,0 +1,48 @@
+{
+  "id": "assembly-language",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Assembly language",
+      "from": "1949"
+    }
+  ],
+  "summary": "Programming language in which each statement stands for one instruction of a particular processor, written in readable short names instead of numbers. Early assemblers appeared in the late 1940s, and it is still used for low-level code.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "asm",
+    "assembly",
+    "assembly code",
+    "assembler language"
+  ],
+  "wikidata": "Q165436",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: assembly language (Q165436)",
+      "url": "https://www.wikidata.org/wiki/Q165436",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Assembly language",
+      "url": "https://en.wikipedia.org/wiki/Assembly_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

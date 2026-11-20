@@ -1,0 +1,48 @@
+{
+  "id": "transformer-model",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Transformer",
+      "from": "2017"
+    }
+  ],
+  "maker": "Researchers at Google",
+  "summary": "A neural network design introduced in a paper called Attention Is All You Need, written by researchers at Google. It processes whole sequences using attention and underlies most modern large language models.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "transformer model",
+    "transformer architecture",
+    "transformers"
+  ],
+  "wikidata": "Q85810444",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-06-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: transformer (Q85810444)",
+      "url": "https://www.wikidata.org/wiki/Q85810444",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Transformer (deep learning)",
+      "url": "https://en.wikipedia.org/wiki/Transformer_(deep_learning)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

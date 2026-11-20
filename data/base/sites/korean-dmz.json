@@ -1,0 +1,55 @@
+{
+  "id": "korean-dmz",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Korean Demilitarized Zone",
+      "from": "1953"
+    }
+  ],
+  "summary": "Strip of land about four kilometres wide that separates North and South Korea, set up by the 1953 armistice that ended fighting in the Korean War. It is one of the most heavily guarded borders in the world.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Korean Demilitarised Zone"
+  ],
+  "wikidata": "Q331990",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    },
+    {
+      "type": "in",
+      "to": "north-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Korean Demilitarized Zone (Q331990)",
+      "url": "https://www.wikidata.org/wiki/Q331990",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Korean Demilitarized Zone",
+      "url": "https://en.wikipedia.org/wiki/Korean_Demilitarized_Zone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

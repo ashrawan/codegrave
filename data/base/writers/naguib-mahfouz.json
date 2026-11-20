@@ -30,7 +30,16 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "james-joyce"
+    },
+    {
+      "type": "influenced_by",
+      "to": "marcel-proust"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Naguib Mahfouz (Q7176)",

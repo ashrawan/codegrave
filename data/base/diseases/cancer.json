@@ -1,0 +1,47 @@
+{
+  "id": "cancer",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Cancer",
+      "from": "-1600"
+    }
+  ],
+  "summary": "Group of diseases in which cells grow out of control and can spread. The Edwin Smith papyrus from Egypt, from about 1600 BCE, describes breast tumours and is one of the earliest records.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "malignant neoplasm",
+    "malignant tumor",
+    "primary cancer"
+  ],
+  "wikidata": "Q12078",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cancer (Q12078)",
+      "url": "https://www.wikidata.org/wiki/Q12078",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cancer",
+      "url": "https://en.wikipedia.org/wiki/Cancer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

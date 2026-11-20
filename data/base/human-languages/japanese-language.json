@@ -1,0 +1,50 @@
+{
+  "id": "japanese-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Japanese",
+      "from": "0712"
+    }
+  ],
+  "summary": "Language of Japan, unrelated to Chinese though written with Chinese-derived characters alongside two syllable scripts. Its oldest long text is the Kojiki of 712, which is the date used here.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Japanesic"
+  ],
+  "wikidata": "Q5287",
+  "events": [
+    {
+      "type": "born",
+      "date": "0712",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Japanese (Q5287)",
+      "url": "https://www.wikidata.org/wiki/Q5287",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Japanese language",
+      "url": "https://en.wikipedia.org/wiki/Japanese_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

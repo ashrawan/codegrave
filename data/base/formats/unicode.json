@@ -1,0 +1,49 @@
+{
+  "id": "unicode",
+  "category": "formats",
+  "names": [
+    {
+      "name": "Unicode",
+      "from": "1991"
+    }
+  ],
+  "maker": "Unicode Consortium",
+  "summary": "Standard that gives a number to every character of the world's writing systems, so computers can store and share text in any language. The first version was published in 1991.",
+  "labels": [
+    "computing",
+    "language"
+  ],
+  "aliases": [
+    "The Unicode Standard",
+    "Uni-code",
+    "Unicode Standard"
+  ],
+  "wikidata": "Q8819",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-10",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: The Unicode Standard (Q8819)",
+      "url": "https://www.wikidata.org/wiki/Q8819",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Unicode",
+      "url": "https://en.wikipedia.org/wiki/Unicode",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

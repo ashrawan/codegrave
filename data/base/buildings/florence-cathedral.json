@@ -1,0 +1,63 @@
+{
+  "id": "florence-cathedral",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Florence Cathedral",
+      "from": "1296"
+    }
+  ],
+  "summary": "The cathedral of Florence in Italy, known for its huge red brick dome designed by Filippo Brunelleschi. Work started in 1296 and the dome was finished in 1436. The building is also called Santa Maria del Fiore.",
+  "labels": [
+    "architecture",
+    "religion"
+  ],
+  "aliases": [
+    "Duomo di Firenze"
+  ],
+  "wikidata": "Q191739",
+  "events": [
+    {
+      "type": "born",
+      "date": "1296-09-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "filippo-brunelleschi"
+    },
+    {
+      "type": "made_by",
+      "to": "giotto"
+    },
+    {
+      "type": "in",
+      "to": "florence"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Florence Cathedral (Q191739)",
+      "url": "https://www.wikidata.org/wiki/Q191739",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Florence Cathedral",
+      "url": "https://en.wikipedia.org/wiki/Florence_Cathedral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

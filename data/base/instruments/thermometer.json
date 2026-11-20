@@ -30,7 +30,12 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "made_by",
+      "to": "daniel-fahrenheit"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: thermometer (Q646)",

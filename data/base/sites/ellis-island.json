@@ -1,0 +1,60 @@
+{
+  "id": "ellis-island",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Ellis Island",
+      "from": "1892"
+    }
+  ],
+  "summary": "Island in New York Harbor that held the main United States immigration station from 1892 to 1954. Millions of arrivals from Europe were inspected there. It is now a museum and part of the Statue of Liberty National Monument.",
+  "labels": [
+    "firsts"
+  ],
+  "aliases": [
+    "Fort Gibson",
+    "Anderson's Island",
+    "Bucking Island",
+    "Dyre Island",
+    "Ellis's Island"
+  ],
+  "wikidata": "Q202175",
+  "events": [
+    {
+      "type": "born",
+      "date": "1892",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1954",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed as immigration checks moved to consulates abroad and to other ports",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ellis Island (Q202175)",
+      "url": "https://www.wikidata.org/wiki/Q202175",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ellis Island",
+      "url": "https://en.wikipedia.org/wiki/Ellis_Island",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "khmer-rouge",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Khmer Rouge",
+      "from": "1968"
+    }
+  ],
+  "summary": "Communist movement of Cambodia led by Pol Pot. It took power in 1975 and ruled until 1979, a period in which perhaps around two million people died from execution, forced labour, hunger and disease.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Red Khmers"
+  ],
+  "wikidata": "Q191764",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968",
+      "precision": "circa",
+      "note": "Dated from 1968, when its armed uprising began. The communist party it grew from was founded in 1951."
+    },
+    {
+      "type": "ended",
+      "date": "1999",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Driven from power in 1979, then fought on in the jungle until its leaders surrendered or were arrested",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Communist Party of the Cambodia (Khmer Rouge) (Q191764)",
+      "url": "https://www.wikidata.org/wiki/Q191764",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Khmer Rouge",
+      "url": "https://en.wikipedia.org/wiki/Khmer_Rouge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

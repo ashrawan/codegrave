@@ -1,0 +1,64 @@
+{
+  "id": "carl-friedrich-gauss",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Carl Friedrich Gauss",
+      "from": "1777"
+    }
+  ],
+  "summary": "German mathematician and astronomer who made major advances in number theory, algebra and statistics. His work on the bell-shaped error curve and on predicting the orbit of the dwarf planet Ceres made him famous while still young.",
+  "labels": [
+    "mathematics",
+    "astronomy"
+  ],
+  "aliases": [
+    "Carl Friedrich Gauß",
+    "Karl Gauss",
+    "Johann Carl Friedrich Gauss",
+    "C. F. Gauss",
+    "Gauß, Carl Friedrich"
+  ],
+  "wikidata": "Q6722",
+  "events": [
+    {
+      "type": "born",
+      "date": "1777-04-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1855-02-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "leonhard-euler"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carl Friedrich Gauss (Q6722)",
+      "url": "https://www.wikidata.org/wiki/Q6722",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carl Friedrich Gauss",
+      "url": "https://en.wikipedia.org/wiki/Carl_Friedrich_Gauss",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

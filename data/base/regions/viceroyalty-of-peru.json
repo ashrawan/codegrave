@@ -1,0 +1,58 @@
+{
+  "id": "viceroyalty-of-peru",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Viceroyalty of Peru",
+      "from": "1542"
+    }
+  ],
+  "summary": "Spanish colonial territory set up after the conquest of the Inca, with its capital at Lima. It once covered most of Spanish South America, and its silver from Potosí made it central to the empire's wealth.",
+  "labels": [
+    "politics",
+    "exploration"
+  ],
+  "aliases": [
+    "Peru",
+    "Kingdom of Peru"
+  ],
+  "wikidata": "Q211435",
+  "events": [
+    {
+      "type": "born",
+      "date": "1542",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1824",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended by the wars of independence, with the Spanish defeat at Ayacucho in 1824",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spanish-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Viceroyalty of Peru (Q211435)",
+      "url": "https://www.wikidata.org/wiki/Q211435",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Viceroyalty of Peru",
+      "url": "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "sigmund-freud",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Sigmund Freud",
+      "from": "1856"
+    }
+  ],
+  "summary": "Austrian doctor who founded psychoanalysis, a method of treating mental distress by talking about thoughts, memories and dreams. His ideas about the unconscious mind spread widely in the arts and culture, though many are now disputed.",
+  "labels": [
+    "medicine",
+    "philosophy"
+  ],
+  "wikidata": "Q9215",
+  "events": [
+    {
+      "type": "born",
+      "date": "1856-05-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1939-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sigmund Freud (Q9215)",
+      "url": "https://www.wikidata.org/wiki/Q9215",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sigmund Freud",
+      "url": "https://en.wikipedia.org/wiki/Sigmund_Freud",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

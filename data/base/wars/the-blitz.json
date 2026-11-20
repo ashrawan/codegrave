@@ -1,0 +1,60 @@
+{
+  "id": "the-blitz",
+  "category": "wars",
+  "names": [
+    {
+      "name": "The Blitz",
+      "from": "1940"
+    }
+  ],
+  "summary": "The German bombing campaign against British cities, above all London, from September 1940 to May 1941. It killed tens of thousands of civilians and destroyed many homes, but did not force Britain to make peace.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Blitz",
+    "London Blitz"
+  ],
+  "wikidata": "Q6900329",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-09-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: the Blitz (Q6900329)",
+      "url": "https://www.wikidata.org/wiki/Q6900329",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Blitz",
+      "url": "https://en.wikipedia.org/wiki/The_Blitz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,61 @@
+{
+  "id": "ur",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ur",
+      "from": "-3800"
+    }
+  ],
+  "summary": "Ancient Sumerian city in southern Mesopotamia, known for its great ziggurat and the royal tombs excavated in the 1920s. It was a capital of the Third Dynasty of Ur and is traditionally linked to Abraham.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Tell al-Muqayyar"
+  ],
+  "wikidata": "Q5699",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned as the Euphrates shifted course and the region dried",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "in",
+      "to": "elam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ur (Q5699)",
+      "url": "https://www.wikidata.org/wiki/Q5699",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ur",
+      "url": "https://en.wikipedia.org/wiki/Ur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

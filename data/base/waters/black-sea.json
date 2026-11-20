@@ -1,0 +1,56 @@
+{
+  "id": "black-sea",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Black Sea",
+      "from": "-6000"
+    }
+  ],
+  "summary": "Inland sea between Europe and Asia, linked to the Mediterranean by the Bosporus. It became salt water again as ocean levels rose after the last ice age, around 8,000 years ago.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Euxine",
+    "Rucenum mare",
+    "Ponto mare"
+  ],
+  "wikidata": "Q166",
+  "events": [
+    {
+      "type": "born",
+      "date": "-6000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Black Sea (Q166)",
+      "url": "https://www.wikidata.org/wiki/Q166",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Black Sea",
+      "url": "https://en.wikipedia.org/wiki/Black_Sea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

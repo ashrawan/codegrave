@@ -1,0 +1,58 @@
+{
+  "id": "seoul",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Seoul",
+      "from": "-0018"
+    }
+  ],
+  "summary": "Capital of South Korea on the Han River. It was a capital of Baekje, and from 1394 of the Joseon dynasty, and is now a large centre of technology and culture.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Seoul Special City",
+    "Sŏul T'ŭkpyŏlsi",
+    "Wiryeseong",
+    "Namgyeong",
+    "Hanseong"
+  ],
+  "wikidata": "Q8684",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0018",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "joseon"
+    },
+    {
+      "type": "in",
+      "to": "empire-of-japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seoul (Q8684)",
+      "url": "https://www.wikidata.org/wiki/Q8684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seoul",
+      "url": "https://en.wikipedia.org/wiki/Seoul",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Steller's sea cow",
-      "from": "-1000000"
+      "from": "1741"
     }
   ],
   "summary": "A gentle sea mammal, up to about eight metres long, that grazed on kelp in the cold waters of the Bering Sea. It was found in 1741 and had been hunted to extinction within about 30 years.",
@@ -19,8 +19,10 @@
   "events": [
     {
       "type": "born",
-      "date": "-1000000",
-      "precision": "circa"
+      "date": "1741",
+      "precision": "year",
+      "label": "Described",
+      "note": "First described by the naturalist Georg Steller in 1741, when it survived only around the Commander Islands. The species is far older; no sourced estimate of its origin is given here."
     },
     {
       "type": "ended",

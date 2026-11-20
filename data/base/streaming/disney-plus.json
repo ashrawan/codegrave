@@ -1,0 +1,50 @@
+{
+  "id": "disney-plus",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Disney+",
+      "from": "2019"
+    }
+  ],
+  "maker": "The Walt Disney Company",
+  "summary": "Subscription video streaming service run by The Walt Disney Company, launched in the United States in November 2019. It carries Disney, Pixar, Marvel, Star Wars and National Geographic titles and later expanded to many countries.",
+  "labels": [
+    "media",
+    "film",
+    "television"
+  ],
+  "wikidata": "Q54958752",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-11-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Disney+ (Q54958752)",
+      "url": "https://www.wikidata.org/wiki/Q54958752",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Disney+",
+      "url": "https://en.wikipedia.org/wiki/Disney%2B",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

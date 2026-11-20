@@ -1,0 +1,63 @@
+{
+  "id": "marie-antoinette",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Marie Antoinette",
+      "from": "1755"
+    }
+  ],
+  "summary": "Austrian-born archduchess who became queen of France as the wife of Louis XVI. She was widely criticised for spending and for her foreign birth during the financial crisis before the Revolution, and was guillotined in October 1793.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Marie-Antoinette Josephus Joan",
+    "Mary Antionette Queen",
+    "Queen of France Marie Antoinette",
+    "Mary Antoinette",
+    "Maria Antonia Josepha Johanna"
+  ],
+  "wikidata": "Q47365",
+  "events": [
+    {
+      "type": "born",
+      "date": "1755-11-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1793-10-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "maria-theresa"
+    },
+    {
+      "type": "related",
+      "to": "french-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marie Antoinette (Q47365)",
+      "url": "https://www.wikidata.org/wiki/Q47365",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marie Antoinette",
+      "url": "https://en.wikipedia.org/wiki/Marie_Antoinette",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

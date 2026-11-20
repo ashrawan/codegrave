@@ -1,0 +1,52 @@
+{
+  "id": "turing-machine",
+  "category": "mathematics",
+  "names": [
+    {
+      "name": "Turing machine",
+      "from": "1936"
+    }
+  ],
+  "maker": "Alan Turing",
+  "summary": "Imaginary machine that reads and writes symbols on a tape by simple rules. Alan Turing described it in 1936 to define what can be computed, and it became the basic model of computers.",
+  "labels": [
+    "mathematics",
+    "computing"
+  ],
+  "aliases": [
+    "deterministic Turing machine"
+  ],
+  "wikidata": "Q163310",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "alan-turing"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Turing machine (Q163310)",
+      "url": "https://www.wikidata.org/wiki/Q163310",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Turing machine",
+      "url": "https://en.wikipedia.org/wiki/Turing_machine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

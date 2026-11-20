@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Western black rhinoceros",
-      "from": "-1000000"
+      "from": "1949"
     }
   ],
   "summary": "A subspecies of black rhinoceros that lived in the savannas of West Africa. Poaching drove it down, and it was declared extinct in 2011.",
@@ -21,8 +21,10 @@
   "events": [
     {
       "type": "born",
-      "date": "-1000000",
-      "precision": "circa"
+      "date": "1949",
+      "precision": "year",
+      "label": "Described",
+      "note": "Named as a subspecies of the black rhinoceros in 1949. The animals themselves are far older; no sourced estimate of their origin is given here."
     },
     {
       "type": "ended",

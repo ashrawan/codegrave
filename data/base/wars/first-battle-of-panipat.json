@@ -1,0 +1,63 @@
+{
+  "id": "first-battle-of-panipat",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Battle of Panipat",
+      "from": "1526"
+    }
+  ],
+  "summary": "A battle in northern India in April 1526 in which Babur, ruler of Kabul, defeated the Sultan of Delhi, Ibrahim Lodi. His army used gunpowder weapons and field cannon. The victory led to the founding of the Mughal Empire.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Panipat"
+  ],
+  "wikidata": "Q605321",
+  "events": [
+    {
+      "type": "born",
+      "date": "1526-05-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1526-05-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "mughal-empire"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "related",
+      "to": "delhi-sultanate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Panipat (Q605321)",
+      "url": "https://www.wikidata.org/wiki/Q605321",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Battle of Panipat",
+      "url": "https://en.wikipedia.org/wiki/First_Battle_of_Panipat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

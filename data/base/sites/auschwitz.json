@@ -1,0 +1,65 @@
+{
+  "id": "auschwitz",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Auschwitz",
+      "from": "1940"
+    }
+  ],
+  "summary": "German Nazi concentration and extermination camp complex in occupied Poland, near Oświęcim. Over a million people, most of them Jews, were killed there. It is now a memorial and museum and a World Heritage site.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "KZ Auschwitz",
+    "Birkenau",
+    "Auschwitz death camp",
+    "Auschwitz-Birkenau",
+    "Au."
+  ],
+  "wikidata": "Q7341",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-05-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-01-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Liberated by the Red Army in January 1945",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Auschwitz (Q7341)",
+      "url": "https://www.wikidata.org/wiki/Q7341",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Auschwitz concentration camp",
+      "url": "https://en.wikipedia.org/wiki/Auschwitz_concentration_camp",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

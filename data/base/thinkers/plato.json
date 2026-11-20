@@ -38,7 +38,23 @@
     },
     {
       "type": "influenced_by",
+      "to": "heraclitus"
+    },
+    {
+      "type": "influenced_by",
+      "to": "parmenides"
+    },
+    {
+      "type": "influenced_by",
       "to": "homer"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristophanes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "pythagoras"
     }
   ],
   "sources": [
@@ -53,5 +69,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

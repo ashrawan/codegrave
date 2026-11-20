@@ -32,7 +32,16 @@
     "standard": 0,
     "editor": 0
   },
-  "links": [],
+  "links": [
+    {
+      "type": "in",
+      "to": "africa"
+    },
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
   "sources": [
     {
       "title": "Wikidata: Oldowan (Q746287)",

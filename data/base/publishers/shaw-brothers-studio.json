@@ -1,0 +1,62 @@
+{
+  "id": "shaw-brothers-studio",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "Shaw Brothers Studio",
+      "from": "1925"
+    }
+  ],
+  "summary": "Film company founded in Shanghai by the Shaw brothers that built a large studio in Hong Kong. It was known for martial arts films, including those of Chang Cheh. It made fewer films in the 1980s, then stopped.",
+  "labels": [
+    "film",
+    "business"
+  ],
+  "aliases": [
+    "SB"
+  ],
+  "wikidata": "Q947354",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925",
+      "precision": "circa",
+      "note": "Dated from the Shaws' first film company, Tianyi, founded in Shanghai in 1925. The Hong Kong company Shaw Brothers was formed in 1958, and its film-making wound down in the late 1980s."
+    },
+    {
+      "type": "ended",
+      "date": "1987",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Stopped making films as the industry changed and moved to television",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hong-kong"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shaw Brothers Studio (Q947354)",
+      "url": "https://www.wikidata.org/wiki/Q947354",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shaw Brothers Studio",
+      "url": "https://en.wikipedia.org/wiki/Shaw_Brothers_Studio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

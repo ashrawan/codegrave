@@ -1,0 +1,60 @@
+{
+  "id": "holodomor",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Holodomor",
+      "from": "1932"
+    }
+  ],
+  "summary": "A severe famine in Soviet Ukraine that killed millions of people, linked to Soviet grain requisitions and the forced collectivisation of farms. Ukraine and many other countries call it a genocide; historians still debate its intent.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Terror-Famine",
+    "Famine-Genocide in Ukraine",
+    "Great Famine",
+    "The Ukrainian Genocide of 1932–33",
+    "The Holodomor"
+  ],
+  "wikidata": "Q165058",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1933",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Holodomor (Q165058)",
+      "url": "https://www.wikidata.org/wiki/Q165058",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Holodomor",
+      "url": "https://en.wikipedia.org/wiki/Holodomor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

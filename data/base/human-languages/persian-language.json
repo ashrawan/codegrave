@@ -1,0 +1,56 @@
+{
+  "id": "persian-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Persian",
+      "from": "-0520"
+    }
+  ],
+  "summary": "Indo-Iranian language of Iran, Afghanistan and Tajikistan. The date is that of the Old Persian inscription at Behistun. The modern form took shape in the ninth century and has a long poetic tradition.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Farsi language",
+    "Farsic–Caucasian Tat",
+    "Farsi"
+  ],
+  "wikidata": "Q9168",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0520",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    },
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Persian (Q9168)",
+      "url": "https://www.wikidata.org/wiki/Q9168",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Persian language",
+      "url": "https://en.wikipedia.org/wiki/Persian_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

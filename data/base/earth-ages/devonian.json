@@ -4,7 +4,7 @@
   "names": [
     {
       "name": "Devonian",
-      "from": "-419200000"
+      "from": "-419620000"
     }
   ],
   "summary": "The period from 419 to 359 million years ago, called the age of fishes. Armoured fish and sharks ruled the water, the first forests grew, and some fish developed limbs and began to move onto land.",
@@ -20,8 +20,9 @@
   "events": [
     {
       "type": "born",
-      "date": "-419200000",
-      "precision": "circa"
+      "date": "-419620000",
+      "precision": "circa",
+      "note": "The boundary with the Silurian, as dated on the current international chart of geological time."
     },
     {
       "type": "ended",
@@ -53,5 +54,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }

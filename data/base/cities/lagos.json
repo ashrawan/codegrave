@@ -1,0 +1,50 @@
+{
+  "id": "lagos",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Lagos",
+      "from": "1472"
+    }
+  ],
+  "summary": "Largest city in Nigeria and one of the biggest in Africa, built around a lagoon on the Atlantic coast. It grew from a Yoruba island settlement, became a British colony and is Nigeria's main commercial centre.",
+  "labels": [
+    "business"
+  ],
+  "aliases": [
+    "Lagos City"
+  ],
+  "wikidata": "Q8673",
+  "events": [
+    {
+      "type": "born",
+      "date": "1472",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lagos (Q8673)",
+      "url": "https://www.wikidata.org/wiki/Q8673",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lagos",
+      "url": "https://en.wikipedia.org/wiki/Lagos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

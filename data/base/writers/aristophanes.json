@@ -1,0 +1,59 @@
+{
+  "id": "aristophanes",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Aristophanes",
+      "from": "-0446"
+    }
+  ],
+  "summary": "Athenian comic playwright whose plays mocked politicians, philosophers and the war with Sparta. Eleven of his comedies survive, including The Clouds, The Birds and Lysistrata. His dates are approximate.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Father of Comedy"
+  ],
+  "wikidata": "Q43353",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0446",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0386",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "euripides"
+    },
+    {
+      "type": "influenced_by",
+      "to": "socrates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aristophanes (Q43353)",
+      "url": "https://www.wikidata.org/wiki/Q43353",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aristophanes",
+      "url": "https://en.wikipedia.org/wiki/Aristophanes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "africa",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Africa",
+      "from": "-100000000"
+    }
+  ],
+  "summary": "Second-largest continent, crossed by the equator. It was the centre of the supercontinent Gondwana, and it split from South America about 100 million years ago as the South Atlantic opened.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "African continent"
+  ],
+  "wikidata": "Q15",
+  "events": [
+    {
+      "type": "born",
+      "date": "-100000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Africa (Q15)",
+      "url": "https://www.wikidata.org/wiki/Q15",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Africa",
+      "url": "https://en.wikipedia.org/wiki/Africa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

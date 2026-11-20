@@ -1,0 +1,57 @@
+{
+  "id": "antoine-lavoisier",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Antoine Lavoisier",
+      "from": "1743"
+    }
+  ],
+  "summary": "French chemist who showed that burning and breathing involve combining with oxygen, and that matter is conserved in chemical reactions. He helped create a modern system of chemical names and was guillotined during the French Revolution.",
+  "labels": [
+    "chemistry"
+  ],
+  "aliases": [
+    "Antoine Laurent Lavoisier",
+    "Lavoisier",
+    "Antoine Laurent de Lavoisier"
+  ],
+  "wikidata": "Q39607",
+  "events": [
+    {
+      "type": "born",
+      "date": "1743-08-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1794-05-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antoine Lavoisier (Q39607)",
+      "url": "https://www.wikidata.org/wiki/Q39607",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antoine Lavoisier",
+      "url": "https://en.wikipedia.org/wiki/Antoine_Lavoisier",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

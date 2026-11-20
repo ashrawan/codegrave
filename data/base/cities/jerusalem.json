@@ -1,0 +1,57 @@
+{
+  "id": "jerusalem",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Jerusalem",
+      "from": "-4000"
+    }
+  ],
+  "summary": "City in the hills between the Mediterranean and the Dead Sea, holy to Jews, Christians and Muslims. It has been ruled by many powers over thousands of years, and its status remains disputed today.",
+  "labels": [
+    "religion",
+    "politics"
+  ],
+  "aliases": [
+    "J'lem",
+    "Aelia Capitolina",
+    "Mint of Aelia Capitolina"
+  ],
+  "wikidata": "Q1218",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "byzantine-empire"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-jerusalem"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jerusalem (Q1218)",
+      "url": "https://www.wikidata.org/wiki/Q1218",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jerusalem",
+      "url": "https://en.wikipedia.org/wiki/Jerusalem",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

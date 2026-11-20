@@ -1,0 +1,60 @@
+{
+  "id": "swahili",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Swahili",
+      "from": "1728"
+    }
+  ],
+  "summary": "Bantu language of the East African coast, with many words borrowed from Arabic. Old poems in Arabic script survive from the early eighteenth century. It is a shared language across Tanzania, Kenya and nearby countries.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Swahili language",
+    "Swahili (macrolanguage)",
+    "Kiswahili"
+  ],
+  "wikidata": "Q7838",
+  "events": [
+    {
+      "type": "born",
+      "date": "1728",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    },
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    },
+    {
+      "type": "influenced_by",
+      "to": "arabic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Swahili (Q7838)",
+      "url": "https://www.wikidata.org/wiki/Q7838",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Swahili",
+      "url": "https://en.wikipedia.org/wiki/Swahili",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

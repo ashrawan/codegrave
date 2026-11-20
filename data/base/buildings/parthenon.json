@@ -32,6 +32,14 @@
   },
   "links": [
     {
+      "type": "made_by",
+      "to": "phidias"
+    },
+    {
+      "type": "part_of",
+      "to": "acropolis-of-athens"
+    },
+    {
       "type": "in",
       "to": "athens"
     },
@@ -52,5 +60,5 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": false
 }
