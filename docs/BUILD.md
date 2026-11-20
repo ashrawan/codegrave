@@ -65,10 +65,10 @@ word that starts "cu"), and `boot.json` says which form is in use
 
 ## Sizes to expect
 
-Measured on 3,800 entries and 396 views (255 of them community books): the
-build takes about half a second; `boot.json` is about 58 KB compressed, a book
-4 to 17 KB, the largest classical view about 63 KB, the search index about
-170 KB, a detail file about 5 KB. Detail files hold at most about 64 entries
+Measured on 4,400 entries and 409 views (268 of them community books): the
+build takes under a second; `boot.json` is about 61 KB compressed, a book
+4 to 18 KB, the largest classical view about 63 KB, the search index about
+195 KB, a detail file about 6 KB. Detail files hold at most about 64 entries
 each: the build uses more hex digits of the hash as the data grows
 (`detail.chars` in `boot.json`). A classical view carries its 200 best-ranked
 entries however many it holds, so no file grows with the dataset except the

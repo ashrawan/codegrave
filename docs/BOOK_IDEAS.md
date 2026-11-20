@@ -2,8 +2,8 @@
 
 Views on codegrave are books: a title, a hand-picked set of entries and
 chapters that tell the story (`docs/VIEWS.md`). This is a backlog of
-939 subjects that would make good ones and have no book yet, gathered while
-the first 255 were written. Pick one, or bring your own.
+914 subjects that would make good ones and have no book yet, gathered while
+the first 268 were written. Pick one, or bring your own.
 
 How to use the list:
 
@@ -15,11 +15,10 @@ How to use the list:
 - When you publish a book from this list, remove its line in the same pull
   request.
 
-## People (84)
+## People (77)
 
 - **African Explorers and Travellers.** Ibn Battuta, Mansa Musa's pilgrimage and the travellers and traders who linked Africa to the wider world.
 - **Byzantine Emperors.** A thousand years of rule from Constantinople.
-- **Civil Rights and Freedom Movements.** From abolitionists and suffragettes to Rosa Parks, Martin Luther King and the marches that changed laws.
 - **Civil Rights Leaders and Their Faith.** Tutu, King, Gandhi and others whose religious belief led them to struggle for justice.
 - **Edison and Tesla: The War of the Currents.** Two inventors, two kinds of electricity and the contest that decided how the world would be powered.
 - **Famous Musicians' Rivalries.** Beatles versus Stones, Mozart versus Salieri and other feuds.
@@ -30,13 +29,10 @@ How to use the list:
 - **Inventors of the Industrial Revolution.** Watt, Arkwright, Stephenson and others who remade work.
 - **Japan's Great Entrepreneurs.** Matsushita, Honda, Morita and Toyoda: how Japanese companies rebuilt after the war and reached the world.
 - **Kings of Africa.** Mansa Musa, Menelik, Shaka and the great rulers of African kingdoms.
-- **Latin America's Liberators.** Bolivar, San Martin, O'Higgins and Sucre: the Wars of Independence.
 - **Leaders in Exile.** Napoleon, Trotsky, Haile Selassie and the rulers who lost their lands.
 - **Mathematicians Who Cracked Codes.** From the Enigma at Bletchley Park to modern cryptography: the people who made and broke secret messages.
-- **Medieval Kings of England.** From Alfred to Richard III: the Plantagenets and their wars.
 - **Napoleon's Marshals.** The soldiers who followed Napoleon across Europe, and what became of them.
 - **Nobel Peace Prize Winners.** Peacemakers and activists from Bertha von Suttner to Malala.
-- **Nobel Prize Winners Who Changed the World.** The scientists, writers and peacemakers honoured since 1901, and the discoveries and causes they stand for.
 - **Pioneers of Medicine.** Hippocrates, Vesalius, Jenner, Pasteur, Nightingale and Fleming: the people who learned how to cure and prevent disease.
 - **Pioneers of Women in Medicine and Science.** Healers, nurses and inventors whose work reshaped hospitals and laboratories.
 - **Revolutionaries.** Cromwell, Washington, Robespierre, Lenin, Mao and the makers of revolutions.
@@ -55,7 +51,6 @@ How to use the list:
 - **The Fall of the Berlin Wall.** The leaders and protesters of 1989 who ended communist rule in Europe.
 - **The Fall of the Soviet Union.** Gorbachev, Yeltsin and the people who watched an empire come apart.
 - **The Founders of Modern India.** Gandhi, Nehru, Patel, Ambedkar and Bose: the makers of independent India.
-- **The Founding Fathers.** The men and women who wrote the Declaration and Constitution of the United States.
 - **The Founding Mothers of Feminism.** Wollstonecraft, Beauvoir and the many women who argued for education, votes and equal rights.
 - **The Generals of Rome.** Scipio, Marius, Sulla, Pompey and Caesar: the soldiers who made and broke the Republic.
 - **The Generals of the American Civil War.** Grant, Lee, Sherman, Jackson and the battlefield commanders of the Union and Confederacy.
@@ -81,7 +76,6 @@ How to use the list:
 - **The Scientists Who Changed Medicine.** Harvey, Jenner, Lister, Curie, Fleming and Hodgkin: discoveries that extended and saved lives.
 - **The Seven Years' War.** Frederick, Maria Theresa and Pitt: the first world war fought across the globe.
 - **The Shoguns of Japan.** Seven centuries of military rulers behind the emperor.
-- **The Spanish Conquistadors.** Cortes, Pizarro and the men who took the Aztec and Inca empires.
 - **The Spy Masters.** Walsingham, Fouche, Beria and the heads of secret services in history.
 - **The Tech Founders Who Built the Internet Age.** Jobs, Gates, Bezos, Zuckerberg and Ma: how a few companies came to shape daily life online.
 - **The Terror: Robespierre and the French Revolution.** How a revolution devoured its own leaders.
@@ -93,7 +87,6 @@ How to use the list:
 - **The Women of the French Revolution.** Olympe de Gouges, Charlotte Corday, Madame Roland and the women who joined and opposed the Revolution.
 - **The Women of the Scientific Revolution.** Du Châtelet, Merian, Cavendish and others who joined in the new science despite exclusion.
 - **The Women Prime Ministers.** Bandaranaike, Meir, Thatcher, Bhutto and others who led their countries.
-- **The Women Who Won the Vote.** Suffragists and suffragettes from New Zealand to Britain and the United States.
 - **Women Artists You Should Know.** From Artemisia Gentileschi to Frida Kahlo and Yayoi Kusama.
 - **Women Composers.** Hildegard, Clara Schumann and others who wrote the music history ignored.
 - **Women Explorers.** Travellers and climbers history forgot
@@ -102,7 +95,7 @@ How to use the list:
 - **Women Who Explored the World.** Travellers, mountaineers and pioneers of the air and space whose journeys are often missing from the usual stories.
 - **Women Who Flew.** Pioneering aviators from Harriet Quimby to modern astronauts.
 
-## Places (120)
+## Places (117)
 
 - **Africa's Ancient Kingdoms in Stone.** Aksum, Great Zimbabwe, Kilwa and the cities of the Swahili coast.
 - **Alexander and His Successors.** The conquests of Alexander and the Greek kingdoms that followed him.
@@ -127,7 +120,6 @@ How to use the list:
 - **Hidden Cities of the Silk Road.** Merv, Bukhara, Khiva and Kashgar: oases that rose and fell with the caravans.
 - **Island Capitals.** Venice, Singapore, Manhattan and other cities made by the sea.
 - **Japan from Shogun to Empire.** How Japan changed from feudal rule to a modern empire and then to a democracy.
-- **Korea Through the Dynasties.** From Goryeo and Joseon to colonial rule and the two Koreas.
 - **Lost Countries.** States that vanished from the map in the twentieth century.
 - **Lost Wonders of the Medieval World.** The porcelain tower of Nanjing, the Library of Baghdad and the marvels that vanished.
 - **Mexico: Aztecs to Revolution.** Five centuries of Mexican history.
@@ -137,7 +129,6 @@ How to use the list:
 - **Mountains of Stone: The Great Pyramids and Their Rivals.** Egypt, Mesoamerica, Sudan and Southeast Asia: the pyramid builders compared.
 - **Museums as Landmarks.** The Louvre, the British Museum and the buildings that keep humanity's treasures.
 - **Napoleon and the Remaking of Europe.** Wars, laws and a new map between 1799 and 1815.
-- **Places of Pilgrimage.** Mecca, Jerusalem, Santiago and Varanasi: the roads people walk for faith.
 - **Planned Cities from Babylon to Brasilia.** Grids, circles and garden suburbs: the dream of designing a city from nothing.
 - **Railway Stations as Cathedrals.** Grand Central, St Pancras and the age when stations looked like temples.
 - **Roman Britain.** Londinium, Hadrian's Wall, Bath and the island at the edge of the empire.
@@ -192,7 +183,6 @@ How to use the list:
 - **The Mongol Storm.** Genghis Khan and his heirs and how they remade Eurasia.
 - **The Opium Wars and the Fall of the Qing.** How foreign pressure and revolt ended imperial China.
 - **The Ottoman World.** Six centuries of sultans, janissaries and a state that spanned three continents.
-- **The Pacific Kingdoms.** Tonga, Hawaii, Tahiti and other island states before colonisation.
 - **The Palaces of the Mughals.** Agra, Delhi, Lahore and Fatehpur Sikri in the age of the great emperors.
 - **The Palaces of the World.** Versailles, the Forbidden City, the Alhambra and the courts built to show power.
 - **The Panama and Suez Canals.** Two cuts through the land that reshaped world shipping.
@@ -279,7 +269,7 @@ How to use the list:
 - **Universities of the Islamic Golden Age.** Baghdad, Cordoba, Cairo and Fez: centres of learning from Spain to Persia.
 - **Workers' Movements and Unions.** From the Chartists to Solidarity: how working people organised for a share of power.
 
-## Events (123)
+## Events (118)
 
 - **Air Disasters and How Flying Got Safe.** How each crash led to a safer sky
 - **Alexander the Great's Campaigns.** From Macedon to the Indus.
@@ -310,7 +300,6 @@ How to use the list:
 - **The Age of Exploration by Sea.** Caravels, compasses and the ships that mapped the world.
 - **The Age of Sail.** Wooden ships, winds and the empires they built
 - **The American Civil War.** Four years that decided slavery and the Union.
-- **The American Revolution.** The road from tax protest to independence.
 - **The Ancient Games.** Olympia, Delphi and the other contests of Greece
 - **The Arab Spring.** Protests that shook a region.
 - **The Arab-Israeli Conflict.** Wars and peace efforts from 1948 to today.
@@ -350,7 +339,6 @@ How to use the list:
 - **The Gulf Wars.** Iraq, Kuwait and the Middle East after 1980.
 - **The Haitian Revolution.** The only successful slave revolt that created a state.
 - **The History of the Marathon.** From a Greek legend to a mass event
-- **The Holocaust.** How it happened, who resisted and how the world responded.
 - **The Indian Rebellion of 1857.** Mutiny, rising and the end of Company rule.
 - **The Interwar Years.** Hope, crisis and dictators between two wars.
 - **The Iranian Revolution.** How a monarchy fell and a republic began.
@@ -370,7 +358,6 @@ How to use the list:
 - **The Race to the South Pole.** Amundsen, Scott and Shackleton on the ice: the great contest of polar exploration and the price some paid.
 - **The Reconquista.** Eight centuries of war and exchange in Iberia.
 - **The Rise and Fall of Japan Inc.** Japan boom, its bubble and its long aftermath
-- **The Russian Revolution.** From the last tsar to the first Soviet state.
 - **The Russo-Japanese War.** The first modern defeat of a European power by an Asian one.
 - **The Salem Witch Trials.** Fear and law in a colonial town.
 - **The Scramble for Africa.** How Europe carved up a continent.
@@ -395,17 +382,15 @@ How to use the list:
 - **The Vikings in the North Atlantic.** Voyages to Iceland, Greenland and North America
 - **The War on Terror.** Two decades after September 11.
 - **The Warring States of China.** Seven kingdoms and the road to the first emperor.
-- **The Wars of Independence in Latin America.** Bolívar, San Martín and the end of the Spanish Empire.
 - **The Wars of the Roses.** Houses, battles and betrayals on the road to the Tudors.
 - **The Western Front.** Four years of trench warfare from the Channel to Switzerland.
 - **The Winter Olympics.** From Chamonix to the snow of modern games
-- **Voyagers of the Pacific.** From Polynesian navigators to Cook and Magellan, how people found and crossed the largest ocean on Earth.
 - **Watergate.** The scandal that brought down a president.
 - **Wimbledon and the Grand Slams.** The history of tennis tournaments
 - **Y2K: The Bug That Wasn't.** The millennium panic and the work that prevented it.
 - **Zheng He and the Ming Voyages.** The treasure fleets that sailed to Africa.
 
-## Arts & media (152)
+## Arts & media (147)
 
 - **African Art and Its Collectors.** Masks, bronzes and the debate on where they belong.
 - **African Art and Its Modern Admirers.** Benin bronzes, Ife heads and the masks that inspired Picasso.
@@ -445,7 +430,6 @@ How to use the list:
 - **Great Sitcoms.** Laughs from the living room, from Lucy to Friends.
 - **Greek and Roman Satire.** Juvenal, Lucian and the long tradition of mocking the powerful.
 - **Greek Tragedy and Comedy.** Aeschylus, Sophocles, Euripides and Aristophanes at the festival of Dionysus.
-- **Greek Tragedy and the Birth of Theatre.** Aeschylus, Sophocles, Euripides and the festivals of Athens where drama began.
 - **Hard-Boiled Detectives.** Hammett, Chandler and the noir city.
 - **Heavy Metal: Loud History.** Birmingham, black leather and a worldwide family of bands.
 - **Heroes and Villains of the Page.** The great characters of fiction, from Hamlet to Sherlock Holmes.
@@ -471,7 +455,6 @@ How to use the list:
 - **Nature on Television.** The wildlife series that took viewers to the ends of the Earth.
 - **Newspaper Comic Strips.** Peanuts, Calvin and Hobbes and the funnies page from the Yellow Kid onward.
 - **Nobel Prize Winners in Literature.** Tagore to Morrison: the writers honoured by Stockholm, and the stories that surprised the committee.
-- **Nobel Prize Writers.** A century of laureates in literature and what their books said.
 - **Nordic Noir.** Larsson, Mankell and the dark crime fiction of Scandinavia.
 - **Opera: Three Hundred Years of Singing Drama.** Monteverdi to Puccini and the great houses that staged them.
 - **Persian Poetry.** Ferdowsi, Rumi, Hafez and Omar Khayyam.
@@ -481,7 +464,6 @@ How to use the list:
 - **Reggae and the Caribbean Sound.** Jamaica's rhythms and their worldwide reach.
 - **Science Fiction on Screen.** Rockets, robots and aliens from Melies to modern blockbusters.
 - **Shakespeare's Rivals and Friends.** Marlowe, Jonson and the crowded London stage of the 1590s.
-- **Shakespeare's World.** The plays, the playhouses and the people of Elizabethan and Jacobean London.
 - **Soap Operas and Telenovelas.** The long stories that tied together whole countries.
 - **Street Art and Graffiti.** From subway trains to Banksy.
 - **Tabloids and Scandal Sheets.** The popular press, from the penny papers to the phone-hacking affair.
@@ -503,7 +485,6 @@ How to use the list:
 - **The Dead Sea Scrolls and Other Lost Texts.** Ancient manuscripts found by chance and what they changed.
 - **The Detective Story.** From Poe's Dupin to Sherlock Holmes, Poirot and modern thrillers, a hundred and eighty years of crime fiction.
 - **The Dutch Golden Age of Painting.** Rembrandt, Vermeer and Hals in the richest trading nation of the seventeenth century.
-- **The Film Festivals.** Cannes, Venice, Sundance and the careers they made
 - **The First Artists.** Cave paintings and early art by ice age people.
 - **The Golden Age of Comic Books.** Heroes, horror and crime comics of the 1940s and 1950s.
 - **The Great Cathedrals of Europe.** Stone, glass and ambition: the medieval builders of Chartres, Notre-Dame and Cologne.
@@ -516,7 +497,6 @@ How to use the list:
 - **The Harlem Renaissance.** Writers, poets and artists who made Harlem the center of Black culture in the 1920s.
 - **The History of Radio Drama.** Voices in the dark and the shows that kept families listening.
 - **The History of the Encyclopedia.** From Pliny and Diderot to Wikipedia: attempts to collect all knowledge.
-- **The Latin American Boom.** García Márquez, Borges, Cortázar and Vargas Llosa and the novels that brought magic realism to the world.
 - **The Magazines That Shaped a Century.** Time, Life, Vogue and the New Yorker.
 - **The Mexican Muralists.** Rivera, Orozco and Siqueiros, and the walls on which they painted the history of Mexico.
 - **The Modern Artists Who Broke the Rules.** From Cubism and Surrealism to Pop Art: a century of painters and sculptors who tore up the old rulebook.
@@ -560,7 +540,7 @@ How to use the list:
 - **World Music Voices.** Fela Kuti, Nusrat Fateh Ali Khan, Cesária Évora and the artists who put their traditions on the world stage.
 - **Writers of the Harlem Renaissance.** Langston Hughes, Zora Neale Hurston and the poets and novelists of Black New York in the 1920s.
 
-## Knowledge & belief (72)
+## Knowledge & belief (70)
 
 - **Alchemists and Their Dreams.** Gold, elixirs and the roots of chemistry.
 - **Ancient DNA.** How genes from old bones rewrote human history.
@@ -575,7 +555,6 @@ How to use the list:
 - **Einstein's Universe.** Relativity, light and gravity: the ideas of Albert Einstein and the experiments that tested them.
 - **Existentialism: Sartre, Beauvoir and Their Circle.** The ideas of freedom, choice and meaning that shaped postwar Europe, in cafés, books and politics.
 - **Famous Proofs That Changed Mathematics.** Euclid, Gödel, Wiles and Perelman: the arguments that settled long-standing questions.
-- **Genetics From Mendel to CRISPR.** The century and a half that opened the code of life.
 - **Heresies and Banned Ideas.** Gnostics, Cathars and others whose beliefs were condemned.
 - **How Chinese Characters Work.** Oracle bones, seal script and simplified characters.
 - **How We Learned the Age of the Earth.** From Bishop Ussher to radiometric dating.
@@ -607,7 +586,6 @@ How to use the list:
 - **The Golden Age of Islamic Science.** Baghdad's scholars, their mathematics, medicine, optics and astronomy, and what Europe learned.
 - **The Greatest Unsolved Problems in Mathematics.** From Goldbach to Riemann, the puzzles that have beaten the best minds for centuries.
 - **The Greek Philosophers Before Socrates.** Thales, Pythagoras, Heraclitus and Democritus asked what the world is made of and how it works.
-- **The Hindu Epics and Their Worlds.** The Mahabharata and Ramayana, and how they shaped culture across Asia.
 - **The History of Atheism and Doubt.** From ancient sceptics to modern secular humanism.
 - **The History of English.** From Anglo-Saxon tribes to a global language.
 - **The History of Money.** From shells to Bitcoin
@@ -635,7 +613,7 @@ How to use the list:
 - **Women Philosophers and Scientists.** The thinkers history left out, from Hypatia to Emmy Noether.
 - **Writing Systems of the World.** Syllabaries, abjads, alphabets and logograms compared.
 
-## Society & daily life (96)
+## Society & daily life (95)
 
 - **A History of Beer.** Mesopotamian brewers, monastic ales and the lager revolution.
 - **A History of Chocolate.** From Mesoamerican cacao drinks to the modern bar.
@@ -677,7 +655,6 @@ How to use the list:
 - **The Dishes of the Silk Road.** Noodles, dumplings and flatbreads that travelled with caravans.
 - **The Environmental Movement and Its Founders.** Carson, Muir, Goodall and others who taught the world to protect wild places and species.
 - **The Fashion Houses of Paris.** Haute couture from Worth to the present day.
-- **The Festivals of Light.** Diwali, Hanukkah, the Lantern Festival and the rest
 - **The Football Legends.** Pelé to Messi: the players who defined the world's most popular sport.
 - **The Founders of Modern Sport.** FA, MCC and the other bodies that wrote the rules of games.
 - **The Great Craft Guilds.** How medieval trades set rules for quality and training.
@@ -778,7 +755,7 @@ How to use the list:
 - **Whales From Land to Sea.** How a four-legged land animal turned into the blue whale.
 - **Wolves Return.** The story of wolves in Yellowstone.
 
-## Earth & space (64)
+## Earth & space (62)
 
 - **Antarctica: The Last Continent.** From a lost forest world to ice cap, and the explorers who reached the pole.
 - **Black Holes: The Dark Heart of the Universe.** From a 1783 thought experiment to the first picture of a black hole.
@@ -811,7 +788,6 @@ How to use the list:
 - **The Age of Fishes.** The Devonian world: armoured giants, sharks and the first fish to crawl on land.
 - **The Alps: A Mountain History.** Geology, glaciers, passes and the people who crossed them from Hannibal onward.
 - **The Amazon: River of Rivers.** How the world's largest river basin formed and its place in history.
-- **The Andes from Rock to Empire.** How a mountain range shaped the Inca and everything after.
 - **The Arctic: A Frozen Ocean's History.** Ice, whales, explorers and a warming sea.
 - **The Astronomers: Mapping the Heavens.** From Babylonian skywatchers to Hubble and Rubin, how humans learned the size and age of the universe.
 - **The Birth of the Atlantic.** How the ocean opened over 180 million years and what lies on its ridge.
@@ -827,7 +803,6 @@ How to use the list:
 - **The Five Great Extinctions.** Five times life on Earth nearly ended, and what rose after.
 - **The Great Deserts of the World.** The Sahara, the Gobi, the Atacama and the Namib, and the life and trade that crossed them.
 - **The Great Lakes of Africa.** The Rift Valley lakes, their fishes and the peoples who live around them.
-- **The Great Rivers and the Civilizations Beside Them.** The Nile, Tigris, Indus, Yellow River and others, and the first cities that grew on their banks.
 - **The Living Planet: Oxygen and the Origin of Complex Life.** How microbes changed the air and prepared the way for animals.
 - **The Mediterranean Before History.** Dry sea, flood and the first sailors of the Mediterranean basin.
 - **The Milky Way and Its Neighbours.** Our galaxy, its companions and the great collision to come.

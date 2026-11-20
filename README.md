@@ -15,10 +15,10 @@ language from first release to end of support. It began as a timeline of
 computing, and computing is still its deepest shelf. Click a line to read its
 history, with dates, sources, links and images.
 
-The base holds about 3,800 entries on one map of ten branches: People,
+The base holds about 4,400 entries on one map of ten branches: People,
 Places, Organisations, Events, Arts & media, Knowledge & belief, Society &
 daily life, Life, Earth & space, and Technology (with Computing). On top of
-it sit community views: more than 180 books such as "The Race to the Moon",
+it sit community views: more than 260 books such as "The Race to the Moon",
 "Seven Hills to World Power" and "Women Who Changed Science", each a title,
 a hand-picked set of entries and chapters that tell the story.
 
