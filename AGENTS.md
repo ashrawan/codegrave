@@ -264,7 +264,10 @@ How the page is put together:
   sit as pills in a strip along the bottom (`#dock`), which scrolls
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
-  colour, and the cross removes one of several.
+  colour, and the cross removes one of several. The strip starts at the
+  left with the "Views" button and the pills; shuffle and the bookmark
+  stand at its right end, the bookmark last. This was asked for; do not
+  centre the strip again.
 - **One view at a time.** Picking a view shows it alone (`showOnly()`): the
   others leave and the road opens at its beginning. Putting a view beside
   the others is the second action (`turnOn()`): the small plus at the end

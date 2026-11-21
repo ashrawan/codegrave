@@ -173,13 +173,14 @@ mark { background: none; color: var(--text); font-weight: 600; text-decoration: 
 .ibtn[hidden] { display: none; }
 .ibtn.done { color: var(--acc); }
 /* the views on the timeline: a strip of pills along the bottom, which scrolls sideways when they do not fit */
-#dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; height: 44px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; background: var(--surf); border-top: 1px solid var(--rule); }
+#dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; height: 44px; display: flex; align-items: center; justify-content: flex-start; gap: 6px; padding: 0 20px; background: var(--surf); border-top: 1px solid var(--rule); }
 body.side-open #dock { right: var(--side); }
 #pills { display: flex; align-items: center; gap: 6px; min-width: 0; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; --fl: #000; --fr: #000; -webkit-mask-image: linear-gradient(to right, var(--fl), #000 22px, #000 calc(100% - 22px), var(--fr)); mask-image: linear-gradient(to right, var(--fl), #000 22px, #000 calc(100% - 22px), var(--fr)); }
 #pills.more-l { --fl: transparent; }
 #pills.more-r { --fr: transparent; }
 #pills::-webkit-scrollbar { display: none; }
-.dock-tools { flex: none; display: inline-flex; align-items: center; gap: 2px; padding-left: 8px; margin-left: 2px; border-left: 1px solid var(--rule); }
+/* the views start at the left; the tools stand at the right end, the bookmark last */
+.dock-tools { flex: none; display: inline-flex; align-items: center; gap: 2px; margin-left: auto; padding-left: 8px; }
 .pill { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 4px 0 6px; font-size: 12.5px; color: var(--text); white-space: nowrap; background: var(--bg); border: 1px solid var(--rule2); border-radius: 14px; cursor: grab; touch-action: pan-x; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
 .pill.one { padding-right: 11px; cursor: default; }
 .pill .dot { flex: none; width: 16px; height: 16px; padding: 0; border-radius: 50%; background: var(--c); border: 4px solid var(--bg); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 45%, transparent); cursor: pointer; }
@@ -305,7 +306,7 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
   #ticks .yr.under, #ticks .yr.under small { color: var(--muted); }
   #p-views > #vlist { min-height: 0; }
   body.side-open #dock { display: none; }
-  #dock { justify-content: flex-start; padding: 0 8px; }
+  #dock { padding: 0 8px; }
   .filters { gap: 12px; padding: 0 20px 14px; }
   .fbtn { display: flex; align-items: center; gap: 10px; width: calc(100% + 40px); height: 44px; margin: 0 -20px -12px; padding: 0 20px; text-align: left; color: var(--muted); background: none; border: 0; }
   .fbtn output { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; font-size: 12.5px; font-variant-numeric: tabular-nums; pointer-events: none; }
