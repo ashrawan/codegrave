@@ -7,7 +7,7 @@
    with rank.js, file keys come from keys.js. */
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf } from './keys.js';
-import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect, placeLabels, ruler, paceFor, orderOf, dwellFor, holdPace, PATIENCE } from './road.js';
+import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, ruler, paceFor, orderOf, dwellFor, turnPace } from './road.js';
 
 (() => {
   'use strict';
@@ -652,7 +652,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // jumps. The card at the front is drawn as selected (road.focus): its line
   // and the dated points of its history light up as it arrives. While play
   // travels, cards that would cover one another take turns (road.turn), and
-  // play waits for one that has not had its turn (road.hold).
+  // play slows for the ones that have not had theirs (road.limit).
   const road = {
     t: null, target: null, rate: 6,           // where the reader stands, where a glide is heading, and how briskly
     raf: 0, live: false, last: 0, prev: null, pace: 1, vel: 0, cards: 0, within1: 0, within3: 0,    // vel: how fast play is carrying the reader, in focal lengths a second
@@ -660,12 +660,12 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     nodes: new Map(), vis: new Map(), heat: new Map(),    // the elements of the names shown; which names were shown last frame, and how; how lit each line is
     soft: new Map(), side: new Map(),                     // how far each piece of writing on the ground has faded in; which side of its line an event is written on
     drag: null, swallow: 0, until: 0, jump: null, year: null, pal: null, said: null,
-    turn: new Map(), hold: null, waiting: 0, stuck: null,   // turns during play: the seconds each card has stood (Infinity once it has had its turn), how far ahead the nearest card still owed one is (focal lengths), how many wait behind another, and the one play has stood waiting for
+    turn: new Map(), limit: Infinity, waiting: 0,   // turns during play: the seconds each card has stood (Infinity once it has had its turn), the most play may travel while cards are owed theirs (focal lengths a second), and how many wait behind another
   };
   // The reader was moved by hand, or what is drawn changed: every card is owed its turn afresh.
-  const turnsOver = () => { road.turn.clear(); road.hold = null; road.waiting = 0; road.stuck = null; };
+  const turnsOver = () => { road.turn.clear(); road.limit = Infinity; road.waiting = 0; };
   const PLAY_PACE = 0.26;                      // focal lengths a second at full speed
-  const SLIDE = 110;                           // how far to its side a card of a side lane comes in from, in pixels at full size
+  const OPENS = 0.62;                          // the seconds a card takes to open out of its small card
   const BAR_PAD = 10;                          // room at each end of the bar on the right
   const calm = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   const camDir = () => (state.order === 'new' ? -1 : 1);
@@ -801,8 +801,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     } else if (play.on || road.vel) {
       // Play eases up to its speed, and a pause lets the reader glide to a stop.
       if (play.on) road.pace += (paceFor(road.cards + road.waiting, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
-      // Play does not pass a card that has not had its turn: it glides up to it and stands until it has.
-      const cap = play.on && road.hold != null ? holdPace(road.hold) : Infinity;
+      // Play slows for cards that have not had their turn, by as much as they still need, and never stands still.
+      const cap = play.on ? road.limit : Infinity;
       const want = Math.min(cap, play.on ? PLAY_PACE * road.pace : 0);
       road.vel = calm() ? want : Math.min(cap, road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on ? 4 : 6))));
       if (!play.on && road.vel < 0.004) road.vel = 0;
@@ -862,8 +862,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       : mode === 'near' ? `<button type="button" class="rc end near" ${at}><span class="rk"><b>${name}</b><small>${esc(endWords(t))}</small></span>${t.cause ? `<span class="rs">${esc(t.cause)}</span>` : ''}</button>`
       : `<button type="button" class="rc end small" ${at}><b>${name}</b><small>${esc(endWords(t))}</small></button>`;
     $('road-labels').appendChild(el);
-    const btn = el.firstChild, n = { el, btn, pk: p.key, end, mode, o: 0, want: 0, hot: false, z: -1, dead: true };
+    const btn = el.firstChild, n = { el, btn, pk: p.key, end, mode, o: 0, g: 0, cut: '', want: 0, hot: false, z: -1, dead: true };
     const size = () => {
+      btn.style.height = ''; n.cut = '';                    // measured whole, not as far as it has opened
       if (mode === 'full') m.fullH = btn.offsetHeight; else if (mode === 'near') m.nearH = btn.offsetHeight;
       else if (mode === 'compact') m.compactW = btn.offsetWidth; else if (mode === 'tag') m.tagW = btn.offsetWidth; else m.endW = btn.offsetWidth;
     };
@@ -935,20 +936,16 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     }
     road.cards = cards; road.within1 = within1; road.within3 = within3;
     road.focus = front && !openUp ? front.p.t.id : null;
-    // Turns: how many starts wait behind another card, and how far ahead the nearest one still owed its turn is.
-    // Play stands for that one (roadFrame); if it cannot be shown at all, play gives up on it after a while.
-    let waiting = 0, owed = null, owedUp = false;
+    // Turns: the starts still owed theirs, how many of them wait behind another card, and how fast play
+    // may travel so that each has had its turn by the time the reader reaches it (turnPace in road.js).
+    const owed = [];
     for (const c of cands) {
       if (c.turn !== 'due' || c.end || c.u < -0.05 * D) continue;
-      const r = placed.get(c.key), isUp = !!r && r.big;
-      if (!isUp) waiting++;
-      if (!owed || c.u < owed.u) { owed = c; owedUp = isUp; }
+      const r = placed.get(c.key);
+      const n = still ? null : road.nodes.get(c.key + ':full');       // its turn begins once it has opened
+      owed.push({ ahead: c.u / D, up: !!r && r.big, left: dwell - (road.turn.get(c.key) || 0) + (still ? 0 : OPENS * (1 - (n ? n.g : 0))) });
     }
-    road.waiting = waiting; road.hold = owed ? owed.u / D : null;
-    if (owed && !owedUp && road.vel < 0.03) {
-      if (!road.stuck || road.stuck.key !== owed.key) road.stuck = { key: owed.key, t: 0 };
-      else if ((road.stuck.t += dt) > PATIENCE) road.turn.set(owed.key, Infinity);
-    } else road.stuck = null;
+    road.waiting = owed.filter((c) => !c.up).length; road.limit = turnPace(owed);
     const hotNow = (id) => id === state.open || id === road.hover || id === road.focus;
 
     // Each name shown has its element; one that is no longer shown keeps its place on the ground while it fades.
@@ -962,14 +959,16 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       seen.add(nk);
       n.r = r; n.s = c.s;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
-      if (c.turn === 'due' && r.big && n.o > 0.6) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
-      // A card that comes up while play travels says so: a ring in its colour and a soft pop.
+      if (c.turn === 'due' && r.big && n.o > 0.6 && n.g >= 1) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
+      // A card that opens while play travels says so: a ring in its colour and a soft rustle.
       if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }
-    // A card arrives a little more slowly than a small name: it comes in from its lane's side of the
-    // road and leaves the same way (the left lane's from and to the left, the right lane's the right),
-    // and a card in the middle rises into place. It grows the last little bit as it comes.
-    const ease = still ? 1 : 1 - Math.exp(-dt * 12), easeBig = still ? 1 : 1 - Math.exp(-dt * 5.5);
+    // A card opens out of its small card, like a scroll unrolling: it starts as that box, where that
+    // stands, and grows upwards into its own place (openFrom in road.js; `n.g` is how far it has opened,
+    // and the card is cut to the height it has reached). The small card goes with it and dissolves into
+    // it, so the two are one thing opening. A card that leaves fades where it is, more slowly than a
+    // small name does.
+    const ease = still ? 1 : 1 - Math.exp(-dt * 12), easeBig = still ? 1 : 1 - Math.exp(-dt * 5.5), easeInto = still ? 1 : 1 - Math.exp(-dt * 8);
     for (const [nk, n] of road.nodes) {
       const p = L.byKey.get(n.pk);
       if (!seen.has(nk)) {
@@ -978,21 +977,32 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
         n.s = S(u); n.want = 0; n.live = false;
         n.r = labelRect(n.mode, n.s, px(p.xn, n.s), py(n.s), roadSizes(p.t), G, p.lane.lean);
       }
-      const big = n.mode === 'full' || n.mode === 'near';
-      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * (big ? easeBig : ease);
+      const big = n.mode === 'full' || n.mode === 'near', side = (n.end ? 'e:' : 's:') + n.pk;
+      // The card this small card is opening into, if it is.
+      const card = !big && n.mode !== 'tag' && !seen.has(nk) && placed.get(side)?.big ? road.nodes.get(side + ':' + placed.get(side).mode) : null;
+      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * (!big ? (card ? easeInto : ease) : n.g < 1 && n.want > n.o ? ease : easeBig);
       if (n.o !== n.want) busy = true;
       if (!n.want && !n.o && !seen.has(nk)) { n.el.remove(); road.nodes.delete(nk); continue; }
       const hot = hotNow(p.t.id), r = n.r;
-      const away = big && !still ? (1 - n.o) * (1 - n.o) : 0, lean = p.lane.lean;
-      const dx = away * lean * SLIDE * r.k, dy = away * (1 - Math.abs(lean)) * 14 * r.k;
+      let x = r.cx, y = r.y1, k = r.k, ax = r.ax;
+      if (big) {
+        if (still) n.g = 1;
+        else if (n.want > 0 && n.g < 1) { n.g = Math.min(1, n.g + dt / OPENS); busy = true; }
+        let cut = '';
+        if (n.g < 1) {
+          const o = openFrom(labelRect(n.end ? 'endc' : 'compact', n.s, r.gx, r.gy, roadSizes(p.t), G, p.lane.lean), r, n.g);
+          x = o.x; y = o.y; k = o.k; ax = o.ax; cut = (o.h / o.k).toFixed(1) + 'px';
+        }
+        if (cut !== n.cut) { n.cut = cut; n.btn.style.height = cut; }
+      } else if (card) ({ x, y } = openFrom(r, card.r, card.g));
       if (hot !== n.hot) { n.hot = hot; n.btn.classList.toggle('hot', hot); }
       const z = (hot ? 2000 : n.end ? 95 : 100) + Math.round(n.s * 400) - (n.mode === 'tag' ? 90 : 0);
       if (z !== n.z) { n.z = z; n.el.style.zIndex = z; }
       const dead = n.o < 0.3;
       if (dead !== n.dead) { n.dead = dead; n.el.style.pointerEvents = dead ? 'none' : ''; }
-      n.el.style.transform = `translate3d(${(r.cx + dx).toFixed(1)}px,${(r.y1 + dy).toFixed(1)}px,0) scale(${(r.k * (1 - 0.06 * away)).toFixed(3)})`;
+      n.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0) scale(${k.toFixed(3)})`;
       n.el.style.opacity = n.o.toFixed(3);
-      if (n.o > 0.02) stems.push({ x1: r.gx, y1: r.gy, x2: r.ax + dx, y2: r.y1 + dy, a: n.o, hot, col: p.lane.col });
+      if (n.o > 0.02) stems.push({ x1: r.gx, y1: r.gy, x2: ax, y2: y, a: n.o, hot, col: p.lane.col });
     }
 
     // Writing on the ground (a chapter's name, an event on the selected line) is not drawn under a name:
@@ -1921,9 +1931,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     roadKick();
   }
 
-  // The sound of play: a soft pop as a card comes up. It is made on the spot, so there is no sound file to
+  // The sound of play: a soft rustle as a card opens. It is made on the spot, so there is no sound file to
   // fetch, and nothing sounds before play has been pressed. The button above play turns it off (`cg-sound`).
-  const sound = { on: store.get('cg-sound') !== '0', ctx: null, last: 0 };
+  const sound = { on: store.get('cg-sound') !== '0', ctx: null, last: 0, noise: null };
   const ICON_SOUND = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3l4.5-3.5v12L7 14.5H4z"/><path d="M15.5 9.5a3.6 3.6 0 0 1 0 5M18.2 7a7.2 7.2 0 0 1 0 10"/></svg>';
   const ICON_MUTED = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3l4.5-3.5v12L7 14.5H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>';
   // A browser lets a page sound only after a press: play and the sound button both are one.
@@ -1935,35 +1945,42 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       if (sound.ctx && sound.ctx.state === 'suspended') sound.ctx.resume();
     } catch { sound.ctx = null; }
   }
-  // One pop: a short, quiet note that rises as it starts and dies away in a fifth of a second. A card on the
-  // left lane sounds a tone lower and from the left, one on the right lane a tone higher and from the right.
-  function pop(lean = 0) {
+  // One rustle, like a sheet unrolling: noise through a filter that opens as the card does. It swells for a
+  // seventh of a second and is gone in half a second, so it has no note and no tap. A card on the left lane
+  // sounds a tone lower and from the left, one on the right lane a tone higher and from the right.
+  function rustle(lean = 0) {
     const ctx = sound.ctx;
     if (!sound.on || !ctx || ctx.state !== 'running') return;
     const at = ctx.currentTime;
-    if (at - sound.last < 0.09) return;
+    if (at - sound.last < 0.12) return;
     sound.last = at;
-    const f = 587 * Math.pow(2, (2 * clamp(lean, -1, 1)) / 12), osc = ctx.createOscillator(), gain = ctx.createGain();
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(f * 0.72, at);
-    osc.frequency.exponentialRampToValueAtTime(f, at + 0.045);
-    gain.gain.setValueAtTime(0.0001, at);
-    gain.gain.exponentialRampToValueAtTime(0.08, at + 0.012);
-    gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.21);
-    osc.connect(gain);
+    if (!sound.noise) {
+      sound.noise = ctx.createBuffer(1, ctx.sampleRate, ctx.sampleRate);
+      const d = sound.noise.getChannelData(0);
+      for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+    }
+    const f = 1250 * Math.pow(2, (2 * clamp(lean, -1, 1)) / 12), src = ctx.createBufferSource(), band = ctx.createBiquadFilter(), gain = ctx.createGain();
+    src.buffer = sound.noise;
+    band.type = 'bandpass'; band.Q.value = 0.9;
+    band.frequency.setValueAtTime(f * 0.6, at);
+    band.frequency.exponentialRampToValueAtTime(f * 1.7, at + 0.45);
+    gain.gain.setValueAtTime(0, at);
+    gain.gain.linearRampToValueAtTime(0.15, at + 0.14);
+    gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.52);
+    src.connect(band); band.connect(gain);
     if (ctx.createStereoPanner) { const pan = ctx.createStereoPanner(); pan.pan.value = 0.4 * clamp(lean, -1, 1); gain.connect(pan); pan.connect(ctx.destination); }
     else gain.connect(ctx.destination);
-    osc.start(at); osc.stop(at + 0.23);
+    src.start(at, Math.random() * 0.4, 0.56);
   }
-  // A card comes up while play travels: a ring in its view's colour that fades, and the pop.
+  // A card opens while play travels: a ring in its view's colour that fades, and the rustle.
   function cardArrives(n, lean) {
-    if (!calm()) { n.btn.classList.remove('pop'); void n.btn.offsetWidth; n.btn.classList.add('pop'); }
-    pop(lean);
+    if (!calm()) { n.btn.classList.remove('ring'); void n.btn.offsetWidth; n.btn.classList.add('ring'); }
+    rustle(lean);
   }
   function drawSound() {
     const b = $('sound');
     b.setAttribute('aria-pressed', sound.on);
-    b.title = sound.on ? 'Sound is on: a soft pop as each card comes up' : 'Sound is off';
+    b.title = sound.on ? 'Sound is on: a soft rustle as each card opens' : 'Sound is off';
     b.innerHTML = sound.on ? ICON_SOUND : ICON_MUTED;
   }
   function toggleSound() {
@@ -1971,7 +1988,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     store.set('cg-sound', sound.on ? '1' : '0');
     drawSound();
     // Turning it on lets you hear what you turned on.
-    if (sound.on) { soundReady(); setTimeout(() => pop(0), 60); }
+    if (sound.on) { soundReady(); setTimeout(() => rustle(0), 60); }
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.

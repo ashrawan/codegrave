@@ -47,7 +47,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
-| The arithmetic of the road (sizes in depth, tracks, which names fit and in what order, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
+| The arithmetic of the road (sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
 To find an entry without listing folders: its path is always
@@ -162,10 +162,19 @@ How the page is put together:
 - **Lanes have sides.** With more than one view, `ln.lean` is -1 for the
   left lane, 0 for a middle one and 1 for the right lane. A card on a side
   lane stands to the outer side of its point, like a flag on its pole
-  (`labelRect()` takes the lean), comes in from that side and leaves to it
-  (`SLIDE`); a card in the middle, or on a road of one lane, stands on its
-  point and rises into place. Keep it so: the left lane's cards never cross
+  (`labelRect()` takes the lean); a card in the middle, or on a road of one
+  lane, stands on its point. Keep it so: the left lane's cards never cross
   to the right.
+- **A card opens like a scroll.** A card is never brought in from the side
+  and never pops up. It opens out of its small card: it starts as that box,
+  where that stands, and unrolls upwards into its own place over `OPENS`
+  seconds, easing in and out (`openFrom()` in `site/road.js` gives the box
+  for how far it has opened, `n.g`; the page cuts the card to that height,
+  and what the card holds keeps to its foot, so nothing in it moves). The
+  small card goes with it and dissolves into it, so the two read as one
+  thing. A card that leaves fades where it stands. This was asked for in so
+  many words ("think like opening scroll"), so do not bring back a slide or
+  a pop.
 - **The front card** is selected by itself: the nearest card in front of
   the reader (`road.focus`) has its line drawn in its view's colour and its
   events written along it, like the open and the hovered entry
@@ -184,23 +193,27 @@ How the page is put together:
   together their cards would cover one another, and before this the one
   behind passed without ever being shown. Now every start is owed a moment
   as a full card. A card that is up keeps its place for `DWELL` seconds
-  (`dwellFor()`: less when more than two wait); then it gives way to one it
-  was hiding, and those come nearest first, in the order things happened
-  (`orderOf()` in `site/road.js` decides the order for every name;
-  `road.turn` counts each card's seconds). Play glides to a stand just
-  short of a card still owed its turn (`road.hold`, `holdPace()`) and moves
-  on once it has had it; one that cannot be shown at all (behind the card
-  under the pointer, say) is given up after `PATIENCE` seconds, so play
-  never hangs. The open entry's card takes its turn like any other. Moving by hand, or any change to what is drawn, starts the turns
-  afresh (`turnsOver()`). Standing still and travelling by hand, nothing
-  takes turns: a card does not leave while someone reads it. Keep it this
-  simple: no queue, no timers, only an order and a speed limit worked out
-  each frame.
-- **The sound of play.** A card that comes up while play travels gets a
-  ring in its view's colour that fades (`.rc.full.pop`) and a soft pop
-  (`pop()`): one short, quiet note made with Web Audio on the spot, so
-  there is no sound file. The left lane sounds a tone lower and from the
-  left, the right lane a tone higher and from the right. Nothing sounds
+  once it has opened (`dwellFor()`: less when more than two wait); then it
+  gives way to one it was hiding, and those come nearest first, in the
+  order things happened (`orderOf()` in `site/road.js` decides the order
+  for every name; `road.turn` counts each card's seconds). Play never
+  stands still for this. It slows down early instead: each frame
+  `turnPace()` works out how fast the reader may travel so that every card
+  still owed its turn has had it by the time the reader is nearly on it
+  (`road.limit`), and it never goes below `CRAWL`. A full stop was tried
+  and was not wanted, so keep the floor. The open entry's card takes its
+  turn like any other. Moving by hand, or any change to what is drawn,
+  starts the turns afresh (`turnsOver()`). Standing still and travelling by
+  hand, nothing takes turns: a card does not leave while someone reads it.
+  Keep it this simple: no queue, no timers, only an order and a speed limit
+  worked out each frame.
+- **The sound of play.** A card that opens while play travels gets a ring
+  in its view's colour that fades (`.rc.full.ring`) and a soft rustle
+  (`rustle()`), like a sheet unrolling: noise through a filter that opens
+  as the card does, made with Web Audio on the spot, so there is no sound
+  file. It swells and dies away, with no note and no tap: a short pop was
+  tried first and was not liked. The left lane sounds a tone lower and from
+  the left, the right lane a tone higher and from the right. Nothing sounds
   before play is pressed, travelling by hand is silent, and the small
   button above play turns the sound off (`cg-sound` in this browser).
 - **The panel** is hidden until its button, the "Views" button in the strip

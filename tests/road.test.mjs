@@ -1,7 +1,7 @@
 // Run with: node --test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, DWELL, DWELL_BUSY, HOLD_AT, sizeAt, step125, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, placeLabels, ruler, paceFor, orderOf, dwellFor, holdPace } from '../site/road.js';
+import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, DWELL, DWELL_BUSY, DWELL_CROWD, HOLD_AT, CRAWL, sizeAt, step125, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, openFrom, placeLabels, ruler, paceFor, orderOf, dwellFor, turnPace } from '../site/road.js';
 
 const SIZES = { fullH: 158, nearH: 100, compactW: 170, tagW: 70, endW: 150 };
 
@@ -132,6 +132,32 @@ test('a card on a side lane stands to the outer side of its point, and one in th
   assert.ok(labelRect('full', FULL, gx, gy, SIZES, G).k >= CARD_MIN * G.ks - 1e-9);
 });
 
+test('a card opens out of its small card: it starts as that box and grows upwards into its own place', () => {
+  const G = stageOf(1368, 848), gx = G.vx - 200, gy = G.vy + G.gh * 0.7;
+  for (const lean of [-1, 0, 1]) {
+    const small = labelRect('compact', FULL, gx, gy, SIZES, G, lean), card = labelRect('full', FULL, gx, gy, SIZES, G, lean);
+    const at = (g) => openFrom(small, card, g), a = at(0), z = at(1);
+    // Closed, it is the small card: where that stands, no taller and no wider.
+    assert.ok(a.x === small.cx && a.y === small.y1 && a.h === small.h && (card.w / card.k) * a.k <= small.w + 1e-9);
+    // Open, it is the card.
+    assert.ok(Math.abs(z.x - card.cx) < 1e-9 && Math.abs(z.y - card.y1) < 1e-9 && Math.abs(z.k - card.k) < 1e-9 && Math.abs(z.h - card.h) < 1e-9);
+    // In between it only grows, and moves only towards its side: nothing jumps and nothing overshoots.
+    let was = a;
+    for (let g = 0.05; g <= 1.0001; g += 0.05) {
+      const now = at(g);
+      assert.ok(now.h >= was.h - 1e-9 && now.k >= was.k - 1e-9 && now.h <= card.h + 1e-9);
+      assert.ok((now.x - was.x) * lean >= -1e-9 && Math.abs(now.x - was.x) < Math.abs(card.cx - small.cx) * 0.2 + 1e-9);
+      assert.ok(now.ax > now.x - ((card.w / card.k) * now.k) / 2 && now.ax < now.x + ((card.w / card.k) * now.k) / 2);
+      was = now;
+    }
+    // It starts and ends gently.
+    assert.ok(at(0.1).h - a.h < (card.h - small.h) * 0.05 && z.h - at(0.9).h < (card.h - small.h) * 0.05);
+  }
+  // A small card wider than its card: the card keeps its own scale and only its height opens.
+  const wide = labelRect('compact', FULL, gx, gy, { ...SIZES, compactW: 400 }, G), card = labelRect('full', FULL, gx, gy, SIZES, G);
+  assert.equal(openFrom(wide, card, 0).k, card.k);
+});
+
 test('play slows for cards and hurries through empty years', () => {
   assert.equal(paceFor(0, 2, 5), 1);
   assert.ok(paceFor(2, 2, 5) < paceFor(1, 2, 5) && paceFor(1, 2, 5) < 1);
@@ -173,14 +199,30 @@ test('cards that would cover one another take turns while play travels', () => {
   assert.ok(orderOf({ zone: 0, score: 0.5 }) < orderOf({ zone: 1, up: 'compact', score: 0.5 }));
 });
 
-test('play stands for a card that has not had its turn, and a longer queue moves faster', () => {
-  assert.equal(holdPace(HOLD_AT), 0);
-  assert.equal(holdPace(-0.04), 0);
-  assert.ok(holdPace(0.1) > 0 && holdPace(0.2) > holdPace(0.1));
-  // Where a name first becomes a card, the limit is above the fastest play travels, so play only slows as it comes close.
-  assert.ok(holdPace(1 / FULL - 1) > 0.26 * 5);
+test('play slows for cards that have not had their turn, and never stands still', () => {
+  const edge = 1 / FULL - 1;   // how far ahead a name first becomes a card
+  // Nothing owed: no limit.
+  assert.equal(turnPace([]), Infinity);
+  // One card that is up: play arrives just short of it as its time runs out.
+  assert.ok(Math.abs(turnPace([{ ahead: 0.5, up: true, left: 2 }]) - (0.5 - HOLD_AT) / 2) < 1e-9);
+  // Four that begin together, one up and three waiting: slow, but well above a crawl.
+  const four = [{ ahead: edge, up: true, left: 1 }, ...[0, 1, 2].map(() => ({ ahead: edge, up: false, left: DWELL_BUSY }))];
+  assert.ok(Math.abs(turnPace(four) - (edge - HOLD_AT) / (1 + 3 * DWELL_BUSY)) < 1e-9);
+  assert.ok(turnPace(four) > CRAWL * 2 && turnPace(four) < 0.26);
+  // The more that wait, the slower; cards that are up together do not add up.
+  assert.ok(turnPace(four) < turnPace(four.slice(0, 3)) && turnPace(four.slice(0, 3)) < turnPace(four.slice(0, 2)));
+  assert.equal(turnPace([{ ahead: 0.4, up: true, left: 2 }, { ahead: 0.4, up: true, left: 2 }]), turnPace([{ ahead: 0.4, up: true, left: 2 }]));
+  // The order they are given in does not matter, and the nearest one that waits sets the pace when it is close.
+  assert.equal(turnPace([...four].reverse()), turnPace(four));
+  assert.ok(turnPace([{ ahead: 0.1, up: false, left: 2 }, { ahead: 0.5, up: false, left: 2 }]) < turnPace([{ ahead: 0.5, up: false, left: 2 }]));
+  // It never comes to a stand: right on top of a card that still waits, play keeps crawling.
+  assert.ok(CRAWL > 0);
+  assert.equal(turnPace([{ ahead: HOLD_AT, up: false, left: 2 }]), CRAWL);
+  assert.equal(turnPace([{ ahead: -0.04, up: false, left: 2 }, { ahead: 0, up: true, left: 1 }]), CRAWL);
+  // A longer queue moves faster.
   assert.equal(dwellFor(0), DWELL);
   assert.equal(dwellFor(2), DWELL);
   assert.equal(dwellFor(3), DWELL_BUSY);
-  assert.ok(DWELL_BUSY < DWELL && DWELL_BUSY >= 1.5);
+  assert.equal(dwellFor(6), DWELL_CROWD);
+  assert.ok(DWELL_CROWD < DWELL_BUSY && DWELL_BUSY < DWELL && DWELL_CROWD >= 1.2);
 });

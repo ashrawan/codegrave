@@ -107,6 +107,21 @@ export function labelRect(mode, s, gx, gy, m, G, lean = 0) {
   return { mode, big, k, w, h, lift, cx, ax, gx, gy, x0: cx - half, x1: cx + half, y0: gy - lift - h, y1: gy - lift, area: w * h };
 }
 
+// A card opens out of its small card. While it comes up it is drawn between
+// the two: at first it is the small card's box, no wider and no taller and
+// standing where that stands, and then it grows into its own place. It grows
+// upwards, since both stand on the same foot, and on a side lane towards its
+// side of the road. `g` runs from 0 (the small card) to 1 (the card), and
+// `small` and `card` are their boxes from labelRect. Returns where its foot
+// stands (x, y), its scale, how tall it is drawn (h, in pixels on the screen:
+// the page cuts the card to that from the top) and where its stem meets it (ax).
+export function openFrom(small, card, g) {
+  const e = g <= 0 ? 0 : g >= 1 ? 1 : g * g * (3 - 2 * g), k0 = Math.min(card.k, (card.k * small.w) / card.w);
+  const x = small.cx + (card.cx - small.cx) * e, y = small.y1 + (card.y1 - small.y1) * e, k = k0 + (card.k - k0) * e;
+  const half = ((card.w / card.k) * k) / 2, h = Math.min(card.h, small.h) + (card.h - Math.min(card.h, small.h)) * e;
+  return { x, y, k, h, ax: clamp(card.gx, x - half + 12 * k, x + half - 12 * k) };
+}
+
 // Which names are shown. `cands` come best first: { key, end, s, gx, gy, m, lean }.
 // Each takes the biggest form its distance allows that fits. Near cards may
 // overlap a little, as things do in depth; smaller names never touch
@@ -184,16 +199,29 @@ export function paceFor(cards, within1, within3) {
 // Taking turns. Where things begin close together their cards would cover one
 // another, and the one behind would pass without ever being shown. So while
 // play travels, every start is owed a moment as a full card. A card that is up
-// keeps its place for a few seconds (less when several wait behind it); then
-// it gives way to one it was hiding, and those come nearest first, in the
-// order things happened. Play glides to a stand a little short of a card still
-// owed its turn (HOLD_AT focal lengths) and moves on once it has had it; one
-// that cannot be shown at all is given up after PATIENCE seconds of standing,
-// which is longer than any card in front of it can keep its place.
-export const DWELL = 2.6, DWELL_BUSY = 1.8, HOLD_AT = 0.03, PATIENCE = 4;
-export const dwellFor = (waiting) => (waiting > 2 ? DWELL_BUSY : DWELL);
-// The most play may travel, in focal lengths a second, with the nearest card still owed its turn `ahead` focal lengths away.
-export const holdPace = (ahead) => Math.max(0, (ahead - HOLD_AT) * 4);
+// keeps its place for a few seconds (less the more wait behind it); then it
+// gives way to one it was hiding, and those come nearest first, in the order
+// things happened. Play does not stop for them: it slows early, by as much as
+// the cards in front still need, so that each has had its turn by the time
+// the reader reaches it (HOLD_AT focal lengths short of it), and it never
+// travels slower than CRAWL.
+export const DWELL = 2.3, DWELL_BUSY = 1.6, DWELL_CROWD = 1.2, HOLD_AT = 0.03, CRAWL = 0.035;
+export const dwellFor = (waiting) => (waiting > 5 ? DWELL_CROWD : waiting > 2 ? DWELL_BUSY : DWELL);
+// The most play may travel, in focal lengths a second. `owed` are the starts
+// still owed their turn: { ahead (focal lengths), up (its card is up), left
+// (the seconds it still needs) }. Cards that are up spend their time together;
+// those that wait follow one after another, nearest first. With nothing owed
+// there is no limit.
+export function turnPace(owed) {
+  const line = [...owed].sort((a, b) => a.ahead - b.ahead);
+  let together = 0, queue = 0, pace = Infinity;
+  for (const c of line) if (c.up) together = Math.max(together, c.left);
+  for (const c of line) {
+    const need = c.up ? c.left : together + (queue += Math.max(0, c.left));
+    if (need > 0) pace = Math.min(pace, Math.max(0, c.ahead - HOLD_AT) / need);
+  }
+  return Math.max(CRAWL, pace);
+}
 
 // The order in which names are offered a place, lowest first. The open entry
 // and the one under the pointer come first; then the nearest zone, starts
@@ -202,8 +230,7 @@ export const holdPace = (ahead) => Math.max(0, (ahead - HOLD_AT) * 4);
 // for a name near enough to be a card: 'due' until it has had its time, then
 // 'done'. A start that is due keeps its place if it is up, and otherwise waits
 // in line by distance (`ahead`, in focal lengths) in front of every card that
-// has had its turn. The open entry's card takes its turn like any other, so
-// play is never left standing behind it.
+// has had its turn. The open entry's card takes its turn like any other.
 export function orderOf({ open = false, hover = false, zone = 0, end = false, up = null, score = 0, turn = null, ahead = 0 }) {
   const first = (open && turn !== 'done' ? -100 : 0) + (hover ? -50 : 0), big = isBig(up);
   if (turn === 'due' && !end) return first + (big ? -9 : 1) + clamp(ahead, 0, 1);

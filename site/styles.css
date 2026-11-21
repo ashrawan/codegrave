@@ -381,9 +381,12 @@ small > .ctag, small .ctag { margin-left: 0; }
 .rc.hot { border-color: var(--c); }
 .rc.full { width: var(--fw, 288px); padding: 13px 14px 14px; background: var(--bg); box-shadow: var(--card-sh); }
 .rc.full.hot { box-shadow: 0 0 0 1px var(--c), var(--card-sh); }
-/* a card that comes up while play travels: a ring in its view's colour that fades into the card's own edge */
-.rc.full.pop { animation: rcpop .65s ease-out; }
-@keyframes rcpop { from { border-color: var(--c); box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 32%, transparent), var(--card-sh); } }
+/* A card can be drawn cut short while it opens out of its small card: what it holds keeps to its foot. */
+.rc.full, .rc.end.near { display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
+.rc.full > *, .rc.end.near > * { flex: none; }
+/* a card that opens while play travels: a ring in its view's colour that fades into the card's own edge */
+.rc.full.ring { animation: rcring .8s ease-out; }
+@keyframes rcring { from { border-color: var(--c); box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 32%, transparent), var(--card-sh); } }
 .rc.full img { display: block; width: 100%; height: 110px; margin-bottom: 8px; object-fit: cover; background: var(--ph); border-radius: 2px; }
 .rc .rk { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .rc.full .rk b { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 10.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--c); }
