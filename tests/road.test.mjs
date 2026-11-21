@@ -1,7 +1,7 @@
 // Run with: node --test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { NEAR, GONE, FAR, FULL, SMALL, sizeAt, step125, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, placeLabels, ruler, paceFor } from '../site/road.js';
+import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, sizeAt, step125, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, placeLabels, ruler, paceFor } from '../site/road.js';
 
 const SIZES = { fullH: 158, nearH: 100, compactW: 170, tagW: 70, endW: 150 };
 
@@ -117,6 +117,19 @@ test('the years along the road: nearest first, round, never the year 0, never cr
   // Deep time: steps of millions of years, still a bounded number of ticks.
   const deep = ruler({ t: -4e8, dir: 1, D: 1.2e8, tMin: -1.45e10, tMax: 2026, gh: 736, fsOf });
   assert.ok(deep.length > 5 && deep.length < 120 && deep.every((k) => k.y % 1e6 === 0));
+});
+
+test('a card on a side lane stands to the outer side of its point, and one in the middle stands on it', () => {
+  const G = stageOf(1368, 848), gx = G.vx - 200, gy = G.vy + G.gh * 0.9;
+  const mid = labelRect('full', 0.9, gx, gy, SIZES, G), left = labelRect('full', 0.9, gx, gy, SIZES, G, -1), right = labelRect('full', 0.9, gx, gy, SIZES, G, 1);
+  assert.equal(mid.cx, gx);
+  assert.ok(left.cx < gx && right.cx > gx && Math.abs((gx - left.cx) - (right.cx - gx)) < 1e-9);
+  // Its stem still stands on its point, inside the card.
+  for (const r of [mid, left, right]) assert.ok(r.ax === gx && r.ax > r.x0 && r.ax < r.x1);
+  // A small name does not lean.
+  assert.equal(labelRect('compact', 0.5, gx, gy, SIZES, G, -1).cx, labelRect('compact', 0.5, gx, gy, SIZES, G).cx);
+  // A card is drawn large enough to read from where it first shows.
+  assert.ok(labelRect('full', FULL, gx, gy, SIZES, G).k >= CARD_MIN * G.ks - 1e-9);
 });
 
 test('play slows for cards and hurries through empty years', () => {

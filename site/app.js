@@ -439,7 +439,30 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     state.views.push(id); state.colors.set(id, n);
     return true;
   }
-  // Fetches a view if needed, then puts it on the timeline. The list shows it loading meanwhile.
+  // Shows one view alone, which is what picking a view does: fetches it if needed, takes the
+  // others off, and the road opens at its beginning. The last one asked for wins.
+  let wanted = null;
+  function showOnly(id, done) {
+    const real = alias.get(id) || id;
+    wanted = real;
+    if (state.views.length === 1 && state.views[0] === real) { if (done) done(real); return Promise.resolve(real); }
+    pending.add(real); broken.delete(real);
+    drawResults();
+    return loadView(real).then((got) => {
+      pending.delete(real);
+      if (wanted !== real) { drawResults(); return null; }
+      if (!got || !viewById.get(got)?.members) { note(`“${viewById.get(real)?.name || real}” could not be loaded. Try again in a moment.`); return null; }
+      if (play.on) pausePlay();
+      state.span = null; state.pinned.clear();
+      setViews([got]);
+      road.t = road.target = null; road.vel = 0;      // render() then opens the road where this view begins
+      drawReverse();
+      if (done) done(got); else changed();
+      return got;
+    });
+  }
+  // Fetches a view if needed, then puts it on the timeline beside the others: the secondary
+  // action (the plus on a row, a right click). The list shows it loading meanwhile.
   function turnOn(id, done) {
     const real = alias.get(id) || id;
     if (state.views.includes(real) || pending.has(real)) return Promise.resolve(real);
@@ -598,8 +621,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     $('road').style.setProperty('--fw', G.FW + 'px');
     $('road').style.setProperty('--nw', G.NW + 'px');
     // The views, named under the year in the order of their lanes, each with the chapter the reader is in.
-    // A narrow stage has no room for them beside the road; the strip under it names the views.
-    $('road-views').innerHTML = G.short || G.phone ? '' : L.lanes.map((ln, i) =>
+    // A phone names only the chapters there (the strip under the road names the views), and only for one or two lanes.
+    $('road-views').innerHTML = G.short || (G.phone && L.lanes.length > 2) ? '' : L.lanes.map((ln, i) =>
       `<div class="rv" style="--c:var(--p${ln.col})"><b>${esc(ln.view.name)}</b><button type="button" class="rch" data-lane="${i}" hidden></button></div>`).join('');
     for (const ln of L.lanes) ln.cur = undefined;
     barTicks();
@@ -614,7 +637,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     roadClear();
     $('ticks').innerHTML = '';
     $('status').hidden = false;
-    $('status').textContent = pending.size ? 'Loading the timeline…' : 'Add a view to draw its timeline.';
+    $('status').textContent = pending.size ? 'Loading the timeline…' : 'Pick a view to draw its timeline.';
     renderSide();
     if (!pending.size) showSide(true);
   }
@@ -630,13 +653,14 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // and the dated points of its history light up as it arrives.
   const road = {
     t: null, target: null, rate: 6,           // where the reader stands, where a glide is heading, and how briskly
-    raf: 0, live: false, last: 0, prev: null, pace: 1, cards: 0, within1: 0, within3: 0,
+    raf: 0, live: false, last: 0, prev: null, pace: 1, vel: 0, cards: 0, within1: 0, within3: 0,    // vel: how fast play is carrying the reader, in focal lengths a second
     hover: null, focus: null,                  // entry ids: under the pointer, and at the front
     nodes: new Map(), vis: new Map(), heat: new Map(),    // the elements of the names shown; which names were shown last frame, and how; how lit each line is
     soft: new Map(), side: new Map(),                     // how far each piece of writing on the ground has faded in; which side of its line an event is written on
     drag: null, swallow: 0, until: 0, jump: null, year: null, pal: null, said: null,
   };
   const PLAY_PACE = 0.26;                      // focal lengths a second at full speed
+  const SLIDE = 110;                           // how far to its side a card of a side lane comes in from, in pixels at full size
   const BAR_PAD = 10;                          // room at each end of the bar on the right
   const calm = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   const camDir = () => (state.order === 'new' ? -1 : 1);
@@ -661,6 +685,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const shown = [], groups = [];
     lanes.forEach((ln, k) => {
       ln.x0 = -G.RW + laneW * k; ln.x1 = ln.x0 + laneW; ln.col = state.colors.get(ln.view.id) % 8;
+      // Which side of the road it is on: -1 the left lane, 0 the middle (or the only one), 1 the right lane.
+      ln.lean = lanes.length > 1 ? clamp((ln.x0 + ln.x1) / G.RW, -1, 1) : 0;
       ln.eras = viewEras(ln.view).filter((c) => c.b > tMin && c.a < tMax);
       const where = tracks(ln.mine.map((t) => ({ id: t.id, a: t.born, b: t.end })), D * 0.2);
       for (const t of ln.mine) {
@@ -675,7 +701,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
 
   function roadClear() {
-    cancelAnimationFrame(road.raf); road.raf = 0; road.live = false;
+    cancelAnimationFrame(road.raf); road.raf = 0; road.live = false; road.vel = 0;
     for (const n of road.nodes.values()) n.el.remove();
     road.nodes.clear(); road.vis = new Map(); road.heat.clear(); road.soft.clear(); road.side.clear();
     road.hover = road.focus = road.jump = road.year = null;
@@ -683,8 +709,12 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const cv = $('road-cv');
     cv.getContext('2d').clearRect(0, 0, cv.width, cv.height);
   }
-  // Where a view begins on the road: its first chapter or its first start, whichever is earlier.
-  function laneStart(ln) { return Math.max(L.tMin, Math.min(...ln.mine.map((t) => t.born), ...ln.eras.map((c) => c.a))); }
+  // Where a view begins on the road: its first start, or its first chapter when that opens a little
+  // before it. A chapter that opens long before anything happens does not make the road open on empty years.
+  function laneStart(ln) {
+    const first = Math.min(...ln.mine.map((t) => t.born)), chapter = Math.min(first, ...ln.eras.map((c) => c.a));
+    return Math.max(L.tMin, chapter, first - 0.6 * L.D);
+  }
   // The stretch where the most lines start, the earliest such, so a long road never opens on empty years.
   function roadBusiest() {
     const ts = L.shown.map((p) => clamp(p.a, L.tMin, L.tMax)).sort((a, b) => a - b), win = 3 * L.D;
@@ -707,6 +737,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (!L) return;
     const to = camClamp(time - camDir() * 0.2 * L.D);
     if (play.on) pausePlay();
+    road.vel = 0;
     if (smooth && !calm()) { road.target = to; road.rate = 6; } else { road.t = road.prev = to; road.target = null; }
     roadKick();
   }
@@ -714,6 +745,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   function roadBy(n, rate = 14) {
     if (!L) return;
     if (play.on) pausePlay();
+    road.vel = 0;
     road.target = camClamp((road.target ?? road.t) + camDir() * n * L.D); road.rate = rate;
     if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
@@ -729,9 +761,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     roadTo(dir > 0 ? laneStart(ln) - 0.05 * D : L.tMax, smooth);
   }
   // Brings an entry into sight: where its line starts.
-  function roadToThing(id) {
+  function roadToThing(id, smooth = true) {
     const p = L && L.at.get(id);
-    if (p) roadTo(clamp(p.a, L.tMin, L.tMax));
+    if (p) roadTo(clamp(p.a, L.tMin, L.tMax), smooth);
   }
   // Takes the reader to a moment on one line and marks the spot for a moment.
   function jumpTo(id, at) {
@@ -760,11 +792,18 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       road.t += (road.target - road.t) * (1 - Math.exp(-dt * road.rate));
       if (Math.abs(road.target - road.t) < L.D * 0.002) { road.t = road.target; road.target = null; }
       moving = true;
-    } else if (play.on) {
-      road.pace += (paceFor(road.cards, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
-      road.t += dir * PLAY_PACE * L.D * road.pace * dt;
-      if (road.t >= hi || road.t <= lo) { road.t = clamp(road.t, lo, hi); if (dir > 0 ? road.t >= hi : road.t <= lo) { play.on = false; drawPlay(); } }
-      moving = play.on;
+    } else if (play.on || road.vel) {
+      // Play eases up to its speed, and a pause lets the reader glide to a stop.
+      if (play.on) road.pace += (paceFor(road.cards, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
+      const want = play.on ? PLAY_PACE * road.pace : 0;
+      road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on ? 4 : 6)));
+      if (!play.on && road.vel < 0.004) road.vel = 0;
+      road.t += dir * road.vel * L.D * dt;
+      if (road.t >= hi || road.t <= lo) {
+        road.t = clamp(road.t, lo, hi); road.vel = 0;
+        if (play.on && (dir > 0 ? road.t >= hi : road.t <= lo)) { play.on = false; drawPlay(); }
+      }
+      moving = play.on || road.vel > 0;
     }
     const speed = dt > 0 && road.prev != null ? Math.abs(road.t - road.prev) / dt : 0;
     road.prev = road.t;
@@ -848,7 +887,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       if (fast && !up && id !== state.open) return;
       // A name already up keeps its place, and a card keeps being a card: a newcomer waits rather than pushing it out.
       const pri = (id === state.open ? -100 : 0) + (id === road.hover ? -50 : 0) + zoneOf(s) * 10 + (end ? 4 : 0) + (up ? 0 : 2) + (up === 'full' || up === 'near' ? -3 : 0) - (p.t.score || 0);
-      cands.push({ key, p, end, u, s, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), pri });
+      cands.push({ key, p, end, u, s, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
     };
     let within1 = 0, within3 = 0;
     const count = (time) => { const u = U(time); if (u > 0 && u <= 3 * D) { within3++; if (u <= D) within1++; } };
@@ -895,27 +934,33 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       n.r = r; n.s = c.s;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
     }
-    const ease = still ? 1 : 1 - Math.exp(-dt * 12);
+    // A card arrives a little more slowly than a small name: it comes in from its lane's side of the
+    // road and leaves the same way (the left lane's from and to the left, the right lane's the right),
+    // and a card in the middle rises into place.
+    const ease = still ? 1 : 1 - Math.exp(-dt * 12), easeBig = still ? 1 : 1 - Math.exp(-dt * 5.5);
     for (const [nk, n] of road.nodes) {
       const p = L.byKey.get(n.pk);
       if (!seen.has(nk)) {
         const u = p ? U(n.end ? p.b : p.a) : -Infinity;
         if (!p || u <= uNear * 0.9 || u >= uFar) { n.el.remove(); road.nodes.delete(nk); continue; }
         n.s = S(u); n.want = 0;
-        n.r = labelRect(n.mode, n.s, px(p.xn, n.s), py(n.s), roadSizes(p.t), G);
+        n.r = labelRect(n.mode, n.s, px(p.xn, n.s), py(n.s), roadSizes(p.t), G, p.lane.lean);
       }
-      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * ease;
+      const big = n.mode === 'full' || n.mode === 'near';
+      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * (big ? easeBig : ease);
       if (n.o !== n.want) busy = true;
       if (!n.want && !n.o && !seen.has(nk)) { n.el.remove(); road.nodes.delete(nk); continue; }
       const hot = hotNow(p.t.id), r = n.r;
+      const away = big && !still ? (1 - n.o) * (1 - n.o) : 0, lean = p.lane.lean;
+      const dx = away * lean * SLIDE * r.k, dy = away * (1 - Math.abs(lean)) * 14 * r.k;
       if (hot !== n.hot) { n.hot = hot; n.btn.classList.toggle('hot', hot); }
       const z = (hot ? 2000 : n.end ? 95 : 100) + Math.round(n.s * 400) - (n.mode === 'tag' ? 90 : 0);
       if (z !== n.z) { n.z = z; n.el.style.zIndex = z; }
       const dead = n.o < 0.3;
       if (dead !== n.dead) { n.dead = dead; n.el.style.pointerEvents = dead ? 'none' : ''; }
-      n.el.style.transform = `translate3d(${r.cx.toFixed(1)}px,${r.y1.toFixed(1)}px,0) scale(${r.k.toFixed(3)})`;
+      n.el.style.transform = `translate3d(${(r.cx + dx).toFixed(1)}px,${(r.y1 + dy).toFixed(1)}px,0) scale(${r.k.toFixed(3)})`;
       n.el.style.opacity = n.o.toFixed(3);
-      if (n.o > 0.02) stems.push({ x1: r.gx, y1: r.gy, x2: r.cx, y2: r.y1, a: n.o, hot, col: p.lane.col });
+      if (n.o > 0.02) stems.push({ x1: r.gx, y1: r.gy, x2: r.ax + dx, y2: r.y1 + dy, a: n.o, hot, col: p.lane.col });
     }
 
     // Writing on the ground (a chapter's name, an event on the selected line) is not drawn under a name:
@@ -989,7 +1034,10 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
         font(500, fs);
         const tw = c.measureText(text).width;
         if (tw > room) { fs = Math.max(8.5, (fs * room) / tw); font(500, fs); }
-        c.textBaseline = 'middle'; c.textAlign = 'left'; c.fillStyle = rgba(P.text, (0.45 + 0.5 * Math.min(1, s)) * a);
+        // A year steps aside while a card stands over it, rather than show half its digits.
+        const ya = soft('y' + tk.y, covered(x - 4, y - fs * 0.55, x + Math.min(tw, room) + 4, y + fs * 0.55) ? 0 : 1);
+        if (ya < 0.01) continue;
+        c.textBaseline = 'middle'; c.textAlign = 'left'; c.fillStyle = rgba(P.text, (0.45 + 0.5 * Math.min(1, s)) * a * ya);
         c.fillText(text, x, y);
       }
 
@@ -1169,7 +1217,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const y = barY(t), y2 = barY(clamp(t + dir * 3 * D, L.tMin, L.tMax));
     $('playhead').style.top = y.toFixed(1) + 'px';
     // A year on the bar steps aside while the marker's own year is over it.
-    for (const k of L.barYears) { const under = Math.abs(k.y - y) < 12; if (under !== k.under) { k.under = under; k.el.classList.toggle('under', under); } }
+    for (const k of L.barYears) { const under = Math.abs(k.y - y) < 15; if (under !== k.under) { k.under = under; k.el.classList.toggle('under', under); } }
     $('axis-win').style.top = Math.min(y, y2).toFixed(1) + 'px';
     $('axis-win').style.height = Math.abs(y - y2).toFixed(1) + 'px';
     // The chapter in front of the reader.
@@ -1187,7 +1235,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const b = $('play'), end = camAtEnd();
     b.setAttribute('aria-pressed', play.on);
     b.setAttribute('aria-label', play.on ? 'Pause' : end ? 'Play from the beginning' : 'Play: travel along the road');
-    b.innerHTML = play.on ? ICON_PAUSE : ICON_PLAY;
+    b.title = play.on ? 'Pause' : end ? 'Play again from the beginning' : 'Play';
+    const icon = play.on ? ICON_PAUSE : end ? ICON_AGAIN : ICON_PLAY;
+    if (b.dataset.icon !== icon) { b.dataset.icon = icon; b.innerHTML = icon; }
   }
 
   // The wheel, a drag and the arrow keys carry the reader along the road.
@@ -1208,7 +1258,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const dy = e.clientY - d.y;
       if (!d.moved && Math.abs(dy) + Math.abs(e.clientX - d.x) < 6) return;
       if (!d.moved) { d.moved = true; box.setPointerCapture?.(d.id); box.classList.add('dragging'); if (play.on) pausePlay(); }
-      road.target = null;
+      road.target = null; road.vel = 0;
       road.t = camClamp(d.t + camDir() * dy * L.D / 240);
       roadKick();
     });
@@ -1265,7 +1315,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const tier = (h) => (h.p && h.p.t.tier === 'community' ? 1 : 0);
       hits.sort((a, b) => (!!b.year - !!a.year) || ((b.s || 0) - (a.s || 0)) || (!!b.era - !!a.era) || (!!a.m - !!b.m) || (tier(a) - tier(b)) || ((a.p ? a.p.t.rank : 0) - (b.p ? b.p.t.rank : 0)) || ((b.p ? b.p.t.pop || 0 : 0) - (a.p ? a.p.t.pop || 0 : 0)));
       // Entries that are not drawn, from the search index, after a divider.
-      // Picking one adds the view it belongs to.
+      // Picking one shows the view it belongs to.
       const data = qt ? indexFor(raw, () => { if (fold($('q').value.trim()) === q) findOnTimeline(); }) : { entries: [] };
       const onPage = new Set(L ? L.shown.map((p) => p.t.id) : []);
       // A year: what began or ended in it. Otherwise: names.
@@ -1310,7 +1360,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
           if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
           const e = h.e, comm = e.tier === 2 ? ' · <span class="ctag">community</span>' : '';
           const when = h.how ? `<em class="yw">${esc(yearWord(e, h.how, h.how === 'born' ? e.born : e.end))}</em>` : esc(lineSpan(e));
-          return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b><span>${mk(e.name)}</span></b><small>${esc(kindName(e.kind))} · ${when}${comm}</small></span><span class="add">${ICON.plus}</span></li>`;
+          return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b><span>${mk(e.name)}</span></b><small>${esc(kindName(e.kind))} · ${when}${comm}</small></span></li>`;
         }
         if (h.year != null) { main = esc(yearText(h.year)); sub = 'Year'; }
         else if (h.era) { main = mk(h.era.name); sub = `Chapter of ${esc(h.era.view.name)} · ${esc(h.era.years)}`; cls = 'k-era'; }
@@ -1332,16 +1382,20 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (h.m) jumpTo(h.p.t.id, h.m.t);
   }
   // Brings an entry that is not drawn onto the timeline: fetches its detail
-  // file, adds the view it belongs to if that is not on the timeline, pins it
-  // so it is drawn, and opens it.
+  // file, pins it so it is drawn, and opens it. When no view on the timeline
+  // holds it, the view it belongs to is shown alone, like a view picked from
+  // the list; with `opts.beside` (a link that names its own views) that view
+  // joins the others instead.
   function bringIn(id, opts = {}) {
     return loadEntry(id).then((t) => {
       if (!t) { if (!opts.quiet) note('That entry could not be loaded.'); return false; }
-      const open = () => { state.pinned.add(t.id); changed(); openThing(t.id, { scroll: true, focus: opts.focus ?? false }); };
+      const open = (jump) => { state.pinned.add(t.id); changed(); openThing(t.id, { scroll: true, jump, focus: opts.focus ?? false }); };
       const home = alias.get(t.home) || t.home;
       if (!home || state.views.includes(home) || state.views.some((v) => viewById.get(v).memberIds.has(t.id))) { open(); return true; }
+      const after = (got) => { if (!got && state.views.length) open(); return true; };
+      if (!opts.beside) return showOnly(home, () => open(true)).then(after);
       if (state.views.length + pending.size >= MAX_VIEWS) removeView(state.views[0]);
-      return turnOn(home, () => open()).then((got) => { if (!got) { if (state.views.length) open(); } return true; });
+      return turnOn(home, () => open()).then(after);
     });
   }
   // Brings a year into sight and lights its stretch of road for a moment.
@@ -1392,22 +1446,31 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     // The views on the timeline: one pill each in the strip under the years.
     const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
     $('shown-n').textContent = !state.views.length ? '' : !more ? `${n} ${n === 1 ? 'entry' : 'entries'}` : `${n}${more} on the road`;
-    $('pills').innerHTML = `<button type="button" class="padd" data-add>${ICON.plus}<span>Add view</span></button>` + state.views.map((id) => {
+    const many = state.views.length > 1;
+    $('pills').innerHTML = state.views.map((id) => {
       const v = viewById.get(id);
-      return `<div class="pill" data-pill="${esc(id)}" style="--c:var(--p${state.colors.get(id) % 8})" title="Drag to reorder">` +
+      return `<div class="pill${many ? '' : ' one'}" data-pill="${esc(id)}" style="--c:var(--p${state.colors.get(id) % 8})"${many ? ' title="Drag to reorder"' : ''}>` +
         `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
-        `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button></div>`;
+        (many ? `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button>` : '') + '</div>';
     }).join('');
     $('save-mine').disabled = !state.views.length;
-    $('shuffle').disabled = state.views.length < 2;
+    $('shuffle').hidden = !many;
+    requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
 
     // How much to show: the nearest of the four named levels is marked.
     const near = LEVELS.reduce((a, l) => Math.abs(l.pct - state.level) < Math.abs(a.pct - state.level) ? l : a);
     for (const b of $('level').querySelectorAll('[data-lv]')) b.setAttribute('aria-checked', Number(b.dataset.lv) === near.pct);
     drawYears();
+    $('filters-sum').textContent = state.views.length ? `${$('years-out').textContent} · ${near.name}` : '';
     drawChips();
     runSearch();
+  }
+  // A fade at either end of the strip of pills says it scrolls.
+  function pillEdges() {
+    const c = $('pills');
+    c.classList.toggle('more-l', c.scrollLeft > 2);
+    c.classList.toggle('more-r', c.scrollLeft < c.scrollWidth - c.clientWidth - 2);
   }
   // The year range: a picture of how busy each stretch of years is, with two
   // handles to narrow the timeline to the years between them. The handles
@@ -1551,7 +1614,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const where = v.id === 'everything' ? 'The whole map' : kind ? `Kind · ${kind.domainName || ''}` : dom ? (dom.parent ? `Branch · ${domById.get(dom.parent)?.name || ''}` : 'Branch') : 'Classical view';
     return [where, n].filter(Boolean).join(' · ');
   }
-  // The thumbnail is the switch: a view on the timeline draws it in its own colour.
+  // A row shows its view alone. The small button at its end is the second action: it puts the
+  // view beside the others, or takes it off again. A view on the timeline is drawn in its colour.
   function drawResults() {
     const q = fold($('vq').value.trim());
     const full = state.views.length + pending.size >= MAX_VIEWS;
@@ -1559,7 +1623,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const msg = noteText || (q && !found.length ? 'Nothing matches. Try a name, a topic or a year.' : '') || (!q && full ? `${MAX_VIEWS} views is the most at once. Remove one to add another.` : '');
     $('vnote').textContent = msg;
     function row(f, i) {
-      let name, sub, tb, attrs = '';
+      let name, sub, tb, attrs = '', side = '';
       if (f.wait) return '<li class="none" role="presentation">Searching every view…</li>';
       if (f.head) return `<li class="vhead" role="presentation">${esc(f.head)}</li>`;
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(alias.get(id) || id)?.name || id).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
@@ -1572,13 +1636,17 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
         // The icon tells the two sorts apart where a search mixes them; the list itself holds one sort.
         name = `<span>${mark(v.name, q)}</span>${q ? `<i title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i>` : ''}`;
         sub = (on ? '<span class="st">On the timeline</span> · ' : wait ? '<span class="st">Loading…</span> · ' : bad ? '<span class="st bad">Could not load</span> · ' : '') + esc(viewSub(v));
-        tb = `<span class="tb">${thumb(v)}<span class="go">${ICON.plus}</span></span>`;
-        attrs = `${v.description ? ` title="${esc(v.description)}"` : ''} aria-checked="${on}"${on ? ` style="--c:var(--p${state.colors.get(v.id) % 8})"` : ''}${!on && full && !wait ? ' aria-disabled="true"' : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
+        tb = `<span class="tb">${thumb(v)}</span>`;
+        attrs = `${v.description ? ` title="${esc(v.description)}"` : ''} aria-checked="${on}"${on ? ` style="--c:var(--p${state.colors.get(v.id) % 8})"` : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
+        // Beside the others: add it, or take it off when it is one of several.
+        if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}</button>`;
+        else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}</button>`;
       }
-      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span></li>`;
+      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
     }
   }
-  function pick(i) {
+  // Picking a row shows its view alone. `beside` is the second action: add it to the others, or take it off.
+  function pick(i, beside) {
     const f = found[i];
     if (!f || f.wait || f.head) return;
     if (f.mine) return loadMine(f.mine);
@@ -1586,8 +1654,13 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (f.year != null) { $('vq').value = ''; runSearch(); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
     if (f.e) { $('vq').value = ''; runSearch(); return bringIn(f.e.id, { focus: true }); }
     if (pending.has(f.v.id)) return;
-    if (state.views.includes(f.v.id)) { removeView(f.v.id); return changed(); }
-    turnOn(f.v.id);
+    if (beside) {
+      if (!state.views.includes(f.v.id)) turnOn(f.v.id);
+      else if (state.views.length > 1) { removeView(f.v.id); changed(); }
+      return;
+    }
+    // On a phone the list is a sheet over the road: it steps aside to show what was picked.
+    showOnly(f.v.id).then((got) => { if (got && matchMedia(PHONE).matches) showSide(false); });
   }
 
   // One saved view per visitor, kept in this browser. Saving again replaces it.
@@ -1604,7 +1677,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     runSearch();
   }
   function loadMine(v) {
-    Promise.all(v.views.map(loadView)).then(() => { applyMine(v); drawReverse(); changed(); });
+    Promise.all(v.views.map(loadView)).then(() => { if (play.on) pausePlay(); state.pinned.clear(); applyMine(v); road.t = road.target = null; road.vel = 0; drawReverse(); changed(); });
   }
   function applyMine(v) {
     setViews(v.views);
@@ -1726,7 +1799,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       <div class="pane-foot"><button type="button" class="btn" data-copy="${esc(link)}">Copy link</button><a class="btn" href="${esc(issue)}" target="_blank" rel="noopener">Suggest a correction</a></div>`;
     showPane('thing');
     if ($('side').hidden) showSide(true); else render();
-    if (opts.scroll) roadToThing(id);
+    if (opts.scroll) roadToThing(id, !opts.jump);
     // Re-colour after render: the entry may have just been placed under a view.
     const placed = L && L.at.get(id);
     if (placed) $('p-thing').style.setProperty('--c', `var(--p${state.colors.get(placed.group.id) % 8})`);
@@ -1783,6 +1856,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // they stand. Drag it, or press play. The reader's place is road.t.
   const play = { on: false, drag: false };
   const ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>';
+  const ICON_AGAIN = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5"/><path d="M4.5 4.5v4.2h4.2"/></svg>';
   const ICON_PAUSE = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>';
   // The year the reader stands in, said as briefly as the bar says it.
   function playLabel(t) {
@@ -1808,7 +1882,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // Dragging along the bar moves the reader, playing or not.
   function scrubTo(e) {
     if (!L) return;
-    road.target = null;
+    road.target = null; road.vel = 0;
     road.t = camClamp(barT(e.clientY - $('axis').getBoundingClientRect().top));
     roadKick();
   }
@@ -1869,8 +1943,10 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       if (playFrom) return startPlay(playFrom.dataset.playFrom);
       const go = el('[data-go]');
       if (go) return jumpTo(state.open, Number(go.dataset.go));
+      const beside = el('#vlist [data-beside]');
+      if (beside) return pick(Number(beside.dataset.beside), true);
       const li = el('#vlist [data-i]');
-      if (li) return pick(Number(li.dataset.i));
+      if (li) return pick(Number(li.dataset.i), e.shiftKey || e.ctrlKey || e.metaKey);
       // A name on the road opens its entry and brings the reader to it.
       const card = el('#road-labels [data-id]');
       if (card) { openThing(card.dataset.id, { focus: false }); return roadTo(Number(card.dataset.at)); }
@@ -1894,7 +1970,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       if (!L || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(e.key)) return;
       e.preventDefault(); e.stopPropagation();
       const [lo, hi] = camLimits(), fwd = camDir() > 0;
-      if (e.key === 'Home' || e.key === 'End') { road.target = null; road.t = road.prev = (e.key === 'Home') === fwd ? lo : hi; if (play.on) pausePlay(); return roadKick(); }
+      if (e.key === 'Home' || e.key === 'End') { road.target = null; road.vel = 0; road.t = road.prev = (e.key === 'Home') === fwd ? lo : hi; if (play.on) pausePlay(); return roadKick(); }
       roadBy((e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1) * Math.max(0.3, (L.tMax - L.tMin) / L.D / 100), 8);
     });
     $('reverse').addEventListener('click', () => { state.order = state.order === 'new' ? 'old' : 'new'; drawReverse(); changed(); });
@@ -1919,6 +1995,13 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     $('qlist').addEventListener('pointerdown', (e) => { const li = e.target.closest('[data-h]'); if (li) { e.preventDefault(); goHit(Number(li.dataset.h)); } });
     $('vq').addEventListener('input', () => { drawChips(); runSearch(); });
     $('vq').addEventListener('focus', () => indexFor('a'));
+    // A right click on a view puts it beside the others, like the plus at the end of its row.
+    $('vlist').addEventListener('contextmenu', (e) => {
+      const li = e.target.closest('[data-i]'), f = li && found[Number(li.dataset.i)];
+      if (!f || !f.v) return;
+      e.preventDefault();
+      pick(Number(li.dataset.i), true);
+    });
     $('topics').addEventListener('scroll', chipEdges, { passive: true });
     $('vq').addEventListener('keydown', (e) => {
       const ok = found.map((f, i) => i).filter((i) => !found[i].wait && !found[i].head);
@@ -1930,7 +2013,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
         drawResults();
         $('vlist').querySelector('[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
       }
-      else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) pick(active); }
+      else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) pick(active, e.shiftKey); }
       else if (e.key === 'Escape' && $('vq').value) { e.stopPropagation(); $('vq').value = ''; drawChips(); runSearch(); }
     });
 
@@ -1954,6 +2037,10 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       changed();
     });
     $('save-mine').addEventListener('click', saveMine);
+    $('filters-btn').addEventListener('click', () => {
+      const open = $('filters').classList.toggle('open');
+      $('filters-btn').setAttribute('aria-expanded', open);
+    });
 
     // The pills: drag one to change the order of the lanes, tap its dot to
     // pick its colour, or shuffle every colour at once.
@@ -1967,8 +2054,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       state.views.forEach((id, i) => state.colors.set(id, next[i]));
       changed();
     });
+    $('views-btn').addEventListener('click', () => { showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
+    $('pills').addEventListener('scroll', pillEdges, { passive: true });
     $('pills').addEventListener('click', (e) => {
-      if (e.target.closest('[data-add]')) { showPane('views'); showSide(true); $('vq').focus(); return; }
       const dot = e.target.closest('[data-colour]');
       if (!dot) return;
       e.stopPropagation();
@@ -1995,35 +2083,49 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     });
     document.addEventListener('pointerdown', (e) => { if (!e.target.closest('#swatches, [data-colour]')) $('swatches').hidden = true; });
 
+    // Dragging a pill reorders the lanes. With a mouse it starts at once. A finger scrolls the
+    // strip, so there a pill is picked up by holding it for a moment first.
     let pillDrag = null;
+    const HOLD = 350;
     $('pills').addEventListener('pointerdown', (e) => {
       const pill = e.target.closest('[data-pill]');
-      if (!pill || e.target.closest('button') || e.button !== 0) return;
-      e.preventDefault();
-      pillDrag = { pill, x0: e.clientX, y0: e.clientY, moved: false };
-      pill.setPointerCapture(e.pointerId);
+      if (!pill || e.target.closest('button') || e.button !== 0 || state.views.length < 2) return;
+      const touch = e.pointerType === 'touch';
+      const d = pillDrag = { pill, id: e.pointerId, x0: e.clientX, y0: e.clientY, moved: false, armed: !touch, timer: 0 };
+      if (!touch) { e.preventDefault(); pill.setPointerCapture(e.pointerId); return; }
+      d.timer = setTimeout(() => {
+        if (pillDrag !== d) return;
+        d.armed = true; pill.classList.add('dragging');
+        try { pill.setPointerCapture(d.id); } catch (err) { /* the finger has gone */ }
+      }, HOLD);
     });
     $('pills').addEventListener('pointermove', (e) => {
-      if (!pillDrag) return;
-      const { pill } = pillDrag;
-      if (!pillDrag.moved && Math.hypot(e.clientX - pillDrag.x0, e.clientY - pillDrag.y0) < 4) return;
-      pillDrag.moved = true; pill.classList.add('dragging');
+      const d = pillDrag;
+      if (!d || e.pointerId !== d.id) return;
+      const far = Math.hypot(e.clientX - d.x0, e.clientY - d.y0);
+      // A finger that moves before the hold is over is scrolling the strip.
+      if (!d.armed) { if (far > 8) { clearTimeout(d.timer); pillDrag = null; } return; }
+      if (!d.moved && far < 4) return;
+      d.moved = true; d.pill.classList.add('dragging');
       // Move the pill before, or after, the pill under the pointer.
       for (const o of $('pills').querySelectorAll('[data-pill]')) {
-        if (o === pill) continue;
+        if (o === d.pill) continue;
         const r = o.getBoundingClientRect();
         if (e.clientX < r.left || e.clientX > r.right) continue;
         const before = e.clientX < r.left + r.width / 2;
-        if (before && o.previousElementSibling !== pill) o.before(pill);
-        else if (!before && o.nextElementSibling !== pill) o.after(pill);
+        if (before && o.previousElementSibling !== d.pill) o.before(d.pill);
+        else if (!before && o.nextElementSibling !== d.pill) o.after(d.pill);
         break;
       }
     });
-    const dropPill = () => {
-      if (!pillDrag) return;
-      const { pill, moved } = pillDrag;
-      pillDrag = null; pill.classList.remove('dragging');
-      if (!moved) return;
+    // While a pill is held, the finger moves the pill and not the strip.
+    $('pills').addEventListener('touchmove', (e) => { if (pillDrag && pillDrag.armed) e.preventDefault(); }, { passive: false });
+    const dropPill = (e) => {
+      const d = pillDrag;
+      if (!d || (e && e.pointerId !== d.id)) return;
+      clearTimeout(d.timer);
+      pillDrag = null; d.pill.classList.remove('dragging');
+      if (!d.moved) return;
       const order = [...$('pills').querySelectorAll('[data-pill]')].map((p) => p.dataset.pill);
       if (order.join() !== state.views.join()) { state.views = order; changed(); }
     };
@@ -2058,7 +2160,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (!h) return false;
     if (/^-?\d{1,11}$/.test(h) && Number(h) !== 0) { flashYear(Number(h)); return true; }
     if (byId.has(h) && (L && L.at.has(h) || state.pinned.has(h))) { if (state.open !== h) openThing(h, { scroll: true, focus: smooth }); return true; }
-    if (/^[a-z0-9][a-z0-9-]*$/.test(h)) { bringIn(h, { focus: smooth, quiet: !smooth }); return true; }
+    if (/^[a-z0-9][a-z0-9-]*$/.test(h)) { bringIn(h, { focus: smooth, quiet: !smooth, beside: !smooth && urlViews().length > 0 }); return true; }
     return false;
   }
 

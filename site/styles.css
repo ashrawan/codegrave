@@ -94,7 +94,7 @@ body.side-open #axisbar { right: var(--side); }
 #playhead { position: absolute; left: 0; right: 0; top: 0; z-index: 2; height: 0; pointer-events: none; }
 #playhead i { position: absolute; left: -7px; top: -6px; width: 14px; height: 12px; border-radius: 3px; background: var(--text); box-shadow: 0 0 0 2px var(--bg); }
 #playhead i::after { content: ''; position: absolute; left: 3px; top: 5px; width: 8px; height: 2px; background: var(--bg); opacity: .6; }
-#playhead span { position: absolute; right: 4px; top: 0; transform: translateY(-50%); padding: 1px 7px; white-space: nowrap; font-size: 11.5px; font-weight: 600; line-height: 16px; font-variant-numeric: tabular-nums; color: var(--bg); background: var(--text); border-radius: 9px; }
+#playhead span { position: absolute; z-index: 1; right: 4px; top: 0; transform: translateY(-50%); padding: 1px 7px; white-space: nowrap; font-size: 11.5px; font-weight: 600; line-height: 16px; font-variant-numeric: tabular-nums; color: var(--bg); background: var(--text); border-radius: 9px; }
 .ends { position: absolute; left: 0; right: 0; z-index: 3; display: flex; align-items: center; justify-content: center; }
 .ends.head { top: 0; height: 52px; }
 .ends.foot { bottom: 0; height: 58px; }
@@ -138,21 +138,23 @@ body.side-open #axisbar { right: var(--side); }
 #p-views > #vlist { flex: 1 1 0; min-height: 140px; margin: 10px -12px 0; padding: 0 0 12px; overflow-y: auto; overscroll-behavior: contain; }
 #vlist li { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 8px; color: var(--muted); cursor: pointer; }
 #vlist li:hover, #vlist li[aria-selected="true"] { background: var(--raised); color: var(--text); }
-#vlist li[aria-disabled="true"] { opacity: .45; cursor: default; }
-/* the thumbnail is the switch: a view on the timeline draws its lines in its own colour */
+/* a view on the timeline draws its thumbnail and its name in its own colour */
 .tb { position: relative; flex: none; width: 56px; height: 36px; display: flex; align-items: center; justify-content: center; overflow: hidden; color: var(--faint); background: var(--bg); border: 1px solid var(--rule); border-radius: 5px; }
 .tb svg.th { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
 .tb .th .dead { opacity: .45; }
 .tb img { width: 100%; height: 100%; object-fit: cover; }
-.tb .go { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; color: var(--text); background: color-mix(in srgb, var(--bg) 72%, transparent); }
 .tb.icon { color: var(--faint); }
-#vlist li:hover .tb .go, #vlist li[aria-selected="true"] .tb .go { display: flex; }
 #vlist li[aria-checked="true"] { background: color-mix(in srgb, var(--c) 8%, var(--surf)); }
 #vlist li[aria-checked="true"]:hover, #vlist li[aria-checked="true"][aria-selected="true"] { background: color-mix(in srgb, var(--c) 14%, var(--surf)); }
 #vlist li[aria-checked="true"] .tb { color: var(--c); border-color: var(--c); }
-#vlist li[aria-checked="true"] .tb .go { display: none; }
 #vlist li[aria-checked="true"] .r-txt b { color: var(--c); }
 #vlist li[aria-checked="true"] .st { color: var(--c); font-weight: 600; }
+/* the second action at the end of a row: show the view beside the others, or take it off. It waits for the pointer; on a touch screen it is always there. */
+.radd { flex: none; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; padding: 0; color: var(--faint); background: transparent; border: 1px solid transparent; border-radius: 50%; opacity: 0; transition: opacity .12s; }
+#vlist li:hover .radd, #vlist li[aria-selected="true"] .radd, .radd:focus-visible { opacity: 1; }
+.radd:hover { color: var(--text); background: var(--bg); border-color: var(--rule2); }
+.radd:disabled { cursor: default; opacity: 0 !important; }
+@media (hover: none) { .radd { opacity: .75; } }
 #vlist li.none { font-size: 12px; color: var(--faint); cursor: default; }
 #vlist li.none:hover { background: none; }
 .r-txt { flex: 1; min-width: 0; }
@@ -164,21 +166,25 @@ mark { background: none; color: var(--text); font-weight: 600; text-decoration: 
 #p-views > #vnote { margin-top: 8px; }
 #vnote:empty { display: none; }
 .ibtn.sm { width: 30px; height: 30px; }
+.ibtn[hidden] { display: none; }
 .ibtn.done { color: var(--acc); }
-/* the views on the timeline: a strip of pills under the years */
+/* the views on the timeline: a strip of pills along the bottom, which scrolls sideways when they do not fit */
 #dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; height: 44px; display: flex; align-items: center; justify-content: center; gap: 6px; padding: 0 12px; background: var(--surf); border-top: 1px solid var(--rule); }
 body.side-open #dock { right: var(--side); }
-#pills { display: flex; align-items: center; gap: 6px; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+#pills { display: flex; align-items: center; gap: 6px; min-width: 0; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; --fl: #000; --fr: #000; -webkit-mask-image: linear-gradient(to right, var(--fl), #000 22px, #000 calc(100% - 22px), var(--fr)); mask-image: linear-gradient(to right, var(--fl), #000 22px, #000 calc(100% - 22px), var(--fr)); }
+#pills.more-l { --fl: transparent; }
+#pills.more-r { --fr: transparent; }
 #pills::-webkit-scrollbar { display: none; }
 .dock-tools { flex: none; display: inline-flex; align-items: center; gap: 2px; padding-left: 8px; margin-left: 2px; border-left: 1px solid var(--rule); }
-.pill { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 4px 0 6px; font-size: 12.5px; color: var(--text); white-space: nowrap; background: var(--bg); border: 1px solid var(--rule2); border-radius: 14px; cursor: grab; touch-action: none; user-select: none; }
+.pill { flex: none; display: inline-flex; align-items: center; gap: 7px; height: 28px; padding: 0 4px 0 6px; font-size: 12.5px; color: var(--text); white-space: nowrap; background: var(--bg); border: 1px solid var(--rule2); border-radius: 14px; cursor: grab; touch-action: pan-x; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.pill.one { padding-right: 11px; cursor: default; }
 .pill .dot { flex: none; width: 16px; height: 16px; padding: 0; border-radius: 50%; background: var(--c); border: 4px solid var(--bg); box-shadow: 0 0 0 1px color-mix(in srgb, var(--c) 45%, transparent); cursor: pointer; }
 .pill .dot:hover { box-shadow: 0 0 0 1.5px var(--c); }
 .pill.dragging { cursor: grabbing; background: var(--surf); border-color: var(--c); box-shadow: 0 4px 14px rgba(0, 0, 0, .14); position: relative; z-index: 2; }
 .pill button:not(.dot) { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; padding: 0; color: var(--faint); background: none; border: 0; border-radius: 50%; }
 .pill button:not(.dot):hover { color: var(--bg); background: var(--text); }
-.padd { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; font-size: 12.5px; color: var(--text); background: transparent; border: 1px dashed var(--rule2); border-radius: 14px; }
-.padd:hover { border-style: solid; background: var(--bg); }
+.padd { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; font-size: 12.5px; color: var(--text); background: transparent; border: 1px solid var(--rule2); border-radius: 14px; }
+.padd:hover { background: var(--bg); border-color: var(--text); }
 #swatches { position: absolute; bottom: 40px; z-index: 20; display: grid; grid-template-columns: repeat(8, 22px); gap: 6px; padding: 8px; background: var(--surf); border: 1px solid var(--rule2); border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); }
 #swatches[hidden] { display: none; }
 #swatches button { width: 22px; height: 22px; padding: 0; border-radius: 50%; background: var(--c); border: 2px solid var(--surf); box-shadow: 0 0 0 1px var(--rule2); cursor: pointer; }
@@ -187,6 +193,7 @@ body.side-open #dock { right: var(--side); }
 /* the filters sit at the bottom of the panel, whatever is above them */
 .filters { position: sticky; bottom: 0; z-index: 2; display: flex; flex-direction: column; gap: 18px; margin: auto -20px 0 !important; padding: 16px 20px 20px; background: var(--surf); border-top: 1px solid var(--rule); }
 .field { display: flex; flex-direction: column; gap: 7px; }
+.fbtn { display: none; }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .row-r { display: flex; align-items: baseline; gap: 12px; font-size: 12px; }
 #years-out { font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -288,11 +295,21 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
   #ticks .yr { left: 9px; font-size: 10.5px; line-height: 12px; }
   #ticks .yr::before { left: -9px; width: 5px; }
   #ticks .yr small { display: block; font-size: 9px; line-height: 10px; color: var(--faint); }
-  #playhead span { right: 2px; padding: 1px 5px; font-size: 10.5px; }
+  /* the bar is slim: the marker's year shows while it is dragged; the year at the top left says it otherwise */
+  #playhead span { right: 2px; padding: 1px 5px; font-size: 10.5px; opacity: 0; transition: opacity .15s; }
+  #axisbar.dragging #playhead span { opacity: 1; }
+  #ticks .yr.under, #ticks .yr.under small { color: var(--muted); }
   #p-views > #vlist { min-height: 0; }
   body.side-open #dock { display: none; }
   #dock { justify-content: flex-start; padding: 0 8px; }
-  .filters { gap: 12px; padding: 12px 20px 14px; }
+  .filters { gap: 12px; padding: 0 20px 14px; }
+  .fbtn { display: flex; align-items: center; gap: 10px; width: calc(100% + 40px); height: 44px; margin: 0 -20px -12px; padding: 0 20px; text-align: left; color: var(--muted); background: none; border: 0; }
+  .fbtn output { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; font-size: 12.5px; font-variant-numeric: tabular-nums; pointer-events: none; }
+  .fbtn svg { flex: none; transition: transform .15s; }
+  .filters.open .fbtn svg { transform: rotate(180deg); }
+  .filters:not(.open) { padding-bottom: 0; }
+  .filters:not(.open) .field { display: none; }
+  .filters:not(.open) .fbtn { margin-bottom: 0; }
   .filters .yearbar { height: 22px; }
   .filters #hist i { max-height: 100%; }
   .filters #year-ticks { display: none; }
@@ -302,7 +319,6 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
   .pane-foot { padding-bottom: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
-#pills > .fine { padding: 9px 10px; }
 
 /* the filter by branch above the list of views: one quiet row that scrolls sideways */
 .chipbar { position: relative; margin: 10px -20px 0 !important; }
@@ -391,6 +407,12 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road.short #road-year { font-size: 34px; }
 #road.short .rc.full .rs, #road.short .rc.full img { display: none; }
 @media (max-width: 699px) {
-  #road-head { left: 14px; top: 10px; max-width: 150px; }
+  #road-head { left: 14px; top: 10px; gap: 6px; max-width: 62%; }
   #road-year { font-size: 44px; }
+  /* under the year, only the chapter the reader is in, marked in its view's colour */
+  #road-views { gap: 4px; }
+  .rv { padding: 0 0 0 7px; border-top: 0; border-left: 2px solid var(--c); }
+  .rv b { display: none; }
+  .rv:has(.rch[hidden]) { display: none; }
+  .rch { font-size: 11.5px; line-height: 1.25; color: var(--muted); }
 }

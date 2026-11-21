@@ -9,7 +9,8 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 // Distance is counted in years ahead of the reader (u). D is the focal length
 // in years: something D years ahead is drawn at half size.
 export const NEAR = -0.42, GONE = -0.16, FAR = 10.8;   // in focal lengths: the edge of the screen behind the reader, where a name lets go, the horizon
-export const FULL = 0.72, SMALL = 0.3;                  // the size from which a name is a full card, and from which it is a small card
+export const FULL = 0.64, SMALL = 0.3;                  // the size from which a name is a full card, and from which it is a small card
+export const CARD_MIN = 0.7;                            // a full card is never drawn smaller than this, so it can be read from where it first shows
 export const sizeAt = (u, D) => D / (D + u);
 
 // A step from the 1, 2, 5 series that is at least v.
@@ -20,8 +21,8 @@ export function step125(v) {
 }
 
 // The focal length, in years, for a set of starts between tMin and tMax: long
-// enough that the stretch in front of the reader (0.39 of it is drawn at card
-// size) holds about three starts where the road is typically busy: the
+// enough that the stretch in front of the reader holds about three starts in
+// its nearest 0.39 focal lengths where the road is typically busy: the
 // median, over the starts, of the years that three in a row take. It is never
 // so short that crossing the road would take many minutes, nor so long that
 // everything sits at the reader's feet.
@@ -85,22 +86,28 @@ export const isBig = (mode) => mode === 'full' || mode === 'near';
 
 // The box a name takes on the stage. It stands on the point (gx, gy) of the
 // ground, lifted a little, and is drawn at scale k. `m` holds its sizes at
-// full scale: fullH, nearH, compactW, tagW, endW.
-export function labelRect(mode, s, gx, gy, m, G) {
+// full scale: fullH, nearH, compactW, tagW, endW. `lean` is the side of the
+// road its lane is on, from -1 (the left lane) through 0 (the middle, or a
+// road of one lane) to 1 (the right lane): a card on a side lane stands to
+// the outer side of its point, like a flag on its pole, so the lanes' cards
+// part and the road between them stays open. `ax` is where its stem meets it.
+export function labelRect(mode, s, gx, gy, m, G, lean = 0) {
   let w, h, lift, k = 1;
-  if (mode === 'full') { k = Math.min(s, 1.3) * G.ks; w = G.FW * k; h = m.fullH * k; lift = 22 * k; }
+  if (mode === 'full') { k = clamp(s, CARD_MIN, 1.3) * G.ks; w = G.FW * k; h = m.fullH * k; lift = 22 * k; }
   else if (mode === 'compact') { k = clamp(0.62 + 0.55 * s, 0.8, 1); w = m.compactW * k; h = 28 * k; lift = 8 + 14 * s; }
   else if (mode === 'tag') { w = m.tagW; h = 15; lift = 6; }
-  else if (mode === 'near') { k = Math.min(s, 1.3) * G.ks; w = G.NW * k; h = m.nearH * k; lift = 18 * k; }
+  else if (mode === 'near') { k = clamp(s, CARD_MIN, 1.3) * G.ks; w = G.NW * k; h = m.nearH * k; lift = 18 * k; }
   else { k = clamp(0.62 + 0.55 * s, 0.8, 1); w = m.endW * k; h = 26 * k; lift = 8 + 12 * s; }
   // A name stays on the stage, and a small one also stays off the years along the right edge:
   // it stands upright, so it is its top corner that must stay inside the road.
   const half = w / 2, big = isBig(mode), sTop = Math.max(0, (gy - lift - h - G.vy) / G.gh);
-  const cx = Math.max(half + 4, Math.min(big ? G.SW - half - 4 : G.vx + G.RW * sTop - half - 3, gx));
-  return { mode, big, k, w, h, lift, cx, gx, gy, x0: cx - half, x1: cx + half, y0: gy - lift - h, y1: gy - lift, area: w * h };
+  const out = big ? lean * Math.max(0, half - 26 * k) : 0;
+  const cx = Math.max(half + 4, Math.min(big ? G.SW - half - 4 : G.vx + G.RW * sTop - half - 3, gx + out));
+  const ax = clamp(gx, cx - half + 12 * k, cx + half - 12 * k);
+  return { mode, big, k, w, h, lift, cx, ax, gx, gy, x0: cx - half, x1: cx + half, y0: gy - lift - h, y1: gy - lift, area: w * h };
 }
 
-// Which names are shown. `cands` come best first: { key, end, s, gx, gy, m }.
+// Which names are shown. `cands` come best first: { key, end, s, gx, gy, m, lean }.
 // Each takes the biggest form its distance allows that fits. Near cards may
 // overlap a little, as things do in depth; smaller names never touch
 // anything, and one that would is left out. The small ones are capped.
@@ -121,7 +128,7 @@ export function placeLabels(cands, G, caps = {}) {
     for (const mode of modesOf(c.end, zoneOf(c.s))) {
       const isSmall = mode === 'compact' || mode === 'endc';
       if ((isSmall && small >= maxSmall) || (mode === 'tag' && tags >= maxTags)) continue;
-      const r = labelRect(mode, c.s, c.gx, c.gy, c.m, G);
+      const r = labelRect(mode, c.s, c.gx, c.gy, c.m, G, c.lean);
       if (blocked(r)) continue;
       taken.push(r); out.set(c.key, r);
       if (mode === 'tag') tags++; else if (isSmall) small++;
@@ -170,5 +177,5 @@ export function ruler({ t, dir, D, tMin, tMax, gh, fsOf }) {
 export function paceFor(cards, within1, within3) {
   if (!within3) return 5;
   if (!within1) return 2.2;
-  return 1 / (1 + 0.6 * Math.max(0, cards));
+  return 1 / (1 + 0.42 * Math.max(0, cards));
 }

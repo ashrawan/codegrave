@@ -75,7 +75,9 @@
     <div class="chipbar" id="chipbar"><div id="topics" class="chips" role="radiogroup" aria-label="Show views about" hidden></div></div>
     <ul id="vlist" role="listbox" aria-label="Views" aria-multiselectable="true"></ul>
     <p id="vnote" class="fine"></p>
-    <section class="filters" aria-label="Filters">
+    <section id="filters" class="filters" aria-label="Filters">
+      <!-- On a phone the filters fold into this one line, so the list of views has the sheet -->
+      <button id="filters-btn" class="fbtn" type="button" aria-expanded="false"><span class="lab">Filters</span><output id="filters-sum"></output><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg></button>
       <div class="field">
         <div class="row"><span class="lab" id="years-cap">Years</span><span class="row-r"><button id="years-reset" class="lnk" type="button" hidden>Show all years</button><output id="years-out"></output></span></div>
         <div class="yearbar" id="yearbar" role="group" aria-labelledby="years-cap">
@@ -112,6 +114,7 @@
 
 <!-- The views on the timeline, one pill each, along the bottom -->
 <div id="dock" role="group" aria-label="Views on the timeline">
+  <button id="views-btn" class="padd" type="button" aria-controls="side"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg><span>Views</span></button>
   <div id="pills"></div>
   <span class="dock-tools">
     <button id="shuffle" class="ibtn sm" type="button" aria-label="Shuffle colours" title="Shuffle colours"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5c4 0 6 10 10 10H21M18 14l3 3-3 3M3 17h3.5c1.6 0 2.8-1.6 3.9-3.6M13.6 9.6C14.7 8.1 15.8 7 16.5 7H21M18 4l3 3-3 3"/></svg></button>
