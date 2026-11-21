@@ -7,7 +7,7 @@ request and never a chain of lookups, however large the data grows.
 
 | File | Holds | Loaded when |
 | --- | --- | --- |
-| `boot.json` | The map (branches and kinds, with each branch's words), the labels, the community views the panel lists, the default and featured views, the 12 most-referenced entries, and how the detail and search files are keyed. | Always, once. |
+| `boot.json` | The map (branches and kinds, with each branch's words), the labels, the community views the panel lists (each with its topic, the years it covers and its thumbnail), the editors' topics, the default views, the 12 most-referenced entries, and how the detail and search files are keyed. | Always, once. |
 | `home.json` | The default views, ready to draw. | The link names no views and the reader has saved none. Fetched at the same time as `boot.json`. |
 | `v/<view-id>.json` | One view and everything it shows: its details, its eras, and the full entries it holds (at most 200, best ranked first; `view.count` is how many it really holds). A community view is `v/<owner>/<id>.json`. | A view is put on the timeline. One request each, fetched together. |
 | `d/<key>.json` | Full entries by id. `key` is the first hex digits of a hash of the id (`shardOf` in `site/keys.js`). | A link or a search result points at an entry that is not loaded. |
@@ -65,14 +65,14 @@ word that starts "cu"), and `boot.json` says which form is in use
 
 ## Sizes to expect
 
-Measured on 4,400 entries and 409 views (268 of them community books): the
-build takes under a second; `boot.json` is about 61 KB compressed, a book
-4 to 18 KB, the largest classical view about 63 KB, the search index about
-195 KB, a detail file about 6 KB. Detail files hold at most about 64 entries
+Measured on 4,420 entries and 202 views (61 of them community views): the
+build takes under a second; `boot.json` is about 20 KB compressed, a
+community view 5 to 16 KB, the largest classical view about 68 KB, the
+search index about 167 KB, a detail file about 6 KB. Detail files hold at most about 64 entries
 each: the build uses more hex digits of the hash as the data grows
 (`detail.chars` in `boot.json`). A classical view carries its 200 best-ranked
 entries however many it holds, so no file grows with the dataset except the
 search index, which splits itself, and `boot.json`, which lists every
 community view with its thumbnail (about 0.2 KB compressed each). Past about
-1,000 books, move that list into files per branch and load one when its chip
+1,000 views, move that list into files per topic and load one when its chip
 is picked.

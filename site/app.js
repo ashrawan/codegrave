@@ -12,6 +12,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   'use strict';
 
   const REPO = 'https://github.com/ashrawan/codegrave';
+  const EDITORS = 'codegrave';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
   const LEVELS = [
     { name: 'Landmarks', pct: 10 }, { name: 'Notable', pct: 30 },
@@ -236,9 +237,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // What the page holds, said with the real counts: in the top search and above the list of views.
   function sayScope() {
     if (!boot) return;
-    const n = group(boot.counts?.entries || 0), books = (boot.views || []).length;
+    const n = group(boot.counts?.entries || 0), views = (boot.views || []).length;
     $('q').placeholder = matchMedia(PHONE).matches ? `Search ${n} entries` : `Search ${n} entries: a person, a place, an event or a year`;
-    $('vscope').textContent = `${group(books)} community views · ${n} entries`;
+    $('vscope').textContent = `${group(views)} ${views === 1 ? 'view' : 'views'} · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.
   function lineage(id) {
@@ -456,7 +457,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     span: null,               // [from, to] written years when the reader narrows the timeline
     sizes: new Map(),         // view id -> height in pixels the reader dragged its section's rows to
     fit: true,                // sections share the height of the screen; false: each takes what it needs
-    branch: '',               // the branch the list of views is narrowed to, '' for all
+    topic: '',                // the chip the list of views is narrowed to, '' for all
     mode: 'road',             // 'road': the timeline in depth; 'flat': left to right (?m=flat)
   };
   let L = null;               // the current layout
@@ -1828,7 +1829,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const near = LEVELS.reduce((a, l) => Math.abs(l.pct - state.level) < Math.abs(a.pct - state.level) ? l : a);
     for (const b of $('level').querySelectorAll('[data-lv]')) b.setAttribute('aria-checked', Number(b.dataset.lv) === near.pct);
     drawYears();
-    drawBranches();
+    drawChips();
     runSearch();
   }
   // The year range: a picture of how busy each stretch of years is, with two
@@ -1876,43 +1877,55 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     return y;
   }
 
-  // A compact filter by branch above the list: All, then each top-level branch
-  // and Computing that has a community view.
-  function branchesWithViews() {
-    const have = new Set((boot?.views || []).map((v) => v.category).filter(Boolean));
+  // A compact filter above the list: All, then the editors' topics (History,
+  // Science and so on). A community view outside every topic sits under More.
+  // Where the editors name no topics, the chips are the branches that have a view.
+  const REST = '~';
+  function chipList() {
+    const views = boot?.views || [];
+    const topics = boot?.topics || [];
+    if (topics.length) return views.some((v) => !v.topic) ? [...topics, { id: REST, name: 'More' }] : topics;
+    const have = new Set(views.map((v) => v.category).filter(Boolean));
     return (boot?.domains || []).filter((d) => (!d.parent || d.id === 'computing') && have.has(d.id));
   }
-  function drawBranches() {
-    const list = branchesWithViews();
-    const box = $('branches');
+  const chipOf = (v) => (boot?.topics?.length ? v.topic || REST : v.category);
+  function drawChips() {
+    const list = chipList();
+    const box = $('topics');
     box.hidden = !list.length || !!$('vq').value.trim();
-    if (state.branch && !list.some((d) => d.id === state.branch)) state.branch = '';
-    const chip = (id, name) => `<button type="button" role="radio" data-branch="${esc(id)}" aria-checked="${state.branch === id}">${esc(name)}</button>`;
+    if (state.topic && !list.some((d) => d.id === state.topic)) state.topic = '';
+    const chip = (id, name) => `<button type="button" role="radio" data-chip="${esc(id)}" aria-checked="${state.topic === id}">${esc(name)}</button>`;
     const ids = ['', ...list.map((d) => d.id)].join(',');
-    // Redrawn only when the branches change, so the row keeps its sideways scroll.
+    // Redrawn only when the chips change, so the row keeps its sideways scroll.
     if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'All') + list.map((d) => chip(d.id, d.name)).join(''); }
-    else for (const b of box.querySelectorAll('[data-branch]')) b.setAttribute('aria-checked', b.dataset.branch === state.branch);
+    else for (const b of box.querySelectorAll('[data-chip]')) b.setAttribute('aria-checked', b.dataset.chip === state.topic);
     requestAnimationFrame(chipEdges);
   }
-  // A fade at either end of the row of branches says it scrolls.
+  // A fade at either end of the row of chips says it scrolls.
   function chipEdges() {
-    const c = $('branches'), bar = $('chipbar');
+    const c = $('topics'), bar = $('chipbar');
     bar.classList.toggle('more-l', c.scrollLeft > 2);
     bar.classList.toggle('more-r', c.scrollLeft < c.scrollWidth - c.clientWidth - 2);
   }
 
-  // The list: the community views, in the editors' order, narrowed by branch.
-  // Search finds classical views too (the map: everything, each branch, each kind),
-  // and entries and years.
+  // The list: the community views, in the editors' order, under a heading for
+  // each topic, or narrowed to one by its chip. Search finds classical views too
+  // (the map: everything, each branch, each kind), and entries and years.
   let found = [], active = -1;
   function runSearch() {
     const raw = $('vq').value.trim(), q = fold(raw);
     found = [];
     if (!q) {
       const mine = myView();
-      if (mine && !state.branch) found.push({ mine });
-      const list = (boot?.views || []).filter((v) => !state.branch || v.category === state.branch);
-      found.push(...list.map((v) => ({ v: viewById.get(v.id) || v })));
+      if (mine && !state.topic) found.push({ mine });
+      const chips = chipList(), heads = !state.topic && !!boot?.topics?.length;
+      let last = null;
+      for (const v of boot?.views || []) {
+        const c = chipOf(v);
+        if (state.topic && c !== state.topic) continue;
+        if (heads && c !== last) { last = c; found.push({ head: chips.find((d) => d.id === c)?.name || 'More' }); }
+        found.push({ v: viewById.get(v.id) || v });
+      }
       found.push({ propose: true });
       active = -1;
     } else {
@@ -1949,10 +1962,14 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (t.image) return `<img src="${esc(mediaUrl(t.image))}" alt="" loading="lazy">`;
     return `<svg class="th" viewBox="0 0 64 40" aria-hidden="true"><path class="dead" d="${esc(t.dead || '')}"/><path d="${esc(t.live || '')}"/></svg>`;
   }
-  // What a view is, said quietly: who wrote it, or where it sits on the map.
+  // What a view is, said quietly in one line: the years it covers and who wrote
+  // it when that is not the editors, or where a classical view sits on the map.
   function viewSub(v) {
     const n = v.count != null ? `${group(v.count)} ${v.count === 1 ? 'entry' : 'entries'}` : '';
-    if (v.type !== 'classical') return [v.author ? 'by ' + v.author : '', n].filter(Boolean).join(' · ');
+    if (v.type !== 'classical') {
+      const by = v.author && v.author !== EDITORS ? 'by ' + (ownerTitle.get(v.author) || v.author) : '';
+      return [v.span ? spanText(v.span[0], v.span[1]) : '', n, by].filter(Boolean).join(' · ');
+    }
     const kind = cats.find((c) => c.view === v.id), dom = domById.get(v.id);
     const where = v.id === 'everything' ? 'The whole map' : kind ? `Kind · ${kind.domainName || ''}` : dom ? (dom.parent ? `Branch · ${domById.get(dom.parent)?.name || ''}` : 'Branch') : 'Classical view';
     return [where, n].filter(Boolean).join(' · ');
@@ -1965,8 +1982,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const msg = noteText || (q && !found.length ? 'Nothing matches. Try a name, a topic or a year.' : '') || (!q && full ? `${MAX_VIEWS} views is the most at once. Remove one to add another.` : '');
     $('vnote').textContent = msg;
     function row(f, i) {
-      let name, sub, tb, attrs = '', by = '';
+      let name, sub, tb, attrs = '';
       if (f.wait) return '<li class="none" role="presentation">Searching every view…</li>';
+      if (f.head) return `<li class="vhead" role="presentation">${esc(f.head)}</li>`;
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(alias.get(id) || id)?.name || id).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
       else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; tb = `<span class="tb icon">${ICON.plus}</span>`; }
       else if (f.year != null) { name = 'Go to ' + esc(yearText(f.year)); sub = 'On the timeline'; tb = `<span class="tb icon">${ICON.dot}</span>`; }
@@ -1974,18 +1992,18 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       else {
         const v = f.v, on = state.views.includes(v.id), wait = pending.has(v.id), bad = broken.has(v.id);
         const kind = v.type === 'classical' ? 'classical' : 'community';
-        name = `<span>${mark(v.name, q)}</span><i title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i>`;
-        sub = (on ? '<span class="st">On the timeline</span> · ' : wait ? '<span class="st">Loading…</span> · ' : bad ? '<span class="st bad">Could not load</span> · ' : '') + esc(v.description || '');
-        by = `<small class="by">${esc(viewSub(v))}</small>`;
+        // The icon tells the two sorts apart where a search mixes them; the list itself holds one sort.
+        name = `<span>${mark(v.name, q)}</span>${q ? `<i title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i>` : ''}`;
+        sub = (on ? '<span class="st">On the timeline</span> · ' : wait ? '<span class="st">Loading…</span> · ' : bad ? '<span class="st bad">Could not load</span> · ' : '') + esc(viewSub(v));
         tb = `<span class="tb">${thumb(v)}<span class="go">${ICON.plus}</span></span>`;
-        attrs = ` aria-checked="${on}"${on ? ` style="--c:var(--p${state.colors.get(v.id) % 8})"` : ''}${!on && full && !wait ? ' aria-disabled="true"' : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
+        attrs = `${v.description ? ` title="${esc(v.description)}"` : ''} aria-checked="${on}"${on ? ` style="--c:var(--p${state.colors.get(v.id) % 8})"` : ''}${!on && full && !wait ? ' aria-disabled="true"' : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
       }
-      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small>${by}</span></li>`;
+      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span></li>`;
     }
   }
   function pick(i) {
     const f = found[i];
-    if (!f || f.wait) return;
+    if (!f || f.wait || f.head) return;
     if (f.mine) return loadMine(f.mine);
     if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
     if (f.year != null) { $('vq').value = ''; runSearch(); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
@@ -2366,8 +2384,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       }
       const rm = el('[data-remove]');
       if (rm) { removeView(rm.dataset.remove); return changed(); }
-      const br = el('[data-branch]');
-      if (br) { state.branch = br.dataset.branch; drawBranches(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
+      const br = el('[data-chip]');
+      if (br) { state.topic = br.dataset.chip; drawChips(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
       const era = el('[data-era]');
       if (era && !el('#side')) return openEra(era.dataset.era);
       const zoom = el('[data-zoom]');
@@ -2446,11 +2464,11 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       else if (e.key === 'Escape') { e.stopPropagation(); $('q').value = ''; drawHits(''); $('q').blur(); }
     });
     $('qlist').addEventListener('pointerdown', (e) => { const li = e.target.closest('[data-h]'); if (li) { e.preventDefault(); goHit(Number(li.dataset.h)); } });
-    $('vq').addEventListener('input', () => { drawBranches(); runSearch(); });
+    $('vq').addEventListener('input', () => { drawChips(); runSearch(); });
     $('vq').addEventListener('focus', () => indexFor('a'));
-    $('branches').addEventListener('scroll', chipEdges, { passive: true });
+    $('topics').addEventListener('scroll', chipEdges, { passive: true });
     $('vq').addEventListener('keydown', (e) => {
-      const ok = found.map((f, i) => i).filter((i) => !found[i].wait);
+      const ok = found.map((f, i) => i).filter((i) => !found[i].wait && !found[i].head);
       if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault();
         if (!ok.length) return;
@@ -2460,7 +2478,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
         $('vlist').querySelector('[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
       }
       else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) pick(active); }
-      else if (e.key === 'Escape' && $('vq').value) { e.stopPropagation(); $('vq').value = ''; drawBranches(); runSearch(); }
+      else if (e.key === 'Escape' && $('vq').value) { e.stopPropagation(); $('vq').value = ''; drawChips(); runSearch(); }
     });
 
     // The bars redraw as they move, and record the link once let go.

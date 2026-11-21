@@ -21,14 +21,15 @@ line to read its history, with dates, sources, links and images.
 The base holds about 4,400 entries on one map of ten branches: People,
 Places, Organisations, Events, Arts & media, Knowledge & belief, Society &
 daily life, Life, Earth & space, and Technology (with Computing). On top of
-it sit community views: more than 260 books such as "The Race to the Moon",
-"Seven Hills to World Power" and "Women Who Changed Science", each a title,
-a hand-picked set of entries and chapters that tell the story.
+it sit the views: about sixty subjects people look for, such as Ancient
+Egypt, World War II, US Presidents, Dinosaurs, Video Games and Discontinued
+Tech. Each is a plain name, a hand-picked set of entries and chapters that
+tell the story in order.
 
 <table>
   <tr>
-    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: a book on the rise and fall of Rome drawn as lines and chapters, with the entry for Julius Caesar open in the side panel"></td>
-    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: a book on the age of the dinosaurs, with its chapters and the years in millions"></td>
+    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: the view Ancient Rome drawn as lines and chapters, with the entry for Julius Caesar open in the side panel"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: the view Dinosaurs, with its chapters and the years in millions"></td>
   </tr>
   <tr>
     <td align="center"><sub>Wide screen, light theme</sub></td>
@@ -38,9 +39,10 @@ a hand-picked set of entries and chapters that tell the story.
 
 ## What the page does
 
-- **Books as sections.** A community view is a book on one subject. Each
-  view on the timeline gets its own section under a coloured heading, with
-  its chapters drawn in its colour. Click a chapter to read it.
+- **One subject, one view.** The panel lists the views under four topics:
+  History, Science, Technology and Culture. Each view on the timeline gets
+  its own section under a coloured heading, with its chapters drawn in its
+  colour. Click a chapter to read it.
 - **Any stretch of time.** The same axis shows a decade of software, three
   thousand years of empires, or four billion years of the Earth. Dates
   before the common era and deep time are first-class.
@@ -53,7 +55,7 @@ a hand-picked set of entries and chapters that tell the story.
 - **Search.** The top search finds entries, events, chapters and years on
   the timeline (try `44 BCE`). Below them it lists matches from the whole
   encyclopedia, and picking one brings it onto the timeline. The panel's
-  search finds views: community books, and the classical shelves (Everything,
+  search finds views: the listed ones, and the classical shelves (Everything,
   each branch, each kind) with their type marked.
 - **Play and reverse.** Play moves a marker through time so the timeline
   shows only what had happened by then. Reverse flips the order of the lines.
@@ -101,9 +103,8 @@ screenshots. The full guide is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Propose a view
 
-A view is a book: a named way of looking at the timeline, such as "The
-browser wars" or "The Race to the Moon". Anyone can publish one. Ideas
-waiting for an author are listed in [`docs/BOOK_IDEAS.md`](docs/BOOK_IDEAS.md).
+A view is one subject on the timeline under a plain name, such as "The
+Space Race" or "Video Games". Anyone can publish one.
 
 **Without code:** press "Propose a view" in the panel, or open the
 [Propose a view](../../issues/new?template=propose-view.yml) form, and
@@ -134,7 +135,7 @@ most wanted are built first.
    screenshots in the description. The template asks what the view shows,
    why it is worth having, and where the facts come from.
 
-Once it is merged, the view is listed in the panel under its branch, has its
+Once it is merged, the view is listed in the panel, has its
 own address (`codegrave.com/?views=<your-github-name>/<id>`) and can be put
 beside any other view.
 
@@ -146,7 +147,7 @@ beside any other view.
 | `data/community/<owner>/` | One folder per person or group: `profile.json`, their `views/` and their own `entries/`. | Its owner |
 | `data/categories.json` | The map: ten branches (Computing sits under Technology) and their kinds. | Editors |
 | `data/labels.json` | The shared labels for what an entry or a view is about. | Editors |
-| `data/editors-choice.json` | The default views and the featured views. | Editors |
+| `data/editors-choice.json` | The default views, and the topics the panel lists the views under. | Editors |
 | `data/redirects.json` | Old addresses that still work. | Editors |
 | `data/media/` | Icons and local images. | Anyone, with a licence |
 | `site/` | The page: `index.html`, `styles.css`, `app.js`, `rank.js`, `keys.js`. No framework. | Maintainers |
@@ -173,7 +174,7 @@ text is copied from Wikipedia or any other source. Images are hot-linked from
 Wikimedia Commons with each file's author and licence, or kept in
 `data/media/` with theirs.
 
-The first general-knowledge entries and books were drafted with AI
+The first general-knowledge entries and views were drafted with AI
 assistance and then checked against Wikidata and by review. Drafts can be
 wrong. Found a mistake? A correction with a source is the most useful
 contribution there is.

@@ -441,12 +441,32 @@ for (const [from, to] of Object.entries(entryRedirects)) {
   if (byId.has(from)) err('data/redirects.json', `"${from}" is an entry, so it cannot also be an old address`);
   if (!byId.has(to)) err('data/redirects.json', `"${from}" points to the unknown entry "${to}"`);
 }
-const featured = choice.featured || [];
+// The groups the panel lists the community views in, in the editors' order. A view sits in one group at most.
+const topics = Array.isArray(choice.topics) ? choice.topics : [];
+const topicOf = new Map();    // view id -> the id of its group
+{
+  const at = 'data/editors-choice.json';
+  if (choice.topics != null && !Array.isArray(choice.topics)) err(at, '"topics" must be a list');
+  const seen = new Set();
+  for (const t of topics) {
+    if (!t || typeof t.id !== 'string' || !/^[a-z0-9][a-z0-9-]*$/.test(t.id)) { err(at, 'each topic needs an "id" in lower case with dashes'); continue; }
+    if (seen.has(t.id)) err(at, `topic "${t.id}" is listed twice`);
+    seen.add(t.id);
+    if (typeof t.name !== 'string' || !t.name || t.name.length > 24) err(at, `topic "${t.id}" needs a "name" of 1 to 24 characters`);
+    if (!Array.isArray(t.views) || !t.views.length) { err(at, `topic "${t.id}" needs a list of "views"`); continue; }
+    for (const id of t.views) {
+      const real = resolveView(id);
+      if (!real) err(at, `topic "${t.id}" names the view "${id}", which does not exist`);
+      else if (viewById.get(real)._type !== 'community') err(at, `topic "${t.id}" names "${id}", which is not a community view`);
+      else if (topicOf.has(real)) err(at, `the view "${id}" is in two topics`);
+      else topicOf.set(real, t.id);
+    }
+  }
+}
 // The page opens on the default: one view, or several shown side by side.
 const defaults = Array.isArray(choice.default) ? choice.default : [choice.default];
 if (defaults.length === 0 || defaults.length > 8) err('data/editors-choice.json', '"default" must name one to eight views');
 for (const id of defaults) if (!resolveView(id)) err('data/editors-choice.json', `default view "${id}" does not exist`);
-for (const id of featured) if (!resolveView(id)) err('data/editors-choice.json', `featured view "${id}" does not exist`);
 
 // ---------------------------------------------------------------- report
 const quiet = process.argv.includes('--quiet');
@@ -535,6 +555,18 @@ if (!process.argv.includes('--check')) {
       tags: v.tags || [], level: v.level ?? 100, count: v._members.length,
     };
     for (const k of ['category', 'labels', 'year', 'order']) if (v[k] != null) out[k] = v[k];
+    if (topicOf.has(v._id)) out.topic = topicOf.get(v._id);
+    // The years a community view covers, for its line in the list: its chapters, or else its entries.
+    if (v._type === 'community' && v._members.length) {
+      const cps = v.checkpoints || [];
+      if (cps.length) out.span = [Math.min(...cps.map((c) => c.from)), Math.max(...cps.map((c) => c.to))];
+      else {
+        const ends = v._members.map((t) => t.events.find((e) => e.type === 'ended'));
+        out.span = [Math.min(...v._members.map((t) => yearOf(t.events.find((e) => e.type === 'born').date))),
+          ends.every(Boolean) ? Math.max(...ends.map((e) => yearOf(e.date))) : null];
+      }
+      if (out.span[1] != null && out.span[1] >= nowYear) out.span[1] = null;
+    }
     if (v._list) out.picked = true;
     else { out.categories = v.categories || []; if (v.domains) out.domains = v.domains; }
     out.thumb = v.image ? { image: v.image.src } : timelineThumb(v._members.map((t) => {
@@ -562,10 +594,10 @@ if (!process.argv.includes('--check')) {
   for (const [from, to] of Object.entries(viewRedirects)) if (viewById.get(to)._members.length) write(`v/${from}.json`, payload(viewById.get(to)));
   write('home.json', { views: defaults.map((id) => payload(viewById.get(resolveView(id)))) });
 
-  // Community views in the order the panel lists them: featured first, then the most-listed subjects.
-  const featuredIds = featured.map(resolveView);
+  // Community views in the order the panel lists them: topic by topic in the editors' order, then the rest by name.
+  const placed = topics.flatMap((t) => (Array.isArray(t.views) ? t.views.map(resolveView) : []));
   const catalogue = live.filter((v) => v._type === 'community').sort((a, b) => {
-    const fa = featuredIds.indexOf(a._id), fb = featuredIds.indexOf(b._id);
+    const fa = placed.indexOf(a._id), fb = placed.indexOf(b._id);
     return ((fa < 0 ? 1e9 : fa) - (fb < 0 ? 1e9 : fb)) || a.name.localeCompare(b.name);
   });
 
@@ -621,7 +653,8 @@ if (!process.argv.includes('--check')) {
     domains: domains.map((d) => ({ id: d.id, name: d.name, description: d.description, ...(d.parent ? { parent: d.parent } : {}), words: wordsOf(d.id) })),
     categories: categories.map((c) => ({ ...c, n: counts[c.id] || 0, view: homeOf(c.id) })),
     labels: labelFile,
-    default: defaults.map(resolveView), featured: featuredIds,
+    default: defaults.map(resolveView),
+    topics: topics.filter((t) => catalogue.some((v) => topicOf.get(v._id) === t.id)).map((t) => ({ id: t.id, name: t.name })),
     views: catalogue.slice(0, CATALOGUE_MAX).map(meta),
     owners: owners.map((o) => ({ id: o.id, title: o.profile.title })),
     top: entryLines.slice(0, 12).map((l) => [l[0], l[1], l[2]]),

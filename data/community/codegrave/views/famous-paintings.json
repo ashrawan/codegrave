@@ -1,0 +1,95 @@
+{
+  "id": "famous-paintings",
+  "name": "Famous Paintings",
+  "description": "The paintings everyone recognises and the artists behind them, from the Mona Lisa to The Starry Night and Guernica.",
+  "category": "arts",
+  "labels": [
+    "visual-art"
+  ],
+  "tags": [
+    "paintings",
+    "art",
+    "mona lisa",
+    "van gogh",
+    "picasso",
+    "leonardo da vinci",
+    "famous art",
+    "artists"
+  ],
+  "entries": [
+    "leonardo-da-vinci",
+    "michelangelo",
+    "birth-of-venus",
+    "the-last-supper",
+    "garden-of-earthly-delights",
+    "mona-lisa",
+    "school-of-athens",
+    "sistine-chapel-ceiling",
+    "caravaggio",
+    "rembrandt",
+    "johannes-vermeer",
+    "the-night-watch",
+    "las-meninas",
+    "girl-with-a-pearl-earring",
+    "katsushika-hokusai",
+    "raft-of-the-medusa",
+    "liberty-leading-the-people",
+    "great-wave-off-kanagawa",
+    "claude-monet",
+    "vincent-van-gogh",
+    "edvard-munch",
+    "impression-sunrise",
+    "pablo-picasso",
+    "sunflowers-van-gogh",
+    "the-starry-night",
+    "the-scream",
+    "salvador-dali",
+    "the-kiss-klimt",
+    "frida-kahlo",
+    "jackson-pollock",
+    "andy-warhol",
+    "american-gothic",
+    "the-persistence-of-memory",
+    "guernica-picasso",
+    "the-two-fridas",
+    "campbells-soup-cans",
+    "marilyn-diptych"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-renaissance",
+      "name": "The Renaissance",
+      "from": 1452,
+      "to": 1549,
+      "note": "Artists in Florence, Rome and the Low Countries learn perspective and anatomy, and paint the faces and scenes that museums still draw crowds with."
+    },
+    {
+      "id": "baroque-and-the-dutch-golden-age",
+      "name": "Baroque and the Dutch Golden Age",
+      "from": 1550,
+      "to": 1799,
+      "note": "Caravaggio lights Rome's churches with sudden shadow, while Spanish kings and Dutch merchants hire painters who catch light, character and daily life, and put the viewer inside the picture."
+    },
+    {
+      "id": "romanticism",
+      "name": "Romanticism",
+      "from": 1800,
+      "to": 1869,
+      "note": "Painters turn to politics, disaster and nature, while Japanese woodblock prints reach Europe and change how artists see."
+    },
+    {
+      "id": "impressionism-and-after",
+      "name": "Impressionism and after",
+      "from": 1870,
+      "to": 1913,
+      "note": "Impressionists, Post-Impressionists and their followers paint light and feeling, and nervous or golden images become icons."
+    },
+    {
+      "id": "modern-art",
+      "name": "Modern art",
+      "from": 1914,
+      "to": 1989,
+      "note": "Cubism, Surrealism, protest and Pop turn paintings into statements, Jackson Pollock lets paint drip across the canvas, and a painted soup can sits beside an old master in the museum."
+    }
+  ]
+}

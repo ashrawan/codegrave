@@ -1,0 +1,114 @@
+{
+  "id": "movies",
+  "name": "Movies",
+  "description": "The films that made the movies, from the first moving pictures and Chaplin to Star Wars, Toy Story and streaming.",
+  "category": "arts",
+  "labels": [
+    "film"
+  ],
+  "tags": [
+    "movies",
+    "films",
+    "cinema",
+    "hollywood",
+    "star wars",
+    "disney",
+    "directors",
+    "film history"
+  ],
+  "entries": [
+    "georges-melies",
+    "roundhay-garden-scene",
+    "charlie-chaplin",
+    "workers-leaving-the-lumiere-factory",
+    "silent-film",
+    "arrival-of-a-train-at-la-ciotat",
+    "alfred-hitchcock",
+    "a-trip-to-the-moon",
+    "the-great-train-robbery-1903",
+    "akira-kurosawa",
+    "cabinet-of-dr-caligari",
+    "satyajit-ray",
+    "nosferatu-1922",
+    "battleship-potemkin",
+    "metropolis-1927",
+    "the-jazz-singer",
+    "bollywood",
+    "modern-times",
+    "snow-white-1937",
+    "the-wizard-of-oz-1939",
+    "gone-with-the-wind-film",
+    "citizen-kane",
+    "film-noir",
+    "casablanca-film",
+    "italian-neorealism",
+    "singin-in-the-rain",
+    "tokyo-story",
+    "seven-samurai",
+    "pather-panchali",
+    "french-new-wave",
+    "psycho-1960",
+    "new-hollywood",
+    "2001-a-space-odyssey",
+    "the-godfather",
+    "jaws-film",
+    "star-wars-1977",
+    "et-the-extra-terrestrial",
+    "blade-runner",
+    "nollywood",
+    "schindlers-list",
+    "pulp-fiction",
+    "the-lion-king-1994",
+    "toy-story-1995",
+    "titanic-1997",
+    "netflix",
+    "the-matrix",
+    "spirited-away",
+    "fellowship-of-the-ring-film",
+    "parasite-2019"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-films",
+      "name": "The first films",
+      "from": 1888,
+      "to": 1905,
+      "note": "Inventors in France, Britain and the United States film short scenes of workers, trains and trips to the Moon, and cinema becomes a show people pay to see."
+    },
+    {
+      "id": "silent-films",
+      "name": "Silent films",
+      "from": 1906,
+      "to": 1929,
+      "note": "Feature films, stars and studios appear. Germany, the Soviet Union and the United States each build a style, and sound arrives in 1927 to end the era."
+    },
+    {
+      "id": "hollywood-s-golden-age",
+      "name": "Hollywood's golden age",
+      "from": 1930,
+      "to": 1950,
+      "note": "Hollywood studios turn out films like a factory, Disney proves feature animation can pay, and war and shadowy crime stories give rise to film noir and neorealism."
+    },
+    {
+      "id": "world-cinema",
+      "name": "World cinema",
+      "from": 1951,
+      "to": 1969,
+      "note": "Young directors in France, Japan, India and Italy show that films can be personal and cheap, and television pushes cinema to be bolder."
+    },
+    {
+      "id": "blockbusters",
+      "name": "Blockbusters",
+      "from": 1970,
+      "to": 1989,
+      "note": "Directors like Coppola, Spielberg and Lucas bring big ideas and then big summer hits, and Hollywood turns toward franchises."
+    },
+    {
+      "id": "the-digital-era",
+      "name": "The digital era",
+      "from": 1990,
+      "to": 2026,
+      "note": "Computer animation, digital effects and cheap video cameras open film to the whole world, from Lagos to Seoul, where Parasite wins the top Oscar in 2020. Netflix, which began renting discs by mail, turns to streaming and changes how films are watched."
+    }
+  ]
+}

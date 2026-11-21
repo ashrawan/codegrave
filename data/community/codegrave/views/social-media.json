@@ -1,0 +1,85 @@
+{
+  "id": "social-media",
+  "name": "Social Media",
+  "description": "The networks we joined and the ones we left, from SixDegrees and MySpace to Facebook, Instagram and TikTok.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "tags": [
+    "social media",
+    "facebook",
+    "twitter",
+    "instagram",
+    "tiktok",
+    "myspace",
+    "social networks"
+  ],
+  "entries": [
+    "sixdegrees",
+    "friendster",
+    "linkedin",
+    "myspace",
+    "orkut",
+    "facebook",
+    "flickr",
+    "digg",
+    "youtube",
+    "reddit",
+    "bebo",
+    "twitter",
+    "vk",
+    "tumblr",
+    "whatsapp",
+    "pinterest",
+    "google-buzz",
+    "instagram",
+    "wechat",
+    "google-plus",
+    "snapchat",
+    "vine",
+    "mastodon",
+    "tiktok",
+    "cambridge-analytica-scandal",
+    "bluesky",
+    "threads"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-networks",
+      "name": "The first networks",
+      "from": 1997,
+      "to": 2002,
+      "note": "Sites such as SixDegrees try to put friendships on the web, but too few people are online and too few have broadband. The idea waits for the next wave."
+    },
+    {
+      "id": "myspace-and-facebook",
+      "name": "MySpace and Facebook",
+      "from": 2003,
+      "to": 2006,
+      "note": "Friendster, MySpace and Facebook show that millions of people will build profiles and add friends. MySpace grows fastest at first, while Facebook spreads from one university to the world."
+    },
+    {
+      "id": "twitter-instagram-and-the-phone",
+      "name": "Twitter, Instagram and the phone",
+      "from": 2007,
+      "to": 2012,
+      "note": "Phones put a camera and a feed in every pocket. Twitter takes off, Tumblr, Instagram, Pinterest and Snapchat arrive, Facebook buys Instagram, and Google tries and fails to make its own network with Buzz and Google+."
+    },
+    {
+      "id": "stories-and-short-video",
+      "name": "Stories and short video",
+      "from": 2013,
+      "to": 2019,
+      "note": "Disappearing photos, six-second videos and algorithm-driven feeds take over. Vine rises and closes, Snapchat and TikTok attract the young, and Google+ is shut down."
+    },
+    {
+      "id": "new-networks",
+      "name": "New networks",
+      "from": 2020,
+      "to": 2026,
+      "note": "Questions about who controls the big platforms send users to open networks such as Mastodon, launched in 2016, and Bluesky. Meta launches Threads in 2023, and rivals scramble for users leaving X."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 name: Propose a view
-description: A book-like timeline you would like to see or share, such as "The race to the Moon". No code needed.
+description: A timeline of one subject you would like to see or share, such as "The Space Race". No code needed.
 title: "View: "
 labels: ["view", "proposal"]
 body:
@@ -11,7 +11,7 @@ body:
     id: name
     attributes:
       label: Name of the view
-      placeholder: The race to the Moon
+      placeholder: The Space Race
     validations:
       required: true
   - type: textarea

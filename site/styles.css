@@ -402,8 +402,10 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 .chips button[aria-checked="true"] { color: var(--text); font-weight: 600; background: var(--bg); border-color: var(--rule2); }
 #p-views > .chipbar + #vlist { margin-top: 6px; }
 #p-views > .scope { margin-top: 12px; margin-bottom: -6px; }
-/* who wrote a view, or where a classical view sits on the map */
-.r-txt small.by { margin-top: 1px; font-size: 11px; color: var(--faint); opacity: .85; }
+/* the name of a topic above its views, when the list shows them all */
+#vlist li.vhead { padding: 14px 8px 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); cursor: default; }
+#vlist li.vhead:first-child { padding-top: 4px; }
+#vlist li.vhead:hover { background: none; color: var(--faint); }
 .st.bad { color: var(--p7); font-weight: 600; }
 /* a classical view not loaded yet has no thumbnail: the folded map stands in */
 .th-map { display: flex; color: var(--faint); }

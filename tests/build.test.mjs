@@ -82,11 +82,23 @@ test('the build rejects an unknown label, a second entry for one Wikidata item, 
   const copy = copyOfRepo();
   edit(join(copy, 'data', 'base', 'languages', 'typescript.json'), (t) => { t.labels = ['no-such-label']; t.wikidata = 'Q1'; });
   edit(join(copy, 'data', 'base', 'languages', 'javascript.json'), (t) => { t.wikidata = 'Q1'; });
-  edit(join(copy, 'data', 'community', 'codegrave', 'views', 'browser-wars.json'), (v) => { v.things.push('no-such-entry'); });
+  edit(join(copy, 'data', 'community', 'codegrave', 'views', 'browser-wars.json'), (v) => { v.entries.push('no-such-entry'); });
   const out = build(copy, '--check');
   assert.match(out, /unknown label "no-such-label"/);
   assert.match(out, /is the same Wikidata item \(Q1\)/);
   assert.match(out, /lists unknown entry "no-such-entry"/);
+});
+
+test('the editors\' topics name real community views, each in one topic only', () => {
+  const copy = copyOfRepo();
+  const file = join(copy, 'data', 'editors-choice.json');
+  edit(file, (c) => { c.topics = [{ id: 'one', name: 'One', views: ['codegrave/browser-wars', 'languages', 'codegrave/no-such-view'] }, { id: 'two', name: 'Two', views: ['codegrave/browser-wars'] }]; });
+  const out = build(copy, '--check');
+  assert.match(out, /topic "one" names "languages", which is not a community view/);
+  assert.match(out, /topic "one" names the view "codegrave\/no-such-view", which does not exist/);
+  assert.match(out, /the view "codegrave\/browser-wars" is in two topics/);
+  edit(file, (c) => { delete c.topics; });
+  assert.match(build(copy, '--check'), / 0 errors/);
 });
 
 test('a community folder needs a profile, and may only list base entries or its own', () => {
@@ -118,6 +130,11 @@ test('the build writes one ready-made file per view, old addresses, detail files
   const top = boot.domains.filter((d) => !d.parent).map((d) => d.id);
   assert.deepEqual(top, ['people', 'places', 'organisations', 'events', 'arts', 'knowledge', 'society', 'life', 'earth-space', 'technology']);
   assert.equal(boot.domains.find((d) => d.id === 'computing').parent, 'technology');
+  // The list comes topic by topic, in the editors' order, and every view says which years it covers.
+  const order = boot.topics.map((t) => t.id);
+  assert.ok(order.length > 0 && boot.views.every((v) => order.includes(v.topic)), 'every listed view sits in a topic');
+  assert.deepEqual(boot.views.map((v) => order.indexOf(v.topic)), boot.views.map((v) => order.indexOf(v.topic)).sort((a, b) => a - b));
+  assert.ok(boot.views.every((v) => Array.isArray(v.span) && (v.span[1] == null || v.span[0] <= v.span[1])));
 
   // A community view: everything it shows is in its one file.
   const view = read('v/codegrave/browser-wars.json');

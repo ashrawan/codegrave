@@ -1,0 +1,98 @@
+{
+  "id": "great-scientists",
+  "name": "Great Scientists",
+  "description": "The people whose discoveries changed how we understand the world, from Archimedes and Newton to Curie, Einstein and Hawking.",
+  "category": "people",
+  "labels": [
+    "physics",
+    "biology"
+  ],
+  "tags": [
+    "scientists",
+    "physics",
+    "einstein",
+    "newton",
+    "darwin",
+    "marie curie",
+    "discoveries",
+    "science history"
+  ],
+  "entries": [
+    "pythagoras",
+    "hippocrates",
+    "euclid",
+    "archimedes",
+    "ptolemy",
+    "hypatia",
+    "al-khwarizmi-scientist",
+    "ibn-al-haytham",
+    "nicolaus-copernicus",
+    "galileo-galilei",
+    "johannes-kepler",
+    "isaac-newton",
+    "carl-linnaeus",
+    "antoine-lavoisier",
+    "michael-faraday",
+    "charles-darwin",
+    "gregor-mendel",
+    "louis-pasteur",
+    "james-clerk-maxwell",
+    "dmitri-mendeleev",
+    "nikola-tesla",
+    "max-planck",
+    "marie-curie",
+    "ernest-rutherford",
+    "albert-einstein",
+    "alexander-fleming",
+    "niels-bohr",
+    "erwin-schrodinger",
+    "edwin-hubble",
+    "enrico-fermi",
+    "werner-heisenberg",
+    "j-robert-oppenheimer",
+    "alan-turing",
+    "francis-crick",
+    "richard-feynman",
+    "rosalind-franklin",
+    "james-watson",
+    "jane-goodall",
+    "stephen-hawking"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-ancient-world",
+      "name": "The ancient world",
+      "from": -600,
+      "to": 500,
+      "note": "Greek thinkers look for rules behind nature. Pythagoras and Euclid shape mathematics, Hippocrates medicine and Archimedes mechanics, and Ptolemy's picture of the heavens lasts for fourteen centuries."
+    },
+    {
+      "id": "scholars-of-the-islamic-world",
+      "name": "Scholars of the Islamic world",
+      "from": 501,
+      "to": 1450,
+      "note": "In Baghdad and Cairo scholars preserve Greek science and add to it. Al-Khwarizmi gives algebra its name and Ibn al-Haytham studies light by experiment."
+    },
+    {
+      "id": "the-scientific-revolution",
+      "name": "The Scientific Revolution",
+      "from": 1451,
+      "to": 1750,
+      "note": "Copernicus puts the Sun at the centre, Galileo turns a telescope to the sky, Kepler finds the shape of the orbits and Newton explains them with gravity."
+    },
+    {
+      "id": "chemistry-evolution-and-electricity",
+      "name": "Chemistry, evolution and electricity",
+      "from": 1751,
+      "to": 1894,
+      "note": "Lavoisier makes chemistry a science of measurement and Mendeleev orders the elements. Darwin explains how species change, Pasteur shows that germs cause disease, and Faraday and Maxwell uncover electromagnetism."
+    },
+    {
+      "id": "atoms-relativity-and-dna",
+      "name": "Atoms, relativity and DNA",
+      "from": 1895,
+      "to": 2018,
+      "note": "Radioactivity, the quantum and relativity change physics within thirty years. Later come the atomic bomb, the computer, the structure of DNA and new pictures of the universe."
+    }
+  ]
+}

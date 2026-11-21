@@ -1,0 +1,86 @@
+{
+  "id": "wonders-of-the-world",
+  "name": "Wonders of the World",
+  "description": "The seven wonders of the ancient world, the new seven wonders and the landmarks everyone knows, in the order they were built.",
+  "category": "places",
+  "labels": [
+    "seven-wonders",
+    "world-heritage",
+    "architecture"
+  ],
+  "tags": [
+    "seven wonders",
+    "landmarks",
+    "pyramids",
+    "taj mahal",
+    "eiffel tower",
+    "colosseum",
+    "monuments"
+  ],
+  "entries": [
+    "stonehenge",
+    "great-pyramid-of-giza",
+    "great-sphinx-of-giza",
+    "great-wall-of-china",
+    "hanging-gardens-of-babylon",
+    "temple-of-artemis",
+    "statue-of-zeus-at-olympia",
+    "parthenon",
+    "mausoleum-at-halicarnassus",
+    "petra",
+    "colossus-of-rhodes",
+    "lighthouse-of-alexandria",
+    "terracotta-army",
+    "colosseum",
+    "pantheon-rome",
+    "chichen-itza",
+    "hagia-sophia",
+    "borobudur",
+    "angkor-wat",
+    "alhambra",
+    "moai",
+    "notre-dame-de-paris",
+    "forbidden-city",
+    "machu-picchu",
+    "st-peters-basilica",
+    "taj-mahal",
+    "palace-of-versailles",
+    "sagrada-familia",
+    "statue-of-liberty",
+    "eiffel-tower",
+    "empire-state-building",
+    "christ-the-redeemer",
+    "sydney-opera-house",
+    "burj-khalifa"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-ancient-wonders",
+      "name": "The ancient wonders",
+      "from": -3000,
+      "to": -200,
+      "note": "Stonehenge and the Great Pyramid are older than any list. Greek travellers later named seven wonders around the eastern Mediterranean, from the pyramid at Giza to the lighthouse at Alexandria. Only the pyramid still stands."
+    },
+    {
+      "id": "rome-to-angkor",
+      "name": "Rome to Angkor",
+      "from": -199,
+      "to": 1200,
+      "note": "Rome raises the Colosseum and the Pantheon, Constantinople builds Hagia Sophia, and great temples rise at Chichen Itza, Borobudur and Angkor."
+    },
+    {
+      "id": "palaces-temples-and-tombs",
+      "name": "Palaces, temples and tombs",
+      "from": 1201,
+      "to": 1700,
+      "note": "The Alhambra, the Forbidden City, Machu Picchu, St Peter's and the Taj Mahal are built, most of them for kings, emperors or the faithful."
+    },
+    {
+      "id": "modern-landmarks",
+      "name": "Modern landmarks",
+      "from": 1701,
+      "to": 2026,
+      "note": "Iron, steel and concrete make new shapes possible: the Statue of Liberty, the Eiffel Tower, skyscrapers and the Sydney Opera House. In 2007 a worldwide vote named seven new wonders."
+    }
+  ]
+}

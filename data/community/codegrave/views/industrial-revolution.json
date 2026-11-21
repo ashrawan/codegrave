@@ -1,0 +1,91 @@
+{
+  "id": "industrial-revolution",
+  "name": "The Industrial Revolution",
+  "description": "Steam engines, factories, railways and steel: how Britain and then the world moved from hand work to machines.",
+  "category": "technology",
+  "labels": [
+    "engineering"
+  ],
+  "tags": [
+    "industrial revolution",
+    "steam engine",
+    "factories",
+    "railways",
+    "james watt",
+    "machines",
+    "victorian"
+  ],
+  "entries": [
+    "newcomen-engine",
+    "steam-engine",
+    "richard-arkwright",
+    "james-watt",
+    "industrial-revolution",
+    "spinning-jenny",
+    "lunar-society",
+    "wealth-of-nations",
+    "iron-bridge",
+    "george-stephenson",
+    "cotton-gin",
+    "isambard-kingdom-brunel",
+    "krupp",
+    "charles-dickens",
+    "corn-laws",
+    "karl-marx",
+    "stephensons-rocket",
+    "liverpool-and-manchester-railway",
+    "electrical-telegraph",
+    "chartists",
+    "thames-tunnel",
+    "ss-great-britain",
+    "railway-mania",
+    "thomas-edison",
+    "communist-manifesto",
+    "great-exhibition-1851",
+    "broad-street-cholera",
+    "bessemer-process",
+    "transatlantic-telegraph-cable",
+    "meiji-restoration",
+    "suez-canal",
+    "telephone",
+    "incandescent-light-bulb",
+    "steam-turbine"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-steam-engines",
+      "name": "The first steam engines",
+      "from": 1712,
+      "to": 1775,
+      "note": "Newcomen's atmospheric engine pumps mines, Hargreaves's spinning jenny and Arkwright's water frame speed up cotton spinning, and James Watt improves the steam engine with the support of thinkers in the Lunar Society."
+    },
+    {
+      "id": "factories-and-iron",
+      "name": "Factories and iron",
+      "from": 1776,
+      "to": 1829,
+      "note": "The Iron Bridge shows what cast iron can do, Adam Smith's Wealth of Nations explains the new economy, the Corn Laws of 1815 keep grain dear, and Stephenson's Rocket proves steam trains can work."
+    },
+    {
+      "id": "the-railway-age",
+      "name": "The railway age",
+      "from": 1830,
+      "to": 1850,
+      "note": "The Liverpool and Manchester Railway opens, telegraph wires follow the lines, and Brunel builds tunnels and ships. Chartists march for the vote, Railway Mania ruins investors, Dickens writes of the poor, and Marx publishes The Communist Manifesto."
+    },
+    {
+      "id": "steel-and-the-telegraph",
+      "name": "Steel and the telegraph",
+      "from": 1851,
+      "to": 1879,
+      "note": "The Great Exhibition shows British industry to the world. The Bessemer process makes cheap steel, cables and the Suez Canal shrink distances, and the cholera outbreak of 1854 in Broad Street shows the cost of crowded cities."
+    },
+    {
+      "id": "the-second-industrial-revolution",
+      "name": "The second industrial revolution",
+      "from": 1880,
+      "to": 1914,
+      "note": "Steam turbines, electricity and steel take over from the first generation, and industry spreads to Germany, where Krupp grows into a giant, and to Japan, which began to industrialise after the Meiji Restoration."
+    }
+  ]
+}

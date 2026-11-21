@@ -2,9 +2,9 @@
 
 A view is a named way of looking at the timeline. There are two sorts.
 
-- A **community view** is a book: someone's telling of one subject, such as
-  "The race to the Moon" or "The browser wars". It has a title, a hand-picked
-  list of entries, and chapters that tell the story. Anyone can write one.
+- A **community view** is one subject, hand-picked: "Ancient Egypt", "The
+  Space Race", "US Presidents". It has a plain name, a list of entries, and
+  chapters that tell the story in order. Anyone can write one.
 - A **classical view** is a shelf of the encyclopedia: Everything, one view
   per branch of the map (People, Places, … Technology, Computing) and one per
   kind (Rulers, Cities, Browsers). Nobody writes these. The build makes them
@@ -16,9 +16,9 @@ where every result says which sort it is, and their links work like any
 other.
 
 Every view has its own link. A community view's address is its owner and its
-id, as on GitHub: `codegrave.com/?views=codegrave/the-race-to-the-moon`. A
+id, as on GitHub: `codegrave.com/?views=codegrave/the-space-race`. A
 classical view's address is its id: `?views=rulers`. A link can name
-several: `?views=people,codegrave/the-race-to-the-moon`. Each view on the
+several: `?views=people,codegrave/the-space-race`. Each view on the
 timeline gets its own block of rows under its name.
 
 A view only chooses what to show. It never changes a fact. Dates, names,
@@ -52,17 +52,17 @@ the profile if you have none.
 
 ```json
 {
-  "id": "the-race-to-the-moon",
-  "name": "The race to the Moon",
-  "description": "Two superpowers, twelve years, and the machines and people that crossed 384,000 kilometres.",
+  "id": "the-space-race",
+  "name": "The Space Race",
+  "description": "The contest between the United States and the Soviet Union to reach orbit and the Moon.",
   "category": "technology",
-  "labels": ["space", "cold-war"],
-  "tags": ["apollo", "nasa", "sputnik", "moon"],
+  "labels": ["space-race", "exploration"],
+  "tags": ["apollo", "nasa", "sputnik", "moon landing"],
   "entries": ["sputnik-1", "yuri-gagarin", "nasa", "saturn-v", "apollo-11", "neil-armstrong"],
   "checkpoints": [
-    { "id": "first-steps", "name": "First into orbit", "from": 1957, "to": 1961,
+    { "id": "the-first-people-in-space", "name": "The first people in space", "from": 1957, "to": 1961,
       "note": "Sputnik 1 starts the race and Yuri Gagarin becomes the first person in orbit." },
-    { "id": "landing", "name": "The landing", "from": 1962, "to": 1972,
+    { "id": "the-moon-landing", "name": "The Moon landing", "from": 1962, "to": 1972,
       "note": "NASA builds the Saturn V, and Apollo 11 puts Neil Armstrong on the Moon." }
   ],
   "year": 1965
@@ -72,12 +72,12 @@ the profile if you have none.
 | Field | Required | Meaning |
 | --- | --- | --- |
 | `id` | yes | Lower-case letters, digits and hyphens. The file name. Never changes once merged, because links use it. |
-| `name` | yes | The title, at most 60 characters. |
-| `description` | yes | One or two sentences, at most 200 characters. |
+| `name` | yes | The subject, in the plainest words people would search for, at most 60 characters. |
+| `description` | yes | One or two sentences, at most 200 characters. The list shows it as a tooltip and the search reads it. |
 | `category` | no | The one branch of the map the view mostly belongs to. It files the view; it does not limit what the view may hold. |
 | `labels` | no | Up to 4 labels from `data/labels.json`, for what the view is about. |
 | `tags` | no | Up to 8 words people might search for. |
-| `entries` | yes, for a book | The entries the view shows, by id: any base entry, or an entry of your own. The older name `things` still works. |
+| `entries` | yes, for a hand-picked view | The entries the view shows, by id: any base entry, or an entry of your own. The older name `things` still works. |
 | `checkpoints` | no | The chapters: named eras with `id`, `name`, whole-year `from` and `to` (negative before the common era, never 0) and a `note` of at most 400 characters. They must not overlap. They are drawn inside the view's section, in its colour, and clicking one opens its note with what began and ended in those years. |
 | `year` | no | The year to centre on when the timeline is wider than the screen. |
 | `order` | no | `"old"` (the default, oldest on the left) or `"new"`. |
@@ -85,7 +85,7 @@ the profile if you have none.
 | `categories`, `domains`, `level` | no | Instead of `entries`: draw the view from whole kinds or branches of the base, showing the top `level` percent (5 to 100). Such a view grows by itself as entries are added. |
 
 A view holds any number of entries, and its file on the site carries the 200
-best ranked. A good book has 20 to 45.
+best ranked. A good view has 20 to 50.
 
 An entry may be in any number of views. One that is in two views on the
 timeline is drawn in both sections, so every view always shows all of its
@@ -104,8 +104,10 @@ the build refuses it: use the base entry.
 
 ## How views are ranked and found
 
-- The panel lists community views: the ones named in `featured` in
-  `data/editors-choice.json` first, in that order, then the rest by name.
+- The panel lists community views under the editors' topics (`topics` in
+  `data/editors-choice.json`), in the order given there. A view that is in no
+  topic comes after them, by name, under "More". Each row shows the view's
+  name, the years it covers and how many entries it holds.
 - Search finds every view, of both sorts, and every entry. See
   `docs/BUILD.md` for how the search index is ordered.
 - What the community lists most becomes easier to find, but it never changes
@@ -123,15 +125,23 @@ The old link keeps working at the same speed.
 
 ## Editor's choice
 
-`data/editors-choice.json` is the one place that decides what is featured:
+`data/editors-choice.json` decides what a new visitor sees and how the
+panel is ordered:
 
 ```json
-{ "default": ["codegrave/the-race-to-the-moon"], "featured": ["codegrave/the-race-to-the-moon", "codegrave/browser-wars"] }
+{
+  "default": ["codegrave/the-space-race"],
+  "topics": [
+    { "id": "history", "name": "History", "views": ["codegrave/ancient-egypt", "codegrave/world-war-2"] },
+    { "id": "science", "name": "Science", "views": ["codegrave/dinosaurs", "codegrave/the-space-race"] }
+  ]
+}
 ```
 
 `default` is what a new visitor sees: one view id, or a list of up to eight
-shown side by side. `featured` ranks the community views. Only editors
-change this file.
+shown side by side. `topics` are the chips above the list, in order; each
+names its views in the order they are listed, and a view sits in one topic
+at most. Keep the topics few and broad. Only editors change this file.
 
 ## Add a view
 
@@ -142,9 +152,14 @@ the pull request.
 
 ## What makes a good view
 
-- It has a point of view that the title states plainly.
-- It crosses kinds: the people, the places, the events and the things of one
-  story, side by side.
+- It is a subject many people look for, and its name is that subject in the
+  plainest words: "World War II", "Dinosaurs", "Video Games". Not a book
+  title, and no subtitle. Chapter names are plain too: "The first raids",
+  not a phrase that needs explaining.
+- A set that people expect to be complete is complete: every US president,
+  every British monarch.
+- It crosses kinds where the story does: the people, the places, the events
+  and the things of one subject, side by side.
 - Its chapters tell that story in order and name the entries they cover.
 - It does not repeat an existing view under a new name.
 - Every fact in a chapter note is one the entries themselves support. Notes

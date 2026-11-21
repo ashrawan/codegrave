@@ -1,0 +1,100 @@
+{
+  "id": "programming-languages",
+  "name": "Programming Languages",
+  "description": "The languages programmers write in, from assembly, Fortran and C to Python, JavaScript and Rust, in the order they appeared.",
+  "category": "computing",
+  "labels": [
+    "computing"
+  ],
+  "tags": [
+    "programming languages",
+    "coding",
+    "python",
+    "javascript",
+    "c",
+    "java",
+    "software",
+    "developers"
+  ],
+  "entries": [
+    "assembly-language",
+    "fortran",
+    "lisp",
+    "algol",
+    "cobol",
+    "basic",
+    "simula",
+    "apl",
+    "logo-language",
+    "pascal",
+    "c",
+    "prolog",
+    "smalltalk",
+    "sql",
+    "scheme",
+    "ada-language",
+    "objective-c",
+    "cpp",
+    "perl",
+    "haskell",
+    "python",
+    "visual-basic",
+    "lua",
+    "r-language",
+    "java",
+    "php",
+    "javascript",
+    "ruby",
+    "csharp",
+    "scratch",
+    "go",
+    "kotlin",
+    "rust",
+    "typescript",
+    "swift"
+  ],
+  "checkpoints": [
+    {
+      "id": "machine-code-and-assembly",
+      "name": "Machine code and assembly",
+      "from": 1949,
+      "to": 1956,
+      "note": "The first programmers give machines their instructions as numbers. Assembly language, from 1949, lets them write short names instead, one line for each step the machine takes."
+    },
+    {
+      "id": "the-first-high-level-languages",
+      "name": "The first high-level languages",
+      "from": 1957,
+      "to": 1969,
+      "note": "Fortran, Lisp, ALGOL and COBOL show that a computer can understand human-style instructions. BASIC opens programming to students, and each of these languages has descendants still in use."
+    },
+    {
+      "id": "c-and-structured-programming",
+      "name": "C and structured programming",
+      "from": 1970,
+      "to": 1984,
+      "note": "Pascal, C, Smalltalk, SQL and Prolog set out new ways to organise programs and data. C becomes the language of Unix, and with it much of the world's software."
+    },
+    {
+      "id": "object-oriented-languages",
+      "name": "Object-oriented languages",
+      "from": 1985,
+      "to": 1994,
+      "note": "C++ and Objective-C bring object-oriented programming to ordinary work, Perl becomes a tool for gluing systems together, Microsoft's Visual Basic makes Windows programs easy to build, and Python and Haskell start quietly."
+    },
+    {
+      "id": "the-web-era",
+      "name": "The web era",
+      "from": 1995,
+      "to": 2008,
+      "note": "Java, JavaScript, PHP and Ruby all arrive in 1995 as the web creates demand for new languages. Microsoft answers Java with C#, and Scratch, from MIT, teaches children to program with blocks."
+    },
+    {
+      "id": "modern-languages",
+      "name": "Modern languages",
+      "from": 2009,
+      "to": 2026,
+      "note": "Go, Rust, Swift, Kotlin and TypeScript aim at safety and speed. Each fixes a pain point of an older language, and none has replaced the old ones, which still run much of the world's software."
+    }
+  ]
+}

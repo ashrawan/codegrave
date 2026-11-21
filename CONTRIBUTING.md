@@ -6,7 +6,7 @@ once without getting in each other's way. This page says how.
 ## Issues or pull requests?
 
 - **Open an issue** to report a bug, to point out a wrong fact when you
-  cannot fix it yourself, or to suggest an idea, a featured view, a category
+  cannot fix it yourself, or to suggest an idea, a view for the list, a category
   or an era. For anything bigger than one file, such as a change to how the
   page works or to the data rules, open an "Idea or proposal" issue first
   and agree on the approach before writing code.
@@ -57,7 +57,7 @@ an assistant that copied one; summaries and notes are in your own words.
 | Add an entry of your own, for a view | `data/community/<your-github-name>/entries/<id>.json` | "Your own entries" in `docs/VIEWS.md` |
 | Add an icon or image | `data/media/`, or a Wikimedia Commons address, named on the entry | "Icons and images" in `docs/DATA_RULES.md` |
 | Change the page | `site/` | `AGENTS.md`; open an issue first |
-| Suggest a featured view, a kind or a label | Open an issue | Editors decide |
+| Suggest a view for the list, a topic, a kind or a label | Open an issue | Editors decide |
 
 Facts need sources. A correction without a source cannot be merged. Images
 need an author and a free licence; we only show pictures we are allowed to

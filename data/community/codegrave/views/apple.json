@@ -1,0 +1,90 @@
+{
+  "id": "apple",
+  "name": "Apple",
+  "description": "Apple from a garage in 1976 to the iPhone and its own chips: the computers, the phones and the products it left behind.",
+  "category": "computing",
+  "labels": [
+    "business",
+    "computing"
+  ],
+  "tags": [
+    "apple",
+    "iphone",
+    "mac",
+    "steve jobs",
+    "ipod",
+    "ipad",
+    "macintosh"
+  ],
+  "entries": [
+    "steve-wozniak",
+    "steve-jobs",
+    "tim-cook",
+    "apple-inc",
+    "apple-i",
+    "apple-ii",
+    "apple-lisa",
+    "macintosh",
+    "classic-mac-os",
+    "objective-c",
+    "hypercard",
+    "next-computer",
+    "powerbook",
+    "quicktime",
+    "powerpc",
+    "apple-newton",
+    "imac-g3",
+    "macos",
+    "ipod",
+    "safari",
+    "itunes-store",
+    "iphone",
+    "iphone-os",
+    "macbook-air",
+    "app-store",
+    "ipad",
+    "imessage",
+    "siri",
+    "swift",
+    "apple-watch",
+    "apple-music",
+    "apple-m1"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-apple-ii-and-the-macintosh",
+      "name": "The Apple II and the Macintosh",
+      "from": 1976,
+      "to": 1984,
+      "note": "Steve Jobs and Steve Wozniak founded Apple in 1976. The Apple I was a board for hobbyists, the Apple II was a hit, and the Apple Lisa and the Mac, with the original Mac OS, brought a mouse and windows to ordinary users."
+    },
+    {
+      "id": "without-steve-jobs",
+      "name": "Without Steve Jobs",
+      "from": 1985,
+      "to": 1996,
+      "note": "Jobs left Apple in 1985 and started NeXT Computer, whose software used Objective-C. Apple tried the PowerBook, the Newton and PowerPC chips, and HyperCard and QuickTime had loyal fans, but it lost ground and in 1996 bought NeXT."
+    },
+    {
+      "id": "imac-and-ipod",
+      "name": "iMac and iPod",
+      "from": 1997,
+      "to": 2006,
+      "note": "Jobs returned in 1997, and the bright iMac G3 of 1998 signalled a new start. Mac OS X, now macOS, built on NeXT's work, and the iPod and the iTunes Store changed how people bought music. Safari arrived in 2003."
+    },
+    {
+      "id": "iphone-and-ipad",
+      "name": "iPhone and iPad",
+      "from": 2007,
+      "to": 2019,
+      "note": "The iPhone and its iOS made the phone a pocket computer, and the MacBook Air and the iPad followed. Siri and iMessage came in 2011, the Swift language in 2014, and the Apple Watch and Apple Music in 2015. Jobs died in 2011."
+    },
+    {
+      "id": "apple-silicon",
+      "name": "Apple silicon",
+      "from": 2020,
+      "to": 2026,
+      "note": "The Apple M1 chip put Apple's own processor into the Mac in 2020, ending years of reliance on Intel and showing how far the company had come since the garage."
+    }
+  ]
+}

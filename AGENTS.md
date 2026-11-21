@@ -18,8 +18,9 @@ The data has two layers:
 - **The base** (`data/base/`): one reviewed file per entry. Every view draws
   on it, so a fact is written once.
 - **Community folders** (`data/community/<github-name>/`): what one person or
-  group publishes. Their views are "books": a title, a hand-picked list of
-  entries, and chapters. The folder `codegrave` belongs to the editors.
+  group publishes. A view is one subject under a plain name ("Ancient Egypt",
+  "US Presidents", "Video Games"): a hand-picked list of entries, and
+  chapters. The folder `codegrave` belongs to the editors.
 
 ## Commands
 
@@ -37,9 +38,9 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | You want to change | Edit | Do not edit |
 | --- | --- | --- |
 | A fact about an entry | `data/base/<kind>/<id>.json` (one file) | `site/data/` (generated) |
-| A view (a book) | `data/community/<owner>/views/<id>.json` (one file) | another person's folder |
+| A view | `data/community/<owner>/views/<id>.json` (one file) | another person's folder |
 | An entry the base lacks, for your own view | `data/base/` in the same pull request, or `data/community/<owner>/entries/<id>.json` | |
-| Featured or default views | `data/editors-choice.json` | |
+| The default views, and the topics the panel lists views under | `data/editors-choice.json` | |
 | The map (branches and their kinds, which are the folders of `data/base/`) | `data/categories.json` | |
 | Labels | `data/labels.json` | |
 | An old address that must keep working | `data/redirects.json` | |
@@ -65,7 +66,10 @@ The build makes them from `data/categories.json`.
    been merged; if something must move, add the old id to
    `data/redirects.json`.
 2. A view only chooses what to show. Never put dates, names or ranks in a
-   view. Chapter notes tell the story; the facts live on the entries.
+   view. Chapter notes tell the story; the facts live on the entries. Name a
+   view after its subject in the words people search for ("World War II",
+   "Dinosaurs"), never with a book title or a subtitle, and name its chapters
+   the same way.
 3. Never invent a date. Use the `precision` you can support (`year` and
    `circa` are fine) and list the source. Leave `"verified": false` unless
    every date in the file was checked against a listed source.
@@ -193,15 +197,19 @@ How the page is put together:
   needs. The views on the timeline sit as pills in a strip under the years
   (`#dock`): drag to reorder, the dot picks the colour, the cross removes
   it, "Add view" opens the panel.
-- **The views pane** is search, then a row of branch chips
-  (`drawBranches()`: All, then each branch that has community views), then
-  the list of community views in the order `boot.json` gives them (featured
-  first, then by name), then the filters: the year range (`state.span`) and
-  how much to show (`state.level`). Only community views are listed.
-  Classical views are found by the search, and every result carries an icon
-  that says which sort it is. Each row has a thumbnail made by the build
+- **The views pane** is search, then a row of chips (`drawChips()`: All,
+  then the editors' topics from `data/editors-choice.json`, today History,
+  Science, Technology and Culture), then the list of community views in the
+  order `boot.json` gives them (topic by topic; under All each topic has a
+  small heading), then the filters: the year range (`state.span`) and how
+  much to show (`state.level`). Only community views are listed. Classical
+  views are found by the search, where every result carries an icon that
+  says which sort it is. A row is a thumbnail made by the build
   (`scripts/thumb.mjs`), which is also the switch that puts the view on the
-  timeline.
+  timeline, then the name and one quiet line (`viewSub()`: the years the view
+  covers and how many entries it holds). The description is the row's tooltip
+  and is searched; it is not printed in the list. Keep the row to those two
+  lines.
 - **Time**, flat, is a straight scale left to right (`L.xOf`, `L.tOf`) with
   the years on the fixed axis at the bottom. `axisTicks()` picks round steps
   from one year to a billion; there is no year 0; deep time is labelled ka,

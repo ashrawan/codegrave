@@ -1,0 +1,89 @@
+{
+  "id": "mobile-phones",
+  "name": "Mobile Phones",
+  "description": "From the brick-sized DynaTAC to the smartphone: the handsets, networks and apps that put a computer in every pocket.",
+  "category": "computing",
+  "labels": [
+    "computing"
+  ],
+  "tags": [
+    "mobile phones",
+    "smartphones",
+    "iphone",
+    "nokia",
+    "android",
+    "blackberry",
+    "cell phones"
+  ],
+  "entries": [
+    "martin-cooper",
+    "amps",
+    "dynatac",
+    "gsm",
+    "2g",
+    "sms",
+    "ibm-simon",
+    "symbian",
+    "iridium-network",
+    "wap",
+    "gprs",
+    "nokia-3310",
+    "3g",
+    "mms",
+    "nokia-1100",
+    "razr-v3",
+    "bbm",
+    "nokia-n95",
+    "iphone",
+    "iphone-os",
+    "blackberry-curve",
+    "app-store",
+    "android",
+    "htc-dream",
+    "whatsapp",
+    "webos",
+    "lte",
+    "samsung-galaxy-s",
+    "windows-phone",
+    "wechat",
+    "siri",
+    "5g"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-mobile-phones",
+      "name": "The first mobile phones",
+      "from": 1983,
+      "to": 1993,
+      "note": "AMPS was an early analogue network in the United States, and Motorola's DynaTAC was the first handheld mobile phone sold. GSM and 2G brought digital calls across Europe, and in 1992 the first text messages travelled by SMS."
+    },
+    {
+      "id": "texting-and-the-first-smartphone",
+      "name": "Texting and the first smartphone",
+      "from": 1994,
+      "to": 1999,
+      "note": "The IBM Simon had a touchscreen and email, and is often called the first smartphone. Nokia rose, Symbian was a software platform for phones, and WAP offered early web pages. The Iridium network linked phones by satellite."
+    },
+    {
+      "id": "the-nokia-years",
+      "name": "The Nokia years",
+      "from": 2000,
+      "to": 2006,
+      "note": "The Nokia 3310 and the Nokia 1100 became everyday objects around the world. GPRS and 3G brought data, MMS sent pictures, the Motorola Razr was sleek, and BBM kept BlackBerry users in touch."
+    },
+    {
+      "id": "iphone-and-android",
+      "name": "iPhone and Android",
+      "from": 2007,
+      "to": 2010,
+      "note": "The BlackBerry Curve and Nokia N95 were popular when the iPhone and iOS arrived in 2007. Then the HTC Dream ran Android, and webOS, LTE and the Samsung Galaxy S were part of the scramble."
+    },
+    {
+      "id": "apps-and-5g",
+      "name": "Apps and 5G",
+      "from": 2011,
+      "to": 2026,
+      "note": "Windows Phone and others faded while Android and iOS won. WhatsApp and WeChat became the main way many people talk, Siri taught phones to listen, and 5G networks began to roll out in 2019."
+    }
+  ]
+}
