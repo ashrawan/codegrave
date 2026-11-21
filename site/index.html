@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>codegrave — everything born here dies, or becomes something else</title>
-<meta name="description" content="One scrolling timeline of everything that begins and ends: people, places, wars, books, inventions, species and planets, from first to last.">
+<meta name="description" content="One timeline of everything that begins and ends, drawn as a road you travel through time: people, places, wars, books, inventions, species and planets, from first to last.">
 <meta property="og:title" content="codegrave">
-<meta property="og:description" content="Nothing ships forever. One scrolling timeline of everything.">
+<meta property="og:description" content="Nothing ships forever. One timeline of everything.">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='6' fill='%23faf8f3' stroke='none'/%3E%3Cpath d='M3 27.5H29' stroke='%23121211' stroke-width='1.8'/%3E%3Cpath d='M6.5 27.5V12.5a6.5 6.5 0 0 1 13 0V27.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M21.5 27.5V20a3.5 3.5 0 0 1 7 0v7.5' stroke='%23121211' stroke-width='1.8' opacity='.55'/%3E%3Cpath d='M10 14.5l3 2.5-3 2.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M14 22.5h3.5' stroke='%239a6c00' stroke-width='2.6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,13 +46,8 @@
 </header>
 
 <main id="stage">
-  <div id="canvas" aria-label="Timeline">
-    <div id="bands"></div>
-    <svg id="lines" aria-hidden="true"></svg>
-    <div id="labels"></div>
-  </div>
   <!-- The timeline in depth: the ground on a canvas, the year and the views at the top left, the names standing on the road -->
-  <div id="road" aria-label="Timeline" hidden>
+  <div id="road" aria-label="Timeline">
     <canvas id="road-cv" aria-hidden="true"></canvas>
     <div id="road-head"><div id="road-year" aria-hidden="true"></div><p id="road-unit" class="fine" hidden></p><div id="road-views"></div></div>
     <div id="road-labels"></div>
@@ -95,7 +90,6 @@
         <div id="level" class="seg" role="radiogroup" aria-labelledby="level-cap">
           <button type="button" role="radio" data-lv="10">Landmarks</button><button type="button" role="radio" data-lv="30">Notable</button><button type="button" role="radio" data-lv="60">Most</button><button type="button" role="radio" data-lv="100">All</button>
         </div>
-        <p id="fit-hint" class="fine" hidden>To see the rest, drag a section taller, or use Expand (bottom right).</p>
       </div>
     </section>
   </div>
@@ -103,40 +97,29 @@
   <div id="p-thing" class="pane" hidden></div>
   <!-- One era: what began and ended in it -->
   <div id="p-era" class="pane" hidden></div>
-  <!-- Saving the selection as a view -->
 </aside>
 
+<!-- The bar on the right: the whole span of years upright, the reader's marker, reverse at its head and play at its foot -->
 <div id="axisbar" role="group" aria-label="Years">
-  <div id="axis" tabindex="0" role="slider" aria-label="Move through time"><div id="axis-in"><div id="axis-win"></div><div id="ticks"></div><div id="playhead"><span></span><i></i></div></div></div>
-  <span id="axis-unit" aria-live="polite" hidden></span>
-  <div class="ends l">
-    <button id="play" class="abtn solid" type="button" aria-label="Play the timeline"><svg width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg></button>
-    <button id="stop" class="abtn" type="button" aria-label="Stop and show everything" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="ends head">
+    <button id="reverse" class="abtn" type="button" aria-label="Turn round and face the past"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4v15M20 15l-4 4-4-4M8 20V5M12 9 8 5 4 9"/></svg></button>
   </div>
-  <div class="ends r">
-    <button id="fit" class="abtn" type="button" aria-pressed="false">
-        <svg class="i-fit" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M12 3v5M9.5 5.5 12 8l2.5-2.5M12 21v-5M9.5 18.5 12 16l2.5 2.5"/></svg>
-        <svg class="i-expand" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M12 8V3M9.5 5.5 12 3l2.5 2.5M12 16v5M9.5 18.5 12 21l2.5-2.5"/></svg>
-      </button>
-    <button id="reverse" class="abtn" type="button" aria-label="Show newest on the left"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h15M15 4l4 4-4 4M20 16H5M9 12l-4 4 4 4"/></svg></button>
+  <div id="axis" tabindex="0" role="slider" aria-orientation="vertical" aria-label="Move through time"><div id="axis-in"><div id="axis-win"></div><div id="ticks"></div><div id="playhead"><span></span><i></i></div></div></div>
+  <div class="ends foot">
+    <button id="play" class="abtn solid" type="button" aria-label="Play: travel along the road"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg></button>
   </div>
 </div>
 
-<!-- The views on the timeline, one pill each, under the years -->
+<!-- The views on the timeline, one pill each, along the bottom -->
 <div id="dock" role="group" aria-label="Views on the timeline">
   <div id="pills"></div>
   <span class="dock-tools">
     <button id="shuffle" class="ibtn sm" type="button" aria-label="Shuffle colours" title="Shuffle colours"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5c4 0 6 10 10 10H21M18 14l3 3-3 3M3 17h3.5c1.6 0 2.8-1.6 3.9-3.6M13.6 9.6C14.7 8.1 15.8 7 16.5 7H21M18 4l3 3-3 3"/></svg></button>
-    <button id="mode" class="ibtn sm" type="button" aria-pressed="false" aria-label="Show the flat timeline" title="Flat timeline"><svg class="to-flat" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h13M3 12h18M3 17h9"/><circle cx="16" cy="7" r="1.6"/><circle cx="12" cy="17" r="1.6"/></svg><svg class="to-road" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.5 4 4 20M14.5 4 20 20M12 5v2.5M12 11v3M12 17.5V20"/></svg></button>
     <button id="save-mine" class="ibtn sm" type="button" aria-label="Save as your view" title="Save as your view"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z"/></svg></button>
   </span>
   <div id="swatches" role="listbox" aria-label="Colour" hidden></div>
 </div>
 
-<!-- The timeline goes on past the edge of the screen -->
-<div id="edge-l" class="edge l" aria-hidden="true" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6l-6 6 6 6"/></svg></div>
-<div id="edge-r" class="edge r" aria-hidden="true" hidden><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 6l6 6-6 6"/></svg></div>
-<div id="rguide" hidden></div>
 <div id="info" role="dialog" aria-label="How to read the timeline" hidden></div>
 
 <script type="module" src="app.js"></script>

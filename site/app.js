@@ -1,4 +1,5 @@
-/* codegrave — one scrolling timeline of everything, from first to last.
+/* codegrave — one timeline of everything, from first to last, drawn in
+   depth as a road that time runs along.
    Plain JavaScript modules, no framework. The page never loads the whole
    dataset: it starts from data/boot.json and fetches one small ready-made
    file per action (a view, a detail shard, the search index), all written
@@ -19,9 +20,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     { name: 'Most', pct: 60 }, { name: 'All', pct: 100 },
   ];
   const MAX_ROWS = 160;         // the most lines drawn at once
-  const CARD_RANK = 10;        // entries in the top tenth of their peers get a card
-  const MIN_LINE = 8;          // the shortest a line is drawn, in pixels, however brief its life
-  const MAX_SCREENS = 4, MAX_SCREENS_PHONE = 6;   // the widest a long view is fitted to
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
     succeeded_by: 'succeeded by', forked_from: 'forked from', merged_into: 'merged into',
@@ -39,26 +37,11 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     in: 'includes', part_of: 'has part', member_of: 'has member', made_by: 'maker of',
     parent: 'parent of', spouse: 'married to', about: 'subject of', related: 'related to',
   };
-  // Drawn between lines. A branch leaves the older line and starts the newer
-  // one. A handover leaves a line and joins the one that carries on. Every
-  // other link is only listed in the panel.
-  const BRANCH = ['forked_from', 'spun_off_from', 'version_of', 'extends', 'built_on'];
-  const HANDOVER = ['succeeded_by', 'merged_into', 'open_sourced_as'];
   const EVENT_TITLES = { released: 'Release', changed_hands: 'Changed hands', milestone: 'Milestone', deprecated: 'End announced' };
   const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   // The words for an entry whose branch is unknown, and for text about many kinds at once.
   const NEUTRAL = { born: 'Began', ended: 'Ended', alive: 'Still going', dead: 'Ended', from: 'begun in' };
-  const TOP = 52;   // height of the fixed top bar
-  // Height of what is fixed along the bottom: the axis, and the strip of views under it (hidden on a phone while the panel is open).
-  const bottomH = () => $('axisbar').offsetHeight + $('dock').offsetHeight;
-  // On a phone the open panel is a sheet over the lower half; what is drawn fits above it.
-  const PHONE = '(max-width: 699px)';
-  const sheetH = () => (!$('side').hidden && matchMedia(PHONE).matches ? $('side').offsetHeight : 0);
-  // The timeline scrolls inside #stage, both ways, so the page itself always lays out at the width of the screen.
-  const S = () => $('stage');
-  const sx = () => S().scrollLeft, sy = () => S().scrollTop;
-  const viewH = () => S().clientHeight;
-  const stageTo = (o) => S().scrollTo(o);
+  const PHONE = '(max-width: 699px)';    // on a phone the open panel is a sheet over the lower half
 
   const today = new Date();
   const NOW_YEAR = today.getFullYear();
@@ -415,21 +398,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     return !v.cats.size && !v.doms.size;
   }
 
-  // The width of an era title as drawn (uppercase, letter-spaced name, then the years),
-  // measured with the page's own font so a title never runs past the edge.
-  let measureCtx = null;
-  function eraTitleWidth(c) {
-    if (!measureCtx) measureCtx = document.createElement('canvas').getContext('2d');
-    const font = getComputedStyle(document.body).fontFamily;
-    measureCtx.font = `600 11px ${font}`;
-    const name = c.name.toUpperCase();
-    const nameW = measureCtx.measureText(name).width + name.length * 0.88;
-    measureCtx.font = `400 11px ${font}`;
-    const yearsW = measureCtx.measureText(c.years).width;
-    return Math.ceil(2 + 8 + nameW + 7 + yearsW + 8 + 4);
-  }
+  let measureCtx = null;      // a canvas to measure writing with
 
-  // The named eras. Each belongs to a view and sits in its section, in its colour.
+  // The named eras (chapters). Each belongs to a view and is drawn across its lane, in its colour.
   // Era years are whole written years; `a` and `b` are where they start and end on the line.
   function viewEras(v) {
     return (v.checkpoints || []).map((c) => ({ ...c, view: v, key: v.id + '/' + c.id, a: lineYear(c.from), b: lineYear(c.to) + 1, years: spanText(c.from, c.to) }))
@@ -452,13 +423,10 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   const state = {
     views: [],                // ids of the views on the timeline, in the order they were added
     colors: new Map(),        // view id -> palette index
-    level: 100, order: 'old',  // everything that fits, oldest at the top
+    level: 100, order: 'old',  // everything that fits; 'old': the reader faces the future, 'new': the past
     pinned: new Set(), open: null, pane: 'views', era: null, trail: [],
     span: null,               // [from, to] written years when the reader narrows the timeline
-    sizes: new Map(),         // view id -> height in pixels the reader dragged its section's rows to
-    fit: true,                // sections share the height of the screen; false: each takes what it needs
     topic: '',                // the chip the list of views is narrowed to, '' for all
-    mode: 'road',             // 'road': the timeline in depth; 'flat': left to right (?m=flat)
   };
   let L = null;               // the current layout
 
@@ -480,17 +448,17 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (L || !state.views.length) drawResults();
     return loadView(real).then((got) => {
       pending.delete(real);
-      if (got && addView(got)) { if (done) done(got); else { changed(); scrollToView(got); } spansNote(); }
+      if (got && addView(got)) { if (done) done(got); else { changed(); roadToView(got); } spansNote(); }
       else { if (!got) note(`“${viewById.get(real)?.name || real}” could not be loaded. Try again in a moment.`); drawResults(); }
       return got;
     });
   }
   function removeView(id) {
     state.views = state.views.filter((v) => v !== id);
-    state.colors.delete(id); state.sizes.delete(id);
+    state.colors.delete(id);
   }
   function setViews(ids) {
-    state.views = []; state.colors.clear(); state.sizes.clear();
+    state.views = []; state.colors.clear();
     for (const id of ids) addView(alias.get(id) || id);
     if (state.views.length === 1) {
       const v = viewById.get(state.views[0]);
@@ -518,7 +486,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (q.has('lv')) state.level = clamp(Number(q.get('lv')) || 100, 5, 100);
     state.span = readSpan(q.get('yr'));
     if (q.get('o') === 'old') state.order = 'old'; else if (q.get('o') === 'new') state.order = 'new';
-    if (q.get('h') === 'expand') state.fit = false;
     const cs = (q.get('c') || '').split(',').map(Number);
     if (cs.length === state.views.length && cs.every((n) => n >= 0 && n < 8) && new Set(cs).size === cs.length) state.views.forEach((id, i) => state.colors.set(id, cs[i]));
     return true;
@@ -529,18 +496,14 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (state.level !== 100) q.set('lv', state.level);
     if (state.order === 'new') q.set('o', 'new');
     if (state.span) q.set('yr', state.span.join('-'));
-    if (!state.fit) q.set('h', 'expand');
-    if (state.mode === 'flat') q.set('m', 'flat');
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
     history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
   }
 
-  // ---------------------------------------------------------------- layout
-  // Time runs left to right with the years along the bottom. Each view on the
-  // timeline owns a block of rows, one row per entry. An entry that is in two
-  // views is drawn in both, so every view shows all of its own entries.
-  const PAD_L = 84, PAD_PHONE = 72;  // room at the ends of the axis for play and reverse
-  // What is drawn, and over which years: the same for the flat timeline and the road.
+  // ---------------------------------------------------------------- what is drawn
+  // The views on the timeline, their entries and the years they cover. An
+  // entry that is in two views is drawn in both, so every view shows all of
+  // its own entries.
   function chosen() {
     const groupsOf = new Map();   // entry -> the views on the timeline that hold it
     const selected = state.views.map((id) => viewById.get(id));
@@ -550,8 +513,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const t = byId.get(id);
       if (t && !groupsOf.has(t)) join(t, selected.find((v) => v.id === t.home) || selected.find((v) => holds(v, t)) || selected[selected.length - 1]);
     }
-    // Rows are capped so the page stays fast at any data size: the best ranked come first.
-    // The cap counts rows, so an entry drawn in two views counts twice.
+    // Lines are capped so the page stays fast at any data size: the best ranked come first.
+    // The cap counts lines, so an entry drawn in two views counts twice.
     const ranked = [...groupsOf.keys()].sort((a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score));
     const rowsOf = new Map(selected.map((v) => [v, new Set()]));
     let rowCount = 0;
@@ -594,149 +557,17 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const inSpan = (t) => (t.lead ?? t.born) < tMax && (t.end ?? NOW) >= tMin;
     return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
   }
-  function layout() {
-    const SW = $('stage').clientWidth;
-    const narrow = SW < 700;
-    const newest = state.order === 'new';
-    const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan } = chosen();
-    const pad = narrow ? PAD_PHONE : PAD_L;
-    // A straight scale: short views fill the screen, middling ones get at least
-    // 9 pixels a year, and long ones are fitted to a few screens at most.
-    const avail = SW - 2 * pad, years = tMax - tMin;
-    // A view with few lines gets fewer screens, so it is not mostly empty years.
-    const screens = clamp(all.length / 10, 1.5, narrow ? MAX_SCREENS_PHONE : MAX_SCREENS);
-    const ppy = Math.max(avail / years, Math.min(narrow ? 10 : 9, (avail * screens) / years));
-    const W = Math.round(2 * pad + years * ppy);
-    const xOf = (t) => Math.round((pad + (newest ? tMax - clamp(t, tMin, tMax) : clamp(t, tMin, tMax) - tMin) * ppy) * 10) / 10;
-    const tOf = (x) => clamp(newest ? tMax - (x - pad) / ppy : tMin + (x - pad) / ppy, tMin, tMax);
-
-    // A view's era titles sit at the top of its section, on as many lines as they need.
-    const placeEras = (list) => {
-      const out = list.filter((c) => c.b > tMin && c.a < tMax).map((c) => {
-        const a = xOf(c.a), b = xOf(Math.min(c.b, tMax));
-        return { c, x: Math.min(a, b), w: Math.max(2, Math.abs(a - b)), tw: eraTitleWidth(c) };
-      });
-      const lineEnds = [];
-      for (const e of out) {
-        const x = clamp(e.x + 4, 4, W - e.tw - 4);
-        let n = lineEnds.findIndex((end) => end < x - 8);
-        if (n < 0) { n = lineEnds.length; lineEnds.push(0); }
-        lineEnds[n] = x + e.tw; e.tx = x; e.line = n;
-      }
-      return { list: out, lines: lineEnds.length };
-    };
-    const eras = [];            // every era belongs to a view and sits in its section
-    const eraH = 8;
-
-    // Rows: inside a block, by kind, then by start, with linked entries side by side.
-    const drawn = (l) => BRANCH.includes(l.type) || HANDOVER.includes(l.type);
-    const rowH = (t) => (t.rank < CARD_RANK ? 62 : 34);
-    const byRank = (a, b) => (state.pinned.has(b.id) - state.pinned.has(a.id)) || (a.rank - b.rank) || (b.score - a.score);
-    const secs = [];
-    for (const g of selected) {
-      // A community view reads as a story, in order of time; a classical view groups by kind first.
-      const story = g.type !== 'classical';
-      const mine = all.filter((t) => rowsOf.get(g).has(t) && inSpan(t)).sort((a, b) => (story ? 0 : a.cat.i - b.cat.i) || ((a.lead ?? a.born) - (b.lead ?? b.born)));
-      if (!mine.length) continue;
-      const set = new Set(mine), seen = new Set(), ordered = [];
-      const near = (t) => [
-        ...t.links.filter(drawn).map((l) => byId.get(l.to)),
-        ...t.inbound.filter(drawn).map((l) => byId.get(l.from)),
-      ].filter((o) => o && set.has(o)).sort((a, b) => a.born - b.born);
-      const visit = (t) => { if (seen.has(t)) return; seen.add(t); ordered.push(t); near(t).forEach(visit); };
-      mine.forEach(visit);
-      const own = placeEras(viewEras(g));
-      const head = 30 + (own.list.length ? own.lines * 26 + 8 : 0);
-      secs.push({ g, ordered, own, head, need: ordered.reduce((n, t) => n + rowH(t), 0) });
-    }
-
-    // How tall each section's rows may be. Expand: everything, or the height the
-    // reader dragged it to. Fit: the sections share the height of the screen,
-    // each taking what it needs up to an even share; a dragged section keeps its height.
-    // The rows a section keeps for a given height: its best ranked, in their usual order.
-    const fill = (c) => {
-      c.rows = c.ordered; c.used = c.need;
-      if (c.budget >= c.need) return;
-      const keep = new Set();
-      let used = 0;
-      for (const t of [...c.ordered].sort(byRank)) {
-        if (keep.size && used + rowH(t) > c.budget) continue;
-        keep.add(t); used += rowH(t);
-      }
-      c.rows = c.ordered.filter((t) => keep.has(t)); c.used = used;
-    };
-    if (state.fit) {
-      const room = viewH() - (eraH + 6) - 12 - secs.reduce((n, c) => n + c.head + 24, 0);
-      let pool = room, open = [];
-      for (const c of secs) {
-        const want = state.sizes.get(c.g.id);
-        if (want != null) { c.budget = Math.min(want, c.need); pool -= c.budget; } else open.push(c);
-      }
-      while (open.length) {
-        const share = Math.max(0, pool) / open.length;
-        const small = open.filter((c) => c.need <= share);
-        if (!small.length) { for (const c of open) c.budget = share; break; }
-        for (const c of small) { c.budget = c.need; pool -= c.need; }
-        open = open.filter((c) => c.need > share);
-      }
-      secs.forEach(fill);
-      // Rows come in whole heights, so hand what is left over to sections that want more.
-      let spare = room - secs.reduce((n, c) => n + c.used, 0);
-      for (const c of secs) {
-        if (spare < 34 || c.used >= c.need || state.sizes.has(c.g.id)) continue;
-        const was = c.used;
-        c.budget = c.used + spare; fill(c); spare -= c.used - was;
-      }
-    } else {
-      for (const c of secs) { c.budget = state.sizes.get(c.g.id) ?? Infinity; fill(c); }
-    }
-
-    const groups = [], shown = [];
-    const dir = newest ? -1 : 1, lo = pad / 2, hi = W - pad / 2;
-    let y = eraH + 6;
-    for (const c of secs) {
-      const { g, ordered, own, rows } = c;
-      const grp = { view: g, y, n: rows.length, total: ordered.length, eras: own.list };
-      groups.push(grp);
-      y += 30;
-      if (own.list.length) { grp.eraY = y + 2; y += own.lines * 26 + 8; }
-      grp.rowsY = y;
-      for (const t of rows) {
-        const major = t.rank < CARD_RANK;
-        const p = { t, major, group: g, y: Math.round(y + (major ? 36 : 22)) };
-        p.alive = t.end == null;
-        p.xBorn = xOf(t.born); p.xEnd = xOf(t.end ?? NOW);
-        // However brief, a line stays long enough to see: it runs on past its
-        // end, or, at the edge of the years, starts a little earlier.
-        if (Math.abs(p.xEnd - p.xBorn) < MIN_LINE) {
-          p.short = true;
-          p.xEnd = p.xBorn + dir * MIN_LINE;
-          if (p.xEnd > hi || p.xEnd < lo) { p.xEnd = clamp(p.xEnd, lo, hi); p.xBorn = p.xEnd - dir * MIN_LINE; }
-        }
-        p.xL = Math.min(p.xBorn, p.xEnd); p.xR = Math.max(p.xBorn, p.xEnd);
-        shown.push(p);
-        y += rowH(t);
-      }
-      grp.end = y + 6;
-      y += 18;
-    }
-    const height = Math.max(Math.round(y + 12), viewH());
-    L = { W, SW, narrow, height, ppy, tMin, tMax, fitMin, fitMax, autoMin, xOf, tOf, newest, shown, groups, eras, eraH,
-      at: new Map([...shown].reverse().map((p) => [p.t.id, p])), total: groupsOf.size };
-    return L;
-  }
-
-  // The years along the axis: a step that suits the span, labels that never
+  // The years along the bar: a step that suits the span, labels that never
   // touch, BCE marked, and deep time in thousands, millions or billions of years.
-  // `ppy` is pixels per year; `gap` is the room a label needs along the axis (its width, when not given).
-  function axisTicks(ppy = L.ppy, gap = 0) {
+  // `ppy` is pixels per year; `gap` is the room a label needs along the bar.
+  function axisTicks(ppy, gap) {
     const { tMin, tMax } = L;
     const atNow = tMax >= NOW - 0.01;
     const yMin = writtenOf(tMin), yMax = writtenOf(tMax - 1e-9);
     const width = (s) => s.length * 7 + 18;
     const widest = Math.max(width(axisText(yMin)), width(axisText(yMax, 0, yMin < 0)), width(axisText(Math.round((yMin + yMax) / 2))), 44);
     // Steps grow 1, 2, 5, 10, 25, 50, 100, 250, 500, 1,000 … until labels have room.
-    let step = niceStep((gap || widest) / ppy);
+    let step = niceStep(gap / ppy);
     if (!Number.isInteger(step)) step = Math.ceil(step / 5) * 5;
     // A minor tick between labels, where there is room for it.
     const minor = [5, 4, 2].map((d) => step / d).find((s) => Number.isInteger(s) && s * ppy >= 7) || 0;
@@ -755,268 +586,41 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
 
   // ---------------------------------------------------------------- render
-  function render(keepX) {
+  function render() {
     if (!state.views.length) return renderEmpty();
-    if (state.mode === 'road') return renderRoad();
-    const anchor = keepX ?? (L && L.W > L.SW ? L.tOf(sx() + L.SW / 2) : null);
-    layout();
-    const { W, height, xOf, newest, shown, tMin, tMax, eras } = L;
-    const dx = newest ? -1 : 1;                  // +1 when later times are further right
-    $('canvas').style.width = W + 'px';
-    $('canvas').style.height = height + 'px';
-    $('canvas').classList.toggle('has-open', !!state.open && L.at.has(state.open));
-
-    // The year grid, the line for today, and the years on the axis.
-    let html = '';
-    const ax = axisTicks();
-    let axis = '';
-    const xNow = xOf(NOW);
-    for (const yr of ax.ticks) {
-      const x = xOf(lineYear(yr));
-      html += `<div class="rule" style="left:${x}px"></div>`;
-      if (ax.atNow && Math.abs(x - xNow) < ax.widest * 0.75) { axis += `<i class="tk big" style="left:${x}px"></i>`; continue; }
-      axis += `<span class="yr" style="left:${x}px">${esc(axisText(yr, ax.step, ax.ce))}</span>`;
-    }
-    for (const yr of ax.marks) axis += `<i class="tk" style="left:${xOf(lineYear(yr))}px"></i>`;
-    if (ax.atNow) { html += `<div class="rule now" style="left:${xNow}px"></div>`; axis += `<span class="yr now" style="left:${xNow}px">Today</span>`; }
-    const unit = $('axis-unit');
-    unit.textContent = ax.units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`).join(' · ');
-    unit.hidden = !ax.units.length;
-    // Each view's own eras: a band down its section and a title in its colour.
-    for (const g of L.groups) {
-      const c = `--c:var(--p${state.colors.get(g.view.id) % 8})`;
-      for (const e of g.eras) {
-        html += `<div class="band own" data-era="${esc(e.c.key)}" style="${c};left:${e.x}px;width:${e.w}px;top:${g.y + 8}px;height:${g.end - g.y - 8}px"></div>`;
-        html += `<button type="button" class="band-title own" data-era="${esc(e.c.key)}" style="${c};left:${e.tx}px;top:${g.eraY + e.line * 26}px" title="${esc(e.c.note || '')}">` +
-          `<b>${esc(e.c.name)}</b><span>${esc(e.c.years)}</span></button>`;
-      }
-    }
-    for (const e of eras) html += `<div class="band" data-era="${esc(e.c.key)}" style="left:${e.x}px;width:${e.w}px"></div>`;
-    $('bands').innerHTML = html;
-    $('ticks').innerHTML = axis;
-    $('axis-in').style.width = W + 'px';
-
-    // View names head their block of rows.
-    // Below each section, a grip that drags the section taller or shorter.
-    let labs = L.groups.map((g) => {
-      const c = `--c:var(--p${state.colors.get(g.view.id) % 8})`, more = g.total - g.n;
-      return `<div class="head" style="top:${g.y + 8}px;${c}"><span>${esc(g.view.name)}</span></div>` +
-        `<div class="grip" data-grip="${esc(g.view.id)}" style="top:${g.end + 2}px;${c}" title="Drag to resize. Double-click to show all." role="separator" aria-orientation="horizontal" aria-label="Resize ${esc(g.view.name)}">` +
-        `<i></i>${more > 0 ? `<span title="${more} more. Drag down to show them">+${more}</span>` : ''}</div>`;
-    }).join('');
-
-    // Links first, so the lines are drawn over them.
-    let svg = '';
-    const covers = (p, t) => t >= p.t.born - 0.01 && t <= (p.t.end ?? NOW) + 0.01;
-    for (const p of shown) {
-      for (const l of p.t.links) {
-        const branch = BRANCH.includes(l.type);
-        if (!branch && !HANDOVER.includes(l.type)) continue;
-        const o = shown.find((q) => q.t.id === l.to && q.group === p.group);
-        if (!o || o === p) continue;
-        const when = l.date ? parseDate(l.date) : branch ? p.t.born : p.t.end;
-        // A link to a far-off row would cut across everything between; the history still lists it.
-        if (when == null || !covers(o, when) || Math.abs(p.y - o.y) > 240 || when < tMin || when > tMax) continue;
-        const x = xOf(when), s = p.y > o.y ? 1 : -1, r = 8;
-        // A branch leaves the older line a little earlier and drops into the newer one.
-        // A handover leaves this line and curves forward in time into the other.
-        const d = branch
-          ? `M${x - r * dx} ${o.y}Q${x} ${o.y} ${x} ${o.y + r * s}V${p.y - 4 * s}`
-          : `M${x} ${p.y}V${o.y + r * s}Q${x} ${o.y} ${x + r * dx} ${o.y}`;
-        const hot = state.open === p.t.id || state.open === o.t.id;
-        svg += `<path class="link${hot ? ' open' : ''}" d="${d}" data-a="${p.t.id}" data-b="${o.t.id}"/>`;
-        if (Math.abs(p.y - o.y) >= 50) labs += `<span class="link-lab${hot ? ' open' : ''}" style="left:${x + 5}px;top:${(p.y + o.y) / 2 - 7}px">${LINK_LABELS[l.type]}</span>`;
-      }
-    }
-    shown.forEach((p, k) => {
-      const { t, y } = p;
-      const cls = 'thing' + (p.major ? ' major' : '') + (p.alive ? '' : ' dead') + (state.open === t.id ? ' open' : '');
-      const cvar = `--c:var(--p${state.colors.get(p.group.id) % 8})`;
-      const seg = (a, b, c) => `<line class="${c}" x1="${a}" x2="${b}" y1="${y}" y2="${y}"/>`;
-      const inLine = (x) => clamp(x, p.xL, p.xR);
-      let g = `<title>${esc(t.name)}</title>`;
-      if (t.lead != null && t.lead < t.born && !p.short) g += seg(xOf(t.lead), p.xBorn, 'lead');
-      if (t.dep != null && !p.alive && !p.short) g += seg(p.xBorn, inLine(xOf(t.dep)), 'life') + seg(inLine(xOf(t.dep)), p.xEnd, 'life fade');
-      else g += seg(p.xBorn, p.xEnd, 'life');
-      if (t.after != null && !p.alive && Math.abs(xOf(t.after) - p.xEnd) > 8) g += seg(p.xEnd + 6 * dx, xOf(t.after), 'after');
-      g += `<line class="hit" x1="${p.xL - 4}" x2="${p.xR + 4}" y1="${y}" y2="${y}"/>`;
-      // A line that runs past the edge of the years shown just reaches the edge.
-      if (t.born >= tMin) g += `<circle class="born" cx="${p.xBorn}" cy="${y}" r="3"/>`;
-      if (p.alive ? tMax >= NOW - 0.01 : t.end <= tMax) g += p.alive ? `<circle class="alive" cx="${p.xEnd}" cy="${y}" r="3"/>` : `<rect class="end" x="${p.xEnd - 1}" y="${y - 5.5}" width="2" height="11"/>`;
-      // Dated points. A major row has room under its line to say what each one is.
-      let lastLab = -1e9, lastMark = -1e9;
-      const ends = [p.xBorn, p.xEnd];
-      for (const m of t.marks) {
-        if (m.t < tMin || m.t > tMax || p.short) continue;
-        const x = xOf(m.t);
-        if (ends.some((e) => Math.abs(x - e) < 6) || Math.abs(x - lastMark) < 6) continue;   // too close to another mark to read
-        lastMark = x;
-        g += m.kind === 'ren'
-          ? `<rect class="ren" x="${x - 3.5}" y="${y - 3.5}" width="7" height="7" transform="rotate(45 ${x} ${y})"/>`
-          : `<line class="mark" x1="${x}" x2="${x}" y1="${y}" y2="${y + 6}"/>`;
-        if (!p.major || !m.label) continue;
-        const w = 6.2 * (m.label.length + m.date.length) + 14;
-        const lx = newest ? x - w : x;
-        if (dx > 0 ? lx < lastLab + 8 : lx + w > lastLab - 8) continue;
-        if (lx < 4 || lx + w > W - 4) continue;
-        lastLab = dx > 0 ? lx + w : lx;
-        labs += `<span class="mark-lab${newest ? ' rev' : ''}" data-of="${t.id}" style="left:${x}px;top:${y + 8}px" title="${esc(m.note)}"><b>${esc(m.label)}</b> <i>${esc(m.date)}</i></span>`;
-      }
-      svg += `<g class="${cls}" data-id="${t.id}" style="${cvar}">${g}</g>`;
-
-      // The name sits above the start of the line: a card for the major entries, a quiet label for the rest.
-      const years = spanOf(t);
-      const open = state.open === t.id ? ' open' : '';
-      const lead = t.lead != null && !p.short ? xOf(t.lead) : null;
-      const x0 = newest ? Math.max(p.xR, lead ?? p.xR) : Math.max(4, Math.min(p.xL, lead ?? p.xL));
-      const tag = t.tier === 'community' ? '<em class="ctag" title="Community entry">community</em>' : '';
-      if (p.major) {
-        labs += `<button type="button" class="card${open}" data-id="${t.id}" data-k="${k}" style="${cvar};left:${x0}px;top:${y - 36}px">` +
-          `<span class="tile">${tileIcon(t)}</span><b>${esc(t.name)}</b><small>${esc(years)}</small>${tag}</button>`;
-      } else {
-        labs += `<button type="button" class="nm${p.alive ? '' : ' dead'}${open}" data-id="${t.id}" data-k="${k}" style="${cvar};left:${x0}px;top:${y - 19}px" title="${esc(t.name)}, ${esc(years)}">` +
-          `${esc(t.name)}<small>${esc(years)}</small>${tag}</button>`;
-      }
-    });
-    const el = $('lines');
-    el.setAttribute('viewBox', `0 0 ${W} ${height}`);
-    el.setAttribute('width', W); el.setAttribute('height', height);
-    el.innerHTML = svg;
-    $('labels').innerHTML = labs;
-    L.heads = [...$('labels').querySelectorAll('.head > span')];
-    L.mores = [...$('labels').querySelectorAll('.grip > span')];
-    // A name near the right edge would run off the page, so it ends at the edge instead.
-    for (const c of $('labels').querySelectorAll('.card, .nm')) {
-      const p = L.shown[c.dataset.k];
-      p.nameEl = c; p.nameW = c.offsetWidth; p.nameX = parseFloat(c.style.left);
-      if (newest) { p.nameX = Math.max(4, p.nameX - p.nameW); c.style.left = p.nameX + 'px'; }
-      if (p.nameX + p.nameW > W - 6) { p.nameX = Math.max(4, W - 6 - p.nameW); c.style.left = p.nameX + 'px'; }
-    }
-
+    roadLayout();
+    if (road.t == null) road.t = road.prev = roadOpening();
+    road.t = camClamp(road.t);
+    if (road.target != null) road.target = camClamp(road.target);
+    road.pal = null; road.said = null;
+    const G = L.G;
+    $('road').classList.toggle('short', G.short);
+    $('road').style.setProperty('--fw', G.FW + 'px');
+    $('road').style.setProperty('--nw', G.NW + 'px');
+    // The views, named under the year in the order of their lanes, each with the chapter the reader is in.
+    // A narrow stage has no room for them beside the road; the strip under it names the views.
+    $('road-views').innerHTML = G.short || G.phone ? '' : L.lanes.map((ln, i) =>
+      `<div class="rv" style="--c:var(--p${ln.col})"><b>${esc(ln.view.name)}</b><button type="button" class="rch" data-lane="${i}" hidden></button></div>`).join('');
+    for (const ln of L.lanes) ln.cur = undefined;
+    barTicks();
     renderSide();
     $('status').hidden = true;
     drawPlay();
-    if (anchor != null && L.W > L.SW) stageTo({ left: Math.max(0, L.xOf(anchor) - L.SW / 2), top: sy() });
-    onScroll();
+    roadKick();
   }
 
   function renderEmpty() {
     L = null;
     roadClear();
-    $('bands').innerHTML = ''; $('lines').innerHTML = ''; $('labels').innerHTML = ''; $('ticks').innerHTML = '';
-    $('axis-unit').hidden = true;
-    $('canvas').style.height = '0'; $('canvas').style.width = '';
+    $('ticks').innerHTML = '';
     $('status').hidden = false;
     $('status').textContent = pending.size ? 'Loading the timeline…' : 'Add a view to draw its timeline.';
     renderSide();
     if (!pending.size) showSide(true);
   }
 
-  // The axis follows the page sideways, and names stay on screen while their line does.
-  let ticking = false;
-  function onScroll() {
-    ticking = false;
-    if (!L || L.road) return;
-    const x0 = sx();
-    $('axis-in').style.transform = `translateX(${-x0}px)`;
-    // A year label half under play or reverse would read as "Ma" or "70": it waits until it is clear.
-    if (!L.tickEls) {
-      L.tickEls = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, x: parseFloat(el.style.left), w: el.offsetWidth }));
-      L.endL = $('axisbar').querySelector('.ends.l').offsetWidth;
-      L.endR = $('axisbar').querySelector('.ends.r').offsetWidth;
-      L.axisW = $('axisbar').clientWidth;
-    }
-    for (const k of L.tickEls) {
-      const x = k.x - x0;
-      k.el.style.visibility = x - k.w / 2 < L.endL + 2 || x + k.w / 2 > L.axisW - L.endR - 2 ? 'hidden' : '';
-    }
-    // The timeline goes on past the edge of the screen: a soft fade says so.
-    const more = S().scrollWidth - S().clientWidth;
-    $('edge-l').hidden = !(x0 > 4);
-    $('edge-r').hidden = !(more - x0 > 4);
-    // Each view's name stays at the left of its section, and its "+N" at the right of the screen.
-    for (const h of L.heads || []) h.style.transform = `translateX(${clamp(x0, 0, Math.max(0, L.W - 40 - h.offsetWidth))}px)`;
-    for (const m of L.mores || []) m.style.left = clamp(x0 + L.SW - m.offsetWidth - 88, 0, L.W - m.offsetWidth - 48) + 'px';
-    if (L.W <= L.SW + 1) return;
-    const edge = x0 + 8;
-    for (const p of L.shown) {
-      if (!p.nameEl) continue;
-      const room = Math.max(p.nameX, p.xR - p.nameW);
-      p.nameEl.style.left = clamp(edge, p.nameX, room) + 'px';
-    }
-  }
-  // Where a view starts on the drawn timeline: its first chapter or its first line, whichever is earlier.
-  function viewStartX(id) {
-    const g = L && L.groups.find((x) => x.view.id === id);
-    if (!g) return null;
-    const xs = [...g.eras.map((e) => (L.newest ? e.x + e.w : e.x)), ...L.shown.filter((p) => p.group === g.view).map((p) => (L.newest ? p.xR : p.xL))];
-    if (!xs.length) return null;
-    return L.newest ? Math.max(...xs) : Math.min(...xs);
-  }
-  // Brings a view's section into sight: its start, and its heading.
-  function scrollToView(id, smooth = true) {
-    if (L && L.road) {
-      const ln = L.lanes.find((x) => x.view.id === id);
-      if (!ln) return;
-      // A view added while travelling stays where the reader is, if something of it is in sight.
-      const D = L.D, dir = camDir(), ahead = (t) => dir * (t - road.t);
-      if (smooth && ln.mine.some((t) => ahead(t.born) > -0.1 * D && ahead(t.born) < 3 * D)) return;
-      return roadTo(dir > 0 ? laneStart(ln) - 0.05 * D : L.tMax, smooth);
-    }
-    const g = L && L.groups.find((x) => x.view.id === id), x = viewStartX(id);
-    if (!g) return;
-    const left = x == null || L.W <= L.SW ? sx() : clamp(L.newest ? x - L.SW + 60 : x - 60, 0, L.W - L.SW);
-    stageTo({ left, top: Math.max(0, g.y - 4), behavior: smooth ? 'smooth' : 'auto' });
-  }
-  // Takes the timeline to a moment on the line (a decimal year, as parseDate gives).
-  function scrollToTime(t, smooth = true) {
-    if (L && L.road) return roadTo(t, smooth);
-    if (!L || L.W <= L.SW) return;
-    stageTo({ left: Math.max(0, L.xOf(t) - L.SW / 2), top: sy(), behavior: smooth ? 'smooth' : 'auto' });
-  }
-  function scrollToThing(id) {
-    const p = L && L.at.get(id);
-    if (!p) return;
-    if (L.road) return roadTo(clamp(p.a, L.tMin, L.tMax));
-    const seen = viewH(), x0 = sx(), y0 = sy();
-    const top = p.y < y0 + 60 || p.y > y0 + seen - 60 ? Math.max(0, p.y - seen * 0.4) : y0;
-    const left = L.W > L.SW && (p.xL < x0 + 20 || p.xL > x0 + L.SW - 160) ? Math.max(0, p.xL - 80) : x0;
-    stageTo({ top, left, behavior: 'smooth' });
-  }
-
-  // Where a timeline wider than the screen opens: the screenful where the most
-  // lines start, the earliest such, so a long view never opens on empty years.
-  function busiest() {
-    if (!L || L.W <= L.SW || !L.shown.length) return 0;
-    const xs = L.shown.map((p) => (L.newest ? p.xR : p.xL)).sort((a, b) => a - b);
-    const win = L.SW * 0.8;
-    let best = 0, at = xs[0];
-    for (let i = 0, j = 0; i < xs.length; i++) {
-      while (xs[j] < xs[i] - win) j++;
-      if (i - j + 1 > best) { best = i - j + 1; at = xs[j]; }
-    }
-    // The leftmost start of the busiest stretch, a little in from the edge.
-    const left = xs.find((x) => x >= at - 1);
-    return clamp(left - 60, 0, L.W - L.SW);
-  }
-  // Takes the timeline to a moment on one line and marks the spot for a moment.
-  function jumpTo(id, at) {
-    const p = L && L.at.get(id);
-    if (!p) return;
-    if (L.road) {
-      const time = clamp(at, Math.max(p.a, L.tMin), Math.min(p.b, L.tMax));
-      road.jump = { id, time, t0: performance.now() }; road.until = road.jump.t0 + 1700;
-      return roadTo(time);
-    }
-    const t = clamp(at, p.t.lead ?? p.t.born, p.t.end ?? NOW), x = clamp(L.xOf(t), p.xL, p.xR);
-    stageTo({ top: Math.max(0, p.y - viewH() * 0.4), left: L.W > L.SW ? Math.max(0, x - L.SW / 2) : 0, behavior: 'smooth' });
-    $('lines').querySelector('.flash')?.remove();
-    $('lines').insertAdjacentHTML('beforeend', `<circle class="flash" cx="${x}" cy="${p.y}" r="4"/>`);
-  }
-
   // ---------------------------------------------------------------- the road
-  // The timeline in depth (state.mode 'road', the default; "?m=flat" is the
-  // left-to-right timeline). Time runs into the screen on a straight scale and
+  // The timeline in depth. Time runs into the screen on a straight scale and
   // each view is a lane. The reader stands at road.t and faces the future, or
   // the past when reversed; play, the wheel, a drag, the arrow keys and the
   // bar on the right all move road.t. Lines lie on the ground, on one canvas.
@@ -1061,37 +665,15 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const where = tracks(ln.mine.map((t) => ({ id: t.id, a: t.born, b: t.end })), D * 0.2);
       for (const t of ln.mine) {
         shown.push({ t, group: ln.view, lane: ln, key: k + ':' + t.id, xn: ln.x0 + pad + where.get(t.id) * (laneW - 2 * pad),
-          alive: t.end == null, major: t.rank < CARD_RANK, a: t.born, b: t.end ?? NOW });
+          alive: t.end == null, a: t.born, b: t.end ?? NOW });
       }
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
-    L = { road: true, W: G.SW, SW: G.SW, narrow: G.phone, height: G.SH, ppy: 0, tMin, tMax, fitMin, fitMax, autoMin, xOf: () => 0, tOf: () => tMin,
-      newest: state.order === 'new', shown, groups, eras: [], eraH: 0, total: groupsOf.size, D, G, lanes,
+    L = { tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
 
-  function renderRoad() {
-    roadLayout();
-    if (road.t == null) road.t = road.prev = roadOpening();
-    road.t = camClamp(road.t);
-    if (road.target != null) road.target = camClamp(road.target);
-    road.pal = null; road.said = null;
-    const G = L.G;
-    $('road').classList.toggle('short', G.short);
-    $('road').style.setProperty('--fw', G.FW + 'px');
-    $('road').style.setProperty('--nw', G.NW + 'px');
-    // The views, named under the year in the order of their lanes, each with the chapter the reader is in.
-    // A narrow stage has no room for them beside the road; the strip under it names the views.
-    $('road-views').innerHTML = G.short || G.phone ? '' : L.lanes.map((ln, i) =>
-      `<div class="rv" style="--c:var(--p${ln.col})"><b>${esc(ln.view.name)}</b><button type="button" class="rch" data-lane="${i}" hidden></button></div>`).join('');
-    for (const ln of L.lanes) ln.cur = undefined;
-    barTicks();
-    renderSide();
-    $('status').hidden = true;
-    drawPlay();
-    roadKick();
-  }
   function roadClear() {
     cancelAnimationFrame(road.raf); road.raf = 0; road.live = false;
     for (const n of road.nodes.values()) n.el.remove();
@@ -1101,23 +683,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const cv = $('road-cv');
     cv.getContext('2d').clearRect(0, 0, cv.width, cv.height);
   }
-  // Switches between the road and the flat timeline.
-  function applyMode() {
-    const on = state.mode === 'road';
-    document.body.classList.toggle('road', on);
-    document.body.classList.remove('revealing', 'play-rev');
-    $('road').hidden = !on; $('canvas').hidden = on;
-    $('axis').setAttribute('aria-orientation', on ? 'vertical' : 'horizontal');
-    for (const id of ['playhead', 'axis-in']) $(id).removeAttribute('style');
-    $('edge-l').hidden = $('edge-r').hidden = true;
-    play.t = null; road.t = null; road.target = null;
-    if (!on) roadClear();
-    const b = $('mode');
-    b.setAttribute('aria-pressed', !on);
-    b.title = on ? 'Flat timeline' : 'Timeline in depth';
-    b.setAttribute('aria-label', on ? 'Show the flat timeline' : 'Show the timeline in depth');
-  }
-
   // Where a view begins on the road: its first chapter or its first start, whichever is earlier.
   function laneStart(ln) { return Math.max(L.tMin, Math.min(...ln.mine.map((t) => t.born), ...ln.eras.map((c) => c.a))); }
   // The stretch where the most lines start, the earliest such, so a long road never opens on empty years.
@@ -1139,7 +704,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
   // Takes the reader to a moment: it ends up a little in front of them.
   function roadTo(time, smooth = true) {
-    if (!L || !L.road) return;
+    if (!L) return;
     const to = camClamp(time - camDir() * 0.2 * L.D);
     if (play.on) pausePlay();
     if (smooth && !calm()) { road.target = to; road.rate = 6; } else { road.t = road.prev = to; road.target = null; }
@@ -1147,15 +712,38 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
   // Moves the reader by a number of focal lengths, gliding.
   function roadBy(n, rate = 14) {
-    if (!L || !L.road) return;
+    if (!L) return;
     if (play.on) pausePlay();
     road.target = camClamp((road.target ?? road.t) + camDir() * n * L.D); road.rate = rate;
     if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
   }
 
+  // Brings a view into sight: where it begins.
+  function roadToView(id, smooth = true) {
+    const ln = L && L.lanes.find((x) => x.view.id === id);
+    if (!ln) return;
+    // A view added while travelling stays where the reader is, if something of it is in sight.
+    const D = L.D, dir = camDir(), ahead = (t) => dir * (t - road.t);
+    if (smooth && ln.mine.some((t) => ahead(t.born) > -0.1 * D && ahead(t.born) < 3 * D)) return;
+    roadTo(dir > 0 ? laneStart(ln) - 0.05 * D : L.tMax, smooth);
+  }
+  // Brings an entry into sight: where its line starts.
+  function roadToThing(id) {
+    const p = L && L.at.get(id);
+    if (p) roadTo(clamp(p.a, L.tMin, L.tMax));
+  }
+  // Takes the reader to a moment on one line and marks the spot for a moment.
+  function jumpTo(id, at) {
+    const p = L && L.at.get(id);
+    if (!p) return;
+    const time = clamp(at, Math.max(p.a, L.tMin), Math.min(p.b, L.tMax));
+    road.jump = { id, time, t0: performance.now() }; road.until = road.jump.t0 + 1700;
+    roadTo(time);
+  }
+
   function roadKick() {
-    if (road.raf || !L || !L.road) return;
+    if (road.raf || !L) return;
     if (!road.live) road.last = performance.now();
     road.live = true;
     road.raf = requestAnimationFrame(roadFrame);
@@ -1163,7 +751,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // One frame: move the reader, then draw. Time is read from performance.now() only.
   function roadFrame() {
     road.raf = 0; road.live = false;
-    if (!L || !L.road) return;
+    if (!L) return;
     const now = performance.now(), dt = clamp((now - road.last) / 1000, 0, 0.05);
     road.last = now;
     const dir = camDir(), [lo, hi] = camLimits();
@@ -1547,7 +1135,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   const barY = (t) => { const f = (t - L.tMin) / (L.tMax - L.tMin); return BAR_PAD + (camDir() > 0 ? 1 - f : f) * barSpan(); };
   const barT = (y) => { const f = clamp((y - BAR_PAD) / barSpan(), 0, 1); return L.tMin + (camDir() > 0 ? 1 - f : f) * (L.tMax - L.tMin); };
   function barTicks() {
-    const ax = axisTicks(barSpan() / (L.tMax - L.tMin), L.narrow ? 34 : 30);
+    const ax = axisTicks(barSpan() / (L.tMax - L.tMin), L.G.phone ? 34 : 30);
     const yEnd = barY(L.tMax);
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
     const text = (yr) => esc(axisText(yr, ax.step, ax.ce)).replace(/ (BCE|CE|ka|Ma|Ga)$/, ' <small>$1</small>');
@@ -1561,7 +1149,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     $('ticks').innerHTML = html;
     L.barYears = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, y: parseFloat(el.style.top), under: false }));
     L.units = ax.units;
-    $('axis-unit').hidden = true;
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
@@ -1601,24 +1188,23 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     b.setAttribute('aria-pressed', play.on);
     b.setAttribute('aria-label', play.on ? 'Pause' : end ? 'Play from the beginning' : 'Play: travel along the road');
     b.innerHTML = play.on ? ICON_PAUSE : ICON_PLAY;
-    $('stop').hidden = true;
   }
 
   // The wheel, a drag and the arrow keys carry the reader along the road.
   function wireRoad() {
     const box = $('road');
     box.addEventListener('wheel', (e) => {
-      if (!L || !L.road) return;
+      if (!L) return;
       const d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
       if (d) roadBy((d * (e.deltaMode === 1 ? 30 : 1)) / 520);
     }, { passive: true });
     box.addEventListener('pointerdown', (e) => {
-      if (!L || !L.road || e.button > 0) return;
+      if (!L || e.button > 0) return;
       road.drag = { y: e.clientY, x: e.clientX, t: road.t, moved: false, id: e.pointerId };
     });
     box.addEventListener('pointermove', (e) => {
       const d = road.drag;
-      if (!d || !L || !L.road) return;
+      if (!d || !L) return;
       const dy = e.clientY - d.y;
       if (!d.moved && Math.abs(dy) + Math.abs(e.clientX - d.x) < 6) return;
       if (!d.moved) { d.moved = true; box.setPointerCapture?.(d.id); box.classList.add('dragging'); if (play.on) pausePlay(); }
@@ -1638,14 +1224,14 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     $('road-labels').addEventListener('pointerover', (e) => { const el = e.target.closest('[data-id]'); if (el && e.pointerType === 'mouse' && !road.drag?.moved) over(el.dataset.id); });
     $('road-labels').addEventListener('pointerout', (e) => { if (e.target.closest('[data-id]')) over(null); });
     addEventListener('keydown', (e) => {
-      if (!L || !L.road || e.altKey || e.ctrlKey || e.metaKey) return;
+      if (!L || e.altKey || e.ctrlKey || e.metaKey) return;
       if (!['ArrowUp', 'ArrowRight', 'ArrowDown', 'ArrowLeft'].includes(e.key)) return;
       // Not while typing, nor inside the panel or the bar, which use the arrows themselves.
       if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '') || e.target.closest?.('#side, #axis, #info, .tsearch')) return;
       e.preventDefault();
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
-    if (window.ResizeObserver) new ResizeObserver(() => { if (L && L.road && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); }).observe(box);
+    if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); }).observe(box);
   }
 
   // ---------------------------------------------------------------- search the timeline
@@ -1758,18 +1344,12 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       return turnOn(home, () => open()).then((got) => { if (!got) { if (state.views.length) open(); } return true; });
     });
   }
-  // Brings a year into view and lights its column for a moment.
+  // Brings a year into sight and lights its stretch of road for a moment.
   function flashYear(year) {
     if (!L) return;
     const a0 = lineYear(year);
-    if (L.road) {
-      road.year = { a: a0, label: yearText(year), t0: performance.now() }; road.until = road.year.t0 + 4600;
-      return roadTo(camDir() > 0 ? a0 : a0 + 1);
-    }
-    scrollToTime(a0 + 0.5);
-    const a = L.xOf(a0), b = L.xOf(a0 + 1), w = Math.max(4, Math.abs(b - a)), x = Math.min(a, b) - (Math.abs(b - a) < 4 ? 2 : 0);
-    $('bands').querySelector('.yflash')?.remove();
-    $('bands').insertAdjacentHTML('beforeend', `<div class="yflash" style="left:${x}px;width:${w}px"><b style="top:${sy() + 10}px">${esc(yearText(year))}</b></div>`);
+    road.year = { a: a0, label: yearText(year), t0: performance.now() }; road.until = road.year.t0 + 4600;
+    roadTo(camDir() > 0 ? a0 : a0 + 1);
   }
 
   // ---------------------------------------------------------------- panel: views
@@ -1811,10 +1391,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   function renderSide() {
     // The views on the timeline: one pill each in the strip under the years.
     const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
-    // How many fit on screen, and how to see the rest: nothing is filtered out here.
-    const phone = matchMedia(PHONE).matches;
-    $('shown-n').textContent = !state.views.length ? '' : !more ? `${n} ${n === 1 ? 'entry' : 'entries'}` : L.road ? `${n}${more} on the road` : `${n}${more} fit on screen`;
-    $('fit-hint').hidden = !more || phone || L.road;
+    $('shown-n').textContent = !state.views.length ? '' : !more ? `${n} ${n === 1 ? 'entry' : 'entries'}` : `${n}${more} on the road`;
     $('pills').innerHTML = `<button type="button" class="padd" data-add>${ICON.plus}<span>Add view</span></button>` + state.views.map((id) => {
       const v = viewById.get(id);
       return `<div class="pill" data-pill="${esc(id)}" style="--c:var(--p${state.colors.get(id) % 8})" title="Drag to reorder">` +
@@ -2020,7 +1597,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
   function saveMine() {
     if (!state.views.length) return;
-    store.set('cg-mine', JSON.stringify({ views: state.views, level: state.level, order: state.order, span: state.span, mode: state.mode }));
+    store.set('cg-mine', JSON.stringify({ views: state.views, level: state.level, order: state.order, span: state.span }));
     const b = $('save-mine');
     b.innerHTML = ICON.check; b.classList.add('done'); b.title = 'Saved as your view';
     setTimeout(() => { b.innerHTML = ICON.save; b.classList.remove('done'); b.title = 'Save as your view'; }, 1600);
@@ -2034,10 +1611,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     state.level = clamp(Number(v.level) || 100, 5, 100);
     state.order = v.order === 'new' ? 'new' : 'old';
     state.span = Array.isArray(v.span) && v.span.length === 2 && v.span.every(Number.isFinite) ? v.span : null;
-    if ((v.mode === 'flat' ? 'flat' : 'road') !== state.mode && !new URLSearchParams(location.search).has('m')) { state.mode = v.mode === 'flat' ? 'flat' : 'road'; applyMode(); }
   }
 
-  function changed(keepX) { render(keepX); writeUrl(); }
+  function changed() { render(); writeUrl(); }
 
   // ---------------------------------------------------------------- panel: history of one entry
   // A link to another entry: its name travels with the link, so it shows before that entry is loaded.
@@ -2150,7 +1726,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       <div class="pane-foot"><button type="button" class="btn" data-copy="${esc(link)}">Copy link</button><a class="btn" href="${esc(issue)}" target="_blank" rel="noopener">Suggest a correction</a></div>`;
     showPane('thing');
     if ($('side').hidden) showSide(true); else render();
-    if (opts.scroll) scrollToThing(id);
+    if (opts.scroll) roadToThing(id);
     // Re-colour after render: the entry may have just been placed under a view.
     const placed = L && L.at.get(id);
     if (placed) $('p-thing').style.setProperty('--c', `var(--p${state.colors.get(placed.group.id) % 8})`);
@@ -2203,93 +1779,38 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
 
   // ---------------------------------------------------------------- play and scrub
-  // A marker sits on the axis. Drag it, or press play, and the timeline shows
-  // only what had happened by then: lines and names appear as it passes. The
-  // year scale and the eras stay in place. At the far end everything shows.
-  const play = { on: false, t: null, last: 0, raf: 0, drag: false };
+  // Play carries the reader along the road; the marker on the bar is where
+  // they stand. Drag it, or press play. The reader's place is road.t.
+  const play = { on: false, drag: false };
   const ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>';
   const ICON_PAUSE = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>';
-  // A whole run takes about twenty seconds, whether it covers ten years or four billion.
-  const PLAY_SECONDS = 20;
-  const yearsPerSecond = () => (L.tMax - L.tMin) / PLAY_SECONDS;
-  const atEnd = () => play.t == null || play.t >= L.tMax - (L.tMax - L.tMin) * 1e-6;
-  // The year under the marker, said as briefly as the axis says it.
+  // The year the reader stands in, said as briefly as the bar says it.
   function playLabel(t) {
     const y = writtenOf(t);
     if (y > -1e5) return y > 0 ? String(y) : (-y) + ' BCE';
     return axisText(-sig(-y));
   }
 
+  // From the far end, play starts again at the beginning.
   function startPlay(from) {
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
-    if (L.road) {
-      // On the road, play carries the reader along it; from the far end it starts again at the beginning.
-      road.target = null;
-      if (from != null) road.t = camClamp(Number(from) - camDir() * 0.1 * L.D);
-      else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
-      play.on = true; road.pace = 1;
-      drawPlay();
-      return roadKick();
-    }
-    if (from != null) play.t = clamp(Number(from), L.tMin, L.tMax);
-    // From the start: just before the first line drawn, not through empty years.
-    else if (atEnd()) {
-      const first = L.shown.length ? Math.min(...L.shown.map((p) => Math.max(L.tMin, p.t.lead ?? p.t.born))) : L.tMin;
-      play.t = Math.max(L.tMin, first - (L.tMax - L.tMin) * 0.01);
-    }
-    play.on = true;
+    road.target = null;
+    if (from != null) road.t = camClamp(Number(from) - camDir() * 0.1 * L.D);
+    else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
+    play.on = true; road.pace = 1;
     drawPlay();
-    play.last = performance.now();
-    cancelAnimationFrame(play.raf);
-    play.raf = requestAnimationFrame(tick);
+    roadKick();
   }
-  function tick(now) {
-    if (!play.on) return;
-    const dt = Math.min(0.1, (now - play.last) / 1000);
-    play.last = now;
-    play.t += dt * yearsPerSecond();
-    if (play.t >= L.tMax) { play.t = null; play.on = false; drawPlay(); return; }
-    // On a timeline wider than the screen, keep the marker in view.
-    if (L.W > L.SW) {
-      const x = L.xOf(play.t);
-      if (x > sx() + L.SW * 0.7 || x < sx() + L.SW * 0.2) stageTo({ left: Math.max(0, x - L.SW / 2), top: sy() });
-    }
-    drawPlay();
-    play.raf = requestAnimationFrame(tick);
-  }
-  function drawPlay() {
-    if (!L) return;
-    if (L.road) return roadHud(true);
-    if (play.t != null) play.t = clamp(play.t, L.tMin, L.tMax);
-    const end = atEnd(), t = end ? L.tMax : play.t, x = L.xOf(t);
-    document.body.classList.toggle('revealing', !end);
-    document.body.classList.toggle('play-rev', L.newest);
-    $('canvas').style.setProperty('--reveal', (L.newest ? L.W - x : x) + 'px');
-    $('playhead').style.left = x + 'px';
-    $('playhead').firstElementChild.textContent = end && L.tMax >= NOW - 0.5 ? 'Today' : playLabel(t);
-    $('playhead').classList.toggle('show-year', !end || play.drag);
-    $('axis').setAttribute('aria-valuetext', end && L.tMax >= NOW - 0.5 ? 'Today' : playLabel(t));
-    $('stop').hidden = end && !play.on;
-    const b = $('play');
-    b.setAttribute('aria-pressed', play.on);
-    b.setAttribute('aria-label', play.on ? 'Pause' : end ? 'Play the timeline' : 'Carry on playing');
-    b.innerHTML = play.on ? ICON_PAUSE : ICON_PLAY;
-  }
-  function pausePlay() { play.on = false; cancelAnimationFrame(play.raf); drawPlay(); }
-  function stopPlay() { play.on = false; cancelAnimationFrame(play.raf); play.t = null; drawPlay(); }   // on the road this only pauses: there the reader's place is road.t
+  function drawPlay() { if (L) roadHud(true); }
+  function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
-  // Dragging along the axis moves the marker, playing or not.
+  // Dragging along the bar moves the reader, playing or not.
   function scrubTo(e) {
     if (!L) return;
-    if (L.road) {
-      road.target = null;
-      road.t = camClamp(barT(e.clientY - $('axis').getBoundingClientRect().top));
-      return roadKick();
-    }
-    const t = L.tOf(e.clientX + sx());
-    play.t = t >= L.tMax - (L.tMax - L.tMin) * 0.001 ? null : t;
-    drawPlay();
+    road.target = null;
+    road.t = camClamp(barT(e.clientY - $('axis').getBoundingClientRect().top));
+    roadKick();
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.
@@ -2298,22 +1819,18 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const w = wordsNow();
     const neutral = w === NEUTRAL;
     const row = (svg, a, b) => `<li><svg width="28" height="28" aria-hidden="true">${svg}</svg><span><b>${esc(a)}</b><small>${esc(b)}</small></span></li>`;
-    const on = state.mode === 'road';   // the road draws no diamonds and no links: a rename is a tick like any other event
     $('info').innerHTML = `<div class="pane-head"><h2>How to read the timeline</h2><button class="ibtn" type="button" data-info-close aria-label="Close">${ICON.x}</button></div><ul class="legend">` +
       row('<line x1="14" y1="2" x2="14" y2="16" class="s-line2"/><circle cx="14" cy="19" r="3" class="s-born2"/>', neutral ? 'Start' : w.born, neutral ? 'Where its life begins: a birth, a founding, a first release' : 'Where its line begins') +
       row('<line x1="14" y1="13" x2="14" y2="27" class="s-line2"/><rect x="8.5" y="12" width="11" height="2" class="s-fill2"/>', neutral ? 'End' : w.ended, neutral ? 'Where it ends: a death, a dissolution, an official end' : 'Where its line ends') +
       row('<line x1="14" y1="9" x2="14" y2="27" class="s-line2"/><circle cx="14" cy="9" r="3" class="s-fill2"/>', w.alive, 'The line reaches today') +
       row('<line x1="14" y1="14" x2="14" y2="27" class="s-line2"/><line x1="14" y1="1" x2="14" y2="14" class="s-line2 s-dots"/>', 'Dotted', 'Its end has been announced') +
-      (on ? '' : row('<line x1="14" y1="1" x2="14" y2="27" class="s-line2"/><rect x="10.5" y="10.5" width="7" height="7" class="s-born2" transform="rotate(45 14 14)"/>', 'Renamed', 'Same entry, new name')) +
       row('<line x1="14" y1="1" x2="14" y2="27" class="s-line2"/><line x1="14" y1="14" x2="21" y2="14" class="s-dim2"/>', 'Tick', 'A dated event in its life') +
-      (on ? '' : row('<line x1="6" y1="1" x2="6" y2="27" class="s-line2"/><path d="M6 22Q6 14 14 14H22" class="s-dim2" fill="none"/><circle cx="22" cy="14" r="2.5" class="s-born2"/>', 'Link', 'One grew out of another, or took over from it')) +
-      `</ul><p class="fine">${on ? 'Click a card or a name' : 'Entries with a card rank in the top tenth of their kind and time. Click any line'} to read its full history. Years before the common era are marked BCE; deep time is counted in years ago (ka, Ma and Ga on the axis: thousands, millions and billions).</p>
+      `</ul><p class="fine">Click a card or a name to read its full history. Years before the common era are marked BCE; deep time is counted in years ago (ka, Ma and Ga on the bar: thousands, millions and billions).</p>
       <p class="fine">Ranking weighs ${Object.entries(WEIGHTS).map(([k, v]) => `${k} ${Math.round(v * 100)}%`).join(', ')}. Dates are still being checked against sources. Release ${esc(boot?.release || '')}, ${group(boot?.counts?.entries || 0)} entries. <a href="${REPO}" target="_blank" rel="noopener">Data and code on GitHub</a>. Text and data <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>, code MIT; images credited to their authors.</p>`;
   }
 
   // ---------------------------------------------------------------- events
   function wire() {
-    S().addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
     let rt = null, lastW = innerWidth, lastH = innerHeight;
     addEventListener('resize', () => {
       clearTimeout(rt);
@@ -2321,53 +1838,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
         if (innerWidth !== lastW || Math.abs(innerHeight - lastH) > 120) { lastW = innerWidth; lastH = innerHeight; sayScope(); if (state.views.length) render(); }
       }, 150);
     });
-
-    const hot = (id, on) => { for (const el of document.querySelectorAll(`#canvas [data-id="${CSS.escape(id)}"]`)) el.classList.toggle('hot', on); };
-    const eraHot = (key, on) => { for (const el of document.querySelectorAll(`#canvas [data-era="${CSS.escape(key)}"]`)) el.classList.toggle('hot', on || state.era === key); };
-    $('canvas').addEventListener('pointerover', (e) => { const el = e.target.closest('.band-title'); if (el) eraHot(el.dataset.era, true); });
-    $('canvas').addEventListener('pointerout', (e) => { const el = e.target.closest('.band-title'); if (el) eraHot(el.dataset.era, false); });
-    $('canvas').addEventListener('pointerover', (e) => { const el = e.target.closest('[data-id]'); if (el && e.pointerType === 'mouse') hot(el.dataset.id, true); });
-    $('canvas').addEventListener('pointerout', (e) => { const el = e.target.closest('[data-id]'); if (el) hot(el.dataset.id, false); });
-    // Drag the grip under a section to make it taller or shorter; a shorter
-    // section keeps its best-ranked rows. A guide line follows the pointer and
-    // the timeline redraws at most once a frame. Double-click shows it all again.
-    let grip = null;
-    $('canvas').addEventListener('pointerdown', (e) => {
-      const el = e.target.closest('[data-grip]');
-      if (!el || e.button !== 0) return;
-      const g = L.groups.find((x) => x.view.id === el.dataset.grip);
-      if (!g) return;
-      e.preventDefault();
-      el.setPointerCapture?.(e.pointerId);
-      grip = { id: g.view.id, y0: e.clientY, h0: g.end - 6 - g.rowsY, raf: 0, y: e.clientY, colour: getComputedStyle(el).getPropertyValue('--c') };
-      const guide = $('rguide');
-      guide.style.setProperty('--c', grip.colour); guide.style.top = e.clientY + 'px'; guide.hidden = false;
-      document.body.classList.add('resizing');
-    });
-    const gripFrame = () => {
-      grip.raf = 0;
-      state.sizes.set(grip.id, Math.max(34, grip.h0 + grip.y - grip.y0));
-      render(L.tOf(sx() + L.SW / 2));
-    };
-    addEventListener('pointermove', (e) => {
-      if (!grip) return;
-      grip.y = e.clientY;
-      $('rguide').style.top = e.clientY + 'px';
-      if (!grip.raf) grip.raf = requestAnimationFrame(gripFrame);
-    });
-    const endGrip = () => {
-      if (!grip) return;
-      if (grip.raf) { cancelAnimationFrame(grip.raf); gripFrame(); }
-      grip = null; $('rguide').hidden = true;
-      document.body.classList.remove('resizing');
-    };
-    addEventListener('pointerup', endGrip);
-    addEventListener('pointercancel', endGrip);
-    $('canvas').addEventListener('dblclick', (e) => {
-      const el = e.target.closest('[data-grip]');
-      if (el && state.sizes.delete(el.dataset.grip)) render(L.tOf(sx() + L.SW / 2));
-    });
-    $('fit').addEventListener('click', () => { state.fit = !state.fit; state.sizes.clear(); drawFit(); changed(); });
 
     document.addEventListener('click', (e) => {
       const el = (sel) => e.target.closest(sel);
@@ -2410,16 +1880,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
 
     $('toggle-side').addEventListener('click', () => showSide($('side').hidden));
     wireRoad();
-    // The road or the flat timeline: the moment in sight stays in sight.
-    $('mode').addEventListener('click', () => {
-      const at = !L ? null : L.road ? road.t + camDir() * 0.2 * L.D : L.W > L.SW ? L.tOf(sx() + L.SW / 2) : null;
-      if (play.on) pausePlay();
-      state.mode = state.mode === 'road' ? 'flat' : 'road';
-      applyMode(); drawReverse(); changed();
-      if (at != null) scrollToTime(at, false);
-    });
     $('play').addEventListener('click', togglePlay);
-    $('stop').addEventListener('click', stopPlay);
     $('axis').addEventListener('pointerdown', (e) => {
       if (e.button !== 0) return;
       if (play.on) pausePlay();
@@ -2429,20 +1890,12 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     $('axis').addEventListener('pointermove', (e) => { if (play.drag) scrubTo(e); });
     for (const ev of ['pointerup', 'pointercancel']) $('axis').addEventListener(ev, () => { play.drag = false; $('axisbar').classList.remove('dragging'); drawPlay(); });
     $('axis').addEventListener('keydown', (e) => {
-      if (L && L.road) {
-        // On the upright bar, up and right are ahead; Home is where the road begins for the reader.
-        if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(e.key)) return;
-        e.preventDefault(); e.stopPropagation();
-        const [lo, hi] = camLimits(), fwd = camDir() > 0;
-        if (e.key === 'Home' || e.key === 'End') { road.target = null; road.t = road.prev = (e.key === 'Home') === fwd ? lo : hi; if (play.on) pausePlay(); return roadKick(); }
-        return roadBy((e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1) * Math.max(0.3, (L.tMax - L.tMin) / L.D / 100), 8);
-      }
-      if (!L || !['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(e.key)) return;
-      e.preventDefault();
-      // An arrow moves a hundredth of the span: a year on a century, a million years on a hundred million.
-      const now = atEnd() ? L.tMax : play.t, stepT = Math.max(1, niceStep((L.tMax - L.tMin) / 100)) * ((e.key === 'ArrowRight') !== L.newest ? 1 : -1);
-      const t = e.key === 'Home' ? L.tMin : e.key === 'End' ? L.tMax : now + stepT;
-      play.t = t >= L.tMax ? null : t; drawPlay();
+      // On the upright bar, up and right are ahead; Home is where the road begins for the reader.
+      if (!L || !['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(e.key)) return;
+      e.preventDefault(); e.stopPropagation();
+      const [lo, hi] = camLimits(), fwd = camDir() > 0;
+      if (e.key === 'Home' || e.key === 'End') { road.target = null; road.t = road.prev = (e.key === 'Home') === fwd ? lo : hi; if (play.on) pausePlay(); return roadKick(); }
+      roadBy((e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1) * Math.max(0.3, (L.tMax - L.tMin) / L.D / 100), 8);
     });
     $('reverse').addEventListener('click', () => { state.order = state.order === 'new' ? 'old' : 'new'; drawReverse(); changed(); });
     $('info-btn').addEventListener('click', () => {
@@ -2502,7 +1955,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     });
     $('save-mine').addEventListener('click', saveMine);
 
-    // The pills: drag one to change the order of the sections, tap its dot to
+    // The pills: drag one to change the order of the lanes, tap its dot to
     // pick its colour, or shuffle every colour at once.
     $('shuffle').addEventListener('click', () => {
       const pool = [0, 1, 2, 3, 4, 5, 6, 7];
@@ -2584,24 +2037,18 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '');
       if (e.key === ' ' && !typing && !e.target.closest('button, a')) { e.preventDefault(); return togglePlay(); }
       if (e.key !== 'Escape') return;
-      if (L && (!atEnd() || play.on)) stopPlay();
+      if (play.on) pausePlay();
       else if (!$('info').hidden) { $('info').hidden = true; $('info-btn').setAttribute('aria-expanded', false); }
       else if (state.pane !== 'views') goCrumb(state.trail.length - 2);
       else showSide(false);
     });
     addEventListener('hashchange', () => followHash(true));
   }
-  function drawFit() {
-    const b = $('fit');
-    b.setAttribute('aria-pressed', !state.fit);
-    b.title = b.ariaLabel = state.fit ? 'Fit: sections share the screen. Click to expand them' : 'Expand: sections take the room they need. Click to fit them to the screen';
-    b.classList.toggle('expand', !state.fit);
-  }
   function drawReverse() {
-    const b = $('reverse'), rev = state.order === 'new', on = state.mode === 'road';
+    const b = $('reverse'), rev = state.order === 'new';
     b.setAttribute('aria-pressed', rev);
-    b.setAttribute('aria-label', on ? (rev ? 'Turn round and face the future' : 'Turn round and face the past') : rev ? 'Show oldest on the left' : 'Show newest on the left');
-    b.title = on ? (rev ? 'Facing the past' : 'Facing the future') : rev ? 'Newest on the left' : 'Oldest on the left';
+    b.setAttribute('aria-label', rev ? 'Turn round and face the future' : 'Turn round and face the past');
+    b.title = rev ? 'Facing the past' : 'Facing the future';
   }
 
   // "#1969" or "#-44" goes to a year; "#<id>" opens an entry, fetching it and
@@ -2618,8 +2065,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // ---------------------------------------------------------------- start
   // boot.json and the views the page opens on are asked for at the same time.
   async function start() {
-    state.mode = new URLSearchParams(location.search).get('m') === 'flat' ? 'flat' : 'road';
-    applyMode();
     const ids = urlViews();
     const mine = ids.length ? null : myView();
     bootReady = getJSON('boot.json').then(useBoot);
@@ -2644,20 +2089,13 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     else setViews(got.length ? got : [].concat(boot.default || []));
     if (ids.length && got.length < ids.length) note('Some views in this link could not be loaded.');
     wire();
-    drawReverse(); drawFit();
+    drawReverse();
     if (document.fonts && document.fonts.ready) await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 1200))]);
     if (!state.views.length) $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
-    render(L ? undefined : null);
+    render();
     if (ids.length) writeUrl();
     spansNote();
-    // A community view is a story: it opens at its beginning. A classical view opens on its busiest stretch.
-    const first = viewById.get(state.views[0]);
-    if (!followHash(false)) {
-      if (first && first.type !== 'classical') scrollToView(first.id, false);
-      else if (first && first.year) scrollToTime(lineYear(first.year) + 0.5, false);
-      else if (L && L.road) roadTo(roadBusiest(), false);
-      else stageTo({ left: busiest(), top: 0 });
-    }
+    followHash(false);     // otherwise the road opens where roadOpening() says
   }
   start();
 })();
