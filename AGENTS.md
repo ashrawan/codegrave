@@ -5,11 +5,13 @@ to make a correct change.
 
 ## What this is
 
-codegrave.com is one page: a left-to-right timeline of everything, from its
-start to its end. It is an encyclopedia drawn in time: people, places,
-organisations, events, works, ideas, living things, the Earth and the sky,
-and technology, with computing as the oldest and deepest shelf. There is no
-framework, no package manager and nothing to install. You need Node 22.
+codegrave.com is one page: a timeline of everything, from its start to its
+end. It opens drawn in depth, as a road that time runs along into the
+screen; one button switches to the flat timeline, left to right. It is an
+encyclopedia drawn in time: people, places, organisations, events, works,
+ideas, living things, the Earth and the sky, and technology, with computing
+as the oldest and deepest shelf. There is no framework, no package manager
+and nothing to install. You need Node 22.
 
 The data has two layers:
 
@@ -45,6 +47,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
+| The arithmetic of the road (sizes in depth, tracks, which names fit, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
 To find an entry without listing folders: its path is always
@@ -108,16 +111,21 @@ dataset, have the build work it out.
 ## How the page code is laid out
 
 `site/app.js` is one module in sections, in this order: constants, dates,
-data, state and URL, layout, render, search the timeline, panel (views, then
-the history of one entry, then one era), play and scrub, events, start. Each
-section starts with a `// ----` comment line with its name. `site/rank.js`
-holds the ranking and the date functions as pure functions with tests;
-`site/keys.js` holds the file keys and the word-splitting the search uses.
+data, state and URL, layout, render, the road, search the timeline, panel
+(views, then the history of one entry, then one era), play and scrub,
+events, start. Each section starts with a `// ----` comment line with its
+name. `site/rank.js` holds the ranking and the date functions as pure
+functions with tests; `site/road.js` holds the arithmetic of the road the
+same way; `site/keys.js` holds the file keys and the word-splitting the
+search uses.
 
 The page redraws from `state` in one function, `render()`. To change
 behaviour: change `state`, then call `changed()` (which also updates the
-link) or `render()`. Do not patch the drawn page directly. The one exception
-is `onScroll()`, which only moves names so they stay in sight.
+link) or `render()`. Do not patch the drawn page directly. There are two
+exceptions. `onScroll()` only moves names so they stay in sight. On the
+road, `roadFrame()` moves the reader and `roadDraw()` paints what is in
+sight, once a frame and only while something moves; a change of `state`
+still goes through `render()`.
 
 How the page is put together:
 
@@ -127,7 +135,39 @@ How the page is put together:
   every loaded entry as a single object in `byId`. A view that fails to load
   leaves a note and the page keeps working. An old address is answered by
   the build's redirect file and the link is rewritten to the new id.
-- **The timeline** fills the page and scrolls inside `#stage`, both ways;
+- **Two ways to draw it.** `state.mode` is `road` (the default) or `flat`
+  (`?m=flat`). The button `#mode` in the dock switches and keeps the moment
+  in sight. Both draw the same choice: `chosen()` picks the views, their
+  entries (at most `MAX_ROWS`) and the years; `layout()` lays it out flat
+  and `roadLayout()` in depth, and both leave `L` with `tMin`, `tMax`,
+  `shown` and `groups`, so the panel, the searches and links work the same
+  in both. Whatever goes somewhere (`scrollToTime()`, `scrollToThing()`,
+  `scrollToView()`, `jumpTo()`, `flashYear()`) has a road branch that calls
+  `roadTo()`. A change to the page must work in both modes.
+- **The road.** Time runs into the screen on a straight scale, towards one
+  vanishing point. Each view is a lane and each entry a line along it, on a
+  track of its own (`tracks()`). The reader stands at `road.t` facing the
+  future, or the past when reversed (`camDir()`). `L.D` is the focal length
+  in years (`focalYears()`): what is `D` years ahead is drawn half size.
+  The ground (road, lanes, years, lines, starts, ends, chapters) is one
+  canvas, `#road-cv`. Names are elements in `#road-labels`: a start is a
+  card when near, a small card further off, then a bare name; an end is a
+  dashed plate with its cause. `placeLabels()` decides every frame which
+  fit, best first and capped, and they fade in and out. Wheel, drag and the
+  arrow keys travel (`roadBy()`).
+- **The front card** is selected by itself: the nearest card in front of
+  the reader (`road.focus`) has its line drawn in its view's colour and its
+  events written along it, like the open and the hovered entry
+  (`road.heat` eases the colour). It is not `state.open`; do not write one
+  to the other.
+- **The bar.** On the road the axis (`#axisbar`) stands upright on the
+  right: reverse at the top, play at the bottom, the whole span between
+  them with ahead upwards (`barY()`, `barT()`, `barTicks()`), the stretch
+  in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
+  marker moves the reader. Play moves the reader `PLAY_PACE` focal lengths
+  a second, slower while cards stand in front and quicker through empty
+  years (`paceFor()`).
+- **The flat timeline** fills the page and scrolls inside `#stage`, both ways;
   the page itself never scrolls, so it always lays out at the width of the
   screen. Read and set the scroll with `sx()`, `sy()` and `stageTo()`, never
   `scrollX` or `scrollTo`. A fade with a chevron (`#edge-l`, `#edge-r`) shows
@@ -162,8 +202,8 @@ How the page is put together:
   that says which sort it is. Each row has a thumbnail made by the build
   (`scripts/thumb.mjs`), which is also the switch that puts the view on the
   timeline.
-- **Time** is a straight scale left to right (`L.xOf`, `L.tOf`) with the
-  years on the fixed axis at the bottom. `axisTicks()` picks round steps
+- **Time**, flat, is a straight scale left to right (`L.xOf`, `L.tOf`) with
+  the years on the fixed axis at the bottom. `axisTicks()` picks round steps
   from one year to a billion; there is no year 0; deep time is labelled ka,
   Ma and Ga. A long view is fitted to a few screens (`MAX_SCREENS`). When a
   few entries start far earlier than the rest, the view opens on the rest
@@ -172,8 +212,8 @@ How the page is put together:
 - **Words.** A person is born and dies; a city is founded; a species goes
   extinct. The words come from the entry's branch (`words` in `boot.json`,
   `wordsNow()` for mixed text).
-- **Play** sits at the bottom left of the axis and reverse (`state.order`)
-  at the bottom right. A marker on the axis (`play.t`, null at the far end)
+- **Play**, flat, sits at the bottom left of the axis and reverse
+  (`state.order`) at the bottom right. A marker on the axis (`play.t`, null at the far end)
   can be dragged at any time; the timeline shows only what had happened by
   then. Play moves the same marker and crosses any span in about 20 seconds.
 - **The top search** (`findOnTimeline()`) finds entries, events, chapters
@@ -194,19 +234,21 @@ How the page is put together:
   as "Your view" in this browser (`cg-mine`, one slot), and the page opens
   on it when the link names no views.
 - Lines are neutral. Colour is only for view names and the open line.
-- An entry with `rank < CARD_RANK` gets a card; the rest get a name.
+- On the flat timeline an entry with `rank < CARD_RANK` gets a card; the
+  rest get a name. On the road it is distance that decides.
 
 Layout draws at most `MAX_ROWS` lines, best ranked first, so it stays fast
-at any data size. Keep it that way: never draw one element per entry
-without a cap, and never make the page fetch a chain of files to answer one
-click.
+at any data size. The road keeps the same cap, draws its lines on one
+canvas and makes an element only for the few names in sight. Keep it that
+way: never draw one element per entry without a cap, and never make the
+page fetch a chain of files to answer one click.
 
 ## Before you finish
 
 - `node scripts/build.mjs --check` prints `0 errors`.
 - `node --test` passes.
 - If you changed the page, load it and check the browser console is clean at
-  1440 and 390 pixels wide.
+  1440 and 390 pixels wide, on the road and on the flat timeline (`?m=flat`).
 - If what the page shows changed (a view, an entry, or `site/`), take
   screenshots at 1440 and 390 pixels wide for the pull request. With
   Playwright: build, serve `site/` on a local port, open

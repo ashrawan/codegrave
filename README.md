@@ -8,12 +8,15 @@
 <p align="center"><em>Nothing ships forever.</em></p>
 
 [codegrave.com](https://codegrave.com) is one page: an encyclopedia drawn as a
-timeline. Time runs left to right with the years along the bottom, and every
-entry is one line from its start to its end: a person from birth to death,
-an empire from founding to fall, a species to its extinction, a programming
-language from first release to end of support. It began as a timeline of
-computing, and computing is still its deepest shelf. Click a line to read its
-history, with dates, sources, links and images.
+timeline. Every entry is one line from its start to its end: a person from
+birth to death, an empire from founding to fall, a species to its
+extinction, a programming language from first release to end of support.
+The page opens with the timeline drawn in depth: time runs into the screen
+like a road, with the years along its edge, and play carries you along it.
+One button switches to the flat timeline in the pictures below, where time
+runs left to right with the years along the bottom. It began as a timeline
+of computing, and computing is still its deepest shelf. Click a card or a
+line to read its history, with dates, sources, links and images.
 
 The base holds about 4,400 entries on one map of ten branches: People,
 Places, Organisations, Events, Arts & media, Knowledge & belief, Society &
