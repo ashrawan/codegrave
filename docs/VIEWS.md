@@ -19,7 +19,9 @@ Every view has its own link. A community view's address is its owner and its
 id, as on GitHub: `codegrave.com/?views=codegrave/the-space-race`. A
 classical view's address is its id: `?views=rulers`. A link can name
 several: `?views=people,codegrave/the-space-race`. Each view on the
-timeline gets its own block of rows under its name.
+timeline gets a lane of its own on the road. Picking a view in the panel
+shows it alone; the small plus at the end of its row, or a right click, puts
+it beside the ones already there.
 
 A view only chooses what to show. It never changes a fact. Dates, names,
 causes and ranks come from the entries and are the same in every view.
@@ -78,9 +80,9 @@ the profile if you have none.
 | `labels` | no | Up to 4 labels from `data/labels.json`, for what the view is about. |
 | `tags` | no | Up to 8 words people might search for. |
 | `entries` | yes, for a hand-picked view | The entries the view shows, by id: any base entry, or an entry of your own. The older name `things` still works. |
-| `checkpoints` | no | The chapters: named eras with `id`, `name`, whole-year `from` and `to` (negative before the common era, never 0) and a `note` of at most 400 characters. They must not overlap. They are drawn inside the view's section, in its colour, and clicking one opens its note with what began and ended in those years. |
-| `year` | no | The year to centre on when the timeline is wider than the screen. |
-| `order` | no | `"old"` (the default, oldest on the left) or `"new"`. |
+| `checkpoints` | no | The chapters: named eras with `id`, `name`, whole-year `from` and `to` (negative before the common era, never 0) and a `note` of at most 400 characters. They must not overlap. They are drawn as lines across the view's lane, named in its colour, and clicking one opens its note with what began and ended in those years. |
+| `year` | no | Not read for a hand-picked view, which opens at its beginning. Older files may carry it. |
+| `order` | no | `"old"` (the default: the road starts at the oldest and runs towards the present) or `"new"` (it starts at the present and runs back). |
 | `image` | no | The thumbnail: a picture with `src`, `alt`, `credit`, `licence` and `source`, as for an entry's image. Leave it out and the build draws a miniature of the view's own lines. |
 | `categories`, `domains`, `level` | no | Instead of `entries`: draw the view from whole kinds or branches of the base, showing the top `level` percent (5 to 100). Such a view grows by itself as entries are added. |
 
@@ -88,7 +90,7 @@ A view holds any number of entries, and its file on the site carries the 200
 best ranked. A good view has 20 to 50.
 
 An entry may be in any number of views. One that is in two views on the
-timeline is drawn in both sections, so every view always shows all of its
+timeline is drawn in both lanes, so every view always shows all of its
 own.
 
 ## Your own entries

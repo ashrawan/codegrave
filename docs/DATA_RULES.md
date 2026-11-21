@@ -313,6 +313,6 @@ an entry feeds only the order of search results (`docs/BUILD.md`).
 - A checkpoint is a named era with whole-year `from` and `to` (negative
   before the common era, never 0). Checkpoints of one list must not overlap.
   A `note` is at most 400 characters. A view carries its own eras, drawn
-  inside its section (see `docs/VIEWS.md`); `data/checkpoints.json` holds a
+  across its lane (see `docs/VIEWS.md`); `data/checkpoints.json` holds a
   shared list that is not drawn.
 - Views are covered in `docs/VIEWS.md`.

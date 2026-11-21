@@ -6,9 +6,8 @@ to make a correct change.
 ## What this is
 
 codegrave.com is one page: a timeline of everything, from its start to its
-end. It opens drawn in depth, as a road that time runs along into the
-screen; one button switches to the flat timeline, left to right. It is an
-encyclopedia drawn in time: people, places, organisations, events, works,
+end. It is drawn in depth, as a road that time runs along into the screen,
+and you travel it. It is an encyclopedia drawn in time: people, places, organisations, events, works,
 ideas, living things, the Earth and the sky, and technology, with computing
 as the oldest and deepest shelf. There is no framework, no package manager
 and nothing to install. You need Node 22.
@@ -115,8 +114,8 @@ dataset, have the build work it out.
 ## How the page code is laid out
 
 `site/app.js` is one module in sections, in this order: constants, dates,
-data, state and URL, layout, render, the road, search the timeline, panel
-(views, then the history of one entry, then one era), play and scrub,
+data, state and URL, what is drawn, render, the road, search the timeline,
+panel (views, then the history of one entry, then one era), play and scrub,
 events, start. Each section starts with a `// ----` comment line with its
 name. `site/rank.js` holds the ranking and the date functions as pure
 functions with tests; `site/road.js` holds the arithmetic of the road the
@@ -125,10 +124,9 @@ search uses.
 
 The page redraws from `state` in one function, `render()`. To change
 behaviour: change `state`, then call `changed()` (which also updates the
-link) or `render()`. Do not patch the drawn page directly. There are two
-exceptions. `onScroll()` only moves names so they stay in sight. On the
-road, `roadFrame()` moves the reader and `roadDraw()` paints what is in
-sight, once a frame and only while something moves; a change of `state`
+link) or `render()`. Do not patch the drawn page directly. There is one
+exception: `roadFrame()` moves the reader and `roadDraw()` paints what is
+in sight, once a frame and only while something moves; a change of `state`
 still goes through `render()`.
 
 How the page is put together:
@@ -139,15 +137,14 @@ How the page is put together:
   every loaded entry as a single object in `byId`. A view that fails to load
   leaves a note and the page keeps working. An old address is answered by
   the build's redirect file and the link is rewritten to the new id.
-- **Two ways to draw it.** `state.mode` is `road` (the default) or `flat`
-  (`?m=flat`). The button `#mode` in the dock switches and keeps the moment
-  in sight. Both draw the same choice: `chosen()` picks the views, their
-  entries (at most `MAX_ROWS`) and the years; `layout()` lays it out flat
-  and `roadLayout()` in depth, and both leave `L` with `tMin`, `tMax`,
-  `shown` and `groups`, so the panel, the searches and links work the same
-  in both. Whatever goes somewhere (`scrollToTime()`, `scrollToThing()`,
-  `scrollToView()`, `jumpTo()`, `flashYear()`) has a road branch that calls
-  `roadTo()`. A change to the page must work in both modes.
+- **What is drawn.** `chosen()` picks the views, their entries (at most
+  `MAX_ROWS`) and the years. `roadLayout()` lays them out in depth and
+  leaves `L` with `tMin`, `tMax`, `shown`, `groups` and `lanes`, which the
+  panel, the searches and the links read. Whatever goes somewhere
+  (`roadToView()`, `roadToThing()`, `jumpTo()`, `flashYear()`) calls
+  `roadTo()`. There is one way to draw the timeline. The flat, left-to-right
+  timeline was removed in November 2026; an old link with `?m=flat` or
+  `?h=expand` simply opens the road.
 - **The road.** Time runs into the screen on a straight scale, towards one
   vanishing point. Each view is a lane and each entry a line along it, on a
   track of its own (`tracks()`). The reader stands at `road.t` facing the
@@ -155,75 +152,84 @@ How the page is put together:
   in years (`focalYears()`): what is `D` years ahead is drawn half size.
   The ground (road, lanes, years, lines, starts, ends, chapters) is one
   canvas, `#road-cv`. Names are elements in `#road-labels`: a start is a
-  card when near, a small card further off, then a bare name; an end is a
-  dashed plate with its cause. `placeLabels()` decides every frame which
-  fit, best first and capped, and they fade in and out. Wheel, drag and the
-  arrow keys travel (`roadBy()`).
+  card when near (from size `FULL`, never drawn smaller than `CARD_MIN`), a
+  small card further off, then a bare name; an end is a dashed plate with
+  its cause. `placeLabels()` decides every frame which fit, best first and
+  capped, and they fade in and out. Writing on the ground (a chapter's
+  name, a year at the edge) steps aside while a name stands over it
+  (`covered()`, `soft()`). Wheel, drag and the arrow keys travel
+  (`roadBy()`).
+- **Lanes have sides.** With more than one view, `ln.lean` is -1 for the
+  left lane, 0 for a middle one and 1 for the right lane. A card on a side
+  lane stands to the outer side of its point, like a flag on its pole
+  (`labelRect()` takes the lean), comes in from that side and leaves to it
+  (`SLIDE`); a card in the middle, or on a road of one lane, stands on its
+  point and rises into place. Keep it so: the left lane's cards never cross
+  to the right.
 - **The front card** is selected by itself: the nearest card in front of
   the reader (`road.focus`) has its line drawn in its view's colour and its
   events written along it, like the open and the hovered entry
   (`road.heat` eases the colour). It is not `state.open`; do not write one
   to the other.
-- **The bar.** On the road the axis (`#axisbar`) stands upright on the
-  right: reverse at the top, play at the bottom, the whole span between
+- **The bar** (`#axisbar`) stands upright on the right: reverse
+  (`state.order`) at the top, play at the bottom, the whole span between
   them with ahead upwards (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
   marker moves the reader. Play moves the reader `PLAY_PACE` focal lengths
   a second, slower while cards stand in front and quicker through empty
-  years (`paceFor()`).
-- **The flat timeline** fills the page and scrolls inside `#stage`, both ways;
-  the page itself never scrolls, so it always lays out at the width of the
-  screen. Read and set the scroll with `sx()`, `sy()` and `stageTo()`, never
-  `scrollX` or `scrollTo`. A fade with a chevron (`#edge-l`, `#edge-r`) shows
-  where the timeline goes on. The panel is hidden until its button or a
-  line is clicked. It never covers the timeline: on wide screens and tablets
-  it sits beside it and the timeline narrows; on phones (under 700 px) it is
-  a sheet over the lower half and the timeline and axis move up above it
-  (`sheetH()`). It has three panes: views, the history of one entry, and one
-  era. The entry and era panes head with a trail back (`state.trail`,
-  `crumbs()`). Opening something from inside the panel adds a step, opening
-  it from the timeline starts over, and Escape goes back one step.
-- **Views.** `state.views` is the list of views on the timeline. Each owns a
-  block of rows (a section) under its coloured heading line. An entry in two
-  views is drawn in both sections; `L.at` maps an id to its first row. A
-  view's chapters (`checkpoints`) are drawn inside its section in its
-  colour. A community view reads as a story: its rows are in order of time
-  and it opens at its first chapter or first line (`viewStartX()`,
-  `scrollToView()`); a classical view groups by kind and opens on its
-  busiest stretch. A view's name stays at the left of its section while the
-  timeline scrolls sideways. The grip under a section drags it shorter or taller
-  (`state.sizes`; a shorter section keeps its best-ranked rows). `state.fit`
-  makes the sections share the screen height; Expand lets each take what it
-  needs. The views on the timeline sit as pills in a strip under the years
-  (`#dock`): drag to reorder, the dot picks the colour, the cross removes
-  it, "Add view" opens the panel.
+  years (`paceFor()`); it eases up to speed and a pause glides to a stop
+  (`road.vel`). Space plays and pauses. At the far end the button offers to
+  play again from the beginning.
+- **The panel** is hidden until its button, the "Views" button in the strip
+  or a name is clicked. It never covers the road: on wide screens and
+  tablets it sits beside it and the road narrows; on phones (under 700 px)
+  it is a sheet over the lower half, and the road and the bar move up above
+  it. It has three panes: views, the history of one entry, and one era. The
+  entry and era panes head with a trail back (`state.trail`, `crumbs()`).
+  Opening something from inside the panel adds a step, opening it from the
+  road starts over, and Escape goes back one step.
+- **Views.** `state.views` is the list of views on the timeline, each a
+  lane, in order from the left. An entry in two views is drawn in both
+  lanes; `L.at` maps an id to its first line. A view's chapters
+  (`checkpoints`) are lines across its lane, named in its colour. The road
+  opens where the first view begins (`roadOpening()`, `laneStart()`): at its
+  first entry, or its first chapter when that opens a little before; a
+  classical view opens on its busiest stretch. The views on the timeline
+  sit as pills in a strip along the bottom (`#dock`), which scrolls
+  sideways when they do not fit: drag to reorder (with a finger, hold a
+  pill first, because a finger scrolls the strip), the dot picks the
+  colour, and the cross removes one of several.
+- **One view at a time.** Picking a view shows it alone (`showOnly()`): the
+  others leave and the road opens at its beginning. Putting a view beside
+  the others is the second action (`turnOn()`): the small plus at the end
+  of its row, a right click, Shift, Ctrl or Cmd with a click, or
+  Shift+Enter in the search. The same button takes a view off again when
+  it is one of several. An entry found by a search that no view on the
+  timeline holds brings its own view alone too (`bringIn()`); only a link
+  that names its views keeps them and adds. Do not make adding the default
+  again: it was changed on purpose.
 - **The views pane** is search, then a row of chips (`drawChips()`: All,
   then the editors' topics from `data/editors-choice.json`, today History,
   Science, Technology and Culture), then the list of community views in the
   order `boot.json` gives them (topic by topic; under All each topic has a
   small heading), then the filters: the year range (`state.span`) and how
-  much to show (`state.level`). Only community views are listed. Classical
-  views are found by the search, where every result carries an icon that
-  says which sort it is. A row is a thumbnail made by the build
-  (`scripts/thumb.mjs`), which is also the switch that puts the view on the
-  timeline, then the name and one quiet line (`viewSub()`: the years the view
-  covers and how many entries it holds). The description is the row's tooltip
-  and is searched; it is not printed in the list. Keep the row to those two
-  lines.
-- **Time**, flat, is a straight scale left to right (`L.xOf`, `L.tOf`) with
-  the years on the fixed axis at the bottom. `axisTicks()` picks round steps
-  from one year to a billion; there is no year 0; deep time is labelled ka,
-  Ma and Ga. A long view is fitted to a few screens (`MAX_SCREENS`). When a
-  few entries start far earlier than the rest, the view opens on the rest
-  and "Show all years" reaches back. Every date on the page goes through
-  `fmtDate()` and `spanText()`, which read BCE and deep-time dates.
+  much to show (`state.level`). On a phone the filters fold into one line
+  (`#filters-btn`) so the list has the sheet. Only community views are
+  listed. Classical views are found by the search, where every result
+  carries an icon that says which sort it is. A row is a thumbnail made by
+  the build (`scripts/thumb.mjs`), then the name and one quiet line
+  (`viewSub()`: the years the view covers and how many entries it holds).
+  The description is the row's tooltip and is searched; it is not printed
+  in the list. Keep the row to those two lines.
+- **Time** is a straight scale. `ruler()` writes the years along the edge
+  of the road and `axisTicks()` those on the bar, in round steps from one
+  year to a billion; there is no year 0; deep time is labelled ka, Ma and
+  Ga. When a few entries start far earlier than the rest, the view opens on
+  the rest and "Show all years" reaches back. Every date on the page goes
+  through `fmtDate()` and `spanText()`, which read BCE and deep-time dates.
 - **Words.** A person is born and dies; a city is founded; a species goes
   extinct. The words come from the entry's branch (`words` in `boot.json`,
   `wordsNow()` for mixed text).
-- **Play**, flat, sits at the bottom left of the axis and reverse
-  (`state.order`) at the bottom right. A marker on the axis (`play.t`, null at the far end)
-  can be dragged at any time; the timeline shows only what had happened by
-  then. Play moves the same marker and crosses any span in about 20 seconds.
 - **The top search** (`findOnTimeline()`) finds entries, events, chapters
   and years among what is drawn and goes there; it understands `44 BCE` and
   `66 ma`. Below a divider it lists matches from the search index that are
@@ -231,9 +237,9 @@ How the page is put together:
   name always beats a match in another name), then base before community,
   then rank, then popularity. For a year that is not drawn it lists what
   began or ended in that year (`entriesInYear()`), and the panel's search
-  does the same. Picking one (`bringIn()`)
-  fetches the entry, adds its home view and opens it. When nothing matches
-  it offers "Suggest …", which opens the "New entry" issue form.
+  does the same. Picking one (`bringIn()`) fetches the entry, shows its
+  home view and opens it. When nothing matches it offers "Suggest …", which
+  opens the "New entry" issue form.
 - **The entry pane** shows the kind and branch, labels, other names, every
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
@@ -241,22 +247,22 @@ How the page is put together:
   form with the current link filled in. The bookmark icon saves the timeline
   as "Your view" in this browser (`cg-mine`, one slot), and the page opens
   on it when the link names no views.
-- Lines are neutral. Colour is only for view names and the open line.
-- On the flat timeline an entry with `rank < CARD_RANK` gets a card; the
-  rest get a name. On the road it is distance that decides.
+- Lines are neutral. Colour is only for view names and the selected line.
+- Whether a name is a card is decided by distance, not by rank.
 
-Layout draws at most `MAX_ROWS` lines, best ranked first, so it stays fast
-at any data size. The road keeps the same cap, draws its lines on one
-canvas and makes an element only for the few names in sight. Keep it that
-way: never draw one element per entry without a cap, and never make the
-page fetch a chain of files to answer one click.
+The road draws at most `MAX_ROWS` lines, best ranked first, so it stays
+fast at any data size. It draws them on one canvas and makes an element
+only for the few names in sight. Keep it that way: never draw one element
+per entry without a cap, and never make the page fetch a chain of files to
+answer one click.
 
 ## Before you finish
 
 - `node scripts/build.mjs --check` prints `0 errors`.
 - `node --test` passes.
 - If you changed the page, load it and check the browser console is clean at
-  1440 and 390 pixels wide, on the road and on the flat timeline (`?m=flat`).
+  1440 and 390 pixels wide. Watch it move as well: press play, and look at a
+  road of two or three views, since cards behave differently by lane.
 - If what the page shows changed (a view, an entry, or `site/`), take
   screenshots at 1440 and 390 pixels wide for the pull request. With
   Playwright: build, serve `site/` on a local port, open

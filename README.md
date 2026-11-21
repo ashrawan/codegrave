@@ -11,12 +11,10 @@
 timeline. Every entry is one line from its start to its end: a person from
 birth to death, an empire from founding to fall, a species to its
 extinction, a programming language from first release to end of support.
-The page opens with the timeline drawn in depth: time runs into the screen
-like a road, with the years along its edge, and play carries you along it.
-One button switches to the flat timeline in the pictures below, where time
-runs left to right with the years along the bottom. It began as a timeline
-of computing, and computing is still its deepest shelf. Click a card or a
-line to read its history, with dates, sources, links and images.
+The timeline is drawn in depth: time runs into the screen like a road, with
+the years along its edge, and play carries you along it. It began as a
+timeline of computing, and computing is still its deepest shelf. Click a
+card or a line to read its history, with dates, sources, links and images.
 
 The base holds about 4,400 entries on one map of ten branches: People,
 Places, Organisations, Events, Arts & media, Knowledge & belief, Society &
@@ -28,37 +26,38 @@ tell the story in order.
 
 <table>
   <tr>
-    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: the view Ancient Rome drawn as lines and chapters, with the entry for Julius Caesar open in the side panel"></td>
-    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: the view Dinosaurs, with its chapters and the years in millions"></td>
+    <td width="74%" valign="top"><img src="docs/screenshots/road.png" alt="codegrave on a wide screen: the views The Space Race and Computers as two lanes of a road that runs into the distance, with cards standing where things began"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/road-phone.png" alt="codegrave on a phone: one view as a road, with the year, the cards and the upright bar on the right"></td>
   </tr>
   <tr>
     <td align="center"><sub>Wide screen, light theme</sub></td>
-    <td align="center"><sub>Phone, dark theme</sub></td>
+    <td align="center"><sub>Phone</sub></td>
   </tr>
 </table>
 
 ## What the page does
 
 - **One subject, one view.** The panel lists the views under four topics:
-  History, Science, Technology and Culture. Each view on the timeline gets
-  its own section under a coloured heading, with its chapters drawn in its
+  History, Science, Technology and Culture. Pick one and the road shows it
+  alone, from its beginning, with its chapters drawn across it in its
   colour. Click a chapter to read it.
 - **Any stretch of time.** The same axis shows a decade of software, three
   thousand years of empires, or four billion years of the Earth. Dates
   before the common era and deep time are first-class.
-- **Side by side.** Put up to eight views on the timeline at once and see
-  what was happening at the same moment in different stories.
-- **Fit or Expand.** Fit shares the screen height between the sections.
-  Expand lets each section take what it needs and the page scrolls. Drag the
-  grip under a section to make it shorter or taller; a shorter section keeps
-  its best-ranked lines.
+- **Side by side.** The small plus at the end of a row (or a right click)
+  puts a view beside the ones already there, each in a lane of its own, so
+  you see what was happening at the same moment in different stories. The
+  left lane's cards stand on the left and the right lane's on the right.
+  Two lanes are comfortable; up to eight fit.
 - **Search.** The top search finds entries, events, chapters and years on
   the timeline (try `44 BCE`). Below them it lists matches from the whole
   encyclopedia, and picking one brings it onto the timeline. The panel's
   search finds views: the listed ones, and the classical shelves (Everything,
   each branch, each kind) with their type marked.
-- **Play and reverse.** Play moves a marker through time so the timeline
-  shows only what had happened by then. Reverse flips the order of the lines.
+- **Play and reverse.** Play carries you along the road, slower where much
+  happens and quicker through empty years. The wheel, a drag, the arrow keys
+  and the upright bar on the right travel too. Reverse turns you round to
+  start at the present and go back.
 - **One link for everything.** The address holds the views, their order and
   colours, the year range and the open entry, so any state can be shared.
 - **Fast at any size.** The page never loads the whole dataset. Each action
