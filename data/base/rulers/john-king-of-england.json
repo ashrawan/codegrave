@@ -1,0 +1,58 @@
+{
+  "id": "john-king-of-england",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "King John",
+      "from": "1166"
+    }
+  ],
+  "summary": "Youngest son of Henry II. He lost Normandy to France and was forced by his barons to seal Magna Carta in 1215.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "John Lackland",
+    "John, King of England"
+  ],
+  "wikidata": "Q129308",
+  "events": [
+    {
+      "type": "born",
+      "date": "1166-12-24",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1199",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1199 to 1216."
+    },
+    {
+      "type": "ended",
+      "date": "1216-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John, King of England (Q129308)",
+      "url": "https://www.wikidata.org/wiki/Q129308",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John, King of England",
+      "url": "https://en.wikipedia.org/wiki/John,_King_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

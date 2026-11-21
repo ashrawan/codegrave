@@ -1,0 +1,61 @@
+{
+  "id": "henry-vi-of-england",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Henry VI of England",
+      "from": "1421"
+    }
+  ],
+  "summary": "Became king as a baby. He lost England's lands in France, and the rivalry around his weak rule grew into the Wars of the Roses.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q160337",
+  "events": [
+    {
+      "type": "born",
+      "date": "1421-12-06",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1422",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1422, when he was nine months old."
+    },
+    {
+      "type": "milestone",
+      "date": "1461",
+      "precision": "year",
+      "label": "Deposed",
+      "note": "Deposed by Edward IV. He was restored for six months in 1470 and 1471."
+    },
+    {
+      "type": "ended",
+      "date": "1471-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Henry VI of England (Q160337)",
+      "url": "https://www.wikidata.org/wiki/Q160337",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henry VI of England",
+      "url": "https://en.wikipedia.org/wiki/Henry_VI_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

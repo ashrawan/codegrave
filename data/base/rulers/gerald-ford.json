@@ -1,0 +1,64 @@
+{
+  "id": "gerald-ford",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Gerald Ford",
+      "from": "1913"
+    }
+  ],
+  "summary": "Thirty-eighth president, who took office when Richard Nixon resigned. He is the only president who was never elected as president or as vice president.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Gerald R. Ford"
+  ],
+  "wikidata": "Q9582",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913-07-14",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1974-08-09",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 38th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1977-01-20",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Jimmy Carter took office."
+    },
+    {
+      "type": "ended",
+      "date": "2006-12-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Gerald Ford (Q9582)",
+      "url": "https://www.wikidata.org/wiki/Q9582",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gerald Ford",
+      "url": "https://en.wikipedia.org/wiki/Gerald_Ford",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

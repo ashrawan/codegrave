@@ -1,0 +1,61 @@
+{
+  "id": "andrew-johnson",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Andrew Johnson",
+      "from": "1808"
+    }
+  ],
+  "summary": "Seventeenth president, who took office after Lincoln was assassinated. He fought Congress over Reconstruction and was the first president to be impeached; the Senate acquitted him by one vote.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q8612",
+  "events": [
+    {
+      "type": "born",
+      "date": "1808-12-29",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1865-04-15",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 17th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1869-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Ulysses S. Grant took office."
+    },
+    {
+      "type": "ended",
+      "date": "1875-07-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Andrew Johnson (Q8612)",
+      "url": "https://www.wikidata.org/wiki/Q8612",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andrew Johnson",
+      "url": "https://en.wikipedia.org/wiki/Andrew_Johnson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "george-iv",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "George IV",
+      "from": "1762"
+    }
+  ],
+  "summary": "Prince Regent from 1811 during his father's illness, then king. He is remembered for his taste in building, including the Royal Pavilion at Brighton.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q130586",
+  "events": [
+    {
+      "type": "born",
+      "date": "1762-08-12",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1820-01-29",
+      "precision": "day",
+      "label": "Became king",
+      "note": "King of the United Kingdom from 1820 to 1830."
+    },
+    {
+      "type": "ended",
+      "date": "1830-06-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: George IV of the United Kingdom (Q130586)",
+      "url": "https://www.wikidata.org/wiki/Q130586",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George IV",
+      "url": "https://en.wikipedia.org/wiki/George_IV",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

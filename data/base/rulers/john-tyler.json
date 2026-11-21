@@ -1,0 +1,61 @@
+{
+  "id": "john-tyler",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "John Tyler",
+      "from": "1790"
+    }
+  ],
+  "summary": "Tenth president and the first vice president to take over after a president died. Texas was brought towards the Union at the end of his term.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11881",
+  "events": [
+    {
+      "type": "born",
+      "date": "1790-03-29",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1841-04-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 10th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1845-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and James K. Polk took office."
+    },
+    {
+      "type": "ended",
+      "date": "1862-01-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Tyler (Q11881)",
+      "url": "https://www.wikidata.org/wiki/Q11881",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Tyler",
+      "url": "https://en.wikipedia.org/wiki/John_Tyler",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

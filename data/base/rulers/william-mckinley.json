@@ -1,0 +1,54 @@
+{
+  "id": "william-mckinley",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "William McKinley",
+      "from": "1843"
+    }
+  ],
+  "summary": "Twenty-fifth president. He led the country in the Spanish-American War of 1898 and was assassinated early in his second term.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q35041",
+  "events": [
+    {
+      "type": "born",
+      "date": "1843-01-29",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1897-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 25th president of the United States."
+    },
+    {
+      "type": "ended",
+      "date": "1901-09-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: William McKinley (Q35041)",
+      "url": "https://www.wikidata.org/wiki/Q35041",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: William McKinley",
+      "url": "https://en.wikipedia.org/wiki/William_McKinley",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}
