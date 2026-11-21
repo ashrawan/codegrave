@@ -1,0 +1,54 @@
+{
+  "id": "eurovision-song-contest",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Eurovision Song Contest",
+      "from": "1956"
+    }
+  ],
+  "summary": "A yearly television song contest between countries, started in Europe to bring broadcasters together after the war. Now many countries take part, and the show has launched artists such as ABBA.",
+  "labels": [
+    "music",
+    "television"
+  ],
+  "aliases": [
+    "ESC",
+    "Eurovision",
+    "Grand Prix Eurovision de la Chanson",
+    "Eurosong"
+  ],
+  "wikidata": "Q276",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eurovision Song Contest (Q276)",
+      "url": "https://www.wikidata.org/wiki/Q276",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eurovision Song Contest",
+      "url": "https://en.wikipedia.org/wiki/Eurovision_Song_Contest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

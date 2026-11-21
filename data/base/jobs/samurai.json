@@ -1,0 +1,57 @@
+{
+  "id": "samurai",
+  "category": "jobs",
+  "names": [
+    {
+      "name": "Samurai",
+      "from": "0900"
+    }
+  ],
+  "summary": "Warriors of Japan who served lords and rose to rule the country during the shogun period. They became a hereditary class, until the Meiji government ended their privileges.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "buke",
+    "bushi"
+  ],
+  "wikidata": "Q38142",
+  "events": [
+    {
+      "type": "born",
+      "date": "0900",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1876",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abolished as a class by the Meiji government, which banned wearing swords",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: samurai (Q38142)",
+      "url": "https://www.wikidata.org/wiki/Q38142",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samurai",
+      "url": "https://en.wikipedia.org/wiki/Samurai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

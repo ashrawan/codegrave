@@ -1,0 +1,53 @@
+{
+  "id": "linear-b",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Linear B",
+      "from": "-1450"
+    }
+  ],
+  "summary": "A script used by the Mycenaean Greeks on clay tablets to keep palace records. It was deciphered in 1952 by Michael Ventris, who showed that it recorded an early form of Greek.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Linear B Script",
+    "Linb"
+  ],
+  "wikidata": "Q190102",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1450",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Mycenaean palaces collapsed and writing was lost for centuries",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Linear B (Q190102)",
+      "url": "https://www.wikidata.org/wiki/Q190102",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Linear B",
+      "url": "https://en.wikipedia.org/wiki/Linear_B",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

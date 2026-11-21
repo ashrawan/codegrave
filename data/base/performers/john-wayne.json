@@ -1,0 +1,51 @@
+{
+  "id": "john-wayne",
+  "category": "performers",
+  "names": [
+    {
+      "name": "John Wayne",
+      "from": "1907"
+    }
+  ],
+  "summary": "American actor who became the best-known star of Westerns and war films, such as Stagecoach, Red River and True Grit. He won an Academy Award for True Grit.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "The Duke",
+    "Duke"
+  ],
+  "wikidata": "Q40531",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907-05-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-06-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Wayne (Q40531)",
+      "url": "https://www.wikidata.org/wiki/Q40531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Wayne",
+      "url": "https://en.wikipedia.org/wiki/John_Wayne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

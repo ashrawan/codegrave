@@ -1,0 +1,98 @@
+{
+  "id": "the-cold-war",
+  "name": "The Cold War",
+  "description": "The long standoff between the United States and the Soviet Union, from Yalta to the fall of the Berlin Wall.",
+  "category": "events",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "tags": [
+    "cold war",
+    "soviet union",
+    "ussr",
+    "berlin wall",
+    "cuban missile crisis",
+    "nuclear",
+    "communism"
+  ],
+  "entries": [
+    "joseph-stalin",
+    "mao-zedong",
+    "nikita-khrushchev",
+    "leonid-brezhnev",
+    "ronald-reagan",
+    "kim-il-sung",
+    "john-f-kennedy",
+    "soviet-union",
+    "fidel-castro",
+    "mikhail-gorbachev",
+    "yalta-conference",
+    "cold-war",
+    "potsdam-conference",
+    "marshall-plan",
+    "berlin-blockade",
+    "nato",
+    "korean-war",
+    "thermonuclear-weapon",
+    "cuban-revolution",
+    "warsaw-pact",
+    "vietnam-war",
+    "hungarian-revolution-of-1956",
+    "suez-crisis",
+    "sputnik-1",
+    "space-race",
+    "u2-incident",
+    "bay-of-pigs-invasion",
+    "berlin-wall",
+    "cuban-missile-crisis",
+    "prague-spring",
+    "chilean-coup-of-1973",
+    "soviet-afghan-war",
+    "solidarity-trade-union",
+    "chernobyl-disaster",
+    "revolutions-of-1989",
+    "tiananmen-square-protests-of-1989",
+    "fall-of-the-berlin-wall",
+    "german-reunification",
+    "velvet-revolution",
+    "dissolution-of-the-soviet-union"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-iron-curtain",
+      "name": "The Iron Curtain",
+      "from": 1945,
+      "to": 1949,
+      "note": "Wartime allies split over Europe. Germany is divided, the Berlin Blockade tests the West, and Marshall Plan aid and NATO bind the West together as two rival camps take shape around the United States and the Soviet Union. In 1949 Mao Zedong's Communists win China."
+    },
+    {
+      "id": "korea-hungary-and-the-berlin-wall",
+      "name": "Korea, Hungary and the Berlin Wall",
+      "from": 1950,
+      "to": 1961,
+      "note": "War in Korea, where Kim Il Sung rules the north, revolt in Hungary and crisis at Suez show the limits of each side. The Warsaw Pact forms in 1955, Fidel Castro wins Cuba in 1959, Sputnik starts the space race, a U-2 is shot down in 1960, the Bay of Pigs fails in 1961, and East Germany builds a wall through Berlin."
+    },
+    {
+      "id": "the-cuban-missile-crisis-and-vietnam",
+      "name": "The Cuban Missile Crisis and Vietnam",
+      "from": 1962,
+      "to": 1972,
+      "note": "The Cuban Missile Crisis brings the world close to nuclear war, the two sides build vast thermonuclear arsenals, the United States sinks into Vietnam, and the Soviet Union crushes the Prague Spring."
+    },
+    {
+      "id": "detente-and-afghanistan",
+      "name": "Détente and Afghanistan",
+      "from": 1973,
+      "to": 1984,
+      "note": "A thaw in relations gives way to renewed tension after the Soviet invasion of Afghanistan. The Chilean coup shows proxy rivalry in Latin America, Solidarity challenges communist rule in Poland from 1980, and Ronald Reagan takes office in 1981 promising a harder line."
+    },
+    {
+      "id": "the-end-of-the-cold-war",
+      "name": "The end of the Cold War",
+      "from": 1985,
+      "to": 1991,
+      "note": "Mikhail Gorbachev's reforms open the door, and the Chernobyl disaster of 1986 shakes faith in the Soviet system. In 1989 protests sweep Eastern Europe and the Berlin Wall falls, in 1990 Germany is reunited, and in 1991 the Soviet Union itself dissolves."
+    }
+  ]
+}

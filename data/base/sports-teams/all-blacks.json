@@ -1,0 +1,57 @@
+{
+  "id": "all-blacks",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "All Blacks",
+      "from": "1903"
+    }
+  ],
+  "summary": "National rugby union team of New Zealand, known for its black kit and for performing a haka before matches. It has won the Rugby World Cup three times and has one of the best win records in international sport.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "New Zealand national rugby team",
+    "New Zealand rugby union team",
+    "New Zealand rugby team"
+  ],
+  "wikidata": "Q55801",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903-08-15",
+      "precision": "day",
+      "note": "Dated from New Zealand's first Test match, in 1903. A national team first toured in 1884, and the name All Blacks dates from the tour of 1905."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    },
+    {
+      "type": "related",
+      "to": "rugby-world-cup-1995"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New Zealand national rugby union team (Q55801)",
+      "url": "https://www.wikidata.org/wiki/Q55801",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Zealand national rugby union team",
+      "url": "https://en.wikipedia.org/wiki/New_Zealand_national_rugby_union_team",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

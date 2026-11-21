@@ -1,0 +1,49 @@
+{
+  "id": "dromedary",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Dromedary camel",
+      "from": "-3000"
+    }
+  ],
+  "summary": "The one-humped camel, tamed in Arabia and used to carry people and goods across deserts. Camel caravans made long desert trade routes possible.",
+  "labels": [
+    "transport"
+  ],
+  "aliases": [
+    "Camelus dromedarius",
+    "Arabian camel",
+    "hygeen",
+    "hajeen",
+    "mehari"
+  ],
+  "wikidata": "Q71516",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Camelus dromedarius (Q71516)",
+      "url": "https://www.wikidata.org/wiki/Q71516",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dromedary",
+      "url": "https://en.wikipedia.org/wiki/Dromedary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,76 @@
+{
+  "id": "ramones",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Ramones",
+      "from": "1974"
+    }
+  ],
+  "summary": "New York band that played fast, short songs in leather jackets and are counted among the first punk bands. Its style spread to Britain and many other countries.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "The Ramones"
+  ],
+  "wikidata": "Q483407",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1996-08-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended after a final tour and retirement",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "chuck-berry"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-rolling-stones"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-beach-boys"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-beatles"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-velvet-underground"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-who"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ramones (Q483407)",
+      "url": "https://www.wikidata.org/wiki/Q483407",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ramones",
+      "url": "https://en.wikipedia.org/wiki/Ramones",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

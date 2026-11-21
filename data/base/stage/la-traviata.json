@@ -1,0 +1,47 @@
+{
+  "id": "la-traviata",
+  "category": "stage",
+  "names": [
+    {
+      "name": "La traviata",
+      "from": "1853"
+    }
+  ],
+  "summary": "Opera by Giuseppe Verdi about Violetta, a Paris courtesan who gives up the man she loves and dies of illness. Based on a play by Alexandre Dumas the younger, it is among the most performed operas.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q186162",
+  "events": [
+    {
+      "type": "born",
+      "date": "1853-03-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "giuseppe-verdi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: La traviata (Q186162)",
+      "url": "https://www.wikidata.org/wiki/Q186162",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La traviata",
+      "url": "https://en.wikipedia.org/wiki/La_traviata",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

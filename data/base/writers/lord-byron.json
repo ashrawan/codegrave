@@ -1,0 +1,57 @@
+{
+  "id": "lord-byron",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Lord Byron",
+      "from": "1788"
+    }
+  ],
+  "summary": "English poet whose long poems Childe Harold and Don Juan made him famous across Europe. He left England in 1816 and later joined the Greek war for independence, where he died of illness at Missolonghi.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Noel Byron",
+    "George Gordon Byron, 6th Lord Byron",
+    "George Gordon Byron, 6th Baron Byron"
+  ],
+  "wikidata": "Q5679",
+  "events": [
+    {
+      "type": "born",
+      "date": "1788-01-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1824-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lord Byron (Q5679)",
+      "url": "https://www.wikidata.org/wiki/Q5679",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lord Byron",
+      "url": "https://en.wikipedia.org/wiki/Lord_Byron",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

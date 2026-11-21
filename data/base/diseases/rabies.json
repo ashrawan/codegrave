@@ -1,0 +1,52 @@
+{
+  "id": "rabies",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Rabies",
+      "from": "-2300"
+    }
+  ],
+  "summary": "Viral disease passed on by the bite of an infected animal, nearly always fatal once signs appear. A law code from Mesopotamia around 2300 BCE already mentions mad dogs that bite people.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Lyssa",
+    "hydrophobia",
+    "extreme salivation"
+  ],
+  "wikidata": "Q39222",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "dog"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: rabies (Q39222)",
+      "url": "https://www.wikidata.org/wiki/Q39222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rabies",
+      "url": "https://en.wikipedia.org/wiki/Rabies",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

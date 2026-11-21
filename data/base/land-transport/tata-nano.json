@@ -1,0 +1,49 @@
+{
+  "id": "tata-nano",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Tata Nano",
+      "from": "2008"
+    }
+  ],
+  "summary": "A very small, low-priced car launched in India in 2008 by Tata Motors and aimed at families that rode scooters. It sold less than hoped and production ended in 2018.",
+  "labels": [
+    "transport",
+    "business"
+  ],
+  "wikidata": "Q152238",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2018",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Low sales ended production",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Tata Nano (Q152238)",
+      "url": "https://www.wikidata.org/wiki/Q152238",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tata Nano",
+      "url": "https://en.wikipedia.org/wiki/Tata_Nano",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

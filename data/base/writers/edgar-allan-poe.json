@@ -1,0 +1,50 @@
+{
+  "id": "edgar-allan-poe",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Edgar Allan Poe",
+      "from": "1809"
+    }
+  ],
+  "summary": "American writer of poems and short stories, including The Raven and The Tell-Tale Heart. He helped to invent the detective story, and his tales of fear shaped later horror fiction.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Quarles"
+  ],
+  "wikidata": "Q16867",
+  "events": [
+    {
+      "type": "born",
+      "date": "1809-01-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1849-10-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Edgar Allan Poe (Q16867)",
+      "url": "https://www.wikidata.org/wiki/Q16867",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edgar Allan Poe",
+      "url": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

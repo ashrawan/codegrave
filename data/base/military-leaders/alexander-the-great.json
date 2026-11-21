@@ -1,0 +1,60 @@
+{
+  "id": "alexander-the-great",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Alexander the Great",
+      "from": "-0356"
+    }
+  ],
+  "summary": "King of Macedon who took the throne at twenty and defeated the Persian Empire. His army marched as far as India, and he founded many cities before dying in Babylon aged thirty-two.",
+  "labels": [
+    "war",
+    "exploration"
+  ],
+  "aliases": [
+    "Alexandros III of Macedonia",
+    "Alexander III of Macedonia",
+    "Alexandros III",
+    "the Great Alexander",
+    "Alexandros"
+  ],
+  "wikidata": "Q8409",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0356-07-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0323-06-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alexander the Great (Q8409)",
+      "url": "https://www.wikidata.org/wiki/Q8409",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexander the Great",
+      "url": "https://en.wikipedia.org/wiki/Alexander_the_Great",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

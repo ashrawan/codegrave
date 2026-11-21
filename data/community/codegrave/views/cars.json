@@ -1,0 +1,76 @@
+{
+  "id": "cars",
+  "name": "Cars",
+  "description": "The motor car from the Benz Patent-Motorwagen of 1886 to the Model T, the Beetle, the Mini and the electric car.",
+  "category": "technology",
+  "labels": [
+    "transport"
+  ],
+  "tags": [
+    "cars",
+    "automobiles",
+    "ford model t",
+    "beetle",
+    "electric cars",
+    "motoring",
+    "automotive"
+  ],
+  "entries": [
+    "bicycle",
+    "electric-motor",
+    "vulcanization",
+    "karl-benz",
+    "drake-well",
+    "internal-combustion-engine",
+    "henry-ford",
+    "benz-patent-motorwagen",
+    "automobile",
+    "diesel-engine",
+    "ford-motor-company",
+    "general-motors",
+    "ford-model-t",
+    "us-route-66",
+    "toyota",
+    "volkswagen-beetle",
+    "willys-mb",
+    "vespa",
+    "citroen-2cv",
+    "honda-super-cub",
+    "mini",
+    "oil-crisis-1973",
+    "lithium-ion-battery",
+    "toyota-prius",
+    "tesla-roadster",
+    "tata-nano"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-the-car",
+      "name": "Before the car",
+      "from": 1817,
+      "to": 1885,
+      "note": "Bicycles move people and goods while inventors tinker with steam wagons and gas engines. Rubber and oil, two future necessities, are found and made useful."
+    },
+    {
+      "id": "the-first-cars-and-the-model-t",
+      "name": "The first cars and the Model T",
+      "from": 1886,
+      "to": 1929,
+      "note": "Benz patents a petrol car, Diesel builds his engine and Henry Ford brings the price of a Model T down until ordinary families can buy one. General Motors grows into his great rival, and Route 66 opens in 1926 as a road for the new motorists."
+    },
+    {
+      "id": "cars-for-everyone",
+      "name": "Cars for everyone",
+      "from": 1930,
+      "to": 1969,
+      "note": "After the war, cheap and clever small vehicles put Europe and Asia on the road: the Beetle, the 2CV, the Vespa, the Honda Super Cub and the Mini, while Toyota grows from a Japanese loom-maker's car venture into a world carmaker."
+    },
+    {
+      "id": "hybrid-and-electric",
+      "name": "Hybrid and electric",
+      "from": 1970,
+      "to": 2026,
+      "note": "The 1973 oil crisis pushes buyers toward thrift. Better batteries, hybrids and electric sports cars then begin to challenge the petrol engine, while very cheap cars try to reach new buyers."
+    }
+  ]
+}

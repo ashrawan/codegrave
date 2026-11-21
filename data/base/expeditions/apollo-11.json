@@ -1,0 +1,62 @@
+{
+  "id": "apollo-11",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Apollo 11",
+      "from": "1969"
+    }
+  ],
+  "summary": "The American spaceflight in which Neil Armstrong and Buzz Aldrin landed on the Moon, while Michael Collins orbited above. Armstrong was the first person to walk on the lunar surface, on 20 July.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "aliases": [
+    "Apollo XI",
+    "The Moon Landing",
+    "The 1st Moon Landing"
+  ],
+  "wikidata": "Q43653",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1969",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "apollo-program"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apollo 11 (Q43653)",
+      "url": "https://www.wikidata.org/wiki/Q43653",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apollo 11",
+      "url": "https://en.wikipedia.org/wiki/Apollo_11",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

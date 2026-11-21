@@ -1,0 +1,62 @@
+{
+  "id": "ada-lovelace",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Ada Lovelace",
+      "from": "1815"
+    }
+  ],
+  "summary": "English mathematician who wrote notes on Babbage's Analytical Engine, including a method for calculating Bernoulli numbers that is often called the first computer program. She also saw that such machines could work with more than numbers.",
+  "labels": [
+    "computing",
+    "mathematics"
+  ],
+  "aliases": [
+    "Lady Ada",
+    "Augusta Ada King, Countess of Lovelace",
+    "Ada Byron"
+  ],
+  "wikidata": "Q7259",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815-12-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1852-11-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "lord-byron"
+    },
+    {
+      "type": "influenced_by",
+      "to": "charles-babbage"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ada Lovelace (Q7259)",
+      "url": "https://www.wikidata.org/wiki/Q7259",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ada Lovelace",
+      "url": "https://en.wikipedia.org/wiki/Ada_Lovelace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

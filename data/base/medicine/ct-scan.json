@@ -1,0 +1,52 @@
+{
+  "id": "ct-scan",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "CT scan",
+      "from": "1971"
+    }
+  ],
+  "maker": "Godfrey Hounsfield",
+  "summary": "A scanner that takes many X-ray pictures from different angles and builds a picture of a slice of the body. It was developed in England in the early 1970s and let doctors see inside the head without surgery.",
+  "labels": [
+    "medicine",
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "computed tomography",
+    "X-ray computed tomography",
+    "CAT scan",
+    "CT",
+    "CAT"
+  ],
+  "wikidata": "Q32566",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: computed tomography (Q32566)",
+      "url": "https://www.wikidata.org/wiki/Q32566",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: CT scan",
+      "url": "https://en.wikipedia.org/wiki/CT_scan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

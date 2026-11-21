@@ -1,0 +1,73 @@
+{
+  "id": "google",
+  "name": "Google",
+  "description": "Google's products from the search box of 1997 to Gemini, including the ones it shut down.",
+  "category": "computing",
+  "labels": [
+    "business",
+    "computing"
+  ],
+  "tags": [
+    "google",
+    "gmail",
+    "youtube",
+    "android",
+    "chrome",
+    "killed by google",
+    "search"
+  ],
+  "entries": [
+    "google-search",
+    "orkut",
+    "gmail",
+    "google-maps",
+    "youtube",
+    "google-talk",
+    "google-reader",
+    "google-docs",
+    "chrome",
+    "android",
+    "google-buzz",
+    "google-plus",
+    "chromebook",
+    "chrome-os",
+    "chromecast",
+    "alphago",
+    "tensorflow",
+    "google-assistant",
+    "transformer-model",
+    "alphafold",
+    "google-stadia",
+    "gemini"
+  ],
+  "checkpoints": [
+    {
+      "id": "search",
+      "name": "Search",
+      "from": 1997,
+      "to": 2003,
+      "note": "Two Stanford students build a search engine that ranks pages by the links pointing to them. Within a few years it is the front door of the web."
+    },
+    {
+      "id": "mail-maps-and-video",
+      "name": "Mail, maps and video",
+      "from": 2004,
+      "to": 2007,
+      "note": "Gmail arrives in 2004 with far more storage than its rivals, Google Maps follows in 2005, and in 2006 the company buys YouTube."
+    },
+    {
+      "id": "android-and-chrome",
+      "name": "Android and Chrome",
+      "from": 2008,
+      "to": 2012,
+      "note": "Android and the Chrome browser both arrive in 2008 and both become the most used in the world. The social networks Buzz and Google+ do less well."
+    },
+    {
+      "id": "ai-first",
+      "name": "AI first",
+      "from": 2013,
+      "to": 2026,
+      "note": "AlphaGo beats one of the world's best Go players in 2016, and a 2017 paper by Google researchers describes the transformer, the design behind today's chatbots. Reader, Google+ and Stadia are among the products closed along the way."
+    }
+  ]
+}

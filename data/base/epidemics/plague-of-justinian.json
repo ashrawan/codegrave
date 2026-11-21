@@ -1,0 +1,59 @@
+{
+  "id": "plague-of-justinian",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Plague of Justinian",
+      "from": "0541"
+    }
+  ],
+  "summary": "The first great outbreak of plague in recorded history, reaching the Byzantine capital Constantinople in the reign of Justinian I. It returned in waves around the Mediterranean and beyond for two centuries.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Justinianic plague"
+  ],
+  "wikidata": "Q821711",
+  "events": [
+    {
+      "type": "born",
+      "date": "0541",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0549",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "byzantine-empire"
+    },
+    {
+      "type": "related",
+      "to": "justinian-i"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Plague of Justinian (Q821711)",
+      "url": "https://www.wikidata.org/wiki/Q821711",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plague of Justinian",
+      "url": "https://en.wikipedia.org/wiki/Plague_of_Justinian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

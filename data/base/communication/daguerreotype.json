@@ -1,0 +1,60 @@
+{
+  "id": "daguerreotype",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Daguerreotype",
+      "from": "1839"
+    }
+  ],
+  "maker": "Louis Daguerre",
+  "summary": "An early photograph made on a silvered metal plate. Announced in France in 1839, it gave sharp one-off pictures and began the age of portrait photography, until paper-based photographs replaced it.",
+  "labels": [
+    "visual-art",
+    "lost"
+  ],
+  "aliases": [
+    "daguerreotype process",
+    "daguerreotyping",
+    "daguerreotypy"
+  ],
+  "wikidata": "Q179744",
+  "events": [
+    {
+      "type": "born",
+      "date": "1839",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1860",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by cheaper processes that could print many copies",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "louis-daguerre"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: daguerreotype process (Q179744)",
+      "url": "https://www.wikidata.org/wiki/Q179744",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Daguerreotype",
+      "url": "https://en.wikipedia.org/wiki/Daguerreotype",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "spanish-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Spanish Empire",
+      "from": "1492"
+    }
+  ],
+  "summary": "The overseas empire that grew after Columbus's voyages, holding much of the Americas, the Philippines and parts of Europe. Silver from its mines shaped world trade, and Spanish became a world language.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Imperio español",
+    "Monarquía universal Española",
+    "Monarquía Hispánica"
+  ],
+  "wikidata": "Q80702",
+  "events": [
+    {
+      "type": "born",
+      "date": "1492-10-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-02-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost most colonies in the 1800s and the last, Spanish Sahara, in 1976",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish Empire (Q80702)",
+      "url": "https://www.wikidata.org/wiki/Q80702",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish Empire",
+      "url": "https://en.wikipedia.org/wiki/Spanish_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

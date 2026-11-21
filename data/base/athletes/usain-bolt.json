@@ -1,0 +1,42 @@
+{
+  "id": "usain-bolt",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Usain Bolt",
+      "from": "1986"
+    }
+  ],
+  "summary": "Jamaican sprinter who holds the world records in the 100 metres and 200 metres, set in 2009. He won eight Olympic gold medals, in 2008, 2012 and 2016.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1189",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-08-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Usain Bolt (Q1189)",
+      "url": "https://www.wikidata.org/wiki/Q1189",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Usain Bolt",
+      "url": "https://en.wikipedia.org/wiki/Usain_Bolt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

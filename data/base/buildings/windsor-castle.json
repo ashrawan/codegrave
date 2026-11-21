@@ -1,0 +1,48 @@
+{
+  "id": "windsor-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Windsor Castle",
+      "from": "1080"
+    }
+  ],
+  "summary": "Royal residence in Berkshire, England, begun by William the Conqueror after 1066. It is the largest inhabited castle in the world and has been used by British monarchs for almost a thousand years.",
+  "labels": [
+    "architecture",
+    "politics"
+  ],
+  "wikidata": "Q42646",
+  "events": [
+    {
+      "type": "born",
+      "date": "1080",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Windsor Castle (Q42646)",
+      "url": "https://www.wikidata.org/wiki/Q42646",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windsor Castle",
+      "url": "https://en.wikipedia.org/wiki/Windsor_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

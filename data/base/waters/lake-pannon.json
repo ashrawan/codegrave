@@ -1,0 +1,49 @@
+{
+  "id": "lake-pannon",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Lake Pannon",
+      "from": "-11600000"
+    }
+  ],
+  "summary": "A large inland sea in what is now central Europe, centred on Hungary, which was cut off from the ocean about 11 million years ago. It slowly filled with river sediment and became the Pannonian plain.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "wikidata": "Q3705990",
+  "events": [
+    {
+      "type": "born",
+      "date": "-11600000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-600000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Filled with river sediment and slowly became land",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pannonian Sea (Q3705990)",
+      "url": "https://www.wikidata.org/wiki/Q3705990",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pannonian Sea",
+      "url": "https://en.wikipedia.org/wiki/Pannonian_Sea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,63 @@
+{
+  "id": "iraq",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Iraq",
+      "from": "1932"
+    }
+  ],
+  "summary": "A country in the land of ancient Mesopotamia that gained independence from Britain in 1932. It is crossed by the Tigris and Euphrates and has been through many wars since the 1980s.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Iraq",
+    "iq"
+  ],
+  "wikidata": "Q796",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "opec"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iraq (Q796)",
+      "url": "https://www.wikidata.org/wiki/Q796",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iraq",
+      "url": "https://en.wikipedia.org/wiki/Iraq",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

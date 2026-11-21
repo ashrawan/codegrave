@@ -1,0 +1,57 @@
+{
+  "id": "american-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "American Revolution",
+      "from": "1765"
+    }
+  ],
+  "summary": "The political upheaval in which thirteen British colonies rejected British rule and created the United States, beginning with protests over taxes and ending with independence. Its ideas of rights and republic spread widely.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "wikidata": "Q192769",
+  "events": [
+    {
+      "type": "born",
+      "date": "1765",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1783",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "thirteen-colonies"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: American Revolution (Q192769)",
+      "url": "https://www.wikidata.org/wiki/Q192769",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: American Revolution",
+      "url": "https://en.wikipedia.org/wiki/American_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

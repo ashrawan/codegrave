@@ -1,0 +1,92 @@
+{
+  "id": "thomas-aquinas",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Thomas Aquinas",
+      "from": "1225"
+    }
+  ],
+  "summary": "Italian friar and teacher who combined the thought of Aristotle with Christian teaching, notably in his Summa Theologiae. He is one of the most influential philosophers and theologians of the medieval Church.",
+  "labels": [
+    "philosophy",
+    "religion"
+  ],
+  "aliases": [
+    "Tommaso d'Aquino",
+    "St Thomas Aquinas",
+    "Aquinas",
+    "Angelic Doctor",
+    "Dumb Ox"
+  ],
+  "wikidata": "Q9438",
+  "events": [
+    {
+      "type": "born",
+      "date": "1225",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1274-03-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "maimonides"
+    },
+    {
+      "type": "influenced_by",
+      "to": "cicero"
+    },
+    {
+      "type": "influenced_by",
+      "to": "averroes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "avicenna"
+    },
+    {
+      "type": "influenced_by",
+      "to": "augustine-of-hippo"
+    },
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "paul-the-apostle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "al-ghazali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thomas Aquinas (Q9438)",
+      "url": "https://www.wikidata.org/wiki/Q9438",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thomas Aquinas",
+      "url": "https://en.wikipedia.org/wiki/Thomas_Aquinas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

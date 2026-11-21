@@ -1,0 +1,62 @@
+{
+  "id": "olympics-1968",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1968 Summer Olympics",
+      "from": "1968"
+    }
+  ],
+  "summary": "Held in Mexico City at high altitude, the Games saw records in sprints and jumping. On the podium the American sprinters Tommie Smith and John Carlos raised gloved fists in protest against racism.",
+  "labels": [
+    "sport",
+    "human-rights"
+  ],
+  "aliases": [
+    "Games of the XIX Olympiad",
+    "Mexico City 1968",
+    "Mexico 1968"
+  ],
+  "wikidata": "Q8429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-10-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico-city"
+    },
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1968 Summer Olympics (Q8429)",
+      "url": "https://www.wikidata.org/wiki/Q8429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1968 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1968_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

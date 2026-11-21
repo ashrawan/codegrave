@@ -1,0 +1,61 @@
+{
+  "id": "ford-model-t",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Ford Model T",
+      "from": "1908"
+    }
+  ],
+  "maker": "Ford Motor Company",
+  "summary": "A simple, tough car made by Ford from 1908 and produced on a moving assembly line from 1913. Its low price put motoring in reach of ordinary families, and more than fifteen million were built.",
+  "labels": [
+    "transport",
+    "business"
+  ],
+  "aliases": [
+    "Tin Lizzie",
+    "Model T Ford",
+    "T",
+    "T-Ford"
+  ],
+  "wikidata": "Q182323",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-09-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1927",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Ford Model A as buyers wanted newer designs",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ford-motor-company"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ford Model T (Q182323)",
+      "url": "https://www.wikidata.org/wiki/Q182323",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ford Model T",
+      "url": "https://en.wikipedia.org/wiki/Ford_Model_T",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

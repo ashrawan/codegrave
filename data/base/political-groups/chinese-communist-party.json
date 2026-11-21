@@ -1,0 +1,56 @@
+{
+  "id": "chinese-communist-party",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Chinese Communist Party",
+      "from": "1921"
+    }
+  ],
+  "summary": "Ruling party of China since 1949, founded in Shanghai in 1921. It fought the Kuomintang in a long civil war and, led by Mao Zedong, won control of the mainland.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "CCP",
+    "CPC",
+    "Communist Party of China"
+  ],
+  "wikidata": "Q17427",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921-07-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chinese Communist Party (Q17427)",
+      "url": "https://www.wikidata.org/wiki/Q17427",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chinese Communist Party",
+      "url": "https://en.wikipedia.org/wiki/Chinese_Communist_Party",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

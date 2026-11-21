@@ -1,0 +1,68 @@
+{
+  "id": "st-pauls-cathedral",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "St Paul's Cathedral",
+      "from": "1675"
+    }
+  ],
+  "maker": "Christopher Wren",
+  "summary": "Cathedral on Ludgate Hill in London, rebuilt by Christopher Wren after the Great Fire of 1666. Its large dome dominates the skyline, and it survived the Blitz of the Second World War.",
+  "labels": [
+    "architecture",
+    "religion"
+  ],
+  "aliases": [
+    "Cathedral Church of St Paul the Apostle",
+    "St Paul's",
+    "New St Paul's",
+    "London Cathedral",
+    "Cathedral of London"
+  ],
+  "wikidata": "Q173882",
+  "events": [
+    {
+      "type": "born",
+      "date": "1675",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "christopher-wren"
+    },
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "paul-the-apostle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: St Paul's Cathedral (Q173882)",
+      "url": "https://www.wikidata.org/wiki/Q173882",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: St Paul's Cathedral",
+      "url": "https://en.wikipedia.org/wiki/St_Paul's_Cathedral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

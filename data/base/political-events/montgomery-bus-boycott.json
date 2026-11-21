@@ -1,0 +1,60 @@
+{
+  "id": "montgomery-bus-boycott",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Montgomery bus boycott",
+      "from": "1955"
+    }
+  ],
+  "summary": "A year-long refusal by Black residents of Montgomery, Alabama to ride city buses after Rosa Parks was arrested. It ended with a court ruling against bus segregation and made Martin Luther King Jr. a national leader.",
+  "labels": [
+    "human-rights"
+  ],
+  "wikidata": "Q249367",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-12-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1956-12-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "martin-luther-king-jr"
+    },
+    {
+      "type": "related",
+      "to": "rosa-parks"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Montgomery bus boycott (Q249367)",
+      "url": "https://www.wikidata.org/wiki/Q249367",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Montgomery bus boycott",
+      "url": "https://en.wikipedia.org/wiki/Montgomery_bus_boycott",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

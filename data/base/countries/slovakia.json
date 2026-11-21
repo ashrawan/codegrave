@@ -1,0 +1,72 @@
+{
+  "id": "slovakia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Slovakia",
+      "from": "1993"
+    }
+  ],
+  "summary": "A central European country that became independent on 1 January 1993 when Czechoslovakia peacefully split in two. It joined the European Union in 2004 and uses the euro.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Slovak Republic",
+    "SVK",
+    "SK"
+  ],
+  "wikidata": "Q214",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Slovakia (Q214)",
+      "url": "https://www.wikidata.org/wiki/Q214",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Slovakia",
+      "url": "https://en.wikipedia.org/wiki/Slovakia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

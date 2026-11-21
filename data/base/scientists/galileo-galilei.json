@@ -1,0 +1,48 @@
+{
+  "id": "galileo-galilei",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Galileo Galilei",
+      "from": "1564"
+    }
+  ],
+  "summary": "Italian astronomer and physicist who pointed the telescope at the sky and saw the moons of Jupiter and the phases of Venus. He defended the Sun-centred model, was condemned by the Church, and spent his last years under house arrest.",
+  "labels": [
+    "astronomy",
+    "physics"
+  ],
+  "wikidata": "Q307",
+  "events": [
+    {
+      "type": "born",
+      "date": "1564-02-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1642-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Galileo Galilei (Q307)",
+      "url": "https://www.wikidata.org/wiki/Q307",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Galileo Galilei",
+      "url": "https://en.wikipedia.org/wiki/Galileo_Galilei",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

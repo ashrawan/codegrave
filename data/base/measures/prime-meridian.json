@@ -1,0 +1,51 @@
+{
+  "id": "prime-meridian",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Prime meridian",
+      "from": "1884"
+    }
+  ],
+  "summary": "The line of longitude marked as zero, from which other longitudes are counted. In 1884 an international conference chose the line through the Royal Observatory at Greenwich in London as the world standard.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q3401774",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: prime meridian (Q3401774)",
+      "url": "https://www.wikidata.org/wiki/Q3401774",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prime meridian",
+      "url": "https://en.wikipedia.org/wiki/Prime_meridian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

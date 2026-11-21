@@ -1,0 +1,52 @@
+{
+  "id": "berlin-blockade",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Berlin Blockade",
+      "from": "1948"
+    }
+  ],
+  "summary": "The Soviet Union closed road and rail routes to West Berlin, and the Western Allies supplied the city by air for almost a year. The crisis helped lead to the founding of NATO.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q151349",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-06-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1949-05-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Berlin Blockade (Q151349)",
+      "url": "https://www.wikidata.org/wiki/Q151349",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Berlin Blockade",
+      "url": "https://en.wikipedia.org/wiki/Berlin_Blockade",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

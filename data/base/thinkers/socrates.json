@@ -1,0 +1,47 @@
+{
+  "id": "socrates",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Socrates",
+      "from": "-0470"
+    }
+  ],
+  "summary": "Athenian philosopher who taught by questioning people about justice, virtue and knowledge. He wrote nothing himself, and we know him through Plato and others. An Athenian jury sentenced him to death.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q913",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0470",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0399-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Socrates (Q913)",
+      "url": "https://www.wikidata.org/wiki/Q913",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Socrates",
+      "url": "https://en.wikipedia.org/wiki/Socrates",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

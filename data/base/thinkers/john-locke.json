@@ -1,0 +1,61 @@
+{
+  "id": "john-locke",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "John Locke",
+      "from": "1632"
+    }
+  ],
+  "summary": "English philosopher who held that the mind begins blank and learns from experience and that people have natural rights to life, liberty and property. His writings influenced the American and French revolutions.",
+  "labels": [
+    "philosophy",
+    "politics"
+  ],
+  "wikidata": "Q9353",
+  "events": [
+    {
+      "type": "born",
+      "date": "1632-08-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1704-10-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "thomas-hobbes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "rene-descartes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Locke (Q9353)",
+      "url": "https://www.wikidata.org/wiki/Q9353",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Locke",
+      "url": "https://en.wikipedia.org/wiki/John_Locke",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

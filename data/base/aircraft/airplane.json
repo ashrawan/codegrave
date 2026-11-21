@@ -1,0 +1,51 @@
+{
+  "id": "airplane",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Airplane",
+      "from": "1903"
+    }
+  ],
+  "maker": "Wilbur and Orville Wright",
+  "summary": "Powered, fixed-wing aircraft that can fly under control. The Wright brothers made the first sustained powered flight at Kitty Hawk, North Carolina, on 17 December 1903.",
+  "labels": [
+    "engineering",
+    "transport"
+  ],
+  "aliases": [
+    "aeroplane",
+    "powered fixed-wing aircraft",
+    "plane",
+    "fixed-wing aeroplane",
+    "fixed-wing airplane"
+  ],
+  "wikidata": "Q197",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: airplane (Q197)",
+      "url": "https://www.wikidata.org/wiki/Q197",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Airplane",
+      "url": "https://en.wikipedia.org/wiki/Airplane",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

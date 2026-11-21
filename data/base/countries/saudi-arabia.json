@@ -1,0 +1,76 @@
+{
+  "id": "saudi-arabia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Saudi Arabia",
+      "from": "1727"
+    }
+  ],
+  "summary": "A kingdom that covers most of the Arabian Peninsula. The Saud family first ruled a state in central Arabia in 1727, and Ibn Saud united the present kingdom in 1932. It holds the holy cities of Mecca and Medina and has some of the largest oil reserves in the world.",
+  "labels": [
+    "religion",
+    "economics"
+  ],
+  "aliases": [
+    "Kingdom of Saudi Arabia",
+    "Saudi"
+  ],
+  "wikidata": "Q851",
+  "events": [
+    {
+      "type": "born",
+      "date": "1727",
+      "precision": "year",
+      "note": "Dated from 1727, when the Saud family began to rule Diriyah, which the kingdom marks as its founding. That first state fell in 1818, and Ibn Saud rebuilt the family's rule from 1902."
+    },
+    {
+      "type": "milestone",
+      "date": "1932",
+      "precision": "year",
+      "label": "Kingdom unified",
+      "note": "Ibn Saud joined his lands as the Kingdom of Saudi Arabia."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "opec"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saudi Arabia (Q851)",
+      "url": "https://www.wikidata.org/wiki/Q851",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saudi Arabia",
+      "url": "https://en.wikipedia.org/wiki/Saudi_Arabia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,63 @@
+{
+  "id": "mount-everest",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Mount Everest",
+      "from": "-50000000"
+    }
+  ],
+  "summary": "The highest mountain above sea level, on the border of Nepal and Tibet, about 8,849 metres tall. It was first climbed in 1953 by Edmund Hillary and Tenzing Norgay, and it is still rising a little each year.",
+  "labels": [
+    "exploration",
+    "record-holders"
+  ],
+  "aliases": [
+    "Mount Qomolangma",
+    "Mount Sagarmatha",
+    "Chomolangma",
+    "Qomolangma Feng",
+    "Mount Chomolubutangma"
+  ],
+  "wikidata": "Q513",
+  "events": [
+    {
+      "type": "born",
+      "date": "-50000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "himalayas"
+    },
+    {
+      "type": "in",
+      "to": "nepal"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mount Everest (Q513)",
+      "url": "https://www.wikidata.org/wiki/Q513",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mount Everest",
+      "url": "https://en.wikipedia.org/wiki/Mount_Everest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "werner-heisenberg",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Werner Heisenberg",
+      "from": "1901"
+    }
+  ],
+  "summary": "German physicist who helped create quantum mechanics and stated the uncertainty principle, which says that some pairs of properties cannot both be known exactly. He won the 1932 Nobel Prize in Physics.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Heisenberg",
+    "Werner Karl Heisenberg",
+    "Werner K. Heisenberg"
+  ],
+  "wikidata": "Q40904",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-12-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-02-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Werner Heisenberg (Q40904)",
+      "url": "https://www.wikidata.org/wiki/Q40904",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Werner Heisenberg",
+      "url": "https://en.wikipedia.org/wiki/Werner_Heisenberg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

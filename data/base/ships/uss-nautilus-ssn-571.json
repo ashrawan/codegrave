@@ -1,0 +1,58 @@
+{
+  "id": "uss-nautilus-ssn-571",
+  "category": "ships",
+  "names": [
+    {
+      "name": "USS Nautilus",
+      "from": "1954"
+    }
+  ],
+  "summary": "The first nuclear-powered submarine, launched in 1954. She sailed beneath the North Pole in 1958 and is now a museum ship at Groton, Connecticut.",
+  "labels": [
+    "firsts",
+    "energy"
+  ],
+  "wikidata": "Q827360",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1980",
+      "precision": "year"
+    },
+    {
+      "type": "afterlife",
+      "note": "A museum ship at Groton, Connecticut."
+    }
+  ],
+  "status": "dead",
+  "cause": "Decommissioned and turned into a museum ship",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: USS Nautilus (Q827360)",
+      "url": "https://www.wikidata.org/wiki/Q827360",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: USS Nautilus (SSN-571)",
+      "url": "https://en.wikipedia.org/wiki/USS_Nautilus_(SSN-571)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

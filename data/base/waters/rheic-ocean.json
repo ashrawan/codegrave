@@ -1,0 +1,49 @@
+{
+  "id": "rheic-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Rheic Ocean",
+      "from": "-480000000"
+    }
+  ],
+  "summary": "A Paleozoic ocean that opened between Gondwana and the northern continents about 480 million years ago and closed around 300 million years ago, when they collided to form the supercontinent Pangaea.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "wikidata": "Q1891116",
+  "events": [
+    {
+      "type": "born",
+      "date": "-480000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-300000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed as Gondwana and Laurussia collided to form Pangaea",
+  "signals": {
+    "adoption": 1,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Rheic Ocean (Q1891116)",
+      "url": "https://www.wikidata.org/wiki/Q1891116",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rheic Ocean",
+      "url": "https://en.wikipedia.org/wiki/Rheic_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

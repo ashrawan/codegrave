@@ -1,0 +1,68 @@
+{
+  "id": "woodstock",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Woodstock",
+      "from": "1969"
+    }
+  ],
+  "summary": "A music festival on a dairy farm in New York State, billed as three days of peace and music. Roughly half a million people came, and artists such as Jimi Hendrix played. It became a symbol of 1960s youth culture.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Woodstock Festival",
+    "Woodstock Fest"
+  ],
+  "wikidata": "Q164815",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-08-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1969-08-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "jimi-hendrix"
+    },
+    {
+      "type": "related",
+      "to": "ravi-shankar"
+    },
+    {
+      "type": "related",
+      "to": "the-who"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Woodstock Festival (Q164815)",
+      "url": "https://www.wikidata.org/wiki/Q164815",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Woodstock",
+      "url": "https://en.wikipedia.org/wiki/Woodstock",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

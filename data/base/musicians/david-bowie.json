@@ -1,0 +1,83 @@
+{
+  "id": "david-bowie",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "David Bowie",
+      "from": "1947"
+    }
+  ],
+  "summary": "English singer and songwriter who changed his sound and appearance often, from the stage character Ziggy Stardust to the Berlin albums of the 1970s. His songs include Space Oddity and Heroes.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "David Robert Jones",
+    "David Jones",
+    "Davy Jones",
+    "Thin White Duke",
+    "Halloween Jack"
+  ],
+  "wikidata": "Q5383",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-01-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-01-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "pink-floyd"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-beatles"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-velvet-underground"
+    },
+    {
+      "type": "influenced_by",
+      "to": "bob-dylan"
+    },
+    {
+      "type": "influenced_by",
+      "to": "andy-warhol"
+    },
+    {
+      "type": "influenced_by",
+      "to": "little-richard"
+    },
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: David Bowie (Q5383)",
+      "url": "https://www.wikidata.org/wiki/Q5383",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David Bowie",
+      "url": "https://en.wikipedia.org/wiki/David_Bowie",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

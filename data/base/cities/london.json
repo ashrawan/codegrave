@@ -1,0 +1,59 @@
+{
+  "id": "london",
+  "category": "cities",
+  "names": [
+    {
+      "name": "London",
+      "from": "0047"
+    }
+  ],
+  "summary": "Capital of the United Kingdom on the Thames, founded by the Romans as Londinium. It grew into a world centre of trade and finance and was for a time the largest city on Earth.",
+  "labels": [
+    "politics",
+    "economics"
+  ],
+  "aliases": [
+    "London, UK",
+    "London, United Kingdom",
+    "London, England",
+    "London U.K.",
+    "Londinium"
+  ],
+  "wikidata": "Q84",
+  "events": [
+    {
+      "type": "born",
+      "date": "0047",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "in",
+      "to": "roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: London (Q84)",
+      "url": "https://www.wikidata.org/wiki/Q84",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: London",
+      "url": "https://en.wikipedia.org/wiki/London",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

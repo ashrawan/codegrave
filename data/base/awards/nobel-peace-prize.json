@@ -1,0 +1,57 @@
+{
+  "id": "nobel-peace-prize",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Nobel Peace Prize",
+      "from": "1901"
+    }
+  ],
+  "summary": "The prize awarded each year for work toward peace, chosen by a committee in Norway. Its winners have included statesmen, activists and organisations, as well as individuals.",
+  "labels": [
+    "nobel-prize",
+    "politics"
+  ],
+  "aliases": [
+    "Nobel Prize for Peace",
+    "Noble Peace Prize",
+    "Nobel Prize in Peace"
+  ],
+  "wikidata": "Q35637",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-12-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nobel-prize"
+    },
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nobel Peace Prize (Q35637)",
+      "url": "https://www.wikidata.org/wiki/Q35637",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nobel Peace Prize",
+      "url": "https://en.wikipedia.org/wiki/Nobel_Peace_Prize",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

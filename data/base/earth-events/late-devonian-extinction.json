@@ -1,0 +1,53 @@
+{
+  "id": "late-devonian-extinction",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Late Devonian Extinction",
+      "from": "-372000000"
+    }
+  ],
+  "summary": "A series of extinctions about 372 to 359 million years ago that hit shallow-sea life hard, especially reef builders and armoured fish. Its causes are debated, with falling ocean oxygen a leading idea.",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "wikidata": "Q678023",
+  "events": [
+    {
+      "type": "born",
+      "date": "-372000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-359000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "devonian"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Late Devonian extinction (Q678023)",
+      "url": "https://www.wikidata.org/wiki/Q678023",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Late Devonian mass extinction",
+      "url": "https://en.wikipedia.org/wiki/Late_Devonian_mass_extinction",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

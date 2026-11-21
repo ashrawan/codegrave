@@ -1,0 +1,54 @@
+{
+  "id": "commodore-pet",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "Commodore PET",
+      "from": "1977"
+    }
+  ],
+  "maker": "Commodore",
+  "summary": "All-in-one personal computer with a screen, keyboard and tape recorder in a single metal case. It was popular in schools in North America and Europe and began Commodore's home computer business.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q946661",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1982",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the VIC-20 and Commodore 64",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "commodore-international"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Commodore PET (Q946661)",
+      "url": "https://www.wikidata.org/wiki/Q946661",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Commodore PET",
+      "url": "https://en.wikipedia.org/wiki/Commodore_PET",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

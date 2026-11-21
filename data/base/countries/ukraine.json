@@ -1,0 +1,72 @@
+{
+  "id": "ukraine",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ukraine",
+      "from": "1917"
+    }
+  ],
+  "summary": "A large country in Eastern Europe, independent from the Soviet Union in 1991. Its capital is Kyiv, and it has rich farmland and a long history from Kievan Rus' onward.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Ukrainia",
+    "Ukr.",
+    "Ukraïna"
+  ],
+  "wikidata": "Q212",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917",
+      "precision": "year",
+      "note": "Dated from the Ukrainian People's Republic, proclaimed in 1917, the first modern Ukrainian state. Kievan Rus', which Ukraine, Russia and Belarus all count as a forerunner, has its own entry. Ukraine was a Soviet republic from 1922 to 1991."
+    },
+    {
+      "type": "milestone",
+      "date": "1991-08-24",
+      "precision": "day",
+      "label": "Independence",
+      "note": "Ukraine declared independence from the Soviet Union."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ukraine (Q212)",
+      "url": "https://www.wikidata.org/wiki/Q212",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ukraine",
+      "url": "https://en.wikipedia.org/wiki/Ukraine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "mumbai",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Mumbai",
+      "from": "1534"
+    }
+  ],
+  "summary": "Large port city on India's west coast, built on a group of seven islands. It passed from Portugal to Britain in the 1660s and is now India's financial centre and home to its film industry.",
+  "labels": [
+    "business"
+  ],
+  "aliases": [
+    "Bombay"
+  ],
+  "wikidata": "Q1156",
+  "events": [
+    {
+      "type": "born",
+      "date": "1534",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "portuguese-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mumbai (Q1156)",
+      "url": "https://www.wikidata.org/wiki/Q1156",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mumbai",
+      "url": "https://en.wikipedia.org/wiki/Mumbai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

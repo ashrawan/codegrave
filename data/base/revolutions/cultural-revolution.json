@@ -1,0 +1,62 @@
+{
+  "id": "cultural-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Cultural Revolution",
+      "from": "1966"
+    }
+  ],
+  "summary": "Campaign launched by Mao Zedong in China to remove his rivals and root out old ideas and customs. Young Red Guards attacked teachers and officials, schools closed and millions were persecuted before the chaos ended.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Great Proletarian Cultural Revolution",
+    "Chinese Revolution",
+    "Mao's Revolution",
+    "Ten Years of Turmoil"
+  ],
+  "wikidata": "Q8690",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966-05-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-10-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mao-zedong"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cultural Revolution (Q8690)",
+      "url": "https://www.wikidata.org/wiki/Q8690",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cultural Revolution",
+      "url": "https://en.wikipedia.org/wiki/Cultural_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

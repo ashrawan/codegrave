@@ -1,0 +1,56 @@
+{
+  "id": "medal-of-honor",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Medal of Honor",
+      "from": "1862"
+    }
+  ],
+  "summary": "The highest military decoration of the United States, awarded for acts of great bravery beyond the call of duty. It was created during the American Civil War, and is given by the president in the name of Congress.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "MOH",
+    "The Medal of Honor",
+    "Congressional Medal of Honor"
+  ],
+  "wikidata": "Q203535",
+  "events": [
+    {
+      "type": "born",
+      "date": "1862-07-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "united-states-congress"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Medal of Honor (Q203535)",
+      "url": "https://www.wikidata.org/wiki/Q203535",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Medal of Honor",
+      "url": "https://en.wikipedia.org/wiki/Medal_of_Honor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

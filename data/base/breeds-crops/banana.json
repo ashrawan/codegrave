@@ -1,0 +1,46 @@
+{
+  "id": "banana",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Banana",
+      "from": "-5000"
+    }
+  ],
+  "summary": "A fruit first grown by farmers in New Guinea and Southeast Asia, from seedy wild plants. Farmers bred seedless kinds, and banana plants are grown from cuttings, which makes them open to disease.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "bananas",
+    "banana fruit"
+  ],
+  "wikidata": "Q503",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: banana (Q503)",
+      "url": "https://www.wikidata.org/wiki/Q503",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Banana",
+      "url": "https://en.wikipedia.org/wiki/Banana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

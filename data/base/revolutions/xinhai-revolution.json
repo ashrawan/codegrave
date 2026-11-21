@@ -1,0 +1,63 @@
+{
+  "id": "xinhai-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Xinhai Revolution",
+      "from": "1911"
+    }
+  ],
+  "summary": "The revolution that overthrew the Qing dynasty and ended two thousand years of imperial rule in China. It founded the Republic of China, with Sun Yat-sen as its first provisional president.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Hsinhai Revolution",
+    "Republican Revolution of 1911",
+    "Chinese Revolution of 1911",
+    "1911 Chinese Revolution",
+    "The 1911 Revolution"
+  ],
+  "wikidata": "Q190517",
+  "events": [
+    {
+      "type": "born",
+      "date": "1911-10-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1912-02-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qing-dynasty"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Xinhai Revolution (Q190517)",
+      "url": "https://www.wikidata.org/wiki/Q190517",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1911 Revolution",
+      "url": "https://en.wikipedia.org/wiki/1911_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

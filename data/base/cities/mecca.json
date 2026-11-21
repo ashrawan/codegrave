@@ -1,0 +1,58 @@
+{
+  "id": "mecca",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Mecca",
+      "from": "0400"
+    }
+  ],
+  "summary": "City in western Saudi Arabia where the Prophet Muhammad was born and the holiest city of Islam. Muslims face it in prayer, and the yearly Hajj pilgrimage gathers around the Kaaba in its Great Mosque.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Bakkah",
+    "The Holy City of Mecca",
+    "Umm al-Qurā",
+    "Mother of All Settlements",
+    "Makkah"
+  ],
+  "wikidata": "Q5806",
+  "events": [
+    {
+      "type": "born",
+      "date": "0400",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rashidun-caliphate"
+    },
+    {
+      "type": "in",
+      "to": "umayyad-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mecca (Q5806)",
+      "url": "https://www.wikidata.org/wiki/Q5806",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mecca",
+      "url": "https://en.wikipedia.org/wiki/Mecca",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

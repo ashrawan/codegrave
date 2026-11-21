@@ -1,0 +1,63 @@
+{
+  "id": "amber-room",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Amber Room",
+      "from": "1712"
+    }
+  ],
+  "summary": "Palace chamber covered in carved amber panels, made in Prussia and given to the Russian tsar in 1716. German troops took it apart in the Second World War and its fate is unknown. A copy was rebuilt near Saint Petersburg in 2003.",
+  "labels": [
+    "visual-art",
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "The Amber Room",
+    "Pushkin"
+  ],
+  "wikidata": "Q157012",
+  "events": [
+    {
+      "type": "born",
+      "date": "1712",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dismantled and taken by German forces in the Second World War; never found",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Amber Room (Q157012)",
+      "url": "https://www.wikidata.org/wiki/Q157012",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amber Room",
+      "url": "https://en.wikipedia.org/wiki/Amber_Room",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

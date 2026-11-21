@@ -1,0 +1,51 @@
+{
+  "id": "tartuffe",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Tartuffe",
+      "from": "1664"
+    }
+  ],
+  "summary": "Comedy by Moliere about a hypocrite who pretends to be devout to cheat a gullible man out of his house. It was banned for some years after the Church objected.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "The Impostor",
+    "Tartuffe, or the Impostor"
+  ],
+  "wikidata": "Q205875",
+  "events": [
+    {
+      "type": "born",
+      "date": "1664",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "moliere"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tartuffe (Q205875)",
+      "url": "https://www.wikidata.org/wiki/Q205875",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tartuffe",
+      "url": "https://en.wikipedia.org/wiki/Tartuffe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

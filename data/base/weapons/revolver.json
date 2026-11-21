@@ -1,0 +1,49 @@
+{
+  "id": "revolver",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Revolver",
+      "from": "1836"
+    }
+  ],
+  "maker": "Samuel Colt",
+  "summary": "A handgun with a rotating cylinder that holds several rounds, so that it can be fired many times without reloading. Samuel Colt's patent of 1836 made it practical, and it became the typical sidearm of the nineteenth century.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "aliases": [
+    "wheel gun",
+    "wheelgun"
+  ],
+  "wikidata": "Q170382",
+  "events": [
+    {
+      "type": "born",
+      "date": "1836",
+      "precision": "year",
+      "note": "Dated from Samuel Colt's patent of 1836. Guns with revolving chambers had been made before, but in small numbers."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: revolver (Q170382)",
+      "url": "https://www.wikidata.org/wiki/Q170382",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Revolver",
+      "url": "https://en.wikipedia.org/wiki/Revolver",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

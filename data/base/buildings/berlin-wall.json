@@ -1,0 +1,58 @@
+{
+  "id": "berlin-wall",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Berlin Wall",
+      "from": "1961"
+    }
+  ],
+  "summary": "Barrier built by East Germany in 1961 that split Berlin in two and stopped people leaving the east. It came down after the border opened on 9 November 1989, a step toward the end of the Cold War.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q5086",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-08-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Opened after mass protests and the collapse of East German rule",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "east-germany"
+    },
+    {
+      "type": "related",
+      "to": "berlin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Berlin Wall (Q5086)",
+      "url": "https://www.wikidata.org/wiki/Q5086",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Berlin Wall",
+      "url": "https://en.wikipedia.org/wiki/Berlin_Wall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

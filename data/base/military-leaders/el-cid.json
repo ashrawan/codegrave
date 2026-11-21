@@ -1,0 +1,52 @@
+{
+  "id": "el-cid",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "El Cid",
+      "from": "1043"
+    }
+  ],
+  "summary": "Castilian nobleman and soldier named Rodrigo Diaz de Vivar. He fought for Christian and Muslim rulers in medieval Spain, took the city of Valencia, and became the hero of a national poem.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Rodrigo Díaz de Villarreal",
+    "El Cid Campeador",
+    "El Campeador"
+  ],
+  "wikidata": "Q43958",
+  "events": [
+    {
+      "type": "born",
+      "date": "1043",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1099-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Rodrigo Díaz de Villarreal (Q43958)",
+      "url": "https://www.wikidata.org/wiki/Q43958",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: El Cid",
+      "url": "https://en.wikipedia.org/wiki/El_Cid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

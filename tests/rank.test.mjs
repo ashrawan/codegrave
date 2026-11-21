@@ -1,7 +1,7 @@
 // Run with: node --test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { WEIGHTS, parseDate, score } from '../site/rank.js';
+import { WEIGHTS, parseDate, yearOf, eraOf, score } from '../site/rank.js';
 
 const cat = { name: 'Languages' };
 const thing = (id, born, adoption, extra = {}) => ({
@@ -54,4 +54,31 @@ test('a small kind widens to its domain before everything', () => {
   const phone = things.find((t) => t.id === 'phone');
   assert.equal(phone.peers, 'everything in Devices');
   assert.equal(phone.rank, 0);
+});
+
+test('years before the common era count as historians write them, with no year zero', () => {
+  assert.equal(yearOf('-0044-03-15'), -44);
+  assert.equal(yearOf('1995-08'), 1995);
+  assert.equal(parseDate('-0001'), 0.5);            // 1 BCE is the year before 1 CE
+  assert.ok(parseDate('-0001-12-31') < parseDate('0001-01-01'));
+  assert.ok(parseDate('0001-01-01') - parseDate('-0001-12-31') < 0.01);
+  assert.ok(parseDate('-0044-03-15') < parseDate('-0044-03-16') && parseDate('-0044') < parseDate('-0043'));
+  assert.ok(parseDate('-66000000') < parseDate('-10000'));
+});
+
+test('peers are a decade since 1800, a century before that, a millennium before the year 1', () => {
+  assert.equal(eraOf(1995.5).name, 'the 1990s');
+  assert.equal(eraOf(1799.5).name, 'the 18th century');
+  assert.equal(eraOf(1.5).name, 'the 1st century');
+  assert.equal(eraOf(parseDate('-0044')).name, 'the 1st millennium BCE');
+  assert.equal(eraOf(parseDate('-2560')).name, 'the 3rd millennium BCE');
+  assert.equal(eraOf(parseDate('-66000000')).name, 'prehistory');
+  assert.notEqual(eraOf(1066).key, eraOf(1166).key);
+});
+
+test('the words of a category name its peers', () => {
+  const rulers = { name: 'Rulers & heads of state', domain: 'people', domainName: 'People', from: 'born in' };
+  const things = [1, 2, 3, 4, 5].map((a) => ({ id: 'r' + a, category: 'rulers', cat: rulers, born: 1500 + a, end: 1560, inbound: [], signals: { adoption: a } }));
+  score(things, 2026);
+  assert.equal(things[0].peers, 'rulers & heads of state born in the 16th century');
 });

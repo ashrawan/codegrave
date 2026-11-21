@@ -1,0 +1,57 @@
+{
+  "id": "maccabean-revolt",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Maccabean Revolt",
+      "from": "-0167"
+    }
+  ],
+  "summary": "A Jewish revolt against the Seleucid Empire and its ban on Jewish religious practice, led by Judas Maccabeus and his family. It led to an independent Jewish kingdom and the festival of Hanukkah.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "aliases": [
+    "Revolt of the Maccabees",
+    "Hasmonean Revolt"
+  ],
+  "wikidata": "Q7930888",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0167",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0160",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "seleucid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maccabean Revolt (Q7930888)",
+      "url": "https://www.wikidata.org/wiki/Q7930888",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maccabean Revolt",
+      "url": "https://en.wikipedia.org/wiki/Maccabean_Revolt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "adobe-pagemaker",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Adobe PageMaker",
+      "from": "1985"
+    }
+  ],
+  "maker": "Aldus",
+  "summary": "Page layout program for the Macintosh that, with the laser printer, began desktop publishing. People could design newsletters and books on a desktop, and Adobe later replaced it with InDesign.",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "aliases": [
+    "PageMaker"
+  ],
+  "wikidata": "Q360355",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-07",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Adobe InDesign",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Adobe PageMaker (Q360355)",
+      "url": "https://www.wikidata.org/wiki/Q360355",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aldus PageMaker",
+      "url": "https://en.wikipedia.org/wiki/Aldus_PageMaker",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

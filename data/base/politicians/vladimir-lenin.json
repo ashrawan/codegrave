@@ -1,0 +1,67 @@
+{
+  "id": "vladimir-lenin",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Vladimir Lenin",
+      "from": "1870"
+    }
+  ],
+  "summary": "Russian revolutionary who led the Bolsheviks to power in the October Revolution of 1917. He headed the new Soviet government through a civil war and founded the Soviet Union in 1922.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Vladimir Ulyanov",
+    "Vladimir Ilyich Lenin",
+    "V. I. Ulyanov",
+    "V. I. Ul'yanov",
+    "Vladimir Il'ich Lenin"
+  ],
+  "wikidata": "Q1394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1870-04-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1924-01-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "karl-marx"
+    },
+    {
+      "type": "influenced_by",
+      "to": "georg-hegel"
+    },
+    {
+      "type": "related",
+      "to": "russian-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vladimir Lenin (Q1394)",
+      "url": "https://www.wikidata.org/wiki/Q1394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vladimir Lenin",
+      "url": "https://en.wikipedia.org/wiki/Vladimir_Lenin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

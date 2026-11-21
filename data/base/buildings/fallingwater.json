@@ -1,0 +1,52 @@
+{
+  "id": "fallingwater",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Fallingwater",
+      "from": "1937"
+    }
+  ],
+  "summary": "A house in Pennsylvania designed by Frank Lloyd Wright for the Kaufmann family. It is built over a waterfall on Bear Run and is now a museum. It was built in the 1930s.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q463179",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937",
+      "precision": "year",
+      "note": "Dated from the main house, finished in 1937. Building began in 1936 and the guest house was added in 1939."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "frank-lloyd-wright"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fallingwater (Q463179)",
+      "url": "https://www.wikidata.org/wiki/Q463179",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fallingwater",
+      "url": "https://en.wikipedia.org/wiki/Fallingwater",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

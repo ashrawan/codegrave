@@ -1,0 +1,92 @@
+{
+  "id": "first-civilizations",
+  "name": "The First Civilizations",
+  "description": "The first farmers, cities, writing and empires, from Göbekli Tepe and Sumer to Babylon and Persia.",
+  "category": "places",
+  "labels": [
+    "firsts"
+  ],
+  "tags": [
+    "mesopotamia",
+    "sumer",
+    "babylon",
+    "ancient history",
+    "bronze age",
+    "cradle of civilization"
+  ],
+  "entries": [
+    "gobekli-tepe",
+    "jericho",
+    "neolithic",
+    "catalhoyuk",
+    "irrigation",
+    "sumer",
+    "plough",
+    "ancient-egypt",
+    "uruk",
+    "ur",
+    "wheel",
+    "cuneiform",
+    "bronze",
+    "indus-valley-civilisation",
+    "egyptian-hieroglyphs",
+    "indus-script",
+    "great-pyramid-of-giza",
+    "mohenjo-daro",
+    "sargon-of-akkad",
+    "akkadian-empire",
+    "babylon",
+    "epic-of-gilgamesh",
+    "assyria",
+    "hammurabi",
+    "code-of-hammurabi",
+    "hittite-empire",
+    "minoan-eruption",
+    "shang-dynasty",
+    "chinese-characters",
+    "late-bronze-age-collapse",
+    "phoenician-alphabet",
+    "library-of-ashurbanipal",
+    "nebuchadnezzar-ii",
+    "hanging-gardens-of-babylon",
+    "cyrus-the-great",
+    "achaemenid-empire"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-farmers-and-towns",
+      "name": "The first farmers and towns",
+      "from": -10000,
+      "to": -4501,
+      "note": "Hunters built the temple at Gobekli Tepe, and people settled at Jericho and Catalhoyuk. The Neolithic brought farming, and irrigation let villages grow in dry lands."
+    },
+    {
+      "id": "sumer",
+      "name": "Sumer",
+      "from": -4500,
+      "to": -2801,
+      "note": "In Sumer the first cities rose, among them Uruk and Ur. People used the plough and the wheel, wrote on clay in cuneiform, and learned to smelt bronze, while Egyptians began to write hieroglyphs."
+    },
+    {
+      "id": "akkad-and-babylon",
+      "name": "Akkad and Babylon",
+      "from": -2800,
+      "to": -1601,
+      "note": "Ancient Egypt raised the Great Pyramid at Giza. The Indus Valley civilisation had cities like Mohenjo-daro and a script of its own. Sargon of Akkad built an empire, the Epic of Gilgamesh was composed, Hammurabi of Babylon issued his code, and scribes counted in base 60, a system inherited from Sumer."
+    },
+    {
+      "id": "the-late-bronze-age",
+      "name": "The late Bronze Age",
+      "from": -1600,
+      "to": -1100,
+      "note": "The Hittites, a giant eruption on Thera, the first Chinese characters and the Shang dynasty belong to an age of great powers. Around 1200 BCE many of them fell in the Late Bronze Age collapse."
+    },
+    {
+      "id": "assyria-and-persia",
+      "name": "Assyria and Persia",
+      "from": -1099,
+      "to": -500,
+      "note": "Phoenician sailors spread an alphabet. Assyria kept a library at Nineveh, Nebuchadnezzar rebuilt Babylon and its gardens, and Cyrus the Great founded the Achaemenid Empire."
+    }
+  ]
+}

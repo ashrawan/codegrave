@@ -1,0 +1,49 @@
+{
+  "id": "chess",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Chess",
+      "from": "0600"
+    }
+  ],
+  "summary": "A board game for two with sixteen pieces each, in which the aim is to trap the opposing king. It grew from an Indian game and spread through Persia and the Arab world to Europe.",
+  "labels": [
+    "games",
+    "sport"
+  ],
+  "aliases": [
+    "chess game",
+    "international chess",
+    "modern European chess",
+    "Western chess"
+  ],
+  "wikidata": "Q718",
+  "events": [
+    {
+      "type": "born",
+      "date": "0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: chess (Q718)",
+      "url": "https://www.wikidata.org/wiki/Q718",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chess",
+      "url": "https://en.wikipedia.org/wiki/Chess",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

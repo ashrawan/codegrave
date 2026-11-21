@@ -1,0 +1,55 @@
+{
+  "id": "solidarity-trade-union",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Solidarity",
+      "from": "1980"
+    }
+  ],
+  "summary": "Polish trade union born at the Gdansk shipyard, the first independent union in the Soviet bloc. Banned under martial law, it returned and helped bring about the end of communist rule in Poland.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Solidarność"
+  ],
+  "wikidata": "Q1003",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-09",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "lech-walesa"
+    },
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Solidarity (Q1003)",
+      "url": "https://www.wikidata.org/wiki/Q1003",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Solidarity (Polish trade union)",
+      "url": "https://en.wikipedia.org/wiki/Solidarity_(Polish_trade_union)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,69 @@
+{
+  "id": "zimbabwe",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Zimbabwe",
+      "from": "1980"
+    }
+  ],
+  "summary": "A southern African country that gained independence in 1980 after the end of white minority rule in Rhodesia. It is named for the stone ruins of Great Zimbabwe.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Zimbabwe",
+    "Southern Rhodesia",
+    "Rhodesia",
+    "Zimbabwe Rhodesia"
+  ],
+  "wikidata": "Q954",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-04-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zimbabwe (Q954)",
+      "url": "https://www.wikidata.org/wiki/Q954",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zimbabwe",
+      "url": "https://en.wikipedia.org/wiki/Zimbabwe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "friends-tv",
+  "category": "shows",
+  "names": [
+    {
+      "name": "Friends",
+      "from": "1994"
+    }
+  ],
+  "summary": "American sitcom about six friends in their twenties and thirties living in New York. It ran for ten seasons, was among the most watched shows in the United States, and remains popular in reruns and on streaming services.",
+  "labels": [
+    "television"
+  ],
+  "wikidata": "Q79784",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-09-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2004-05-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended after ten seasons by choice of its makers",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Friends (Q79784)",
+      "url": "https://www.wikidata.org/wiki/Q79784",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Friends",
+      "url": "https://en.wikipedia.org/wiki/Friends",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "mekong",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Mekong",
+      "from": "-17000000"
+    }
+  ],
+  "summary": "The longest river of South-East Asia, running from the Tibetan Plateau through China, Myanmar, Laos, Thailand, Cambodia and Vietnam. Its fisheries and its delta's rice fields feed tens of millions of people. Sediment studies suggest the river has followed roughly its present path for about 17 million years.",
+  "labels": [
+    "environment",
+    "food"
+  ],
+  "aliases": [
+    "Mekong River",
+    "Mekhong",
+    "Lancang River",
+    "Lancang Jiang",
+    "Lantzan-kiang"
+  ],
+  "wikidata": "Q41179",
+  "events": [
+    {
+      "type": "born",
+      "date": "-17000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mekong River (Q41179)",
+      "url": "https://www.wikidata.org/wiki/Q41179",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mekong",
+      "url": "https://en.wikipedia.org/wiki/Mekong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

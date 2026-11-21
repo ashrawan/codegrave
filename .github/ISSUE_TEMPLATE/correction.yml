@@ -6,7 +6,7 @@ body:
   - type: input
     id: thing
     attributes:
-      label: Which thing
+      label: Which entry
       description: Its name, or its link such as codegrave.com/#flash
     validations:
       required: true

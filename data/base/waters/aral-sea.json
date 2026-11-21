@@ -1,0 +1,55 @@
+{
+  "id": "aral-sea",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Aral Sea",
+      "from": "-10000"
+    }
+  ],
+  "summary": "Once the fourth largest lake in the world, between Kazakhstan and Uzbekistan. After Soviet planners diverted its two feeding rivers for cotton irrigation, it shrank to small remnants, leaving a salty desert and stranded fishing towns.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "aliases": [
+    "the sea of Aral"
+  ],
+  "wikidata": "Q35883",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kazakhstan"
+    },
+    {
+      "type": "in",
+      "to": "uzbekistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aral Sea (Q35883)",
+      "url": "https://www.wikidata.org/wiki/Q35883",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aral Sea",
+      "url": "https://en.wikipedia.org/wiki/Aral_Sea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

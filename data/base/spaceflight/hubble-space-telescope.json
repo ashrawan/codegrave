@@ -1,0 +1,52 @@
+{
+  "id": "hubble-space-telescope",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Hubble Space Telescope",
+      "from": "1990"
+    }
+  ],
+  "maker": "NASA and ESA",
+  "summary": "A large telescope launched in 1990 that orbits above the distorting atmosphere. Its sharp images helped fix the age of the universe, and it has been repaired by shuttle crews.",
+  "labels": [
+    "astronomy",
+    "engineering"
+  ],
+  "aliases": [
+    "Large Space Telescope"
+  ],
+  "wikidata": "Q2513",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "edwin-hubble"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hubble Space Telescope (Q2513)",
+      "url": "https://www.wikidata.org/wiki/Q2513",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hubble Space Telescope",
+      "url": "https://en.wikipedia.org/wiki/Hubble_Space_Telescope",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

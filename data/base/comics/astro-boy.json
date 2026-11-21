@@ -1,0 +1,52 @@
+{
+  "id": "astro-boy",
+  "category": "comics",
+  "names": [
+    {
+      "name": "Astro Boy",
+      "from": "1952"
+    }
+  ],
+  "summary": "Japanese manga by Osamu Tezuka about a robot boy with human feelings, and the basis of the first popular anime series on television. It set the visual style of later manga and anime.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "Atom Boy",
+    "Tetsuwan Atomu",
+    "Tetsuwan Atom"
+  ],
+  "wikidata": "Q673036",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-04-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "osamu-tezuka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Astro Boy (Q673036)",
+      "url": "https://www.wikidata.org/wiki/Q673036",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Astro Boy",
+      "url": "https://en.wikipedia.org/wiki/Astro_Boy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

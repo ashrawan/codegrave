@@ -1,0 +1,63 @@
+{
+  "id": "falklands-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Falklands War",
+      "from": "1982"
+    }
+  ],
+  "summary": "A short war between Argentina and the United Kingdom after Argentina occupied the Falkland Islands in the South Atlantic. British forces retook the islands within a few months.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Falklands Crisis",
+    "Malvinas War",
+    "Malvinas Conflict",
+    "Malvinas Crisis",
+    "South Atlantic War"
+  ],
+  "wikidata": "Q48249",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-04-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1982-06-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Falklands War (Q48249)",
+      "url": "https://www.wikidata.org/wiki/Q48249",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Falklands War",
+      "url": "https://en.wikipedia.org/wiki/Falklands_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

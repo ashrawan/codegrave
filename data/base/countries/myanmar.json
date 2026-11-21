@@ -1,0 +1,66 @@
+{
+  "id": "myanmar",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Myanmar",
+      "from": "1948"
+    }
+  ],
+  "summary": "A Southeast Asian country, also called Burma, that became independent from Britain in 1948. It has been under military rule for long periods and has many ethnic groups.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of the Union of Myanmar",
+    "Union of Burma",
+    "Birmania",
+    "MM",
+    "MMR"
+  ],
+  "wikidata": "Q836",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-01-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Myanmar (Q836)",
+      "url": "https://www.wikidata.org/wiki/Q836",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Myanmar",
+      "url": "https://en.wikipedia.org/wiki/Myanmar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

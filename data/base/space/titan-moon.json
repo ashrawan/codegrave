@@ -1,0 +1,58 @@
+{
+  "id": "titan-moon",
+  "category": "space",
+  "names": [
+    {
+      "name": "Titan",
+      "from": "-4500000000"
+    }
+  ],
+  "summary": "Saturn's largest moon, the only moon with a thick atmosphere. Lakes and rivers of liquid methane and ethane lie on its frozen surface, and the European Huygens probe landed there in 2005.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Saturn VI"
+  ],
+  "wikidata": "Q2565",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500000000",
+      "precision": "circa",
+      "note": "An estimate: the large moons are thought to have formed with their planets, about 4.5 billion years ago."
+    },
+    {
+      "type": "milestone",
+      "date": "1655",
+      "precision": "year",
+      "label": "Discovered",
+      "note": "Found by Christiaan Huygens in 1655."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "christiaan-huygens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Titan (Q2565)",
+      "url": "https://www.wikidata.org/wiki/Q2565",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Titan (moon)",
+      "url": "https://en.wikipedia.org/wiki/Titan_(moon)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

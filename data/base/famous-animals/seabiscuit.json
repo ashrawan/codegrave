@@ -1,0 +1,50 @@
+{
+  "id": "seabiscuit",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Seabiscuit",
+      "from": "1933"
+    }
+  ],
+  "summary": "A small racehorse who became a hero of the Great Depression after beating the favourite War Admiral in 1938. His story was told in a best-selling book and later a film.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Sea Biscuit"
+  ],
+  "wikidata": "Q1500356",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933-05-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-05-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Seabiscuit (Q1500356)",
+      "url": "https://www.wikidata.org/wiki/Q1500356",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seabiscuit",
+      "url": "https://en.wikipedia.org/wiki/Seabiscuit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

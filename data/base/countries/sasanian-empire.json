@@ -1,0 +1,56 @@
+{
+  "id": "sasanian-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Sasanian Empire",
+      "from": "0224"
+    }
+  ],
+  "summary": "The last pre-Islamic Persian empire, rival of Rome and later Byzantium. Zoroastrianism was its state faith, and its court gave fine silver, silk and architecture that influenced later Islamic art.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Neo-Persian Empire",
+    "Ērānshahr",
+    "Ērān",
+    "Second Persian Empire",
+    "Sassanid Empire"
+  ],
+  "wikidata": "Q83891",
+  "events": [
+    {
+      "type": "born",
+      "date": "0224",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0651",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by the Arab Muslim armies after long wars with Byzantium",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Sasanian Empire (Q83891)",
+      "url": "https://www.wikidata.org/wiki/Q83891",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sasanian Empire",
+      "url": "https://en.wikipedia.org/wiki/Sasanian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

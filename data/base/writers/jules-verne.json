@@ -1,0 +1,61 @@
+{
+  "id": "jules-verne",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Jules Verne",
+      "from": "1828"
+    }
+  ],
+  "summary": "French author of adventure novels such as Twenty Thousand Leagues Under the Sea and Around the World in Eighty Days. His stories of submarines and journeys to the Moon made him a founder of science fiction.",
+  "labels": [
+    "literature",
+    "exploration"
+  ],
+  "aliases": [
+    "Julius Verne",
+    "Jules Gabriel Verne"
+  ],
+  "wikidata": "Q33977",
+  "events": [
+    {
+      "type": "born",
+      "date": "1828-02-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1905-03-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "edgar-allan-poe"
+    },
+    {
+      "type": "influenced_by",
+      "to": "victor-hugo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jules Verne (Q33977)",
+      "url": "https://www.wikidata.org/wiki/Q33977",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jules Verne",
+      "url": "https://en.wikipedia.org/wiki/Jules_Verne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

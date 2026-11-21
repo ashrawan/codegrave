@@ -1,0 +1,80 @@
+{
+  "id": "sweden",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Sweden",
+      "from": "0995"
+    }
+  ],
+  "summary": "A Scandinavian country that became an independent kingdom under Gustav Vasa in 1523. It was once a regional great power and has stayed out of wars for two centuries.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Kingdom of Sweden",
+    "se",
+    "Swedish Kingdom"
+  ],
+  "wikidata": "Q34",
+  "events": [
+    {
+      "type": "born",
+      "date": "0995",
+      "precision": "circa",
+      "note": "Dated from about 995, when Olof Skötkonung became the first king known to rule both the Svear and the Götar. No founding year is recorded."
+    },
+    {
+      "type": "milestone",
+      "date": "1523",
+      "precision": "year",
+      "label": "Gustav Vasa",
+      "note": "Gustav Vasa was elected king and Sweden left the Kalmar Union with Denmark and Norway."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sweden (Q34)",
+      "url": "https://www.wikidata.org/wiki/Q34",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sweden",
+      "url": "https://en.wikipedia.org/wiki/Sweden",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

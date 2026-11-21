@@ -1,0 +1,54 @@
+{
+  "id": "daily-mail",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Daily Mail",
+      "from": "1896"
+    }
+  ],
+  "summary": "British daily newspaper founded by Alfred Harmsworth for a mass readership. Its short, lively style and low price helped create the popular press in Britain.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "The Daily Mail"
+  ],
+  "wikidata": "Q210534",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896-05-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Daily Mail (Q210534)",
+      "url": "https://www.wikidata.org/wiki/Q210534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Daily Mail",
+      "url": "https://en.wikipedia.org/wiki/Daily_Mail",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

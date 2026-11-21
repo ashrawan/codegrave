@@ -1,0 +1,56 @@
+{
+  "id": "microsoft-word",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Microsoft Word",
+      "from": "1983"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Word processor from Microsoft, first released for DOS and later for Windows and Mac. By the 1990s it had become the most widely used program for writing documents, and its file type was a common standard.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Multi-Tool Word"
+  ],
+  "wikidata": "Q11261",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-10",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    },
+    {
+      "type": "part_of",
+      "to": "microsoft-office"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft Word (Q11261)",
+      "url": "https://www.wikidata.org/wiki/Q11261",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft Word",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Word",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "wall-street-crash-1929",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Wall Street Crash of 1929",
+      "from": "1929"
+    }
+  ],
+  "summary": "In October 1929, stock prices on the New York Stock Exchange fell sharply over several days after years of rises. The crash is often seen as the start of the Great Depression, though other causes mattered too.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "Stock Market Crash of 1929",
+    "Black Thursday",
+    "Black Tuesday"
+  ],
+  "wikidata": "Q201684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-10-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1929-10-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wall Street crash of 1929 (Q201684)",
+      "url": "https://www.wikidata.org/wiki/Q201684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wall Street crash of 1929",
+      "url": "https://en.wikipedia.org/wiki/Wall_Street_crash_of_1929",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

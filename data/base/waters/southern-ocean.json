@@ -1,0 +1,52 @@
+{
+  "id": "southern-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Southern Ocean",
+      "from": "-34000000"
+    }
+  ],
+  "summary": "The ocean around Antarctica, which many geographers count as the world's fifth ocean. It took shape as the gap between Antarctica and South America opened about 34 million years ago and a current began circling the continent.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Antarctic Ocean",
+    "Great Southern Ocean",
+    "South Polar Ocean"
+  ],
+  "wikidata": "Q7354",
+  "events": [
+    {
+      "type": "born",
+      "date": "-34000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "antarctica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Southern Ocean (Q7354)",
+      "url": "https://www.wikidata.org/wiki/Q7354",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Southern Ocean",
+      "url": "https://en.wikipedia.org/wiki/Southern_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

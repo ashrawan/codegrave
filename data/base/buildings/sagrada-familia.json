@@ -1,0 +1,59 @@
+{
+  "id": "sagrada-familia",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Sagrada Familia",
+      "from": "1882"
+    }
+  ],
+  "summary": "Large church in Barcelona designed by Antoni Gaudi, with work beginning in 1882. It is still being built, and its towers are intended to make it the tallest church in the world when complete.",
+  "labels": [
+    "religion",
+    "architecture"
+  ],
+  "aliases": [
+    "Temple Expiatori de la Sagrada Família",
+    "La Sagrada Familia",
+    "Expiatory Temple of the Holy Family",
+    "Temple of the Holy Family",
+    "Holy Family"
+  ],
+  "wikidata": "Q48435",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882-03-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "antoni-gaudi"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Basilica and Expiatory Church of the Holy Family (Q48435)",
+      "url": "https://www.wikidata.org/wiki/Q48435",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sagrada Família",
+      "url": "https://en.wikipedia.org/wiki/Sagrada_Fam%C3%ADlia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

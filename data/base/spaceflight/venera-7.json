@@ -1,0 +1,50 @@
+{
+  "id": "venera-7",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Venera 7",
+      "from": "1970"
+    }
+  ],
+  "summary": "Soviet probe whose lander reached the surface of Venus in 1970. It was the first spacecraft to send back data from the ground of another planet, reporting a surface temperature of several hundred degrees.",
+  "labels": [
+    "astronomy",
+    "space-race",
+    "firsts"
+  ],
+  "wikidata": "Q152800",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-08-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-12-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "The lander survived only briefly in Venus's heat and pressure",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Venera 7 (Q152800)",
+      "url": "https://www.wikidata.org/wiki/Q152800",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venera 7",
+      "url": "https://en.wikipedia.org/wiki/Venera_7",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

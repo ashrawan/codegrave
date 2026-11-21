@@ -1,0 +1,61 @@
+{
+  "id": "ghent-altarpiece",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Ghent Altarpiece",
+      "from": "1432"
+    }
+  ],
+  "maker": "Jan and Hubert van Eyck",
+  "summary": "Huge folding altarpiece painted in Flanders by Jan van Eyck and his brother, with the Adoration of the Mystic Lamb at its centre. It is a landmark of oil painting and has been stolen, hidden and looted several times in its history.",
+  "labels": [
+    "visual-art",
+    "religion",
+    "lost"
+  ],
+  "aliases": [
+    "Adoration of the Mystic Lamb",
+    "Lamb of God",
+    "Lam Gods",
+    "The Ghent Altarpiece",
+    "Mystic Lamb"
+  ],
+  "wikidata": "Q734834",
+  "events": [
+    {
+      "type": "born",
+      "date": "1432",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jan-van-eyck"
+    },
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ghent Altarpiece (Q734834)",
+      "url": "https://www.wikidata.org/wiki/Q734834",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ghent Altarpiece",
+      "url": "https://en.wikipedia.org/wiki/Ghent_Altarpiece",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

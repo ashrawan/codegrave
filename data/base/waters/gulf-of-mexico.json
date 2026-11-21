@@ -1,0 +1,57 @@
+{
+  "id": "gulf-of-mexico",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Gulf of Mexico",
+      "from": "-165000000"
+    }
+  ],
+  "summary": "A large ocean basin partly enclosed by North America and Cuba, which opened as the land stretched apart roughly 165 million years ago. It is warm and rich in fish and oil, and the Mississippi River flows into it.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Bay of Mexico",
+    "Mexican Gulf",
+    "The Gulf",
+    "Gulf of America"
+  ],
+  "wikidata": "Q12630",
+  "events": [
+    {
+      "type": "born",
+      "date": "-165000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gulf of Mexico (Q12630)",
+      "url": "https://www.wikidata.org/wiki/Q12630",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gulf of Mexico",
+      "url": "https://en.wikipedia.org/wiki/Gulf_of_Mexico",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

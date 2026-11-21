@@ -1,0 +1,60 @@
+{
+  "id": "caesars-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Caesar's civil war",
+      "from": "-0049"
+    }
+  ],
+  "summary": "War between Julius Caesar and the Roman Senate's forces led by Pompey, fought from Italy to Greece, Egypt, Africa and Spain. Caesar won and became dictator, which led to his murder in 44 BCE.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Great Roman Civil War"
+  ],
+  "wikidata": "Q1238338",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0049-01-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0045-03-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "africa"
+    },
+    {
+      "type": "related",
+      "to": "julius-caesar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Caesar's Civil War (Q1238338)",
+      "url": "https://www.wikidata.org/wiki/Q1238338",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caesar's civil war",
+      "url": "https://en.wikipedia.org/wiki/Caesar's_civil_war",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

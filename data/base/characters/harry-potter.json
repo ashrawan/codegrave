@@ -1,0 +1,52 @@
+{
+  "id": "harry-potter",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Harry Potter",
+      "from": "1997"
+    }
+  ],
+  "summary": "Boy wizard created by J. K. Rowling, who learns he is famous in the magical world and defeats the dark wizard Voldemort. He is the hero of seven novels and a film series.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Harry James Potter",
+    "The Boy Who Lived",
+    "The Chosen One"
+  ],
+  "wikidata": "Q3244512",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jk-rowling"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harry Potter (Q3244512)",
+      "url": "https://www.wikidata.org/wiki/Q3244512",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harry Potter (character)",
+      "url": "https://en.wikipedia.org/wiki/Harry_Potter_(character)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

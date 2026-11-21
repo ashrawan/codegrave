@@ -1,0 +1,61 @@
+{
+  "id": "world-cup-1966",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1966 FIFA World Cup",
+      "from": "1966"
+    }
+  ],
+  "summary": "England won the only World Cup it has had to date, beating West Germany in extra time at Wembley. A disputed goal in that match is still argued about, and the tournament had a mascot, World Cup Willie.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Jules Rimet Cup 1966",
+    "1962 Jules Rimet Cup",
+    "FIFA World Cup 1966"
+  ],
+  "wikidata": "Q134202",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966-07-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1966-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "old-wembley-stadium"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1966 FIFA World Cup (Q134202)",
+      "url": "https://www.wikidata.org/wiki/Q134202",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1966 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1966_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

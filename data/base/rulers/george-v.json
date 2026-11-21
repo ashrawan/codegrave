@@ -1,0 +1,54 @@
+{
+  "id": "george-v",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "George V",
+      "from": "1865"
+    }
+  ],
+  "summary": "King through the First World War. In 1917 he changed the family's name to Windsor.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q269412",
+  "events": [
+    {
+      "type": "born",
+      "date": "1865-06-03",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1910-05-06",
+      "precision": "day",
+      "label": "Became king",
+      "note": "King of the United Kingdom from 1910 to 1936."
+    },
+    {
+      "type": "ended",
+      "date": "1936-01-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: George V (Q269412)",
+      "url": "https://www.wikidata.org/wiki/Q269412",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George V",
+      "url": "https://en.wikipedia.org/wiki/George_V",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

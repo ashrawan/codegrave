@@ -1,0 +1,48 @@
+{
+  "id": "apartheid",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Apartheid",
+      "from": "1948"
+    }
+  ],
+  "summary": "The system of legal racial separation and white minority rule in South Africa. It was dismantled in the early 1990s and ended with the 1994 election.",
+  "labels": [
+    "human-rights",
+    "law"
+  ],
+  "wikidata": "Q11409",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1991",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: apartheid (Q11409)",
+      "url": "https://www.wikidata.org/wiki/Q11409",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apartheid",
+      "url": "https://en.wikipedia.org/wiki/Apartheid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

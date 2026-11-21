@@ -1,0 +1,53 @@
+{
+  "id": "irish-elk",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Irish elk",
+      "from": "-400000"
+    }
+  ],
+  "summary": "A giant deer of ice age Europe and Asia with the largest antlers of any deer, spanning up to about three metres. Despite the name, it was not only Irish and was not a true elk.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Megaloceros giganteus",
+    "Irish deer",
+    "Giant deer"
+  ],
+  "wikidata": "Q312054",
+  "events": [
+    {
+      "type": "born",
+      "date": "-400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-5700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Died out as the climate changed and forests spread",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Megaloceros giganteus (Q312054)",
+      "url": "https://www.wikidata.org/wiki/Q312054",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Irish elk",
+      "url": "https://en.wikipedia.org/wiki/Irish_elk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

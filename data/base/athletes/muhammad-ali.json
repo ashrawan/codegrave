@@ -1,0 +1,59 @@
+{
+  "id": "muhammad-ali",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Muhammad Ali",
+      "from": "1942"
+    }
+  ],
+  "summary": "American heavyweight boxer who won an Olympic gold in 1960 and the world title three times. He refused to join the army in the Vietnam War and was banned for years from boxing as a result.",
+  "labels": [
+    "sport",
+    "human-rights"
+  ],
+  "aliases": [
+    "Muhammad Ali Clay",
+    "The Greatest",
+    "Cassius Marcellus Clay Jr.",
+    "Cassius Clay"
+  ],
+  "wikidata": "Q36107",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-01-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-06-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-1960"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Muhammad Ali (Q36107)",
+      "url": "https://www.wikidata.org/wiki/Q36107",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Muhammad Ali",
+      "url": "https://en.wikipedia.org/wiki/Muhammad_Ali",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

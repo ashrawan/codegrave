@@ -1,0 +1,48 @@
+{
+  "id": "john-harrison",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "John Harrison",
+      "from": "1693"
+    }
+  ],
+  "summary": "English clockmaker who built a series of timekeepers that stayed accurate at sea. His work solved the longitude problem and made it possible for ships to find their position east and west.",
+  "labels": [
+    "exploration",
+    "engineering"
+  ],
+  "wikidata": "Q314335",
+  "events": [
+    {
+      "type": "born",
+      "date": "1693-03-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1776-03-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Harrison (Q314335)",
+      "url": "https://www.wikidata.org/wiki/Q314335",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Harrison",
+      "url": "https://en.wikipedia.org/wiki/John_Harrison",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

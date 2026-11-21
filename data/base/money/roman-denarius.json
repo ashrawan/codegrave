@@ -1,0 +1,48 @@
+{
+  "id": "roman-denarius",
+  "category": "money",
+  "names": [
+    {
+      "name": "Roman denarius",
+      "from": "-0211"
+    }
+  ],
+  "summary": "The silver coin that was the backbone of Roman money for centuries. Its silver content shrank as emperors needed to pay for armies, until it was replaced by other coins.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q187776",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0211",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0274",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Debased over time and replaced by other coins in later reforms",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: denarius (Q187776)",
+      "url": "https://www.wikidata.org/wiki/Q187776",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Denarius",
+      "url": "https://en.wikipedia.org/wiki/Denarius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

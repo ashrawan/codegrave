@@ -1,0 +1,56 @@
+{
+  "id": "robert-hooke",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Robert Hooke",
+      "from": "1635"
+    }
+  ],
+  "summary": "English scientist whose book Micrographia showed fleas and plant cells under the microscope and gave the cell its name. He also studied springs and gravity, and worked as a surveyor and architect in London after the Great Fire.",
+  "labels": [
+    "physics",
+    "biology"
+  ],
+  "aliases": [
+    "Hooke"
+  ],
+  "wikidata": "Q46830",
+  "events": [
+    {
+      "type": "born",
+      "date": "1635-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1703-03-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Robert Hooke (Q46830)",
+      "url": "https://www.wikidata.org/wiki/Q46830",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Hooke",
+      "url": "https://en.wikipedia.org/wiki/Robert_Hooke",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

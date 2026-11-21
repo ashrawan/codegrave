@@ -1,0 +1,55 @@
+{
+  "id": "major-league-baseball",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Major League Baseball",
+      "from": "1903"
+    }
+  ],
+  "summary": "Top professional baseball organisation in the United States and Canada, made up of the National League and the American League. The two leagues agreed to work together in 1903 and began the World Series that year.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "MLB",
+    "Major League"
+  ],
+  "wikidata": "Q1163715",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Major League Baseball (Q1163715)",
+      "url": "https://www.wikidata.org/wiki/Q1163715",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Major League Baseball",
+      "url": "https://en.wikipedia.org/wiki/Major_League_Baseball",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

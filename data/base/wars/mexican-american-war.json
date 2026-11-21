@@ -1,0 +1,61 @@
+{
+  "id": "mexican-american-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Mexican–American War",
+      "from": "1846"
+    }
+  ],
+  "summary": "A war between the United States and Mexico after the US annexed Texas. Mexico lost about half its territory, including California and much of the south-west, in the treaty that ended it.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Mexican War",
+    "United States Intervention in Mexico",
+    "U.S.-Mexico War"
+  ],
+  "wikidata": "Q6683",
+  "events": [
+    {
+      "type": "born",
+      "date": "1846-04-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1848-02-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mexican-American War (Q6683)",
+      "url": "https://www.wikidata.org/wiki/Q6683",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mexican–American War",
+      "url": "https://en.wikipedia.org/wiki/Mexican%E2%80%93American_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

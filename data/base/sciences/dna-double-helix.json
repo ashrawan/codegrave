@@ -1,0 +1,60 @@
+{
+  "id": "dna-double-helix",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Structure of DNA",
+      "from": "1953"
+    }
+  ],
+  "summary": "The discovery in 1953, by James Watson and Francis Crick, using X-ray images by Rosalind Franklin and Maurice Wilkins, that DNA is two strands twisted in a double helix. It showed how genetic information can be copied.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "double helix",
+    "DNA double helix",
+    "RNA double helix"
+  ],
+  "wikidata": "Q60535862",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "james-watson"
+    },
+    {
+      "type": "made_by",
+      "to": "francis-crick"
+    },
+    {
+      "type": "made_by",
+      "to": "rosalind-franklin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: nucleic acid double helix (Q60535862)",
+      "url": "https://www.wikidata.org/wiki/Q60535862",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nucleic acid double helix",
+      "url": "https://en.wikipedia.org/wiki/Nucleic_acid_double_helix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

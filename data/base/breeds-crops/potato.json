@@ -1,0 +1,49 @@
+{
+  "id": "potato",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Potato",
+      "from": "-8000"
+    }
+  ],
+  "summary": "A tuber first farmed in the Andes of South America. The Spanish brought it to Europe in the 1500s, where it became a staple, though blight led to famine in Ireland in the 1840s.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "potato plant",
+    "tater",
+    "tattie",
+    "spud",
+    "Solanum tuberosum"
+  ],
+  "wikidata": "Q10998",
+  "events": [
+    {
+      "type": "born",
+      "date": "-8000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: potato (Q10998)",
+      "url": "https://www.wikidata.org/wiki/Q10998",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Potato",
+      "url": "https://en.wikipedia.org/wiki/Potato",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

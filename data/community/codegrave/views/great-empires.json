@@ -1,0 +1,86 @@
+{
+  "id": "great-empires",
+  "name": "Great Empires",
+  "description": "The largest empires in history, each from its rise to its fall: Persia, Rome, the Mongols, the Ottomans, Britain and more.",
+  "category": "places",
+  "tags": [
+    "empires",
+    "roman empire",
+    "mongol empire",
+    "british empire",
+    "ottoman empire",
+    "rise and fall"
+  ],
+  "entries": [
+    "akkadian-empire",
+    "assyria",
+    "carthage",
+    "kingdom-of-macedon",
+    "achaemenid-empire",
+    "roman-republic",
+    "maurya-empire",
+    "han-dynasty",
+    "roman-empire",
+    "sasanian-empire",
+    "gupta-empire",
+    "byzantine-empire",
+    "tang-dynasty",
+    "umayyad-caliphate",
+    "abbasid-caliphate",
+    "khmer-empire",
+    "holy-roman-empire",
+    "mongol-empire",
+    "mali-empire",
+    "ottoman-empire",
+    "ming-dynasty",
+    "portuguese-empire",
+    "aztec-empire",
+    "inca-empire",
+    "spanish-empire",
+    "mughal-empire",
+    "british-empire",
+    "qing-dynasty",
+    "russian-empire",
+    "austria-hungary",
+    "empire-of-japan",
+    "german-empire",
+    "soviet-union"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-empires",
+      "name": "The first empires",
+      "from": -2334,
+      "to": -31,
+      "note": "Akkad, Assyria and Persia show that one ruler can govern many peoples through roads, governors and armies. Alexander conquers Persia, the Mauryas unite much of India, Han China rises, and Carthage and Rome fight over the Mediterranean."
+    },
+    {
+      "id": "classical-empires",
+      "name": "Classical empires",
+      "from": -27,
+      "to": 750,
+      "note": "Rome and Han China rule millions with law, coins and soldiers, Sasanian Persia rivals Rome, Byzantium carries Rome on in the east, and the first caliphs build a new empire out of Arabia."
+    },
+    {
+      "id": "caliphates-and-the-mongols",
+      "name": "Caliphates and the Mongols",
+      "from": 751,
+      "to": 1450,
+      "note": "Baghdad, Tang China and the Mongols link continents by trade and conquest. The Mongols create the biggest land empire ever, the Ottomans start their rise on the ruins of Byzantium, and far from Eurasia, Mali and the Khmer, and then the Aztec and Inca, build great empires."
+    },
+    {
+      "id": "early-modern-empires",
+      "name": "Early modern empires",
+      "from": 1451,
+      "to": 1800,
+      "note": "Gunpowder states such as the Ottomans, Mughals and Ming hold huge lands, while Portugal and Spain use ships to reach the Americas, Africa and Asia and start the first global empires."
+    },
+    {
+      "id": "modern-empires",
+      "name": "Modern empires",
+      "from": 1801,
+      "to": 1999,
+      "note": "Britain, Russia, Germany and Japan chase empire in the industrial age. Two world wars and national movements break them up, the Soviet Union falls in 1991, and Britain's handover of Hong Kong in 1997 and Portugal's of Macau in 1999 end the old colonial empires."
+    }
+  ]
+}

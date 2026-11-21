@@ -1,0 +1,55 @@
+{
+  "id": "juan-peron",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Juan Peron",
+      "from": "1895"
+    }
+  ],
+  "summary": "Argentine army officer who was elected president in 1946, with his wife Eva as an influential figure. His movement, Peronism, remained a major force in Argentine politics long after his death.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Juan Domingo Perón"
+  ],
+  "wikidata": "Q93330",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895-10-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "eva-peron"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Juan Domingo Perón (Q93330)",
+      "url": "https://www.wikidata.org/wiki/Q93330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Juan Perón",
+      "url": "https://en.wikipedia.org/wiki/Juan_Per%C3%B3n",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

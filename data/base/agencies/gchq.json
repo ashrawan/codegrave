@@ -1,0 +1,51 @@
+{
+  "id": "gchq",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "GCHQ",
+      "from": "1919"
+    }
+  ],
+  "summary": "British agency for signals intelligence and cyber security, begun as the Government Code and Cypher School. In the Second World War its staff at Bletchley Park broke German codes.",
+  "labels": [
+    "politics",
+    "computing"
+  ],
+  "aliases": [
+    "Government Communications Headquarters"
+  ],
+  "wikidata": "Q220798",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Government Communications Headquarters (Q220798)",
+      "url": "https://www.wikidata.org/wiki/Q220798",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: GCHQ",
+      "url": "https://en.wikipedia.org/wiki/GCHQ",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

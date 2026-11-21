@@ -1,0 +1,54 @@
+{
+  "id": "quran",
+  "category": "books",
+  "names": [
+    {
+      "name": "Quran",
+      "from": "0610"
+    }
+  ],
+  "summary": "Central religious text of Islam, which Muslims believe was revealed to the Prophet Muhammad over about twenty-three years. Its 114 chapters are recited in Arabic around the world and it shaped the Arabic language.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Qur’an",
+    "Holy Qur'an",
+    "the Holy Koran",
+    "Korân",
+    "the Koran"
+  ],
+  "wikidata": "Q428",
+  "events": [
+    {
+      "type": "born",
+      "date": "0610",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "about",
+      "to": "islam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Qur’an (Q428)",
+      "url": "https://www.wikidata.org/wiki/Q428",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quran",
+      "url": "https://en.wikipedia.org/wiki/Quran",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

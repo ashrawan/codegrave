@@ -1,0 +1,58 @@
+{
+  "id": "multics",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Multics",
+      "from": "1969"
+    }
+  ],
+  "summary": "Time-sharing system from MIT, Bell Labs and General Electric that tried many ideas about security and sharing. Bell Labs left the project, and two of its engineers wrote Unix as a simpler answer.",
+  "labels": [
+    "computing",
+    "firsts"
+  ],
+  "wikidata": "Q739186",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Last installation was shut down in 2000",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "dennis-ritchie"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Multics (Q739186)",
+      "url": "https://www.wikidata.org/wiki/Q739186",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Multics",
+      "url": "https://en.wikipedia.org/wiki/Multics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

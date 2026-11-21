@@ -1,0 +1,52 @@
+{
+  "id": "great-plague-of-marseille",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Great Plague of Marseille",
+      "from": "1720"
+    }
+  ],
+  "summary": "Plague arrived in the French port of Marseille on a ship from the eastern Mediterranean and spread into nearby Provence. It was one of the last major outbreaks of plague in western Europe.",
+  "labels": [
+    "medicine"
+  ],
+  "wikidata": "Q1936002",
+  "events": [
+    {
+      "type": "born",
+      "date": "1720-05-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1722-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Plague of Marseille (Q1936002)",
+      "url": "https://www.wikidata.org/wiki/Q1936002",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Plague of Marseille",
+      "url": "https://en.wikipedia.org/wiki/Great_Plague_of_Marseille",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

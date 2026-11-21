@@ -1,0 +1,56 @@
+{
+  "id": "battle-of-fort-sumter",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Fort Sumter",
+      "from": "1861"
+    }
+  ],
+  "summary": "Confederate guns bombarded a Union-held fort in Charleston harbour in South Carolina. The fort surrendered after about a day and a half, and the attack is counted as the opening of the American Civil War.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q543165",
+  "events": [
+    {
+      "type": "born",
+      "date": "1861-04-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1861-04-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "american-civil-war"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Fort Sumter (Q543165)",
+      "url": "https://www.wikidata.org/wiki/Q543165",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Fort Sumter",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Fort_Sumter",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

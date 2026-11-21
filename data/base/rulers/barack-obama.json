@@ -1,0 +1,56 @@
+{
+  "id": "barack-obama",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Barack Obama",
+      "from": "1961"
+    }
+  ],
+  "summary": "Forty-fourth president of the United States, the first Black person elected to the office. He served from 2009 to 2017, signed the Affordable Care Act and a large stimulus law in response to the financial crisis, and ordered the raid that killed Osama bin Laden.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q76",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-08-04",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2009-01-20",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 44th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "2017-01-20",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Donald Trump took office."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Barack Obama (Q76)",
+      "url": "https://www.wikidata.org/wiki/Q76",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Barack Obama",
+      "url": "https://en.wikipedia.org/wiki/Barack_Obama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

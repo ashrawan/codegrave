@@ -1,0 +1,52 @@
+{
+  "id": "john-wesley",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "John Wesley",
+      "from": "1703"
+    }
+  ],
+  "summary": "English clergyman who, with his brother Charles, started the Methodist movement. He preached outdoors to ordinary people, travelled thousands of miles on horseback and urged his followers to live a disciplined life.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q213393",
+  "events": [
+    {
+      "type": "born",
+      "date": "1703-06-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1791-03-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "martin-luther"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Wesley (Q213393)",
+      "url": "https://www.wikidata.org/wiki/Q213393",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Wesley",
+      "url": "https://en.wikipedia.org/wiki/John_Wesley",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

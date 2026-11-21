@@ -1,0 +1,82 @@
+{
+  "id": "latvia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Latvia",
+      "from": "1918"
+    }
+  ],
+  "summary": "A Baltic state with its capital at Riga. Independent between the world wars and taken by the Soviet Union in 1940, it restored its independence in 1991 and joined the EU in 2004.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "lv",
+    "Republic of Latvia",
+    "Latvian Republic",
+    "Latvija",
+    "Latveja"
+  ],
+  "wikidata": "Q211",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-11-18",
+      "precision": "day",
+      "note": "Dated from the proclamation of the republic on 18 November 1918. Latvia was annexed by the Soviet Union in 1940."
+    },
+    {
+      "type": "milestone",
+      "date": "1991",
+      "precision": "year",
+      "label": "Restored",
+      "note": "Independence was restored as the Soviet Union broke up."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Latvia (Q211)",
+      "url": "https://www.wikidata.org/wiki/Q211",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Latvia",
+      "url": "https://en.wikipedia.org/wiki/Latvia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

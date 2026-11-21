@@ -1,0 +1,58 @@
+{
+  "id": "sydney",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Sydney",
+      "from": "1788"
+    }
+  ],
+  "summary": "Largest city in Australia, begun as a British penal colony at Sydney Cove. It grew into a major port and is known for its harbour, bridge and opera house.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Sydney, Australia",
+    "Sydney, New South Wales, Australia",
+    "Sydney, New South Wales",
+    "Sydney, NSW, Australia",
+    "Sydney, NSW"
+  ],
+  "wikidata": "Q3130",
+  "events": [
+    {
+      "type": "born",
+      "date": "1788-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-south-wales"
+    },
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sydney (Q3130)",
+      "url": "https://www.wikidata.org/wiki/Q3130",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sydney",
+      "url": "https://en.wikipedia.org/wiki/Sydney",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

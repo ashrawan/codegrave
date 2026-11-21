@@ -1,0 +1,69 @@
+{
+  "id": "richard-i-of-england",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Richard the Lionheart",
+      "from": "1157"
+    }
+  ],
+  "summary": "King of England who spent most of his reign abroad. He led the Third Crusade, took Acre and Jaffa, and made a truce with Saladin. He was captured on the way home and later killed in France.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Lionheart",
+    "Richard I",
+    "Cœur de Lion",
+    "Richard Cœur de Lion"
+  ],
+  "wikidata": "Q42305",
+  "events": [
+    {
+      "type": "born",
+      "date": "1157-09-08",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1189",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1189 to 1199."
+    },
+    {
+      "type": "ended",
+      "date": "1199-04-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "eleanor-of-aquitaine"
+    },
+    {
+      "type": "parent",
+      "to": "henry-ii-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Richard I of England (Q42305)",
+      "url": "https://www.wikidata.org/wiki/Q42305",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Richard I of England",
+      "url": "https://en.wikipedia.org/wiki/Richard_I_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

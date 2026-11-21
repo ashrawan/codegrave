@@ -1,0 +1,50 @@
+{
+  "id": "telstar",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Telstar",
+      "from": "1962"
+    }
+  ],
+  "maker": "Bell Labs and AT&T",
+  "summary": "An early communications satellite that relayed television pictures and telephone calls between North America and Europe. It was launched in 1962 and stopped working the next year.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "wikidata": "Q63114705",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1963",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Failed after radiation damage to its electronics",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Telstar (Q63114705)",
+      "url": "https://www.wikidata.org/wiki/Q63114705",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Telstar",
+      "url": "https://en.wikipedia.org/wiki/Telstar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

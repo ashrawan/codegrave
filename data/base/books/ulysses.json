@@ -1,0 +1,52 @@
+{
+  "id": "ulysses",
+  "category": "books",
+  "names": [
+    {
+      "name": "Ulysses",
+      "from": "1922"
+    }
+  ],
+  "summary": "Novel by James Joyce that follows a single day in Dublin and echoes Homer's Odyssey. Its experimental style and frankness led to bans in the United States and Britain for years.",
+  "labels": [
+    "literature",
+    "banned"
+  ],
+  "wikidata": "Q6511",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-02-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "james-joyce"
+    },
+    {
+      "type": "about",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ulysses (Q6511)",
+      "url": "https://www.wikidata.org/wiki/Q6511",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ulysses (novel)",
+      "url": "https://en.wikipedia.org/wiki/Ulysses_(novel)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

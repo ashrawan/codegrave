@@ -1,0 +1,48 @@
+{
+  "id": "bluesky",
+  "category": "social",
+  "names": [
+    {
+      "name": "Bluesky",
+      "from": "2021"
+    }
+  ],
+  "summary": "Social network built on an open protocol that lets people move between apps. It began as a project inside Twitter and grew fast after 2024 as users left X.",
+  "labels": [
+    "media",
+    "open-source"
+  ],
+  "wikidata": "Q78194383",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bluesky (Q78194383)",
+      "url": "https://www.wikidata.org/wiki/Q78194383",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bluesky",
+      "url": "https://en.wikipedia.org/wiki/Bluesky",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

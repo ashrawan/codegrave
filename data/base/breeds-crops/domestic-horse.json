@@ -1,0 +1,46 @@
+{
+  "id": "domestic-horse",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Domestic horse",
+      "from": "-3500"
+    }
+  ],
+  "summary": "A grass-eating animal first tamed on the steppes of Central Asia, apparently for meat and milk, then for riding and pulling. It changed war, trade and travel across the world.",
+  "labels": [
+    "transport"
+  ],
+  "aliases": [
+    "nag",
+    "horses"
+  ],
+  "wikidata": "Q726",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: horse (Q726)",
+      "url": "https://www.wikidata.org/wiki/Q726",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Horse",
+      "url": "https://en.wikipedia.org/wiki/Horse",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

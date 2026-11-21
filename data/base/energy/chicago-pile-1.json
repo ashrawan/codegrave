@@ -1,0 +1,63 @@
+{
+  "id": "chicago-pile-1",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Chicago Pile-1",
+      "from": "1942"
+    }
+  ],
+  "maker": "Enrico Fermi's team",
+  "summary": "The first nuclear reactor, built under the stands of a sports field at the University of Chicago by a team led by Enrico Fermi. It achieved the first self-sustaining chain reaction on 2 December 1942.",
+  "labels": [
+    "energy",
+    "physics",
+    "firsts"
+  ],
+  "aliases": [
+    "CP-1"
+  ],
+  "wikidata": "Q284681",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-12-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dismantled and rebuilt at a new site outside the city",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "manhattan-project"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chicago Pile-1 (Q284681)",
+      "url": "https://www.wikidata.org/wiki/Q284681",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chicago Pile-1",
+      "url": "https://en.wikipedia.org/wiki/Chicago_Pile-1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

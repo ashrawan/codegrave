@@ -1,0 +1,53 @@
+{
+  "id": "adam-smith",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Adam Smith",
+      "from": "1723"
+    }
+  ],
+  "summary": "Scottish philosopher and one of the first great writers on economics. He argued that trade, the division of labour and competition could make nations richer, and his ideas still shape debates on markets and government.",
+  "labels": [
+    "economics",
+    "philosophy"
+  ],
+  "wikidata": "Q9381",
+  "events": [
+    {
+      "type": "born",
+      "date": "1723-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1790-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Adam Smith (Q9381)",
+      "url": "https://www.wikidata.org/wiki/Q9381",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Adam Smith",
+      "url": "https://en.wikipedia.org/wiki/Adam_Smith",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

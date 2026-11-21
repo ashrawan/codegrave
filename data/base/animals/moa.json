@@ -1,0 +1,52 @@
+{
+  "id": "moa",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Moa",
+      "from": "-17000000"
+    }
+  ],
+  "summary": "A group of huge flightless birds of New Zealand, the tallest of which stood well over two metres. The Māori ancestors hunted them for food, and all were gone within a couple of centuries of arrival.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Dinornithiformes"
+  ],
+  "wikidata": "Q452969",
+  "events": [
+    {
+      "type": "born",
+      "date": "-17000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1445",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Hunted to extinction by the first Polynesian settlers of New Zealand",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Dinornithiformes (Q452969)",
+      "url": "https://www.wikidata.org/wiki/Q452969",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moa",
+      "url": "https://en.wikipedia.org/wiki/Moa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

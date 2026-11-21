@@ -1,0 +1,64 @@
+{
+  "id": "second-sino-japanese-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Sino-Japanese War",
+      "from": "1937"
+    }
+  ],
+  "summary": "A long war between China and Japan, which began with a clash near Beijing in 1937 and became part of the Second World War. Millions of Chinese people died. It ended with the Japanese surrender in 1945.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q170314",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-07-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "related",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "related",
+      "to": "republic-of-china-1912"
+    },
+    {
+      "type": "related",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Sino-Japanese War (Q170314)",
+      "url": "https://www.wikidata.org/wiki/Q170314",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Sino-Japanese War",
+      "url": "https://en.wikipedia.org/wiki/Second_Sino-Japanese_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

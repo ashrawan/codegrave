@@ -1,0 +1,45 @@
+{
+  "id": "boxing",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Boxing",
+      "from": "-0688"
+    }
+  ],
+  "summary": "Combat sport in which two people fight with gloved fists. It was added to the ancient Olympic Games in 688 BCE, and modern rules came in the nineteenth century.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "pugilism"
+  ],
+  "wikidata": "Q32112",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0688",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: boxing (Q32112)",
+      "url": "https://www.wikidata.org/wiki/Q32112",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boxing",
+      "url": "https://en.wikipedia.org/wiki/Boxing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

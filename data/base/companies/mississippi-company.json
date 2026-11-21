@@ -1,0 +1,64 @@
+{
+  "id": "mississippi-company",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Mississippi Company",
+      "from": "1717"
+    }
+  ],
+  "maker": "John Law",
+  "summary": "French trading company led by the Scottish financier John Law, given rights over Louisiana and later much of France's overseas trade. Its shares soared and then crashed, ruining many investors in a famous financial bubble.",
+  "labels": [
+    "economics",
+    "business"
+  ],
+  "aliases": [
+    "Mississippi scheme",
+    "Mississippi Bubble"
+  ],
+  "wikidata": "Q1192494",
+  "events": [
+    {
+      "type": "born",
+      "date": "1717",
+      "precision": "year",
+      "note": "Dated from 1717, when John Law took over the company and renamed it. The first French company for the Mississippi trade was chartered in 1684."
+    },
+    {
+      "type": "ended",
+      "date": "1721",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Share price bubble burst in 1720 and the company's finances collapsed",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-america"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mississippi Company (Q1192494)",
+      "url": "https://www.wikidata.org/wiki/Q1192494",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Law's Company",
+      "url": "https://en.wikipedia.org/wiki/John_Law's_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

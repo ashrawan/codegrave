@@ -1,0 +1,55 @@
+{
+  "id": "windows-3-1",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows 3.1",
+      "from": "1992"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Version of Windows that ran on top of MS-DOS and became the first one that was widely used. It brought TrueType fonts and stable multitasking and sold in tens of millions before Windows 95.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "wikidata": "Q29017752",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Windows 95 and later systems",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Windows 3.1x (Q29017752)",
+      "url": "https://www.wikidata.org/wiki/Q29017752",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windows 3.1x",
+      "url": "https://en.wikipedia.org/wiki/Windows_3.1x",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

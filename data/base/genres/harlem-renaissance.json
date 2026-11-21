@@ -1,0 +1,51 @@
+{
+  "id": "harlem-renaissance",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Harlem Renaissance",
+      "from": "1918"
+    }
+  ],
+  "summary": "Flowering of Black writing, music, painting and ideas centred on the Harlem district of New York. Writers such as Langston Hughes and musicians such as Duke Ellington made it a landmark of American culture.",
+  "labels": [
+    "literature",
+    "music"
+  ],
+  "aliases": [
+    "New Negro Movement"
+  ],
+  "wikidata": "Q829895",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1937",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Harlem Renaissance (Q829895)",
+      "url": "https://www.wikidata.org/wiki/Q829895",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harlem Renaissance",
+      "url": "https://en.wikipedia.org/wiki/Harlem_Renaissance",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "goryeo",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Goryeo",
+      "from": "0918"
+    }
+  ],
+  "summary": "The Korean kingdom, source of the name Korea, that united the peninsula in the 10th century. Buddhism flourished, and its craftsmen made celadon pottery and printed Buddhist texts with movable metal type.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Koryŏ",
+    "Goryeoguk"
+  ],
+  "wikidata": "Q28208",
+  "events": [
+    {
+      "type": "born",
+      "date": "0918",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1392-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown by General Yi Seong-gye, who founded Joseon",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "joseon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Goryeo (Q28208)",
+      "url": "https://www.wikidata.org/wiki/Q28208",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Goryeo",
+      "url": "https://en.wikipedia.org/wiki/Goryeo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

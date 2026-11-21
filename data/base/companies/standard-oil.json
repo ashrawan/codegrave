@@ -1,0 +1,70 @@
+{
+  "id": "standard-oil",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Standard Oil",
+      "from": "1870"
+    }
+  ],
+  "maker": "John D. Rockefeller and partners",
+  "summary": "American oil company founded by John D. Rockefeller and partners that came to control most oil refining in the United States. Its size led to antitrust law, and in 1911 the Supreme Court ordered it split up.",
+  "labels": [
+    "business",
+    "economics",
+    "law"
+  ],
+  "aliases": [
+    "Standard Oil Co. Inc.",
+    "Standard Oil Company",
+    "Standard Oil Trust",
+    "Standard Oil Co."
+  ],
+  "wikidata": "Q375791",
+  "events": [
+    {
+      "type": "born",
+      "date": "1870",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1911",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broken into separate companies by order of the US Supreme Court under antitrust law",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "john-d-rockefeller"
+    },
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Standard Oil (Q375791)",
+      "url": "https://www.wikidata.org/wiki/Q375791",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Standard Oil",
+      "url": "https://en.wikipedia.org/wiki/Standard_Oil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

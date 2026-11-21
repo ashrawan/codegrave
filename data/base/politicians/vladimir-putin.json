@@ -1,0 +1,47 @@
+{
+  "id": "vladimir-putin",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Vladimir Putin",
+      "from": "1952"
+    }
+  ],
+  "summary": "Russian politician and former intelligence officer who has led Russia as president or prime minister since 1999. His time in office has been marked by a strong central state, a revived role for Russia abroad and wars in Chechnya, Georgia and Ukraine.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q7747",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-10-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "niccolo-machiavelli"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vladimir Putin (Q7747)",
+      "url": "https://www.wikidata.org/wiki/Q7747",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vladimir Putin",
+      "url": "https://en.wikipedia.org/wiki/Vladimir_Putin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

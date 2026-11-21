@@ -1,0 +1,48 @@
+{
+  "id": "bank-of-england",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Bank of England",
+      "from": "1694"
+    }
+  ],
+  "summary": "Central bank of the United Kingdom, set up in London to lend money to the government. It issues banknotes, was nationalised in 1946 and was given control of interest rates in 1997.",
+  "labels": [
+    "economics",
+    "business"
+  ],
+  "wikidata": "Q183231",
+  "events": [
+    {
+      "type": "born",
+      "date": "1694-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bank of England (Q183231)",
+      "url": "https://www.wikidata.org/wiki/Q183231",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bank of England",
+      "url": "https://en.wikipedia.org/wiki/Bank_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

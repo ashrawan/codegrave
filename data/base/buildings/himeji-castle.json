@@ -1,0 +1,55 @@
+{
+  "id": "himeji-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Himeji Castle",
+      "from": "1609"
+    }
+  ],
+  "summary": "Japanese castle with white plastered walls that give it the nickname White Heron. It escaped war, fires and earthquakes, and its maze of paths and gates is among the best preserved of any Japanese castle.",
+  "labels": [
+    "war",
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Shirasagi Castle",
+    "Hakuro Castle",
+    "White Heron Castle",
+    "White Egret Castle"
+  ],
+  "wikidata": "Q188754",
+  "events": [
+    {
+      "type": "born",
+      "date": "1609",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Himeji Castle (Q188754)",
+      "url": "https://www.wikidata.org/wiki/Q188754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Himeji Castle",
+      "url": "https://en.wikipedia.org/wiki/Himeji_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

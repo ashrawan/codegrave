@@ -1,0 +1,50 @@
+{
+  "id": "swan-lake",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Swan Lake",
+      "from": "1877"
+    }
+  ],
+  "summary": "Ballet with music by Tchaikovsky about a prince who falls in love with a princess turned into a swan by a sorcerer. The Moscow premiere failed, and the version known today dates from 1895.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Lebedinoye ozero"
+  ],
+  "wikidata": "Q199786",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877-02-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "pyotr-ilyich-tchaikovsky"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Swan Lake (Q199786)",
+      "url": "https://www.wikidata.org/wiki/Q199786",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Swan Lake",
+      "url": "https://en.wikipedia.org/wiki/Swan_Lake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

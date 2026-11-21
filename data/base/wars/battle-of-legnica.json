@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-legnica",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Legnica",
+      "from": "1241"
+    }
+  ],
+  "summary": "Battle in April 1241 in which a Mongol army defeated a force of Poles, Germans and Templars led by Duke Henry II of Silesia near Legnica. Henry was killed. The Mongols then moved on and did not stay in Poland.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q159512",
+  "events": [
+    {
+      "type": "born",
+      "date": "1241-04-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1241-04-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    },
+    {
+      "type": "related",
+      "to": "golden-horde"
+    },
+    {
+      "type": "related",
+      "to": "knights-templar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Legnica (Q159512)",
+      "url": "https://www.wikidata.org/wiki/Q159512",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Legnica",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Legnica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

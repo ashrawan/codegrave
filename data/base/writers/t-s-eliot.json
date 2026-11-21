@@ -1,0 +1,85 @@
+{
+  "id": "t-s-eliot",
+  "category": "writers",
+  "names": [
+    {
+      "name": "T. S. Eliot",
+      "from": "1888"
+    }
+  ],
+  "summary": "American-born poet who settled in England. His poems The Love Song of J. Alfred Prufrock and The Waste Land are central to modernist poetry. He also wrote plays and criticism, and won the Nobel Prize in Literature in 1948.",
+  "labels": [
+    "literature",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Eliot",
+    "Thomas Eliot"
+  ],
+  "wikidata": "Q37767",
+  "events": [
+    {
+      "type": "born",
+      "date": "1888-09-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-01-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "dante-alighieri"
+    },
+    {
+      "type": "influenced_by",
+      "to": "virgil"
+    },
+    {
+      "type": "influenced_by",
+      "to": "william-shakespeare"
+    },
+    {
+      "type": "influenced_by",
+      "to": "john-milton"
+    },
+    {
+      "type": "influenced_by",
+      "to": "homer"
+    },
+    {
+      "type": "influenced_by",
+      "to": "charles-dickens"
+    },
+    {
+      "type": "influenced_by",
+      "to": "walt-whitman"
+    },
+    {
+      "type": "influenced_by",
+      "to": "immanuel-kant"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: T. S. Eliot (Q37767)",
+      "url": "https://www.wikidata.org/wiki/Q37767",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: T. S. Eliot",
+      "url": "https://en.wikipedia.org/wiki/T._S._Eliot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,49 @@
+{
+  "id": "cattle",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Domestic cattle",
+      "from": "-8000"
+    }
+  ],
+  "summary": "Cows and bulls descend from wild aurochs, which were tamed independently in the Near East and in South Asia. They give meat, milk and leather and, for centuries, pulled ploughs and carts.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "bovine",
+    "cows",
+    "cow",
+    "domestic cow",
+    "Bos taurus + indicus"
+  ],
+  "wikidata": "Q830",
+  "events": [
+    {
+      "type": "born",
+      "date": "-8000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cattle (Q830)",
+      "url": "https://www.wikidata.org/wiki/Q830",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cattle",
+      "url": "https://en.wikipedia.org/wiki/Cattle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

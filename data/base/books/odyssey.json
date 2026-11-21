@@ -1,0 +1,52 @@
+{
+  "id": "odyssey",
+  "category": "books",
+  "names": [
+    {
+      "name": "Odyssey",
+      "from": "-0725"
+    }
+  ],
+  "summary": "Greek epic poem credited to Homer about Odysseus and his long, dangerous voyage home after the Trojan War. Its monsters, storms and homecoming have been borrowed by writers ever since.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "the Odyssey",
+    "Homer's Odyssey",
+    "Hom. Od."
+  ],
+  "wikidata": "Q35160",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0725",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "homer"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Odyssey (Q35160)",
+      "url": "https://www.wikidata.org/wiki/Q35160",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Odyssey",
+      "url": "https://en.wikipedia.org/wiki/Odyssey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

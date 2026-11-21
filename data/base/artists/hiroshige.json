@@ -1,0 +1,59 @@
+{
+  "id": "hiroshige",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Hiroshige",
+      "from": "1797"
+    }
+  ],
+  "summary": "Japanese woodblock print artist of the Edo period. His series The Fifty-three Stations of the Tōkaidō and One Hundred Famous Views of Edo showed landscapes, weather and travellers, and influenced European painters.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Utagawa Hiroshige",
+    "Andō Hiroshige",
+    "Ando",
+    "Jūemon Andō",
+    "Utugawa Hiroshige"
+  ],
+  "wikidata": "Q200798",
+  "events": [
+    {
+      "type": "born",
+      "date": "1797",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1858-10-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "katsushika-hokusai"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Utagawa Hiroshige (Q200798)",
+      "url": "https://www.wikidata.org/wiki/Q200798",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hiroshige",
+      "url": "https://en.wikipedia.org/wiki/Hiroshige",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

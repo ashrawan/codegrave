@@ -1,0 +1,54 @@
+{
+  "id": "asahi-shimbun",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Asahi Shimbun",
+      "from": "1879"
+    }
+  ],
+  "summary": "Japanese daily newspaper founded in Osaka. It is one of Japan's national papers and, with a morning circulation in the millions, among the largest in the world.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "Asahi Shinbun"
+  ],
+  "wikidata": "Q720503",
+  "events": [
+    {
+      "type": "born",
+      "date": "1879",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tokyo"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Asahi Shimbun (Q720503)",
+      "url": "https://www.wikidata.org/wiki/Q720503",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Asahi Shimbun",
+      "url": "https://en.wikipedia.org/wiki/The_Asahi_Shimbun",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

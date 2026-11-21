@@ -1,0 +1,58 @@
+{
+  "id": "uzbekistan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Uzbekistan",
+      "from": "1991"
+    }
+  ],
+  "summary": "A Central Asian country on the old Silk Road with the cities of Samarkand and Bukhara. It became independent from the Soviet Union in 1991.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Uzbekistan"
+  ],
+  "wikidata": "Q265",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uzbekistan (Q265)",
+      "url": "https://www.wikidata.org/wiki/Q265",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uzbekistan",
+      "url": "https://en.wikipedia.org/wiki/Uzbekistan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

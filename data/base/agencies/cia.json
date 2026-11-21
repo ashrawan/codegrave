@@ -1,0 +1,56 @@
+{
+  "id": "cia",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Central Intelligence Agency",
+      "from": "1947"
+    }
+  ],
+  "summary": "American agency for gathering intelligence abroad and carrying out secret operations, created at the start of the Cold War. It succeeded the wartime OSS and reports to the president.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q37230",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-09-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "dwight-d-eisenhower"
+    },
+    {
+      "type": "made_by",
+      "to": "harry-s-truman"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Central Intelligence Agency (Q37230)",
+      "url": "https://www.wikidata.org/wiki/Q37230",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Central Intelligence Agency",
+      "url": "https://en.wikipedia.org/wiki/Central_Intelligence_Agency",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

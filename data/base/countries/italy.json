@@ -1,0 +1,71 @@
+{
+  "id": "italy",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Italy",
+      "from": "1861"
+    }
+  ],
+  "summary": "The Mediterranean country that was the heart of ancient Rome. Unified as a kingdom in 1861, it became a republic by referendum in 1946, and it holds the Vatican City within its capital.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Italian Republic",
+    "Republic of Italy"
+  ],
+  "wikidata": "Q38",
+  "events": [
+    {
+      "type": "born",
+      "date": "1861-03-17",
+      "precision": "day",
+      "note": "Dated from the proclamation of the Kingdom of Italy on 17 March 1861, which united most of the peninsula."
+    },
+    {
+      "type": "milestone",
+      "date": "1946-06-18",
+      "precision": "day",
+      "label": "Republic",
+      "note": "The monarchy ended after the referendum of 2 June 1946."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "cern"
+    },
+    {
+      "type": "member_of",
+      "to": "international-monetary-fund"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Italy (Q38)",
+      "url": "https://www.wikidata.org/wiki/Q38",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Italy",
+      "url": "https://en.wikipedia.org/wiki/Italy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

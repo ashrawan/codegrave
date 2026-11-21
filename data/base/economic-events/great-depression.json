@@ -1,0 +1,56 @@
+{
+  "id": "great-depression",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Great Depression",
+      "from": "1929"
+    }
+  ],
+  "summary": "The deepest and longest economic downturn of the twentieth century hit countries around the world. Millions lost jobs and homes, and governments responded with new kinds of public spending and social programmes.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q8698",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-10-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    },
+    {
+      "type": "in",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Depression (Q8698)",
+      "url": "https://www.wikidata.org/wiki/Q8698",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Depression",
+      "url": "https://en.wikipedia.org/wiki/Great_Depression",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

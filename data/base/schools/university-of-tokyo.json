@@ -1,0 +1,58 @@
+{
+  "id": "university-of-tokyo",
+  "category": "schools",
+  "names": [
+    {
+      "name": "University of Tokyo",
+      "from": "1877"
+    }
+  ],
+  "summary": "Leading university of Japan, founded in the Meiji era to bring Western science and law to the country. It has produced many of the country's prime ministers, scientists and officials.",
+  "labels": [
+    "education"
+  ],
+  "aliases": [
+    "Todai",
+    "Tōkyō Daigaku",
+    "UTokyo",
+    "The University of Tokyo",
+    "Tokyo University"
+  ],
+  "wikidata": "Q7842",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877-04-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tokyo"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: University of Tokyo (Q7842)",
+      "url": "https://www.wikidata.org/wiki/Q7842",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: University of Tokyo",
+      "url": "https://en.wikipedia.org/wiki/University_of_Tokyo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-kursk",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Kursk",
+      "from": "1943"
+    }
+  ],
+  "summary": "The largest tank battle of the war, where the German army attacked a bulge in the Soviet lines in July 1943. The Soviets held and then counterattacked, and Germany never again had the initiative in the east.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Operation Citadel"
+  ],
+  "wikidata": "Q130861",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943-07-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-08-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Kursk (Q130861)",
+      "url": "https://www.wikidata.org/wiki/Q130861",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Kursk",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Kursk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

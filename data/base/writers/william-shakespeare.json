@@ -1,0 +1,53 @@
+{
+  "id": "william-shakespeare",
+  "category": "writers",
+  "names": [
+    {
+      "name": "William Shakespeare",
+      "from": "1564"
+    }
+  ],
+  "summary": "English playwright and poet from Stratford-upon-Avon who wrote about three dozen plays, including Hamlet, Macbeth and Romeo and Juliet. His work is performed in nearly every language and has shaped English.",
+  "labels": [
+    "literature",
+    "visual-art"
+  ],
+  "wikidata": "Q692",
+  "events": [
+    {
+      "type": "born",
+      "date": "1564-04",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1616-04-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "ovid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: William Shakespeare (Q692)",
+      "url": "https://www.wikidata.org/wiki/Q692",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: William Shakespeare",
+      "url": "https://en.wikipedia.org/wiki/William_Shakespeare",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

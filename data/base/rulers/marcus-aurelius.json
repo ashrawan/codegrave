@@ -1,0 +1,60 @@
+{
+  "id": "marcus-aurelius",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Marcus Aurelius",
+      "from": "0121"
+    }
+  ],
+  "summary": "Roman emperor who spent much of his reign defending the northern frontier. He followed Stoic philosophy, and his private notes, now known as the Meditations, are still widely read.",
+  "labels": [
+    "politics",
+    "philosophy"
+  ],
+  "aliases": [
+    "Marcus Aurelius Verus",
+    "Verissimus",
+    "Antoninus",
+    "Marcus Annius Verus",
+    "Marcus Catilius Severus Annius Verus"
+  ],
+  "wikidata": "Q1430",
+  "events": [
+    {
+      "type": "born",
+      "date": "0121-04-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0180-03-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "antoninus-pius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marcus Aurelius (Q1430)",
+      "url": "https://www.wikidata.org/wiki/Q1430",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marcus Aurelius",
+      "url": "https://en.wikipedia.org/wiki/Marcus_Aurelius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

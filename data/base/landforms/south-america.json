@@ -1,0 +1,51 @@
+{
+  "id": "south-america",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "South America",
+      "from": "-100000000"
+    }
+  ],
+  "summary": "Continent of the Andes and the Amazon basin. It broke away from Africa about 100 million years ago and was isolated for a long time, until a land link to North America formed.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "S. America",
+    "South American continent"
+  ],
+  "wikidata": "Q18",
+  "events": [
+    {
+      "type": "born",
+      "date": "-100000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South America (Q18)",
+      "url": "https://www.wikidata.org/wiki/Q18",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South America",
+      "url": "https://en.wikipedia.org/wiki/South_America",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

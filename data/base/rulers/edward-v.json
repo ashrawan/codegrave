@@ -1,0 +1,57 @@
+{
+  "id": "edward-v",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Edward V",
+      "from": "1470"
+    }
+  ],
+  "summary": "Became king at twelve and was never crowned. He and his brother, the Princes in the Tower, disappeared in 1483.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Edward V of England"
+  ],
+  "wikidata": "Q170470",
+  "events": [
+    {
+      "type": "born",
+      "date": "1470-11-02",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1483",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from April to June 1483; never crowned."
+    },
+    {
+      "type": "ended",
+      "date": "1483",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Edward V of England (Q170470)",
+      "url": "https://www.wikidata.org/wiki/Q170470",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward V",
+      "url": "https://en.wikipedia.org/wiki/Edward_V",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

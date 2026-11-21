@@ -1,0 +1,61 @@
+{
+  "id": "spanish-conquest-of-the-inca-empire",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Spanish conquest of the Inca Empire",
+      "from": "1532"
+    }
+  ],
+  "summary": "The campaign in which Francisco Pizarro and a small Spanish force, with Indigenous allies and helped by disease and an Inca civil war, took control of the Inca Empire. The capture of the emperor Atahualpa at Cajamarca came in 1532.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Conquest of Peru",
+    "Spanish conquest of Tawantinsuyu",
+    "Spanish colonization of Peru"
+  ],
+  "wikidata": "Q636771",
+  "events": [
+    {
+      "type": "born",
+      "date": "1532",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1572-06-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "inca-empire"
+    },
+    {
+      "type": "related",
+      "to": "francisco-pizarro"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish conquest of the Inca Empire (Q636771)",
+      "url": "https://www.wikidata.org/wiki/Q636771",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish conquest of the Inca Empire",
+      "url": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Inca_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

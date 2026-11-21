@@ -1,0 +1,49 @@
+{
+  "id": "edict-of-milan",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Edict of Milan",
+      "from": "0313"
+    }
+  ],
+  "summary": "An agreement between the Roman emperors Constantine and Licinius to let Christians and others worship freely. It ended official persecution of Christians in the empire.",
+  "labels": [
+    "law",
+    "religion",
+    "politics"
+  ],
+  "wikidata": "Q180764",
+  "events": [
+    {
+      "type": "born",
+      "date": "0313-06",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "constantine-the-great"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Edict of Milan (Q180764)",
+      "url": "https://www.wikidata.org/wiki/Q180764",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edict of Milan",
+      "url": "https://en.wikipedia.org/wiki/Edict_of_Milan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

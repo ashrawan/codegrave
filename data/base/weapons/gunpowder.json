@@ -1,0 +1,48 @@
+{
+  "id": "gunpowder",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Gunpowder",
+      "from": "0900"
+    }
+  ],
+  "maker": "Chinese alchemists",
+  "summary": "A mixture of saltpetre, sulphur and charcoal that burns very fast. Chinese alchemists found it while looking for elixirs of life, and it led to fireworks, guns and cannon and changed warfare across the world.",
+  "labels": [
+    "chemistry",
+    "war",
+    "firsts"
+  ],
+  "aliases": [
+    "black powder"
+  ],
+  "wikidata": "Q12861",
+  "events": [
+    {
+      "type": "born",
+      "date": "0900",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: gunpowder (Q12861)",
+      "url": "https://www.wikidata.org/wiki/Q12861",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gunpowder",
+      "url": "https://en.wikipedia.org/wiki/Gunpowder",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

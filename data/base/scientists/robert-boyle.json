@@ -1,0 +1,70 @@
+{
+  "id": "robert-boyle",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Robert Boyle",
+      "from": "1627"
+    }
+  ],
+  "summary": "Irish-born natural philosopher who showed that the pressure and volume of a gas are linked, a rule now called Boyle's law. He argued for testing ideas by experiment and is often counted among the founders of modern chemistry.",
+  "labels": [
+    "chemistry",
+    "physics"
+  ],
+  "aliases": [
+    "The Hon. Robert Boyle",
+    "Hon. Robert Boyle",
+    "Sir Robert Boyle"
+  ],
+  "wikidata": "Q43393",
+  "events": [
+    {
+      "type": "born",
+      "date": "1627-01-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1691-12-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "galileo-galilei"
+    },
+    {
+      "type": "influenced_by",
+      "to": "rene-descartes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "francis-bacon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Robert Boyle (Q43393)",
+      "url": "https://www.wikidata.org/wiki/Q43393",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Boyle",
+      "url": "https://en.wikipedia.org/wiki/Robert_Boyle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

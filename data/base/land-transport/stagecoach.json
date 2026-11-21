@@ -1,0 +1,54 @@
+{
+  "id": "stagecoach",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Stagecoach",
+      "from": "1610"
+    }
+  ],
+  "summary": "A horse-drawn coach that ran a fixed route on a timetable, carrying passengers, mail and parcels between towns. Stagecoaches linked Europe and later the American West before railways and cars replaced them.",
+  "labels": [
+    "transport"
+  ],
+  "aliases": [
+    "stage coach",
+    "stage",
+    "stage carriage",
+    "coach"
+  ],
+  "wikidata": "Q339249",
+  "events": [
+    {
+      "type": "born",
+      "date": "1610",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by railways and motor vehicles",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: stagecoach (Q339249)",
+      "url": "https://www.wikidata.org/wiki/Q339249",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stagecoach",
+      "url": "https://en.wikipedia.org/wiki/Stagecoach",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

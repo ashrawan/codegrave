@@ -1,0 +1,54 @@
+{
+  "id": "the-ashes",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "The Ashes",
+      "from": "1882"
+    }
+  ],
+  "summary": "A cricket series between England and Australia played for a tiny urn. It began after Australia beat England in England in 1882, when a newspaper mocked English cricket as dead and its ashes taken to Australia.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Ashes"
+  ],
+  "wikidata": "Q725151",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Ashes (Q725151)",
+      "url": "https://www.wikidata.org/wiki/Q725151",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Ashes",
+      "url": "https://en.wikipedia.org/wiki/The_Ashes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

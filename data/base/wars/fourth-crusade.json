@@ -1,0 +1,48 @@
+{
+  "id": "fourth-crusade",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Fourth Crusade",
+      "from": "1202"
+    }
+  ],
+  "summary": "A crusade that was meant to reach Egypt but, after debts to Venice and a dispute over the Byzantine throne, ended with the sack of Christian Constantinople in 1204. It left the Byzantine Empire badly weakened.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "wikidata": "Q51656",
+  "events": [
+    {
+      "type": "born",
+      "date": "1202",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1204",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Fourth Crusade (Q51656)",
+      "url": "https://www.wikidata.org/wiki/Q51656",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fourth Crusade",
+      "url": "https://en.wikipedia.org/wiki/Fourth_Crusade",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

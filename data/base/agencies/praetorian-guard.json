@@ -1,0 +1,57 @@
+{
+  "id": "praetorian-guard",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Praetorian Guard",
+      "from": "-0027"
+    }
+  ],
+  "summary": "Soldiers who guarded the Roman emperors and were stationed near Rome. They often made and unmade emperors, and they were disbanded after Constantine defeated their candidate.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Prætorian Guard"
+  ],
+  "wikidata": "Q181733",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0027",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0312",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Disbanded by Constantine after the Battle of the Milvian Bridge",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "roman-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Praetorian Guard (Q181733)",
+      "url": "https://www.wikidata.org/wiki/Q181733",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Praetorian Guard",
+      "url": "https://en.wikipedia.org/wiki/Praetorian_Guard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

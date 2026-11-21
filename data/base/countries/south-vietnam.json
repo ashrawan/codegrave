@@ -1,0 +1,57 @@
+{
+  "id": "south-vietnam",
+  "category": "countries",
+  "names": [
+    {
+      "name": "South Vietnam",
+      "from": "1955"
+    }
+  ],
+  "summary": "The anti-communist state in the southern half of divided Vietnam, with its capital at Saigon. Backed by the United States, it fought the North and the Viet Cong in the Vietnam War.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Republic of Vietnam"
+  ],
+  "wikidata": "Q180573",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-10-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by North Vietnam when Saigon fell",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South Vietnam (Q180573)",
+      "url": "https://www.wikidata.org/wiki/Q180573",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South Vietnam",
+      "url": "https://en.wikipedia.org/wiki/South_Vietnam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

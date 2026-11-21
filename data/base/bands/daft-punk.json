@@ -1,0 +1,53 @@
+{
+  "id": "daft-punk",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Daft Punk",
+      "from": "1993"
+    }
+  ],
+  "summary": "French duo of Thomas Bangalter and Guy-Manuel de Homem-Christo who made house and electronic dance music and appeared in robot helmets. They announced their split in 2021.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q185828",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2021-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Announced their split in 2021",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Daft Punk (Q185828)",
+      "url": "https://www.wikidata.org/wiki/Q185828",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Daft Punk",
+      "url": "https://en.wikipedia.org/wiki/Daft_Punk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

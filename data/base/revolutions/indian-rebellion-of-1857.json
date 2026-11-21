@@ -1,0 +1,76 @@
+{
+  "id": "indian-rebellion-of-1857",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Indian Rebellion of 1857",
+      "from": "1857"
+    }
+  ],
+  "summary": "A large uprising against the British East India Company, starting with soldiers in Meerut and spreading across northern India. After its defeat, Britain took direct control of India from the Company.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Indian Mutiny of 1857",
+    "Indian Mutiny",
+    "India's First War of Independence",
+    "Sepoy Rebellion",
+    "First War of Indian Independence"
+  ],
+  "wikidata": "Q129864",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857-05-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1858-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "company-rule-in-india"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "related",
+      "to": "lakshmibai"
+    },
+    {
+      "type": "related",
+      "to": "british-empire"
+    },
+    {
+      "type": "related",
+      "to": "east-india-company"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Indian Mutiny of 1857 (Q129864)",
+      "url": "https://www.wikidata.org/wiki/Q129864",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indian Rebellion of 1857",
+      "url": "https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

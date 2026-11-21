@@ -1,0 +1,67 @@
+{
+  "id": "jimi-hendrix",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Jimi Hendrix",
+      "from": "1942"
+    }
+  ],
+  "summary": "American guitarist who played left-handed and used feedback and effects in new ways. His career lasted only a few years, including a famous set at Woodstock in 1969, before his death in London at twenty-seven.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "JHX"
+  ],
+  "wikidata": "Q5928",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-11-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-09-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "bob-dylan"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-who"
+    },
+    {
+      "type": "influenced_by",
+      "to": "chuck-berry"
+    },
+    {
+      "type": "related",
+      "to": "monterey-pop-festival"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jimi Hendrix (Q5928)",
+      "url": "https://www.wikidata.org/wiki/Q5928",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jimi Hendrix",
+      "url": "https://en.wikipedia.org/wiki/Jimi_Hendrix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

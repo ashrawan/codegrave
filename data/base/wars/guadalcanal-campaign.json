@@ -1,0 +1,64 @@
+{
+  "id": "guadalcanal-campaign",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Guadalcanal campaign",
+      "from": "1942"
+    }
+  ],
+  "summary": "Battles in 1942 and 1943 between Allied and Japanese forces for the Pacific island of Guadalcanal and its airfield, fought on land, at sea and in the air. The Allied victory ended Japanese advance in the South Pacific.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Operation Watchtower",
+    "Battle of Guadalcanal"
+  ],
+  "wikidata": "Q217145",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-08-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-02-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "empire-of-japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Guadalcanal campaign (Q217145)",
+      "url": "https://www.wikidata.org/wiki/Q217145",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guadalcanal campaign",
+      "url": "https://en.wikipedia.org/wiki/Guadalcanal_campaign",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "antonine-plague",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Antonine Plague",
+      "from": "0165"
+    }
+  ],
+  "summary": "A great epidemic, perhaps smallpox, spread through the Roman Empire after soldiers returned from campaigns in the East. It killed many people in cities and armies and is often linked to the empire's later troubles.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Plague of Galen"
+  ],
+  "wikidata": "Q599141",
+  "events": [
+    {
+      "type": "born",
+      "date": "0165",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0180",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "marcus-aurelius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antonine Plague (Q599141)",
+      "url": "https://www.wikidata.org/wiki/Q599141",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antonine Plague",
+      "url": "https://en.wikipedia.org/wiki/Antonine_Plague",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

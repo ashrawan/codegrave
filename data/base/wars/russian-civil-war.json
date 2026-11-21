@@ -1,0 +1,77 @@
+{
+  "id": "russian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Russian Civil War",
+      "from": "1917"
+    }
+  ],
+  "summary": "A war between the Bolshevik Red Army and many opposing forces, known together as the Whites, after the October Revolution. The Bolsheviks won and founded the Soviet Union in 1922.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "wikidata": "Q79911",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-11-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1922-10-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    },
+    {
+      "type": "related",
+      "to": "vladimir-lenin"
+    },
+    {
+      "type": "related",
+      "to": "leon-trotsky"
+    },
+    {
+      "type": "related",
+      "to": "joseph-stalin"
+    },
+    {
+      "type": "related",
+      "to": "red-army"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russian Civil War (Q79911)",
+      "url": "https://www.wikidata.org/wiki/Q79911",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russian Civil War",
+      "url": "https://en.wikipedia.org/wiki/Russian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

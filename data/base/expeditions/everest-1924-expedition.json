@@ -1,0 +1,52 @@
+{
+  "id": "everest-1924-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "1924 British Mount Everest expedition",
+      "from": "1924"
+    }
+  ],
+  "summary": "A British team tried to climb Mount Everest, and the climbers George Mallory and Andrew Irvine disappeared near the summit. Whether they reached the top is still debated, and Mallory's body was found in 1999.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q918286",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1924-06",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1924 British Mount Everest Expedition (Q918286)",
+      "url": "https://www.wikidata.org/wiki/Q918286",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1924 British Mount Everest expedition",
+      "url": "https://en.wikipedia.org/wiki/1924_British_Mount_Everest_expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

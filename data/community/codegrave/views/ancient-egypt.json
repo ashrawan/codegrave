@@ -1,0 +1,89 @@
+{
+  "id": "ancient-egypt",
+  "name": "Ancient Egypt",
+  "description": "Pharaohs, pyramids and gods along the Nile, from the first kings to Cleopatra.",
+  "category": "places",
+  "labels": [
+    "world-heritage"
+  ],
+  "tags": [
+    "egypt",
+    "pharaohs",
+    "pyramids",
+    "nile",
+    "cleopatra",
+    "tutankhamun",
+    "mummies"
+  ],
+  "entries": [
+    "ancient-egypt",
+    "egyptian-hieroglyphs",
+    "scribe",
+    "papyrus",
+    "ancient-egyptian-religion",
+    "egyptian-calendar",
+    "pyramid-of-djoser",
+    "great-pyramid-of-giza",
+    "great-sphinx-of-giza",
+    "khufu-ship",
+    "karnak",
+    "book-of-the-dead",
+    "hatshepsut",
+    "valley-of-the-kings",
+    "thutmose-iii",
+    "akhenaten",
+    "amarna",
+    "bust-of-nefertiti",
+    "tutankhamun",
+    "ramesses-ii",
+    "battle-of-kadesh",
+    "abu-simbel",
+    "treaty-of-kadesh",
+    "kingdom-of-kush",
+    "alexander-the-great",
+    "alexandria",
+    "ptolemaic-kingdom",
+    "library-of-alexandria",
+    "lighthouse-of-alexandria",
+    "rosetta-stone",
+    "cleopatra-vii",
+    "battle-of-actium"
+  ],
+  "checkpoints": [
+    {
+      "id": "early-egypt",
+      "name": "Early Egypt",
+      "from": -4000,
+      "to": -2600,
+      "note": "Farmers along the Nile River used its yearly flood to grow grain. Their kings united the land, scribes invented hieroglyphs and wrote on papyrus, a calendar was devised, and the Pyramid of Djoser showed what stone could do."
+    },
+    {
+      "id": "the-pyramid-age",
+      "name": "The pyramid age",
+      "from": -2599,
+      "to": -2000,
+      "note": "At Giza the Great Pyramid and the Sphinx were raised for kings who were thought to become gods, and a boat was buried beside Khufu. Later, after a time of division, a new line of kings reunited the land."
+    },
+    {
+      "id": "the-great-pharaohs",
+      "name": "The great pharaohs",
+      "from": -1999,
+      "to": -1071,
+      "note": "Middle Kingdom kings began the temple of Karnak. In the New Kingdom, Egyptian armies reached far beyond the Nile, Hatshepsut and Thutmose III ruled, Akhenaten promoted the sun disc Aten, kings were buried in the Valley of the Kings with the Book of the Dead, and Ramesses II fought at Kadesh and built Abu Simbel."
+    },
+    {
+      "id": "the-late-dynasties",
+      "name": "The late dynasties",
+      "from": -1070,
+      "to": -332,
+      "note": "Egypt's power shrank. The kingdom of Kush to the south grew strong and even ruled Egypt for a time, and in the end Persian rulers took the Nile land before Alexander the Great arrived."
+    },
+    {
+      "id": "the-ptolemies-and-cleopatra",
+      "name": "The Ptolemies and Cleopatra",
+      "from": -331,
+      "to": -30,
+      "note": "Alexander founded Alexandria, and his general's family ruled as the Ptolemaic kingdom. They built the Library and the Lighthouse, put up the Rosetta Stone, and ended with Cleopatra, beaten at Actium by Rome."
+    }
+  ]
+}

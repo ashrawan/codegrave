@@ -1,0 +1,52 @@
+{
+  "id": "empire-state-building",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Empire State Building",
+      "from": "1931"
+    }
+  ],
+  "summary": "Art Deco skyscraper in Manhattan, finished in just over a year. At 381 metres it was the tallest building in the world for nearly forty years, until the World Trade Center's towers passed it.",
+  "labels": [
+    "architecture",
+    "record-holders"
+  ],
+  "aliases": [
+    "350 5th Avenue",
+    "350 Fifth Avenue"
+  ],
+  "wikidata": "Q9188",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-05-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Empire State Building (Q9188)",
+      "url": "https://www.wikidata.org/wiki/Q9188",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Empire State Building",
+      "url": "https://en.wikipedia.org/wiki/Empire_State_Building",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

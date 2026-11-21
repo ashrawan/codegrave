@@ -1,0 +1,54 @@
+{
+  "id": "brooklyn-dodgers",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Brooklyn Dodgers",
+      "from": "1884"
+    }
+  ],
+  "summary": "American baseball team from Brooklyn, New York, which in 1947 signed Jackie Robinson, the first Black player in the major leagues of the modern era. The team moved to Los Angeles.",
+  "labels": [
+    "sport",
+    "human-rights"
+  ],
+  "wikidata": "Q5869184",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1957",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Moved to Los Angeles",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brooklyn Dodgers (Q5869184)",
+      "url": "https://www.wikidata.org/wiki/Q5869184",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brooklyn Dodgers",
+      "url": "https://en.wikipedia.org/wiki/Brooklyn_Dodgers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,68 @@
+{
+  "id": "charles-darwin",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Charles Darwin",
+      "from": "1809"
+    }
+  ],
+  "summary": "English naturalist whose voyage on HMS Beagle and decades of study led to the theory of evolution by natural selection, published in On the Origin of Species in 1859. It changed how people understand living things.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q1035",
+  "events": [
+    {
+      "type": "born",
+      "date": "1809-02-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1882-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "david-hume"
+    },
+    {
+      "type": "influenced_by",
+      "to": "johann-wolfgang-von-goethe"
+    },
+    {
+      "type": "influenced_by",
+      "to": "alexander-von-humboldt"
+    },
+    {
+      "type": "influenced_by",
+      "to": "charles-lyell"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles Darwin (Q1035)",
+      "url": "https://www.wikidata.org/wiki/Q1035",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles Darwin",
+      "url": "https://en.wikipedia.org/wiki/Charles_Darwin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

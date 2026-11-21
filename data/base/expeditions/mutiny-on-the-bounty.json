@@ -1,0 +1,52 @@
+{
+  "id": "mutiny-on-the-bounty",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Mutiny on the Bounty",
+      "from": "1789"
+    }
+  ],
+  "summary": "Part of the crew of the British ship Bounty, on a mission to carry breadfruit plants from Tahiti, seized the ship from Captain Bligh. Bligh sailed a small boat thousands of miles to safety.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q749811",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-04-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1789-04-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pacific-ocean"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mutiny on the Bounty (Q749811)",
+      "url": "https://www.wikidata.org/wiki/Q749811",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mutiny on the Bounty",
+      "url": "https://en.wikipedia.org/wiki/Mutiny_on_the_Bounty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

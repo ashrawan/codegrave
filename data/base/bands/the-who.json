@@ -1,0 +1,71 @@
+{
+  "id": "the-who",
+  "category": "bands",
+  "names": [
+    {
+      "name": "The Who",
+      "from": "1964"
+    }
+  ],
+  "summary": "English rock band known for loud live shows and for the rock opera Tommy. Its guitarist Pete Townshend wrote most of its songs, and its members were known for smashing instruments on stage.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "The Horrible 'oo",
+    "The 'oo"
+  ],
+  "wikidata": "Q93346",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-02",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "influenced_by",
+      "to": "james-brown"
+    },
+    {
+      "type": "influenced_by",
+      "to": "jimi-hendrix"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ludwig-van-beethoven"
+    },
+    {
+      "type": "related",
+      "to": "monterey-pop-festival"
+    },
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Who (Q93346)",
+      "url": "https://www.wikidata.org/wiki/Q93346",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Who",
+      "url": "https://en.wikipedia.org/wiki/The_Who",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

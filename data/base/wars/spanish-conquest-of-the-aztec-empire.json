@@ -1,0 +1,53 @@
+{
+  "id": "spanish-conquest-of-the-aztec-empire",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Spanish conquest of the Aztec Empire",
+      "from": "1519"
+    }
+  ],
+  "summary": "Hernán Cortés and Spanish soldiers, with many Indigenous allies and helped by disease, overthrew the Aztec Empire and took Tenochtitlan. The conquest began Spanish rule in Mexico.",
+  "labels": [
+    "war",
+    "exploration"
+  ],
+  "wikidata": "Q828435",
+  "events": [
+    {
+      "type": "born",
+      "date": "1519-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1521-08-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "aztec-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish conquest of the Aztec Empire (Q828435)",
+      "url": "https://www.wikidata.org/wiki/Q828435",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish conquest of the Aztec Empire",
+      "url": "https://en.wikipedia.org/wiki/Spanish_conquest_of_the_Aztec_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

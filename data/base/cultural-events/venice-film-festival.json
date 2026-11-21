@@ -1,0 +1,54 @@
+{
+  "id": "venice-film-festival",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Venice Film Festival",
+      "from": "1932"
+    }
+  ],
+  "summary": "The oldest film festival in the world, held on the Lido in Venice each late summer. Its highest award is the Golden Lion, and it is often a first stop in the awards season.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Venice International Film Festival"
+  ],
+  "wikidata": "Q49024",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venice"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Venice Film Festival (Q49024)",
+      "url": "https://www.wikidata.org/wiki/Q49024",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venice Film Festival",
+      "url": "https://en.wikipedia.org/wiki/Venice_Film_Festival",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

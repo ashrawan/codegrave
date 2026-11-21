@@ -1,0 +1,60 @@
+{
+  "id": "ashoka",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Ashoka",
+      "from": "-0304"
+    }
+  ],
+  "summary": "Emperor of the Maurya dynasty who ruled most of the Indian subcontinent. After a bloody war in Kalinga he turned toward Buddhism and spread his ideas of tolerance on pillars across his lands.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Ashok",
+    "Ashoka the Great",
+    "Ashoka Maurya",
+    "Samrat Ashok",
+    "Chakravarty Samrat Ashok"
+  ],
+  "wikidata": "Q8589",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0304",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0232",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "gautama-buddha"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ashoka (Q8589)",
+      "url": "https://www.wikidata.org/wiki/Q8589",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ashoka",
+      "url": "https://en.wikipedia.org/wiki/Ashoka",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

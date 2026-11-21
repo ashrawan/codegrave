@@ -1,0 +1,56 @@
+{
+  "id": "old-english",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Old English",
+      "from": "0450"
+    }
+  ],
+  "summary": "The language of the Anglo-Saxons in England, in which the poem Beowulf was written. It was heavily changed by Norse and then Norman French, and became Middle English after 1066.",
+  "labels": [
+    "language",
+    "literature"
+  ],
+  "aliases": [
+    "Anglo-Saxon",
+    "ang",
+    "Ænglisc",
+    "Englisc",
+    "Anglisc"
+  ],
+  "wikidata": "Q42365",
+  "events": [
+    {
+      "type": "born",
+      "date": "0450",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1150",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Changed into Middle English after the Norman Conquest",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Old English (Q42365)",
+      "url": "https://www.wikidata.org/wiki/Q42365",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Old English",
+      "url": "https://en.wikipedia.org/wiki/Old_English",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

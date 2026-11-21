@@ -1,0 +1,54 @@
+{
+  "id": "apl",
+  "category": "languages",
+  "names": [
+    {
+      "name": "APL",
+      "from": "1966"
+    }
+  ],
+  "summary": "Programming language by Kenneth Iverson that works on whole arrays of numbers using special symbols. It is very short to write and is still used in finance.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "APL language",
+    "A Programming Language",
+    "Array Processing Language",
+    "APL programming language family",
+    "X3J10"
+  ],
+  "wikidata": "Q296187",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: APL (Q296187)",
+      "url": "https://www.wikidata.org/wiki/Q296187",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: APL (programming language)",
+      "url": "https://en.wikipedia.org/wiki/APL_(programming_language)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,62 @@
+{
+  "id": "university-of-paris",
+  "category": "schools",
+  "names": [
+    {
+      "name": "University of Paris",
+      "from": "1150"
+    }
+  ],
+  "summary": "Medieval university in Paris, a leading school of theology and philosophy in Europe. Its Latin Quarter takes its name from the language students used. It was closed during the French Revolution.",
+  "labels": [
+    "education",
+    "religion"
+  ],
+  "aliases": [
+    "Sorbonne",
+    "University of Paris (1896-1970)"
+  ],
+  "wikidata": "Q209842",
+  "events": [
+    {
+      "type": "born",
+      "date": "1150",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1793",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abolished during the French Revolution",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paris"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: University of Paris (Q209842)",
+      "url": "https://www.wikidata.org/wiki/Q209842",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: University of Paris",
+      "url": "https://en.wikipedia.org/wiki/University_of_Paris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

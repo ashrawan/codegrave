@@ -1,0 +1,65 @@
+{
+  "id": "chinese-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Chinese Civil War",
+      "from": "1927"
+    }
+  ],
+  "summary": "A long conflict between the Nationalist government and the Chinese Communist Party, interrupted by the war with Japan. The Communists won in 1949 and the Nationalists withdrew to Taiwan.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "wikidata": "Q179975",
+  "events": [
+    {
+      "type": "born",
+      "date": "1927-08-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1950-05-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    },
+    {
+      "type": "related",
+      "to": "kuomintang"
+    },
+    {
+      "type": "related",
+      "to": "chinese-communist-party"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chinese Civil War (Q179975)",
+      "url": "https://www.wikidata.org/wiki/Q179975",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chinese Civil War",
+      "url": "https://en.wikipedia.org/wiki/Chinese_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

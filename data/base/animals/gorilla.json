@@ -1,0 +1,45 @@
+{
+  "id": "gorilla",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Gorilla",
+      "from": "-9000000"
+    }
+  ],
+  "summary": "Largest living primate, a plant-eating great ape of central African forests. Genetic estimates place the split of its line from the line leading to humans and chimpanzees about nine million years ago.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "gorilla genus"
+  ],
+  "wikidata": "Q36611",
+  "events": [
+    {
+      "type": "born",
+      "date": "-9000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Gorilla (Q36611)",
+      "url": "https://www.wikidata.org/wiki/Q36611",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gorilla",
+      "url": "https://en.wikipedia.org/wiki/Gorilla",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

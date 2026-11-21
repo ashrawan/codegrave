@@ -1,0 +1,65 @@
+{
+  "id": "led-zeppelin",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Led Zeppelin",
+      "from": "1968"
+    }
+  ],
+  "summary": "English rock band made up of Jimmy Page, Robert Plant, John Paul Jones and John Bonham. Their heavy blues-based sound was among the foundations of hard rock and heavy metal.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q2331",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1980-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended after the death of drummer John Bonham",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "the-lord-of-the-rings"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-grapes-of-wrath"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-rolling-stones"
+    },
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Led Zeppelin (Q2331)",
+      "url": "https://www.wikidata.org/wiki/Q2331",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Led Zeppelin",
+      "url": "https://en.wikipedia.org/wiki/Led_Zeppelin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

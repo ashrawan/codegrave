@@ -1,0 +1,59 @@
+{
+  "id": "heian-period",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Heian period",
+      "from": "0794"
+    }
+  ],
+  "summary": "An era of Japanese history with its capital at Heian-kyō, now Kyoto. Court culture produced works such as The Tale of Genji, and the era ended as warrior clans gained power.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Heian jidai",
+    "Heian era",
+    "Heian Culture",
+    "Heian Style",
+    "Heian Japan"
+  ],
+  "wikidata": "Q193292",
+  "events": [
+    {
+      "type": "born",
+      "date": "0794",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1185",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Heian period (Q193292)",
+      "url": "https://www.wikidata.org/wiki/Q193292",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Heian period",
+      "url": "https://en.wikipedia.org/wiki/Heian_period",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

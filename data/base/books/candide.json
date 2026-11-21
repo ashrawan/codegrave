@@ -1,0 +1,62 @@
+{
+  "id": "candide",
+  "category": "books",
+  "names": [
+    {
+      "name": "Candide",
+      "from": "1759"
+    }
+  ],
+  "summary": "Short satirical tale by Voltaire in which a young man faces war, earthquake and betrayal while his tutor insists this is the best of all possible worlds. It was banned in several places on publication.",
+  "labels": [
+    "literature",
+    "banned"
+  ],
+  "aliases": [
+    "Candide: or, All for the Best",
+    "Candide: or, The Optimist",
+    "Candide: Optimism",
+    "Voltaire, 1694-1778. Candide"
+  ],
+  "wikidata": "Q215894",
+  "events": [
+    {
+      "type": "born",
+      "date": "1759",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "voltaire"
+    },
+    {
+      "type": "part_of",
+      "to": "index-librorum-prohibitorum"
+    },
+    {
+      "type": "about",
+      "to": "lisbon-earthquake-1755"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Candide (Q215894)",
+      "url": "https://www.wikidata.org/wiki/Q215894",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Candide",
+      "url": "https://en.wikipedia.org/wiki/Candide",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

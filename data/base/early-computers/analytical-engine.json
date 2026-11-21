@@ -1,0 +1,58 @@
+{
+  "id": "analytical-engine",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "Analytical Engine",
+      "from": "1837"
+    }
+  ],
+  "maker": "Charles Babbage",
+  "summary": "Design for a general-purpose mechanical computer by Charles Babbage, with a store, a mill for calculations and punched cards for programs. It was never finished, but its plan anticipated modern computers.",
+  "labels": [
+    "computing",
+    "firsts"
+  ],
+  "aliases": [
+    "Babbage engine"
+  ],
+  "wikidata": "Q485257",
+  "events": [
+    {
+      "type": "born",
+      "date": "1837",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1871",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Never finished; Babbage died with it still unbuilt",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "charles-babbage"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: analytical engine (Q485257)",
+      "url": "https://www.wikidata.org/wiki/Q485257",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Analytical engine",
+      "url": "https://en.wikipedia.org/wiki/Analytical_engine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

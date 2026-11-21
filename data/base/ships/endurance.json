@@ -1,0 +1,49 @@
+{
+  "id": "endurance",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Endurance",
+      "from": "1912"
+    }
+  ],
+  "summary": "The ship of Ernest Shackleton's Antarctic expedition. She was trapped and crushed by pack ice in 1915, yet all the crew survived. Her wreck was found in the Weddell Sea in 2022.",
+  "labels": [
+    "exploration",
+    "lost"
+  ],
+  "wikidata": "Q911858",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-12-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1915",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Crushed by pack ice in the Weddell Sea",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Endurance (Q911858)",
+      "url": "https://www.wikidata.org/wiki/Q911858",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Endurance (1912 ship)",
+      "url": "https://en.wikipedia.org/wiki/Endurance_(1912_ship)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

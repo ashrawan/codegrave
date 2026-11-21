@@ -1,0 +1,53 @@
+{
+  "id": "morse-code",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Morse code",
+      "from": "1837"
+    }
+  ],
+  "maker": "Samuel Morse and Alfred Vail",
+  "summary": "A code that writes letters as short and long signals. It was made for the telegraph and later used on radio, by ships, pilots and amateurs, and it can be sent with lamps, flags or taps.",
+  "labels": [
+    "media",
+    "language"
+  ],
+  "wikidata": "Q79897",
+  "events": [
+    {
+      "type": "born",
+      "date": "1837",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "samuel-morse"
+    },
+    {
+      "type": "in",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Morse code (Q79897)",
+      "url": "https://www.wikidata.org/wiki/Q79897",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Morse code",
+      "url": "https://en.wikipedia.org/wiki/Morse_code",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

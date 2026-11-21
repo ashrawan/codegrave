@@ -1,0 +1,57 @@
+{
+  "id": "gran-colombia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Gran Colombia",
+      "from": "1819"
+    }
+  ],
+  "summary": "Republic created during the wars of independence from Spain, joining the lands of today's Colombia, Venezuela, Ecuador and Panama. Simón Bolívar led it, but regional rivalries broke it apart within about a decade.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Great Colombia"
+  ],
+  "wikidata": "Q199821",
+  "events": [
+    {
+      "type": "born",
+      "date": "1819",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1831",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved into separate states over regional and political disputes",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gran Colombia (Q199821)",
+      "url": "https://www.wikidata.org/wiki/Q199821",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gran Colombia",
+      "url": "https://en.wikipedia.org/wiki/Gran_Colombia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

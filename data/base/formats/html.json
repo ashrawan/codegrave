@@ -1,0 +1,51 @@
+{
+  "id": "html",
+  "category": "formats",
+  "names": [
+    {
+      "name": "HTML",
+      "from": "1989"
+    }
+  ],
+  "summary": "HyperText Markup Language, the code that describes the headings, links and pictures of a web page. Tim Berners-Lee wrote the first version, and every browser reads it.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q8811",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "tim-berners-lee"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: HTML (Q8811)",
+      "url": "https://www.wikidata.org/wiki/Q8811",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HTML",
+      "url": "https://en.wikipedia.org/wiki/HTML",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "egyptian-calendar",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Ancient Egyptian calendar",
+      "from": "-2700"
+    }
+  ],
+  "summary": "The calendar of ancient Egypt, with twelve months of thirty days plus five extra days, based on the yearly flooding of the Nile and the rising of the star Sirius. It was among the first solar calendars.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Egyptian calendar"
+  ],
+  "wikidata": "Q254101",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2700",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0026",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Alexandrian calendar with a leap day under Augustus",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Egyptian calendar (Q254101)",
+      "url": "https://www.wikidata.org/wiki/Q254101",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ancient Egyptian calendar",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Egyptian_calendar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

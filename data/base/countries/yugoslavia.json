@@ -1,0 +1,54 @@
+{
+  "id": "yugoslavia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Yugoslavia",
+      "from": "1918"
+    }
+  ],
+  "summary": "The South Slav state formed in 1918 and later a socialist federation under Josip Broz Tito, made of six republics. Its break-up in the 1990s was followed by a series of wars.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "wikidata": "Q36704",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-12-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broke apart as its republics declared independence in 1991 and 1992",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yugoslavia (Q36704)",
+      "url": "https://www.wikidata.org/wiki/Q36704",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yugoslavia",
+      "url": "https://en.wikipedia.org/wiki/Yugoslavia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

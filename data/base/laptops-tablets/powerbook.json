@@ -1,0 +1,58 @@
+{
+  "id": "powerbook",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "PowerBook",
+      "from": "1991"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's series of laptops, whose first models put the keyboard at the back with room for the wrists and a trackball in front. The design was copied by other makers. It was replaced by the MacBook Pro.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Macintosh PowerBook",
+    "Apple PowerBook"
+  ],
+  "wikidata": "Q621317",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2006",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the MacBook Pro when Apple moved to Intel chips",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: PowerBook (Q621317)",
+      "url": "https://www.wikidata.org/wiki/Q621317",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PowerBook",
+      "url": "https://en.wikipedia.org/wiki/PowerBook",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "church-of-england",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Church of England",
+      "from": "1534"
+    }
+  ],
+  "summary": "The established church of England, which broke away from the authority of the Pope under Henry VIII. It is the mother church of the worldwide Anglican Communion.",
+  "labels": [
+    "religion",
+    "politics"
+  ],
+  "aliases": [
+    "C of E",
+    "The Church of England"
+  ],
+  "wikidata": "Q82708",
+  "events": [
+    {
+      "type": "born",
+      "date": "1534",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "henry-viii"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Church of England (Q82708)",
+      "url": "https://www.wikidata.org/wiki/Q82708",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Church of England",
+      "url": "https://en.wikipedia.org/wiki/Church_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

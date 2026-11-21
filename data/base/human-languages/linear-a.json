@@ -1,0 +1,53 @@
+{
+  "id": "linear-a",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Linear A",
+      "from": "-1800"
+    }
+  ],
+  "summary": "A script used by the Minoans of Crete on tablets and objects. It has never been deciphered, and the language it recorded is unknown, though some signs were borrowed for Linear B.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Linear A Script",
+    "Lina"
+  ],
+  "wikidata": "Q30972",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1450",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Minoan palaces fell and the Mycenaeans replaced it with Linear B",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Linear A (Q30972)",
+      "url": "https://www.wikidata.org/wiki/Q30972",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Linear A",
+      "url": "https://en.wikipedia.org/wiki/Linear_A",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

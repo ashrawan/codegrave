@@ -1,0 +1,54 @@
+{
+  "id": "brahmi-script",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Brahmi script",
+      "from": "-0300"
+    }
+  ],
+  "summary": "An ancient script of India, best known from the edicts of the emperor Ashoka. Almost all later scripts of South and Southeast Asia descend from it, but readers lost the ability to read it until it was deciphered in the 1830s.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Brahmi",
+    "Brah",
+    "Brahmi Lipi"
+  ],
+  "wikidata": "Q185083",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Evolved into the many regional scripts of South and Southeast Asia",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Brahmi (Q185083)",
+      "url": "https://www.wikidata.org/wiki/Q185083",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brahmi script",
+      "url": "https://en.wikipedia.org/wiki/Brahmi_script",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

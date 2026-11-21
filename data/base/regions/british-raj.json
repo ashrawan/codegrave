@@ -1,0 +1,69 @@
+{
+  "id": "british-raj",
+  "category": "regions",
+  "names": [
+    {
+      "name": "British Raj",
+      "from": "1858"
+    }
+  ],
+  "summary": "British rule over the Indian subcontinent from 1858, when the Crown took over from the East India Company. It built railways and bureaucracy but also faced famine and a growing independence movement.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Indian Empire",
+    "Crown rule in India",
+    "Direct rule in India",
+    "British Indian Empire",
+    "the Raj"
+  ],
+  "wikidata": "Q129286",
+  "events": [
+    {
+      "type": "born",
+      "date": "1858",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1947-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended with independence and the partition into India and Pakistan",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "india"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "pakistan"
+    },
+    {
+      "type": "part_of",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Raj (Q129286)",
+      "url": "https://www.wikidata.org/wiki/Q129286",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Raj",
+      "url": "https://en.wikipedia.org/wiki/British_Raj",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

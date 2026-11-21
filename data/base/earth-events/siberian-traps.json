@@ -1,0 +1,56 @@
+{
+  "id": "siberian-traps",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Siberian Traps",
+      "from": "-252000000"
+    }
+  ],
+  "summary": "A huge outpouring of lava in what is now Siberia, lasting hundreds of thousands of years around 252 million years ago. Its gases, and the coal it burned, are the leading explanation for the Permian mass extinction.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q58808",
+  "events": [
+    {
+      "type": "born",
+      "date": "-252000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-251000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siberian Traps (Q58808)",
+      "url": "https://www.wikidata.org/wiki/Q58808",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siberian Traps",
+      "url": "https://en.wikipedia.org/wiki/Siberian_Traps",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

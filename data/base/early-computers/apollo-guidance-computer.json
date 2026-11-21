@@ -1,0 +1,59 @@
+{
+  "id": "apollo-guidance-computer",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "Apollo Guidance Computer",
+      "from": "1966"
+    }
+  ],
+  "maker": "MIT Instrumentation Laboratory",
+  "summary": "Small computer carried in the Apollo command and lunar modules to guide them to the Moon and back. It was one of the first to use integrated circuits and had far less memory than a modern phone.",
+  "labels": [
+    "computing",
+    "space-race",
+    "engineering"
+  ],
+  "aliases": [
+    "AGC"
+  ],
+  "wikidata": "Q138875",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1975",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Last flown on the Apollo-Soyuz mission",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "margaret-hamilton"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apollo Guidance Computer (Q138875)",
+      "url": "https://www.wikidata.org/wiki/Q138875",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apollo Guidance Computer",
+      "url": "https://en.wikipedia.org/wiki/Apollo_Guidance_Computer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

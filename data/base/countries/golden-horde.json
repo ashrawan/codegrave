@@ -1,0 +1,60 @@
+{
+  "id": "golden-horde",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Golden Horde",
+      "from": "1243"
+    }
+  ],
+  "summary": "The western part of the Mongol Empire, ruling the steppes north of the Black and Caspian seas. Russian princes paid it tribute for generations, and it left Tatar peoples in the region today.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Great Horde",
+    "Ulug Ulus",
+    "Kipchak Khanate",
+    "Ulus of Jochi"
+  ],
+  "wikidata": "Q79965",
+  "events": [
+    {
+      "type": "born",
+      "date": "1243",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1502-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broke into smaller khanates and was ended by the Crimean Khanate",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "mongol-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Golden Horde (Q79965)",
+      "url": "https://www.wikidata.org/wiki/Q79965",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Golden Horde",
+      "url": "https://en.wikipedia.org/wiki/Golden_Horde",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

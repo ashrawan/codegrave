@@ -1,0 +1,61 @@
+{
+  "id": "dissolution-of-the-soviet-union",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Dissolution of the Soviet Union",
+      "from": "1991"
+    }
+  ],
+  "summary": "After a failed coup in August 1991 and declarations of independence by its republics, the Soviet Union ended on 26 December 1991. Fifteen new countries took its place.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "fall of the Soviet Union",
+    "collapse of the Soviet Union",
+    "collapse of the USSR"
+  ],
+  "wikidata": "Q5167679",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-12-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-12-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "revolutions-of-1989"
+    },
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: dissolution of the Soviet Union (Q5167679)",
+      "url": "https://www.wikidata.org/wiki/Q5167679",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dissolution of the Soviet Union",
+      "url": "https://en.wikipedia.org/wiki/Dissolution_of_the_Soviet_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

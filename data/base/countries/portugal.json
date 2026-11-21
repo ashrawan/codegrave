@@ -1,0 +1,67 @@
+{
+  "id": "portugal",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Portugal",
+      "from": "1143"
+    }
+  ],
+  "summary": "A country on the western edge of Europe, one of the oldest nation-states, which gained recognition as a kingdom in the twelfth century. It led the Age of Discovery and became a republic in 1910.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Portuguese Republic",
+    "POR"
+  ],
+  "wikidata": "Q45",
+  "events": [
+    {
+      "type": "born",
+      "date": "1143-10-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Portugal (Q45)",
+      "url": "https://www.wikidata.org/wiki/Q45",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portugal",
+      "url": "https://en.wikipedia.org/wiki/Portugal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

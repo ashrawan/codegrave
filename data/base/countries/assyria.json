@@ -1,0 +1,53 @@
+{
+  "id": "assyria",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Assyria",
+      "from": "-2025"
+    }
+  ],
+  "summary": "A Mesopotamian kingdom on the upper Tigris that grew into the largest empire of its age, with a feared army and a great library at Nineveh. Its kings deported conquered peoples and ruled from Nimrud and Nineveh.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Assyrian Empire",
+    "Early Period"
+  ],
+  "wikidata": "Q41137",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2025",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0609",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by a Babylonian and Median alliance",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Assyrian Empire (Q41137)",
+      "url": "https://www.wikidata.org/wiki/Q41137",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Assyria",
+      "url": "https://en.wikipedia.org/wiki/Assyria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

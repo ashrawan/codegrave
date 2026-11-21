@@ -1,0 +1,51 @@
+{
+  "id": "the-guardian",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "The Guardian",
+      "from": "1821"
+    }
+  ],
+  "summary": "British newspaper founded in Manchester as the Manchester Guardian and renamed in 1959. It is known for liberal-leaning reporting and a large online readership around the world.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q11148",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821-05-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Guardian (Q11148)",
+      "url": "https://www.wikidata.org/wiki/Q11148",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Guardian",
+      "url": "https://en.wikipedia.org/wiki/The_Guardian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

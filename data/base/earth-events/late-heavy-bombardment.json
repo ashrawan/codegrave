@@ -1,0 +1,51 @@
+{
+  "id": "late-heavy-bombardment",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Late Heavy Bombardment",
+      "from": "-4100000000"
+    }
+  ],
+  "summary": "A proposed time, around 4.1 to 3.8 billion years ago, when the inner solar system was hit by an unusually large number of asteroids and comets. Evidence comes from Moon rocks, and scientists still debate how intense it was.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "lunar cataclysm",
+    "LHB"
+  ],
+  "wikidata": "Q591571",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4100000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-3800000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Late Heavy Bombardment (Q591571)",
+      "url": "https://www.wikidata.org/wiki/Q591571",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Late Heavy Bombardment",
+      "url": "https://en.wikipedia.org/wiki/Late_Heavy_Bombardment",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

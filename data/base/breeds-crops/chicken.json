@@ -1,0 +1,47 @@
+{
+  "id": "chicken",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Chicken",
+      "from": "-6000"
+    }
+  ],
+  "summary": "The most common farm bird, bred from the red junglefowl of Southeast Asia. Chickens spread across Asia and then the world, and are kept for eggs and meat.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "Gallus gallus domesticus",
+    "chickens",
+    "vistas"
+  ],
+  "wikidata": "Q780",
+  "events": [
+    {
+      "type": "born",
+      "date": "-6000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: chicken (Q780)",
+      "url": "https://www.wikidata.org/wiki/Q780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chicken",
+      "url": "https://en.wikipedia.org/wiki/Chicken",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

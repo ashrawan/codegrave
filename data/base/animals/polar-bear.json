@@ -1,0 +1,48 @@
+{
+  "id": "polar-bear",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Polar bear",
+      "from": "-500000"
+    }
+  ],
+  "summary": "Large white bear of the Arctic that hunts seals on sea ice. DNA studies suggest it split from brown bears roughly half a million years ago, though published estimates vary widely.",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "aliases": [
+    "Ursus maritimus",
+    "ice bear",
+    "white bear"
+  ],
+  "wikidata": "Q33609",
+  "events": [
+    {
+      "type": "born",
+      "date": "-500000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ursus maritimus (Q33609)",
+      "url": "https://www.wikidata.org/wiki/Q33609",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Polar bear",
+      "url": "https://en.wikipedia.org/wiki/Polar_bear",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

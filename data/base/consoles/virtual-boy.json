@@ -1,0 +1,60 @@
+{
+  "id": "virtual-boy",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Virtual Boy",
+      "from": "1995"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's tabletop console that showed red-and-black 3D pictures through a visor. It was uncomfortable to use, had few games and sold badly, and was taken off the market within a year.",
+  "labels": [
+    "games",
+    "failures"
+  ],
+  "aliases": [
+    "Nintendo Virtual Boy",
+    "VR32",
+    "VR 32"
+  ],
+  "wikidata": "Q164651",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-07-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-03-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Very poor sales and discomfort for players",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nintendo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Virtual Boy (Q164651)",
+      "url": "https://www.wikidata.org/wiki/Q164651",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Virtual Boy",
+      "url": "https://en.wikipedia.org/wiki/Virtual_Boy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

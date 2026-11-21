@@ -1,0 +1,52 @@
+{
+  "id": "duelling",
+  "category": "customs",
+  "names": [
+    {
+      "name": "Duelling",
+      "from": "1400"
+    }
+  ],
+  "summary": "A formal fight between two people, with matching weapons, to settle a matter of honour. It was common among European gentlemen and officers until laws and changing opinion ended it.",
+  "labels": [
+    "law",
+    "war"
+  ],
+  "aliases": [
+    "dueling"
+  ],
+  "wikidata": "Q191503",
+  "events": [
+    {
+      "type": "born",
+      "date": "1400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Outlawed and abandoned as public opinion and courts turned against it",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: duel (Q191503)",
+      "url": "https://www.wikidata.org/wiki/Q191503",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Duel",
+      "url": "https://en.wikipedia.org/wiki/Duel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "janissaries",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Janissaries",
+      "from": "1363"
+    }
+  ],
+  "summary": "Elite infantry of the Ottoman sultans, first recruited from Christian boys taken into service. They became a powerful force in politics before the sultan destroyed them.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "yanissary",
+    "yanissaries",
+    "janizaries",
+    "janizary"
+  ],
+  "wikidata": "Q130263",
+  "events": [
+    {
+      "type": "born",
+      "date": "1363",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1826",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by Sultan Mahmud II after a revolt",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ottoman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: janissary (Q130263)",
+      "url": "https://www.wikidata.org/wiki/Q130263",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Janissary",
+      "url": "https://en.wikipedia.org/wiki/Janissary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

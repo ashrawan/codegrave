@@ -1,0 +1,53 @@
+{
+  "id": "guernica-picasso",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Guernica",
+      "from": "1937"
+    }
+  ],
+  "maker": "Pablo Picasso",
+  "summary": "Huge black, white and grey painting by Pablo Picasso, made after the bombing of a Basque town during the Spanish Civil War. It shows people and animals in agony and is widely seen as a statement against war. It is now in Madrid.",
+  "labels": [
+    "visual-art",
+    "war"
+  ],
+  "wikidata": "Q175036",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "pablo-picasso"
+    },
+    {
+      "type": "about",
+      "to": "spanish-civil-war"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Guernica (Q175036)",
+      "url": "https://www.wikidata.org/wiki/Q175036",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guernica (Picasso)",
+      "url": "https://en.wikipedia.org/wiki/Guernica_(Picasso)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

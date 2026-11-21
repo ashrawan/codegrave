@@ -1,0 +1,57 @@
+{
+  "id": "live-aid",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Live Aid",
+      "from": "1985"
+    }
+  ],
+  "summary": "Two linked concerts, in London and Philadelphia, watched around the world on television, to raise money for famine relief in Ethiopia. Many of the top musicians of the day played in a single day.",
+  "labels": [
+    "music",
+    "media"
+  ],
+  "wikidata": "Q193740",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-07-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "old-wembley-stadium"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Live Aid (Q193740)",
+      "url": "https://www.wikidata.org/wiki/Q193740",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Live Aid",
+      "url": "https://en.wikipedia.org/wiki/Live_Aid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

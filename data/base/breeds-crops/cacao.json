@@ -1,0 +1,54 @@
+{
+  "id": "cacao",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Cacao",
+      "from": "-3300"
+    }
+  ],
+  "summary": "Tree whose seeds are made into cocoa and chocolate. Traces of its use in Ecuador date to about 3300 BCE, the earliest known sign of its cultivation, and it later became important in Mesoamerica.",
+  "labels": [
+    "food",
+    "biology"
+  ],
+  "aliases": [
+    "cacao tree",
+    "cacao species",
+    "cocoa plant",
+    "chocolate tree"
+  ],
+  "wikidata": "Q42385",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "christopher-columbus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Theobroma cacao (Q42385)",
+      "url": "https://www.wikidata.org/wiki/Q42385",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Theobroma cacao",
+      "url": "https://en.wikipedia.org/wiki/Theobroma_cacao",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

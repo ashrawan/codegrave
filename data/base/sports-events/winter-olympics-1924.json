@@ -1,0 +1,57 @@
+{
+  "id": "winter-olympics-1924",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1924 Winter Olympics",
+      "from": "1924"
+    }
+  ],
+  "summary": "Held at Chamonix in the French Alps, these were later recognised as the first Winter Olympic Games. They offered skiing, skating, ice hockey and the bobsleigh to athletes from a small number of countries.",
+  "labels": [
+    "sport",
+    "firsts"
+  ],
+  "aliases": [
+    "I Olympic Winter Games",
+    "Chamonix 1924"
+  ],
+  "wikidata": "Q9583",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924-01-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1924-02-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1924 Winter Olympics (Q9583)",
+      "url": "https://www.wikidata.org/wiki/Q9583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1924 Winter Olympics",
+      "url": "https://en.wikipedia.org/wiki/1924_Winter_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

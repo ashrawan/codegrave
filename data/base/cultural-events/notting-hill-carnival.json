@@ -1,0 +1,51 @@
+{
+  "id": "notting-hill-carnival",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Notting Hill Carnival",
+      "from": "1965"
+    }
+  ],
+  "summary": "A street festival in west London held each August bank holiday, rooted in the Caribbean community. With steel bands, sound systems, costumes and floats, it draws large crowds every year.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q586220",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Notting Hill Carnival (Q586220)",
+      "url": "https://www.wikidata.org/wiki/Q586220",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Notting Hill Carnival",
+      "url": "https://en.wikipedia.org/wiki/Notting_Hill_Carnival",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "astrolabe",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Astrolabe",
+      "from": "-0200"
+    }
+  ],
+  "maker": "Greek and Islamic astronomers",
+  "summary": "A metal disc with moving parts that models the sky, used to find the time and the position of stars and the Sun. Islamic scholars improved it and sailors used it to find latitude.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "wikidata": "Q164992",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the sextant and other more exact instruments",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "sextant"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: astrolabe (Q164992)",
+      "url": "https://www.wikidata.org/wiki/Q164992",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Astrolabe",
+      "url": "https://en.wikipedia.org/wiki/Astrolabe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

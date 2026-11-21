@@ -1,0 +1,55 @@
+{
+  "id": "hans-christian-andersen",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Hans Christian Andersen",
+      "from": "1805"
+    }
+  ],
+  "summary": "Danish author of fairy tales such as The Little Mermaid, The Ugly Duckling and The Emperor's New Clothes. Unlike older collections, many of his stories were his own invention.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Hans Andersen"
+  ],
+  "wikidata": "Q5673",
+  "events": [
+    {
+      "type": "born",
+      "date": "1805-04-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1875-08-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hans Christian Andersen (Q5673)",
+      "url": "https://www.wikidata.org/wiki/Q5673",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hans Christian Andersen",
+      "url": "https://en.wikipedia.org/wiki/Hans_Christian_Andersen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

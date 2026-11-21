@@ -1,0 +1,71 @@
+{
+  "id": "macos",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "macOS",
+      "from": "2001"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's operating system for Mac computers, which began as Mac OS X and was built on NeXTSTEP and Unix. It brought a stable core and the Dock and is renamed for places in California.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Mac OS",
+    "Macintosh Operating System X",
+    "Mac OS 10",
+    "OSX",
+    "Modern Mac OS"
+  ],
+  "wikidata": "Q14116",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-03-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "steve-jobs"
+    },
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    },
+    {
+      "type": "part_of",
+      "to": "freebsd"
+    },
+    {
+      "type": "part_of",
+      "to": "unix"
+    },
+    {
+      "type": "influenced_by",
+      "to": "linux"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: macOS (Q14116)",
+      "url": "https://www.wikidata.org/wiki/Q14116",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: MacOS",
+      "url": "https://en.wikipedia.org/wiki/MacOS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

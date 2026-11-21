@@ -1,0 +1,64 @@
+{
+  "id": "reichsmark",
+  "category": "money",
+  "names": [
+    {
+      "name": "Reichsmark",
+      "from": "1924"
+    }
+  ],
+  "summary": "The German currency introduced after the hyperinflation of the early 1920s. It was used through the Nazi period and was replaced in the western zones after the Second World War.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "RM"
+  ],
+  "wikidata": "Q155009",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924-08-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Deutsche Mark in West Germany and a separate mark in the east",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "deutsche-mark"
+    },
+    {
+      "type": "in",
+      "to": "weimar-republic"
+    },
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Reichsmark (Q155009)",
+      "url": "https://www.wikidata.org/wiki/Q155009",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reichsmark",
+      "url": "https://en.wikipedia.org/wiki/Reichsmark",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

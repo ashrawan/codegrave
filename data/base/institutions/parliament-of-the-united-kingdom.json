@@ -1,0 +1,55 @@
+{
+  "id": "parliament-of-the-united-kingdom",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Parliament of the United Kingdom",
+      "from": "1801"
+    }
+  ],
+  "summary": "Law-making body of the United Kingdom, made up of the House of Commons, the House of Lords and the monarch. It began in 1801 on the union with Ireland and continues the Parliament of Great Britain, formed in 1707.",
+  "labels": [
+    "politics",
+    "law"
+  ],
+  "aliases": [
+    "British Parliament",
+    "UK Parliament",
+    "United Kingdom Parliament",
+    "Parliament of Britain",
+    "British legislature"
+  ],
+  "wikidata": "Q11010",
+  "events": [
+    {
+      "type": "born",
+      "date": "1801",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Parliament of the United Kingdom (Q11010)",
+      "url": "https://www.wikidata.org/wiki/Q11010",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Parliament of the United Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Parliament_of_the_United_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,70 @@
+{
+  "id": "afghanistan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Afghanistan",
+      "from": "1747"
+    }
+  ],
+  "summary": "A mountainous landlocked country of Central and South Asia that regained control of its foreign affairs from Britain in 1919. It has been crossed by invaders and trade routes for thousands of years.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Affghanistan",
+    "Afghania",
+    "Affghanisthan",
+    "Affghaunistan",
+    "Afghanisthan"
+  ],
+  "wikidata": "Q889",
+  "events": [
+    {
+      "type": "born",
+      "date": "1747",
+      "precision": "year",
+      "note": "Dated from 1747, when Ahmad Shah Durrani was chosen king and founded the Afghan state."
+    },
+    {
+      "type": "milestone",
+      "date": "1919",
+      "precision": "year",
+      "label": "Independence",
+      "note": "Britain gave up control of Afghan foreign affairs."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Afghanistan (Q889)",
+      "url": "https://www.wikidata.org/wiki/Q889",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Afghanistan",
+      "url": "https://en.wikipedia.org/wiki/Afghanistan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

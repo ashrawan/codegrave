@@ -1,0 +1,54 @@
+{
+  "id": "indus-script",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Indus script",
+      "from": "-2800"
+    }
+  ],
+  "summary": "The short strings of symbols found on seals and pots from the Indus Valley civilisation. No one has deciphered them, and scholars still debate whether they record a language at all.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Harappan script",
+    "Indus",
+    "Inds"
+  ],
+  "wikidata": "Q601388",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Indus cities declined and the symbols passed out of use",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Indus script (Q601388)",
+      "url": "https://www.wikidata.org/wiki/Q601388",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indus script",
+      "url": "https://en.wikipedia.org/wiki/Indus_script",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

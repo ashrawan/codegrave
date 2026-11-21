@@ -1,0 +1,45 @@
+{
+  "id": "fields-medal",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Fields Medal",
+      "from": "1936"
+    }
+  ],
+  "summary": "A prize for outstanding mathematicians under forty, given every four years. It is often called the maths equivalent of the Nobel Prize, which has no maths category.",
+  "labels": [
+    "mathematics"
+  ],
+  "aliases": [
+    "Fields Medals"
+  ],
+  "wikidata": "Q28835",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Fields medal (Q28835)",
+      "url": "https://www.wikidata.org/wiki/Q28835",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fields Medal",
+      "url": "https://en.wikipedia.org/wiki/Fields_Medal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

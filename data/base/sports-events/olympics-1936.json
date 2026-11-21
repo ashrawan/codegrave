@@ -1,0 +1,58 @@
+{
+  "id": "olympics-1936",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1936 Summer Olympics",
+      "from": "1936"
+    }
+  ],
+  "summary": "The Berlin Games were used by Nazi Germany to show off its power. The American sprinter Jesse Owens won four gold medals, and the event introduced the torch relay from Olympia to the host city.",
+  "labels": [
+    "sport",
+    "politics"
+  ],
+  "aliases": [
+    "Berlin 1936",
+    "Games of the XI Olympiad",
+    "The Games of the XI Olympiad"
+  ],
+  "wikidata": "Q8150",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-08-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1936-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "berlin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1936 Summer Olympics (Q8150)",
+      "url": "https://www.wikidata.org/wiki/Q8150",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1936 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1936_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "weimar-constitution",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Weimar Constitution",
+      "from": "1919"
+    }
+  ],
+  "summary": "The constitution of Germany's first democratic republic. It gave women the vote and listed social rights, but its emergency powers were later used to weaken democracy.",
+  "labels": [
+    "law",
+    "politics"
+  ],
+  "wikidata": "Q156003",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1933",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Undermined and set aside after the Nazi seizure of power",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "related",
+      "to": "weimar-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Weimar Constitution (Q156003)",
+      "url": "https://www.wikidata.org/wiki/Q156003",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Weimar Constitution",
+      "url": "https://en.wikipedia.org/wiki/Weimar_Constitution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

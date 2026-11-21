@@ -1,0 +1,64 @@
+{
+  "id": "peloponnesian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Peloponnesian War",
+      "from": "-0431"
+    }
+  ],
+  "summary": "A long war between Athens and its empire and the Spartan-led Peloponnesian League. It ended with Athens beaten and weakened, and it was described in detail by the historian Thucydides.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q33745",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0431",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0404-04-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ancient-greece"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    },
+    {
+      "type": "related",
+      "to": "delian-league"
+    },
+    {
+      "type": "related",
+      "to": "achaemenid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peloponnesian War (Q33745)",
+      "url": "https://www.wikidata.org/wiki/Q33745",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peloponnesian War",
+      "url": "https://en.wikipedia.org/wiki/Peloponnesian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

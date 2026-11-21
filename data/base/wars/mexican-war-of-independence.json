@@ -1,0 +1,57 @@
+{
+  "id": "mexican-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Mexican War of Independence",
+      "from": "1810"
+    }
+  ],
+  "summary": "A war that began in 1810 with the call of the priest Miguel Hidalgo for revolt against Spanish rule. After eleven years of fighting by many leaders, Mexico gained independence from Spain in 1821.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "wikidata": "Q68750",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1821-09-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "spanish-american-wars-of-independence"
+    },
+    {
+      "type": "in",
+      "to": "spanish-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mexican War of Independence (Q68750)",
+      "url": "https://www.wikidata.org/wiki/Q68750",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mexican War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Mexican_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

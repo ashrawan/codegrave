@@ -1,0 +1,50 @@
+{
+  "id": "dracula",
+  "category": "books",
+  "names": [
+    {
+      "name": "Dracula",
+      "from": "1897"
+    }
+  ],
+  "summary": "Novel by Bram Stoker told through letters and diaries, in which a group of friends hunt a vampire count who has moved from Transylvania to England. It shaped the modern vampire story.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "1897 Dracula"
+  ],
+  "wikidata": "Q41542",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897-05-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "count-dracula"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dracula (Q41542)",
+      "url": "https://www.wikidata.org/wiki/Q41542",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dracula",
+      "url": "https://en.wikipedia.org/wiki/Dracula",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

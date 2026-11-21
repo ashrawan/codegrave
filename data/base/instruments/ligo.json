@@ -1,0 +1,49 @@
+{
+  "id": "ligo",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "LIGO",
+      "from": "2002"
+    }
+  ],
+  "summary": "The Laser Interferometer Gravitational-Wave Observatory, two huge detectors in the United States that use laser beams to measure tiny ripples in space. In 2015 it made the first direct detection of gravitational waves.",
+  "labels": [
+    "physics",
+    "astronomy",
+    "engineering"
+  ],
+  "wikidata": "Q255371",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002-08-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Laser Interferometer Gravitational Wave Observatory (Q255371)",
+      "url": "https://www.wikidata.org/wiki/Q255371",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: LIGO",
+      "url": "https://en.wikipedia.org/wiki/LIGO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

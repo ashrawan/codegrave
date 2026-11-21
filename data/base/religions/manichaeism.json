@@ -1,0 +1,68 @@
+{
+  "id": "manichaeism",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Manichaeism",
+      "from": "0240"
+    }
+  ],
+  "summary": "A religion founded in Persia by the prophet Mani, which taught that the world is a struggle between light and darkness. It spread from the Roman Empire to China along trade routes before it disappeared.",
+  "labels": [
+    "religion",
+    "lost"
+  ],
+  "aliases": [
+    "religion of light",
+    "Manichaism",
+    "Manichæism",
+    "Manicheism"
+  ],
+  "wikidata": "Q131165",
+  "events": [
+    {
+      "type": "born",
+      "date": "0240",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Persecuted by rulers of several faiths and gradually absorbed or replaced",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "buddhism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "christianity"
+    },
+    {
+      "type": "influenced_by",
+      "to": "zoroastrianism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manichaeism (Q131165)",
+      "url": "https://www.wikidata.org/wiki/Q131165",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manichaeism",
+      "url": "https://en.wikipedia.org/wiki/Manichaeism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

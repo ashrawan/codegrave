@@ -1,0 +1,51 @@
+{
+  "id": "hemodialysis",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "Hemodialysis",
+      "from": "1943"
+    }
+  ],
+  "maker": "Willem Kolff",
+  "summary": "A treatment that cleans the blood with a machine when the kidneys fail. Dutch doctor Willem Kolff built the first working machine during the Second World War and many patients now rely on it.",
+  "labels": [
+    "medicine",
+    "engineering"
+  ],
+  "aliases": [
+    "haemodialysis",
+    "UHD",
+    "dialyzer",
+    "dialysis",
+    "help for human"
+  ],
+  "wikidata": "Q391744",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: hemodialysis (Q391744)",
+      "url": "https://www.wikidata.org/wiki/Q391744",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hemodialysis",
+      "url": "https://en.wikipedia.org/wiki/Hemodialysis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

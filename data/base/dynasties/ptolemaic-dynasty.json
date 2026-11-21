@@ -1,0 +1,58 @@
+{
+  "id": "ptolemaic-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Ptolemaic dynasty",
+      "from": "-0305"
+    }
+  ],
+  "summary": "Greek dynasty that ruled Egypt after Alexander the Great, begun by his general Ptolemy. Its last ruler was Cleopatra VII, and Egypt then fell to Rome.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Lagids",
+    "Lagidae",
+    "Ptolemies"
+  ],
+  "wikidata": "Q131976",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0305",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0030",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when Egypt was conquered by Rome",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ancient-egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ptolemaic dynasty (Q131976)",
+      "url": "https://www.wikidata.org/wiki/Q131976",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ptolemaic dynasty",
+      "url": "https://en.wikipedia.org/wiki/Ptolemaic_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

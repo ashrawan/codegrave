@@ -1,0 +1,48 @@
+{
+  "id": "cyrillic-script",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Cyrillic script",
+      "from": "0890"
+    }
+  ],
+  "summary": "The alphabet used for Russian, Ukrainian, Bulgarian, Serbian and many other languages. It was created in the First Bulgarian Empire around the ninth century and is based on Greek letters, with added signs.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "cyrl",
+    "Kiril",
+    "Cyrillic",
+    "Cyrillic alphabet"
+  ],
+  "wikidata": "Q8209",
+  "events": [
+    {
+      "type": "born",
+      "date": "0890",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Cyrillic script (Q8209)",
+      "url": "https://www.wikidata.org/wiki/Q8209",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cyrillic script",
+      "url": "https://en.wikipedia.org/wiki/Cyrillic_script",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

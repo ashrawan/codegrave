@@ -1,0 +1,61 @@
+{
+  "id": "statue-of-liberty",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Statue of Liberty",
+      "from": "1886"
+    }
+  ],
+  "maker": "Frederic Auguste Bartholdi",
+  "summary": "Huge copper statue of a robed woman holding a torch, designed by Frederic Bartholdi with an iron frame by Gustave Eiffel. A gift from France to the United States, it stands in New York harbour and greeted many arriving immigrants.",
+  "labels": [
+    "visual-art",
+    "politics"
+  ],
+  "wikidata": "Q9202",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "gustave-eiffel"
+    },
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "influenced_by",
+      "to": "colossus-of-rhodes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Statue of Liberty (Q9202)",
+      "url": "https://www.wikidata.org/wiki/Q9202",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Statue of Liberty",
+      "url": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,61 @@
+{
+  "id": "order-of-the-garter",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Order of the Garter",
+      "from": "1348"
+    }
+  ],
+  "maker": "Edward III of England",
+  "summary": "The senior order of knighthood in England, founded by King Edward III. Its members are chosen by the monarch, and its motto is written on a blue garter worn by members.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "The Most Noble Order of the Garter",
+    "Order of the Garter -- History",
+    "Instrument of Degradation"
+  ],
+  "wikidata": "Q215248",
+  "events": [
+    {
+      "type": "born",
+      "date": "1348",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "edward-iii"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Order of the Garter (Q215248)",
+      "url": "https://www.wikidata.org/wiki/Q215248",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Order of the Garter",
+      "url": "https://en.wikipedia.org/wiki/Order_of_the_Garter",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

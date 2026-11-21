@@ -1,0 +1,65 @@
+{
+  "id": "austria-hungary",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Austria-Hungary",
+      "from": "1867"
+    }
+  ],
+  "summary": "The dual monarchy of Austria and Hungary under one Habsburg emperor, a multi-ethnic state in central Europe. The murder of Archduke Franz Ferdinand in 1914 set off the First World War.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Austro-Hungarian Empire",
+    "Dual Monarchy",
+    "Austria",
+    "Austro-Hungarian Monarchy",
+    "Monarchy of Austria-Hungary"
+  ],
+  "wikidata": "Q28513",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867-03-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved after defeat in the First World War, splitting into several new states",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "czechoslovakia"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Austria–Hungary (Q28513)",
+      "url": "https://www.wikidata.org/wiki/Q28513",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Austria-Hungary",
+      "url": "https://en.wikipedia.org/wiki/Austria-Hungary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

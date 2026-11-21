@@ -1,0 +1,72 @@
+{
+  "id": "chile",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Chile",
+      "from": "1818"
+    }
+  ],
+  "summary": "Long, narrow country on the Pacific coast of South America, between the Andes and the sea. It declared independence from Spain in 1818, and its capital is Santiago.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Chile",
+    "CHI"
+  ],
+  "wikidata": "Q298",
+  "events": [
+    {
+      "type": "born",
+      "date": "1818",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "south-america"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "antarctic-treaty"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chile (Q298)",
+      "url": "https://www.wikidata.org/wiki/Q298",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chile",
+      "url": "https://en.wikipedia.org/wiki/Chile",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

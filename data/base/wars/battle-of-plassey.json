@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-plassey",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Plassey",
+      "from": "1757"
+    }
+  ],
+  "summary": "The East India Company's forces under Robert Clive defeated the Nawab of Bengal, helped by a rival's betrayal. The win gave the Company control of Bengal and began British rule in India.",
+  "labels": [
+    "war",
+    "business"
+  ],
+  "wikidata": "Q203233",
+  "events": [
+    {
+      "type": "born",
+      "date": "1757-06-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1757-06-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Plassey (Q203233)",
+      "url": "https://www.wikidata.org/wiki/Q203233",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Plassey",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Plassey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

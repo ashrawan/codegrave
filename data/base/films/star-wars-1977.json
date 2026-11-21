@@ -1,0 +1,48 @@
+{
+  "id": "star-wars-1977",
+  "category": "films",
+  "names": [
+    {
+      "name": "Star Wars",
+      "from": "1977"
+    }
+  ],
+  "maker": "George Lucas",
+  "summary": "Space fantasy by George Lucas about a farm boy, a princess and a smuggler fighting an evil empire. Its special effects and merchandise changed Hollywood and started one of the largest film franchises in the world.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q17738",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-05-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "dune"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Star Wars (Q17738)",
+      "url": "https://www.wikidata.org/wiki/Q17738",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Star Wars (film)",
+      "url": "https://en.wikipedia.org/wiki/Star_Wars_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

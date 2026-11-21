@@ -1,0 +1,58 @@
+{
+  "id": "new-york-yankees",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "New York Yankees",
+      "from": "1903"
+    }
+  ],
+  "summary": "American baseball team in Major League Baseball, based in the Bronx. It began in Baltimore in 1901 and moved to New York in 1903. The team has won more World Series titles than any other.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Yankees",
+    "Bronx Bombers",
+    "Bombers",
+    "New York Highlanders",
+    "Highlanders"
+  ],
+  "wikidata": "Q213417",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "new-york-city"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New York Yankees (Q213417)",
+      "url": "https://www.wikidata.org/wiki/Q213417",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New York Yankees",
+      "url": "https://en.wikipedia.org/wiki/New_York_Yankees",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

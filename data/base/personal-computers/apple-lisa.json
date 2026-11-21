@@ -1,0 +1,63 @@
+{
+  "id": "apple-lisa",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "Apple Lisa",
+      "from": "1983"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's computer with a graphical interface and a mouse, years before most rivals. It cost far too much and was slow, so it sold badly, but its ideas came back in the cheaper Macintosh.",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "aliases": [
+    "Lisa",
+    "The Lisa"
+  ],
+  "wikidata": "Q371482",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-01-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Too expensive and slow; replaced by the Macintosh",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    },
+    {
+      "type": "made_by",
+      "to": "steve-jobs"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apple Lisa (Q371482)",
+      "url": "https://www.wikidata.org/wiki/Q371482",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apple Lisa",
+      "url": "https://en.wikipedia.org/wiki/Apple_Lisa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

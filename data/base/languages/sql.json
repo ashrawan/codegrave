@@ -1,0 +1,45 @@
+{
+  "id": "sql",
+  "category": "languages",
+  "names": [
+    {
+      "name": "SQL",
+      "from": "1974"
+    }
+  ],
+  "summary": "Language for asking questions of databases, such as which customers bought a product. Developed at IBM, it became the standard language for relational databases and is used in almost every business.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Structural Query Language"
+  ],
+  "wikidata": "Q47607",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: SQL (Q47607)",
+      "url": "https://www.wikidata.org/wiki/Q47607",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SQL",
+      "url": "https://en.wikipedia.org/wiki/SQL",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

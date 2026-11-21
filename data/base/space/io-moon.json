@@ -1,0 +1,58 @@
+{
+  "id": "io-moon",
+  "category": "space",
+  "names": [
+    {
+      "name": "Io",
+      "from": "-4500000000"
+    }
+  ],
+  "summary": "Jupiter's innermost large moon and the most volcanically active body known in the solar system. Squeezed and stretched by Jupiter's gravity, it erupts lava and sulphur plumes over a surface of yellow, red and white.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Jupiter I"
+  ],
+  "wikidata": "Q3123",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500000000",
+      "precision": "circa",
+      "note": "An estimate: the large moons are thought to have formed with their planets, about 4.5 billion years ago."
+    },
+    {
+      "type": "milestone",
+      "date": "1610",
+      "precision": "year",
+      "label": "Discovered",
+      "note": "First seen by Galileo Galilei through his telescope in January 1610."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "galileo-galilei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Io (Q3123)",
+      "url": "https://www.wikidata.org/wiki/Q3123",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Io (moon)",
+      "url": "https://en.wikipedia.org/wiki/Io_(moon)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

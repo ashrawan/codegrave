@@ -1,0 +1,57 @@
+{
+  "id": "alexander-fleming",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Alexander Fleming",
+      "from": "1881"
+    }
+  ],
+  "summary": "Scottish bacteriologist who noticed in 1928 that mould on a dish killed bacteria. He named the substance penicillin, and shared the Nobel Prize in 1945 with the scientists who turned it into a drug.",
+  "labels": [
+    "medicine",
+    "biology",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Sir Alexander Fleming"
+  ],
+  "wikidata": "Q37064",
+  "events": [
+    {
+      "type": "born",
+      "date": "1881-08-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1955-03-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alexander Fleming (Q37064)",
+      "url": "https://www.wikidata.org/wiki/Q37064",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexander Fleming",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Fleming",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

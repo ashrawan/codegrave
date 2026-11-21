@@ -1,0 +1,48 @@
+{
+  "id": "burgess-shale",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Burgess Shale",
+      "from": "-508000000"
+    }
+  ],
+  "summary": "A fossil bed in the Canadian Rockies in British Columbia, found in 1909 by Charles Walcott. It holds exceptionally preserved soft-bodied animals from the Cambrian, giving a rare view of early animal life.",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "wikidata": "Q852085",
+  "events": [
+    {
+      "type": "born",
+      "date": "-508000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Burgess Shale (Q852085)",
+      "url": "https://www.wikidata.org/wiki/Q852085",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Burgess Shale",
+      "url": "https://en.wikipedia.org/wiki/Burgess_Shale",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

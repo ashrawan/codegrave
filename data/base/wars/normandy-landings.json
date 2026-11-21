@@ -1,0 +1,92 @@
+{
+  "id": "normandy-landings",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Normandy landings",
+      "from": "1944"
+    }
+  ],
+  "summary": "The largest seaborne invasion in history, in which Allied troops landed on the beaches of Normandy, France, on 6 June 1944. It opened a Western Front and led to the liberation of France.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Operation Neptune",
+    "D-Day"
+  ],
+  "wikidata": "Q16470",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-06-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "canada"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    },
+    {
+      "type": "related",
+      "to": "poland"
+    },
+    {
+      "type": "related",
+      "to": "belgium"
+    },
+    {
+      "type": "related",
+      "to": "denmark"
+    },
+    {
+      "type": "related",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Normandy landings (Q16470)",
+      "url": "https://www.wikidata.org/wiki/Q16470",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Normandy landings",
+      "url": "https://en.wikipedia.org/wiki/Normandy_landings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

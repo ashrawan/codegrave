@@ -1,0 +1,51 @@
+{
+  "id": "braille",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Braille",
+      "from": "1824"
+    }
+  ],
+  "summary": "A system of raised dots that blind people read by touch, devised by the young Frenchman Louis Braille in the 1820s. Its six-dot cells represent letters, numbers and music, and it is used worldwide.",
+  "labels": [
+    "language",
+    "education"
+  ],
+  "aliases": [
+    "Braille script"
+  ],
+  "wikidata": "Q79894",
+  "events": [
+    {
+      "type": "born",
+      "date": "1824",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "louis-braille"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Braille script (Q79894)",
+      "url": "https://www.wikidata.org/wiki/Q79894",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Braille",
+      "url": "https://en.wikipedia.org/wiki/Braille",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

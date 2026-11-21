@@ -1,0 +1,60 @@
+{
+  "id": "tata-group",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Tata Group",
+      "from": "1868"
+    }
+  ],
+  "maker": "Jamsetji Tata",
+  "summary": "Indian business group founded in Mumbai as a trading firm. It later built steel works, hotels, power plants, cars and an airline, and much of its holding company is owned by charitable trusts.",
+  "labels": [
+    "business",
+    "economics"
+  ],
+  "aliases": [
+    "Tata"
+  ],
+  "wikidata": "Q331715",
+  "events": [
+    {
+      "type": "born",
+      "date": "1868",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jamsetji-tata"
+    },
+    {
+      "type": "in",
+      "to": "mumbai"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tata Group (Q331715)",
+      "url": "https://www.wikidata.org/wiki/Q331715",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tata Group",
+      "url": "https://en.wikipedia.org/wiki/Tata_Group",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

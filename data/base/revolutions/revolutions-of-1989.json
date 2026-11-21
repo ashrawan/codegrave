@@ -1,0 +1,59 @@
+{
+  "id": "revolutions-of-1989",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Revolutions of 1989",
+      "from": "1989"
+    }
+  ],
+  "summary": "A wave of mostly peaceful uprisings that ended communist governments in Poland, Hungary, East Germany, Czechoslovakia and other states of Eastern Europe, and soon the Soviet Union itself.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "1989 revolutions"
+  ],
+  "wikidata": "Q382861",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-03-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "in",
+      "to": "east-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Revolutions of 1989 (Q382861)",
+      "url": "https://www.wikidata.org/wiki/Q382861",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Revolutions of 1989",
+      "url": "https://en.wikipedia.org/wiki/Revolutions_of_1989",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

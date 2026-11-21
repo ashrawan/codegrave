@@ -1,0 +1,54 @@
+{
+  "id": "doggerland",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Doggerland",
+      "from": "-20000"
+    }
+  ],
+  "summary": "A land of plains, rivers and marshes that once joined Britain to mainland Europe, in what is now the North Sea. People hunted there until rising seas after the last ice age drowned it, around 6000 BCE.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "wikidata": "Q1138308",
+  "events": [
+    {
+      "type": "born",
+      "date": "-20000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-6200",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Drowned by rising seas as the ice sheets melted",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Doggerland (Q1138308)",
+      "url": "https://www.wikidata.org/wiki/Q1138308",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Doggerland",
+      "url": "https://en.wikipedia.org/wiki/Doggerland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

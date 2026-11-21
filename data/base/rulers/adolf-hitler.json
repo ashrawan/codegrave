@@ -1,0 +1,65 @@
+{
+  "id": "adolf-hitler",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Adolf Hitler",
+      "from": "1889"
+    }
+  ],
+  "summary": "Austrian-born leader of the Nazi Party who became chancellor of Germany in 1933 and ruled as dictator. His invasion of Poland began the Second World War, and his regime carried out the Holocaust.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q352",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-04-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "richard-wagner"
+    },
+    {
+      "type": "influenced_by",
+      "to": "friedrich-nietzsche"
+    },
+    {
+      "type": "related",
+      "to": "holocaust"
+    },
+    {
+      "type": "related",
+      "to": "munich-agreement"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Adolf Hitler (Q352)",
+      "url": "https://www.wikidata.org/wiki/Q352",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Adolf Hitler",
+      "url": "https://en.wikipedia.org/wiki/Adolf_Hitler",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

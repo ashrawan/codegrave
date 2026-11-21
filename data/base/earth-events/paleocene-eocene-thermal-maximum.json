@@ -1,0 +1,54 @@
+{
+  "id": "paleocene-eocene-thermal-maximum",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Paleocene-Eocene Thermal Maximum",
+      "from": "-56000000"
+    }
+  ],
+  "summary": "A burst of rapid warming about 56 million years ago when huge amounts of carbon entered the air and oceans, heating the planet by several degrees for around 200,000 years. It is studied for clues about modern climate change.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Eocene thermal maximum 1",
+    "ETM1",
+    "Initial Eocene",
+    "Late Paleocene Thermal Maximum",
+    "IETM"
+  ],
+  "wikidata": "Q55826",
+  "events": [
+    {
+      "type": "born",
+      "date": "-56000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-55800000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Paleocene–Eocene Thermal Maximum (Q55826)",
+      "url": "https://www.wikidata.org/wiki/Q55826",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paleocene–Eocene thermal maximum",
+      "url": "https://en.wikipedia.org/wiki/Paleocene%E2%80%93Eocene_thermal_maximum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "war-of-the-triple-alliance",
+  "category": "wars",
+  "names": [
+    {
+      "name": "War of the Triple Alliance",
+      "from": "1864"
+    }
+  ],
+  "summary": "A war in South America in which Paraguay fought Brazil, Argentina and Uruguay. It ended with the death of Paraguayan leader Francisco Solano López. Paraguay lost territory and a very large share of its population.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Paraguay campaign",
+    "Triple Alliance War"
+  ],
+  "wikidata": "Q58947",
+  "events": [
+    {
+      "type": "born",
+      "date": "1864-12-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1870-03-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "empire-of-brazil"
+    },
+    {
+      "type": "related",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paraguayan War (Q58947)",
+      "url": "https://www.wikidata.org/wiki/Q58947",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paraguayan War",
+      "url": "https://en.wikipedia.org/wiki/Paraguayan_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

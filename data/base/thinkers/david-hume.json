@@ -1,0 +1,59 @@
+{
+  "id": "david-hume",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "David Hume",
+      "from": "1711"
+    }
+  ],
+  "summary": "Scottish philosopher who argued that knowledge comes from experience and that we cannot prove cause and effect with logic alone. His clear, doubting style influenced Kant and many later thinkers.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "David Home"
+  ],
+  "wikidata": "Q37160",
+  "events": [
+    {
+      "type": "born",
+      "date": "1711-04-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1776-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "john-locke"
+    },
+    {
+      "type": "influenced_by",
+      "to": "isaac-newton"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: David Hume (Q37160)",
+      "url": "https://www.wikidata.org/wiki/Q37160",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David Hume",
+      "url": "https://en.wikipedia.org/wiki/David_Hume",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

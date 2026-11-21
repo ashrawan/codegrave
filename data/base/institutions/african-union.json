@@ -1,0 +1,53 @@
+{
+  "id": "african-union",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "African Union",
+      "from": "1999"
+    }
+  ],
+  "summary": "Organisation of African states launched to succeed the Organisation of African Unity. It has its headquarters in Addis Ababa and works on peace, trade and the development of the continent.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "AU",
+    "UA",
+    "The African Union",
+    "Union Africaine"
+  ],
+  "wikidata": "Q7159",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "africa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: African Union (Q7159)",
+      "url": "https://www.wikidata.org/wiki/Q7159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: African Union",
+      "url": "https://en.wikipedia.org/wiki/African_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

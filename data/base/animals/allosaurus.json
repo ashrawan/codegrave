@@ -1,0 +1,47 @@
+{
+  "id": "allosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Allosaurus",
+      "from": "-155000000"
+    }
+  ],
+  "summary": "The top meat-eater of the late Jurassic in North America and Europe, a two-legged hunter with a large head and sharp, curved teeth. Many skeletons have been found, so it is one of the best-known dinosaurs.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q14400",
+  "events": [
+    {
+      "type": "born",
+      "date": "-155000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-145000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Allosaurus (Q14400)",
+      "url": "https://www.wikidata.org/wiki/Q14400",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Allosaurus",
+      "url": "https://en.wikipedia.org/wiki/Allosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

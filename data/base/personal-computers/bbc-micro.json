@@ -1,0 +1,59 @@
+{
+  "id": "bbc-micro",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "BBC Micro",
+      "from": "1981"
+    }
+  ],
+  "maker": "Acorn Computers",
+  "summary": "British computer made by Acorn for the BBC's computer literacy project. It was put in most British schools in the 1980s, taught a generation to program and led to the Acorn-designed ARM chip.",
+  "labels": [
+    "computing",
+    "education"
+  ],
+  "aliases": [
+    "BBC Microcomputer System",
+    "BBC Microcomputer"
+  ],
+  "wikidata": "Q749976",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-12-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1994",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by newer Acorn computers and PCs",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "acorn-computers"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: BBC Micro (Q749976)",
+      "url": "https://www.wikidata.org/wiki/Q749976",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: BBC Micro",
+      "url": "https://en.wikipedia.org/wiki/BBC_Micro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

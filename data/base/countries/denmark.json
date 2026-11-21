@@ -1,0 +1,74 @@
+{
+  "id": "denmark",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Denmark",
+      "from": "0936"
+    }
+  ],
+  "summary": "Nordic country made up of the Jutland peninsula and many islands, with Copenhagen as its capital. It became a constitutional monarchy in 1849 and is a member of the European Union and NATO.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "dk",
+    "TAN",
+    "Denmark proper",
+    "metropolitan Denmark",
+    "Dania"
+  ],
+  "wikidata": "Q35",
+  "events": [
+    {
+      "type": "born",
+      "date": "0936",
+      "precision": "circa",
+      "note": "Dated from about 936, the reign of Gorm the Old, from whom the Danish monarchy counts its line. His son Harald Bluetooth claimed to have won all Denmark."
+    },
+    {
+      "type": "milestone",
+      "date": "1849",
+      "precision": "year",
+      "label": "Constitution",
+      "note": "The first constitution ended absolute monarchy."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "part_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Denmark (Q35)",
+      "url": "https://www.wikidata.org/wiki/Q35",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Denmark",
+      "url": "https://en.wikipedia.org/wiki/Denmark",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "atomic-bombings-of-hiroshima-and-nagasaki",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Atomic bombings of Hiroshima and Nagasaki",
+      "from": "1945"
+    }
+  ],
+  "summary": "In August 1945 the United States dropped atomic bombs on two Japanese cities, killing about a hundred thousand people at once and many more later. Japan announced its surrender days later.",
+  "labels": [
+    "war",
+    "physics"
+  ],
+  "wikidata": "Q488",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-08-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-08-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "harry-s-truman"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: atomic bombings of Hiroshima and Nagasaki (Q488)",
+      "url": "https://www.wikidata.org/wiki/Q488",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atomic bombings of Hiroshima and Nagasaki",
+      "url": "https://en.wikipedia.org/wiki/Atomic_bombings_of_Hiroshima_and_Nagasaki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

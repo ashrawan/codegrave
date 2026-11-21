@@ -1,0 +1,56 @@
+{
+  "id": "monterey-pop-festival",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Monterey Pop Festival",
+      "from": "1967"
+    }
+  ],
+  "summary": "A three-day music festival in California that brought Jimi Hendrix, Janis Joplin and The Who to a wide American audience. It set a pattern for the large rock festivals that followed.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q203159",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-06-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-06-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "california"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Monterey International Pop Festival (Q203159)",
+      "url": "https://www.wikidata.org/wiki/Q203159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Monterey International Pop Festival",
+      "url": "https://en.wikipedia.org/wiki/Monterey_International_Pop_Festival",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

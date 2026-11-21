@@ -1,0 +1,55 @@
+{
+  "id": "royal-navy",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Royal Navy",
+      "from": "1546"
+    }
+  ],
+  "summary": "Naval force of the United Kingdom, the largest in the world for much of the 18th and 19th centuries. It protected British trade and colonies and fought at Trafalgar and in both world wars.",
+  "labels": [
+    "war",
+    "exploration"
+  ],
+  "aliases": [
+    "RN",
+    "Senior Service",
+    "Navy Royal",
+    "British Royal Navy",
+    "RoyalNavy"
+  ],
+  "wikidata": "Q172771",
+  "events": [
+    {
+      "type": "born",
+      "date": "1546",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Royal Navy (Q172771)",
+      "url": "https://www.wikidata.org/wiki/Q172771",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Royal Navy",
+      "url": "https://en.wikipedia.org/wiki/Royal_Navy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

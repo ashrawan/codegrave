@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-tsushima",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Tsushima",
+      "from": "1905"
+    }
+  ],
+  "summary": "A naval battle in the strait between Korea and Japan in which the Japanese fleet under Admiral Togo destroyed a Russian fleet that had sailed from the Baltic. It was decisive in the Russo-Japanese War.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Sea of Japan Naval Battle",
+    "Battle of Tsushima Strait"
+  ],
+  "wikidata": "Q208127",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-05-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1905-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "russo-japanese-war"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Tsushima (Q208127)",
+      "url": "https://www.wikidata.org/wiki/Q208127",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Tsushima",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Tsushima",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

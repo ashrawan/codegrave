@@ -1,0 +1,48 @@
+{
+  "id": "opec",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "OPEC",
+      "from": "1960"
+    }
+  ],
+  "summary": "Organisation of petroleum-exporting countries founded in Baghdad by five states to coordinate oil policy. Its members meet to set production levels, and its decisions can affect world oil prices.",
+  "labels": [
+    "economics",
+    "energy"
+  ],
+  "wikidata": "Q7795",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-09-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vienna"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Organization of the Petroleum Exporting Countries (Q7795)",
+      "url": "https://www.wikidata.org/wiki/Q7795",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: OPEC",
+      "url": "https://en.wikipedia.org/wiki/OPEC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

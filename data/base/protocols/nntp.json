@@ -1,0 +1,42 @@
+{
+  "id": "nntp",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "NNTP",
+      "from": "1985"
+    }
+  ],
+  "summary": "Protocol used to move Usenet newsgroup posts between servers and to readers. It allowed discussion groups to spread across the internet in a way that does not depend on one central computer.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q219730",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Network News Transfer Protocol (Q219730)",
+      "url": "https://www.wikidata.org/wiki/Q219730",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Network News Transfer Protocol",
+      "url": "https://en.wikipedia.org/wiki/Network_News_Transfer_Protocol",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "national-basketball-association",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "National Basketball Association",
+      "from": "1946"
+    }
+  ],
+  "summary": "North American professional basketball league, begun as the Basketball Association of America and renamed in 1949. It draws players from around the world and is one of the most watched leagues.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "NBA",
+    "Basketball Association of America",
+    "National Basketball Assn.",
+    "Nat'l Basketball Assn.",
+    "BAA"
+  ],
+  "wikidata": "Q155223",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-06-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: National Basketball Association (Q155223)",
+      "url": "https://www.wikidata.org/wiki/Q155223",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Basketball Association",
+      "url": "https://en.wikipedia.org/wiki/National_Basketball_Association",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

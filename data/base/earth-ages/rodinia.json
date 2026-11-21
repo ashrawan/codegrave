@@ -1,0 +1,48 @@
+{
+  "id": "rodinia",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Rodinia",
+      "from": "-1100000000"
+    }
+  ],
+  "summary": "An early supercontinent that gathered most land about a billion years ago, before breaking apart about 750 million years ago. Its split may have helped trigger the Snowball Earth ice ages.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q185161",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1100000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-750000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Rifted apart as plate movements tore it into pieces",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Rodinia (Q185161)",
+      "url": "https://www.wikidata.org/wiki/Q185161",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rodinia",
+      "url": "https://en.wikipedia.org/wiki/Rodinia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

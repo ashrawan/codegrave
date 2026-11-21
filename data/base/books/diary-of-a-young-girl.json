@@ -1,0 +1,59 @@
+{
+  "id": "diary-of-a-young-girl",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Diary of a Young Girl",
+      "from": "1947"
+    }
+  ],
+  "summary": "Diary kept by Anne Frank while hiding from the Nazis in Amsterdam, published by her father after the Second World War. It has been translated into dozens of languages and is a key record of the Holocaust.",
+  "labels": [
+    "literature",
+    "war"
+  ],
+  "aliases": [
+    "Diary of Anne Frank",
+    "The Secret Annex",
+    "The Diary of Anne Frank",
+    "Anne Frank's diary",
+    "Anne Frank Diary"
+  ],
+  "wikidata": "Q6911",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "anne-frank"
+    },
+    {
+      "type": "about",
+      "to": "holocaust"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Diary of Anne Frank (Q6911)",
+      "url": "https://www.wikidata.org/wiki/Q6911",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Diary of a Young Girl",
+      "url": "https://en.wikipedia.org/wiki/The_Diary_of_a_Young_Girl",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

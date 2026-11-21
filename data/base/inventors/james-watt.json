@@ -1,0 +1,61 @@
+{
+  "id": "james-watt",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "James Watt",
+      "from": "1736"
+    }
+  ],
+  "summary": "Scottish instrument maker who made the steam engine far more efficient by adding a separate condenser. His engines drove mines and factories in the Industrial Revolution, and the unit of power, the watt, is named after him.",
+  "labels": [
+    "engineering",
+    "energy"
+  ],
+  "aliases": [
+    "James, Sr. Watt",
+    "James von Breda Watt"
+  ],
+  "wikidata": "Q9041",
+  "events": [
+    {
+      "type": "born",
+      "date": "1736-01-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1819-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "member_of",
+      "to": "lunar-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James Watt (Q9041)",
+      "url": "https://www.wikidata.org/wiki/Q9041",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Watt",
+      "url": "https://en.wikipedia.org/wiki/James_Watt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

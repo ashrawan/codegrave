@@ -1,0 +1,55 @@
+{
+  "id": "mandarin-chinese",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Mandarin Chinese",
+      "from": "1300"
+    }
+  ],
+  "summary": "The most widely spoken first language in the world, used across northern and south-western China. Its standard form is based on the Beijing speech. The date given is when a Mandarin-type speech appears in writing under the Yuan.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Mandarin",
+    "Guanhua"
+  ],
+  "wikidata": "Q9192",
+  "events": [
+    {
+      "type": "born",
+      "date": "1300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mandarin (Q9192)",
+      "url": "https://www.wikidata.org/wiki/Q9192",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mandarin Chinese",
+      "url": "https://en.wikipedia.org/wiki/Mandarin_Chinese",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

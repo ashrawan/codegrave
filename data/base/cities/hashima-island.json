@@ -1,0 +1,58 @@
+{
+  "id": "hashima-island",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Hashima Island",
+      "from": "1887"
+    }
+  ],
+  "summary": "Tiny Japanese island covered in concrete apartment blocks for coal miners and their families. The mine closed and everyone left, and the abandoned island is now a tourist attraction.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Battleship Island",
+    "Gunkanjima"
+  ],
+  "wikidata": "Q285468",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1974",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Coal mine closed and residents left",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hashima Island (Q285468)",
+      "url": "https://www.wikidata.org/wiki/Q285468",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hashima Island",
+      "url": "https://en.wikipedia.org/wiki/Hashima_Island",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

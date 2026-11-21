@@ -1,0 +1,61 @@
+{
+  "id": "gamecube",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "GameCube",
+      "from": "2001"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's console in the shape of a small cube that played small discs and had a handle on top. It was well liked for its games but sold fewer than the PlayStation 2, and was followed by the Wii.",
+  "labels": [
+    "games"
+  ],
+  "aliases": [
+    "Nintendo GameCube",
+    "GCN",
+    "GC",
+    "NGC",
+    "Game Cube"
+  ],
+  "wikidata": "Q182172",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-09-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Wii",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nintendo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nintendo GameCube (Q182172)",
+      "url": "https://www.wikidata.org/wiki/Q182172",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: GameCube",
+      "url": "https://en.wikipedia.org/wiki/GameCube",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "timurid-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Timurid Empire",
+      "from": "1370"
+    }
+  ],
+  "summary": "The Central Asian empire founded by Timur, a conqueror from Samarkand. His heirs made Samarkand and Herat centres of astronomy, poetry and tilework, and a Timurid prince, Babur, later founded the Mughal Empire.",
+  "labels": [
+    "lost",
+    "architecture"
+  ],
+  "aliases": [
+    "Gurkani"
+  ],
+  "wikidata": "Q484195",
+  "events": [
+    {
+      "type": "born",
+      "date": "1370",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1507",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Taken over by the Uzbek Shaybanids",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Timurid Empire (Q484195)",
+      "url": "https://www.wikidata.org/wiki/Q484195",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Timurid Empire",
+      "url": "https://en.wikipedia.org/wiki/Timurid_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

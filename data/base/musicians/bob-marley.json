@@ -1,0 +1,60 @@
+{
+  "id": "bob-marley",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Bob Marley",
+      "from": "1945"
+    }
+  ],
+  "summary": "Jamaican singer and songwriter who took reggae around the world with his band the Wailers. His songs such as No Woman, No Cry and Redemption Song speak of struggle and unity.",
+  "labels": [
+    "music",
+    "independence"
+  ],
+  "aliases": [
+    "Tuff Gong",
+    "Donald Marley",
+    "Bab Maali",
+    "Nesta Robert Marley",
+    "Robert Marley"
+  ],
+  "wikidata": "Q409",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-02-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1981-05-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "james-brown"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bob Marley (Q409)",
+      "url": "https://www.wikidata.org/wiki/Q409",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bob Marley",
+      "url": "https://en.wikipedia.org/wiki/Bob_Marley",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

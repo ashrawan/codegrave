@@ -1,0 +1,55 @@
+{
+  "id": "lz-129-hindenburg",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Hindenburg",
+      "from": "1936"
+    }
+  ],
+  "summary": "The largest airship ever built, a German passenger zeppelin flown across the Atlantic. She caught fire while landing at Lakehurst, New Jersey, in May 1937 and thirty-six people died.",
+  "labels": [
+    "transport",
+    "failures"
+  ],
+  "aliases": [
+    "D-LZ 129",
+    "Hindenburg airship",
+    "the Hindenburg",
+    "Hindenburg zeppelin"
+  ],
+  "wikidata": "Q217964",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-03-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-05-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Burst into flames while landing at Lakehurst",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: LZ 129 Hindenburg (Q217964)",
+      "url": "https://www.wikidata.org/wiki/Q217964",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: LZ 129 Hindenburg",
+      "url": "https://en.wikipedia.org/wiki/LZ_129_Hindenburg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

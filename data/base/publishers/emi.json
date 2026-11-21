@@ -1,0 +1,61 @@
+{
+  "id": "emi",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "EMI",
+      "from": "1931"
+    }
+  ],
+  "summary": "British record company formed by a merger, whose labels released the Beatles and Pink Floyd. Its Abbey Road studios became famous, and it was broken up and sold in 2012.",
+  "labels": [
+    "music",
+    "media"
+  ],
+  "aliases": [
+    "EMI Music",
+    "EMI (United Kingdom)",
+    "EMI Records",
+    "EMI Records Limited",
+    "EMI Records Ltd."
+  ],
+  "wikidata": "Q183412",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-03-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broken up and sold to Universal and Sony",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: EMI (Q183412)",
+      "url": "https://www.wikidata.org/wiki/Q183412",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: EMI",
+      "url": "https://en.wikipedia.org/wiki/EMI",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

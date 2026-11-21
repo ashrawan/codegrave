@@ -1,0 +1,87 @@
+{
+  "id": "world-war-ii",
+  "category": "wars",
+  "names": [
+    {
+      "name": "World War II",
+      "from": "1939"
+    }
+  ],
+  "summary": "The largest war in history, fought between the Allies and the Axis Powers across Europe, Asia, Africa and the oceans. It ended with the defeat of Germany and Japan and left the United States and Soviet Union as superpowers.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "WW 2",
+    "WW II",
+    "World War Two",
+    "2nd World War",
+    "World War 2"
+  ],
+  "wikidata": "Q362",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-09-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "europe"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "taiwan"
+    },
+    {
+      "type": "related",
+      "to": "egypt"
+    },
+    {
+      "type": "related",
+      "to": "mexico"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World War II (Q362)",
+      "url": "https://www.wikidata.org/wiki/Q362",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World War II",
+      "url": "https://en.wikipedia.org/wiki/World_War_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "glass",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Glass",
+      "from": "-3500"
+    }
+  ],
+  "summary": "A hard, transparent material made by melting sand with other minerals. People in Mesopotamia and Egypt made glass beads and vessels by about 3500 BCE, and later glass gave us windows, lenses and bottles.",
+  "labels": [
+    "engineering",
+    "firsts"
+  ],
+  "wikidata": "Q11469",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "mirror"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: glass (Q11469)",
+      "url": "https://www.wikidata.org/wiki/Q11469",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Glass",
+      "url": "https://en.wikipedia.org/wiki/Glass",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

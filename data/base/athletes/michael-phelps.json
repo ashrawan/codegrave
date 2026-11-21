@@ -1,0 +1,42 @@
+{
+  "id": "michael-phelps",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Michael Phelps",
+      "from": "1985"
+    }
+  ],
+  "summary": "American swimmer who has won twenty-eight Olympic medals, twenty-three of them gold, more than any other athlete. He won eight golds at the 2008 Beijing Games alone.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q39562",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Michael Phelps (Q39562)",
+      "url": "https://www.wikidata.org/wiki/Q39562",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michael Phelps",
+      "url": "https://en.wikipedia.org/wiki/Michael_Phelps",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

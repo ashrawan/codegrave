@@ -1,0 +1,50 @@
+{
+  "id": "spartacus",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Spartacus",
+      "from": "-0103"
+    }
+  ],
+  "summary": "Thracian gladiator who led a revolt of enslaved people against Rome from 73 BCE. His army defeated several Roman forces before it was crushed by Marcus Crassus. His birth year is a rough estimate.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Spártakos"
+  ],
+  "wikidata": "Q83406",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0103",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0071-04",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Spartacus (Q83406)",
+      "url": "https://www.wikidata.org/wiki/Q83406",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spartacus",
+      "url": "https://en.wikipedia.org/wiki/Spartacus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

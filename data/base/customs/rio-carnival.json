@@ -1,0 +1,56 @@
+{
+  "id": "rio-carnival",
+  "category": "customs",
+  "names": [
+    {
+      "name": "Rio Carnival",
+      "from": "1723"
+    }
+  ],
+  "summary": "Yearly festival in Rio de Janeiro before Lent, known for samba school parades. Its roots lie in the Portuguese pre-Lent street games introduced in the 1700s, and samba schools began in 1928.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Carnaval do Rio de Janeiro",
+    "Carnaval Carioca",
+    "Carnival of Rio de Janeiro"
+  ],
+  "wikidata": "Q35232",
+  "events": [
+    {
+      "type": "born",
+      "date": "1723",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rio-de-janeiro"
+    },
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rio Carnival (Q35232)",
+      "url": "https://www.wikidata.org/wiki/Q35232",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rio Carnival",
+      "url": "https://en.wikipedia.org/wiki/Rio_Carnival",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

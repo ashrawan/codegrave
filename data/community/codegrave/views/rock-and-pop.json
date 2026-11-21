@@ -1,0 +1,89 @@
+{
+  "id": "rock-and-pop",
+  "name": "Rock and Pop Music",
+  "description": "The stars and bands of popular music, from Elvis and the Beatles to Michael Jackson, Madonna, Beyoncé and Taylor Swift.",
+  "category": "arts",
+  "labels": [
+    "music"
+  ],
+  "tags": [
+    "rock",
+    "pop",
+    "music",
+    "beatles",
+    "elvis",
+    "michael jackson",
+    "bands",
+    "singers"
+  ],
+  "entries": [
+    "frank-sinatra",
+    "chuck-berry",
+    "ray-charles",
+    "johnny-cash",
+    "little-richard",
+    "james-brown",
+    "elvis-presley",
+    "tina-turner",
+    "john-lennon",
+    "bob-dylan",
+    "aretha-franklin",
+    "jimi-hendrix",
+    "bob-marley",
+    "david-bowie",
+    "elton-john",
+    "bruce-springsteen",
+    "stevie-wonder",
+    "rock-and-roll",
+    "prince",
+    "madonna",
+    "michael-jackson",
+    "the-beatles",
+    "the-beach-boys",
+    "the-rolling-stones",
+    "whitney-houston",
+    "the-who",
+    "pink-floyd",
+    "led-zeppelin",
+    "queen-band",
+    "abba",
+    "hip-hop-music",
+    "u2",
+    "beyonce",
+    "thriller-album",
+    "live-aid",
+    "nirvana",
+    "taylor-swift",
+    "bts"
+  ],
+  "checkpoints": [
+    {
+      "id": "rock-and-roll",
+      "name": "Rock and roll",
+      "from": 1950,
+      "to": 1963,
+      "note": "Chuck Berry, Little Richard and Elvis blend blues, country and gospel into a sound for teenagers, while Ray Charles and Johnny Cash bring their own roots to the radio."
+    },
+    {
+      "id": "the-beatles-and-the-album-years",
+      "name": "The Beatles and the album years",
+      "from": 1964,
+      "to": 1979,
+      "note": "The Beatles, Stones and Dylan turn singles into albums and albums into statements, while Hendrix, Led Zeppelin, Pink Floyd, Marley and Bowie push sound and stagecraft."
+    },
+    {
+      "id": "the-mtv-years",
+      "name": "The MTV years",
+      "from": 1980,
+      "to": 1999,
+      "note": "MTV makes the image as important as the song. Michael Jackson's Thriller, Madonna and Prince rule the charts, and Queen's Live Aid set draws the world's eyes."
+    },
+    {
+      "id": "the-streaming-era",
+      "name": "The streaming era",
+      "from": 2000,
+      "to": 2026,
+      "note": "Beyoncé and Taylor Swift build huge careers in the download and streaming age, drawing on the soul, country and rock traditions the earlier stars had made."
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "id": "silent-spring",
+  "category": "books",
+  "names": [
+    {
+      "name": "Silent Spring",
+      "from": "1962"
+    }
+  ],
+  "summary": "Rachel Carson's 1962 book on how pesticides such as DDT harm birds and other wildlife and spread through food chains. It woke wide public concern about pollution and helped launch the modern environmental movement.",
+  "labels": [
+    "environment",
+    "literature",
+    "biology"
+  ],
+  "wikidata": "Q591623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-09-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "rachel-carson"
+    },
+    {
+      "type": "about",
+      "to": "ddt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Silent Spring (Q591623)",
+      "url": "https://www.wikidata.org/wiki/Q591623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Silent Spring",
+      "url": "https://en.wikipedia.org/wiki/Silent_Spring",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

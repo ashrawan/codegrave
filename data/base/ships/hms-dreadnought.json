@@ -1,0 +1,50 @@
+{
+  "id": "hms-dreadnought",
+  "category": "ships",
+  "names": [
+    {
+      "name": "HMS Dreadnought",
+      "from": "1906"
+    }
+  ],
+  "maker": "Royal Navy",
+  "summary": "A British battleship launched in 1906 with big guns of a single size and steam turbines. Her design made earlier battleships obsolete and set off a naval arms race.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "wikidata": "Q308909",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-12-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1921",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sold for scrap after the First World War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: HMS Dreadnought (Q308909)",
+      "url": "https://www.wikidata.org/wiki/Q308909",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HMS Dreadnought (1906)",
+      "url": "https://en.wikipedia.org/wiki/HMS_Dreadnought_(1906)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

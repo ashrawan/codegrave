@@ -1,0 +1,47 @@
+{
+  "id": "dc-comics",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "DC Comics",
+      "from": "1934"
+    }
+  ],
+  "summary": "American comic book publisher that launched Superman in 1938 and Batman in 1939, setting up the superhero genre. It takes its name from Detective Comics and is owned by Warner Bros.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q2924461",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: DC Comics (Q2924461)",
+      "url": "https://www.wikidata.org/wiki/Q2924461",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: DC Comics",
+      "url": "https://en.wikipedia.org/wiki/DC_Comics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

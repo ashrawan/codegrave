@@ -1,0 +1,54 @@
+{
+  "id": "real-madrid",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Real Madrid",
+      "from": "1902"
+    }
+  ],
+  "summary": "Spanish football club from the capital, record winner of the European Cup and Champions League. It plays in white at the Santiago Bernabeu stadium and is owned by its members.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Real Madrid Club de Fútbol",
+    "Real Madrid Football Club",
+    "Real Madrid C.F.",
+    "RMCF",
+    "Real FC"
+  ],
+  "wikidata": "Q8682",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902-03-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Real Madrid Club de Fútbol (Q8682)",
+      "url": "https://www.wikidata.org/wiki/Q8682",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Real Madrid CF",
+      "url": "https://en.wikipedia.org/wiki/Real_Madrid_CF",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

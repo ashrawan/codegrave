@@ -1,0 +1,47 @@
+{
+  "id": "jackson-pollock",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Jackson Pollock",
+      "from": "1912"
+    }
+  ],
+  "summary": "American painter who laid large canvases on the floor and dripped and poured paint onto them. A leader of Abstract Expressionism, he died in a car crash at forty-four.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q37571",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-01-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1956-08-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Jackson Pollock (Q37571)",
+      "url": "https://www.wikidata.org/wiki/Q37571",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jackson Pollock",
+      "url": "https://en.wikipedia.org/wiki/Jackson_Pollock",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

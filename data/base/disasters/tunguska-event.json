@@ -1,0 +1,59 @@
+{
+  "id": "tunguska-event",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Tunguska event",
+      "from": "1908"
+    }
+  ],
+  "summary": "A massive explosion in the air over a remote part of Siberia flattened millions of trees across a vast area. It is thought to have been caused by a small asteroid or comet breaking up before it hit the ground.",
+  "labels": [
+    "astronomy",
+    "environment"
+  ],
+  "aliases": [
+    "Tunguska case",
+    "Tunguska incident",
+    "Tunguska explosion",
+    "Tunguska impact"
+  ],
+  "wikidata": "Q125953",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-06-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1908-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tunguska event (Q125953)",
+      "url": "https://www.wikidata.org/wiki/Q125953",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tunguska event",
+      "url": "https://en.wikipedia.org/wiki/Tunguska_event",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

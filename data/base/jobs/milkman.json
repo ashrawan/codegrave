@@ -1,0 +1,49 @@
+{
+  "id": "milkman",
+  "category": "jobs",
+  "names": [
+    {
+      "name": "Milkman",
+      "from": "1800"
+    }
+  ],
+  "summary": "A worker who delivers milk to homes, once by cart and later by electric float. The trade has shrunk since supermarkets, but small services remain in some countries.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "milk deliverer",
+    "milk peddler",
+    "milkwoman",
+    "milk man",
+    "milk men"
+  ],
+  "wikidata": "Q278138",
+  "events": [
+    {
+      "type": "born",
+      "date": "1800",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: milk deliverer (Q278138)",
+      "url": "https://www.wikidata.org/wiki/Q278138",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Milk delivery",
+      "url": "https://en.wikipedia.org/wiki/Milk_delivery",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

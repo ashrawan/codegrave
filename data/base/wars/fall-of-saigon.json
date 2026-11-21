@@ -1,0 +1,59 @@
+{
+  "id": "fall-of-saigon",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Fall of Saigon",
+      "from": "1975"
+    }
+  ],
+  "summary": "Capture of Saigon, capital of South Vietnam, by North Vietnamese forces on 30 April 1975, ending the Vietnam War. Americans and many South Vietnamese were evacuated by helicopter, and Vietnam was reunited the next year.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Liberation of Saigon"
+  ],
+  "wikidata": "Q482456",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-04-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "vietnam-war"
+    },
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fall of Saigon (Q482456)",
+      "url": "https://www.wikidata.org/wiki/Q482456",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of Saigon",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_Saigon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,64 @@
+{
+  "id": "cold-war",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Cold War",
+      "from": "1945"
+    }
+  ],
+  "summary": "The long rivalry between the United States and the Soviet Union and their allies, fought through arms races, spying, proxy wars and propaganda rather than direct war between them.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "The Cold War"
+  ],
+  "wikidata": "Q8683",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1991-12-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "asia"
+    },
+    {
+      "type": "in",
+      "to": "africa"
+    },
+    {
+      "type": "related",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cold War (Q8683)",
+      "url": "https://www.wikidata.org/wiki/Q8683",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cold War",
+      "url": "https://en.wikipedia.org/wiki/Cold_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

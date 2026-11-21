@@ -1,0 +1,48 @@
+{
+  "id": "pont-du-gard",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Pont du Gard",
+      "from": "0050"
+    }
+  ],
+  "summary": "Three-tiered stone aqueduct bridge in southern France, built by the Romans to carry water to the city of Nimes. Its arches were fitted together without mortar and it still stands.",
+  "labels": [
+    "engineering",
+    "world-heritage"
+  ],
+  "wikidata": "Q189764",
+  "events": [
+    {
+      "type": "born",
+      "date": "0050",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pont du Gard (Q189764)",
+      "url": "https://www.wikidata.org/wiki/Q189764",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pont du Gard",
+      "url": "https://en.wikipedia.org/wiki/Pont_du_Gard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "magna-carta",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Magna Carta",
+      "from": "1215"
+    }
+  ],
+  "summary": "A charter that English barons forced King John to accept at Runnymede. It said that the king was bound by law and promised fair trial for free men, and it became a symbol of limits on rulers.",
+  "labels": [
+    "law",
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Magna Carta Libertatum",
+    "Great Charter"
+  ],
+  "wikidata": "Q12519",
+  "events": [
+    {
+      "type": "born",
+      "date": "1215-06-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Magna Carta (Q12519)",
+      "url": "https://www.wikidata.org/wiki/Q12519",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Magna Carta",
+      "url": "https://en.wikipedia.org/wiki/Magna_Carta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

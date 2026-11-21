@@ -1,0 +1,102 @@
+{
+  "id": "computer-generations",
+  "name": "Computers",
+  "description": "From Babbage's engines and room-sized machines to the PC, the laptop and the phone: the computers that mattered, generation by generation.",
+  "category": "computing",
+  "labels": [
+    "computing"
+  ],
+  "tags": [
+    "computers",
+    "pc",
+    "eniac",
+    "apple ii",
+    "ibm pc",
+    "computer history",
+    "hardware",
+    "macintosh"
+  ],
+  "entries": [
+    "charles-babbage",
+    "ada-lovelace",
+    "difference-engine",
+    "analytical-engine",
+    "alan-turing",
+    "z3",
+    "colossus",
+    "harvard-mark-i",
+    "eniac",
+    "manchester-baby",
+    "edsac",
+    "univac-i",
+    "ibm-650",
+    "pdp-1",
+    "ibm-1401",
+    "ibm-7090",
+    "system-360",
+    "pdp-11",
+    "intel-4004",
+    "xerox-alto",
+    "altair-8800",
+    "apple-ii",
+    "trs-80",
+    "osborne-1",
+    "ibm-pc",
+    "zx-spectrum",
+    "fifth-generation",
+    "commodore-64",
+    "macintosh",
+    "amiga-1000",
+    "next-computer",
+    "thinkpad",
+    "imac-g3",
+    "iphone",
+    "macbook-air",
+    "ipad",
+    "raspberry-pi"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-electronics",
+      "name": "Before electronics",
+      "from": 1822,
+      "to": 1939,
+      "note": "Charles Babbage designs mechanical calculating engines in the nineteenth century and Ada Lovelace writes about what such a machine could do. In 1936 Alan Turing describes a universal computing machine on paper."
+    },
+    {
+      "id": "first-generation-vacuum-tubes",
+      "name": "First generation: vacuum tubes",
+      "from": 1940,
+      "to": 1955,
+      "note": "Computers switch with vacuum tubes (valves). They fill a room, run hot and fail often, and each one is built by hand. Colossus, ENIAC, EDSAC and UNIVAC I belong here; the Z3, built from relays, is a step just before."
+    },
+    {
+      "id": "second-generation-transistors",
+      "name": "Second generation: transistors",
+      "from": 1956,
+      "to": 1963,
+      "note": "The transistor replaces the tube: smaller, cooler, cheaper and far more reliable. Computers such as the IBM 1401 and 7090 move from laboratories into ordinary businesses, and languages like FORTRAN and COBOL arrive."
+    },
+    {
+      "id": "third-generation-integrated-circuits",
+      "name": "Third generation: integrated circuits",
+      "from": 1964,
+      "to": 1970,
+      "note": "Many transistors are made together on one chip. IBM's System/360 gives business a family of compatible machines, and minicomputers bring a computer within reach of a single department."
+    },
+    {
+      "id": "fourth-generation-microprocessors",
+      "name": "Fourth generation: microprocessors",
+      "from": 1971,
+      "to": 2009,
+      "note": "From 1971 a whole processor fits on one chip, and the computer becomes personal: on the desk, then on the lap, then in the pocket. Textbooks differ on where this generation ends; many say it has not."
+    },
+    {
+      "id": "fifth-generation-ai-and-parallel-machines",
+      "name": "Fifth generation: AI and parallel machines",
+      "from": 2010,
+      "to": 2026,
+      "note": "Computers built to learn and reason, using many processors at once. Japan set out to build them in 1982 and fell short. There is no agreed start date: textbooks say \"the present and beyond\", so the line drawn here at 2010 is only a guide."
+    }
+  ]
+}

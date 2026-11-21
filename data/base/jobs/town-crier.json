@@ -1,0 +1,45 @@
+{
+  "id": "town-crier",
+  "category": "jobs",
+  "names": [
+    {
+      "name": "Town crier",
+      "from": "1200"
+    }
+  ],
+  "summary": "An officer who walked the streets shouting news, laws and notices before most people could read or had newspapers. A few towns still keep one for ceremonies.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "bellman"
+  ],
+  "wikidata": "Q1500389",
+  "events": [
+    {
+      "type": "born",
+      "date": "1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: town crier (Q1500389)",
+      "url": "https://www.wikidata.org/wiki/Q1500389",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Town crier",
+      "url": "https://en.wikipedia.org/wiki/Town_crier",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

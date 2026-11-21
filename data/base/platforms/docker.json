@@ -1,0 +1,44 @@
+{
+  "id": "docker",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "Docker",
+      "from": "2013"
+    }
+  ],
+  "maker": "Solomon Hykes and Docker, Inc.",
+  "summary": "Software that packages programs with what they need into containers that run the same on different machines. Solomon Hykes presented it in 2013, and it helped make container technology common.",
+  "labels": [
+    "computing",
+    "open-source"
+  ],
+  "wikidata": "Q15206305",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Docker (Q15206305)",
+      "url": "https://www.wikidata.org/wiki/Q15206305",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Docker (software)",
+      "url": "https://en.wikipedia.org/wiki/Docker_(software)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

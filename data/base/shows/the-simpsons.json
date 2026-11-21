@@ -1,0 +1,43 @@
+{
+  "id": "the-simpsons",
+  "category": "shows",
+  "names": [
+    {
+      "name": "The Simpsons",
+      "from": "1989"
+    }
+  ],
+  "maker": "Matt Groening",
+  "summary": "American animated sitcom by Matt Groening about a yellow-skinned family in the town of Springfield. It began in 1989 and is the longest-running American scripted prime-time series, with a deep influence on animation and humour.",
+  "labels": [
+    "television"
+  ],
+  "wikidata": "Q886",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: The Simpsons (Q886)",
+      "url": "https://www.wikidata.org/wiki/Q886",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Simpsons",
+      "url": "https://en.wikipedia.org/wiki/The_Simpsons",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

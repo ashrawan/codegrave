@@ -1,0 +1,54 @@
+{
+  "id": "cenozoic",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Cenozoic",
+      "from": "-66000000"
+    }
+  ],
+  "summary": "The era from 66 million years ago to today, the age of mammals and flowering plants. Continents drifted to their present places, the Himalayas and Alps rose, and ice ages arrived before humans appeared.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Cenozoic Era",
+    "Cenozoic Erathem",
+    "Caenozoic Era",
+    "Caenozoic"
+  ],
+  "wikidata": "Q102416",
+  "events": [
+    {
+      "type": "born",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "phanerozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cenozoic (Q102416)",
+      "url": "https://www.wikidata.org/wiki/Q102416",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cenozoic",
+      "url": "https://en.wikipedia.org/wiki/Cenozoic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

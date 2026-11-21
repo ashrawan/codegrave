@@ -1,0 +1,53 @@
+{
+  "id": "bar-kokhba-revolt",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Bar Kokhba revolt",
+      "from": "0132"
+    }
+  ],
+  "summary": "A Jewish uprising against Roman rule in Judea led by Simon bar Kokhba. It was put down at great cost, and Jews were barred from Jerusalem, which Rome renamed Aelia Capitolina.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "wikidata": "Q334502",
+  "events": [
+    {
+      "type": "born",
+      "date": "0132",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0136",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bar Kokhba revolt (Q334502)",
+      "url": "https://www.wikidata.org/wiki/Q334502",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bar Kokhba Revolt",
+      "url": "https://en.wikipedia.org/wiki/Bar_Kokhba_Revolt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

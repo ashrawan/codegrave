@@ -1,0 +1,55 @@
+{
+  "id": "prague-spring",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Prague Spring",
+      "from": "1968"
+    }
+  ],
+  "summary": "A period of political easing in Czechoslovakia under Alexander Dubček, who promised socialism with a human face. Warsaw Pact troops invaded in August 1968 and ended the reforms.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Prague Spring 1968"
+  ],
+  "wikidata": "Q162401",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1968",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czechoslovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Prague Spring (Q162401)",
+      "url": "https://www.wikidata.org/wiki/Q162401",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prague Spring",
+      "url": "https://en.wikipedia.org/wiki/Prague_Spring",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

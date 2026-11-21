@@ -1,0 +1,63 @@
+{
+  "id": "roadrunner",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "Roadrunner",
+      "from": "2008"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "IBM supercomputer at Los Alamos that was the first to pass one quadrillion calculations a second. It mixed ordinary processors with chips from the PlayStation 3, and it modelled nuclear weapons ageing.",
+  "labels": [
+    "computing",
+    "engineering",
+    "firsts"
+  ],
+  "aliases": [
+    "IBM Roadrunner"
+  ],
+  "wikidata": "Q818756",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2013-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired as newer machines were more efficient",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: IBM Roadrunner (Q818756)",
+      "url": "https://www.wikidata.org/wiki/Q818756",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roadrunner (supercomputer)",
+      "url": "https://en.wikipedia.org/wiki/Roadrunner_(supercomputer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

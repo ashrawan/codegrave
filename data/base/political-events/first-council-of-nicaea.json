@@ -1,0 +1,55 @@
+{
+  "id": "first-council-of-nicaea",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "First Council of Nicaea",
+      "from": "0325"
+    }
+  ],
+  "summary": "Gathering of Christian bishops called in 325 by the Roman emperor Constantine at Nicaea in Asia Minor. It rejected the teaching of Arius, issued a statement of belief that became the Nicene Creed and set rules on matters such as the date of Easter.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "First Ecumenical Council"
+  ],
+  "wikidata": "Q133331",
+  "events": [
+    {
+      "type": "born",
+      "date": "0325-05",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "0325-07",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Council of Nicaea (Q133331)",
+      "url": "https://www.wikidata.org/wiki/Q133331",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Council of Nicaea",
+      "url": "https://en.wikipedia.org/wiki/First_Council_of_Nicaea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

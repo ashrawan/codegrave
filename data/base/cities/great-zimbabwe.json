@@ -1,0 +1,61 @@
+{
+  "id": "great-zimbabwe",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Great Zimbabwe",
+      "from": "1100"
+    }
+  ],
+  "summary": "Stone-walled city in southern Africa, built by the ancestors of the Shona people. It controlled trade in gold and cattle, and gave the modern country of Zimbabwe its name.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Zimbabye"
+  ],
+  "wikidata": "Q209217",
+  "events": [
+    {
+      "type": "born",
+      "date": "1100",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1450",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned as trade shifted and local resources ran short",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "kingdom-of-zimbabwe"
+    },
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Zimbabwe (Q209217)",
+      "url": "https://www.wikidata.org/wiki/Q209217",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Zimbabwe",
+      "url": "https://en.wikipedia.org/wiki/Great_Zimbabwe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

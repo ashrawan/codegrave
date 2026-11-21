@@ -1,0 +1,53 @@
+{
+  "id": "belgian-congo",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Belgian Congo",
+      "from": "1908"
+    }
+  ],
+  "summary": "The Belgian colony in central Africa, taken over from King Leopold II in 1908. Its mines of copper and uranium made it rich for Belgium while its people had few political rights.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Congo Belge",
+    "Belgisch-Congo"
+  ],
+  "wikidata": "Q213510",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Became the independent Republic of the Congo",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Belgian Congo (Q213510)",
+      "url": "https://www.wikidata.org/wiki/Q213510",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belgian Congo",
+      "url": "https://en.wikipedia.org/wiki/Belgian_Congo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

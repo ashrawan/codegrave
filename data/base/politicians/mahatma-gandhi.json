@@ -1,0 +1,65 @@
+{
+  "id": "mahatma-gandhi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Mahatma Gandhi",
+      "from": "1869"
+    }
+  ],
+  "summary": "Indian lawyer who led the movement against British rule through nonviolent protest, including the Salt March of 1930. He was assassinated in 1948, a few months after India became independent.",
+  "labels": [
+    "politics",
+    "independence",
+    "human-rights"
+  ],
+  "aliases": [
+    "Mohandas K. Gandhi",
+    "M. K. Gandhi",
+    "Gandhiji",
+    "Bapuji",
+    "MK Gandhi"
+  ],
+  "wikidata": "Q1001",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869-10-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-01-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "leo-tolstoy"
+    },
+    {
+      "type": "influenced_by",
+      "to": "gautama-buddha"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mahatma Gandhi (Q1001)",
+      "url": "https://www.wikidata.org/wiki/Q1001",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mahatma Gandhi",
+      "url": "https://en.wikipedia.org/wiki/Mahatma_Gandhi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

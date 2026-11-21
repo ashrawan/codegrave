@@ -1,0 +1,54 @@
+{
+  "id": "in-search-of-lost-time",
+  "category": "books",
+  "names": [
+    {
+      "name": "In Search of Lost Time",
+      "from": "1913"
+    }
+  ],
+  "maker": "Marcel Proust",
+  "summary": "Seven-volume French novel by Marcel Proust about a narrator's memories, love and place in society. The first volume, Swann's Way, appeared in 1913 and the last in 1927. It is one of the longest novels ever written.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "À la recherche du temps perdu",
+    "Remembrance of Things Past",
+    "A Search for Lost Time"
+  ],
+  "wikidata": "Q464928",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913",
+      "precision": "year",
+      "note": "The first of its seven volumes was published in 1913 and the last in 1927."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "marcel-proust"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: In Search of Lost Time (Q464928)",
+      "url": "https://www.wikidata.org/wiki/Q464928",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: In Search of Lost Time",
+      "url": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

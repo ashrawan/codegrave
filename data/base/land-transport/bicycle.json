@@ -1,0 +1,50 @@
+{
+  "id": "bicycle",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Bicycle",
+      "from": "1817"
+    }
+  ],
+  "summary": "A two-wheeled machine driven by the rider. Karl Drais's steered running machine of 1817 was the forerunner, and pedals and the chain-driven \"safety bicycle\" of the 1880s made cycling cheap transport for millions.",
+  "labels": [
+    "transport",
+    "firsts"
+  ],
+  "aliases": [
+    "bike",
+    "pushbike",
+    "pedal bike",
+    "pedal cycle",
+    "cycle"
+  ],
+  "wikidata": "Q11442",
+  "events": [
+    {
+      "type": "born",
+      "date": "1817",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: bicycle (Q11442)",
+      "url": "https://www.wikidata.org/wiki/Q11442",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bicycle",
+      "url": "https://en.wikipedia.org/wiki/Bicycle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

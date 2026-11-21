@@ -1,0 +1,45 @@
+{
+  "id": "wine",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Wine",
+      "from": "-6000"
+    }
+  ],
+  "summary": "A drink made by fermenting grape juice. Evidence of winemaking in the South Caucasus goes back thousands of years, and it spread through the Mediterranean world and then around the globe.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "vino"
+  ],
+  "wikidata": "Q282",
+  "events": [
+    {
+      "type": "born",
+      "date": "-6000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: wine (Q282)",
+      "url": "https://www.wikidata.org/wiki/Q282",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wine",
+      "url": "https://en.wikipedia.org/wiki/Wine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

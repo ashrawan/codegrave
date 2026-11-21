@@ -1,0 +1,53 @@
+{
+  "id": "2001-a-space-odyssey",
+  "category": "films",
+  "names": [
+    {
+      "name": "2001: A Space Odyssey",
+      "from": "1968"
+    }
+  ],
+  "maker": "Stanley Kubrick",
+  "summary": "Science-fiction film by Stanley Kubrick that follows human evolution from apes to a mission to Jupiter and a ship's computer that turns on its crew. Its realistic effects and almost silent stretches changed science-fiction cinema.",
+  "labels": [
+    "film",
+    "space-race"
+  ],
+  "wikidata": "Q103474",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-04-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "stanley-kubrick"
+    },
+    {
+      "type": "related",
+      "to": "odyssey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2001: A Space Odyssey (Q103474)",
+      "url": "https://www.wikidata.org/wiki/Q103474",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2001: A Space Odyssey",
+      "url": "https://en.wikipedia.org/wiki/2001:_A_Space_Odyssey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "british-museum",
+  "category": "schools",
+  "names": [
+    {
+      "name": "British Museum",
+      "from": "1759"
+    }
+  ],
+  "summary": "National museum in London, founded by an act of Parliament in 1753 and opened to the public in 1759. It holds about eight million objects from across world history, including the Rosetta Stone.",
+  "labels": [
+    "education",
+    "visual-art"
+  ],
+  "aliases": [
+    "the British Museum"
+  ],
+  "wikidata": "Q6373",
+  "events": [
+    {
+      "type": "born",
+      "date": "1759",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Museum (Q6373)",
+      "url": "https://www.wikidata.org/wiki/Q6373",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Museum",
+      "url": "https://en.wikipedia.org/wiki/British_Museum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

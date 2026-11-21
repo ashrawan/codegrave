@@ -1,0 +1,50 @@
+{
+  "id": "scurvy",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Scurvy",
+      "from": "-1500"
+    }
+  ],
+  "summary": "A disease caused by lack of vitamin C that killed many sailors on long voyages. It is described in ancient Egyptian writing, and eating citrus fruit was shown to prevent it in the 1700s.",
+  "labels": [
+    "medicine",
+    "exploration"
+  ],
+  "aliases": [
+    "Deficiency of vitamin C",
+    "L-Gulonolactone Oxidase, Nonfunctional",
+    "L-Gulonolactone Oxidase Pseudogene",
+    "Vitamin C, Inability to Synthesize",
+    "Scorbutus"
+  ],
+  "wikidata": "Q163865",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: scurvy (Q163865)",
+      "url": "https://www.wikidata.org/wiki/Q163865",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Scurvy",
+      "url": "https://en.wikipedia.org/wiki/Scurvy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

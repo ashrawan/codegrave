@@ -1,0 +1,56 @@
+{
+  "id": "greek-war-of-independence",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Greek War of Independence",
+      "from": "1821"
+    }
+  ],
+  "summary": "A revolt by Greeks against Ottoman rule that drew sympathy and, later, naval help from Britain, France and Russia. It led to the creation of an independent Greek state.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Greek revolution"
+  ],
+  "wikidata": "Q182062",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1829",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ottoman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Greek War of Independence (Q182062)",
+      "url": "https://www.wikidata.org/wiki/Q182062",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Greek War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Greek_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

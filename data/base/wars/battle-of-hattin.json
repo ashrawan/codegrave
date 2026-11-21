@@ -1,0 +1,64 @@
+{
+  "id": "battle-of-hattin",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Hattin",
+      "from": "1187"
+    }
+  ],
+  "summary": "Saladin's army destroyed the army of the Kingdom of Jerusalem near the Sea of Galilee. Within months he took Jerusalem, which led Europe to launch the Third Crusade.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "aliases": [
+    "Battle of Hattin (1187)"
+  ],
+  "wikidata": "Q233568",
+  "events": [
+    {
+      "type": "born",
+      "date": "1187-07-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1187-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-jerusalem"
+    },
+    {
+      "type": "related",
+      "to": "knights-templar"
+    },
+    {
+      "type": "related",
+      "to": "knights-hospitaller"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Hattin (Q233568)",
+      "url": "https://www.wikidata.org/wiki/Q233568",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Hattin",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Hattin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

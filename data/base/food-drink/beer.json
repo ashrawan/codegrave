@@ -1,0 +1,46 @@
+{
+  "id": "beer",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Beer",
+      "from": "-3500"
+    }
+  ],
+  "summary": "A drink brewed by fermenting grain, usually barley. It was made in ancient Mesopotamia and Egypt, where it was part of everyday meals and wages, and is now one of the most widely drunk alcoholic drinks.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "brew",
+    "Beers"
+  ],
+  "wikidata": "Q44",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: beer (Q44)",
+      "url": "https://www.wikidata.org/wiki/Q44",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Beer",
+      "url": "https://en.wikipedia.org/wiki/Beer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "water-clock",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Water clock",
+      "from": "-1500"
+    }
+  ],
+  "maker": "Ancient Egyptians, Babylonians and Chinese",
+  "summary": "A clock that measures time by the steady flow of water into or out of a vessel. It was used in Egypt, Greece, China and the Islamic world to mark hours, even at night or on cloudy days.",
+  "labels": [
+    "astronomy",
+    "engineering"
+  ],
+  "aliases": [
+    "clepsydra"
+  ],
+  "wikidata": "Q194173",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by mechanical clocks",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: water clock (Q194173)",
+      "url": "https://www.wikidata.org/wiki/Q194173",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Water clock",
+      "url": "https://en.wikipedia.org/wiki/Water_clock",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

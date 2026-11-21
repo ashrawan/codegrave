@@ -1,0 +1,58 @@
+{
+  "id": "nile-river",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Nile",
+      "from": "-6000000"
+    }
+  ],
+  "summary": "The great river of north-east Africa, whose yearly floods made a fertile strip of farmland through the Egyptian desert. Ancient Egyptian civilisation grew along it, and it is traditionally listed as the longest river in the world.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Nile River",
+    "River Nile",
+    "Bahr en Nīl",
+    "Nahr an Nīl",
+    "Nīl River"
+  ],
+  "wikidata": "Q3392",
+  "events": [
+    {
+      "type": "born",
+      "date": "-6000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nile (Q3392)",
+      "url": "https://www.wikidata.org/wiki/Q3392",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nile",
+      "url": "https://en.wikipedia.org/wiki/Nile",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

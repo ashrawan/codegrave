@@ -1,0 +1,53 @@
+{
+  "id": "plesiosaur",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Plesiosaur",
+      "from": "-199600000"
+    }
+  ],
+  "summary": "Sea reptiles with a broad body, four flippers and, in many kinds, a very long neck. They swam the oceans of the Jurassic and Cretaceous, and the Loch Ness monster legend is often compared to them.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q857081",
+  "events": [
+    {
+      "type": "born",
+      "date": "-199600000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Wiped out in the mass extinction at the end of the Cretaceous",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mary-anning"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Plesiosaurus (Q857081)",
+      "url": "https://www.wikidata.org/wiki/Q857081",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plesiosaurus",
+      "url": "https://en.wikipedia.org/wiki/Plesiosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

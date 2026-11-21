@@ -1,0 +1,51 @@
+{
+  "id": "windows-11",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows 11",
+      "from": "2021"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's Windows release of 2021, with a centred taskbar and rounded windows and stricter hardware rules. It replaced Windows 10, whose regular support ended in 2025.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Windows11"
+  ],
+  "wikidata": "Q107269746",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-10-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Windows 11 (Q107269746)",
+      "url": "https://www.wikidata.org/wiki/Q107269746",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windows 11",
+      "url": "https://en.wikipedia.org/wiki/Windows_11",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

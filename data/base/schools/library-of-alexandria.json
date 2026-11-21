@@ -1,0 +1,64 @@
+{
+  "id": "library-of-alexandria",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Library of Alexandria",
+      "from": "-0285"
+    }
+  ],
+  "summary": "The great library of the ancient Mediterranean, founded under the Ptolemies in Egypt to collect every book in the world. Scholars there measured the Earth and edited Homer. It declined over centuries rather than burning in a single fire.",
+  "labels": [
+    "education",
+    "lost"
+  ],
+  "aliases": [
+    "Royal Library of Alexandria",
+    "Ancient Library of Alexandria",
+    "Alexandrian Library",
+    "Great Library of Alexandria"
+  ],
+  "wikidata": "Q435",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0285",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0272",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined after losing royal support and was destroyed in fighting over the city",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "alexandria"
+    },
+    {
+      "type": "in",
+      "to": "ptolemaic-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Library of Alexandria (Q435)",
+      "url": "https://www.wikidata.org/wiki/Q435",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Library of Alexandria",
+      "url": "https://en.wikipedia.org/wiki/Library_of_Alexandria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

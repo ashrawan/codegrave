@@ -1,0 +1,55 @@
+{
+  "id": "cicero",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Cicero",
+      "from": "-0106"
+    }
+  ],
+  "summary": "Roman lawyer, orator and statesman who was consul in 63 BCE. He wrote speeches, letters and works on philosophy, and he opposed Mark Antony after Caesar's death, which led to his murder.",
+  "labels": [
+    "politics",
+    "law",
+    "literature"
+  ],
+  "aliases": [
+    "M. Tullius Cicero",
+    "Marcus Tullius Cicero",
+    "Tully",
+    "M. Tullii Ciceronis"
+  ],
+  "wikidata": "Q1541",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0106-01-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0043-12-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Cicero (Q1541)",
+      "url": "https://www.wikidata.org/wiki/Q1541",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cicero",
+      "url": "https://en.wikipedia.org/wiki/Cicero",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

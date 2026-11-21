@@ -1,0 +1,58 @@
+{
+  "id": "beyonce",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Beyoncé",
+      "from": "1981"
+    }
+  ],
+  "summary": "American singer and songwriter who rose with the group Destiny's Child and then began a solo career in 2003. Her albums Lemonade and Renaissance and her live shows have won her many Grammy Awards.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Third Ward Trill",
+    "Queen B",
+    "Queen Bey",
+    "Harmonies by the Hive",
+    "Beyoncé Giselle Knowles Carter"
+  ],
+  "wikidata": "Q36153",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-09-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "michael-jackson"
+    },
+    {
+      "type": "influenced_by",
+      "to": "tina-turner"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Beyoncé (Q36153)",
+      "url": "https://www.wikidata.org/wiki/Q36153",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Beyoncé",
+      "url": "https://en.wikipedia.org/wiki/Beyonc%C3%A9",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

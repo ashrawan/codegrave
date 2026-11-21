@@ -1,0 +1,83 @@
+{
+  "id": "english-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "English",
+      "from": "0700"
+    }
+  ],
+  "summary": "Germanic language that began in England from the speech of Anglo-Saxon settlers. Old English appears in writing from around the seventh century. It is now spoken or used by more people worldwide than any other language.",
+  "labels": [
+    "language"
+  ],
+  "wikidata": "Q1860",
+  "events": [
+    {
+      "type": "born",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    },
+    {
+      "type": "in",
+      "to": "canada"
+    },
+    {
+      "type": "influenced_by",
+      "to": "french-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "spanish-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "japanese-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "arabic"
+    },
+    {
+      "type": "influenced_by",
+      "to": "portuguese-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "sanskrit"
+    },
+    {
+      "type": "influenced_by",
+      "to": "russian-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "hindi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: English (Q1860)",
+      "url": "https://www.wikidata.org/wiki/Q1860",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: English language",
+      "url": "https://en.wikipedia.org/wiki/English_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

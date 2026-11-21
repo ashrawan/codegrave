@@ -1,0 +1,43 @@
+{
+  "id": "dhow",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Dhow",
+      "from": "0700"
+    }
+  ],
+  "summary": "A traditional sailing boat of the Indian Ocean with one or more lateen sails. Dhows carried goods and people between Arabia, East Africa and India for many centuries, and some are still used in trade.",
+  "labels": [
+    "transport",
+    "exploration"
+  ],
+  "wikidata": "Q171799",
+  "events": [
+    {
+      "type": "born",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: dhow (Q171799)",
+      "url": "https://www.wikidata.org/wiki/Q171799",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dhow",
+      "url": "https://en.wikipedia.org/wiki/Dhow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

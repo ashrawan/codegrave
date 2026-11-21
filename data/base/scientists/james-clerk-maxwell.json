@@ -1,0 +1,64 @@
+{
+  "id": "james-clerk-maxwell",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "James Clerk Maxwell",
+      "from": "1831"
+    }
+  ],
+  "summary": "Scottish physicist who wrote the equations that join electricity, magnetism and light into one theory. He showed that light is an electromagnetic wave, and he also helped found the kinetic theory of gases and colour photography.",
+  "labels": [
+    "physics",
+    "mathematics"
+  ],
+  "aliases": [
+    "Maxwell"
+  ],
+  "wikidata": "Q9095",
+  "events": [
+    {
+      "type": "born",
+      "date": "1831-06-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1879-11-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "isaac-newton"
+    },
+    {
+      "type": "influenced_by",
+      "to": "michael-faraday"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James Clerk Maxwell (Q9095)",
+      "url": "https://www.wikidata.org/wiki/Q9095",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Clerk Maxwell",
+      "url": "https://en.wikipedia.org/wiki/James_Clerk_Maxwell",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

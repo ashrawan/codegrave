@@ -1,0 +1,48 @@
+{
+  "id": "john-milton",
+  "category": "writers",
+  "names": [
+    {
+      "name": "John Milton",
+      "from": "1608"
+    }
+  ],
+  "summary": "English poet and official who wrote the epic Paradise Lost. He supported Parliament in the English Civil War, argued against censorship in Areopagitica, and was blind when he composed his greatest poem.",
+  "labels": [
+    "literature",
+    "religion"
+  ],
+  "wikidata": "Q79759",
+  "events": [
+    {
+      "type": "born",
+      "date": "1608-12-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1674-11-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Milton (Q79759)",
+      "url": "https://www.wikidata.org/wiki/Q79759",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Milton",
+      "url": "https://en.wikipedia.org/wiki/John_Milton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

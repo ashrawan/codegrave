@@ -1,0 +1,49 @@
+{
+  "id": "angkor",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Angkor",
+      "from": "0802"
+    }
+  ],
+  "summary": "Capital region of the Khmer Empire in Cambodia, with temples, reservoirs and canals spread across a wide area. The Khmer court left after a Siamese attack, though monks kept some temples in use.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "wikidata": "Q163607",
+  "events": [
+    {
+      "type": "born",
+      "date": "0802",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1431",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned as capital after an attack by Ayutthaya",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Angkor (Q163607)",
+      "url": "https://www.wikidata.org/wiki/Q163607",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Angkor",
+      "url": "https://en.wikipedia.org/wiki/Angkor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

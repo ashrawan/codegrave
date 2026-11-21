@@ -1,0 +1,58 @@
+{
+  "id": "parthian-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Parthian Empire",
+      "from": "-0247"
+    }
+  ],
+  "summary": "An Iranian empire that held Persia and Mesopotamia for nearly five centuries. Its mounted archers defeated a Roman army at Carrhae, and its lands lay along the trade routes between Rome and China.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Arsacid dynasty of Parthia",
+    "Arsacid Empire"
+  ],
+  "wikidata": "Q1986139",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0247",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0224",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown by the Sasanian dynasty",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "sasanian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Parthian Empire (Q1986139)",
+      "url": "https://www.wikidata.org/wiki/Q1986139",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Parthian Empire",
+      "url": "https://en.wikipedia.org/wiki/Parthian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "apollo-1-fire",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Apollo 1 fire",
+      "from": "1967"
+    }
+  ],
+  "summary": "A fire swept through the Apollo command module during a launch rehearsal on the ground and killed three astronauts. The spacecraft was redesigned with safer materials and a hatch that opened faster.",
+  "labels": [
+    "space-race"
+  ],
+  "aliases": [
+    "AS-204",
+    "Apollo I"
+  ],
+  "wikidata": "Q194082",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-01-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-01-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "apollo-program"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apollo 1 (Q194082)",
+      "url": "https://www.wikidata.org/wiki/Q194082",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apollo 1",
+      "url": "https://en.wikipedia.org/wiki/Apollo_1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

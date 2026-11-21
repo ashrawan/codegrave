@@ -1,0 +1,47 @@
+{
+  "id": "time-magazine",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Time",
+      "from": "1923"
+    }
+  ],
+  "summary": "American weekly news magazine founded by Henry Luce and Briton Hadden. It became known for its red-bordered cover and for its Person of the Year feature.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q43297",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-03-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Time (Q43297)",
+      "url": "https://www.wikidata.org/wiki/Q43297",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Time (magazine)",
+      "url": "https://en.wikipedia.org/wiki/Time_(magazine)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

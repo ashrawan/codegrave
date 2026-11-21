@@ -1,0 +1,47 @@
+{
+  "id": "vodka",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Vodka",
+      "from": "1400"
+    }
+  ],
+  "summary": "A clear spirit made by distilling grain or potatoes. It became a national drink in Poland and Russia, and its early history is disputed between the two countries.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q374",
+  "events": [
+    {
+      "type": "born",
+      "date": "1400",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: vodka (Q374)",
+      "url": "https://www.wikidata.org/wiki/Q374",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vodka",
+      "url": "https://en.wikipedia.org/wiki/Vodka",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

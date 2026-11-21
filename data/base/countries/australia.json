@@ -1,0 +1,62 @@
+{
+  "id": "australia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Australia",
+      "from": "1901"
+    }
+  ],
+  "summary": "A country and continent in the southern hemisphere, formed in 1901 when six British colonies federated. Its Aboriginal peoples have lived there for tens of thousands of years.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Commonwealth of Australia",
+    "Straya",
+    "Aussieland",
+    "Oz",
+    "Stralia"
+  ],
+  "wikidata": "Q408",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "asean"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Australia (Q408)",
+      "url": "https://www.wikidata.org/wiki/Q408",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Australia",
+      "url": "https://en.wikipedia.org/wiki/Australia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

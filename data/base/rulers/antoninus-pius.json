@@ -1,0 +1,55 @@
+{
+  "id": "antoninus-pius",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Antoninus Pius",
+      "from": "0086"
+    }
+  ],
+  "summary": "Roman emperor who followed Hadrian and ruled for over twenty years in a time of peace and steady government. He had a second wall built in Scotland, which was later given up.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Antoninus"
+  ],
+  "wikidata": "Q1429",
+  "events": [
+    {
+      "type": "born",
+      "date": "0086-09-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0161-03-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "hadrian"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antoninus Pius (Q1429)",
+      "url": "https://www.wikidata.org/wiki/Q1429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antoninus Pius",
+      "url": "https://en.wikipedia.org/wiki/Antoninus_Pius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

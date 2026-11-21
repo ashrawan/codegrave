@@ -1,0 +1,52 @@
+{
+  "id": "rms-lusitania",
+  "category": "ships",
+  "names": [
+    {
+      "name": "RMS Lusitania",
+      "from": "1904"
+    }
+  ],
+  "summary": "A British ocean liner that was torpedoed by a German submarine off Ireland in 1915 with the loss of more than a thousand people. Her sinking turned opinion in neutral countries against Germany.",
+  "labels": [
+    "war",
+    "transport"
+  ],
+  "aliases": [
+    "Lusitania"
+  ],
+  "wikidata": "Q187425",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-08-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1915",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Torpedoed by a German U-boat",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: RMS Lusitania (Q187425)",
+      "url": "https://www.wikidata.org/wiki/Q187425",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: RMS Lusitania",
+      "url": "https://en.wikipedia.org/wiki/RMS_Lusitania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

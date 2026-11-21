@@ -1,0 +1,63 @@
+{
+  "id": "revolutions-of-1848",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Revolutions of 1848",
+      "from": "1848"
+    }
+  ],
+  "summary": "A wave of uprisings across Europe, from France to the Habsburg lands, demanding constitutions, national rights and fairer government. Most failed in the short term but changed European politics.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "European Revolutions of 1848",
+    "Europe before of Revolutions of 1848",
+    "Revolution of 1848",
+    "1848 revolutions",
+    "Spring of Nations"
+  ],
+  "wikidata": "Q3588",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-01-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1849-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "age-of-revolution"
+    },
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: European Revolutions of 1848 (Q3588)",
+      "url": "https://www.wikidata.org/wiki/Q3588",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Revolutions of 1848",
+      "url": "https://en.wikipedia.org/wiki/Revolutions_of_1848",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

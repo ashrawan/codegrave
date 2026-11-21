@@ -1,0 +1,59 @@
+{
+  "id": "anglo-zulu-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Anglo-Zulu War",
+      "from": "1879"
+    }
+  ],
+  "summary": "A war between Britain and the Zulu Kingdom in southern Africa. The Zulu won at Isandlwana but were beaten later, and their kingdom was brought under British control.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Zulu War"
+  ],
+  "wikidata": "Q228911",
+  "events": [
+    {
+      "type": "born",
+      "date": "1879-01-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1879-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zulu-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anglo-Zulu War (Q228911)",
+      "url": "https://www.wikidata.org/wiki/Q228911",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anglo-Zulu War",
+      "url": "https://en.wikipedia.org/wiki/Anglo-Zulu_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

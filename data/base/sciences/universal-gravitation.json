@@ -1,0 +1,57 @@
+{
+  "id": "universal-gravitation",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Newton's law of universal gravitation",
+      "from": "1687"
+    }
+  ],
+  "summary": "Newton's idea, published in 1687, that every mass attracts every other mass with a force that falls with distance. It explained the fall of an apple, the tides and the orbits of the planets with one rule.",
+  "labels": [
+    "physics",
+    "astronomy"
+  ],
+  "aliases": [
+    "universal gravitation",
+    "Newtonian gravity",
+    "Newton's theory of gravitation"
+  ],
+  "wikidata": "Q134465",
+  "events": [
+    {
+      "type": "born",
+      "date": "1687",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "robert-hooke"
+    },
+    {
+      "type": "related",
+      "to": "isaac-newton"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Newton's law of universal gravitation (Q134465)",
+      "url": "https://www.wikidata.org/wiki/Q134465",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Newton's law of universal gravitation",
+      "url": "https://en.wikipedia.org/wiki/Newton's_law_of_universal_gravitation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

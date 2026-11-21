@@ -1,0 +1,52 @@
+{
+  "id": "the-lord-of-the-rings",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Lord of the Rings",
+      "from": "1954"
+    }
+  ],
+  "summary": "Fantasy epic by J. R. R. Tolkien in which the hobbit Frodo sets out to destroy a ring of power. It set the pattern for modern fantasy and is among the best-selling books ever.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Lord of the Rings",
+    "TLotR",
+    "LotR"
+  ],
+  "wikidata": "Q15228",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jrr-tolkien"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Lord of the Rings (Q15228)",
+      "url": "https://www.wikidata.org/wiki/Q15228",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Lord of the Rings",
+      "url": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

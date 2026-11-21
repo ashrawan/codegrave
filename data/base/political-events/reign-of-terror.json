@@ -1,0 +1,61 @@
+{
+  "id": "reign-of-terror",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Reign of Terror",
+      "from": "1793"
+    }
+  ],
+  "summary": "A period of the French Revolution in which the government used mass arrests and the guillotine against its enemies. Thousands were executed, among them Louis XVI, Marie Antoinette and, finally, Robespierre.",
+  "labels": [
+    "politics",
+    "law"
+  ],
+  "aliases": [
+    "The Terror",
+    "la Terreur"
+  ],
+  "wikidata": "Q193547",
+  "events": [
+    {
+      "type": "born",
+      "date": "1793-09-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1794-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "french-revolution"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Reign of Terror (Q193547)",
+      "url": "https://www.wikidata.org/wiki/Q193547",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reign of Terror",
+      "url": "https://en.wikipedia.org/wiki/Reign_of_Terror",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

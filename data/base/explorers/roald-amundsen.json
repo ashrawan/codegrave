@@ -1,0 +1,51 @@
+{
+  "id": "roald-amundsen",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Roald Amundsen",
+      "from": "1872"
+    }
+  ],
+  "summary": "Norwegian explorer whose team reached the South Pole first, in December 1911. He also led the first ship voyage through the Northwest Passage and died in 1928 flying to help a missing airship.",
+  "labels": [
+    "exploration",
+    "firsts"
+  ],
+  "aliases": [
+    "R. Amundsen"
+  ],
+  "wikidata": "Q926",
+  "events": [
+    {
+      "type": "born",
+      "date": "1872-07-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1928-06-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Roald Amundsen (Q926)",
+      "url": "https://www.wikidata.org/wiki/Q926",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roald Amundsen",
+      "url": "https://en.wikipedia.org/wiki/Roald_Amundsen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

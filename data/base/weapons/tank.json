@@ -1,0 +1,49 @@
+{
+  "id": "tank",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Tank",
+      "from": "1915"
+    }
+  ],
+  "maker": "British Army",
+  "summary": "An armoured fighting vehicle moving on tracks and carrying a gun. Tanks were first used in the Battle of the Somme in 1916 to cross trenches and barbed wire, and they became the centre of land warfare in the Second World War.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "aliases": [
+    "military tank",
+    "combat tank",
+    "panzer"
+  ],
+  "wikidata": "Q12876",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: tank (Q12876)",
+      "url": "https://www.wikidata.org/wiki/Q12876",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tank",
+      "url": "https://en.wikipedia.org/wiki/Tank",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

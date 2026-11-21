@@ -1,0 +1,54 @@
+{
+  "id": "pyrenean-ibex",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Pyrenean ibex",
+      "from": "1838"
+    }
+  ],
+  "summary": "A wild mountain goat of Spain and France. The last female died in 2000, and a clone born in 2003 lived only minutes, which made it the first animal to be brought back, briefly, after extinction.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Capra pyrenaica pyrenaica"
+  ],
+  "wikidata": "Q1941059",
+  "events": [
+    {
+      "type": "born",
+      "date": "1838",
+      "precision": "year",
+      "label": "Described",
+      "note": "Named as a subspecies of the Iberian ibex in 1838. No sourced estimate of its origin is given here; the animals had lived in the Pyrenees since the last ice age."
+    },
+    {
+      "type": "ended",
+      "date": "2000-01-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overhunted, then low numbers and loss of habitat",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pyrenean ibex (Q1941059)",
+      "url": "https://www.wikidata.org/wiki/Q1941059",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pyrenean ibex",
+      "url": "https://en.wikipedia.org/wiki/Pyrenean_ibex",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

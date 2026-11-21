@@ -1,0 +1,47 @@
+{
+  "id": "transistor",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Transistor",
+      "from": "1947"
+    }
+  ],
+  "maker": "John Bardeen, Walter Brattain and William Shockley",
+  "summary": "Small solid-state switch and amplifier that replaced vacuum tubes and is the basic part of every modern chip. The first working one was built at Bell Laboratories in December 1947.",
+  "labels": [
+    "physics",
+    "engineering"
+  ],
+  "aliases": [
+    "transistors"
+  ],
+  "wikidata": "Q5339",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-12",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: transistor (Q5339)",
+      "url": "https://www.wikidata.org/wiki/Q5339",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Transistor",
+      "url": "https://en.wikipedia.org/wiki/Transistor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,58 @@
+{
+  "id": "machu-picchu",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Machu Picchu",
+      "from": "1450"
+    }
+  ],
+  "summary": "Mountain estate of the Inca rulers high in the Peruvian Andes, with terraces, temples and stone houses. It was left empty after the Spanish conquest and became widely known to the outside world in 1911.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Huayna Picchu",
+    "Wayna Picchu"
+  ],
+  "wikidata": "Q676203",
+  "events": [
+    {
+      "type": "born",
+      "date": "1450",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1572",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned during and after the Spanish conquest of the Inca",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Machu Picchu (Q676203)",
+      "url": "https://www.wikidata.org/wiki/Q676203",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Machu Picchu",
+      "url": "https://en.wikipedia.org/wiki/Machu_Picchu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

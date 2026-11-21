@@ -1,0 +1,58 @@
+{
+  "id": "british-library",
+  "category": "schools",
+  "names": [
+    {
+      "name": "British Library",
+      "from": "1973"
+    }
+  ],
+  "summary": "National library of the United Kingdom, formed from the library departments of the British Museum and other bodies. It holds the Magna Carta and many other manuscripts and receives a copy of every book published in Britain.",
+  "labels": [
+    "education",
+    "literature"
+  ],
+  "aliases": [
+    "BL",
+    "B.L.",
+    "The British Library",
+    "The British Museum Library"
+  ],
+  "wikidata": "Q23308",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Library (Q23308)",
+      "url": "https://www.wikidata.org/wiki/Q23308",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Library",
+      "url": "https://en.wikipedia.org/wiki/British_Library",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

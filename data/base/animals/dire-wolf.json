@@ -1,0 +1,52 @@
+{
+  "id": "dire-wolf",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Dire wolf",
+      "from": "-125000"
+    }
+  ],
+  "summary": "A heavy wolf-like predator of ice age America with a large head and strong jaws. Thousands of bones have been recovered from the La Brea tar pits in California.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Aenocyon dirus",
+    "direwolf"
+  ],
+  "wikidata": "Q496689",
+  "events": [
+    {
+      "type": "born",
+      "date": "-125000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Died out with its large prey at the end of the ice age",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: dire wolf (Q496689)",
+      "url": "https://www.wikidata.org/wiki/Q496689",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dire wolf",
+      "url": "https://en.wikipedia.org/wiki/Dire_wolf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

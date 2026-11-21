@@ -1,0 +1,57 @@
+{
+  "id": "velvet-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Velvet Revolution",
+      "from": "1989"
+    }
+  ],
+  "summary": "A peaceful uprising in Czechoslovakia, begun by student protests in November 1989, that ended one-party communist rule in a few weeks. Václav Havel became president.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "sametová revoluce",
+    "Gentle Revolution",
+    "nežná revolúcia"
+  ],
+  "wikidata": "Q182817",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-11-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-12-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czechoslovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Velvet Revolution (Q182817)",
+      "url": "https://www.wikidata.org/wiki/Q182817",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Velvet Revolution",
+      "url": "https://en.wikipedia.org/wiki/Velvet_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

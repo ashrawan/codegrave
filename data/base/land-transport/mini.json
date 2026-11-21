@@ -1,0 +1,59 @@
+{
+  "id": "mini",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Mini",
+      "from": "1959"
+    }
+  ],
+  "maker": "Alec Issigonis, British Motor Corporation",
+  "summary": "A small British car launched in 1959 with a sideways engine that left most of its body for passengers. Designed by Alec Issigonis, it was a hit in the 1960s and sold for more than forty years.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "wikidata": "Q116232",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Original model ended after forty years of production",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mini (Q116232)",
+      "url": "https://www.wikidata.org/wiki/Q116232",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mini (marque)",
+      "url": "https://en.wikipedia.org/wiki/Mini_(marque)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

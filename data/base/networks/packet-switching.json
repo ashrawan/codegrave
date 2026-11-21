@@ -1,0 +1,46 @@
+{
+  "id": "packet-switching",
+  "category": "networks",
+  "names": [
+    {
+      "name": "Packet switching",
+      "from": "1965"
+    }
+  ],
+  "summary": "Method of sending data by cutting it into small packets that travel separately and are put back together at the other end. Paul Baran and Donald Davies devised it independently, and it underlies ARPANET and the internet.",
+  "labels": [
+    "computing",
+    "firsts"
+  ],
+  "aliases": [
+    "packet-switched"
+  ],
+  "wikidata": "Q193446",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: packet switching (Q193446)",
+      "url": "https://www.wikidata.org/wiki/Q193446",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Packet switching",
+      "url": "https://en.wikipedia.org/wiki/Packet_switching",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

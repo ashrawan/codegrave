@@ -1,0 +1,56 @@
+{
+  "id": "first-french-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "First French Empire",
+      "from": "1804"
+    }
+  ],
+  "summary": "The state led by Napoleon Bonaparte, who crowned himself emperor in 1804. It spread the Napoleonic Code and reorganised much of Europe, until a coalition of powers defeated him.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Greater French Empire",
+    "Napoleonic Empire",
+    "French Empire",
+    "Napoleonic France",
+    "French First Empire"
+  ],
+  "wikidata": "Q71084",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-05-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1815-07-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Napoleon abdicated after defeat by a European coalition; a brief return ended at Waterloo",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: First French Empire (Q71084)",
+      "url": "https://www.wikidata.org/wiki/Q71084",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First French Empire",
+      "url": "https://en.wikipedia.org/wiki/First_French_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

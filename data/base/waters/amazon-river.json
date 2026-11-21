@@ -1,0 +1,58 @@
+{
+  "id": "amazon-river",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Amazon River",
+      "from": "-10000000"
+    }
+  ],
+  "summary": "The river with the largest flow of water in the world, draining the vast Amazon rainforest. It took its present course across South America, flowing east to the Atlantic, within the last ten million years or so.",
+  "labels": [
+    "environment",
+    "record-holders"
+  ],
+  "aliases": [
+    "River Amazon",
+    "Amazonian River",
+    "The Amazon",
+    "The Amazon River"
+  ],
+  "wikidata": "Q3783",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    },
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Amazon River (Q3783)",
+      "url": "https://www.wikidata.org/wiki/Q3783",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amazon River",
+      "url": "https://en.wikipedia.org/wiki/Amazon_River",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

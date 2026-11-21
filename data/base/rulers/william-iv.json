@@ -1,0 +1,54 @@
+{
+  "id": "william-iv",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "William IV",
+      "from": "1765"
+    }
+  ],
+  "summary": "Known as the Sailor King for his years in the navy. The Reform Act of 1832 was passed in his reign.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q130822",
+  "events": [
+    {
+      "type": "born",
+      "date": "1765-08-21",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1830-06-26",
+      "precision": "day",
+      "label": "Became king",
+      "note": "King of the United Kingdom from 1830 to 1837."
+    },
+    {
+      "type": "ended",
+      "date": "1837-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: William IV (Q130822)",
+      "url": "https://www.wikidata.org/wiki/Q130822",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: William IV",
+      "url": "https://en.wikipedia.org/wiki/William_IV",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

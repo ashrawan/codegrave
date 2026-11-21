@@ -1,0 +1,55 @@
+{
+  "id": "k-computer",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "K computer",
+      "from": "2011"
+    }
+  ],
+  "maker": "Fujitsu and RIKEN",
+  "summary": "Japanese supercomputer at the RIKEN institute in Kobe. It was the world's fastest in 2011 and was used to study weather, earthquakes and drug design before it was replaced by Fugaku.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q183012",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2019-08-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Shut down and replaced by the Fugaku supercomputer",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: K computer (Q183012)",
+      "url": "https://www.wikidata.org/wiki/Q183012",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: K computer",
+      "url": "https://en.wikipedia.org/wiki/K_computer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

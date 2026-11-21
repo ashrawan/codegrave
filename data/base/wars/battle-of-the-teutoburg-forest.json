@@ -1,0 +1,52 @@
+{
+  "id": "battle-of-the-teutoburg-forest",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of the Teutoburg Forest",
+      "from": "0009"
+    }
+  ],
+  "summary": "Germanic tribes led by Arminius ambushed three Roman legions in the forests of northern Germany. The loss stopped Roman expansion beyond the Rhine and shaped the border of the empire for centuries.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q87779",
+  "events": [
+    {
+      "type": "born",
+      "date": "0009-09",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "0009-09",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of the Teutoburg Forest (Q87779)",
+      "url": "https://www.wikidata.org/wiki/Q87779",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of the Teutoburg Forest",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Teutoburg_Forest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

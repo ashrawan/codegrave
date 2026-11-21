@@ -1,0 +1,57 @@
+{
+  "id": "human-genome-project",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Human Genome Project",
+      "from": "1990"
+    }
+  ],
+  "summary": "International research effort to read the full sequence of human DNA. It began in 1990, a first draft came out in 2001, and the project announced it was finished in 2003.",
+  "labels": [
+    "biology",
+    "medicine"
+  ],
+  "aliases": [
+    "HGP"
+  ],
+  "wikidata": "Q192446",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2003-04-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Completed: the full human genome sequence was announced in 2003",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Human Genome Project (Q192446)",
+      "url": "https://www.wikidata.org/wiki/Q192446",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Human Genome Project",
+      "url": "https://en.wikipedia.org/wiki/Human_Genome_Project",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

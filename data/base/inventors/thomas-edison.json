@@ -1,0 +1,48 @@
+{
+  "id": "thomas-edison",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Thomas Edison",
+      "from": "1847"
+    }
+  ],
+  "summary": "American inventor who held over a thousand patents and set up a research laboratory at Menlo Park. He improved the phonograph and the electric light bulb and helped build one of the first electric power systems.",
+  "labels": [
+    "engineering",
+    "energy"
+  ],
+  "wikidata": "Q8743",
+  "events": [
+    {
+      "type": "born",
+      "date": "1847-02-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1931-10-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Thomas Edison (Q8743)",
+      "url": "https://www.wikidata.org/wiki/Q8743",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thomas Edison",
+      "url": "https://en.wikipedia.org/wiki/Thomas_Edison",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

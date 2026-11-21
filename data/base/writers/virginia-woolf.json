@@ -1,0 +1,58 @@
+{
+  "id": "virginia-woolf",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Virginia Woolf",
+      "from": "1882"
+    }
+  ],
+  "summary": "English novelist and essayist of the Bloomsbury group who wrote Mrs Dalloway and To the Lighthouse. She used the flow of thought inside characters' minds, and her essay A Room of One's Own argued for women writers.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Virginia Adeline Woolf",
+    "Adeline Virginia Stephen Woolf",
+    "Virginia Stephen Woolf",
+    "Virginia Stephen"
+  ],
+  "wikidata": "Q40909",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882-01-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941-03-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "george-eliot"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Virginia Woolf (Q40909)",
+      "url": "https://www.wikidata.org/wiki/Q40909",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Virginia Woolf",
+      "url": "https://en.wikipedia.org/wiki/Virginia_Woolf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

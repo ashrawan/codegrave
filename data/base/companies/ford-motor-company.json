@@ -1,0 +1,59 @@
+{
+  "id": "ford-motor-company",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Ford Motor Company",
+      "from": "1903"
+    }
+  ],
+  "maker": "Henry Ford",
+  "summary": "American car maker whose Model T and moving assembly line made cars cheap enough for ordinary families. It remains one of the world's large vehicle makers.",
+  "labels": [
+    "business",
+    "engineering",
+    "transport"
+  ],
+  "aliases": [
+    "Ford Motor Corporation",
+    "FoMoCo",
+    "Ford Motors"
+  ],
+  "wikidata": "Q44294",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903-06-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "henry-ford"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ford Motor Company (Q44294)",
+      "url": "https://www.wikidata.org/wiki/Q44294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ford Motor Company",
+      "url": "https://en.wikipedia.org/wiki/Ford_Motor_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

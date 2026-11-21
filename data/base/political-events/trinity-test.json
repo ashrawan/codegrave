@@ -1,0 +1,63 @@
+{
+  "id": "trinity-test",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Trinity test",
+      "from": "1945"
+    }
+  ],
+  "summary": "The first explosion of a nuclear weapon, carried out by the Manhattan Project in the New Mexico desert on 16 July 1945. It confirmed that the bomb design worked, a few weeks before Hiroshima.",
+  "labels": [
+    "war",
+    "physics",
+    "firsts"
+  ],
+  "aliases": [
+    "Trinity",
+    "The Trinity Test",
+    "Trinity Explosion"
+  ],
+  "wikidata": "Q207342",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-07-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-07-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "manhattan-project"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Trinity (Q207342)",
+      "url": "https://www.wikidata.org/wiki/Q207342",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trinity (nuclear test)",
+      "url": "https://en.wikipedia.org/wiki/Trinity_(nuclear_test)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "edward-the-confessor",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Edward the Confessor",
+      "from": "1003"
+    }
+  ],
+  "summary": "King of England from 1042. He rebuilt Westminster Abbey, and his death without an heir in January 1066 opened the struggle for the crown.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q130005",
+  "events": [
+    {
+      "type": "born",
+      "date": "1003",
+      "precision": "circa"
+    },
+    {
+      "type": "milestone",
+      "date": "1042",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1042 to 1066."
+    },
+    {
+      "type": "ended",
+      "date": "1066-01-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Edward the Confessor (Q130005)",
+      "url": "https://www.wikidata.org/wiki/Q130005",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward the Confessor",
+      "url": "https://en.wikipedia.org/wiki/Edward_the_Confessor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

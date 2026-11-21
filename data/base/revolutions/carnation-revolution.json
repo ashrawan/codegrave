@@ -1,0 +1,52 @@
+{
+  "id": "carnation-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Carnation Revolution",
+      "from": "1974"
+    }
+  ],
+  "summary": "A mostly bloodless military coup in Portugal that ended the long dictatorship. Citizens put carnations in soldiers' rifles, and the change led to democracy and independence for Portugal's African colonies.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q193245",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974-04-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-04-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carnation Revolution (Q193245)",
+      "url": "https://www.wikidata.org/wiki/Q193245",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carnation Revolution",
+      "url": "https://en.wikipedia.org/wiki/Carnation_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

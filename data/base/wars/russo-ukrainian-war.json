@@ -1,0 +1,57 @@
+{
+  "id": "russo-ukrainian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Russo-Ukrainian War",
+      "from": "2014"
+    }
+  ],
+  "summary": "A conflict between Russia and Ukraine that began in 2014 with the annexation of Crimea and fighting in the Donbas. Russia launched a full-scale invasion in February 2022.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Putin's war of aggression",
+    "Russian war in Ukraine",
+    "Russia-Ukraine war",
+    "Russian-Ukrainian war"
+  ],
+  "wikidata": "Q15860072",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-02-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russo-Ukrainian war (Q15860072)",
+      "url": "https://www.wikidata.org/wiki/Q15860072",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russo-Ukrainian war",
+      "url": "https://en.wikipedia.org/wiki/Russo-Ukrainian_war",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

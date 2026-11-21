@@ -1,0 +1,47 @@
+{
+  "id": "llama",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Llama",
+      "from": "-4000"
+    }
+  ],
+  "summary": "A South American animal tamed in the Andes from the wild guanaco. People used llamas to carry loads and for wool and meat, before the Inca and long before horses arrived.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "Lama glama",
+    "Domestic llama",
+    "Domesticated llama"
+  ],
+  "wikidata": "Q42569",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: llama (Q42569)",
+      "url": "https://www.wikidata.org/wiki/Q42569",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Llama",
+      "url": "https://en.wikipedia.org/wiki/Llama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

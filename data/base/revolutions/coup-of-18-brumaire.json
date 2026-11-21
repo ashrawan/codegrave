@@ -1,0 +1,61 @@
+{
+  "id": "coup-of-18-brumaire",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Coup of 18 Brumaire",
+      "from": "1799"
+    }
+  ],
+  "summary": "The coup in November 1799 in which Napoleon Bonaparte and allies overthrew the French Directory. He became First Consul, which began his period of personal rule.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "18 Brumaire",
+    "Eighteenth Brumaire",
+    "the 18th Brumaire"
+  ],
+  "wikidata": "Q620965",
+  "events": [
+    {
+      "type": "born",
+      "date": "1799-11-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1799-11-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "french-revolution"
+    },
+    {
+      "type": "related",
+      "to": "napoleon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: coup of 18 Brumaire (Q620965)",
+      "url": "https://www.wikidata.org/wiki/Q620965",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coup of 18 Brumaire",
+      "url": "https://en.wikipedia.org/wiki/Coup_of_18_Brumaire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

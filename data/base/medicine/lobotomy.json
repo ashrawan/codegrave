@@ -1,0 +1,53 @@
+{
+  "id": "lobotomy",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "Lobotomy",
+      "from": "1935"
+    }
+  ],
+  "maker": "António Egas Moniz",
+  "summary": "An operation that cut connections in the brain's frontal lobes, used to treat mental illness. Its inventor won a Nobel Prize, but it left many patients badly harmed and was abandoned.",
+  "labels": [
+    "medicine",
+    "failures"
+  ],
+  "aliases": [
+    "leucotomy"
+  ],
+  "wikidata": "Q207684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1970",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by drugs and condemned for the harm it caused",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: lobotomy (Q207684)",
+      "url": "https://www.wikidata.org/wiki/Q207684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lobotomy",
+      "url": "https://en.wikipedia.org/wiki/Lobotomy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

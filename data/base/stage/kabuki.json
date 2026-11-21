@@ -1,0 +1,50 @@
+{
+  "id": "kabuki",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Kabuki",
+      "from": "1603"
+    }
+  ],
+  "summary": "Japanese theatre known for its stylised acting, bold make-up and elaborate costumes. It began in the early 1600s with a woman called Okuni, and is now performed only by men.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "kabuki theatre"
+  ],
+  "wikidata": "Q199701",
+  "events": [
+    {
+      "type": "born",
+      "date": "1603",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: kabuki (Q199701)",
+      "url": "https://www.wikidata.org/wiki/Q199701",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kabuki",
+      "url": "https://en.wikipedia.org/wiki/Kabuki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

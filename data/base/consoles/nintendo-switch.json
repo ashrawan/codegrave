@@ -1,0 +1,48 @@
+{
+  "id": "nintendo-switch",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Nintendo Switch",
+      "from": "2017"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Hybrid console that works as a handheld or connected to a TV, with detachable controllers. It sold extremely well and became one of Nintendo's biggest hits.",
+  "labels": [
+    "games"
+  ],
+  "wikidata": "Q19610114",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-03-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nintendo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nintendo Switch (Q19610114)",
+      "url": "https://www.wikidata.org/wiki/Q19610114",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nintendo Switch",
+      "url": "https://en.wikipedia.org/wiki/Nintendo_Switch",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

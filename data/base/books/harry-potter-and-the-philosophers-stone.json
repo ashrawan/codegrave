@@ -1,0 +1,55 @@
+{
+  "id": "harry-potter-and-the-philosophers-stone",
+  "category": "books",
+  "names": [
+    {
+      "name": "Harry Potter and the Philosopher's Stone",
+      "from": "1997"
+    }
+  ],
+  "summary": "First of J. K. Rowling's seven Harry Potter novels, in which an orphan learns he is a wizard and starts school at Hogwarts. The series sold in the hundreds of millions of copies.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "first Harry Potter book",
+    "Sorcerer's Stone"
+  ],
+  "wikidata": "Q43361",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997-06-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jk-rowling"
+    },
+    {
+      "type": "related",
+      "to": "harry-potter"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harry Potter and the Philosopher's Stone (Q43361)",
+      "url": "https://www.wikidata.org/wiki/Q43361",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harry Potter and the Philosopher's Stone",
+      "url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher's_Stone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

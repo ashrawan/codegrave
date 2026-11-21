@@ -1,0 +1,60 @@
+{
+  "id": "german-reunification",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "German reunification",
+      "from": "1989"
+    }
+  ],
+  "summary": "On 3 October 1990 East Germany joined the Federal Republic, ending the division of Germany that began after the Second World War.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "German unity",
+    "Reunification of Germany"
+  ],
+  "wikidata": "Q56039",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-11-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-10-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "east-germany"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German reunification (Q56039)",
+      "url": "https://www.wikidata.org/wiki/Q56039",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German reunification",
+      "url": "https://en.wikipedia.org/wiki/German_reunification",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

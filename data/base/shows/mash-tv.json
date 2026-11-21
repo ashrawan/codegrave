@@ -1,0 +1,53 @@
+{
+  "id": "mash-tv",
+  "category": "shows",
+  "names": [
+    {
+      "name": "M*A*S*H",
+      "from": "1972"
+    }
+  ],
+  "summary": "American comedy-drama set in a mobile army surgical hospital during the Korean War, though made during the Vietnam era. It mixed jokes with serious loss, and its final episode in 1983 was watched by a record television audience.",
+  "labels": [
+    "television",
+    "war"
+  ],
+  "aliases": [
+    "MASH",
+    "Mobile Army Surgical Hospital"
+  ],
+  "wikidata": "Q494244",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-09-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1983-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended after eleven seasons by choice of its makers",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: M*A*S*H (Q494244)",
+      "url": "https://www.wikidata.org/wiki/Q494244",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: M*A*S*H (TV series)",
+      "url": "https://en.wikipedia.org/wiki/M*A*S*H_(TV_series)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

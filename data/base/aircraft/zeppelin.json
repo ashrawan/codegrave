@@ -1,0 +1,53 @@
+{
+  "id": "zeppelin",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Zeppelin",
+      "from": "1900"
+    }
+  ],
+  "summary": "A large rigid airship with a metal frame, developed by Count Ferdinand von Zeppelin from 1900. Zeppelins carried passengers and bombed cities in the First World War before aeroplanes outclassed them.",
+  "labels": [
+    "transport",
+    "war"
+  ],
+  "aliases": [
+    "Luftschiff Zeppelin",
+    "LZ number"
+  ],
+  "wikidata": "Q191413",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1940",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Superseded by aeroplanes and ended after the Hindenburg fire",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Zeppelin (Q191413)",
+      "url": "https://www.wikidata.org/wiki/Q191413",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zeppelin",
+      "url": "https://en.wikipedia.org/wiki/Zeppelin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

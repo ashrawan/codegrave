@@ -1,0 +1,48 @@
+{
+  "id": "stegosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Stegosaurus",
+      "from": "-155000000"
+    }
+  ],
+  "summary": "A large plant-eating dinosaur of the late Jurassic with a row of tall bony plates along its back and spikes on its tail. Its brain was small for its size, and it lived in what is now the western United States.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q14388",
+  "events": [
+    {
+      "type": "born",
+      "date": "-155000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-150000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Died out in the late Jurassic as habitats and plant life changed",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Stegosaurus (Q14388)",
+      "url": "https://www.wikidata.org/wiki/Q14388",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stegosaurus",
+      "url": "https://en.wikipedia.org/wiki/Stegosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

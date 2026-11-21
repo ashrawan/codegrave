@@ -1,0 +1,59 @@
+{
+  "id": "super-bowl-i",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Super Bowl I",
+      "from": "1967"
+    }
+  ],
+  "summary": "The first championship game between the champions of the two American football leagues, held in Los Angeles. The Green Bay Packers won, and the event grew into the biggest television occasion in the United States.",
+  "labels": [
+    "sport",
+    "media"
+  ],
+  "aliases": [
+    "Super Bowl 1",
+    "1967 Super Bowl",
+    "AFL-NFL World Championship Game",
+    "Super Bowl 1967"
+  ],
+  "wikidata": "Q847827",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-01-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-01-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Super Bowl I (Q847827)",
+      "url": "https://www.wikidata.org/wiki/Q847827",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Super Bowl I",
+      "url": "https://en.wikipedia.org/wiki/Super_Bowl_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

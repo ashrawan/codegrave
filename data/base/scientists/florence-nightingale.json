@@ -1,0 +1,58 @@
+{
+  "id": "florence-nightingale",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Florence Nightingale",
+      "from": "1820"
+    }
+  ],
+  "summary": "British nurse who led a team caring for wounded soldiers in the Crimean War and used statistics to show how poor hygiene killed patients. She founded a nursing school in London and helped turn nursing into a profession.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Lady with the Lamp",
+    "Nightingale Florence",
+    "Miss Smith",
+    "Angel of Crimea"
+  ],
+  "wikidata": "Q37103",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820-05-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1910-08-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "florence"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Florence Nightingale (Q37103)",
+      "url": "https://www.wikidata.org/wiki/Q37103",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Florence Nightingale",
+      "url": "https://en.wikipedia.org/wiki/Florence_Nightingale",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "marxism",
+  "category": "philosophies",
+  "names": [
+    {
+      "name": "Marxism",
+      "from": "1848"
+    }
+  ],
+  "summary": "The body of ideas drawn from Karl Marx and Friedrich Engels, which explains history as a struggle between classes and predicts the replacement of capitalism by a classless society. It shaped many movements and states.",
+  "labels": [
+    "politics",
+    "economics",
+    "philosophy"
+  ],
+  "aliases": [
+    "Marxists"
+  ],
+  "wikidata": "Q7264",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "karl-marx"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marxism (Q7264)",
+      "url": "https://www.wikidata.org/wiki/Q7264",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marxism",
+      "url": "https://en.wikipedia.org/wiki/Marxism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

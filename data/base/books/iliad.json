@@ -1,0 +1,51 @@
+{
+  "id": "iliad",
+  "category": "books",
+  "names": [
+    {
+      "name": "Iliad",
+      "from": "-0750"
+    }
+  ],
+  "summary": "Greek epic poem credited to Homer, set in the last year of the Trojan War and centred on the anger of the warrior Achilles. It was the base of Greek education and has been retold for almost three thousand years.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "the Iliad",
+    "Hom. Il."
+  ],
+  "wikidata": "Q8275",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0750",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "homer"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iliad (Q8275)",
+      "url": "https://www.wikidata.org/wiki/Q8275",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iliad",
+      "url": "https://en.wikipedia.org/wiki/Iliad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

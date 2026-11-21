@@ -1,0 +1,56 @@
+{
+  "id": "battle-of-actium",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Actium",
+      "from": "-0031"
+    }
+  ],
+  "summary": "Naval battle off western Greece in which the fleet of Octavian beat that of Mark Antony and Cleopatra. It left Octavian the sole ruler of Rome and opened the way to the Roman Empire.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q160387",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0031-09-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0031-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "augustus"
+    },
+    {
+      "type": "related",
+      "to": "cleopatra-vii"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Actium (Q160387)",
+      "url": "https://www.wikidata.org/wiki/Q160387",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Actium",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Actium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

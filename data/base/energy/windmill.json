@@ -1,0 +1,47 @@
+{
+  "id": "windmill",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Windmill",
+      "from": "0700"
+    }
+  ],
+  "summary": "A machine that uses sails turned by the wind to grind grain or pump water. Early vertical-axis mills worked in Persia around the seventh century, and the tower mill later became common in Europe.",
+  "labels": [
+    "energy",
+    "engineering"
+  ],
+  "aliases": [
+    "wind mill",
+    "windmills"
+  ],
+  "wikidata": "Q38720",
+  "events": [
+    {
+      "type": "born",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: windmill (Q38720)",
+      "url": "https://www.wikidata.org/wiki/Q38720",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windmill",
+      "url": "https://en.wikipedia.org/wiki/Windmill",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

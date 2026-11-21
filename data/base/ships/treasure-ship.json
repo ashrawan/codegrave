@@ -1,0 +1,55 @@
+{
+  "id": "treasure-ship",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Treasure ship",
+      "from": "1405"
+    }
+  ],
+  "maker": "Ming dynasty shipyards",
+  "summary": "The great ships of the Ming fleets led by Zheng He, which sailed to Southeast Asia, India, Arabia and East Africa between 1405 and 1433. Their exact size is debated by historians, but they were very large.",
+  "labels": [
+    "exploration",
+    "transport"
+  ],
+  "aliases": [
+    "Zheng He's treasure ship",
+    "Baochuan",
+    "Baochuan shipyard"
+  ],
+  "wikidata": "Q702138",
+  "events": [
+    {
+      "type": "born",
+      "date": "1405",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1433",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "The voyages stopped when the Ming court ended the expeditions",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Chinese treasure ship (Q702138)",
+      "url": "https://www.wikidata.org/wiki/Q702138",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chinese treasure ship",
+      "url": "https://en.wikipedia.org/wiki/Chinese_treasure_ship",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

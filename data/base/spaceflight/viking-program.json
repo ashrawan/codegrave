@@ -1,0 +1,50 @@
+{
+  "id": "viking-program",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Viking program",
+      "from": "1975"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "A pair of American spacecraft that reached Mars in 1976. Each had an orbiter and a lander, and the landers took the first pictures from the surface and tested the soil for signs of life.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "wikidata": "Q233708",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1982",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Contact was lost with the last lander in 1982",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Viking program (Q233708)",
+      "url": "https://www.wikidata.org/wiki/Q233708",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Viking program",
+      "url": "https://en.wikipedia.org/wiki/Viking_program",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

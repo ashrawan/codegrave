@@ -1,0 +1,69 @@
+{
+  "id": "maimonides",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Maimonides",
+      "from": "1138"
+    }
+  ],
+  "summary": "Jewish scholar born in Córdoba who became physician to the ruler of Egypt. His Mishneh Torah organised Jewish law, and his Guide for the Perplexed tried to reconcile faith with Aristotle's philosophy.",
+  "labels": [
+    "philosophy",
+    "religion",
+    "medicine"
+  ],
+  "aliases": [
+    "Moshe ben Maimon",
+    "Moses Maimonides",
+    "Rabbeinu Mosheh Ben Maimon",
+    "Mūsā ibn Maymūn",
+    "Rambam"
+  ],
+  "wikidata": "Q127398",
+  "events": [
+    {
+      "type": "born",
+      "date": "1138-03-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1204-12-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "avicenna"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "averroes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moshe ben Maimon (Q127398)",
+      "url": "https://www.wikidata.org/wiki/Q127398",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maimonides",
+      "url": "https://en.wikipedia.org/wiki/Maimonides",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

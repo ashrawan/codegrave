@@ -1,0 +1,63 @@
+{
+  "id": "olympics-2000",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2000 Summer Olympics",
+      "from": "2000"
+    }
+  ],
+  "summary": "The Sydney Games were the first of the new millennium. The Australian runner Cathy Freeman lit the flame and won the 400 metres, and athletes from North and South Korea marched together at the opening.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Games of the XXVII Olympics",
+    "Sydney 2000",
+    "2000 Olympics",
+    "Sydney Olympics",
+    "The 2000 Summer Olympics"
+  ],
+  "wikidata": "Q8544",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-09-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sydney"
+    },
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2000 Summer Olympics (Q8544)",
+      "url": "https://www.wikidata.org/wiki/Q8544",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2000 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/2000_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

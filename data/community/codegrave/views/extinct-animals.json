@@ -1,0 +1,75 @@
+{
+  "id": "extinct-animals",
+  "name": "Extinct Animals",
+  "description": "Animals that are gone for good: the mammoth, the sabre-toothed cat, the dodo, the thylacine and others, from the ice age to our own time.",
+  "category": "life",
+  "labels": [
+    "extinct-by-humans"
+  ],
+  "tags": [
+    "extinct animals",
+    "dodo",
+    "mammoth",
+    "extinction",
+    "thylacine",
+    "sabre-toothed cat",
+    "ice age animals"
+  ],
+  "entries": [
+    "baiji",
+    "moa",
+    "elephant-bird",
+    "dodo",
+    "passenger-pigeon",
+    "megatherium",
+    "smilodon",
+    "glyptodon",
+    "aurochs",
+    "thylacine",
+    "woolly-mammoth",
+    "irish-elk",
+    "woolly-rhinoceros",
+    "cave-bear",
+    "quagga",
+    "dire-wolf",
+    "quaternary-extinction",
+    "holocene-extinction",
+    "stellers-sea-cow",
+    "great-auk",
+    "carolina-parakeet",
+    "pyrenean-ibex",
+    "lonesome-george",
+    "western-black-rhinoceros",
+    "golden-toad"
+  ],
+  "checkpoints": [
+    {
+      "id": "ice-age-giants",
+      "name": "Ice age giants",
+      "from": -50000,
+      "to": -1,
+      "note": "After humans spread across the world, woolly mammoths and woolly rhinos, giant ground sloths, glyptodonts, sabre-toothed cats, dire wolves and Irish elk disappear in the Late Quaternary extinction, though a changing climate shares the blame."
+    },
+    {
+      "id": "island-birds",
+      "name": "Island birds",
+      "from": 1,
+      "to": 1599,
+      "note": "The first settlers of Madagascar and New Zealand hunt the elephant birds and the moa to extinction."
+    },
+    {
+      "id": "1600-to-1899",
+      "name": "1600 to 1899",
+      "from": 1600,
+      "to": 1899,
+      "note": "Sailors kill off the dodo, the sea cow and the great auk, and market hunters shoot the passenger pigeon and the quagga."
+    },
+    {
+      "id": "since-1900",
+      "name": "Since 1900",
+      "from": 1900,
+      "to": 2026,
+      "note": "The last passenger pigeon dies in a zoo in 1914 and the last thylacine in 1936. Then the golden toad, the Pyrenean ibex, the baiji and the western black rhinoceros are lost, and Lonesome George, the last Pinta Island tortoise, dies in 2012, as the Holocene extinction goes on."
+    }
+  ]
+}

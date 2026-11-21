@@ -1,0 +1,53 @@
+{
+  "id": "notre-dame-de-paris",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Notre-Dame de Paris",
+      "from": "1345"
+    }
+  ],
+  "summary": "Gothic cathedral on an island in the Seine, begun in 1163. It was restored in the 1800s, was badly damaged by fire in 2019, and reopened after a long restoration in December 2024.",
+  "labels": [
+    "religion",
+    "architecture"
+  ],
+  "aliases": [
+    "Cathedral Notre Dame de Paris",
+    "Notre Dame cathedral",
+    "Cathedral Basilica of Our Lady of Paris"
+  ],
+  "wikidata": "Q2981",
+  "events": [
+    {
+      "type": "born",
+      "date": "1345",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Notre-Dame de Paris (Q2981)",
+      "url": "https://www.wikidata.org/wiki/Q2981",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Notre-Dame de Paris",
+      "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

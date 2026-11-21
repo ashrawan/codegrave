@@ -1,0 +1,64 @@
+{
+  "id": "parthenon",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Parthenon",
+      "from": "-0432"
+    }
+  ],
+  "summary": "Marble temple to the goddess Athena on the Acropolis of Athens, completed in the time of Pericles. It later served as a church and a mosque, and an explosion in 1687 left it a ruin.",
+  "labels": [
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Pathenonas",
+    "The Parthenon"
+  ],
+  "wikidata": "Q10288",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0432",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "phidias"
+    },
+    {
+      "type": "part_of",
+      "to": "acropolis-of-athens"
+    },
+    {
+      "type": "in",
+      "to": "athens"
+    },
+    {
+      "type": "in",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Parthenon (Q10288)",
+      "url": "https://www.wikidata.org/wiki/Q10288",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Parthenon",
+      "url": "https://en.wikipedia.org/wiki/Parthenon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

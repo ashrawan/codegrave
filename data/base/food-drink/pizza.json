@@ -1,0 +1,46 @@
+{
+  "id": "pizza",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Pizza",
+      "from": "1700"
+    }
+  ],
+  "summary": "A flat bread baked with toppings such as tomato and cheese. It was a cheap street food in Naples and spread worldwide with Italian migrants in the twentieth century.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "pie",
+    "pizza pie"
+  ],
+  "wikidata": "Q177",
+  "events": [
+    {
+      "type": "born",
+      "date": "1700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: pizza (Q177)",
+      "url": "https://www.wikidata.org/wiki/Q177",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pizza",
+      "url": "https://en.wikipedia.org/wiki/Pizza",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "thylacine",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Thylacine",
+      "from": "-2000000"
+    }
+  ],
+  "summary": "A dog-like pouched predator with stripes across its back, also called the Tasmanian tiger. Hunted heavily after farming arrived, the last known one died in a Hobart zoo in 1936.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Tassie tiger",
+    "Tasmanian wolf",
+    "Thylacinus cynocephalus",
+    "Tasmanian tiger"
+  ],
+  "wikidata": "Q123102",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1936-09-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Hunted as a pest, and hit by disease and loss of habitat",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Thylacine (Q123102)",
+      "url": "https://www.wikidata.org/wiki/Q123102",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thylacine",
+      "url": "https://en.wikipedia.org/wiki/Thylacine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

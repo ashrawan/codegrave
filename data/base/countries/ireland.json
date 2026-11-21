@@ -1,0 +1,67 @@
+{
+  "id": "ireland",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ireland",
+      "from": "1922"
+    }
+  ],
+  "summary": "The state that covers most of the island of Ireland. It came into being as the Irish Free State in 1922 after a war of independence against Britain, and became a republic in 1949.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Southern Ireland",
+    "Irish Republic"
+  ],
+  "wikidata": "Q27",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ireland (Q27)",
+      "url": "https://www.wikidata.org/wiki/Q27",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Republic of Ireland",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_Ireland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

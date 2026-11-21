@@ -1,0 +1,55 @@
+{
+  "id": "windows-vista",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows Vista",
+      "from": "2007"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's successor to Windows XP, with a new look and security features. It was criticised for slowness, security pop-ups and driver problems, and it was soon replaced by Windows 7.",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "wikidata": "Q11230",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-01-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Support ended after poor reception and replacement by Windows 7",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Windows Vista (Q11230)",
+      "url": "https://www.wikidata.org/wiki/Q11230",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windows Vista",
+      "url": "https://en.wikipedia.org/wiki/Windows_Vista",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

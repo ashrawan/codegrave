@@ -1,0 +1,53 @@
+{
+  "id": "frankensteins-monster",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Frankenstein's monster",
+      "from": "1818"
+    }
+  ],
+  "summary": "The creature built by Victor Frankenstein in Mary Shelley's novel, who is clever and sensitive but rejected by all. The flat-headed film version of 1931 is the one most people picture.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Frankenstein",
+    "The Human Experiment",
+    "The Creature",
+    "Adam Frankenstei"
+  ],
+  "wikidata": "Q2021531",
+  "events": [
+    {
+      "type": "born",
+      "date": "1818",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mary-shelley"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Frankenstein's monster (Q2021531)",
+      "url": "https://www.wikidata.org/wiki/Q2021531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Frankenstein's monster",
+      "url": "https://en.wikipedia.org/wiki/Frankenstein's_monster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

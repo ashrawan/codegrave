@@ -1,0 +1,58 @@
+{
+  "id": "christianity",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Christianity",
+      "from": "0033"
+    }
+  ],
+  "summary": "A religion based on the life and teachings of Jesus of Nazareth, whom its followers hold to be the Messiah and Son of God. It began among Jews in the Roman province of Judaea and is now the largest religion in the world by number of followers.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Christian faith"
+  ],
+  "wikidata": "Q5043",
+  "events": [
+    {
+      "type": "born",
+      "date": "0033",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jesus"
+    },
+    {
+      "type": "made_by",
+      "to": "paul-the-apostle"
+    },
+    {
+      "type": "made_by",
+      "to": "saint-peter"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Christianity (Q5043)",
+      "url": "https://www.wikidata.org/wiki/Q5043",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Christianity",
+      "url": "https://en.wikipedia.org/wiki/Christianity",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,65 @@
+{
+  "id": "persepolis-citie",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Persepolis",
+      "from": "-0518"
+    }
+  ],
+  "summary": "Ceremonial capital of the Achaemenid Persian Empire, built on a terrace in the mountains of southern Iran. Its carved stairways show delegations from across the empire bringing gifts to the king.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Takht-e Jamshid",
+    "Chilminar",
+    "Chihil Minar",
+    "Chil Minar",
+    "Chehel Menar"
+  ],
+  "wikidata": "Q129072",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0518",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0330",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Burned after Alexander the Great captured it",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    },
+    {
+      "type": "in",
+      "to": "achaemenid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Persepolis (Q129072)",
+      "url": "https://www.wikidata.org/wiki/Q129072",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Persepolis",
+      "url": "https://en.wikipedia.org/wiki/Persepolis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

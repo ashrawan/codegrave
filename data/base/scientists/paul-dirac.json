@@ -1,0 +1,62 @@
+{
+  "id": "paul-dirac",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Paul Dirac",
+      "from": "1902"
+    }
+  ],
+  "summary": "English physicist who joined quantum mechanics with special relativity and predicted the existence of antimatter before it was found. He shared the 1933 Nobel Prize in Physics with Erwin Schrödinger.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "P A M Dirac",
+    "Paul Adrien Maurice Dirac",
+    "Paul A M Dirac"
+  ],
+  "wikidata": "Q47480",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902-08-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1984-10-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "john-stuart-mill"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paul Dirac (Q47480)",
+      "url": "https://www.wikidata.org/wiki/Q47480",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paul Dirac",
+      "url": "https://en.wikipedia.org/wiki/Paul_Dirac",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

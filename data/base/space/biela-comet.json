@@ -1,0 +1,49 @@
+{
+  "id": "biela-comet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Biela's Comet",
+      "from": "1772"
+    }
+  ],
+  "summary": "A comet first recorded in 1772 and shown to return every few years by the Austrian army officer Wilhelm von Biela in 1826. In 1846 it split in two, and after 1852 it was never seen again. Born is when it was first recorded.",
+  "labels": [
+    "astronomy",
+    "lost"
+  ],
+  "wikidata": "Q857320",
+  "events": [
+    {
+      "type": "born",
+      "date": "1772-03-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1852",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Split in two in 1846 and then broke up completely",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Biela's Comet (Q857320)",
+      "url": "https://www.wikidata.org/wiki/Q857320",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Biela's Comet",
+      "url": "https://en.wikipedia.org/wiki/Biela's_Comet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

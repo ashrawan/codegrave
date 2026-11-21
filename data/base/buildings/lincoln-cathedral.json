@@ -1,0 +1,51 @@
+{
+  "id": "lincoln-cathedral",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Lincoln Cathedral",
+      "from": "1311"
+    }
+  ],
+  "summary": "Large medieval cathedral on a hill in Lincoln, England, begun in the 1070s and rebuilt after an earthquake in 1185. Its tower made it the tallest building in the world for over two centuries. The year is when the central tower was done.",
+  "labels": [
+    "architecture",
+    "religion"
+  ],
+  "aliases": [
+    "St. Mary's Cathedral"
+  ],
+  "wikidata": "Q390169",
+  "events": [
+    {
+      "type": "born",
+      "date": "1311",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lincoln Cathedral (Q390169)",
+      "url": "https://www.wikidata.org/wiki/Q390169",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lincoln Cathedral",
+      "url": "https://en.wikipedia.org/wiki/Lincoln_Cathedral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

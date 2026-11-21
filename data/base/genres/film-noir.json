@@ -1,0 +1,50 @@
+{
+  "id": "film-noir",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Film noir",
+      "from": "1941"
+    }
+  ],
+  "summary": "Style of dark crime dramas, mostly American in the 1940s and 1950s, with shadowy lighting, tough detectives and women who bring trouble. French critics named it, and it shaped later thrillers.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "noir film"
+  ],
+  "wikidata": "Q185867",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1958",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: film noir (Q185867)",
+      "url": "https://www.wikidata.org/wiki/Q185867",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Film noir",
+      "url": "https://en.wikipedia.org/wiki/Film_noir",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

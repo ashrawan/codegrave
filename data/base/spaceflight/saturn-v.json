@@ -1,0 +1,55 @@
+{
+  "id": "saturn-v",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Saturn V",
+      "from": "1967"
+    }
+  ],
+  "maker": "Wernher von Braun and NASA",
+  "summary": "The huge three-stage American rocket that sent Apollo astronauts to the Moon. First launched in 1967, it remains the most powerful rocket ever to fly successfully, and its last launch was in 1973.",
+  "labels": [
+    "space-race",
+    "engineering"
+  ],
+  "wikidata": "Q54363",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-11-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-05-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired after the Apollo programme and the launch of Skylab",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saturn V (Q54363)",
+      "url": "https://www.wikidata.org/wiki/Q54363",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saturn V",
+      "url": "https://en.wikipedia.org/wiki/Saturn_V",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

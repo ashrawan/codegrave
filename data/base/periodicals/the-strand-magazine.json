@@ -1,0 +1,54 @@
+{
+  "id": "the-strand-magazine",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "The Strand Magazine",
+      "from": "1891"
+    }
+  ],
+  "summary": "Monthly British magazine of fiction and articles. It published the Sherlock Holmes stories of Arthur Conan Doyle, which helped make it a huge success.",
+  "labels": [
+    "literature",
+    "media"
+  ],
+  "wikidata": "Q1126800",
+  "events": [
+    {
+      "type": "born",
+      "date": "1891",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1950-03",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined after the war and closed",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Strand Magazine (Q1126800)",
+      "url": "https://www.wikidata.org/wiki/Q1126800",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Strand Magazine",
+      "url": "https://en.wikipedia.org/wiki/The_Strand_Magazine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "new-york-city-subway",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "New York City Subway",
+      "from": "1904"
+    }
+  ],
+  "summary": "Rapid transit system of New York City, whose first line opened in 1904. It has hundreds of stations and runs around the clock, which few other systems do. It is among the busiest metro systems in the world.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "New York Subway",
+    "NYC Subway"
+  ],
+  "wikidata": "Q7733",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New York City Subway (Q7733)",
+      "url": "https://www.wikidata.org/wiki/Q7733",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New York City Subway",
+      "url": "https://en.wikipedia.org/wiki/New_York_City_Subway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

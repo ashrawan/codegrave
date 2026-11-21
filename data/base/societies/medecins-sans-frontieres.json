@@ -1,0 +1,52 @@
+{
+  "id": "medecins-sans-frontieres",
+  "category": "societies",
+  "names": [
+    {
+      "name": "Médecins Sans Frontières",
+      "from": "1971"
+    }
+  ],
+  "summary": "International medical aid group founded in France in 1971 by doctors and journalists. It sends medical teams to war zones, epidemics and disasters, speaks publicly about what it sees, and was awarded the Nobel Peace Prize in 1999.",
+  "labels": [
+    "medicine",
+    "human-rights",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Doctors Without Borders International"
+  ],
+  "wikidata": "Q49330",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-12-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Médecins Sans Frontières (Q49330)",
+      "url": "https://www.wikidata.org/wiki/Q49330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Médecins Sans Frontières",
+      "url": "https://en.wikipedia.org/wiki/M%C3%A9decins_Sans_Fronti%C3%A8res",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

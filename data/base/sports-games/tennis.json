@@ -1,0 +1,46 @@
+{
+  "id": "tennis",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Tennis",
+      "from": "1873"
+    }
+  ],
+  "summary": "A racket game played over a net on a court. The modern form, called lawn tennis, was introduced in England in the 1870s and grew from older indoor court games.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "lawn tennis",
+    "lawntennis"
+  ],
+  "wikidata": "Q847",
+  "events": [
+    {
+      "type": "born",
+      "date": "1873",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: tennis (Q847)",
+      "url": "https://www.wikidata.org/wiki/Q847",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tennis",
+      "url": "https://en.wikipedia.org/wiki/Tennis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

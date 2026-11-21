@@ -1,0 +1,58 @@
+{
+  "id": "hajj",
+  "category": "customs",
+  "names": [
+    {
+      "name": "Hajj",
+      "from": "0632"
+    }
+  ],
+  "summary": "Pilgrimage to Mecca that every Muslim who is able should make once. Its rites follow the one made by Muhammad in 632, the year given, and Muslim tradition links them to Ibrahim.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Hadj",
+    "Hadji",
+    "Haj",
+    "AlHajj",
+    "trip to Mecca"
+  ],
+  "wikidata": "Q234915",
+  "events": [
+    {
+      "type": "born",
+      "date": "0632",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "islam"
+    },
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hajj (Q234915)",
+      "url": "https://www.wikidata.org/wiki/Q234915",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hajj",
+      "url": "https://en.wikipedia.org/wiki/Hajj",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "pop-art",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Pop art",
+      "from": "1955"
+    }
+  ],
+  "summary": "Movement that began in Britain and the United States in the 1950s, taking images from advertising, comics and celebrity and treating them as fine art. Andy Warhol, Roy Lichtenstein and Richard Hamilton were among its leaders.",
+  "labels": [
+    "visual-art",
+    "media"
+  ],
+  "wikidata": "Q134147",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "andy-warhol"
+    },
+    {
+      "type": "influenced_by",
+      "to": "dada"
+    },
+    {
+      "type": "influenced_by",
+      "to": "abstract-expressionism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: pop art (Q134147)",
+      "url": "https://www.wikidata.org/wiki/Q134147",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pop art",
+      "url": "https://en.wikipedia.org/wiki/Pop_art",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

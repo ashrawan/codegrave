@@ -1,0 +1,59 @@
+{
+  "id": "black-panther-party",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Black Panther Party",
+      "from": "1966"
+    }
+  ],
+  "summary": "African American organisation founded in Oakland, California, by Huey Newton and Bobby Seale. It organised armed patrols against police abuse and free breakfasts for children before declining in the 1970s.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Black Pather Party For Self Defense",
+    "BPP",
+    "The Black Panthers"
+  ],
+  "wikidata": "Q189150",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966-10-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1982",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined after arrests, internal splits and conflict with police",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Black Panther Party (Q189150)",
+      "url": "https://www.wikidata.org/wiki/Q189150",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Black Panther Party",
+      "url": "https://en.wikipedia.org/wiki/Black_Panther_Party",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

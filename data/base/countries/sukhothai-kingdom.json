@@ -1,0 +1,58 @@
+{
+  "id": "sukhothai-kingdom",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Sukhothai Kingdom",
+      "from": "1238"
+    }
+  ],
+  "summary": "Thai kingdom in the northern part of today's Thailand, often counted as the first Thai state. Its rulers promoted Theravada Buddhism and a Thai script. It weakened in the fourteenth century and was absorbed by the rising kingdom of Ayutthaya.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Kingdom of Sukhothai",
+    "Roy de Sukhodaya"
+  ],
+  "wikidata": "Q863279",
+  "events": [
+    {
+      "type": "born",
+      "date": "1238",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1438",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Weakened and absorbed by the neighbouring kingdom of Ayutthaya",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "ayutthaya-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sukhothai Kingdom (Q863279)",
+      "url": "https://www.wikidata.org/wiki/Q863279",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sukhothai Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Sukhothai_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

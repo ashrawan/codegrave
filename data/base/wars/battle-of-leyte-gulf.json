@@ -1,0 +1,64 @@
+{
+  "id": "battle-of-leyte-gulf",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Leyte Gulf",
+      "from": "1944"
+    }
+  ],
+  "summary": "Series of naval battles in October 1944 around the Philippines as American forces landed on Leyte. The Japanese fleet was badly beaten, and it was the first battle where Japan used organised kamikaze attacks. Often called the largest naval battle ever.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Second Battle of the Philippine Sea",
+    "Battle of the Leyte Gulf"
+  ],
+  "wikidata": "Q308999",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-10-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-10-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "empire-of-japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Leyte Gulf (Q308999)",
+      "url": "https://www.wikidata.org/wiki/Q308999",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Leyte Gulf",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

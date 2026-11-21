@@ -1,0 +1,84 @@
+{
+  "id": "the-beatles",
+  "category": "bands",
+  "names": [
+    {
+      "name": "The Beatles",
+      "from": "1960"
+    }
+  ],
+  "summary": "English band from Liverpool made up of John Lennon, Paul McCartney, George Harrison and Ringo Starr. Their songs and studio work shaped pop and rock, and they split up in 1970.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "The Lads from Liverpool",
+    "John, Paul, George, and Ringo",
+    "The Beetles",
+    "The Silver Beetles",
+    "The Silver Beatles"
+  ],
+  "wikidata": "Q1299",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1970-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Split after personal and business disagreements",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "elvis-presley"
+    },
+    {
+      "type": "influenced_by",
+      "to": "chuck-berry"
+    },
+    {
+      "type": "influenced_by",
+      "to": "little-richard"
+    },
+    {
+      "type": "influenced_by",
+      "to": "bob-dylan"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ravi-shankar"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ludwig-van-beethoven"
+    },
+    {
+      "type": "influenced_by",
+      "to": "johann-sebastian-bach"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Beatles (Q1299)",
+      "url": "https://www.wikidata.org/wiki/Q1299",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Beatles",
+      "url": "https://en.wikipedia.org/wiki/The_Beatles",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

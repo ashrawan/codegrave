@@ -1,0 +1,51 @@
+{
+  "id": "antikythera-mechanism",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Antikythera mechanism",
+      "from": "-0100"
+    }
+  ],
+  "maker": "Ancient Greek craftsmen",
+  "summary": "A bronze device of many gears, found in a shipwreck in 1901, that modelled the movements of the Sun, Moon and probably the planets. Nothing like it is known for over a thousand years afterward.",
+  "labels": [
+    "astronomy",
+    "lost",
+    "engineering"
+  ],
+  "wikidata": "Q182324",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0100",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0060",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost in a shipwreck off a Greek island",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Antikythera mechanism (Q182324)",
+      "url": "https://www.wikidata.org/wiki/Q182324",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antikythera mechanism",
+      "url": "https://en.wikipedia.org/wiki/Antikythera_mechanism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

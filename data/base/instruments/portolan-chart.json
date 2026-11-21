@@ -1,0 +1,57 @@
+{
+  "id": "portolan-chart",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Portolan chart",
+      "from": "1275"
+    }
+  ],
+  "maker": "Mediterranean navigators",
+  "summary": "A sailing chart marked with coastlines, ports and crossing lines of compass directions. Used first around the Mediterranean and Black Sea, such charts guided pilots for centuries.",
+  "labels": [
+    "exploration",
+    "visual-art"
+  ],
+  "aliases": [
+    "portolan",
+    "compass map",
+    "loxodrome",
+    "rutter",
+    "ruttier"
+  ],
+  "wikidata": "Q266680",
+  "events": [
+    {
+      "type": "born",
+      "date": "1275",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by charts using the Mercator projection",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: portolan chart (Q266680)",
+      "url": "https://www.wikidata.org/wiki/Q266680",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portolan chart",
+      "url": "https://en.wikipedia.org/wiki/Portolan_chart",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

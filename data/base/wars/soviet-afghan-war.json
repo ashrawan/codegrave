@@ -1,0 +1,56 @@
+{
+  "id": "soviet-afghan-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Soviet–Afghan War",
+      "from": "1979"
+    }
+  ],
+  "summary": "The Soviet Union sent troops to support Afghanistan's communist government against Afghan rebel groups, who were helped by several foreign states. Soviet forces withdrew in 1989 after years of heavy fighting.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Soviet war in Afghanistan"
+  ],
+  "wikidata": "Q83085",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-12-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Soviet-Afghan War (Q83085)",
+      "url": "https://www.wikidata.org/wiki/Q83085",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Soviet–Afghan War",
+      "url": "https://en.wikipedia.org/wiki/Soviet%E2%80%93Afghan_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

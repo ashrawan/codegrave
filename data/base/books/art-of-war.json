@@ -1,0 +1,51 @@
+{
+  "id": "art-of-war",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Art of War",
+      "from": "-0500"
+    }
+  ],
+  "summary": "Chinese treatise on strategy traditionally credited to Sun Tzu. It argues that the best victory is the one won without a fight. Generals, business people and students have read it ever since.",
+  "labels": [
+    "war",
+    "philosophy"
+  ],
+  "aliases": [
+    "Art of War"
+  ],
+  "wikidata": "Q8251",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sun-tzu"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Art of War (Q8251)",
+      "url": "https://www.wikidata.org/wiki/Q8251",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Art of War",
+      "url": "https://en.wikipedia.org/wiki/The_Art_of_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

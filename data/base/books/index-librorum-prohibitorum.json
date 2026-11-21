@@ -1,0 +1,54 @@
+{
+  "id": "index-librorum-prohibitorum",
+  "category": "books",
+  "names": [
+    {
+      "name": "Index Librorum Prohibitorum",
+      "from": "1559"
+    }
+  ],
+  "summary": "List of books Catholics were forbidden to read, first issued by the Roman Catholic Church in 1559 and revised many times. Works by Galileo, Descartes and many others appeared on it.",
+  "labels": [
+    "banned",
+    "religion"
+  ],
+  "aliases": [
+    "Romish Index",
+    "Index Expurgatorius",
+    "Index of banned books"
+  ],
+  "wikidata": "Q22765",
+  "events": [
+    {
+      "type": "born",
+      "date": "1559",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abolished by the Catholic Church",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Index Librorum Prohibitorum (Q22765)",
+      "url": "https://www.wikidata.org/wiki/Q22765",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Index Librorum Prohibitorum",
+      "url": "https://en.wikipedia.org/wiki/Index_Librorum_Prohibitorum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

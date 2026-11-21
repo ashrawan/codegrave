@@ -1,0 +1,60 @@
+{
+  "id": "first-battle-of-the-marne",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Battle of the Marne",
+      "from": "1914"
+    }
+  ],
+  "summary": "French and British forces stopped the German advance toward Paris in September 1914. It ended German hopes of a quick win and led to the long trench war on the Western Front.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Miracle of the Marne",
+    "Battle of the Marne"
+  ],
+  "wikidata": "Q190712",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-09-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1914-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Battle of the Marne (Q190712)",
+      "url": "https://www.wikidata.org/wiki/Q190712",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Battle of the Marne",
+      "url": "https://en.wikipedia.org/wiki/First_Battle_of_the_Marne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

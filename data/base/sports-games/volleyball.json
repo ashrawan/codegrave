@@ -1,0 +1,42 @@
+{
+  "id": "volleyball",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Volleyball",
+      "from": "1895"
+    }
+  ],
+  "summary": "A game in which teams hit a ball over a high net. A physical education teacher in Massachusetts devised it as a gentler indoor alternative to basketball for older players.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1734",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: volleyball (Q1734)",
+      "url": "https://www.wikidata.org/wiki/Q1734",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Volleyball",
+      "url": "https://en.wikipedia.org/wiki/Volleyball",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

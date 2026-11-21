@@ -1,0 +1,47 @@
+{
+  "id": "diplodocus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Diplodocus",
+      "from": "-154000000"
+    }
+  ],
+  "summary": "A very long plant-eating dinosaur of late Jurassic North America with a whip-like tail and a slender neck. Casts of its skeleton were sent to museums around the world in the early 1900s.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q14330",
+  "events": [
+    {
+      "type": "born",
+      "date": "-154000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-152000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Diplodocus (Q14330)",
+      "url": "https://www.wikidata.org/wiki/Q14330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Diplodocus",
+      "url": "https://en.wikipedia.org/wiki/Diplodocus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

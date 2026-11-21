@@ -1,0 +1,47 @@
+{
+  "id": "hercule-poirot",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Hercule Poirot",
+      "from": "1920"
+    }
+  ],
+  "summary": "Fictional Belgian detective created by Agatha Christie, known for his moustache and his little grey cells. He appears in thirty-three novels, starting with The Mysterious Affair at Styles.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q170534",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "agatha-christie"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hercule Poirot (Q170534)",
+      "url": "https://www.wikidata.org/wiki/Q170534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hercule Poirot",
+      "url": "https://en.wikipedia.org/wiki/Hercule_Poirot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

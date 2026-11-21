@@ -1,0 +1,54 @@
+{
+  "id": "punched-card",
+  "category": "storage",
+  "names": [
+    {
+      "name": "Punched card",
+      "from": "1804"
+    }
+  ],
+  "summary": "Stiff card with holes in set positions that stand for data or instructions. Joseph Marie Jacquard used them to control looms from 1804, and Herman Hollerith later used them to tabulate census data.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "punch card",
+    "punchcard",
+    "Hollerith card",
+    "IBM card",
+    "tab card"
+  ],
+  "wikidata": "Q183414",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "charles-babbage"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: punched card (Q183414)",
+      "url": "https://www.wikidata.org/wiki/Q183414",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Punched card",
+      "url": "https://en.wikipedia.org/wiki/Punched_card",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

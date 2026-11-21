@@ -1,0 +1,55 @@
+{
+  "id": "studio-ghibli",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "Studio Ghibli",
+      "from": "1985"
+    }
+  ],
+  "summary": "Japanese animation studio founded by Hayao Miyazaki, Isao Takahata and Toshio Suzuki. Spirited Away, one of its films, won an Academy Award for animated feature.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "STUDIO GHIBLI INC.",
+    "Ghibli"
+  ],
+  "wikidata": "Q182950",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-06-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "hayao-miyazaki"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Studio Ghibli (Q182950)",
+      "url": "https://www.wikidata.org/wiki/Q182950",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Studio Ghibli",
+      "url": "https://en.wikipedia.org/wiki/Studio_Ghibli",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

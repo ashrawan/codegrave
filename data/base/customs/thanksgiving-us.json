@@ -1,0 +1,53 @@
+{
+  "id": "thanksgiving-us",
+  "category": "customs",
+  "names": [
+    {
+      "name": "Thanksgiving in the United States",
+      "from": "1621"
+    }
+  ],
+  "summary": "A national holiday in November built around a family meal. It looks back to a harvest feast shared by English settlers and Wampanoag people in Massachusetts.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "Thanksgiving",
+    "Thanksgiving Day",
+    "American Thanksgiving",
+    "Turkey day"
+  ],
+  "wikidata": "Q2913791",
+  "events": [
+    {
+      "type": "born",
+      "date": "1621",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thanksgiving (Q2913791)",
+      "url": "https://www.wikidata.org/wiki/Q2913791",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thanksgiving (United States)",
+      "url": "https://en.wikipedia.org/wiki/Thanksgiving_(United_States)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

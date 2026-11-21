@@ -1,0 +1,57 @@
+{
+  "id": "francis-crick",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Francis Crick",
+      "from": "1916"
+    }
+  ],
+  "summary": "British biologist who worked with James Watson at Cambridge to work out the double helix shape of DNA in 1953. He shared the 1962 Nobel Prize and later helped explain how genes are read, and then studied the brain.",
+  "labels": [
+    "biology",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Francis Harry Compton Crick",
+    "Francis H.C. Crick"
+  ],
+  "wikidata": "Q123280",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-06-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2004-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Francis Crick (Q123280)",
+      "url": "https://www.wikidata.org/wiki/Q123280",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Francis Crick",
+      "url": "https://en.wikipedia.org/wiki/Francis_Crick",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

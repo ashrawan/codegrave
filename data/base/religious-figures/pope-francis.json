@@ -1,0 +1,59 @@
+{
+  "id": "pope-francis",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Pope Francis",
+      "from": "1936"
+    }
+  ],
+  "summary": "Argentine-born Catholic pope from 2013, the first from the Americas and the first Jesuit. He spoke often on poverty, migration and care for the environment. He died in 2025.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Francisco",
+    "Pope Francis I",
+    "Franciscus I",
+    "François Bergoglio",
+    "Francis"
+  ],
+  "wikidata": "Q450675",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-12-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "francis-of-assisi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pope Francis (Q450675)",
+      "url": "https://www.wikidata.org/wiki/Q450675",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pope Francis",
+      "url": "https://en.wikipedia.org/wiki/Pope_Francis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

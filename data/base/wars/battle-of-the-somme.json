@@ -1,0 +1,64 @@
+{
+  "id": "battle-of-the-somme",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of the Somme",
+      "from": "1916"
+    }
+  ],
+  "summary": "A British and French offensive on the Western Front, remembered for the huge British losses on its first day. The battle also saw the first use of tanks, and gained little ground.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Somme Offensive",
+    "Bloody Somme"
+  ],
+  "wikidata": "Q132568",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1916-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "british-empire"
+    },
+    {
+      "type": "related",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of the Somme (Q132568)",
+      "url": "https://www.wikidata.org/wiki/Q132568",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of the Somme",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Somme",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

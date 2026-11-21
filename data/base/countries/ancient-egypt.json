@@ -1,0 +1,60 @@
+{
+  "id": "ancient-egypt",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ancient Egypt",
+      "from": "-4000"
+    }
+  ],
+  "summary": "The civilization along the lower Nile ruled by pharaohs for about three thousand years. It left pyramids, temples, hieroglyphic writing and a religion built around the afterlife, and historians group its kings into some thirty dynasties.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Ta-Kemet",
+    "Ta-Meri",
+    "Ta-Ui",
+    "Egypt, Ancient"
+  ],
+  "wikidata": "Q11768",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0030",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by Rome after the defeat of Cleopatra VII and Mark Antony",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ancient Egypt (Q11768)",
+      "url": "https://www.wikidata.org/wiki/Q11768",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ancient Egypt",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Egypt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

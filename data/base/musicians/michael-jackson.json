@@ -1,0 +1,56 @@
+{
+  "id": "michael-jackson",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Michael Jackson",
+      "from": "1958"
+    }
+  ],
+  "summary": "American singer and dancer who began as a child with the Jackson 5. His 1982 album Thriller is among the best-selling albums ever, and his dance moves and music videos changed pop.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q2831",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-08-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "james-brown"
+    },
+    {
+      "type": "influenced_by",
+      "to": "fred-astaire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Michael Jackson (Q2831)",
+      "url": "https://www.wikidata.org/wiki/Q2831",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michael Jackson",
+      "url": "https://en.wikipedia.org/wiki/Michael_Jackson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

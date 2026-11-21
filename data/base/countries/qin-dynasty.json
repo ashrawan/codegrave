@@ -1,0 +1,59 @@
+{
+  "id": "qin-dynasty",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Qin dynasty",
+      "from": "-0221"
+    }
+  ],
+  "summary": "The short dynasty that first unified China under an emperor, Qin Shi Huang. It standardised writing, coins and measures, linked defensive walls, and was buried with the terracotta army.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Qin China",
+    "Qin",
+    "Qin Empire"
+  ],
+  "wikidata": "Q7183",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0221",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0206",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Collapsed in rebellions soon after the first emperor died",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "han-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Qin dynasty (Q7183)",
+      "url": "https://www.wikidata.org/wiki/Q7183",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qin dynasty",
+      "url": "https://en.wikipedia.org/wiki/Qin_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

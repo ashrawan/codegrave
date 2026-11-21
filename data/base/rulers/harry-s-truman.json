@@ -1,0 +1,78 @@
+{
+  "id": "harry-s-truman",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Harry S. Truman",
+      "from": "1884"
+    }
+  ],
+  "summary": "Thirty-third president, who took office when Franklin Roosevelt died. He authorised the atomic bombings of Japan, announced the Marshall Plan, and sent American forces to Korea.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "President Truman",
+    "Harry Truman",
+    "H. Truman",
+    "H. S. Truman",
+    "Truman"
+  ],
+  "wikidata": "Q11613",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884-05-08",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1945-04-12",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 33rd president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1953-01-20",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Dwight D. Eisenhower took office."
+    },
+    {
+      "type": "ended",
+      "date": "1972-12-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    },
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harry S. Truman (Q11613)",
+      "url": "https://www.wikidata.org/wiki/Q11613",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harry S. Truman",
+      "url": "https://en.wikipedia.org/wiki/Harry_S._Truman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "kazakhstan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kazakhstan",
+      "from": "1991"
+    }
+  ],
+  "summary": "The largest landlocked country in the world, spanning Central Asia and a corner of Europe. It became independent from the Soviet Union in 1991 and has large oil and mineral resources.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Kazakhstan",
+    "kz",
+    "Republic of Qazaqstan"
+  ],
+  "wikidata": "Q232",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kazakhstan (Q232)",
+      "url": "https://www.wikidata.org/wiki/Q232",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kazakhstan",
+      "url": "https://en.wikipedia.org/wiki/Kazakhstan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,74 @@
+{
+  "id": "serbia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Serbia",
+      "from": "1217"
+    }
+  ],
+  "summary": "A Balkan country with its capital at Belgrade, the largest nation of former Yugoslavia. It became fully independent in 2006 after Montenegro left their union.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Serbia",
+    "RS"
+  ],
+  "wikidata": "Q403",
+  "events": [
+    {
+      "type": "born",
+      "date": "1217",
+      "precision": "year",
+      "note": "Dated from 1217, when Stefan Nemanjić was crowned the first king of Serbia. A Serbian principality is known from about the eighth century. The Ottomans ruled from 1459, and a new Serbian state arose after the uprising of 1804."
+    },
+    {
+      "type": "milestone",
+      "date": "1878",
+      "precision": "year",
+      "label": "Independence",
+      "note": "The Congress of Berlin recognised Serbia as independent."
+    },
+    {
+      "type": "milestone",
+      "date": "2006",
+      "precision": "year",
+      "label": "Union dissolved",
+      "note": "Serbia stood alone again when Montenegro left their union."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Serbia (Q403)",
+      "url": "https://www.wikidata.org/wiki/Q403",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Serbia",
+      "url": "https://en.wikipedia.org/wiki/Serbia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

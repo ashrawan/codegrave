@@ -1,0 +1,48 @@
+{
+  "id": "koala",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Koala",
+      "from": "-25000000"
+    }
+  ],
+  "summary": "Tree-living marsupial of eastern Australia that eats mostly eucalyptus leaves. Fossils of its family, the koala line, go back about 25 million years.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "koala bear",
+    "coala",
+    "koolah"
+  ],
+  "wikidata": "Q36101",
+  "events": [
+    {
+      "type": "born",
+      "date": "-25000000",
+      "precision": "circa",
+      "note": "From the oldest fossils of the koala family, about 25 million years old. The living species is much younger."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: koala (Q36101)",
+      "url": "https://www.wikidata.org/wiki/Q36101",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Koala",
+      "url": "https://en.wikipedia.org/wiki/Koala",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

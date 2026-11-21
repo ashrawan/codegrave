@@ -1,0 +1,61 @@
+{
+  "id": "discovery-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Discovery Expedition",
+      "from": "1901"
+    }
+  ],
+  "summary": "A British expedition led by Robert Falcon Scott made the first major scientific exploration of the Antarctic interior. It set a record for the furthest south yet reached by people and trained several later polar leaders.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Discovery Expedition (1901-1904)",
+    "British National Antarctic Expedition",
+    "National Antarctic Expedition"
+  ],
+  "wikidata": "Q1031706",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1904",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "antarctica"
+    },
+    {
+      "type": "related",
+      "to": "robert-falcon-scott"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Discovery Expedition (1901-1904) (Q1031706)",
+      "url": "https://www.wikidata.org/wiki/Q1031706",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Discovery Expedition",
+      "url": "https://en.wikipedia.org/wiki/Discovery_Expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "national-geographic-society",
+  "category": "societies",
+  "names": [
+    {
+      "name": "National Geographic Society",
+      "from": "1888"
+    }
+  ],
+  "summary": "American society founded in Washington by explorers and scientists to spread geographic knowledge. It funds expeditions and publishes a magazine famous for its photography.",
+  "labels": [
+    "exploration",
+    "education"
+  ],
+  "aliases": [
+    "NGS",
+    "The National Geographic Society"
+  ],
+  "wikidata": "Q167186",
+  "events": [
+    {
+      "type": "born",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: National Geographic Society (Q167186)",
+      "url": "https://www.wikidata.org/wiki/Q167186",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Geographic Society",
+      "url": "https://en.wikipedia.org/wiki/National_Geographic_Society",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

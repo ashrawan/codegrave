@@ -1,0 +1,48 @@
+{
+  "id": "industrial-revolution",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Industrial Revolution",
+      "from": "1760"
+    }
+  ],
+  "summary": "The change from hand work and farming to machines and factories, beginning in Britain. It brought steam power, railways, big cities and new kinds of work. The dates are rough.",
+  "labels": [
+    "engineering",
+    "economics"
+  ],
+  "wikidata": "Q2269",
+  "events": [
+    {
+      "type": "born",
+      "date": "1760",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1840",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Industrial Revolution (Q2269)",
+      "url": "https://www.wikidata.org/wiki/Q2269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Industrial Revolution",
+      "url": "https://en.wikipedia.org/wiki/Industrial_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,71 @@
+{
+  "id": "colombia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Colombia",
+      "from": "1810"
+    }
+  ],
+  "summary": "A South American country with coasts on two oceans, which declared independence from Spain in 1810. It is known for coffee, emeralds and a long internal conflict that has eased in recent years.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Colombia",
+    "The Republic of Colombia"
+  ],
+  "wikidata": "Q739",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "south-america"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "related",
+      "to": "christopher-columbus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colombia (Q739)",
+      "url": "https://www.wikidata.org/wiki/Q739",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colombia",
+      "url": "https://en.wikipedia.org/wiki/Colombia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

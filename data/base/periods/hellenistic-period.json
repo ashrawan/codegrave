@@ -1,0 +1,60 @@
+{
+  "id": "hellenistic-period",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Hellenistic period",
+      "from": "-0323"
+    }
+  ],
+  "summary": "The era from the death of Alexander the Great to the Roman conquest of Egypt, when Greek culture spread across the Middle East and beyond under successor kingdoms.",
+  "labels": [
+    "politics",
+    "language"
+  ],
+  "aliases": [
+    "Hellenism"
+  ],
+  "wikidata": "Q428995",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0323",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0030",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "classical-antiquity"
+    },
+    {
+      "type": "part_of",
+      "to": "ancient-greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hellenistic period (Q428995)",
+      "url": "https://www.wikidata.org/wiki/Q428995",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hellenistic period",
+      "url": "https://en.wikipedia.org/wiki/Hellenistic_period",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

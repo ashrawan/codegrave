@@ -1,0 +1,48 @@
+{
+  "id": "neil-armstrong",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Neil Armstrong",
+      "from": "1930"
+    }
+  ],
+  "summary": "American astronaut and former test pilot who in July 1969 became the first person to walk on the Moon, commanding Apollo 11. He left the space programme soon after and later taught engineering.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "wikidata": "Q1615",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-08-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Neil Armstrong (Q1615)",
+      "url": "https://www.wikidata.org/wiki/Q1615",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neil Armstrong",
+      "url": "https://en.wikipedia.org/wiki/Neil_Armstrong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

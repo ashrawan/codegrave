@@ -1,0 +1,47 @@
+{
+  "id": "ray-charles",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Ray Charles",
+      "from": "1930"
+    }
+  ],
+  "summary": "American singer and pianist who lost his sight as a child. He blended gospel, blues and jazz into early soul in songs like What'd I Say, and also recorded country music albums.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q544387",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-09-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2004-06-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ray Charles (Q544387)",
+      "url": "https://www.wikidata.org/wiki/Q544387",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ray Charles",
+      "url": "https://en.wikipedia.org/wiki/Ray_Charles",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

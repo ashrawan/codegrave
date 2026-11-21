@@ -1,0 +1,54 @@
+{
+  "id": "newcomen-engine",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Newcomen atmospheric engine",
+      "from": "1712"
+    }
+  ],
+  "maker": "Thomas Newcomen",
+  "summary": "The first practical steam engine, built by Thomas Newcomen in 1712 to pump water out of coal mines. It burned a great deal of fuel but worked well enough to spread across Britain and Europe.",
+  "labels": [
+    "energy",
+    "engineering",
+    "firsts"
+  ],
+  "aliases": [
+    "Newcomen engine"
+  ],
+  "wikidata": "Q2224989",
+  "events": [
+    {
+      "type": "born",
+      "date": "1712",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1800",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by James Watt's more efficient engine with a separate condenser",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Newcomen atmospheric engine (Q2224989)",
+      "url": "https://www.wikidata.org/wiki/Q2224989",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Newcomen atmospheric engine",
+      "url": "https://en.wikipedia.org/wiki/Newcomen_atmospheric_engine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

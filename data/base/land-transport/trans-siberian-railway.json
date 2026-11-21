@@ -1,0 +1,52 @@
+{
+  "id": "trans-siberian-railway",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Trans-Siberian Railway",
+      "from": "1903"
+    }
+  ],
+  "summary": "The longest railway line in the world, linking Moscow with the Russian Far East. Construction began in 1891, and it opened Siberia to settlement and made overland travel across Asia far quicker.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "TSR",
+    "Trans Siberian"
+  ],
+  "wikidata": "Q58767",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Trans-Siberian railway (Q58767)",
+      "url": "https://www.wikidata.org/wiki/Q58767",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trans-Siberian Railway",
+      "url": "https://en.wikipedia.org/wiki/Trans-Siberian_Railway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

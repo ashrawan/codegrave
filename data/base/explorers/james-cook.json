@@ -1,0 +1,59 @@
+{
+  "id": "james-cook",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "James Cook",
+      "from": "1728"
+    }
+  ],
+  "summary": "British naval officer who made three voyages in the Pacific, mapping New Zealand and the east coast of Australia and visiting Hawaii. He was killed in a clash with islanders at Hawaii on his last voyage.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Cook, James",
+    "Captain James Cook",
+    "James Cooke",
+    "Captain Cook",
+    "James Marton Cook"
+  ],
+  "wikidata": "Q7324",
+  "events": [
+    {
+      "type": "born",
+      "date": "1728-10-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1779-02-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James Cook (Q7324)",
+      "url": "https://www.wikidata.org/wiki/Q7324",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Cook",
+      "url": "https://en.wikipedia.org/wiki/James_Cook",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

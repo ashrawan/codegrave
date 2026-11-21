@@ -1,0 +1,56 @@
+{
+  "id": "second-battle-of-el-alamein",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Battle of El Alamein",
+      "from": "1942"
+    }
+  ],
+  "summary": "A British Eighth Army offensive, led by Montgomery, that broke the German-Italian forces in Egypt. It ended the Axis threat to the Suez Canal and led to their retreat from North Africa.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q153376",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-10-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1942-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Battle of El Alamein (Q153376)",
+      "url": "https://www.wikidata.org/wiki/Q153376",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Battle of El Alamein",
+      "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

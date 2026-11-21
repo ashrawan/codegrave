@@ -1,0 +1,59 @@
+{
+  "id": "shanghai",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Shanghai",
+      "from": "1292"
+    }
+  ],
+  "summary": "Largest city in China, on the Yangtze delta. It became a county in the early 1290s, grew as a treaty port after 1842 and is now a major centre of finance and shipping.",
+  "labels": [
+    "business"
+  ],
+  "aliases": [
+    "Hu",
+    "Shang Hai",
+    "Shanghai, China",
+    "Shanghae",
+    "Zanghae"
+  ],
+  "wikidata": "Q8686",
+  "events": [
+    {
+      "type": "born",
+      "date": "1292",
+      "precision": "year",
+      "note": "Dated from the founding of Shanghai County, approved in 1291 and set up in 1292. A market town stood here earlier."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shanghai (Q8686)",
+      "url": "https://www.wikidata.org/wiki/Q8686",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shanghai",
+      "url": "https://en.wikipedia.org/wiki/Shanghai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

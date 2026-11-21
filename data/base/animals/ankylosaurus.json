@@ -1,0 +1,48 @@
+{
+  "id": "ankylosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Ankylosaurus",
+      "from": "-68000000"
+    }
+  ],
+  "summary": "A heavily armoured plant-eating dinosaur covered in bony plates, with a club of fused bone on the end of its tail. It lived in North America in the last days of the dinosaurs.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q40621",
+  "events": [
+    {
+      "type": "born",
+      "date": "-68000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-65000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Wiped out in the mass extinction at the end of the Cretaceous",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ankylosaurus (Q40621)",
+      "url": "https://www.wikidata.org/wiki/Q40621",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ankylosaurus",
+      "url": "https://en.wikipedia.org/wiki/Ankylosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

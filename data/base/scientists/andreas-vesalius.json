@@ -1,0 +1,56 @@
+{
+  "id": "andreas-vesalius",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Andreas Vesalius",
+      "from": "1514"
+    }
+  ],
+  "summary": "Flemish anatomist who dissected human bodies himself and published a richly illustrated book on their structure in 1543. It corrected many mistakes inherited from the ancient writer Galen and set a new standard for medical study.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Vesalius, Andreas, 1514-1564",
+    "Andries van Wesel"
+  ],
+  "wikidata": "Q170267",
+  "events": [
+    {
+      "type": "born",
+      "date": "1514-12-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1564-10-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "galen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Andreas Vesalius (Q170267)",
+      "url": "https://www.wikidata.org/wiki/Q170267",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andreas Vesalius",
+      "url": "https://en.wikipedia.org/wiki/Andreas_Vesalius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "glyptodon",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Glyptodon",
+      "from": "-2500000"
+    }
+  ],
+  "summary": "A relative of the armadillo the size of a small car, with a domed shell made of bony plates and a spiked tail. It lived in South America and was hunted by early people.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q131695",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2500000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-11000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Disappeared at the end of the ice age, probably through climate change and hunting",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Glyptodon (Q131695)",
+      "url": "https://www.wikidata.org/wiki/Q131695",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Glyptodon",
+      "url": "https://en.wikipedia.org/wiki/Glyptodon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

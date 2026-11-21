@@ -1,0 +1,52 @@
+{
+  "id": "theia",
+  "category": "space",
+  "names": [
+    {
+      "name": "Theia",
+      "from": "-4568000000"
+    }
+  ],
+  "summary": "A hypothetical Mars-sized planet that astronomers think hit the young Earth about 4.5 billion years ago. Debris from the crash is believed to have gathered into the Moon, while Theia itself was mostly destroyed.",
+  "labels": [
+    "astronomy",
+    "lost"
+  ],
+  "aliases": [
+    "Orpheus"
+  ],
+  "wikidata": "Q1053432",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4568000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-4520000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Thought to have been destroyed in a collision with the young Earth that formed the Moon",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Theia (Q1053432)",
+      "url": "https://www.wikidata.org/wiki/Q1053432",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Theia (hypothetical planet)",
+      "url": "https://en.wikipedia.org/wiki/Theia_(hypothetical_planet)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

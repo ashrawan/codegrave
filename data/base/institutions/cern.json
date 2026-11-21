@@ -1,0 +1,55 @@
+{
+  "id": "cern",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "CERN",
+      "from": "1954"
+    }
+  ],
+  "summary": "European laboratory near Geneva that runs the world's largest particle physics experiments. It was the birthplace of the World Wide Web in 1989 and built the Large Hadron Collider.",
+  "labels": [
+    "physics",
+    "computing"
+  ],
+  "aliases": [
+    "home.cern"
+  ],
+  "wikidata": "Q42944",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-09-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: CERN (Q42944)",
+      "url": "https://www.wikidata.org/wiki/Q42944",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: CERN",
+      "url": "https://en.wikipedia.org/wiki/CERN",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

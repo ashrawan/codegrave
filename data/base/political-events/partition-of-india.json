@@ -1,0 +1,57 @@
+{
+  "id": "partition-of-india",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Partition of India",
+      "from": "1947"
+    }
+  ],
+  "summary": "The division of British India into the independent states of India and Pakistan in August 1947. Millions crossed the new borders, and violence killed a great many people.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "wikidata": "Q129053",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-08-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "british-raj"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: partition of India (Q129053)",
+      "url": "https://www.wikidata.org/wiki/Q129053",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Partition of India",
+      "url": "https://en.wikipedia.org/wiki/Partition_of_India",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "mamluk-sultanate",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Mamluk Sultanate",
+      "from": "1250"
+    }
+  ],
+  "summary": "A state in Egypt and Syria ruled by former slave soldiers. It stopped the Mongols at Ain Jalut in 1260, drove out the last Crusaders and built many of the monuments of Cairo.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Mamluk Sultanate of Egypt",
+    "Egyptian Mamluk Empire",
+    "Egyptian Mamluk Sultanate"
+  ],
+  "wikidata": "Q282428",
+  "events": [
+    {
+      "type": "born",
+      "date": "1250",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1517",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by the Ottoman Empire",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mamluk Sultanate of Egypt (Q282428)",
+      "url": "https://www.wikidata.org/wiki/Q282428",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mamluk Sultanate",
+      "url": "https://en.wikipedia.org/wiki/Mamluk_Sultanate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

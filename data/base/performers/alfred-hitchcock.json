@@ -1,0 +1,51 @@
+{
+  "id": "alfred-hitchcock",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Alfred Hitchcock",
+      "from": "1899"
+    }
+  ],
+  "summary": "English film director who moved to Hollywood and made thrillers such as Rear Window, Vertigo and Psycho. He was known for building suspense and for appearing briefly in his own films.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "The Master of Suspense",
+    "Master of Suspense"
+  ],
+  "wikidata": "Q7374",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-08-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-04-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Alfred Hitchcock (Q7374)",
+      "url": "https://www.wikidata.org/wiki/Q7374",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alfred Hitchcock",
+      "url": "https://en.wikipedia.org/wiki/Alfred_Hitchcock",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

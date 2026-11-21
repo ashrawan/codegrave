@@ -1,0 +1,57 @@
+{
+  "id": "easter-rising",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Easter Rising",
+      "from": "1916"
+    }
+  ],
+  "summary": "An armed rebellion in Dublin during Easter week 1916 aimed at ending British rule in Ireland. It was put down within days, but the execution of its leaders turned public opinion toward independence.",
+  "labels": [
+    "independence",
+    "war"
+  ],
+  "aliases": [
+    "1916 Rising",
+    "Easter Rebellion"
+  ],
+  "wikidata": "Q193689",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-04-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1916-04-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Easter Rising (Q193689)",
+      "url": "https://www.wikidata.org/wiki/Q193689",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Easter Rising",
+      "url": "https://en.wikipedia.org/wiki/Easter_Rising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

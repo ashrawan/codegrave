@@ -1,0 +1,50 @@
+{
+  "id": "homo-floresiensis",
+  "category": "human-origins",
+  "names": [
+    {
+      "name": "Homo floresiensis",
+      "from": "-190000"
+    }
+  ],
+  "summary": "A small human relative found on the Indonesian island of Flores in 2003 and nicknamed the hobbit. Adults were about a metre tall, and it lived there until people like us arrived.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Flores Man"
+  ],
+  "wikidata": "Q186266",
+  "events": [
+    {
+      "type": "born",
+      "date": "-190000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-50000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Homo floresiensis (Q186266)",
+      "url": "https://www.wikidata.org/wiki/Q186266",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Homo floresiensis",
+      "url": "https://en.wikipedia.org/wiki/Homo_floresiensis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

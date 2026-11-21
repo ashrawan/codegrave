@@ -1,0 +1,70 @@
+{
+  "id": "uganda",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Uganda",
+      "from": "1962"
+    }
+  ],
+  "summary": "A landlocked East African country on Lake Victoria that gained independence from Britain in 1962. It has the source of the Nile and a long history of kingdoms such as Buganda.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Uganda",
+    "ug",
+    "The Republic of Uganda",
+    "Ugandah",
+    "+256"
+  ],
+  "wikidata": "Q1036",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uganda (Q1036)",
+      "url": "https://www.wikidata.org/wiki/Q1036",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uganda",
+      "url": "https://en.wikipedia.org/wiki/Uganda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

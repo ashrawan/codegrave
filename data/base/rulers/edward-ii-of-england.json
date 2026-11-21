@@ -1,0 +1,64 @@
+{
+  "id": "edward-ii-of-england",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Edward II of England",
+      "from": "1284"
+    }
+  ],
+  "summary": "Defeated by Robert the Bruce at Bannockburn in 1314. He was forced to give up the throne in 1327 in favour of his son.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Edward of Caernarfon"
+  ],
+  "wikidata": "Q5236",
+  "events": [
+    {
+      "type": "born",
+      "date": "1284-04-25",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1307",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1307 to 1327."
+    },
+    {
+      "type": "milestone",
+      "date": "1327",
+      "precision": "year",
+      "label": "Deposed",
+      "note": "Forced to give up the throne to his son, Edward III."
+    },
+    {
+      "type": "ended",
+      "date": "1327-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Edward II of England (Q5236)",
+      "url": "https://www.wikidata.org/wiki/Q5236",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward II",
+      "url": "https://en.wikipedia.org/wiki/Edward_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

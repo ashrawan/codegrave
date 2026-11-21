@@ -1,0 +1,63 @@
+{
+  "id": "mohenjo-daro",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Mohenjo-daro",
+      "from": "-2500"
+    }
+  ],
+  "summary": "Large planned city of the Indus Valley civilisation, in what is now Pakistan. It had straight streets, brick houses and drains, and its undeciphered script still puzzles scholars.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Mound of dead",
+    "Mound of the Dead",
+    "Mound of Dead Men"
+  ],
+  "wikidata": "Q5725",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned as the Indus civilisation declined",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "indus-valley-civilisation"
+    },
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mohenjo-daro (Q5725)",
+      "url": "https://www.wikidata.org/wiki/Q5725",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mohenjo-daro",
+      "url": "https://en.wikipedia.org/wiki/Mohenjo-daro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

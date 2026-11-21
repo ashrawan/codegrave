@@ -1,0 +1,53 @@
+{
+  "id": "council-of-clermont",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Council of Clermont",
+      "from": "1095"
+    }
+  ],
+  "summary": "Church meeting in France where Pope Urban II urged Christians to march to Jerusalem and help the Byzantine Empire. His speech is taken as the start of the First Crusade.",
+  "labels": [
+    "religion",
+    "war"
+  ],
+  "wikidata": "Q49964",
+  "events": [
+    {
+      "type": "born",
+      "date": "1095-11",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1095-11",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Council of Clermont (Q49964)",
+      "url": "https://www.wikidata.org/wiki/Q49964",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Council of Clermont",
+      "url": "https://en.wikipedia.org/wiki/Council_of_Clermont",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

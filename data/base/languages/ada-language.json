@@ -1,0 +1,64 @@
+{
+  "id": "ada-language",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Ada",
+      "from": "1980"
+    }
+  ],
+  "summary": "Programming language created for the US Department of Defense and named after Ada Lovelace. It emphasises safety and is used in aircraft, trains and space systems.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q154755",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "pascal"
+    },
+    {
+      "type": "influenced_by",
+      "to": "cpp"
+    },
+    {
+      "type": "influenced_by",
+      "to": "smalltalk"
+    },
+    {
+      "type": "influenced_by",
+      "to": "java"
+    },
+    {
+      "type": "related",
+      "to": "ada-lovelace"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ada (Q154755)",
+      "url": "https://www.wikidata.org/wiki/Q154755",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ada (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Ada_(programming_language)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

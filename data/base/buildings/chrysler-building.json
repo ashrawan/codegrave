@@ -1,0 +1,52 @@
+{
+  "id": "chrysler-building",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Chrysler Building",
+      "from": "1930"
+    }
+  ],
+  "summary": "Art Deco skyscraper in New York with a steel crown of arches. It briefly held the record as the tallest building in the world in 1930, before the Empire State Building overtook it the next year.",
+  "labels": [
+    "architecture",
+    "record-holders"
+  ],
+  "aliases": [
+    "The Chrysler Building",
+    "405 Lexington Avenue"
+  ],
+  "wikidata": "Q11274",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-05-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chrysler Building (Q11274)",
+      "url": "https://www.wikidata.org/wiki/Q11274",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chrysler Building",
+      "url": "https://en.wikipedia.org/wiki/Chrysler_Building",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

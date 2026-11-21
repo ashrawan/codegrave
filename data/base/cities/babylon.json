@@ -1,0 +1,61 @@
+{
+  "id": "babylon",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Babylon",
+      "from": "-2200"
+    }
+  ],
+  "summary": "Ancient city on the Euphrates in Mesopotamia, capital of several kingdoms and famous for its walls, temples and learning. After centuries of decline it was left to the desert, and its ruins lie in modern Iraq.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Mint of Babylon"
+  ],
+  "wikidata": "Q5684",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0001",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined slowly as rulers moved their capitals elsewhere",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "babylonia"
+    },
+    {
+      "type": "in",
+      "to": "achaemenid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Babylon (Q5684)",
+      "url": "https://www.wikidata.org/wiki/Q5684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Babylon",
+      "url": "https://en.wikipedia.org/wiki/Babylon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

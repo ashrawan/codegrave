@@ -1,0 +1,57 @@
+{
+  "id": "nixon-shock",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Nixon shock",
+      "from": "1971"
+    }
+  ],
+  "summary": "The United States ended the exchange of dollars for gold, which broke the fixed-rate system agreed at Bretton Woods. Currencies began to float against each other, as they still do.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "wikidata": "Q1420512",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-08-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "richard-nixon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nixon Shock (Q1420512)",
+      "url": "https://www.wikidata.org/wiki/Q1420512",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nixon shock",
+      "url": "https://en.wikipedia.org/wiki/Nixon_shock",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

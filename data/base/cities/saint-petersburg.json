@@ -1,0 +1,69 @@
+{
+  "id": "saint-petersburg",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Saint Petersburg",
+      "from": "1703"
+    }
+  ],
+  "summary": "City on the Baltic founded by Peter the Great as a window to Europe. It was the capital of imperial Russia for two centuries and is known for its canals, palaces and museums.",
+  "labels": [
+    "politics",
+    "architecture"
+  ],
+  "aliases": [
+    "Petersburg",
+    "Sankt-Peterburg",
+    "St Petersburg"
+  ],
+  "wikidata": "Q656",
+  "events": [
+    {
+      "type": "born",
+      "date": "1703-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "peter-the-great"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "related",
+      "to": "saint-peter"
+    },
+    {
+      "type": "related",
+      "to": "vladimir-lenin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint Petersburg (Q656)",
+      "url": "https://www.wikidata.org/wiki/Q656",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint Petersburg",
+      "url": "https://en.wikipedia.org/wiki/Saint_Petersburg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

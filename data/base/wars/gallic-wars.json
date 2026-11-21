@@ -1,0 +1,55 @@
+{
+  "id": "gallic-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Gallic Wars",
+      "from": "-0058"
+    }
+  ],
+  "summary": "Julius Caesar's campaigns that brought Gaul, roughly modern France and Belgium, under Roman rule. His own account of them is a famous Latin text, and the conquest made him rich, powerful and a rival to Pompey.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Gallic War"
+  ],
+  "wikidata": "Q202161",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0058",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0051",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "julius-caesar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gallic War (Q202161)",
+      "url": "https://www.wikidata.org/wiki/Q202161",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gallic Wars",
+      "url": "https://en.wikipedia.org/wiki/Gallic_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

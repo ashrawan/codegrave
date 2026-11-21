@@ -1,0 +1,52 @@
+{
+  "id": "galen",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Galen",
+      "from": "0129"
+    }
+  ],
+  "summary": "Greek physician from Pergamon who served gladiators and Roman emperors and wrote many works on anatomy and healing. His teaching, based on animal dissection and the four humours, shaped medicine for about fifteen centuries. Dates are approximate.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Galen of Pergamon",
+    "Aelius Galenus",
+    "Claudius Galenus"
+  ],
+  "wikidata": "Q8778",
+  "events": [
+    {
+      "type": "born",
+      "date": "0129-09",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "0216",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Galen (Q8778)",
+      "url": "https://www.wikidata.org/wiki/Q8778",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Galen",
+      "url": "https://en.wikipedia.org/wiki/Galen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

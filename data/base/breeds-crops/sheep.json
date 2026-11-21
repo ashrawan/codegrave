@@ -1,0 +1,42 @@
+{
+  "id": "sheep",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Domestic sheep",
+      "from": "-9000"
+    }
+  ],
+  "summary": "A farm animal tamed in the Near East from wild mouflon, kept first for meat and milk. Breeding later gave woolly sheep, and wool became a major trade good.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q7368",
+  "events": [
+    {
+      "type": "born",
+      "date": "-9000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: sheep (Q7368)",
+      "url": "https://www.wikidata.org/wiki/Q7368",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sheep",
+      "url": "https://en.wikipedia.org/wiki/Sheep",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

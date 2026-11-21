@@ -1,0 +1,47 @@
+{
+  "id": "brachiosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Brachiosaurus",
+      "from": "-154000000"
+    }
+  ],
+  "summary": "A huge long-necked dinosaur of the late Jurassic whose front legs were longer than its back legs, so its body sloped upward like a giraffe's. It browsed on tall trees in North America.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q14397",
+  "events": [
+    {
+      "type": "born",
+      "date": "-154000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-150000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Brachiosaurus (Q14397)",
+      "url": "https://www.wikidata.org/wiki/Q14397",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brachiosaurus",
+      "url": "https://en.wikipedia.org/wiki/Brachiosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,49 @@
+{
+  "id": "trireme",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Trireme",
+      "from": "-0700"
+    }
+  ],
+  "summary": "A fast warship with three banks of oars, used by Greeks, Phoenicians and later Romans. It was fitted with a bronze ram at the bow, and it was central to battles such as Salamis in 480 BCE.",
+  "labels": [
+    "transport",
+    "war"
+  ],
+  "wikidata": "Q208420",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by larger oared and sailing warships",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: trireme (Q208420)",
+      "url": "https://www.wikidata.org/wiki/Q208420",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trireme",
+      "url": "https://en.wikipedia.org/wiki/Trireme",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,62 @@
+{
+  "id": "song-dynasty",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Song dynasty",
+      "from": "0960"
+    }
+  ],
+  "summary": "A Chinese dynasty known for commerce and invention. In its time gunpowder weapons, the compass and paper money came into wide use, and its cities were among the largest in the world.",
+  "labels": [
+    "lost",
+    "economics",
+    "firsts"
+  ],
+  "aliases": [
+    "Sung Dynasty",
+    "Song Empire",
+    "Song China",
+    "Song",
+    "Sung"
+  ],
+  "wikidata": "Q7462",
+  "events": [
+    {
+      "type": "born",
+      "date": "0960",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1279",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by the Mongols under Kublai Khan",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "yuan-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Song dynasty (Q7462)",
+      "url": "https://www.wikidata.org/wiki/Q7462",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Song dynasty",
+      "url": "https://en.wikipedia.org/wiki/Song_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

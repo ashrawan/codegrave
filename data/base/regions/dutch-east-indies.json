@@ -1,0 +1,61 @@
+{
+  "id": "dutch-east-indies",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Dutch East Indies",
+      "from": "1800"
+    }
+  ],
+  "summary": "The Dutch colony in Southeast Asia, now Indonesia, ruled first through the Dutch East India Company and then by the Netherlands. It exported spices, sugar, coffee and rubber.",
+  "labels": [
+    "lost",
+    "economics"
+  ],
+  "aliases": [
+    "Netherlands East Indies",
+    "Dutch Indies",
+    "Nederlands-Indië",
+    "Netherlands Indies",
+    "Insulinde"
+  ],
+  "wikidata": "Q188161",
+  "events": [
+    {
+      "type": "born",
+      "date": "1800-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1949-12-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Independence of Indonesia after a revolution and Dutch recognition",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dutch East Indies (Q188161)",
+      "url": "https://www.wikidata.org/wiki/Q188161",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dutch East Indies",
+      "url": "https://en.wikipedia.org/wiki/Dutch_East_Indies",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

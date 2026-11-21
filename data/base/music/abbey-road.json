@@ -1,0 +1,48 @@
+{
+  "id": "abbey-road",
+  "category": "music",
+  "names": [
+    {
+      "name": "Abbey Road",
+      "from": "1969"
+    }
+  ],
+  "maker": "The Beatles",
+  "summary": "Last album recorded by the Beatles, named for the London studio where it was made. Its second side is a run of short songs linked into one piece, and its cover of the band crossing a street is among the most copied photographs.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q173643",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-09-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "the-beatles"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abbey Road (Q173643)",
+      "url": "https://www.wikidata.org/wiki/Q173643",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abbey Road",
+      "url": "https://en.wikipedia.org/wiki/Abbey_Road",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

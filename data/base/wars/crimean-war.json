@@ -1,0 +1,68 @@
+{
+  "id": "crimean-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Crimean War",
+      "from": "1853"
+    }
+  ],
+  "summary": "A war in which Russia fought the Ottoman Empire, Britain, France and Sardinia, mostly in Crimea. It showed the effects of new weapons and disease, and made Florence Nightingale famous for her work in nursing.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q254106",
+  "events": [
+    {
+      "type": "born",
+      "date": "1853-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1856-02",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "black-sea"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    },
+    {
+      "type": "related",
+      "to": "ottoman-empire"
+    },
+    {
+      "type": "related",
+      "to": "british-empire"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-sardinia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Crimean War (Q254106)",
+      "url": "https://www.wikidata.org/wiki/Q254106",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Crimean War",
+      "url": "https://en.wikipedia.org/wiki/Crimean_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

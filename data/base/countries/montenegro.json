@@ -1,0 +1,74 @@
+{
+  "id": "montenegro",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Montenegro",
+      "from": "1852"
+    }
+  ],
+  "summary": "A small mountainous country on the Adriatic that voted for independence from its union with Serbia in 2006. It was once a medieval principality and is a member of NATO.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Montenegro"
+  ],
+  "wikidata": "Q236",
+  "events": [
+    {
+      "type": "born",
+      "date": "1852",
+      "precision": "year",
+      "note": "Dated from 1852, when its ruling prince-bishop made Montenegro a secular principality. Its independence was recognised in 1878, and from 1918 it was part of Yugoslavia and then of a union with Serbia."
+    },
+    {
+      "type": "milestone",
+      "date": "2006-06-03",
+      "precision": "day",
+      "label": "Independence",
+      "note": "Independence was declared after a referendum."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Montenegro (Q236)",
+      "url": "https://www.wikidata.org/wiki/Q236",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Montenegro",
+      "url": "https://en.wikipedia.org/wiki/Montenegro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

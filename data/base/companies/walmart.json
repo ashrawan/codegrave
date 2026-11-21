@@ -1,0 +1,57 @@
+{
+  "id": "walmart",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Walmart",
+      "from": "1962"
+    }
+  ],
+  "maker": "Sam Walton",
+  "summary": "American retail company that began with one discount store in Arkansas and grew into a chain of large stores selling groceries and goods at low prices. It is among the largest private employers in the world.",
+  "labels": [
+    "business"
+  ],
+  "aliases": [
+    "Wal-Mart Stores, Inc.",
+    "Wallmart",
+    "Wall Mart"
+  ],
+  "wikidata": "Q483551",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-07-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sam-walton"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Walmart (Q483551)",
+      "url": "https://www.wikidata.org/wiki/Q483551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Walmart",
+      "url": "https://en.wikipedia.org/wiki/Walmart",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

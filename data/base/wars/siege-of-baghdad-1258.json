@@ -1,0 +1,59 @@
+{
+  "id": "siege-of-baghdad-1258",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Baghdad (1258)",
+      "from": "1258"
+    }
+  ],
+  "summary": "Mongol army under Hulagu Khan besieged and took Baghdad, then the centre of the Abbasid caliphate. The caliph was killed and the city lost its libraries and much of its population.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Baghdad"
+  ],
+  "wikidata": "Q369560",
+  "events": [
+    {
+      "type": "born",
+      "date": "1258-01-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1258-02-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "baghdad"
+    },
+    {
+      "type": "in",
+      "to": "abbasid-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Baghdad (Q369560)",
+      "url": "https://www.wikidata.org/wiki/Q369560",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Baghdad",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Baghdad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

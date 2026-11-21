@@ -1,0 +1,51 @@
+{
+  "id": "reuters",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "Reuters",
+      "from": "1851"
+    }
+  ],
+  "summary": "News agency founded in London by Paul Julius Reuter, who first used telegraph cables and carrier pigeons to send market news. It supplies reports to newspapers and broadcasters around the world.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q130879",
+  "events": [
+    {
+      "type": "born",
+      "date": "1851-10",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Reuters (Q130879)",
+      "url": "https://www.wikidata.org/wiki/Q130879",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reuters",
+      "url": "https://en.wikipedia.org/wiki/Reuters",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

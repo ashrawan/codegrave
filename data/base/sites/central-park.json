@@ -1,0 +1,50 @@
+{
+  "id": "central-park",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Central Park",
+      "from": "1856"
+    }
+  ],
+  "summary": "Large public park in the middle of Manhattan, designed by Frederick Law Olmsted and Calvert Vaux in the 1850s. It was one of the first major landscaped parks in an American city.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Bgb"
+  ],
+  "wikidata": "Q160409",
+  "events": [
+    {
+      "type": "born",
+      "date": "1856",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Central Park (Q160409)",
+      "url": "https://www.wikidata.org/wiki/Q160409",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Central Park",
+      "url": "https://en.wikipedia.org/wiki/Central_Park",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

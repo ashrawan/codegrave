@@ -1,0 +1,57 @@
+{
+  "id": "lotus-1-2-3",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Lotus 1-2-3",
+      "from": "1983"
+    }
+  ],
+  "summary": "Spreadsheet that combined calculations, charts and simple data tools, and was a leading reason people bought IBM PCs in the 1980s. Microsoft Excel later took its place, and IBM stopped selling it.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Lotus 123"
+  ],
+  "wikidata": "Q653999",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-01-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Microsoft Excel and withdrawn by IBM",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lotus 1-2-3 (Q653999)",
+      "url": "https://www.wikidata.org/wiki/Q653999",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lotus 1-2-3",
+      "url": "https://en.wikipedia.org/wiki/Lotus_1-2-3",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

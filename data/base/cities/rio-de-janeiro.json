@@ -1,0 +1,51 @@
+{
+  "id": "rio-de-janeiro",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Rio de Janeiro",
+      "from": "1565"
+    }
+  ],
+  "summary": "Coastal city in south-eastern Brazil, founded by the Portuguese in 1565. It was the capital of Brazil until 1960 and is known for Sugarloaf Mountain, Copacabana and its carnival.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Rio de Janeiro city",
+    "City of Río de Janeiro"
+  ],
+  "wikidata": "Q8678",
+  "events": [
+    {
+      "type": "born",
+      "date": "1565-03-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rio de Janeiro (Q8678)",
+      "url": "https://www.wikidata.org/wiki/Q8678",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rio de Janeiro",
+      "url": "https://en.wikipedia.org/wiki/Rio_de_Janeiro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

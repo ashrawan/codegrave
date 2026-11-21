@@ -1,0 +1,74 @@
+{
+  "id": "iran",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Iran",
+      "from": "1501"
+    }
+  ],
+  "summary": "The country on the Iranian plateau that was once the heart of Persia. After a revolution in 1979 the monarchy was replaced by an Islamic Republic led by a supreme leader.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Islamic Republic of Iran",
+    "ir",
+    "Islamic Rep. Iran",
+    "IRI"
+  ],
+  "wikidata": "Q794",
+  "events": [
+    {
+      "type": "born",
+      "date": "1501",
+      "precision": "year",
+      "note": "Dated from 1501, when the Safavids reunited Iran as one state, the first since the Arab conquest. Safavid Iran and the ancient Persian empires have entries of their own."
+    },
+    {
+      "type": "milestone",
+      "date": "1979-04-01",
+      "precision": "day",
+      "label": "Islamic Republic",
+      "note": "After the revolution a referendum replaced the monarchy with an Islamic Republic."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "opec"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iran (Q794)",
+      "url": "https://www.wikidata.org/wiki/Q794",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iran",
+      "url": "https://en.wikipedia.org/wiki/Iran",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

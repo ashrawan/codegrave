@@ -1,0 +1,70 @@
+{
+  "id": "spanish-american-wars-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Spanish American wars of independence",
+      "from": "1808"
+    }
+  ],
+  "summary": "A set of wars in which most of Spain's colonies in the Americas broke away. Leaders such as Simón Bolívar and José de San Martín helped create new nations from Mexico to Argentina.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Spanish American independence",
+    "Independence of Spanish America",
+    "Emancipation of Spanish America"
+  ],
+  "wikidata": "Q1123201",
+  "events": [
+    {
+      "type": "born",
+      "date": "1808-09-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1833-09-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "spanish-empire"
+    },
+    {
+      "type": "related",
+      "to": "gran-colombia"
+    },
+    {
+      "type": "related",
+      "to": "chile"
+    },
+    {
+      "type": "related",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish American wars of independence (Q1123201)",
+      "url": "https://www.wikidata.org/wiki/Q1123201",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish American wars of independence",
+      "url": "https://en.wikipedia.org/wiki/Spanish_American_wars_of_independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

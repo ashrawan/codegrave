@@ -1,0 +1,57 @@
+{
+  "id": "al-azhar",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Al-Azhar University",
+      "from": "0970"
+    }
+  ],
+  "summary": "Mosque founded in Cairo that grew into a major centre of Islamic learning and later a university. Students come from many countries to study religion and, today, other subjects.",
+  "labels": [
+    "education",
+    "religion"
+  ],
+  "aliases": [
+    "Egyptian University",
+    "azhar.edu.eg/en",
+    "University of (the honorable) Al-Azhar"
+  ],
+  "wikidata": "Q173959",
+  "events": [
+    {
+      "type": "born",
+      "date": "0970",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cairo"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Al-Azhar University (Q173959)",
+      "url": "https://www.wikidata.org/wiki/Q173959",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Al-Azhar University",
+      "url": "https://en.wikipedia.org/wiki/Al-Azhar_University",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "silphium",
+  "category": "plants-fungi",
+  "names": [
+    {
+      "name": "Silphium",
+      "from": "-0700"
+    }
+  ],
+  "summary": "A plant of the Cyrene region of Libya used in cooking and medicine in the ancient world, so valuable that Cyrene put it on coins. It was harvested to extinction and its identity is still debated.",
+  "labels": [
+    "food",
+    "lost"
+  ],
+  "aliases": [
+    "silphion",
+    "laserwort"
+  ],
+  "wikidata": "Q1570745",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0100",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overharvested and perhaps hard to farm, it was gone by late Roman times",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: silphium (Q1570745)",
+      "url": "https://www.wikidata.org/wiki/Q1570745",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Silphium",
+      "url": "https://en.wikipedia.org/wiki/Silphium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

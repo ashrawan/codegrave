@@ -1,0 +1,78 @@
+{
+  "id": "battle-of-the-bulge",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of the Bulge",
+      "from": "1944"
+    }
+  ],
+  "summary": "Germany's last big offensive in the west, through the Ardennes forest in winter. It surprised the Allies but ran out of fuel and was beaten back, costing Germany its remaining reserves.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Ardennes Counteroffensive",
+    "Battle of the Ardennes",
+    "The Battle of the Bulge",
+    "Ardennes Offensive"
+  ],
+  "wikidata": "Q151018",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-12-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-01-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "in",
+      "to": "belgium"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of the Bulge (Q151018)",
+      "url": "https://www.wikidata.org/wiki/Q151018",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of the Bulge",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Bulge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

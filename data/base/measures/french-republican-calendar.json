@@ -1,0 +1,57 @@
+{
+  "id": "french-republican-calendar",
+  "category": "measures",
+  "names": [
+    {
+      "name": "French Republican calendar",
+      "from": "1793"
+    }
+  ],
+  "summary": "A calendar introduced during the French Revolution with twelve months of thirty days, ten-day weeks and new month names based on nature. It aimed to break with the Church and was used for about twelve years.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "French Revolutionary calendar",
+    "FRC"
+  ],
+  "wikidata": "Q181974",
+  "events": [
+    {
+      "type": "born",
+      "date": "1793",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1805",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Napoleon restored the Gregorian calendar",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Republican calendar (Q181974)",
+      "url": "https://www.wikidata.org/wiki/Q181974",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Republican calendar",
+      "url": "https://en.wikipedia.org/wiki/French_Republican_calendar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

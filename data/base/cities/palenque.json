@@ -1,0 +1,54 @@
+{
+  "id": "palenque",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Palenque",
+      "from": "0226"
+    }
+  ],
+  "summary": "Maya city in the rainforest of southern Mexico, known for its temples and for the tomb of the ruler Pakal. Its carved texts are an important source for Maya history.",
+  "labels": [
+    "architecture",
+    "politics"
+  ],
+  "wikidata": "Q181427",
+  "events": [
+    {
+      "type": "born",
+      "date": "0226",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0800",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned around 800 as Maya cities in the region declined",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Palenque (Q181427)",
+      "url": "https://www.wikidata.org/wiki/Q181427",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palenque",
+      "url": "https://en.wikipedia.org/wiki/Palenque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

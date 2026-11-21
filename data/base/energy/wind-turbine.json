@@ -1,0 +1,46 @@
+{
+  "id": "wind-turbine",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Wind turbine",
+      "from": "1887"
+    }
+  ],
+  "summary": "A machine that turns the wind's motion into electricity. James Blyth in Scotland and Charles Brush in the United States built early ones in 1887, and huge modern turbines are now sited on land and at sea.",
+  "labels": [
+    "energy",
+    "environment"
+  ],
+  "aliases": [
+    "wind generator"
+  ],
+  "wikidata": "Q49833",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: wind turbine (Q49833)",
+      "url": "https://www.wikidata.org/wiki/Q49833",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wind turbine",
+      "url": "https://en.wikipedia.org/wiki/Wind_turbine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

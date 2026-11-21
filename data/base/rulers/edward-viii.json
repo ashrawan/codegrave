@@ -1,0 +1,64 @@
+{
+  "id": "edward-viii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Edward VIII",
+      "from": "1894"
+    }
+  ],
+  "summary": "King for less than a year. He gave up the throne in December 1936 to marry Wallis Simpson.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Duke of Windsor"
+  ],
+  "wikidata": "Q590227",
+  "events": [
+    {
+      "type": "born",
+      "date": "1894-06-23",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1936-01-20",
+      "precision": "day",
+      "label": "Became king",
+      "note": "King of the United Kingdom from January to December 1936."
+    },
+    {
+      "type": "milestone",
+      "date": "1936-12-11",
+      "precision": "day",
+      "label": "Abdicated",
+      "note": "Gave up the throne; his brother became George VI."
+    },
+    {
+      "type": "ended",
+      "date": "1972-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Edward VIII (Q590227)",
+      "url": "https://www.wikidata.org/wiki/Q590227",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward VIII",
+      "url": "https://en.wikipedia.org/wiki/Edward_VIII",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

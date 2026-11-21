@@ -1,0 +1,61 @@
+{
+  "id": "franklin-pierce",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Franklin Pierce",
+      "from": "1804"
+    }
+  ],
+  "summary": "Fourteenth president. His support for the Kansas-Nebraska Act of 1854 reopened the fight over slavery in the western territories.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q12312",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-11-23",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1853-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 14th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1857-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and James Buchanan took office."
+    },
+    {
+      "type": "ended",
+      "date": "1869-10-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Franklin Pierce (Q12312)",
+      "url": "https://www.wikidata.org/wiki/Q12312",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franklin Pierce",
+      "url": "https://en.wikipedia.org/wiki/Franklin_Pierce",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

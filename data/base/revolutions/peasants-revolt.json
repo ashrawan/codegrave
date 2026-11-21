@@ -1,0 +1,60 @@
+{
+  "id": "peasants-revolt",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Peasants' Revolt",
+      "from": "1381"
+    }
+  ],
+  "summary": "A rising of English peasants and townspeople against a new poll tax and feudal burdens. Rebels marched on London and met the young Richard II, but the leaders were killed or executed and the revolt collapsed.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Peasants' Revolt of 1381",
+    "Great Rising"
+  ],
+  "wikidata": "Q498871",
+  "events": [
+    {
+      "type": "born",
+      "date": "1381-05-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1381-11",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peasants' Revolt of 1381 (Q498871)",
+      "url": "https://www.wikidata.org/wiki/Q498871",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peasants' Revolt",
+      "url": "https://en.wikipedia.org/wiki/Peasants'_Revolt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

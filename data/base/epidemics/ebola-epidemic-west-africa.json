@@ -1,0 +1,62 @@
+{
+  "id": "ebola-epidemic-west-africa",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "West African Ebola epidemic",
+      "from": "2013"
+    }
+  ],
+  "summary": "The largest outbreak of Ebola virus disease began in Guinea and spread to Liberia and Sierra Leone. Many health workers died, and the response led to new ways of testing vaccines in emergencies.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Western African Ebola virus epidemic",
+    "2014 Ebola virus epidemic in West Africa",
+    "West African Ebola virus epidemic",
+    "Ebola virus epidemic in West Africa"
+  ],
+  "wikidata": "Q15989108",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-12",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2016-06",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Western African Ebola virus epidemic (Q15989108)",
+      "url": "https://www.wikidata.org/wiki/Q15989108",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Western African Ebola epidemic",
+      "url": "https://en.wikipedia.org/wiki/Western_African_Ebola_epidemic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

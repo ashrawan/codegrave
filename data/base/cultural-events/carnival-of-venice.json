@@ -1,0 +1,55 @@
+{
+  "id": "carnival-of-venice",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Carnival of Venice",
+      "from": "1162"
+    }
+  ],
+  "summary": "A festival of masks and costumes held in Venice before Lent, said to date back to the twelfth century. It was banned for a long time and then revived in the late twentieth century.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Venice Carnival",
+    "Carnevale di Venezia"
+  ],
+  "wikidata": "Q35191",
+  "events": [
+    {
+      "type": "born",
+      "date": "1162",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venice"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carnival of Venice (Q35191)",
+      "url": "https://www.wikidata.org/wiki/Q35191",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carnival of Venice",
+      "url": "https://en.wikipedia.org/wiki/Carnival_of_Venice",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,69 @@
+{
+  "id": "fatehpur-sikri",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Fatehpur Sikri",
+      "from": "1569"
+    }
+  ],
+  "summary": "Red sandstone city in India built by the Mughal emperor Akbar as his new capital. Its palaces and mosque were left almost empty after only about fifteen years, mainly because of a shortage of water.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Fatehpur Sikri Old",
+    "Old Fatehpur Sikri",
+    "Futtypore Sicri",
+    "Fathpur Sikri",
+    "Futtehpore Sikri"
+  ],
+  "wikidata": "Q179046",
+  "events": [
+    {
+      "type": "born",
+      "date": "1569",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1585",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned by the court, mainly for lack of water",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "akbar"
+    },
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "mughal-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fatehpur Sikri (Q179046)",
+      "url": "https://www.wikidata.org/wiki/Q179046",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fatehpur Sikri",
+      "url": "https://en.wikipedia.org/wiki/Fatehpur_Sikri",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

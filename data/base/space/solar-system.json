@@ -1,0 +1,52 @@
+{
+  "id": "solar-system",
+  "category": "space",
+  "names": [
+    {
+      "name": "Solar System",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The Sun and everything held by its gravity: eight planets, their moons, dwarf planets, asteroids and comets. It formed from a collapsing cloud of gas and dust about 4.6 billion years ago.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "planetary house",
+    "sun system",
+    "The Solar System"
+  ],
+  "wikidata": "Q544",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "milky-way"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Solar System (Q544)",
+      "url": "https://www.wikidata.org/wiki/Q544",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Solar System",
+      "url": "https://en.wikipedia.org/wiki/Solar_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

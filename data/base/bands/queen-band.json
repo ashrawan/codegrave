@@ -1,0 +1,63 @@
+{
+  "id": "queen-band",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Queen",
+      "from": "1970"
+    }
+  ],
+  "summary": "English rock band fronted by Freddie Mercury, with Brian May, Roger Taylor and John Deacon. Its songs mixed rock with opera and pop, and its Live Aid set of 1985 is often remembered.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q15862",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "the-beatles"
+    },
+    {
+      "type": "influenced_by",
+      "to": "the-who"
+    },
+    {
+      "type": "influenced_by",
+      "to": "jimi-hendrix"
+    },
+    {
+      "type": "influenced_by",
+      "to": "pink-floyd"
+    },
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Queen (Q15862)",
+      "url": "https://www.wikidata.org/wiki/Q15862",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Queen (band)",
+      "url": "https://en.wikipedia.org/wiki/Queen_(band)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

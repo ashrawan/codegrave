@@ -1,0 +1,55 @@
+{
+  "id": "atari-jaguar",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Atari Jaguar",
+      "from": "1993"
+    }
+  ],
+  "maker": "Atari",
+  "summary": "Atari's last home console, advertised as the first 64-bit system. It was difficult to program and had few good games, and Atari left the hardware business and merged with a disk drive firm.",
+  "labels": [
+    "games",
+    "failures"
+  ],
+  "aliases": [
+    "Jaguar",
+    "Jaguar 64",
+    "Jaguar64"
+  ],
+  "wikidata": "Q650601",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-11-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Poor sales and Atari's exit from hardware",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Atari Jaguar (Q650601)",
+      "url": "https://www.wikidata.org/wiki/Q650601",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atari Jaguar",
+      "url": "https://en.wikipedia.org/wiki/Atari_Jaguar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

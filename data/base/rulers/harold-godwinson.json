@@ -1,0 +1,57 @@
+{
+  "id": "harold-godwinson",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Harold Godwinson",
+      "from": "1022"
+    }
+  ],
+  "summary": "The last Anglo-Saxon king of England. He reigned for nine months in 1066 and was killed at the Battle of Hastings.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Harold II"
+  ],
+  "wikidata": "Q159597",
+  "events": [
+    {
+      "type": "born",
+      "date": "1022",
+      "precision": "circa"
+    },
+    {
+      "type": "milestone",
+      "date": "1066",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from January to October 1066."
+    },
+    {
+      "type": "ended",
+      "date": "1066-10-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Harold Godwinson (Q159597)",
+      "url": "https://www.wikidata.org/wiki/Q159597",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harold Godwinson",
+      "url": "https://en.wikipedia.org/wiki/Harold_Godwinson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

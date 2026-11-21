@@ -1,0 +1,51 @@
+{
+  "id": "michael-jordan",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Michael Jordan",
+      "from": "1963"
+    }
+  ],
+  "summary": "American basketball player who won six NBA titles with the Chicago Bulls and two Olympic gold medals. His shoe line with Nike also made him one of the best-known athletes in the world.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q41421",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-02-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-1992"
+    },
+    {
+      "type": "related",
+      "to": "olympics-1984"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Michael Jordan (Q41421)",
+      "url": "https://www.wikidata.org/wiki/Q41421",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michael Jordan",
+      "url": "https://en.wikipedia.org/wiki/Michael_Jordan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

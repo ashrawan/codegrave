@@ -1,0 +1,50 @@
+{
+  "id": "little-ice-age",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Little Ice Age",
+      "from": "1303"
+    }
+  ],
+  "summary": "A cooler period in the Northern Hemisphere, roughly from the 1300s to the mid-1800s, with colder winters, glaciers advancing in the Alps and frozen rivers such as the Thames. Volcanic eruptions and a quiet Sun may have contributed.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "LIA"
+  ],
+  "wikidata": "Q190530",
+  "events": [
+    {
+      "type": "born",
+      "date": "1303",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1850",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Little Ice Age (Q190530)",
+      "url": "https://www.wikidata.org/wiki/Q190530",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Little Ice Age",
+      "url": "https://en.wikipedia.org/wiki/Little_Ice_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

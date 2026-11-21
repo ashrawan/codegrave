@@ -1,0 +1,53 @@
+{
+  "id": "pc-98",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "NEC PC-9800 series",
+      "from": "1982"
+    }
+  ],
+  "maker": "NEC",
+  "summary": "Line of personal computers from NEC that dominated the Japanese market for years. Its design was not IBM-compatible, so it had its own software, including a large number of Japanese games.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "PC-9800 series"
+  ],
+  "wikidata": "Q183505",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2003",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by IBM-compatible PCs",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: NEC PC-9800 series (Q183505)",
+      "url": "https://www.wikidata.org/wiki/Q183505",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PC-98",
+      "url": "https://en.wikipedia.org/wiki/PC-98",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

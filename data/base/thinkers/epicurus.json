@@ -1,0 +1,55 @@
+{
+  "id": "epicurus",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Epicurus",
+      "from": "-0341"
+    }
+  ],
+  "summary": "Greek philosopher who taught that the aim of life is lasting calm, free from pain and fear, which he thought came from friendship and simple pleasures. He taught his followers in a garden in Athens.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "Epikouros"
+  ],
+  "wikidata": "Q43216",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0341",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0270",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "democritus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Epicurus (Q43216)",
+      "url": "https://www.wikidata.org/wiki/Q43216",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Epicurus",
+      "url": "https://en.wikipedia.org/wiki/Epicurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

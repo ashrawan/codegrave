@@ -1,0 +1,51 @@
+{
+  "id": "asia",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Asia",
+      "from": "-50000000"
+    }
+  ],
+  "summary": "Largest continent by area and population, joined to Europe as Eurasia. Its present form took shape when India collided with it about 50 million years ago, raising the Himalaya.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Asian continent",
+    "Continental Asia"
+  ],
+  "wikidata": "Q48",
+  "events": [
+    {
+      "type": "born",
+      "date": "-50000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Asia (Q48)",
+      "url": "https://www.wikidata.org/wiki/Q48",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Asia",
+      "url": "https://en.wikipedia.org/wiki/Asia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

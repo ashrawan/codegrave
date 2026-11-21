@@ -1,0 +1,48 @@
+{
+  "id": "pierre-curie",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Pierre Curie",
+      "from": "1859"
+    }
+  ],
+  "summary": "French physicist who studied magnetism and crystals, then worked with his wife Marie on radioactivity. They shared the 1903 Nobel Prize in Physics with Henri Becquerel. He died when a horse-drawn cart ran him over in Paris.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "wikidata": "Q37463",
+  "events": [
+    {
+      "type": "born",
+      "date": "1859-05-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1906-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pierre Curie (Q37463)",
+      "url": "https://www.wikidata.org/wiki/Q37463",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pierre Curie",
+      "url": "https://en.wikipedia.org/wiki/Pierre_Curie",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

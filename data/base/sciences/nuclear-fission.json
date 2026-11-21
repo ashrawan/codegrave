@@ -1,0 +1,47 @@
+{
+  "id": "nuclear-fission",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Nuclear fission",
+      "from": "1938"
+    }
+  ],
+  "maker": "Otto Hahn, Fritz Strassmann, Lise Meitner",
+  "summary": "Splitting of a heavy atomic nucleus into smaller ones, releasing energy. Otto Hahn and Fritz Strassmann found it in uranium in 1938, and Lise Meitner and Otto Frisch explained it. It powers reactors and atomic bombs.",
+  "labels": [
+    "physics",
+    "energy"
+  ],
+  "aliases": [
+    "fission"
+  ],
+  "wikidata": "Q11429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: nuclear fission (Q11429)",
+      "url": "https://www.wikidata.org/wiki/Q11429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nuclear fission",
+      "url": "https://en.wikipedia.org/wiki/Nuclear_fission",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

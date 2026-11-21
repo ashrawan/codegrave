@@ -1,0 +1,57 @@
+{
+  "id": "cretaceous",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Cretaceous",
+      "from": "-145000000"
+    }
+  ],
+  "summary": "The final period of the dinosaurs, from 145 to 66 million years ago. Flowering plants spread, seas were high and warm, Tyrannosaurus and Triceratops lived, and an asteroid impact ended the period.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Cretaceous Period",
+    "Cretaceous System"
+  ],
+  "wikidata": "Q44626",
+  "events": [
+    {
+      "type": "born",
+      "date": "-145000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "mesozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cretaceous (Q44626)",
+      "url": "https://www.wikidata.org/wiki/Q44626",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cretaceous",
+      "url": "https://en.wikipedia.org/wiki/Cretaceous",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

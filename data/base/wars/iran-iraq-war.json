@@ -1,0 +1,76 @@
+{
+  "id": "iran-iraq-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Iran–Iraq War",
+      "from": "1980"
+    }
+  ],
+  "summary": "A war that began when Iraq invaded Iran, and went on for eight years with huge casualties, trench fighting and the use of chemical weapons. It ended in a ceasefire with borders little changed.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Gulf War",
+    "Iraq-Iran War"
+  ],
+  "wikidata": "Q82664",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-09-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1988-08-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    },
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "related",
+      "to": "sudan"
+    },
+    {
+      "type": "related",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "soviet-union"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iran–Iraq War (Q82664)",
+      "url": "https://www.wikidata.org/wiki/Q82664",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iran–Iraq War",
+      "url": "https://en.wikipedia.org/wiki/Iran%E2%80%93Iraq_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

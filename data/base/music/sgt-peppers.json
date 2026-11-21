@@ -1,0 +1,51 @@
+{
+  "id": "sgt-peppers",
+  "category": "music",
+  "names": [
+    {
+      "name": "Sgt. Pepper's Lonely Hearts Club Band",
+      "from": "1967"
+    }
+  ],
+  "maker": "The Beatles",
+  "summary": "Eighth album by the Beatles, made in the studio after they stopped touring, with orchestras, Indian instruments and tape effects. Its elaborate cover and linked songs made the album an art form of its own in rock.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Sgt. Pepper's"
+  ],
+  "wikidata": "Q169226",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-05-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "the-beatles"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sgt. Pepper's Lonely Hearts Club Band (Q169226)",
+      "url": "https://www.wikidata.org/wiki/Q169226",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sgt. Pepper's Lonely Hearts Club Band",
+      "url": "https://en.wikipedia.org/wiki/Sgt._Pepper's_Lonely_Hearts_Club_Band",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

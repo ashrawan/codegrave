@@ -1,0 +1,80 @@
+{
+  "id": "immanuel-kant",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Immanuel Kant",
+      "from": "1724"
+    }
+  ],
+  "summary": "German philosopher from Königsberg who argued that the mind shapes the way we experience the world and that moral duties follow from reason. His Critique of Pure Reason is a landmark of modern philosophy.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q9312",
+  "events": [
+    {
+      "type": "born",
+      "date": "1724-04-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1804-02-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "david-hume"
+    },
+    {
+      "type": "influenced_by",
+      "to": "jean-jacques-rousseau"
+    },
+    {
+      "type": "influenced_by",
+      "to": "isaac-newton"
+    },
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "rene-descartes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "gottfried-leibniz"
+    },
+    {
+      "type": "influenced_by",
+      "to": "john-locke"
+    },
+    {
+      "type": "influenced_by",
+      "to": "baruch-spinoza"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Immanuel Kant (Q9312)",
+      "url": "https://www.wikidata.org/wiki/Q9312",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Immanuel Kant",
+      "url": "https://en.wikipedia.org/wiki/Immanuel_Kant",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

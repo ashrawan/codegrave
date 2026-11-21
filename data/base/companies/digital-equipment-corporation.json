@@ -1,0 +1,65 @@
+{
+  "id": "digital-equipment-corporation",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Digital Equipment Corporation",
+      "from": "1957"
+    }
+  ],
+  "maker": "Ken Olsen and Harlan Anderson",
+  "summary": "American computer maker whose PDP and VAX minicomputers brought computing to laboratories and companies. It was bought by Compaq in 1998 after the market had shifted to personal computers.",
+  "labels": [
+    "business",
+    "engineering",
+    "computing"
+  ],
+  "aliases": [
+    "DEC",
+    "Digital",
+    "Digital Equipment"
+  ],
+  "wikidata": "Q690079",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1998",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Bought by Compaq after missing the shift to personal computers",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "compaq"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Digital Equipment Corporation (Q690079)",
+      "url": "https://www.wikidata.org/wiki/Q690079",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Digital Equipment Corporation",
+      "url": "https://en.wikipedia.org/wiki/Digital_Equipment_Corporation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

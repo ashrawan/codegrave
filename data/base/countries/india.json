@@ -1,0 +1,75 @@
+{
+  "id": "india",
+  "category": "countries",
+  "names": [
+    {
+      "name": "India",
+      "from": "1947"
+    }
+  ],
+  "summary": "A South Asian republic that became independent from Britain in 1947 and is now the most populous country in the world. It is a parliamentary democracy with many languages and religions.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "aliases": [
+    "Republic of India",
+    "Bharatvarsh",
+    "Hindustan",
+    "Bharata",
+    "Hindoostan"
+  ],
+  "wikidata": "Q668",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-08-15",
+      "precision": "day",
+      "note": "Dated from independence in 1947. Earlier states of the subcontinent, such as the Maurya and Mughal empires, have entries of their own."
+    },
+    {
+      "type": "milestone",
+      "date": "1950-01-26",
+      "precision": "day",
+      "label": "Republic",
+      "note": "The constitution came into force."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "antarctic-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: India (Q668)",
+      "url": "https://www.wikidata.org/wiki/Q668",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: India",
+      "url": "https://en.wikipedia.org/wiki/India",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

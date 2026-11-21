@@ -1,0 +1,52 @@
+{
+  "id": "pendulum-clock",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Pendulum clock",
+      "from": "1656"
+    }
+  ],
+  "maker": "Christiaan Huygens",
+  "summary": "A clock regulated by a swinging weight. Christiaan Huygens built the first in 1656, and it was much more accurate than earlier clocks, making minutes and seconds useful in daily life and science.",
+  "labels": [
+    "physics",
+    "engineering"
+  ],
+  "aliases": [
+    "pendulum clocks"
+  ],
+  "wikidata": "Q41751",
+  "events": [
+    {
+      "type": "born",
+      "date": "1656",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "christiaan-huygens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: pendulum clock (Q41751)",
+      "url": "https://www.wikidata.org/wiki/Q41751",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pendulum clock",
+      "url": "https://en.wikipedia.org/wiki/Pendulum_clock",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

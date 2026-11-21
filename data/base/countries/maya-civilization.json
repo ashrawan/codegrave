@@ -1,0 +1,52 @@
+{
+  "id": "maya-civilization",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Maya civilization",
+      "from": "-2000"
+    }
+  ],
+  "summary": "A Mesoamerican civilization of rival city-states in Mexico and Central America. The Maya built stepped pyramids, wrote with glyphs and kept an exact calendar, and their descendants live there today.",
+  "labels": [
+    "lost",
+    "astronomy"
+  ],
+  "aliases": [
+    "Mayan civilization"
+  ],
+  "wikidata": "Q28567",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1697",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its great cities declined from about 900; the last independent city fell to the Spanish in 1697",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Maya civilization (Q28567)",
+      "url": "https://www.wikidata.org/wiki/Q28567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maya civilization",
+      "url": "https://en.wikipedia.org/wiki/Maya_civilization",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

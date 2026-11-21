@@ -1,0 +1,52 @@
+{
+  "id": "david-livingstone",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "David Livingstone",
+      "from": "1813"
+    }
+  ],
+  "summary": "Scottish missionary and doctor who crossed southern and central Africa, was the first European to see Victoria Falls, and campaigned against the slave trade. He died in what is now Zambia.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q48373",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813-03-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1873-05-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: David Livingstone (Q48373)",
+      "url": "https://www.wikidata.org/wiki/Q48373",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David Livingstone",
+      "url": "https://en.wikipedia.org/wiki/David_Livingstone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

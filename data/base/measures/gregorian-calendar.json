@@ -1,0 +1,49 @@
+{
+  "id": "gregorian-calendar",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Gregorian calendar",
+      "from": "1582"
+    }
+  ],
+  "summary": "The calendar introduced by Pope Gregory XIII to fix the drift of the Julian calendar, by skipping some leap years. It is the most widely used civil calendar in the world today.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Western calendar",
+    "Christian calendar",
+    "New Style",
+    "new Western calendar",
+    "new Christian calendar"
+  ],
+  "wikidata": "Q12138",
+  "events": [
+    {
+      "type": "born",
+      "date": "1582-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Gregorian calendar (Q12138)",
+      "url": "https://www.wikidata.org/wiki/Q12138",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gregorian calendar",
+      "url": "https://en.wikipedia.org/wiki/Gregorian_calendar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

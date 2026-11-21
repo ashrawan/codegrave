@@ -1,0 +1,52 @@
+{
+  "id": "roman-forum",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Roman Forum",
+      "from": "-0600"
+    }
+  ],
+  "summary": "Open space in the middle of ancient Rome, surrounded by temples, law courts and government buildings. Speeches, trials and triumphal parades happened there, and its ruins lie below the Palatine Hill.",
+  "labels": [
+    "politics",
+    "architecture"
+  ],
+  "wikidata": "Q180212",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rome"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roman Forum (Q180212)",
+      "url": "https://www.wikidata.org/wiki/Q180212",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roman Forum",
+      "url": "https://en.wikipedia.org/wiki/Roman_Forum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

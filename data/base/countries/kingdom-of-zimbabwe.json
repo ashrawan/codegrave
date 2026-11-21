@@ -1,0 +1,55 @@
+{
+  "id": "kingdom-of-zimbabwe",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kingdom of Zimbabwe",
+      "from": "1220"
+    }
+  ],
+  "summary": "A southern African state built around Great Zimbabwe, a city of huge dry-stone walls. Its rulers grew wealthy from gold and cattle and traded with Swahili merchants on the Indian Ocean coast.",
+  "labels": [
+    "lost",
+    "architecture",
+    "world-heritage"
+  ],
+  "wikidata": "Q596092",
+  "events": [
+    {
+      "type": "born",
+      "date": "1220",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1450",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abandoned and fragmented, possibly after trade shifts and resource strain",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "kingdom-of-mutapa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Zimbabwe (Q596092)",
+      "url": "https://www.wikidata.org/wiki/Q596092",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Great Zimbabwe",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Great_Zimbabwe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

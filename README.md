@@ -7,17 +7,29 @@
 
 <p align="center"><em>Nothing ships forever.</em></p>
 
-[codegrave.com](https://codegrave.com) is one page: a timeline of digital
-things (languages, browsers, frameworks, machines and more) from first
-release to official end. Time runs left to right with the years along the
-bottom, and each thing is one line. Only things are listed, never people.
-Click a line to read its history, with
-dates, sources, official links and images.
+[codegrave.com](https://codegrave.com) is one page: an encyclopedia drawn as a
+timeline. Every entry is one line from its start to its end: a person from
+birth to death, an empire from founding to fall, a species to its
+extinction, a programming language from first release to end of support.
+The page opens with the timeline drawn in depth: time runs into the screen
+like a road, with the years along its edge, and play carries you along it.
+One button switches to the flat timeline in the pictures below, where time
+runs left to right with the years along the bottom. It began as a timeline
+of computing, and computing is still its deepest shelf. Click a card or a
+line to read its history, with dates, sources, links and images.
+
+The base holds about 4,400 entries on one map of ten branches: People,
+Places, Organisations, Events, Arts & media, Knowledge & belief, Society &
+daily life, Life, Earth & space, and Technology (with Computing). On top of
+it sit the views: about sixty subjects people look for, such as Ancient
+Egypt, World War II, US Presidents, Dinosaurs, Video Games and Discontinued
+Tech. Each is a plain name, a hand-picked set of entries and chapters that
+tell the story in order.
 
 <table>
   <tr>
-    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: the five generations of computers drawn as eras, with the history of ENIAC open in the side panel"></td>
-    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: the history of AI, scrolled to the recent years"></td>
+    <td width="74%" valign="top"><img src="docs/screenshots/desktop.png" alt="codegrave on a wide screen: the view Ancient Rome drawn as lines and chapters, with the entry for Julius Caesar open in the side panel"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/phone.png" alt="codegrave on a phone in the dark theme: the view Dinosaurs, with its chapters and the years in millions"></td>
   </tr>
   <tr>
     <td align="center"><sub>Wide screen, light theme</sub></td>
@@ -27,27 +39,33 @@ dates, sources, official links and images.
 
 ## What the page does
 
-- **Views as sections.** A view is a named set of things, such as "Endings
-  of the 2020s" or "Machines and their systems". Each view on the timeline
-  gets its own section under a coloured heading, with its own named eras
-  drawn in its colour.
-- **Fit or Expand.** Fit (the button above reverse, bottom right) shares the
-  screen height between the sections. Expand lets each section take what it
-  needs and the page scrolls. Drag the grip under a section to make it
-  shorter or taller; a shorter section keeps its best-ranked lines.
-- **Showing.** In the panel, each view on the timeline is a row: drag it to
-  reorder the sections, pick its colour from the dot, remove it with the
-  cross, or shuffle all the colours.
-- **Search.** The top search finds things, events, eras and years on the
-  timeline. Below them it lists matches from views that are not on the
-  timeline yet, and picking one adds that view.
+- **One subject, one view.** The panel lists the views under four topics:
+  History, Science, Technology and Culture. Each view on the timeline gets
+  its own section under a coloured heading, with its chapters drawn in its
+  colour. Click a chapter to read it.
+- **Any stretch of time.** The same axis shows a decade of software, three
+  thousand years of empires, or four billion years of the Earth. Dates
+  before the common era and deep time are first-class.
+- **Side by side.** Put up to eight views on the timeline at once and see
+  what was happening at the same moment in different stories.
+- **Fit or Expand.** Fit shares the screen height between the sections.
+  Expand lets each section take what it needs and the page scrolls. Drag the
+  grip under a section to make it shorter or taller; a shorter section keeps
+  its best-ranked lines.
+- **Search.** The top search finds entries, events, chapters and years on
+  the timeline (try `44 BCE`). Below them it lists matches from the whole
+  encyclopedia, and picking one brings it onto the timeline. The panel's
+  search finds views: the listed ones, and the classical shelves (Everything,
+  each branch, each kind) with their type marked.
 - **Play and reverse.** Play moves a marker through time so the timeline
   shows only what had happened by then. Reverse flips the order of the lines.
 - **One link for everything.** The address holds the views, their order and
-  colours, the year range and the open thing, so any state can be shared.
+  colours, the year range and the open entry, so any state can be shared.
+- **Fast at any size.** The page never loads the whole dataset. Each action
+  fetches one small ready-made file ([`docs/BUILD.md`](docs/BUILD.md)).
 
-The timeline is built in the open. Anyone can correct a fact, add a thing,
-or propose a new view of the timeline.
+The encyclopedia is built in the open. Anyone can correct a fact, add an
+entry, or publish a view of their own.
 
 ## Quick start
 
@@ -64,8 +82,8 @@ python3 -m http.server 8080 --directory site   # serves the page on http://local
 | --- | --- |
 | `node scripts/build.mjs --check` | Checks every data file. Must print `0 errors`. |
 | `node --test` | Runs the tests. |
-| `node scripts/new.mjs thing <category> <id> "<Name>" <born-date>` | Starts a new thing file. |
-| `node scripts/new.mjs view <id> "<Name>"` | Starts a new view file. |
+| `node scripts/new.mjs entry <kind> <id> "<Name>" <born-date>` | Starts a new entry file in the base. |
+| `node scripts/new.mjs view <github-name> <id> "<Title>"` | Starts a new view file in your community folder. |
 
 Any static file server works in place of `python3 -m http.server`.
 
@@ -73,77 +91,93 @@ Any static file server works in place of `python3 -m http.server`.
 
 | You want to | Do this |
 | --- | --- |
-| Fix a wrong date or fact | Open a pull request that changes the thing's file and links a source, or open a "Correction" issue. |
-| Add a thing that is missing | Open a pull request with one new file under `data/things/`, or a "New thing" issue if you only have the idea. |
-| Propose a view | Follow [Propose a view](#propose-a-view) below. |
+| Fix a wrong date or fact | Open a pull request that changes the entry's file and links a source, or open a "Correction" issue. |
+| Add an entry that is missing | Open a pull request with one new file under `data/base/<kind>/`, or a "New entry" issue if you only have the idea. |
+| Publish a view | Follow [Propose a view](#propose-a-view) below. |
 | Report something broken on the page | Open a "Bug" issue with a screenshot. |
 | Suggest an idea or discuss a change | Open an "Idea or proposal" issue first, before writing code. |
 
 Every pull request explains what it changes and why. A pull request that
-changes what the page shows (a view, a thing, or the page itself) includes
+changes what the page shows (a view, an entry, or the page itself) includes
 screenshots. The full guide is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Propose a view
 
-A view is a named way of looking at the timeline, such as "The browser wars".
-Anyone can propose one.
+A view is one subject on the timeline under a plain name, such as "The
+Space Race" or "Video Games". Anyone can publish one.
 
 **Without code:** press "Propose a view" in the panel, or open the
 [Propose a view](../../issues/new?template=propose-view.yml) form, and
-describe it. To ask for a single missing thing, use the
-[New thing](../../issues/new?template=new-thing.yml) form; the search offers
+describe it. To ask for a single missing entry, use the
+[New entry](../../issues/new?template=new-thing.yml) form; the search offers
 it when it finds nothing. Give a thumbs-up to the proposals you want: the
-most wanted are built first, and editors use the votes to rank the
-Community views.
+most wanted are built first.
 
 **With code:** an AI coding assistant can do most of the work. Point it at
 [`AGENTS.md`](AGENTS.md) and [`docs/VIEWS.md`](docs/VIEWS.md).
 
 1. **Fork this repository** and run the page locally (see Quick start).
-2. **Build the view.** Add one file, `data/views/<id>.json`. Copy an existing
-   view as a start; the fields are explained in `docs/VIEWS.md`. If your view
-   needs things that are not on the timeline yet, add them too, one file each
-   under `data/things/<category>/`, with sources, following
-   `docs/DATA_RULES.md`.
-3. **Check it.** `node scripts/build.mjs --check` must report 0 errors and
-   `node --test` must pass. Open `http://localhost:8080/?views=<id>` and look
-   at the result on a wide screen and a phone-sized window.
-4. **Take screenshots** of the page showing your view: one wide, one narrow.
-5. **Open a pull request** with the view file, any new thing files, and the
+2. **Make your folder.** `node scripts/new.mjs view <your-github-name> <id> "<Title>"`
+   creates `data/community/<your-github-name>/` with your profile and the
+   view file. You only ever edit your own folder.
+3. **Build the view.** List the entries it shows by id, and write its
+   chapters; the fields are explained in `docs/VIEWS.md`. Use entries that
+   are already in the base wherever you can: search the page, or
+   `grep -rl '"name": "Ada Lovelace' data/base`. If the base lacks something,
+   add it to the base in the same pull request, one file under
+   `data/base/<kind>/`, with sources, following `docs/DATA_RULES.md`.
+4. **Check it.** `node scripts/build.mjs --check` must report 0 errors and
+   `node --test` must pass. Open
+   `http://localhost:8080/?views=<your-github-name>/<id>` and look at the
+   result on a wide screen and a phone-sized window.
+5. **Take screenshots** of the page showing your view: one wide, one narrow.
+6. **Open a pull request** with your folder, any new base entries, and the
    screenshots in the description. The template asks what the view shows,
    why it is worth having, and where the facts come from.
 
-The community reviews the pull request. Once it is merged, the view appears
-under "Community views" in the panel and anyone can add it beside other views.
+Once it is merged, the view is listed in the panel, has its
+own address (`codegrave.com/?views=<your-github-name>/<id>`) and can be put
+beside any other view.
 
 ## Layout of this repository
 
 | Path | What it is | Who changes it |
 | --- | --- | --- |
-| `data/things/<category>/<id>.json` | One file per thing. The facts of the timeline. | Anyone, with sources |
-| `data/views/<id>.json` | One file per view: a named way of looking at the timeline. | Anyone |
-| `data/editors-choice.json` | The default view and the featured views. | Editors |
-| `data/categories.json` | The categories. A view's named eras live in the view file. | Editors |
+| `data/base/<kind>/<id>.json` | The base: one reviewed file per entry. The facts of the encyclopedia. | Anyone, with sources; editors review |
+| `data/community/<owner>/` | One folder per person or group: `profile.json`, their `views/` and their own `entries/`. | Its owner |
+| `data/categories.json` | The map: ten branches (Computing sits under Technology) and their kinds. | Editors |
+| `data/labels.json` | The shared labels for what an entry or a view is about. | Editors |
+| `data/editors-choice.json` | The default views, and the topics the panel lists the views under. | Editors |
+| `data/redirects.json` | Old addresses that still work. | Editors |
 | `data/media/` | Icons and local images. | Anyone, with a licence |
-| `site/` | The page: `index.html`, `styles.css`, `app.js`, `rank.js`. No framework. | Maintainers |
-| `scripts/build.mjs` | Checks `data/` and bundles it into `site/data/` (generated, not committed). | Maintainers |
-| `docs/` | The rules: `DATA_RULES.md` for things, `VIEWS.md` for views. | Maintainers |
+| `site/` | The page: `index.html`, `styles.css`, `app.js`, `rank.js`, `keys.js`. No framework. | Maintainers |
+| `scripts/build.mjs` | Checks `data/` and writes what the page loads into `site/data/` (generated, not committed). | Maintainers |
+| `docs/` | The rules: `DATA_RULES.md` for entries, `VIEWS.md` for views, `BUILD.md` for what the build writes. | Maintainers |
 | `schema/` | JSON Schemas that give editors hints while typing. | Maintainers |
-| `tests/` | Tests for the ranking and the data. | Maintainers |
+| `tests/` | Tests for the ranking, the dates and the build. | Maintainers |
 | `AGENTS.md` | The map for AI agents and new developers. | Maintainers |
 | `.github/` | Pull request and issue templates, the check that runs on every pull request. | Maintainers |
 
 The facts and the views are kept apart on purpose. A view only chooses what
 to show. It cannot change a date, a name or a rank, so every view draws the
-same timeline for the same thing.
+same line for the same entry. Classical views (Everything, one per branch,
+one per kind) are not files at all: the build makes them from the map.
 
 ## About the data
 
-Every thing lists its sources, usually its Wikipedia article and an official
-page, and dates are checked against them. An entry checked this way is marked
-`"verified": true`. Images are hot-linked from Wikimedia Commons with each
-file's author and licence, or kept in `data/media/` with theirs. Found a
-mistake? A correction with a source is the most useful contribution there is.
+Every entry lists its sources, and its Wikidata item where it has one. Dates
+are compared with those sources; an entry whose dates all agree is marked
+`"verified": true`, and the rest are labelled as unverified on the page until
+someone settles them. Wikidata is used for identity and dates only. The
+summaries and chapter notes are original text, written for this site; no
+text is copied from Wikipedia or any other source. Images are hot-linked from
+Wikimedia Commons with each file's author and licence, or kept in
+`data/media/` with theirs.
+
+The first general-knowledge entries and views were drafted with AI
+assistance and then checked against Wikidata and by review. Drafts can be
+wrong. Found a mistake? A correction with a source is the most useful
+contribution there is.
 
 ## Deploy
 

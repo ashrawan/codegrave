@@ -1,0 +1,53 @@
+{
+  "id": "neolithic",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Neolithic",
+      "from": "-9000"
+    }
+  ],
+  "summary": "The New Stone Age, when people in many regions began farming, keeping animals and living in villages. The dates vary widely by region and are rough.",
+  "labels": [
+    "firsts",
+    "environment"
+  ],
+  "aliases": [
+    "Neolithic Age",
+    "Neolithic Era",
+    "Neolithic Period"
+  ],
+  "wikidata": "Q36422",
+  "events": [
+    {
+      "type": "born",
+      "date": "-9000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-3000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Neolithic (Q36422)",
+      "url": "https://www.wikidata.org/wiki/Q36422",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neolithic",
+      "url": "https://en.wikipedia.org/wiki/Neolithic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

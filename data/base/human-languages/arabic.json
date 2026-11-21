@@ -1,0 +1,56 @@
+{
+  "id": "arabic",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Arabic",
+      "from": "0328"
+    }
+  ],
+  "summary": "Semitic language of the Arabian Peninsula, written right to left. Its earliest known inscription is from the fourth century. It is the language of the Quran and is spoken across the Middle East and North Africa.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Arabic language",
+    "Arabian",
+    "Arabian language"
+  ],
+  "wikidata": "Q13955",
+  "events": [
+    {
+      "type": "born",
+      "date": "0328",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    },
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Arabic (Q13955)",
+      "url": "https://www.wikidata.org/wiki/Q13955",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Arabic",
+      "url": "https://en.wikipedia.org/wiki/Arabic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

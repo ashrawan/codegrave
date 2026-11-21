@@ -1,0 +1,56 @@
+{
+  "id": "world-cup-1994",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1994 FIFA World Cup",
+      "from": "1994"
+    }
+  ],
+  "summary": "The first World Cup in the United States set attendance records. Brazil won the first final decided by a penalty shoot-out against Italy, after a scoreless match in Pasadena.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "World Cup USA 94",
+    "FIFA World Cup 1994"
+  ],
+  "wikidata": "Q101751",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-06-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1994-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1994 FIFA World Cup (Q101751)",
+      "url": "https://www.wikidata.org/wiki/Q101751",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1994 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1994_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

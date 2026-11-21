@@ -1,0 +1,60 @@
+{
+  "id": "da-gama-first-voyage",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Vasco da Gama's first voyage to India",
+      "from": "1497"
+    }
+  ],
+  "summary": "A Portuguese fleet sailed round Africa and across the Indian Ocean to reach Calicut in India. It opened a direct sea route between Europe and Asia and gave Portugal a trading empire in the East.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q951383",
+  "events": [
+    {
+      "type": "born",
+      "date": "1497",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1499",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "portugal"
+    },
+    {
+      "type": "related",
+      "to": "bartolomeu-dias"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Portuguese discovery of the sea route to India (Q951383)",
+      "url": "https://www.wikidata.org/wiki/Q951383",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portuguese discovery of the sea route to India",
+      "url": "https://en.wikipedia.org/wiki/Portuguese_discovery_of_the_sea_route_to_India",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "corpus-juris-civilis",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Corpus Juris Civilis",
+      "from": "0529"
+    }
+  ],
+  "maker": "Emperor Justinian I",
+  "summary": "A huge collection of Roman law gathered on the orders of the Byzantine emperor Justinian. Rediscovered in medieval Europe, it became the base of civil law systems used across much of the modern world.",
+  "labels": [
+    "law"
+  ],
+  "aliases": [
+    "Corpus Iuris Civilis"
+  ],
+  "wikidata": "Q187719",
+  "events": [
+    {
+      "type": "born",
+      "date": "0529",
+      "precision": "year",
+      "note": "Dated from the first Code, issued in 529. The Digest and the Institutes followed in 533 and the revised Code in 534."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "byzantine-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Corpus Juris Civilis (Q187719)",
+      "url": "https://www.wikidata.org/wiki/Q187719",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Corpus Juris Civilis",
+      "url": "https://en.wikipedia.org/wiki/Corpus_Juris_Civilis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

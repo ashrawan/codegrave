@@ -1,0 +1,59 @@
+{
+  "id": "library-of-congress",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Library of Congress",
+      "from": "1800"
+    }
+  ],
+  "summary": "Research library of the United States Congress and the largest library in the world by number of items. It holds books, maps, films and recordings, and it houses Thomas Jefferson's collection.",
+  "labels": [
+    "education",
+    "literature"
+  ],
+  "aliases": [
+    "LC",
+    "LOC",
+    "Congressional Library",
+    "United States. Library of Congress",
+    "US Library of Congress"
+  ],
+  "wikidata": "Q131454",
+  "events": [
+    {
+      "type": "born",
+      "date": "1800-04-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Library of Congress (Q131454)",
+      "url": "https://www.wikidata.org/wiki/Q131454",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Library of Congress",
+      "url": "https://en.wikipedia.org/wiki/Library_of_Congress",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

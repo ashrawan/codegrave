@@ -1,0 +1,55 @@
+{
+  "id": "elvis-presley",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Elvis Presley",
+      "from": "1935"
+    }
+  ],
+  "summary": "American singer from Mississippi and Tennessee who combined country, blues and gospel on his early records. His 1950s hits and television appearances made him a symbol of the arrival of rock and roll.",
+  "labels": [
+    "music",
+    "film"
+  ],
+  "aliases": [
+    "Elvis A. Presley",
+    "Elvis",
+    "King of Rock'n'Roll",
+    "The King of Rock'n'Roll",
+    "Elvis Aaron Presley"
+  ],
+  "wikidata": "Q303",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-01-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1977-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Elvis Presley (Q303)",
+      "url": "https://www.wikidata.org/wiki/Q303",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elvis Presley",
+      "url": "https://en.wikipedia.org/wiki/Elvis_Presley",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

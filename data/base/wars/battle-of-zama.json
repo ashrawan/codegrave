@@ -1,0 +1,52 @@
+{
+  "id": "battle-of-zama",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Zama",
+      "from": "-0202"
+    }
+  ],
+  "summary": "The final battle of the Second Punic War, in North Africa, where the Roman general Scipio Africanus beat Hannibal. Carthage had to accept harsh peace terms and lost its empire overseas.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q200056",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0202-10-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0202-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "second-punic-war"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Zama (Q200056)",
+      "url": "https://www.wikidata.org/wiki/Q200056",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Zama",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Zama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

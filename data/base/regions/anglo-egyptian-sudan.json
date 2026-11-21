@@ -1,0 +1,61 @@
+{
+  "id": "anglo-egyptian-sudan",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Anglo-Egyptian Sudan",
+      "from": "1899"
+    }
+  ],
+  "summary": "The territory of Sudan ruled jointly by Britain and Egypt after the defeat of the Mahdist state. In practice Britain governed it, until pressure for independence grew in the 1950s.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Anglo-Egyptian occupation of Sudan"
+  ],
+  "wikidata": "Q541455",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1956-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Became the independent Republic of the Sudan",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "sudan"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anglo-Egyptian Sudan (Q541455)",
+      "url": "https://www.wikidata.org/wiki/Q541455",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anglo-Egyptian Sudan",
+      "url": "https://en.wikipedia.org/wiki/Anglo-Egyptian_Sudan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

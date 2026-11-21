@@ -1,0 +1,55 @@
+{
+  "id": "the-starry-night",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "The Starry Night",
+      "from": "1889"
+    }
+  ],
+  "maker": "Vincent van Gogh",
+  "summary": "Painting by Vincent van Gogh of a swirling night sky above a quiet village and a dark cypress tree, made while he was staying in an asylum in southern France. It is now in the Museum of Modern Art in New York.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Starry Night",
+    "The Starry Night by Vincent van Gogh",
+    "The Starry Night Vincent van Gogh",
+    "Starry Night by Vincent van Gogh",
+    "Starry Night Vincent van Gogh"
+  ],
+  "wikidata": "Q45585",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "vincent-van-gogh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Starry Night (Q45585)",
+      "url": "https://www.wikidata.org/wiki/Q45585",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Starry Night",
+      "url": "https://en.wikipedia.org/wiki/The_Starry_Night",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

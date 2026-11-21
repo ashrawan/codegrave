@@ -1,0 +1,48 @@
+{
+  "id": "soundcloud",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "SoundCloud",
+      "from": "2007"
+    }
+  ],
+  "summary": "Website where anyone can upload and share music and recordings, begun in Berlin. It has been important for independent musicians, hip hop and electronic artists.",
+  "labels": [
+    "music",
+    "media"
+  ],
+  "wikidata": "Q568769",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-08",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: SoundCloud (Q568769)",
+      "url": "https://www.wikidata.org/wiki/Q568769",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SoundCloud",
+      "url": "https://en.wikipedia.org/wiki/SoundCloud",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

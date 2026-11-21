@@ -1,0 +1,52 @@
+{
+  "id": "lake-titicaca",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Lake Titicaca",
+      "from": "-3000000"
+    }
+  ],
+  "summary": "Large lake high in the Andes on the border of Peru and Bolivia, among the highest navigable lakes in the world. Estimates put its age at around two to three million years.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Titicaca",
+    "Titiqaqa",
+    "Lake Titiqaqa"
+  ],
+  "wikidata": "Q35342",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Titicaca (Q35342)",
+      "url": "https://www.wikidata.org/wiki/Q35342",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lake Titicaca",
+      "url": "https://en.wikipedia.org/wiki/Lake_Titicaca",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

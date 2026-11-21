@@ -1,0 +1,58 @@
+{
+  "id": "fc-barcelona",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "FC Barcelona",
+      "from": "1899"
+    }
+  ],
+  "summary": "Catalan football club founded by Swiss-born Joan Gamper and others. Its motto is more than a club, it is owned by its members, and it is known for its academy and passing style.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Fútbol Club Barcelona",
+    "Barcelona FC",
+    "F.C. Barcelona",
+    "Barcelona Football Club",
+    "Football Club of Barcelona"
+  ],
+  "wikidata": "Q7156",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-11-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "fifa"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: FC Barcelona (Q7156)",
+      "url": "https://www.wikidata.org/wiki/Q7156",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: FC Barcelona",
+      "url": "https://en.wikipedia.org/wiki/FC_Barcelona",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

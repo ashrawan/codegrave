@@ -1,0 +1,58 @@
+{
+  "id": "nobel-prize",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Nobel Prize",
+      "from": "1901"
+    }
+  ],
+  "summary": "Annual prizes set up in the will of Alfred Nobel, the Swedish inventor of dynamite. They honour work in physics, chemistry, medicine, literature and peace, and an economics prize was added later.",
+  "labels": [
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Nobel"
+  ],
+  "wikidata": "Q7191",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "alfred-nobel"
+    },
+    {
+      "type": "in",
+      "to": "sweden"
+    },
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nobel Prize (Q7191)",
+      "url": "https://www.wikidata.org/wiki/Q7191",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nobel Prize",
+      "url": "https://en.wikipedia.org/wiki/Nobel_Prize",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

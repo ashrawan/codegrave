@@ -1,0 +1,48 @@
+{
+  "id": "antarctica",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Antarctica",
+      "from": "-35000000"
+    }
+  ],
+  "summary": "Southernmost continent, almost all covered by ice, with no permanent residents. It finished separating from Australia and South America about 35 million years ago and then cooled and froze.",
+  "labels": [
+    "environment",
+    "exploration"
+  ],
+  "wikidata": "Q51",
+  "events": [
+    {
+      "type": "born",
+      "date": "-35000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antarctica (Q51)",
+      "url": "https://www.wikidata.org/wiki/Q51",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antarctica",
+      "url": "https://en.wikipedia.org/wiki/Antarctica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

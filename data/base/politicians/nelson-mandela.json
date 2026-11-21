@@ -1,0 +1,51 @@
+{
+  "id": "nelson-mandela",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Nelson Mandela",
+      "from": "1918"
+    }
+  ],
+  "summary": "South African lawyer who fought apartheid and spent twenty-seven years in prison. After his release in 1990 he helped negotiate a new constitution, and he became the country's first Black president in 1994.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Father of the Nation"
+  ],
+  "wikidata": "Q8023",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2013-12-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Nelson Mandela (Q8023)",
+      "url": "https://www.wikidata.org/wiki/Q8023",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nelson Mandela",
+      "url": "https://en.wikipedia.org/wiki/Nelson_Mandela",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

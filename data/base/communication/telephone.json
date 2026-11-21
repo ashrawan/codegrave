@@ -1,0 +1,53 @@
+{
+  "id": "telephone",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Telephone",
+      "from": "1876"
+    }
+  ],
+  "maker": "Alexander Graham Bell",
+  "summary": "A device that carries speech along wires as electrical signals. Alexander Graham Bell's patent of 1876 began a network that linked homes and businesses, and its descendants carry voice calls today.",
+  "labels": [
+    "media",
+    "firsts"
+  ],
+  "aliases": [
+    "phone",
+    "telephone set"
+  ],
+  "wikidata": "Q11035",
+  "events": [
+    {
+      "type": "born",
+      "date": "1876",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "alexander-graham-bell"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: telephone (Q11035)",
+      "url": "https://www.wikidata.org/wiki/Q11035",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Telephone",
+      "url": "https://en.wikipedia.org/wiki/Telephone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

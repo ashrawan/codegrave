@@ -1,0 +1,50 @@
+{
+  "id": "belle-epoque",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Belle Époque",
+      "from": "1871"
+    }
+  ],
+  "summary": "A period in France and Europe of peace, new technology and flowering arts, from the end of the Franco-Prussian War to the First World War. The name means beautiful age.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Beautiful Era"
+  ],
+  "wikidata": "Q466887",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-01-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1914-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Belle Époque (Q466887)",
+      "url": "https://www.wikidata.org/wiki/Q466887",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belle Époque",
+      "url": "https://en.wikipedia.org/wiki/Belle_%C3%89poque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

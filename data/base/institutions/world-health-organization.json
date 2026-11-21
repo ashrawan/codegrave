@@ -1,0 +1,56 @@
+{
+  "id": "world-health-organization",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "World Health Organization",
+      "from": "1948"
+    }
+  ],
+  "summary": "United Nations agency for public health, based in Geneva. It led the campaign that ended smallpox, sets health guidelines and coordinates responses to epidemics.",
+  "labels": [
+    "medicine",
+    "politics"
+  ],
+  "aliases": [
+    "World Health Organization (WHO)",
+    "World Health Organisation"
+  ],
+  "wikidata": "Q7817",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-04-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World Health Organization (Q7817)",
+      "url": "https://www.wikidata.org/wiki/Q7817",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World Health Organization",
+      "url": "https://en.wikipedia.org/wiki/World_Health_Organization",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

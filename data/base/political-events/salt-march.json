@@ -1,0 +1,59 @@
+{
+  "id": "salt-march",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Salt March",
+      "from": "1930"
+    }
+  ],
+  "summary": "Walk of about three weeks led by Mahatma Gandhi from his ashram to the Indian coast to make salt in defiance of the British tax on it. The march drew world attention and inspired mass civil disobedience across India.",
+  "labels": [
+    "independence",
+    "human-rights"
+  ],
+  "aliases": [
+    "Dandi March",
+    "Great Salt March",
+    "Salt Satyagraha",
+    "Dandi Satyagraha"
+  ],
+  "wikidata": "Q239344",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-03-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1930-04-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "mahatma-gandhi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Salt March (Q239344)",
+      "url": "https://www.wikidata.org/wiki/Q239344",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Salt March",
+      "url": "https://en.wikipedia.org/wiki/Salt_March",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

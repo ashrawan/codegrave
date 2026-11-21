@@ -1,0 +1,58 @@
+{
+  "id": "rastafari",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Rastafari",
+      "from": "1930"
+    }
+  ],
+  "summary": "A religious movement that began in Jamaica in the 1930s, which honours Haile Selassie of Ethiopia and looks to Africa as a spiritual home. It is known for its reggae music, dreadlocks and a diet called ital.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Rastafarianism"
+  ],
+  "wikidata": "Q101462",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "judaism"
+    },
+    {
+      "type": "influenced_by",
+      "to": "christianity"
+    },
+    {
+      "type": "related",
+      "to": "haile-selassie"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rastafari (Q101462)",
+      "url": "https://www.wikidata.org/wiki/Q101462",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rastafari",
+      "url": "https://en.wikipedia.org/wiki/Rastafari",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,55 @@
+{
+  "id": "wheel",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Wheel",
+      "from": "-3500"
+    }
+  ],
+  "summary": "A disc or ring that turns on an axle. The oldest known wheels were used for pottery and then carts in Mesopotamia and Europe around 3500 BCE, and wheeled vehicles spread across Eurasia within centuries.",
+  "labels": [
+    "firsts",
+    "transport"
+  ],
+  "aliases": [
+    "wheels"
+  ],
+  "wikidata": "Q446",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "rickshaw"
+    },
+    {
+      "type": "part_of",
+      "to": "automobile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: wheel (Q446)",
+      "url": "https://www.wikidata.org/wiki/Q446",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wheel",
+      "url": "https://en.wikipedia.org/wiki/Wheel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

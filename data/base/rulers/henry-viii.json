@@ -1,0 +1,69 @@
+{
+  "id": "henry-viii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Henry VIII",
+      "from": "1491"
+    }
+  ],
+  "summary": "King of England who married six times and broke with the Roman Catholic Church when the Pope would not annul his first marriage. He became head of the Church of England and closed the monasteries.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Henry VIII of England",
+    "Henry Tudor",
+    "Henry the Eighth"
+  ],
+  "wikidata": "Q38370",
+  "events": [
+    {
+      "type": "born",
+      "date": "1491-06-28",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1509",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1509 to 1547."
+    },
+    {
+      "type": "ended",
+      "date": "1547-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "henry-vii"
+    },
+    {
+      "type": "part_of",
+      "to": "house-of-tudor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Henry VIII of England (Q38370)",
+      "url": "https://www.wikidata.org/wiki/Q38370",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henry VIII",
+      "url": "https://en.wikipedia.org/wiki/Henry_VIII",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

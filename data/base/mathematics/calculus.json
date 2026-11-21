@@ -1,0 +1,56 @@
+{
+  "id": "calculus",
+  "category": "mathematics",
+  "names": [
+    {
+      "name": "Calculus",
+      "from": "1684"
+    }
+  ],
+  "summary": "The mathematics of change and accumulation, covering slopes of curves and areas under them. Newton and Leibniz developed it independently in the late seventeenth century, and it underlies physics and engineering.",
+  "labels": [
+    "mathematics",
+    "physics"
+  ],
+  "aliases": [
+    "differential and integral calculus",
+    "infinitesimal calculus"
+  ],
+  "wikidata": "Q149972",
+  "events": [
+    {
+      "type": "born",
+      "date": "1684",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "isaac-newton"
+    },
+    {
+      "type": "made_by",
+      "to": "gottfried-leibniz"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: calculus (Q149972)",
+      "url": "https://www.wikidata.org/wiki/Q149972",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Calculus",
+      "url": "https://en.wikipedia.org/wiki/Calculus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

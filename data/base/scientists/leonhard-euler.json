@@ -1,0 +1,62 @@
+{
+  "id": "leonhard-euler",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Leonhard Euler",
+      "from": "1707"
+    }
+  ],
+  "summary": "Swiss mathematician who worked in St Petersburg and Berlin and wrote on almost every area of mathematics of his time. He introduced much of the notation still used, such as f(x) and the symbol e, and kept working after losing his sight.",
+  "labels": [
+    "mathematics",
+    "physics"
+  ],
+  "aliases": [
+    "L. Euler",
+    "Euler",
+    "Euler, Leonhard"
+  ],
+  "wikidata": "Q7604",
+  "events": [
+    {
+      "type": "born",
+      "date": "1707-04-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1783-09-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "christiaan-huygens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Leonhard Euler (Q7604)",
+      "url": "https://www.wikidata.org/wiki/Q7604",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Leonhard Euler",
+      "url": "https://en.wikipedia.org/wiki/Leonhard_Euler",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

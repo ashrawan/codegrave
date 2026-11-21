@@ -1,0 +1,53 @@
+{
+  "id": "news-of-the-world",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "News of the World",
+      "from": "1843"
+    }
+  ],
+  "summary": "British Sunday newspaper that was once the best-selling English-language newspaper. It was shut down in 2011 after it emerged that its staff had hacked phones.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q190534",
+  "events": [
+    {
+      "type": "born",
+      "date": "1843-10-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed by its owner after a phone-hacking scandal",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: News of the World (Q190534)",
+      "url": "https://www.wikidata.org/wiki/Q190534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: News of the World",
+      "url": "https://en.wikipedia.org/wiki/News_of_the_World",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,61 @@
+{
+  "id": "austrian-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Austrian Empire",
+      "from": "1804"
+    }
+  ],
+  "summary": "The Habsburg state proclaimed by Francis II in 1804 when he saw the Holy Roman Empire failing. It ruled Austria, Hungary, Bohemia and parts of Italy and the Balkans and was led by the minister Metternich.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Austria"
+  ],
+  "wikidata": "Q131964",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-08-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1867-06-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Transformed into Austria-Hungary by the Compromise giving Hungary equal status",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "austria-hungary"
+    },
+    {
+      "type": "member_of",
+      "to": "holy-roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Austrian Empire (Q131964)",
+      "url": "https://www.wikidata.org/wiki/Q131964",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Austrian Empire",
+      "url": "https://en.wikipedia.org/wiki/Austrian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

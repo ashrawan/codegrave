@@ -1,0 +1,81 @@
+{
+  "id": "philippines",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Philippines",
+      "from": "1898"
+    }
+  ],
+  "summary": "A country of more than seven thousand islands in Southeast Asia. It declared independence from Spain in 1898, was ruled by the United States until 1946, and is largely Christian with a mix of Asian and Spanish heritage.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of the Philippines",
+    "The Philippines",
+    "Philippine Islands",
+    "RP"
+  ],
+  "wikidata": "Q928",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898-06-12",
+      "precision": "day",
+      "note": "Dated from the declaration of independence from Spain on 12 June 1898, which the Philippines marks as its independence day. The United States then ruled the islands until 1946."
+    },
+    {
+      "type": "milestone",
+      "date": "1946-07-04",
+      "precision": "day",
+      "label": "US rule ends",
+      "note": "The United States recognised the independence of the Philippines."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "related",
+      "to": "philip-ii-of-spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Philippines (Q928)",
+      "url": "https://www.wikidata.org/wiki/Q928",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Philippines",
+      "url": "https://en.wikipedia.org/wiki/Philippines",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

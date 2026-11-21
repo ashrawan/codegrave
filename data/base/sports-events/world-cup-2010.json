@@ -1,0 +1,57 @@
+{
+  "id": "world-cup-2010",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2010 FIFA World Cup",
+      "from": "2010"
+    }
+  ],
+  "summary": "The first World Cup in Africa was held in South Africa. Spain won its first title by beating the Netherlands in extra time, and the noisy plastic horns called vuvuzelas were heard in every stadium.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "2010 FIFA World Cup South Africa",
+    "FIFA World Cup 2010",
+    "FIFA 2010"
+  ],
+  "wikidata": "Q176883",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-06-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2010-07-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-africa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2010 FIFA World Cup (Q176883)",
+      "url": "https://www.wikidata.org/wiki/Q176883",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2010 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/2010_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

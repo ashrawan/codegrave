@@ -1,0 +1,65 @@
+{
+  "id": "franklin-d-roosevelt",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Franklin D. Roosevelt",
+      "from": "1882"
+    }
+  ],
+  "summary": "Thirty-second president, elected four times. He answered the Great Depression with the New Deal programs and led the country through most of the Second World War, dying in office in 1945.",
+  "labels": [
+    "politics",
+    "economics"
+  ],
+  "aliases": [
+    "Franklin Delano Roosevelt",
+    "President Roosevelt",
+    "F. D. R."
+  ],
+  "wikidata": "Q8007",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882-01-30",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1933-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 32nd president of the United States."
+    },
+    {
+      "type": "ended",
+      "date": "1945-04-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "eleanor-roosevelt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Franklin Delano Roosevelt (Q8007)",
+      "url": "https://www.wikidata.org/wiki/Q8007",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franklin D. Roosevelt",
+      "url": "https://en.wikipedia.org/wiki/Franklin_D._Roosevelt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

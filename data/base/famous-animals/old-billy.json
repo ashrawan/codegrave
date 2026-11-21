@@ -1,0 +1,51 @@
+{
+  "id": "old-billy",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Old Billy",
+      "from": "1760"
+    }
+  ],
+  "summary": "A work horse from northern England said to be the oldest horse ever, reaching 62 years. His skull is kept in a museum, though the claim cannot be fully checked.",
+  "labels": [
+    "record-holders"
+  ],
+  "aliases": [
+    "Ol' Billy",
+    "Billy Boy"
+  ],
+  "wikidata": "Q7083484",
+  "events": [
+    {
+      "type": "born",
+      "date": "1760",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1822-11-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Old Billy (Q7083484)",
+      "url": "https://www.wikidata.org/wiki/Q7083484",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Old Billy",
+      "url": "https://en.wikipedia.org/wiki/Old_Billy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

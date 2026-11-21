@@ -1,0 +1,59 @@
+{
+  "id": "caracalla",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Caracalla",
+      "from": "0188"
+    }
+  ],
+  "summary": "Roman emperor and son of Septimius Severus. He granted citizenship to nearly all free people in the empire in 212 and built huge baths in Rome. He was murdered by his own officers.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Marcus Aurelius Antoninus",
+    "Tarautas",
+    "Divus Antoninus Magnus",
+    "Caracallus",
+    "Marcus Aurelius Antoninus Caracallus"
+  ],
+  "wikidata": "Q1446",
+  "events": [
+    {
+      "type": "born",
+      "date": "0188-04-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0217-04-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "septimius-severus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Caracalla (Q1446)",
+      "url": "https://www.wikidata.org/wiki/Q1446",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caracalla",
+      "url": "https://en.wikipedia.org/wiki/Caracalla",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "pasteurization",
+  "category": "farming",
+  "names": [
+    {
+      "name": "Pasteurization",
+      "from": "1864"
+    }
+  ],
+  "maker": "Louis Pasteur",
+  "summary": "Heating a liquid such as milk or wine to kill harmful microbes without ruining it. Louis Pasteur developed it, and it has made milk much safer and kept it fresh for longer.",
+  "labels": [
+    "food",
+    "medicine"
+  ],
+  "aliases": [
+    "pasteurisation",
+    "pasteurizing",
+    "pasteurising",
+    "pasteurism"
+  ],
+  "wikidata": "Q58148",
+  "events": [
+    {
+      "type": "born",
+      "date": "1864-04-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "louis-pasteur"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: pasteurization (Q58148)",
+      "url": "https://www.wikidata.org/wiki/Q58148",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pasteurization",
+      "url": "https://en.wikipedia.org/wiki/Pasteurization",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

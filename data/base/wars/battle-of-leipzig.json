@@ -1,0 +1,71 @@
+{
+  "id": "battle-of-leipzig",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Leipzig",
+      "from": "1813"
+    }
+  ],
+  "summary": "Called the Battle of the Nations, this clash saw Napoleon beaten by an alliance of Russia, Prussia, Austria and Sweden. It was among the largest battles in Europe before the First World War.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of the Nations"
+  ],
+  "wikidata": "Q151005",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813-10-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1813-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    },
+    {
+      "type": "related",
+      "to": "first-french-empire"
+    },
+    {
+      "type": "related",
+      "to": "austrian-empire"
+    },
+    {
+      "type": "related",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Leipzig (Q151005)",
+      "url": "https://www.wikidata.org/wiki/Q151005",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Leipzig",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Leipzig",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

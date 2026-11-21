@@ -1,0 +1,59 @@
+{
+  "id": "national-security-agency",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "National Security Agency",
+      "from": "1952"
+    }
+  ],
+  "summary": "American agency that collects and studies foreign communications and protects the government's own codes. It grew out of wartime code-breaking and is one of the largest employers of mathematicians.",
+  "labels": [
+    "politics",
+    "computing"
+  ],
+  "aliases": [
+    "NSA",
+    "N.S.A.",
+    "United States National Security Agency",
+    "U.S. National Security Agency",
+    "US National Security Agency"
+  ],
+  "wikidata": "Q121194",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-11-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "harry-s-truman"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: National Security Agency (Q121194)",
+      "url": "https://www.wikidata.org/wiki/Q121194",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Security Agency",
+      "url": "https://en.wikipedia.org/wiki/National_Security_Agency",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "concorde",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Concorde",
+      "from": "1969"
+    }
+  ],
+  "maker": "British Aircraft Corporation and Aérospatiale",
+  "summary": "A British-French supersonic airliner that flew passengers across the Atlantic at twice the speed of sound. It was retired in 2003 after a crash in 2000 and falling demand.",
+  "labels": [
+    "transport",
+    "record-holders"
+  ],
+  "aliases": [
+    "Aérospatiale-BAC Concorde",
+    "Sud-BAC Concorde",
+    "Aerospatiale/BAe Concorde"
+  ],
+  "wikidata": "Q6505",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-03-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003-11-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired after a fatal crash in 2000 and falling demand",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Concorde (Q6505)",
+      "url": "https://www.wikidata.org/wiki/Q6505",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Concorde",
+      "url": "https://en.wikipedia.org/wiki/Concorde",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

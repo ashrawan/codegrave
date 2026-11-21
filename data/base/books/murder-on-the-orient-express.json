@@ -1,0 +1,50 @@
+{
+  "id": "murder-on-the-orient-express",
+  "category": "books",
+  "names": [
+    {
+      "name": "Murder on the Orient Express",
+      "from": "1934"
+    }
+  ],
+  "summary": "Detective novel by Agatha Christie in which Hercule Poirot investigates a killing on a snowbound train. Its surprising solution is one of the best known in crime fiction.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Murder in the Calais Coach"
+  ],
+  "wikidata": "Q845889",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "agatha-christie"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Murder on the Orient Express (Q845889)",
+      "url": "https://www.wikidata.org/wiki/Q845889",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Murder on the Orient Express",
+      "url": "https://en.wikipedia.org/wiki/Murder_on_the_Orient_Express",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

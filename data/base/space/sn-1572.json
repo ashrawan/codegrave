@@ -1,0 +1,51 @@
+{
+  "id": "sn-1572",
+  "category": "space",
+  "names": [
+    {
+      "name": "Tycho's Supernova",
+      "from": "1572"
+    }
+  ],
+  "summary": "A supernova in the constellation Cassiopeia that appeared in 1572 and was studied by Tycho Brahe. Because the new star showed no shift against the sky, he argued it lay far beyond the Moon, challenging the idea of an unchanging heaven.",
+  "labels": [
+    "astronomy"
+  ],
+  "wikidata": "Q554280",
+  "events": [
+    {
+      "type": "born",
+      "date": "1572-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "tycho-brahe"
+    },
+    {
+      "type": "part_of",
+      "to": "milky-way"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tycho's Supernova (Q554280)",
+      "url": "https://www.wikidata.org/wiki/Q554280",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SN 1572",
+      "url": "https://en.wikipedia.org/wiki/SN_1572",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

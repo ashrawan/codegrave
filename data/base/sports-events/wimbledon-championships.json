@@ -1,0 +1,51 @@
+{
+  "id": "wimbledon-championships",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Wimbledon Championships",
+      "from": "1877"
+    }
+  ],
+  "summary": "The oldest tennis tournament in the world, played on grass in south-west London. It began in 1877 as a men's event, and it is known for its traditions, such as players wearing white.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Wimbledon",
+    "The Championships, Wimbledon"
+  ],
+  "wikidata": "Q41520",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wimbledon Championships (Q41520)",
+      "url": "https://www.wikidata.org/wiki/Q41520",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wimbledon Championships",
+      "url": "https://en.wikipedia.org/wiki/Wimbledon_Championships",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

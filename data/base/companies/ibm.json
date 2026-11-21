@@ -1,0 +1,53 @@
+{
+  "id": "ibm",
+  "category": "companies",
+  "names": [
+    {
+      "name": "IBM",
+      "from": "1911"
+    }
+  ],
+  "summary": "American company that sold punched card machines, built mainframes such as System/360 and launched the IBM PC. Known as Big Blue, it moved into software, consulting and cloud services.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "IBM Corp.",
+    "18M",
+    "ibm.com"
+  ],
+  "wikidata": "Q37156",
+  "events": [
+    {
+      "type": "born",
+      "date": "1911-06-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: IBM (Q37156)",
+      "url": "https://www.wikidata.org/wiki/Q37156",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IBM",
+      "url": "https://en.wikipedia.org/wiki/IBM",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

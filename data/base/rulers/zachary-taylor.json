@@ -1,0 +1,54 @@
+{
+  "id": "zachary-taylor",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Zachary Taylor",
+      "from": "1784"
+    }
+  ],
+  "summary": "Twelfth president, a career soldier and hero of the Mexican-American War. He died sixteen months into his term.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11896",
+  "events": [
+    {
+      "type": "born",
+      "date": "1784-11-24",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1849-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 12th president of the United States."
+    },
+    {
+      "type": "ended",
+      "date": "1850-07-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Zachary Taylor (Q11896)",
+      "url": "https://www.wikidata.org/wiki/Q11896",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zachary Taylor",
+      "url": "https://en.wikipedia.org/wiki/Zachary_Taylor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

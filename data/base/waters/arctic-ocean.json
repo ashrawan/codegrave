@@ -1,0 +1,54 @@
+{
+  "id": "arctic-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Arctic Ocean",
+      "from": "-130000000"
+    }
+  ],
+  "summary": "The smallest and shallowest ocean, around the North Pole and mostly covered by sea ice. Its ice has shrunk rapidly in recent decades, and the Arctic is warming faster than most of the planet.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Northern Ocean",
+    "Arctic Sea",
+    "Tartar Sea",
+    "Tartar Ocean",
+    "Sea of Tartary"
+  ],
+  "wikidata": "Q788",
+  "events": [
+    {
+      "type": "born",
+      "date": "-130000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "atlantic-ocean"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Arctic Ocean (Q788)",
+      "url": "https://www.wikidata.org/wiki/Q788",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Arctic Ocean",
+      "url": "https://en.wikipedia.org/wiki/Arctic_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "principia",
+  "category": "books",
+  "names": [
+    {
+      "name": "Philosophiæ Naturalis Principia Mathematica",
+      "from": "1687"
+    }
+  ],
+  "maker": "Isaac Newton",
+  "summary": "Isaac Newton's book that set out the three laws of motion and the law of universal gravitation, using mathematics to explain how planets and falling objects move. It is among the most important works in the history of science.",
+  "labels": [
+    "physics",
+    "mathematics"
+  ],
+  "wikidata": "Q205921",
+  "events": [
+    {
+      "type": "born",
+      "date": "1687",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "isaac-newton"
+    },
+    {
+      "type": "about",
+      "to": "newtons-laws-of-motion"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Philosophiæ Naturalis Principia Mathematica (Q205921)",
+      "url": "https://www.wikidata.org/wiki/Q205921",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Philosophiæ Naturalis Principia Mathematica",
+      "url": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

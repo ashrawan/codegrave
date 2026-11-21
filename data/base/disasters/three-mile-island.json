@@ -1,0 +1,57 @@
+{
+  "id": "three-mile-island",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Three Mile Island accident",
+      "from": "1979"
+    }
+  ],
+  "summary": "A partial meltdown at a nuclear plant in Pennsylvania was the most serious accident in the history of American commercial nuclear power. Little radiation escaped, but public trust fell and new reactor building slowed.",
+  "labels": [
+    "energy"
+  ],
+  "aliases": [
+    "Harrisburg accident",
+    "Harrisburg incident",
+    "Harrisburg leak"
+  ],
+  "wikidata": "Q840847",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-03-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-03-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Three Mile Island accident (Q840847)",
+      "url": "https://www.wikidata.org/wiki/Q840847",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Three Mile Island accident",
+      "url": "https://en.wikipedia.org/wiki/Three_Mile_Island_accident",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

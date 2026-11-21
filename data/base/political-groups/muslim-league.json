@@ -1,0 +1,54 @@
+{
+  "id": "muslim-league",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "All-India Muslim League",
+      "from": "1906"
+    }
+  ],
+  "summary": "Political party founded in Dhaka to represent Muslims of British India. Under Muhammad Ali Jinnah it called for a separate state, and Pakistan was created in 1947. It then split into Pakistani and Indian successor parties.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "wikidata": "Q223898",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-12-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Split into separate parties in India and Pakistan after partition in 1947",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "british-raj"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: All India Muslim League (Q223898)",
+      "url": "https://www.wikidata.org/wiki/Q223898",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: All-India Muslim League",
+      "url": "https://en.wikipedia.org/wiki/All-India_Muslim_League",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

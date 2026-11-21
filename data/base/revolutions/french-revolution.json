@@ -1,0 +1,53 @@
+{
+  "id": "french-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "French Revolution",
+      "from": "1789"
+    }
+  ],
+  "summary": "The upheaval that ended the absolute monarchy of France and the privileges of the nobility. It brought the Declaration of the Rights of Man, a republic, the Terror, and finally Napoleon's rise to power.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "wikidata": "Q6534",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-07-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1799-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Revolution (Q6534)",
+      "url": "https://www.wikidata.org/wiki/Q6534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Revolution",
+      "url": "https://en.wikipedia.org/wiki/French_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

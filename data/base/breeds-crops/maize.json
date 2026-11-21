@@ -1,0 +1,48 @@
+{
+  "id": "maize",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Maize",
+      "from": "-7000"
+    }
+  ],
+  "summary": "A tall grain crop bred in southern Mexico from a wild grass called teosinte. Farmers there changed a plant with tiny seeds into one with large cobs, and it spread across the Americas and then the world.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "corn plant",
+    "maize plant",
+    "corn",
+    "Zea mays"
+  ],
+  "wikidata": "Q11575",
+  "events": [
+    {
+      "type": "born",
+      "date": "-7000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: maize (Q11575)",
+      "url": "https://www.wikidata.org/wiki/Q11575",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maize",
+      "url": "https://en.wikipedia.org/wiki/Maize",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

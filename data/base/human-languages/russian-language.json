@@ -1,0 +1,55 @@
+{
+  "id": "russian-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Russian",
+      "from": "1056"
+    }
+  ],
+  "summary": "East Slavic language written in the Cyrillic alphabet. Its roots lie in Old East Slavic, first seen in writing in the eleventh century, as in the Ostromir Gospels of 1056. It is widely spoken in Eastern Europe and Asia.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Russkiy",
+    "Russkiy yazyk"
+  ],
+  "wikidata": "Q7737",
+  "events": [
+    {
+      "type": "born",
+      "date": "1056",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russian (Q7737)",
+      "url": "https://www.wikidata.org/wiki/Q7737",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russian language",
+      "url": "https://en.wikipedia.org/wiki/Russian_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

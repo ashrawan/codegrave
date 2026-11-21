@@ -1,0 +1,83 @@
+{
+  "id": "hundred-years-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Hundred Years' War",
+      "from": "1337"
+    }
+  ],
+  "summary": "A series of wars between the kingdoms of England and France over the French crown and land. It saw Crécy, Agincourt and Joan of Arc, and it ended with England losing nearly all its lands in France.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "100 Years War"
+  ],
+  "wikidata": "Q12551",
+  "events": [
+    {
+      "type": "born",
+      "date": "1337-05-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1453-10-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-scotland"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-bohemia"
+    },
+    {
+      "type": "related",
+      "to": "avignon-papacy"
+    },
+    {
+      "type": "related",
+      "to": "papal-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hundred Years' War (Q12551)",
+      "url": "https://www.wikidata.org/wiki/Q12551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hundred Years' War",
+      "url": "https://en.wikipedia.org/wiki/Hundred_Years'_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

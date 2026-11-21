@@ -1,0 +1,49 @@
+{
+  "id": "goat",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Domestic goat",
+      "from": "-10000"
+    }
+  ],
+  "summary": "One of the earliest farm animals, tamed from wild goats in the mountains of Iran and neighbouring regions. It gives milk, meat, hair and skin and thrives on poor land.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "goats",
+    "Capra hircus",
+    "C. hircus",
+    "Capra aegagrus hircus",
+    "C. aegagrus hircus"
+  ],
+  "wikidata": "Q2934",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: goat (Q2934)",
+      "url": "https://www.wikidata.org/wiki/Q2934",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Goat",
+      "url": "https://en.wikipedia.org/wiki/Goat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

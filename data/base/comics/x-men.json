@@ -1,0 +1,45 @@
+{
+  "id": "x-men",
+  "category": "comics",
+  "names": [
+    {
+      "name": "X-Men",
+      "from": "1963"
+    }
+  ],
+  "summary": "Marvel comic created by Stan Lee and Jack Kirby about mutants, born with powers, who are feared by the public. It later became a large franchise and was often read as a story about prejudice.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "The X-Men"
+  ],
+  "wikidata": "Q128452",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-09",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: X-Men (Q128452)",
+      "url": "https://www.wikidata.org/wiki/Q128452",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: X-Men",
+      "url": "https://en.wikipedia.org/wiki/X-Men",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

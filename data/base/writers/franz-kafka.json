@@ -1,0 +1,52 @@
+{
+  "id": "franz-kafka",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Franz Kafka",
+      "from": "1883"
+    }
+  ],
+  "summary": "Prague-born writer in German who worked in an insurance office. His stories The Metamorphosis and the novels The Trial and The Castle show people trapped by faceless systems, and most appeared after his death.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q905",
+  "events": [
+    {
+      "type": "born",
+      "date": "1883-07-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1924-06-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "gustave-flaubert"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Franz Kafka (Q905)",
+      "url": "https://www.wikidata.org/wiki/Q905",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franz Kafka",
+      "url": "https://en.wikipedia.org/wiki/Franz_Kafka",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

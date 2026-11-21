@@ -1,0 +1,57 @@
+{
+  "id": "julian-calendar",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Julian calendar",
+      "from": "-0045"
+    }
+  ],
+  "summary": "The calendar introduced by Julius Caesar, with a year of 365 days and a leap day every four years. It was the main calendar of Europe for over sixteen centuries and is still used by some Orthodox churches.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Old Style",
+    "Christian calendar",
+    "old Western calendar",
+    "old Christian calendar"
+  ],
+  "wikidata": "Q11184",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0045",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "gregorian-calendar"
+    },
+    {
+      "type": "related",
+      "to": "julius-caesar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Julian calendar (Q11184)",
+      "url": "https://www.wikidata.org/wiki/Q11184",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Julian calendar",
+      "url": "https://en.wikipedia.org/wiki/Julian_calendar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

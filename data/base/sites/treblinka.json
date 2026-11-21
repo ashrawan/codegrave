@@ -1,0 +1,58 @@
+{
+  "id": "treblinka",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Treblinka",
+      "from": "1942"
+    }
+  ],
+  "summary": "German Nazi extermination camp in occupied Poland where about 800,000 people, mostly Jews from Warsaw and elsewhere, were killed between 1942 and 1943. Prisoners staged an uprising in August 1943.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "Treblinka II",
+    "Vernichtungslager Treblinka"
+  ],
+  "wikidata": "Q152010",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-07-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed and dismantled by the Germans after the prisoner uprising in 1943",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Treblinka extermination camp (Q152010)",
+      "url": "https://www.wikidata.org/wiki/Q152010",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Treblinka extermination camp",
+      "url": "https://en.wikipedia.org/wiki/Treblinka_extermination_camp",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

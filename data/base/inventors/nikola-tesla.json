@@ -1,0 +1,52 @@
+{
+  "id": "nikola-tesla",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Nikola Tesla",
+      "from": "1856"
+    }
+  ],
+  "summary": "Engineer born in the Austrian Empire, in present-day Croatia, who designed alternating-current motors and power systems that spread worldwide. He also experimented with radio waves and high-voltage coils in the United States.",
+  "labels": [
+    "engineering",
+    "energy"
+  ],
+  "aliases": [
+    "Nicola Tesla",
+    "Tesla"
+  ],
+  "wikidata": "Q9036",
+  "events": [
+    {
+      "type": "born",
+      "date": "1856-07-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-01-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Nikola Tesla (Q9036)",
+      "url": "https://www.wikidata.org/wiki/Q9036",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nikola Tesla",
+      "url": "https://en.wikipedia.org/wiki/Nikola_Tesla",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

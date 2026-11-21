@@ -1,0 +1,58 @@
+{
+  "id": "babi-yar",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Babi Yar massacre",
+      "from": "1941"
+    }
+  ],
+  "summary": "The shooting of more than thirty thousand Jews of Kyiv by German forces and local police over two days in late September 1941, in a ravine on the edge of the city. More killings took place at the site during the German occupation.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "Babyn Yar",
+    "Babin Yar",
+    "Babiy Yar"
+  ],
+  "wikidata": "Q48766",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-09-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941-09-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Babi Yar (Q48766)",
+      "url": "https://www.wikidata.org/wiki/Q48766",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Babi Yar",
+      "url": "https://en.wikipedia.org/wiki/Babi_Yar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

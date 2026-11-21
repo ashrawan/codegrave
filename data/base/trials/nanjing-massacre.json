@@ -1,0 +1,64 @@
+{
+  "id": "nanjing-massacre",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Nanjing Massacre",
+      "from": "1937"
+    }
+  ],
+  "summary": "The killing of Chinese civilians and disarmed soldiers, along with widespread rape and looting, by the Japanese army after it captured the Chinese capital Nanjing in December 1937. Estimates of the dead vary widely by source.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "Rape of Nanjing",
+    "Nanjing Atrocity",
+    "Nanjing Incident",
+    "Nanking Masscare",
+    "Rape of Nanking"
+  ],
+  "wikidata": "Q192055",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-12-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1938-02-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "second-sino-japanese-war"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nanjing Massacre (Q192055)",
+      "url": "https://www.wikidata.org/wiki/Q192055",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nanjing Massacre",
+      "url": "https://en.wikipedia.org/wiki/Nanjing_Massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

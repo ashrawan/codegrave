@@ -1,0 +1,55 @@
+{
+  "id": "v-2-rocket",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "V-2 rocket",
+      "from": "1944"
+    }
+  ],
+  "maker": "Wernher von Braun and German army",
+  "summary": "The first long-range ballistic missile, built in Germany and fired at London and Antwerp late in the Second World War. After the war its designers and captured rockets started the American and Soviet space programmes.",
+  "labels": [
+    "war",
+    "space-race"
+  ],
+  "aliases": [
+    "V-2",
+    "Aggregat-4",
+    "A4"
+  ],
+  "wikidata": "Q174640",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Launch sites were overrun at the end of the Second World War",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: V-2 rocket (Q174640)",
+      "url": "https://www.wikidata.org/wiki/Q174640",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: V-2 rocket",
+      "url": "https://en.wikipedia.org/wiki/V-2_rocket",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

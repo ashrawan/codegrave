@@ -1,0 +1,54 @@
+{
+  "id": "smallpox",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Smallpox",
+      "from": "-1200"
+    }
+  ],
+  "summary": "A deadly viral disease that left scars on survivors and killed hundreds of millions through history. The first vaccine was developed in 1796, and in 1980 it became the first human disease to be wiped out.",
+  "labels": [
+    "medicine",
+    "firsts"
+  ],
+  "aliases": [
+    "Red Plague",
+    "pox",
+    "speckled monster"
+  ],
+  "wikidata": "Q12214",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1978",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Eradicated worldwide through vaccination",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: smallpox (Q12214)",
+      "url": "https://www.wikidata.org/wiki/Q12214",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Smallpox",
+      "url": "https://en.wikipedia.org/wiki/Smallpox",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

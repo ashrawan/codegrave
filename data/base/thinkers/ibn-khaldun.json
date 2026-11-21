@@ -1,0 +1,53 @@
+{
+  "id": "ibn-khaldun",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Ibn Khaldun",
+      "from": "1332"
+    }
+  ],
+  "summary": "Scholar born in Tunis who wrote the Muqaddimah, an introduction to history that studies how societies, economies and states grow and decline. Many regard him as an early thinker in sociology and economics.",
+  "labels": [
+    "philosophy",
+    "economics"
+  ],
+  "wikidata": "Q9294",
+  "events": [
+    {
+      "type": "born",
+      "date": "1332-05-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1406-03-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "averroes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ibn Khaldun (Q9294)",
+      "url": "https://www.wikidata.org/wiki/Q9294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ibn Khaldun",
+      "url": "https://en.wikipedia.org/wiki/Ibn_Khaldun",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

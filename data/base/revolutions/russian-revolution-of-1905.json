@@ -1,0 +1,56 @@
+{
+  "id": "russian-revolution-of-1905",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Russian Revolution of 1905",
+      "from": "1905"
+    }
+  ],
+  "summary": "A wave of strikes, protests and mutinies across the Russian Empire after Bloody Sunday. It forced Tsar Nicholas II to issue the October Manifesto and create an elected Duma.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q184928",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-01-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1907-06-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russian Revolution of 1905 (Q184928)",
+      "url": "https://www.wikidata.org/wiki/Q184928",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russian Revolution of 1905",
+      "url": "https://en.wikipedia.org/wiki/Russian_Revolution_of_1905",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "pompeii",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Pompeii",
+      "from": "-0600"
+    }
+  ],
+  "summary": "Roman town near Naples that was buried under ash and pumice when Mount Vesuvius erupted. The ash preserved streets, houses, shops and wall paintings, giving a detailed picture of everyday Roman life.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "wikidata": "Q43332",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0600",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0079",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Buried by the eruption of Mount Vesuvius",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pompeii (Q43332)",
+      "url": "https://www.wikidata.org/wiki/Q43332",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pompeii",
+      "url": "https://en.wikipedia.org/wiki/Pompeii",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

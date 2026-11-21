@@ -1,0 +1,54 @@
+{
+  "id": "george-vi",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "George VI",
+      "from": "1895"
+    }
+  ],
+  "summary": "Became king when his brother abdicated. He stayed in London through the Blitz and was the father of Elizabeth II.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q280856",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895-12-14",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1936-12-11",
+      "precision": "day",
+      "label": "Became king",
+      "note": "King of the United Kingdom from 1936 to 1952."
+    },
+    {
+      "type": "ended",
+      "date": "1952-02-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: George VI (Q280856)",
+      "url": "https://www.wikidata.org/wiki/Q280856",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George VI",
+      "url": "https://en.wikipedia.org/wiki/George_VI",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "meta-platforms",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Meta Platforms",
+      "from": "2004"
+    }
+  ],
+  "summary": "American company that owns Facebook, Instagram and WhatsApp. It was started as Facebook in 2004 and renamed Meta in 2021 to show a shift towards virtual reality.",
+  "labels": [
+    "computing",
+    "business",
+    "media"
+  ],
+  "wikidata": "Q380",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-07-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mark-zuckerberg"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "facebook"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Meta Platforms (Q380)",
+      "url": "https://www.wikidata.org/wiki/Q380",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Meta Platforms",
+      "url": "https://en.wikipedia.org/wiki/Meta_Platforms",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

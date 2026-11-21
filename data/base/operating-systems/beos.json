@@ -1,0 +1,49 @@
+{
+  "id": "beos",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "BeOS",
+      "from": "1995"
+    }
+  ],
+  "summary": "Fast multimedia operating system made by Be Inc. for its own hardware and later for PCs. Apple nearly bought it in 1996, and it was sold to Palm when the company ran out of money.",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "wikidata": "Q62563",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2001-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Be Inc. was sold off and development stopped",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: BeOS (Q62563)",
+      "url": "https://www.wikidata.org/wiki/Q62563",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: BeOS",
+      "url": "https://en.wikipedia.org/wiki/BeOS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

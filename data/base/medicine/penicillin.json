@@ -1,0 +1,56 @@
+{
+  "id": "penicillin",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "Penicillin",
+      "from": "1928"
+    }
+  ],
+  "maker": "Alexander Fleming",
+  "summary": "The first widely used antibiotic, discovered when mould on a laboratory dish killed nearby bacteria. Developed into a drug in the 1940s, it saved many lives and began the age of antibiotics.",
+  "labels": [
+    "medicine",
+    "biology",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "PCN",
+    "pen",
+    "penicillin antibiotic",
+    "penicillins"
+  ],
+  "wikidata": "Q12190",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "alexander-fleming"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: penicillin (Q12190)",
+      "url": "https://www.wikidata.org/wiki/Q12190",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Penicillin",
+      "url": "https://en.wikipedia.org/wiki/Penicillin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

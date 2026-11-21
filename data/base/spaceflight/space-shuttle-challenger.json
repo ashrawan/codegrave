@@ -1,0 +1,56 @@
+{
+  "id": "space-shuttle-challenger",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Space Shuttle Challenger",
+      "from": "1983"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "A space shuttle orbiter that flew nine missions from 1983. She broke apart 73 seconds after launch on 28 January 1986, killing all seven crew, after a rubber seal failed in cold weather.",
+  "labels": [
+    "space-race",
+    "failures"
+  ],
+  "aliases": [
+    "Challenger",
+    "OV-099",
+    "OV099",
+    "Orbiter Vehicle 99"
+  ],
+  "wikidata": "Q54382",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-04-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broke apart after launch when a booster seal failed",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Challenger (Q54382)",
+      "url": "https://www.wikidata.org/wiki/Q54382",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Space Shuttle Challenger",
+      "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

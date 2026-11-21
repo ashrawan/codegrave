@@ -1,0 +1,61 @@
+{
+  "id": "pripyat",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Pripyat",
+      "from": "1970"
+    }
+  ],
+  "summary": "Soviet town in Ukraine built for workers at the Chernobyl power plant. Its roughly fifty thousand people were evacuated within days of the 1986 reactor explosion, and it remains empty.",
+  "labels": [
+    "lost",
+    "environment"
+  ],
+  "aliases": [
+    "Prypiat"
+  ],
+  "wikidata": "Q170456",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-02-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Evacuated after the Chernobyl nuclear disaster",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    },
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pripyat (Q170456)",
+      "url": "https://www.wikidata.org/wiki/Q170456",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pripyat",
+      "url": "https://en.wikipedia.org/wiki/Pripyat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

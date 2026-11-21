@@ -1,0 +1,55 @@
+{
+  "id": "fountain-duchamp",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Fountain",
+      "from": "1917"
+    }
+  ],
+  "maker": "Marcel Duchamp",
+  "summary": "An ordinary porcelain urinal signed with a false name and sent to an art show by Marcel Duchamp. It asked whether an everyday object could be art if an artist chose it. The original was lost, and later replicas are what museums show.",
+  "labels": [
+    "visual-art",
+    "lost"
+  ],
+  "wikidata": "Q1206847",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1917",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Original lost soon after it was shown; replicas were made decades later",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "marcel-duchamp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fountain (Q1206847)",
+      "url": "https://www.wikidata.org/wiki/Q1206847",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fountain (Duchamp)",
+      "url": "https://en.wikipedia.org/wiki/Fountain_(Duchamp)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

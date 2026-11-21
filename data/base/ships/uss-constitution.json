@@ -1,0 +1,55 @@
+{
+  "id": "uss-constitution",
+  "category": "ships",
+  "names": [
+    {
+      "name": "USS Constitution",
+      "from": "1797"
+    }
+  ],
+  "summary": "A wooden frigate of the United States Navy, launched in 1797 and nicknamed Old Ironsides. She won famous victories in the War of 1812 and is the oldest warship still afloat.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Old Ironsides",
+    "Constitution"
+  ],
+  "wikidata": "Q944436",
+  "events": [
+    {
+      "type": "born",
+      "date": "1797-10-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "us-constitution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: USS Constitution (Q944436)",
+      "url": "https://www.wikidata.org/wiki/Q944436",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: USS Constitution",
+      "url": "https://en.wikipedia.org/wiki/USS_Constitution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

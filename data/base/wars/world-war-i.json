@@ -1,0 +1,75 @@
+{
+  "id": "world-war-i",
+  "category": "wars",
+  "names": [
+    {
+      "name": "World War I",
+      "from": "1914"
+    }
+  ],
+  "summary": "A global war between the Allied Powers and the Central Powers, fought mainly in Europe but also in Africa, Asia and at sea. Millions died, four empires fell and the map of Europe and the Middle East was redrawn.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "World War One",
+    "WW1",
+    "World War 1",
+    "World War",
+    "the First World War"
+  ],
+  "wikidata": "Q361",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-07-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "europe"
+    },
+    {
+      "type": "in",
+      "to": "africa"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World War I (Q361)",
+      "url": "https://www.wikidata.org/wiki/Q361",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World War I",
+      "url": "https://en.wikipedia.org/wiki/World_War_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

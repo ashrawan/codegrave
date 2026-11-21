@@ -1,0 +1,51 @@
+{
+  "id": "visicalc",
+  "category": "applications",
+  "names": [
+    {
+      "name": "VisiCalc",
+      "from": "1979"
+    }
+  ],
+  "maker": "Dan Bricklin and Bob Frankston",
+  "summary": "The first spreadsheet program for personal computers. Numbers in a grid recalculated automatically when one changed. It gave businesses a reason to buy the Apple II and was among the first killer applications.",
+  "labels": [
+    "computing",
+    "business",
+    "firsts"
+  ],
+  "wikidata": "Q725401",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-05",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1985",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by Lotus 1-2-3",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: VisiCalc (Q725401)",
+      "url": "https://www.wikidata.org/wiki/Q725401",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: VisiCalc",
+      "url": "https://en.wikipedia.org/wiki/VisiCalc",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "hms-beagle",
+  "category": "ships",
+  "names": [
+    {
+      "name": "HMS Beagle",
+      "from": "1820"
+    }
+  ],
+  "summary": "British Royal Navy survey ship that made three voyages, the second of which carried Charles Darwin around the world. After a long career she was sold in the 1870s and broken up.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "The Beagle",
+    "Darwin's Beagle"
+  ],
+  "wikidata": "Q35926",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1870",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: HMS Beagle (Q35926)",
+      "url": "https://www.wikidata.org/wiki/Q35926",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HMS Beagle",
+      "url": "https://en.wikipedia.org/wiki/HMS_Beagle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

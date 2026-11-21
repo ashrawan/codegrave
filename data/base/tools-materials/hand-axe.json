@@ -1,0 +1,55 @@
+{
+  "id": "hand-axe",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Hand axe",
+      "from": "-1700000"
+    }
+  ],
+  "summary": "A teardrop-shaped stone tool shaped on both faces, used by Homo erectus and later humans to cut, chop and scrape. It was made across Africa, Europe and Asia for well over a million years, longer than any other tool.",
+  "labels": [
+    "firsts",
+    "engineering"
+  ],
+  "aliases": [
+    "biface",
+    "hand ax",
+    "handaxe",
+    "handax"
+  ],
+  "wikidata": "Q479448",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1700000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-300000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by more specialised tools made from prepared stone cores",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: hand axe (Q479448)",
+      "url": "https://www.wikidata.org/wiki/Q479448",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hand axe",
+      "url": "https://en.wikipedia.org/wiki/Hand_axe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

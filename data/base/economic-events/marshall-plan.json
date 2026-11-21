@@ -1,0 +1,60 @@
+{
+  "id": "marshall-plan",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Marshall Plan",
+      "from": "1948"
+    }
+  ],
+  "summary": "American programme that sent billions of dollars in aid to help rebuild western European economies after the Second World War. It aimed to prevent hunger and unrest and to bind Europe closer to the United States.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "aliases": [
+    "The marshal plan",
+    "Marshall Aid",
+    "Economic Cooperation Act of 1948",
+    "European Recovery Program",
+    "Operation Rathole"
+  ],
+  "wikidata": "Q4576",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-04-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1951-12",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marshall Plan (Q4576)",
+      "url": "https://www.wikidata.org/wiki/Q4576",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marshall Plan",
+      "url": "https://en.wikipedia.org/wiki/Marshall_Plan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

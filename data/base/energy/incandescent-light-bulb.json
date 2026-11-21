@@ -1,0 +1,60 @@
+{
+  "id": "incandescent-light-bulb",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Incandescent light bulb",
+      "from": "1879"
+    }
+  ],
+  "maker": "Joseph Swan and Thomas Edison",
+  "summary": "A lamp in which a thin filament glows when electricity passes through it. Joseph Swan in Britain and Thomas Edison in the United States made practical bulbs around 1879, and bulbs of this kind are now being phased out.",
+  "labels": [
+    "energy",
+    "firsts"
+  ],
+  "aliases": [
+    "incandescent lamp",
+    "incandescent light globe",
+    "light bulb",
+    "electric lamp",
+    "incandescent light"
+  ],
+  "wikidata": "Q47616",
+  "events": [
+    {
+      "type": "born",
+      "date": "1879",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "thomas-edison"
+    },
+    {
+      "type": "made_by",
+      "to": "alessandro-volta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: incandescent light bulb (Q47616)",
+      "url": "https://www.wikidata.org/wiki/Q47616",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Incandescent light bulb",
+      "url": "https://en.wikipedia.org/wiki/Incandescent_light_bulb",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,61 @@
+{
+  "id": "office-of-strategic-services",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Office of Strategic Services",
+      "from": "1942"
+    }
+  ],
+  "summary": "American wartime intelligence agency that ran spies, saboteurs and resistance support behind enemy lines. Its people and methods formed the basis of the CIA.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "O.S.S."
+  ],
+  "wikidata": "Q658626",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-06-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-09-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Disbanded after the war; its work passed to other agencies",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "cia"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Office of Strategic Services (Q658626)",
+      "url": "https://www.wikidata.org/wiki/Q658626",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Office of Strategic Services",
+      "url": "https://en.wikipedia.org/wiki/Office_of_Strategic_Services",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

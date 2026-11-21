@@ -1,0 +1,57 @@
+{
+  "id": "european-debt-crisis",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "European debt crisis",
+      "from": "2010"
+    }
+  ],
+  "summary": "Greece, Ireland, Portugal, Spain and Cyprus struggled to pay or refinance their debts after the global crisis. Rescue loans came with demands for budget cuts, and the future of the euro was debated.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "aliases": [
+    "European sovereign-debt crisis",
+    "Eurozone debt crisis"
+  ],
+  "wikidata": "Q217197",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "2014",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "european-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: European sovereign-debt crisis (Q217197)",
+      "url": "https://www.wikidata.org/wiki/Q217197",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eurozone crisis",
+      "url": "https://en.wikipedia.org/wiki/Eurozone_crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,71 @@
+{
+  "id": "nigeria",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Nigeria",
+      "from": "1960"
+    }
+  ],
+  "summary": "The most populous country in Africa, independent from Britain since 1960. It has hundreds of ethnic groups, a large oil industry and a film industry known as Nollywood.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Federal Republic of Nigeria",
+    "Naija"
+  ],
+  "wikidata": "Q1033",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "opec"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nigeria (Q1033)",
+      "url": "https://www.wikidata.org/wiki/Q1033",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nigeria",
+      "url": "https://en.wikipedia.org/wiki/Nigeria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

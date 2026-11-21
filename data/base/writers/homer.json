@@ -1,0 +1,52 @@
+{
+  "id": "homer",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Homer",
+      "from": "-0750"
+    }
+  ],
+  "summary": "Ancient Greek poet traditionally credited with the Iliad and the Odyssey, the oldest great works of European literature. Little is known about his life, and scholars still debate whether one person composed both.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Homerus",
+    "Homeros",
+    "Mæonides"
+  ],
+  "wikidata": "Q6691",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0750",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Homer (Q6691)",
+      "url": "https://www.wikidata.org/wiki/Q6691",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Homer",
+      "url": "https://en.wikipedia.org/wiki/Homer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

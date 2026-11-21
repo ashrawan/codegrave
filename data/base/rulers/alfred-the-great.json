@@ -1,0 +1,61 @@
+{
+  "id": "alfred-the-great",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Alfred the Great",
+      "from": "0849"
+    }
+  ],
+  "summary": "King of Wessex who held back Viking invaders and defended southern England when other kingdoms fell. He founded a navy, issued laws, and encouraged learning and the use of English.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Alfred, king of the Saxons",
+    "Aelfred the Great",
+    "Aelfred the Great, king of Wessex",
+    "Aelfred of Wessex",
+    "Alfred the Wise of England"
+  ],
+  "wikidata": "Q83476",
+  "events": [
+    {
+      "type": "born",
+      "date": "0849",
+      "precision": "year"
+    },
+    {
+      "type": "milestone",
+      "date": "0871",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of Wessex from 871; later styled King of the Anglo-Saxons."
+    },
+    {
+      "type": "ended",
+      "date": "0899",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Alfred the Great (Q83476)",
+      "url": "https://www.wikidata.org/wiki/Q83476",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alfred the Great",
+      "url": "https://en.wikipedia.org/wiki/Alfred_the_Great",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

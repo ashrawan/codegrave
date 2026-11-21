@@ -1,0 +1,42 @@
+{
+  "id": "golf",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Golf",
+      "from": "1457"
+    }
+  ],
+  "summary": "A game in which players hit a ball into a series of holes with as few strokes as possible. It developed in Scotland, where an early law of 1457 banned it because it distracted men from archery.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q5377",
+  "events": [
+    {
+      "type": "born",
+      "date": "1457",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: golf (Q5377)",
+      "url": "https://www.wikidata.org/wiki/Q5377",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Golf",
+      "url": "https://en.wikipedia.org/wiki/Golf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "pulitzer-prize",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Pulitzer Prize",
+      "from": "1917"
+    }
+  ],
+  "summary": "American prizes for journalism, books, drama and music, funded by the publisher Joseph Pulitzer. They are administered by Columbia University, and winners are announced each spring.",
+  "labels": [
+    "media",
+    "literature"
+  ],
+  "aliases": [
+    "pulitzer.org",
+    "Pulitzer Prizes"
+  ],
+  "wikidata": "Q46525",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-06-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "joseph-pulitzer"
+    },
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pulitzer Prize (Q46525)",
+      "url": "https://www.wikidata.org/wiki/Q46525",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pulitzer Prize",
+      "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

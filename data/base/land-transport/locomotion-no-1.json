@@ -1,0 +1,56 @@
+{
+  "id": "locomotion-no-1",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Locomotion No. 1",
+      "from": "1825"
+    }
+  ],
+  "maker": "George and Robert Stephenson",
+  "summary": "A steam locomotive built by George and Robert Stephenson that pulled the first passenger train on a public steam railway, the Stockton and Darlington, in 1825. It is preserved in a museum in England.",
+  "labels": [
+    "transport",
+    "firsts"
+  ],
+  "aliases": [
+    "Locomotion locomotive"
+  ],
+  "wikidata": "Q738131",
+  "events": [
+    {
+      "type": "born",
+      "date": "1825",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "george-stephenson"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stockton and Darlington Railway No. 1 “Locomotion” (Q738131)",
+      "url": "https://www.wikidata.org/wiki/Q738131",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Locomotion No. 1",
+      "url": "https://en.wikipedia.org/wiki/Locomotion_No._1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

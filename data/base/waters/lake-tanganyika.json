@@ -1,0 +1,54 @@
+{
+  "id": "lake-tanganyika",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Lake Tanganyika",
+      "from": "-10000000"
+    }
+  ],
+  "summary": "A very long, deep lake in the African Rift Valley, shared by four countries and the second deepest lake in the world. It holds hundreds of fish species, many found nowhere else.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Tanganyika"
+  ],
+  "wikidata": "Q5511",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    },
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lake Tanganyika (Q5511)",
+      "url": "https://www.wikidata.org/wiki/Q5511",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lake Tanganyika",
+      "url": "https://en.wikipedia.org/wiki/Lake_Tanganyika",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

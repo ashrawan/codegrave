@@ -1,0 +1,56 @@
+{
+  "id": "an-lushan-rebellion",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "An Lushan Rebellion",
+      "from": "0755"
+    }
+  ],
+  "summary": "A huge revolt led by the general An Lushan against the Tang dynasty of China. It cost millions of lives, weakened the central government and began the long decline of the dynasty.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q253774",
+  "events": [
+    {
+      "type": "born",
+      "date": "0755-12-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0763-02-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "tang-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: An Lushan Rebellion (Q253774)",
+      "url": "https://www.wikidata.org/wiki/Q253774",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: An Lushan rebellion",
+      "url": "https://en.wikipedia.org/wiki/An_Lushan_rebellion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

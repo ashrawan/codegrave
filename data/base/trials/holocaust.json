@@ -1,0 +1,64 @@
+{
+  "id": "holocaust",
+  "category": "trials",
+  "names": [
+    {
+      "name": "The Holocaust",
+      "from": "1941"
+    }
+  ],
+  "summary": "The systematic persecution and murder of about six million European Jews by Nazi Germany and its allies and collaborators. Other groups, including Roma and disabled people, were also persecuted and killed. It ended with the defeat of Germany in 1945.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "Holocaust",
+    "the Shoah",
+    "Shoah",
+    "HaShoah"
+  ],
+  "wikidata": "Q2763",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941",
+      "precision": "year",
+      "note": "Dated from 1941, when the mass murder began. The Nazi persecution of Jews began in 1933, and some historians date the Holocaust from then."
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "in",
+      "to": "french-algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Holocaust (Q2763)",
+      "url": "https://www.wikidata.org/wiki/Q2763",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Holocaust",
+      "url": "https://en.wikipedia.org/wiki/The_Holocaust",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,50 @@
+{
+  "id": "hamilton-musical",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Hamilton",
+      "from": "2015"
+    }
+  ],
+  "summary": "Musical by Lin-Manuel Miranda about the American founding father Alexander Hamilton, told through hip-hop, rap and a cast of mostly non-white actors. It won the Pulitzer Prize for Drama.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Hamilton: An American Musical"
+  ],
+  "wikidata": "Q19320959",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-02-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "about",
+      "to": "alexander-hamilton"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hamilton (Q19320959)",
+      "url": "https://www.wikidata.org/wiki/Q19320959",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hamilton (musical)",
+      "url": "https://en.wikipedia.org/wiki/Hamilton_(musical)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

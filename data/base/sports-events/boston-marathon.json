@@ -1,0 +1,47 @@
+{
+  "id": "boston-marathon",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Boston Marathon",
+      "from": "1897"
+    }
+  ],
+  "summary": "The world's oldest annual marathon, first run in 1897 and inspired by the marathon at the first modern Olympic Games. It is held each spring in and around Boston, and runners must qualify to enter.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q826038",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Boston Marathon (Q826038)",
+      "url": "https://www.wikidata.org/wiki/Q826038",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boston Marathon",
+      "url": "https://en.wikipedia.org/wiki/Boston_Marathon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

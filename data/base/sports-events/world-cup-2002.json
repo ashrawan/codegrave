@@ -1,0 +1,61 @@
+{
+  "id": "world-cup-2002",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2002 FIFA World Cup",
+      "from": "2002"
+    }
+  ],
+  "summary": "The first World Cup in Asia was shared by Japan and South Korea. Brazil won a fifth title, and South Korea reached the semi-finals, the best result for an Asian team.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "2002 FIFA World Cup Korea/Japan",
+    "FIFA 2002",
+    "FIFA World Cup 2002"
+  ],
+  "wikidata": "Q47735",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002-05-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-06-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    },
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2002 FIFA World Cup (Q47735)",
+      "url": "https://www.wikidata.org/wiki/Q47735",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2002 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/2002_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

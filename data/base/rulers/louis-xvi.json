@@ -1,0 +1,57 @@
+{
+  "id": "louis-xvi",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Louis XVI",
+      "from": "1754"
+    }
+  ],
+  "summary": "King of France from 1774 who was overthrown in the French Revolution. He was tried for treason and guillotined in January 1793. His wife was Marie Antoinette.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Louis XVI of France",
+    "Louis I of Navarre",
+    "Louis Capet"
+  ],
+  "wikidata": "Q7732",
+  "events": [
+    {
+      "type": "born",
+      "date": "1754-08-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1793-01-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "marie-antoinette"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Louis XVI of France (Q7732)",
+      "url": "https://www.wikidata.org/wiki/Q7732",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Louis XVI",
+      "url": "https://en.wikipedia.org/wiki/Louis_XVI",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

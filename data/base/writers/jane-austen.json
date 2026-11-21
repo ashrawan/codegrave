@@ -1,0 +1,52 @@
+{
+  "id": "jane-austen",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Jane Austen",
+      "from": "1775"
+    }
+  ],
+  "summary": "English novelist who wrote Pride and Prejudice, Emma and Sense and Sensibility. Her sharp, funny stories about marriage, money and manners in country life were published without her name during her lifetime.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Ao-ssu-ting",
+    "Author of Sense and sensibility",
+    "Lady"
+  ],
+  "wikidata": "Q36322",
+  "events": [
+    {
+      "type": "born",
+      "date": "1775-12-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1817-07-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Jane Austen (Q36322)",
+      "url": "https://www.wikidata.org/wiki/Q36322",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jane Austen",
+      "url": "https://en.wikipedia.org/wiki/Jane_Austen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,84 @@
+{
+  "id": "the-renaissance",
+  "name": "The Renaissance",
+  "description": "Leonardo, Michelangelo, Raphael and the artists, patrons and thinkers who remade European art between 1300 and 1600.",
+  "category": "arts",
+  "labels": [
+    "visual-art"
+  ],
+  "tags": [
+    "renaissance",
+    "leonardo da vinci",
+    "michelangelo",
+    "florence",
+    "medici",
+    "art history",
+    "raphael"
+  ],
+  "entries": [
+    "giotto",
+    "florence-cathedral",
+    "petrarch",
+    "renaissance",
+    "renaissance-humanism",
+    "filippo-brunelleschi",
+    "donatello",
+    "jan-van-eyck",
+    "house-of-medici",
+    "johannes-gutenberg",
+    "ghent-altarpiece",
+    "printing-press",
+    "sandro-botticelli",
+    "leonardo-da-vinci",
+    "erasmus",
+    "niccolo-machiavelli",
+    "albrecht-durer",
+    "nicolaus-copernicus",
+    "michelangelo",
+    "raphael",
+    "birth-of-venus",
+    "titian",
+    "mimar-sinan",
+    "the-last-supper",
+    "garden-of-earthly-delights",
+    "mona-lisa",
+    "david-michelangelo",
+    "andrea-palladio",
+    "school-of-athens",
+    "sistine-chapel-ceiling",
+    "pieter-bruegel-the-elder",
+    "the-prince",
+    "el-greco",
+    "st-peters-basilica"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-forerunners",
+      "name": "The forerunners",
+      "from": 1267,
+      "to": 1400,
+      "note": "In Tuscany, Giotto paints people with weight and feeling, and a century later Florence is ready to look back at Rome and Greece for ideas."
+    },
+    {
+      "id": "early-renaissance-in-florence",
+      "name": "Early Renaissance in Florence",
+      "from": 1401,
+      "to": 1470,
+      "note": "Brunelleschi raises the great dome over Florence and works out linear perspective, and Donatello casts a bronze David. In the north Jan van Eyck finishes the Ghent Altarpiece in 1432, with oil paint of a new richness and detail."
+    },
+    {
+      "id": "the-high-renaissance",
+      "name": "The High Renaissance",
+      "from": 1471,
+      "to": 1520,
+      "note": "Botticelli paints The Birth of Venus, Leonardo The Last Supper and the Mona Lisa, and Michelangelo carves the David and paints the Sistine ceiling, while Raphael paints The School of Athens. In the north Durer brings the new art to woodcut and engraving, and Bosch paints The Garden of Earthly Delights."
+    },
+    {
+      "id": "the-late-renaissance",
+      "name": "The late Renaissance",
+      "from": 1521,
+      "to": 1614,
+      "note": "Titian's colour rules Venice, Palladio designs villas, Bruegel paints village life in the Low Countries and Sinan builds mosques for the Ottomans. El Greco, trained in Venice and Rome, carries the late style to Spain and works in Toledo until 1614."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "olympics-1988",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1988 Summer Olympics",
+      "from": "1988"
+    }
+  ],
+  "summary": "The Games of the XXIV Olympiad, held in Seoul, South Korea, in September and October 1988. They were the first Games in years without a large boycott, and drew athletes from over 150 countries. Taekwondo and table tennis featured as medal events.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Seoul 1988",
+    "Seoul Olympics",
+    "1988 Olympics",
+    "Games of the XXIV Olympiad",
+    "Seoul '88"
+  ],
+  "wikidata": "Q8470",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-09-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1988-10-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "seoul"
+    },
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1988 Summer Olympics (Q8470)",
+      "url": "https://www.wikidata.org/wiki/Q8470",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1988 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1988_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

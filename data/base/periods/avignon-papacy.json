@@ -1,0 +1,53 @@
+{
+  "id": "avignon-papacy",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Avignon Papacy",
+      "from": "1309"
+    }
+  ],
+  "summary": "Period when seven popes lived in Avignon in southern France instead of Rome, under strong French influence. It ended when Gregory XI returned to Rome, and a split in the Church soon followed.",
+  "labels": [
+    "religion",
+    "politics"
+  ],
+  "wikidata": "Q202558",
+  "events": [
+    {
+      "type": "born",
+      "date": "1309",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1377",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Avignon Papacy (Q202558)",
+      "url": "https://www.wikidata.org/wiki/Q202558",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Avignon Papacy",
+      "url": "https://en.wikipedia.org/wiki/Avignon_Papacy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

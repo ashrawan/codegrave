@@ -1,0 +1,63 @@
+{
+  "id": "henry-vii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Henry VII",
+      "from": "1457"
+    }
+  ],
+  "summary": "First Tudor king of England. He won the crown at Bosworth in 1485, ending the Wars of the Roses, and rebuilt royal finances and order. He married Elizabeth of York to join the rival houses.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Solomon of England",
+    "Henry Tudor"
+  ],
+  "wikidata": "Q675493",
+  "events": [
+    {
+      "type": "born",
+      "date": "1457-01-28",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1485",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1485 to 1509, the first Tudor king."
+    },
+    {
+      "type": "ended",
+      "date": "1509-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "house-of-tudor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Henry VII of England (Q675493)",
+      "url": "https://www.wikidata.org/wiki/Q675493",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henry VII of England",
+      "url": "https://en.wikipedia.org/wiki/Henry_VII_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

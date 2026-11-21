@@ -1,0 +1,53 @@
+{
+  "id": "boudica",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Boudica",
+      "from": "0030"
+    }
+  ],
+  "summary": "Queen of the Iceni, a people of eastern Britain, who led a revolt against Roman rule around 60 or 61 CE. Her forces burned Colchester, London and St Albans before being defeated. Her birth and death years are uncertain.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Boudicca",
+    "Boadicea",
+    "Buddug"
+  ],
+  "wikidata": "Q184634",
+  "events": [
+    {
+      "type": "born",
+      "date": "0030",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0061",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Boudica (Q184634)",
+      "url": "https://www.wikidata.org/wiki/Q184634",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boudica",
+      "url": "https://en.wikipedia.org/wiki/Boudica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

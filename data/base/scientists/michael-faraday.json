@@ -1,0 +1,54 @@
+{
+  "id": "michael-faraday",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Michael Faraday",
+      "from": "1791"
+    }
+  ],
+  "summary": "English experimenter who showed in 1831 that a moving magnet can make an electric current. That discovery, electromagnetic induction, led straight to the dynamo and the transformer, and so to electric power.",
+  "labels": [
+    "physics",
+    "chemistry",
+    "energy"
+  ],
+  "wikidata": "Q8750",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-09-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1867-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Michael Faraday (Q8750)",
+      "url": "https://www.wikidata.org/wiki/Q8750",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michael Faraday",
+      "url": "https://en.wikipedia.org/wiki/Michael_Faraday",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

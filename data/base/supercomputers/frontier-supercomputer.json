@@ -1,0 +1,53 @@
+{
+  "id": "frontier-supercomputer",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "Frontier",
+      "from": "2022"
+    }
+  ],
+  "maker": "HPE and AMD",
+  "summary": "Supercomputer at Oak Ridge National Laboratory that was the first to pass one quintillion calculations a second, a level known as exascale. It is used for research in climate, energy and medicine.",
+  "labels": [
+    "computing",
+    "engineering",
+    "firsts"
+  ],
+  "aliases": [
+    "OLCF-5"
+  ],
+  "wikidata": "Q55231581",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-06",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Frontier (Q55231581)",
+      "url": "https://www.wikidata.org/wiki/Q55231581",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Frontier (supercomputer)",
+      "url": "https://en.wikipedia.org/wiki/Frontier_(supercomputer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

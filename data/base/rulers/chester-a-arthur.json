@@ -1,0 +1,64 @@
+{
+  "id": "chester-a-arthur",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Chester A. Arthur",
+      "from": "1829"
+    }
+  ],
+  "summary": "Twenty-first president, who took office when Garfield died. He signed the Pendleton Act of 1883, which began the modern civil service.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Chester Arthur"
+  ],
+  "wikidata": "Q35498",
+  "events": [
+    {
+      "type": "born",
+      "date": "1829-10-05",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1881-09-19",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 21st president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1885-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Grover Cleveland took office."
+    },
+    {
+      "type": "ended",
+      "date": "1886-11-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Chester A. Arthur (Q35498)",
+      "url": "https://www.wikidata.org/wiki/Q35498",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chester A. Arthur",
+      "url": "https://en.wikipedia.org/wiki/Chester_A._Arthur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

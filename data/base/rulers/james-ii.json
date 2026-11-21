@@ -1,0 +1,78 @@
+{
+  "id": "james-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "James II of England",
+      "from": "1633"
+    }
+  ],
+  "summary": "Catholic king of England and Scotland who lost his throne in the Glorious Revolution of 1688. He fled to France and later fought in Ireland with Irish and French support, but was beaten at the Boyne.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "James, Duke of York and Albany",
+    "James II of England and VII of Scotland",
+    "James VII of Scotland",
+    "James VII",
+    "James VII and II"
+  ],
+  "wikidata": "Q126188",
+  "events": [
+    {
+      "type": "born",
+      "date": "1633-10-14",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1685",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England and Ireland, and of Scotland as James VII, from 1685 to 1688."
+    },
+    {
+      "type": "milestone",
+      "date": "1688",
+      "precision": "year",
+      "label": "Deposed",
+      "note": "Fled to France in the Glorious Revolution; William III and Mary II took the throne."
+    },
+    {
+      "type": "ended",
+      "date": "1701-09-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "charles-i"
+    },
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James II of England (Q126188)",
+      "url": "https://www.wikidata.org/wiki/Q126188",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James II of England",
+      "url": "https://en.wikipedia.org/wiki/James_II_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

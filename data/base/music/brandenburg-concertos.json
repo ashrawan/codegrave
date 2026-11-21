@@ -1,0 +1,52 @@
+{
+  "id": "brandenburg-concertos",
+  "category": "music",
+  "names": [
+    {
+      "name": "Brandenburg Concertos",
+      "from": "1721"
+    }
+  ],
+  "maker": "Johann Sebastian Bach",
+  "summary": "Six concertos by Johann Sebastian Bach, sent to a German nobleman in 1721 in hope of a job. Each gives a different mix of instruments a showy part, and together they are a high point of Baroque music.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Six Concerts avec plusieurs instruments",
+    "Brandonburg Concerto"
+  ],
+  "wikidata": "Q208224",
+  "events": [
+    {
+      "type": "born",
+      "date": "1721",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "johann-sebastian-bach"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brandenburg Concertos (Q208224)",
+      "url": "https://www.wikidata.org/wiki/Q208224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brandenburg Concertos",
+      "url": "https://en.wikipedia.org/wiki/Brandenburg_Concertos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

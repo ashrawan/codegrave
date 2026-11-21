@@ -1,0 +1,46 @@
+{
+  "id": "barley",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Barley",
+      "from": "-10000"
+    }
+  ],
+  "summary": "A cereal grain first grown in the Near East alongside wheat. It was used for bread and porridge and later for brewing beer, and it can grow in poor soil and cold places.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "Hordeum vulgare",
+    "barley plant"
+  ],
+  "wikidata": "Q11577",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Hordeum vulgare (Q11577)",
+      "url": "https://www.wikidata.org/wiki/Q11577",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Barley",
+      "url": "https://en.wikipedia.org/wiki/Barley",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

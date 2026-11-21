@@ -1,0 +1,56 @@
+{
+  "id": "weimar-hyperinflation",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "German hyperinflation",
+      "from": "1921"
+    }
+  ],
+  "summary": "Prices in Germany rose so fast that money became almost worthless, and people carried banknotes in wheelbarrows. Savings were wiped out, and the experience left a deep fear of inflation in Germany.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q695052",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1923-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "german-empire"
+    },
+    {
+      "type": "in",
+      "to": "weimar-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: hyperinflation in the Weimar Republic (Q695052)",
+      "url": "https://www.wikidata.org/wiki/Q695052",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hyperinflation in the Weimar Republic",
+      "url": "https://en.wikipedia.org/wiki/Hyperinflation_in_the_Weimar_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

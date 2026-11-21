@@ -1,0 +1,67 @@
+{
+  "id": "six-day-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Six-Day War",
+      "from": "1967"
+    }
+  ],
+  "summary": "A short war in June 1967 in which Israel fought Egypt, Jordan and Syria. Israel took the Sinai, the Gaza Strip, the West Bank, East Jerusalem and the Golan Heights.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "The June War",
+    "1967 Arab-Israeli War",
+    "1967 Six Day War",
+    "Six Day War in Israel",
+    "Six Day War 1967"
+  ],
+  "wikidata": "Q49077",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-06-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "israel"
+    },
+    {
+      "type": "related",
+      "to": "egypt"
+    },
+    {
+      "type": "related",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Six-Day War (Q49077)",
+      "url": "https://www.wikidata.org/wiki/Q49077",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Six-Day War",
+      "url": "https://en.wikipedia.org/wiki/Six-Day_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "samuel-pepys",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Samuel Pepys",
+      "from": "1633"
+    }
+  ],
+  "summary": "English naval official who kept a diary in the 1660s. It gives a vivid record of daily life in London, including the Great Plague of 1665 and the Great Fire of 1666.",
+  "labels": [
+    "literature",
+    "politics"
+  ],
+  "aliases": [
+    "Pepys"
+  ],
+  "wikidata": "Q106143",
+  "events": [
+    {
+      "type": "born",
+      "date": "1633-02-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1703-05-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samuel Pepys (Q106143)",
+      "url": "https://www.wikidata.org/wiki/Q106143",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samuel Pepys",
+      "url": "https://en.wikipedia.org/wiki/Samuel_Pepys",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

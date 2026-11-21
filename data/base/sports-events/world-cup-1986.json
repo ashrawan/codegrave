@@ -1,0 +1,55 @@
+{
+  "id": "world-cup-1986",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1986 FIFA World Cup",
+      "from": "1986"
+    }
+  ],
+  "summary": "Argentina won in Mexico, led by Diego Maradona, who scored two famous goals against England in one match. One came from a handball and the other from a dribble across the field.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "FIFA World Cup 1986"
+  ],
+  "wikidata": "Q46938",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-05-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-06-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1986 FIFA World Cup (Q46938)",
+      "url": "https://www.wikidata.org/wiki/Q46938",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1986 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1986_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

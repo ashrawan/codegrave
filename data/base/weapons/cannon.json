@@ -1,0 +1,43 @@
+{
+  "id": "cannon",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Cannon",
+      "from": "1250"
+    }
+  ],
+  "summary": "A large tube that fires heavy balls or shells using an explosive charge. Cannon appeared in China and later in Europe and the Islamic world, and by the fifteenth century they could break down the walls of cities.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "wikidata": "Q81103",
+  "events": [
+    {
+      "type": "born",
+      "date": "1250",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cannon (Q81103)",
+      "url": "https://www.wikidata.org/wiki/Q81103",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cannon",
+      "url": "https://en.wikipedia.org/wiki/Cannon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "great-lakes",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Great Lakes",
+      "from": "-12000"
+    }
+  ],
+  "summary": "The chain of five huge freshwater lakes, Superior, Michigan, Huron, Erie and Ontario, on the border of Canada and the USA. Ice sheets carved their basins, and they took their present form as the ice retreated.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Great Lakes of North America"
+  ],
+  "wikidata": "Q7347",
+  "events": [
+    {
+      "type": "born",
+      "date": "-12000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Lakes (Q7347)",
+      "url": "https://www.wikidata.org/wiki/Q7347",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Lakes",
+      "url": "https://en.wikipedia.org/wiki/Great_Lakes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

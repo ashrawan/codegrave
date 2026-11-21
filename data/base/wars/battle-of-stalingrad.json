@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-stalingrad",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Stalingrad",
+      "from": "1942"
+    }
+  ],
+  "summary": "A months-long battle in which German and Axis forces tried to take the city on the Volga. The Soviet army surrounded and captured the German Sixth Army, a turning point of the war in Europe.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Stalingrad Battle",
+    "Battle of Volgograd"
+  ],
+  "wikidata": "Q38789",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-08-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-02-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "related",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Stalingrad (Q38789)",
+      "url": "https://www.wikidata.org/wiki/Q38789",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Stalingrad",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Stalingrad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

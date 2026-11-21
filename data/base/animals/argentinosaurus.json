@@ -1,0 +1,52 @@
+{
+  "id": "argentinosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Argentinosaurus",
+      "from": "-97000000"
+    }
+  ],
+  "summary": "A huge long-necked dinosaur from Argentina and among the heaviest land animals known. It is known from only a few bones, so its exact size is an estimate.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q130859",
+  "events": [
+    {
+      "type": "born",
+      "date": "-97000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-93000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Argentinosaurus (Q130859)",
+      "url": "https://www.wikidata.org/wiki/Q130859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Argentinosaurus",
+      "url": "https://en.wikipedia.org/wiki/Argentinosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

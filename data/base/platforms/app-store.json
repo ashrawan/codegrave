@@ -1,0 +1,57 @@
+{
+  "id": "app-store",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "App Store",
+      "from": "2008"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's online shop for software on the iPhone, later also on the iPad and other devices. It opened in 2008 with the iPhone 2.0 update and made it easy for outside developers to sell apps to a large audience.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "App Store (iPadOS)",
+    "com.apple.AppStore"
+  ],
+  "wikidata": "Q368215",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "steve-jobs"
+    },
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: App Store (Q368215)",
+      "url": "https://www.wikidata.org/wiki/Q368215",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: App Store (Apple)",
+      "url": "https://en.wikipedia.org/wiki/App_Store_(Apple)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "giuseppe-verdi",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Giuseppe Verdi",
+      "from": "1813"
+    }
+  ],
+  "summary": "Italian opera composer of Rigoletto, La traviata and Aida. His music was linked to the movement for Italian unification, and he served briefly as a member of parliament.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Giuseppe Fortunino Francesco Verdi",
+    "Verdi"
+  ],
+  "wikidata": "Q7317",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813-10-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1901-01-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Giuseppe Verdi (Q7317)",
+      "url": "https://www.wikidata.org/wiki/Q7317",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Giuseppe Verdi",
+      "url": "https://en.wikipedia.org/wiki/Giuseppe_Verdi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

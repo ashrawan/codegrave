@@ -1,0 +1,52 @@
+{
+  "id": "haiti-earthquake-2010",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "2010 Haiti earthquake",
+      "from": "2010"
+    }
+  ],
+  "summary": "A shallow earthquake struck close to Port-au-Prince, the capital of Haiti, a country already among the poorest in the Americas. Many buildings collapsed, and a large international aid effort followed.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q43777",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-01-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2010-01-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "haiti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2010 Haiti earthquake (Q43777)",
+      "url": "https://www.wikidata.org/wiki/Q43777",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2010 Haiti earthquake",
+      "url": "https://en.wikipedia.org/wiki/2010_Haiti_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

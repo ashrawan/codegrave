@@ -1,0 +1,54 @@
+{
+  "id": "california",
+  "category": "regions",
+  "names": [
+    {
+      "name": "California",
+      "from": "1850"
+    }
+  ],
+  "summary": "The most populous US state, on the Pacific coast, taken from Mexico in the Mexican-American War. The Gold Rush of 1848-49 brought a flood of settlers and it became a state in 1850.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "State of California",
+    "The Golden State",
+    "California, United States",
+    "Cal.",
+    "Golden State"
+  ],
+  "wikidata": "Q99",
+  "events": [
+    {
+      "type": "born",
+      "date": "1850-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: California (Q99)",
+      "url": "https://www.wikidata.org/wiki/Q99",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: California",
+      "url": "https://en.wikipedia.org/wiki/California",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

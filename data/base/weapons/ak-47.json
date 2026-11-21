@@ -1,0 +1,47 @@
+{
+  "id": "ak-47",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "AK-47",
+      "from": "1947"
+    }
+  ],
+  "maker": "Mikhail Kalashnikov",
+  "summary": "A rugged assault rifle designed by Mikhail Kalashnikov in the Soviet Union and accepted by its army in 1949. Simple to make and repair, it has been produced in huge numbers and used by armies and fighters around the world.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Kalash",
+    "Avtomat Kalashnikova"
+  ],
+  "wikidata": "Q37116",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: AK-47 (Q37116)",
+      "url": "https://www.wikidata.org/wiki/Q37116",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: AK-47",
+      "url": "https://en.wikipedia.org/wiki/AK-47",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

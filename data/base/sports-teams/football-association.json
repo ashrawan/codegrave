@@ -1,0 +1,58 @@
+{
+  "id": "football-association",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "The Football Association",
+      "from": "1863"
+    }
+  ],
+  "summary": "Governing body of football in England, formed in a London pub. It wrote the first standard rules of the game, which separated football from rugby, and runs the FA Cup.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "FA",
+    "The FA",
+    "England Football Association",
+    "English Football Association",
+    "English FA"
+  ],
+  "wikidata": "Q9500",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-10-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "fifa"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Football Association (Q9500)",
+      "url": "https://www.wikidata.org/wiki/Q9500",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Football Association",
+      "url": "https://en.wikipedia.org/wiki/The_Football_Association",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

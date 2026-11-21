@@ -1,0 +1,49 @@
+{
+  "id": "megatherium",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Giant ground sloth",
+      "from": "-5000000"
+    }
+  ],
+  "summary": "A ground sloth as big as an elephant, which stood on its hind legs to pull down leaves. It lived in South America and died out soon after people arrived.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "wikidata": "Q310387",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Disappeared after humans reached the Americas, with climate change as a likely factor",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Megatherium (Q310387)",
+      "url": "https://www.wikidata.org/wiki/Q310387",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Megatherium",
+      "url": "https://en.wikipedia.org/wiki/Megatherium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

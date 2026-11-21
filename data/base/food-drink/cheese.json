@@ -1,0 +1,45 @@
+{
+  "id": "cheese",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Cheese",
+      "from": "-5500"
+    }
+  ],
+  "summary": "A food made from the curds of milk, kept longer than milk itself. People began to make it in the early days of dairy farming, and thousands of varieties now exist.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "cheeses"
+  ],
+  "wikidata": "Q10943",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cheese (Q10943)",
+      "url": "https://www.wikidata.org/wiki/Q10943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cheese",
+      "url": "https://en.wikipedia.org/wiki/Cheese",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "john-tyndall",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "John Tyndall",
+      "from": "1820"
+    }
+  ],
+  "summary": "Irish physicist who showed in the 1850s and 1860s that gases such as carbon dioxide and water vapour absorb heat. He also explained why the sky looks blue through the scattering of light, and took part in early mountaineering.",
+  "labels": [
+    "physics",
+    "environment"
+  ],
+  "aliases": [
+    "John Tyndal"
+  ],
+  "wikidata": "Q360808",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820-08-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1893-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Tyndall (Q360808)",
+      "url": "https://www.wikidata.org/wiki/Q360808",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Tyndall",
+      "url": "https://en.wikipedia.org/wiki/John_Tyndall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,67 @@
+{
+  "id": "walt-whitman",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Walt Whitman",
+      "from": "1819"
+    }
+  ],
+  "summary": "American poet whose collection Leaves of Grass, revised throughout his life, used free verse and plain speech to celebrate ordinary people and the new democracy. He also nursed wounded soldiers in the Civil War.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Walter Whitman"
+  ],
+  "wikidata": "Q81438",
+  "events": [
+    {
+      "type": "born",
+      "date": "1819-05-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1892-03-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "dante-alighieri"
+    },
+    {
+      "type": "influenced_by",
+      "to": "charles-dickens"
+    },
+    {
+      "type": "influenced_by",
+      "to": "homer"
+    },
+    {
+      "type": "influenced_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Walt Whitman (Q81438)",
+      "url": "https://www.wikidata.org/wiki/Q81438",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Walt Whitman",
+      "url": "https://en.wikipedia.org/wiki/Walt_Whitman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

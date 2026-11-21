@@ -1,0 +1,48 @@
+{
+  "id": "thriller-album",
+  "category": "music",
+  "names": [
+    {
+      "name": "Thriller",
+      "from": "1982"
+    }
+  ],
+  "maker": "Michael Jackson",
+  "summary": "Sixth studio album by Michael Jackson, mixing pop, funk, rock and soul, with several songs that reached the top ten. Its music videos brought the form to television, and it is among the best-selling albums in history.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q44320",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-11-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "michael-jackson"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thriller (Q44320)",
+      "url": "https://www.wikidata.org/wiki/Q44320",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thriller (album)",
+      "url": "https://en.wikipedia.org/wiki/Thriller_(album)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

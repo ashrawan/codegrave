@@ -1,0 +1,55 @@
+{
+  "id": "maginot-line",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Maginot Line",
+      "from": "1928"
+    }
+  ],
+  "maker": "France",
+  "summary": "A chain of concrete forts and tunnels built along France's border with Germany. It was strong where it stood, but German forces in 1940 went around its end through the Ardennes and Belgium.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "wikidata": "Q162746",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1940",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Bypassed by the German invasion through Belgium in 1940",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maginot Line (Q162746)",
+      "url": "https://www.wikidata.org/wiki/Q162746",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maginot Line",
+      "url": "https://en.wikipedia.org/wiki/Maginot_Line",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

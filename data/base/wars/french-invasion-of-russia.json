@@ -1,0 +1,64 @@
+{
+  "id": "french-invasion-of-russia",
+  "category": "wars",
+  "names": [
+    {
+      "name": "French invasion of Russia",
+      "from": "1812"
+    }
+  ],
+  "summary": "Napoleon led a huge army into Russia, which retreated and burned supplies. Hunger, disease and the winter destroyed most of his force, and it was the turning point of the Napoleonic Wars.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Patriotic War of 1812",
+    "Russian Campaign"
+  ],
+  "wikidata": "Q179250",
+  "events": [
+    {
+      "type": "born",
+      "date": "1812-06-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1812-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "napoleonic-wars"
+    },
+    {
+      "type": "in",
+      "to": "russian-empire"
+    },
+    {
+      "type": "related",
+      "to": "first-french-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French invasion of Russia (Q179250)",
+      "url": "https://www.wikidata.org/wiki/Q179250",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French invasion of Russia",
+      "url": "https://en.wikipedia.org/wiki/French_invasion_of_Russia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

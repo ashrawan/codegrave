@@ -1,0 +1,52 @@
+{
+  "id": "robert-schumann",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Robert Schumann",
+      "from": "1810"
+    }
+  ],
+  "summary": "German Romantic composer of piano works, songs and four symphonies. He also edited a music magazine that championed young composers such as Brahms, and he was married to the pianist Clara Wieck.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q7351",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810-06-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1856-07-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "clara-schumann"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Robert Schumann (Q7351)",
+      "url": "https://www.wikidata.org/wiki/Q7351",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Schumann",
+      "url": "https://en.wikipedia.org/wiki/Robert_Schumann",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

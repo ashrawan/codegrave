@@ -1,0 +1,54 @@
+{
+  "id": "analects",
+  "category": "books",
+  "names": [
+    {
+      "name": "Analects",
+      "from": "-0450"
+    }
+  ],
+  "summary": "Collection of sayings of Confucius and his disciples, put together by followers after his death. It teaches ethics, duty and good government and shaped education in East Asia for two thousand years.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "Analects of Confucius",
+    "Confucian Analects",
+    "The Analects",
+    "Lunyu",
+    "Lun-yu"
+  ],
+  "wikidata": "Q276015",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0450",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "about",
+      "to": "confucius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Analects (Q276015)",
+      "url": "https://www.wikidata.org/wiki/Q276015",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Analects",
+      "url": "https://en.wikipedia.org/wiki/Analects",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

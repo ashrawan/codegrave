@@ -1,0 +1,58 @@
+{
+  "id": "richard-iii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Richard III",
+      "from": "1452"
+    }
+  ],
+  "summary": "King of England from 1483, who took the throne from his young nephew Edward V. He died at the Battle of Bosworth, the last English king killed in battle, and his remains were found in Leicester in 2012.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "King Richard III"
+  ],
+  "wikidata": "Q133028",
+  "events": [
+    {
+      "type": "born",
+      "date": "1452-10-02",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1483",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1483 to 1485, the last Yorkist king."
+    },
+    {
+      "type": "ended",
+      "date": "1485-08-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Richard III of England (Q133028)",
+      "url": "https://www.wikidata.org/wiki/Q133028",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Richard III of England",
+      "url": "https://en.wikipedia.org/wiki/Richard_III_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "imjin-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Imjin War",
+      "from": "1592"
+    }
+  ],
+  "summary": "Two invasions of Korea by Japan under Toyotomi Hideyoshi, who hoped to go on to conquer China. Korea, helped by Ming China and by the naval skill of Admiral Yi Sun-sin, drove the invaders out. Hideyoshi's death ended the war.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Japanese invasions of Korea"
+  ],
+  "wikidata": "Q576338",
+  "events": [
+    {
+      "type": "born",
+      "date": "1592-05-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1598-12-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "toyotomi-hideyoshi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Japanese invasions of Korea (Q576338)",
+      "url": "https://www.wikidata.org/wiki/Q576338",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Imjin War",
+      "url": "https://en.wikipedia.org/wiki/Imjin_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

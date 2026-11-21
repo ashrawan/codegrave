@@ -1,0 +1,61 @@
+{
+  "id": "herbert-hoover",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Herbert Hoover",
+      "from": "1874"
+    }
+  ],
+  "summary": "Thirty-first president. An engineer and organiser of famine relief, he was in office when the stock market crashed in 1929 and the Great Depression began.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q35236",
+  "events": [
+    {
+      "type": "born",
+      "date": "1874-08-10",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1929-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 31st president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1933-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Franklin D. Roosevelt took office."
+    },
+    {
+      "type": "ended",
+      "date": "1964-10-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Herbert Hoover (Q35236)",
+      "url": "https://www.wikidata.org/wiki/Q35236",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Herbert Hoover",
+      "url": "https://en.wikipedia.org/wiki/Herbert_Hoover",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

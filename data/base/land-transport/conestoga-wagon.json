@@ -1,0 +1,48 @@
+{
+  "id": "conestoga-wagon",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Conestoga wagon",
+      "from": "1730"
+    }
+  ],
+  "summary": "A heavy, broad-wheeled freight wagon first built in Pennsylvania and pulled by teams of horses or oxen. It carried goods across the Appalachians, and later wagon trains used similar covered wagons.",
+  "labels": [
+    "transport"
+  ],
+  "wikidata": "Q2060586",
+  "events": [
+    {
+      "type": "born",
+      "date": "1730",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1850",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by railways for long-distance freight",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Conestoga wagon (Q2060586)",
+      "url": "https://www.wikidata.org/wiki/Q2060586",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Conestoga wagon",
+      "url": "https://en.wikipedia.org/wiki/Conestoga_wagon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "space-needle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Space Needle",
+      "from": "1962"
+    }
+  ],
+  "summary": "Slender observation tower with a saucer-shaped top in Seattle, built for the 1962 world's fair. Its restaurant and viewing deck made it the symbol of the city.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q5317",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Space Needle (Q5317)",
+      "url": "https://www.wikidata.org/wiki/Q5317",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Space Needle",
+      "url": "https://en.wikipedia.org/wiki/Space_Needle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

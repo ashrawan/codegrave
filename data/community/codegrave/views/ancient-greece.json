@@ -1,0 +1,98 @@
+{
+  "id": "ancient-greece",
+  "name": "Ancient Greece",
+  "description": "City-states, gods, philosophers and Alexander the Great, from Mycenae to the coming of Rome.",
+  "category": "places",
+  "tags": [
+    "greece",
+    "athens",
+    "sparta",
+    "greek gods",
+    "alexander the great",
+    "philosophy",
+    "olympics"
+  ],
+  "entries": [
+    "athens",
+    "minoan-civilization",
+    "minoan-eruption",
+    "mycenaean-greece",
+    "linear-b",
+    "trojan-war",
+    "greek-alphabet",
+    "sparta",
+    "kingdom-of-macedon",
+    "ancient-greek-religion",
+    "delphi",
+    "ancient-olympic-games",
+    "homer",
+    "iliad",
+    "odyssey",
+    "sappho",
+    "thales",
+    "pythagoras",
+    "athenian-democracy",
+    "greco-persian-wars",
+    "sophocles",
+    "pericles",
+    "battle-of-marathon",
+    "herodotus",
+    "battle-of-thermopylae",
+    "battle-of-salamis",
+    "socrates",
+    "hippocrates",
+    "thucydides",
+    "parthenon",
+    "peloponnesian-war",
+    "plague-of-athens",
+    "plato",
+    "trial-of-socrates",
+    "aristotle",
+    "alexander-the-great",
+    "battle-of-gaugamela",
+    "euclid",
+    "hellenistic-period",
+    "stoicism",
+    "archimedes",
+    "colossus-of-rhodes",
+    "venus-de-milo",
+    "antikythera-mechanism"
+  ],
+  "checkpoints": [
+    {
+      "id": "bronze-age-greece",
+      "name": "Bronze Age Greece",
+      "from": -3000,
+      "to": -1200,
+      "note": "The Minoan civilisation on Crete and Mycenaean Greece on the mainland built palace kingdoms that kept records in Linear B, after a giant eruption shook the Aegean. Later poets sang of a great war at Troy, and the Trojan War became the main story of Greece."
+    },
+    {
+      "id": "the-city-states",
+      "name": "The city-states",
+      "from": -1199,
+      "to": -501,
+      "note": "The Greeks borrowed an alphabet, and Homer's Iliad and Odyssey were set down. Cities met at the Olympic Games and the oracle at Delphi, honoured their gods, and produced Sappho the poet, Thales, often called the first scientist, and Pythagoras."
+    },
+    {
+      "id": "the-persian-wars-and-the-golden-age",
+      "name": "The Persian Wars and the golden age",
+      "from": -500,
+      "to": -400,
+      "note": "Athens beat the Persians at Marathon, Spartans made their famous last stand at Thermopylae, and the Greek fleet won at Salamis. Under Pericles Athens built the Parthenon and staged tragedies by Sophocles, until the Peloponnesian War, in which Sparta fought Athens, and a plague shattered it. Thucydides wrote its history."
+    },
+    {
+      "id": "philosophers-and-alexander",
+      "name": "Philosophers and Alexander",
+      "from": -399,
+      "to": -323,
+      "note": "After the trial of Socrates his pupil Plato taught, and Aristotle taught Alexander the Great. Alexander, king of Macedon, won at Gaugamela and conquered an empire stretching to India, spreading the Greek language far from home."
+    },
+    {
+      "id": "the-hellenistic-world",
+      "name": "The Hellenistic world",
+      "from": -322,
+      "to": -30,
+      "note": "Greek culture ruled the successor kingdoms. Euclid and Archimedes advanced mathematics, Stoicism taught calm, and artists made the Colossus of Rhodes and the Venus de Milo before Rome absorbed it all."
+    }
+  ]
+}

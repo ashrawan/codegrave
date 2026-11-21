@@ -1,0 +1,59 @@
+{
+  "id": "apple-inc",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Apple",
+      "from": "1976"
+    }
+  ],
+  "summary": "American company founded by Steve Jobs, Steve Wozniak and Ronald Wayne. It made the Apple II, the Macintosh, the iPod, the iPhone and the iPad, and became one of the most valuable companies in the world.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Apple (company)"
+  ],
+  "wikidata": "Q312",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-04-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "steve-wozniak"
+    },
+    {
+      "type": "made_by",
+      "to": "steve-jobs"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apple Inc. (Q312)",
+      "url": "https://www.wikidata.org/wiki/Q312",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apple Inc.",
+      "url": "https://en.wikipedia.org/wiki/Apple_Inc.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

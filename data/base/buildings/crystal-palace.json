@@ -1,0 +1,66 @@
+{
+  "id": "crystal-palace",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "The Crystal Palace",
+      "from": "1851"
+    }
+  ],
+  "maker": "Joseph Paxton",
+  "summary": "Vast hall of iron and glass built in Hyde Park to house the Great Exhibition of 1851. It was later moved to south London and used for concerts and shows until a fire destroyed it in 1936.",
+  "labels": [
+    "architecture",
+    "lost"
+  ],
+  "aliases": [
+    "Crystal Palace"
+  ],
+  "wikidata": "Q202902",
+  "events": [
+    {
+      "type": "born",
+      "date": "1851-05-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1936-11-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by fire",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "joseph-paxton"
+    },
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "hyde-park"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Crystal Palace (Q202902)",
+      "url": "https://www.wikidata.org/wiki/Q202902",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Crystal Palace",
+      "url": "https://en.wikipedia.org/wiki/The_Crystal_Palace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

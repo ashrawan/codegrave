@@ -1,0 +1,45 @@
+{
+  "id": "sword",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Sword",
+      "from": "-3300"
+    }
+  ],
+  "summary": "A long blade made for cutting or thrusting. Swords first appeared with copper and bronze working and later grew longer and stronger in iron and steel. They were a symbol of rank as well as a weapon.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "swords"
+  ],
+  "wikidata": "Q12791",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: sword (Q12791)",
+      "url": "https://www.wikidata.org/wiki/Q12791",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sword",
+      "url": "https://en.wikipedia.org/wiki/Sword",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

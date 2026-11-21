@@ -1,0 +1,74 @@
+{
+  "id": "tonga",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Tonga",
+      "from": "1845"
+    }
+  ],
+  "summary": "Polynesian kingdom of about 170 islands in the South Pacific, with Nukuʻalofa as its capital. It was never fully colonised and became fully independent of British protection in 1970.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "to",
+    "Kingdom of Tonga",
+    "Friendly Islands",
+    "Tonga Islands"
+  ],
+  "wikidata": "Q678",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845",
+      "precision": "year",
+      "note": "Dated from 1845, when Tāufaʻāhau united the islands as King George Tupou I. A constitution followed in 1875, and Tonga was under British protection from 1900."
+    },
+    {
+      "type": "milestone",
+      "date": "1970",
+      "precision": "year",
+      "label": "Protection ends",
+      "note": "Tonga became fully independent of Britain."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tonga (Q678)",
+      "url": "https://www.wikidata.org/wiki/Q678",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tonga",
+      "url": "https://en.wikipedia.org/wiki/Tonga",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

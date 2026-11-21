@@ -1,0 +1,65 @@
+{
+  "id": "potsdam-conference",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Potsdam Conference",
+      "from": "1945"
+    }
+  ],
+  "summary": "A July 1945 meeting of Truman, Stalin and the British leaders Churchill and then Attlee near Berlin. They agreed on the occupation of Germany and called on Japan to surrender.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q151187",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-07-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-08-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Potsdam Conference (Q151187)",
+      "url": "https://www.wikidata.org/wiki/Q151187",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Potsdam Conference",
+      "url": "https://en.wikipedia.org/wiki/Potsdam_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

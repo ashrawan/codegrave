@@ -1,0 +1,49 @@
+{
+  "id": "walkman",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "Walkman",
+      "from": "1979"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "Sony's pocket cassette player with headphones, which let people take music anywhere. It changed how people listened to music and sold in the hundreds of millions in various forms.",
+  "labels": [
+    "media",
+    "music"
+  ],
+  "wikidata": "Q622493",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-07-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sony"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Walkman (Q622493)",
+      "url": "https://www.wikidata.org/wiki/Q622493",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Walkman",
+      "url": "https://en.wikipedia.org/wiki/Walkman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "project-gemini",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Project Gemini",
+      "from": "1961"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "A series of two-person American spaceflights in 1965 and 1966 that tested spacewalks, docking in orbit and long missions. They taught NASA the skills it needed to reach the Moon.",
+  "labels": [
+    "space-race"
+  ],
+  "wikidata": "Q214996",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Project Gemini (Q214996)",
+      "url": "https://www.wikidata.org/wiki/Q214996",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Project Gemini",
+      "url": "https://en.wikipedia.org/wiki/Project_Gemini",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

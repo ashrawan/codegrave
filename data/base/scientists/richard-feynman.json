@@ -1,0 +1,61 @@
+{
+  "id": "richard-feynman",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Richard Feynman",
+      "from": "1918"
+    }
+  ],
+  "summary": "American physicist who worked on the atomic bomb project, shared the 1965 Nobel Prize for quantum electrodynamics and drew the diagrams that bear his name. He was also a popular teacher and helped investigate the Challenger disaster.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "wikidata": "Q39246",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-05-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1988-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "paul-dirac"
+    },
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Richard Feynman (Q39246)",
+      "url": "https://www.wikidata.org/wiki/Q39246",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Richard Feynman",
+      "url": "https://en.wikipedia.org/wiki/Richard_Feynman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

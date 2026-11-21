@@ -1,0 +1,49 @@
+{
+  "id": "coca-cola",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Coca-Cola",
+      "from": "1886"
+    }
+  ],
+  "maker": "John Pemberton",
+  "summary": "A sweet fizzy drink made by an Atlanta pharmacist and sold first as a tonic. It was later sold in bottles by a growing company and became one of the most recognised brands in the world.",
+  "labels": [
+    "food",
+    "business"
+  ],
+  "wikidata": "Q2813",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886-05-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Coca-Cola (Q2813)",
+      "url": "https://www.wikidata.org/wiki/Q2813",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coca-Cola",
+      "url": "https://en.wikipedia.org/wiki/Coca-Cola",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

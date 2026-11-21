@@ -1,0 +1,53 @@
+{
+  "id": "securitate",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Securitate",
+      "from": "1948"
+    }
+  ],
+  "summary": "Secret police of communist Romania, set up soon after the communist takeover. It watched and punished opponents of the regime until the revolution of 1989.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Securitatea statului",
+    "DSS"
+  ],
+  "wikidata": "Q208980",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-08-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-12-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved after the fall of Ceausescu in 1989",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Securitate (Q208980)",
+      "url": "https://www.wikidata.org/wiki/Q208980",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Securitate",
+      "url": "https://en.wikipedia.org/wiki/Securitate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

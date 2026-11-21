@@ -1,0 +1,59 @@
+{
+  "id": "worlds-columbian-exposition",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "World's Columbian Exposition",
+      "from": "1893"
+    }
+  ],
+  "summary": "A world's fair in Chicago marking four hundred years since Columbus reached the Americas. It featured the first Ferris wheel and a white city of grand buildings, and it drew millions of visitors.",
+  "labels": [
+    "engineering"
+  ],
+  "aliases": [
+    "Chicago World's Fair",
+    "World's Fair: Columbian Exposition",
+    "Columbian Exposition of 1893",
+    "Columbian Exposition",
+    "World Columbian Exposition, Chicago"
+  ],
+  "wikidata": "Q285406",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893-05-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1893-10-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World's Columbian Exposition (Q285406)",
+      "url": "https://www.wikidata.org/wiki/Q285406",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World's Columbian Exposition",
+      "url": "https://en.wikipedia.org/wiki/World's_Columbian_Exposition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

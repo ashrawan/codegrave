@@ -1,0 +1,62 @@
+{
+  "id": "william-the-conqueror",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "William the Conqueror",
+      "from": "1028"
+    }
+  ],
+  "summary": "Duke of Normandy who won the Battle of Hastings in 1066 and became king of England. He ordered the Domesday survey of his new kingdom and built castles to hold it. His birth year is approximate.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "William, King of the Normans",
+    "William I the Conqueror",
+    "William I of England",
+    "William the Bastard",
+    "William of Normandy"
+  ],
+  "wikidata": "Q37594",
+  "events": [
+    {
+      "type": "born",
+      "date": "1028",
+      "precision": "circa"
+    },
+    {
+      "type": "milestone",
+      "date": "1066",
+      "precision": "year",
+      "label": "Became king",
+      "note": "Crowned King of England at the end of 1066, after his victory at Hastings; reigned until 1087."
+    },
+    {
+      "type": "ended",
+      "date": "1087-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: William the Conqueror (Q37594)",
+      "url": "https://www.wikidata.org/wiki/Q37594",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: William the Conqueror",
+      "url": "https://en.wikipedia.org/wiki/William_the_Conqueror",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

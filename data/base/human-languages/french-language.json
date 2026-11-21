@@ -1,0 +1,51 @@
+{
+  "id": "french-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "French",
+      "from": "0842"
+    }
+  ],
+  "summary": "Romance language that developed from Latin in Gaul. The Oaths of Strasbourg of 842 are the oldest text in an early form of it. It is spoken in France and many countries in Africa and in Canada.",
+  "labels": [
+    "language"
+  ],
+  "wikidata": "Q150",
+  "events": [
+    {
+      "type": "born",
+      "date": "0842",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French (Q150)",
+      "url": "https://www.wikidata.org/wiki/Q150",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French language",
+      "url": "https://en.wikipedia.org/wiki/French_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

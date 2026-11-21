@@ -1,0 +1,59 @@
+{
+  "id": "arthur-andersen",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Arthur Andersen",
+      "from": "1913"
+    }
+  ],
+  "summary": "One of the five largest accounting firms in the world. After it was convicted of obstruction over papers destroyed in the Enron case, its clients left and it stopped auditing, though the verdict was later overturned.",
+  "labels": [
+    "business",
+    "law"
+  ],
+  "aliases": [
+    "Arthur Andersen and Consulting",
+    "Arthur Andersen & Co.",
+    "Arthur Andersen LLP"
+  ],
+  "wikidata": "Q392730",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2002",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost its clients after a conviction linked to the Enron case",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Arthur Andersen (Q392730)",
+      "url": "https://www.wikidata.org/wiki/Q392730",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Arthur Andersen",
+      "url": "https://en.wikipedia.org/wiki/Arthur_Andersen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-verdun",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Verdun",
+      "from": "1916"
+    }
+  ],
+  "summary": "One of the longest battles of the First World War, as Germany attacked the French fortress town of Verdun and France defended it for most of the year. Casualties were enormous on both sides.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q130847",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-02-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1916-12-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-i"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Verdun (Q130847)",
+      "url": "https://www.wikidata.org/wiki/Q130847",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Verdun",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Verdun",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

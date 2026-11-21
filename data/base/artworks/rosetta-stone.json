@@ -1,0 +1,51 @@
+{
+  "id": "rosetta-stone",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Rosetta Stone",
+      "from": "-0196"
+    }
+  ],
+  "summary": "Carved stone slab that repeats one royal decree in hieroglyphs, a later Egyptian script and Greek. Because scholars could read the Greek, it gave the key to reading hieroglyphs, which Champollion achieved in the 1820s.",
+  "labels": [
+    "language"
+  ],
+  "wikidata": "Q48584",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0196",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "british-museum"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rosetta Stone (Q48584)",
+      "url": "https://www.wikidata.org/wiki/Q48584",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rosetta Stone",
+      "url": "https://en.wikipedia.org/wiki/Rosetta_Stone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "yugoslav-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Yugoslav Wars",
+      "from": "1991"
+    }
+  ],
+  "summary": "A series of wars as Yugoslavia broke apart into new states, including Slovenia, Croatia, Bosnia and Herzegovina, and Kosovo. They were the deadliest conflicts in Europe since the Second World War.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Yugoslavian Wars",
+    "Yugoslav Civil War",
+    "Yugoslav Civil Wars",
+    "Yugoslavian Civil War",
+    "Yugoslavian Civil Wars"
+  ],
+  "wikidata": "Q242352",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-03-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-08-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yugoslavia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yugoslav Wars (Q242352)",
+      "url": "https://www.wikidata.org/wiki/Q242352",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yugoslav Wars",
+      "url": "https://en.wikipedia.org/wiki/Yugoslav_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

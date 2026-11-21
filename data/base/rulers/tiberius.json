@@ -1,0 +1,63 @@
+{
+  "id": "tiberius",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Tiberius",
+      "from": "-0042"
+    }
+  ],
+  "summary": "Second Roman emperor and stepson of Augustus. He was a capable general who ruled carefully, but in later years he withdrew to the island of Capri and left much of the government to others.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Tiberius Julius Caesar Augustus",
+    "Emperor Tiberius",
+    "Marcus Gallius Claudianus",
+    "Tiberius Caesar",
+    "Caesar Tiberius"
+  ],
+  "wikidata": "Q1407",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0042-11-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0037-03-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "augustus"
+    },
+    {
+      "type": "related",
+      "to": "ancient-olympic-games"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tiberius (Q1407)",
+      "url": "https://www.wikidata.org/wiki/Q1407",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tiberius",
+      "url": "https://en.wikipedia.org/wiki/Tiberius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

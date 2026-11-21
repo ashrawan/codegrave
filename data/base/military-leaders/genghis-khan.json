@@ -1,0 +1,55 @@
+{
+  "id": "genghis-khan",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Genghis Khan",
+      "from": "1162"
+    }
+  ],
+  "summary": "Mongol leader who united the steppe tribes in 1206 and led the Mongols in conquests across Central Asia and northern China. His heirs built the largest land empire in history. His birth year is uncertain.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Chinggis Khan",
+    "Tiemuzhen",
+    "Temujin",
+    "Chengjisihan",
+    "Jenghiz"
+  ],
+  "wikidata": "Q720",
+  "events": [
+    {
+      "type": "born",
+      "date": "1162-05-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1227-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Genghis Khan (Q720)",
+      "url": "https://www.wikidata.org/wiki/Q720",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Genghis Khan",
+      "url": "https://en.wikipedia.org/wiki/Genghis_Khan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

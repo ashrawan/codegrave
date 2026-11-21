@@ -1,0 +1,57 @@
+{
+  "id": "grammy-awards",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Grammy Awards",
+      "from": "1958"
+    }
+  ],
+  "summary": "Annual American awards for recorded music, given in many genres by industry members. Trophies are shaped like a gramophone, and the first ceremony was held in 1959 in Los Angeles and New York.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Gramophone Award",
+    "Grammies",
+    "Grammy Award",
+    "Grammys"
+  ],
+  "wikidata": "Q41254",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grammy Awards (Q41254)",
+      "url": "https://www.wikidata.org/wiki/Q41254",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grammy Awards",
+      "url": "https://en.wikipedia.org/wiki/Grammy_Awards",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

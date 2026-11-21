@@ -1,0 +1,56 @@
+{
+  "id": "santa-maria",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Santa María",
+      "from": "1492"
+    }
+  ],
+  "summary": "The flagship of Christopher Columbus on his 1492 voyage across the Atlantic. It ran aground on a reef off the island now called Hispaniola on Christmas Day that year, and its timbers were used to build a fort.",
+  "labels": [
+    "exploration",
+    "failures"
+  ],
+  "aliases": [
+    "Sta. Maria",
+    "caravel Santa Maria",
+    "nao Santa Maria",
+    "Marigalante",
+    "Santa Maria (nao)"
+  ],
+  "wikidata": "Q107900",
+  "events": [
+    {
+      "type": "born",
+      "date": "1492",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1492",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ran aground on a reef off Hispaniola",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Santa Maria (Q107900)",
+      "url": "https://www.wikidata.org/wiki/Q107900",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Santa María (ship)",
+      "url": "https://en.wikipedia.org/wiki/Santa_Mar%C3%ADa_(ship)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

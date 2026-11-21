@@ -1,0 +1,92 @@
+{
+  "id": "microsoft",
+  "name": "Microsoft",
+  "description": "Microsoft from BASIC and MS-DOS to Windows, Office and Xbox, with the products it retired along the way.",
+  "category": "computing",
+  "labels": [
+    "business",
+    "computing"
+  ],
+  "tags": [
+    "microsoft",
+    "windows",
+    "office",
+    "xbox",
+    "bill gates",
+    "ms-dos",
+    "internet explorer"
+  ],
+  "entries": [
+    "bill-gates",
+    "microsoft",
+    "ms-dos",
+    "microsoft-flight-simulator",
+    "microsoft-word",
+    "microsoft-excel",
+    "powerpoint",
+    "microsoft-office",
+    "visual-basic",
+    "windows-3-1",
+    "windows-95",
+    "internet-explorer",
+    "hotmail",
+    "united-states-v-microsoft",
+    "msn-messenger",
+    "windows-xp",
+    "xbox",
+    "csharp",
+    "skype",
+    "xbox-360",
+    "zune",
+    "windows-vista",
+    "silverlight",
+    "bing",
+    "windows-7",
+    "kinect",
+    "windows-phone",
+    "surface",
+    "typescript",
+    "xbox-one",
+    "cortana",
+    "windows-10",
+    "microsoft-teams",
+    "windows-11"
+  ],
+  "checkpoints": [
+    {
+      "id": "basic-and-dos",
+      "name": "BASIC and DOS",
+      "from": 1975,
+      "to": 1989,
+      "note": "Bill Gates and Paul Allen found Microsoft in 1975 to write software for the first home computers. In 1981 IBM chooses MS-DOS for its PC, and Word and Excel follow."
+    },
+    {
+      "id": "windows-takes-the-desktop",
+      "name": "Windows takes the desktop",
+      "from": 1990,
+      "to": 2000,
+      "note": "Windows 3 and Windows 95 make Microsoft the largest software company in the world. Internet Explorer wins the browser war, and the United States takes the company to court over how it won."
+    },
+    {
+      "id": "xp-and-xbox",
+      "name": "XP and Xbox",
+      "from": 2001,
+      "to": 2008,
+      "note": "Windows XP becomes the most used system in the world and the Xbox takes Microsoft into the living room. The Zune music player and Windows Vista do less well."
+    },
+    {
+      "id": "phones-tablets-and-the-cloud",
+      "name": "Phones, tablets and the cloud",
+      "from": 2009,
+      "to": 2014,
+      "note": "Windows 7 repairs the damage done by Vista, but Windows Phone arrives too late to catch the iPhone and Android. Microsoft starts building its own hardware with the Surface."
+    },
+    {
+      "id": "windows-10-and-after",
+      "name": "Windows 10 and after",
+      "from": 2015,
+      "to": 2026,
+      "note": "Windows 10 is offered as a free upgrade and stays in support for ten years. Teams becomes the office meeting room, and older products such as Internet Explorer, Cortana and Skype are retired."
+    }
+  ]
+}

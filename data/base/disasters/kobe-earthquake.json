@@ -1,0 +1,59 @@
+{
+  "id": "kobe-earthquake",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Great Hanshin earthquake",
+      "from": "1995"
+    }
+  ],
+  "summary": "Powerful earthquake that struck the Kobe area in Japan on 17 January 1995. It killed more than six thousand people, destroyed many buildings and an elevated highway, and led to changes in Japanese building rules and disaster planning.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Great Hanshin-Awaji Earthquake",
+    "1995 Kobe Earthquake",
+    "1995 Great Hanshin-Awaji Earthquake",
+    "Hyogo-ken Nanbu Earthquake",
+    "1995 Hyogo-ken Nanbu Earthquake"
+  ],
+  "wikidata": "Q214866",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-01-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-01-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Hanshin Earthquake (Q214866)",
+      "url": "https://www.wikidata.org/wiki/Q214866",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kobe earthquake",
+      "url": "https://en.wikipedia.org/wiki/Kobe_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

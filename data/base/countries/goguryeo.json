@@ -1,0 +1,58 @@
+{
+  "id": "goguryeo",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Goguryeo",
+      "from": "-0037"
+    }
+  ],
+  "summary": "Kingdom of northern Korea and southern Manchuria, one of the Three Kingdoms of Korea. It held off several Chinese invasions and left painted tombs that are now a World Heritage site.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Goryeo",
+    "Koryo"
+  ],
+  "wikidata": "Q28370",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0037",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0668-10-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by an alliance of Silla and Tang China",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "tang-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Goguryeo (Q28370)",
+      "url": "https://www.wikidata.org/wiki/Q28370",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Goguryeo",
+      "url": "https://en.wikipedia.org/wiki/Goguryeo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

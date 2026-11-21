@@ -1,0 +1,52 @@
+{
+  "id": "madame-bovary",
+  "category": "books",
+  "names": [
+    {
+      "name": "Madame Bovary",
+      "from": "1856"
+    }
+  ],
+  "summary": "Novel by Gustave Flaubert about a doctor's wife who seeks escape from a dull provincial life in romance and debt. Its author was put on trial for offending public morals and was acquitted.",
+  "labels": [
+    "literature",
+    "banned"
+  ],
+  "wikidata": "Q193417",
+  "events": [
+    {
+      "type": "born",
+      "date": "1856",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "gustave-flaubert"
+    },
+    {
+      "type": "part_of",
+      "to": "index-librorum-prohibitorum"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Madame Bovary (Q193417)",
+      "url": "https://www.wikidata.org/wiki/Q193417",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Madame Bovary",
+      "url": "https://en.wikipedia.org/wiki/Madame_Bovary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

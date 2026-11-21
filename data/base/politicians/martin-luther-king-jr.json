@@ -1,0 +1,57 @@
+{
+  "id": "martin-luther-king-jr",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Martin Luther King Jr.",
+      "from": "1929"
+    }
+  ],
+  "summary": "Baptist minister and leader of the American civil rights movement. He led the Montgomery bus boycott, spoke at the March on Washington in 1963, won the Nobel Peace Prize, and was assassinated in Memphis.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "wikidata": "Q8027",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-01-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "mahatma-gandhi"
+    },
+    {
+      "type": "related",
+      "to": "martin-luther"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Martin Luther King Jr. (Q8027)",
+      "url": "https://www.wikidata.org/wiki/Q8027",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Martin Luther King Jr.",
+      "url": "https://en.wikipedia.org/wiki/Martin_Luther_King_Jr.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

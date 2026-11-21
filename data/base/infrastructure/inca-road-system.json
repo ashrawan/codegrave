@@ -1,0 +1,56 @@
+{
+  "id": "inca-road-system",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Inca road system",
+      "from": "1450"
+    }
+  ],
+  "summary": "Network of paved paths, stairways and rope bridges linking the Inca Empire across the Andes. Relay runners carried messages along it, and it stretched for tens of thousands of kilometres.",
+  "labels": [
+    "transport",
+    "engineering",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Qhapaq Ñan"
+  ],
+  "wikidata": "Q948975",
+  "events": [
+    {
+      "type": "born",
+      "date": "1450",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    },
+    {
+      "type": "in",
+      "to": "chile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Inca road system (Q948975)",
+      "url": "https://www.wikidata.org/wiki/Q948975",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Inca road system",
+      "url": "https://en.wikipedia.org/wiki/Inca_road_system",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

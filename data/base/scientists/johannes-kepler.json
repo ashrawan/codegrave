@@ -1,0 +1,60 @@
+{
+  "id": "johannes-kepler",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Johannes Kepler",
+      "from": "1571"
+    }
+  ],
+  "summary": "German astronomer who showed that the planets move in ellipses rather than circles and set out three laws of planetary motion. He built them from the careful observations of Tycho Brahe, and Newton later explained them with gravity.",
+  "labels": [
+    "astronomy",
+    "mathematics"
+  ],
+  "aliases": [
+    "John Kepler",
+    "Johannes Keppler",
+    "Johann Kepler",
+    "Keppler",
+    "John Keppler"
+  ],
+  "wikidata": "Q8963",
+  "events": [
+    {
+      "type": "born",
+      "date": "1571-12-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1630-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "nicolaus-copernicus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Johannes Kepler (Q8963)",
+      "url": "https://www.wikidata.org/wiki/Q8963",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Johannes Kepler",
+      "url": "https://en.wikipedia.org/wiki/Johannes_Kepler",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

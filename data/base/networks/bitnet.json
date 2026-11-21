@@ -1,0 +1,56 @@
+{
+  "id": "bitnet",
+  "category": "networks",
+  "names": [
+    {
+      "name": "BITNET",
+      "from": "1981"
+    }
+  ],
+  "summary": "Cooperative network linking university computers, mostly IBM mainframes, which carried email and mailing lists in the 1980s. It faded in the 1990s as universities moved to the internet.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "BITNETS"
+  ],
+  "wikidata": "Q796027",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1996",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the internet",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: BITNET (Q796027)",
+      "url": "https://www.wikidata.org/wiki/Q796027",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: BITNET",
+      "url": "https://en.wikipedia.org/wiki/BITNET",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

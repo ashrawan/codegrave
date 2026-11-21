@@ -1,0 +1,59 @@
+{
+  "id": "windows-7",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows 7",
+      "from": "2009"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's system that followed Vista, quicker and simpler to use. Many people and companies kept it for years, and some continued to use it after Microsoft stopped updates.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Windows 7 SP1",
+    "Windows Seven",
+    "Vienna"
+  ],
+  "wikidata": "Q11215",
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-07-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-01-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Microsoft ended regular support",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Windows 7 (Q11215)",
+      "url": "https://www.wikidata.org/wiki/Q11215",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windows 7",
+      "url": "https://en.wikipedia.org/wiki/Windows_7",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

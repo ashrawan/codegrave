@@ -1,0 +1,51 @@
+{
+  "id": "haskell",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Haskell",
+      "from": "1990"
+    }
+  ],
+  "summary": "Purely functional programming language designed by a committee of academics. It is known for ideas such as lazy evaluation and strong types, and it influenced many other languages.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Haskell programming language",
+    "hs"
+  ],
+  "wikidata": "Q34010",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "lisp"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Haskell (Q34010)",
+      "url": "https://www.wikidata.org/wiki/Q34010",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Haskell",
+      "url": "https://en.wikipedia.org/wiki/Haskell",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

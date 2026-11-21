@@ -1,0 +1,66 @@
+{
+  "id": "douglas-macarthur",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Douglas MacArthur",
+      "from": "1880"
+    }
+  ],
+  "summary": "American general who led forces in the Pacific in the Second World War. He oversaw the occupation of Japan, then commanded United Nations forces in the Korean War until Truman removed him in 1951.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "General Douglas MacArthur",
+    "MacArthur",
+    "General MacArthur",
+    "D. MacArthur"
+  ],
+  "wikidata": "Q127417",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880-01-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-04-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "world-war-i"
+    },
+    {
+      "type": "related",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "related",
+      "to": "korean-war"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Douglas MacArthur (Q127417)",
+      "url": "https://www.wikidata.org/wiki/Q127417",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Douglas MacArthur",
+      "url": "https://en.wikipedia.org/wiki/Douglas_MacArthur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

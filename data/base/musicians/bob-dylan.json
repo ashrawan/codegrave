@@ -1,0 +1,55 @@
+{
+  "id": "bob-dylan",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Bob Dylan",
+      "from": "1941"
+    }
+  ],
+  "summary": "American singer-songwriter whose songs such as Blowin' in the Wind and Like a Rolling Stone brought poetic lyrics to folk and rock music. He received the Nobel Prize in Literature in 2016.",
+  "labels": [
+    "music",
+    "literature"
+  ],
+  "aliases": [
+    "Robert Zimmerman",
+    "Jack Frost",
+    "Shabtai Zisl ben Avraham",
+    "Dylan",
+    "Robert Dylan né Robert Allen Zimmerman"
+  ],
+  "wikidata": "Q392",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-05-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bob Dylan (Q392)",
+      "url": "https://www.wikidata.org/wiki/Q392",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bob Dylan",
+      "url": "https://en.wikipedia.org/wiki/Bob_Dylan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

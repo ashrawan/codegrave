@@ -1,0 +1,55 @@
+{
+  "id": "spanish-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Spanish",
+      "from": "0950"
+    }
+  ],
+  "summary": "Romance language that grew out of Latin spoken in Castile. Its earliest written traces are notes in the margins of manuscripts around the tenth century. It is the main language of Spain and most of Latin America.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Castilian",
+    "Castilian language"
+  ],
+  "wikidata": "Q1321",
+  "events": [
+    {
+      "type": "born",
+      "date": "0950",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    },
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish (Q1321)",
+      "url": "https://www.wikidata.org/wiki/Q1321",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish language",
+      "url": "https://en.wikipedia.org/wiki/Spanish_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

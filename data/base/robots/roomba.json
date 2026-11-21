@@ -1,0 +1,52 @@
+{
+  "id": "roomba",
+  "category": "robots",
+  "names": [
+    {
+      "name": "Roomba",
+      "from": "2002"
+    }
+  ],
+  "maker": "iRobot",
+  "summary": "Small round robot that moves around a home to vacuum the floor and returns to its charger. It made household robots common and has sold in the tens of millions.",
+  "labels": [
+    "engineering",
+    "business"
+  ],
+  "aliases": [
+    "IRobot Roomba"
+  ],
+  "wikidata": "Q74050",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roomba (Q74050)",
+      "url": "https://www.wikidata.org/wiki/Q74050",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roomba",
+      "url": "https://en.wikipedia.org/wiki/Roomba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

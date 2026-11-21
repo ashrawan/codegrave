@@ -1,0 +1,46 @@
+{
+  "id": "fidonet",
+  "category": "networks",
+  "names": [
+    {
+      "name": "FidoNet",
+      "from": "1984"
+    }
+  ],
+  "maker": "Tom Jennings",
+  "summary": "Network that linked amateur bulletin board systems over telephone lines, passing messages from one to another at night. It spread worldwide in the 1980s and 1990s and still has a small number of users.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Fido"
+  ],
+  "wikidata": "Q729805",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: FidoNet (Q729805)",
+      "url": "https://www.wikidata.org/wiki/Q729805",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: FidoNet",
+      "url": "https://en.wikipedia.org/wiki/FidoNet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "jurassic",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Jurassic",
+      "from": "-201400000"
+    }
+  ],
+  "summary": "The period from 201 to 145 million years ago, when giant long-necked dinosaurs and early birds lived and the Atlantic began to open as Pangaea broke up. Its name comes from the Jura Mountains of Europe.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Jurassic Period",
+    "Jurassic System"
+  ],
+  "wikidata": "Q45805",
+  "events": [
+    {
+      "type": "born",
+      "date": "-201400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-145000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "mesozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jurassic (Q45805)",
+      "url": "https://www.wikidata.org/wiki/Q45805",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jurassic",
+      "url": "https://en.wikipedia.org/wiki/Jurassic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

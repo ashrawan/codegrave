@@ -1,0 +1,53 @@
+{
+  "id": "triton-moon",
+  "category": "space",
+  "names": [
+    {
+      "name": "Triton",
+      "from": "-4500000000"
+    }
+  ],
+  "summary": "Neptune's largest moon, which orbits in the opposite direction to the planet's spin, suggesting it was captured from the Kuiper belt. Voyager 2 saw ice geysers and a young surface there in 1989.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Neptune I"
+  ],
+  "wikidata": "Q3359",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500000000",
+      "precision": "circa",
+      "note": "An estimate: Triton is thought to have formed in the early Solar System, about 4.5 billion years ago, and to have been captured by Neptune later."
+    },
+    {
+      "type": "milestone",
+      "date": "1846",
+      "precision": "year",
+      "label": "Discovered",
+      "note": "Found by William Lassell in 1846, days after Neptune itself was discovered."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Triton (Q3359)",
+      "url": "https://www.wikidata.org/wiki/Q3359",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Triton (moon)",
+      "url": "https://en.wikipedia.org/wiki/Triton_(moon)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

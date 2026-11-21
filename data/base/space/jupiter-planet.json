@@ -1,0 +1,47 @@
+{
+  "id": "jupiter-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Jupiter",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The largest planet, a gas giant with more mass than all the other planets combined. It has a banded atmosphere, a huge long-lived storm called the Great Red Spot and dozens of moons, including four large ones that Galileo saw.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Planet Jupiter",
+    "Sol V",
+    "Sol 5"
+  ],
+  "wikidata": "Q319",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Jupiter (Q319)",
+      "url": "https://www.wikidata.org/wiki/Q319",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jupiter",
+      "url": "https://en.wikipedia.org/wiki/Jupiter",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

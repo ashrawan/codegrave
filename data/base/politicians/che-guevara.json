@@ -1,0 +1,60 @@
+{
+  "id": "che-guevara",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Che Guevara",
+      "from": "1928"
+    }
+  ],
+  "summary": "Argentine-born doctor who joined Fidel Castro's revolution in Cuba and held posts in the new government. He later tried to start revolutions in Congo and Bolivia, where he was captured and killed.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5809",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-06-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-10-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "karl-marx"
+    },
+    {
+      "type": "influenced_by",
+      "to": "mao-zedong"
+    },
+    {
+      "type": "influenced_by",
+      "to": "vladimir-lenin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Che Guevara (Q5809)",
+      "url": "https://www.wikidata.org/wiki/Q5809",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Che Guevara",
+      "url": "https://en.wikipedia.org/wiki/Che_Guevara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

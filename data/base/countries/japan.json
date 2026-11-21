@@ -1,0 +1,89 @@
+{
+  "id": "japan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Japan",
+      "from": "0300"
+    }
+  ],
+  "summary": "An island nation in East Asia with an emperor as symbol of the state. Its present constitution came into force in 1947 after the Second World War, and it is known for technology and its culture.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "State of Japan",
+    "Land of the Rising Sun",
+    "Nippon-koku",
+    "Nihon-koku",
+    "Iapan"
+  ],
+  "wikidata": "Q17",
+  "events": [
+    {
+      "type": "born",
+      "date": "0300",
+      "precision": "circa",
+      "note": "Dated from the rise of the Yamato state, which historians place between the third and fifth centuries. Tradition gives 660 BCE for the first emperor, a legendary date. No founding year is recorded. The Tokugawa shogunate and the Empire of Japan have entries of their own."
+    },
+    {
+      "type": "milestone",
+      "date": "1868",
+      "precision": "year",
+      "label": "Meiji era",
+      "note": "Rule returned to the emperor and Japan began to modernise."
+    },
+    {
+      "type": "milestone",
+      "date": "1947-05-03",
+      "precision": "day",
+      "label": "Constitution",
+      "note": "The present constitution came into force."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "antarctic-treaty"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Japan (Q17)",
+      "url": "https://www.wikidata.org/wiki/Q17",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Japan",
+      "url": "https://en.wikipedia.org/wiki/Japan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

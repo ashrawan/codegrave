@@ -1,0 +1,53 @@
+{
+  "id": "beethoven-symphony-9",
+  "category": "music",
+  "names": [
+    {
+      "name": "Symphony No. 9 (Beethoven)",
+      "from": "1824"
+    }
+  ],
+  "maker": "Ludwig van Beethoven",
+  "summary": "Last complete symphony by Ludwig van Beethoven, the first by a major composer to add a choir and soloists to the orchestra. Its final movement sets a poem about human brotherhood, and part of it is now the anthem of the European Union.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Symphony No. 9",
+    "Symphony No. 9 in D minor, Op. 125",
+    "Ode to Joy"
+  ],
+  "wikidata": "Q11989",
+  "events": [
+    {
+      "type": "born",
+      "date": "1824-05-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ludwig-van-beethoven"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Symphony No. 9 (Q11989)",
+      "url": "https://www.wikidata.org/wiki/Q11989",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Symphony No. 9 (Beethoven)",
+      "url": "https://en.wikipedia.org/wiki/Symphony_No._9_(Beethoven)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

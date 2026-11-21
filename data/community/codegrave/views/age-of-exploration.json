@@ -1,0 +1,86 @@
+{
+  "id": "age-of-exploration",
+  "name": "The Age of Exploration",
+  "description": "The voyages that joined the continents, from Zheng He and Columbus to Magellan and Captain Cook.",
+  "category": "events",
+  "labels": [
+    "exploration"
+  ],
+  "tags": [
+    "explorers",
+    "columbus",
+    "magellan",
+    "vasco da gama",
+    "age of discovery",
+    "voyages",
+    "captain cook"
+  ],
+  "entries": [
+    "leif-erikson",
+    "marco-polo",
+    "ibn-battuta",
+    "zheng-he",
+    "prince-henry-the-navigator",
+    "treasure-voyages",
+    "portuguese-empire",
+    "bartolomeu-dias",
+    "christopher-columbus",
+    "amerigo-vespucci",
+    "vasco-da-gama",
+    "vasco-nunez-de-balboa",
+    "francisco-pizarro",
+    "ferdinand-magellan",
+    "hernan-cortes",
+    "juan-sebastian-elcano",
+    "jacques-cartier",
+    "voyages-of-columbus",
+    "columbian-exchange",
+    "spanish-empire",
+    "da-gama-first-voyage",
+    "magellan-elcano-circumnavigation",
+    "francis-drake",
+    "henry-hudson",
+    "samuel-de-champlain",
+    "abel-tasman",
+    "james-cook",
+    "hms-endeavour",
+    "first-voyage-of-cook"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-columbus",
+      "name": "Before Columbus",
+      "from": 1000,
+      "to": 1491,
+      "note": "Leif Erikson reaches North America around the year 1000, Marco Polo and Ibn Battuta cross Asia, and Zheng He leads Chinese fleets as far as Africa. Portuguese ships work their way down the African coast and round its southern tip in 1488."
+    },
+    {
+      "id": "columbus-and-da-gama",
+      "name": "Columbus and da Gama",
+      "from": 1492,
+      "to": 1518,
+      "note": "Columbus crosses the Atlantic in 1492 and Vasco da Gama sails round Africa to India in 1498. Spain and Portugal begin to build empires overseas."
+    },
+    {
+      "id": "around-the-world",
+      "name": "Around the world",
+      "from": 1519,
+      "to": 1579,
+      "note": "Magellan's expedition sets out in 1519 and one of its ships completes the first voyage around the world in 1522. Cortés and Pizarro conquer the Aztec and Inca empires."
+    },
+    {
+      "id": "new-coasts-and-colonies",
+      "name": "New coasts and colonies",
+      "from": 1580,
+      "to": 1700,
+      "note": "Francis Drake completes the second voyage round the world in 1580. Champlain, Hudson and Tasman explore the St Lawrence, the Hudson River and the seas around Australia and New Zealand."
+    },
+    {
+      "id": "cook-and-the-pacific",
+      "name": "Cook and the Pacific",
+      "from": 1701,
+      "to": 1779,
+      "note": "James Cook maps New Zealand and the east coast of Australia on his first voyage, from 1768 to 1771, and crosses the Pacific twice more before his death in Hawaii in 1779."
+    }
+  ]
+}

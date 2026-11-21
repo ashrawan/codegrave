@@ -1,0 +1,57 @@
+{
+  "id": "lake-bonneville",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Lake Bonneville",
+      "from": "-28000"
+    }
+  ],
+  "summary": "An ice-age lake that covered much of western Utah and neighbouring states, leaving shorelines still visible on mountain slopes. About 14,500 years ago it burst its natural dam in a giant flood. Great Salt Lake is its remnant.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "aliases": [
+    "Bonneville (jezero)"
+  ],
+  "wikidata": "Q1748190",
+  "events": [
+    {
+      "type": "born",
+      "date": "-28000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-11000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Shrank as the climate warmed and dried, after a giant flood",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lake Bonneville (Q1748190)",
+      "url": "https://www.wikidata.org/wiki/Q1748190",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lake Bonneville",
+      "url": "https://en.wikipedia.org/wiki/Lake_Bonneville",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

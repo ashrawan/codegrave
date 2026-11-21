@@ -1,0 +1,50 @@
+{
+  "id": "blue-gene",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "Blue Gene",
+      "from": "2004"
+    }
+  ],
+  "maker": "IBM",
+  "summary": "IBM family of supercomputers built with huge numbers of low-power chips, to lessen electricity use. Machines in the series studied how proteins fold and often topped the world rankings.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q815846",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004",
+      "precision": "year"
+    }
+  ],
+  "status": "fading",
+  "note": "No longer made. The year it was withdrawn is not established here.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Blue Gene (Q815846)",
+      "url": "https://www.wikidata.org/wiki/Q815846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IBM Blue Gene",
+      "url": "https://en.wikipedia.org/wiki/IBM_Blue_Gene",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

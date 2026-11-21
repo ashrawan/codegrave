@@ -1,0 +1,57 @@
+{
+  "id": "assignat",
+  "category": "money",
+  "names": [
+    {
+      "name": "Assignat",
+      "from": "1789"
+    }
+  ],
+  "summary": "Paper money issued by the revolutionary government of France, at first backed by confiscated church lands. So many were printed that they lost almost all value.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "aliases": [
+    "assignats"
+  ],
+  "wikidata": "Q281914",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1796",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Collapsed through over-printing and runaway inflation",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: assignat (Q281914)",
+      "url": "https://www.wikidata.org/wiki/Q281914",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Assignat",
+      "url": "https://en.wikipedia.org/wiki/Assignat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
