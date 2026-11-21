@@ -1,0 +1,51 @@
+{
+  "id": "frankenstein",
+  "category": "books",
+  "names": [
+    {
+      "name": "Frankenstein",
+      "from": "1818"
+    }
+  ],
+  "summary": "Novel by Mary Shelley, written when she was a teenager, about a scientist who builds a living being and then abandons it. It is often called the first science fiction novel.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "The Modern Prometheus",
+    "1818 Frankenstein"
+  ],
+  "wikidata": "Q150827",
+  "events": [
+    {
+      "type": "born",
+      "date": "1818-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mary-shelley"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Frankenstein; or, The Modern Prometheus (Q150827)",
+      "url": "https://www.wikidata.org/wiki/Q150827",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Frankenstein",
+      "url": "https://en.wikipedia.org/wiki/Frankenstein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

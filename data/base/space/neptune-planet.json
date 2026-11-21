@@ -1,0 +1,51 @@
+{
+  "id": "neptune-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Neptune",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The most distant planet, a cold blue ice giant with fast winds and a large moon, Triton. It was found in 1846 after mathematicians worked out where an unseen planet had to be to explain Uranus's orbit.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Sol VIII",
+    "Sol 8"
+  ],
+  "wikidata": "Q332",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "urbain-le-verrier"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Neptune (Q332)",
+      "url": "https://www.wikidata.org/wiki/Q332",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neptune",
+      "url": "https://en.wikipedia.org/wiki/Neptune",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

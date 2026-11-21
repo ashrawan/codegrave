@@ -1,0 +1,60 @@
+{
+  "id": "armenian-genocide",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Armenian genocide",
+      "from": "1915"
+    }
+  ],
+  "summary": "The mass killing and forced deportation of Armenians from the Ottoman Empire, carried out by its wartime government during the First World War. Historians count hundreds of thousands to over a million deaths. Turkey disputes the term genocide.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "Armenian Massacre",
+    "Armenian Holocaust",
+    "Armenian Massacres",
+    "Great Crime"
+  ],
+  "wikidata": "Q80034",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915-04-24",
+      "precision": "day",
+      "note": "Dated from 24 April 1915, when Armenian leaders in Constantinople were arrested. Most of the killing took place in 1915 and 1916; some historians count the violence up to 1923."
+    },
+    {
+      "type": "ended",
+      "date": "1917",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ottoman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Armenian Genocide (Q80034)",
+      "url": "https://www.wikidata.org/wiki/Q80034",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Armenian genocide",
+      "url": "https://en.wikipedia.org/wiki/Armenian_genocide",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

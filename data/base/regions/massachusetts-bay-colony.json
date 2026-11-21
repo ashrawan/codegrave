@@ -1,0 +1,58 @@
+{
+  "id": "massachusetts-bay-colony",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Massachusetts Bay Colony",
+      "from": "1628"
+    }
+  ],
+  "summary": "The Puritan colony around Boston founded in 1630 by English settlers seeking religious reform. Harvard College was begun there, and it played a leading role in colonial resistance to Britain.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Colony of Massachusetts Bay",
+    "The Colony of Massachusetts Bay"
+  ],
+  "wikidata": "Q1191350",
+  "events": [
+    {
+      "type": "born",
+      "date": "1628",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1691",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Merged with Plymouth Colony into the Province of Massachusetts Bay",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Massachusetts Bay Colony (Q1191350)",
+      "url": "https://www.wikidata.org/wiki/Q1191350",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Massachusetts Bay Colony",
+      "url": "https://en.wikipedia.org/wiki/Massachusetts_Bay_Colony",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

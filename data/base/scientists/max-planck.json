@@ -1,0 +1,53 @@
+{
+  "id": "max-planck",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Max Planck",
+      "from": "1858"
+    }
+  ],
+  "summary": "German physicist who showed that heat and light are given off in small separate packets of energy called quanta. This idea started quantum theory, and he received the 1918 Nobel Prize in Physics.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "wikidata": "Q9021",
+  "events": [
+    {
+      "type": "born",
+      "date": "1858-04-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Max Planck (Q9021)",
+      "url": "https://www.wikidata.org/wiki/Q9021",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Max Planck",
+      "url": "https://en.wikipedia.org/wiki/Max_Planck",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

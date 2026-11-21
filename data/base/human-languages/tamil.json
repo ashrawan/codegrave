@@ -1,0 +1,51 @@
+{
+  "id": "tamil",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Tamil",
+      "from": "-0300"
+    }
+  ],
+  "summary": "Dravidian language of southern India and Sri Lanka with one of the longest unbroken literary traditions. Its earliest inscriptions in the Tamil-Brahmi script date to about the third century BCE.",
+  "labels": [
+    "language"
+  ],
+  "wikidata": "Q5885",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tamil (Q5885)",
+      "url": "https://www.wikidata.org/wiki/Q5885",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tamil language",
+      "url": "https://en.wikipedia.org/wiki/Tamil_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

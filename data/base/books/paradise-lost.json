@@ -1,0 +1,56 @@
+{
+  "id": "paradise-lost",
+  "category": "books",
+  "names": [
+    {
+      "name": "Paradise Lost",
+      "from": "1667"
+    }
+  ],
+  "maker": "John Milton",
+  "summary": "Epic poem in blank verse by John Milton that retells the biblical fall of Adam and Eve and Satan's rebellion against God. It was first published in ten books in 1667, and a twelve-book edition followed in 1674.",
+  "labels": [
+    "literature",
+    "religion"
+  ],
+  "aliases": [
+    "Paradise Lost (1667)"
+  ],
+  "wikidata": "Q28754",
+  "events": [
+    {
+      "type": "born",
+      "date": "1667",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "john-milton"
+    },
+    {
+      "type": "part_of",
+      "to": "index-librorum-prohibitorum"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paradise Lost (Q28754)",
+      "url": "https://www.wikidata.org/wiki/Q28754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paradise Lost",
+      "url": "https://en.wikipedia.org/wiki/Paradise_Lost",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

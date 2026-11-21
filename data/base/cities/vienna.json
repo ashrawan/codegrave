@@ -1,0 +1,56 @@
+{
+  "id": "vienna",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Vienna",
+      "from": "0100"
+    }
+  ],
+  "summary": "Capital of Austria on the Danube, which began as a Roman military camp called Vindobona. It was the seat of the Habsburg monarchy and a leading centre of classical music.",
+  "labels": [
+    "music",
+    "politics"
+  ],
+  "aliases": [
+    "Vienna, Austria"
+  ],
+  "wikidata": "Q1741",
+  "events": [
+    {
+      "type": "born",
+      "date": "0100",
+      "precision": "circa",
+      "note": "Dated from the Roman army camp of Vindobona, built around the end of the first century. Vienna received its town charter in 1221."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    },
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vienna (Q1741)",
+      "url": "https://www.wikidata.org/wiki/Q1741",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vienna",
+      "url": "https://en.wikipedia.org/wiki/Vienna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

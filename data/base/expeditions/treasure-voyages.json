@@ -1,0 +1,63 @@
+{
+  "id": "treasure-voyages",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Treasure voyages of Zheng He",
+      "from": "1405"
+    }
+  ],
+  "summary": "Seven huge naval expeditions sent out by the Ming dynasty under the admiral Zheng He. The fleets sailed across the Indian Ocean as far as East Africa, carrying gifts and trade goods and demonstrating Chinese power.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Treasure Voyages",
+    "Zheng He's Voyages",
+    "Zheng He Xia Xiyang",
+    "Voyages of Zheng He",
+    "Zheng He's expedition"
+  ],
+  "wikidata": "Q699127",
+  "events": [
+    {
+      "type": "born",
+      "date": "1405",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1433",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "zheng-he"
+    },
+    {
+      "type": "in",
+      "to": "ming-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Treasure Voyages (Q699127)",
+      "url": "https://www.wikidata.org/wiki/Q699127",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ming treasure voyages",
+      "url": "https://en.wikipedia.org/wiki/Ming_treasure_voyages",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

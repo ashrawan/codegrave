@@ -1,0 +1,45 @@
+{
+  "id": "king-arthur",
+  "category": "characters",
+  "names": [
+    {
+      "name": "King Arthur",
+      "from": "0830"
+    }
+  ],
+  "summary": "Legendary British king who leads the Knights of the Round Table and is linked with Camelot, Merlin and the Holy Grail. He first appears in Welsh and Latin writings of the early Middle Ages, and later in medieval romances.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Arthur of Britain"
+  ],
+  "wikidata": "Q45792",
+  "events": [
+    {
+      "type": "born",
+      "date": "0830",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: King Arthur (Q45792)",
+      "url": "https://www.wikidata.org/wiki/Q45792",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: King Arthur",
+      "url": "https://en.wikipedia.org/wiki/King_Arthur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

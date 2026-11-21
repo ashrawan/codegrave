@@ -1,0 +1,59 @@
+{
+  "id": "mao-zedong",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Mao Zedong",
+      "from": "1893"
+    }
+  ],
+  "summary": "Leader of the Chinese Communist Party who won the civil war and proclaimed the People's Republic of China in 1949. His campaigns, the Great Leap Forward and Cultural Revolution, brought great upheaval.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Máu Zéh-ton",
+    "Mouh Jaahk-dung",
+    "Moo Tik-tang",
+    "Mao Runzhi",
+    "Mao Tsê-tung"
+  ],
+  "wikidata": "Q5816",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893-12-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "xinhai-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mao Zedong (Q5816)",
+      "url": "https://www.wikidata.org/wiki/Q5816",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mao Zedong",
+      "url": "https://en.wikipedia.org/wiki/Mao_Zedong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

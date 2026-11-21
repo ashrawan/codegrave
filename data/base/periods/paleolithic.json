@@ -1,0 +1,54 @@
+{
+  "id": "paleolithic",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Paleolithic",
+      "from": "-3300000"
+    }
+  ],
+  "summary": "The Old Stone Age, the longest part of human history, when people made stone tools and lived by hunting and gathering. It saw the control of fire and the first cave art. Dates are rough.",
+  "labels": [
+    "firsts"
+  ],
+  "aliases": [
+    "Palaeolithic",
+    "Palaeolithic Age",
+    "Palaeolithic Era",
+    "Palaeolithic Period",
+    "Paleolithic Age"
+  ],
+  "wikidata": "Q40203",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3300000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-13000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Paleolithic (Q40203)",
+      "url": "https://www.wikidata.org/wiki/Q40203",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paleolithic",
+      "url": "https://en.wikipedia.org/wiki/Paleolithic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

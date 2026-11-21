@@ -1,0 +1,52 @@
+{
+  "id": "hms-endeavour",
+  "category": "ships",
+  "names": [
+    {
+      "name": "HMS Endeavour",
+      "from": "1764"
+    }
+  ],
+  "summary": "The converted coal ship in which James Cook sailed to Tahiti, New Zealand and eastern Australia. Later sold, she was used as a transport in the American Revolutionary War and sank in 1778.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "HM Bark Endeavour",
+    "Lord Sandwich",
+    "Earl of Pembroke"
+  ],
+  "wikidata": "Q312224",
+  "events": [
+    {
+      "type": "born",
+      "date": "1764",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1778",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: HMS Endeavour (Q312224)",
+      "url": "https://www.wikidata.org/wiki/Q312224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HMS Endeavour",
+      "url": "https://en.wikipedia.org/wiki/HMS_Endeavour",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

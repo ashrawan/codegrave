@@ -1,0 +1,59 @@
+{
+  "id": "dmitri-shostakovich",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Dmitri Shostakovich",
+      "from": "1906"
+    }
+  ],
+  "summary": "Soviet composer of fifteen symphonies and fifteen string quartets. He was publicly denounced by the state more than once, and his music is often read as a hidden comment on life under Stalin.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Dmitri Dmitrievitch Chostakovitch",
+    "Dmitriii Dmitrievich Shostakovich",
+    "Dmitri Dmitriyevich Shostakovich",
+    "Dimitri Shostakovich",
+    "Dmitrij Šostakovič"
+  ],
+  "wikidata": "Q80135",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-09-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-08-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "pyotr-ilyich-tchaikovsky"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dmitri Shostakovich (Q80135)",
+      "url": "https://www.wikidata.org/wiki/Q80135",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dmitri Shostakovich",
+      "url": "https://en.wikipedia.org/wiki/Dmitri_Shostakovich",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,59 @@
+{
+  "id": "atari-inc",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Atari",
+      "from": "1972"
+    }
+  ],
+  "maker": "Nolan Bushnell and Ted Dabney",
+  "summary": "American company that launched the arcade era with Pong and then the home console boom with the Atari 2600. Its fall in the video game crash of 1983 and its split in 1984 are a famous business collapse.",
+  "labels": [
+    "games",
+    "business",
+    "failures"
+  ],
+  "aliases": [
+    "WCI Games Inc."
+  ],
+  "wikidata": "Q13409231",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-06-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1984",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Collapsed in the video game crash and was split up and sold",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Atari, Inc. (Q13409231)",
+      "url": "https://www.wikidata.org/wiki/Q13409231",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atari, Inc.",
+      "url": "https://en.wikipedia.org/wiki/Atari,_Inc.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

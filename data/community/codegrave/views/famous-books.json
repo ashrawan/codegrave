@@ -1,0 +1,93 @@
+{
+  "id": "famous-books",
+  "name": "Famous Books",
+  "description": "The books almost everyone has heard of, from the Odyssey and Don Quixote to Pride and Prejudice, 1984 and Harry Potter.",
+  "category": "arts",
+  "labels": [
+    "literature"
+  ],
+  "tags": [
+    "books",
+    "novels",
+    "literature",
+    "bestsellers",
+    "classics",
+    "harry potter",
+    "reading",
+    "authors"
+  ],
+  "entries": [
+    "odyssey",
+    "one-thousand-and-one-nights",
+    "divine-comedy",
+    "don-quixote",
+    "pilgrims-progress",
+    "robinson-crusoe",
+    "gullivers-travels",
+    "grimms-fairy-tales",
+    "pride-and-prejudice",
+    "frankenstein",
+    "a-christmas-carol",
+    "moby-dick",
+    "uncle-toms-cabin",
+    "a-tale-of-two-cities",
+    "les-miserables",
+    "alices-adventures",
+    "crime-and-punishment",
+    "war-and-peace",
+    "the-adventures-of-pinocchio",
+    "huckleberry-finn",
+    "dracula",
+    "the-great-gatsby",
+    "brave-new-world",
+    "the-hobbit",
+    "and-then-there-were-none",
+    "the-little-prince",
+    "animal-farm",
+    "diary-of-a-young-girl",
+    "nineteen-eighty-four",
+    "the-lion-the-witch-and-the-wardrobe",
+    "the-catcher-in-the-rye",
+    "the-lord-of-the-rings",
+    "to-kill-a-mockingbird",
+    "charlie-and-the-chocolate-factory",
+    "dune",
+    "one-hundred-years-of-solitude",
+    "a-brief-history-of-time",
+    "the-alchemist",
+    "a-game-of-thrones",
+    "harry-potter-and-the-philosophers-stone",
+    "the-da-vinci-code",
+    "the-hunger-games"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-and-medieval-classics",
+      "name": "Ancient and medieval classics",
+      "from": -800,
+      "to": 1700,
+      "note": "Homer's Odyssey was sung before it was written down, and the tales of the Thousand and One Nights were gathered over centuries. Dante's Divine Comedy, Don Quixote and The Pilgrim's Progress were copied, printed and read aloud long before anyone counted sales."
+    },
+    {
+      "id": "the-rise-of-the-novel",
+      "name": "The rise of the novel",
+      "from": 1701,
+      "to": 1900,
+      "note": "Cheap printing, new schools and railway bookstalls made reading a mass habit. Fairy tales, Dickens, Wonderland, Uncle Tom's Cabin and War and Peace found readers in the millions."
+    },
+    {
+      "id": "the-early-twentieth-century",
+      "name": "The early twentieth century",
+      "from": 1901,
+      "to": 1960,
+      "note": "Two world wars and the arrival of the paperback put books in soldiers' pockets and children's hands, from Christie's island murders to Tolkien's Middle-earth."
+    },
+    {
+      "id": "modern-bestsellers",
+      "name": "Modern bestsellers",
+      "from": 1961,
+      "to": 2026,
+      "note": "Translation, film and the internet turned some books into worldwide events, from One Hundred Years of Solitude to Harry Potter and The Da Vinci Code."
+    }
+  ]
+}

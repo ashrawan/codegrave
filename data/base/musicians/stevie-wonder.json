@@ -1,0 +1,65 @@
+{
+  "id": "stevie-wonder",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Stevie Wonder",
+      "from": "1950"
+    }
+  ],
+  "summary": "American singer and multi-instrumentalist who signed with Motown as a child. In the 1970s he made albums such as Songs in the Key of Life, playing many instruments himself, and he campaigned for a holiday for Martin Luther King Jr.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Stevland Judkins",
+    "Stevland Morris",
+    "Stevland Hardaway Morris",
+    "Stevland Hardaway Morris Judkins"
+  ],
+  "wikidata": "Q714",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-05-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "ray-charles"
+    },
+    {
+      "type": "influenced_by",
+      "to": "duke-ellington"
+    },
+    {
+      "type": "influenced_by",
+      "to": "bob-dylan"
+    },
+    {
+      "type": "influenced_by",
+      "to": "james-brown"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stevie Wonder (Q714)",
+      "url": "https://www.wikidata.org/wiki/Q714",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stevie Wonder",
+      "url": "https://en.wikipedia.org/wiki/Stevie_Wonder",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

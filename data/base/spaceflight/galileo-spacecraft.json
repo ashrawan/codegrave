@@ -1,0 +1,57 @@
+{
+  "id": "galileo-spacecraft",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Galileo",
+      "from": "1989"
+    }
+  ],
+  "summary": "A NASA probe launched in 1989 that orbited Jupiter from 1995 to 2003, studying the planet and its moons. It found signs of an ocean beneath Europa's ice and dropped a probe into Jupiter's atmosphere.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "aliases": [
+    "Galileo orbiter"
+  ],
+  "wikidata": "Q105425030",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-10-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Plunged into Jupiter on purpose to protect its possibly habitable moons",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "galileo-galilei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Galileo (Q105425030)",
+      "url": "https://www.wikidata.org/wiki/Q105425030",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Galileo (spacecraft)",
+      "url": "https://en.wikipedia.org/wiki/Galileo_(spacecraft)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

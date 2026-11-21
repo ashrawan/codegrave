@@ -1,0 +1,60 @@
+{
+  "id": "munich-agreement",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Munich Agreement",
+      "from": "1938"
+    }
+  ],
+  "summary": "A 1938 agreement between Germany, Britain, France and Italy that let Germany take the Sudetenland from Czechoslovakia. It is seen as the high point of appeasement and failed to prevent war.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154255",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-09-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1938-09-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "related",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Munich agreement (Q154255)",
+      "url": "https://www.wikidata.org/wiki/Q154255",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Munich Agreement",
+      "url": "https://en.wikipedia.org/wiki/Munich_Agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

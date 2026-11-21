@@ -1,0 +1,61 @@
+{
+  "id": "thirteen-colonies",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Thirteen Colonies",
+      "from": "1607"
+    }
+  ],
+  "summary": "The British colonies along the Atlantic coast of North America from New Hampshire to Georgia. They rose against British rule in 1775 and became the first states of the United States.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Colonial America",
+    "American colonies",
+    "provinces in America",
+    "provinces in North America",
+    "thirteen American colonies"
+  ],
+  "wikidata": "Q179997",
+  "events": [
+    {
+      "type": "born",
+      "date": "1607-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1776-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declared independence as the United States of America",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thirteen Colonies (Q179997)",
+      "url": "https://www.wikidata.org/wiki/Q179997",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thirteen Colonies",
+      "url": "https://en.wikipedia.org/wiki/Thirteen_Colonies",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "german-battleship-bismarck",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Bismarck",
+      "from": "1939"
+    }
+  ],
+  "summary": "The largest warship built by Germany, launched in 1939. She sank the British battle cruiser Hood in 1941 and was sunk days later by British ships and aircraft in the Atlantic.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q150857",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1941-05-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sunk by the Royal Navy in the North Atlantic",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "otto-von-bismarck"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bismarck (Q150857)",
+      "url": "https://www.wikidata.org/wiki/Q150857",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German battleship Bismarck",
+      "url": "https://en.wikipedia.org/wiki/German_battleship_Bismarck",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

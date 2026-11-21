@@ -1,0 +1,76 @@
+{
+  "id": "french-revolution-and-napoleon",
+  "name": "The French Revolution and Napoleon",
+  "description": "From the storming of the Bastille to Waterloo: the revolution that ended the French monarchy and the general who made himself emperor.",
+  "category": "events",
+  "tags": [
+    "french revolution",
+    "napoleon",
+    "bastille",
+    "waterloo",
+    "reign of terror",
+    "france",
+    "bonaparte"
+  ],
+  "entries": [
+    "louis-xvi",
+    "marie-antoinette",
+    "maximilien-robespierre",
+    "horatio-nelson",
+    "duke-of-wellington",
+    "napoleon",
+    "storming-of-the-bastille",
+    "french-revolution",
+    "declaration-of-the-rights-of-man",
+    "haitian-revolution",
+    "french-revolutionary-wars",
+    "reign-of-terror",
+    "coup-of-18-brumaire",
+    "napoleonic-wars",
+    "napoleonic-code",
+    "battle-of-trafalgar",
+    "battle-of-austerlitz",
+    "peninsular-war",
+    "french-invasion-of-russia",
+    "battle-of-leipzig",
+    "congress-of-vienna",
+    "battle-of-waterloo"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-the-revolution",
+      "name": "Before the revolution",
+      "from": 1754,
+      "to": 1788,
+      "note": "Louis XVI inherits a kingdom deep in debt after decades of war. Bad harvests and a tax system that spares the nobility turn discontent into crisis, and in 1788 the king agrees to call the Estates-General, which has not met since 1614."
+    },
+    {
+      "id": "revolution-and-the-terror",
+      "name": "Revolution and the Terror",
+      "from": 1789,
+      "to": 1794,
+      "note": "The Bastille falls, the Declaration of the Rights of Man is issued, the king is executed and the republic fights Europe. Under Robespierre fear rules until he too is sent to the guillotine."
+    },
+    {
+      "id": "the-rise-of-napoleon",
+      "name": "The rise of Napoleon",
+      "from": 1795,
+      "to": 1802,
+      "note": "A young general wins fame in Italy and Egypt and seizes power in 1799. In the colonies, enslaved people in Saint-Domingue make their own revolution."
+    },
+    {
+      "id": "napoleon-s-empire",
+      "name": "Napoleon's empire",
+      "from": 1803,
+      "to": 1812,
+      "note": "Napoleon crowns himself emperor, issues his Civil Code, wins at Austerlitz and redraws the map, though Nelson's victory at Trafalgar leaves Britain master of the seas and Spain bleeds his armies. In 1812 he invades Russia."
+    },
+    {
+      "id": "fall-and-exile",
+      "name": "Fall and exile",
+      "from": 1813,
+      "to": 1815,
+      "note": "After Russia, the allies defeat him at Leipzig, he abdicates, returns for a hundred days and is beaten at Waterloo by Wellington and the Prussian army. He is sent to Saint Helena."
+    }
+  ]
+}

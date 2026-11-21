@@ -1,0 +1,57 @@
+{
+  "id": "july-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "July Revolution",
+      "from": "1830"
+    }
+  ],
+  "summary": "Three days of street fighting in Paris that forced out King Charles X of France. The throne passed to Louis-Philippe, and the uprising inspired revolts elsewhere in Europe.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Trois Glorieuses",
+    "French Revolution of 1830",
+    "Third French Revolution"
+  ],
+  "wikidata": "Q214028",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1830-07-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paris"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: July Revolution (Q214028)",
+      "url": "https://www.wikidata.org/wiki/Q214028",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: July Revolution",
+      "url": "https://en.wikipedia.org/wiki/July_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,47 @@
+{
+  "id": "electron-microscope",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Electron microscope",
+      "from": "1931"
+    }
+  ],
+  "summary": "Microscope that uses a beam of electrons instead of light, so it can show things thousands of times smaller than a light microscope can. It let scientists see viruses, cell parts and even single atoms.",
+  "labels": [
+    "physics",
+    "biology",
+    "engineering"
+  ],
+  "aliases": [
+    "electronmicroscope"
+  ],
+  "wikidata": "Q132560",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: electron microscope (Q132560)",
+      "url": "https://www.wikidata.org/wiki/Q132560",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Electron microscope",
+      "url": "https://en.wikipedia.org/wiki/Electron_microscope",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

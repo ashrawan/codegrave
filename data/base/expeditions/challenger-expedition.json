@@ -1,0 +1,53 @@
+{
+  "id": "challenger-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Challenger expedition",
+      "from": "1872"
+    }
+  ],
+  "summary": "A British naval ship sailed round the world to study the deep sea. Its crew measured depths and collected thousands of new species, laying the foundation of oceanography as a science.",
+  "labels": [
+    "exploration",
+    "environment"
+  ],
+  "aliases": [
+    "H.M.S. Challenger Expedition",
+    "HMS Challenger Expedition",
+    "Challenger Expedition (1872-1876)"
+  ],
+  "wikidata": "Q644521",
+  "events": [
+    {
+      "type": "born",
+      "date": "1872-12-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1876-05-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Challenger Expedition (Q644521)",
+      "url": "https://www.wikidata.org/wiki/Q644521",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Challenger expedition",
+      "url": "https://en.wikipedia.org/wiki/Challenger_expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,72 @@
+{
+  "id": "browser-wars",
+  "name": "Browsers and Search Engines",
+  "description": "The programs we browse with and the sites we search with, from Mosaic and AltaVista to Chrome and Google.",
+  "category": "computing",
+  "labels": [
+    "computing",
+    "rivalries"
+  ],
+  "tags": [
+    "browsers",
+    "search engines",
+    "netscape",
+    "internet explorer",
+    "chrome",
+    "firefox",
+    "google",
+    "browser wars"
+  ],
+  "entries": [
+    "world-wide-web",
+    "mosaic",
+    "yahoo",
+    "yahoo-directory",
+    "lycos",
+    "netscape",
+    "internet-explorer",
+    "javascript",
+    "excite",
+    "altavista",
+    "flash",
+    "ask-jeeves",
+    "google-search",
+    "united-states-v-microsoft",
+    "baidu",
+    "firefox",
+    "safari",
+    "chrome",
+    "duckduckgo",
+    "bing"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-web",
+      "name": "The first web",
+      "from": 1990,
+      "to": 1994,
+      "note": "Tim Berners-Lee builds the web at CERN, and in 1993 the Mosaic browser puts pictures and text on one page. Netscape follows a year later, and the first directories and search engines appear to help people find their way."
+    },
+    {
+      "id": "the-first-browser-war",
+      "name": "The first browser war",
+      "from": 1995,
+      "to": 2001,
+      "note": "Internet Explorer arrives in August 1995 and, bundled with Windows, overtakes Netscape. By the time Internet Explorer 6 ships in 2001 the war is over."
+    },
+    {
+      "id": "the-second-browser-war",
+      "name": "The second browser war",
+      "from": 2004,
+      "to": 2015,
+      "note": "Firefox 1.0 (2004) and then Chrome (2008) win users back from a stalled Internet Explorer, until Microsoft replaces it with Edge in Windows 10 in 2015."
+    },
+    {
+      "id": "chrome-on-top",
+      "name": "Chrome on top",
+      "from": 2016,
+      "to": 2026,
+      "note": "Chrome is the most used browser by a wide margin, and most of its rivals are built on the same engine. Internet Explorer is retired in 2022, and search begins to share the screen with AI assistants."
+    }
+  ]
+}

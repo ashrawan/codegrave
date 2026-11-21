@@ -1,0 +1,48 @@
+{
+  "id": "lech-walesa",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Lech Walesa",
+      "from": "1943"
+    }
+  ],
+  "summary": "Polish electrician who led the Solidarity trade union at the Gdansk shipyard in 1980. He won the Nobel Peace Prize in 1983 and was elected president of Poland in 1990 after communist rule ended.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "wikidata": "Q444",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943-09-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "solidarity-trade-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lech Wałęsa (Q444)",
+      "url": "https://www.wikidata.org/wiki/Q444",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lech Wałęsa",
+      "url": "https://en.wikipedia.org/wiki/Lech_Wa%C5%82%C4%99sa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

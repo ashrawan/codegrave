@@ -1,0 +1,55 @@
+{
+  "id": "martin-luther",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Martin Luther",
+      "from": "1483"
+    }
+  ],
+  "summary": "German monk and professor whose 1517 challenge to the Church over the sale of indulgences began the Reformation. He translated the Bible into German and his teachings gave rise to Lutheran churches.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Junker Jörg"
+  ],
+  "wikidata": "Q9554",
+  "events": [
+    {
+      "type": "born",
+      "date": "1483-11-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1546-02-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "augustine-of-hippo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Martin Luther (Q9554)",
+      "url": "https://www.wikidata.org/wiki/Q9554",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Martin Luther",
+      "url": "https://en.wikipedia.org/wiki/Martin_Luther",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

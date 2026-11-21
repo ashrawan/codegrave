@@ -1,0 +1,47 @@
+{
+  "id": "les-miserables",
+  "category": "books",
+  "names": [
+    {
+      "name": "Les Miserables",
+      "from": "1862"
+    }
+  ],
+  "summary": "Long French novel by Victor Hugo following the ex-convict Jean Valjean and the policeman who hunts him through the years leading to the 1832 Paris uprising. It is also a plea for the poor.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q180736",
+  "events": [
+    {
+      "type": "born",
+      "date": "1862",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "victor-hugo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Les Misérables (Q180736)",
+      "url": "https://www.wikidata.org/wiki/Q180736",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Les Misérables",
+      "url": "https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

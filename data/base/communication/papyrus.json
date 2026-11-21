@@ -1,0 +1,50 @@
+{
+  "id": "papyrus",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Papyrus",
+      "from": "-3000"
+    }
+  ],
+  "maker": "Ancient Egyptians",
+  "summary": "A writing sheet made from the stems of a marsh plant, pressed and dried. Egyptians used it for records and scrolls, and it spread across the Mediterranean until paper took over in the early Middle Ages.",
+  "labels": [
+    "media",
+    "firsts"
+  ],
+  "wikidata": "Q125576",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by paper, which was cheaper and easier to make",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: papyrus (Q125576)",
+      "url": "https://www.wikidata.org/wiki/Q125576",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Papyrus",
+      "url": "https://en.wikipedia.org/wiki/Papyrus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

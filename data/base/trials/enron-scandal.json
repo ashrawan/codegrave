@@ -1,0 +1,48 @@
+{
+  "id": "enron-scandal",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Enron scandal",
+      "from": "2001"
+    }
+  ],
+  "summary": "The US energy company Enron collapsed after its accounting fraud became public. Executives were convicted, its auditor Arthur Andersen was destroyed, and the case led to tougher financial reporting laws.",
+  "labels": [
+    "business",
+    "law"
+  ],
+  "wikidata": "Q2723024",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2006",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Enron scandal (Q2723024)",
+      "url": "https://www.wikidata.org/wiki/Q2723024",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Enron scandal",
+      "url": "https://en.wikipedia.org/wiki/Enron_scandal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

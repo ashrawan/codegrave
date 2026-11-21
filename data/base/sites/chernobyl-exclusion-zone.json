@@ -1,0 +1,59 @@
+{
+  "id": "chernobyl-exclusion-zone",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Chernobyl Exclusion Zone",
+      "from": "1986"
+    }
+  ],
+  "summary": "Closed area around the Chernobyl nuclear plant in Ukraine, set up after the 1986 explosion. People were moved out, and wildlife has returned to forests and fields in the abandoned land.",
+  "labels": [
+    "environment",
+    "energy"
+  ],
+  "aliases": [
+    "The Zone",
+    "alienation zone",
+    "zone of alienation",
+    "Chornobyl Exclusion Zone",
+    "Chernobyl restricted zone"
+  ],
+  "wikidata": "Q1050926",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    },
+    {
+      "type": "related",
+      "to": "chernobyl-disaster"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chernobyl Exclusion Zone (Q1050926)",
+      "url": "https://www.wikidata.org/wiki/Q1050926",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chernobyl exclusion zone",
+      "url": "https://en.wikipedia.org/wiki/Chernobyl_exclusion_zone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

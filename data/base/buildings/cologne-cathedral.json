@@ -1,0 +1,56 @@
+{
+  "id": "cologne-cathedral",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Cologne Cathedral",
+      "from": "1880"
+    }
+  ],
+  "summary": "Gothic cathedral in Germany that took more than six hundred years to finish, because work stopped for centuries. Its twin spires made it the tallest building in the world for a few years.",
+  "labels": [
+    "religion",
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "High Cathedral of St. Peter"
+  ],
+  "wikidata": "Q4176",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "related",
+      "to": "saint-peter"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cologne Cathedral (Q4176)",
+      "url": "https://www.wikidata.org/wiki/Q4176",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cologne Cathedral",
+      "url": "https://en.wikipedia.org/wiki/Cologne_Cathedral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

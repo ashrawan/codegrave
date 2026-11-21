@@ -1,0 +1,71 @@
+{
+  "id": "mary-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Mary I of England",
+      "from": "1516"
+    }
+  ],
+  "summary": "First queen to rule England in her own right. A Catholic, she restored obedience to Rome and had hundreds of Protestants burned for heresy, which earned her the nickname Bloody Mary.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Mary Tudor",
+    "Queen Mary I",
+    "Mary I Queen of England",
+    "Queen Mary I of England and Ireland",
+    "Queen Mary"
+  ],
+  "wikidata": "Q82674",
+  "events": [
+    {
+      "type": "born",
+      "date": "1516-02-18",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1553",
+      "precision": "year",
+      "label": "Became queen",
+      "note": "Queen of England from 1553 to 1558."
+    },
+    {
+      "type": "ended",
+      "date": "1558-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "henry-viii"
+    },
+    {
+      "type": "part_of",
+      "to": "house-of-tudor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mary I (Q82674)",
+      "url": "https://www.wikidata.org/wiki/Q82674",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mary I",
+      "url": "https://en.wikipedia.org/wiki/Mary_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

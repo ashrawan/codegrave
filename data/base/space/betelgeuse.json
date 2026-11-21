@@ -1,0 +1,54 @@
+{
+  "id": "betelgeuse",
+  "category": "space",
+  "names": [
+    {
+      "name": "Betelgeuse",
+      "from": "-10000000"
+    }
+  ],
+  "summary": "A red supergiant in the constellation Orion and one of the brightest stars in the night sky, hundreds of times wider than the Sun. It is expected to end its life as a supernova, but probably not for many thousands of years.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "HR 2061",
+    "FKS 224",
+    "HIP 27989",
+    "SAO 113271",
+    "GC 7451"
+  ],
+  "wikidata": "Q12124",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "orion-constellation"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Betelgeuse (Q12124)",
+      "url": "https://www.wikidata.org/wiki/Q12124",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Betelgeuse",
+      "url": "https://en.wikipedia.org/wiki/Betelgeuse",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mayflower",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Mayflower",
+      "from": "1609"
+    }
+  ],
+  "summary": "The English ship that carried the Pilgrims across the Atlantic to what is now Massachusetts in 1620. Its passengers founded Plymouth Colony, and the voyage became a founding story in American history.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "The Mayflower"
+  ],
+  "wikidata": "Q187093",
+  "events": [
+    {
+      "type": "born",
+      "date": "1609",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1624",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Believed to have been broken up after years of neglect",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mayflower (Q187093)",
+      "url": "https://www.wikidata.org/wiki/Q187093",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mayflower",
+      "url": "https://en.wikipedia.org/wiki/Mayflower",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

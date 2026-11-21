@@ -1,0 +1,49 @@
+{
+  "id": "galapagos-national-park",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Galapagos National Park",
+      "from": "1959"
+    }
+  ],
+  "summary": "Protected area covering most of the Galapagos Islands, which belong to Ecuador. Its giant tortoises, finches and iguanas helped inspire Charles Darwin's thinking about evolution.",
+  "labels": [
+    "environment",
+    "biology",
+    "world-heritage"
+  ],
+  "wikidata": "Q112375",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "galapagos-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Galápagos National Park (Q112375)",
+      "url": "https://www.wikidata.org/wiki/Q112375",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Galápagos National Park",
+      "url": "https://en.wikipedia.org/wiki/Gal%C3%A1pagos_National_Park",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

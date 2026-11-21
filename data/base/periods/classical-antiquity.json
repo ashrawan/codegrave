@@ -1,0 +1,57 @@
+{
+  "id": "classical-antiquity",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Classical antiquity",
+      "from": "-0800"
+    }
+  ],
+  "summary": "The long era centred on the Mediterranean in which Greek and Roman civilisation grew and fell. It left lasting ideas in government, law, science and the arts. The dates are conventional.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "classic antiquity",
+    "classical history",
+    "classic period"
+  ],
+  "wikidata": "Q486761",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ancient-greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: classical antiquity (Q486761)",
+      "url": "https://www.wikidata.org/wiki/Q486761",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Classical antiquity",
+      "url": "https://en.wikipedia.org/wiki/Classical_antiquity",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

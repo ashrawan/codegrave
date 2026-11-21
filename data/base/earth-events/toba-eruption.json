@@ -1,0 +1,52 @@
+{
+  "id": "toba-eruption",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Toba Eruption",
+      "from": "-71860"
+    }
+  ],
+  "summary": "A giant volcanic eruption in Sumatra about 74,000 years ago, one of the largest in the past two million years. It left Lake Toba, and how far it cooled the climate and affected early humans is debated.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q65159662",
+  "events": [
+    {
+      "type": "born",
+      "date": "-71860",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-71860",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: youngest Toba eruption (Q65159662)",
+      "url": "https://www.wikidata.org/wiki/Q65159662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Youngest Toba eruption",
+      "url": "https://en.wikipedia.org/wiki/Youngest_Toba_eruption",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

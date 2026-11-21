@@ -1,0 +1,57 @@
+{
+  "id": "singing-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Singing Revolution",
+      "from": "1987"
+    }
+  ],
+  "summary": "A non-violent movement in Estonia, Latvia and Lithuania, in which huge crowds sang national songs to demand freedom from Soviet rule. All three countries regained independence in 1991.",
+  "labels": [
+    "independence",
+    "music"
+  ],
+  "wikidata": "Q595321",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1991",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "latvia"
+    },
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Singing Revolution (Q595321)",
+      "url": "https://www.wikidata.org/wiki/Q595321",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Singing Revolution",
+      "url": "https://en.wikipedia.org/wiki/Singing_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

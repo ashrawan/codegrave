@@ -1,0 +1,58 @@
+{
+  "id": "bell-system",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Bell System",
+      "from": "1877"
+    }
+  ],
+  "summary": "American telephone monopoly that grew from Alexander Graham Bell's invention and included AT&T, Western Electric and Bell Labs. Its research produced the transistor, and a court settlement split it in 1984.",
+  "labels": [
+    "business",
+    "engineering",
+    "media"
+  ],
+  "aliases": [
+    "Ma Bell"
+  ],
+  "wikidata": "Q4883269",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1984",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Broken up into regional companies by an antitrust settlement",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "alexander-graham-bell"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bell System (Q4883269)",
+      "url": "https://www.wikidata.org/wiki/Q4883269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bell System",
+      "url": "https://en.wikipedia.org/wiki/Bell_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

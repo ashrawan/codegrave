@@ -1,0 +1,55 @@
+{
+  "id": "world-cup-1974",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1974 FIFA World Cup",
+      "from": "1974"
+    }
+  ],
+  "summary": "West Germany won on home ground, beating a Dutch team led by Johan Cruyff that had played a fluid style known as total football. The golden trophy used today was first awarded at this tournament.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "FIFA World Cup 1974"
+  ],
+  "wikidata": "Q166121",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974-06-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-07-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1974 FIFA World Cup (Q166121)",
+      "url": "https://www.wikidata.org/wiki/Q166121",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1974 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1974_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

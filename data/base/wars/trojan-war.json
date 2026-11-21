@@ -1,0 +1,53 @@
+{
+  "id": "trojan-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Trojan War",
+      "from": "-1258"
+    }
+  ],
+  "summary": "The ten-year siege of the city of Troy by a Greek army, told in Homer's poems. Historians debate whether it happened as told; the dates here are the traditional ones from later Greek writers.",
+  "labels": [
+    "war",
+    "literature"
+  ],
+  "wikidata": "Q42937",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1258",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1180",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "troy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Trojan War (Q42937)",
+      "url": "https://www.wikidata.org/wiki/Q42937",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trojan War",
+      "url": "https://en.wikipedia.org/wiki/Trojan_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

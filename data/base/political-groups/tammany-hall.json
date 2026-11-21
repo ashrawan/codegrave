@@ -1,0 +1,63 @@
+{
+  "id": "tammany-hall",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Tammany Hall",
+      "from": "1789"
+    }
+  ],
+  "summary": "Political organisation of the Democratic Party in New York City that began as a social club in the 1780s. It controlled city politics for much of the 19th century through patronage and helping immigrants, and was known for corruption.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Society of St. Tammany",
+    "Sons of St. Tammany",
+    "Columbian Order",
+    "Tammany Society"
+  ],
+  "wikidata": "Q432139",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-05-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost power through reform movements, civil service rules and changes in city politics",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tammany Hall (Q432139)",
+      "url": "https://www.wikidata.org/wiki/Q432139",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tammany Hall",
+      "url": "https://en.wikipedia.org/wiki/Tammany_Hall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

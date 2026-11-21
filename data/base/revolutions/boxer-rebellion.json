@@ -1,0 +1,79 @@
+{
+  "id": "boxer-rebellion",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Boxer Rebellion",
+      "from": "1899"
+    }
+  ],
+  "summary": "An uprising in northern China against foreign influence and Christian missions, led by a movement called the Boxers. An eight-nation alliance relieved the siege of the foreign legations in Beijing.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Boxer Uprising"
+  ],
+  "wikidata": "Q150229",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-08",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1901-09",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "german-empire"
+    },
+    {
+      "type": "in",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "related",
+      "to": "british-empire"
+    },
+    {
+      "type": "related",
+      "to": "qing-dynasty"
+    },
+    {
+      "type": "related",
+      "to": "austria-hungary"
+    },
+    {
+      "type": "related",
+      "to": "cixi"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Boxer Rebellion (Q150229)",
+      "url": "https://www.wikidata.org/wiki/Q150229",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boxer Rebellion",
+      "url": "https://en.wikipedia.org/wiki/Boxer_Rebellion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

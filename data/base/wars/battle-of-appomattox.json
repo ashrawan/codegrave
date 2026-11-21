@@ -1,0 +1,56 @@
+{
+  "id": "battle-of-appomattox",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Appomattox Court House",
+      "from": "1865"
+    }
+  ],
+  "summary": "The last major action of Robert E. Lee's Army of Northern Virginia in Virginia. Lee surrendered to Ulysses S. Grant at the nearby village a few days later, which effectively ended the American Civil War in the east.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1355391",
+  "events": [
+    {
+      "type": "born",
+      "date": "1865-04-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1865-04-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "american-civil-war"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Appomattox Court House (Q1355391)",
+      "url": "https://www.wikidata.org/wiki/Q1355391",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Appomattox Court House",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Appomattox_Court_House",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

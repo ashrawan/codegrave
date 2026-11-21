@@ -1,0 +1,49 @@
+{
+  "id": "wordstar",
+  "category": "applications",
+  "names": [
+    {
+      "name": "WordStar",
+      "from": "1978"
+    }
+  ],
+  "maker": "MicroPro",
+  "summary": "Early word processor for CP/M and later DOS computers, with keyboard commands that wrote text to the screen as it would print. It was the leading word processor in the early 1980s before newer programs replaced it.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q1435134",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1992",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost its market to WordPerfect and Microsoft Word and was discontinued.",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: WordStar (Q1435134)",
+      "url": "https://www.wikidata.org/wiki/Q1435134",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: WordStar",
+      "url": "https://en.wikipedia.org/wiki/WordStar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

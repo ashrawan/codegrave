@@ -1,0 +1,93 @@
+{
+  "id": "china",
+  "category": "countries",
+  "names": [
+    {
+      "name": "China",
+      "from": "-0221"
+    }
+  ],
+  "summary": "Country in East Asia and one of the world's oldest states, first united as an empire in 221 BCE and ruled by dynasties until 1912. The People's Republic, proclaimed by Mao Zedong in 1949, is a one-party state governed by the Communist Party and a global manufacturing power.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "People's Republic of China",
+    "Red China",
+    "PR China",
+    "Communist China",
+    "China PR"
+  ],
+  "wikidata": "Q148",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0221",
+      "precision": "year",
+      "note": "Dated from 221 BCE, when the Qin first united China as one empire. The Shang and Zhou before it and the great dynasties after it have entries of their own, as does the Republic of China."
+    },
+    {
+      "type": "milestone",
+      "date": "1912-01-01",
+      "precision": "day",
+      "label": "Republic",
+      "note": "The Republic of China was founded as the last dynasty fell."
+    },
+    {
+      "type": "milestone",
+      "date": "1949-10-01",
+      "precision": "day",
+      "label": "PRC proclaimed",
+      "note": "Mao Zedong proclaimed the People's Republic in Beijing."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asia"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "antarctic-treaty"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    },
+    {
+      "type": "related",
+      "to": "qin-dynasty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: People's Republic of China (Q148)",
+      "url": "https://www.wikidata.org/wiki/Q148",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: China",
+      "url": "https://en.wikipedia.org/wiki/China",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,62 @@
+{
+  "id": "christopher-columbus",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Christopher Columbus",
+      "from": "1451"
+    }
+  ],
+  "summary": "Italian-born navigator who sailed west for Spain in 1492 and reached the Caribbean, starting lasting contact between Europe and the Americas. He made four voyages and always believed he had reached Asia.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Cristoffer Columbus",
+    "Don Cristobál Colón",
+    "Columbus",
+    "Cristobal Colon"
+  ],
+  "wikidata": "Q7322",
+  "events": [
+    {
+      "type": "born",
+      "date": "1451",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1506-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "ptolemy"
+    },
+    {
+      "type": "influenced_by",
+      "to": "marco-polo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Christopher Columbus (Q7322)",
+      "url": "https://www.wikidata.org/wiki/Q7322",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Christopher Columbus",
+      "url": "https://en.wikipedia.org/wiki/Christopher_Columbus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

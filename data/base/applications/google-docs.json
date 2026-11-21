@@ -1,0 +1,51 @@
+{
+  "id": "google-docs",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Google Docs",
+      "from": "2006"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Free web-based word processor from Google that lets several people edit the same document at once in a browser. It grew from the Writely program that Google bought in 2006 and is part of Google's office tools.",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "aliases": [
+    "Docs",
+    "Google Documents",
+    "Documents",
+    "docs.google.com",
+    "docs.google.com/document"
+  ],
+  "wikidata": "Q9344",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-10",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Google Docs (Q9344)",
+      "url": "https://www.wikidata.org/wiki/Q9344",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Google Docs",
+      "url": "https://en.wikipedia.org/wiki/Google_Docs",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "hindi",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Hindi",
+      "from": "1000"
+    }
+  ],
+  "summary": "Indo-Aryan language of northern India written in the Devanagari script. It grew from medieval speech of the Delhi region. The date given is an approximation of when early Hindi forms appear in literature.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Hindi language",
+    "Modern Standard Hindi"
+  ],
+  "wikidata": "Q1568",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hindi (Q1568)",
+      "url": "https://www.wikidata.org/wiki/Q1568",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hindi",
+      "url": "https://en.wikipedia.org/wiki/Hindi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "eamon-de-valera",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Eamon de Valera",
+      "from": "1882"
+    }
+  ],
+  "summary": "Irish leader who survived the Easter Rising of 1916 and led the opposition to the 1921 treaty. He later served as head of government and as president of Ireland, and wrote its 1937 constitution.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "wikidata": "Q173347",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882-10-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Éamon de Valera (Q173347)",
+      "url": "https://www.wikidata.org/wiki/Q173347",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Éamon de Valera",
+      "url": "https://en.wikipedia.org/wiki/%C3%89amon_de_Valera",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

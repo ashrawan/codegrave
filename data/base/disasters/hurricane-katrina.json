@@ -1,0 +1,51 @@
+{
+  "id": "hurricane-katrina",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Katrina",
+      "from": "2005"
+    }
+  ],
+  "summary": "A major hurricane struck the American Gulf Coast, and the floodwalls protecting New Orleans failed. Much of the city flooded, and the slow response and its uneven effects on the poor became a national controversy.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Katrina",
+    "Major Hurricane Katrina"
+  ],
+  "wikidata": "Q16422",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-08-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-08-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Katrina (Q16422)",
+      "url": "https://www.wikidata.org/wiki/Q16422",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Katrina",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Katrina",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

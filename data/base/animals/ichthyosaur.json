@@ -1,0 +1,50 @@
+{
+  "id": "ichthyosaur",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Ichthyosaur",
+      "from": "-250000000"
+    }
+  ],
+  "summary": "A group of dolphin-shaped sea reptiles that breathed air and gave birth to live young. Mary Anning's early finds in England helped science recognise them as animals that had vanished.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "ichthyosaurs"
+  ],
+  "wikidata": "Q194515",
+  "events": [
+    {
+      "type": "born",
+      "date": "-250000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-90000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ichthyosauria (Q194515)",
+      "url": "https://www.wikidata.org/wiki/Q194515",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ichthyosauria",
+      "url": "https://en.wikipedia.org/wiki/Ichthyosauria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

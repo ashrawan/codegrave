@@ -1,0 +1,67 @@
+{
+  "id": "bauhaus",
+  "category": "schools",
+  "names": [
+    {
+      "name": "Bauhaus",
+      "from": "1919"
+    }
+  ],
+  "maker": "Walter Gropius",
+  "summary": "German school of art, craft and design founded in Weimar by Walter Gropius. It taught design for industry with plain forms and shaped modern architecture and graphic design. It moved to Dessau and then Berlin.",
+  "labels": [
+    "architecture",
+    "visual-art",
+    "education"
+  ],
+  "aliases": [
+    "Staatliches Bauhaus"
+  ],
+  "wikidata": "Q124354",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-04",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1933",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed by its directors under pressure from the Nazi government",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "walter-gropius"
+    },
+    {
+      "type": "in",
+      "to": "berlin"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bauhaus (Q124354)",
+      "url": "https://www.wikidata.org/wiki/Q124354",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bauhaus",
+      "url": "https://en.wikipedia.org/wiki/Bauhaus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

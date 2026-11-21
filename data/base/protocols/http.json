@@ -1,0 +1,59 @@
+{
+  "id": "http",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "HTTP",
+      "from": "1990"
+    }
+  ],
+  "maker": "Tim Berners-Lee",
+  "summary": "Hypertext Transfer Protocol, the set of rules a browser uses to ask a server for a web page and receive it. It was created for the first web server and is still the basis of nearly every site.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Hypertext Transfer Protocol"
+  ],
+  "wikidata": "Q8777",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "tim-berners-lee"
+    },
+    {
+      "type": "part_of",
+      "to": "internet-protocol-suite"
+    },
+    {
+      "type": "part_of",
+      "to": "world-wide-web"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hypertext Transfer Protocol (Q8777)",
+      "url": "https://www.wikidata.org/wiki/Q8777",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HTTP",
+      "url": "https://en.wikipedia.org/wiki/HTTP",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

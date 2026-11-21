@@ -1,0 +1,54 @@
+{
+  "id": "alaska",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Alaska",
+      "from": "1959"
+    }
+  ],
+  "summary": "The largest US state, in the far north-west of North America. Russia sold it to the United States in 1867, and it became the forty-ninth state in 1959.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "AK",
+    "US-AK",
+    "State of Alaska",
+    "Alaska, United States",
+    "The Last Frontier"
+  ],
+  "wikidata": "Q797",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-01-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alaska (Q797)",
+      "url": "https://www.wikidata.org/wiki/Q797",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alaska",
+      "url": "https://en.wikipedia.org/wiki/Alaska",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

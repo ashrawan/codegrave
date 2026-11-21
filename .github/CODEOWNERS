@@ -1,8 +1,11 @@
-# Community files (data/things/, data/views/) are open to everyone.
-# These decide what every visitor sees first, so editors review them.
+# The base (data/base/) and community folders (data/community/<name>/) are open to everyone.
+# These decide what every visitor sees first, or how every entry is filed, so editors review them.
 /data/editors-choice.json  @ashrawan
 /data/categories.json      @ashrawan
+/data/labels.json          @ashrawan
+/data/redirects.json       @ashrawan
 /data/checkpoints.json     @ashrawan
+/data/community/codegrave/ @ashrawan
 /site/                     @ashrawan
 /scripts/                  @ashrawan
 /.github/                  @ashrawan

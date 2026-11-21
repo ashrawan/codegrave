@@ -1,0 +1,49 @@
+{
+  "id": "elektro-robot",
+  "category": "robots",
+  "names": [
+    {
+      "name": "Elektro",
+      "from": "1937"
+    }
+  ],
+  "maker": "Westinghouse",
+  "summary": "Tall humanoid robot built by Westinghouse that appeared at the 1939 New York World's Fair. It could walk, speak from a record player and puff smoke, and it travelled with a robot dog named Sparko.",
+  "labels": [
+    "engineering",
+    "firsts"
+  ],
+  "wikidata": "Q1112027",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "electricity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Elektro (Q1112027)",
+      "url": "https://www.wikidata.org/wiki/Q1112027",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elektro",
+      "url": "https://en.wikipedia.org/wiki/Elektro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

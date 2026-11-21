@@ -1,0 +1,87 @@
+{
+  "id": "battle-of-okinawa",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Okinawa",
+      "from": "1945"
+    }
+  ],
+  "summary": "The last major battle of the Pacific War, fought from April to June 1945 between United States forces and Japan on the island of Okinawa. Heavy losses on both sides, and the deaths of many civilians, marked the fighting.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Operation Iceberg"
+  ],
+  "wikidata": "Q192660",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-04-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-06-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "in",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "chester-nimitz"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "canada"
+    },
+    {
+      "type": "related",
+      "to": "new-zealand"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Okinawa (Q192660)",
+      "url": "https://www.wikidata.org/wiki/Q192660",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Okinawa",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Okinawa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

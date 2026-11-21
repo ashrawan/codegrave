@@ -1,0 +1,60 @@
+{
+  "id": "charles-lyell",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Charles Lyell",
+      "from": "1797"
+    }
+  ],
+  "summary": "Scottish geologist whose Principles of Geology argued that the Earth was shaped by slow processes still at work today. Darwin read it on the Beagle, and its vast timescale made evolution thinkable.",
+  "labels": [
+    "education"
+  ],
+  "aliases": [
+    "Sir Charles Lyell, 1st Baronet",
+    "Sir Charles Lyell"
+  ],
+  "wikidata": "Q5333",
+  "events": [
+    {
+      "type": "born",
+      "date": "1797-11-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1875-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "james-hutton"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles Lyell (Q5333)",
+      "url": "https://www.wikidata.org/wiki/Q5333",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles Lyell",
+      "url": "https://en.wikipedia.org/wiki/Charles_Lyell",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

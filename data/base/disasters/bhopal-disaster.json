@@ -1,0 +1,57 @@
+{
+  "id": "bhopal-disaster",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Bhopal disaster",
+      "from": "1984"
+    }
+  ],
+  "summary": "A toxic gas leak from a pesticide factory in the Indian city of Bhopal poisoned huge numbers of people in the surrounding neighbourhoods. It is counted among the worst industrial accidents ever and led to lasting legal battles.",
+  "labels": [
+    "business",
+    "environment"
+  ],
+  "aliases": [
+    "Bhopal gas tragedy",
+    "brunenger"
+  ],
+  "wikidata": "Q129029",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-12-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1984-12-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bhopal disaster (Q129029)",
+      "url": "https://www.wikidata.org/wiki/Q129029",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bhopal disaster",
+      "url": "https://en.wikipedia.org/wiki/Bhopal_disaster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

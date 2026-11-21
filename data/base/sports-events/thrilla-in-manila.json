@@ -1,0 +1,55 @@
+{
+  "id": "thrilla-in-manila",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Thrilla in Manila",
+      "from": "1975"
+    }
+  ],
+  "summary": "The third and final boxing match between Muhammad Ali and Joe Frazier took place in the heat of the Philippines. Frazier's corner stopped the fight before the last round, and Ali kept the title.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Muhammad Ali vs. Joe Frazier III"
+  ],
+  "wikidata": "Q1271324",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-10-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thrilla in Manila (Q1271324)",
+      "url": "https://www.wikidata.org/wiki/Q1271324",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thrilla in Manila",
+      "url": "https://en.wikipedia.org/wiki/Thrilla_in_Manila",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

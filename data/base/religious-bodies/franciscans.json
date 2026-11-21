@@ -1,0 +1,59 @@
+{
+  "id": "franciscans",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Franciscans",
+      "from": "1209"
+    }
+  ],
+  "maker": "Francis of Assisi",
+  "summary": "Catholic order of friars begun by Francis of Assisi, who gave up his wealth to live in poverty and preach. They worked among the poor and later became teachers and missionaries.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Seraphic Order",
+    "Ordo Fratrum Minorum",
+    "OFM",
+    "Minorites",
+    "Grey Friars"
+  ],
+  "wikidata": "Q165005",
+  "events": [
+    {
+      "type": "born",
+      "date": "1209",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "francis-of-assisi"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Franciscans (Q165005)",
+      "url": "https://www.wikidata.org/wiki/Q165005",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franciscans",
+      "url": "https://en.wikipedia.org/wiki/Franciscans",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

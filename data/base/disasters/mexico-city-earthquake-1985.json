@@ -1,0 +1,60 @@
+{
+  "id": "mexico-city-earthquake-1985",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "1985 Mexico City earthquake",
+      "from": "1985"
+    }
+  ],
+  "summary": "Large earthquake off the Pacific coast that hit Mexico City on 19 September 1985. The soft old lakebed under the city amplified the shaking, many buildings fell and thousands of people died. It changed building codes and public life.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "terremoto del 85 (1985) en México",
+    "terremoto de México"
+  ],
+  "wikidata": "Q1798567",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-09-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-09-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico-city"
+    },
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1985 Mexico City earthquake (Q1798567)",
+      "url": "https://www.wikidata.org/wiki/Q1798567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1985 Mexico City earthquake",
+      "url": "https://en.wikipedia.org/wiki/1985_Mexico_City_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

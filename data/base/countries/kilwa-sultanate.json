@@ -1,0 +1,54 @@
+{
+  "id": "kilwa-sultanate",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kilwa Sultanate",
+      "from": "0957"
+    }
+  ],
+  "summary": "Medieval Swahili sultanate based on the island of Kilwa Kisiwani off the coast of present-day Tanzania. It grew rich from the Indian Ocean trade in gold and ivory, built stone mosques and a palace, and was attacked by Portugal in 1505.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q3107156",
+  "events": [
+    {
+      "type": "born",
+      "date": "0957",
+      "precision": "circa",
+      "note": "The traditional founding date, from the Kilwa Chronicle. Some historians place the founding later."
+    },
+    {
+      "type": "ended",
+      "date": "1513",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Weakened after a Portuguese attack in 1505 and later absorbed by outside powers",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kilwa Sultanate (Q3107156)",
+      "url": "https://www.wikidata.org/wiki/Q3107156",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kilwa Sultanate",
+      "url": "https://en.wikipedia.org/wiki/Kilwa_Sultanate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

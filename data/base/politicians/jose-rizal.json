@@ -1,0 +1,60 @@
+{
+  "id": "jose-rizal",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jose Rizal",
+      "from": "1861"
+    }
+  ],
+  "summary": "Filipino doctor and writer whose novels criticised Spanish rule in the Philippines. He was executed in Manila in 1896, and his death helped turn reform demands into a revolution.",
+  "labels": [
+    "politics",
+    "literature",
+    "independence"
+  ],
+  "aliases": [
+    "Dimasalang",
+    "Laong Laan",
+    "José P. Rizal",
+    "José Protasio Rizal"
+  ],
+  "wikidata": "Q1500",
+  "events": [
+    {
+      "type": "born",
+      "date": "1861-06-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1896-12-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: José Rizal (Q1500)",
+      "url": "https://www.wikidata.org/wiki/Q1500",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: José Rizal",
+      "url": "https://en.wikipedia.org/wiki/Jos%C3%A9_Rizal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

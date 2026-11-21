@@ -1,0 +1,47 @@
+{
+  "id": "alfred-wegener",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Alfred Wegener",
+      "from": "1880"
+    }
+  ],
+  "summary": "German scientist who proposed continental drift in 1912, noticing that coastlines, fossils and rocks on different continents matched. Most rejected the idea in his lifetime, but plate tectonics later proved him largely right.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q76323",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880-11-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1930-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Alfred Wegener (Q76323)",
+      "url": "https://www.wikidata.org/wiki/Q76323",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alfred Wegener",
+      "url": "https://en.wikipedia.org/wiki/Alfred_Wegener",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "istanbul",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Istanbul",
+      "from": "0330"
+    }
+  ],
+  "summary": "City on the Bosphorus, split between Europe and Asia. Built on the site of Greek Byzantium, it was refounded as Constantinople in 330 and was the capital of the Byzantine and then Ottoman empires. It is now the largest city of Turkey.",
+  "labels": [
+    "politics",
+    "world-heritage"
+  ],
+  "wikidata": "Q406",
+  "events": [
+    {
+      "type": "born",
+      "date": "0330",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    },
+    {
+      "type": "in",
+      "to": "ottoman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Istanbul (Q406)",
+      "url": "https://www.wikidata.org/wiki/Q406",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Istanbul",
+      "url": "https://en.wikipedia.org/wiki/Istanbul",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

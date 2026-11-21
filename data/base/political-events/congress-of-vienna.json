@@ -1,0 +1,60 @@
+{
+  "id": "congress-of-vienna",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Congress of Vienna",
+      "from": "1814"
+    }
+  ],
+  "summary": "A meeting of European powers after Napoleon's fall to redraw the map and restore a balance of power. It gave Europe a long period without a general war.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q46362",
+  "events": [
+    {
+      "type": "born",
+      "date": "1814-11",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1815-06",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vienna"
+    },
+    {
+      "type": "in",
+      "to": "austria"
+    },
+    {
+      "type": "related",
+      "to": "duke-of-wellington"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Congress of Vienna (Q46362)",
+      "url": "https://www.wikidata.org/wiki/Q46362",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Congress of Vienna",
+      "url": "https://en.wikipedia.org/wiki/Congress_of_Vienna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

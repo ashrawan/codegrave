@@ -1,0 +1,52 @@
+{
+  "id": "suez-canal",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Suez Canal",
+      "from": "1869"
+    }
+  ],
+  "summary": "Sea-level canal across Egypt joining the Mediterranean to the Red Sea. It shortened the sea route between Europe and Asia by thousands of kilometres and is one of the busiest waterways.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "wikidata": "Q899",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ferdinand-de-lesseps"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Suez Canal (Q899)",
+      "url": "https://www.wikidata.org/wiki/Q899",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Suez Canal",
+      "url": "https://en.wikipedia.org/wiki/Suez_Canal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

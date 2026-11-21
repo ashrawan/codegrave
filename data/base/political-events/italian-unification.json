@@ -1,0 +1,62 @@
+{
+  "id": "italian-unification",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Italian unification",
+      "from": "1815"
+    }
+  ],
+  "summary": "The process, called the Risorgimento, in which the separate states of the Italian peninsula were joined into the Kingdom of Italy. Garibaldi and Cavour were among its leaders, and Rome became the capital in 1871.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Risorgimento",
+    "formation of Italy",
+    "Italian Risorgimento",
+    "Italian unificatio"
+  ],
+  "wikidata": "Q51122",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1871",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "giuseppe-garibaldi"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Unification of Italy (Q51122)",
+      "url": "https://www.wikidata.org/wiki/Q51122",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Unification of Italy",
+      "url": "https://en.wikipedia.org/wiki/Unification_of_Italy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

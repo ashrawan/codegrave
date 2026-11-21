@@ -1,0 +1,56 @@
+{
+  "id": "omar-khayyam",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Omar Khayyam",
+      "from": "1048"
+    }
+  ],
+  "summary": "Persian mathematician, astronomer and poet. He worked on cubic equations and helped reform the calendar, and he is famous in the West through the Rubaiyat, a collection of quatrains credited to him.",
+  "labels": [
+    "literature",
+    "mathematics"
+  ],
+  "aliases": [
+    "Hakim Omar Khayyám"
+  ],
+  "wikidata": "Q35900",
+  "events": [
+    {
+      "type": "born",
+      "date": "1048-05-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1131-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "avicenna"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Omar Khayyám (Q35900)",
+      "url": "https://www.wikidata.org/wiki/Q35900",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Omar Khayyam",
+      "url": "https://en.wikipedia.org/wiki/Omar_Khayyam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

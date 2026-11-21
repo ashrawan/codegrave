@@ -1,0 +1,57 @@
+{
+  "id": "international-olympic-committee",
+  "category": "societies",
+  "names": [
+    {
+      "name": "International Olympic Committee",
+      "from": "1894"
+    }
+  ],
+  "maker": "Pierre de Coubertin",
+  "summary": "Body based in Lausanne that organises the modern Olympic Games and chooses their host cities. It was founded at a congress in Paris led by Pierre de Coubertin, and the first Games it ran were held in Athens in 1896.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "IOC",
+    "I.O.C.",
+    "International Olympics Committee"
+  ],
+  "wikidata": "Q40970",
+  "events": [
+    {
+      "type": "born",
+      "date": "1894-06-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "pierre-de-coubertin"
+    },
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: International Olympic Committee (Q40970)",
+      "url": "https://www.wikidata.org/wiki/Q40970",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: International Olympic Committee",
+      "url": "https://en.wikipedia.org/wiki/International_Olympic_Committee",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

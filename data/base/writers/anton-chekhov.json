@@ -1,0 +1,85 @@
+{
+  "id": "anton-chekhov",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Anton Chekhov",
+      "from": "1860"
+    }
+  ],
+  "summary": "Russian doctor and writer of short stories and plays such as The Seagull and The Cherry Orchard. He wrote about ordinary people and quiet disappointment, and he changed how stage drama is written.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Antón Pávlovich Chékhov",
+    "Antón Pávlovič Čéhov",
+    "Chekhov"
+  ],
+  "wikidata": "Q5685",
+  "events": [
+    {
+      "type": "born",
+      "date": "1860-01-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1904-07-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "henrik-ibsen"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ivan-turgenev"
+    },
+    {
+      "type": "influenced_by",
+      "to": "gustave-flaubert"
+    },
+    {
+      "type": "influenced_by",
+      "to": "nikolai-gogol"
+    },
+    {
+      "type": "influenced_by",
+      "to": "alexander-pushkin"
+    },
+    {
+      "type": "influenced_by",
+      "to": "leo-tolstoy"
+    },
+    {
+      "type": "influenced_by",
+      "to": "honore-de-balzac"
+    },
+    {
+      "type": "influenced_by",
+      "to": "fyodor-dostoevsky"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anton Chekhov (Q5685)",
+      "url": "https://www.wikidata.org/wiki/Q5685",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anton Chekhov",
+      "url": "https://en.wikipedia.org/wiki/Anton_Chekhov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

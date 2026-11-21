@@ -1,0 +1,64 @@
+{
+  "id": "tenochtitlan",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tenochtitlan",
+      "from": "1325"
+    }
+  ],
+  "summary": "Capital of the Aztec Empire, built on an island in Lake Texcoco and linked to the shore by causeways. Spanish soldiers and their native allies besieged it, and Mexico City was later built over its ruins.",
+  "labels": [
+    "lost"
+  ],
+  "aliases": [
+    "Mexico-Tenochtitlan"
+  ],
+  "wikidata": "Q13695",
+  "events": [
+    {
+      "type": "born",
+      "date": "1325",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1521-08-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Captured and destroyed by the Spanish and their allies",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "mexico-city"
+    },
+    {
+      "type": "part_of",
+      "to": "aztec-empire"
+    },
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tenochtitlan (Q13695)",
+      "url": "https://www.wikidata.org/wiki/Q13695",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tenochtitlan",
+      "url": "https://en.wikipedia.org/wiki/Tenochtitlan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

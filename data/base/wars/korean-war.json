@@ -1,0 +1,89 @@
+{
+  "id": "korean-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Korean War",
+      "from": "1950"
+    }
+  ],
+  "summary": "War that began when North Korea invaded South Korea, drawing in the United States and UN allies on one side and China on the other. It ended in an armistice and Korea stayed divided.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "wikidata": "Q8663",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-06-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1953-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "in",
+      "to": "north-korea"
+    },
+    {
+      "type": "in",
+      "to": "south-korea"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "canada"
+    },
+    {
+      "type": "related",
+      "to": "turkey"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    },
+    {
+      "type": "related",
+      "to": "ethiopia"
+    },
+    {
+      "type": "related",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Korean War (Q8663)",
+      "url": "https://www.wikidata.org/wiki/Q8663",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Korean War",
+      "url": "https://en.wikipedia.org/wiki/Korean_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

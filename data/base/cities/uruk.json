@@ -1,0 +1,65 @@
+{
+  "id": "uruk",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Uruk",
+      "from": "-4000"
+    }
+  ],
+  "summary": "Early Sumerian city in Mesopotamia and one of the first large cities in the world. Cuneiform writing is thought to have begun there, and it is the home city of the hero Gilgamesh in the epic.",
+  "labels": [
+    "politics",
+    "language"
+  ],
+  "aliases": [
+    "Erech",
+    "Erekh",
+    "Auruk",
+    "Orkhóē",
+    "Orékh"
+  ],
+  "wikidata": "Q168518",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0300",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined and was gradually abandoned as the rivers shifted and trade routes changed",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sumer"
+    },
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uruk (Q168518)",
+      "url": "https://www.wikidata.org/wiki/Q168518",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uruk",
+      "url": "https://en.wikipedia.org/wiki/Uruk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

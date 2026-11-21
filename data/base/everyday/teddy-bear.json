@@ -1,0 +1,47 @@
+{
+  "id": "teddy-bear",
+  "category": "everyday",
+  "names": [
+    {
+      "name": "Teddy bear",
+      "from": "1902"
+    }
+  ],
+  "summary": "Soft toy bear that appeared in the early 1900s in both the United States and Germany. Its name comes from a hunting story about President Theodore Roosevelt, and it has been a child's comfort ever since.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q213477",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "theodore-roosevelt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: teddy bear (Q213477)",
+      "url": "https://www.wikidata.org/wiki/Q213477",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Teddy bear",
+      "url": "https://en.wikipedia.org/wiki/Teddy_bear",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

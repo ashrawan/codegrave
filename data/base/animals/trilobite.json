@@ -1,0 +1,48 @@
+{
+  "id": "trilobite",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Trilobites",
+      "from": "-521000000"
+    }
+  ],
+  "summary": "Sea animals with a hard, segmented shell, related to insects and crabs. They crawled the ocean floor for nearly 300 million years, and their fossils are among the most common in old rocks.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q17170",
+  "events": [
+    {
+      "type": "born",
+      "date": "-521000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-251900000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Died out in the Permian mass extinction",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Trilobites (Q17170)",
+      "url": "https://www.wikidata.org/wiki/Q17170",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trilobite",
+      "url": "https://en.wikipedia.org/wiki/Trilobite",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

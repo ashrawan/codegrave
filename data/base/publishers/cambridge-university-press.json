@@ -1,0 +1,60 @@
+{
+  "id": "cambridge-university-press",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "Cambridge University Press",
+      "from": "1534"
+    }
+  ],
+  "summary": "Publishing arm of the University of Cambridge, which received a royal charter from Henry VIII. It is regarded as the oldest publishing house in the world and prints books and journals.",
+  "labels": [
+    "literature",
+    "education"
+  ],
+  "wikidata": "Q912887",
+  "events": [
+    {
+      "type": "born",
+      "date": "1534",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "henry-viii"
+    },
+    {
+      "type": "part_of",
+      "to": "university-of-cambridge"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cambridge University Press (Q912887)",
+      "url": "https://www.wikidata.org/wiki/Q912887",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cambridge University Press",
+      "url": "https://en.wikipedia.org/wiki/Cambridge_University_Press",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

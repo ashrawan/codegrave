@@ -1,0 +1,55 @@
+{
+  "id": "jesse-owens",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Jesse Owens",
+      "from": "1913"
+    }
+  ],
+  "summary": "American sprinter and long jumper who won four gold medals at the 1936 Berlin Olympics, which the Nazi government had hoped to use to show racial superiority. Back in the United States, he still faced segregation.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "James Cleveland Owens"
+  ],
+  "wikidata": "Q52651",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913-09-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "olympics-1936"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jesse Owens (Q52651)",
+      "url": "https://www.wikidata.org/wiki/Q52651",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jesse Owens",
+      "url": "https://en.wikipedia.org/wiki/Jesse_Owens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

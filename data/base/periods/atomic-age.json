@@ -1,0 +1,51 @@
+{
+  "id": "atomic-age",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Atomic Age",
+      "from": "1945"
+    }
+  ],
+  "summary": "The era that began with the first atomic bombs, when nuclear weapons and nuclear power shaped politics and culture. The end date here is loosely set to the end of the Cold War.",
+  "labels": [
+    "physics",
+    "energy"
+  ],
+  "aliases": [
+    "Nuclear Age"
+  ],
+  "wikidata": "Q757669",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-07-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Atomic Age (Q757669)",
+      "url": "https://www.wikidata.org/wiki/Q757669",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atomic Age",
+      "url": "https://en.wikipedia.org/wiki/Atomic_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,57 @@
+{
+  "id": "damascus",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Damascus",
+      "from": "-2000"
+    }
+  ],
+  "summary": "Capital of Syria and one of the oldest continuously inhabited cities in the world. It was the seat of the Umayyad caliphate, and its old city holds the Umayyad Mosque.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Sham city",
+    "Jasmine city",
+    "Mint of Damascus"
+  ],
+  "wikidata": "Q3766",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "roman-empire"
+    },
+    {
+      "type": "in",
+      "to": "byzantine-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Damascus (Q3766)",
+      "url": "https://www.wikidata.org/wiki/Q3766",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Damascus",
+      "url": "https://en.wikipedia.org/wiki/Damascus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

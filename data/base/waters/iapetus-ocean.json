@@ -1,0 +1,49 @@
+{
+  "id": "iapetus-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Iapetus Ocean",
+      "from": "-600000000"
+    }
+  ],
+  "summary": "An ancient ocean that lay between the early continents of Laurentia and Baltica before the Caledonian mountains rose. It closed about 420 million years ago, which is why matching rocks lie on both sides of the Atlantic.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "wikidata": "Q581244",
+  "events": [
+    {
+      "type": "born",
+      "date": "-600000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-400000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed as the continents on either side collided",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Iapetus Ocean (Q581244)",
+      "url": "https://www.wikidata.org/wiki/Q581244",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iapetus Ocean",
+      "url": "https://en.wikipedia.org/wiki/Iapetus_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

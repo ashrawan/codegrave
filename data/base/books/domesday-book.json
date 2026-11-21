@@ -1,0 +1,53 @@
+{
+  "id": "domesday-book",
+  "category": "books",
+  "names": [
+    {
+      "name": "Domesday Book",
+      "from": "1086"
+    }
+  ],
+  "summary": "Record of land and property across much of England, ordered by William the Conqueror to learn what each place held and owed. People compared its final word to the Last Judgement, which gave it its name.",
+  "labels": [
+    "law",
+    "economics"
+  ],
+  "aliases": [
+    "Book of Winchester",
+    "Liber de Wintonia",
+    "Great Domesday Book"
+  ],
+  "wikidata": "Q19867",
+  "events": [
+    {
+      "type": "born",
+      "date": "1086",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Domesday Book (Q19867)",
+      "url": "https://www.wikidata.org/wiki/Q19867",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Domesday Book",
+      "url": "https://en.wikipedia.org/wiki/Domesday_Book",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

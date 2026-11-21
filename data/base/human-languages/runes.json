@@ -1,0 +1,52 @@
+{
+  "id": "runes",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Runes",
+      "from": "0150"
+    }
+  ],
+  "summary": "The letters used by Germanic peoples, including the Vikings, carved on wood, stone and metal from the early centuries CE. Many runestones from Scandinavia record memorials and travels.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Runic script",
+    "Runr"
+  ],
+  "wikidata": "Q82996",
+  "events": [
+    {
+      "type": "born",
+      "date": "0150",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Latin alphabet, though runes lingered in a few remote places",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Runic script (Q82996)",
+      "url": "https://www.wikidata.org/wiki/Q82996",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Runes",
+      "url": "https://en.wikipedia.org/wiki/Runes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

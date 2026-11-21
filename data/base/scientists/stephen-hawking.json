@@ -1,0 +1,61 @@
+{
+  "id": "stephen-hawking",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Stephen Hawking",
+      "from": "1942"
+    }
+  ],
+  "summary": "British theoretical physicist who studied black holes and the origin of the universe. He argued that black holes give off faint radiation, and his book A Brief History of Time brought cosmology to a very wide audience.",
+  "labels": [
+    "physics",
+    "astronomy"
+  ],
+  "wikidata": "Q17714",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-01-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "paul-dirac"
+    },
+    {
+      "type": "influenced_by",
+      "to": "albert-einstein"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stephen Hawking (Q17714)",
+      "url": "https://www.wikidata.org/wiki/Q17714",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stephen Hawking",
+      "url": "https://en.wikipedia.org/wiki/Stephen_Hawking",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

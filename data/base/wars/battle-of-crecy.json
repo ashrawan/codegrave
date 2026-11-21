@@ -1,0 +1,68 @@
+{
+  "id": "battle-of-crecy",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Crécy",
+      "from": "1346"
+    }
+  ],
+  "summary": "A battle in northern France in which an English army under Edward III defeated a larger French force early in the Hundred Years' War. English longbowmen played a large part in the result.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q27759",
+  "events": [
+    {
+      "type": "born",
+      "date": "1346-08-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1346-08-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "hundred-years-war"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-bohemia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Crécy (Q27759)",
+      "url": "https://www.wikidata.org/wiki/Q27759",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Crécy",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Cr%C3%A9cy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

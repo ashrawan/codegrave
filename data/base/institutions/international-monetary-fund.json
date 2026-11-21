@@ -1,0 +1,64 @@
+{
+  "id": "international-monetary-fund",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "International Monetary Fund",
+      "from": "1945"
+    }
+  ],
+  "summary": "International lender that grew out of the Bretton Woods talks of 1944. It makes loans to governments in financial trouble, with conditions, and it watches the health of the world economy.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "aliases": [
+    "IMF",
+    "International Monetary Fund, IMF"
+  ],
+  "wikidata": "Q7804",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-12-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "part_of",
+      "to": "bretton-woods-system"
+    },
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: International Monetary Fund (Q7804)",
+      "url": "https://www.wikidata.org/wiki/Q7804",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: International Monetary Fund",
+      "url": "https://en.wikipedia.org/wiki/International_Monetary_Fund",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

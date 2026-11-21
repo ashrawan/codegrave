@@ -1,0 +1,55 @@
+{
+  "id": "baghdad",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Baghdad",
+      "from": "0762"
+    }
+  ],
+  "summary": "City on the Tigris founded as the capital of the Abbasid caliphate. Its House of Wisdom drew scholars from many lands, and it was one of the largest cities in the world before the Mongol sack of 1258.",
+  "labels": [
+    "education",
+    "politics"
+  ],
+  "aliases": [
+    "Bagdat"
+  ],
+  "wikidata": "Q1530",
+  "events": [
+    {
+      "type": "born",
+      "date": "0762",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "in",
+      "to": "abbasid-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Baghdad (Q1530)",
+      "url": "https://www.wikidata.org/wiki/Q1530",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baghdad",
+      "url": "https://en.wikipedia.org/wiki/Baghdad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

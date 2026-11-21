@@ -1,0 +1,55 @@
+{
+  "id": "japanese-asset-bubble",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Japanese asset price bubble",
+      "from": "1986"
+    }
+  ],
+  "summary": "Prices for land and shares in Japan rose to extraordinary heights in the late 1980s, then fell. The aftermath of bank troubles and slow growth was long, and it is often called the lost decade.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "Bubble boom"
+  ],
+  "wikidata": "Q6500827",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-12",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1991-02",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Japanese asset price bubble (Q6500827)",
+      "url": "https://www.wikidata.org/wiki/Q6500827",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Japanese asset price bubble",
+      "url": "https://en.wikipedia.org/wiki/Japanese_asset_price_bubble",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

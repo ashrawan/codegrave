@@ -1,0 +1,59 @@
+{
+  "id": "german-east-africa",
+  "category": "regions",
+  "names": [
+    {
+      "name": "German East Africa",
+      "from": "1885"
+    }
+  ],
+  "summary": "The German colony covering present-day Tanzania, Rwanda and Burundi. Its people rose against German rule in the Maji Maji rebellion, and it became a theatre of fighting in the First World War.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Deutsch-Ostafrika",
+    "GEA",
+    "DOA"
+  ],
+  "wikidata": "Q153963",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1919-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Divided among Britain, Belgium and Portugal under the Treaty of Versailles",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German East Africa (Q153963)",
+      "url": "https://www.wikidata.org/wiki/Q153963",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German East Africa",
+      "url": "https://en.wikipedia.org/wiki/German_East_Africa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "the-magic-flute",
+  "category": "stage",
+  "names": [
+    {
+      "name": "The Magic Flute",
+      "from": "1791"
+    }
+  ],
+  "summary": "Opera by Mozart, with a German libretto by Emanuel Schikaneder, about a prince and a bird-catcher on a quest to rescue a princess. It was first staged just weeks before Mozart's death.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Die Zauberflöte",
+    "Magic Flute"
+  ],
+  "wikidata": "Q5064",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-09-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "wolfgang-amadeus-mozart"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Magic Flute (Q5064)",
+      "url": "https://www.wikidata.org/wiki/Q5064",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Magic Flute",
+      "url": "https://en.wikipedia.org/wiki/The_Magic_Flute",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,76 @@
+{
+  "id": "suez-crisis",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Suez Crisis",
+      "from": "1956"
+    }
+  ],
+  "summary": "After Egypt took over the Suez Canal, Britain, France and Israel attacked. The United States and Soviet Union pushed them to withdraw, a sign that the old colonial powers had lost influence.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Second Arab-Israeli War",
+    "Tripartite Aggression",
+    "1956 Sinai War",
+    "Sinai War 1956",
+    "Suez Canal crisis"
+  ],
+  "wikidata": "Q49101",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-10-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1956-11-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "related",
+      "to": "israel"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Suez Crisis (Q49101)",
+      "url": "https://www.wikidata.org/wiki/Q49101",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Suez Crisis",
+      "url": "https://en.wikipedia.org/wiki/Suez_Crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

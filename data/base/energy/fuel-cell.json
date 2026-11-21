@@ -1,0 +1,47 @@
+{
+  "id": "fuel-cell",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Fuel cell",
+      "from": "1842"
+    }
+  ],
+  "maker": "William Grove",
+  "summary": "A device that makes electricity from a reaction between a fuel such as hydrogen and oxygen, giving out only water. William Grove demonstrated the principle in 1839 and fuel cells later powered spacecraft.",
+  "labels": [
+    "energy",
+    "chemistry"
+  ],
+  "aliases": [
+    "FC"
+  ],
+  "wikidata": "Q180253",
+  "events": [
+    {
+      "type": "born",
+      "date": "1842",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: fuel cell (Q180253)",
+      "url": "https://www.wikidata.org/wiki/Q180253",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fuel cell",
+      "url": "https://en.wikipedia.org/wiki/Fuel_cell",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

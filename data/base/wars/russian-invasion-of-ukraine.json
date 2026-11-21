@@ -1,0 +1,63 @@
+{
+  "id": "russian-invasion-of-ukraine",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Russian invasion of Ukraine",
+      "from": "2022"
+    }
+  ],
+  "summary": "Full-scale war launched by Russia against Ukraine in February 2022, following the 2014 annexation of Crimea and fighting in the Donbas. It has caused many deaths and displaced millions of people, and brought sanctions on Russia.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "full-scale Russo-Ukrainian war",
+    "Russia's invasion of Ukraine",
+    "Russo-Ukrainian War",
+    "War in Ukraine",
+    "invasion of Ukraine"
+  ],
+  "wikidata": "Q110999040",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-02-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "russo-ukrainian-war"
+    },
+    {
+      "type": "in",
+      "to": "ukraine"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: full-scale Russo-Ukrainian war (Q110999040)",
+      "url": "https://www.wikidata.org/wiki/Q110999040",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russo-Ukrainian war (2022–present)",
+      "url": "https://en.wikipedia.org/wiki/Russo-Ukrainian_war_(2022%E2%80%93present)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,49 @@
+{
+  "id": "printing-press",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Printing press",
+      "from": "1439"
+    }
+  ],
+  "maker": "Johannes Gutenberg",
+  "summary": "A machine that presses inked metal type against paper. Gutenberg's press in Germany made books cheap enough for many to own and helped spread the Renaissance, the Reformation and scientific ideas across Europe.",
+  "labels": [
+    "media",
+    "firsts"
+  ],
+  "wikidata": "Q144334",
+  "events": [
+    {
+      "type": "born",
+      "date": "1439",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "johannes-gutenberg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: printing press (Q144334)",
+      "url": "https://www.wikidata.org/wiki/Q144334",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Printing press",
+      "url": "https://en.wikipedia.org/wiki/Printing_press",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

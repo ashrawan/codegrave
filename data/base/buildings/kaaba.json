@@ -1,0 +1,60 @@
+{
+  "id": "kaaba",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Kaaba",
+      "from": "0605"
+    }
+  ],
+  "summary": "Cube-shaped stone building at the centre of the Great Mosque in Mecca. It is the direction Muslims face in prayer and the focus of the Hajj. It was rebuilt several times, most recently in 1630.",
+  "labels": [
+    "religion",
+    "architecture"
+  ],
+  "aliases": [
+    "Sacred House",
+    "The Cube",
+    "Kabah",
+    "Kaba",
+    "Kabbah"
+  ],
+  "wikidata": "Q29466",
+  "events": [
+    {
+      "type": "born",
+      "date": "0605",
+      "precision": "circa",
+      "note": "Dated from the rebuilding of about 605, in the lifetime of Muhammad. A shrine stood on the site earlier, and Islamic tradition ascribes the first Kaaba to Abraham."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mecca"
+    },
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kaaba (Q29466)",
+      "url": "https://www.wikidata.org/wiki/Q29466",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kaaba",
+      "url": "https://en.wikipedia.org/wiki/Kaaba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

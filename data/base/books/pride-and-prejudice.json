@@ -1,0 +1,51 @@
+{
+  "id": "pride-and-prejudice",
+  "category": "books",
+  "names": [
+    {
+      "name": "Pride and Prejudice",
+      "from": "1813"
+    }
+  ],
+  "summary": "Novel by Jane Austen about Elizabeth Bennet and the proud Mr Darcy, in a society where marriage decides a woman's future. It has stayed in print for over two hundred years and is retold on screen again and again.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Pride & Prejudice",
+    "First Impressions"
+  ],
+  "wikidata": "Q170583",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jane-austen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pride and Prejudice (Q170583)",
+      "url": "https://www.wikidata.org/wiki/Q170583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pride and Prejudice",
+      "url": "https://en.wikipedia.org/wiki/Pride_and_Prejudice",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "flappy-bird",
+  "category": "games",
+  "names": [
+    {
+      "name": "Flappy Bird",
+      "from": "2013"
+    }
+  ],
+  "maker": "Dong Nguyen",
+  "summary": "Very hard mobile game in which the player taps to keep a small bird flying between green pipes. It topped the app store charts in early 2014 before its maker pulled it from sale.",
+  "labels": [
+    "games",
+    "computing",
+    "failures"
+  ],
+  "wikidata": "Q15707420",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-05",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2014",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its creator removed it from the app stores",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Flappy Bird (Q15707420)",
+      "url": "https://www.wikidata.org/wiki/Q15707420",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Flappy Bird",
+      "url": "https://en.wikipedia.org/wiki/Flappy_Bird",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

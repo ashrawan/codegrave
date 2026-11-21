@@ -1,0 +1,56 @@
+{
+  "id": "daniel-fahrenheit",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Daniel Gabriel Fahrenheit",
+      "from": "1686"
+    }
+  ],
+  "summary": "Physicist and instrument maker born in Danzig who worked in the Dutch Republic. He made accurate mercury thermometers in the 1710s and proposed the temperature scale that carries his name, still used in the United States.",
+  "labels": [
+    "physics",
+    "engineering"
+  ],
+  "aliases": [
+    "Gabriel Daniel Fahrenheit"
+  ],
+  "wikidata": "Q57073",
+  "events": [
+    {
+      "type": "born",
+      "date": "1686-05-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1736-09-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Daniel Gabriel Fahrenheit (Q57073)",
+      "url": "https://www.wikidata.org/wiki/Q57073",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Daniel Gabriel Fahrenheit",
+      "url": "https://en.wikipedia.org/wiki/Daniel_Gabriel_Fahrenheit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

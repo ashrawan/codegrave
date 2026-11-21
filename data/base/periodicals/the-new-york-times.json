@@ -1,0 +1,47 @@
+{
+  "id": "the-new-york-times",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "The New York Times",
+      "from": "1851"
+    }
+  ],
+  "summary": "Daily newspaper of New York City, founded in 1851 and long seen as the main American newspaper of record. It published the Pentagon Papers in 1971 and has won more Pulitzer Prizes than any other paper.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q9684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1851-09-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The New York Times (Q9684)",
+      "url": "https://www.wikidata.org/wiki/Q9684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The New York Times",
+      "url": "https://en.wikipedia.org/wiki/The_New_York_Times",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

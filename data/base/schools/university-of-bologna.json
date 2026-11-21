@@ -1,0 +1,59 @@
+{
+  "id": "university-of-bologna",
+  "category": "schools",
+  "names": [
+    {
+      "name": "University of Bologna",
+      "from": "1088"
+    }
+  ],
+  "summary": "University in northern Italy regarded as the oldest in the Western world that has run without a break. It first became famous for the study of law, and its students had unusual powers over their teachers.",
+  "labels": [
+    "education",
+    "law"
+  ],
+  "aliases": [
+    "UNIBO",
+    "Universita di Bologna",
+    "Bologna University",
+    "unibo.it",
+    "Bologne University"
+  ],
+  "wikidata": "Q131262",
+  "events": [
+    {
+      "type": "born",
+      "date": "1088",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "buenos-aires"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: University of Bologna (Q131262)",
+      "url": "https://www.wikidata.org/wiki/Q131262",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: University of Bologna",
+      "url": "https://en.wikipedia.org/wiki/University_of_Bologna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

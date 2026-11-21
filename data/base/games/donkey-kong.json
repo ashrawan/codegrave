@@ -1,0 +1,49 @@
+{
+  "id": "donkey-kong",
+  "category": "games",
+  "names": [
+    {
+      "name": "Donkey Kong",
+      "from": "1981"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Arcade game in which a carpenter later called Mario climbs scaffolding and jumps barrels thrown by a giant ape. It rescued Nintendo's American business and launched Mario, one of gaming's best-known figures.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "wikidata": "Q12384",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-07-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nintendo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Donkey Kong (Q12384)",
+      "url": "https://www.wikidata.org/wiki/Q12384",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Donkey Kong (1981 video game)",
+      "url": "https://en.wikipedia.org/wiki/Donkey_Kong_(1981_video_game)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

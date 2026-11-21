@@ -1,0 +1,58 @@
+{
+  "id": "devanagari",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Devanagari",
+      "from": "0700"
+    }
+  ],
+  "summary": "A script written with a horizontal line along the tops of the letters. Developed in India from the older Brahmi script, it is used for Hindi, Marathi, Nepali and Sanskrit and serves more than half a billion readers.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Deva",
+    "Deva Nagari Lipi",
+    "Hindi script",
+    "Nagari",
+    "Devanagari script"
+  ],
+  "wikidata": "Q38592",
+  "events": [
+    {
+      "type": "born",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    },
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Devanagari (Q38592)",
+      "url": "https://www.wikidata.org/wiki/Q38592",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Devanagari",
+      "url": "https://en.wikipedia.org/wiki/Devanagari",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

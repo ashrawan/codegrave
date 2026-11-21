@@ -1,0 +1,48 @@
+{
+  "id": "hyde-park",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Hyde Park",
+      "from": "1637"
+    }
+  ],
+  "summary": "Large royal park in central London, opened to the public in the 1600s. It has long been a place for public meetings and demonstrations, and the Great Exhibition of 1851 was held there.",
+  "labels": [
+    "environment",
+    "politics"
+  ],
+  "wikidata": "Q123738",
+  "events": [
+    {
+      "type": "born",
+      "date": "1637",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hyde Park (Q123738)",
+      "url": "https://www.wikidata.org/wiki/Q123738",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hyde Park, London",
+      "url": "https://en.wikipedia.org/wiki/Hyde_Park,_London",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

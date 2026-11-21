@@ -1,0 +1,62 @@
+{
+  "id": "temple-of-artemis",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Temple of Artemis at Ephesus",
+      "from": "-0550"
+    }
+  ],
+  "summary": "Huge marble temple to the goddess Artemis in Ephesus, rebuilt after an arson attack in the fourth century BCE. It was wrecked by invaders and then dismantled as Christianity spread.",
+  "labels": [
+    "seven-wonders",
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Temple of Ephesian Artemis"
+  ],
+  "wikidata": "Q43018",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0550",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0401",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Damaged by raiders and later torn down for building stone",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ephesus"
+    },
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Temple of Ephesian Artemis (Q43018)",
+      "url": "https://www.wikidata.org/wiki/Q43018",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Temple of Artemis",
+      "url": "https://en.wikipedia.org/wiki/Temple_of_Artemis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

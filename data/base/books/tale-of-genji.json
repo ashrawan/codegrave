@@ -1,0 +1,54 @@
+{
+  "id": "tale-of-genji",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Tale of Genji",
+      "from": "1010"
+    }
+  ],
+  "summary": "Long story of court life in Japan by the noblewoman Murasaki Shikibu, following the loves and sorrows of Prince Genji. It was written around the year 1000 and is often called the first novel.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Genji Monogatari",
+    "The Tale of Genzi",
+    "Genzi Monogatari",
+    "Genjimonogatari",
+    "Princess Aoi"
+  ],
+  "wikidata": "Q8269",
+  "events": [
+    {
+      "type": "born",
+      "date": "1010",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "murasaki-shikibu"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Tale of Genji (Q8269)",
+      "url": "https://www.wikidata.org/wiki/Q8269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Tale of Genji",
+      "url": "https://en.wikipedia.org/wiki/The_Tale_of_Genji",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

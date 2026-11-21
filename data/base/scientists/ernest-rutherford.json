@@ -1,0 +1,57 @@
+{
+  "id": "ernest-rutherford",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Ernest Rutherford",
+      "from": "1871"
+    }
+  ],
+  "summary": "New Zealand-born physicist who showed that an atom has a tiny, dense nucleus and later named the proton. He found that radioactivity turns one element into another, won the 1908 Nobel Prize in Chemistry and led labs in Montreal, Manchester and Cambridge.",
+  "labels": [
+    "physics",
+    "chemistry",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Ernest Lord Rutherford"
+  ],
+  "wikidata": "Q9123",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-08-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ernest Rutherford (Q9123)",
+      "url": "https://www.wikidata.org/wiki/Q9123",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ernest Rutherford",
+      "url": "https://en.wikipedia.org/wiki/Ernest_Rutherford",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

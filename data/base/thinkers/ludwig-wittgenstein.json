@@ -1,0 +1,53 @@
+{
+  "id": "ludwig-wittgenstein",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Ludwig Wittgenstein",
+      "from": "1889"
+    }
+  ],
+  "summary": "Austrian-born philosopher who studied how language relates to the world. He changed his mind radically between his two major books, the Tractatus and the Philosophical Investigations, and taught at Cambridge.",
+  "labels": [
+    "philosophy",
+    "language"
+  ],
+  "wikidata": "Q9391",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-04-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1951-04-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "soren-kierkegaard"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ludwig Wittgenstein (Q9391)",
+      "url": "https://www.wikidata.org/wiki/Q9391",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ludwig Wittgenstein",
+      "url": "https://en.wikipedia.org/wiki/Ludwig_Wittgenstein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

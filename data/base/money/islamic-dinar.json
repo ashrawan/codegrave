@@ -1,0 +1,59 @@
+{
+  "id": "islamic-dinar",
+  "category": "money",
+  "names": [
+    {
+      "name": "Islamic gold dinar",
+      "from": "0696"
+    }
+  ],
+  "summary": "A gold coin issued by the Umayyad caliph Abd al-Malik that carried Arabic writing in place of images. The word dinar is still the name of money in several countries.",
+  "labels": [
+    "economics",
+    "religion"
+  ],
+  "aliases": [
+    "denar"
+  ],
+  "wikidata": "Q191830",
+  "events": [
+    {
+      "type": "born",
+      "date": "0696",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    },
+    {
+      "type": "in",
+      "to": "iran"
+    },
+    {
+      "type": "related",
+      "to": "roman-denarius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: dinar (Q191830)",
+      "url": "https://www.wikidata.org/wiki/Q191830",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dinar",
+      "url": "https://en.wikipedia.org/wiki/Dinar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

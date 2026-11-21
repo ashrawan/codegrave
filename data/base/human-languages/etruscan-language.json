@@ -1,0 +1,54 @@
+{
+  "id": "etruscan-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Etruscan language",
+      "from": "-0700"
+    }
+  ],
+  "summary": "The language of the Etruscans of central Italy, written with a Greek-based alphabet. It is only partly understood, from short inscriptions, and has no known close relatives.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Etruscan",
+    "ett",
+    "Etruscian"
+  ],
+  "wikidata": "Q35726",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0050",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Latin after Rome absorbed Etruria",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Etruscan (Q35726)",
+      "url": "https://www.wikidata.org/wiki/Q35726",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Etruscan language",
+      "url": "https://en.wikipedia.org/wiki/Etruscan_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

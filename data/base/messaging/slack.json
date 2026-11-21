@@ -1,0 +1,48 @@
+{
+  "id": "slack",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Slack",
+      "from": "2013"
+    }
+  ],
+  "summary": "Workplace chat service with channels for teams and links to other tools. It began as an internal tool at a games company and became a standard in offices, and Salesforce bought it.",
+  "labels": [
+    "business",
+    "computing"
+  ],
+  "aliases": [
+    "Slack HQ",
+    "chatlyio",
+    "chatly.io"
+  ],
+  "wikidata": "Q17130715",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-08",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Slack (Q17130715)",
+      "url": "https://www.wikidata.org/wiki/Q17130715",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Slack (software)",
+      "url": "https://en.wikipedia.org/wiki/Slack_(software)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

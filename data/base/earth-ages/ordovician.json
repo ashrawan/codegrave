@@ -1,0 +1,57 @@
+{
+  "id": "ordovician",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Ordovician",
+      "from": "-486850000"
+    }
+  ],
+  "summary": "The period from 485 to 444 million years ago, with shallow seas full of trilobites, corals and giant cone-shelled cephalopods. It ended with an ice age and a mass extinction, one of the five biggest.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Ordovician Period",
+    "Ordovician System"
+  ],
+  "wikidata": "Q62100",
+  "events": [
+    {
+      "type": "born",
+      "date": "-486850000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-443100000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "paleozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ordovician (Q62100)",
+      "url": "https://www.wikidata.org/wiki/Q62100",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ordovician",
+      "url": "https://en.wikipedia.org/wiki/Ordovician",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

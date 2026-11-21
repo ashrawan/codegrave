@@ -1,0 +1,49 @@
+{
+  "id": "modern-times",
+  "category": "films",
+  "names": [
+    {
+      "name": "Modern Times",
+      "from": "1936"
+    }
+  ],
+  "maker": "Charlie Chaplin",
+  "summary": "Mostly silent comedy in which Charlie Chaplin's Tramp struggles with factory work and the Great Depression. It is a gentle attack on machines and mass production, made when sound was already standard in Hollywood.",
+  "labels": [
+    "film",
+    "economics"
+  ],
+  "wikidata": "Q45602",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-02-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "charlie-chaplin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Modern Times (Q45602)",
+      "url": "https://www.wikidata.org/wiki/Q45602",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Modern Times (film)",
+      "url": "https://en.wikipedia.org/wiki/Modern_Times_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "la-mer-debussy",
+  "category": "music",
+  "names": [
+    {
+      "name": "La mer",
+      "from": "1905"
+    }
+  ],
+  "maker": "Claude Debussy",
+  "summary": "Three-part orchestral work by Claude Debussy that paints the sea through shifting colours rather than a clear tune. It is a central piece of musical Impressionism, a style that drew on the ideas of painters of the time.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "L.109"
+  ],
+  "wikidata": "Q1057812",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "claude-debussy"
+    },
+    {
+      "type": "influenced_by",
+      "to": "great-wave-off-kanagawa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: La mer (Q1057812)",
+      "url": "https://www.wikidata.org/wiki/Q1057812",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La mer (Debussy)",
+      "url": "https://en.wikipedia.org/wiki/La_mer_(Debussy)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

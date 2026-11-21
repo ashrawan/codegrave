@@ -1,0 +1,51 @@
+{
+  "id": "uncle-toms-cabin",
+  "category": "books",
+  "names": [
+    {
+      "name": "Uncle Tom's Cabin",
+      "from": "1852"
+    }
+  ],
+  "summary": "Anti-slavery novel by Harriet Beecher Stowe that sold in huge numbers in the United States and Britain. It turned many readers against slavery and was banned in parts of the American South.",
+  "labels": [
+    "literature",
+    "banned"
+  ],
+  "aliases": [
+    "Life Among the Lowly"
+  ],
+  "wikidata": "Q2222",
+  "events": [
+    {
+      "type": "born",
+      "date": "1852-03-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "harriet-beecher-stowe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uncle Tom's Cabin (Q2222)",
+      "url": "https://www.wikidata.org/wiki/Q2222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uncle Tom's Cabin",
+      "url": "https://en.wikipedia.org/wiki/Uncle_Tom's_Cabin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

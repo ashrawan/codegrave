@@ -1,0 +1,52 @@
+{
+  "id": "babe-ruth",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Babe Ruth",
+      "from": "1895"
+    }
+  ],
+  "summary": "American baseball player who started as a pitcher and became the sport's biggest home-run hitter with the New York Yankees. His success helped make baseball hugely popular in the 1920s.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "George Herman Ruth",
+    "George Herman Ruth Jr.",
+    "The Bambino"
+  ],
+  "wikidata": "Q213812",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895-02-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Babe Ruth (Q213812)",
+      "url": "https://www.wikidata.org/wiki/Q213812",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Babe Ruth",
+      "url": "https://en.wikipedia.org/wiki/Babe_Ruth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,71 @@
+{
+  "id": "battle-of-austerlitz",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Austerlitz",
+      "from": "1805"
+    }
+  ],
+  "summary": "Napoleon's army defeated the Russian and Austrian forces in what is now the Czech Republic, often seen as his greatest victory. It led to the end of the Holy Roman Empire in 1806.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Austerlitz"
+  ],
+  "wikidata": "Q134114",
+  "events": [
+    {
+      "type": "born",
+      "date": "1805-12-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1805-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "napoleonic-wars"
+    },
+    {
+      "type": "in",
+      "to": "austrian-empire"
+    },
+    {
+      "type": "in",
+      "to": "czech-republic"
+    },
+    {
+      "type": "related",
+      "to": "french-colonial-empire"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Austerlitz (Q134114)",
+      "url": "https://www.wikidata.org/wiki/Q134114",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Austerlitz",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Austerlitz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,79 @@
+{
+  "id": "georgia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Georgia",
+      "from": "1008"
+    }
+  ],
+  "summary": "A country in the Caucasus between the Black Sea and Azerbaijan, one of the oldest Christian nations. It left the Soviet Union in 1991, and parts of its territory remain disputed.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Georgia",
+    "Georgia (Sakartvelo)",
+    "Sakartvelo"
+  ],
+  "wikidata": "Q230",
+  "events": [
+    {
+      "type": "born",
+      "date": "1008",
+      "precision": "year",
+      "note": "Dated from 1008, when Bagrat III united the Georgian lands in one kingdom. The kingdom broke up in the fifteenth century and Russia annexed the region from 1801."
+    },
+    {
+      "type": "milestone",
+      "date": "1918-05-26",
+      "precision": "day",
+      "label": "First republic",
+      "note": "The Democratic Republic of Georgia was declared; the Red Army took it in 1921."
+    },
+    {
+      "type": "milestone",
+      "date": "1991-12-25",
+      "precision": "day",
+      "label": "Independence",
+      "note": "Georgia left the Soviet Union, having declared independence on 9 April 1991."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Georgia (Q230)",
+      "url": "https://www.wikidata.org/wiki/Q230",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Georgia (country)",
+      "url": "https://en.wikipedia.org/wiki/Georgia_(country)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

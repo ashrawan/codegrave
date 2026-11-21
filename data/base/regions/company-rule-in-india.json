@@ -1,0 +1,65 @@
+{
+  "id": "company-rule-in-india",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Company rule in India",
+      "from": "1757"
+    }
+  ],
+  "summary": "The period when the British East India Company ruled large parts of India with its own army and tax collection. It began after the Battle of Plassey and ended after the rebellion of 1857.",
+  "labels": [
+    "lost",
+    "business"
+  ],
+  "aliases": [
+    "Company Raj",
+    "Ruling Company",
+    "British India",
+    "East India Company India",
+    "India under the British rule"
+  ],
+  "wikidata": "Q2001966",
+  "events": [
+    {
+      "type": "born",
+      "date": "1757",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1858",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Taken over by the British Crown after the Indian Rebellion of 1857",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "british-raj"
+    },
+    {
+      "type": "in",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Company rule in India (Q2001966)",
+      "url": "https://www.wikidata.org/wiki/Q2001966",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Company rule in India",
+      "url": "https://en.wikipedia.org/wiki/Company_rule_in_India",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

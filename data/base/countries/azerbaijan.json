@@ -1,0 +1,66 @@
+{
+  "id": "azerbaijan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Azerbaijan",
+      "from": "1918"
+    }
+  ],
+  "summary": "A Caucasus country on the Caspian Sea, rich in oil and gas around its capital Baku. It became independent from the Soviet Union in 1991.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Azerbaijan"
+  ],
+  "wikidata": "Q227",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-05-28",
+      "precision": "day",
+      "note": "Dated from the Azerbaijan Democratic Republic, declared on 28 May 1918. It was a Soviet republic from 1920 to 1991."
+    },
+    {
+      "type": "milestone",
+      "date": "1991",
+      "precision": "year",
+      "label": "Restored",
+      "note": "Independence was restored as the Soviet Union broke up."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Azerbaijan (Q227)",
+      "url": "https://www.wikidata.org/wiki/Q227",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Azerbaijan",
+      "url": "https://en.wikipedia.org/wiki/Azerbaijan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

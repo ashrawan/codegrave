@@ -1,0 +1,55 @@
+{
+  "id": "rinderpest",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Rinderpest",
+      "from": "1700"
+    }
+  ],
+  "summary": "A viral disease of cattle and related animals that caused famines in Africa and Europe by killing herds. It was declared wiped out in 2011, the second disease ever eradicated.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "cattle plague",
+    "steppe murrain",
+    "Plague, Cattle",
+    "obsolete rinderpest"
+  ],
+  "wikidata": "Q157008",
+  "events": [
+    {
+      "type": "born",
+      "date": "1700",
+      "precision": "circa",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    },
+    {
+      "type": "ended",
+      "date": "2011",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Eradicated through a worldwide vaccination campaign",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: rinderpest (Q157008)",
+      "url": "https://www.wikidata.org/wiki/Q157008",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rinderpest",
+      "url": "https://en.wikipedia.org/wiki/Rinderpest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

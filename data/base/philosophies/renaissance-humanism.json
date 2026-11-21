@@ -1,0 +1,60 @@
+{
+  "id": "renaissance-humanism",
+  "category": "philosophies",
+  "names": [
+    {
+      "name": "Renaissance humanism",
+      "from": "1350"
+    }
+  ],
+  "summary": "An educational and cultural movement that began in Italy, which revived the study of Greek and Roman writers and placed human potential and civic life at the centre of learning. Petrarch and Erasmus were among its leaders.",
+  "labels": [
+    "philosophy",
+    "education"
+  ],
+  "aliases": [
+    "revival of letters"
+  ],
+  "wikidata": "Q846933",
+  "events": [
+    {
+      "type": "born",
+      "date": "1350",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "renaissance"
+    },
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: renaissance humanism (Q846933)",
+      "url": "https://www.wikidata.org/wiki/Q846933",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Renaissance humanism",
+      "url": "https://en.wikipedia.org/wiki/Renaissance_humanism",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "leprosy",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Leprosy",
+      "from": "1873"
+    }
+  ],
+  "summary": "A slow disease caused by bacteria that damages skin and nerves, long feared and surrounded by stigma. Gerhard Hansen found the germ in Norway in 1873, and it can now be cured.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Hansen's disease",
+    "lepras"
+  ],
+  "wikidata": "Q36956",
+  "events": [
+    {
+      "type": "born",
+      "date": "1873",
+      "precision": "year",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: leprosy (Q36956)",
+      "url": "https://www.wikidata.org/wiki/Q36956",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Leprosy",
+      "url": "https://en.wikipedia.org/wiki/Leprosy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

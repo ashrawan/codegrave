@@ -1,0 +1,54 @@
+{
+  "id": "bayern-munich",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Bayern Munich",
+      "from": "1900"
+    }
+  ],
+  "summary": "German football club from Bavaria that has won more national titles than any other in Germany. In the mid-1970s it won three European Cups in a row, and it plays in a stadium shared with a rival.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Bayern Muenchen",
+    "Bayern Munchen",
+    "FC Bayern Muenchen",
+    "FC Bayern Munchen",
+    "Bayern"
+  ],
+  "wikidata": "Q15789",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900-02-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: FC Bayern Munich (Q15789)",
+      "url": "https://www.wikidata.org/wiki/Q15789",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: FC Bayern Munich",
+      "url": "https://en.wikipedia.org/wiki/FC_Bayern_Munich",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

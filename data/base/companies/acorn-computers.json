@@ -1,0 +1,53 @@
+{
+  "id": "acorn-computers",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Acorn Computers",
+      "from": "1978"
+    }
+  ],
+  "maker": "Hermann Hauser and Chris Curry",
+  "summary": "British computer company based in Cambridge. It made the BBC Micro for the BBC's computer literacy project and later designed the ARM processor, whose design was spun off as Arm Ltd. The computer business closed around the end of the 1990s.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Acorn Computers Ltd."
+  ],
+  "wikidata": "Q342149",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-12-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-11",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost its market to PCs and closed its computer business",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Acorn Computers (Q342149)",
+      "url": "https://www.wikidata.org/wiki/Q342149",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Acorn Computers",
+      "url": "https://en.wikipedia.org/wiki/Acorn_Computers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

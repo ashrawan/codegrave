@@ -1,0 +1,48 @@
+{
+  "id": "kubernetes",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "Kubernetes",
+      "from": "2014"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Open-source system for running and managing many containers across a group of computers. Google released it in 2014, drawing on its in-house Borg system, and it is now run by the Cloud Native Computing Foundation.",
+  "labels": [
+    "computing",
+    "open-source"
+  ],
+  "aliases": [
+    "K8s",
+    "container orchestrator"
+  ],
+  "wikidata": "Q22661306",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-06-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Kubernetes (Q22661306)",
+      "url": "https://www.wikidata.org/wiki/Q22661306",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kubernetes",
+      "url": "https://en.wikipedia.org/wiki/Kubernetes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

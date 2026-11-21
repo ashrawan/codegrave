@@ -1,0 +1,57 @@
+{
+  "id": "royal-society",
+  "category": "societies",
+  "names": [
+    {
+      "name": "Royal Society",
+      "from": "1660"
+    }
+  ],
+  "summary": "British learned society for natural science, founded by a group in London. Isaac Newton and Charles Darwin were fellows, and it publishes the oldest scientific journal still in print.",
+  "labels": [
+    "physics",
+    "education"
+  ],
+  "aliases": [
+    "Royal Society of London",
+    "The Royal Society, UK",
+    "royalsociety.org"
+  ],
+  "wikidata": "Q123885",
+  "events": [
+    {
+      "type": "born",
+      "date": "1660-11",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Royal Society of London (Q123885)",
+      "url": "https://www.wikidata.org/wiki/Q123885",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Royal Society",
+      "url": "https://en.wikipedia.org/wiki/Royal_Society",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

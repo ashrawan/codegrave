@@ -1,0 +1,53 @@
+{
+  "id": "amelia-earhart",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Amelia Earhart",
+      "from": "1897"
+    }
+  ],
+  "summary": "American pilot who in 1932 became the first woman to fly solo across the Atlantic. She vanished over the Pacific in 1937 while trying to fly around the world.",
+  "labels": [
+    "exploration",
+    "firsts"
+  ],
+  "aliases": [
+    "Señora George Putnam",
+    "Señora Lindy",
+    "El bebé del cielo"
+  ],
+  "wikidata": "Q3355",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897-07-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-07-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Amelia Earhart (Q3355)",
+      "url": "https://www.wikidata.org/wiki/Q3355",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amelia Earhart",
+      "url": "https://en.wikipedia.org/wiki/Amelia_Earhart",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

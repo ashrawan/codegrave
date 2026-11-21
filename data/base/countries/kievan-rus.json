@@ -1,0 +1,55 @@
+{
+  "id": "kievan-rus",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kievan Rus'",
+      "from": "0882"
+    }
+  ],
+  "summary": "A loose union of Slavic princedoms centred on Kyiv. Its ruler Vladimir adopted Orthodox Christianity around 988, and the state is claimed as the early ancestor by Ukrainians, Russians and Belarusians.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Rus",
+    "Kyivska Rus'",
+    "Kyivan Rus",
+    "Kyivan state"
+  ],
+  "wikidata": "Q1108445",
+  "events": [
+    {
+      "type": "born",
+      "date": "0882",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1240",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Divided into rival principalities and then overrun by the Mongol invasion",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Kievan Rus' (Q1108445)",
+      "url": "https://www.wikidata.org/wiki/Q1108445",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kievan Rus'",
+      "url": "https://en.wikipedia.org/wiki/Kievan_Rus'",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

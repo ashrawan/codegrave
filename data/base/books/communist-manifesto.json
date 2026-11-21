@@ -1,0 +1,59 @@
+{
+  "id": "communist-manifesto",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Communist Manifesto",
+      "from": "1848"
+    }
+  ],
+  "summary": "Short pamphlet by Karl Marx and Friedrich Engels that presents history as a struggle between classes and calls for workers to unite. It influenced political movements and governments across the twentieth century.",
+  "labels": [
+    "politics",
+    "economics"
+  ],
+  "aliases": [
+    "Communist Manifesto"
+  ],
+  "wikidata": "Q40591",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "karl-marx"
+    },
+    {
+      "type": "about",
+      "to": "socialism"
+    },
+    {
+      "type": "about",
+      "to": "communism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Communist Manifesto (Q40591)",
+      "url": "https://www.wikidata.org/wiki/Q40591",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Communist Manifesto",
+      "url": "https://en.wikipedia.org/wiki/The_Communist_Manifesto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

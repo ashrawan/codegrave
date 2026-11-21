@@ -1,0 +1,64 @@
+{
+  "id": "battle-of-agincourt",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Agincourt",
+      "from": "1415"
+    }
+  ],
+  "summary": "Henry V of England's tired army beat a much larger French force in northern France, helped by English longbowmen and muddy ground. It is one of the best known battles of the Hundred Years' War.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q188495",
+  "events": [
+    {
+      "type": "born",
+      "date": "1415-10-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1415-10-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "hundred-years-war"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Agincourt (Q188495)",
+      "url": "https://www.wikidata.org/wiki/Q188495",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Agincourt",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Agincourt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "charlie-hebdo",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Charlie Hebdo",
+      "from": "1970"
+    }
+  ],
+  "summary": "French satirical weekly known for provocative cartoons. In 2015 two gunmen attacked its Paris office and killed twelve people, prompting protests for freedom of expression around the world.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q1043104",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paris"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charlie Hebdo (Q1043104)",
+      "url": "https://www.wikidata.org/wiki/Q1043104",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charlie Hebdo",
+      "url": "https://en.wikipedia.org/wiki/Charlie_Hebdo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

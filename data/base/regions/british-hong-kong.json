@@ -1,0 +1,61 @@
+{
+  "id": "british-hong-kong",
+  "category": "regions",
+  "names": [
+    {
+      "name": "British Hong Kong",
+      "from": "1841"
+    }
+  ],
+  "summary": "The British colony on the south coast of China, taken after the First Opium War. It grew into a major trading port and finance centre before being returned to China in 1997.",
+  "labels": [
+    "lost",
+    "economics"
+  ],
+  "aliases": [
+    "colonial Hong Kong",
+    "Hongkong",
+    "Hong Kong",
+    "British Administration",
+    "British HK"
+  ],
+  "wikidata": "Q1054923",
+  "events": [
+    {
+      "type": "born",
+      "date": "1841-01-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Handed over to China under the Sino-British Joint Declaration",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Hong Kong (Q1054923)",
+      "url": "https://www.wikidata.org/wiki/Q1054923",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Hong Kong",
+      "url": "https://en.wikipedia.org/wiki/British_Hong_Kong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

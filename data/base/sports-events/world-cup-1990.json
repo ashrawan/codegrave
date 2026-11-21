@@ -1,0 +1,55 @@
+{
+  "id": "world-cup-1990",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1990 FIFA World Cup",
+      "from": "1990"
+    }
+  ],
+  "summary": "West Germany won in Italy in a tournament with few goals and many cautious matches. Rule changes after it, such as banning the back-pass to the goalkeeper, aimed to make the game more attacking.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "FIFA World Cup 1990"
+  ],
+  "wikidata": "Q132529",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-06-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-07-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1990 FIFA World Cup (Q132529)",
+      "url": "https://www.wikidata.org/wiki/Q132529",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1990 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1990_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

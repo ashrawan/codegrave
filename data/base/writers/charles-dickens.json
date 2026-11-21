@@ -1,0 +1,52 @@
+{
+  "id": "charles-dickens",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Charles Dickens",
+      "from": "1812"
+    }
+  ],
+  "summary": "English novelist who wrote Oliver Twist, A Christmas Carol and Great Expectations. Published in monthly parts, his stories exposed poverty and injustice in Victorian Britain and made him very popular.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Boz",
+    "C. Dickens",
+    "Dickens"
+  ],
+  "wikidata": "Q5686",
+  "events": [
+    {
+      "type": "born",
+      "date": "1812-02-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1870-06-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Charles Dickens (Q5686)",
+      "url": "https://www.wikidata.org/wiki/Q5686",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles Dickens",
+      "url": "https://en.wikipedia.org/wiki/Charles_Dickens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

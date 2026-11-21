@@ -1,0 +1,65 @@
+{
+  "id": "yuan-dynasty",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Yuan dynasty",
+      "from": "1271"
+    }
+  ],
+  "summary": "The Mongol dynasty founded by Kublai Khan that ruled all China from Khanbaliq, now Beijing. It built the Grand Canal's northern links and welcomed foreign traders, such as Marco Polo.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Great Yuan Empire",
+    "Empire of the Great Khan",
+    "Great Yuan Great Mongol State",
+    "Great Yuan",
+    "Yüan"
+  ],
+  "wikidata": "Q7313",
+  "events": [
+    {
+      "type": "born",
+      "date": "1271",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1368",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overthrown by the rebellion that founded the Ming dynasty",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "ming-dynasty"
+    },
+    {
+      "type": "part_of",
+      "to": "mongol-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yuan dynasty (Q7313)",
+      "url": "https://www.wikidata.org/wiki/Q7313",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yuan dynasty",
+      "url": "https://en.wikipedia.org/wiki/Yuan_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

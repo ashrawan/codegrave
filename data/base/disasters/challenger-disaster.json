@@ -1,0 +1,56 @@
+{
+  "id": "challenger-disaster",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Space Shuttle Challenger disaster",
+      "from": "1986"
+    }
+  ],
+  "summary": "The American space shuttle broke apart about a minute after launch, killing all seven crew, including a schoolteacher. A faulty rubber seal and poor decisions about the cold weather were blamed, and shuttle flights stopped for years.",
+  "labels": [
+    "space-race",
+    "engineering"
+  ],
+  "aliases": [
+    "Challenger disaster"
+  ],
+  "wikidata": "Q858145",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-01-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Space Shuttle Challenger disaster (Q858145)",
+      "url": "https://www.wikidata.org/wiki/Q858145",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Space Shuttle Challenger disaster",
+      "url": "https://en.wikipedia.org/wiki/Space_Shuttle_Challenger_disaster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

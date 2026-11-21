@@ -1,0 +1,54 @@
+{
+  "id": "texas",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Texas",
+      "from": "1845"
+    }
+  ],
+  "summary": "The second largest US state, once part of Mexico and then an independent republic. It joined the United States in 1845 and is known for ranching, oil and space flight control at Houston.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Lone Star State",
+    "Texas, United States",
+    "State of Texas",
+    "US-TX",
+    "Tex."
+  ],
+  "wikidata": "Q1439",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845-12-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Texas (Q1439)",
+      "url": "https://www.wikidata.org/wiki/Q1439",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Texas",
+      "url": "https://en.wikipedia.org/wiki/Texas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "wealth-of-nations",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Wealth of Nations",
+      "from": "1776"
+    }
+  ],
+  "summary": "Adam Smith's book on how nations grow wealthy, published in 1776. It explains how specialised work, free trade and competition raise output, and it is seen as the founding text of modern economics.",
+  "labels": [
+    "economics",
+    "literature"
+  ],
+  "wikidata": "Q233562",
+  "events": [
+    {
+      "type": "born",
+      "date": "1776-03-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "adam-smith"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Wealth of Nations (Q233562)",
+      "url": "https://www.wikidata.org/wiki/Q233562",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Wealth of Nations",
+      "url": "https://en.wikipedia.org/wiki/The_Wealth_of_Nations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

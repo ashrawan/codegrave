@@ -1,0 +1,46 @@
+{
+  "id": "kiwi",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Kiwi",
+      "from": "-50000000"
+    }
+  ],
+  "summary": "Flightless, nocturnal bird of New Zealand with a long bill and hair-like feathers. Genetic work suggests its line split from the extinct elephant birds of Madagascar about 50 million years ago.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Apteryx",
+    "the kiwis"
+  ],
+  "wikidata": "Q43642",
+  "events": [
+    {
+      "type": "born",
+      "date": "-50000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Apteryx (Q43642)",
+      "url": "https://www.wikidata.org/wiki/Q43642",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kiwi (bird)",
+      "url": "https://en.wikipedia.org/wiki/Kiwi_(bird)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

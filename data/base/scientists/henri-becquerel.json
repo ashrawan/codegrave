@@ -1,0 +1,56 @@
+{
+  "id": "henri-becquerel",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Henri Becquerel",
+      "from": "1852"
+    }
+  ],
+  "summary": "French physicist who found in 1896 that uranium salts give off invisible rays even in the dark, the first sign of radioactivity. He shared the 1903 Nobel Prize in Physics with Pierre and Marie Curie.",
+  "labels": [
+    "physics",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "Antoine Henri Becquerel"
+  ],
+  "wikidata": "Q41269",
+  "events": [
+    {
+      "type": "born",
+      "date": "1852-12-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1908-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antoine Henri Becquerel (Q41269)",
+      "url": "https://www.wikidata.org/wiki/Q41269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henri Becquerel",
+      "url": "https://en.wikipedia.org/wiki/Henri_Becquerel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

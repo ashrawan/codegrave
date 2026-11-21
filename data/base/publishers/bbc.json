@@ -1,0 +1,55 @@
+{
+  "id": "bbc",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "BBC",
+      "from": "1922"
+    }
+  ],
+  "summary": "British public broadcaster, begun as a company and made a corporation in 1927. It runs radio, television and an online news service, and it is paid for by a licence fee.",
+  "labels": [
+    "media",
+    "television"
+  ],
+  "aliases": [
+    "British Broadcasting Corporation"
+  ],
+  "wikidata": "Q9531",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Broadcasting Corporation (Q9531)",
+      "url": "https://www.wikidata.org/wiki/Q9531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: BBC",
+      "url": "https://en.wikipedia.org/wiki/BBC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

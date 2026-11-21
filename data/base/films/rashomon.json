@@ -1,0 +1,52 @@
+{
+  "id": "rashomon",
+  "category": "films",
+  "names": [
+    {
+      "name": "Rashomon",
+      "from": "1950"
+    }
+  ],
+  "maker": "Akira Kurosawa",
+  "summary": "Japanese film by Akira Kurosawa in which four people give clashing accounts of one crime. Its win at the Venice festival in 1951 brought Japanese cinema to Western audiences, and its story device is still copied.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q135465",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "akira-kurosawa"
+    },
+    {
+      "type": "made_by",
+      "to": "toshiro-mifune"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rashomon (Q135465)",
+      "url": "https://www.wikidata.org/wiki/Q135465",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rashomon",
+      "url": "https://en.wikipedia.org/wiki/Rashomon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

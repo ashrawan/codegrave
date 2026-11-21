@@ -1,0 +1,61 @@
+{
+  "id": "wii-u",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Wii U",
+      "from": "2012"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Nintendo's follow-up to the Wii, with a controller that had its own touch screen. Its name confused buyers and few third-party games arrived, so it sold poorly and was replaced after five years.",
+  "labels": [
+    "games",
+    "failures"
+  ],
+  "aliases": [
+    "WiiU",
+    "Nintendo Wii U",
+    "Nintendo WiiU",
+    "Project Café"
+  ],
+  "wikidata": "Q56942",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-11-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Weak sales; replaced by the Switch",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nintendo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wii U (Q56942)",
+      "url": "https://www.wikidata.org/wiki/Q56942",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wii U",
+      "url": "https://en.wikipedia.org/wiki/Wii_U",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

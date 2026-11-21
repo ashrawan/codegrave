@@ -1,0 +1,69 @@
+{
+  "id": "new-spain",
+  "category": "regions",
+  "names": [
+    {
+      "name": "New Spain",
+      "from": "1521"
+    }
+  ],
+  "summary": "The Spanish viceroyalty founded after the conquest of the Aztecs, governed from Mexico City. It covered Mexico, Central America, parts of the southwestern United States and the Philippines.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Viceroyalty of New Spain",
+    "Nueva España",
+    "Spanish Mexico",
+    "Spanish Central America",
+    "Spanish America"
+  ],
+  "wikidata": "Q170603",
+  "events": [
+    {
+      "type": "born",
+      "date": "1521-08-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1821-08-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended by Mexico's war of independence",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "mexico"
+    },
+    {
+      "type": "part_of",
+      "to": "spanish-empire"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New Spain (Q170603)",
+      "url": "https://www.wikidata.org/wiki/Q170603",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Spain",
+      "url": "https://en.wikipedia.org/wiki/New_Spain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

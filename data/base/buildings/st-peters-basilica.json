@@ -1,0 +1,67 @@
+{
+  "id": "st-peters-basilica",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "St. Peter's Basilica",
+      "from": "1626"
+    }
+  ],
+  "summary": "Church in Vatican City built over the traditional tomb of Saint Peter. Bramante, Michelangelo and Bernini all worked on it, and Michelangelo's dome rises above the city of Rome.",
+  "labels": [
+    "religion",
+    "architecture"
+  ],
+  "aliases": [
+    "Saint Peter's Basilica",
+    "Saint Peter's, Vatican",
+    "Basilica of Saint Peter",
+    "Saint Peter's",
+    "St. Peter's"
+  ],
+  "wikidata": "Q12512",
+  "events": [
+    {
+      "type": "born",
+      "date": "1626",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "michelangelo"
+    },
+    {
+      "type": "made_by",
+      "to": "raphael"
+    },
+    {
+      "type": "made_by",
+      "to": "gian-lorenzo-bernini"
+    },
+    {
+      "type": "related",
+      "to": "saint-peter"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: St. Peter's Basilica (Q12512)",
+      "url": "https://www.wikidata.org/wiki/Q12512",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: St. Peter's Basilica",
+      "url": "https://en.wikipedia.org/wiki/St._Peter's_Basilica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

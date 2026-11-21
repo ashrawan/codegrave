@@ -1,0 +1,54 @@
+{
+  "id": "safavid-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Safavid dynasty",
+      "from": "1501"
+    }
+  ],
+  "summary": "Persian dynasty founded by Shah Ismail I, which made Twelver Shia Islam the state religion of Iran. It made Isfahan a great capital, especially under Shah Abbas I.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "wikidata": "Q161205",
+  "events": [
+    {
+      "type": "born",
+      "date": "1501",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1736",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Fell after Afghan invasions and the rise of Nader Shah",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "safavid-iran"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Safavid dynasty (Q161205)",
+      "url": "https://www.wikidata.org/wiki/Q161205",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Safavid dynasty",
+      "url": "https://en.wikipedia.org/wiki/Safavid_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

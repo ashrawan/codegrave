@@ -1,0 +1,60 @@
+{
+  "id": "commonwealth-trans-antarctic-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Commonwealth Trans-Antarctic Expedition",
+      "from": "1955"
+    }
+  ],
+  "summary": "A British-led party under Vivian Fuchs made the first land crossing of Antarctica by way of the South Pole, using tractors and aircraft. Edmund Hillary led a support team from the Ross Sea side.",
+  "labels": [
+    "exploration",
+    "firsts"
+  ],
+  "aliases": [
+    "CTAE"
+  ],
+  "wikidata": "Q1117065",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1958",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "antarctica"
+    },
+    {
+      "type": "related",
+      "to": "edmund-hillary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Commonwealth Trans-Antarctic Expedition (Q1117065)",
+      "url": "https://www.wikidata.org/wiki/Q1117065",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Commonwealth Trans-Antarctic Expedition",
+      "url": "https://en.wikipedia.org/wiki/Commonwealth_Trans-Antarctic_Expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

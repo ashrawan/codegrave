@@ -1,0 +1,48 @@
+{
+  "id": "giant-panda",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Giant panda",
+      "from": "-2000000"
+    }
+  ],
+  "summary": "A black and white bear of the bamboo forests of central China that eats almost only bamboo. Once endangered, it has become a symbol of conservation as its numbers have grown.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Ailuropoda melanoleuca",
+    "panda",
+    "panda bear",
+    "giant panda bear"
+  ],
+  "wikidata": "Q33602",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Giant panda (Q33602)",
+      "url": "https://www.wikidata.org/wiki/Q33602",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Giant panda",
+      "url": "https://en.wikipedia.org/wiki/Giant_panda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

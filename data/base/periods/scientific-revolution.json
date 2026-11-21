@@ -1,0 +1,53 @@
+{
+  "id": "scientific-revolution",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Scientific Revolution",
+      "from": "1543"
+    }
+  ],
+  "summary": "The period in which new methods and discoveries changed views of nature, from Copernicus's Sun-centred model in 1543 to Newton's Principia in 1687.",
+  "labels": [
+    "astronomy",
+    "physics"
+  ],
+  "wikidata": "Q214078",
+  "events": [
+    {
+      "type": "born",
+      "date": "1543",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1687",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Scientific Revolution (Q214078)",
+      "url": "https://www.wikidata.org/wiki/Q214078",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Scientific Revolution",
+      "url": "https://en.wikipedia.org/wiki/Scientific_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

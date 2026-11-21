@@ -1,0 +1,52 @@
+{
+  "id": "russian-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Russian Revolution",
+      "from": "1917"
+    }
+  ],
+  "summary": "The 1917 revolutions in Russia overthrew Tsar Nicholas II and then brought the Bolsheviks under Lenin to power. They led to civil war and the creation of the Soviet Union.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q8729",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1923",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russian Revolution (Q8729)",
+      "url": "https://www.wikidata.org/wiki/Q8729",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russian Revolution",
+      "url": "https://en.wikipedia.org/wiki/Russian_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

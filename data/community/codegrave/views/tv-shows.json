@@ -1,0 +1,91 @@
+{
+  "id": "tv-shows",
+  "name": "TV Shows",
+  "description": "The series people stayed home for, from I Love Lucy and Star Trek to The Simpsons, Friends, Breaking Bad and Squid Game.",
+  "category": "arts",
+  "labels": [
+    "television"
+  ],
+  "tags": [
+    "tv shows",
+    "television",
+    "series",
+    "sitcoms",
+    "friends",
+    "the simpsons",
+    "netflix",
+    "drama"
+  ],
+  "entries": [
+    "the-ed-sullivan-show",
+    "telenovela",
+    "i-love-lucy",
+    "colour-television",
+    "the-twilight-zone-1959",
+    "doctor-who",
+    "star-trek-original-series",
+    "monty-pythons-flying-circus",
+    "sesame-street",
+    "mash-tv",
+    "fawlty-towers",
+    "the-muppet-show",
+    "roots-miniseries",
+    "dallas-tv",
+    "life-on-earth",
+    "cosmos-a-personal-voyage",
+    "hill-street-blues",
+    "oshin",
+    "ramayan-1987",
+    "seinfeld",
+    "the-simpsons",
+    "twin-peaks",
+    "the-x-files",
+    "friends-tv",
+    "netflix",
+    "the-sopranos",
+    "the-wire",
+    "planet-earth-2006",
+    "mad-men",
+    "breaking-bad",
+    "game-of-thrones",
+    "money-heist",
+    "squid-game"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-hits",
+      "name": "The first hits",
+      "from": 1948,
+      "to": 1959,
+      "note": "A small screen enters homes, bringing live variety, new sitcoms filmed for repeat, and the first drama anthologies. Colour television arrives in the 1950s."
+    },
+    {
+      "id": "the-1960s-and-1970s",
+      "name": "The 1960s and 1970s",
+      "from": 1960,
+      "to": 1979,
+      "note": "Space adventures, satire, children's learning and the epic miniseries Roots show how many people can watch one show at once."
+    },
+    {
+      "id": "the-1980s-and-1990s",
+      "name": "The 1980s and 1990s",
+      "from": 1980,
+      "to": 1998,
+      "note": "Big-cast dramas, cartoons for adults, natural-history landmarks and sitcoms about nothing reshape the schedule, and drama starts to feel like a novel. Telenovelas and Japan's Oshin win huge audiences at home and abroad."
+    },
+    {
+      "id": "cable-dramas",
+      "name": "Cable dramas",
+      "from": 1999,
+      "to": 2012,
+      "note": "Pay channels let writers tell long, grim, complex stories, and critics begin to speak of television as the equal of film."
+    },
+    {
+      "id": "the-streaming-age",
+      "name": "The streaming age",
+      "from": 2013,
+      "to": 2026,
+      "note": "Netflix and other streaming services and global hits remove the weekly schedule, and a Spanish show and a fantasy epic find audiences in every country."
+    }
+  ]
+}

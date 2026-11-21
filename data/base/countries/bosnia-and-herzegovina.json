@@ -1,0 +1,63 @@
+{
+  "id": "bosnia-and-herzegovina",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Bosnia and Herzegovina",
+      "from": "1992"
+    }
+  ],
+  "summary": "A Balkan country that declared independence from Yugoslavia in 1992. A war of over three years followed, and the Dayton Agreement of 1995 set up two entities within one state.",
+  "labels": [
+    "independence",
+    "war"
+  ],
+  "aliases": [
+    "Bosnia-Herzegovina",
+    "ba",
+    "Bosnia and Hercegovina",
+    "B&H"
+  ],
+  "wikidata": "Q225",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-03-06",
+      "precision": "day",
+      "note": "Dated from independence in 1992. A medieval Bosnian banate and kingdom existed from the twelfth century until the Ottoman conquest of 1463."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bosnia and Herzegovina (Q225)",
+      "url": "https://www.wikidata.org/wiki/Q225",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bosnia and Herzegovina",
+      "url": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

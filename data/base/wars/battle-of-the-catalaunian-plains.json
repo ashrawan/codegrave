@@ -1,0 +1,61 @@
+{
+  "id": "battle-of-the-catalaunian-plains",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of the Catalaunian Plains",
+      "from": "0451"
+    }
+  ],
+  "summary": "A battle in Gaul between the Huns under Attila and an alliance of Romans and Visigoths. Attila was stopped and turned back, though he raided Italy the next year.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of the Maureaco Fields",
+    "Battle of Catalaunian",
+    "Battle of Maurica"
+  ],
+  "wikidata": "Q139808",
+  "events": [
+    {
+      "type": "born",
+      "date": "0451-06-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0451-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "fall-of-the-western-roman-empire"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of the Maureaco Fields (Q139808)",
+      "url": "https://www.wikidata.org/wiki/Q139808",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of the Catalaunian Plains",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Catalaunian_Plains",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

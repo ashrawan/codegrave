@@ -1,7 +1,7 @@
-name: New thing
-description: Something is missing from the timeline.
+name: New entry
+description: Someone or something is missing from the encyclopedia.
 title: "Add: "
-labels: ["data", "new thing"]
+labels: ["data", "new entry"]
 body:
   - type: input
     id: name
@@ -12,20 +12,20 @@ body:
   - type: input
     id: category
     attributes:
-      label: What kind of thing is it?
-      description: For example a phone, a game console, a website, a programming language, an AI assistant. A guess is fine; the full list is in data/categories.json.
+      label: What kind of entry is it?
+      description: For example a scientist, a city, a war, a book, a species, a ship, a programming language. A guess is fine; the full list is in data/categories.json.
   - type: textarea
     id: why
     attributes:
       label: Why it belongs
-      description: What it was, and why it matters in the history of computing.
+      description: Who or what it is, and why a general encyclopedia would have it.
     validations:
       required: true
   - type: textarea
     id: dates
     attributes:
       label: Key dates and sources
-      description: First public release, official end if any, and links that back them up.
+      description: When it began (birth, founding, first release) and when it ended, if it has, with links that back the dates up.
   - type: checkboxes
     id: pr
     attributes:

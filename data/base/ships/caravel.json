@@ -1,0 +1,49 @@
+{
+  "id": "caravel",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Caravel",
+      "from": "1440"
+    }
+  ],
+  "summary": "A small, light, manoeuvrable ship developed by the Portuguese in the fifteenth century. It could sail close to the wind, which made it ideal for the voyages down the African coast.",
+  "labels": [
+    "transport",
+    "exploration"
+  ],
+  "wikidata": "Q169560",
+  "events": [
+    {
+      "type": "born",
+      "date": "1440",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by larger carracks and galleons",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: caravel (Q169560)",
+      "url": "https://www.wikidata.org/wiki/Q169560",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caravel",
+      "url": "https://en.wikipedia.org/wiki/Caravel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

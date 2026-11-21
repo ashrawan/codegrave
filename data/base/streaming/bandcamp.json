@@ -1,0 +1,48 @@
+{
+  "id": "bandcamp",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Bandcamp",
+      "from": "2007"
+    }
+  ],
+  "summary": "Website where musicians sell albums and downloads straight to fans and keep most of the money. It is known for supporting independent artists and for its Bandcamp Friday sales.",
+  "labels": [
+    "music",
+    "media"
+  ],
+  "wikidata": "Q545966",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bandcamp (Q545966)",
+      "url": "https://www.wikidata.org/wiki/Q545966",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bandcamp",
+      "url": "https://en.wikipedia.org/wiki/Bandcamp",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

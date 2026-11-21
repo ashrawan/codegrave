@@ -1,0 +1,51 @@
+{
+  "id": "japanese-battleship-yamato",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Yamato",
+      "from": "1941"
+    }
+  ],
+  "summary": "The largest battleship ever built, commissioned by Japan in 1941. She had the biggest guns ever carried by a warship, but spent most of the war in port and was sunk by aircraft in 1945.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "IJN Yamato"
+  ],
+  "wikidata": "Q215010",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Sunk by American aircraft on a one-way mission",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Yamato (Q215010)",
+      "url": "https://www.wikidata.org/wiki/Q215010",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Japanese battleship Yamato",
+      "url": "https://en.wikipedia.org/wiki/Japanese_battleship_Yamato",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

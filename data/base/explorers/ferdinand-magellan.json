@@ -1,0 +1,59 @@
+{
+  "id": "ferdinand-magellan",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Ferdinand Magellan",
+      "from": "1480"
+    }
+  ],
+  "summary": "Portuguese navigator who led a Spanish fleet of five ships in 1519 to find a western route to the Spice Islands. He found the strait that bears his name and was killed in the Philippines before the voyage was finished.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Fernan de Magalhaes",
+    "Magallanes",
+    "Fernando de Magalhães",
+    "Fernand de Magaglianes",
+    "Hernando de Magallanes"
+  ],
+  "wikidata": "Q1496",
+  "events": [
+    {
+      "type": "born",
+      "date": "1480",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1521-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "magellan-elcano-circumnavigation"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ferdinand Magellan (Q1496)",
+      "url": "https://www.wikidata.org/wiki/Q1496",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ferdinand Magellan",
+      "url": "https://en.wikipedia.org/wiki/Ferdinand_Magellan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

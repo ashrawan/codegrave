@@ -1,0 +1,49 @@
+{
+  "id": "batman",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Batman",
+      "from": "1939"
+    }
+  ],
+  "summary": "Comic book hero created by Bob Kane and Bill Finger, a wealthy man of Gotham City who fights crime in a bat costume without superpowers. Villains such as the Joker are part of the story.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "the Batman",
+    "Bat-Man",
+    "Matches Malone",
+    "Sir Hemingford Grey",
+    "Mordecai Wayne"
+  ],
+  "wikidata": "Q2695156",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-05-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Batman (Q2695156)",
+      "url": "https://www.wikidata.org/wiki/Q2695156",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Batman",
+      "url": "https://en.wikipedia.org/wiki/Batman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

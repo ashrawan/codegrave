@@ -1,0 +1,60 @@
+{
+  "id": "trajan",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Trajan",
+      "from": "0053"
+    }
+  ],
+  "summary": "Roman emperor born in Spain, the first from outside Italy. He conquered Dacia and campaigned in the east, so that the empire reached its greatest size, and he built a famous forum and column in Rome.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Traianus",
+    "Marcus Ulpius Trajan",
+    "Optimus Princeps",
+    "Ulpius Crinitus Traianus",
+    "Caesar Nerva Traianus Germanicus"
+  ],
+  "wikidata": "Q1425",
+  "events": [
+    {
+      "type": "born",
+      "date": "0053-09-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0117-08-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "nerva"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Trajan (Q1425)",
+      "url": "https://www.wikidata.org/wiki/Q1425",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trajan",
+      "url": "https://en.wikipedia.org/wiki/Trajan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

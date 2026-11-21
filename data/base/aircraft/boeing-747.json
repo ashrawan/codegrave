@@ -1,0 +1,54 @@
+{
+  "id": "boeing-747",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Boeing 747",
+      "from": "1969"
+    }
+  ],
+  "maker": "Boeing",
+  "summary": "The first wide-body jetliner, with a distinctive upper deck. It entered service in 1970 and its size opened up cheap long-distance travel. The last one was delivered in January 2023.",
+  "labels": [
+    "transport",
+    "record-holders"
+  ],
+  "aliases": [
+    "Jumbo Jet",
+    "Queen of the Skies"
+  ],
+  "wikidata": "Q179",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-02-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Production ended as twin-engine jets became more efficient",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Boeing 747 (Q179)",
+      "url": "https://www.wikidata.org/wiki/Q179",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boeing 747",
+      "url": "https://en.wikipedia.org/wiki/Boeing_747",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

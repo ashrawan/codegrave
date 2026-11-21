@@ -1,0 +1,101 @@
+{
+  "id": "philosophers",
+  "name": "Philosophers",
+  "description": "The great thinkers of East and West, from Confucius, Socrates and Plato to Kant, Nietzsche and Simone de Beauvoir.",
+  "category": "people",
+  "labels": [
+    "philosophy"
+  ],
+  "tags": [
+    "philosophy",
+    "philosophers",
+    "socrates",
+    "plato",
+    "aristotle",
+    "kant",
+    "nietzsche",
+    "confucius"
+  ],
+  "entries": [
+    "thales",
+    "laozi",
+    "pythagoras",
+    "confucius",
+    "socrates",
+    "plato",
+    "aristotle",
+    "mencius",
+    "zhuangzi",
+    "epicurus",
+    "zeno-of-citium",
+    "marcus-aurelius",
+    "nagarjuna",
+    "augustine-of-hippo",
+    "adi-shankara",
+    "avicenna",
+    "al-ghazali",
+    "averroes",
+    "zhu-xi",
+    "maimonides",
+    "thomas-aquinas",
+    "ibn-khaldun",
+    "niccolo-machiavelli",
+    "wang-yangming",
+    "francis-bacon",
+    "thomas-hobbes",
+    "rene-descartes",
+    "john-locke",
+    "baruch-spinoza",
+    "david-hume",
+    "jean-jacques-rousseau",
+    "immanuel-kant",
+    "mary-wollstonecraft",
+    "georg-hegel",
+    "john-stuart-mill",
+    "soren-kierkegaard",
+    "karl-marx",
+    "friedrich-nietzsche",
+    "mahatma-gandhi",
+    "ludwig-wittgenstein",
+    "jean-paul-sartre",
+    "hannah-arendt",
+    "simone-de-beauvoir"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-philosophy",
+      "name": "Ancient philosophy",
+      "from": -624,
+      "to": 149,
+      "note": "Thales looks for natural causes, Pythagoras finds number in nature, Laozi and Zhuangzi in China turn to the way of nature, Confucius and Mencius ask how to live well together, and in Athens Socrates questions everyone while Plato, Aristotle, Epicurus and Zeno found schools whose ideas outlast their cities."
+    },
+    {
+      "id": "medieval-philosophy",
+      "name": "Medieval philosophy",
+      "from": 150,
+      "to": 1274,
+      "note": "The Stoic emperor Marcus Aurelius writes his private Meditations. Nagarjuna, Augustine, Adi Shankara, Avicenna, Al-Ghazali, Averroes, Maimonides and Aquinas ask how reason and revelation fit together, Zhu Xi remakes Confucian thought, and Greek ideas pass through the Islamic world into Europe."
+    },
+    {
+      "id": "renaissance-and-early-modern",
+      "name": "Renaissance and early modern",
+      "from": 1275,
+      "to": 1704,
+      "note": "Wang Yangming reworks Confucian thought, Ibn Khaldun studies how states rise and fall, and Machiavelli, Bacon, Hobbes, Descartes, Spinoza and Locke seek firm ground for knowledge and government."
+    },
+    {
+      "id": "the-enlightenment-and-the-nineteenth-century",
+      "name": "The Enlightenment and the nineteenth century",
+      "from": 1705,
+      "to": 1883,
+      "note": "Hume, Rousseau, Kant, Wollstonecraft, Hegel, Mill, Kierkegaard and Marx argue about reason, rights, freedom and history in a century of revolutions."
+    },
+    {
+      "id": "the-twentieth-century",
+      "name": "The twentieth century",
+      "from": 1884,
+      "to": 1986,
+      "note": "Nietzsche, Wittgenstein, Sartre, Arendt and Beauvoir ask what meaning is left after science, war and totalitarianism, and what freedom means for each person, while Gandhi's teaching of nonviolent resistance offers a different answer from India."
+    }
+  ]
+}

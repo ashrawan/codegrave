@@ -1,0 +1,60 @@
+{
+  "id": "ethereum",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "Ethereum",
+      "from": "2015"
+    }
+  ],
+  "maker": "Vitalik Buterin and co-founders",
+  "summary": "Blockchain network that runs small programs called smart contracts alongside its currency, ether. Vitalik Buterin proposed it in 2013, and it went live in July 2015.",
+  "labels": [
+    "computing",
+    "economics"
+  ],
+  "aliases": [
+    "ETH",
+    "ethereum.org",
+    "Ethereum blockchain",
+    "Ether",
+    "Ethereum network"
+  ],
+  "wikidata": "Q16783523",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    },
+    {
+      "type": "related",
+      "to": "luminiferous-aether"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ethereum (Q16783523)",
+      "url": "https://www.wikidata.org/wiki/Q16783523",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ethereum",
+      "url": "https://en.wikipedia.org/wiki/Ethereum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "sydney-harbour-bridge",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Sydney Harbour Bridge",
+      "from": "1932"
+    }
+  ],
+  "summary": "Steel arch bridge across Sydney Harbour, nicknamed the Coathanger. It carries trains, cars and walkers, and visitors can climb over the top of the arch.",
+  "labels": [
+    "engineering",
+    "transport"
+  ],
+  "wikidata": "Q54495",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-03-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sydney"
+    },
+    {
+      "type": "in",
+      "to": "new-south-wales"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sydney Harbour Bridge (Q54495)",
+      "url": "https://www.wikidata.org/wiki/Q54495",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sydney Harbour Bridge",
+      "url": "https://en.wikipedia.org/wiki/Sydney_Harbour_Bridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

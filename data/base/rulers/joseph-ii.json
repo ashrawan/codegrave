@@ -1,0 +1,56 @@
+{
+  "id": "joseph-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Joseph II",
+      "from": "1741"
+    }
+  ],
+  "summary": "Holy Roman Emperor from 1765 and ruler of the Habsburg lands, first with his mother Maria Theresa and alone from 1780. He pushed reforms such as religious toleration and the end of serfdom's heaviest duties, but many met resistance.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Joseph II, Holy Roman Emperor",
+    "Josef II"
+  ],
+  "wikidata": "Q76555",
+  "events": [
+    {
+      "type": "born",
+      "date": "1741-03-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1790-02-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "maria-theresa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Joseph II, Holy Roman Emperor (Q76555)",
+      "url": "https://www.wikidata.org/wiki/Q76555",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Joseph II",
+      "url": "https://en.wikipedia.org/wiki/Joseph_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

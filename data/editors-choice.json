@@ -1,12 +1,93 @@
 {
   "default": [
-    "computer-generations"
+    "codegrave/the-space-race",
+    "codegrave/computer-generations"
   ],
-  "featured": [
-    "computer-generations",
-    "ai-history",
-    "endings-2020s",
-    "browser-wars",
-    "killed-by-the-iphone"
+  "topics": [
+    {
+      "id": "history",
+      "name": "History",
+      "views": [
+        "codegrave/first-civilizations",
+        "codegrave/ancient-egypt",
+        "codegrave/ancient-greece",
+        "codegrave/ancient-rome",
+        "codegrave/chinese-dynasties",
+        "codegrave/history-of-india",
+        "codegrave/great-empires",
+        "codegrave/wonders-of-the-world",
+        "codegrave/the-vikings",
+        "codegrave/the-middle-ages",
+        "codegrave/aztecs-maya-and-incas",
+        "codegrave/the-renaissance",
+        "codegrave/age-of-exploration",
+        "codegrave/british-kings-and-queens",
+        "codegrave/french-revolution-and-napoleon",
+        "codegrave/industrial-revolution",
+        "codegrave/us-presidents",
+        "codegrave/american-history",
+        "codegrave/world-war-1",
+        "codegrave/world-war-2",
+        "codegrave/the-cold-war",
+        "codegrave/great-disasters"
+      ]
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "views": [
+        "codegrave/dinosaurs",
+        "codegrave/history-of-the-earth",
+        "codegrave/human-evolution",
+        "codegrave/extinct-animals",
+        "codegrave/the-solar-system",
+        "codegrave/the-space-race",
+        "codegrave/space-exploration",
+        "codegrave/great-scientists",
+        "codegrave/medicine",
+        "codegrave/pandemics"
+      ]
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "views": [
+        "codegrave/computer-generations",
+        "codegrave/the-internet",
+        "codegrave/browser-wars",
+        "codegrave/social-media",
+        "codegrave/video-games",
+        "codegrave/mobile-phones",
+        "codegrave/programming-languages",
+        "codegrave/operating-systems",
+        "codegrave/ai-history",
+        "codegrave/apple",
+        "codegrave/google",
+        "codegrave/microsoft",
+        "codegrave/discontinued-tech",
+        "codegrave/inventions",
+        "codegrave/cars",
+        "codegrave/aviation"
+      ]
+    },
+    {
+      "id": "culture",
+      "name": "Culture",
+      "views": [
+        "codegrave/famous-paintings",
+        "codegrave/classical-music",
+        "codegrave/rock-and-pop",
+        "codegrave/movies",
+        "codegrave/tv-shows",
+        "codegrave/famous-books",
+        "codegrave/comics-and-superheroes",
+        "codegrave/anime-and-manga",
+        "codegrave/philosophers",
+        "codegrave/world-religions",
+        "codegrave/football",
+        "codegrave/the-olympic-games",
+        "codegrave/greatest-athletes"
+      ]
+    }
   ]
 }

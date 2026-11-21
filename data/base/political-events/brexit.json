@@ -1,0 +1,57 @@
+{
+  "id": "brexit",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Brexit",
+      "from": "2016"
+    }
+  ],
+  "summary": "The United Kingdom's departure from the European Union, decided in a 2016 referendum. The country left on 31 January 2020, and a transition period ended on 31 December 2020.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "British exit",
+    "United Kingdom's withdrawal from the EU",
+    "British withdrawal from the EU"
+  ],
+  "wikidata": "Q7888194",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2020-01-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brexit (Q7888194)",
+      "url": "https://www.wikidata.org/wiki/Q7888194",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brexit",
+      "url": "https://en.wikipedia.org/wiki/Brexit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

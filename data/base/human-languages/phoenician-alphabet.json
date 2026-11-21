@@ -1,0 +1,59 @@
+{
+  "id": "phoenician-alphabet",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Phoenician alphabet",
+      "from": "-1050"
+    }
+  ],
+  "summary": "A set of about twenty-two letters for consonants, used by traders of Phoenician cities such as Tyre and Byblos. It was the ancestor of the Greek, Latin, Hebrew and Arabic alphabets.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Phoenician script",
+    "Early Linear script",
+    "Phoenician abjad",
+    "Phnx"
+  ],
+  "wikidata": "Q26752",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1050",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0150",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Greek, Aramaic and Latin writing after the Phoenician cities were absorbed by empires",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "phoenicia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Phoenician script (Q26752)",
+      "url": "https://www.wikidata.org/wiki/Q26752",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Phoenician alphabet",
+      "url": "https://en.wikipedia.org/wiki/Phoenician_alphabet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

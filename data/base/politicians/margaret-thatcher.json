@@ -1,0 +1,52 @@
+{
+  "id": "margaret-thatcher",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Margaret Thatcher",
+      "from": "1925"
+    }
+  ],
+  "summary": "British prime minister from 1979 to 1990, the first woman to hold the office. She sold state-owned industries, curbed the power of trade unions, and led Britain in the Falklands War of 1982.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q7416",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-10-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2013-04-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Margaret Thatcher (Q7416)",
+      "url": "https://www.wikidata.org/wiki/Q7416",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Margaret Thatcher",
+      "url": "https://en.wikipedia.org/wiki/Margaret_Thatcher",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

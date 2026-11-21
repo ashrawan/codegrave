@@ -1,0 +1,48 @@
+{
+  "id": "bohemian-rhapsody-song",
+  "category": "music",
+  "names": [
+    {
+      "name": "Bohemian Rhapsody",
+      "from": "1975"
+    }
+  ],
+  "maker": "Queen",
+  "summary": "Song by the band Queen that runs about six minutes and moves from ballad through mock opera to hard rock with no repeating chorus. A promotional video helped it to the top of the British chart for weeks in 1975 and 1976.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q187745",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "queen-band"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bohemian Rhapsody (Q187745)",
+      "url": "https://www.wikidata.org/wiki/Q187745",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bohemian Rhapsody",
+      "url": "https://en.wikipedia.org/wiki/Bohemian_Rhapsody",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

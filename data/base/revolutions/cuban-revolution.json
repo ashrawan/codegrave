@@ -1,0 +1,52 @@
+{
+  "id": "cuban-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Cuban Revolution",
+      "from": "1953"
+    }
+  ],
+  "summary": "The armed movement led by Fidel Castro, Che Guevara and others that overthrew the Cuban president Fulgencio Batista. Castro's government became communist and allied with the Soviet Union.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11264",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1959-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cuban Revolution (Q11264)",
+      "url": "https://www.wikidata.org/wiki/Q11264",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cuban Revolution",
+      "url": "https://en.wikipedia.org/wiki/Cuban_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

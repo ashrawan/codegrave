@@ -1,0 +1,51 @@
+{
+  "id": "pink-floyd",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Pink Floyd",
+      "from": "1965"
+    }
+  ],
+  "summary": "English band formed in London who moved from psychedelic rock to long concept albums such as The Dark Side of the Moon and The Wall, known for their stage shows and effects.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "The Pink Floyd",
+    "The Pink Floyd Sound"
+  ],
+  "wikidata": "Q2306",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "2014",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pink Floyd (Q2306)",
+      "url": "https://www.wikidata.org/wiki/Q2306",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pink Floyd",
+      "url": "https://en.wikipedia.org/wiki/Pink_Floyd",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

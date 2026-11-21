@@ -1,0 +1,53 @@
+{
+  "id": "messerschmitt-me-262",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Messerschmitt Me 262",
+      "from": "1942"
+    }
+  ],
+  "summary": "The first jet fighter to see combat, flown by Germany near the end of the Second World War. It was much faster than propeller fighters but arrived too late and in too few numbers to change the war.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "aliases": [
+    "Messerschmitt Me 262 Schwalbe",
+    "Me 262"
+  ],
+  "wikidata": "Q140254",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Production ended with Germany's defeat",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Messerschmitt Me 262 (Q140254)",
+      "url": "https://www.wikidata.org/wiki/Q140254",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Messerschmitt Me 262",
+      "url": "https://en.wikipedia.org/wiki/Messerschmitt_Me_262",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,61 @@
+{
+  "id": "islamic-golden-age",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Islamic Golden Age",
+      "from": "0750"
+    }
+  ],
+  "summary": "A long period in which scholars in cities such as Baghdad, Cairo and Córdoba advanced mathematics, medicine, astronomy and philosophy. It is often dated to end with the Mongol sack of Baghdad.",
+  "labels": [
+    "religion",
+    "education"
+  ],
+  "aliases": [
+    "medieval Islam",
+    "Golden Age of Islam"
+  ],
+  "wikidata": "Q745799",
+  "events": [
+    {
+      "type": "born",
+      "date": "0750",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1258",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "baghdad"
+    },
+    {
+      "type": "in",
+      "to": "cairo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Islamic Golden Age (Q745799)",
+      "url": "https://www.wikidata.org/wiki/Q745799",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Islamic Golden Age",
+      "url": "https://en.wikipedia.org/wiki/Islamic_Golden_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

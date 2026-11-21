@@ -1,0 +1,51 @@
+{
+  "id": "triceratops",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Triceratops",
+      "from": "-68000000"
+    }
+  ],
+  "summary": "A plant-eating dinosaur of late Cretaceous North America with a bony neck frill and three horns on its face. It shared its habitat with Tyrannosaurus and is one of the last dinosaurs known.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Triceratopses"
+  ],
+  "wikidata": "Q14384",
+  "events": [
+    {
+      "type": "born",
+      "date": "-68000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-65000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Wiped out in the mass extinction at the end of the Cretaceous",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Triceratops (Q14384)",
+      "url": "https://www.wikidata.org/wiki/Q14384",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Triceratops",
+      "url": "https://en.wikipedia.org/wiki/Triceratops",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

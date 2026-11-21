@@ -1,0 +1,58 @@
+{
+  "id": "oldowan-tools",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Oldowan stone tools",
+      "from": "-2600000"
+    }
+  ],
+  "summary": "The oldest known stone toolmaking tradition, in which early humans knocked flakes off pebbles to get sharp edges for cutting meat and scraping hides. It began in East Africa and lasted for roughly a million years.",
+  "labels": [
+    "firsts",
+    "engineering"
+  ],
+  "wikidata": "Q746287",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2600000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1700000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Gradually replaced by the more refined Acheulean hand axes",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "africa"
+    },
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Oldowan (Q746287)",
+      "url": "https://www.wikidata.org/wiki/Q746287",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oldowan",
+      "url": "https://en.wikipedia.org/wiki/Oldowan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

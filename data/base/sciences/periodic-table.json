@@ -1,0 +1,54 @@
+{
+  "id": "periodic-table",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Periodic table",
+      "from": "1869"
+    }
+  ],
+  "summary": "The chart of chemical elements arranged by atomic number so that elements with similar properties line up. Dmitri Mendeleev published his version in 1869 and left gaps for elements that were yet to be found.",
+  "labels": [
+    "chemistry"
+  ],
+  "aliases": [
+    "Mendeleev's periodic table",
+    "periodic table of chemical elements",
+    "periodic table of elements",
+    "the periodic table",
+    "periodic classification of elements"
+  ],
+  "wikidata": "Q10693",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869-03-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "dmitri-mendeleev"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: periodic table (Q10693)",
+      "url": "https://www.wikidata.org/wiki/Q10693",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Periodic table",
+      "url": "https://en.wikipedia.org/wiki/Periodic_table",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

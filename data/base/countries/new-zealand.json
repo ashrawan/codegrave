@@ -1,0 +1,64 @@
+{
+  "id": "new-zealand",
+  "category": "countries",
+  "names": [
+    {
+      "name": "New Zealand",
+      "from": "1907"
+    }
+  ],
+  "summary": "An island nation in the South Pacific, home to the Maori people and a British colony from 1840. In 1893 it became the first self-governing country to give women the vote in national elections, and it became a dominion in 1907.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Dominion of New Zealand",
+    "nz",
+    "Aotearoa New Zealand"
+  ],
+  "wikidata": "Q664",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907-09-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New Zealand (Q664)",
+      "url": "https://www.wikidata.org/wiki/Q664",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Zealand",
+      "url": "https://en.wikipedia.org/wiki/New_Zealand",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

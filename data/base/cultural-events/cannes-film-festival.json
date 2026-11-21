@@ -1,0 +1,51 @@
+{
+  "id": "cannes-film-festival",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Cannes Film Festival",
+      "from": "1946"
+    }
+  ],
+  "summary": "One of the most important film festivals in the world, held each spring on the French Riviera. Its top prize is the Palme d'Or, and the event has launched many film-makers' careers.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Cannes International Film Festival",
+    "Festival de Cannes"
+  ],
+  "wikidata": "Q42369",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cannes Film Festival (Q42369)",
+      "url": "https://www.wikidata.org/wiki/Q42369",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cannes Film Festival",
+      "url": "https://en.wikipedia.org/wiki/Cannes_Film_Festival",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

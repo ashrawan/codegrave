@@ -1,0 +1,52 @@
+{
+  "id": "mongol-conquest-of-the-khwarazmian-empire",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Mongol conquest of Khwarazmia",
+      "from": "1219"
+    }
+  ],
+  "summary": "Genghis Khan's invasion of the Khwarazmian Empire in Central Asia, after its governor killed Mongol envoys and traders. Great cities such as Samarkand and Bukhara fell, and the empire collapsed.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q431177",
+  "events": [
+    {
+      "type": "born",
+      "date": "1219",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1221",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "mongol-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mongol invasion of Khwarazmian Empire and Eastern Iran (Q431177)",
+      "url": "https://www.wikidata.org/wiki/Q431177",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mongol invasion of the Khwarazmian Empire",
+      "url": "https://en.wikipedia.org/wiki/Mongol_invasion_of_the_Khwarazmian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

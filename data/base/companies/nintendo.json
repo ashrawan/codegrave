@@ -1,0 +1,56 @@
+{
+  "id": "nintendo",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Nintendo",
+      "from": "1889"
+    }
+  ],
+  "maker": "Fusajiro Yamauchi",
+  "summary": "Japanese company that began by making hanafuda playing cards in Kyoto. It turned to toys and then video games, making consoles such as the Game Boy and the Switch and characters such as Mario.",
+  "labels": [
+    "business",
+    "games"
+  ],
+  "aliases": [
+    "Nintendō kabushiki-gaisha"
+  ],
+  "wikidata": "Q8093",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kyoto"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nintendo (Q8093)",
+      "url": "https://www.wikidata.org/wiki/Q8093",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nintendo",
+      "url": "https://en.wikipedia.org/wiki/Nintendo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

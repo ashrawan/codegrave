@@ -1,0 +1,56 @@
+{
+  "id": "battle-of-midway",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Midway",
+      "from": "1942"
+    }
+  ],
+  "summary": "A naval battle in the Pacific in which American aircraft sank four Japanese aircraft carriers. It was a turning point of the war in the Pacific.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q173034",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-06-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1942-06-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "empire-of-japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Midway (Q173034)",
+      "url": "https://www.wikidata.org/wiki/Q173034",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Midway",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Midway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

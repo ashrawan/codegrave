@@ -1,0 +1,55 @@
+{
+  "id": "titan-supercomputer",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "Titan",
+      "from": "2012"
+    }
+  ],
+  "maker": "Cray",
+  "summary": "Supercomputer at Oak Ridge National Laboratory in the United States that used graphics chips alongside ordinary processors. It topped the world list in 2012 and showed how useful graphics chips are for science.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q44070",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2020",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Decommissioned after newer machines took its place",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Titan (Q44070)",
+      "url": "https://www.wikidata.org/wiki/Q44070",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Titan (supercomputer)",
+      "url": "https://en.wikipedia.org/wiki/Titan_(supercomputer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

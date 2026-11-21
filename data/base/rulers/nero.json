@@ -1,0 +1,59 @@
+{
+  "id": "nero",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Nero",
+      "from": "0037"
+    }
+  ],
+  "summary": "Last emperor of the Julio-Claudian line. He ruled as a young man and was an enthusiast of music and theatre. The fire of Rome happened in his reign, and a revolt by generals ended with his suicide.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Nero Claudius Caesar Drusus Germanicus",
+    "Nero Claudius Caesar Augustus Germanicus",
+    "Nero Claudius Drusus Germanicus Caesar",
+    "Emperor of Rome Nero",
+    "Nero Claudius Drusus Germanicus"
+  ],
+  "wikidata": "Q1413",
+  "events": [
+    {
+      "type": "born",
+      "date": "0037-12-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0068-06-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "claudius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nero (Q1413)",
+      "url": "https://www.wikidata.org/wiki/Q1413",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nero",
+      "url": "https://en.wikipedia.org/wiki/Nero",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

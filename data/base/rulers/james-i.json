@@ -1,0 +1,67 @@
+{
+  "id": "james-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "James VI and I",
+      "from": "1566"
+    }
+  ],
+  "summary": "King of Scotland who also became king of England in 1603, joining the two crowns in one person. He backed a new English translation of the Bible, which still bears his name.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "James VI, King of Scotland",
+    "James VI & I",
+    "James I, King of England James I",
+    "James I and VI",
+    "James I and James VI"
+  ],
+  "wikidata": "Q79972",
+  "events": [
+    {
+      "type": "born",
+      "date": "1566-06-19",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1603",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of Scotland as James VI from 1567, and King of England from 1603 to 1625."
+    },
+    {
+      "type": "ended",
+      "date": "1625-03-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "mary-queen-of-scots"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James VI and I (Q79972)",
+      "url": "https://www.wikidata.org/wiki/Q79972",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James VI and I",
+      "url": "https://en.wikipedia.org/wiki/James_VI_and_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

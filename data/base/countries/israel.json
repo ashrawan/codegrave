@@ -1,0 +1,74 @@
+{
+  "id": "israel",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Israel",
+      "from": "1948"
+    }
+  ],
+  "summary": "A country on the eastern Mediterranean, declared in 1948 as a Jewish state at the end of the British Mandate. Its borders and the status of Jerusalem remain disputed in the wider conflict with Palestinians.",
+  "labels": [
+    "independence",
+    "religion"
+  ],
+  "aliases": [
+    "ISR",
+    "State of Israel",
+    "il",
+    "Yisrael"
+  ],
+  "wikidata": "Q801",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-05-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "david-ben-gurion"
+    },
+    {
+      "type": "part_of",
+      "to": "asia"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "cern"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Israel (Q801)",
+      "url": "https://www.wikidata.org/wiki/Q801",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Israel",
+      "url": "https://en.wikipedia.org/wiki/Israel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

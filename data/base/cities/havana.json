@@ -1,0 +1,56 @@
+{
+  "id": "havana",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Havana",
+      "from": "1519"
+    }
+  ],
+  "summary": "Capital of Cuba, founded by the Spanish in 1519 and later a major port for treasure fleets. Its old town is a World Heritage site, and it was the centre of Cuba's 1959 revolution.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "La Habana",
+    "Habana",
+    "Havana, Cuba"
+  ],
+  "wikidata": "Q1563",
+  "events": [
+    {
+      "type": "born",
+      "date": "1519",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    },
+    {
+      "type": "in",
+      "to": "spanish-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Havana (Q1563)",
+      "url": "https://www.wikidata.org/wiki/Q1563",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Havana",
+      "url": "https://en.wikipedia.org/wiki/Havana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

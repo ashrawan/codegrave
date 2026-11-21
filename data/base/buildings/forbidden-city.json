@@ -1,0 +1,54 @@
+{
+  "id": "forbidden-city",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Forbidden City",
+      "from": "1420"
+    }
+  ],
+  "summary": "Palace complex in the middle of Beijing, home to Ming and Qing emperors for almost five hundred years. It has hundreds of buildings and is now a museum.",
+  "labels": [
+    "politics",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Zijin Cheng",
+    "Gugong",
+    "Old Palace (Beijing)",
+    "Imperial Palace"
+  ],
+  "wikidata": "Q80290",
+  "events": [
+    {
+      "type": "born",
+      "date": "1420",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Forbidden City (Q80290)",
+      "url": "https://www.wikidata.org/wiki/Q80290",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Forbidden City",
+      "url": "https://en.wikipedia.org/wiki/Forbidden_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "proterozoic",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Proterozoic",
+      "from": "-2500000000"
+    }
+  ],
+  "summary": "The long eon between 2.5 billion and about 539 million years ago. Oxygen built up in the air, complex cells appeared, supercontinents formed and broke apart, and the first animals emerged near its end.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Proterozoic Eon"
+  ],
+  "wikidata": "Q104162",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2500000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-538800000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Proterozoic (Q104162)",
+      "url": "https://www.wikidata.org/wiki/Q104162",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Proterozoic",
+      "url": "https://en.wikipedia.org/wiki/Proterozoic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

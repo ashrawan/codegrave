@@ -1,0 +1,83 @@
+{
+  "id": "great-disasters",
+  "name": "Great Disasters",
+  "description": "Eruptions, earthquakes, fires, shipwrecks and accidents that the world remembers, from Pompeii to Fukushima.",
+  "category": "events",
+  "tags": [
+    "disasters",
+    "titanic",
+    "chernobyl",
+    "pompeii",
+    "earthquakes",
+    "tsunami",
+    "hindenburg"
+  ],
+  "entries": [
+    "vesuvius-79",
+    "shaanxi-earthquake-1556",
+    "great-fire-of-london",
+    "lisbon-earthquake-1755",
+    "tambora-1815",
+    "great-chicago-fire",
+    "tay-bridge-disaster",
+    "krakatoa-1883",
+    "yellow-river-flood-1887",
+    "johnstown-flood",
+    "galveston-hurricane-1900",
+    "san-francisco-earthquake-1906",
+    "tunguska-event",
+    "sinking-of-the-titanic",
+    "halifax-explosion",
+    "great-kanto-earthquake",
+    "dust-bowl",
+    "china-floods-1931",
+    "hindenburg-disaster",
+    "great-smog-of-london",
+    "valdivia-earthquake-1960",
+    "alaska-earthquake-1964",
+    "bhola-cyclone",
+    "tangshan-earthquake",
+    "tenerife-airport-disaster",
+    "three-mile-island",
+    "bhopal-disaster",
+    "challenger-disaster",
+    "chernobyl-disaster",
+    "columbia-disaster",
+    "indian-ocean-tsunami-2004",
+    "hurricane-katrina",
+    "sichuan-earthquake-2008",
+    "haiti-earthquake-2010",
+    "tohoku-earthquake-2011",
+    "fukushima-accident"
+  ],
+  "checkpoints": [
+    {
+      "id": "vesuvius-to-the-great-fire-of-london",
+      "name": "Vesuvius to the Great Fire of London",
+      "from": 79,
+      "to": 1700,
+      "note": "Volcanoes, earthquakes and city fires dominate the early record. Vesuvius buries Pompeii, the 1556 Shaanxi earthquake in China is among the deadliest ever recorded, and the Great Fire of London burns the old city and leads to a rebuilt, more stony capital."
+    },
+    {
+      "id": "lisbon-to-tunguska",
+      "name": "Lisbon to Tunguska",
+      "from": 1701,
+      "to": 1911,
+      "note": "Earthquakes, eruptions and floods are now written about across the world, and engineers learn from collapsing bridges and dams. Lisbon, Krakatoa and Galveston shape the first modern ideas of preparing for disaster, while the Yellow River flood of 1887 shows how rivers can kill on a vast scale."
+    },
+    {
+      "id": "titanic-and-hindenburg",
+      "name": "Titanic and Hindenburg",
+      "from": 1912,
+      "to": 1975,
+      "note": "Ships, airships and chemical works fail on a huge scale, and giant quakes in Chile and Alaska help prove plate tectonics. The great Chinese floods of 1931 and the Bhola cyclone of 1970 kill huge numbers. Governments begin to write new safety rules after each disaster."
+    },
+    {
+      "id": "chernobyl-to-fukushima",
+      "name": "Chernobyl to Fukushima",
+      "from": 1976,
+      "to": 2011,
+      "note": "Nuclear plants, spacecraft and chemical factories bring risks no earlier century knew, while the world watches tsunamis and storms on live television and learns the cost of weak warnings. The Tangshan quake of 1976 and the Sichuan and Haiti quakes of 2008 and 2010 show how weak buildings raise the toll."
+    }
+  ]
+}

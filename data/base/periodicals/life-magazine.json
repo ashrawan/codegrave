@@ -1,0 +1,53 @@
+{
+  "id": "life-magazine",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Life",
+      "from": "1936"
+    }
+  ],
+  "summary": "American magazine that built its fame on large photographs, bought by Henry Luce in 1936. Its photo essays shaped how Americans saw the war and the world. It was revived in other forms until 2007.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q463198",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "The weekly closed in 1972; later monthly and supplement versions also ended",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Life (Q463198)",
+      "url": "https://www.wikidata.org/wiki/Q463198",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Life (magazine)",
+      "url": "https://en.wikipedia.org/wiki/Life_(magazine)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "knossos",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Knossos",
+      "from": "-7000"
+    }
+  ],
+  "summary": "Large Bronze Age site on Crete, linked with the Minoan civilisation. Arthur Evans dug up and partly rebuilt its palace from 1900. People lived there from the Neolithic, and the palace was abandoned in the late Bronze Age.",
+  "labels": [
+    "architecture",
+    "exploration"
+  ],
+  "aliases": [
+    "Cnossus",
+    "Mint of Cnossus"
+  ],
+  "wikidata": "Q173527",
+  "events": [
+    {
+      "type": "born",
+      "date": "-7000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1100",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Palace damaged and abandoned in the Late Bronze Age; the causes are debated",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Knossos (Q173527)",
+      "url": "https://www.wikidata.org/wiki/Q173527",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Knossos",
+      "url": "https://en.wikipedia.org/wiki/Knossos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

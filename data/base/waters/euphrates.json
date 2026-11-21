@@ -1,0 +1,52 @@
+{
+  "id": "euphrates",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Euphrates",
+      "from": "-5000000"
+    }
+  ],
+  "summary": "The longest river of western Asia, flowing from Turkey through Syria and Iraq. Early farmers used its floods and canals to feed Sumer and Babylon, and it remains a lifeline for the region today.",
+  "labels": [
+    "environment",
+    "exploration"
+  ],
+  "wikidata": "Q34589",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    },
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Euphrates (Q34589)",
+      "url": "https://www.wikidata.org/wiki/Q34589",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Euphrates",
+      "url": "https://en.wikipedia.org/wiki/Euphrates",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "chernobyl-disaster",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Chernobyl disaster",
+      "from": "1986"
+    }
+  ],
+  "summary": "A reactor exploded at a nuclear power plant in the Soviet Union, now Ukraine, and spread radioactive material across Europe. Tens of thousands of people were moved away, and a large zone around the plant is still closed.",
+  "labels": [
+    "energy",
+    "environment"
+  ],
+  "aliases": [
+    "Chernobyl nuclear reactor disaster",
+    "Chernobyl accident",
+    "Chernobyl incident",
+    "Chornobyl nuclear reactor disaster",
+    "Chornobyl disaster"
+  ],
+  "wikidata": "Q486",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-04-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-04-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chernobyl disaster (Q486)",
+      "url": "https://www.wikidata.org/wiki/Q486",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chernobyl disaster",
+      "url": "https://en.wikipedia.org/wiki/Chernobyl_disaster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

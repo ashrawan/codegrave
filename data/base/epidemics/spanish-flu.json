@@ -1,0 +1,54 @@
+{
+  "id": "spanish-flu",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "1918 influenza pandemic",
+      "from": "1918"
+    }
+  ],
+  "summary": "An influenza pandemic that spread around the world at the end of the First World War and infected a large share of humanity. It was called Spanish flu because neutral Spain reported on it freely. Many victims were young adults.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "1918–1920 flu pandemic",
+    "The 1918 flu",
+    "1918 flu pandemic spread",
+    "influenza pandemic of 1918–19",
+    "influenza pandemic of 1918–1919"
+  ],
+  "wikidata": "Q178275",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-01",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1920-12",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: 1918–1920 flu pandemic (Q178275)",
+      "url": "https://www.wikidata.org/wiki/Q178275",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish flu",
+      "url": "https://en.wikipedia.org/wiki/Spanish_flu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "george-w-bush",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "George W. Bush",
+      "from": "1946"
+    }
+  ],
+  "summary": "American politician who was the 43rd president of the United States from 2001 to 2009, and earlier governor of Texas. His presidency saw the September 11 attacks and the wars in Afghanistan and Iraq. He is the son of President George H. W. Bush.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Bush 43",
+    "POTUS 43"
+  ],
+  "wikidata": "Q207",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-07-06",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2001-01-20",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 43rd president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "2009-01-20",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Barack Obama took office."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: George W. Bush (Q207)",
+      "url": "https://www.wikidata.org/wiki/Q207",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George W. Bush",
+      "url": "https://en.wikipedia.org/wiki/George_W._Bush",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

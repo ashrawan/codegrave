@@ -1,0 +1,53 @@
+{
+  "id": "dred-scott-decision",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Dred Scott decision",
+      "from": "1857"
+    }
+  ],
+  "summary": "A United States Supreme Court ruling that held that people of African descent could not be citizens and that Congress could not ban slavery in the territories. It deepened the divide that led to the Civil War.",
+  "labels": [
+    "law",
+    "human-rights"
+  ],
+  "wikidata": "Q690462",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1857",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dred Scott v. Sandford (Q690462)",
+      "url": "https://www.wikidata.org/wiki/Q690462",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dred Scott v. Sandford",
+      "url": "https://en.wikipedia.org/wiki/Dred_Scott_v._Sandford",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

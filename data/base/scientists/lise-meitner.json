@@ -1,0 +1,52 @@
+{
+  "id": "lise-meitner",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Lise Meitner",
+      "from": "1878"
+    }
+  ],
+  "summary": "Austrian-born physicist who, with her nephew Otto Frisch, explained in 1938 that Hahn's experiment showed a uranium nucleus splitting, and named it fission. She had fled Nazi Germany that year. The element meitnerium carries her name.",
+  "labels": [
+    "physics"
+  ],
+  "wikidata": "Q56189",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878-11-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lise Meitner (Q56189)",
+      "url": "https://www.wikidata.org/wiki/Q56189",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lise Meitner",
+      "url": "https://en.wikipedia.org/wiki/Lise_Meitner",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

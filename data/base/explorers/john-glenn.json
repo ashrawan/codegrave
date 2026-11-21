@@ -1,0 +1,50 @@
+{
+  "id": "john-glenn",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "John Glenn",
+      "from": "1921"
+    }
+  ],
+  "summary": "American pilot who in 1962 became the first American to orbit the Earth. He later served as a US senator and, in 1998, flew on the Space Shuttle at the age of 77, the oldest person in space at that time.",
+  "labels": [
+    "space-race"
+  ],
+  "aliases": [
+    "John Herschel Glenn Jr."
+  ],
+  "wikidata": "Q182642",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Glenn (Q182642)",
+      "url": "https://www.wikidata.org/wiki/Q182642",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Glenn",
+      "url": "https://en.wikipedia.org/wiki/John_Glenn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

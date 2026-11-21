@@ -1,0 +1,55 @@
+{
+  "id": "shanghai-tower",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Shanghai Tower",
+      "from": "2014"
+    }
+  ],
+  "summary": "Twisting skyscraper in Shanghai's Pudong district, the tallest building in China. Its spiralling shape reduces the force of the wind and the amount of structural material needed.",
+  "labels": [
+    "architecture",
+    "record-holders"
+  ],
+  "aliases": [
+    "Shanghai Center"
+  ],
+  "wikidata": "Q18547",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-09-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "shanghai"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shanghai Tower (Q18547)",
+      "url": "https://www.wikidata.org/wiki/Q18547",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shanghai Tower",
+      "url": "https://en.wikipedia.org/wiki/Shanghai_Tower",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

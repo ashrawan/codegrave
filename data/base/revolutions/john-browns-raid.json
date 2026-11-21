@@ -1,0 +1,62 @@
+{
+  "id": "john-browns-raid",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "John Brown's raid on Harpers Ferry",
+      "from": "1859"
+    }
+  ],
+  "summary": "Attempt by the abolitionist John Brown and a small band to seize a federal weapons store in Virginia and arm enslaved people. It failed within days and Brown was hanged, but it deepened the split between North and South before the Civil War.",
+  "labels": [
+    "human-rights",
+    "war"
+  ],
+  "aliases": [
+    "John Brown's raid on Harper's Ferry",
+    "John Brown's raid",
+    "The raid on Harper's Ferry"
+  ],
+  "wikidata": "Q6223430",
+  "events": [
+    {
+      "type": "born",
+      "date": "1859-10-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1859-10-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "robert-e-lee"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Brown's raid on Harpers Ferry (Q6223430)",
+      "url": "https://www.wikidata.org/wiki/Q6223430",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Brown's raid on Harpers Ferry",
+      "url": "https://en.wikipedia.org/wiki/John_Brown's_raid_on_Harpers_Ferry",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

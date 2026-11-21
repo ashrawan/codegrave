@@ -1,0 +1,65 @@
+{
+  "id": "hypatia",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Hypatia",
+      "from": "0360"
+    }
+  ],
+  "summary": "Greek mathematician, astronomer and teacher in Alexandria who lectured on Plato and on the heavens. A mob killed her in 415 during political and religious conflict in the city, and her birth year is only an estimate.",
+  "labels": [
+    "mathematics",
+    "astronomy"
+  ],
+  "aliases": [
+    "Hypatia of Alexandria",
+    "Divine Pagan"
+  ],
+  "wikidata": "Q11903",
+  "events": [
+    {
+      "type": "born",
+      "date": "0360",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0415-03",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "ptolemy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hypatia (Q11903)",
+      "url": "https://www.wikidata.org/wiki/Q11903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hypatia",
+      "url": "https://en.wikipedia.org/wiki/Hypatia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

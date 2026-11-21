@@ -1,0 +1,52 @@
+{
+  "id": "radioactivity",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Radioactivity",
+      "from": "1896"
+    }
+  ],
+  "summary": "The spontaneous release of energy and particles from unstable atoms, first noticed by Henri Becquerel in 1896 and studied by Marie and Pierre Curie. Its study led to nuclear physics, medical imaging and nuclear power.",
+  "labels": [
+    "physics",
+    "chemistry"
+  ],
+  "wikidata": "Q11448",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "henri-becquerel"
+    },
+    {
+      "type": "made_by",
+      "to": "pierre-curie"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: radioactivity (Q11448)",
+      "url": "https://www.wikidata.org/wiki/Q11448",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Radioactivity",
+      "url": "https://en.wikipedia.org/wiki/Radioactivity",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

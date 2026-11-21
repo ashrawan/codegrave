@@ -1,0 +1,64 @@
+{
+  "id": "minoan-civilization",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Minoan civilization",
+      "from": "-3000"
+    }
+  ],
+  "summary": "Bronze Age civilisation on the island of Crete, known for the palace at Knossos, vivid wall paintings and an undeciphered script called Linear A. It traded widely across the eastern Mediterranean.",
+  "labels": [
+    "architecture"
+  ],
+  "aliases": [
+    "Minoan civilisation",
+    "Minoan Crete",
+    "Minoan",
+    "Minoans",
+    "Minoan culture"
+  ],
+  "wikidata": "Q134178",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1100",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined after volcanic and other disasters and was taken over by Mycenaean Greeks",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "mycenaean-greece"
+    },
+    {
+      "type": "part_of",
+      "to": "bronze-age"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Minoan civilization (Q134178)",
+      "url": "https://www.wikidata.org/wiki/Q134178",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Minoan civilization",
+      "url": "https://en.wikipedia.org/wiki/Minoan_civilization",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

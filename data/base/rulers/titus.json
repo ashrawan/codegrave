@@ -1,0 +1,60 @@
+{
+  "id": "titus",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Titus",
+      "from": "0039"
+    }
+  ],
+  "summary": "Roman emperor and son of Vespasian. As a general he captured Jerusalem in 70 CE. His brief reign saw the eruption of Vesuvius, which buried Pompeii, and the opening of the Colosseum.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Titus Caesar Vespasianus",
+    "Titus Flavius Vespasianus",
+    "Titus Vespasianus Augustus",
+    "Titus Flavius Sabinus Vespasianus",
+    "Flavius Vespasianus Titus"
+  ],
+  "wikidata": "Q1421",
+  "events": [
+    {
+      "type": "born",
+      "date": "0039-12-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0081-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "vespasian"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Titus (Q1421)",
+      "url": "https://www.wikidata.org/wiki/Q1421",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Titus",
+      "url": "https://en.wikipedia.org/wiki/Titus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-england",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kingdom of England",
+      "from": "0927"
+    }
+  ],
+  "summary": "The English monarchy from its unification under the Wessex kings to the Union with Scotland. It saw the Norman Conquest, Magna Carta, the Tudors and the Civil War, and became a sea power.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "England"
+  ],
+  "wikidata": "Q179876",
+  "events": [
+    {
+      "type": "born",
+      "date": "0927",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1707-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Merged with Scotland to form the Kingdom of Great Britain under the Acts of Union",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of England (Q179876)",
+      "url": "https://www.wikidata.org/wiki/Q179876",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of England",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_England",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

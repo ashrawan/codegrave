@@ -1,0 +1,53 @@
+{
+  "id": "aristotelian-physics",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Aristotelian physics",
+      "from": "-0350"
+    }
+  ],
+  "summary": "Aristotle's account of motion and matter, in which heavy things fall toward the centre of the world and a moving body needs a continual push. It guided European and Islamic scholars until the scientific revolution.",
+  "labels": [
+    "physics"
+  ],
+  "wikidata": "Q1248980",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0350",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1687",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overturned by Galileo and Newton's laws of motion",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "aristotle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aristotelian physics (Q1248980)",
+      "url": "https://www.wikidata.org/wiki/Q1248980",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aristotelian physics",
+      "url": "https://en.wikipedia.org/wiki/Aristotelian_physics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

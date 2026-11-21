@@ -1,0 +1,47 @@
+{
+  "id": "james-joyce",
+  "category": "writers",
+  "names": [
+    {
+      "name": "James Joyce",
+      "from": "1882"
+    }
+  ],
+  "summary": "Irish writer who spent most of his adult life abroad but wrote about Dublin. His novel Ulysses follows one day in the city, and Finnegans Wake uses invented, multilingual wordplay. Both changed what a novel could do.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q6882",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882-02-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941-01-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: James Joyce (Q6882)",
+      "url": "https://www.wikidata.org/wiki/Q6882",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Joyce",
+      "url": "https://en.wikipedia.org/wiki/James_Joyce",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

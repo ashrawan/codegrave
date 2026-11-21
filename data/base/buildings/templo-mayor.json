@@ -1,0 +1,57 @@
+{
+  "id": "templo-mayor",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Templo Mayor",
+      "from": "1325"
+    }
+  ],
+  "summary": "Main temple of the Aztec capital Tenochtitlan, with twin shrines to the gods Huitzilopochtli and Tlaloc. The Spanish destroyed it in 1521, and its remains were found in Mexico City in 1978.",
+  "labels": [
+    "religion",
+    "architecture"
+  ],
+  "aliases": [
+    "Templo Mayor archaeological site"
+  ],
+  "wikidata": "Q774021",
+  "events": [
+    {
+      "type": "born",
+      "date": "1325",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1521",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by the Spanish after they captured Tenochtitlan in 1521",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Templo Mayor (Q774021)",
+      "url": "https://www.wikidata.org/wiki/Q774021",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Templo Mayor",
+      "url": "https://en.wikipedia.org/wiki/Templo_Mayor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "vespa",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Vespa",
+      "from": "1946"
+    }
+  ],
+  "maker": "Piaggio",
+  "summary": "An Italian motor scooter launched by Piaggio in 1946, with a body that shielded the rider from dirt. It gave postwar Europe cheap transport and became linked with youth fashion and Italian style.",
+  "labels": [
+    "transport",
+    "fashion"
+  ],
+  "aliases": [
+    "Piaggio Vespa"
+  ],
+  "wikidata": "Q217673",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-04-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vespa (Q217673)",
+      "url": "https://www.wikidata.org/wiki/Q217673",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vespa",
+      "url": "https://en.wikipedia.org/wiki/Vespa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

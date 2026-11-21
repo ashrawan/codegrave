@@ -1,0 +1,57 @@
+{
+  "id": "fugaku",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "Fugaku",
+      "from": "2020"
+    }
+  ],
+  "maker": "Fujitsu and RIKEN",
+  "summary": "Japanese supercomputer built by Fujitsu and RIKEN with Arm-based processors. It led the world rankings from 2020 and was used for work on medicines and models of the spread of COVID-19.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "aliases": [
+    "Post-K",
+    "RIKEN Fugaku"
+  ],
+  "wikidata": "Q64008087",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    },
+    {
+      "type": "related",
+      "to": "mount-fuji"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fugaku (Q64008087)",
+      "url": "https://www.wikidata.org/wiki/Q64008087",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fugaku (supercomputer)",
+      "url": "https://en.wikipedia.org/wiki/Fugaku_(supercomputer)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "crispr-gene-editing",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "CRISPR gene editing",
+      "from": "2012"
+    }
+  ],
+  "maker": "Jennifer Doudna and Emmanuelle Charpentier",
+  "summary": "A tool that cuts DNA at chosen places, adapted from a defence system in bacteria. Two scientists showed it could edit genes in 2012, and it has led to new research and early treatments for inherited diseases.",
+  "labels": [
+    "biology",
+    "medicine",
+    "nobel-prize"
+  ],
+  "aliases": [
+    "CRISPR-Cas method",
+    "CRISPR/Cas tool",
+    "CRISPR interference",
+    "CRISPR-Cas9",
+    "CRISPR/Cas"
+  ],
+  "wikidata": "Q17310682",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: CRISPR-Cas method (Q17310682)",
+      "url": "https://www.wikidata.org/wiki/Q17310682",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: CRISPR gene editing",
+      "url": "https://en.wikipedia.org/wiki/CRISPR_gene_editing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

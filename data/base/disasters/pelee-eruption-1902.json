@@ -1,0 +1,52 @@
+{
+  "id": "pelee-eruption-1902",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "1902 eruption of Mount Pelée",
+      "from": "1902"
+    }
+  ],
+  "summary": "A volcano on the Caribbean island of Martinique erupted and sent a cloud of hot gas and ash over the port of Saint-Pierre. Almost the whole city was destroyed within minutes, and very few people survived.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q386230",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902-04-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1905-10-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1902 eruption of Mount Pelée (Q386230)",
+      "url": "https://www.wikidata.org/wiki/Q386230",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1902 eruption of Mount Pelée",
+      "url": "https://en.wikipedia.org/wiki/1902_eruption_of_Mount_Pel%C3%A9e",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

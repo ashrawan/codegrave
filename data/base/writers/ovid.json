@@ -1,0 +1,51 @@
+{
+  "id": "ovid",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Ovid",
+      "from": "-0043"
+    }
+  ],
+  "summary": "Roman poet who wrote the Metamorphoses, a long poem retelling myths in which people change into trees, animals and stars. Emperor Augustus sent him into exile far from Rome, where he died.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Publius Ovidius Naso",
+    "P. Ovidius Naso"
+  ],
+  "wikidata": "Q7198",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0043-03-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0017",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ovid (Q7198)",
+      "url": "https://www.wikidata.org/wiki/Q7198",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ovid",
+      "url": "https://en.wikipedia.org/wiki/Ovid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

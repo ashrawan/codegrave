@@ -1,0 +1,72 @@
+{
+  "id": "second-boer-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Boer War",
+      "from": "1899"
+    }
+  ],
+  "summary": "A war between Britain and the two Boer republics of southern Africa, the Transvaal and the Orange Free State. Britain won after guerrilla fighting and camps that held many civilians.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Boer War",
+    "South African War"
+  ],
+  "wikidata": "Q215112",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-10-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1902-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-africa"
+    },
+    {
+      "type": "related",
+      "to": "british-empire"
+    },
+    {
+      "type": "related",
+      "to": "canada"
+    },
+    {
+      "type": "related",
+      "to": "british-raj"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Boer War (Q215112)",
+      "url": "https://www.wikidata.org/wiki/Q215112",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Boer War",
+      "url": "https://en.wikipedia.org/wiki/Second_Boer_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

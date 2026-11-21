@@ -1,0 +1,65 @@
+{
+  "id": "empire-of-japan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Empire of Japan",
+      "from": "1868"
+    }
+  ],
+  "summary": "The Japanese state from the Meiji Restoration to 1947. It industrialised quickly, took Korea, Taiwan and Manchuria, and fought in the Second World War until its defeat.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Japanese Empire",
+    "Imperial Japan",
+    "Great Empire of Japan",
+    "Great Japanese Empire",
+    "Japan"
+  ],
+  "wikidata": "Q188712",
+  "events": [
+    {
+      "type": "born",
+      "date": "1868-01-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-05-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Defeated in the Second World War and replaced under a new constitution",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "japan"
+    },
+    {
+      "type": "related",
+      "to": "world-war-i"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Empire of Japan (Q188712)",
+      "url": "https://www.wikidata.org/wiki/Q188712",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Empire of Japan",
+      "url": "https://en.wikipedia.org/wiki/Empire_of_Japan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

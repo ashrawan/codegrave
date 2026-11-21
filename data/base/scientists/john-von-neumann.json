@@ -1,0 +1,60 @@
+{
+  "id": "john-von-neumann",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "John von Neumann",
+      "from": "1903"
+    }
+  ],
+  "summary": "Hungarian-born American mathematician who made major contributions to set theory, quantum theory, game theory and computing. The stored-program design used by most computers is named after him, and he worked on the Manhattan Project.",
+  "labels": [
+    "mathematics",
+    "computing",
+    "physics"
+  ],
+  "aliases": [
+    "John Louis von Neumann",
+    "von Neumann",
+    "Neumann János Lajos",
+    "János Lajos Neumann"
+  ],
+  "wikidata": "Q17455",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903-12-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1957-02-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John von Neumann (Q17455)",
+      "url": "https://www.wikidata.org/wiki/Q17455",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John von Neumann",
+      "url": "https://en.wikipedia.org/wiki/John_von_Neumann",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

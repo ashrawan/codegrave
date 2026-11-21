@@ -1,0 +1,53 @@
+{
+  "id": "asteroid-belt",
+  "category": "space",
+  "names": [
+    {
+      "name": "Asteroid Belt",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "A wide ring of rocky bodies between Mars and Jupiter, left over from the early solar system. Jupiter's gravity stopped them from joining into a planet. Ceres is the largest; most asteroids are small and far apart.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "the asteroid belt",
+    "main asteroid belt",
+    "the main asteroid belt",
+    "main belt"
+  ],
+  "wikidata": "Q2179",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "solar-system"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: asteroid belt (Q2179)",
+      "url": "https://www.wikidata.org/wiki/Q2179",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Asteroid belt",
+      "url": "https://en.wikipedia.org/wiki/Asteroid_belt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dns",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "Domain Name System",
+      "from": "1983"
+    }
+  ],
+  "maker": "Paul Mockapetris",
+  "summary": "The internet's address book, turning names such as example.com into the numbers computers use. Before it existed, one file listing every host was copied around. It is a core part of how the internet works.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q8767",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "internet-protocol-suite"
+    },
+    {
+      "type": "part_of",
+      "to": "world-wide-web"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Domain Name System (Q8767)",
+      "url": "https://www.wikidata.org/wiki/Q8767",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Domain Name System",
+      "url": "https://en.wikipedia.org/wiki/Domain_Name_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

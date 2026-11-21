@@ -1,0 +1,50 @@
+{
+  "id": "yellow-fever",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Yellow fever",
+      "from": "1900"
+    }
+  ],
+  "summary": "A virus spread by mosquitoes that can turn the skin yellow and cause bleeding. Walter Reed's team showed in 1900 that mosquitoes carry it, and a vaccine was developed in the 1930s.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Yellow jack",
+    "Yellow plague",
+    "Yellow fever virus infection",
+    "Sylvatic yellow fever",
+    "Yellow fever, Sylvan"
+  ],
+  "wikidata": "Q154874",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900",
+      "precision": "year",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: yellow fever (Q154874)",
+      "url": "https://www.wikidata.org/wiki/Q154874",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yellow fever",
+      "url": "https://en.wikipedia.org/wiki/Yellow_fever",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "a-study-in-scarlet",
+  "category": "books",
+  "names": [
+    {
+      "name": "A Study in Scarlet",
+      "from": "1887"
+    }
+  ],
+  "summary": "Short novel by Arthur Conan Doyle in which Sherlock Holmes and Dr Watson first meet and solve a murder in London. It introduced the world's best-known detective.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Study in Scarlet",
+    "A Tangled Skein"
+  ],
+  "wikidata": "Q223131",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "arthur-conan-doyle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: A Study in Scarlet (Q223131)",
+      "url": "https://www.wikidata.org/wiki/Q223131",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: A Study in Scarlet",
+      "url": "https://en.wikipedia.org/wiki/A_Study_in_Scarlet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

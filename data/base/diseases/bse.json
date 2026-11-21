@@ -1,0 +1,48 @@
+{
+  "id": "bse",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Mad cow disease",
+      "from": "1986"
+    }
+  ],
+  "summary": "A fatal brain disease of cattle first identified in Britain in 1986, linked to infected cattle feed. A related disease in people appeared in the 1990s and led to the slaughter of millions of cattle.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "BSE",
+    "variant Creutzfeldt-Jakob disease",
+    "mad cow diseases",
+    "bovine spongiform encephalitis"
+  ],
+  "wikidata": "Q154666",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: bovine spongiform encephalopathy (Q154666)",
+      "url": "https://www.wikidata.org/wiki/Q154666",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bovine spongiform encephalopathy",
+      "url": "https://en.wikipedia.org/wiki/Bovine_spongiform_encephalopathy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

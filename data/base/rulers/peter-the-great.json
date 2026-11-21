@@ -1,0 +1,54 @@
+{
+  "id": "peter-the-great",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Peter the Great",
+      "from": "1672"
+    }
+  ],
+  "summary": "Tsar of Russia who travelled Europe to learn modern methods. He built a navy, reformed the army and government, defeated Sweden, and founded the new capital of Saint Petersburg.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Petr I Alekseevich",
+    "Pyotr Velikiy",
+    "Petr Alekseevich Romanov",
+    "Pyotr Alekseyevich",
+    "Pyotr Alexeyevich Romanov"
+  ],
+  "wikidata": "Q8479",
+  "events": [
+    {
+      "type": "born",
+      "date": "1672-05-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1725-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Peter the Great (Q8479)",
+      "url": "https://www.wikidata.org/wiki/Q8479",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peter the Great",
+      "url": "https://en.wikipedia.org/wiki/Peter_the_Great",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

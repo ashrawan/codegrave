@@ -1,0 +1,55 @@
+{
+  "id": "life-on-earth",
+  "category": "shows",
+  "names": [
+    {
+      "name": "Life on Earth",
+      "from": "1979"
+    }
+  ],
+  "maker": "BBC",
+  "summary": "BBC documentary series presented by David Attenborough, tracing the history of life from the first living things to mammals. Filmed in many countries, it set the model for later large natural-history series.",
+  "labels": [
+    "television",
+    "biology"
+  ],
+  "wikidata": "Q6545267",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-01-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "A single-series documentary",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "bbc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Life on Earth (Q6545267)",
+      "url": "https://www.wikidata.org/wiki/Q6545267",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Life on Earth (TV series)",
+      "url": "https://en.wikipedia.org/wiki/Life_on_Earth_(TV_series)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

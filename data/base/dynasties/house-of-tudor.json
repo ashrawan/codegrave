@@ -1,0 +1,65 @@
+{
+  "id": "house-of-tudor",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "House of Tudor",
+      "from": "1485"
+    }
+  ],
+  "summary": "English royal family founded by Henry VII, which included Henry VIII and Elizabeth I. It saw the break with Rome and the rise of English sea power, and it ended with Elizabeth's death.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Tudor Dynasty",
+    "Tudor"
+  ],
+  "wikidata": "Q101978",
+  "events": [
+    {
+      "type": "born",
+      "date": "1485-08-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1603-03-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended with the death of Elizabeth I without an heir",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "henry-vii"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "house-of-stuart"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: House of Tudor (Q101978)",
+      "url": "https://www.wikidata.org/wiki/Q101978",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: House of Tudor",
+      "url": "https://en.wikipedia.org/wiki/House_of_Tudor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

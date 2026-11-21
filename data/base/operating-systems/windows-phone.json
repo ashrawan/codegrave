@@ -1,0 +1,59 @@
+{
+  "id": "windows-phone",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "Windows Phone",
+      "from": "2010"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's mobile system with colourful tiles instead of rows of icons. It never got enough apps or users to compete with Android and iOS, and Microsoft gave it up.",
+  "labels": [
+    "computing",
+    "failures"
+  ],
+  "aliases": [
+    "maribe",
+    "WP"
+  ],
+  "wikidata": "Q4885200",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-11-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lack of apps and users against Android and iOS",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Windows Phone (Q4885200)",
+      "url": "https://www.wikidata.org/wiki/Q4885200",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windows Phone",
+      "url": "https://en.wikipedia.org/wiki/Windows_Phone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

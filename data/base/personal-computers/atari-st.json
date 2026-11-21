@@ -1,0 +1,50 @@
+{
+  "id": "atari-st",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "Atari ST",
+      "from": "1985"
+    }
+  ],
+  "maker": "Atari Corporation",
+  "summary": "Atari's 16-bit home computer with a graphical interface and MIDI ports built in. It rivalled the Amiga, and it was widely used by musicians to run synthesisers and make music.",
+  "labels": [
+    "computing",
+    "music"
+  ],
+  "wikidata": "Q627302",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1993",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Atari left the computer market",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Atari ST (Q627302)",
+      "url": "https://www.wikidata.org/wiki/Q627302",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atari ST",
+      "url": "https://en.wikipedia.org/wiki/Atari_ST",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

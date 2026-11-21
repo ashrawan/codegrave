@@ -1,0 +1,74 @@
+{
+  "id": "slovenia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Slovenia",
+      "from": "1991"
+    }
+  ],
+  "summary": "A small Alpine country that was the first to leave Yugoslavia, in 1991, after a short ten-day war. It joined the European Union in 2004.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Slovenija",
+    "si",
+    "svn",
+    "slo",
+    "Republic of Slovenia"
+  ],
+  "wikidata": "Q215",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Slovenia (Q215)",
+      "url": "https://www.wikidata.org/wiki/Q215",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Slovenia",
+      "url": "https://en.wikipedia.org/wiki/Slovenia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

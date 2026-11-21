@@ -1,0 +1,62 @@
+{
+  "id": "compuserve",
+  "category": "networks",
+  "names": [
+    {
+      "name": "CompuServe",
+      "from": "1969"
+    }
+  ],
+  "summary": "One of the first online services for the public, with forums, email and file downloads reached by dial-up modem. It lost ground in the 1990s to AOL and the open internet and was folded into AOL.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "CIS",
+    "CompuServe Information Service"
+  ],
+  "wikidata": "Q1122074",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2009-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by the open internet; its service was closed by AOL",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "aol"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: CompuServe (Q1122074)",
+      "url": "https://www.wikidata.org/wiki/Q1122074",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: CompuServe",
+      "url": "https://en.wikipedia.org/wiki/CompuServe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

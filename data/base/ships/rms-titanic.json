@@ -1,0 +1,60 @@
+{
+  "id": "rms-titanic",
+  "category": "ships",
+  "names": [
+    {
+      "name": "RMS Titanic",
+      "from": "1912"
+    }
+  ],
+  "maker": "White Star Line",
+  "summary": "A British luxury liner that struck an iceberg and sank on her first voyage in April 1912, with the loss of more than 1,500 lives. The disaster led to new rules on lifeboats and radio watch.",
+  "labels": [
+    "transport",
+    "failures"
+  ],
+  "aliases": [
+    "The Titanic",
+    "Royal Mail Steamship Titanic",
+    "SS Titanic"
+  ],
+  "wikidata": "Q25173",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-03-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1912-04-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Struck an iceberg in the North Atlantic on her maiden voyage",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "atlantic-ocean"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Titanic (Q25173)",
+      "url": "https://www.wikidata.org/wiki/Q25173",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Titanic",
+      "url": "https://en.wikipedia.org/wiki/Titanic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

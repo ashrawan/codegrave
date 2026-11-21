@@ -1,0 +1,53 @@
+{
+  "id": "anna-karenina",
+  "category": "books",
+  "names": [
+    {
+      "name": "Anna Karenina",
+      "from": "1877"
+    }
+  ],
+  "maker": "Leo Tolstoy",
+  "summary": "Novel by Leo Tolstoy about a married Russian noblewoman who leaves her husband for an officer, set beside the story of a landowner named Levin. It appeared in serial form in the 1870s, and as a book in 1878.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q147787",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877",
+      "precision": "year",
+      "note": "Dated from the end of its serial run in 1877. The first book edition came out in 1878."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "leo-tolstoy"
+    },
+    {
+      "type": "about",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anna Karenina (Q147787)",
+      "url": "https://www.wikidata.org/wiki/Q147787",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anna Karenina",
+      "url": "https://en.wikipedia.org/wiki/Anna_Karenina",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

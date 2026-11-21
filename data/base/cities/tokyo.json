@@ -1,0 +1,55 @@
+{
+  "id": "tokyo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tokyo",
+      "from": "1457"
+    }
+  ],
+  "summary": "Capital of Japan and one of the largest urban areas in the world. It grew from the fishing town of Edo, became the seat of the shogun in 1603 and the imperial capital in 1868, when it was renamed.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Tokyo-to",
+    "Tokyo Metropolitan prefecture",
+    "Tokyo Metropolis",
+    "Tokio",
+    "Tokyo Prefecture"
+  ],
+  "wikidata": "Q1490",
+  "events": [
+    {
+      "type": "born",
+      "date": "1457",
+      "precision": "circa",
+      "note": "Dated from the building of Edo Castle in 1457. Edo became the shogun's seat in 1603 and was renamed Tokyo in 1868."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tokyo (Q1490)",
+      "url": "https://www.wikidata.org/wiki/Q1490",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tokyo",
+      "url": "https://en.wikipedia.org/wiki/Tokyo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

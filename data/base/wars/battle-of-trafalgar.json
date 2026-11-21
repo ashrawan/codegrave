@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-trafalgar",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Trafalgar",
+      "from": "1805"
+    }
+  ],
+  "summary": "A naval battle off the coast of Spain in which Admiral Nelson's British fleet destroyed a larger French and Spanish fleet. Nelson was killed, but Britain kept control of the seas.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q171416",
+  "events": [
+    {
+      "type": "born",
+      "date": "1805-10-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1805-10-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jmw-turner"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    },
+    {
+      "type": "related",
+      "to": "first-french-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Trafalgar (Q171416)",
+      "url": "https://www.wikidata.org/wiki/Q171416",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Trafalgar",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Trafalgar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "pancho-villa",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Pancho Villa",
+      "from": "1878"
+    }
+  ],
+  "summary": "Mexican revolutionary commander, born Doroteo Arango, who led the Division of the North in the revolution of the 1910s. His troops raided Columbus, New Mexico, in 1916. He was assassinated in 1923.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Jose Doroteo Arango Arámbula"
+  ],
+  "wikidata": "Q192278",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1923-07-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pancho Villa (Q192278)",
+      "url": "https://www.wikidata.org/wiki/Q192278",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pancho Villa",
+      "url": "https://en.wikipedia.org/wiki/Pancho_Villa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

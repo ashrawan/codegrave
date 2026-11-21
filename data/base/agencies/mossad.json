@@ -1,0 +1,52 @@
+{
+  "id": "mossad",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Mossad",
+      "from": "1949"
+    }
+  ],
+  "summary": "Israel's foreign intelligence agency, formed soon after the state was founded. Among its best known operations was the capture of the Nazi official Adolf Eichmann in Argentina in 1960.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q34216",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-12-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "david-ben-gurion"
+    },
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mossad (Q34216)",
+      "url": "https://www.wikidata.org/wiki/Q34216",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mossad",
+      "url": "https://en.wikipedia.org/wiki/Mossad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

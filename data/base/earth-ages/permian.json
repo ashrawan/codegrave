@@ -1,0 +1,57 @@
+{
+  "id": "permian",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Permian",
+      "from": "-298900000"
+    }
+  ],
+  "summary": "The last period of the Paleozoic, from 299 to 252 million years ago, when the continents joined as Pangaea. Early relatives of mammals were common. It ended in the worst mass extinction in Earth's history.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Permian Period",
+    "Permian System"
+  ],
+  "wikidata": "Q76402",
+  "events": [
+    {
+      "type": "born",
+      "date": "-298900000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-251902000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "paleozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Permian (Q76402)",
+      "url": "https://www.wikidata.org/wiki/Q76402",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Permian",
+      "url": "https://en.wikipedia.org/wiki/Permian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

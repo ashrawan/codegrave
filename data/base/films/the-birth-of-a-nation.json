@@ -1,0 +1,52 @@
+{
+  "id": "the-birth-of-a-nation",
+  "category": "films",
+  "names": [
+    {
+      "name": "The Birth of a Nation",
+      "from": "1915"
+    }
+  ],
+  "maker": "D. W. Griffith",
+  "summary": "American silent film by D. W. Griffith about the Civil War and Reconstruction, released in 1915. It was a hit and advanced film technique, but it showed Black people in racist ways, praised the Ku Klux Klan and drew protests.",
+  "labels": [
+    "film",
+    "politics"
+  ],
+  "aliases": [
+    "Birth of a Nation"
+  ],
+  "wikidata": "Q220394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "d-w-griffith"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Birth of a Nation (Q220394)",
+      "url": "https://www.wikidata.org/wiki/Q220394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Birth of a Nation",
+      "url": "https://en.wikipedia.org/wiki/The_Birth_of_a_Nation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "pangaea",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Pangaea",
+      "from": "-335000000"
+    }
+  ],
+  "summary": "The supercontinent that gathered nearly all of Earth's land about 335 million years ago, surrounded by one huge ocean. It began splitting about 175 million years ago, and its pieces drifted to form today's continents.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Pangea",
+    "Pangæa"
+  ],
+  "wikidata": "Q4398",
+  "events": [
+    {
+      "type": "born",
+      "date": "-335000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-175000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Rifted apart as moving plates opened new oceans",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pangaea (Q4398)",
+      "url": "https://www.wikidata.org/wiki/Q4398",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pangaea",
+      "url": "https://en.wikipedia.org/wiki/Pangaea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

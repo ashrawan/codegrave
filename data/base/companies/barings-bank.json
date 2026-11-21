@@ -1,0 +1,62 @@
+{
+  "id": "barings-bank",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Barings Bank",
+      "from": "1762"
+    }
+  ],
+  "maker": "Francis Baring",
+  "summary": "Oldest merchant bank in London, which once helped finance governments. In 1995 a trader in Singapore lost more than the bank was worth, and it was sold to the Dutch bank ING for a token sum.",
+  "labels": [
+    "business",
+    "economics"
+  ],
+  "aliases": [
+    "Baring Brothers"
+  ],
+  "wikidata": "Q790455",
+  "events": [
+    {
+      "type": "born",
+      "date": "1762",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1995-02-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Bankrupt after a trader's hidden losses and sold to ING",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Barings Bank (Q790455)",
+      "url": "https://www.wikidata.org/wiki/Q790455",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Barings Bank",
+      "url": "https://en.wikipedia.org/wiki/Barings_Bank",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

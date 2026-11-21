@@ -1,0 +1,48 @@
+{
+  "id": "tetris",
+  "category": "games",
+  "names": [
+    {
+      "name": "Tetris",
+      "from": "1985"
+    }
+  ],
+  "maker": "Alexey Pajitnov",
+  "summary": "Puzzle game in which falling blocks of four squares must be turned and fitted into complete lines. Designed in Moscow, it became a worldwide hit when packaged with the Game Boy.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "aliases": [
+    "1985 Tetris"
+  ],
+  "wikidata": "Q71910",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year",
+      "note": "Sources differ on the year: the game's publisher gives June 1984, and later research dates the first playable version to 1985."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Tetris (Q71910)",
+      "url": "https://www.wikidata.org/wiki/Q71910",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tetris",
+      "url": "https://en.wikipedia.org/wiki/Tetris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

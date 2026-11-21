@@ -1,0 +1,46 @@
+{
+  "id": "sars",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "SARS",
+      "from": "2003"
+    }
+  ],
+  "summary": "A serious respiratory illness caused by a coronavirus that was recognised in 2003 after spreading from southern China. An international effort stopped the outbreak within months and no cases have been reported since 2004.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "severe acute respiratory syndrome",
+    "SARS-CoV infection"
+  ],
+  "wikidata": "Q103177",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: severe acute respiratory syndrome (Q103177)",
+      "url": "https://www.wikidata.org/wiki/Q103177",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SARS",
+      "url": "https://en.wikipedia.org/wiki/SARS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

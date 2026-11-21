@@ -1,0 +1,59 @@
+{
+  "id": "aol",
+  "category": "networks",
+  "names": [
+    {
+      "name": "AOL",
+      "from": "1983"
+    }
+  ],
+  "summary": "American online service that sent out free trial discs and brought millions of households online in the 1990s. Its disc mailings and chat rooms were everywhere, and its merger with Time Warner became a warning.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "aol.com",
+    "Tegic",
+    "AmericaOnline",
+    "America Online",
+    "AOL RED"
+  ],
+  "wikidata": "Q27585",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: AOL (Q27585)",
+      "url": "https://www.wikidata.org/wiki/Q27585",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: AOL",
+      "url": "https://en.wikipedia.org/wiki/AOL",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

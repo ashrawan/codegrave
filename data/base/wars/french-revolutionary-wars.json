@@ -1,0 +1,88 @@
+{
+  "id": "french-revolutionary-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "French Revolutionary Wars",
+      "from": "1792"
+    }
+  ],
+  "summary": "Wars between revolutionary France and a changing set of European powers. They spread revolutionary ideas by force and made the career of Napoleon Bonaparte.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q207318",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792-04-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1802-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "french-revolution"
+    },
+    {
+      "type": "in",
+      "to": "europe"
+    },
+    {
+      "type": "related",
+      "to": "holy-roman-empire"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    },
+    {
+      "type": "related",
+      "to": "spanish-empire"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-sardinia"
+    },
+    {
+      "type": "related",
+      "to": "ottoman-empire"
+    },
+    {
+      "type": "related",
+      "to": "knights-hospitaller"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Revolutionary Wars (Q207318)",
+      "url": "https://www.wikidata.org/wiki/Q207318",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Revolutionary Wars",
+      "url": "https://en.wikipedia.org/wiki/French_Revolutionary_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

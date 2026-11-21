@@ -1,0 +1,56 @@
+{
+  "id": "nicolaus-copernicus",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Nicolaus Copernicus",
+      "from": "1473"
+    }
+  ],
+  "summary": "Polish astronomer who proposed that the Earth and the other planets travel around the Sun. His book on the idea appeared in the year he died and began to overturn the old picture of a fixed Earth at the centre of everything.",
+  "labels": [
+    "astronomy"
+  ],
+  "wikidata": "Q619",
+  "events": [
+    {
+      "type": "born",
+      "date": "1473-02-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1543-05-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "ptolemy"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nicolaus Copernicus (Q619)",
+      "url": "https://www.wikidata.org/wiki/Q619",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nicolaus Copernicus",
+      "url": "https://en.wikipedia.org/wiki/Nicolaus_Copernicus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

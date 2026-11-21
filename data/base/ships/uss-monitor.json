@@ -1,0 +1,52 @@
+{
+  "id": "uss-monitor",
+  "category": "ships",
+  "names": [
+    {
+      "name": "USS Monitor",
+      "from": "1862"
+    }
+  ],
+  "summary": "The first ironclad warship of the United States Navy with a rotating gun turret. She fought the Confederate ironclad Virginia in 1862 and sank in a storm at the end of that year.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "aliases": [
+    "Monitor ironclad"
+  ],
+  "wikidata": "Q857891",
+  "events": [
+    {
+      "type": "born",
+      "date": "1862",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1862",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Foundered in a storm off Cape Hatteras",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: USS Monitor (Q857891)",
+      "url": "https://www.wikidata.org/wiki/Q857891",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: USS Monitor",
+      "url": "https://en.wikipedia.org/wiki/USS_Monitor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

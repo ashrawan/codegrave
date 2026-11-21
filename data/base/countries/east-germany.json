@@ -1,0 +1,73 @@
+{
+  "id": "east-germany",
+  "category": "countries",
+  "names": [
+    {
+      "name": "East Germany",
+      "from": "1949"
+    }
+  ],
+  "summary": "The communist German Democratic Republic created in the Soviet occupation zone, with East Berlin as its capital. It built the Berlin Wall in 1961 and was a Warsaw Pact member.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "GDR",
+    "DDR",
+    "Deutsche Demokratische Republik",
+    "Communist Germany",
+    "Socialist Germany"
+  ],
+  "wikidata": "Q16957",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-10-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-10-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Merged into West Germany after the fall of the Berlin Wall and reunification",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "germany"
+    },
+    {
+      "type": "part_of",
+      "to": "warsaw-pact"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "comecon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: East Germany (Q16957)",
+      "url": "https://www.wikidata.org/wiki/Q16957",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: East Germany",
+      "url": "https://en.wikipedia.org/wiki/East_Germany",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

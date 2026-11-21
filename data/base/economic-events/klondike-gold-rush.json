@@ -1,0 +1,57 @@
+{
+  "id": "klondike-gold-rush",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Klondike Gold Rush",
+      "from": "1896"
+    }
+  ],
+  "summary": "Gold found on a creek in Canada's Yukon drew tens of thousands of hopeful prospectors north through harsh mountain passes. Few became rich, but Dawson City grew into a boom town almost overnight.",
+  "labels": [
+    "economics",
+    "exploration"
+  ],
+  "aliases": [
+    "Alaska Gold Rush",
+    "Klondike Gold Fever"
+  ],
+  "wikidata": "Q631489",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1899",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Klondike Gold Rush (Q631489)",
+      "url": "https://www.wikidata.org/wiki/Q631489",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Klondike Gold Rush",
+      "url": "https://en.wikipedia.org/wiki/Klondike_Gold_Rush",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

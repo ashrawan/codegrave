@@ -1,0 +1,57 @@
+{
+  "id": "cambrian",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Cambrian",
+      "from": "-538800000"
+    }
+  ],
+  "summary": "The first period of the Paleozoic, 539 to 485 million years ago, when most major animal groups appear in the fossil record. Trilobites and other early arthropods filled the seas, and animals with eyes and shells flourished.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Cambrian Period",
+    "Cambrian System"
+  ],
+  "wikidata": "Q79064",
+  "events": [
+    {
+      "type": "born",
+      "date": "-538800000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-486850000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "paleozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cambrian (Q79064)",
+      "url": "https://www.wikidata.org/wiki/Q79064",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cambrian",
+      "url": "https://en.wikipedia.org/wiki/Cambrian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

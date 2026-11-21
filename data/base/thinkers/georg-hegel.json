@@ -1,0 +1,83 @@
+{
+  "id": "georg-hegel",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Georg Wilhelm Friedrich Hegel",
+      "from": "1770"
+    }
+  ],
+  "summary": "German philosopher who saw history as a process of ideas developing through conflict and resolution. His difficult writing influenced thinkers from Marx to existentialists and shaped nineteenth-century philosophy.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "Hegel"
+  ],
+  "wikidata": "Q9235",
+  "events": [
+    {
+      "type": "born",
+      "date": "1770-08-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1831-11-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "immanuel-kant"
+    },
+    {
+      "type": "influenced_by",
+      "to": "heraclitus"
+    },
+    {
+      "type": "influenced_by",
+      "to": "baruch-spinoza"
+    },
+    {
+      "type": "influenced_by",
+      "to": "montesquieu"
+    },
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "plato"
+    },
+    {
+      "type": "influenced_by",
+      "to": "rene-descartes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "jean-jacques-rousseau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Georg Wilhelm Friedrich Hegel (Q9235)",
+      "url": "https://www.wikidata.org/wiki/Q9235",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Georg Wilhelm Friedrich Hegel",
+      "url": "https://en.wikipedia.org/wiki/Georg_Wilhelm_Friedrich_Hegel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

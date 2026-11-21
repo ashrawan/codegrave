@@ -1,0 +1,63 @@
+{
+  "id": "battle-of-iwo-jima",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Iwo Jima",
+      "from": "1945"
+    }
+  ],
+  "summary": "Battle in February and March 1945 in which United States Marines took the Japanese-held island of Iwo Jima after weeks of fighting. Nearly all the Japanese defenders were killed. A photograph of raising the flag became famous.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Operation Detachment"
+  ],
+  "wikidata": "Q180182",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-02-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-03-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Iwo Jima (Q180182)",
+      "url": "https://www.wikidata.org/wiki/Q180182",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Iwo Jima",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Iwo_Jima",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

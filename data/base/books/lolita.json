@@ -1,0 +1,52 @@
+{
+  "id": "lolita",
+  "category": "books",
+  "names": [
+    {
+      "name": "Lolita",
+      "from": "1955"
+    }
+  ],
+  "summary": "Novel by Vladimir Nabokov narrated by an adult who preys on a young girl. It was first published in Paris after American publishers refused it and was banned in several countries.",
+  "labels": [
+    "literature",
+    "banned"
+  ],
+  "wikidata": "Q127149",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "fyodor-dostoevsky"
+    },
+    {
+      "type": "influenced_by",
+      "to": "edgar-allan-poe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lolita (Q127149)",
+      "url": "https://www.wikidata.org/wiki/Q127149",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lolita",
+      "url": "https://en.wikipedia.org/wiki/Lolita",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

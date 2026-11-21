@@ -1,0 +1,75 @@
+{
+  "id": "greece",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Greece",
+      "from": "1830"
+    }
+  ],
+  "summary": "The home of ancient Greek civilization in south-eastern Europe. The modern state arose from the war of independence against the Ottoman Empire and was recognised in 1830.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Hellenic Republic",
+    "gr",
+    "el",
+    "Greek Republic",
+    "Hellas, Greece"
+  ],
+  "wikidata": "Q41",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830",
+      "precision": "year",
+      "note": "Dated from 1830, when the powers recognised the Greek state that arose from the war of independence begun in 1821. Ancient Greece has its own entry."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Greece (Q41)",
+      "url": "https://www.wikidata.org/wiki/Q41",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Greece",
+      "url": "https://en.wikipedia.org/wiki/Greece",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "enron",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Enron",
+      "from": "1985"
+    }
+  ],
+  "summary": "American energy trading company that grew into one of the largest firms in the country. In 2001 it was found to have hidden debts and inflated its profits, and it went bankrupt.",
+  "labels": [
+    "business",
+    "law"
+  ],
+  "aliases": [
+    "Enron Corp.",
+    "Enron Corporation",
+    "Enron Creditors Recovery Corp."
+  ],
+  "wikidata": "Q327646",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Went bankrupt after hidden debts and false accounts came to light",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Enron (Q327646)",
+      "url": "https://www.wikidata.org/wiki/Q327646",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Enron",
+      "url": "https://en.wikipedia.org/wiki/Enron",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

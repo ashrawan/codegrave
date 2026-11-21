@@ -1,0 +1,52 @@
+{
+  "id": "facebook-messenger",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Facebook Messenger",
+      "from": "2011"
+    }
+  ],
+  "maker": "Facebook",
+  "summary": "Chat app from Facebook that began as a feature of the site and became a stand-alone app in 2011. It has over a billion users, and it adds calls, video, bots and payments.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Messenger",
+    "Facebook Chat"
+  ],
+  "wikidata": "Q116947",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-08-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "meta-platforms"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Messenger (Q116947)",
+      "url": "https://www.wikidata.org/wiki/Q116947",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Facebook Messenger",
+      "url": "https://en.wikipedia.org/wiki/Facebook_Messenger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

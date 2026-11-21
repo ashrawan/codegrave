@@ -1,0 +1,52 @@
+{
+  "id": "jaws-film",
+  "category": "films",
+  "names": [
+    {
+      "name": "Jaws",
+      "from": "1975"
+    }
+  ],
+  "maker": "Steven Spielberg",
+  "summary": "Thriller by Steven Spielberg about a police chief, a scientist and a fisherman hunting a great white shark that attacks a seaside town. Its huge summer success created the idea of the blockbuster film.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q189505",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "steven-spielberg"
+    },
+    {
+      "type": "about",
+      "to": "great-white-shark"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jaws (Q189505)",
+      "url": "https://www.wikidata.org/wiki/Q189505",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jaws (film)",
+      "url": "https://en.wikipedia.org/wiki/Jaws_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

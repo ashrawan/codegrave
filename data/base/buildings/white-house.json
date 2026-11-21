@@ -1,0 +1,59 @@
+{
+  "id": "white-house",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "White House",
+      "from": "1800"
+    }
+  ],
+  "summary": "Official residence and workplace of the President of the United States in Washington, D.C. It was designed by James Hoban, and the first president to live there, John Adams, moved in in 1800.",
+  "labels": [
+    "politics",
+    "architecture"
+  ],
+  "aliases": [
+    "Executive Mansion",
+    "President's Palace",
+    "Presidential Mansion",
+    "President's House",
+    "the White House"
+  ],
+  "wikidata": "Q35525",
+  "events": [
+    {
+      "type": "born",
+      "date": "1800-11-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: White House (Q35525)",
+      "url": "https://www.wikidata.org/wiki/Q35525",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: White House",
+      "url": "https://en.wikipedia.org/wiki/White_House",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

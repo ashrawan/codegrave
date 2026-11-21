@@ -1,0 +1,77 @@
+{
+  "id": "algeria",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Algeria",
+      "from": "1962"
+    }
+  ],
+  "summary": "The largest country in Africa by area. It won independence from France in 1962 after a long war and most of its land lies in the Sahara.",
+  "labels": [
+    "independence",
+    "war"
+  ],
+  "aliases": [
+    "People's Democratic Republic of Algeria",
+    "Dzayer",
+    "Djazaïr"
+  ],
+  "wikidata": "Q262",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-07-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "france"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "opec"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Algeria (Q262)",
+      "url": "https://www.wikidata.org/wiki/Q262",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Algeria",
+      "url": "https://en.wikipedia.org/wiki/Algeria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

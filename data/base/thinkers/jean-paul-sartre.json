@@ -1,0 +1,57 @@
+{
+  "id": "jean-paul-sartre",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Jean-Paul Sartre",
+      "from": "1905"
+    }
+  ],
+  "summary": "French philosopher and writer who argued that humans have no fixed nature and must create themselves through free choices. He wrote novels and plays, and declined the 1964 Nobel Prize in Literature.",
+  "labels": [
+    "philosophy",
+    "literature"
+  ],
+  "wikidata": "Q9364",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-06-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-04-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "georg-hegel"
+    },
+    {
+      "type": "influenced_by",
+      "to": "karl-marx"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jean-Paul Sartre (Q9364)",
+      "url": "https://www.wikidata.org/wiki/Q9364",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jean-Paul Sartre",
+      "url": "https://en.wikipedia.org/wiki/Jean-Paul_Sartre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

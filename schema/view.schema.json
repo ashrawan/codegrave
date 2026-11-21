@@ -1,15 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "A view of the codegrave timeline",
-  "description": "One file per view at data/views/<id>.json. Rules: docs/VIEWS.md. scripts/build.mjs is the authority; this schema is for editor hints.",
+  "description": "One file per view at data/community/<owner>/views/<id>.json. Rules: docs/VIEWS.md. scripts/build.mjs is the authority; this schema is for editor hints.",
   "type": "object",
   "required": [
     "id",
     "name",
-    "description",
-    "author",
-    "categories",
-    "level"
+    "description"
   ],
   "additionalProperties": false,
   "properties": {
@@ -28,7 +25,19 @@
     },
     "author": {
       "type": "string",
-      "description": "A GitHub user name."
+      "description": "Optional. If given, it must be the name of the folder the view is in."
+    },
+    "category": {
+      "type": "string",
+      "description": "The one branch of the map the view mostly belongs to (a \"domains\" id in data/categories.json)."
+    },
+    "labels": {
+      "type": "array",
+      "maxItems": 4,
+      "items": {
+        "type": "string"
+      },
+      "description": "What the view is about: ids from data/labels.json."
     },
     "tags": {
       "type": "array",
@@ -37,28 +46,13 @@
         "type": "string"
       }
     },
-    "categories": {
+    "entries": {
       "type": "array",
-      "maxItems": 8,
+      "minItems": 1,
       "items": {
         "type": "string"
       },
-      "description": "Category ids whose things the view holds. Empty means every category."
-    },
-    "level": {
-      "type": "integer",
-      "minimum": 5,
-      "maximum": 100
-    },
-    "year": {
-      "type": "integer",
-      "description": "The year to open on."
-    },
-    "order": {
-      "enum": [
-        "new",
-        "old"
-      ]
+      "description": "Hand-picked entry ids: base entries, or your own. When present the view shows exactly these."
     },
     "things": {
       "type": "array",
@@ -66,23 +60,11 @@
       "items": {
         "type": "string"
       },
-      "description": "Hand-picked thing ids. When present the view shows exactly these."
-    },
-    "image": {
-      "type": "object",
-      "description": "The view's thumbnail: a picture under data/media/ or on Wikimedia Commons, with alt, credit and licence. Without it the build draws a small picture of the view's own lines.",
-      "required": ["src", "alt", "credit", "licence"],
-      "properties": {
-        "src": { "type": "string" },
-        "alt": { "type": "string" },
-        "credit": { "type": "string" },
-        "licence": { "type": "string" },
-        "source": { "type": "string" }
-      }
+      "description": "The older name for \"entries\". Use one or the other."
     },
     "checkpoints": {
       "type": "array",
-      "description": "The view's own eras. They must not overlap.",
+      "description": "The chapters: the view's own eras. They must not overlap. Years before the common era are negative; there is no year 0.",
       "items": {
         "type": "object",
         "additionalProperties": false,
@@ -90,7 +72,8 @@
           "id",
           "name",
           "from",
-          "to"
+          "to",
+          "note"
         ],
         "properties": {
           "id": {
@@ -114,6 +97,51 @@
         }
       }
     },
+    "year": {
+      "type": "integer",
+      "description": "The year to open on."
+    },
+    "order": {
+      "enum": [
+        "new",
+        "old"
+      ]
+    },
+    "image": {
+      "type": "object",
+      "description": "The view's thumbnail: a picture under data/media/ or on Wikimedia Commons, with alt, credit and licence. Without it the build draws a small picture of the view's own lines.",
+      "required": [
+        "src",
+        "alt",
+        "credit",
+        "licence"
+      ],
+      "properties": {
+        "src": {
+          "type": "string"
+        },
+        "alt": {
+          "type": "string"
+        },
+        "credit": {
+          "type": "string"
+        },
+        "licence": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string"
+        }
+      }
+    },
+    "categories": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "string"
+      },
+      "description": "Category ids whose things the view holds. Empty means every category."
+    },
     "domains": {
       "type": "array",
       "minItems": 1,
@@ -121,6 +149,11 @@
         "type": "string"
       },
       "description": "Domain ids from data/categories.json. The view also holds every kind in these domains."
+    },
+    "level": {
+      "type": "integer",
+      "minimum": 5,
+      "maximum": 100
     }
   }
 }

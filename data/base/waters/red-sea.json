@@ -1,0 +1,62 @@
+{
+  "id": "red-sea",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Red Sea",
+      "from": "-30000000"
+    }
+  ],
+  "summary": "A narrow sea between Africa and Arabia that began to open about 30 million years ago as the two plates pulled apart. It joins the Mediterranean through the Suez Canal and holds rich coral reefs.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Sinus Arabicus",
+    "Al Baḩr al Aḩmar",
+    "Erythraean Sea",
+    "Arabian Gulf",
+    "the Red Sea"
+  ],
+  "wikidata": "Q23406",
+  "events": [
+    {
+      "type": "born",
+      "date": "-30000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "indian-ocean"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    },
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Red Sea (Q23406)",
+      "url": "https://www.wikidata.org/wiki/Q23406",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Red Sea",
+      "url": "https://en.wikipedia.org/wiki/Red_Sea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

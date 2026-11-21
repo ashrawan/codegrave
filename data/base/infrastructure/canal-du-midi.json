@@ -1,0 +1,54 @@
+{
+  "id": "canal-du-midi",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Canal du Midi",
+      "from": "1681"
+    }
+  ],
+  "summary": "Canal in southern France linking the Mediterranean to the Atlantic by way of the Garonne. Pierre-Paul Riquet built it under Louis XIV so that ships could avoid sailing round Spain.",
+  "labels": [
+    "engineering",
+    "transport",
+    "world-heritage"
+  ],
+  "aliases": [
+    "canal of the two seas",
+    "Canal de las Doas Mars",
+    "Canal Royal en Languedoc"
+  ],
+  "wikidata": "Q202494",
+  "events": [
+    {
+      "type": "born",
+      "date": "1681-05-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Canal du Midi (Q202494)",
+      "url": "https://www.wikidata.org/wiki/Q202494",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Canal du Midi",
+      "url": "https://en.wikipedia.org/wiki/Canal_du_Midi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

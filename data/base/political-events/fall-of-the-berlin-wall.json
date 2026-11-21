@@ -1,0 +1,65 @@
+{
+  "id": "fall-of-the-berlin-wall",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Fall of the Berlin Wall",
+      "from": "1989"
+    }
+  ],
+  "summary": "On 9 November 1989 East Germany announced that its citizens could cross the border, and crowds poured through and began to break down the Wall. It became a symbol of the end of the Cold War.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Berlin Wall fall",
+    "demolition of the Berlin Wall",
+    "Berlin Wall demolition"
+  ],
+  "wikidata": "Q69163529",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-11-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "revolutions-of-1989"
+    },
+    {
+      "type": "in",
+      "to": "east-germany"
+    },
+    {
+      "type": "related",
+      "to": "berlin-wall"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: fall of the Berlin Wall (Q69163529)",
+      "url": "https://www.wikidata.org/wiki/Q69163529",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of the Berlin Wall",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "panama-canal",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Panama Canal",
+      "from": "1914"
+    }
+  ],
+  "summary": "Canal across Panama linking the Atlantic and Pacific oceans with locks that lift ships over the hills. The French failed to build it, and the United States finished it, at a heavy cost in lives.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "wikidata": "Q7350",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Panama Canal (Q7350)",
+      "url": "https://www.wikidata.org/wiki/Q7350",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Panama Canal",
+      "url": "https://en.wikipedia.org/wiki/Panama_Canal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

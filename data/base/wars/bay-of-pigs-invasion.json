@@ -1,0 +1,57 @@
+{
+  "id": "bay-of-pigs-invasion",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Bay of Pigs Invasion",
+      "from": "1961"
+    }
+  ],
+  "summary": "Failed attempt by Cuban exiles, trained and backed by the CIA, to overthrow Fidel Castro by landing on the coast of Cuba. It embarrassed President Kennedy and pushed Cuba closer to the Soviet Union.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "wikidata": "Q191721",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-04-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1961-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bay of Pigs invasion (Q191721)",
+      "url": "https://www.wikidata.org/wiki/Q191721",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bay of Pigs Invasion",
+      "url": "https://en.wikipedia.org/wiki/Bay_of_Pigs_Invasion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

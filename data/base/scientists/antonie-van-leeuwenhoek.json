@@ -1,0 +1,60 @@
+{
+  "id": "antonie-van-leeuwenhoek",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Antonie van Leeuwenhoek",
+      "from": "1632"
+    }
+  ],
+  "summary": "Dutch cloth merchant who ground tiny, powerful lenses and became the first person to see bacteria and other single-celled life in pond water and in his own mouth. He described what he saw in letters to the Royal Society.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Anton van Leeuwenhoek",
+    "Antonie Philips van Leeuwenhoek"
+  ],
+  "wikidata": "Q43522",
+  "events": [
+    {
+      "type": "born",
+      "date": "1632-10-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1723-08-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "influenced_by",
+      "to": "robert-hooke"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antonie van Leeuwenhoek (Q43522)",
+      "url": "https://www.wikidata.org/wiki/Q43522",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antonie van Leeuwenhoek",
+      "url": "https://en.wikipedia.org/wiki/Antonie_van_Leeuwenhoek",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

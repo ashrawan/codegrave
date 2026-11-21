@@ -1,0 +1,51 @@
+{
+  "id": "woolly-rhinoceros",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Woolly rhinoceros",
+      "from": "-350000"
+    }
+  ],
+  "summary": "A thick-furred rhinoceros of the ice age steppes of Eurasia with two horns, the front one very long. Cave paintings show it, and a few frozen bodies have been found.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "woolly rhino"
+  ],
+  "wikidata": "Q188949",
+  "events": [
+    {
+      "type": "born",
+      "date": "-350000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Died out at the end of the ice age as the climate warmed",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: woolly rhinoceros (Q188949)",
+      "url": "https://www.wikidata.org/wiki/Q188949",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Woolly rhinoceros",
+      "url": "https://en.wikipedia.org/wiki/Woolly_rhinoceros",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

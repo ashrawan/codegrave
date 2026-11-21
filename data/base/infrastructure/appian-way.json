@@ -1,0 +1,55 @@
+{
+  "id": "appian-way",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Appian Way",
+      "from": "-0312"
+    }
+  ],
+  "summary": "Early Roman military road running south from Rome toward Brindisi, begun by the censor Appius Claudius. Parts of its paving are still in place and are lined with tombs and ruins.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "Via Appia"
+  ],
+  "wikidata": "Q189417",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0312",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rome"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Appian Way (Q189417)",
+      "url": "https://www.wikidata.org/wiki/Q189417",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Appian Way",
+      "url": "https://en.wikipedia.org/wiki/Appian_Way",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,54 @@
+{
+  "id": "large-hadron-collider",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Large Hadron Collider",
+      "from": "2008"
+    }
+  ],
+  "maker": "CERN",
+  "summary": "The world's largest particle accelerator, in a ring tunnel under the border of France and Switzerland. It smashes particles together at very high energy, and in 2012 it helped find the Higgs boson.",
+  "labels": [
+    "physics",
+    "engineering",
+    "record-holders"
+  ],
+  "wikidata": "Q40605",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-10-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Large Hadron Collider (Q40605)",
+      "url": "https://www.wikidata.org/wiki/Q40605",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Large Hadron Collider",
+      "url": "https://en.wikipedia.org/wiki/Large_Hadron_Collider",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

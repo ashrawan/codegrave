@@ -1,0 +1,63 @@
+{
+  "id": "iranian-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Iranian Revolution",
+      "from": "1978"
+    }
+  ],
+  "summary": "Mass protests overthrew the Shah of Iran, and Ayatollah Khomeini returned from exile. Iran became an Islamic republic, which changed politics in the Middle East.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "Revolution of 1979",
+    "Islamic Revolution of Iran",
+    "Islamic Revolution",
+    "1979 Iranian Revolution"
+  ],
+  "wikidata": "Q126065",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-01",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1979-02",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    },
+    {
+      "type": "related",
+      "to": "ruhollah-khomeini"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iranian Revolution (Q126065)",
+      "url": "https://www.wikidata.org/wiki/Q126065",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iranian Revolution",
+      "url": "https://en.wikipedia.org/wiki/Iranian_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "peninsular-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Peninsular War",
+      "from": "1808"
+    }
+  ],
+  "summary": "War in Spain and Portugal against Napoleon's French army, fought by Spanish and Portuguese forces and guerrillas with British help under Wellington. It drained French strength and weakened Napoleon.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Napoleonic invasion of Iberia",
+    "Spanish War of Independence"
+  ],
+  "wikidata": "Q152499",
+  "events": [
+    {
+      "type": "born",
+      "date": "1808-05-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1814-04-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "napoleonic-wars"
+    },
+    {
+      "type": "related",
+      "to": "first-french-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peninsular War (Q152499)",
+      "url": "https://www.wikidata.org/wiki/Q152499",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peninsular War",
+      "url": "https://en.wikipedia.org/wiki/Peninsular_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

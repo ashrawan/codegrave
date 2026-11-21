@@ -1,0 +1,54 @@
+{
+  "id": "ernest-hemingway",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Ernest Hemingway",
+      "from": "1899"
+    }
+  ],
+  "summary": "American novelist and journalist who wrote The Sun Also Rises and The Old Man and the Sea. His short, plain sentences changed English prose, and he received the Nobel Prize in Literature in 1954.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Papa",
+    "Ernest M. Hemingway",
+    "Ernest Miller Hemmingway",
+    "E. Hemmingway",
+    "E. Hemingway"
+  ],
+  "wikidata": "Q23434",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-07-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1961-07-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Ernest Hemingway (Q23434)",
+      "url": "https://www.wikidata.org/wiki/Q23434",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ernest Hemingway",
+      "url": "https://en.wikipedia.org/wiki/Ernest_Hemingway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

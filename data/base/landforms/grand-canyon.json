@@ -1,0 +1,54 @@
+{
+  "id": "grand-canyon",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Grand Canyon",
+      "from": "-5000000"
+    }
+  ],
+  "summary": "A vast gorge in Arizona carved by the Colorado River, about 1.8 kilometres deep. Its walls display rock layers from nearly two billion years of Earth history, and Native peoples have lived there for thousands of years.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Cañon of Colorado"
+  ],
+  "wikidata": "Q118841",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "grand-canyon-national-park"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grand Canyon (Q118841)",
+      "url": "https://www.wikidata.org/wiki/Q118841",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand Canyon",
+      "url": "https://en.wikipedia.org/wiki/Grand_Canyon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,60 @@
+{
+  "id": "justinian-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Justinian I",
+      "from": "0482"
+    }
+  ],
+  "summary": "Byzantine emperor who tried to win back the lost western lands, and whose generals retook Italy and North Africa. He ordered the codification of Roman law and built the Hagia Sophia.",
+  "labels": [
+    "politics",
+    "law"
+  ],
+  "aliases": [
+    "Ioustinianos I",
+    "Justinian the Great",
+    "Iustinianus I",
+    "Flavius Petrus Sabbatius Justinianus",
+    "Petrus Sabbatius Iustinianus"
+  ],
+  "wikidata": "Q41866",
+  "events": [
+    {
+      "type": "born",
+      "date": "0482-05-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0565-11-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "theodora"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Justinian I (Q41866)",
+      "url": "https://www.wikidata.org/wiki/Q41866",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Justinian I",
+      "url": "https://en.wikipedia.org/wiki/Justinian_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

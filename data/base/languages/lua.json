@@ -1,0 +1,59 @@
+{
+  "id": "lua",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Lua",
+      "from": "1993"
+    }
+  ],
+  "summary": "Small, light scripting language created in Brazil. Because it is easy to embed, many video games, including World of Warcraft and Roblox, use it for scripts and add-ons.",
+  "labels": [
+    "computing",
+    "games"
+  ],
+  "aliases": [
+    "Lua language"
+  ],
+  "wikidata": "Q207316",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "cpp"
+    },
+    {
+      "type": "influenced_by",
+      "to": "scheme"
+    },
+    {
+      "type": "related",
+      "to": "moon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lua (Q207316)",
+      "url": "https://www.wikidata.org/wiki/Q207316",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lua",
+      "url": "https://en.wikipedia.org/wiki/Lua",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

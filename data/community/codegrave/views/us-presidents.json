@@ -1,0 +1,115 @@
+{
+  "id": "us-presidents",
+  "name": "US Presidents",
+  "description": "Every president of the United States in order, from George Washington to today, with the day each one took office.",
+  "category": "people",
+  "labels": [
+    "politics"
+  ],
+  "tags": [
+    "presidents of the united states",
+    "american presidents",
+    "potus",
+    "white house",
+    "washington",
+    "lincoln"
+  ],
+  "entries": [
+    "george-washington",
+    "john-adams",
+    "thomas-jefferson",
+    "james-madison",
+    "james-monroe",
+    "john-quincy-adams",
+    "andrew-jackson",
+    "martin-van-buren",
+    "william-henry-harrison",
+    "john-tyler",
+    "james-k-polk",
+    "zachary-taylor",
+    "millard-fillmore",
+    "franklin-pierce",
+    "james-buchanan",
+    "abraham-lincoln",
+    "andrew-johnson",
+    "ulysses-s-grant",
+    "rutherford-b-hayes",
+    "james-a-garfield",
+    "chester-a-arthur",
+    "grover-cleveland",
+    "benjamin-harrison",
+    "william-mckinley",
+    "theodore-roosevelt",
+    "william-howard-taft",
+    "woodrow-wilson",
+    "warren-g-harding",
+    "calvin-coolidge",
+    "herbert-hoover",
+    "franklin-d-roosevelt",
+    "harry-s-truman",
+    "dwight-d-eisenhower",
+    "john-f-kennedy",
+    "lyndon-b-johnson",
+    "richard-nixon",
+    "gerald-ford",
+    "jimmy-carter",
+    "ronald-reagan",
+    "george-h-w-bush",
+    "bill-clinton",
+    "george-w-bush",
+    "barack-obama",
+    "donald-trump",
+    "joe-biden"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-founding-era",
+      "name": "The founding era",
+      "from": 1789,
+      "to": 1828,
+      "note": "George Washington takes office in 1789. The first six presidents, from Washington to John Quincy Adams, set up the new government, double the country's size with the Louisiana Purchase and fight Britain again in 1812."
+    },
+    {
+      "id": "expansion-and-division",
+      "name": "Expansion and division",
+      "from": 1829,
+      "to": 1860,
+      "note": "From Andrew Jackson to James Buchanan the country spreads to the Pacific, and the argument over slavery in the new territories grows until the Union breaks."
+    },
+    {
+      "id": "civil-war-and-reconstruction",
+      "name": "Civil War and Reconstruction",
+      "from": 1861,
+      "to": 1876,
+      "note": "Abraham Lincoln leads the Union through the Civil War and is assassinated in 1865. Andrew Johnson and Ulysses S. Grant face the rebuilding of the South."
+    },
+    {
+      "id": "the-gilded-age-and-reform",
+      "name": "The Gilded Age and reform",
+      "from": 1877,
+      "to": 1912,
+      "note": "Presidents from Hayes to Taft govern a fast-growing industrial country. Theodore Roosevelt, who takes office in 1901 after McKinley is shot, makes the presidency more active."
+    },
+    {
+      "id": "world-wars-and-the-depression",
+      "name": "World wars and the Depression",
+      "from": 1913,
+      "to": 1944,
+      "note": "Woodrow Wilson takes the country into the First World War. After the crash of 1929, Franklin D. Roosevelt is elected four times and leads through the Depression and the Second World War."
+    },
+    {
+      "id": "the-cold-war",
+      "name": "The Cold War",
+      "from": 1945,
+      "to": 1988,
+      "note": "From Harry Truman to Ronald Reagan, eight presidents face the Soviet Union abroad, and civil rights, Vietnam and Watergate at home."
+    },
+    {
+      "id": "since-the-cold-war",
+      "name": "Since the Cold War",
+      "from": 1989,
+      "to": 2026,
+      "note": "George H. W. Bush sees the Cold War end. His successors govern through the rise of the internet, the attacks of 11 September 2001, a financial crisis and a pandemic."
+    }
+  ]
+}

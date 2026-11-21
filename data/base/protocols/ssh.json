@@ -1,0 +1,48 @@
+{
+  "id": "ssh",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "SSH",
+      "from": "1995"
+    }
+  ],
+  "maker": "Tatu Ylonen",
+  "summary": "Protocol for logging in to remote computers and moving files through an encrypted link. A Finnish researcher wrote it after a password-sniffing attack at his university, and it replaced Telnet.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Secure Shell",
+    "SSH protocol",
+    "Secure Shell protocol"
+  ],
+  "wikidata": "Q170460",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Secure Shell (Q170460)",
+      "url": "https://www.wikidata.org/wiki/Q170460",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SSH",
+      "url": "https://en.wikipedia.org/wiki/SSH",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

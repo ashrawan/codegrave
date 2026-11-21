@@ -1,0 +1,60 @@
+{
+  "id": "pierre-de-coubertin",
+  "category": "founders",
+  "names": [
+    {
+      "name": "Pierre de Coubertin",
+      "from": "1863"
+    }
+  ],
+  "summary": "French educator who founded the International Olympic Committee in 1894 and organised the first modern Olympic Games in Athens in 1896. He believed that sport should be part of education and led the committee until 1925.",
+  "labels": [
+    "sport",
+    "education"
+  ],
+  "aliases": [
+    "Baron Pierre de Coubertin"
+  ],
+  "wikidata": "Q82984",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "international-olympic-committee"
+    },
+    {
+      "type": "related",
+      "to": "olympics-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pierre de Coubertin (Q82984)",
+      "url": "https://www.wikidata.org/wiki/Q82984",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pierre de Coubertin",
+      "url": "https://en.wikipedia.org/wiki/Pierre_de_Coubertin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

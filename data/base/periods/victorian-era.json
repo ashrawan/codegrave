@@ -1,0 +1,57 @@
+{
+  "id": "victorian-era",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Victorian era",
+      "from": "1837"
+    }
+  ],
+  "summary": "The reign of Queen Victoria in Britain, a time of industry, empire, railways and social reform. It gave its name to a style of building, dress and manners.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Victorian period",
+    "Victorian Age",
+    "Victorian Britain"
+  ],
+  "wikidata": "Q182688",
+  "events": [
+    {
+      "type": "born",
+      "date": "1837",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "british-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Victorian era (Q182688)",
+      "url": "https://www.wikidata.org/wiki/Q182688",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Victorian era",
+      "url": "https://en.wikipedia.org/wiki/Victorian_era",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

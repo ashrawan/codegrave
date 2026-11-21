@@ -1,0 +1,56 @@
+{
+  "id": "australian-gold-rushes",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Australian gold rushes",
+      "from": "1851"
+    }
+  ],
+  "summary": "The rushes that followed gold finds in New South Wales and Victoria in 1851 and later in other colonies. They brought large numbers of migrants, including many from China, and sharply raised the population and wealth of the colonies.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "Australian gold rush",
+    "Gold rush in Australia"
+  ],
+  "wikidata": "Q2914928",
+  "events": [
+    {
+      "type": "born",
+      "date": "1851-05",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Australian gold rush (Q2914928)",
+      "url": "https://www.wikidata.org/wiki/Q2914928",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Australian gold rushes",
+      "url": "https://en.wikipedia.org/wiki/Australian_gold_rushes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

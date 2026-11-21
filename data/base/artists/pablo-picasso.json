@@ -1,0 +1,59 @@
+{
+  "id": "pablo-picasso",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Pablo Picasso",
+      "from": "1881"
+    }
+  ],
+  "summary": "Spanish artist who spent most of his life in France. With Georges Braque he started Cubism, and his huge painting Guernica shows the bombing of a Basque town in the Spanish Civil War.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Pablo Ruys",
+    "P. Picasso",
+    "Pablo Ruys Picasso",
+    "Pablo Ruiz",
+    "Pablo Ruiz y Picasso"
+  ],
+  "wikidata": "Q5593",
+  "events": [
+    {
+      "type": "born",
+      "date": "1881-10-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-04-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "paul-cezanne"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pablo Picasso (Q5593)",
+      "url": "https://www.wikidata.org/wiki/Q5593",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pablo Picasso",
+      "url": "https://en.wikipedia.org/wiki/Pablo_Picasso",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

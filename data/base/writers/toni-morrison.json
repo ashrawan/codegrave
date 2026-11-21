@@ -1,0 +1,61 @@
+{
+  "id": "toni-morrison",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Toni Morrison",
+      "from": "1931"
+    }
+  ],
+  "summary": "American novelist and editor who wrote Beloved and Song of Solomon about Black life and the legacy of slavery. She won the Nobel Prize in Literature in 1993, the first Black woman to do so.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Chloe Ardelia Wofford",
+    "Chloe Anthony Wofford-Morrison",
+    "Chloe Anthony Wofford"
+  ],
+  "wikidata": "Q72334",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-02-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2019-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "virginia-woolf"
+    },
+    {
+      "type": "influenced_by",
+      "to": "herman-melville"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Toni Morrison (Q72334)",
+      "url": "https://www.wikidata.org/wiki/Q72334",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Toni Morrison",
+      "url": "https://en.wikipedia.org/wiki/Toni_Morrison",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

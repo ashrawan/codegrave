@@ -1,0 +1,50 @@
+{
+  "id": "illiac-iv",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "ILLIAC IV",
+      "from": "1975"
+    }
+  ],
+  "maker": "University of Illinois and Burroughs",
+  "summary": "Early parallel computer in which many processors carried out the same operation on different data at once. It was far behind schedule and over budget but showed the strengths and limits of parallel design.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q935306",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1981",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Retired after years of use at NASA Ames",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: ILLIAC IV (Q935306)",
+      "url": "https://www.wikidata.org/wiki/Q935306",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: ILLIAC IV",
+      "url": "https://en.wikipedia.org/wiki/ILLIAC_IV",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

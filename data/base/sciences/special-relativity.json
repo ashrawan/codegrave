@@ -1,0 +1,52 @@
+{
+  "id": "special-relativity",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Special relativity",
+      "from": "1905"
+    }
+  ],
+  "summary": "Einstein's 1905 theory that the laws of physics are the same for all observers moving steadily and that the speed of light is constant. It leads to time dilation and the famous link between mass and energy.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "SR",
+    "special theory of relativity",
+    "STR"
+  ],
+  "wikidata": "Q11455",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "albert-einstein"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: special relativity (Q11455)",
+      "url": "https://www.wikidata.org/wiki/Q11455",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Special relativity",
+      "url": "https://en.wikipedia.org/wiki/Special_relativity",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

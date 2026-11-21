@@ -1,0 +1,51 @@
+{
+  "id": "xerox-alto",
+  "category": "personal-computers",
+  "names": [
+    {
+      "name": "Xerox Alto",
+      "from": "1973"
+    }
+  ],
+  "maker": "Xerox PARC",
+  "summary": "Experimental personal computer built at Xerox PARC in 1973 with a screen display, a mouse and a graphical interface. It influenced later machines from Apple and Microsoft, though it was never sold widely.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Alto"
+  ],
+  "wikidata": "Q1140061",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-03-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "xerox-parc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Xerox Alto (Q1140061)",
+      "url": "https://www.wikidata.org/wiki/Q1140061",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Xerox Alto",
+      "url": "https://en.wikipedia.org/wiki/Xerox_Alto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

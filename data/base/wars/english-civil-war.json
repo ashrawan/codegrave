@@ -1,0 +1,61 @@
+{
+  "id": "english-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "English Civil War",
+      "from": "1642"
+    }
+  ],
+  "summary": "Wars between supporters of King Charles I and Parliament over who held power. The king was tried and executed in 1649, and England was run without a monarch until 1660.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "wikidata": "Q80330",
+  "events": [
+    {
+      "type": "born",
+      "date": "1642",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1651-09-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "charles-i"
+    },
+    {
+      "type": "related",
+      "to": "oliver-cromwell"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: English Civil War (Q80330)",
+      "url": "https://www.wikidata.org/wiki/Q80330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: English Civil War",
+      "url": "https://en.wikipedia.org/wiki/English_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,73 @@
+{
+  "id": "russia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Russia",
+      "from": "1263"
+    }
+  ],
+  "summary": "The largest country in the world by area, stretching from Eastern Europe across Siberia to the Pacific. It grew from the medieval principality of Moscow into an empire, and became the Russian Federation when the Soviet Union ended in 1991.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Russian Federation"
+  ],
+  "wikidata": "Q159",
+  "events": [
+    {
+      "type": "born",
+      "date": "1263",
+      "precision": "circa",
+      "note": "Dated from the principality of Moscow, founded about 1263, from which the Russian state grew. Kievan Rus', which Russia, Ukraine and Belarus all count as a forerunner, has its own entry, as do the Russian Empire and the Soviet Union."
+    },
+    {
+      "type": "milestone",
+      "date": "1547",
+      "precision": "year",
+      "label": "Tsardom",
+      "note": "Ivan IV was crowned the first tsar."
+    },
+    {
+      "type": "milestone",
+      "date": "1991-12-25",
+      "precision": "day",
+      "label": "Federation",
+      "note": "The Soviet Union ended and Russia became the Russian Federation."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russia (Q159)",
+      "url": "https://www.wikidata.org/wiki/Q159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russia",
+      "url": "https://en.wikipedia.org/wiki/Russia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

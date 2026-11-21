@@ -1,0 +1,53 @@
+{
+  "id": "longship",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Viking longship",
+      "from": "0800"
+    }
+  ],
+  "summary": "A long, narrow, shallow-draught ship propelled by sail and oars, used by Scandinavian seafarers. Longships could cross open sea and sail up rivers, taking the Vikings to Iceland, Greenland and North America.",
+  "labels": [
+    "transport",
+    "exploration"
+  ],
+  "aliases": [
+    "Viking ship",
+    "Scandinavian longship"
+  ],
+  "wikidata": "Q897611",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Gave way to broader cargo and warships such as the cog",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: longship (Q897611)",
+      "url": "https://www.wikidata.org/wiki/Q897611",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Longship",
+      "url": "https://en.wikipedia.org/wiki/Longship",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

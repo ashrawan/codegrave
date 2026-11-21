@@ -1,0 +1,55 @@
+{
+  "id": "johann-sebastian-bach",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Johann Sebastian Bach",
+      "from": "1685"
+    }
+  ],
+  "summary": "German organist and composer who wrote the Brandenburg Concertos, the Mass in B minor and The Well-Tempered Clavier. His music was little valued after his death until it was revived in the 1800s.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "J S Bach"
+  ],
+  "wikidata": "Q1339",
+  "events": [
+    {
+      "type": "born",
+      "date": "1685-03-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1750-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "antonio-vivaldi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Johann Sebastian Bach (Q1339)",
+      "url": "https://www.wikidata.org/wiki/Q1339",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Johann Sebastian Bach",
+      "url": "https://en.wikipedia.org/wiki/Johann_Sebastian_Bach",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

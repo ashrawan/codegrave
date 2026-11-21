@@ -1,0 +1,56 @@
+{
+  "id": "madonna",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Madonna",
+      "from": "1958"
+    }
+  ],
+  "summary": "American singer and songwriter who rose to fame in the 1980s with hits such as Like a Prayer. She has reinvented her style many times and is among the best-selling female artists of all time.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Madonna L. Ciccone",
+    "Madonna Ciccone",
+    "Madge"
+  ],
+  "wikidata": "Q1744",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "david-bowie"
+    },
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Madonna (Q1744)",
+      "url": "https://www.wikidata.org/wiki/Q1744",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Madonna",
+      "url": "https://en.wikipedia.org/wiki/Madonna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

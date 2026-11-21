@@ -1,0 +1,53 @@
+{
+  "id": "railway-mania",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Railway Mania",
+      "from": "1845"
+    }
+  ],
+  "summary": "Investors in Britain rushed to buy shares in new railway companies, driving prices up before a sharp fall. Many lost their savings, though thousands of miles of track were built and still serve the country.",
+  "labels": [
+    "economics",
+    "transport"
+  ],
+  "wikidata": "Q3072191",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1847",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Railway Mania (Q3072191)",
+      "url": "https://www.wikidata.org/wiki/Q3072191",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Railway Mania",
+      "url": "https://en.wikipedia.org/wiki/Railway_Mania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

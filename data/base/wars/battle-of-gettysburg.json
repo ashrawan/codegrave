@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-gettysburg",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Gettysburg",
+      "from": "1863"
+    }
+  ],
+  "summary": "A three-day battle in Pennsylvania in which the Union army beat Robert E. Lee's invasion of the North. It had the most casualties of the war and is seen as a turning point.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q33132",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1863-07-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "american-civil-war"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "confederate-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Gettysburg (Q33132)",
+      "url": "https://www.wikidata.org/wiki/Q33132",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Gettysburg",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Gettysburg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

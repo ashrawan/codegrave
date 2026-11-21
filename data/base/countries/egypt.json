@@ -1,0 +1,78 @@
+{
+  "id": "egypt",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Egypt",
+      "from": "1922"
+    }
+  ],
+  "summary": "A country of north-eastern Africa on the Nile and the site of the pyramids. The monarchy ended in 1952 and the republic was proclaimed in 1953; the Suez Canal is among its important assets.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Republic of Egypt",
+    "Arab Republic of Egypt",
+    "Arab Rep. Egypt",
+    "Rep. Egypt",
+    "Misr"
+  ],
+  "wikidata": "Q79",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-02-28",
+      "precision": "day",
+      "note": "Dated from 28 February 1922, when Britain recognised Egypt as an independent kingdom. Ancient Egypt has its own entry."
+    },
+    {
+      "type": "milestone",
+      "date": "1953",
+      "precision": "year",
+      "label": "Republic",
+      "note": "The monarchy was abolished a year after the revolution of 1952."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Egypt (Q79)",
+      "url": "https://www.wikidata.org/wiki/Q79",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Egypt",
+      "url": "https://en.wikipedia.org/wiki/Egypt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

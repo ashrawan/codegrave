@@ -1,0 +1,53 @@
+{
+  "id": "electric-motor",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Electric motor",
+      "from": "1834"
+    }
+  ],
+  "summary": "A machine that turns electric current into rotation. Several inventors built working motors in the 1820s and 1830s, and the motor now drives everything from fans and trains to factory machinery.",
+  "labels": [
+    "energy",
+    "engineering"
+  ],
+  "aliases": [
+    "motor",
+    "electrical motor",
+    "electro motor"
+  ],
+  "wikidata": "Q72313",
+  "events": [
+    {
+      "type": "born",
+      "date": "1834",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "tram"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: electric motor (Q72313)",
+      "url": "https://www.wikidata.org/wiki/Q72313",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Electric motor",
+      "url": "https://en.wikipedia.org/wiki/Electric_motor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

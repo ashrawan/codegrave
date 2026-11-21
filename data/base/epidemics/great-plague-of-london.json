@@ -1,0 +1,59 @@
+{
+  "id": "great-plague-of-london",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Great Plague of London",
+      "from": "1665"
+    }
+  ],
+  "summary": "The last major plague epidemic in England killed a large share of London's people in less than two years. Many wealthy residents left the city, and houses with infected families were shut up and marked.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "Great Plague"
+  ],
+  "wikidata": "Q917048",
+  "events": [
+    {
+      "type": "born",
+      "date": "1665",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1666",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Plague of London (Q917048)",
+      "url": "https://www.wikidata.org/wiki/Q917048",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Plague of London",
+      "url": "https://en.wikipedia.org/wiki/Great_Plague_of_London",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

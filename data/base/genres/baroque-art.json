@@ -1,0 +1,61 @@
+{
+  "id": "baroque-art",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Baroque",
+      "from": "1600"
+    }
+  ],
+  "summary": "Dramatic style in art and architecture that began in Italy, using strong light, movement and rich ornament. It was used by the Catholic Church and by royal courts, and spread to Spain, Latin America and Central Europe.",
+  "labels": [
+    "visual-art",
+    "architecture"
+  ],
+  "wikidata": "Q37853",
+  "events": [
+    {
+      "type": "born",
+      "date": "1600",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1750",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "europe"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "influenced_by",
+      "to": "council-of-trent"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Baroque (Q37853)",
+      "url": "https://www.wikidata.org/wiki/Q37853",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baroque",
+      "url": "https://en.wikipedia.org/wiki/Baroque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

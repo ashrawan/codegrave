@@ -1,0 +1,49 @@
+{
+  "id": "mercury-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Mercury",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The smallest planet and the closest to the Sun, a cratered, airless world with huge swings between day and night temperatures. It circles the Sun in about 88 Earth days, faster than any other planet.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Sol I",
+    "Hermes",
+    "Sol b",
+    "Sol 1",
+    "Planet Mercury"
+  ],
+  "wikidata": "Q308",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Mercury (Q308)",
+      "url": "https://www.wikidata.org/wiki/Q308",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mercury (planet)",
+      "url": "https://en.wikipedia.org/wiki/Mercury_(planet)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

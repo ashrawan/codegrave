@@ -1,0 +1,55 @@
+{
+  "id": "great-chicago-fire",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Great Chicago Fire",
+      "from": "1871"
+    }
+  ],
+  "summary": "A fire burned through Chicago for about two days and left a large part of the city, then mostly built of wood, in ruins. The city rebuilt quickly and became a centre of new building methods and early skyscrapers.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Great Fire of 1871"
+  ],
+  "wikidata": "Q70520",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-10-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1871-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Chicago Fire (Q70520)",
+      "url": "https://www.wikidata.org/wiki/Q70520",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Chicago Fire",
+      "url": "https://en.wikipedia.org/wiki/Great_Chicago_Fire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

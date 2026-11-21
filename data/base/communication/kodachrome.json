@@ -1,0 +1,55 @@
+{
+  "id": "kodachrome",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Kodachrome",
+      "from": "1935"
+    }
+  ],
+  "maker": "Kodak",
+  "summary": "A colour film famous for rich colours and for lasting a long time in slides. Used by professionals and families for decades, it ended in 2009 when digital cameras took over.",
+  "labels": [
+    "visual-art",
+    "lost"
+  ],
+  "wikidata": "Q1455620",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2009",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Digital photography ended demand and Kodak stopped making it",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "kodak"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kodachrome (Q1455620)",
+      "url": "https://www.wikidata.org/wiki/Q1455620",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kodachrome",
+      "url": "https://en.wikipedia.org/wiki/Kodachrome",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

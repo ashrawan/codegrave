@@ -1,0 +1,50 @@
+{
+  "id": "greek-fire",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Greek fire",
+      "from": "0672"
+    }
+  ],
+  "maker": "Byzantine Empire",
+  "summary": "A burning liquid used by the Byzantine navy, sprayed from tubes onto enemy ships, where it kept burning even on water. Its recipe was a state secret and no one today knows for sure what it contained.",
+  "labels": [
+    "war",
+    "lost"
+  ],
+  "wikidata": "Q179537",
+  "events": [
+    {
+      "type": "born",
+      "date": "0672",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "The secret recipe was lost and gunpowder weapons took over",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Greek fire (Q179537)",
+      "url": "https://www.wikidata.org/wiki/Q179537",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Greek fire",
+      "url": "https://en.wikipedia.org/wiki/Greek_fire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

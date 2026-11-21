@@ -1,0 +1,56 @@
+{
+  "id": "euromaidan",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Euromaidan",
+      "from": "2013"
+    }
+  ],
+  "summary": "Protests in Kyiv, Ukraine, that began when the government dropped an agreement with the European Union. They grew into the Revolution of Dignity, and President Yanukovych left office in February 2014.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "2013 Ukraine protests",
+    "Maidan protests"
+  ],
+  "wikidata": "Q15224558",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-11-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-02-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Euromaidan (Q15224558)",
+      "url": "https://www.wikidata.org/wiki/Q15224558",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Euromaidan",
+      "url": "https://en.wikipedia.org/wiki/Euromaidan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

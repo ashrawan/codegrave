@@ -1,0 +1,55 @@
+{
+  "id": "great-oxidation-event",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Great Oxidation Event",
+      "from": "-2400000000"
+    }
+  ],
+  "summary": "The time, from about 2.4 to 2 billion years ago, when oxygen made by photosynthetic microbes first built up in the air. It rusted iron in the oceans and killed many of the oxygen-hating microbes that had lived before.",
+  "labels": [
+    "biology",
+    "environment"
+  ],
+  "aliases": [
+    "Great Oxygenation Event",
+    "Oxygen catastrophe",
+    "GOE",
+    "Oxygen Revolution",
+    "Oxygen Crisis"
+  ],
+  "wikidata": "Q837561",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2400000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2000000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Great Oxygenation Event (Q837561)",
+      "url": "https://www.wikidata.org/wiki/Q837561",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Oxidation Event",
+      "url": "https://en.wikipedia.org/wiki/Great_Oxidation_Event",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

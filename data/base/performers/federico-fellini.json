@@ -1,0 +1,61 @@
+{
+  "id": "federico-fellini",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Federico Fellini",
+      "from": "1920"
+    }
+  ],
+  "summary": "Italian film director of La Strada, La Dolce Vita and 8½. His films mix memory, dreams and circus-like scenes, and he won four Academy Awards for Best Foreign Language Film.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Federico",
+    "Frederico Fellini",
+    "Fellas"
+  ],
+  "wikidata": "Q7371",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-01-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "charlie-chaplin"
+    },
+    {
+      "type": "influenced_by",
+      "to": "pablo-picasso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Federico Fellini (Q7371)",
+      "url": "https://www.wikidata.org/wiki/Q7371",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Federico Fellini",
+      "url": "https://en.wikipedia.org/wiki/Federico_Fellini",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,49 @@
+{
+  "id": "covid-19",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "COVID-19",
+      "from": "2019"
+    }
+  ],
+  "summary": "A disease caused by the SARS-CoV-2 virus, first identified in Wuhan, China in late 2019. It became a worldwide pandemic in 2020 and led to rapid development of vaccines.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "coronavirus disease 2019",
+    "nCOVD-19",
+    "2019-nCoV acute respiratory disease",
+    "Novel Coronavirus Pneumonia",
+    "Wuhan respiratory syndrome"
+  ],
+  "wikidata": "Q84263196",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-12",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: COVID-19 (Q84263196)",
+      "url": "https://www.wikidata.org/wiki/Q84263196",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: COVID-19",
+      "url": "https://en.wikipedia.org/wiki/COVID-19",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

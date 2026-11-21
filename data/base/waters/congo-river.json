@@ -1,0 +1,53 @@
+{
+  "id": "congo-river",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Congo River",
+      "from": "-2000000"
+    }
+  ],
+  "summary": "The deepest river in the world and the second largest by flow, crossing the equator twice as it drains the rainforest of central Africa. It has been a highway for trade and the route by which outsiders entered the region. Its present course to the Atlantic is thought to have formed between 1.5 and 2 million years ago.",
+  "labels": [
+    "environment",
+    "transport"
+  ],
+  "aliases": [
+    "Zaire River",
+    "Zaire",
+    "River Congo"
+  ],
+  "wikidata": "Q3503",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Congo River (Q3503)",
+      "url": "https://www.wikidata.org/wiki/Q3503",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Congo River",
+      "url": "https://en.wikipedia.org/wiki/Congo_River",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

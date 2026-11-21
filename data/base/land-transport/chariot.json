@@ -1,0 +1,43 @@
+{
+  "id": "chariot",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Chariot",
+      "from": "-2000"
+    }
+  ],
+  "summary": "Light two-wheeled vehicle pulled by horses, used for war, racing and ceremony. Light chariots with spoked wheels appear in the steppe around 2000 BCE and then spread across Asia and Europe.",
+  "labels": [
+    "war",
+    "transport"
+  ],
+  "wikidata": "Q203788",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: chariot (Q203788)",
+      "url": "https://www.wikidata.org/wiki/Q203788",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chariot",
+      "url": "https://en.wikipedia.org/wiki/Chariot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

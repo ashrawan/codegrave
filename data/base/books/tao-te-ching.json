@@ -1,0 +1,55 @@
+{
+  "id": "tao-te-ching",
+  "category": "books",
+  "names": [
+    {
+      "name": "Tao Te Ching",
+      "from": "-0400"
+    }
+  ],
+  "summary": "Short Chinese text of eighty-one chapters, traditionally credited to Laozi, about the Way (Dao) and about living and ruling by yielding rather than forcing. It is the base of Taoism and among the most translated books.",
+  "labels": [
+    "philosophy",
+    "religion"
+  ],
+  "aliases": [
+    "Laozi",
+    "Lao-tzu",
+    "Classic of the Way and Its Power",
+    "The Way and Its Power",
+    "Classic of the Way and Virtue"
+  ],
+  "wikidata": "Q134425",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0400",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "laozi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tao Te Ching (Q134425)",
+      "url": "https://www.wikidata.org/wiki/Q134425",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tao Te Ching",
+      "url": "https://en.wikipedia.org/wiki/Tao_Te_Ching",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

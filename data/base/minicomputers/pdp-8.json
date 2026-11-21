@@ -1,0 +1,55 @@
+{
+  "id": "pdp-8",
+  "category": "minicomputers",
+  "names": [
+    {
+      "name": "PDP-8",
+      "from": "1965"
+    }
+  ],
+  "maker": "Digital Equipment Corporation",
+  "summary": "Small, low-priced computer from Digital Equipment Corporation, one of the first that a laboratory or small firm could afford. Many thousands were sold, and it helped make the minicomputer a real industry.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "wikidata": "Q911888",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-03-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by newer microprocessor-based machines",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "digital-equipment-corporation"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: PDP-8 (Q911888)",
+      "url": "https://www.wikidata.org/wiki/Q911888",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PDP-8",
+      "url": "https://en.wikipedia.org/wiki/PDP-8",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

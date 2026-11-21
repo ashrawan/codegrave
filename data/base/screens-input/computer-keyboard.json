@@ -1,0 +1,52 @@
+{
+  "id": "computer-keyboard",
+  "category": "screens-input",
+  "names": [
+    {
+      "name": "Computer keyboard",
+      "from": "1868"
+    }
+  ],
+  "summary": "Set of keys for typing text and commands into a computer. Its QWERTY layout comes from the typewriter that Christopher Latham Sholes patented in 1868, and computers later adopted it.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "keyboard",
+    "keyboard (computer)",
+    "laptop keyboard"
+  ],
+  "wikidata": "Q250",
+  "events": [
+    {
+      "type": "born",
+      "date": "1868",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "compaq-portable"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: computer keyboard (Q250)",
+      "url": "https://www.wikidata.org/wiki/Q250",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Computer keyboard",
+      "url": "https://en.wikipedia.org/wiki/Computer_keyboard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

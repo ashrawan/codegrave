@@ -1,0 +1,61 @@
+{
+  "id": "kingdom-of-macedon",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kingdom of Macedon",
+      "from": "-0808"
+    }
+  ],
+  "summary": "The Greek kingdom of the north that rose under Philip II and then, under his son Alexander the Great, overthrew Persia. Its generals divided Alexander's conquests after his death in 323 BCE.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Macedonia",
+    "Macedon",
+    "Macedonian Empire",
+    "Ancient Macedonia",
+    "Macedonian Kingdom"
+  ],
+  "wikidata": "Q83958",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0808",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0167",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Defeated by Rome and divided into republics",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "classical-antiquity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Macedonia (Q83958)",
+      "url": "https://www.wikidata.org/wiki/Q83958",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Macedonia (ancient kingdom)",
+      "url": "https://en.wikipedia.org/wiki/Macedonia_(ancient_kingdom)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

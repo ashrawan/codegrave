@@ -1,0 +1,52 @@
+{
+  "id": "the-brothers-karamazov",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Brothers Karamazov",
+      "from": "1880"
+    }
+  ],
+  "maker": "Fyodor Dostoevsky",
+  "summary": "Last novel by Fyodor Dostoevsky, about three brothers and their father, whose murder brings to the surface questions of faith, doubt and guilt. It was published in instalments and then as a book in 1880.",
+  "labels": [
+    "literature",
+    "religion"
+  ],
+  "aliases": [
+    "The Karamazov Brothers"
+  ],
+  "wikidata": "Q183157",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "fyodor-dostoevsky"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Brothers Karamazov (Q183157)",
+      "url": "https://www.wikidata.org/wiki/Q183157",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Brothers Karamazov",
+      "url": "https://en.wikipedia.org/wiki/The_Brothers_Karamazov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,62 @@
+{
+  "id": "fatimid-caliphate",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Fatimid Caliphate",
+      "from": "0909"
+    }
+  ],
+  "summary": "A Shia Muslim caliphate that began in North Africa and then ruled Egypt from the city of Cairo, which it founded. It also founded the al-Azhar mosque, now one of the oldest universities.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Fatimid empire",
+    "Fatimid dynasty"
+  ],
+  "wikidata": "Q160307",
+  "events": [
+    {
+      "type": "born",
+      "date": "0909",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1171",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when Saladin took power in Egypt",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "kingdom-of-jerusalem"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "almohad-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fatimid Caliphate (Q160307)",
+      "url": "https://www.wikidata.org/wiki/Q160307",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fatimid Caliphate",
+      "url": "https://en.wikipedia.org/wiki/Fatimid_Caliphate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

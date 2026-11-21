@@ -1,0 +1,54 @@
+{
+  "id": "laika",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Laika",
+      "from": "1954"
+    }
+  ],
+  "summary": "A Moscow street dog sent into orbit on Sputnik 2 in November 1957, the first animal to orbit Earth. She did not survive the flight, and her mission showed that a living creature could endure spaceflight.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "aliases": [
+    "Zhuchka",
+    "Limonchik",
+    "Muttnik",
+    "Kudryavka"
+  ],
+  "wikidata": "Q53662",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1957-11-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Laika (Q53662)",
+      "url": "https://www.wikidata.org/wiki/Q53662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Laika",
+      "url": "https://en.wikipedia.org/wiki/Laika",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

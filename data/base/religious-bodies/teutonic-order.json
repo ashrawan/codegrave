@@ -1,0 +1,57 @@
+{
+  "id": "teutonic-order",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Teutonic Order",
+      "from": "1190"
+    }
+  ],
+  "summary": "Catholic military order founded in the Holy Land by German knights. It later conquered and ruled lands on the Baltic, and it now exists as a religious and charitable order.",
+  "labels": [
+    "religion",
+    "war"
+  ],
+  "aliases": [
+    "Teutonic Knights",
+    "O.T.",
+    "OT"
+  ],
+  "wikidata": "Q48189",
+  "events": [
+    {
+      "type": "born",
+      "date": "1190",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venice"
+    },
+    {
+      "type": "in",
+      "to": "vienna"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Teutonic Order (Q48189)",
+      "url": "https://www.wikidata.org/wiki/Q48189",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Teutonic Order",
+      "url": "https://en.wikipedia.org/wiki/Teutonic_Order",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

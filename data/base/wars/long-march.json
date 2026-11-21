@@ -1,0 +1,61 @@
+{
+  "id": "long-march",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Long March",
+      "from": "1934"
+    }
+  ],
+  "summary": "A long retreat by the Chinese Red Army to escape Nationalist forces, covering thousands of kilometres of rough country to the north-west. Mao Zedong gained leadership of the Communist Party during it.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "wikidata": "Q46333",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-10-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1935-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "chinese-civil-war"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Long March (Q46333)",
+      "url": "https://www.wikidata.org/wiki/Q46333",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Long March",
+      "url": "https://en.wikipedia.org/wiki/Long_March",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

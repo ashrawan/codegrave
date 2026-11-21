@@ -1,0 +1,89 @@
+{
+  "id": "operating-systems",
+  "name": "Operating Systems",
+  "description": "The systems that run our computers and phones, from Unix and MS-DOS to Windows, macOS, Linux, Android and iOS.",
+  "category": "computing",
+  "labels": [
+    "computing"
+  ],
+  "tags": [
+    "operating systems",
+    "windows",
+    "linux",
+    "macos",
+    "unix",
+    "android",
+    "ios",
+    "ms-dos"
+  ],
+  "entries": [
+    "multics",
+    "unix",
+    "cp-m",
+    "ms-dos",
+    "gnu",
+    "classic-mac-os",
+    "os-2",
+    "linux",
+    "windows-3-1",
+    "freebsd",
+    "windows-95",
+    "beos",
+    "symbian",
+    "macos",
+    "windows-xp",
+    "windows-vista",
+    "iphone-os",
+    "android",
+    "webos",
+    "windows-7",
+    "windows-phone",
+    "chrome-os",
+    "windows-10",
+    "windows-11"
+  ],
+  "checkpoints": [
+    {
+      "id": "mainframes-and-unix",
+      "name": "Mainframes and Unix",
+      "from": 1969,
+      "to": 1973,
+      "note": "Multics shows what a time-sharing system can do, and Unix, written at Bell Labs, becomes the model for most systems that follow."
+    },
+    {
+      "id": "systems-for-the-first-pcs",
+      "name": "Systems for the first PCs",
+      "from": 1974,
+      "to": 1989,
+      "note": "CP/M runs the first small business computers, MS-DOS ships with the IBM PC in 1981, and the Macintosh brings windows and a mouse in 1984."
+    },
+    {
+      "id": "windows-takes-the-desktop",
+      "name": "Windows takes the desktop",
+      "from": 1990,
+      "to": 2000,
+      "note": "Windows 3 and then Windows 95 put a graphical desktop on most of the world's PCs. Linux, started by a student in 1991, grows into the system that runs much of the internet."
+    },
+    {
+      "id": "xp-and-mac-os-x",
+      "name": "XP and Mac OS X",
+      "from": 2001,
+      "to": 2006,
+      "note": "Windows XP and Mac OS X, both released in 2001, set the pattern for the desktop for more than a decade."
+    },
+    {
+      "id": "phones-change-everything",
+      "name": "Phones change everything",
+      "from": 2007,
+      "to": 2014,
+      "note": "The iPhone arrives in 2007 and Android a year later. Within a few years they push aside Symbian, webOS and Windows Phone, and most computing moves to the phone."
+    },
+    {
+      "id": "today",
+      "name": "Today",
+      "from": 2015,
+      "to": 2026,
+      "note": "Windows 10 and 11 on the desktop, and Android and iOS in the pocket, with Linux underneath much of the rest."
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "claude-shannon",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Claude Shannon",
+      "from": "1916"
+    }
+  ],
+  "summary": "American mathematician and engineer who founded information theory with his 1948 paper on communication. He showed how to measure information in bits, and earlier linked Boolean logic to electrical switching circuits.",
+  "labels": [
+    "mathematics",
+    "computing"
+  ],
+  "aliases": [
+    "C E Shannon",
+    "Claude E. Shannon",
+    "Shannon",
+    "Claude Elwood Shannon"
+  ],
+  "wikidata": "Q92760",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-04-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-02-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "related",
+      "to": "dartmouth-workshop"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Claude Shannon (Q92760)",
+      "url": "https://www.wikidata.org/wiki/Q92760",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Claude Shannon",
+      "url": "https://en.wikipedia.org/wiki/Claude_Shannon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

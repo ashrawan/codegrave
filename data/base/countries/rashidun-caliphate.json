@@ -1,0 +1,57 @@
+{
+  "id": "rashidun-caliphate",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Rashidun Caliphate",
+      "from": "0632"
+    }
+  ],
+  "summary": "The first Islamic state, led by the first four caliphs after the death of Muhammad. In about thirty years its armies took Arabia, Syria, Egypt and Persia from the Byzantine and Sasanian empires.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "al-Khilāfat ar-Rāshidah"
+  ],
+  "wikidata": "Q12490507",
+  "events": [
+    {
+      "type": "born",
+      "date": "0632-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "0661-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Umayyad dynasty after a civil war",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "umayyad-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rashidun Caliphate (Q12490507)",
+      "url": "https://www.wikidata.org/wiki/Q12490507",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rashidun Caliphate",
+      "url": "https://en.wikipedia.org/wiki/Rashidun_Caliphate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

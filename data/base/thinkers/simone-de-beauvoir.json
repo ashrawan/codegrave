@@ -1,0 +1,53 @@
+{
+  "id": "simone-de-beauvoir",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Simone de Beauvoir",
+      "from": "1908"
+    }
+  ],
+  "summary": "French philosopher and writer whose 1949 book The Second Sex examined how society shapes women's lives, including the idea that one is not born but becomes a woman. It became a foundation of modern feminist thought.",
+  "labels": [
+    "philosophy",
+    "human-rights"
+  ],
+  "wikidata": "Q7197",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-01-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-04-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "jean-paul-sartre"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Simone de Beauvoir (Q7197)",
+      "url": "https://www.wikidata.org/wiki/Q7197",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Simone de Beauvoir",
+      "url": "https://en.wikipedia.org/wiki/Simone_de_Beauvoir",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

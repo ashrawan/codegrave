@@ -1,0 +1,48 @@
+{
+  "id": "crater-lake",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Crater Lake",
+      "from": "-5700"
+    }
+  ],
+  "summary": "The deepest lake in the United States, in Oregon, filling the caldera left when Mount Mazama collapsed about 7,700 years ago. Fed only by rain and snow, it is known for its deep blue water.",
+  "labels": [
+    "environment",
+    "world-heritage"
+  ],
+  "wikidata": "Q329266",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Crater Lake (Q329266)",
+      "url": "https://www.wikidata.org/wiki/Q329266",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Crater Lake",
+      "url": "https://en.wikipedia.org/wiki/Crater_Lake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

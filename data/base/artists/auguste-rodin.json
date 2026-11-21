@@ -1,0 +1,59 @@
+{
+  "id": "auguste-rodin",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Auguste Rodin",
+      "from": "1840"
+    }
+  ],
+  "summary": "French sculptor who made The Thinker and The Kiss. He modelled the surface of his figures in rough, expressive clay, which broke with the smooth style of earlier public statues.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Lo-tan",
+    "aug. rodin",
+    "rodin",
+    "e. rodin",
+    "François Auguste René Rodin"
+  ],
+  "wikidata": "Q30755",
+  "events": [
+    {
+      "type": "born",
+      "date": "1840-11-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1917-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "michelangelo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Auguste Rodin (Q30755)",
+      "url": "https://www.wikidata.org/wiki/Q30755",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Auguste Rodin",
+      "url": "https://en.wikipedia.org/wiki/Auguste_Rodin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

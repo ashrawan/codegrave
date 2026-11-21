@@ -1,0 +1,42 @@
+{
+  "id": "sushi",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Sushi",
+      "from": "0700"
+    }
+  ],
+  "summary": "A Japanese dish of vinegared rice with fish or other ingredients. It began as a way to preserve fish in fermented rice, and the fresh, hand-pressed form arose in Edo in the nineteenth century.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q46383",
+  "events": [
+    {
+      "type": "born",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: sushi (Q46383)",
+      "url": "https://www.wikidata.org/wiki/Q46383",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sushi",
+      "url": "https://en.wikipedia.org/wiki/Sushi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

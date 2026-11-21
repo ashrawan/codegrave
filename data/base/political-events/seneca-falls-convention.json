@@ -1,0 +1,53 @@
+{
+  "id": "seneca-falls-convention",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Seneca Falls Convention",
+      "from": "1848"
+    }
+  ],
+  "summary": "Meeting in New York State in July 1848, widely seen as the first women's rights convention in the United States. Organisers including Elizabeth Cady Stanton and Lucretia Mott issued a Declaration of Sentiments demanding equal rights, including the vote.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "wikidata": "Q2736155",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-07-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1848-07-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "frederick-douglass"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seneca Falls Convention (Q2736155)",
+      "url": "https://www.wikidata.org/wiki/Q2736155",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seneca Falls Convention",
+      "url": "https://en.wikipedia.org/wiki/Seneca_Falls_Convention",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

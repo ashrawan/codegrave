@@ -1,0 +1,54 @@
+{
+  "id": "victoria-cross",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Victoria Cross",
+      "from": "1856"
+    }
+  ],
+  "summary": "The highest military honour of the United Kingdom, awarded for bravery in the presence of the enemy. It was created in 1856 during the Crimean War and is also used in several Commonwealth countries.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "VC"
+  ],
+  "wikidata": "Q219578",
+  "events": [
+    {
+      "type": "born",
+      "date": "1856-01-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "victoria"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Victoria Cross (Q219578)",
+      "url": "https://www.wikidata.org/wiki/Q219578",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Victoria Cross",
+      "url": "https://en.wikipedia.org/wiki/Victoria_Cross",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

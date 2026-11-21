@@ -1,0 +1,83 @@
+{
+  "id": "wassily-kandinsky",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Wassily Kandinsky",
+      "from": "1866"
+    }
+  ],
+  "summary": "Russian-born painter who is often credited with making some of the first fully abstract paintings, around 1910. He taught at the Bauhaus school and wrote about the link between colour and music.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Kandinsky",
+    "Vasilij Vasil'evič Kandinskij",
+    "Wahsili Kang-ting-ssu-chi",
+    "Basile W. Kandinsky",
+    "Vasilij Vasilijevitch Kandynski"
+  ],
+  "wikidata": "Q61064",
+  "events": [
+    {
+      "type": "born",
+      "date": "1866-11-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-12-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "richard-wagner"
+    },
+    {
+      "type": "influenced_by",
+      "to": "claude-monet"
+    },
+    {
+      "type": "influenced_by",
+      "to": "edvard-munch"
+    },
+    {
+      "type": "influenced_by",
+      "to": "vincent-van-gogh"
+    },
+    {
+      "type": "influenced_by",
+      "to": "henri-matisse"
+    },
+    {
+      "type": "influenced_by",
+      "to": "pablo-picasso"
+    },
+    {
+      "type": "influenced_by",
+      "to": "walter-gropius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wassily Kandinsky (Q61064)",
+      "url": "https://www.wikidata.org/wiki/Q61064",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wassily Kandinsky",
+      "url": "https://en.wikipedia.org/wiki/Wassily_Kandinsky",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

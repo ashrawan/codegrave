@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-manzikert",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Manzikert",
+      "from": "1071"
+    }
+  ],
+  "summary": "The Seljuk Turks under Alp Arslan defeated and captured the Byzantine emperor Romanos IV in eastern Anatolia. The loss opened Anatolia to Turkish settlement and helped lead to the call for the Crusades.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "The Battle of Manzikert",
+    "Malazgirt"
+  ],
+  "wikidata": "Q200032",
+  "events": [
+    {
+      "type": "born",
+      "date": "1071-08-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1071-08-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    },
+    {
+      "type": "related",
+      "to": "byzantine-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Manzikert (Q200032)",
+      "url": "https://www.wikidata.org/wiki/Q200032",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Manzikert",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Manzikert",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

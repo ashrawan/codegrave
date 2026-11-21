@@ -1,0 +1,53 @@
+{
+  "id": "higgs-boson",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Higgs boson",
+      "from": "1964"
+    }
+  ],
+  "summary": "A particle predicted in 1964 as part of the way other particles acquire mass. It was found at the Large Hadron Collider at CERN in 2012, completing the Standard Model of particle physics.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "God particle",
+    "H0",
+    "Higgs particle",
+    "Higgson"
+  ],
+  "wikidata": "Q402",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "cern"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Higgs boson (Q402)",
+      "url": "https://www.wikidata.org/wiki/Q402",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Higgs boson",
+      "url": "https://en.wikipedia.org/wiki/Higgs_boson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

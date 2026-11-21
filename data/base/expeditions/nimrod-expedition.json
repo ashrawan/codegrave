@@ -1,0 +1,59 @@
+{
+  "id": "nimrod-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Nimrod Expedition",
+      "from": "1907"
+    }
+  ],
+  "summary": "A British expedition led by Ernest Shackleton went to Antarctica to reach the South Pole. His party turned back a short distance from the Pole to survive, and another group reached the South Magnetic Pole.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "British Antarctic Expedition (1907–1909)"
+  ],
+  "wikidata": "Q975593",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907-08",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1909-03",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    },
+    {
+      "type": "related",
+      "to": "ernest-shackleton"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Antarctic Expedition (1907–1909) (Q975593)",
+      "url": "https://www.wikidata.org/wiki/Q975593",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nimrod Expedition",
+      "url": "https://en.wikipedia.org/wiki/Nimrod_Expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "watergate-scandal",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Watergate scandal",
+      "from": "1972"
+    }
+  ],
+  "summary": "A US political scandal that began with a break-in at the Democratic Party's offices and grew into a story of cover-up by President Nixon's staff. Nixon resigned in 1974.",
+  "labels": [
+    "politics",
+    "law"
+  ],
+  "wikidata": "Q42761",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-06-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-08-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "richard-nixon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Watergate scandal (Q42761)",
+      "url": "https://www.wikidata.org/wiki/Q42761",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Watergate scandal",
+      "url": "https://en.wikipedia.org/wiki/Watergate_scandal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

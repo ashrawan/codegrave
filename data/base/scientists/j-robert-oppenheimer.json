@@ -1,0 +1,62 @@
+{
+  "id": "j-robert-oppenheimer",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "J. Robert Oppenheimer",
+      "from": "1904"
+    }
+  ],
+  "summary": "American physicist who directed the Los Alamos laboratory that built the first atomic bombs in the Second World War. After the war he advised on nuclear policy and lost his security clearance in 1954.",
+  "labels": [
+    "physics",
+    "war"
+  ],
+  "aliases": [
+    "Julius Ropert Oppenheimer",
+    "Robert Oppenheimer",
+    "Oppenheimer"
+  ],
+  "wikidata": "Q132537",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-04-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-02-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: J. Robert Oppenheimer (Q132537)",
+      "url": "https://www.wikidata.org/wiki/Q132537",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: J. Robert Oppenheimer",
+      "url": "https://en.wikipedia.org/wiki/J._Robert_Oppenheimer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

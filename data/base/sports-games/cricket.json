@@ -1,0 +1,42 @@
+{
+  "id": "cricket",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Cricket",
+      "from": "1550"
+    }
+  ],
+  "summary": "A bat and ball game between two teams that grew from village play in south-east England. It spread with the British Empire and is hugely popular in South Asia, Australia and the Caribbean.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q5375",
+  "events": [
+    {
+      "type": "born",
+      "date": "1550",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: cricket (Q5375)",
+      "url": "https://www.wikidata.org/wiki/Q5375",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cricket",
+      "url": "https://en.wikipedia.org/wiki/Cricket",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

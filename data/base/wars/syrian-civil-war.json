@@ -1,0 +1,63 @@
+{
+  "id": "syrian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Syrian civil war",
+      "from": "2011"
+    }
+  ],
+  "summary": "A conflict that grew from protests against the government of Bashar al-Assad into a multi-sided war with foreign involvement. It killed hundreds of thousands and displaced millions, and ended with Assad's government falling in December 2024.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Syrian Uprising",
+    "Syrian Demonstrations",
+    "Syrian Protests",
+    "Syrian Rebellion",
+    "Syrian Revolt"
+  ],
+  "wikidata": "Q178810",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-03-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "arab-spring"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Syrian Civil War (Q178810)",
+      "url": "https://www.wikidata.org/wiki/Q178810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Syrian civil war",
+      "url": "https://en.wikipedia.org/wiki/Syrian_civil_war",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

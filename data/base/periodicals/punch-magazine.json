@@ -1,0 +1,60 @@
+{
+  "id": "punch-magazine",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Punch",
+      "from": "1841"
+    }
+  ],
+  "summary": "British weekly magazine of humour and cartoons that popularised the word cartoon in its modern sense. It closed in 1992, was revived in 1996 and closed for good in 2002.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "Punch, or the London Charivari"
+  ],
+  "wikidata": "Q849759",
+  "events": [
+    {
+      "type": "born",
+      "date": "1841-07-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Fell in sales and closed after a revival failed",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Punch (Q849759)",
+      "url": "https://www.wikidata.org/wiki/Q849759",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Punch (magazine)",
+      "url": "https://en.wikipedia.org/wiki/Punch_(magazine)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

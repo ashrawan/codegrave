@@ -1,0 +1,56 @@
+{
+  "id": "new-hollywood",
+  "category": "genres",
+  "names": [
+    {
+      "name": "New Hollywood",
+      "from": "1967"
+    }
+  ],
+  "summary": "Period of American film making from the late 1960s to around 1980 when young directors such as Coppola, Scorsese and Altman had unusual freedom, making personal and often grim films, until blockbusters took over.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Hollywood Renaissance",
+    "American New Wave"
+  ],
+  "wikidata": "Q377616",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1980",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New Hollywood (Q377616)",
+      "url": "https://www.wikidata.org/wiki/Q377616",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Hollywood",
+      "url": "https://en.wikipedia.org/wiki/New_Hollywood",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

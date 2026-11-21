@@ -1,0 +1,58 @@
+{
+  "id": "venice",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Venice",
+      "from": "0421"
+    }
+  ],
+  "summary": "Italian city built on islands in a lagoon, with canals instead of streets. Its merchant fleet made it a rich republic that traded between Europe and the East for about a thousand years.",
+  "labels": [
+    "economics",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Serenissima",
+    "Venexia",
+    "Venetia",
+    "Venice, Italy"
+  ],
+  "wikidata": "Q641",
+  "events": [
+    {
+      "type": "born",
+      "date": "0421-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    },
+    {
+      "type": "in",
+      "to": "austrian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Venice (Q641)",
+      "url": "https://www.wikidata.org/wiki/Q641",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venice",
+      "url": "https://en.wikipedia.org/wiki/Venice",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

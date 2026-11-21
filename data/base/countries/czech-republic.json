@@ -1,0 +1,83 @@
+{
+  "id": "czech-republic",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Czech Republic",
+      "from": "0870"
+    }
+  ],
+  "summary": "A central European country, heir to the medieval kingdom of Bohemia and a state of its own since 1 January 1993, when Czechoslovakia split. Its capital Prague is among Europe's best-preserved old cities, and it also uses the short name Czechia.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Czechia",
+    "the Czech Republic"
+  ],
+  "wikidata": "Q213",
+  "events": [
+    {
+      "type": "born",
+      "date": "0870",
+      "precision": "circa",
+      "note": "Dated from the duchy of Bohemia, which took shape around 870. It became a kingdom in 1198 and was part of Czechoslovakia from 1918 to 1992."
+    },
+    {
+      "type": "milestone",
+      "date": "1993-01-01",
+      "precision": "day",
+      "label": "Czech Republic",
+      "note": "Czechoslovakia split peacefully into two states."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "member_of",
+      "to": "european-union"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "cern"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "antarctic-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Czech Republic (Q213)",
+      "url": "https://www.wikidata.org/wiki/Q213",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Czech Republic",
+      "url": "https://en.wikipedia.org/wiki/Czech_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

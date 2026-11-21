@@ -1,0 +1,47 @@
+{
+  "id": "price-revolution",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Price revolution",
+      "from": "1500"
+    }
+  ],
+  "summary": "A long period of steady price rises in Europe, caused by population growth and a flow of silver from the Americas. It changed incomes, favouring merchants and landowners over wage earners.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q1066998",
+  "events": [
+    {
+      "type": "born",
+      "date": "1500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1650",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Price revolution (Q1066998)",
+      "url": "https://www.wikidata.org/wiki/Q1066998",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Price revolution",
+      "url": "https://en.wikipedia.org/wiki/Price_revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

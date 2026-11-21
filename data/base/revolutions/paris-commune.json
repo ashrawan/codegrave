@@ -1,0 +1,60 @@
+{
+  "id": "paris-commune",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Paris Commune",
+      "from": "1871"
+    }
+  ],
+  "summary": "Radical government that ruled Paris from March to May 1871, after the French defeat by Prussia and the end of the empire. It was crushed by the national army in Bloody Week, and thousands of its supporters were killed.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Commune"
+  ],
+  "wikidata": "Q133132",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-03-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1871-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paris"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paris Commune (Q133132)",
+      "url": "https://www.wikidata.org/wiki/Q133132",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paris Commune",
+      "url": "https://en.wikipedia.org/wiki/Paris_Commune",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

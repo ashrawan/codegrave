@@ -1,0 +1,47 @@
+{
+  "id": "bow-and-arrow",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Bow and arrow",
+      "from": "-60000"
+    }
+  ],
+  "summary": "A flexible stave strung with cord that shoots light shafts at speed. Hunters used it for tens of thousands of years, and it armed armies on every continent until firearms replaced it in war.",
+  "labels": [
+    "war",
+    "firsts"
+  ],
+  "aliases": [
+    "arrow and bow",
+    "bow & arrow"
+  ],
+  "wikidata": "Q19827042",
+  "events": [
+    {
+      "type": "born",
+      "date": "-60000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: bow and arrow (Q19827042)",
+      "url": "https://www.wikidata.org/wiki/Q19827042",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bow and arrow",
+      "url": "https://en.wikipedia.org/wiki/Bow_and_arrow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

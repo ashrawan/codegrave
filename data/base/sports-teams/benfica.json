@@ -1,0 +1,52 @@
+{
+  "id": "benfica",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Benfica",
+      "from": "1904"
+    }
+  ],
+  "summary": "Portuguese sports club from Lisbon and the most successful football team in the country. It won the European Cup twice in the early 1960s with Eusebio as its star.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Sport Lisboa e Benfica",
+    "SLB",
+    "SL Benfica"
+  ],
+  "wikidata": "Q131499",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: S.L. Benfica (Q131499)",
+      "url": "https://www.wikidata.org/wiki/Q131499",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: S.L. Benfica",
+      "url": "https://en.wikipedia.org/wiki/S.L._Benfica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,61 @@
+{
+  "id": "nasa",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "NASA",
+      "from": "1958"
+    }
+  ],
+  "summary": "American space agency created after the Soviet Union launched Sputnik. It ran the Apollo missions to the Moon, the Space Shuttle and many robot probes to the planets.",
+  "labels": [
+    "astronomy",
+    "engineering",
+    "exploration"
+  ],
+  "wikidata": "Q23548",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-07-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "dwight-d-eisenhower"
+    },
+    {
+      "type": "made_by",
+      "to": "united-states-congress"
+    },
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: National Aeronautics and Space Administration (Q23548)",
+      "url": "https://www.wikidata.org/wiki/Q23548",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: NASA",
+      "url": "https://en.wikipedia.org/wiki/NASA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

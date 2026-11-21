@@ -1,0 +1,63 @@
+{
+  "id": "google-buzz",
+  "category": "social",
+  "names": [
+    {
+      "name": "Google Buzz",
+      "from": "2010"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Social feature built into Gmail, which showed the posts of contacts. It was criticised at once because it made people's contacts public by default, and Google closed it a year later.",
+  "labels": [
+    "media",
+    "failures"
+  ],
+  "aliases": [
+    "Google Buzz service",
+    "Buzz by Google"
+  ],
+  "wikidata": "Q476786",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-02-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-12-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Privacy complaints and low use; replaced by Google+",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "google-plus"
+    },
+    {
+      "type": "part_of",
+      "to": "gmail"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Google Buzz (Q476786)",
+      "url": "https://www.wikidata.org/wiki/Q476786",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Google Buzz",
+      "url": "https://en.wikipedia.org/wiki/Google_Buzz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

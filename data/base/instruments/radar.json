@@ -1,0 +1,48 @@
+{
+  "id": "radar",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Radar",
+      "from": "1935"
+    }
+  ],
+  "maker": "Robert Watson-Watt and others",
+  "summary": "A system that sends out radio waves and listens for echoes to find the position of aircraft, ships and storms. British researchers built a chain of stations in the late 1930s that helped win the Battle of Britain.",
+  "labels": [
+    "physics",
+    "war"
+  ],
+  "aliases": [
+    "R.A.D.A.R.",
+    "Radio Detection and Ranging"
+  ],
+  "wikidata": "Q47528",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: radar (Q47528)",
+      "url": "https://www.wikidata.org/wiki/Q47528",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Radar",
+      "url": "https://en.wikipedia.org/wiki/Radar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

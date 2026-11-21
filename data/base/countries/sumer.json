@@ -1,0 +1,49 @@
+{
+  "id": "sumer",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Sumer",
+      "from": "-4500"
+    }
+  ],
+  "summary": "The earliest known civilization of southern Mesopotamia, made of rival city-states such as Ur and Uruk. Its people developed cuneiform writing, built temple towers and ran some of the first organised farming with canals.",
+  "labels": [
+    "lost",
+    "language"
+  ],
+  "wikidata": "Q35355",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1940",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Absorbed by Akkadian, Amorite and Babylonian rulers, and its language died out",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Sumer (Q35355)",
+      "url": "https://www.wikidata.org/wiki/Q35355",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sumer",
+      "url": "https://en.wikipedia.org/wiki/Sumer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

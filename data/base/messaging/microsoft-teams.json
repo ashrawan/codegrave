@@ -1,0 +1,53 @@
+{
+  "id": "microsoft-teams",
+  "category": "messaging",
+  "names": [
+    {
+      "name": "Microsoft Teams",
+      "from": "2017"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's workplace chat and video meeting tool, bundled with Office. Its use grew very fast when many people worked from home in 2020.",
+  "labels": [
+    "business",
+    "computing"
+  ],
+  "wikidata": "Q28406404",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    },
+    {
+      "type": "part_of",
+      "to": "microsoft-office"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft Teams (Q28406404)",
+      "url": "https://www.wikidata.org/wiki/Q28406404",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft Teams",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Teams",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

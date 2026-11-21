@@ -1,0 +1,63 @@
+{
+  "id": "louvre",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Louvre",
+      "from": "1793"
+    }
+  ],
+  "summary": "Paris palace that began as a medieval fortress and opened as a public art museum in 1793, during the French Revolution. It holds the Mona Lisa and many works from the ancient world to the 19th century.",
+  "labels": [
+    "visual-art",
+    "architecture"
+  ],
+  "aliases": [
+    "Louvre Museum",
+    "The Louvre",
+    "Musée Napoléon",
+    "Musée national du Louvre",
+    "France. Musée du Louvre Paris"
+  ],
+  "wikidata": "Q19675",
+  "events": [
+    {
+      "type": "born",
+      "date": "1793-08-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "napoleon"
+    },
+    {
+      "type": "made_by",
+      "to": "im-pei"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Louvre Museum (Q19675)",
+      "url": "https://www.wikidata.org/wiki/Q19675",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Louvre",
+      "url": "https://en.wikipedia.org/wiki/Louvre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

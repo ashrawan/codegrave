@@ -1,0 +1,51 @@
+{
+  "id": "peanuts",
+  "category": "comics",
+  "names": [
+    {
+      "name": "Peanuts",
+      "from": "1950"
+    }
+  ],
+  "summary": "Daily newspaper comic strip by Charles Schulz about Charlie Brown, Lucy, Linus and the dog Snoopy. It ran for nearly fifty years and appeared in thousands of newspapers worldwide.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "Snoopy"
+  ],
+  "wikidata": "Q7115636",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-10-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-02-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when its creator Charles Schulz retired and then died",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Peanuts (Q7115636)",
+      "url": "https://www.wikidata.org/wiki/Q7115636",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peanuts",
+      "url": "https://en.wikipedia.org/wiki/Peanuts",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,43 @@
+{
+  "id": "steam-engine",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Steam engine",
+      "from": "1712"
+    }
+  ],
+  "summary": "An engine that uses steam pressure to push a piston or turn a wheel. Improved by James Watt, it powered mines, factories, locomotives and ships, and made the Industrial Revolution possible.",
+  "labels": [
+    "energy",
+    "engineering"
+  ],
+  "wikidata": "Q12760",
+  "events": [
+    {
+      "type": "born",
+      "date": "1712",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: steam engine (Q12760)",
+      "url": "https://www.wikidata.org/wiki/Q12760",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Steam engine",
+      "url": "https://en.wikipedia.org/wiki/Steam_engine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

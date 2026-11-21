@@ -1,0 +1,45 @@
+{
+  "id": "venus-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Venus",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "The second planet from the Sun, close to Earth in size but wrapped in thick carbon dioxide clouds that trap heat. Its surface is hot enough to melt lead, and it spins slowly in the opposite direction to most planets.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Planet Venus"
+  ],
+  "wikidata": "Q313",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Venus (Q313)",
+      "url": "https://www.wikidata.org/wiki/Q313",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venus",
+      "url": "https://en.wikipedia.org/wiki/Venus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

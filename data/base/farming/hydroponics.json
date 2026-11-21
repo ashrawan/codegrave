@@ -1,0 +1,52 @@
+{
+  "id": "hydroponics",
+  "category": "farming",
+  "names": [
+    {
+      "name": "Hydroponics",
+      "from": "1860"
+    }
+  ],
+  "maker": "Julius von Sachs and Wilhelm Knop",
+  "summary": "Growing plants in water with dissolved nutrients, without soil. Nineteenth-century botanists grew plants this way in experiments, and it is now used in greenhouses and indoor farms.",
+  "labels": [
+    "food",
+    "biology"
+  ],
+  "aliases": [
+    "hydroponic"
+  ],
+  "wikidata": "Q191667",
+  "events": [
+    {
+      "type": "born",
+      "date": "1860",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "francis-bacon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: hydroponics (Q191667)",
+      "url": "https://www.wikidata.org/wiki/Q191667",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hydroponics",
+      "url": "https://en.wikipedia.org/wiki/Hydroponics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

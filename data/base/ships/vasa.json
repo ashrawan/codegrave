@@ -1,0 +1,56 @@
+{
+  "id": "vasa",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Vasa",
+      "from": "1628"
+    }
+  ],
+  "summary": "A Swedish warship that sank within minutes of leaving Stockholm harbour on her first voyage in 1628, because she was top-heavy. She was raised in 1961 and is preserved in a museum in Stockholm.",
+  "labels": [
+    "failures",
+    "war"
+  ],
+  "aliases": [
+    "Wasa"
+  ],
+  "wikidata": "Q219821",
+  "events": [
+    {
+      "type": "born",
+      "date": "1628",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1628",
+      "precision": "year"
+    },
+    {
+      "type": "afterlife",
+      "note": "Raised in 1961 and shown in its own museum in Stockholm."
+    }
+  ],
+  "status": "dead",
+  "cause": "Capsized and sank on her maiden voyage",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Vasa (Q219821)",
+      "url": "https://www.wikidata.org/wiki/Q219821",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vasa (ship)",
+      "url": "https://en.wikipedia.org/wiki/Vasa_(ship)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

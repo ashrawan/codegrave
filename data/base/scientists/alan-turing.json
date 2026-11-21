@@ -1,0 +1,60 @@
+{
+  "id": "alan-turing",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Alan Turing",
+      "from": "1912"
+    }
+  ],
+  "summary": "English mathematician who described an abstract machine that defined what computers can calculate. During the Second World War he helped break German Enigma messages at Bletchley Park, and later he proposed a test for machine intelligence.",
+  "labels": [
+    "computing",
+    "mathematics",
+    "war"
+  ],
+  "aliases": [
+    "Alan Mathieson Turing",
+    "Turing",
+    "Alan M. Turing",
+    "Alan Mathison Turing"
+  ],
+  "wikidata": "Q7251",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-06-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1954-06-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alan Turing (Q7251)",
+      "url": "https://www.wikidata.org/wiki/Q7251",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alan Turing",
+      "url": "https://en.wikipedia.org/wiki/Alan_Turing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

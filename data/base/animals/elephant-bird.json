@@ -1,0 +1,53 @@
+{
+  "id": "elephant-bird",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Elephant bird",
+      "from": "-10000000"
+    }
+  ],
+  "summary": "Giant flightless birds of Madagascar, among the heaviest birds ever, which laid the largest eggs known. They survived until about the time people began to settle the island in large numbers.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "elephant bird family",
+    "Aepyornithidae"
+  ],
+  "wikidata": "Q214508",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Hunted and lost its habitat after people settled Madagascar",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: elephant bird (Q214508)",
+      "url": "https://www.wikidata.org/wiki/Q214508",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elephant bird",
+      "url": "https://en.wikipedia.org/wiki/Elephant_bird",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

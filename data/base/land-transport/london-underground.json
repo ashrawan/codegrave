@@ -1,0 +1,58 @@
+{
+  "id": "london-underground",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "London Underground",
+      "from": "1863"
+    }
+  ],
+  "summary": "The world's first underground passenger railway, which opened in London in 1863 as the Metropolitan Railway. It grew into a large network of lines and inspired subways in many other cities.",
+  "labels": [
+    "transport",
+    "engineering"
+  ],
+  "aliases": [
+    "the Underground",
+    "the Tube",
+    "LUL",
+    "London Underground Limited"
+  ],
+  "wikidata": "Q20075",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-01-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: London Underground (Q20075)",
+      "url": "https://www.wikidata.org/wiki/Q20075",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: London Underground",
+      "url": "https://en.wikipedia.org/wiki/London_Underground",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

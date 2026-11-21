@@ -1,0 +1,45 @@
+{
+  "id": "sumo",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Sumo",
+      "from": "0642"
+    }
+  ],
+  "summary": "A Japanese form of wrestling in which one wrestler tries to push the other out of a ring or make him touch the ground. It has ties to Shinto ritual and is run by strict traditions.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "sumo wrestling"
+  ],
+  "wikidata": "Q40561",
+  "events": [
+    {
+      "type": "born",
+      "date": "0642",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: sumo (Q40561)",
+      "url": "https://www.wikidata.org/wiki/Q40561",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sumo",
+      "url": "https://en.wikipedia.org/wiki/Sumo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

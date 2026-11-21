@@ -1,0 +1,58 @@
+{
+  "id": "milky-way",
+  "category": "space",
+  "names": [
+    {
+      "name": "Milky Way",
+      "from": "-13600000000"
+    }
+  ],
+  "summary": "The spiral galaxy that contains the Sun and the solar system, home to hundreds of billions of stars. Its oldest stars formed soon after the universe began, and its disc appears from Earth as a pale band across the night sky.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "The Milky Way",
+    "Milky Way Galaxy",
+    "The Milky Way Galaxy",
+    "Celestial River",
+    "Local Galaxy"
+  ],
+  "wikidata": "Q321",
+  "events": [
+    {
+      "type": "born",
+      "date": "-13600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "sheep"
+    },
+    {
+      "type": "related",
+      "to": "domestic-horse"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Milky Way (Q321)",
+      "url": "https://www.wikidata.org/wiki/Q321",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Milky Way",
+      "url": "https://en.wikipedia.org/wiki/Milky_Way",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

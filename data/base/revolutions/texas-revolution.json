@@ -1,0 +1,56 @@
+{
+  "id": "texas-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Texas Revolution",
+      "from": "1835"
+    }
+  ],
+  "summary": "A revolt by settlers and Tejanos in Mexican Texas against the Mexican government. After the siege of the Alamo and the win at San Jacinto, Texas became an independent republic.",
+  "labels": [
+    "independence",
+    "war"
+  ],
+  "aliases": [
+    "Independence of Texas"
+  ],
+  "wikidata": "Q638530",
+  "events": [
+    {
+      "type": "born",
+      "date": "1835-10-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1836-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "republic-of-texas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Texas Revolution (Q638530)",
+      "url": "https://www.wikidata.org/wiki/Q638530",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Texas Revolution",
+      "url": "https://en.wikipedia.org/wiki/Texas_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

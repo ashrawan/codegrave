@@ -1,0 +1,59 @@
+{
+  "id": "mona-lisa",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Mona Lisa",
+      "from": "1503"
+    }
+  ],
+  "maker": "Leonardo da Vinci",
+  "summary": "Oil portrait of a seated woman with a faint smile, painted by Leonardo da Vinci in Florence and kept in the Louvre in Paris. Its soft shading and calm pose shaped portrait painting, and it is now the most visited single painting in the world.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "The Mona Lisa"
+  ],
+  "wikidata": "Q12418",
+  "events": [
+    {
+      "type": "born",
+      "date": "1503",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "leonardo-da-vinci"
+    },
+    {
+      "type": "in",
+      "to": "paris"
+    },
+    {
+      "type": "in",
+      "to": "louvre"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mona Lisa (Q12418)",
+      "url": "https://www.wikidata.org/wiki/Q12418",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mona Lisa",
+      "url": "https://en.wikipedia.org/wiki/Mona_Lisa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

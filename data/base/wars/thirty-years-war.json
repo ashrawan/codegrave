@@ -1,0 +1,76 @@
+{
+  "id": "thirty-years-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Thirty Years' War",
+      "from": "1618"
+    }
+  ],
+  "summary": "A series of wars, fought mostly in the Holy Roman Empire, that began as a religious conflict and grew into a struggle for power across Europe. It killed a large share of the population in some German regions.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "aliases": [
+    "30 Years War"
+  ],
+  "wikidata": "Q2487",
+  "events": [
+    {
+      "type": "born",
+      "date": "1618",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1648",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "holy-roman-empire"
+    },
+    {
+      "type": "related",
+      "to": "sweden"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-scotland"
+    },
+    {
+      "type": "related",
+      "to": "spanish-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thirty Years' War (Q2487)",
+      "url": "https://www.wikidata.org/wiki/Q2487",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thirty Years' War",
+      "url": "https://en.wikipedia.org/wiki/Thirty_Years'_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

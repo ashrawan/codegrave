@@ -1,0 +1,68 @@
+{
+  "id": "red-army",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Red Army",
+      "from": "1918"
+    }
+  ],
+  "summary": "Army of the Soviet state, set up after the Russian Revolution. It fought the Russian Civil War, and in the Second World War it defeated Germany on the eastern front.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Red Workers' and Peasants' Army",
+    "PKKA",
+    "RKKA",
+    "Workers' and Peasants' Red Army"
+  ],
+  "wikidata": "Q251395",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-02-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1946-02-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Renamed the Soviet Army in 1946",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "joseph-stalin"
+    },
+    {
+      "type": "made_by",
+      "to": "vladimir-lenin"
+    },
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Red Army (Q251395)",
+      "url": "https://www.wikidata.org/wiki/Q251395",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Red Army",
+      "url": "https://en.wikipedia.org/wiki/Red_Army",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

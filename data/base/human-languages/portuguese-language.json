@@ -1,0 +1,51 @@
+{
+  "id": "portuguese-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Portuguese",
+      "from": "1214"
+    }
+  ],
+  "summary": "Romance language that grew from Latin in the west of the Iberian Peninsula. The oldest known documents in it date from the early thirteenth century. It is spoken in Portugal, Brazil and several African countries.",
+  "labels": [
+    "language"
+  ],
+  "wikidata": "Q5146",
+  "events": [
+    {
+      "type": "born",
+      "date": "1214",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    },
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Portuguese (Q5146)",
+      "url": "https://www.wikidata.org/wiki/Q5146",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portuguese language",
+      "url": "https://en.wikipedia.org/wiki/Portuguese_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

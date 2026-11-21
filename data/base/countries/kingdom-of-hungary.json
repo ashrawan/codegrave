@@ -1,0 +1,58 @@
+{
+  "id": "kingdom-of-hungary",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kingdom of Hungary",
+      "from": "1000"
+    }
+  ],
+  "summary": "The Christian kingdom founded by King Stephen I that was a major power of Central Europe. It fought the Ottomans, later joined the Habsburg lands and became half of Austria-Hungary.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Hungary",
+    "Transleithania"
+  ],
+  "wikidata": "Q171150",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1946-02-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Monarchy abolished and the Second Hungarian Republic proclaimed",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austrian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Hungary (Q171150)",
+      "url": "https://www.wikidata.org/wiki/Q171150",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Hungary",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Hungary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

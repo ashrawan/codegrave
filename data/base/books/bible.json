@@ -1,0 +1,58 @@
+{
+  "id": "bible",
+  "category": "books",
+  "names": [
+    {
+      "name": "Bible",
+      "from": "-0800"
+    }
+  ],
+  "summary": "Collection of sacred writings of Judaism and Christianity, composed by many authors over many centuries. It has been translated into more languages and printed in more copies than any other book.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Holy Bible",
+    "Christian scriptures",
+    "The Bible",
+    "The Holy Bible",
+    "Holy Scriptures"
+  ],
+  "wikidata": "Q1845",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0800",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "about",
+      "to": "christianity"
+    },
+    {
+      "type": "about",
+      "to": "judaism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bible (Q1845)",
+      "url": "https://www.wikidata.org/wiki/Q1845",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bible",
+      "url": "https://en.wikipedia.org/wiki/Bible",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

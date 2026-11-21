@@ -1,0 +1,62 @@
+{
+  "id": "great-leap-forward",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Great Leap Forward",
+      "from": "1958"
+    }
+  ],
+  "summary": "A campaign led by Mao Zedong to turn China quickly into an industrial society through large people's communes and local steel-making. It disrupted farming and was followed by a famine that killed many millions of people.",
+  "labels": [
+    "politics",
+    "economics"
+  ],
+  "aliases": [
+    "The Great Leap Forward",
+    "Great Leap Forward (China)",
+    "Great Leap Forward movement"
+  ],
+  "wikidata": "Q58715",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mao-zedong"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Leap Forward (Q58715)",
+      "url": "https://www.wikidata.org/wiki/Q58715",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Leap Forward",
+      "url": "https://en.wikipedia.org/wiki/Great_Leap_Forward",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

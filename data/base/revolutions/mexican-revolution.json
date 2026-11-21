@@ -1,0 +1,65 @@
+{
+  "id": "mexican-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Mexican Revolution",
+      "from": "1910"
+    }
+  ],
+  "summary": "A long period of fighting and political change that started with the fall of dictator Porfirio Díaz. Figures such as Zapata, Villa and Madero fought over land and power, and it led to the 1917 constitution.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Mexican revolution war",
+    "Mexican Civil War"
+  ],
+  "wikidata": "Q214426",
+  "events": [
+    {
+      "type": "born",
+      "date": "1910-11-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1920-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    },
+    {
+      "type": "related",
+      "to": "pancho-villa"
+    },
+    {
+      "type": "related",
+      "to": "emiliano-zapata"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mexican Revolution (Q214426)",
+      "url": "https://www.wikidata.org/wiki/Q214426",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mexican Revolution",
+      "url": "https://en.wikipedia.org/wiki/Mexican_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

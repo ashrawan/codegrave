@@ -1,0 +1,61 @@
+{
+  "id": "benjamin-franklin",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Benjamin Franklin",
+      "from": "1706"
+    }
+  ],
+  "summary": "American printer, writer and diplomat who also studied electricity. His kite and key experiment and his lightning rod helped show that lightning is an electrical event and gave towns a way to protect their buildings.",
+  "labels": [
+    "physics",
+    "politics"
+  ],
+  "aliases": [
+    "Poor Richard",
+    "The First American"
+  ],
+  "wikidata": "Q34969",
+  "events": [
+    {
+      "type": "born",
+      "date": "1706-01-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1790-04-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    },
+    {
+      "type": "member_of",
+      "to": "freemasonry"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benjamin Franklin (Q34969)",
+      "url": "https://www.wikidata.org/wiki/Q34969",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Benjamin Franklin",
+      "url": "https://en.wikipedia.org/wiki/Benjamin_Franklin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

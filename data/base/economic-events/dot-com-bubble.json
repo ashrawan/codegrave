@@ -1,0 +1,62 @@
+{
+  "id": "dot-com-bubble",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Dot-com bubble",
+      "from": "1995"
+    }
+  ],
+  "summary": "Share prices of internet companies rose to great heights in the late 1990s, even for firms with no profits. The bubble burst in 2000, and many companies failed, while others such as Amazon survived and grew.",
+  "labels": [
+    "economics",
+    "computing"
+  ],
+  "aliases": [
+    "dot-com boom",
+    "Internet bubble",
+    "Information Technology Bubble"
+  ],
+  "wikidata": "Q79721",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "2000-03-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nasdaq"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: dot-com bubble (Q79721)",
+      "url": "https://www.wikidata.org/wiki/Q79721",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dot-com bubble",
+      "url": "https://en.wikipedia.org/wiki/Dot-com_bubble",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,63 @@
+{
+  "id": "pablo-neruda",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Pablo Neruda",
+      "from": "1904"
+    }
+  ],
+  "summary": "Chilean poet and diplomat who wrote Twenty Love Poems and a Song of Despair and the epic Canto General. He won the Nobel Prize in Literature in 1971 and served as a senator for the Communist Party.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Nieluda",
+    "Neftalí Reyes Basualto",
+    "Neftalí Reyespeneto",
+    "Pāplō Nerūda",
+    "Neftali Ricardo Reyes"
+  ],
+  "wikidata": "Q34189",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-07-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "federico-garcia-lorca"
+    },
+    {
+      "type": "influenced_by",
+      "to": "walt-whitman"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pablo Neruda (Q34189)",
+      "url": "https://www.wikidata.org/wiki/Q34189",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pablo Neruda",
+      "url": "https://en.wikipedia.org/wiki/Pablo_Neruda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

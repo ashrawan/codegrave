@@ -1,0 +1,53 @@
+{
+  "id": "petra",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Petra",
+      "from": "-0300"
+    }
+  ],
+  "summary": "Rock-cut city in southern Jordan, the capital of the Nabataean kingdom and a stop on caravan routes. Its tombs and temples were carved into rose-coloured cliffs, and its water system supported a desert city.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Petra, Jordan",
+    "Mint of Petra"
+  ],
+  "wikidata": "Q5788",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined as trade routes shifted and earthquakes struck",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Petra (Q5788)",
+      "url": "https://www.wikidata.org/wiki/Q5788",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Petra",
+      "url": "https://en.wikipedia.org/wiki/Petra",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,50 @@
+{
+  "id": "salyut-1",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Salyut 1",
+      "from": "1971"
+    }
+  ],
+  "maker": "Soviet Union",
+  "summary": "The first space station, launched by the Soviet Union in April 1971. A crew spent three weeks aboard, but the three men died on the return to Earth when their capsule lost air.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "wikidata": "Q211761",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-04-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971-10-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Deliberately brought down to burn up in the atmosphere",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Salyut 1 (Q211761)",
+      "url": "https://www.wikidata.org/wiki/Q211761",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Salyut 1",
+      "url": "https://en.wikipedia.org/wiki/Salyut_1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

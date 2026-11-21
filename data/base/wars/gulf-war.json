@@ -1,0 +1,83 @@
+{
+  "id": "gulf-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Gulf War",
+      "from": "1990"
+    }
+  ],
+  "summary": "A war in which a coalition led by the United States, acting on UN resolutions, drove Iraqi forces out of Kuwait after Iraq invaded in 1990. The ground phase lasted only a few days.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Kuwait War",
+    "Iraq War",
+    "First Gulf War",
+    "Gulf War I",
+    "First Iraq War"
+  ],
+  "wikidata": "Q37643",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-08-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    },
+    {
+      "type": "in",
+      "to": "iraq"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    },
+    {
+      "type": "related",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gulf War (Q37643)",
+      "url": "https://www.wikidata.org/wiki/Q37643",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gulf War",
+      "url": "https://en.wikipedia.org/wiki/Gulf_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

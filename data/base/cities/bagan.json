@@ -1,0 +1,57 @@
+{
+  "id": "bagan",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bagan",
+      "from": "0849"
+    }
+  ],
+  "summary": "Capital of the first Burmese empire on the Irrawaddy plain in Myanmar. Thousands of Buddhist temples and pagodas still stand there, though the kingdom fell to Mongol attacks in the late thirteenth century.",
+  "labels": [
+    "religion",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Pagan"
+  ],
+  "wikidata": "Q29317",
+  "events": [
+    {
+      "type": "born",
+      "date": "0849",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1287",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined after Mongol invasions and the fall of the kingdom",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bagan (Q29317)",
+      "url": "https://www.wikidata.org/wiki/Q29317",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bagan",
+      "url": "https://en.wikipedia.org/wiki/Bagan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "faust-goethe",
+  "category": "stage",
+  "names": [
+    {
+      "name": "Faust",
+      "from": "1808"
+    }
+  ],
+  "maker": "Johann Wolfgang von Goethe",
+  "summary": "Verse drama in two parts by Johann Wolfgang von Goethe about a scholar who makes a bargain with the devil Mephistopheles. Part One was published in 1808 and Part Two in 1832, shortly after Goethe's death.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Johann Wolfgang von Goethe's Faust"
+  ],
+  "wikidata": "Q29478",
+  "events": [
+    {
+      "type": "born",
+      "date": "1808",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "johann-wolfgang-von-goethe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Faust (Q29478)",
+      "url": "https://www.wikidata.org/wiki/Q29478",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Goethe's Faust",
+      "url": "https://en.wikipedia.org/wiki/Goethe's_Faust",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

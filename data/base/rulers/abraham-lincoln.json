@@ -1,0 +1,68 @@
+{
+  "id": "abraham-lincoln",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Abraham Lincoln",
+      "from": "1809"
+    }
+  ],
+  "summary": "Lawyer from Illinois who became the sixteenth president and led the Union through the Civil War. He issued the Emancipation Proclamation and was assassinated in 1865 shortly after the war ended.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Uncle Abe",
+    "President Lincoln"
+  ],
+  "wikidata": "Q91",
+  "events": [
+    {
+      "type": "born",
+      "date": "1809-02-12",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1861-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 16th president of the United States."
+    },
+    {
+      "type": "ended",
+      "date": "1865-04-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "bible"
+    },
+    {
+      "type": "influenced_by",
+      "to": "pilgrims-progress"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abraham Lincoln (Q91)",
+      "url": "https://www.wikidata.org/wiki/Q91",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abraham Lincoln",
+      "url": "https://en.wikipedia.org/wiki/Abraham_Lincoln",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

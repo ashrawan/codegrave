@@ -1,0 +1,53 @@
+{
+  "id": "chemical-weapon",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Chemical weapon",
+      "from": "1915"
+    }
+  ],
+  "maker": "Germany",
+  "summary": "A weapon that uses poison gas or other toxic chemicals to hurt or kill. Large-scale use began on the Western Front in the First World War, and an international treaty now bans these weapons.",
+  "labels": [
+    "war",
+    "chemistry",
+    "banned"
+  ],
+  "aliases": [
+    "CW"
+  ],
+  "wikidata": "Q3639228",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "fritz-haber"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: chemical weapon (Q3639228)",
+      "url": "https://www.wikidata.org/wiki/Q3639228",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chemical weapon",
+      "url": "https://en.wikipedia.org/wiki/Chemical_weapon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

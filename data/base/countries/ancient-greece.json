@@ -1,0 +1,60 @@
+{
+  "id": "ancient-greece",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ancient Greece",
+      "from": "-0800"
+    }
+  ],
+  "summary": "The world of independent Greek city-states around the Aegean, from the rise of the polis to the Roman conquest. It produced early democracy, philosophy, drama, the Olympic Games and many ideas still used in science and politics.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Greek antiquity",
+    "Greece",
+    "Hellas",
+    "classical Greece"
+  ],
+  "wikidata": "Q11772",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0146",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by Rome, which took Corinth in 146 BCE",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "classical-antiquity"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ancient Greece (Q11772)",
+      "url": "https://www.wikidata.org/wiki/Q11772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ancient Greece",
+      "url": "https://en.wikipedia.org/wiki/Ancient_Greece",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

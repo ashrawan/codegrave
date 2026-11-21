@@ -1,0 +1,59 @@
+{
+  "id": "globe-theatre",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Globe Theatre",
+      "from": "1599"
+    }
+  ],
+  "summary": "Open-air London playhouse built by Shakespeare's acting company, where many of his plays were first staged. It burned down in 1613, was rebuilt, and was demolished in 1644. A new Globe opened in 1997.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "The Globe",
+    "The Globe Theatre",
+    "Globe"
+  ],
+  "wikidata": "Q272434",
+  "events": [
+    {
+      "type": "born",
+      "date": "1599",
+      "precision": "year",
+      "note": "The first Globe burned down in 1613 and was rebuilt the next year. This entry covers both, to the closing of the theatres in 1642."
+    },
+    {
+      "type": "ended",
+      "date": "1642",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Burned in 1613, rebuilt, closed by Puritans in 1642 and pulled down",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Globe Theatre (Q272434)",
+      "url": "https://www.wikidata.org/wiki/Q272434",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Globe Theatre",
+      "url": "https://en.wikipedia.org/wiki/Globe_Theatre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

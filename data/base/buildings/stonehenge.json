@@ -1,0 +1,48 @@
+{
+  "id": "stonehenge",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Stonehenge",
+      "from": "-3000"
+    }
+  ],
+  "summary": "Ring of huge standing stones on Salisbury Plain in England, raised in stages by prehistoric people. Its purpose is debated, but it lines up with the midsummer sunrise and the midwinter sunset.",
+  "labels": [
+    "architecture",
+    "world-heritage"
+  ],
+  "wikidata": "Q39671",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stonehenge (Q39671)",
+      "url": "https://www.wikidata.org/wiki/Q39671",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stonehenge",
+      "url": "https://en.wikipedia.org/wiki/Stonehenge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,58 @@
+{
+  "id": "indian-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Indian Ocean",
+      "from": "-150000000"
+    }
+  ],
+  "summary": "The third largest ocean, bounded by Africa, Asia and Australia, which opened as Gondwana broke up about 150 million years ago. Seasonal monsoon winds long carried trading ships between East Africa, Arabia, India and Southeast Asia.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Eastern Ocean",
+    "Eastern Sea",
+    "Indian Sea",
+    "Oriental Sea",
+    "Oriental Ocean"
+  ],
+  "wikidata": "Q1239",
+  "events": [
+    {
+      "type": "born",
+      "date": "-150000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    },
+    {
+      "type": "related",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Indian Ocean (Q1239)",
+      "url": "https://www.wikidata.org/wiki/Q1239",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indian Ocean",
+      "url": "https://en.wikipedia.org/wiki/Indian_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

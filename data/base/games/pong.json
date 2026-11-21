@@ -1,0 +1,53 @@
+{
+  "id": "pong",
+  "category": "games",
+  "names": [
+    {
+      "name": "Pong",
+      "from": "1972"
+    }
+  ],
+  "maker": "Atari",
+  "summary": "Simple table-tennis game in which two paddles knock a square ball back and forth. Atari put it in arcades and later in homes, and it became the first video game to be a commercial hit, starting the arcade business.",
+  "labels": [
+    "games",
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "Atari Pong"
+  ],
+  "wikidata": "Q216293",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-11-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "atari-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pong (Q216293)",
+      "url": "https://www.wikidata.org/wiki/Q216293",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pong",
+      "url": "https://en.wikipedia.org/wiki/Pong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

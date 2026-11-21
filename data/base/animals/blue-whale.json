@@ -1,0 +1,48 @@
+{
+  "id": "blue-whale",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Blue whale",
+      "from": "-1500000"
+    }
+  ],
+  "summary": "The largest animal known to have lived, a baleen whale that can reach about 30 metres. It feeds on tiny shrimp-like krill, and whaling cut its numbers sharply before it was protected.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Balaenoptera musculus",
+    "Sibbold’s Rorqual,",
+    "Sulphur-bottom whale",
+    "Pygmy Blue Whale"
+  ],
+  "wikidata": "Q42196",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1500000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Balaenoptera musculus (Q42196)",
+      "url": "https://www.wikidata.org/wiki/Q42196",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blue whale",
+      "url": "https://en.wikipedia.org/wiki/Blue_whale",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

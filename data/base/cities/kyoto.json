@@ -1,0 +1,53 @@
+{
+  "id": "kyoto",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kyoto",
+      "from": "0794"
+    }
+  ],
+  "summary": "Former imperial capital of Japan, founded as Heian-kyo. It was the home of the emperor for more than a thousand years and still holds many temples, shrines and gardens.",
+  "labels": [
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Kyoto City",
+    "Meacum",
+    "Meako"
+  ],
+  "wikidata": "Q34600",
+  "events": [
+    {
+      "type": "born",
+      "date": "0794-11-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kyoto (Q34600)",
+      "url": "https://www.wikidata.org/wiki/Q34600",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kyoto",
+      "url": "https://en.wikipedia.org/wiki/Kyoto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

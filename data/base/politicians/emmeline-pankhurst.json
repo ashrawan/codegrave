@@ -1,0 +1,60 @@
+{
+  "id": "emmeline-pankhurst",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Emmeline Pankhurst",
+      "from": "1858"
+    }
+  ],
+  "summary": "British campaigner who founded the Women's Social and Political Union in 1903. Its members, called suffragettes, used protests, window breaking and hunger strikes to win votes for women.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Emmeline Goulden"
+  ],
+  "wikidata": "Q211519",
+  "events": [
+    {
+      "type": "born",
+      "date": "1858-07-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1928-06-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "womens-social-and-political-union"
+    },
+    {
+      "type": "member_of",
+      "to": "fabian-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Emmeline Pankhurst (Q211519)",
+      "url": "https://www.wikidata.org/wiki/Q211519",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Emmeline Pankhurst",
+      "url": "https://en.wikipedia.org/wiki/Emmeline_Pankhurst",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

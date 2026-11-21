@@ -1,0 +1,61 @@
+{
+  "id": "world-bank",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "World Bank",
+      "from": "1945"
+    }
+  ],
+  "summary": "International lender also born at Bretton Woods, first meant to help rebuild Europe after the war. It now lends to poorer countries for projects such as roads, schools and power.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "aliases": [
+    "World Bank, WB",
+    "The World Bank",
+    "WB"
+  ],
+  "wikidata": "Q7164",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-12-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "bretton-woods-system"
+    },
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World Bank (Q7164)",
+      "url": "https://www.wikidata.org/wiki/Q7164",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World Bank",
+      "url": "https://en.wikipedia.org/wiki/World_Bank",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

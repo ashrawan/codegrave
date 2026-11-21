@@ -1,0 +1,53 @@
+{
+  "id": "roman-calendar",
+  "category": "measures",
+  "names": [
+    {
+      "name": "Roman calendar",
+      "from": "-0753"
+    }
+  ],
+  "summary": "The calendar of early Rome, which at first had ten months and later twelve, with an extra month added by priests to keep it near the seasons. Its confusion led Julius Caesar to reform it.",
+  "labels": [
+    "astronomy"
+  ],
+  "wikidata": "Q200966",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0753",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0046-12-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Julian calendar",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "julian-calendar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roman calendar (Q200966)",
+      "url": "https://www.wikidata.org/wiki/Q200966",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roman calendar",
+      "url": "https://en.wikipedia.org/wiki/Roman_calendar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

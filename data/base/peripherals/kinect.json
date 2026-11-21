@@ -1,0 +1,62 @@
+{
+  "id": "kinect",
+  "category": "peripherals",
+  "names": [
+    {
+      "name": "Kinect",
+      "from": "2010"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Camera bar for Microsoft's Xbox that tracked players' bodies and voices so they could play without a controller. It sold quickly at launch and was also used in robotics research.",
+  "labels": [
+    "computing",
+    "games"
+  ],
+  "aliases": [
+    "Project Natal"
+  ],
+  "wikidata": "Q474334",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2017",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Microsoft stopped making it after weak game support",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    },
+    {
+      "type": "part_of",
+      "to": "xbox-one"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kinect (Q474334)",
+      "url": "https://www.wikidata.org/wiki/Q474334",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kinect",
+      "url": "https://en.wikipedia.org/wiki/Kinect",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

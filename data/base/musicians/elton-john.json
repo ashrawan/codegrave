@@ -1,0 +1,54 @@
+{
+  "id": "elton-john",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Elton John",
+      "from": "1947"
+    }
+  ],
+  "summary": "English singer and pianist who has written pop songs with lyricist Bernie Taupin since 1967, such as Rocket Man and Your Song. He also wrote music for The Lion King and has raised money for AIDS charities.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Lord Choc Ice",
+    "Tripe",
+    "Rockaday Johnnie",
+    "Prince Rhino",
+    "Dinah Card"
+  ],
+  "wikidata": "Q2808",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "live-aid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Elton John (Q2808)",
+      "url": "https://www.wikidata.org/wiki/Q2808",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elton John",
+      "url": "https://en.wikipedia.org/wiki/Elton_John",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

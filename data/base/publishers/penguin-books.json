@@ -1,0 +1,58 @@
+{
+  "id": "penguin-books",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "Penguin Books",
+      "from": "1935"
+    }
+  ],
+  "maker": "Allen Lane",
+  "summary": "British publisher begun by Allen Lane, who sold quality paperbacks cheaply, first at railway stations and shops. Penguin made reading serious books affordable for many people.",
+  "labels": [
+    "media",
+    "literature"
+  ],
+  "aliases": [
+    "Penguin Books, Limited",
+    "Penguin",
+    "Penguin Books Ltd."
+  ],
+  "wikidata": "Q1336200",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Penguin Books (Q1336200)",
+      "url": "https://www.wikidata.org/wiki/Q1336200",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Penguin Books",
+      "url": "https://en.wikipedia.org/wiki/Penguin_Books",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

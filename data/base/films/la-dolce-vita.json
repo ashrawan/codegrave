@@ -1,0 +1,51 @@
+{
+  "id": "la-dolce-vita",
+  "category": "films",
+  "names": [
+    {
+      "name": "La Dolce Vita",
+      "from": "1960"
+    }
+  ],
+  "maker": "Federico Fellini",
+  "summary": "Italian film by Federico Fellini following a journalist through a week of parties and fame in Rome. It won the top prize at Cannes and helped give the world the word paparazzi, from a photographer character's name.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Dolce Vita"
+  ],
+  "wikidata": "Q18407",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-02-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "federico-fellini"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: La Dolce Vita (Q18407)",
+      "url": "https://www.wikidata.org/wiki/Q18407",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La Dolce Vita",
+      "url": "https://en.wikipedia.org/wiki/La_Dolce_Vita",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

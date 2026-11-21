@@ -1,0 +1,53 @@
+{
+  "id": "four-color-theorem",
+  "category": "mathematics",
+  "names": [
+    {
+      "name": "Four color theorem",
+      "from": "1852"
+    }
+  ],
+  "summary": "The claim that any map can be coloured with just four colours so that no two neighbouring regions match. First posed in 1852, it was proved in 1976 with the help of a computer, the first major proof of that kind.",
+  "labels": [
+    "mathematics",
+    "computing"
+  ],
+  "aliases": [
+    "four color map theorem",
+    "4CT"
+  ],
+  "wikidata": "Q184410",
+  "events": [
+    {
+      "type": "born",
+      "date": "1852",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1976",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Proved by Kenneth Appel and Wolfgang Haken with computer assistance",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: four color theorem (Q184410)",
+      "url": "https://www.wikidata.org/wiki/Q184410",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Four color theorem",
+      "url": "https://en.wikipedia.org/wiki/Four_color_theorem",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,68 @@
+{
+  "id": "canada",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Canada",
+      "from": "1867"
+    }
+  ],
+  "summary": "The second largest country in the world by area, formed in 1867 as a federation of British colonies. It has two official languages, English and French, and gained full legal independence in stages.",
+  "labels": [
+    "independence",
+    "politics"
+  ],
+  "aliases": [
+    "CA",
+    "CAN"
+  ],
+  "wikidata": "Q16",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "nato"
+    },
+    {
+      "type": "part_of",
+      "to": "north-america"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Canada (Q16)",
+      "url": "https://www.wikidata.org/wiki/Q16",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Canada",
+      "url": "https://en.wikipedia.org/wiki/Canada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

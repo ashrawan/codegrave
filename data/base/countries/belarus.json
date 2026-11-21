@@ -1,0 +1,62 @@
+{
+  "id": "belarus",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Belarus",
+      "from": "1991"
+    }
+  ],
+  "summary": "A landlocked country in Eastern Europe that became independent when the Soviet Union ended in 1991. Its capital is Minsk, and it has been led by one president since 1994.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "White Russia",
+    "White Ruthenia",
+    "Republic of Belarus",
+    "by",
+    "Byeloruss"
+  ],
+  "wikidata": "Q184",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Belarus (Q184)",
+      "url": "https://www.wikidata.org/wiki/Q184",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belarus",
+      "url": "https://en.wikipedia.org/wiki/Belarus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

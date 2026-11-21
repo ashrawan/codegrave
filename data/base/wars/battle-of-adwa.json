@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-adwa",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Adwa",
+      "from": "1896"
+    }
+  ],
+  "summary": "Ethiopian forces under Emperor Menelik II defeated an Italian army in northern Ethiopia. The victory kept Ethiopia independent and became a symbol of African resistance to colonial rule.",
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "aliases": [
+    "Battle of Adowa"
+  ],
+  "wikidata": "Q302519",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896-03-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1896-03-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopian-empire"
+    },
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Adwa (Q302519)",
+      "url": "https://www.wikidata.org/wiki/Q302519",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Adwa",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Adwa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

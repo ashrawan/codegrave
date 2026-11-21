@@ -1,0 +1,50 @@
+{
+  "id": "baxter-robot",
+  "category": "robots",
+  "names": [
+    {
+      "name": "Baxter",
+      "from": "2012"
+    }
+  ],
+  "maker": "Rethink Robotics",
+  "summary": "Factory robot with two arms and a screen showing a face, which workers could teach by moving its arms. It was meant to be a low-cost robot that people could work beside, but it was too imprecise and slow.",
+  "labels": [
+    "engineering",
+    "failures"
+  ],
+  "wikidata": "Q4873834",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2018",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its maker Rethink Robotics closed down",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Baxter (Q4873834)",
+      "url": "https://www.wikidata.org/wiki/Q4873834",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baxter (robot)",
+      "url": "https://en.wikipedia.org/wiki/Baxter_(robot)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

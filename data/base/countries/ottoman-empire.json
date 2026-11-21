@@ -1,0 +1,64 @@
+{
+  "id": "ottoman-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ottoman Empire",
+      "from": "1299"
+    }
+  ],
+  "summary": "A Muslim empire founded in Anatolia that took Constantinople in 1453 and at its height held south-eastern Europe, the Middle East and North Africa. Its sultans reigned for more than six centuries, ruling from Istanbul for nearly five hundred years of that time.",
+  "labels": [
+    "lost",
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Ottoman State",
+    "Turkish Empire",
+    "Sublime Ottoman State"
+  ],
+  "wikidata": "Q12560",
+  "events": [
+    {
+      "type": "born",
+      "date": "1299-07-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1922-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Defeated in the First World War and replaced by the Republic of Turkey after the sultanate was abolished",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "turkey"
+    },
+    {
+      "type": "related",
+      "to": "osman-i"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ottoman Empire (Q12560)",
+      "url": "https://www.wikidata.org/wiki/Q12560",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ottoman Empire",
+      "url": "https://en.wikipedia.org/wiki/Ottoman_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

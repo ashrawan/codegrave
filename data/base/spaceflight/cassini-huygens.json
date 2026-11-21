@@ -1,0 +1,58 @@
+{
+  "id": "cassini-huygens",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Cassini-Huygens",
+      "from": "1997"
+    }
+  ],
+  "maker": "NASA, ESA and ASI",
+  "summary": "A joint American and European mission to Saturn launched in 1997. The Huygens probe landed on the moon Titan in 2005, and Cassini orbited Saturn for thirteen years before ending in its atmosphere.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "aliases": [
+    "Cassini-Huygens mission"
+  ],
+  "wikidata": "Q165585",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997-10-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Deliberately sent into Saturn to avoid contaminating its moons",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "christiaan-huygens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cassini−Huygens (Q165585)",
+      "url": "https://www.wikidata.org/wiki/Q165585",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cassini–Huygens",
+      "url": "https://en.wikipedia.org/wiki/Cassini%E2%80%93Huygens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

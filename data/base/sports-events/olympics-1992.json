@@ -1,0 +1,59 @@
+{
+  "id": "olympics-1992",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1992 Summer Olympics",
+      "from": "1992"
+    }
+  ],
+  "summary": "The Barcelona Games took place soon after the end of the Cold War and the breakup of the Soviet Union, and brought almost every nation together. The city used them to renew its harbour and districts.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "1992 Summer Olympic Games",
+    "1992 Olympics",
+    "Barcelona '92",
+    "Barcelona 1992",
+    "Games of the XXV Olympiad"
+  ],
+  "wikidata": "Q8488",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-07-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-08-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1992 Summer Olympics (Q8488)",
+      "url": "https://www.wikidata.org/wiki/Q8488",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1992 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1992_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

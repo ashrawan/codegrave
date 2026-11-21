@@ -1,0 +1,56 @@
+{
+  "id": "fbi",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Federal Bureau of Investigation",
+      "from": "1908"
+    }
+  ],
+  "summary": "Main federal police and domestic intelligence agency of the United States, investigating crimes such as kidnapping, terrorism and fraud across state lines.",
+  "labels": [
+    "law",
+    "politics"
+  ],
+  "wikidata": "Q8333",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-07-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "theodore-roosevelt"
+    },
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Federal Bureau of Investigation (Q8333)",
+      "url": "https://www.wikidata.org/wiki/Q8333",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Federal Bureau of Investigation",
+      "url": "https://en.wikipedia.org/wiki/Federal_Bureau_of_Investigation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

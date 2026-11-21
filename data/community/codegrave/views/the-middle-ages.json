@@ -1,0 +1,95 @@
+{
+  "id": "the-middle-ages",
+  "name": "The Middle Ages",
+  "description": "A thousand years of Europe between Rome and the Renaissance: knights, castles, crusades, cathedrals and the Black Death.",
+  "category": "events",
+  "tags": [
+    "medieval",
+    "middle ages",
+    "knights",
+    "castles",
+    "crusades",
+    "black death",
+    "charlemagne"
+  ],
+  "entries": [
+    "byzantine-empire",
+    "middle-ages",
+    "horse-collar",
+    "order-of-saint-benedict",
+    "battle-of-tours",
+    "charlemagne",
+    "viking-age",
+    "treaty-of-verdun",
+    "alfred-the-great",
+    "holy-roman-empire",
+    "william-the-conqueror",
+    "battle-of-hastings",
+    "bayeux-tapestry",
+    "domesday-book",
+    "university-of-bologna",
+    "first-crusade",
+    "kingdom-of-jerusalem",
+    "tower-of-london",
+    "knights-templar",
+    "eleanor-of-aquitaine",
+    "saladin",
+    "university-of-paris",
+    "richard-i-of-england",
+    "krak-des-chevaliers",
+    "francis-of-assisi",
+    "third-crusade",
+    "magna-carta",
+    "chartres-cathedral",
+    "thomas-aquinas",
+    "hanseatic-league",
+    "dante-alighieri",
+    "divine-comedy",
+    "hundred-years-war",
+    "black-death",
+    "peasants-revolt",
+    "canterbury-tales",
+    "johannes-gutenberg",
+    "joan-of-arc",
+    "battle-of-agincourt",
+    "printing-press",
+    "fall-of-constantinople"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-early-middle-ages",
+      "name": "The early Middle Ages",
+      "from": 500,
+      "to": 799,
+      "note": "Monks under the Rule of Benedict kept learning alive while kingdoms rose from Roman provinces. Charles Martel stopped a raid at Tours, and the horse collar helped farms grow."
+    },
+    {
+      "id": "charlemagne-and-the-vikings",
+      "name": "Charlemagne and the Vikings",
+      "from": 800,
+      "to": 1065,
+      "note": "Charlemagne ruled much of western Europe and the Treaty of Verdun split his lands. Viking raiders struck coasts and rivers, Alfred held them back in England, and the Holy Roman Empire was begun in 962."
+    },
+    {
+      "id": "normans-and-the-crusades",
+      "name": "Normans and the Crusades",
+      "from": 1066,
+      "to": 1215,
+      "note": "William the Conqueror won at Hastings and began the Tower of London to hold his new kingdom, and the Bayeux Tapestry and Domesday Book recorded it. Universities began at Bologna, crusaders left for Jerusalem and raised castles such as Krak des Chevaliers, Eleanor of Aquitaine ruled, and Magna Carta limited a king."
+    },
+    {
+      "id": "the-high-middle-ages",
+      "name": "The high Middle Ages",
+      "from": 1216,
+      "to": 1347,
+      "note": "Friars like Francis of Assisi, schools at Paris and thinkers like Thomas Aquinas flourished. Chartres rose in glass and stone, the Hanseatic League traded, and Dante wrote the Divine Comedy."
+    },
+    {
+      "id": "the-black-death-and-the-hundred-years-war",
+      "name": "The Black Death and the Hundred Years' War",
+      "from": 1348,
+      "to": 1500,
+      "note": "The Black Death killed millions, peasants revolted, the Hundred Years' War brought Agincourt and Joan of Arc, and Chaucer wrote. Gutenberg's press, at work by the 1450s, opened a new age just as Constantinople fell."
+    }
+  ]
+}

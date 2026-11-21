@@ -1,0 +1,55 @@
+{
+  "id": "kim-il-sung",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Kim Il Sung",
+      "from": "1912"
+    }
+  ],
+  "summary": "Founder and first leader of North Korea, which he ruled from 1948 until his death. He launched the Korean War in 1950 and built a state around his own cult, which passed to his son and grandson.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Kim Il-sŏng"
+  ],
+  "wikidata": "Q41117",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-04-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1994-07-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "joseph-stalin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kim Il-sung (Q41117)",
+      "url": "https://www.wikidata.org/wiki/Q41117",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kim Il Sung",
+      "url": "https://en.wikipedia.org/wiki/Kim_Il_Sung",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

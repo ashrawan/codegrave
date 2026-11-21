@@ -1,0 +1,62 @@
+{
+  "id": "carolingian-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Carolingian dynasty",
+      "from": "0751"
+    }
+  ],
+  "summary": "Frankish royal family named after Charles Martel, which included Charlemagne. Charlemagne was crowned emperor in 800, and the dynasty lost power in France in 987.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Carlovingians",
+    "Carolings",
+    "Karlings"
+  ],
+  "wikidata": "Q133602",
+  "events": [
+    {
+      "type": "born",
+      "date": "0751",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0987",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the Capetians in France",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "carolingian-empire"
+    },
+    {
+      "type": "related",
+      "to": "charles-martel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Carolingian dynasty (Q133602)",
+      "url": "https://www.wikidata.org/wiki/Q133602",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carolingian dynasty",
+      "url": "https://en.wikipedia.org/wiki/Carolingian_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

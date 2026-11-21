@@ -1,0 +1,53 @@
+{
+  "id": "aztec-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Aztec Empire",
+      "from": "1428"
+    }
+  ],
+  "summary": "The alliance of three cities in central Mexico led by Tenochtitlan, built on a lake. It collected tribute from many peoples and had a great market, schools, and a religion with elaborate temple rites.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Triple Alliance",
+    "Mexica Empire"
+  ],
+  "wikidata": "Q2608489",
+  "events": [
+    {
+      "type": "born",
+      "date": "1428",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1521-08-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by Spanish forces under Hernan Cortes and their indigenous allies",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Aztec Empire (Q2608489)",
+      "url": "https://www.wikidata.org/wiki/Q2608489",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aztec Empire",
+      "url": "https://en.wikipedia.org/wiki/Aztec_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

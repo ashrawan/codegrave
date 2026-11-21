@@ -1,0 +1,49 @@
+{
+  "id": "citizen-kane",
+  "category": "films",
+  "names": [
+    {
+      "name": "Citizen Kane",
+      "from": "1941"
+    }
+  ],
+  "maker": "Orson Welles",
+  "summary": "Film by Orson Welles about the rise and lonely death of a newspaper tycoon, told through other people's memories. Its deep-focus shots and non-linear story changed film technique, and critics often rank it as the best film ever.",
+  "labels": [
+    "film",
+    "media"
+  ],
+  "wikidata": "Q24815",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-05-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "orson-welles"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Citizen Kane (Q24815)",
+      "url": "https://www.wikidata.org/wiki/Q24815",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Citizen Kane",
+      "url": "https://en.wikipedia.org/wiki/Citizen_Kane",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

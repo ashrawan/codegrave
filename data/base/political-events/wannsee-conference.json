@@ -1,0 +1,57 @@
+{
+  "id": "wannsee-conference",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Wannsee Conference",
+      "from": "1942"
+    }
+  ],
+  "summary": "A meeting of senior Nazi officials and civil servants in a villa in Berlin in January 1942. Led by Reinhard Heydrich, it coordinated how the government bodies would take part in the deportation and murder of Europe's Jews.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q152120",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-01-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1942-01-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "berlin"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wannsee Conference (Q152120)",
+      "url": "https://www.wikidata.org/wiki/Q152120",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wannsee Conference",
+      "url": "https://en.wikipedia.org/wiki/Wannsee_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

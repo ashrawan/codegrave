@@ -1,0 +1,50 @@
+{
+  "id": "tuberculosis",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Tuberculosis",
+      "from": "1882"
+    }
+  ],
+  "summary": "A lung disease caused by bacteria that spread through the air. Robert Koch identified the germ in 1882, and it is still one of the leading infectious causes of death in the world.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "TB",
+    "phthisis",
+    "phthisis pulmonalis",
+    "consumption",
+    "White Death"
+  ],
+  "wikidata": "Q12204",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882",
+      "precision": "year",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: tuberculosis (Q12204)",
+      "url": "https://www.wikidata.org/wiki/Q12204",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tuberculosis",
+      "url": "https://en.wikipedia.org/wiki/Tuberculosis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

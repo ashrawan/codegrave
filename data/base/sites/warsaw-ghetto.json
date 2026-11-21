@@ -1,0 +1,54 @@
+{
+  "id": "warsaw-ghetto",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Warsaw Ghetto",
+      "from": "1940"
+    }
+  ],
+  "summary": "Largest Jewish ghetto in German-occupied Europe, sealed off in 1940. Hundreds of thousands of people were confined there, and many died of hunger and disease or were deported to Treblinka in 1942.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "wikidata": "Q154607",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-10-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-05",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by German forces after the ghetto uprising in 1943",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Warsaw Ghetto (Q154607)",
+      "url": "https://www.wikidata.org/wiki/Q154607",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Warsaw Ghetto",
+      "url": "https://en.wikipedia.org/wiki/Warsaw_Ghetto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

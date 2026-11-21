@@ -1,0 +1,65 @@
+{
+  "id": "byzantine-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Byzantine Empire",
+      "from": "0395"
+    }
+  ],
+  "summary": "The eastern Roman Empire, ruled from Constantinople for about a thousand years after Rome's fall in the west. It preserved Greek learning and Roman law and built the Hagia Sophia.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Byzantium",
+    "Eastern Roman Empire",
+    "Roman Empire",
+    "Lower Empire",
+    "Romanía"
+  ],
+  "wikidata": "Q12544",
+  "events": [
+    {
+      "type": "born",
+      "date": "0395-01-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1453-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Conquered by the Ottoman Empire when Constantinople fell",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "ottoman-empire"
+    },
+    {
+      "type": "in",
+      "to": "roman-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Byzantine Empire (Q12544)",
+      "url": "https://www.wikidata.org/wiki/Q12544",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Byzantine Empire",
+      "url": "https://en.wikipedia.org/wiki/Byzantine_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

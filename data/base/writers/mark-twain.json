@@ -1,0 +1,50 @@
+{
+  "id": "mark-twain",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Mark Twain",
+      "from": "1835"
+    }
+  ],
+  "summary": "Pen name of Samuel Clemens, an American writer and former riverboat pilot. He wrote The Adventures of Tom Sawyer and Adventures of Huckleberry Finn, funny books about boyhood on the Mississippi that also deal with slavery.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Thomas Jefferson Snodgrass"
+  ],
+  "wikidata": "Q7245",
+  "events": [
+    {
+      "type": "born",
+      "date": "1835-11-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1910-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Mark Twain (Q7245)",
+      "url": "https://www.wikidata.org/wiki/Q7245",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mark Twain",
+      "url": "https://en.wikipedia.org/wiki/Mark_Twain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

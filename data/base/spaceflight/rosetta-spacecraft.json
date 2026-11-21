@@ -1,0 +1,58 @@
+{
+  "id": "rosetta-spacecraft",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Rosetta",
+      "from": "2004"
+    }
+  ],
+  "maker": "European Space Agency",
+  "summary": "A European Space Agency probe launched in 2004 that orbited comet 67P and landed the small Philae lander on it in 2014. It was the first mission to orbit a comet.",
+  "labels": [
+    "astronomy",
+    "exploration"
+  ],
+  "aliases": [
+    "Rosetta space probe"
+  ],
+  "wikidata": "Q48572",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-03-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Deliberately landed on the comet at the end of the mission",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "rosetta-stone"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rosetta (Q48572)",
+      "url": "https://www.wikidata.org/wiki/Q48572",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rosetta (spacecraft)",
+      "url": "https://en.wikipedia.org/wiki/Rosetta_(spacecraft)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

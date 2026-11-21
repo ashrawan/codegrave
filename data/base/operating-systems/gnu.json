@@ -1,0 +1,52 @@
+{
+  "id": "gnu",
+  "category": "operating-systems",
+  "names": [
+    {
+      "name": "GNU",
+      "from": "1983"
+    }
+  ],
+  "maker": "Richard Stallman",
+  "summary": "Free software system begun by Richard Stallman to replace Unix with programs anyone may copy and change. Combined with the Linux kernel it forms the system most people call Linux.",
+  "labels": [
+    "computing",
+    "open-source"
+  ],
+  "aliases": [
+    "GNU's Not Unix"
+  ],
+  "wikidata": "Q44571",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-09-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "unix"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: GNU (Q44571)",
+      "url": "https://www.wikidata.org/wiki/Q44571",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: GNU",
+      "url": "https://en.wikipedia.org/wiki/GNU",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

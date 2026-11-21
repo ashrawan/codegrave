@@ -1,0 +1,50 @@
+{
+  "id": "gregor-mendel",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Gregor Mendel",
+      "from": "1822"
+    }
+  ],
+  "summary": "Moravian friar who bred thousands of pea plants in a monastery garden and found that traits pass on in fixed patterns. His work, ignored in his lifetime, became the basis of genetics after 1900.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Mendel"
+  ],
+  "wikidata": "Q37970",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822-07-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1884-01-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Gregor Mendel (Q37970)",
+      "url": "https://www.wikidata.org/wiki/Q37970",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gregor Mendel",
+      "url": "https://en.wikipedia.org/wiki/Gregor_Mendel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

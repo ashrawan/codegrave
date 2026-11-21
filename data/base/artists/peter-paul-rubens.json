@@ -1,0 +1,59 @@
+{
+  "id": "peter-paul-rubens",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Peter Paul Rubens",
+      "from": "1577"
+    }
+  ],
+  "summary": "Flemish painter based in Antwerp who ran a large workshop. He painted religious, mythological and portrait subjects in a lively Baroque style, and also worked as a diplomat for the Spanish rulers of the Netherlands.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Pierre Rubens",
+    "Petri Paulo Rubbens",
+    "Pieter Paul Rubens",
+    "Pieter Paul Rubbens",
+    "Peter Paul Ruebens"
+  ],
+  "wikidata": "Q5599",
+  "events": [
+    {
+      "type": "born",
+      "date": "1577-06-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1640-05-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "pieter-bruegel-the-elder"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peter Paul Rubens (Q5599)",
+      "url": "https://www.wikidata.org/wiki/Q5599",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peter Paul Rubens",
+      "url": "https://en.wikipedia.org/wiki/Peter_Paul_Rubens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

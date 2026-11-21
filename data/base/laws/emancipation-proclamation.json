@@ -1,0 +1,53 @@
+{
+  "id": "emancipation-proclamation",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Emancipation Proclamation",
+      "from": "1863"
+    }
+  ],
+  "summary": "An order by United States president Abraham Lincoln declaring slaves free in areas held by the Confederacy during the Civil War. It changed the aim of the war and allowed Black men to join the Union army.",
+  "labels": [
+    "law",
+    "human-rights",
+    "war"
+  ],
+  "aliases": [
+    "The Emancipation Proclamation",
+    "Proclamation 95"
+  ],
+  "wikidata": "Q391358",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "abraham-lincoln"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Emancipation Proclamation (Q391358)",
+      "url": "https://www.wikidata.org/wiki/Q391358",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Emancipation Proclamation",
+      "url": "https://en.wikipedia.org/wiki/Emancipation_Proclamation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

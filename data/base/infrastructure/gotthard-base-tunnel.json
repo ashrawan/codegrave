@@ -1,0 +1,54 @@
+{
+  "id": "gotthard-base-tunnel",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Gotthard Base Tunnel",
+      "from": "2016"
+    }
+  ],
+  "summary": "Railway tunnel through the Swiss Alps, the longest in the world at about 57 kilometres. It runs deep below the mountains and lets fast trains cross the Alps on a nearly flat route.",
+  "labels": [
+    "engineering",
+    "transport"
+  ],
+  "aliases": [
+    "GBT",
+    "Gotthard-Basistunnel",
+    "Galleria di base del San Gottardo",
+    "Tunnel da basa dal Son Gottard"
+  ],
+  "wikidata": "Q193002",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-12-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gotthard Base Tunnel (Q193002)",
+      "url": "https://www.wikidata.org/wiki/Q193002",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gotthard Base Tunnel",
+      "url": "https://en.wikipedia.org/wiki/Gotthard_Base_Tunnel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

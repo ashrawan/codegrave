@@ -1,0 +1,53 @@
+{
+  "id": "starlink",
+  "category": "networks",
+  "names": [
+    {
+      "name": "Starlink",
+      "from": "2019"
+    }
+  ],
+  "maker": "SpaceX",
+  "summary": "Internet service from SpaceX using thousands of small satellites in low orbit. It reaches remote places and ships and was used in Ukraine, and it has made SpaceX one of the biggest operators of satellites.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "aliases": [
+    "SpaceX satellite constellation",
+    "Starlink constellation"
+  ],
+  "wikidata": "Q19867977",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Starlink (Q19867977)",
+      "url": "https://www.wikidata.org/wiki/Q19867977",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Starlink",
+      "url": "https://en.wikipedia.org/wiki/Starlink",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

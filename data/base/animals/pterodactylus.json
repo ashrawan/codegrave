@@ -1,0 +1,50 @@
+{
+  "id": "pterodactylus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Pterodactylus",
+      "from": "-150800000"
+    }
+  ],
+  "summary": "A small flying reptile of the late Jurassic with a long beak and wings of skin, known from fossils in Germany. It was the first pterosaur ever named, in the late 1700s.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "pterodactyl"
+  ],
+  "wikidata": "Q309490",
+  "events": [
+    {
+      "type": "born",
+      "date": "-150800000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-148500000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: pterodactyl (Q309490)",
+      "url": "https://www.wikidata.org/wiki/Q309490",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pterodactylus",
+      "url": "https://en.wikipedia.org/wiki/Pterodactylus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

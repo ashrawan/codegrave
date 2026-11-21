@@ -1,0 +1,60 @@
+{
+  "id": "aretha-franklin",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Aretha Franklin",
+      "from": "1942"
+    }
+  ],
+  "summary": "American singer from Detroit who began in gospel and became known as the Queen of Soul. Her hits include Respect and Think, and she was the first woman inducted into the Rock and Roll Hall of Fame.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "The Queen of Soul",
+    "Aretha Louise Franklin"
+  ],
+  "wikidata": "Q125121",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-03-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "billie-holiday"
+    },
+    {
+      "type": "influenced_by",
+      "to": "nina-simone"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aretha Franklin (Q125121)",
+      "url": "https://www.wikidata.org/wiki/Q125121",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aretha Franklin",
+      "url": "https://en.wikipedia.org/wiki/Aretha_Franklin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

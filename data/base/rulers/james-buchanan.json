@@ -1,0 +1,61 @@
+{
+  "id": "james-buchanan",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "James Buchanan",
+      "from": "1791"
+    }
+  ],
+  "summary": "Fifteenth president. Seven Southern states left the Union in his last months in office, and the Civil War began weeks after he left.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q12325",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-04-23",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1857-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 15th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1861-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Abraham Lincoln took office."
+    },
+    {
+      "type": "ended",
+      "date": "1868-06-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: James Buchanan (Q12325)",
+      "url": "https://www.wikidata.org/wiki/Q12325",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Buchanan",
+      "url": "https://en.wikipedia.org/wiki/James_Buchanan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

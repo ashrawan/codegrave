@@ -1,0 +1,59 @@
+{
+  "id": "benjamin-disraeli",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Benjamin Disraeli",
+      "from": "1804"
+    }
+  ],
+  "summary": "British Conservative politician and novelist who was twice prime minister, in 1868 and from 1874 to 1880. His government bought shares in the Suez Canal and made Queen Victoria Empress of India.",
+  "labels": [
+    "politics",
+    "literature"
+  ],
+  "aliases": [
+    "Dizzy",
+    "Benjamin, Earl of Beaconsfield Disraeli",
+    "Lord Beaconsfield",
+    "Benjamin Disraeli, Earl of Beaconsfield"
+  ],
+  "wikidata": "Q82006",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-12-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1881-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benjamin Disraeli (Q82006)",
+      "url": "https://www.wikidata.org/wiki/Q82006",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Benjamin Disraeli",
+      "url": "https://en.wikipedia.org/wiki/Benjamin_Disraeli",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

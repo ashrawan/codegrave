@@ -1,0 +1,57 @@
+{
+  "id": "mount-mazama",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Mount Mazama",
+      "from": "-400000"
+    }
+  ],
+  "summary": "A volcano in Oregon that collapsed in a huge eruption about 7,700 years ago, leaving a deep caldera that filled with water to become Crater Lake. Native peoples of the region kept stories of its destruction.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "aliases": [
+    "Mt. Mazama"
+  ],
+  "wikidata": "Q1201788",
+  "events": [
+    {
+      "type": "born",
+      "date": "-400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-5700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Collapsed into its emptied magma chamber in a giant eruption",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mount Mazama (Q1201788)",
+      "url": "https://www.wikidata.org/wiki/Q1201788",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mount Mazama",
+      "url": "https://en.wikipedia.org/wiki/Mount_Mazama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

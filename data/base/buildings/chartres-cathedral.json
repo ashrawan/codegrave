@@ -1,0 +1,53 @@
+{
+  "id": "chartres-cathedral",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Chartres Cathedral",
+      "from": "1220"
+    }
+  ],
+  "summary": "Gothic cathedral in northern France, mostly rebuilt after a fire in 1194. It is known for its stained glass, much of which survived the centuries, and for the way it shaped later church design.",
+  "labels": [
+    "religion",
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Notre-Dame de Chartres",
+    "Our Lady of Chartres"
+  ],
+  "wikidata": "Q180274",
+  "events": [
+    {
+      "type": "born",
+      "date": "1220",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Notre-Dame de Chartres (Q180274)",
+      "url": "https://www.wikidata.org/wiki/Q180274",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chartres Cathedral",
+      "url": "https://en.wikipedia.org/wiki/Chartres_Cathedral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "orient-express",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Orient Express",
+      "from": "1883"
+    }
+  ],
+  "summary": "A luxury long-distance passenger train service that began in 1883 from Paris towards Constantinople, now Istanbul. It became a symbol of glamorous European travel, with sleeping cars and a famous dining car.",
+  "labels": [
+    "transport"
+  ],
+  "wikidata": "Q191985",
+  "events": [
+    {
+      "type": "born",
+      "date": "1883-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Services were cut back and the last Paris to Vienna route ended",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Orient Express (Q191985)",
+      "url": "https://www.wikidata.org/wiki/Q191985",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Orient Express",
+      "url": "https://en.wikipedia.org/wiki/Orient_Express",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,89 @@
+{
+  "id": "world-religions",
+  "name": "World Religions",
+  "description": "The world's major religions and their founders, from Hinduism and Judaism to Buddhism, Christianity, Islam and Sikhism.",
+  "category": "knowledge",
+  "labels": [
+    "religion"
+  ],
+  "tags": [
+    "religion",
+    "religions",
+    "christianity",
+    "islam",
+    "hinduism",
+    "buddhism",
+    "judaism",
+    "faith"
+  ],
+  "entries": [
+    "vedic-religion",
+    "hinduism",
+    "moses",
+    "zoroastrianism",
+    "judaism",
+    "bible",
+    "jainism",
+    "gautama-buddha",
+    "confucius",
+    "buddhism",
+    "confucianism",
+    "taoism",
+    "jesus",
+    "christianity",
+    "catholic-church",
+    "eastern-orthodox-church",
+    "muhammad",
+    "shinto",
+    "islam",
+    "quran",
+    "sunni-islam",
+    "shia-islam",
+    "guru-nanak",
+    "martin-luther",
+    "sikhism",
+    "protestant-reformation",
+    "protestantism",
+    "haitian-vodou",
+    "bahai-faith",
+    "pentecostalism",
+    "rastafari"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-oldest-faiths",
+      "name": "The oldest faiths",
+      "from": -1500,
+      "to": -501,
+      "note": "Priests in India chant the hymns of the Vedas, Persian teachers speak of one wise god, and the Hebrew people shape their law and stories around Moses. These are the oldest strands of belief still alive today."
+    },
+    {
+      "id": "buddha-confucius-and-laozi",
+      "name": "Buddha, Confucius and Laozi",
+      "from": -500,
+      "to": -1,
+      "note": "In India, China and Greece, wandering teachers ask how to live well. The Buddha, Mahavira, Confucius and the Daoist writers set out paths of discipline and compassion that outlast the empires around them."
+    },
+    {
+      "id": "christianity-and-islam",
+      "name": "Christianity and Islam",
+      "from": 1,
+      "to": 700,
+      "note": "Christianity grows from a small Jewish sect into a religion of the Roman world, and then Islam arises in Arabia. Each is built on a holy book, and each spreads quickly along the roads of trade and conquest."
+    },
+    {
+      "id": "reform-and-new-branches",
+      "name": "Reform and new branches",
+      "from": 701,
+      "to": 1800,
+      "note": "Faiths cross borders and divide. Islam splits into Sunni and Shia, Christianity into the Catholic and Orthodox churches and later the Protestant Reformation. Buddhism travels across Asia, Shinto takes shape beside it, Sikhism begins in the Punjab, and Vodou arises in the Caribbean."
+    },
+    {
+      "id": "modern-faiths",
+      "name": "Modern faiths",
+      "from": 1801,
+      "to": 2026,
+      "note": "Printing, migration and political change give rise to new movements such as the Bahá'í Faith and Rastafari, while old religions find new homes in every continent."
+    }
+  ]
+}

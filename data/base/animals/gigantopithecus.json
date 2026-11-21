@@ -1,0 +1,48 @@
+{
+  "id": "gigantopithecus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Gigantopithecus",
+      "from": "-2000000"
+    }
+  ],
+  "summary": "The largest ape known, a relative of the orangutan that was about three metres tall and lived in southern China. It is known from teeth and jawbones, and fed mainly on plants.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q310434",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-300000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Probably lost as forests shrank and its food became scarce",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Gigantopithecus (Q310434)",
+      "url": "https://www.wikidata.org/wiki/Q310434",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gigantopithecus",
+      "url": "https://en.wikipedia.org/wiki/Gigantopithecus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

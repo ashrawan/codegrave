@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-marathon",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Marathon",
+      "from": "-0490"
+    }
+  ],
+  "summary": "Athenian and Plataean soldiers defeated a Persian landing force on the plain of Marathon. The victory boosted Athenian confidence, and the later marathon race is named after the story of a messenger running to Athens.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Marathon battle"
+  ],
+  "wikidata": "Q31900",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0490-09-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0490-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    },
+    {
+      "type": "related",
+      "to": "achaemenid-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Marathon (Q31900)",
+      "url": "https://www.wikidata.org/wiki/Q31900",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Marathon",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Marathon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

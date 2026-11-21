@@ -1,0 +1,58 @@
+{
+  "id": "house-of-stuart",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "House of Stuart",
+      "from": "1371"
+    }
+  ],
+  "summary": "Royal family of Scotland and later of England and Ireland, which joined the crowns under James VI and I. It lost the throne in the civil wars and again in 1688, and it ended with Queen Anne.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Stuart",
+    "House of Stewart",
+    "Stuart Dynasty"
+  ],
+  "wikidata": "Q179840",
+  "events": [
+    {
+      "type": "born",
+      "date": "1371",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1714",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended with the death of Queen Anne",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-scotland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: House of Stuart (Q179840)",
+      "url": "https://www.wikidata.org/wiki/Q179840",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: House of Stuart",
+      "url": "https://en.wikipedia.org/wiki/House_of_Stuart",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

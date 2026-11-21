@@ -1,0 +1,57 @@
+{
+  "id": "zika-epidemic",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Zika virus epidemic",
+      "from": "2015"
+    }
+  ],
+  "summary": "A mosquito-borne virus spread quickly through Brazil and other countries in the Americas. It was linked to birth defects in babies, which led to a global health emergency and travel advice for pregnant women.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "2015 Brazil zika virus outbreak",
+    "Zika virus outbreak in Latin America",
+    "Zika virus outbreak 2015–16"
+  ],
+  "wikidata": "Q21686043",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-04",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2016-11",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2015–16 Zika virus epidemic (Q21686043)",
+      "url": "https://www.wikidata.org/wiki/Q21686043",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2015–16 Zika virus epidemic",
+      "url": "https://en.wikipedia.org/wiki/2015%E2%80%9316_Zika_virus_epidemic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

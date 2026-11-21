@@ -1,0 +1,51 @@
+{
+  "id": "german-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "German",
+      "from": "0750"
+    }
+  ],
+  "summary": "West Germanic language of Germany, Austria and Switzerland. Its earliest written form, Old High German, appears in glossaries from around the eighth century. Luther's Bible helped spread a common written standard.",
+  "labels": [
+    "language"
+  ],
+  "wikidata": "Q188",
+  "events": [
+    {
+      "type": "born",
+      "date": "0750",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    },
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German (Q188)",
+      "url": "https://www.wikidata.org/wiki/Q188",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German language",
+      "url": "https://en.wikipedia.org/wiki/German_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

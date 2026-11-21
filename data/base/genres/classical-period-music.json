@@ -1,0 +1,54 @@
+{
+  "id": "classical-period-music",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Classical period (music)",
+      "from": "1750"
+    }
+  ],
+  "summary": "Style of European art music from about 1750 to 1820, favouring clear tunes, balanced phrases and forms such as the symphony and sonata. Haydn and Mozart are its central figures, and early Beethoven belongs to it.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Classical period",
+    "Classical music period",
+    "Classical music",
+    "musical classicism",
+    "Classical era"
+  ],
+  "wikidata": "Q17723",
+  "events": [
+    {
+      "type": "born",
+      "date": "1750",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1820",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Classical period (Q17723)",
+      "url": "https://www.wikidata.org/wiki/Q17723",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Classical period (music)",
+      "url": "https://en.wikipedia.org/wiki/Classical_period_(music)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

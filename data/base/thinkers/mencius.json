@@ -1,0 +1,59 @@
+{
+  "id": "mencius",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Mencius",
+      "from": "-0372"
+    }
+  ],
+  "summary": "Chinese Confucian thinker who argued that people are born with a natural tendency toward goodness and that rulers must care for the people they govern. His sayings are collected in a book that bears his name.",
+  "labels": [
+    "philosophy"
+  ],
+  "aliases": [
+    "Meng Ke",
+    "Meng-tze",
+    "Mengzi",
+    "Meng K'e",
+    "Meng-tzu"
+  ],
+  "wikidata": "Q188903",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0372",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0289",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "confucius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mencius (Q188903)",
+      "url": "https://www.wikidata.org/wiki/Q188903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mencius",
+      "url": "https://en.wikipedia.org/wiki/Mencius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

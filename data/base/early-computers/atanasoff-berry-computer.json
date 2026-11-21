@@ -1,0 +1,58 @@
+{
+  "id": "atanasoff-berry-computer",
+  "category": "early-computers",
+  "names": [
+    {
+      "name": "Atanasoff-Berry Computer",
+      "from": "1942"
+    }
+  ],
+  "maker": "John Atanasoff and Clifford Berry",
+  "summary": "Electronic machine built at Iowa State College to solve sets of linear equations. It used binary numbers and vacuum tubes, and a court later ruled it influenced the design of ENIAC.",
+  "labels": [
+    "computing",
+    "firsts"
+  ],
+  "aliases": [
+    "ABC"
+  ],
+  "wikidata": "Q522906",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1948",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dismantled when the room was needed",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Atanasoff–Berry Computer (Q522906)",
+      "url": "https://www.wikidata.org/wiki/Q522906",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atanasoff–Berry computer",
+      "url": "https://en.wikipedia.org/wiki/Atanasoff%E2%80%93Berry_computer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

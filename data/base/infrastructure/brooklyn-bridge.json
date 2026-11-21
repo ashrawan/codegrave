@@ -1,0 +1,56 @@
+{
+  "id": "brooklyn-bridge",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Brooklyn Bridge",
+      "from": "1883"
+    }
+  ],
+  "summary": "Suspension bridge over the East River that joined Brooklyn and Manhattan. Its designer John Roebling died of an injury before work began, and his son and his daughter-in-law finished the job.",
+  "labels": [
+    "engineering",
+    "transport"
+  ],
+  "aliases": [
+    "New York and Brooklyn Bridge",
+    "East River Bridge"
+  ],
+  "wikidata": "Q125006",
+  "events": [
+    {
+      "type": "born",
+      "date": "1883-05-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brooklyn Bridge (Q125006)",
+      "url": "https://www.wikidata.org/wiki/Q125006",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brooklyn Bridge",
+      "url": "https://en.wikipedia.org/wiki/Brooklyn_Bridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

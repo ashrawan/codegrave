@@ -1,0 +1,59 @@
+{
+  "id": "robert-koch",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Robert Koch",
+      "from": "1843"
+    }
+  ],
+  "summary": "German doctor who showed that specific germs cause specific diseases. He identified the bacteria of anthrax, tuberculosis and cholera and won the 1905 Nobel Prize.",
+  "labels": [
+    "medicine",
+    "biology"
+  ],
+  "aliases": [
+    "Heinrich Hermann Robert Koch",
+    "Koch R.",
+    "R. Koch",
+    "Koch"
+  ],
+  "wikidata": "Q37193",
+  "events": [
+    {
+      "type": "born",
+      "date": "1843-12-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1910-05-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Robert Koch (Q37193)",
+      "url": "https://www.wikidata.org/wiki/Q37193",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Koch",
+      "url": "https://en.wikipedia.org/wiki/Robert_Koch",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

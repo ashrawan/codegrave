@@ -1,0 +1,55 @@
+{
+  "id": "yellowstone-caldera",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Yellowstone Caldera",
+      "from": "-640000"
+    }
+  ],
+  "summary": "A huge volcanic crater in Wyoming, about 70 kilometres across, formed in giant eruptions, the last big one about 640,000 years ago. Heat below the ground feeds its geysers and hot springs, including Old Faithful.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Yellowstone volcano",
+    "Yellowstone Supervolcano"
+  ],
+  "wikidata": "Q650836",
+  "events": [
+    {
+      "type": "born",
+      "date": "-640000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "yellowstone-national-park"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yellowstone volcano (Q650836)",
+      "url": "https://www.wikidata.org/wiki/Q650836",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yellowstone Caldera",
+      "url": "https://en.wikipedia.org/wiki/Yellowstone_Caldera",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

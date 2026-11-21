@@ -1,0 +1,54 @@
+{
+  "id": "webvan",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Webvan",
+      "from": "1996"
+    }
+  ],
+  "summary": "Online grocer that built huge warehouses and promised delivery within a short window. It grew too fast, spent hundreds of millions and went bankrupt in 2001, a famous failure of the dot-com bubble.",
+  "labels": [
+    "business",
+    "failures"
+  ],
+  "wikidata": "Q17087287",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Expanded too fast and went bankrupt",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Webvan (Q17087287)",
+      "url": "https://www.wikidata.org/wiki/Q17087287",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Webvan",
+      "url": "https://en.wikipedia.org/wiki/Webvan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

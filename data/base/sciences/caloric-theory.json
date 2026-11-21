@@ -1,0 +1,57 @@
+{
+  "id": "caloric-theory",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Caloric theory",
+      "from": "1783"
+    }
+  ],
+  "summary": "The idea that heat is a weightless fluid called caloric that flows from hot bodies to cold ones. It was a leading view in the eighteenth and early nineteenth centuries before heat was understood as the motion of particles.",
+  "labels": [
+    "physics"
+  ],
+  "wikidata": "Q845261",
+  "events": [
+    {
+      "type": "born",
+      "date": "1783",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1850",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the kinetic theory and the study of energy and thermodynamics",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "antoine-lavoisier"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "thermodynamics"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: caloric theory (Q845261)",
+      "url": "https://www.wikidata.org/wiki/Q845261",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caloric theory",
+      "url": "https://en.wikipedia.org/wiki/Caloric_theory",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,43 @@
+{
+  "id": "atlas-robot",
+  "category": "robots",
+  "names": [
+    {
+      "name": "Atlas",
+      "from": "2013"
+    }
+  ],
+  "maker": "Boston Dynamics",
+  "summary": "Two-legged humanoid robot developed by Boston Dynamics. Videos of it jumping, doing backflips and running over obstacles have been watched by many millions and show how far robot balance has come.",
+  "labels": [
+    "engineering"
+  ],
+  "wikidata": "Q14248859",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-07-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Atlas (Q14248859)",
+      "url": "https://www.wikidata.org/wiki/Q14248859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atlas (robot)",
+      "url": "https://en.wikipedia.org/wiki/Atlas_(robot)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

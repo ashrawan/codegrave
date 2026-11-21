@@ -1,0 +1,66 @@
+{
+  "id": "samoa",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Samoa",
+      "from": "1962"
+    }
+  ],
+  "summary": "Polynesian island country in the South Pacific, with Apia as its capital. It was the first Pacific island nation to regain independence, from New Zealand administration, in 1962.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Western Samoa",
+    "Independent State of Samoa",
+    "ws",
+    "SAM"
+  ],
+  "wikidata": "Q683",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samoa (Q683)",
+      "url": "https://www.wikidata.org/wiki/Q683",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samoa",
+      "url": "https://en.wikipedia.org/wiki/Samoa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

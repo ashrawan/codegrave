@@ -1,0 +1,60 @@
+{
+  "id": "kristallnacht",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Kristallnacht",
+      "from": "1938"
+    }
+  ],
+  "summary": "A night of organised attacks on Jews across Nazi Germany, Austria and the Sudetenland on 9 and 10 November 1938. Synagogues and Jewish shops were smashed or burned, many Jews were killed, and about thirty thousand men were arrested.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "aliases": [
+    "Crystal Night",
+    "Reichskristallnacht",
+    "Pogromnacht",
+    "Novemberpogrome",
+    "Night of Broken Glass"
+  ],
+  "wikidata": "Q36756",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-11",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1938-11",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kristallnacht (Q36756)",
+      "url": "https://www.wikidata.org/wiki/Q36756",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kristallnacht",
+      "url": "https://en.wikipedia.org/wiki/Kristallnacht",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

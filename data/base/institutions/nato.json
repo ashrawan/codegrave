@@ -1,0 +1,57 @@
+{
+  "id": "nato",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "NATO",
+      "from": "1949"
+    }
+  ],
+  "summary": "Alliance of North American and European states formed in Washington. Members promise to treat an attack on one as an attack on all, and the alliance grew after the end of the Cold War.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "NATO Alliance",
+    "North Atlantic Treaty Organisation",
+    "North Atlantic Alliance"
+  ],
+  "wikidata": "Q7184",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: NATO (Q7184)",
+      "url": "https://www.wikidata.org/wiki/Q7184",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: NATO",
+      "url": "https://en.wikipedia.org/wiki/NATO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

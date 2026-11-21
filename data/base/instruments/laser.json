@@ -1,0 +1,47 @@
+{
+  "id": "laser",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Laser",
+      "from": "1960"
+    }
+  ],
+  "maker": "Theodore Maiman",
+  "summary": "Device that makes a narrow, single-colour beam of light by stimulated emission. Theodore Maiman built the first working laser in 1960. Lasers are now used in surgery, cutting, scanning and fibre communication.",
+  "labels": [
+    "physics",
+    "engineering"
+  ],
+  "aliases": [
+    "lasers"
+  ],
+  "wikidata": "Q38867",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: laser (Q38867)",
+      "url": "https://www.wikidata.org/wiki/Q38867",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Laser",
+      "url": "https://en.wikipedia.org/wiki/Laser",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

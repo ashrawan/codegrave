@@ -1,0 +1,73 @@
+{
+  "id": "czechoslovakia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Czechoslovakia",
+      "from": "1918"
+    }
+  ],
+  "summary": "The state of Czechs and Slovaks created from Austria-Hungary in 1918. It was occupied by Nazi Germany, became communist in 1948, and ended a communist period in the Velvet Revolution.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Czecho-Slovakia",
+    "cs",
+    "TCH",
+    "Československo",
+    "Federation of Czechoslovakia"
+  ],
+  "wikidata": "Q33946",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-10-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-12-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Split peacefully into the Czech Republic and Slovakia on 1 January 1993",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "league-of-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "warsaw-pact"
+    },
+    {
+      "type": "member_of",
+      "to": "comecon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Czechoslovakia (Q33946)",
+      "url": "https://www.wikidata.org/wiki/Q33946",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Czechoslovakia",
+      "url": "https://en.wikipedia.org/wiki/Czechoslovakia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "ballon-dor",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Ballon d'Or",
+      "from": "1956"
+    }
+  ],
+  "summary": "An annual award to the best footballer of the year, first given by the French magazine France Football. Votes come from journalists, and its first winner was Stanley Matthews.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "European Footballer of the Year"
+  ],
+  "wikidata": "Q166177",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ballon d'Or (Q166177)",
+      "url": "https://www.wikidata.org/wiki/Q166177",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ballon d'Or",
+      "url": "https://en.wikipedia.org/wiki/Ballon_d'Or",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

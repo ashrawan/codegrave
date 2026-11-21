@@ -1,0 +1,52 @@
+{
+  "id": "scratch",
+  "category": "languages",
+  "names": [
+    {
+      "name": "Scratch",
+      "from": "2007"
+    }
+  ],
+  "maker": "MIT Media Lab",
+  "summary": "Visual language from MIT in which learners snap coloured blocks together to make animations and games. It is used in schools around the world and has a large online community.",
+  "labels": [
+    "computing",
+    "education"
+  ],
+  "aliases": [
+    "scratch.mit.edu"
+  ],
+  "wikidata": "Q275131",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "logo-language"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Scratch (Q275131)",
+      "url": "https://www.wikidata.org/wiki/Q275131",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Scratch (programming language)",
+      "url": "https://en.wikipedia.org/wiki/Scratch_(programming_language)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

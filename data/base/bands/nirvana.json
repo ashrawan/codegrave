@@ -1,0 +1,57 @@
+{
+  "id": "nirvana",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Nirvana",
+      "from": "1987"
+    }
+  ],
+  "summary": "American band from Washington state, led by Kurt Cobain, whose album Nevermind brought grunge into the mainstream in 1991. The band ended when Cobain died.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q11649",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1994",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended after the death of Kurt Cobain",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "influenced_by",
+      "to": "led-zeppelin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nirvana (Q11649)",
+      "url": "https://www.wikidata.org/wiki/Q11649",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nirvana (band)",
+      "url": "https://en.wikipedia.org/wiki/Nirvana_(band)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

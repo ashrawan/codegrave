@@ -1,0 +1,55 @@
+{
+  "id": "compaq-portable",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "Compaq Portable",
+      "from": "1983"
+    }
+  ],
+  "maker": "Compaq",
+  "summary": "Luggable computer the size of a sewing machine that ran the same software as the IBM PC. It was copied without breaking IBM's rights, and it founded Compaq as a leading maker of PC-compatible machines.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "wikidata": "Q2893926",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1986",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by newer Compaq models",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "compaq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Compaq Portable (Q2893926)",
+      "url": "https://www.wikidata.org/wiki/Q2893926",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Compaq Portable",
+      "url": "https://en.wikipedia.org/wiki/Compaq_Portable",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "balto",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Balto",
+      "from": "1919"
+    }
+  ],
+  "summary": "A sled dog who led the last leg of the 1925 relay that carried diphtheria medicine to Nome, Alaska. A statue of him stands in New York's Central Park.",
+  "labels": [
+    "medicine",
+    "firsts"
+  ],
+  "wikidata": "Q805807",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1933-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Balto (Q805807)",
+      "url": "https://www.wikidata.org/wiki/Q805807",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Balto",
+      "url": "https://en.wikipedia.org/wiki/Balto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

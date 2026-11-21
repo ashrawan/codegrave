@@ -1,0 +1,60 @@
+{
+  "id": "paleogene",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Paleogene",
+      "from": "-66000000"
+    }
+  ],
+  "summary": "The period from 66 to 23 million years ago, after the dinosaurs died out. Mammals and birds grew in variety and size, forests spread, and the climate shifted from hothouse to cooler as ice formed on Antarctica.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Palaeogene",
+    "Palæogene",
+    "Lower Tertiary",
+    "Paleogene Period",
+    "Paleogene System"
+  ],
+  "wikidata": "Q55810",
+  "events": [
+    {
+      "type": "born",
+      "date": "-66000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-23030000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cenozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paleogene (Q55810)",
+      "url": "https://www.wikidata.org/wiki/Q55810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paleogene",
+      "url": "https://en.wikipedia.org/wiki/Paleogene",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

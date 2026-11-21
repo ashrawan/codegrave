@@ -1,0 +1,85 @@
+{
+  "id": "tet-offensive",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Tet Offensive",
+      "from": "1968"
+    }
+  ],
+  "summary": "A wave of surprise attacks launched in January 1968 by North Vietnamese and Viet Cong forces on cities and bases across South Vietnam during the Tet holiday. It failed militarily but shifted opinion in the United States against the war.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Tet",
+    "The Tet Offensive",
+    "Viet Cong Tet Offensive, 1968"
+  ],
+  "wikidata": "Q82542",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-01-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "vietnam-war"
+    },
+    {
+      "type": "in",
+      "to": "south-vietnam"
+    },
+    {
+      "type": "in",
+      "to": "vietnam"
+    },
+    {
+      "type": "related",
+      "to": "australia"
+    },
+    {
+      "type": "related",
+      "to": "new-zealand"
+    },
+    {
+      "type": "related",
+      "to": "south-korea"
+    },
+    {
+      "type": "related",
+      "to": "thailand"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tet Offensive (Q82542)",
+      "url": "https://www.wikidata.org/wiki/Q82542",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tet Offensive",
+      "url": "https://en.wikipedia.org/wiki/Tet_Offensive",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

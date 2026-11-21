@@ -1,0 +1,47 @@
+{
+  "id": "moliere",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Molière",
+      "from": "1622"
+    }
+  ],
+  "summary": "Stage name of Jean-Baptiste Poquelin, French actor and playwright at the court of Louis XIV. His comedies, such as Tartuffe and The Miser, mocked hypocrisy and greed. He collapsed while performing in his last play and died soon after.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q687",
+  "events": [
+    {
+      "type": "born",
+      "date": "1622-01-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1673-02-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Molière (Q687)",
+      "url": "https://www.wikidata.org/wiki/Q687",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Molière",
+      "url": "https://en.wikipedia.org/wiki/Moli%C3%A8re",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

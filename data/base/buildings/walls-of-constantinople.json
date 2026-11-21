@@ -1,0 +1,51 @@
+{
+  "id": "walls-of-constantinople",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Walls of Constantinople",
+      "from": "0413"
+    }
+  ],
+  "summary": "Triple line of land walls protecting Constantinople on its western side, built under Theodosius II. They held off many sieges for a thousand years, until Ottoman cannon broke through in 1453.",
+  "labels": [
+    "war",
+    "architecture"
+  ],
+  "aliases": [
+    "Theodosian walls"
+  ],
+  "wikidata": "Q89917",
+  "events": [
+    {
+      "type": "born",
+      "date": "0413",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Walls of Constantinople (Q89917)",
+      "url": "https://www.wikidata.org/wiki/Q89917",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Walls of Constantinople",
+      "url": "https://en.wikipedia.org/wiki/Walls_of_Constantinople",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

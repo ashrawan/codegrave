@@ -1,0 +1,56 @@
+{
+  "id": "ipad",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "iPad",
+      "from": "2010"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple tablet with a large touchscreen, running the same system as the iPhone. It made tablets popular after earlier attempts failed and is used for reading, drawing, games and video.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q2796",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    },
+    {
+      "type": "made_by",
+      "to": "steve-jobs"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: iPad (Q2796)",
+      "url": "https://www.wikidata.org/wiki/Q2796",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IPad",
+      "url": "https://en.wikipedia.org/wiki/IPad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

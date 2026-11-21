@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-thermopylae",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Thermopylae",
+      "from": "-0480"
+    }
+  ],
+  "summary": "A small Greek force, led by the Spartan king Leonidas, held a narrow coastal pass against the huge army of Xerxes I for several days before being outflanked. The stand became a lasting symbol of courage.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q131969",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0480-08-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0480-08-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    },
+    {
+      "type": "related",
+      "to": "achaemenid-empire"
+    },
+    {
+      "type": "related",
+      "to": "sparta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Thermopylae (Q131969)",
+      "url": "https://www.wikidata.org/wiki/Q131969",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Thermopylae",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Thermopylae",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

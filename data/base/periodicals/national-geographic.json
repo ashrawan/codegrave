@@ -1,0 +1,54 @@
+{
+  "id": "national-geographic",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "National Geographic",
+      "from": "1888"
+    }
+  ],
+  "summary": "Magazine of the National Geographic Society, founded to spread geographical knowledge. It is known for its yellow border, its photography of nature and peoples, and its reports on expeditions.",
+  "labels": [
+    "exploration",
+    "media"
+  ],
+  "aliases": [
+    "National Geographic Magazine",
+    "The National Geographic",
+    "The National geographic magazine",
+    "Nat Geo"
+  ],
+  "wikidata": "Q5973845",
+  "events": [
+    {
+      "type": "born",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "national-geographic-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: National Geographic (Q5973845)",
+      "url": "https://www.wikidata.org/wiki/Q5973845",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Geographic",
+      "url": "https://en.wikipedia.org/wiki/National_Geographic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

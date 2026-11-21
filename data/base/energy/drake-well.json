@@ -1,0 +1,49 @@
+{
+  "id": "drake-well",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Drake Well",
+      "from": "1859"
+    }
+  ],
+  "maker": "Edwin Drake",
+  "summary": "The first successful commercial oil well in the United States, drilled by Edwin Drake in Pennsylvania in 1859. Its success set off an oil boom and the start of the modern petroleum industry.",
+  "labels": [
+    "energy",
+    "business"
+  ],
+  "wikidata": "Q5305631",
+  "events": [
+    {
+      "type": "born",
+      "date": "1859",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Drake Well (Q5305631)",
+      "url": "https://www.wikidata.org/wiki/Q5305631",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Drake Well",
+      "url": "https://en.wikipedia.org/wiki/Drake_Well",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

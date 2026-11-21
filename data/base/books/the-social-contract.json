@@ -1,0 +1,48 @@
+{
+  "id": "the-social-contract",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Social Contract",
+      "from": "1762"
+    }
+  ],
+  "summary": "Book by Jean-Jacques Rousseau arguing that legitimate government rests on an agreement among free people and on the will of the whole community. It was widely read by thinkers of the French Revolution.",
+  "labels": [
+    "philosophy",
+    "politics"
+  ],
+  "wikidata": "Q190126",
+  "events": [
+    {
+      "type": "born",
+      "date": "1762",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jean-jacques-rousseau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Social Contract (Q190126)",
+      "url": "https://www.wikidata.org/wiki/Q190126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Social Contract",
+      "url": "https://en.wikipedia.org/wiki/The_Social_Contract",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

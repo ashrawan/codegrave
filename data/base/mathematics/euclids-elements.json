@@ -1,0 +1,53 @@
+{
+  "id": "euclids-elements",
+  "category": "mathematics",
+  "names": [
+    {
+      "name": "Euclid's Elements",
+      "from": "-0300"
+    }
+  ],
+  "summary": "A set of thirteen books by Euclid that gather the geometry and number theory of the Greeks and prove it step by step from basic assumptions. It was a main textbook of mathematics for over two thousand years.",
+  "labels": [
+    "mathematics",
+    "education"
+  ],
+  "aliases": [
+    "Elements",
+    "Elements by Euclid",
+    "Euc."
+  ],
+  "wikidata": "Q172891",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "euclid"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Elements (Q172891)",
+      "url": "https://www.wikidata.org/wiki/Q172891",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Euclid's Elements",
+      "url": "https://en.wikipedia.org/wiki/Euclid's_Elements",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

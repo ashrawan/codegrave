@@ -1,0 +1,53 @@
+{
+  "id": "canon-of-medicine",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Canon of Medicine",
+      "from": "1025"
+    }
+  ],
+  "summary": "Huge medical encyclopedia by Avicenna that gathered Greek and Islamic knowledge about diseases and drugs. Translated into Latin, it was a main textbook in European medical schools for several hundred years.",
+  "labels": [
+    "medicine",
+    "literature"
+  ],
+  "aliases": [
+    "Canon of Medicine",
+    "al-Qānūn fī al-Ṭibb",
+    "Kitāb al-Qānūn fī al-ṭibb"
+  ],
+  "wikidata": "Q466060",
+  "events": [
+    {
+      "type": "born",
+      "date": "1025",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "avicenna"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Canon of Medicine (Q466060)",
+      "url": "https://www.wikidata.org/wiki/Q466060",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Canon of Medicine",
+      "url": "https://en.wikipedia.org/wiki/The_Canon_of_Medicine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

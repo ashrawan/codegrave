@@ -1,0 +1,58 @@
+{
+  "id": "sahara",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Sahara",
+      "from": "-7000000"
+    }
+  ],
+  "summary": "The world's largest hot desert, covering much of North Africa. It has swung between desert and green grassland several times, and about 6,000 years ago it had lakes and herders before drying out again.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "The Sahara",
+    "Sahara Desert",
+    "as-Sahra",
+    "al-Sahara",
+    "al-Sahra"
+  ],
+  "wikidata": "Q6583",
+  "events": [
+    {
+      "type": "born",
+      "date": "-7000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    },
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sahara (Q6583)",
+      "url": "https://www.wikidata.org/wiki/Q6583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sahara",
+      "url": "https://en.wikipedia.org/wiki/Sahara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

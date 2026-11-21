@@ -1,0 +1,58 @@
+{
+  "id": "compaq",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Compaq",
+      "from": "1982"
+    }
+  ],
+  "summary": "American company that made the first widely successful IBM PC compatible and grew into the largest PC maker in the 1990s. It bought Digital Equipment Corporation and was bought by Hewlett-Packard in 2002.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "aliases": [
+    "HP Compaq",
+    "Compaq Computer Corporation"
+  ],
+  "wikidata": "Q324603",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-02-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-05-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Bought by Hewlett-Packard",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Compaq (Q324603)",
+      "url": "https://www.wikidata.org/wiki/Q324603",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Compaq",
+      "url": "https://en.wikipedia.org/wiki/Compaq",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

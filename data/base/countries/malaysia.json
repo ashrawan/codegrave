@@ -1,0 +1,67 @@
+{
+  "id": "malaysia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Malaysia",
+      "from": "1963"
+    }
+  ],
+  "summary": "A Southeast Asian federation formed in 1963 from Malaya, Sabah, Sarawak and Singapore, the last of which left in 1965. It has a rotating monarchy with sultans as rulers of the states.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Federation of Malaysia",
+    "Malaysia Federation"
+  ],
+  "wikidata": "Q833",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-09-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "asean"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Malaysia (Q833)",
+      "url": "https://www.wikidata.org/wiki/Q833",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malaysia",
+      "url": "https://en.wikipedia.org/wiki/Malaysia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

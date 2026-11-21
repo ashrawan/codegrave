@@ -1,0 +1,47 @@
+{
+  "id": "natural-selection",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Natural selection",
+      "from": "1858"
+    }
+  ],
+  "summary": "The process in which living things with helpful inherited traits are more likely to survive and breed, so those traits spread. Darwin and Wallace put it forward in 1858 as the main driver of evolution.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q43478",
+  "events": [
+    {
+      "type": "born",
+      "date": "1858",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "charles-darwin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: natural selection (Q43478)",
+      "url": "https://www.wikidata.org/wiki/Q43478",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Natural selection",
+      "url": "https://en.wikipedia.org/wiki/Natural_selection",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,66 @@
+{
+  "id": "esperanto",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Esperanto",
+      "from": "1887"
+    }
+  ],
+  "summary": "A language invented by L. L. Zamenhof in 1887 to be an easy second language for people everywhere. It has regular grammar and a vocabulary taken mainly from European languages, and has speakers in many countries.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Esperanto language"
+  ],
+  "wikidata": "Q143",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887-07-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "latin-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "english-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "russian-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "german-language"
+    },
+    {
+      "type": "influenced_by",
+      "to": "french-language"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Esperanto (Q143)",
+      "url": "https://www.wikidata.org/wiki/Q143",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Esperanto",
+      "url": "https://en.wikipedia.org/wiki/Esperanto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

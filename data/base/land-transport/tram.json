@@ -1,0 +1,48 @@
+{
+  "id": "tram",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Tram",
+      "from": "1832"
+    }
+  ],
+  "summary": "A passenger vehicle that runs on rails set in city streets. Horse-drawn trams began in the United States in the 1830s, and electric trams from the 1880s grew into networks in cities around the world.",
+  "labels": [
+    "transport"
+  ],
+  "aliases": [
+    "streetcar",
+    "trolley",
+    "tramcar",
+    "trolley car"
+  ],
+  "wikidata": "Q3407658",
+  "events": [
+    {
+      "type": "born",
+      "date": "1832",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: tram (Q3407658)",
+      "url": "https://www.wikidata.org/wiki/Q3407658",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tram",
+      "url": "https://en.wikipedia.org/wiki/Tram",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

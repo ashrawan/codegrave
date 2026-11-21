@@ -1,0 +1,52 @@
+{
+  "id": "vulcan-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Vulcan (hypothetical planet)",
+      "from": "1859"
+    }
+  ],
+  "summary": "A planet once thought to circle the Sun inside Mercury's orbit, proposed by Urbain Le Verrier in 1859 to explain Mercury's odd path. Sightings were reported but none held up, and general relativity later solved the puzzle.",
+  "labels": [
+    "astronomy",
+    "lost"
+  ],
+  "aliases": [
+    "Vulcan"
+  ],
+  "wikidata": "Q213636",
+  "events": [
+    {
+      "type": "born",
+      "date": "1859",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1915",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Mercury's orbit was explained by Einstein's general relativity, so no planet was needed",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Vulcan (Q213636)",
+      "url": "https://www.wikidata.org/wiki/Q213636",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vulcan (hypothetical planet)",
+      "url": "https://en.wikipedia.org/wiki/Vulcan_(hypothetical_planet)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

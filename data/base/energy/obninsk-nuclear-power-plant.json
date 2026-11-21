@@ -1,0 +1,58 @@
+{
+  "id": "obninsk-nuclear-power-plant",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Obninsk Nuclear Power Plant",
+      "from": "1954"
+    }
+  ],
+  "summary": "The first nuclear power station to feed electricity into a public grid, opened in the Soviet Union in 1954. It was a small graphite-moderated water-cooled reactor and ran for nearly fifty years.",
+  "labels": [
+    "energy",
+    "firsts"
+  ],
+  "wikidata": "Q1739453",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-06-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-04-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Shut down after almost fifty years of service",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    },
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Obninsk Nuclear Power Plant (Q1739453)",
+      "url": "https://www.wikidata.org/wiki/Q1739453",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Obninsk Nuclear Power Plant",
+      "url": "https://en.wikipedia.org/wiki/Obninsk_Nuclear_Power_Plant",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

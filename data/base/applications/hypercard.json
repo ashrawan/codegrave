@@ -1,0 +1,54 @@
+{
+  "id": "hypercard",
+  "category": "applications",
+  "names": [
+    {
+      "name": "HyperCard",
+      "from": "1987"
+    }
+  ],
+  "maker": "Bill Atkinson, Apple",
+  "summary": "Apple program for the Macintosh that let ordinary users build stacks of linked cards with buttons and simple scripts. It was an early step towards hypertext and inspired later web tools.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q1053749",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2004",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dropped by Apple after years without updates",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: HyperCard (Q1053749)",
+      "url": "https://www.wikidata.org/wiki/Q1053749",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HyperCard",
+      "url": "https://en.wikipedia.org/wiki/HyperCard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

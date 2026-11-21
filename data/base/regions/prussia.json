@@ -1,0 +1,61 @@
+{
+  "id": "prussia",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Prussia",
+      "from": "1525"
+    }
+  ],
+  "summary": "The north-eastern German state that grew from a duchy to a kingdom and became the core of the German Empire. It was known for its army, its civil service and its king Frederick the Great.",
+  "labels": [
+    "lost",
+    "war"
+  ],
+  "aliases": [
+    "Prussia (Germany)"
+  ],
+  "wikidata": "Q38872",
+  "events": [
+    {
+      "type": "born",
+      "date": "1525",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1947-02-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Abolished by the Allied Control Council after the Second World War",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Prussia (Q38872)",
+      "url": "https://www.wikidata.org/wiki/Q38872",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prussia",
+      "url": "https://en.wikipedia.org/wiki/Prussia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

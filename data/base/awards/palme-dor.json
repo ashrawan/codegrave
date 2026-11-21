@@ -1,0 +1,50 @@
+{
+  "id": "palme-dor",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Palme d'Or",
+      "from": "1955"
+    }
+  ],
+  "summary": "The top prize of the Cannes Film Festival in France. It was named after a palm leaf, the emblem of the city, and replaced an earlier grand prize of the festival.",
+  "labels": [
+    "film"
+  ],
+  "aliases": [
+    "Golden Palm"
+  ],
+  "wikidata": "Q179808",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Palme d'Or (Q179808)",
+      "url": "https://www.wikidata.org/wiki/Q179808",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palme d'Or",
+      "url": "https://en.wikipedia.org/wiki/Palme_d'Or",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

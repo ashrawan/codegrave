@@ -1,0 +1,76 @@
+{
+  "id": "pandemics",
+  "name": "Pandemics",
+  "description": "The great outbreaks of disease, from the plague of Athens and the Black Death to the 1918 flu and COVID-19.",
+  "category": "events",
+  "labels": [
+    "medicine"
+  ],
+  "tags": [
+    "pandemics",
+    "plague",
+    "black death",
+    "covid-19",
+    "spanish flu",
+    "epidemics",
+    "disease"
+  ],
+  "entries": [
+    "smallpox",
+    "plague-of-athens",
+    "antonine-plague",
+    "plague-of-cyprian",
+    "plague-of-justinian",
+    "measles",
+    "black-death",
+    "columbian-exchange",
+    "cocoliztli-epidemics",
+    "plague-of-1629-italy",
+    "great-plague-of-london",
+    "great-plague-of-marseille",
+    "philadelphia-yellow-fever-1793",
+    "second-cholera-pandemic",
+    "broad-street-cholera",
+    "third-plague-pandemic",
+    "germ-theory",
+    "spanish-flu",
+    "asian-flu-1957",
+    "hong-kong-flu-1968",
+    "hiv-aids-pandemic",
+    "sars-outbreak-2003",
+    "swine-flu-2009",
+    "ebola-epidemic-west-africa",
+    "zika-epidemic",
+    "covid-19-pandemic"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-plagues",
+      "name": "Ancient plagues",
+      "from": -1200,
+      "to": 1345,
+      "note": "Great epidemics strike Athens, Rome and Constantinople. Writers describe the terror but not the cause, and the sickness weakens armies and states. In the centuries after, smallpox and measles are established killers of children across Eurasia."
+    },
+    {
+      "id": "the-black-death-and-after",
+      "name": "The Black Death and after",
+      "from": 1346,
+      "to": 1800,
+      "note": "Plague kills a huge share of people across Eurasia and then keeps returning to cities. After 1492 smallpox and measles reach the Americas in the Columbian exchange. Quarantine, health boards and burial laws are the first public health response."
+    },
+    {
+      "id": "cholera-and-the-third-plague",
+      "name": "Cholera and the third plague",
+      "from": 1801,
+      "to": 1917,
+      "note": "Trade, steamships and crowded industrial cities spread cholera, yellow fever and plague. John Snow's map of a London pump marks the start of modern epidemiology, and the germ theory soon explains such outbreaks."
+    },
+    {
+      "id": "flu-hiv-and-covid-19",
+      "name": "Flu, HIV and COVID-19",
+      "from": 1918,
+      "to": 2023,
+      "note": "Influenza, HIV, SARS, Ebola and COVID-19 move around the world by air and sea. Vaccines and surveillance grow, yet each new disease tests them again."
+    }
+  ]
+}

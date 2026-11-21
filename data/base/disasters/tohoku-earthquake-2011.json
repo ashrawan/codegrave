@@ -1,0 +1,58 @@
+{
+  "id": "tohoku-earthquake-2011",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "2011 Tohoku earthquake and tsunami",
+      "from": "2011"
+    }
+  ],
+  "summary": "A huge undersea earthquake off the coast of Japan sent a tsunami onto the north-east shore and swept away towns. It was the strongest quake ever recorded in Japan and set off the Fukushima nuclear accident.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Great East Japan Earthquake",
+    "2011 Tohoku earthquake",
+    "2011 Tohoku-Oki Earthquake",
+    "3.11"
+  ],
+  "wikidata": "Q36204",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-03-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-03-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2011 Tōhoku earthquake and tsunami (Q36204)",
+      "url": "https://www.wikidata.org/wiki/Q36204",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2011 Tōhoku earthquake and tsunami",
+      "url": "https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

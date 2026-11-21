@@ -1,0 +1,56 @@
+{
+  "id": "tower-bridge",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Tower Bridge",
+      "from": "1894"
+    }
+  ],
+  "summary": "Bridge over the Thames in London that combines a suspension bridge with raised sections. Its two decks lift to let tall ships pass, and it is often mistaken for London Bridge.",
+  "labels": [
+    "engineering",
+    "transport"
+  ],
+  "wikidata": "Q83125",
+  "events": [
+    {
+      "type": "born",
+      "date": "1894-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    },
+    {
+      "type": "related",
+      "to": "tower-of-london"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tower Bridge (Q83125)",
+      "url": "https://www.wikidata.org/wiki/Q83125",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tower Bridge",
+      "url": "https://en.wikipedia.org/wiki/Tower_Bridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

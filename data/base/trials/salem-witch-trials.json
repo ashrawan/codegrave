@@ -1,0 +1,53 @@
+{
+  "id": "salem-witch-trials",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Salem witch trials",
+      "from": "1692"
+    }
+  ],
+  "summary": "A series of hearings and trials in colonial Massachusetts after accusations of witchcraft. Twenty people were executed and others died in jail. It is a common example of mass panic.",
+  "labels": [
+    "law",
+    "religion"
+  ],
+  "wikidata": "Q219698",
+  "events": [
+    {
+      "type": "born",
+      "date": "1692-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1693-05",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Salem Witch Trials (Q219698)",
+      "url": "https://www.wikidata.org/wiki/Q219698",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Salem witch trials",
+      "url": "https://en.wikipedia.org/wiki/Salem_witch_trials",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

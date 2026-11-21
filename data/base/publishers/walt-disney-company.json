@@ -1,0 +1,56 @@
+{
+  "id": "walt-disney-company",
+  "category": "publishers",
+  "names": [
+    {
+      "name": "The Walt Disney Company",
+      "from": "1923"
+    }
+  ],
+  "maker": "Walt and Roy Disney",
+  "summary": "American entertainment company founded by Walt and Roy Disney as a cartoon studio. It grew to include theme parks, television networks and large film and animation studios.",
+  "labels": [
+    "film",
+    "media"
+  ],
+  "aliases": [
+    "The Walt Disney Studio"
+  ],
+  "wikidata": "Q7414",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-10-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "walt-disney"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Walt Disney Company (Q7414)",
+      "url": "https://www.wikidata.org/wiki/Q7414",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Walt Disney Company",
+      "url": "https://en.wikipedia.org/wiki/The_Walt_Disney_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

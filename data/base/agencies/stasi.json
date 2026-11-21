@@ -1,0 +1,61 @@
+{
+  "id": "stasi",
+  "category": "agencies",
+  "names": [
+    {
+      "name": "Stasi",
+      "from": "1950"
+    }
+  ],
+  "summary": "Secret police and intelligence service of East Germany, with a huge network of informers among ordinary people. Its files on citizens were opened for them to read after the country ended.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Ministerium für Staatssicherheit",
+    "MfS",
+    "Staatssicherheit",
+    "si",
+    "Ministry for State Security in GDR"
+  ],
+  "wikidata": "Q153846",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-02-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved as East Germany collapsed and joined West Germany",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "east-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ministerium für Staatssicherheit (Q153846)",
+      "url": "https://www.wikidata.org/wiki/Q153846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stasi",
+      "url": "https://en.wikipedia.org/wiki/Stasi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

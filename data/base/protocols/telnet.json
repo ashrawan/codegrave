@@ -1,0 +1,45 @@
+{
+  "id": "telnet",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "Telnet",
+      "from": "1969"
+    }
+  ],
+  "summary": "Early protocol for logging in to a distant computer over a network and typing commands as if sitting at it. It sent everything unencrypted, so it was replaced by SSH for most uses.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "Telecommunications Network"
+  ],
+  "wikidata": "Q160470",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Telnet (Q160470)",
+      "url": "https://www.wikidata.org/wiki/Q160470",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Telnet",
+      "url": "https://en.wikipedia.org/wiki/Telnet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

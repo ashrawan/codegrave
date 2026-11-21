@@ -1,0 +1,59 @@
+{
+  "id": "paleozoic",
+  "category": "earth-ages",
+  "names": [
+    {
+      "name": "Paleozoic",
+      "from": "-538800000"
+    }
+  ],
+  "summary": "The era of ancient life from about 539 to 252 million years ago, which saw fish, land plants, insects, great forests and the first four-legged animals on land. It ended with the largest mass extinction known.",
+  "labels": [
+    "environment",
+    "biology"
+  ],
+  "aliases": [
+    "Palaeozoic",
+    "Palaeozoic Era",
+    "Paleozoic Era",
+    "Paleozoic Erathem"
+  ],
+  "wikidata": "Q75507",
+  "events": [
+    {
+      "type": "born",
+      "date": "-538800000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-251902000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "phanerozoic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paleozoic (Q75507)",
+      "url": "https://www.wikidata.org/wiki/Q75507",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paleozoic",
+      "url": "https://en.wikipedia.org/wiki/Paleozoic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

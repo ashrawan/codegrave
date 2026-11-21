@@ -1,0 +1,61 @@
+{
+  "id": "john-calvin",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "John Calvin",
+      "from": "1509"
+    }
+  ],
+  "summary": "French theologian who led church reform in Geneva and wrote the Institutes of the Christian Religion. His teaching shaped Reformed and Presbyterian churches in Switzerland, Scotland, the Netherlands and North America.",
+  "labels": [
+    "religion"
+  ],
+  "aliases": [
+    "Cauvin",
+    "Johannes Calvinus",
+    "Ioannes Calvinus"
+  ],
+  "wikidata": "Q37577",
+  "events": [
+    {
+      "type": "born",
+      "date": "1509-07-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1564-05-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "augustine-of-hippo"
+    },
+    {
+      "type": "influenced_by",
+      "to": "martin-luther"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Calvin (Q37577)",
+      "url": "https://www.wikidata.org/wiki/Q37577",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Calvin",
+      "url": "https://en.wikipedia.org/wiki/John_Calvin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

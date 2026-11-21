@@ -1,0 +1,61 @@
+{
+  "id": "east-india-company",
+  "category": "companies",
+  "names": [
+    {
+      "name": "East India Company",
+      "from": "1600"
+    }
+  ],
+  "maker": "Merchants of London under a charter of Elizabeth I",
+  "summary": "English trading company chartered by Elizabeth I that grew into the ruler of much of India, with its own army. It traded in cotton, tea, spices and opium until the Crown took over its powers after 1857.",
+  "labels": [
+    "business",
+    "economics",
+    "politics"
+  ],
+  "aliases": [
+    "EIC",
+    "John Company",
+    "English East India Company"
+  ],
+  "wikidata": "Q83164",
+  "events": [
+    {
+      "type": "born",
+      "date": "1600-12-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1874-06-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost its powers to the Crown after the 1857 rebellion and was dissolved by Act of Parliament",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: East India Company (Q83164)",
+      "url": "https://www.wikidata.org/wiki/Q83164",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: East India Company",
+      "url": "https://en.wikipedia.org/wiki/East_India_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

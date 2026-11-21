@@ -1,0 +1,51 @@
+{
+  "id": "electron",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Electron",
+      "from": "1897"
+    }
+  ],
+  "maker": "J. J. Thomson",
+  "summary": "Tiny particle with negative electric charge found in all atoms. J. J. Thomson showed in 1897 that cathode rays were made of such particles. Moving electrons make electric currents.",
+  "labels": [
+    "physics"
+  ],
+  "aliases": [
+    "electrons"
+  ],
+  "wikidata": "Q2225",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jj-thomson"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: electron (Q2225)",
+      "url": "https://www.wikidata.org/wiki/Q2225",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Electron",
+      "url": "https://en.wikipedia.org/wiki/Electron",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,53 @@
+{
+  "id": "alhambra",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Alhambra",
+      "from": "1239"
+    }
+  ],
+  "summary": "Palace and fortress on a hill above Granada, begun by the Nasrid dynasty. Its courtyards, fountains and carved plaster show the best of Islamic art in Spain, and it passed to the Christian monarchs in 1492.",
+  "labels": [
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "La Alhambra",
+    "The Alhambra",
+    "Alhambra fortress"
+  ],
+  "wikidata": "Q47476",
+  "events": [
+    {
+      "type": "born",
+      "date": "1239",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alhambra (Q47476)",
+      "url": "https://www.wikidata.org/wiki/Q47476",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alhambra",
+      "url": "https://en.wikipedia.org/wiki/Alhambra",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,50 @@
+{
+  "id": "smtp",
+  "category": "protocols",
+  "names": [
+    {
+      "name": "SMTP",
+      "from": "1982"
+    }
+  ],
+  "summary": "Standard way of sending email from one server to another on the internet. It was defined in 1982, and with later changes it still carries nearly all email today.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "SMTP protocol"
+  ],
+  "wikidata": "Q160453",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "email"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Simple Mail Transfer Protocol (Q160453)",
+      "url": "https://www.wikidata.org/wiki/Q160453",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Simple Mail Transfer Protocol",
+      "url": "https://en.wikipedia.org/wiki/Simple_Mail_Transfer_Protocol",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

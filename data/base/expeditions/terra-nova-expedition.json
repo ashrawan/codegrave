@@ -1,0 +1,56 @@
+{
+  "id": "terra-nova-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Terra Nova Expedition",
+      "from": "1910"
+    }
+  ],
+  "summary": "A British expedition led by Robert Falcon Scott reached the South Pole in January 1912 after Amundsen had already been there. Scott and his four companions died on the way back, and their diaries were found later.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "British Antarctic Expedition (1910–1913)",
+    "Scott Expedition"
+  ],
+  "wikidata": "Q973919",
+  "events": [
+    {
+      "type": "born",
+      "date": "1910-06-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1913-06-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "robert-falcon-scott"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Terra Nova Expedition (Q973919)",
+      "url": "https://www.wikidata.org/wiki/Q973919",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Terra Nova Expedition",
+      "url": "https://en.wikipedia.org/wiki/Terra_Nova_Expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

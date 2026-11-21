@@ -1,0 +1,62 @@
+{
+  "id": "democratic-party-us",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Democratic Party",
+      "from": "1828"
+    }
+  ],
+  "summary": "One of the two main political parties in the United States. It grew out of the supporters of Andrew Jackson in the 1820s and 1830s and has been through many changes of programme since then.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Democrats",
+    "Democrat",
+    "Dems",
+    "American Democratic Party",
+    "Democratic Party of the United States"
+  ],
+  "wikidata": "Q29552",
+  "events": [
+    {
+      "type": "born",
+      "date": "1828-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "andrew-jackson"
+    },
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Democratic Party (Q29552)",
+      "url": "https://www.wikidata.org/wiki/Q29552",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Democratic Party (United States)",
+      "url": "https://en.wikipedia.org/wiki/Democratic_Party_(United_States)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "renaissance-art",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Renaissance art",
+      "from": "1400"
+    }
+  ],
+  "summary": "Painting, sculpture and design that began in Italy, built on ancient Greek and Roman models and new study of nature. Artists such as Leonardo, Michelangelo and Raphael used perspective and anatomy, then the style spread across Europe.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "art of the Renaissance"
+  ],
+  "wikidata": "Q1133779",
+  "events": [
+    {
+      "type": "born",
+      "date": "1400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "renaissance"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Renaissance art (Q1133779)",
+      "url": "https://www.wikidata.org/wiki/Q1133779",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Renaissance art",
+      "url": "https://en.wikipedia.org/wiki/Renaissance_art",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

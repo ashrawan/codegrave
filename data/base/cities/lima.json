@@ -1,0 +1,54 @@
+{
+  "id": "lima",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Lima",
+      "from": "1535"
+    }
+  ],
+  "summary": "Capital of Peru, founded by Francisco Pizarro in 1535 near the Pacific coast. It became the seat of the Spanish viceroy of Peru and today holds about a third of the country's people.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "City of the Kings"
+  ],
+  "wikidata": "Q2868",
+  "events": [
+    {
+      "type": "born",
+      "date": "1535-01-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "francisco-pizarro"
+    },
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lima (Q2868)",
+      "url": "https://www.wikidata.org/wiki/Q2868",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lima",
+      "url": "https://en.wikipedia.org/wiki/Lima",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

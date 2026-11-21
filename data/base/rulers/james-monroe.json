@@ -1,0 +1,61 @@
+{
+  "id": "james-monroe",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "James Monroe",
+      "from": "1758"
+    }
+  ],
+  "summary": "Fifth president and the last of the Virginia founders to hold the office. His Monroe Doctrine of 1823 warned the European powers against founding new colonies in the Americas.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11815",
+  "events": [
+    {
+      "type": "born",
+      "date": "1758-04-28",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1817-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 5th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1825-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and John Quincy Adams took office."
+    },
+    {
+      "type": "ended",
+      "date": "1831-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: James Monroe (Q11815)",
+      "url": "https://www.wikidata.org/wiki/Q11815",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Monroe",
+      "url": "https://en.wikipedia.org/wiki/James_Monroe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

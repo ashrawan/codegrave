@@ -1,0 +1,48 @@
+{
+  "id": "macbook-air",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "MacBook Air",
+      "from": "2008"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Thin and light Apple laptop that Steve Jobs pulled out of a paper envelope on stage. It dropped the optical drive and set the pattern for slim laptops from many makers.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q488192",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-01-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: MacBook Air (Q488192)",
+      "url": "https://www.wikidata.org/wiki/Q488192",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: MacBook Air",
+      "url": "https://en.wikipedia.org/wiki/MacBook_Air",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

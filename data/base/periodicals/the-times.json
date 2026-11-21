@@ -1,0 +1,51 @@
+{
+  "id": "the-times",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "The Times",
+      "from": "1785"
+    }
+  ],
+  "summary": "Daily newspaper of London, founded as the Daily Universal Register and renamed The Times in 1788. It became the best-known British newspaper of record and gave its name to many others.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q50008",
+  "events": [
+    {
+      "type": "born",
+      "date": "1785-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Times (Q50008)",
+      "url": "https://www.wikidata.org/wiki/Q50008",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Times",
+      "url": "https://en.wikipedia.org/wiki/The_Times",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

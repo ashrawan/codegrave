@@ -1,0 +1,58 @@
+{
+  "id": "middle-ages",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Middle Ages",
+      "from": "0500"
+    }
+  ],
+  "summary": "The period of European history between the fall of the Western Roman Empire and the Renaissance. It saw feudalism, the rise of the Church, cathedrals and the Crusades. The dates are conventional.",
+  "labels": [
+    "politics",
+    "religion"
+  ],
+  "aliases": [
+    "medieval period",
+    "medieval Europe",
+    "the Middle Ages"
+  ],
+  "wikidata": "Q12554",
+  "events": [
+    {
+      "type": "born",
+      "date": "0500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Middle Ages (Q12554)",
+      "url": "https://www.wikidata.org/wiki/Q12554",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Middle Ages",
+      "url": "https://en.wikipedia.org/wiki/Middle_Ages",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

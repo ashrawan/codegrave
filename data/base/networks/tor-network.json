@@ -1,0 +1,45 @@
+{
+  "id": "tor-network",
+  "category": "networks",
+  "names": [
+    {
+      "name": "Tor",
+      "from": "2002"
+    }
+  ],
+  "summary": "Network that sends internet traffic through several volunteer servers, each knowing only the previous and next step, to hide who is talking to whom. It is used by journalists and activists, and also by criminals.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "The Onion Router"
+  ],
+  "wikidata": "Q202044",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002-09-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Tor (Q202044)",
+      "url": "https://www.wikidata.org/wiki/Q202044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tor (network)",
+      "url": "https://en.wikipedia.org/wiki/Tor_(network)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "xbox-one",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Xbox One",
+      "from": "2013"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "Microsoft's console of 2013, first promoted as an all-round living-room entertainment box. Its high price and early policies drew criticism, and it sold less than the PlayStation 4.",
+  "labels": [
+    "games",
+    "rivalries"
+  ],
+  "wikidata": "Q13361286",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-11-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Xbox Series X and S",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "microsoft"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Xbox One (Q13361286)",
+      "url": "https://www.wikidata.org/wiki/Q13361286",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Xbox One",
+      "url": "https://en.wikipedia.org/wiki/Xbox_One",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

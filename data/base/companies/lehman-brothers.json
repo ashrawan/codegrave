@@ -1,0 +1,61 @@
+{
+  "id": "lehman-brothers",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Lehman Brothers",
+      "from": "1850"
+    }
+  ],
+  "summary": "American investment bank begun by German immigrant brothers in Alabama. Its bankruptcy in September 2008 was the largest in US history and deepened the global financial crisis.",
+  "labels": [
+    "business",
+    "economics"
+  ],
+  "aliases": [
+    "Lehman Brothers Holdings Inc."
+  ],
+  "wikidata": "Q212900",
+  "events": [
+    {
+      "type": "born",
+      "date": "1850",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2008",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Filed for bankruptcy during the 2008 financial crisis",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lehman Brothers (Q212900)",
+      "url": "https://www.wikidata.org/wiki/Q212900",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lehman Brothers",
+      "url": "https://en.wikipedia.org/wiki/Lehman_Brothers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

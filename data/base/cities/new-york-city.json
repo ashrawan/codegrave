@@ -1,0 +1,59 @@
+{
+  "id": "new-york-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "New York City",
+      "from": "1624"
+    }
+  ],
+  "summary": "Largest city of the United States, begun as the Dutch trading post of New Amsterdam on Manhattan island. It is a global centre of finance, media and migration, and home to many skyscrapers.",
+  "labels": [
+    "economics",
+    "architecture"
+  ],
+  "aliases": [
+    "the five boroughs",
+    "City of New York",
+    "NY City",
+    "New York City, New York",
+    "New York, NY"
+  ],
+  "wikidata": "Q60",
+  "events": [
+    {
+      "type": "born",
+      "date": "1624",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "james-ii"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New York City (Q60)",
+      "url": "https://www.wikidata.org/wiki/Q60",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New York City",
+      "url": "https://en.wikipedia.org/wiki/New_York_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

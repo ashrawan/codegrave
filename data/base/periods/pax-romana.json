@@ -1,0 +1,47 @@
+{
+  "id": "pax-romana",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Pax Romana",
+      "from": "-0027"
+    }
+  ],
+  "summary": "About two centuries of relative peace and strong order across the Roman Empire, beginning under Augustus. Trade, roads and cities grew within its borders.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q75207",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0027",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0180",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Pax Romana (Q75207)",
+      "url": "https://www.wikidata.org/wiki/Q75207",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pax Romana",
+      "url": "https://en.wikipedia.org/wiki/Pax_Romana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

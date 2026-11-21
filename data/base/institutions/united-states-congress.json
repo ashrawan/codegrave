@@ -1,0 +1,59 @@
+{
+  "id": "united-states-congress",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "United States Congress",
+      "from": "1789"
+    }
+  ],
+  "summary": "Law-making branch of the United States government, made up of the Senate and the House of Representatives. It first met in 1789 under the Constitution, replacing the Congress of the Confederation.",
+  "labels": [
+    "politics",
+    "law"
+  ],
+  "aliases": [
+    "US Congress",
+    "U.S. Congress",
+    "American Congress",
+    "Congress of the United States",
+    "Legislature of the United States"
+  ],
+  "wikidata": "Q11268",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-03-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "washington-dc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United States Congress (Q11268)",
+      "url": "https://www.wikidata.org/wiki/Q11268",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United States Congress",
+      "url": "https://en.wikipedia.org/wiki/United_States_Congress",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

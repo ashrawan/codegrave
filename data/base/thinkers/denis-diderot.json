@@ -1,0 +1,61 @@
+{
+  "id": "denis-diderot",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Denis Diderot",
+      "from": "1713"
+    }
+  ],
+  "summary": "French philosopher and writer who spent over two decades as the chief editor of the Encyclopédie. He also wrote novels, plays and essays on art, and held that knowledge should be shared with ordinary readers.",
+  "labels": [
+    "philosophy",
+    "literature"
+  ],
+  "wikidata": "Q448",
+  "events": [
+    {
+      "type": "born",
+      "date": "1713-10-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1784-07-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "aristotle"
+    },
+    {
+      "type": "influenced_by",
+      "to": "baruch-spinoza"
+    },
+    {
+      "type": "influenced_by",
+      "to": "voltaire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Denis Diderot (Q448)",
+      "url": "https://www.wikidata.org/wiki/Q448",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Denis Diderot",
+      "url": "https://en.wikipedia.org/wiki/Denis_Diderot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

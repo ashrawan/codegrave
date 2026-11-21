@@ -1,0 +1,53 @@
+{
+  "id": "miracle-on-ice",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Miracle on Ice",
+      "from": "1980"
+    }
+  ],
+  "summary": "At the Winter Olympics in Lake Placid, a team of American college players beat the strong Soviet ice hockey team during the Cold War. They went on to win the gold medal.",
+  "labels": [
+    "sport",
+    "politics"
+  ],
+  "wikidata": "Q287405",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-02-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Miracle on Ice (Q287405)",
+      "url": "https://www.wikidata.org/wiki/Q287405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Miracle on Ice",
+      "url": "https://en.wikipedia.org/wiki/Miracle_on_Ice",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

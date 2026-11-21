@@ -1,0 +1,54 @@
+{
+  "id": "legend-of-zelda",
+  "category": "games",
+  "names": [
+    {
+      "name": "The Legend of Zelda",
+      "from": "1986"
+    }
+  ],
+  "maker": "Nintendo",
+  "summary": "Adventure game in which the hero Link explores a large open map, finds items and enters dungeons. It was one of the first console games to let players save their progress on the cartridge.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "aliases": [
+    "Zelda no Densetsu",
+    "The Hyrule Fantasy: Zelda no Densetsu",
+    "The Hyrule Fantasy"
+  ],
+  "wikidata": "Q12395",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "nintendo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Legend of Zelda (Q12395)",
+      "url": "https://www.wikidata.org/wiki/Q12395",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Legend of Zelda (video game)",
+      "url": "https://en.wikipedia.org/wiki/The_Legend_of_Zelda_(video_game)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

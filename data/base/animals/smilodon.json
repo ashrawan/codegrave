@@ -1,0 +1,53 @@
+{
+  "id": "smilodon",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Smilodon",
+      "from": "-2500000"
+    }
+  ],
+  "summary": "The best-known sabre-toothed cat, with huge upper canine teeth, a strong build and a short tail. It hunted large animals in the Americas, and thousands of its bones come from the La Brea tar pits.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "saber-toothed  cat",
+    "saber-toothed tiger",
+    "sabre-toothed cat"
+  ],
+  "wikidata": "Q188717",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2500000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost as the large prey it hunted died out at the end of the ice age",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Smilodon (Q188717)",
+      "url": "https://www.wikidata.org/wiki/Q188717",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Smilodon",
+      "url": "https://en.wikipedia.org/wiki/Smilodon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

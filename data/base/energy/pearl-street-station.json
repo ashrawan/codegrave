@@ -1,0 +1,55 @@
+{
+  "id": "pearl-street-station",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Pearl Street Station",
+      "from": "1882"
+    }
+  ],
+  "maker": "Thomas Edison",
+  "summary": "The first central power station in the United States, opened by Thomas Edison in lower Manhattan in 1882. It sent direct current to customers' lamps and showed that selling electricity could be a business.",
+  "labels": [
+    "energy",
+    "business"
+  ],
+  "wikidata": "Q3373852",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1890",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Destroyed by fire",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pearl Street Station (Q3373852)",
+      "url": "https://www.wikidata.org/wiki/Q3373852",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pearl Street Station",
+      "url": "https://en.wikipedia.org/wiki/Pearl_Street_Station",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,72 @@
+{
+  "id": "argentina",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Argentina",
+      "from": "1816"
+    }
+  ],
+  "summary": "The large country at the southern tip of South America, which declared independence from Spain in 1816. It is known for the tango, beef, football and the Andes and Patagonia.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "Argentine Republic",
+    "Republic of Argentina",
+    "Republica Argentina"
+  ],
+  "wikidata": "Q414",
+  "events": [
+    {
+      "type": "born",
+      "date": "1816-07-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "south-america"
+    },
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "antarctic-treaty"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Argentina (Q414)",
+      "url": "https://www.wikidata.org/wiki/Q414",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Argentina",
+      "url": "https://en.wikipedia.org/wiki/Argentina",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

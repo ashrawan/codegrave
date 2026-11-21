@@ -1,0 +1,58 @@
+{
+  "id": "messinian-salinity-crisis",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Messinian Salinity Crisis",
+      "from": "-5970000"
+    }
+  ],
+  "summary": "A period between about six and 5.3 million years ago when the Mediterranean was cut off from the Atlantic and largely dried out, leaving thick salt deposits on its seafloor.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Messinian Event",
+    "MSC",
+    "Messinian erosional surface",
+    "MES"
+  ],
+  "wikidata": "Q605948",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5970000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-5330000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mediterranean-sea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Messinian salinity crisis (Q605948)",
+      "url": "https://www.wikidata.org/wiki/Q605948",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Messinian salinity crisis",
+      "url": "https://en.wikipedia.org/wiki/Messinian_salinity_crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

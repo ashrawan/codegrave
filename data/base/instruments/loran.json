@@ -1,0 +1,53 @@
+{
+  "id": "loran",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "LORAN",
+      "from": "1943"
+    }
+  ],
+  "maker": "United States and Britain",
+  "summary": "A navigation system in which ships and aircraft found position from timed radio signals sent by pairs of shore stations. Developed in the Second World War, it was shut down in the United States in 2010.",
+  "labels": [
+    "exploration",
+    "lost"
+  ],
+  "aliases": [
+    "LOng-RAnge Navigation"
+  ],
+  "wikidata": "Q596529",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2010",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by satellite navigation",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: LORAN (Q596529)",
+      "url": "https://www.wikidata.org/wiki/Q596529",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: LORAN",
+      "url": "https://en.wikipedia.org/wiki/LORAN",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

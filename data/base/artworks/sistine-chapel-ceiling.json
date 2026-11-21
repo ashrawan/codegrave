@@ -1,0 +1,49 @@
+{
+  "id": "sistine-chapel-ceiling",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Sistine Chapel ceiling",
+      "from": "1512"
+    }
+  ],
+  "maker": "Michelangelo",
+  "summary": "Huge fresco cycle on the vaulted ceiling of the pope's chapel in Rome, painted by Michelangelo over about four years. Scenes from the book of Genesis, including the creation of Adam, cover the vault and made Renaissance painting a model for later artists.",
+  "labels": [
+    "visual-art",
+    "religion"
+  ],
+  "wikidata": "Q844675",
+  "events": [
+    {
+      "type": "born",
+      "date": "1512",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "michelangelo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sistine Chapel ceiling (Q844675)",
+      "url": "https://www.wikidata.org/wiki/Q844675",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sistine Chapel ceiling",
+      "url": "https://en.wikipedia.org/wiki/Sistine_Chapel_ceiling",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

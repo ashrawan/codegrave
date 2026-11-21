@@ -1,0 +1,56 @@
+{
+  "id": "plague-of-cyprian",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Plague of Cyprian",
+      "from": "0249"
+    }
+  ],
+  "summary": "An epidemic that swept the Roman Empire in the middle of the third century, named after a bishop of Carthage who described it. It struck during a time of war and unrest and killed many in towns and cities.",
+  "labels": [
+    "medicine"
+  ],
+  "wikidata": "Q2321578",
+  "events": [
+    {
+      "type": "born",
+      "date": "0249",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0262",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "roman-empire"
+    },
+    {
+      "type": "in",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Plague of Cyprian (Q2321578)",
+      "url": "https://www.wikidata.org/wiki/Q2321578",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plague of Cyprian",
+      "url": "https://en.wikipedia.org/wiki/Plague_of_Cyprian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

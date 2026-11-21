@@ -1,0 +1,64 @@
+{
+  "id": "john-quincy-adams",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "John Quincy Adams",
+      "from": "1767"
+    }
+  ],
+  "summary": "Sixth president and son of John Adams. A diplomat before his presidency, he later spent seventeen years in Congress, where he argued against slavery.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "JQA"
+  ],
+  "wikidata": "Q11816",
+  "events": [
+    {
+      "type": "born",
+      "date": "1767-07-11",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1825-03-04",
+      "precision": "day",
+      "label": "Became president",
+      "note": "Sworn in as the 6th president of the United States."
+    },
+    {
+      "type": "milestone",
+      "date": "1829-03-04",
+      "precision": "day",
+      "label": "Left office",
+      "note": "His term ended and Andrew Jackson took office."
+    },
+    {
+      "type": "ended",
+      "date": "1848-02-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: John Quincy Adams (Q11816)",
+      "url": "https://www.wikidata.org/wiki/Q11816",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Quincy Adams",
+      "url": "https://en.wikipedia.org/wiki/John_Quincy_Adams",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

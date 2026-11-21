@@ -1,0 +1,59 @@
+{
+  "id": "apollo-program",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Apollo program",
+      "from": "1961"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "The American programme that landed twelve people on the Moon between 1969 and 1972. Announced by President Kennedy in 1961, it used the Saturn V rocket and cost the equivalent of many billions of dollars.",
+  "labels": [
+    "space-race",
+    "exploration"
+  ],
+  "aliases": [
+    "Project Apollo",
+    "Apollo",
+    "Apollo space program"
+  ],
+  "wikidata": "Q46611",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1972",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apollo program (Q46611)",
+      "url": "https://www.wikidata.org/wiki/Q46611",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apollo program",
+      "url": "https://en.wikipedia.org/wiki/Apollo_program",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

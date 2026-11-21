@@ -1,0 +1,66 @@
+{
+  "id": "bangladesh",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Bangladesh",
+      "from": "1971"
+    }
+  ],
+  "summary": "A densely populated South Asian country on the Bay of Bengal that won independence from Pakistan in 1971 after a war. Its people are mostly Bengali, and its economy is strong in textiles.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "People's Republic of Bangladesh",
+    "bd",
+    "Bangla Desh",
+    "Land of Bengal",
+    "Country of Bengal"
+  ],
+  "wikidata": "Q902",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-03-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bangladesh (Q902)",
+      "url": "https://www.wikidata.org/wiki/Q902",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bangladesh",
+      "url": "https://en.wikipedia.org/wiki/Bangladesh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

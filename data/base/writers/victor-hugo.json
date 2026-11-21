@@ -1,0 +1,51 @@
+{
+  "id": "victor-hugo",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Victor Hugo",
+      "from": "1802"
+    }
+  ],
+  "summary": "French poet, playwright and novelist who wrote Les Misérables and The Hunchback of Notre-Dame. He was a leader of French Romanticism, spent nearly twenty years in exile under Napoleon III, and was given a state funeral.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Homme océan",
+    "Ocean Man"
+  ],
+  "wikidata": "Q535",
+  "events": [
+    {
+      "type": "born",
+      "date": "1802-02-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1885-05-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Victor Hugo (Q535)",
+      "url": "https://www.wikidata.org/wiki/Q535",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Victor Hugo",
+      "url": "https://en.wikipedia.org/wiki/Victor_Hugo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

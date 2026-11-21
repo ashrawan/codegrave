@@ -1,0 +1,51 @@
+{
+  "id": "first-folio",
+  "category": "books",
+  "names": [
+    {
+      "name": "First Folio",
+      "from": "1623"
+    }
+  ],
+  "summary": "The first collected edition of William Shakespeare's plays, put together by two of his fellow actors seven years after his death. It saved eighteen plays, including Macbeth and The Tempest, that might otherwise be lost.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "First Folio of Shakespeare",
+    "Shakespeare's First Folio"
+  ],
+  "wikidata": "Q833645",
+  "events": [
+    {
+      "type": "born",
+      "date": "1623",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "william-shakespeare"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Folio (Q833645)",
+      "url": "https://www.wikidata.org/wiki/Q833645",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Folio",
+      "url": "https://en.wikipedia.org/wiki/First_Folio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

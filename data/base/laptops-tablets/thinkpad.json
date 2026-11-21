@@ -1,0 +1,49 @@
+{
+  "id": "thinkpad",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "ThinkPad",
+      "from": "1992"
+    }
+  ],
+  "maker": "IBM, later Lenovo",
+  "summary": "Black laptop line made by IBM and later by Lenovo, known for its red pointing stick, sturdy cases and good keyboards. It was a favourite of business travellers, and some went into space.",
+  "labels": [
+    "computing",
+    "business"
+  ],
+  "wikidata": "Q861126",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-10-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "ibm"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: ThinkPad (Q861126)",
+      "url": "https://www.wikidata.org/wiki/Q861126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: ThinkPad",
+      "url": "https://en.wikipedia.org/wiki/ThinkPad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

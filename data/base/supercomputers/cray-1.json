@@ -1,0 +1,50 @@
+{
+  "id": "cray-1",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "Cray-1",
+      "from": "1975"
+    }
+  ],
+  "maker": "Cray Research",
+  "summary": "Supercomputer shaped like a C with a bench around the base, which housed power supplies and cooling. It used vector processing for fast number crunching and was bought by many laboratories and weather services.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "wikidata": "Q1093705",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1982",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by newer Cray machines",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Cray-1 (Q1093705)",
+      "url": "https://www.wikidata.org/wiki/Q1093705",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cray-1",
+      "url": "https://en.wikipedia.org/wiki/Cray-1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

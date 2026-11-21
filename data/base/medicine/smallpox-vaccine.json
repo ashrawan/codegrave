@@ -1,0 +1,49 @@
+{
+  "id": "smallpox-vaccine",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "Smallpox vaccine",
+      "from": "1798"
+    }
+  ],
+  "maker": "Edward Jenner",
+  "summary": "The first vaccine, based on Edward Jenner's finding that cowpox gave protection from smallpox. Worldwide use helped end the disease, which the World Health Organization declared gone in 1980.",
+  "labels": [
+    "medicine",
+    "firsts"
+  ],
+  "wikidata": "Q1037810",
+  "events": [
+    {
+      "type": "born",
+      "date": "1798",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "edward-jenner"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: smallpox vaccine (Q1037810)",
+      "url": "https://www.wikidata.org/wiki/Q1037810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Smallpox vaccine",
+      "url": "https://en.wikipedia.org/wiki/Smallpox_vaccine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

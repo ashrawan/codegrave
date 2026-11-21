@@ -1,0 +1,51 @@
+{
+  "id": "the-hobbit",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Hobbit",
+      "from": "1937"
+    }
+  ],
+  "summary": "Fantasy novel by J. R. R. Tolkien in which the hobbit Bilbo Baggins joins dwarves to win back a treasure from the dragon Smaug. It began as a story for his children and led to The Lord of the Rings.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Hobbit",
+    "The Hobbit, or There and Back Again"
+  ],
+  "wikidata": "Q74287",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "jrr-tolkien"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Hobbit (Q74287)",
+      "url": "https://www.wikidata.org/wiki/Q74287",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Hobbit",
+      "url": "https://en.wikipedia.org/wiki/The_Hobbit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

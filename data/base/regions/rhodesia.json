@@ -1,0 +1,52 @@
+{
+  "id": "rhodesia",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Rhodesia",
+      "from": "1965"
+    }
+  ],
+  "summary": "The southern African state that declared itself independent from Britain in 1965 under a white minority government. It fought a guerrilla war and was not recognised internationally.",
+  "labels": [
+    "lost",
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Rhodesia"
+  ],
+  "wikidata": "Q217169",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-11-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-06-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended by a negotiated settlement that led to Zimbabwe in 1980",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Rhodesia (Q217169)",
+      "url": "https://www.wikidata.org/wiki/Q217169",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rhodesia",
+      "url": "https://en.wikipedia.org/wiki/Rhodesia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

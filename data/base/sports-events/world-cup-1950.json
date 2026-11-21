@@ -1,0 +1,61 @@
+{
+  "id": "world-cup-1950",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1950 FIFA World Cup",
+      "from": "1950"
+    }
+  ],
+  "summary": "Brazil hosted the first World Cup after the Second World War. Uruguay beat Brazil in the deciding match in front of a huge crowd at the Maracana stadium, a result known in Brazil as the Maracanazo.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "FIFA World Cup 1950",
+    "Jules Rimet Cup 1950",
+    "1950 Jules Rimet Cup"
+  ],
+  "wikidata": "Q132515",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-06-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1950-07-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "maracana-stadium"
+    },
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1950 FIFA World Cup (Q132515)",
+      "url": "https://www.wikidata.org/wiki/Q132515",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1950 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1950_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

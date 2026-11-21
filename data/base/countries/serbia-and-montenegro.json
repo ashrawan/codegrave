@@ -1,0 +1,62 @@
+{
+  "id": "serbia-and-montenegro",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Serbia and Montenegro",
+      "from": "1992"
+    }
+  ],
+  "summary": "The union of Serbia and Montenegro that carried on the name Yugoslavia after 1992 and from 2003 was called Serbia and Montenegro. It was loosely joined and was ended by a referendum.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Serbia-Montenegro",
+    "State Union of Serbia and Montenegro"
+  ],
+  "wikidata": "Q37024",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2006-06-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Montenegro voted for independence in a 2006 referendum",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "serbia"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "montenegro"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Serbia and Montenegro (Q37024)",
+      "url": "https://www.wikidata.org/wiki/Q37024",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Serbia and Montenegro",
+      "url": "https://en.wikipedia.org/wiki/Serbia_and_Montenegro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

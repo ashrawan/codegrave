@@ -1,0 +1,51 @@
+{
+  "id": "marcel-proust",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Marcel Proust",
+      "from": "1871"
+    }
+  ],
+  "summary": "French novelist who wrote In Search of Lost Time, a very long novel in seven volumes about memory, society and time. He wrote much of it in a cork-lined bedroom in Paris, and the last volumes appeared after his death.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Bernard d'Algouvres",
+    "Proust"
+  ],
+  "wikidata": "Q7199",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-07-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1922-11-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Marcel Proust (Q7199)",
+      "url": "https://www.wikidata.org/wiki/Q7199",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marcel Proust",
+      "url": "https://en.wikipedia.org/wiki/Marcel_Proust",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

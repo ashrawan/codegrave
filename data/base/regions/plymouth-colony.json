@@ -1,0 +1,53 @@
+{
+  "id": "plymouth-colony",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Plymouth Colony",
+      "from": "1620"
+    }
+  ],
+  "summary": "The colony founded in 1620 by the Pilgrims who had crossed the Atlantic on the Mayflower. The Mayflower Compact and its first harvest feast with the Wampanoag are well remembered.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "New Plymouth",
+    "Plymouth"
+  ],
+  "wikidata": "Q126195",
+  "events": [
+    {
+      "type": "born",
+      "date": "1620",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1691",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Merged into the Province of Massachusetts Bay",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Plymouth Colony (Q126195)",
+      "url": "https://www.wikidata.org/wiki/Q126195",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plymouth Colony",
+      "url": "https://en.wikipedia.org/wiki/Plymouth_Colony",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,60 @@
+{
+  "id": "battle-of-tours",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Tours",
+      "from": "0732"
+    }
+  ],
+  "summary": "Frankish forces under Charles Martel defeated a raiding army from the Umayyad Caliphate between Tours and Poitiers in France. Historians still debate how much it mattered, but it became a symbol in European history.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Poitiers",
+    "Battle of the Highway of the Martyrs"
+  ],
+  "wikidata": "Q173077",
+  "events": [
+    {
+      "type": "born",
+      "date": "0732-10-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0732-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "umayyad-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Tours (Q173077)",
+      "url": "https://www.wikidata.org/wiki/Q173077",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Tours",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Tours",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

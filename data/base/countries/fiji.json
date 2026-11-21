@@ -1,0 +1,67 @@
+{
+  "id": "fiji",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Fiji",
+      "from": "1970"
+    }
+  ],
+  "summary": "Island country in the South Pacific made of more than three hundred islands, with Suva as its capital. It became independent from Britain in 1970 and has been a republic since 1987.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Republic of Fiji",
+    "fj",
+    "Republic of the Fiji Islands",
+    "Viti",
+    "Matanitu Tugalala o Viti"
+  ],
+  "wikidata": "Q712",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fiji (Q712)",
+      "url": "https://www.wikidata.org/wiki/Q712",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fiji",
+      "url": "https://en.wikipedia.org/wiki/Fiji",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

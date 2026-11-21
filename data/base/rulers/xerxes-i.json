@@ -1,0 +1,58 @@
+{
+  "id": "xerxes-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Xerxes I",
+      "from": "-0519"
+    }
+  ],
+  "summary": "Persian king, son of Darius, who led a huge army against Greece in 480 BCE. He burned Athens but lost at the sea battle of Salamis, and the Greeks later drove his forces back.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Xerxes the Great",
+    "Xerxes I of Persia",
+    "Xerxes"
+  ],
+  "wikidata": "Q129165",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0519",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0465-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "darius-the-great"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Xerxes I (Q129165)",
+      "url": "https://www.wikidata.org/wiki/Q129165",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Xerxes I",
+      "url": "https://en.wikipedia.org/wiki/Xerxes_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

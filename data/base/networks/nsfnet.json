@@ -1,0 +1,48 @@
+{
+  "id": "nsfnet",
+  "category": "networks",
+  "names": [
+    {
+      "name": "NSFNET",
+      "from": "1985"
+    }
+  ],
+  "summary": "United States network that linked universities and supercomputer centres in the late 1980s and became the backbone of the early internet. It was closed when commercial providers took over its job.",
+  "labels": [
+    "computing"
+  ],
+  "wikidata": "Q1093567",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1995-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by commercial internet backbones",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: National Science Foundation Network (Q1093567)",
+      "url": "https://www.wikidata.org/wiki/Q1093567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Science Foundation Network",
+      "url": "https://en.wikipedia.org/wiki/National_Science_Foundation_Network",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

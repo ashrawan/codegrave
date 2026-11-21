@@ -1,0 +1,50 @@
+{
+  "id": "vhs",
+  "category": "storage",
+  "names": [
+    {
+      "name": "VHS",
+      "from": "1976"
+    }
+  ],
+  "maker": "JVC",
+  "summary": "Videocassette format from JVC that won the war against Sony's Betamax and became the standard for home video and rentals. DVD replaced it, and the last VCR makers stopped in 2016.",
+  "labels": [
+    "media",
+    "rivalries"
+  ],
+  "wikidata": "Q183976",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by DVD and streaming",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: VHS (Q183976)",
+      "url": "https://www.wikidata.org/wiki/Q183976",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: VHS",
+      "url": "https://en.wikipedia.org/wiki/VHS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

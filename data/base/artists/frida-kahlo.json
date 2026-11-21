@@ -1,0 +1,59 @@
+{
+  "id": "frida-kahlo",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Frida Kahlo",
+      "from": "1907"
+    }
+  ],
+  "summary": "Mexican painter who made many self-portraits that deal with pain, identity and Mexican culture. After a bus accident in her youth she lived with lasting injuries, and she was married to the muralist Diego Rivera.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Frida Rivera-Kahlo",
+    "Magdalena Carmen Frieda Kahlo y Calderon",
+    "Magdalena Carmen Frida Kahlo Calderon",
+    "Frida Kahlo Calderon",
+    "Magdalena Carmen Frida Kahlo y Calderon"
+  ],
+  "wikidata": "Q5588",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907-07-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1954-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "spouse",
+      "to": "diego-rivera"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Frida Kahlo (Q5588)",
+      "url": "https://www.wikidata.org/wiki/Q5588",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Frida Kahlo",
+      "url": "https://en.wikipedia.org/wiki/Frida_Kahlo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

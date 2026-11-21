@@ -1,0 +1,57 @@
+{
+  "id": "jacobin-club",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Jacobin Club",
+      "from": "1789"
+    }
+  ],
+  "summary": "Political club of the French Revolution, named after the Paris convent where it met. Led for a time by Robespierre, it supported the radical government of 1793 and 1794.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q179885",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1794-11-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Closed after the fall of Robespierre",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    },
+    {
+      "type": "related",
+      "to": "french-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jacobins (Q179885)",
+      "url": "https://www.wikidata.org/wiki/Q179885",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jacobins",
+      "url": "https://en.wikipedia.org/wiki/Jacobins",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

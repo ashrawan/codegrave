@@ -1,0 +1,64 @@
+{
+  "id": "tower-of-london",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Tower of London",
+      "from": "1100"
+    }
+  ],
+  "summary": "Castle beside the Thames begun by William the Conqueror, with the White Tower at its core. It has served as a royal palace, prison, armoury and mint, and now houses the Crown Jewels.",
+  "labels": [
+    "architecture",
+    "world-heritage",
+    "war"
+  ],
+  "aliases": [
+    "Her Majesty's Royal Palace and Fortress",
+    "The Tower of London",
+    "The Tower",
+    "Tower of London (London, England)",
+    "His Majesty's Royal Palace and Fortress"
+  ],
+  "wikidata": "Q62378",
+  "events": [
+    {
+      "type": "born",
+      "date": "1100",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "william-the-conqueror"
+    },
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tower of London (Q62378)",
+      "url": "https://www.wikidata.org/wiki/Q62378",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tower of London",
+      "url": "https://en.wikipedia.org/wiki/Tower_of_London",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

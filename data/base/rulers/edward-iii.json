@@ -1,0 +1,63 @@
+{
+  "id": "edward-iii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Edward III of England",
+      "from": "1312"
+    }
+  ],
+  "summary": "King of England for fifty years from 1327. He claimed the French throne, which began the Hundred Years' War, and he won victories at Crécy and in sea battles. His reign also saw the Black Death reach England.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "aliases": [
+    "Edward of Windsor"
+  ],
+  "wikidata": "Q129247",
+  "events": [
+    {
+      "type": "born",
+      "date": "1312-11-13",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1327",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1327 to 1377."
+    },
+    {
+      "type": "ended",
+      "date": "1377-06-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "order-of-the-garter"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Edward III of England (Q129247)",
+      "url": "https://www.wikidata.org/wiki/Q129247",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward III",
+      "url": "https://en.wikipedia.org/wiki/Edward_III",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

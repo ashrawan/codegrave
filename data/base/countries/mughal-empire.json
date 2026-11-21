@@ -1,0 +1,65 @@
+{
+  "id": "mughal-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Mughal Empire",
+      "from": "1526"
+    }
+  ],
+  "summary": "The Muslim empire that ruled most of the Indian subcontinent from Delhi and Agra. Its emperors, from Babur to Aurangzeb, built the Taj Mahal and the Red Fort and blended Persian and Indian culture.",
+  "labels": [
+    "lost",
+    "architecture"
+  ],
+  "aliases": [
+    "Mogul Empire",
+    "Mughal India",
+    "Moghul Empire",
+    "Mogul India",
+    "Moghul India"
+  ],
+  "wikidata": "Q33296",
+  "events": [
+    {
+      "type": "born",
+      "date": "1526",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1857-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Declined in the 1700s and was formally ended by the British after the Rebellion of 1857",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "british-raj"
+    },
+    {
+      "type": "succeeded_by",
+      "to": "company-rule-in-india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mughal Empire (Q33296)",
+      "url": "https://www.wikidata.org/wiki/Q33296",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mughal Empire",
+      "url": "https://en.wikipedia.org/wiki/Mughal_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

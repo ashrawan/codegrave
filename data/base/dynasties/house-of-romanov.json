@@ -1,0 +1,59 @@
+{
+  "id": "house-of-romanov",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "House of Romanov",
+      "from": "1613"
+    }
+  ],
+  "summary": "Last royal dynasty of Russia, begun with Michael Romanov and including Peter the Great and Catherine the Great. It ended when Nicholas II gave up the throne in the revolution.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Romanov",
+    "Romanoff",
+    "House of Romanoff",
+    "Romanovs"
+  ],
+  "wikidata": "Q112707",
+  "events": [
+    {
+      "type": "born",
+      "date": "1613",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1917",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Ended when Nicholas II abdicated in the Russian Revolution",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: House of Romanov (Q112707)",
+      "url": "https://www.wikidata.org/wiki/Q112707",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: House of Romanov",
+      "url": "https://en.wikipedia.org/wiki/House_of_Romanov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

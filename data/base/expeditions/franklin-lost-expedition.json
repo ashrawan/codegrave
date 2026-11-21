@@ -1,0 +1,58 @@
+{
+  "id": "franklin-lost-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Franklin's lost expedition",
+      "from": "1845"
+    }
+  ],
+  "summary": "Two British ships under Sir John Franklin went to search for the Northwest Passage in the Arctic and never returned. Dozens of search parties followed, and the wrecks were found only in recent years.",
+  "labels": [
+    "exploration",
+    "lost"
+  ],
+  "aliases": [
+    "Franklin's expedition",
+    "John Franklin Arctic Expedition",
+    "Third Franklin expedition"
+  ],
+  "wikidata": "Q2305",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845-05-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1848",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Franklin's lost expedition (Q2305)",
+      "url": "https://www.wikidata.org/wiki/Q2305",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franklin's lost expedition",
+      "url": "https://en.wikipedia.org/wiki/Franklin's_lost_expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

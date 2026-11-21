@@ -1,0 +1,63 @@
+{
+  "id": "war-of-1812",
+  "category": "wars",
+  "names": [
+    {
+      "name": "War of 1812",
+      "from": "1812"
+    }
+  ],
+  "summary": "A war between the United States and Britain and its allies, fought on the Atlantic, the Great Lakes and in Canada and the Gulf coast. It ended with no change in borders but shaped national feeling in the US and Canada.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Mr. Madison's War",
+    "British–American War",
+    "American War of 1812",
+    "American War of 1812–15",
+    "Anglo–American War of 1812"
+  ],
+  "wikidata": "Q26013",
+  "events": [
+    {
+      "type": "born",
+      "date": "1812-06-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1815-02-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "atlantic-ocean"
+    },
+    {
+      "type": "in",
+      "to": "pacific-ocean"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: War of 1812 (Q26013)",
+      "url": "https://www.wikidata.org/wiki/Q26013",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: War of 1812",
+      "url": "https://en.wikipedia.org/wiki/War_of_1812",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "pather-panchali",
+  "category": "films",
+  "names": [
+    {
+      "name": "Pather Panchali",
+      "from": "1955"
+    }
+  ],
+  "maker": "Satyajit Ray",
+  "summary": "Bengali film that was Satyajit Ray's first, following a poor family in a village in Bengal through the eyes of a young boy and his sister. It brought Indian art cinema to the world's attention and began the Apu Trilogy.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q622380",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-08-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "satyajit-ray"
+    },
+    {
+      "type": "made_by",
+      "to": "ravi-shankar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pather Panchali (Q622380)",
+      "url": "https://www.wikidata.org/wiki/Q622380",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pather Panchali",
+      "url": "https://en.wikipedia.org/wiki/Pather_Panchali",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

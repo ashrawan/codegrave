@@ -1,0 +1,59 @@
+{
+  "id": "hadrian",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Hadrian",
+      "from": "0076"
+    }
+  ],
+  "summary": "Roman emperor who spent much of his reign travelling the provinces. He gave up some of Trajan's eastern conquests and ordered the wall across northern Britain that bears his name.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Emperor of Rome Adrian",
+    "Caesar Traianus Hadrianus Augustus",
+    "Emperor of Rome Hadrian",
+    "Adrian",
+    "Hadrianus"
+  ],
+  "wikidata": "Q1427",
+  "events": [
+    {
+      "type": "born",
+      "date": "0076-01-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0138-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "trajan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hadrian (Q1427)",
+      "url": "https://www.wikidata.org/wiki/Q1427",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hadrian",
+      "url": "https://en.wikipedia.org/wiki/Hadrian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

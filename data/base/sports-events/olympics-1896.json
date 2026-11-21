@@ -1,0 +1,56 @@
+{
+  "id": "olympics-1896",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1896 Summer Olympics",
+      "from": "1896"
+    }
+  ],
+  "summary": "The first modern Olympic Games, held in Athens with athletes from a small number of countries, all men. The marathon, run in memory of a legend from ancient Greece, was won by the Greek runner Spyridon Louis.",
+  "labels": [
+    "sport",
+    "firsts"
+  ],
+  "aliases": [
+    "The Games of the I Olympiad"
+  ],
+  "wikidata": "Q8080",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896-04-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1896-04-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "athens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1896 Summer Olympics (Q8080)",
+      "url": "https://www.wikidata.org/wiki/Q8080",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1896 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1896_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

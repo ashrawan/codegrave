@@ -1,0 +1,61 @@
+{
+  "id": "paris",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Paris",
+      "from": "-0250"
+    }
+  ],
+  "summary": "Capital of France on the river Seine, grown from a Gallic settlement of the Parisii tribe. It has been a centre of government, art, fashion and ideas for centuries and is among the most visited cities in the world.",
+  "labels": [
+    "politics",
+    "visual-art"
+  ],
+  "aliases": [
+    "City of Light",
+    "City of Love",
+    "Lutetia"
+  ],
+  "wikidata": "Q90",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0250",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "george-stephenson"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paris (Q90)",
+      "url": "https://www.wikidata.org/wiki/Q90",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paris",
+      "url": "https://en.wikipedia.org/wiki/Paris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

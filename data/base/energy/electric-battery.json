@@ -1,0 +1,57 @@
+{
+  "id": "electric-battery",
+  "category": "energy",
+  "names": [
+    {
+      "name": "Electric battery",
+      "from": "1800"
+    }
+  ],
+  "maker": "Alessandro Volta",
+  "summary": "Device that stores chemical energy and releases it as electric current. Alessandro Volta announced the first one, the voltaic pile of stacked metal discs and wet cloth, in 1800.",
+  "labels": [
+    "physics",
+    "engineering"
+  ],
+  "aliases": [
+    "battery",
+    "electrical battery"
+  ],
+  "wikidata": "Q267298",
+  "events": [
+    {
+      "type": "born",
+      "date": "1800",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "alessandro-volta"
+    },
+    {
+      "type": "part_of",
+      "to": "digital-camera"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: battery (Q267298)",
+      "url": "https://www.wikidata.org/wiki/Q267298",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Electric battery",
+      "url": "https://en.wikipedia.org/wiki/Electric_battery",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

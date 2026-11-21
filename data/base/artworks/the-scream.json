@@ -1,0 +1,51 @@
+{
+  "id": "the-scream",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "The Scream",
+      "from": "1893"
+    }
+  ],
+  "maker": "Edvard Munch",
+  "summary": "Expressionist work by the Norwegian artist Edvard Munch of a figure with hands at its face against a blood-red sky. Munch made several versions, and the image has become a common sign of modern anxiety.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Scream"
+  ],
+  "wikidata": "Q471379",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "edvard-munch"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Scream (Q471379)",
+      "url": "https://www.wikidata.org/wiki/Q471379",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Scream",
+      "url": "https://en.wikipedia.org/wiki/The_Scream",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

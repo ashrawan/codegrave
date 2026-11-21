@@ -1,0 +1,60 @@
+{
+  "id": "chelyabinsk-meteor",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Chelyabinsk meteor",
+      "from": "2013"
+    }
+  ],
+  "summary": "Small asteroid that exploded in the air above the Russian city of Chelyabinsk on 15 February 2013. The shock wave broke many windows and injured over a thousand people. Pieces fell as meteorites in a nearby lake.",
+  "labels": [
+    "astronomy",
+    "environment"
+  ],
+  "aliases": [
+    "2013 Russian meteor shower",
+    "Chelyabinsk Meteor shower",
+    "2013 Russian meteor event",
+    "2013 meteor",
+    "Chelyabinsk Meteoroid"
+  ],
+  "wikidata": "Q4661508",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-02-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2013-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chelyabinsk meteor (Q4661508)",
+      "url": "https://www.wikidata.org/wiki/Q4661508",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chelyabinsk meteor",
+      "url": "https://en.wikipedia.org/wiki/Chelyabinsk_meteor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,49 @@
+{
+  "id": "mastodon",
+  "category": "social",
+  "names": [
+    {
+      "name": "Mastodon",
+      "from": "2016"
+    }
+  ],
+  "maker": "Eugen Rochko",
+  "summary": "Social network made of many independent servers that can talk to each other, with short posts similar to Twitter's. Its software is free, and many people moved there after Twitter's sale in 2022.",
+  "labels": [
+    "media",
+    "open-source"
+  ],
+  "wikidata": "Q27986619",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-03-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mastodon (Q27986619)",
+      "url": "https://www.wikidata.org/wiki/Q27986619",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mastodon (social network)",
+      "url": "https://en.wikipedia.org/wiki/Mastodon_(social_network)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

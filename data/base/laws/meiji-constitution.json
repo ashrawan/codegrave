@@ -1,0 +1,57 @@
+{
+  "id": "meiji-constitution",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Meiji Constitution",
+      "from": "1889"
+    }
+  ],
+  "summary": "Japan's first modern constitution, given by the emperor. It created a parliament but kept great power with the emperor, the army and the navy, and it lasted until Japan's defeat in the Second World War.",
+  "labels": [
+    "law",
+    "politics"
+  ],
+  "aliases": [
+    "Constitution of the Empire of Japan"
+  ],
+  "wikidata": "Q122804",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-02-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-05-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the postwar constitution under Allied occupation",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "empire-of-japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Constitution of the Empire of Japan (Q122804)",
+      "url": "https://www.wikidata.org/wiki/Q122804",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Meiji Constitution",
+      "url": "https://en.wikipedia.org/wiki/Meiji_Constitution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

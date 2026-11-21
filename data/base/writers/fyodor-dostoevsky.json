@@ -1,0 +1,92 @@
+{
+  "id": "fyodor-dostoevsky",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Fyodor Dostoevsky",
+      "from": "1821"
+    }
+  ],
+  "summary": "Russian novelist who wrote Crime and Punishment and The Brothers Karamazov. His books explore guilt, faith and doubt through characters under heavy pressure, after he was himself sentenced to death and then reprieved.",
+  "labels": [
+    "literature",
+    "philosophy"
+  ],
+  "aliases": [
+    "Fyodor Dostoyevsky",
+    "Fyodor Mikhailovich Dostoevsky",
+    "Fyodor Doestoevsky",
+    "Doestoevsky",
+    "F.M. Dostoiewski"
+  ],
+  "wikidata": "Q991",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821-10-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1881-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "alexander-pushkin"
+    },
+    {
+      "type": "influenced_by",
+      "to": "nikolai-gogol"
+    },
+    {
+      "type": "influenced_by",
+      "to": "immanuel-kant"
+    },
+    {
+      "type": "influenced_by",
+      "to": "william-shakespeare"
+    },
+    {
+      "type": "influenced_by",
+      "to": "honore-de-balzac"
+    },
+    {
+      "type": "influenced_by",
+      "to": "miguel-de-cervantes"
+    },
+    {
+      "type": "influenced_by",
+      "to": "charles-dickens"
+    },
+    {
+      "type": "influenced_by",
+      "to": "victor-hugo"
+    },
+    {
+      "type": "influenced_by",
+      "to": "edgar-allan-poe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fyodor Dostoyevsky (Q991)",
+      "url": "https://www.wikidata.org/wiki/Q991",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fyodor Dostoevsky",
+      "url": "https://en.wikipedia.org/wiki/Fyodor_Dostoevsky",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

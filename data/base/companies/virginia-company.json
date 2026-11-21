@@ -1,0 +1,66 @@
+{
+  "id": "virginia-company",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Virginia Company",
+      "from": "1606"
+    }
+  ],
+  "summary": "English joint-stock company that founded Jamestown in 1607, the first lasting English settlement in North America. Its investors lost money, and the Crown took over the colony.",
+  "labels": [
+    "business",
+    "exploration"
+  ],
+  "wikidata": "Q1152507",
+  "events": [
+    {
+      "type": "born",
+      "date": "1606-04-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1624-05-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its charter was revoked by King James I and Virginia became a royal colony",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "james-i"
+    },
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "colony-of-virginia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Virginia Company (Q1152507)",
+      "url": "https://www.wikidata.org/wiki/Q1152507",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Virginia Company",
+      "url": "https://en.wikipedia.org/wiki/Virginia_Company",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

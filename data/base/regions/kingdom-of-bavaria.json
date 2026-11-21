@@ -1,0 +1,56 @@
+{
+  "id": "kingdom-of-bavaria",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Kingdom of Bavaria",
+      "from": "1806"
+    }
+  ],
+  "summary": "The south German kingdom created by Napoleon in 1806 with Munich as its capital. It joined the German Empire in 1871, and its king Ludwig II built fairy-tale castles such as Neuschwanstein.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Bavaria",
+    "Königreich Baiern",
+    "Kinereich Baiern",
+    "Königreich Bayern",
+    "Kinereich Bayern"
+  ],
+  "wikidata": "Q154195",
+  "events": [
+    {
+      "type": "born",
+      "date": "1806-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Monarchy ended in the German Revolution of 1918",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Bavaria (Q154195)",
+      "url": "https://www.wikidata.org/wiki/Q154195",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Bavaria",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Bavaria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

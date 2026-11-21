@@ -1,0 +1,72 @@
+{
+  "id": "operation-barbarossa",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Operation Barbarossa",
+      "from": "1941"
+    }
+  ],
+  "summary": "Germany's surprise invasion of the Soviet Union in June 1941, the largest land attack in history. It opened the Eastern Front, where most of the fighting and deaths of the war took place.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Fall Barbarroja",
+    "Operation Fritz"
+  ],
+  "wikidata": "Q83055",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-06-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941-12-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-ii"
+    },
+    {
+      "type": "in",
+      "to": "estonia"
+    },
+    {
+      "type": "in",
+      "to": "lithuania"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "related",
+      "to": "kingdom-of-hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Operation Barbarossa (Q83055)",
+      "url": "https://www.wikidata.org/wiki/Q83055",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Operation Barbarossa",
+      "url": "https://en.wikipedia.org/wiki/Operation_Barbarossa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

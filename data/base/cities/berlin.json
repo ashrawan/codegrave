@@ -1,0 +1,55 @@
+{
+  "id": "berlin",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Berlin",
+      "from": "1237"
+    }
+  ],
+  "summary": "Capital of Germany, first recorded in the thirteenth century. It was the capital of Prussia and the German Empire, was divided by a wall between 1961 and 1989, and was reunited as capital in 1990.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Berlin, Germany",
+    "DE-BE"
+  ],
+  "wikidata": "Q64",
+  "events": [
+    {
+      "type": "born",
+      "date": "1237",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Berlin (Q64)",
+      "url": "https://www.wikidata.org/wiki/Q64",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Berlin",
+      "url": "https://en.wikipedia.org/wiki/Berlin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

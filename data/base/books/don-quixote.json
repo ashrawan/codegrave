@@ -1,0 +1,50 @@
+{
+  "id": "don-quixote",
+  "category": "books",
+  "names": [
+    {
+      "name": "Don Quixote",
+      "from": "1605"
+    }
+  ],
+  "summary": "Spanish novel by Miguel de Cervantes about a country gentleman who reads so many tales of chivalry that he sets out to be a knight. It is often named the first modern novel and one of the best-selling books ever.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Don Quijote de la Mancha"
+  ],
+  "wikidata": "Q480",
+  "events": [
+    {
+      "type": "born",
+      "date": "1605",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "miguel-de-cervantes"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Don Quixote (Q480)",
+      "url": "https://www.wikidata.org/wiki/Q480",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Don Quixote",
+      "url": "https://en.wikipedia.org/wiki/Don_Quixote",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

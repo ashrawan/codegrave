@@ -1,0 +1,49 @@
+{
+  "id": "western-interior-seaway",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Western Interior Seaway",
+      "from": "-100000000"
+    }
+  ],
+  "summary": "A shallow sea that split North America in two for millions of years in the Cretaceous, stretching from the Arctic to the Gulf of Mexico. Marine reptiles swam in it, and its sediments hold many fossils.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "wikidata": "Q1083697",
+  "events": [
+    {
+      "type": "born",
+      "date": "-100000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Drained as the land rose and sea level fell",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Western Interior Seaway (Q1083697)",
+      "url": "https://www.wikidata.org/wiki/Q1083697",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Western Interior Seaway",
+      "url": "https://en.wikipedia.org/wiki/Western_Interior_Seaway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

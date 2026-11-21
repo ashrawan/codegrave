@@ -1,0 +1,69 @@
+{
+  "id": "siege-of-acre-1291",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Acre",
+      "from": "1291"
+    }
+  ],
+  "summary": "The Mamluk Sultanate besieged and took the city of Acre, the last major Crusader stronghold in the Holy Land. The loss ended the Crusader states on the mainland of the Levant.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "wikidata": "Q325985",
+  "events": [
+    {
+      "type": "born",
+      "date": "1291-04-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1291-05-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-jerusalem"
+    },
+    {
+      "type": "related",
+      "to": "mamluk-sultanate"
+    },
+    {
+      "type": "related",
+      "to": "knights-templar"
+    },
+    {
+      "type": "related",
+      "to": "knights-hospitaller"
+    },
+    {
+      "type": "related",
+      "to": "teutonic-order"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Acre (Q325985)",
+      "url": "https://www.wikidata.org/wiki/Q325985",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Acre (1291)",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Acre_(1291)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

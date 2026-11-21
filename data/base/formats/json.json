@@ -1,0 +1,46 @@
+{
+  "id": "json",
+  "category": "formats",
+  "names": [
+    {
+      "name": "JSON",
+      "from": "2001"
+    }
+  ],
+  "maker": "Douglas Crockford",
+  "summary": "Simple text format for sending data between programs, made of names with values, lists and objects. Douglas Crockford named and promoted it from about 2001, and it is now very common in web services.",
+  "labels": [
+    "computing"
+  ],
+  "aliases": [
+    "JavaScript/Handling JSON"
+  ],
+  "wikidata": "Q2063",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: JSON (Q2063)",
+      "url": "https://www.wikidata.org/wiki/Q2063",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: JSON",
+      "url": "https://en.wikipedia.org/wiki/JSON",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

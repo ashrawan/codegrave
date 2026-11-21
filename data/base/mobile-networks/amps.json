@@ -1,0 +1,50 @@
+{
+  "id": "amps",
+  "category": "mobile-networks",
+  "names": [
+    {
+      "name": "AMPS",
+      "from": "1983"
+    }
+  ],
+  "maker": "Bell Labs",
+  "summary": "The first widely used cellular phone network in the United States, using analogue radio. It split areas into cells that reused frequencies. Digital networks replaced it, and its last networks closed in 2008.",
+  "labels": [
+    "computing",
+    "media"
+  ],
+  "wikidata": "Q379651",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2008",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by digital networks and switched off",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Advanced Mobile Phone System (Q379651)",
+      "url": "https://www.wikidata.org/wiki/Q379651",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Advanced Mobile Phone System",
+      "url": "https://en.wikipedia.org/wiki/Advanced_Mobile_Phone_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

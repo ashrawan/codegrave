@@ -1,0 +1,54 @@
+{
+  "id": "chichen-itza",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Chichen Itza",
+      "from": "0525"
+    }
+  ],
+  "summary": "Major Maya city in Mexico's Yucatan, known for the stepped pyramid of El Castillo and a large ball court. It was a centre of trade and ritual, and lost its power well before the Spanish arrived.",
+  "labels": [
+    "lost",
+    "world-heritage"
+  ],
+  "wikidata": "Q5859",
+  "events": [
+    {
+      "type": "born",
+      "date": "0525",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Lost power and was largely deserted as rival centres rose",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chichen Itza (Q5859)",
+      "url": "https://www.wikidata.org/wiki/Q5859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chichen Itza",
+      "url": "https://en.wikipedia.org/wiki/Chichen_Itza",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

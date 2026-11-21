@@ -1,0 +1,63 @@
+{
+  "id": "coptic-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Coptic language",
+      "from": "0200"
+    }
+  ],
+  "summary": "The last stage of the Egyptian language, written in an alphabet adapted from Greek. It was the everyday language of Christian Egypt and is still used in the liturgy of the Coptic Church.",
+  "labels": [
+    "language",
+    "religion"
+  ],
+  "aliases": [
+    "Coptic",
+    "Coptic Egyptian",
+    "cop"
+  ],
+  "wikidata": "Q36155",
+  "events": [
+    {
+      "type": "born",
+      "date": "0200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Arabic as the everyday language of Egypt",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    },
+    {
+      "type": "in",
+      "to": "ancient-egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Coptic (Q36155)",
+      "url": "https://www.wikidata.org/wiki/Q36155",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coptic language",
+      "url": "https://en.wikipedia.org/wiki/Coptic_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

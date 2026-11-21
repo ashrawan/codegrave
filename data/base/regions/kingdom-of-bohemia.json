@@ -1,0 +1,72 @@
+{
+  "id": "kingdom-of-bohemia",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Kingdom of Bohemia",
+      "from": "1198"
+    }
+  ],
+  "summary": "The kingdom in the Czech lands with Prague as its capital. Its rulers were prince-electors of the Holy Roman Empire, and from 1526 it was held by the Habsburgs.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Königreich Böhmen",
+    "Regnum Bohemiae",
+    "Bohemia",
+    "České království"
+  ],
+  "wikidata": "Q42585",
+  "events": [
+    {
+      "type": "born",
+      "date": "1198",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1918",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Absorbed into the new state of Czechoslovakia after the First World War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "czechoslovakia"
+    },
+    {
+      "type": "part_of",
+      "to": "holy-roman-empire"
+    },
+    {
+      "type": "in",
+      "to": "austrian-empire"
+    },
+    {
+      "type": "in",
+      "to": "austria-hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Bohemia (Q42585)",
+      "url": "https://www.wikidata.org/wiki/Q42585",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Bohemia",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Bohemia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "yellow-river",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Yellow River",
+      "from": "-1000000"
+    }
+  ],
+  "summary": "China's second-longest river, named for the yellow silt it carries. Early Chinese states grew along it, but its changing course also caused huge floods, which earned it the nickname China's Sorrow.",
+  "labels": [
+    "environment",
+    "exploration"
+  ],
+  "aliases": [
+    "Huang He River",
+    "Huanghe River",
+    "Hoang-ho",
+    "Hoan-ho",
+    "Yellow R."
+  ],
+  "wikidata": "Q7355",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yellow River (Q7355)",
+      "url": "https://www.wikidata.org/wiki/Q7355",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yellow River",
+      "url": "https://en.wikipedia.org/wiki/Yellow_River",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

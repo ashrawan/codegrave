@@ -1,0 +1,54 @@
+{
+  "id": "atlantic-ocean",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Atlantic Ocean",
+      "from": "-180000000"
+    }
+  ],
+  "summary": "The second largest ocean, which began to open about 180 million years ago as Pangaea split. It separates the Americas from Europe and Africa and carries the Gulf Stream, warm water that shapes Europe's climate.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Atlantic",
+    "Atlantic Sea",
+    "Great Western Ocean",
+    "Oceanus",
+    "the Atlantic"
+  ],
+  "wikidata": "Q97",
+  "events": [
+    {
+      "type": "born",
+      "date": "-180000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Atlantic Ocean (Q97)",
+      "url": "https://www.wikidata.org/wiki/Q97",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atlantic Ocean",
+      "url": "https://en.wikipedia.org/wiki/Atlantic_Ocean",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

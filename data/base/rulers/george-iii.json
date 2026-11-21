@@ -1,0 +1,57 @@
+{
+  "id": "george-iii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "George III",
+      "from": "1738"
+    }
+  ],
+  "summary": "King for almost sixty years, through the loss of the American colonies and the wars with Napoleon. Illness ended his active rule in 1811.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "King George III"
+  ],
+  "wikidata": "Q127318",
+  "events": [
+    {
+      "type": "born",
+      "date": "1738-06-04",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1760-10-25",
+      "precision": "day",
+      "label": "Became king",
+      "note": "King of Great Britain, and from 1801 of the United Kingdom, from 1760 to 1820."
+    },
+    {
+      "type": "ended",
+      "date": "1820-01-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: George III of Great Britain (Q127318)",
+      "url": "https://www.wikidata.org/wiki/Q127318",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George III",
+      "url": "https://en.wikipedia.org/wiki/George_III",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

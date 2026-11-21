@@ -1,0 +1,53 @@
+{
+  "id": "ethernet",
+  "category": "networks",
+  "names": [
+    {
+      "name": "Ethernet",
+      "from": "1973"
+    }
+  ],
+  "maker": "Robert Metcalfe, Xerox PARC",
+  "summary": "Way of linking computers in a building by cable, devised at Xerox PARC. It became the standard for local networks and has grown from a few million bits a second to many billions.",
+  "labels": [
+    "computing",
+    "engineering"
+  ],
+  "aliases": [
+    "Ethernets",
+    "Ethernet protocol"
+  ],
+  "wikidata": "Q79984",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "luminiferous-aether"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ethernet (Q79984)",
+      "url": "https://www.wikidata.org/wiki/Q79984",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ethernet",
+      "url": "https://en.wikipedia.org/wiki/Ethernet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

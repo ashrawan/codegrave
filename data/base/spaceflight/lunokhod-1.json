@@ -1,0 +1,55 @@
+{
+  "id": "lunokhod-1",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Lunokhod 1",
+      "from": "1970"
+    }
+  ],
+  "summary": "Soviet remote-controlled rover that landed on the Moon in 1970 and was driven by operators on Earth. It was the first robot vehicle to roam another world and travelled several kilometres, sending back images and soil data.",
+  "labels": [
+    "astronomy",
+    "space-race",
+    "firsts"
+  ],
+  "wikidata": "Q261052",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-11-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "The rover stopped working when its heat source ran out",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lunokhod 1 (Q261052)",
+      "url": "https://www.wikidata.org/wiki/Q261052",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lunokhod 1",
+      "url": "https://en.wikipedia.org/wiki/Lunokhod_1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

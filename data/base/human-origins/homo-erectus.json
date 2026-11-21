@@ -1,0 +1,47 @@
+{
+  "id": "homo-erectus",
+  "category": "human-origins",
+  "names": [
+    {
+      "name": "Homo erectus",
+      "from": "-1900000"
+    }
+  ],
+  "summary": "An early human with a body like ours who walked long distances, used fire and spread out of Africa across Asia. It lasted for well over a million years, longer than our own species so far.",
+  "labels": [
+    "biology"
+  ],
+  "wikidata": "Q101362",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1900000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-143000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Homo erectus (Q101362)",
+      "url": "https://www.wikidata.org/wiki/Q101362",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Homo erectus",
+      "url": "https://en.wikipedia.org/wiki/Homo_erectus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

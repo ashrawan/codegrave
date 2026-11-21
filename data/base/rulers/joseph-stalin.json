@@ -1,0 +1,63 @@
+{
+  "id": "joseph-stalin",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Joseph Stalin",
+      "from": "1878"
+    }
+  ],
+  "summary": "Georgian-born leader of the Soviet Union from the late 1920s until his death. He industrialised the country by force, ruled through terror, and led the Soviet Union to victory over Nazi Germany.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Joseph Vissarionovich Stalin",
+    "Josef Stalin",
+    "Joseph Vissarionovitch Stalin",
+    "Ioseb Besarionis dze Dzhugashvili",
+    "Ioseb Jugashvili"
+  ],
+  "wikidata": "Q855",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878-12-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1953-03-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "karl-marx"
+    },
+    {
+      "type": "influenced_by",
+      "to": "vladimir-lenin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Joseph Stalin (Q855)",
+      "url": "https://www.wikidata.org/wiki/Q855",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Joseph Stalin",
+      "url": "https://en.wikipedia.org/wiki/Joseph_Stalin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,47 @@
+{
+  "id": "atomium",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Atomium",
+      "from": "1958"
+    }
+  ],
+  "summary": "Landmark in Brussels built for the 1958 world's fair: nine steel spheres joined by tubes, shaped like a magnified iron crystal. It was meant to stand for a few months but was kept.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q180901",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-04-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Atomium (Q180901)",
+      "url": "https://www.wikidata.org/wiki/Q180901",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atomium",
+      "url": "https://en.wikipedia.org/wiki/Atomium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

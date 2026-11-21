@@ -1,0 +1,53 @@
+{
+  "id": "green-revolution",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Green Revolution",
+      "from": "1944"
+    }
+  ],
+  "summary": "A period when high-yield crop varieties, fertiliser, irrigation and new farming methods spread across the developing world. It sharply raised grain harvests in Mexico, India and elsewhere and helped avert famine.",
+  "labels": [
+    "food",
+    "environment"
+  ],
+  "wikidata": "Q186050",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1970",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "norman-borlaug"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Green Revolution (Q186050)",
+      "url": "https://www.wikidata.org/wiki/Q186050",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Green Revolution",
+      "url": "https://en.wikipedia.org/wiki/Green_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,62 @@
+{
+  "id": "australia-continent",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Australia (continent)",
+      "from": "-45000000"
+    }
+  ],
+  "summary": "The smallest continent, including mainland Australia, Tasmania and New Guinea. It finished separating from Antarctica about 45 million years ago and drifted north to its present place.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Australian continent",
+    "Sahul",
+    "Australinea",
+    "Meganesia",
+    "Australia"
+  ],
+  "wikidata": "Q3960",
+  "events": [
+    {
+      "type": "born",
+      "date": "-45000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "earth-planet"
+    },
+    {
+      "type": "in",
+      "to": "australia"
+    },
+    {
+      "type": "in",
+      "to": "papua-new-guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Australian continent (Q3960)",
+      "url": "https://www.wikidata.org/wiki/Q3960",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Australia (continent)",
+      "url": "https://en.wikipedia.org/wiki/Australia_(continent)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

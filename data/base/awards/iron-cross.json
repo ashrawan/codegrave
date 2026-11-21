@@ -1,0 +1,51 @@
+{
+  "id": "iron-cross",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Iron Cross",
+      "from": "1813"
+    }
+  ],
+  "summary": "A military decoration of Prussia and later Germany, first awarded in the wars against Napoleon. Its black and silver cross design has also been used as a military emblem.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q154554",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813-03-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "prussia"
+    },
+    {
+      "type": "in",
+      "to": "german-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iron Cross (Q154554)",
+      "url": "https://www.wikidata.org/wiki/Q154554",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iron Cross",
+      "url": "https://en.wikipedia.org/wiki/Iron_Cross",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

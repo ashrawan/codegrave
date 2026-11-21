@@ -1,0 +1,52 @@
+{
+  "id": "sunflowers-van-gogh",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "The Sunflowers",
+      "from": "1888"
+    }
+  ],
+  "maker": "Vincent van Gogh",
+  "summary": "Series of still-life paintings by Vincent van Gogh of sunflowers in a vase, made in Arles in southern France, partly to decorate a room for his friend Paul Gauguin. Their thick yellow paint made them among the best-loved of his works.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Sunflowers",
+    "Sunflowers (Van Gogh)"
+  ],
+  "wikidata": "Q157541",
+  "events": [
+    {
+      "type": "born",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "vincent-van-gogh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sunflowers (Q157541)",
+      "url": "https://www.wikidata.org/wiki/Q157541",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sunflowers (Van Gogh series)",
+      "url": "https://en.wikipedia.org/wiki/Sunflowers_(Van_Gogh_series)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

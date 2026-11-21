@@ -1,0 +1,53 @@
+{
+  "id": "third-servile-war",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Third Servile War",
+      "from": "-0073"
+    }
+  ],
+  "summary": "The largest slave uprising against Rome, led by the gladiator Spartacus. The rebels defeated several Roman armies in Italy before being crushed, and thousands were executed along the road to Rome.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "wikidata": "Q194378",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0073",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0071",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "spartacus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Third Servile War (Q194378)",
+      "url": "https://www.wikidata.org/wiki/Q194378",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Third Servile War",
+      "url": "https://en.wikipedia.org/wiki/Third_Servile_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

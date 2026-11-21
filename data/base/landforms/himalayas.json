@@ -1,0 +1,58 @@
+{
+  "id": "himalayas",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Himalayas",
+      "from": "-50000000"
+    }
+  ],
+  "summary": "The world's highest mountain range, stretching about 2,400 kilometres across South Asia. It rose when the Indian plate crashed into Asia starting about 50 million years ago, and it is still rising.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Himalaya",
+    "Himalayan Mountains",
+    "Himalaya Mountains",
+    "Himmaleh",
+    "the Himalayas"
+  ],
+  "wikidata": "Q5451",
+  "events": [
+    {
+      "type": "born",
+      "date": "-50000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    },
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Himalayas (Q5451)",
+      "url": "https://www.wikidata.org/wiki/Q5451",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Himalayas",
+      "url": "https://en.wikipedia.org/wiki/Himalayas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

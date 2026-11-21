@@ -1,0 +1,61 @@
+{
+  "id": "paralympics-1960",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1960 Summer Paralympics",
+      "from": "1960"
+    }
+  ],
+  "summary": "Held in Rome soon after the Olympic Games, these are counted as the first Paralympic Games. Several hundred athletes in wheelchairs from a small number of countries took part.",
+  "labels": [
+    "sport",
+    "human-rights"
+  ],
+  "aliases": [
+    "Rome 1960",
+    "Summer Paralympics 1960"
+  ],
+  "wikidata": "Q570431",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-09-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-09-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rome"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1960 Summer Paralympics (Q570431)",
+      "url": "https://www.wikidata.org/wiki/Q570431",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1960 Summer Paralympics",
+      "url": "https://en.wikipedia.org/wiki/1960_Summer_Paralympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

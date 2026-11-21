@@ -1,0 +1,67 @@
+{
+  "id": "claude-monet",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Claude Monet",
+      "from": "1840"
+    }
+  ],
+  "summary": "French painter whose work Impression, Sunrise gave Impressionism its name. He painted the same scenes in changing light, such as haystacks and the water lilies in his garden at Giverny.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "monet claude",
+    "Claude Jean Monet",
+    "Cl. Monet",
+    "monet c.",
+    "claude oscar monet"
+  ],
+  "wikidata": "Q296",
+  "events": [
+    {
+      "type": "born",
+      "date": "1840-11-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1926-12-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "edouard-manet"
+    },
+    {
+      "type": "influenced_by",
+      "to": "jmw-turner"
+    },
+    {
+      "type": "influenced_by",
+      "to": "katsushika-hokusai"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Claude Monet (Q296)",
+      "url": "https://www.wikidata.org/wiki/Q296",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Claude Monet",
+      "url": "https://en.wikipedia.org/wiki/Claude_Monet",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "sputnik-1",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Sputnik 1",
+      "from": "1957"
+    }
+  ],
+  "maker": "Soviet Union",
+  "summary": "The first artificial satellite, a metal sphere that the Soviet Union launched into orbit on 4 October 1957. Its radio beeps could be heard around the world, and it started the space race.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "aliases": [
+    "Object PS",
+    "PS-1",
+    "Satellite-1",
+    "Prosteyshiy Sputnik-1",
+    "Elementary Satellite 1"
+  ],
+  "wikidata": "Q80811",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-10-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1958-01-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Fell back into the atmosphere and burned up",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Sputnik 1 (Q80811)",
+      "url": "https://www.wikidata.org/wiki/Q80811",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sputnik 1",
+      "url": "https://en.wikipedia.org/wiki/Sputnik_1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

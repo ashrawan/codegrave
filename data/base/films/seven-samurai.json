@@ -1,0 +1,60 @@
+{
+  "id": "seven-samurai",
+  "category": "films",
+  "names": [
+    {
+      "name": "Seven Samurai",
+      "from": "1954"
+    }
+  ],
+  "maker": "Akira Kurosawa",
+  "summary": "Japanese epic by Akira Kurosawa in which poor villagers hire seven masterless warriors to defend them from bandits. Its team-building plot and action scenes were copied by many later films, including Westerns.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q189540",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-04-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "akira-kurosawa"
+    },
+    {
+      "type": "made_by",
+      "to": "toshiro-mifune"
+    },
+    {
+      "type": "about",
+      "to": "samurai"
+    },
+    {
+      "type": "about",
+      "to": "sengoku-period"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seven Samurai (Q189540)",
+      "url": "https://www.wikidata.org/wiki/Q189540",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seven Samurai",
+      "url": "https://en.wikipedia.org/wiki/Seven_Samurai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

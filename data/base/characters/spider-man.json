@@ -1,0 +1,49 @@
+{
+  "id": "spider-man",
+  "category": "characters",
+  "names": [
+    {
+      "name": "Spider-Man",
+      "from": "1962"
+    }
+  ],
+  "summary": "Marvel superhero created by Stan Lee and Steve Ditko, a teenager named Peter Parker who gains spider powers and faces problems of school, money and guilt.",
+  "labels": [
+    "media"
+  ],
+  "aliases": [
+    "Wallcrawler",
+    "Web-slinger",
+    "Spidey",
+    "The Human Spider",
+    "The Amazing Spider-Man"
+  ],
+  "wikidata": "Q79037",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-08",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Spider-Man (Q79037)",
+      "url": "https://www.wikidata.org/wiki/Q79037",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spider-Man",
+      "url": "https://en.wikipedia.org/wiki/Spider-Man",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

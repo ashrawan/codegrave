@@ -1,0 +1,53 @@
+{
+  "id": "vostok-1",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Vostok 1",
+      "from": "1961"
+    }
+  ],
+  "summary": "The Soviet spacecraft that carried Yuri Gagarin around the Earth once, making him the first human in space. The flight lasted less than two hours and gave the Soviet Union an early lead in the space race.",
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "wikidata": "Q182524",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1961",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "soviet-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vostok 1 (Q182524)",
+      "url": "https://www.wikidata.org/wiki/Q182524",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vostok 1",
+      "url": "https://en.wikipedia.org/wiki/Vostok_1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

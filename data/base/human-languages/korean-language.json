@@ -1,0 +1,51 @@
+{
+  "id": "korean-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Korean",
+      "from": "1443"
+    }
+  ],
+  "summary": "Language of the Korean peninsula, with its own alphabet, hangul, created in the 1440s under King Sejong. The date given is the proclamation of hangul, when the language gained a script of its own.",
+  "labels": [
+    "language"
+  ],
+  "wikidata": "Q9176",
+  "events": [
+    {
+      "type": "born",
+      "date": "1443",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    },
+    {
+      "type": "in",
+      "to": "north-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Korean (Q9176)",
+      "url": "https://www.wikidata.org/wiki/Q9176",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Korean language",
+      "url": "https://en.wikipedia.org/wiki/Korean_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

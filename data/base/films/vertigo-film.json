@@ -1,0 +1,52 @@
+{
+  "id": "vertigo-film",
+  "category": "films",
+  "names": [
+    {
+      "name": "Vertigo",
+      "from": "1958"
+    }
+  ],
+  "maker": "Alfred Hitchcock",
+  "summary": "Thriller by Alfred Hitchcock about a former detective with a fear of heights who becomes obsessed with a woman he is hired to follow. Mixed reviews at first, it later topped some critics' lists of the best films.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q202548",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-05-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "alfred-hitchcock"
+    },
+    {
+      "type": "made_by",
+      "to": "james-stewart"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vertigo (Q202548)",
+      "url": "https://www.wikidata.org/wiki/Q202548",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vertigo (film)",
+      "url": "https://en.wikipedia.org/wiki/Vertigo_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

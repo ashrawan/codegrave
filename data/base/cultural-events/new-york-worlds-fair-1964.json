@@ -1,0 +1,57 @@
+{
+  "id": "new-york-worlds-fair-1964",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "1964 New York World's Fair",
+      "from": "1964"
+    }
+  ],
+  "summary": "A world's fair in Queens, New York, with exhibits on space, computers and the future shown by large companies. It introduced many visitors to new products such as the video telephone and the ride It's a Small World.",
+  "labels": [
+    "engineering"
+  ],
+  "wikidata": "Q1189910",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-04-22",
+      "precision": "day",
+      "note": "The fair ran for two seasons, from 22 April 1964 to 17 October 1965."
+    },
+    {
+      "type": "ended",
+      "date": "1965-10-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1964 New York World's Fair (Q1189910)",
+      "url": "https://www.wikidata.org/wiki/Q1189910",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1964 New York World's Fair",
+      "url": "https://en.wikipedia.org/wiki/1964_New_York_World's_Fair",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

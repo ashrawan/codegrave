@@ -1,0 +1,57 @@
+{
+  "id": "konstantin-tsiolkovsky",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Konstantin Tsiolkovsky",
+      "from": "1857"
+    }
+  ],
+  "summary": "Russian schoolteacher and theorist who worked out the mathematics of rocket flight and argued for liquid fuel and multistage rockets as the way to reach space. He was deaf from childhood and mostly self-taught.",
+  "labels": [
+    "physics",
+    "space-race"
+  ],
+  "aliases": [
+    "Tsiolkovsky",
+    "Konstantin Eduardovich Tsiolkovsky"
+  ],
+  "wikidata": "Q41239",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857-09-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1935-09-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "jules-verne"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Konstantin Tsiolkovsky (Q41239)",
+      "url": "https://www.wikidata.org/wiki/Q41239",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Konstantin Tsiolkovsky",
+      "url": "https://en.wikipedia.org/wiki/Konstantin_Tsiolkovsky",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

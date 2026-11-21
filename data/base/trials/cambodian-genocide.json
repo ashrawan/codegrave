@@ -1,0 +1,53 @@
+{
+  "id": "cambodian-genocide",
+  "category": "trials",
+  "names": [
+    {
+      "name": "Cambodian genocide",
+      "from": "1975"
+    }
+  ],
+  "summary": "The killing of well over a million people in Cambodia under the Khmer Rouge government led by Pol Pot. Deaths came from executions, forced labour, famine and disease. It ended when Vietnamese forces overthrew the regime in 1979.",
+  "labels": [
+    "war",
+    "human-rights"
+  ],
+  "wikidata": "Q2885072",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-04-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-01-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "khmer-rouge"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cambodian genocide (Q2885072)",
+      "url": "https://www.wikidata.org/wiki/Q2885072",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cambodian genocide",
+      "url": "https://en.wikipedia.org/wiki/Cambodian_genocide",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

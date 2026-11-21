@@ -1,0 +1,53 @@
+{
+  "id": "renaissance",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Renaissance",
+      "from": "1350"
+    }
+  ],
+  "summary": "A period of renewed interest in classical learning and new ideas in art, science and writing, which began in Italian cities and spread across Europe. Dates are rough.",
+  "labels": [
+    "visual-art",
+    "education"
+  ],
+  "wikidata": "Q4692",
+  "events": [
+    {
+      "type": "born",
+      "date": "1350",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "europe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Renaissance (Q4692)",
+      "url": "https://www.wikidata.org/wiki/Q4692",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Renaissance",
+      "url": "https://en.wikipedia.org/wiki/Renaissance",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

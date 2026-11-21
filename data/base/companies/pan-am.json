@@ -1,0 +1,65 @@
+{
+  "id": "pan-am",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Pan Am",
+      "from": "1927"
+    }
+  ],
+  "summary": "American airline that flew early transatlantic and transpacific passenger routes and helped bring jet travel to the public with the Boeing 707. It stopped flying in 1991.",
+  "labels": [
+    "business",
+    "transport"
+  ],
+  "aliases": [
+    "Pan American Airways",
+    "Pan American World",
+    "PanAm",
+    "PAA",
+    "Pan American World Airways Inc."
+  ],
+  "wikidata": "Q8681",
+  "events": [
+    {
+      "type": "born",
+      "date": "1927-03-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Bankrupt after years of losses and rising costs",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-york-city"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pan Am (Q8681)",
+      "url": "https://www.wikidata.org/wiki/Q8681",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pan Am",
+      "url": "https://en.wikipedia.org/wiki/Pan_Am",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

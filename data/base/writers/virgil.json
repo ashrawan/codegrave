@@ -1,0 +1,58 @@
+{
+  "id": "virgil",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Virgil",
+      "from": "-0070"
+    }
+  ],
+  "summary": "Roman poet who wrote the Aeneid, an epic about the Trojan hero Aeneas and the roots of Rome. It became the model for later epics, and Dante chose Virgil as his guide through hell in the Divine Comedy.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Swan of Mantua",
+    "Mantuan Swan",
+    "Publius Vergilius Maro",
+    "Vergil"
+  ],
+  "wikidata": "Q1398",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0070-10-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "-0019-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "homer"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Virgil (Q1398)",
+      "url": "https://www.wikidata.org/wiki/Q1398",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Virgil",
+      "url": "https://en.wikipedia.org/wiki/Virgil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

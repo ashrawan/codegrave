@@ -1,0 +1,70 @@
+{
+  "id": "colony-of-virginia",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Colony of Virginia",
+      "from": "1607"
+    }
+  ],
+  "summary": "The first permanent English colony in North America, begun at Jamestown in 1607. Tobacco farming, slavery and a representative assembly grew there, and it later supplied several leaders of the American Revolution.",
+  "labels": [
+    "lost",
+    "exploration"
+  ],
+  "aliases": [
+    "Province of Virginia",
+    "Virginia Colony"
+  ],
+  "wikidata": "Q1070529",
+  "events": [
+    {
+      "type": "born",
+      "date": "1607",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1776",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Became the independent Commonwealth of Virginia during the American Revolution",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "thirteen-colonies"
+    },
+    {
+      "type": "in",
+      "to": "british-empire"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    },
+    {
+      "type": "related",
+      "to": "elizabeth-i"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colony of Virginia (Q1070529)",
+      "url": "https://www.wikidata.org/wiki/Q1070529",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colony of Virginia",
+      "url": "https://en.wikipedia.org/wiki/Colony_of_Virginia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

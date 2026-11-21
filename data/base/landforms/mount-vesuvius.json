@@ -1,0 +1,50 @@
+{
+  "id": "mount-vesuvius",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Mount Vesuvius",
+      "from": "-25000"
+    }
+  ],
+  "summary": "The volcano above the Bay of Naples, Italy, famous for the eruption of 79 CE that buried Pompeii and Herculaneum. It is among the most dangerous volcanoes in the world because so many people live near it.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Vesuvius"
+  ],
+  "wikidata": "Q524",
+  "events": [
+    {
+      "type": "born",
+      "date": "-25000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mount Vesuvius (Q524)",
+      "url": "https://www.wikidata.org/wiki/Q524",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mount Vesuvius",
+      "url": "https://en.wikipedia.org/wiki/Mount_Vesuvius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

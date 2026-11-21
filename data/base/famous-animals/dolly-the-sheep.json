@@ -1,0 +1,48 @@
+{
+  "id": "dolly-the-sheep",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Dolly the sheep",
+      "from": "1996"
+    }
+  ],
+  "summary": "A sheep born in Scotland in 1996, the first mammal cloned from an adult cell. She raised hopes and fears about cloning, and she had normal lambs before she was put down in 2003.",
+  "labels": [
+    "biology",
+    "firsts"
+  ],
+  "wikidata": "Q171433",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-07-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003-02-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Dolly the Sheep (Q171433)",
+      "url": "https://www.wikidata.org/wiki/Q171433",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dolly (sheep)",
+      "url": "https://en.wikipedia.org/wiki/Dolly_(sheep)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

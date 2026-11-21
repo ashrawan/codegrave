@@ -1,0 +1,54 @@
+{
+  "id": "manchester-united",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Manchester United",
+      "from": "1878"
+    }
+  ],
+  "summary": "English football club that began as a works team of a railway company. It rebuilt after the 1958 Munich air disaster and has won the English league more often than most clubs.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Man United",
+    "MUFC",
+    "Manchester United Football Club",
+    "Manchester United FC",
+    "Man Utd"
+  ],
+  "wikidata": "Q18656",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manchester United F.C. (Q18656)",
+      "url": "https://www.wikidata.org/wiki/Q18656",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manchester United F.C.",
+      "url": "https://en.wikipedia.org/wiki/Manchester_United_F.C.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

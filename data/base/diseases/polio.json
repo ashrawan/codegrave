@@ -1,0 +1,49 @@
+{
+  "id": "polio",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Polio",
+      "from": "1840"
+    }
+  ],
+  "summary": "A viral disease that can cause paralysis, which Jakob Heine described in 1840. Vaccines in the 1950s cut cases sharply, and polio is now rare but not fully eradicated.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "poliomyelitis",
+    "infantile paralysis",
+    "acute poliomyelitis",
+    "Heine–Medin disease"
+  ],
+  "wikidata": "Q12195",
+  "events": [
+    {
+      "type": "born",
+      "date": "1840",
+      "precision": "year",
+      "note": "Dated from when science first identified the disease or its cause. The illness itself is far older."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: poliomyelitis (Q12195)",
+      "url": "https://www.wikidata.org/wiki/Q12195",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Polio",
+      "url": "https://en.wikipedia.org/wiki/Polio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

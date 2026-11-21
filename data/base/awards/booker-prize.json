@@ -1,0 +1,58 @@
+{
+  "id": "booker-prize",
+  "category": "awards",
+  "names": [
+    {
+      "name": "Booker Prize",
+      "from": "1969"
+    }
+  ],
+  "summary": "A British literary award for a novel written in English and published in the United Kingdom or Ireland. Its shortlist and winner draw large attention to book sales.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "Man Booker Prize for Fiction",
+    "Booker-McConnell Prize",
+    "Booker Prize for Fiction",
+    "Man Booker Prize",
+    "The Booker Prize"
+  ],
+  "wikidata": "Q160082",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-04",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Booker Prize (Q160082)",
+      "url": "https://www.wikidata.org/wiki/Q160082",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Booker Prize",
+      "url": "https://en.wikipedia.org/wiki/Booker_Prize",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tea",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Tea",
+      "from": "-0200"
+    }
+  ],
+  "summary": "A drink made by steeping the leaves of the tea plant in hot water. It was first drunk in China, spread across Asia, and became one of the most traded goods in the world.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q6097",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "bubble-tea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: tea (Q6097)",
+      "url": "https://www.wikidata.org/wiki/Q6097",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tea",
+      "url": "https://en.wikipedia.org/wiki/Tea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

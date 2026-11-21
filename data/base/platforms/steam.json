@@ -1,0 +1,44 @@
+{
+  "id": "steam",
+  "category": "platforms",
+  "names": [
+    {
+      "name": "Steam",
+      "from": "2003"
+    }
+  ],
+  "maker": "Valve",
+  "summary": "Digital store and game library from Valve, launched in 2003, first to update Valve's own games and later to sell those of other makers. It handles downloads, friends lists and updates, and is a main way PC games are sold.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "wikidata": "Q337535",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Steam (Q337535)",
+      "url": "https://www.wikidata.org/wiki/Q337535",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Steam (service)",
+      "url": "https://en.wikipedia.org/wiki/Steam_(service)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

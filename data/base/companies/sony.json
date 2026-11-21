@@ -1,0 +1,58 @@
+{
+  "id": "sony",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Sony",
+      "from": "1946"
+    }
+  ],
+  "maker": "Masaru Ibuka and Akio Morita",
+  "summary": "Japanese electronics company founded in Tokyo soon after the war. It made the Walkman and the PlayStation among many other products, and it also owns film, television and music businesses.",
+  "labels": [
+    "business",
+    "engineering",
+    "media"
+  ],
+  "aliases": [
+    "Sony Group",
+    "Totsuko"
+  ],
+  "wikidata": "Q41187",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-05-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "akio-morita"
+    },
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sony Group (Q41187)",
+      "url": "https://www.wikidata.org/wiki/Q41187",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sony",
+      "url": "https://en.wikipedia.org/wiki/Sony",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "leonardo-da-vinci",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Leonardo da Vinci",
+      "from": "1452"
+    }
+  ],
+  "summary": "Italian painter, engineer and student of anatomy and nature who painted the Mona Lisa and The Last Supper. His notebooks hold designs for flying machines and studies of the human body.",
+  "labels": [
+    "visual-art",
+    "engineering"
+  ],
+  "wikidata": "Q762",
+  "events": [
+    {
+      "type": "born",
+      "date": "1452-04-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1519-05-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Leonardo da Vinci (Q762)",
+      "url": "https://www.wikidata.org/wiki/Q762",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Leonardo da Vinci",
+      "url": "https://en.wikipedia.org/wiki/Leonardo_da_Vinci",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

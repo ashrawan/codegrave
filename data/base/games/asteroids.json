@@ -1,0 +1,49 @@
+{
+  "id": "asteroids",
+  "category": "games",
+  "names": [
+    {
+      "name": "Asteroids",
+      "from": "1979"
+    }
+  ],
+  "maker": "Atari",
+  "summary": "Arcade game drawn with sharp vector lines, in which a small ship spins and thrusts through a field of drifting rocks and saucers. It was one of Atari's best-selling arcade machines.",
+  "labels": [
+    "games",
+    "computing"
+  ],
+  "wikidata": "Q748890",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-11",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "atari-inc"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Asteroids (Q748890)",
+      "url": "https://www.wikidata.org/wiki/Q748890",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Asteroids (video game)",
+      "url": "https://en.wikipedia.org/wiki/Asteroids_(video_game)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

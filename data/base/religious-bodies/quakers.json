@@ -1,0 +1,54 @@
+{
+  "id": "quakers",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Quakers",
+      "from": "1652"
+    }
+  ],
+  "maker": "George Fox",
+  "summary": "Religious movement that began in England with George Fox. Its members, formally the Religious Society of Friends, worship in silence, refuse to fight in wars, and were early opponents of slavery.",
+  "labels": [
+    "religion",
+    "human-rights"
+  ],
+  "aliases": [
+    "Society of Friends",
+    "Friends",
+    "Quakerism"
+  ],
+  "wikidata": "Q170208",
+  "events": [
+    {
+      "type": "born",
+      "date": "1652",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "protestantism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Quakers (Q170208)",
+      "url": "https://www.wikidata.org/wiki/Q170208",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quakers",
+      "url": "https://en.wikipedia.org/wiki/Quakers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

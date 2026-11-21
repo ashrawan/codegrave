@@ -1,0 +1,56 @@
+{
+  "id": "papal-states",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Papal States",
+      "from": "0754"
+    }
+  ],
+  "summary": "The lands of central Italy ruled directly by the popes as monarchs, with Rome as their centre. They were one of the main obstacles to Italian unification.",
+  "labels": [
+    "lost",
+    "religion"
+  ],
+  "aliases": [
+    "Papal State",
+    "Church State",
+    "State of the Church",
+    "Status Ecclesiae",
+    "Ecclesiastical States"
+  ],
+  "wikidata": "Q170174",
+  "events": [
+    {
+      "type": "born",
+      "date": "0754",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1870-09-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Annexed by the Kingdom of Italy when its army entered Rome",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Papal States (Q170174)",
+      "url": "https://www.wikidata.org/wiki/Q170174",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Papal States",
+      "url": "https://en.wikipedia.org/wiki/Papal_States",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

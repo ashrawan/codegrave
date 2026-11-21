@@ -1,0 +1,70 @@
+{
+  "id": "democratic-republic-of-the-congo",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Democratic Republic of the Congo",
+      "from": "1960"
+    }
+  ],
+  "summary": "A very large country in central Africa that became independent from Belgium in 1960. It has rainforest, the Congo River and rich deposits of copper and cobalt, and has suffered long conflicts.",
+  "labels": [
+    "independence"
+  ],
+  "aliases": [
+    "DRC",
+    "DR Congo",
+    "Democratic Republic of Congo",
+    "cd",
+    "Dem. Republic of the Congo"
+  ],
+  "wikidata": "Q974",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    },
+    {
+      "type": "member_of",
+      "to": "african-union"
+    },
+    {
+      "type": "member_of",
+      "to": "world-trade-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "world-health-organization"
+    },
+    {
+      "type": "member_of",
+      "to": "non-proliferation-treaty"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Democratic Republic of the Congo (Q974)",
+      "url": "https://www.wikidata.org/wiki/Q974",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Democratic Republic of the Congo",
+      "url": "https://en.wikipedia.org/wiki/Democratic_Republic_of_the_Congo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

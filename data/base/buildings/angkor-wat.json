@@ -1,0 +1,60 @@
+{
+  "id": "angkor-wat",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Angkor Wat",
+      "from": "1150"
+    }
+  ],
+  "summary": "Temple built for King Suryavarman II in the Khmer capital. Dedicated first to Vishnu and later used by Buddhists, it is the largest religious monument in the world and appears on Cambodia's flag.",
+  "labels": [
+    "religion",
+    "architecture",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Nokor Wat",
+    "Prasat Angkor Wat",
+    "Temple City",
+    "City of Temples",
+    "Vrah Viṣṇuloka"
+  ],
+  "wikidata": "Q43473",
+  "events": [
+    {
+      "type": "born",
+      "date": "1150",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "angkor"
+    },
+    {
+      "type": "in",
+      "to": "khmer-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Angkor Wat (Q43473)",
+      "url": "https://www.wikidata.org/wiki/Q43473",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Angkor Wat",
+      "url": "https://en.wikipedia.org/wiki/Angkor_Wat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

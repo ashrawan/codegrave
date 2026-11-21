@@ -1,0 +1,53 @@
+{
+  "id": "piper-alpha",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Piper Alpha disaster",
+      "from": "1988"
+    }
+  ],
+  "summary": "An explosion and fire destroyed an oil and gas platform in the North Sea off Scotland, in the worst offshore oil accident to date. The inquiry led to new safety rules that put responsibility on platform operators.",
+  "labels": [
+    "energy",
+    "engineering"
+  ],
+  "wikidata": "Q1569137",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-07",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1988-07",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Piper Alpha (Q1569137)",
+      "url": "https://www.wikidata.org/wiki/Q1569137",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Piper Alpha",
+      "url": "https://en.wikipedia.org/wiki/Piper_Alpha",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

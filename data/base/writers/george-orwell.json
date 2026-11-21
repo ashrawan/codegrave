@@ -1,0 +1,53 @@
+{
+  "id": "george-orwell",
+  "category": "writers",
+  "names": [
+    {
+      "name": "George Orwell",
+      "from": "1903"
+    }
+  ],
+  "summary": "Pen name of Eric Blair, an English writer. His fable Animal Farm and novel Nineteen Eighty-Four warned about dictatorship and lies, and gave English words such as Big Brother and Orwellian.",
+  "labels": [
+    "literature",
+    "politics"
+  ],
+  "wikidata": "Q3335",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903-06-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1950-01-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "charles-dickens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: George Orwell (Q3335)",
+      "url": "https://www.wikidata.org/wiki/Q3335",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George Orwell",
+      "url": "https://en.wikipedia.org/wiki/George_Orwell",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

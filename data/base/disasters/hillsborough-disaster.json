@@ -1,0 +1,55 @@
+{
+  "id": "hillsborough-disaster",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hillsborough disaster",
+      "from": "1989"
+    }
+  ],
+  "summary": "A crush of supporters at a football match in Sheffield, England, killed many people. Years of campaigning by families led to new inquests that found the dead had been unlawfully killed, and to stadium rules for seating.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "Hillsborough tragedy"
+  ],
+  "wikidata": "Q234132",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-04-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-04-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hillsborough disaster (Q234132)",
+      "url": "https://www.wikidata.org/wiki/Q234132",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hillsborough disaster",
+      "url": "https://en.wikipedia.org/wiki/Hillsborough_disaster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

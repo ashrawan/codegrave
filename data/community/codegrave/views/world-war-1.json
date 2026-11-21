@@ -1,0 +1,87 @@
+{
+  "id": "world-war-1",
+  "name": "World War I",
+  "description": "The First World War, from the shots at Sarajevo to the armistice: the battles, the empires that fell and the peace that followed.",
+  "category": "events",
+  "labels": [
+    "war"
+  ],
+  "tags": [
+    "ww1",
+    "wwi",
+    "first world war",
+    "great war",
+    "trenches",
+    "1914",
+    "armistice",
+    "somme"
+  ],
+  "entries": [
+    "ottoman-empire",
+    "russian-empire",
+    "woodrow-wilson",
+    "wilhelm-ii",
+    "austria-hungary",
+    "franco-prussian-war",
+    "german-empire",
+    "belle-epoque",
+    "russo-japanese-war",
+    "assassination-of-franz-ferdinand",
+    "world-war-i",
+    "battle-of-tannenberg-1914",
+    "first-battle-of-the-marne",
+    "gallipoli-campaign",
+    "lusitania-sinking",
+    "tank",
+    "chemical-weapon",
+    "battle-of-verdun",
+    "battle-of-jutland",
+    "battle-of-the-somme",
+    "russian-revolution",
+    "battle-of-passchendaele",
+    "battle-of-caporetto",
+    "spanish-flu",
+    "treaty-of-brest-litovsk",
+    "german-revolution-of-1918-1919",
+    "armistice-of-11-november-1918",
+    "treaty-of-versailles",
+    "league-of-nations"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-road-to-war",
+      "name": "The road to war",
+      "from": 1870,
+      "to": 1913,
+      "note": "After 1870 Europe grows rich and builds huge armies and rival alliances. Wars such as the Franco-Prussian War and the Russo-Japanese War show what modern weapons can do, but the Belle Époque ignores the warning."
+    },
+    {
+      "id": "1914-war-begins",
+      "name": "1914: war begins",
+      "from": 1914,
+      "to": 1914,
+      "note": "A shooting in Sarajevo sets off ultimatums and mobilisations. Within weeks the great powers are at war, the German advance is stopped at the Marne, and both sides dig in for what becomes a long war."
+    },
+    {
+      "id": "trench-warfare",
+      "name": "Trench warfare",
+      "from": 1915,
+      "to": 1916,
+      "note": "On the Western Front, huge offensives at Verdun and the Somme cost vast numbers of lives and gain little ground. Poison gas and the first tanks appear, Gallipoli fails, the war at sea reaches its climax at Jutland, and the sinking of the Lusitania turns opinion in America."
+    },
+    {
+      "id": "1917-revolution-and-new-allies",
+      "name": "1917: revolution and new allies",
+      "from": 1917,
+      "to": 1917,
+      "note": "Revolution in Russia knocks the largest Allied army out of the war while mud at Passchendaele and defeat at Caporetto test the Allies. The United States enters the war on their side."
+    },
+    {
+      "id": "armistice-and-peace",
+      "name": "Armistice and peace",
+      "from": 1918,
+      "to": 1923,
+      "note": "Germany signs the armistice on 11 November 1918 after revolution at home. The German, Austro-Hungarian, Russian and Ottoman empires are gone, and a flu pandemic sweeps the world. The Treaty of Versailles redraws Europe, but its terms leave bitterness that shapes the interwar years."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "el-clasico",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "El Clásico",
+      "from": "1902"
+    }
+  ],
+  "summary": "Football match between Real Madrid and FC Barcelona, the two biggest clubs in Spain. Its sporting weight is joined by old rivalries between Madrid and Catalonia, and it is watched around the world.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q484736",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902-05-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    },
+    {
+      "type": "related",
+      "to": "real-madrid"
+    },
+    {
+      "type": "related",
+      "to": "fc-barcelona"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: El Clásico (Q484736)",
+      "url": "https://www.wikidata.org/wiki/Q484736",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: El Clásico",
+      "url": "https://en.wikipedia.org/wiki/El_Cl%C3%A1sico",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

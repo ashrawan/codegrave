@@ -1,0 +1,63 @@
+{
+  "id": "world-cup-2014",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2014 FIFA World Cup",
+      "from": "2014"
+    }
+  ],
+  "summary": "Held in Brazil, this World Cup was won by Germany. Its 7 to 1 semi-final win over the hosts was one of the biggest surprises in the tournament's history, and Germany then beat Argentina in the final.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "20th FIFA World Cup",
+    "2014 FIFA World Cup Brasil",
+    "FIFA 2014",
+    "2014 FIFA World Cup Brazil",
+    "FIFA World Cup 2014"
+  ],
+  "wikidata": "Q79859",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-06-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "maracana-stadium"
+    },
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2014 FIFA World Cup (Q79859)",
+      "url": "https://www.wikidata.org/wiki/Q79859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2014 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/2014_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

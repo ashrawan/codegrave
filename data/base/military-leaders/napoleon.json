@@ -1,0 +1,60 @@
+{
+  "id": "napoleon",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Napoleon",
+      "from": "1769"
+    }
+  ],
+  "summary": "Corsican-born French general who took power in 1799 and made himself emperor in 1804. He won many victories in Europe, introduced the Napoleonic Code, and was defeated at Waterloo in 1815.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Napulione di Buonaparte",
+    "The Little Corporal",
+    "Napoleon Buonaparte",
+    "Napoleon I of France",
+    "the Corsican Napolean"
+  ],
+  "wikidata": "Q517",
+  "events": [
+    {
+      "type": "born",
+      "date": "1769-08-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1821-05-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "french-revolution"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Napoleon (Q517)",
+      "url": "https://www.wikidata.org/wiki/Q517",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Napoleon",
+      "url": "https://en.wikipedia.org/wiki/Napoleon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

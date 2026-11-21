@@ -1,0 +1,50 @@
+{
+  "id": "volkswagen-beetle",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Volkswagen Beetle",
+      "from": "1938"
+    }
+  ],
+  "maker": "Ferdinand Porsche and Volkswagen",
+  "summary": "A small rear-engined car designed in Germany in the 1930s and sold from 1938, but mass-produced only after the war. More than twenty million were built, in Germany and elsewhere, until 2003.",
+  "labels": [
+    "transport",
+    "business"
+  ],
+  "wikidata": "Q152946",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2003-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Production ended in Mexico as sales fell",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Volkswagen Beetle (Q152946)",
+      "url": "https://www.wikidata.org/wiki/Q152946",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Volkswagen Beetle",
+      "url": "https://en.wikipedia.org/wiki/Volkswagen_Beetle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

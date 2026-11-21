@@ -1,0 +1,53 @@
+{
+  "id": "apple-music",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Apple Music",
+      "from": "2015"
+    }
+  ],
+  "maker": "Apple",
+  "summary": "Apple's music streaming service, launched in 2015 with a monthly fee. It offers a large library, radio shows and playlists, and it is one of the main rivals of Spotify.",
+  "labels": [
+    "music",
+    "media"
+  ],
+  "wikidata": "Q20056642",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "apple-inc"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apple Music (Q20056642)",
+      "url": "https://www.wikidata.org/wiki/Q20056642",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apple Music",
+      "url": "https://en.wikipedia.org/wiki/Apple_Music",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

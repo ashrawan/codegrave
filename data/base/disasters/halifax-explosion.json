@@ -1,0 +1,53 @@
+{
+  "id": "halifax-explosion",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Halifax Explosion",
+      "from": "1917"
+    }
+  ],
+  "summary": "In Halifax harbour, Canada, a French ship loaded with explosives collided with another vessel and blew up. It devastated the north end of the city, and it remains one of the largest accidental explosions.",
+  "labels": [
+    "war",
+    "transport"
+  ],
+  "wikidata": "Q502073",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-12-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1917-12-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Halifax explosion (Q502073)",
+      "url": "https://www.wikidata.org/wiki/Q502073",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Halifax Explosion",
+      "url": "https://en.wikipedia.org/wiki/Halifax_Explosion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,51 @@
+{
+  "id": "greenland",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Greenland",
+      "from": "-33000000"
+    }
+  ],
+  "summary": "The world's largest island, mostly covered by an ice sheet. It became a separate landmass as the North Atlantic opened and was split from Canada by Baffin Bay, completed about 33 million years ago.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Groenland",
+    "Greenlandia"
+  ],
+  "wikidata": "Q223",
+  "events": [
+    {
+      "type": "born",
+      "date": "-33000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "north-america"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Greenland (Q223)",
+      "url": "https://www.wikidata.org/wiki/Q223",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Greenland",
+      "url": "https://en.wikipedia.org/wiki/Greenland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

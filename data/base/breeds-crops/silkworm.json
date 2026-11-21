@@ -1,0 +1,50 @@
+{
+  "id": "silkworm",
+  "category": "breeds-crops",
+  "names": [
+    {
+      "name": "Silkworm",
+      "from": "-3000"
+    }
+  ],
+  "summary": "The caterpillar of a moth, raised in China for the silk thread of its cocoon. It can no longer live in the wild, and silk making was a closely guarded secret for ages.",
+  "labels": [
+    "food",
+    "economics"
+  ],
+  "aliases": [
+    "silk moth",
+    "silk worm",
+    "silkmoth",
+    "domestic silkmoth",
+    "Chinese silkworm"
+  ],
+  "wikidata": "Q134747",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Bombyx mori (Q134747)",
+      "url": "https://www.wikidata.org/wiki/Q134747",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bombyx mori",
+      "url": "https://en.wikipedia.org/wiki/Bombyx_mori",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

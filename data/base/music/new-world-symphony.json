@@ -1,0 +1,52 @@
+{
+  "id": "new-world-symphony",
+  "category": "music",
+  "names": [
+    {
+      "name": "New World Symphony",
+      "from": "1893"
+    }
+  ],
+  "maker": "Antonin Dvorak",
+  "summary": "Symphony written by the Czech composer Antonin Dvorak during his stay in the United States. It blends the sound of his homeland with melodies inspired by Black spirituals and Native American song, and premiered in New York.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Symphony No. 9",
+    "From the New World"
+  ],
+  "wikidata": "Q11985",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893-12-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "antonin-dvorak"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Symphony No. 9 (Q11985)",
+      "url": "https://www.wikidata.org/wiki/Q11985",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Symphony No. 9 (Dvořák)",
+      "url": "https://en.wikipedia.org/wiki/Symphony_No._9_(Dvo%C5%99%C3%A1k)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

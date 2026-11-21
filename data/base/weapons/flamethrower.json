@@ -1,0 +1,46 @@
+{
+  "id": "flamethrower",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "Flamethrower",
+      "from": "1901"
+    }
+  ],
+  "maker": "German engineers",
+  "summary": "A weapon that throws a stream of burning liquid. The modern form was built in Germany around the start of the twentieth century and used widely in both world wars, mainly to clear bunkers and trenches.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "flame thrower"
+  ],
+  "wikidata": "Q45183",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: flamethrower (Q45183)",
+      "url": "https://www.wikidata.org/wiki/Q45183",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Flamethrower",
+      "url": "https://en.wikipedia.org/wiki/Flamethrower",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

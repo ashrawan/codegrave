@@ -1,0 +1,56 @@
+{
+  "id": "domitian",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Domitian",
+      "from": "0051"
+    }
+  ],
+  "summary": "Roman emperor, the younger son of Vespasian. He ran the empire firmly and built widely, but he clashed with the Senate and was assassinated in a palace plot.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Caesar Domitianus Augustus",
+    "Domitianus"
+  ],
+  "wikidata": "Q1423",
+  "events": [
+    {
+      "type": "born",
+      "date": "0051-10-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0096-09-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "vespasian"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Domitian (Q1423)",
+      "url": "https://www.wikidata.org/wiki/Q1423",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Domitian",
+      "url": "https://en.wikipedia.org/wiki/Domitian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,52 @@
+{
+  "id": "automobile",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Automobile",
+      "from": "1886"
+    }
+  ],
+  "maker": "Karl Benz",
+  "summary": "Self-propelled road vehicle for carrying people. Karl Benz was granted a patent in 1886 for his three-wheeled motor car with a petrol engine, often called the first practical automobile.",
+  "labels": [
+    "engineering",
+    "transport"
+  ],
+  "aliases": [
+    "auto",
+    "autocar",
+    "motorcar",
+    "automobiles",
+    "motor cars"
+  ],
+  "wikidata": "Q1420",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886",
+      "precision": "year",
+      "note": "Dated from Karl Benz's patent of January 1886. Steam road vehicles are older, and other petrol cars were being built in the same years."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: car (Q1420)",
+      "url": "https://www.wikidata.org/wiki/Q1420",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Car",
+      "url": "https://en.wikipedia.org/wiki/Car",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

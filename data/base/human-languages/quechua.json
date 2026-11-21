@@ -1,0 +1,57 @@
+{
+  "id": "quechua",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Quechua",
+      "from": "1560"
+    }
+  ],
+  "summary": "Family of languages of the Andes and the main language of the Inca Empire. It was first written in Latin letters by Spanish priests, with a grammar published in 1560. Millions of people still speak it.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Quichua",
+    "runa simi",
+    "qu"
+  ],
+  "wikidata": "Q5218",
+  "events": [
+    {
+      "type": "born",
+      "date": "1560",
+      "precision": "year",
+      "note": "Dated from its first printed grammar, of 1560. The language family is about two thousand years old."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    },
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Quechua (Q5218)",
+      "url": "https://www.wikidata.org/wiki/Q5218",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quechuan languages",
+      "url": "https://en.wikipedia.org/wiki/Quechuan_languages",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

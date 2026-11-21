@@ -1,0 +1,49 @@
+{
+  "id": "gladiatorial-combat",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Gladiator combat",
+      "from": "-0264"
+    }
+  ],
+  "summary": "Fights to the death or defeat between trained fighters, shown in Roman arenas such as the Colosseum. Many gladiators were slaves or prisoners, and some became famous.",
+  "labels": [
+    "sport",
+    "games"
+  ],
+  "wikidata": "Q482999",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0264",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0404",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Faded under Christian emperors and rising costs, with a ban attributed to Honorius",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: gladiator (Q482999)",
+      "url": "https://www.wikidata.org/wiki/Q482999",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gladiator",
+      "url": "https://en.wikipedia.org/wiki/Gladiator",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

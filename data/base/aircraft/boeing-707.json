@@ -1,0 +1,55 @@
+{
+  "id": "boeing-707",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Boeing 707",
+      "from": "1957"
+    }
+  ],
+  "maker": "Boeing",
+  "summary": "The American jet airliner that made jet travel common from 1958. It was reliable and fast and carried passengers across oceans, and it established Boeing as the leading maker of airliners.",
+  "labels": [
+    "transport",
+    "business"
+  ],
+  "aliases": [
+    "B707",
+    "707",
+    "B-707"
+  ],
+  "wikidata": "Q6394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-12-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Production ended in favour of newer wide-body jets",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Boeing 707 (Q6394)",
+      "url": "https://www.wikidata.org/wiki/Q6394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boeing 707",
+      "url": "https://en.wikipedia.org/wiki/Boeing_707",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

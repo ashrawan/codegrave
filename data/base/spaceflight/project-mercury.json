@@ -1,0 +1,56 @@
+{
+  "id": "project-mercury",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Project Mercury",
+      "from": "1958"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "The first crewed spaceflight programme of the United States, which sent six astronauts into space between 1961 and 1963. It showed that people could work in orbit and prepared the ground for Gemini and Apollo.",
+  "labels": [
+    "space-race"
+  ],
+  "aliases": [
+    "Mercury program"
+  ],
+  "wikidata": "Q52162",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1963",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Project Mercury (Q52162)",
+      "url": "https://www.wikidata.org/wiki/Q52162",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Project Mercury",
+      "url": "https://en.wikipedia.org/wiki/Project_Mercury",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

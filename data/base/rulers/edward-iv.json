@@ -1,0 +1,57 @@
+{
+  "id": "edward-iv",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Edward IV",
+      "from": "1442"
+    }
+  ],
+  "summary": "The first Yorkist king. He won the throne in battle in 1461, lost it for a few months in 1470 and then ruled until his death.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Edward IV of England"
+  ],
+  "wikidata": "Q160341",
+  "events": [
+    {
+      "type": "born",
+      "date": "1442-04-28",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1461",
+      "precision": "year",
+      "label": "Became king",
+      "note": "King of England from 1461 to 1470 and again from 1471 to 1483."
+    },
+    {
+      "type": "ended",
+      "date": "1483-04-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Edward IV of England (Q160341)",
+      "url": "https://www.wikidata.org/wiki/Q160341",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edward IV",
+      "url": "https://en.wikipedia.org/wiki/Edward_IV",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,65 @@
+{
+  "id": "cuban-missile-crisis",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Cuban Missile Crisis",
+      "from": "1962"
+    }
+  ],
+  "summary": "A thirteen-day standoff in October 1962 after the US found Soviet missiles in Cuba. It brought the superpowers closer to nuclear war than ever, and ended when the missiles were removed.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "wikidata": "Q128160",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-10-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-10-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "cold-war"
+    },
+    {
+      "type": "in",
+      "to": "cuba"
+    },
+    {
+      "type": "related",
+      "to": "soviet-union"
+    },
+    {
+      "type": "related",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cuban Missile Crisis (Q128160)",
+      "url": "https://www.wikidata.org/wiki/Q128160",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cuban Missile Crisis",
+      "url": "https://en.wikipedia.org/wiki/Cuban_Missile_Crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

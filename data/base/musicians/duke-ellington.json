@@ -1,0 +1,51 @@
+{
+  "id": "duke-ellington",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Duke Ellington",
+      "from": "1899"
+    }
+  ],
+  "summary": "American pianist, composer and bandleader who led his orchestra for about fifty years. He wrote thousands of pieces, including Take the A Train and Mood Indigo, and treated jazz as serious art.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Duke Elington",
+    "Mood Ellington"
+  ],
+  "wikidata": "Q4030",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-04-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-05-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Duke Ellington (Q4030)",
+      "url": "https://www.wikidata.org/wiki/Q4030",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Duke Ellington",
+      "url": "https://en.wikipedia.org/wiki/Duke_Ellington",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

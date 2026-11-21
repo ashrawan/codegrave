@@ -1,0 +1,54 @@
+{
+  "id": "the-pirate-bay",
+  "category": "websites",
+  "names": [
+    {
+      "name": "The Pirate Bay",
+      "from": "2003"
+    }
+  ],
+  "summary": "Swedish website that lists torrent links so people can share files, including films and music that are copyrighted. It has been the subject of court cases and blocked in many countries, but it has kept returning.",
+  "labels": [
+    "media",
+    "banned"
+  ],
+  "aliases": [
+    "torrentdb",
+    "thepiratebay",
+    "torrentdb.ga",
+    "TPB"
+  ],
+  "wikidata": "Q22663",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-09-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Pirate Bay (Q22663)",
+      "url": "https://www.wikidata.org/wiki/Q22663",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Pirate Bay",
+      "url": "https://en.wikipedia.org/wiki/The_Pirate_Bay",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

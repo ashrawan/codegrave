@@ -1,0 +1,59 @@
+{
+  "id": "chicxulub-impact",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Chicxulub Impact",
+      "from": "-66000000"
+    }
+  ],
+  "summary": "An asteroid, perhaps ten kilometres wide, struck what is now Mexico's Yucatan about 66 million years ago, leaving a crater around 180 kilometres across. The blast and dust-filled skies are blamed for the end of the dinosaurs.",
+  "labels": [
+    "astronomy",
+    "environment"
+  ],
+  "aliases": [
+    "Mexican Chicxulub crater",
+    "Chicxulub impact event",
+    "Yucatan impact event",
+    "Chicxulub impact structure"
+  ],
+  "wikidata": "Q55816",
+  "events": [
+    {
+      "type": "born",
+      "date": "-66000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chicxulub crater (Q55816)",
+      "url": "https://www.wikidata.org/wiki/Q55816",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chicxulub crater",
+      "url": "https://en.wikipedia.org/wiki/Chicxulub_crater",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

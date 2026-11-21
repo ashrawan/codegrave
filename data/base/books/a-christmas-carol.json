@@ -1,0 +1,54 @@
+{
+  "id": "a-christmas-carol",
+  "category": "books",
+  "names": [
+    {
+      "name": "A Christmas Carol",
+      "from": "1843"
+    }
+  ],
+  "summary": "Short novel by Charles Dickens in which the miser Ebenezer Scrooge is visited by ghosts on Christmas Eve and changes his ways. It helped shape how Christmas is celebrated in English-speaking countries.",
+  "labels": [
+    "literature"
+  ],
+  "aliases": [
+    "A Christmas Carol in Prose"
+  ],
+  "wikidata": "Q62879",
+  "events": [
+    {
+      "type": "born",
+      "date": "1843-12-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "charles-dickens"
+    },
+    {
+      "type": "about",
+      "to": "christmas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: A Christmas Carol (Q62879)",
+      "url": "https://www.wikidata.org/wiki/Q62879",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: A Christmas Carol",
+      "url": "https://en.wikipedia.org/wiki/A_Christmas_Carol",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

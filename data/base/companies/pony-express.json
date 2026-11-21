@@ -1,0 +1,53 @@
+{
+  "id": "pony-express",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Pony Express",
+      "from": "1860"
+    }
+  ],
+  "summary": "A mail service in the American West in which relays of riders carried letters between Missouri and California. It ran for just over a year and became a legend of the American West.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q859130",
+  "events": [
+    {
+      "type": "born",
+      "date": "1860",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1861",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the transcontinental telegraph",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pony Express (Q859130)",
+      "url": "https://www.wikidata.org/wiki/Q859130",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pony Express",
+      "url": "https://en.wikipedia.org/wiki/Pony_Express",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

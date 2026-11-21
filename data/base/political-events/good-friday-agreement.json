@@ -1,0 +1,55 @@
+{
+  "id": "good-friday-agreement",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Good Friday Agreement",
+      "from": "1998"
+    }
+  ],
+  "summary": "An agreement signed in Belfast that set up shared government in Northern Ireland and largely ended the conflict known as the Troubles. It was approved by voters in both parts of Ireland.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Belfast Agreement"
+  ],
+  "wikidata": "Q208958",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-04-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1998-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Good Friday Agreement (Q208958)",
+      "url": "https://www.wikidata.org/wiki/Q208958",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Good Friday Agreement",
+      "url": "https://en.wikipedia.org/wiki/Good_Friday_Agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

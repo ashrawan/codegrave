@@ -1,0 +1,54 @@
+{
+  "id": "inca-religion",
+  "category": "religions",
+  "names": [
+    {
+      "name": "Inca religion",
+      "from": "1200"
+    }
+  ],
+  "summary": "The state religion of the Inca Empire in the Andes, centred on Inti the sun god and on the worship of mountains, springs and the mummies of ancestors. The emperor was held to be a child of the sun.",
+  "labels": [
+    "religion",
+    "lost"
+  ],
+  "wikidata": "Q3238302",
+  "events": [
+    {
+      "type": "born",
+      "date": "1200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1572",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Spanish conquest and missionary campaigns against local religion",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "inca-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: religion in the Inca Empire (Q3238302)",
+      "url": "https://www.wikidata.org/wiki/Q3238302",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Religion in the Inca Empire",
+      "url": "https://en.wikipedia.org/wiki/Religion_in_the_Inca_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,56 @@
+{
+  "id": "russo-japanese-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Russo-Japanese War",
+      "from": "1904"
+    }
+  ],
+  "summary": "War between Russia and Japan over influence in Manchuria and Korea. Japan's win, including the naval battle of Tsushima, surprised the world and led to unrest in Russia.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q159950",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-02-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1905-09-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "empire-of-japan"
+    },
+    {
+      "type": "related",
+      "to": "russian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russo-Japanese War (Q159950)",
+      "url": "https://www.wikidata.org/wiki/Q159950",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russo-Japanese War",
+      "url": "https://en.wikipedia.org/wiki/Russo-Japanese_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

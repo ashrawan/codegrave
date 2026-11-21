@@ -1,0 +1,54 @@
+{
+  "id": "house-of-bourbon",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "House of Bourbon",
+      "from": "1272"
+    }
+  ],
+  "summary": "European royal house that began as lords of Bourbon in France in the Middle Ages. Its branches ruled France from 1589, as well as Spain, Naples and Sicily, and Parma. Today the Spanish king and the Grand Duke of Luxembourg descend from it.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Bourbon"
+  ],
+  "wikidata": "Q58389",
+  "events": [
+    {
+      "type": "born",
+      "date": "1272",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kingdom-of-france"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: House of Bourbon (Q58389)",
+      "url": "https://www.wikidata.org/wiki/Q58389",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: House of Bourbon",
+      "url": "https://en.wikipedia.org/wiki/House_of_Bourbon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "the-prince",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Prince",
+      "from": "1532"
+    }
+  ],
+  "summary": "Short work by Niccolo Machiavelli giving advice to rulers on how to gain and keep power, even by harsh means. It was written around 1513 and published after his death; it founded modern political thinking.",
+  "labels": [
+    "politics",
+    "philosophy"
+  ],
+  "wikidata": "Q131719",
+  "events": [
+    {
+      "type": "born",
+      "date": "1532",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "niccolo-machiavelli"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Prince (Q131719)",
+      "url": "https://www.wikidata.org/wiki/Q131719",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Prince",
+      "url": "https://en.wikipedia.org/wiki/The_Prince",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

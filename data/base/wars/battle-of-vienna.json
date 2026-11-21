@@ -1,0 +1,64 @@
+{
+  "id": "battle-of-vienna",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Vienna",
+      "from": "1683"
+    }
+  ],
+  "summary": "A relief army led by John III Sobieski of Poland, with allied forces, broke the Ottoman siege of Vienna. It marked the start of the Ottoman retreat from central Europe.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q200855",
+  "events": [
+    {
+      "type": "born",
+      "date": "1683-09-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1683-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    },
+    {
+      "type": "related",
+      "to": "ottoman-empire"
+    },
+    {
+      "type": "related",
+      "to": "holy-roman-empire"
+    },
+    {
+      "type": "related",
+      "to": "polish-lithuanian-commonwealth"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Vienna (Q200855)",
+      "url": "https://www.wikidata.org/wiki/Q200855",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Vienna",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Vienna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

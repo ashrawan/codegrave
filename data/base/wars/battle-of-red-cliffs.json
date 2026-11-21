@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-red-cliffs",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Red Cliffs",
+      "from": "0208"
+    }
+  ],
+  "summary": "A naval battle on the Yangtze river in which the allied forces of Sun Quan and Liu Bei defeated the larger army of Cao Cao. It helped create the Three Kingdoms of China and is retold in a famous novel.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Battle of Chibi"
+  ],
+  "wikidata": "Q830059",
+  "events": [
+    {
+      "type": "born",
+      "date": "0208",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0208",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yangtze"
+    },
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Red Cliffs (Q830059)",
+      "url": "https://www.wikidata.org/wiki/Q830059",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Red Cliffs",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Red_Cliffs",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

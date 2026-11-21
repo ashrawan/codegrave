@@ -1,0 +1,56 @@
+{
+  "id": "sega-saturn",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "Sega Saturn",
+      "from": "1994"
+    }
+  ],
+  "maker": "Sega",
+  "summary": "Sega's 32-bit console, hard to program and sold at a high price. It sold well in Japan but lost to the PlayStation in the West, and Sega moved on to the Dreamcast.",
+  "labels": [
+    "games",
+    "failures",
+    "rivalries"
+  ],
+  "wikidata": "Q200912",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-11-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Overtaken by the PlayStation and replaced by the Dreamcast",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sega"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sega Saturn (Q200912)",
+      "url": "https://www.wikidata.org/wiki/Q200912",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sega Saturn",
+      "url": "https://en.wikipedia.org/wiki/Sega_Saturn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

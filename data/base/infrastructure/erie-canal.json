@@ -1,0 +1,52 @@
+{
+  "id": "erie-canal",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Erie Canal",
+      "from": "1825"
+    }
+  ],
+  "summary": "Canal across New York State that joined the Hudson River to the Great Lakes. It cut the cost of shipping goods inland and helped make New York City the leading port of the United States.",
+  "labels": [
+    "transport",
+    "economics"
+  ],
+  "aliases": [
+    "Clinton's Ditch",
+    "New York State Barge Canal"
+  ],
+  "wikidata": "Q459578",
+  "events": [
+    {
+      "type": "born",
+      "date": "1825",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Erie Canal (Q459578)",
+      "url": "https://www.wikidata.org/wiki/Q459578",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Erie Canal",
+      "url": "https://en.wikipedia.org/wiki/Erie_Canal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

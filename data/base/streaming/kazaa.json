@@ -1,0 +1,52 @@
+{
+  "id": "kazaa",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Kazaa",
+      "from": "2001"
+    }
+  ],
+  "summary": "Peer-to-peer file sharing program that took over from Napster in the early 2000s, with millions of users swapping songs and films. Lawsuits from the music industry forced it to change and then shut.",
+  "labels": [
+    "media",
+    "computing"
+  ],
+  "aliases": [
+    "Kazaa Media Desktop"
+  ],
+  "wikidata": "Q1163401",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-03",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2012",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Legal action by the music and film industries",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Kazaa (Q1163401)",
+      "url": "https://www.wikidata.org/wiki/Q1163401",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kazaa",
+      "url": "https://en.wikipedia.org/wiki/Kazaa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

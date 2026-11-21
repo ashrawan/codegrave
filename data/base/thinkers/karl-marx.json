@@ -1,0 +1,54 @@
+{
+  "id": "karl-marx",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Karl Marx",
+      "from": "1818"
+    }
+  ],
+  "summary": "German thinker who studied how economies shape society and argued that history is driven by struggles between classes. His books, including Das Kapital, and the Communist Manifesto he wrote with Engels, shaped politics worldwide.",
+  "labels": [
+    "economics",
+    "philosophy",
+    "politics"
+  ],
+  "wikidata": "Q9061",
+  "events": [
+    {
+      "type": "born",
+      "date": "1818-05-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1883-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "georg-hegel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Karl Marx (Q9061)",
+      "url": "https://www.wikidata.org/wiki/Q9061",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Karl Marx",
+      "url": "https://en.wikipedia.org/wiki/Karl_Marx",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

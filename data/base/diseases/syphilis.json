@@ -1,0 +1,46 @@
+{
+  "id": "syphilis",
+  "category": "diseases",
+  "names": [
+    {
+      "name": "Syphilis",
+      "from": "1495"
+    }
+  ],
+  "summary": "A disease caused by a bacterium and spread by sex, which broke out across Europe from 1495 after an army besieged Naples. It can be cured with antibiotics such as penicillin.",
+  "labels": [
+    "medicine"
+  ],
+  "aliases": [
+    "syphilitic chancre",
+    "great pox"
+  ],
+  "wikidata": "Q41083",
+  "events": [
+    {
+      "type": "born",
+      "date": "1495",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: syphilis (Q41083)",
+      "url": "https://www.wikidata.org/wiki/Q41083",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Syphilis",
+      "url": "https://en.wikipedia.org/wiki/Syphilis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

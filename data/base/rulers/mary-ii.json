@@ -1,0 +1,66 @@
+{
+  "id": "mary-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Mary II of England",
+      "from": "1662"
+    }
+  ],
+  "summary": "Protestant daughter of James II who ruled England, Scotland and Ireland jointly with her husband William III. She governed alone when he was abroad at war and died of smallpox in her early thirties.",
+  "labels": [
+    "politics"
+  ],
+  "aliases": [
+    "Lady Mary of England",
+    "Mary II Stuart",
+    "Mary II of Ireland",
+    "Mary Clorine",
+    "Mary II of Scotland"
+  ],
+  "wikidata": "Q130812",
+  "events": [
+    {
+      "type": "born",
+      "date": "1662-04-30",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1689",
+      "precision": "year",
+      "label": "Became queen",
+      "note": "Queen from 1689 to 1694, ruling jointly with William III."
+    },
+    {
+      "type": "ended",
+      "date": "1694-12-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "parent",
+      "to": "james-ii"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mary II of England (Q130812)",
+      "url": "https://www.wikidata.org/wiki/Q130812",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mary II",
+      "url": "https://en.wikipedia.org/wiki/Mary_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

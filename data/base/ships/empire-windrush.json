@@ -1,0 +1,57 @@
+{
+  "id": "empire-windrush",
+  "category": "ships",
+  "names": [
+    {
+      "name": "HMT Empire Windrush",
+      "from": "1930"
+    }
+  ],
+  "summary": "A passenger ship that brought hundreds of people from the Caribbean to Britain in 1948, at a time when Britain was seeking workers. The name came to stand for the postwar generation of Caribbean migrants. It sank in 1954.",
+  "labels": [
+    "transport",
+    "human-rights"
+  ],
+  "aliases": [
+    "Empire Windrush",
+    "MV Monte Rosa",
+    "SS Empire Windrush",
+    "SS Monte Rosa",
+    "MS Monte Rosa"
+  ],
+  "wikidata": "Q2291385",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930",
+      "precision": "year",
+      "note": "Launched in 1930 as the German liner Monte Rosa and in service from 1931. Britain took the ship in 1945 and renamed it."
+    },
+    {
+      "type": "ended",
+      "date": "1954",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Caught fire in the Mediterranean and sank while under tow",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Empire Windrush (Q2291385)",
+      "url": "https://www.wikidata.org/wiki/Q2291385",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: HMT Empire Windrush",
+      "url": "https://en.wikipedia.org/wiki/HMT_Empire_Windrush",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

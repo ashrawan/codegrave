@@ -1,0 +1,47 @@
+{
+  "id": "bread",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Bread",
+      "from": "-12000"
+    }
+  ],
+  "summary": "Baked dough made of ground grain and water, one of the oldest prepared foods. Flatbreads were made before farming began, and leavened loaves later became a daily staple in many cultures.",
+  "labels": [
+    "food"
+  ],
+  "aliases": [
+    "bun",
+    "breads",
+    "buns"
+  ],
+  "wikidata": "Q7802",
+  "events": [
+    {
+      "type": "born",
+      "date": "-12000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: bread (Q7802)",
+      "url": "https://www.wikidata.org/wiki/Q7802",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bread",
+      "url": "https://en.wikipedia.org/wiki/Bread",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

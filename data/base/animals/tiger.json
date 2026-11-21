@@ -1,0 +1,48 @@
+{
+  "id": "tiger",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Tiger",
+      "from": "-2000000"
+    }
+  ],
+  "summary": "Largest living cat, a solitary striped hunter of Asian forests and grasslands. Fossils of the species go back about two million years. Wild tigers now live in a small part of their old range.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Panthera tigris",
+    "tigress",
+    "tigers",
+    "P. tigris"
+  ],
+  "wikidata": "Q19939",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: tiger (Q19939)",
+      "url": "https://www.wikidata.org/wiki/Q19939",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tiger",
+      "url": "https://en.wikipedia.org/wiki/Tiger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

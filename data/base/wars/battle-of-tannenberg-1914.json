@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-tannenberg-1914",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Tannenberg",
+      "from": "1914"
+    }
+  ],
+  "summary": "German forces in East Prussia surrounded and destroyed a Russian army in late August 1914. It made heroes of Hindenburg and Ludendorff and was a heavy early blow for Russia.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Second Battle of Tannenberg"
+  ],
+  "wikidata": "Q153858",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-08-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1914-08-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "world-war-i"
+    },
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Tannenberg (Q153858)",
+      "url": "https://www.wikidata.org/wiki/Q153858",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Tannenberg",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Tannenberg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

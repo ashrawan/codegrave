@@ -1,0 +1,58 @@
+{
+  "id": "knights-templar",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Knights Templar",
+      "from": "1120"
+    }
+  ],
+  "summary": "Order of warrior monks formed to protect pilgrims in the Holy Land. It grew rich through donations and banking, and was dissolved by the Pope after the French king turned against it.",
+  "labels": [
+    "religion",
+    "war"
+  ],
+  "aliases": [
+    "Order of the Temple",
+    "Templars"
+  ],
+  "wikidata": "Q41300",
+  "events": [
+    {
+      "type": "born",
+      "date": "1120-01-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1312-03-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Dissolved by Pope Clement V under pressure from King Philip IV of France",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "papal-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Knights Templar (Q41300)",
+      "url": "https://www.wikidata.org/wiki/Q41300",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Knights Templar",
+      "url": "https://en.wikipedia.org/wiki/Knights_Templar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

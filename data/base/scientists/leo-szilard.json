@@ -1,0 +1,52 @@
+{
+  "id": "leo-szilard",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Leo Szilard",
+      "from": "1898"
+    }
+  ],
+  "summary": "Hungarian-born physicist who conceived the nuclear chain reaction in 1933 and helped draft the 1939 letter, signed by Einstein, that warned the US president about atomic weapons. He later turned to biology and arms control.",
+  "labels": [
+    "physics"
+  ],
+  "wikidata": "Q153238",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898-02-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-05-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "manhattan-project"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Leó Szilárd (Q153238)",
+      "url": "https://www.wikidata.org/wiki/Q153238",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Leo Szilard",
+      "url": "https://en.wikipedia.org/wiki/Leo_Szilard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

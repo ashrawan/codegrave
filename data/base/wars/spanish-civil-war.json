@@ -1,0 +1,73 @@
+{
+  "id": "spanish-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Spanish Civil War",
+      "from": "1936"
+    }
+  ],
+  "summary": "A war between the Republican government and the Nationalist forces of General Franco. Germany and Italy backed the Nationalists, and the Soviet Union and volunteers backed the Republic. Franco won.",
+  "labels": [
+    "war",
+    "politics"
+  ],
+  "aliases": [
+    "Spanish War",
+    "The Spanish Civil War"
+  ],
+  "wikidata": "Q10859",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1939-04-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "interwar-period"
+    },
+    {
+      "type": "in",
+      "to": "spain"
+    },
+    {
+      "type": "related",
+      "to": "nazi-germany"
+    },
+    {
+      "type": "related",
+      "to": "soviet-union"
+    },
+    {
+      "type": "related",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish Civil War (Q10859)",
+      "url": "https://www.wikidata.org/wiki/Q10859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish Civil War",
+      "url": "https://en.wikipedia.org/wiki/Spanish_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

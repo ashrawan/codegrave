@@ -1,0 +1,64 @@
+{
+  "id": "first-sino-japanese-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Sino-Japanese War",
+      "from": "1894"
+    }
+  ],
+  "summary": "A war between Qing China and Japan, fought mainly over influence in Korea. Japan's modern army and navy won. The Treaty of Shimonoseki gave Japan Taiwan and a large payment, and marked Japan's rise as a regional power.",
+  "labels": [
+    "war"
+  ],
+  "aliases": [
+    "Sino-Japanese War",
+    "War jia-wu"
+  ],
+  "wikidata": "Q178687",
+  "events": [
+    {
+      "type": "born",
+      "date": "1894-08-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1895-04-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "joseon"
+    },
+    {
+      "type": "related",
+      "to": "qing-dynasty"
+    },
+    {
+      "type": "related",
+      "to": "empire-of-japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Sino-Japanese War (Q178687)",
+      "url": "https://www.wikidata.org/wiki/Q178687",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Sino-Japanese War",
+      "url": "https://en.wikipedia.org/wiki/First_Sino-Japanese_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

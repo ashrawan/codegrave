@@ -1,0 +1,57 @@
+{
+  "id": "seleucid-empire",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Seleucid Empire",
+      "from": "-0312"
+    }
+  ],
+  "summary": "The Greek-ruled state founded by Seleucus I, one of Alexander's generals, which at first held much of the former Persian Empire. It spread Greek cities and culture across western Asia.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Seleucids"
+  ],
+  "wikidata": "Q93180",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0312",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0063",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Shrank under Parthian pressure and was ended by Rome",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "parthian-empire"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seleucid Empire (Q93180)",
+      "url": "https://www.wikidata.org/wiki/Q93180",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seleucid Empire",
+      "url": "https://en.wikipedia.org/wiki/Seleucid_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

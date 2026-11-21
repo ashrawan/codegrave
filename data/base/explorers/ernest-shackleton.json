@@ -1,0 +1,59 @@
+{
+  "id": "ernest-shackleton",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Ernest Shackleton",
+      "from": "1874"
+    }
+  ],
+  "summary": "Anglo-Irish explorer of Antarctica whose ship Endurance was crushed by ice in 1915. He led all of his crew to safety after a boat journey to South Georgia. He died on a later expedition.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Sir Ernest Henry Shackleton"
+  ],
+  "wikidata": "Q957543",
+  "events": [
+    {
+      "type": "born",
+      "date": "1874-02-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1922-01-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "discovery-expedition"
+    },
+    {
+      "type": "related",
+      "to": "imperial-trans-antarctic-expedition"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ernest Shackleton (Q957543)",
+      "url": "https://www.wikidata.org/wiki/Q957543",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ernest Shackleton",
+      "url": "https://en.wikipedia.org/wiki/Ernest_Shackleton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

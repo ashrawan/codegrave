@@ -1,0 +1,58 @@
+{
+  "id": "mary-rose",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Mary Rose",
+      "from": "1511"
+    }
+  ],
+  "summary": "A warship of Henry VIII's English navy, launched in 1511. It sank in the Solent in 1545 during an attack by the French fleet, and was raised in 1982 and displayed in a museum at Portsmouth.",
+  "labels": [
+    "war",
+    "exploration"
+  ],
+  "wikidata": "Q544894",
+  "events": [
+    {
+      "type": "born",
+      "date": "1511",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1545",
+      "precision": "year"
+    },
+    {
+      "type": "afterlife",
+      "note": "Raised in 1982 and shown in Portsmouth."
+    }
+  ],
+  "status": "dead",
+  "cause": "Sank in the Solent while sailing out to meet a French fleet",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mary Rose (Q544894)",
+      "url": "https://www.wikidata.org/wiki/Q544894",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mary Rose",
+      "url": "https://en.wikipedia.org/wiki/Mary_Rose",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

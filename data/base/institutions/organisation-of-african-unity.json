@@ -1,0 +1,58 @@
+{
+  "id": "organisation-of-african-unity",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Organisation of African Unity",
+      "from": "1963"
+    }
+  ],
+  "summary": "Association of newly independent African states, founded in Addis Ababa. It backed the end of colonial rule and white minority rule in the continent, and was replaced by the African Union.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "OAU",
+    "Organization of African Unity, OAU"
+  ],
+  "wikidata": "Q191703",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2002",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the African Union",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "african-union"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Organisation of African Unity (Q191703)",
+      "url": "https://www.wikidata.org/wiki/Q191703",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Organisation of African Unity",
+      "url": "https://en.wikipedia.org/wiki/Organisation_of_African_Unity",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

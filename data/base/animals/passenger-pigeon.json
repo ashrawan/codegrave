@@ -1,0 +1,54 @@
+{
+  "id": "passenger-pigeon",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Passenger pigeon",
+      "from": "-5333000"
+    }
+  ],
+  "summary": "A North American bird that once flew in flocks of millions and may have been the most numerous bird on Earth. Hunting and forest clearing wiped it out, and the last one, Martha, died in a zoo.",
+  "labels": [
+    "biology",
+    "extinct-by-humans"
+  ],
+  "aliases": [
+    "Ectopistes migratorius",
+    "wild pigeon"
+  ],
+  "wikidata": "Q191968",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5333000",
+      "precision": "circa",
+      "note": "The start of the Pliocene age, from which the oldest fossils of its genus come. Linnaeus named the species in 1766."
+    },
+    {
+      "type": "ended",
+      "date": "1914",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Hunted in huge numbers and lost its forests",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Passenger Pigeon (Q191968)",
+      "url": "https://www.wikidata.org/wiki/Q191968",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Passenger pigeon",
+      "url": "https://en.wikipedia.org/wiki/Passenger_pigeon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

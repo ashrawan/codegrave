@@ -1,0 +1,56 @@
+{
+  "id": "amnesty-international",
+  "category": "societies",
+  "names": [
+    {
+      "name": "Amnesty International",
+      "from": "1961"
+    }
+  ],
+  "maker": "Peter Benenson",
+  "summary": "Human rights organisation begun in London by the lawyer Peter Benenson, after he wrote about two Portuguese students jailed for a toast to freedom. It campaigns for people it sees as prisoners of conscience.",
+  "labels": [
+    "human-rights",
+    "law"
+  ],
+  "aliases": [
+    "AI"
+  ],
+  "wikidata": "Q42970",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Amnesty International (Q42970)",
+      "url": "https://www.wikidata.org/wiki/Q42970",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amnesty International",
+      "url": "https://en.wikipedia.org/wiki/Amnesty_International",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

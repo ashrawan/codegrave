@@ -1,0 +1,56 @@
+{
+  "id": "urartu",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Urartu",
+      "from": "-0860"
+    }
+  ],
+  "summary": "An Iron Age kingdom around Lake Van in the Armenian highlands. Its kings built mountain fortresses and irrigation canals, and it was a long-time rival of Assyria. Its name is linked to the later name Ararat.",
+  "labels": [
+    "lost"
+  ],
+  "aliases": [
+    "Kingdom of Urartu"
+  ],
+  "wikidata": "Q185068",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0860",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0590",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Fell to Median and Scythian attacks",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Urartu (Q185068)",
+      "url": "https://www.wikidata.org/wiki/Q185068",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Urartu",
+      "url": "https://en.wikipedia.org/wiki/Urartu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

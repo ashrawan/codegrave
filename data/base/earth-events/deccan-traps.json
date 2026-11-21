@@ -1,0 +1,52 @@
+{
+  "id": "deccan-traps",
+  "category": "earth-events",
+  "names": [
+    {
+      "name": "Deccan Traps",
+      "from": "-66000000"
+    }
+  ],
+  "summary": "A vast lava plateau in western India made by eruptions around 66 million years ago. Some scientists think it stressed life and worsened the extinction that struck at the same time as the Chicxulub impact.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q55819",
+  "events": [
+    {
+      "type": "born",
+      "date": "-66000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-65000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Deccan Traps (Q55819)",
+      "url": "https://www.wikidata.org/wiki/Q55819",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Deccan Traps",
+      "url": "https://en.wikipedia.org/wiki/Deccan_Traps",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

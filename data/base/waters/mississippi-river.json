@@ -1,0 +1,50 @@
+{
+  "id": "mississippi-river",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Mississippi River",
+      "from": "-10000"
+    }
+  ],
+  "summary": "Main river of North America, flowing from Minnesota to the Gulf of Mexico. Its present course and delta took shape after the last ice age ended, roughly ten thousand years ago.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "The Mississippi"
+  ],
+  "wikidata": "Q1497",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mississippi River (Q1497)",
+      "url": "https://www.wikidata.org/wiki/Q1497",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mississippi River",
+      "url": "https://en.wikipedia.org/wiki/Mississippi_River",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,63 @@
+{
+  "id": "lewis-and-clark-expedition",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Lewis and Clark Expedition",
+      "from": "1804"
+    }
+  ],
+  "summary": "An American party led by Meriwether Lewis and William Clark travelled up the Missouri River, crossed the Rocky Mountains and reached the Pacific. It mapped the land and met many Native nations, helped by Sacagawea.",
+  "labels": [
+    "exploration"
+  ],
+  "aliases": [
+    "Corps of Discovery Expedition"
+  ],
+  "wikidata": "Q505802",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1806-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "meriwether-lewis"
+    },
+    {
+      "type": "related",
+      "to": "william-clark"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lewis and Clark Expedition (Q505802)",
+      "url": "https://www.wikidata.org/wiki/Q505802",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lewis and Clark Expedition",
+      "url": "https://en.wikipedia.org/wiki/Lewis_and_Clark_Expedition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "great-fire-of-london",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Great Fire of London",
+      "from": "1666"
+    }
+  ],
+  "summary": "A fire that began in a bakery spread through the crowded wooden streets of London for several days and destroyed most of the old city, including St Paul's Cathedral. The city was rebuilt with more stone and brick.",
+  "labels": [
+    "environment"
+  ],
+  "wikidata": "Q164679",
+  "events": [
+    {
+      "type": "born",
+      "date": "1666-09-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1666-09-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    },
+    {
+      "type": "in",
+      "to": "kingdom-of-england"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Fire of London (Q164679)",
+      "url": "https://www.wikidata.org/wiki/Q164679",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Fire of London",
+      "url": "https://en.wikipedia.org/wiki/Great_Fire_of_London",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

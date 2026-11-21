@@ -1,0 +1,54 @@
+{
+  "id": "megalodon",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Megalodon",
+      "from": "-23000000"
+    }
+  ],
+  "summary": "A gigantic shark that hunted whales and other large prey in the world's seas. It is known mostly from its huge teeth, and it was several times heavier than a great white shark.",
+  "labels": [
+    "biology"
+  ],
+  "aliases": [
+    "Carcharocles megalodon",
+    "pachiclon megalodon",
+    "Otodus megalodon",
+    "Megalodon Carcharodon"
+  ],
+  "wikidata": "Q163873",
+  "events": [
+    {
+      "type": "born",
+      "date": "-23000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2600000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Probably lost as oceans cooled and its prey declined or moved",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: megalodon (Q163873)",
+      "url": "https://www.wikidata.org/wiki/Q163873",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Megalodon",
+      "url": "https://en.wikipedia.org/wiki/Megalodon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,47 @@
+{
+  "id": "chromebook",
+  "category": "laptops-tablets",
+  "names": [
+    {
+      "name": "Chromebook",
+      "from": "2011"
+    }
+  ],
+  "maker": "Google",
+  "summary": "Cheap laptop that runs Google's Chrome OS and relies on web apps and online storage. Chromebooks became very popular in schools, especially in the United States, because they are simple to manage.",
+  "labels": [
+    "computing",
+    "education"
+  ],
+  "aliases": [
+    "Google Chromebook"
+  ],
+  "wikidata": "Q861508",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Chromebook (Q861508)",
+      "url": "https://www.wikidata.org/wiki/Q861508",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chromebook",
+      "url": "https://en.wikipedia.org/wiki/Chromebook",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

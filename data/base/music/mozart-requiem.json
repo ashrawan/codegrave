@@ -1,0 +1,55 @@
+{
+  "id": "mozart-requiem",
+  "category": "music",
+  "names": [
+    {
+      "name": "Requiem (Mozart)",
+      "from": "1791"
+    }
+  ],
+  "maker": "Wolfgang Amadeus Mozart",
+  "summary": "Mass for the dead that Wolfgang Amadeus Mozart was writing when he died in 1791, leaving it unfinished. Pupils completed it from his sketches, and it remains one of the most performed choral works.",
+  "labels": [
+    "music",
+    "religion"
+  ],
+  "aliases": [
+    "Requiem",
+    "K. 626",
+    "Requiem Mass in D minor",
+    "Mozart's Requiem"
+  ],
+  "wikidata": "Q207875",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "wolfgang-amadeus-mozart"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Requiem (Q207875)",
+      "url": "https://www.wikidata.org/wiki/Q207875",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Requiem (Mozart)",
+      "url": "https://en.wikipedia.org/wiki/Requiem_(Mozart)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

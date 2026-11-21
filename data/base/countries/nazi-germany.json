@@ -1,0 +1,62 @@
+{
+  "id": "nazi-germany",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Nazi Germany",
+      "from": "1933"
+    }
+  ],
+  "summary": "The German state under Adolf Hitler and the Nazi Party, a one-party dictatorship. It started the Second World War in Europe and carried out the Holocaust, the genocide of European Jews.",
+  "labels": [
+    "lost",
+    "war",
+    "human-rights"
+  ],
+  "aliases": [
+    "Third Reich",
+    "Greater German Reich",
+    "Hitler's Third Reich",
+    "German Reich",
+    "Thousand-Year Reich"
+  ],
+  "wikidata": "Q7318",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933-03-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-05-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Defeated by the Allies in the Second World War",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "fascism"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nazi Germany (Q7318)",
+      "url": "https://www.wikidata.org/wiki/Q7318",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nazi Germany",
+      "url": "https://en.wikipedia.org/wiki/Nazi_Germany",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,55 @@
+{
+  "id": "caspian-sea",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Caspian Sea",
+      "from": "-5500000"
+    }
+  ],
+  "summary": "The largest inland body of water, a salty lake bordered by Russia, Kazakhstan, Turkmenistan, Iran and Azerbaijan. It is a remnant of an ancient sea, holds the sturgeon that give caviar, and has oil and gas beneath and around it.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Caspic Sea",
+    "Khazar Sea"
+  ],
+  "wikidata": "Q5484",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5500000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    },
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Caspian Sea (Q5484)",
+      "url": "https://www.wikidata.org/wiki/Q5484",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caspian Sea",
+      "url": "https://en.wikipedia.org/wiki/Caspian_Sea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

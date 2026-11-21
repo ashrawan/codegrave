@@ -1,0 +1,59 @@
+{
+  "id": "dmitri-mendeleev",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Dmitri Mendeleev",
+      "from": "1834"
+    }
+  ],
+  "summary": "Russian chemist who published a periodic table of the elements in 1869, arranging them by atomic weight and repeating properties. He left gaps for elements not yet found and predicted what some of them would be like.",
+  "labels": [
+    "chemistry"
+  ],
+  "aliases": [
+    "Mendeleev",
+    "Dmitry Mendeleyev",
+    "Dimitri Mendeleyev",
+    "Dmitri Mendeleiev",
+    "Dmitri Ivanovich Mendeleyev"
+  ],
+  "wikidata": "Q9106",
+  "events": [
+    {
+      "type": "born",
+      "date": "1834-01-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1907-01-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dmitri Mendeleev (Q9106)",
+      "url": "https://www.wikidata.org/wiki/Q9106",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dmitri Mendeleev",
+      "url": "https://en.wikipedia.org/wiki/Dmitri_Mendeleev",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

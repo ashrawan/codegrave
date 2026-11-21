@@ -1,0 +1,52 @@
+{
+  "id": "argentine-crisis-2001",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Argentine economic crisis",
+      "from": "1998"
+    }
+  ],
+  "summary": "Argentina fell into deep recession, then defaulted on its debts and ended the one-to-one link of its peso to the dollar. Savings were frozen, protests grew and several presidents left office in a short time.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q645426",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2002",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Argentine economic crisis (Q645426)",
+      "url": "https://www.wikidata.org/wiki/Q645426",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1998–2002 Argentine great depression",
+      "url": "https://en.wikipedia.org/wiki/1998%E2%80%932002_Argentine_great_depression",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

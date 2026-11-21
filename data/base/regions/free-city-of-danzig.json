@@ -1,0 +1,54 @@
+{
+  "id": "free-city-of-danzig",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Free City of Danzig",
+      "from": "1920"
+    }
+  ],
+  "summary": "A semi-independent city-state around the port of Danzig, now Gdansk, set up after the First World War under the League of Nations. Disputes over it were a cause of the war in 1939.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "wikidata": "Q216173",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1939-09-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Annexed by Nazi Germany at the start of the Second World War",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "succeeded_by",
+      "to": "nazi-germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Free City of Danzig (Q216173)",
+      "url": "https://www.wikidata.org/wiki/Q216173",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Free City of Danzig",
+      "url": "https://en.wikipedia.org/wiki/Free_City_of_Danzig",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

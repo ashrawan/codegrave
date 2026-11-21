@@ -1,0 +1,59 @@
+{
+  "id": "california-gold-rush",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "California Gold Rush",
+      "from": "1848"
+    }
+  ],
+  "summary": "After gold was found at Sutter's Mill, hundreds of thousands of people moved to California from the United States and across the world. San Francisco boomed, and Native peoples were harmed by the sudden influx.",
+  "labels": [
+    "economics"
+  ],
+  "aliases": [
+    "California Gold yields"
+  ],
+  "wikidata": "Q17550",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-01-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1855",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "california"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: California Gold Rush (Q17550)",
+      "url": "https://www.wikidata.org/wiki/Q17550",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: California gold rush",
+      "url": "https://en.wikipedia.org/wiki/California_gold_rush",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

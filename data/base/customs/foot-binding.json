@@ -1,0 +1,61 @@
+{
+  "id": "foot-binding",
+  "category": "customs",
+  "names": [
+    {
+      "name": "Foot binding",
+      "from": "0900"
+    }
+  ],
+  "summary": "A Chinese custom in which girls' feet were tightly bound to keep them small, causing lifelong pain and difficulty walking. It spread from the elite to many families before campaigns and laws ended it.",
+  "labels": [
+    "fashion"
+  ],
+  "aliases": [
+    "lotus feet",
+    "lotus foot"
+  ],
+  "wikidata": "Q498231",
+  "events": [
+    {
+      "type": "born",
+      "date": "0900",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1949",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Campaigned against and then banned by the Chinese government",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qing-dynasty"
+    },
+    {
+      "type": "in",
+      "to": "republic-of-china-1912"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: foot binding (Q498231)",
+      "url": "https://www.wikidata.org/wiki/Q498231",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Foot binding",
+      "url": "https://en.wikipedia.org/wiki/Foot_binding",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

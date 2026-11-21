@@ -1,0 +1,53 @@
+{
+  "id": "da-vinci-surgical-system",
+  "category": "robots",
+  "names": [
+    {
+      "name": "Da Vinci Surgical System",
+      "from": "2000"
+    }
+  ],
+  "maker": "Intuitive Surgical",
+  "summary": "Robotic system in which a surgeon sits at a console and controls small instruments on arms that work through tiny cuts in the patient. It is widely used in hospitals for operations with small incisions.",
+  "labels": [
+    "engineering",
+    "medicine"
+  ],
+  "wikidata": "Q2323044",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "related",
+      "to": "leonardo-da-vinci"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Da Vinci Surgical System (Q2323044)",
+      "url": "https://www.wikidata.org/wiki/Q2323044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Da Vinci Surgical System",
+      "url": "https://en.wikipedia.org/wiki/Da_Vinci_Surgical_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

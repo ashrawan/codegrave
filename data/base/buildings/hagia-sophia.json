@@ -1,0 +1,68 @@
+{
+  "id": "hagia-sophia",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Hagia Sophia",
+      "from": "0537"
+    }
+  ],
+  "summary": "Domed church built for Emperor Justinian in Constantinople. It became a mosque after the Ottoman conquest of 1453, then a museum, and it is now a mosque again.",
+  "labels": [
+    "architecture",
+    "religion",
+    "world-heritage"
+  ],
+  "aliases": [
+    "Santa Sophia",
+    "St. Sophia Basilica",
+    "Church of Saint Sophia",
+    "Church of the Holy Wisdom",
+    "Hagia Sophia Mosque"
+  ],
+  "wikidata": "Q12506",
+  "events": [
+    {
+      "type": "born",
+      "date": "0537-12-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "constantine-the-great"
+    },
+    {
+      "type": "made_by",
+      "to": "mimar-sinan"
+    },
+    {
+      "type": "in",
+      "to": "istanbul"
+    },
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hagia Sophia (Q12506)",
+      "url": "https://www.wikidata.org/wiki/Q12506",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hagia Sophia",
+      "url": "https://en.wikipedia.org/wiki/Hagia_Sophia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

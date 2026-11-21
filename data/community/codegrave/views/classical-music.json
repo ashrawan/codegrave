@@ -1,0 +1,87 @@
+{
+  "id": "classical-music",
+  "name": "Classical Music",
+  "description": "The great composers and their best-known works, from Bach and Mozart to Beethoven, Tchaikovsky and Stravinsky.",
+  "category": "arts",
+  "labels": [
+    "music"
+  ],
+  "tags": [
+    "classical music",
+    "composers",
+    "mozart",
+    "beethoven",
+    "bach",
+    "symphony",
+    "orchestra",
+    "opera"
+  ],
+  "entries": [
+    "claudio-monteverdi",
+    "antonio-vivaldi",
+    "george-frideric-handel",
+    "johann-sebastian-bach",
+    "vivaldi-four-seasons",
+    "joseph-haydn",
+    "handel-messiah",
+    "wolfgang-amadeus-mozart",
+    "ludwig-van-beethoven",
+    "eine-kleine-nachtmusik",
+    "franz-schubert",
+    "moonlight-sonata",
+    "hector-berlioz",
+    "beethoven-symphony-5",
+    "felix-mendelssohn",
+    "frederic-chopin",
+    "robert-schumann",
+    "franz-liszt",
+    "richard-wagner",
+    "giuseppe-verdi",
+    "clara-schumann",
+    "beethoven-symphony-9",
+    "johannes-brahms",
+    "pyotr-ilyich-tchaikovsky",
+    "antonin-dvorak",
+    "edvard-grieg",
+    "giacomo-puccini",
+    "gustav-mahler",
+    "claude-debussy",
+    "sergei-rachmaninoff",
+    "arnold-schoenberg",
+    "maurice-ravel",
+    "igor-stravinsky",
+    "sergei-prokofiev",
+    "dmitri-shostakovich",
+    "rite-of-spring"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-baroque",
+      "name": "The Baroque",
+      "from": 1567,
+      "to": 1759,
+      "note": "Monteverdi writes some of the first operas, Vivaldi fills Venice with concertos, and Bach and Handel bring the Baroque to its height in church and theatre."
+    },
+    {
+      "id": "the-classical-period",
+      "name": "The Classical period",
+      "from": 1760,
+      "to": 1827,
+      "note": "Haydn and Mozart give the symphony and the string quartet their shape in Vienna, then Beethoven stretches the forms until they carry whole worlds of feeling."
+    },
+    {
+      "id": "the-romantic-era",
+      "name": "The Romantic era",
+      "from": 1828,
+      "to": 1899,
+      "note": "Songs, piano poems and vast operas by Schubert, Chopin, Liszt, Verdi and Wagner put personal feeling first, composers like Brahms, Tchaikovsky and Dvořák add national colour, and Puccini carries Italian opera into the next century."
+    },
+    {
+      "id": "the-twentieth-century",
+      "name": "The twentieth century",
+      "from": 1900,
+      "to": 1975,
+      "note": "Mahler closes one era, Debussy and Ravel paint in sound, and Stravinsky's Rite of Spring in 1913 shows that rhythm and harmony can be rebuilt from nothing. Shostakovich writes under Stalin."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "krupp",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Krupp",
+      "from": "1811"
+    }
+  ],
+  "maker": "Friedrich Krupp",
+  "summary": "German steel and arms firm founded in Essen by Friedrich Krupp. It made cast steel, railway parts and heavy guns, and it was a leading supplier to German armies in both world wars.",
+  "labels": [
+    "business",
+    "war",
+    "engineering"
+  ],
+  "aliases": [
+    "Friedrich Krupp AG"
+  ],
+  "wikidata": "Q679201",
+  "events": [
+    {
+      "type": "born",
+      "date": "1811",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Merged with Thyssen to form ThyssenKrupp",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Friedrich Krupp AG (Q679201)",
+      "url": "https://www.wikidata.org/wiki/Q679201",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Krupp",
+      "url": "https://en.wikipedia.org/wiki/Krupp",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

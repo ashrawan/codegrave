@@ -1,0 +1,56 @@
+{
+  "id": "andes",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Andes",
+      "from": "-200000000"
+    }
+  ],
+  "summary": "The longest continental mountain range, about 7,000 kilometres along the west of South America, formed where the Nazca plate dives beneath the continent. Its peaks include Aconcagua, and the Inca built their empire in it.",
+  "labels": [
+    "environment"
+  ],
+  "aliases": [
+    "Andes mountains",
+    "Andes mountain range",
+    "Ecuadorian Andes"
+  ],
+  "wikidata": "Q5456",
+  "events": [
+    {
+      "type": "born",
+      "date": "-200000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chile"
+    },
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Andes (Q5456)",
+      "url": "https://www.wikidata.org/wiki/Q5456",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andes",
+      "url": "https://en.wikipedia.org/wiki/Andes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

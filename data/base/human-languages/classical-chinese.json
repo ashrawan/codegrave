@@ -1,0 +1,56 @@
+{
+  "id": "classical-chinese",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Classical Chinese",
+      "from": "-0500"
+    }
+  ],
+  "summary": "The written language of ancient Chinese literature and later government. Its concise style was used for two thousand years across China and was also the written language of educated people in Korea, Japan and Vietnam.",
+  "labels": [
+    "language",
+    "literature"
+  ],
+  "aliases": [
+    "Wenyan",
+    "zh-classical",
+    "lzh",
+    "Literary Chinese",
+    "Wen yan wen"
+  ],
+  "wikidata": "Q37041",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1919",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced as the written standard by vernacular Chinese after the May Fourth Movement",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Classical Chinese (Q37041)",
+      "url": "https://www.wikidata.org/wiki/Q37041",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Classical Chinese",
+      "url": "https://en.wikipedia.org/wiki/Classical_Chinese",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

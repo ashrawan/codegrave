@@ -1,0 +1,57 @@
+{
+  "id": "mq-1-predator",
+  "category": "weapons",
+  "names": [
+    {
+      "name": "MQ-1 Predator",
+      "from": "1995"
+    }
+  ],
+  "maker": "General Atomics",
+  "summary": "A remotely piloted aircraft used first for surveillance and later armed with missiles. It helped bring drones to the centre of modern warfare, and its operators flew it from bases far from the target.",
+  "labels": [
+    "war",
+    "engineering"
+  ],
+  "aliases": [
+    "Predator",
+    "Q1",
+    "Predator UAV",
+    "Q-1",
+    "Predator drone"
+  ],
+  "wikidata": "Q198024",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2018-03-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by the larger and more capable MQ-9 Reaper",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Predator (Q198024)",
+      "url": "https://www.wikidata.org/wiki/Q198024",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: General Atomics MQ-1 Predator",
+      "url": "https://en.wikipedia.org/wiki/General_Atomics_MQ-1_Predator",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

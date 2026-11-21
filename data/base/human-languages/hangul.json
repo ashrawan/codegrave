@@ -1,0 +1,54 @@
+{
+  "id": "hangul",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Hangul",
+      "from": "1443"
+    }
+  ],
+  "summary": "The alphabet of Korea, created under King Sejong the Great in 1443 and made public in 1446. Its letters are grouped into syllable blocks and were made to be easy to learn. It is celebrated in Korea on Hangul Day.",
+  "labels": [
+    "language"
+  ],
+  "aliases": [
+    "Chosongul",
+    "Hangeul",
+    "Chosŏn'gŭl",
+    "Hang",
+    "Hunminjeong'eum"
+  ],
+  "wikidata": "Q8222",
+  "events": [
+    {
+      "type": "born",
+      "date": "1443",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sejong-the-great"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hangul (Q8222)",
+      "url": "https://www.wikidata.org/wiki/Q8222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hangul",
+      "url": "https://en.wikipedia.org/wiki/Hangul",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,48 @@
+{
+  "id": "playstation-5",
+  "category": "consoles",
+  "names": [
+    {
+      "name": "PlayStation 5",
+      "from": "2020"
+    }
+  ],
+  "maker": "Sony",
+  "summary": "Sony's console of 2020 with a fast solid-state drive and a controller that gives touch feedback. It sold well despite shortages of parts in its first years.",
+  "labels": [
+    "games"
+  ],
+  "wikidata": "Q63184502",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-11-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "sony"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: PlayStation 5 (Q63184502)",
+      "url": "https://www.wikidata.org/wiki/Q63184502",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PlayStation 5",
+      "url": "https://en.wikipedia.org/wiki/PlayStation_5",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

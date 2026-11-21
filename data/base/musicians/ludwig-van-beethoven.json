@@ -1,0 +1,67 @@
+{
+  "id": "ludwig-van-beethoven",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Ludwig van Beethoven",
+      "from": "1770"
+    }
+  ],
+  "summary": "German composer and pianist who wrote nine symphonies, five piano concertos and many sonatas. He went deaf by his late forties but kept composing, and his work bridged the Classical and Romantic styles.",
+  "labels": [
+    "music"
+  ],
+  "aliases": [
+    "Ludwik van Beethoven",
+    "Ludwig von Beethoven",
+    "Ludvig van Beethoven",
+    "L. v. Beethoven",
+    "L. van Betkhoven"
+  ],
+  "wikidata": "Q255",
+  "events": [
+    {
+      "type": "born",
+      "date": "1770-12-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1827-03-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "johann-sebastian-bach"
+    },
+    {
+      "type": "influenced_by",
+      "to": "joseph-haydn"
+    },
+    {
+      "type": "influenced_by",
+      "to": "wolfgang-amadeus-mozart"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ludwig van Beethoven (Q255)",
+      "url": "https://www.wikidata.org/wiki/Q255",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ludwig van Beethoven",
+      "url": "https://en.wikipedia.org/wiki/Ludwig_van_Beethoven",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

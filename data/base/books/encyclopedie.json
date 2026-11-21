@@ -1,0 +1,60 @@
+{
+  "id": "encyclopedie",
+  "category": "books",
+  "names": [
+    {
+      "name": "Encyclopédie",
+      "from": "1751"
+    }
+  ],
+  "summary": "Large French reference work edited by Denis Diderot and Jean le Rond d'Alembert, published in many volumes. It gathered the arts, trades and sciences of its day, and its critics in church and court tried to have it banned.",
+  "labels": [
+    "literature",
+    "education"
+  ],
+  "aliases": [
+    "Diderot's encyclopedia",
+    "D'Alembert's encyclopedia"
+  ],
+  "wikidata": "Q447",
+  "events": [
+    {
+      "type": "born",
+      "date": "1751",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "denis-diderot"
+    },
+    {
+      "type": "made_by",
+      "to": "voltaire"
+    },
+    {
+      "type": "made_by",
+      "to": "jean-jacques-rousseau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Encyclopédie (Q447)",
+      "url": "https://www.wikidata.org/wiki/Q447",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Encyclopédie",
+      "url": "https://en.wikipedia.org/wiki/Encyclop%C3%A9die",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

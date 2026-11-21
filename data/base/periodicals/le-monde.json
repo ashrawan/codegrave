@@ -1,0 +1,47 @@
+{
+  "id": "le-monde",
+  "category": "periodicals",
+  "names": [
+    {
+      "name": "Le Monde",
+      "from": "1944"
+    }
+  ],
+  "summary": "French evening newspaper founded after the liberation of Paris at the request of General de Gaulle. It became France's leading paper of record.",
+  "labels": [
+    "media"
+  ],
+  "wikidata": "Q12461",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-12-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Le Monde (Q12461)",
+      "url": "https://www.wikidata.org/wiki/Q12461",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Le Monde",
+      "url": "https://en.wikipedia.org/wiki/Le_Monde",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,57 @@
+{
+  "id": "r-language",
+  "category": "languages",
+  "names": [
+    {
+      "name": "R",
+      "from": "1993"
+    }
+  ],
+  "summary": "Free language for statistics and charts, written by two professors in New Zealand. It is used by scientists, analysts and journalists, and has thousands of add-on packages.",
+  "labels": [
+    "computing",
+    "mathematics"
+  ],
+  "aliases": [
+    "GNU R",
+    "GNU S",
+    "R language"
+  ],
+  "wikidata": "Q206904",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-08",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "gnu"
+    },
+    {
+      "type": "influenced_by",
+      "to": "scheme"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: R (Q206904)",
+      "url": "https://www.wikidata.org/wiki/Q206904",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: R (programming language)",
+      "url": "https://en.wikipedia.org/wiki/R_(programming_language)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "mars-pathfinder",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Mars Pathfinder",
+      "from": "1996"
+    }
+  ],
+  "summary": "NASA mission that landed on Mars in 1997 using airbags. It carried Sojourner, the first wheeled rover to drive on another planet, which tested rocks near the landing site and proved that cheap, small rovers could work.",
+  "labels": [
+    "astronomy",
+    "engineering",
+    "firsts"
+  ],
+  "aliases": [
+    "MESUR Pathfinder",
+    "Carl Sagan Memorial Station",
+    "Pathfinder",
+    "Sagan Memorial Station"
+  ],
+  "wikidata": "Q201771",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-12-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "cause": "Contact ended after the lander's battery failed in the Martian cold",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Mars Pathfinder (Q201771)",
+      "url": "https://www.wikidata.org/wiki/Q201771",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mars Pathfinder",
+      "url": "https://en.wikipedia.org/wiki/Mars_Pathfinder",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

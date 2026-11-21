@@ -1,0 +1,51 @@
+{
+  "id": "eris-dwarf-planet",
+  "category": "space",
+  "names": [
+    {
+      "name": "Eris",
+      "from": "-4600000000"
+    }
+  ],
+  "summary": "Dwarf planet in the outer solar system, found in 2005 by a team led by Mike Brown. It is about as large as Pluto and more massive, and its discovery led astronomers to define the term dwarf planet in 2006. The year given is the age of the solar system.",
+  "labels": [
+    "astronomy"
+  ],
+  "aliases": [
+    "Sol k",
+    "Xena"
+  ],
+  "wikidata": "Q611",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4600000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "solar-system"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eris (Q611)",
+      "url": "https://www.wikidata.org/wiki/Q611",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eris (dwarf planet)",
+      "url": "https://en.wikipedia.org/wiki/Eris_(dwarf_planet)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "olympics-1960",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1960 Summer Olympics",
+      "from": "1960"
+    }
+  ],
+  "summary": "The Rome Games were the first Summer Olympics shown on television in many countries. The Ethiopian runner Abebe Bikila won the marathon barefoot, and the Games were held beside ancient ruins.",
+  "labels": [
+    "sport",
+    "media"
+  ],
+  "aliases": [
+    "Rome 1960",
+    "Games of the XVII Olympiad"
+  ],
+  "wikidata": "Q8415",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-08-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rome"
+    },
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1960 Summer Olympics (Q8415)",
+      "url": "https://www.wikidata.org/wiki/Q8415",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1960 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1960_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

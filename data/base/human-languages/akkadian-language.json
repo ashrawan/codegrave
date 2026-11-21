@@ -1,0 +1,64 @@
+{
+  "id": "akkadian-language",
+  "category": "human-languages",
+  "names": [
+    {
+      "name": "Akkadian language",
+      "from": "-2500"
+    }
+  ],
+  "summary": "A Semitic language of Mesopotamia, written in cuneiform, spoken by the Akkadians, Babylonians and Assyrians. It was the language of diplomacy across the Near East in the second millennium BCE.",
+  "labels": [
+    "language",
+    "lost"
+  ],
+  "aliases": [
+    "Akkadian",
+    "akk",
+    "Old Babylonian language",
+    "Old Babylonian"
+  ],
+  "wikidata": "Q35518",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0100",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Replaced by Aramaic as the everyday language of the region",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "akkadian-empire"
+    },
+    {
+      "type": "in",
+      "to": "babylonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Akkadian (Q35518)",
+      "url": "https://www.wikidata.org/wiki/Q35518",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Akkadian language",
+      "url": "https://en.wikipedia.org/wiki/Akkadian_language",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

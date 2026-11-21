@@ -1,0 +1,53 @@
+{
+  "id": "federation-of-australia",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Federation of Australia",
+      "from": "1901"
+    }
+  ],
+  "summary": "The joining of six British colonies into the Commonwealth of Australia on 1 January 1901, under a new federal constitution. It remained part of the British Empire, and it created the national parliament and government.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "wikidata": "Q3310872",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Federation of Australia (Q3310872)",
+      "url": "https://www.wikidata.org/wiki/Q3310872",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Federation of Australia",
+      "url": "https://en.wikipedia.org/wiki/Federation_of_Australia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

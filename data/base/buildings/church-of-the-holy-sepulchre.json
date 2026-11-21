@@ -1,0 +1,56 @@
+{
+  "id": "church-of-the-holy-sepulchre",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Church of the Holy Sepulchre",
+      "from": "0335"
+    }
+  ],
+  "summary": "Church in Jerusalem built over the place where Christian tradition says Jesus was buried and rose. The first church was consecrated under Constantine, and several denominations now share the building.",
+  "labels": [
+    "religion",
+    "architecture"
+  ],
+  "aliases": [
+    "Church of the Anastasis",
+    "Church of the Resurrection"
+  ],
+  "wikidata": "Q187702",
+  "events": [
+    {
+      "type": "born",
+      "date": "0335",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "constantine-the-great"
+    },
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Church of the Holy Sepulchre (Q187702)",
+      "url": "https://www.wikidata.org/wiki/Q187702",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Church of the Holy Sepulchre",
+      "url": "https://en.wikipedia.org/wiki/Church_of_the_Holy_Sepulchre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

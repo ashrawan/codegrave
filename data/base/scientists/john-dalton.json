@@ -1,0 +1,56 @@
+{
+  "id": "john-dalton",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "John Dalton",
+      "from": "1766"
+    }
+  ],
+  "summary": "English chemist and teacher who proposed that each chemical element is made of its own kind of atom, with its own weight. He also studied gases and gave an early detailed description of colour blindness, which he had himself.",
+  "labels": [
+    "chemistry",
+    "physics"
+  ],
+  "aliases": [
+    "Jn.Dalton"
+  ],
+  "wikidata": "Q41284",
+  "events": [
+    {
+      "type": "born",
+      "date": "1766-09-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1844-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "royal-society"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Dalton (Q41284)",
+      "url": "https://www.wikidata.org/wiki/Q41284",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Dalton",
+      "url": "https://en.wikipedia.org/wiki/John_Dalton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

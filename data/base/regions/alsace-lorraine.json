@@ -1,0 +1,61 @@
+{
+  "id": "alsace-lorraine",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Alsace-Lorraine",
+      "from": "1871"
+    }
+  ],
+  "summary": "The territory on the Franco-German border that Germany took from France in 1871. It was a symbol of French resentment and was handed back to France after the First World War.",
+  "labels": [
+    "lost",
+    "politics"
+  ],
+  "aliases": [
+    "Imperial Territory of Alsace-Lorraine"
+  ],
+  "wikidata": "Q155144",
+  "events": [
+    {
+      "type": "born",
+      "date": "1871-05-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "cause": "Returned to France under the Treaty of Versailles",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "german-empire"
+    },
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alsace–Lorraine (Q155144)",
+      "url": "https://www.wikidata.org/wiki/Q155144",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alsace–Lorraine",
+      "url": "https://en.wikipedia.org/wiki/Alsace%E2%80%93Lorraine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,56 @@
+{
+  "id": "bandung-conference",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Bandung Conference",
+      "from": "1955"
+    }
+  ],
+  "summary": "A meeting in Indonesia of leaders from 29 newly independent Asian and African countries. It spoke against colonialism and helped lead to the Non-Aligned Movement.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "aliases": [
+    "Asian–African Conference"
+  ],
+  "wikidata": "Q208191",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-04-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1955-04-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Asian–African Conference (Q208191)",
+      "url": "https://www.wikidata.org/wiki/Q208191",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bandung Conference",
+      "url": "https://en.wikipedia.org/wiki/Bandung_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

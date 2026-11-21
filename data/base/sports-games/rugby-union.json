@@ -1,0 +1,45 @@
+{
+  "id": "rugby-union",
+  "category": "sports-games",
+  "names": [
+    {
+      "name": "Rugby union",
+      "from": "1845"
+    }
+  ],
+  "summary": "A team sport played with an oval ball that can be carried and passed backwards. Rules were first written down at Rugby School in England and spread to many countries.",
+  "labels": [
+    "sport"
+  ],
+  "aliases": [
+    "rugby"
+  ],
+  "wikidata": "Q5849",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: rugby union (Q5849)",
+      "url": "https://www.wikidata.org/wiki/Q5849",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rugby union",
+      "url": "https://en.wikipedia.org/wiki/Rugby_union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "first-crusade",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Crusade",
+      "from": "1096"
+    }
+  ],
+  "summary": "A military expedition from western Europe, called by Pope Urban II, to help the Byzantine Empire and take Jerusalem. The crusaders captured the city in 1099 and set up several Crusader states in the Levant.",
+  "labels": [
+    "war",
+    "religion"
+  ],
+  "wikidata": "Q51649",
+  "events": [
+    {
+      "type": "born",
+      "date": "1096",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1099",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "fatimid-caliphate"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Crusade (Q51649)",
+      "url": "https://www.wikidata.org/wiki/Q51649",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Crusade",
+      "url": "https://en.wikipedia.org/wiki/First_Crusade",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

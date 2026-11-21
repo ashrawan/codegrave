@@ -1,0 +1,57 @@
+{
+  "id": "glacial-lake-missoula",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Glacial Lake Missoula",
+      "from": "-13000"
+    }
+  ],
+  "summary": "A huge lake held back by an ice dam in Montana at the end of the last ice age. When the dam burst, again and again, huge floods rushed across Washington to the Pacific and scoured the landscape.",
+  "labels": [
+    "environment",
+    "lost"
+  ],
+  "aliases": [
+    "Lake Missoula"
+  ],
+  "wikidata": "Q1801015",
+  "events": [
+    {
+      "type": "born",
+      "date": "-13000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-11000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "cause": "Its ice dam failed repeatedly, draining it in huge floods",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lake Missoula (Q1801015)",
+      "url": "https://www.wikidata.org/wiki/Q1801015",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Glacial Lake Missoula",
+      "url": "https://en.wikipedia.org/wiki/Glacial_Lake_Missoula",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

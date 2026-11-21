@@ -1,0 +1,71 @@
+{
+  "id": "paul-gauguin",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Paul Gauguin",
+      "from": "1848"
+    }
+  ],
+  "summary": "French painter who left a banking career, worked with Van Gogh in Arles and later lived in Tahiti. His flat areas of bold colour influenced later modern art, though his colonial life is now criticised.",
+  "labels": [
+    "visual-art"
+  ],
+  "aliases": [
+    "Eugene-Henri-Paul Gauguin",
+    "Paul Eugène Henri Gauguin",
+    "P. gaugin",
+    "Kao-keng",
+    "Gauguin"
+  ],
+  "wikidata": "Q37693",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-06-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1903-05-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "influenced_by",
+      "to": "katsushika-hokusai"
+    },
+    {
+      "type": "influenced_by",
+      "to": "paul-cezanne"
+    },
+    {
+      "type": "influenced_by",
+      "to": "claude-monet"
+    },
+    {
+      "type": "influenced_by",
+      "to": "edgar-degas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paul Gauguin (Q37693)",
+      "url": "https://www.wikidata.org/wiki/Q37693",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paul Gauguin",
+      "url": "https://en.wikipedia.org/wiki/Paul_Gauguin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}

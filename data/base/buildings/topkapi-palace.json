@@ -1,0 +1,62 @@
+{
+  "id": "topkapi-palace",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Topkapı Palace",
+      "from": "1460"
+    }
+  ],
+  "summary": "Palace in Istanbul that the Ottoman sultans used as their home and seat of government for about four hundred years. Its courtyards, harem and treasury are now a museum.",
+  "labels": [
+    "architecture"
+  ],
+  "aliases": [
+    "Topkapi Museum",
+    "Topkapı Museum",
+    "Topkapi",
+    "Topkapı",
+    "Topkapı Palace Museum"
+  ],
+  "wikidata": "Q170495",
+  "events": [
+    {
+      "type": "born",
+      "date": "1460",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "made_by",
+      "to": "mehmed-ii"
+    },
+    {
+      "type": "in",
+      "to": "istanbul"
+    },
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Topkapı Palace (Q170495)",
+      "url": "https://www.wikidata.org/wiki/Q170495",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Topkapı Palace",
+      "url": "https://en.wikipedia.org/wiki/Topkap%C4%B1_Palace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": true
+}
