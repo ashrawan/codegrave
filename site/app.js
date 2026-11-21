@@ -1028,6 +1028,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     raf: 0, live: false, last: 0, prev: null, pace: 1, cards: 0, within1: 0, within3: 0,
     hover: null, focus: null,                  // entry ids: under the pointer, and at the front
     nodes: new Map(), vis: new Map(), heat: new Map(),    // the elements of the names shown; which names were shown last frame, and how; how lit each line is
+    soft: new Map(), side: new Map(),                     // how far each piece of writing on the ground has faded in; which side of its line an event is written on
     drag: null, swallow: 0, until: 0, jump: null, year: null, pal: null, said: null,
   };
   const PLAY_PACE = 0.26;                      // focal lengths a second at full speed
@@ -1093,7 +1094,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   function roadClear() {
     cancelAnimationFrame(road.raf); road.raf = 0; road.live = false;
     for (const n of road.nodes.values()) n.el.remove();
-    road.nodes.clear(); road.vis = new Map(); road.heat.clear();
+    road.nodes.clear(); road.vis = new Map(); road.heat.clear(); road.soft.clear(); road.side.clear();
     road.hover = road.focus = road.jump = road.year = null;
     $('road-views').innerHTML = ''; $('road-year').textContent = '';
     const cv = $('road-cv');
@@ -1265,31 +1266,41 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     for (const p of L.shown) {
       count(p.a); if (!p.alive) count(p.b);
       if (p.a >= L.tMin && p.a <= L.tMax) add(p, false, p.a);
-      // An end too close behind its start would only hide behind the start's card.
-      if (!p.alive && p.b <= L.tMax && p.b >= L.tMin && p.b - p.a > 0.1 * D) add(p, true, p.b);
+      // An end too close behind its start would only hide behind the start's card, and far off,
+      // where the two stand a line apart, the end says nothing that the dates on the start do not.
+      if (!p.alive && p.b <= L.tMax && p.b >= L.tMin && p.b - p.a > 0.1 * D) {
+        const ua = U(p.a), sb = S(U(p.b));
+        if (!(p.a >= L.tMin && ua > uGone && ua < uFar && zoneOf(sb) > 0 && Math.abs(S(ua) - sb) * gh < 72)) add(p, true, p.b);
+      }
     }
     cands.sort((a, b) => a.pri - b.pri || (a.key < b.key ? -1 : 1));
     const placed = placeLabels(cands, G);
     road.vis = new Map([...placed].map(([key, r]) => [key, r.mode]));
 
-    // The card at the front is the selected one: the nearest big card the reader has not yet passed.
-    let front = null, cards = 0;
+    // The card at the front is the selected one: the nearest big card the reader has not yet passed,
+    // and first one whose line runs on ahead (a start, or an end when facing the past). While the
+    // open entry has its own card up, that is the selection and no other line is lit.
+    let front = null, cards = 0, openUp = false;
+    const leads = (c) => c.end === (dir < 0);
     for (const c of cands) {
       const r = placed.get(c.key);
       if (!r || !r.big) continue;
       if (c.u > 0) cards++;
-      if (c.u > -0.05 * D && (!front || c.u < front.u || (c.u === front.u && c.key < front.key))) front = c;
+      if (c.p.t.id === state.open) openUp = true;
+      if (c.u <= -0.05 * D) continue;
+      if (!front || (leads(c) !== leads(front) ? leads(c) : c.u < front.u || (c.u === front.u && c.key < front.key))) front = c;
     }
     road.cards = cards; road.within1 = within1; road.within3 = within3;
-    road.focus = front ? front.p.t.id : null;
+    road.focus = front && !openUp ? front.p.t.id : null;
     const hotNow = (id) => id === state.open || id === road.hover || id === road.focus;
 
     // Each name shown has its element; one that is no longer shown keeps its place on the ground while it fades.
     const fade = (u, s) => clamp((s - 0.085) / 0.06, 0, 1) * clamp(1 + (u + 0.06 * D) / (0.1 * D), 0, 1);
-    const seen = new Set(), stems = [];
+    const seen = new Set(), stems = [], boxes = [];
     for (const c of cands) {
       const r = placed.get(c.key);
       if (!r) continue;
+      boxes.push(r);
       const nk = c.key + ':' + r.mode, n = road.nodes.get(nk) || roadNode(nk, c.p, c.end, r.mode);
       seen.add(nk);
       n.r = r; n.s = c.s;
@@ -1317,6 +1328,18 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       n.el.style.opacity = n.o.toFixed(3);
       if (n.o > 0.02) stems.push({ x1: r.gx, y1: r.gy, x2: r.cx, y2: r.y1, a: n.o, hot, col: p.lane.col });
     }
+
+    // Writing on the ground (a chapter's name, an event on the selected line) is not drawn under a name:
+    // it fades out as the name arrives. `soft` eases each piece of writing in and out by its key.
+    const covered = (x0, y0, x1, y1) => boxes.some((b) => x0 < b.x1 + 3 && x1 > b.x0 - 3 && y0 < b.y1 + 3 && y1 > b.y0 - 3);
+    const inked = new Set();
+    const soft = (key, want) => {
+      inked.add(key);
+      const was = road.soft.get(key) ?? want, v = Math.abs(want - was) < 0.01 ? want : was + (want - was) * ease;
+      road.soft.set(key, v);
+      if (v !== want) busy = true;
+      return v;
+    };
 
     // How lit each line is: the selected ones warm up and cool down, they do not switch.
     for (const id of [state.open, road.hover, road.focus]) if (id && !road.heat.has(id)) road.heat.set(id, 0);
@@ -1393,19 +1416,23 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       for (let i = 1; i < L.lanes.length; i++) edge(L.lanes[i].x0, [5, 6]);
 
       // A view's chapters: a line across its lane where each begins, named in the view's colour.
-      for (const ln of L.lanes) for (const e of ln.eras) {
+      for (const [li, ln] of L.lanes.entries()) for (const e of ln.eras) {
         const at = dir > 0 ? e.a : e.b, u = U(at);
         if (at < L.tMin || at > L.tMax || u <= uGone || u >= uFar * 0.6) continue;
         const s = S(u), y = py(s), a = far(s) * clamp(1 + (u + 0.06 * D) / (0.1 * D), 0, 1), col = P.p[ln.col];
         c.strokeStyle = rgba(col, 0.55 * a); c.lineWidth = 1.2;
         c.beginPath(); c.moveTo(px(ln.x0, s), y); c.lineTo(px(ln.x1, s), y); c.stroke();
         if (s < 0.4) continue;      // far off, the line alone
-        font(600, 9 + 2.5 * Math.min(1, s));
+        const fs = 9 + 2.5 * Math.min(1, s);
+        font(600, fs);
         c.textAlign = 'left'; c.textBaseline = 'bottom';
-        const text = e.name.toUpperCase(), x = px(ln.x0, s) + 6;
-        if (c.measureText(text).width > px(ln.x1, s) - x - 6) continue;      // named once its lane is wide enough to hold the name
-        c.lineWidth = 3.5; c.lineJoin = 'round'; c.strokeStyle = rgba(P.surf, a); c.strokeText(text, x, y - 2);
-        c.fillStyle = rgba(col, a); c.fillText(text, x, y - 2);
+        const text = e.name.toUpperCase(), x = px(ln.x0, s) + 6, w = c.measureText(text).width;
+        if (w > px(ln.x1, s) - x - 6) continue;      // named once its lane is wide enough to hold the name
+        // It lets go at the foot of the stage, and wherever a name stands on it.
+        const na = a * clamp((G.SH + 2 - y) / 12, 0, 1) * soft('c' + li + '|' + e.key, covered(x, y - 2 - fs, x + w, y - 2) ? 0 : 1);
+        if (na < 0.01) continue;
+        c.lineWidth = 3.5; c.lineJoin = 'round'; c.strokeStyle = rgba(P.surf, na); c.strokeText(text, x, y - 2);
+        c.fillStyle = rgba(col, na); c.fillText(text, x, y - 2);
       }
 
       // Lifelines: neutral at rest, in their view's colour while selected.
@@ -1457,11 +1484,21 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
             c.beginPath(); c.moveTo(x - hl, y); c.lineTo(x + hl, y); c.stroke();
             const text = [m.label, m.date].filter(Boolean).join(' ');
             if (text && lastY - y >= 14) {
-              lastY = y;
+              // Written beside the line, on whichever side no name stands; it keeps its side while that stays free.
               font(600, 10 + 4 * Math.min(1, s));
-              c.textBaseline = 'middle'; c.textAlign = 'left';
-              c.lineWidth = 4; c.lineJoin = 'round'; c.strokeStyle = rgba(P.bg, 1); c.strokeText(text, x + hl + 6, y);
-              c.fillStyle = rgba(pc, 1); c.fillText(text, x + hl + 6, y);
+              const w = c.measureText(text).width, off = hl + 6, mk = 'm' + p.key + '|' + m.t;
+              const right = !covered(x + off, y - 8, x + off + w, y + 8), left = x - off - w > 4 && !covered(x - off - w, y - 8, x - off, y + 8);
+              let side = road.side.get(mk) || 1;
+              if (!(side > 0 ? right : left)) side = right ? 1 : left ? -1 : side;
+              road.side.set(mk, side);
+              const ma = soft(mk, (side > 0 ? right : left) ? 1 : 0);
+              if (ma > 0.01) {
+                lastY = y;
+                c.globalAlpha = a * ma;
+                c.textBaseline = 'middle'; c.textAlign = side > 0 ? 'left' : 'right';
+                c.lineWidth = 4; c.lineJoin = 'round'; c.strokeStyle = rgba(P.bg, 1); c.strokeText(text, x + side * off, y);
+                c.fillStyle = rgba(pc, 1); c.fillText(text, x + side * off, y);
+              }
             }
             c.globalAlpha = 1;
           }
@@ -1498,6 +1535,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
         }
       }
     }
+    for (const k of road.soft.keys()) if (!inked.has(k)) { road.soft.delete(k); road.side.delete(k); }
     roadHud(false);
     return busy;
   }
@@ -1520,6 +1558,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     for (const yr of ax.marks) html += `<i class="tk" style="top:${barY(lineYear(yr))}px"></i>`;
     if (ax.atNow) html += `<span class="yr now" style="top:${yEnd}px">Today</span>`;
     $('ticks').innerHTML = html;
+    L.barYears = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, y: parseFloat(el.style.top), under: false }));
     L.units = ax.units;
     $('axis-unit').hidden = true;
   }
@@ -1541,6 +1580,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     }
     const y = barY(t), y2 = barY(clamp(t + dir * 3 * D, L.tMin, L.tMax));
     $('playhead').style.top = y.toFixed(1) + 'px';
+    // A year on the bar steps aside while the marker's own year is over it.
+    for (const k of L.barYears) { const under = Math.abs(k.y - y) < 12; if (under !== k.under) { k.under = under; k.el.classList.toggle('under', under); } }
     $('axis-win').style.top = Math.min(y, y2).toFixed(1) + 'px';
     $('axis-win').style.height = Math.abs(y - y2).toFixed(1) + 'px';
     // The chapter in front of the reader.
