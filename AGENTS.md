@@ -47,7 +47,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
-| The arithmetic of the road (sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
+| The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
 To find an entry without listing folders: its path is always
@@ -145,11 +145,12 @@ How the page is put together:
   `roadTo()`. There is one way to draw the timeline. The flat, left-to-right
   timeline was removed in November 2026; an old link with `?m=flat` or
   `?h=expand` simply opens the road.
-- **The road.** Time runs into the screen on a straight scale, towards one
-  vanishing point. Each view is a lane and each entry a line along it, on a
-  track of its own (`tracks()`). The reader stands at `road.t` facing the
-  future, or the past when reversed (`camDir()`). `L.D` is the focal length
-  in years (`focalYears()`): what is `D` years ahead is drawn half size.
+- **The road.** Time runs into the screen, towards one vanishing point (not
+  evenly: see the next point). Each view is a lane and each entry a line
+  along it, on a track of its own (`tracks()`). The reader stands at
+  `road.t` facing the future, or the past when reversed (`camDir()`). `L.D`
+  is the focal length, a length of road (`focalYears()`): what is `D` ahead
+  is drawn half size.
   The ground (road, lanes, years, lines, starts, ends, chapters) is one
   canvas, `#road-cv`. Names are elements in `#road-labels`: a start is a
   card when near (from size `FULL`, never drawn smaller than `CARD_MIN`), a
@@ -159,6 +160,29 @@ How the page is put together:
   name, a year at the edge) steps aside while a name stands over it
   (`covered()`, `soft()`). Wheel, drag and the arrow keys travel
   (`roadBy()`).
+- **The road stretches busy periods and shrinks empty ones.** The road is not
+  an even ruler. `warp()` in `site/road.js` shares it out: a quarter (`EVEN`)
+  follows the calendar, and the rest goes to what happens (a start counts 1,
+  an end half), so each start has the same room before it whether the one
+  before came a day or a century earlier. Things that share a moment (three
+  entries dated only "1961") do not share a spot either: they stand one
+  after another, what ended first, then what began, the better ranked
+  first, and the calendar waits while they do. No date changes by this: the
+  whole stretch they stand on is that one moment, and the year is written
+  once, where it begins. This was asked for, so that play can keep an even
+  pace instead of crawling through a crowd and racing over nothing; do not
+  go back to an even scale. The road code therefore works in places, not
+  moments. `road.t`, a line's `p.a` and `p.b` (its own spots), a chapter's
+  `xa` and `xb` and `L.D` are places or lengths of road. Dates stay moments:
+  `t.born`, `t.end`, an event's `m.t`, a chapter's `a` and `b`, and anything
+  written or kept in the link or in `state`. `L.place(moment)` and
+  `L.when(place)` convert; for a moment several things share, `L.place()`
+  is where the first of them stands, so go to an entry by `p.a` or `p.b`,
+  never by `L.place(t.born)`. Convert at the edge (`jumpTo()`, `flashYear()`
+  and `startPlay()` take moments; `roadTo()` takes a place). `L.tMin` and
+  `L.tMax` are both at once: the road starts and ends where it did.
+  `render()` carries the reader over as a moment, because the scale changes
+  with what is drawn.
 - **Lanes have sides.** With more than one view, `ln.lean` is -1 for the
   left lane, 0 for a middle one and 1 for the right lane. A card on a side
   lane stands to the outer side of its point, like a flag on its pole
@@ -182,15 +206,19 @@ How the page is put together:
   to the other.
 - **The bar** (`#axisbar`) stands upright on the right: reverse
   (`state.order`) at the top, play at the bottom, the whole span between
-  them with ahead upwards (`barY()`, `barT()`, `barTicks()`), the stretch
+  them with ahead upwards, on the road's own scale so the marker climbs
+  steadily (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
   marker moves the reader. Play moves the reader `PLAY_PACE` focal lengths
-  a second, slower while cards stand in front and quicker through empty
-  years (`paceFor()`); it eases up to speed and a pause glides to a stop
-  (`road.vel`). Space plays and pauses. At the far end the button offers to
+  a second, a little slower while cards stand in front and quicker through
+  empty years (`paceFor()`). Because the road gives every start its own
+  room, that pace stays nearly even. Every change of speed is eased, up to
+  speed, down to the turn limit and to a stop on pause (`road.vel`), so the
+  road never jerks under the reader. Space plays and pauses. At the far end the button offers to
   play again from the beginning.
-- **Cards take turns while play travels.** Where things begin close
-  together their cards would cover one another, and before this the one
+- **Cards take turns while play travels.** The uneven scale keeps starts
+  apart along the road, but cards are wide, so on a narrow screen or a
+  crowded lane they would still cover one another, and before this the one
   behind passed without ever being shown. Now every start is owed a moment
   as a full card. A card that is up keeps its place for `DWELL` seconds
   once it has opened (`dwellFor()`: less when more than two wait); then it
@@ -259,9 +287,13 @@ How the page is put together:
   (`viewSub()`: the years the view covers and how many entries it holds).
   The description is the row's tooltip and is searched; it is not printed
   in the list. Keep the row to those two lines.
-- **Time** is a straight scale. `ruler()` writes the years along the edge
-  of the road and `axisTicks()` those on the bar, in round steps from one
-  year to a billion; there is no year 0; deep time is labelled ka, Ma and
+- **The years.** `ruler()` writes the years along the edge of the road and
+  `barTicks()` those on the bar. Because the scale is uneven there is no
+  fixed step: `yearMarks()` in `site/road.js` writes a year where the years
+  next to it leave room, round ones first (1, 5, 10, 50, 100 and so on, up
+  to a billion), so single years are written where much happens and only
+  round ones where little does. It is bounded by what fits on the screen, whatever the
+  span; keep it so. There is no year 0; deep time is labelled ka, Ma and
   Ga. When a few entries start far earlier than the rest, the view opens on
   the rest and "Show all years" reaches back. Every date on the page goes
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates.

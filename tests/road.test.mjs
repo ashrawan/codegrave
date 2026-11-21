@@ -1,7 +1,7 @@
 // Run with: node --test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, DWELL, DWELL_BUSY, DWELL_CROWD, HOLD_AT, CRAWL, sizeAt, step125, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, openFrom, placeLabels, ruler, paceFor, orderOf, dwellFor, turnPace } from '../site/road.js';
+import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, DWELL, DWELL_BUSY, DWELL_CROWD, HOLD_AT, CRAWL, sizeAt, step125, warp, EVEN, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, dwellFor, turnPace } from '../site/road.js';
 
 const SIZES = { fullH: 158, nearH: 100, compactW: 170, tagW: 70, endW: 150 };
 
@@ -116,7 +116,69 @@ test('the years along the road: nearest first, round, never the year 0, never cr
   assert.ok(era.some((k) => k.y < 0 && k.at === k.y + 1));
   // Deep time: steps of millions of years, still a bounded number of ticks.
   const deep = ruler({ t: -4e8, dir: 1, D: 1.2e8, tMin: -1.45e10, tMax: 2026, gh: 736, fsOf });
-  assert.ok(deep.length > 5 && deep.length < 120 && deep.every((k) => k.y % 1e6 === 0));
+  assert.ok(deep.length > 5 && deep.length < 400 && deep.every((k) => k.y % 1e5 === 0));
+  assert.ok(deep.filter((k) => k.label).every((k) => k.y % 5e6 === 0));
+});
+
+test('the road is not an even ruler: busy years get more of it, empty years less, and nothing changes order', () => {
+  // Forty quiet years, then seven starts in six.
+  const starts = [1939, 1939.7, 1940.3, 1941.5, 1941.9, 1944.4, 1945.3], marks = starts.map((t) => [t, 1]);
+  const w = warp(marks, 1900, 1950);
+  assert.equal(w.place(1900), 1900);
+  assert.equal(w.place(1950), 1950);                   // the road is as long as before and ends where it did
+  assert.ok(w.place(1939) - w.place(1900) < 39 * 0.5);  // the quiet years are shrunk
+  assert.ok(w.place(1945.3) - w.place(1939) > 6.3 * 3); // the busy ones stretched
+  // Every start has at least its share of the road before it, however close the one before came.
+  const xs = starts.map(w.place);
+  assert.deepEqual(xs, w.at);
+  for (let i = 1; i < xs.length; i++) assert.ok(xs[i] - xs[i - 1] >= ((1 - EVEN) * 50) / starts.length - 1e-9);
+  // Moments keep their order, and `when` undoes `place`.
+  for (let t = 1890, last = -Infinity; t <= 1960; t += 0.37) {
+    const x = w.place(t);
+    assert.ok(x > last); last = x;
+    assert.ok(Math.abs(w.when(x) - t) < 1e-9);
+  }
+  // Outside the road a moment is its own place.
+  assert.equal(w.place(1850), 1850);
+  assert.equal(w.when(1975), 1975);
+  // Things that share a moment do not share a spot: they stand one after another in the order given, each with
+  // its own room, and the calendar waits while they do. A start counts 1 and an end half.
+  const tied = warp([[1910, 1], [1930, 0.5], [1930, 1], [1930, 1], [1950, 1]], 1900, 1960);
+  const [a, e, b, c, d] = tied.at;
+  assert.ok(a < e && e < b && b < c && c < d);
+  assert.ok(Math.abs((c - b) - (b - e)) < 1e-9 && Math.abs((b - e) - ((1 - EVEN) * 60) / 4.5) < 1e-9);
+  assert.equal(tied.place(1930), e);                    // the moment itself is where the first of them stands
+  for (const x of [e, (e + b) / 2, b, c]) assert.equal(tied.when(x), 1930);
+  assert.ok(tied.when(c + 0.01) > 1930 && tied.place(1930.001) > c);
+  // A mark outside the road is its own place.
+  assert.deepEqual(warp([[1850, 1], [1920, 1], [1990, 1]], 1900, 1950).at.filter((x, i) => i !== 1), [1850, 1990]);
+  // With nothing to go by, or on a road of no length, the scale is even.
+  assert.equal(warp([], 0, 100).place(40), 40);
+  assert.equal(warp([[5, 1]], 5, 5).place(5), 5);
+  // A scale that is all calendar is the calendar.
+  assert.ok(Math.abs(warp(marks, 1900, 1950, 1).place(1920) - 1920) < 1e-9);
+});
+
+test('years on an uneven scale: round years first, never touching, and bounded whatever the span', () => {
+  // An even scale of 10 pixels a year: every fifth year has room to be written, the rest are ticks.
+  const even = yearMarks(1900, 2000, (y) => y * 10, () => 40);
+  const written = even.filter((k) => k.label).map((k) => k.y).sort((a, b) => a - b);
+  assert.deepEqual(written, [1900, 1905, 1910, 1915, 1920, 1925, 1930, 1935, 1940, 1945, 1950, 1955, 1960, 1965, 1970, 1975, 1980, 1985, 1990, 1995, 2000]);
+  assert.equal(even.length, 101);
+  // With room for every other year, the years between the fives are written two and three apart, always the same ones.
+  const tight = yearMarks(1900, 1910, (y) => y * 10, () => 20).filter((k) => k.label).map((k) => k.y).sort((a, b) => a - b);
+  assert.deepEqual(tight, [1900, 1902, 1905, 1907, 1910]);
+  // A scale that opens up after 1939: single years are written there and only round ones before.
+  const w = warp([1939, 1939.7, 1940.3, 1941.5, 1941.9, 1944.4, 1945.3].map((t) => [t, 1]), 1900, 1950);
+  const marks = yearMarks(1900, 1950, (y) => w.place(y) * 12, () => 40).filter((k) => k.label).sort((a, b) => a.y - b.y);
+  assert.deepEqual(marks.map((k) => k.y), [1900, 1910, 1920, 1930, 1939, 1940, 1941, 1942, 1944, 1950]);
+  for (let i = 1; i < marks.length; i++) assert.ok(marks[i].p - marks[i - 1].p >= 40 - 1e-9);
+  // Fourteen billion years with all the room at one end: still a handful of marks, and it returns at once.
+  const deep = warp([[-1000, 1], [1500, 1], [1900, 1], [1990, 1], [2020, 1]], -1.4e10, 2026);
+  const far = yearMarks(-13999999999, 2026, (y) => ((deep.place(y < 0 ? y + 1 : y) + 1.4e10) / 1.4e10) * 800, () => 30);
+  assert.ok(far.length > 5 && far.length < 300);
+  assert.ok(far.every((k) => k.y !== 0));
+  assert.ok(far.some((k) => k.label && k.y > 1000) && far.some((k) => k.label && k.y < -1e9));
 });
 
 test('a card on a side lane stands to the outer side of its point, and one in the middle stands on it', () => {

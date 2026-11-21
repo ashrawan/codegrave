@@ -7,7 +7,7 @@
    with rank.js, file keys come from keys.js. */
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf } from './keys.js';
-import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, ruler, paceFor, orderOf, dwellFor, turnPace } from './road.js';
+import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, dwellFor, turnPace } from './road.js';
 
 (() => {
   'use strict';
@@ -471,7 +471,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (L || !state.views.length) drawResults();
     return loadView(real).then((got) => {
       pending.delete(real);
-      if (got && addView(got)) { if (done) done(got); else { changed(); roadToView(got); } spansNote(); }
+      if (got && addView(got)) { if (done) done(got); else { changed(); roadToView(got); } }
       else { if (!got) note(`“${viewById.get(real)?.name || real}” could not be loaded. Try again in a moment.`); drawResults(); }
       return got;
     });
@@ -580,38 +580,16 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const inSpan = (t) => (t.lead ?? t.born) < tMax && (t.end ?? NOW) >= tMin;
     return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
   }
-  // The years along the bar: a step that suits the span, labels that never
-  // touch, BCE marked, and deep time in thousands, millions or billions of years.
-  // `ppy` is pixels per year; `gap` is the room a label needs along the bar.
-  function axisTicks(ppy, gap) {
-    const { tMin, tMax } = L;
-    const atNow = tMax >= NOW - 0.01;
-    const yMin = writtenOf(tMin), yMax = writtenOf(tMax - 1e-9);
-    const width = (s) => s.length * 7 + 18;
-    const widest = Math.max(width(axisText(yMin)), width(axisText(yMax, 0, yMin < 0)), width(axisText(Math.round((yMin + yMax) / 2))), 44);
-    // Steps grow 1, 2, 5, 10, 25, 50, 100, 250, 500, 1,000 … until labels have room.
-    let step = niceStep(gap / ppy);
-    if (!Number.isInteger(step)) step = Math.ceil(step / 5) * 5;
-    // A minor tick between labels, where there is room for it.
-    const minor = [5, 4, 2].map((d) => step / d).find((s) => Number.isInteger(s) && s * ppy >= 7) || 0;
-    const ticks = [], marks = [];
-    const ce = yMin < 0 && yMax > 0;    // both eras on the axis: say which is which
-    const first = Math.ceil(yMin / step) * step;
-    const used = new Set();
-    for (let y = first; y <= yMax; y += step) {
-      if (y === 0) continue;   // there is no year zero
-      ticks.push(y);
-      const m = /\s(ka|Ma|Ga)$/.exec(axisText(y, step));
-      if (m) used.add(m[1]);
-    }
-    if (minor) for (let y = Math.ceil(yMin / minor) * minor; y <= yMax; y += minor) if (y !== 0 && y % step !== 0) marks.push(y);
-    return { ticks, marks, atNow, widest, units: [...used], step, ce };
-  }
-
   // ---------------------------------------------------------------- render
   function render() {
     if (!state.views.length) return renderEmpty();
+    // The scale of the road changes with what is drawn, so the reader's place is carried over as a moment
+    // (and how far into that moment's stretch of road, where several things share it).
+    const keep = (x) => { if (!L || x == null) return null; const t = L.when(x); return { t, off: x - L.place(t) }; };
+    const was = keep(road.t), aim = keep(road.target);
     roadLayout();
+    if (was) road.t = road.prev = L.place(was.t) + was.off;
+    if (aim) road.target = L.place(aim.t) + aim.off;
     if (road.t == null) road.t = road.prev = roadOpening();
     road.t = camClamp(road.t);
     if (road.target != null) road.target = camClamp(road.target);
@@ -633,7 +611,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
 
   function renderEmpty() {
-    L = null;
+    L = null; road.t = road.target = null;
     roadClear();
     $('ticks').innerHTML = '';
     $('status').hidden = false;
@@ -643,10 +621,16 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   }
 
   // ---------------------------------------------------------------- the road
-  // The timeline in depth. Time runs into the screen on a straight scale and
-  // each view is a lane. The reader stands at road.t and faces the future, or
-  // the past when reversed; play, the wheel, a drag, the arrow keys and the
-  // bar on the right all move road.t. Lines lie on the ground, on one canvas.
+  // The timeline in depth. Time runs into the screen and each view is a lane.
+  // The road is not an even ruler: a busy period is drawn longer and an empty
+  // one shorter (warp in road.js), so the reader meets things at an even pace.
+  // Everything on the road is therefore kept as a place along it, not a
+  // moment: `L.place(moment)` gives the place and `L.when(place)` the moment,
+  // and only what is written (a year, a date) or comes from outside the road
+  // (an entry's dates, a year asked for) is a moment. The reader stands at
+  // the place road.t and faces the future, or the past when reversed; play,
+  // the wheel, a drag, the arrow keys and the bar on the right all move
+  // road.t. Lines lie on the ground, on one canvas.
   // Names stand on them: road.js chooses afresh every frame which are shown
   // and how big, and each fades in and out as its own element, so nothing
   // jumps. The card at the front is drawn as selected (road.focus): its line
@@ -685,7 +669,20 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const mine = all.filter((t) => rowsOf.get(v).has(t) && inSpan(t));
       if (mine.length) lanes.push({ view: v, mine });
     }
-    const D = focalYears(lanes.flatMap((l) => l.mine.map((t) => t.born)), tMin, tMax);
+    // The scale: room on the road goes to where things begin (an end counts half), not evenly to every year.
+    // Each start and each end has its own spot. Where several share a moment they stand one after another:
+    // what ended first, then what began, the better ranked first.
+    const marks = [];
+    for (const t of new Set(lanes.flatMap((l) => l.mine))) {
+      marks.push({ t, end: 0, at: t.born, w: 1 });
+      if (t.end != null && t.end > t.born) marks.push({ t, end: 1, at: t.end, w: 0.5 });
+    }
+    marks.sort((a, b) => a.at - b.at || b.end - a.end || a.t.rank - b.t.rank || (a.t.id < b.t.id ? -1 : 1));
+    const { place, when, at } = warp(marks.map((m) => [m.at, m.w]), tMin, tMax);
+    const spot = [new Map(), new Map()];      // where each entry starts, and where it ends
+    marks.forEach((m, i) => spot[m.end].set(m.t, at[i]));
+    const from = (t) => spot[0].get(t), to = (t) => (t.end == null ? place(NOW) : spot[1].get(t) ?? from(t));
+    const D = focalYears(lanes.flatMap((l) => l.mine.map(from)), tMin, tMax);
     const laneW = lanes.length ? (2 * G.RW) / lanes.length : 0, pad = Math.min(G.phone ? 14 : 24, laneW * 0.15);
     const shown = [], groups = [];
     lanes.forEach((ln, k) => {
@@ -693,15 +690,16 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       // Which side of the road it is on: -1 the left lane, 0 the middle (or the only one), 1 the right lane.
       ln.lean = lanes.length > 1 ? clamp((ln.x0 + ln.x1) / G.RW, -1, 1) : 0;
       ln.eras = viewEras(ln.view).filter((c) => c.b > tMin && c.a < tMax);
-      const where = tracks(ln.mine.map((t) => ({ id: t.id, a: t.born, b: t.end })), D * 0.2);
+      for (const c of ln.eras) { c.xa = place(c.a); c.xb = place(c.b); }     // a chapter's years stay c.a and c.b
+      const where = tracks(ln.mine.map((t) => ({ id: t.id, a: from(t), b: t.end == null ? null : to(t) })), D * 0.2);
       for (const t of ln.mine) {
         shown.push({ t, group: ln.view, lane: ln, key: k + ':' + t.id, xn: ln.x0 + pad + where.get(t.id) * (laneW - 2 * pad),
-          alive: t.end == null, a: t.born, b: t.end ?? NOW });
+          alive: t.end == null, a: from(t), b: to(t) });      // a and b are places on the road
       }
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
     turnsOver();
-    L = { tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes,
+    L = { tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
@@ -718,7 +716,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // Where a view begins on the road: its first start, or its first chapter when that opens a little
   // before it. A chapter that opens long before anything happens does not make the road open on empty years.
   function laneStart(ln) {
-    const first = Math.min(...ln.mine.map((t) => t.born)), chapter = Math.min(first, ...ln.eras.map((c) => c.a));
+    const first = Math.min(...ln.mine.map((t) => L.at.get(t.id).a)), chapter = Math.min(first, ...ln.eras.map((c) => c.xa));
     return Math.max(L.tMin, chapter, first - 0.6 * L.D);
   }
   // The stretch where the most lines start, the earliest such, so a long road never opens on empty years.
@@ -735,13 +733,13 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   function roadOpening() {
     const first = viewById.get(state.views[0]), ln = L.lanes[0];
     if (!ln) return L.tMin;
-    if (first && first.type === 'classical') return camClamp((first.year ? lineYear(first.year) : roadBusiest()) - camDir() * 0.2 * L.D);
+    if (first && first.type === 'classical') return camClamp((first.year ? L.place(lineYear(first.year)) : roadBusiest()) - camDir() * 0.2 * L.D);
     return camDir() > 0 ? camClamp(laneStart(ln) - 0.25 * L.D) : camLimits()[1];
   }
-  // Takes the reader to a moment: it ends up a little in front of them.
-  function roadTo(time, smooth = true) {
+  // Takes the reader to a place on the road: it ends up a little in front of them.
+  function roadTo(x, smooth = true) {
     if (!L) return;
-    const to = camClamp(time - camDir() * 0.2 * L.D);
+    const to = camClamp(x - camDir() * 0.2 * L.D);
     if (play.on) pausePlay();
     road.vel = 0; turnsOver();
     if (smooth && !calm()) { road.target = to; road.rate = 6; } else { road.t = road.prev = to; road.target = null; }
@@ -762,8 +760,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     const ln = L && L.lanes.find((x) => x.view.id === id);
     if (!ln) return;
     // A view added while travelling stays where the reader is, if something of it is in sight.
-    const D = L.D, dir = camDir(), ahead = (t) => dir * (t - road.t);
-    if (smooth && ln.mine.some((t) => ahead(t.born) > -0.1 * D && ahead(t.born) < 3 * D)) return;
+    const D = L.D, dir = camDir(), ahead = (t) => dir * (L.at.get(t.id).a - road.t);
+    if (smooth && ln.mine.some((t) => ahead(t) > -0.1 * D && ahead(t) < 3 * D)) return;
     roadTo(dir > 0 ? laneStart(ln) - 0.05 * D : L.tMax, smooth);
   }
   // Brings an entry into sight: where its line starts.
@@ -775,9 +773,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   function jumpTo(id, at) {
     const p = L && L.at.get(id);
     if (!p) return;
-    const time = clamp(at, Math.max(p.a, L.tMin), Math.min(p.b, L.tMax));
-    road.jump = { id, time, t0: performance.now() }; road.until = road.jump.t0 + 1700;
-    roadTo(time);
+    const x = clamp(L.place(at), Math.max(p.a, L.tMin), Math.min(p.b, L.tMax));
+    road.jump = { id, x, t0: performance.now() }; road.until = road.jump.t0 + 1700;
+    roadTo(x);
   }
 
   function roadKick() {
@@ -802,9 +800,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       // Play eases up to its speed, and a pause lets the reader glide to a stop.
       if (play.on) road.pace += (paceFor(road.cards + road.waiting, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
       // Play slows for cards that have not had their turn, by as much as they still need, and never stands still.
-      const cap = play.on ? road.limit : Infinity;
-      const want = Math.min(cap, play.on ? PLAY_PACE * road.pace : 0);
-      road.vel = calm() ? want : Math.min(cap, road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on ? 4 : 6))));
+      // It eases down to that limit as it eases up to speed, so the road never jerks under the reader.
+      const want = play.on ? Math.min(road.limit, PLAY_PACE * road.pace) : 0;
+      road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       road.t += dir * road.vel * L.D * dt;
       if (road.t >= hi || road.t <= lo) {
@@ -851,7 +849,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // One name on the road, in one of its forms. It is made when first shown and removed once it has faded.
   function roadNode(nk, p, end, mode) {
     const t = p.t, el = document.createElement('div'), m = roadSizes(t);
-    const at = `data-id="${esc(t.id)}" data-at="${end ? p.b : p.a}" style="--c:var(--p${p.lane.col})"`, name = esc(t.name), years = esc(spanOf(t));
+    const at = `data-id="${esc(t.id)}" data-key="${esc(p.key)}"${end ? ' data-end' : ''} style="--c:var(--p${p.lane.col})"`, name = esc(t.name), years = esc(spanOf(t));
     el.className = 'rl';
     el.innerHTML = mode === 'full'
       ? `<button type="button" class="rc full" ${at}>${t.image && !t.noImage && !L.G.short ? `<img src="${esc(mediaUrl(t.image.src))}" alt="">` : ''}` +
@@ -1048,7 +1046,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       // A year the reader asked for: its stretch of road is lit for a few seconds.
       if (road.year) {
         const age = (now - road.year.t0) / 4500, a = age >= 1 ? 0 : age < 0.7 ? 1 : 1 - (age - 0.7) / 0.3;
-        const u0 = U(road.year.a), u1 = U(road.year.a + 1), ua = Math.max(uNear, Math.min(u0, u1)), ub = Math.min(uFar, Math.max(u0, u1));
+        const u0 = U(road.year.a), u1 = U(road.year.b), ua = Math.max(uNear, Math.min(u0, u1)), ub = Math.min(uFar, Math.max(u0, u1));
         if (a && ub > ua) {
           quad(-G.RW, G.RW, S(ub), S(ua)); c.fillStyle = rgba(P.acc, 0.22 * a); c.fill();
           const s = S(ua), text = road.year.label;
@@ -1063,7 +1061,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       // The years: a line across the road at each written year, ticks on both edges.
       const fsOf = (s) => (G.phone ? Math.max(9.5, 8 + 13 * s) : Math.max(10, 9 + 25 * s));
       const ce = writtenOf(L.tMin) < 0 && writtenOf(L.tMax) > 0;
-      for (const tk of ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf })) {
+      for (const tk of ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when })) {
         // A year fades in from the horizon, and out as it slides under the reader's feet.
         const s = tk.s, y = py(s), xl = px(-G.RW, s), xr = px(G.RW, s), a = far(s) * clamp(2.4 - s * 1.5, 0, 1) * clamp((G.SH - y) / (tk.fs * 0.9), 0, 1);
         if (tk.label) { c.strokeStyle = rgba(P.ink, 0.1 * a); c.beginPath(); c.moveTo(xl, y); c.lineTo(xr, y); c.stroke(); }
@@ -1096,7 +1094,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
 
       // A view's chapters: a line across its lane where each begins, named in the view's colour.
       for (const [li, ln] of L.lanes.entries()) for (const e of ln.eras) {
-        const at = dir > 0 ? e.a : e.b, u = U(at);
+        const at = dir > 0 ? e.xa : e.xb, u = U(at);
         if (at < L.tMin || at > L.tMax || u <= uGone || u >= uFar * 0.6) continue;
         const s = S(u), y = py(s), a = far(s) * clamp(1 + (u + 0.06 * D) / (0.1 * D), 0, 1), col = P.p[ln.col];
         c.strokeStyle = rgba(col, 0.55 * a); c.lineWidth = 1.2;
@@ -1129,7 +1127,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
           g.addColorStop(0, rgba(col, 0.34 * thin + (1 - 0.34 * thin) * h)); g.addColorStop(1, rgba(col, 0.07 * thin + (0.75 - 0.07 * thin) * h));
           c.strokeStyle = g; c.lineWidth = 1 + 1.2 * h;
           // Dotted from the day its end was announced.
-          const ud = p.t.dep != null && !p.alive ? clamp(U(p.t.dep), lo, hi) : null;
+          const ud = p.t.dep != null && !p.alive ? clamp(U(L.place(p.t.dep)), lo, hi) : null;
           const seg = (ua, ub, dash) => { if (ub <= ua) return; const sa = S(ua), sb = S(ub); c.setLineDash(dash); c.beginPath(); c.moveTo(px(p.xn, sa), py(sa)); c.lineTo(px(p.xn, sb), py(sb)); c.stroke(); };
           if (ud == null) seg(lo, hi, []);
           else if (dir > 0) { seg(lo, ud, []); seg(ud, hi, [2, 4]); } else { seg(lo, ud, [2, 4]); seg(ud, hi, []); }
@@ -1155,8 +1153,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
           let lastY = Infinity;
           const ms = dir > 0 ? p.t.marks : [...p.t.marks].reverse();
           for (const m of ms) {
-            if (m.t <= p.a + 0.01 || m.t >= p.b - 0.01 || m.t < L.tMin || m.t > L.tMax) continue;
-            const u = U(m.t);
+            if (m.t <= p.t.born + 0.01 || m.t >= (p.t.end ?? NOW) - 0.01 || m.t < L.tMin || m.t > L.tMax) continue;
+            const u = U(L.place(m.t));
             if (u <= uGone || u >= uFar * 0.5) continue;
             const s = S(u), x = px(p.xn, s), y = py(s), hl = 6 * s + 1.5, a = far(s) * h * clamp(1 + (u + 0.06 * D) / (0.1 * D), 0, 1);
             c.globalAlpha = a; c.strokeStyle = rgba(pc, 1); c.lineWidth = 2;
@@ -1186,7 +1184,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
 
       // A moment on a line the reader asked for: a ring opens around it.
       if (road.jump) {
-        const age = (now - road.jump.t0) / 1600, p = L.at.get(road.jump.id), u = p ? U(road.jump.time) : uFar;
+        const age = (now - road.jump.t0) / 1600, p = L.at.get(road.jump.id), u = p ? U(road.jump.x) : uFar;
         if (age < 1 && u > uNear && u < uFar) {
           const s = S(u), r = (4 + 10 * Math.min(1, age / 0.7)) * s + 1;
           c.strokeStyle = rgba(P.acc, age < 0.7 ? 1 : 1 - (age - 0.7) / 0.3); c.lineWidth = 2;
@@ -1224,25 +1222,34 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   const barSpan = () => Math.max(1, L.barH - 2 * BAR_PAD);
   const barY = (t) => { const f = (t - L.tMin) / (L.tMax - L.tMin); return BAR_PAD + (camDir() > 0 ? 1 - f : f) * barSpan(); };
   const barT = (y) => { const f = clamp((y - BAR_PAD) / barSpan(), 0, 1); return L.tMin + (camDir() > 0 ? 1 - f : f) * (L.tMax - L.tMin); };
+  // The years on the bar. It follows the road's scale, so its years are not evenly spaced either: they
+  // are written where there is room (yearMarks in road.js), BCE marked, and deep time in thousands,
+  // millions or billions of years.
   function barTicks() {
-    const ax = axisTicks(barSpan() / (L.tMax - L.tMin), L.G.phone ? 34 : 30);
-    const yEnd = barY(L.tMax);
+    const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9), ce = yMin < 0 && yMax > 0;    // both eras on the bar: say which is which
+    const atNow = L.tMax >= NOW - 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
-    const text = (yr) => esc(axisText(yr, ax.step, ax.ce)).replace(/ (BCE|CE|ka|Ma|Ga)$/, ' <small>$1</small>');
+    const text = (k) => esc(axisText(k.y, k.step, ce)).replace(/ (BCE|CE|ka|Ma|Ga)$/, ' <small>$1</small>');
+    const used = new Set();
     let html = '';
-    for (const yr of ax.ticks) {
-      const y = barY(lineYear(yr));
-      html += ax.atNow && Math.abs(y - yEnd) < 22 ? `<i class="tk big" style="top:${y}px"></i>` : `<span class="yr" style="top:${y}px">${text(yr)}</span>`;
+    for (const k of yearMarks(yMin, yMax, (y) => barY(L.place(lineYear(y))), () => gap, 7)) {
+      const y = k.p.toFixed(1);
+      if (!k.label) html += `<i class="tk" style="top:${y}px"></i>`;
+      else if (atNow && Math.abs(k.p - yEnd) < 22) html += `<i class="tk big" style="top:${y}px"></i>`;
+      else {
+        html += `<span class="yr" style="top:${y}px">${text(k)}</span>`;
+        const m = /\s(ka|Ma|Ga)$/.exec(axisText(k.y, k.step));
+        if (m) used.add(m[1]);
+      }
     }
-    for (const yr of ax.marks) html += `<i class="tk" style="top:${barY(lineYear(yr))}px"></i>`;
-    if (ax.atNow) html += `<span class="yr now" style="top:${yEnd}px">Today</span>`;
+    if (atNow) html += `<span class="yr now" style="top:${yEnd}px">Today</span>`;
     $('ticks').innerHTML = html;
     L.barYears = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, y: parseFloat(el.style.top), under: false }));
-    L.units = ax.units;
+    L.units = [...used];
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
-    const t = road.t, D = L.D, dir = camDir(), label = playLabel(t);
+    const t = road.t, D = L.D, dir = camDir(), label = playLabel(L.when(t));
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
@@ -1265,7 +1272,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     // The chapter in front of the reader.
     const at = t + dir * 0.2 * D;
     L.lanes.forEach((ln, i) => {
-      const cur = ln.eras.find((e) => e.a <= at && at < e.b) || null;
+      const cur = ln.eras.find((e) => e.xa <= at && at < e.xb) || null;
       if (cur === ln.cur) return;
       ln.cur = cur;
       const b = $('road-views').querySelector(`[data-lane="${i}"]`);
@@ -1444,8 +1451,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   function flashYear(year) {
     if (!L) return;
     const a0 = lineYear(year);
-    road.year = { a: a0, label: yearText(year), t0: performance.now() }; road.until = road.year.t0 + 4600;
-    roadTo(camDir() > 0 ? a0 : a0 + 1);
+    const a = L.place(a0), b = L.place(a0 + 1);
+    road.year = { a, b, label: yearText(year), t0: performance.now() }; road.until = road.year.t0 + 4600;
+    roadTo(camDir() > 0 ? a : b);
   }
 
   // ---------------------------------------------------------------- panel: views
@@ -1470,20 +1478,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     noteTimer = setTimeout(() => { noteText = ''; drawResults(); }, ms);
     drawResults();
   }
-  // Said once: views of very different lengths squeeze the shorter ones into a sliver.
-  let spansSaid = false;
-  function spansNote() {
-    if (spansSaid || state.views.length < 2) return;
-    const lengths = state.views.map((id) => {
-      const m = viewById.get(id).members;
-      if (!m || !m.length) return 0;
-      return Math.max(...m.map((t) => t.end ?? NOW)) - Math.min(...m.map((t) => t.lead ?? t.born));
-    }).filter((n) => n > 0);
-    if (lengths.length < 2 || Math.max(...lengths) < 50 * Math.max(1, Math.min(...lengths))) return;
-    spansSaid = true;
-    note('These views cover very different spans of time. To see the shorter one, narrow the years with the year range below, or open one of its chapters and choose "Only these years".', 20000);
-  }
-
   function renderSide() {
     // The views on the timeline: one pill each in the strip under the years.
     const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
@@ -1913,7 +1907,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
     if (from != null || camAtEnd()) turnsOver();
-    if (from != null) road.t = camClamp(Number(from) - camDir() * 0.1 * L.D);
+    if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1;
     soundReady();
@@ -2054,7 +2048,11 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       if (li) return pick(Number(li.dataset.i), e.shiftKey || e.ctrlKey || e.metaKey);
       // A name on the road opens its entry and brings the reader to it.
       const card = el('#road-labels [data-id]');
-      if (card) { openThing(card.dataset.id, { focus: false }); return roadTo(Number(card.dataset.at)); }
+      if (card) {
+        openThing(card.dataset.id, { focus: false });
+        const p = L && L.byKey.get(card.dataset.key);      // its own spot on the road, which need not be where its year begins
+        return p ? roadTo('end' in card.dataset ? p.b : p.a) : undefined;
+      }
       const thing = el('[data-id]');
       if (thing) return openThing(thing.dataset.id, { scroll: !!thing.closest('#side'), push: !!thing.closest('#side') });
     });
@@ -2303,7 +2301,6 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (!state.views.length) $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
     render();
     if (ids.length) writeUrl();
-    spansNote();
     followHash(false);     // otherwise the road opens where roadOpening() says
   }
   start();

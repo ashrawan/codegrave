@@ -44,6 +44,10 @@ tell the story in order.
 - **Any stretch of time.** The same axis shows a decade of software, three
   thousand years of empires, or four billion years of the Earth. Dates
   before the common era and deep time are first-class.
+- **Busy periods get more road.** The road is not an even ruler: where much
+  happens it is drawn longer, and where nothing does it is drawn shorter, so
+  the journey keeps an even pace. Things that share a date stand one after
+  another. The years along the edge show how the road is stretched.
 - **Side by side.** The small plus at the end of a row (or a right click)
   puts a view beside the ones already there, each in a lane of its own, so
   you see what was happening at the same moment in different stories. The
@@ -54,10 +58,10 @@ tell the story in order.
   encyclopedia, and picking one brings it onto the timeline. The panel's
   search finds views: the listed ones, and the classical shelves (Everything,
   each branch, each kind) with their type marked.
-- **Play and reverse.** Play carries you along the road, slower where much
-  happens and quicker through empty years. Where things begin close together
-  their cards take turns, and play slows down, without ever stopping, so
-  that each is shown. A card opens out of its small card like a scroll
+- **Play and reverse.** Play carries you along the road at an even pace,
+  because the road itself gives busy periods more room. Where cards would
+  still cover one another they take turns, and play slows down, without ever
+  stopping, so that each is shown. A card opens out of its small card like a scroll
   unrolling, with a quiet breath of air (the button above play turns the
   sound off), and fades away when its turn is over.
   The wheel, a drag, the arrow keys and the upright bar on the right travel

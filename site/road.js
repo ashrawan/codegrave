@@ -1,13 +1,18 @@
-/* The road: the timeline drawn in depth. Time runs into the screen on a
-   straight scale towards one vanishing point, and each view is a lane.
+/* The road: the timeline drawn in depth. Time runs into the screen towards
+   one vanishing point, and each view is a lane. The road is not an even
+   ruler: a stretch where much happens is drawn longer and an empty one
+   shorter, and things that share a date stand one after another (warp), so
+   the reader meets things at an even pace.
    This file is the arithmetic only, as pure functions with tests: the
-   projection, where each line runs across its lane, which names are shown,
-   and the years along the edge. app.js draws what these return. */
+   scale, the projection, where each line runs across its lane, which names
+   are shown, and the years along the edge. app.js draws what these return. */
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
-// Distance is counted in years ahead of the reader (u). D is the focal length
-// in years: something D years ahead is drawn at half size.
+// Distance is counted along the road ahead of the reader (u), in the road's own
+// years: a place on the road is a number between its first year and its last,
+// and `warp` says which moment lies at which place. D is the focal length in
+// those years: something D ahead is drawn at half size.
 export const NEAR = -0.42, GONE = -0.16, FAR = 10.8;   // in focal lengths: the edge of the screen behind the reader, where a name lets go, the horizon
 export const FULL = 0.64, SMALL = 0.3;                  // the size from which a name is a full card, and from which it is a small card
 export const CARD_MIN = 0.7;                            // a full card is never drawn smaller than this, so it can be read from where it first shows
@@ -20,7 +25,59 @@ export function step125(v) {
   return 10 * p;
 }
 
-// The focal length, in years, for a set of starts between tMin and tMax: long
+// The scale of the road. Time does not run evenly along it. `marks` is what
+// happens, as [moment, weight] pairs (a start counts 1), in the order they
+// are to stand when several share a moment. A share `even` of the road
+// follows the calendar, so a long quiet stretch is still longer than a short
+// one; the rest is shared out by what happens, so each thing has the same
+// room before it whether the one before came a day or a century earlier. A
+// busy period is stretched and an empty one shrunk, and nowhere is the road
+// more than 1 / (1 - even) times as crowded as on average.
+// Things that share a moment do not share a spot: they stand one after
+// another, each with its own room, and the calendar waits while they do.
+// Nothing is given a different date by this: the whole stretch they stand on
+// is that one moment.
+// Returns `at`, the place of each mark; `place(moment)`, which for a moment
+// several things share is where the first of them stands; and `when(place)`.
+// The road runs from tMin to tMax as before, so both ends stay where they
+// were, and outside them a moment is its own place.
+export const EVEN = 0.25;
+export function warp(marks, tMin, tMax, even = EVEN) {
+  const same = (v) => v, span = tMax - tMin, at = marks.map((m) => m[0]);
+  const order = marks.map((m, i) => i).filter((i) => marks[i][0] >= tMin && marks[i][0] <= tMax).sort((a, b) => marks[a][0] - marks[b][0] || a - b);
+  const total = order.reduce((sum, i) => sum + marks[i][1], 0);
+  if (!(span > 0) || !(total > 0)) return { place: same, when: same, at };
+  // One knot for each moment: the moment, where the first thing of that moment stands, and where the last does.
+  const T = [tMin], A = [tMin], B = [tMin];
+  let sum = 0;
+  for (const i of order) {
+    const t = marks[i][0];
+    sum += marks[i][1];
+    const x = at[i] = Math.min(tMax, tMin + even * (t - tMin) + (1 - even) * span * (sum / total));
+    if (t > T[T.length - 1]) { T.push(t); A.push(x); B.push(x); } else B[B.length - 1] = x;
+  }
+  if (T[T.length - 1] < tMax) { T.push(tMax); A.push(tMax); B.push(tMax); }
+  // The knot at or before v, going by `by` (the moments, or the places where each moment begins).
+  const knot = (by, v) => {
+    let lo = 0, hi = by.length - 1;
+    while (hi - lo > 1) { const mid = (lo + hi) >> 1; if (by[mid] <= v) lo = mid; else hi = mid; }
+    return lo;
+  };
+  const place = (t) => {
+    if (!(t > tMin && t < tMax)) return t;
+    const i = knot(T, t);
+    return t === T[i] ? A[i] : B[i] + ((t - T[i]) / (T[i + 1] - T[i])) * (A[i + 1] - B[i]);
+  };
+  const when = (x) => {
+    if (!(x > tMin && x < tMax)) return x;
+    const i = knot(A, x);
+    return x <= B[i] ? T[i] : T[i] + ((x - B[i]) / (A[i + 1] - B[i])) * (T[i + 1] - T[i]);
+  };
+  return { place, when, at };
+}
+
+// The focal length, in the road's years, for a set of starts (their places on
+// the road) between tMin and tMax: long
 // enough that the stretch in front of the reader holds about three starts in
 // its nearest 0.39 focal lengths where the road is typically busy: the
 // median, over the starts, of the years that three in a row take. It is never
@@ -153,36 +210,77 @@ export function placeLabels(cands, G, caps = {}) {
   return out;
 }
 
-// The years along the edge of the road, nearest first. Every `unit` years
-// there may be a tick; a year is written where there is room for it, at a
-// round step that grows with distance. Years are written years (no year 0);
-// `at` is where each sits on the number line. `fsOf(s)` is the size of the
-// writing at scale s, in pixels, and gh the height of the ground.
-export function ruler({ t, dir, D, tMin, tMax, gh, fsOf }) {
-  const unit = Math.max(1, step125(D / 8));
-  const lineOf = (y) => (y < 0 ? y + 1 : y);
-  const from = dir > 0 ? Math.max(tMin, t + NEAR * D) : Math.max(tMin, t - FAR * D);
-  const to = dir > 0 ? Math.min(tMax, t + FAR * D) : Math.min(tMax, t - NEAR * D);
-  const n0 = Math.ceil((from - 1) / unit), n1 = Math.floor((to + 1) / unit);
+// The years to mark along a scale that is not even. `at(y)` is where written
+// year y falls, in pixels along the scale (all one way), or null when it is
+// out of sight behind the reader. Every year has a grid: the roundest step it
+// is a multiple of, from 1, 5, 10, 50, 100 and so on. A year is marked when
+// the years next to it on its own grid are at least `tick` pixels off, and
+// written when they are `room(p, q)` pixels off, the room two written years
+// at p and q must keep. So round years are written first and the years
+// between them follow where the scale opens up, two written years never
+// touch, and a year once written stays written as it comes nearer. Where the
+// scale is crowded on one side of a year only, that rule leaves a gap, so the
+// marked years left over are then written wherever they still have room, the
+// rounder first and in a fixed order, so the choice does not flicker as the
+// reader moves. The work is bounded by what fits on the screen, whatever the
+// span: a stretch too small to hold a mark is not looked into. There is no
+// year 0.
+export function yearMarks(from, to, at, room, tick = 4) {
   const out = [];
-  let lastY = Infinity;
-  for (let i = 0; i <= n1 - n0; i++) {
-    const y = (dir > 0 ? n0 + i : n1 - i) * unit;
-    if (y === 0) continue;
-    const at = lineOf(y);
-    if (at < tMin || at > tMax) continue;
-    const u = dir * (at - t);
-    if (u <= NEAR * D || u >= FAR * D) continue;
-    const s = sizeAt(u, D), gap = gh * Math.abs(s - sizeAt(u + unit, D)), yy = gh * s, fs = fsOf(s);
-    // The smallest round step, a multiple of the unit, whose years are far enough apart to read.
-    let step = step125((fs * 1.5 * unit) / Math.max(gap, 1e-9));
-    while (step % unit) step = step125(step * 1.01);
-    step = Math.max(step, unit);
-    const five = y % (unit * 5) === 0;
-    if (y % step === 0 && lastY - yy >= fs * 1.3) { out.push({ y, at, s, fs, step, label: true, major: true }); lastY = yy; }
-    else if (gap >= 3 || five) out.push({ y, at, s, fs, step, label: false, major: five });
+  const gap = (p, q) => (q == null ? Infinity : Math.abs(p - q));
+  const mark = (y, step, turn = 0) => {
+    if (y === 0 || y < from || y > to) return;
+    const p = at(y);
+    if (p == null) return;
+    const a = at(y - step), b = at(y + step), ga = gap(p, a), gb = gap(p, b);
+    if (Math.min(ga, gb) < tick) return;
+    const label = ga >= room(p, a) && gb >= room(p, b);
+    out.push({ y, step, p, turn, label, major: label || Math.min(ga, gb) >= 3 * tick });
+  };
+  // The years between a and a + step: a step of 10 is halved into fives, a step of 5 into ones.
+  const walk = (a, step, five) => {
+    const lo = Math.max(a, from), hi = Math.min(a + step, to);
+    if (step <= 1 || lo >= hi) return;
+    const pl = at(lo), ph = at(hi);
+    if (pl != null && ph != null && Math.abs(pl - ph) < 2 * tick) return;
+    const sub = five ? step / 5 : step / 2;
+    for (let y = a + sub, j = 0; y < a + step; y += sub, j++) mark(y, sub, five ? [2, 0, 1, 3][j] : 0);      // of four, the middle ones first
+    for (let y = a; y < a + step; y += sub) walk(y, sub, !five);
+  };
+  // The grid of a year: the roundest step of the series that divides it.
+  const gridOf = (y) => {
+    let s = 1;
+    for (;;) { if (y % (s * 5)) return s; s *= 5; if (y % (s * 2)) return s; s *= 2; }
+  };
+  let top = 10;
+  while (top < to - from) top *= 10;
+  for (let a = Math.floor(from / top) * top; a <= to; a += top) { if (a) mark(a, gridOf(a)); walk(a, top, false); }
+  const written = out.filter((k) => k.label);
+  for (const k of out.filter((k) => !k.label).sort((a, b) => b.step - a.step || a.turn - b.turn || a.y - b.y)) {
+    if (written.every((q) => Math.abs(k.p - q.p) >= room(k.p, q.p))) { k.label = k.major = true; written.push(k); }
   }
   return out;
+}
+
+// The years along the edge of the road, nearest first: a tick where there is
+// room for one and the year written where there is room for that (yearMarks).
+// Years are written years (no year 0); `at` is where each sits on the number
+// line. `place` and `when` are the road's scale (warp); `fsOf(s)` is the size
+// of the writing at scale s, in pixels, and gh the height of the ground.
+export function ruler({ t, dir, D, tMin, tMax, gh, fsOf, place = (v) => v, when = (v) => v }) {
+  const lineOf = (y) => (y < 0 ? y + 1 : y), written = (v) => { const y = Math.floor(v); return y <= 0 ? y - 1 : y; };
+  const x0 = Math.max(tMin, dir > 0 ? t + NEAR * D : t - FAR * D), x1 = Math.min(tMax, dir > 0 ? t + FAR * D : t - NEAR * D);
+  if (!(x1 > x0)) return [];
+  const ahead = (y) => dir * (place(lineOf(y)) - t);
+  const at = (y) => { const u = ahead(y); return u <= NEAR * D ? null : gh * sizeAt(u, D); };
+  const room = (p, q) => 1.5 * fsOf(Math.max(p, q ?? 0) / gh);
+  const out = [];
+  for (const k of yearMarks(written(when(x0)), written(when(x1)), at, room)) {
+    const line = lineOf(k.y), s = k.p / gh;
+    if (line < tMin || line > tMax || ahead(k.y) >= FAR * D) continue;
+    out.push({ y: k.y, at: line, s, fs: fsOf(s), step: k.step, label: k.label, major: k.major });
+  }
+  return out.sort((a, b) => b.s - a.s);
 }
 
 // How fast play travels, as a share of its usual speed: slower while cards
