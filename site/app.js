@@ -960,7 +960,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       n.r = r; n.s = c.s;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
       if (c.turn === 'due' && r.big && n.o > 0.6 && n.g >= 1) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
-      // A card that opens while play travels says so: a ring in its colour and a soft rustle.
+      // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
       if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }
     // A card opens out of its small card, like a scroll unrolling: it starts as that box, where that
@@ -1931,7 +1931,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     roadKick();
   }
 
-  // The sound of play: a soft rustle as a card opens. It is made on the spot, so there is no sound file to
+  // The sound of play: a quiet breath of air as a card opens. It is made on the spot, so there is no sound file to
   // fetch, and nothing sounds before play has been pressed. The button above play turns it off (`cg-sound`).
   const sound = { on: store.get('cg-sound') !== '0', ctx: null, last: 0, noise: null };
   const ICON_SOUND = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3l4.5-3.5v12L7 14.5H4z"/><path d="M15.5 9.5a3.6 3.6 0 0 1 0 5M18.2 7a7.2 7.2 0 0 1 0 10"/></svg>';
@@ -1945,10 +1945,11 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       if (sound.ctx && sound.ctx.state === 'suspended') sound.ctx.resume();
     } catch { sound.ctx = null; }
   }
-  // One rustle, like a sheet unrolling: noise through a filter that opens as the card does. It swells for a
-  // seventh of a second and is gone in half a second, so it has no note and no tap. A card on the left lane
-  // sounds a tone lower and from the left, one on the right lane a tone higher and from the right.
-  function rustle(lean = 0) {
+  // One breath of air: noise through a filter that closes as the sound settles, so it starts soft, sinks and
+  // is gone in under half a second. It has no note and no tap, and it is kept quiet on purpose (the gain
+  // below; a louder one was tried and turned down). A card on the left lane sounds a tone lower and from
+  // the left, one on the right lane a tone higher and from the right.
+  function breath(lean = 0) {
     const ctx = sound.ctx;
     if (!sound.on || !ctx || ctx.state !== 'running') return;
     const at = ctx.currentTime;
@@ -1959,28 +1960,28 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const d = sound.noise.getChannelData(0);
       for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
     }
-    const f = 1250 * Math.pow(2, (2 * clamp(lean, -1, 1)) / 12), src = ctx.createBufferSource(), band = ctx.createBiquadFilter(), gain = ctx.createGain();
+    const f = 1500 * Math.pow(2, (2 * clamp(lean, -1, 1)) / 12), src = ctx.createBufferSource(), low = ctx.createBiquadFilter(), gain = ctx.createGain();
     src.buffer = sound.noise;
-    band.type = 'bandpass'; band.Q.value = 0.9;
-    band.frequency.setValueAtTime(f * 0.6, at);
-    band.frequency.exponentialRampToValueAtTime(f * 1.7, at + 0.45);
+    low.type = 'lowpass'; low.Q.value = 0.5;
+    low.frequency.setValueAtTime(f, at);
+    low.frequency.exponentialRampToValueAtTime(f * 0.3, at + 0.6);
     gain.gain.setValueAtTime(0, at);
-    gain.gain.linearRampToValueAtTime(0.15, at + 0.14);
-    gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.52);
-    src.connect(band); band.connect(gain);
+    gain.gain.linearRampToValueAtTime(0.07, at + 0.2);
+    gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.7);
+    src.connect(low); low.connect(gain);
     if (ctx.createStereoPanner) { const pan = ctx.createStereoPanner(); pan.pan.value = 0.4 * clamp(lean, -1, 1); gain.connect(pan); pan.connect(ctx.destination); }
     else gain.connect(ctx.destination);
-    src.start(at, Math.random() * 0.4, 0.56);
+    src.start(at, Math.random() * 0.2, 0.74);
   }
-  // A card opens while play travels: a ring in its view's colour that fades, and the rustle.
+  // A card opens while play travels: a ring in its view's colour that fades, and the breath of air.
   function cardArrives(n, lean) {
     if (!calm()) { n.btn.classList.remove('ring'); void n.btn.offsetWidth; n.btn.classList.add('ring'); }
-    rustle(lean);
+    breath(lean);
   }
   function drawSound() {
     const b = $('sound');
     b.setAttribute('aria-pressed', sound.on);
-    b.title = sound.on ? 'Sound is on: a soft rustle as each card opens' : 'Sound is off';
+    b.title = sound.on ? 'Sound is on: a quiet breath of air as each card opens' : 'Sound is off';
     b.innerHTML = sound.on ? ICON_SOUND : ICON_MUTED;
   }
   function toggleSound() {
@@ -1988,7 +1989,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     store.set('cg-sound', sound.on ? '1' : '0');
     drawSound();
     // Turning it on lets you hear what you turned on.
-    if (sound.on) { soundReady(); setTimeout(() => rustle(0), 60); }
+    if (sound.on) { soundReady(); setTimeout(() => breath(0), 60); }
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.

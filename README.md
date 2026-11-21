@@ -58,8 +58,8 @@ tell the story in order.
   happens and quicker through empty years. Where things begin close together
   their cards take turns, and play slows down, without ever stopping, so
   that each is shown. A card opens out of its small card like a scroll
-  unrolling, with a soft rustle (the button above play turns the sound
-  off), and fades away when its turn is over.
+  unrolling, with a quiet breath of air (the button above play turns the
+  sound off), and fades away when its turn is over.
   The wheel, a drag, the arrow keys and the upright bar on the right travel
   too. Reverse turns you round to start at the present and go back.
 - **One link for everything.** The address holds the views, their order and

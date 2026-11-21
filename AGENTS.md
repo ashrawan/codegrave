@@ -208,14 +208,16 @@ How the page is put together:
   Keep it this simple: no queue, no timers, only an order and a speed limit
   worked out each frame.
 - **The sound of play.** A card that opens while play travels gets a ring
-  in its view's colour that fades (`.rc.full.ring`) and a soft rustle
-  (`rustle()`), like a sheet unrolling: noise through a filter that opens
-  as the card does, made with Web Audio on the spot, so there is no sound
-  file. It swells and dies away, with no note and no tap: a short pop was
-  tried first and was not liked. The left lane sounds a tone lower and from
-  the left, the right lane a tone higher and from the right. Nothing sounds
-  before play is pressed, travelling by hand is silent, and the small
-  button above play turns the sound off (`cg-sound` in this browser).
+  in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
+  air (`breath()`): noise through a filter that closes as the sound
+  settles, made with Web Audio on the spot, so there is no sound file. It
+  has no note and no tap, and it is quiet on purpose. A short pop was tried
+  first and was not liked; this one was picked by ear from six, and then
+  turned down, so do not make it louder or swap it without asking. The left
+  lane sounds a tone lower and from the left, the right lane a tone higher
+  and from the right. Nothing sounds before play is pressed, travelling by
+  hand is silent, and the small button above play turns the sound off
+  (`cg-sound` in this browser).
 - **The panel** is hidden until its button, the "Views" button in the strip
   or a name is clicked. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)
