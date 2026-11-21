@@ -171,11 +171,41 @@ export function ruler({ t, dir, D, tMin, tMax, gh, fsOf }) {
 }
 
 // How fast play travels, as a share of its usual speed: slower while cards
-// stand in front of the reader, so each can be read, and much quicker through
-// years where nothing begins or ends. `within1` and `within3` count what
-// begins or ends in the next one and the next three focal lengths.
+// stand in front of the reader or wait for their turn, so each can be read,
+// and much quicker through years where nothing begins or ends. `within1` and
+// `within3` count what begins or ends in the next one and the next three
+// focal lengths.
 export function paceFor(cards, within1, within3) {
   if (!within3) return 5;
   if (!within1) return 2.2;
   return 1 / (1 + 0.42 * Math.max(0, cards));
+}
+
+// Taking turns. Where things begin close together their cards would cover one
+// another, and the one behind would pass without ever being shown. So while
+// play travels, every start is owed a moment as a full card. A card that is up
+// keeps its place for a few seconds (less when several wait behind it); then
+// it gives way to one it was hiding, and those come nearest first, in the
+// order things happened. Play glides to a stand a little short of a card still
+// owed its turn (HOLD_AT focal lengths) and moves on once it has had it; one
+// that cannot be shown at all is given up after PATIENCE seconds of standing,
+// which is longer than any card in front of it can keep its place.
+export const DWELL = 2.6, DWELL_BUSY = 1.8, HOLD_AT = 0.03, PATIENCE = 4;
+export const dwellFor = (waiting) => (waiting > 2 ? DWELL_BUSY : DWELL);
+// The most play may travel, in focal lengths a second, with the nearest card still owed its turn `ahead` focal lengths away.
+export const holdPace = (ahead) => Math.max(0, (ahead - HOLD_AT) * 4);
+
+// The order in which names are offered a place, lowest first. The open entry
+// and the one under the pointer come first; then the nearest zone, starts
+// before ends, what is already up before a newcomer (and a card that is up
+// stays a card), then the better ranked. `turn` is set while play takes turns,
+// for a name near enough to be a card: 'due' until it has had its time, then
+// 'done'. A start that is due keeps its place if it is up, and otherwise waits
+// in line by distance (`ahead`, in focal lengths) in front of every card that
+// has had its turn. The open entry's card takes its turn like any other, so
+// play is never left standing behind it.
+export function orderOf({ open = false, hover = false, zone = 0, end = false, up = null, score = 0, turn = null, ahead = 0 }) {
+  const first = (open && turn !== 'done' ? -100 : 0) + (hover ? -50 : 0), big = isBig(up);
+  if (turn === 'due' && !end) return first + (big ? -9 : 1) + clamp(ahead, 0, 1);
+  return first + zone * 10 + (end ? 4 : 0) + (up ? 0 : 2) + (big ? -3 : 0) + (turn === 'done' ? 8 : 0) - score;
 }

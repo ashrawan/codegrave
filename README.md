@@ -55,9 +55,11 @@ tell the story in order.
   search finds views: the listed ones, and the classical shelves (Everything,
   each branch, each kind) with their type marked.
 - **Play and reverse.** Play carries you along the road, slower where much
-  happens and quicker through empty years. The wheel, a drag, the arrow keys
-  and the upright bar on the right travel too. Reverse turns you round to
-  start at the present and go back.
+  happens and quicker through empty years. Where things begin close together
+  their cards take turns, and play waits until each has been shown, with a
+  soft pop as a card comes up (the button above play turns the sound off).
+  The wheel, a drag, the arrow keys and the upright bar on the right travel
+  too. Reverse turns you round to start at the present and go back.
 - **One link for everything.** The address holds the views, their order and
   colours, the year range and the open entry, so any state can be shared.
 - **Fast at any size.** The page never loads the whole dataset. Each action

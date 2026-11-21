@@ -7,7 +7,7 @@
    with rank.js, file keys come from keys.js. */
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf } from './keys.js';
-import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect, placeLabels, ruler, paceFor } from './road.js';
+import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect, placeLabels, ruler, paceFor, orderOf, dwellFor, holdPace, PATIENCE } from './road.js';
 
 (() => {
   'use strict';
@@ -650,7 +650,9 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // Names stand on them: road.js chooses afresh every frame which are shown
   // and how big, and each fades in and out as its own element, so nothing
   // jumps. The card at the front is drawn as selected (road.focus): its line
-  // and the dated points of its history light up as it arrives.
+  // and the dated points of its history light up as it arrives. While play
+  // travels, cards that would cover one another take turns (road.turn), and
+  // play waits for one that has not had its turn (road.hold).
   const road = {
     t: null, target: null, rate: 6,           // where the reader stands, where a glide is heading, and how briskly
     raf: 0, live: false, last: 0, prev: null, pace: 1, vel: 0, cards: 0, within1: 0, within3: 0,    // vel: how fast play is carrying the reader, in focal lengths a second
@@ -658,7 +660,10 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     nodes: new Map(), vis: new Map(), heat: new Map(),    // the elements of the names shown; which names were shown last frame, and how; how lit each line is
     soft: new Map(), side: new Map(),                     // how far each piece of writing on the ground has faded in; which side of its line an event is written on
     drag: null, swallow: 0, until: 0, jump: null, year: null, pal: null, said: null,
+    turn: new Map(), hold: null, waiting: 0, stuck: null,   // turns during play: the seconds each card has stood (Infinity once it has had its turn), how far ahead the nearest card still owed one is (focal lengths), how many wait behind another, and the one play has stood waiting for
   };
+  // The reader was moved by hand, or what is drawn changed: every card is owed its turn afresh.
+  const turnsOver = () => { road.turn.clear(); road.hold = null; road.waiting = 0; road.stuck = null; };
   const PLAY_PACE = 0.26;                      // focal lengths a second at full speed
   const SLIDE = 110;                           // how far to its side a card of a side lane comes in from, in pixels at full size
   const BAR_PAD = 10;                          // room at each end of the bar on the right
@@ -695,6 +700,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       }
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
+    turnsOver();
     L = { tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
@@ -737,7 +743,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (!L) return;
     const to = camClamp(time - camDir() * 0.2 * L.D);
     if (play.on) pausePlay();
-    road.vel = 0;
+    road.vel = 0; turnsOver();
     if (smooth && !calm()) { road.target = to; road.rate = 6; } else { road.t = road.prev = to; road.target = null; }
     roadKick();
   }
@@ -745,7 +751,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   function roadBy(n, rate = 14) {
     if (!L) return;
     if (play.on) pausePlay();
-    road.vel = 0;
+    road.vel = 0; turnsOver();
     road.target = camClamp((road.target ?? road.t) + camDir() * n * L.D); road.rate = rate;
     if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
@@ -794,9 +800,11 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       moving = true;
     } else if (play.on || road.vel) {
       // Play eases up to its speed, and a pause lets the reader glide to a stop.
-      if (play.on) road.pace += (paceFor(road.cards, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
-      const want = play.on ? PLAY_PACE * road.pace : 0;
-      road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on ? 4 : 6)));
+      if (play.on) road.pace += (paceFor(road.cards + road.waiting, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
+      // Play does not pass a card that has not had its turn: it glides up to it and stands until it has.
+      const cap = play.on && road.hold != null ? holdPace(road.hold) : Infinity;
+      const want = Math.min(cap, play.on ? PLAY_PACE * road.pace : 0);
+      road.vel = calm() ? want : Math.min(cap, road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on ? 4 : 6))));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       road.t += dir * road.vel * L.D * dt;
       if (road.t >= hi || road.t <= lo) {
@@ -878,16 +886,23 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
 
     // The names in range, best first: the open entry, the one under the pointer, then the nearest, then by rank.
     // While the reader is swept along (a long jump) no new name is put up; they return as the road slows.
-    const fast = speed > 2.5 * D, cands = [];
+    const fast = speed > 2.5 * D, cands = [], dwell = dwellFor(road.waiting);
     if (fast) busy = true;
     const add = (p, end, time) => {
       const u = U(time);
       if (u <= uGone || u >= (end ? uFar * 0.5 : uFar)) return;
-      const key = (end ? 'e:' : 's:') + p.key, id = p.t.id, s = S(u), up = road.vis.get(key);
+      const key = (end ? 'e:' : 's:') + p.key, id = p.t.id, s = S(u), up = road.vis.get(key), zone = zoneOf(s);
       if (fast && !up && id !== state.open) return;
       // A name already up keeps its place, and a card keeps being a card: a newcomer waits rather than pushing it out.
-      const pri = (id === state.open ? -100 : 0) + (id === road.hover ? -50 : 0) + zoneOf(s) * 10 + (end ? 4 : 0) + (up ? 0 : 2) + (up === 'full' || up === 'near' ? -3 : 0) - (p.t.score || 0);
-      cands.push({ key, p, end, u, s, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
+      // While play travels, a card that has stood its time gives way to one it was hiding (orderOf in road.js).
+      let turn = null;
+      if (play.on && zone === 0) {
+        const had = road.turn.get(key) || 0;
+        if (had >= dwell && had !== Infinity) road.turn.set(key, Infinity);
+        turn = had >= dwell ? 'done' : 'due';
+      }
+      const pri = orderOf({ open: id === state.open, hover: id === road.hover, zone, end, up, score: p.t.score || 0, turn, ahead: u / D });
+      cands.push({ key, p, end, u, s, zone, turn, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
     };
     let within1 = 0, within3 = 0;
     const count = (time) => { const u = U(time); if (u > 0 && u <= 3 * D) { within3++; if (u <= D) within1++; } };
@@ -920,6 +935,20 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     }
     road.cards = cards; road.within1 = within1; road.within3 = within3;
     road.focus = front && !openUp ? front.p.t.id : null;
+    // Turns: how many starts wait behind another card, and how far ahead the nearest one still owed its turn is.
+    // Play stands for that one (roadFrame); if it cannot be shown at all, play gives up on it after a while.
+    let waiting = 0, owed = null, owedUp = false;
+    for (const c of cands) {
+      if (c.turn !== 'due' || c.end || c.u < -0.05 * D) continue;
+      const r = placed.get(c.key), isUp = !!r && r.big;
+      if (!isUp) waiting++;
+      if (!owed || c.u < owed.u) { owed = c; owedUp = isUp; }
+    }
+    road.waiting = waiting; road.hold = owed ? owed.u / D : null;
+    if (owed && !owedUp && road.vel < 0.03) {
+      if (!road.stuck || road.stuck.key !== owed.key) road.stuck = { key: owed.key, t: 0 };
+      else if ((road.stuck.t += dt) > PATIENCE) road.turn.set(owed.key, Infinity);
+    } else road.stuck = null;
     const hotNow = (id) => id === state.open || id === road.hover || id === road.focus;
 
     // Each name shown has its element; one that is no longer shown keeps its place on the ground while it fades.
@@ -933,17 +962,20 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       seen.add(nk);
       n.r = r; n.s = c.s;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
+      if (c.turn === 'due' && r.big && n.o > 0.6) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
+      // A card that comes up while play travels says so: a ring in its colour and a soft pop.
+      if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }
     // A card arrives a little more slowly than a small name: it comes in from its lane's side of the
     // road and leaves the same way (the left lane's from and to the left, the right lane's the right),
-    // and a card in the middle rises into place.
+    // and a card in the middle rises into place. It grows the last little bit as it comes.
     const ease = still ? 1 : 1 - Math.exp(-dt * 12), easeBig = still ? 1 : 1 - Math.exp(-dt * 5.5);
     for (const [nk, n] of road.nodes) {
       const p = L.byKey.get(n.pk);
       if (!seen.has(nk)) {
         const u = p ? U(n.end ? p.b : p.a) : -Infinity;
         if (!p || u <= uNear * 0.9 || u >= uFar) { n.el.remove(); road.nodes.delete(nk); continue; }
-        n.s = S(u); n.want = 0;
+        n.s = S(u); n.want = 0; n.live = false;
         n.r = labelRect(n.mode, n.s, px(p.xn, n.s), py(n.s), roadSizes(p.t), G, p.lane.lean);
       }
       const big = n.mode === 'full' || n.mode === 'near';
@@ -958,7 +990,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       if (z !== n.z) { n.z = z; n.el.style.zIndex = z; }
       const dead = n.o < 0.3;
       if (dead !== n.dead) { n.dead = dead; n.el.style.pointerEvents = dead ? 'none' : ''; }
-      n.el.style.transform = `translate3d(${(r.cx + dx).toFixed(1)}px,${(r.y1 + dy).toFixed(1)}px,0) scale(${r.k.toFixed(3)})`;
+      n.el.style.transform = `translate3d(${(r.cx + dx).toFixed(1)}px,${(r.y1 + dy).toFixed(1)}px,0) scale(${(r.k * (1 - 0.06 * away)).toFixed(3)})`;
       n.el.style.opacity = n.o.toFixed(3);
       if (n.o > 0.02) stems.push({ x1: r.gx, y1: r.gy, x2: r.ax + dx, y2: r.y1 + dy, a: n.o, hot, col: p.lane.col });
     }
@@ -1258,7 +1290,7 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
       const dy = e.clientY - d.y;
       if (!d.moved && Math.abs(dy) + Math.abs(e.clientX - d.x) < 6) return;
       if (!d.moved) { d.moved = true; box.setPointerCapture?.(d.id); box.classList.add('dragging'); if (play.on) pausePlay(); }
-      road.target = null; road.vel = 0;
+      road.target = null; road.vel = 0; turnsOver();
       road.t = camClamp(d.t + camDir() * dy * L.D / 240);
       roadKick();
     });
@@ -1870,9 +1902,11 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
+    if (from != null || camAtEnd()) turnsOver();
     if (from != null) road.t = camClamp(Number(from) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1;
+    soundReady();
     drawPlay();
     roadKick();
   }
@@ -1882,9 +1916,62 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
   // Dragging along the bar moves the reader, playing or not.
   function scrubTo(e) {
     if (!L) return;
-    road.target = null; road.vel = 0;
+    road.target = null; road.vel = 0; turnsOver();
     road.t = camClamp(barT(e.clientY - $('axis').getBoundingClientRect().top));
     roadKick();
+  }
+
+  // The sound of play: a soft pop as a card comes up. It is made on the spot, so there is no sound file to
+  // fetch, and nothing sounds before play has been pressed. The button above play turns it off (`cg-sound`).
+  const sound = { on: store.get('cg-sound') !== '0', ctx: null, last: 0 };
+  const ICON_SOUND = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3l4.5-3.5v12L7 14.5H4z"/><path d="M15.5 9.5a3.6 3.6 0 0 1 0 5M18.2 7a7.2 7.2 0 0 1 0 10"/></svg>';
+  const ICON_MUTED = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3l4.5-3.5v12L7 14.5H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>';
+  // A browser lets a page sound only after a press: play and the sound button both are one.
+  function soundReady() {
+    if (!sound.on) return;
+    try {
+      const AC = window.AudioContext || window.webkitAudioContext;
+      if (!sound.ctx && AC) sound.ctx = new AC();
+      if (sound.ctx && sound.ctx.state === 'suspended') sound.ctx.resume();
+    } catch { sound.ctx = null; }
+  }
+  // One pop: a short, quiet note that rises as it starts and dies away in a fifth of a second. A card on the
+  // left lane sounds a tone lower and from the left, one on the right lane a tone higher and from the right.
+  function pop(lean = 0) {
+    const ctx = sound.ctx;
+    if (!sound.on || !ctx || ctx.state !== 'running') return;
+    const at = ctx.currentTime;
+    if (at - sound.last < 0.09) return;
+    sound.last = at;
+    const f = 587 * Math.pow(2, (2 * clamp(lean, -1, 1)) / 12), osc = ctx.createOscillator(), gain = ctx.createGain();
+    osc.type = 'sine';
+    osc.frequency.setValueAtTime(f * 0.72, at);
+    osc.frequency.exponentialRampToValueAtTime(f, at + 0.045);
+    gain.gain.setValueAtTime(0.0001, at);
+    gain.gain.exponentialRampToValueAtTime(0.08, at + 0.012);
+    gain.gain.exponentialRampToValueAtTime(0.0001, at + 0.21);
+    osc.connect(gain);
+    if (ctx.createStereoPanner) { const pan = ctx.createStereoPanner(); pan.pan.value = 0.4 * clamp(lean, -1, 1); gain.connect(pan); pan.connect(ctx.destination); }
+    else gain.connect(ctx.destination);
+    osc.start(at); osc.stop(at + 0.23);
+  }
+  // A card comes up while play travels: a ring in its view's colour that fades, and the pop.
+  function cardArrives(n, lean) {
+    if (!calm()) { n.btn.classList.remove('pop'); void n.btn.offsetWidth; n.btn.classList.add('pop'); }
+    pop(lean);
+  }
+  function drawSound() {
+    const b = $('sound');
+    b.setAttribute('aria-pressed', sound.on);
+    b.title = sound.on ? 'Sound is on: a soft pop as each card comes up' : 'Sound is off';
+    b.innerHTML = sound.on ? ICON_SOUND : ICON_MUTED;
+  }
+  function toggleSound() {
+    sound.on = !sound.on;
+    store.set('cg-sound', sound.on ? '1' : '0');
+    drawSound();
+    // Turning it on lets you hear what you turned on.
+    if (sound.on) { soundReady(); setTimeout(() => pop(0), 60); }
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.
@@ -1957,6 +2044,8 @@ import { NEAR, GONE, FAR, sizeAt, focalYears, tracks, stageOf, zoneOf, labelRect
     $('toggle-side').addEventListener('click', () => showSide($('side').hidden));
     wireRoad();
     $('play').addEventListener('click', togglePlay);
+    $('sound').addEventListener('click', toggleSound);
+    drawSound();
     $('axis').addEventListener('pointerdown', (e) => {
       if (e.button !== 0) return;
       if (play.on) pausePlay();

@@ -80,7 +80,7 @@ body.side-open #stage { right: calc(var(--side) + var(--bar)); }
 /* the bar on the right: the whole span upright, ahead is up; turn round at its head, play at its foot */
 #axisbar { user-select: none; -webkit-user-select: none; position: fixed; top: 52px; right: 0; bottom: 44px; z-index: 18; width: var(--bar); background: var(--bg); border-left: 1px solid var(--rule2); }
 body.side-open #axisbar { right: var(--side); }
-#axis { position: absolute; inset: 52px 0 58px 0; cursor: ns-resize; touch-action: none; outline-offset: -3px; }
+#axis { position: absolute; inset: 52px 0 88px 0; cursor: ns-resize; touch-action: none; outline-offset: -3px; }
 #axis-in { position: absolute; inset: 0; }
 #axis-win { position: absolute; left: 0; right: 0; background: var(--raised); opacity: .7; }
 #ticks .yr { position: absolute; left: 15px; transform: translateY(-50%); font-size: 11.5px; line-height: 16px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; transition: color .15s; }
@@ -97,7 +97,11 @@ body.side-open #axisbar { right: var(--side); }
 #playhead span { position: absolute; z-index: 1; right: 4px; top: 0; transform: translateY(-50%); padding: 1px 7px; white-space: nowrap; font-size: 11.5px; font-weight: 600; line-height: 16px; font-variant-numeric: tabular-nums; color: var(--bg); background: var(--text); border-radius: 9px; }
 .ends { position: absolute; left: 0; right: 0; z-index: 3; display: flex; align-items: center; justify-content: center; }
 .ends.head { top: 0; height: 52px; }
-.ends.foot { bottom: 0; height: 58px; }
+.ends.foot { bottom: 0; height: 88px; flex-direction: column; gap: 4px; }
+/* the sound of play, on or off: a quiet button above play */
+.sbtn { width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; padding: 0; color: var(--muted); background: transparent; border: 0; border-radius: 50%; }
+.sbtn:hover { color: var(--text); background: var(--raised); }
+.sbtn[aria-pressed="false"] { color: var(--faint); }
 .abtn { width: 32px; height: 32px; display: inline-flex; align-items: center; justify-content: center; padding: 0; color: var(--muted); background: transparent; border: 1px solid var(--rule2); border-radius: 50%; }
 .abtn:hover { color: var(--text); border-color: var(--text); }
 .abtn.solid { color: var(--bg); background: var(--text); border-color: var(--text); }
@@ -289,9 +293,9 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
   #side { top: auto; left: 0; width: auto; height: var(--sheet); border-left: 0; border-top: 1px solid var(--rule2); border-radius: 14px 14px 0 0; box-shadow: 0 -12px 32px rgba(0, 0, 0, .18); }
   body.side-open #stage { right: var(--bar); bottom: var(--sheet); }
   body.side-open #axisbar { right: 0; bottom: var(--sheet); }
-  #axis { inset: 46px 0 52px 0; }
+  #axis { inset: 46px 0 82px 0; }
   .ends.head { height: 46px; }
-  .ends.foot { height: 52px; }
+  .ends.foot { height: 82px; }
   #ticks .yr { left: 9px; font-size: 10.5px; line-height: 12px; }
   #ticks .yr::before { left: -9px; width: 5px; }
   #ticks .yr small { display: block; font-size: 9px; line-height: 10px; color: var(--faint); }
@@ -377,6 +381,9 @@ small > .ctag, small .ctag { margin-left: 0; }
 .rc.hot { border-color: var(--c); }
 .rc.full { width: var(--fw, 288px); padding: 13px 14px 14px; background: var(--bg); box-shadow: var(--card-sh); }
 .rc.full.hot { box-shadow: 0 0 0 1px var(--c), var(--card-sh); }
+/* a card that comes up while play travels: a ring in its view's colour that fades into the card's own edge */
+.rc.full.pop { animation: rcpop .65s ease-out; }
+@keyframes rcpop { from { border-color: var(--c); box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 32%, transparent), var(--card-sh); } }
 .rc.full img { display: block; width: 100%; height: 110px; margin-bottom: 8px; object-fit: cover; background: var(--ph); border-radius: 2px; }
 .rc .rk { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .rc.full .rk b { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 10.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--c); }

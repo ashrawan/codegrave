@@ -1,7 +1,7 @@
 // Run with: node --test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, sizeAt, step125, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, placeLabels, ruler, paceFor } from '../site/road.js';
+import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, DWELL, DWELL_BUSY, HOLD_AT, sizeAt, step125, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, placeLabels, ruler, paceFor, orderOf, dwellFor, holdPace } from '../site/road.js';
 
 const SIZES = { fullH: 158, nearH: 100, compactW: 170, tagW: 70, endW: 150 };
 
@@ -136,4 +136,51 @@ test('play slows for cards and hurries through empty years', () => {
   assert.equal(paceFor(0, 2, 5), 1);
   assert.ok(paceFor(2, 2, 5) < paceFor(1, 2, 5) && paceFor(1, 2, 5) < 1);
   assert.ok(paceFor(0, 0, 3) > 1 && paceFor(0, 0, 0) > paceFor(0, 0, 3));
+});
+
+test('cards that would cover one another take turns while play travels', () => {
+  const G = stageOf(1368, 848);
+  // Two starts on one spot of the road: `a` is the better ranked and a little further off.
+  const at = (key, s, score) => ({ key, end: false, s, score, ahead: 1 / s - 1, gx: G.vx, gy: G.vy + G.gh * s, m: SIZES, lean: 0 });
+  const a = at('a', 0.8, 0.9), b = at('b', 0.84, 0.2);
+  const show = (states) => {
+    const cands = [a, b].map((c) => ({ ...c, pri: orderOf({ zone: zoneOf(c.s), score: c.score, ahead: c.ahead, ...states[c.key] }) })).sort((p, q) => p.pri - q.pri);
+    const placed = placeLabels(cands, G);
+    return { a: placed.get('a')?.mode, b: placed.get('b')?.mode };
+  };
+  // Standing still, the better ranked has the card and the other never gets one.
+  assert.deepEqual(show({ a: {}, b: {} }), { a: 'full', b: undefined });
+  assert.deepEqual(show({ a: { up: 'full' }, b: {} }), { a: 'full', b: undefined });
+  // In play, the one that is up keeps its place until it has had its time...
+  assert.deepEqual(show({ a: { up: 'full', turn: 'due' }, b: { turn: 'due' } }), { a: 'full', b: undefined });
+  // ...then it gives way to the one it was hiding...
+  assert.deepEqual(show({ a: { up: 'full', turn: 'done' }, b: { turn: 'due' } }), { a: undefined, b: 'full' });
+  // ...which stays, also after its own time, so the two do not swap back and forth.
+  assert.deepEqual(show({ a: { turn: 'done' }, b: { up: 'full', turn: 'due' } }), { a: undefined, b: 'full' });
+  assert.deepEqual(show({ a: { turn: 'done' }, b: { up: 'full', turn: 'done' } }), { a: undefined, b: 'full' });
+  // Before either is up, the nearer one goes first, whatever its rank: things come in the order they happened.
+  assert.deepEqual(show({ a: { turn: 'due' }, b: { turn: 'due' } }), { a: undefined, b: 'full' });
+  // The open entry is never pushed out while standing still; in play it takes its turn like any other.
+  assert.deepEqual(show({ a: { open: true }, b: { up: 'full' } }), { a: 'full', b: undefined });
+  assert.deepEqual(show({ a: { up: 'full', turn: 'due', open: true }, b: { turn: 'due' } }), { a: 'full', b: undefined });
+  assert.deepEqual(show({ a: { up: 'full', turn: 'done', open: true }, b: { turn: 'due' } }), { a: undefined, b: 'full' });
+  // An end plate that is up keeps its place until its time is over, then gives way to a start that waits.
+  const waits = orderOf({ zone: 0, turn: 'due', ahead: 0.3, score: 0.5 });
+  assert.ok(orderOf({ zone: 0, end: true, up: 'near', turn: 'due', score: 0.5 }) < waits);
+  assert.ok(orderOf({ zone: 0, end: true, up: 'near', turn: 'done', score: 0.5 }) > waits);
+  // Out of play nothing changes: what is up stays up, and a card stays a card.
+  assert.ok(orderOf({ zone: 0, up: 'full', score: 0.1 }) < orderOf({ zone: 0, score: 0.9 }));
+  assert.ok(orderOf({ zone: 0, score: 0.5 }) < orderOf({ zone: 1, up: 'compact', score: 0.5 }));
+});
+
+test('play stands for a card that has not had its turn, and a longer queue moves faster', () => {
+  assert.equal(holdPace(HOLD_AT), 0);
+  assert.equal(holdPace(-0.04), 0);
+  assert.ok(holdPace(0.1) > 0 && holdPace(0.2) > holdPace(0.1));
+  // Where a name first becomes a card, the limit is above the fastest play travels, so play only slows as it comes close.
+  assert.ok(holdPace(1 / FULL - 1) > 0.26 * 5);
+  assert.equal(dwellFor(0), DWELL);
+  assert.equal(dwellFor(2), DWELL);
+  assert.equal(dwellFor(3), DWELL_BUSY);
+  assert.ok(DWELL_BUSY < DWELL && DWELL_BUSY >= 1.5);
 });
