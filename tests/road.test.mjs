@@ -286,5 +286,5 @@ test('play slows for cards that have not had their turn, and never stands still'
   assert.equal(dwellFor(2), DWELL);
   assert.equal(dwellFor(3), DWELL_BUSY);
   assert.equal(dwellFor(6), DWELL_CROWD);
-  assert.ok(DWELL_CROWD < DWELL_BUSY && DWELL_BUSY < DWELL && DWELL_CROWD >= 1.2);
+  assert.ok(DWELL_CROWD < DWELL_BUSY && DWELL_BUSY < DWELL && DWELL_CROWD >= 1 && DWELL <= 3);
 });

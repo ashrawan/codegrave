@@ -1002,7 +1002,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       seen.add(nk);
       n.r = r; n.s = c.s;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
-      if (c.turn === 'due' && r.big && n.o > 0.6 && n.g >= 1) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
+      if (c.turn === 'due' && r.big && n.o > 0.45 && n.g >= 1) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
       // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
       if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }
@@ -1353,12 +1353,34 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (cur) { b.textContent = cur.name; b.dataset.era = cur.key; b.title = cur.years; }
     });
     if (!all) return;
-    const b = $('play'), end = camAtEnd();
-    b.setAttribute('aria-pressed', play.on);
-    b.setAttribute('aria-label', play.on ? 'Pause' : end ? 'Play from the beginning' : 'Play: travel along the road');
-    b.title = play.on ? 'Pause' : end ? 'Play again from the beginning' : 'Play';
-    const icon = play.on ? ICON_PAUSE : end ? ICON_AGAIN : ICON_PLAY;
+    const b = $('play'), end = camAtEnd(), own = ownAudio(), mine = play.on && !(own && play.own);
+    b.setAttribute('aria-pressed', mine);
+    b.setAttribute('aria-label', mine ? 'Pause' : end ? 'Play from the beginning' : own ? 'Play with the house music' : 'Play: travel along the road');
+    b.title = mine ? 'Pause' : end ? 'Play again from the beginning' : own ? 'Play with the house music' : 'Play';
+    const icon = mine ? ICON_PAUSE : end ? ICON_AGAIN : ICON_PLAY;
     if (b.dataset.icon !== icon) { b.dataset.icon = icon; b.innerHTML = icon; }
+    // A view with its own music gets a second play beside the first, dressed in its picture (a country's flag).
+    const o = $('play-own'), ownOn = !!own && play.on && play.own;
+    $('axisbar').classList.toggle('two', !!own); $('axisbar').classList.toggle('own-on', ownOn);
+    o.hidden = !own;
+    if (own) {
+      const look = (own.img || '') + (ownOn ? '|on' : end ? '|again' : '');
+      if (o.dataset.look !== look) {
+        o.dataset.look = look;
+        o.style.backgroundImage = own.img ? `url("${own.img.replace(/"/g, '%22')}")` : '';
+        o.innerHTML = `<i>${ownOn ? ICON_PAUSE : end ? ICON_AGAIN : ICON_PLAY}</i>`;
+      }
+      const say = ownOn ? 'Pause' : `Play with ${own.title || 'its own music'}`;
+      o.setAttribute('aria-label', say); o.title = say; o.setAttribute('aria-pressed', ownOn);
+    }
+  }
+  // The first view on the road that brings its own music: its track, its title and its picture.
+  function ownAudio() {
+    for (const id of state.views) {
+      const v = viewById.get(id), a = v?.audio;
+      if (a && a.src) return { src: mediaUrl(a.src), title: a.title, img: v.thumb?.image ? mediaUrl(v.thumb.image) : v.image?.src ? mediaUrl(v.image.src) : null };
+    }
+    return null;
   }
 
   // The wheel, a drag and the arrow keys carry the reader along the road.
@@ -1951,7 +1973,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // ---------------------------------------------------------------- play and scrub
   // Play carries the reader along the road; the marker on the bar is where
   // they stand. Drag it, or press play. The reader's place is road.t.
-  const play = { on: false, drag: false };
+  const play = { on: false, drag: false, own: false };   // own: play to the view's own music (a country's anthem)
   const ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>';
   const ICON_AGAIN = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5"/><path d="M4.5 4.5v4.2h4.2"/></svg>';
   const ICON_PAUSE = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>';
@@ -1980,6 +2002,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek'); }
   function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
+  // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
+  function playWith(own) {
+    if (play.on && play.own === own) return pausePlay();
+    play.own = own;
+    if (play.on) drawPlay(); else startPlay();
+  }
   // Dragging along the bar moves the reader, playing or not.
   function scrubTo(e) {
     if (!L) return;
@@ -2037,10 +2065,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // the track from its beginning too. The sound button silences it.
   const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4;
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
-  // The track for what is on the road: the first view that brings its own, else the house track.
+  // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
-    for (const id of state.views) { const a = viewById.get(id)?.audio; if (a && a.src) return mediaUrl(a.src); }
-    return MUSIC;
+    const own = play.own && ownAudio();
+    return own ? own.src : MUSIC;
   }
   const musicAgain = () => { music.fresh = true; };
   function tune() {
@@ -2114,7 +2142,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     addEventListener('pointermove', (e) => {
       if (!play.on || e.pointerType === 'touch') return;
       const b = document.body.classList;
-      if (e.clientY < 48) b.add('peek'); else if (e.clientY > 110) b.remove('peek');
+      // Over the open panel the bar stays away: the panel keeps its own head and nothing covers it.
+      const sd = b.contains('side-open') ? $('side').getBoundingClientRect() : null;
+      if (e.clientY < 48 && !(sd && e.clientX >= sd.left)) b.add('peek'); else if (e.clientY > 110 || (sd && e.clientX >= sd.left)) b.remove('peek');
     }, { passive: true });
     addEventListener('resize', () => {
       clearTimeout(rt);
@@ -2170,7 +2200,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
     $('toggle-side').addEventListener('click', () => showSide($('side').hidden));
     wireRoad();
-    $('play').addEventListener('click', togglePlay);
+    $('play').addEventListener('click', () => playWith(false));
+    $('play-own').addEventListener('click', () => playWith(true));
     $('sound').addEventListener('click', toggleSound);
     drawSound();
     $('axis').addEventListener('pointerdown', (e) => {

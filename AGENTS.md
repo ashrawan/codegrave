@@ -279,7 +279,11 @@ How the page is put together:
   Play also has music (`tune()`): one track, looped, that sounds only
   while play travels, eases in and out and keeps its place on pause. A view
   may bring its own (`audio` on the view, `docs/VIEWS.md`); otherwise it is
-  `site/media/gallery-of-glass.mp3`. Showing another view, or playing again
+  `site/media/gallery-of-glass.mp3`. A view with its own music gets two
+  plays side by side in one pill (one above the other on a phone): the
+  house play, and a second dressed in the view's thumbnail (a country's
+  flag) that plays its own track (`play.own`, `playWith()`). Pressing the
+  other while playing changes the music without stopping. Showing another view, or playing again
   from the beginning, starts the track from its beginning. It is fetched
   when play is first pressed with the sound on, and the same button
   silences it. The house track was asked for with this file; do not swap it

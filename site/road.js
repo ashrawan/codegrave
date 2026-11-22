@@ -303,7 +303,7 @@ export function paceFor(cards, within1, within3) {
 // the cards in front still need, so that each has had its turn by the time
 // the reader reaches it (HOLD_AT focal lengths short of it), and it never
 // travels slower than CRAWL.
-export const DWELL = 2.3, DWELL_BUSY = 1.6, DWELL_CROWD = 1.2, HOLD_AT = 0.03, CRAWL = 0.035;
+export const DWELL = 2.0, DWELL_BUSY = 1.4, DWELL_CROWD = 1.0, HOLD_AT = 0.03, CRAWL = 0.035;
 export const dwellFor = (waiting) => (waiting > 5 ? DWELL_CROWD : waiting > 2 ? DWELL_BUSY : DWELL);
 // The most play may travel, in focal lengths a second. `owed` are the starts
 // still owed their turn: { ahead (focal lengths), up (its card is up), left

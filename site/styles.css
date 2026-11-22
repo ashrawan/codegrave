@@ -527,4 +527,21 @@ small > .ctag, small .ctag { margin-left: 0; }
 body.playing .top { transform: translateY(-100%); opacity: 0; pointer-events: none; }
 body.playing.peek .top, body.playing .top:focus-within { transform: none; opacity: 1; pointer-events: auto; }
 body.playing #stage, body.playing #axisbar { top: 0; }
-@media (min-width: 701px) { body.playing #side { top: 0; } }
+
+/* Two plays for a view with its own music (a country's anthem): one pill, the house play and the flag's play,
+   side by side on a wide screen and one above the other on a phone, where the bar is narrow. */
+.plays { display: flex; align-items: center; gap: 3px; }
+.pown { position: relative; width: 30px; height: 30px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--rule2); border-radius: 50%; background: var(--raised, #222) center / 80% auto no-repeat; color: #fff; overflow: hidden; cursor: pointer; }
+.pown[hidden] { display: none; }
+.pown i { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: rgba(0, 0, 0, .5); backdrop-filter: blur(2px); }
+.pown svg { width: 9px; height: 9px; }
+.pown:hover { border-color: var(--text); }
+.pown[aria-pressed="true"] { border-color: var(--acc); box-shadow: 0 0 0 1px var(--acc), 0 0 14px color-mix(in srgb, var(--acc) 45%, transparent); }
+#axisbar.two .plays { padding: 2px; border: 1px solid var(--rule2); border-radius: 18px; background: rgba(255, 255, 255, .04); }
+#axisbar.two #play { width: 30px; height: 30px; }
+#axisbar.own-on #play:not(:hover) { color: var(--text); background: transparent; border-color: var(--rule2); box-shadow: none; }
+@media (max-width: 699px) {
+  #axisbar.two .plays { flex-direction: column; }
+  #axisbar.two .ends.foot { height: 116px; }
+  #axisbar.two #axis { bottom: 116px; }
+}
