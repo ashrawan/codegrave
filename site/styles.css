@@ -208,6 +208,8 @@ body.side-open #dock { right: var(--side); }
 .filters { position: sticky; bottom: 0; z-index: 2; display: flex; flex-direction: column; gap: 18px; margin: auto -20px 0 !important; padding: 16px 20px 20px; background: var(--surf); border-top: 1px solid var(--rule); }
 .field { display: flex; flex-direction: column; gap: 7px; }
 .fbtn { display: none; }
+.propose { display: flex; align-items: center; gap: 8px; align-self: flex-start; padding: 0; font-size: 13px; color: var(--muted); background: none; border: 0; cursor: pointer; }
+.propose:hover { color: var(--text); }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .row-r { display: flex; align-items: baseline; gap: 12px; font-size: 12px; }
 #years-out { font-size: 12.5px; font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -519,10 +521,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road-head { text-shadow: 0 1px 2px var(--bg), 0 0 12px var(--bg); }
 
 /* What BCE and CE stand for, quietly at the right end of the strip. */
-.era-key { font-size: 12px; color: var(--faint); white-space: nowrap; margin-right: 6px; }
-.era-key b { font-weight: 600; opacity: 1; }
 
-@media (max-width: 700px) { .era-key { font-size: 10px; white-space: normal; line-height: 1.25; max-width: 140px; text-align: right; } }
 
 /* Play takes the whole screen: the top bar slides up and the road grows into its place. Pointing at the
    top edge brings the bar back over the road; it also stays while anything in it has focus. */

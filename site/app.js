@@ -1340,17 +1340,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
-      // What the era of the year in sight stands for, in the strip at the bottom.
-      const yr = writtenOf(L.when(t)), era = yr <= -1e5 ? '' : yr < 0 ? '<b>BCE</b> Before the Common Era' : '<b>CE</b> Common Era';
-      if ($('era-key').innerHTML !== era) $('era-key').innerHTML = era;
+      // What the era of the year in sight stands for, under the year, as deep time's units are (asked for, Nov 2026).
+      const yr = writtenOf(L.when(t)), era = label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the units in sight are spelled out once, under the year.
       const units = [...new Set([...L.units, (/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean))];
-      if (units.join() !== L.unitsSaid) {
-        L.unitsSaid = units.join();
-        $('road-unit').textContent = units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`).join(' · ');
-        $('road-unit').hidden = !units.length || L.G.short;
+      const under = [era, ...units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
+      if (under !== L.unitsSaid) {
+        L.unitsSaid = under;
+        $('road-unit').textContent = under;
+        $('road-unit').hidden = !under || L.G.short;
       }
     }
     const y = barY(t), y2 = barY(clamp(t + dir * 3 * D, L.tMin, L.tMax));
@@ -1706,7 +1706,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         found.push({ head: 'My view' });
         for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
       }
-      found.push({ propose: true });
       active = -1;
     } else {
       // Community views at once; every view in the search index once it has arrived.
@@ -1785,12 +1784,16 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
     }
   }
+  // "Propose a view" at the foot of the panel opens the issue form with this link filled in.
+  function propose() {
+    window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
+  }
   // Picking a row shows its view alone. `beside` is the second action: add it to the others, or take it off.
   function pick(i, beside) {
     const f = found[i];
     if (!f || f.wait || f.head) return;
     if (f.mine) return loadMine(f.mine);
-    if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
+    if (f.propose) return propose();
     if (f.year != null) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
     if (f.e) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); return bringIn(f.e.id, { focus: true }); }
     if (pending.has(f.v.id)) return;
@@ -2243,6 +2246,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
 
     $('q').addEventListener('input', findOnTimeline);
+    $('propose').addEventListener('click', propose);
     // A cross in each search box clears it, shown while there is something to clear.
     for (const c of document.querySelectorAll('.clr')) {
       const box = $(c.dataset.for), sync = () => { c.hidden = !box.value; };

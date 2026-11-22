@@ -304,9 +304,8 @@ How the page is put together:
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
   colour, and the cross removes one of several. The strip starts at the
-  left with the "Views" button and the pills; at its right end stand what
-  the era of the year in sight stands for (BCE or CE, from `roadHud()`),
-  then shuffle, then reverse (`state.order`), small, last in the strip
+  left with the "Views" button and the pills; at its right end stand
+  shuffle, then reverse (`state.order`), small, last in the strip
   (moved there on request, Nov 2026). There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
@@ -348,9 +347,10 @@ How the page is put together:
   round ones where little does. It is bounded by what fits on the screen, whatever the
   span; keep it so. There is no year 0; deep time is labelled ka, Ma and
   Ga. BCE and CE are written only where the era changes (`eraMarked()`):
-  on the BCE year nearest the change and the CE year nearest it; the note
-  in the strip spells out the era of the year in sight, whether playing or
-  scrolling. Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
+  on the BCE year nearest the change and the CE year nearest it; the line
+  under the big year spells out the era of the year in sight ("BCE: Before
+  the Common Era"), as it does deep time's units (`#road-unit`, moved there
+  from the strip on request, Nov 2026). Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
   the rest and "Show all years" reaches back. Every date on the page goes
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates.
 - **Words.** A person is born and dies; a city is founded; a species goes
@@ -369,7 +369,8 @@ How the page is put together:
 - **The entry pane** shows the kind and branch, labels, other names, every
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
-- "Propose a view" at the end of the list opens the "Propose a view" issue
+- "Propose a view" at the foot of the panel, under the filters (moved
+  there on request, Nov 2026), opens the "Propose a view" issue
   form with the current link filled in.
 - **Play takes the whole screen.** The top bar floats over the road: the
   road (`#stage`) always fills the page from the top, and keeps a band of
