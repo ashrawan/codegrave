@@ -118,6 +118,15 @@ function single(D) {
       + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
       + '<div class="toc">' + D.chs.map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
+    // The cover is one page: the pictures take the largest size that still leaves room for every chapter
+    // (12 in rows of 4, then 12 in rows of 6, then 6 in one row), and a long list of chapters closes up last.
+    const mos = m.querySelector('.mos'), over = () => m.scrollHeight > m.clientHeight + 1;
+    for (const [cols, n] of [[4, 12], [6, 12], [6, 6]]) {
+      mos.style.gridTemplateColumns = 'repeat(' + cols + ',1fr)';
+      [...mos.children].forEach((d, k) => { d.style.display = k < n ? '' : 'none'; });
+      if (!over()) break;
+    }
+    if (over()) m.classList.add('tight');
     const r = p.querySelector('.rail'); const H = r.clientHeight;
     const keys = D.chs.map((c, i) => ({ c, i, n: Math.max(1, D.es.filter((e) => e.ci === i).length) }));
     const total = keys.reduce((s, k) => s + k.n, 0) || 1; let y = 6 * MM;

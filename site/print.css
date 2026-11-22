@@ -166,4 +166,8 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .cred div{break-inside:avoid;margin-bottom:1mm}
 .many .cred b{color:var(--ink)}
 .many .credl{position:absolute;left:10mm;right:10mm;top:22mm;font-size:8px;line-height:1.5;color:var(--soft)}
+/* a cover with many chapters closes up */
+.one .cover .main.tight .stats{margin:5mm 0 6mm}
+.one .cover .main.tight .toc{margin-top:5mm}
+.one .cover .main.tight .toc div{padding:1.1mm 0;font-size:13px}
 #doc .pg:last-child { page-break-after: auto; }
