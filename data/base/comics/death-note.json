@@ -17,9 +17,14 @@
       "type": "born",
       "date": "2003-12-01",
       "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-05-15",
+      "precision": "day"
     }
   ],
-  "status": "alive",
+  "status": "dead",
   "signals": {
     "adoption": 4,
     "standard": 0,

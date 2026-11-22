@@ -22,9 +22,14 @@
       "date": "1971-11-15",
       "precision": "day",
       "note": "Intel releases the 4004."
+    },
+    {
+      "type": "ended",
+      "date": "1981",
+      "precision": "year"
     }
   ],
-  "status": "fading",
+  "status": "dead",
   "note": "No longer made in its first form; the exact end of production is not recorded.",
   "signals": {
     "adoption": 2,
@@ -46,5 +51,6 @@
     "credit": "Thomas Nguyen",
     "licence": "CC BY-SA 4.0",
     "source": "https://commons.wikimedia.org/wiki/File:Intel_C4004.jpg"
-  }
+  },
+  "cause": "Discontinued as faster Intel chips replaced it"
 }
