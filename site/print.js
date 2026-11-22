@@ -102,6 +102,8 @@ let yr = null;   // the year range the timeline was narrowed to, if any
 let rev = false; // newest first, like the timeline turned round (`o=new`)
 // Entries in reading order: oldest first, or newest first when reversed; the better ranked first within a moment.
 export const inOrder = (es, newest) => es.slice().sort((a, b) => (newest ? b.t - a.t : a.t - b.t) || a.rank - b.rank || a.vi - b.vi);
+// A span in reading order: "1957 – 1966", or "1966 – 1957" and "today – 1957" when reversed.
+const rs = (a, b) => (rev ? (b == null ? 'today' : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
 const ends = (first) => (rev ? ['today', yearText(first)] : [yearText(first), 'today']);
 const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '') + (rev ? '&o=new' : '');
 const today = () => { const d = new Date(); return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); };
@@ -119,9 +121,9 @@ function single(D) {
     const p = newPage('cover'); const m = frame(p, 'A timeline from codegrave.com');
     const pics = coverPictures(D.es, 12); if (rev) pics.reverse();
     m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
-      + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
+      + '<div class="stats"><div><b>' + esc(rs(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-      + '<div class="toc">' + (rev ? D.chs.slice().reverse() : D.chs).map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
+      + '<div class="toc">' + (rev ? D.chs.slice().reverse() : D.chs).map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
     // The cover is one page: 12 small pictures in rows of 6 (picked, Nov 2026), 6 in one row when the
     // chapters need the room, and a long list of chapters closes up last.
     const mos = m.querySelector('.mos'), over = () => m.scrollHeight > m.clientHeight + 1;
@@ -198,7 +200,7 @@ function single(D) {
     const c = D.chs[e.ci];
     if (e.ci !== lastCi) {
       lastCi = e.ci;
-      if (c) place('<div class="ch"><div class="k">' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>', { chName: c.name });
+      if (c) place('<div class="ch"><div class="k">' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>', { chName: c.name });
     }
     place(entryHtml(e), { e, chName: c?.name });
   }
@@ -266,8 +268,8 @@ function many(V, inks) {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
       const pics = coverPictures(v.es, N <= 2 ? 18 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-        + (N > 4 ? '' : '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(rs(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+        + (N > 4 ? '' : '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
   }
@@ -288,7 +290,7 @@ function many(V, inks) {
   }
   function chapHtml(e) {
     const c = V[e.vi].chs[e.ci];
-    return '<div class="ch"><div class="k">' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>';
+    return '<div class="ch"><div class="k">' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>';
   }
   function add(e, force) {
     const s = sideOf(e.vi); const prev = open[s], prevY = colY[s]; let b = prev, fresh = false;
