@@ -247,7 +247,9 @@ How the page is put together:
   play again from the beginning.
 - **Cards take turns while play travels.** One rule, asked for in Nov
   2026 ("cards are popping up twice"): while play travels, each start opens
-  as a full card once, when it comes near enough (size `FULL`), stands for
+  as a full card once, one card per lane at a time and strictly nearest
+  first (the lane's `lead`, which may overlap other cards; the rest wait as
+  small cards, so a far card never opens before a near one), when it comes near enough (size `FULL`), stands for
   `dwellFor()` seconds (about 2, less when others wait), then closes to its
   small card and does not open again on that run (`closed` in `roadDraw()`,
   honoured by `placeLabels()`). Ends stay small plates in play, so one entry

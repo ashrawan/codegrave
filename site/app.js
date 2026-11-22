@@ -950,6 +950,22 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         if (!(p.a >= L.tMin && ua > uGone && ua < uFar && zoneOf(sb) > 0 && Math.abs(S(ua) - sb) * gh < 72)) add(p, true, p.b);
       }
     }
+    // While play travels each lane opens one card at a time, strictly in order: the card already open, else
+    // the nearest start still owed its turn. The ones behind it wait as small cards, so a far card never
+    // opens before a near one. The card whose turn it is may overlap others; it is never pushed aside.
+    if (play.on) {
+      const lead = new Map(), isUp = (c) => road.vis.get(c.key) === 'full';
+      for (const c of cands) {
+        if (c.turn !== 'due' || c.end || c.u < -0.05 * D) continue;
+        const cur = lead.get(c.p.lane);
+        if (!cur || (isUp(c) && !isUp(cur)) || (isUp(c) === isUp(cur) && c.u < cur.u)) lead.set(c.p.lane, c);
+      }
+      for (const c of cands) {
+        if (c.turn !== 'due' || c.end) continue;
+        if (lead.get(c.p.lane) === c) { c.lead = true; c.pri -= 1000; }
+        else if (c.p.t.id !== state.open && c.p.t.id !== road.hover) c.closed = true;
+      }
+    }
     cands.sort((a, b) => a.pri - b.pri || (a.key < b.key ? -1 : 1));
     const placed = placeLabels(cands, G);
     road.vis = new Map([...placed].map(([key, r]) => [key, r.mode]));

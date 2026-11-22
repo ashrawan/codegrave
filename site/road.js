@@ -203,7 +203,8 @@ export function placeLabels(cands, G, caps = {}) {
       const isSmall = mode === 'compact' || mode === 'endc';
       if ((isSmall && small >= maxSmall) || (mode === 'tag' && tags >= maxTags)) continue;
       const r = labelRect(mode, c.s, c.gx, c.gy, c.m, G, c.lean);
-      if (blocked(r)) continue;
+      // The card whose turn it is (`lead`) may overlap the others; it only has to be on the stage.
+      if (c.lead && r.big ? r.y1 < (G.top || 0) + 4 || r.y0 > G.SH : blocked(r)) continue;
       taken.push(r); out.set(c.key, r);
       if (mode === 'tag') tags++; else if (isSmall) small++;
       break;
