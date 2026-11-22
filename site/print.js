@@ -266,8 +266,8 @@ function many(V, inks) {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
       const pics = coverPictures(v.es, N <= 2 ? 18 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-        + (N > 4 ? '' : '<ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+        + (N > 4 ? '' : '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
   }

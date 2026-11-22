@@ -156,10 +156,12 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .tile h2{font-family:'Instrument Serif';font-weight:400;font-size:22px;line-height:1}
 .many .tile .m{font-size:6.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:1.5mm 0 2mm}
 .many .tile p{font-size:8px;line-height:1.5;color:var(--soft)}
-.many .tile .pics{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2mm;margin-top:2.5mm}
+.many .tile .pics{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2mm;margin:2.5mm 0}
+.many .tile.roomy .pics{margin:7mm 0 8mm}
+.many .tile .chl{font-size:6.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-top:4mm}
 .many .tile .pics div{aspect-ratio:1;background:#f5f2ec;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .many .tile .pics img{max-width:100%;max-height:100%;display:block}
-.many .tile ol{list-style:none;margin-top:2.5mm;border-top:.5pt solid var(--line)}
+.many .tile ol{list-style:none;margin-top:1.5mm;border-top:.5pt solid var(--line)}
 .many .tile li{display:flex;justify-content:space-between;gap:2mm;font-size:7.5px;padding:1mm 0;border-bottom:.5pt solid var(--line)}
 .many .tile li span{color:var(--mute);white-space:nowrap}
 .many .cred{position:absolute;left:10mm;right:10mm;top:22mm;bottom:14mm;column-fill:auto;columns:2;column-gap:6mm;font-size:6.8px;line-height:1.5;color:var(--soft)}
