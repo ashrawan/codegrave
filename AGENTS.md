@@ -44,7 +44,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | Labels | `data/labels.json` | |
 | An old address that must keep working | `data/redirects.json` | |
 | An icon or image | `data/media/`, then name it on the entry or event | `site/data/media/` (generated) |
-| The pictures and films on the walls beside the road, era by era | `data/wall.json` (`docs/WALL.md`) | |
+| The pictures and films beside the road | An entry's own: `media` on the entry. The stand-ins, era by era: `data/wall.json` (`docs/WALL.md`) | |
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
@@ -202,21 +202,27 @@ How the page is put together:
   a pop.
 - **The look.** Dark by default, like a museum at night: a sky of stars,
   glass cards with a lit edge, the road lit warm from the left and cool from
-  the right. Light stays as a softer gallery (`cg-theme`).
+  the right. The light theme is the same place by day: a blue sky, the sun
+  low over the far end of the road, a pale moon and soft clouds (`cg-theme`).
 - **The media wall** (`site/wall.js`, `docs/WALL.md`). The road runs
-  through a dark void (a CSS gradient, stars drawn once), with rails of
-  light either side whose pulses rush towards the reader and about 200 motes
-  of dust fading into fog, all on one 2D canvas and only while something
-  moves. Asked for as "great performance on all devices": no WebGL, no
-  library, no grid on the flanks. Six frames float either side (two on a
-  phone) and show the
-  pictures and films of the era in front of the reader, from
-  `data/wall.json` by way of `boot.json`. Crossing into another era fades
-  the frames one after another and eases the light of the walls and the
-  road's edges to the era's `tone`. `roadFrame()` calls `wall.frame()` once
-  a frame; the wall knows nothing about entries or views. Films play muted
-  and only for the era in sight; less motion shows posters. Keep it behind
-  the road (`#wall`, under `#road-cv`) and keep the frames few.
+  through open air (a CSS gradient; stars or clouds drawn once), with rails
+  of light either side whose pulses rush towards the reader and about 200
+  motes of dust fading into fog, all on one 2D canvas and only while
+  something moves. Asked for as "great performance on all devices": no
+  WebGL, no library, no grid on the flanks. Six frames float either side
+  (two on a phone). They show the media of the cards that are up
+  (`wallMedia()`: an entry's `image`, its `media` list and its events'
+  images), each on its lane's side and, with several views, bordered in its
+  view's colour; `placeLabels()` already knows which cards are up, so the
+  page only hands that list over (`road.shows`) and the wall shares the
+  frames out when the list changes, never per frame. This was asked for:
+  the wall follows the views and the cards on show. The eras of
+  `data/wall.json` fill the frames only for views with few pictures of
+  their own (`L.own`), and always give the light of the rails and the
+  road's edges (`tone`). Pointing at a frame shows its caption. The wall
+  knows nothing about entries or views. Films play muted; less motion shows
+  posters. Keep it behind the road (`#wall`, under `#road-cv`) and keep the
+  frames few.
 - **The front card** is selected by itself: the nearest card in front of
   the reader (`road.focus`) has its line drawn in its view's colour and its
   events written along it, like the open and the hovered entry

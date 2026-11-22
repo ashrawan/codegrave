@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { eraAt, sidesOf, SLOTS, FRAMES, FRAMES_PHONE, rgbOf } from '../site/wall.js';
+import { eraAt, sidesOf, SLOTS, FRAMES, FRAMES_PHONE, rgbOf, slotFor } from '../site/wall.js';
 
 const eras = [
   { id: 'a', from: -3000, to: 0, media: [] },
@@ -53,4 +53,11 @@ test('the eras in data/wall.json run in order and each has media to show', () =>
   }
   // Every year from the first written year to today falls inside an era, not between two.
   for (let y = 1; y <= 2026; y++) assert.ok(wall.eras.some((e) => y >= e.from && y < e.to), `${y} is in an era`);
+});
+
+test('a card\'s picture takes a free frame first, then the one left longest ago', () => {
+  assert.equal(slotFor([{ from: 'card', live: true }, { from: 'era' }, { from: undefined }]), 1);
+  assert.equal(slotFor([{ from: 'card', live: true }, { from: 'card', live: false, gone: 50 }, { from: 'card', live: false, gone: 20 }]), 2);
+  assert.equal(slotFor([{ from: 'card', live: true }, { from: 'card', live: true }]), -1);
+  assert.equal(slotFor([]), -1);
 });

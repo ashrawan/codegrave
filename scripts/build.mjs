@@ -109,6 +109,27 @@ function checkMedia(at, what, m, needCredit) {
   for (const k of Object.keys(m)) if (!['src', 'alt', 'caption', 'credit', 'licence', 'source'].includes(k)) err(at, `${what} has an unknown field "${k}"`);
 }
 
+// One picture or film for the media wall (docs/WALL.md): on an era in data/wall.json, or in an entry's "media".
+const FILM = /^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/transcoded\/[^\s"'<>]+\.webm$/;
+function checkWallItem(mw, m) {
+  if (typeof m !== 'object' || !m) return err(mw, 'must be an object with a "type" and a "src"');
+  if (m.type === 'video') {
+    if (!FILM.test(m.src || '')) err(mw, 'a film\'s "src" must be a .webm transcode on upload.wikimedia.org/wikipedia/commons/transcoded/');
+    if (!REMOTE_MEDIA.test(m.poster || '')) err(mw, 'a film needs a "poster" picture from upload.wikimedia.org');
+    for (const t of ['start', 'end']) if (m[t] != null && !(typeof m[t] === 'number' && m[t] >= 0)) err(mw, `"${t}" must be a number of seconds`);
+    if (m.start != null && m.end != null && m.end <= m.start) err(mw, '"end" must come after "start"');
+  } else if (m.type === 'image') {
+    if (!REMOTE_MEDIA.test(m.src || '') && !(/^[a-z0-9][a-z0-9/._-]*\.(png|jpg|jpeg|webp)$/.test(m.src || '') && existsSync(join(mediaDir, m.src || '')))) err(mw, '"src" must be an upload.wikimedia.org url or a file under data/media/');
+  } else err(mw, '"type" must be "image" or "video"');
+  if (!m.alt) err(mw, 'needs an "alt" text');
+  if (m.caption != null && (typeof m.caption !== 'string' || m.caption.length > 200)) err(mw, '"caption" must be up to 200 characters');
+  if (!m.credit) err(mw, 'needs a "credit"');
+  if (!m.licence) err(mw, 'needs a "licence"');
+  if (!/^https:\/\//.test(m.source || '')) err(mw, 'needs an https "source"');
+  if (m.side != null && m.side !== 'left' && m.side !== 'right') err(mw, '"side" must be "left" or "right"');
+  for (const key of Object.keys(m)) if (!['type', 'src', 'poster', 'alt', 'caption', 'credit', 'licence', 'source', 'start', 'end', 'side'].includes(key)) err(mw, `unknown field "${key}"`);
+}
+
 // ---------------------------------------------------------------- the map
 // data/categories.json is one tree. "domains" are its branches (People,
 // Places … Technology, with Computing and its seven sections under it) and
@@ -155,7 +176,6 @@ const labelFile = readJson(join(dataDir, 'labels.json')) || {};
 const wall = existsSync(join(dataDir, 'wall.json')) ? (readJson(join(dataDir, 'wall.json')) || { eras: [] }) : { eras: [] };
 {
   const at = 'data/wall.json', HEX = /^#[0-9a-f]{6}$/i;
-  const FILM = /^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/transcoded\/[^\s"'<>]+\.webm$/;
   if (!Array.isArray(wall.eras)) err(at, '"eras" must be a list');
   const seen = new Set();
   let last = -Infinity;
@@ -168,23 +188,7 @@ const wall = existsSync(join(dataDir, 'wall.json')) ? (readJson(join(dataDir, 'w
     else { if (e.from < last) err(w, 'eras must be in order and must not overlap'); last = e.to; }
     if (!e.tone || !HEX.test(e.tone.warm || '') || !HEX.test(e.tone.cool || '')) err(w, '"tone" needs "warm" and "cool" colours like "#e3b25f"');
     if (!Array.isArray(e.media)) { err(w, '"media" must be a list'); continue; }
-    for (const [k, m] of e.media.entries()) {
-      const mw = `${w} media ${k + 1}`;
-      if (m.type === 'video') {
-        if (!FILM.test(m.src || '')) err(mw, 'a film\'s "src" must be a .webm transcode on upload.wikimedia.org/wikipedia/commons/transcoded/');
-        if (!REMOTE_MEDIA.test(m.poster || '')) err(mw, 'a film needs a "poster" picture from upload.wikimedia.org');
-        for (const t of ['start', 'end']) if (m[t] != null && !(typeof m[t] === 'number' && m[t] >= 0)) err(mw, `"${t}" must be a number of seconds`);
-        if (m.start != null && m.end != null && m.end <= m.start) err(mw, '"end" must come after "start"');
-      } else if (m.type === 'image') {
-        if (!REMOTE_MEDIA.test(m.src || '') && !(/^[a-z0-9][a-z0-9/._-]*\.(png|jpg|jpeg|webp)$/.test(m.src || '') && existsSync(join(mediaDir, m.src || '')))) err(mw, '"src" must be an upload.wikimedia.org url or a file under data/media/');
-      } else err(mw, '"type" must be "image" or "video"');
-      if (!m.alt) err(mw, 'needs an "alt" text');
-      if (!m.credit) err(mw, 'needs a "credit"');
-      if (!m.licence) err(mw, 'needs a "licence"');
-      if (!/^https:\/\//.test(m.source || '')) err(mw, 'needs an https "source"');
-      if (m.side != null && m.side !== 'left' && m.side !== 'right') err(mw, '"side" must be "left" or "right"');
-      for (const key of Object.keys(m)) if (!['type', 'src', 'poster', 'alt', 'credit', 'licence', 'source', 'start', 'end', 'side'].includes(key)) err(mw, `unknown field "${key}"`);
-    }
+    for (const [k, m] of e.media.entries()) checkWallItem(`${w} media ${k + 1}`, m);
   }
 }
 const labelList = [...(labelFile.subject || []), ...(labelFile.theme || [])];
@@ -333,6 +337,10 @@ for (const t of entries) {
   for (const o of t.official || []) if (!o.title || !URL_OK(o.url)) err(at, 'every "official" link needs a title and an https url');
   if ((t.official || []).length > 6) err(at, 'at most 6 "official" links');
   if (t.image != null) checkMedia(at, 'image', t.image, true);
+  if (t.media != null) {
+    if (!Array.isArray(t.media) || t.media.length > 12) err(at, '"media" must be a list of at most 12 pictures and films');
+    else t.media.forEach((m, k) => checkWallItem(`${at} media ${k + 1}`, m));
+  }
   if (isDate(born[0]?.date) && isDate(ended[0]?.date) && isBefore(ended[0].date, born[0].date)) err(at, 'ended before it was born');
   if (isDate(born[0]?.date) && isDate(t.names?.[0]?.from) && yearOf(t.names[0].from) !== yearOf(born[0].date)) {
     warn(at, 'first name does not start in the year of birth');

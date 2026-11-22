@@ -1,13 +1,45 @@
 # The media wall
 
-The road runs through a dark void: a slate gradient drawn in CSS, faint
-stars and haze, rails of light either side whose pulses rush towards the
-reader as they travel, and about 200 motes of dust that drift past and fade
-into the fog. Frames float in the dark either side of the road. The frames show
-pictures and short films of the era the reader is in. When the reader
-crosses into another era, the frames fade one after another to the new
-era's media, and the light on the walls and along the edges of the road
-eases to the new era's colours.
+The road runs through open air. In the dark theme it is night: a slate
+gradient drawn in CSS, faint stars and haze. In the light theme it is day: a
+blue sky that pales to the horizon, the sun low over the far end of the
+road, a pale moon, a few stars still out and soft clouds. Either way there
+are rails of light either side whose pulses rush towards the reader as they
+travel, and about 200 motes of dust that drift past and fade into the fog.
+
+Frames float either side of the road, and what they show comes from two
+places:
+
+1. **The cards on show.** Each card that is up on the road brings its
+   entry's own media: its `image`, its `media` list and its events' images
+   (at most six). They go up on the card's side of the road (the left
+   lane's on the left, the right lane's on the right, a card in the middle
+   on the side it stands nearer), and with several views each frame's
+   border takes its view's colour. A picture stays while its card does, and
+   a little longer.
+2. **The era**, from `data/wall.json`. When the views on the road have few
+   pictures of their own (fewer than 15 in 100 entries), the frames no card
+   needs show the era the reader is in. Views with pictures of their own
+   show only those; the era then only lends its light.
+
+Pointing at a frame says what it shows: the caption (or the alt text),
+whose card it belongs to, the author and the licence. Clicking opens the
+source page. When the reader crosses into another era, the light along the
+edges of the road eases to the new era's colours.
+
+## An entry's own media
+
+```json
+"media": [
+  { "type": "image", "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/…/500px-….jpg",
+    "alt": "Earthrise, seen from Apollo 8", "credit": "NASA / Bill Anders",
+    "licence": "Public domain", "source": "https://commons.wikimedia.org/wiki/File:…" }
+]
+```
+
+An entry in `data/base/` may carry up to 12 items, written like the items
+of an era below, plus an optional `caption` of up to 200 characters. They
+are for the wall only: unlike `image`, they do not make the card taller.
 
 ## The data: `data/wall.json`
 

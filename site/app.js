@@ -702,7 +702,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
     turnsOver();
-    L = { tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
+    // Do the views bring pictures of their own for the media wall? Enough of them (15 in 100 entries) and the wall shows only those.
+    const own = shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
+    L = { own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
@@ -819,7 +821,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     road.prev = road.t;
     let busy = roadDraw(dt, speed, now);
     // The media wall either side of the road follows the reader: the era in front of them, and the distance travelled.
-    if (wall && wall.frame({ year: writtenOf(L.when(road.t + camDir() * 0.2 * L.D)), travel: camDir() * road.t / L.D, G: L.G, dark: roadPalette().dark, dt })) busy = true;
+    if (wall && wall.frame({ year: writtenOf(L.when(road.t + camDir() * 0.2 * L.D)), travel: camDir() * road.t / L.D, G: L.G, dark: roadPalette().dark, dt, cards: road.shows || [], own: L.own })) busy = true;
     if (moving || busy || now < road.until) roadKick();
   }
 
@@ -851,6 +853,16 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       endW: Math.ceil(t.endEv ? 26 + w(t.name, `600 12px ${font}`) + w(endWords(t), `400 11px ${font}`) : 0),
     };
     return t.rm;
+  }
+  // What an entry has for the media wall: its picture, its events' pictures and its own list of media
+  // (pictures and films), at most six. Worked out once for each entry.
+  function wallMedia(t) {
+    if (t.wm) return t.wm;
+    const out = [], add = (m) => { if (m && m.src && out.length < 6 && !out.some((x) => x.src === mediaUrl(m.src))) out.push({ type: 'image', ...m, src: mediaUrl(m.src) }); };
+    add(t.image);
+    for (const m of t.media || []) add(m);
+    for (const e of t.events || []) add(e.image);
+    return (t.wm = out);
   }
   // One name on the road, in one of its forms. It is made when first shown and removed once it has faded.
   function roadNode(nk, p, end, mode) {
@@ -939,6 +951,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (!front || (leads(c) !== leads(front) ? leads(c) : c.u < front.u || (c.u === front.u && c.key < front.key))) front = c;
     }
     road.cards = cards; road.within1 = within1; road.within3 = within3;
+    // The media wall shows the pictures of the cards that are up: at most four cards, each on its lane's
+    // side (a card in the middle goes to the side it stands nearer), in its view's colour when there are several views.
+    const shows = [];
+    for (const c of cands) {
+      const r = placed.get(c.key), t = c.p.t;
+      if (!r || !r.big || shows.length >= 4 || !wallMedia(t).length || shows.some((x) => x.id === t.id)) continue;
+      const lean = c.p.lane.lean;
+      shows.push({ id: t.id, name: t.name, side: lean < 0 ? -1 : lean > 0 ? 1 : r.cx < G.vx - 24 ? -1 : r.cx > G.vx + 24 ? 1 : 0,
+        col: L.lanes.length > 1 ? `var(--p${c.p.lane.col})` : null, media: wallMedia(t) });
+    }
+    road.shows = shows;
     road.focus = front && !openUp ? front.p.t.id : null;
     // Turns: the starts still owed theirs, how many of them wait behind another card, and how fast play
     // may travel so that each has had its turn by the time the reader reaches it (turnPace in road.js).

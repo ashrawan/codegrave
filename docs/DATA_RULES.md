@@ -250,6 +250,8 @@ Images may instead be hot-linked from Wikimedia Commons: then `src` is an
 file's page on Commons, which records its author and licence. An entry may
 have an `icon` (shown on its card) and an `image` (shown at the top of its
 history). An event may have an `image`.
+An entry may also have `media`: up to 12 pictures and films that float beside
+the road while its card is up (`docs/WALL.md` describes an item).
 
 ```json
 "icon": { "src": "icons/typescript.svg", "alt": "TypeScript logo",
