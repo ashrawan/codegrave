@@ -72,7 +72,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .one .cover .toc span{margin-left:auto;font-family:Inter;font-size:7.5px;color:var(--mute);letter-spacing:.1em}
 .one .cover .ttl{display:flex;align-items:center;gap:6mm;margin:8mm 0 5mm}
 .one .cover .ttl h1{margin:0}
-.one .flag{height:22mm;max-width:40mm;object-fit:contain;display:block;flex:none}
+.one .flag{width:auto;height:auto;max-height:22mm;max-width:40mm;object-fit:contain;display:block;flex:none}
 .one .cred{columns:2;column-gap:6mm;column-fill:auto;font-size:7px;line-height:1.5;color:var(--soft)}
 .one .cred div{break-inside:avoid;margin-bottom:1.2mm}
 .one .cred b{color:var(--ink)}
@@ -152,7 +152,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .cover .body{top:48mm}
 .many .tile{padding:7mm 4mm 4mm}
 .many .tile .top{display:flex;align-items:center;gap:3mm}
-.many .tile .top img{height:10mm;max-width:16mm;object-fit:contain}
+.many .tile .top img{width:auto;height:auto;max-height:10mm;max-width:16mm;object-fit:contain}
 .many .tile h2{font-family:'Instrument Serif';font-weight:400;font-size:22px;line-height:1}
 .many .tile .m{font-size:6.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:1.5mm 0 2mm}
 .many .tile p{font-size:8px;line-height:1.5;color:var(--soft)}
@@ -199,8 +199,9 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster .yr.u{transform:translateY(-140%)}
 .poster .yr.d{transform:translateY(55%)}
 .poster .card{position:absolute;background:#fff;border:.3mm solid #e4ddd0;border-top:.9mm solid var(--k);border-radius:1.6mm;overflow:hidden;box-shadow:0 .5mm 1.4mm rgba(0,0,0,.07);display:flex;flex-direction:column}
-.poster figure{position:relative;flex:none;background:#efeae0}
-.poster figure img{width:100%;height:100%;object-fit:contain;display:block}
+.poster figure{position:relative;flex:none;background:#efeae0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+/* sized by the browser within the frame, not by object-fit, which html2canvas ignores (it stretched pictures in the PDF) */
+.poster figure img{width:auto;height:auto;max-width:100%;max-height:100%;flex:none;display:block}
 .poster figcaption{position:absolute;right:0;bottom:0;max-width:100%;font:400 1.5mm/1.2 Inter,sans-serif;color:#fff;background:rgba(0,0,0,.45);padding:.3mm .8mm;border-top-left-radius:.8mm;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .poster .tx{padding:1.6mm 2mm;display:flex;flex-direction:column;gap:.4mm;min-height:0;flex:1}
 .poster .tx em{font:600 1.95mm Inter,sans-serif;font-style:normal;text-transform:uppercase;letter-spacing:.2mm;color:var(--k);opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
