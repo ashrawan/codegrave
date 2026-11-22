@@ -178,7 +178,8 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 
 /* The poster (".poster"): landscape sheets laid out in A2 sizes (.vs) and scaled to the paper, see poster() in print.js */
 .poster #doc { align-items: flex-start; overflow-x: auto; }
-.poster .pg{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;page-break-after:always;background:#fbf8f1}
+.poster #doc .pg { margin: 0 auto; }
+.poster .pg{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;page-break-after:always;background:#fff}
 .poster .vs{position:absolute;left:0;top:0;transform-origin:0 0}
 .poster .t{position:absolute;left:22mm;top:12mm;right:22mm;display:flex;align-items:flex-end;gap:10mm}
 .poster .t h1{font:500 15.6mm/0.9 Literata,Georgia,serif;letter-spacing:-.2mm;white-space:nowrap}
@@ -194,7 +195,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster .arrow{position:absolute;width:0;height:0;margin-top:-5mm;border-left:5mm solid var(--ink);border-top:5mm solid transparent;border-bottom:5mm solid transparent}
 .poster .stem{position:absolute;width:.4mm;margin-left:-.2mm;opacity:.55}
 .poster .arm{position:absolute;height:.4mm;margin-top:-.2mm;opacity:.55}
-.poster .tick{position:absolute;width:1.8mm;height:1.8mm;margin:-.9mm 0 0 -.9mm;border-radius:50%;background:#fbf8f1;border:.5mm solid;z-index:2}
+.poster .tick{position:absolute;width:1.8mm;height:1.8mm;margin:-.9mm 0 0 -.9mm;border-radius:50%;background:#fff;border:.5mm solid;z-index:2}
 .poster .yr{position:absolute;margin-left:1.3mm;font:600 2.3mm/1 Inter,sans-serif;letter-spacing:.1mm;white-space:nowrap;z-index:3}
 .poster .yr.u{transform:translateY(-140%)}
 .poster .yr.d{transform:translateY(55%)}

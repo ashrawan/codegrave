@@ -417,8 +417,10 @@ function poster(vs, inks, paper) {
     p.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')';
     p.style.setProperty('--mid', MID + 'mm');
     const slots = posterSlots(n, C, sheet.rows);
+    // the grid stands in the middle of the sheet, also when its cards are at their widest and it is narrower than the sheet
+    const x0 = (S.w - C * CW - (C - 1) * S.gutter) / 2;
     const items = part.map((e, i) => {
-      const [c, s] = slots[i], a = S.side + S.gutter + c * (CW + S.gutter);
+      const [c, s] = slots[i], a = x0 + c * (CW + S.gutter);
       const x = s === 0 ? a - S.gutter / 2 + 1.4 : s === 1 ? a + CW * 0.35 : s === 2 ? a + CW * 0.65 : a + CW + S.gutter / 2 - 1.4;
       return { e, a, x, up: s <= 1, outer: s === 0 || s === 3 };
     });
