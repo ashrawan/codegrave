@@ -751,7 +751,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const first = viewById.get(state.views[0]), ln = L.lanes[0];
     if (!ln) return L.tMin;
     if (first && first.type === 'classical') return camClamp((first.year ? L.place(lineYear(first.year)) : roadBusiest()) - camDir() * 0.2 * L.D);
-    return camDir() > 0 ? camClamp(laneStart(ln) - 0.25 * L.D) : camLimits()[1];
+    // With several views the road opens where the earliest of them begins, so no lane starts half way.
+    return camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
   }
   // Takes the reader to a place on the road: it ends up a little in front of them.
   function roadTo(x, smooth = true) {
