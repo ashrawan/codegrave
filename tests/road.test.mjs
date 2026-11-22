@@ -1,7 +1,7 @@
 // Run with: node --test
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, DWELL, DWELL_BUSY, DWELL_CROWD, HOLD_AT, CRAWL, sizeAt, step125, warp, EVEN, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, dwellFor, turnPace } from '../site/road.js';
+import { NEAR, GONE, FAR, FULL, SMALL, CARD_MIN, OPEN_AT, CLOSE_AT, MIN_FRONT, CRAWL, sizeAt, step125, warp, EVEN, focalYears, tracks, stageOf, zoneOf, modesOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from '../site/road.js';
 
 const SIZES = { fullH: 158, nearH: 100, compactW: 170, tagW: 70, endW: 150 };
 
@@ -261,30 +261,22 @@ test('cards that would cover one another take turns while play travels', () => {
   assert.ok(orderOf({ zone: 0, score: 0.5 }) < orderOf({ zone: 1, up: 'compact', score: 0.5 }));
 });
 
-test('play slows for cards that have not had their turn, and never stands still', () => {
-  const edge = 1 / FULL - 1;   // how far ahead a name first becomes a card
-  // Nothing owed: no limit.
-  assert.equal(turnPace([]), Infinity);
-  // One card that is up: play arrives just short of it as its time runs out.
-  assert.ok(Math.abs(turnPace([{ ahead: 0.5, up: true, left: 2 }]) - (0.5 - HOLD_AT) / 2) < 1e-9);
-  // Four that begin together, one up and three waiting: slow, but well above a crawl.
-  const four = [{ ahead: edge, up: true, left: 1 }, ...[0, 1, 2].map(() => ({ ahead: edge, up: false, left: DWELL_BUSY }))];
-  assert.ok(Math.abs(turnPace(four) - (edge - HOLD_AT) / (1 + 3 * DWELL_BUSY)) < 1e-9);
-  assert.ok(turnPace(four) > CRAWL * 2 && turnPace(four) < 0.26);
-  // The more that wait, the slower; cards that are up together do not add up.
-  assert.ok(turnPace(four) < turnPace(four.slice(0, 3)) && turnPace(four.slice(0, 3)) < turnPace(four.slice(0, 2)));
-  assert.equal(turnPace([{ ahead: 0.4, up: true, left: 2 }, { ahead: 0.4, up: true, left: 2 }]), turnPace([{ ahead: 0.4, up: true, left: 2 }]));
-  // The order they are given in does not matter, and the nearest one that waits sets the pace when it is close.
-  assert.equal(turnPace([...four].reverse()), turnPace(four));
-  assert.ok(turnPace([{ ahead: 0.1, up: false, left: 2 }, { ahead: 0.5, up: false, left: 2 }]) < turnPace([{ ahead: 0.5, up: false, left: 2 }]));
-  // It never comes to a stand: right on top of a card that still waits, play keeps crawling.
-  assert.ok(CRAWL > 0);
-  assert.equal(turnPace([{ ahead: HOLD_AT, up: false, left: 2 }]), CRAWL);
-  assert.equal(turnPace([{ ahead: -0.04, up: false, left: 2 }, { ahead: 0, up: true, left: 1 }]), CRAWL);
-  // A longer queue moves faster.
-  assert.equal(dwellFor(0), DWELL);
-  assert.equal(dwellFor(2), DWELL);
-  assert.equal(dwellFor(3), DWELL_BUSY);
-  assert.equal(dwellFor(6), DWELL_CROWD);
-  assert.ok(DWELL_CROWD < DWELL_BUSY && DWELL_BUSY < DWELL && DWELL_CROWD >= 1 && DWELL <= 3);
+test('in play a start is a card while it stands in one window ahead, in every lane alike', () => {
+  assert.ok(OPEN_AT < 1 / FULL - 1);   // inside the distance where a card is full size
+  assert.ok(inWindow(OPEN_AT) && inWindow(0.5) && inWindow(CLOSE_AT + 0.001));
+  assert.ok(!inWindow(OPEN_AT + 0.01) && !inWindow(CLOSE_AT) && !inWindow(-0.1));
+});
+
+test('play slows where starts in one lane come close, so each stands in front a while, and never stops', () => {
+  assert.equal(windowPace([]), Infinity);
+  assert.equal(windowPace([[0.5]]), Infinity);
+  // Two starts 0.3 apart: each gets MIN_FRONT seconds in front.
+  assert.ok(Math.abs(windowPace([[0.4, 0.7]]) - 0.3 / MIN_FRONT) < 1e-9);
+  // Lanes do not crowd each other; the closest pair in any lane sets the pace.
+  assert.equal(windowPace([[0.4], [0.7]]), Infinity);
+  assert.ok(Math.abs(windowPace([[0.7, 0.4], [0.2, 0.3]]) - 0.1 / MIN_FRONT) < 1e-9);
+  // Starts that share a moment never bring play to a stand.
+  assert.equal(windowPace([[0.5, 0.5]]), CRAWL);
+  // Starts already passed or far off do not count.
+  assert.equal(windowPace([[0.01, 0.02, 5, 5.1]]), Infinity);
 });

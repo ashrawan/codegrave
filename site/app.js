@@ -8,7 +8,7 @@
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf } from './keys.js';
 import { createWall } from './wall.js';
-import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, dwellFor, turnPace } from './road.js';
+import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
   'use strict';
@@ -914,7 +914,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
     // The names in range, best first: the open entry, the one under the pointer, then the nearest, then by rank.
     // While the reader is swept along (a long jump) no new name is put up; they return as the road slows.
-    const fast = speed > 2.5 * D, cands = [], dwell = dwellFor(road.waiting);
+    const fast = speed > 2.5 * D, cands = [];
     if (fast) busy = true;
     const add = (p, end, time) => {
       const u = U(time);
@@ -922,21 +922,15 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const key = (end ? 'e:' : 's:') + p.key, id = p.t.id, s = S(u), up = road.vis.get(key), zone = zoneOf(s);
       if (fast && !up && id !== state.open) return;
       // A name already up keeps its place, and a card keeps being a card: a newcomer waits rather than pushing it out.
-      // While play travels, a card that has stood its time gives way to one it was hiding (orderOf in road.js).
-      // While play travels, each start opens as a card once: it is 'due' until it has stood `dwell` seconds,
-      // then 'done', closes to its small card and does not open again on this run of play. Ends stay small
-      // plates, so one entry never seems to open twice. The open entry and the one pointed at are exempt.
-      let turn = null, closed = false;
-      if (play.on) {
-        const had = road.turn.get(key) || 0;
-        if (!end && zone === 0) {
-          if (had >= dwell && had !== Infinity) road.turn.set(key, Infinity);
-          turn = had >= dwell ? 'done' : 'due';
-        }
-        closed = (end || had === Infinity || turn === 'done') && id !== state.open && id !== road.hover;
+      // While play travels, distance alone decides (inWindow in road.js): a start is a card while it stands in the
+      // window ahead of the reader, and may overlap other cards there; ends stay small plates. The open entry and
+      // the one pointed at are exempt.
+      let lead = false, closed = false;
+      if (play.on && id !== state.open && id !== road.hover) {
+        if (!end && inWindow(u / D)) lead = true; else closed = true;
       }
-      const pri = orderOf({ open: id === state.open, hover: id === road.hover, zone, end, up, score: p.t.score || 0, turn, ahead: u / D });
-      cands.push({ key, p, end, u, s, zone, turn, closed, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
+      const pri = orderOf({ open: id === state.open, hover: id === road.hover, zone, end, up, score: p.t.score || 0, ahead: u / D }) - (lead ? 1000 : 0);
+      cands.push({ key, p, end, u, s, zone, lead, closed, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
     };
     let within1 = 0, within3 = 0;
     const count = (time) => { const u = U(time); if (u > 0 && u <= 3 * D) { within3++; if (u <= D) within1++; } };
@@ -948,22 +942,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (!p.alive && p.b <= L.tMax && p.b >= L.tMin && p.b - p.a > 0.1 * D) {
         const ua = U(p.a), sb = S(U(p.b));
         if (!(p.a >= L.tMin && ua > uGone && ua < uFar && zoneOf(sb) > 0 && Math.abs(S(ua) - sb) * gh < 72)) add(p, true, p.b);
-      }
-    }
-    // While play travels each lane opens one card at a time, strictly in order: the card already open, else
-    // the nearest start still owed its turn. The ones behind it wait as small cards, so a far card never
-    // opens before a near one. The card whose turn it is may overlap others; it is never pushed aside.
-    if (play.on) {
-      const lead = new Map(), isUp = (c) => road.vis.get(c.key) === 'full';
-      for (const c of cands) {
-        if (c.turn !== 'due' || c.end || c.u < -0.05 * D) continue;
-        const cur = lead.get(c.p.lane);
-        if (!cur || (isUp(c) && !isUp(cur)) || (isUp(c) === isUp(cur) && c.u < cur.u)) lead.set(c.p.lane, c);
-      }
-      for (const c of cands) {
-        if (c.turn !== 'due' || c.end) continue;
-        if (lead.get(c.p.lane) === c) { c.lead = true; c.pri -= 1000; }
-        else if (c.p.t.id !== state.open && c.p.t.id !== road.hover) c.closed = true;
       }
     }
     cands.sort((a, b) => a.pri - b.pri || (a.key < b.key ? -1 : 1));
@@ -1007,15 +985,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     }
     road.shows = shows;
     road.focus = front && !openUp ? front.p.t.id : null;
-    // Turns: the starts still owed theirs, how many of them wait behind another card, and how fast play
-    // may travel so that each has had its turn by the time the reader reaches it (turnPace in road.js).
-    const owed = [];
-    for (const c of cands) {
-      if (c.turn !== 'due' || c.end || c.u < -0.05 * D) continue;
-      const r = placed.get(c.key);
-      owed.push({ ahead: c.u / D, up: !!r && r.big, left: dwell - (road.turn.get(c.key) || 0) });
-    }
-    road.waiting = owed.filter((c) => !c.up).length; road.limit = turnPace(owed);
+    // How fast play may travel: slow enough that each card has its moment in front of its lane (windowPace).
+    const ahead = new Map();
+    for (const c of cands) if (!c.end) { const a = ahead.get(c.p.lane) || []; a.push(c.u / D); ahead.set(c.p.lane, a); }
+    road.waiting = cands.filter((c) => c.lead).length; road.limit = play.on ? windowPace([...ahead.values()]) : Infinity;
     const hotNow = (id) => id === state.open || id === road.hover || id === road.focus;
 
     // Each name shown has its element; one that is no longer shown keeps its place on the ground while it fades.
@@ -1029,7 +1002,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       seen.add(nk);
       n.r = r; n.s = c.s;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
-      if (c.turn === 'due' && r.big) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
       // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
       if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }

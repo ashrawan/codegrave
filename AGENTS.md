@@ -245,21 +245,20 @@ How the page is put together:
   speed, down to the turn limit and to a stop on pause (`road.vel`), so the
   road never jerks under the reader. Space plays and pauses. At the far end the button offers to
   play again from the beginning.
-- **Cards take turns while play travels.** One rule, asked for in Nov
-  2026 ("cards are popping up twice"): while play travels, each start opens
-  as a full card once, one card per lane at a time and strictly nearest
-  first (the lane's `lead`, which may overlap other cards; the rest wait as
-  small cards, so a far card never opens before a near one), when it comes near enough (size `FULL`), stands for
-  `dwellFor()` seconds (about 2, less when others wait), then closes to its
-  small card and does not open again on that run (`closed` in `roadDraw()`,
-  honoured by `placeLabels()`). Ends stay small plates in play, so one entry
-  never seems to open twice. Cards that would cover one another wait,
-  nearest first (`orderOf()`), and play slows early so each gets its turn
-  before the reader reaches it (`turnPace()`, never below `CRAWL`). Moving
-  by hand, or other views, starts the turns afresh (`turnsOver()`);
-  opening the panel does not. Clicking a card while play travels opens
-  its entry and play goes on (asked for, Nov 2026). Standing still, nothing takes turns: a card stays while
-  someone reads it. Keep it this simple: no queue, no timers.
+- **Cards open by distance while play travels.** One rule, asked for in Nov
+  2026 ("on multiple lanes the order is not there"): while play travels, a
+  start is a full card exactly while it stands in one window ahead of the
+  reader (`inWindow()`: from `OPEN_AT` to `CLOSE_AT` focal lengths), the
+  same in every lane, so cards open in the order of their dates and close
+  just before the reader reaches them. Outside the window it is a small
+  card. Cards in the window may overlap; the nearer stands on top. Ends stay
+  small plates in play, so one entry never seems to open twice. Where starts
+  in a lane come close, play slows so each stands in front about
+  `MIN_FRONT` seconds (`windowPace()`, never below `CRAWL`). The open and
+  the hovered entry are exempt. Clicking a card while play travels opens
+  its entry and play goes on (asked for, Nov 2026). Standing still, nothing
+  takes turns: a card stays while someone reads it. Keep it this simple: no
+  queue, no timers, no turns.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
