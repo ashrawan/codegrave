@@ -18,8 +18,9 @@ export const INKS = ['#a5621a', '#2c58a6', '#a23b67', '#1f7a5c', '#6a4aa8', '#7a
 // Chapter tints of a single view.
 const TINTS = ['#b5651d', '#2f6b9a', '#7a4f9e', '#2e7d6b', '#a83b3b', '#8a7a2a', '#5b6b7a', '#9a5a7a'];
 const BEFORE = '#9a8f7e';   // entries before the first chapter
-// The poster's sheet: A2 landscape.
-const POSTER_PAPER = { w: 594, h: 420, css: 'A2 landscape' };
+// The poster's paper, always landscape: A2 as designed, A3, or A4 and Letter for a home printer.
+export const POSTER_PAPERS = { a2: { w: 594, h: 420, css: 'A2 landscape', name: 'A2' }, a3: { w: 420, h: 297, css: 'A3 landscape', name: 'A3' },
+  a4: { w: 297, h: 210, css: 'A4 landscape', name: 'A4' }, letter: { w: 279.4, h: 215.9, css: 'letter landscape', name: 'Letter' } };
 export const PAPERS = { a4: { w: 210, h: 297, css: 'A4' }, letter: { w: 215.9, h: 279.4, css: 'letter' } };
 const MM = 96 / 25.4;
 
@@ -357,37 +358,51 @@ function many(V, inks) {
 // cards' lines run down the gutter beside the column, so no line crosses a card. A small ring marks
 // where each line meets the band, with the year written beside it (not a pill: asked for).
 export const POSTER = { w: 594, h: 420, side: 22, gutter: 7, minCard: 44, maxCard: 62 };
-// Card width for C columns on a sheet: a gutter before the first and after the last for their lines.
-export const posterCardWidth = (C) => Math.min(POSTER.maxCard, (POSTER.w - 2 * POSTER.side - (C + 1) * POSTER.gutter) / C);
+// Smaller paper (asked for, Nov 2026: "we cannot print in the A4 or letter"). The poster is laid out
+// on a sheet of the paper's shape in the A2 sizes, then the whole sheet is scaled down by k. A3 is A2
+// at 0.71 with the same four rows. A4 and Letter would be too small that way, so they keep two rows
+// (the inner cards only) at 0.8 and take more sheets.
+export function posterSheet(P) {
+  const k = P.h / POSTER.h;
+  if (k >= 0.7) return { w: P.w / k, h: POSTER.h, rows: 4, k };
+  return { w: P.w / 0.8, h: P.h / 0.8, rows: 2, k: 0.8 };
+}
+// Card width for C columns on a sheet W wide: a gutter before the first and after the last for their lines.
+export const posterCardWidth = (C, W = POSTER.w) => Math.min(POSTER.maxCard, (W - 2 * POSTER.side - (C + 1) * POSTER.gutter) / C);
 // How the entries share the sheets: the fewest sheets whose cards are at least minCard wide.
 // Returns the number of entries on each sheet and the columns per sheet.
-export function posterSheets(n) {
+export function posterSheets(n, sheet = { w: POSTER.w, rows: 4 }) {
+  const R = sheet.rows;
   for (let P = 1; ; P++) {
-    const per = Math.ceil(n / P), C = Math.ceil(per / 4);
-    if (posterCardWidth(C) >= POSTER.minCard || per <= 4) {
+    const per = Math.ceil(n / P), C = Math.ceil(per / R);
+    if (posterCardWidth(C, sheet.w) >= POSTER.minCard || per <= R) {
       const sizes = []; for (let i = 0; i < n; i += per) sizes.push(Math.min(per, n - i));
       return { sizes, C };
     }
   }
 }
-// The slots of one sheet, [column, slot] in date order. A sheet with fewer entries than 4 × C gives
-// up an outer slot in columns inside it (top and bottom in turn), so its first and last columns stay
-// full and the edges line up.
-export function posterSlots(n, C) {
-  const empty = Math.max(0, C * 4 - n), short = new Set();
+// The slots of one sheet, [column, slot] in date order. A sheet with fewer entries than rows × C
+// gives up a slot in columns inside it (an outer one with four rows; top and bottom in turn), so its
+// first and last columns stay full and the edges line up. With two rows only slots 1 and 2 are used.
+export function posterSlots(n, C, rows = 4) {
+  const empty = Math.max(0, C * rows - n), short = new Set();
   for (let k = 0; k < empty; k++) short.add(Math.min(C - 1, Math.max(0, Math.round((k + 1) * (C - 1) / (empty + 1)))));
+  const full = rows === 4 ? [0, 1, 2, 3] : [1, 2], less = (c) => (rows === 4 ? (c % 2 ? [0, 1, 2] : [1, 2, 3]) : (c % 2 ? [2] : [1]));
   const out = [];
-  for (let c = 0; c < C; c++) out.push(...(short.has(c) ? (c % 2 ? [0, 1, 2] : [1, 2, 3]) : [0, 1, 2, 3]).map((s) => [c, s]));
+  for (let c = 0; c < C; c++) out.push(...(short.has(c) ? less(c) : full).map((s) => [c, s]));
   return out.slice(0, n);
 }
 
-function poster(vs, inks) {
-  const S = POSTER, one = vs.length === 1, link = linkOf(vs);
+function poster(vs, inks, paper) {
+  const sheet = posterSheet(paper), S = { ...POSTER, w: sheet.w, h: sheet.h }, one = vs.length === 1, link = linkOf(vs);
   const all = one ? vs[0].es : inOrder(vs.flatMap((v) => v.es), rev);
   const chs = one ? vs[0].chs : [];
   const ink = (e) => (one ? (e.ci < 0 ? BEFORE : TINTS[e.ci % TINTS.length]) : inks[e.vi]);
-  const { sizes, C } = posterSheets(all.length), CW = posterCardWidth(C);
-  const PIC = CW * 0.56, CH = PIC + 42, BAND = 8, MID = 40 + (S.h - 14 - 40) / 2;
+  const { sizes, C } = posterSheets(all.length, sheet), CW = posterCardWidth(C, S.w);
+  const BAND = 8, MID = 40 + (S.h - 14 - 40) / 2;
+  // two rows leave room above and below: the cards grow taller, with a larger picture and more words
+  const room = MID - 40 - BAND / 2 - 7 - 4;
+  const CH = sheet.rows === 4 ? CW * 0.56 + 42 : Math.min(room, CW * 0.8 + 46), PIC = sheet.rows === 4 ? CW * 0.56 : CH - 46;
   const name = vs.map((v) => v.name).join(', ');
   // with several views the title names them in their colours, which are the cards' colours
   const title = one ? esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + esc(v.name) + '</span>').join(', ');
@@ -396,9 +411,12 @@ function poster(vs, inks) {
   let at = 0;
   sizes.forEach((n, pi) => {
     const part = all.slice(at, at + n); at += n;
-    const p = newPage('sheet'), lastSheet = pi === sizes.length - 1;
+    const pg = newPage('sheet'), lastSheet = pi === sizes.length - 1;
+    // everything stands on the sheet in A2 sizes, scaled down to the paper
+    const p = document.createElement('div'); p.className = 'vs'; pg.appendChild(p);
+    p.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')';
     p.style.setProperty('--mid', MID + 'mm');
-    const slots = posterSlots(n, C);
+    const slots = posterSlots(n, C, sheet.rows);
     const items = part.map((e, i) => {
       const [c, s] = slots[i], a = S.side + S.gutter + c * (CW + S.gutter);
       const x = s === 0 ? a - S.gutter / 2 + 1.4 : s === 1 ? a + CW * 0.35 : s === 2 ? a + CW * 0.65 : a + CW + S.gutter / 2 - 1.4;
@@ -466,13 +484,13 @@ async function download(paper, fmt) {
   try {
     msg.textContent = 'Making the PDF…';
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
-    const P = fmt === 'poster' ? POSTER_PAPER : PAPERS[paper] || PAPERS.a4, turn = P.w > P.h ? 'landscape' : 'portrait';
+    const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4, turn = P.w > P.h ? 'landscape' : 'portrait';
     const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: turn, compress: true });
     const pages = [...doc.querySelectorAll('.pg')];
     for (let i = 0; i < pages.length; i++) {
       msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
-      // a poster sheet is large: 1.5 keeps it sharp at A2 without a huge file
-      const c = await window.html2canvas(pages[i], { scale: fmt === 'poster' ? 1.5 : 2, useCORS: true, backgroundColor: '#ffffff', logging: false });
+      // a poster is drawn as sharp as an A2 sheet at 1.5, whatever the paper, without a huge file
+      const c = await window.html2canvas(pages[i], { scale: fmt === 'poster' ? Math.min(3, 1.5 * 594 / P.w) : 2, useCORS: true, backgroundColor: '#ffffff', logging: false });
       if (i) pdf.addPage([P.w, P.h], turn);
       pdf.addImage(c.toDataURL('image/jpeg', 0.85), 'JPEG', 0, 0, P.w, P.h, undefined, 'FAST');
     }
@@ -481,7 +499,7 @@ async function download(paper, fmt) {
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { btn.disabled = false; $('paper').disabled = fmt === 'poster'; $('order').disabled = false; $('fmt').disabled = false; }
+  } finally { btn.disabled = false; $('paper').disabled = false; $('order').disabled = false; $('fmt').disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -493,7 +511,7 @@ async function getJSON(path) {
 const FONTS = ['400 9px "Source Serif 4"', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
 let shaped = null;
 function lay(paper, fmt) {
-  const P = fmt === 'poster' ? POSTER_PAPER : PAPERS[paper] || PAPERS.a4;
+  const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
   document.documentElement.style.setProperty('--pw', P.w + 'mm');
   document.documentElement.style.setProperty('--ph', P.h + 'mm');
   $('page-size').textContent = '@page { size: ' + P.css + '; }';
@@ -501,8 +519,8 @@ function lay(paper, fmt) {
   const { views, inks } = shaped;
   document.body.className = fmt === 'poster' ? 'poster' : views.length === 1 ? 'one' : 'many';
   const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
-  if (fmt === 'poster') poster(vs, inks); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
-  $('msg').textContent = fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', A2 landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
+  if (fmt === 'poster') poster(vs, inks, P); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
+  $('msg').textContent = fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
 async function start() {
@@ -523,16 +541,20 @@ async function start() {
   await Promise.all(FONTS.map((f) => document.fonts.load(f).catch(() => null)));
   await document.fonts.ready;
   shaped = { views, inks: keep };
-  // The paper starts as the one used where the reader is (Letter in the US and a few others, A4 elsewhere); both stay in the switch.
-  const sel = $('paper'); sel.value = PAPERS[q.get('paper')] ? q.get('paper') : paperFor(navigator.language);
-  // Format: the book (A4 or Letter pages) or the poster (A2 sheets); kept in the link as `fmt=poster`
+  // Format: the book (A4 or Letter pages) or the poster (landscape sheets, A2 to A4); kept in the link as `fmt=poster`
   const fm = $('fmt'); fm.value = q.get('fmt') === 'poster' ? 'poster' : 'book';
   const keepLink = () => history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/'));
-  sel.disabled = fm.value === 'poster';
+  // The paper starts as the one used where the reader is (Letter in the US and a few others, A4 elsewhere).
+  // The book offers A4 and Letter; the poster A2, A3, A4 and Letter. Kept in the link as `paper`.
+  const sel = $('paper'), home = paperFor(navigator.language);
+  const papers = () => { const set = fm.value === 'poster' ? POSTER_PAPERS : PAPERS, was = sel.value || q.get('paper');
+    sel.innerHTML = Object.entries(set).map(([k, v]) => '<option value="' + k + '">' + (v.name || v.css.replace('letter', 'Letter (US)')) + '</option>').join('');
+    sel.value = set[was] ? was : home; };
+  sel.textContent = ''; papers();
   await lay(sel.value, fm.value);
-  const relay = async () => { $('save').disabled = true; sel.disabled = fm.value === 'poster'; await lay(sel.value, fm.value); $('save').disabled = false; };
-  sel.addEventListener('change', relay);
-  fm.addEventListener('change', () => { if (fm.value === 'poster') q.set('fmt', 'poster'); else q.delete('fmt'); keepLink(); relay(); });
+  const relay = async () => { $('save').disabled = true; await lay(sel.value, fm.value); $('save').disabled = false; };
+  sel.addEventListener('change', () => { q.set('paper', sel.value); keepLink(); relay(); });
+  fm.addEventListener('change', () => { if (fm.value === 'poster') q.set('fmt', 'poster'); else q.delete('fmt'); papers(); keepLink(); relay(); });
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';
     q.set('o', rev ? 'backward' : 'forward'); keepLink();

@@ -176,9 +176,10 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 
 .foot .lnk{text-transform:none;letter-spacing:.04em}
 
-/* The poster (".poster"): A2 landscape sheets, see poster() in print.js */
+/* The poster (".poster"): landscape sheets laid out in A2 sizes (.vs) and scaled to the paper, see poster() in print.js */
 .poster #doc { align-items: flex-start; overflow-x: auto; }
-.poster .pg{width:594mm;height:420mm;position:relative;overflow:hidden;page-break-after:always;background:#fbf8f1}
+.poster .pg{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;page-break-after:always;background:#fbf8f1}
+.poster .vs{position:absolute;left:0;top:0;transform-origin:0 0}
 .poster .t{position:absolute;left:22mm;top:12mm;right:22mm;display:flex;align-items:flex-end;gap:10mm}
 .poster .t h1{font:400 20mm/0.9 'Instrument Serif',serif;letter-spacing:-.4mm;white-space:nowrap}
 .poster .t.sm h1{font-size:12mm}

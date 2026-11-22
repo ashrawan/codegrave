@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, fileName, coverPictures, INKS, PAPERS, POSTER, posterSheets, posterSlots, posterCardWidth } from '../site/print.js';
+import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, fileName, coverPictures, INKS, PAPERS, POSTER, POSTER_PAPERS, posterSheet, posterSheets, posterSlots, posterCardWidth } from '../site/print.js';
 
 test('dates are written as the page writes them', () => {
   assert.equal(yearText(1969), '1969');
@@ -90,5 +90,22 @@ test('poster slots run in date order, top to bottom, and keep the first and last
       assert.equal(s.filter(([c]) => c === 0).length, 4);
       assert.equal(s.filter(([c]) => c === C - 1).length, 4);
     }
+  }
+});
+
+test('the poster fits every paper: A3 is A2 scaled, A4 and Letter take two rows', () => {
+  assert.deepEqual(posterSheet(POSTER_PAPERS.a2), { w: 594, h: 420, rows: 4, k: 1 });
+  const a3 = posterSheet(POSTER_PAPERS.a3);
+  assert.equal(a3.rows, 4); assert.ok(Math.abs(a3.w - 594) < 1 && a3.k < 0.71);
+  for (const k of ['a4', 'letter']) {
+    const s = posterSheet(POSTER_PAPERS[k]), { sizes, C } = posterSheets(85, s);
+    assert.equal(s.rows, 2);
+    assert.equal(sizes.reduce((a, b) => a + b, 0), 85);
+    assert.ok(Math.max(...sizes) <= 2 * C && posterCardWidth(C, s.w) >= POSTER.minCard);
+    const slots = posterSlots(9, 5, 2);
+    assert.equal(slots.length, 9);
+    assert.ok(slots.every(([, r]) => r === 1 || r === 2));
+    assert.deepEqual(slots.filter(([c]) => c === 0).length, 2);
+    assert.deepEqual(slots.filter(([c]) => c === 4).length, 2);
   }
 });
