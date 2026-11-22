@@ -180,6 +180,8 @@ mark { background: none; color: var(--text); font-weight: 600; text-decoration: 
 #vnote:empty { display: none; }
 .ibtn.sm { width: 30px; height: 30px; }
 .ibtn[hidden] { display: none; }
+#pdf img { filter: saturate(.45); opacity: .75; transition: filter .2s, opacity .2s; }
+#pdf:hover img, #pdf:focus-visible img { filter: none; opacity: 1; }
 .ibtn.done { color: var(--acc); }
 /* the views on the timeline: a strip of pills along the bottom, which scrolls sideways when they do not fit */
 #dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; height: 44px; display: flex; align-items: center; justify-content: flex-start; gap: 6px; padding: 0 20px; background: var(--surf); border-top: 1px solid var(--rule); }
