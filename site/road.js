@@ -127,12 +127,13 @@ export function tracks(items, rest = 0) {
 // The stage: where the horizon and the foot of the road sit in a box SW by SH
 // pixels, how wide the road is at the reader's feet, and how big cards are.
 // On a narrow stage the road sits a little left, so the years have a margin.
-export function stageOf(SW, SH) {
+// `top` is the band at the top that the page's bar may cover: the road stands below it, and so do the names.
+export function stageOf(SW, SH, top = 0) {
   const phone = SW < 700;
-  const vx = phone ? SW * 0.43 : SW / 2, vy = Math.round(SH * (phone ? 0.17 : 0.2)), by = SH - (phone ? 8 : 12);
+  const vx = phone ? SW * 0.43 : SW / 2, vy = top + Math.round((SH - top) * (phone ? 0.17 : 0.2)), by = SH - (phone ? 8 : 12);
   const RW = phone ? SW * 0.385 : Math.min(SW * 0.4, 640);
-  const short = SH < 430, ks = short ? 0.84 : clamp(SH / (phone ? 560 : 620), 0.8, 1);
-  return { SW, SH, phone, vx, vy, by, gh: by - vy, RW, short, ks, FW: phone ? 216 : 288, NW: phone ? 200 : 244 };
+  const short = SH - top < 430, ks = short ? 0.84 : clamp((SH - top) / (phone ? 560 : 620), 0.8, 1);
+  return { SW, SH, top, phone, vx, vy, by, gh: by - vy, RW, short, ks, FW: phone ? 216 : 288, NW: phone ? 200 : 244 };
 }
 
 // How a name is drawn at each size: a start is a full card, a small card or a
@@ -188,7 +189,7 @@ export function placeLabels(cands, G, caps = {}) {
   const taken = [], out = new Map();
   let small = 0, tags = 0;
   const blocked = (r) => {
-    if (r.y1 < 4 || r.y0 > G.SH) return true;
+    if (r.y1 < (G.top || 0) + 4 || r.y0 > G.SH) return true;
     for (const a of taken) {
       const both = r.big && a.big, m = both ? 0 : 5;
       const ox = Math.min(r.x1, a.x1) - Math.max(r.x0, a.x0) + m, oy = Math.min(r.y1, a.y1) - Math.max(r.y0, a.y0) + m;

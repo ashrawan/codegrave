@@ -78,7 +78,7 @@ ul, ol { list-style: none; }
 /* stage: the road fills the page between the top bar, the bar of years on the right and the strip of views along the bottom */
 :root { --bar: 72px; --card-sh: 0 12px 28px rgba(0, 0, 0, .55); }
 :root[data-theme="light"] { --card-sh: 0 10px 26px rgba(40, 30, 10, .14); }
-#stage { position: fixed; top: 52px; left: 0; right: var(--bar); bottom: 44px; overflow: hidden; }
+#stage { position: fixed; top: 0; left: 0; right: var(--bar); bottom: 44px; overflow: hidden; }
 body.side-open #stage { right: calc(var(--side) + var(--bar)); }
 .status { padding: 80px 24px; text-align: center; color: var(--muted); }
 
@@ -372,7 +372,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road { position: absolute; inset: 0; z-index: 1; overflow: hidden; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
 #road.dragging { cursor: grabbing; }
 #road-cv { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
-#road-head { position: absolute; left: 24px; top: 18px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; max-width: 240px; pointer-events: none; }
+#road-head { position: absolute; left: 24px; top: 70px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; max-width: 240px; pointer-events: none; }
 #road-year { font-family: var(--serif); font-size: 68px; line-height: .95; font-variant-numeric: tabular-nums; white-space: nowrap; }
 #road-unit { margin-top: -6px; }
 #road-views { display: flex; flex-direction: column; gap: 10px; }
@@ -423,7 +423,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road.short #road-year { font-size: 34px; }
 #road.short .rc.full .rs, #road.short .rc.full img { display: none; }
 @media (max-width: 699px) {
-  #road-head { left: 14px; top: 10px; gap: 6px; max-width: 62%; }
+  #road-head { left: 14px; top: 62px; gap: 6px; max-width: 62%; }
   #road-year { font-size: 44px; }
   /* under the year, only the chapter the reader is in, marked in its view's colour */
   #road-views { gap: 4px; }
@@ -526,19 +526,18 @@ small > .ctag, small .ctag { margin-left: 0; }
 .top { transition: transform .35s ease, opacity .35s ease; }
 body.playing .top { transform: translateY(-100%); opacity: 0; pointer-events: none; }
 body.playing.peek .top, body.playing .top:focus-within { transform: none; opacity: 1; pointer-events: auto; }
-body.playing #stage, body.playing #axisbar { top: 0; }
 
 /* Two plays for a view with its own music (a country's anthem): one pill, the house play and the flag's play,
    side by side on a wide screen and one above the other on a phone, where the bar is narrow. */
-.plays { display: flex; align-items: center; gap: 3px; }
-.pown { position: relative; width: 30px; height: 30px; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--rule2); border-radius: 50%; background: var(--raised, #222) center / 80% auto no-repeat; color: #fff; overflow: hidden; cursor: pointer; }
+.plays { display: flex; align-items: center; gap: 2px; }
+.pown { position: relative; width: 28px; height: 28px; flex: none; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--rule2); border-radius: 50%; background: var(--raised, #222) center / 80% auto no-repeat; color: #fff; overflow: hidden; cursor: pointer; }
 .pown[hidden] { display: none; }
 .pown i { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: rgba(0, 0, 0, .5); backdrop-filter: blur(2px); }
 .pown svg { width: 9px; height: 9px; }
 .pown:hover { border-color: var(--text); }
 .pown[aria-pressed="true"] { border-color: var(--acc); box-shadow: 0 0 0 1px var(--acc), 0 0 14px color-mix(in srgb, var(--acc) 45%, transparent); }
 #axisbar.two .plays { padding: 2px; border: 1px solid var(--rule2); border-radius: 18px; background: rgba(255, 255, 255, .04); }
-#axisbar.two #play { width: 30px; height: 30px; }
+#axisbar.two #play { width: 28px; height: 28px; flex: none; }
 #axisbar.own-on #play:not(:hover) { color: var(--text); background: transparent; border-color: var(--rule2); box-shadow: none; }
 @media (max-width: 699px) {
   #axisbar.two .plays { flex-direction: column; }

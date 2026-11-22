@@ -21,6 +21,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     { name: 'Most', pct: 60 }, { name: 'All', pct: 100 },
   ];
   const MAX_ROWS = 160;         // the most lines drawn at once
+  const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
     succeeded_by: 'succeeded by', forked_from: 'forked from', merged_into: 'merged into',
@@ -671,7 +672,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
   function roadLayout() {
     const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan } = chosen();
-    const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight);
+    const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight, TOP);
     const lanes = [];
     for (const v of selected) {
       const mine = all.filter((t) => rowsOf.get(v).has(t) && inSpan(t));

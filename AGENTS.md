@@ -362,10 +362,14 @@ How the page is put together:
   A link to an entry that is not loaded shows its name and loads on click.
 - "Propose a view" at the end of the list opens the "Propose a view" issue
   form with the current link filled in.
-- **Play takes the whole screen.** While play travels the top bar slides
-  away (`body.playing`) and the road grows into its place; pointing at the
-  top edge brings it back over the road (`body.peek`), and it returns when
-  play stops. Asked for in Nov 2026.
+- **Play takes the whole screen.** The top bar floats over the road: the
+  road (`#stage`) always fills the page from the top, and keeps a band of
+  `TOP` pixels clear (`stageOf(SW, SH, top)` puts the road and the names
+  below it), so nothing moves when the bar comes and goes. While play
+  travels the bar slides away (`body.playing`); pointing at the top edge
+  brings it back over the road (`body.peek`), never over the open panel,
+  and it returns when play stops. Asked for in Nov 2026: do not make the
+  road move with the bar again.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or
   landscape. A wall frame takes the shape of its picture (`fit()` in
