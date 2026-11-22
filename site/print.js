@@ -118,10 +118,10 @@ function single(D) {
       + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
       + '<div class="toc">' + D.chs.map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
-    // The cover is one page: the pictures take the largest size that still leaves room for every chapter
-    // (12 in rows of 4, then 12 in rows of 6, then 6 in one row), and a long list of chapters closes up last.
+    // The cover is one page: 12 small pictures in rows of 6 (picked, Nov 2026), 6 in one row when the
+    // chapters need the room, and a long list of chapters closes up last.
     const mos = m.querySelector('.mos'), over = () => m.scrollHeight > m.clientHeight + 1;
-    for (const [cols, n] of [[4, 12], [6, 12], [6, 6]]) {
+    for (const [cols, n] of [[6, 12], [6, 6]]) {
       mos.style.gridTemplateColumns = 'repeat(' + cols + ',1fr)';
       [...mos.children].forEach((d, k) => { d.style.display = k < n ? '' : 'none'; });
       if (!over()) break;
@@ -261,7 +261,7 @@ function many(V, inks) {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
       const pics = coverPictures(v.es, N <= 2 ? 6 : 4);
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 3 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
         + (N > 4 ? '' : '<ol>' + v.chs.map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
