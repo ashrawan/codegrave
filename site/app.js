@@ -649,8 +649,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // and how big, and each fades in and out as its own element, so nothing
   // jumps. The card at the front is drawn as selected (road.focus): its line
   // and the dated points of its history light up as it arrives. While play
-  // travels, cards that would cover one another take turns (road.turn), and
-  // play slows for the ones that have not had theirs (road.limit).
+  // travels, a start is a card while it stands in a window ahead (inWindow), and
+  // play slows where starts come close (road.limit).
   const road = {
     t: null, target: null, rate: 6,           // where the reader stands, where a glide is heading, and how briskly
     raf: 0, live: false, last: 0, prev: null, pace: 1, vel: 0, cards: 0, within1: 0, within3: 0,    // vel: how fast play is carrying the reader, in focal lengths a second
