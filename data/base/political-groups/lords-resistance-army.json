@@ -1,0 +1,47 @@
+{
+  "id": "lords-resistance-army",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Lord's Resistance Army",
+      "from": "1987"
+    }
+  ],
+  "summary": "The rebel group of Joseph Kony that terrorised the north.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q108462",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lord's Resistance Army (Q108462)",
+      "url": "https://www.wikidata.org/wiki/Q108462",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lord's Resistance Army",
+      "url": "https://en.wikipedia.org/wiki/Lord's_Resistance_Army",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

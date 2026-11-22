@@ -1,0 +1,59 @@
+{
+  "id": "jose-saramago",
+  "category": "writers",
+  "names": [
+    {
+      "name": "José Saramago",
+      "from": "1922"
+    }
+  ],
+  "summary": "Novelist who won the Nobel Prize in 1998.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q37060",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-11-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2010-06-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: José Saramago (Q37060)",
+      "url": "https://www.wikidata.org/wiki/Q37060",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: José Saramago",
+      "url": "https://en.wikipedia.org/wiki/José_Saramago",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/JSJoseSaramago.jpg_unscaled",
+    "alt": "José Saramago",
+    "credit": "Unknown authorUnknown author",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:JSJoseSaramago.jpg"
+  }
+}

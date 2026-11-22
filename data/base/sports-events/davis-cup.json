@@ -1,0 +1,48 @@
+{
+  "id": "davis-cup",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Davis Cup",
+      "from": "1900"
+    }
+  ],
+  "summary": "The team competition between nations, first played in 1900.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q132377",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Davis Cup (Q132377)",
+      "url": "https://www.wikidata.org/wiki/Q132377",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Davis Cup",
+      "url": "https://en.wikipedia.org/wiki/Davis_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Davis_Cup_Praha_%C4%8CRo_2012-11-28_cropped_1.jpg/500px-Davis_Cup_Praha_%C4%8CRo_2012-11-28_cropped_1.jpg",
+    "alt": "Davis Cup",
+    "credit": "Draceane",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Davis_Cup_Praha_%C4%8CRo_2012-11-28_cropped_1.jpg"
+  }
+}

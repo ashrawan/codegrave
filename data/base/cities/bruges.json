@@ -1,0 +1,45 @@
+{
+  "id": "bruges",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bruges",
+      "from": "0850"
+    }
+  ],
+  "summary": "A medieval trading city of canals, the richest town of northern Europe in the 15th century.",
+  "wikidata": "Q12994",
+  "events": [
+    {
+      "type": "born",
+      "date": "0850",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bruges (Q12994)",
+      "url": "https://www.wikidata.org/wiki/Q12994",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bruges",
+      "url": "https://en.wikipedia.org/wiki/Bruges",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Brugge-CanalRozenhoedkaai.JPG/500px-Brugge-CanalRozenhoedkaai.JPG",
+    "alt": "Bruges",
+    "credit": "Jean-Christophe BENOIST",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Brugge-CanalRozenhoedkaai.JPG"
+  }
+}

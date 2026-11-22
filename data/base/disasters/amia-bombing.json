@@ -1,0 +1,50 @@
+{
+  "id": "amia-bombing",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "AMIA bombing",
+      "from": "1994"
+    }
+  ],
+  "summary": "A bomb destroyed a Jewish centre in Buenos Aires in 1994, killing 85 people.",
+  "wikidata": "Q322936",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1994-07-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: AMIA bombing (Q322936)",
+      "url": "https://www.wikidata.org/wiki/Q322936",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: AMIA bombing",
+      "url": "https://en.wikipedia.org/wiki/AMIA_bombing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Atentado_a_la_AMIA.png/500px-Atentado_a_la_AMIA.png",
+    "alt": "AMIA bombing",
+    "credit": "www.argentina.gob.ar",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Atentado_a_la_AMIA.png"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "cameroon",
+  "name": "Cameroon",
+  "description": "Cameroon from its kingdoms to German, French and British rule, independence and reunification.",
+  "category": "places",
+  "tags": [
+    "cameroon",
+    "yaounde",
+    "douala",
+    "africa",
+    "football",
+    "bamileke"
+  ],
+  "entries": [
+    "kingdom-of-bamum",
+    "ibrahim-njoya",
+    "kamerun",
+    "yaounde",
+    "ruben-um-nyobe",
+    "ahmadou-ahidjo",
+    "mongo-beti",
+    "paul-biya",
+    "manu-dibango",
+    "roger-milla",
+    "cameroon",
+    "samuel-etoo",
+    "lake-nyos-disaster",
+    "francis-ngannou",
+    "boko-haram-insurgency-cameroon",
+    "anglophone-crisis"
+  ],
+  "checkpoints": [
+    {
+      "id": "kingdoms",
+      "name": "Kingdoms",
+      "from": 1394,
+      "to": 1883,
+      "note": "Bamum and other kingdoms ruled the grasslands."
+    },
+    {
+      "id": "colony",
+      "name": "Colony",
+      "from": 1884,
+      "to": 1959,
+      "note": "Germany took Kamerun in 1884. After 1916 France and Britain split it."
+    },
+    {
+      "id": "cameroon",
+      "name": "Cameroon",
+      "from": 1960,
+      "to": 2026,
+      "note": "Independence came in 1960. Biya has ruled since 1982."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Flag_of_Cameroon.svg/330px-Flag_of_Cameroon.svg.png",
+    "alt": "Flag of Cameroon",
+    "credit": "(of code) -xfi-",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Cameroon.svg"
+  }
+}

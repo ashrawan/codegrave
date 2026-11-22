@@ -1,0 +1,59 @@
+{
+  "id": "olympics-1932",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1932 Summer Olympics",
+      "from": "1932"
+    }
+  ],
+  "summary": "The Los Angeles Games, held in the Great Depression, when many countries could not afford to send teams. Medal winners stood on a podium for the first time.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8143",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-07-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1932-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1932 Summer Olympics (Q8143)",
+      "url": "https://www.wikidata.org/wiki/Q8143",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1932 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1932_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Plaque_Commemorating_1932_Olympics_-_Los_Angeles_Coliseum_-_Los_Angeles%2C_CA_-_USA_%286933963721%29.jpg/500px-Plaque_Commemorating_1932_Olympics_-_Los_Angeles_Coliseum_-_Los_Angeles%2C_CA_-_USA_%286933963721%29.jpg",
+    "alt": "1932 Summer Olympics",
+    "credit": "Adam Jones from Kelowna, BC, Canada",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plaque_Commemorating_1932_Olympics_-_Los_Angeles_Coliseum_-_Los_Angeles,_CA_-_USA_(6933963721).jpg"
+  }
+}

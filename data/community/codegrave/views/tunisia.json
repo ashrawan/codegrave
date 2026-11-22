@@ -1,0 +1,80 @@
+{
+  "id": "tunisia",
+  "name": "Tunisia",
+  "description": "Tunisia from Carthage and Roman Africa to Kairouan, the Hafsids, the Ottomans, French rule, independence and the Arab Spring.",
+  "category": "places",
+  "tags": [
+    "tunisia",
+    "tunis",
+    "carthage",
+    "kairouan",
+    "maghreb",
+    "arab spring"
+  ],
+  "entries": [
+    "carthage",
+    "punic-wars",
+    "hannibal",
+    "el-jem-amphitheatre",
+    "kairouan",
+    "great-mosque-of-kairouan",
+    "zitouna-mosque",
+    "hafsid-dynasty",
+    "ibn-khaldun",
+    "french-protectorate-of-tunisia",
+    "habib-bourguiba",
+    "zine-el-abidine-ben-ali",
+    "tunisia",
+    "code-of-personal-status",
+    "kais-saied",
+    "mohamed-bouazizi",
+    "ons-jabeur",
+    "tunisian-revolution",
+    "tunisian-national-dialogue-quartet",
+    "2015-sousse-attacks"
+  ],
+  "checkpoints": [
+    {
+      "id": "carthage",
+      "name": "Carthage",
+      "from": -814,
+      "to": -146,
+      "note": "Phoenicians founded Carthage, which fought Rome."
+    },
+    {
+      "id": "roman-africa",
+      "name": "Roman Africa",
+      "from": -145,
+      "to": 669,
+      "note": "Rome made Africa a rich province."
+    },
+    {
+      "id": "islamic-tunisia",
+      "name": "Islamic Tunisia",
+      "from": 670,
+      "to": 1880,
+      "note": "Kairouan was founded in 670. Aghlabids, Hafsids and Ottomans ruled."
+    },
+    {
+      "id": "modern-tunisia",
+      "name": "Modern Tunisia",
+      "from": 1881,
+      "to": 2026,
+      "note": "France ruled from 1881. Independence came in 1956, and the revolution of 2011 began the Arab Spring."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/330px-Flag_of_Tunisia.svg.png",
+    "alt": "Flag of Tunisia",
+    "credit": "Various Wikimedia Commons' contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Tunisia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/23/Humat_al-Hima.ogg/Humat_al-Hima.ogg.mp3",
+    "title": "Humat Al Hima",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Humat_al-Hima.ogg"
+  }
+}

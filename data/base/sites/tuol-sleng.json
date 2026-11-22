@@ -1,0 +1,50 @@
+{
+  "id": "tuol-sleng",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Tuol Sleng prison",
+      "from": "1976"
+    }
+  ],
+  "summary": "A school turned into the Khmer Rouge prison S-21, where about 18,000 people were held; very few survived.",
+  "wikidata": "Q850268",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tuol Sleng prison (Q850268)",
+      "url": "https://www.wikidata.org/wiki/Q850268",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tuol Sleng Genocide Museum",
+      "url": "https://en.wikipedia.org/wiki/Tuol_Sleng_Genocide_Museum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Tuol_Sleng.jpg/500px-Tuol_Sleng.jpg",
+    "alt": "Tuol Sleng prison",
+    "credit": "Michael Gruijters at Dutch Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tuol_Sleng.jpg"
+  }
+}

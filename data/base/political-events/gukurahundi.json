@@ -1,0 +1,52 @@
+{
+  "id": "gukurahundi",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Gukurahundi",
+      "from": "1983"
+    }
+  ],
+  "summary": "The massacres in Matabeleland in the 1980s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q490844",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-01-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1987-12-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gukurahundi (Q490844)",
+      "url": "https://www.wikidata.org/wiki/Q490844",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gukurahundi",
+      "url": "https://en.wikipedia.org/wiki/Gukurahundi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

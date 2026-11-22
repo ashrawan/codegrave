@@ -1,0 +1,47 @@
+{
+  "id": "swiss-womens-suffrage",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Votes for women",
+      "from": "1971"
+    }
+  ],
+  "summary": "Swiss men voted in 1971 to give women the vote in federal elections, one of the last countries in Europe to do so.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q665778",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-02-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Votes for women (Q665778)",
+      "url": "https://www.wikidata.org/wiki/Q665778",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Women's suffrage in Switzerland",
+      "url": "https://en.wikipedia.org/wiki/Women's_suffrage_in_Switzerland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

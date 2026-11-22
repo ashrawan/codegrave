@@ -1,0 +1,53 @@
+{
+  "id": "meles-zenawi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Meles Zenawi",
+      "from": "1955"
+    }
+  ],
+  "summary": "Rebel leader who ruled Ethiopia from 1991 until his death in 2012.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q161184",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-05-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012-08-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Meles Zenawi (Q161184)",
+      "url": "https://www.wikidata.org/wiki/Q161184",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Meles Zenawi",
+      "url": "https://en.wikipedia.org/wiki/Meles_Zenawi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Meles_Zenawi_-_World_Economic_Forum_Annual_Meeting_2012.jpg/500px-Meles_Zenawi_-_World_Economic_Forum_Annual_Meeting_2012.jpg",
+    "alt": "Meles Zenawi",
+    "credit": "World Economic Forum",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Meles_Zenawi_-_World_Economic_Forum_Annual_Meeting_2012.jpg"
+  }
+}

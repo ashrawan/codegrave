@@ -1,0 +1,59 @@
+{
+  "id": "david",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "David",
+      "from": "-1039"
+    }
+  ],
+  "summary": "King of Israel in the Bible who made Jerusalem his capital.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q41370",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1039",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0969",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: David (Q41370)",
+      "url": "https://www.wikidata.org/wiki/Q41370",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David",
+      "url": "https://en.wikipedia.org/wiki/David",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/King_David%2C_the_King_of_Israel.jpg/500px-King_David%2C_the_King_of_Israel.jpg",
+    "alt": "David",
+    "credit": "Gerard van Honthorst",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:King_David,_the_King_of_Israel.jpg"
+  }
+}

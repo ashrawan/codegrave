@@ -28,8 +28,30 @@
   "events": [
     {
       "type": "born",
+      "date": "1163",
+      "precision": "year",
+      "note": "Building begins under Bishop Maurice de Sully."
+    },
+    {
+      "type": "milestone",
       "date": "1345",
-      "precision": "year"
+      "precision": "year",
+      "label": "Finished",
+      "note": "The cathedral is completed after almost two centuries of work."
+    },
+    {
+      "type": "milestone",
+      "date": "2019-04-15",
+      "precision": "day",
+      "label": "Fire",
+      "note": "A fire destroys the roof and the spire."
+    },
+    {
+      "type": "milestone",
+      "date": "2024-12-07",
+      "precision": "day",
+      "label": "Reopened",
+      "note": "The restored cathedral reopens."
     }
   ],
   "status": "alive",

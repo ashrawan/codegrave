@@ -1,0 +1,59 @@
+{
+  "id": "irish-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Irish War of Independence",
+      "from": "1919"
+    }
+  ],
+  "summary": "The guerrilla war of 1919 to 1921 against British rule.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q208297",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-01-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1921-07-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Irish War of Independence (Q208297)",
+      "url": "https://www.wikidata.org/wiki/Q208297",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Irish War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Irish_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Hogan%27s_Flying_Column.gif/500px-Hogan%27s_Flying_Column.gif",
+    "alt": "Irish War of Independence",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hogan%27s_Flying_Column.gif"
+  }
+}

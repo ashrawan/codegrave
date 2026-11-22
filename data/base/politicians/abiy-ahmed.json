@@ -1,0 +1,54 @@
+{
+  "id": "abiy-ahmed",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Abiy Ahmed",
+      "from": "1976"
+    }
+  ],
+  "summary": "Prime minister since 2018 and Nobel peace laureate.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q50365049",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abiy Ahmed (Q50365049)",
+      "url": "https://www.wikidata.org/wiki/Q50365049",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abiy Ahmed",
+      "url": "https://en.wikipedia.org/wiki/Abiy_Ahmed",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Prime_Minister_of_Ethiopia_Abiy_Ahmed_Ali_%28cropped%29.jpg/500px-Prime_Minister_of_Ethiopia_Abiy_Ahmed_Ali_%28cropped%29.jpg",
+    "alt": "Abiy Ahmed",
+    "credit": "Ethiopia Prime Minister's Office",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Prime_Minister_of_Ethiopia_Abiy_Ahmed_Ali_(cropped).jpg"
+  }
+}

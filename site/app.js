@@ -16,7 +16,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const REPO = 'https://github.com/ashrawan/codegrave';
   const EDITORS = 'codegrave';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
-  const MAX_ROWS = 160;         // the most lines drawn at once
+  const MAX_ROWS = 800;         // the most lines drawn at once
   const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
@@ -438,7 +438,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     level: 100, order: 'old',  // everything that fits; 'old': the reader faces the future, 'new': the past
     pinned: new Set(), open: null, pane: 'views', era: null, trail: [],
     span: null,               // [from, to] written years when the reader narrows the timeline
-    topic: '',                // the chip the list of views is narrowed to, '' for all
+    topic: '',                // the pressed chip: the list shows that topic's views; '' for the views on the timeline
   };
   let L = null;               // the current layout
 
@@ -612,9 +612,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('road').classList.toggle('short', G.short);
     $('road').style.setProperty('--fw', G.FW + 'px');
     $('road').style.setProperty('--nw', G.NW + 'px');
-    // The views, named under the year in the order of their lanes, each with the chapter the reader is in.
-    // A phone names only the chapters there (the strip under the road names the views), and only for one or two lanes.
-    $('road-views').innerHTML = G.short || (G.phone && L.lanes.length > 2) ? '' : L.lanes.map((ln, i) =>
+    // The views, named across the top centre in the order of their lanes, each with the chapter the reader is in
+    // (asked for, Nov 2026). With many lanes the names get smaller; a phone drops the chapters beyond two lanes.
+    $('road-views').dataset.n = L.lanes.length;
+    $('road-views').classList.toggle('bare', G.phone && L.lanes.length > 2);
+    $('road-views').innerHTML = G.short ? '' : L.lanes.map((ln, i) =>
       `<div class="rv" style="--c:var(--p${ln.col})"><b>${esc(ln.view.name)}</b><button type="button" class="rch" data-lane="${i}" hidden></button></div>`).join('');
     for (const ln of L.lanes) ln.cur = undefined;
     barTicks();
@@ -1332,21 +1334,23 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
-    const t = road.t, D = L.D, dir = camDir(), label = playLabel(L.when(t));
+    const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
+    // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
+    const label = L.tMax >= NOW - 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : playLabel(m);
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
-      // What the era of the year in sight stands for, in the strip at the bottom.
-      const yr = writtenOf(L.when(t)), era = yr <= -1e5 ? '' : yr < 0 ? '<b>BCE</b> Before the Common Era' : '<b>CE</b> Common Era';
-      if ($('era-key').innerHTML !== era) $('era-key').innerHTML = era;
+      // What the era of the year in sight stands for, under the year, as deep time's units are (asked for, Nov 2026).
+      const yr = writtenOf(L.when(t)), era = label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the units in sight are spelled out once, under the year.
       const units = [...new Set([...L.units, (/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean))];
-      if (units.join() !== L.unitsSaid) {
-        L.unitsSaid = units.join();
-        $('road-unit').textContent = units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`).join(' · ');
-        $('road-unit').hidden = !units.length || L.G.short;
+      const under = [era, ...units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
+      if (under !== L.unitsSaid) {
+        L.unitsSaid = under;
+        $('road-unit').textContent = under;
+        $('road-unit').hidden = !under || L.G.short;
       }
     }
     const y = barY(t), y2 = barY(clamp(t + dir * 3 * D, L.tMin, L.tMax));
@@ -1531,7 +1535,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const h = hits[i];
     if (h && h.suggest) return void window.open(`${REPO}/issues/new?template=new-thing.yml&title=${encodeURIComponent('Add: ' + h.suggest)}&name=${encodeURIComponent(h.suggest)}`, '_blank', 'noopener');
     if (!h || h.none) return;
-    $('q').value = ''; drawHits(''); $('q').blur();
+    $('q').value = ''; $('q').dispatchEvent(new Event('input')); $('q').blur();
     if (h.year != null) return flashYear(h.year);
     if (h.era) return openEra(h.era.key);
     if (h.away) return bringIn(h.e.id);
@@ -1655,8 +1659,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     return y;
   }
 
-  // A compact filter above the list: All, then the editors' topics (History,
-  // Science and so on). A community view outside every topic sits under More.
+  // A compact filter above the list: the editors' topics (History, Science and
+  // so on). Pressed, a chip lists that topic's views; pressed again, the list
+  // goes back to what is on the timeline. A view outside every topic sits under More.
   // Where the editors name no topics, the chips are the branches that have a view.
   const REST = '~';
   function chipList() {
@@ -1673,9 +1678,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     box.hidden = !list.length || !!$('vq').value.trim();
     if (state.topic && !list.some((d) => d.id === state.topic)) state.topic = '';
     const chip = (id, name) => `<button type="button" role="radio" data-chip="${esc(id)}" aria-checked="${state.topic === id}">${esc(name)}</button>`;
-    const ids = ['', ...list.map((d) => d.id)].join(',');
+    const ids = list.map((d) => d.id).join(',');
+    // "My view" comes first: the views on the timeline, pressed when no topic is.
     // Redrawn only when the chips change, so the row keeps its sideways scroll.
-    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'All') + list.map((d) => chip(d.id, d.name)).join(''); }
+    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'My view') + list.map((d) => chip(d.id, d.name)).join(''); }
     else for (const b of box.querySelectorAll('[data-chip]')) b.setAttribute('aria-checked', b.dataset.chip === state.topic);
     requestAnimationFrame(chipEdges);
   }
@@ -1686,25 +1692,20 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     bar.classList.toggle('more-r', c.scrollLeft < c.scrollWidth - c.clientWidth - 2);
   }
 
-  // The list: the community views, in the editors' order, under a heading for
-  // each topic, or narrowed to one by its chip. Search finds classical views too
-  // (the map: everything, each branch, each kind), and entries and years.
+  // The list: the views on the timeline, or one topic's views when its chip is
+  // pressed. Search finds every view, community and classical (the map:
+  // everything, each branch, each kind), and entries and years.
   let found = [], active = -1;
   function runSearch() {
     const raw = $('vq').value.trim(), q = fold(raw);
     found = [];
     if (!q) {
-      const mine = myView();
-      if (mine && !state.topic) found.push({ mine });
-      const chips = chipList(), heads = !state.topic && !!boot?.topics?.length;
-      let last = null;
-      for (const v of boot?.views || []) {
-        const c = chipOf(v);
-        if (state.topic && c !== state.topic) continue;
-        if (heads && c !== last) { last = c; found.push({ head: chips.find((d) => d.id === c)?.name || 'More' }); }
-        found.push({ v: viewById.get(v.id) || v });
+      if (state.topic) {
+        for (const v of boot?.views || []) if (chipOf(v) === state.topic) found.push({ v: viewById.get(v.id) || v });
+      } else {
+        found.push({ head: 'My view' });
+        for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
       }
-      found.push({ propose: true });
       active = -1;
     } else {
       // Community views at once; every view in the search index once it has arrived.
@@ -1783,14 +1784,18 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
     }
   }
+  // "Propose a view" at the foot of the panel opens the issue form with this link filled in.
+  function propose() {
+    window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
+  }
   // Picking a row shows its view alone. `beside` is the second action: add it to the others, or take it off.
   function pick(i, beside) {
     const f = found[i];
     if (!f || f.wait || f.head) return;
     if (f.mine) return loadMine(f.mine);
-    if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
-    if (f.year != null) { $('vq').value = ''; runSearch(); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
-    if (f.e) { $('vq').value = ''; runSearch(); return bringIn(f.e.id, { focus: true }); }
+    if (f.propose) return propose();
+    if (f.year != null) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
+    if (f.e) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); return bringIn(f.e.id, { focus: true }); }
     if (pending.has(f.v.id)) return;
     if (beside) {
       if (!state.views.includes(f.v.id)) turnOn(f.v.id);
@@ -2150,9 +2155,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     addEventListener('pointermove', (e) => {
       if (!play.on || e.pointerType === 'touch') return;
       const b = document.body.classList;
-      // Over the open panel the bar stays away: the panel keeps its own head and nothing covers it.
-      const sd = b.contains('side-open') ? $('side').getBoundingClientRect() : null;
-      if (e.clientY < 48 && !(sd && e.clientX >= sd.left)) b.add('peek'); else if (e.clientY > 110 || (sd && e.clientX >= sd.left)) b.remove('peek');
+      // The top edge brings the bar back anywhere, over the open panel too (asked for, Nov 2026).
+      if (e.clientY < 48) b.add('peek'); else if (e.clientY > 110) b.remove('peek');
     }, { passive: true });
     addEventListener('resize', () => {
       clearTimeout(rt);
@@ -2177,7 +2181,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const rm = el('[data-remove]');
       if (rm) { removeView(rm.dataset.remove); return changed(); }
       const br = el('[data-chip]');
-      if (br) { state.topic = br.dataset.chip; drawChips(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
+      if (br) { state.topic = state.topic === br.dataset.chip ? '' : br.dataset.chip; drawChips(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
       const era = el('[data-era]');
       if (era && !el('#side')) return openEra(era.dataset.era);
       const zoom = el('[data-zoom]');
@@ -2242,12 +2246,21 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
 
     $('q').addEventListener('input', findOnTimeline);
+    $('propose').addEventListener('click', propose);
+    // A cross in each search box clears it, shown while there is something to clear.
+    for (const c of document.querySelectorAll('.clr')) {
+      const box = $(c.dataset.for), sync = () => { c.hidden = !box.value; };
+      box.addEventListener('input', sync);
+      c.addEventListener('pointerdown', (e) => e.preventDefault());
+      c.addEventListener('click', (e) => { e.preventDefault(); box.value = ''; box.dispatchEvent(new Event('input')); box.focus(); });
+      sync();
+    }
     $('q').addEventListener('focus', () => { indexFor('a'); if ($('q').value) findOnTimeline(); });
     $('q').addEventListener('blur', () => setTimeout(() => drawHits(''), 150));
     $('q').addEventListener('keydown', (e) => {
       if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && hits.length) { e.preventDefault(); hit = (hit + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length; drawHits(fold($('q').value.trim())); }
       else if (e.key === 'Enter') { e.preventDefault(); goHit(Math.max(0, hit)); }
-      else if (e.key === 'Escape') { e.stopPropagation(); $('q').value = ''; drawHits(''); $('q').blur(); }
+      else if (e.key === 'Escape') { e.stopPropagation(); $('q').value = ''; $('q').dispatchEvent(new Event('input')); $('q').blur(); }
     });
     $('qlist').addEventListener('pointerdown', (e) => { const li = e.target.closest('[data-h]'); if (li) { e.preventDefault(); goHit(Number(li.dataset.h)); } });
     $('vq').addEventListener('input', () => { drawChips(); runSearch(); });
@@ -2271,7 +2284,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         $('vlist').querySelector('[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
       }
       else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) pick(active, e.shiftKey); }
-      else if (e.key === 'Escape' && $('vq').value) { e.stopPropagation(); $('vq').value = ''; drawChips(); runSearch(); }
+      else if (e.key === 'Escape' && $('vq').value) { e.stopPropagation(); $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); }
     });
 
     // The bars redraw as they move, and record the link once let go.
@@ -2419,6 +2432,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
 
   // ---------------------------------------------------------------- start
+  // The views the page opens on; a phone opens on the editors' shorter list (`phone` in home.json).
+  function homeViews(home) {
+    const ids = (home.views || []).map((p) => useView(p).id), few = matchMedia(PHONE).matches ? home.phone || [] : [];
+    const kept = ids.filter((id) => few.includes(id));
+    return kept.length ? kept : ids;
+  }
   // boot.json and the views the page opens on are asked for at the same time.
   async function start() {
     const ids = urlViews();
@@ -2426,7 +2445,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     bootReady = getJSON('boot.json').then(useBoot);
     let asked = ids.length ? ids : mine ? mine.views : null;
     const viewsReady = asked ? Promise.all(asked.map(loadView))
-      : Promise.all([getJSON('home.json'), bootReady]).then(([home]) => (home.views || []).map((p) => useView(p).id));
+      : Promise.all([getJSON('home.json'), bootReady]).then(([home]) => homeViews(home));
     try {
       await bootReady;
     } catch (e) {
@@ -2438,7 +2457,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!got.length && asked) {
       if (ids.length) note('The views in this link could not be loaded.');
       asked = null;
-      got = await Promise.all([getJSON('home.json')]).then(([home]) => (home.views || []).map((p) => useView(p).id)).catch(() => []);
+      got = await Promise.all([getJSON('home.json')]).then(([home]) => homeViews(home)).catch(() => []);
     }
     if (ids.length && got.length) readUrl(got);
     else if (mine && asked) applyMine({ ...mine, views: got });

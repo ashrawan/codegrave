@@ -1,0 +1,93 @@
+{
+  "id": "netherlands",
+  "name": "Netherlands",
+  "description": "The Netherlands from Roman frontier and Frisian traders to the Dutch Revolt, the Golden Age, empire, flood defences and modern Europe.",
+  "category": "places",
+  "tags": [
+    "netherlands",
+    "holland",
+    "amsterdam",
+    "golden age",
+    "rembrandt",
+    "dikes"
+  ],
+  "entries": [
+    "amsterdam",
+    "william-the-silent",
+    "eighty-years-war",
+    "netherlands",
+    "dutch-republic",
+    "act-of-abjuration",
+    "dutch-east-india-company",
+    "rembrandt",
+    "new-amsterdam",
+    "christiaan-huygens",
+    "antonie-van-leeuwenhoek",
+    "johannes-vermeer",
+    "baruch-spinoza",
+    "tulip-mania",
+    "the-night-watch",
+    "peace-of-westphalia-netherlands",
+    "girl-with-a-pearl-earring",
+    "treaty-of-utrecht",
+    "kingdom-of-the-netherlands",
+    "vincent-van-gogh",
+    "philips",
+    "ajax",
+    "anne-frank",
+    "rotterdam-blitz",
+    "hunger-winter",
+    "international-court-of-justice",
+    "johan-cruyff",
+    "north-sea-flood-of-1953",
+    "delta-works",
+    "dick-schoof",
+    "asml",
+    "maastricht-treaty",
+    "same-sex-marriage-in-the-netherlands"
+  ],
+  "checkpoints": [
+    {
+      "id": "frontier-and-towns",
+      "name": "Frontier and towns",
+      "from": -57,
+      "to": 1567,
+      "note": "The Rhine was Rome's frontier here. Frisians and Franks followed, towns grew rich on cloth and trade, and the lands passed to the Burgundians and then the Habsburgs."
+    },
+    {
+      "id": "revolt-and-golden-age",
+      "name": "Revolt and golden age",
+      "from": 1568,
+      "to": 1794,
+      "note": "The Dutch rose against Spain in 1568 and won independence. Amsterdam became the world's warehouse, the East India Company sailed to Asia, and Rembrandt and Vermeer painted."
+    },
+    {
+      "id": "kingdom",
+      "name": "Kingdom",
+      "from": 1795,
+      "to": 1944,
+      "note": "French rule ended in a kingdom under the House of Orange in 1815, which lost Belgium in 1830. Van Gogh painted, and the country stayed neutral in the First World War but was occupied in the Second."
+    },
+    {
+      "id": "modern-netherlands",
+      "name": "Modern Netherlands",
+      "from": 1945,
+      "to": 2026,
+      "note": "After liberation the Dutch rebuilt, gave up Indonesia, built the Delta Works against the sea, and helped found the European Union."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/330px-Flag_of_the_Netherlands.svg.png",
+    "alt": "Flag of Netherlands",
+    "credit": "Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Netherlands.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e3/Wilhelmus_koor.oga/Wilhelmus_koor.oga.mp3",
+    "title": "Wilhelmus",
+    "credit": "No machine-readable author provided. Wilhelmus~commonswiki assumed (based on copyright claims).",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wilhelmus_koor.oga"
+  }
+}

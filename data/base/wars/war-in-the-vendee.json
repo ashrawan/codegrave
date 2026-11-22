@@ -1,0 +1,53 @@
+{
+  "id": "war-in-the-vendee",
+  "category": "wars",
+  "names": [
+    {
+      "name": "War in the Vendée",
+      "from": "1793"
+    }
+  ],
+  "summary": "A Catholic and royalist uprising in western France from 1793, crushed by the republic with massacres.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q8628",
+  "events": [
+    {
+      "type": "born",
+      "date": "1793-03-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1796-07-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: War in the Vendée (Q8628)",
+      "url": "https://www.wikidata.org/wiki/Q8628",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: War in the Vendée",
+      "url": "https://en.wikipedia.org/wiki/War_in_the_Vendée",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4c/GuerreVend%C3%A9e_1.jpg",
+    "alt": "War in the Vendée",
+    "credit": "Paul-Émile Boutigny",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:GuerreVend%C3%A9e_1.jpg"
+  }
+}

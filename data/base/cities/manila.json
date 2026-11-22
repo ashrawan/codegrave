@@ -1,0 +1,51 @@
+{
+  "id": "manila",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Manila",
+      "from": "1571"
+    }
+  ],
+  "summary": "The capital, founded by the Spanish in 1571 on the bay of Manila.",
+  "wikidata": "Q1461",
+  "events": [
+    {
+      "type": "born",
+      "date": "1571-06-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manila (Q1461)",
+      "url": "https://www.wikidata.org/wiki/Q1461",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manila",
+      "url": "https://en.wikipedia.org/wiki/Manila",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Big_Manila.jpg/500px-Big_Manila.jpg",
+    "alt": "Manila",
+    "credit": "Mike Gonzalez (TheCoffee)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Big_Manila.jpg"
+  }
+}

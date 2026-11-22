@@ -1,0 +1,53 @@
+{
+  "id": "siege-of-aleppo",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Aleppo",
+      "from": "2012"
+    }
+  ],
+  "summary": "Four years of fighting for Aleppo, ended by the regime's victory in 2016.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1842866",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-07-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-12-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Aleppo (Q1842866)",
+      "url": "https://www.wikidata.org/wiki/Q1842866",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Aleppo (2012–2016)",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Aleppo_(2012–2016)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Rif_Aleppo2.svg/500px-Rif_Aleppo2.svg.png",
+    "alt": "Battle of Aleppo",
+    "credit": "Kami888",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rif_Aleppo2.svg"
+  }
+}

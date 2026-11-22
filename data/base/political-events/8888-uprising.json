@@ -1,0 +1,59 @@
+{
+  "id": "8888-uprising",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "8888 Uprising",
+      "from": "1988"
+    }
+  ],
+  "summary": "The uprising of 1988 crushed by the army.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q274365",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-03",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1988-09",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 8888 Uprising (Q274365)",
+      "url": "https://www.wikidata.org/wiki/Q274365",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 8888 Uprising",
+      "url": "https://en.wikipedia.org/wiki/8888_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/8888s-Strike.JPG/500px-8888s-Strike.JPG",
+    "alt": "8888 Uprising",
+    "credit": "Kwantonge (talk)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:8888s-Strike.JPG"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "john-mahama",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "John Mahama",
+      "from": "1958"
+    }
+  ],
+  "summary": "President again since 2025.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q50678",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-11-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ghana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Mahama (Q50678)",
+      "url": "https://www.wikidata.org/wiki/Q50678",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Mahama",
+      "url": "https://en.wikipedia.org/wiki/John_Mahama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/John_Mahama_in_Yokohama_%28cropped%29.jpg/500px-John_Mahama_in_Yokohama_%28cropped%29.jpg",
+    "alt": "John Mahama",
+    "credit": "Cabinet Public Relations Office of the Cabinet Secretariat",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Mahama_in_Yokohama_(cropped).jpg"
+  }
+}

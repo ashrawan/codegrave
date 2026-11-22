@@ -1,0 +1,52 @@
+{
+  "id": "pala-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Pala Empire",
+      "from": "0750"
+    }
+  ],
+  "summary": "A Buddhist empire of Bengal that ruled much of north India and built great monasteries.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q668412",
+  "events": [
+    {
+      "type": "born",
+      "date": "0750",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1174",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bangladesh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pala Empire (Q668412)",
+      "url": "https://www.wikidata.org/wiki/Q668412",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pala Empire",
+      "url": "https://en.wikipedia.org/wiki/Pala_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

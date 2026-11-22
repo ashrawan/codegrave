@@ -1,0 +1,59 @@
+{
+  "id": "marko-marulic",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Marko Marulić",
+      "from": "1450"
+    }
+  ],
+  "summary": "Poet of Split, father of Croatian literature.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q336571",
+  "events": [
+    {
+      "type": "born",
+      "date": "1450-08-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1524-01-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marko Marulić (Q336571)",
+      "url": "https://www.wikidata.org/wiki/Q336571",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marko Marulić",
+      "url": "https://en.wikipedia.org/wiki/Marko_Marulić",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Croatia-01216_-_Marko_Maruli%C4%87_%289548667523%29.jpg/500px-Croatia-01216_-_Marko_Maruli%C4%87_%289548667523%29.jpg",
+    "alt": "Marko Marulić",
+    "credit": "Dennis G. Jarvis",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Croatia-01216_-_Marko_Maruli%C4%87_(9548667523).jpg"
+  }
+}

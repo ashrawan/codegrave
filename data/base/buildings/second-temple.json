@@ -1,0 +1,59 @@
+{
+  "id": "second-temple",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Second Temple",
+      "from": "-0516"
+    }
+  ],
+  "summary": "The temple of Jerusalem rebuilt after the exile, expanded by Herod and destroyed by Rome in 70 CE.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q728428",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0516",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0070-08-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Temple (Q728428)",
+      "url": "https://www.wikidata.org/wiki/Q728428",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Temple",
+      "url": "https://en.wikipedia.org/wiki/Second_Temple",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Second_Temple.jpg/500px-Second_Temple.jpg",
+    "alt": "Second Temple",
+    "credit": "Ariely",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Second_Temple.jpg"
+  }
+}

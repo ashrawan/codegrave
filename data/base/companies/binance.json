@@ -1,0 +1,48 @@
+{
+  "id": "binance",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Binance",
+      "from": "2017"
+    }
+  ],
+  "summary": "The world's largest crypto exchange by trading volume, founded in 2017.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q51403327",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Binance (Q51403327)",
+      "url": "https://www.wikidata.org/wiki/Q51403327",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Binance",
+      "url": "https://en.wikipedia.org/wiki/Binance",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Binance_t-shirt_and_bag_-_2022-07-09.jpg/500px-Binance_t-shirt_and_bag_-_2022-07-09.jpg",
+    "alt": "Binance",
+    "credit": "Bretwa",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Binance_t-shirt_and_bag_-_2022-07-09.jpg"
+  }
+}

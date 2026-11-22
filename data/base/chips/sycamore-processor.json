@@ -1,0 +1,51 @@
+{
+  "id": "sycamore-processor",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Google Sycamore",
+      "from": "2019"
+    }
+  ],
+  "summary": "Google's quantum chip that in 2019 finished in minutes a task claimed to take ordinary supercomputers thousands of years, a claim known as quantum supremacy.",
+  "wikidata": "Q78045330",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Google Sycamore (Q78045330)",
+      "url": "https://www.wikidata.org/wiki/Q78045330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sycamore processor",
+      "url": "https://en.wikipedia.org/wiki/Sycamore_processor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Google_Sycamore_Chip_002.png/500px-Google_Sycamore_Chip_002.png",
+    "alt": "Google Sycamore",
+    "credit": "Google (https://www.youtube.com/channel/UCK8sQmJBp8GCxrOtXWBpyEA)",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Google_Sycamore_Chip_002.png"
+  }
+}

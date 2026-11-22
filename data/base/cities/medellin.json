@@ -1,0 +1,45 @@
+{
+  "id": "medellin",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Medellín",
+      "from": "1675"
+    }
+  ],
+  "summary": "Colombia's second city, once ruled by drug cartels and since remade by cable cars and libraries.",
+  "wikidata": "Q48278",
+  "events": [
+    {
+      "type": "born",
+      "date": "1675-11-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Medellín (Q48278)",
+      "url": "https://www.wikidata.org/wiki/Q48278",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Medellín",
+      "url": "https://en.wikipedia.org/wiki/Medellín",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Panor%C3%A1mica_de_Medell%C3%ADn_desde_el_Cerro_El_Picacho.jpg/500px-Panor%C3%A1mica_de_Medell%C3%ADn_desde_el_Cerro_El_Picacho.jpg",
+    "alt": "Medellín",
+    "credit": "Luis90f",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_de_Medell%C3%ADn_desde_el_Cerro_El_Picacho.jpg"
+  }
+}

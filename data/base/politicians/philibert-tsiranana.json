@@ -1,0 +1,59 @@
+{
+  "id": "philibert-tsiranana",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Philibert Tsiranana",
+      "from": "1912"
+    }
+  ],
+  "summary": "First president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q315944",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-10-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1978-04-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Philibert Tsiranana (Q315944)",
+      "url": "https://www.wikidata.org/wiki/Q315944",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Philibert Tsiranana",
+      "url": "https://en.wikipedia.org/wiki/Philibert_Tsiranana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Philibert_Tsiranana_1962.jpg/500px-Philibert_Tsiranana_1962.jpg",
+    "alt": "Philibert Tsiranana",
+    "credit": "Bundesarchiv_B_145_Bild-F013783-0033,_Berlin,_Staatsbesuch_aus_Madagaskar.jpg: Wegmann, Ludwig derivative work: Polaert ",
+    "licence": "CC BY-SA 3.0 de",
+    "source": "https://commons.wikimedia.org/wiki/File:Philibert_Tsiranana_1962.jpg"
+  }
+}

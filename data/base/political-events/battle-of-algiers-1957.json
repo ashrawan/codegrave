@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-algiers-1957",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of Algiers",
+      "from": "1957"
+    }
+  ],
+  "summary": "The French army's campaign of 1957 to break the FLN in Algiers, notorious for the use of torture.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1761043",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-01-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1957-10-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Algiers (Q1761043)",
+      "url": "https://www.wikidata.org/wiki/Q1761043",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Algiers (1956–1957)",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Algiers_(1956–1957)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Casbah-cache-Ali-lapointe.jpg/500px-Casbah-cache-Ali-lapointe.jpg",
+    "alt": "Battle of Algiers",
+    "credit": "Saber68",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Casbah-cache-Ali-lapointe.jpg"
+  }
+}

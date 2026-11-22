@@ -16,7 +16,7 @@ where every result says which sort it is, and their links work like any
 other.
 
 Every view has its own link. A community view's address is its owner and its
-id, as on GitHub: `codegrave.com/?views=codegrave/the-space-race`. A
+id, as on GitHub: `codegrave.com/?views=codegrave/space-exploration`. A
 classical view's address is its id: `?views=rulers`. A link can name
 several: `?views=people,codegrave/the-space-race`. Each view on the
 timeline gets a lane of its own on the road. Picking a view in the panel
@@ -87,8 +87,11 @@ the profile if you have none.
 | `audio` | no | The view's own music for play: `src` (a sound file under `data/media/`, or an `https` link ending in mp3, ogg, oga, m4a, mp4, webm or wav), `credit`, `licence` and `source`, and an optional `title`. It plays, looped, while play travels. Leave it out and play uses the site's track. With several views on the road, the first one that brings a track is heard. |
 | `categories`, `domains`, `level` | no | Instead of `entries`: draw the view from whole kinds or branches of the base, showing the top `level` percent (5 to 100). Such a view grows by itself as entries are added. |
 
-A view holds any number of entries, and its file on the site carries the 200
-best ranked. A good view has 20 to 50.
+A view holds any number of entries, and its file on the site carries up to
+1,000 of them, best ranked first. A view is one whole subject ("Wars",
+"Music", "Science"), so it may hold a few hundred: the road stretches busy
+years and the cards open by distance, so a big view still reads well. Group
+related subjects into one view rather than making many small ones.
 
 An entry may be in any number of views. One that is in two views on the
 timeline is drawn in both lanes, so every view always shows all of its
@@ -133,16 +136,18 @@ panel is ordered:
 
 ```json
 {
-  "default": ["codegrave/the-space-race"],
+  "default": ["codegrave/space-exploration", "codegrave/computer-generations"],
+  "phone": ["codegrave/computer-generations"],
   "topics": [
-    { "id": "history", "name": "History", "views": ["codegrave/ancient-egypt", "codegrave/world-war-2"] },
-    { "id": "science", "name": "Science", "views": ["codegrave/dinosaurs", "codegrave/the-space-race"] }
+    { "id": "history", "name": "History", "views": ["codegrave/the-ancient-world", "codegrave/wars"] },
+    { "id": "science", "name": "Science", "views": ["codegrave/evolution-of-life", "codegrave/space-exploration"] }
   ]
 }
 ```
 
 `default` is what a new visitor sees: one view id, or a list of up to eight
-shown side by side. `topics` are the chips above the list, in order; each
+shown side by side. `phone`, if given, names the ones of those a phone
+opens on (a narrow screen has room for fewer lanes). `topics` are the chips above the list, in order; each
 names its views in the order they are listed, and a view sits in one topic
 at most. Keep the topics few and broad. Only editors change this file.
 

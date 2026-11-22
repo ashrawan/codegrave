@@ -1,0 +1,50 @@
+{
+  "id": "smolensk-air-disaster",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Smolensk air disaster",
+      "from": "2010"
+    }
+  ],
+  "summary": "The crash in 2010 that killed Poland's president and 95 others.",
+  "wikidata": "Q131311",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-04-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2010-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Smolensk air disaster (Q131311)",
+      "url": "https://www.wikidata.org/wiki/Q131311",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2010 Polish Air Force Tu-154 crash",
+      "url": "https://en.wikipedia.org/wiki/2010_Polish_Air_Force_Tu-154_crash",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Tu-154-crash-in-smolensk-20100410-11.jpg/500px-Tu-154-crash-in-smolensk-20100410-11.jpg",
+    "alt": "Smolensk air disaster",
+    "credit": "Serge Serebro, Vitebsk Popular News",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tu-154-crash-in-smolensk-20100410-11.jpg"
+  }
+}

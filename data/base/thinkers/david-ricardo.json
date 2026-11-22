@@ -1,0 +1,53 @@
+{
+  "id": "david-ricardo",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "David Ricardo",
+      "from": "1772"
+    }
+  ],
+  "summary": "British economist who showed that countries gain from trade even when one makes everything better, the idea of comparative advantage.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q160270",
+  "events": [
+    {
+      "type": "born",
+      "date": "1772-04-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1823-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: David Ricardo (Q160270)",
+      "url": "https://www.wikidata.org/wiki/Q160270",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David Ricardo",
+      "url": "https://en.wikipedia.org/wiki/David_Ricardo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg/500px-Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg",
+    "alt": "David Ricardo",
+    "credit": "Thomas Phillips",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg"
+  }
+}

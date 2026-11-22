@@ -1,0 +1,51 @@
+{
+  "id": "cape-town",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Cape Town",
+      "from": "1652"
+    }
+  ],
+  "summary": "The oldest city, founded by the Dutch in 1652 below Table Mountain.",
+  "wikidata": "Q5465",
+  "events": [
+    {
+      "type": "born",
+      "date": "1652",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-africa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cape Town (Q5465)",
+      "url": "https://www.wikidata.org/wiki/Q5465",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cape Town",
+      "url": "https://en.wikipedia.org/wiki/Cape_Town",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Ciudad_del_Cabo_desde_Cabeza_de_Le%C3%B3n%2C_Sud%C3%A1frica%2C_2018-07-22%2C_DD_34.jpg/500px-Ciudad_del_Cabo_desde_Cabeza_de_Le%C3%B3n%2C_Sud%C3%A1frica%2C_2018-07-22%2C_DD_34.jpg",
+    "alt": "Cape Town",
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ciudad_del_Cabo_desde_Cabeza_de_Le%C3%B3n,_Sud%C3%A1frica,_2018-07-22,_DD_34.jpg"
+  }
+}

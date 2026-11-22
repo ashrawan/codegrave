@@ -1,0 +1,48 @@
+{
+  "id": "ta-prohm",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Ta Prohm",
+      "from": "1186"
+    }
+  ],
+  "summary": "An Angkor temple left in the grip of giant tree roots.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q592846",
+  "events": [
+    {
+      "type": "born",
+      "date": "1186",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ta Prohm (Q592846)",
+      "url": "https://www.wikidata.org/wiki/Q592846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ta Prohm",
+      "url": "https://en.wikipedia.org/wiki/Ta_Prohm",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ta_Prohm.JPG/500px-Ta_Prohm.JPG",
+    "alt": "Ta Prohm",
+    "credit": "Dmitry A. Mottl",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ta_Prohm.JPG"
+  }
+}

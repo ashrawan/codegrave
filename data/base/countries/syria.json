@@ -1,0 +1,51 @@
+{
+  "id": "syria",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Syria",
+      "from": "1920"
+    }
+  ],
+  "summary": "A country of the eastern Mediterranean, with Damascus among the oldest cities on Earth, independent since 1946.",
+  "wikidata": "Q858",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-03-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Syria (Q858)",
+      "url": "https://www.wikidata.org/wiki/Q858",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Syria",
+      "url": "https://en.wikipedia.org/wiki/Syria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Damascus%2C_Syria%2C_Panoramic_view_of_Damascus.jpg/500px-Damascus%2C_Syria%2C_Panoramic_view_of_Damascus.jpg",
+    "alt": "Syria",
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Damascus,_Syria,_Panoramic_view_of_Damascus.jpg"
+  }
+}

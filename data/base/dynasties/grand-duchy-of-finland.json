@@ -1,0 +1,52 @@
+{
+  "id": "grand-duchy-of-finland",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Grand Duchy of Finland",
+      "from": "1809"
+    }
+  ],
+  "summary": "Finland under the Russian tsars, with its own laws, from 1809 to 1917.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q62633",
+  "events": [
+    {
+      "type": "born",
+      "date": "1809-10-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1917-12-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grand Duchy of Finland (Q62633)",
+      "url": "https://www.wikidata.org/wiki/Q62633",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand Duchy of Finland",
+      "url": "https://en.wikipedia.org/wiki/Grand_Duchy_of_Finland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

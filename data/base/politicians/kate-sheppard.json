@@ -1,0 +1,53 @@
+{
+  "id": "kate-sheppard",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Kate Sheppard",
+      "from": "1847"
+    }
+  ],
+  "summary": "Leader of the campaign that won New Zealand women the vote in 1893.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q455072",
+  "events": [
+    {
+      "type": "born",
+      "date": "1847-03-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1934-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kate Sheppard (Q455072)",
+      "url": "https://www.wikidata.org/wiki/Q455072",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kate Sheppard",
+      "url": "https://en.wikipedia.org/wiki/Kate_Sheppard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Mrs._K._W._Sheppard_%28cropped%29.jpg/500px-Mrs._K._W._Sheppard_%28cropped%29.jpg",
+    "alt": "Kate Sheppard",
+    "credit": "H. H. Clifford, see https://collection.canterburymuseum.com/objects/243177/glass-plate-negative-kate-w-sheppard",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mrs._K._W._Sheppard_(cropped).jpg"
+  }
+}

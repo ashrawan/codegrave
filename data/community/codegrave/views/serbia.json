@@ -1,0 +1,93 @@
+{
+  "id": "serbia",
+  "name": "Serbia",
+  "description": "Serbia from the Nemanjić kingdom and Kosovo to Ottoman rule, risings, Yugoslavia, the wars of the 1990s and today.",
+  "category": "places",
+  "tags": [
+    "serbia",
+    "belgrade",
+    "balkans",
+    "yugoslavia",
+    "kosovo",
+    "danube"
+  ],
+  "entries": [
+    "lepenski-vir",
+    "belgrade",
+    "nemanjic-dynasty",
+    "saint-sava",
+    "studenica-monastery",
+    "serbia",
+    "stefan-dusan",
+    "serbian-empire",
+    "battle-of-kosovo",
+    "karadjordje",
+    "serbian-revolution",
+    "nikola-tesla",
+    "mihajlo-pupin",
+    "ivo-andric",
+    "assassination-of-franz-ferdinand",
+    "serbian-campaign-ww1",
+    "yugoslavia",
+    "slobodan-milosevic",
+    "aleksandar-vucic",
+    "novak-djokovic",
+    "srebrenica-massacre",
+    "kosovo-war",
+    "nato-bombing-of-yugoslavia",
+    "overthrow-of-slobodan-milosevic",
+    "kosovo-declaration-of-independence",
+    "novi-sad-canopy-collapse"
+  ],
+  "checkpoints": [
+    {
+      "id": "early-serbia",
+      "name": "Early Serbia",
+      "from": -9500,
+      "to": 1167,
+      "note": "Lepenski Vir was settled ten thousand years ago. Slavs came in the 600s."
+    },
+    {
+      "id": "the-kingdom",
+      "name": "The kingdom",
+      "from": 1168,
+      "to": 1458,
+      "note": "The Nemanjić kings built a kingdom and Dušan an empire. The Ottomans won at Kosovo in 1389."
+    },
+    {
+      "id": "ottoman-rule",
+      "name": "Ottoman rule",
+      "from": 1459,
+      "to": 1803,
+      "note": "The Ottomans ruled Serbia for centuries."
+    },
+    {
+      "id": "rising-and-yugoslavia",
+      "name": "Rising and Yugoslavia",
+      "from": 1804,
+      "to": 1990,
+      "note": "Serbs rose in 1804. The Sarajevo shot of 1914 began the war, and Yugoslavia was formed in 1918."
+    },
+    {
+      "id": "serbia",
+      "name": "Serbia",
+      "from": 1991,
+      "to": 2026,
+      "note": "Wars broke Yugoslavia apart, and Kosovo was lost."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/330px-Flag_of_Serbia.svg.png",
+    "alt": "Flag of Serbia",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Serbia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8e/Serbian_national_anthem%2C_instrumental.oga/Serbian_national_anthem%2C_instrumental.oga.mp3",
+    "title": "Bože pravde",
+    "credit": "https://web.archive.org/web/20080913132321/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Serbian_national_anthem,_instrumental.oga"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "yemeni-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Yemeni civil war",
+      "from": "2014"
+    }
+  ],
+  "summary": "The war since 2014.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q19686631",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-09-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yemeni civil war (Q19686631)",
+      "url": "https://www.wikidata.org/wiki/Q19686631",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yemeni civil war (2014–present)",
+      "url": "https://en.wikipedia.org/wiki/Yemeni_civil_war_(2014–present)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Yemeni_Civil_War.svg/500px-Yemeni_Civil_War.svg.png",
+    "alt": "Yemeni civil war",
+    "credit": "Ali Zifan",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yemeni_Civil_War.svg"
+  }
+}

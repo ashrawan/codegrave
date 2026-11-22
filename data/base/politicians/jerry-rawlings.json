@@ -1,0 +1,59 @@
+{
+  "id": "jerry-rawlings",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jerry Rawlings",
+      "from": "1947"
+    }
+  ],
+  "summary": "Air force officer who took power twice and then led Ghana to democracy.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q51002",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-06-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-11-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ghana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jerry Rawlings (Q51002)",
+      "url": "https://www.wikidata.org/wiki/Q51002",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jerry Rawlings",
+      "url": "https://en.wikipedia.org/wiki/Jerry_Rawlings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/JJ_Rawlings_in_Brussels_1998_%28P002554000101%2C_cropped%29.jpg/500px-JJ_Rawlings_in_Brussels_1998_%28P002554000101%2C_cropped%29.jpg",
+    "alt": "Jerry Rawlings",
+    "credit": "Mark Renders / European Communities, 1998 / EC - Audiovisual Service",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:JJ_Rawlings_in_Brussels_1998_(P002554000101,_cropped).jpg"
+  }
+}

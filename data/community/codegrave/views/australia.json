@@ -1,0 +1,94 @@
+{
+  "id": "australia",
+  "name": "Australia",
+  "description": "Australia from sixty thousand years of First Nations life to the First Fleet, gold rushes, federation, Gallipoli and the modern nation.",
+  "category": "places",
+  "tags": [
+    "australia",
+    "sydney",
+    "canberra",
+    "aboriginal",
+    "outback",
+    "anzac"
+  ],
+  "entries": [
+    "uluru",
+    "aboriginal-australians",
+    "lake-mungo-remains",
+    "james-cook",
+    "first-fleet",
+    "australian-frontier-wars",
+    "sydney",
+    "melbourne",
+    "edmund-barton",
+    "australian-gold-rushes",
+    "eureka-rebellion",
+    "the-ashes",
+    "john-curtin",
+    "federation-of-australia",
+    "australia",
+    "white-australia-policy",
+    "stolen-generations",
+    "don-bradman",
+    "canberra",
+    "gallipoli-campaign",
+    "qantas",
+    "kokoda-track-campaign",
+    "olympics-1956",
+    "anthony-albanese",
+    "1967-australian-referendum",
+    "cathy-freeman",
+    "sydney-opera-house",
+    "ac-dc",
+    "great-barrier-reef-marine-park",
+    "mabo-v-queensland",
+    "port-arthur-massacre",
+    "olympics-2000",
+    "apology-to-stolen-generations",
+    "black-summer-bushfires"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-nations",
+      "name": "First Nations",
+      "from": -63000,
+      "to": 1769,
+      "note": "People reached Australia at least fifty thousand years ago and made it home to hundreds of nations, each with its own language and country, and the rock art and songlines that are among the oldest living cultures."
+    },
+    {
+      "id": "colonies",
+      "name": "Colonies",
+      "from": 1770,
+      "to": 1900,
+      "note": "Cook charted the east coast in 1770 and the First Fleet landed at Sydney Cove in 1788. Convict colonies spread across the continent, often by violence against its peoples, and the gold rushes of the 1850s brought a wave of settlers."
+    },
+    {
+      "id": "a-new-nation",
+      "name": "A new nation",
+      "from": 1901,
+      "to": 1966,
+      "note": "The colonies federated in 1901. Australians fought at Gallipoli in 1915 and in the Second World War, and migrants arrived from Europe after 1945."
+    },
+    {
+      "id": "modern-australia",
+      "name": "Modern Australia",
+      "from": 1967,
+      "to": 2026,
+      "note": "The 1967 referendum and the Mabo ruling began to recognise Aboriginal rights. Sydney gained its Opera House and hosted the 2000 Olympics, and bushfires grew fiercer."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/330px-Flag_of_Australia_%28converted%29.svg.png",
+    "alt": "Flag of Australia",
+    "credit": "Unknown (Vector graphics image by Ian Fieggen) (only minor code changes by uploader.)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Australia_(converted).svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fc/Advance_Australia_Fair_%281927%29.ogg/Advance_Australia_Fair_%281927%29.ogg.mp3",
+    "title": "Advance Australia Fair",
+    "credit": "Peter Dawson",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Advance_Australia_Fair_(1927).ogg"
+  }
+}

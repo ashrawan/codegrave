@@ -1,0 +1,53 @@
+{
+  "id": "luz-de-america",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Ecuadorian War of Independence",
+      "from": "1809"
+    }
+  ],
+  "summary": "The struggle that began with Quito's revolt of 1809 and ended with Sucre's victory at Pichincha in 1822.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5334383",
+  "events": [
+    {
+      "type": "born",
+      "date": "1809-08-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1822-05-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ecuadorian War of Independence (Q5334383)",
+      "url": "https://www.wikidata.org/wiki/Q5334383",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ecuadorian War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Ecuadorian_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Camino_Real_guayaquil.jpg/500px-Camino_Real_guayaquil.jpg",
+    "alt": "Ecuadorian War of Independence",
+    "credit": "http://www.enciclopediadelecuador.com/historia-del-ecuador/batalla-camino-real/ &amp; http://www.edupedia.ec/index.php/t",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Camino_Real_guayaquil.jpg"
+  }
+}

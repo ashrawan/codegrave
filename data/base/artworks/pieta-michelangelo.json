@@ -1,0 +1,48 @@
+{
+  "id": "pieta-michelangelo",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Pietà",
+      "from": "1499"
+    }
+  ],
+  "summary": "Michelangelo's marble of Mary holding the dead Christ, carved when he was in his early twenties.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q235242",
+  "events": [
+    {
+      "type": "born",
+      "date": "1499",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Pietà (Q235242)",
+      "url": "https://www.wikidata.org/wiki/Q235242",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pietà (Michelangelo)",
+      "url": "https://en.wikipedia.org/wiki/Pietà_(Michelangelo)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg/500px-Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg",
+    "alt": "Pietà",
+    "credit": "Stanislav Traykov",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "united-arab-republic",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "United Arab Republic",
+      "from": "1958"
+    }
+  ],
+  "summary": "The union of Egypt and Syria from 1958 to 1961.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q170468",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1971",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "syria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Arab Republic (Q170468)",
+      "url": "https://www.wikidata.org/wiki/Q170468",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Arab Republic",
+      "url": "https://en.wikipedia.org/wiki/United_Arab_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

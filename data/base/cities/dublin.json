@@ -1,0 +1,51 @@
+{
+  "id": "dublin",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Dublin",
+      "from": "0841"
+    }
+  ],
+  "summary": "The capital, founded by the Vikings on the River Liffey.",
+  "wikidata": "Q1761",
+  "events": [
+    {
+      "type": "born",
+      "date": "0841",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dublin (Q1761)",
+      "url": "https://www.wikidata.org/wiki/Q1761",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dublin",
+      "url": "https://en.wikipedia.org/wiki/Dublin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Dublin_-_aerial_-_2025-07-07_01.jpg/500px-Dublin_-_aerial_-_2025-07-07_01.jpg",
+    "alt": "Dublin",
+    "credit": "瑞丽江的河水",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dublin_-_aerial_-_2025-07-07_01.jpg"
+  }
+}

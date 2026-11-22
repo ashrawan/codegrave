@@ -1,0 +1,50 @@
+{
+  "id": "french-first-republic",
+  "category": "countries",
+  "names": [
+    {
+      "name": "French First Republic",
+      "from": "1792"
+    }
+  ],
+  "summary": "The republic declared in September 1792 after the fall of the monarchy, which lasted until Napoleon made himself emperor.",
+  "wikidata": "Q58296",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792-09-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1804-05-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: French First Republic (Q58296)",
+      "url": "https://www.wikidata.org/wiki/Q58296",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French First Republic",
+      "url": "https://en.wikipedia.org/wiki/French_First_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/France_Departement_1801.svg/500px-France_Departement_1801.svg.png",
+    "alt": "French First Republic",
+    "credit": "BrightRaven",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:France_Departement_1801.svg"
+  }
+}

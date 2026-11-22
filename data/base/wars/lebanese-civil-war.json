@@ -1,0 +1,59 @@
+{
+  "id": "lebanese-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Lebanese Civil War",
+      "from": "1975"
+    }
+  ],
+  "summary": "The war of 1975 to 1990.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q208484",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-04-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-10-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lebanese Civil War (Q208484)",
+      "url": "https://www.wikidata.org/wiki/Q208484",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lebanese Civil War",
+      "url": "https://en.wikipedia.org/wiki/Lebanese_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Green_Line%2C_Beirut_1982.jpg/500px-Green_Line%2C_Beirut_1982.jpg",
+    "alt": "Lebanese Civil War",
+    "credit": "James Case from Philadelphia, Mississippi, U.S.A.",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Green_Line,_Beirut_1982.jpg"
+  }
+}

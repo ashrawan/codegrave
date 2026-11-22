@@ -1,0 +1,53 @@
+{
+  "id": "lajos-kossuth",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Lajos Kossuth",
+      "from": "1802"
+    }
+  ],
+  "summary": "Leader of the revolution of 1848, the national hero of Hungary.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q157040",
+  "events": [
+    {
+      "type": "born",
+      "date": "1802-09-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1894-03-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Lajos Kossuth (Q157040)",
+      "url": "https://www.wikidata.org/wiki/Q157040",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lajos Kossuth",
+      "url": "https://en.wikipedia.org/wiki/Lajos_Kossuth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Portrait_of_Lajos_Kossuth%2C_1852.jpg/500px-Portrait_of_Lajos_Kossuth%2C_1852.jpg",
+    "alt": "Lajos Kossuth",
+    "credit": "Southworth &amp; Hawes",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_Lajos_Kossuth,_1852.jpg"
+  }
+}

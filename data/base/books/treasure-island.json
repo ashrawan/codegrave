@@ -1,0 +1,48 @@
+{
+  "id": "treasure-island",
+  "category": "books",
+  "names": [
+    {
+      "name": "Treasure Island",
+      "from": "1883"
+    }
+  ],
+  "summary": "Stevenson's pirate adventure with Long John Silver, which gave us treasure maps marked with an X.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q185118",
+  "events": [
+    {
+      "type": "born",
+      "date": "1883",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Treasure Island (Q185118)",
+      "url": "https://www.wikidata.org/wiki/Q185118",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Treasure Island",
+      "url": "https://en.wikipedia.org/wiki/Treasure_Island",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Treasure_Island-Scribner%27s-1911.jpg/500px-Treasure_Island-Scribner%27s-1911.jpg",
+    "alt": "Treasure Island",
+    "credit": "N. C. Wyeth",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Treasure_Island-Scribner%27s-1911.jpg"
+  }
+}

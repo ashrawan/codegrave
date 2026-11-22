@@ -1,0 +1,75 @@
+{
+  "id": "belarus",
+  "name": "Belarus",
+  "description": "Belarus from Polotsk and the Grand Duchy of Lithuania to Russian and Soviet rule, the war, independence and Lukashenko.",
+  "category": "places",
+  "tags": [
+    "belarus",
+    "minsk",
+    "polotsk",
+    "lithuania",
+    "soviet",
+    "eastern europe"
+  ],
+  "entries": [
+    "polotsk",
+    "minsk",
+    "grand-duchy-of-lithuania",
+    "francysk-skaryna",
+    "mir-castle",
+    "polish-lithuanian-commonwealth",
+    "nesvizh-castle",
+    "tadeusz-kosciuszko",
+    "brest-fortress",
+    "yanka-kupala",
+    "marc-chagall",
+    "bialowieza-forest",
+    "belarus-in-world-war-ii",
+    "khatyn-massacre",
+    "operation-bagration",
+    "svetlana-alexievich",
+    "alexander-lukashenko",
+    "sviatlana-tsikhanouskaya",
+    "chernobyl-disaster",
+    "belarus",
+    "belovezha-accords",
+    "2020-belarusian-protests"
+  ],
+  "checkpoints": [
+    {
+      "id": "polotsk-and-lithuania",
+      "name": "Polotsk and Lithuania",
+      "from": 862,
+      "to": 1794,
+      "note": "Polotsk ruled. Belarus became part of Lithuania and the Commonwealth."
+    },
+    {
+      "id": "russian-and-soviet",
+      "name": "Russian and Soviet",
+      "from": 1795,
+      "to": 1990,
+      "note": "Russia took the land. The war killed a quarter of the people."
+    },
+    {
+      "id": "belarus",
+      "name": "Belarus",
+      "from": 1991,
+      "to": 2026,
+      "note": "Independence came in 1991; Lukashenko has ruled since 1994."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/330px-Flag_of_Belarus.svg.png",
+    "alt": "Flag of Belarus",
+    "credit": "Nikolai Gusev",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Belarus.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/46/My_Belarusy.ogg/My_Belarusy.ogg.mp3",
+    "title": "My Belarusy",
+    "credit": "https://web.archive.org/web/20041019083218if_/http://www.navyband.navy.mil/anthems/ANTHEMS/Belarus.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:My_Belarusy.ogg"
+  }
+}

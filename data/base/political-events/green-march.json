@@ -1,0 +1,59 @@
+{
+  "id": "green-march",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Green March",
+      "from": "1975"
+    }
+  ],
+  "summary": "The march of 350,000 Moroccans into Western Sahara in 1975.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q870684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-11-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "morocco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Green March (Q870684)",
+      "url": "https://www.wikidata.org/wiki/Q870684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Green March",
+      "url": "https://en.wikipedia.org/wiki/Green_March",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Gr%C3%BCner_Marsch_Karte.png/500px-Gr%C3%BCner_Marsch_Karte.png",
+    "alt": "Green March",
+    "credit": "Lencer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gr%C3%BCner_Marsch_Karte.png"
+  }
+}

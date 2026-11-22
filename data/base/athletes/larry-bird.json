@@ -1,0 +1,48 @@
+{
+  "id": "larry-bird",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Larry Bird",
+      "from": "1956"
+    }
+  ],
+  "summary": "Celtics forward and shooter who won three titles and three MVP awards in a row in the 1980s.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q190152",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-12-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Larry Bird (Q190152)",
+      "url": "https://www.wikidata.org/wiki/Q190152",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Larry Bird",
+      "url": "https://en.wikipedia.org/wiki/Larry_Bird",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Larrybird.jpg",
+    "alt": "Larry Bird",
+    "credit": "Kurt Shimala",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Larrybird.jpg"
+  }
+}

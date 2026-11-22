@@ -1,0 +1,70 @@
+{
+  "id": "guatemala",
+  "name": "Guatemala",
+  "description": "Guatemala from the Maya of Tikal to the Spanish conquest, independence, the coup of 1954, civil war and peace.",
+  "category": "places",
+  "tags": [
+    "guatemala",
+    "maya",
+    "tikal",
+    "antigua",
+    "central america",
+    "volcanoes"
+  ],
+  "entries": [
+    "el-mirador",
+    "tikal",
+    "guatemala-city",
+    "antigua-guatemala",
+    "popol-vuh",
+    "guatemala",
+    "united-fruit-company",
+    "miguel-angel-asturias",
+    "juan-jose-arevalo",
+    "jacobo-arbenz",
+    "efrain-rios-montt",
+    "1954-guatemalan-coup",
+    "bernardo-arevalo",
+    "rigoberta-menchu",
+    "guatemalan-civil-war",
+    "1976-guatemala-earthquake",
+    "volcan-de-fuego-2018"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-maya",
+      "name": "The Maya",
+      "from": -1000,
+      "to": 1523,
+      "note": "Maya cities such as El Mirador and Tikal ruled the lowlands."
+    },
+    {
+      "id": "spanish-rule",
+      "name": "Spanish rule",
+      "from": 1524,
+      "to": 1820,
+      "note": "Spain conquered the land from 1524 and ruled from Antigua."
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "from": 1821,
+      "to": 2026,
+      "note": "Guatemala became independent in 1821. The coup of 1954 led to a long civil war, which ended in peace in 1996."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Flag_of_Guatemala.svg/330px-Flag_of_Guatemala.svg.png",
+    "alt": "Flag of Guatemala",
+    "credit": "K21edgo",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Guatemala.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8f/National_anthem_of_Guatemala%2C_by_the_U.S._Navy_Band.oga/National_anthem_of_Guatemala%2C_by_the_U.S._Navy_Band.oga.mp3",
+    "title": "National Anthem of Guatemala",
+    "credit": "http://www.navyband.navy.mil/anthems/all_countries.htm US Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Guatemala,_by_the_U.S._Navy_Band.oga"
+  }
+}

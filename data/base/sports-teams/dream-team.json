@@ -1,0 +1,48 @@
+{
+  "id": "dream-team",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "The Dream Team",
+      "from": "1992"
+    }
+  ],
+  "summary": "The first US Olympic team with NBA stars, which won gold at Barcelona in 1992 and spread the game worldwide.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q369529",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Dream Team (Q369529)",
+      "url": "https://www.wikidata.org/wiki/Q369529",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1992 United States men's Olympic basketball team",
+      "url": "https://en.wikipedia.org/wiki/1992_United_States_men's_Olympic_basketball_team",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Dream_Team_at_the_1992_Summer_Olympics.JPEG/500px-Dream_Team_at_the_1992_Summer_Olympics.JPEG",
+    "alt": "The Dream Team",
+    "credit": "Ken Hackman, U.S. Air Force",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dream_Team_at_the_1992_Summer_Olympics.JPEG"
+  }
+}

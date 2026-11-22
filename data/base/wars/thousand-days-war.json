@@ -1,0 +1,59 @@
+{
+  "id": "thousand-days-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Thousand Days' War",
+      "from": "1899"
+    }
+  ],
+  "summary": "The civil war of 1899 to 1902 after which Panama broke away.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q43378",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-10-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1902-11-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thousand Days' War (Q43378)",
+      "url": "https://www.wikidata.org/wiki/Q43378",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thousand Days' War",
+      "url": "https://en.wikipedia.org/wiki/Thousand_Days'_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Lautaro_Sinking_I.jpg/500px-Lautaro_Sinking_I.jpg",
+    "alt": "Thousand Days' War",
+    "credit": "Carlos Chahin. Original Black and White by Donald Velasco.",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lautaro_Sinking_I.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ian-smith",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Ian Smith",
+      "from": "1919"
+    }
+  ],
+  "summary": "Prime minister of Rhodesia who declared independence from Britain in 1965 to keep white rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q313424",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-04-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2007-11-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ian Smith (Q313424)",
+      "url": "https://www.wikidata.org/wiki/Q313424",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ian Smith",
+      "url": "https://en.wikipedia.org/wiki/Ian_Smith",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Ian_Smith_1975.jpg",
+    "alt": "Ian Smith",
+    "credit": "Colin Weyer, photographer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ian_Smith_1975.jpg"
+  }
+}

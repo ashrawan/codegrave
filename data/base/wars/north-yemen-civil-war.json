@@ -1,0 +1,59 @@
+{
+  "id": "north-yemen-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "North Yemen Civil War",
+      "from": "1962"
+    }
+  ],
+  "summary": "The war of 1962 to 1970.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q521199",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-09-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-12-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: North Yemen Civil War (Q521199)",
+      "url": "https://www.wikidata.org/wiki/Q521199",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: North Yemen Civil War",
+      "url": "https://en.wikipedia.org/wiki/North_Yemen_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/North_Yemen_Civil_War.jpg/500px-North_Yemen_Civil_War.jpg",
+    "alt": "North Yemen Civil War",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:North_Yemen_Civil_War.jpg"
+  }
+}

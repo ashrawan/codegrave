@@ -1,0 +1,72 @@
+{
+  "id": "uganda",
+  "name": "Uganda",
+  "description": "Uganda from the Buganda kingdom to British rule, independence, Idi Amin and today.",
+  "category": "places",
+  "tags": [
+    "uganda",
+    "kampala",
+    "buganda",
+    "lake victoria",
+    "nile",
+    "idi amin"
+  ],
+  "entries": [
+    "lake-victoria",
+    "buganda",
+    "mutesa-i-of-buganda",
+    "source-of-the-nile",
+    "kasubi-tombs",
+    "uganda-martyrs",
+    "uganda-protectorate",
+    "idi-amin",
+    "milton-obote",
+    "yoweri-museveni",
+    "uganda",
+    "expulsion-of-asians-from-uganda",
+    "operation-entebbe",
+    "uganda-tanzania-war",
+    "hiv-aids-in-uganda",
+    "lords-resistance-army",
+    "bwindi-impenetrable-national-park",
+    "joshua-cheptegei",
+    "anti-homosexuality-act-2023"
+  ],
+  "checkpoints": [
+    {
+      "id": "kingdoms",
+      "name": "Kingdoms",
+      "from": 1300,
+      "to": 1893,
+      "note": "Buganda and other kingdoms grew around the great lakes."
+    },
+    {
+      "id": "protectorate",
+      "name": "Protectorate",
+      "from": 1894,
+      "to": 1961,
+      "note": "Britain made Uganda a protectorate in 1894."
+    },
+    {
+      "id": "uganda",
+      "name": "Uganda",
+      "from": 1962,
+      "to": 2026,
+      "note": "Uganda became independent in 1962. Amin's rule was brutal, and Museveni has ruled since 1986."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Flag_of_Uganda.svg/330px-Flag_of_Uganda.svg.png",
+    "alt": "Flag of Uganda",
+    "credit": "tobias",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Uganda.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/64/Ugandan_national_anthem%2C_performed_by_the_U.S._Navy_Band.ogg/Ugandan_national_anthem%2C_performed_by_the_U.S._Navy_Band.ogg.mp3",
+    "title": "Oh Uganda, Land of Beauty",
+    "credit": "https://web.archive.org/web/20190305111127/http://www.navyband.navy.mil/anthems/anthems/uganda_may1990.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ugandan_national_anthem,_performed_by_the_U.S._Navy_Band.ogg"
+  }
+}

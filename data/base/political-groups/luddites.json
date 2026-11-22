@@ -1,0 +1,53 @@
+{
+  "id": "luddites",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Luddites",
+      "from": "1811"
+    }
+  ],
+  "summary": "English textile workers who smashed machines from 1811 to protest against wages cut by the new mills.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1159675",
+  "events": [
+    {
+      "type": "born",
+      "date": "1811-03-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1817",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Luddites (Q1159675)",
+      "url": "https://www.wikidata.org/wiki/Q1159675",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luddite",
+      "url": "https://en.wikipedia.org/wiki/Luddite",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Luddite.jpg/500px-Luddite.jpg",
+    "alt": "Luddites",
+    "credit": "Unknown. 195 years since publication, copyright extinguished",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Luddite.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "failaka-island",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Failaka Island",
+      "from": "-2000"
+    }
+  ],
+  "summary": "An island with Bronze Age and Greek remains off the coast of Kuwait.",
+  "wikidata": "Q1392962",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kuwait"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Failaka Island (Q1392962)",
+      "url": "https://www.wikidata.org/wiki/Q1392962",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Failaka Island",
+      "url": "https://en.wikipedia.org/wiki/Failaka_Island",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Failaka_Island_2.JPG/500px-Failaka_Island_2.JPG",
+    "alt": "Failaka Island",
+    "credit": "Pburiot",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Failaka_Island_2.JPG"
+  }
+}

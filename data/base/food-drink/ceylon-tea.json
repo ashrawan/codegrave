@@ -1,0 +1,54 @@
+{
+  "id": "ceylon-tea",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Ceylon tea",
+      "from": "1867"
+    }
+  ],
+  "summary": "The tea of Sri Lanka, first planted on a large scale in 1867.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q105616623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ceylon tea (Q105616623)",
+      "url": "https://www.wikidata.org/wiki/Q105616623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ceylon tea",
+      "url": "https://en.wikipedia.org/wiki/Ceylon_tea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Ceylon_Tea_logo.png_unscaled",
+    "alt": "Ceylon tea",
+    "credit": "Chamath237",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ceylon_Tea_logo.png"
+  }
+}

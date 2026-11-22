@@ -1,0 +1,59 @@
+{
+  "id": "turkish-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Turkish War of Independence",
+      "from": "1919"
+    }
+  ],
+  "summary": "The war led by Mustafa Kemal against the Allied occupation and partition after the First World War.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q234738",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-05-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1923-07-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Turkish War of Independence (Q234738)",
+      "url": "https://www.wikidata.org/wiki/Q234738",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Turkish War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Turkish_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Turkish_War_of_Independence_-_collage.jpg_unscaled",
+    "alt": "Turkish War of Independence",
+    "credit": "Youngottoman",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Turkish_War_of_Independence_-_collage.jpg"
+  }
+}

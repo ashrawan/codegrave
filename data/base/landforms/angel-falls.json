@@ -1,0 +1,51 @@
+{
+  "id": "angel-falls",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Angel Falls",
+      "from": "1933"
+    }
+  ],
+  "summary": "The world's highest waterfall, made known to the world by the pilot Jimmie Angel in 1933.",
+  "wikidata": "Q80299",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Angel Falls (Q80299)",
+      "url": "https://www.wikidata.org/wiki/Q80299",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Angel Falls",
+      "url": "https://en.wikipedia.org/wiki/Angel_Falls",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/SaltoAngel4.jpg/500px-SaltoAngel4.jpg",
+    "alt": "Angel Falls",
+    "credit": "Paulo Capiotti",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:SaltoAngel4.jpg"
+  }
+}

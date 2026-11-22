@@ -1,0 +1,46 @@
+{
+  "id": "bankruptcy-of-ftx",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "FTX collapse",
+      "from": "2022"
+    }
+  ],
+  "summary": "The crypto exchange FTX collapsed in November 2022. Its founder Sam Bankman-Fried was convicted of fraud.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q115255994",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2022",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: FTX collapse (Q115255994)",
+      "url": "https://www.wikidata.org/wiki/Q115255994",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bankruptcy of FTX",
+      "url": "https://en.wikipedia.org/wiki/Bankruptcy_of_FTX",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

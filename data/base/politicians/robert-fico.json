@@ -1,0 +1,54 @@
+{
+  "id": "robert-fico",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Robert Fico",
+      "from": "1964"
+    }
+  ],
+  "summary": "Prime minister who survived an assassination attempt in 2024.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57606",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-09-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Robert Fico (Q57606)",
+      "url": "https://www.wikidata.org/wiki/Q57606",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Fico",
+      "url": "https://en.wikipedia.org/wiki/Robert_Fico",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Robert_Fico_%2854359433078%29_%28cropped%29.jpg/500px-Robert_Fico_%2854359433078%29_%28cropped%29.jpg",
+    "alt": "Robert Fico",
+    "credit": "Gage Skidmore from Surprise, AZ, United States of America",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Robert_Fico_(54359433078)_(cropped).jpg"
+  }
+}

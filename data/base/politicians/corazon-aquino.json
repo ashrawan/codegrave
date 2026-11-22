@@ -1,0 +1,59 @@
+{
+  "id": "corazon-aquino",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Corazon Aquino",
+      "from": "1933"
+    }
+  ],
+  "summary": "Widow of the murdered Benigno Aquino who became president after the People Power revolution.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1480",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933-01-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Corazon Aquino (Q1480)",
+      "url": "https://www.wikidata.org/wiki/Q1480",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Corazon Aquino",
+      "url": "https://en.wikipedia.org/wiki/Corazon_Aquino",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Corazon_Aquino_1986.jpg/500px-Corazon_Aquino_1986.jpg",
+    "alt": "Corazon Aquino",
+    "credit": "Airman Gerald B. Johnson",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Corazon_Aquino_1986.jpg"
+  }
+}

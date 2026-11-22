@@ -1,0 +1,47 @@
+{
+  "id": "the-walking-dead-comic",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Walking Dead",
+      "from": "2003"
+    }
+  ],
+  "summary": "Black-and-white comic about survivors after a zombie outbreak. It ran for 193 issues and led to a long-running television series.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q340181",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Walking Dead (Q340181)",
+      "url": "https://www.wikidata.org/wiki/Q340181",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Walking Dead (comic book)",
+      "url": "https://en.wikipedia.org/wiki/The_Walking_Dead_(comic_book)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

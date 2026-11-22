@@ -1,0 +1,51 @@
+{
+  "id": "maputo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Maputo",
+      "from": "1781"
+    }
+  ],
+  "summary": "The capital, once called Lourenço Marques.",
+  "wikidata": "Q3889",
+  "events": [
+    {
+      "type": "born",
+      "date": "1781",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maputo (Q3889)",
+      "url": "https://www.wikidata.org/wiki/Q3889",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maputo",
+      "url": "https://en.wikipedia.org/wiki/Maputo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Maputo_seen_from_southeast_-_October_2006.jpg/500px-Maputo_seen_from_southeast_-_October_2006.jpg",
+    "alt": "Maputo",
+    "credit": "AmigoDia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Maputo_seen_from_southeast_-_October_2006.jpg"
+  }
+}

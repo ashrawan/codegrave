@@ -1,0 +1,54 @@
+{
+  "id": "frelimo",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "FRELIMO",
+      "from": "1962"
+    }
+  ],
+  "summary": "The liberation movement that has ruled since independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q504564",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: FRELIMO (Q504564)",
+      "url": "https://www.wikidata.org/wiki/Q504564",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: FRELIMO",
+      "url": "https://en.wikipedia.org/wiki/FRELIMO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/FRELIMO_Emblem.svg/500px-FRELIMO_Emblem.svg.png",
+    "alt": "FRELIMO",
+    "credit": "Arramall",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FRELIMO_Emblem.svg"
+  }
+}

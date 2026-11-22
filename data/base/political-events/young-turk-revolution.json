@@ -1,0 +1,59 @@
+{
+  "id": "young-turk-revolution",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Young Turk Revolution",
+      "from": "1908"
+    }
+  ],
+  "summary": "Officers forced the sultan in 1908 to restore the constitution and parliament.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4298662",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-07-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1908-07-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Young Turk Revolution (Q4298662)",
+      "url": "https://www.wikidata.org/wiki/Q4298662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Young Turk Revolution",
+      "url": "https://en.wikipedia.org/wiki/Young_Turk_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Declaration_of_the_1908_Revolution_in_Ottoman_Empire.png/500px-Declaration_of_the_1908_Revolution_in_Ottoman_Empire.png",
+    "alt": "Young Turk Revolution",
+    "credit": "Charles Roden Buxton",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Declaration_of_the_1908_Revolution_in_Ottoman_Empire.png"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "krakow",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kraków",
+      "from": "0965"
+    }
+  ],
+  "summary": "The old royal capital of Poland on the Vistula.",
+  "wikidata": "Q31487",
+  "events": [
+    {
+      "type": "born",
+      "date": "0965",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kraków (Q31487)",
+      "url": "https://www.wikidata.org/wiki/Q31487",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kraków",
+      "url": "https://en.wikipedia.org/wiki/Kraków",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Zamek_Kr%C3%B3lewski_na_Wawelu_%281%29.jpg/500px-Zamek_Kr%C3%B3lewski_na_Wawelu_%281%29.jpg",
+    "alt": "Kraków",
+    "credit": "XEvansGambitx",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zamek_Kr%C3%B3lewski_na_Wawelu_(1).jpg"
+  }
+}

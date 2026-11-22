@@ -1,0 +1,45 @@
+{
+  "id": "juno-spacecraft",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Juno",
+      "from": "2011"
+    }
+  ],
+  "summary": "NASA probe that has orbited Jupiter since 2016, looking under its clouds and at its moons.",
+  "wikidata": "Q48546",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Juno (Q48546)",
+      "url": "https://www.wikidata.org/wiki/Q48546",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Juno (spacecraft)",
+      "url": "https://en.wikipedia.org/wiki/Juno_(spacecraft)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/JUNO_-_PIA13746.jpg/500px-JUNO_-_PIA13746.jpg",
+    "alt": "Juno",
+    "credit": "NASA/JPL",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JUNO_-_PIA13746.jpg"
+  }
+}

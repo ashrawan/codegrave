@@ -1,0 +1,59 @@
+{
+  "id": "2014-thai-coup",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2014 Thai coup d'état",
+      "from": "2014"
+    }
+  ],
+  "summary": "The army's seizure of power in 2014, the latest of many coups.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q16914766",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-05-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-05-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "thailand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2014 Thai coup d'état (Q16914766)",
+      "url": "https://www.wikidata.org/wiki/Q16914766",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2014 Thai coup d'état",
+      "url": "https://en.wikipedia.org/wiki/2014_Thai_coup_d'état",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/2014_0526_Thailand_coup_Chang_Phueak_Gate_Chiang_Mai_01.jpg/500px-2014_0526_Thailand_coup_Chang_Phueak_Gate_Chiang_Mai_01.jpg",
+    "alt": "2014 Thai coup d'état",
+    "credit": "Takeaway",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2014_0526_Thailand_coup_Chang_Phueak_Gate_Chiang_Mai_01.jpg"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "id": "egypt",
+  "name": "Egypt",
+  "description": "Egypt from the pharaohs and the pyramids to Alexander, Rome, Islam, the Mamluks, the Ottomans, the Suez Canal, Nasser and today.",
+  "category": "places",
+  "tags": [
+    "egypt",
+    "cairo",
+    "pharaohs",
+    "pyramids",
+    "nile",
+    "suez"
+  ],
+  "entries": [
+    "nile-river",
+    "ancient-egypt",
+    "pyramid-of-djoser",
+    "great-pyramid-of-giza",
+    "great-sphinx-of-giza",
+    "karnak",
+    "valley-of-the-kings",
+    "tutankhamun",
+    "ramesses-ii",
+    "abu-simbel",
+    "alexandria",
+    "ptolemaic-kingdom",
+    "lighthouse-of-alexandria",
+    "rosetta-stone",
+    "cleopatra-vii",
+    "fatimid-caliphate",
+    "cairo",
+    "al-azhar",
+    "saladin",
+    "mamluk-sultanate",
+    "muhammad-ali-of-egypt",
+    "suez-canal",
+    "umm-kulthum",
+    "naguib-mahfouz",
+    "gamal-abdel-nasser",
+    "anwar-sadat",
+    "egypt",
+    "second-battle-of-el-alamein",
+    "egyptian-revolution-of-1952",
+    "abdel-fattah-el-sisi",
+    "suez-crisis",
+    "aswan-high-dam",
+    "mohamed-salah",
+    "bibliotheca-alexandrina",
+    "egyptian-revolution-of-2011",
+    "grand-egyptian-museum"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-pharaohs",
+      "name": "The pharaohs",
+      "from": -3150,
+      "to": -333,
+      "note": "Egypt was united around 3100 BCE. The Old Kingdom built the pyramids, and the New Kingdom of Tutankhamun and Ramesses ruled an empire."
+    },
+    {
+      "id": "greeks-and-romans",
+      "name": "Greeks and Romans",
+      "from": -332,
+      "to": 640,
+      "note": "Alexander took Egypt in 332 BCE, and his general's family ruled until Cleopatra. Rome then held it, and Egypt became Christian."
+    },
+    {
+      "id": "islamic-egypt",
+      "name": "Islamic Egypt",
+      "from": 641,
+      "to": 1881,
+      "note": "Arab armies came in 641. The Fatimids founded Cairo, Saladin and the Mamluks ruled, and the Ottomans followed. The Suez Canal opened in 1869."
+    },
+    {
+      "id": "modern-egypt",
+      "name": "Modern Egypt",
+      "from": 1882,
+      "to": 2026,
+      "note": "Britain occupied Egypt in 1882. Independence came in 1922, Nasser's revolution in 1952, peace with Israel in 1979, and the Tahrir uprising in 2011."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/330px-Flag_of_Egypt.svg.png",
+    "alt": "Flag of Egypt",
+    "credit": "ErrrrrWhat",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Egypt.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f2/Bilady%2C_Bilady%2C_Bilady.ogg/Bilady%2C_Bilady%2C_Bilady.ogg.mp3",
+    "title": "Bilady, Bilady, Bilady",
+    "credit": "https://www.navyband.navy.mil/ceremonial https://web.archive.org/web/20030505034419/http://www.navyband.navy.mil/anthems",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bilady,_Bilady,_Bilady.ogg"
+  }
+}

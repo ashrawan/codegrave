@@ -1,0 +1,52 @@
+{
+  "id": "greek-junta",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Greek junta",
+      "from": "1967"
+    }
+  ],
+  "summary": "The military dictatorship of 1967 to 1974.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q504081",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-04-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-07-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "greece"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Greek junta (Q504081)",
+      "url": "https://www.wikidata.org/wiki/Q504081",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Greek junta",
+      "url": "https://en.wikipedia.org/wiki/Greek_junta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

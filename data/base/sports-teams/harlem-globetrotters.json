@@ -1,0 +1,54 @@
+{
+  "id": "harlem-globetrotters",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Harlem Globetrotters",
+      "from": "1926"
+    }
+  ],
+  "summary": "Touring team known for trick shots and comedy, who helped spread basketball around the world.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q506754",
+  "events": [
+    {
+      "type": "born",
+      "date": "1926",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harlem Globetrotters (Q506754)",
+      "url": "https://www.wikidata.org/wiki/Q506754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harlem Globetrotters",
+      "url": "https://en.wikipedia.org/wiki/Harlem_Globetrotters",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Harlem_Globetrotters_in_Doha.jpg/500px-Harlem_Globetrotters_in_Doha.jpg",
+    "alt": "Harlem Globetrotters",
+    "credit": "Doha Stadium Plus Qatar from Doha, Qatar",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Harlem_Globetrotters_in_Doha.jpg"
+  }
+}

@@ -9,6 +9,7 @@
   ],
   "maker": "LinkedIn",
   "summary": "A social network for work: your profile is your CV and your contacts are colleagues. Microsoft has owned it since 2016.",
+  "wikidata": "Q213660",
   "events": [
     {
       "type": "born",
@@ -38,5 +39,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Linkedin_screenshot.png/500px-Linkedin_screenshot.png",
+    "alt": "LinkedIn",
+    "credit": "LinkedIn",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Linkedin_screenshot.png"
+  }
 }

@@ -1,0 +1,53 @@
+{
+  "id": "hiram-bingham-machu-picchu",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Hiram Bingham III",
+      "from": "1875"
+    }
+  ],
+  "summary": "American explorer who brought Machu Picchu to the world's attention in 1911.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q237220",
+  "events": [
+    {
+      "type": "born",
+      "date": "1875-11-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1956-06-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hiram Bingham III (Q237220)",
+      "url": "https://www.wikidata.org/wiki/Q237220",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hiram Bingham III",
+      "url": "https://en.wikipedia.org/wiki/Hiram_Bingham_III",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Senator_Hiram_Bingham_of_Conn.%2C_%281-9-25%29_LCCN2016839105_%283x4a%29.jpg/500px-Senator_Hiram_Bingham_of_Conn.%2C_%281-9-25%29_LCCN2016839105_%283x4a%29.jpg",
+    "alt": "Hiram Bingham III",
+    "credit": "National Photo Company Collection",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Senator_Hiram_Bingham_of_Conn.,_(1-9-25)_LCCN2016839105_(3x4a).jpg"
+  }
+}

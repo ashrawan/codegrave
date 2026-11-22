@@ -1,0 +1,59 @@
+{
+  "id": "winter-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Winter War",
+      "from": "1939"
+    }
+  ],
+  "summary": "The war of 1939 and 1940 in which Finland held off the Soviet Union.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q134949",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-11-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1940-03-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Winter War (Q134949)",
+      "url": "https://www.wikidata.org/wiki/Q134949",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Winter War",
+      "url": "https://en.wikipedia.org/wiki/Winter_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/A_Finnish_Maxim_M-32_machine_gun_nest_during_the_Winter_War.jpg/500px-A_Finnish_Maxim_M-32_machine_gun_nest_during_the_Winter_War.jpg",
+    "alt": "Winter War",
+    "credit": "Unknown author.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Finnish_Maxim_M-32_machine_gun_nest_during_the_Winter_War.jpg"
+  }
+}

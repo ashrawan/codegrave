@@ -1,0 +1,51 @@
+{
+  "id": "kuala-lumpur",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kuala Lumpur",
+      "from": "1857"
+    }
+  ],
+  "summary": "The capital, which grew from a tin-mining camp of the 1850s.",
+  "wikidata": "Q1865",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malaysia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kuala Lumpur (Q1865)",
+      "url": "https://www.wikidata.org/wiki/Q1865",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kuala Lumpur",
+      "url": "https://en.wikipedia.org/wiki/Kuala_Lumpur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Kuala_Lumpur_with_Petronas_Towers.jpg/500px-Kuala_Lumpur_with_Petronas_Towers.jpg",
+    "alt": "Kuala Lumpur",
+    "credit": "thomasgl",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kuala_Lumpur_with_Petronas_Towers.jpg"
+  }
+}

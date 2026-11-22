@@ -1,0 +1,52 @@
+{
+  "id": "south-yemen",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "South Yemen",
+      "from": "1967"
+    }
+  ],
+  "summary": "The socialist state of the south from 1967 to 1990.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q199841",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-11-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-05-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South Yemen (Q199841)",
+      "url": "https://www.wikidata.org/wiki/Q199841",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South Yemen",
+      "url": "https://en.wikipedia.org/wiki/South_Yemen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

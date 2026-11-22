@@ -1,0 +1,56 @@
+{
+  "id": "manila-galleon",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Manila galleon",
+      "from": "1565"
+    }
+  ],
+  "summary": "The Spanish ships that sailed between Manila and Mexico for two hundred and fifty years.",
+  "wikidata": "Q683846",
+  "events": [
+    {
+      "type": "born",
+      "date": "1565",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1815",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manila galleon (Q683846)",
+      "url": "https://www.wikidata.org/wiki/Q683846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manila galleon",
+      "url": "https://en.wikipedia.org/wiki/Manila_galleon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/16th_century_Portuguese_Spanish_trade_routes.png/500px-16th_century_Portuguese_Spanish_trade_routes.png",
+    "alt": "Manila galleon",
+    "credit": "World_Topography.jpg: NASA/JPL/NIMA derivative work: Uxbona (talk)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:16th_century_Portuguese_Spanish_trade_routes.png"
+  }
+}

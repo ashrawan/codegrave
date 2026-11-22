@@ -1,0 +1,52 @@
+{
+  "id": "funan",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Funan",
+      "from": "0068"
+    }
+  ],
+  "summary": "An early trading kingdom of the Mekong.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q867782",
+  "events": [
+    {
+      "type": "born",
+      "date": "0068",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0550",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cambodia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Funan (Q867782)",
+      "url": "https://www.wikidata.org/wiki/Q867782",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Funan",
+      "url": "https://en.wikipedia.org/wiki/Funan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

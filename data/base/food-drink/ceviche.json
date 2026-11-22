@@ -1,0 +1,54 @@
+{
+  "id": "ceviche",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Ceviche",
+      "from": "1820"
+    }
+  ],
+  "summary": "Raw fish cured in lime juice, the national dish.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q1057953",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ceviche (Q1057953)",
+      "url": "https://www.wikidata.org/wiki/Q1057953",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ceviche",
+      "url": "https://en.wikipedia.org/wiki/Ceviche",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Ceviche_del_Per%C3%BA.jpg/500px-Ceviche_del_Per%C3%BA.jpg",
+    "alt": "Ceviche",
+    "credit": "No machine-readable author provided. Manuel González Olaechea assumed (based on copyright claims).",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ceviche_del_Per%C3%BA.jpg"
+  }
+}

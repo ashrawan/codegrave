@@ -1,0 +1,54 @@
+{
+  "id": "hirak-algeria",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Hirak",
+      "from": "2019"
+    }
+  ],
+  "summary": "The peaceful protests of 2019 that ended Bouteflika's rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q61829297",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-02-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hirak (Q61829297)",
+      "url": "https://www.wikidata.org/wiki/Q61829297",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hirak (Algeria)",
+      "url": "https://en.wikipedia.org/wiki/Hirak_(Algeria)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Manifestation_contre_le_5e_mandat_de_Bouteflika_%28Blida%29.jpg/500px-Manifestation_contre_le_5e_mandat_de_Bouteflika_%28Blida%29.jpg",
+    "alt": "Hirak",
+    "credit": "Fethi Hamlati",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Manifestation_contre_le_5e_mandat_de_Bouteflika_(Blida).jpg"
+  }
+}

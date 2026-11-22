@@ -1,0 +1,59 @@
+{
+  "id": "gojoseon",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Gojoseon",
+      "from": "-2333"
+    }
+  ],
+  "summary": "The first Korean kingdom. Tradition dates its founding by Dangun to 2333 BCE; it which fell to the Han dynasty of China in 108 BCE.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q28405",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2333",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0108",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gojoseon (Q28405)",
+      "url": "https://www.wikidata.org/wiki/Q28405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gojoseon",
+      "url": "https://en.wikipedia.org/wiki/Gojoseon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Korean-type_bronze_dagger_and_mirror.National_Museum_of_Korea.jpg/500px-Korean-type_bronze_dagger_and_mirror.National_Museum_of_Korea.jpg",
+    "alt": "Gojoseon",
+    "credit": "Ismoon (talk) 11:10, 3 December 2017 (UTC)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Korean-type_bronze_dagger_and_mirror.National_Museum_of_Korea.jpg"
+  }
+}

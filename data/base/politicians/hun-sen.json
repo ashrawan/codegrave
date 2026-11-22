@@ -1,0 +1,54 @@
+{
+  "id": "hun-sen",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Hun Sen",
+      "from": "1952"
+    }
+  ],
+  "summary": "Prime minister for nearly forty years.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57788",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cambodia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hun Sen (Q57788)",
+      "url": "https://www.wikidata.org/wiki/Q57788",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hun Sen",
+      "url": "https://en.wikipedia.org/wiki/Hun_Sen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Cambodian_President_of_the_Senate_Hun_Sen_met_United_States_Secretary_of_Defense_Lloyd_Austin_during_his_visit_to_senior_Cambodian_government_officials_in_Phnom_Penh_on_June_4%2C_2024_%28cropped%29.jpg/500px-thumbnail.jpg",
+    "alt": "Hun Sen",
+    "credit": "U.S. Secretary of Defense",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cambodian_President_of_the_Senate_Hun_Sen_met_United_States_Secretary_of_Defense_Lloyd_Austin_during_his_visit_to_senior_Cambodian_government_officials_in_Phnom_Penh_on_June_4,_2024_(cropped).jpg"
+  }
+}

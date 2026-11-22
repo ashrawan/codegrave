@@ -1,0 +1,59 @@
+{
+  "id": "world-cup-1938",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1938 FIFA World Cup",
+      "from": "1938"
+    }
+  ],
+  "summary": "The third World Cup, held in France on the eve of the Second World War. Italy beat Hungary in the final in Paris to keep the title it had won in 1934, and the tournament was not held again until 1950.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q131591",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-06-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1938-06-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1938 FIFA World Cup (Q131591)",
+      "url": "https://www.wikidata.org/wiki/Q131591",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1938 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1938_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/82/1938_fifa_worldcup_poster.jpg",
+    "alt": "1938 FIFA World Cup",
+    "credit": "Henri Desmé (?–?)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1938_fifa_worldcup_poster.jpg"
+  }
+}

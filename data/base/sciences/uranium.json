@@ -1,0 +1,45 @@
+{
+  "id": "uranium",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Uranium",
+      "from": "1789"
+    }
+  ],
+  "summary": "Heavy radioactive element found by Martin Klaproth in 1789, later the fuel of nuclear power and the atomic bomb.",
+  "wikidata": "Q1098",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Uranium (Q1098)",
+      "url": "https://www.wikidata.org/wiki/Q1098",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uranium",
+      "url": "https://en.wikipedia.org/wiki/Uranium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Uranium2.jpg",
+    "alt": "Uranium",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Uranium2.jpg"
+  }
+}

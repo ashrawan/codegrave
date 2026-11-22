@@ -1,0 +1,48 @@
+{
+  "id": "bayterek",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Bayterek Tower",
+      "from": "2002"
+    }
+  ],
+  "summary": "The tower in Astana, made the capital in 1997, shaped like a golden egg in a tree.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q804210",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bayterek Tower (Q804210)",
+      "url": "https://www.wikidata.org/wiki/Q804210",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baiterek (monument)",
+      "url": "https://en.wikipedia.org/wiki/Baiterek_(monument)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Night_at_Esil_District%2C_Astana_%28P1190721%29.jpg/500px-Night_at_Esil_District%2C_Astana_%28P1190721%29.jpg",
+    "alt": "Bayterek Tower",
+    "credit": "Matti Blume",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Night_at_Esil_District,_Astana_(P1190721).jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "boko-haram-insurgency-cameroon",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Boko Haram insurgency",
+      "from": "2009"
+    }
+  ],
+  "summary": "The jihadist insurgency from Nigeria that spread into Cameroon's Far North from 2014.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1569328",
+  "events": [
+    {
+      "type": "born",
+      "date": "2009",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Boko Haram insurgency (Q1569328)",
+      "url": "https://www.wikidata.org/wiki/Q1569328",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boko Haram insurgency",
+      "url": "https://en.wikipedia.org/wiki/Boko_Haram_insurgency",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Militaires_nig%C3%A9riens_Diffa_Mars_2015.jpg/500px-Militaires_nig%C3%A9riens_Diffa_Mars_2015.jpg",
+    "alt": "Boko Haram insurgency",
+    "credit": "VOA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Militaires_nig%C3%A9riens_Diffa_Mars_2015.jpg"
+  }
+}

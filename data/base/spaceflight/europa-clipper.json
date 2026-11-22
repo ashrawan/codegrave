@@ -1,0 +1,45 @@
+{
+  "id": "europa-clipper",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Europa Clipper",
+      "from": "2024"
+    }
+  ],
+  "summary": "NASA probe launched in 2024 to Jupiter's moon Europa, which hides an ocean under its ice that might suit life.",
+  "wikidata": "Q15637513",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-10-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Europa Clipper (Q15637513)",
+      "url": "https://www.wikidata.org/wiki/Q15637513",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Europa Clipper",
+      "url": "https://en.wikipedia.org/wiki/Europa_Clipper",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Europa_Clipper_spacecraft_model.png/500px-Europa_Clipper_spacecraft_model.png",
+    "alt": "Europa Clipper",
+    "credit": "National Aeronautics and Space Administration (NASA) · Jet Propulsion Laboratory",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Europa_Clipper_spacecraft_model.png"
+  }
+}

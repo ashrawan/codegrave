@@ -1,0 +1,48 @@
+{
+  "id": "eminem",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Eminem",
+      "from": "1972"
+    }
+  ],
+  "summary": "Detroit rapper, the best-selling hip hop artist ever, known for his speed and his alter ego Slim Shady.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q5608",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-10-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Eminem (Q5608)",
+      "url": "https://www.wikidata.org/wiki/Q5608",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eminem",
+      "url": "https://en.wikipedia.org/wiki/Eminem",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Eminem_2021_Color_Corrected.jpg/500px-Eminem_2021_Color_Corrected.jpg",
+    "alt": "Eminem",
+    "credit": "Brendan_linden",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Eminem_2021_Color_Corrected.jpg"
+  }
+}

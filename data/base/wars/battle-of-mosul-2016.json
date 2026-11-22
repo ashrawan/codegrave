@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-mosul-2016",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Mosul",
+      "from": "2016"
+    }
+  ],
+  "summary": "Iraqi forces retook Mosul from Islamic State in 2017.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q27429856",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-10-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-07-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Mosul (Q27429856)",
+      "url": "https://www.wikidata.org/wiki/Q27429856",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Mosul (2016–2017)",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Mosul_(2016–2017)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Battle_of_Mosul_%282016%E2%80%9317%29.svg/500px-Battle_of_Mosul_%282016%E2%80%9317%29.svg.png",
+    "alt": "Battle of Mosul",
+    "credit": "Kami888",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Battle_of_Mosul_(2016%E2%80%9317).svg"
+  }
+}

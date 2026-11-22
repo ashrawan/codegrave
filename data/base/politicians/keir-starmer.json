@@ -7,7 +7,7 @@
       "from": "1962"
     }
   ],
-  "summary": "Lawyer and Labour leader who became prime minister after a landslide election win in July 2024.",
+  "summary": "Lawyer and Labour leader who became prime minister after a landslide election win in July 2024. He stepped down in July 2026 and was followed by Andy Burnham.",
   "image": {
     "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg/500px-Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg",
     "alt": "Prime Minister Keir Starmer Portrait",
@@ -18,6 +18,7 @@
   "labels": [
     "politics"
   ],
+  "wikidata": "Q6383803",
   "events": [
     {
       "type": "born",
@@ -30,6 +31,13 @@
       "precision": "day",
       "label": "Prime minister",
       "note": "Took office after Labour won the general election."
+    },
+    {
+      "type": "milestone",
+      "date": "2026-07-20",
+      "precision": "day",
+      "label": "Left office",
+      "note": "Hands over to Andy Burnham as prime minister."
     }
   ],
   "status": "alive",

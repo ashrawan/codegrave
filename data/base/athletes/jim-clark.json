@@ -1,0 +1,53 @@
+{
+  "id": "jim-clark",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Jim Clark",
+      "from": "1936"
+    }
+  ],
+  "summary": "Scottish driver who won two world titles with Lotus in the 1960s and was thought the most naturally gifted of his age.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q3137",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-03-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-04-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jim Clark (Q3137)",
+      "url": "https://www.wikidata.org/wiki/Q3137",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jim Clark",
+      "url": "https://en.wikipedia.org/wiki/Jim_Clark",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Jim_Clark_1965.jpg/500px-Jim_Clark_1965.jpg",
+    "alt": "Jim Clark",
+    "credit": "Unknown photographer; NL-HaNA, ANEFO / neg. stroken, 1945-1989, 2.24.01.05, item number 918-4009",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jim_Clark_1965.jpg"
+  }
+}

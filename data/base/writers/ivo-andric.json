@@ -1,0 +1,59 @@
+{
+  "id": "ivo-andric",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Ivo Andrić",
+      "from": "1892"
+    }
+  ],
+  "summary": "Novelist of The Bridge on the Drina, Nobel laureate in 1961.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q47561",
+  "events": [
+    {
+      "type": "born",
+      "date": "1892-10-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-03-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ivo Andrić (Q47561)",
+      "url": "https://www.wikidata.org/wiki/Q47561",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ivo Andrić",
+      "url": "https://en.wikipedia.org/wiki/Ivo_Andrić",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/S._Kragujevic%2C_Ivo_Andric%2C_1961.jpg/500px-S._Kragujevic%2C_Ivo_Andric%2C_1961.jpg",
+    "alt": "Ivo Andrić",
+    "credit": "Stevan Kragujević",
+    "licence": "CC BY-SA 3.0 rs",
+    "source": "https://commons.wikimedia.org/wiki/File:S._Kragujevic,_Ivo_Andric,_1961.jpg"
+  }
+}

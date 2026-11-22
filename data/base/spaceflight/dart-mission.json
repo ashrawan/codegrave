@@ -1,0 +1,51 @@
+{
+  "id": "dart-mission",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "DART",
+      "from": "2021"
+    }
+  ],
+  "summary": "A NASA probe crashed into a small moon of an asteroid in 2022 on purpose, and nudged its orbit: the first test of defending the Earth from an asteroid.",
+  "wikidata": "Q47482008",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-11-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: DART (Q47482008)",
+      "url": "https://www.wikidata.org/wiki/Q47482008",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Double Asteroid Redirection Test",
+      "url": "https://en.wikipedia.org/wiki/Double_Asteroid_Redirection_Test",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/DART_spacecraft_model_2.png/500px-DART_spacecraft_model_2.png",
+    "alt": "DART",
+    "credit": "NASA/Johns Hopkins APL",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DART_spacecraft_model_2.png"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "trump-tariffs",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Trump tariffs",
+      "from": "2025"
+    }
+  ],
+  "summary": "The sweeping tariffs the United States put on imports from almost every country in 2025, the highest in a century.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q132099340",
+  "events": [
+    {
+      "type": "born",
+      "date": "2025",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Trump tariffs (Q132099340)",
+      "url": "https://www.wikidata.org/wiki/Q132099340",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tariffs in the second Trump administration",
+      "url": "https://en.wikipedia.org/wiki/Tariffs_in_the_second_Trump_administration",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Trump_showing_a_chart_with_reciprocal_tariffs_%28cropped%29.jpg/500px-Trump_showing_a_chart_with_reciprocal_tariffs_%28cropped%29.jpg",
+    "alt": "Trump tariffs",
+    "credit": "The White House",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Trump_showing_a_chart_with_reciprocal_tariffs_(cropped).jpg"
+  }
+}

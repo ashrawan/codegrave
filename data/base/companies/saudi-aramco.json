@@ -1,0 +1,54 @@
+{
+  "id": "saudi-aramco",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Saudi Aramco",
+      "from": "1988"
+    }
+  ],
+  "summary": "The state oil company, which grew from the American firm that found oil at Dammam in 1938 into one of the most valuable companies in the world.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q679322",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saudi Aramco (Q679322)",
+      "url": "https://www.wikidata.org/wiki/Q679322",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saudi Aramco",
+      "url": "https://en.wikipedia.org/wiki/Saudi_Aramco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/AramcoCoreArea.jpg/500px-AramcoCoreArea.jpg",
+    "alt": "Saudi Aramco",
+    "credit": "Eagleamn",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:AramcoCoreArea.jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "intermodal-container",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Shipping container",
+      "from": "1956"
+    }
+  ],
+  "summary": "The standard steel box, first used by Malcolm McLean in 1956, that made world trade cheap.",
+  "wikidata": "Q187956",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-04-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Shipping container (Q187956)",
+      "url": "https://www.wikidata.org/wiki/Q187956",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Intermodal container",
+      "url": "https://en.wikipedia.org/wiki/Intermodal_container",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Container_01_KMJ.jpg/500px-Container_01_KMJ.jpg",
+    "alt": "Shipping container",
+    "credit": "KMJ at German Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Container_01_KMJ.jpg"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "vietnam",
+  "name": "Vietnam",
+  "description": "Vietnam from the Dong Son drums and the Trung sisters to a thousand years of Chinese rule, independent dynasties, French rule, the wars and Doi Moi.",
+  "category": "places",
+  "tags": [
+    "vietnam",
+    "hanoi",
+    "saigon",
+    "ho chi minh",
+    "dynasties",
+    "war"
+  ],
+  "entries": [
+    "dong-son-culture",
+    "trung-sisters",
+    "battle-of-bach-dang-938",
+    "vietnam",
+    "ly-dynasty",
+    "hanoi",
+    "tran-dynasty",
+    "nguyen-dynasty",
+    "french-indochina",
+    "ho-chi-minh",
+    "pho",
+    "vo-nguyen-giap",
+    "first-indochina-war",
+    "battle-of-dien-bien-phu",
+    "south-vietnam",
+    "vietnam-war",
+    "to-lam",
+    "ho-chi-minh-trail",
+    "tet-offensive",
+    "my-lai-massacre",
+    "boat-people",
+    "fall-of-saigon",
+    "ho-chi-minh-city",
+    "sino-vietnamese-war",
+    "doi-moi",
+    "vingroup",
+    "ha-long-bay"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-vietnam",
+      "name": "Ancient Vietnam",
+      "from": -1000,
+      "to": 938,
+      "note": "The Dong Son people cast great bronze drums. China ruled the north for a thousand years, and the Trung sisters rose against it in 40 CE."
+    },
+    {
+      "id": "the-dynasties",
+      "name": "The dynasties",
+      "from": 939,
+      "to": 1857,
+      "note": "Independence was won at Bach Dang in 938. The Ly founded Hanoi, the Tran beat the Mongols, and the Nguyen united the country in 1802."
+    },
+    {
+      "id": "french-rule",
+      "name": "French rule",
+      "from": 1858,
+      "to": 1945,
+      "note": "France conquered Vietnam from 1858 and made it part of Indochina. Ho Chi Minh founded the Communist Party, and Japan occupied the country in the Second World War."
+    },
+    {
+      "id": "war-and-reunification",
+      "name": "War and reunification",
+      "from": 1946,
+      "to": 1985,
+      "note": "War with France ended at Dien Bien Phu in 1954, and the country was divided. The war with the United States and the South ended with the fall of Saigon in 1975."
+    },
+    {
+      "id": "doi-moi",
+      "name": "Doi Moi",
+      "from": 1986,
+      "to": 2026,
+      "note": "The reforms of 1986 opened the economy, and Vietnam became one of the fastest growing countries in Asia."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/330px-Flag_of_Vietnam.svg.png",
+    "alt": "Flag of Vietnam",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Vietnam.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Vietnamese_Ti%E1%BA%BFn_Qu%C3%A2n_Ca.ogg/Vietnamese_Ti%E1%BA%BFn_Qu%C3%A2n_Ca.ogg.mp3",
+    "title": "Tiến Quân Ca",
+    "credit": "Nguyễn Văn Cao",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vietnamese_Ti%E1%BA%BFn_Qu%C3%A2n_Ca.ogg"
+  }
+}

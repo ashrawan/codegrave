@@ -1,0 +1,51 @@
+{
+  "id": "lebanon",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Lebanon",
+      "from": "1943"
+    }
+  ],
+  "summary": "A small country on the eastern Mediterranean, the land of the Phoenicians, independent since 1943.",
+  "wikidata": "Q822",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943-11-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lebanon (Q822)",
+      "url": "https://www.wikidata.org/wiki/Q822",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lebanon",
+      "url": "https://en.wikipedia.org/wiki/Lebanon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Beirut_skyline%2C_Beirut%2C_Lebanon.jpg/500px-Beirut_skyline%2C_Beirut%2C_Lebanon.jpg",
+    "alt": "Lebanon",
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Beirut_skyline,_Beirut,_Lebanon.jpg"
+  }
+}

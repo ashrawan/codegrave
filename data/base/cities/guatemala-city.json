@@ -1,0 +1,45 @@
+{
+  "id": "guatemala-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Guatemala City",
+      "from": "1524"
+    }
+  ],
+  "summary": "The capital and largest city of Central America.",
+  "wikidata": "Q1555",
+  "events": [
+    {
+      "type": "born",
+      "date": "1524-07-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Guatemala City (Q1555)",
+      "url": "https://www.wikidata.org/wiki/Q1555",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guatemala City",
+      "url": "https://en.wikipedia.org/wiki/Guatemala_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Buildings_in_Guatemala_City.jpg/500px-Buildings_in_Guatemala_City.jpg",
+    "alt": "Guatemala City",
+    "credit": "BladimiroAlvarado",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Buildings_in_Guatemala_City.jpg"
+  }
+}

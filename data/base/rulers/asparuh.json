@@ -1,0 +1,59 @@
+{
+  "id": "asparuh",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Asparuh of Bulgaria",
+      "from": "0640"
+    }
+  ],
+  "summary": "Khan who founded the Bulgarian state on the Danube in 681.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q189450",
+  "events": [
+    {
+      "type": "born",
+      "date": "0640",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0701",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Asparuh of Bulgaria (Q189450)",
+      "url": "https://www.wikidata.org/wiki/Q189450",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Asparuh of Bulgaria",
+      "url": "https://en.wikipedia.org/wiki/Asparuh_of_Bulgaria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Asparukh_of_Bulgaria.JPG_unscaled",
+    "alt": "Asparuh of Bulgaria",
+    "credit": "TRAJAN 117",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Asparukh_of_Bulgaria.JPG"
+  }
+}

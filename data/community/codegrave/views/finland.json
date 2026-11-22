@@ -1,0 +1,76 @@
+{
+  "id": "finland",
+  "name": "Finland",
+  "description": "Finland from the Kalevala songs to Swedish and Russian rule, independence, the Winter War, saunas, Nokia and NATO.",
+  "category": "places",
+  "tags": [
+    "finland",
+    "helsinki",
+    "sauna",
+    "nokia",
+    "winter war",
+    "lapland"
+  ],
+  "entries": [
+    "swedish-finland",
+    "turku",
+    "helsinki",
+    "grand-duchy-of-finland",
+    "kalevala",
+    "nokia",
+    "jean-sibelius",
+    "carl-gustaf-emil-mannerheim",
+    "paavo-nurmi",
+    "urho-kekkonen",
+    "tove-jansson",
+    "finland",
+    "finnish-declaration-of-independence",
+    "finnish-civil-war",
+    "winter-war",
+    "continuation-war",
+    "olympics-1952",
+    "alexander-stubb",
+    "helsinki-accords",
+    "linux",
+    "rovio",
+    "world-happiness-report",
+    "finland-nato"
+  ],
+  "checkpoints": [
+    {
+      "id": "swedish-finland",
+      "name": "Swedish Finland",
+      "from": 1150,
+      "to": 1808,
+      "note": "Finland became part of Sweden in the Middle Ages. Turku was its main town, and Finnish folk songs were passed down by singers."
+    },
+    {
+      "id": "the-grand-duchy",
+      "name": "The grand duchy",
+      "from": 1809,
+      "to": 1916,
+      "note": "Russia took Finland in 1809 and made it a grand duchy. The Kalevala and Sibelius woke a national spirit."
+    },
+    {
+      "id": "independent-finland",
+      "name": "Independent Finland",
+      "from": 1917,
+      "to": 2026,
+      "note": "Finland became independent in 1917 and fought the Soviets in the Winter War. Nokia made phones for the world, and Finland joined NATO in 2023."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/330px-Flag_of_Finland.svg.png",
+    "alt": "Flag of Finland",
+    "credit": "Unknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Finland.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/61/United_States_Navy_Band_-_Maamme.ogg/United_States_Navy_Band_-_Maamme.ogg.mp3",
+    "title": "Maamme",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil:80/anthems/national_anthems.htm https://web.arch",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Maamme.ogg"
+  }
+}

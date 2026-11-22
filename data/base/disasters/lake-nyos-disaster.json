@@ -1,0 +1,56 @@
+{
+  "id": "lake-nyos-disaster",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Lake Nyos disaster",
+      "from": "1986"
+    }
+  ],
+  "summary": "The gas cloud of 1986 that killed some 1,700 people.",
+  "wikidata": "Q11737225",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-08-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-08-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cameroon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lake Nyos disaster (Q11737225)",
+      "url": "https://www.wikidata.org/wiki/Q11737225",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lake Nyos disaster",
+      "url": "https://en.wikipedia.org/wiki/Lake_Nyos_disaster",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Tml15-16_Nc.jpg/500px-Tml15-16_Nc.jpg",
+    "alt": "Lake Nyos disaster",
+    "credit": "United States Geological Survey",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tml15-16_Nc.jpg"
+  }
+}

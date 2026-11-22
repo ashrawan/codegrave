@@ -1,0 +1,59 @@
+{
+  "id": "jean-sibelius",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Jean Sibelius",
+      "from": "1865"
+    }
+  ],
+  "summary": "Composer of Finlandia and seven symphonies.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q45682",
+  "events": [
+    {
+      "type": "born",
+      "date": "1865-12-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1957-09-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jean Sibelius (Q45682)",
+      "url": "https://www.wikidata.org/wiki/Q45682",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jean Sibelius",
+      "url": "https://en.wikipedia.org/wiki/Jean_Sibelius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Jean_Sibelius_in_1890_%28cropped%29.jpg/500px-Jean_Sibelius_in_1890_%28cropped%29.jpg",
+    "alt": "Jean Sibelius",
+    "credit": "Paul Heckscher",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean_Sibelius_in_1890_(cropped).jpg"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "id": "peru",
+  "name": "Peru",
+  "description": "Peru from Caral and the Nazca to the Inca Empire, the Spanish conquest, independence and the modern republic.",
+  "category": "places",
+  "tags": [
+    "peru",
+    "lima",
+    "cusco",
+    "inca",
+    "machu picchu",
+    "andes"
+  ],
+  "entries": [
+    "lake-titicaca",
+    "potato",
+    "caral",
+    "chavin-culture",
+    "nazca-lines",
+    "moche-culture",
+    "chan-chan",
+    "cusco",
+    "chimu-culture",
+    "pachacuti",
+    "inca-empire",
+    "sacsayhuaman",
+    "inca-road-system",
+    "machu-picchu",
+    "spanish-conquest-of-the-inca-empire",
+    "lima",
+    "rebellion-of-tupac-amaru-ii",
+    "ceviche",
+    "peruvian-war-of-independence",
+    "peru",
+    "hiram-bingham-machu-picchu",
+    "mario-vargas-llosa",
+    "alberto-fujimori",
+    "shining-path",
+    "japanese-embassy-hostage-crisis",
+    "2022-peruvian-self-coup-attempt"
+  ],
+  "checkpoints": [
+    {
+      "id": "early-andes",
+      "name": "Early Andes",
+      "from": -3000,
+      "to": 1437,
+      "note": "Caral rose five thousand years ago. Chavín, the Nazca with their lines, the Moche and the Chimú followed."
+    },
+    {
+      "id": "the-incas",
+      "name": "The Incas",
+      "from": 1438,
+      "to": 1531,
+      "note": "Pachacuti made Cusco the head of an empire that ran along the Andes, joined by roads, with Machu Picchu in the clouds."
+    },
+    {
+      "id": "colony",
+      "name": "Colony",
+      "from": 1532,
+      "to": 1820,
+      "note": "Pizarro overthrew the Incas, and Lima became the capital of Spain's South America."
+    },
+    {
+      "id": "republic",
+      "name": "Republic",
+      "from": 1821,
+      "to": 2026,
+      "note": "Peru declared independence in 1821. It lost wars, suffered the Shining Path, and saw many presidents fall."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_Peru.svg/330px-Flag_of_Peru.svg.png",
+    "alt": "Flag of Peru",
+    "credit": "David Benbennick",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Peru.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cc/United_States_Navy_Band_-_Marcha_Nacional_del_Per%C3%BA.ogg/United_States_Navy_Band_-_Marcha_Nacional_del_Per%C3%BA.ogg.mp3",
+    "title": "National Anthem of Peru",
+    "credit": "United States Navy Band (performer) José de la Torre Ugarte (lyrics) José Bernardo Alcedo (music) Encoded in OGG by Linf",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Marcha_Nacional_del_Per%C3%BA.ogg"
+  }
+}

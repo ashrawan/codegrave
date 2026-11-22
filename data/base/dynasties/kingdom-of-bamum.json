@@ -1,0 +1,54 @@
+{
+  "id": "kingdom-of-bamum",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Bamum Kingdom",
+      "from": "1394"
+    }
+  ],
+  "summary": "A kingdom of the western highlands.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1629505",
+  "events": [
+    {
+      "type": "born",
+      "date": "1394",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cameroon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bamum Kingdom (Q1629505)",
+      "url": "https://www.wikidata.org/wiki/Q1629505",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bamum Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Bamum_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Detailed_Map_of_the_Bamum.png/500px-Detailed_Map_of_the_Bamum.png",
+    "alt": "Bamum Kingdom",
+    "credit": "Khu'hamgaba Kitap",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Detailed_Map_of_the_Bamum.png"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "samuel-beckett",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Samuel Beckett",
+      "from": "1906"
+    }
+  ],
+  "summary": "Irish playwright of Waiting for Godot, Nobel Prize in Literature 1969.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q37327",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-04-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-12-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Samuel Beckett (Q37327)",
+      "url": "https://www.wikidata.org/wiki/Q37327",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samuel Beckett",
+      "url": "https://en.wikipedia.org/wiki/Samuel_Beckett",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Samuel_Beckett%2C_Pic%2C_1_%28cropped%29.jpg/500px-Samuel_Beckett%2C_Pic%2C_1_%28cropped%29.jpg",
+    "alt": "Samuel Beckett",
+    "credit": "Roger Pic",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Samuel_Beckett,_Pic,_1_(cropped).jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "kuwait-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kuwait City",
+      "from": "1752"
+    }
+  ],
+  "summary": "The capital, once a walled port of traders and pearl divers.",
+  "wikidata": "Q35178",
+  "events": [
+    {
+      "type": "born",
+      "date": "1752",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kuwait"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kuwait City (Q35178)",
+      "url": "https://www.wikidata.org/wiki/Q35178",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kuwait City",
+      "url": "https://en.wikipedia.org/wiki/Kuwait_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/LiberationTower.jpg/500px-LiberationTower.jpg",
+    "alt": "Kuwait City",
+    "credit": "User:Deepak",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LiberationTower.jpg"
+  }
+}

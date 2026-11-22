@@ -1,0 +1,53 @@
+{
+  "id": "coronation-of-napoleon",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Coronation of Napoleon",
+      "from": "1804"
+    }
+  ],
+  "summary": "Napoleon crowned himself emperor in Notre-Dame in December 1804, with the pope looking on.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q973118",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-12-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1804-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Coronation of Napoleon (Q973118)",
+      "url": "https://www.wikidata.org/wiki/Q973118",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coronation of Napoleon",
+      "url": "https://en.wikipedia.org/wiki/Coronation_of_Napoleon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg/500px-Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_%3B_MR_1437.jpg",
+    "alt": "Coronation of Napoleon",
+    "credit": "Jacques-Louis David",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_Sacre_de_Napol%C3%A9on_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3699_;_MR_1437.jpg"
+  }
+}

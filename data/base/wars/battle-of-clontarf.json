@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-clontarf",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Clontarf",
+      "from": "1014"
+    }
+  ],
+  "summary": "The battle of 1014 where Brian Boru broke the power of the Vikings and their Irish allies.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q868027",
+  "events": [
+    {
+      "type": "born",
+      "date": "1014-04-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1014-04-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Clontarf (Q868027)",
+      "url": "https://www.wikidata.org/wiki/Q868027",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Clontarf",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Clontarf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/%27Battle_of_Clontarf%27%2C_oil_on_canvas_painting_by_Hugh_Frazer%2C_1826.jpg/500px-%27Battle_of_Clontarf%27%2C_oil_on_canvas_painting_by_Hugh_Frazer%2C_1826.jpg",
+    "alt": "Battle of Clontarf",
+    "credit": "Hugh Frazer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%27Battle_of_Clontarf%27,_oil_on_canvas_painting_by_Hugh_Frazer,_1826.jpg"
+  }
+}

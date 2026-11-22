@@ -1,0 +1,100 @@
+{
+  "id": "greece",
+  "name": "Greece",
+  "description": "Greece from Minoan Crete and Mycenae to classical Athens, Alexander, Rome, Byzantium, Ottoman rule, independence and the modern republic.",
+  "category": "places",
+  "tags": [
+    "greece",
+    "athens",
+    "ancient greece",
+    "byzantium",
+    "acropolis",
+    "olympics"
+  ],
+  "entries": [
+    "knossos",
+    "athens",
+    "minoan-civilization",
+    "minoan-eruption",
+    "mycenaean-greece",
+    "sparta",
+    "ancient-greece",
+    "delphi",
+    "ancient-olympic-games",
+    "homer",
+    "athenian-democracy",
+    "battle-of-marathon",
+    "battle-of-thermopylae",
+    "battle-of-salamis",
+    "socrates",
+    "acropolis-of-athens",
+    "parthenon",
+    "plato",
+    "platonic-academy",
+    "aristotle",
+    "alexander-the-great",
+    "byzantine-empire",
+    "battle-of-lepanto",
+    "greek-war-of-independence",
+    "greece",
+    "olympics-1896",
+    "greek-civil-war",
+    "greek-junta",
+    "kyriakos-mitsotakis",
+    "alexis-tsipras",
+    "greece-joins-eec",
+    "olympics-2004",
+    "greek-government-debt-crisis"
+  ],
+  "checkpoints": [
+    {
+      "id": "bronze-age",
+      "name": "Bronze Age",
+      "from": -7000,
+      "to": -1101,
+      "note": "The Minoans built palaces on Crete, and the Mycenaean kings ruled the mainland."
+    },
+    {
+      "id": "ancient-greece",
+      "name": "Ancient Greece",
+      "from": -1100,
+      "to": -31,
+      "note": "City states rose. The Olympics began, Athens beat Persia and built the Parthenon, the philosophers taught, and Alexander conquered to India."
+    },
+    {
+      "id": "rome-and-byzantium",
+      "name": "Rome and Byzantium",
+      "from": -30,
+      "to": 1452,
+      "note": "Greece became part of Rome. The eastern empire, ruled from Constantinople, was Greek in speech and faith."
+    },
+    {
+      "id": "ottoman-greece",
+      "name": "Ottoman Greece",
+      "from": 1453,
+      "to": 1820,
+      "note": "Greece was ruled by the Ottomans for nearly four centuries."
+    },
+    {
+      "id": "modern-greece",
+      "name": "Modern Greece",
+      "from": 1821,
+      "to": 2026,
+      "note": "The war of 1821 won independence. Athens hosted the first modern Olympics in 1896, Greece survived war and dictatorship, and joined Europe in 1981."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/330px-Flag_of_Greece.svg.png",
+    "alt": "Flag of Greece",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Greece.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/db/Hymn_to_liberty_instrumental.oga/Hymn_to_liberty_instrumental.oga.mp3",
+    "title": "Hymn to Liberty",
+    "credit": "https://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hymn_to_liberty_instrumental.oga"
+  }
+}

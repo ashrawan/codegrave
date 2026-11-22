@@ -1,0 +1,46 @@
+{
+  "id": "baath-party-coup",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "17 July Revolution",
+      "from": "1968"
+    }
+  ],
+  "summary": "The Baath party took power in 1968.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4120226",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-07-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: 17 July Revolution (Q4120226)",
+      "url": "https://www.wikidata.org/wiki/Q4120226",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 17 July Revolution",
+      "url": "https://en.wikipedia.org/wiki/17_July_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

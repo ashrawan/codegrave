@@ -1,0 +1,54 @@
+{
+  "id": "gardens-by-the-bay",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Gardens by the Bay",
+      "from": "2012"
+    }
+  ],
+  "summary": "A park of giant glass houses and tree-like towers, opened in 2012.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q630135",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gardens by the Bay (Q630135)",
+      "url": "https://www.wikidata.org/wiki/Q630135",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gardens by the Bay",
+      "url": "https://en.wikipedia.org/wiki/Gardens_by_the_Bay",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore_-_20120712-02.jpg/500px-Supertree_Grove%2C_Gardens_by_the_Bay%2C_Singapore_-_20120712-02.jpg",
+    "alt": "Gardens by the Bay",
+    "credit": "Shiny Things.",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Supertree_Grove,_Gardens_by_the_Bay,_Singapore_-_20120712-02.jpg"
+  }
+}

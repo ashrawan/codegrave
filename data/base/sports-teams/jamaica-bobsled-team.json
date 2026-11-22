@@ -1,0 +1,48 @@
+{
+  "id": "jamaica-bobsled-team",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Jamaican bobsled team",
+      "from": "1988"
+    }
+  ],
+  "summary": "The team that went to the 1988 Winter Olympics from a country without snow, the story of the film Cool Runnings.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1679839",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jamaican bobsled team (Q1679839)",
+      "url": "https://www.wikidata.org/wiki/Q1679839",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jamaica national bobsleigh team",
+      "url": "https://en.wikipedia.org/wiki/Jamaica_national_bobsleigh_team",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Two-man_bobsleigh%2C_2014_winter_Olympics%2C_Jamaica.jpg/500px-Two-man_bobsleigh%2C_2014_winter_Olympics%2C_Jamaica.jpg",
+    "alt": "Jamaican bobsled team",
+    "credit": "M. Smelter",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Two-man_bobsleigh,_2014_winter_Olympics,_Jamaica.jpg"
+  }
+}

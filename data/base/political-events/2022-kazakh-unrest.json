@@ -1,0 +1,59 @@
+{
+  "id": "2022-kazakh-unrest",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2022 Kazakh unrest",
+      "from": "2022"
+    }
+  ],
+  "summary": "Protests over fuel prices that turned to deadly unrest in January 2022.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q110413718",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-01-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-01-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kazakhstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2022 Kazakh unrest (Q110413718)",
+      "url": "https://www.wikidata.org/wiki/Q110413718",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2022 Kazakh unrest",
+      "url": "https://en.wikipedia.org/wiki/2022_Kazakh_unrest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/2022_Kazakhstan_protests_%E2%80%94_Aqtobe%2C_January_4_%2801%29.jpg/500px-2022_Kazakhstan_protests_%E2%80%94_Aqtobe%2C_January_4_%2801%29.jpg",
+    "alt": "2022 Kazakh unrest",
+    "credit": "Esetok",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Kazakhstan_protests_%E2%80%94_Aqtobe,_January_4_(01).jpg"
+  }
+}

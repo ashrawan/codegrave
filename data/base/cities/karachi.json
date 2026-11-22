@@ -1,0 +1,45 @@
+{
+  "id": "karachi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Karachi",
+      "from": "1729"
+    }
+  ],
+  "summary": "Pakistan's largest city and port, the first capital.",
+  "wikidata": "Q8660",
+  "events": [
+    {
+      "type": "born",
+      "date": "1729",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Karachi (Q8660)",
+      "url": "https://www.wikidata.org/wiki/Q8660",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Karachi",
+      "url": "https://en.wikipedia.org/wiki/Karachi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Karachi_from_above.jpg/500px-Karachi_from_above.jpg",
+    "alt": "Karachi",
+    "credit": "Bilalhassan88",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karachi_from_above.jpg"
+  }
+}

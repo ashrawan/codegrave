@@ -1,0 +1,59 @@
+{
+  "id": "valdivia-culture",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Valdivia culture",
+      "from": "-3500"
+    }
+  ],
+  "summary": "One of the oldest pottery-making cultures of the Americas.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1755426",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3500",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-1800",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ecuador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Valdivia culture (Q1755426)",
+      "url": "https://www.wikidata.org/wiki/Q1755426",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Valdivia culture",
+      "url": "https://en.wikipedia.org/wiki/Valdivia_culture",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/02/Figurilla_de_Valdivia.jpg_unscaled",
+    "alt": "Valdivia culture",
+    "credit": "Ministerio de Cultura y Patrimonio del Ecuador",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Figurilla_de_Valdivia.jpg"
+  }
+}

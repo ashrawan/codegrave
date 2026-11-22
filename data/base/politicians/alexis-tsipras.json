@@ -1,0 +1,48 @@
+{
+  "id": "alexis-tsipras",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Alexis Tsipras",
+      "from": "1974"
+    }
+  ],
+  "summary": "Prime minister during the debt crisis, from 2015 to 2019.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q312015",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Alexis Tsipras (Q312015)",
+      "url": "https://www.wikidata.org/wiki/Q312015",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexis Tsipras",
+      "url": "https://en.wikipedia.org/wiki/Alexis_Tsipras",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Alexis_Tsipras%2C_prime_minister_of_Greece.jpg/500px-Alexis_Tsipras%2C_prime_minister_of_Greece.jpg",
+    "alt": "Alexis Tsipras",
+    "credit": "EU2017EE Estonian Presidency",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alexis_Tsipras,_prime_minister_of_Greece.jpg"
+  }
+}

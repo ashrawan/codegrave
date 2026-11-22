@@ -1,0 +1,56 @@
+{
+  "id": "meroe",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Meroë",
+      "from": "-0800"
+    }
+  ],
+  "summary": "The capital of Kush with its many pyramids.",
+  "wikidata": "Q5780",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0350",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Meroë (Q5780)",
+      "url": "https://www.wikidata.org/wiki/Q5780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Meroë",
+      "url": "https://en.wikipedia.org/wiki/Meroë",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Sudan_Meroe_Pyramids_2001.JPG/500px-Sudan_Meroe_Pyramids_2001.JPG",
+    "alt": "Meroë",
+    "credit": "Photographer: B N Chagny",
+    "licence": "CC BY-SA 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sudan_Meroe_Pyramids_2001.JPG"
+  }
+}

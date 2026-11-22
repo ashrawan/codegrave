@@ -1,0 +1,81 @@
+{
+  "id": "kazakhstan",
+  "name": "Kazakhstan",
+  "description": "Kazakhstan from the Botai horse herders and the Silk Road to the Kazakh Khanate, Russian and Soviet rule, Baikonur and independence.",
+  "category": "places",
+  "tags": [
+    "kazakhstan",
+    "astana",
+    "almaty",
+    "steppe",
+    "baikonur",
+    "central asia"
+  ],
+  "entries": [
+    "aral-sea",
+    "botai-culture",
+    "battle-of-talas",
+    "golden-horde",
+    "mausoleum-of-khoja-ahmed-yasawi",
+    "kazakh-khanate",
+    "astana",
+    "abai-kunanbaev",
+    "almaty",
+    "kazakh-famine-of-1930-1933",
+    "nursultan-nazarbayev",
+    "semipalatinsk-test-site",
+    "kassym-jomart-tokayev",
+    "baikonur-cosmodrome",
+    "vostok-1",
+    "gennady-golovkin",
+    "jeltoqsan",
+    "kazakhstan",
+    "kashagan-field",
+    "bayterek",
+    "2022-kazakh-unrest"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-steppe",
+      "name": "The steppe",
+      "from": -10000,
+      "to": 1464,
+      "note": "The Botai people tamed horses on the steppe. Scythians, Turks and Mongols followed, and Silk Road towns grew in the south."
+    },
+    {
+      "id": "the-kazakh-khanate",
+      "name": "The Kazakh Khanate",
+      "from": 1465,
+      "to": 1919,
+      "note": "The Kazakhs formed their khanate in the 1460s. The Russian empire took the steppe in the 1700s and 1800s."
+    },
+    {
+      "id": "soviet-kazakhstan",
+      "name": "Soviet Kazakhstan",
+      "from": 1920,
+      "to": 1990,
+      "note": "Collectivisation caused a terrible famine. Baikonur sent Gagarin to space, the bomb was tested at Semipalatinsk, and the virgin lands were ploughed."
+    },
+    {
+      "id": "independent-kazakhstan",
+      "name": "Independent Kazakhstan",
+      "from": 1991,
+      "to": 2026,
+      "note": "Kazakhstan became independent in 1991, grew rich on oil and built a new capital at Astana."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kazakhstan.svg/330px-Flag_of_Kazakhstan.svg.png",
+    "alt": "Flag of Kazakhstan",
+    "credit": "Shaken Niyazbekop",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Kazakhstan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/Kazakhstan_National_Anthem_2012.ogg/Kazakhstan_National_Anthem_2012.ogg.mp3",
+    "title": "Menıñ Qazaqstanym",
+    "credit": "Government of Kazakhstan",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kazakhstan_National_Anthem_2012.ogg"
+  }
+}

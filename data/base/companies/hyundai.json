@@ -1,0 +1,54 @@
+{
+  "id": "hyundai",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Hyundai",
+      "from": "1947"
+    }
+  ],
+  "summary": "Group founded by Chung Ju-yung that grew from a construction firm into a maker of cars, ships and much else.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q29311",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hyundai (Q29311)",
+      "url": "https://www.wikidata.org/wiki/Q29311",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hyundai",
+      "url": "https://en.wikipedia.org/wiki/Hyundai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Hyundai_Headquarter_Building%2C_Jongno-gu%2C_Seoul.jpg/500px-Hyundai_Headquarter_Building%2C_Jongno-gu%2C_Seoul.jpg",
+    "alt": "Hyundai",
+    "credit": "Marcopolis at English Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hyundai_Headquarter_Building,_Jongno-gu,_Seoul.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "maji-maji-rebellion",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Maji Maji Rebellion",
+      "from": "1905"
+    }
+  ],
+  "summary": "The great revolt against German rule in 1905.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q705553",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-07",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1907-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maji Maji Rebellion (Q705553)",
+      "url": "https://www.wikidata.org/wiki/Q705553",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maji Maji Rebellion",
+      "url": "https://en.wikipedia.org/wiki/Maji_Maji_Rebellion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Maji_Maji_rebellion_-_de.png/500px-Maji_Maji_rebellion_-_de.png",
+    "alt": "Maji Maji Rebellion",
+    "credit": "Maximilian Dörrbecker (Chumwa)",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Maji_Maji_rebellion_-_de.png"
+  }
+}

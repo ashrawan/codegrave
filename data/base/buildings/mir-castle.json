@@ -1,0 +1,48 @@
+{
+  "id": "mir-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Mir Castle",
+      "from": "1520"
+    }
+  ],
+  "summary": "A red-brick castle of the 16th century in western Belarus.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q209643",
+  "events": [
+    {
+      "type": "born",
+      "date": "1520",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mir Castle (Q209643)",
+      "url": "https://www.wikidata.org/wiki/Q209643",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mir Castle Complex",
+      "url": "https://en.wikipedia.org/wiki/Mir_Castle_Complex",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Mir_Castle_2018.jpg/500px-Mir_Castle_2018.jpg",
+    "alt": "Mir Castle",
+    "credit": "Sergey Sebelev",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mir_Castle_2018.jpg"
+  }
+}

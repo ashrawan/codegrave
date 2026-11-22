@@ -1,0 +1,45 @@
+{
+  "id": "ankara",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ankara",
+      "from": "1923"
+    }
+  ],
+  "summary": "Made the capital of Turkey in 1923.",
+  "wikidata": "Q3640",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-10-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ankara (Q3640)",
+      "url": "https://www.wikidata.org/wiki/Q3640",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ankara",
+      "url": "https://en.wikipedia.org/wiki/Ankara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Ankara_%2816290014657%29.jpg/500px-Ankara_%2816290014657%29.jpg",
+    "alt": "Ankara",
+    "credit": "Jorge Franganillo from Barcelona, Spain",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ankara_(16290014657).jpg"
+  }
+}

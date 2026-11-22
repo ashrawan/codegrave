@@ -1,0 +1,45 @@
+{
+  "id": "yangon",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Yangon",
+      "from": "1755"
+    }
+  ],
+  "summary": "Myanmar's largest city, the capital under the British.",
+  "wikidata": "Q37995",
+  "events": [
+    {
+      "type": "born",
+      "date": "1755",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Yangon (Q37995)",
+      "url": "https://www.wikidata.org/wiki/Q37995",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yangon",
+      "url": "https://en.wikipedia.org/wiki/Yangon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/2016_Rangun%2C_Dawny_budynek_S%C4%85du_Najwy%C5%BCszego_%2815%29.jpg/500px-2016_Rangun%2C_Dawny_budynek_S%C4%85du_Najwy%C5%BCszego_%2815%29.jpg",
+    "alt": "Yangon",
+    "credit": "Marcin Konsek",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2016_Rangun,_Dawny_budynek_S%C4%85du_Najwy%C5%BCszego_(15).jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "french-conquest-of-algeria",
+  "category": "wars",
+  "names": [
+    {
+      "name": "French conquest of Algeria",
+      "from": "1830"
+    }
+  ],
+  "summary": "France's long conquest from 1830.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2629782",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830-06-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1904-01-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French conquest of Algeria (Q2629782)",
+      "url": "https://www.wikidata.org/wiki/Q2629782",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French conquest of Algeria",
+      "url": "https://en.wikipedia.org/wiki/French_conquest_of_Algeria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/La_prise_de_Constantine_1837_par_Horace_Vernet.jpg/500px-La_prise_de_Constantine_1837_par_Horace_Vernet.jpg",
+    "alt": "French conquest of Algeria",
+    "credit": "Horace Vernet",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_prise_de_Constantine_1837_par_Horace_Vernet.jpg"
+  }
+}

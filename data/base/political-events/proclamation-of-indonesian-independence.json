@@ -1,0 +1,59 @@
+{
+  "id": "proclamation-of-indonesian-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Proclamation of Indonesian Independence",
+      "from": "1945"
+    }
+  ],
+  "summary": "The declaration read by Sukarno on 17 August 1945, two days after Japan surrendered.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1661772",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-08-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-08-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Proclamation of Indonesian Independence (Q1661772)",
+      "url": "https://www.wikidata.org/wiki/Q1661772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Proclamation of Indonesian Independence",
+      "url": "https://en.wikipedia.org/wiki/Proclamation_of_Indonesian_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Indonesia_declaration_of_independence_17_August_1945.jpg/500px-Indonesia_declaration_of_independence_17_August_1945.jpg",
+    "alt": "Proclamation of Indonesian Independence",
+    "credit": "Frans Mendur (also Frans Mendoer) (1913 – 1971)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Indonesia_declaration_of_independence_17_August_1945.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "felix-houphouet-boigny",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Félix Houphouët-Boigny",
+      "from": "1905"
+    }
+  ],
+  "summary": "First president, who ruled for thirty-three years.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q214407",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-10-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-12-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Félix Houphouët-Boigny (Q214407)",
+      "url": "https://www.wikidata.org/wiki/Q214407",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Félix Houphouët-Boigny",
+      "url": "https://en.wikipedia.org/wiki/Félix_Houphouët-Boigny",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/76/F%C3%A9lix_Houphou%C3%ABt-Boigny_1962-07-16.jpg_unscaled",
+    "alt": "Félix Houphouët-Boigny",
+    "credit": "GPO",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:F%C3%A9lix_Houphou%C3%ABt-Boigny_1962-07-16.jpg"
+  }
+}

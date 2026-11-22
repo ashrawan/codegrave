@@ -1,0 +1,59 @@
+{
+  "id": "tove-jansson",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Tove Jansson",
+      "from": "1914"
+    }
+  ],
+  "summary": "Writer and artist who created the Moomins.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q102071",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-08-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-06-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tove Jansson (Q102071)",
+      "url": "https://www.wikidata.org/wiki/Q102071",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tove Jansson",
+      "url": "https://en.wikipedia.org/wiki/Tove_Jansson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Tove_Jansson_with_flower_crown_001.jpg/500px-Tove_Jansson_with_flower_crown_001.jpg",
+    "alt": "Tove Jansson",
+    "credit": "Per Olov Jansson",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tove_Jansson_with_flower_crown_001.jpg"
+  }
+}

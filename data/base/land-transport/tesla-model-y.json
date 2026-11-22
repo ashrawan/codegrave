@@ -1,0 +1,51 @@
+{
+  "id": "tesla-model-y",
+  "category": "land-transport",
+  "names": [
+    {
+      "name": "Tesla Model Y",
+      "from": "2020"
+    }
+  ],
+  "summary": "Tesla's electric crossover, which in 2023 became the best-selling car of any kind in the world.",
+  "wikidata": "Q42298250",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tesla Model Y (Q42298250)",
+      "url": "https://www.wikidata.org/wiki/Q42298250",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tesla Model Y",
+      "url": "https://en.wikipedia.org/wiki/Tesla_Model_Y",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Tesla_Model_Y_%28Facelift%29_%E2%80%93_f_05052026.jpg/500px-Tesla_Model_Y_%28Facelift%29_%E2%80%93_f_05052026.jpg",
+    "alt": "Tesla Model Y",
+    "credit": "© M 93",
+    "licence": "CC BY-SA 3.0 de",
+    "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_Y_(Facelift)_%E2%80%93_f_05052026.jpg"
+  }
+}

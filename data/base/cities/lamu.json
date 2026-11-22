@@ -1,0 +1,51 @@
+{
+  "id": "lamu",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Lamu Old Town",
+      "from": "1370"
+    }
+  ],
+  "summary": "The oldest Swahili town still lived in.",
+  "wikidata": "Q272799",
+  "events": [
+    {
+      "type": "born",
+      "date": "1370",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lamu Old Town (Q272799)",
+      "url": "https://www.wikidata.org/wiki/Q272799",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lamu Old Town",
+      "url": "https://en.wikipedia.org/wiki/Lamu_Old_Town",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Lamu_coast.jpg/500px-Lamu_coast.jpg",
+    "alt": "Lamu Old Town",
+    "credit": "MysteryBee",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lamu_coast.jpg"
+  }
+}

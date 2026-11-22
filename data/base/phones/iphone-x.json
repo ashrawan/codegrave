@@ -1,0 +1,45 @@
+{
+  "id": "iphone-x",
+  "category": "phones",
+  "names": [
+    {
+      "name": "iPhone X",
+      "from": "2017"
+    }
+  ],
+  "summary": "Apple's 2017 phone with an edge-to-edge screen and face unlocking instead of a home button, the shape most phones then followed.",
+  "wikidata": "Q39510168",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: iPhone X (Q39510168)",
+      "url": "https://www.wikidata.org/wiki/Q39510168",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IPhone X",
+      "url": "https://en.wikipedia.org/wiki/IPhone_X",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/IPhone_X_vector.svg/500px-IPhone_X_vector.svg.png",
+    "alt": "iPhone X",
+    "credit": "Rafael Fernandez",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:IPhone_X_vector.svg"
+  }
+}

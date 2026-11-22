@@ -1,0 +1,59 @@
+{
+  "id": "jayavarman-vii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Jayavarman VII",
+      "from": "1122"
+    }
+  ],
+  "summary": "Great king who built Angkor Thom and the Bayon.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q335273",
+  "events": [
+    {
+      "type": "born",
+      "date": "1122",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1218",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cambodia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jayavarman VII (Q335273)",
+      "url": "https://www.wikidata.org/wiki/Q335273",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jayavarman VII",
+      "url": "https://en.wikipedia.org/wiki/Jayavarman_VII",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/JayavarmanVII.jpg/500px-JayavarmanVII.jpg",
+    "alt": "Jayavarman VII",
+    "credit": "Suzan Black",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:JayavarmanVII.jpg"
+  }
+}

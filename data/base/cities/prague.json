@@ -1,0 +1,45 @@
+{
+  "id": "prague",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Prague",
+      "from": "0880"
+    }
+  ],
+  "summary": "The Czech capital on the Vltava, with a castle and an old town of a hundred spires.",
+  "wikidata": "Q1085",
+  "events": [
+    {
+      "type": "born",
+      "date": "0880",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Prague (Q1085)",
+      "url": "https://www.wikidata.org/wiki/Q1085",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prague",
+      "url": "https://en.wikipedia.org/wiki/Prague",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Pet%C5%99%C3%ADn_Tower_View_IMG_3020.JPG/500px-Pet%C5%99%C3%ADn_Tower_View_IMG_3020.JPG",
+    "alt": "Prague",
+    "credit": "Deror_avi",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_Tower_View_IMG_3020.JPG"
+  }
+}

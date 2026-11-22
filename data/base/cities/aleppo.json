@@ -1,0 +1,45 @@
+{
+  "id": "aleppo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Aleppo",
+      "from": "-5000"
+    }
+  ],
+  "summary": "One of the oldest lived-in cities in the world, with a great citadel; much of its old town was ruined in the civil war.",
+  "wikidata": "Q41183",
+  "events": [
+    {
+      "type": "born",
+      "date": "-5000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Aleppo (Q41183)",
+      "url": "https://www.wikidata.org/wiki/Q41183",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aleppo",
+      "url": "https://en.wikipedia.org/wiki/Aleppo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Aleppo%2C_View_of_the_city%2C_Syria.jpg/500px-Aleppo%2C_View_of_the_city%2C_Syria.jpg",
+    "alt": "Aleppo",
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aleppo,_View_of_the_city,_Syria.jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "jelling-stones",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Jelling stones",
+      "from": "0965"
+    }
+  ],
+  "summary": "Runestones raised by Gorm the Old and Harald Bluetooth, called Denmark's birth certificate.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q723999",
+  "events": [
+    {
+      "type": "born",
+      "date": "0965",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "denmark"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jelling stones (Q723999)",
+      "url": "https://www.wikidata.org/wiki/Q723999",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jelling stones",
+      "url": "https://en.wikipedia.org/wiki/Jelling_stones",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Runesten_i_Jelling.jpg/500px-Runesten_i_Jelling.jpg",
+    "alt": "Jelling stones",
+    "credit": "Alicudi",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Runesten_i_Jelling.jpg"
+  }
+}

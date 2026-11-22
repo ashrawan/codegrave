@@ -1,0 +1,54 @@
+{
+  "id": "umayyad-mosque",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Umayyad Mosque",
+      "from": "0706"
+    }
+  ],
+  "summary": "The great mosque of Damascus.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q183562",
+  "events": [
+    {
+      "type": "born",
+      "date": "0706",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "syria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Umayyad Mosque (Q183562)",
+      "url": "https://www.wikidata.org/wiki/Q183562",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Umayyad Mosque",
+      "url": "https://en.wikipedia.org/wiki/Umayyad_Mosque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ommayyad_masjed.jpg/500px-Ommayyad_masjed.jpg",
+    "alt": "Umayyad Mosque",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ommayyad_masjed.jpg"
+  }
+}

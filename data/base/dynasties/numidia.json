@@ -1,0 +1,52 @@
+{
+  "id": "numidia",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Numidia",
+      "from": "-0202"
+    }
+  ],
+  "summary": "The Berber kingdom of Massinissa and Jugurtha, allies and then enemies of Rome.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q102679",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0202",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0046",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Numidia (Q102679)",
+      "url": "https://www.wikidata.org/wiki/Q102679",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Numidia",
+      "url": "https://en.wikipedia.org/wiki/Numidia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

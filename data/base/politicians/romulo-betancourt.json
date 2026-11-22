@@ -1,0 +1,59 @@
+{
+  "id": "romulo-betancourt",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Rómulo Betancourt",
+      "from": "1908"
+    }
+  ],
+  "summary": "The father of Venezuelan democracy.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q332081",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-02-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1981-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rómulo Betancourt (Q332081)",
+      "url": "https://www.wikidata.org/wiki/Q332081",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rómulo Betancourt",
+      "url": "https://en.wikipedia.org/wiki/Rómulo_Betancourt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Foto_oficial_R%C3%B3mulo_Betancourt_1959.jpg/500px-Foto_oficial_R%C3%B3mulo_Betancourt_1959.jpg",
+    "alt": "Rómulo Betancourt",
+    "credit": "Presidencia de la República de Venezuela",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Foto_oficial_R%C3%B3mulo_Betancourt_1959.jpg"
+  }
+}

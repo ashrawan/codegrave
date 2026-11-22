@@ -1,0 +1,48 @@
+{
+  "id": "tesla-inc",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Tesla",
+      "from": "2003"
+    }
+  ],
+  "summary": "Electric car maker led by Elon Musk that made electric cars popular.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q478214",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tesla (Q478214)",
+      "url": "https://www.wikidata.org/wiki/Q478214",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tesla, Inc.",
+      "url": "https://en.wikipedia.org/wiki/Tesla,_Inc.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Gigafactory_Texas_Building_1_June_2022.jpg/500px-Gigafactory_Texas_Building_1_June_2022.jpg",
+    "alt": "Tesla",
+    "credit": "Larry D. Moore",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gigafactory_Texas_Building_1_June_2022.jpg"
+  }
+}

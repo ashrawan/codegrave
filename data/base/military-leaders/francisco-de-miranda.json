@@ -1,0 +1,59 @@
+{
+  "id": "francisco-de-miranda",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Francisco de Miranda",
+      "from": "1750"
+    }
+  ],
+  "summary": "Forerunner of independence who fought in the American and French revolutions.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q311447",
+  "events": [
+    {
+      "type": "born",
+      "date": "1750-03-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1816-07-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Francisco de Miranda (Q311447)",
+      "url": "https://www.wikidata.org/wiki/Q311447",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Francisco de Miranda",
+      "url": "https://en.wikipedia.org/wiki/Francisco_de_Miranda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Francisco_de_Miranda_by_Tovar_y_Tovar.jpg_unscaled",
+    "alt": "Francisco de Miranda",
+    "credit": "Martin Tovar y Tovar",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Miranda_by_Tovar_y_Tovar.jpg"
+  }
+}

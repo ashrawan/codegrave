@@ -1,0 +1,59 @@
+{
+  "id": "black-september",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Black September",
+      "from": "1970"
+    }
+  ],
+  "summary": "The war of 1970 with Palestinian groups.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154288",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-09-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jordan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Black September (Q154288)",
+      "url": "https://www.wikidata.org/wiki/Q154288",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Black September",
+      "url": "https://en.wikipedia.org/wiki/Black_September",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Smoke_rises_above_Amman_during_Black_September%2C_1_October_1970.png_unscaled",
+    "alt": "Black September",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Smoke_rises_above_Amman_during_Black_September,_1_October_1970.png"
+  }
+}

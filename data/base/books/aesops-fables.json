@@ -1,0 +1,48 @@
+{
+  "id": "aesops-fables",
+  "category": "books",
+  "names": [
+    {
+      "name": "Aesop's Fables",
+      "from": "-0560"
+    }
+  ],
+  "summary": "Short animal stories with a moral, such as the tortoise and the hare, told in ancient Greece.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q865902",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0560",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Aesop's Fables (Q865902)",
+      "url": "https://www.wikidata.org/wiki/Q865902",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aesop's Fables",
+      "url": "https://en.wikipedia.org/wiki/Aesop's_Fables",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Aesop_and_Priests_by_Francis_Barlow_1687.png/500px-Aesop_and_Priests_by_Francis_Barlow_1687.png",
+    "alt": "Aesop's Fables",
+    "credit": "Francis Barlow",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Aesop_and_Priests_by_Francis_Barlow_1687.png"
+  }
+}

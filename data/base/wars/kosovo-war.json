@@ -1,0 +1,59 @@
+{
+  "id": "kosovo-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Kosovo War",
+      "from": "1998"
+    }
+  ],
+  "summary": "The war of 1998 and 1999.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q190029",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-02-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-06-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kosovo War (Q190029)",
+      "url": "https://www.wikidata.org/wiki/Q190029",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kosovo War",
+      "url": "https://en.wikipedia.org/wiki/Kosovo_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Kosovo_War_header.jpg/500px-Kosovo_War_header.jpg",
+    "alt": "Kosovo War",
+    "credit": "Clockwise from upper left: Tomislav Jagušt, User:Snake bgd, User:Zeke, Senior Airman Mitch Fuqua (U.S. Air Force)",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Kosovo_War_header.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "flight-to-varennes",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Flight to Varennes",
+      "from": "1791"
+    }
+  ],
+  "summary": "Louis XVI and his family tried to escape France in disguise in 1791 and were caught, destroying trust in the king.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1192894",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-06-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1791-06-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Flight to Varennes (Q1192894)",
+      "url": "https://www.wikidata.org/wiki/Q1192894",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Flight to Varennes",
+      "url": "https://en.wikipedia.org/wiki/Flight_to_Varennes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Le_roi_reconnu_%C3%A0_chalons_par_Dumont.jpg/500px-Le_roi_reconnu_%C3%A0_chalons_par_Dumont.jpg",
+    "alt": "Flight to Varennes",
+    "credit": "inconnu. Versement et modifications ː G.Garitan",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_roi_reconnu_%C3%A0_chalons_par_Dumont.jpg"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "id": "uzbekistan",
+  "name": "Uzbekistan",
+  "description": "Uzbekistan from Sogdiana and the Silk Road to Samarkand, Bukhara, Timur, the khanates, Russian and Soviet rule and independence.",
+  "category": "places",
+  "tags": [
+    "uzbekistan",
+    "samarkand",
+    "bukhara",
+    "tashkent",
+    "silk road",
+    "timur"
+  ],
+  "entries": [
+    "aral-sea",
+    "samarkand",
+    "sogdia",
+    "bukhara",
+    "khiva",
+    "tashkent",
+    "al-khwarizmi-scientist",
+    "samanid-empire",
+    "al-biruni",
+    "avicenna",
+    "timur",
+    "timurid-empire",
+    "ulugh-beg",
+    "gur-e-amir",
+    "registan",
+    "babur",
+    "khanate-of-bukhara",
+    "islam-karimov",
+    "shavkat-mirziyoyev",
+    "1966-tashkent-earthquake",
+    "uzbekistan",
+    "andijan-massacre"
+  ],
+  "checkpoints": [
+    {
+      "id": "silk-road",
+      "name": "Silk Road",
+      "from": -10000,
+      "to": 1369,
+      "note": "Sogdian merchants traded along the Silk Road. Arab armies brought Islam, scholars such as al-Khwarizmi worked, and the Mongols laid waste the cities."
+    },
+    {
+      "id": "timur-and-the-khanates",
+      "name": "Timur and the khanates",
+      "from": 1370,
+      "to": 1864,
+      "note": "Timur made Samarkand his capital, and Ulugh Beg studied the stars. Khanates ruled Bukhara and Khiva."
+    },
+    {
+      "id": "russian-and-soviet",
+      "name": "Russian and Soviet",
+      "from": 1865,
+      "to": 1990,
+      "note": "Russia took Tashkent in 1865. The Soviets made the land grow cotton, and the Aral Sea dried up."
+    },
+    {
+      "id": "independent-uzbekistan",
+      "name": "Independent Uzbekistan",
+      "from": 1991,
+      "to": 2026,
+      "note": "Uzbekistan became independent in 1991, ruled by Karimov until 2016."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Uzbekistan.svg/330px-Flag_of_Uzbekistan.svg.png",
+    "alt": "Flag of Uzbekistan",
+    "credit": "Farhod Yoʻldoshev",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Uzbekistan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/af/Uzbekistan_anthem.ogg/Uzbekistan_anthem.ogg.mp3",
+    "title": "National Anthem of Uzbekistan",
+    "credit": "Mutal Burhonov / Abdulla Oripov",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Uzbekistan_anthem.ogg"
+  }
+}

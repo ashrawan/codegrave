@@ -1,0 +1,48 @@
+{
+  "id": "turkey-women-vote",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Turkish women get the vote",
+      "from": "1934"
+    }
+  ],
+  "summary": "Turkish women won the vote in national elections in 1934, before many European countries.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q6098256",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-12-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Turkish women get the vote (Q6098256)",
+      "url": "https://www.wikidata.org/wiki/Q6098256",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Women's suffrage in Turkey",
+      "url": "https://en.wikipedia.org/wiki/Women's_suffrage_in_Turkey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Political_cartoon_commenting_on_women%27s_voting_rights_in_Quebec.jpg/500px-Political_cartoon_commenting_on_women%27s_voting_rights_in_Quebec.jpg",
+    "alt": "Turkish women get the vote",
+    "credit": "Racey, Arthur G. (1870-1941) In 1930, Racey was a cartoonist at the Montreal Star.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Political_cartoon_commenting_on_women%27s_voting_rights_in_Quebec.jpg"
+  }
+}

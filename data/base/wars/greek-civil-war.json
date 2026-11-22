@@ -1,0 +1,53 @@
+{
+  "id": "greek-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Greek Civil War",
+      "from": "1946"
+    }
+  ],
+  "summary": "The war of 1946 to 1949 between the government and the communists.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q188972",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-03-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1949-10-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Greek Civil War (Q188972)",
+      "url": "https://www.wikidata.org/wiki/Q188972",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Greek Civil War",
+      "url": "https://en.wikipedia.org/wiki/Greek_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Vladina_edinica%2C_Gradjanska_vojna_vo_Grcija.jpg/500px-Vladina_edinica%2C_Gradjanska_vojna_vo_Grcija.jpg",
+    "alt": "Greek Civil War",
+    "credit": "AnonymousUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vladina_edinica,_Gradjanska_vojna_vo_Grcija.jpg"
+  }
+}

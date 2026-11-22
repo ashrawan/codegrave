@@ -1,0 +1,45 @@
+{
+  "id": "new-york-stock-exchange",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "New York Stock Exchange",
+      "from": "1792"
+    }
+  ],
+  "summary": "The largest stock exchange in the world, begun under a buttonwood tree on Wall Street in 1792.",
+  "wikidata": "Q13677",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792-05-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: New York Stock Exchange (Q13677)",
+      "url": "https://www.wikidata.org/wiki/Q13677",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New York Stock Exchange",
+      "url": "https://en.wikipedia.org/wiki/New_York_Stock_Exchange",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Nyse_2009g.JPG/500px-Nyse_2009g.JPG",
+    "alt": "New York Stock Exchange",
+    "credit": "chensiyuan",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nyse_2009g.JPG"
+  }
+}

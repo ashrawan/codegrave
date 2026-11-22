@@ -1,0 +1,59 @@
+{
+  "id": "al-biruni",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Al-Biruni",
+      "from": "0973"
+    }
+  ],
+  "summary": "Scholar of Khwarazm who measured the Earth.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q11826",
+  "events": [
+    {
+      "type": "born",
+      "date": "0973-09-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1048-12-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uzbekistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Al-Biruni (Q11826)",
+      "url": "https://www.wikidata.org/wiki/Q11826",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Al-Biruni",
+      "url": "https://en.wikipedia.org/wiki/Al-Biruni",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Al-Biruni_Portrait.jpg_unscaled",
+    "alt": "Al-Biruni",
+    "credit": "Michel Bakni",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Al-Biruni_Portrait.jpg"
+  }
+}

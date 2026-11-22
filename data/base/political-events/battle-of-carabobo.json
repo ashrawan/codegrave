@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-carabobo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of Carabobo",
+      "from": "1821"
+    }
+  ],
+  "summary": "Bolívar's victory of 1821 that secured Venezuela's independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q388210",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821-06-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1821-06-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Carabobo (Q388210)",
+      "url": "https://www.wikidata.org/wiki/Q388210",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Carabobo",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Carabobo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/BatallaCarabobo01.JPG/500px-BatallaCarabobo01.JPG",
+    "alt": "Battle of Carabobo",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BatallaCarabobo01.JPG"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "grand-mosque-seizure",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Grand Mosque seizure",
+      "from": "1979"
+    }
+  ],
+  "summary": "The armed takeover of the Great Mosque of Mecca by militants in 1979, ended after two weeks of fighting.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q829839",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-11-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grand Mosque seizure (Q829839)",
+      "url": "https://www.wikidata.org/wiki/Q829839",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand Mosque seizure",
+      "url": "https://en.wikipedia.org/wiki/Grand_Mosque_seizure",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Kaaba_mirror_edit_jj.jpg/500px-Kaaba_mirror_edit_jj.jpg",
+    "alt": "Grand Mosque seizure",
+    "credit": "Muhammad Mahdi Karim; edited by jjron",
+    "licence": "GFDL 1.2",
+    "source": "https://commons.wikimedia.org/wiki/File:Kaaba_mirror_edit_jj.jpg"
+  }
+}

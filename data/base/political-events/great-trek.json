@@ -1,0 +1,53 @@
+{
+  "id": "great-trek",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Great Trek",
+      "from": "1835"
+    }
+  ],
+  "summary": "Boer settlers left the Cape for the interior from 1835 to escape British rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q338949",
+  "events": [
+    {
+      "type": "born",
+      "date": "1835",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1846",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Great Trek (Q338949)",
+      "url": "https://www.wikidata.org/wiki/Q338949",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Trek",
+      "url": "https://en.wikipedia.org/wiki/Great_Trek",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Uittog%2C_panele_1_%26_2%2C_Voortrekkermonument.jpg/500px-Uittog%2C_panele_1_%26_2%2C_Voortrekkermonument.jpg",
+    "alt": "Great Trek",
+    "credit": "JMK",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Uittog,_panele_1_%26_2,_Voortrekkermonument.jpg"
+  }
+}

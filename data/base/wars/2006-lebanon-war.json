@@ -1,0 +1,59 @@
+{
+  "id": "2006-lebanon-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "2006 Lebanon War",
+      "from": "2006"
+    }
+  ],
+  "summary": "The war between Israel and Hezbollah.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q49104",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-07-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2006 Lebanon War (Q49104)",
+      "url": "https://www.wikidata.org/wiki/Q49104",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2006 Lebanon War",
+      "url": "https://en.wikipedia.org/wiki/2006_Lebanon_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Tyre_air_strike.jpg/500px-Tyre_air_strike.jpg",
+    "alt": "2006 Lebanon War",
+    "credit": "Masser",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tyre_air_strike.jpg"
+  }
+}

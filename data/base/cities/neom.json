@@ -1,0 +1,45 @@
+{
+  "id": "neom",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Neom",
+      "from": "2017"
+    }
+  ],
+  "summary": "A planned city of the future announced in 2017 in the northwest, including The Line.",
+  "wikidata": "Q42310572",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Neom (Q42310572)",
+      "url": "https://www.wikidata.org/wiki/Q42310572",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neom",
+      "url": "https://en.wikipedia.org/wiki/Neom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Neom_location-ar.jpg/500px-Neom_location-ar.jpg",
+    "alt": "Neom",
+    "credit": "Original: Costa.x Derivative: باسم",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Neom_location-ar.jpg"
+  }
+}

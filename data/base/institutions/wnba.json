@@ -1,0 +1,51 @@
+{
+  "id": "wnba",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "WNBA",
+      "from": "1996"
+    }
+  ],
+  "summary": "The women's professional league in the United States, first played in 1997.",
+  "wikidata": "Q2593221",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: WNBA (Q2593221)",
+      "url": "https://www.wikidata.org/wiki/Q2593221",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Women's National Basketball Association",
+      "url": "https://en.wikipedia.org/wiki/Women's_National_Basketball_Association",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Courtney_Williams_guards_Leonie_Fiebich.jpg/500px-Courtney_Williams_guards_Leonie_Fiebich.jpg",
+    "alt": "WNBA",
+    "credit": "WOWyerrr",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Courtney_Williams_guards_Leonie_Fiebich.jpg"
+  }
+}

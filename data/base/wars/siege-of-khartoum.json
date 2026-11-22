@@ -1,0 +1,59 @@
+{
+  "id": "siege-of-khartoum",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Khartoum",
+      "from": "1884"
+    }
+  ],
+  "summary": "The siege of 1884 and 1885 in which Gordon died.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q815159",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884-03-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1885-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Khartoum (Q815159)",
+      "url": "https://www.wikidata.org/wiki/Q815159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Khartoum",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Khartoum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Death_of_General_Gordon_at_Khartoum%2C_by_J.L.G._Ferris.jpg/500px-Death_of_General_Gordon_at_Khartoum%2C_by_J.L.G._Ferris.jpg",
+    "alt": "Siege of Khartoum",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Death_of_General_Gordon_at_Khartoum,_by_J.L.G._Ferris.jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "kabul",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kabul",
+      "from": "1776"
+    }
+  ],
+  "summary": "Afghanistan's capital since 1776, in a high valley in the Hindu Kush.",
+  "wikidata": "Q5838",
+  "events": [
+    {
+      "type": "born",
+      "date": "1776",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kabul (Q5838)",
+      "url": "https://www.wikidata.org/wiki/Q5838",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kabul",
+      "url": "https://en.wikipedia.org/wiki/Kabul",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Kabul_TV_Hill_view.jpg/500px-Kabul_TV_Hill_view.jpg",
+    "alt": "Kabul",
+    "credit": "Sven Dirks, Wien",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kabul_TV_Hill_view.jpg"
+  }
+}

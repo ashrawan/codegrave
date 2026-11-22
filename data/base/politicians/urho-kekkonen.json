@@ -1,0 +1,53 @@
+{
+  "id": "urho-kekkonen",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Urho Kekkonen",
+      "from": "1900"
+    }
+  ],
+  "summary": "President for 26 years, from 1956 to 1982, who kept Finland free by careful dealings with Moscow.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q179858",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900-09-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-08-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Urho Kekkonen (Q179858)",
+      "url": "https://www.wikidata.org/wiki/Q179858",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Urho Kekkonen",
+      "url": "https://en.wikipedia.org/wiki/Urho_Kekkonen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Urho-Kekkonen-1977-c.jpg/500px-Urho-Kekkonen-1977-c.jpg",
+    "alt": "Urho Kekkonen",
+    "credit": "AnonymousUnknown author / Kuvasiskot studio",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Urho-Kekkonen-1977-c.jpg"
+  }
+}

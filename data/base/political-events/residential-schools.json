@@ -1,0 +1,53 @@
+{
+  "id": "residential-schools",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Canadian Indian residential school system",
+      "from": "1831"
+    }
+  ],
+  "summary": "Church-run schools from 1831 to 1997 that took Indigenous children from their families.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q945507",
+  "events": [
+    {
+      "type": "born",
+      "date": "1831",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1997",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Canadian Indian residential school system (Q945507)",
+      "url": "https://www.wikidata.org/wiki/Q945507",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Canadian Indian residential school system",
+      "url": "https://en.wikipedia.org/wiki/Canadian_Indian_residential_school_system",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Students_of_Fort_Albany_Residential_School_in_class.JPG/500px-Students_of_Fort_Albany_Residential_School_in_class.JPG",
+    "alt": "Canadian Indian residential school system",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Students_of_Fort_Albany_Residential_School_in_class.JPG"
+  }
+}

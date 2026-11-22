@@ -1,0 +1,59 @@
+{
+  "id": "john-curtin",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "John Curtin",
+      "from": "1885"
+    }
+  ],
+  "summary": "Prime minister who led Australia through most of the Second World War and turned to the United States for help.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q23375",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885-01-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Curtin (Q23375)",
+      "url": "https://www.wikidata.org/wiki/Q23375",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Curtin",
+      "url": "https://en.wikipedia.org/wiki/John_Curtin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/JohnCurtin.jpg/500px-JohnCurtin.jpg",
+    "alt": "John Curtin",
+    "credit": "National Library of Australia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JohnCurtin.jpg"
+  }
+}

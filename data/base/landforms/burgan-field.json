@@ -1,0 +1,51 @@
+{
+  "id": "burgan-field",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Burgan field",
+      "from": "1938"
+    }
+  ],
+  "summary": "The great oil field found in 1938, one of the largest in the world.",
+  "wikidata": "Q1014779",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kuwait"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Burgan field (Q1014779)",
+      "url": "https://www.wikidata.org/wiki/Q1014779",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Burgan field",
+      "url": "https://en.wikipedia.org/wiki/Burgan_field",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Burgan_oil_field_Aerial_image.jpg/500px-Burgan_oil_field_Aerial_image.jpg",
+    "alt": "Burgan field",
+    "credit": "Jdromero28",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Burgan_oil_field_Aerial_image.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "venezuelan-crisis",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Crisis in Venezuela",
+      "from": "2010"
+    }
+  ],
+  "summary": "Economic collapse, hyperinflation and shortages from the 2010s, which drove about eight million people abroad.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q28485502",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Crisis in Venezuela (Q28485502)",
+      "url": "https://www.wikidata.org/wiki/Q28485502",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Crisis in Venezuela",
+      "url": "https://en.wikipedia.org/wiki/Crisis_in_Venezuela",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/%C2%A9UNICEF-ECU-2018-Arcos.jpg/500px-%C2%A9UNICEF-ECU-2018-Arcos.jpg",
+    "alt": "Crisis in Venezuela",
+    "credit": "UNICEF Ecuador from Ecuador",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%C2%A9UNICEF-ECU-2018-Arcos.jpg"
+  }
+}

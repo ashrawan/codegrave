@@ -1,0 +1,51 @@
+{
+  "id": "mombasa",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Mombasa",
+      "from": "1593"
+    }
+  ],
+  "summary": "An old Swahili port city on the Indian Ocean.",
+  "wikidata": "Q225641",
+  "events": [
+    {
+      "type": "born",
+      "date": "1593",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mombasa (Q225641)",
+      "url": "https://www.wikidata.org/wiki/Q225641",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mombasa",
+      "url": "https://en.wikipedia.org/wiki/Mombasa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Downtown_Mombasa.jpg/500px-Downtown_Mombasa.jpg",
+    "alt": "Mombasa",
+    "credit": "Victor Ochieng",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Downtown_Mombasa.jpg"
+  }
+}

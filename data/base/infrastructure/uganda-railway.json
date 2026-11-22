@@ -1,0 +1,51 @@
+{
+  "id": "uganda-railway",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Uganda Railway",
+      "from": "1903"
+    }
+  ],
+  "summary": "The railway from Mombasa to Lake Victoria, built from 1896.",
+  "wikidata": "Q500115",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uganda Railway (Q500115)",
+      "url": "https://www.wikidata.org/wiki/Q500115",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uganda Railway",
+      "url": "https://en.wikipedia.org/wiki/Uganda_Railway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/URCengines.jpg/500px-URCengines.jpg",
+    "alt": "Uganda Railway",
+    "credit": "Danbirchall at English Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:URCengines.jpg"
+  }
+}

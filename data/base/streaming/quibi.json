@@ -1,0 +1,51 @@
+{
+  "id": "quibi",
+  "category": "streaming",
+  "names": [
+    {
+      "name": "Quibi",
+      "from": "2020"
+    }
+  ],
+  "summary": "A service of short videos for phones that raised almost two billion dollars and closed eight months after launch.",
+  "wikidata": "Q65073105",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-04-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-12-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Quibi (Q65073105)",
+      "url": "https://www.wikidata.org/wiki/Q65073105",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quibi",
+      "url": "https://en.wikipedia.org/wiki/Quibi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "cause": "Too few people paid for short videos they could watch free elsewhere.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Quibi_logo_purple.svg/500px-Quibi_logo_purple.svg.png",
+    "alt": "Quibi",
+    "credit": "Quibi Holdings LLC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Quibi_logo_purple.svg"
+  }
+}

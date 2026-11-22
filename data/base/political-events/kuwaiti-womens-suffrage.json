@@ -1,0 +1,47 @@
+{
+  "id": "kuwaiti-womens-suffrage",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Votes for women",
+      "from": "2005"
+    }
+  ],
+  "summary": "Women won the vote in 2005.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q8031243",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kuwait"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Votes for women (Q8031243)",
+      "url": "https://www.wikidata.org/wiki/Q8031243",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Women's suffrage in Kuwait",
+      "url": "https://en.wikipedia.org/wiki/Women's_suffrage_in_Kuwait",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

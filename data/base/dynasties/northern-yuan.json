@@ -1,0 +1,52 @@
+{
+  "id": "northern-yuan",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Northern Yuan",
+      "from": "1368"
+    }
+  ],
+  "summary": "The Mongol state after the fall of the Yuan.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q8959",
+  "events": [
+    {
+      "type": "born",
+      "date": "1368-01-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1691",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Northern Yuan (Q8959)",
+      "url": "https://www.wikidata.org/wiki/Q8959",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Northern Yuan",
+      "url": "https://en.wikipedia.org/wiki/Northern_Yuan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "john-lewis",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "John Lewis",
+      "from": "1940"
+    }
+  ],
+  "summary": "Leader of the student movement, beaten at Selma, who served in Congress for more than thirty years.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q45380",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-02-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Lewis (Q45380)",
+      "url": "https://www.wikidata.org/wiki/Q45380",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Lewis",
+      "url": "https://en.wikipedia.org/wiki/John_Lewis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/John_Lewis-2006_%28cropped%29.jpg/500px-John_Lewis-2006_%28cropped%29.jpg",
+    "alt": "John Lewis",
+    "credit": "United States House of Representatives",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Lewis-2006_(cropped).jpg"
+  }
+}

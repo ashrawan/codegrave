@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-grunwald",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Grunwald",
+      "from": "1410"
+    }
+  ],
+  "summary": "The battle of 1410 in which Poland and Lithuania crushed the Teutonic Knights.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q33570",
+  "events": [
+    {
+      "type": "born",
+      "date": "1410-07-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1410-07-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Grunwald (Q33570)",
+      "url": "https://www.wikidata.org/wiki/Q33570",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Grunwald",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Grunwald",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Grunwald_Witold.jpg/500px-Grunwald_Witold.jpg",
+    "alt": "Battle of Grunwald",
+    "credit": "Jan Matejko",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Grunwald_Witold.jpg"
+  }
+}

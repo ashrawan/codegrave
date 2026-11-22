@@ -1,0 +1,45 @@
+{
+  "id": "belgrade",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Belgrade",
+      "from": "-0279"
+    }
+  ],
+  "summary": "The capital of Serbia, where the Sava meets the Danube, fought over in more than a hundred wars.",
+  "wikidata": "Q3711",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0279",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Belgrade (Q3711)",
+      "url": "https://www.wikidata.org/wiki/Q3711",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belgrade",
+      "url": "https://en.wikipedia.org/wiki/Belgrade",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Beograd_collage.jpg/500px-Beograd_collage.jpg",
+    "alt": "Belgrade",
+    "credit": "Zeks127",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Beograd_collage.jpg"
+  }
+}

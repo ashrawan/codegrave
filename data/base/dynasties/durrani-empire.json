@@ -1,0 +1,52 @@
+{
+  "id": "durrani-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Durrani Empire",
+      "from": "1747"
+    }
+  ],
+  "summary": "The empire founded in 1747, seen as the start of modern Afghanistan.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q467627",
+  "events": [
+    {
+      "type": "born",
+      "date": "1747",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1826",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Durrani Empire (Q467627)",
+      "url": "https://www.wikidata.org/wiki/Q467627",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Durrani Empire",
+      "url": "https://en.wikipedia.org/wiki/Durrani_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

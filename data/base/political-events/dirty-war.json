@@ -1,0 +1,52 @@
+{
+  "id": "dirty-war",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Dirty War",
+      "from": "1955"
+    }
+  ],
+  "summary": "The military regime's campaign of state terror from 1976 to 1983, in which some thirty thousand people disappeared.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q75984",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1989",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dirty War (Q75984)",
+      "url": "https://www.wikidata.org/wiki/Q75984",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dirty War",
+      "url": "https://en.wikipedia.org/wiki/Dirty_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

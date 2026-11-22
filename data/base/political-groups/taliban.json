@@ -1,0 +1,54 @@
+{
+  "id": "taliban",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Taliban",
+      "from": "1994"
+    }
+  ],
+  "summary": "The Islamist movement that has ruled Afghanistan twice.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q42418",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Taliban (Q42418)",
+      "url": "https://www.wikidata.org/wiki/Q42418",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taliban",
+      "url": "https://en.wikipedia.org/wiki/Taliban",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Taliban_insurgents_turn_themselves_in_to_Afghan_National_Security_Forces_at_a_forward_operating_base_in_Puza-i-Eshan_-a.jpg/500px-Taliban_insurgents_turn_themselves_in_to_Afghan_National_Security_Forces_at_a_forward_operating_base_in_Puza-i-Eshan_-a.jpg",
+    "alt": "Taliban",
+    "credit": "isafmedia",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Taliban_insurgents_turn_themselves_in_to_Afghan_National_Security_Forces_at_a_forward_operating_base_in_Puza-i-Eshan_-a.jpg"
+  }
+}

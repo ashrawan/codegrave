@@ -1,0 +1,53 @@
+{
+  "id": "olympe-de-gouges",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Olympe de Gouges",
+      "from": "1748"
+    }
+  ],
+  "summary": "French playwright who wrote the Declaration of the Rights of Woman in 1791 and was guillotined two years later.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q206972",
+  "events": [
+    {
+      "type": "born",
+      "date": "1748-05-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1793-11-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Olympe de Gouges (Q206972)",
+      "url": "https://www.wikidata.org/wiki/Q206972",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Olympe de Gouges",
+      "url": "https://en.wikipedia.org/wiki/Olympe_de_Gouges",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Marie-Olympe-de-Gouges.jpg",
+    "alt": "Olympe de Gouges",
+    "credit": "Alexander Kucharsky",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marie-Olympe-de-Gouges.jpg"
+  }
+}

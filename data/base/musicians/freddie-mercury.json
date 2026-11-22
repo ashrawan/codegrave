@@ -1,0 +1,59 @@
+{
+  "id": "freddie-mercury",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Freddie Mercury",
+      "from": "1946"
+    }
+  ],
+  "summary": "Singer of Queen, born in Zanzibar.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q15869",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-09-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-11-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Freddie Mercury (Q15869)",
+      "url": "https://www.wikidata.org/wiki/Q15869",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Freddie Mercury",
+      "url": "https://en.wikipedia.org/wiki/Freddie_Mercury",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Freddie_Mercury_at_Sheraton_Hotel_Buenos_Aires.jpg_unscaled",
+    "alt": "Freddie Mercury",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Freddie_Mercury_at_Sheraton_Hotel_Buenos_Aires.jpg"
+  }
+}

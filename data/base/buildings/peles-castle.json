@@ -1,0 +1,48 @@
+{
+  "id": "peles-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Peleș Castle",
+      "from": "1873"
+    }
+  ],
+  "summary": "The royal castle in the Carpathians built for King Carol I.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q917702",
+  "events": [
+    {
+      "type": "born",
+      "date": "1873",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Peleș Castle (Q917702)",
+      "url": "https://www.wikidata.org/wiki/Q917702",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peleș Castle",
+      "url": "https://en.wikipedia.org/wiki/Peleș_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/01_Chateau_Peles.jpg/500px-01_Chateau_Peles.jpg",
+    "alt": "Peleș Castle",
+    "credit": "Myrabella",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:01_Chateau_Peles.jpg"
+  }
+}

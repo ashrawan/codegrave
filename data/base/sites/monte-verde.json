@@ -1,0 +1,45 @@
+{
+  "id": "monte-verde",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Monte Verde",
+      "from": "-12500"
+    }
+  ],
+  "summary": "A settlement of about 14,500 years ago, among the oldest known in the Americas.",
+  "wikidata": "Q975775",
+  "events": [
+    {
+      "type": "born",
+      "date": "-12500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Monte Verde (Q975775)",
+      "url": "https://www.wikidata.org/wiki/Q975775",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Monte Verde",
+      "url": "https://en.wikipedia.org/wiki/Monte_Verde",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Monte_Verde_3.JPG/500px-Monte_Verde_3.JPG",
+    "alt": "Monte Verde",
+    "credit": "Rodolfo Ditzel Lacoa",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Monte_Verde_3.JPG"
+  }
+}

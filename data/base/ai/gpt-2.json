@@ -9,6 +9,7 @@
   ],
   "maker": "OpenAI",
   "summary": "OpenAI's second language model, trained on eight million web pages. It wrote text good enough that OpenAI at first held back the full model, saying it could be misused. It is the direct ancestor of GPT-3 and ChatGPT, and its code and weights are still free to download.",
+  "wikidata": "Q95726727",
   "events": [
     {
       "type": "born",
@@ -38,5 +39,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/GPT2-talks-about-GPT2.png/500px-GPT2-talks-about-GPT2.png",
+    "alt": "GPT-2",
+    "credit": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:GPT2-talks-about-GPT2.png"
+  }
 }

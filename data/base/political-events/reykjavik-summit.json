@@ -1,0 +1,53 @@
+{
+  "id": "reykjavik-summit",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Reykjavík Summit",
+      "from": "1986"
+    }
+  ],
+  "summary": "Reagan and Gorbachev met in Reykjavík in 1986 and almost agreed to scrap all nuclear weapons.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1036702",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-10-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-10-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Reykjavík Summit (Q1036702)",
+      "url": "https://www.wikidata.org/wiki/Q1036702",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reykjavík Summit",
+      "url": "https://en.wikipedia.org/wiki/Reykjavík_Summit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/President_Ronald_Reagan_Says_Goodbye_to_Soviet_General_Secretary_Gorbachev_After_The_Last_Meeting_at_Hofdi_House_Reykjavik_Iceland_-_DPLA_-_52e614a2e7c0706a37e0b9f3a873c385.jpg/500px-thumbnail.jpg",
+    "alt": "Reykjavík Summit",
+    "credit": "President (1981-1989 : Reagan). White House Photographic Office. 1981-1989",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:President_Ronald_Reagan_Says_Goodbye_to_Soviet_General_Secretary_Gorbachev_After_The_Last_Meeting_at_Hofdi_House_Reykjavik_Iceland_-_DPLA_-_52e614a2e7c0706a37e0b9f3a873c385.jpg"
+  }
+}

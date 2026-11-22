@@ -1,0 +1,59 @@
+{
+  "id": "sheikh-mujibur-rahman",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Sheikh Mujibur Rahman",
+      "from": "1920"
+    }
+  ],
+  "summary": "Leader of independence and founding father of Bangladesh, killed in a coup in 1975.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q191375",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-03-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bangladesh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sheikh Mujibur Rahman (Q191375)",
+      "url": "https://www.wikidata.org/wiki/Q191375",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sheikh Mujibur Rahman",
+      "url": "https://en.wikipedia.org/wiki/Sheikh_Mujibur_Rahman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Sheikh_Mujibur_Rahman_portrait_%28PID-h0066%29.jpg/500px-Sheikh_Mujibur_Rahman_portrait_%28PID-h0066%29.jpg",
+    "alt": "Sheikh Mujibur Rahman",
+    "credit": "Prime Minister's Office of Bangladesh",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sheikh_Mujibur_Rahman_portrait_(PID-h0066).jpg"
+  }
+}

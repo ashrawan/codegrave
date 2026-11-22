@@ -1,0 +1,52 @@
+{
+  "id": "almoravid-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Almoravid dynasty",
+      "from": "1040"
+    }
+  ],
+  "summary": "Berber dynasty from the Sahara that ruled Morocco and Spain and founded Marrakesh.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q75613",
+  "events": [
+    {
+      "type": "born",
+      "date": "1040",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1147",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "morocco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Almoravid dynasty (Q75613)",
+      "url": "https://www.wikidata.org/wiki/Q75613",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Almoravid dynasty",
+      "url": "https://en.wikipedia.org/wiki/Almoravid_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

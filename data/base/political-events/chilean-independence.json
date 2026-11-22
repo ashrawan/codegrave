@@ -1,0 +1,53 @@
+{
+  "id": "chilean-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Chilean War of Independence",
+      "from": "1810"
+    }
+  ],
+  "summary": "The struggle against Spain from 1810, won at Chacabuco and Maipú.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1072889",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1826",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Chilean War of Independence (Q1072889)",
+      "url": "https://www.wikidata.org/wiki/Q1072889",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chilean War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Chilean_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/FCNS1.svg/500px-FCNS1.svg.png",
+    "alt": "Chilean War of Independence",
+    "credit": "me",
+    "licence": "GFDL",
+    "source": "https://commons.wikimedia.org/wiki/File:FCNS1.svg"
+  }
+}

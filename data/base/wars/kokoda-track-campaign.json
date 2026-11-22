@@ -1,0 +1,53 @@
+{
+  "id": "kokoda-track-campaign",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Kokoda Track campaign",
+      "from": "1942"
+    }
+  ],
+  "summary": "Australians stopped the Japanese advance in New Guinea in 1942.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2299343",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-07-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1942-11-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kokoda Track campaign (Q2299343)",
+      "url": "https://www.wikidata.org/wiki/Q2299343",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kokoda Track campaign",
+      "url": "https://en.wikipedia.org/wiki/Kokoda_Track_campaign",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Australian_39th_Battalion_after_the_Kokoda_Track_campaign_1942_%28AWM_013289%29.jpg/500px-Australian_39th_Battalion_after_the_Kokoda_Track_campaign_1942_%28AWM_013289%29.jpg",
+    "alt": "Kokoda Track campaign",
+    "credit": "Parer, Damien Peter",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Australian_39th_Battalion_after_the_Kokoda_Track_campaign_1942_(AWM_013289).jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "algiers",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Algiers",
+      "from": "0944"
+    }
+  ],
+  "summary": "The white city of the capital, on the Mediterranean.",
+  "wikidata": "Q3561",
+  "events": [
+    {
+      "type": "born",
+      "date": "0944",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Algiers (Q3561)",
+      "url": "https://www.wikidata.org/wiki/Q3561",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Algiers",
+      "url": "https://en.wikipedia.org/wiki/Algiers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Argel_3.jpg/500px-Argel_3.jpg",
+    "alt": "Algiers",
+    "credit": "LBM1948",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Argel_3.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "regency-of-algiers",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Regency of Algiers",
+      "from": "1516"
+    }
+  ],
+  "summary": "The Ottoman state of Algiers, home of the Barbary corsairs.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3045696",
+  "events": [
+    {
+      "type": "born",
+      "date": "1516",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1830-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Regency of Algiers (Q3045696)",
+      "url": "https://www.wikidata.org/wiki/Q3045696",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Regency of Algiers",
+      "url": "https://en.wikipedia.org/wiki/Regency_of_Algiers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/View_of_Algiers_in_1828.jpg/500px-View_of_Algiers_in_1828.jpg",
+    "alt": "Regency of Algiers",
+    "credit": "Robert Salmon",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Algiers_in_1828.jpg"
+  }
+}

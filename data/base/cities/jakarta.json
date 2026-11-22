@@ -1,0 +1,51 @@
+{
+  "id": "jakarta",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Jakarta",
+      "from": "1527"
+    }
+  ],
+  "summary": "The capital and largest city, once the Dutch colonial town of Batavia.",
+  "wikidata": "Q3630",
+  "events": [
+    {
+      "type": "born",
+      "date": "1527-06-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jakarta (Q3630)",
+      "url": "https://www.wikidata.org/wiki/Q3630",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jakarta",
+      "url": "https://en.wikipedia.org/wiki/Jakarta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Jakarta.jpg/500px-Jakarta.jpg",
+    "alt": "Jakarta",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Copyrighted free use",
+    "source": "https://commons.wikimedia.org/wiki/File:Jakarta.jpg"
+  }
+}

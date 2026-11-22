@@ -1,0 +1,54 @@
+{
+  "id": "abdou-diouf",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Abdou Diouf",
+      "from": "1935"
+    }
+  ],
+  "summary": "President from 1981 to 2000.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q219728",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-09-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "senegal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abdou Diouf (Q219728)",
+      "url": "https://www.wikidata.org/wiki/Q219728",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abdou Diouf",
+      "url": "https://en.wikipedia.org/wiki/Abdou_Diouf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Abdou_Diouf.jpg/500px-Abdou_Diouf.jpg",
+    "alt": "Abdou Diouf",
+    "credit": "Chris Peus",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Abdou_Diouf.jpg"
+  }
+}

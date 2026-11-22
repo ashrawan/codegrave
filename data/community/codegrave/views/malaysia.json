@@ -1,0 +1,76 @@
+{
+  "id": "malaysia",
+  "name": "Malaysia",
+  "description": "Malaysia from the Malacca Sultanate to Portuguese, Dutch and British rule, rubber and tin, independence, the federation and the Petronas Towers.",
+  "category": "places",
+  "tags": [
+    "malaysia",
+    "kuala lumpur",
+    "malacca",
+    "borneo",
+    "merdeka",
+    "asia"
+  ],
+  "entries": [
+    "niah-caves",
+    "malacca-sultanate",
+    "capture-of-malacca-1511",
+    "british-malaya",
+    "kuala-lumpur",
+    "tunku-abdul-rahman",
+    "mahathir-mohamad",
+    "anwar-ibrahim",
+    "malayan-emergency",
+    "malayan-declaration-of-independence",
+    "confrontation",
+    "malaysia-agreement",
+    "malaysia",
+    "proclamation-of-singapore",
+    "13-may-incident",
+    "petronas",
+    "lee-chong-wei",
+    "proton",
+    "putrajaya",
+    "petronas-towers",
+    "1mdb-scandal",
+    "malaysia-airlines-flight-370",
+    "2018-malaysian-general-election"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-malaya",
+      "name": "Ancient Malaya",
+      "from": -40000,
+      "to": 1399,
+      "note": "People lived in the Niah caves forty thousand years ago. Indian-influenced kingdoms traded along the straits."
+    },
+    {
+      "id": "sultans-and-colonies",
+      "name": "Sultans and colonies",
+      "from": 1400,
+      "to": 1956,
+      "note": "The Malacca Sultanate spread Islam until the Portuguese took it in 1511. The Dutch and then the British followed, and tin and rubber drew Chinese and Indian workers."
+    },
+    {
+      "id": "malaysia",
+      "name": "Malaysia",
+      "from": 1957,
+      "to": 2026,
+      "note": "Malaya became independent in 1957 and Malaysia was formed in 1963. Mahathir drove industry, and Kuala Lumpur gained the tallest towers in the world."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Flag_of_Malaysia.svg/330px-Flag_of_Malaysia.svg.png",
+    "alt": "Flag of Malaysia",
+    "credit": "MapGrid (old version SKopp, Zscout370 and Ranking Update)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Malaysia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/ee/Negaraku_instrumental.ogg/Negaraku_instrumental.ogg.mp3",
+    "title": "Negaraku",
+    "credit": "https://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Negaraku_instrumental.ogg"
+  }
+}

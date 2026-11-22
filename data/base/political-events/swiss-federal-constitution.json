@@ -1,0 +1,54 @@
+{
+  "id": "swiss-federal-constitution",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Swiss federal state",
+      "from": "1848"
+    }
+  ],
+  "summary": "The constitution of 1848 that made Switzerland a federal state with a parliament in Bern.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q30921",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Swiss federal state (Q30921)",
+      "url": "https://www.wikidata.org/wiki/Q30921",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Federal Constitution of Switzerland",
+      "url": "https://en.wikipedia.org/wiki/Federal_Constitution_of_Switzerland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Bundesverfassung_1848.jpg/500px-Bundesverfassung_1848.jpg",
+    "alt": "Swiss federal state",
+    "credit": "omarcoz",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bundesverfassung_1848.jpg"
+  }
+}

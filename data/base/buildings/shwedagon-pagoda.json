@@ -1,0 +1,48 @@
+{
+  "id": "shwedagon-pagoda",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Shwedagon Pagoda",
+      "from": "0600"
+    }
+  ],
+  "summary": "The great golden stupa on a hill in Yangon, the most sacred Buddhist site in Myanmar.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q464535",
+  "events": [
+    {
+      "type": "born",
+      "date": "0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Shwedagon Pagoda (Q464535)",
+      "url": "https://www.wikidata.org/wiki/Q464535",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shwedagon Pagoda",
+      "url": "https://en.wikipedia.org/wiki/Shwedagon_Pagoda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Yangon_-_Shwedagon_Pagoda_03.jpg/500px-Yangon_-_Shwedagon_Pagoda_03.jpg",
+    "alt": "Shwedagon Pagoda",
+    "credit": "Stefan Fussan",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yangon_-_Shwedagon_Pagoda_03.jpg"
+  }
+}

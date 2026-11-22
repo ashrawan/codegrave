@@ -1,0 +1,45 @@
+{
+  "id": "gondar",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Gondar",
+      "from": "1635"
+    }
+  ],
+  "summary": "The royal capital from 1636, with castles of the emperors.",
+  "wikidata": "Q218861",
+  "events": [
+    {
+      "type": "born",
+      "date": "1635",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Gondar (Q218861)",
+      "url": "https://www.wikidata.org/wiki/Q218861",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gondar",
+      "url": "https://en.wikipedia.org/wiki/Gondar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Gonder_from_the_Goha_hotel.jpg/500px-Gonder_from_the_Goha_hotel.jpg",
+    "alt": "Gondar",
+    "credit": "Giustino",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gonder_from_the_Goha_hotel.jpg"
+  }
+}

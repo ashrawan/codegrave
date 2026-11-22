@@ -1,0 +1,54 @@
+{
+  "id": "alexander-nevsky-cathedral-sofia",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Alexander Nevsky Cathedral, Sofia",
+      "from": "1882"
+    }
+  ],
+  "summary": "The great cathedral of Sofia, built for the Russians who died freeing Bulgaria.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q43282",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882-03-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alexander Nevsky Cathedral, Sofia (Q43282)",
+      "url": "https://www.wikidata.org/wiki/Q43282",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexander Nevsky Cathedral, Sofia",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Nevsky_Cathedral,_Sofia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/AlexanderNevskyCathedral-Sofia-6.jpg/500px-AlexanderNevskyCathedral-Sofia-6.jpg",
+    "alt": "Alexander Nevsky Cathedral, Sofia",
+    "credit": "Plamen Agov (user:MrPanyGoff)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:AlexanderNevskyCathedral-Sofia-6.jpg"
+  }
+}

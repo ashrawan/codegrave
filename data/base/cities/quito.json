@@ -1,0 +1,51 @@
+{
+  "id": "quito",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Quito",
+      "from": "1534"
+    }
+  ],
+  "summary": "The capital, high in the Andes, with one of the best-kept old towns of the Americas.",
+  "wikidata": "Q2900",
+  "events": [
+    {
+      "type": "born",
+      "date": "1534-12-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ecuador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Quito (Q2900)",
+      "url": "https://www.wikidata.org/wiki/Q2900",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quito",
+      "url": "https://en.wikipedia.org/wiki/Quito",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/FACHADA_ASAMBLEA_NACIONAL._QUITO%2C_20_DE_FEBRERO_2020._01.jpg/500px-FACHADA_ASAMBLEA_NACIONAL._QUITO%2C_20_DE_FEBRERO_2020._01.jpg",
+    "alt": "Quito",
+    "credit": "Asamblea Nacional del Ecuador",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FACHADA_ASAMBLEA_NACIONAL._QUITO,_20_DE_FEBRERO_2020._01.jpg"
+  }
+}

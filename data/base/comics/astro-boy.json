@@ -22,9 +22,14 @@
       "type": "born",
       "date": "1952-04-03",
       "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-03-12",
+      "precision": "day"
     }
   ],
-  "status": "alive",
+  "status": "dead",
   "signals": {
     "adoption": 3,
     "standard": 0,

@@ -9,6 +9,7 @@
   ],
   "maker": "IBM",
   "summary": "IBM's question-answering computer, built to play the quiz show Jeopardy!, where it beat two of the show's greatest champions in 2011. IBM then tried to turn it into a business, above all in medicine, with disappointing results.",
+  "wikidata": "Q12253",
   "events": [
     {
       "type": "project_start",
@@ -52,5 +53,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/IBM_Watson.PNG/500px-IBM_Watson.PNG",
+    "alt": "IBM Watson",
+    "credit": "Clockready",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:IBM_Watson.PNG"
+  }
 }

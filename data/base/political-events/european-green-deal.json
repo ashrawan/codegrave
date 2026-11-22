@@ -1,0 +1,48 @@
+{
+  "id": "european-green-deal",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "European Green Deal",
+      "from": "2019"
+    }
+  ],
+  "summary": "The European Union's plan of 2019 to make Europe climate neutral by 2050.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q79198143",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-12-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: European Green Deal (Q79198143)",
+      "url": "https://www.wikidata.org/wiki/Q79198143",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: European Green Deal",
+      "url": "https://en.wikipedia.org/wiki/European_Green_Deal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/European_Green_Deal_Budget_2014-2020_Planung_2021-2027.svg/500px-European_Green_Deal_Budget_2014-2020_Planung_2021-2027.svg.png",
+    "alt": "European Green Deal",
+    "credit": "Infrastrukturatlas | Appenzeller/Hecher/Sack",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:European_Green_Deal_Budget_2014-2020_Planung_2021-2027.svg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "radama-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Radama I",
+      "from": "1793"
+    }
+  ],
+  "summary": "King who opened the island to foreign help and writing.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q525141",
+  "events": [
+    {
+      "type": "born",
+      "date": "1793",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1828-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Radama I (Q525141)",
+      "url": "https://www.wikidata.org/wiki/Q525141",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Radama I",
+      "url": "https://en.wikipedia.org/wiki/Radama_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Radama_I%2C_portrait_by_Ramanankirahina.jpg/500px-Radama_I%2C_portrait_by_Ramanankirahina.jpg",
+    "alt": "Radama I",
+    "credit": "Philippe-Auguste Ramanankirahina (1860-1915)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Radama_I,_portrait_by_Ramanankirahina.jpg"
+  }
+}

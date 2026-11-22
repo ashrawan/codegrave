@@ -1,0 +1,45 @@
+{
+  "id": "tashkent",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tashkent",
+      "from": "-0200"
+    }
+  ],
+  "summary": "Uzbekistan's capital and the largest city of Central Asia.",
+  "wikidata": "Q269",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tashkent (Q269)",
+      "url": "https://www.wikidata.org/wiki/Q269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tashkent",
+      "url": "https://en.wikipedia.org/wiki/Tashkent",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Aerial_view_of_Tashkent%2C_Uzbekistan.JPG/500px-Aerial_view_of_Tashkent%2C_Uzbekistan.JPG",
+    "alt": "Tashkent",
+    "credit": "ssr (talk)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Tashkent,_Uzbekistan.JPG"
+  }
+}

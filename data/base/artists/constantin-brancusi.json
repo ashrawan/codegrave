@@ -1,0 +1,59 @@
+{
+  "id": "constantin-brancusi",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Constantin Brâncuși",
+      "from": "1876"
+    }
+  ],
+  "summary": "Sculptor of pure, simple forms such as Bird in Space.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q153048",
+  "events": [
+    {
+      "type": "born",
+      "date": "1876-02-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1957-03-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Constantin Brâncuși (Q153048)",
+      "url": "https://www.wikidata.org/wiki/Q153048",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Constantin Brâncuși",
+      "url": "https://en.wikipedia.org/wiki/Constantin_Brâncuși",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Edward_Steichen_-_Brancusi.jpg/500px-Edward_Steichen_-_Brancusi.jpg",
+    "alt": "Constantin Brâncuși",
+    "credit": "Edward Steichen",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edward_Steichen_-_Brancusi.jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "goree-island",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Gorée",
+      "from": "1444"
+    }
+  ],
+  "summary": "A small island off Dakar, a station of the slave trade from the 15th to the 19th century, now a place of memory.",
+  "wikidata": "Q244347",
+  "events": [
+    {
+      "type": "born",
+      "date": "1444",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Gorée (Q244347)",
+      "url": "https://www.wikidata.org/wiki/Q244347",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gorée",
+      "url": "https://en.wikipedia.org/wiki/Gorée",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Senegal_Gor%C3%A9e_island_harbor.jpg/500px-Senegal_Gor%C3%A9e_island_harbor.jpg",
+    "alt": "Gorée",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Senegal_Gor%C3%A9e_island_harbor.jpg"
+  }
+}

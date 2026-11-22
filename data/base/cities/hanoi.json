@@ -1,0 +1,51 @@
+{
+  "id": "hanoi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Hanoi",
+      "from": "1010"
+    }
+  ],
+  "summary": "The capital, founded as Thăng Long in 1010.",
+  "wikidata": "Q1858",
+  "events": [
+    {
+      "type": "born",
+      "date": "1010",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hanoi (Q1858)",
+      "url": "https://www.wikidata.org/wiki/Q1858",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hanoi",
+      "url": "https://en.wikipedia.org/wiki/Hanoi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Th%C3%A1p_R%C3%B9a_-_NKS.jpg/500px-Th%C3%A1p_R%C3%B9a_-_NKS.jpg",
+    "alt": "Hanoi",
+    "credit": "NKSTTSSHNVN",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Th%C3%A1p_R%C3%B9a_-_NKS.jpg"
+  }
+}

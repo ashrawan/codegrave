@@ -1,0 +1,51 @@
+{
+  "id": "im-1",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "IM-1 Odysseus",
+      "from": "2024"
+    }
+  ],
+  "summary": "The first private spacecraft to land softly on the Moon, built by Intuitive Machines and set down near the south pole in 2024.",
+  "wikidata": "Q112959040",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: IM-1 Odysseus (Q112959040)",
+      "url": "https://www.wikidata.org/wiki/Q112959040",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IM-1",
+      "url": "https://en.wikipedia.org/wiki/IM-1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Intuitive_Machines%E2%80%99_Nova-C_lunar_lander_%28IM_00309%29_%28cropped%29.jpg/500px-Intuitive_Machines%E2%80%99_Nova-C_lunar_lander_%28IM_00309%29_%28cropped%29.jpg",
+    "alt": "IM-1 Odysseus",
+    "credit": "NASA Marshall Space Flight Center / Intuitive Machines",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Intuitive_Machines%E2%80%99_Nova-C_lunar_lander_(IM_00309)_(cropped).jpg"
+  }
+}

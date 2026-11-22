@@ -1,0 +1,59 @@
+{
+  "id": "warsaw-uprising",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Warsaw Uprising",
+      "from": "1944"
+    }
+  ],
+  "summary": "The rising of the Home Army against the Nazis in 1944, after which the city was razed.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1402078",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-08-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-10-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Warsaw Uprising (Q1402078)",
+      "url": "https://www.wikidata.org/wiki/Q1402078",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Warsaw Uprising",
+      "url": "https://en.wikipedia.org/wiki/Warsaw_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Polish_Soldier%27s_Grave_Warsaw_1945.jpg/500px-Polish_Soldier%27s_Grave_Warsaw_1945.jpg",
+    "alt": "Warsaw Uprising",
+    "credit": "Tadeusz Bukowski",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Polish_Soldier%27s_Grave_Warsaw_1945.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "reykjavik",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Reykjavík",
+      "from": "1786"
+    }
+  ],
+  "summary": "The capital, where the first settler made his home.",
+  "wikidata": "Q1764",
+  "events": [
+    {
+      "type": "born",
+      "date": "1786",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iceland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Reykjavík (Q1764)",
+      "url": "https://www.wikidata.org/wiki/Q1764",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reykjavík",
+      "url": "https://en.wikipedia.org/wiki/Reykjavík",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Reykjav%C3%ADk_5545_%28cropped%29.JPG/500px-Reykjav%C3%ADk_5545_%28cropped%29.JPG",
+    "alt": "Reykjavík",
+    "credit": "Hedwig Storch",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Reykjav%C3%ADk_5545_(cropped).JPG"
+  }
+}

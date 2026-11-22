@@ -9,6 +9,7 @@
   ],
   "maker": "DeepMind",
   "summary": "DeepMind's program for predicting the 3D shape of a protein from its sequence, a problem biologists had worked on for fifty years. Its predictions for nearly every known protein are free for any scientist to use.",
+  "wikidata": "Q60827595",
   "events": [
     {
       "type": "born",
@@ -52,5 +53,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Protein-Struktur.png/500px-Protein-Struktur.png",
+    "alt": "AlphaFold",
+    "credit": "Holger87",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Protein-Struktur.png"
+  }
 }

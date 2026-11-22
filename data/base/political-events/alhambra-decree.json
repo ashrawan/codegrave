@@ -1,0 +1,54 @@
+{
+  "id": "alhambra-decree",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Alhambra Decree",
+      "from": "1492"
+    }
+  ],
+  "summary": "The order of 1492 that expelled the Jews of Spain who would not convert.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1061030",
+  "events": [
+    {
+      "type": "born",
+      "date": "1492-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alhambra Decree (Q1061030)",
+      "url": "https://www.wikidata.org/wiki/Q1061030",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alhambra Decree",
+      "url": "https://en.wikipedia.org/wiki/Alhambra_Decree",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Alhambra_Decree.jpg_unscaled",
+    "alt": "Alhambra Decree",
+    "credit": "The original uploader was Goodoldpolonius2 at English Wikipedia.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Alhambra_Decree.jpg"
+  }
+}

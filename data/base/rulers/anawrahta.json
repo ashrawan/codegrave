@@ -1,0 +1,59 @@
+{
+  "id": "anawrahta",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Anawrahta",
+      "from": "1014"
+    }
+  ],
+  "summary": "King who founded the Pagan empire.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q45241",
+  "events": [
+    {
+      "type": "born",
+      "date": "1014-05-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1077-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anawrahta (Q45241)",
+      "url": "https://www.wikidata.org/wiki/Q45241",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anawrahta",
+      "url": "https://en.wikipedia.org/wiki/Anawrahta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Pyinoolwin_--_DSA_Anawrahta.JPG/500px-Pyinoolwin_--_DSA_Anawrahta.JPG",
+    "alt": "Anawrahta",
+    "credit": "Hybernator",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pyinoolwin_--_DSA_Anawrahta.JPG"
+  }
+}

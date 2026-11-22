@@ -1,0 +1,59 @@
+{
+  "id": "overthrow-of-slobodan-milosevic",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Overthrow of Slobodan Milošević",
+      "from": "2000"
+    }
+  ],
+  "summary": "The protests of October 2000 that ended Milošević's rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q640607",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-10-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Overthrow of Slobodan Milošević (Q640607)",
+      "url": "https://www.wikidata.org/wiki/Q640607",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Overthrow of Slobodan Milošević",
+      "url": "https://en.wikipedia.org/wiki/Overthrow_of_Slobodan_Milošević",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Petooktobarska_revolucija.png/500px-Petooktobarska_revolucija.png",
+    "alt": "Overthrow of Slobodan Milošević",
+    "credit": "WagingNonViolence/Viktor Sekularac",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Petooktobarska_revolucija.png"
+  }
+}

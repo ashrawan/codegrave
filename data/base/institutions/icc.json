@@ -1,0 +1,45 @@
+{
+  "id": "icc",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "ICC",
+      "from": "1909"
+    }
+  ],
+  "summary": "The world body of cricket, founded in 1909 by England, Australia and South Africa, which now runs the World Cups.",
+  "wikidata": "Q722694",
+  "events": [
+    {
+      "type": "born",
+      "date": "1909-06-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: ICC (Q722694)",
+      "url": "https://www.wikidata.org/wiki/Q722694",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: International Cricket Council",
+      "url": "https://en.wikipedia.org/wiki/International_Cricket_Council",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/ICC_Dubai_1.jpg/500px-ICC_Dubai_1.jpg",
+    "alt": "ICC",
+    "credit": "PaddyBriggs at English Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ICC_Dubai_1.jpg"
+  }
+}

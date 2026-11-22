@@ -1,0 +1,59 @@
+{
+  "id": "belgian-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Belgian Revolution",
+      "from": "1830"
+    }
+  ],
+  "summary": "The revolt of 1830 that split the south from the Netherlands and made Belgium a kingdom.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q223933",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830-08-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1831-07-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Belgian Revolution (Q223933)",
+      "url": "https://www.wikidata.org/wiki/Q223933",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belgian Revolution",
+      "url": "https://en.wikipedia.org/wiki/Belgian_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Gustave_Wappers_-_Episode_of_the_September_Days_1830%2C_on_the_Grand_Place_of_Brussels_-_Google_Art_Project.jpg/500px-Gustave_Wappers_-_Episode_of_the_September_Days_1830%2C_on_the_Grand_Place_of_Brussels_-_Google_Art_Project.jpg",
+    "alt": "Belgian Revolution",
+    "credit": "Gustaaf Wappers",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustave_Wappers_-_Episode_of_the_September_Days_1830,_on_the_Grand_Place_of_Brussels_-_Google_Art_Project.jpg"
+  }
+}

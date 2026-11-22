@@ -1,0 +1,51 @@
+{
+  "id": "ibm-q-system-one",
+  "category": "supercomputers",
+  "names": [
+    {
+      "name": "IBM Q System One",
+      "from": "2019"
+    }
+  ],
+  "summary": "Shown in 2019, the first quantum computer built as a complete product for businesses, sealed in a glass cube.",
+  "wikidata": "Q60626630",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: IBM Q System One (Q60626630)",
+      "url": "https://www.wikidata.org/wiki/Q60626630",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IBM Q System One",
+      "url": "https://en.wikipedia.org/wiki/IBM_Q_System_One",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/IBM_Q_system_%28Fraunhofer_2%29.jpg/500px-IBM_Q_system_%28Fraunhofer_2%29.jpg",
+    "alt": "IBM Q System One",
+    "credit": "IBM Research",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:IBM_Q_system_(Fraunhofer_2).jpg"
+  }
+}

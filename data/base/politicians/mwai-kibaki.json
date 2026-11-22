@@ -1,0 +1,59 @@
+{
+  "id": "mwai-kibaki",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Mwai Kibaki",
+      "from": "1931"
+    }
+  ],
+  "summary": "President from 2002 to 2013.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57291",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mwai Kibaki (Q57291)",
+      "url": "https://www.wikidata.org/wiki/Q57291",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mwai Kibaki",
+      "url": "https://en.wikipedia.org/wiki/Mwai_Kibaki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Mwai_Kibaki_%28cropped%29.jpg/500px-Mwai_Kibaki_%28cropped%29.jpg",
+    "alt": "Mwai Kibaki",
+    "credit": "Foreign and Commonwealth Office",
+    "licence": "OGL v1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mwai_Kibaki_(cropped).jpg"
+  }
+}

@@ -22,13 +22,27 @@
       "precision": "day"
     },
     {
+      "type": "milestone",
+      "date": "2002-05-19",
+      "precision": "day",
+      "label": "First run ends",
+      "note": "The ninth season ends the first run on Fox."
+    },
+    {
+      "type": "milestone",
+      "date": "2016-01-24",
+      "precision": "day",
+      "label": "Revival",
+      "note": "A six-episode revival brings back Mulder and Scully."
+    },
+    {
       "type": "ended",
-      "date": "2002",
-      "precision": "year"
+      "date": "2018-03-21",
+      "precision": "day"
     }
   ],
   "status": "dead",
-  "cause": "Original run ended after nine seasons; later revived",
+  "cause": "Ended after eleven seasons, the last two a revival",
   "signals": {
     "adoption": 4,
     "standard": 0,
@@ -56,5 +70,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/The_X-Files_Office.jpg/500px-The_X-Files_Office.jpg",
+    "alt": "The X-Files",
+    "credit": "Marcin Wichary from San Francisco, U.S.A.",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_X-Files_Office.jpg"
+  }
 }

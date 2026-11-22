@@ -1,0 +1,45 @@
+{
+  "id": "bridgewater-canal",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Bridgewater Canal",
+      "from": "1761"
+    }
+  ],
+  "summary": "Britain's first great canal, opened in 1761 to carry coal to Manchester, which halved its price.",
+  "wikidata": "Q913932",
+  "events": [
+    {
+      "type": "born",
+      "date": "1761-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bridgewater Canal (Q913932)",
+      "url": "https://www.wikidata.org/wiki/Q913932",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bridgewater Canal",
+      "url": "https://en.wikipedia.org/wiki/Bridgewater_Canal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Worsley_packet_house_closeup_large_image.jpg/500px-Worsley_packet_house_closeup_large_image.jpg",
+    "alt": "Bridgewater Canal",
+    "credit": "Parrot of Doom",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Worsley_packet_house_closeup_large_image.jpg"
+  }
+}

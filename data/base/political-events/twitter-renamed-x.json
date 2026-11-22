@@ -1,0 +1,46 @@
+{
+  "id": "twitter-renamed-x",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Twitter bought by Elon Musk",
+      "from": "2022"
+    }
+  ],
+  "summary": "Elon Musk bought Twitter in 2022 for 44 billion dollars, cut most of its staff and renamed it X the following year.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q111725317",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-10-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Twitter bought by Elon Musk (Q111725317)",
+      "url": "https://www.wikidata.org/wiki/Q111725317",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Acquisition of Twitter by Elon Musk",
+      "url": "https://en.wikipedia.org/wiki/Acquisition_of_Twitter_by_Elon_Musk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

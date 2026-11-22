@@ -1,0 +1,54 @@
+{
+  "id": "minaret-of-jam",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Minaret of Jam",
+      "from": "1194"
+    }
+  ],
+  "summary": "A tall brick minaret in the mountains, built in the 1190s.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q192981",
+  "events": [
+    {
+      "type": "born",
+      "date": "1194",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Minaret of Jam (Q192981)",
+      "url": "https://www.wikidata.org/wiki/Q192981",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Minaret of Jam",
+      "url": "https://en.wikipedia.org/wiki/Minaret_of_Jam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Minaret_of_jam_2009_ghor.jpg/500px-Minaret_of_jam_2009_ghor.jpg",
+    "alt": "Minaret of Jam",
+    "credit": "david adamec",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Minaret_of_jam_2009_ghor.jpg"
+  }
+}

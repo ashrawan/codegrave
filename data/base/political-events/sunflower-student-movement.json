@@ -1,0 +1,59 @@
+{
+  "id": "sunflower-student-movement",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Sunflower Student Movement",
+      "from": "2014"
+    }
+  ],
+  "summary": "Students occupied the legislature in 2014 to stop a trade pact with China.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q15972916",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-03-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sunflower Student Movement (Q15972916)",
+      "url": "https://www.wikidata.org/wiki/Q15972916",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sunflower Student Movement",
+      "url": "https://en.wikipedia.org/wiki/Sunflower_Student_Movement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Sunflower_Movement_collage.jpg/500px-Sunflower_Movement_collage.jpg",
+    "alt": "Sunflower Student Movement",
+    "credit": "KOKUYO合併",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sunflower_Movement_collage.jpg"
+  }
+}

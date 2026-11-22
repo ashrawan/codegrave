@@ -1,0 +1,50 @@
+{
+  "id": "hurricane-mitch",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Mitch",
+      "from": "1998"
+    }
+  ],
+  "summary": "A hurricane that stalled over Central America in 1998 and caused floods and landslides that killed about 11,000 people.",
+  "wikidata": "Q390115",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-10-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1998-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Mitch (Q390115)",
+      "url": "https://www.wikidata.org/wiki/Q390115",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Mitch",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Mitch",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Mitch_1998-10-26_1915Z.jpg/500px-Mitch_1998-10-26_1915Z.jpg",
+    "alt": "Hurricane Mitch",
+    "credit": "NASA, NOAA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mitch_1998-10-26_1915Z.jpg"
+  }
+}

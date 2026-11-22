@@ -1,0 +1,59 @@
+{
+  "id": "peruvian-war-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Peruvian War of Independence",
+      "from": "1821"
+    }
+  ],
+  "summary": "The wars that ended Spanish rule, completed at Ayacucho in 1824.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q68478",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1824",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peruvian War of Independence (Q68478)",
+      "url": "https://www.wikidata.org/wiki/Q68478",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peruvian War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Peruvian_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Peruvian_War_of_Independence_1.png/500px-Peruvian_War_of_Independence_1.png",
+    "alt": "Peruvian War of Independence",
+    "credit": "LLs",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Peruvian_War_of_Independence_1.png"
+  }
+}

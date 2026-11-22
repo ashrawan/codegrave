@@ -1,0 +1,54 @@
+{
+  "id": "grand-mosque-kuwait",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Grand Mosque",
+      "from": "1986"
+    }
+  ],
+  "summary": "The largest mosque in the country, opened in 1986.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1432832",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kuwait"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grand Mosque (Q1432832)",
+      "url": "https://www.wikidata.org/wiki/Q1432832",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand Mosque (Kuwait)",
+      "url": "https://en.wikipedia.org/wiki/Grand_Mosque_(Kuwait)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Kuwait_City_Grand_Mosque_Exterior_South_Facade_5.jpg/500px-Kuwait_City_Grand_Mosque_Exterior_South_Facade_5.jpg",
+    "alt": "Grand Mosque",
+    "credit": "Zairon",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kuwait_City_Grand_Mosque_Exterior_South_Facade_5.jpg"
+  }
+}

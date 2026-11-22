@@ -1,0 +1,54 @@
+{
+  "id": "spacex",
+  "category": "companies",
+  "names": [
+    {
+      "name": "SpaceX",
+      "from": "2002"
+    }
+  ],
+  "summary": "Rocket company founded by Elon Musk in 2002 to cut the cost of reaching space. It became the first private company to send a spacecraft to orbit and back, and later to fly astronauts.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q193701",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: SpaceX (Q193701)",
+      "url": "https://www.wikidata.org/wiki/Q193701",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SpaceX",
+      "url": "https://en.wikipedia.org/wiki/SpaceX",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/SpaceX_Crew_Dragon_%28More_cropped%29.jpg/500px-SpaceX_Crew_Dragon_%28More_cropped%29.jpg",
+    "alt": "SpaceX",
+    "credit": "NASA/SpaceX",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:SpaceX_Crew_Dragon_(More_cropped).jpg"
+  }
+}

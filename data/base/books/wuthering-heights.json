@@ -1,0 +1,48 @@
+{
+  "id": "wuthering-heights",
+  "category": "books",
+  "names": [
+    {
+      "name": "Wuthering Heights",
+      "from": "1847"
+    }
+  ],
+  "summary": "Emily Brontë's only novel, a wild love story on the Yorkshire moors.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q202975",
+  "events": [
+    {
+      "type": "born",
+      "date": "1847",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Wuthering Heights (Q202975)",
+      "url": "https://www.wikidata.org/wiki/Q202975",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wuthering Heights",
+      "url": "https://en.wikipedia.org/wiki/Wuthering_Heights",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Houghton_Lowell_1238.5_%28A%29_-_Wuthering_Heights%2C_1847.jpg/500px-Houghton_Lowell_1238.5_%28A%29_-_Wuthering_Heights%2C_1847.jpg",
+    "alt": "Wuthering Heights",
+    "credit": "Emily Brontë (under the pseudonym Ellis Bell)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Houghton_Lowell_1238.5_(A)_-_Wuthering_Heights,_1847.jpg"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "morocco",
+  "name": "Morocco",
+  "description": "Morocco from Volubilis and the Berber kingdoms to the Idrisids, Almoravids and Almohads, the sultans, French rule and the kingdom today.",
+  "category": "places",
+  "tags": [
+    "morocco",
+    "marrakesh",
+    "fez",
+    "berber",
+    "maghreb",
+    "sultans"
+  ],
+  "entries": [
+    "jebel-irhoud",
+    "volubilis",
+    "idrisid-dynasty",
+    "morocco",
+    "fez",
+    "al-qarawiyyin",
+    "almoravid-dynasty",
+    "marrakesh",
+    "almohad-caliphate",
+    "koutoubia-mosque",
+    "ibn-battuta",
+    "chefchaouen",
+    "alaouite-dynasty",
+    "french-protectorate-in-morocco",
+    "rif-war",
+    "hassan-ii",
+    "mohammed-vi-of-morocco",
+    "green-march",
+    "hassan-ii-mosque",
+    "2023-marrakesh-earthquake"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-morocco",
+      "name": "Ancient Morocco",
+      "from": -300000,
+      "to": 787,
+      "note": "Jebel Irhoud holds the oldest known modern humans. Berber kingdoms traded with Carthage, and Rome built Volubilis."
+    },
+    {
+      "id": "the-dynasties",
+      "name": "The dynasties",
+      "from": 788,
+      "to": 1911,
+      "note": "Idris founded the first Muslim state and Fez. The Almoravids and Almohads ruled Spain, and the Saadians and Alaouites kept Morocco free of Ottoman rule."
+    },
+    {
+      "id": "protectorate",
+      "name": "Protectorate",
+      "from": 1912,
+      "to": 1955,
+      "note": "France and Spain divided Morocco in 1912."
+    },
+    {
+      "id": "the-kingdom",
+      "name": "The kingdom",
+      "from": 1956,
+      "to": 2026,
+      "note": "Morocco became independent in 1956 under King Mohammed V. It marched into Western Sahara in 1975."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/330px-Flag_of_Morocco.svg.png",
+    "alt": "Flag of Morocco",
+    "credit": "Denelson83, Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Morocco.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3f/National_Anthem_of_Morocco.ogg/National_Anthem_of_Morocco.ogg.mp3",
+    "title": "Cherifian Anthem",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Morocco.ogg"
+  }
+}

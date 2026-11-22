@@ -1,0 +1,45 @@
+{
+  "id": "mandalay",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Mandalay",
+      "from": "1857"
+    }
+  ],
+  "summary": "The last royal capital of Burma, founded in 1857.",
+  "wikidata": "Q185518",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mandalay (Q185518)",
+      "url": "https://www.wikidata.org/wiki/Q185518",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mandalay",
+      "url": "https://en.wikipedia.org/wiki/Mandalay",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Mandalay%2C_Moat%2C_Myanmar.jpg/500px-Mandalay%2C_Moat%2C_Myanmar.jpg",
+    "alt": "Mandalay",
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mandalay,_Moat,_Myanmar.jpg"
+  }
+}

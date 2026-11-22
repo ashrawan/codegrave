@@ -1,0 +1,59 @@
+{
+  "id": "french-west-africa",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "French West Africa",
+      "from": "1895"
+    }
+  ],
+  "summary": "The French federation of colonies, ruled from Dakar.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q210682",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1958-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "senegal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French West Africa (Q210682)",
+      "url": "https://www.wikidata.org/wiki/Q210682",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French West Africa",
+      "url": "https://en.wikipedia.org/wiki/French_West_Africa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Carte_murale_%C3%A0_l%27usage_des_%C3%A9coles_-_dress%C3%A9e_et_publi%C3%A9e_par_le_Service_g%C3%A9ographique_de_l%27A._O._F._%3B_sous_la_direction_du_commandant_E._de_Martonne_-_btv1b53209844b.jpg/500px-thumbnail.jpg",
+    "alt": "French West Africa",
+    "credit": "Martonne, Édouard de (1879-1952). Éditeur scientifique Afrique occidentale française. Service géographique. Dessinateur",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Carte_murale_%C3%A0_l%27usage_des_%C3%A9coles_-_dress%C3%A9e_et_publi%C3%A9e_par_le_Service_g%C3%A9ographique_de_l%27A._O._F._;_sous_la_direction_du_commandant_E._de_Martonne_-_btv1b53209844b.jpg"
+  }
+}

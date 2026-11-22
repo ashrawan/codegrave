@@ -1,0 +1,38 @@
+{
+  "id": "tether",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "Tether",
+      "from": "2015"
+    }
+  ],
+  "summary": "The largest stablecoin, a token meant to be worth one US dollar each.",
+  "wikidata": "Q47528658",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-11",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tether (Q47528658)",
+      "url": "https://www.wikidata.org/wiki/Q47528658",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tether (cryptocurrency)",
+      "url": "https://en.wikipedia.org/wiki/Tether_(cryptocurrency)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

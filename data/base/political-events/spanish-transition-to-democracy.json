@@ -1,0 +1,59 @@
+{
+  "id": "spanish-transition-to-democracy",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Spanish transition to democracy",
+      "from": "1975"
+    }
+  ],
+  "summary": "The move from Franco's dictatorship to a democratic monarchy, sealed by the constitution of 1978.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q874209",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-11-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1983",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish transition to democracy (Q874209)",
+      "url": "https://www.wikidata.org/wiki/Q874209",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish transition to democracy",
+      "url": "https://en.wikipedia.org/wiki/Spanish_transition_to_democracy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cortejo-f%C3%BAnebre-abogados-Atocha.jpg/500px-Cortejo-f%C3%BAnebre-abogados-Atocha.jpg",
+    "alt": "Spanish transition to democracy",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cortejo-f%C3%BAnebre-abogados-Atocha.jpg"
+  }
+}

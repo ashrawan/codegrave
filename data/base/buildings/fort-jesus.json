@@ -1,0 +1,54 @@
+{
+  "id": "fort-jesus",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Fort Jesus",
+      "from": "1593"
+    }
+  ],
+  "summary": "The fort built by the Portuguese at Mombasa in 1593.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q379080",
+  "events": [
+    {
+      "type": "born",
+      "date": "1593-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fort Jesus (Q379080)",
+      "url": "https://www.wikidata.org/wiki/Q379080",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fort Jesus",
+      "url": "https://en.wikipedia.org/wiki/Fort_Jesus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Fort_JesusMombasa.jpg_unscaled",
+    "alt": "Fort Jesus",
+    "credit": "The original uploader was Zeljko at Croatian Wikipedia.",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fort_JesusMombasa.jpg"
+  }
+}

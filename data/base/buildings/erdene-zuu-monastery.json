@@ -1,0 +1,48 @@
+{
+  "id": "erdene-zuu-monastery",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Erdene Zuu Monastery",
+      "from": "1585"
+    }
+  ],
+  "summary": "The oldest surviving Buddhist monastery in Mongolia, built from the ruins of Karakorum.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1058965",
+  "events": [
+    {
+      "type": "born",
+      "date": "1585",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Erdene Zuu Monastery (Q1058965)",
+      "url": "https://www.wikidata.org/wiki/Q1058965",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Erdene Zuu Monastery",
+      "url": "https://en.wikipedia.org/wiki/Erdene_Zuu_Monastery",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Niebo_nad_budynkami_klasztoru_Erdene_Dzuu_02.jpg/500px-Niebo_nad_budynkami_klasztoru_Erdene_Dzuu_02.jpg",
+    "alt": "Erdene Zuu Monastery",
+    "credit": "Marcin Konsek",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Niebo_nad_budynkami_klasztoru_Erdene_Dzuu_02.jpg"
+  }
+}

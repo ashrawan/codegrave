@@ -1,0 +1,41 @@
+{
+  "id": "red-sea-crisis",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Red Sea crisis",
+      "from": "2023"
+    }
+  ],
+  "summary": "From 2023 the Houthis attacked ships in the Red Sea, forcing world trade to sail around Africa.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q123285238",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Red Sea crisis (Q123285238)",
+      "url": "https://www.wikidata.org/wiki/Q123285238",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Red Sea crisis",
+      "url": "https://en.wikipedia.org/wiki/Red_Sea_crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

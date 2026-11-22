@@ -1,0 +1,90 @@
+{
+  "id": "argentina",
+  "name": "Argentina",
+  "description": "Argentina from the Andes and the Pampas to independence, immigrants, Perón and Evita, dictatorship and democracy, tango and football.",
+  "category": "places",
+  "tags": [
+    "argentina",
+    "buenos aires",
+    "tango",
+    "peron",
+    "maradona",
+    "messi"
+  ],
+  "entries": [
+    "cueva-de-las-manos",
+    "buenos-aires",
+    "viceroyalty-of-the-rio-de-la-plata",
+    "jose-de-san-martin",
+    "may-revolution",
+    "argentina",
+    "argentine-declaration-of-independence",
+    "european-immigration-argentina",
+    "conquest-of-the-desert",
+    "tango-music",
+    "carlos-gardel",
+    "juan-peron",
+    "aconcagua",
+    "jorge-luis-borges",
+    "boca-juniors",
+    "eva-peron",
+    "che-guevara",
+    "iguazu-national-park",
+    "pope-francis",
+    "dirty-war",
+    "diego-maradona",
+    "javier-milei",
+    "mothers-of-the-plaza-de-mayo",
+    "world-cup-1978",
+    "falklands-war",
+    "lionel-messi",
+    "amia-bombing",
+    "argentine-crisis-2001",
+    "argentine-great-depression-2001",
+    "world-cup-2022"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-the-spanish",
+      "name": "Before the Spanish",
+      "from": -7300,
+      "to": 1535,
+      "note": "Hunters painted hands in Patagonian caves, and the Inca empire reached into the north-west."
+    },
+    {
+      "id": "colony-and-independence",
+      "name": "Colony and independence",
+      "from": 1536,
+      "to": 1860,
+      "note": "Buenos Aires was founded and became the capital of a viceroyalty. Revolution in 1810 and the declaration of 1816 won independence, and San Martín carried the fight over the Andes."
+    },
+    {
+      "id": "immigrants-and-per-n",
+      "name": "Immigrants and Perón",
+      "from": 1861,
+      "to": 1975,
+      "note": "Millions of Europeans came to farm the Pampas, and Argentina grew rich. Tango rose in Buenos Aires, and Perón and Evita rallied the workers."
+    },
+    {
+      "id": "dictatorship-and-democracy",
+      "name": "Dictatorship and democracy",
+      "from": 1976,
+      "to": 2026,
+      "note": "The junta made thousands disappear and lost the Falklands War. Democracy returned in 1983, Maradona and Messi won World Cups, and crises came and went."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/330px-Flag_of_Argentina.svg.png",
+    "alt": "Flag of Argentina",
+    "credit": "Manuel Belgrano",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Argentina.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cd/Himno_Nacional_Argentino_instrumental.ogg/Himno_Nacional_Argentino_instrumental.ogg.mp3",
+    "title": "Argentine National Anthem",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil:80/anthems/national_anthems.htm http://web.archi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Himno_Nacional_Argentino_instrumental.ogg"
+  }
+}

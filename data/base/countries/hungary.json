@@ -1,0 +1,51 @@
+{
+  "id": "hungary",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Hungary",
+      "from": "1000"
+    }
+  ],
+  "summary": "A country of the middle Danube founded by the Magyars, whose kingdom was crowned in 1000 and whose capital is Budapest.",
+  "wikidata": "Q28",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hungary (Q28)",
+      "url": "https://www.wikidata.org/wiki/Q28",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hungary",
+      "url": "https://en.wikipedia.org/wiki/Hungary",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/20190502_Widok_na_Budapeszt_z_G%C3%B3ry_Gellerta_1651_2150_DxO.jpg/500px-20190502_Widok_na_Budapeszt_z_G%C3%B3ry_Gellerta_1651_2150_DxO.jpg",
+    "alt": "Hungary",
+    "credit": "Jakub Hałun",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20190502_Widok_na_Budapeszt_z_G%C3%B3ry_Gellerta_1651_2150_DxO.jpg"
+  }
+}

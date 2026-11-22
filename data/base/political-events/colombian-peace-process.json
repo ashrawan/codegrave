@@ -1,0 +1,52 @@
+{
+  "id": "colombian-peace-process",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Peace with the FARC",
+      "from": "2016"
+    }
+  ],
+  "summary": "The peace deal of 2016 with the FARC.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5858325",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-11-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-11-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peace with the FARC (Q5858325)",
+      "url": "https://www.wikidata.org/wiki/Q5858325",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colombian peace process",
+      "url": "https://en.wikipedia.org/wiki/Colombian_peace_process",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

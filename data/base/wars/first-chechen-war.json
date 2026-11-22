@@ -1,0 +1,53 @@
+{
+  "id": "first-chechen-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Chechen War",
+      "from": "1994"
+    }
+  ],
+  "summary": "Russia's war of 1994 to 1996 against the breakaway Chechnya.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q29269",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-12-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-08-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: First Chechen War (Q29269)",
+      "url": "https://www.wikidata.org/wiki/Q29269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Chechen War",
+      "url": "https://en.wikipedia.org/wiki/First_Chechen_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Collage_the_First_Chechen_War.jpg/500px-Collage_the_First_Chechen_War.jpg",
+    "alt": "First Chechen War",
+    "credit": "Derivative work: Ostrovsky Gregory",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Collage_the_First_Chechen_War.jpg"
+  }
+}

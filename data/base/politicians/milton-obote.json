@@ -1,0 +1,59 @@
+{
+  "id": "milton-obote",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Milton Obote",
+      "from": "1925"
+    }
+  ],
+  "summary": "First prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q210069",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-12-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Milton Obote (Q210069)",
+      "url": "https://www.wikidata.org/wiki/Q210069",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Milton Obote",
+      "url": "https://en.wikipedia.org/wiki/Milton_Obote",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/President_John_F._Kennedy_with_Prime_Minister_Milton_Obote_%28cropped%29.jpg/500px-President_John_F._Kennedy_with_Prime_Minister_Milton_Obote_%28cropped%29.jpg",
+    "alt": "Milton Obote",
+    "credit": "Warren K. Leffler",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:President_John_F._Kennedy_with_Prime_Minister_Milton_Obote_(cropped).jpg"
+  }
+}

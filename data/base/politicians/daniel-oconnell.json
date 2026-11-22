@@ -1,0 +1,53 @@
+{
+  "id": "daniel-oconnell",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Daniel O'Connell",
+      "from": "1775"
+    }
+  ],
+  "summary": "The Liberator, who won Catholic emancipation in 1829.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q314917",
+  "events": [
+    {
+      "type": "born",
+      "date": "1775-08-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1847-05-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Daniel O'Connell (Q314917)",
+      "url": "https://www.wikidata.org/wiki/Q314917",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Daniel O'Connell",
+      "url": "https://en.wikipedia.org/wiki/Daniel_O'Connell",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Daniel_O%27Connell.png",
+    "alt": "Daniel O'Connell",
+    "credit": "Bernard Mulrenin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Daniel_O%27Connell.png"
+  }
+}

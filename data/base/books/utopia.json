@@ -1,0 +1,48 @@
+{
+  "id": "utopia",
+  "category": "books",
+  "names": [
+    {
+      "name": "Utopia",
+      "from": "1516"
+    }
+  ],
+  "summary": "Thomas More's book of 1516 about an imaginary island with a perfect society, which gave the word utopia.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q404158",
+  "events": [
+    {
+      "type": "born",
+      "date": "1516",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Utopia (Q404158)",
+      "url": "https://www.wikidata.org/wiki/Q404158",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Utopia (book)",
+      "url": "https://en.wikipedia.org/wiki/Utopia_(book)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/34/Utopia.jpg",
+    "alt": "Utopia",
+    "credit": "Ambrosius Holbein",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Utopia.jpg"
+  }
+}

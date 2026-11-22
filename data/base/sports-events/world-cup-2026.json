@@ -1,0 +1,63 @@
+{
+  "id": "world-cup-2026",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2026 FIFA World Cup",
+      "from": "2026"
+    }
+  ],
+  "summary": "The first World Cup shared by three countries, the United States, Canada and Mexico, and the first with forty-eight teams. Spain won it, its second title after 2010.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q5020214",
+  "events": [
+    {
+      "type": "born",
+      "date": "2026-06-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2026-07-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    },
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2026 FIFA World Cup (Q5020214)",
+      "url": "https://www.wikidata.org/wiki/Q5020214",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2026 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/2026_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Spain_World_Cup_Winners_Argentina_v_Spain_19_July_2026-1.jpg/500px-Spain_World_Cup_Winners_Argentina_v_Spain_19_July_2026-1.jpg",
+    "alt": "2026 FIFA World Cup",
+    "credit": "Bryan Berlin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Spain_World_Cup_Winners_Argentina_v_Spain_19_July_2026-1.jpg"
+  }
+}

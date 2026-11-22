@@ -1,0 +1,59 @@
+{
+  "id": "oslo-accords",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Oslo Accords",
+      "from": "1993"
+    }
+  ],
+  "summary": "The agreements of the 1990s between Israel and the Palestine Liberation Organization.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q17013132",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-09-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Oslo Accords (Q17013132)",
+      "url": "https://www.wikidata.org/wiki/Q17013132",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oslo Accords",
+      "url": "https://en.wikipedia.org/wiki/Oslo_Accords",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bill_Clinton%2C_Yitzhak_Rabin%2C_Yasser_Arafat_at_the_White_House_1993-09-13.jpg/500px-Bill_Clinton%2C_Yitzhak_Rabin%2C_Yasser_Arafat_at_the_White_House_1993-09-13.jpg",
+    "alt": "Oslo Accords",
+    "credit": "Vince Musi / The White House",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bill_Clinton,_Yitzhak_Rabin,_Yasser_Arafat_at_the_White_House_1993-09-13.jpg"
+  }
+}

@@ -9,6 +9,7 @@
   ],
   "maker": "Microsoft",
   "summary": "Microsoft's voice assistant, named after a character in the Halo games. It was built into Windows Phone and then Windows 10, never caught up with its rivals, and was removed in stages in favour of Copilot.",
+  "wikidata": "Q15897235",
   "events": [
     {
       "type": "born",
@@ -52,5 +53,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Microsoft_Cortana.svg/500px-Microsoft_Cortana.svg.png",
+    "alt": "Cortana",
+    "credit": "Microsoft Devin Cook",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Microsoft_Cortana.svg"
+  }
 }

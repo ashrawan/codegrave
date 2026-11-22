@@ -1,0 +1,59 @@
+{
+  "id": "war-in-darfur",
+  "category": "wars",
+  "names": [
+    {
+      "name": "War in Darfur",
+      "from": "2003"
+    }
+  ],
+  "summary": "The war in Darfur from 2003.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q190758",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-02-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-08-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: War in Darfur (Q190758)",
+      "url": "https://www.wikidata.org/wiki/Q190758",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: War in Darfur",
+      "url": "https://en.wikipedia.org/wiki/War_in_Darfur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Sudanese_Internal_Conflict.svg/500px-Sudanese_Internal_Conflict.svg.png",
+    "alt": "War in Darfur",
+    "credit": "Ali Zifan",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sudanese_Internal_Conflict.svg"
+  }
+}

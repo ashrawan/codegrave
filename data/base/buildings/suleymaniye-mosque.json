@@ -1,0 +1,54 @@
+{
+  "id": "suleymaniye-mosque",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Süleymaniye Mosque",
+      "from": "1550"
+    }
+  ],
+  "summary": "The great mosque built for Suleiman by the architect Mimar Sinan, which crowns a hill over Istanbul.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q178643",
+  "events": [
+    {
+      "type": "born",
+      "date": "1550",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Süleymaniye Mosque (Q178643)",
+      "url": "https://www.wikidata.org/wiki/Q178643",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Süleymaniye Mosque",
+      "url": "https://en.wikipedia.org/wiki/Süleymaniye_Mosque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/S%C3%BCleymaniyeMosqueIstanbul_%28cropped%29.jpg/500px-S%C3%BCleymaniyeMosqueIstanbul_%28cropped%29.jpg",
+    "alt": "Süleymaniye Mosque",
+    "credit": "Hunanuk",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:S%C3%BCleymaniyeMosqueIstanbul_(cropped).jpg"
+  }
+}

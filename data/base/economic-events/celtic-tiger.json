@@ -1,0 +1,52 @@
+{
+  "id": "celtic-tiger",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Celtic Tiger",
+      "from": "1994"
+    }
+  ],
+  "summary": "The years of very fast growth from the mid-1990s to 2008.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q855736",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Celtic Tiger (Q855736)",
+      "url": "https://www.wikidata.org/wiki/Q855736",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Celtic Tiger",
+      "url": "https://en.wikipedia.org/wiki/Celtic_Tiger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "la-violencia",
+  "category": "wars",
+  "names": [
+    {
+      "name": "La Violencia",
+      "from": "1949"
+    }
+  ],
+  "summary": "Ten years of political killing between Liberals and Conservatives.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q185407",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-12-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1958",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: La Violencia (Q185407)",
+      "url": "https://www.wikidata.org/wiki/Q185407",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La Violencia",
+      "url": "https://en.wikipedia.org/wiki/La_Violencia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/57/Bogotazo.jpg_unscaled",
+    "alt": "La Violencia",
+    "credit": "Daniel Pradilla Holguin",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bogotazo.jpg"
+  }
+}

@@ -9,7 +9,9 @@
     "usa",
     "presidents",
     "civil war",
-    "independence"
+    "independence",
+    "presidents of the united states",
+    "american presidents"
   ],
   "entries": [
     "colony-of-virginia",
@@ -72,7 +74,54 @@
     "muhammad-ali",
     "steve-jobs",
     "bill-gates",
-    "michael-jackson"
+    "michael-jackson",
+    "john-adams",
+    "james-madison",
+    "james-monroe",
+    "john-quincy-adams",
+    "andrew-jackson",
+    "martin-van-buren",
+    "william-henry-harrison",
+    "john-tyler",
+    "james-k-polk",
+    "zachary-taylor",
+    "millard-fillmore",
+    "franklin-pierce",
+    "james-buchanan",
+    "andrew-johnson",
+    "ulysses-s-grant",
+    "rutherford-b-hayes",
+    "james-a-garfield",
+    "chester-a-arthur",
+    "grover-cleveland",
+    "benjamin-harrison",
+    "william-mckinley",
+    "theodore-roosevelt",
+    "william-howard-taft",
+    "woodrow-wilson",
+    "warren-g-harding",
+    "calvin-coolidge",
+    "herbert-hoover",
+    "harry-s-truman",
+    "dwight-d-eisenhower",
+    "lyndon-b-johnson",
+    "richard-nixon",
+    "gerald-ford",
+    "jimmy-carter",
+    "george-h-w-bush",
+    "bill-clinton",
+    "george-w-bush",
+    "american-revolution",
+    "treaty-of-paris-1783",
+    "us-bill-of-rights",
+    "underground-railroad",
+    "confederate-states",
+    "battle-of-gettysburg",
+    "reconstruction-era",
+    "thirteenth-amendment",
+    "ellis-island",
+    "prohibition-in-the-united-states",
+    "brown-v-board-of-education"
   ],
   "checkpoints": [
     {
@@ -80,35 +129,56 @@
       "name": "The colonies",
       "from": 1607,
       "to": 1764,
-      "note": "English settlers founded Jamestown in Virginia and Plymouth in New England. Thirteen colonies grew along the Atlantic coast, and enslaved Africans were brought to work their fields."
+      "note": "English settlers found Jamestown and Plymouth on land long home to Native nations. Thirteen colonies grow on farming, trade and the labour of enslaved Africans."
     },
     {
-      "id": "a-new-nation",
-      "name": "A new nation",
+      "id": "revolution-and-a-new-nation",
+      "name": "Revolution and a new nation",
       "from": 1765,
-      "to": 1860,
-      "note": "The colonies declared independence in 1776 and won the war. The Constitution set up a federal republic, the Louisiana Purchase doubled its size, and settlers pushed west while slavery spread south."
+      "to": 1815,
+      "note": "Taxes from London spark a revolution. The colonies declare independence in 1776, win the war, write the Constitution and elect George Washington the first president."
     },
     {
-      "id": "civil-war-and-industry",
-      "name": "Civil war and industry",
+      "id": "westward-growth-and-slavery",
+      "name": "Westward growth and slavery",
+      "from": 1816,
+      "to": 1860,
+      "note": "The country pushes west, driving Native nations from their land, and wins half of Mexico. The fight over slavery in the new states splits North and South."
+    },
+    {
+      "id": "civil-war-and-reconstruction",
+      "name": "Civil War and Reconstruction",
       "from": 1861,
-      "to": 1940,
-      "note": "The Civil War ended slavery. Railways crossed the continent, Edison lit cities, the Wright brothers flew and Ford built the Model T. The crash of 1929 brought the Great Depression."
+      "to": 1877,
+      "note": "Eleven Southern states leave the Union and war follows. Lincoln frees the enslaved and is murdered as the war ends, and Reconstruction tries to rebuild the South."
+    },
+    {
+      "id": "industry-and-reform",
+      "name": "Industry and reform",
+      "from": 1878,
+      "to": 1916,
+      "note": "Railways, steel and oil make the country the largest economy in the world. Millions of immigrants arrive, and presidents such as Theodore Roosevelt take on the big companies."
+    },
+    {
+      "id": "world-wars-and-the-depression",
+      "name": "World wars and the Depression",
+      "from": 1917,
+      "to": 1945,
+      "note": "The United States joins World War I, then booms and falls into the Great Depression. Franklin Roosevelt's New Deal fights it, and the country leads the Allies to victory in World War II."
     },
     {
       "id": "superpower",
       "name": "Superpower",
-      "from": 1941,
+      "from": 1946,
       "to": 1991,
-      "note": "Pearl Harbor brought the US into the Second World War. In the Cold War it faced the Soviet Union over Cuba and in Vietnam, Martin Luther King led the civil rights movement and Apollo 11 landed on the Moon."
+      "note": "The United States leads the West in the Cold War, lands on the Moon and ends segregation. It fights in Korea and Vietnam, and Watergate brings down a president."
     },
     {
       "id": "the-new-century",
       "name": "The new century",
       "from": 1992,
       "to": 2026,
-      "note": "The web and the iPhone came out of America. The attacks of 11 September 2001 led to wars in Afghanistan and Iraq, the crash of 2008 shook the economy, and Obama became the first Black president. Trump, Biden and Trump again followed, with a pandemic and the Capitol attack between."
+      "note": "After the Cold War the country leads the internet age. The attacks of 2001 lead to long wars, Barack Obama becomes the first Black president, and Donald Trump wins two terms."
     }
   ],
   "image": {

@@ -1,0 +1,54 @@
+{
+  "id": "2017-zimbabwean-coup",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2017 Zimbabwean coup d'état",
+      "from": "2017"
+    }
+  ],
+  "summary": "The coup that ended Mugabe's rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q43172549",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-11-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2017 Zimbabwean coup d'état (Q43172549)",
+      "url": "https://www.wikidata.org/wiki/Q43172549",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2017 Zimbabwean coup d'état",
+      "url": "https://en.wikipedia.org/wiki/2017_Zimbabwean_coup_d'état",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/A_tank_in_harare_during_the_coup.jpg/500px-A_tank_in_harare_during_the_coup.jpg",
+    "alt": "2017 Zimbabwean coup d'état",
+    "credit": "Public Domain Pictures",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_tank_in_harare_during_the_coup.jpg"
+  }
+}

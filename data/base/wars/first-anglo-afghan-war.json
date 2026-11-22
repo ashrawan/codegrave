@@ -1,0 +1,59 @@
+{
+  "id": "first-anglo-afghan-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Anglo-Afghan War",
+      "from": "1839"
+    }
+  ],
+  "summary": "The war in which a British army was wiped out in 1842.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q989092",
+  "events": [
+    {
+      "type": "born",
+      "date": "1839-03",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1842-10",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Anglo-Afghan War (Q989092)",
+      "url": "https://www.wikidata.org/wiki/Q989092",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Anglo-Afghan War",
+      "url": "https://en.wikipedia.org/wiki/First_Anglo-Afghan_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fc/The_army_of_the_Indus_entering_Kandahar.jpg_unscaled",
+    "alt": "First Anglo-Afghan War",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_army_of_the_Indus_entering_Kandahar.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "croatian-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Croatian War of Independence",
+      "from": "1991"
+    }
+  ],
+  "summary": "The war of 1991 to 1995.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q68969",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-03-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-08-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Croatian War of Independence (Q68969)",
+      "url": "https://www.wikidata.org/wiki/Q68969",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Croatian War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Croatian_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Vukovar_turm.jpg/500px-Vukovar_turm.jpg",
+    "alt": "Croatian War of Independence",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vukovar_turm.jpg"
+  }
+}

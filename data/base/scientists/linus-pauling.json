@@ -1,0 +1,50 @@
+{
+  "id": "linus-pauling",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Linus Pauling",
+      "from": "1901"
+    }
+  ],
+  "summary": "American chemist who explained the chemical bond and won two Nobel Prizes, for chemistry and for peace.",
+  "wikidata": "Q48983",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-02-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1994-08-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Linus Pauling (Q48983)",
+      "url": "https://www.wikidata.org/wiki/Q48983",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Linus Pauling",
+      "url": "https://en.wikipedia.org/wiki/Linus_Pauling",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Linus_Pauling_1962.jpg/500px-Linus_Pauling_1962.jpg",
+    "alt": "Linus Pauling",
+    "credit": "Nobel Foundation",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Linus_Pauling_1962.jpg"
+  }
+}

@@ -13,6 +13,7 @@
   ],
   "maker": "Yahoo",
   "summary": "Yahoo's instant messenger, with chat rooms, emoticons and a “buzz” that shook your friend's window.",
+  "wikidata": "Q71694",
   "events": [
     {
       "type": "born",
@@ -42,5 +43,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Yahoo%21_Messenger_Logo_%282013-2018%29.svg/500px-Yahoo%21_Messenger_Logo_%282013-2018%29.svg.png",
+    "alt": "Yahoo Messenger",
+    "credit": "Yahoo! Inc.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Yahoo!_Messenger_Logo_(2013-2018).svg"
+  }
 }

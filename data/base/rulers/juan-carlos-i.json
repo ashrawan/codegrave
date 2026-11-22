@@ -1,0 +1,54 @@
+{
+  "id": "juan-carlos-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Juan Carlos I",
+      "from": "1938"
+    }
+  ],
+  "summary": "King from 1975 to 2014, who backed democracy and faced down an attempted coup in 1981.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q19943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-01-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Juan Carlos I (Q19943)",
+      "url": "https://www.wikidata.org/wiki/Q19943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Juan Carlos I",
+      "url": "https://en.wikipedia.org/wiki/Juan_Carlos_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Rey_Juan_Carlos_2013.jpg/500px-Rey_Juan_Carlos_2013.jpg",
+    "alt": "Juan Carlos I",
+    "credit": "Irekia",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rey_Juan_Carlos_2013.jpg"
+  }
+}

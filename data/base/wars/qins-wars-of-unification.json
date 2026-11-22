@@ -1,0 +1,53 @@
+{
+  "id": "qins-wars-of-unification",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Qin's wars of unification",
+      "from": "-0230"
+    }
+  ],
+  "summary": "The campaigns by which the state of Qin conquered its six rivals and united China for the first time in 221 BCE.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2986801",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0230",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0221",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Qin's wars of unification (Q2986801)",
+      "url": "https://www.wikidata.org/wiki/Q2986801",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qin's wars of unification",
+      "url": "https://en.wikipedia.org/wiki/Qin's_wars_of_unification",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Hou_Xuanxuan_The_situation_map_of_Qin%27s_war.gif/500px-Hou_Xuanxuan_The_situation_map_of_Qin%27s_war.gif",
+    "alt": "Qin's wars of unification",
+    "credit": "Benedetta blair",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hou_Xuanxuan_The_situation_map_of_Qin%27s_war.gif"
+  }
+}

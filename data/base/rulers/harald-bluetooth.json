@@ -1,0 +1,59 @@
+{
+  "id": "harald-bluetooth",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Harald Bluetooth",
+      "from": "0911"
+    }
+  ],
+  "summary": "King who united Denmark and made it Christian.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q201041",
+  "events": [
+    {
+      "type": "born",
+      "date": "0911",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0985-11-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "denmark"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harald Bluetooth (Q201041)",
+      "url": "https://www.wikidata.org/wiki/Q201041",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harald Bluetooth",
+      "url": "https://en.wikipedia.org/wiki/Harald_Bluetooth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Harald_Bl%C3%A5tand_%28Roskilde_Domkirke%29.JPG/500px-Harald_Bl%C3%A5tand_%28Roskilde_Domkirke%29.JPG",
+    "alt": "Harald Bluetooth",
+    "credit": "Orf3us",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Harald_Bl%C3%A5tand_(Roskilde_Domkirke).JPG"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "selim-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Selim I",
+      "from": "1470"
+    }
+  ],
+  "summary": "Sultan who conquered Egypt, Syria and the holy cities of Arabia, doubling the size of the empire.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q494660",
+  "events": [
+    {
+      "type": "born",
+      "date": "1470-10-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1520-09-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Selim I (Q494660)",
+      "url": "https://www.wikidata.org/wiki/Q494660",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Selim I",
+      "url": "https://en.wikipedia.org/wiki/Selim_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Selim_I._Semailname_%28Millet_Library%2C_Ali_Em%C3%AEr%C3%AE_Collection%2C_History%2C_MS_no._1216%29.jpg/500px-Selim_I._Semailname_%28Millet_Library%2C_Ali_Em%C3%AEr%C3%AE_Collection%2C_History%2C_MS_no._1216%29.jpg",
+    "alt": "Selim I",
+    "credit": "16th century artist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Selim_I._Semailname_(Millet_Library,_Ali_Em%C3%AEr%C3%AE_Collection,_History,_MS_no._1216).jpg"
+  }
+}

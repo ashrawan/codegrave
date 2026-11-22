@@ -1,0 +1,53 @@
+{
+  "id": "sino-vietnamese-war",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Sino-Vietnamese War",
+      "from": "1979"
+    }
+  ],
+  "summary": "China attacked Vietnam's northern border in 1979.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q623171",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-02-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-03-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sino-Vietnamese War (Q623171)",
+      "url": "https://www.wikidata.org/wiki/Q623171",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sino-Vietnamese War",
+      "url": "https://en.wikipedia.org/wiki/Sino-Vietnamese_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Vietnam_china.jpg/500px-Vietnam_china.jpg",
+    "alt": "Sino-Vietnamese War",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Vietnam_china.jpg"
+  }
+}

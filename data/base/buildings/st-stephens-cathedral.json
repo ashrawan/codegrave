@@ -1,0 +1,48 @@
+{
+  "id": "st-stephens-cathedral",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "St Stephen's Cathedral",
+      "from": "1137"
+    }
+  ],
+  "summary": "Vienna's Gothic cathedral, symbol of the city.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q5943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1137",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: St Stephen's Cathedral (Q5943)",
+      "url": "https://www.wikidata.org/wiki/Q5943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: St. Stephen's Cathedral, Vienna",
+      "url": "https://en.wikipedia.org/wiki/St._Stephen's_Cathedral,_Vienna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Wien_-_Stephansdom_%281%29.JPG/500px-Wien_-_Stephansdom_%281%29.JPG",
+    "alt": "St Stephen's Cathedral",
+    "credit": "C.Stadler/Bwag",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Stephansdom_(1).JPG"
+  }
+}

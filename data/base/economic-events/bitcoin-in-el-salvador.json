@@ -1,0 +1,48 @@
+{
+  "id": "bitcoin-in-el-salvador",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Bitcoin legal tender in El Salvador",
+      "from": "2021"
+    }
+  ],
+  "summary": "In 2021 El Salvador became the first country to make bitcoin legal money.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q108179323",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-09-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bitcoin legal tender in El Salvador (Q108179323)",
+      "url": "https://www.wikidata.org/wiki/Q108179323",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bitcoin in El Salvador",
+      "url": "https://en.wikipedia.org/wiki/Bitcoin_in_El_Salvador",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Cajero_Bitcoin_Athena_El_Salvador.jpg/500px-Cajero_Bitcoin_Athena_El_Salvador.jpg",
+    "alt": "Bitcoin legal tender in El Salvador",
+    "credit": "Karlalhdz",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cajero_Bitcoin_Athena_El_Salvador.jpg"
+  }
+}

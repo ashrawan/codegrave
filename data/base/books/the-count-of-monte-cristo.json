@@ -1,0 +1,48 @@
+{
+  "id": "the-count-of-monte-cristo",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Count of Monte Cristo",
+      "from": "1844"
+    }
+  ],
+  "summary": "Dumas's story of a man wrongly imprisoned who escapes, finds a treasure and takes his revenge.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q191838",
+  "events": [
+    {
+      "type": "born",
+      "date": "1844",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Count of Monte Cristo (Q191838)",
+      "url": "https://www.wikidata.org/wiki/Q191838",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Count of Monte Cristo",
+      "url": "https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Louis_Fran%C3%A7ais-Dant%C3%A8s_sur_son_rocher.jpg/500px-Louis_Fran%C3%A7ais-Dant%C3%A8s_sur_son_rocher.jpg",
+    "alt": "The Count of Monte Cristo",
+    "credit": "François-Louis Français",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Louis_Fran%C3%A7ais-Dant%C3%A8s_sur_son_rocher.jpg"
+  }
+}

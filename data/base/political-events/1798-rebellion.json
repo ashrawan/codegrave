@@ -1,0 +1,53 @@
+{
+  "id": "1798-rebellion",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Irish Rebellion of 1798",
+      "from": "1798"
+    }
+  ],
+  "summary": "A rising of the United Irishmen against British rule, crushed with great loss of life.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q944941",
+  "events": [
+    {
+      "type": "born",
+      "date": "1798-05-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1798-09-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Irish Rebellion of 1798 (Q944941)",
+      "url": "https://www.wikidata.org/wiki/Q944941",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Irish Rebellion of 1798",
+      "url": "https://en.wikipedia.org/wiki/Irish_Rebellion_of_1798",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/Vinegar_hill.jpg",
+    "alt": "Irish Rebellion of 1798",
+    "credit": "The original uploader was Damnbutter at English Wikipedia.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vinegar_hill.jpg"
+  }
+}

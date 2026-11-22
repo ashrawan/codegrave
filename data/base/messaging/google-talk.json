@@ -9,6 +9,7 @@
   ],
   "maker": "Google",
   "summary": "Google's first chat service, built into Gmail. It was the first of a long line of Google messaging apps that replaced each other.",
+  "wikidata": "Q51713",
   "events": [
     {
       "type": "born",
@@ -38,5 +39,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Google_Talk_on_BlackBerry.jpg/500px-Google_Talk_on_BlackBerry.jpg",
+    "alt": "Google Talk",
+    "credit": "Unknown author",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Google_Talk_on_BlackBerry.jpg"
+  }
 }

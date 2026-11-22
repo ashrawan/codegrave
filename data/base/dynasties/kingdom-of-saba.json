@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-saba",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Sheba",
+      "from": "-1000"
+    }
+  ],
+  "summary": "The ancient kingdom of Saba, linked to the Queen of Sheba.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q216068",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0275",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sheba (Q216068)",
+      "url": "https://www.wikidata.org/wiki/Q216068",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sheba",
+      "url": "https://en.wikipedia.org/wiki/Sheba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

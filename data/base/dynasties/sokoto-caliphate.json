@@ -1,0 +1,59 @@
+{
+  "id": "sokoto-caliphate",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Sokoto Caliphate",
+      "from": "1804"
+    }
+  ],
+  "summary": "An Islamic state founded by the scholar Usman dan Fodio after a holy war against the Hausa kings. It ruled much of the north until British conquest in 1903.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q600524",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1903",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sokoto Caliphate (Q600524)",
+      "url": "https://www.wikidata.org/wiki/Q600524",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sokoto Caliphate",
+      "url": "https://en.wikipedia.org/wiki/Sokoto_Caliphate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/View_of_Sokoto_%281890%29.jpg/500px-View_of_Sokoto_%281890%29.jpg",
+    "alt": "Sokoto Caliphate",
+    "credit": "Monteil, P.-L. (Parfait-Louis)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Sokoto_(1890).jpg"
+  }
+}

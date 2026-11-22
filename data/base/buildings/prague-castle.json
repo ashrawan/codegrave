@@ -1,0 +1,48 @@
+{
+  "id": "prague-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Prague Castle",
+      "from": "0880"
+    }
+  ],
+  "summary": "The largest old castle complex in the world, seat of kings and presidents.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q193369",
+  "events": [
+    {
+      "type": "born",
+      "date": "0880",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Prague Castle (Q193369)",
+      "url": "https://www.wikidata.org/wiki/Q193369",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prague Castle",
+      "url": "https://en.wikipedia.org/wiki/Prague_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Castillo_de_Praga%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_209.jpg/500px-Castillo_de_Praga%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_209.jpg",
+    "alt": "Prague Castle",
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Castillo_de_Praga,_Praga,_Rep%C3%BAblica_Checa,_2022-07-02,_DD_209.jpg"
+  }
+}

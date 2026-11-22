@@ -1,0 +1,68 @@
+{
+  "id": "andy-burnham",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Andy Burnham",
+      "from": "1970"
+    }
+  ],
+  "summary": "Labour politician who was a Cabinet minister under Gordon Brown and then mayor of Greater Manchester from 2017. He returned to Parliament in a by-election in June 2026 and became prime minister in July 2026.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q269909",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-01-07",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2017-05-08",
+      "precision": "day",
+      "label": "Mayor",
+      "note": "Becomes the first elected mayor of Greater Manchester."
+    },
+    {
+      "type": "milestone",
+      "date": "2026-07-20",
+      "precision": "day",
+      "label": "Prime minister",
+      "note": "Becomes prime minister of the United Kingdom after winning the Labour leadership."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Andy Burnham (Q269909)",
+      "url": "https://www.wikidata.org/wiki/Q269909",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andy Burnham",
+      "url": "https://en.wikipedia.org/wiki/Andy_Burnham",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Prime_Minister_Andy_Burnham_portrait_%28cropped%29.jpg/500px-Prime_Minister_Andy_Burnham_portrait_%28cropped%29.jpg",
+    "alt": "Andy Burnham",
+    "credit": "Prime Minister's Office",
+    "licence": "OGL 3",
+    "source": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Andy_Burnham_portrait_(cropped).jpg"
+  }
+}

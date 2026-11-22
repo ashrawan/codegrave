@@ -1,0 +1,50 @@
+{
+  "id": "hurricane-maria",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Maria",
+      "from": "2017"
+    }
+  ],
+  "summary": "A hurricane that devastated Puerto Rico and Dominica in 2017, cutting power for months; about 3,000 people died.",
+  "wikidata": "Q40178187",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-09-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-10-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Maria (Q40178187)",
+      "url": "https://www.wikidata.org/wiki/Q40178187",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Maria",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Maria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Maria_2017-09-19_2115Z.jpg/500px-Maria_2017-09-19_2115Z.jpg",
+    "alt": "Hurricane Maria",
+    "credit": "ABI imagery from NOAA's GOES-16 Satellite",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Maria_2017-09-19_2115Z.jpg"
+  }
+}

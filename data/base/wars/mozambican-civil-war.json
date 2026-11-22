@@ -1,0 +1,59 @@
+{
+  "id": "mozambican-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Mozambican Civil War",
+      "from": "1977"
+    }
+  ],
+  "summary": "The war of 1977 to 1992.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q657661",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-05-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mozambican Civil War (Q657661)",
+      "url": "https://www.wikidata.org/wiki/Q657661",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mozambican Civil War",
+      "url": "https://en.wikipedia.org/wiki/Mozambican_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/LocationMozambique.svg/500px-LocationMozambique.svg.png",
+    "alt": "Mozambican Civil War",
+    "credit": "By Rei-artur pt en Rei-artur blog",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LocationMozambique.svg"
+  }
+}

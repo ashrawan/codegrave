@@ -1,0 +1,38 @@
+{
+  "id": "dogecoin",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "Dogecoin",
+      "from": "2013"
+    }
+  ],
+  "summary": "A coin started as a joke in 2013 with a Shiba Inu dog as its face, which later soared on social media.",
+  "wikidata": "Q15377916",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Dogecoin (Q15377916)",
+      "url": "https://www.wikidata.org/wiki/Q15377916",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dogecoin",
+      "url": "https://en.wikipedia.org/wiki/Dogecoin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

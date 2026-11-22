@@ -1,0 +1,53 @@
+{
+  "id": "mohammad-reza-pahlavi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Mohammad Reza Pahlavi",
+      "from": "1919"
+    }
+  ],
+  "summary": "The last shah, who ruled from 1941 until the revolution of 1979.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q128245",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-10-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mohammad Reza Pahlavi (Q128245)",
+      "url": "https://www.wikidata.org/wiki/Q128245",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mohammad Reza Pahlavi",
+      "url": "https://en.wikipedia.org/wiki/Mohammad_Reza_Pahlavi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Shah_Mohammad_Reza_Pahlavi%2C_1973.jpg/500px-Shah_Mohammad_Reza_Pahlavi%2C_1973.jpg",
+    "alt": "Mohammad Reza Pahlavi",
+    "credit": "Ghazarians",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Shah_Mohammad_Reza_Pahlavi,_1973.jpg"
+  }
+}

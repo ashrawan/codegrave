@@ -1,0 +1,54 @@
+{
+  "id": "alcazar-de-colon",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Alcázar de Colón",
+      "from": "1511"
+    }
+  ],
+  "summary": "The palace of Diego Columbus, son of the explorer, in Santo Domingo.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q668772",
+  "events": [
+    {
+      "type": "born",
+      "date": "1511",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominican-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alcázar de Colón (Q668772)",
+      "url": "https://www.wikidata.org/wiki/Q668772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alcázar de Colón",
+      "url": "https://en.wikipedia.org/wiki/Alcázar_de_Colón",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Santo_Domingo_-_Alcazar_de_Colon_02.JPG/500px-Santo_Domingo_-_Alcazar_de_Colon_02.JPG",
+    "alt": "Alcázar de Colón",
+    "credit": "Martin Falbisoner",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Santo_Domingo_-_Alcazar_de_Colon_02.JPG"
+  }
+}

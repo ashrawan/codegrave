@@ -1,0 +1,48 @@
+{
+  "id": "australian-open",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Australian Open",
+      "from": "1905"
+    }
+  ],
+  "summary": "The first Grand Slam of each year, in Melbourne in January.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q60874",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Australian Open (Q60874)",
+      "url": "https://www.wikidata.org/wiki/Q60874",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Australian Open",
+      "url": "https://en.wikipedia.org/wiki/Australian_Open",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Rod_Laver_Arena_%288984015851%29.jpg/500px-Rod_Laver_Arena_%288984015851%29.jpg",
+    "alt": "Australian Open",
+    "credit": "Steve Collis from Melbourne, Australia",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rod_Laver_Arena_(8984015851).jpg"
+  }
+}

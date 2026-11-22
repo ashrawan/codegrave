@@ -1,0 +1,75 @@
+{
+  "id": "mongolia",
+  "name": "Mongolia",
+  "description": "Mongolia from the Xiongnu to Genghis Khan and the Mongol Empire, the Qing, the revolution of 1921, communism and democracy.",
+  "category": "places",
+  "tags": [
+    "mongolia",
+    "ulaanbaatar",
+    "genghis khan",
+    "steppe",
+    "nomads",
+    "gobi"
+  ],
+  "entries": [
+    "xiongnu",
+    "genghis-khan",
+    "ogedei-khan",
+    "mongol-empire",
+    "naadam",
+    "kublai-khan",
+    "karakorum",
+    "secret-history-of-the-mongols",
+    "mongol-invasions-of-japan",
+    "northern-yuan",
+    "erdene-zuu-monastery",
+    "zanabazar",
+    "ulaanbaatar",
+    "bogd-khan",
+    "damdin-sukhbaatar",
+    "mongolia",
+    "mongolian-revolution-of-1921",
+    "mongolian-peoples-republic",
+    "mongolian-soviet-purges",
+    "ukhnaagiin-khurelsukh",
+    "1990-democratic-revolution-in-mongolia",
+    "oyu-tolgoi"
+  ],
+  "checkpoints": [
+    {
+      "id": "steppe-empires",
+      "name": "Steppe empires",
+      "from": -209,
+      "to": 1161,
+      "note": "The Xiongnu, Turks and Uyghurs ruled the steppe."
+    },
+    {
+      "id": "the-mongol-empire",
+      "name": "The Mongol Empire",
+      "from": 1162,
+      "to": 1634,
+      "note": "Genghis Khan united the tribes in 1206 and conquered from China to Europe."
+    },
+    {
+      "id": "qing-rule",
+      "name": "Qing rule",
+      "from": 1635,
+      "to": 1910,
+      "note": "The Qing ruled Mongolia for nearly three centuries."
+    },
+    {
+      "id": "modern-mongolia",
+      "name": "Modern Mongolia",
+      "from": 1911,
+      "to": 2026,
+      "note": "Mongolia broke from China in 1911, became communist in 1924 and democratic in 1990."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Mongolia.svg/330px-Flag_of_Mongolia.svg.png",
+    "alt": "Flag of Mongolia",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mongolia.svg"
+  }
+}

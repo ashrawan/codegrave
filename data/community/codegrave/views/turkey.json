@@ -1,0 +1,87 @@
+{
+  "id": "turkey",
+  "name": "Turkey",
+  "description": "Turkey from Göbekli Tepe, Troy and the Hittites to Byzantium, the Seljuks, the Ottoman Empire, Atatürk's republic and today.",
+  "category": "places",
+  "tags": [
+    "turkey",
+    "istanbul",
+    "ankara",
+    "ottomans",
+    "anatolia",
+    "ataturk"
+  ],
+  "entries": [
+    "gobekli-tepe",
+    "catalhoyuk",
+    "troy",
+    "hittite-empire",
+    "ephesus",
+    "temple-of-artemis",
+    "mausoleum-at-halicarnassus",
+    "istanbul",
+    "walls-of-constantinople",
+    "hagia-sophia",
+    "seljuk-empire",
+    "battle-of-manzikert",
+    "rumi",
+    "ottoman-empire",
+    "mehmed-ii",
+    "fall-of-constantinople",
+    "topkapi-palace",
+    "mimar-sinan",
+    "suleiman-the-magnificent",
+    "sultan-ahmed-mosque",
+    "mustafa-kemal-ataturk",
+    "gallipoli-campaign",
+    "turkish-war-of-independence",
+    "treaty-of-lausanne",
+    "ankara",
+    "turkey",
+    "turkish-alphabet-reform",
+    "turkey-women-vote",
+    "orhan-pamuk",
+    "recep-tayyip-erdogan",
+    "1980-turkish-coup",
+    "izmit-earthquake-1999",
+    "2016-turkish-coup-attempt",
+    "turkey-syria-earthquakes-2023"
+  ],
+  "checkpoints": [
+    {
+      "id": "anatolia-of-old",
+      "name": "Anatolia of old",
+      "from": -9999,
+      "to": 1070,
+      "note": "Göbekli Tepe and Çatalhöyük are among the oldest monuments and towns. The Hittites ruled the plateau, Troy stood on the coast, the Greeks and Romans built Ephesus, and Constantinople became the capital of Byzantium."
+    },
+    {
+      "id": "seljuks-and-ottomans",
+      "name": "Seljuks and Ottomans",
+      "from": 1071,
+      "to": 1918,
+      "note": "Turks won Anatolia after Manzikert. The Ottomans took Constantinople in 1453 and under Suleiman ruled from Hungary to Arabia, then slowly declined until defeat in the First World War."
+    },
+    {
+      "id": "the-republic",
+      "name": "The republic",
+      "from": 1919,
+      "to": 2026,
+      "note": "Atatürk won the war of independence and founded the republic in 1923, remaking its laws and alphabet. Turkey joined NATO, lived through coups, and has been led by Erdoğan since 2003."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Flag_of_Turkey.svg/330px-Flag_of_Turkey.svg.png",
+    "alt": "Flag of Turkey",
+    "credit": "David Benbennick (original author)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkey.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/99/Istikl%C3%A2l_Marsi_instrumetal.ogg/Istikl%C3%A2l_Marsi_instrumetal.ogg.mp3",
+    "title": "İstiklâl Marşı",
+    "credit": "http://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm http://web.archive.org/",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Istikl%C3%A2l_Marsi_instrumetal.ogg"
+  }
+}

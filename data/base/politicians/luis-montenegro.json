@@ -1,0 +1,54 @@
+{
+  "id": "luis-montenegro",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Luís Montenegro",
+      "from": "1973"
+    }
+  ],
+  "summary": "Prime minister since 2024.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11764394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-02-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Luís Montenegro (Q11764394)",
+      "url": "https://www.wikidata.org/wiki/Q11764394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luís Montenegro",
+      "url": "https://en.wikipedia.org/wiki/Luís_Montenegro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Lu%C3%ADs_Montenegro%2C_2025.06.26_%2805%29_%28cropped%29.jpg/500px-Lu%C3%ADs_Montenegro%2C_2025.06.26_%2805%29_%28cropped%29.jpg",
+    "alt": "Luís Montenegro",
+    "credit": "European Union",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Lu%C3%ADs_Montenegro,_2025.06.26_(05)_(cropped).jpg"
+  }
+}

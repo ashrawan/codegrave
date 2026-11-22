@@ -1,0 +1,46 @@
+{
+  "id": "slovak-state",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Slovak State",
+      "from": "1939"
+    }
+  ],
+  "summary": "The state allied with Nazi Germany from 1939 to 1945.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154401",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-03-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Slovak State (Q154401)",
+      "url": "https://www.wikidata.org/wiki/Q154401",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Slovak Republic (1939–1945)",
+      "url": "https://en.wikipedia.org/wiki/Slovak_Republic_(1939–1945)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

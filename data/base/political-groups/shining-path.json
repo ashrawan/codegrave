@@ -1,0 +1,59 @@
+{
+  "id": "shining-path",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Shining Path",
+      "from": "1969"
+    }
+  ],
+  "summary": "Maoist guerrilla group whose war killed tens of thousands.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q207854",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2018-06",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shining Path (Q207854)",
+      "url": "https://www.wikidata.org/wiki/Q207854",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shining Path",
+      "url": "https://en.wikipedia.org/wiki/Shining_Path",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Emblem_of_the_PCP-Shining_Path.svg/500px-Emblem_of_the_PCP-Shining_Path.svg.png",
+    "alt": "Shining Path",
+    "credit": "Cesar David MP",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Emblem_of_the_PCP-Shining_Path.svg"
+  }
+}

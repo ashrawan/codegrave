@@ -1,0 +1,47 @@
+{
+  "id": "boston-celtics",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Boston Celtics",
+      "from": "1946"
+    }
+  ],
+  "summary": "Team that won eleven titles in thirteen years with Bill Russell, and holds the most titles in NBA history.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q131371",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Boston Celtics (Q131371)",
+      "url": "https://www.wikidata.org/wiki/Q131371",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boston Celtics",
+      "url": "https://en.wikipedia.org/wiki/Boston_Celtics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

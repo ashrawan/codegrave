@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-omdurman",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Omdurman",
+      "from": "1898"
+    }
+  ],
+  "summary": "The battle of 1898 in which Britain crushed the Mahdists.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1137302",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898-09-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1898-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Omdurman (Q1137302)",
+      "url": "https://www.wikidata.org/wiki/Q1137302",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Omdurman",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Omdurman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/21lancers.JPG/500px-21lancers.JPG",
+    "alt": "Battle of Omdurman",
+    "credit": "Edward Matthew Hale (1852-1924). Original uploader was Raoulduke47 4 January 2007 (original upload date) at en.wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:21lancers.JPG"
+  }
+}

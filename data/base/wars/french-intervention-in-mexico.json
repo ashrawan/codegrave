@@ -1,0 +1,59 @@
+{
+  "id": "french-intervention-in-mexico",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second French intervention in Mexico",
+      "from": "1861"
+    }
+  ],
+  "summary": "The French invasion that set up Maximilian of Austria as emperor until he was defeated and shot in 1867.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q952881",
+  "events": [
+    {
+      "type": "born",
+      "date": "1861-12-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1867-06-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second French intervention in Mexico (Q952881)",
+      "url": "https://www.wikidata.org/wiki/Q952881",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second French intervention in Mexico",
+      "url": "https://en.wikipedia.org/wiki/Second_French_intervention_in_Mexico",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0f/BattleofPuebla2.jpg_unscaled",
+    "alt": "Second French intervention in Mexico",
+    "credit": "Mike Manning",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BattleofPuebla2.jpg"
+  }
+}

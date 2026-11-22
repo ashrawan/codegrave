@@ -1,0 +1,59 @@
+{
+  "id": "habib-bourguiba",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Habib Bourguiba",
+      "from": "1903"
+    }
+  ],
+  "summary": "Leader of independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q643348",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903-08-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-04-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tunisia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Habib Bourguiba (Q643348)",
+      "url": "https://www.wikidata.org/wiki/Q643348",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Habib Bourguiba",
+      "url": "https://en.wikipedia.org/wiki/Habib_Bourguiba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Habib_Bourguiba_portrait4.jpg/500px-Habib_Bourguiba_portrait4.jpg",
+    "alt": "Habib Bourguiba",
+    "credit": "Habib Osman",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Habib_Bourguiba_portrait4.jpg"
+  }
+}

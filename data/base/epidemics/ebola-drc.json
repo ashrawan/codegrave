@@ -1,0 +1,45 @@
+{
+  "id": "ebola-drc",
+  "category": "epidemics",
+  "names": [
+    {
+      "name": "Kivu Ebola epidemic",
+      "from": "2018"
+    }
+  ],
+  "summary": "An Ebola outbreak in eastern Congo from 2018 to 2020, the second largest on record.",
+  "wikidata": "Q55887234",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kivu Ebola epidemic (Q55887234)",
+      "url": "https://www.wikidata.org/wiki/Q55887234",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kivu Ebola epidemic",
+      "url": "https://en.wikipedia.org/wiki/Kivu_Ebola_epidemic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/DRC_cases_south_and_north_kivu_%2C_ituri.jpg/500px-DRC_cases_south_and_north_kivu_%2C_ituri.jpg",
+    "alt": "Kivu Ebola epidemic",
+    "credit": "NordNordWest, DaB., Ozzie10aaaa",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:DRC_cases_south_and_north_kivu_,_ituri.jpg"
+  }
+}

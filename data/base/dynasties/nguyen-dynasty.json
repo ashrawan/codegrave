@@ -1,0 +1,52 @@
+{
+  "id": "nguyen-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Nguyễn dynasty",
+      "from": "1802"
+    }
+  ],
+  "summary": "The last dynasty, which ruled from Hue from 1802 and fell under French control.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q6500483",
+  "events": [
+    {
+      "type": "born",
+      "date": "1802-06-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-08-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nguyễn dynasty (Q6500483)",
+      "url": "https://www.wikidata.org/wiki/Q6500483",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nguyễn dynasty",
+      "url": "https://en.wikipedia.org/wiki/Nguyễn_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

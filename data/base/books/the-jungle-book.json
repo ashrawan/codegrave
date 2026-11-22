@@ -1,0 +1,48 @@
+{
+  "id": "the-jungle-book",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Jungle Book",
+      "from": "1894"
+    }
+  ],
+  "summary": "Kipling's stories of Mowgli, a boy raised by wolves in an Indian jungle.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q189509",
+  "events": [
+    {
+      "type": "born",
+      "date": "1894",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Jungle Book (Q189509)",
+      "url": "https://www.wikidata.org/wiki/Q189509",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Jungle Book",
+      "url": "https://en.wikipedia.org/wiki/The_Jungle_Book",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f5/JunglebookCover.jpg",
+    "alt": "The Jungle Book",
+    "credit": "Illustrated by John Lockwood Kipling",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JunglebookCover.jpg"
+  }
+}

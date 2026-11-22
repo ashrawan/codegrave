@@ -1,0 +1,53 @@
+{
+  "id": "polish-soviet-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Polish–Soviet War",
+      "from": "1919"
+    }
+  ],
+  "summary": "The war of 1919 to 1921, won by Poland at the Battle of Warsaw.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q186284",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1921-03",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Polish–Soviet War (Q186284)",
+      "url": "https://www.wikidata.org/wiki/Q186284",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Polish–Soviet War",
+      "url": "https://en.wikipedia.org/wiki/Polish–Soviet_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Polish-soviet_war_1920_Polish_defences_near_Milosna%2C_August.jpg/500px-Polish-soviet_war_1920_Polish_defences_near_Milosna%2C_August.jpg",
+    "alt": "Polish–Soviet War",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Polish-soviet_war_1920_Polish_defences_near_Milosna,_August.jpg"
+  }
+}

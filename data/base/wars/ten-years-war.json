@@ -1,0 +1,59 @@
+{
+  "id": "ten-years-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Ten Years' War",
+      "from": "1868"
+    }
+  ],
+  "summary": "The first war for Cuban independence, from 1868 to 1878.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q184637",
+  "events": [
+    {
+      "type": "born",
+      "date": "1868-10-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1878",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ten Years' War (Q184637)",
+      "url": "https://www.wikidata.org/wiki/Q184637",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ten Years' War",
+      "url": "https://en.wikipedia.org/wiki/Ten_Years'_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Embarcament_dels_voluntaris_catalans_al_port_de_Barcelona.jpg/500px-Embarcament_dels_voluntaris_catalans_al_port_de_Barcelona.jpg",
+    "alt": "Ten Years' War",
+    "credit": "Ramon Padró i Pedret",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Embarcament_dels_voluntaris_catalans_al_port_de_Barcelona.jpg"
+  }
+}

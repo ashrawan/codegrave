@@ -1,0 +1,54 @@
+{
+  "id": "donald-tusk",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Donald Tusk",
+      "from": "1957"
+    }
+  ],
+  "summary": "Prime minister of Poland in 2007 to 2014 and again from 2023, and once president of the European Council.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q946",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-04-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Donald Tusk (Q946)",
+      "url": "https://www.wikidata.org/wiki/Q946",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Donald Tusk",
+      "url": "https://en.wikipedia.org/wiki/Donald_Tusk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Premier_Donald_Tusk_KPRM.jpg_unscaled",
+    "alt": "Donald Tusk",
+    "credit": "The Chancellery of the Prime Minister of the Republic of Poland",
+    "licence": "CC BY 3.0 pl",
+    "source": "https://commons.wikimedia.org/wiki/File:Premier_Donald_Tusk_KPRM.jpg"
+  }
+}

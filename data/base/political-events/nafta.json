@@ -1,0 +1,54 @@
+{
+  "id": "nafta",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "North American Free Trade Agreement",
+      "from": "1994"
+    }
+  ],
+  "summary": "The trade pact of 1994 between Mexico, the United States and Canada.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q181574",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: North American Free Trade Agreement (Q181574)",
+      "url": "https://www.wikidata.org/wiki/Q181574",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: North American Free Trade Agreement",
+      "url": "https://en.wikipedia.org/wiki/North_American_Free_Trade_Agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/NAFTA_logo.svg/500px-NAFTA_logo.svg.png",
+    "alt": "North American Free Trade Agreement",
+    "credit": "Nicoguaro",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:NAFTA_logo.svg"
+  }
+}

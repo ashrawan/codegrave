@@ -1,0 +1,45 @@
+{
+  "id": "chefchaouen",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Chefchaouen",
+      "from": "1471"
+    }
+  ],
+  "summary": "A mountain town in the Rif with houses painted blue.",
+  "wikidata": "Q676778",
+  "events": [
+    {
+      "type": "born",
+      "date": "1471",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Chefchaouen (Q676778)",
+      "url": "https://www.wikidata.org/wiki/Q676778",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chefchaouen",
+      "url": "https://en.wikipedia.org/wiki/Chefchaouen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Chefcha%27ouen_City_%2C_Morocco.jpg/500px-Chefcha%27ouen_City_%2C_Morocco.jpg",
+    "alt": "Chefchaouen",
+    "credit": "Ismailbrk",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chefcha%27ouen_City_,_Morocco.jpg"
+  }
+}

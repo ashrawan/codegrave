@@ -1,0 +1,52 @@
+{
+  "id": "kalmar-union",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Kalmar Union",
+      "from": "1397"
+    }
+  ],
+  "summary": "The union of Denmark, Norway and Sweden under one crown, which Sweden left in 1523.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q62623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1397",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1523",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kalmar Union (Q62623)",
+      "url": "https://www.wikidata.org/wiki/Q62623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kalmar Union",
+      "url": "https://en.wikipedia.org/wiki/Kalmar_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

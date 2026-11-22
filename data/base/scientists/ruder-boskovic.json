@@ -1,0 +1,56 @@
+{
+  "id": "ruder-boskovic",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Roger Joseph Boscovich",
+      "from": "1711"
+    }
+  ],
+  "summary": "Scientist of Dubrovnik, a pioneer of atomic theory.",
+  "wikidata": "Q310757",
+  "events": [
+    {
+      "type": "born",
+      "date": "1711-05-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1787-02-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roger Joseph Boscovich (Q310757)",
+      "url": "https://www.wikidata.org/wiki/Q310757",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roger Joseph Boscovich",
+      "url": "https://en.wikipedia.org/wiki/Roger_Joseph_Boscovich",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Rudjer_Boskovic.jpg_unscaled",
+    "alt": "Roger Joseph Boscovich",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rudjer_Boskovic.jpg"
+  }
+}

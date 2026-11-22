@@ -1,0 +1,51 @@
+{
+  "id": "antigua-guatemala",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Antigua Guatemala",
+      "from": "1543"
+    }
+  ],
+  "summary": "The old colonial capital, ruined by earthquakes.",
+  "wikidata": "Q212773",
+  "events": [
+    {
+      "type": "born",
+      "date": "1543",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guatemala"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antigua Guatemala (Q212773)",
+      "url": "https://www.wikidata.org/wiki/Q212773",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antigua Guatemala",
+      "url": "https://en.wikipedia.org/wiki/Antigua_Guatemala",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Santa_Catalina_Arch_-_Antigua_Guatemala_Feb_2020.jpg/500px-Santa_Catalina_Arch_-_Antigua_Guatemala_Feb_2020.jpg",
+    "alt": "Antigua Guatemala",
+    "credit": "Chad Davis",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Santa_Catalina_Arch_-_Antigua_Guatemala_Feb_2020.jpg"
+  }
+}

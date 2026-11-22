@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-stiklestad",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Stiklestad",
+      "from": "1030"
+    }
+  ],
+  "summary": "The battle of 1030 where King Olaf fell, soon honoured as Saint Olaf, patron of Norway.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q830878",
+  "events": [
+    {
+      "type": "born",
+      "date": "1030-07-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1030-07-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Stiklestad (Q830878)",
+      "url": "https://www.wikidata.org/wiki/Q830878",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Stiklestad",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Stiklestad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Stiklestad.jpeg/500px-Stiklestad.jpeg",
+    "alt": "Battle of Stiklestad",
+    "credit": "Peter Nicolai Arbo",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Stiklestad.jpeg"
+  }
+}

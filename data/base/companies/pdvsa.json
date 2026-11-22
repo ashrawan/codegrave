@@ -1,0 +1,54 @@
+{
+  "id": "pdvsa",
+  "category": "companies",
+  "names": [
+    {
+      "name": "PDVSA",
+      "from": "1975"
+    }
+  ],
+  "summary": "The state oil company, formed when oil was nationalised in 1976.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q718194",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-08-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: PDVSA (Q718194)",
+      "url": "https://www.wikidata.org/wiki/Q718194",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PDVSA",
+      "url": "https://en.wikipedia.org/wiki/PDVSA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Edificio_PDVSA_5_de_Julio.jpg/500px-Edificio_PDVSA_5_de_Julio.jpg",
+    "alt": "PDVSA",
+    "credit": "Wilfredor",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Edificio_PDVSA_5_de_Julio.jpg"
+  }
+}

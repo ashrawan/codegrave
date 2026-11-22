@@ -1,0 +1,53 @@
+{
+  "id": "us-occupation-dominican-republic",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "US occupation of 1916–1924",
+      "from": "1916"
+    }
+  ],
+  "summary": "US marines ran the Dominican Republic from 1916 to 1924.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1756207",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1924",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: US occupation of 1916–1924 (Q1756207)",
+      "url": "https://www.wikidata.org/wiki/Q1756207",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United States occupation of the Dominican Republic (1916–1924)",
+      "url": "https://en.wikipedia.org/wiki/United_States_occupation_of_the_Dominican_Republic_(1916–1924)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/USS_Tennessee_ACR-10_-_photo_NH59921.jpg/500px-USS_Tennessee_ACR-10_-_photo_NH59921.jpg",
+    "alt": "US occupation of 1916–1924",
+    "credit": "http://www.history.navy.mil",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:USS_Tennessee_ACR-10_-_photo_NH59921.jpg"
+  }
+}

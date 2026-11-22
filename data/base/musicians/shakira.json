@@ -1,0 +1,54 @@
+{
+  "id": "shakira",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Shakira",
+      "from": "1977"
+    }
+  ],
+  "summary": "Singer from Barranquilla, one of the best-selling Latin artists.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q34424",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-02-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shakira (Q34424)",
+      "url": "https://www.wikidata.org/wiki/Q34424",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shakira",
+      "url": "https://en.wikipedia.org/wiki/Shakira",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2023-11-16_Gala_de_los_Latin_Grammy%2C_03_%28cropped%2901.jpg/500px-2023-11-16_Gala_de_los_Latin_Grammy%2C_03_%28cropped%2901.jpg",
+    "alt": "Shakira",
+    "credit": "Junta de Andalucía",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2023-11-16_Gala_de_los_Latin_Grammy,_03_(cropped)01.jpg"
+  }
+}

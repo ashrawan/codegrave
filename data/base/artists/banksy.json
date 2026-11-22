@@ -1,0 +1,48 @@
+{
+  "id": "banksy",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Banksy",
+      "from": "1973"
+    }
+  ],
+  "summary": "Anonymous street artist from Bristol whose stencilled pictures of rats, children and police appear on walls around the world.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q133600",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Banksy (Q133600)",
+      "url": "https://www.wikidata.org/wiki/Q133600",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Banksy",
+      "url": "https://en.wikipedia.org/wiki/Banksy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Banksy_signature-removebg-preview.png/500px-Banksy_signature-removebg-preview.png",
+    "alt": "Banksy",
+    "credit": "MykReeve",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Banksy_signature-removebg-preview.png"
+  }
+}

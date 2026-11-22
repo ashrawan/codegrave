@@ -1,0 +1,59 @@
+{
+  "id": "pyu-city-states",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Pyu city-states",
+      "from": "-0200"
+    }
+  ],
+  "summary": "Early Buddhist cities of the Irrawaddy.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1627675",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1050",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pyu city-states (Q1627675)",
+      "url": "https://www.wikidata.org/wiki/Q1627675",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pyu city-states",
+      "url": "https://en.wikipedia.org/wiki/Pyu_city-states",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/BawbawgyiPaya.jpg/500px-BawbawgyiPaya.jpg",
+    "alt": "Pyu city-states",
+    "credit": "Doron",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BawbawgyiPaya.jpg"
+  }
+}

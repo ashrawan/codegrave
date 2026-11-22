@@ -1,0 +1,85 @@
+{
+  "id": "philippines",
+  "name": "Philippines",
+  "description": "The Philippines from its island peoples to Magellan and Spanish rule, revolution, American rule, war, People Power and today.",
+  "category": "places",
+  "tags": [
+    "philippines",
+    "manila",
+    "rizal",
+    "people power",
+    "islands",
+    "asia"
+  ],
+  "entries": [
+    "banaue-rice-terraces",
+    "lapulapu",
+    "magellan-elcano-circumnavigation",
+    "battle-of-mactan",
+    "manila-galleon",
+    "manila",
+    "jose-rizal",
+    "andres-bonifacio",
+    "emilio-aguinaldo",
+    "philippine-revolution",
+    "philippines",
+    "philippine-declaration-of-independence",
+    "philippine-american-war",
+    "ferdinand-marcos",
+    "corazon-aquino",
+    "bataan-death-march",
+    "battle-of-leyte-gulf",
+    "rodrigo-duterte",
+    "bongbong-marcos",
+    "martial-law-philippines",
+    "thrilla-in-manila",
+    "manny-pacquiao",
+    "people-power-revolution",
+    "pinatubo-eruption",
+    "typhoon-haiyan"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-islands",
+      "name": "The islands",
+      "from": -1000,
+      "to": 1520,
+      "note": "Austronesian seafarers settled the islands. Rice terraces climbed the mountains of Luzon, and trading states dealt with China and the Malay world."
+    },
+    {
+      "id": "spanish-rule",
+      "name": "Spanish rule",
+      "from": 1521,
+      "to": 1897,
+      "note": "Magellan arrived in 1521, and Spain founded Manila in 1571 and made the islands Catholic. Galleons carried silver and silk across the Pacific, and Rizal's writings inspired revolt."
+    },
+    {
+      "id": "america-and-war",
+      "name": "America and war",
+      "from": 1898,
+      "to": 1945,
+      "note": "The United States bought the islands from Spain and crushed the new republic. Japan occupied them in 1942, and Leyte Gulf saw the largest sea battle in history."
+    },
+    {
+      "id": "the-republic",
+      "name": "The republic",
+      "from": 1946,
+      "to": 2026,
+      "note": "The Philippines became independent in 1946. Marcos ruled under martial law until People Power drove him out in 1986, and democracy has endured since."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_the_Philippines.svg/330px-Flag_of_the_Philippines.svg.png",
+    "alt": "Flag of Philippines",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Philippines.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/2b/Lupang_Hinirang_instrumental.ogg/Lupang_Hinirang_instrumental.ogg.mp3",
+    "title": "Lupang Hinirang",
+    "credit": "https://web.archive.org/web/20030503062809/http://www.navyband.navy.mil/anthems/index.htm https://web.archive.org/web/20",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lupang_Hinirang_instrumental.ogg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "hermitage-museum",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Hermitage Museum",
+      "from": "1764"
+    }
+  ],
+  "summary": "Catherine the Great's art collection in the Winter Palace, one of the largest museums in the world.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q132783",
+  "events": [
+    {
+      "type": "born",
+      "date": "1764",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hermitage Museum (Q132783)",
+      "url": "https://www.wikidata.org/wiki/Q132783",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hermitage Museum",
+      "url": "https://en.wikipedia.org/wiki/Hermitage_Museum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Winter_Palace_Panorama_4.jpg/500px-Winter_Palace_Panorama_4.jpg",
+    "alt": "Hermitage Museum",
+    "credit": "Florstein (Telegram:WikiPhoto.Space)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Winter_Palace_Panorama_4.jpg"
+  }
+}

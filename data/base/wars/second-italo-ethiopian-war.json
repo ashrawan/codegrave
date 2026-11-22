@@ -1,0 +1,59 @@
+{
+  "id": "second-italo-ethiopian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Italo-Ethiopian War",
+      "from": "1935"
+    }
+  ],
+  "summary": "Italy's invasion of 1935.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q94916",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-10-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-02-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Italo-Ethiopian War (Q94916)",
+      "url": "https://www.wikidata.org/wiki/Q94916",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Italo-Ethiopian War",
+      "url": "https://en.wikipedia.org/wiki/Second_Italo-Ethiopian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/DC-1936-52-d.jpg/500px-DC-1936-52-d.jpg",
+    "alt": "Second Italo-Ethiopian War",
+    "credit": "Achille Beltrame",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DC-1936-52-d.jpg"
+  }
+}

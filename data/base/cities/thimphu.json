@@ -1,0 +1,51 @@
+{
+  "id": "thimphu",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Thimphu",
+      "from": "1955"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q9270",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bhutan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thimphu (Q9270)",
+      "url": "https://www.wikidata.org/wiki/Q9270",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thimphu",
+      "url": "https://en.wikipedia.org/wiki/Thimphu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Thimphu-12-vom_Buddha_Dordenma-2015-gje.jpg/500px-Thimphu-12-vom_Buddha_Dordenma-2015-gje.jpg",
+    "alt": "Thimphu",
+    "credit": "Gerd Eichmann",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thimphu-12-vom_Buddha_Dordenma-2015-gje.jpg"
+  }
+}

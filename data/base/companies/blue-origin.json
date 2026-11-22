@@ -1,0 +1,54 @@
+{
+  "id": "blue-origin",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Blue Origin",
+      "from": "2000"
+    }
+  ],
+  "summary": "Rocket company founded by Jeff Bezos in 2000. It flies tourists to the edge of space in New Shepard and builds the larger New Glenn rocket.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q885836",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-09",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Blue Origin (Q885836)",
+      "url": "https://www.wikidata.org/wiki/Q885836",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blue Origin",
+      "url": "https://en.wikipedia.org/wiki/Blue_Origin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Blue_Origin_BE-4_rocket_engine%2C_sn_103%2C_April_2018_--_LCH4_inlet_side_view%2C_minus_nozzle.jpg/500px-Blue_Origin_BE-4_rocket_engine%2C_sn_103%2C_April_2018_--_LCH4_inlet_side_view%2C_minus_nozzle.jpg",
+    "alt": "Blue Origin",
+    "credit": "N2e",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Blue_Origin_BE-4_rocket_engine,_sn_103,_April_2018_--_LCH4_inlet_side_view,_minus_nozzle.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "herge",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Hergé",
+      "from": "1907"
+    }
+  ],
+  "summary": "Cartoonist who created Tintin and made Brussels a capital of comics.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q52985",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907-05-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1983-03-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hergé (Q52985)",
+      "url": "https://www.wikidata.org/wiki/Q52985",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hergé",
+      "url": "https://en.wikipedia.org/wiki/Hergé",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Herge-Italie-1965-Linus.png_unscaled",
+    "alt": "Hergé",
+    "credit": "Anonyme, revue italienne Linus, publiée en 1965.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Herge-Italie-1965-Linus.png"
+  }
+}

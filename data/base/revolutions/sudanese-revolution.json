@@ -1,0 +1,54 @@
+{
+  "id": "sudanese-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Sudanese revolution",
+      "from": "2018"
+    }
+  ],
+  "summary": "The revolution that ended Omar al-Bashir's rule in 2019.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q60289711",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-12-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sudanese revolution (Q60289711)",
+      "url": "https://www.wikidata.org/wiki/Q60289711",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sudanese revolution",
+      "url": "https://en.wikipedia.org/wiki/Sudanese_revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/%D8%A5%D8%B1%D8%AD%D9%84_%D9%8A%D8%A7_%D8%A8%D8%B4%D9%8A%D8%B1_-_Bashir_must_go.jpg/500px-%D8%A5%D8%B1%D8%AD%D9%84_%D9%8A%D8%A7_%D8%A8%D8%B4%D9%8A%D8%B1_-_Bashir_must_go.jpg",
+    "alt": "Sudanese revolution",
+    "credit": "Obai Alsadig",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%D8%A5%D8%B1%D8%AD%D9%84_%D9%8A%D8%A7_%D8%A8%D8%B4%D9%8A%D8%B1_-_Bashir_must_go.jpg"
+  }
+}

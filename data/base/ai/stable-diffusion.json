@@ -9,6 +9,7 @@
   ],
   "maker": "Stability AI, with the CompVis group at LMU Munich and Runway",
   "summary": "A text-to-image model whose code and weights were released to the public, so anyone with a home graphics card could run it. Earlier image generators could only be used through their makers' websites.",
+  "wikidata": "Q113660857",
   "events": [
     {
       "type": "born",
@@ -31,5 +32,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Astronaut_Riding_a_Horse_%28SD3.5%29.webp/500px-Astronaut_Riding_a_Horse_%28SD3.5%29.webp",
+    "alt": "Stable Diffusion",
+    "credit": "VulcanSphere",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Astronaut_Riding_a_Horse_(SD3.5).webp"
+  }
 }

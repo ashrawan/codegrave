@@ -1,0 +1,59 @@
+{
+  "id": "malayan-emergency",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Malayan Emergency",
+      "from": "1948"
+    }
+  ],
+  "summary": "The war of 1948 to 1960 against communist guerrillas.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2354629",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-06-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-07-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malaysia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Malayan Emergency (Q2354629)",
+      "url": "https://www.wikidata.org/wiki/Q2354629",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malayan Emergency",
+      "url": "https://en.wikipedia.org/wiki/Malayan_Emergency",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/RAAFAvroLincolnMalaya1950.jpg/500px-RAAFAvroLincolnMalaya1950.jpg",
+    "alt": "Malayan Emergency",
+    "credit": "Australian Government",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:RAAFAvroLincolnMalaya1950.jpg"
+  }
+}

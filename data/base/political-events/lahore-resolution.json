@@ -1,0 +1,47 @@
+{
+  "id": "lahore-resolution",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Lahore Resolution",
+      "from": "1940"
+    }
+  ],
+  "summary": "The resolution of 1940 calling for independent Muslim states.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1800631",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-03-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lahore Resolution (Q1800631)",
+      "url": "https://www.wikidata.org/wiki/Q1800631",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lahore Resolution",
+      "url": "https://en.wikipedia.org/wiki/Lahore_Resolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

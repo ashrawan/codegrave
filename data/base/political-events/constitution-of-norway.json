@@ -1,0 +1,54 @@
+{
+  "id": "constitution-of-norway",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Constitution of Norway",
+      "from": "1814"
+    }
+  ],
+  "summary": "The constitution signed at Eidsvoll on 17 May 1814, Norway's national day.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q642673",
+  "events": [
+    {
+      "type": "born",
+      "date": "1814-05-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Constitution of Norway (Q642673)",
+      "url": "https://www.wikidata.org/wiki/Q642673",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Constitution of Norway",
+      "url": "https://en.wikipedia.org/wiki/Constitution_of_Norway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Eidsvoll_riksraad_1814.jpeg/500px-Eidsvoll_riksraad_1814.jpeg",
+    "alt": "Constitution of Norway",
+    "credit": "Oscar Wergeland",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eidsvoll_riksraad_1814.jpeg"
+  }
+}

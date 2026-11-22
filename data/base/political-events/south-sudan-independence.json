@@ -1,0 +1,54 @@
+{
+  "id": "south-sudan-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "South Sudan independence",
+      "from": "2011"
+    }
+  ],
+  "summary": "South Sudan broke away in 2011.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q958",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-07-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South Sudan independence (Q958)",
+      "url": "https://www.wikidata.org/wiki/Q958",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South Sudan",
+      "url": "https://en.wikipedia.org/wiki/South_Sudan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/South_Sudan_topographic_map.svg/500px-South_Sudan_topographic_map.svg.png",
+    "alt": "South Sudan independence",
+    "credit": "Goran_tek-en",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:South_Sudan_topographic_map.svg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "bombing-of-guernica",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Bombing of Guernica",
+      "from": "1937"
+    }
+  ],
+  "summary": "German and Italian planes bombed the Basque town in 1937, the subject of Picasso's painting.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q170351",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-04-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bombing of Guernica (Q170351)",
+      "url": "https://www.wikidata.org/wiki/Q170351",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bombing of Guernica",
+      "url": "https://en.wikipedia.org/wiki/Bombing_of_Guernica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Bundesarchiv_Bild_183-H25224%2C_Guernica%2C_Ruinen.jpg/500px-Bundesarchiv_Bild_183-H25224%2C_Guernica%2C_Ruinen.jpg",
+    "alt": "Bombing of Guernica",
+    "credit": "Unknown authorUnknown author",
+    "licence": "CC BY-SA 3.0 de",
+    "source": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-H25224,_Guernica,_Ruinen.jpg"
+  }
+}

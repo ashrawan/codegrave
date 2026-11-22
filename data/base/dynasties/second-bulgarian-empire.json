@@ -1,0 +1,59 @@
+{
+  "id": "second-bulgarian-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Second Bulgarian Empire",
+      "from": "1185"
+    }
+  ],
+  "summary": "The revived empire of the 1100s to 1300s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q420759",
+  "events": [
+    {
+      "type": "born",
+      "date": "1185",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1396",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Bulgarian Empire (Q420759)",
+      "url": "https://www.wikidata.org/wiki/Q420759",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Bulgarian Empire",
+      "url": "https://en.wikipedia.org/wiki/Second_Bulgarian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Bulgaria-Iv%C3%A1n_Asen2-es.svg/500px-Bulgaria-Iv%C3%A1n_Asen2-es.svg.png",
+    "alt": "Second Bulgarian Empire",
+    "credit": "Bulgaria-Iván Asen-es.svg: rowanwindwhistler Болгария во время Ивана Асеня II.jpg: Драган Веселинов Манчов (1834-1908) d",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bulgaria-Iv%C3%A1n_Asen2-es.svg"
+  }
+}

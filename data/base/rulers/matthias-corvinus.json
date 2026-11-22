@@ -1,0 +1,59 @@
+{
+  "id": "matthias-corvinus",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Matthias Corvinus",
+      "from": "1443"
+    }
+  ],
+  "summary": "Renaissance king who built a great library and a strong army.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q188634",
+  "events": [
+    {
+      "type": "born",
+      "date": "1443-02-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1490-04-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Matthias Corvinus (Q188634)",
+      "url": "https://www.wikidata.org/wiki/Q188634",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Matthias Corvinus",
+      "url": "https://en.wikipedia.org/wiki/Matthias_Corvinus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Andrea_Mantegna_-_King_Matthias_Corvinus_of_Hungary.jpg/500px-Andrea_Mantegna_-_King_Matthias_Corvinus_of_Hungary.jpg",
+    "alt": "Matthias Corvinus",
+    "credit": "Andrea Mantegna",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Andrea_Mantegna_-_King_Matthias_Corvinus_of_Hungary.jpg"
+  }
+}

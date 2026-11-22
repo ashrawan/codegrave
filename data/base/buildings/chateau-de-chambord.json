@@ -1,0 +1,48 @@
+{
+  "id": "chateau-de-chambord",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Château de Chambord",
+      "from": "1519"
+    }
+  ],
+  "summary": "The great château of the Loire begun in 1519 for Francis I, with a double spiral staircase perhaps designed by Leonardo.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q205367",
+  "events": [
+    {
+      "type": "born",
+      "date": "1519",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Château de Chambord (Q205367)",
+      "url": "https://www.wikidata.org/wiki/Q205367",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Château de Chambord",
+      "url": "https://en.wikipedia.org/wiki/Château_de_Chambord",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/France_Loir-et-Cher_Chambord_Chateau_03.jpg/500px-France_Loir-et-Cher_Chambord_Chateau_03.jpg",
+    "alt": "Château de Chambord",
+    "credit": "No machine-readable author provided. Calips assumed (based on copyright claims).",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:France_Loir-et-Cher_Chambord_Chateau_03.jpg"
+  }
+}

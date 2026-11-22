@@ -1,0 +1,48 @@
+{
+  "id": "das-kapital",
+  "category": "books",
+  "names": [
+    {
+      "name": "Das Kapital",
+      "from": "1867"
+    }
+  ],
+  "summary": "Karl Marx's critique of capitalism, which shaped communist movements and governments of the twentieth century.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q58784",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Das Kapital (Q58784)",
+      "url": "https://www.wikidata.org/wiki/Q58784",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Das Kapital",
+      "url": "https://en.wikipedia.org/wiki/Das_Kapital",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Zentralbibliothek_Z%C3%BCrich_Das_Kapital_Marx_1867.jpg/500px-Zentralbibliothek_Z%C3%BCrich_Das_Kapital_Marx_1867.jpg",
+    "alt": "Das Kapital",
+    "credit": "Zentralbibliothek Zürich",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Zentralbibliothek_Z%C3%BCrich_Das_Kapital_Marx_1867.jpg"
+  }
+}

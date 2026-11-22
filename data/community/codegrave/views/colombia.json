@@ -1,0 +1,83 @@
+{
+  "id": "colombia",
+  "name": "Colombia",
+  "description": "Colombia from San Agustín and the Muisca to Spanish New Granada, Bolívar, a long civil conflict and the peace of 2016.",
+  "category": "places",
+  "tags": [
+    "colombia",
+    "bogota",
+    "medellin",
+    "coffee",
+    "bolivar",
+    "el dorado"
+  ],
+  "entries": [
+    "san-agustin-archaeological-park",
+    "muisca-confederation",
+    "ciudad-perdida",
+    "cartagena",
+    "bogota",
+    "medellin",
+    "simon-bolivar",
+    "colombia",
+    "gran-colombia",
+    "battle-of-boyaca",
+    "thousand-days-war",
+    "gabriel-garcia-marquez",
+    "museo-del-oro",
+    "bogotazo",
+    "pablo-escobar",
+    "la-violencia",
+    "juan-manuel-santos",
+    "alvaro-uribe",
+    "gustavo-petro",
+    "farc",
+    "shakira",
+    "armero-tragedy",
+    "colombian-peace-process"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-the-spanish",
+      "name": "Before the Spanish",
+      "from": -3000,
+      "to": 1498,
+      "note": "Statue-makers worked at San Agustín, and the Muisca and Tairona built chiefdoms of gold."
+    },
+    {
+      "id": "new-granada",
+      "name": "New Granada",
+      "from": 1499,
+      "to": 1809,
+      "note": "Spain conquered the land and founded Bogotá and Cartagena. New Granada sent gold and emeralds to Spain."
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "from": 1810,
+      "to": 1947,
+      "note": "Bolívar won independence in 1819. Liberals and Conservatives fought many wars, and Panama broke away in 1903."
+    },
+    {
+      "id": "violence-and-peace",
+      "name": "Violence and peace",
+      "from": 1948,
+      "to": 2026,
+      "note": "La Violencia and then the guerrillas and the cartels brought decades of war. Peace with the FARC came in 2016."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/330px-Flag_of_Colombia.svg.png",
+    "alt": "Flag of Colombia",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Colombia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/55/United_States_Navy_Band_-_%C2%A1Oh%2C_gloria_inmarcesible%21.ogg/United_States_Navy_Band_-_%C2%A1Oh%2C_gloria_inmarcesible%21.ogg.mp3",
+    "title": "National Anthem of Colombia",
+    "credit": "http://www.navyband.navy.mil/anthems/national_anthems.htm http://www.navyband.navy.mil/anthems/ANTHEMS/Colombia.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_%C2%A1Oh,_gloria_inmarcesible!.ogg"
+  }
+}

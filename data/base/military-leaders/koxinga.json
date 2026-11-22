@@ -1,0 +1,59 @@
+{
+  "id": "koxinga",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Koxinga",
+      "from": "1624"
+    }
+  ],
+  "summary": "Ming loyalist commander who drove the Dutch out of Taiwan in 1662 and set up the Kingdom of Tungning.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q197615",
+  "events": [
+    {
+      "type": "born",
+      "date": "1624-08-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1662-06-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Koxinga (Q197615)",
+      "url": "https://www.wikidata.org/wiki/Q197615",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Koxinga",
+      "url": "https://en.wikipedia.org/wiki/Koxinga",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/The_Portrait_of_Koxinga.jpg/500px-The_Portrait_of_Koxinga.jpg",
+    "alt": "Koxinga",
+    "credit": "AnonymousUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Portrait_of_Koxinga.jpg"
+  }
+}

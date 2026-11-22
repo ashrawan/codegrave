@@ -1,0 +1,86 @@
+{
+  "id": "iraq",
+  "name": "Iraq",
+  "description": "Iraq, the land of Mesopotamia, from Sumer, Akkad and Babylon to the Abbasid caliphs of Baghdad, the Ottomans, the kingdom, Saddam Hussein and the wars.",
+  "category": "places",
+  "tags": [
+    "iraq",
+    "baghdad",
+    "mesopotamia",
+    "babylon",
+    "sumer",
+    "tigris"
+  ],
+  "entries": [
+    "tigris",
+    "euphrates",
+    "nineveh",
+    "sumer",
+    "uruk",
+    "ur",
+    "akkadian-empire",
+    "epic-of-gilgamesh",
+    "babylonia",
+    "hammurabi",
+    "code-of-hammurabi",
+    "neo-assyrian-empire",
+    "library-of-ashurbanipal",
+    "nebuchadnezzar-ii",
+    "hanging-gardens-of-babylon",
+    "battle-of-gaugamela",
+    "abbasid-caliphate",
+    "baghdad",
+    "house-of-wisdom",
+    "siege-of-baghdad-1258",
+    "kingdom-of-iraq",
+    "iraq",
+    "saddam-hussein",
+    "14-july-revolution",
+    "baath-party-coup",
+    "iran-iraq-war",
+    "anfal-campaign",
+    "halabja-massacre",
+    "gulf-war",
+    "islamic-state",
+    "iraq-war",
+    "war-in-iraq-2013-2017",
+    "battle-of-mosul-2016"
+  ],
+  "checkpoints": [
+    {
+      "id": "mesopotamia",
+      "name": "Mesopotamia",
+      "from": -5300,
+      "to": -540,
+      "note": "Writing and cities began in Sumer. Akkad, Babylon and Assyria ruled empires, and Nebuchadnezzar built Babylon's great walls."
+    },
+    {
+      "id": "persians-to-caliphs",
+      "name": "Persians to caliphs",
+      "from": -539,
+      "to": 1257,
+      "note": "Persians, Greeks and Parthians ruled. Then the Abbasid caliphs built Baghdad, a world centre of learning, until the Mongols sacked it."
+    },
+    {
+      "id": "ottomans-and-britain",
+      "name": "Ottomans and Britain",
+      "from": 1258,
+      "to": 1957,
+      "note": "The land declined and later fell to the Ottomans. Britain made it a kingdom in 1921, independent in 1932."
+    },
+    {
+      "id": "republic-and-wars",
+      "name": "Republic and wars",
+      "from": 1958,
+      "to": 2026,
+      "note": "The monarchy fell in 1958. Saddam Hussein led Iraq into wars with Iran and Kuwait, the 2003 invasion toppled him, and the country fought off the Islamic State."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Flag_of_Iraq.svg/330px-Flag_of_Iraq.svg.png",
+    "alt": "Flag of Iraq",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Iraq.svg"
+  }
+}

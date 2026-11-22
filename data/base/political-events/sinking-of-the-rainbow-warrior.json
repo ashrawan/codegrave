@@ -1,0 +1,53 @@
+{
+  "id": "sinking-of-the-rainbow-warrior",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Sinking of the Rainbow Warrior",
+      "from": "1985"
+    }
+  ],
+  "summary": "French agents sank the Greenpeace ship in Auckland harbour in 1985.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q460731",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-07-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sinking of the Rainbow Warrior (Q460731)",
+      "url": "https://www.wikidata.org/wiki/Q460731",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sinking of the Rainbow Warrior",
+      "url": "https://en.wikipedia.org/wiki/Sinking_of_the_Rainbow_Warrior",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Pacific_Nuclear_Testing-_a_French_letter_to_the_NZ_Embassy_in_Paris_%2827726454900%29.jpg/500px-Pacific_Nuclear_Testing-_a_French_letter_to_the_NZ_Embassy_in_Paris_%2827726454900%29.jpg",
+    "alt": "Sinking of the Rainbow Warrior",
+    "credit": "Archives New Zealand from New Zealand",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pacific_Nuclear_Testing-_a_French_letter_to_the_NZ_Embassy_in_Paris_(27726454900).jpg"
+  }
+}

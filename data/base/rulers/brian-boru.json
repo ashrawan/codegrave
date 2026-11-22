@@ -1,0 +1,53 @@
+{
+  "id": "brian-boru",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Brian Boru",
+      "from": "0941"
+    }
+  ],
+  "summary": "High King of Ireland who defeated the Vikings and their allies at Clontarf in 1014.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q272498",
+  "events": [
+    {
+      "type": "born",
+      "date": "0941",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1014-04-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Brian Boru (Q272498)",
+      "url": "https://www.wikidata.org/wiki/Q272498",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brian Boru",
+      "url": "https://en.wikipedia.org/wiki/Brian_Boru",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Brian_B%C3%B3ruma_mac_Cenn%C3%A9tig_%281723%29_%28crop%29.jpg/500px-Brian_B%C3%B3ruma_mac_Cenn%C3%A9tig_%281723%29_%28crop%29.jpg",
+    "alt": "Brian Boru",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Brian_B%C3%B3ruma_mac_Cenn%C3%A9tig_(1723)_(crop).jpg"
+  }
+}

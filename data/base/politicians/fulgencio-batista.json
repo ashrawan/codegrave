@@ -1,0 +1,59 @@
+{
+  "id": "fulgencio-batista",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Fulgencio Batista",
+      "from": "1901"
+    }
+  ],
+  "summary": "Dictator overthrown in 1959.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11270",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-01-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-08-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fulgencio Batista (Q11270)",
+      "url": "https://www.wikidata.org/wiki/Q11270",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fulgencio Batista",
+      "url": "https://en.wikipedia.org/wiki/Fulgencio_Batista",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Fulgencio_Batista%2C_1938.jpg/500px-Fulgencio_Batista%2C_1938.jpg",
+    "alt": "Fulgencio Batista",
+    "credit": "Harris &amp; Ewing",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fulgencio_Batista,_1938.jpg"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "sudan",
+  "name": "Sudan",
+  "description": "Sudan from Kerma and Kush to the Nubian kingdoms, the Funj, the Mahdi, Anglo-Egyptian rule, independence, wars and today.",
+  "category": "places",
+  "tags": [
+    "sudan",
+    "khartoum",
+    "nubia",
+    "kush",
+    "nile",
+    "meroe"
+  ],
+  "entries": [
+    "nile-river",
+    "kingdom-of-kush",
+    "meroe",
+    "makuria",
+    "sennar-sultanate",
+    "funj-sultanate",
+    "khartoum",
+    "muhammad-ahmad",
+    "siege-of-khartoum",
+    "battle-of-omdurman",
+    "anglo-egyptian-sudan",
+    "omar-al-bashir",
+    "sudan",
+    "second-sudanese-civil-war",
+    "merowe-dam",
+    "war-in-darfur",
+    "south-sudan-independence",
+    "rapid-support-forces",
+    "sudanese-revolution",
+    "sudanese-civil-war-2023"
+  ],
+  "checkpoints": [
+    {
+      "id": "kush",
+      "name": "Kush",
+      "from": -2500,
+      "to": 349,
+      "note": "Kerma and then Kush ruled Nubia, and Kush ruled Egypt for a time."
+    },
+    {
+      "id": "nubian-kingdoms",
+      "name": "Nubian kingdoms",
+      "from": 350,
+      "to": 1820,
+      "note": "Christian kingdoms ruled the Nile. The Funj sultans followed."
+    },
+    {
+      "id": "mahdi-and-britain",
+      "name": "Mahdi and Britain",
+      "from": 1821,
+      "to": 1955,
+      "note": "Egypt conquered Sudan in 1821. The Mahdi drove it out in 1885, and Britain and Egypt took it in 1898."
+    },
+    {
+      "id": "sudan",
+      "name": "Sudan",
+      "from": 1956,
+      "to": 2026,
+      "note": "Sudan became independent in 1956. War has rarely stopped, the south broke away in 2011, and war returned in 2023."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Sudan.svg/330px-Flag_of_Sudan.svg.png",
+    "alt": "Flag of Sudan",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Sudan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9c/Sudanese_national_anthem%2C_performed_by_the_U.S._Navy_Band.oga/Sudanese_national_anthem%2C_performed_by_the_U.S._Navy_Band.oga.mp3",
+    "title": "Nahnu Jund Allah Jund Al-watan",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil/anthems/national_anthems.htm#S https://web.archi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sudanese_national_anthem,_performed_by_the_U.S._Navy_Band.oga"
+  }
+}

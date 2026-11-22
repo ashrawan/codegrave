@@ -1,0 +1,51 @@
+{
+  "id": "new-shepard",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "New Shepard",
+      "from": "2015"
+    }
+  ],
+  "summary": "A small reusable rocket and capsule from Blue Origin that lands upright after carrying passengers just past the edge of space.",
+  "wikidata": "Q3339012",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-04-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New Shepard (Q3339012)",
+      "url": "https://www.wikidata.org/wiki/Q3339012",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Shepard",
+      "url": "https://en.wikipedia.org/wiki/New_Shepard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/New_Shepard_booster_at_Oshkosh_Airventure_2017_02_%2836143645465%29.jpg/500px-New_Shepard_booster_at_Oshkosh_Airventure_2017_02_%2836143645465%29.jpg",
+    "alt": "New Shepard",
+    "credit": "LunchboxLarry",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:New_Shepard_booster_at_Oshkosh_Airventure_2017_02_(36143645465).jpg"
+  }
+}

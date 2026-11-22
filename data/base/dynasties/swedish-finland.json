@@ -1,0 +1,52 @@
+{
+  "id": "swedish-finland",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Swedish Finland",
+      "from": "1150"
+    }
+  ],
+  "summary": "The six centuries in which Finland was part of the Swedish realm.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q12375230",
+  "events": [
+    {
+      "type": "born",
+      "date": "1150",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1809",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Swedish Finland (Q12375230)",
+      "url": "https://www.wikidata.org/wiki/Q12375230",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Finland under Swedish rule",
+      "url": "https://en.wikipedia.org/wiki/Finland_under_Swedish_rule",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

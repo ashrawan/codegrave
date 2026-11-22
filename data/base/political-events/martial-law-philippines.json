@@ -1,0 +1,46 @@
+{
+  "id": "martial-law-philippines",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Martial law under Marcos",
+      "from": "1972"
+    }
+  ],
+  "summary": "Marcos ruled by decree from 1972 to 1981.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q60740956",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-09-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1981",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Martial law under Marcos (Q60740956)",
+      "url": "https://www.wikidata.org/wiki/Q60740956",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Martial law under Ferdinand Marcos",
+      "url": "https://en.wikipedia.org/wiki/Martial_law_under_Ferdinand_Marcos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

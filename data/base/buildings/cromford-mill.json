@@ -1,0 +1,48 @@
+{
+  "id": "cromford-mill",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Cromford Mill",
+      "from": "1771"
+    }
+  ],
+  "summary": "Arkwright's water-powered cotton mill of 1771 in Derbyshire, the first true factory.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q2566525",
+  "events": [
+    {
+      "type": "born",
+      "date": "1771",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cromford Mill (Q2566525)",
+      "url": "https://www.wikidata.org/wiki/Q2566525",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cromford Mill",
+      "url": "https://en.wikipedia.org/wiki/Cromford_Mill",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Cromford_1771_mill.jpg/500px-Cromford_1771_mill.jpg",
+    "alt": "Cromford Mill",
+    "credit": "chevin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cromford_1771_mill.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "romanian-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Romanian Revolution",
+      "from": "1989"
+    }
+  ],
+  "summary": "The violent uprising of December 1989 that ended communist rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q204213",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-12-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-12-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Romanian Revolution (Q204213)",
+      "url": "https://www.wikidata.org/wiki/Q204213",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Romanian Revolution",
+      "url": "https://en.wikipedia.org/wiki/Romanian_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Revolutia_Bucuresti_1989_000.JPG/500px-Revolutia_Bucuresti_1989_000.JPG",
+    "alt": "Romanian Revolution",
+    "credit": "Not credited",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Revolutia_Bucuresti_1989_000.JPG"
+  }
+}

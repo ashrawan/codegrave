@@ -1,0 +1,52 @@
+{
+  "id": "yemeni-unification",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Yemeni unification",
+      "from": "1990"
+    }
+  ],
+  "summary": "The joining of North and South Yemen in 1990.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1139876",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-05-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-05-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yemeni unification (Q1139876)",
+      "url": "https://www.wikidata.org/wiki/Q1139876",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yemeni unification",
+      "url": "https://en.wikipedia.org/wiki/Yemeni_unification",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,54 @@
+{
+  "id": "the-lord-of-the-rings-film-series",
+  "category": "films",
+  "names": [
+    {
+      "name": "The Lord of the Rings",
+      "from": "2001"
+    }
+  ],
+  "summary": "Peter Jackson's films, shot in New Zealand.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q190214",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Lord of the Rings (Q190214)",
+      "url": "https://www.wikidata.org/wiki/Q190214",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Lord of the Rings (film series)",
+      "url": "https://en.wikipedia.org/wiki/The_Lord_of_the_Rings_(film_series)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/LotR21.png/500px-LotR21.png",
+    "alt": "The Lord of the Rings",
+    "credit": "New Line Cinema",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:LotR21.png"
+  }
+}

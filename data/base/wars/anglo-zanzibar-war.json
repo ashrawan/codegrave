@@ -1,0 +1,59 @@
+{
+  "id": "anglo-zanzibar-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Anglo-Zanzibar War",
+      "from": "1896"
+    }
+  ],
+  "summary": "The shortest war in history, in 1896.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q170850",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896-08-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1896-08-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anglo-Zanzibar War (Q170850)",
+      "url": "https://www.wikidata.org/wiki/Q170850",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anglo-Zanzibar War",
+      "url": "https://en.wikipedia.org/wiki/Anglo-Zanzibar_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/AngloZanzibarWar.jpg/500px-AngloZanzibarWar.jpg",
+    "alt": "Anglo-Zanzibar War",
+    "credit": "Richard Mohun",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:AngloZanzibarWar.jpg"
+  }
+}

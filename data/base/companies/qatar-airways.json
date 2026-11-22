@@ -1,0 +1,54 @@
+{
+  "id": "qatar-airways",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Qatar Airways",
+      "from": "1993"
+    }
+  ],
+  "summary": "The national airline, founded in 1993.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q208033",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-11-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qatar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Qatar Airways (Q208033)",
+      "url": "https://www.wikidata.org/wiki/Q208033",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qatar Airways",
+      "url": "https://en.wikipedia.org/wiki/Qatar_Airways",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Qatar_Airways_Airbus_A350-1000.jpg/500px-Qatar_Airways_Airbus_A350-1000.jpg",
+    "alt": "Qatar Airways",
+    "credit": "Juke Schweizer",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Qatar_Airways_Airbus_A350-1000.jpg"
+  }
+}

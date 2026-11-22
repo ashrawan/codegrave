@@ -1,0 +1,59 @@
+{
+  "id": "angolan-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Angolan Civil War",
+      "from": "1975"
+    }
+  ],
+  "summary": "The civil war of 1975 to 2002.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q12055176",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-11-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Angolan Civil War (Q12055176)",
+      "url": "https://www.wikidata.org/wiki/Q12055176",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Angolan Civil War",
+      "url": "https://en.wikipedia.org/wiki/Angolan_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Cuban_PT-76_Angola.JPG/500px-Cuban_PT-76_Angola.JPG",
+    "alt": "Angolan Civil War",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cuban_PT-76_Angola.JPG"
+  }
+}

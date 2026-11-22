@@ -1,0 +1,59 @@
+{
+  "id": "zanabazar",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Zanabazar",
+      "from": "1635"
+    }
+  ],
+  "summary": "Buddhist leader and great sculptor.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q735871",
+  "events": [
+    {
+      "type": "born",
+      "date": "1635",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1723",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zanabazar (Q735871)",
+      "url": "https://www.wikidata.org/wiki/Q735871",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zanabazar",
+      "url": "https://en.wikipedia.org/wiki/Zanabazar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/58/YesheDorje.jpg_unscaled",
+    "alt": "Zanabazar",
+    "credit": "https://www.himalayanart.org/image.cfm/1089.html",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:YesheDorje.jpg"
+  }
+}

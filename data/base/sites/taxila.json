@@ -1,0 +1,56 @@
+{
+  "id": "taxila",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Taxila",
+      "from": "-1000"
+    }
+  ],
+  "summary": "An ancient city and seat of learning near Islamabad.",
+  "wikidata": "Q156093",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Taxila (Q156093)",
+      "url": "https://www.wikidata.org/wiki/Q156093",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taxila",
+      "url": "https://en.wikipedia.org/wiki/Taxila",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Double-Headed_Eagle_Stupa_at_Sirkap_08.jpg/500px-Double-Headed_Eagle_Stupa_at_Sirkap_08.jpg",
+    "alt": "Taxila",
+    "credit": "not stated",
+    "licence": "CC BY-SA 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Double-Headed_Eagle_Stupa_at_Sirkap_08.jpg"
+  }
+}

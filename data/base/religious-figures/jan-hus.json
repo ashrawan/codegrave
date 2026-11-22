@@ -1,0 +1,59 @@
+{
+  "id": "jan-hus",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Jan Hus",
+      "from": "1370"
+    }
+  ],
+  "summary": "Reformer burned at the stake in 1415, whose followers fought the Hussite wars.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q43977",
+  "events": [
+    {
+      "type": "born",
+      "date": "1370",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1415-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czech-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jan Hus (Q43977)",
+      "url": "https://www.wikidata.org/wiki/Q43977",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jan Hus",
+      "url": "https://en.wikipedia.org/wiki/Jan_Hus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/07/Jan_hus_1.jpg_unscaled",
+    "alt": "Jan Hus",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_hus_1.jpg"
+  }
+}

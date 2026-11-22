@@ -1,0 +1,59 @@
+{
+  "id": "philippine-american-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Philippine–American War",
+      "from": "1899"
+    }
+  ],
+  "summary": "The war of 1899 to 1902 in which the United States crushed the new republic.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q214456",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899-02-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1902-07-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Philippine–American War (Q214456)",
+      "url": "https://www.wikidata.org/wiki/Q214456",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Philippine–American War",
+      "url": "https://en.wikipedia.org/wiki/Philippine–American_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Manila646_1899.jpg/500px-Manila646_1899.jpg",
+    "alt": "Philippine–American War",
+    "credit": "Perley Fremont Rockett",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Manila646_1899.jpg"
+  }
+}

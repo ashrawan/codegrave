@@ -1,0 +1,53 @@
+{
+  "id": "volodymyr-the-great",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Vladimir the Great",
+      "from": "0956"
+    }
+  ],
+  "summary": "Prince of Kyiv who made Rus' Christian in 988.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q14974",
+  "events": [
+    {
+      "type": "born",
+      "date": "0956",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1015-07-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Vladimir the Great (Q14974)",
+      "url": "https://www.wikidata.org/wiki/Q14974",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vladimir the Great",
+      "url": "https://en.wikipedia.org/wiki/Vladimir_the_Great",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Vladimir_I_of_Kiev.PNG/500px-Vladimir_I_of_Kiev.PNG",
+    "alt": "Vladimir the Great",
+    "credit": "Anonymous illumination",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vladimir_I_of_Kiev.PNG"
+  }
+}

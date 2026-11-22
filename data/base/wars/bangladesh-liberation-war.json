@@ -1,0 +1,59 @@
+{
+  "id": "bangladesh-liberation-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Bangladesh Liberation War",
+      "from": "1971"
+    }
+  ],
+  "summary": "The war of 1971 in which Bangladesh won independence from Pakistan.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q371394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-03-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971-12-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bangladesh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bangladesh Liberation War (Q371394)",
+      "url": "https://www.wikidata.org/wiki/Q371394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bangladesh Liberation War",
+      "url": "https://en.wikipedia.org/wiki/Bangladesh_Liberation_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Bangladesh_1971_Liberation.jpg/500px-Bangladesh_1971_Liberation.jpg",
+    "alt": "Bangladesh Liberation War",
+    "credit": "Mike Young",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bangladesh_1971_Liberation.jpg"
+  }
+}

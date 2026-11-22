@@ -1,0 +1,53 @@
+{
+  "id": "continuation-war",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Continuation War",
+      "from": "1941"
+    }
+  ],
+  "summary": "Finland's second war with the Soviet Union, from 1941 to 1944.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q122100",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-06-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-09-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Continuation War (Q122100)",
+      "url": "https://www.wikidata.org/wiki/Q122100",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Continuation War",
+      "url": "https://en.wikipedia.org/wiki/Continuation_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Continuation-War-1941.png/500px-Continuation-War-1941.png",
+    "alt": "Continuation War",
+    "credit": "Upload by Jniemenmaa",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Continuation-War-1941.png"
+  }
+}

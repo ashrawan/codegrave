@@ -1,0 +1,92 @@
+{
+  "id": "nigeria",
+  "name": "Nigeria",
+  "description": "Nigeria from the Nok culture and the kingdoms of Benin, Oyo and Kano to British rule, independence, civil war, oil, Nollywood and Afrobeats.",
+  "category": "places",
+  "tags": [
+    "nigeria",
+    "lagos",
+    "abuja",
+    "africa",
+    "nollywood",
+    "afrobeats"
+  ],
+  "entries": [
+    "nok-culture",
+    "igbo-ukwu",
+    "benin-empire",
+    "oyo-empire",
+    "lagos",
+    "benin-bronzes",
+    "sokoto-caliphate",
+    "nnamdi-azikiwe",
+    "obafemi-awolowo",
+    "ahmadu-bello",
+    "colony-of-nigeria",
+    "chinua-achebe",
+    "wole-soyinka",
+    "yakubu-gowon",
+    "olusegun-obasanjo",
+    "fela-kuti",
+    "bola-tinubu",
+    "ngozi-okonjo-iweala",
+    "nigerian-oil-boom",
+    "nigeria",
+    "biafra",
+    "nigerian-civil-war",
+    "jay-jay-okocha",
+    "abuja",
+    "nwankwo-kanu",
+    "chimamanda-ngozi-adichie",
+    "burna-boy",
+    "nollywood",
+    "nigeria-fourth-republic",
+    "afrobeats",
+    "chibok-schoolgirls-kidnapping",
+    "end-sars-protests"
+  ],
+  "checkpoints": [
+    {
+      "id": "old-kingdoms",
+      "name": "Old kingdoms",
+      "from": -1500,
+      "to": 1850,
+      "note": "The Nok people made terracotta heads more than two thousand years ago. Later the kingdoms of Benin and Oyo grew in the forest and savanna of the south, Hausa city states such as Kano traded across the Sahara, and the Sokoto Caliphate rose in the north."
+    },
+    {
+      "id": "british-nigeria",
+      "name": "British Nigeria",
+      "from": 1851,
+      "to": 1959,
+      "note": "Britain took Lagos in 1861 and conquered the interior. In 1914 it joined north and south into one colony, and after the Second World War leaders such as Azikiwe, Awolowo and Bello pressed for self-rule."
+    },
+    {
+      "id": "independence-and-war",
+      "name": "Independence and war",
+      "from": 1960,
+      "to": 1998,
+      "note": "Nigeria became independent in 1960. Coups in 1966 led to the Biafran war, oil money flowed in the 1970s, and soldiers ruled for most of the next thirty years."
+    },
+    {
+      "id": "the-fourth-republic",
+      "name": "The fourth republic",
+      "from": 1999,
+      "to": 2026,
+      "note": "Civilian rule returned in 1999. Lagos grew into one of Africa's largest cities, Nollywood and Afrobeats spread worldwide, and the young marched against police violence in 2020."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/330px-Flag_of_Nigeria.svg.png",
+    "alt": "Flag of Nigeria",
+    "credit": "Jon Harald Søby.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Nigeria.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/26/Nigeria_We_Hail_Thee.ogg/Nigeria_We_Hail_Thee.ogg.mp3",
+    "title": "Nigeria, We Hail Thee",
+    "credit": "Nigerian Army Band Corps",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nigeria_We_Hail_Thee.ogg"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "iran",
+  "name": "Iran",
+  "description": "Iran from Elam and the Persian empires to Islam, the Safavids, the Pahlavi shahs, the revolution of 1979 and the Islamic Republic.",
+  "category": "places",
+  "tags": [
+    "iran",
+    "persia",
+    "tehran",
+    "isfahan",
+    "persian empire",
+    "revolution"
+  ],
+  "entries": [
+    "elam",
+    "chogha-zanbil",
+    "zoroastrianism",
+    "cyrus-the-great",
+    "achaemenid-empire",
+    "pasargadae",
+    "persepolis-citie",
+    "nowruz",
+    "parthian-empire",
+    "sasanian-empire",
+    "ferdowsi",
+    "avicenna",
+    "saadi-shirazi",
+    "hafez",
+    "iran",
+    "safavid-dynasty",
+    "naqsh-e-jahan-square",
+    "mohammad-mosaddegh",
+    "ruhollah-khomeini",
+    "persian-constitutional-revolution",
+    "mohammad-reza-pahlavi",
+    "pahlavi-dynasty",
+    "ali-khamenei",
+    "1953-iranian-coup",
+    "iranian-revolution",
+    "iran-hostage-crisis",
+    "iran-iraq-war",
+    "a-separation",
+    "iran-nuclear-deal",
+    "mahsa-amini-protests",
+    "iran-israel-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-iran",
+      "name": "Ancient Iran",
+      "from": -3200,
+      "to": 650,
+      "note": "Elam ruled from Susa. Cyrus founded the Persian empire in the 500s BCE, and the Parthians and Sasanians later fought Rome."
+    },
+    {
+      "id": "islamic-iran",
+      "name": "Islamic Iran",
+      "from": 651,
+      "to": 1500,
+      "note": "Arab armies brought Islam. Persian culture flowered again with Ferdowsi, Avicenna and Hafez, through Seljuk and Mongol rule."
+    },
+    {
+      "id": "shahs",
+      "name": "Shahs",
+      "from": 1501,
+      "to": 1978,
+      "note": "The Safavids made Iran Shia and built Isfahan. A revolution won a parliament in 1906, and the Pahlavi shahs modernised by force."
+    },
+    {
+      "id": "the-islamic-republic",
+      "name": "The Islamic Republic",
+      "from": 1979,
+      "to": 2026,
+      "note": "The revolution of 1979 brought Khomeini to power. War with Iraq followed, and protests have challenged the clerics again and again."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/330px-Flag_of_Iran.svg.png",
+    "alt": "Flag of Iran",
+    "credit": "SVG file: SiBr4Designer: Hamid NadimiConstruction: ISIRI",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Iran.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f2/Sorud-e_Mell%C3%AD-e_Yomhur%C3%AD-e_Eslam%C3%AD-e_Ir%C3%A1n_%28instrumental%29.oga/Sorud-e_Mell%C3%AD-e_Yomhur%C3%AD-e_Eslam%C3%AD-e_Ir%C3%A1n_%28instrumental%29.oga.mp3",
+    "title": "National Anthem of the Islamic Republic of Iran",
+    "credit": "https://web.archive.org/web/20090424091320/http://en.iran.ir:80/en_news/national-anthem.html",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sorud-e_Mell%C3%AD-e_Yomhur%C3%AD-e_Eslam%C3%AD-e_Ir%C3%A1n_(instrumental).oga"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "axe-murder-incident",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Korean axe murder incident",
+      "from": "1976"
+    }
+  ],
+  "summary": "North Korean soldiers killed two US officers over a tree in the Demilitarized Zone in 1976.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q495739",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-08-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-08-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Korean axe murder incident (Q495739)",
+      "url": "https://www.wikidata.org/wiki/Q495739",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Korean axe murder incident",
+      "url": "https://en.wikipedia.org/wiki/Korean_axe_murder_incident",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/DMZ_incident_tree.jpg/500px-DMZ_incident_tree.jpg",
+    "alt": "Korean axe murder incident",
+    "credit": "Service Depicted: ArmyCamera Operator: SPC 4 LONG",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DMZ_incident_tree.jpg"
+  }
+}

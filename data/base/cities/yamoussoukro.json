@@ -1,0 +1,45 @@
+{
+  "id": "yamoussoukro",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Yamoussoukro",
+      "from": "1983"
+    }
+  ],
+  "summary": "The capital since 1983, Houphouët-Boigny's home village.",
+  "wikidata": "Q3768",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Yamoussoukro (Q3768)",
+      "url": "https://www.wikidata.org/wiki/Q3768",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yamoussoukro",
+      "url": "https://en.wikipedia.org/wiki/Yamoussoukro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Inphb_de_Yamoussoukro_%28Bosson%29.jpg/500px-Inphb_de_Yamoussoukro_%28Bosson%29.jpg",
+    "alt": "Yamoussoukro",
+    "credit": "HONORE BOSSON",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Inphb_de_Yamoussoukro_(Bosson).jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "maersk",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Maersk",
+      "from": "1904"
+    }
+  ],
+  "summary": "Shipping company founded in 1904, one of the largest container lines.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q18224",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-04-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "denmark"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maersk (Q18224)",
+      "url": "https://www.wikidata.org/wiki/Q18224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maersk",
+      "url": "https://en.wikipedia.org/wiki/Maersk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Maersk_headquarters%2C_2019_%2801%29.jpg/500px-Maersk_headquarters%2C_2019_%2801%29.jpg",
+    "alt": "Maersk",
+    "credit": "Bahnfrend",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Maersk_headquarters,_2019_(01).jpg"
+  }
+}

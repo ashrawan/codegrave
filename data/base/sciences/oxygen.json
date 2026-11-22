@@ -1,0 +1,45 @@
+{
+  "id": "oxygen",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Oxygen",
+      "from": "1774"
+    }
+  ],
+  "summary": "The element we breathe, found by Carl Wilhelm Scheele and Joseph Priestley in the 1770s and named by Lavoisier.",
+  "wikidata": "Q629",
+  "events": [
+    {
+      "type": "born",
+      "date": "1774",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Oxygen (Q629)",
+      "url": "https://www.wikidata.org/wiki/Q629",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oxygen",
+      "url": "https://en.wikipedia.org/wiki/Oxygen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Liquid_oxygen_in_a_beaker_4.jpg/500px-Liquid_oxygen_in_a_beaker_4.jpg",
+    "alt": "Oxygen",
+    "credit": "U.S. Air Force/Staff Sgt. Jim Araos",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Liquid_oxygen_in_a_beaker_4.jpg"
+  }
+}

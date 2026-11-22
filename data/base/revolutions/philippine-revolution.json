@@ -1,0 +1,59 @@
+{
+  "id": "philippine-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Philippine Revolution",
+      "from": "1896"
+    }
+  ],
+  "summary": "The revolution against Spain begun in 1896.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q422082",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1898",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Philippine Revolution (Q422082)",
+      "url": "https://www.wikidata.org/wiki/Q422082",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Philippine Revolution",
+      "url": "https://en.wikipedia.org/wiki/Philippine_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/UltimosFilipinas.jpg/500px-UltimosFilipinas.jpg",
+    "alt": "Philippine Revolution",
+    "credit": "Desconocido (pertenece a la misma sesión de fotos que File:Los defensores de Baler en Barcelona (septiembre de 1899, La ",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:UltimosFilipinas.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "bjorn-borg",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Björn Borg",
+      "from": "1956"
+    }
+  ],
+  "summary": "Swedish champion who won five Wimbledons in a row, cool against the fiery John McEnroe.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q104506",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-06-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Björn Borg (Q104506)",
+      "url": "https://www.wikidata.org/wiki/Q104506",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Björn Borg",
+      "url": "https://en.wikipedia.org/wiki/Björn_Borg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Bjorn_Borg_en_2014.jpg/500px-Bjorn_Borg_en_2014.jpg",
+    "alt": "Björn Borg",
+    "credit": "Michaël Bemelmans",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bjorn_Borg_en_2014.jpg"
+  }
+}

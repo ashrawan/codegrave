@@ -1,0 +1,53 @@
+{
+  "id": "mohamed-bouazizi",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Mohamed Bouazizi",
+      "from": "1984"
+    }
+  ],
+  "summary": "A street vendor who set himself on fire in December 2010, setting off the Tunisian revolution and the Arab Spring.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q214088",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-03-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-01-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mohamed Bouazizi (Q214088)",
+      "url": "https://www.wikidata.org/wiki/Q214088",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mohamed Bouazizi",
+      "url": "https://en.wikipedia.org/wiki/Mohamed_Bouazizi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/French_support_Bouazizi.jpg/500px-French_support_Bouazizi.jpg",
+    "alt": "Mohamed Bouazizi",
+    "credit": "Antoine Walter",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:French_support_Bouazizi.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "norodom-sihanouk",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Norodom Sihanouk",
+      "from": "1922"
+    }
+  ],
+  "summary": "King and leader who won independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q160318",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-10-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cambodia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Norodom Sihanouk (Q160318)",
+      "url": "https://www.wikidata.org/wiki/Q160318",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Norodom Sihanouk",
+      "url": "https://en.wikipedia.org/wiki/Norodom_Sihanouk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Norodom_Sihanouk_%28c._1952%29.jpg/500px-Norodom_Sihanouk_%28c._1952%29.jpg",
+    "alt": "Norodom Sihanouk",
+    "credit": "Norodom Sihanouk, gifted to Andre Kostelanetz",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Norodom_Sihanouk_(c._1952).jpg"
+  }
+}

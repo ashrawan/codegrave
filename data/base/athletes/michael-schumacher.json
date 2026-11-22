@@ -1,0 +1,48 @@
+{
+  "id": "michael-schumacher",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Michael Schumacher",
+      "from": "1969"
+    }
+  ],
+  "summary": "German driver who won seven world titles, five of them in a row with Ferrari from 2000 to 2004.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q9671",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-01-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Michael Schumacher (Q9671)",
+      "url": "https://www.wikidata.org/wiki/Q9671",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michael Schumacher",
+      "url": "https://en.wikipedia.org/wiki/Michael_Schumacher",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Michael_Schumacher%2C_September_2005.jpg/500px-Michael_Schumacher%2C_September_2005.jpg",
+    "alt": "Michael Schumacher",
+    "credit": "Original: Aécio Neves – Wellington Pedro/Imprensa MG / Derivative work: F1fans, FMSky",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Michael_Schumacher,_September_2005.jpg"
+  }
+}

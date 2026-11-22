@@ -1,0 +1,53 @@
+{
+  "id": "taiwan-miracle",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Taiwan Miracle",
+      "from": "1960"
+    }
+  ],
+  "summary": "The fast growth that made Taiwan one of the four Asian tigers.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q701364",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Taiwan Miracle (Q701364)",
+      "url": "https://www.wikidata.org/wiki/Q701364",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taiwan Miracle",
+      "url": "https://en.wikipedia.org/wiki/Taiwan_Miracle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Taipei_Night_Skyline_from_Hongludi_20240113.jpg/500px-Taipei_Night_Skyline_from_Hongludi_20240113.jpg",
+    "alt": "Taiwan Miracle",
+    "credit": "xiangyang17",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Taipei_Night_Skyline_from_Hongludi_20240113.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "gerardus-mercator",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Gerardus Mercator",
+      "from": "1512"
+    }
+  ],
+  "summary": "Flemish map-maker whose map of 1569 let sailors steer by straight lines, a projection still used today.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q6353",
+  "events": [
+    {
+      "type": "born",
+      "date": "1512-03-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1594-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Gerardus Mercator (Q6353)",
+      "url": "https://www.wikidata.org/wiki/Q6353",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gerardus Mercator",
+      "url": "https://en.wikipedia.org/wiki/Gerardus_Mercator",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Gerard_Mercator_%28Cremer%29._Line_engraving_by_N._de_Larmessin%2C_Wellcome_V0003979.jpg/500px-Gerard_Mercator_%28Cremer%29._Line_engraving_by_N._de_Larmessin%2C_Wellcome_V0003979.jpg",
+    "alt": "Gerardus Mercator",
+    "credit": "Nicolas de Larmessin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gerard_Mercator_(Cremer)._Line_engraving_by_N._de_Larmessin,_Wellcome_V0003979.jpg"
+  }
+}

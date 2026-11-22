@@ -1,0 +1,56 @@
+{
+  "id": "lepenski-vir",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Lepenski Vir",
+      "from": "-9500"
+    }
+  ],
+  "summary": "A Stone Age village on the Danube.",
+  "wikidata": "Q906669",
+  "events": [
+    {
+      "type": "born",
+      "date": "-9500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-6000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lepenski Vir (Q906669)",
+      "url": "https://www.wikidata.org/wiki/Q906669",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lepenski Vir",
+      "url": "https://en.wikipedia.org/wiki/Lepenski_Vir",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Lepenski_Vir_%282%29.JPG/500px-Lepenski_Vir_%282%29.JPG",
+    "alt": "Lepenski Vir",
+    "credit": "Myself",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lepenski_Vir_(2).JPG"
+  }
+}

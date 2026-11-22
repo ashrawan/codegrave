@@ -1,0 +1,54 @@
+{
+  "id": "finland-nato",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Finland joins NATO",
+      "from": "2023"
+    }
+  ],
+  "summary": "Finland joined NATO in 2023 after Russia's invasion of Ukraine.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q110653216",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Finland joins NATO (Q110653216)",
+      "url": "https://www.wikidata.org/wiki/Q110653216",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Finland in NATO",
+      "url": "https://en.wikipedia.org/wiki/Finland_in_NATO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Suomesta_Naton_j%C3%A4sen%2C_4_April_2023.jpg/500px-Suomesta_Naton_j%C3%A4sen%2C_4_April_2023.jpg",
+    "alt": "Finland joins NATO",
+    "credit": "FinnishGovernment",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Suomesta_Naton_j%C3%A4sen,_4_April_2023.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "mongo-beti",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Mongo Beti",
+      "from": "1932"
+    }
+  ],
+  "summary": "Novelist and critic of colonial and later rule.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q248047",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-06-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-10-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cameroon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mongo Beti (Q248047)",
+      "url": "https://www.wikidata.org/wiki/Q248047",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mongo Beti",
+      "url": "https://en.wikipedia.org/wiki/Mongo_Beti",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Mongo_Beti.jpg_unscaled",
+    "alt": "Mongo Beti",
+    "credit": "Stollama",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mongo_Beti.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-white-mountain",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of White Mountain",
+      "from": "1620"
+    }
+  ],
+  "summary": "The battle of 1620 that ended Bohemian independence for three centuries.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4373",
+  "events": [
+    {
+      "type": "born",
+      "date": "1620-11-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1620-11-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of White Mountain (Q4373)",
+      "url": "https://www.wikidata.org/wiki/Q4373",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of White Mountain",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_White_Mountain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Schlacht_am_Wei%C3%9Fen_Berg_C-K_063.jpg/500px-Schlacht_am_Wei%C3%9Fen_Berg_C-K_063.jpg",
+    "alt": "Battle of White Mountain",
+    "credit": "Peter Snayers",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Schlacht_am_Wei%C3%9Fen_Berg_C-K_063.jpg"
+  }
+}

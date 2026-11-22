@@ -1,0 +1,45 @@
+{
+  "id": "blombos-cave",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Blombos Cave",
+      "from": "-100000"
+    }
+  ],
+  "summary": "A coastal cave with some of the oldest known art: ochre engraved about 75,000 years ago.",
+  "wikidata": "Q884971",
+  "events": [
+    {
+      "type": "born",
+      "date": "-100000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Blombos Cave (Q884971)",
+      "url": "https://www.wikidata.org/wiki/Q884971",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blombos Cave",
+      "url": "https://en.wikipedia.org/wiki/Blombos_Cave",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Blombos.jpg/500px-Blombos.jpg",
+    "alt": "Blombos Cave",
+    "credit": "Vincent Mourre / Inrap",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Blombos.jpg"
+  }
+}

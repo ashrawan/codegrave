@@ -1,0 +1,45 @@
+{
+  "id": "java-man",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Java Man",
+      "from": "-1000000"
+    }
+  ],
+  "summary": "Fossils of Homo erectus found on Java in 1891, about a million years old.",
+  "wikidata": "Q192993",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Java Man (Q192993)",
+      "url": "https://www.wikidata.org/wiki/Q192993",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Java Man",
+      "url": "https://en.wikipedia.org/wiki/Java_Man",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Javamensch_Replik_Rosensteinmuseum.jpg/500px-Javamensch_Replik_Rosensteinmuseum.jpg",
+    "alt": "Java Man",
+    "credit": "Immanuel Giel",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Javamensch_Replik_Rosensteinmuseum.jpg"
+  }
+}

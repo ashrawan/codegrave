@@ -1,0 +1,53 @@
+{
+  "id": "john-cabot",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "John Cabot",
+      "from": "1450"
+    }
+  ],
+  "summary": "Italian navigator who sailed for England in 1497 and reached the coast of North America.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q85642",
+  "events": [
+    {
+      "type": "born",
+      "date": "1450",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1498",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: John Cabot (Q85642)",
+      "url": "https://www.wikidata.org/wiki/Q85642",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Cabot",
+      "url": "https://en.wikipedia.org/wiki/John_Cabot",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/JohnCabotPainting.jpg/500px-JohnCabotPainting.jpg",
+    "alt": "John Cabot",
+    "credit": "Giustino Menescardi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JohnCabotPainting.jpg"
+  }
+}

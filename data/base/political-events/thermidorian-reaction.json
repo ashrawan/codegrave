@@ -1,0 +1,53 @@
+{
+  "id": "thermidorian-reaction",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Thermidorian Reaction",
+      "from": "1794"
+    }
+  ],
+  "summary": "The fall and execution of Robespierre in July 1794, which ended the Terror.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q474757",
+  "events": [
+    {
+      "type": "born",
+      "date": "1794-07-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1795-10-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Thermidorian Reaction (Q474757)",
+      "url": "https://www.wikidata.org/wiki/Q474757",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thermidorian Reaction",
+      "url": "https://en.wikipedia.org/wiki/Thermidorian_Reaction",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Valery_Jacobi_Ninth_Thermidor.jpg/500px-Valery_Jacobi_Ninth_Thermidor.jpg",
+    "alt": "Thermidorian Reaction",
+    "credit": "Valery Jacobi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Valery_Jacobi_Ninth_Thermidor.jpg"
+  }
+}

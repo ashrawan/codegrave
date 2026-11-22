@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-the-boyne",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of the Boyne",
+      "from": "1690"
+    }
+  ],
+  "summary": "William III's victory of 1690 over James II, which secured Protestant rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q644960",
+  "events": [
+    {
+      "type": "born",
+      "date": "1690-07-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1690-07-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of the Boyne (Q644960)",
+      "url": "https://www.wikidata.org/wiki/Q644960",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of the Boyne",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Boyne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/De_slag_aan_de_Boyne_%28Ierland%29_tussen_Jacobus_II_en_Willem_III%2C_12_juli_1690_Rijksmuseum_SK-A-605.jpeg/500px-De_slag_aan_de_Boyne_%28Ierland%29_tussen_Jacobus_II_en_Willem_III%2C_12_juli_1690_Rijksmuseum_SK-A-605.jpeg",
+    "alt": "Battle of the Boyne",
+    "credit": "Jan van Huchtenburgh",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:De_slag_aan_de_Boyne_(Ierland)_tussen_Jacobus_II_en_Willem_III,_12_juli_1690_Rijksmuseum_SK-A-605.jpeg"
+  }
+}

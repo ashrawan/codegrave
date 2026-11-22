@@ -1,0 +1,59 @@
+{
+  "id": "afcon-2023",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2023 Africa Cup of Nations",
+      "from": "2024"
+    }
+  ],
+  "summary": "The Africa Cup of Nations hosted and won by Ivory Coast.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q18107167",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-01-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-02-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2023 Africa Cup of Nations (Q18107167)",
+      "url": "https://www.wikidata.org/wiki/Q18107167",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2023 Africa Cup of Nations",
+      "url": "https://en.wikipedia.org/wiki/2023_Africa_Cup_of_Nations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Confederation_of_African_Football_member_associations_map.svg/500px-Confederation_of_African_Football_member_associations_map.svg.png",
+    "alt": "2023 Africa Cup of Nations",
+    "credit": "EOZyo",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Confederation_of_African_Football_member_associations_map.svg"
+  }
+}

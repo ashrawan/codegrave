@@ -1,0 +1,52 @@
+{
+  "id": "kamerun",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kamerun",
+      "from": "1884"
+    }
+  ],
+  "summary": "The German colony of 1884 to 1916.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q668294",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884-07-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1919",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cameroon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kamerun (Q668294)",
+      "url": "https://www.wikidata.org/wiki/Q668294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kamerun",
+      "url": "https://en.wikipedia.org/wiki/Kamerun",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "moche-culture",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Moche culture",
+      "from": "0001"
+    }
+  ],
+  "summary": "A culture of the north coast famous for portrait pots and the tomb of the Lord of Sipán.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q208188",
+  "events": [
+    {
+      "type": "born",
+      "date": "0001",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moche culture (Q208188)",
+      "url": "https://www.wikidata.org/wiki/Q208188",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moche culture",
+      "url": "https://en.wikipedia.org/wiki/Moche_culture",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

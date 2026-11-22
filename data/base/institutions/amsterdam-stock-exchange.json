@@ -1,0 +1,45 @@
+{
+  "id": "amsterdam-stock-exchange",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Amsterdam Stock Exchange",
+      "from": "1602"
+    }
+  ],
+  "summary": "The first modern stock exchange, set up in Amsterdam to trade shares of the Dutch East India Company.",
+  "wikidata": "Q478720",
+  "events": [
+    {
+      "type": "born",
+      "date": "1602",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Amsterdam Stock Exchange (Q478720)",
+      "url": "https://www.wikidata.org/wiki/Q478720",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Euronext Amsterdam",
+      "url": "https://en.wikipedia.org/wiki/Euronext_Amsterdam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/20220525.Amsterdam.-028.jpg/500px-20220525.Amsterdam.-028.jpg",
+    "alt": "Amsterdam Stock Exchange",
+    "credit": "Bybbisch94, Christian Gebhardt",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20220525.Amsterdam.-028.jpg"
+  }
+}

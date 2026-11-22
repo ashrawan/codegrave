@@ -1,0 +1,56 @@
+{
+  "id": "cyclone-nargis",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Cyclone Nargis",
+      "from": "2008"
+    }
+  ],
+  "summary": "The cyclone of 2008 that killed some 140,000 people.",
+  "wikidata": "Q152314",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-04-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2008-05-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cyclone Nargis (Q152314)",
+      "url": "https://www.wikidata.org/wiki/Q152314",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cyclone Nargis",
+      "url": "https://en.wikipedia.org/wiki/Cyclone_Nargis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Nargis_2008-05-02_0645Z.jpg/500px-Nargis_2008-05-02_0645Z.jpg",
+    "alt": "Cyclone Nargis",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nargis_2008-05-02_0645Z.jpg"
+  }
+}

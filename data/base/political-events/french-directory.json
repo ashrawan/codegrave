@@ -1,0 +1,53 @@
+{
+  "id": "french-directory",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "The Directory",
+      "from": "1795"
+    }
+  ],
+  "summary": "The government of five directors that ran France from 1795 until Napoleon overthrew it in 1799.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q219817",
+  "events": [
+    {
+      "type": "born",
+      "date": "1795-10-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1799-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Directory (Q219817)",
+      "url": "https://www.wikidata.org/wiki/Q219817",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Directory",
+      "url": "https://en.wikipedia.org/wiki/French_Directory",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Directoire%2C_R%C3%A9volution_fran%C3%A7aise._Portrait_de_Paul_Barras_en_costume_de_Directeur._G.31925.jpg/500px-Directoire%2C_R%C3%A9volution_fran%C3%A7aise._Portrait_de_Paul_Barras_en_costume_de_Directeur._G.31925.jpg",
+    "alt": "The Directory",
+    "credit": "Bonneville, François, graveur",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Directoire,_R%C3%A9volution_fran%C3%A7aise._Portrait_de_Paul_Barras_en_costume_de_Directeur._G.31925.jpg"
+  }
+}

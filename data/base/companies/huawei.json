@@ -1,0 +1,48 @@
+{
+  "id": "huawei",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Huawei",
+      "from": "1987"
+    }
+  ],
+  "summary": "Chinese maker of phone networks and phones.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q160120",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Huawei (Q160120)",
+      "url": "https://www.wikidata.org/wiki/Q160120",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Huawei",
+      "url": "https://en.wikipedia.org/wiki/Huawei",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/HuaweiShenzhen.jpg/500px-HuaweiShenzhen.jpg",
+    "alt": "Huawei",
+    "credit": "Raysonho @ Open Grid Scheduler / Grid Engine",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:HuaweiShenzhen.jpg"
+  }
+}

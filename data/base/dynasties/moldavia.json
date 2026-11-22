@@ -1,0 +1,52 @@
+{
+  "id": "moldavia",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Moldavia",
+      "from": "1346"
+    }
+  ],
+  "summary": "The principality to the east of the Carpathians, the other land that formed Romania.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q10957559",
+  "events": [
+    {
+      "type": "born",
+      "date": "1346",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1859",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moldavia (Q10957559)",
+      "url": "https://www.wikidata.org/wiki/Q10957559",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moldavia",
+      "url": "https://en.wikipedia.org/wiki/Moldavia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

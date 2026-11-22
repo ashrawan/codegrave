@@ -1,0 +1,53 @@
+{
+  "id": "november-uprising",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "November Uprising",
+      "from": "1830"
+    }
+  ],
+  "summary": "A rising against Russian rule in 1830 and 1831.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q462964",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830-11-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1831-10-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: November Uprising (Q462964)",
+      "url": "https://www.wikidata.org/wiki/Q462964",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: November Uprising",
+      "url": "https://en.wikipedia.org/wiki/November_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Marcin_Zaleski%2C_Wzi%C4%99cie_Arsena%C5%82u.jpg/500px-Marcin_Zaleski%2C_Wzi%C4%99cie_Arsena%C5%82u.jpg",
+    "alt": "November Uprising",
+    "credit": "Marcin Zaleski",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marcin_Zaleski,_Wzi%C4%99cie_Arsena%C5%82u.jpg"
+  }
+}

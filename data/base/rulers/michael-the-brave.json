@@ -1,0 +1,53 @@
+{
+  "id": "michael-the-brave",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Michael the Brave",
+      "from": "1558"
+    }
+  ],
+  "summary": "Prince who in 1600 briefly united Wallachia, Transylvania and Moldavia.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q118755",
+  "events": [
+    {
+      "type": "born",
+      "date": "1558",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1601-08-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Michael the Brave (Q118755)",
+      "url": "https://www.wikidata.org/wiki/Q118755",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michael the Brave",
+      "url": "https://en.wikipedia.org/wiki/Michael_the_Brave",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/MihaiViteazul.jpg/500px-MihaiViteazul.jpg",
+    "alt": "Michael the Brave",
+    "credit": "Aegidius Sadeler",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:MihaiViteazul.jpg"
+  }
+}

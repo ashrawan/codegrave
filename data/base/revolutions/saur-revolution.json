@@ -1,0 +1,59 @@
+{
+  "id": "saur-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Saur Revolution",
+      "from": "1978"
+    }
+  ],
+  "summary": "The communist coup of 1978.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1341539",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-04-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1978-04-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saur Revolution (Q1341539)",
+      "url": "https://www.wikidata.org/wiki/Q1341539",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saur Revolution",
+      "url": "https://en.wikipedia.org/wiki/Saur_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Day_after_Saur_revolution.JPG/500px-Day_after_Saur_revolution.JPG",
+    "alt": "Saur Revolution",
+    "credit": "Cleric77",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Day_after_Saur_revolution.JPG"
+  }
+}

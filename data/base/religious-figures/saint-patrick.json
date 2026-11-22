@@ -1,0 +1,59 @@
+{
+  "id": "saint-patrick",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Saint Patrick",
+      "from": "0400"
+    }
+  ],
+  "summary": "Missionary who brought Christianity to Ireland in the 400s and became its patron saint.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q165479",
+  "events": [
+    {
+      "type": "born",
+      "date": "0400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0461-03-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint Patrick (Q165479)",
+      "url": "https://www.wikidata.org/wiki/Q165479",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint Patrick",
+      "url": "https://en.wikipedia.org/wiki/Saint_Patrick",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Saint_Patrick_Catholic_Church_%28Junction_City%2C_Ohio%29_-_stained_glass%2C_Saint_Patrick_-_detail.jpg/500px-Saint_Patrick_Catholic_Church_%28Junction_City%2C_Ohio%29_-_stained_glass%2C_Saint_Patrick_-_detail.jpg",
+    "alt": "Saint Patrick",
+    "credit": "Nheyob",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Patrick_Catholic_Church_(Junction_City,_Ohio)_-_stained_glass,_Saint_Patrick_-_detail.jpg"
+  }
+}

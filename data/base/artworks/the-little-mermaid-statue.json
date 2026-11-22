@@ -1,0 +1,54 @@
+{
+  "id": "the-little-mermaid-statue",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "The Little Mermaid",
+      "from": "1913"
+    }
+  ],
+  "summary": "Statue in Copenhagen harbour of Andersen's mermaid.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q214619",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "denmark"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Little Mermaid (Q214619)",
+      "url": "https://www.wikidata.org/wiki/Q214619",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Little Mermaid (statue)",
+      "url": "https://en.wikipedia.org/wiki/The_Little_Mermaid_(statue)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Petite_sir%C3%A8ne_de_Copenhague_%28conforme_%C3%A0_la_loi_danoise%29.JPG/500px-Petite_sir%C3%A8ne_de_Copenhague_%28conforme_%C3%A0_la_loi_danoise%29.JPG",
+    "alt": "The Little Mermaid",
+    "credit": "Benoît Prieur",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Petite_sir%C3%A8ne_de_Copenhague_(conforme_%C3%A0_la_loi_danoise).JPG"
+  }
+}

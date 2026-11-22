@@ -1,0 +1,59 @@
+{
+  "id": "tran-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Trần dynasty",
+      "from": "1226"
+    }
+  ],
+  "summary": "The dynasty that beat back three Mongol invasions in the 1200s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3111454",
+  "events": [
+    {
+      "type": "born",
+      "date": "1226-01-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1400-03-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Trần dynasty (Q3111454)",
+      "url": "https://www.wikidata.org/wiki/Q3111454",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trần dynasty",
+      "url": "https://en.wikipedia.org/wiki/Trần_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/TrucLam_CongNgoai.JPG/500px-TrucLam_CongNgoai.JPG",
+    "alt": "Trần dynasty",
+    "credit": "Bùi Thế Tâm",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TrucLam_CongNgoai.JPG"
+  }
+}

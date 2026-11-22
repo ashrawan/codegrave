@@ -1,0 +1,59 @@
+{
+  "id": "cod-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Cod Wars",
+      "from": "1958"
+    }
+  ],
+  "summary": "The fishing disputes with Britain that Iceland won.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q940618",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-09-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-06-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iceland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cod Wars (Q940618)",
+      "url": "https://www.wikidata.org/wiki/Q940618",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cod Wars",
+      "url": "https://en.wikipedia.org/wiki/Cod_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/CoventryAlbertWestfj.jpg/500px-CoventryAlbertWestfj.jpg",
+    "alt": "Cod Wars",
+    "credit": "CoventryAlbertWestfj.png: Original uploader was Kjallakr at en.wikipedia derivative work: Materialscientist (talk)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:CoventryAlbertWestfj.jpg"
+  }
+}

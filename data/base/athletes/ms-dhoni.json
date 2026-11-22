@@ -1,0 +1,41 @@
+{
+  "id": "ms-dhoni",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "MS Dhoni",
+      "from": "1981"
+    }
+  ],
+  "summary": "Indian captain and wicket-keeper known for his calm, who led India to the T20, one-day and Champions Trophy titles.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q470774",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-07-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: MS Dhoni (Q470774)",
+      "url": "https://www.wikidata.org/wiki/Q470774",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: MS Dhoni",
+      "url": "https://en.wikipedia.org/wiki/MS_Dhoni",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

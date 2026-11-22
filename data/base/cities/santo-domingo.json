@@ -1,0 +1,51 @@
+{
+  "id": "santo-domingo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Santo Domingo",
+      "from": "1496"
+    }
+  ],
+  "summary": "The oldest European city of the Americas, founded in 1496.",
+  "wikidata": "Q34820",
+  "events": [
+    {
+      "type": "born",
+      "date": "1496",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominican-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Santo Domingo (Q34820)",
+      "url": "https://www.wikidata.org/wiki/Q34820",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Santo Domingo",
+      "url": "https://en.wikipedia.org/wiki/Santo_Domingo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Santo_Domingo_%28Dominican_Republic%29_taken_atop_Novocentro_tower_viewing_the_city_to_the_southwest_2010.jpg/500px-Santo_Domingo_%28Dominican_Republic%29_taken_atop_Novocentro_tower_viewing_the_city_to_the_southwest_2010.jpg",
+    "alt": "Santo Domingo",
+    "credit": "Jjc09",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Santo_Domingo_(Dominican_Republic)_taken_atop_Novocentro_tower_viewing_the_city_to_the_southwest_2010.jpg"
+  }
+}

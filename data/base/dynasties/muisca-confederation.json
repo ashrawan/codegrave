@@ -1,0 +1,59 @@
+{
+  "id": "muisca-confederation",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Muisca Confederation",
+      "from": "0800"
+    }
+  ],
+  "summary": "The Muisca people of the highlands, whose gold rites gave rise to the legend of El Dorado.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5782830",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1540",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Muisca Confederation (Q5782830)",
+      "url": "https://www.wikidata.org/wiki/Q5782830",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Muisca Confederation",
+      "url": "https://en.wikipedia.org/wiki/Muisca_Confederation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Templo_del_sol.jpg/500px-Templo_del_sol.jpg",
+    "alt": "Muisca Confederation",
+    "credit": "Aizquier",
+    "licence": "CC BY 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Templo_del_sol.jpg"
+  }
+}

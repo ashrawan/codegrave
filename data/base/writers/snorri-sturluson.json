@@ -1,0 +1,59 @@
+{
+  "id": "snorri-sturluson",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Snorri Sturluson",
+      "from": "1179"
+    }
+  ],
+  "summary": "Writer of the Prose Edda and of sagas of the Norse kings.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q102323",
+  "events": [
+    {
+      "type": "born",
+      "date": "1179",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1241-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iceland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Snorri Sturluson (Q102323)",
+      "url": "https://www.wikidata.org/wiki/Q102323",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Snorri Sturluson",
+      "url": "https://en.wikipedia.org/wiki/Snorri_Sturluson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Snorre_Sturluson-Christian_Krohg.jpg/500px-Snorre_Sturluson-Christian_Krohg.jpg",
+    "alt": "Snorri Sturluson",
+    "credit": "Christian Krohg",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Snorre_Sturluson-Christian_Krohg.jpg"
+  }
+}

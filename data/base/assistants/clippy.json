@@ -1,0 +1,44 @@
+{
+  "id": "clippy",
+  "category": "assistants",
+  "names": [
+    {
+      "name": "Clippy",
+      "from": "1997"
+    }
+  ],
+  "summary": "The paperclip that popped up in Microsoft Office from 1997 to offer help, widely mocked and removed in 2007.",
+  "wikidata": "Q1042885",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Clippy (Q1042885)",
+      "url": "https://www.wikidata.org/wiki/Q1042885",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Office Assistant",
+      "url": "https://en.wikipedia.org/wiki/Office_Assistant",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "cause": "Users found it annoying, and Microsoft dropped it from Office 2007."
+}

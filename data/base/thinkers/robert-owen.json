@@ -1,0 +1,53 @@
+{
+  "id": "robert-owen",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Robert Owen",
+      "from": "1771"
+    }
+  ],
+  "summary": "Welsh mill owner who ran New Lanark as a model village with schools and shorter hours, and an early socialist.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q179374",
+  "events": [
+    {
+      "type": "born",
+      "date": "1771-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1858-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Robert Owen (Q179374)",
+      "url": "https://www.wikidata.org/wiki/Q179374",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Owen",
+      "url": "https://en.wikipedia.org/wiki/Robert_Owen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Robert_Owen_by_William_Henry_Brooke.jpg/500px-Robert_Owen_by_William_Henry_Brooke.jpg",
+    "alt": "Robert Owen",
+    "credit": "William Henry Brooke",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Robert_Owen_by_William_Henry_Brooke.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "cartagena",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Cartagena, Colombia",
+      "from": "1533"
+    }
+  ],
+  "summary": "A walled port on the Caribbean, once a treasure port of Spain.",
+  "wikidata": "Q657461",
+  "events": [
+    {
+      "type": "born",
+      "date": "1533",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cartagena, Colombia (Q657461)",
+      "url": "https://www.wikidata.org/wiki/Q657461",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cartagena, Colombia",
+      "url": "https://en.wikipedia.org/wiki/Cartagena,_Colombia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/View_of_Cartagena_from_Convento_de_Santa_Cruz_de_la_Popa_01.jpg/500px-View_of_Cartagena_from_Convento_de_Santa_Cruz_de_la_Popa_01.jpg",
+    "alt": "Cartagena, Colombia",
+    "credit": "Bernard Gagnon",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Cartagena_from_Convento_de_Santa_Cruz_de_la_Popa_01.jpg"
+  }
+}

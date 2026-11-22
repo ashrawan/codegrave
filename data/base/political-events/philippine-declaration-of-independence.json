@@ -1,0 +1,53 @@
+{
+  "id": "philippine-declaration-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Philippine Declaration of Independence",
+      "from": "1898"
+    }
+  ],
+  "summary": "Aguinaldo declared independence from Spain on 12 June 1898.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q69772",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898-06-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1898-06-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Philippine Declaration of Independence (Q69772)",
+      "url": "https://www.wikidata.org/wiki/Q69772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Philippine Declaration of Independence",
+      "url": "https://en.wikipedia.org/wiki/Philippine_Declaration_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Acta_de_la_proclamaci%C3%B3n_de_independencia_del_pueblo_Filipino-parte1.gif/500px-Acta_de_la_proclamaci%C3%B3n_de_independencia_del_pueblo_Filipino-parte1.gif",
+    "alt": "Philippine Declaration of Independence",
+    "credit": "Ambrosio Rianzares Bautista",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Acta_de_la_proclamaci%C3%B3n_de_independencia_del_pueblo_Filipino-parte1.gif"
+  }
+}

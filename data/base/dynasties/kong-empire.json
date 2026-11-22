@@ -1,0 +1,52 @@
+{
+  "id": "kong-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kong Empire",
+      "from": "1710"
+    }
+  ],
+  "summary": "A Muslim state of the north.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1587244",
+  "events": [
+    {
+      "type": "born",
+      "date": "1710",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1898",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kong Empire (Q1587244)",
+      "url": "https://www.wikidata.org/wiki/Q1587244",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kong Empire",
+      "url": "https://en.wikipedia.org/wiki/Kong_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

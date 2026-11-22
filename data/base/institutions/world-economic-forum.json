@@ -1,0 +1,51 @@
+{
+  "id": "world-economic-forum",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "World Economic Forum",
+      "from": "1971"
+    }
+  ],
+  "summary": "The foundation that hosts the yearly meeting of business and political leaders at Davos.",
+  "wikidata": "Q170418",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-01",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: World Economic Forum (Q170418)",
+      "url": "https://www.wikidata.org/wiki/Q170418",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World Economic Forum",
+      "url": "https://en.wikipedia.org/wiki/World_Economic_Forum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/World_Economic_Forum_headquarters_%28cropped%29.jpg/500px-World_Economic_Forum_headquarters_%28cropped%29.jpg",
+    "alt": "World Economic Forum",
+    "credit": "Alexey M.",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:World_Economic_Forum_headquarters_(cropped).jpg"
+  }
+}

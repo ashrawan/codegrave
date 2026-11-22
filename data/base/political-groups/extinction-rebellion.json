@@ -1,0 +1,48 @@
+{
+  "id": "extinction-rebellion",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Extinction Rebellion",
+      "from": "2018"
+    }
+  ],
+  "summary": "A movement founded in Britain in 2018 that blocks roads and bridges to demand faster action on climate.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q58819597",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-05",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Extinction Rebellion (Q58819597)",
+      "url": "https://www.wikidata.org/wiki/Q58819597",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Extinction Rebellion",
+      "url": "https://en.wikipedia.org/wiki/Extinction_Rebellion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/London_November_23_2018_%2819%29_Extinction_Rebellion_Protest_Tower_Hill.jpg/500px-London_November_23_2018_%2819%29_Extinction_Rebellion_Protest_Tower_Hill.jpg",
+    "alt": "Extinction Rebellion",
+    "credit": "DAVID HOLT",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:London_November_23_2018_(19)_Extinction_Rebellion_Protest_Tower_Hill.jpg"
+  }
+}

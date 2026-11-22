@@ -1,0 +1,52 @@
+{
+  "id": "dutch-formosa",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Dutch Formosa",
+      "from": "1624"
+    }
+  ],
+  "summary": "The Dutch colony in the south of Taiwan, centred on Fort Zeelandia, from 1624 to 1662.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q699446",
+  "events": [
+    {
+      "type": "born",
+      "date": "1624",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1662",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dutch Formosa (Q699446)",
+      "url": "https://www.wikidata.org/wiki/Q699446",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dutch Formosa",
+      "url": "https://en.wikipedia.org/wiki/Dutch_Formosa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

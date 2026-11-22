@@ -1,0 +1,59 @@
+{
+  "id": "mariel-boatlift",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Mariel boatlift",
+      "from": "1980"
+    }
+  ],
+  "summary": "The flight of 125,000 Cubans to Florida in 1980.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1776480",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-04-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mariel boatlift (Q1776480)",
+      "url": "https://www.wikidata.org/wiki/Q1776480",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mariel boatlift",
+      "url": "https://en.wikipedia.org/wiki/Mariel_boatlift",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Mariel_Refugees.jpg/500px-Mariel_Refugees.jpg",
+    "alt": "Mariel boatlift",
+    "credit": "U.S. Department of Homeland Security",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mariel_Refugees.jpg"
+  }
+}

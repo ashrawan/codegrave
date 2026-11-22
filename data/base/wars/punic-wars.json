@@ -1,0 +1,59 @@
+{
+  "id": "punic-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Punic Wars",
+      "from": "-0264"
+    }
+  ],
+  "summary": "The wars between Rome and Carthage.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q124988",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0264",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0146",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tunisia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Punic Wars (Q124988)",
+      "url": "https://www.wikidata.org/wiki/Q124988",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Punic Wars",
+      "url": "https://en.wikipedia.org/wiki/Punic_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Map_of_Rome_and_Carthage_at_the_start_of_the_Second_Punic_War.svg/500px-Map_of_Rome_and_Carthage_at_the_start_of_the_Second_Punic_War.svg.png",
+    "alt": "Punic Wars",
+    "credit": "William Robert Shepherd",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Map_of_Rome_and_Carthage_at_the_start_of_the_Second_Punic_War.svg"
+  }
+}

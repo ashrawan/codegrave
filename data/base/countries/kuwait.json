@@ -1,0 +1,44 @@
+{
+  "id": "kuwait",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kuwait",
+      "from": "1991"
+    }
+  ],
+  "summary": "A small Gulf state at the head of the Persian Gulf, a British protectorate until 1961, grown rich on oil.",
+  "wikidata": "Q817",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-02-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kuwait (Q817)",
+      "url": "https://www.wikidata.org/wiki/Q817",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kuwait",
+      "url": "https://en.wikipedia.org/wiki/Kuwait",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

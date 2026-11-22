@@ -1,0 +1,52 @@
+{
+  "id": "french-protectorate-in-morocco",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "French protectorate in Morocco",
+      "from": "1912"
+    }
+  ],
+  "summary": "French rule from 1912 to 1956.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q907234",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-03-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1956-03-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "morocco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French protectorate in Morocco (Q907234)",
+      "url": "https://www.wikidata.org/wiki/Q907234",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French protectorate in Morocco",
+      "url": "https://en.wikipedia.org/wiki/French_protectorate_in_Morocco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

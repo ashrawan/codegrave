@@ -1,0 +1,51 @@
+{
+  "id": "jordan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Jordan",
+      "from": "1946"
+    }
+  ],
+  "summary": "A Hashemite kingdom east of the Jordan River, home of Petra, independent since 1946.",
+  "wikidata": "Q810",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jordan (Q810)",
+      "url": "https://www.wikidata.org/wiki/Q810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jordan",
+      "url": "https://en.wikipedia.org/wiki/Jordan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/17_Dead_Sea_%2813%29_%2813252089754%29.jpg/500px-17_Dead_Sea_%2813%29_%2813252089754%29.jpg",
+    "alt": "Jordan",
+    "credit": "xorge",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:17_Dead_Sea_(13)_(13252089754).jpg"
+  }
+}

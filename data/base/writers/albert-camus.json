@@ -1,0 +1,59 @@
+{
+  "id": "albert-camus",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Albert Camus",
+      "from": "1913"
+    }
+  ],
+  "summary": "Writer born in Algeria, author of The Stranger, who won the Nobel Prize in 1957.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q34670",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913-11-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-01-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Albert Camus (Q34670)",
+      "url": "https://www.wikidata.org/wiki/Q34670",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Albert Camus",
+      "url": "https://en.wikipedia.org/wiki/Albert_Camus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg/500px-Albert_Camus%2C_gagnant_de_prix_Nobel%2C_portrait_en_buste%2C_pos%C3%A9_au_bureau%2C_faisant_face_%C3%A0_gauche%2C_cigarette_de_tabagisme.jpg",
+    "alt": "Albert Camus",
+    "credit": "Photograph by United Press International",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Albert_Camus,_gagnant_de_prix_Nobel,_portrait_en_buste,_pos%C3%A9_au_bureau,_faisant_face_%C3%A0_gauche,_cigarette_de_tabagisme.jpg"
+  }
+}

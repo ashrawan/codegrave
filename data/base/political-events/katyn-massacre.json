@@ -1,0 +1,53 @@
+{
+  "id": "katyn-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Katyn massacre",
+      "from": "1940"
+    }
+  ],
+  "summary": "The Soviet secret police shot about 22,000 Polish officers and leaders in 1940.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q134301",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-04",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1940-05",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Katyn massacre (Q134301)",
+      "url": "https://www.wikidata.org/wiki/Q134301",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Katyn massacre",
+      "url": "https://en.wikipedia.org/wiki/Katyn_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Trzy_krzyze.jpg/500px-Trzy_krzyze.jpg",
+    "alt": "Katyn massacre",
+    "credit": "Goku122 at Polish Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Trzy_krzyze.jpg"
+  }
+}

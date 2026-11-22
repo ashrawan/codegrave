@@ -1,0 +1,54 @@
+{
+  "id": "mexican-drug-war",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Mexican drug war",
+      "from": "2006"
+    }
+  ],
+  "summary": "The fight between the state and drug cartels, declared in 2006, which has cost hundreds of thousands of lives.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q475678",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-12-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mexican drug war (Q475678)",
+      "url": "https://www.wikidata.org/wiki/Q475678",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mexican drug war",
+      "url": "https://en.wikipedia.org/wiki/Mexican_drug_war",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Mexican_troops_operating_at_a_random_checkpoint_2009.jpg_unscaled",
+    "alt": "Mexican drug war",
+    "credit": "en:User:Homan05",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mexican_troops_operating_at_a_random_checkpoint_2009.jpg"
+  }
+}

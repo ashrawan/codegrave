@@ -1,0 +1,51 @@
+{
+  "id": "ban-chiang",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Ban Chiang",
+      "from": "-1500"
+    }
+  ],
+  "summary": "A Bronze Age village site in the north-east whose red-painted pots are famous.",
+  "wikidata": "Q584125",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "thailand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ban Chiang (Q584125)",
+      "url": "https://www.wikidata.org/wiki/Q584125",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ban Chiang",
+      "url": "https://en.wikipedia.org/wiki/Ban_Chiang",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Wat_Pho_Si_Nai_-_UNESCO_World_Heritage_Site_plaque.JPG/500px-Wat_Pho_Si_Nai_-_UNESCO_World_Heritage_Site_plaque.JPG",
+    "alt": "Ban Chiang",
+    "credit": "User:Mattes",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wat_Pho_Si_Nai_-_UNESCO_World_Heritage_Site_plaque.JPG"
+  }
+}

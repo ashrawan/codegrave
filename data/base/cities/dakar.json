@@ -1,0 +1,45 @@
+{
+  "id": "dakar",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Dakar",
+      "from": "1857"
+    }
+  ],
+  "summary": "Senegal's capital on the Cape Verde peninsula, the westernmost point of mainland Africa, founded as a French post in 1857.",
+  "wikidata": "Q3718",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Dakar (Q3718)",
+      "url": "https://www.wikidata.org/wiki/Q3718",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dakar",
+      "url": "https://en.wikipedia.org/wiki/Dakar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Pointe_des_Almadies_-_Senegal.jpg/500px-Pointe_des_Almadies_-_Senegal.jpg",
+    "alt": "Dakar",
+    "credit": "Jeff Attaway",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pointe_des_Almadies_-_Senegal.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "cave-of-altamira",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Cave of Altamira",
+      "from": "-36000"
+    }
+  ],
+  "summary": "A cave in Cantabria whose ceiling of painted bison, made in the Old Stone Age, was the first such art to be recognised.",
+  "wikidata": "Q133575",
+  "events": [
+    {
+      "type": "born",
+      "date": "-36000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cave of Altamira (Q133575)",
+      "url": "https://www.wikidata.org/wiki/Q133575",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cave of Altamira",
+      "url": "https://en.wikipedia.org/wiki/Cave_of_Altamira",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Techo_de_Altamira_%28replica%29-Museo_Arqueol%C3%B3gico_Nacional.jpg/500px-Techo_de_Altamira_%28replica%29-Museo_Arqueol%C3%B3gico_Nacional.jpg",
+    "alt": "Cave of Altamira",
+    "credit": "José-Manuel Benito",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Techo_de_Altamira_(replica)-Museo_Arqueol%C3%B3gico_Nacional.jpg"
+  }
+}

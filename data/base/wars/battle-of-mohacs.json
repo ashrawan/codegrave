@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-mohacs",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Mohács",
+      "from": "1526"
+    }
+  ],
+  "summary": "The battle of 1526 in which the Ottomans crushed the Hungarian army and its king died.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q178510",
+  "events": [
+    {
+      "type": "born",
+      "date": "1526-08-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1526-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Mohács (Q178510)",
+      "url": "https://www.wikidata.org/wiki/Q178510",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Mohács",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Mohács",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Than_M%C3%B3r_Moh%C3%A1csi_csata.jpg/500px-Than_M%C3%B3r_Moh%C3%A1csi_csata.jpg",
+    "alt": "Battle of Mohács",
+    "credit": "Mór Than",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Than_M%C3%B3r_Moh%C3%A1csi_csata.jpg"
+  }
+}

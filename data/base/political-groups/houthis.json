@@ -1,0 +1,54 @@
+{
+  "id": "houthis",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Houthis",
+      "from": "2000"
+    }
+  ],
+  "summary": "The movement that took Sanaa in 2014.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3042087",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Houthis (Q3042087)",
+      "url": "https://www.wikidata.org/wiki/Q3042087",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Houthis",
+      "url": "https://en.wikipedia.org/wiki/Houthis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Houthis_protest_against_airstrikes_2.png/500px-Houthis_protest_against_airstrikes_2.png",
+    "alt": "Houthis",
+    "credit": "Henry Ridgwell (VOA)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Houthis_protest_against_airstrikes_2.png"
+  }
+}

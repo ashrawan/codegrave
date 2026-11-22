@@ -1,0 +1,83 @@
+{
+  "id": "climate-change",
+  "name": "Climate Change",
+  "description": "Climate change from the first measurements of carbon dioxide to the Paris Agreement and the hottest years on record: the science, the treaties and the movements.",
+  "category": "earth-space",
+  "labels": [
+    "environment"
+  ],
+  "tags": [
+    "climate change",
+    "global warming",
+    "paris agreement",
+    "ipcc",
+    "greta thunberg",
+    "carbon dioxide",
+    "kyoto protocol",
+    "cop"
+  ],
+  "entries": [
+    "joseph-fourier",
+    "eunice-newton-foote",
+    "john-tyndall",
+    "svante-arrhenius",
+    "milutin-milankovic",
+    "guy-stewart-callendar",
+    "syukuro-manabe",
+    "james-hansen",
+    "al-gore",
+    "keeling-curve",
+    "earth-day",
+    "greenpeace",
+    "the-limits-to-growth",
+    "stockholm-conference-1972",
+    "montreal-protocol",
+    "ipcc",
+    "unfccc",
+    "earth-summit-1992",
+    "kyoto-protocol",
+    "hockey-stick-graph",
+    "2003-european-heatwave",
+    "greta-thunberg",
+    "an-inconvenient-truth",
+    "stern-review",
+    "copenhagen-summit-2009",
+    "paris-agreement",
+    "us-withdrawal-from-paris",
+    "extinction-rebellion",
+    "fridays-for-future",
+    "ipcc-special-report-1-5",
+    "black-summer-bushfires",
+    "european-green-deal",
+    "ipcc-sixth-assessment",
+    "cop26",
+    "2022-pakistan-floods",
+    "inflation-reduction-act",
+    "cop28",
+    "2024-warmest-year",
+    "cop30"
+  ],
+  "checkpoints": [
+    {
+      "id": "discovering-the-greenhouse",
+      "name": "Discovering the greenhouse",
+      "from": 1824,
+      "to": 1987,
+      "note": "Fourier, Foote and Tyndall find that the air traps heat, Arrhenius works out what doubling carbon dioxide would do, Milanković explains the ice ages and Keeling starts measuring carbon dioxide in Hawaii. In 1970 the first Earth Day is held, and Stockholm hosts the first UN meeting on the environment."
+    },
+    {
+      "id": "treaties",
+      "name": "Treaties",
+      "from": 1988,
+      "to": 2014,
+      "note": "Hansen warns the US Senate, the IPCC is set up, the Rio summit and the Kyoto Protocol follow, and Al Gore's film reaches millions."
+    },
+    {
+      "id": "paris-and-after",
+      "name": "Paris and after",
+      "from": 2015,
+      "to": 2026,
+      "note": "Almost every country signs the Paris Agreement. Young people strike for the climate, and the hottest years on record follow one after another."
+    }
+  ]
+}

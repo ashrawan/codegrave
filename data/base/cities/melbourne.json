@@ -1,0 +1,51 @@
+{
+  "id": "melbourne",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Melbourne",
+      "from": "1835"
+    }
+  ],
+  "summary": "A city founded in 1835 that grew rich on gold and was the seat of the federal government until 1927.",
+  "wikidata": "Q3141",
+  "events": [
+    {
+      "type": "born",
+      "date": "1835-08-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Melbourne (Q3141)",
+      "url": "https://www.wikidata.org/wiki/Q3141",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Melbourne",
+      "url": "https://en.wikipedia.org/wiki/Melbourne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Melbourne_CBD_and_Ceremonial_Avenue_%28in_2024%29_as_seen_from_the_rooftop_of_Shrine_of_Remembrance.jpg/500px-Melbourne_CBD_and_Ceremonial_Avenue_%28in_2024%29_as_seen_from_the_rooftop_of_Shrine_of_Remembrance.jpg",
+    "alt": "Melbourne",
+    "credit": "Shkuru Afshar",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Melbourne_CBD_and_Ceremonial_Avenue_(in_2024)_as_seen_from_the_rooftop_of_Shrine_of_Remembrance.jpg"
+  }
+}

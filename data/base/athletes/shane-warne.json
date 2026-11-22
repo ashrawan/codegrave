@@ -1,0 +1,53 @@
+{
+  "id": "shane-warne",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Shane Warne",
+      "from": "1969"
+    }
+  ],
+  "summary": "Australian leg-spinner who brought wrist spin back to life and took 708 Test wickets.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q555240",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-09-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-03-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Shane Warne (Q555240)",
+      "url": "https://www.wikidata.org/wiki/Q555240",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shane Warne",
+      "url": "https://en.wikipedia.org/wiki/Shane_Warne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Shane_Warne_February_2015.jpg/500px-Shane_Warne_February_2015.jpg",
+    "alt": "Shane Warne",
+    "credit": "Tourism Victoria from Australia",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shane_Warne_February_2015.jpg"
+  }
+}

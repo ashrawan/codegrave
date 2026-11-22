@@ -1,0 +1,51 @@
+{
+  "id": "karakorum",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Karakorum",
+      "from": "1220"
+    }
+  ],
+  "summary": "The capital of the Mongol Empire.",
+  "wikidata": "Q62677",
+  "events": [
+    {
+      "type": "born",
+      "date": "1220",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Karakorum (Q62677)",
+      "url": "https://www.wikidata.org/wiki/Q62677",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Karakorum",
+      "url": "https://en.wikipedia.org/wiki/Karakorum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Karakorum_Silver_Tree.jpg/500px-Karakorum_Silver_Tree.jpg",
+    "alt": "Karakorum",
+    "credit": "Bank of Mongolia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Karakorum_Silver_Tree.jpg"
+  }
+}

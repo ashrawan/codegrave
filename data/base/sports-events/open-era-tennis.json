@@ -1,0 +1,48 @@
+{
+  "id": "open-era-tennis",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "The Open Era",
+      "from": "1968"
+    }
+  ],
+  "summary": "From 1968 professionals were allowed into the Grand Slams, and tennis became a sport of prize money and television.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q2295996",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Open Era (Q2295996)",
+      "url": "https://www.wikidata.org/wiki/Q2295996",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Open Era (tennis)",
+      "url": "https://en.wikipedia.org/wiki/Open_Era_(tennis)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Lawn_Tennis_Court_1874.jpg/500px-Lawn_Tennis_Court_1874.jpg",
+    "alt": "The Open Era",
+    "credit": "Walter Clopton Wingfield (1833-1912) ?",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lawn_Tennis_Court_1874.jpg"
+  }
+}

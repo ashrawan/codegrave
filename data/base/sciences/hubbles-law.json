@@ -1,0 +1,45 @@
+{
+  "id": "hubbles-law",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Expanding universe",
+      "from": "1929"
+    }
+  ],
+  "summary": "The discovery that galaxies are moving away from us faster the further away they are, showing that the universe is expanding.",
+  "wikidata": "Q179916",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Expanding universe (Q179916)",
+      "url": "https://www.wikidata.org/wiki/Q179916",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hubble's law",
+      "url": "https://en.wikipedia.org/wiki/Hubble's_law",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Hubble_constant.JPG/500px-Hubble_constant.JPG",
+    "alt": "Expanding universe",
+    "credit": "Brews ohare",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hubble_constant.JPG"
+  }
+}

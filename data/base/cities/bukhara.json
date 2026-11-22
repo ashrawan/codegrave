@@ -1,0 +1,45 @@
+{
+  "id": "bukhara",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bukhara",
+      "from": "-0500"
+    }
+  ],
+  "summary": "A Silk Road city of mosques and madrasas, once a great centre of Islamic learning.",
+  "wikidata": "Q5764",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bukhara (Q5764)",
+      "url": "https://www.wikidata.org/wiki/Q5764",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bukhara",
+      "url": "https://en.wikipedia.org/wiki/Bukhara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kalon-Ensemble_Buchara.jpg/500px-Kalon-Ensemble_Buchara.jpg",
+    "alt": "Bukhara",
+    "credit": "Euyasik",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kalon-Ensemble_Buchara.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "rhodesia-udi",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Rhodesia's Unilateral Declaration of Independence",
+      "from": "1965"
+    }
+  ],
+  "summary": "The break from Britain in 1965 to keep white rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q7321053",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-11-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rhodesia's Unilateral Declaration of Independence (Q7321053)",
+      "url": "https://www.wikidata.org/wiki/Q7321053",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rhodesia's Unilateral Declaration of Independence",
+      "url": "https://en.wikipedia.org/wiki/Rhodesia's_Unilateral_Declaration_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

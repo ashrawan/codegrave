@@ -1,0 +1,48 @@
+{
+  "id": "formula-one-world-championship",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Formula One",
+      "from": "1950"
+    }
+  ],
+  "summary": "The world championship of single-seater motor racing, first held in 1950, raced on circuits around the world.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1968",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Formula One (Q1968)",
+      "url": "https://www.wikidata.org/wiki/Q1968",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Formula One World Championship",
+      "url": "https://en.wikipedia.org/wiki/Formula_One_World_Championship",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Opening_lap_of_the_2025_Canadian_Grand_Prix_%28cropped%29.jpg/500px-Opening_lap_of_the_2025_Canadian_Grand_Prix_%28cropped%29.jpg",
+    "alt": "Formula One",
+    "credit": "Bassfish22",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Opening_lap_of_the_2025_Canadian_Grand_Prix_(cropped).jpg"
+  }
+}

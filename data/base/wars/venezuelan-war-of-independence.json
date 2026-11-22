@@ -1,0 +1,59 @@
+{
+  "id": "venezuelan-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Venezuelan War of Independence",
+      "from": "1810"
+    }
+  ],
+  "summary": "The war of 1810 to 1823 against Spain.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q8934",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1823",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Venezuelan War of Independence (Q8934)",
+      "url": "https://www.wikidata.org/wiki/Q8934",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venezuelan War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Venezuelan_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/BatallaCarabobo02.JPG/500px-BatallaCarabobo02.JPG",
+    "alt": "Venezuelan War of Independence",
+    "credit": "Martin Tovar y Tovar",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BatallaCarabobo02.JPG"
+  }
+}

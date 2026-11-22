@@ -1,0 +1,56 @@
+{
+  "id": "typhoon-haiyan",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Typhoon Haiyan",
+      "from": "2013"
+    }
+  ],
+  "summary": "The super typhoon of 2013 that killed more than six thousand people.",
+  "wikidata": "Q15136651",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-11-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2013-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Typhoon Haiyan (Q15136651)",
+      "url": "https://www.wikidata.org/wiki/Q15136651",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Typhoon Haiyan",
+      "url": "https://en.wikipedia.org/wiki/Typhoon_Haiyan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Haiyan_2013-11-07_1345Z_%28alternate%2C_borderless%29.png/500px-Haiyan_2013-11-07_1345Z_%28alternate%2C_borderless%29.png",
+    "alt": "Typhoon Haiyan",
+    "credit": "NASA, LAADS Web, HDF File processed by Supportstorm",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Haiyan_2013-11-07_1345Z_(alternate,_borderless).png"
+  }
+}

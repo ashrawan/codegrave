@@ -1,0 +1,48 @@
+{
+  "id": "beloved-novel",
+  "category": "books",
+  "names": [
+    {
+      "name": "Beloved",
+      "from": "1987"
+    }
+  ],
+  "summary": "Toni Morrison's novel of a woman who escaped slavery and is haunted by her past.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q971767",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Beloved (Q971767)",
+      "url": "https://www.wikidata.org/wiki/Q971767",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Beloved (novel)",
+      "url": "https://en.wikipedia.org/wiki/Beloved_(novel)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Beloved_%281987_1st_ed_dust_jacket_cover%29.jpg/500px-Beloved_%281987_1st_ed_dust_jacket_cover%29.jpg",
+    "alt": "Beloved",
+    "credit": "Jacket design by R. D. Scudellari. Published by Alfred A. Knopf.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Beloved_(1987_1st_ed_dust_jacket_cover).jpg"
+  }
+}

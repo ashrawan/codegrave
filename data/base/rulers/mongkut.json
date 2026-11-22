@@ -1,0 +1,53 @@
+{
+  "id": "mongkut",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Mongkut",
+      "from": "1804"
+    }
+  ],
+  "summary": "King Rama IV, a scholar king who opened Siam to the West, made famous by The King and I.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q312849",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-10-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1868-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mongkut (Q312849)",
+      "url": "https://www.wikidata.org/wiki/Q312849",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mongkut",
+      "url": "https://en.wikipedia.org/wiki/Mongkut",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/First_King_of_Siam_MET_DP-573-001_%28cropped%29.jpg/500px-First_King_of_Siam_MET_DP-573-001_%28cropped%29.jpg",
+    "alt": "Mongkut",
+    "credit": "John Thomson",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:First_King_of_Siam_MET_DP-573-001_(cropped).jpg"
+  }
+}

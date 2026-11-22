@@ -1,0 +1,59 @@
+{
+  "id": "thurgood-marshall",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Thurgood Marshall",
+      "from": "1908"
+    }
+  ],
+  "summary": "Lawyer who won Brown v. Board of Education and became the first Black justice of the Supreme Court.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q312348",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-07-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-01-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thurgood Marshall (Q312348)",
+      "url": "https://www.wikidata.org/wiki/Q312348",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thurgood Marshall",
+      "url": "https://en.wikipedia.org/wiki/Thurgood_Marshall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Thurgood-marshall-2.jpg/500px-Thurgood-marshall-2.jpg",
+    "alt": "Thurgood Marshall",
+    "credit": "Robert S. Oakes",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Thurgood-marshall-2.jpg"
+  }
+}

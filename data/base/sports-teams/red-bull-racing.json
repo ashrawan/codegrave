@@ -1,0 +1,54 @@
+{
+  "id": "red-bull-racing",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Red Bull Racing",
+      "from": "2005"
+    }
+  ],
+  "summary": "Team owned by the energy drink company, champions with Vettel from 2010 and with Verstappen from 2021.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q173663",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Red Bull Racing (Q173663)",
+      "url": "https://www.wikidata.org/wiki/Q173663",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Red Bull Racing",
+      "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Red_Bull_Formula_One_Night%2C_Belfast%2C_March_2010_%2816%29.JPG/500px-Red_Bull_Formula_One_Night%2C_Belfast%2C_March_2010_%2816%29.JPG",
+    "alt": "Red Bull Racing",
+    "credit": "Ardfern",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Red_Bull_Formula_One_Night,_Belfast,_March_2010_(16).JPG"
+  }
+}

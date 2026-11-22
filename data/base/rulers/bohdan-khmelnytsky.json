@@ -1,0 +1,59 @@
+{
+  "id": "bohdan-khmelnytsky",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Bohdan Khmelnytsky",
+      "from": "1595"
+    }
+  ],
+  "summary": "Cossack leader whose rising of 1648 created the Hetmanate.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q203808",
+  "events": [
+    {
+      "type": "born",
+      "date": "1595",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1657-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bohdan Khmelnytsky (Q203808)",
+      "url": "https://www.wikidata.org/wiki/Q203808",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bohdan Khmelnytsky",
+      "url": "https://en.wikipedia.org/wiki/Bohdan_Khmelnytsky",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bohdan_Khmelnytsky.jpg/500px-Bohdan_Khmelnytsky.jpg",
+    "alt": "Bohdan Khmelnytsky",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bohdan_Khmelnytsky.jpg"
+  }
+}

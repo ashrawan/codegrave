@@ -1,0 +1,45 @@
+{
+  "id": "guayaquil",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Guayaquil",
+      "from": "1534"
+    }
+  ],
+  "summary": "Ecuador's largest city and main port on the Pacific.",
+  "wikidata": "Q43509",
+  "events": [
+    {
+      "type": "born",
+      "date": "1534-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Guayaquil (Q43509)",
+      "url": "https://www.wikidata.org/wiki/Q43509",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guayaquil",
+      "url": "https://en.wikipedia.org/wiki/Guayaquil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Gye13.jpg/500px-Gye13.jpg",
+    "alt": "Guayaquil",
+    "credit": "Yyntl",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gye13.jpg"
+  }
+}

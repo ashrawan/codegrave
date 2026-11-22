@@ -1,0 +1,56 @@
+{
+  "id": "mehrgarh",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Mehrgarh",
+      "from": "-7000"
+    }
+  ],
+  "summary": "One of the earliest farming villages of South Asia, in Balochistan.",
+  "wikidata": "Q242148",
+  "events": [
+    {
+      "type": "born",
+      "date": "-7000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mehrgarh (Q242148)",
+      "url": "https://www.wikidata.org/wiki/Q242148",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mehrgarh",
+      "url": "https://en.wikipedia.org/wiki/Mehrgarh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Mehrgarh_ruins.jpg/500px-Mehrgarh_ruins.jpg",
+    "alt": "Mehrgarh",
+    "credit": "Ashish_Premier",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mehrgarh_ruins.jpg"
+  }
+}

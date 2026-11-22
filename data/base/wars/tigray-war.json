@@ -1,0 +1,59 @@
+{
+  "id": "tigray-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Tigray war",
+      "from": "2020"
+    }
+  ],
+  "summary": "The war of 2020 to 2022 in the north.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q101231200",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-11-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-11-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tigray war (Q101231200)",
+      "url": "https://www.wikidata.org/wiki/Q101231200",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tigray war",
+      "url": "https://en.wikipedia.org/wiki/Tigray_war",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/VOA_Hawzen5.jpg/500px-VOA_Hawzen5.jpg",
+    "alt": "Tigray war",
+    "credit": "Yan Boechat/VOA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:VOA_Hawzen5.jpg"
+  }
+}

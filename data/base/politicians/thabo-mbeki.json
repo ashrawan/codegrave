@@ -1,0 +1,48 @@
+{
+  "id": "thabo-mbeki",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Thabo Mbeki",
+      "from": "1942"
+    }
+  ],
+  "summary": "President of South Africa from 1999 to 2008.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q101547",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-06-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Thabo Mbeki (Q101547)",
+      "url": "https://www.wikidata.org/wiki/Q101547",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thabo Mbeki",
+      "url": "https://en.wikipedia.org/wiki/Thabo_Mbeki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/SthAfrica.ThaboMbeki.01.jpg/500px-SthAfrica.ThaboMbeki.01.jpg",
+    "alt": "Thabo Mbeki",
+    "credit": "Antônio Milena/ABr",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:SthAfrica.ThaboMbeki.01.jpg"
+  }
+}

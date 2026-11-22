@@ -1,0 +1,48 @@
+{
+  "id": "studenica-monastery",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Studenica Monastery",
+      "from": "1190"
+    }
+  ],
+  "summary": "The largest and richest medieval Serbian monastery.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q143042",
+  "events": [
+    {
+      "type": "born",
+      "date": "1190",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Studenica Monastery (Q143042)",
+      "url": "https://www.wikidata.org/wiki/Q143042",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Studenica Monastery",
+      "url": "https://en.wikipedia.org/wiki/Studenica_Monastery",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Studenica_monastery_%28Manastir_Studenica%29_-_by_Pudelek.jpg/500px-Studenica_monastery_%28Manastir_Studenica%29_-_by_Pudelek.jpg",
+    "alt": "Studenica Monastery",
+    "credit": "Pudelek (Marcin Szala)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Studenica_monastery_(Manastir_Studenica)_-_by_Pudelek.jpg"
+  }
+}

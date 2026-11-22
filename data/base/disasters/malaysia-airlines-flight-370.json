@@ -1,0 +1,56 @@
+{
+  "id": "malaysia-airlines-flight-370",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Malaysia Airlines Flight 370",
+      "from": "2014"
+    }
+  ],
+  "summary": "The airliner that vanished in 2014 with 239 people on board.",
+  "wikidata": "Q15908324",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-03-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-03-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malaysia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Malaysia Airlines Flight 370 (Q15908324)",
+      "url": "https://www.wikidata.org/wiki/Q15908324",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malaysia Airlines Flight 370",
+      "url": "https://en.wikipedia.org/wiki/Malaysia_Airlines_Flight_370",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Malaysia_Airlines_B777-200ER%289M-MRO%29_%283780278171%29.jpg/500px-Malaysia_Airlines_B777-200ER%289M-MRO%29_%283780278171%29.jpg",
+    "alt": "Malaysia Airlines Flight 370",
+    "credit": "Kentaro Iemoto from Tokyo, Japan",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Malaysia_Airlines_B777-200ER(9M-MRO)_(3780278171).jpg"
+  }
+}

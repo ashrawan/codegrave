@@ -1,0 +1,48 @@
+{
+  "id": "hallgrimskirkja",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Hallgrímskirkja",
+      "from": "1986"
+    }
+  ],
+  "summary": "The tall concrete church in Reykjavík shaped like basalt columns.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q271466",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hallgrímskirkja (Q271466)",
+      "url": "https://www.wikidata.org/wiki/Q271466",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hallgrímskirkja",
+      "url": "https://en.wikipedia.org/wiki/Hallgrímskirkja",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Hallgrimskirkja_mai_2026.jpg/500px-Hallgrimskirkja_mai_2026.jpg",
+    "alt": "Hallgrímskirkja",
+    "credit": "Steinninn",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hallgrimskirkja_mai_2026.jpg"
+  }
+}

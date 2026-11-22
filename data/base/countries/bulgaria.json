@@ -1,0 +1,51 @@
+{
+  "id": "bulgaria",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Bulgaria",
+      "from": "1878"
+    }
+  ],
+  "summary": "A Balkan country on the Black Sea, the land where the Cyrillic alphabet was born, free since 1878.",
+  "wikidata": "Q219",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bulgaria (Q219)",
+      "url": "https://www.wikidata.org/wiki/Q219",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bulgaria",
+      "url": "https://en.wikipedia.org/wiki/Bulgaria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Rila_Monastery%2C_August_2013.jpg/500px-Rila_Monastery%2C_August_2013.jpg",
+    "alt": "Bulgaria",
+    "credit": "Raggatt2000",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rila_Monastery,_August_2013.jpg"
+  }
+}

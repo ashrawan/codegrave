@@ -1,0 +1,51 @@
+{
+  "id": "kairouan",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kairouan",
+      "from": "0670"
+    }
+  ],
+  "summary": "A holy city of Islam in North Africa.",
+  "wikidata": "Q179570",
+  "events": [
+    {
+      "type": "born",
+      "date": "0670",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tunisia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kairouan (Q179570)",
+      "url": "https://www.wikidata.org/wiki/Q179570",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kairouan",
+      "url": "https://en.wikipedia.org/wiki/Kairouan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/View_of_Kairouan_from_the_Minaret_of_the_Great_Mosque_-_Tunisia_-_1899.jpg/500px-View_of_Kairouan_from_the_Minaret_of_the_Great_Mosque_-_Tunisia_-_1899.jpg",
+    "alt": "Kairouan",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Kairouan_from_the_Minaret_of_the_Great_Mosque_-_Tunisia_-_1899.jpg"
+  }
+}

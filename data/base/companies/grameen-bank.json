@@ -1,0 +1,54 @@
+{
+  "id": "grameen-bank",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Grameen Bank",
+      "from": "1983"
+    }
+  ],
+  "summary": "The bank of small loans to the poor founded by Muhammad Yunus.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q188567",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bangladesh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grameen Bank (Q188567)",
+      "url": "https://www.wikidata.org/wiki/Q188567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grameen Bank",
+      "url": "https://en.wikipedia.org/wiki/Grameen_Bank",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Grameen.JPG/500px-Grameen.JPG",
+    "alt": "Grameen Bank",
+    "credit": "Mamun2a",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Grameen.JPG"
+  }
+}

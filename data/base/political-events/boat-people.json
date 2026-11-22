@@ -1,0 +1,46 @@
+{
+  "id": "boat-people",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Vietnamese boat people",
+      "from": "1975"
+    }
+  ],
+  "summary": "Up to two million people fled Vietnam by sea after 1975; many died at sea.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q6449297",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1995",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Vietnamese boat people (Q6449297)",
+      "url": "https://www.wikidata.org/wiki/Q6449297",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vietnamese boat people",
+      "url": "https://en.wikipedia.org/wiki/Vietnamese_boat_people",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

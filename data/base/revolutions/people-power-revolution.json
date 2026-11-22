@@ -1,0 +1,59 @@
+{
+  "id": "people-power-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "People Power Revolution",
+      "from": "1986"
+    }
+  ],
+  "summary": "The peaceful uprising of February 1986 that drove out Marcos.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1274389",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-02-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-02-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: People Power Revolution (Q1274389)",
+      "url": "https://www.wikidata.org/wiki/Q1274389",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: People Power Revolution",
+      "url": "https://en.wikipedia.org/wiki/People_Power_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Corazon_Aquino_inauguration.jpg/500px-Corazon_Aquino_inauguration.jpg",
+    "alt": "People Power Revolution",
+    "credit": "Malacañang Palace archives",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Corazon_Aquino_inauguration.jpg"
+  }
+}

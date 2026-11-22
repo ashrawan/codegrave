@@ -1,0 +1,59 @@
+{
+  "id": "chaco-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Chaco War",
+      "from": "1932"
+    }
+  ],
+  "summary": "The war of 1932 to 1935 with Paraguay.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q223126",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-09-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1935-06-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bolivia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chaco War (Q223126)",
+      "url": "https://www.wikidata.org/wiki/Q223126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chaco War",
+      "url": "https://en.wikipedia.org/wiki/Chaco_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/Disputed_Bolivia_Paraguay.jpg_unscaled",
+    "alt": "Chaco War",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Disputed_Bolivia_Paraguay.jpg"
+  }
+}

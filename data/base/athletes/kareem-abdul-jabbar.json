@@ -1,0 +1,48 @@
+{
+  "id": "kareem-abdul-jabbar",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Kareem Abdul-Jabbar",
+      "from": "1947"
+    }
+  ],
+  "summary": "Centre famous for his skyhook shot, the NBA's top scorer of all time until 2023.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q179051",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-04-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kareem Abdul-Jabbar (Q179051)",
+      "url": "https://www.wikidata.org/wiki/Q179051",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kareem Abdul-Jabbar",
+      "url": "https://en.wikipedia.org/wiki/Kareem_Abdul-Jabbar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Kareem_Abdul-Jabbar_May_2014.jpg/500px-Kareem_Abdul-Jabbar_May_2014.jpg",
+    "alt": "Kareem Abdul-Jabbar",
+    "credit": "Yahoo from Sunnyvale, California, USA",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kareem_Abdul-Jabbar_May_2014.jpg"
+  }
+}

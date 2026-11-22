@@ -1,0 +1,45 @@
+{
+  "id": "auckland",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Auckland",
+      "from": "1840"
+    }
+  ],
+  "summary": "New Zealand's largest city, founded in 1840 on an isthmus between two harbours.",
+  "wikidata": "Q37100",
+  "events": [
+    {
+      "type": "born",
+      "date": "1840",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Auckland (Q37100)",
+      "url": "https://www.wikidata.org/wiki/Q37100",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Auckland",
+      "url": "https://en.wikipedia.org/wiki/Auckland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Auckland_CBD.jpg/500px-Auckland_CBD.jpg",
+    "alt": "Auckland",
+    "credit": "ChewyPineapple",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Auckland_CBD.jpg"
+  }
+}

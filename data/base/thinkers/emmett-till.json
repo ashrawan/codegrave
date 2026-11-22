@@ -1,0 +1,59 @@
+{
+  "id": "emmett-till",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Emmett Till",
+      "from": "1941"
+    }
+  ],
+  "summary": "Black teenager from Chicago, lynched in Mississippi in 1955 at fourteen. His mother chose an open casket, and the nation saw what had been done to him.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q506878",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-07-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1955-08-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Emmett Till (Q506878)",
+      "url": "https://www.wikidata.org/wiki/Q506878",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Emmett Till",
+      "url": "https://en.wikipedia.org/wiki/Emmett_Till",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Emmett_Till_1954.jpg/500px-Emmett_Till_1954.jpg",
+    "alt": "Emmett Till",
+    "credit": "Mamie Till Bradley",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Emmett_Till_1954.jpg"
+  }
+}

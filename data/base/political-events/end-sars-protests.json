@@ -1,0 +1,54 @@
+{
+  "id": "end-sars-protests",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "End SARS",
+      "from": "2020"
+    }
+  ],
+  "summary": "Youth-led protests in 2020 against a brutal police unit, which ended when soldiers fired on demonstrators at the Lekki toll gate.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q48811126",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-10",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: End SARS (Q48811126)",
+      "url": "https://www.wikidata.org/wiki/Q48811126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: End SARS",
+      "url": "https://en.wikipedia.org/wiki/End_SARS",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Protesters_at_the_endSARS_protest_in_Lagos%2C_Nigeria_59.jpg/500px-Protesters_at_the_endSARS_protest_in_Lagos%2C_Nigeria_59.jpg",
+    "alt": "End SARS",
+    "credit": "Kaizenify",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Protesters_at_the_endSARS_protest_in_Lagos,_Nigeria_59.jpg"
+  }
+}

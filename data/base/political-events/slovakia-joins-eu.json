@@ -1,0 +1,53 @@
+{
+  "id": "slovakia-joins-eu",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Ten countries join the EU",
+      "from": "2004"
+    }
+  ],
+  "summary": "Slovakia and nine other countries joined the European Union in 2004.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1230874",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-05-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2004-05-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ten countries join the EU (Q1230874)",
+      "url": "https://www.wikidata.org/wiki/Q1230874",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2004 enlargement of the European Union",
+      "url": "https://en.wikipedia.org/wiki/2004_enlargement_of_the_European_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/EU_Enlargement_2004.png/500px-EU_Enlargement_2004.png",
+    "alt": "Ten countries join the EU",
+    "credit": "JLogan",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:EU_Enlargement_2004.png"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "ghana",
+  "name": "Ghana",
+  "description": "Ghana from the Ashanti Empire and the Gold Coast forts to independence in 1957, Nkrumah and a stable democracy.",
+  "category": "places",
+  "tags": [
+    "ghana",
+    "accra",
+    "ashanti",
+    "gold coast",
+    "nkrumah",
+    "africa"
+  ],
+  "entries": [
+    "ghana-empire",
+    "akosombo-dam",
+    "elmina-castle",
+    "kente-cloth",
+    "cape-coast-castle",
+    "osei-tutu",
+    "kumasi",
+    "ashanti-empire",
+    "gold-coast-colony",
+    "yaa-asantewaa",
+    "war-of-the-golden-stool",
+    "kwame-nkrumah",
+    "kofi-annan",
+    "john-kufuor",
+    "nana-akufo-addo",
+    "jerry-rawlings",
+    "convention-peoples-party",
+    "ghana",
+    "john-mahama",
+    "abedi-pele"
+  ],
+  "checkpoints": [
+    {
+      "id": "akan-kingdoms",
+      "name": "Akan kingdoms",
+      "from": 300,
+      "to": 1481,
+      "note": "Akan states such as Bono grew rich on gold."
+    },
+    {
+      "id": "forts-and-ashanti",
+      "name": "Forts and Ashanti",
+      "from": 1482,
+      "to": 1873,
+      "note": "The Portuguese built Elmina in 1482, and forts lined the coast for the trade in gold and slaves. The Ashanti built an empire inland."
+    },
+    {
+      "id": "gold-coast",
+      "name": "Gold Coast",
+      "from": 1874,
+      "to": 1956,
+      "note": "Britain made the coast a colony in 1874 and conquered the Ashanti by 1901."
+    },
+    {
+      "id": "ghana",
+      "name": "Ghana",
+      "from": 1957,
+      "to": 2026,
+      "note": "Ghana became independent in 1957 under Nkrumah. Coups followed until democracy took hold in 1992."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Ghana.svg/330px-Flag_of_Ghana.svg.png",
+    "alt": "Flag of Ghana",
+    "credit": "Theodosia Okoh",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ghana.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/43/National_Anthem_of_Ghana.ogg/National_Anthem_of_Ghana.ogg.mp3",
+    "title": "God Bless Our Homeland Ghana",
+    "credit": "https://web.archive.org/web/20000913132321/http://www.navyband.navy.mil/anthems/national_anthems.htm https://www.navyban",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Ghana.ogg"
+  }
+}

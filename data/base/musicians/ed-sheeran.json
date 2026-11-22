@@ -1,0 +1,54 @@
+{
+  "id": "ed-sheeran",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Ed Sheeran",
+      "from": "1991"
+    }
+  ],
+  "summary": "English singer-songwriter with a guitar and a loop pedal, whose Shape of You was the most streamed song for years.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q47447",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-02-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ed Sheeran (Q47447)",
+      "url": "https://www.wikidata.org/wiki/Q47447",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ed Sheeran",
+      "url": "https://en.wikipedia.org/wiki/Ed_Sheeran",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Ed_Sheeran-6886_%28cropped%29.jpg/500px-Ed_Sheeran-6886_%28cropped%29.jpg",
+    "alt": "Ed Sheeran",
+    "credit": "Harald Krichel",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ed_Sheeran-6886_(cropped).jpg"
+  }
+}

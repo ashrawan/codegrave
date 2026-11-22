@@ -1,0 +1,59 @@
+{
+  "id": "war-of-the-golden-stool",
+  "category": "wars",
+  "names": [
+    {
+      "name": "War of the Golden Stool",
+      "from": "1900"
+    }
+  ],
+  "summary": "The last Anglo-Ashanti war, in 1900, led by Yaa Asantewaa.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q356920",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900-03",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1900-09",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ghana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: War of the Golden Stool (Q356920)",
+      "url": "https://www.wikidata.org/wiki/Q356920",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: War of the Golden Stool",
+      "url": "https://en.wikipedia.org/wiki/War_of_the_Golden_Stool",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Typical_fight_in_the_forest%2C_Anglo-Ashanti_War_of_1900_%28Battles_of_the_nineteenth_century%2C_1901%29.jpg/500px-Typical_fight_in_the_forest%2C_Anglo-Ashanti_War_of_1900_%28Battles_of_the_nineteenth_century%2C_1901%29.jpg",
+    "alt": "War of the Golden Stool",
+    "credit": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Typical_fight_in_the_forest,_Anglo-Ashanti_War_of_1900_(Battles_of_the_nineteenth_century,_1901).jpg"
+  }
+}

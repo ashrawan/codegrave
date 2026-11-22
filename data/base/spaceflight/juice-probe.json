@@ -1,0 +1,45 @@
+{
+  "id": "juice-probe",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "JUICE",
+      "from": "2023"
+    }
+  ],
+  "summary": "European probe launched in 2023 to study Jupiter's icy moons Ganymede, Callisto and Europa.",
+  "wikidata": "Q63350",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-04-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: JUICE (Q63350)",
+      "url": "https://www.wikidata.org/wiki/Q63350",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jupiter Icy Moons Explorer",
+      "url": "https://en.wikipedia.org/wiki/Jupiter_Icy_Moons_Explorer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Juice_launch_kit_cover_close-up.png/500px-Juice_launch_kit_cover_close-up.png",
+    "alt": "JUICE",
+    "credit": "ESA",
+    "licence": "CC BY-SA 3.0 igo",
+    "source": "https://commons.wikimedia.org/wiki/File:Juice_launch_kit_cover_close-up.png"
+  }
+}

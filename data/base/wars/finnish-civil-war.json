@@ -1,0 +1,59 @@
+{
+  "id": "finnish-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Finnish Civil War",
+      "from": "1918"
+    }
+  ],
+  "summary": "The short and bitter war of 1918 between Reds and Whites.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q211855",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-01-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-05-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Finnish Civil War (Q211855)",
+      "url": "https://www.wikidata.org/wiki/Q211855",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Finnish Civil War",
+      "url": "https://en.wikipedia.org/wiki/Finnish_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Red_officers.jpg_unscaled",
+    "alt": "Finnish Civil War",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Red_officers.jpg"
+  }
+}

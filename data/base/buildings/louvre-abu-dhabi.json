@@ -1,0 +1,54 @@
+{
+  "id": "louvre-abu-dhabi",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Louvre Abu Dhabi",
+      "from": "2007"
+    }
+  ],
+  "summary": "Art museum under a great dome of latticed steel, opened in 2017.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q3176133",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-03-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-arab-emirates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Louvre Abu Dhabi (Q3176133)",
+      "url": "https://www.wikidata.org/wiki/Q3176133",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Louvre Abu Dhabi",
+      "url": "https://en.wikipedia.org/wiki/Louvre_Abu_Dhabi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/LouvreAD_tree.jpg/500px-LouvreAD_tree.jpg",
+    "alt": "Louvre Abu Dhabi",
+    "credit": "Boubloub",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LouvreAD_tree.jpg"
+  }
+}

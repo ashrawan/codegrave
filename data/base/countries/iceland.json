@@ -1,0 +1,51 @@
+{
+  "id": "iceland",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Iceland",
+      "from": "1944"
+    }
+  ],
+  "summary": "A volcanic island in the North Atlantic, settled by Norse people in the 870s and independent since 1944.",
+  "wikidata": "Q189",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-06-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iceland (Q189)",
+      "url": "https://www.wikidata.org/wiki/Q189",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iceland",
+      "url": "https://en.wikipedia.org/wiki/Iceland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Cloud-free_Iceland_ESA22181280_%28cropped%29.jpeg/500px-Cloud-free_Iceland_ESA22181280_%28cropped%29.jpeg",
+    "alt": "Iceland",
+    "credit": "European Space Agency",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Cloud-free_Iceland_ESA22181280_(cropped).jpeg"
+  }
+}

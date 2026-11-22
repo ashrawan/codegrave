@@ -1,0 +1,59 @@
+{
+  "id": "argentine-declaration-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Argentine Declaration of Independence",
+      "from": "1816"
+    }
+  ],
+  "summary": "The declaration of independence made at Tucumán on 9 July 1816.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3248484",
+  "events": [
+    {
+      "type": "born",
+      "date": "1816-07-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1816-07-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Argentine Declaration of Independence (Q3248484)",
+      "url": "https://www.wikidata.org/wiki/Q3248484",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Argentine Declaration of Independence",
+      "url": "https://en.wikipedia.org/wiki/Argentine_Declaration_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Argentina._Acta_de_Independencia_%28Provincias_Unidas_en_Sud-Am%C3%A9rica%29.jpg/500px-Argentina._Acta_de_Independencia_%28Provincias_Unidas_en_Sud-Am%C3%A9rica%29.jpg",
+    "alt": "Argentine Declaration of Independence",
+    "credit": "Argentina. Congreso de Tucumán.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Argentina._Acta_de_Independencia_(Provincias_Unidas_en_Sud-Am%C3%A9rica).jpg"
+  }
+}

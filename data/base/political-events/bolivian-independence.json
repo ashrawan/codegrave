@@ -1,0 +1,53 @@
+{
+  "id": "bolivian-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Bolivian War of Independence",
+      "from": "1809"
+    }
+  ],
+  "summary": "The war that began with revolts in Chuquisaca and La Paz in 1809 and ended with independence in 1825.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q68475",
+  "events": [
+    {
+      "type": "born",
+      "date": "1809",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1825",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bolivian War of Independence (Q68475)",
+      "url": "https://www.wikidata.org/wiki/Q68475",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bolivian War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Bolivian_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Sucre1.jpg",
+    "alt": "Bolivian War of Independence",
+    "credit": "anonymous",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sucre1.jpg"
+  }
+}

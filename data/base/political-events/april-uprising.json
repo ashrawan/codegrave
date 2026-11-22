@@ -1,0 +1,59 @@
+{
+  "id": "april-uprising",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "April Uprising",
+      "from": "1876"
+    }
+  ],
+  "summary": "The rising of 1876 against the Ottomans.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q622059",
+  "events": [
+    {
+      "type": "born",
+      "date": "1876",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1876",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: April Uprising (Q622059)",
+      "url": "https://www.wikidata.org/wiki/Q622059",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: April Uprising",
+      "url": "https://en.wikipedia.org/wiki/April_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Zname_Aprilsko_vastanie.svg/500px-Zname_Aprilsko_vastanie.svg.png",
+    "alt": "April Uprising",
+    "credit": "Kreuzkümmel",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Zname_Aprilsko_vastanie.svg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "muhammad-ahmad",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Muhammad Ahmad",
+      "from": "1844"
+    }
+  ],
+  "summary": "The Mahdi, who drove out the Egyptians.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q298678",
+  "events": [
+    {
+      "type": "born",
+      "date": "1844-08-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1885-06-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Muhammad Ahmad (Q298678)",
+      "url": "https://www.wikidata.org/wiki/Q298678",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Muhammad Ahmad",
+      "url": "https://en.wikipedia.org/wiki/Muhammad_Ahmad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Muhammad_Ahmad_al-Mahdi.jpg/500px-Muhammad_Ahmad_al-Mahdi.jpg",
+    "alt": "Muhammad Ahmad",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Muhammad_Ahmad_al-Mahdi.jpg"
+  }
+}

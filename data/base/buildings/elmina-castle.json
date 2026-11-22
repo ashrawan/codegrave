@@ -1,0 +1,54 @@
+{
+  "id": "elmina-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Elmina Castle",
+      "from": "1482"
+    }
+  ],
+  "summary": "The fort built by the Portuguese in 1482, later a hub of the slave trade.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q55264655",
+  "events": [
+    {
+      "type": "born",
+      "date": "1482",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ghana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Elmina Castle (Q55264655)",
+      "url": "https://www.wikidata.org/wiki/Q55264655",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elmina Castle",
+      "url": "https://en.wikipedia.org/wiki/Elmina_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Castle_of_St._George%E2%80%99s_03.JPG/500px-Castle_of_St._George%E2%80%99s_03.JPG",
+    "alt": "Elmina Castle",
+    "credit": "Bolance",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Castle_of_St._George%E2%80%99s_03.JPG"
+  }
+}

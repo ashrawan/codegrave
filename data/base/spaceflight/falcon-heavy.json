@@ -1,0 +1,51 @@
+{
+  "id": "falcon-heavy",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Falcon Heavy",
+      "from": "2018"
+    }
+  ],
+  "summary": "Three Falcon 9 cores strapped together. Its first flight in 2018 sent a red sports car towards Mars, and its two side boosters landed side by side.",
+  "wikidata": "Q1093627",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-02-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Falcon Heavy (Q1093627)",
+      "url": "https://www.wikidata.org/wiki/Q1093627",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Falcon Heavy",
+      "url": "https://en.wikipedia.org/wiki/Falcon_Heavy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Falcon-heavy-crop.jpg/500px-Falcon-heavy-crop.jpg",
+    "alt": "Falcon Heavy",
+    "credit": "spacex",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Falcon-heavy-crop.jpg"
+  }
+}

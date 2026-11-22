@@ -1,0 +1,59 @@
+{
+  "id": "fall-of-kabul-2021",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Fall of Kabul",
+      "from": "2021"
+    }
+  ],
+  "summary": "The Taliban's return to power as US forces left.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q108102583",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-08-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fall of Kabul (Q108102583)",
+      "url": "https://www.wikidata.org/wiki/Q108102583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of Kabul (2021)",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_Kabul_(2021)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Crowds_in_front_of_Kabul_International_Airport.jpg/500px-Crowds_in_front_of_Kabul_International_Airport.jpg",
+    "alt": "Fall of Kabul",
+    "credit": "VOA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Crowds_in_front_of_Kabul_International_Airport.jpg"
+  }
+}

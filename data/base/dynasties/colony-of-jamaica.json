@@ -1,0 +1,52 @@
+{
+  "id": "colony-of-jamaica",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Colony of Jamaica",
+      "from": "1655"
+    }
+  ],
+  "summary": "British rule from 1655 to 1962.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2526023",
+  "events": [
+    {
+      "type": "born",
+      "date": "1655",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1962-08-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jamaica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colony of Jamaica (Q2526023)",
+      "url": "https://www.wikidata.org/wiki/Q2526023",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colony of Jamaica",
+      "url": "https://en.wikipedia.org/wiki/Colony_of_Jamaica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

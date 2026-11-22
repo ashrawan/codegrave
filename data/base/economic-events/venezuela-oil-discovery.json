@@ -1,0 +1,41 @@
+{
+  "id": "venezuela-oil-discovery",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Oil found at Zumaque",
+      "from": "1914"
+    }
+  ],
+  "summary": "The first commercial oil well in Venezuela, which began the oil boom.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q6171903",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-07-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Oil found at Zumaque (Q6171903)",
+      "url": "https://www.wikidata.org/wiki/Q6171903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zumaque I",
+      "url": "https://en.wikipedia.org/wiki/Zumaque_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

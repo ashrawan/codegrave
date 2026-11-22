@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-croatia",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Croatia",
+      "from": "0925"
+    }
+  ],
+  "summary": "The medieval kingdom.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q858841",
+  "events": [
+    {
+      "type": "born",
+      "date": "0925",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1102",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Croatia (Q858841)",
+      "url": "https://www.wikidata.org/wiki/Q858841",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Croatia (925–1102)",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Croatia_(925–1102)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

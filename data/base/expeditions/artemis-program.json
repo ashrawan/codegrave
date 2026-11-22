@@ -1,0 +1,51 @@
+{
+  "id": "artemis-program",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Artemis program",
+      "from": "2017"
+    }
+  ],
+  "summary": "NASA's programme to send people back to the Moon, this time with partners abroad and private companies, and to stay longer than Apollo did.",
+  "wikidata": "Q63819987",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Artemis program (Q63819987)",
+      "url": "https://www.wikidata.org/wiki/Q63819987",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Artemis program",
+      "url": "https://en.wikipedia.org/wiki/Artemis_program",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lunar_Orbital_Platform-Gateway_with_approaching_Orion_spacecraft.jpg/500px-Lunar_Orbital_Platform-Gateway_with_approaching_Orion_spacecraft.jpg",
+    "alt": "Artemis program",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lunar_Orbital_Platform-Gateway_with_approaching_Orion_spacecraft.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "wilt-chamberlain",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Wilt Chamberlain",
+      "from": "1936"
+    }
+  ],
+  "summary": "Towering centre who once scored 100 points in a single game, in 1962.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q182455",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-08-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-10-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Wilt Chamberlain (Q182455)",
+      "url": "https://www.wikidata.org/wiki/Q182455",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wilt Chamberlain",
+      "url": "https://en.wikipedia.org/wiki/Wilt_Chamberlain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Wilt_Chamberlain3.jpg/500px-Wilt_Chamberlain3.jpg",
+    "alt": "Wilt Chamberlain",
+    "credit": "Wilt_Chamberlain2.jpg: Fred Palumbo, World Telegram staff photographer derivative work: JoeJohnson2 (talk)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wilt_Chamberlain3.jpg"
+  }
+}

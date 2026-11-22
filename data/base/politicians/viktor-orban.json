@@ -1,0 +1,54 @@
+{
+  "id": "viktor-orban",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Viktor Orbán",
+      "from": "1963"
+    }
+  ],
+  "summary": "Prime minister from 1998 to 2002 and again from 2010.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57641",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Viktor Orbán (Q57641)",
+      "url": "https://www.wikidata.org/wiki/Q57641",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Viktor Orbán",
+      "url": "https://en.wikipedia.org/wiki/Viktor_Orbán",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/78/President_Donald_Trump_hosts_a_bilateral_lunch_meeting_with_Hungarian_Prime_Minister_Viktor_Orban.2_%28cropped%29.jpg_unscaled",
+    "alt": "Viktor Orbán",
+    "credit": "The White House",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:President_Donald_Trump_hosts_a_bilateral_lunch_meeting_with_Hungarian_Prime_Minister_Viktor_Orban.2_(cropped).jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "birka",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Birka",
+      "from": "0750"
+    }
+  ],
+  "summary": "A Viking trading town on an island in Lake Mälaren.",
+  "wikidata": "Q208177",
+  "events": [
+    {
+      "type": "born",
+      "date": "0750",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Birka (Q208177)",
+      "url": "https://www.wikidata.org/wiki/Q208177",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Birka",
+      "url": "https://en.wikipedia.org/wiki/Birka",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/BirkaExcavation1.png/500px-BirkaExcavation1.png",
+    "alt": "Birka",
+    "credit": "Alex Peterson",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BirkaExcavation1.png"
+  }
+}

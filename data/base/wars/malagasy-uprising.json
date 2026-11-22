@@ -1,0 +1,59 @@
+{
+  "id": "malagasy-uprising",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Malagasy Uprising",
+      "from": "1947"
+    }
+  ],
+  "summary": "The rising of 1947 against French rule.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2506639",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-03-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1949-02",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Malagasy Uprising (Q2506639)",
+      "url": "https://www.wikidata.org/wiki/Q2506639",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malagasy Uprising",
+      "url": "https://en.wikipedia.org/wiki/Malagasy_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/29_Mars_1947_Monument.jpg/500px-29_Mars_1947_Monument.jpg",
+    "alt": "Malagasy Uprising",
+    "credit": "Robin Taylor from Bamako, Mali",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:29_Mars_1947_Monument.jpg"
+  }
+}

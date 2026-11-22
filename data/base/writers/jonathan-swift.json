@@ -1,0 +1,59 @@
+{
+  "id": "jonathan-swift",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Jonathan Swift",
+      "from": "1667"
+    }
+  ],
+  "summary": "Dublin clergyman and author of Gulliver's Travels.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q41166",
+  "events": [
+    {
+      "type": "born",
+      "date": "1667-11-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1745-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jonathan Swift (Q41166)",
+      "url": "https://www.wikidata.org/wiki/Q41166",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jonathan Swift",
+      "url": "https://en.wikipedia.org/wiki/Jonathan_Swift",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Jonathan_Swift_by_Charles_Jervas_detail.jpg/500px-Jonathan_Swift_by_Charles_Jervas_detail.jpg",
+    "alt": "Jonathan Swift",
+    "credit": "Charles Jervas",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jonathan_Swift_by_Charles_Jervas_detail.jpg"
+  }
+}

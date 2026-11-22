@@ -1,0 +1,84 @@
+{
+  "id": "cuba",
+  "name": "Cuba",
+  "description": "Cuba from the Taíno to Columbus, Spanish sugar and slavery, independence wars, the revolution, the missile crisis and today.",
+  "category": "places",
+  "tags": [
+    "cuba",
+    "havana",
+    "castro",
+    "revolution",
+    "caribbean",
+    "che"
+  ],
+  "entries": [
+    "taino",
+    "voyages-of-columbus",
+    "havana",
+    "jose-marti",
+    "ten-years-war",
+    "cuban-war-of-independence",
+    "spanish-american-war",
+    "fulgencio-batista",
+    "platt-amendment",
+    "cuba",
+    "guantanamo-bay-naval-base",
+    "fidel-castro",
+    "che-guevara",
+    "raul-castro",
+    "cuban-revolution",
+    "united-states-embargo-against-cuba",
+    "miguel-diaz-canel",
+    "bay-of-pigs-invasion",
+    "cuban-missile-crisis",
+    "mariel-boatlift",
+    "special-period",
+    "buena-vista-social-club",
+    "cuban-thaw",
+    "2021-cuban-protests"
+  ],
+  "checkpoints": [
+    {
+      "id": "ta-no-cuba",
+      "name": "Taíno Cuba",
+      "from": 1200,
+      "to": 1491,
+      "note": "The Taíno farmed and fished across the island."
+    },
+    {
+      "id": "spanish-cuba",
+      "name": "Spanish Cuba",
+      "from": 1492,
+      "to": 1897,
+      "note": "Columbus came in 1492. The Taíno died out, and enslaved Africans worked the sugar fields. Wars for independence began in 1868."
+    },
+    {
+      "id": "republic",
+      "name": "Republic",
+      "from": 1898,
+      "to": 1958,
+      "note": "Spain was driven out in 1898, and Cuba lived in the shadow of the United States."
+    },
+    {
+      "id": "revolution",
+      "name": "Revolution",
+      "from": 1959,
+      "to": 2026,
+      "note": "Castro's revolution won in 1959. Cuba allied with the Soviet Union, faced the missile crisis, and struggled after 1991."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Flag_of_Cuba.svg/330px-Flag_of_Cuba.svg.png",
+    "alt": "Flag of Cuba",
+    "credit": "Miguel Teurbe Tolón and Narciso López",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Cuba.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/59/La_Bayamesa_%281945%29.ogg/La_Bayamesa_%281945%29.ogg.mp3",
+    "title": "El Himno de Bayamo",
+    "credit": "Perucho Figueredo and Antonio Rodríguez Ferrer; performed by the choir of Radio Progreso",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Bayamesa_(1945).ogg"
+  }
+}

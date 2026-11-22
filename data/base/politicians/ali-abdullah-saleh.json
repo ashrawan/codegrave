@@ -1,0 +1,59 @@
+{
+  "id": "ali-abdullah-saleh",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Ali Abdullah Saleh",
+      "from": "1947"
+    }
+  ],
+  "summary": "President for thirty-three years.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q483672",
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-03-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ali Abdullah Saleh (Q483672)",
+      "url": "https://www.wikidata.org/wiki/Q483672",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ali Abdullah Saleh",
+      "url": "https://en.wikipedia.org/wiki/Ali_Abdullah_Saleh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Ali_Abdullah_Saleh_-_Putin_meeting_2010-06-30_%28cropped%29.jpg/500px-Ali_Abdullah_Saleh_-_Putin_meeting_2010-06-30_%28cropped%29.jpg",
+    "alt": "Ali Abdullah Saleh",
+    "credit": "premier.gov.ru",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ali_Abdullah_Saleh_-_Putin_meeting_2010-06-30_(cropped).jpg"
+  }
+}

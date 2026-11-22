@@ -1,0 +1,45 @@
+{
+  "id": "ishango-bone",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Ishango bone",
+      "from": "-20000"
+    }
+  ],
+  "summary": "A baboon bone from Congo carved with groups of notches, among the oldest signs of people counting.",
+  "wikidata": "Q1077717",
+  "events": [
+    {
+      "type": "born",
+      "date": "-20000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ishango bone (Q1077717)",
+      "url": "https://www.wikidata.org/wiki/Q1077717",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ishango bone",
+      "url": "https://en.wikipedia.org/wiki/Ishango_bone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Ishango_bone_%28cropped%29.jpg/500px-Ishango_bone_%28cropped%29.jpg",
+    "alt": "Ishango bone",
+    "credit": "Joeykentin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ishango_bone_(cropped).jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "hydrogen",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Hydrogen",
+      "from": "1766"
+    }
+  ],
+  "summary": "The lightest and most common element in the universe, recognised as an element by Henry Cavendish in 1766.",
+  "wikidata": "Q556",
+  "events": [
+    {
+      "type": "born",
+      "date": "1766",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hydrogen (Q556)",
+      "url": "https://www.wikidata.org/wiki/Q556",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hydrogen",
+      "url": "https://en.wikipedia.org/wiki/Hydrogen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Hydrogen_discharge_tube.jpg/500px-Hydrogen_discharge_tube.jpg",
+    "alt": "Hydrogen",
+    "credit": "Alchemist-hp (talk) (www.pse-mendelejew.de)",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:Hydrogen_discharge_tube.jpg"
+  }
+}

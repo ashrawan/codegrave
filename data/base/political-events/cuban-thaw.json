@@ -1,0 +1,48 @@
+{
+  "id": "cuban-thaw",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Cuban thaw",
+      "from": "2014"
+    }
+  ],
+  "summary": "The restoring of US–Cuban relations announced in 2014 under Obama.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q19816100",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cuban thaw (Q19816100)",
+      "url": "https://www.wikidata.org/wiki/Q19816100",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cuban thaw",
+      "url": "https://en.wikipedia.org/wiki/Cuban_thaw",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Handshake_between_the_President_and_Cuban_President_Ra%C3%BAl_Castro.jpg/500px-Handshake_between_the_President_and_Cuban_President_Ra%C3%BAl_Castro.jpg",
+    "alt": "Cuban thaw",
+    "credit": "The White House from Washington, DC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Handshake_between_the_President_and_Cuban_President_Ra%C3%BAl_Castro.jpg"
+  }
+}

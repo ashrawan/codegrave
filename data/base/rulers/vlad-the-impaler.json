@@ -1,0 +1,59 @@
+{
+  "id": "vlad-the-impaler",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Vlad the Impaler",
+      "from": "1431"
+    }
+  ],
+  "summary": "Prince of Wallachia famed for cruelty to his enemies, whose name inspired the story of Dracula.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q43715",
+  "events": [
+    {
+      "type": "born",
+      "date": "1431",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1476-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vlad the Impaler (Q43715)",
+      "url": "https://www.wikidata.org/wiki/Q43715",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vlad the Impaler",
+      "url": "https://en.wikipedia.org/wiki/Vlad_the_Impaler",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Vlad_%C5%A2epe%C5%9F%2C_the_Impaler%2C_Prince_of_Wallachia_%281456-1462%29_%28died_1477%29.jpg/500px-Vlad_%C5%A2epe%C5%9F%2C_the_Impaler%2C_Prince_of_Wallachia_%281456-1462%29_%28died_1477%29.jpg",
+    "alt": "Vlad the Impaler",
+    "credit": "AnonymousUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vlad_%C5%A2epe%C5%9F,_the_Impaler,_Prince_of_Wallachia_(1456-1462)_(died_1477).jpg"
+  }
+}

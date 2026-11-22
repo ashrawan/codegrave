@@ -1,0 +1,56 @@
+{
+  "id": "2011-christchurch-earthquake",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "2011 Christchurch earthquake",
+      "from": "2011"
+    }
+  ],
+  "summary": "The earthquake that killed 185 people.",
+  "wikidata": "Q151850",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-02-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2011 Christchurch earthquake (Q151850)",
+      "url": "https://www.wikidata.org/wiki/Q151850",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2011 Christchurch earthquake",
+      "url": "https://en.wikipedia.org/wiki/2011_Christchurch_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Colombo_St_looking_south_to_Tuam.JPG/500px-Colombo_St_looking_south_to_Tuam.JPG",
+    "alt": "2011 Christchurch earthquake",
+    "credit": "Schwede66",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Colombo_St_looking_south_to_Tuam.JPG"
+  }
+}

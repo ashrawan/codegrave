@@ -1,0 +1,54 @@
+{
+  "id": "adele",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Adele",
+      "from": "1988"
+    }
+  ],
+  "summary": "English singer of big ballads whose album 21 was the best-selling album of the 2010s in many countries.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q23215",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-05-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Adele (Q23215)",
+      "url": "https://www.wikidata.org/wiki/Q23215",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Adele",
+      "url": "https://en.wikipedia.org/wiki/Adele",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Adele_2016.jpg/500px-Adele_2016.jpg",
+    "alt": "Adele",
+    "credit": "Marc E.",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Adele_2016.jpg"
+  }
+}

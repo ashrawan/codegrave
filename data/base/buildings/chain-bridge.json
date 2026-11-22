@@ -1,0 +1,48 @@
+{
+  "id": "chain-bridge",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Chain Bridge",
+      "from": "1849"
+    }
+  ],
+  "summary": "The first permanent bridge across the Danube in Hungary, opened in 1849, which joined Buda and Pest.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q465534",
+  "events": [
+    {
+      "type": "born",
+      "date": "1849",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Chain Bridge (Q465534)",
+      "url": "https://www.wikidata.org/wiki/Q465534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Széchenyi Chain Bridge",
+      "url": "https://en.wikipedia.org/wiki/Széchenyi_Chain_Bridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Budapest_-_Chain_Bridge_-_panoramio.jpg/500px-Budapest_-_Chain_Bridge_-_panoramio.jpg",
+    "alt": "Chain Bridge",
+    "credit": "Alireza Javaheri",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Budapest_-_Chain_Bridge_-_panoramio.jpg"
+  }
+}

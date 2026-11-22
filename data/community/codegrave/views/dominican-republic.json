@@ -1,0 +1,74 @@
+{
+  "id": "dominican-republic",
+  "name": "Dominican Republic",
+  "description": "The Dominican Republic from the Taíno to the first Spanish city of the Americas, independence from Haiti, Trujillo and baseball.",
+  "category": "places",
+  "tags": [
+    "dominican republic",
+    "santo domingo",
+    "caribbean",
+    "hispaniola",
+    "baseball",
+    "merengue"
+  ],
+  "entries": [
+    "taino",
+    "santo-domingo",
+    "alcazar-de-colon",
+    "cathedral-of-santo-domingo",
+    "juan-pablo-duarte",
+    "haitian-occupation",
+    "dominican-republic",
+    "dominican-war-of-independence",
+    "merengue",
+    "rafael-trujillo",
+    "joaquin-balaguer",
+    "us-occupation-dominican-republic",
+    "parsley-massacre",
+    "juan-luis-guerra",
+    "bachata",
+    "mirabal-sisters",
+    "dominican-civil-war",
+    "luis-abinader",
+    "pedro-martinez",
+    "vladimir-guerrero",
+    "david-ortiz"
+  ],
+  "checkpoints": [
+    {
+      "id": "hispaniola",
+      "name": "Hispaniola",
+      "from": 1200,
+      "to": 1843,
+      "note": "The Taíno lived on the island when Columbus came. Santo Domingo was the first Spanish city of the Americas. Spain, France and Haiti ruled in turn."
+    },
+    {
+      "id": "the-republic",
+      "name": "The republic",
+      "from": 1844,
+      "to": 1929,
+      "note": "Independence from Haiti came in 1844. Spain returned for a time, and the United States occupied the country from 1916 to 1924."
+    },
+    {
+      "id": "trujillo-and-after",
+      "name": "Trujillo and after",
+      "from": 1930,
+      "to": 2026,
+      "note": "Trujillo ruled harshly until 1961. Democracy grew slowly, and the country became known for baseball and merengue."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_the_Dominican_Republic.svg/330px-Flag_of_the_Dominican_Republic.svg.png",
+    "alt": "Flag of Dominican Republic",
+    "credit": "Juan Pablo Duarte",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Dominican_Republic.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bb/Dominican_Republic_National_Anthem.ogg/Dominican_Republic_National_Anthem.ogg.mp3",
+    "title": "National Anthem of the Dominican Republic",
+    "credit": "José Rufino Reyes Siancas (lyrics by Emilio Prud'Homme)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dominican_Republic_National_Anthem.ogg"
+  }
+}

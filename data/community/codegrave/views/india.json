@@ -9,14 +9,12 @@
     "mughal empire",
     "british raj",
     "gandhi",
-    "independence"
+    "independence",
+    "maurya"
   ],
   "entries": [
     "indus-valley-civilisation",
     "mohenjo-daro",
-    "vedic-religion",
-    "rigveda",
-    "gautama-buddha",
     "maurya-empire",
     "ashoka",
     "edicts-of-ashoka",
@@ -27,7 +25,6 @@
     "chola-dynasty",
     "delhi-sultanate",
     "vijayanagara-empire",
-    "guru-nanak",
     "mughal-empire",
     "akbar",
     "taj-mahal",
@@ -62,51 +59,66 @@
     "demonetisation-2016",
     "covid-19-pandemic",
     "chandragupta-maurya",
-    "adi-shankara",
-    "swami-vivekananda",
     "vallabhbhai-patel",
     "srinivasa-ramanujan",
     "lata-mangeshkar",
     "apj-abdul-kalam",
     "sachin-tendulkar",
     "kalpana-chawla",
-    "ratan-tata"
+    "ratan-tata",
+    "indus-script",
+    "arthashastra",
+    "ajanta-caves",
+    "babur",
+    "shah-jahan",
+    "aurangzeb",
+    "lakshmibai",
+    "muhammad-ali-jinnah",
+    "muslim-league",
+    "bengal-famine-1943"
   ],
   "checkpoints": [
     {
-      "id": "indus-and-vedic-india",
-      "name": "Indus and Vedic India",
+      "id": "indus-valley-and-the-vedic-age",
+      "name": "Indus Valley and the Vedic age",
       "from": -3300,
       "to": -322,
-      "note": "The Indus Valley Civilisation built planned cities such as Mohenjo-daro. The Rigveda was composed, and the Buddha taught in the Ganges plain."
+      "note": "The cities of the Indus Valley flourish and fade. The Vedas are composed, and the Buddha and Mahavira teach in the Ganges plain."
     },
     {
-      "id": "classical-empires",
-      "name": "Classical empires",
+      "id": "mauryas-and-guptas",
+      "name": "Mauryas and Guptas",
       "from": -321,
-      "to": 1205,
-      "note": "The Mauryas united most of the subcontinent and Ashoka carved his edicts. Under the Guptas Aryabhata worked and Nalanda taught, and the Cholas ruled the south."
+      "to": 550,
+      "note": "Chandragupta and Ashoka build India's first great empire. Under the Guptas come the decimal numbers with zero, Aryabhata's astronomy and the Kama Sutra."
     },
     {
-      "id": "sultans-and-mughals",
-      "name": "Sultans and Mughals",
-      "from": 1206,
+      "id": "medieval-kingdoms-and-sultanates",
+      "name": "Medieval kingdoms and sultanates",
+      "from": 551,
+      "to": 1525,
+      "note": "Chola fleets sail to Southeast Asia and temples rise across the south. The Delhi Sultanate rules the north for three centuries."
+    },
+    {
+      "id": "the-mughal-empire",
+      "name": "The Mughal Empire",
+      "from": 1526,
       "to": 1756,
-      "note": "The Delhi Sultanate and Vijayanagara held the north and south. Guru Nanak founded Sikhism, the Mughals built the Taj Mahal, and the Marathas rose under Shivaji."
+      "note": "Babur founds the Mughal Empire. Akbar unites most of India, and Shah Jahan builds the Taj Mahal."
     },
     {
-      "id": "company-and-raj",
-      "name": "Company and Raj",
+      "id": "british-rule",
+      "name": "British rule",
       "from": 1757,
       "to": 1946,
-      "note": "After Plassey the East India Company took Bengal and then most of India. The rising of 1857 brought rule by the Crown. Gandhi led the struggle for freedom with the Salt March."
+      "note": "The East India Company takes Bengal and then most of India. After the rebellion of 1857 the British crown rules, until Gandhi leads the struggle for freedom."
     },
     {
       "id": "independent-india",
       "name": "Independent India",
       "from": 1947,
       "to": 2026,
-      "note": "India became free and was partitioned in 1947, and a republic in 1950 under Ambedkar's constitution. It fought China and Pakistan and went through the Emergency. In this century it survived the Mumbai attacks, reached Mars and landed on the Moon's south pole."
+      "note": "India wins independence in 1947 amid the violence of Partition and becomes the largest democracy in the world, a nuclear power and the most populous country."
     }
   ],
   "image": {

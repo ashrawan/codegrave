@@ -1,0 +1,59 @@
+{
+  "id": "kahlil-gibran",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Kahlil Gibran",
+      "from": "1883"
+    }
+  ],
+  "summary": "Poet of The Prophet.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q47737",
+  "events": [
+    {
+      "type": "born",
+      "date": "1883-01-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1931-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kahlil Gibran (Q47737)",
+      "url": "https://www.wikidata.org/wiki/Q47737",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kahlil Gibran",
+      "url": "https://en.wikipedia.org/wiki/Kahlil_Gibran",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/34/Kahlil_Gibran_1913.jpg_unscaled",
+    "alt": "Kahlil Gibran",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kahlil_Gibran_1913.jpg"
+  }
+}

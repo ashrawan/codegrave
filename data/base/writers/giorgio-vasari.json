@@ -1,0 +1,53 @@
+{
+  "id": "giorgio-vasari",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Giorgio Vasari",
+      "from": "1511"
+    }
+  ],
+  "summary": "Painter and architect whose Lives of the Artists of 1550 is the first history of art and named the age a rebirth.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q128027",
+  "events": [
+    {
+      "type": "born",
+      "date": "1511-07-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1574-06-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Giorgio Vasari (Q128027)",
+      "url": "https://www.wikidata.org/wiki/Q128027",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Giorgio Vasari",
+      "url": "https://en.wikipedia.org/wiki/Giorgio_Vasari",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg/500px-Zucchi%2C_Jacopo_-_Vasari%2C_Giorgio_-_Uffizi_ICCD.jpg",
+    "alt": "Giorgio Vasari",
+    "credit": "Attributed to Jacopo Zucchi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Zucchi,_Jacopo_-_Vasari,_Giorgio_-_Uffizi_ICCD.jpg"
+  }
+}

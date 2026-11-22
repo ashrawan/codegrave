@@ -9,6 +9,7 @@
   ],
   "maker": "Stanford Research Institute",
   "summary": "The first mobile robot that could reason about its own actions: given a goal, it worked out the steps itself, looked around with a camera, and rolled off to do them. The project produced methods still used in route finding and computer vision, including the A* search algorithm.",
+  "wikidata": "Q1810639",
   "events": [
     {
       "type": "born",
@@ -42,5 +43,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/SRI_Shakey_robot%2C_1969%2C_Computer_History_Museum.jpg/500px-SRI_Shakey_robot%2C_1969%2C_Computer_History_Museum.jpg",
+    "alt": "Shakey",
+    "credit": "The wub",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:SRI_Shakey_robot,_1969,_Computer_History_Museum.jpg"
+  }
 }

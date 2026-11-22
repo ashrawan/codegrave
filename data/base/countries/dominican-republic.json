@@ -1,0 +1,44 @@
+{
+  "id": "dominican-republic",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Dominican Republic",
+      "from": "1844"
+    }
+  ],
+  "summary": "A Caribbean country sharing the island of Hispaniola with Haiti, independent since 1844.",
+  "wikidata": "Q786",
+  "events": [
+    {
+      "type": "born",
+      "date": "1844",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dominican Republic (Q786)",
+      "url": "https://www.wikidata.org/wiki/Q786",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dominican Republic",
+      "url": "https://en.wikipedia.org/wiki/Dominican_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

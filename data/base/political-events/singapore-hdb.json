@@ -1,0 +1,48 @@
+{
+  "id": "singapore-hdb",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Public housing (HDB)",
+      "from": "1960"
+    }
+  ],
+  "summary": "The board set up in 1960 that built flats for most of Singapore's people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1934365",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-02-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Public housing (HDB) (Q1934365)",
+      "url": "https://www.wikidata.org/wiki/Q1934365",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Housing and Development Board",
+      "url": "https://en.wikipedia.org/wiki/Housing_and_Development_Board",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/HDB_Hub%2C_Aug_06.JPG/500px-HDB_Hub%2C_Aug_06.JPG",
+    "alt": "Public housing (HDB)",
+    "credit": "User:Sengkang",
+    "licence": "Copyrighted free use",
+    "source": "https://commons.wikimedia.org/wiki/File:HDB_Hub,_Aug_06.JPG"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "great-purge",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Great Purge",
+      "from": "1936"
+    }
+  ],
+  "summary": "Stalin's campaign of terror in which hundreds of thousands were shot and many more sent to the Gulag camps.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q187650",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936-08",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1938-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Great Purge (Q187650)",
+      "url": "https://www.wikidata.org/wiki/Q187650",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Purge",
+      "url": "https://en.wikipedia.org/wiki/Great_Purge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Great_Purge_Resolution_of_Central_Committee.jpg/500px-Great_Purge_Resolution_of_Central_Committee.jpg",
+    "alt": "Great Purge",
+    "credit": "Soviet government",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Great_Purge_Resolution_of_Central_Committee.jpg"
+  }
+}

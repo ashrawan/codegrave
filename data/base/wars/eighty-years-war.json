@@ -1,0 +1,59 @@
+{
+  "id": "eighty-years-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Eighty Years' War",
+      "from": "1568"
+    }
+  ],
+  "summary": "The revolt of the Dutch provinces against Spanish rule, led at first by William the Silent, that ended in independence in 1648.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q164432",
+  "events": [
+    {
+      "type": "born",
+      "date": "1568-05-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1648-01-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "netherlands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eighty Years' War (Q164432)",
+      "url": "https://www.wikidata.org/wiki/Q164432",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eighty Years' War",
+      "url": "https://en.wikipedia.org/wiki/Eighty_Years'_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Vel%C3%A1zquez_-_de_Breda_o_Las_Lanzas_%28Museo_del_Prado%2C_1634-35%29.jpg/500px-Vel%C3%A1zquez_-_de_Breda_o_Las_Lanzas_%28Museo_del_Prado%2C_1634-35%29.jpg",
+    "alt": "Eighty Years' War",
+    "credit": "Diego Velázquez",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vel%C3%A1zquez_-_de_Breda_o_Las_Lanzas_(Museo_del_Prado,_1634-35).jpg"
+  }
+}

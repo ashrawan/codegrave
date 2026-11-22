@@ -1,0 +1,59 @@
+{
+  "id": "marc-chagall",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Marc Chagall",
+      "from": "1887"
+    }
+  ],
+  "summary": "Painter born in Vitebsk.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q93284",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887-06-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-03-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belarus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marc Chagall (Q93284)",
+      "url": "https://www.wikidata.org/wiki/Q93284",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marc Chagall",
+      "url": "https://en.wikipedia.org/wiki/Marc_Chagall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Shagal_Choumoff.jpg/500px-Shagal_Choumoff.jpg",
+    "alt": "Marc Chagall",
+    "credit": "Pierre Choumoff",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Shagal_Choumoff.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "treaties-of-tilsit",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Treaties of Tilsit",
+      "from": "1807"
+    }
+  ],
+  "summary": "The peace of 1807 in which Napoleon and the Russian tsar divided Europe between them, the high point of his power.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154596",
+  "events": [
+    {
+      "type": "born",
+      "date": "1807-07",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1807-07",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Treaties of Tilsit (Q154596)",
+      "url": "https://www.wikidata.org/wiki/Q154596",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Treaties of Tilsit",
+      "url": "https://en.wikipedia.org/wiki/Treaties_of_Tilsit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Tilsitz_1807.JPG/500px-Tilsitz_1807.JPG",
+    "alt": "Treaties of Tilsit",
+    "credit": "Adolphe Roehn",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tilsitz_1807.JPG"
+  }
+}

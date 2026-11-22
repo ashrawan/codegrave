@@ -13,6 +13,7 @@
   ],
   "maker": "Microsoft",
   "summary": "Microsoft's instant messenger, later called Windows Live Messenger. With its nudges, winks and custom status lines it was the main way young people chatted online in much of the world in the 2000s.",
+  "wikidata": "Q71493",
   "events": [
     {
       "type": "born",
@@ -54,5 +55,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/43/MSN_messenger_icon.png",
+    "alt": "Windows Live Messenger",
+    "credit": "Sebastian Wallroth",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:MSN_messenger_icon.png"
+  }
 }

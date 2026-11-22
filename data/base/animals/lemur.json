@@ -1,0 +1,44 @@
+{
+  "id": "lemur",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Lemur",
+      "from": "1795"
+    }
+  ],
+  "summary": "The primates found only on Madagascar.",
+  "wikidata": "Q1192405",
+  "events": [
+    {
+      "type": "born",
+      "date": "1795",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lemur (Q1192405)",
+      "url": "https://www.wikidata.org/wiki/Q1192405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lemur",
+      "url": "https://en.wikipedia.org/wiki/Lemur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

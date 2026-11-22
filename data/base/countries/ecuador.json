@@ -1,0 +1,51 @@
+{
+  "id": "ecuador",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Ecuador",
+      "from": "1840"
+    }
+  ],
+  "summary": "An Andean and Amazon country on the equator, independent since 1830, which owns the Galápagos Islands.",
+  "wikidata": "Q736",
+  "events": [
+    {
+      "type": "born",
+      "date": "1840-02-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ecuador (Q736)",
+      "url": "https://www.wikidata.org/wiki/Q736",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ecuador",
+      "url": "https://en.wikipedia.org/wiki/Ecuador",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Ecuador_Blue_Marble.png/500px-Ecuador_Blue_Marble.png",
+    "alt": "Ecuador",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ecuador_Blue_Marble.png"
+  }
+}

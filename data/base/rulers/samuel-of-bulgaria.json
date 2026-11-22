@@ -1,0 +1,59 @@
+{
+  "id": "samuel-of-bulgaria",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Samuel of Bulgaria",
+      "from": "0958"
+    }
+  ],
+  "summary": "Tsar who fought Byzantium for decades until his army was blinded in 1014.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q270740",
+  "events": [
+    {
+      "type": "born",
+      "date": "0958",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1014-10-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samuel of Bulgaria (Q270740)",
+      "url": "https://www.wikidata.org/wiki/Q270740",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samuel of Bulgaria",
+      "url": "https://en.wikipedia.org/wiki/Samuel_of_Bulgaria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Samuil_of_Bulgaria.jpg/500px-Samuil_of_Bulgaria.jpg",
+    "alt": "Samuel of Bulgaria",
+    "credit": "Кочев",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samuil_of_Bulgaria.jpg"
+  }
+}

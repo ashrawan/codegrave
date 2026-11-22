@@ -1,0 +1,59 @@
+{
+  "id": "todor-zhivkov",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Todor Zhivkov",
+      "from": "1911"
+    }
+  ],
+  "summary": "Communist leader from 1954 to 1989.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q28517",
+  "events": [
+    {
+      "type": "born",
+      "date": "1911-09-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1998-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Todor Zhivkov (Q28517)",
+      "url": "https://www.wikidata.org/wiki/Q28517",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Todor Zhivkov",
+      "url": "https://en.wikipedia.org/wiki/Todor_Zhivkov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Todor_Zhivkov_%2C_eerste_secretaris_Communistische_Partij_en_president_van_Bulgari%2C_Bestanddeelnr_924-8077_%28cropped%29.jpg/500px-Todor_Zhivkov_%2C_eerste_secretaris_Communistische_Partij_en_president_van_Bulgari%2C_Bestanddeelnr_924-8077_%28cropped%29.jpg",
+    "alt": "Todor Zhivkov",
+    "credit": "Anefo",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Todor_Zhivkov_,_eerste_secretaris_Communistische_Partij_en_president_van_Bulgari,_Bestanddeelnr_924-8077_(cropped).jpg"
+  }
+}

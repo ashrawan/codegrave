@@ -1,0 +1,54 @@
+{
+  "id": "aleksandar-vucic",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Aleksandar Vučić",
+      "from": "1970"
+    }
+  ],
+  "summary": "President since 2017.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q222031",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-03-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aleksandar Vučić (Q222031)",
+      "url": "https://www.wikidata.org/wiki/Q222031",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aleksandar Vučić",
+      "url": "https://en.wikipedia.org/wiki/Aleksandar_Vučić",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Aleksandar_Vu%C4%8Di%C4%87_%282024%29.jpg/500px-Aleksandar_Vu%C4%8Di%C4%87_%282024%29.jpg",
+    "alt": "Aleksandar Vučić",
+    "credit": "Oliver Bunic - European Commission",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aleksandar_Vu%C4%8Di%C4%87_(2024).jpg"
+  }
+}

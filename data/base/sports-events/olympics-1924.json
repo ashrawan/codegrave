@@ -1,0 +1,59 @@
+{
+  "id": "olympics-1924",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1924 Summer Olympics",
+      "from": "1924"
+    }
+  ],
+  "summary": "The Paris Games of Paavo Nurmi, who won five gold medals in running, and of the British sprinters later shown in the film Chariots of Fire. The first Olympic Village was built for the athletes.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8132",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924-05-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1924-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paris"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1924 Summer Olympics (Q8132)",
+      "url": "https://www.wikidata.org/wiki/Q8132",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1924 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1924_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Affiche_des_jeux_olympiques_de_Paris_de_1924.jpg/500px-Affiche_des_jeux_olympiques_de_Paris_de_1924.jpg",
+    "alt": "1924 Summer Olympics",
+    "credit": "Tangopaso",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Affiche_des_jeux_olympiques_de_Paris_de_1924.jpg"
+  }
+}

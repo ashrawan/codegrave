@@ -1,0 +1,59 @@
+{
+  "id": "assassination-of-martin-luther-king-jr",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Assassination of Martin Luther King Jr.",
+      "from": "1968"
+    }
+  ],
+  "summary": "King was shot dead in Memphis in April 1968, and riots broke out in more than a hundred cities.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q757963",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-04-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Assassination of Martin Luther King Jr. (Q757963)",
+      "url": "https://www.wikidata.org/wiki/Q757963",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Assassination of Martin Luther King Jr.",
+      "url": "https://en.wikipedia.org/wiki/Assassination_of_Martin_Luther_King_Jr.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Martin_Luther_King_Jr_NYWTS.jpg/500px-Martin_Luther_King_Jr_NYWTS.jpg",
+    "alt": "Assassination of Martin Luther King Jr.",
+    "credit": "Dick DeMarsico",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Martin_Luther_King_Jr_NYWTS.jpg"
+  }
+}

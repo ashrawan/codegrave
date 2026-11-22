@@ -1,0 +1,50 @@
+{
+  "id": "european-economic-community",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "European Economic Community",
+      "from": "1958"
+    }
+  ],
+  "summary": "The common market founded by six countries in 1957, which grew into the European Union.",
+  "wikidata": "Q52847",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-12-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: European Economic Community (Q52847)",
+      "url": "https://www.wikidata.org/wiki/Q52847",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: European Economic Community",
+      "url": "https://en.wikipedia.org/wiki/European_Economic_Community",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Euratom_Treaty_%28Treaty_of_Rome%29_Dutch_copy_%28page_112_crop%29_signatures.jpg/500px-Euratom_Treaty_%28Treaty_of_Rome%29_Dutch_copy_%28page_112_crop%29_signatures.jpg",
+    "alt": "European Economic Community",
+    "credit": "government of Italy, and subsequently EUR-Lex",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Euratom_Treaty_(Treaty_of_Rome)_Dutch_copy_(page_112_crop)_signatures.jpg"
+  }
+}

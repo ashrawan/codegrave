@@ -1,0 +1,88 @@
+{
+  "id": "austria",
+  "name": "Austria",
+  "description": "Austria from Hallstatt and the Habsburgs to Mozart's Vienna, the empire of Austria-Hungary, the world wars and the neutral republic.",
+  "category": "places",
+  "tags": [
+    "austria",
+    "vienna",
+    "habsburgs",
+    "mozart",
+    "alps",
+    "salzburg"
+  ],
+  "entries": [
+    "otzi",
+    "hallstatt-culture",
+    "vienna",
+    "salzburg",
+    "austria",
+    "house-of-habsburg",
+    "st-stephens-cathedral",
+    "battle-of-vienna",
+    "schonbrunn-palace",
+    "maria-theresa",
+    "joseph-haydn",
+    "wolfgang-amadeus-mozart",
+    "ludwig-van-beethoven",
+    "klemens-von-metternich",
+    "franz-schubert",
+    "austrian-empire",
+    "congress-of-vienna",
+    "johann-strauss-ii",
+    "vienna-philharmonic",
+    "sigmund-freud",
+    "gustav-klimt",
+    "austria-hungary",
+    "assassination-of-franz-ferdinand",
+    "anschluss",
+    "niki-lauda",
+    "austrian-state-treaty",
+    "the-sound-of-music-film",
+    "austria-joins-eu"
+  ],
+  "checkpoints": [
+    {
+      "id": "alpine-peoples",
+      "name": "Alpine peoples",
+      "from": -3300,
+      "to": 975,
+      "note": "Ötzi died in the mountains more than five thousand years ago. The salt miners of Hallstatt gave their name to an Iron Age, and Rome held the Danube frontier."
+    },
+    {
+      "id": "the-habsburgs",
+      "name": "The Habsburgs",
+      "from": 976,
+      "to": 1866,
+      "note": "Austria grew into the heart of the Habsburg lands. Vienna held off the Ottomans in 1529 and 1683, and Haydn and Mozart made it the capital of music."
+    },
+    {
+      "id": "austria-hungary",
+      "name": "Austria-Hungary",
+      "from": 1867,
+      "to": 1918,
+      "note": "The dual monarchy ruled much of Central Europe. Vienna was the city of Freud and Klimt, until the killing in Sarajevo in 1914 led to war and collapse."
+    },
+    {
+      "id": "the-republic",
+      "name": "The republic",
+      "from": 1919,
+      "to": 2026,
+      "note": "A small republic was left in 1918. Hitler annexed it in 1938, and after the war Austria was occupied until the treaty of 1955 made it free and neutral."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/330px-Flag_of_Austria.svg.png",
+    "alt": "Flag of Austria",
+    "credit": "Bundesministerium für Landesverteidigung",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Austria.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7c/Land_der_Berge_Land_am_Strome_instrumental.ogg/Land_der_Berge_Land_am_Strome_instrumental.ogg.mp3",
+    "title": "Land der Berge, Land am Strome",
+    "credit": "https://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Land_der_Berge_Land_am_Strome_instrumental.ogg"
+  }
+}

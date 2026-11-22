@@ -1,0 +1,45 @@
+{
+  "id": "automated-teller-machine",
+  "category": "everyday",
+  "names": [
+    {
+      "name": "Cash machine (ATM)",
+      "from": "1967"
+    }
+  ],
+  "summary": "The machine that hands out cash from a bank account at any hour, first installed by Barclays in London in 1967.",
+  "wikidata": "Q81235",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-06-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cash machine (ATM) (Q81235)",
+      "url": "https://www.wikidata.org/wiki/Q81235",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Automated teller machine",
+      "url": "https://en.wikipedia.org/wiki/Automated_teller_machine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Bankomaty_na_dworcu_Pozna%C5%84_G%C5%82%C3%B3wny_01.JPG/500px-Bankomaty_na_dworcu_Pozna%C5%84_G%C5%82%C3%B3wny_01.JPG",
+    "alt": "Cash machine (ATM)",
+    "credit": "Adrian Grycuk",
+    "licence": "CC BY-SA 3.0 pl",
+    "source": "https://commons.wikimedia.org/wiki/File:Bankomaty_na_dworcu_Pozna%C5%84_G%C5%82%C3%B3wny_01.JPG"
+  }
+}

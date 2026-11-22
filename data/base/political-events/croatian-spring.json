@@ -1,0 +1,52 @@
+{
+  "id": "croatian-spring",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Croatian Spring",
+      "from": "1966"
+    }
+  ],
+  "summary": "The movement for reform of 1971.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q616146",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1971-12",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Croatian Spring (Q616146)",
+      "url": "https://www.wikidata.org/wiki/Q616146",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Croatian Spring",
+      "url": "https://en.wikipedia.org/wiki/Croatian_Spring",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

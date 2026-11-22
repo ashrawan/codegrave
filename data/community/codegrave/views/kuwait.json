@@ -1,0 +1,73 @@
+{
+  "id": "kuwait",
+  "name": "Kuwait",
+  "description": "Kuwait from its traders and pearl divers to British protection, oil, independence, the Iraqi invasion and liberation.",
+  "category": "places",
+  "tags": [
+    "kuwait",
+    "gulf",
+    "oil",
+    "kuwait city",
+    "gulf war",
+    "pearl"
+  ],
+  "entries": [
+    "failaka-island",
+    "kuwait-city",
+    "house-of-al-sabah",
+    "abdullah-al-salim-al-sabah",
+    "anglo-kuwaiti-agreement",
+    "jaber-al-ahmad-al-sabah",
+    "burgan-field",
+    "mishal-al-ahmad-al-jaber-al-sabah",
+    "kuwait-investment-authority",
+    "constitution-of-kuwait",
+    "kuwait-towers",
+    "kuwait-petroleum-corporation",
+    "souk-al-manakh",
+    "grand-mosque-kuwait",
+    "gulf-war",
+    "invasion-of-kuwait",
+    "kuwaiti-oil-fires",
+    "kuwait",
+    "kuwaiti-womens-suffrage",
+    "jaber-causeway"
+  ],
+  "checkpoints": [
+    {
+      "id": "port-of-traders",
+      "name": "Port of traders",
+      "from": -2000,
+      "to": 1898,
+      "note": "Failaka was a Bronze Age trading post. The Al-Sabah family ruled the port of Kuwait from the 1750s, a town of ships and pearl divers."
+    },
+    {
+      "id": "protectorate-and-oil",
+      "name": "Protectorate and oil",
+      "from": 1899,
+      "to": 1960,
+      "note": "An agreement with Britain in 1899 made Kuwait a protectorate, and oil was found at Burgan in 1938."
+    },
+    {
+      "id": "independent-kuwait",
+      "name": "Independent Kuwait",
+      "from": 1961,
+      "to": 2026,
+      "note": "Kuwait became independent in 1961. Iraq invaded in 1990, and Kuwait was freed in 1991 as its oil wells burned."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/330px-Flag_of_Kuwait.svg.png",
+    "alt": "Flag of Kuwait",
+    "credit": "Derivative works of this file: Standard of the Emir of Kuwait.svg: Flag of Kuwait, Saudi Arabia and United Arab Emirates",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Kuwait.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d4/National_anthem_of_Kuwait_%28instrumental%29.ogg/National_anthem_of_Kuwait_%28instrumental%29.ogg.mp3",
+    "title": "National Anthem of Kuwait",
+    "credit": "https://web.archive.org/web/20060522001844/http://www.navyband.navy.mil/anthems/ANTHEMS/Kuwait.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Kuwait_(instrumental).ogg"
+  }
+}

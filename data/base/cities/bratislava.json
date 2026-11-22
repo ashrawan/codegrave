@@ -1,0 +1,45 @@
+{
+  "id": "bratislava",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bratislava",
+      "from": "0907"
+    }
+  ],
+  "summary": "The capital of Slovakia on the Danube, once Pressburg, where Hungarian kings were crowned for 300 years.",
+  "wikidata": "Q1780",
+  "events": [
+    {
+      "type": "born",
+      "date": "0907",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bratislava (Q1780)",
+      "url": "https://www.wikidata.org/wiki/Q1780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bratislava",
+      "url": "https://en.wikipedia.org/wiki/Bratislava",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Hlavn%C3%A9_Namestie_%2835096533142%29.jpg/500px-Hlavn%C3%A9_Namestie_%2835096533142%29.jpg",
+    "alt": "Bratislava",
+    "credit": "Rob Hurson from Kentstown, Ireland",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hlavn%C3%A9_Namestie_(35096533142).jpg"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "senegal",
+  "name": "Senegal",
+  "description": "Senegal from the Jolof Empire to Gorée and French West Africa, Senghor, independence and a stable democracy.",
+  "category": "places",
+  "tags": [
+    "senegal",
+    "dakar",
+    "goree",
+    "africa",
+    "teranga",
+    "senghor"
+  ],
+  "entries": [
+    "jolof-empire",
+    "goree-island",
+    "saint-louis-senegal",
+    "amadou-bamba",
+    "dakar",
+    "french-west-africa",
+    "leopold-sedar-senghor",
+    "ousmane-sembene",
+    "cheikh-anta-diop",
+    "abdoulaye-wade",
+    "abdou-diouf",
+    "thiaroye-massacre",
+    "youssou-ndour",
+    "senegal",
+    "macky-sall",
+    "dakar-rally",
+    "bassirou-diomaye-faye",
+    "mv-le-joola",
+    "sadio-mane",
+    "african-renaissance-monument",
+    "senegal-afcon-2021"
+  ],
+  "checkpoints": [
+    {
+      "id": "empires",
+      "name": "Empires",
+      "from": 1350,
+      "to": 1658,
+      "note": "The Jolof Empire ruled the Wolof."
+    },
+    {
+      "id": "colony",
+      "name": "Colony",
+      "from": 1659,
+      "to": 1959,
+      "note": "France founded Saint-Louis in 1659."
+    },
+    {
+      "id": "senegal",
+      "name": "Senegal",
+      "from": 1960,
+      "to": 2026,
+      "note": "Senegal became independent in 1960 under Senghor."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/330px-Flag_of_Senegal.svg.png",
+    "alt": "Flag of Senegal",
+    "credit": "Original upload by Nightstallion",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Senegal.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8c/National_Anthem_of_Senegal.ogg/National_Anthem_of_Senegal.ogg.mp3",
+    "title": "Le Lion rouge",
+    "credit": "Lyrics: Léopold Sédar Senghor Music: Herbert Pepper Performed by: United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Senegal.ogg"
+  }
+}

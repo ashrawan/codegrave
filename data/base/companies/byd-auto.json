@@ -1,0 +1,54 @@
+{
+  "id": "byd-auto",
+  "category": "companies",
+  "names": [
+    {
+      "name": "BYD",
+      "from": "2003"
+    }
+  ],
+  "summary": "Chinese battery maker turned car maker, which overtook Tesla in 2024 to sell the most battery-electric cars in the world.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q27423",
+  "events": [
+    {
+      "type": "born",
+      "date": "2003-01-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: BYD (Q27423)",
+      "url": "https://www.wikidata.org/wiki/Q27423",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: BYD Auto",
+      "url": "https://en.wikipedia.org/wiki/BYD_Auto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/BYD_Zhengzhou_All-Terrain_Circuit_entrance.png/500px-BYD_Zhengzhou_All-Terrain_Circuit_entrance.png",
+    "alt": "BYD",
+    "credit": "iMoD Official",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BYD_Zhengzhou_All-Terrain_Circuit_entrance.png"
+  }
+}

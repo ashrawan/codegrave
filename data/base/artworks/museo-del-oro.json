@@ -1,0 +1,48 @@
+{
+  "id": "museo-del-oro",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Gold Museum",
+      "from": "1939"
+    }
+  ],
+  "summary": "Bogotá's museum of about 55,000 pieces of pre-Columbian gold.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q1109031",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Gold Museum (Q1109031)",
+      "url": "https://www.wikidata.org/wiki/Q1109031",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gold Museum, Bogotá",
+      "url": "https://en.wikipedia.org/wiki/Gold_Museum,_Bogotá",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/BOG_Museo_del_Oro.JPG/500px-BOG_Museo_del_Oro.JPG",
+    "alt": "Gold Museum",
+    "credit": "Felipe Restrepo Acosta",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BOG_Museo_del_Oro.JPG"
+  }
+}

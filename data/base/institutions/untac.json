@@ -1,0 +1,49 @@
+{
+  "id": "untac",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "United Nations Transitional Authority in Cambodia",
+      "from": "1992"
+    }
+  ],
+  "summary": "The UN mission that ran the elections of 1993.",
+  "wikidata": "Q593662",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-02-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-09-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cambodia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Nations Transitional Authority in Cambodia (Q593662)",
+      "url": "https://www.wikidata.org/wiki/Q593662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Nations Transitional Authority in Cambodia",
+      "url": "https://en.wikipedia.org/wiki/United_Nations_Transitional_Authority_in_Cambodia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "dominican-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Dominican Civil War",
+      "from": "1965"
+    }
+  ],
+  "summary": "The war of 1965 that brought a US invasion.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q955457",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-04-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-09-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominican-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dominican Civil War (Q955457)",
+      "url": "https://www.wikidata.org/wiki/Q955457",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dominican Civil War",
+      "url": "https://en.wikipedia.org/wiki/Dominican_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Humanitarian_G.I.%27s._Firefight_where_G.I._pushes_little_kid_under_jeep_for_protection%2C_Santo_Domingo%2C_May_5.%2C_1965_-_NARA_-_541806_%28cropped%29.jpg/500px-Humanitarian_G.I.%27s._Firefight_where_G.I._pushes_little_kid_under_jeep_for_protection%2C_Santo_Domingo%2C_May_5.%2C_1965_-_NARA_-_541806_%28cropped%29.jpg",
+    "alt": "Dominican Civil War",
+    "credit": "Unknown authorUnknown author or not provided",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Humanitarian_G.I.%27s._Firefight_where_G.I._pushes_little_kid_under_jeep_for_protection,_Santo_Domingo,_May_5.,_1965_-_NARA_-_541806_(cropped).jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "iran-nuclear-deal",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Iran nuclear deal",
+      "from": "2015"
+    }
+  ],
+  "summary": "The deal of 2015 that limited Iran's nuclear programme in return for lifting sanctions.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q17001802",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-07-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2015-07-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Iran nuclear deal (Q17001802)",
+      "url": "https://www.wikidata.org/wiki/Q17001802",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Joint Comprehensive Plan of Action",
+      "url": "https://en.wikipedia.org/wiki/Joint_Comprehensive_Plan_of_Action",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Iran_Talks_Vienna_14_July_2015_%2819067069963%29.jpg/500px-Iran_Talks_Vienna_14_July_2015_%2819067069963%29.jpg",
+    "alt": "Iran nuclear deal",
+    "credit": "Bundesministerium für Europa, Integration und Äusseres",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Iran_Talks_Vienna_14_July_2015_(19067069963).jpg"
+  }
+}

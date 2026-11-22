@@ -1,0 +1,59 @@
+{
+  "id": "franjo-tudjman",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Franjo Tuđman",
+      "from": "1922"
+    }
+  ],
+  "summary": "First president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q183703",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-12-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Franjo Tuđman (Q183703)",
+      "url": "https://www.wikidata.org/wiki/Q183703",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franjo Tuđman",
+      "url": "https://en.wikipedia.org/wiki/Franjo_Tuđman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Franjo_Tudjman_1995.jpg/500px-Franjo_Tudjman_1995.jpg",
+    "alt": "Franjo Tuđman",
+    "credit": "Mark Reinstein",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Franjo_Tudjman_1995.jpg"
+  }
+}

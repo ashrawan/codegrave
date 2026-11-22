@@ -1,0 +1,45 @@
+{
+  "id": "unified-payments-interface",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "UPI",
+      "from": "2016"
+    }
+  ],
+  "summary": "India's system for paying instantly from a phone, launched in 2016, now used for billions of payments a month.",
+  "wikidata": "Q24949969",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: UPI (Q24949969)",
+      "url": "https://www.wikidata.org/wiki/Q24949969",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Unified Payments Interface",
+      "url": "https://en.wikipedia.org/wiki/Unified_Payments_Interface",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/UPI_logo.svg/500px-UPI_logo.svg.png",
+    "alt": "UPI",
+    "credit": "NPCI",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:UPI_logo.svg"
+  }
+}

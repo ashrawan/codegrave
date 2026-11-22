@@ -1,0 +1,53 @@
+{
+  "id": "vitus-bering",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Vitus Bering",
+      "from": "1681"
+    }
+  ],
+  "summary": "Danish explorer in Russian service who found the strait between Asia and America that now bears his name.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q127641",
+  "events": [
+    {
+      "type": "born",
+      "date": "1681-08-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1741-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Vitus Bering (Q127641)",
+      "url": "https://www.wikidata.org/wiki/Q127641",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vitus Bering",
+      "url": "https://en.wikipedia.org/wiki/Vitus_Bering",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Vitus_Bering_Reconstruction_%28cropped%29.jpg/500px-Vitus_Bering_Reconstruction_%28cropped%29.jpg",
+    "alt": "Vitus Bering",
+    "credit": "Институт Археологии РАН (Institute of Archaeology in Russian Academy of Sciences)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vitus_Bering_Reconstruction_(cropped).jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "egyptian-revolution-of-2011",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Egyptian revolution of 2011",
+      "from": "2011"
+    }
+  ],
+  "summary": "The uprising centred on Tahrir Square that ended Hosni Mubarak's thirty years in power.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q29198",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-01-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-02-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Egyptian revolution of 2011 (Q29198)",
+      "url": "https://www.wikidata.org/wiki/Q29198",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Egyptian revolution of 2011",
+      "url": "https://en.wikipedia.org/wiki/Egyptian_revolution_of_2011",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Tahrir_Square_during_8_February_2011.jpg/500px-Tahrir_Square_during_8_February_2011.jpg",
+    "alt": "Egyptian revolution of 2011",
+    "credit": "Mona",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tahrir_Square_during_8_February_2011.jpg"
+  }
+}

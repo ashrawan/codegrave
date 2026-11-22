@@ -1,0 +1,54 @@
+{
+  "id": "our-lady-of-guadalupe",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Our Lady of Guadalupe",
+      "from": "1531"
+    }
+  ],
+  "summary": "The vision of the Virgin Mary said to have appeared to Juan Diego in 1531, which became Mexico's best-loved symbol of faith.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q31877",
+  "events": [
+    {
+      "type": "born",
+      "date": "1531-12-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Our Lady of Guadalupe (Q31877)",
+      "url": "https://www.wikidata.org/wiki/Q31877",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Our Lady of Guadalupe",
+      "url": "https://en.wikipedia.org/wiki/Our_Lady_of_Guadalupe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Virgen_de_guadalupe1.jpg/500px-Virgen_de_guadalupe1.jpg",
+    "alt": "Our Lady of Guadalupe",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Virgen_de_guadalupe1.jpg"
+  }
+}

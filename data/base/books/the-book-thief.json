@@ -1,0 +1,41 @@
+{
+  "id": "the-book-thief",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Book Thief",
+      "from": "2005"
+    }
+  ],
+  "summary": "Novel narrated by Death about a girl in Nazi Germany who steals books and shares them with a Jewish man hidden in her family's basement.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q819101",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Book Thief (Q819101)",
+      "url": "https://www.wikidata.org/wiki/Q819101",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Book Thief",
+      "url": "https://en.wikipedia.org/wiki/The_Book_Thief",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

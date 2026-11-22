@@ -1,0 +1,59 @@
+{
+  "id": "marcus-garvey",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Marcus Garvey",
+      "from": "1887"
+    }
+  ],
+  "summary": "Leader of a great movement for Black pride.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q272504",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887-08-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1940-06-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jamaica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marcus Garvey (Q272504)",
+      "url": "https://www.wikidata.org/wiki/Q272504",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marcus Garvey",
+      "url": "https://en.wikipedia.org/wiki/Marcus_Garvey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Marcus_Garvey_1924-08-05.jpg/500px-Marcus_Garvey_1924-08-05.jpg",
+    "alt": "Marcus Garvey",
+    "credit": "from George Grantham Bain Collection",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marcus_Garvey_1924-08-05.jpg"
+  }
+}

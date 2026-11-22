@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-morgarten",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of Morgarten",
+      "from": "1315"
+    }
+  ],
+  "summary": "The Swiss beat a Habsburg army in a mountain pass in 1315.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q326989",
+  "events": [
+    {
+      "type": "born",
+      "date": "1315-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1315-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Morgarten (Q326989)",
+      "url": "https://www.wikidata.org/wiki/Q326989",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Morgarten",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Morgarten",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Battle_of_Morgarten_%2888362417%29.jpg/500px-Battle_of_Morgarten_%2888362417%29.jpg",
+    "alt": "Battle of Morgarten",
+    "credit": "Johann Stumpf",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Battle_of_Morgarten_(88362417).jpg"
+  }
+}

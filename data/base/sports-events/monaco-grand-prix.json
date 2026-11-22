@@ -1,0 +1,48 @@
+{
+  "id": "monaco-grand-prix",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Monaco Grand Prix",
+      "from": "1929"
+    }
+  ],
+  "summary": "The race through the narrow streets and harbour of Monte Carlo, the most famous and glamorous on the calendar.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q9102",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Monaco Grand Prix (Q9102)",
+      "url": "https://www.wikidata.org/wiki/Q9102",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Monaco Grand Prix",
+      "url": "https://en.wikipedia.org/wiki/Monaco_Grand_Prix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/2013_Monaco_Grand_Prix_-_Sunday.jpg/500px-2013_Monaco_Grand_Prix_-_Sunday.jpg",
+    "alt": "Monaco Grand Prix",
+    "credit": "Charles Coates/LAT Photographic",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2013_Monaco_Grand_Prix_-_Sunday.jpg"
+  }
+}

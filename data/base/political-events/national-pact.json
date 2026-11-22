@@ -1,0 +1,47 @@
+{
+  "id": "national-pact",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "National Pact",
+      "from": "1943"
+    }
+  ],
+  "summary": "The unwritten pact of 1943 that shared power between faiths.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q748819",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: National Pact (Q748819)",
+      "url": "https://www.wikidata.org/wiki/Q748819",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Pact",
+      "url": "https://en.wikipedia.org/wiki/National_Pact",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

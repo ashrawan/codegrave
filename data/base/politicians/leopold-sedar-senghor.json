@@ -1,0 +1,59 @@
+{
+  "id": "leopold-sedar-senghor",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Léopold Sédar Senghor",
+      "from": "1906"
+    }
+  ],
+  "summary": "Poet and first president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154545",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-10-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-12-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "senegal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Léopold Sédar Senghor (Q154545)",
+      "url": "https://www.wikidata.org/wiki/Q154545",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Léopold Sédar Senghor",
+      "url": "https://en.wikipedia.org/wiki/Léopold_Sédar_Senghor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/L%C3%A9opold_S%C3%A9dar_Senghor.jpg_unscaled",
+    "alt": "Léopold Sédar Senghor",
+    "credit": "Bundesarchiv_B_145_Bild-F011981-0003,_Frankfurt-Main,_Staatspräsident_von_Senegal.jpg: Steiner, Egon derivative work: Ro",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:L%C3%A9opold_S%C3%A9dar_Senghor.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "operation-storm",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Operation Storm",
+      "from": "1995"
+    }
+  ],
+  "summary": "The Croatian offensive of August 1995 that retook the Krajina; some 200,000 Serbs fled.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q769377",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-08-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-08-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Operation Storm (Q769377)",
+      "url": "https://www.wikidata.org/wiki/Q769377",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Operation Storm",
+      "url": "https://en.wikipedia.org/wiki/Operation_Storm",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Map_49_-_Croatia_-_Operation_Oluja%2C_4-8_August_1995.jpg/500px-Map_49_-_Croatia_-_Operation_Oluja%2C_4-8_August_1995.jpg",
+    "alt": "Operation Storm",
+    "credit": "CIA, from \"Balkan Battlegrounds\", 2003",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Map_49_-_Croatia_-_Operation_Oluja,_4-8_August_1995.jpg"
+  }
+}

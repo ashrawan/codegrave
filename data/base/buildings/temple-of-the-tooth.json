@@ -1,0 +1,48 @@
+{
+  "id": "temple-of-the-tooth",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Temple of the Tooth",
+      "from": "1592"
+    }
+  ],
+  "summary": "The temple in Kandy that keeps a tooth of the Buddha.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q289175",
+  "events": [
+    {
+      "type": "born",
+      "date": "1592",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Temple of the Tooth (Q289175)",
+      "url": "https://www.wikidata.org/wiki/Q289175",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Temple of the Tooth",
+      "url": "https://en.wikipedia.org/wiki/Temple_of_the_Tooth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/SL_Kandy_asv2020-01_img33_Sacred_Tooth_Temple.jpg/500px-SL_Kandy_asv2020-01_img33_Sacred_Tooth_Temple.jpg",
+    "alt": "Temple of the Tooth",
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:SL_Kandy_asv2020-01_img33_Sacred_Tooth_Temple.jpg"
+  }
+}

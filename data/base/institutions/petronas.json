@@ -1,0 +1,45 @@
+{
+  "id": "petronas",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Petronas",
+      "from": "1974"
+    }
+  ],
+  "summary": "Malaysia's state oil company, founded in 1974.",
+  "wikidata": "Q221692",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Petronas (Q221692)",
+      "url": "https://www.wikidata.org/wiki/Q221692",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Petronas",
+      "url": "https://en.wikipedia.org/wiki/Petronas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Petronas_tower_-_Kuala_Lumpur_-_panoramio_-_Thajsko.jpg/500px-Petronas_tower_-_Kuala_Lumpur_-_panoramio_-_Thajsko.jpg",
+    "alt": "Petronas",
+    "credit": "Thajsko",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Petronas_tower_-_Kuala_Lumpur_-_panoramio_-_Thajsko.jpg"
+  }
+}

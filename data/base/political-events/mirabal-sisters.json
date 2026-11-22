@@ -1,0 +1,59 @@
+{
+  "id": "mirabal-sisters",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Murder of the Mirabal sisters",
+      "from": "1960"
+    }
+  ],
+  "summary": "The murder of three sisters who opposed Trujillo, remembered by the International Day for the Elimination of Violence against Women.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q139947",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-11-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-11-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominican-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Murder of the Mirabal sisters (Q139947)",
+      "url": "https://www.wikidata.org/wiki/Q139947",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mirabal sisters",
+      "url": "https://en.wikipedia.org/wiki/Mirabal_sisters",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7b/Hermanas_Mirabal.jpg_unscaled",
+    "alt": "Murder of the Mirabal sisters",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hermanas_Mirabal.jpg"
+  }
+}

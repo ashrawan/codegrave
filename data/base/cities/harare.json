@@ -1,0 +1,51 @@
+{
+  "id": "harare",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Harare",
+      "from": "1890"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q3921",
+  "events": [
+    {
+      "type": "born",
+      "date": "1890",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harare (Q3921)",
+      "url": "https://www.wikidata.org/wiki/Q3921",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harare",
+      "url": "https://en.wikipedia.org/wiki/Harare",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Harare_skyline.jpg/500px-Harare_skyline.jpg",
+    "alt": "Harare",
+    "credit": "Radozw at Serbian Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Harare_skyline.jpg"
+  }
+}

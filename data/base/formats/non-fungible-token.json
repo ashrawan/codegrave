@@ -1,0 +1,45 @@
+{
+  "id": "non-fungible-token",
+  "category": "formats",
+  "names": [
+    {
+      "name": "NFT",
+      "from": "2014"
+    }
+  ],
+  "summary": "Tokens that record who owns a digital item such as a picture. Sales boomed in 2021 and collapsed soon after.",
+  "wikidata": "Q55648452",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: NFT (Q55648452)",
+      "url": "https://www.wikidata.org/wiki/Q55648452",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Non-fungible token",
+      "url": "https://en.wikipedia.org/wiki/Non-fungible_token",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/VeKings.png/500px-VeKings.png",
+    "alt": "NFT",
+    "credit": "RingrEven",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:VeKings.png"
+  }
+}

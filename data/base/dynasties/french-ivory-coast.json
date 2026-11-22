@@ -1,0 +1,52 @@
+{
+  "id": "french-ivory-coast",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "French Ivory Coast",
+      "from": "1893"
+    }
+  ],
+  "summary": "French rule from 1893 to 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q947365",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893-03-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-08-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Ivory Coast (Q947365)",
+      "url": "https://www.wikidata.org/wiki/Q947365",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Ivory Coast",
+      "url": "https://en.wikipedia.org/wiki/French_Ivory_Coast",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

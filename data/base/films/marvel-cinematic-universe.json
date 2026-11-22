@@ -1,0 +1,47 @@
+{
+  "id": "marvel-cinematic-universe",
+  "category": "films",
+  "names": [
+    {
+      "name": "Marvel Cinematic Universe",
+      "from": "2008"
+    }
+  ],
+  "summary": "The linked series of Marvel superhero films and shows that began with Iron Man in 2008 and became the highest-grossing film series ever.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q642878",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-05-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marvel Cinematic Universe (Q642878)",
+      "url": "https://www.wikidata.org/wiki/Q642878",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marvel Cinematic Universe",
+      "url": "https://en.wikipedia.org/wiki/Marvel_Cinematic_Universe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

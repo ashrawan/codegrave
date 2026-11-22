@@ -1,0 +1,53 @@
+{
+  "id": "danish-occupation",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "German occupation of Denmark",
+      "from": "1940"
+    }
+  ],
+  "summary": "Germany occupied Denmark from April 1940 to May 1945.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q819136",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-04-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-05-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: German occupation of Denmark (Q819136)",
+      "url": "https://www.wikidata.org/wiki/Q819136",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German occupation of Denmark",
+      "url": "https://en.wikipedia.org/wiki/German_occupation_of_Denmark",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Schalburgerblegdamsvej.jpg/500px-Schalburgerblegdamsvej.jpg",
+    "alt": "German occupation of Denmark",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Schalburgerblegdamsvej.jpg"
+  }
+}

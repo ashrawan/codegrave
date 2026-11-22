@@ -1,0 +1,53 @@
+{
+  "id": "estates-general-1789",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Estates-General of 1789",
+      "from": "1789"
+    }
+  ],
+  "summary": "The meeting of clergy, nobles and commoners called by Louis XVI in May 1789, which turned into the start of the revolution.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1463941",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-01-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1789-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Estates-General of 1789 (Q1463941)",
+      "url": "https://www.wikidata.org/wiki/Q1463941",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Estates General of 1789",
+      "url": "https://en.wikipedia.org/wiki/Estates_General_of_1789",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Opening_of_the_Estates_General_at_Versailles_on_5th_May_1789.jpg/500px-Opening_of_the_Estates_General_at_Versailles_on_5th_May_1789.jpg",
+    "alt": "Estates-General of 1789",
+    "credit": "Louis Charles Auguste Couder-1839",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Opening_of_the_Estates_General_at_Versailles_on_5th_May_1789.jpg"
+  }
+}

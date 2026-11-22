@@ -1,0 +1,45 @@
+{
+  "id": "plutonium",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Plutonium",
+      "from": "1941"
+    }
+  ],
+  "summary": "Element 94, first made and identified by Glenn Seaborg's team in 1940 and 1941, used in nuclear weapons and reactors.",
+  "wikidata": "Q1102",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Plutonium (Q1102)",
+      "url": "https://www.wikidata.org/wiki/Q1102",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plutonium",
+      "url": "https://en.wikipedia.org/wiki/Plutonium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Plutonium_ring.jpg/500px-Plutonium_ring.jpg",
+    "alt": "Plutonium",
+    "credit": "Los Alamos National Laboratory",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Plutonium_ring.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "second-ivorian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Ivorian Civil War",
+      "from": "2010"
+    }
+  ],
+  "summary": "The war of 2010 and 2011.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1087909",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-11-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Ivorian Civil War (Q1087909)",
+      "url": "https://www.wikidata.org/wiki/Q1087909",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Ivorian Civil War",
+      "url": "https://en.wikipedia.org/wiki/Second_Ivorian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

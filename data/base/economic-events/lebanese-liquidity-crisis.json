@@ -1,0 +1,47 @@
+{
+  "id": "lebanese-liquidity-crisis",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Lebanese liquidity crisis",
+      "from": "2019"
+    }
+  ],
+  "summary": "The financial collapse from 2019.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q95946139",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-08",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lebanese liquidity crisis (Q95946139)",
+      "url": "https://www.wikidata.org/wiki/Q95946139",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lebanese liquidity crisis",
+      "url": "https://en.wikipedia.org/wiki/Lebanese_liquidity_crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

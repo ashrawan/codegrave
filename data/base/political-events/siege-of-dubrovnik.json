@@ -1,0 +1,53 @@
+{
+  "id": "siege-of-dubrovnik",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Siege of Dubrovnik",
+      "from": "1991"
+    }
+  ],
+  "summary": "The Yugoslav army shelled Dubrovnik in 1991 and 1992, hitting the old town.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q815140",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-10-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Dubrovnik (Q815140)",
+      "url": "https://www.wikidata.org/wiki/Q815140",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Dubrovnik",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Dubrovnik",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Stari_grad_sa_Imperiala.JPG/500px-Stari_grad_sa_Imperiala.JPG",
+    "alt": "Siege of Dubrovnik",
+    "credit": "Bracodbk",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stari_grad_sa_Imperiala.JPG"
+  }
+}

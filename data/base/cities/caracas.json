@@ -1,0 +1,51 @@
+{
+  "id": "caracas",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Caracas",
+      "from": "1567"
+    }
+  ],
+  "summary": "The capital, founded in 1567 in a valley near the coast.",
+  "wikidata": "Q1533",
+  "events": [
+    {
+      "type": "born",
+      "date": "1567-07-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Caracas (Q1533)",
+      "url": "https://www.wikidata.org/wiki/Q1533",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caracas",
+      "url": "https://en.wikipedia.org/wiki/Caracas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Caracas_desde_el_%C3%A1vila.jpg/500px-Caracas_desde_el_%C3%A1vila.jpg",
+    "alt": "Caracas",
+    "credit": "Olga Berrios",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caracas_desde_el_%C3%A1vila.jpg"
+  }
+}

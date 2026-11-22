@@ -1,0 +1,44 @@
+{
+  "id": "finland",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Finland",
+      "from": "1917"
+    }
+  ],
+  "summary": "A Nordic country of lakes and forests, ruled by Sweden and then Russia before it became independent in 1917.",
+  "wikidata": "Q33",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-12-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Finland (Q33)",
+      "url": "https://www.wikidata.org/wiki/Q33",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Finland",
+      "url": "https://en.wikipedia.org/wiki/Finland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

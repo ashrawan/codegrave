@@ -1,0 +1,59 @@
+{
+  "id": "martial-law-in-taiwan",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Martial law in Taiwan",
+      "from": "1949"
+    }
+  ],
+  "summary": "Thirty-eight years of martial law from 1949 to 1987, the time of the White Terror.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4501943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-05-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1987-07-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Martial law in Taiwan (Q4501943)",
+      "url": "https://www.wikidata.org/wiki/Q4501943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Martial law in Taiwan",
+      "url": "https://en.wikipedia.org/wiki/Martial_law_in_Taiwan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Martial_law_order_taiwan_may_1949.jpg/500px-Martial_law_order_taiwan_may_1949.jpg",
+    "alt": "Martial law in Taiwan",
+    "credit": "Taiwan Provincial Government and Taiwan Garrison Command",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Martial_law_order_taiwan_may_1949.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "treaty-of-windsor",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Treaty of Windsor",
+      "from": "1386"
+    }
+  ],
+  "summary": "The alliance with England of 1386, the oldest still in force.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q717346",
+  "events": [
+    {
+      "type": "born",
+      "date": "1386-05-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1386-05-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Treaty of Windsor (Q717346)",
+      "url": "https://www.wikidata.org/wiki/Q717346",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Treaty of Windsor (1386)",
+      "url": "https://en.wikipedia.org/wiki/Treaty_of_Windsor_(1386)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Treaty_of_Windsor.jpg/500px-Treaty_of_Windsor.jpg",
+    "alt": "Treaty of Windsor",
+    "credit": "Richard II of England",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Treaty_of_Windsor.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "halabja-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Halabja chemical attack",
+      "from": "1988"
+    }
+  ],
+  "summary": "The poison gas attack of 1988 that killed thousands of Kurds.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q579179",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-03-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1988-03-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Halabja chemical attack (Q579179)",
+      "url": "https://www.wikidata.org/wiki/Q579179",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Halabja chemical attack",
+      "url": "https://en.wikipedia.org/wiki/Halabja_chemical_attack",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/500px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg",
+    "alt": "Halabja chemical attack",
+    "credit": "Adam Jones, Ph.D.",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg"
+  }
+}

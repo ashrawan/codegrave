@@ -1,0 +1,51 @@
+{
+  "id": "senegal",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Senegal",
+      "from": "1960"
+    }
+  ],
+  "summary": "A West African country, a French colony until 1960.",
+  "wikidata": "Q1041",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Senegal (Q1041)",
+      "url": "https://www.wikidata.org/wiki/Q1041",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Senegal",
+      "url": "https://en.wikipedia.org/wiki/Senegal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_map_of_Senegal.svg/500px-Flag_map_of_Senegal.svg.png",
+    "alt": "Senegal",
+    "credit": "Darwinek",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_map_of_Senegal.svg"
+  }
+}

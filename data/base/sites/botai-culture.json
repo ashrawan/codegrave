@@ -1,0 +1,49 @@
+{
+  "id": "botai-culture",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Botai culture",
+      "from": "-3700"
+    }
+  ],
+  "summary": "A culture of the northern steppe, among the first people to tame horses, more than five thousand years ago.",
+  "wikidata": "Q279792",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3700",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-3100",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kazakhstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Botai culture (Q279792)",
+      "url": "https://www.wikidata.org/wiki/Q279792",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Botai culture",
+      "url": "https://en.wikipedia.org/wiki/Botai_culture",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

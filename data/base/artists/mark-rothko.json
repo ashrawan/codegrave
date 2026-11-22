@@ -1,0 +1,53 @@
+{
+  "id": "mark-rothko",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Mark Rothko",
+      "from": "1903"
+    }
+  ],
+  "summary": "American painter of large, glowing fields of colour.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q160149",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903-09-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-02-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mark Rothko (Q160149)",
+      "url": "https://www.wikidata.org/wiki/Q160149",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mark Rothko",
+      "url": "https://en.wikipedia.org/wiki/Mark_Rothko",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg/500px-Consuelo_Kanaga%2C_Mark_Rothko%2C_Yorktown_Heights%2C_ca._1949.jpg",
+    "alt": "Mark Rothko",
+    "credit": "Consuelo Kanaga",
+    "licence": "No restrictions",
+    "source": "https://commons.wikimedia.org/wiki/File:Consuelo_Kanaga,_Mark_Rothko,_Yorktown_Heights,_ca._1949.jpg"
+  }
+}

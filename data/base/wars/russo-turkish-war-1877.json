@@ -1,0 +1,59 @@
+{
+  "id": "russo-turkish-war-1877",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Russo-Turkish War",
+      "from": "1877"
+    }
+  ],
+  "summary": "The war that freed Bulgaria.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q174205",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877-04-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1878-03-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russo-Turkish War (Q174205)",
+      "url": "https://www.wikidata.org/wiki/Q174205",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russo-Turkish War (1877–1878)",
+      "url": "https://en.wikipedia.org/wiki/Russo-Turkish_War_(1877–1878)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Fight_near_Telish_1877.jpg/500px-Fight_near_Telish_1877.jpg",
+    "alt": "Russo-Turkish War",
+    "credit": "Wiktor Mazurowski",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fight_near_Telish_1877.jpg"
+  }
+}

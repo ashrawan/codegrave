@@ -1,0 +1,54 @@
+{
+  "id": "bratislava-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Bratislava Castle",
+      "from": "1431"
+    }
+  ],
+  "summary": "The castle above the Danube.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q593311",
+  "events": [
+    {
+      "type": "born",
+      "date": "1431",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bratislava Castle (Q593311)",
+      "url": "https://www.wikidata.org/wiki/Q593311",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bratislava Castle",
+      "url": "https://en.wikipedia.org/wiki/Bratislava_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Bratislava_-_Burg_%28a%29.JPG/500px-Bratislava_-_Burg_%28a%29.JPG",
+    "alt": "Bratislava Castle",
+    "credit": "C.Stadler/Bwag",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bratislava_-_Burg_(a).JPG"
+  }
+}

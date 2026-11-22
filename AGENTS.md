@@ -99,7 +99,7 @@ page costs one request (`docs/BUILD.md` has the full table):
 
 - `boot.json`: the map, the labels and the list of community views. Always.
 - `home.json`: the default views, ready to draw.
-- `v/<view-id>.json`: one view and the entries it shows (at most 200, best
+- `v/<view-id>.json`: one view and the entries it shows (a hand-picked view up to 1,000, a classical view at most 200, best
   ranked first). A community view is `v/<owner>/<id>.json`.
 - `d/<key>.json`: full entries by a hash of their id (`shardOf` in
   `site/keys.js`), for a link or search result that is not loaded.
@@ -133,7 +133,8 @@ still goes through `render()`.
 How the page is put together:
 
 - **Loading.** `start()` asks for `boot.json` and, at the same time, the
-  views the link names (else `home.json`).
+  views the link names (else `home.json`; a phone opens only on its
+  `phone` views, from `data/editors-choice.json`, asked for in Nov 2026).
   `loadView()` and `loadEntry()` fetch one file each, once; `ingest()` keeps
   every loaded entry as a single object in `byId`. A view that fails to load
   leaves a note and the page keeps working. An old address is answered by
@@ -304,9 +305,8 @@ How the page is put together:
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
   colour, and the cross removes one of several. The strip starts at the
-  left with the "Views" button and the pills; at its right end stand what
-  the era of the year in sight stands for (BCE or CE, from `roadHud()`),
-  then shuffle, then reverse (`state.order`), small, last in the strip
+  left with the "Views" button and the pills; at its right end stand
+  shuffle, then reverse (`state.order`), small, last in the strip
   (moved there on request, Nov 2026). There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
@@ -319,20 +319,27 @@ How the page is put together:
   timeline holds brings its own view alone too (`bringIn()`); only a link
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
-- **The views pane** is search, then a row of chips (`drawChips()`: All,
-  then the editors' topics from `data/editors-choice.json`, today History,
-  Science, Technology, Culture and Countries), then the list of community views in the
-  order `boot.json` gives them (topic by topic; under All each topic has a
-  small heading), then the filter: the year range (`state.span`). "How much to show" was
+- **The views pane** is search, then a row of chips (`drawChips()`: the
+  editors' topics from `data/editors-choice.json`, today Countries,
+  Culture, History, Science and Technology, after a first chip "My view"),
+  then the list, then the filter: the year range (`state.span`). "My view"
+  is pressed when no topic is, and the list then holds only the views on
+  the timeline; there is no "All" list (removed on request, Nov 2026: "just
+  have a current showing there, and anything we search"). Pressing a chip
+  lists that topic's views; pressing it again, or "My view", goes back.
+  Both search boxes have a cross that clears them (`.clr`). A search finds
+  every view, community and classical, and entries and years. "How much to show" was
   removed on request (Nov 2026): every entry of a view is on the road, and
   the road's scale and the cards by distance do the rest. On a phone the filters fold into one line
-  (`#filters-btn`) so the list has the sheet. Only community views are
-  listed. Classical views are found by the search, where every result
+  (`#filters-btn`) so the list has the sheet. Only community views sit
+  under the chips.
+  Classical views are found by the search, where every result
   carries an icon that says which sort it is. A row is a thumbnail made by
   the build (`scripts/thumb.mjs`), then the name and one quiet line
   (`viewSub()`: the years the view covers and how many entries it holds).
   The description is the row's tooltip and is searched; it is not printed
   in the list. Keep the row to those two lines.
+- **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter the reader is in below it in small capitals in its colour, with no lines (`#road-views`; style "A", picked from six); the year the reader stands in is written large on the right (`#road-year`), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
 - **The years.** `ruler()` writes the years along the edge of the road and
   `barTicks()` those on the bar. Because the scale is uneven there is no
   fixed step: `yearMarks()` in `site/road.js` writes a year where the years
@@ -341,9 +348,10 @@ How the page is put together:
   round ones where little does. It is bounded by what fits on the screen, whatever the
   span; keep it so. There is no year 0; deep time is labelled ka, Ma and
   Ga. BCE and CE are written only where the era changes (`eraMarked()`):
-  on the BCE year nearest the change and the CE year nearest it; the note
-  in the strip spells out the era of the year in sight, whether playing or
-  scrolling. Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
+  on the BCE year nearest the change and the CE year nearest it; the line
+  under the big year spells out the era of the year in sight ("BCE: Before
+  the Common Era"), as it does deep time's units (`#road-unit`, moved there
+  from the strip on request, Nov 2026). Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
   the rest and "Show all years" reaches back. Every date on the page goes
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates.
 - **Words.** A person is born and dies; a city is founded; a species goes
@@ -362,15 +370,16 @@ How the page is put together:
 - **The entry pane** shows the kind and branch, labels, other names, every
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
-- "Propose a view" at the end of the list opens the "Propose a view" issue
+- "Propose a view" at the foot of the panel, under the filters (moved
+  there on request, Nov 2026), opens the "Propose a view" issue
   form with the current link filled in.
 - **Play takes the whole screen.** The top bar floats over the road: the
   road (`#stage`) always fills the page from the top, and keeps a band of
   `TOP` pixels clear (`stageOf(SW, SH, top)` puts the road and the names
   below it), so nothing moves when the bar comes and goes. While play
   travels the bar slides away (`body.playing`); pointing at the top edge
-  brings it back over the road (`body.peek`), never over the open panel,
-  and it returns when play stops. Asked for in Nov 2026: do not make the
+  brings it back (`body.peek`), over the open panel too (asked for, Nov
+  2026), and it returns when play stops. Asked for in Nov 2026: do not make the
   road move with the bar again.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or

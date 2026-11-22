@@ -1,0 +1,53 @@
+{
+  "id": "serbian-campaign-ww1",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Serbia in the First World War",
+      "from": "1914"
+    }
+  ],
+  "summary": "Serbia lost about a sixth of its people in the First World War.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q841559",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-07-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-11-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Serbia in the First World War (Q841559)",
+      "url": "https://www.wikidata.org/wiki/Q841559",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Serbian campaign of World War I",
+      "url": "https://en.wikipedia.org/wiki/Serbian_campaign_of_World_War_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Vojska_Ada_Ciganlija.jpg/500px-Vojska_Ada_Ciganlija.jpg",
+    "alt": "Serbia in the First World War",
+    "credit": "The original uploader was Lord Eru at English Wikipedia. Later versions were uploaded by Avala at en.wikipedia.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vojska_Ada_Ciganlija.jpg"
+  }
+}

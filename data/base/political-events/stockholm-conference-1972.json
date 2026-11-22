@@ -1,0 +1,53 @@
+{
+  "id": "stockholm-conference-1972",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Stockholm Conference",
+      "from": "1972"
+    }
+  ],
+  "summary": "The first United Nations meeting on the environment, held in Stockholm in 1972, which set up the UN Environment Programme.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1781365",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1972-06-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Stockholm Conference (Q1781365)",
+      "url": "https://www.wikidata.org/wiki/Q1781365",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Nations Conference on the Human Environment",
+      "url": "https://en.wikipedia.org/wiki/United_Nations_Conference_on_the_Human_Environment",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/UN-environment-in-Stockholm-1972.jpg/500px-UN-environment-in-Stockholm-1972.jpg",
+    "alt": "Stockholm Conference",
+    "credit": "AnonymousUnknown author / Pressens Bild",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:UN-environment-in-Stockholm-1972.jpg"
+  }
+}

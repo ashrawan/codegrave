@@ -1,0 +1,53 @@
+{
+  "id": "cop26",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "COP26 Glasgow",
+      "from": "2021"
+    }
+  ],
+  "summary": "The 2021 summit in Glasgow, where countries agreed for the first time to phase down coal.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q68580968",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-10-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-11-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: COP26 Glasgow (Q68580968)",
+      "url": "https://www.wikidata.org/wiki/Q68580968",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2021 United Nations Climate Change Conference",
+      "url": "https://en.wikipedia.org/wiki/2021_United_Nations_Climate_Change_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/World_Leaders%27_Summit_Opening_Ceremony_%2851648261125%29.jpg/500px-World_Leaders%27_Summit_Opening_Ceremony_%2851648261125%29.jpg",
+    "alt": "COP26 Glasgow",
+    "credit": "PMO Barbados from Bridgetown, Barbados",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:World_Leaders%27_Summit_Opening_Ceremony_(51648261125).jpg"
+  }
+}

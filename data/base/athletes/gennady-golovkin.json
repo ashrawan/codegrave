@@ -1,0 +1,54 @@
+{
+  "id": "gennady-golovkin",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Gennady Golovkin",
+      "from": "1982"
+    }
+  ],
+  "summary": "Middleweight boxing champion known as GGG.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1009230",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-04-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kazakhstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gennady Golovkin (Q1009230)",
+      "url": "https://www.wikidata.org/wiki/Q1009230",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gennady Golovkin",
+      "url": "https://en.wikipedia.org/wiki/Gennady_Golovkin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Gennady_Golovkin_%28KAZ%29_2017.png/500px-Gennady_Golovkin_%28KAZ%29_2017.png",
+    "alt": "Gennady Golovkin",
+    "credit": "Box Azteca",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gennady_Golovkin_(KAZ)_2017.png"
+  }
+}

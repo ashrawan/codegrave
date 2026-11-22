@@ -30,8 +30,16 @@
   "events": [
     {
       "type": "born",
-      "date": "1626",
-      "precision": "year"
+      "date": "1506-04-18",
+      "precision": "day",
+      "note": "Pope Julius II lays the foundation stone of the new basilica."
+    },
+    {
+      "type": "milestone",
+      "date": "1626-11-18",
+      "precision": "day",
+      "label": "Consecrated",
+      "note": "Pope Urban VIII consecrates the finished church."
     }
   ],
   "status": "alive",

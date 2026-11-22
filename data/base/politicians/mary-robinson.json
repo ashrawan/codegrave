@@ -1,0 +1,48 @@
+{
+  "id": "mary-robinson",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Mary Robinson",
+      "from": "1944"
+    }
+  ],
+  "summary": "Ireland's first woman president and later UN High Commissioner for Human Rights.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q188214",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mary Robinson (Q188214)",
+      "url": "https://www.wikidata.org/wiki/Q188214",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mary Robinson",
+      "url": "https://en.wikipedia.org/wiki/Mary_Robinson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Mary_Robinson_%282014%29.jpg/500px-Mary_Robinson_%282014%29.jpg",
+    "alt": "Mary Robinson",
+    "credit": "Nationaal Comité 4 en 5 mei",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Mary_Robinson_(2014).jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "arab-revolt",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Arab Revolt",
+      "from": "1916"
+    }
+  ],
+  "summary": "The revolt against the Ottomans in 1916.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q239060",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1918-10",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jordan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Arab Revolt (Q239060)",
+      "url": "https://www.wikidata.org/wiki/Q239060",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Arab Revolt",
+      "url": "https://en.wikipedia.org/wiki/Arab_Revolt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/030Arab.jpg/500px-030Arab.jpg",
+    "alt": "Arab Revolt",
+    "credit": "Maurice Bauche (1878–1956)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:030Arab.jpg"
+  }
+}

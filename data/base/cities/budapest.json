@@ -1,0 +1,51 @@
+{
+  "id": "budapest",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Budapest",
+      "from": "1873"
+    }
+  ],
+  "summary": "The capital, formed in 1873 by joining Buda, Óbuda and Pest.",
+  "wikidata": "Q1781",
+  "events": [
+    {
+      "type": "born",
+      "date": "1873-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Budapest (Q1781)",
+      "url": "https://www.wikidata.org/wiki/Q1781",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Budapest",
+      "url": "https://en.wikipedia.org/wiki/Budapest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Budapest%2C_Hungary_%28explored%29_%2814995308504%29.jpg/500px-Budapest%2C_Hungary_%28explored%29_%2814995308504%29.jpg",
+    "alt": "Budapest",
+    "credit": "Thomas Depenbusch (Depi) from Cologne, Germany",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Budapest,_Hungary_(explored)_(14995308504).jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "colony-of-nigeria",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "British Nigeria",
+      "from": "1914"
+    }
+  ],
+  "summary": "In 1914 the British joined their northern and southern protectorates into one colony under Frederick Lugard, drawing the borders of modern Nigeria. It lasted until independence in 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2046345",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Nigeria (Q2046345)",
+      "url": "https://www.wikidata.org/wiki/Q2046345",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colonial Nigeria",
+      "url": "https://en.wikipedia.org/wiki/Colonial_Nigeria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

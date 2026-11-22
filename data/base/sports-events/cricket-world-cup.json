@@ -1,0 +1,48 @@
+{
+  "id": "cricket-world-cup",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Cricket World Cup",
+      "from": "1975"
+    }
+  ],
+  "summary": "The one-day international world championship, first played in England in 1975 and won by the West Indies.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q192202",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cricket World Cup (Q192202)",
+      "url": "https://www.wikidata.org/wiki/Q192202",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cricket World Cup",
+      "url": "https://en.wikipedia.org/wiki/Cricket_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Bangladesh_v._Ireland_%285522416435%29.jpg/500px-Bangladesh_v._Ireland_%285522416435%29.jpg",
+    "alt": "Cricket World Cup",
+    "credit": "reivax from Washington, DC, USA",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bangladesh_v._Ireland_(5522416435).jpg"
+  }
+}

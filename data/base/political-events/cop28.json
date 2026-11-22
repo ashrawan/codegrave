@@ -1,0 +1,53 @@
+{
+  "id": "cop28",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "COP28",
+      "from": "2023"
+    }
+  ],
+  "summary": "The climate summit in Dubai in 2023, where countries first agreed to move away from fossil fuels.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q111208159",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-11-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023-12-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: COP28 (Q111208159)",
+      "url": "https://www.wikidata.org/wiki/Q111208159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2023 United Nations Climate Change Conference",
+      "url": "https://en.wikipedia.org/wiki/2023_United_Nations_Climate_Change_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/ADIBF_2023_-_Publishers_Stands_11.jpg/500px-ADIBF_2023_-_Publishers_Stands_11.jpg",
+    "alt": "COP28",
+    "credit": "Serine Ben Brahim",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ADIBF_2023_-_Publishers_Stands_11.jpg"
+  }
+}

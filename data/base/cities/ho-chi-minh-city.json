@@ -1,0 +1,51 @@
+{
+  "id": "ho-chi-minh-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ho Chi Minh City",
+      "from": "1976"
+    }
+  ],
+  "summary": "The largest city, once Saigon, the capital of the South.",
+  "wikidata": "Q1854",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ho Chi Minh City (Q1854)",
+      "url": "https://www.wikidata.org/wiki/Q1854",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ho Chi Minh City",
+      "url": "https://en.wikipedia.org/wiki/Ho_Chi_Minh_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Ho_Chi_Minh_City_Skyline.jpg/500px-Ho_Chi_Minh_City_Skyline.jpg",
+    "alt": "Ho Chi Minh City",
+    "credit": "Pimnl",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ho_Chi_Minh_City_Skyline.jpg"
+  }
+}

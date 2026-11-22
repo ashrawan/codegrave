@@ -1,0 +1,59 @@
+{
+  "id": "new-zealand-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "New Zealand Wars",
+      "from": "1845"
+    }
+  ],
+  "summary": "The wars between the colonial government and Māori over land.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1545405",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1872",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New Zealand Wars (Q1545405)",
+      "url": "https://www.wikidata.org/wiki/Q1545405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Zealand Wars",
+      "url": "https://en.wikipedia.org/wiki/New_Zealand_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Newzealandwarsmemorial.jpg/500px-Newzealandwarsmemorial.jpg",
+    "alt": "New Zealand Wars",
+    "credit": "DO'Neil at English Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Newzealandwarsmemorial.jpg"
+  }
+}

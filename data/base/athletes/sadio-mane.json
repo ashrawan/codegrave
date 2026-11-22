@@ -1,0 +1,54 @@
+{
+  "id": "sadio-mane",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Sadio Mané",
+      "from": "1992"
+    }
+  ],
+  "summary": "Footballer.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q209942",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-04-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "senegal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sadio Mané (Q209942)",
+      "url": "https://www.wikidata.org/wiki/Q209942",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sadio Mané",
+      "url": "https://en.wikipedia.org/wiki/Sadio_Mané",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Sadio_Mane_France_v_Senegal_16_June_2026-450.jpg/500px-Sadio_Mane_France_v_Senegal_16_June_2026-450.jpg",
+    "alt": "Sadio Mané",
+    "credit": "Bryan Berlin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sadio_Mane_France_v_Senegal_16_June_2026-450.jpg"
+  }
+}

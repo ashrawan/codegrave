@@ -1,0 +1,53 @@
+{
+  "id": "belarus-in-world-war-ii",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Belarus in World War II",
+      "from": "1941"
+    }
+  ],
+  "summary": "About a quarter of Belarus's people died under German occupation, and hundreds of villages were burned.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q3138007",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-06-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Belarus in World War II (Q3138007)",
+      "url": "https://www.wikidata.org/wiki/Q3138007",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belarus in World War II",
+      "url": "https://en.wikipedia.org/wiki/Belarus_in_World_War_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Marcks_Plan_for_Operation_Barbarossa.jpg/500px-Marcks_Plan_for_Operation_Barbarossa.jpg",
+    "alt": "Belarus in World War II",
+    "credit": "US Government",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marcks_Plan_for_Operation_Barbarossa.jpg"
+  }
+}

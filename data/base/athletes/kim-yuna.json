@@ -1,0 +1,54 @@
+{
+  "id": "kim-yuna",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Kim Yuna",
+      "from": "1990"
+    }
+  ],
+  "summary": "Figure skater who won Olympic gold at Vancouver in 2010.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q229124",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-09-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kim Yuna (Q229124)",
+      "url": "https://www.wikidata.org/wiki/Q229124",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kim Yuna",
+      "url": "https://en.wikipedia.org/wiki/Kim_Yuna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Yuna_Kim_2024.jpg/500px-Yuna_Kim_2024.jpg",
+    "alt": "Kim Yuna",
+    "credit": "K-POPIT 케이팝잇",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yuna_Kim_2024.jpg"
+  }
+}

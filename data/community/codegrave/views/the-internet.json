@@ -1,20 +1,20 @@
 {
   "id": "the-internet",
   "name": "The Internet",
-  "description": "How a research network of four computers became the internet: ARPANET, email, the web, Wi-Fi and beyond.",
+  "description": "The internet from ARPANET to the web, browsers, search engines, social media and cryptocurrency.",
   "category": "computing",
   "labels": [
     "computing"
   ],
   "tags": [
     "internet",
-    "web",
-    "arpanet",
     "world wide web",
-    "email",
-    "wifi",
-    "online",
-    "networks"
+    "browsers",
+    "search engines",
+    "social media",
+    "cryptocurrency",
+    "bitcoin",
+    "arpanet"
   ],
   "entries": [
     "bob-kahn",
@@ -25,8 +25,8 @@
     "telnet",
     "compuserve",
     "arpanet",
-    "ftp",
     "email",
+    "ftp",
     "ethernet",
     "internet-protocol-suite",
     "bulletin-board-system",
@@ -51,7 +51,65 @@
     "wi-fi",
     "tls",
     "wikipedia",
-    "starlink"
+    "zoom-video",
+    "starlink",
+    "5g",
+    "yahoo",
+    "yahoo-directory",
+    "lycos",
+    "internet-explorer",
+    "javascript",
+    "excite",
+    "altavista",
+    "flash",
+    "ask-jeeves",
+    "united-states-v-microsoft",
+    "baidu",
+    "firefox",
+    "safari",
+    "chrome",
+    "duckduckgo",
+    "bing",
+    "microsoft-edge",
+    "sixdegrees",
+    "friendster",
+    "linkedin",
+    "myspace",
+    "orkut",
+    "facebook",
+    "flickr",
+    "digg",
+    "bebo",
+    "youtube",
+    "reddit",
+    "twitter",
+    "vk",
+    "tumblr",
+    "whatsapp",
+    "pinterest",
+    "google-buzz",
+    "instagram",
+    "wechat",
+    "google-plus",
+    "snapchat",
+    "vine",
+    "mastodon",
+    "tiktok",
+    "cambridge-analytica-scandal",
+    "bluesky",
+    "twitter-renamed-x",
+    "threads",
+    "bitcoin",
+    "mt-gox",
+    "silk-road-marketplace",
+    "coinbase",
+    "dogecoin",
+    "non-fungible-token",
+    "ethereum",
+    "tether",
+    "binance",
+    "bitcoin-in-el-salvador",
+    "bankruptcy-of-ftx"
   ],
   "checkpoints": [
     {
@@ -59,35 +117,42 @@
       "name": "ARPANET",
       "from": 1965,
       "to": 1974,
-      "note": "Researchers in America and Britain devise packet switching, and the US funds ARPANET to link its computers. Telnet, email and file transfer appear, and Vint Cerf and Bob Kahn sketch TCP/IP in 1974."
+      "note": "The first computer network links American universities in 1969. Packet switching and email are invented."
     },
     {
       "id": "email-usenet-and-bulletin-boards",
       "name": "Email, Usenet and bulletin boards",
       "from": 1975,
-      "to": 1984,
-      "note": "Ethernet joins computers in buildings, Usenet and bulletin boards let strangers talk, and ARPANET adopts TCP/IP. DNS and SMTP give the net its names and its mail."
-    },
-    {
-      "id": "the-internet-opens-up",
-      "name": "The internet opens up",
-      "from": 1985,
-      "to": 1992,
-      "note": "The NSFNET links universities, while services such as CompuServe and Minitel bring the public online by modem. IRC and Gopher give an early taste of chat and browsing."
+      "to": 1989,
+      "note": "TCP/IP joins networks into one internet. People meet on Usenet and bulletin boards, and the domain names we use today begin."
     },
     {
       "id": "the-world-wide-web",
       "name": "The World Wide Web",
-      "from": 1993,
+      "from": 1990,
       "to": 1999,
-      "note": "Tim Berners-Lee's web, with HTML and HTTP, and the Mosaic and Netscape browsers make the internet easy to use. Search engines and encryption follow, and millions come online."
+      "note": "Tim Berners-Lee invents the web, Mosaic and Netscape make it easy to browse, Microsoft fights Netscape in the first browser war, and Google begins."
+    },
+    {
+      "id": "social-networks",
+      "name": "Social networks",
+      "from": 2000,
+      "to": 2007,
+      "note": "Broadband arrives, Wikipedia and YouTube are founded and MySpace and Facebook begin social networking. Firefox challenges Internet Explorer."
+    },
+    {
+      "id": "phones-apps-and-bitcoin",
+      "name": "Phones, apps and Bitcoin",
+      "from": 2008,
+      "to": 2016,
+      "note": "Chrome, Twitter, Instagram and WhatsApp move the internet to the phone. Bitcoin, the first cryptocurrency, is launched, and Chrome becomes the most used browser."
     },
     {
       "id": "always-online",
       "name": "Always online",
-      "from": 2000,
+      "from": 2017,
       "to": 2026,
-      "note": "Wi-Fi and phone networks put the net in every pocket, IPv6 makes room for more devices, and satellites such as Starlink reach places that cables never will."
+      "note": "TikTok and short video take over, cryptocurrency reaches the mainstream with booms and crashes, and AI chatbots begin to change how people search."
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "id": "first-bulgarian-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "First Bulgarian Empire",
+      "from": "0681"
+    }
+  ],
+  "summary": "The medieval empire founded in 681.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q203817",
+  "events": [
+    {
+      "type": "born",
+      "date": "0681",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1018",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Bulgarian Empire (Q203817)",
+      "url": "https://www.wikidata.org/wiki/Q203817",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Bulgarian Empire",
+      "url": "https://en.wikipedia.org/wiki/First_Bulgarian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

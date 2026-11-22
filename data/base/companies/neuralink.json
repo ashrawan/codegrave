@@ -1,0 +1,54 @@
+{
+  "id": "neuralink",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Neuralink",
+      "from": "2016"
+    }
+  ],
+  "summary": "Elon Musk's company that makes a chip implanted in the brain. In 2024 its first patient moved a computer cursor by thought.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q29043471",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-06",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Neuralink (Q29043471)",
+      "url": "https://www.wikidata.org/wiki/Q29043471",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neuralink",
+      "url": "https://en.wikipedia.org/wiki/Neuralink",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pioneer_Building%2C_San_Francisco_%282019%29_-1.jpg/500px-Pioneer_Building%2C_San_Francisco_%282019%29_-1.jpg",
+    "alt": "Neuralink",
+    "credit": "HaeB",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg"
+  }
+}

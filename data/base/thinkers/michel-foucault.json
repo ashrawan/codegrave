@@ -1,0 +1,53 @@
+{
+  "id": "michel-foucault",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Michel Foucault",
+      "from": "1926"
+    }
+  ],
+  "summary": "French philosopher who studied how prisons, hospitals and schools shape people, and how power works through knowledge.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q44272",
+  "events": [
+    {
+      "type": "born",
+      "date": "1926-10-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1984-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Michel Foucault (Q44272)",
+      "url": "https://www.wikidata.org/wiki/Q44272",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michel Foucault",
+      "url": "https://en.wikipedia.org/wiki/Michel_Foucault",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Photo_of_Michel_Foucault_on_1970_dustjacket_of_The_Order_of_Things.jpg",
+    "alt": "Michel Foucault",
+    "credit": "Jerry Bauer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Photo_of_Michel_Foucault_on_1970_dustjacket_of_The_Order_of_Things.jpg"
+  }
+}

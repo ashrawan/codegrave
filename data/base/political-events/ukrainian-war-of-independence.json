@@ -1,0 +1,53 @@
+{
+  "id": "ukrainian-war-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Ukrainian War of Independence",
+      "from": "1917"
+    }
+  ],
+  "summary": "The struggle for an independent Ukraine after 1917, ended by the Soviet victory.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2479606",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1921",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ukrainian War of Independence (Q2479606)",
+      "url": "https://www.wikidata.org/wiki/Q2479606",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ukrainian War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Ukrainian_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Ukrainian_pro-Tsentralna_Rada_demonstration_in_Sophia_Square%2C_Kyiv%2C_1917-03-17%2C_01.jpg/500px-Ukrainian_pro-Tsentralna_Rada_demonstration_in_Sophia_Square%2C_Kyiv%2C_1917-03-17%2C_01.jpg",
+    "alt": "Ukrainian War of Independence",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ukrainian_pro-Tsentralna_Rada_demonstration_in_Sophia_Square,_Kyiv,_1917-03-17,_01.jpg"
+  }
+}

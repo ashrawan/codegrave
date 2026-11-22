@@ -1,0 +1,51 @@
+{
+  "id": "kinshasa",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kinshasa",
+      "from": "1881"
+    }
+  ],
+  "summary": "The capital, one of the largest cities of Africa.",
+  "wikidata": "Q3838",
+  "events": [
+    {
+      "type": "born",
+      "date": "1881",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kinshasa (Q3838)",
+      "url": "https://www.wikidata.org/wiki/Q3838",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kinshasa",
+      "url": "https://en.wikipedia.org/wiki/Kinshasa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Vue_Kinshasa.jpg/500px-Vue_Kinshasa.jpg",
+    "alt": "Kinshasa",
+    "credit": "Garcia-Pavilion",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vue_Kinshasa.jpg"
+  }
+}

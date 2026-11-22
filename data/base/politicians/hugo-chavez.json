@@ -1,0 +1,59 @@
+{
+  "id": "hugo-chavez",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Hugo Chávez",
+      "from": "1954"
+    }
+  ],
+  "summary": "President from 1999 to 2013 who led the Bolivarian revolution.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q8440",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-07-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2013-03-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hugo Chávez (Q8440)",
+      "url": "https://www.wikidata.org/wiki/Q8440",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hugo Chávez",
+      "url": "https://en.wikipedia.org/wiki/Hugo_Chávez",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Hugo_Ch%C3%A1vez_in_Bras%C3%ADlia_2011_%283x4_cropped%29_%282%29.jpg/500px-Hugo_Ch%C3%A1vez_in_Bras%C3%ADlia_2011_%283x4_cropped%29_%282%29.jpg",
+    "alt": "Hugo Chávez",
+    "credit": "Roberto Stuckert Filho",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hugo_Ch%C3%A1vez_in_Bras%C3%ADlia_2011_(3x4_cropped)_(2).jpg"
+  }
+}

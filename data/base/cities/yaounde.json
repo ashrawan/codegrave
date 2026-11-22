@@ -1,0 +1,51 @@
+{
+  "id": "yaounde",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Yaoundé",
+      "from": "1888"
+    }
+  ],
+  "summary": "The capital, founded by Germans in 1889.",
+  "wikidata": "Q3808",
+  "events": [
+    {
+      "type": "born",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cameroon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yaoundé (Q3808)",
+      "url": "https://www.wikidata.org/wiki/Q3808",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yaoundé",
+      "url": "https://en.wikipedia.org/wiki/Yaoundé",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Yaound%C3%A9_view_from_central_market_%282014%29.JPG/500px-Yaound%C3%A9_view_from_central_market_%282014%29.JPG",
+    "alt": "Yaoundé",
+    "credit": "Bdx",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yaound%C3%A9_view_from_central_market_(2014).JPG"
+  }
+}

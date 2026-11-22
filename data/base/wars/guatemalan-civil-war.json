@@ -1,0 +1,59 @@
+{
+  "id": "guatemalan-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Guatemalan Civil War",
+      "from": "1965"
+    }
+  ],
+  "summary": "The war of 1960 to 1996 in which some 200,000 people died.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1282732",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-03-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-12-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guatemala"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Guatemalan Civil War (Q1282732)",
+      "url": "https://www.wikidata.org/wiki/Q1282732",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guatemalan Civil War",
+      "url": "https://en.wikipedia.org/wiki/Guatemalan_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Exhumation_in_the_ixil_triangle_in_Guatemala.jpg/500px-Exhumation_in_the_ixil_triangle_in_Guatemala.jpg",
+    "alt": "Guatemalan Civil War",
+    "credit": "Trocaire / CAFCA archive",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Exhumation_in_the_ixil_triangle_in_Guatemala.jpg"
+  }
+}

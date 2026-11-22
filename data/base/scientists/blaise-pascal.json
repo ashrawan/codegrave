@@ -1,0 +1,50 @@
+{
+  "id": "blaise-pascal",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Blaise Pascal",
+      "from": "1623"
+    }
+  ],
+  "summary": "French mathematician and inventor who built a calculating machine and, with Fermat, founded the study of probability.",
+  "wikidata": "Q1290",
+  "events": [
+    {
+      "type": "born",
+      "date": "1623-06-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1662-08-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Blaise Pascal (Q1290)",
+      "url": "https://www.wikidata.org/wiki/Q1290",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blaise Pascal",
+      "url": "https://en.wikipedia.org/wiki/Blaise_Pascal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Blaise_Pascal_Versailles.JPG/500px-Blaise_Pascal_Versailles.JPG",
+    "alt": "Blaise Pascal",
+    "credit": "unknown; a copy of the painting of François II Quesnel, which was made for Gérard Edelinck en 1691[réf. nécessaire].",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Blaise_Pascal_Versailles.JPG"
+  }
+}

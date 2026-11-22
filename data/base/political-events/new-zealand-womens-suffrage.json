@@ -1,0 +1,54 @@
+{
+  "id": "new-zealand-womens-suffrage",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Votes for women",
+      "from": "1893"
+    }
+  ],
+  "summary": "In 1893 New Zealand became the first self-governing country to give women the vote.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3447247",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893-09-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Votes for women (Q3447247)",
+      "url": "https://www.wikidata.org/wiki/Q3447247",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Women's suffrage in New Zealand",
+      "url": "https://en.wikipedia.org/wiki/Women's_suffrage_in_New_Zealand",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/The_1893_Women%27s_Suffrage_Petition_%2816734429368%29_%28cropped%29.jpg/500px-The_1893_Women%27s_Suffrage_Petition_%2816734429368%29_%28cropped%29.jpg",
+    "alt": "Votes for women",
+    "credit": "Archives New Zealand from New Zealand",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_1893_Women%27s_Suffrage_Petition_(16734429368)_(cropped).jpg"
+  }
+}

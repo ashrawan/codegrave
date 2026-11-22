@@ -1,0 +1,53 @@
+{
+  "id": "insurrection-of-10-august-1792",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Storming of the Tuileries",
+      "from": "1792"
+    }
+  ],
+  "summary": "Armed crowds stormed the king's palace in Paris in August 1792, which ended the monarchy.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1154330",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792-08-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1792-08-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Storming of the Tuileries (Q1154330)",
+      "url": "https://www.wikidata.org/wiki/Q1154330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Insurrection of 10 August 1792",
+      "url": "https://en.wikipedia.org/wiki/Insurrection_of_10_August_1792",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Jacques_Bertaux_-_Der_Tuileriensturm_am_10._August_1792.jpg/500px-Jacques_Bertaux_-_Der_Tuileriensturm_am_10._August_1792.jpg",
+    "alt": "Storming of the Tuileries",
+    "credit": "Jacques Bertaux",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacques_Bertaux_-_Der_Tuileriensturm_am_10._August_1792.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "dominican-war-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Dominican War of Independence",
+      "from": "1844"
+    }
+  ],
+  "summary": "The war that freed the east of the island from Haiti in 1844.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3439047",
+  "events": [
+    {
+      "type": "born",
+      "date": "1844",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1856",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominican-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dominican War of Independence (Q3439047)",
+      "url": "https://www.wikidata.org/wiki/Q3439047",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dominican War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Dominican_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

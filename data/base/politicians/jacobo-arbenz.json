@@ -1,0 +1,59 @@
+{
+  "id": "jacobo-arbenz",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jacobo Árbenz",
+      "from": "1913"
+    }
+  ],
+  "summary": "President whose land reform led to the coup of 1954.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q216943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913-09-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971-01-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guatemala"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jacobo Árbenz (Q216943)",
+      "url": "https://www.wikidata.org/wiki/Q216943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jacobo Árbenz",
+      "url": "https://en.wikipedia.org/wiki/Jacobo_Árbenz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Jacobo_Arbenz_1951_%28cropped%29.jpg/500px-Jacobo_Arbenz_1951_%28cropped%29.jpg",
+    "alt": "Jacobo Árbenz",
+    "credit": "Gobierno de Guatemala",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacobo_Arbenz_1951_(cropped).jpg"
+  }
+}

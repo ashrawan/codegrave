@@ -1,0 +1,51 @@
+{
+  "id": "chang-e-5",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Chang'e 5",
+      "from": "2020"
+    }
+  ],
+  "summary": "The Chinese lander that brought rock and soil back from the Moon in 2020, the first samples returned since 1976.",
+  "wikidata": "Q10944018",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-11-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chang'e 5 (Q10944018)",
+      "url": "https://www.wikidata.org/wiki/Q10944018",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chang'e 5",
+      "url": "https://en.wikipedia.org/wiki/Chang'e_5",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Launch_of_Chang%27e_5.png/500px-Launch_of_Chang%27e_5.png",
+    "alt": "Chang'e 5",
+    "credit": "China News Service",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Launch_of_Chang%27e_5.png"
+  }
+}

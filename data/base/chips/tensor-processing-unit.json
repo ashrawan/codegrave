@@ -1,0 +1,51 @@
+{
+  "id": "tensor-processing-unit",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Tensor Processing Unit",
+      "from": "2015"
+    }
+  ],
+  "summary": "Google's own chip for running neural networks, used in its data centres from 2015 and announced in 2016.",
+  "wikidata": "Q25106376",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tensor Processing Unit (Q25106376)",
+      "url": "https://www.wikidata.org/wiki/Q25106376",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tensor processing unit",
+      "url": "https://en.wikipedia.org/wiki/Tensor_processing_unit",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/TPU_v4.png/500px-TPU_v4.png",
+    "alt": "Tensor Processing Unit",
+    "credit": "Norman P. Jouppi, George Kurian, Sheng Li, Peter Ma, Rahul Nagarajan, Lifeng Nai, Nishant Patil, Suvinay Subramanian, An",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TPU_v4.png"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "njals-saga",
+  "category": "books",
+  "names": [
+    {
+      "name": "Njáls saga",
+      "from": "1280"
+    }
+  ],
+  "summary": "The greatest of the Icelandic sagas.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q844119",
+  "events": [
+    {
+      "type": "born",
+      "date": "1280",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iceland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Njáls saga (Q844119)",
+      "url": "https://www.wikidata.org/wiki/Q844119",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Njáls saga",
+      "url": "https://en.wikipedia.org/wiki/Njáls_saga",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/M%C3%B6%C3%B0ruvallab%C3%B3k_f13r.jpg/500px-M%C3%B6%C3%B0ruvallab%C3%B3k_f13r.jpg",
+    "alt": "Njáls saga",
+    "credit": "GDK",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:M%C3%B6%C3%B0ruvallab%C3%B3k_f13r.jpg"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "id": "singapore",
+  "name": "Singapore",
+  "description": "Singapore from Temasek and the Malay kingdoms to Raffles' port, Japanese occupation, independence and a rich city state.",
+  "category": "places",
+  "tags": [
+    "singapore",
+    "city state",
+    "lee kuan yew",
+    "port",
+    "raffles",
+    "asia"
+  ],
+  "entries": [
+    "kingdom-of-singapura",
+    "stamford-raffles",
+    "singapore",
+    "port-of-singapore",
+    "straits-settlements",
+    "singapore-botanic-gardens",
+    "raffles-hotel",
+    "national-university-of-singapore",
+    "lee-kuan-yew",
+    "goh-chok-tong",
+    "fall-of-singapore",
+    "sook-ching-massacre",
+    "lee-hsien-loong",
+    "singapore-hdb",
+    "singapore-in-malaysia",
+    "singapore-airlines",
+    "proclamation-of-singapore",
+    "lawrence-wong",
+    "changi-airport",
+    "singapore-grand-prix",
+    "marina-bay-sands",
+    "gardens-by-the-bay"
+  ],
+  "checkpoints": [
+    {
+      "id": "temasek",
+      "name": "Temasek",
+      "from": 1299,
+      "to": 1818,
+      "note": "Temasek was a trading port of the Malay world, and a kingdom of Singapura was there in the 1300s. Later the island was a quiet part of the Johor sultanate."
+    },
+    {
+      "id": "the-british-port",
+      "name": "The British port",
+      "from": 1819,
+      "to": 1958,
+      "note": "Raffles founded a free port in 1819, and Singapore grew into a great port of Chinese, Malay and Indian traders. Japan took it in 1942."
+    },
+    {
+      "id": "the-city-state",
+      "name": "The city state",
+      "from": 1959,
+      "to": 2026,
+      "note": "Singapore won self-rule in 1959, joined Malaysia in 1963 and became independent in 1965. Under Lee Kuan Yew it became one of the richest places in the world."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/330px-Flag_of_Singapore.svg.png",
+    "alt": "Flag of Singapore",
+    "credit": "Original: Government of Singapore Vector: Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Singapore.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/Majulah_Singapura.ogg/Majulah_Singapura.ogg.mp3",
+    "title": "Onward Singapore",
+    "credit": "http://www.navyband.navy.mil/anthems/national_anthems.htmSingapore.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Majulah_Singapura.ogg"
+  }
+}

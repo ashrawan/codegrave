@@ -1,0 +1,54 @@
+{
+  "id": "imran-khan",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Imran Khan",
+      "from": "1952"
+    }
+  ],
+  "summary": "Cricket captain who became prime minister in 2018 and was later jailed.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q155164",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-10-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Imran Khan (Q155164)",
+      "url": "https://www.wikidata.org/wiki/Q155164",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Imran Khan",
+      "url": "https://en.wikipedia.org/wiki/Imran_Khan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Prime_Minister_Imran_Khan_Adresses_the_Forum_01.jpg/500px-Prime_Minister_Imran_Khan_Adresses_the_Forum_01.jpg",
+    "alt": "Imran Khan",
+    "credit": "Imran Khan",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Imran_Khan_Adresses_the_Forum_01.jpg"
+  }
+}

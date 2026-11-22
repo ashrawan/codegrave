@@ -1,0 +1,50 @@
+{
+  "id": "arnolfini-portrait",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "The Arnolfini Portrait",
+      "from": "1434"
+    }
+  ],
+  "maker": "Jan van Eyck",
+  "summary": "Small oil painting by Jan van Eyck of a merchant and a woman standing in a room in Bruges. Its fine detail, including a round mirror that reflects the scene, made it one of the most studied paintings in Western art.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q220859",
+  "events": [
+    {
+      "type": "born",
+      "date": "1434",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: The Arnolfini Portrait (Q220859)",
+      "url": "https://www.wikidata.org/wiki/Q220859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Arnolfini Portrait",
+      "url": "https://en.wikipedia.org/wiki/Arnolfini_Portrait",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Van_Eyck_-_Arnolfini_Portrait.jpg/500px-Van_Eyck_-_Arnolfini_Portrait.jpg",
+    "alt": "The Arnolfini Portrait",
+    "credit": "Jan van Eyck",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg"
+  }
+}

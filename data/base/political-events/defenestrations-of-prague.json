@@ -1,0 +1,59 @@
+{
+  "id": "defenestrations-of-prague",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Defenestrations of Prague",
+      "from": "1419"
+    }
+  ],
+  "summary": "The throwing of officials from a window in 1618 that started the Thirty Years' War.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q374696",
+  "events": [
+    {
+      "type": "born",
+      "date": "1419-07-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1419-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czech-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Defenestrations of Prague (Q374696)",
+      "url": "https://www.wikidata.org/wiki/Q374696",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Defenestrations of Prague",
+      "url": "https://en.wikipedia.org/wiki/Defenestrations_of_Prague",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Prager.Fenstersturz.1618.jpg/500px-Prager.Fenstersturz.1618.jpg",
+    "alt": "Defenestrations of Prague",
+    "credit": "Johann Philipp Abelinus",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Prager.Fenstersturz.1618.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "de-revolutionibus",
+  "category": "books",
+  "names": [
+    {
+      "name": "On the Revolutions of the Heavenly Spheres",
+      "from": "1543"
+    }
+  ],
+  "summary": "Copernicus' book, published as he died, which put the Sun rather than the Earth at the centre of the planets.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q845981",
+  "events": [
+    {
+      "type": "born",
+      "date": "1543",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: On the Revolutions of the Heavenly Spheres (Q845981)",
+      "url": "https://www.wikidata.org/wiki/Q845981",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: De revolutionibus orbium coelestium",
+      "url": "https://en.wikipedia.org/wiki/De_revolutionibus_orbium_coelestium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/De_Revolvtionibvs_Orbium_coelestium_1543_%28121406887%29_%28cropped%29.jpg/500px-De_Revolvtionibvs_Orbium_coelestium_1543_%28121406887%29_%28cropped%29.jpg",
+    "alt": "On the Revolutions of the Heavenly Spheres",
+    "credit": "Mikołaj Kopernik",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:De_Revolvtionibvs_Orbium_coelestium_1543_(121406887)_(cropped).jpg"
+  }
+}

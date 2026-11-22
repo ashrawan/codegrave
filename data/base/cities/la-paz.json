@@ -1,0 +1,51 @@
+{
+  "id": "la-paz",
+  "category": "cities",
+  "names": [
+    {
+      "name": "La Paz",
+      "from": "1548"
+    }
+  ],
+  "summary": "The seat of government, the highest capital.",
+  "wikidata": "Q1491",
+  "events": [
+    {
+      "type": "born",
+      "date": "1548-10-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bolivia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: La Paz (Q1491)",
+      "url": "https://www.wikidata.org/wiki/Q1491",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La Paz",
+      "url": "https://en.wikipedia.org/wiki/La_Paz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/La_Paz-center.jpg/500px-La_Paz-center.jpg",
+    "alt": "La Paz",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Paz-center.jpg"
+  }
+}

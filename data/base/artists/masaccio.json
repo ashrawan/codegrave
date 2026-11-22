@@ -1,0 +1,53 @@
+{
+  "id": "masaccio",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Masaccio",
+      "from": "1401"
+    }
+  ],
+  "summary": "Florentine painter of the 1420s whose frescoes were the first to use true perspective and real light.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q5811",
+  "events": [
+    {
+      "type": "born",
+      "date": "1401-12-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1428",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Masaccio (Q5811)",
+      "url": "https://www.wikidata.org/wiki/Q5811",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Masaccio",
+      "url": "https://en.wikipedia.org/wiki/Masaccio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/96/Masaccio_Self_Portrait.jpg",
+    "alt": "Masaccio",
+    "credit": "Masaccio",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaccio_Self_Portrait.jpg"
+  }
+}

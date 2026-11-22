@@ -82,7 +82,8 @@ const LINK_TYPES = [
 ];
 const LABEL_MAX = 16;
 const SUMMARY_MAX = 600;
-const VIEW_CAP = 200;          // the most entries one view file carries, best ranked first
+const VIEW_CAP = 200;          // the most entries a classical view file carries, best ranked first
+const PICKED_CAP = 1000;       // the most entries a hand-picked (community) view file carries
 const CATALOGUE_MAX = 400;     // the most community views listed in boot.json; the rest are found by search
 const SEARCH_SPLIT = 20000;    // above this many index lines, the search index is split by first letters
 const INBOUND_MAX = 40;
@@ -525,6 +526,9 @@ const topicOf = new Map();    // view id -> the id of its group
 const defaults = Array.isArray(choice.default) ? choice.default : [choice.default];
 if (defaults.length === 0 || defaults.length > 8) err('data/editors-choice.json', '"default" must name one to eight views');
 for (const id of defaults) if (!resolveView(id)) err('data/editors-choice.json', `default view "${id}" does not exist`);
+// On a phone the page opens on fewer: `phone` picks from the default views.
+const phoneDefaults = choice.phone == null ? [] : Array.isArray(choice.phone) ? choice.phone : [choice.phone];
+for (const id of phoneDefaults) if (!defaults.includes(id)) err('data/editors-choice.json', `phone view "${id}" must be one of the default views`);
 
 // ---------------------------------------------------------------- report
 const quiet = process.argv.includes('--quiet');
@@ -635,7 +639,7 @@ if (!process.argv.includes('--check')) {
   };
   const payload = (v) => ({
     view: { ...meta(v), checkpoints: v.checkpoints || [] },
-    entries: v._members.slice(0, VIEW_CAP).map(compile),
+    entries: v._members.slice(0, v._list ? PICKED_CAP : VIEW_CAP).map(compile),
   });
 
   rmSync(outDir, { recursive: true, force: true });
@@ -650,7 +654,7 @@ if (!process.argv.includes('--check')) {
   for (const v of live) write(`v/${v._id}.json`, payload(v));
   // An old address gets the view's file under the old name too, so an old link still costs one request.
   for (const [from, to] of Object.entries(viewRedirects)) if (viewById.get(to)._members.length) write(`v/${from}.json`, payload(viewById.get(to)));
-  write('home.json', { views: defaults.map((id) => payload(viewById.get(resolveView(id)))) });
+  write('home.json', { views: defaults.map((id) => payload(viewById.get(resolveView(id)))), phone: phoneDefaults.map(resolveView) });
 
   // Community views in the order the panel lists them: topic by topic in the editors' order, then the rest by name.
   const placed = topics.flatMap((t) => (Array.isArray(t.views) ? t.views.map(resolveView) : []));

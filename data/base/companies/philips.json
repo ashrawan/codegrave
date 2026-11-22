@@ -1,0 +1,54 @@
+{
+  "id": "philips",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Philips",
+      "from": "1891"
+    }
+  ],
+  "summary": "Electronics company founded in Eindhoven in 1891, known for light bulbs, radios, the compact cassette and the CD.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q170416",
+  "events": [
+    {
+      "type": "born",
+      "date": "1891-05-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "netherlands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Philips (Q170416)",
+      "url": "https://www.wikidata.org/wiki/Q170416",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Philips",
+      "url": "https://en.wikipedia.org/wiki/Philips",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Siege_Philips_Amsterdam.jpg/500px-Siege_Philips_Amsterdam.jpg",
+    "alt": "Philips",
+    "credit": "Philips",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Siege_Philips_Amsterdam.jpg"
+  }
+}

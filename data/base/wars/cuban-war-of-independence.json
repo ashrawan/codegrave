@@ -1,0 +1,53 @@
+{
+  "id": "cuban-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Cuban War of Independence",
+      "from": "1895"
+    }
+  ],
+  "summary": "The war of 1895 to 1898 led by José Martí, which the United States joined.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1514908",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1898",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cuban War of Independence (Q1514908)",
+      "url": "https://www.wikidata.org/wiki/Q1514908",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cuban War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Cuban_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/An_illustrated_history_of_our_war_with_Spain_-_its_causes%2C_incidents%2C_and_results_%281898%29_%2814579399380%29.jpg/500px-An_illustrated_history_of_our_war_with_Spain_-_its_causes%2C_incidents%2C_and_results_%281898%29_%2814579399380%29.jpg",
+    "alt": "Cuban War of Independence",
+    "credit": "Russell, Henry Benajah, 1859-; Thurston, John Mellen, 1847-1916; Proctor, Redfield, 1831-1908",
+    "licence": "No restrictions",
+    "source": "https://commons.wikimedia.org/wiki/File:An_illustrated_history_of_our_war_with_Spain_-_its_causes,_incidents,_and_results_(1898)_(14579399380).jpg"
+  }
+}

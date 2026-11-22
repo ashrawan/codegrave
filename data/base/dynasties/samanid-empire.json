@@ -1,0 +1,52 @@
+{
+  "id": "samanid-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Samanid Empire",
+      "from": "0819"
+    }
+  ],
+  "summary": "A Persian dynasty that ruled from Bukhara in the 800s and 900s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q12150341",
+  "events": [
+    {
+      "type": "born",
+      "date": "0819",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0999",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uzbekistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samanid Empire (Q12150341)",
+      "url": "https://www.wikidata.org/wiki/Q12150341",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samanid Empire",
+      "url": "https://en.wikipedia.org/wiki/Samanid_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

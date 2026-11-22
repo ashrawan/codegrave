@@ -1,0 +1,52 @@
+{
+  "id": "german-occupation-of-norway",
+  "category": "wars",
+  "names": [
+    {
+      "name": "German occupation of Norway",
+      "from": "1940"
+    }
+  ],
+  "summary": "Nazi Germany's occupation from 1940 to 1945.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q819274",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-04-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-05-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German occupation of Norway (Q819274)",
+      "url": "https://www.wikidata.org/wiki/Q819274",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German occupation of Norway",
+      "url": "https://en.wikipedia.org/wiki/German_occupation_of_Norway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

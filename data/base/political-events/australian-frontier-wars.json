@@ -1,0 +1,46 @@
+{
+  "id": "australian-frontier-wars",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Australian frontier wars",
+      "from": "1788"
+    }
+  ],
+  "summary": "Violent conflicts between settlers and Aboriginal peoples from 1788.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2889339",
+  "events": [
+    {
+      "type": "born",
+      "date": "1788",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1934",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Australian frontier wars (Q2889339)",
+      "url": "https://www.wikidata.org/wiki/Q2889339",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Australian frontier wars",
+      "url": "https://en.wikipedia.org/wiki/Australian_frontier_wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

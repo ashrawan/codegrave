@@ -9,6 +9,7 @@
   ],
   "maker": "Jarkko Oikarinen",
   "summary": "Live group chat in text, organised in channels. It was the internet's chat room for twenty years and still runs today.",
+  "wikidata": "Q73",
   "events": [
     {
       "type": "born",
@@ -31,5 +32,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/WeeChat_3.4_screenshot.png/500px-WeeChat_3.4_screenshot.png",
+    "alt": "IRC",
+    "credit": "Software: Weechat developers Screenshot: VulcanSphere",
+    "licence": "GPLv3",
+    "source": "https://commons.wikimedia.org/wiki/File:WeeChat_3.4_screenshot.png"
+  }
 }

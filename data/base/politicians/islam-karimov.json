@@ -1,0 +1,59 @@
+{
+  "id": "islam-karimov",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Islam Karimov",
+      "from": "1938"
+    }
+  ],
+  "summary": "President from 1991 until his death in 2016.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57558",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-01-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uzbekistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Islam Karimov (Q57558)",
+      "url": "https://www.wikidata.org/wiki/Q57558",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Islam Karimov",
+      "url": "https://en.wikipedia.org/wiki/Islam_Karimov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Karimov_Ufa.jpg/500px-Karimov_Ufa.jpg",
+    "alt": "Islam Karimov",
+    "credit": "Russian Presidential Press and Information Office",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karimov_Ufa.jpg"
+  }
+}

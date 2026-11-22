@@ -1,0 +1,59 @@
+{
+  "id": "boris-yeltsin",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Boris Yeltsin",
+      "from": "1931"
+    }
+  ],
+  "summary": "First president of the Russian Federation, who faced down the 1991 coup and led the painful move to a market economy.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q34453",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-02-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2007-04-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Boris Yeltsin (Q34453)",
+      "url": "https://www.wikidata.org/wiki/Q34453",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boris Yeltsin",
+      "url": "https://en.wikipedia.org/wiki/Boris_Yeltsin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/%D0%91%D0%BE%D1%80%D0%B8%D1%81_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_%D0%95%D0%BB%D1%8C%D1%86%D0%B8%D0%BD-1_%28cropped%29_%28cropped%29.jpg/500px-%D0%91%D0%BE%D1%80%D0%B8%D1%81_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_%D0%95%D0%BB%D1%8C%D1%86%D0%B8%D0%BD-1_%28cropped%29_%28cropped%29.jpg",
+    "alt": "Boris Yeltsin",
+    "credit": "Presidential Press and Information Office",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%BE%D1%80%D0%B8%D1%81_%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B5%D0%B2%D0%B8%D1%87_%D0%95%D0%BB%D1%8C%D1%86%D0%B8%D0%BD-1_(cropped)_(cropped).jpg"
+  }
+}

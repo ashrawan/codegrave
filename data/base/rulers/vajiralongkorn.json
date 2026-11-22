@@ -1,0 +1,54 @@
+{
+  "id": "vajiralongkorn",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Vajiralongkorn",
+      "from": "1952"
+    }
+  ],
+  "summary": "King Rama X, on the throne since 2016.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q548733",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "thailand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vajiralongkorn (Q548733)",
+      "url": "https://www.wikidata.org/wiki/Q548733",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vajiralongkorn",
+      "url": "https://en.wikipedia.org/wiki/Vajiralongkorn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/King_Rama_X_official_%28crop%29.png/500px-King_Rama_X_official_%28crop%29.png",
+    "alt": "Vajiralongkorn",
+    "credit": "The Public Relations Department (กรมประชาสัมพันธ์)",
+    "licence": "CC BY 3.0 th",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Rama_X_official_(crop).png"
+  }
+}

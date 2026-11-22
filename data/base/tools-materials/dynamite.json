@@ -1,0 +1,45 @@
+{
+  "id": "dynamite",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Dynamite",
+      "from": "1867"
+    }
+  ],
+  "summary": "The explosive invented by Alfred Nobel, whose fortune funded the Nobel Prizes.",
+  "wikidata": "Q80728",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Dynamite (Q80728)",
+      "url": "https://www.wikidata.org/wiki/Q80728",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dynamite",
+      "url": "https://en.wikipedia.org/wiki/Dynamite",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Caisse_dynamite_nobel_paulilles_expo.JPG/500px-Caisse_dynamite_nobel_paulilles_expo.JPG",
+    "alt": "Dynamite",
+    "credit": "Olecrab",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caisse_dynamite_nobel_paulilles_expo.JPG"
+  }
+}

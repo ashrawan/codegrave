@@ -1,0 +1,59 @@
+{
+  "id": "rene-magritte",
+  "category": "artists",
+  "names": [
+    {
+      "name": "René Magritte",
+      "from": "1898"
+    }
+  ],
+  "summary": "Surrealist painter of the pipe that is not a pipe and men in bowler hats.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q7836",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898-11-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: René Magritte (Q7836)",
+      "url": "https://www.wikidata.org/wiki/Q7836",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: René Magritte",
+      "url": "https://en.wikipedia.org/wiki/René_Magritte",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Ren%C3%A9_Magritte_in_1961.jpg/500px-Ren%C3%A9_Magritte_in_1961.jpg",
+    "alt": "René Magritte",
+    "credit": "Unknown authorUnknown author Restored by Giovanni Cardinali",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ren%C3%A9_Magritte_in_1961.jpg"
+  }
+}

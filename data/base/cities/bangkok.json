@@ -1,0 +1,51 @@
+{
+  "id": "bangkok",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bangkok",
+      "from": "1782"
+    }
+  ],
+  "summary": "The capital, founded by Rama I in 1782 on the Chao Phraya River.",
+  "wikidata": "Q1861",
+  "events": [
+    {
+      "type": "born",
+      "date": "1782-04-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "thailand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bangkok (Q1861)",
+      "url": "https://www.wikidata.org/wiki/Q1861",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bangkok",
+      "url": "https://en.wikipedia.org/wiki/Bangkok",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Temple_of_the_Emerald_of_buddha_or_Wat_Phra_Kaew_%28cropped%29.jpg/500px-Temple_of_the_Emerald_of_buddha_or_Wat_Phra_Kaew_%28cropped%29.jpg",
+    "alt": "Bangkok",
+    "credit": "Preecha.MJ",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Temple_of_the_Emerald_of_buddha_or_Wat_Phra_Kaew_(cropped).jpg"
+  }
+}

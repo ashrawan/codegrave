@@ -1,0 +1,59 @@
+{
+  "id": "slovak-national-uprising",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Slovak National Uprising",
+      "from": "1944"
+    }
+  ],
+  "summary": "The rising against the Nazis in 1944.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q163780",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-08-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-10-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Slovak National Uprising (Q163780)",
+      "url": "https://www.wikidata.org/wiki/Q163780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Slovak National Uprising",
+      "url": "https://en.wikipedia.org/wiki/Slovak_National_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Nastupeni_povstalci.jpg/500px-Nastupeni_povstalci.jpg",
+    "alt": "Slovak National Uprising",
+    "credit": "Pavel Pelech",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Nastupeni_povstalci.jpg"
+  }
+}

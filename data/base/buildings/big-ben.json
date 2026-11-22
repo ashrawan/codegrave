@@ -1,0 +1,48 @@
+{
+  "id": "big-ben",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Big Ben",
+      "from": "1859"
+    }
+  ],
+  "summary": "The great bell and clock tower of the Houses of Parliament in London, finished in 1859.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q41225",
+  "events": [
+    {
+      "type": "born",
+      "date": "1859",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Big Ben (Q41225)",
+      "url": "https://www.wikidata.org/wiki/Q41225",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Big Ben",
+      "url": "https://en.wikipedia.org/wiki/Big_Ben",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg/500px-Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster%2C_London.jpg",
+    "alt": "Big Ben",
+    "credit": "Christian David",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Tower_and_the_north_front_of_the_Palace_of_Westminster,_London.jpg"
+  }
+}

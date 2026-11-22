@@ -1,0 +1,45 @@
+{
+  "id": "komodo-national-park",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Komodo National Park",
+      "from": "1980"
+    }
+  ],
+  "summary": "The islands that are home to the Komodo dragon, the largest lizard.",
+  "wikidata": "Q4520",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Komodo National Park (Q4520)",
+      "url": "https://www.wikidata.org/wiki/Q4520",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Komodo National Park",
+      "url": "https://en.wikipedia.org/wiki/Komodo_National_Park",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Komodo_dragon_at_Komodo_National_Park.jpg/500px-Komodo_dragon_at_Komodo_National_Park.jpg",
+    "alt": "Komodo National Park",
+    "credit": "Adhi Rachdian from Indonesia",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Komodo_dragon_at_Komodo_National_Park.jpg"
+  }
+}

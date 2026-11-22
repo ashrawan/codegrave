@@ -17,9 +17,14 @@
       "type": "born",
       "date": "1999-09-21",
       "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-11-10",
+      "precision": "day"
     }
   ],
-  "status": "alive",
+  "status": "dead",
   "signals": {
     "adoption": 5,
     "standard": 0,

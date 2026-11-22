@@ -1,0 +1,54 @@
+{
+  "id": "javier-milei",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Javier Milei",
+      "from": "1970"
+    }
+  ],
+  "summary": "Libertarian economist elected president in 2023.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q52395487",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-10-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Javier Milei (Q52395487)",
+      "url": "https://www.wikidata.org/wiki/Q52395487",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Javier Milei",
+      "url": "https://en.wikipedia.org/wiki/Javier_Milei",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Mattarella_Milei_2024_%28cropped%29.jpg/500px-Mattarella_Milei_2024_%28cropped%29.jpg",
+    "alt": "Javier Milei",
+    "credit": "Quirinale",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Mattarella_Milei_2024_(cropped).jpg"
+  }
+}

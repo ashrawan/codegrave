@@ -1,0 +1,54 @@
+{
+  "id": "palace-of-the-parliament",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Palace of the Parliament",
+      "from": "1985"
+    }
+  ],
+  "summary": "The vast palace built by Ceaușescu in Bucharest, one of the largest buildings in the world.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q164150",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Palace of the Parliament (Q164150)",
+      "url": "https://www.wikidata.org/wiki/Q164150",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palace of the Parliament",
+      "url": "https://en.wikipedia.org/wiki/Palace_of_the_Parliament",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Avenida_de_la_Uni%C3%B3n%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_57.jpg/500px-Avenida_de_la_Uni%C3%B3n%2C_Bucarest%2C_Ruman%C3%ADa%2C_2016-05-29%2C_DD_57.jpg",
+    "alt": "Palace of the Parliament",
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Avenida_de_la_Uni%C3%B3n,_Bucarest,_Ruman%C3%ADa,_2016-05-29,_DD_57.jpg"
+  }
+}

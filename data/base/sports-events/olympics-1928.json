@@ -1,0 +1,54 @@
+{
+  "id": "olympics-1928",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1928 Summer Olympics",
+      "from": "1928"
+    }
+  ],
+  "summary": "The Games in Amsterdam, where an Olympic flame burned in a tower over the stadium for the first time. Women competed in athletics and gymnastics for the first time.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8138",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-05-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1928-08-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: 1928 Summer Olympics (Q8138)",
+      "url": "https://www.wikidata.org/wiki/Q8138",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1928 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1928_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/IXe_Olympiade.jpg/500px-IXe_Olympiade.jpg",
+    "alt": "1928 Summer Olympics",
+    "credit": "UnknownUnknown , Uitgevers Maatschappij 's-Gravenhage, Nederlandsche Rotogravure…",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:IXe_Olympiade.jpg"
+  }
+}

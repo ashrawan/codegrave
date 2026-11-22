@@ -1,0 +1,45 @@
+{
+  "id": "ciudad-perdida",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Ciudad Perdida",
+      "from": "0800"
+    }
+  ],
+  "summary": "The Lost City of the Tairona in the Sierra Nevada, built around 800 CE and found again in 1972.",
+  "wikidata": "Q1094367",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ciudad Perdida (Q1094367)",
+      "url": "https://www.wikidata.org/wiki/Q1094367",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ciudad Perdida",
+      "url": "https://en.wikipedia.org/wiki/Ciudad_Perdida",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Lost_City_Ruins.jpg/500px-Lost_City_Ruins.jpg",
+    "alt": "Ciudad Perdida",
+    "credit": "Gavin Rough from Waterloo, Canada",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lost_City_Ruins.jpg"
+  }
+}

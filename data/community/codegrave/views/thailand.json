@@ -1,0 +1,81 @@
+{
+  "id": "thailand",
+  "name": "Thailand",
+  "description": "Thailand from Ban Chiang and Sukhothai to Ayutthaya, the Chakri kings, a land never colonised, coups and a modern kingdom.",
+  "category": "places",
+  "tags": [
+    "thailand",
+    "bangkok",
+    "siam",
+    "ayutthaya",
+    "buddhism",
+    "muay thai"
+  ],
+  "entries": [
+    "ban-chiang",
+    "thailand",
+    "sukhothai-kingdom",
+    "ramkhamhaeng",
+    "ayutthaya-kingdom",
+    "wat-arun",
+    "grand-palace",
+    "chakri-dynasty",
+    "bangkok",
+    "mongkut",
+    "chulalongkorn",
+    "bhumibol-adulyadej",
+    "siamese-revolution-of-1932",
+    "pad-thai",
+    "thaksin-shinawatra",
+    "vajiralongkorn",
+    "6-october-1976-massacre",
+    "asian-financial-crisis",
+    "indian-ocean-tsunami-2004",
+    "2014-thai-coup",
+    "tham-luang-cave-rescue"
+  ],
+  "checkpoints": [
+    {
+      "id": "early-kingdoms",
+      "name": "Early kingdoms",
+      "from": -1500,
+      "to": 1350,
+      "note": "Bronze Age villages flourished at Ban Chiang. Mon and Khmer kingdoms ruled before the Thai kingdom of Sukhothai rose in the 1200s."
+    },
+    {
+      "id": "ayutthaya",
+      "name": "Ayutthaya",
+      "from": 1351,
+      "to": 1781,
+      "note": "Ayutthaya grew into one of the great trading cities of Asia, until the Burmese destroyed it in 1767."
+    },
+    {
+      "id": "bangkok-and-siam",
+      "name": "Bangkok and Siam",
+      "from": 1782,
+      "to": 1931,
+      "note": "The Chakri kings built Bangkok. Chulalongkorn reformed the state and kept Siam free while its neighbours became colonies."
+    },
+    {
+      "id": "modern-thailand",
+      "name": "Modern Thailand",
+      "from": 1932,
+      "to": 2026,
+      "note": "A coup in 1932 ended absolute monarchy. Generals and elected leaders took turns in power, Bhumibol reigned for seventy years, and Bangkok became a great city of Asia."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/330px-Flag_of_Thailand.svg.png",
+    "alt": "Flag of Thailand",
+    "credit": "Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Thailand.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/45/Phleng_Chat_Thai_%28Fine_Art_Department_Orchestra%29_-_Rabbit_Gramophone_record_N.123.ogg/Phleng_Chat_Thai_%28Fine_Art_Department_Orchestra%29_-_Rabbit_Gramophone_record_N.123.ogg.mp3",
+    "title": "Thai National Anthem",
+    "credit": "The Orchestra of the Fine Arts Department of Thailand, Government Public Relations Department (PRD)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Phleng_Chat_Thai_(Fine_Art_Department_Orchestra)_-_Rabbit_Gramophone_record_N.123.ogg"
+  }
+}

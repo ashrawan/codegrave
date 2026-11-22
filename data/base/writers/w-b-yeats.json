@@ -1,0 +1,59 @@
+{
+  "id": "w-b-yeats",
+  "category": "writers",
+  "names": [
+    {
+      "name": "W. B. Yeats",
+      "from": "1865"
+    }
+  ],
+  "summary": "Poet and playwright who won the Nobel Prize in 1923.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q40213",
+  "events": [
+    {
+      "type": "born",
+      "date": "1865-06-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1939-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: W. B. Yeats (Q40213)",
+      "url": "https://www.wikidata.org/wiki/Q40213",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: W. B. Yeats",
+      "url": "https://en.wikipedia.org/wiki/W._B._Yeats",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/William_Butler_Yeats_by_George_Charles_Beresford.jpg/500px-William_Butler_Yeats_by_George_Charles_Beresford.jpg",
+    "alt": "W. B. Yeats",
+    "credit": "George Charles Beresford",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:William_Butler_Yeats_by_George_Charles_Beresford.jpg"
+  }
+}

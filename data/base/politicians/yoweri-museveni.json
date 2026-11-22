@@ -1,0 +1,54 @@
+{
+  "id": "yoweri-museveni",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Yoweri Museveni",
+      "from": "1944"
+    }
+  ],
+  "summary": "President since 1986.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57274",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-09-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yoweri Museveni (Q57274)",
+      "url": "https://www.wikidata.org/wiki/Q57274",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yoweri Museveni",
+      "url": "https://en.wikipedia.org/wiki/Yoweri_Museveni",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Yoweri_Museveni_September_2015.jpg/500px-Yoweri_Museveni_September_2015.jpg",
+    "alt": "Yoweri Museveni",
+    "credit": "U.S. Department of State",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Yoweri_Museveni_September_2015.jpg"
+  }
+}

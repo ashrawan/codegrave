@@ -1,0 +1,48 @@
+{
+  "id": "palestinian-refugees-in-jordan",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Palestinian refugees",
+      "from": "1948"
+    }
+  ],
+  "summary": "People who fled or were driven from their homes in 1948 and 1967, millions of whose descendants live in Jordan.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1506487",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Palestinian refugees (Q1506487)",
+      "url": "https://www.wikidata.org/wiki/Q1506487",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palestinian refugees",
+      "url": "https://en.wikipedia.org/wiki/Palestinian_refugees",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Displaced_people_try_to_return_to_northern_Gaza_Strip.jpg/500px-Displaced_people_try_to_return_to_northern_Gaza_Strip.jpg",
+    "alt": "Palestinian refugees",
+    "credit": "Ashraf Amra",
+    "licence": "CC BY-SA 3.0 igo",
+    "source": "https://commons.wikimedia.org/wiki/File:Displaced_people_try_to_return_to_northern_Gaza_Strip.jpg"
+  }
+}

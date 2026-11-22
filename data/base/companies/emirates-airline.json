@@ -1,0 +1,54 @@
+{
+  "id": "emirates-airline",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Emirates",
+      "from": "1985"
+    }
+  ],
+  "summary": "The airline of Dubai, founded in 1985, which made the city a hub between continents.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q180432",
+  "events": [
+    {
+      "type": "born",
+      "date": "1985-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-arab-emirates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Emirates (Q180432)",
+      "url": "https://www.wikidata.org/wiki/Q180432",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Emirates (airline)",
+      "url": "https://en.wikipedia.org/wiki/Emirates_(airline)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg/500px-A6-EDY_A380_Emirates_31_jan_2013_jfk_%288442269364%29_%28cropped%29.jpg",
+    "alt": "Emirates",
+    "credit": "Maarten Visser from Capelle aan den IJssel, Nederland",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A6-EDY_A380_Emirates_31_jan_2013_jfk_(8442269364)_(cropped).jpg"
+  }
+}

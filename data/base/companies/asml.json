@@ -1,0 +1,54 @@
+{
+  "id": "asml",
+  "category": "companies",
+  "names": [
+    {
+      "name": "ASML Holding",
+      "from": "1984"
+    }
+  ],
+  "summary": "Company in Veldhoven that makes the machines used to print the world's most advanced computer chips.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q297879",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-04-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "netherlands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: ASML Holding (Q297879)",
+      "url": "https://www.wikidata.org/wiki/Q297879",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: ASML Holding",
+      "url": "https://en.wikipedia.org/wiki/ASML_Holding",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/ASML_headquarters_Veldhoven.jpg/500px-ASML_headquarters_Veldhoven.jpg",
+    "alt": "ASML Holding",
+    "credit": "A ansems",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ASML_headquarters_Veldhoven.jpg"
+  }
+}

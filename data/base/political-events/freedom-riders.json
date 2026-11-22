@@ -1,0 +1,59 @@
+{
+  "id": "freedom-riders",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Freedom Riders",
+      "from": "1961"
+    }
+  ],
+  "summary": "Activists who rode buses through the South in 1961 to challenge segregation, and were beaten by mobs.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q538790",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-05-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1961-12-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Freedom Riders (Q538790)",
+      "url": "https://www.wikidata.org/wiki/Q538790",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Freedom Riders",
+      "url": "https://en.wikipedia.org/wiki/Freedom_Riders",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Exhibit_on_Freedom_Riders_-_Center_for_Civil_and_Human_Rights_-_Atlanta_-_Georgia_-_USA_%2833468216774%29.jpg/500px-Exhibit_on_Freedom_Riders_-_Center_for_Civil_and_Human_Rights_-_Atlanta_-_Georgia_-_USA_%2833468216774%29.jpg",
+    "alt": "Freedom Riders",
+    "credit": "Adam Jones from Kelowna, BC, Canada",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Exhibit_on_Freedom_Riders_-_Center_for_Civil_and_Human_Rights_-_Atlanta_-_Georgia_-_USA_(33468216774).jpg"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "id": "portugal",
+  "name": "Portugal",
+  "description": "Portugal from the Lusitanians and Rome to the founding kingdom, the age of discovery, the earthquake of 1755, the republic, the Carnation Revolution and Europe.",
+  "category": "places",
+  "tags": [
+    "portugal",
+    "lisbon",
+    "porto",
+    "explorers",
+    "fado",
+    "discoveries"
+  ],
+  "entries": [
+    "lusitania",
+    "afonso-i-of-portugal",
+    "portugal",
+    "battle-of-aljubarrota",
+    "treaty-of-windsor",
+    "prince-henry-the-navigator",
+    "portuguese-empire",
+    "pedro-alvares-cabral",
+    "da-gama-first-voyage",
+    "jeronimos-monastery",
+    "belem-tower",
+    "luis-de-camoes",
+    "iberian-union",
+    "lisbon-earthquake-1755",
+    "fado",
+    "independence-of-brazil",
+    "salazar",
+    "benfica",
+    "5-october-1910-revolution",
+    "jose-saramago",
+    "luis-montenegro",
+    "carnation-revolution",
+    "cristiano-ronaldo",
+    "portugal-joins-eec",
+    "expo-98",
+    "euro-2016"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-portugal",
+      "name": "Before Portugal",
+      "from": -200,
+      "to": 1138,
+      "note": "The Lusitanians fought Rome, and the land became the province of Lusitania. Visigoths and then Moors ruled."
+    },
+    {
+      "id": "the-kingdom",
+      "name": "The kingdom",
+      "from": 1139,
+      "to": 1414,
+      "note": "Afonso I made Portugal a kingdom, took Lisbon in 1147, and his heirs completed the conquest of the south."
+    },
+    {
+      "id": "discoveries-and-empire",
+      "name": "Discoveries and empire",
+      "from": 1415,
+      "to": 1754,
+      "note": "Portuguese ships went down the coast of Africa, reached India in 1498 and Brazil in 1500, and built an empire of trade."
+    },
+    {
+      "id": "earthquake-to-dictatorship",
+      "name": "Earthquake to dictatorship",
+      "from": 1755,
+      "to": 1973,
+      "note": "The earthquake of 1755 destroyed Lisbon. Brazil became independent in 1822, the monarchy fell in 1910, and Salazar ruled for decades."
+    },
+    {
+      "id": "democracy",
+      "name": "Democracy",
+      "from": 1974,
+      "to": 2026,
+      "note": "The Carnation Revolution of 1974 ended the dictatorship and the empire. Portugal joined Europe in 1986."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Flag_of_Portugal_%28official%29.svg/330px-Flag_of_Portugal_%28official%29.svg.png",
+    "alt": "Flag of Portugal",
+    "credit": "Original: Columbano Bordalo Pinheiro Vector: Vítor Luís Rodrigues, António Martins-Tuválkin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Portugal_(official).svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/58/A_Portuguesa.ogg/A_Portuguesa.ogg.mp3",
+    "title": "A Portuguesa",
+    "credit": "United States Navy Band Anthems Website https://www.navyband.navy.mil/national_anthems.html",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Portuguesa.ogg"
+  }
+}

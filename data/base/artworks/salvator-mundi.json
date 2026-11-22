@@ -1,0 +1,48 @@
+{
+  "id": "salvator-mundi",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Salvator Mundi",
+      "from": "1500"
+    }
+  ],
+  "summary": "A painting of Christ attributed to Leonardo da Vinci. In 2017 it sold for 450 million dollars, the highest price ever paid for a painting.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q1892745",
+  "events": [
+    {
+      "type": "born",
+      "date": "1500",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Salvator Mundi (Q1892745)",
+      "url": "https://www.wikidata.org/wiki/Q1892745",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Salvator Mundi (Leonardo)",
+      "url": "https://en.wikipedia.org/wiki/Salvator_Mundi_(Leonardo)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg/500px-Leonardo_da_Vinci%2C_Salvator_Mundi%2C_c.1500%2C_oil_on_walnut%2C_45.4_%C3%97_65.6_cm.jpg",
+    "alt": "Salvator Mundi",
+    "credit": "Leonardo da Vinci",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci,_Salvator_Mundi,_c.1500,_oil_on_walnut,_45.4_%C3%97_65.6_cm.jpg"
+  }
+}
