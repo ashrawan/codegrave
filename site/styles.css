@@ -179,6 +179,7 @@ mark { background: none; color: var(--text); font-weight: 600; text-decoration: 
 #p-views > #vnote { margin-top: 8px; }
 #vnote:empty { display: none; }
 .ibtn.sm { width: 30px; height: 30px; }
+.ibtn.sm.txt { width: auto; padding: 0 8px; gap: 6px; font-size: 12px; white-space: nowrap; }
 .ibtn[hidden] { display: none; }
 .ibtn.done { color: var(--acc); }
 /* the views on the timeline: a strip of pills along the bottom, which scrolls sideways when they do not fit */

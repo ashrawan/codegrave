@@ -51,7 +51,7 @@ export function when(s) {
   const { y, m, d } = dateParts(s);
   return y + ((m || 1) - 1) / 12 + ((d || 1) - 1) / 365;
 }
-export const spanText = (a, b) => (b == null ? yearText(a) + ' – today' : yearText(a) + ' – ' + yearText(b));
+export const spanText = (a, b) => (b == null ? yearText(a) + ' – Today' : yearText(a) + ' – ' + yearText(b));
 // Which side of the middle timeline a view stands on: like a die, read left to right, then down.
 export const sideOf = (i) => (i % 2 === 0 ? 'l' : 'r');
 // Letter where it is the usual paper (the US, Canada, Mexico, the Philippines, Chile, Colombia), else A4.
@@ -102,9 +102,9 @@ let yr = null;   // the year range the timeline was narrowed to, if any
 let rev = false; // newest first, like the timeline turned round (`o=backward`)
 // Entries in reading order: oldest first, or newest first when reversed; the better ranked first within a moment.
 export const inOrder = (es, newest) => es.slice().sort((a, b) => (newest ? b.t - a.t : a.t - b.t) || a.rank - b.rank || a.vi - b.vi);
-// A span in reading order: "1957 – 1966", or "1966 – 1957" and "today – 1957" when reversed.
-const rs = (a, b) => (rev ? (b == null ? 'today' : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
-const ends = (first) => (rev ? ['today', yearText(first)] : [yearText(first), 'today']);
+// A span in reading order: "1957 – 1966", or "1966 – 1957" and "Today – 1957" when reversed.
+const rs = (a, b) => (rev ? (b == null ? 'Today' : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
+const ends = (first) => (rev ? ['Today', yearText(first)] : [yearText(first), 'Today']);
 const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '') + '&o=' + (rev ? 'backward' : 'forward');
 const today = () => { const d = new Date(); return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); };
 
@@ -140,10 +140,10 @@ function single(D) {
     r.insertAdjacentHTML('beforeend', '<div class="mini"><div class="lab" style="padding-left:12.6mm">The whole view</div></div><div class="ax" style="top:6mm"></div>');
     keys.forEach((k) => {
       const h = (H - 8 * MM) * k.n / total;
-      r.insertAdjacentHTML('beforeend', '<div class="band" style="top:' + y + 'px;height:' + (h - 2) + 'px;background:' + T(k.i) + '"></div><div class="tl" style="top:' + y + 'px">' + esc(rev ? (k.c.to >= 1e9 ? 'today' : yearText(k.c.to)) : yearText(k.c.from)) + '</div><div class="bn" style="top:' + (y + 2) + 'px">' + esc(k.c.name) + '<span>' + k.n + ' entries</span></div>');
+      r.insertAdjacentHTML('beforeend', '<div class="band" style="top:' + y + 'px;height:' + (h - 2) + 'px;background:' + T(k.i) + '"></div><div class="tl" style="top:' + y + 'px">' + esc(rev ? (k.c.to >= 1e9 ? 'Today' : yearText(k.c.to)) : yearText(k.c.from)) + '</div><div class="bn" style="top:' + (y + 2) + 'px">' + esc(k.c.name) + '<span>' + k.n + ' entries</span></div>');
       y += h;
     });
-    if (keys.length) r.insertAdjacentHTML('beforeend', '<div class="tl" style="top:' + y + 'px">' + esc(rev ? yearText(keys.at(-1).c.from) : 'today') + '</div>');
+    if (keys.length) r.insertAdjacentHTML('beforeend', '<div class="tl" style="top:' + y + 'px">' + esc(rev ? yearText(keys.at(-1).c.from) : 'Today') + '</div>');
   }
   // the pages: chapters and entries flow down the left; a page ends when the next one does not fit
   let page, main, items = [];
@@ -261,8 +261,8 @@ function many(V, inks) {
   {
     const p = newManyPage('cover', 'Timelines from codegrave.com');
     p.insertAdjacentHTML('beforeend', '<div class="title"><h1>' + V.map((v) => esc(v.name)).join(' <span>·</span> ') + '</h1><p>' + N + ' views read side by side, ' + all.length + ' entries. The years run down the middle in order; each view keeps its side and its colour.</p></div>'
-      + '<div class="body"><div class="col L"></div><div class="hub"><div class="ln"></div><div class="yr a"></div><div class="yr b">today</div></div><div class="col R"></div></div>');
-    const top = yearText(Math.min(...V.map((v) => v.first))), bot = V[0].last != null ? yearText(V[0].last) : 'today';
+      + '<div class="body"><div class="col L"></div><div class="hub"><div class="ln"></div><div class="yr a"></div><div class="yr b">Today</div></div><div class="col R"></div></div>');
+    const top = yearText(Math.min(...V.map((v) => v.first))), bot = V[0].last != null ? yearText(V[0].last) : 'Today';
     p.querySelector('.yr.a').textContent = rev ? bot : top; p.querySelector('.yr.b').textContent = rev ? top : bot;
     V.forEach((v, i) => {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);

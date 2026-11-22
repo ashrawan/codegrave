@@ -13,7 +13,7 @@ test('dates are written as the page writes them', () => {
   assert.equal(fmtDate('1969-07', 'month'), 'July 1969');
   assert.equal(fmtDate('-0044-03-15', 'year'), '44 BCE');
   assert.equal(fmtDate('1450', 'circa'), 'c. 1450');
-  assert.equal(spanText(1957), '1957 – today');
+  assert.equal(spanText(1957), '1957 – Today');
   assert.equal(spanText(1957, 1975), '1957 – 1975');
 });
 
