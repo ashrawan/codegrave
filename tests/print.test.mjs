@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, INKS, PAPERS } from '../site/print.js';
+import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, fileName, INKS, PAPERS } from '../site/print.js';
 
 test('dates are written as the page writes them', () => {
   assert.equal(yearText(1969), '1969');
@@ -42,4 +42,19 @@ test('a built view file becomes chapters and entries in date order', { skip: !fs
   assert.ok(v.chs.length > 0);
   for (let i = 1; i < v.es.length; i++) assert.ok(v.es[i - 1].t <= v.es[i].t);
   for (const e of v.es) assert.ok(e.ci === -1 || (e.y >= v.chs[e.ci].from && e.y <= v.chs[e.ci].to));
+});
+
+test('the downloaded file is named after the views', () => {
+  assert.equal(fileName(['Space Exploration', 'Computers']), 'space-exploration-computers.pdf');
+  assert.equal(fileName(['Côte d’Ivoire']), 'cote-d-ivoire.pdf');
+  assert.equal(fileName(['']), 'codegrave.pdf');
+});
+
+test('a year range keeps only the entries begun in it', { skip: !fs.existsSync('site/data/boot.json') && 'run node scripts/build.mjs first' }, () => {
+  const boot = JSON.parse(fs.readFileSync('site/data/boot.json'));
+  const payload = JSON.parse(fs.readFileSync('site/data/v/codegrave/space-exploration.json'));
+  const v = shapeView(payload, boot, 0, [1960, 1975]);
+  assert.ok(v.es.length > 0 && v.es.every((e) => e.y >= 1960 && e.y <= 1975));
+  assert.ok(v.chs.every((c) => c.to >= 1960 && c.from <= 1975));
+  assert.deepEqual(v.chs.map((c) => c.num), v.chs.map((c, k) => k + 1));
 });

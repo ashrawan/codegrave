@@ -65,7 +65,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .one .cover .stats b{display:block;font-family:'Instrument Serif';font-size:24px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink)}
 .one .cover .mos{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5mm}
 .one .cover .mos div{aspect-ratio:1;background:#f5f2ec;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.one .cover .mos img{width:100%;height:100%;object-fit:cover}
+.one .cover .mos img{max-width:100%;max-height:100%;display:block}
 .one .cover .toc{margin-top:9mm}
 .one .cover .toc div{display:flex;gap:4mm;align-items:baseline;padding:2mm 0;border-bottom:.5pt solid var(--line);font-family:'Instrument Serif';font-size:16px}
 .one .cover .toc i{font-style:normal;color:var(--acc);width:6mm}
@@ -157,8 +157,8 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .tile .m{font-size:6.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:1.5mm 0 2mm}
 .many .tile p{font-size:8px;line-height:1.5;color:var(--soft)}
 .many .tile .pics{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2mm;margin-top:2.5mm}
-.many .tile .pics div{aspect-ratio:1;background:#f5f2ec;overflow:hidden}
-.many .tile .pics img{width:100%;height:100%;object-fit:cover}
+.many .tile .pics div{aspect-ratio:1;background:#f5f2ec;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.many .tile .pics img{max-width:100%;max-height:100%;display:block}
 .many .tile ol{list-style:none;margin-top:2.5mm;border-top:.5pt solid var(--line)}
 .many .tile li{display:flex;justify-content:space-between;gap:2mm;font-size:7.5px;padding:1mm 0;border-bottom:.5pt solid var(--line)}
 .many .tile li span{color:var(--mute);white-space:nowrap}

@@ -8,8 +8,9 @@
      written once. A view's entries stand on its side (the 1st, 3rd, 5th view on the left, the
      others on the right, like the pips of a die), in a box bordered in its colour that appears
      where its entries fall. Lines run straight from the timeline, curving only into a shared year.
-   The pages are measured in the browser, so everything is placed where it really fits; then the
-   browser's own print dialog saves the PDF. Pure helpers are exported for tests/print.test.mjs. */
+   The pages are measured in the browser, so everything is placed where it really fits. "Download PDF"
+   then draws each page to an image (html2canvas) and saves them as one file (jsPDF), both fetched
+   from cdnjs only when pressed; printing is left to the browser, whose print uses print.css. Pure helpers are exported for tests/print.test.mjs. */
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 // The light theme's view colours (--p0 to --p7 in styles.css): inks that print well on white.
@@ -68,8 +69,9 @@ export function shapeView(payload, boot, i, span) {
   const words = Object.fromEntries(boot.domains.map((d) => [d.id, d.words]));
   const v = payload.view;
   const inSpan = (y) => !span || (y >= span[0] && y <= span[1]);
-  const chs = (v.checkpoints || []).map((c, k) => ({ num: k + 1, name: c.name, from: c.from, to: c.to ?? 1e9, note: c.note || '' }))
-    .filter((c) => !span || (c.to >= span[0] && c.from <= span[1]));
+  // chapters that overlap the range, numbered from 1 within it
+  const chs = (v.checkpoints || []).map((c) => ({ name: c.name, from: c.from, to: c.to ?? 1e9, note: c.note || '' }))
+    .filter((c) => !span || (c.to >= span[0] && c.from <= span[1])).map((c, k) => ({ ...c, num: k + 1 }));
   const es = payload.entries.filter((e) => inSpan(dateParts(e.events.find((x) => x.type === 'born').date).y)).map((e) => {
     const born = e.events.find((x) => x.type === 'born');
     const end = e.events.find((x) => x.type === 'ended');
@@ -114,7 +116,7 @@ function single(D) {
     const pics = D.es.filter((e) => e.img).sort((a, b) => a.rank - b.rank).slice(0, 8).sort((a, b) => a.t - b.t);
     m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
       + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
-      + '<div class="mos">' + pics.map((e) => '<div><img src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+      + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
       + '<div class="toc">' + D.chs.map((c, i) => '<div><i>' + c.num + '</i>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
     const r = p.querySelector('.rail'); const H = r.clientHeight;
     const keys = D.chs.map((c, i) => ({ c, i, n: Math.max(1, D.es.filter((e) => e.ci === i).length) }));
@@ -207,7 +209,7 @@ function flowCredits(list, open, link) {
   c.p.querySelector('.foot span').textContent = link;
 }
 function entryHtml(e) {
-  return '<div class="e' + (e.img ? '' : ' noimg') + '">' + (e.img ? '<div class="ph"><img src="' + esc(e.img.src) + '" alt=""></div>' : '')
+  return '<div class="e' + (e.img ? '' : ' noimg') + '">' + (e.img ? '<div class="ph"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>' : '')
     + '<div><div class="d"><b>' + esc(e.date) + '</b> · ' + esc(e.kind) + '</div><h3>' + esc(e.name) + '</h3><p>' + esc(e.summary) + '</p>' + (e.endText ? '<div class="end">' + esc(e.endText) + '</div>' : '') + '</div></div>';
 }
 const creditLine = () => 'Pictures are free-licensed and credited below. Text is written for codegrave and shared under CC BY-NC-SA 4.0. Saved ' + today() + '.';
@@ -235,7 +237,7 @@ function many(V, inks) {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
       const pics = v.es.filter((e) => e.img).sort((a, b) => a.rank - b.rank).slice(0, 4);
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics">' + pics.map((e) => '<div><img src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
         + (N > 4 ? '' : '<ol>' + v.chs.map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
@@ -252,7 +254,7 @@ function many(V, inks) {
   function openBox(vi, s, y) {
     const v = V[vi]; const el = document.createElement('div'); el.className = 'panel ' + s;
     el.style.cssText = '--c:' + inks[vi] + ';position:absolute;top:' + y + 'px;width:' + CW + 'px;' + (s === 'l' ? 'left:0' : 'right:0');
-    el.innerHTML = '<div class="tab"><b>' + (v.flag ? '<img src="' + esc(v.flag) + '" alt="">' : '') + esc(v.name) + '</b><span></span></div><div class="list"></div>';
+    el.innerHTML = '<div class="tab"><b>' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + esc(v.name) + '</b><span></span></div><div class="list"></div>';
     flow.appendChild(el); return { el, vi, list: el.querySelector('.list') };
   }
   function chapHtml(e) {
@@ -312,6 +314,34 @@ function many(V, inks) {
   }, link);
 }
 
+// ---------------------------------------------------------------- download
+const LIBS = ['https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'];
+const script = (src) => new Promise((ok, no) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = () => no(new Error('could not load ' + src)); document.head.appendChild(s); });
+// A file name from the views' names: "space-exploration-computers.pdf".
+export const fileName = (names) => (names.join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'codegrave') + '.pdf';
+async function download(paper) {
+  const btn = $('save'), msg = $('msg'), was = msg.textContent;
+  btn.disabled = true; $('paper').disabled = true;
+  try {
+    msg.textContent = 'Making the PDF…';
+    if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
+    const P = PAPERS[paper] || PAPERS.a4;
+    const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: 'portrait', compress: true });
+    const pages = [...doc.querySelectorAll('.pg')];
+    for (let i = 0; i < pages.length; i++) {
+      msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
+      const c = await window.html2canvas(pages[i], { scale: 2, useCORS: true, backgroundColor: '#ffffff', logging: false });
+      if (i) pdf.addPage([P.w, P.h], 'portrait');
+      pdf.addImage(c.toDataURL('image/jpeg', 0.85), 'JPEG', 0, 0, P.w, P.h, undefined, 'FAST');
+    }
+    pdf.setProperties({ title: shaped.views.map((v) => v.name).join(', '), creator: 'codegrave.com' });
+    pdf.save(fileName(shaped.views.map((v) => v.name)));
+    msg.textContent = was;
+  } catch (err) {
+    msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
+  } finally { btn.disabled = false; $('paper').disabled = false; }
+}
+
 // ---------------------------------------------------------------- start
 async function getJSON(path) {
   const r = await fetch('data/' + path);
@@ -329,13 +359,13 @@ function lay(paper) {
   const { views, inks } = shaped;
   document.body.className = views.length === 1 ? 'one' : 'many';
   if (views.length === 1) single(views[0]); else many(views, inks);
-  $('msg').textContent = pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '. In the print window, choose "Save as PDF".';
+  $('msg').textContent = pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
 async function start() {
   const q = new URLSearchParams(location.search);
   const ids = (q.get('views') || '').split(',').map((s) => s.trim()).filter((s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..'));
-  if (!ids.length) { $('msg').textContent = 'No views named. Open a timeline and press Save as PDF.'; return; }
+  if (!ids.length) { $('msg').textContent = 'No views named. Open a timeline and press Download PDF.'; return; }
   const m = /^(-?\d+)-(-?\d+)$/.exec(q.get('yr') || '');
   if (m && Number(m[1]) < Number(m[2])) yr = [Number(m[1]), Number(m[2])];
   const cs = (q.get('c') || '').split(',').map(Number);
@@ -353,7 +383,7 @@ async function start() {
   await lay(sel.value);
   sel.addEventListener('change', async () => { $('save').disabled = true; await lay(sel.value); $('save').disabled = false; });
   $('save').disabled = false;
-  $('save').addEventListener('click', () => window.print());
+  $('save').addEventListener('click', () => download(sel.value));
   document.body.dataset.done = '1';
 }
 if (typeof document !== 'undefined') start().catch((err) => { $('msg').textContent = 'Something went wrong: ' + err.message; });
