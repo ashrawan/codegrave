@@ -1,0 +1,45 @@
+{
+  "id": "dhaka",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Dhaka",
+      "from": "1608"
+    }
+  ],
+  "summary": "Capital of Mughal Bengal from 1608 and now of Bangladesh, one of the most crowded cities on Earth.",
+  "wikidata": "Q1354",
+  "events": [
+    {
+      "type": "born",
+      "date": "1608",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Dhaka (Q1354)",
+      "url": "https://www.wikidata.org/wiki/Q1354",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dhaka",
+      "url": "https://en.wikipedia.org/wiki/Dhaka",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Dhaka_skyline1.jpg/500px-Dhaka_skyline1.jpg",
+    "alt": "Dhaka",
+    "credit": "Tanweer drmc",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dhaka_skyline1.jpg"
+  }
+}

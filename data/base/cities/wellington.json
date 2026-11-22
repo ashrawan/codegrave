@@ -1,0 +1,45 @@
+{
+  "id": "wellington",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Wellington",
+      "from": "1840"
+    }
+  ],
+  "summary": "The capital of New Zealand since 1865.",
+  "wikidata": "Q23661",
+  "events": [
+    {
+      "type": "born",
+      "date": "1840",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Wellington (Q23661)",
+      "url": "https://www.wikidata.org/wiki/Q23661",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wellington",
+      "url": "https://en.wikipedia.org/wiki/Wellington",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5d/WellingtonPanorama.jpg",
+    "alt": "Wellington",
+    "credit": "en:User:Dhum Dhum",
+    "licence": "Copyrighted free use",
+    "source": "https://commons.wikimedia.org/wiki/File:WellingtonPanorama.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "the-picture-of-dorian-gray",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Picture of Dorian Gray",
+      "from": "1890"
+    }
+  ],
+  "summary": "Oscar Wilde's novel of a young man who stays beautiful while his portrait grows old and evil.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q82464",
+  "events": [
+    {
+      "type": "born",
+      "date": "1890",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Picture of Dorian Gray (Q82464)",
+      "url": "https://www.wikidata.org/wiki/Q82464",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Picture of Dorian Gray",
+      "url": "https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Lippincott_doriangray.jpg/500px-Lippincott_doriangray.jpg",
+    "alt": "The Picture of Dorian Gray",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lippincott_doriangray.jpg"
+  }
+}

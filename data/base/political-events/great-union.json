@@ -1,0 +1,53 @@
+{
+  "id": "great-union",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Great Union",
+      "from": "1918"
+    }
+  ],
+  "summary": "Transylvania joined Romania on 1 December 1918, Romania's national day.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1989779",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-12-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-12-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Great Union (Q1989779)",
+      "url": "https://www.wikidata.org/wiki/Q1989779",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Union of Transylvania with Romania",
+      "url": "https://en.wikipedia.org/wiki/Union_of_Transylvania_with_Romania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/RomaniaGreatUnion.jpg/500px-RomaniaGreatUnion.jpg",
+    "alt": "Great Union",
+    "credit": "AnonymousUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:RomaniaGreatUnion.jpg"
+  }
+}

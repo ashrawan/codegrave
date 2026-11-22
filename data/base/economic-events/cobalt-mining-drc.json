@@ -1,0 +1,41 @@
+{
+  "id": "cobalt-mining-drc",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Cobalt mining in Congo",
+      "from": "1906"
+    }
+  ],
+  "summary": "Congo supplies about 70% of the world's cobalt for phone and car batteries, much of it dug by hand.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q6865632",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cobalt mining in Congo (Q6865632)",
+      "url": "https://www.wikidata.org/wiki/Q6865632",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mining industry of the Democratic Republic of the Congo",
+      "url": "https://en.wikipedia.org/wiki/Mining_industry_of_the_Democratic_Republic_of_the_Congo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

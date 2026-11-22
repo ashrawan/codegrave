@@ -1,0 +1,53 @@
+{
+  "id": "sack-of-rome-1527",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Sack of Rome",
+      "from": "1527"
+    }
+  ],
+  "summary": "Unpaid imperial soldiers looted Rome in 1527, killing thousands and scattering its artists.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q465627",
+  "events": [
+    {
+      "type": "born",
+      "date": "1527-05-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1527-05-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sack of Rome (Q465627)",
+      "url": "https://www.wikidata.org/wiki/Q465627",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sack of Rome (1527)",
+      "url": "https://en.wikipedia.org/wiki/Sack_of_Rome_(1527)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Sack_of_Rome_of_1527_by_Johannes_Lingelbach_17th_century.jpg/500px-Sack_of_Rome_of_1527_by_Johannes_Lingelbach_17th_century.jpg",
+    "alt": "Sack of Rome",
+    "credit": "Johannes Lingelbach",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sack_of_Rome_of_1527_by_Johannes_Lingelbach_17th_century.jpg"
+  }
+}

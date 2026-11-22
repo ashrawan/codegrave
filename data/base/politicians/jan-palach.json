@@ -1,0 +1,53 @@
+{
+  "id": "jan-palach",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jan Palach",
+      "from": "1948"
+    }
+  ],
+  "summary": "Student who set himself on fire in 1969 to protest against the Soviet occupation.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q192893",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-08-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1969-01-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jan Palach (Q192893)",
+      "url": "https://www.wikidata.org/wiki/Q192893",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jan Palach",
+      "url": "https://en.wikipedia.org/wiki/Jan_Palach",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Jan_Palach_foto_z_pr%C5%AFkazu.JPG",
+    "alt": "Jan Palach",
+    "credit": "Úřady",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jan_Palach_foto_z_pr%C5%AFkazu.JPG"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "port-arthur-massacre",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Port Arthur massacre",
+      "from": "1996"
+    }
+  ],
+  "summary": "A gunman killed 35 people in Tasmania in 1996; Australia then passed strict gun laws.",
+  "wikidata": "Q2357517",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-04-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-04-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Port Arthur massacre (Q2357517)",
+      "url": "https://www.wikidata.org/wiki/Q2357517",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Port Arthur massacre",
+      "url": "https://en.wikipedia.org/wiki/Port_Arthur_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "neuschwanstein-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Neuschwanstein Castle",
+      "from": "1869"
+    }
+  ],
+  "summary": "A fairy-tale castle built in the Bavarian Alps for King Ludwig II, the model for Disney's castles.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q4152",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Neuschwanstein Castle (Q4152)",
+      "url": "https://www.wikidata.org/wiki/Q4152",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neuschwanstein Castle",
+      "url": "https://en.wikipedia.org/wiki/Neuschwanstein_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Neuschwanstein_Castle_2024-02.jpg/500px-Neuschwanstein_Castle_2024-02.jpg",
+    "alt": "Neuschwanstein Castle",
+    "credit": "Wilfredor",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_2024-02.jpg"
+  }
+}

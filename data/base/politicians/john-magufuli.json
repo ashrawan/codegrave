@@ -1,0 +1,53 @@
+{
+  "id": "john-magufuli",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "John Magufuli",
+      "from": "1959"
+    }
+  ],
+  "summary": "President from 2015 until his death in 2021.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5018756",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-10-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-03-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: John Magufuli (Q5018756)",
+      "url": "https://www.wikidata.org/wiki/Q5018756",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Magufuli",
+      "url": "https://en.wikipedia.org/wiki/John_Magufuli",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c0/John_Magufuli_2015.png",
+    "alt": "John Magufuli",
+    "credit": "Issa Michuzi / issamichuzi.blogspot.co.uk",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Magufuli_2015.png"
+  }
+}

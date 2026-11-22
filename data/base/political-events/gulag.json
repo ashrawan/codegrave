@@ -1,0 +1,53 @@
+{
+  "id": "gulag",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Gulag",
+      "from": "1930"
+    }
+  ],
+  "summary": "The Soviet labour camps where millions were held from 1930 to 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q161448",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1960",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Gulag (Q161448)",
+      "url": "https://www.wikidata.org/wiki/Q161448",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gulag",
+      "url": "https://en.wikipedia.org/wiki/Gulag",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Vorkuta.jpg/500px-Vorkuta.jpg",
+    "alt": "Gulag",
+    "credit": "Russian State Archive, Moscow, Moscow (Російський Державний архів, Москва)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vorkuta.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "vitruvian-man",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Vitruvian Man",
+      "from": "1490"
+    }
+  ],
+  "summary": "Leonardo's drawing of around 1490 of a man inside a circle and a square, showing ideal proportions.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q215486",
+  "events": [
+    {
+      "type": "born",
+      "date": "1490",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Vitruvian Man (Q215486)",
+      "url": "https://www.wikidata.org/wiki/Q215486",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vitruvian Man",
+      "url": "https://en.wikipedia.org/wiki/Vitruvian_Man",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Da_Vinci_Vitruve_Luc_Viatour.jpg/500px-Da_Vinci_Vitruve_Luc_Viatour.jpg",
+    "alt": "Vitruvian Man",
+    "credit": "Leonardo da Vinci",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg"
+  }
+}

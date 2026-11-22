@@ -1,0 +1,48 @@
+{
+  "id": "belem-tower",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Belém Tower",
+      "from": "1514"
+    }
+  ],
+  "summary": "The fortress tower on the Tagus from which ships left for the Indies.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q215003",
+  "events": [
+    {
+      "type": "born",
+      "date": "1514",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Belém Tower (Q215003)",
+      "url": "https://www.wikidata.org/wiki/Q215003",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belém Tower",
+      "url": "https://en.wikipedia.org/wiki/Belém_Tower",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Belem_Tower_-_April_2019_%282%29.jpg/500px-Belem_Tower_-_April_2019_%282%29.jpg",
+    "alt": "Belém Tower",
+    "credit": "Rehman Abubakr",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Belem_Tower_-_April_2019_(2).jpg"
+  }
+}

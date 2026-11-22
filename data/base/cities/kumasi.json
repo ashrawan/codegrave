@@ -1,0 +1,45 @@
+{
+  "id": "kumasi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kumasi",
+      "from": "1680"
+    }
+  ],
+  "summary": "The capital of the Ashanti kingdom, home of its king, the Asantehene.",
+  "wikidata": "Q182059",
+  "events": [
+    {
+      "type": "born",
+      "date": "1680",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kumasi (Q182059)",
+      "url": "https://www.wikidata.org/wiki/Q182059",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kumasi",
+      "url": "https://en.wikipedia.org/wiki/Kumasi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Kronum_Kumasi_2018-11-08_%28130246%29.jpg/500px-Kronum_Kumasi_2018-11-08_%28130246%29.jpg",
+    "alt": "Kumasi",
+    "credit": "Maven Egote",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kronum_Kumasi_2018-11-08_(130246).jpg"
+  }
+}

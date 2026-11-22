@@ -1,0 +1,53 @@
+{
+  "id": "hundred-days",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Hundred Days",
+      "from": "1815"
+    }
+  ],
+  "summary": "Napoleon escaped from Elba in 1815 and ruled France again for about a hundred days, until Waterloo.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q199955",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815-03-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1815-07-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hundred Days (Q199955)",
+      "url": "https://www.wikidata.org/wiki/Q199955",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hundred Days",
+      "url": "https://en.wikipedia.org/wiki/Hundred_Days",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Wellington_at_Waterloo_Hillingford.jpg/500px-Wellington_at_Waterloo_Hillingford.jpg",
+    "alt": "Hundred Days",
+    "credit": "Robert Alexander Hillingford",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wellington_at_Waterloo_Hillingford.jpg"
+  }
+}

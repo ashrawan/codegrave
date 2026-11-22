@@ -1,0 +1,45 @@
+{
+  "id": "herat",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Herat",
+      "from": "-0500"
+    }
+  ],
+  "summary": "An ancient city of the west, a centre of Timurid art and learning.",
+  "wikidata": "Q45313",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0500",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Herat (Q45313)",
+      "url": "https://www.wikidata.org/wiki/Q45313",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Herat",
+      "url": "https://en.wikipedia.org/wiki/Herat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/View_of_Herat_in_2009.jpg/500px-View_of_Herat_in_2009.jpg",
+    "alt": "Herat",
+    "credit": "Employee of the U.S. State Department",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Herat_in_2009.jpg"
+  }
+}

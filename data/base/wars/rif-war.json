@@ -1,0 +1,53 @@
+{
+  "id": "rif-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Rif War",
+      "from": "1921"
+    }
+  ],
+  "summary": "The Berber revolt led by Abd el-Krim against Spain and France from 1921 to 1926.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q766437",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1926",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Rif War (Q766437)",
+      "url": "https://www.wikidata.org/wiki/Q766437",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rif War",
+      "url": "https://en.wikipedia.org/wiki/Rif_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Desembarco_de_Alhucemas%2C_por_Jos%C3%A9_Moreno_Carbonero.jpg/500px-Desembarco_de_Alhucemas%2C_por_Jos%C3%A9_Moreno_Carbonero.jpg",
+    "alt": "Rif War",
+    "credit": "José Moreno Carbonero",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Desembarco_de_Alhucemas,_por_Jos%C3%A9_Moreno_Carbonero.jpg"
+  }
+}

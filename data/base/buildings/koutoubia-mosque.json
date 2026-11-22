@@ -1,0 +1,48 @@
+{
+  "id": "koutoubia-mosque",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Koutoubia Mosque",
+      "from": "1147"
+    }
+  ],
+  "summary": "The great mosque of Marrakesh, built by the Almohads, whose minaret is a model for others.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1137533",
+  "events": [
+    {
+      "type": "born",
+      "date": "1147",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Koutoubia Mosque (Q1137533)",
+      "url": "https://www.wikidata.org/wiki/Q1137533",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Koutoubia Mosque",
+      "url": "https://en.wikipedia.org/wiki/Koutoubia_Mosque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Mosqu%C3%A9e_de_la_Koutoubia_-_marakesh.jpg/500px-Mosqu%C3%A9e_de_la_Koutoubia_-_marakesh.jpg",
+    "alt": "Koutoubia Mosque",
+    "credit": "Baca12",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mosqu%C3%A9e_de_la_Koutoubia_-_marakesh.jpg"
+  }
+}

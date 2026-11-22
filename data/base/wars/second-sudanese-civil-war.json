@@ -1,0 +1,53 @@
+{
+  "id": "second-sudanese-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Sudanese Civil War",
+      "from": "1983"
+    }
+  ],
+  "summary": "The war of 1983 to 2005 between the north and the south, one of the longest and deadliest of the century.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q842380",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-01-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Second Sudanese Civil War (Q842380)",
+      "url": "https://www.wikidata.org/wiki/Q842380",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Sudanese Civil War",
+      "url": "https://en.wikipedia.org/wiki/Second_Sudanese_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Sudan_%26_Southern_Sudan_map_%282005-2011%29.png/500px-Sudan_%26_Southern_Sudan_map_%282005-2011%29.png",
+    "alt": "Second Sudanese Civil War",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sudan_%26_Southern_Sudan_map_(2005-2011).png"
+  }
+}

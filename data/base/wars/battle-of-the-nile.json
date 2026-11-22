@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-the-nile",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of the Nile",
+      "from": "1798"
+    }
+  ],
+  "summary": "Nelson destroyed the French fleet at Aboukir Bay in 1798, stranding Napoleon's army in Egypt.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q243979",
+  "events": [
+    {
+      "type": "born",
+      "date": "1798-08-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1798-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of the Nile (Q243979)",
+      "url": "https://www.wikidata.org/wiki/Q243979",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of the Nile",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Nile",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Seeschlacht_bei_Abukir.jpg/500px-Seeschlacht_bei_Abukir.jpg",
+    "alt": "Battle of the Nile",
+    "credit": "Thomas Luny",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Seeschlacht_bei_Abukir.jpg"
+  }
+}

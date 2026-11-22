@@ -1,0 +1,53 @@
+{
+  "id": "rotterdam-blitz",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Rotterdam Blitz",
+      "from": "1940"
+    }
+  ],
+  "summary": "German bombers destroyed the centre of Rotterdam in May 1940.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q714349",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1940-05-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Rotterdam Blitz (Q714349)",
+      "url": "https://www.wikidata.org/wiki/Q714349",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rotterdam Blitz",
+      "url": "https://en.wikipedia.org/wiki/Rotterdam_Blitz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Rotterdam%2C_Laurenskerk%2C_na_bombardement_van_mei_1940.jpg/500px-Rotterdam%2C_Laurenskerk%2C_na_bombardement_van_mei_1940.jpg",
+    "alt": "Rotterdam Blitz",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rotterdam,_Laurenskerk,_na_bombardement_van_mei_1940.jpg"
+  }
+}

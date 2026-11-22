@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-kyiv-2022",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Kyiv",
+      "from": "2022"
+    }
+  ],
+  "summary": "Russia's attempt to take Kyiv in early 2022, which failed.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q111015252",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-02-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Kyiv (Q111015252)",
+      "url": "https://www.wikidata.org/wiki/Q111015252",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Kyiv (2022)",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Kyiv_(2022)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Battle_of_Kyiv_%282022%29.svg/500px-Battle_of_Kyiv_%282022%29.svg.png",
+    "alt": "Battle of Kyiv",
+    "credit": "Viewsridge",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Battle_of_Kyiv_(2022).svg"
+  }
+}

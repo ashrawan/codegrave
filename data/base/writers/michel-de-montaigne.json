@@ -1,0 +1,53 @@
+{
+  "id": "michel-de-montaigne",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Michel de Montaigne",
+      "from": "1533"
+    }
+  ],
+  "summary": "French writer who invented the essay, writing honestly about himself and doubting easy answers.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q41568",
+  "events": [
+    {
+      "type": "born",
+      "date": "1533-02-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1592-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Michel de Montaigne (Q41568)",
+      "url": "https://www.wikidata.org/wiki/Q41568",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Michel de Montaigne",
+      "url": "https://en.wikipedia.org/wiki/Michel_de_Montaigne",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Montaigne-Dumonstier.jpg/500px-Montaigne-Dumonstier.jpg",
+    "alt": "Michel de Montaigne",
+    "credit": "anonymous",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Montaigne-Dumonstier.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "tomas-garrigue-masaryk",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Tomáš Garrigue Masaryk",
+      "from": "1850"
+    }
+  ],
+  "summary": "Founder and first president of Czechoslovakia.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q78492",
+  "events": [
+    {
+      "type": "born",
+      "date": "1850-03-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-09-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tomáš Garrigue Masaryk (Q78492)",
+      "url": "https://www.wikidata.org/wiki/Q78492",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tomáš Garrigue Masaryk",
+      "url": "https://en.wikipedia.org/wiki/Tomáš_Garrigue_Masaryk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Masaryk_im_Bild_%281937%29_obr_088_%E2%80%93_Podobizna_z_r._1934_%28Karel_Nov%C3%A1k%29_%28cropped%29.jpg/500px-Masaryk_im_Bild_%281937%29_obr_088_%E2%80%93_Podobizna_z_r._1934_%28Karel_Nov%C3%A1k%29_%28cropped%29.jpg",
+    "alt": "Tomáš Garrigue Masaryk",
+    "credit": "Státní grafická škola v Praze / Karel Novák (1875–1950)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Masaryk_im_Bild_(1937)_obr_088_%E2%80%93_Podobizna_z_r._1934_(Karel_Nov%C3%A1k)_(cropped).jpg"
+  }
+}

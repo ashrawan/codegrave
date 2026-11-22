@@ -1,0 +1,45 @@
+{
+  "id": "medina",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Medina",
+      "from": "0622"
+    }
+  ],
+  "summary": "The oasis city where Muhammad moved in 622, the Hijra, which begins the Islamic calendar.",
+  "wikidata": "Q35484",
+  "events": [
+    {
+      "type": "born",
+      "date": "0622",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Medina (Q35484)",
+      "url": "https://www.wikidata.org/wiki/Q35484",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Medina",
+      "url": "https://en.wikipedia.org/wiki/Medina",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Madeena_masjid_nabavi_12122008230.jpg/500px-Madeena_masjid_nabavi_12122008230.jpg",
+    "alt": "Medina",
+    "credit": "Bluemangoa2z at Malayalam Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Madeena_masjid_nabavi_12122008230.jpg"
+  }
+}

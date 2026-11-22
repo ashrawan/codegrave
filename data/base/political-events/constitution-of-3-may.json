@@ -1,0 +1,53 @@
+{
+  "id": "constitution-of-3-may",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Constitution of 3 May 1791",
+      "from": "1791"
+    }
+  ],
+  "summary": "Europe's first modern written constitution, adopted in 1791.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1129096",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-05-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1793-11-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Constitution of 3 May 1791 (Q1129096)",
+      "url": "https://www.wikidata.org/wiki/Q1129096",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Constitution of 3 May 1791",
+      "url": "https://en.wikipedia.org/wiki/Constitution_of_3_May_1791",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Manuscript_of_the_Constitution_of_the_3rd_May_1791.PNG/500px-Manuscript_of_the_Constitution_of_the_3rd_May_1791.PNG",
+    "alt": "Constitution of 3 May 1791",
+    "credit": "Ignacy Potocki (1750–1809), Hugo Kołłątaj (1750–1812), Stanisław August Poniatowski (1732–1798)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Manuscript_of_the_Constitution_of_the_3rd_May_1791.PNG"
+  }
+}

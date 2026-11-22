@@ -1,0 +1,53 @@
+{
+  "id": "pakistan-nuclear-tests",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Pakistan's nuclear tests",
+      "from": "1998"
+    }
+  ],
+  "summary": "Pakistan tested nuclear weapons in May 1998, days after India.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2658429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-05-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1998-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Pakistan's nuclear tests (Q2658429)",
+      "url": "https://www.wikidata.org/wiki/Q2658429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chagai-I",
+      "url": "https://en.wikipedia.org/wiki/Chagai-I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Chagaiatomictests.jpg/500px-Chagaiatomictests.jpg",
+    "alt": "Pakistan's nuclear tests",
+    "credit": "Government of Pakistan",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Chagaiatomictests.jpg"
+  }
+}

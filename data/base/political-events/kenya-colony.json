@@ -1,0 +1,46 @@
+{
+  "id": "kenya-colony",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Kenya Colony",
+      "from": "1920"
+    }
+  ],
+  "summary": "British Kenya from 1920 to 1963.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2538511",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-06-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1963-12-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kenya Colony (Q2538511)",
+      "url": "https://www.wikidata.org/wiki/Q2538511",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kenya Colony",
+      "url": "https://en.wikipedia.org/wiki/Kenya_Colony",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

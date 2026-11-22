@@ -1,0 +1,53 @@
+{
+  "id": "willem-janszoon",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Willem Janszoon",
+      "from": "1570"
+    }
+  ],
+  "summary": "Dutch navigator who in 1606 became the first European known to land in Australia.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q174085",
+  "events": [
+    {
+      "type": "born",
+      "date": "1570",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1630",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Willem Janszoon (Q174085)",
+      "url": "https://www.wikidata.org/wiki/Q174085",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Willem Janszoon",
+      "url": "https://en.wikipedia.org/wiki/Willem_Janszoon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Duyfken_Replica_Under_Sail.jpg/500px-Duyfken_Replica_Under_Sail.jpg",
+    "alt": "Willem Janszoon",
+    "credit": "Rupert Gerritsen",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Duyfken_Replica_Under_Sail.jpg"
+  }
+}

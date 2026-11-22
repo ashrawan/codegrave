@@ -1,0 +1,50 @@
+{
+  "id": "zollverein",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Zollverein",
+      "from": "1834"
+    }
+  ],
+  "summary": "The customs union of German states formed in 1834, which helped Germany industrialise and unite.",
+  "wikidata": "Q155707",
+  "events": [
+    {
+      "type": "born",
+      "date": "1834",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1919",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Zollverein (Q155707)",
+      "url": "https://www.wikidata.org/wiki/Q155707",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zollverein",
+      "url": "https://en.wikipedia.org/wiki/Zollverein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Zollverein_%281834%29.png/500px-Zollverein_%281834%29.png",
+    "alt": "Zollverein",
+    "credit": "Nicolas Eynaud",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zollverein_(1834).png"
+  }
+}

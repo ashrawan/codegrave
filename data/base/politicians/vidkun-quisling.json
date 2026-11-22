@@ -1,0 +1,53 @@
+{
+  "id": "vidkun-quisling",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Vidkun Quisling",
+      "from": "1887"
+    }
+  ],
+  "summary": "Leader who ruled Norway for the Nazis, whose name came to mean traitor.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q151364",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Vidkun Quisling (Q151364)",
+      "url": "https://www.wikidata.org/wiki/Q151364",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vidkun Quisling",
+      "url": "https://en.wikipedia.org/wiki/Vidkun_Quisling",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Portrett_av_Vidkun_Quisling_i_sivile_kl%C3%A6r%2C_ukjent_datering_%283x4_cropped%29.jpg/500px-Portrett_av_Vidkun_Quisling_i_sivile_kl%C3%A6r%2C_ukjent_datering_%283x4_cropped%29.jpg",
+    "alt": "Vidkun Quisling",
+    "credit": "Riksarkivet (National Archives of Norway) from Oslo, Norway",
+    "licence": "No restrictions",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrett_av_Vidkun_Quisling_i_sivile_kl%C3%A6r,_ukjent_datering_(3x4_cropped).jpg"
+  }
+}

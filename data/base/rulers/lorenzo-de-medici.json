@@ -1,0 +1,53 @@
+{
+  "id": "lorenzo-de-medici",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Lorenzo the Magnificent",
+      "from": "1449"
+    }
+  ],
+  "summary": "Ruler of Florence and patron of Botticelli and the young Michelangelo, at the height of the city's glory.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q177854",
+  "events": [
+    {
+      "type": "born",
+      "date": "1449-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1492-04-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Lorenzo the Magnificent (Q177854)",
+      "url": "https://www.wikidata.org/wiki/Q177854",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lorenzo de' Medici",
+      "url": "https://en.wikipedia.org/wiki/Lorenzo_de'_Medici",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Bottega_di_Agnolo_di_Cosimo%2C_detto_il_Bronzino_%28Firenze_1503-1572%29_-_Ritratto_di_Lorenzo_il_Magnifico_-_865_-_Uffizi_Gallery_%28cropped%29.jpg/500px-Bottega_di_Agnolo_di_Cosimo%2C_detto_il_Bronzino_%28Firenze_1503-1572%29_-_Ritratto_di_Lorenzo_il_Magnifico_-_865_-_Uffizi_Gallery_%28cropped%29.jpg",
+    "alt": "Lorenzo the Magnificent",
+    "credit": "Workshop of Bronzino",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bottega_di_Agnolo_di_Cosimo,_detto_il_Bronzino_(Firenze_1503-1572)_-_Ritratto_di_Lorenzo_il_Magnifico_-_865_-_Uffizi_Gallery_(cropped).jpg"
+  }
+}

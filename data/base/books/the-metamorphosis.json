@@ -1,0 +1,48 @@
+{
+  "id": "the-metamorphosis",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Metamorphosis",
+      "from": "1915"
+    }
+  ],
+  "summary": "Kafka's story of a man who wakes up as a giant insect.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q184222",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Metamorphosis (Q184222)",
+      "url": "https://www.wikidata.org/wiki/Q184222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Metamorphosis",
+      "url": "https://en.wikipedia.org/wiki/The_Metamorphosis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Franz_Kafka_Die_Verwandlung_1916_Orig.-Pappband.jpg/500px-Franz_Kafka_Die_Verwandlung_1916_Orig.-Pappband.jpg",
+    "alt": "The Metamorphosis",
+    "credit": "© Foto H.-P.Haack",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Franz_Kafka_Die_Verwandlung_1916_Orig.-Pappband.jpg"
+  }
+}

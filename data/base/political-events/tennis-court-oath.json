@@ -1,0 +1,53 @@
+{
+  "id": "tennis-court-oath",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Tennis Court Oath",
+      "from": "1789"
+    }
+  ],
+  "summary": "The commoners' deputies swore on a tennis court in June 1789 not to part until France had a constitution.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q60022",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789-06-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1789-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tennis Court Oath (Q60022)",
+      "url": "https://www.wikidata.org/wiki/Q60022",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tennis Court Oath",
+      "url": "https://en.wikipedia.org/wiki/Tennis_Court_Oath",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Serment_du_Jeu_de_Paume_-_Jacques-Louis_David.jpg/500px-Serment_du_Jeu_de_Paume_-_Jacques-Louis_David.jpg",
+    "alt": "Tennis Court Oath",
+    "credit": "Jacques-Louis David",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Serment_du_Jeu_de_Paume_-_Jacques-Louis_David.jpg"
+  }
+}

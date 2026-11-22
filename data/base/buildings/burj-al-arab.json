@@ -1,0 +1,48 @@
+{
+  "id": "burj-al-arab",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Burj Al Arab",
+      "from": "1999"
+    }
+  ],
+  "summary": "A sail-shaped hotel on its own island in Dubai, opened in 1999.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q62939",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Burj Al Arab (Q62939)",
+      "url": "https://www.wikidata.org/wiki/Q62939",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Burj Al Arab",
+      "url": "https://en.wikipedia.org/wiki/Burj_Al_Arab",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Burj_Al_Arab_and_Jumeirah_Beach_%289601659067%29.jpg/500px-Burj_Al_Arab_and_Jumeirah_Beach_%289601659067%29.jpg",
+    "alt": "Burj Al Arab",
+    "credit": "Yacine Hary",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Burj_Al_Arab_and_Jumeirah_Beach_(9601659067).jpg"
+  }
+}

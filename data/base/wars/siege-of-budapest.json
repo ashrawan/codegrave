@@ -1,0 +1,53 @@
+{
+  "id": "siege-of-budapest",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Budapest",
+      "from": "1944"
+    }
+  ],
+  "summary": "The Soviet siege of Budapest in 1944 and 1945, one of the bloodiest of the war.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q155103",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-12-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-02-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Budapest (Q155103)",
+      "url": "https://www.wikidata.org/wiki/Q155103",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Budapest",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Budapest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/UNGHERIA.jpg/500px-UNGHERIA.jpg",
+    "alt": "Siege of Budapest",
+    "credit": "fotoreporter sovietico sconosciuto",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:UNGHERIA.jpg"
+  }
+}

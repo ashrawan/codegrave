@@ -1,0 +1,45 @@
+{
+  "id": "fado",
+  "category": "genres",
+  "names": [
+    {
+      "name": "Fado",
+      "from": "1820"
+    }
+  ],
+  "summary": "The sad songs of longing of Lisbon and Coimbra.",
+  "wikidata": "Q185676",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Fado (Q185676)",
+      "url": "https://www.wikidata.org/wiki/Q185676",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fado",
+      "url": "https://en.wikipedia.org/wiki/Fado",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Old_Portuguese_Tiles_O_Fado_%282861589727%29.jpg/500px-Old_Portuguese_Tiles_O_Fado_%282861589727%29.jpg",
+    "alt": "Fado",
+    "credit": "Pedro Simões from Lisboa, Portugal",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Old_Portuguese_Tiles_O_Fado_(2861589727).jpg"
+  }
+}

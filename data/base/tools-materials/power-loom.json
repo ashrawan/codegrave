@@ -1,0 +1,45 @@
+{
+  "id": "power-loom",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Power loom",
+      "from": "1785"
+    }
+  ],
+  "summary": "Edmund Cartwright's weaving machine of 1785, which in time put hand weavers out of work.",
+  "wikidata": "Q1353185",
+  "events": [
+    {
+      "type": "born",
+      "date": "1785",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Power loom (Q1353185)",
+      "url": "https://www.wikidata.org/wiki/Q1353185",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Power loom",
+      "url": "https://en.wikipedia.org/wiki/Power_loom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Early_Power_Loom_Helmshore_6154.JPG/500px-Early_Power_Loom_Helmshore_6154.JPG",
+    "alt": "Power loom",
+    "credit": "Clem Rutter, Rochester, Kent.",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Early_Power_Loom_Helmshore_6154.JPG"
+  }
+}

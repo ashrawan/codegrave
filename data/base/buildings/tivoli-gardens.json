@@ -1,0 +1,48 @@
+{
+  "id": "tivoli-gardens",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Tivoli Gardens",
+      "from": "1843"
+    }
+  ],
+  "summary": "One of the oldest amusement parks in the world, opened in Copenhagen in 1843.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q110289",
+  "events": [
+    {
+      "type": "born",
+      "date": "1843-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tivoli Gardens (Q110289)",
+      "url": "https://www.wikidata.org/wiki/Q110289",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tivoli Gardens",
+      "url": "https://en.wikipedia.org/wiki/Tivoli_Gardens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/CopenhagenTivoliEntrance.jpg/500px-CopenhagenTivoliEntrance.jpg",
+    "alt": "Tivoli Gardens",
+    "credit": "Elgaard",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CopenhagenTivoliEntrance.jpg"
+  }
+}

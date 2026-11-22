@@ -16,11 +16,14 @@
     "cucuteni-trypillia-culture",
     "kyiv",
     "kievan-rus",
+    "volodymyr-the-great",
     "saint-sophia-cathedral-kyiv",
+    "kyiv-pechersk-lavra",
     "bohdan-khmelnytsky",
     "cossack-hetmanate",
     "taras-shevchenko",
     "ukraine",
+    "ukrainian-war-of-independence",
     "ukrainian-peoples-republic",
     "holodomor",
     "babi-yar",
@@ -30,17 +33,21 @@
     "chernobyl-disaster",
     "chernobyl-exclusion-zone",
     "declaration-of-independence-of-ukraine",
+    "budapest-memorandum",
     "orange-revolution",
     "euromaidan",
     "russo-ukrainian-war",
     "annexation-of-crimea",
-    "russian-invasion-of-ukraine"
+    "russian-invasion-of-ukraine",
+    "battle-of-kyiv-2022",
+    "siege-of-mariupol",
+    "kakhovka-dam-destruction"
   ],
   "checkpoints": [
     {
       "id": "the-steppe-and-rus",
       "name": "The steppe and Rus",
-      "from": -5500,
+      "from": -6000,
       "to": 1239,
       "note": "Trypillian farmers built great towns, and Scythians rode the steppe. Kyiv became the capital of Rus in the 800s."
     },

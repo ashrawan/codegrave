@@ -1,0 +1,45 @@
+{
+  "id": "sennar-sultanate",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Sennar",
+      "from": "1504"
+    }
+  ],
+  "summary": "The capital of the Funj Sultanate on the Blue Nile.",
+  "wikidata": "Q611867",
+  "events": [
+    {
+      "type": "born",
+      "date": "1504",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sennar (Q611867)",
+      "url": "https://www.wikidata.org/wiki/Q611867",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sennar",
+      "url": "https://en.wikipedia.org/wiki/Sennar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Sennar_University_Gate.JPG/500px-Sennar_University_Gate.JPG",
+    "alt": "Sennar",
+    "credit": "Ahmadnet20",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sennar_University_Gate.JPG"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "swedish-empire",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Swedish Empire",
+      "from": "1611"
+    }
+  ],
+  "summary": "Sweden as a great power of northern Europe from 1611 to 1721.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q215443",
+  "events": [
+    {
+      "type": "born",
+      "date": "1611",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1721",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Swedish Empire (Q215443)",
+      "url": "https://www.wikidata.org/wiki/Q215443",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Swedish Empire",
+      "url": "https://en.wikipedia.org/wiki/Swedish_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

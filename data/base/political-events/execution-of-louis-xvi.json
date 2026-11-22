@@ -1,0 +1,53 @@
+{
+  "id": "execution-of-louis-xvi",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Execution of Louis XVI",
+      "from": "1793"
+    }
+  ],
+  "summary": "The king was tried by the Convention and beheaded by the guillotine in Paris in January 1793.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3062714",
+  "events": [
+    {
+      "type": "born",
+      "date": "1793-01-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1793-01-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Execution of Louis XVI (Q3062714)",
+      "url": "https://www.wikidata.org/wiki/Q3062714",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Execution of Louis XVI",
+      "url": "https://en.wikipedia.org/wiki/Execution_of_Louis_XVI",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Hinrichtung_Ludwig_des_XVI.png/500px-Hinrichtung_Ludwig_des_XVI.png",
+    "alt": "Execution of Louis XVI",
+    "credit": "Georg Heinrich Sieveking",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hinrichtung_Ludwig_des_XVI.png"
+  }
+}

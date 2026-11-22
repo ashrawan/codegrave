@@ -1,0 +1,48 @@
+{
+  "id": "jeronimos-monastery",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Jerónimos Monastery",
+      "from": "1501"
+    }
+  ],
+  "summary": "The monastery in Lisbon paid for by the spice trade, where Vasco da Gama is buried.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q272781",
+  "events": [
+    {
+      "type": "born",
+      "date": "1501",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jerónimos Monastery (Q272781)",
+      "url": "https://www.wikidata.org/wiki/Q272781",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jerónimos Monastery",
+      "url": "https://en.wikipedia.org/wiki/Jerónimos_Monastery",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg/500px-1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg",
+    "alt": "Jerónimos Monastery",
+    "credit": "Holger Uwe Schmitt",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1502_legte_K%C3%B6nig_Manuel_I._den_Grundstein_f%C3%BCr_das_Hieronymus_Kloster_in_Lissabon._06.jpg"
+  }
+}

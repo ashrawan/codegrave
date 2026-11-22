@@ -1,0 +1,48 @@
+{
+  "id": "palm-jumeirah",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Palm Jumeirah",
+      "from": "2001"
+    }
+  ],
+  "summary": "An island built off Dubai in the shape of a palm tree, begun in 2001.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q277294",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Palm Jumeirah (Q277294)",
+      "url": "https://www.wikidata.org/wiki/Q277294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palm Jumeirah",
+      "url": "https://en.wikipedia.org/wiki/Palm_Jumeirah",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Artificial_Archipelagos%2C_Dubai%2C_United_Arab_Emirates_ISS022-E-024940_lrg_%28cropped%29.jpg/500px-Artificial_Archipelagos%2C_Dubai%2C_United_Arab_Emirates_ISS022-E-024940_lrg_%28cropped%29.jpg",
+    "alt": "Palm Jumeirah",
+    "credit": "Member of the Expedition 22 crew.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Artificial_Archipelagos,_Dubai,_United_Arab_Emirates_ISS022-E-024940_lrg_(cropped).jpg"
+  }
+}

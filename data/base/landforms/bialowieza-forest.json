@@ -1,0 +1,45 @@
+{
+  "id": "bialowieza-forest",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Białowieża Forest",
+      "from": "1932"
+    }
+  ],
+  "summary": "One of the last primeval forests of Europe, on the Polish border, home of the European bison.",
+  "wikidata": "Q192666",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Białowieża Forest (Q192666)",
+      "url": "https://www.wikidata.org/wiki/Q192666",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Białowieża Forest",
+      "url": "https://en.wikipedia.org/wiki/Białowieża_Forest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Wisent.jpg/500px-Wisent.jpg",
+    "alt": "Białowieża Forest",
+    "credit": "Henryk Kotowski at English Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wisent.jpg"
+  }
+}

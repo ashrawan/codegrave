@@ -1,0 +1,53 @@
+{
+  "id": "andres-bonifacio",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Andrés Bonifacio",
+      "from": "1863"
+    }
+  ],
+  "summary": "Founder of the Katipunan, the society that began the revolution of 1896.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q313604",
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-11-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1897-05-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Andrés Bonifacio (Q313604)",
+      "url": "https://www.wikidata.org/wiki/Q313604",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andrés Bonifacio",
+      "url": "https://en.wikipedia.org/wiki/Andrés_Bonifacio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Andr%C3%A9s_Bonifacio_photo_%28cropped%29.jpg/500px-Andr%C3%A9s_Bonifacio_photo_%28cropped%29.jpg",
+    "alt": "Andrés Bonifacio",
+    "credit": "Chofre y Cia (now Cacho Hermanos Inc.)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Andr%C3%A9s_Bonifacio_photo_(cropped).jpg"
+  }
+}

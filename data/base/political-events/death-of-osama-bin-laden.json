@@ -1,0 +1,53 @@
+{
+  "id": "death-of-osama-bin-laden",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Killing of Osama bin Laden",
+      "from": "2011"
+    }
+  ],
+  "summary": "US forces killed Osama bin Laden in Abbottabad in 2011.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q19085",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-05-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-05-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Killing of Osama bin Laden (Q19085)",
+      "url": "https://www.wikidata.org/wiki/Q19085",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Killing of Osama bin Laden",
+      "url": "https://en.wikipedia.org/wiki/Killing_of_Osama_bin_Laden",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Osama_bin_Laden_compound2.jpg/500px-Osama_bin_Laden_compound2.jpg",
+    "alt": "Killing of Osama bin Laden",
+    "credit": "Sajjad Ali Qureshi",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Osama_bin_Laden_compound2.jpg"
+  }
+}

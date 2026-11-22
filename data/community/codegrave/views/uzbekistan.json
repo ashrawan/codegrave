@@ -15,9 +15,13 @@
     "aral-sea",
     "samarkand",
     "sogdia",
+    "bukhara",
+    "khiva",
+    "tashkent",
     "al-khwarizmi-scientist",
     "samanid-empire",
     "al-biruni",
+    "avicenna",
     "timur",
     "timurid-empire",
     "ulugh-beg",
@@ -28,13 +32,14 @@
     "islam-karimov",
     "shavkat-mirziyoyev",
     "1966-tashkent-earthquake",
-    "uzbekistan"
+    "uzbekistan",
+    "andijan-massacre"
   ],
   "checkpoints": [
     {
       "id": "silk-road",
       "name": "Silk Road",
-      "from": -500,
+      "from": -10000,
       "to": 1369,
       "note": "Sogdian merchants traded along the Silk Road. Arab armies brought Islam, scholars such as al-Khwarizmi worked, and the Mongols laid waste the cities."
     },

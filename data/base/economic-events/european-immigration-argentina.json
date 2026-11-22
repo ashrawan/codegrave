@@ -1,0 +1,46 @@
+{
+  "id": "european-immigration-argentina",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Great European immigration",
+      "from": "1857"
+    }
+  ],
+  "summary": "Millions of Italians and Spaniards came to Argentina between the 1850s and 1930.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q9008551",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1930",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Great European immigration (Q9008551)",
+      "url": "https://www.wikidata.org/wiki/Q9008551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Immigration to Argentina",
+      "url": "https://en.wikipedia.org/wiki/Immigration_to_Argentina",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-guningtou",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of Guningtou",
+      "from": "1949"
+    }
+  ],
+  "summary": "The battle of 1949 on Kinmen that stopped the Communists from taking the island.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q699096",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-10-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1949-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Guningtou (Q699096)",
+      "url": "https://www.wikidata.org/wiki/Q699096",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Guningtou",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Guningtou",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/ROC_Quemoy.png",
+    "alt": "Battle of Guningtou",
+    "credit": "CIA (base map), Ran (derivative work)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ROC_Quemoy.png"
+  }
+}

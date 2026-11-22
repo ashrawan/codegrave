@@ -1,0 +1,45 @@
+{
+  "id": "padma-bridge",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Padma Bridge",
+      "from": "2022"
+    }
+  ],
+  "summary": "The road and rail bridge over the Padma river, opened in 2022, the largest building project in the country's history.",
+  "wikidata": "Q7123825",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Padma Bridge (Q7123825)",
+      "url": "https://www.wikidata.org/wiki/Q7123825",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Padma Bridge",
+      "url": "https://en.wikipedia.org/wiki/Padma_Bridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/The_padma_bridge_02.jpg/500px-The_padma_bridge_02.jpg",
+    "alt": "Padma Bridge",
+    "credit": "Azim Khan Ronnie",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_padma_bridge_02.jpg"
+  }
+}

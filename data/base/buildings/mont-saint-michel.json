@@ -1,0 +1,48 @@
+{
+  "id": "mont-saint-michel",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Mont-Saint-Michel",
+      "from": "0966"
+    }
+  ],
+  "summary": "An abbey on a rocky island off Normandy that the tide cuts off from the mainland.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q20892",
+  "events": [
+    {
+      "type": "born",
+      "date": "0966",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mont-Saint-Michel (Q20892)",
+      "url": "https://www.wikidata.org/wiki/Q20892",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mont-Saint-Michel",
+      "url": "https://en.wikipedia.org/wiki/Mont-Saint-Michel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Mont_St_Michel_3%2C_Brittany%2C_France_-_July_2011.jpg/500px-Mont_St_Michel_3%2C_Brittany%2C_France_-_July_2011.jpg",
+    "alt": "Mont-Saint-Michel",
+    "credit": "Diliff",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_3,_Brittany,_France_-_July_2011.jpg"
+  }
+}

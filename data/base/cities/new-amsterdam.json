@@ -1,0 +1,50 @@
+{
+  "id": "new-amsterdam",
+  "category": "cities",
+  "names": [
+    {
+      "name": "New Amsterdam",
+      "from": "1625"
+    }
+  ],
+  "summary": "The Dutch trading town on Manhattan, founded in the 1620s and taken by the English in 1664, when it became New York.",
+  "wikidata": "Q223308",
+  "events": [
+    {
+      "type": "born",
+      "date": "1625",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1664",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: New Amsterdam (Q223308)",
+      "url": "https://www.wikidata.org/wiki/Q223308",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Amsterdam",
+      "url": "https://en.wikipedia.org/wiki/New_Amsterdam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/View_of_New_Amsterdam_from_the_harbor.jpg/500px-View_of_New_Amsterdam_from_the_harbor.jpg",
+    "alt": "New Amsterdam",
+    "credit": "Nicolaes Visscher II",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_New_Amsterdam_from_the_harbor.jpg"
+  }
+}

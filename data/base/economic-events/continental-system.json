@@ -1,0 +1,53 @@
+{
+  "id": "continental-system",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Continental System",
+      "from": "1806"
+    }
+  ],
+  "summary": "Napoleon's ban on trade with Britain from 1806, which hurt Europe and pushed him into wars to enforce it.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q258081",
+  "events": [
+    {
+      "type": "born",
+      "date": "1806-11-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1814-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Continental System (Q258081)",
+      "url": "https://www.wikidata.org/wiki/Q258081",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Continental System",
+      "url": "https://en.wikipedia.org/wiki/Continental_System",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Gei%C3%9Fler_Leipziger_Kriegs-Scene_3.jpg/500px-Gei%C3%9Fler_Leipziger_Kriegs-Scene_3.jpg",
+    "alt": "Continental System",
+    "credit": "Gottfried Heinrich Geißler",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gei%C3%9Fler_Leipziger_Kriegs-Scene_3.jpg"
+  }
+}

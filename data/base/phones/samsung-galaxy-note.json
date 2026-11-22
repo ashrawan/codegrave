@@ -1,0 +1,45 @@
+{
+  "id": "samsung-galaxy-note",
+  "category": "phones",
+  "names": [
+    {
+      "name": "Samsung Galaxy Note",
+      "from": "2011"
+    }
+  ],
+  "summary": "Samsung's 2011 phone with a 5.3 inch screen and a pen, first mocked as too big, which started the move to large phones.",
+  "wikidata": "Q494698",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Samsung Galaxy Note (Q494698)",
+      "url": "https://www.wikidata.org/wiki/Q494698",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samsung Galaxy Note (original)",
+      "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Note_(original)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Samsung_Galaxy_Note.png/500px-Samsung_Galaxy_Note.png",
+    "alt": "Samsung Galaxy Note",
+    "credit": "GadgetsGuy",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Note.png"
+  }
+}

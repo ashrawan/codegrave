@@ -1,0 +1,46 @@
+{
+  "id": "taif-agreement",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Taif Agreement",
+      "from": "1989"
+    }
+  ],
+  "summary": "The agreement of 1989 that ended the Lebanese civil war and shared power among religious groups.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q321936",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1989",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Taif Agreement (Q321936)",
+      "url": "https://www.wikidata.org/wiki/Q321936",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taif Agreement",
+      "url": "https://en.wikipedia.org/wiki/Taif_Agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

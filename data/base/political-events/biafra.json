@@ -1,0 +1,46 @@
+{
+  "id": "biafra",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Biafra",
+      "from": "1967"
+    }
+  ],
+  "summary": "The breakaway state of the south-east from 1967 to 1970.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q178469",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-05-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-01-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Biafra (Q178469)",
+      "url": "https://www.wikidata.org/wiki/Q178469",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Biafra",
+      "url": "https://en.wikipedia.org/wiki/Biafra",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

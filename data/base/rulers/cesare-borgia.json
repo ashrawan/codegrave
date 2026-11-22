@@ -1,0 +1,53 @@
+{
+  "id": "cesare-borgia",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Cesare Borgia",
+      "from": "1475"
+    }
+  ],
+  "summary": "Son of a pope who carved out a state in central Italy by war and murder; Machiavelli used him as a model in The Prince.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q187998",
+  "events": [
+    {
+      "type": "born",
+      "date": "1475-09-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1507-03-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cesare Borgia (Q187998)",
+      "url": "https://www.wikidata.org/wiki/Q187998",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cesare Borgia",
+      "url": "https://en.wikipedia.org/wiki/Cesare_Borgia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Cesare_Borgia%2C_Duke_of_Valentinois.jpg/500px-Cesare_Borgia%2C_Duke_of_Valentinois.jpg",
+    "alt": "Cesare Borgia",
+    "credit": "After Bartolomeo Veneto",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cesare_Borgia,_Duke_of_Valentinois.jpg"
+  }
+}

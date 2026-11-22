@@ -1,0 +1,45 @@
+{
+  "id": "amman",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Amman",
+      "from": "1921"
+    }
+  ],
+  "summary": "Capital of Jordan since 1921, built over the ancient city of Philadelphia and now home to about four million people.",
+  "wikidata": "Q3805",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Amman (Q3805)",
+      "url": "https://www.wikidata.org/wiki/Q3805",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amman",
+      "url": "https://en.wikipedia.org/wiki/Amman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Amman.jpg/500px-Amman.jpg",
+    "alt": "Amman",
+    "credit": "David Bjorgen",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Amman.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "raffles-hotel",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Raffles Hotel",
+      "from": "1887"
+    }
+  ],
+  "summary": "The colonial hotel of 1887 where the Singapore Sling was invented.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1538837",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Raffles Hotel (Q1538837)",
+      "url": "https://www.wikidata.org/wiki/Q1538837",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Raffles Hotel",
+      "url": "https://en.wikipedia.org/wiki/Raffles_Hotel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/RafflesHotel-Singapore-20041025.jpg/500px-RafflesHotel-Singapore-20041025.jpg",
+    "alt": "Raffles Hotel",
+    "credit": "Velela.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:RafflesHotel-Singapore-20041025.jpg"
+  }
+}

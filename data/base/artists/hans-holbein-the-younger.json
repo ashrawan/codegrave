@@ -1,0 +1,53 @@
+{
+  "id": "hans-holbein-the-younger",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Hans Holbein the Younger",
+      "from": "1497"
+    }
+  ],
+  "summary": "German painter of exact portraits at the court of Henry VIII, including The Ambassadors.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q48319",
+  "events": [
+    {
+      "type": "born",
+      "date": "1497",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1543-11-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hans Holbein the Younger (Q48319)",
+      "url": "https://www.wikidata.org/wiki/Q48319",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hans Holbein the Younger",
+      "url": "https://en.wikipedia.org/wiki/Hans_Holbein_the_Younger",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Hans_Holbein_the_Younger%2C_self-portrait.jpg/500px-Hans_Holbein_the_Younger%2C_self-portrait.jpg",
+    "alt": "Hans Holbein the Younger",
+    "credit": "Hans Holbein the Younger",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hans_Holbein_the_Younger,_self-portrait.jpg"
+  }
+}

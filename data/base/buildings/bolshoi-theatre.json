@@ -1,0 +1,48 @@
+{
+  "id": "bolshoi-theatre",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Bolshoi Theatre",
+      "from": "1776"
+    }
+  ],
+  "summary": "Moscow's theatre of ballet and opera.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q138908",
+  "events": [
+    {
+      "type": "born",
+      "date": "1776",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bolshoi Theatre (Q138908)",
+      "url": "https://www.wikidata.org/wiki/Q138908",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bolshoi Theatre",
+      "url": "https://en.wikipedia.org/wiki/Bolshoi_Theatre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Moscow_-_2025_-_Facade_of_Big_Theatre_%281%29.jpg/500px-Moscow_-_2025_-_Facade_of_Big_Theatre_%281%29.jpg",
+    "alt": "Bolshoi Theatre",
+    "credit": "Юрий Д.К.",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Moscow_-_2025_-_Facade_of_Big_Theatre_(1).jpg"
+  }
+}

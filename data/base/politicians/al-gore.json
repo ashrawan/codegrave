@@ -1,0 +1,48 @@
+{
+  "id": "al-gore",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Al Gore",
+      "from": "1948"
+    }
+  ],
+  "summary": "US vice president who warned about global warming for decades and shared the Nobel Peace Prize in 2007 with the IPCC.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q19673",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Al Gore (Q19673)",
+      "url": "https://www.wikidata.org/wiki/Q19673",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Al Gore",
+      "url": "https://en.wikipedia.org/wiki/Al_Gore",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Al_Gore%2C_Vice_President_of_the_United_States%2C_official_portrait_1994.jpg/500px-Al_Gore%2C_Vice_President_of_the_United_States%2C_official_portrait_1994.jpg",
+    "alt": "Al Gore",
+    "credit": "Unknown photographerUnknown photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Al_Gore,_Vice_President_of_the_United_States,_official_portrait_1994.jpg"
+  }
+}

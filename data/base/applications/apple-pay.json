@@ -1,0 +1,45 @@
+{
+  "id": "apple-pay",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Apple Pay",
+      "from": "2014"
+    }
+  ],
+  "summary": "Apple's service of 2014 that lets people pay by holding a phone to a card reader.",
+  "wikidata": "Q18010990",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-10-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Apple Pay (Q18010990)",
+      "url": "https://www.wikidata.org/wiki/Q18010990",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apple Pay",
+      "url": "https://en.wikipedia.org/wiki/Apple_Pay",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Apple-payment-square.jpg/500px-Apple-payment-square.jpg",
+    "alt": "Apple Pay",
+    "credit": "Mybloodtypeiscoffee",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Apple-payment-square.jpg"
+  }
+}

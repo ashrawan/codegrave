@@ -1,0 +1,53 @@
+{
+  "id": "juan-vicente-gomez",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Juan Vicente Gómez",
+      "from": "1857"
+    }
+  ],
+  "summary": "Dictator from 1908 to 1935 who opened Venezuela to the oil companies.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q317990",
+  "events": [
+    {
+      "type": "born",
+      "date": "1857-07-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1935-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Juan Vicente Gómez (Q317990)",
+      "url": "https://www.wikidata.org/wiki/Q317990",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Juan Vicente Gómez",
+      "url": "https://en.wikipedia.org/wiki/Juan_Vicente_Gómez",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/27/Juan_Vicente_G%C3%B3mez.jpg",
+    "alt": "Juan Vicente Gómez",
+    "credit": "Revista Selecta",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Juan_Vicente_G%C3%B3mez.jpg"
+  }
+}

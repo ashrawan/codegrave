@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-borodino",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Borodino",
+      "from": "1812"
+    }
+  ],
+  "summary": "The bloodiest day of the Napoleonic Wars, fought outside Moscow in 1812, which opened the road to the city.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q184320",
+  "events": [
+    {
+      "type": "born",
+      "date": "1812-09-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1812-09-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Borodino (Q184320)",
+      "url": "https://www.wikidata.org/wiki/Q184320",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Borodino",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Borodino",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Borodino-Desarno-Large.jpg/500px-Borodino-Desarno-Large.jpg",
+    "alt": "Battle of Borodino",
+    "credit": "Auguste-Joseph Desarnot",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Borodino-Desarno-Large.jpg"
+  }
+}

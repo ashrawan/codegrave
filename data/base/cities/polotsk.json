@@ -1,0 +1,45 @@
+{
+  "id": "polotsk",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Polotsk",
+      "from": "0862"
+    }
+  ],
+  "summary": "One of the oldest cities of the East Slavs, first recorded in 862.",
+  "wikidata": "Q200797",
+  "events": [
+    {
+      "type": "born",
+      "date": "0862",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Polotsk (Q200797)",
+      "url": "https://www.wikidata.org/wiki/Q200797",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Polotsk",
+      "url": "https://en.wikipedia.org/wiki/Polotsk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Polack_Montage_%282017%29.jpg/500px-Polack_Montage_%282017%29.jpg",
+    "alt": "Polotsk",
+    "credit": "Belarus2578",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Polack_Montage_(2017).jpg"
+  }
+}

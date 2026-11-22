@@ -1,0 +1,48 @@
+{
+  "id": "waldseemuller-map",
+  "category": "books",
+  "names": [
+    {
+      "name": "Waldseemüller map",
+      "from": "1507"
+    }
+  ],
+  "summary": "A world map of 1507, the first to show a separate new continent and to name it America.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q195801",
+  "events": [
+    {
+      "type": "born",
+      "date": "1507",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Waldseemüller map (Q195801)",
+      "url": "https://www.wikidata.org/wiki/Q195801",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Waldseemüller map",
+      "url": "https://en.wikipedia.org/wiki/Waldseemüller_map",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Waldseemuller_map_2.jpg/500px-Waldseemuller_map_2.jpg",
+    "alt": "Waldseemüller map",
+    "credit": "Martin Waldseemüller",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Waldseemuller_map_2.jpg"
+  }
+}

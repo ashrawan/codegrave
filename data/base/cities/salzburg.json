@@ -1,0 +1,45 @@
+{
+  "id": "salzburg",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Salzburg",
+      "from": "0696"
+    }
+  ],
+  "summary": "The city of the prince-archbishops, Mozart's birthplace, home of the Salzburg Festival.",
+  "wikidata": "Q34713",
+  "events": [
+    {
+      "type": "born",
+      "date": "0696",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Salzburg (Q34713)",
+      "url": "https://www.wikidata.org/wiki/Q34713",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Salzburg",
+      "url": "https://en.wikipedia.org/wiki/Salzburg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Salzburg_Altstadt_vom_M%C3%B6nchsberg.jpg/500px-Salzburg_Altstadt_vom_M%C3%B6nchsberg.jpg",
+    "alt": "Salzburg",
+    "credit": "Photo: Andreas Praefcke",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Salzburg_Altstadt_vom_M%C3%B6nchsberg.jpg"
+  }
+}

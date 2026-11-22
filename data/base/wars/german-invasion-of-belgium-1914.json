@@ -1,0 +1,53 @@
+{
+  "id": "german-invasion-of-belgium-1914",
+  "category": "wars",
+  "names": [
+    {
+      "name": "German invasion of Belgium",
+      "from": "1914"
+    }
+  ],
+  "summary": "Germany's invasion of neutral Belgium in 1914, which brought Britain into the war.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q792340",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-08-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1914-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: German invasion of Belgium (Q792340)",
+      "url": "https://www.wikidata.org/wiki/Q792340",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German invasion of Belgium (1914)",
+      "url": "https://en.wikipedia.org/wiki/German_invasion_of_Belgium_(1914)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/German_advance_through_Belgium%2C_August_1914.jpg/500px-German_advance_through_Belgium%2C_August_1914.jpg",
+    "alt": "German invasion of Belgium",
+    "credit": "Essen, Léon van der",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:German_advance_through_Belgium,_August_1914.jpg"
+  }
+}

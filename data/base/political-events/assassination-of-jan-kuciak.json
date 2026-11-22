@@ -1,0 +1,53 @@
+{
+  "id": "assassination-of-jan-kuciak",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Murder of Ján Kuciak",
+      "from": "2018"
+    }
+  ],
+  "summary": "The murder of a journalist and his fiancée in 2018, which led to huge protests and the fall of the government.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q50192515",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-02-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Murder of Ján Kuciak (Q50192515)",
+      "url": "https://www.wikidata.org/wiki/Q50192515",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Murder of Ján Kuciak",
+      "url": "https://en.wikipedia.org/wiki/Murder_of_Ján_Kuciak",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Dom_J%C3%A1na_Kuciaka_a_Martina_Ku%C5%A1n%C3%ADrovej.jpg/500px-Dom_J%C3%A1na_Kuciaka_a_Martina_Ku%C5%A1n%C3%ADrovej.jpg",
+    "alt": "Murder of Ján Kuciak",
+    "credit": "Miro.kern",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dom_J%C3%A1na_Kuciaka_a_Martina_Ku%C5%A1n%C3%ADrovej.jpg"
+  }
+}

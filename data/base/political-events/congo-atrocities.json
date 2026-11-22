@@ -1,0 +1,53 @@
+{
+  "id": "congo-atrocities",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Atrocities in the Congo Free State",
+      "from": "1885"
+    }
+  ],
+  "summary": "Forced labour for rubber under Leopold II killed millions and caused the first great human rights campaign.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1781531",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1908",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Atrocities in the Congo Free State (Q1781531)",
+      "url": "https://www.wikidata.org/wiki/Q1781531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Atrocities in the Congo Free State",
+      "url": "https://en.wikipedia.org/wiki/Atrocities_in_the_Congo_Free_State",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/MutilatedChildrenFromCongo.jpg/500px-MutilatedChildrenFromCongo.jpg",
+    "alt": "Atrocities in the Congo Free State",
+    "credit": "unknown, please edit with correct data.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:MutilatedChildrenFromCongo.jpg"
+  }
+}

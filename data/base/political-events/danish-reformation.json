@@ -1,0 +1,46 @@
+{
+  "id": "danish-reformation",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Danish Reformation",
+      "from": "1536"
+    }
+  ],
+  "summary": "Denmark became Lutheran in 1536.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4381174",
+  "events": [
+    {
+      "type": "born",
+      "date": "1536",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1536-10-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Danish Reformation (Q4381174)",
+      "url": "https://www.wikidata.org/wiki/Q4381174",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Reformation in Denmark–Norway and Holstein",
+      "url": "https://en.wikipedia.org/wiki/Reformation_in_Denmark–Norway_and_Holstein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

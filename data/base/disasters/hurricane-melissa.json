@@ -1,0 +1,50 @@
+{
+  "id": "hurricane-melissa",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Melissa",
+      "from": "2025"
+    }
+  ],
+  "summary": "One of the strongest Atlantic hurricanes on record, which struck Jamaica in October 2025.",
+  "wikidata": "Q136548986",
+  "events": [
+    {
+      "type": "born",
+      "date": "2025-10-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Melissa (Q136548986)",
+      "url": "https://www.wikidata.org/wiki/Q136548986",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Melissa",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Melissa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Melissa_2025-10-28_1230Z.jpg/500px-Melissa_2025-10-28_1230Z.jpg",
+    "alt": "Hurricane Melissa",
+    "credit": "ABI Imagery from NOAA's GOES-19 Satellite",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Melissa_2025-10-28_1230Z.jpg"
+  }
+}

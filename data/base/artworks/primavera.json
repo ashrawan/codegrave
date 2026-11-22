@@ -1,0 +1,48 @@
+{
+  "id": "primavera",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Primavera",
+      "from": "1480"
+    }
+  ],
+  "summary": "Botticelli's painting of a spring garden full of gods and nymphs, made around 1480.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q549847",
+  "events": [
+    {
+      "type": "born",
+      "date": "1480",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Primavera (Q549847)",
+      "url": "https://www.wikidata.org/wiki/Q549847",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Primavera (Botticelli)",
+      "url": "https://en.wikipedia.org/wiki/Primavera_(Botticelli)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Sandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg/500px-Sandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg",
+    "alt": "Primavera",
+    "credit": "Sandro Botticelli",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_La_Primavera_-_Google_Art_Project.jpg"
+  }
+}

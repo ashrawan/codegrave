@@ -1,0 +1,53 @@
+{
+  "id": "mohammad-mosaddegh",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Mohammad Mosaddegh",
+      "from": "1882"
+    }
+  ],
+  "summary": "Prime minister who nationalised Iran's oil and was overthrown in 1953.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q123037",
+  "events": [
+    {
+      "type": "born",
+      "date": "1882-06-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-03-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mohammad Mosaddegh (Q123037)",
+      "url": "https://www.wikidata.org/wiki/Q123037",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mohammad Mosaddegh",
+      "url": "https://en.wikipedia.org/wiki/Mohammad_Mosaddegh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Dr_Mohammad_Mosaddeq.jpg/500px-Dr_Mohammad_Mosaddeq.jpg",
+    "alt": "Mohammad Mosaddegh",
+    "credit": "International News Photos",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dr_Mohammad_Mosaddeq.jpg"
+  }
+}

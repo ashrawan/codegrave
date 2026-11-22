@@ -1,0 +1,48 @@
+{
+  "id": "schonbrunn-palace",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Schönbrunn Palace",
+      "from": "1696"
+    }
+  ],
+  "summary": "The summer palace of the Habsburgs in Vienna.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q131330",
+  "events": [
+    {
+      "type": "born",
+      "date": "1696",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Schönbrunn Palace (Q131330)",
+      "url": "https://www.wikidata.org/wiki/Q131330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Schönbrunn Palace",
+      "url": "https://en.wikipedia.org/wiki/Schönbrunn_Palace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Wien_-_Schloss_Sch%C3%B6nbrunn.JPG/500px-Wien_-_Schloss_Sch%C3%B6nbrunn.JPG",
+    "alt": "Schönbrunn Palace",
+    "credit": "C.Stadler/Bwag",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Wien_-_Schloss_Sch%C3%B6nbrunn.JPG"
+  }
+}

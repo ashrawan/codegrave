@@ -1,0 +1,53 @@
+{
+  "id": "first-chimurenga",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "First Chimurenga",
+      "from": "1896"
+    }
+  ],
+  "summary": "The uprising of 1896 and 1897 by the Ndebele and Shona against Rhodes's company.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q233657",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896-03",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1897-10",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: First Chimurenga (Q233657)",
+      "url": "https://www.wikidata.org/wiki/Q233657",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Matabele War",
+      "url": "https://en.wikipedia.org/wiki/Second_Matabele_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Burnham_%26_Bonar_Armstrong_after_the_assassination_of_Mlimo.jpg/500px-Burnham_%26_Bonar_Armstrong_after_the_assassination_of_Mlimo.jpg",
+    "alt": "First Chimurenga",
+    "credit": "Drawn by Frank Dadd. R.I. (died 1929)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Burnham_%26_Bonar_Armstrong_after_the_assassination_of_Mlimo.jpg"
+  }
+}

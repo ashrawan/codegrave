@@ -1,0 +1,53 @@
+{
+  "id": "fall-of-granada",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Fall of Granada",
+      "from": "1492"
+    }
+  ],
+  "summary": "Ferdinand and Isabella took Granada in 1492, ending Muslim rule in Spain.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1552718",
+  "events": [
+    {
+      "type": "born",
+      "date": "1492",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1492-01-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Fall of Granada (Q1552718)",
+      "url": "https://www.wikidata.org/wiki/Q1552718",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of Granada",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_Granada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg/500px-La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg",
+    "alt": "Fall of Granada",
+    "credit": "Francisco Pradilla y Ortiz",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Rendici%C3%B3n_de_Granada_-_Pradilla.jpg"
+  }
+}

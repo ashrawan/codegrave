@@ -1,0 +1,53 @@
+{
+  "id": "jozef-tiso",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jozef Tiso",
+      "from": "1887"
+    }
+  ],
+  "summary": "Priest and president of the Slovak State allied with Nazi Germany, executed in 1947.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154346",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887-10-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947-04-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jozef Tiso (Q154346)",
+      "url": "https://www.wikidata.org/wiki/Q154346",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jozef Tiso",
+      "url": "https://en.wikipedia.org/wiki/Jozef_Tiso",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Bundesarchiv_Bild_146-2010-0049%2C_Josef_Tiso.jpg/500px-Bundesarchiv_Bild_146-2010-0049%2C_Josef_Tiso.jpg",
+    "alt": "Jozef Tiso",
+    "credit": "Unknown photographer",
+    "licence": "CC BY-SA 3.0 de",
+    "source": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_146-2010-0049,_Josef_Tiso.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "ghouta-chemical-attack",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Ghouta chemical attack",
+      "from": "2013"
+    }
+  ],
+  "summary": "A sarin gas attack near Damascus in 2013 that killed hundreds of people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q14626794",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-08-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2013-08-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ghouta chemical attack (Q14626794)",
+      "url": "https://www.wikidata.org/wiki/Q14626794",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ghouta chemical attack",
+      "url": "https://en.wikipedia.org/wiki/Ghouta_chemical_attack",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Ghouta_massacre4.JPG/500px-Ghouta_massacre4.JPG",
+    "alt": "Ghouta chemical attack",
+    "credit": "محمد السعيد",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ghouta_massacre4.JPG"
+  }
+}

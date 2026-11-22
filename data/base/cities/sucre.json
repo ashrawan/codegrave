@@ -1,0 +1,45 @@
+{
+  "id": "sucre",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Sucre",
+      "from": "1538"
+    }
+  ],
+  "summary": "Bolivia's constitutional capital, where independence was declared in 1825.",
+  "wikidata": "Q2907",
+  "events": [
+    {
+      "type": "born",
+      "date": "1538",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sucre (Q2907)",
+      "url": "https://www.wikidata.org/wiki/Q2907",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sucre",
+      "url": "https://en.wikipedia.org/wiki/Sucre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Sucre_Square.jpg/500px-Sucre_Square.jpg",
+    "alt": "Sucre",
+    "credit": "Parallelepiped09",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sucre_Square.jpg"
+  }
+}

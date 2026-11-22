@@ -1,0 +1,53 @@
+{
+  "id": "french-invasion-of-egypt",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Napoleon's campaign in Egypt",
+      "from": "1798"
+    }
+  ],
+  "summary": "Napoleon's invasion of Egypt in 1798, which failed as a war but brought scholars who opened up the study of ancient Egypt.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q253684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1798-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1801-09-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Napoleon's campaign in Egypt (Q253684)",
+      "url": "https://www.wikidata.org/wiki/Q253684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French invasion of Egypt and Syria",
+      "url": "https://en.wikipedia.org/wiki/French_invasion_of_Egypt_and_Syria",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Baron_Antoine-Jean_Gros-Battle_Pyramids_1810.jpg/500px-Baron_Antoine-Jean_Gros-Battle_Pyramids_1810.jpg",
+    "alt": "Napoleon's campaign in Egypt",
+    "credit": "Antoine-Jean Gros",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Baron_Antoine-Jean_Gros-Battle_Pyramids_1810.jpg"
+  }
+}

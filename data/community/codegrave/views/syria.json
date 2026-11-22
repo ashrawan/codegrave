@@ -12,6 +12,7 @@
     "levant"
   ],
   "entries": [
+    "aleppo",
     "ebla",
     "damascus",
     "seleucid-empire",
@@ -24,19 +25,23 @@
     "mandate-for-syria",
     "nizar-qabbani",
     "hafez-al-assad",
+    "syrian-independence-1946",
     "united-arab-republic",
     "bashar-al-assad",
     "hama-massacre",
     "ahmed-al-sharaa",
     "islamic-state",
     "syrian-civil-war",
+    "siege-of-aleppo",
+    "ghouta-chemical-attack",
+    "drowning-of-alan-kurdi",
     "fall-of-the-assad-regime"
   ],
   "checkpoints": [
     {
       "id": "ancient-syria",
       "name": "Ancient Syria",
-      "from": -3500,
+      "from": -5000,
       "to": 635,
       "note": "Ebla and Ugarit flourished, and Damascus is among the oldest cities. Rome held Syria, and Zenobia ruled Palmyra."
     },

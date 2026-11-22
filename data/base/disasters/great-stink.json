@@ -1,0 +1,50 @@
+{
+  "id": "great-stink",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Great Stink",
+      "from": "1858"
+    }
+  ],
+  "summary": "The hot summer of 1858 when the Thames stank of sewage, which led London to build Bazalgette's sewers.",
+  "wikidata": "Q546233",
+  "events": [
+    {
+      "type": "born",
+      "date": "1858-07",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1858-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Great Stink (Q546233)",
+      "url": "https://www.wikidata.org/wiki/Q546233",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Stink",
+      "url": "https://en.wikipedia.org/wiki/Great_Stink",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/The_silent_highwayman.jpg/500px-The_silent_highwayman.jpg",
+    "alt": "Great Stink",
+    "credit": "Punch Magazine",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_silent_highwayman.jpg"
+  }
+}

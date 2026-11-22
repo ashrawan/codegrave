@@ -1,0 +1,53 @@
+{
+  "id": "conquest-of-the-desert",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Conquest of the Desert",
+      "from": "1878"
+    }
+  ],
+  "summary": "Military campaigns of the 1870s and 1880s that seized Patagonia from its native peoples.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1348983",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1885",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Conquest of the Desert (Q1348983)",
+      "url": "https://www.wikidata.org/wiki/Q1348983",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Conquest of the Desert",
+      "url": "https://en.wikipedia.org/wiki/Conquest_of_the_Desert",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/La_conquista_del_desierto.jpg/500px-La_conquista_del_desierto.jpg",
+    "alt": "Conquest of the Desert",
+    "credit": "Juan Manuel Blanes",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_conquista_del_desierto.jpg"
+  }
+}

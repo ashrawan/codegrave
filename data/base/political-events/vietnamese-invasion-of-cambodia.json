@@ -1,0 +1,53 @@
+{
+  "id": "vietnamese-invasion-of-cambodia",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Vietnamese invasion of Cambodia",
+      "from": "1977"
+    }
+  ],
+  "summary": "Vietnam invaded in December 1978 and drove the Khmer Rouge from power.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q635533",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-04-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-10-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Vietnamese invasion of Cambodia (Q635533)",
+      "url": "https://www.wikidata.org/wiki/Q635533",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cambodian–Vietnamese War",
+      "url": "https://en.wikipedia.org/wiki/Cambodian–Vietnamese_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5f/H_4_ill_639759_cambodia-phnom_penh-1979-61.jpg",
+    "alt": "Vietnamese invasion of Cambodia",
+    "credit": "Sebbers10",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:H_4_ill_639759_cambodia-phnom_penh-1979-61.jpg"
+  }
+}

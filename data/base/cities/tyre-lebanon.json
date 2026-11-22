@@ -1,0 +1,45 @@
+{
+  "id": "tyre-lebanon",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tyre",
+      "from": "-2750"
+    }
+  ],
+  "summary": "A great Phoenician port, famous for purple dye, taken by Alexander after a siege in 332 BCE.",
+  "wikidata": "Q82070",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2750",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tyre (Q82070)",
+      "url": "https://www.wikidata.org/wiki/Q82070",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tyre, Lebanon",
+      "url": "https://en.wikipedia.org/wiki/Tyre,_Lebanon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SubmergedEgyptianHarbour_TyreSour_Lebanon_RomanDeckert04112019.jpg/500px-SubmergedEgyptianHarbour_TyreSour_Lebanon_RomanDeckert04112019.jpg",
+    "alt": "Tyre",
+    "credit": "RomanDeckert",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:SubmergedEgyptianHarbour_TyreSour_Lebanon_RomanDeckert04112019.jpg"
+  }
+}

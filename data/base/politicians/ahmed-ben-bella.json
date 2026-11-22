@@ -1,0 +1,53 @@
+{
+  "id": "ahmed-ben-bella",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Ahmed Ben Bella",
+      "from": "1916"
+    }
+  ],
+  "summary": "Leader of the independence struggle and Algeria's first president, overthrown in 1965.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q179908",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-12-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ahmed Ben Bella (Q179908)",
+      "url": "https://www.wikidata.org/wiki/Q179908",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ahmed Ben Bella",
+      "url": "https://en.wikipedia.org/wiki/Ahmed_Ben_Bella",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Pr%C3%A9sident_Ahmed_Ben_Bella.jpg/500px-Pr%C3%A9sident_Ahmed_Ben_Bella.jpg",
+    "alt": "Ahmed Ben Bella",
+    "credit": "République Algérienne",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pr%C3%A9sident_Ahmed_Ben_Bella.jpg"
+  }
+}

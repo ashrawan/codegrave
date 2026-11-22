@@ -1,0 +1,53 @@
+{
+  "id": "water-lilies-monet",
+  "category": "artworks",
+  "names": [
+    {
+      "name": "Water Lilies",
+      "from": "1896"
+    }
+  ],
+  "summary": "About 250 paintings of the pond in Monet's garden at Giverny, painted over the last 30 years of his life.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q1189907",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1926",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Water Lilies (Q1189907)",
+      "url": "https://www.wikidata.org/wiki/Q1189907",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Water Lilies (Monet series)",
+      "url": "https://en.wikipedia.org/wiki/Water_Lilies_(Monet_series)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Claude_Monet_Seerosen_um_1915_Neue_Pinakothek-4.jpg/500px-Claude_Monet_Seerosen_um_1915_Neue_Pinakothek-4.jpg",
+    "alt": "Water Lilies",
+    "credit": "Rufus46",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Claude_Monet_Seerosen_um_1915_Neue_Pinakothek-4.jpg"
+  }
+}

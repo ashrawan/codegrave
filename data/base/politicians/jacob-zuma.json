@@ -1,0 +1,48 @@
+{
+  "id": "jacob-zuma",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jacob Zuma",
+      "from": "1942"
+    }
+  ],
+  "summary": "President from 2009 to 2018, who resigned over corruption.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57282",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-04-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jacob Zuma (Q57282)",
+      "url": "https://www.wikidata.org/wiki/Q57282",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jacob Zuma",
+      "url": "https://en.wikipedia.org/wiki/Jacob_Zuma",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/Russian_President_Vladimir_Putin_alongside_South_African_President_Jacob_Zuma_%28cropped%29.jpg",
+    "alt": "Jacob Zuma",
+    "credit": "Presidential Press and Information Office / Пресс-служба Президента России",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Russian_President_Vladimir_Putin_alongside_South_African_President_Jacob_Zuma_(cropped).jpg"
+  }
+}

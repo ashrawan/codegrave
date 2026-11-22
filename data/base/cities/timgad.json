@@ -1,0 +1,45 @@
+{
+  "id": "timgad",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Timgad",
+      "from": "0100"
+    }
+  ],
+  "summary": "A Roman colony built on a perfect grid in 100 CE in the Aurès mountains.",
+  "wikidata": "Q459629",
+  "events": [
+    {
+      "type": "born",
+      "date": "0100",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Timgad (Q459629)",
+      "url": "https://www.wikidata.org/wiki/Q459629",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Timgad",
+      "url": "https://en.wikipedia.org/wiki/Timgad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Timgad_Ruins_Panorama.jpg/500px-Timgad_Ruins_Panorama.jpg",
+    "alt": "Timgad",
+    "credit": "Hamza-sia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Timgad_Ruins_Panorama.jpg"
+  }
+}

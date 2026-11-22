@@ -1,0 +1,48 @@
+{
+  "id": "singapore-grand-prix",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Singapore Grand Prix",
+      "from": "2008"
+    }
+  ],
+  "summary": "The first night race in Formula One, run on city streets since 2008.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q9137",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Singapore Grand Prix (Q9137)",
+      "url": "https://www.wikidata.org/wiki/Q9137",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Singapore Grand Prix",
+      "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Formula_One_Grand_Prix_Singapore_2013_-_Ferrari_3.jpg/500px-Formula_One_Grand_Prix_Singapore_2013_-_Ferrari_3.jpg",
+    "alt": "Singapore Grand Prix",
+    "credit": "Benjamin Goetzinger",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Formula_One_Grand_Prix_Singapore_2013_-_Ferrari_3.jpg"
+  }
+}

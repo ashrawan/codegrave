@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-poltava",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Poltava",
+      "from": "1709"
+    }
+  ],
+  "summary": "Peter the Great crushed Charles XII in 1709, ending Sweden's time as a great power.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q152486",
+  "events": [
+    {
+      "type": "born",
+      "date": "1709-06-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1709-06-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Poltava (Q152486)",
+      "url": "https://www.wikidata.org/wiki/Q152486",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Poltava",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Poltava",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Marten%27s_Poltava.jpg/500px-Marten%27s_Poltava.jpg",
+    "alt": "Battle of Poltava",
+    "credit": "Pierre-Denis Martin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marten%27s_Poltava.jpg"
+  }
+}

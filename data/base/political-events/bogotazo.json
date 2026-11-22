@@ -1,0 +1,53 @@
+{
+  "id": "bogotazo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Bogotazo",
+      "from": "1948"
+    }
+  ],
+  "summary": "The riots in Bogotá after the murder of Jorge Eliécer Gaitán in 1948, which began La Violencia.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2327438",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-04-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-04-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bogotazo (Q2327438)",
+      "url": "https://www.wikidata.org/wiki/Q2327438",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bogotazo",
+      "url": "https://en.wikipedia.org/wiki/Bogotazo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/57/Bogotazo.jpg",
+    "alt": "Bogotazo",
+    "credit": "Daniel Pradilla Holguin",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bogotazo.jpg"
+  }
+}

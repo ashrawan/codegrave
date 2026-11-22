@@ -1,0 +1,45 @@
+{
+  "id": "masada",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Masada",
+      "from": "-0030"
+    }
+  ],
+  "summary": "A fortress on a rock by the Dead Sea where Jewish rebels held out against Rome until 73 CE.",
+  "wikidata": "Q186312",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0030",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Masada (Q186312)",
+      "url": "https://www.wikidata.org/wiki/Q186312",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Masada",
+      "url": "https://en.wikipedia.org/wiki/Masada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Israel-2013-Aerial_21-Masada.jpg/500px-Israel-2013-Aerial_21-Masada.jpg",
+    "alt": "Masada",
+    "credit": "Godot13",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Israel-2013-Aerial_21-Masada.jpg"
+  }
+}

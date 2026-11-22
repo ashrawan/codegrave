@@ -1,0 +1,53 @@
+{
+  "id": "ramkhamhaeng",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Ram Khamhaeng",
+      "from": "1239"
+    }
+  ],
+  "summary": "King of Sukhothai credited with creating the Thai alphabet.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q349249",
+  "events": [
+    {
+      "type": "born",
+      "date": "1239",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1298",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ram Khamhaeng (Q349249)",
+      "url": "https://www.wikidata.org/wiki/Q349249",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ram Khamhaeng",
+      "url": "https://en.wikipedia.org/wiki/Ram_Khamhaeng",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Ramkhamhaeng_the_Great.jpg",
+    "alt": "Ram Khamhaeng",
+    "credit": "Ananda",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ramkhamhaeng_the_Great.jpg"
+  }
+}

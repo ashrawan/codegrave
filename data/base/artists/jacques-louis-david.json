@@ -1,0 +1,53 @@
+{
+  "id": "jacques-louis-david",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Jacques-Louis David",
+      "from": "1748"
+    }
+  ],
+  "summary": "Painter of the revolution and of Napoleon, whose works include The Death of Marat and Napoleon Crossing the Alps.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q83155",
+  "events": [
+    {
+      "type": "born",
+      "date": "1748-08-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1825-12-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jacques-Louis David (Q83155)",
+      "url": "https://www.wikidata.org/wiki/Q83155",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jacques-Louis David",
+      "url": "https://en.wikipedia.org/wiki/Jacques-Louis_David",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/David_Self_Portrait.jpg/500px-David_Self_Portrait.jpg",
+    "alt": "Jacques-Louis David",
+    "credit": "Jacques-Louis David",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_Self_Portrait.jpg"
+  }
+}

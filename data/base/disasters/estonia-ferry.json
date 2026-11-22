@@ -1,0 +1,50 @@
+{
+  "id": "estonia-ferry",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "MS Estonia",
+      "from": "1980"
+    }
+  ],
+  "summary": "The ferry that sank in the Baltic in 1994 on its way to Stockholm, killing 852 people.",
+  "wikidata": "Q828458",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-04-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1994-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: MS Estonia (Q828458)",
+      "url": "https://www.wikidata.org/wiki/Q828458",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: MS Estonia",
+      "url": "https://en.wikipedia.org/wiki/MS_Estonia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/MS_Estonia_model.jpg/500px-MS_Estonia_model.jpg",
+    "alt": "MS Estonia",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:MS_Estonia_model.jpg"
+  }
+}

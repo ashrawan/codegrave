@@ -1,0 +1,46 @@
+{
+  "id": "iberian-union",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Iberian Union",
+      "from": "1580"
+    }
+  ],
+  "summary": "Portugal and Spain shared one king from 1580 to 1640.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q377350",
+  "events": [
+    {
+      "type": "born",
+      "date": "1580-09-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1640-12-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Iberian Union (Q377350)",
+      "url": "https://www.wikidata.org/wiki/Q377350",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iberian Union",
+      "url": "https://en.wikipedia.org/wiki/Iberian_Union",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

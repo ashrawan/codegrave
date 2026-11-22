@@ -1,0 +1,53 @@
+{
+  "id": "klemens-von-metternich",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Klemens von Metternich",
+      "from": "1773"
+    }
+  ],
+  "summary": "Austrian statesman who led the Congress of Vienna and kept the old order in Europe for decades after Napoleon.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q45662",
+  "events": [
+    {
+      "type": "born",
+      "date": "1773-05-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1859-06-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Klemens von Metternich (Q45662)",
+      "url": "https://www.wikidata.org/wiki/Q45662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Klemens von Metternich",
+      "url": "https://en.wikipedia.org/wiki/Klemens_von_Metternich",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Klemens_von_Metternich_by_Lawrence.jpg/500px-Klemens_von_Metternich_by_Lawrence.jpg",
+    "alt": "Klemens von Metternich",
+    "credit": "Thomas Lawrence",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Klemens_von_Metternich_by_Lawrence.jpg"
+  }
+}

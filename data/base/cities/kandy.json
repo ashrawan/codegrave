@@ -1,0 +1,45 @@
+{
+  "id": "kandy",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kandy",
+      "from": "1350"
+    }
+  ],
+  "summary": "The capital of the last Sinhala kingdom, taken by the British in 1815.",
+  "wikidata": "Q203197",
+  "events": [
+    {
+      "type": "born",
+      "date": "1350",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kandy (Q203197)",
+      "url": "https://www.wikidata.org/wiki/Q203197",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kandy",
+      "url": "https://en.wikipedia.org/wiki/Kandy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/SL_Kandy_asv2020-01_img10_Arthurs_Seat_view.jpg/500px-SL_Kandy_asv2020-01_img10_Arthurs_Seat_view.jpg",
+    "alt": "Kandy",
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:SL_Kandy_asv2020-01_img10_Arthurs_Seat_view.jpg"
+  }
+}

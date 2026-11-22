@@ -1,0 +1,38 @@
+{
+  "id": "world-happiness-report",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "World Happiness Report",
+      "from": "2012"
+    }
+  ],
+  "summary": "A yearly UN-backed ranking that has named Finland the happiest country every year since 2018.",
+  "wikidata": "Q17090395",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: World Happiness Report (Q17090395)",
+      "url": "https://www.wikidata.org/wiki/Q17090395",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: World Happiness Report",
+      "url": "https://en.wikipedia.org/wiki/World_Happiness_Report",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

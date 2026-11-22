@@ -1,0 +1,48 @@
+{
+  "id": "alvaro-uribe",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Álvaro Uribe",
+      "from": "1952"
+    }
+  ],
+  "summary": "President from 2002 to 2010 who led a hard campaign against the FARC.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q187413",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Álvaro Uribe (Q187413)",
+      "url": "https://www.wikidata.org/wiki/Q187413",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Álvaro Uribe",
+      "url": "https://en.wikipedia.org/wiki/Álvaro_Uribe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/24/%C3%81lvaro_Uribe_%28cropped%29.jpg",
+    "alt": "Álvaro Uribe",
+    "credit": "Center for American Progress",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%C3%81lvaro_Uribe_(cropped).jpg"
+  }
+}

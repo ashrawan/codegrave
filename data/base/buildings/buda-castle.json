@@ -1,0 +1,48 @@
+{
+  "id": "buda-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Buda Castle",
+      "from": "1265"
+    }
+  ],
+  "summary": "The royal castle on the hill above the Danube in Budapest.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q46313",
+  "events": [
+    {
+      "type": "born",
+      "date": "1265",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Buda Castle (Q46313)",
+      "url": "https://www.wikidata.org/wiki/Q46313",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Buda Castle",
+      "url": "https://en.wikipedia.org/wiki/Buda_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/20190502_Zamek_w_Budapeszcie_0647_1862_DxO.jpg/500px-20190502_Zamek_w_Budapeszcie_0647_1862_DxO.jpg",
+    "alt": "Buda Castle",
+    "credit": "Jakub Hałun",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20190502_Zamek_w_Budapeszcie_0647_1862_DxO.jpg"
+  }
+}

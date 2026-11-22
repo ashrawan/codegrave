@@ -1,0 +1,53 @@
+{
+  "id": "marquis-de-lafayette",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Lafayette",
+      "from": "1757"
+    }
+  ],
+  "summary": "French nobleman who fought for American independence and then led the National Guard in the first years of the revolution.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q186652",
+  "events": [
+    {
+      "type": "born",
+      "date": "1757-09-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1834-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Lafayette (Q186652)",
+      "url": "https://www.wikidata.org/wiki/Q186652",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gilbert du Motier, Marquis de Lafayette",
+      "url": "https://en.wikipedia.org/wiki/Gilbert_du_Motier,_Marquis_de_Lafayette",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Gilbert_du_Motier_Marquis_de_Lafayette.jpg/500px-Gilbert_du_Motier_Marquis_de_Lafayette.jpg",
+    "alt": "Lafayette",
+    "credit": "Joseph-Désiré Court",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gilbert_du_Motier_Marquis_de_Lafayette.jpg"
+  }
+}

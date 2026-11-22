@@ -1,0 +1,53 @@
+{
+  "id": "anfal-campaign",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Anfal campaign",
+      "from": "1986"
+    }
+  ],
+  "summary": "Saddam Hussein's campaign of 1986 to 1989 against the Kurds, a genocide.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q529723",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1989",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Anfal campaign (Q529723)",
+      "url": "https://www.wikidata.org/wiki/Q529723",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anfal campaign",
+      "url": "https://en.wikipedia.org/wiki/Anfal_campaign",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Iraqi_mass_grave.jpg/500px-Iraqi_mass_grave.jpg",
+    "alt": "Anfal campaign",
+    "credit": "James Gordon from Los Angeles, California, USA",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Iraqi_mass_grave.jpg"
+  }
+}

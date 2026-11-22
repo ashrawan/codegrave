@@ -1,0 +1,45 @@
+{
+  "id": "taipei",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Taipei",
+      "from": "1875"
+    }
+  ],
+  "summary": "Taiwan's capital, made a prefecture in 1875.",
+  "wikidata": "Q1867",
+  "events": [
+    {
+      "type": "born",
+      "date": "1875",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Taipei (Q1867)",
+      "url": "https://www.wikidata.org/wiki/Q1867",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taipei",
+      "url": "https://en.wikipedia.org/wiki/Taipei",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/20260204_Taipei%2C_Taiwan_Skyline.jpg/500px-20260204_Taipei%2C_Taiwan_Skyline.jpg",
+    "alt": "Taipei",
+    "credit": "Heeheemalu",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20260204_Taipei,_Taiwan_Skyline.jpg"
+  }
+}

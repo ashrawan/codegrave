@@ -1,0 +1,53 @@
+{
+  "id": "emilio-aguinaldo",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Emilio Aguinaldo",
+      "from": "1869"
+    }
+  ],
+  "summary": "General who declared independence in 1898 and was the first president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q188939",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869-03-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-02-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Emilio Aguinaldo (Q188939)",
+      "url": "https://www.wikidata.org/wiki/Q188939",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Emilio Aguinaldo",
+      "url": "https://en.wikipedia.org/wiki/Emilio_Aguinaldo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Emilio_Aguinaldo_ca._1919_%28Restored%29.jpg/500px-Emilio_Aguinaldo_ca._1919_%28Restored%29.jpg",
+    "alt": "Emilio Aguinaldo",
+    "credit": "Harris &amp; Ewing Photo Studio",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Emilio_Aguinaldo_ca._1919_(Restored).jpg"
+  }
+}

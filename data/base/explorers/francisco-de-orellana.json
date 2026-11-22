@@ -1,0 +1,53 @@
+{
+  "id": "francisco-de-orellana",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Francisco de Orellana",
+      "from": "1511"
+    }
+  ],
+  "summary": "Spanish explorer who was the first European to travel the whole length of the Amazon, in 1542.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q207901",
+  "events": [
+    {
+      "type": "born",
+      "date": "1511",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1546",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Francisco de Orellana (Q207901)",
+      "url": "https://www.wikidata.org/wiki/Q207901",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Francisco de Orellana",
+      "url": "https://en.wikipedia.org/wiki/Francisco_de_Orellana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Francisco_de_Orellana_Portrait.jpg",
+    "alt": "Francisco de Orellana",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Francisco_de_Orellana_Portrait.jpg"
+  }
+}

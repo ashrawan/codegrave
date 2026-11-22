@@ -1,0 +1,53 @@
+{
+  "id": "david-hockney",
+  "category": "artists",
+  "names": [
+    {
+      "name": "David Hockney",
+      "from": "1937"
+    }
+  ],
+  "summary": "English painter of swimming pools, bright Yorkshire landscapes and portraits, one of the best-known artists of his time.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q159907",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-07-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2026-06-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: David Hockney (Q159907)",
+      "url": "https://www.wikidata.org/wiki/Q159907",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David Hockney",
+      "url": "https://en.wikipedia.org/wiki/David_Hockney",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9f/David_Hockney_in_Washington_Square_Park_%281977%29.jpg",
+    "alt": "David Hockney",
+    "credit": "United Press International",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_Hockney_in_Washington_Square_Park_(1977).jpg"
+  }
+}

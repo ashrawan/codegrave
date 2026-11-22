@@ -1,0 +1,48 @@
+{
+  "id": "twilight-novel",
+  "category": "books",
+  "names": [
+    {
+      "name": "Twilight",
+      "from": "2005"
+    }
+  ],
+  "summary": "Stephenie Meyer's novel of a teenager in love with a vampire, the start of a series that sold over 160 million copies.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q189378",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Twilight (Q189378)",
+      "url": "https://www.wikidata.org/wiki/Q189378",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Twilight (Meyer novel)",
+      "url": "https://en.wikipedia.org/wiki/Twilight_(Meyer_novel)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Twilight_red.png",
+    "alt": "Twilight",
+    "credit": "Scarce",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Twilight_red.png"
+  }
+}

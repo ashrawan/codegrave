@@ -1,0 +1,45 @@
+{
+  "id": "water-frame",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Water frame",
+      "from": "1769"
+    }
+  ],
+  "summary": "Arkwright's spinning machine of 1769, driven by a water wheel, which needed mills and so began the factory system.",
+  "wikidata": "Q1751504",
+  "events": [
+    {
+      "type": "born",
+      "date": "1769",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Water frame (Q1751504)",
+      "url": "https://www.wikidata.org/wiki/Q1751504",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Water frame",
+      "url": "https://en.wikipedia.org/wiki/Water_frame",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Arkwright-water-frame.jpg/500px-Arkwright-water-frame.jpg",
+    "alt": "Water frame",
+    "credit": "Chris55 at English Wikipedia",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arkwright-water-frame.jpg"
+  }
+}

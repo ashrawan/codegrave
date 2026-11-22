@@ -1,0 +1,53 @@
+{
+  "id": "greece-joins-eec",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Greece joins the EEC",
+      "from": "1981"
+    }
+  ],
+  "summary": "Greece joined the European Community in 1981.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2824360",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1981-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Greece joins the EEC (Q2824360)",
+      "url": "https://www.wikidata.org/wiki/Q2824360",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1981 enlargement of the European Communities",
+      "url": "https://en.wikipedia.org/wiki/1981_enlargement_of_the_European_Communities",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/EC10-1981_European_Community_map_enlargement.svg/500px-EC10-1981_European_Community_map_enlargement.svg.png",
+    "alt": "Greece joins the EEC",
+    "credit": "EC10-1981_European_Community_map.svg: Kolja21 derivative work: Kolja21 (talk)",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:EC10-1981_European_Community_map_enlargement.svg"
+  }
+}

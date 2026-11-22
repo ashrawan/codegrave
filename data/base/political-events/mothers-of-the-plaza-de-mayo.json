@@ -1,0 +1,48 @@
+{
+  "id": "mothers-of-the-plaza-de-mayo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Mothers of the Plaza de Mayo",
+      "from": "1977"
+    }
+  ],
+  "summary": "Mothers who marched every week from 1977 to demand news of their children who disappeared under the dictatorship.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q727121",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-04-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mothers of the Plaza de Mayo (Q727121)",
+      "url": "https://www.wikidata.org/wiki/Q727121",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mothers of the Plaza de Mayo",
+      "url": "https://en.wikipedia.org/wiki/Mothers_of_the_Plaza_de_Mayo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/20/2%C2%AA_Marcha_de_la_Resistencia_9_y_10_diciembre_1982.jpg",
+    "alt": "Mothers of the Plaza de Mayo",
+    "credit": "Archivo Hasenberg-Quaretti",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2%C2%AA_Marcha_de_la_Resistencia_9_y_10_diciembre_1982.jpg"
+  }
+}

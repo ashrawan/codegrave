@@ -1,0 +1,50 @@
+{
+  "id": "sewol-ferry",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Sinking of MV Sewol",
+      "from": "2014"
+    }
+  ],
+  "summary": "A ferry capsized in 2014, killing 304 people, most of them schoolchildren.",
+  "wikidata": "Q16338015",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-04-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-04-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sinking of MV Sewol (Q16338015)",
+      "url": "https://www.wikidata.org/wiki/Q16338015",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sinking of MV Sewol",
+      "url": "https://en.wikipedia.org/wiki/Sinking_of_MV_Sewol",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/2017_MV_Sewol_in_Mokpo_New_Port.jpg/500px-2017_MV_Sewol_in_Mokpo_New_Port.jpg",
+    "alt": "Sinking of MV Sewol",
+    "credit": "Trainholic",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2017_MV_Sewol_in_Mokpo_New_Port.jpg"
+  }
+}

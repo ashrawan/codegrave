@@ -1,0 +1,53 @@
+{
+  "id": "act-of-abjuration",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Act of Abjuration",
+      "from": "1581"
+    }
+  ],
+  "summary": "The Dutch provinces declared in 1581 that they no longer obeyed the king of Spain.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q634839",
+  "events": [
+    {
+      "type": "born",
+      "date": "1581-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1581-07-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Act of Abjuration (Q634839)",
+      "url": "https://www.wikidata.org/wiki/Q634839",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Act of Abjuration",
+      "url": "https://en.wikipedia.org/wiki/Act_of_Abjuration",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Plakkaat_van_Verlatinghe.jpg/500px-Plakkaat_van_Verlatinghe.jpg",
+    "alt": "Act of Abjuration",
+    "credit": "the northern Low Countries: Brabant, Gelre and Zutphen, Flanders, Holland, Zeeland, Friesland, Mechelen, and Utrecht",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Plakkaat_van_Verlatinghe.jpg"
+  }
+}

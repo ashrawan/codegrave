@@ -1,0 +1,48 @@
+{
+  "id": "kronborg",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Kronborg",
+      "from": "1585"
+    }
+  ],
+  "summary": "The castle at Helsingør guarding the Sound, the Elsinore of Hamlet.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q189358",
+  "events": [
+    {
+      "type": "born",
+      "date": "1585",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kronborg (Q189358)",
+      "url": "https://www.wikidata.org/wiki/Q189358",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kronborg",
+      "url": "https://en.wikipedia.org/wiki/Kronborg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e2/KronborgCastle_HCS.jpg",
+    "alt": "Kronborg",
+    "credit": "H.C. Steensen",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KronborgCastle_HCS.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "gone-with-the-wind",
+  "category": "books",
+  "names": [
+    {
+      "name": "Gone with the Wind",
+      "from": "1936"
+    }
+  ],
+  "summary": "Margaret Mitchell's novel of the American Civil War and Scarlett O'Hara.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q2870",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Gone with the Wind (Q2870)",
+      "url": "https://www.wikidata.org/wiki/Q2870",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gone with the Wind (novel)",
+      "url": "https://en.wikipedia.org/wiki/Gone_with_the_Wind_(novel)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Gone_with_the_Wind_%281936%2C_first_edition_cover%29.jpg/500px-Gone_with_the_Wind_%281936%2C_first_edition_cover%29.jpg",
+    "alt": "Gone with the Wind",
+    "credit": "Published by Macmillan Publishers (For jurisdictions that do not recognize the rule of the shorter term, and define copy",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gone_with_the_Wind_(1936,_first_edition_cover).jpg"
+  }
+}

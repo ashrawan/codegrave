@@ -1,0 +1,45 @@
+{
+  "id": "zagreb",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Zagreb",
+      "from": "1094"
+    }
+  ],
+  "summary": "The capital of Croatia.",
+  "wikidata": "Q1435",
+  "events": [
+    {
+      "type": "born",
+      "date": "1094",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Zagreb (Q1435)",
+      "url": "https://www.wikidata.org/wiki/Q1435",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zagreb",
+      "url": "https://en.wikipedia.org/wiki/Zagreb",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Zagreb_%2829255640143%29.jpg/500px-Zagreb_%2829255640143%29.jpg",
+    "alt": "Zagreb",
+    "credit": "Nick Savchenko from Kiev, Ukraine",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zagreb_(29255640143).jpg"
+  }
+}

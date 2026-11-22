@@ -1,0 +1,45 @@
+{
+  "id": "harar",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Harar",
+      "from": "1007"
+    }
+  ],
+  "summary": "A walled Muslim city in the east with 82 mosques, a centre of Islamic learning.",
+  "wikidata": "Q190184",
+  "events": [
+    {
+      "type": "born",
+      "date": "1007",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Harar (Q190184)",
+      "url": "https://www.wikidata.org/wiki/Q190184",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harar",
+      "url": "https://en.wikipedia.org/wiki/Harar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Town_of_Harar_with_Citywall.jpg/500px-Town_of_Harar_with_Citywall.jpg",
+    "alt": "Harar",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Town_of_Harar_with_Citywall.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "stockholm-bloodbath",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Stockholm Bloodbath",
+      "from": "1520"
+    }
+  ],
+  "summary": "The Danish king killed about 80 Swedish nobles in 1520, which set off the war for Swedish independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q846876",
+  "events": [
+    {
+      "type": "born",
+      "date": "1520-11-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1520-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Stockholm Bloodbath (Q846876)",
+      "url": "https://www.wikidata.org/wiki/Q846876",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stockholm Bloodbath",
+      "url": "https://en.wikipedia.org/wiki/Stockholm_Bloodbath",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Stockholm_Bloodbath.jpg/500px-Stockholm_Bloodbath.jpg",
+    "alt": "Stockholm Bloodbath",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Stockholm_Bloodbath.jpg"
+  }
+}

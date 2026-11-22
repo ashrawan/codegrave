@@ -1,0 +1,53 @@
+{
+  "id": "lapulapu",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Lapulapu",
+      "from": "1492"
+    }
+  ],
+  "summary": "The chief of Mactan who defeated Magellan, honoured as the first Filipino hero.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q216275",
+  "events": [
+    {
+      "type": "born",
+      "date": "1492",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1542",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Lapulapu (Q216275)",
+      "url": "https://www.wikidata.org/wiki/Q216275",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lapulapu",
+      "url": "https://en.wikipedia.org/wiki/Lapulapu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Lapu-Lapu_sculpture_by_Fidel_Araneta.jpg/500px-Lapu-Lapu_sculpture_by_Fidel_Araneta.jpg",
+    "alt": "Lapulapu",
+    "credit": "Kozak005",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lapu-Lapu_sculpture_by_Fidel_Araneta.jpg"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "evian-accords",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Évian Accords",
+      "from": "1962"
+    }
+  ],
+  "summary": "The agreement of March 1962 that ended the Algerian War and led to independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1471139",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-03-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-03-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Évian Accords (Q1471139)",
+      "url": "https://www.wikidata.org/wiki/Q1471139",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Évian Accords",
+      "url": "https://en.wikipedia.org/wiki/Évian_Accords",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Frontignan_memorial_1962_a_%28cropped%29.jpg/500px-Frontignan_memorial_1962_a_%28cropped%29.jpg",
+    "alt": "Évian Accords",
+    "credit": "Gnrc",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Frontignan_memorial_1962_a_(cropped).jpg"
+  }
+}

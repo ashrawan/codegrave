@@ -1,0 +1,53 @@
+{
+  "id": "harvey-milk",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Harvey Milk",
+      "from": "1930"
+    }
+  ],
+  "summary": "The first openly gay man elected to public office in California, murdered in 1978.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q17141",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-05-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1978-11-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Harvey Milk (Q17141)",
+      "url": "https://www.wikidata.org/wiki/Q17141",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harvey Milk",
+      "url": "https://en.wikipedia.org/wiki/Harvey_Milk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Harvey_Milk_in_front_of_camera_shop_November_1977_%28cropped%29.jpg",
+    "alt": "Harvey Milk",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Harvey_Milk_in_front_of_camera_shop_November_1977_(cropped).jpg"
+  }
+}

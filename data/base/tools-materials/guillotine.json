@@ -1,0 +1,45 @@
+{
+  "id": "guillotine",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "Guillotine",
+      "from": "1792"
+    }
+  ],
+  "summary": "The beheading machine adopted in 1792 as a quick and equal death, which became the symbol of the Terror.",
+  "wikidata": "Q128015",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Guillotine (Q128015)",
+      "url": "https://www.wikidata.org/wiki/Q128015",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guillotine",
+      "url": "https://en.wikipedia.org/wiki/Guillotine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Guillotine_Luxembourg_01.jpg/500px-Guillotine_Luxembourg_01.jpg",
+    "alt": "Guillotine",
+    "credit": "Christian Ries",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Guillotine_Luxembourg_01.jpg"
+  }
+}

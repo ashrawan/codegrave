@@ -1,0 +1,53 @@
+{
+  "id": "cosimo-de-medici",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Cosimo de' Medici",
+      "from": "1389"
+    }
+  ],
+  "summary": "Banker who ruled Florence from behind the scenes and paid for buildings, artists and scholars.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q48544",
+  "events": [
+    {
+      "type": "born",
+      "date": "1389-09-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1464-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Cosimo de' Medici (Q48544)",
+      "url": "https://www.wikidata.org/wiki/Q48544",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cosimo de' Medici",
+      "url": "https://en.wikipedia.org/wiki/Cosimo_de'_Medici",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Pontormo_-_Ritratto_di_Cosimo_il_Vecchio_-_Google_Art_Project.jpg/500px-Pontormo_-_Ritratto_di_Cosimo_il_Vecchio_-_Google_Art_Project.jpg",
+    "alt": "Cosimo de' Medici",
+    "credit": "Pontormo",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pontormo_-_Ritratto_di_Cosimo_il_Vecchio_-_Google_Art_Project.jpg"
+  }
+}

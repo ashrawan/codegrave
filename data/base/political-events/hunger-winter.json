@@ -1,0 +1,53 @@
+{
+  "id": "hunger-winter",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Hunger Winter",
+      "from": "1944"
+    }
+  ],
+  "summary": "About 20,000 people died of hunger in the occupied west in the winter of 1944 and 1945.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2562594",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-09",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1945-04",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hunger Winter (Q2562594)",
+      "url": "https://www.wikidata.org/wiki/Q2562594",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dutch famine of 1944–1945",
+      "url": "https://en.wikipedia.org/wiki/Dutch_famine_of_1944–1945",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Twee_deelnemers_aan_de_hongertochten_tijdens_de_hongerwinter.jpg/500px-Twee_deelnemers_aan_de_hongertochten_tijdens_de_hongerwinter.jpg",
+    "alt": "Hunger Winter",
+    "credit": "Fotograaf Onbekend / Anefo",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Twee_deelnemers_aan_de_hongertochten_tijdens_de_hongerwinter.jpg"
+  }
+}

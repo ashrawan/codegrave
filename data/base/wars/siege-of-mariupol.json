@@ -1,0 +1,53 @@
+{
+  "id": "siege-of-mariupol",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Mariupol",
+      "from": "2022"
+    }
+  ],
+  "summary": "Russian forces besieged and destroyed Mariupol in 2022.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q111017791",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-02-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Mariupol (Q111017791)",
+      "url": "https://www.wikidata.org/wiki/Q111017791",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Mariupol",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Mariupol",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Russian_bombing_of_Mariupol.jpg/500px-Russian_bombing_of_Mariupol.jpg",
+    "alt": "Siege of Mariupol",
+    "credit": "Міністерство внутрішніх справ України",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Russian_bombing_of_Mariupol.jpg"
+  }
+}

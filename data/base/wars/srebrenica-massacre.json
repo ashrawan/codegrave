@@ -1,0 +1,53 @@
+{
+  "id": "srebrenica-massacre",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Srebrenica massacre",
+      "from": "1995"
+    }
+  ],
+  "summary": "Bosnian Serb forces killed about 8,000 Bosnian Muslim men and boys in 1995, a genocide.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q170334",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-07-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-07-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Srebrenica massacre (Q170334)",
+      "url": "https://www.wikidata.org/wiki/Q170334",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Srebrenica massacre",
+      "url": "https://en.wikipedia.org/wiki/Srebrenica_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/50/Map_of_Bosnia_and_Hercegovina_showing_Srebrenica.png",
+    "alt": "Srebrenica massacre",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Map_of_Bosnia_and_Hercegovina_showing_Srebrenica.png"
+  }
+}

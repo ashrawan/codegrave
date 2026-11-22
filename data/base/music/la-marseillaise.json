@@ -1,0 +1,45 @@
+{
+  "id": "la-marseillaise",
+  "category": "music",
+  "names": [
+    {
+      "name": "La Marseillaise",
+      "from": "1792"
+    }
+  ],
+  "summary": "The war song written in 1792 and sung by volunteers from Marseille marching on Paris, later France's national anthem.",
+  "wikidata": "Q41180",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792-04-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: La Marseillaise (Q41180)",
+      "url": "https://www.wikidata.org/wiki/Q41180",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La Marseillaise",
+      "url": "https://en.wikipedia.org/wiki/La_Marseillaise",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pils_rouget_lisle_chantant_marseillaise_mb_%28Mus%C3%A9e%29.jpg/500px-Pils_rouget_lisle_chantant_marseillaise_mb_%28Mus%C3%A9e%29.jpg",
+    "alt": "La Marseillaise",
+    "credit": "Isidore Pils",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pils_rouget_lisle_chantant_marseillaise_mb_(Mus%C3%A9e).jpg"
+  }
+}

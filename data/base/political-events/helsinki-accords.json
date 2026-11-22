@@ -1,0 +1,48 @@
+{
+  "id": "helsinki-accords",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Helsinki Accords",
+      "from": "1975"
+    }
+  ],
+  "summary": "The agreement of 1975 in which 35 states of East and West promised to respect borders and human rights.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q318161",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Helsinki Accords (Q318161)",
+      "url": "https://www.wikidata.org/wiki/Q318161",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Helsinki Final Act",
+      "url": "https://en.wikipedia.org/wiki/Helsinki_Final_Act",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Schlussakte_Helsinki_1975_%28KSZE%29.jpg/500px-Schlussakte_Helsinki_1975_%28KSZE%29.jpg",
+    "alt": "Helsinki Accords",
+    "credit": "Rabax63",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Schlussakte_Helsinki_1975_(KSZE).jpg"
+  }
+}

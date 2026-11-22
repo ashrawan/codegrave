@@ -1,0 +1,53 @@
+{
+  "id": "peterloo-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Peterloo Massacre",
+      "from": "1819"
+    }
+  ],
+  "summary": "Cavalry charged a crowd of 60,000 calling for the vote in Manchester in 1819, killing at least 15 people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q876357",
+  "events": [
+    {
+      "type": "born",
+      "date": "1819-08-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1819-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Peterloo Massacre (Q876357)",
+      "url": "https://www.wikidata.org/wiki/Q876357",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peterloo Massacre",
+      "url": "https://en.wikipedia.org/wiki/Peterloo_Massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Peterloo_Massacre.png/500px-Peterloo_Massacre.png",
+    "alt": "Peterloo Massacre",
+    "credit": "Richard Carlile",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peterloo_Massacre.png"
+  }
+}

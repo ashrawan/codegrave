@@ -1,0 +1,53 @@
+{
+  "id": "fall-of-tenochtitlan",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Fall of Tenochtitlan",
+      "from": "1521"
+    }
+  ],
+  "summary": "Cortés and his native allies besieged and took the Aztec capital in 1521, where Mexico City now stands.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q593267",
+  "events": [
+    {
+      "type": "born",
+      "date": "1521-05-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1521-08-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Fall of Tenochtitlan (Q593267)",
+      "url": "https://www.wikidata.org/wiki/Q593267",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of Tenochtitlan",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_Tenochtitlan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Conquista-de-M%C3%A9xico-por-Cort%C3%A9s-Tenochtitlan-Painting.png/500px-Conquista-de-M%C3%A9xico-por-Cort%C3%A9s-Tenochtitlan-Painting.png",
+    "alt": "Fall of Tenochtitlan",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Conquista-de-M%C3%A9xico-por-Cort%C3%A9s-Tenochtitlan-Painting.png"
+  }
+}

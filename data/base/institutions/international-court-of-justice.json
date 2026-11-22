@@ -1,0 +1,45 @@
+{
+  "id": "international-court-of-justice",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "International Court of Justice",
+      "from": "1945"
+    }
+  ],
+  "summary": "The UN's highest court, in The Hague since 1946.",
+  "wikidata": "Q7801",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: International Court of Justice (Q7801)",
+      "url": "https://www.wikidata.org/wiki/Q7801",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: International Court of Justice",
+      "url": "https://en.wikipedia.org/wiki/International_Court_of_Justice",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Friedenspalast_Den_Haag_%28100MP%29.jpg/500px-Friedenspalast_Den_Haag_%28100MP%29.jpg",
+    "alt": "International Court of Justice",
+    "credit": "Thomas Wolf, www.foto-tw.de",
+    "licence": "CC BY-SA 3.0 de",
+    "source": "https://commons.wikimedia.org/wiki/File:Friedenspalast_Den_Haag_(100MP).jpg"
+  }
+}

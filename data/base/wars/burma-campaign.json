@@ -1,0 +1,53 @@
+{
+  "id": "burma-campaign",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Burma campaign",
+      "from": "1942"
+    }
+  ],
+  "summary": "The Second World War fighting in Burma from 1942 to 1945 between Japan and the British, Indian and Chinese forces.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q221519",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-01",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1945-07",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Burma campaign (Q221519)",
+      "url": "https://www.wikidata.org/wiki/Q221519",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Burma campaign",
+      "url": "https://en.wikipedia.org/wiki/Burma_campaign",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/IND_003714_Battlefield_on_Scraggy_Hill_at_Shenam.jpg/500px-IND_003714_Battlefield_on_Scraggy_Hill_at_Shenam.jpg",
+    "alt": "Burma campaign",
+    "credit": "Official photographer of No.9 Army Film and Photographic Unit.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:IND_003714_Battlefield_on_Scraggy_Hill_at_Shenam.jpg"
+  }
+}

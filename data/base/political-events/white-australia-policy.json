@@ -1,0 +1,53 @@
+{
+  "id": "white-australia-policy",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "White Australia policy",
+      "from": "1901"
+    }
+  ],
+  "summary": "Laws from 1901 that kept non-white migrants out, ended by 1973.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1077496",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1973",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: White Australia policy (Q1077496)",
+      "url": "https://www.wikidata.org/wiki/Q1077496",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: White Australia policy",
+      "url": "https://en.wikipedia.org/wiki/White_Australia_policy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/1910_White_Australia_badge.png",
+    "alt": "White Australia policy",
+    "credit": "Australian Natives' Association",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1910_White_Australia_badge.png"
+  }
+}

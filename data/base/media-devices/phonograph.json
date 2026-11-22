@@ -1,0 +1,45 @@
+{
+  "id": "phonograph",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "Phonograph",
+      "from": "1877"
+    }
+  ],
+  "summary": "Edison's machine of 1877 that recorded and played back sound, the start of recorded music.",
+  "wikidata": "Q116434",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Phonograph (Q116434)",
+      "url": "https://www.wikidata.org/wiki/Q116434",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Phonograph",
+      "url": "https://en.wikipedia.org/wiki/Phonograph",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edison_and_phonograph_edit2.jpg/500px-Edison_and_phonograph_edit2.jpg",
+    "alt": "Phonograph",
+    "credit": "Levin C. Handy (per http://hdl.loc.gov/loc.pnp/cwpbh.04326)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edison_and_phonograph_edit2.jpg"
+  }
+}

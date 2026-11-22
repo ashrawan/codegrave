@@ -1,0 +1,50 @@
+{
+  "id": "stockton-and-darlington-railway",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Stockton and Darlington Railway",
+      "from": "1825"
+    }
+  ],
+  "summary": "The first public railway to use steam locomotives, opened in 1825 in north-east England.",
+  "wikidata": "Q375044",
+  "events": [
+    {
+      "type": "born",
+      "date": "1825",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1863",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Stockton and Darlington Railway (Q375044)",
+      "url": "https://www.wikidata.org/wiki/Q375044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stockton and Darlington Railway",
+      "url": "https://en.wikipedia.org/wiki/Stockton_and_Darlington_Railway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/StocktonDarlingtonOpening.jpg/500px-StocktonDarlingtonOpening.jpg",
+    "alt": "Stockton and Darlington Railway",
+    "credit": "John Dobbin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:StocktonDarlingtonOpening.jpg"
+  }
+}

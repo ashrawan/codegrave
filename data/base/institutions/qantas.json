@@ -1,0 +1,45 @@
+{
+  "id": "qantas",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Qantas",
+      "from": "1920"
+    }
+  ],
+  "summary": "Australia's national airline, founded in Queensland in 1920.",
+  "wikidata": "Q32491",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-11-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Qantas (Q32491)",
+      "url": "https://www.wikidata.org/wiki/Q32491",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qantas",
+      "url": "https://en.wikipedia.org/wiki/Qantas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/QANTAS_A380_VH-OQF_4974.jpg/500px-QANTAS_A380_VH-OQF_4974.jpg",
+    "alt": "Qantas",
+    "credit": "Vismay Bhadra",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:QANTAS_A380_VH-OQF_4974.jpg"
+  }
+}

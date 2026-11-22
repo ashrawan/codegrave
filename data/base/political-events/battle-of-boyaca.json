@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-boyaca",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of Boyacá",
+      "from": "1819"
+    }
+  ],
+  "summary": "Bolívar's victory of 1819 that freed New Granada from Spain.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1150410",
+  "events": [
+    {
+      "type": "born",
+      "date": "1819-08-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1819-08-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Boyacá (Q1150410)",
+      "url": "https://www.wikidata.org/wiki/Q1150410",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Boyacá",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Boyacá",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Batalla_de_Boyaca_de_Martin_Tovar_y_Tovar.jpg/500px-Batalla_de_Boyaca_de_Martin_Tovar_y_Tovar.jpg",
+    "alt": "Battle of Boyacá",
+    "credit": "Martin Tovar y Tovar",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Batalla_de_Boyaca_de_Martin_Tovar_y_Tovar.jpg"
+  }
+}

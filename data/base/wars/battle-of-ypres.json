@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-ypres",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Battle of Ypres",
+      "from": "1914"
+    }
+  ],
+  "summary": "The battle of 1914 around Ypres, where the trenches of the Western Front took shape.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q853976",
+  "events": [
+    {
+      "type": "born",
+      "date": "1914-10-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1914-11-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: First Battle of Ypres (Q853976)",
+      "url": "https://www.wikidata.org/wiki/Q853976",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Battle of Ypres",
+      "url": "https://en.wikipedia.org/wiki/First_Battle_of_Ypres",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/XXVI._RK.GIF/500px-XXVI._RK.GIF",
+    "alt": "First Battle of Ypres",
+    "credit": "Erwin Lindemann",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:XXVI._RK.GIF"
+  }
+}

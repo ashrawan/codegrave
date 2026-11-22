@@ -1,0 +1,53 @@
+{
+  "id": "king-faisal",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "King Faisal",
+      "from": "1906"
+    }
+  ],
+  "summary": "King from 1964 to 1975, who led the oil embargo of 1973 and modernised the state.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q217167",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-04-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: King Faisal (Q217167)",
+      "url": "https://www.wikidata.org/wiki/Q217167",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Faisal of Saudi Arabia",
+      "url": "https://en.wikipedia.org/wiki/Faisal_of_Saudi_Arabia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/King_Faisal_of_Saudi_Arabia_on_on_arrival_ceremony_welcoming_05-27-1971_%28cropped%29.jpg/500px-King_Faisal_of_Saudi_Arabia_on_on_arrival_ceremony_welcoming_05-27-1971_%28cropped%29.jpg",
+    "alt": "King Faisal",
+    "credit": "Arrival_ceremony_welcoming_King_Faisal_of_Saudi_Arabia_05-27-1971.jpg: Knudsen, Robert L. (Robert LeRoy), 1929-1989",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Faisal_of_Saudi_Arabia_on_on_arrival_ceremony_welcoming_05-27-1971_(cropped).jpg"
+  }
+}

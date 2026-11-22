@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-karameh",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of Karameh",
+      "from": "1968"
+    }
+  ],
+  "summary": "A battle in 1968 between Israel and Palestinian fighters with the Jordanian army, a turning point for the Palestinian movement.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1930278",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-03-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Karameh (Q1930278)",
+      "url": "https://www.wikidata.org/wiki/Q1930278",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Karameh",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Karameh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Karama_aftermath_1.jpg/500px-Karama_aftermath_1.jpg",
+    "alt": "Battle of Karameh",
+    "credit": "Jordanian Military Photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Karama_aftermath_1.jpg"
+  }
+}

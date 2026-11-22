@@ -1,0 +1,53 @@
+{
+  "id": "hassan-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Hassan II of Morocco",
+      "from": "1929"
+    }
+  ],
+  "summary": "King from 1961 to 1999, who ruled with an iron hand in the years of lead.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q69103",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-07-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-07-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hassan II of Morocco (Q69103)",
+      "url": "https://www.wikidata.org/wiki/Q69103",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hassan II of Morocco",
+      "url": "https://en.wikipedia.org/wiki/Hassan_II_of_Morocco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Hassan_II_%281983%29.jpg/500px-Hassan_II_%281983%29.jpg",
+    "alt": "Hassan II of Morocco",
+    "credit": "Christian Lambiotte",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hassan_II_(1983).jpg"
+  }
+}

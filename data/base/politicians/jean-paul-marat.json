@@ -1,0 +1,53 @@
+{
+  "id": "jean-paul-marat",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jean-Paul Marat",
+      "from": "1743"
+    }
+  ],
+  "summary": "Radical journalist who called for the death of the revolution's enemies and was stabbed in his bath in 1793.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q122290",
+  "events": [
+    {
+      "type": "born",
+      "date": "1743-05-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1793-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jean-Paul Marat (Q122290)",
+      "url": "https://www.wikidata.org/wiki/Q122290",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jean-Paul Marat",
+      "url": "https://en.wikipedia.org/wiki/Jean-Paul_Marat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Jean-Paul_Marat_-_portrait_peint_par_Joseph_Boze.jpg/500px-Jean-Paul_Marat_-_portrait_peint_par_Joseph_Boze.jpg",
+    "alt": "Jean-Paul Marat",
+    "credit": "Joseph Boze",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean-Paul_Marat_-_portrait_peint_par_Joseph_Boze.jpg"
+  }
+}

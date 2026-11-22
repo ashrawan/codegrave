@@ -1,0 +1,48 @@
+{
+  "id": "us-withdrawal-from-paris",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "US withdrawal from the Paris Agreement",
+      "from": "2017"
+    }
+  ],
+  "summary": "The United States announced in 2017, and again in 2025, that it would leave the Paris Agreement.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q30106998",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-06-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: US withdrawal from the Paris Agreement (Q30106998)",
+      "url": "https://www.wikidata.org/wiki/Q30106998",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United States withdrawal from the Paris Agreement",
+      "url": "https://en.wikipedia.org/wiki/United_States_withdrawal_from_the_Paris_Agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Donald_Trump%2C_speech_with_teleprompters%2C_2017_%28cropped%29.jpg/500px-Donald_Trump%2C_speech_with_teleprompters%2C_2017_%28cropped%29.jpg",
+    "alt": "US withdrawal from the Paris Agreement",
+    "credit": "Joyce N. Boghosian, the White House, Washington, DC.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Donald_Trump,_speech_with_teleprompters,_2017_(cropped).jpg"
+  }
+}

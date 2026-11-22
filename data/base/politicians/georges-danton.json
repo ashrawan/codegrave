@@ -1,0 +1,53 @@
+{
+  "id": "georges-danton",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Georges Danton",
+      "from": "1759"
+    }
+  ],
+  "summary": "Fiery revolutionary leader and orator who helped bring down the king and was himself guillotined in the Terror.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q184623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1759-10-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1794-04-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Georges Danton (Q184623)",
+      "url": "https://www.wikidata.org/wiki/Q184623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Georges Danton",
+      "url": "https://en.wikipedia.org/wiki/Georges_Danton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Anonyme_-_Portrait_de_Georges_Danton_%281759-1794%29%2C_orateur_et_homme_politique_-_P712_-_Mus%C3%A9e_Carnavalet_-_2.jpg/500px-Anonyme_-_Portrait_de_Georges_Danton_%281759-1794%29%2C_orateur_et_homme_politique_-_P712_-_Mus%C3%A9e_Carnavalet_-_2.jpg",
+    "alt": "Georges Danton",
+    "credit": "anonymous",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Anonyme_-_Portrait_de_Georges_Danton_(1759-1794),_orateur_et_homme_politique_-_P712_-_Mus%C3%A9e_Carnavalet_-_2.jpg"
+  }
+}

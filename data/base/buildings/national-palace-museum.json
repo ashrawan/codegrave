@@ -1,0 +1,48 @@
+{
+  "id": "national-palace-museum",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "National Palace Museum",
+      "from": "1965"
+    }
+  ],
+  "summary": "The museum in Taipei holding nearly 700,000 treasures of Chinese art taken from Beijing.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q540668",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: National Palace Museum (Q540668)",
+      "url": "https://www.wikidata.org/wiki/Q540668",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: National Palace Museum",
+      "url": "https://en.wikipedia.org/wiki/National_Palace_Museum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/NationalPalace_MuseumFrontView.jpg/500px-NationalPalace_MuseumFrontView.jpg",
+    "alt": "National Palace Museum",
+    "credit": "Peellden",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:NationalPalace_MuseumFrontView.jpg"
+  }
+}

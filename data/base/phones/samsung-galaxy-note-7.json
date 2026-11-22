@@ -1,0 +1,45 @@
+{
+  "id": "samsung-galaxy-note-7",
+  "category": "phones",
+  "names": [
+    {
+      "name": "Samsung Galaxy Note 7",
+      "from": "2016"
+    }
+  ],
+  "summary": "A 2016 phone whose batteries caught fire, leading to a worldwide recall and a ban on planes.",
+  "wikidata": "Q24702734",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-07-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Samsung Galaxy Note 7 (Q24702734)",
+      "url": "https://www.wikidata.org/wiki/Q24702734",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samsung Galaxy Note 7",
+      "url": "https://en.wikipedia.org/wiki/Samsung_Galaxy_Note_7",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Samsung_Galaxy_Note_7.png/500px-Samsung_Galaxy_Note_7.png",
+    "alt": "Samsung Galaxy Note 7",
+    "credit": "DoerNoc",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samsung_Galaxy_Note_7.png"
+  }
+}

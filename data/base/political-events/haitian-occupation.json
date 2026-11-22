@@ -1,0 +1,46 @@
+{
+  "id": "haitian-occupation",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Haitian rule of Santo Domingo",
+      "from": "1822"
+    }
+  ],
+  "summary": "Haiti ruled the whole island from 1822 to 1844.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3128939",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822-02-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1844-02-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Haitian rule of Santo Domingo (Q3128939)",
+      "url": "https://www.wikidata.org/wiki/Q3128939",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Haitian occupation of Santo Domingo",
+      "url": "https://en.wikipedia.org/wiki/Haitian_occupation_of_Santo_Domingo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

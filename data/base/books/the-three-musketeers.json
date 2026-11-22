@@ -1,0 +1,48 @@
+{
+  "id": "the-three-musketeers",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Three Musketeers",
+      "from": "1844"
+    }
+  ],
+  "summary": "Dumas's adventure of d'Artagnan and three swordsmen, all for one and one for all.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q140527",
+  "events": [
+    {
+      "type": "born",
+      "date": "1844",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Three Musketeers (Q140527)",
+      "url": "https://www.wikidata.org/wiki/Q140527",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Three Musketeers",
+      "url": "https://en.wikipedia.org/wiki/The_Three_Musketeers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Dartagnan-musketeers.jpg/500px-Dartagnan-musketeers.jpg",
+    "alt": "The Three Musketeers",
+    "credit": "Jules Huyot / After Maurice Leloir",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dartagnan-musketeers.jpg"
+  }
+}

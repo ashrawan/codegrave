@@ -1,0 +1,50 @@
+{
+  "id": "spanish-inquisition",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Spanish Inquisition",
+      "from": "1478"
+    }
+  ],
+  "summary": "The church court set up in 1478 to enforce Catholic faith, abolished in 1834.",
+  "wikidata": "Q184725",
+  "events": [
+    {
+      "type": "born",
+      "date": "1478",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1834",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Spanish Inquisition (Q184725)",
+      "url": "https://www.wikidata.org/wiki/Q184725",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish Inquisition",
+      "url": "https://en.wikipedia.org/wiki/Spanish_Inquisition",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Inquisici%C3%B3n_espa%C3%B1ola.svg/500px-Inquisici%C3%B3n_espa%C3%B1ola.svg.png",
+    "alt": "Spanish Inquisition",
+    "credit": "User:Di (they-them)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Inquisici%C3%B3n_espa%C3%B1ola.svg"
+  }
+}

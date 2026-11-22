@@ -1,0 +1,53 @@
+{
+  "id": "piero-della-francesca",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Piero della Francesca",
+      "from": "1415"
+    }
+  ],
+  "summary": "Painter and mathematician of calm, geometric pictures who wrote on perspective.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q5822",
+  "events": [
+    {
+      "type": "born",
+      "date": "1415",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1492-10-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Piero della Francesca (Q5822)",
+      "url": "https://www.wikidata.org/wiki/Q5822",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Piero della Francesca",
+      "url": "https://en.wikipedia.org/wiki/Piero_della_Francesca",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Resurrection_detail.JPG",
+    "alt": "Piero della Francesca",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Resurrection_detail.JPG"
+  }
+}

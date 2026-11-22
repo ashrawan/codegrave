@@ -1,0 +1,48 @@
+{
+  "id": "masjid-an-nabawi",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Prophet's Mosque",
+      "from": "0622"
+    }
+  ],
+  "summary": "The mosque built by Muhammad in Medina in 622, the second holiest site in Islam, where he is buried.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q486080",
+  "events": [
+    {
+      "type": "born",
+      "date": "0622",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Prophet's Mosque (Q486080)",
+      "url": "https://www.wikidata.org/wiki/Q486080",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Al-Masjid an-Nabawi",
+      "url": "https://en.wikipedia.org/wiki/Al-Masjid_an-Nabawi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Madeena_masjid_nabavi_12122008230.jpg/500px-Madeena_masjid_nabavi_12122008230.jpg",
+    "alt": "Prophet's Mosque",
+    "credit": "Bluemangoa2z at Malayalam Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Madeena_masjid_nabavi_12122008230.jpg"
+  }
+}

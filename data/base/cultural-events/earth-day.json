@@ -1,0 +1,45 @@
+{
+  "id": "earth-day",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Earth Day",
+      "from": "1970"
+    }
+  ],
+  "summary": "A yearly day of action for the environment, first held in the United States in 1970 and now marked in almost every country.",
+  "wikidata": "Q124473",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-04-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Earth Day (Q124473)",
+      "url": "https://www.wikidata.org/wiki/Q124473",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Earth Day",
+      "url": "https://en.wikipedia.org/wiki/Earth_Day",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Ecology_symbol.svg/500px-Ecology_symbol.svg.png",
+    "alt": "Earth Day",
+    "credit": "Ecology_symbol.png: Melanie Schleeter McCalmont derivative work",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ecology_symbol.svg"
+  }
+}

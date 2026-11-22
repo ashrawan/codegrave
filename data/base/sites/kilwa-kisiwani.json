@@ -1,0 +1,50 @@
+{
+  "id": "kilwa-kisiwani",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Kilwa Kisiwani",
+      "from": "0800"
+    }
+  ],
+  "summary": "The island ruins of Kilwa, once the richest town of the Swahili coast.",
+  "wikidata": "Q1741475",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1843",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kilwa Kisiwani (Q1741475)",
+      "url": "https://www.wikidata.org/wiki/Q1741475",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kilwa Kisiwani",
+      "url": "https://en.wikipedia.org/wiki/Kilwa_Kisiwani",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/dc/GreatMosque.jpg",
+    "alt": "Kilwa Kisiwani",
+    "credit": "en:user:Claude McNab",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:GreatMosque.jpg"
+  }
+}

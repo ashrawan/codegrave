@@ -1,0 +1,53 @@
+{
+  "id": "siege-of-leningrad",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Leningrad",
+      "from": "1941"
+    }
+  ],
+  "summary": "The 872-day German siege of Leningrad, in which about a million people died.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q151860",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-09-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-01-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Leningrad (Q151860)",
+      "url": "https://www.wikidata.org/wiki/Q151860",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Leningrad",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Leningrad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Leningrad_Siege_May_1942_-_January_1943.png/500px-Leningrad_Siege_May_1942_-_January_1943.png",
+    "alt": "Siege of Leningrad",
+    "credit": "Memnon335bc",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Leningrad_Siege_May_1942_-_January_1943.png"
+  }
+}

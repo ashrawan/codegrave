@@ -1,0 +1,48 @@
+{
+  "id": "the-adventures-of-sherlock-holmes",
+  "category": "books",
+  "names": [
+    {
+      "name": "The Adventures of Sherlock Holmes",
+      "from": "1892"
+    }
+  ],
+  "summary": "Conan Doyle's first book of short stories about the detective of Baker Street.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q392147",
+  "events": [
+    {
+      "type": "born",
+      "date": "1892",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Adventures of Sherlock Holmes (Q392147)",
+      "url": "https://www.wikidata.org/wiki/Q392147",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Adventures of Sherlock Holmes",
+      "url": "https://en.wikipedia.org/wiki/The_Adventures_of_Sherlock_Holmes",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Adventures_of_sherlock_holmes.jpg",
+    "alt": "The Adventures of Sherlock Holmes",
+    "credit": "Rtrace (upload first version)User:ΛΦΠ (upload second version)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Adventures_of_sherlock_holmes.jpg"
+  }
+}

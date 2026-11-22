@@ -1,0 +1,48 @@
+{
+  "id": "jio",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Jio",
+      "from": "2016"
+    }
+  ],
+  "summary": "Indian mobile network launched in 2016 with free calls and very cheap data, which brought hundreds of millions of Indians online.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q18643672",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-09-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jio (Q18643672)",
+      "url": "https://www.wikidata.org/wiki/Q18643672",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jio",
+      "url": "https://en.wikipedia.org/wiki/Jio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Jio_LYF_building.jpg/500px-Jio_LYF_building.jpg",
+    "alt": "Jio",
+    "credit": "Nairspecht",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jio_LYF_building.jpg"
+  }
+}

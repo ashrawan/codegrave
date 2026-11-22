@@ -1,0 +1,46 @@
+{
+  "id": "battle-of-mactan",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of Mactan",
+      "from": "1521"
+    }
+  ],
+  "summary": "Lapulapu's men killed Magellan on Mactan in 1521.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2091449",
+  "events": [
+    {
+      "type": "born",
+      "date": "1521-04-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1521-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Mactan (Q2091449)",
+      "url": "https://www.wikidata.org/wiki/Q2091449",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Mactan",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Mactan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

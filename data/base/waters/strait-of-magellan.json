@@ -1,0 +1,45 @@
+{
+  "id": "strait-of-magellan",
+  "category": "waters",
+  "names": [
+    {
+      "name": "Strait of Magellan",
+      "from": "1520"
+    }
+  ],
+  "summary": "Magellan sailed through the strait at the tip of South America in 1520.",
+  "wikidata": "Q48365",
+  "events": [
+    {
+      "type": "born",
+      "date": "1520",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Strait of Magellan (Q48365)",
+      "url": "https://www.wikidata.org/wiki/Q48365",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Strait of Magellan",
+      "url": "https://en.wikipedia.org/wiki/Strait_of_Magellan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/StraitOfMagellan.jpg/500px-StraitOfMagellan.jpg",
+    "alt": "Strait of Magellan",
+    "credit": "Jacques Descloitres, MODIS Rapid Response Team, NASA/GSFC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:StraitOfMagellan.jpg"
+  }
+}

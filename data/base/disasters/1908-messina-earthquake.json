@@ -1,0 +1,50 @@
+{
+  "id": "1908-messina-earthquake",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Messina earthquake",
+      "from": "1908"
+    }
+  ],
+  "summary": "An earthquake and tsunami that destroyed Messina and Reggio in southern Italy in 1908, killing about 80,000 people.",
+  "wikidata": "Q1348910",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-12-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1908-12-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Messina earthquake (Q1348910)",
+      "url": "https://www.wikidata.org/wiki/Q1348910",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1908 Messina earthquake",
+      "url": "https://en.wikipedia.org/wiki/1908_Messina_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Comerio%2C_Luca_%281878-1940%29_-_Vittime_del_terremoto_di_Messina_%28dicembre_1908%29.jpg/500px-Comerio%2C_Luca_%281878-1940%29_-_Vittime_del_terremoto_di_Messina_%28dicembre_1908%29.jpg",
+    "alt": "Messina earthquake",
+    "credit": "Luca Comerio",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Comerio,_Luca_(1878-1940)_-_Vittime_del_terremoto_di_Messina_(dicembre_1908).jpg"
+  }
+}

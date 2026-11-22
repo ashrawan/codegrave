@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-aljubarrota",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Aljubarrota",
+      "from": "1385"
+    }
+  ],
+  "summary": "The victory of 1385 that kept Portugal independent of Castile.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1341972",
+  "events": [
+    {
+      "type": "born",
+      "date": "1385-08-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1385-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Aljubarrota (Q1341972)",
+      "url": "https://www.wikidata.org/wiki/Q1341972",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Aljubarrota",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Aljubarrota",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Batalha_de_Aljubarrota_02.jpg/500px-Batalha_de_Aljubarrota_02.jpg",
+    "alt": "Battle of Aljubarrota",
+    "credit": "Jean d'Wavrin (Chronique d'Angleterre)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Batalha_de_Aljubarrota_02.jpg"
+  }
+}

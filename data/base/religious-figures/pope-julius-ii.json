@@ -1,0 +1,53 @@
+{
+  "id": "pope-julius-ii",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Pope Julius II",
+      "from": "1443"
+    }
+  ],
+  "summary": "The warrior pope who began the new St Peter's and set Michelangelo to the Sistine ceiling and Raphael to the Vatican rooms.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q80516",
+  "events": [
+    {
+      "type": "born",
+      "date": "1443-12-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1513-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Pope Julius II (Q80516)",
+      "url": "https://www.wikidata.org/wiki/Q80516",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pope Julius II",
+      "url": "https://en.wikipedia.org/wiki/Pope_Julius_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Pope_Julius_II.jpg/500px-Pope_Julius_II.jpg",
+    "alt": "Pope Julius II",
+    "credit": "Raphael",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pope_Julius_II.jpg"
+  }
+}

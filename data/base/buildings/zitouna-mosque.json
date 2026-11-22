@@ -1,0 +1,48 @@
+{
+  "id": "zitouna-mosque",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Al-Zaytuna Mosque",
+      "from": "0698"
+    }
+  ],
+  "summary": "The great mosque of Tunis and one of the oldest universities in the Islamic world.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1291779",
+  "events": [
+    {
+      "type": "born",
+      "date": "0698",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Al-Zaytuna Mosque (Q1291779)",
+      "url": "https://www.wikidata.org/wiki/Q1291779",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Al-Zaytuna Mosque",
+      "url": "https://en.wikipedia.org/wiki/Al-Zaytuna_Mosque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/MinaretMosqueeZitounaTunis.JPG/500px-MinaretMosqueeZitounaTunis.JPG",
+    "alt": "Al-Zaytuna Mosque",
+    "credit": "Citizen59",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:MinaretMosqueeZitounaTunis.JPG"
+  }
+}

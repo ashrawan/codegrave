@@ -1,0 +1,38 @@
+{
+  "id": "roskilde-viking-ships",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Skuldelev Viking ships",
+      "from": "1070"
+    }
+  ],
+  "summary": "Five Viking ships sunk around 1070 to block a fjord, now shown in Roskilde.",
+  "wikidata": "Q831457",
+  "events": [
+    {
+      "type": "born",
+      "date": "1070",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Skuldelev Viking ships (Q831457)",
+      "url": "https://www.wikidata.org/wiki/Q831457",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Skuldelev ships",
+      "url": "https://en.wikipedia.org/wiki/Skuldelev_ships",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

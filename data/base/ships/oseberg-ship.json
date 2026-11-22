@@ -1,0 +1,50 @@
+{
+  "id": "oseberg-ship",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Oseberg ship",
+      "from": "0820"
+    }
+  ],
+  "summary": "A richly carved Viking ship found in a burial mound, one of the best preserved.",
+  "wikidata": "Q832395",
+  "events": [
+    {
+      "type": "born",
+      "date": "0820",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0834",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Oseberg ship (Q832395)",
+      "url": "https://www.wikidata.org/wiki/Q832395",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oseberg ship",
+      "url": "https://en.wikipedia.org/wiki/Oseberg_ship",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Osebergskipet_2016.jpg/500px-Osebergskipet_2016.jpg",
+    "alt": "Oseberg ship",
+    "credit": "Petter Ulleland",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Osebergskipet_2016.jpg"
+  }
+}

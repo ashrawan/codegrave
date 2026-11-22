@@ -1,0 +1,48 @@
+{
+  "id": "grand-place",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Grand-Place",
+      "from": "1402"
+    }
+  ],
+  "summary": "The main square of Brussels, ringed by guild houses.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q215429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1402",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Grand-Place (Q215429)",
+      "url": "https://www.wikidata.org/wiki/Q215429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand-Place",
+      "url": "https://en.wikipedia.org/wiki/Grand-Place",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg/500px-Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg",
+    "alt": "Grand-Place",
+    "credit": "Celuici",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grand-Place,_Brussels_-_panorama,_June_2018.jpg"
+  }
+}

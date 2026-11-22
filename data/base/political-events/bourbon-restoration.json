@@ -1,0 +1,53 @@
+{
+  "id": "bourbon-restoration",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Bourbon Restoration",
+      "from": "1815"
+    }
+  ],
+  "summary": "The return of the French kings after Napoleon's fall, which lasted until the July Revolution of 1830.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q207162",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1830-08-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bourbon Restoration (Q207162)",
+      "url": "https://www.wikidata.org/wiki/Q207162",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bourbon Restoration in France",
+      "url": "https://en.wikipedia.org/wiki/Bourbon_Restoration_in_France",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg/500px-G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg",
+    "alt": "Bourbon Restoration",
+    "credit": "François Gérard",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:G%C3%A9rard_-_Louis_XVIII_of_France_in_Coronation_Robes.jpg"
+  }
+}

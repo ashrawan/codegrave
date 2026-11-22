@@ -1,0 +1,53 @@
+{
+  "id": "piet-mondrian",
+  "category": "artists",
+  "names": [
+    {
+      "name": "Piet Mondrian",
+      "from": "1872"
+    }
+  ],
+  "summary": "Dutch painter of black grids with blocks of red, yellow and blue.",
+  "labels": [
+    "visual-art"
+  ],
+  "wikidata": "Q151803",
+  "events": [
+    {
+      "type": "born",
+      "date": "1872-03-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-02-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Piet Mondrian (Q151803)",
+      "url": "https://www.wikidata.org/wiki/Q151803",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Piet Mondrian",
+      "url": "https://en.wikipedia.org/wiki/Piet_Mondrian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Piet_Mondriaan.jpg/500px-Piet_Mondriaan.jpg",
+    "alt": "Piet Mondrian",
+    "credit": "AnonymousUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Piet_Mondriaan.jpg"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "hurricane-gilbert",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Gilbert",
+      "from": "1988"
+    }
+  ],
+  "summary": "The 1988 hurricane that hit the whole island of Jamaica.",
+  "wikidata": "Q1139080",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-09-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1988-09-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Gilbert (Q1139080)",
+      "url": "https://www.wikidata.org/wiki/Q1139080",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Gilbert",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Gilbert",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Gilbert_1988-09-13_2200Z.png/500px-Gilbert_1988-09-13_2200Z.png",
+    "alt": "Hurricane Gilbert",
+    "credit": "The National Oceanic and Atmospheric Administration (NOAA)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gilbert_1988-09-13_2200Z.png"
+  }
+}

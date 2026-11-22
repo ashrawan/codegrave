@@ -1,0 +1,45 @@
+{
+  "id": "light-emitting-diode",
+  "category": "screens-input",
+  "names": [
+    {
+      "name": "LED",
+      "from": "1962"
+    }
+  ],
+  "summary": "The light from a semiconductor, first glowing red in 1962, now in almost every lamp, screen and torch.",
+  "wikidata": "Q25504",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: LED (Q25504)",
+      "url": "https://www.wikidata.org/wiki/Q25504",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Light-emitting diode",
+      "url": "https://en.wikipedia.org/wiki/Light-emitting_diode",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/RBG-LED.jpg/500px-RBG-LED.jpg",
+    "alt": "LED",
+    "credit": "PiccoloNamek",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:RBG-LED.jpg"
+  }
+}

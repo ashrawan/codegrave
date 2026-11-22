@@ -1,0 +1,41 @@
+{
+  "id": "platt-amendment",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Platt Amendment",
+      "from": "1901"
+    }
+  ],
+  "summary": "The US law of 1901 that let the United States intervene in Cuba and keep Guantánamo Bay.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q863445",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901-03-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Platt Amendment (Q863445)",
+      "url": "https://www.wikidata.org/wiki/Q863445",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Platt Amendment",
+      "url": "https://en.wikipedia.org/wiki/Platt_Amendment",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
