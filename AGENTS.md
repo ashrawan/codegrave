@@ -338,6 +338,7 @@ How the page is put together:
   (`viewSub()`: the years the view covers and how many entries it holds).
   The description is the row's tooltip and is searched; it is not printed
   in the list. Keep the row to those two lines.
+- **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter the reader is in (`#road-views`); the year the reader stands in is written large on the right (`#road-year`), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
 - **The years.** `ruler()` writes the years along the edge of the road and
   `barTicks()` those on the bar. Because the scale is uneven there is no
   fixed step: `yearMarks()` in `site/road.js` writes a year where the years

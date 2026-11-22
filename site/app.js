@@ -612,9 +612,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('road').classList.toggle('short', G.short);
     $('road').style.setProperty('--fw', G.FW + 'px');
     $('road').style.setProperty('--nw', G.NW + 'px');
-    // The views, named under the year in the order of their lanes, each with the chapter the reader is in.
-    // A phone names only the chapters there (the strip under the road names the views), and only for one or two lanes.
-    $('road-views').innerHTML = G.short || (G.phone && L.lanes.length > 2) ? '' : L.lanes.map((ln, i) =>
+    // The views, named across the top centre in the order of their lanes, each with the chapter the reader is in
+    // (asked for, Nov 2026). With many lanes the names get smaller; a phone drops the chapters beyond two lanes.
+    $('road-views').dataset.n = L.lanes.length;
+    $('road-views').classList.toggle('bare', G.phone && L.lanes.length > 2);
+    $('road-views').innerHTML = G.short ? '' : L.lanes.map((ln, i) =>
       `<div class="rv" style="--c:var(--p${ln.col})"><b>${esc(ln.view.name)}</b><button type="button" class="rch" data-lane="${i}" hidden></button></div>`).join('');
     for (const ln of L.lanes) ln.cur = undefined;
     barTicks();
@@ -1332,7 +1334,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
-    const t = road.t, D = L.D, dir = camDir(), label = playLabel(L.when(t));
+    const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
+    // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
+    const label = L.tMax >= NOW - 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : playLabel(m);
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;

@@ -371,13 +371,16 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road { position: absolute; inset: 0; z-index: 1; overflow: hidden; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
 #road.dragging { cursor: grabbing; }
 #road-cv { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
-#road-head { position: absolute; left: 24px; top: 70px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; max-width: 240px; pointer-events: none; }
+/* the year the reader stands in, on the right; the views and their chapters across the top centre (asked for, Nov 2026) */
+#road-head { position: absolute; right: 24px; top: 70px; z-index: 3000; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; max-width: 240px; text-align: right; pointer-events: none; }
 #road-year { font-family: var(--serif); font-size: 68px; line-height: .95; font-variant-numeric: tabular-nums; white-space: nowrap; }
 #road-unit { margin-top: -6px; }
-#road-views { display: flex; flex-direction: column; gap: 10px; }
-.rv { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding-top: 6px; border-top: 2px solid var(--c); }
-.rv b { font-size: 11px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--c); }
-.rch { padding: 0; font-size: 12px; text-align: left; color: var(--faint); background: none; border: 0; pointer-events: auto; }
+#road-views { position: absolute; left: 50%; top: 64px; z-index: 3000; transform: translateX(-50%); display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 34px; width: max-content; max-width: min(64%, 900px); pointer-events: none; text-shadow: 0 1px 2px var(--bg), 0 0 12px var(--bg); }
+.rv { display: flex; flex-direction: column; align-items: center; gap: 3px; min-width: 0; padding-bottom: 5px; border-bottom: 2px solid var(--c); text-align: center; }
+.rv b { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--serif); font-size: 30px; font-weight: 400; line-height: 1.05; color: var(--text); }
+#road-views[data-n="2"] .rv b { font-size: 24px; }
+#road-views:not([data-n="1"]):not([data-n="2"]) .rv b { font-size: 18px; }
+.rch { padding: 0; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; text-align: center; color: var(--c); background: none; border: 0; pointer-events: auto; }
 .rch:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 .rch[hidden] { display: none; }
 /* a name on the road: a point on the ground, and a card standing on it */
@@ -422,14 +425,13 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road.short #road-year { font-size: 34px; }
 #road.short .rc.full .rs, #road.short .rc.full img { display: none; }
 @media (max-width: 699px) {
-  #road-head { left: 14px; top: 62px; gap: 6px; max-width: 62%; }
-  #road-year { font-size: 44px; }
-  /* under the year, only the chapter the reader is in, marked in its view's colour */
-  #road-views { gap: 4px; }
-  .rv { padding: 0 0 0 7px; border-top: 0; border-left: 2px solid var(--c); }
-  .rv b { display: none; }
-  .rv:has(.rch[hidden]) { display: none; }
-  .rch { font-size: 11.5px; line-height: 1.25; color: var(--muted); }
+  #road-head { right: 14px; top: 104px; gap: 4px; max-width: 50%; }
+  #road-year { font-size: 34px; }
+  #road-views { top: 58px; max-width: calc(100% - 28px); gap: 4px 16px; }
+  .rv b, #road-views[data-n="2"] .rv b { font-size: 18px; }
+  #road-views:not([data-n="1"]):not([data-n="2"]) .rv b { font-size: 14px; }
+  #road-views.bare .rch { display: none; }
+  .rch { font-size: 10.5px; line-height: 1.25; }
 }
 
 /* ---- the dark revamp: a museum at night. The page's chrome is glass over the scene. */
