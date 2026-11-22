@@ -264,6 +264,11 @@ How the page is put together:
   and from the right. Nothing sounds before play is pressed, travelling by
   hand is silent, and the small button above play turns the sound off
   (`cg-sound` in this browser).
+  Play also has music: one track, `site/media/gallery-of-glass.mp3`, that
+  sounds only while play travels, eases in and out, keeps its place on
+  pause and starts over when it ends (`tune()`). It is fetched when play is
+  first pressed with the sound on, and the same button silences it. This
+  was asked for with this file; do not swap the track without asking.
 - **The panel** is hidden until its button, the "Views" button in the strip
   or a name is clicked. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)

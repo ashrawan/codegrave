@@ -1944,7 +1944,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     drawPlay();
     roadKick();
   }
-  function drawPlay() { if (L) roadHud(true); }
+  function drawPlay() { if (L) roadHud(true); tune(); }
   function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // Dragging along the bar moves the reader, playing or not.
@@ -1997,6 +1997,36 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     else gain.connect(ctx.destination);
     src.start(at, Math.random() * 0.2, 0.74);
   }
+  // The music of play: one track (`media/gallery-of-glass.mp3`) that sounds while play travels and starts over
+  // when it ends. It is fetched only when play is first pressed with the sound on, it eases in and out so
+  // nothing starts or stops with a jolt, and pausing keeps its place. The sound button silences it too.
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4;
+  const music = { el: null, vol: 0, want: 0, tick: 0 };
+  function tune() {
+    music.want = play.on && sound.on ? MUSIC_VOL : 0;
+    if (music.want && !music.el) {
+      try { music.el = new Audio(MUSIC); music.el.loop = true; music.el.preload = 'auto'; music.el.volume = 0; }
+      catch { music.el = null; }
+    }
+    const el = music.el;
+    if (!el) return;
+    if (music.want && el.paused) { const p = el.play(); if (p && p.catch) p.catch(() => {}); }
+    if (music.tick) return;
+    music.tick = setInterval(() => {
+      const step = MUSIC_VOL / 16;
+      music.vol = music.want > music.vol ? Math.min(music.want, music.vol + step) : Math.max(music.want, music.vol - step);
+      el.volume = music.vol;
+      if (music.vol === music.want) {
+        clearInterval(music.tick); music.tick = 0;
+        if (!music.want) el.pause();
+      }
+    }, 50);
+  }
+  // The road rests while the tab is hidden, so the music does too.
+  document.addEventListener('visibilitychange', () => {
+    if (!music.el) return;
+    if (document.hidden) music.el.pause(); else if (music.want) { const p = music.el.play(); if (p && p.catch) p.catch(() => {}); }
+  });
   // A card opens while play travels: a ring in its view's colour that fades, and the breath of air.
   function cardArrives(n, lean) {
     if (!calm()) { n.btn.classList.remove('ring'); void n.btn.offsetWidth; n.btn.classList.add('ring'); }
@@ -2005,7 +2035,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function drawSound() {
     const b = $('sound');
     b.setAttribute('aria-pressed', sound.on);
-    b.title = sound.on ? 'Sound is on: a quiet breath of air as each card opens' : 'Sound is off';
+    b.title = sound.on ? 'Sound is on: music while play travels, and a quiet breath of air as each card opens' : 'Sound is off';
     b.innerHTML = sound.on ? ICON_SOUND : ICON_MUTED;
   }
   function toggleSound() {
@@ -2014,6 +2044,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     drawSound();
     // Turning it on lets you hear what you turned on.
     if (sound.on) { soundReady(); setTimeout(() => breath(0), 60); }
+    tune();
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.
