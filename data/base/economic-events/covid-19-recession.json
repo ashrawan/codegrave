@@ -1,0 +1,46 @@
+{
+  "id": "covid-19-recession",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "COVID-19 recession",
+      "from": "2020"
+    }
+  ],
+  "summary": "The sharpest fall in the world economy since the Great Depression, when the pandemic shut down much of the world in 2020.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q88599208",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2020",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: COVID-19 recession (Q88599208)",
+      "url": "https://www.wikidata.org/wiki/Q88599208",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: COVID-19 recession",
+      "url": "https://en.wikipedia.org/wiki/COVID-19_recession",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": "federal-reserve",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Federal Reserve",
+      "from": "1913"
+    }
+  ],
+  "summary": "The central bank of the United States, founded in 1913 after a series of banking panics.",
+  "wikidata": "Q53536",
+  "events": [
+    {
+      "type": "born",
+      "date": "1913-12-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Federal Reserve (Q53536)",
+      "url": "https://www.wikidata.org/wiki/Q53536",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Federal Reserve",
+      "url": "https://en.wikipedia.org/wiki/Federal_Reserve",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

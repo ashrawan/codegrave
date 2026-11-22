@@ -1,10 +1,13 @@
 {
   "id": "the-universe",
   "name": "The Universe",
-  "description": "The universe from the Big Bang to today: the first galaxies, the Sun and its planets, and how telescopes, probes and great scientists found out how it all works.",
+  "description": "The universe itself: the Big Bang, galaxies, stars, black holes and the planets, and the theories and discoveries that showed how it all began and works.",
   "category": "earth-space",
   "entries": [
+    "universe",
     "milky-way",
+    "andromeda-galaxy",
+    "proxima-centauri",
     "solar-system",
     "sun-star",
     "mercury-planet",
@@ -33,9 +36,10 @@
     "almagest",
     "sn-1054",
     "nicolaus-copernicus",
+    "de-revolutionibus",
     "galileo-galilei",
-    "telescope",
     "kepler-laws",
+    "sidereus-nuncius",
     "principia",
     "william-herschel",
     "urbain-le-verrier",
@@ -47,35 +51,18 @@
     "vera-rubin",
     "hubbles-law",
     "big-bang",
+    "dark-matter",
     "carl-sagan",
     "stephen-hawking",
     "jocelyn-bell-burnell",
-    "mariner-4",
     "discovery-of-the-cmb",
-    "apollo-11",
-    "venera-7",
-    "viking-program",
-    "voyager-2",
-    "galileo-spacecraft",
-    "hubble-space-telescope",
+    "sagittarius-a-star",
+    "cosmic-inflation",
+    "shoemaker-levy-9",
     "51-pegasi-b",
-    "cassini-huygens",
     "accelerating-expansion",
-    "new-horizons",
     "iau-definition-of-planet",
-    "juno-spacecraft",
-    "curiosity-rover",
-    "first-gravitational-wave-detection",
-    "osiris-rex",
-    "chang-e-4",
-    "tianwen-1",
-    "perseverance-rover",
-    "ingenuity-helicopter",
-    "dart-mission",
-    "james-webb-space-telescope",
-    "juice-probe",
-    "chang-e-6",
-    "europa-clipper"
+    "first-gravitational-wave-detection"
   ],
   "checkpoints": [
     {
@@ -83,35 +70,42 @@
       "name": "The early universe",
       "from": -13800000000,
       "to": -4600000001,
-      "note": "The universe begins in the Big Bang. Within a few hundred million years the first stars and galaxies shine, and the Milky Way forms. Generations of stars make the elements of which planets and people are made."
+      "note": "The universe begins in the Big Bang and swells in a split second. Within a few hundred million years the first stars and galaxies shine and the Milky Way forms. Generations of stars forge the elements that planets and people are made of."
     },
     {
-      "id": "how-the-planets-formed",
-      "name": "How the planets formed",
+      "id": "the-sun-and-its-planets",
+      "name": "The Sun and its planets",
       "from": -4600000000,
       "to": -1000,
-      "note": "A cloud of gas and dust collapses into the Sun and a disk of planets. Rock and ice clump into worlds, a collision makes the Moon, and the planets settle into their orbits."
+      "note": "A cloud of gas and dust collapses into the Sun and a disk around it. Rock and ice clump into planets, a collision makes our Moon, and the leftovers become the asteroid belt, the comets and the Kuiper belt."
     },
     {
       "id": "watching-the-sky",
       "name": "Watching the sky",
       "from": -999,
-      "to": 1608,
-      "note": "Babylonians, Greeks, Chinese, Indians and Maya chart the sky with the naked eye. Ptolemy puts the Earth at the centre, and Copernicus puts the Sun there instead."
+      "to": 1542,
+      "note": "Babylonians, Greeks, Chinese, Indians and the Maya chart the sky by eye and predict eclipses. Ptolemy puts the Earth at the centre of everything, and Chinese astronomers record a new star in 1054."
     },
     {
-      "id": "the-telescope-age",
-      "name": "The telescope age",
-      "from": 1609,
-      "to": 1956,
-      "note": "Galileo turns a telescope on the sky. Kepler and Newton explain the orbits, new planets are found, Einstein rewrites gravity and Hubble shows that the universe is expanding."
+      "id": "the-sun-at-the-centre",
+      "name": "The Sun at the centre",
+      "from": 1543,
+      "to": 1899,
+      "note": "Copernicus moves the Earth around the Sun, Galileo sees the moons of Jupiter, Kepler and Newton explain the orbits, and Uranus and Neptune are found."
     },
     {
-      "id": "probes-and-great-telescopes",
-      "name": "Probes and great telescopes",
-      "from": 1957,
+      "id": "an-expanding-universe",
+      "name": "An expanding universe",
+      "from": 1900,
+      "to": 1964,
+      "note": "Einstein shows that gravity bends space and time. Hubble finds that other galaxies exist and are rushing away, Lemaître traces it back to a beginning, and dark matter is first suspected."
+    },
+    {
+      "id": "modern-cosmology",
+      "name": "Modern cosmology",
+      "from": 1965,
       "to": 2026,
-      "note": "Spacecraft visit every planet. Radio telescopes hear the echo of the Big Bang, the Hubble and Webb telescopes see the first galaxies, planets are found around other stars, and black holes are photographed."
+      "note": "The afterglow of the Big Bang is found. Pulsars, black holes and planets around other stars are discovered, dark energy is speeding up the expansion, gravitational waves are heard and black holes are photographed."
     }
   ],
   "labels": [
@@ -124,7 +118,7 @@
     "planets",
     "galaxies",
     "black holes",
-    "stars",
-    "astronomy"
+    "dark matter",
+    "cosmology"
   ]
 }
