@@ -2307,10 +2307,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('filters-btn').setAttribute('aria-expanded', open);
     });
 
-    // Save as PDF: the views on the timeline, in their order and colours, as printable pages (print.html).
+    // Save as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html).
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
-      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + '&print=1';
+      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '');
       window.open('print.html?' + q, '_blank', 'noopener');
     });
 

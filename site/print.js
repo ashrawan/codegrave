@@ -61,13 +61,16 @@ const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').
 
 // ---------------------------------------------------------------- data
 // One view file (v/<id>.json) as the export needs it: its chapters and its entries in date order.
-export function shapeView(payload, boot, i) {
+// `span` ([from, to] written years, from the timeline's year range) keeps only the entries begun in it.
+export function shapeView(payload, boot, i, span) {
   const catName = Object.fromEntries(boot.categories.map((c) => [c.id, c.name]));
   const domOf = Object.fromEntries(boot.categories.map((c) => [c.id, c.domain]));
   const words = Object.fromEntries(boot.domains.map((d) => [d.id, d.words]));
   const v = payload.view;
-  const chs = (v.checkpoints || []).map((c) => ({ name: c.name, from: c.from, to: c.to ?? 1e9, note: c.note || '' }));
-  const es = payload.entries.map((e) => {
+  const inSpan = (y) => !span || (y >= span[0] && y <= span[1]);
+  const chs = (v.checkpoints || []).map((c, k) => ({ num: k + 1, name: c.name, from: c.from, to: c.to ?? 1e9, note: c.note || '' }))
+    .filter((c) => !span || (c.to >= span[0] && c.from <= span[1]));
+  const es = payload.entries.filter((e) => inSpan(dateParts(e.events.find((x) => x.type === 'born').date).y)).map((e) => {
     const born = e.events.find((x) => x.type === 'born');
     const end = e.events.find((x) => x.type === 'ended');
     const w = words[domOf[e.category]] || { ended: 'Ended' };
@@ -82,7 +85,7 @@ export function shapeView(payload, boot, i) {
       src: (e.sources || [])[0]?.title || '',
     };
   }).sort((a, b) => a.t - b.t || a.rank - b.rank);
-  return { id: v.id, name: v.name, description: v.description || '', chs, es, first: es[0]?.y ?? 0, flag: v.thumb?.image || null };
+  return { id: v.id, name: v.name, description: v.description || '', chs, es, first: span ? span[0] : es[0]?.y ?? 0, last: span ? span[1] : null, flag: v.thumb?.image || null };
 }
 
 // ---------------------------------------------------------------- the page shell
@@ -93,7 +96,8 @@ function newPage(cls) {
   const p = document.createElement('div'); p.className = 'pg ' + (cls || '');
   doc.appendChild(p); pageNo++; return p;
 }
-const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',');
+let yr = null;   // the year range the timeline was narrowed to, if any
+const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '');
 const today = () => { const d = new Date(); return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); };
 
 // ---------------------------------------------------------------- one view
@@ -106,12 +110,12 @@ function single(D) {
   }
   // the cover: title, numbers, the best pictures, the chapters, and the whole view as bands
   {
-    const p = newPage('cover'); const m = frame(p, 'A timeline from codegrave', true);
+    const p = newPage('cover'); const m = frame(p, 'A timeline from codegrave.com');
     const pics = D.es.filter((e) => e.img).sort((a, b) => a.rank - b.rank).slice(0, 8).sort((a, b) => a.t - b.t);
     m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
-      + '<div class="stats"><div><b>' + esc(spanText(D.first)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
+      + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-      + '<div class="toc">' + D.chs.map((c, i) => '<div><i>' + (i + 1) + '</i>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
+      + '<div class="toc">' + D.chs.map((c, i) => '<div><i>' + c.num + '</i>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
     const r = p.querySelector('.rail'); const H = r.clientHeight;
     const keys = D.chs.map((c, i) => ({ c, i, n: Math.max(1, D.es.filter((e) => e.ci === i).length) }));
     const total = keys.reduce((s, k) => s + k.n, 0) || 1; let y = 6 * MM;
@@ -178,7 +182,7 @@ function single(D) {
     const c = D.chs[e.ci];
     if (e.ci !== lastCi) {
       lastCi = e.ci;
-      if (c) place('<div class="ch"><div class="k">Chapter ' + (e.ci + 1) + ' · ' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>', { chName: c.name });
+      if (c) place('<div class="ch"><div class="k">Chapter ' + c.num + ' · ' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>', { chName: c.name });
     }
     place(entryHtml(e), { e, chName: c?.name });
   }
@@ -208,15 +212,16 @@ function many(V, inks) {
   }
   // the cover: the views as tiles around the middle, in the same places their entries will stand
   {
-    const p = newManyPage('cover', 'Timelines from codegrave', true);
+    const p = newManyPage('cover', 'Timelines from codegrave.com');
     p.insertAdjacentHTML('beforeend', '<div class="title"><h1>' + V.map((v) => esc(v.name)).join(' <span>·</span> ') + '</h1><p>' + N + ' views read side by side, ' + all.length + ' entries. The years run down the middle in order; each view keeps its side and its colour.</p></div>'
       + '<div class="body"><div class="col L"></div><div class="hub"><div class="ln"></div><div class="yr a"></div><div class="yr b">today</div></div><div class="col R"></div></div>');
     p.querySelector('.yr.a').textContent = yearText(Math.min(...V.map((v) => v.first)));
+    if (V[0].last != null) p.querySelector('.yr.b').textContent = yearText(V[0].last);
     V.forEach((v, i) => {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
       const pics = v.es.filter((e) => e.img).sort((a, b) => a.rank - b.rank).slice(0, 4);
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics">' + pics.map((e) => '<div><img src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics">' + pics.map((e) => '<div><img src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
         + (N > 4 ? '' : '<ol>' + v.chs.map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
@@ -238,7 +243,7 @@ function many(V, inks) {
   }
   function chapHtml(e) {
     const c = V[e.vi].chs[e.ci];
-    return '<div class="ch"><div class="k">Chapter ' + (e.ci + 1) + ' · ' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>';
+    return '<div class="ch"><div class="k">Chapter ' + c.num + ' · ' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>';
   }
   function add(e, force) {
     const s = sideOf(e.vi); const prev = open[s], prevY = colY[s]; let b = prev, fresh = false;
@@ -313,12 +318,15 @@ async function start() {
   const q = new URLSearchParams(location.search);
   const ids = (q.get('views') || '').split(',').map((s) => s.trim()).filter((s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..'));
   if (!ids.length) { $('msg').textContent = 'No views named. Open a timeline and press Save as PDF.'; return; }
+  const m = /^(-?\d+)-(-?\d+)$/.exec(q.get('yr') || '');
+  if (m && Number(m[1]) < Number(m[2])) yr = [Number(m[1]), Number(m[2])];
   const cs = (q.get('c') || '').split(',').map(Number);
   const inks = ids.map((_, i) => INKS[(cs.length === ids.length && cs[i] >= 0 && cs[i] < 8 ? cs[i] : i) % INKS.length]);
   const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => getJSON('v/' + id + '.json').catch(() => null))]);
   const views = [], keep = [];
-  payloads.forEach((p, i) => { if (p && p.entries?.length) { views.push(shapeView(p, boot, views.length)); keep.push(inks[i]); } });
-  if (!views.length) { $('msg').textContent = 'These views could not be loaded.'; return; }
+  payloads.forEach((p, i) => { const sv = p && p.entries?.length ? shapeView(p, boot, views.length, yr) : null;
+    if (sv && sv.es.length) { views.push(sv); keep.push(inks[i]); } });
+  if (!views.length) { $('msg').textContent = yr ? 'Nothing in these views begins between ' + yearText(yr[0]) + ' and ' + yearText(yr[1]) + '.' : 'These views could not be loaded.'; return; }
   document.title = views.map((v) => v.name).join(', ') + ' — codegrave';
   await Promise.all(FONTS.map((f) => document.fonts.load(f).catch(() => null)));
   await document.fonts.ready;
@@ -329,6 +337,5 @@ async function start() {
   $('save').disabled = false;
   $('save').addEventListener('click', () => window.print());
   document.body.dataset.done = '1';
-  if (q.get('print') === '1') window.print();
 }
 if (typeof document !== 'undefined') start().catch((err) => { $('msg').textContent = 'Something went wrong: ' + err.message; });
