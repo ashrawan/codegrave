@@ -44,6 +44,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | Labels | `data/labels.json` | |
 | An old address that must keep working | `data/redirects.json` | |
 | An icon or image | `data/media/`, then name it on the entry or event | `site/data/media/` (generated) |
+| The pictures and films beside the road | An entry's own: `media` on the entry. The stand-ins, era by era: `data/wall.json` (`docs/WALL.md`) | |
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
@@ -199,6 +200,35 @@ How the page is put together:
   thing. A card that leaves fades where it stands. This was asked for in so
   many words ("think like opening scroll"), so do not bring back a slide or
   a pop.
+- **The look.** Dark by default, like a museum at night: a sky of stars,
+  glass cards with a lit edge, the road lit warm from the left and cool from
+  the right. The light theme is the same place by day: a blue sky, the sun
+  low over the far end of the road, a pale moon and soft clouds (`cg-theme`).
+- **The media wall** (`site/wall.js`, `docs/WALL.md`). The road runs
+  through open air (a CSS gradient; stars or clouds drawn once), with rails
+  of light either side whose pulses rush towards the reader and about 200
+  motes of dust fading into fog, all on one 2D canvas and only while
+  something moves. Asked for as "great performance on all devices": no
+  WebGL, no library, no grid on the flanks. Six frames float either side
+  (two on a phone), in fixed places that never overlap and are filled in
+  a set order (`FRAMES`; asked for: nothing random, no pictures on top of
+  each other). They show the media of the cards that are up
+  (`wallMedia()`: an entry's `image`, its `media` list and its events'
+  images); with several views each keeps to its lane's side and is bordered
+  in its view's colour, and on a road of one view they fill both sides in
+  turn; `placeLabels()` already knows which cards are up, so the
+  page only hands that list over (`road.shows`) and the wall shares the
+  frames out when the list changes, never per frame. With several views, a
+  side whose lane has no card up shows one small picture of the nearest
+  name there (what comes next, else what just passed), so it never stands
+  empty beside a full one. This was asked for:
+  the wall follows the views and the cards on show. The eras of
+  `data/wall.json` fill the frames only for views with few pictures of
+  their own (`L.own`), and always give the light of the rails and the
+  road's edges (`tone`). Pointing at a frame shows its caption. The wall
+  knows nothing about entries or views. Films play muted; less motion shows
+  posters. Keep it behind the road (`#wall`, under `#road-cv`) and keep the
+  frames few.
 - **The front card** is selected by itself: the nearest card in front of
   the reader (`road.focus`) has its line drawn in its view's colour and its
   events written along it, like the open and the hovered entry
@@ -246,6 +276,14 @@ How the page is put together:
   and from the right. Nothing sounds before play is pressed, travelling by
   hand is silent, and the small button above play turns the sound off
   (`cg-sound` in this browser).
+  Play also has music (`tune()`): one track, looped, that sounds only
+  while play travels, eases in and out and keeps its place on pause. A view
+  may bring its own (`audio` on the view, `docs/VIEWS.md`); otherwise it is
+  `site/media/gallery-of-glass.mp3`. Showing another view, or playing again
+  from the beginning, starts the track from its beginning. It is fetched
+  when play is first pressed with the sound on, and the same button
+  silences it. The house track was asked for with this file; do not swap it
+  without asking.
 - **The panel** is hidden until its button, the "Views" button in the strip
   or a name is clicked. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)

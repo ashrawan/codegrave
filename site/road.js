@@ -129,7 +129,7 @@ export function tracks(items, rest = 0) {
 // On a narrow stage the road sits a little left, so the years have a margin.
 export function stageOf(SW, SH) {
   const phone = SW < 700;
-  const vx = phone ? SW * 0.43 : SW / 2, vy = Math.round(SH * (phone ? 0.13 : 0.07)), by = SH - (phone ? 8 : 12);
+  const vx = phone ? SW * 0.43 : SW / 2, vy = Math.round(SH * (phone ? 0.17 : 0.2)), by = SH - (phone ? 8 : 12);
   const RW = phone ? SW * 0.385 : Math.min(SW * 0.4, 640);
   const short = SH < 430, ks = short ? 0.84 : clamp(SH / (phone ? 560 : 620), 0.8, 1);
   return { SW, SH, phone, vx, vy, by, gh: by - vy, RW, short, ks, FW: phone ? 216 : 288, NW: phone ? 200 : 244 };

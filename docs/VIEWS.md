@@ -84,6 +84,7 @@ the profile if you have none.
 | `year` | no | Not read for a hand-picked view, which opens at its beginning. Older files may carry it. |
 | `order` | no | `"old"` (the default: the road starts at the oldest and runs towards the present) or `"new"` (it starts at the present and runs back). |
 | `image` | no | The thumbnail: a picture with `src`, `alt`, `credit`, `licence` and `source`, as for an entry's image. Leave it out and the build draws a miniature of the view's own lines. |
+| `audio` | no | The view's own music for play: `src` (a sound file under `data/media/`, or an `https` link ending in mp3, ogg, oga, m4a, mp4, webm or wav), `credit`, `licence` and `source`, and an optional `title`. It plays, looped, while play travels. Leave it out and play uses the site's track. With several views on the road, the first one that brings a track is heard. |
 | `categories`, `domains`, `level` | no | Instead of `entries`: draw the view from whole kinds or branches of the base, showing the top `level` percent (5 to 100). Such a view grows by itself as entries are added. |
 
 A view holds any number of entries, and its file on the site carries the 200

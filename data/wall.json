@@ -1,0 +1,1428 @@
+{
+  "$comment": "The media wall beside the road: one entry per era, in order. from and to are written years (to not included). tone is the light on the left (warm) and right (cool) walls. Each media item is a free-licence picture or film hot-linked from Wikimedia Commons, with its author (credit), licence and file page (source). A film plays muted and looped while its era is in sight; start and end (seconds) pick the part that loops. See docs/WALL.md.",
+  "eras": [
+    {
+      "id": "cosmos",
+      "name": "The cosmos",
+      "from": -13800000000,
+      "to": -541000000,
+      "tone": {
+        "warm": "#d9a66a",
+        "cool": "#6f8ff0"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg/500px-NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg",
+          "alt": "Thousands of galaxies in the Hubble Ultra Deep Field",
+          "credit": "NASA, ESA, H. Teplitz and M. Rafelski (IPAC/Caltech), A. Koekemoer …",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:NASA-HS201427a-HubbleUltraDeepField2014-20140603.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/The_Pillars_of_Creation_%28Hubble_and_Webb_Images_Side_by_Side%29.png/500px-The_Pillars_of_Creation_%28Hubble_and_Webb_Images_Side_by_Side%29.png",
+          "alt": "The Pillars of Creation in the Eagle Nebula",
+          "credit": "NASA's James Webb Space Telescope",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Pillars_of_Creation_(Hubble_and_Webb_Images_Side_by_Side).png"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/500px-The_Earth_seen_from_Apollo_17.jpg",
+          "alt": "The whole Earth, seen from Apollo 17",
+          "credit": "NASA/Apollo 17 crew; taken by either Harrison Schmitt or Ron Evans",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:The_Earth_seen_from_Apollo_17.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Crab_Nebula_%283885%29.jpg/500px-Crab_Nebula_%283885%29.jpg",
+          "alt": "The Crab Nebula, the remains of a star",
+          "credit": "Hubble Space Telescope",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Crab_Nebula_(3885).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Andromeda_Galaxy_%28with_h-alpha%29.jpg/500px-Andromeda_Galaxy_%28with_h-alpha%29.jpg",
+          "alt": "The Andromeda Galaxy",
+          "credit": "Adam Evans",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Andromeda_Galaxy_(with_h-alpha).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Orion_Nebula_-_Hubble_2006_mosaic_comparison.png/500px-Orion_Nebula_-_Hubble_2006_mosaic_comparison.png",
+          "alt": "The Orion Nebula, where stars are born",
+          "credit": "Unknown",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Orion_Nebula_-_Hubble_2006_mosaic_comparison.png"
+        },
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/24/Time-lapse_Earth_Flyover_from_NASA_Astronaut_in_Space.webm/Time-lapse_Earth_Flyover_from_NASA_Astronaut_in_Space.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Time-lapse_Earth_Flyover_from_NASA_Astronaut_in_Space.webm/500px--Time-lapse_Earth_Flyover_from_NASA_Astronaut_in_Space.webm.jpg",
+          "alt": "The Earth turning below the International Space Station",
+          "credit": "NASA",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Time-lapse_Earth_Flyover_from_NASA_Astronaut_in_Space.webm"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Llyn_Ogwen_Milky_Way.jpg/500px-Llyn_Ogwen_Milky_Way.jpg",
+          "alt": "The Milky Way across the night sky",
+          "credit": "John Badham",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Llyn_Ogwen_Milky_Way.jpg"
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "name": "Life on Earth",
+      "from": -541000000,
+      "to": -300000,
+      "tone": {
+        "warm": "#d6a15c",
+        "cool": "#77a3c9"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Tyrannosaurus_rex_skeleton_%28cast_of_specimen_MOR_555%29_at_Cleveland_Museum_of_Natural_History.jpg/500px-Tyrannosaurus_rex_skeleton_%28cast_of_specimen_MOR_555%29_at_Cleveland_Museum_of_Natural_History.jpg",
+          "alt": "A Tyrannosaurus skeleton",
+          "credit": "Robosorne",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tyrannosaurus_rex_skeleton_(cast_of_specimen_MOR_555)_at_Cleveland_Museum_of_Natural_History.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Trilobites_%28Austerops_speculator%29%2C_Jebel_Oufatene%2C_Marruecos%2C_2021-01-18%2C_DD_137-195_FS.jpg/500px-Trilobites_%28Austerops_speculator%29%2C_Jebel_Oufatene%2C_Marruecos%2C_2021-01-18%2C_DD_137-195_FS.jpg",
+          "alt": "A trilobite fossil",
+          "credit": "Diego Delso",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Trilobites_(Austerops_speculator),_Jebel_Oufatene,_Marruecos,_2021-01-18,_DD_137-195_FS.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Berlin_Archaeopteryx_-_detail_of_arm.jpg/500px-Berlin_Archaeopteryx_-_detail_of_arm.jpg",
+          "alt": "The Berlin Archaeopteryx fossil",
+          "credit": "Emily Willoughby (emily.a.willoughby@gmail.com)",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Berlin_Archaeopteryx_-_detail_of_arm.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Living_stromatolites%2C_Shark_Bay%2C_Western_Australia.png/500px-Living_stromatolites%2C_Shark_Bay%2C_Western_Australia.png",
+          "alt": "Stromatolites, built by some of the oldest life",
+          "credit": "Ed Landing &amp; Markes E. Johnson (in: Journal of Marine Science a…",
+          "licence": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Living_stromatolites,_Shark_Bay,_Western_Australia.png"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Ammonite-fossil-25-45mm.jpg/500px-Ammonite-fossil-25-45mm.jpg",
+          "alt": "An ammonite fossil",
+          "credit": "Linas Juozėnas",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ammonite-fossil-25-45mm.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Diplodocus_Carnegii_skeleton_in_Museum_f%C3%BCr_Naturkunde_Berlin_0882.jpg/500px-Diplodocus_Carnegii_skeleton_in_Museum_f%C3%BCr_Naturkunde_Berlin_0882.jpg",
+          "alt": "A Diplodocus skeleton",
+          "credit": "Dosseman",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Diplodocus_Carnegii_skeleton_in_Museum_f%C3%BCr_Naturkunde_Berlin_0882.jpg"
+        }
+      ]
+    },
+    {
+      "id": "prehistory",
+      "name": "Prehistory",
+      "from": -300000,
+      "to": -3200,
+      "tone": {
+        "warm": "#d9a35a",
+        "cool": "#7f9fc8"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Lascaux_painting.jpg/500px-Lascaux_painting.jpg",
+          "alt": "A horse painted in the Lascaux cave",
+          "credit": "EU",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Lascaux_painting.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg/500px-Lions_painting%2C_Chauvet_Cave_%28museum_replica%29.jpg",
+          "alt": "Lions painted in the Chauvet cave",
+          "credit": "HTO",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Lions_painting,_Chauvet_Cave_(museum_replica).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Woolly_mammoth_model_Royal_BC_Museum_in_Victoria.jpg/500px-Woolly_mammoth_model_Royal_BC_Museum_in_Victoria.jpg",
+          "alt": "A woolly mammoth",
+          "credit": "Thomas Quine",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Woolly_mammoth_model_Royal_BC_Museum_in_Victoria.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/G%C3%B6bekli_Tepe%2C_Urfa.jpg/500px-G%C3%B6bekli_Tepe%2C_Urfa.jpg",
+          "alt": "The stone circles of Göbekli Tepe",
+          "credit": "Teomancimit",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:G%C3%B6bekli_Tepe,_Urfa.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Early_house_at_Skara_Brae_-_geograph.org.uk_-_7445679.jpg/500px-Early_house_at_Skara_Brae_-_geograph.org.uk_-_7445679.jpg",
+          "alt": "A stone house at Skara Brae",
+          "credit": "Eirian Evans",
+          "licence": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Early_house_at_Skara_Brae_-_geograph.org.uk_-_7445679.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Reproduction_cave_of_Altamira_01.jpg/500px-Reproduction_cave_of_Altamira_01.jpg",
+          "alt": "A bison painted in the cave of Altamira",
+          "credit": "User:MatthiasKabel",
+          "licence": "CC BY 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File:Reproduction_cave_of_Altamira_01.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ancient",
+      "name": "The first civilisations",
+      "from": -3200,
+      "to": -500,
+      "tone": {
+        "warm": "#e0a457",
+        "cool": "#7f9fd6"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/500px-All_Gizah_Pyramids.jpg",
+          "alt": "The pyramids of Giza",
+          "credit": "Ricardo Liberato",
+          "licence": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:All_Gizah_Pyramids.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Great_Sphinx_of_Giza_and_Pyramid_of_Cheops.jpg/500px-Great_Sphinx_of_Giza_and_Pyramid_of_Cheops.jpg",
+          "alt": "The Great Sphinx of Giza",
+          "credit": "kallerna",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Great_Sphinx_of_Giza_and_Pyramid_of_Cheops.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/500px-Stonehenge2007_07_30.jpg",
+          "alt": "Stonehenge",
+          "credit": "garethwiscombe",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Stonehenge2007_07_30.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Ishtar_Gate_in_the_Pergamon_Museum_-.jpg/500px-Ishtar_Gate_in_the_Pergamon_Museum_-.jpg",
+          "alt": "The Ishtar Gate of Babylon",
+          "credit": "Kurt Kaiser",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ishtar_Gate_in_the_Pergamon_Museum_-.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mask_of_Tutankhamun_in_2025.jpg/500px-Mask_of_Tutankhamun_in_2025.jpg",
+          "alt": "The gold mask of Tutankhamun",
+          "credit": "Dawid Wdowczyk",
+          "licence": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Mask_of_Tutankhamun_in_2025.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Proto_cuneiform_tablet_OIM_A12259.jpg/500px-Proto_cuneiform_tablet_OIM_A12259.jpg",
+          "alt": "A clay tablet written in cuneiform",
+          "credit": "Original: Daderot Derivative work : Zunkir",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Proto_cuneiform_tablet_OIM_A12259.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Knossos_north_entrance%2C_Crete_001.JPG/500px-Knossos_north_entrance%2C_Crete_001.JPG",
+          "alt": "The palace of Knossos on Crete",
+          "credit": "Moonik",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Knossos_north_entrance,_Crete_001.JPG"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Templo_de_Rams%C3%A9s_II%2C_Abu_Simbel%2C_Egipto%2C_2022-04-02%2C_DD_26-28_HDR.jpg/500px-Templo_de_Rams%C3%A9s_II%2C_Abu_Simbel%2C_Egipto%2C_2022-04-02%2C_DD_26-28_HDR.jpg",
+          "alt": "The temple of Abu Simbel",
+          "credit": "Diego Delso",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Templo_de_Rams%C3%A9s_II,_Abu_Simbel,_Egipto,_2022-04-02,_DD_26-28_HDR.jpg"
+        }
+      ]
+    },
+    {
+      "id": "classical",
+      "name": "Classical antiquity",
+      "from": -500,
+      "to": 500,
+      "tone": {
+        "warm": "#e3ad62",
+        "cool": "#86a7d9"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Parthenon_from_west.jpg/500px-Parthenon_from_west.jpg",
+          "alt": "The Parthenon in Athens",
+          "credit": "User:Mountain",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Parthenon_from_west.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Colosseum_in_Rome-April_2007-1-_copie_2B.jpg/500px-Colosseum_in_Rome-April_2007-1-_copie_2B.jpg",
+          "alt": "The Colosseum in Rome",
+          "credit": "Diliff",
+          "licence": "CC BY-SA 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome-April_2007-1-_copie_2B.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Qin_Terracotta_Army%2C_Pit_1_09.jpg/500px-Qin_Terracotta_Army%2C_Pit_1_09.jpg",
+          "alt": "The Terracotta Army of the first emperor of China",
+          "credit": "Gary Lee Todd, Ph.D.",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Qin_Terracotta_Army,_Pit_1_09.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/20090529_Great_Wall_8185.jpg/500px-20090529_Great_Wall_8185.jpg",
+          "alt": "The Great Wall of China",
+          "credit": "Jakub Hałun",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:20090529_Great_Wall_8185.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Pantheon_%28Rome%29%2C_Dome_interior.jpg/500px-Pantheon_%28Rome%29%2C_Dome_interior.jpg",
+          "alt": "Inside the Pantheon in Rome",
+          "credit": "Wilfredor",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Pantheon_(Rome),_Dome_interior.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Petra_%2C_Al-Khazneh_2.jpg/500px-Petra_%2C_Al-Khazneh_2.jpg",
+          "alt": "The Treasury at Petra",
+          "credit": "Faraheed",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Petra_,_Al-Khazneh_2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Forum_%28Pompeii%29_and_the_Vesuvio.jpg/500px-Forum_%28Pompeii%29_and_the_Vesuvio.jpg",
+          "alt": "The forum of Pompeii, below Vesuvius",
+          "credit": "Commonists",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Forum_(Pompeii)_and_the_Vesuvio.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Tourists_climbing_lower_stairs_of_Pyramid_of_the_Sun_at_Teotihuacan.jpg/500px-Tourists_climbing_lower_stairs_of_Pyramid_of_the_Sun_at_Teotihuacan.jpg",
+          "alt": "The Pyramid of the Sun at Teotihuacan",
+          "credit": "Daniel Case",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Tourists_climbing_lower_stairs_of_Pyramid_of_the_Sun_at_Teotihuacan.jpg"
+        }
+      ]
+    },
+    {
+      "id": "middle-ages",
+      "name": "The Middle Ages",
+      "from": 500,
+      "to": 1450,
+      "tone": {
+        "warm": "#d79a52",
+        "cool": "#7d95cf"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Hagia_Sophia_Mars_2013.jpg/500px-Hagia_Sophia_Mars_2013.jpg",
+          "alt": "Hagia Sophia in Istanbul",
+          "credit": "Arild Vågen",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Angkor_Wat_Sunrise_%28209237385%29.jpeg/500px-Angkor_Wat_Sunrise_%28209237385%29.jpeg",
+          "alt": "Angkor Wat at sunrise",
+          "credit": "Reinhard Onasch",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Angkor_Wat_Sunrise_(209237385).jpeg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bayeux_Tapestry_scene57_Harold_death.jpg/500px-Bayeux_Tapestry_scene57_Harold_death.jpg",
+          "alt": "A scene from the Bayeux Tapestry",
+          "credit": "Myrabella",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene57_Harold_death.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Cathedrale_Notre-Dame_de_Paris_nef_nouvelles_cloches.jpg/500px-Cathedrale_Notre-Dame_de_Paris_nef_nouvelles_cloches.jpg",
+          "alt": "Notre-Dame de Paris",
+          "credit": "Myrabella",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Cathedrale_Notre-Dame_de_Paris_nef_nouvelles_cloches.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Mario_Kleff_Book_of_Kells_Folio_02.jpg/500px-Mario_Kleff_Book_of_Kells_Folio_02.jpg",
+          "alt": "A page of the Book of Kells",
+          "credit": "Designer Mario Kleff",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Mario_Kleff_Book_of_Kells_Folio_02.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_47.JPG/500px-Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_47.JPG",
+          "alt": "Machu Picchu",
+          "credit": "Diego Delso",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Machu_Picchu,_Per%C3%BA,_2015-07-30,_DD_47.JPG"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Patio_de_los_Arrayanes_detail_Alhambra_Granada_Spain.jpg/500px-Patio_de_los_Arrayanes_detail_Alhambra_Granada_Spain.jpg",
+          "alt": "The Alhambra in Granada",
+          "credit": "Jebulon",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Patio_de_los_Arrayanes_detail_Alhambra_Granada_Spain.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Osebergskipet_2016.jpg/500px-Osebergskipet_2016.jpg",
+          "alt": "The Oseberg Viking ship",
+          "credit": "Petter Ulleland",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Osebergskipet_2016.jpg"
+        }
+      ]
+    },
+    {
+      "id": "renaissance",
+      "name": "Renaissance and discovery",
+      "from": 1450,
+      "to": 1700,
+      "tone": {
+        "warm": "#e2a75a",
+        "cool": "#8aa2d2"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Lightmatter_Sistine_Chapel_ceiling.jpg/500px-Lightmatter_Sistine_Chapel_ceiling.jpg",
+          "alt": "The ceiling of the Sistine Chapel",
+          "credit": "[1]",
+          "licence": "CC BY 2.5",
+          "source": "https://commons.wikimedia.org/wiki/File:Lightmatter_Sistine_Chapel_ceiling.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Gutenberg_Bible_on_display_at_the_U.S._Library_of_Congress.jpg/500px-Gutenberg_Bible_on_display_at_the_U.S._Library_of_Congress.jpg",
+          "alt": "A Gutenberg Bible",
+          "credit": "MC BSU",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Gutenberg_Bible_on_display_at_the_U.S._Library_of_Congress.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Waldseemuller_map_2.jpg/500px-Waldseemuller_map_2.jpg",
+          "alt": "The Waldseemüller world map of 1507",
+          "credit": "Martin Waldseemüller",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Waldseemuller_map_2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Taj_Mahal%2C_Agra%2C_India_edit2.jpg/500px-Taj_Mahal%2C_Agra%2C_India_edit2.jpg",
+          "alt": "The Taj Mahal",
+          "credit": "Yann; edited by King of Hearts",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal,_Agra,_India_edit2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/500px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg",
+          "alt": "The Mona Lisa",
+          "credit": "Leonardo da Vinci",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Sunset_of_the_Forbidden_City_2006.JPG/500px-Sunset_of_the_Forbidden_City_2006.JPG",
+          "alt": "The Forbidden City in Beijing",
+          "credit": "User:kallgan",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Sunset_of_the_Forbidden_City_2006.JPG"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Galilei%27s_older_telescope%2C_eyepiece_part%2C_Museo_Galileo%2C_Florence%2C_Inv._2428%2C_224093.jpg/500px-Galilei%27s_older_telescope%2C_eyepiece_part%2C_Museo_Galileo%2C_Florence%2C_Inv._2428%2C_224093.jpg",
+          "alt": "Galileo's telescopes",
+          "credit": "Zde",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Galilei%27s_older_telescope,_eyepiece_part,_Museo_Galileo,_Florence,_Inv._2428,_224093.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg/500px-Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg",
+          "alt": "St Peter's Basilica in Rome",
+          "credit": "Alvesgaspar",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Pietro_in_Vaticano_September_2015-1a.jpg"
+        }
+      ]
+    },
+    {
+      "id": "revolutions",
+      "name": "Enlightenment and revolution",
+      "from": 1700,
+      "to": 1800,
+      "tone": {
+        "warm": "#d9a35f",
+        "cool": "#8399c9"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/BEP-GIRSCH-Declaration_of_Independence_%28Trumbull%29.jpg/500px-BEP-GIRSCH-Declaration_of_Independence_%28Trumbull%29.jpg",
+          "alt": "The signing of the Declaration of Independence",
+          "credit": "Frederick Girsch at the American Bank Note Company, for the Bureau …",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:BEP-GIRSCH-Declaration_of_Independence_(Trumbull).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Prise_de_la_Bastille_clean.jpg/500px-Prise_de_la_Bastille_clean.jpg",
+          "alt": "The storming of the Bastille, 1789",
+          "credit": "Jean-Pierre Houël",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Prise_de_la_Bastille_clean.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Maquina_vapor_Watt_ETSIIM.jpg/500px-Maquina_vapor_Watt_ETSIIM.jpg",
+          "alt": "A steam engine of James Watt's design",
+          "credit": "Nicolás Pérez",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Maquina_vapor_Watt_ETSIIM.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/500px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+          "alt": "The Palace of Versailles",
+          "credit": "Myrabella",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Chateau_Versailles_Galerie_des_Glaces.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Encyclopedie_frontispice_full.jpg/500px-Encyclopedie_frontispice_full.jpg",
+          "alt": "The Encyclopédie of Diderot and d'Alembert",
+          "credit": "Benoît-Louis Prévost / Charles-Nicolas Cochin",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Encyclopedie_frontispice_full.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Early_flight_02562u.jpg/500px-Early_flight_02562u.jpg",
+          "alt": "A Montgolfier balloon ascent",
+          "credit": "Created/published: Paris : Romanet &amp; Cie., imp. edit.,",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Early_flight_02562u.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Nec_pluribus_impar_ceiling_galerie_des_glaces_versailles.jpg/500px-Nec_pluribus_impar_ceiling_galerie_des_glaces_versailles.jpg",
+          "alt": "The Hall of Mirrors at Versailles",
+          "credit": "Charles Le Brun",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Nec_pluribus_impar_ceiling_galerie_des_glaces_versailles.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Mozart_Family_Croce.jpg/500px-Mozart_Family_Croce.jpg",
+          "alt": "The Mozart family",
+          "credit": "Possibly Johann Nepomuk della Croce",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Mozart_Family_Croce.jpg"
+        }
+      ]
+    },
+    {
+      "id": "industrial",
+      "name": "The industrial age",
+      "from": 1800,
+      "to": 1900,
+      "tone": {
+        "warm": "#d1995a",
+        "cool": "#8a9fbf"
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1a/Arrival_of_a_Train_at_La_Ciotat_%28The_Lumi%C3%A8re_Brothers%2C_1895%29.webm/Arrival_of_a_Train_at_La_Ciotat_%28The_Lumi%C3%A8re_Brothers%2C_1895%29.webm.240p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Arrival_of_a_Train_at_La_Ciotat_%28The_Lumi%C3%A8re_Brothers%2C_1895%29.webm/500px--Arrival_of_a_Train_at_La_Ciotat_%28The_Lumi%C3%A8re_Brothers%2C_1895%29.webm.jpg",
+          "alt": "Arrival of a train, filmed by the Lumière brothers in 1895",
+          "credit": "Lumière brothers",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Arrival_of_a_Train_at_La_Ciotat_(The_Lumi%C3%A8re_Brothers,_1895).webm"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg/500px-Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg",
+          "alt": "The Crystal Palace, 1851",
+          "credit": "Dickinson Brothers",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Crystal_Palace_from_the_northeast_from_Dickinson%27s_Comprehensive_Pictures_of_the_Great_Exhibition_of_1851._1854.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Carl_Larsson_-_The_Eiffel_Tower_under_construction_1888.jpg/500px-Carl_Larsson_-_The_Eiffel_Tower_under_construction_1888.jpg",
+          "alt": "The Eiffel Tower being built",
+          "credit": "Carl Larsson",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Carl_Larsson_-_The_Eiffel_Tower_under_construction_1888.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Stephenson%27s_Rocket_drawing.jpg/500px-Stephenson%27s_Rocket_drawing.jpg",
+          "alt": "Stephenson's Rocket locomotive",
+          "credit": "Unknown",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Stephenson%27s_Rocket_drawing.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Currier_and_Ives_Brooklyn_Bridge2.jpg/500px-Currier_and_Ives_Brooklyn_Bridge2.jpg",
+          "alt": "The Brooklyn Bridge",
+          "credit": "Currier and Ives",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Currier_and_Ives_Brooklyn_Bridge2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Charles_Darwin_in_1881.jpg/500px-Charles_Darwin_in_1881.jpg",
+          "alt": "Charles Darwin",
+          "credit": "Elliott &amp; Fry",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Charles_Darwin_in_1881.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Edison_Home_Phonograph_1901.jpg/500px-Edison_Home_Phonograph_1901.jpg",
+          "alt": "Edison and his phonograph",
+          "credit": "AnonymousUnknown author",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Edison_Home_Phonograph_1901.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Life_of_Brunel_-_Fig_16_-_Longitudinal_Section%2C_Plan%2C_and_Midship_Section_of_the_%E2%80%98Great_Eastern%E2%80%99_Steam-Ship.png/500px-Life_of_Brunel_-_Fig_16_-_Longitudinal_Section%2C_Plan%2C_and_Midship_Section_of_the_%E2%80%98Great_Eastern%E2%80%99_Steam-Ship.png",
+          "alt": "The steamship Great Eastern",
+          "credit": "Isambard Brunel Junior, H Adlard, J C Horsley, T O Barlow",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Life_of_Brunel_-_Fig_16_-_Longitudinal_Section,_Plan,_and_Midship_Section_of_the_%E2%80%98Great_Eastern%E2%80%99_Steam-Ship.png"
+        }
+      ]
+    },
+    {
+      "id": "1900s",
+      "name": "1900 to 1919",
+      "from": 1900,
+      "to": 1920,
+      "tone": {
+        "warm": "#d8a160",
+        "cool": "#88a3cf"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Wright_First_Flight_1903Dec17_%28restore_115%2C_colorized%29.jpg/500px-Wright_First_Flight_1903Dec17_%28restore_115%2C_colorized%29.jpg",
+          "alt": "The first flight of the Wright Flyer, 1903",
+          "credit": "John T. Daniels (restoration &amp; colorization by Wright Stuf)",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Wright_First_Flight_1903Dec17_(restore_115,_colorized).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Ford_Model_T_Tourabout_6301591.jpg/500px-Ford_Model_T_Tourabout_6301591.jpg",
+          "alt": "A Ford Model T",
+          "credit": "Ermell",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Ford_Model_T_Tourabout_6301591.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/RMS_Titanic_3.jpg/500px-RMS_Titanic_3.jpg",
+          "alt": "The Titanic leaving Southampton, 1912",
+          "credit": "Francis Godolphin Osbourne Stuart",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:RMS_Titanic_3.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Cheshire_Regiment_trench_Somme_1916.jpg/500px-Cheshire_Regiment_trench_Somme_1916.jpg",
+          "alt": "A trench on the Somme, 1916",
+          "credit": "John Warwick Brooke",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Cheshire_Regiment_trench_Somme_1916.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ellis_island_1902.jpg/500px-Ellis_island_1902.jpg",
+          "alt": "Immigrants arriving at Ellis Island",
+          "credit": "Unknown author",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Ellis_island_1902.jpg"
+        },
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm/Le_Voyage_dans_la_Lune_%281902%29.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Le_Voyage_dans_la_Lune_%281902%29.webm/500px--Le_Voyage_dans_la_Lune_%281902%29.webm.jpg",
+          "alt": "Le Voyage dans la Lune, 1902",
+          "credit": "Georges Méliès",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Le_Voyage_dans_la_Lune_(1902).webm"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Einstein_patentoffice.jpg/500px-Einstein_patentoffice.jpg",
+          "alt": "Albert Einstein around 1905",
+          "credit": "Lucien Chavan [1] (1868 - 1942), a friend of Einstein's when he was…",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Einstein_patentoffice.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Panama_canal_construction_%283607562265%29.jpg/500px-Panama_canal_construction_%283607562265%29.jpg",
+          "alt": "The Panama Canal being dug",
+          "credit": "The Field Museum Library",
+          "licence": "No restrictions",
+          "source": "https://commons.wikimedia.org/wiki/File:Panama_canal_construction_(3607562265).jpg"
+        }
+      ]
+    },
+    {
+      "id": "1920s",
+      "name": "1920 to 1939",
+      "from": 1920,
+      "to": 1940,
+      "tone": {
+        "warm": "#dfa95e",
+        "cool": "#8ba8da"
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5f/Steamboat_Willie_%281928%29_by_Walt_Disney.webm/Steamboat_Willie_%281928%29_by_Walt_Disney.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Steamboat_Willie_%281928%29_by_Walt_Disney.webm/500px--Steamboat_Willie_%281928%29_by_Walt_Disney.webm.jpg",
+          "alt": "Steamboat Willie, 1928",
+          "credit": "Walt Disney / Ub Iwerks / Johnny Cannon / Les Clark / Wilfred Jacks…",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Steamboat_Willie_(1928)_by_Walt_Disney.webm"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Empire_State_Building._LOC_gsc.5a18068.jpg/500px-Empire_State_Building._LOC_gsc.5a18068.jpg",
+          "alt": "The Empire State Building",
+          "credit": "Gottscho, Samuel H.",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Empire_State_Building._LOC_gsc.5a18068.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Charles_Lindbergh_and_airplane_%22Spirit_of_St._Louis%22_LCCN2016888581.jpg/500px-Charles_Lindbergh_and_airplane_%22Spirit_of_St._Louis%22_LCCN2016888581.jpg",
+          "alt": "Lindbergh's Spirit of St. Louis",
+          "credit": "Harris &amp; Ewing, photographer",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Charles_Lindbergh_and_airplane_%22Spirit_of_St._Louis%22_LCCN2016888581.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Dust_Bowl_-_Dallas%2C_South_Dakota_1936.jpg/500px-Dust_Bowl_-_Dallas%2C_South_Dakota_1936.jpg",
+          "alt": "A dust storm in the Dust Bowl, 1936",
+          "credit": "Sloan (?)",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Dust_Bowl_-_Dallas,_South_Dakota_1936.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Hindenburg_disaster.jpg/500px-Hindenburg_disaster.jpg",
+          "alt": "The Hindenburg disaster, 1937",
+          "credit": "Sam Shere",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Hindenburg_disaster.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Golden_Gate_Bridge_at_sunset_1.jpg/500px-Golden_Gate_Bridge_at_sunset_1.jpg",
+          "alt": "The Golden Gate Bridge",
+          "credit": "Brocken Inaglory",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Bridge_at_sunset_1.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Lange-MigrantMother02.jpg/500px-Lange-MigrantMother02.jpg",
+          "alt": "Migrant Mother, by Dorothea Lange",
+          "credit": "Dorothea Lange",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Lange-MigrantMother02.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/John_Logie_Baird_and_Stooky_Bill.png/500px-John_Logie_Baird_and_Stooky_Bill.png",
+          "alt": "John Logie Baird's television",
+          "credit": "Orrin Dunlap, Jr.",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:John_Logie_Baird_and_Stooky_Bill.png"
+        }
+      ]
+    },
+    {
+      "id": "1940s",
+      "name": "1940 to 1959",
+      "from": 1940,
+      "to": 1960,
+      "tone": {
+        "warm": "#d7a15a",
+        "cool": "#7f9fd9"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg/500px-Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg",
+          "alt": "ENIAC, one of the first electronic computers",
+          "credit": "Unknown author",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Glen_Beck_and_Betty_Snyder_program_the_ENIAC_in_building_328_at_the_Ballistic_Research_Laboratory.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Into_the_Jaws_of_Death_23-0455M_edit.jpg/500px-Into_the_Jaws_of_Death_23-0455M_edit.jpg",
+          "alt": "Landing on Omaha Beach, 1944",
+          "credit": "Chief Photographer's Mate (CPHoM) Robert F. Sargent",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Into_the_Jaws_of_Death_23-0455M_edit.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Trinity_Test_Fireball_16ms.jpg/500px-Trinity_Test_Fireball_16ms.jpg",
+          "alt": "The Trinity test, 1945",
+          "credit": "Berlyn Brixner / Los Alamos National Laboratory",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Trinity_Test_Fireball_16ms.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Sputnik_asm.jpg/500px-Sputnik_asm.jpg",
+          "alt": "A model of Sputnik 1",
+          "credit": "NSSDC, NASA[1]",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Sputnik_asm.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Replica-of-first-transistor.jpg",
+          "alt": "A replica of the first transistor",
+          "credit": "Federal employee",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Replica-of-first-transistor.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Elvis_Presley_at_Olympia_Theater%2C_Aug_3%2C_1956.jpg/500px-Elvis_Presley_at_Olympia_Theater%2C_Aug_3%2C_1956.jpg",
+          "alt": "Elvis Presley, 1956",
+          "credit": "Don Wright for the Miami Herald",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Elvis_Presley_at_Olympia_Theater,_Aug_3,_1956.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/V-J_Day_Times_Square_NYWTS.jpg/500px-V-J_Day_Times_Square_NYWTS.jpg",
+          "alt": "V-J Day in Times Square, 1945",
+          "credit": "New York World-Telegram and the Sun staff photographer: DeMarsico, …",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:V-J_Day_Times_Square_NYWTS.jpg"
+        },
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/45/1958-06-09_Russian_exhibit_of_Sputnik.ogv/1958-06-09_Russian_exhibit_of_Sputnik.ogv.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/1958-06-09_Russian_exhibit_of_Sputnik.ogv/500px--1958-06-09_Russian_exhibit_of_Sputnik.ogv.jpg",
+          "alt": "Newsreel of Sputnik 1, 1957",
+          "credit": "Production Company Universal Studios",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:1958-06-09_Russian_exhibit_of_Sputnik.ogv"
+        }
+      ]
+    },
+    {
+      "id": "1960s",
+      "name": "The 1960s",
+      "from": 1960,
+      "to": 1970,
+      "tone": {
+        "warm": "#e0a85a",
+        "cool": "#7fa6e8"
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/88/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm/500px--Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm.jpg",
+          "alt": "Apollo 11 lifting off, with the launch commentary",
+          "credit": "NASAKennedy",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Jack_King%27s_Apollo_11_Launch_Commentary_o4OBKOlgmfo.webm"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Aldrin_Apollo_11_original.jpg/500px-Aldrin_Apollo_11_original.jpg",
+          "alt": "Buzz Aldrin on the Moon, 1969",
+          "credit": "Neil Armstrong",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Aldrin_Apollo_11_original.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/500px-NASA-Apollo8-Dec24-Earthrise.jpg",
+          "alt": "Earthrise, seen from Apollo 8",
+          "credit": "NASA/Bill Anders",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/IBM_System-360_Model_30_at_Computer_History_Museum%2C_Mountain_View.jpg/500px-IBM_System-360_Model_30_at_Computer_History_Museum%2C_Mountain_View.jpg",
+          "alt": "An IBM System/360 Model 30",
+          "credit": "Alexey Komarov",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:IBM_System-360_Model_30_at_Computer_History_Museum,_Mountain_View.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Apollo_11_Launch_-_GPN-2000-000630.jpg/500px-Apollo_11_Launch_-_GPN-2000-000630.jpg",
+          "alt": "Saturn V carrying Apollo 11",
+          "credit": "NASA",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Apollo_11_Launch_-_GPN-2000-000630.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Apollo_11_bootprint.jpg/500px-Apollo_11_bootprint.jpg",
+          "alt": "A bootprint in lunar soil",
+          "credit": "NASA / Buzz Aldrin",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Apollo_11_bootprint.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Civil_Rights_March_on_Washington%2C_D.C._%28Dr._Martin_Luther_King%2C_Jr._and_Mathew_Ahmann_in_a_crowd.%29_-_NARA_-_542015_-_Restoration.jpg/500px-Civil_Rights_March_on_Washington%2C_D.C._%28Dr._Martin_Luther_King%2C_Jr._and_Mathew_Ahmann_in_a_crowd.%29_-_NARA_-_542015_-_Restoration.jpg",
+          "alt": "The March on Washington, 1963",
+          "credit": "Rowland Scherman / Adam Cuerden",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Civil_Rights_March_on_Washington,_D.C._(Dr._Martin_Luther_King,_Jr._and_Mathew_Ahmann_in_a_crowd.)_-_NARA_-_542015_-_Restoration.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Full-Size_Mock-up_of_Vostok_1_capsule_at_Mus%C3%A9e_de_l%27air_et_de_l%27espace%2C_Le_Bourget%2C_France_%2853431558341%29.jpg/500px-Full-Size_Mock-up_of_Vostok_1_capsule_at_Mus%C3%A9e_de_l%27air_et_de_l%27espace%2C_Le_Bourget%2C_France_%2853431558341%29.jpg",
+          "alt": "A Vostok capsule, like Gagarin's",
+          "credit": "Alan Wilson from Peterborough, Cambs, UK",
+          "licence": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Full-Size_Mock-up_of_Vostok_1_capsule_at_Mus%C3%A9e_de_l%27air_et_de_l%27espace,_Le_Bourget,_France_(53431558341).jpg"
+        }
+      ]
+    },
+    {
+      "id": "1970s",
+      "name": "The 1970s",
+      "from": 1970,
+      "to": 1980,
+      "tone": {
+        "warm": "#e2a052",
+        "cool": "#80a2e0"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/b/be/Apple_1_computer.jpg",
+          "alt": "The Apple I",
+          "credit": "Unknown",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Apple_1_computer.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Altair_8800_and_Model_33_ASR_Teletype.jpg/500px-Altair_8800_and_Model_33_ASR_Teletype.jpg",
+          "alt": "The Altair 8800",
+          "credit": "Tim Colegrove",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Altair_8800_and_Model_33_ASR_Teletype.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Concorde_The_Final_YYZ-JFK-LHR_Flight_%284385501371%29.jpg/500px-Concorde_The_Final_YYZ-JFK-LHR_Flight_%284385501371%29.jpg",
+          "alt": "Concorde taking off",
+          "credit": "Can Pac Swire from Toronto, Canada",
+          "licence": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Concorde_The_Final_YYZ-JFK-LHR_Flight_(4385501371).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Titan_3E_Centaur_launches_Voyager_2.jpg/500px-Titan_3E_Centaur_launches_Voyager_2.jpg",
+          "alt": "The launch of Voyager 2, 1977",
+          "credit": "NASA/MSFC",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Titan_3E_Centaur_launches_Voyager_2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Skylab_%28SL-4%29.jpg/500px-Skylab_%28SL-4%29.jpg",
+          "alt": "Skylab",
+          "credit": "NASA (Crew of Skylab 4)",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Skylab_(SL-4).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Atari_Pong_Table.jpg/500px-Atari_Pong_Table.jpg",
+          "alt": "A Pong arcade machine",
+          "credit": "Mbrickn",
+          "licence": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Atari_Pong_Table.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Viking_Lander_1_Martian_Surface.jpg/500px-Viking_Lander_1_Martian_Surface.jpg",
+          "alt": "The first colour picture from the surface of Mars, 1976",
+          "credit": "NASA/JPL",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Viking_Lander_1_Martian_Surface.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Portrait_of_ASTP_crews_-_restoration.jpg/500px-Portrait_of_ASTP_crews_-_restoration.jpg",
+          "alt": "The Apollo-Soyuz mission, 1975",
+          "credit": "Adam Cuerden",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_ASTP_crews_-_restoration.jpg"
+        }
+      ]
+    },
+    {
+      "id": "1980s",
+      "name": "The 1980s",
+      "from": 1980,
+      "to": 1990,
+      "tone": {
+        "warm": "#e6a65a",
+        "cool": "#7aa6ee"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/IBM_PC-IMG_7271.jpg/500px-IBM_PC-IMG_7271.jpg",
+          "alt": "The IBM Personal Computer",
+          "credit": "Rama &amp; Musée Bolo",
+          "licence": "CC BY-SA 2.0 fr",
+          "source": "https://commons.wikimedia.org/wiki/File:IBM_PC-IMG_7271.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Steve_Jobs_and_Macintosh_computer%2C_January_1984%2C_by_Bernard_Gotfryd_-_edited.jpg/500px-Steve_Jobs_and_Macintosh_computer%2C_January_1984%2C_by_Bernard_Gotfryd_-_edited.jpg",
+          "alt": "The first Apple Macintosh",
+          "credit": "Photo: Bernard Gotfryd - Edited from tif by Cart",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Steve_Jobs_and_Macintosh_computer,_January_1984,_by_Bernard_Gotfryd_-_edited.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg/500px-West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg",
+          "alt": "The fall of the Berlin Wall, 1989",
+          "credit": "Unknown photographer, Reproduction by Lear 21 at English Wikipedia.",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:West_and_East_Germans_at_the_Brandenburg_Gate_in_1989.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Columbia.sts-1.01.jpg/500px-Columbia.sts-1.01.jpg",
+          "alt": "The first Space Shuttle launch, 1981",
+          "credit": "NASA/KSC",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Columbia.sts-1.01.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/500px-NES-Console-Set.jpg",
+          "alt": "The Nintendo Entertainment System",
+          "credit": "Evan-Amos",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:NES-Console-Set.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Walkman_TPS-L2.jpg/500px-Walkman_TPS-L2.jpg",
+          "alt": "The first Sony Walkman",
+          "credit": "Anna Gerdén",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Walkman_TPS-L2.jpg"
+        },
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1a/Shuttle_Imaging_Radar_A_Launches_aboard_STS-2.webm/Shuttle_Imaging_Radar_A_Launches_aboard_STS-2.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Shuttle_Imaging_Radar_A_Launches_aboard_STS-2.webm/500px--Shuttle_Imaging_Radar_A_Launches_aboard_STS-2.webm.jpg",
+          "alt": "Space Shuttle Columbia's second launch, 1981",
+          "credit": "NASA/JPL",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Shuttle_Imaging_Radar_A_Launches_aboard_STS-2.webm",
+          "start": 20
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Commodore-64-Computer-FL.jpg/500px-Commodore-64-Computer-FL.jpg",
+          "alt": "The Commodore 64",
+          "credit": "Evan-Amos",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Commodore-64-Computer-FL.jpg"
+        }
+      ]
+    },
+    {
+      "id": "1990s",
+      "name": "The 1990s",
+      "from": 1990,
+      "to": 2000,
+      "tone": {
+        "warm": "#e4ab62",
+        "cool": "#6fa6f2"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/First_Web_Server.jpg/500px-First_Web_Server.jpg",
+          "alt": "The first web server, at CERN",
+          "credit": "User:Coolcaesar at en.wikipedia",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:First_Web_Server.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/STS-125_and_STS-400_on_Launch_Pads.jpg/500px-STS-125_and_STS-400_on_Launch_Pads.jpg",
+          "alt": "The Hubble Space Telescope",
+          "credit": "NASA/Jack Pfaller",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:STS-125_and_STS-400_on_Launch_Pads.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Game-Boy-FL.jpg/500px-Game-Boy-FL.jpg",
+          "alt": "The Game Boy",
+          "credit": "Evan-Amos",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Game-Boy-FL.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/3/30/Pena_Gomez_and_Nelson_Mandela.png",
+          "alt": "Nelson Mandela",
+          "credit": "CleverEditorSI",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Pena_Gomez_and_Nelson_Mandela.png"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Mir_space_station_12_June_1998-cropped.jpg/500px-Mir_space_station_12_June_1998-cropped.jpg",
+          "alt": "The Mir space station",
+          "credit": "NASA",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Mir_space_station_12_June_1998-cropped.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Sojourner_on_Mars_PIA01122.jpg/500px-Sojourner_on_Mars_PIA01122.jpg",
+          "alt": "The Sojourner rover on Mars, 1997",
+          "credit": "NASA",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Sojourner_on_Mars_PIA01122.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Dolly_the_Sheep_National_Museum_of_Scotland.jpg/500px-Dolly_the_Sheep_National_Museum_of_Scotland.jpg",
+          "alt": "Dolly the sheep, the first cloned mammal",
+          "credit": "Sgerbic",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Dolly_the_Sheep_National_Museum_of_Scotland.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Artist_concept_of_the_Hubble_Space_Telescope_%28HST%29_after_STS-31_deployment.jpg/500px-Artist_concept_of_the_Hubble_Space_Telescope_%28HST%29_after_STS-31_deployment.jpg",
+          "alt": "Hubble being released into orbit, 1990",
+          "credit": "NASA",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Artist_concept_of_the_Hubble_Space_Telescope_(HST)_after_STS-31_deployment.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2000s",
+      "name": "The 2000s",
+      "from": 2000,
+      "to": 2010,
+      "tone": {
+        "warm": "#e8b05e",
+        "cool": "#6aa8f5"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/International_Space_Station_after_undocking_of_STS-132.jpg/500px-International_Space_Station_after_undocking_of_STS-132.jpg",
+          "alt": "The International Space Station",
+          "credit": "NASA/Crew of STS-132",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:International_Space_Station_after_undocking_of_STS-132.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/IPhone_First_Generation_%28cropped%29.jpg/500px-IPhone_First_Generation_%28cropped%29.jpg",
+          "alt": "The first iPhone",
+          "credit": "Carl Berkeley from Riverside California",
+          "licence": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:IPhone_First_Generation_(cropped).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Views_of_the_LHC_tunnel_sector_3-4%2C_tirage_2.jpg/500px-Views_of_the_LHC_tunnel_sector_3-4%2C_tirage_2.jpg",
+          "alt": "The Large Hadron Collider",
+          "credit": "Maximilien Brice (CERN)",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Views_of_the_LHC_tunnel_sector_3-4,_tirage_2.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/NASA_Mars_Rover.jpg/500px-NASA_Mars_Rover.jpg",
+          "alt": "The Mars rover Spirit",
+          "credit": "NASA/JPL/Cornell University, Maas Digital LLC",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:NASA_Mars_Rover.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Burj_Khalifa_%2816260269606%29.jpg/500px-Burj_Khalifa_%2816260269606%29.jpg",
+          "alt": "The Burj Khalifa",
+          "credit": "Laika ac",
+          "licence": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Burj_Khalifa_(16260269606).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Wikimania_globalvoicespanel.jpg/500px-Wikimania_globalvoicespanel.jpg",
+          "alt": "Wikimania 2005, the first Wikipedia conference",
+          "credit": "No machine-readable author provided. Elya assumed (based on copyrig…",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Wikimania_globalvoicespanel.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Beijing_national_stadium.jpg/500px-Beijing_national_stadium.jpg",
+          "alt": "The Beijing Olympic stadium, 2008",
+          "credit": "Peter23",
+          "licence": "CC BY-SA 3.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Beijing_national_stadium.jpg"
+        },
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d7/STS-130_Flyaround_--_Views_of_the_International_Space_Station.webm/STS-130_Flyaround_--_Views_of_the_International_Space_Station.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/STS-130_Flyaround_--_Views_of_the_International_Space_Station.webm/500px--STS-130_Flyaround_--_Views_of_the_International_Space_Station.webm.jpg",
+          "alt": "The International Space Station from a departing shuttle",
+          "credit": "NASA Johnson",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:STS-130_Flyaround_--_Views_of_the_International_Space_Station.webm"
+        }
+      ]
+    },
+    {
+      "id": "2010s",
+      "name": "The 2010s",
+      "from": 2010,
+      "to": 2020,
+      "tone": {
+        "warm": "#e7b45a",
+        "cool": "#6fa8ff"
+      },
+      "media": [
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/da/Falcon_Heavy_side_boosters_landing_at_LZ-1_and_LZ-2.webm/Falcon_Heavy_side_boosters_landing_at_LZ-1_and_LZ-2.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Falcon_Heavy_side_boosters_landing_at_LZ-1_and_LZ-2.webm/500px--Falcon_Heavy_side_boosters_landing_at_LZ-1_and_LZ-2.webm.jpg",
+          "alt": "Falcon Heavy's two side boosters landing side by side, 2018",
+          "credit": "~Ealasaid~ (original frames) BugWarp (video)",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Falcon_Heavy_side_boosters_landing_at_LZ-1_and_LZ-2.webm"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_Watson_w_Jeopardy.jpg/500px-IBM_Watson_w_Jeopardy.jpg",
+          "alt": "IBM Watson's Jeopardy! set",
+          "credit": "Atomic Taco",
+          "licence": "CC BY-SA 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:IBM_Watson_w_Jeopardy.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera.jpg/500px-PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera.jpg",
+          "alt": "The Curiosity rover on Mars",
+          "credit": "NASA/JPL-Caltech/Malin Space Science Systems Derivative work includ…",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:PIA16239_High-Resolution_Self-Portrait_by_Curiosity_Rover_Arm_Camera.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Lee-sedol-alphago-divine-move.jpg/500px-Lee-sedol-alphago-divine-move.jpg",
+          "alt": "AlphaGo against Lee Sedol, game four",
+          "credit": "Axd",
+          "licence": "CC BY-SA 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Lee-sedol-alphago-divine-move.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Raspberry_Pi_board_at_TransferSummit_2011_cropped.jpg/500px-Raspberry_Pi_board_at_TransferSummit_2011_cropped.jpg",
+          "alt": "An early Raspberry Pi board",
+          "credit": "Paul Downey",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Raspberry_Pi_board_at_TransferSummit_2011_cropped.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Falcon_Heavy_Demo_Mission_%2840126461851%29.jpg/500px-Falcon_Heavy_Demo_Mission_%2840126461851%29.jpg",
+          "alt": "Falcon Heavy lifting off, 2018",
+          "credit": "SpaceX",
+          "licence": "CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Falcon_Heavy_Demo_Mission_(40126461851).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Black_hole_-_Messier_87.jpg/500px-Black_hole_-_Messier_87.jpg",
+          "alt": "The first image of a black hole, 2019",
+          "credit": "Event Horizon Telescope",
+          "licence": "CC BY 4.0",
+          "source": "https://commons.wikimedia.org/wiki/File:Black_hole_-_Messier_87.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Pluto-01_Stern_03_Pluto_Color_TXT.jpg/500px-Pluto-01_Stern_03_Pluto_Color_TXT.jpg",
+          "alt": "Pluto, seen by New Horizons in 2015",
+          "credit": "NASA / Johns Hopkins University Applied Physics Laboratory / Southw…",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Pluto-01_Stern_03_Pluto_Color_TXT.jpg"
+        }
+      ]
+    },
+    {
+      "id": "2020s",
+      "name": "The 2020s",
+      "from": 2020,
+      "to": 2200,
+      "tone": {
+        "warm": "#ebb860",
+        "cool": "#64a9ff"
+      },
+      "media": [
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/NASA%E2%80%99s_Webb_Reveals_Cosmic_Cliffs%2C_Glittering_Landscape_of_Star_Birth_-_Flickr_-_James_Webb_Space_Telescope_%281%29.png/500px-NASA%E2%80%99s_Webb_Reveals_Cosmic_Cliffs%2C_Glittering_Landscape_of_Star_Birth_-_Flickr_-_James_Webb_Space_Telescope_%281%29.png",
+          "alt": "The Cosmic Cliffs, seen by the James Webb Space Telescope",
+          "credit": "NASA's James Webb Space Telescope from Greenbelt, MD, USA",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:NASA%E2%80%99s_Webb_Reveals_Cosmic_Cliffs,_Glittering_Landscape_of_Star_Birth_-_Flickr_-_James_Webb_Space_Telescope_(1).png"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/NASA%27s_Ingenuity_helicopter_on_Mars_by_Perseverance_Mastcam-Z%2C_Sol_768_%2853475637956%29.jpg/500px-NASA%27s_Ingenuity_helicopter_on_Mars_by_Perseverance_Mastcam-Z%2C_Sol_768_%2853475637956%29.jpg",
+          "alt": "The Ingenuity helicopter on Mars",
+          "credit": "semeion.photo Credit: NASA/JPL-Caltech/ASU/Simeon Schmauß",
+          "licence": "CC BY 2.0",
+          "source": "https://commons.wikimedia.org/wiki/File:NASA%27s_Ingenuity_helicopter_on_Mars_by_Perseverance_Mastcam-Z,_Sol_768_(53475637956).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/James_Webb_Space_Telescope_Mirror37.jpg/500px-James_Webb_Space_Telescope_Mirror37.jpg",
+          "alt": "The mirror of the James Webb Space Telescope",
+          "credit": "NASA/MSFC/David Higginbotham/Emmett Given",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:James_Webb_Space_Telescope_Mirror37.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mars_2020_Perseverance_Launch_%28NHQ202007300009%29.jpg/500px-Mars_2020_Perseverance_Launch_%28NHQ202007300009%29.jpg",
+          "alt": "Perseverance leaving for Mars, 2020",
+          "credit": "Joel Kowsky",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Mars_2020_Perseverance_Launch_(NHQ202007300009).jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Mars_2020_selfie_containing_both_perseverance_rover_and_ingenuity.gif/500px-Mars_2020_selfie_containing_both_perseverance_rover_and_ingenuity.gif",
+          "alt": "The Perseverance rover on Mars",
+          "credit": "NASA",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Mars_2020_selfie_containing_both_perseverance_rover_and_ingenuity.gif"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Pfizer-BioNTech_COVID-19_vaccine_%282020%29_D.jpg/500px-Pfizer-BioNTech_COVID-19_vaccine_%282020%29_D.jpg",
+          "alt": "A COVID-19 vaccine, 2020",
+          "credit": "U.S. Secretary of Defense",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Pfizer-BioNTech_COVID-19_vaccine_(2020)_D.jpg"
+        },
+        {
+          "type": "image",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Launch_of_Artemis_1_%28KSC_20221115_Artemis_I_Launch-2%29.jpg/500px-Launch_of_Artemis_1_%28KSC_20221115_Artemis_I_Launch-2%29.jpg",
+          "alt": "The launch of Artemis I, 2022",
+          "credit": "NASA/STEVEN SEIPEL",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:Launch_of_Artemis_1_(KSC_20221115_Artemis_I_Launch-2).jpg"
+        },
+        {
+          "type": "video",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b1/NASA%27s_Perseverance_Captures_Video%2C_Audio_of_Fourth_Ingenuity_Flight.webm/NASA%27s_Perseverance_Captures_Video%2C_Audio_of_Fourth_Ingenuity_Flight.webm.480p.vp9.webm",
+          "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/NASA%27s_Perseverance_Captures_Video%2C_Audio_of_Fourth_Ingenuity_Flight.webm/500px--NASA%27s_Perseverance_Captures_Video%2C_Audio_of_Fourth_Ingenuity_Flight.webm.jpg",
+          "alt": "The first powered flight on another planet, 2021",
+          "credit": "NASA/JPL",
+          "licence": "Public domain",
+          "source": "https://commons.wikimedia.org/wiki/File:NASA%27s_Perseverance_Captures_Video,_Audio_of_Fourth_Ingenuity_Flight.webm"
+        }
+      ]
+    }
+  ]
+}

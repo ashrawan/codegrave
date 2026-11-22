@@ -7,6 +7,7 @@
    with rank.js, file keys come from keys.js. */
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf } from './keys.js';
+import { createWall } from './wall.js';
 import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, dwellFor, turnPace } from './road.js';
 
 (() => {
@@ -205,8 +206,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     return name.slice(0, 2);
   }
 
+  let wall = null;       // the media wall either side of the road (wall.js), fed by the eras in boot.json
   function useBoot(b) {
     boot = b;
+    wall = createWall($('wall'), { eras: b.wall || [] });
     cats = b.categories || [];
     cats.forEach((c, i) => { c.i = i; });
     catById = new Map(cats.map((c) => [c.id, c]));
@@ -221,7 +224,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function sayScope() {
     if (!boot) return;
     const n = group(boot.counts?.entries || 0), views = (boot.views || []).length;
-    $('q').placeholder = matchMedia(PHONE).matches ? `Search ${n} entries` : `Search ${n} entries: a person, a place, an event or a year`;
+    $('q').placeholder = matchMedia(PHONE).matches ? 'Search the timeline' : 'Search the timeline: a person, a place, an event or a year';
     $('vscope').textContent = `${group(views)} ${views === 1 ? 'view' : 'views'} · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.
@@ -455,6 +458,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (play.on) pausePlay();
       state.span = null; state.pinned.clear();
       setViews([got]);
+      musicAgain();
       road.t = road.target = null; road.vel = 0;      // render() then opens the road where this view begins
       drawReverse();
       if (done) done(got); else changed();
@@ -699,7 +703,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
     turnsOver();
-    L = { tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
+    // Do the views bring pictures of their own for the media wall? Enough of them (15 in 100 entries) and the wall shows only those.
+    const own = shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
+    L = { own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
@@ -712,6 +718,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('road-views').innerHTML = ''; $('road-year').textContent = '';
     const cv = $('road-cv');
     cv.getContext('2d').clearRect(0, 0, cv.width, cv.height);
+    if (wall) wall.clear();
   }
   // Where a view begins on the road: its first start, or its first chapter when that opens a little
   // before it. A chapter that opens long before anything happens does not make the road open on empty years.
@@ -813,7 +820,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     }
     const speed = dt > 0 && road.prev != null ? Math.abs(road.t - road.prev) / dt : 0;
     road.prev = road.t;
-    const busy = roadDraw(dt, speed, now);
+    let busy = roadDraw(dt, speed, now);
+    // The media wall either side of the road follows the reader: the era in front of them, and the distance travelled.
+    if (wall && wall.frame({ year: writtenOf(L.when(road.t + camDir() * 0.2 * L.D)), travel: camDir() * road.t / L.D, G: L.G, dark: roadPalette().dark, dt, cards: road.shows || [], own: L.own })) busy = true;
     if (moving || busy || now < road.until) roadKick();
   }
 
@@ -845,6 +854,16 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       endW: Math.ceil(t.endEv ? 26 + w(t.name, `600 12px ${font}`) + w(endWords(t), `400 11px ${font}`) : 0),
     };
     return t.rm;
+  }
+  // What an entry has for the media wall: its picture, its events' pictures and its own list of media
+  // (pictures and films), at most six. Worked out once for each entry.
+  function wallMedia(t) {
+    if (t.wm) return t.wm;
+    const out = [], add = (m) => { if (m && m.src && out.length < 6 && !out.some((x) => x.src === mediaUrl(m.src))) out.push({ type: 'image', ...m, src: mediaUrl(m.src) }); };
+    add(t.image);
+    for (const m of t.media || []) add(m);
+    for (const e of t.events || []) add(e.image);
+    return (t.wm = out);
   }
   // One name on the road, in one of its forms. It is made when first shown and removed once it has faded.
   function roadNode(nk, p, end, mode) {
@@ -933,6 +952,28 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (!front || (leads(c) !== leads(front) ? leads(c) : c.u < front.u || (c.u === front.u && c.key < front.key))) front = c;
     }
     road.cards = cards; road.within1 = within1; road.within3 = within3;
+    // The media wall shows the pictures of the cards that are up: at most four cards. With several views a card's
+    // pictures keep to its lane's side, in its view's colour; on a road of one view they fill both sides in turn.
+    const shows = [];
+    for (const c of cands) {
+      const r = placed.get(c.key), t = c.p.t;
+      if (!r || !r.big || shows.length >= 4 || !wallMedia(t).length || shows.some((x) => x.id === t.id)) continue;
+      const lean = c.p.lane.lean;
+      shows.push({ id: t.id, name: t.name, side: Math.sign(lean),
+        col: L.lanes.length > 1 ? `var(--p${c.p.lane.col})` : null, media: wallMedia(t) });
+    }
+    // With several views, a side whose lane has no card up would stand empty beside a full one. It shows one
+    // picture, small, of the nearest name on that side that has one: what comes next, else what has just passed.
+    if (L.lanes.length > 1) for (const sd of [-1, 1]) {
+      if (shows.some((x) => x.side === sd)) continue;
+      let near = null;
+      for (const c of cands) {
+        if (Math.sign(c.p.lane.lean) !== sd || !placed.has(c.key) || !wallMedia(c.p.t).length || shows.some((x) => x.id === c.p.t.id)) continue;
+        if (!near || (c.u > 0) !== (near.u > 0) ? c.u > 0 || !near : Math.abs(c.u) < Math.abs(near.u)) near = c;
+      }
+      if (near) shows.push({ id: near.p.t.id, name: near.p.t.name, side: sd, col: `var(--p${near.p.lane.col})`, media: wallMedia(near.p.t).slice(0, 1), quiet: true });
+    }
+    road.shows = shows;
     road.focus = front && !openUp ? front.p.t.id : null;
     // Turns: the starts still owed theirs, how many of them wait behind another card, and how fast play
     // may travel so that each has had its turn by the time the reader reaches it (turnPace in road.js).
@@ -1039,7 +1080,21 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const haze = (col, a) => { const g = c.createLinearGradient(0, hazeY, 0, G.vy + gh * 0.3); g.addColorStop(0, rgba(col, 0)); g.addColorStop(1, rgba(col, a)); return g; };
     const quad = (x0, x1, sa, sb) => { c.beginPath(); c.moveTo(px(x0, sa), py(sa)); c.lineTo(px(x1, sa), py(sa)); c.lineTo(px(x1, sb), py(sb)); c.lineTo(px(x0, sb), py(sb)); c.closePath(); };
     if (L.lanes.length) {
-      quad(-G.RW, G.RW, sTop, sB); c.fillStyle = haze(P.surf, 1); c.fill();
+      quad(-G.RW, G.RW, sTop, sB); c.fillStyle = haze(P.surf, P.dark ? 0.6 : 1); c.fill();
+      // In the dark the road is glass lit from both sides, the era's warm light on the left and its cool light on the right,
+      // with faint lines running along it.
+      const lit = wall ? wall.light() : null;
+      if (P.dark && lit) {
+        const yb = py(sB), side = c.createLinearGradient(px(-G.RW, sB), yb, px(G.RW, sB), yb);
+        side.addColorStop(0, rgba(lit.warm, 0.13)); side.addColorStop(0.5, rgba(lit.warm, 0)); side.addColorStop(0.5, rgba(lit.cool, 0)); side.addColorStop(1, rgba(lit.cool, 0.13));
+        quad(-G.RW, G.RW, sTop, sB); c.fillStyle = side; c.fill();
+        c.lineWidth = 1;
+        for (let k = -5; k <= 5; k++) {
+          const xn = (G.RW * k) / 6, g = c.createLinearGradient(0, py(sTop), 0, py(sB));
+          g.addColorStop(0, rgba(P.ink, 0)); g.addColorStop(1, rgba(k < 0 ? lit.warm : k > 0 ? lit.cool : P.ink, 0.07));
+          c.strokeStyle = g; c.beginPath(); c.moveTo(px(xn, sTop), py(sTop)); c.lineTo(px(xn, sB), py(sB)); c.stroke();
+        }
+      }
       if (L.lanes.length > 1) for (const ln of L.lanes) { quad(ln.x0, ln.x1, sTop, sB); c.fillStyle = haze(P.p[ln.col], P.dark ? 0.07 : 0.055); c.fill(); }
       c.lineWidth = 1;
 
@@ -1089,7 +1144,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         c.beginPath(); c.moveTo(px(xn, sTop), py(sTop)); c.lineTo(px(xn, sB), py(sB)); c.stroke();
         c.setLineDash([]);
       };
-      edge(-G.RW); edge(G.RW);
+      if (P.dark && lit) {
+        // The edges glow in the light of their side.
+        c.save(); c.lineWidth = 1.4;
+        for (const [xn, col] of [[-G.RW, lit.warm], [G.RW, lit.cool]]) {
+          const g = c.createLinearGradient(0, py(sTop), 0, py(sB));
+          g.addColorStop(0, rgba(col, 0.1)); g.addColorStop(0.5, rgba(col, 0.6)); g.addColorStop(1, rgba(col, 0.85));
+          c.shadowColor = rgba(col, 0.9); c.shadowBlur = 10; c.strokeStyle = g;
+          c.beginPath(); c.moveTo(px(xn, sTop), py(sTop)); c.lineTo(px(xn, sB), py(sB)); c.stroke();
+        }
+        c.restore();
+      } else { edge(-G.RW); edge(G.RW); }
       for (let i = 1; i < L.lanes.length; i++) edge(L.lanes[i].x0, [5, 6]);
 
       // A view's chapters: a line across its lane where each begins, named in the view's colour.
@@ -1906,7 +1971,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
-    if (from != null || camAtEnd()) turnsOver();
+    if (from != null || camAtEnd()) { turnsOver(); musicAgain(); }
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1;
@@ -1914,7 +1979,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     drawPlay();
     roadKick();
   }
-  function drawPlay() { if (L) roadHud(true); }
+  function drawPlay() { if (L) roadHud(true); tune(); }
   function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // Dragging along the bar moves the reader, playing or not.
@@ -1967,6 +2032,48 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     else gain.connect(ctx.destination);
     src.start(at, Math.random() * 0.2, 0.74);
   }
+  // The music of play: one track that sounds while play travels and starts over when it ends. A view may
+  // bring its own (`audio` on the view); otherwise it is `media/gallery-of-glass.mp3`. It is fetched only
+  // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
+  // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
+  // the track from its beginning too. The sound button silences it.
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4;
+  const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
+  // The track for what is on the road: the first view that brings its own, else the house track.
+  function trackNow() {
+    for (const id of state.views) { const a = viewById.get(id)?.audio; if (a && a.src) return mediaUrl(a.src); }
+    return MUSIC;
+  }
+  const musicAgain = () => { music.fresh = true; };
+  function tune() {
+    music.want = play.on && sound.on ? MUSIC_VOL : 0;
+    if (music.want) {
+      const src = trackNow();
+      try {
+        if (!music.el) { music.el = new Audio(); music.el.loop = true; music.el.preload = 'auto'; music.el.volume = 0; }
+        if (src !== music.src) { music.src = src; music.el.src = src; music.vol = 0; music.el.volume = 0; music.fresh = false; }
+        else if (music.fresh) { music.fresh = false; try { music.el.currentTime = 0; } catch { /* not loaded yet: it starts at the beginning anyway */ } }
+      } catch { music.el = null; }
+    }
+    const el = music.el;
+    if (!el) return;
+    if (music.want && el.paused) { const p = el.play(); if (p && p.catch) p.catch(() => {}); }
+    if (music.tick) return;
+    music.tick = setInterval(() => {
+      const step = MUSIC_VOL / 16;
+      music.vol = music.want > music.vol ? Math.min(music.want, music.vol + step) : Math.max(music.want, music.vol - step);
+      el.volume = music.vol;
+      if (music.vol === music.want) {
+        clearInterval(music.tick); music.tick = 0;
+        if (!music.want) el.pause();
+      }
+    }, 50);
+  }
+  // The road rests while the tab is hidden, so the music does too.
+  document.addEventListener('visibilitychange', () => {
+    if (!music.el) return;
+    if (document.hidden) music.el.pause(); else if (music.want) { const p = music.el.play(); if (p && p.catch) p.catch(() => {}); }
+  });
   // A card opens while play travels: a ring in its view's colour that fades, and the breath of air.
   function cardArrives(n, lean) {
     if (!calm()) { n.btn.classList.remove('ring'); void n.btn.offsetWidth; n.btn.classList.add('ring'); }
@@ -1975,7 +2082,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function drawSound() {
     const b = $('sound');
     b.setAttribute('aria-pressed', sound.on);
-    b.title = sound.on ? 'Sound is on: a quiet breath of air as each card opens' : 'Sound is off';
+    b.title = sound.on ? 'Sound is on: music while play travels, and a quiet breath of air as each card opens' : 'Sound is off';
     b.innerHTML = sound.on ? ICON_SOUND : ICON_MUTED;
   }
   function toggleSound() {
@@ -1984,6 +2091,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     drawSound();
     // Turning it on lets you hear what you turned on.
     if (sound.on) { soundReady(); setTimeout(() => breath(0), 60); }
+    tune();
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.

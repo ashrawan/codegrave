@@ -154,6 +154,35 @@
       "type": "integer",
       "minimum": 5,
       "maximum": 100
+    },
+    "audio": {
+      "type": "object",
+      "description": "The view's own music for play: a sound file under data/media/ or an https link (mp3, ogg, oga, m4a, mp4, webm or wav), with its credit. Without it play uses the site's track.",
+      "required": [
+        "src",
+        "credit",
+        "licence",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "src": {
+          "type": "string"
+        },
+        "title": {
+          "type": "string"
+        },
+        "credit": {
+          "type": "string"
+        },
+        "licence": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "pattern": "^https://"
+        }
+      }
     }
   }
 }
