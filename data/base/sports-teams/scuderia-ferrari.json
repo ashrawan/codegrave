@@ -1,0 +1,54 @@
+{
+  "id": "scuderia-ferrari",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Ferrari",
+      "from": "1929"
+    }
+  ],
+  "summary": "The racing team of Ferrari, the only one to race in every Formula One season, and the most successful.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q169898",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ferrari (Q169898)",
+      "url": "https://www.wikidata.org/wiki/Q169898",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Scuderia Ferrari",
+      "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/GESTIONE_SPORTIVA_FERRARI_%2836309430764%29.jpg/500px-GESTIONE_SPORTIVA_FERRARI_%2836309430764%29.jpg",
+    "alt": "Ferrari",
+    "credit": "nimame",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:GESTIONE_SPORTIVA_FERRARI_(36309430764).jpg"
+  }
+}

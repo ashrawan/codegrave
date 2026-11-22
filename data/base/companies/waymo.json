@@ -1,0 +1,54 @@
+{
+  "id": "waymo",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Waymo",
+      "from": "2016"
+    }
+  ],
+  "summary": "Self-driving car company that began inside Google. Its cars carry paying passengers with no one at the wheel in several American cities.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q15330",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-12-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Waymo (Q15330)",
+      "url": "https://www.wikidata.org/wiki/Q15330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Waymo",
+      "url": "https://en.wikipedia.org/wiki/Waymo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Waymo_Zeekr_Vehicle_at_Bayshore_Depot_oblique_view_dllu.jpg/500px-Waymo_Zeekr_Vehicle_at_Bayshore_Depot_oblique_view_dllu.jpg",
+    "alt": "Waymo",
+    "credit": "Dllu",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Waymo_Zeekr_Vehicle_at_Bayshore_Depot_oblique_view_dllu.jpg"
+  }
+}

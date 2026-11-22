@@ -1,0 +1,69 @@
+{
+  "id": "ottoman-empire",
+  "name": "The Ottoman Empire",
+  "description": "The Ottoman Empire from Osman's small state in 1299 to its end in 1922: the sultans, conquests, buildings and fall.",
+  "category": "places",
+  "labels": [
+    "politics"
+  ],
+  "tags": [
+    "ottoman empire",
+    "ottomans",
+    "sultan",
+    "istanbul",
+    "constantinople",
+    "suleiman",
+    "turkey",
+    "topkapi"
+  ],
+  "entries": [
+    "osman-i",
+    "ottoman-empire",
+    "mehmed-ii",
+    "fall-of-constantinople",
+    "topkapi-palace",
+    "selim-i",
+    "suleiman-the-magnificent",
+    "siege-of-vienna-1529",
+    "suleymaniye-mosque",
+    "battle-of-lepanto",
+    "sultan-ahmed-mosque",
+    "battle-of-vienna",
+    "tanzimat",
+    "mustafa-kemal-ataturk",
+    "young-turk-revolution",
+    "armenian-genocide",
+    "gallipoli-campaign",
+    "abolition-of-the-ottoman-sultanate"
+  ],
+  "checkpoints": [
+    {
+      "id": "rise",
+      "name": "Rise",
+      "from": 1299,
+      "to": 1452,
+      "note": "Osman founds a small state in Anatolia. His heirs cross into Europe and surround Constantinople."
+    },
+    {
+      "id": "the-great-age",
+      "name": "The great age",
+      "from": 1453,
+      "to": 1682,
+      "note": "Mehmed II takes Constantinople. Selim and Suleiman conquer from Hungary to Arabia, and Sinan builds the great mosques of Istanbul."
+    },
+    {
+      "id": "decline-and-reform",
+      "name": "Decline and reform",
+      "from": 1683,
+      "to": 1913,
+      "note": "After the defeat at Vienna the empire loses land. The Tanzimat and the Young Turks try to modernise it."
+    },
+    {
+      "id": "the-end",
+      "name": "The end",
+      "from": 1914,
+      "to": 1922,
+      "note": "The empire joins the First World War, wins at Gallipoli, commits the Armenian genocide and loses most of its lands. In 1922 the sultanate is abolished."
+    }
+  ]
+}

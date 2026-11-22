@@ -1,0 +1,54 @@
+{
+  "id": "barbie-film",
+  "category": "films",
+  "names": [
+    {
+      "name": "Barbie",
+      "from": "2023"
+    }
+  ],
+  "summary": "Greta Gerwig's comedy about the doll who leaves her perfect world for the real one, the biggest film of 2023.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q55436290",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-07-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Barbie (Q55436290)",
+      "url": "https://www.wikidata.org/wiki/Q55436290",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Barbie (film)",
+      "url": "https://en.wikipedia.org/wiki/Barbie_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Barbie_and_Ken_costumes_from_Barbie_movie_at_Warner_Bros._Studio_Tour_Hollywood.jpg/500px-Barbie_and_Ken_costumes_from_Barbie_movie_at_Warner_Bros._Studio_Tour_Hollywood.jpg",
+    "alt": "Barbie",
+    "credit": "Dam0812",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Barbie_and_Ken_costumes_from_Barbie_movie_at_Warner_Bros._Studio_Tour_Hollywood.jpg"
+  }
+}

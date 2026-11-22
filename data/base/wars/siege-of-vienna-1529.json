@@ -1,0 +1,59 @@
+{
+  "id": "siege-of-vienna-1529",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Vienna",
+      "from": "1529"
+    }
+  ],
+  "summary": "Suleiman's first attempt to take Vienna, which ended in retreat, the high point of Ottoman advance into Europe.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q207576",
+  "events": [
+    {
+      "type": "born",
+      "date": "1529-09-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1529-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Vienna (Q207576)",
+      "url": "https://www.wikidata.org/wiki/Q207576",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Vienna (1529)",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Vienna_(1529)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Siegeofvienna1529.jpg/500px-Siegeofvienna1529.jpg",
+    "alt": "Siege of Vienna",
+    "credit": "Bartel Beham",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Siegeofvienna1529.jpg"
+  }
+}

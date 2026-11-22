@@ -1,0 +1,53 @@
+{
+  "id": "ennio-morricone",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Ennio Morricone",
+      "from": "1928"
+    }
+  ],
+  "summary": "Italian composer of more than four hundred film scores, from The Good, the Bad and the Ugly to Cinema Paradiso.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q23848",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-11-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ennio Morricone (Q23848)",
+      "url": "https://www.wikidata.org/wiki/Q23848",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ennio Morricone",
+      "url": "https://en.wikipedia.org/wiki/Ennio_Morricone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ennio_Morricone_Cannes_2007.jpg/500px-Ennio_Morricone_Cannes_2007.jpg",
+    "alt": "Ennio Morricone",
+    "credit": "Olivier Strecker",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ennio_Morricone_Cannes_2007.jpg"
+  }
+}

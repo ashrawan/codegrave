@@ -1,0 +1,45 @@
+{
+  "id": "3d-printing",
+  "category": "tools-materials",
+  "names": [
+    {
+      "name": "3D printing",
+      "from": "1984"
+    }
+  ],
+  "summary": "Making solid objects layer by layer from a computer design. Invented in the 1980s, it is now used from factories to homes and hospitals.",
+  "wikidata": "Q229367",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: 3D printing (Q229367)",
+      "url": "https://www.wikidata.org/wiki/Q229367",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 3D printing",
+      "url": "https://en.wikipedia.org/wiki/3D_printing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Robot_3D_print_timelapse_on_RepRapPro_Fisher.gif",
+    "alt": "3D printing",
+    "credit": "Robot 3D print timelapse on RepRapPro Fisher.webm RepRapPro derivative work: ויקיג'אנקי",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Robot_3D_print_timelapse_on_RepRapPro_Fisher.gif"
+  }
+}

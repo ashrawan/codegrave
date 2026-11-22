@@ -1,0 +1,59 @@
+{
+  "id": "k-pop",
+  "name": "K-pop",
+  "description": "K-pop from the Seoul boy band of 1992 to global stars: the groups, labels and hits of South Korea's pop music and the Korean Wave.",
+  "category": "arts",
+  "labels": [
+    "music"
+  ],
+  "tags": [
+    "k-pop",
+    "bts",
+    "blackpink",
+    "korean wave",
+    "gangnam style",
+    "hallyu",
+    "korean pop",
+    "idol"
+  ],
+  "entries": [
+    "boa-singer",
+    "k-pop",
+    "seo-taiji-and-boys",
+    "sm-entertainment",
+    "hot-band",
+    "hybe-corporation",
+    "big-bang-band",
+    "girls-generation",
+    "gangnam-style",
+    "bts",
+    "twice-group",
+    "blackpink",
+    "stray-kids",
+    "newjeans",
+    "kpop-demon-hunters"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-beginnings",
+      "name": "The beginnings",
+      "from": 1992,
+      "to": 2003,
+      "note": "Seo Taiji and Boys mix rap and dance in 1992. Companies like SM train idol groups such as H.O.T., and Korean music and dramas spread across Asia in the Korean Wave."
+    },
+    {
+      "id": "the-idol-era",
+      "name": "The idol era",
+      "from": 2004,
+      "to": 2012,
+      "note": "Big Bang, Girls' Generation and others fill arenas across Asia. Psy's Gangnam Style becomes the first video to pass a billion views."
+    },
+    {
+      "id": "global-stars",
+      "name": "Global stars",
+      "from": 2013,
+      "to": 2026,
+      "note": "BTS top the American charts and fill stadiums, Blackpink headline Coachella, and KPop Demon Hunters makes K-pop a worldwide film hit."
+    }
+  ]
+}

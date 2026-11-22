@@ -1,0 +1,48 @@
+{
+  "id": "arvo-part",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Arvo Pärt",
+      "from": "1935"
+    }
+  ],
+  "summary": "Estonian composer of slow, bell-like music, for years the most performed living composer in the world.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q189534",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Arvo Pärt (Q189534)",
+      "url": "https://www.wikidata.org/wiki/Q189534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Arvo Pärt",
+      "url": "https://en.wikipedia.org/wiki/Arvo_Pärt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Arvo_P%C3%A4rt.jpg/500px-Arvo_P%C3%A4rt.jpg",
+    "alt": "Arvo Pärt",
+    "credit": "Woesinger",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Arvo_P%C3%A4rt.jpg"
+  }
+}

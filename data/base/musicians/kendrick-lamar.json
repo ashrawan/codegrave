@@ -1,0 +1,48 @@
+{
+  "id": "kendrick-lamar",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Kendrick Lamar",
+      "from": "1987"
+    }
+  ],
+  "summary": "Compton rapper who won the Pulitzer Prize for Music in 2018, the first musician outside classical and jazz to do so.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q130798",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-06-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kendrick Lamar (Q130798)",
+      "url": "https://www.wikidata.org/wiki/Q130798",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kendrick Lamar",
+      "url": "https://en.wikipedia.org/wiki/Kendrick_Lamar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Pulitzer2018-portraits-kendrick-lamar.jpg/500px-Pulitzer2018-portraits-kendrick-lamar.jpg",
+    "alt": "Kendrick Lamar",
+    "credit": "Fuzheado",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pulitzer2018-portraits-kendrick-lamar.jpg"
+  }
+}

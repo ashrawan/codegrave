@@ -1,0 +1,54 @@
+{
+  "id": "coinbase",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Coinbase",
+      "from": "2012"
+    }
+  ],
+  "summary": "American exchange founded in 2012 for buying and selling crypto, listed on the stock market in 2021.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q16972754",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-06-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Coinbase (Q16972754)",
+      "url": "https://www.wikidata.org/wiki/Q16972754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coinbase",
+      "url": "https://en.wikipedia.org/wiki/Coinbase",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Congrats_Brian_Armstrong_on_the_Coinbase_IPO%21_%2851124145378%29.jpg/500px-Congrats_Brian_Armstrong_on_the_Coinbase_IPO%21_%2851124145378%29.jpg",
+    "alt": "Coinbase",
+    "credit": "Steve Jurvetson from Los Altos, USA",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Congrats_Brian_Armstrong_on_the_Coinbase_IPO!_(51124145378).jpg"
+  }
+}

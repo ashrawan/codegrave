@@ -1,0 +1,59 @@
+{
+  "id": "march-on-washington",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "March on Washington",
+      "from": "1963"
+    }
+  ],
+  "summary": "The march of 1963 where a quarter of a million people heard Martin Luther King's I Have a Dream speech.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1128871",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-08-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1963-08-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: March on Washington (Q1128871)",
+      "url": "https://www.wikidata.org/wiki/Q1128871",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: March on Washington for Jobs and Freedom",
+      "url": "https://en.wikipedia.org/wiki/March_on_Washington_for_Jobs_and_Freedom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/March_on_Washington_for_Jobs_and_Freedom%2C_Martin_Luther_King%2C_Jr._and_Joachim_Prinz_1963.jpg/500px-March_on_Washington_for_Jobs_and_Freedom%2C_Martin_Luther_King%2C_Jr._and_Joachim_Prinz_1963.jpg",
+    "alt": "March on Washington",
+    "credit": "Center for Jewish History, NYC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:March_on_Washington_for_Jobs_and_Freedom,_Martin_Luther_King,_Jr._and_Joachim_Prinz_1963.jpg"
+  }
+}

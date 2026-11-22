@@ -1,0 +1,48 @@
+{
+  "id": "icc-t20-world-cup",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "T20 World Cup",
+      "from": "2007"
+    }
+  ],
+  "summary": "The world championship of the short twenty-over game, first played in 2007 and won by India.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q979298",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: T20 World Cup (Q979298)",
+      "url": "https://www.wikidata.org/wiki/Q979298",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: ICC Men's T20 World Cup",
+      "url": "https://en.wikipedia.org/wiki/ICC_Men's_T20_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/2007t20.jpg/500px-2007t20.jpg",
+    "alt": "T20 World Cup",
+    "credit": "Warrenski",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2007t20.jpg"
+  }
+}

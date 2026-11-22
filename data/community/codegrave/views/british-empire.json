@@ -1,0 +1,69 @@
+{
+  "id": "british-empire",
+  "name": "The British Empire",
+  "description": "The British Empire from the first colonies in America to the handover of Hong Kong: the conquests, the trade, the resistance and the end of empire.",
+  "category": "places",
+  "labels": [
+    "politics"
+  ],
+  "tags": [
+    "british empire",
+    "colonialism",
+    "east india company",
+    "raj",
+    "commonwealth",
+    "decolonisation",
+    "india",
+    "africa"
+  ],
+  "entries": [
+    "east-india-company",
+    "jamestown-colony",
+    "battle-of-plassey",
+    "american-revolutionary-war",
+    "first-fleet",
+    "victoria",
+    "slavery-abolition-act-1833",
+    "first-opium-war",
+    "indian-rebellion-of-1857",
+    "british-raj",
+    "scramble-for-africa",
+    "second-boer-war",
+    "statute-of-westminster-1931",
+    "commonwealth-of-nations",
+    "partition-of-india",
+    "suez-crisis",
+    "wind-of-change-speech",
+    "handover-of-hong-kong"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-colonies",
+      "name": "First colonies",
+      "from": 1583,
+      "to": 1756,
+      "note": "English settlers found colonies in North America and the Caribbean, built on sugar, tobacco and the slave trade. The East India Company trades in India."
+    },
+    {
+      "id": "empire-in-india",
+      "name": "Empire in India",
+      "from": 1757,
+      "to": 1838,
+      "note": "The Company conquers India from Bengal. Britain loses the American colonies, founds Australia, and abolishes slavery."
+    },
+    {
+      "id": "the-height-of-empire",
+      "name": "The height of empire",
+      "from": 1839,
+      "to": 1913,
+      "note": "Opium Wars, the Indian Rebellion and the Scramble for Africa. Under Queen Victoria the empire covers a quarter of the world."
+    },
+    {
+      "id": "the-end-of-empire",
+      "name": "The end of empire",
+      "from": 1914,
+      "to": 1997,
+      "note": "The dominions become self-governing, India is partitioned and freed in 1947, African colonies follow, and Hong Kong is handed back in 1997."
+    }
+  ]
+}

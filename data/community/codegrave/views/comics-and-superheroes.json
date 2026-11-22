@@ -19,11 +19,11 @@
     "krazy-kat",
     "the-adventures-of-tintin",
     "dc-comics",
-    "action-comics-1",
     "superman",
+    "action-comics-1",
     "the-beano",
-    "batman",
     "marvel-comics",
+    "batman",
     "captain-america",
     "wonder-woman",
     "peanuts",
@@ -37,7 +37,12 @@
     "calvin-and-hobbes",
     "the-dark-knight-returns",
     "watchmen",
-    "persepolis"
+    "persepolis",
+    "the-walking-dead-comic",
+    "marvel-cinematic-universe",
+    "solo-leveling",
+    "black-panther-film",
+    "spider-verse"
   ],
   "checkpoints": [
     {
@@ -72,8 +77,15 @@
       "id": "graphic-novels",
       "name": "Graphic novels",
       "from": 1986,
-      "to": 2026,
+      "to": 2007,
       "note": "Darker, more thoughtful comics such as Watchmen and The Dark Knight Returns won adult readers, manga reached readers around the world, and Persepolis told a childhood in Iran."
+    },
+    {
+      "id": "superheroes-on-screen",
+      "name": "Superheroes on screen",
+      "from": 2008,
+      "to": 2026,
+      "note": "Marvel's linked films turn comic heroes into the biggest film series ever. Readers move to phones, where Korean webtoons scroll down the screen, and Japanese manga outsells American comics."
     }
   ]
 }

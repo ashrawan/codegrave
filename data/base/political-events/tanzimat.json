@@ -1,0 +1,59 @@
+{
+  "id": "tanzimat",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Tanzimat",
+      "from": "1839"
+    }
+  ],
+  "summary": "Reforms from 1839 that tried to modernise the empire's laws, army and schools on European lines.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q330961",
+  "events": [
+    {
+      "type": "born",
+      "date": "1839",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1876",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tanzimat (Q330961)",
+      "url": "https://www.wikidata.org/wiki/Q330961",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tanzimat",
+      "url": "https://en.wikipedia.org/wiki/Tanzimat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Edict_of_G%C3%BClhane.jpg/500px-Edict_of_G%C3%BClhane.jpg",
+    "alt": "Tanzimat",
+    "credit": "Maldek™",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Edict_of_G%C3%BClhane.jpg"
+  }
+}

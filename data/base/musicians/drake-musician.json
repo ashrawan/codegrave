@@ -1,0 +1,48 @@
+{
+  "id": "drake-musician",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Drake",
+      "from": "1986"
+    }
+  ],
+  "summary": "Canadian rapper and singer, one of the most streamed artists in the world.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q33240",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Drake (Q33240)",
+      "url": "https://www.wikidata.org/wiki/Q33240",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Drake (musician)",
+      "url": "https://en.wikipedia.org/wiki/Drake_(musician)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Drake_July_2016.jpg/500px-Drake_July_2016.jpg",
+    "alt": "Drake",
+    "credit": "The Come Up Show",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Drake_July_2016.jpg"
+  }
+}

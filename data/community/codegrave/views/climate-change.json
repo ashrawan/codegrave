@@ -1,0 +1,57 @@
+{
+  "id": "climate-change",
+  "name": "Climate Change",
+  "description": "Climate change from the first measurements of carbon dioxide to the Paris Agreement and the hottest years on record: the science, the treaties and the movements.",
+  "category": "earth-space",
+  "labels": [
+    "environment"
+  ],
+  "tags": [
+    "climate change",
+    "global warming",
+    "paris agreement",
+    "ipcc",
+    "greta thunberg",
+    "carbon dioxide",
+    "kyoto protocol",
+    "cop"
+  ],
+  "entries": [
+    "svante-arrhenius",
+    "james-hansen",
+    "keeling-curve",
+    "montreal-protocol",
+    "ipcc",
+    "earth-summit-1992",
+    "kyoto-protocol",
+    "greta-thunberg",
+    "an-inconvenient-truth",
+    "paris-agreement",
+    "fridays-for-future",
+    "cop28",
+    "2024-warmest-year"
+  ],
+  "checkpoints": [
+    {
+      "id": "discovering-the-greenhouse",
+      "name": "Discovering the greenhouse",
+      "from": 1824,
+      "to": 1987,
+      "note": "Scientists find that carbon dioxide traps heat. Arrhenius calculates the warming in 1896, and from 1958 the Keeling Curve shows the gas rising every year."
+    },
+    {
+      "id": "treaties",
+      "name": "Treaties",
+      "from": 1988,
+      "to": 2014,
+      "note": "Hansen warns the US Senate, the IPCC is set up, the Rio summit and the Kyoto Protocol follow, and Al Gore's film reaches millions."
+    },
+    {
+      "id": "paris-and-after",
+      "name": "Paris and after",
+      "from": 2015,
+      "to": 2026,
+      "note": "Almost every country signs the Paris Agreement. Young people strike for the climate, and the hottest years on record follow one after another."
+    }
+  ]
+}

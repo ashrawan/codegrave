@@ -1,0 +1,53 @@
+{
+  "id": "beijing-declaration",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Beijing women's conference",
+      "from": "1995"
+    }
+  ],
+  "summary": "The UN conference of 1995 in Beijing where Hillary Clinton said women's rights are human rights, and countries agreed a plan for equality.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1753957",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-09-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-09-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Beijing women's conference (Q1753957)",
+      "url": "https://www.wikidata.org/wiki/Q1753957",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fourth World Conference on Women",
+      "url": "https://en.wikipedia.org/wiki/Fourth_World_Conference_on_Women",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Hillary_Rodham_Clinton_Addresses_the_Fourth_United_Nations_Conference_on_Women_at_the_Beijing_International_Conference_Center_in_Bejiing%2C_China_-_DPLA_-_f930a22fe8ca15312130e94f4f201f45.jpg/500px-thumbnail.jpg",
+    "alt": "Beijing women's conference",
+    "credit": "President (1993-2001 : Clinton). White House Photograph Office. 1/20/1993-1/20/2001",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hillary_Rodham_Clinton_Addresses_the_Fourth_United_Nations_Conference_on_Women_at_the_Beijing_International_Conference_Center_in_Bejiing,_China_-_DPLA_-_f930a22fe8ca15312130e94f4f201f45.jpg"
+  }
+}

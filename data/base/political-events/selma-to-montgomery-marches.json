@@ -1,0 +1,59 @@
+{
+  "id": "selma-to-montgomery-marches",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Selma to Montgomery marches",
+      "from": "1965"
+    }
+  ],
+  "summary": "Marches for the vote in Alabama in 1965. Police attacked the marchers on Bloody Sunday, and the nation turned towards the Voting Rights Act.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1061891",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-03-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Selma to Montgomery marches (Q1061891)",
+      "url": "https://www.wikidata.org/wiki/Q1061891",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Selma to Montgomery marches",
+      "url": "https://en.wikipedia.org/wiki/Selma_to_Montgomery_marches",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Bloody_Sunday-Alabama_police_attack.jpeg",
+    "alt": "Selma to Montgomery marches",
+    "credit": "Federal Bureau of Investigation",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bloody_Sunday-Alabama_police_attack.jpeg"
+  }
+}

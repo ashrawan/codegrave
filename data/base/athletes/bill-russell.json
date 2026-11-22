@@ -1,0 +1,53 @@
+{
+  "id": "bill-russell",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Bill Russell",
+      "from": "1934"
+    }
+  ],
+  "summary": "Celtics centre who won eleven NBA titles, more than any player, and later became the first Black head coach in the league.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q242185",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-02-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-07-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bill Russell (Q242185)",
+      "url": "https://www.wikidata.org/wiki/Q242185",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bill Russell",
+      "url": "https://en.wikipedia.org/wiki/Bill_Russell",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_russell_dribbling_%28cropped%29.jpg/500px-Bill_russell_dribbling_%28cropped%29.jpg",
+    "alt": "Bill Russell",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bill_russell_dribbling_(cropped).jpg"
+  }
+}

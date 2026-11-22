@@ -1,0 +1,45 @@
+{
+  "id": "zoom-video",
+  "category": "communication",
+  "names": [
+    {
+      "name": "Zoom",
+      "from": "2013"
+    }
+  ],
+  "summary": "Video meeting app that became part of daily life when schools and offices closed in the pandemic of 2020.",
+  "wikidata": "Q94979732",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-01-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Zoom (Q94979732)",
+      "url": "https://www.wikidata.org/wiki/Q94979732",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zoom Workplace",
+      "url": "https://en.wikipedia.org/wiki/Zoom_Workplace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Zoom_participants_Bubrikh_readings_2020_conference.png/500px-Zoom_participants_Bubrikh_readings_2020_conference.png",
+    "alt": "Zoom",
+    "credit": "English: Andrew Krizhanovsky Русский: Андрей Крижановский",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Zoom_participants_Bubrikh_readings_2020_conference.png"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "airbus-a350",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Airbus A350",
+      "from": "2015"
+    }
+  ],
+  "summary": "Airbus's long-range twin-engine airliner, built largely of carbon fibre, which first flew in 2013.",
+  "wikidata": "Q6484",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-01-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Airbus A350 (Q6484)",
+      "url": "https://www.wikidata.org/wiki/Q6484",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Airbus A350",
+      "url": "https://en.wikipedia.org/wiki/Airbus_A350",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Virgin_Atlantic_Airbus_A350-1041XWB_G-VLUX_%28Red_Velvet%29_approaching_JFK_Airport.jpg/500px-Virgin_Atlantic_Airbus_A350-1041XWB_G-VLUX_%28Red_Velvet%29_approaching_JFK_Airport.jpg",
+    "alt": "Airbus A350",
+    "credit": "Adam Moreira (AEMoreira042281)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Virgin_Atlantic_Airbus_A350-1041XWB_G-VLUX_(Red_Velvet)_approaching_JFK_Airport.jpg"
+  }
+}

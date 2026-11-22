@@ -17,11 +17,13 @@
     "artists"
   ],
   "entries": [
+    "arnolfini-portrait",
     "leonardo-da-vinci",
     "michelangelo",
     "birth-of-venus",
     "the-last-supper",
     "garden-of-earthly-delights",
+    "salvator-mundi",
     "mona-lisa",
     "school-of-athens",
     "sistine-chapel-ceiling",
@@ -45,18 +47,23 @@
     "the-scream",
     "salvador-dali",
     "the-kiss-klimt",
+    "les-demoiselles-davignon",
     "frida-kahlo",
     "jackson-pollock",
     "andy-warhol",
+    "yayoi-kusama",
     "american-gothic",
     "the-persistence-of-memory",
     "guernica-picasso",
     "the-two-fridas",
+    "nighthawks",
+    "jean-michel-basquiat",
     "campbells-soup-cans",
     "marilyn-diptych",
-    "arnolfini-portrait",
-    "les-demoiselles-davignon",
-    "nighthawks"
+    "portrait-of-an-artist-pool",
+    "banksy",
+    "the-physical-impossibility-of-death",
+    "love-is-in-the-bin"
   ],
   "checkpoints": [
     {
@@ -93,6 +100,13 @@
       "from": 1914,
       "to": 1989,
       "note": "Cubism, Surrealism, protest and Pop turn paintings into statements, Jackson Pollock lets paint drip across the canvas, and a painted soup can sits beside an old master in the museum."
+    },
+    {
+      "id": "contemporary-art",
+      "name": "Contemporary art",
+      "from": 1990,
+      "to": 2026,
+      "note": "Art becomes a global market. Damien Hirst pickles a shark, Banksy paints walls and shreds his own picture at auction, Kusama's infinity rooms draw queues, and records keep breaking."
     }
   ]
 }

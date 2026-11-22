@@ -1,0 +1,54 @@
+{
+  "id": "indian-premier-league",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "IPL",
+      "from": "2008"
+    }
+  ],
+  "summary": "India's twenty-over league of city teams, begun in 2008, the richest cricket competition in the world.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q396412",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: IPL (Q396412)",
+      "url": "https://www.wikidata.org/wiki/Q396412",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indian Premier League",
+      "url": "https://en.wikipedia.org/wiki/Indian_Premier_League",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/SRH_fans_while_an_ipl_match.jpg/500px-SRH_fans_while_an_ipl_match.jpg",
+    "alt": "IPL",
+    "credit": "Jms1241",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:SRH_fans_while_an_ipl_match.jpg"
+  }
+}

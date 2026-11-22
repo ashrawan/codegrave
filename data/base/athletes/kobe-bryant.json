@@ -1,0 +1,53 @@
+{
+  "id": "kobe-bryant",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Kobe Bryant",
+      "from": "1978"
+    }
+  ],
+  "summary": "Lakers guard who won five titles over twenty seasons. He died in a helicopter crash in 2020.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q25369",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-08-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Kobe Bryant (Q25369)",
+      "url": "https://www.wikidata.org/wiki/Q25369",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kobe Bryant",
+      "url": "https://en.wikipedia.org/wiki/Kobe_Bryant",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/KBryant8.jpg/500px-KBryant8.jpg",
+    "alt": "Kobe Bryant",
+    "credit": "Kobe_Bryant_8.jpg: *Kobe_Bryant_7144.jpg: Sgt. Joseph A. Lee derivative work: JoeJohnson2 (talk) derivative work: JoeJoh",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:KBryant8.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "succession-tv",
+  "category": "shows",
+  "names": [
+    {
+      "name": "Succession",
+      "from": "2018"
+    }
+  ],
+  "summary": "HBO drama about the grown children of a media tycoon fighting to take over his empire.",
+  "labels": [
+    "television"
+  ],
+  "wikidata": "Q30599007",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-06-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Succession (Q30599007)",
+      "url": "https://www.wikidata.org/wiki/Q30599007",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Succession (TV series)",
+      "url": "https://en.wikipedia.org/wiki/Succession_(TV_series)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,48 @@
+{
+  "id": "public-enemy",
+  "category": "bands",
+  "names": [
+    {
+      "name": "Public Enemy",
+      "from": "1986"
+    }
+  ],
+  "summary": "Political rap group whose dense, noisy records like Fight the Power spoke against racism.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q209182",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Public Enemy (Q209182)",
+      "url": "https://www.wikidata.org/wiki/Q209182",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Public Enemy",
+      "url": "https://en.wikipedia.org/wiki/Public_Enemy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Public_Enemy-01-mika.jpg/500px-Public_Enemy-01-mika.jpg",
+    "alt": "Public Enemy",
+    "credit": "MikaV",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Public_Enemy-01-mika.jpg"
+  }
+}

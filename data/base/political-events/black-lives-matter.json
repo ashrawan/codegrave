@@ -1,0 +1,54 @@
+{
+  "id": "black-lives-matter",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Black Lives Matter",
+      "from": "2013"
+    }
+  ],
+  "summary": "Movement against police violence towards Black people that began in 2013 and led to worldwide protests in 2020.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q19600530",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Black Lives Matter (Q19600530)",
+      "url": "https://www.wikidata.org/wiki/Q19600530",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Black Lives Matter",
+      "url": "https://en.wikipedia.org/wiki/Black_Lives_Matter",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Black_Lives_Matter_protest_against_St._Paul_police_brutality_%2821587635011%29.jpg/500px-Black_Lives_Matter_protest_against_St._Paul_police_brutality_%2821587635011%29.jpg",
+    "alt": "Black Lives Matter",
+    "credit": "Fibonacci Blue from Minnesota, USA",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Black_Lives_Matter_protest_against_St._Paul_police_brutality_(21587635011).jpg"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "tennis",
+  "name": "Tennis",
+  "description": "Tennis from the lawns of Wimbledon to the four Grand Slams and the Open Era: the tournaments and the greatest players.",
+  "category": "society",
+  "labels": [
+    "sport"
+  ],
+  "tags": [
+    "tennis",
+    "wimbledon",
+    "grand slam",
+    "federer",
+    "nadal",
+    "djokovic",
+    "serena williams",
+    "us open"
+  ],
+  "entries": [
+    "tennis",
+    "wimbledon-championships",
+    "us-open-tennis",
+    "french-open",
+    "suzanne-lenglen",
+    "davis-cup",
+    "australian-open",
+    "rod-laver",
+    "billie-jean-king",
+    "bjorn-borg",
+    "martina-navratilova",
+    "open-era-tennis",
+    "steffi-graf",
+    "pete-sampras",
+    "battle-of-the-sexes",
+    "roger-federer",
+    "serena-williams",
+    "rafael-nadal",
+    "novak-djokovic",
+    "jannik-sinner",
+    "carlos-alcaraz"
+  ],
+  "checkpoints": [
+    {
+      "id": "lawn-tennis",
+      "name": "Lawn tennis",
+      "from": 1873,
+      "to": 1967,
+      "note": "Lawn tennis begins in England. Wimbledon starts in 1877, and the other Grand Slams follow. Lenglen and Laver are its stars, but the best professionals are kept out."
+    },
+    {
+      "id": "the-open-era",
+      "name": "The Open Era",
+      "from": 1968,
+      "to": 2002,
+      "note": "Professionals join in 1968. King, Borg, Navratilova, Graf and Sampras win on television around the world."
+    },
+    {
+      "id": "the-big-three-and-after",
+      "name": "The Big Three and after",
+      "from": 2003,
+      "to": 2026,
+      "note": "Federer, Nadal and Djokovic win more than sixty Grand Slams between them, Serena Williams wins twenty-three, and Alcaraz and Sinner take over."
+    }
+  ]
+}

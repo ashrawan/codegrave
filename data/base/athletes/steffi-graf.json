@@ -1,0 +1,48 @@
+{
+  "id": "steffi-graf",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Steffi Graf",
+      "from": "1969"
+    }
+  ],
+  "summary": "German player who in 1988 won all four Grand Slams and the Olympic gold, the Golden Slam.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q11662",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-06-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Steffi Graf (Q11662)",
+      "url": "https://www.wikidata.org/wiki/Q11662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Steffi Graf",
+      "url": "https://en.wikipedia.org/wiki/Steffi_Graf",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Steffi_Graf_in_Hamburg_2010_%28cropped%29.jpg/500px-Steffi_Graf_in_Hamburg_2010_%28cropped%29.jpg",
+    "alt": "Steffi Graf",
+    "credit": "Steffi_Graf_in_Hamburg.jpg: Mark Henckel from Hamburg-Altona, Deutschland (http://sommer-in-hamburg.de/) derivative work",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Steffi_Graf_in_Hamburg_2010_(cropped).jpg"
+  }
+}

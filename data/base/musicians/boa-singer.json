@@ -1,0 +1,54 @@
+{
+  "id": "boa-singer",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "BoA",
+      "from": "1986"
+    }
+  ],
+  "summary": "Singer who became a star in Japan at 16, the first K-pop act to top the Japanese charts.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q232449",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-11-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: BoA (Q232449)",
+      "url": "https://www.wikidata.org/wiki/Q232449",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: BoA",
+      "url": "https://en.wikipedia.org/wiki/BoA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/BoA_at_Incheon_Airport_on_May_15%2C_2019_%282%29.png/500px-BoA_at_Incheon_Airport_on_May_15%2C_2019_%282%29.png",
+    "alt": "BoA",
+    "credit": "Dispatch",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BoA_at_Incheon_Airport_on_May_15,_2019_(2).png"
+  }
+}

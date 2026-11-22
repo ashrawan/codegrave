@@ -1,0 +1,44 @@
+{
+  "id": "silk-road-marketplace",
+  "category": "websites",
+  "names": [
+    {
+      "name": "Silk Road",
+      "from": "2011"
+    }
+  ],
+  "summary": "A hidden online market for drugs that took payment in bitcoin, shut down by the FBI in 2013.",
+  "wikidata": "Q58027",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2013-10-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Silk Road (Q58027)",
+      "url": "https://www.wikidata.org/wiki/Q58027",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Silk Road (marketplace)",
+      "url": "https://en.wikipedia.org/wiki/Silk_Road_(marketplace)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "cause": "Shut down by the FBI, which arrested its founder."
+}

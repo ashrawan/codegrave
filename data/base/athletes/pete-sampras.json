@@ -1,0 +1,48 @@
+{
+  "id": "pete-sampras",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Pete Sampras",
+      "from": "1971"
+    }
+  ],
+  "summary": "American who won fourteen Grand Slams, seven of them at Wimbledon, the record of his time.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q9446",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-08-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Pete Sampras (Q9446)",
+      "url": "https://www.wikidata.org/wiki/Q9446",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pete Sampras",
+      "url": "https://en.wikipedia.org/wiki/Pete_Sampras",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Pete_Sampras_%282008%29_1%2C_cropped.jpg/500px-Pete_Sampras_%282008%29_1%2C_cropped.jpg",
+    "alt": "Pete Sampras",
+    "credit": "Craig ONeal",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pete_Sampras_(2008)_1,_cropped.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "sebastian-vettel",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Sebastian Vettel",
+      "from": "1987"
+    }
+  ],
+  "summary": "German driver who won four world titles in a row with Red Bull from 2010 to 2013.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q42311",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-07-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sebastian Vettel (Q42311)",
+      "url": "https://www.wikidata.org/wiki/Q42311",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sebastian Vettel",
+      "url": "https://en.wikipedia.org/wiki/Sebastian_Vettel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Sebastian_Vettel_2011_Sebastian_Vettel_in_Yokohama.jpg/500px-Sebastian_Vettel_2011_Sebastian_Vettel_in_Yokohama.jpg",
+    "alt": "Sebastian Vettel",
+    "credit": "Morio",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sebastian_Vettel_2011_Sebastian_Vettel_in_Yokohama.jpg"
+  }
+}

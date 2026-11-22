@@ -1,0 +1,53 @@
+{
+  "id": "the-notorious-big",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "The Notorious B.I.G.",
+      "from": "1972"
+    }
+  ],
+  "summary": "Brooklyn rapper famed for his storytelling, killed in Los Angeles in 1997, six months after Tupac.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q179157",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-05-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-03-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The Notorious B.I.G. (Q179157)",
+      "url": "https://www.wikidata.org/wiki/Q179157",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Notorious B.I.G.",
+      "url": "https://en.wikipedia.org/wiki/The_Notorious_B.I.G.",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Biggie_Smalls_typographic_illustration.jpg/500px-Biggie_Smalls_typographic_illustration.jpg",
+    "alt": "The Notorious B.I.G.",
+    "credit": "urban_data",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Biggie_Smalls_typographic_illustration.jpg"
+  }
+}

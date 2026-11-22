@@ -1,0 +1,48 @@
+{
+  "id": "fridays-for-future",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "School strike for climate",
+      "from": "2018"
+    }
+  ],
+  "summary": "Strikes by school pupils for climate action, begun by Greta Thunberg in 2018, which drew millions onto the streets in 2019.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q60674974",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-08-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: School strike for climate (Q60674974)",
+      "url": "https://www.wikidata.org/wiki/Q60674974",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: School Strike for Climate",
+      "url": "https://en.wikipedia.org/wiki/School_Strike_for_Climate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Start_of_the_FridaysForFuture_Demonstration_25-01-2019_Berlin_28.jpg/500px-Start_of_the_FridaysForFuture_Demonstration_25-01-2019_Berlin_28.jpg",
+    "alt": "School strike for climate",
+    "credit": "Leonhard Lenz",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Start_of_the_FridaysForFuture_Demonstration_25-01-2019_Berlin_28.jpg"
+  }
+}

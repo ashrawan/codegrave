@@ -1,0 +1,50 @@
+{
+  "id": "boeing-737-max-groundings",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Boeing 737 MAX groundings",
+      "from": "2018"
+    }
+  ],
+  "summary": "After two crashes caused by a flawed flight-control system, the Boeing 737 MAX was grounded worldwide from 2019 to 2020.",
+  "wikidata": "Q62027184",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-10-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-11-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Boeing 737 MAX groundings (Q62027184)",
+      "url": "https://www.wikidata.org/wiki/Q62027184",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boeing 737 MAX groundings",
+      "url": "https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Boeing_737_MAX_grounded_aircraft_near_Boeing_Field%2C_April_2019.jpg/500px-Boeing_737_MAX_grounded_aircraft_near_Boeing_Field%2C_April_2019.jpg",
+    "alt": "Boeing 737 MAX groundings",
+    "credit": "SounderBruce",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Boeing_737_MAX_grounded_aircraft_near_Boeing_Field,_April_2019.jpg"
+  }
+}

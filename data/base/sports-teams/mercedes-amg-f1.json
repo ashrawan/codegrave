@@ -1,0 +1,54 @@
+{
+  "id": "mercedes-amg-f1",
+  "category": "sports-teams",
+  "names": [
+    {
+      "name": "Mercedes",
+      "from": "2010"
+    }
+  ],
+  "summary": "The Mercedes works team, which won eight constructors' titles in a row from 2014 with Hamilton and Rosberg.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q65954812",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mercedes (Q65954812)",
+      "url": "https://www.wikidata.org/wiki/Q65954812",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mercedes-AMG Petronas F1 Team",
+      "url": "https://en.wikipedia.org/wiki/Mercedes-AMG_Petronas_F1_Team",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/FIA_F1_Austria_2021_Nr._77_Bottas.jpg/500px-FIA_F1_Austria_2021_Nr._77_Bottas.jpg",
+    "alt": "Mercedes",
+    "credit": "Lukas Raich",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:FIA_F1_Austria_2021_Nr._77_Bottas.jpg"
+  }
+}

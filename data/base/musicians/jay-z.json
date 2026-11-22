@@ -1,0 +1,48 @@
+{
+  "id": "jay-z",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Jay-Z",
+      "from": "1969"
+    }
+  ],
+  "summary": "Brooklyn rapper and businessman, one of the best-selling and wealthiest musicians in the world.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q62766",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-12-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Jay-Z (Q62766)",
+      "url": "https://www.wikidata.org/wiki/Q62766",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jay-Z",
+      "url": "https://en.wikipedia.org/wiki/Jay-Z",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/55/Jay-Z_meets_with_New_York_Senate_Majority_Leader_in_Albany_%28cropped%29.webp",
+    "alt": "Jay-Z",
+    "credit": "Photo Courtesy of NYS Senate Media Services",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jay-Z_meets_with_New_York_Senate_Majority_Leader_in_Albany_(cropped).webp"
+  }
+}

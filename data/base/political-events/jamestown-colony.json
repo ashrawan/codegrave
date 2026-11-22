@@ -1,0 +1,54 @@
+{
+  "id": "jamestown-colony",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Jamestown",
+      "from": "1607"
+    }
+  ],
+  "summary": "The first lasting English settlement in America, founded in Virginia in 1607.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q323813",
+  "events": [
+    {
+      "type": "born",
+      "date": "1607-05",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jamestown (Q323813)",
+      "url": "https://www.wikidata.org/wiki/Q323813",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jamestown, Virginia",
+      "url": "https://en.wikipedia.org/wiki/Jamestown,_Virginia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Jamestown_Virginia_in_1622_Conquestofvirg1939sams_0590.jpg/500px-Jamestown_Virginia_in_1622_Conquestofvirg1939sams_0590.jpg",
+    "alt": "Jamestown",
+    "credit": "Peter Vander (via Conway Whittle Sams)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jamestown_Virginia_in_1622_Conquestofvirg1939sams_0590.jpg"
+  }
+}

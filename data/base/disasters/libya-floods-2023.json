@@ -1,0 +1,50 @@
+{
+  "id": "libya-floods-2023",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Storm Daniel and the Derna floods",
+      "from": "2023"
+    }
+  ],
+  "summary": "In September 2023 Storm Daniel burst two dams above the Libyan city of Derna, killing thousands in one night.",
+  "wikidata": "Q122311648",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-09-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Storm Daniel and the Derna floods (Q122311648)",
+      "url": "https://www.wikidata.org/wiki/Q122311648",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Storm Daniel",
+      "url": "https://en.wikipedia.org/wiki/Storm_Daniel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Daniel_storm_in_Herzliya.jpg/500px-Daniel_storm_in_Herzliya.jpg",
+    "alt": "Storm Daniel and the Derna floods",
+    "credit": "דוד שי",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Daniel_storm_in_Herzliya.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "yao-ming",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Yao Ming",
+      "from": "1980"
+    }
+  ],
+  "summary": "Chinese centre who starred for the Houston Rockets and made basketball hugely popular in China.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q58590",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Yao Ming (Q58590)",
+      "url": "https://www.wikidata.org/wiki/Q58590",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yao Ming",
+      "url": "https://en.wikipedia.org/wiki/Yao_Ming",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/YaoMingonoffense2.jpg/500px-YaoMingonoffense2.jpg",
+    "alt": "Yao Ming",
+    "credit": "Keith Allison from Baltimore, USA",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:YaoMingonoffense2.jpg"
+  }
+}

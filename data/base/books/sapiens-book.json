@@ -1,0 +1,48 @@
+{
+  "id": "sapiens-book",
+  "category": "books",
+  "names": [
+    {
+      "name": "Sapiens",
+      "from": "2011"
+    }
+  ],
+  "summary": "Yuval Noah Harari's history of the human species, from foragers to the present, read by tens of millions in many languages.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q12411055",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sapiens (Q12411055)",
+      "url": "https://www.wikidata.org/wiki/Q12411055",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sapiens: A Brief History of Humankind",
+      "url": "https://en.wikipedia.org/wiki/Sapiens:_A_Brief_History_of_Humankind",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sapiens_-_A_Brief_History_of_Humankind.jpg/500px-Sapiens_-_A_Brief_History_of_Humankind.jpg",
+    "alt": "Sapiens",
+    "credit": "宋世怡",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sapiens_-_A_Brief_History_of_Humankind.jpg"
+  }
+}

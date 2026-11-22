@@ -1,0 +1,48 @@
+{
+  "id": "magic-johnson",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Magic Johnson",
+      "from": "1959"
+    }
+  ],
+  "summary": "Lakers point guard whose rivalry with Larry Bird of the Celtics revived the NBA in the 1980s.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q134183",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Magic Johnson (Q134183)",
+      "url": "https://www.wikidata.org/wiki/Q134183",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Magic Johnson",
+      "url": "https://en.wikipedia.org/wiki/Magic_Johnson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Magic_Johnson_at_SXSW_2022_%2851958828669%29_%28cropped%29.jpg/500px-Magic_Johnson_at_SXSW_2022_%2851958828669%29_%28cropped%29.jpg",
+    "alt": "Magic Johnson",
+    "credit": "Daniel Benavides from Austin, TX",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Magic_Johnson_at_SXSW_2022_(51958828669)_(cropped).jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "little-rock-nine",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Little Rock Nine",
+      "from": "1957"
+    }
+  ],
+  "summary": "Nine Black students who entered a white high school in Arkansas in 1957, escorted by federal troops.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1190828",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-09",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Little Rock Nine (Q1190828)",
+      "url": "https://www.wikidata.org/wiki/Q1190828",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Little Rock Nine",
+      "url": "https://en.wikipedia.org/wiki/Little_Rock_Nine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Robert_F._Wagner_with_Little_Rock_students_NYWTS.jpg/500px-Robert_F._Wagner_with_Little_Rock_students_NYWTS.jpg",
+    "alt": "Little Rock Nine",
+    "credit": "New York World-Telegram and the Sun staff photographer: Albertin, Walter, photographer.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Robert_F._Wagner_with_Little_Rock_students_NYWTS.jpg"
+  }
+}

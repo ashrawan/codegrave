@@ -1,0 +1,48 @@
+{
+  "id": "stephen-curry",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Stephen Curry",
+      "from": "1988"
+    }
+  ],
+  "summary": "Golden State guard who changed the game with long three-point shots and won four titles.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q352159",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Stephen Curry (Q352159)",
+      "url": "https://www.wikidata.org/wiki/Q352159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stephen Curry",
+      "url": "https://en.wikipedia.org/wiki/Stephen_Curry",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Stephen_Curry_Shooting_%28cropped%29_%28cropped%29.jpg/500px-Stephen_Curry_Shooting_%28cropped%29_%28cropped%29.jpg",
+    "alt": "Stephen Curry",
+    "credit": "Cyrus Saatsaz",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stephen_Curry_Shooting_(cropped)_(cropped).jpg"
+  }
+}

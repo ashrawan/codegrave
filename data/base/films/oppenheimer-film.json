@@ -1,0 +1,47 @@
+{
+  "id": "oppenheimer-film",
+  "category": "films",
+  "names": [
+    {
+      "name": "Oppenheimer",
+      "from": "2023"
+    }
+  ],
+  "summary": "Christopher Nolan's film about the scientist who led the building of the atomic bomb. It won seven Oscars including best picture.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q108839994",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-07-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Oppenheimer (Q108839994)",
+      "url": "https://www.wikidata.org/wiki/Q108839994",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oppenheimer (film)",
+      "url": "https://en.wikipedia.org/wiki/Oppenheimer_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

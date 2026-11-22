@@ -1,0 +1,50 @@
+{
+  "id": "second-vatican-council",
+  "category": "religious-bodies",
+  "names": [
+    {
+      "name": "Second Vatican Council",
+      "from": "1962"
+    }
+  ],
+  "summary": "Gathering of Catholic bishops from 1962 to 1965 that brought the Mass into local languages and opened the Church to other faiths.",
+  "wikidata": "Q169789",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-10-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Second Vatican Council (Q169789)",
+      "url": "https://www.wikidata.org/wiki/Q169789",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Vatican Council",
+      "url": "https://en.wikipedia.org/wiki/Second_Vatican_Council",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Second_Vatican_Council_by_Lothar_Wolleh_007.jpg/500px-Second_Vatican_Council_by_Lothar_Wolleh_007.jpg",
+    "alt": "Second Vatican Council",
+    "credit": "Lothar Wolleh",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Second_Vatican_Council_by_Lothar_Wolleh_007.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "commonwealth-of-nations",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Commonwealth of Nations",
+      "from": "1931"
+    }
+  ],
+  "summary": "A free association of 56 countries, most of them once British colonies, with the British monarch as its symbolic head.",
+  "wikidata": "Q7785",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-12-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Commonwealth of Nations (Q7785)",
+      "url": "https://www.wikidata.org/wiki/Q7785",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Commonwealth of Nations",
+      "url": "https://en.wikipedia.org/wiki/Commonwealth_of_Nations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Marlborough_House.jpg/500px-Marlborough_House.jpg",
+    "alt": "Commonwealth of Nations",
+    "credit": "CMallwitz at English Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marlborough_House.jpg"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "john-williams-composer",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "John Williams",
+      "from": "1932"
+    }
+  ],
+  "summary": "American composer of the music for Star Wars, Jaws, E.T., Indiana Jones and Harry Potter.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q131285",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-02-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: John Williams (Q131285)",
+      "url": "https://www.wikidata.org/wiki/Q131285",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Williams",
+      "url": "https://en.wikipedia.org/wiki/John_Williams",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/John_Williams_2024.jpg",
+    "alt": "John Williams",
+    "credit": "Lindseysharpe",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Williams_2024.jpg"
+  }
+}
