@@ -37,8 +37,8 @@ tell the story in order.
 
 ## What the page does
 
-- **One subject, one view.** The panel lists the views under four topics:
-  History, Science, Technology and Culture. Pick one and the road shows it
+- **One subject, one view.** The panel lists the views under five topics:
+  History, Science, Technology, Culture and Countries. Pick one and the road shows it
   alone, from its beginning, with its chapters drawn across it in its
   colour. Click a chapter to read it.
 - **Any stretch of time.** The same axis shows a decade of software, three

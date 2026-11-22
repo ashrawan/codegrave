@@ -1,0 +1,41 @@
+{
+  "id": "nunavut",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Nunavut",
+      "from": "1999"
+    }
+  ],
+  "summary": "The largest and most northerly territory of Canada, split from the Northwest Territories as a homeland governed mostly by the Inuit.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-04-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Nunavut",
+      "url": "https://en.wikipedia.org/wiki/Nunavut",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

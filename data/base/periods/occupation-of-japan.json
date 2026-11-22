@@ -1,0 +1,46 @@
+{
+  "id": "occupation-of-japan",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Occupation of Japan",
+      "from": "1945"
+    }
+  ],
+  "summary": "The Allied occupation after the Second World War, led by the United States under Douglas MacArthur. Japan got a new constitution, land reform and votes for women.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-09-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1952-04-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Occupation of Japan",
+      "url": "https://en.wikipedia.org/wiki/Occupation_of_Japan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

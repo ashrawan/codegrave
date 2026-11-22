@@ -1,0 +1,42 @@
+{
+  "id": "lei-aurea",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Golden Law",
+      "from": "1888"
+    }
+  ],
+  "summary": "The short law signed by Princess Isabel that ended slavery in Brazil, the last country in the Americas to do so.",
+  "labels": [
+    "law",
+    "human-rights"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1888-05-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Lei Áurea",
+      "url": "https://en.wikipedia.org/wiki/Lei_%C3%81urea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

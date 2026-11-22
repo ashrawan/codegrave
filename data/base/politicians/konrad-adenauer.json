@@ -1,0 +1,46 @@
+{
+  "id": "konrad-adenauer",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Konrad Adenauer",
+      "from": "1876"
+    }
+  ],
+  "summary": "First chancellor of West Germany, from 1949 to 1963. He tied the new republic to the West and made peace with France.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1876-01-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Konrad Adenauer",
+      "url": "https://en.wikipedia.org/wiki/Konrad_Adenauer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

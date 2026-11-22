@@ -1,0 +1,41 @@
+{
+  "id": "angela-merkel",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Angela Merkel",
+      "from": "1954"
+    }
+  ],
+  "summary": "Physicist from East Germany who became the first woman to be chancellor of Germany and led it from 2005 to 2021.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-07-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Angela Merkel",
+      "url": "https://en.wikipedia.org/wiki/Angela_Merkel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

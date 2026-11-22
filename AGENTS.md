@@ -317,7 +317,7 @@ How the page is put together:
   again: it was changed on purpose.
 - **The views pane** is search, then a row of chips (`drawChips()`: All,
   then the editors' topics from `data/editors-choice.json`, today History,
-  Science, Technology and Culture), then the list of community views in the
+  Science, Technology, Culture and Countries), then the list of community views in the
   order `boot.json` gives them (topic by topic; under All each topic has a
   small heading), then the filters: the year range (`state.span`) and how
   much to show (`state.level`). On a phone the filters fold into one line

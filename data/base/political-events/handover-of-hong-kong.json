@@ -1,0 +1,46 @@
+{
+  "id": "handover-of-hong-kong",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Handover of Hong Kong",
+      "from": "1997"
+    }
+  ],
+  "summary": "The return of Hong Kong from British to Chinese rule after 156 years, under a promise of \"one country, two systems\" for fifty years.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1997-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Handover of Hong Kong",
+      "url": "https://en.wikipedia.org/wiki/Handover_of_Hong_Kong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

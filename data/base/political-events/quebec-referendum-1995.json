@@ -1,0 +1,46 @@
+{
+  "id": "quebec-referendum-1995",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Quebec referendum of 1995",
+      "from": "1995"
+    }
+  ],
+  "summary": "A vote on whether Quebec should become a sovereign country. The No side won by about one percentage point.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-10-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-10-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 1995 Quebec referendum",
+      "url": "https://en.wikipedia.org/wiki/1995_Quebec_referendum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

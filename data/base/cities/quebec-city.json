@@ -1,0 +1,41 @@
+{
+  "id": "quebec-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Quebec City",
+      "from": "1608"
+    }
+  ],
+  "summary": "Capital of the province of Quebec on the St Lawrence River, founded by Samuel de Champlain as a fur-trading post. It was the heart of New France and keeps the only city walls north of Mexico.",
+  "labels": [
+    "world-heritage"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1608-07-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Quebec City",
+      "url": "https://en.wikipedia.org/wiki/Quebec_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

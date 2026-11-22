@@ -1,0 +1,41 @@
+{
+  "id": "brazilian-real",
+  "category": "money",
+  "names": [
+    {
+      "name": "Brazilian real",
+      "from": "1994"
+    }
+  ],
+  "summary": "The currency of Brazil, brought in by the Real Plan to end years of very high inflation.",
+  "labels": [
+    "economics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Brazilian real",
+      "url": "https://en.wikipedia.org/wiki/Brazilian_real",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

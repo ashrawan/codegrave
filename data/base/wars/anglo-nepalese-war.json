@@ -1,0 +1,46 @@
+{
+  "id": "anglo-nepalese-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Anglo-Nepalese War",
+      "from": "1814"
+    }
+  ],
+  "summary": "War between the kingdom of Nepal and the British East India Company over the border lands of the hills. Nepal lost about a third of its territory, and Gurkha soldiers began to serve in the British army.",
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1814-11-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1816-03-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Anglo-Nepalese War",
+      "url": "https://en.wikipedia.org/wiki/Anglo-Nepalese_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

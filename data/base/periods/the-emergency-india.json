@@ -1,0 +1,47 @@
+{
+  "id": "the-emergency-india",
+  "category": "periods",
+  "names": [
+    {
+      "name": "The Emergency",
+      "from": "1975"
+    }
+  ],
+  "summary": "Twenty-one months in which Prime Minister Indira Gandhi ruled by decree, jailed opponents and censored the press.",
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-06-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1977-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: The Emergency (India)",
+      "url": "https://en.wikipedia.org/wiki/The_Emergency_(India)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

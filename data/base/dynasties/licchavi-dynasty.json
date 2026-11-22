@@ -1,0 +1,46 @@
+{
+  "id": "licchavi-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Licchavi dynasty",
+      "from": "0400"
+    }
+  ],
+  "summary": "Rulers of the Kathmandu Valley whose Sanskrit inscriptions are the oldest written records of Nepal. Under them the valley traded between India and Tibet and built Hindu and Buddhist shrines.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "0400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0750",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Licchavi (kingdom)",
+      "url": "https://en.wikipedia.org/wiki/Licchavi_(kingdom)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

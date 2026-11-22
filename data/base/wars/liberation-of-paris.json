@@ -1,0 +1,46 @@
+{
+  "id": "liberation-of-paris",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Liberation of Paris",
+      "from": "1944"
+    }
+  ],
+  "summary": "A rising of the French Resistance in Paris, followed by the arrival of French and American troops, that ended four years of German occupation.",
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-08-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Liberation of Paris",
+      "url": "https://en.wikipedia.org/wiki/Liberation_of_Paris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

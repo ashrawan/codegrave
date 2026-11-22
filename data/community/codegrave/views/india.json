@@ -1,0 +1,96 @@
+{
+  "id": "india",
+  "name": "India",
+  "description": "India from the Indus Valley cities through the Mauryas, Guptas, Mughals and the British Raj to independence and the republic.",
+  "category": "places",
+  "tags": [
+    "india",
+    "indus valley",
+    "mughal empire",
+    "british raj",
+    "gandhi",
+    "independence"
+  ],
+  "entries": [
+    "indus-valley-civilisation",
+    "mohenjo-daro",
+    "vedic-religion",
+    "rigveda",
+    "gautama-buddha",
+    "maurya-empire",
+    "ashoka",
+    "edicts-of-ashoka",
+    "gupta-empire",
+    "nalanda",
+    "aryabhata",
+    "zero",
+    "chola-dynasty",
+    "delhi-sultanate",
+    "vijayanagara-empire",
+    "guru-nanak",
+    "mughal-empire",
+    "akbar",
+    "taj-mahal",
+    "shivaji",
+    "maratha-empire",
+    "battle-of-plassey",
+    "indian-rebellion-of-1857",
+    "british-raj",
+    "rabindranath-tagore",
+    "indian-national-congress",
+    "mahatma-gandhi",
+    "salt-march",
+    "partition-of-india",
+    "india",
+    "jawaharlal-nehru",
+    "b-r-ambedkar",
+    "constitution-of-india",
+    "sino-indian-war",
+    "indira-gandhi",
+    "indian-space-research-organisation",
+    "green-revolution",
+    "indo-pakistani-war-of-1971",
+    "the-emergency-india",
+    "bhopal-disaster",
+    "bollywood",
+    "narendra-modi",
+    "chandrayaan-3"
+  ],
+  "checkpoints": [
+    {
+      "id": "indus-and-vedic-india",
+      "name": "Indus and Vedic India",
+      "from": -3300,
+      "to": -322,
+      "note": "The Indus Valley Civilisation built planned cities such as Mohenjo-daro. The Rigveda was composed, and the Buddha taught in the Ganges plain."
+    },
+    {
+      "id": "classical-empires",
+      "name": "Classical empires",
+      "from": -321,
+      "to": 1205,
+      "note": "The Mauryas united most of the subcontinent and Ashoka carved his edicts. Under the Guptas Aryabhata worked and Nalanda taught, and the Cholas ruled the south."
+    },
+    {
+      "id": "sultans-and-mughals",
+      "name": "Sultans and Mughals",
+      "from": 1206,
+      "to": 1756,
+      "note": "The Delhi Sultanate and Vijayanagara held the north and south. Guru Nanak founded Sikhism, the Mughals built the Taj Mahal, and the Marathas rose under Shivaji."
+    },
+    {
+      "id": "company-and-raj",
+      "name": "Company and Raj",
+      "from": 1757,
+      "to": 1946,
+      "note": "After Plassey the East India Company took Bengal and then most of India. The rising of 1857 brought rule by the Crown. Gandhi led the struggle for freedom with the Salt March."
+    },
+    {
+      "id": "independent-india",
+      "name": "Independent India",
+      "from": 1947,
+      "to": 2026,
+      "note": "India became free and was partitioned in 1947, and a republic in 1950 under the constitution drafted by Ambedkar. It fought China and Pakistan, went through the Emergency and landed on the Moon."
+    }
+  ]
+}

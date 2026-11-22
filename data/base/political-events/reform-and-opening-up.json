@@ -1,0 +1,42 @@
+{
+  "id": "reform-and-opening-up",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Reform and opening up",
+      "from": "1978"
+    }
+  ],
+  "summary": "The turn in Chinese policy under Deng Xiaoping that let farmers and firms sell for profit and opened special zones to foreign investment, starting decades of fast growth.",
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-12",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Chinese economic reform",
+      "url": "https://en.wikipedia.org/wiki/Chinese_economic_reform",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

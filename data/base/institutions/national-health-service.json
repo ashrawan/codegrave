@@ -1,0 +1,41 @@
+{
+  "id": "national-health-service",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "National Health Service",
+      "from": "1948"
+    }
+  ],
+  "summary": "The publicly funded health service of the United Kingdom, free to everyone at the point of use, started by Labour after the Second World War.",
+  "labels": [
+    "medicine"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: National Health Service",
+      "url": "https://en.wikipedia.org/wiki/National_Health_Service",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

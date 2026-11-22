@@ -1,0 +1,46 @@
+{
+  "id": "colonial-brazil",
+  "category": "regions",
+  "names": [
+    {
+      "name": "Colonial Brazil",
+      "from": "1500"
+    }
+  ],
+  "summary": "Brazil as a Portuguese colony, from the arrival of Cabral until it was raised to a kingdom alongside Portugal. Sugar, then gold, were grown and mined there with the forced labour of millions of enslaved Africans.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1500-04-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1815-12-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Colonial Brazil",
+      "url": "https://en.wikipedia.org/wiki/Colonial_Brazil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

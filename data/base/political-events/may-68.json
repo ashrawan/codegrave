@@ -1,0 +1,46 @@
+{
+  "id": "may-68",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "May 68",
+      "from": "1968"
+    }
+  ],
+  "summary": "Student protests and a general strike that brought France to a standstill and shook the government of Charles de Gaulle.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-05",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1968-06",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: May 68",
+      "url": "https://en.wikipedia.org/wiki/May_68",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

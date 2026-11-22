@@ -1,0 +1,46 @@
+{
+  "id": "nepalese-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Nepalese Civil War",
+      "from": "1996"
+    }
+  ],
+  "summary": "A ten-year insurgency by the Communist Party of Nepal (Maoist) against the monarchy and government, in which more than seventeen thousand people died. It ended with a peace agreement in 2006.",
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-02-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-11-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Nepalese Civil War",
+      "url": "https://en.wikipedia.org/wiki/Nepalese_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

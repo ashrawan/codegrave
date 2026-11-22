@@ -1,0 +1,47 @@
+{
+  "id": "one-child-policy",
+  "category": "laws",
+  "names": [
+    {
+      "name": "One-child policy",
+      "from": "1980"
+    }
+  ],
+  "summary": "The rule that most Chinese couples could have only one child, enforced with fines and at times forced abortions and sterilisations. It was replaced by a two-child policy.",
+  "labels": [
+    "law",
+    "human-rights"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2016-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: One-child policy",
+      "url": "https://en.wikipedia.org/wiki/One-child_policy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

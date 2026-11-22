@@ -1,0 +1,46 @@
+{
+  "id": "proclamation-of-the-republic-brazil",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Proclamation of the Republic",
+      "from": "1889"
+    }
+  ],
+  "summary": "A military coup led by Marshal Deodoro da Fonseca that ended the Brazilian monarchy and sent Emperor Pedro II into exile.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1889-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Proclamation of the Republic (Brazil)",
+      "url": "https://en.wikipedia.org/wiki/Proclamation_of_the_Republic_(Brazil)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

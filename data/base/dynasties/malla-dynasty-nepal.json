@@ -1,0 +1,47 @@
+{
+  "id": "malla-dynasty-nepal",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Malla dynasty",
+      "from": "1201"
+    }
+  ],
+  "summary": "Kings of the Kathmandu Valley who later split it into the rival cities of Kathmandu, Patan and Bhaktapur. Their temples and palace squares are now World Heritage sites. The Gorkha conquest ended their rule.",
+  "labels": [
+    "politics",
+    "architecture"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1201",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1769",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Malla (Nepal)",
+      "url": "https://en.wikipedia.org/wiki/Malla_(Nepal)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

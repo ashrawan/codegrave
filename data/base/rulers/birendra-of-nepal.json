@@ -1,0 +1,46 @@
+{
+  "id": "birendra-of-nepal",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Birendra",
+      "from": "1945"
+    }
+  ],
+  "summary": "King of Nepal from 1972 who accepted a multi-party constitution after the protests of 1990. He was killed with most of his family in the royal massacre of 2001.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-12-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-06-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Birendra of Nepal",
+      "url": "https://en.wikipedia.org/wiki/Birendra_of_Nepal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

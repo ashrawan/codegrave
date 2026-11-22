@@ -1,0 +1,38 @@
+{
+  "id": "flag-of-canada",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Maple Leaf flag",
+      "from": "1965"
+    }
+  ],
+  "summary": "The red and white flag with a red maple leaf, raised for the first time on Parliament Hill in 1965 after a long debate, in place of a flag with the British Union Jack.",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Flag of Canada",
+      "url": "https://en.wikipedia.org/wiki/Flag_of_Canada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

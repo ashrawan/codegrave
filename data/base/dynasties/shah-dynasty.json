@@ -1,0 +1,46 @@
+{
+  "id": "shah-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Shah dynasty",
+      "from": "1559"
+    }
+  ],
+  "summary": "Royal house that began in the hill kingdom of Gorkha and went on to unify Nepal. It reigned until the elected assembly abolished the monarchy in 2008.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1559",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2008-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Shah dynasty",
+      "url": "https://en.wikipedia.org/wiki/Shah_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

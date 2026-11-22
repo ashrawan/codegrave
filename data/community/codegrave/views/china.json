@@ -1,0 +1,99 @@
+{
+  "id": "china",
+  "name": "China",
+  "description": "China from the Shang kings to the People's Republic: dynasties, inventions, revolutions and the rise of a modern power.",
+  "category": "places",
+  "tags": [
+    "china",
+    "dynasties",
+    "great wall",
+    "mao",
+    "communist party",
+    "beijing"
+  ],
+  "entries": [
+    "shang-dynasty",
+    "zhou-dynasty",
+    "confucius",
+    "great-wall-of-china",
+    "qin-shi-huang",
+    "china",
+    "qin-dynasty",
+    "terracotta-army",
+    "han-dynasty",
+    "silk-road",
+    "paper",
+    "tang-dynasty",
+    "gunpowder",
+    "song-dynasty",
+    "movable-type",
+    "kublai-khan",
+    "yuan-dynasty",
+    "ming-dynasty",
+    "zheng-he",
+    "forbidden-city",
+    "qing-dynasty",
+    "first-opium-war",
+    "taiping-rebellion",
+    "boxer-rebellion",
+    "sun-yat-sen",
+    "xinhai-revolution",
+    "republic-of-china-1912",
+    "chinese-communist-party",
+    "mao-zedong",
+    "long-march",
+    "second-sino-japanese-war",
+    "chinese-civil-war",
+    "korean-war",
+    "great-leap-forward",
+    "great-chinese-famine",
+    "cultural-revolution",
+    "deng-xiaoping",
+    "reform-and-opening-up",
+    "one-child-policy",
+    "tiananmen-square-protests-of-1989",
+    "handover-of-hong-kong",
+    "three-gorges-dam",
+    "shenzhou-5",
+    "olympics-2008",
+    "xi-jinping",
+    "covid-19-pandemic"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-dynasties",
+      "name": "The first dynasties",
+      "from": -1600,
+      "to": -222,
+      "note": "The Shang left the oldest Chinese writing on oracle bones. Under the Zhou, Confucius taught and rival states fought for centuries."
+    },
+    {
+      "id": "one-empire",
+      "name": "One empire",
+      "from": -221,
+      "to": 1278,
+      "note": "The Qin united China in 221 BCE, and the Han, Tang and Song ruled long and rich empires. Paper, gunpowder and movable type were invented, and the Silk Road carried trade west."
+    },
+    {
+      "id": "mongols-ming-and-qing",
+      "name": "Mongols, Ming and Qing",
+      "from": 1279,
+      "to": 1911,
+      "note": "Kublai Khan ruled as emperor of the Yuan. The Ming built the Forbidden City and sent Zheng He's fleets abroad. The Qing ruled last, weakened by the Opium Wars and the Taiping and Boxer risings."
+    },
+    {
+      "id": "republic-and-war",
+      "name": "Republic and war",
+      "from": 1912,
+      "to": 1948,
+      "note": "The revolution of 1911 ended two thousand years of emperors. Communists and Nationalists fought each other and Japan, and the Communists made the Long March."
+    },
+    {
+      "id": "the-peoples-republic",
+      "name": "The People's Republic",
+      "from": 1949,
+      "to": 2026,
+      "note": "Mao proclaimed the People's Republic in 1949. The Great Leap Forward brought famine and the Cultural Revolution chaos. Under Deng Xiaoping reform began, and China grew into a great economy."
+    }
+  ]
+}

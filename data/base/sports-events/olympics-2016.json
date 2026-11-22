@@ -1,0 +1,46 @@
+{
+  "id": "olympics-2016",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2016 Summer Olympics",
+      "from": "2016"
+    }
+  ],
+  "summary": "The first Olympic Games in South America, held in Rio de Janeiro.",
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-08-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-08-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2016 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/2016_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

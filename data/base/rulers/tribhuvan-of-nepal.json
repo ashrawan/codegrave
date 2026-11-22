@@ -1,0 +1,46 @@
+{
+  "id": "tribhuvan-of-nepal",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Tribhuvan",
+      "from": "1906"
+    }
+  ],
+  "summary": "King of Nepal who fled to the Indian embassy in 1950 to break the power of the Ranas, then returned in 1951 to restore royal rule and promise democracy.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-06-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1955-03-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Tribhuvan of Nepal",
+      "url": "https://en.wikipedia.org/wiki/Tribhuvan_of_Nepal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

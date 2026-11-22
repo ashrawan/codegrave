@@ -1,0 +1,42 @@
+{
+  "id": "treaty-of-sugauli",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Treaty of Sugauli",
+      "from": "1815"
+    }
+  ],
+  "summary": "The peace that ended the Anglo-Nepalese War. Nepal gave up Sikkim and land to the west and south and accepted a British resident in Kathmandu. It set most of the country's present borders.",
+  "labels": [
+    "law",
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1815-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sugauli Treaty",
+      "url": "https://en.wikipedia.org/wiki/Sugauli_Treaty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

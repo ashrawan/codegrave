@@ -1,0 +1,53 @@
+{
+  "id": "pedro-alvares-cabral",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Pedro Álvares Cabral",
+      "from": "1467"
+    }
+  ],
+  "summary": "Portuguese commander whose fleet, bound for India, reached the coast of Brazil in April 1500 and claimed it for Portugal.",
+  "labels": [
+    "exploration"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1467",
+      "precision": "circa"
+    },
+    {
+      "type": "milestone",
+      "date": "1500-04-22",
+      "precision": "day",
+      "label": "Reached Brazil",
+      "note": "His fleet landed at Porto Seguro and claimed the coast for Portugal."
+    },
+    {
+      "type": "ended",
+      "date": "1520",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Pedro Álvares Cabral",
+      "url": "https://en.wikipedia.org/wiki/Pedro_%C3%81lvares_Cabral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

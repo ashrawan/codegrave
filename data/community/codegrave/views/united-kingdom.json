@@ -1,0 +1,99 @@
+{
+  "id": "united-kingdom",
+  "name": "United Kingdom",
+  "description": "Britain from Stonehenge and Roman rule through Saxons, Normans, Tudors and the Industrial Revolution to empire, world wars and Brexit.",
+  "category": "places",
+  "tags": [
+    "united kingdom",
+    "britain",
+    "england",
+    "london",
+    "monarchy",
+    "british empire"
+  ],
+  "entries": [
+    "stonehenge",
+    "hadrians-wall",
+    "alfred-the-great",
+    "battle-of-hastings",
+    "william-the-conqueror",
+    "domesday-book",
+    "tower-of-london",
+    "magna-carta",
+    "black-death",
+    "battle-of-agincourt",
+    "wars-of-the-roses",
+    "henry-viii",
+    "church-of-england",
+    "elizabeth-i",
+    "william-shakespeare",
+    "english-civil-war",
+    "oliver-cromwell",
+    "isaac-newton",
+    "glorious-revolution",
+    "bill-of-rights-1689",
+    "united-kingdom",
+    "james-watt",
+    "industrial-revolution",
+    "british-empire",
+    "battle-of-trafalgar",
+    "battle-of-waterloo",
+    "slavery-abolition-act-1833",
+    "victoria",
+    "great-exhibition-1851",
+    "charles-darwin",
+    "london-underground",
+    "world-war-i",
+    "bbc",
+    "winston-churchill",
+    "battle-of-britain",
+    "the-blitz",
+    "national-health-service",
+    "elizabeth-ii",
+    "the-beatles",
+    "margaret-thatcher",
+    "falklands-war",
+    "channel-tunnel",
+    "good-friday-agreement",
+    "olympics-2012",
+    "brexit",
+    "king-charles-iii"
+  ],
+  "checkpoints": [
+    {
+      "id": "stone-and-rome",
+      "name": "Stone and Rome",
+      "from": -3000,
+      "to": 409,
+      "note": "Stonehenge was raised on Salisbury Plain. Rome conquered Britain and built Hadrian's Wall against the north."
+    },
+    {
+      "id": "saxons-and-normans",
+      "name": "Saxons and Normans",
+      "from": 410,
+      "to": 1484,
+      "note": "Anglo-Saxon kingdoms formed and Alfred held off the Danes. William of Normandy won at Hastings in 1066, Magna Carta limited the king, and the Black Death and the Wars of the Roses followed."
+    },
+    {
+      "id": "tudors-and-stuarts",
+      "name": "Tudors and Stuarts",
+      "from": 1485,
+      "to": 1706,
+      "note": "Henry VIII broke with Rome, Elizabeth I reigned while Shakespeare wrote, and civil war ended with a king beheaded. The Glorious Revolution made parliament supreme."
+    },
+    {
+      "id": "industry-and-empire",
+      "name": "Industry and empire",
+      "from": 1707,
+      "to": 1913,
+      "note": "England and Scotland joined in 1707. Steam power drove the Industrial Revolution, Trafalgar and Waterloo beat Napoleon, slavery was abolished, and under Victoria the empire grew to the largest in history."
+    },
+    {
+      "id": "wars-and-a-new-britain",
+      "name": "Wars and a new Britain",
+      "from": 1914,
+      "to": 2026,
+      "note": "Britain fought two world wars, standing alone in 1940 under Churchill. The NHS was founded, the empire ended and the Beatles came out of Liverpool. Thatcher remade the economy and the country voted to leave the EU."
+    }
+  ]
+}

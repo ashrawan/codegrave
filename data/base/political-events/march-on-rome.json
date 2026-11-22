@@ -1,0 +1,46 @@
+{
+  "id": "march-on-rome",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "March on Rome",
+      "from": "1922"
+    }
+  ],
+  "summary": "The march of Fascist squads on the capital that led King Victor Emmanuel III to make Benito Mussolini prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1922-10",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: March on Rome",
+      "url": "https://en.wikipedia.org/wiki/March_on_Rome",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

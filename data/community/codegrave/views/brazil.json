@@ -1,0 +1,82 @@
+{
+  "id": "brazil",
+  "name": "Brazil",
+  "description": "Brazil from the Portuguese arrival in 1500 through empire, slavery and its end, the republic, military rule and democracy.",
+  "category": "places",
+  "tags": [
+    "brazil",
+    "rio de janeiro",
+    "pedro ii",
+    "portugal",
+    "football",
+    "amazon"
+  ],
+  "entries": [
+    "amazon-rainforest",
+    "pedro-alvares-cabral",
+    "colonial-brazil",
+    "atlantic-slave-trade",
+    "sao-paulo",
+    "rio-de-janeiro",
+    "rio-carnival",
+    "transfer-of-the-portuguese-court-to-brazil",
+    "pedro-i-of-brazil",
+    "independence-of-brazil",
+    "empire-of-brazil",
+    "brazil",
+    "pedro-ii-of-brazil",
+    "war-of-the-triple-alliance",
+    "lei-aurea",
+    "proclamation-of-the-republic-brazil",
+    "roosevelt-rondon-expedition",
+    "getulio-vargas",
+    "christ-the-redeemer",
+    "brazil-national-football-team",
+    "oscar-niemeyer",
+    "maracana-stadium",
+    "world-cup-1950",
+    "pele",
+    "world-cup-1958",
+    "brasilia",
+    "military-dictatorship-in-brazil",
+    "world-cup-1970",
+    "bossa-nova",
+    "ayrton-senna",
+    "constitution-of-brazil-1988",
+    "brazilian-real",
+    "lula-da-silva",
+    "world-cup-2014",
+    "zika-epidemic",
+    "olympics-2016"
+  ],
+  "checkpoints": [
+    {
+      "id": "a-portuguese-colony",
+      "name": "A Portuguese colony",
+      "from": 1500,
+      "to": 1807,
+      "note": "Cabral's fleet reached the coast in 1500 and claimed it for Portugal. São Paulo and Rio de Janeiro were founded, and sugar and later gold were worked by millions of enslaved Africans brought across the Atlantic."
+    },
+    {
+      "id": "court-and-empire",
+      "name": "Court and empire",
+      "from": 1808,
+      "to": 1888,
+      "note": "The Portuguese court fled Napoleon to Rio. Prince Pedro declared independence in 1822 and became emperor; his son Pedro II reigned for almost sixty years, through the war with Paraguay, until the Golden Law ended slavery."
+    },
+    {
+      "id": "the-old-republic-and-vargas",
+      "name": "The early republic and Vargas",
+      "from": 1889,
+      "to": 1963,
+      "note": "A coup made Brazil a republic in 1889. Getúlio Vargas ruled for much of 1930 to 1954, Christ the Redeemer rose over Rio, Pelé won the World Cup, and a new capital, Brasília, was built in the interior."
+    },
+    {
+      "id": "dictatorship-and-democracy",
+      "name": "Dictatorship and democracy",
+      "from": 1964,
+      "to": 2026,
+      "note": "The army ruled from 1964 to 1985. Democracy returned with the constitution of 1988, the real tamed inflation, and Brazil hosted the World Cup of 2014 and the Olympics of 2016."
+    }
+  ]
+}

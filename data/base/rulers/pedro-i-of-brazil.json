@@ -1,0 +1,47 @@
+{
+  "id": "pedro-i-of-brazil",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Pedro I of Brazil",
+      "from": "1798"
+    }
+  ],
+  "summary": "Portuguese prince who stayed in Brazil when his father went home, declared its independence in 1822 and became its first emperor. He gave up the throne to his young son in 1831.",
+  "labels": [
+    "politics",
+    "independence"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1798-10-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1834-09-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Pedro I of Brazil",
+      "url": "https://en.wikipedia.org/wiki/Pedro_I_of_Brazil",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,46 @@
+{
+  "id": "pierre-trudeau",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Pierre Trudeau",
+      "from": "1919"
+    }
+  ],
+  "summary": "Prime minister of Canada for most of the years 1968 to 1984. He made English and French official languages and brought the constitution home from Britain with a Charter of Rights.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-10-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Pierre Trudeau",
+      "url": "https://en.wikipedia.org/wiki/Pierre_Trudeau",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

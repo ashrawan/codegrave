@@ -1,0 +1,42 @@
+{
+  "id": "treaty-of-rome",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Treaty of Rome",
+      "from": "1957"
+    }
+  ],
+  "summary": "The treaty signed in Rome by six countries, Italy among them, that founded the European Economic Community, the forerunner of the European Union.",
+  "labels": [
+    "law",
+    "economics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Treaty of Rome",
+      "url": "https://en.wikipedia.org/wiki/Treaty_of_Rome",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

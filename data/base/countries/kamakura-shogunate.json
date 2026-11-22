@@ -1,0 +1,46 @@
+{
+  "id": "kamakura-shogunate",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kamakura shogunate",
+      "from": "1185"
+    }
+  ],
+  "summary": "The first military government of Japan, set up by Minamoto no Yoritomo at Kamakura. The warrior class ruled in the emperor's name, and it held off the Mongol invasions.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1185",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1333",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Kamakura shogunate",
+      "url": "https://en.wikipedia.org/wiki/Kamakura_shogunate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

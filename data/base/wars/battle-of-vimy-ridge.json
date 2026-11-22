@@ -1,0 +1,46 @@
+{
+  "id": "battle-of-vimy-ridge",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Vimy Ridge",
+      "from": "1917"
+    }
+  ],
+  "summary": "The First World War battle in northern France in which all four divisions of the Canadian Corps attacked together for the first time and took the ridge. It is remembered as a founding moment for Canada.",
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-04-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1917-04-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Battle of Vimy Ridge",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Vimy_Ridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

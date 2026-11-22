@@ -1,0 +1,41 @@
+{
+  "id": "brandenburg-gate",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Brandenburg Gate",
+      "from": "1791"
+    }
+  ],
+  "summary": "Neoclassical gateway in Berlin topped by a chariot of victory. It stood beside the Berlin Wall in the Cold War and became a symbol of reunification.",
+  "labels": [
+    "architecture"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1791",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Brandenburg Gate",
+      "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
