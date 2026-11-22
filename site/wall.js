@@ -68,11 +68,18 @@ export const rgbOf = (hex, fall = [200, 200, 200]) => {
 };
 
 // A small steady random number for a whole number: the same point always twinkles the same way.
+import { createScene } from './scene.js';
+
 const hash = (n) => { let x = Math.imul(n ^ 0x9e3779b9, 0x85ebca6b); x ^= x >>> 13; x = Math.imul(x, 0xc2b2ae35); x ^= x >>> 16; return (x >>> 0) / 4294967296; };
 
 export function createWall(host, { eras = [] } = {}) {
-  host.innerHTML = '<canvas class="w-sky"></canvas><canvas class="w-cv"></canvas><div class="w-scene"><div class="w-o"></div></div>';
-  const sky = host.children[0], cv = host.children[1], scene = host.children[2], origin = scene.firstChild;
+  host.innerHTML = '<canvas class="w-gl"></canvas><canvas class="w-sky"></canvas><canvas class="w-cv"></canvas><div class="w-scene"><div class="w-o"></div></div>';
+  const sky = host.children[1], cv = host.children[2], scene = host.children[3], origin = scene.firstChild;
+  // The world in 3D (scene.js): the lit grid to the horizon, the rails of light and the sky. Where WebGL2 is
+  // missing, the walls of points and the sky are drawn flat instead.
+  const world = createScene(host.children[0]);
+  if (!world) host.children[0].remove();
+  host.classList.toggle('gl', !!world);
   const frames = [];
   for (const side of [-1, 1]) for (let k = 0; k < SLOTS; k++) {
     const el = document.createElement('a');
@@ -203,7 +210,7 @@ export function createWall(host, { eras = [] } = {}) {
       f.el.style.width = w.toFixed(0) + 'px'; f.el.style.height = h.toFixed(0) + 'px';
       f.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,${(-F * d).toFixed(1)}px) rotateY(${f.side < 0 ? 36 : -36}deg) translate(-50%,-50%)`;
     }
-    drawSky(G, W.dark, dpr);
+    if (!world) drawSky(G, W.dark, dpr);
   }
 
   // Draws the walls: a grid of points that flows past as the reader travels, brighter near, lit by the era.
@@ -309,7 +316,8 @@ export function createWall(host, { eras = [] } = {}) {
         host.style.setProperty('--wall-warm', `rgb(${W.warm.map(Math.round).join(',')})`);
         host.style.setProperty('--wall-cool', `rgb(${W.cool.map(Math.round).join(',')})`);
       }
-      draw(G, travel);
+      if (world) world.frame({ G, travel, time: performance.now() / 1000, warm: W.warm, cool: W.cool, dark });
+      else draw(G, travel);
       return busy;
     },
     // The light on each wall now, for the road to borrow.

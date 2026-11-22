@@ -1045,7 +1045,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const haze = (col, a) => { const g = c.createLinearGradient(0, hazeY, 0, G.vy + gh * 0.3); g.addColorStop(0, rgba(col, 0)); g.addColorStop(1, rgba(col, a)); return g; };
     const quad = (x0, x1, sa, sb) => { c.beginPath(); c.moveTo(px(x0, sa), py(sa)); c.lineTo(px(x1, sa), py(sa)); c.lineTo(px(x1, sb), py(sb)); c.lineTo(px(x0, sb), py(sb)); c.closePath(); };
     if (L.lanes.length) {
-      quad(-G.RW, G.RW, sTop, sB); c.fillStyle = haze(P.surf, P.dark ? 0.82 : 1); c.fill();
+      quad(-G.RW, G.RW, sTop, sB); c.fillStyle = haze(P.surf, P.dark ? 0.6 : 1); c.fill();
       // In the dark the road is glass lit from both sides, the era's warm light on the left and its cool light on the right,
       // with faint lines running along it.
       const lit = wall ? wall.light() : null;
