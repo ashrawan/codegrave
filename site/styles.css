@@ -180,7 +180,7 @@ mark { background: none; color: var(--text); font-weight: 600; text-decoration: 
 #vnote:empty { display: none; }
 .ibtn.sm { width: 30px; height: 30px; }
 .ibtn[hidden] { display: none; }
-#pdf img { filter: saturate(.45); opacity: .75; transition: filter .2s, opacity .2s; }
+#pdf img { filter: saturate(.7); opacity: .9; transition: filter .2s, opacity .2s; }
 #pdf:hover img, #pdf:focus-visible img { filter: none; opacity: 1; }
 .ibtn.done { color: var(--acc); }
 /* the views on the timeline: a strip of pills along the bottom, which scrolls sideways when they do not fit */
@@ -356,6 +356,9 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 #vlist li.vhead { padding: 14px 8px 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); cursor: default; }
 #vlist li.vhead:first-child { padding-top: 4px; }
 #vlist li.vhead:hover { background: none; color: var(--faint); }
+#vlist li.vhead { display: flex; align-items: center; justify-content: space-between; }
+#vlist li.vhead .shuf { display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 6px; margin: -6px -4px -6px 0; color: var(--muted); background: transparent; border: 0; border-radius: 6px; cursor: pointer; }
+#vlist li.vhead .shuf:hover { color: var(--text); background: var(--raised); }
 .st.bad { color: var(--p7); font-weight: 600; }
 /* a classical view not loaded yet has no thumbnail: the folded map stands in */
 .th-map { display: flex; color: var(--faint); }

@@ -53,6 +53,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode: carry on */ } },
   };
   const ICON = {
+    shuffle: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5c4 0 6 10 10 10H21M18 14l3 3-3 3M3 17h3.5c1.6 0 2.8-1.6 3.9-3.6M13.6 9.6C14.7 8.1 15.8 7 16.5 7H21M18 4l3 3-3 3"/></svg>',
     // Community views are written by someone (a pen nib); classical views are part of the map (a folded map).
     community: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5 6.5 12 12 3l5.5 9z"/><path d="M12 13.5v8"/><circle cx="12" cy="11.5" r="1.6"/></svg>',
     classical: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6.5 9 4.5l6 2 5.5-2v13l-5.5 2-6-2-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></svg>',
@@ -1599,7 +1600,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
         (many ? `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button>` : '') + '</div>';
     }).join('');
-    $('shuffle').hidden = !many;
     requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
 
@@ -1703,7 +1703,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (state.topic) {
         for (const v of boot?.views || []) if (chipOf(v) === state.topic) found.push({ v: viewById.get(v.id) || v });
       } else {
-        found.push({ head: 'My view' });
+        found.push({ head: 'My view', shuffle: true });
         for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
       }
       active = -1;
@@ -1764,7 +1764,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     function row(f, i) {
       let name, sub, tb, attrs = '', side = '';
       if (f.wait) return '<li class="none" role="presentation">Searching every view…</li>';
-      if (f.head) return `<li class="vhead" role="presentation">${esc(f.head)}</li>`;
+      // "My view" carries shuffle, which mixes the colours of the views on the timeline (moved here from the strip, Nov 2026).
+      if (f.head) return `<li class="vhead" role="presentation"><span>${esc(f.head)}</span>${f.shuffle && state.views.length > 1 ? `<button type="button" class="shuf" data-shuffle aria-label="Shuffle colours" title="Shuffle colours">${ICON.shuffle}</button>` : ''}</li>`;
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(alias.get(id) || id)?.name || id).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
       else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; tb = `<span class="tb icon">${ICON.plus}</span>`; }
       else if (f.year != null) { name = 'Go to ' + esc(yearText(f.year)); sub = 'On the timeline'; tb = `<span class="tb icon">${ICON.dot}</span>`; }
@@ -2195,6 +2196,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (playFrom) return startPlay(playFrom.dataset.playFrom);
       const go = el('[data-go]');
       if (go) return jumpTo(state.open, Number(go.dataset.go));
+      if (el('#vlist [data-shuffle]')) return shuffleColours();
       const beside = el('#vlist [data-beside]');
       if (beside) return pick(Number(beside.dataset.beside), true);
       const li = el('#vlist [data-i]');
@@ -2315,8 +2317,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
 
     // The pills: drag one to change the order of the lanes, tap its dot to
-    // pick its colour, or shuffle every colour at once.
-    $('shuffle').addEventListener('click', () => {
+    // pick its colour; "My view" in the panel shuffles every colour at once.
+    function shuffleColours() {
       const pool = [0, 1, 2, 3, 4, 5, 6, 7];
       let next;
       do {
@@ -2325,7 +2327,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       } while (state.views.every((id, i) => state.colors.get(id) === next[i]));
       state.views.forEach((id, i) => state.colors.set(id, next[i]));
       changed();
-    });
+    }
     $('views-btn').addEventListener('click', () => {
       if (!$('side').hidden && !$('p-views').hidden) return showSide(false);    // a second press closes it
       showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
