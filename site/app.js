@@ -2307,6 +2307,13 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('filters-btn').setAttribute('aria-expanded', open);
     });
 
+    // Save as PDF: the views on the timeline, in their order and colours, as printable pages (print.html).
+    $('pdf').addEventListener('click', () => {
+      if (!state.views.length) return;
+      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + '&print=1';
+      window.open('print.html?' + q, '_blank', 'noopener');
+    });
+
     // The pills: drag one to change the order of the lanes, tap its dot to
     // pick its colour, or shuffle every colour at once.
     $('shuffle').addEventListener('click', () => {

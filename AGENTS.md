@@ -48,6 +48,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
+| The printable export ("Save as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
@@ -306,7 +307,7 @@ How the page is put together:
   pill first, because a finger scrolls the strip), the dot picks the
   colour, and the cross removes one of several. The strip starts at the
   left with the "Views" button and the pills; at its right end stand
-  shuffle, then reverse (`state.order`), small, last in the strip
+  Save as PDF, shuffle, then reverse (`state.order`), small, last in the strip
   (moved there on request, Nov 2026). There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
@@ -354,6 +355,7 @@ How the page is put together:
   from the strip on request, Nov 2026). Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
   the rest and "Show all years" reaches back. Every date on the page goes
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates.
+- **Save as PDF.** The page icon in the strip, beside shuffle, opens `print.html` in a new tab with the views on the timeline, their order and colours (`?views=…&c=…&print=1`). `site/print.js` loads the same view files, lays the pages out by measuring them in the browser, and opens the browser's print dialog, where the reader picks "Save as PDF". The paper is A4 or Letter (`paperFor()` picks Letter for the US and a few others; the reader can switch). One style for every view, asked for in Nov 2026 after several rounds: no full-page pictures, printable pages. One view: a cover with its thumbnail picture (a flag), then entries on the left under their chapters and the page's stretch of the timeline down the right, with a bar at its top showing where the page sits, no scale numbers, a dot level with each name and a straight dotted line, a curve only where entries share a year, chapter tints (grey before the first chapter). Several views: one timeline down the exact middle in strict date order, each year written once; views stand left and right like the pips of a die (1st left, 2nd right, 3rd left…), each in a box bordered in its colour that appears where its entries fall; the heading names the left views on the left and the right views on the right. codegrave.com is written only on the first and last pages. Keep the rules above unless asked.
 - **Words.** A person is born and dies; a city is founded; a species goes
   extinct. The words come from the entry's branch (`words` in `boot.json`,
   `wordsNow()` for mixed text).

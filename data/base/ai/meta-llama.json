@@ -1,0 +1,46 @@
+{
+  "id": "meta-llama",
+  "category": "ai",
+  "names": [
+    {
+      "name": "LLaMA",
+      "from": "2023-02-24"
+    },
+    {
+      "name": "Llama",
+      "from": "2023-07-18"
+    }
+  ],
+  "maker": "Meta AI",
+  "summary": "A family of large language models from Meta. The first version was offered to researchers and its weights soon spread online; later versions were released openly for anyone to download, run and build on, which made it the base of many other models.",
+  "aliases": ["Llama 2", "Llama 3", "Large Language Model Meta AI"],
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-02-24",
+      "precision": "day",
+      "note": "Meta announces LLaMA and offers it to researchers."
+    },
+    {
+      "type": "milestone",
+      "date": "2023-07-18",
+      "precision": "day",
+      "note": "Llama 2 is released for research and commercial use."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Llama (language model)",
+      "url": "https://en.wikipedia.org/wiki/Llama_(language_model)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
