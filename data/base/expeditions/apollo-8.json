@@ -1,0 +1,61 @@
+{
+  "id": "apollo-8",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Apollo 8",
+      "from": "1968"
+    }
+  ],
+  "summary": "The first crewed flight to leave Earth orbit and circle the Moon. Frank Borman, Jim Lovell and Bill Anders made ten lunar orbits over Christmas 1968 and photographed the Earth rising over the lunar horizon.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/NASA-Apollo8-Dec24-Earthrise.jpg/500px-NASA-Apollo8-Dec24-Earthrise.jpg",
+    "alt": "Earthrise, photographed from lunar orbit by Apollo 8",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:NASA-Apollo8-Dec24-Earthrise.jpg"
+  },
+  "labels": [
+    "space-race"
+  ],
+  "aliases": [
+    "Earthrise mission"
+  ],
+  "wikidata": "Q184201",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-12-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-12-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "apollo-program"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Apollo 8",
+      "url": "https://en.wikipedia.org/wiki/Apollo_8",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

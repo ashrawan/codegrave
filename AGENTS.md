@@ -203,7 +203,7 @@ How the page is put together:
 - **The look.** Dark by default, like a museum at night: a sky of stars,
   glass cards with a lit edge, the road lit warm from the left and cool from
   the right. The light theme is the same place by day: a blue sky, the sun
-  low over the far end of the road, a pale moon and soft clouds (`cg-theme`).
+  low over the far end of the road, a pale moon and soft clouds (`cg-theme2`; the key was renamed in Nov 2026 so everyone starts on dark).
 - **The media wall** (`site/wall.js`, `docs/WALL.md`). The road runs
   through open air (a CSS gradient; stars or clouds drawn once), with rails
   of light either side whose pulses rush towards the reader and about 200

@@ -1,0 +1,62 @@
+{
+  "id": "apollo-soyuz",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Apollo–Soyuz",
+      "from": "1975"
+    }
+  ],
+  "summary": "The first joint flight of the United States and the Soviet Union: an Apollo spacecraft docked with a Soyuz in orbit and the crews met and shook hands, a gesture often taken as the close of the Space Race.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/ASTP_patch.png/500px-ASTP_patch.png",
+    "alt": "The mission patch of the Apollo–Soyuz flight",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ASTP_patch.png"
+  },
+  "labels": [
+    "space-race"
+  ],
+  "aliases": [
+    "Apollo–Soyuz Test Project",
+    "ASTP"
+  ],
+  "wikidata": "Q208759",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-07-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-07-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "part_of",
+      "to": "apollo-program"
+    },
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Apollo–Soyuz",
+      "url": "https://en.wikipedia.org/wiki/Apollo%E2%80%93Soyuz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

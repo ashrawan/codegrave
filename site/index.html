@@ -17,7 +17,7 @@
 // Set the theme before first paint so the page never flashes the wrong one. Dark unless the visitor chose light.
 (function () {
   var t = null;
-  try { t = localStorage.getItem('cg-theme'); } catch (e) {}
+  try { t = localStorage.getItem('cg-theme2'); } catch (e) {}
   if (t !== 'dark' && t !== 'light') t = 'dark';
   document.documentElement.dataset.theme = t;
 })();

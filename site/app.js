@@ -2241,7 +2241,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
     $('theme').addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-      document.documentElement.dataset.theme = next; store.set('cg-theme', next); roadKick();
+      document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick();
     });
 
     $('q').addEventListener('input', findOnTimeline);
