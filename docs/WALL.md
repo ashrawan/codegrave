@@ -12,15 +12,19 @@ places:
 
 1. **The cards on show.** Each card that is up on the road brings its
    entry's own media: its `image`, its `media` list and its events' images
-   (at most six). They go up on the card's side of the road (the left
-   lane's on the left, the right lane's on the right, a card in the middle
-   on the side it stands nearer), and with several views each frame's
-   border takes its view's colour. A picture stays while its card does, and
-   a little longer.
+   (at most six). With several views a card's pictures keep to its lane's
+   side of the road, and each frame's border takes its view's colour. On a
+   road of one view they fill both sides in turn. A picture stays while its
+   card does, and a little longer.
 2. **The era**, from `data/wall.json`. When the views on the road have few
    pictures of their own (fewer than 15 in 100 entries), the frames no card
    needs show the era the reader is in. Views with pictures of their own
    show only those; the era then only lends its light.
+
+The frames have fixed places: six a side (`FRAMES` in `site/wall.js`; two
+on a phone), in two rows that follow the road into the distance, clear of
+one another, and taken in a set order. Nothing is placed by chance, and a
+test (`frameBox()`) keeps the places from overlapping.
 
 Pointing at a frame says what it shows: the caption (or the alt text),
 whose card it belongs to, the author and the licence. Clicking opens the

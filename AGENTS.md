@@ -210,10 +210,13 @@ How the page is put together:
   motes of dust fading into fog, all on one 2D canvas and only while
   something moves. Asked for as "great performance on all devices": no
   WebGL, no library, no grid on the flanks. Six frames float either side
-  (two on a phone). They show the media of the cards that are up
+  (two on a phone), in fixed places that never overlap and are filled in
+  a set order (`FRAMES`; asked for: nothing random, no pictures on top of
+  each other). They show the media of the cards that are up
   (`wallMedia()`: an entry's `image`, its `media` list and its events'
-  images), each on its lane's side and, with several views, bordered in its
-  view's colour; `placeLabels()` already knows which cards are up, so the
+  images); with several views each keeps to its lane's side and is bordered
+  in its view's colour, and on a road of one view they fill both sides in
+  turn; `placeLabels()` already knows which cards are up, so the
   page only hands that list over (`road.shows`) and the wall shares the
   frames out when the list changes, never per frame. This was asked for:
   the wall follows the views and the cards on show. The eras of

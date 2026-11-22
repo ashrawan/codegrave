@@ -65,18 +65,35 @@ export function slotFor(frames) {
   return best;
 }
 
-// Where the frames stand on each wall, most visible first: `d` is the depth along the road in focal
+// Where the frames stand on each wall. The places are fixed and clear of one another (the tests check
+// it), so pictures never land on top of each other, and they are taken in this order, most visible first: `d` is the depth along the road in focal
 // lengths (like the road's own u / D), `x` how far out from the middle of the screen the frame is seen
 // (a share of the half width), `y` its height (a share of the eye's height above the ground, negative
 // above the horizon), and `w` its size.
 export const FRAMES = [
-  { d: 0.45, x: 0.58, y: 0.10, w: 1.00 },
-  { d: 0.50, x: 0.72, y: 0.52, w: 0.86 },
-  { d: 1.10, x: 0.27, y: -0.07, w: 0.92 },
-  { d: 1.20, x: 0.36, y: 0.38, w: 0.80 },
-  { d: 0.28, x: 0.95, y: 0.24, w: 0.95 },
-  { d: 2.20, x: 0.15, y: -0.22, w: 0.86 },
+  { d: 1.10, x: 0.40, y: 0.16, w: 0.90 },     // upper row, middle
+  { d: 0.45, x: 0.76, y: 0.52, w: 0.65 },     // lower row, outer
+  { d: 0.50, x: 0.72, y: 0.17, w: 0.81 },     // upper row, outer
+  { d: 0.90, x: 0.46, y: 0.58, w: 0.74 },     // lower row, inner
+  { d: 2.00, x: 0.19, y: 0.146, w: 0.96 },    // upper row, far down the road
+  { d: 0.30, x: 0.80, y: 0.78, w: 0.52 },     // lowest, outer
 ];
+export const TILT = 36;      // degrees each frame is turned towards the road
+// The box a frame covers on the screen, from the middle of the screen (x, outwards positive) and the
+// horizon (y, downwards): the frame's four corners, turned by TILT and seen in the road's perspective.
+// `fw` is the width of a frame of size 1, `half` the half width of the screen on its side, `gh` the eye's
+// height and F the focal length, all in pixels. The tests use it to keep the frames clear of one another.
+export function frameBox(s, { fw, half, gh, F }) {
+  const w = fw * s.w, h = w * 0.6, a = (TILT * Math.PI) / 180, cx = s.x * half * (1 + s.d), cy = s.y * gh;
+  let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+  for (const u of [-1, 1]) for (const v of [-1, 1]) {
+    // the outer edge of a frame stands nearer the reader, the inner edge further off
+    const k = F / (F + F * s.d - u * (w / 2) * Math.sin(a));
+    const x = (cx + u * (w / 2) * Math.cos(a)) * k, y = (cy + v * (h / 2)) * k;
+    x0 = Math.min(x0, x); x1 = Math.max(x1, x); y0 = Math.min(y0, y); y1 = Math.max(y1, y);
+  }
+  return { x0, x1, y0, y1 };
+}
 // On a phone the road takes most of the width: two frames a side, larger, in the sky and beside the road.
 export const FRAMES_PHONE = [
   { d: 0.55, x: 0.6, y: 0.14, w: 1.00 },
@@ -206,10 +223,10 @@ export function createWall(host, { eras = [] } = {}) {
       if (c) { put(f, f.item, c); live.delete(f.item); }
       else if (f.live) { f.live = false; f.gone = now; }
     }
-    let flip = 0;
     for (const [m, c] of live) {
       const count = (sd) => use.filter((f) => f.side === sd && f.from === 'card').length;
-      const sd = c.side || (count(-1) === count(1) ? (flip++ % 2 ? 1 : -1) : count(-1) < count(1) ? -1 : 1);
+      // A card with no side of its own (a road of one view, a middle lane) takes the emptier side, left first.
+      const sd = c.side || (count(-1) <= count(1) ? -1 : 1);
       const mine = use.filter((f) => f.side === sd), i = slotFor(mine);
       if (i >= 0) put(mine[i], m, c);
     }
@@ -294,7 +311,7 @@ export function createWall(host, { eras = [] } = {}) {
       const half = f.side < 0 ? G.vx : G.SW - G.vx;
       const w = fw * s.w, h = w * 0.6, d = s.d, x = f.side * s.x * half * (1 + d), y = s.y * G.gh;
       f.el.style.width = w.toFixed(0) + 'px'; f.el.style.height = h.toFixed(0) + 'px';
-      f.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,${(-F * d).toFixed(1)}px) rotateY(${f.side < 0 ? 36 : -36}deg) translate(-50%,-50%)`;
+      f.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,${(-F * d).toFixed(1)}px) rotateY(${f.side < 0 ? TILT : -TILT}deg) translate(-50%,-50%)`;
     }
     host.style.setProperty('--wall-h', (100 * G.vy / G.SH).toFixed(1) + '%');
     drawSky(G, W.dark, dpr);

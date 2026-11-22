@@ -951,14 +951,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (!front || (leads(c) !== leads(front) ? leads(c) : c.u < front.u || (c.u === front.u && c.key < front.key))) front = c;
     }
     road.cards = cards; road.within1 = within1; road.within3 = within3;
-    // The media wall shows the pictures of the cards that are up: at most four cards, each on its lane's
-    // side (a card in the middle goes to the side it stands nearer), in its view's colour when there are several views.
+    // The media wall shows the pictures of the cards that are up: at most four cards. With several views a card's
+    // pictures keep to its lane's side, in its view's colour; on a road of one view they fill both sides in turn.
     const shows = [];
     for (const c of cands) {
       const r = placed.get(c.key), t = c.p.t;
       if (!r || !r.big || shows.length >= 4 || !wallMedia(t).length || shows.some((x) => x.id === t.id)) continue;
       const lean = c.p.lane.lean;
-      shows.push({ id: t.id, name: t.name, side: lean < 0 ? -1 : lean > 0 ? 1 : r.cx < G.vx - 24 ? -1 : r.cx > G.vx + 24 ? 1 : 0,
+      shows.push({ id: t.id, name: t.name, side: Math.sign(lean),
         col: L.lanes.length > 1 ? `var(--p${c.p.lane.col})` : null, media: wallMedia(t) });
     }
     road.shows = shows;
