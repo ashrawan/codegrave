@@ -1,0 +1,51 @@
+{
+  "id": "tianwen-1",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Tianwen-1",
+      "from": "2020"
+    }
+  ],
+  "summary": "China's first mission to Mars. It reached orbit in 2021 and set down the Zhurong rover, making China the second country to drive on Mars.",
+  "wikidata": "Q23580572",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-07-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tianwen-1 (Q23580572)",
+      "url": "https://www.wikidata.org/wiki/Q23580572",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tianwen-1",
+      "url": "https://en.wikipedia.org/wiki/Tianwen-1",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Tianwen_1_ground_test.png",
+    "alt": "Tianwen-1",
+    "credit": "中国新闻网",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tianwen_1_ground_test.png"
+  }
+}

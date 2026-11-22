@@ -1,0 +1,51 @@
+{
+  "id": "crew-dragon",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Crew Dragon",
+      "from": "2019"
+    }
+  ],
+  "summary": "SpaceX's capsule for astronauts and cargo. In 2020 it became the first privately built spacecraft to carry people to orbit.",
+  "wikidata": "Q17122887",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-03-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Crew Dragon (Q17122887)",
+      "url": "https://www.wikidata.org/wiki/Q17122887",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SpaceX Dragon 2",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Dragon_2",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Crew_Dragon_at_the_ISS_for_Demo_Mission_1_%28cropped%29.jpg/500px-Crew_Dragon_at_the_ISS_for_Demo_Mission_1_%28cropped%29.jpg",
+    "alt": "Crew Dragon",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Crew_Dragon_at_the_ISS_for_Demo_Mission_1_(cropped).jpg"
+  }
+}

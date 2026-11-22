@@ -1,0 +1,44 @@
+{
+  "id": "willow-processor",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Google Willow",
+      "from": "2024"
+    }
+  ],
+  "summary": "Google's quantum chip of 2024 that showed errors falling as more qubits were added, a key step towards useful quantum computers.",
+  "wikidata": "Q131939451",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-12-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Google Willow (Q131939451)",
+      "url": "https://www.wikidata.org/wiki/Q131939451",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Willow processor",
+      "url": "https://en.wikipedia.org/wiki/Willow_processor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

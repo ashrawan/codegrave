@@ -1,0 +1,51 @@
+{
+  "id": "artemis-i",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Artemis I",
+      "from": "2022"
+    }
+  ],
+  "summary": "The first flight of NASA's Space Launch System, which sent an uncrewed Orion capsule around the Moon and back in 2022.",
+  "wikidata": "Q3389152",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-11-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Artemis I (Q3389152)",
+      "url": "https://www.wikidata.org/wiki/Q3389152",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Artemis I",
+      "url": "https://en.wikipedia.org/wiki/Artemis_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/KSC-20220318-PH-KLS03_0014_%28cropped%29.jpg/500px-KSC-20220318-PH-KLS03_0014_%28cropped%29.jpg",
+    "alt": "Artemis I",
+    "credit": "Kim Shiflett",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:KSC-20220318-PH-KLS03_0014_(cropped).jpg"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "nvidia-blackwell",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Nvidia Blackwell",
+      "from": "2024"
+    }
+  ],
+  "summary": "Nvidia's AI chip design announced in 2024, joining two large dies into one package.",
+  "wikidata": "Q125210777",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nvidia Blackwell (Q125210777)",
+      "url": "https://www.wikidata.org/wiki/Q125210777",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blackwell (microarchitecture)",
+      "url": "https://en.wikipedia.org/wiki/Blackwell_(microarchitecture)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

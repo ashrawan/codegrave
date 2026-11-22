@@ -1,0 +1,51 @@
+{
+  "id": "starship",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Starship",
+      "from": "2023"
+    }
+  ],
+  "summary": "The largest and most powerful rocket ever flown, built by SpaceX to be fully reused. In 2024 its giant booster was caught by the arms of its launch tower.",
+  "wikidata": "Q62833385",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-04-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Starship (Q62833385)",
+      "url": "https://www.wikidata.org/wiki/Q62833385",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SpaceX Starship",
+      "url": "https://en.wikipedia.org/wiki/SpaceX_Starship",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Starship_full_stack.jpg/500px-Starship_full_stack.jpg",
+    "alt": "Starship",
+    "credit": "Hotel Pika",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Starship_full_stack.jpg"
+  }
+}

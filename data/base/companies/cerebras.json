@@ -1,0 +1,54 @@
+{
+  "id": "cerebras",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Cerebras",
+      "from": "2016"
+    }
+  ],
+  "summary": "Company that builds a whole silicon wafer into one giant chip for AI, the largest chip ever made.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q66604886",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cerebras (Q66604886)",
+      "url": "https://www.wikidata.org/wiki/Q66604886",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cerebras",
+      "url": "https://en.wikipedia.org/wiki/Cerebras",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/1237_E._Arques_Avenue.jpg/500px-1237_E._Arques_Avenue.jpg",
+    "alt": "Cerebras",
+    "credit": "Coolcaesar",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1237_E._Arques_Avenue.jpg"
+  }
+}

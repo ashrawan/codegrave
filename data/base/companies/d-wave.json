@@ -1,0 +1,47 @@
+{
+  "id": "d-wave",
+  "category": "companies",
+  "names": [
+    {
+      "name": "D-Wave",
+      "from": "1999"
+    }
+  ],
+  "summary": "Canadian company that in 2011 sold the first computer advertised as quantum, built for one kind of problem called annealing.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q5203294",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: D-Wave (Q5203294)",
+      "url": "https://www.wikidata.org/wiki/Q5203294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: D-Wave Systems",
+      "url": "https://en.wikipedia.org/wiki/D-Wave_Systems",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

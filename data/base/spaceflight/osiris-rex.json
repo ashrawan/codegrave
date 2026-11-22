@@ -1,0 +1,51 @@
+{
+  "id": "osiris-rex",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "OSIRIS-REx",
+      "from": "2016"
+    }
+  ],
+  "summary": "A NASA probe that touched the asteroid Bennu, collected dust and rock and dropped them back to Earth in 2023.",
+  "wikidata": "Q604428",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: OSIRIS-REx (Q604428)",
+      "url": "https://www.wikidata.org/wiki/Q604428",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: OSIRIS-REx",
+      "url": "https://en.wikipedia.org/wiki/OSIRIS-REx",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/OSIRIS-REx_spacecraft_model.png/500px-OSIRIS-REx_spacecraft_model.png",
+    "alt": "OSIRIS-REx",
+    "credit": "National Aeronautics and Space Administration (NASA) / Goddard Space Flight Center (GSFC) / University of Arizona / Lock",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:OSIRIS-REx_spacecraft_model.png"
+  }
+}

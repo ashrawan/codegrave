@@ -525,6 +525,9 @@ const topicOf = new Map();    // view id -> the id of its group
 const defaults = Array.isArray(choice.default) ? choice.default : [choice.default];
 if (defaults.length === 0 || defaults.length > 8) err('data/editors-choice.json', '"default" must name one to eight views');
 for (const id of defaults) if (!resolveView(id)) err('data/editors-choice.json', `default view "${id}" does not exist`);
+// On a phone the page opens on fewer: `phone` picks from the default views.
+const phoneDefaults = choice.phone == null ? [] : Array.isArray(choice.phone) ? choice.phone : [choice.phone];
+for (const id of phoneDefaults) if (!defaults.includes(id)) err('data/editors-choice.json', `phone view "${id}" must be one of the default views`);
 
 // ---------------------------------------------------------------- report
 const quiet = process.argv.includes('--quiet');
@@ -650,7 +653,7 @@ if (!process.argv.includes('--check')) {
   for (const v of live) write(`v/${v._id}.json`, payload(v));
   // An old address gets the view's file under the old name too, so an old link still costs one request.
   for (const [from, to] of Object.entries(viewRedirects)) if (viewById.get(to)._members.length) write(`v/${from}.json`, payload(viewById.get(to)));
-  write('home.json', { views: defaults.map((id) => payload(viewById.get(resolveView(id)))) });
+  write('home.json', { views: defaults.map((id) => payload(viewById.get(resolveView(id)))), phone: phoneDefaults.map(resolveView) });
 
   // Community views in the order the panel lists them: topic by topic in the editors' order, then the rest by name.
   const placed = topics.flatMap((t) => (Array.isArray(t.views) ? t.views.map(resolveView) : []));

@@ -1,0 +1,51 @@
+{
+  "id": "crew-dragon-demo-2",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Crew Dragon Demo-2",
+      "from": "2020"
+    }
+  ],
+  "summary": "The first flight with astronauts aboard Crew Dragon, taking two NASA astronauts to the space station and the first crewed launch from US soil since the shuttle retired.",
+  "wikidata": "Q47246047",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-05-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Crew Dragon Demo-2 (Q47246047)",
+      "url": "https://www.wikidata.org/wiki/Q47246047",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Crew Dragon Demo-2",
+      "url": "https://en.wikipedia.org/wiki/Crew_Dragon_Demo-2",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/SpaceX_Demo-2_Launch_%28NHQ202005300044%29.jpg/500px-SpaceX_Demo-2_Launch_%28NHQ202005300044%29.jpg",
+    "alt": "Crew Dragon Demo-2",
+    "credit": "Joel Kowsky",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:SpaceX_Demo-2_Launch_(NHQ202005300044).jpg"
+  }
+}

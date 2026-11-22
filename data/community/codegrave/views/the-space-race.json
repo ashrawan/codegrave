@@ -1,7 +1,7 @@
 {
   "id": "the-space-race",
   "name": "The Space Race",
-  "description": "The contest between the United States and the Soviet Union to reach orbit and the Moon, from the V-2 to Apollo.",
+  "description": "The contest to reach orbit and the Moon, from the V-2 to Apollo, and the new race of reusable rockets, private companies, China and India, Mars and the return to the Moon.",
   "category": "technology",
   "labels": [
     "space-race",
@@ -12,9 +12,10 @@
     "apollo",
     "moon landing",
     "sputnik",
-    "nasa",
-    "gagarin",
-    "neil armstrong"
+    "spacex",
+    "reusable rockets",
+    "mars",
+    "artemis"
   ],
   "entries": [
     "sergei-korolev",
@@ -33,23 +34,54 @@
     "soviet-space-program",
     "space-race",
     "sputnik-1",
-    "explorer-1",
     "project-mercury",
+    "explorer-1",
     "nasa",
-    "vostok-1",
     "project-gemini",
     "apollo-program",
+    "vostok-1",
     "luna-9",
     "apollo-1-fire",
     "soyuz-spacecraft",
     "saturn-v",
-    "n1-rocket",
     "apollo-8",
+    "n1-rocket",
     "apollo-11",
     "apollo-13",
     "salyut-1",
+    "elon-musk",
     "skylab",
-    "apollo-soyuz"
+    "apollo-soyuz",
+    "international-space-station",
+    "blue-origin",
+    "spacex",
+    "shenzhou-5",
+    "falcon-9",
+    "curiosity-rover",
+    "mars-orbiter-mission",
+    "new-shepard",
+    "osiris-rex",
+    "artemis-program",
+    "falcon-heavy",
+    "chang-e-4",
+    "starlink",
+    "crew-dragon",
+    "crew-dragon-demo-2",
+    "emirates-mars-mission",
+    "tianwen-1",
+    "perseverance-rover",
+    "chang-e-5",
+    "ingenuity-helicopter",
+    "tiangong-space-station",
+    "dart-mission",
+    "james-webb-space-telescope",
+    "artemis-i",
+    "starship",
+    "chandrayaan-3",
+    "im-1",
+    "chang-e-6",
+    "polaris-dawn",
+    "artemis-ii"
   ],
   "checkpoints": [
     {
@@ -86,6 +118,13 @@
       "from": 1970,
       "to": 1975,
       "note": "Apollo 13 nearly ends in disaster, further Apollo missions explore the Moon, and the rivals turn to space stations before shaking hands in orbit in 1975."
+    },
+    {
+      "id": "the-new-space-race",
+      "name": "The new space race",
+      "from": 2000,
+      "to": 2026,
+      "note": "Private companies join governments. SpaceX lands and reflies its boosters, flies astronauts and builds Starship. China lands on the far side of the Moon and on Mars, India reaches Mars and the lunar south pole, and NASA's Artemis aims to put people back on the Moon."
     }
   ]
 }

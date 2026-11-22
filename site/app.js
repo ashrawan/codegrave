@@ -2432,6 +2432,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
 
   // ---------------------------------------------------------------- start
+  // The views the page opens on; a phone opens on the editors' shorter list (`phone` in home.json).
+  function homeViews(home) {
+    const ids = (home.views || []).map((p) => useView(p).id), few = matchMedia(PHONE).matches ? home.phone || [] : [];
+    const kept = ids.filter((id) => few.includes(id));
+    return kept.length ? kept : ids;
+  }
   // boot.json and the views the page opens on are asked for at the same time.
   async function start() {
     const ids = urlViews();
@@ -2439,7 +2445,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     bootReady = getJSON('boot.json').then(useBoot);
     let asked = ids.length ? ids : mine ? mine.views : null;
     const viewsReady = asked ? Promise.all(asked.map(loadView))
-      : Promise.all([getJSON('home.json'), bootReady]).then(([home]) => (home.views || []).map((p) => useView(p).id));
+      : Promise.all([getJSON('home.json'), bootReady]).then(([home]) => homeViews(home));
     try {
       await bootReady;
     } catch (e) {
@@ -2451,7 +2457,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!got.length && asked) {
       if (ids.length) note('The views in this link could not be loaded.');
       asked = null;
-      got = await Promise.all([getJSON('home.json')]).then(([home]) => (home.views || []).map((p) => useView(p).id)).catch(() => []);
+      got = await Promise.all([getJSON('home.json')]).then(([home]) => homeViews(home)).catch(() => []);
     }
     if (ids.length && got.length) readUrl(got);
     else if (mine && asked) applyMine({ ...mine, views: got });

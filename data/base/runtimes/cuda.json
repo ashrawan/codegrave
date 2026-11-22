@@ -1,0 +1,44 @@
+{
+  "id": "cuda",
+  "category": "runtimes",
+  "names": [
+    {
+      "name": "CUDA",
+      "from": "2007"
+    }
+  ],
+  "summary": "Nvidia's way of programming graphics chips for general work. It let scientists, and later AI researchers, use a graphics card as a cheap supercomputer.",
+  "wikidata": "Q477690",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-06-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: CUDA (Q477690)",
+      "url": "https://www.wikidata.org/wiki/Q477690",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: CUDA",
+      "url": "https://en.wikipedia.org/wiki/CUDA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

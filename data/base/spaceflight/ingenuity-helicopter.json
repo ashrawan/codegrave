@@ -1,0 +1,56 @@
+{
+  "id": "ingenuity-helicopter",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Ingenuity",
+      "from": "2021"
+    }
+  ],
+  "summary": "A small helicopter carried to Mars by the Perseverance rover. In 2021 it made the first powered flight on another planet and went on to fly 72 times.",
+  "wikidata": "Q48814715",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-04-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-01-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ingenuity (Q48814715)",
+      "url": "https://www.wikidata.org/wiki/Q48814715",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ingenuity (helicopter)",
+      "url": "https://en.wikipedia.org/wiki/Ingenuity_(helicopter)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/PIA23882-MarsHelicopterIngenuity-20200429_%28trsp%29.png/500px-PIA23882-MarsHelicopterIngenuity-20200429_%28trsp%29.png",
+    "alt": "Ingenuity",
+    "credit": "NASA/JPL-Caltech",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:PIA23882-MarsHelicopterIngenuity-20200429_(trsp).png"
+  }
+}

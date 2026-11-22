@@ -1,0 +1,44 @@
+{
+  "id": "nvidia-hopper",
+  "category": "chips",
+  "names": [
+    {
+      "name": "Nvidia Hopper (H100)",
+      "from": "2022"
+    }
+  ],
+  "summary": "The Nvidia design behind the H100, the chip most sought after to train large language models from 2022.",
+  "wikidata": "Q85767253",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nvidia Hopper (H100) (Q85767253)",
+      "url": "https://www.wikidata.org/wiki/Q85767253",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hopper (microarchitecture)",
+      "url": "https://en.wikipedia.org/wiki/Hopper_(microarchitecture)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

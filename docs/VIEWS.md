@@ -133,7 +133,8 @@ panel is ordered:
 
 ```json
 {
-  "default": ["codegrave/the-space-race"],
+  "default": ["codegrave/the-space-race", "codegrave/computer-generations"],
+  "phone": ["codegrave/computer-generations"],
   "topics": [
     { "id": "history", "name": "History", "views": ["codegrave/ancient-egypt", "codegrave/world-war-2"] },
     { "id": "science", "name": "Science", "views": ["codegrave/dinosaurs", "codegrave/the-space-race"] }
@@ -142,7 +143,8 @@ panel is ordered:
 ```
 
 `default` is what a new visitor sees: one view id, or a list of up to eight
-shown side by side. `topics` are the chips above the list, in order; each
+shown side by side. `phone`, if given, names the ones of those a phone
+opens on (a narrow screen has room for fewer lanes). `topics` are the chips above the list, in order; each
 names its views in the order they are listed, and a view sits in one topic
 at most. Keep the topics few and broad. Only editors change this file.
 

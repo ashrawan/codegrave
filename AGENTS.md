@@ -133,7 +133,8 @@ still goes through `render()`.
 How the page is put together:
 
 - **Loading.** `start()` asks for `boot.json` and, at the same time, the
-  views the link names (else `home.json`).
+  views the link names (else `home.json`; a phone opens only on its
+  `phone` views, from `data/editors-choice.json`, asked for in Nov 2026).
   `loadView()` and `loadEntry()` fetch one file each, once; `ingest()` keeps
   every loaded entry as a single object in `byId`. A view that fails to load
   leaves a note and the page keeps working. An old address is answered by

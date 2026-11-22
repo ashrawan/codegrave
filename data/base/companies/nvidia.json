@@ -1,0 +1,54 @@
+{
+  "id": "nvidia",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Nvidia",
+      "from": "1993"
+    }
+  ],
+  "summary": "Chip company founded in 1993 that made the graphics card a household name. Its chips, first built for games, turned out to be what training large AI models needs.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q182477",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-04-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nvidia (Q182477)",
+      "url": "https://www.wikidata.org/wiki/Q182477",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nvidia",
+      "url": "https://en.wikipedia.org/wiki/Nvidia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/NVIDIA_Headquarters.jpg/500px-NVIDIA_Headquarters.jpg",
+    "alt": "Nvidia",
+    "credit": "Coolcaesar",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:NVIDIA_Headquarters.jpg"
+  }
+}
