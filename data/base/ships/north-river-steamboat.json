@@ -1,0 +1,45 @@
+{
+  "id": "north-river-steamboat",
+  "category": "ships",
+  "names": [
+    {
+      "name": "Clermont",
+      "from": "1807"
+    }
+  ],
+  "summary": "Robert Fulton's steamboat on the Hudson River, the first steamship to carry passengers as a business.",
+  "wikidata": "Q1785439",
+  "events": [
+    {
+      "type": "born",
+      "date": "1807-08-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Clermont (Q1785439)",
+      "url": "https://www.wikidata.org/wiki/Q1785439",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: North River Steamboat",
+      "url": "https://en.wikipedia.org/wiki/North_River_Steamboat",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Clermont_replica.jpg/500px-Clermont_replica.jpg",
+    "alt": "Clermont",
+    "credit": "Detroit Publishing Co.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Clermont_replica.jpg"
+  }
+}

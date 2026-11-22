@@ -1,0 +1,48 @@
+{
+  "id": "micrographia",
+  "category": "books",
+  "names": [
+    {
+      "name": "Micrographia",
+      "from": "1665"
+    }
+  ],
+  "summary": "Robert Hooke's book of drawings through the microscope, which gave the cell its name.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q2469465",
+  "events": [
+    {
+      "type": "born",
+      "date": "1665",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Micrographia (Q2469465)",
+      "url": "https://www.wikidata.org/wiki/Q2469465",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Micrographia",
+      "url": "https://en.wikipedia.org/wiki/Micrographia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Micrographia_title_page.gif/500px-Micrographia_title_page.gif",
+    "alt": "Micrographia",
+    "credit": "Robert Hooke (1635-1703)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Micrographia_title_page.gif"
+  }
+}

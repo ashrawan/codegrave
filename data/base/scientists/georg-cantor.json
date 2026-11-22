@@ -1,0 +1,50 @@
+{
+  "id": "georg-cantor",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Georg Cantor",
+      "from": "1845"
+    }
+  ],
+  "summary": "German mathematician who founded set theory and the study of infinite numbers.",
+  "wikidata": "Q76420",
+  "events": [
+    {
+      "type": "born",
+      "date": "1845-03-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-01-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Georg Cantor (Q76420)",
+      "url": "https://www.wikidata.org/wiki/Q76420",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Georg Cantor",
+      "url": "https://en.wikipedia.org/wiki/Georg_Cantor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Georg_Cantor2.jpg/500px-Georg_Cantor2.jpg",
+    "alt": "Georg Cantor",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Georg_Cantor2.jpg"
+  }
+}

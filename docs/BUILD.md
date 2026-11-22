@@ -9,7 +9,7 @@ request and never a chain of lookups, however large the data grows.
 | --- | --- | --- |
 | `boot.json` | The map (branches and kinds, with each branch's words), the labels, the community views the panel lists (each with its topic, the years it covers and its thumbnail), the editors' topics, the default views, the 12 most-referenced entries, how the detail and search files are keyed, and the eras of the media wall (`data/wall.json`). | Always, once. |
 | `home.json` | The default views, ready to draw, and `phone`: the ones a phone opens on. | The link names no views and the reader has saved none. Fetched at the same time as `boot.json`. |
-| `v/<view-id>.json` | One view and everything it shows: its details, its eras, and the full entries it holds (at most 200, best ranked first; `view.count` is how many it really holds). A community view is `v/<owner>/<id>.json`. | A view is put on the timeline. One request each, fetched together. |
+| `v/<view-id>.json` | One view and everything it shows: its details, its eras, and the full entries it holds (a hand-picked view all of them up to 1,000, a classical view at most 200, best ranked first; `view.count` is how many it really holds). A community view is `v/<owner>/<id>.json`. | A view is put on the timeline. One request each, fetched together. |
 | `d/<key>.json` | Full entries by id. `key` is the first hex digits of a hash of the id (`shardOf` in `site/keys.js`). | A link or a search result points at an entry that is not loaded. |
 | `s/all.json` | The search index: one short line per entry and per view. | A search box is first used. |
 | `c/<owner>.json` | One community folder: its profile, its views and its own entries. | A page about one contributor (not built yet). |

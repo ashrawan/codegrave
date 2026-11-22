@@ -1,0 +1,48 @@
+{
+  "id": "traite-elementaire-de-chimie",
+  "category": "books",
+  "names": [
+    {
+      "name": "Elementary Treatise of Chemistry",
+      "from": "1789"
+    }
+  ],
+  "summary": "Lavoisier's book that listed the elements and founded modern chemistry.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q2163561",
+  "events": [
+    {
+      "type": "born",
+      "date": "1789",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Elementary Treatise of Chemistry (Q2163561)",
+      "url": "https://www.wikidata.org/wiki/Q2163561",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Traité élémentaire de chimie",
+      "url": "https://en.wikipedia.org/wiki/Traité_élémentaire_de_chimie",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Lavoisier-7.jpg/500px-Lavoisier-7.jpg",
+    "alt": "Elementary Treatise of Chemistry",
+    "credit": "Lavoisier, Antoine-Laurent de",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lavoisier-7.jpg"
+  }
+}

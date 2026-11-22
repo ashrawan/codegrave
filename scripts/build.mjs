@@ -82,7 +82,8 @@ const LINK_TYPES = [
 ];
 const LABEL_MAX = 16;
 const SUMMARY_MAX = 600;
-const VIEW_CAP = 200;          // the most entries one view file carries, best ranked first
+const VIEW_CAP = 200;          // the most entries a classical view file carries, best ranked first
+const PICKED_CAP = 1000;       // the most entries a hand-picked (community) view file carries
 const CATALOGUE_MAX = 400;     // the most community views listed in boot.json; the rest are found by search
 const SEARCH_SPLIT = 20000;    // above this many index lines, the search index is split by first letters
 const INBOUND_MAX = 40;
@@ -638,7 +639,7 @@ if (!process.argv.includes('--check')) {
   };
   const payload = (v) => ({
     view: { ...meta(v), checkpoints: v.checkpoints || [] },
-    entries: v._members.slice(0, VIEW_CAP).map(compile),
+    entries: v._members.slice(0, v._list ? PICKED_CAP : VIEW_CAP).map(compile),
   });
 
   rmSync(outDir, { recursive: true, force: true });

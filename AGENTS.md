@@ -99,7 +99,7 @@ page costs one request (`docs/BUILD.md` has the full table):
 
 - `boot.json`: the map, the labels and the list of community views. Always.
 - `home.json`: the default views, ready to draw.
-- `v/<view-id>.json`: one view and the entries it shows (at most 200, best
+- `v/<view-id>.json`: one view and the entries it shows (a hand-picked view up to 1,000, a classical view at most 200, best
   ranked first). A community view is `v/<owner>/<id>.json`.
 - `d/<key>.json`: full entries by a hash of their id (`shardOf` in
   `site/keys.js`), for a link or search result that is not loaded.

@@ -1,0 +1,48 @@
+{
+  "id": "intel",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Intel",
+      "from": "1968"
+    }
+  ],
+  "summary": "The American chip maker that made the first microprocessor and the chips inside most PCs.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q248",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-07-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Intel (Q248)",
+      "url": "https://www.wikidata.org/wiki/Q248",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Intel",
+      "url": "https://en.wikipedia.org/wiki/Intel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/2200_Mission_College_Boulevard.jpg/500px-2200_Mission_College_Boulevard.jpg",
+    "alt": "Intel",
+    "credit": "Coolcaesar",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2200_Mission_College_Boulevard.jpg"
+  }
+}

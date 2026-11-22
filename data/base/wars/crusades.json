@@ -1,0 +1,53 @@
+{
+  "id": "crusades",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Crusades",
+      "from": "1095"
+    }
+  ],
+  "summary": "Religious wars in which Christians from Europe fought to take and hold Jerusalem and the Holy Land, from 1096 for about two centuries.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q12546",
+  "events": [
+    {
+      "type": "born",
+      "date": "1095",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1291",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Crusades (Q12546)",
+      "url": "https://www.wikidata.org/wiki/Q12546",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Crusades",
+      "url": "https://en.wikipedia.org/wiki/Crusades",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Bataille_de_Damas_%281148%29_-_Fran%C3%A7ais_22495.jpg/500px-Bataille_de_Damas_%281148%29_-_Fran%C3%A7ais_22495.jpg",
+    "alt": "Crusades",
+    "credit": "Master of the Roman de Fauvel",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bataille_de_Damas_(1148)_-_Fran%C3%A7ais_22495.jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "radium",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Radium",
+      "from": "1898"
+    }
+  ],
+  "summary": "Glowing radioactive element found by Marie and Pierre Curie in 1898.",
+  "wikidata": "Q1128",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Radium (Q1128)",
+      "url": "https://www.wikidata.org/wiki/Q1128",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Radium",
+      "url": "https://en.wikipedia.org/wiki/Radium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Radium226.jpg/500px-Radium226.jpg",
+    "alt": "Radium",
+    "credit": "grenadier",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Radium226.jpg"
+  }
+}

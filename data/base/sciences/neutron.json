@@ -1,0 +1,45 @@
+{
+  "id": "neutron",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Neutron",
+      "from": "1932"
+    }
+  ],
+  "summary": "The particle without charge in the atomic nucleus, found by James Chadwick in 1932.",
+  "wikidata": "Q2348",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Neutron (Q2348)",
+      "url": "https://www.wikidata.org/wiki/Q2348",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neutron",
+      "url": "https://en.wikipedia.org/wiki/Neutron",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Neutron_quark_structure.svg/500px-Neutron_quark_structure.svg.png",
+    "alt": "Neutron",
+    "credit": "Jacek rybak",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Neutron_quark_structure.svg"
+  }
+}

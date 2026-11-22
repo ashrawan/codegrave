@@ -1,0 +1,48 @@
+{
+  "id": "alibaba-group",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Alibaba",
+      "from": "1999"
+    }
+  ],
+  "summary": "Chinese online trading company founded by Jack Ma, the giant of Chinese online shopping.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q1359568",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Alibaba (Q1359568)",
+      "url": "https://www.wikidata.org/wiki/Q1359568",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alibaba Group",
+      "url": "https://en.wikipedia.org/wiki/Alibaba_Group",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Alibaba_Group_provisional_office_at_Xiong%27an_%2820180503164635%29.jpg/500px-Alibaba_Group_provisional_office_at_Xiong%27an_%2820180503164635%29.jpg",
+    "alt": "Alibaba",
+    "credit": "N509FZ",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alibaba_Group_provisional_office_at_Xiong%27an_(20180503164635).jpg"
+  }
+}

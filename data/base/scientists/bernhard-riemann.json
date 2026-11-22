@@ -1,0 +1,50 @@
+{
+  "id": "bernhard-riemann",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Bernhard Riemann",
+      "from": "1826"
+    }
+  ],
+  "summary": "German mathematician whose geometry of curved space was later used by Einstein.",
+  "wikidata": "Q42299",
+  "events": [
+    {
+      "type": "born",
+      "date": "1826-09-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1866-07-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bernhard Riemann (Q42299)",
+      "url": "https://www.wikidata.org/wiki/Q42299",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bernhard Riemann",
+      "url": "https://en.wikipedia.org/wiki/Bernhard_Riemann",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Georg_Friedrich_Bernhard_Riemann.jpeg/500px-Georg_Friedrich_Bernhard_Riemann.jpeg",
+    "alt": "Bernhard Riemann",
+    "credit": "http://www.sil.si.edu/digitalcollections/hst/scientific-identity/explore.htm according to the German Wikipedia.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Georg_Friedrich_Bernhard_Riemann.jpeg"
+  }
+}

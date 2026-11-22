@@ -1,0 +1,48 @@
+{
+  "id": "almagest",
+  "category": "books",
+  "names": [
+    {
+      "name": "Almagest",
+      "from": "0150"
+    }
+  ],
+  "summary": "Ptolemy's great book of astronomy, which put the Earth at the centre of the universe and was followed for fourteen centuries.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q155952",
+  "events": [
+    {
+      "type": "born",
+      "date": "0150",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Almagest (Q155952)",
+      "url": "https://www.wikidata.org/wiki/Q155952",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Almagest",
+      "url": "https://en.wikipedia.org/wiki/Almagest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Almageste_de_Ptol%C3%A9m%C3%A9e_-_BNF_Lat16200_f1.jpg/500px-Almageste_de_Ptol%C3%A9m%C3%A9e_-_BNF_Lat16200_f1.jpg",
+    "alt": "Almagest",
+    "credit": "Almagest Master",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Almageste_de_Ptol%C3%A9m%C3%A9e_-_BNF_Lat16200_f1.jpg"
+  }
+}

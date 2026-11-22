@@ -1,0 +1,53 @@
+{
+  "id": "yom-kippur-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Yom Kippur War",
+      "from": "1973"
+    }
+  ],
+  "summary": "The surprise attack by Egypt and Syria on Israel in 1973, which led to an oil crisis and later to peace between Egypt and Israel.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q49100",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-10-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-10-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Yom Kippur War (Q49100)",
+      "url": "https://www.wikidata.org/wiki/Q49100",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yom Kippur War",
+      "url": "https://en.wikipedia.org/wiki/Yom_Kippur_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Yom_Kippur_War._XXXVI.jpg/500px-Yom_Kippur_War._XXXVI.jpg",
+    "alt": "Yom Kippur War",
+    "credit": "Bamahane photographer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yom_Kippur_War._XXXVI.jpg"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "william-herschel",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "William Herschel",
+      "from": "1738"
+    }
+  ],
+  "summary": "German-British astronomer who discovered Uranus in 1781, the first planet found with a telescope.",
+  "wikidata": "Q14277",
+  "events": [
+    {
+      "type": "born",
+      "date": "1738-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1822-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: William Herschel (Q14277)",
+      "url": "https://www.wikidata.org/wiki/Q14277",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: William Herschel",
+      "url": "https://en.wikipedia.org/wiki/William_Herschel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/William_Herschel01.jpg/500px-William_Herschel01.jpg",
+    "alt": "William Herschel",
+    "credit": "Lemuel Francis Abbott",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:William_Herschel01.jpg"
+  }
+}

@@ -16,7 +16,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const REPO = 'https://github.com/ashrawan/codegrave';
   const EDITORS = 'codegrave';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
-  const MAX_ROWS = 160;         // the most lines drawn at once
+  const MAX_ROWS = 800;         // the most lines drawn at once
   const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {

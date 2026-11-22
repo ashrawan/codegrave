@@ -1,0 +1,50 @@
+{
+  "id": "george-boole",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "George Boole",
+      "from": "1815"
+    }
+  ],
+  "summary": "English mathematician whose algebra of logic became the basis of digital circuits and computing.",
+  "wikidata": "Q134661",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815-11-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1864-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: George Boole (Q134661)",
+      "url": "https://www.wikidata.org/wiki/Q134661",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George Boole",
+      "url": "https://en.wikipedia.org/wiki/George_Boole",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Photo_of_George_Boole_standing.png",
+    "alt": "George Boole",
+    "credit": "Samuel Prout Newcombe (c1824-1912)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Photo_of_George_Boole_standing.png"
+  }
+}

@@ -1,37 +1,63 @@
 {
   "id": "space-exploration",
   "name": "Space Exploration",
-  "description": "Satellites, probes, space stations and telescopes, from Sputnik to the James Webb Space Telescope.",
+  "description": "Space travel from the first rockets and the race to the Moon to space stations, rovers on Mars and the reusable rockets of today.",
   "category": "technology",
   "labels": [
     "exploration",
     "astronomy"
   ],
   "tags": [
-    "space",
+    "space race",
+    "space exploration",
     "nasa",
-    "satellites",
-    "mars rovers",
-    "space station",
-    "hubble",
-    "voyager",
-    "rockets"
+    "apollo",
+    "moon landing",
+    "spacex",
+    "mars",
+    "iss"
   ],
   "entries": [
+    "robert-goddard",
+    "sergei-korolev",
+    "wernher-von-braun",
+    "john-f-kennedy",
+    "john-glenn",
+    "alan-shepard",
+    "buzz-aldrin",
+    "neil-armstrong",
+    "michael-collins",
     "yuri-gagarin",
+    "alexei-leonov",
+    "valentina-tereshkova",
+    "v-2-rocket",
+    "laika",
+    "soviet-space-program",
     "sputnik-1",
+    "space-race",
+    "project-mercury",
     "explorer-1",
+    "nasa",
     "apollo-program",
+    "project-gemini",
     "vostok-1",
     "mariner-4",
     "luna-9",
+    "apollo-1-fire",
+    "soyuz-spacecraft",
+    "saturn-v",
+    "apollo-8",
+    "n1-rocket",
     "apollo-11",
+    "apollo-13",
     "venera-7",
     "lunokhod-1",
     "salyut-1",
+    "elon-musk",
     "pioneer-10",
     "skylab",
     "viking-program",
+    "apollo-soyuz",
     "voyager-program",
     "voyager-2",
     "space-shuttle",
@@ -42,6 +68,8 @@
     "mars-pathfinder",
     "cassini-huygens",
     "international-space-station",
+    "blue-origin",
+    "spacex",
     "mars-exploration-rovers",
     "columbia-disaster",
     "shenzhou-5",
@@ -49,10 +77,15 @@
     "new-horizons",
     "falcon-9",
     "curiosity-rover",
+    "mars-orbiter-mission",
+    "new-shepard",
     "osiris-rex",
+    "artemis-program",
     "falcon-heavy",
     "chang-e-4",
+    "starlink",
     "crew-dragon",
+    "crew-dragon-demo-2",
     "emirates-mars-mission",
     "tianwen-1",
     "perseverance-rover",
@@ -70,39 +103,46 @@
   ],
   "checkpoints": [
     {
-      "id": "the-first-steps",
-      "name": "The first steps",
+      "id": "the-first-rockets",
+      "name": "The first rockets",
+      "from": 1926,
+      "to": 1956,
+      "note": "Goddard flies the first liquid-fuelled rocket in 1926. Germany's V-2 reaches space in war, and afterwards its engineers build rockets for both the United States and the Soviet Union."
+    },
+    {
+      "id": "sputnik-and-the-first-people-in-space",
+      "name": "Sputnik and the first people in space",
       "from": 1957,
-      "to": 1968,
-      "note": "Sputnik 1 opens the space age in 1957 and Yuri Gagarin becomes the first person in orbit in 1961. The first probes reach the Moon and fly past Mars."
+      "to": 1966,
+      "note": "The Soviet Union launches Sputnik in 1957 and sends Laika, then Yuri Gagarin and Valentina Tereshkova, into orbit. The United States answers with Mercury, Gemini and a promise to reach the Moon."
     },
     {
-      "id": "the-moon-and-the-first-stations",
-      "name": "The Moon and the first stations",
-      "from": 1969,
-      "to": 1980,
-      "note": "Astronauts walk on the Moon in 1969. Probes land on Venus and Mars, the first space stations are launched, and the Voyagers set off for the outer planets in 1977."
+      "id": "the-moon-landing",
+      "name": "The Moon landing",
+      "from": 1967,
+      "to": 1972,
+      "note": "Apollo recovers from a deadly fire. In July 1969 Neil Armstrong and Buzz Aldrin walk on the Moon, and twelve people walk there before Apollo ends in 1972."
     },
     {
-      "id": "shuttles-mir-and-hubble",
-      "name": "Shuttles, Mir and Hubble",
-      "from": 1981,
+      "id": "stations-and-shuttles",
+      "name": "Stations and shuttles",
+      "from": 1973,
       "to": 1997,
-      "note": "The Space Shuttle flies from 1981, the Soviet station Mir is assembled in orbit, and the Hubble Space Telescope is launched in 1990. The first small rover drives on Mars in 1997."
+      "note": "Skylab and the Soviet Salyut and Mir stations keep people in orbit for months. The Space Shuttle flies for thirty years, and the Hubble Space Telescope is launched."
     },
     {
       "id": "the-space-station-years",
       "name": "The space station years",
       "from": 1998,
       "to": 2010,
-      "note": "Building of the International Space Station begins in 1998, and crews have lived on it without a break since 2000. China flies its first astronaut in 2003, and twin rovers explore Mars."
+      "note": "Former rivals build the International Space Station together. China sends its first astronaut, and rovers begin to explore Mars."
     },
     {
       "id": "rovers-and-reusable-rockets",
       "name": "Rovers and reusable rockets",
       "from": 2011,
       "to": 2026,
-      "note": "Car-sized rovers land on Mars, probes reach Pluto and the far side of the Moon, rockets begin to land and fly again, and the James Webb Space Telescope is launched in 2021."
+      "note": "SpaceX lands and reuses rockets and flies crews to the station. China builds its own station and lands on the far side of the Moon, rovers search Mars for signs of life, and Artemis aims to take people back to the Moon."
     }
   ]
 }

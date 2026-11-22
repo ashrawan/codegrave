@@ -1,6 +1,6 @@
 {
   "default": [
-    "codegrave/the-space-race",
+    "codegrave/space-exploration",
     "codegrave/computer-generations"
   ],
   "phone": [
@@ -117,56 +117,29 @@
       "id": "culture",
       "name": "Culture",
       "views": [
-        "codegrave/famous-paintings",
-        "codegrave/classical-music",
-        "codegrave/rock-and-pop",
-        "codegrave/hip-hop",
-        "codegrave/k-pop",
-        "codegrave/movies",
-        "codegrave/tv-shows",
+        "codegrave/music",
+        "codegrave/film-and-tv",
+        "codegrave/comics-and-anime",
         "codegrave/famous-books",
-        "codegrave/comics-and-superheroes",
-        "codegrave/anime-and-manga",
-        "codegrave/philosophers",
-        "codegrave/world-religions",
-        "codegrave/football",
-        "codegrave/the-olympic-games",
-        "codegrave/greatest-athletes",
-        "codegrave/cricket",
-        "codegrave/formula-one",
-        "codegrave/basketball",
-        "codegrave/tennis"
+        "codegrave/famous-paintings",
+        "codegrave/religion-and-philosophy",
+        "codegrave/sports"
       ]
     },
     {
       "id": "history",
       "name": "History",
       "views": [
-        "codegrave/first-civilizations",
-        "codegrave/ancient-egypt",
-        "codegrave/ancient-greece",
-        "codegrave/ancient-rome",
-        "codegrave/chinese-dynasties",
-        "codegrave/history-of-india",
-        "codegrave/great-empires",
-        "codegrave/wonders-of-the-world",
-        "codegrave/the-vikings",
+        "codegrave/wars",
+        "codegrave/the-ancient-world",
         "codegrave/the-middle-ages",
-        "codegrave/ottoman-empire",
-        "codegrave/aztecs-maya-and-incas",
+        "codegrave/great-empires",
         "codegrave/the-renaissance",
         "codegrave/age-of-exploration",
-        "codegrave/british-empire",
-        "codegrave/british-kings-and-queens",
         "codegrave/french-revolution-and-napoleon",
         "codegrave/industrial-revolution",
-        "codegrave/us-presidents",
-        "codegrave/american-history",
-        "codegrave/world-war-1",
-        "codegrave/world-war-2",
-        "codegrave/the-cold-war",
-        "codegrave/civil-rights-movement",
-        "codegrave/womens-rights",
+        "codegrave/human-rights",
+        "codegrave/wonders-of-the-world",
         "codegrave/great-disasters"
       ]
     },
@@ -174,17 +147,12 @@
       "id": "science",
       "name": "Science",
       "views": [
-        "codegrave/dinosaurs",
-        "codegrave/history-of-the-earth",
-        "codegrave/climate-change",
-        "codegrave/human-evolution",
-        "codegrave/extinct-animals",
-        "codegrave/the-solar-system",
-        "codegrave/the-space-race",
+        "codegrave/the-universe",
         "codegrave/space-exploration",
-        "codegrave/great-scientists",
-        "codegrave/medicine",
-        "codegrave/pandemics"
+        "codegrave/evolution-of-life",
+        "codegrave/science",
+        "codegrave/human-body",
+        "codegrave/climate-change"
       ]
     },
     {
@@ -193,21 +161,12 @@
       "views": [
         "codegrave/computer-generations",
         "codegrave/the-internet",
-        "codegrave/browser-wars",
-        "codegrave/social-media",
-        "codegrave/cryptocurrency",
-        "codegrave/video-games",
+        "codegrave/big-tech",
         "codegrave/mobile-phones",
-        "codegrave/programming-languages",
-        "codegrave/operating-systems",
-        "codegrave/ai-history",
-        "codegrave/apple",
-        "codegrave/google",
-        "codegrave/microsoft",
-        "codegrave/discontinued-tech",
+        "codegrave/video-games",
         "codegrave/inventions",
-        "codegrave/cars",
-        "codegrave/aviation"
+        "codegrave/transport",
+        "codegrave/discontinued-tech"
       ]
     }
   ]

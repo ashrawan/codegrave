@@ -1,0 +1,45 @@
+{
+  "id": "blood-type",
+  "category": "sciences",
+  "names": [
+    {
+      "name": "Blood groups",
+      "from": "1901"
+    }
+  ],
+  "summary": "Karl Landsteiner's discovery of the A, B and O blood groups, which made blood transfusion safe.",
+  "wikidata": "Q47657",
+  "events": [
+    {
+      "type": "born",
+      "date": "1901",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Blood groups (Q47657)",
+      "url": "https://www.wikidata.org/wiki/Q47657",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blood type",
+      "url": "https://en.wikipedia.org/wiki/Blood_type",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/BloodDonorsAndReceivers.JPG/500px-BloodDonorsAndReceivers.JPG",
+    "alt": "Blood groups",
+    "credit": "Iggydarsa at Turkish Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BloodDonorsAndReceivers.JPG"
+  }
+}

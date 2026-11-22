@@ -1,0 +1,48 @@
+{
+  "id": "tencent",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Tencent",
+      "from": "1998"
+    }
+  ],
+  "summary": "Chinese company behind WeChat and the largest video game business in the world.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q860580",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-11-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Tencent (Q860580)",
+      "url": "https://www.wikidata.org/wiki/Q860580",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tencent",
+      "url": "https://en.wikipedia.org/wiki/Tencent",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Tencent_binghai_building202012.jpg/500px-Tencent_binghai_building202012.jpg",
+    "alt": "Tencent",
+    "credit": "Charlie fong",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tencent_binghai_building202012.jpg"
+  }
+}

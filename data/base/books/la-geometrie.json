@@ -1,0 +1,48 @@
+{
+  "id": "la-geometrie",
+  "category": "books",
+  "names": [
+    {
+      "name": "La Géométrie",
+      "from": "1637"
+    }
+  ],
+  "summary": "Descartes' book that joined algebra and geometry with coordinates, the start of analytic geometry.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q210113",
+  "events": [
+    {
+      "type": "born",
+      "date": "1637",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: La Géométrie (Q210113)",
+      "url": "https://www.wikidata.org/wiki/Q210113",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La Géométrie",
+      "url": "https://en.wikipedia.org/wiki/La_Géométrie",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Discours_De_La_Methode.jpg",
+    "alt": "La Géométrie",
+    "credit": "René Descartes",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Discours_De_La_Methode.jpg"
+  }
+}

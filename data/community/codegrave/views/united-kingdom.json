@@ -9,7 +9,9 @@
     "england",
     "london",
     "monarchy",
-    "british empire"
+    "british empire",
+    "british monarchy",
+    "kings and queens of england"
   ],
   "entries": [
     "stonehenge",
@@ -72,7 +74,48 @@
     "alan-turing",
     "stephen-hawking",
     "tim-berners-lee",
-    "jk-rowling"
+    "jk-rowling",
+    "athelstan",
+    "cnut",
+    "edward-the-confessor",
+    "harold-godwinson",
+    "william-ii-of-england",
+    "henry-i-of-england",
+    "stephen-king-of-england",
+    "henry-ii-of-england",
+    "richard-i-of-england",
+    "john-king-of-england",
+    "henry-iii-of-england",
+    "edward-i-of-england",
+    "edward-ii-of-england",
+    "edward-iii",
+    "richard-ii-of-england",
+    "henry-iv-of-england",
+    "henry-v-of-england",
+    "henry-vi-of-england",
+    "edward-iv",
+    "edward-v",
+    "richard-iii",
+    "henry-vii",
+    "edward-vi",
+    "lady-jane-grey",
+    "mary-i",
+    "james-i",
+    "charles-i",
+    "charles-ii",
+    "james-ii",
+    "william-iii",
+    "mary-ii",
+    "anne-queen-of-great-britain",
+    "george-i-of-great-britain",
+    "george-ii-of-great-britain",
+    "george-iii",
+    "george-iv",
+    "william-iv",
+    "edward-vii",
+    "george-v",
+    "edward-viii",
+    "george-vi"
   ],
   "checkpoints": [
     {
@@ -80,35 +123,56 @@
       "name": "Stone and Rome",
       "from": -3000,
       "to": 409,
-      "note": "Stonehenge was raised on Salisbury Plain. Rome conquered Britain and built Hadrian's Wall against the north."
+      "note": "Farmers raise Stonehenge, Celtic tribes build hill forts, and Rome rules Britain for nearly four centuries and builds Hadrian's Wall."
     },
     {
-      "id": "saxons-and-normans",
-      "name": "Saxons and Normans",
+      "id": "anglo-saxons-and-vikings",
+      "name": "Anglo-Saxons and Vikings",
       "from": 410,
-      "to": 1484,
-      "note": "Anglo-Saxon kingdoms formed and Alfred held off the Danes. William of Normandy won at Hastings in 1066, Magna Carta limited the king, and the Black Death and the Wars of the Roses followed."
+      "to": 1065,
+      "note": "Angles and Saxons settle England, and Vikings raid and then settle the north and east. Alfred the Great holds Wessex, and his heirs unite England."
     },
     {
-      "id": "tudors-and-stuarts",
-      "name": "Tudors and Stuarts",
-      "from": 1485,
-      "to": 1706,
-      "note": "Henry VIII broke with Rome, Elizabeth I reigned while Shakespeare wrote, and civil war ended with a king beheaded. The Glorious Revolution made parliament supreme."
+      "id": "normans-and-plantagenets",
+      "name": "Normans and Plantagenets",
+      "from": 1066,
+      "to": 1398,
+      "note": "William of Normandy conquers England in 1066. Plantagenet kings rule from England to Aquitaine, Magna Carta is sealed and the first Parliaments meet."
+    },
+    {
+      "id": "lancaster-york-and-the-tudors",
+      "name": "Lancaster, York and the Tudors",
+      "from": 1399,
+      "to": 1602,
+      "note": "The Wars of the Roses end with Henry Tudor. Henry VIII breaks with Rome, and Elizabeth I sees off the Spanish Armada in the age of Shakespeare."
+    },
+    {
+      "id": "stuarts-and-union",
+      "name": "Stuarts and union",
+      "from": 1603,
+      "to": 1713,
+      "note": "One king rules England and Scotland. Civil war ends with a king beheaded, the Glorious Revolution sets Parliament above the crown, and the two kingdoms unite in 1707."
     },
     {
       "id": "industry-and-empire",
       "name": "Industry and empire",
-      "from": 1707,
-      "to": 1913,
-      "note": "England and Scotland joined in 1707. Steam power drove the Industrial Revolution, Trafalgar and Waterloo beat Napoleon, slavery was abolished, and under Victoria the empire grew to the largest in history."
+      "from": 1714,
+      "to": 1900,
+      "note": "Under the Hanoverian kings Britain leads the Industrial Revolution and builds the largest empire in history. Queen Victoria reigns for 63 years."
     },
     {
-      "id": "wars-and-a-new-britain",
-      "name": "Wars and a new Britain",
-      "from": 1914,
+      "id": "the-windsors-and-two-world-wars",
+      "name": "The Windsors and two world wars",
+      "from": 1901,
+      "to": 1945,
+      "note": "Britain fights and wins two world wars at great cost, Ireland leaves the union and Churchill leads the country through its darkest hour."
+    },
+    {
+      "id": "a-new-britain",
+      "name": "A new Britain",
+      "from": 1946,
       "to": 2026,
-      "note": "Britain fought two world wars, standing alone in 1940 under Churchill. The NHS was founded, the empire ended and the Beatles came out of Liverpool. Thatcher remade the economy, the country left the EU, Elizabeth II died in 2022 and Labour returned in 2024."
+      "note": "The empire ends and the NHS begins. Elizabeth II reigns for seventy years, Britain joins Europe and then leaves it, and Charles III becomes king."
     }
   ],
   "image": {

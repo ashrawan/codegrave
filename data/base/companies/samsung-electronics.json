@@ -1,0 +1,48 @@
+{
+  "id": "samsung-electronics",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Samsung",
+      "from": "1969"
+    }
+  ],
+  "summary": "South Korean company, the largest maker of phones, memory chips and televisions in the world.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q20718",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-01-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Samsung (Q20718)",
+      "url": "https://www.wikidata.org/wiki/Q20718",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samsung Electronics",
+      "url": "https://en.wikipedia.org/wiki/Samsung_Electronics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Samsung_headquarters.jpg/500px-Samsung_headquarters.jpg",
+    "alt": "Samsung",
+    "credit": "Oskar Alexanderson",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samsung_headquarters.jpg"
+  }
+}

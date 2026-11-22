@@ -1,0 +1,50 @@
+{
+  "id": "peter-higgs",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Peter Higgs",
+      "from": "1929"
+    }
+  ],
+  "summary": "British physicist who predicted the particle that gives other particles their mass.",
+  "wikidata": "Q192112",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-05-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-04-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Peter Higgs (Q192112)",
+      "url": "https://www.wikidata.org/wiki/Q192112",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peter Higgs",
+      "url": "https://en.wikipedia.org/wiki/Peter_Higgs",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Nobel_Prize_24_2013.jpg/500px-Nobel_Prize_24_2013.jpg",
+    "alt": "Peter Higgs",
+    "credit": "Bengt Nyman",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nobel_Prize_24_2013.jpg"
+  }
+}

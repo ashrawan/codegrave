@@ -1,0 +1,50 @@
+{
+  "id": "carl-sagan",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Carl Sagan",
+      "from": "1934"
+    }
+  ],
+  "summary": "American astronomer whose book and TV series Cosmos brought the universe to millions.",
+  "wikidata": "Q410",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-11-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-12-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Carl Sagan (Q410)",
+      "url": "https://www.wikidata.org/wiki/Q410",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carl Sagan",
+      "url": "https://en.wikipedia.org/wiki/Carl_Sagan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/be/Carl_Sagan_Planetary_Society.JPG",
+    "alt": "Carl Sagan",
+    "credit": "NASA/JPL",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Carl_Sagan_Planetary_Society.JPG"
+  }
+}

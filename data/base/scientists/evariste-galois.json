@@ -1,0 +1,50 @@
+{
+  "id": "evariste-galois",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Évariste Galois",
+      "from": "1811"
+    }
+  ],
+  "summary": "French mathematician who founded group theory before dying in a duel at twenty.",
+  "wikidata": "Q7091",
+  "events": [
+    {
+      "type": "born",
+      "date": "1811-10-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1832-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Évariste Galois (Q7091)",
+      "url": "https://www.wikidata.org/wiki/Q7091",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Évariste Galois",
+      "url": "https://en.wikipedia.org/wiki/Évariste_Galois",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/E._Galois_Portrait_No.2.jpg/500px-E._Galois_Portrait_No.2.jpg",
+    "alt": "Évariste Galois",
+    "credit": "Alfred Galois",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:E._Galois_Portrait_No.2.jpg"
+  }
+}

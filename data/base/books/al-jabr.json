@@ -1,0 +1,48 @@
+{
+  "id": "al-jabr",
+  "category": "books",
+  "names": [
+    {
+      "name": "Al-Jabr",
+      "from": "0820"
+    }
+  ],
+  "summary": "Al-Khwarizmi's book on solving equations, which gave algebra its name.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q8369",
+  "events": [
+    {
+      "type": "born",
+      "date": "0820",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Al-Jabr (Q8369)",
+      "url": "https://www.wikidata.org/wiki/Q8369",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Compendious Book on Calculation by Completion and Balancing",
+      "url": "https://en.wikipedia.org/wiki/The_Compendious_Book_on_Calculation_by_Completion_and_Balancing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/23/Image-Al-Kit%C4%81b_al-mu%E1%B8%ABta%E1%B9%A3ar_f%C4%AB_%E1%B8%A5is%C4%81b_al-%C4%9Fabr_wa-l-muq%C4%81bala.jpg",
+    "alt": "Al-Jabr",
+    "credit": "Muḥammad ibn Musa al-Khwarizmi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Image-Al-Kit%C4%81b_al-mu%E1%B8%ABta%E1%B9%A3ar_f%C4%AB_%E1%B8%A5is%C4%81b_al-%C4%9Fabr_wa-l-muq%C4%81bala.jpg"
+  }
+}

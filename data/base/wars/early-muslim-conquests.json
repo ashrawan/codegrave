@@ -1,0 +1,53 @@
+{
+  "id": "early-muslim-conquests",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Early Muslim conquests",
+      "from": "0622"
+    }
+  ],
+  "summary": "The conquests that carried the rule of the new Islamic caliphate from Arabia to Spain and Central Asia within a century of Muhammad's death.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q275918",
+  "events": [
+    {
+      "type": "born",
+      "date": "0622",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0750",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Early Muslim conquests (Q275918)",
+      "url": "https://www.wikidata.org/wiki/Q275918",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Early Muslim conquests",
+      "url": "https://en.wikipedia.org/wiki/Early_Muslim_conquests",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Map_of_expansion_of_Caliphate.svg/500px-Map_of_expansion_of_Caliphate.svg.png",
+    "alt": "Early Muslim conquests",
+    "credit": "DieBuche",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Map_of_expansion_of_Caliphate.svg"
+  }
+}

@@ -9,12 +9,13 @@
     "great wall",
     "mao",
     "communist party",
-    "beijing"
+    "beijing",
+    "emperors",
+    "qin"
   ],
   "entries": [
     "shang-dynasty",
     "zhou-dynasty",
-    "confucius",
     "great-wall-of-china",
     "qin-shi-huang",
     "china",
@@ -65,49 +66,86 @@
     "hong-kong-protests-2019",
     "tiangong-space-station",
     "winter-olympics-2022",
-    "laozi",
     "sun-tzu",
     "sima-qian",
     "lu-xun",
     "zhou-enlai",
     "chiang-kai-shek",
-    "jack-ma"
+    "jack-ma",
+    "chinese-characters",
+    "grand-canal-china",
+    "warring-states-period",
+    "battle-of-red-cliffs",
+    "wu-zetian",
+    "li-bai",
+    "du-fu",
+    "an-lushan-rebellion",
+    "compass",
+    "romance-of-the-three-kingdoms",
+    "journey-to-the-west",
+    "kangxi-emperor",
+    "dream-of-the-red-chamber",
+    "cixi",
+    "puyi",
+    "three-kingdoms",
+    "sui-dynasty"
   ],
   "checkpoints": [
     {
-      "id": "the-first-dynasties",
-      "name": "The first dynasties",
+      "id": "shang-and-zhou",
+      "name": "Shang and Zhou",
       "from": -1600,
       "to": -222,
-      "note": "The Shang left the oldest Chinese writing on oracle bones. Under the Zhou, Confucius taught and rival states fought for centuries."
+      "note": "The Shang write on oracle bones and cast bronze. The Zhou rule for centuries, and in their warring last years Confucius and Laozi teach."
     },
     {
-      "id": "one-empire",
-      "name": "One empire",
+      "id": "qin-and-han",
+      "name": "Qin and Han",
       "from": -221,
-      "to": 1278,
-      "note": "The Qin united China in 221 BCE, and the Han, Tang and Song ruled long and rich empires. Paper, gunpowder and movable type were invented, and the Silk Road carried trade west."
+      "to": 220,
+      "note": "Qin Shi Huang unites China and is buried with the Terracotta Army. The Han open the Silk Road, invent paper and give the Chinese people their name."
     },
     {
-      "id": "mongols-ming-and-qing",
-      "name": "Mongols, Ming and Qing",
-      "from": 1279,
+      "id": "three-kingdoms-to-tang",
+      "name": "Three Kingdoms to Tang",
+      "from": 221,
+      "to": 959,
+      "note": "China splits and is reunited by the Sui, who dig the Grand Canal. The Tang rule a golden age of poetry, trade and Buddhism."
+    },
+    {
+      "id": "song-and-yuan",
+      "name": "Song and Yuan",
+      "from": 960,
+      "to": 1367,
+      "note": "The Song invent printing with movable type, gunpowder weapons and paper money. Kublai Khan's Mongols conquer China and found the Yuan."
+    },
+    {
+      "id": "ming",
+      "name": "Ming",
+      "from": 1368,
+      "to": 1643,
+      "note": "The Ming build the Forbidden City and the Great Wall as it stands today, and Zheng He's fleets sail as far as Africa."
+    },
+    {
+      "id": "qing",
+      "name": "Qing",
+      "from": 1644,
       "to": 1911,
-      "note": "Kublai Khan ruled as emperor of the Yuan. The Ming built the Forbidden City and sent Zheng He's fleets abroad. The Qing ruled last, weakened by the Opium Wars and the Taiping and Boxer risings."
+      "note": "The Manchu Qing rule the largest China ever. The Opium Wars and the Taiping Rebellion weaken them, and the last emperor falls in 1911."
     },
     {
       "id": "republic-and-war",
       "name": "Republic and war",
       "from": 1912,
       "to": 1948,
-      "note": "The revolution of 1911 ended two thousand years of emperors. Communists and Nationalists fought each other and Japan, and the Communists made the Long March."
+      "note": "The republic is torn by warlords, invasion by Japan and civil war between the Nationalists and the Communists."
     },
     {
-      "id": "the-peoples-republic",
+      "id": "the-people-s-republic",
       "name": "The People's Republic",
       "from": 1949,
       "to": 2026,
-      "note": "Mao proclaimed the People's Republic in 1949; famine and the Cultural Revolution followed. Deng Xiaoping opened the economy, Hong Kong returned in 1997, Beijing hosted the Olympics of 2008 and 2022, and under Xi Jinping China built its own space station and the Belt and Road."
+      "note": "Mao proclaims the People's Republic in 1949. Famine and the Cultural Revolution follow, then Deng's reforms make China the world's workshop and a superpower."
     }
   ],
   "image": {

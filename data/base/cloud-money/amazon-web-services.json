@@ -1,0 +1,38 @@
+{
+  "id": "amazon-web-services",
+  "category": "cloud-money",
+  "names": [
+    {
+      "name": "Amazon Web Services",
+      "from": "2006"
+    }
+  ],
+  "summary": "Amazon's cloud, launched in 2006, which rents out the computers that run much of the internet.",
+  "wikidata": "Q456157",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-03",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Amazon Web Services (Q456157)",
+      "url": "https://www.wikidata.org/wiki/Q456157",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amazon Web Services",
+      "url": "https://en.wikipedia.org/wiki/Amazon_Web_Services",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

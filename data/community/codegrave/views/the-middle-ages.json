@@ -1,16 +1,17 @@
 {
   "id": "the-middle-ages",
   "name": "The Middle Ages",
-  "description": "A thousand years of Europe between Rome and the Renaissance: knights, castles, crusades, cathedrals and the Black Death.",
+  "description": "The world from the fall of Rome to the voyages of Columbus: Charlemagne, the Vikings, the Crusades and the Black Death, and the Maya, Aztec and Inca cities of the Americas.",
   "category": "events",
   "tags": [
     "medieval",
     "middle ages",
-    "knights",
-    "castles",
+    "vikings",
     "crusades",
     "black death",
-    "charlemagne"
+    "knights",
+    "aztecs",
+    "maya"
   ],
   "entries": [
     "byzantine-empire",
@@ -53,43 +54,103 @@
     "joan-of-arc",
     "battle-of-agincourt",
     "printing-press",
-    "fall-of-constantinople"
+    "fall-of-constantinople",
+    "runes",
+    "norse-paganism",
+    "lindisfarne-raid",
+    "longship",
+    "kievan-rus",
+    "kingdom-of-england",
+    "althing",
+    "erik-the-red",
+    "leif-erikson",
+    "cnut",
+    "l-anse-aux-meadows",
+    "harald-hardrada",
+    "battle-of-stamford-bridge",
+    "poetic-edda",
+    "quipu",
+    "maya-civilization",
+    "olmecs",
+    "zapotec-civilization",
+    "maya-calendar",
+    "nazca-lines",
+    "tikal",
+    "maya-script",
+    "teotihuacan",
+    "palenque",
+    "chichen-itza",
+    "pakal-the-great",
+    "classic-maya-collapse",
+    "toltecs",
+    "cusco",
+    "inca-religion",
+    "tenochtitlan",
+    "templo-mayor",
+    "aztec-religion",
+    "pachacuti",
+    "aztec-empire",
+    "inca-empire",
+    "machu-picchu",
+    "inca-road-system",
+    "moctezuma-ii",
+    "francisco-pizarro",
+    "hernan-cortes",
+    "cuauhtemoc",
+    "atahualpa",
+    "spanish-conquest-of-the-aztec-empire",
+    "spanish-conquest-of-the-inca-empire",
+    "popol-vuh"
   ],
   "checkpoints": [
+    {
+      "id": "olmecs-and-the-maya",
+      "name": "Olmecs and the Maya",
+      "from": -2500,
+      "to": 499,
+      "note": "Long before Europe's Middle Ages, the Olmecs build the first towns of Mexico. The Maya build stone cities, write in glyphs and keep a calendar of many cycles."
+    },
     {
       "id": "the-early-middle-ages",
       "name": "The early Middle Ages",
       "from": 500,
-      "to": 799,
-      "note": "Monks under the Rule of Benedict kept learning alive while kingdoms rose from Roman provinces. Charles Martel stopped a raid at Tours, and the horse collar helped farms grow."
+      "to": 792,
+      "note": "Kingdoms rise in the ruins of the Western Roman Empire. Byzantium rules the east, Islam spreads from Arabia, and the Maya cities of Tikal and Palenque reach their height."
     },
     {
-      "id": "charlemagne-and-the-vikings",
-      "name": "Charlemagne and the Vikings",
-      "from": 800,
+      "id": "the-viking-age",
+      "name": "The Viking Age",
+      "from": 793,
       "to": 1065,
-      "note": "Charlemagne ruled much of western Europe and the Treaty of Verdun split his lands. Viking raiders struck coasts and rivers, Alfred held them back in England, and the Holy Roman Empire was begun in 962."
+      "note": "Vikings raid Lindisfarne in 793 and go on to trade, raid and settle from Dublin to Kyiv. Charlemagne is crowned emperor, Norse sailors reach Iceland and America, and Europe's kingdoms take shape."
     },
     {
       "id": "normans-and-the-crusades",
       "name": "Normans and the Crusades",
       "from": 1066,
       "to": 1215,
-      "note": "William the Conqueror won at Hastings and began the Tower of London to hold his new kingdom, and the Bayeux Tapestry and Domesday Book recorded it. Universities began at Bologna, crusaders left for Jerusalem and raised castles such as Krak des Chevaliers, Eleanor of Aquitaine ruled, and Magna Carta limited a king."
+      "note": "The Normans conquer England in 1066. Crusaders take Jerusalem and lose it to Saladin, great cathedrals and castles go up, and Magna Carta limits the power of the English king."
     },
     {
       "id": "the-high-middle-ages",
       "name": "The high Middle Ages",
       "from": 1216,
       "to": 1347,
-      "note": "Friars like Francis of Assisi, schools at Paris and thinkers like Thomas Aquinas flourished. Chartres rose in glass and stone, the Hanseatic League traded, and Dante wrote the Divine Comedy."
+      "note": "Towns, trade and universities grow. The Mongols reach Europe, Marco Polo travels to China, the Icelandic sagas are written down and the Aztecs found Tenochtitlan."
     },
     {
       "id": "the-black-death-and-the-hundred-years-war",
       "name": "The Black Death and the Hundred Years' War",
       "from": 1348,
       "to": 1500,
-      "note": "The Black Death killed millions, peasants revolted, the Hundred Years' War brought Agincourt and Joan of Arc, and Chaucer wrote. Gutenberg's press, at work by the 1450s, opened a new age just as Constantinople fell."
+      "note": "Plague kills a third of Europe. England and France fight the Hundred Years' War, Joan of Arc leads France, Constantinople falls, and the Aztec and Inca empires reach their height."
+    },
+    {
+      "id": "the-spanish-conquest",
+      "name": "The Spanish conquest",
+      "from": 1501,
+      "to": 1572,
+      "note": "Cortés conquers the Aztecs and Pizarro the Incas, helped by disease that kills millions. The last Inca stronghold falls in 1572."
     }
   ]
 }

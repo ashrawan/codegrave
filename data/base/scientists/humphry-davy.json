@@ -1,0 +1,50 @@
+{
+  "id": "humphry-davy",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Humphry Davy",
+      "from": "1778"
+    }
+  ],
+  "summary": "English chemist who used electricity to split out new metals such as sodium and potassium.",
+  "wikidata": "Q131761",
+  "events": [
+    {
+      "type": "born",
+      "date": "1778-12-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1829-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Humphry Davy (Q131761)",
+      "url": "https://www.wikidata.org/wiki/Q131761",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Humphry Davy",
+      "url": "https://en.wikipedia.org/wiki/Humphry_Davy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Sir_Humphry_Davy%2C_Bt_by_Thomas_Phillips.jpg/500px-Sir_Humphry_Davy%2C_Bt_by_Thomas_Phillips.jpg",
+    "alt": "Humphry Davy",
+    "credit": "Thomas Phillips",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sir_Humphry_Davy,_Bt_by_Thomas_Phillips.jpg"
+  }
+}

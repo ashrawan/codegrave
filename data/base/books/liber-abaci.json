@@ -1,0 +1,41 @@
+{
+  "id": "liber-abaci",
+  "category": "books",
+  "names": [
+    {
+      "name": "Liber Abaci",
+      "from": "1202"
+    }
+  ],
+  "summary": "Fibonacci's book that brought the Hindu-Arabic digits to Europe, with the rabbit puzzle that gives the Fibonacci numbers.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q2044496",
+  "events": [
+    {
+      "type": "born",
+      "date": "1202",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Liber Abaci (Q2044496)",
+      "url": "https://www.wikidata.org/wiki/Q2044496",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Liber Abaci",
+      "url": "https://en.wikipedia.org/wiki/Liber_Abaci",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
