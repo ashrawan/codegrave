@@ -1,0 +1,51 @@
+{
+  "id": "abidjan",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Abidjan",
+      "from": "1898"
+    }
+  ],
+  "summary": "The largest city.",
+  "wikidata": "Q1515",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abidjan (Q1515)",
+      "url": "https://www.wikidata.org/wiki/Q1515",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abidjan",
+      "url": "https://en.wikipedia.org/wiki/Abidjan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Plateau_2010%2C_Abidjan.jpg/500px-Plateau_2010%2C_Abidjan.jpg",
+    "alt": "Abidjan",
+    "credit": "RyansWorld",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plateau_2010,_Abidjan.jpg"
+  }
+}

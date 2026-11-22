@@ -1,0 +1,97 @@
+{
+  "id": "russia",
+  "name": "Russia",
+  "description": "Russia from Kievan Rus and the Mongol yoke to the tsars, Peter the Great, revolution, the Soviet Union, the space age and the war in Ukraine.",
+  "category": "places",
+  "tags": [
+    "russia",
+    "moscow",
+    "tsars",
+    "soviet union",
+    "kremlin",
+    "putin"
+  ],
+  "entries": [
+    "lake-baikal",
+    "kievan-rus",
+    "moscow",
+    "moscow-kremlin",
+    "golden-horde",
+    "russia",
+    "grand-duchy-of-moscow",
+    "ivan-the-terrible",
+    "house-of-romanov",
+    "peter-the-great",
+    "saint-petersburg",
+    "russian-empire",
+    "catherine-the-great",
+    "alexander-pushkin",
+    "french-invasion-of-russia",
+    "fyodor-dostoevsky",
+    "leo-tolstoy",
+    "dmitri-mendeleev",
+    "pyotr-ilyich-tchaikovsky",
+    "emancipation-reform-1861",
+    "vladimir-lenin",
+    "joseph-stalin",
+    "trans-siberian-railway",
+    "russian-revolution-of-1905",
+    "russian-revolution",
+    "soviet-union",
+    "boris-yeltsin",
+    "mikhail-gorbachev",
+    "battle-of-stalingrad",
+    "vladimir-putin",
+    "soviet-space-program",
+    "sputnik-1",
+    "vostok-1",
+    "mir",
+    "dissolution-of-the-soviet-union",
+    "world-cup-2018",
+    "russian-invasion-of-ukraine"
+  ],
+  "checkpoints": [
+    {
+      "id": "rus-and-the-mongols",
+      "name": "Rus and the Mongols",
+      "from": 862,
+      "to": 1546,
+      "note": "Princes ruling from Kyiv built Kievan Rus and took Orthodox Christianity in 988. The Mongols conquered the land in the 1230s, and Moscow rose under them until Ivan III threw off the Horde in 1480."
+    },
+    {
+      "id": "the-tsars",
+      "name": "The tsars",
+      "from": 1547,
+      "to": 1916,
+      "note": "Ivan the Terrible was crowned tsar in 1547. The Romanovs came to power in 1613, Peter the Great opened a window on Europe, Catherine pushed the empire south, Napoleon was beaten in 1812, and Alexander II freed the serfs."
+    },
+    {
+      "id": "the-soviet-union",
+      "name": "The Soviet Union",
+      "from": 1917,
+      "to": 1991,
+      "note": "Revolution in 1917 brought the Bolsheviks to power. Stalin's terror and industry, victory at Stalingrad, Sputnik and Gagarin followed, until Gorbachev's reforms ended in the union breaking apart."
+    },
+    {
+      "id": "the-russian-federation",
+      "name": "The Russian Federation",
+      "from": 1992,
+      "to": 2026,
+      "note": "Yeltsin's Russia went through a hard decade of change. Putin, in power since 1999, rebuilt the state's grip, annexed Crimea in 2014 and launched the full invasion of Ukraine in 2022."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/330px-Flag_of_Russia.svg.png",
+    "alt": "Flag of Russia",
+    "credit": "Peter the Great",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Russia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fc/Russian_Anthem_chorus.ogg/Russian_Anthem_chorus.ogg.mp3",
+    "title": "State Anthem of the Russian Federation",
+    "credit": "А. Александров",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Russian_Anthem_chorus.ogg"
+  }
+}

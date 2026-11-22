@@ -1,0 +1,51 @@
+{
+  "id": "turku",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Turku",
+      "from": "1229"
+    }
+  ],
+  "summary": "The oldest city and the first capital, on the south-west coast.",
+  "wikidata": "Q38511",
+  "events": [
+    {
+      "type": "born",
+      "date": "1229",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Turku (Q38511)",
+      "url": "https://www.wikidata.org/wiki/Q38511",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Turku",
+      "url": "https://en.wikipedia.org/wiki/Turku",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Turku_Cathedral_Park_2020.jpg/500px-Turku_Cathedral_Park_2020.jpg",
+    "alt": "Turku",
+    "credit": "Ninara",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Turku_Cathedral_Park_2020.jpg"
+  }
+}

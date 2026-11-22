@@ -1,0 +1,52 @@
+{
+  "id": "khatyn-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Khatyn massacre",
+      "from": "1943"
+    }
+  ],
+  "summary": "A village burned with its people in 1943.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q430700",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943-03-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-03-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belarus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Khatyn massacre (Q430700)",
+      "url": "https://www.wikidata.org/wiki/Q430700",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Khatyn massacre",
+      "url": "https://en.wikipedia.org/wiki/Khatyn_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

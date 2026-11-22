@@ -1,0 +1,62 @@
+{
+  "id": "ivory-coast",
+  "name": "Ivory Coast",
+  "description": "Ivory Coast from its kingdoms to French rule, Houphouët-Boigny, civil wars, cocoa and today.",
+  "category": "places",
+  "tags": [
+    "ivory coast",
+    "cote d'ivoire",
+    "abidjan",
+    "cocoa",
+    "africa",
+    "yamoussoukro"
+  ],
+  "entries": [
+    "kong-empire",
+    "french-ivory-coast",
+    "abidjan",
+    "felix-houphouet-boigny",
+    "henri-konan-bedie",
+    "alassane-ouattara",
+    "laurent-gbagbo",
+    "alpha-blondy",
+    "ivory-coast",
+    "tai-national-park",
+    "didier-drogba",
+    "yaya-toure",
+    "basilica-of-our-lady-of-peace",
+    "first-ivorian-civil-war",
+    "second-ivorian-civil-war",
+    "afcon-2023"
+  ],
+  "checkpoints": [
+    {
+      "id": "kingdoms",
+      "name": "Kingdoms",
+      "from": 1710,
+      "to": 1892,
+      "note": "Kong, the Baoulé and other peoples ruled the land."
+    },
+    {
+      "id": "french-colony",
+      "name": "French colony",
+      "from": 1893,
+      "to": 1959,
+      "note": "France made the coast a colony in 1893."
+    },
+    {
+      "id": "ivory-coast",
+      "name": "Ivory Coast",
+      "from": 1960,
+      "to": 2026,
+      "note": "Independence came in 1960. Cocoa brought wealth, and civil wars came in 2002 and 2010."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_C%C3%B4te_d%27Ivoire.svg/330px-Flag_of_C%C3%B4te_d%27Ivoire.svg.png",
+    "alt": "Flag of Ivory Coast",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_C%C3%B4te_d%27Ivoire.svg"
+  }
+}

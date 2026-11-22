@@ -1,0 +1,54 @@
+{
+  "id": "dakar-rally",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Dakar Rally",
+      "from": "1979"
+    }
+  ],
+  "summary": "The desert rally that ended in Dakar.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q181336",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "senegal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dakar Rally (Q181336)",
+      "url": "https://www.wikidata.org/wiki/Q181336",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dakar Rally",
+      "url": "https://en.wikipedia.org/wiki/Dakar_Rally",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Rally_Dakar_2006_9-2.jpg/500px-Rally_Dakar_2006_9-2.jpg",
+    "alt": "Dakar Rally",
+    "credit": "Rally Dakar 2006 9.jpg: Dakar organization derivative work: Lošmi (talk)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rally_Dakar_2006_9-2.jpg"
+  }
+}

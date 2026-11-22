@@ -1,0 +1,59 @@
+{
+  "id": "johann-strauss-ii",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Johann Strauss II",
+      "from": "1825"
+    }
+  ],
+  "summary": "Composer of The Blue Danube, the waltz king.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q83309",
+  "events": [
+    {
+      "type": "born",
+      "date": "1825-10-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1899-06-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Johann Strauss II (Q83309)",
+      "url": "https://www.wikidata.org/wiki/Q83309",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Johann Strauss II",
+      "url": "https://en.wikipedia.org/wiki/Johann_Strauss_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Johann_Strauss_II_%283%29.jpg/500px-Johann_Strauss_II_%283%29.jpg",
+    "alt": "Johann Strauss II",
+    "credit": "Fritz Luckhardt",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Johann_Strauss_II_(3).jpg"
+  }
+}

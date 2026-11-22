@@ -1,0 +1,59 @@
+{
+  "id": "uganda-martyrs",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Uganda Martyrs",
+      "from": "1885"
+    }
+  ],
+  "summary": "Christians killed by the king of Buganda in the 1880s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1094107",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1887",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uganda Martyrs (Q1094107)",
+      "url": "https://www.wikidata.org/wiki/Q1094107",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uganda Martyrs",
+      "url": "https://en.wikipedia.org/wiki/Uganda_Martyrs",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Karoli_Lwanga_and_his_followers.jpg_unscaled",
+    "alt": "Uganda Martyrs",
+    "credit": "Albert Wider",
+    "licence": "Copyrighted free use",
+    "source": "https://commons.wikimedia.org/wiki/File:Karoli_Lwanga_and_his_followers.jpg"
+  }
+}

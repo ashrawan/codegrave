@@ -1,0 +1,51 @@
+{
+  "id": "guatemala",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Guatemala",
+      "from": "1821"
+    }
+  ],
+  "summary": "A Central American country, the heart of the Maya world, independent from Spain since 1821.",
+  "wikidata": "Q774",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Guatemala (Q774)",
+      "url": "https://www.wikidata.org/wiki/Q774",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guatemala",
+      "url": "https://en.wikipedia.org/wiki/Guatemala",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Satellite_image_of_Guatemala_in_April_2002.jpg/500px-Satellite_image_of_Guatemala_in_April_2002.jpg",
+    "alt": "Guatemala",
+    "credit": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Satellite_image_of_Guatemala_in_April_2002.jpg"
+  }
+}

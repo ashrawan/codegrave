@@ -1,0 +1,56 @@
+{
+  "id": "hallstatt-culture",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Hallstatt culture",
+      "from": "-1200"
+    }
+  ],
+  "summary": "An early Iron Age culture named after a salt-mining village in the Alps.",
+  "wikidata": "Q202165",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0450",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hallstatt culture (Q202165)",
+      "url": "https://www.wikidata.org/wiki/Q202165",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hallstatt culture",
+      "url": "https://en.wikipedia.org/wiki/Hallstatt_culture",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Celts_in_Europe.png_unscaled",
+    "alt": "Hallstatt culture",
+    "credit": "QuartierLatin1968,The Ogre,Dbachmann",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Celts_in_Europe.png"
+  }
+}

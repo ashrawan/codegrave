@@ -1,0 +1,51 @@
+{
+  "id": "obelisk-of-axum",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Obelisk of Axum",
+      "from": "0300"
+    }
+  ],
+  "summary": "A great carved stone stela of Aksum.",
+  "wikidata": "Q2308606",
+  "events": [
+    {
+      "type": "born",
+      "date": "0300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Obelisk of Axum (Q2308606)",
+      "url": "https://www.wikidata.org/wiki/Q2308606",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Obelisk of Axum",
+      "url": "https://en.wikipedia.org/wiki/Obelisk_of_Axum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Rome_Stele.jpg/500px-Rome_Stele.jpg",
+    "alt": "Obelisk of Axum",
+    "credit": "Ondřej Žváček",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Rome_Stele.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "uganda-tanzania-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Uganda–Tanzania War",
+      "from": "1978"
+    }
+  ],
+  "summary": "The war that drove out Amin in 1979.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q202465",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-10-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-06-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uganda–Tanzania War (Q202465)",
+      "url": "https://www.wikidata.org/wiki/Q202465",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uganda–Tanzania War",
+      "url": "https://en.wikipedia.org/wiki/Uganda–Tanzania_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Battles_of_the_Uganda%E2%80%93Tanzania_War.svg/500px-Battles_of_the_Uganda%E2%80%93Tanzania_War.svg.png",
+    "alt": "Uganda–Tanzania War",
+    "credit": "Goran tek-en, following request by Indy beetle",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Battles_of_the_Uganda%E2%80%93Tanzania_War.svg"
+  }
+}

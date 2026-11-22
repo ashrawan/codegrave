@@ -1,0 +1,59 @@
+{
+  "id": "xiongnu",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Xiongnu",
+      "from": "-0209"
+    }
+  ],
+  "summary": "The nomad empire that threatened Han China.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q188836",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0209",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0091",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Xiongnu (Q188836)",
+      "url": "https://www.wikidata.org/wiki/Q188836",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Xiongnu",
+      "url": "https://en.wikipedia.org/wiki/Xiongnu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Xiongnu_chieftain_%28black_backgrouond%29.jpg/500px-Xiongnu_chieftain_%28black_backgrouond%29.jpg",
+    "alt": "Xiongnu",
+    "credit": "Davide Mauro",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Xiongnu_chieftain_(black_backgrouond).jpg"
+  }
+}

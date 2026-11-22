@@ -1,0 +1,59 @@
+{
+  "id": "fall-of-singapore",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Fall of Singapore",
+      "from": "1942"
+    }
+  ],
+  "summary": "The surrender of the British garrison to Japan in February 1942, Britain's worst defeat of the war.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q296754",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-02-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1942-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fall of Singapore (Q296754)",
+      "url": "https://www.wikidata.org/wiki/Q296754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of Singapore",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_Singapore",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/74/Singaporesurrender.jpg_unscaled",
+    "alt": "Fall of Singapore",
+    "credit": "Unknown; originally uploaded to en.wikipedia by Natalinasmpf.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Singaporesurrender.jpg"
+  }
+}

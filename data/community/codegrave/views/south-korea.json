@@ -1,0 +1,92 @@
+{
+  "id": "south-korea",
+  "name": "South Korea",
+  "description": "Korea from Gojoseon and the Three Kingdoms to Goryeo and Joseon, Japanese rule, the Korean War, the Miracle on the Han River and K-pop.",
+  "category": "places",
+  "tags": [
+    "korea",
+    "seoul",
+    "joseon",
+    "samsung",
+    "k-pop",
+    "hangul"
+  ],
+  "entries": [
+    "gojoseon",
+    "silla",
+    "goryeo",
+    "tripitaka-koreana",
+    "joseon",
+    "gyeongbokgung",
+    "sejong-the-great",
+    "yi-sun-sin",
+    "syngman-rhee",
+    "japan-korea-treaty-of-1910",
+    "park-chung-hee",
+    "march-first-movement",
+    "kim-dae-jung",
+    "samsung",
+    "hyundai",
+    "south-korea",
+    "korean-war",
+    "korean-dmz",
+    "miracle-on-the-han-river",
+    "lee-jae-myung",
+    "han-kang",
+    "gwangju-uprising",
+    "june-democratic-struggle",
+    "olympics-1988",
+    "kim-yuna",
+    "son-heung-min",
+    "asian-financial-crisis",
+    "world-cup-2002",
+    "bts",
+    "winter-olympics-2018",
+    "parasite-2019",
+    "squid-game"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-kingdoms",
+      "name": "Ancient kingdoms",
+      "from": -2333,
+      "to": 917,
+      "note": "Gojoseon was the first Korean state. The Three Kingdoms of Goguryeo, Baekje and Silla followed, and Silla united most of the peninsula in the 600s."
+    },
+    {
+      "id": "goryeo-and-joseon",
+      "name": "Goryeo and Joseon",
+      "from": 918,
+      "to": 1909,
+      "note": "Goryeo, which gave Korea its name, carved the Tripitaka Koreana. The Joseon dynasty ruled from 1392, King Sejong created Hangul, and Admiral Yi beat back Japan in the 1590s."
+    },
+    {
+      "id": "colony-and-war",
+      "name": "Colony and war",
+      "from": 1910,
+      "to": 1960,
+      "note": "Japan ruled Korea from 1910 to 1945. The peninsula was split at liberation, and the Korean War of 1950 to 1953 left it divided at the demilitarised zone."
+    },
+    {
+      "id": "growth-and-democracy",
+      "name": "Growth and democracy",
+      "from": 1961,
+      "to": 2026,
+      "note": "Under Park Chung Hee the South grew fast. Protest won democracy in 1987, Seoul hosted the 1988 Olympics, and K-pop, films and series spread Korean culture worldwide."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/330px-Flag_of_South_Korea.svg.png",
+    "alt": "Flag of South Korea",
+    "credit": "Original: Government of the Republic of Korea Vector: Great Brightstar and others",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Korea.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0d/National_anthem_of_South_Korea%2C_performed_by_the_United_States_Navy_Band.wav/National_anthem_of_South_Korea%2C_performed_by_the_United_States_Navy_Band.wav.mp3",
+    "title": "Aegukga",
+    "credit": "https://web.archive.org/web/20030505044151/http://www.navyband.navy.mil:80/anthems/asia.htm https://web-beta.archive.org",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_South_Korea,_performed_by_the_United_States_Navy_Band.wav"
+  }
+}

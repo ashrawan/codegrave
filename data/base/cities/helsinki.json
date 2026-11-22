@@ -1,0 +1,51 @@
+{
+  "id": "helsinki",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Helsinki",
+      "from": "1550"
+    }
+  ],
+  "summary": "The capital, made the seat of government by the tsars in 1812.",
+  "wikidata": "Q1757",
+  "events": [
+    {
+      "type": "born",
+      "date": "1550-06-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Helsinki (Q1757)",
+      "url": "https://www.wikidata.org/wiki/Q1757",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Helsinki",
+      "url": "https://en.wikipedia.org/wiki/Helsinki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Helsinki_Lutheran_Cathedral_%28panoraaman%C3%A4k%C3%B6ala%29-2_%28s%C3%A4%C3%A4t%C3%B6%29.jpg/500px-Helsinki_Lutheran_Cathedral_%28panoraaman%C3%A4k%C3%B6ala%29-2_%28s%C3%A4%C3%A4t%C3%B6%29.jpg",
+    "alt": "Helsinki",
+    "credit": "Old Pionear",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Helsinki_Lutheran_Cathedral_(panoraaman%C3%A4k%C3%B6ala)-2_(s%C3%A4%C3%A4t%C3%B6).jpg"
+  }
+}

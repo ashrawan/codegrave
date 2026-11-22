@@ -1,0 +1,54 @@
+{
+  "id": "gaza-war-2023",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Gaza war",
+      "from": "2023"
+    }
+  ],
+  "summary": "The war in Gaza that began after the Hamas attack of 7 October 2023.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q122962941",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-10-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gaza war (Q122962941)",
+      "url": "https://www.wikidata.org/wiki/Q122962941",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gaza war",
+      "url": "https://en.wikipedia.org/wiki/Gaza_war",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Damage_in_Gaza_Strip_during_the_October_2023_-_29.jpg/500px-Damage_in_Gaza_Strip_during_the_October_2023_-_29.jpg",
+    "alt": "Gaza war",
+    "credit": "WAFA in contract with a local company (APAimages)‏‏",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Damage_in_Gaza_Strip_during_the_October_2023_-_29.jpg"
+  }
+}

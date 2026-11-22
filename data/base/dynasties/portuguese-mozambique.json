@@ -1,0 +1,52 @@
+{
+  "id": "portuguese-mozambique",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Portuguese Mozambique",
+      "from": "1498"
+    }
+  ],
+  "summary": "Portuguese rule until 1975.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q889394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1498",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1975-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Portuguese Mozambique (Q889394)",
+      "url": "https://www.wikidata.org/wiki/Q889394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portuguese Mozambique",
+      "url": "https://en.wikipedia.org/wiki/Portuguese_Mozambique",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

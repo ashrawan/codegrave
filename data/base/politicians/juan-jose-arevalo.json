@@ -1,0 +1,59 @@
+{
+  "id": "juan-jose-arevalo",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Juan José Arévalo",
+      "from": "1904"
+    }
+  ],
+  "summary": "The first freely elected president, from 1945 to 1951.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q881158",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-09-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-10-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guatemala"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Juan José Arévalo (Q881158)",
+      "url": "https://www.wikidata.org/wiki/Q881158",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Juan José Arévalo",
+      "url": "https://en.wikipedia.org/wiki/Juan_José_Arévalo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/JuanJos%C3%A9Ar%C3%A9valoBermejo.jpg/500px-JuanJos%C3%A9Ar%C3%A9valoBermejo.jpg",
+    "alt": "Juan José Arévalo",
+    "credit": "Gobierno de Guatemala, fotógrafo sin identificar del gobierno. Ministerio de la Defensa",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JuanJos%C3%A9Ar%C3%A9valoBermejo.jpg"
+  }
+}

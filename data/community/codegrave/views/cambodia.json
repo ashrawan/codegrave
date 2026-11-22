@@ -1,0 +1,76 @@
+{
+  "id": "cambodia",
+  "name": "Cambodia",
+  "description": "Cambodia from Funan and the Khmer Empire of Angkor to French rule, independence, the Khmer Rouge and recovery.",
+  "category": "places",
+  "tags": [
+    "cambodia",
+    "angkor",
+    "phnom penh",
+    "khmer",
+    "khmer rouge",
+    "mekong"
+  ],
+  "entries": [
+    "mekong",
+    "funan",
+    "khmer-empire",
+    "jayavarman-vii",
+    "angkor-wat",
+    "phnom-penh",
+    "french-protectorate-of-cambodia",
+    "norodom-sihanouk",
+    "pol-pot",
+    "hun-sen",
+    "cambodia",
+    "khmer-rouge",
+    "cambodian-genocide",
+    "hun-manet",
+    "paris-peace-agreements-1991",
+    "untac"
+  ],
+  "checkpoints": [
+    {
+      "id": "funan-and-chenla",
+      "name": "Funan and Chenla",
+      "from": 100,
+      "to": 801,
+      "note": "Funan traded by sea, and Chenla followed."
+    },
+    {
+      "id": "angkor",
+      "name": "Angkor",
+      "from": 802,
+      "to": 1431,
+      "note": "Khmer kings ruled from Angkor and built its temples."
+    },
+    {
+      "id": "decline-and-france",
+      "name": "Decline and France",
+      "from": 1432,
+      "to": 1952,
+      "note": "Cambodia lost land to its neighbours, and France ruled from 1863."
+    },
+    {
+      "id": "modern-cambodia",
+      "name": "Modern Cambodia",
+      "from": 1953,
+      "to": 2026,
+      "note": "Independence came in 1953. The Khmer Rouge killed millions, and peace returned in the 1990s."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_Cambodia.svg/330px-Flag_of_Cambodia.svg.png",
+    "alt": "Flag of Cambodia",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Cambodia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/af/United_States_Navy_Band_-_Nokoreach.ogg/United_States_Navy_Band_-_Nokoreach.ogg.mp3",
+    "title": "Nokor Reach",
+    "credit": "https://web.archive.org/web/20081217125341/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Nokoreach.ogg"
+  }
+}

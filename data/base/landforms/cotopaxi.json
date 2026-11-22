@@ -1,0 +1,51 @@
+{
+  "id": "cotopaxi",
+  "category": "landforms",
+  "names": [
+    {
+      "name": "Cotopaxi",
+      "from": "1534"
+    }
+  ],
+  "summary": "One of the highest active volcanoes on Earth.",
+  "wikidata": "Q181476",
+  "events": [
+    {
+      "type": "born",
+      "date": "1534",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ecuador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cotopaxi (Q181476)",
+      "url": "https://www.wikidata.org/wiki/Q181476",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cotopaxi",
+      "url": "https://en.wikipedia.org/wiki/Cotopaxi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/V%C3%B3lcan_Cotopaxi.jpg/500px-V%C3%B3lcan_Cotopaxi.jpg",
+    "alt": "Cotopaxi",
+    "credit": "camilogaleano.com",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:V%C3%B3lcan_Cotopaxi.jpg"
+  }
+}

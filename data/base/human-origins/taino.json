@@ -1,0 +1,51 @@
+{
+  "id": "taino",
+  "category": "human-origins",
+  "names": [
+    {
+      "name": "Taíno",
+      "from": "1200"
+    }
+  ],
+  "summary": "The people who lived in Cuba and the other big Caribbean islands when Columbus came.",
+  "wikidata": "Q210623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Taíno (Q210623)",
+      "url": "https://www.wikidata.org/wiki/Q210623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Taíno",
+      "url": "https://en.wikipedia.org/wiki/Taíno",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Ta%C3%ADnos.svg/500px-Ta%C3%ADnos.svg.png",
+    "alt": "Taíno",
+    "credit": "Yavidaxiu",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ta%C3%ADnos.svg"
+  }
+}

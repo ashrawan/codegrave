@@ -1,0 +1,59 @@
+{
+  "id": "second-congo-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Second Congo War",
+      "from": "1998"
+    }
+  ],
+  "summary": "Africa's world war, the deadliest since 1945.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q75756",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-08-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Congo War (Q75756)",
+      "url": "https://www.wikidata.org/wiki/Q75756",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Congo War",
+      "url": "https://en.wikipedia.org/wiki/Second_Congo_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/DRC-_Child_Soldiers.jpg/500px-DRC-_Child_Soldiers.jpg",
+    "alt": "Second Congo War",
+    "credit": "L. Rose",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DRC-_Child_Soldiers.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "farc",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Revolutionary Armed Forces of Colombia",
+      "from": "1964"
+    }
+  ],
+  "summary": "The guerrilla army that fought the state for more than fifty years.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q155801",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Revolutionary Armed Forces of Colombia (Q155801)",
+      "url": "https://www.wikidata.org/wiki/Q155801",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Revolutionary Armed Forces of Colombia",
+      "url": "https://en.wikipedia.org/wiki/Revolutionary_Armed_Forces_of_Colombia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Revolutionary_Armed_Forces_of_Colombia_%28FARC%29_insurgents.GIF_unscaled",
+    "alt": "Revolutionary Armed Forces of Colombia",
+    "credit": "Institute for National Strategic Studies (INSS.)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Revolutionary_Armed_Forces_of_Colombia_(FARC)_insurgents.GIF"
+  }
+}

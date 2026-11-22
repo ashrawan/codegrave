@@ -1,0 +1,59 @@
+{
+  "id": "chimu-culture",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Chimú culture",
+      "from": "1100"
+    }
+  ],
+  "summary": "A kingdom of the north coast with its capital at Chan Chan, the largest adobe city.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q901198",
+  "events": [
+    {
+      "type": "born",
+      "date": "1100",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1470",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chimú culture (Q901198)",
+      "url": "https://www.wikidata.org/wiki/Q901198",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chimú culture",
+      "url": "https://en.wikipedia.org/wiki/Chimú_culture",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Caral_Peru.JPG/500px-Caral_Peru.JPG",
+    "alt": "Chimú culture",
+    "credit": "Esteban Cuya",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caral_Peru.JPG"
+  }
+}

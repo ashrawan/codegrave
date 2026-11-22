@@ -1,0 +1,51 @@
+{
+  "id": "aboriginal-australians",
+  "category": "human-origins",
+  "names": [
+    {
+      "name": "Aboriginal Australians",
+      "from": "-63000"
+    }
+  ],
+  "summary": "The First Nations of the mainland, whose ancestors arrived at least fifty thousand years ago and whose cultures are among the oldest living in the world.",
+  "wikidata": "Q12060728",
+  "events": [
+    {
+      "type": "born",
+      "date": "-63000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Aboriginal Australians (Q12060728)",
+      "url": "https://www.wikidata.org/wiki/Q12060728",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Aboriginal Australians",
+      "url": "https://en.wikipedia.org/wiki/Aboriginal_Australians",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Aboriginal_Australians_montage.jpg/500px-Aboriginal_Australians_montage.jpg",
+    "alt": "Aboriginal Australians",
+    "credit": "South19",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aboriginal_Australians_montage.jpg"
+  }
+}

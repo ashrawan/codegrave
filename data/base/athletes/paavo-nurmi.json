@@ -1,0 +1,59 @@
+{
+  "id": "paavo-nurmi",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Paavo Nurmi",
+      "from": "1897"
+    }
+  ],
+  "summary": "The Flying Finn, a runner who won nine Olympic golds.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q101942",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897-06-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1973-10-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paavo Nurmi (Q101942)",
+      "url": "https://www.wikidata.org/wiki/Q101942",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paavo Nurmi",
+      "url": "https://en.wikipedia.org/wiki/Paavo_Nurmi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Paavo_Nurmi_%28Antwerp_1920%29.jpg_unscaled",
+    "alt": "Paavo Nurmi",
+    "credit": "Unknown authorUnknown author (Suomen Urheilumuseo)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paavo_Nurmi_(Antwerp_1920).jpg"
+  }
+}

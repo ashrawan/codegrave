@@ -1,0 +1,59 @@
+{
+  "id": "rhodesian-bush-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Rhodesian Bush War",
+      "from": "1964"
+    }
+  ],
+  "summary": "The war of 1964 to 1979.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2444955",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-07-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-12-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rhodesian Bush War (Q2444955)",
+      "url": "https://www.wikidata.org/wiki/Q2444955",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rhodesian Bush War",
+      "url": "https://en.wikipedia.org/wiki/Rhodesian_Bush_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/RhodesiaAllies1975.png/500px-RhodesiaAllies1975.png",
+    "alt": "Rhodesian Bush War",
+    "credit": "Cliftonian",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:RhodesiaAllies1975.png"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "tunisia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Tunisia",
+      "from": "1956"
+    }
+  ],
+  "summary": "A North African country, home of ancient Carthage, independent from France since 1956.",
+  "wikidata": "Q948",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-03-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tunisia (Q948)",
+      "url": "https://www.wikidata.org/wiki/Q948",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tunisia",
+      "url": "https://en.wikipedia.org/wiki/Tunisia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Tunisia_-_Location_Map_%282013%29_-_TUN_-_UNOCHA.svg/500px-Tunisia_-_Location_Map_%282013%29_-_TUN_-_UNOCHA.svg.png",
+    "alt": "Tunisia",
+    "credit": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tunisia_-_Location_Map_(2013)_-_TUN_-_UNOCHA.svg"
+  }
+}

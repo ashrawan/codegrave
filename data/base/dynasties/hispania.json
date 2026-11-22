@@ -1,0 +1,59 @@
+{
+  "id": "hispania",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Hispania",
+      "from": "-0218"
+    }
+  ],
+  "summary": "The Iberian peninsula as a Roman province, which gave Rome emperors such as Trajan and Hadrian and gave Spain its Latin tongue.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q186513",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0218",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0472",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hispania (Q186513)",
+      "url": "https://www.wikidata.org/wiki/Q186513",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hispania",
+      "url": "https://en.wikipedia.org/wiki/Hispania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Conquista_Hispania.svg/500px-Conquista_Hispania.svg.png",
+    "alt": "Hispania",
+    "credit": "HansenBCN",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Conquista_Hispania.svg"
+  }
+}

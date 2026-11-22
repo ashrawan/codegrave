@@ -1,0 +1,54 @@
+{
+  "id": "grand-egyptian-museum",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Grand Egyptian Museum",
+      "from": "2025"
+    }
+  ],
+  "summary": "The great museum by the pyramids of Giza, fully opened in 2025.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q2583681",
+  "events": [
+    {
+      "type": "born",
+      "date": "2025",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grand Egyptian Museum (Q2583681)",
+      "url": "https://www.wikidata.org/wiki/Q2583681",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand Egyptian Museum",
+      "url": "https://en.wikipedia.org/wiki/Grand_Egyptian_Museum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Grand_Egyptian_Museum.jpg/500px-Grand_Egyptian_Museum.jpg",
+    "alt": "Grand Egyptian Museum",
+    "credit": "Mohamed abdelzaher",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grand_Egyptian_Museum.jpg"
+  }
+}

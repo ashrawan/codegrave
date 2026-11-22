@@ -1,0 +1,59 @@
+{
+  "id": "second-polish-republic",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Second Polish Republic",
+      "from": "1918"
+    }
+  ],
+  "summary": "The Polish state reborn at the end of the First World War, which lasted until the invasion of 1939.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q207272",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-11-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1939-09-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Polish Republic (Q207272)",
+      "url": "https://www.wikidata.org/wiki/Q207272",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Polish Republic",
+      "url": "https://en.wikipedia.org/wiki/Second_Polish_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Polonia_Tryumphans_by_Stanis%C5%82aw_Kaczor-Batowski%2C_1929.png/500px-Polonia_Tryumphans_by_Stanis%C5%82aw_Kaczor-Batowski%2C_1929.png",
+    "alt": "Second Polish Republic",
+    "credit": "Stanisław Kaczor-Batowski",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Polonia_Tryumphans_by_Stanis%C5%82aw_Kaczor-Batowski,_1929.png"
+  }
+}

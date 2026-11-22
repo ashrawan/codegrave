@@ -1,0 +1,54 @@
+{
+  "id": "east-timor-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "East Timor independence",
+      "from": "2002"
+    }
+  ],
+  "summary": "East Timor voted to leave Indonesia in 1999 after a long occupation and became independent in 2002.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q574",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: East Timor independence (Q574)",
+      "url": "https://www.wikidata.org/wiki/Q574",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: East Timor",
+      "url": "https://en.wikipedia.org/wiki/East_Timor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lospalos_klein.jpg/500px-Lospalos_klein.jpg",
+    "alt": "East Timor independence",
+    "credit": "J. Patrick Fischer",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Lospalos_klein.jpg"
+  }
+}

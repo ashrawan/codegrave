@@ -1,0 +1,83 @@
+{
+  "id": "bangladesh",
+  "name": "Bangladesh",
+  "description": "Bangladesh from the Pala empire and the Bengal Sultanate to British Bengal, partition, the war of liberation and a fast-growing nation.",
+  "category": "places",
+  "tags": [
+    "bangladesh",
+    "dhaka",
+    "bengal",
+    "liberation war",
+    "delta",
+    "south asia"
+  ],
+  "entries": [
+    "pala-empire",
+    "somapura-mahavihara",
+    "bengal-sultanate",
+    "battle-of-plassey",
+    "rabindranath-tagore",
+    "sheikh-mujibur-rahman",
+    "muhammad-yunus",
+    "bengal-famine-1943",
+    "sheikh-hasina",
+    "bengali-language-movement",
+    "bhola-cyclone",
+    "bangladesh",
+    "bangladesh-liberation-war",
+    "grameen-bank",
+    "rana-plaza-collapse",
+    "july-revolution-bangladesh"
+  ],
+  "checkpoints": [
+    {
+      "id": "bengal-of-old",
+      "name": "Bengal of old",
+      "from": -300,
+      "to": 1351,
+      "note": "Bengal was part of the Maurya and Gupta empires. The Pala kings built great Buddhist monasteries, and the Sena kings followed."
+    },
+    {
+      "id": "sultans-and-mughals",
+      "name": "Sultans and Mughals",
+      "from": 1352,
+      "to": 1756,
+      "note": "The Bengal Sultanate made the region rich, and under the Mughals Dhaka was famous for muslin."
+    },
+    {
+      "id": "british-bengal",
+      "name": "British Bengal",
+      "from": 1757,
+      "to": 1946,
+      "note": "The East India Company took Bengal after Plassey in 1757. Tagore wrote, and famine struck in 1943."
+    },
+    {
+      "id": "east-pakistan",
+      "name": "East Pakistan",
+      "from": 1947,
+      "to": 1970,
+      "note": "Partition made the east of Bengal part of Pakistan. The language movement of 1952 and the cyclone of 1970 fed anger at the west."
+    },
+    {
+      "id": "bangladesh",
+      "name": "Bangladesh",
+      "from": 1971,
+      "to": 2026,
+      "note": "The war of 1971 won independence. Bangladesh grew through cyclones and coups into a large garment-making economy, and students toppled the government in 2024."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/330px-Flag_of_Bangladesh.svg.png",
+    "alt": "Flag of Bangladesh",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bangladesh.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bc/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg/Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg.mp3",
+    "title": "Amar Sonar Bangla",
+    "credit": "Press Information Department",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Amar_Sonar_Bangla_-_official_vocal_music_of_the_National_anthem_of_Bangladesh.ogg"
+  }
+}

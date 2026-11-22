@@ -1,0 +1,59 @@
+{
+  "id": "saint-sophia-cathedral-kyiv",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Saint Sophia Cathedral, Kyiv",
+      "from": "1011"
+    }
+  ],
+  "summary": "The cathedral of Kyiv begun in the 1000s.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q830054",
+  "events": [
+    {
+      "type": "born",
+      "date": "1011",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1934",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint Sophia Cathedral, Kyiv (Q830054)",
+      "url": "https://www.wikidata.org/wiki/Q830054",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint Sophia Cathedral, Kyiv",
+      "url": "https://en.wikipedia.org/wiki/Saint_Sophia_Cathedral,_Kyiv",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/80-391-0151_Kyiv_St.Sophia%27s_Cathedral_RB_18_2_%28cropped%29.jpg/500px-80-391-0151_Kyiv_St.Sophia%27s_Cathedral_RB_18_2_%28cropped%29.jpg",
+    "alt": "Saint Sophia Cathedral, Kyiv",
+    "credit": "Rbrechko",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:80-391-0151_Kyiv_St.Sophia%27s_Cathedral_RB_18_2_(cropped).jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "anglo-burmese-wars",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Anglo-Burmese wars",
+      "from": "1824"
+    }
+  ],
+  "summary": "The three wars by which Britain conquered Burma.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2248139",
+  "events": [
+    {
+      "type": "born",
+      "date": "1824",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1886",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anglo-Burmese wars (Q2248139)",
+      "url": "https://www.wikidata.org/wiki/Q2248139",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anglo-Burmese wars",
+      "url": "https://en.wikipedia.org/wiki/Anglo-Burmese_wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/The_Burma_Campaign%2C_The_Graphic%2C_1887.jpg/500px-The_Burma_Campaign%2C_The_Graphic%2C_1887.jpg",
+    "alt": "Anglo-Burmese wars",
+    "credit": "Adrien Marie",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Burma_Campaign,_The_Graphic,_1887.jpg"
+  }
+}

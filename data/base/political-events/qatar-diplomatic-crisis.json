@@ -1,0 +1,59 @@
+{
+  "id": "qatar-diplomatic-crisis",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Qatar diplomatic crisis",
+      "from": "2017"
+    }
+  ],
+  "summary": "The blockade by Saudi Arabia and its allies from 2017 to 2021.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q30130610",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-01-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qatar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Qatar diplomatic crisis (Q30130610)",
+      "url": "https://www.wikidata.org/wiki/Q30130610",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qatar diplomatic crisis",
+      "url": "https://en.wikipedia.org/wiki/Qatar_diplomatic_crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Qatar_diplomatic_crisis.svg/500px-Qatar_diplomatic_crisis.svg.png",
+    "alt": "Qatar diplomatic crisis",
+    "credit": "Wiki.0hlic",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Qatar_diplomatic_crisis.svg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "special-period",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Special Period",
+      "from": "1990"
+    }
+  ],
+  "summary": "The hard years after the fall of the Soviet Union.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q2301116",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Special Period (Q2301116)",
+      "url": "https://www.wikidata.org/wiki/Q2301116",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Special Period",
+      "url": "https://en.wikipedia.org/wiki/Special_Period",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Cuban_transport.jpg/500px-Cuban_transport.jpg",
+    "alt": "Special Period",
+    "credit": "Nick",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cuban_transport.jpg"
+  }
+}

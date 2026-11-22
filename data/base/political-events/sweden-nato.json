@@ -1,0 +1,54 @@
+{
+  "id": "sweden-nato",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Sweden joins NATO",
+      "from": "2024"
+    }
+  ],
+  "summary": "Sweden ended two centuries of neutrality by joining NATO in 2024.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q110653212",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-03-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sweden joins NATO (Q110653212)",
+      "url": "https://www.wikidata.org/wiki/Q110653212",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sweden and NATO",
+      "url": "https://en.wikipedia.org/wiki/Sweden_and_NATO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Sweden_NATO_Locator_Lambert.svg/500px-Sweden_NATO_Locator_Lambert.svg.png",
+    "alt": "Sweden joins NATO",
+    "credit": "Justin Kunimune",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sweden_NATO_Locator_Lambert.svg"
+  }
+}

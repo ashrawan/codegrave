@@ -1,0 +1,56 @@
+{
+  "id": "semipalatinsk-test-site",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Semipalatinsk Test Site",
+      "from": "1949"
+    }
+  ],
+  "summary": "The Soviet nuclear test site where some 450 bombs were set off.",
+  "wikidata": "Q757666",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-08-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kazakhstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Semipalatinsk Test Site (Q757666)",
+      "url": "https://www.wikidata.org/wiki/Q757666",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Semipalatinsk Test Site",
+      "url": "https://en.wikipedia.org/wiki/Semipalatinsk_Test_Site",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/RIAN_archive_440215_Kurchatov_city.jpg/500px-RIAN_archive_440215_Kurchatov_city.jpg",
+    "alt": "Semipalatinsk Test Site",
+    "credit": "Alexander Liskin / Александр Лыскин",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:RIAN_archive_440215_Kurchatov_city.jpg"
+  }
+}

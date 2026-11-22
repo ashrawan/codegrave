@@ -1,0 +1,51 @@
+{
+  "id": "akosombo-dam",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Akosombo Dam",
+      "from": "1291"
+    }
+  ],
+  "summary": "The dam on the Volta that made the largest man-made lake.",
+  "wikidata": "Q1282314",
+  "events": [
+    {
+      "type": "born",
+      "date": "1291",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ghana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Akosombo Dam (Q1282314)",
+      "url": "https://www.wikidata.org/wiki/Q1282314",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Akosombo Dam",
+      "url": "https://en.wikipedia.org/wiki/Akosombo_Dam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Akosombo_Dam.jpg/500px-Akosombo_Dam.jpg",
+    "alt": "Akosombo Dam",
+    "credit": "Phildawson",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Akosombo_Dam.jpg"
+  }
+}

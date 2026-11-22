@@ -1,0 +1,51 @@
+{
+  "id": "ulaanbaatar",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ulaanbaatar",
+      "from": "1639"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q23430",
+  "events": [
+    {
+      "type": "born",
+      "date": "1639",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ulaanbaatar (Q23430)",
+      "url": "https://www.wikidata.org/wiki/Q23430",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ulaanbaatar",
+      "url": "https://en.wikipedia.org/wiki/Ulaanbaatar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/UB_downtown.jpg/500px-UB_downtown.jpg",
+    "alt": "Ulaanbaatar",
+    "credit": "Zazaa Mongolia",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:UB_downtown.jpg"
+  }
+}

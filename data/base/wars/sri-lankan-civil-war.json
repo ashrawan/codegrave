@@ -1,0 +1,59 @@
+{
+  "id": "sri-lankan-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Sri Lankan Civil War",
+      "from": "1983"
+    }
+  ],
+  "summary": "The war of 1983 to 2009 between the government and the Tamil Tigers.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q213394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-07-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-05-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sri Lankan Civil War (Q213394)",
+      "url": "https://www.wikidata.org/wiki/Q213394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sri Lankan Civil War",
+      "url": "https://en.wikipedia.org/wiki/Sri_Lankan_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/KilinochchiWaterTowerDestroyedByLTTE.JPG/500px-KilinochchiWaterTowerDestroyedByLTTE.JPG",
+    "alt": "Sri Lankan Civil War",
+    "credit": "Shaakunthala",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KilinochchiWaterTowerDestroyedByLTTE.JPG"
+  }
+}

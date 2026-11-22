@@ -1,0 +1,51 @@
+{
+  "id": "putrajaya",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Putrajaya",
+      "from": "1995"
+    }
+  ],
+  "summary": "The planned seat of government built from 1995 south of Kuala Lumpur.",
+  "wikidata": "Q182378",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malaysia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Putrajaya (Q182378)",
+      "url": "https://www.wikidata.org/wiki/Q182378",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Putrajaya",
+      "url": "https://en.wikipedia.org/wiki/Putrajaya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Putrajaya_Collage.jpg/500px-Putrajaya_Collage.jpg",
+    "alt": "Putrajaya",
+    "credit": "See above. Compilation by Fazley Fadzil.",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Putrajaya_Collage.jpg"
+  }
+}

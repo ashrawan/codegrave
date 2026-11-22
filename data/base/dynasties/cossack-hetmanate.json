@@ -1,0 +1,52 @@
+{
+  "id": "cossack-hetmanate",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Cossack Hetmanate",
+      "from": "1648"
+    }
+  ],
+  "summary": "The Cossack state founded by Bohdan Khmelnytsky in 1648.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q212439",
+  "events": [
+    {
+      "type": "born",
+      "date": "1648-01-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1764-11-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cossack Hetmanate (Q212439)",
+      "url": "https://www.wikidata.org/wiki/Q212439",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cossack Hetmanate",
+      "url": "https://en.wikipedia.org/wiki/Cossack_Hetmanate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

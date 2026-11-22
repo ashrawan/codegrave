@@ -1,0 +1,68 @@
+{
+  "id": "lebanon",
+  "name": "Lebanon",
+  "description": "Lebanon from the Phoenicians of Byblos, Tyre and Sidon to Rome, the emirs, the French mandate, civil war and today.",
+  "category": "places",
+  "tags": [
+    "lebanon",
+    "beirut",
+    "phoenicians",
+    "byblos",
+    "cedars",
+    "levant"
+  ],
+  "entries": [
+    "phoenicia",
+    "mount-lebanon-emirate",
+    "kahlil-gibran",
+    "greater-lebanon",
+    "fairuz",
+    "national-pact",
+    "lebanon",
+    "rafic-hariri",
+    "joseph-aoun",
+    "lebanese-civil-war",
+    "hezbollah",
+    "cedar-revolution",
+    "2006-lebanon-war",
+    "lebanese-liquidity-crisis",
+    "beirut-explosion-2020"
+  ],
+  "checkpoints": [
+    {
+      "id": "phoenicia",
+      "name": "Phoenicia",
+      "from": -5000,
+      "to": -64,
+      "note": "Byblos is among the oldest towns. The Phoenicians sailed the sea and spread the alphabet."
+    },
+    {
+      "id": "empires",
+      "name": "Empires",
+      "from": -63,
+      "to": 1919,
+      "note": "Rome, the Arabs, crusaders and the Ottomans ruled."
+    },
+    {
+      "id": "lebanon",
+      "name": "Lebanon",
+      "from": 1920,
+      "to": 2026,
+      "note": "France made Greater Lebanon in 1920; it became free in 1943. Civil war tore it apart from 1975 to 1990."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Flag_of_Lebanon.svg/330px-Flag_of_Lebanon.svg.png",
+    "alt": "Flag of Lebanon",
+    "credit": "Henri Pharaon",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Lebanon.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/97/Lebanese_national_anthem.ogg/Lebanese_national_anthem.ogg.mp3",
+    "title": "Lebanese national anthem",
+    "credit": "Rashid Nakhle / Wadia Sabra / United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lebanese_national_anthem.ogg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "gabriela-mistral",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Gabriela Mistral",
+      "from": "1889"
+    }
+  ],
+  "summary": "Poet and teacher, the first Latin American to win the Nobel Prize in Literature.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q80871",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-04-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1957-01-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gabriela Mistral (Q80871)",
+      "url": "https://www.wikidata.org/wiki/Q80871",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gabriela Mistral",
+      "url": "https://en.wikipedia.org/wiki/Gabriela_Mistral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/64/Gabriela_Mistral_1945.jpg_unscaled",
+    "alt": "Gabriela Mistral",
+    "credit": "Anna Riwkin-Brick",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gabriela_Mistral_1945.jpg"
+  }
+}

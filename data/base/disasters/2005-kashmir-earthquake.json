@@ -1,0 +1,56 @@
+{
+  "id": "2005-kashmir-earthquake",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "2005 Kashmir earthquake",
+      "from": "2005"
+    }
+  ],
+  "summary": "The earthquake of October 2005 that killed some eighty thousand people.",
+  "wikidata": "Q210137",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-10-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-10-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2005 Kashmir earthquake (Q210137)",
+      "url": "https://www.wikidata.org/wiki/Q210137",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2005 Kashmir earthquake",
+      "url": "https://en.wikipedia.org/wiki/2005_Kashmir_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/2005_Pakistan_earthquake.png_unscaled",
+    "alt": "2005 Kashmir earthquake",
+    "credit": "Orlovic",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2005_Pakistan_earthquake.png"
+  }
+}

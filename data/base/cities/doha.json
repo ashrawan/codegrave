@@ -1,0 +1,51 @@
+{
+  "id": "doha",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Doha",
+      "from": "1850"
+    }
+  ],
+  "summary": "The capital, a fishing village that became a city of towers.",
+  "wikidata": "Q3861",
+  "events": [
+    {
+      "type": "born",
+      "date": "1850",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qatar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Doha (Q3861)",
+      "url": "https://www.wikidata.org/wiki/Q3861",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Doha",
+      "url": "https://en.wikipedia.org/wiki/Doha",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Doha_skyline_in_the_morning_%2812544910974%29.jpg/500px-Doha_skyline_in_the_morning_%2812544910974%29.jpg",
+    "alt": "Doha",
+    "credit": "Francisco Anzola",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Doha_skyline_in_the_morning_(12544910974).jpg"
+  }
+}

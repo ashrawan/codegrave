@@ -1,0 +1,54 @@
+{
+  "id": "bran-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Bran Castle",
+      "from": "1289"
+    }
+  ],
+  "summary": "A castle in Transylvania often called Dracula's castle.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q390275",
+  "events": [
+    {
+      "type": "born",
+      "date": "1289",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bran Castle (Q390275)",
+      "url": "https://www.wikidata.org/wiki/Q390275",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bran Castle",
+      "url": "https://en.wikipedia.org/wiki/Bran_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bran_Castle_TB1.jpg/500px-Bran_Castle_TB1.jpg",
+    "alt": "Bran Castle",
+    "credit": "Todor Bozhinov",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bran_Castle_TB1.jpg"
+  }
+}

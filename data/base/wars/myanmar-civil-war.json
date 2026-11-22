@@ -1,0 +1,54 @@
+{
+  "id": "myanmar-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Myanmar civil war",
+      "from": "2021"
+    }
+  ],
+  "summary": "The war that followed the coup.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q110613097",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-05-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Myanmar civil war (Q110613097)",
+      "url": "https://www.wikidata.org/wiki/Q110613097",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Myanmar civil war (2021–present)",
+      "url": "https://en.wikipedia.org/wiki/Myanmar_civil_war_(2021–present)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Myanmar_civil_war.svg/500px-Myanmar_civil_war.svg.png",
+    "alt": "Myanmar civil war",
+    "credit": "Ecrusized",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Myanmar_civil_war.svg"
+  }
+}

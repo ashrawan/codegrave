@@ -1,0 +1,51 @@
+{
+  "id": "addis-ababa",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Addis Ababa",
+      "from": "1886"
+    }
+  ],
+  "summary": "The capital, founded by Menelik in 1886.",
+  "wikidata": "Q3624",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Addis Ababa (Q3624)",
+      "url": "https://www.wikidata.org/wiki/Q3624",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Addis Ababa",
+      "url": "https://en.wikipedia.org/wiki/Addis_Ababa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/AddisView.jpg/500px-AddisView.jpg",
+    "alt": "Addis Ababa",
+    "credit": "DaneyWiki",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:AddisView.jpg"
+  }
+}

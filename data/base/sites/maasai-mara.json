@@ -1,0 +1,51 @@
+{
+  "id": "maasai-mara",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Maasai Mara",
+      "from": "1961"
+    }
+  ],
+  "summary": "The great game reserve of the great migration.",
+  "wikidata": "Q207724",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maasai Mara (Q207724)",
+      "url": "https://www.wikidata.org/wiki/Q207724",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maasai Mara",
+      "url": "https://en.wikipedia.org/wiki/Maasai_Mara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Mara_River_Massai_Mara.jpg/500px-Mara_River_Massai_Mara.jpg",
+    "alt": "Maasai Mara",
+    "credit": "Morris Pügner",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mara_River_Massai_Mara.jpg"
+  }
+}

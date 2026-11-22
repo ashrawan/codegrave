@@ -1,0 +1,59 @@
+{
+  "id": "astrid-lindgren",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Astrid Lindgren",
+      "from": "1907"
+    }
+  ],
+  "summary": "Author of Pippi Longstocking and many other children's books.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q55767",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907-11-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Astrid Lindgren (Q55767)",
+      "url": "https://www.wikidata.org/wiki/Q55767",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Astrid Lindgren",
+      "url": "https://en.wikipedia.org/wiki/Astrid_Lindgren",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Astrid_Lindgren_%28cropped%29.jpg_unscaled",
+    "alt": "Astrid Lindgren",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Astrid_Lindgren_(cropped).jpg"
+  }
+}

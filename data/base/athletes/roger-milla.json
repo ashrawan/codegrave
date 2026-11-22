@@ -1,0 +1,54 @@
+{
+  "id": "roger-milla",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Roger Milla",
+      "from": "1952"
+    }
+  ],
+  "summary": "Footballer who starred at the 1990 World Cup.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q168540",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cameroon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roger Milla (Q168540)",
+      "url": "https://www.wikidata.org/wiki/Q168540",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roger Milla",
+      "url": "https://en.wikipedia.org/wiki/Roger_Milla",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Milla2008cropped.jpg/500px-Milla2008cropped.jpg",
+    "alt": "Roger Milla",
+    "credit": "Jmex60",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Milla2008cropped.jpg"
+  }
+}

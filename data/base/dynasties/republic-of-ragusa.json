@@ -1,0 +1,59 @@
+{
+  "id": "republic-of-ragusa",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Republic of Ragusa",
+      "from": "1358"
+    }
+  ],
+  "summary": "The merchant republic of Dubrovnik.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q208169",
+  "events": [
+    {
+      "type": "born",
+      "date": "1358-05-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1806-05-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Republic of Ragusa (Q208169)",
+      "url": "https://www.wikidata.org/wiki/Q208169",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Republic of Ragusa",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_Ragusa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Vistaderagusa1667.jpg/500px-Vistaderagusa1667.jpg",
+    "alt": "Republic of Ragusa",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vistaderagusa1667.jpg"
+  }
+}

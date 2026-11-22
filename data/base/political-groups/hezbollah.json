@@ -1,0 +1,47 @@
+{
+  "id": "hezbollah",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Hezbollah",
+      "from": "1982"
+    }
+  ],
+  "summary": "The Shia party and armed group.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q41053",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hezbollah (Q41053)",
+      "url": "https://www.wikidata.org/wiki/Q41053",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hezbollah",
+      "url": "https://en.wikipedia.org/wiki/Hezbollah",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

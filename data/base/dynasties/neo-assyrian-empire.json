@@ -1,0 +1,52 @@
+{
+  "id": "neo-assyrian-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Neo-Assyrian Empire",
+      "from": "-0911"
+    }
+  ],
+  "summary": "The empire ruled from Nineveh that conquered much of the Near East.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q10914393",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0911",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0609",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Neo-Assyrian Empire (Q10914393)",
+      "url": "https://www.wikidata.org/wiki/Q10914393",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Neo-Assyrian Empire",
+      "url": "https://en.wikipedia.org/wiki/Neo-Assyrian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

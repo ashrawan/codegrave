@@ -1,0 +1,54 @@
+{
+  "id": "bongbong-marcos",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Bongbong Marcos",
+      "from": "1957"
+    }
+  ],
+  "summary": "Son of the dictator, elected president in 2022.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q983324",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bongbong Marcos (Q983324)",
+      "url": "https://www.wikidata.org/wiki/Q983324",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bongbong Marcos",
+      "url": "https://en.wikipedia.org/wiki/Bongbong_Marcos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Portrait_of_President_Ferdinand_R._Marcos%2C_Jr_%28cropped%29.jpg/500px-Portrait_of_President_Ferdinand_R._Marcos%2C_Jr_%28cropped%29.jpg",
+    "alt": "Bongbong Marcos",
+    "credit": "Office of the President of the Philippines",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_President_Ferdinand_R._Marcos,_Jr_(cropped).jpg"
+  }
+}

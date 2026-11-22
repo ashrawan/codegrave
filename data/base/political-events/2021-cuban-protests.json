@@ -1,0 +1,59 @@
+{
+  "id": "2021-cuban-protests",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2021 Cuban protests",
+      "from": "2021"
+    }
+  ],
+  "summary": "The largest protests since the revolution.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q107487626",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-07-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2021 Cuban protests (Q107487626)",
+      "url": "https://www.wikidata.org/wiki/Q107487626",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2021 Cuban protests",
+      "url": "https://en.wikipedia.org/wiki/2021_Cuban_protests",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/2021_Cuban_protests.png/500px-2021_Cuban_protests.png",
+    "alt": "2021 Cuban protests",
+    "credit": "14ymedio",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Cuban_protests.png"
+  }
+}

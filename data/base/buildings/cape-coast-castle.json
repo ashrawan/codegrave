@@ -1,0 +1,54 @@
+{
+  "id": "cape-coast-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Cape Coast Castle",
+      "from": "1653"
+    }
+  ],
+  "summary": "A great slave fort on the coast.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1254826",
+  "events": [
+    {
+      "type": "born",
+      "date": "1653",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ghana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cape Coast Castle (Q1254826)",
+      "url": "https://www.wikidata.org/wiki/Q1254826",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cape Coast Castle",
+      "url": "https://en.wikipedia.org/wiki/Cape_Coast_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Cape_Coast_Castle%2C_Cape_Coast%2C_Ghana.JPG/500px-Cape_Coast_Castle%2C_Cape_Coast%2C_Ghana.JPG",
+    "alt": "Cape Coast Castle",
+    "credit": "Rjruiziii",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cape_Coast_Castle,_Cape_Coast,_Ghana.JPG"
+  }
+}

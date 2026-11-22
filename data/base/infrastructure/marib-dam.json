@@ -1,0 +1,51 @@
+{
+  "id": "marib-dam",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Marib Dam",
+      "from": "1986"
+    }
+  ],
+  "summary": "An ancient great dam of Saba.",
+  "wikidata": "Q2303666",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marib Dam (Q2303666)",
+      "url": "https://www.wikidata.org/wiki/Q2303666",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marib Dam",
+      "url": "https://en.wikipedia.org/wiki/Marib_Dam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Marib_dam.jpg/500px-Marib_dam.jpg",
+    "alt": "Marib Dam",
+    "credit": "Bernard Gagnon",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marib_dam.jpg"
+  }
+}

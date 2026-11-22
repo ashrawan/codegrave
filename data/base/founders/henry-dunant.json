@@ -1,0 +1,56 @@
+{
+  "id": "henry-dunant",
+  "category": "founders",
+  "names": [
+    {
+      "name": "Henry Dunant",
+      "from": "1828"
+    }
+  ],
+  "summary": "Geneva businessman who founded the Red Cross and shared the first Nobel Peace Prize.",
+  "wikidata": "Q12091",
+  "events": [
+    {
+      "type": "born",
+      "date": "1828-05-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1910-10-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Henry Dunant (Q12091)",
+      "url": "https://www.wikidata.org/wiki/Q12091",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henry Dunant",
+      "url": "https://en.wikipedia.org/wiki/Henry_Dunant",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Henry_Dunant-young.jpg/500px-Henry_Dunant-young.jpg",
+    "alt": "Henry Dunant",
+    "credit": "Frédéric Boissonnas",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Henry_Dunant-young.jpg"
+  }
+}

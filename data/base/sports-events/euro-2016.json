@@ -1,0 +1,59 @@
+{
+  "id": "euro-2016",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "UEFA Euro 2016",
+      "from": "2016"
+    }
+  ],
+  "summary": "The European Championship won by Portugal.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q189571",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-06-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: UEFA Euro 2016 (Q189571)",
+      "url": "https://www.wikidata.org/wiki/Q189571",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: UEFA Euro 2016",
+      "url": "https://en.wikipedia.org/wiki/UEFA_Euro_2016",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Ukraine_vs_Luxembourg_14062015_UEFA_EURO_2016_Qualifying_round_-_Group_C_%281%29.jpg/500px-Ukraine_vs_Luxembourg_14062015_UEFA_EURO_2016_Qualifying_round_-_Group_C_%281%29.jpg",
+    "alt": "UEFA Euro 2016",
+    "credit": "БОГДАН ЗАЯЦ",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ukraine_vs_Luxembourg_14062015_UEFA_EURO_2016_Qualifying_round_-_Group_C_(1).jpg"
+  }
+}

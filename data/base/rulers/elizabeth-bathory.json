@@ -1,0 +1,59 @@
+{
+  "id": "elizabeth-bathory",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Elizabeth Báthory",
+      "from": "1560"
+    }
+  ],
+  "summary": "Countess accused of murdering many girls at her castle of Čachtice.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q170846",
+  "events": [
+    {
+      "type": "born",
+      "date": "1560-08-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1614-08-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Elizabeth Báthory (Q170846)",
+      "url": "https://www.wikidata.org/wiki/Q170846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Elizabeth Báthory",
+      "url": "https://en.wikipedia.org/wiki/Elizabeth_Báthory",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Elizabeth_Bathory_Portrait.jpg/500px-Elizabeth_Bathory_Portrait.jpg",
+    "alt": "Elizabeth Báthory",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_Bathory_Portrait.jpg"
+  }
+}

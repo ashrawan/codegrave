@@ -1,0 +1,59 @@
+{
+  "id": "israeli-declaration-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Israeli Declaration of Independence",
+      "from": "1948"
+    }
+  ],
+  "summary": "The declaration of the state of Israel by David Ben-Gurion on 14 May 1948.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q223732",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-05-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Israeli Declaration of Independence (Q223732)",
+      "url": "https://www.wikidata.org/wiki/Q223732",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Israeli Declaration of Independence",
+      "url": "https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/34/Israel_Declaration_of_Independence.jpg_unscaled",
+    "alt": "Israeli Declaration of Independence",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Israel_Declaration_of_Independence.jpg"
+  }
+}

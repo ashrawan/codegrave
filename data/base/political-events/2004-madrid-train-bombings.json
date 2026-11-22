@@ -1,0 +1,59 @@
+{
+  "id": "2004-madrid-train-bombings",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2004 Madrid train bombings",
+      "from": "2004"
+    }
+  ],
+  "summary": "Bombs on commuter trains in Madrid that killed 193 people, the worst terrorist attack in Spain's history.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q213531",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-03-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2004-03-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2004 Madrid train bombings (Q213531)",
+      "url": "https://www.wikidata.org/wiki/Q213531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2004 Madrid train bombings",
+      "url": "https://en.wikipedia.org/wiki/2004_Madrid_train_bombings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Atentado_11M.jpg/500px-Atentado_11M.jpg",
+    "alt": "2004 Madrid train bombings",
+    "credit": "Ramón Peco (desdetasmania)",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Atentado_11M.jpg"
+  }
+}

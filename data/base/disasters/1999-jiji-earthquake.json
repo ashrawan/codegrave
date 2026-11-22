@@ -1,0 +1,56 @@
+{
+  "id": "1999-jiji-earthquake",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "1999 Jiji earthquake",
+      "from": "1999"
+    }
+  ],
+  "summary": "The earthquake of September 1999 that killed more than two thousand people in central Taiwan.",
+  "wikidata": "Q714320",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-09-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1999 Jiji earthquake (Q714320)",
+      "url": "https://www.wikidata.org/wiki/Q714320",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1999 Jiji earthquake",
+      "url": "https://en.wikipedia.org/wiki/1999_Jiji_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Tonshin_Building_collapsed_after_921_earthquake.jpg_unscaled",
+    "alt": "1999 Jiji earthquake",
+    "credit": "Ho.siminn",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tonshin_Building_collapsed_after_921_earthquake.jpg"
+  }
+}

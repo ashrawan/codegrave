@@ -1,0 +1,54 @@
+{
+  "id": "bjork",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Björk",
+      "from": "1965"
+    }
+  ],
+  "summary": "Singer and artist.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q42455",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-11-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iceland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Björk (Q42455)",
+      "url": "https://www.wikidata.org/wiki/Q42455",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Björk",
+      "url": "https://en.wikipedia.org/wiki/Björk",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Bj%C3%B6rk_at_Cannes.jpg/500px-Bj%C3%B6rk_at_Cannes.jpg",
+    "alt": "Björk",
+    "credit": "Georges Biard",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bj%C3%B6rk_at_Cannes.jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "peter-sagan",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Peter Sagan",
+      "from": "1990"
+    }
+  ],
+  "summary": "Cyclist who won the world championship three times in a row.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q309911",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peter Sagan (Q309911)",
+      "url": "https://www.wikidata.org/wiki/Q309911",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peter Sagan",
+      "url": "https://en.wikipedia.org/wiki/Peter_Sagan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Peter_Sagan_TDF2022.jpg/500px-Peter_Sagan_TDF2022.jpg",
+    "alt": "Peter Sagan",
+    "credit": "Clémence LN",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Peter_Sagan_TDF2022.jpg"
+  }
+}

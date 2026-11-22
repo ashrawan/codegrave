@@ -1,0 +1,59 @@
+{
+  "id": "the-troubles",
+  "category": "wars",
+  "names": [
+    {
+      "name": "The Troubles",
+      "from": "1960"
+    }
+  ],
+  "summary": "Thirty years of violence in Northern Ireland, ended by the Good Friday Agreement.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q815436",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1998",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Troubles (Q815436)",
+      "url": "https://www.wikidata.org/wiki/Q815436",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Troubles",
+      "url": "https://en.wikipedia.org/wiki/The_Troubles",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Dsc1877ne2.jpg/500px-Dsc1877ne2.jpg",
+    "alt": "The Troubles",
+    "credit": "Lasse1974",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dsc1877ne2.jpg"
+  }
+}

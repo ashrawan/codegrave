@@ -1,0 +1,51 @@
+{
+  "id": "phnom-penh",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Phnom Penh",
+      "from": "1372"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q1850",
+  "events": [
+    {
+      "type": "born",
+      "date": "1372",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cambodia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Phnom Penh (Q1850)",
+      "url": "https://www.wikidata.org/wiki/Q1850",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Phnom Penh",
+      "url": "https://en.wikipedia.org/wiki/Phnom_Penh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Phnom_Penh_aerial.jpg/500px-Phnom_Penh_aerial.jpg",
+    "alt": "Phnom Penh",
+    "credit": "KY Geologist",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Phnom_Penh_aerial.jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "charles-bridge",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Charles Bridge",
+      "from": "1357"
+    }
+  ],
+  "summary": "The stone bridge over the Vltava begun by Charles IV in 1357.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q204871",
+  "events": [
+    {
+      "type": "born",
+      "date": "1357",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czech-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles Bridge (Q204871)",
+      "url": "https://www.wikidata.org/wiki/Q204871",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles Bridge",
+      "url": "https://en.wikipedia.org/wiki/Charles_Bridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Prague_07-2016_View_from_Petrinska_Tower_img2.jpg/500px-Prague_07-2016_View_from_Petrinska_Tower_img2.jpg",
+    "alt": "Charles Bridge",
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:Prague_07-2016_View_from_Petrinska_Tower_img2.jpg"
+  }
+}

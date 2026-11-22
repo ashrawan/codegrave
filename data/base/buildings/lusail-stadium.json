@@ -1,0 +1,54 @@
+{
+  "id": "lusail-stadium",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Lusail Stadium",
+      "from": "2022"
+    }
+  ],
+  "summary": "The stadium that hosted the 2022 World Cup final.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1186333",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-11-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qatar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lusail Stadium (Q1186333)",
+      "url": "https://www.wikidata.org/wiki/Q1186333",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lusail Stadium",
+      "url": "https://en.wikipedia.org/wiki/Lusail_Stadium",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Br%C3%A9sil_vs_Serbie.jpg/500px-Br%C3%A9sil_vs_Serbie.jpg",
+    "alt": "Lusail Stadium",
+    "credit": "Adnen1985",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Br%C3%A9sil_vs_Serbie.jpg"
+  }
+}

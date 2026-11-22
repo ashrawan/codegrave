@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-kosovo",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Kosovo",
+      "from": "1389"
+    }
+  ],
+  "summary": "The battle of 1389 against the Ottomans.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q179288",
+  "events": [
+    {
+      "type": "born",
+      "date": "1389-06-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1389-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Kosovo (Q179288)",
+      "url": "https://www.wikidata.org/wiki/Q179288",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Kosovo",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Kosovo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Battle_of_Kosovo%2C_Adam_Stefanovi%C4%87%2C_1870.jpg/500px-Battle_of_Kosovo%2C_Adam_Stefanovi%C4%87%2C_1870.jpg",
+    "alt": "Battle of Kosovo",
+    "credit": "Adam Stefanović",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Battle_of_Kosovo,_Adam_Stefanovi%C4%87,_1870.jpg"
+  }
+}

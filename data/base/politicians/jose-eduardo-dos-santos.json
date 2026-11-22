@@ -1,0 +1,59 @@
+{
+  "id": "jose-eduardo-dos-santos",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "José Eduardo dos Santos",
+      "from": "1942"
+    }
+  ],
+  "summary": "President for 38 years.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57313",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-08-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-07-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: José Eduardo dos Santos (Q57313)",
+      "url": "https://www.wikidata.org/wiki/Q57313",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: José Eduardo dos Santos",
+      "url": "https://en.wikipedia.org/wiki/José_Eduardo_dos_Santos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Jos%C3%A9_Eduardo_dos_Santos_2.jpg_unscaled",
+    "alt": "José Eduardo dos Santos",
+    "credit": "Ricardo Stuckert/PR",
+    "licence": "CC BY 3.0 br",
+    "source": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Eduardo_dos_Santos_2.jpg"
+  }
+}

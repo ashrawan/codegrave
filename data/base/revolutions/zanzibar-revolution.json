@@ -1,0 +1,54 @@
+{
+  "id": "zanzibar-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Zanzibar Revolution",
+      "from": "1964"
+    }
+  ],
+  "summary": "The revolution of 1964 that overthrew the sultan.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q75844",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-01-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zanzibar Revolution (Q75844)",
+      "url": "https://www.wikidata.org/wiki/Q75844",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zanzibar Revolution",
+      "url": "https://en.wikipedia.org/wiki/Zanzibar_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Spice_Islands_%28Zanzibar_highlighted%29.svg/500px-Spice_Islands_%28Zanzibar_highlighted%29.svg.png",
+    "alt": "Zanzibar Revolution",
+    "credit": "Mysid",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Spice_Islands_(Zanzibar_highlighted).svg"
+  }
+}

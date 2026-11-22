@@ -1,0 +1,59 @@
+{
+  "id": "sirimavo-bandaranaike",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Sirimavo Bandaranaike",
+      "from": "1916"
+    }
+  ],
+  "summary": "The world's first woman prime minister, in 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q194291",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-04-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-10-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sirimavo Bandaranaike (Q194291)",
+      "url": "https://www.wikidata.org/wiki/Q194291",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sirimavo Bandaranaike",
+      "url": "https://en.wikipedia.org/wiki/Sirimavo_Bandaranaike",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/S._Bandaranaike_w_Polsce_%28Sirimavo_cropped_close%29.jpg/500px-S._Bandaranaike_w_Polsce_%28Sirimavo_cropped_close%29.jpg",
+    "alt": "Sirimavo Bandaranaike",
+    "credit": "Centralna Agencja Fotograficzna",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:S._Bandaranaike_w_Polsce_(Sirimavo_cropped_close).jpg"
+  }
+}

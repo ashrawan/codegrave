@@ -1,0 +1,54 @@
+{
+  "id": "portuguese-angola",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Portuguese Angola",
+      "from": "1655"
+    }
+  ],
+  "summary": "The Portuguese colony, a great source of enslaved people for Brazil.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2826232",
+  "events": [
+    {
+      "type": "born",
+      "date": "1655",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Portuguese Angola (Q2826232)",
+      "url": "https://www.wikidata.org/wiki/Q2826232",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portuguese Angola",
+      "url": "https://en.wikipedia.org/wiki/Portuguese_Angola",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Portuguese_Angola%2C_c._1500-1800.svg/500px-Portuguese_Angola%2C_c._1500-1800.svg.png",
+    "alt": "Portuguese Angola",
+    "credit": "Nagihuin",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Portuguese_Angola,_c._1500-1800.svg"
+  }
+}

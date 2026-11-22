@@ -1,0 +1,59 @@
+{
+  "id": "rafic-hariri",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Rafic Hariri",
+      "from": "1944"
+    }
+  ],
+  "summary": "Prime minister who rebuilt Beirut, killed by a bomb in 2005.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q192778",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-11-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-02-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rafic Hariri (Q192778)",
+      "url": "https://www.wikidata.org/wiki/Q192778",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rafic Hariri",
+      "url": "https://en.wikipedia.org/wiki/Rafic_Hariri",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/47/Rafic_Hariri_in_2001.jpg_unscaled",
+    "alt": "Rafic Hariri",
+    "credit": "Helene C. Stikkel",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rafic_Hariri_in_2001.jpg"
+  }
+}

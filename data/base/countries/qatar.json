@@ -1,0 +1,51 @@
+{
+  "id": "qatar",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Qatar",
+      "from": "1870"
+    }
+  ],
+  "summary": "A small peninsula on the Persian Gulf, independent since 1971 and one of the richest countries thanks to natural gas.",
+  "wikidata": "Q846",
+  "events": [
+    {
+      "type": "born",
+      "date": "1870",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Qatar (Q846)",
+      "url": "https://www.wikidata.org/wiki/Q846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qatar",
+      "url": "https://en.wikipedia.org/wiki/Qatar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Skyline_of_Doha_West_Bay.jpg/500px-Skyline_of_Doha_West_Bay.jpg",
+    "alt": "Qatar",
+    "credit": "Ceslou",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Skyline_of_Doha_West_Bay.jpg"
+  }
+}

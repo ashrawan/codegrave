@@ -1,0 +1,74 @@
+{
+  "id": "yemen",
+  "name": "Yemen",
+  "description": "Yemen from the kingdom of Saba and Marib to Islam, the imams, Aden, unification and civil war.",
+  "category": "places",
+  "tags": [
+    "yemen",
+    "sanaa",
+    "saba",
+    "aden",
+    "arabia",
+    "socotra"
+  ],
+  "entries": [
+    "kingdom-of-saba",
+    "himyarite-kingdom",
+    "mutawakkilite-kingdom-of-yemen",
+    "colony-of-aden",
+    "ali-abdullah-saleh",
+    "north-yemen-civil-war",
+    "south-yemen",
+    "tawakkol-karman",
+    "marib-dam",
+    "yemen",
+    "yemeni-unification",
+    "houthis",
+    "yemeni-revolution",
+    "yemeni-civil-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "saba",
+      "name": "Saba",
+      "from": -1200,
+      "to": 629,
+      "note": "Saba and Himyar grew rich on incense."
+    },
+    {
+      "id": "imams-and-empires",
+      "name": "Imams and empires",
+      "from": 630,
+      "to": 1838,
+      "note": "Yemen took Islam, and imams ruled the north for a thousand years."
+    },
+    {
+      "id": "north-and-south",
+      "name": "North and south",
+      "from": 1839,
+      "to": 1989,
+      "note": "Britain took Aden in 1839. The north and south became separate states."
+    },
+    {
+      "id": "united-yemen",
+      "name": "United Yemen",
+      "from": 1990,
+      "to": 2026,
+      "note": "The two Yemens joined in 1990. Civil war began in 2014."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Flag_of_Yemen.svg/330px-Flag_of_Yemen.svg.png",
+    "alt": "Flag of Yemen",
+    "credit": "Nightstallion et al., see File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Yemen.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/35/National_Anthem_of_the_Republic_of_Yemen.oga/National_Anthem_of_the_Republic_of_Yemen.oga.mp3",
+    "title": "National anthem of Yemen",
+    "credit": "Ayoob Tarish / Abdullah Abdulwahab Noman",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_the_Republic_of_Yemen.oga"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "sudanese-civil-war-2023",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Sudanese civil war",
+      "from": "2023"
+    }
+  ],
+  "summary": "The war between the army and the Rapid Support Forces.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q117716414",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-04-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sudanese civil war (Q117716414)",
+      "url": "https://www.wikidata.org/wiki/Q117716414",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sudanese civil war (2023–present)",
+      "url": "https://en.wikipedia.org/wiki/Sudanese_civil_war_(2023–present)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Screengrab_of_refugee_camp_from_Number_of_Refugees_Who_Fled_Sudan_for_Chad_Double_in_Week.jpg/500px-Screengrab_of_refugee_camp_from_Number_of_Refugees_Who_Fled_Sudan_for_Chad_Double_in_Week.jpg",
+    "alt": "Sudanese civil war",
+    "credit": "Henry Wilkins/VOA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Screengrab_of_refugee_camp_from_Number_of_Refugees_Who_Fled_Sudan_for_Chad_Double_in_Week.jpg"
+  }
+}

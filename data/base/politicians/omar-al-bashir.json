@@ -1,0 +1,54 @@
+{
+  "id": "omar-al-bashir",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Omar al-Bashir",
+      "from": "1944"
+    }
+  ],
+  "summary": "Ruler from 1989 until 2019.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57265",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Omar al-Bashir (Q57265)",
+      "url": "https://www.wikidata.org/wiki/Q57265",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Omar al-Bashir",
+      "url": "https://en.wikipedia.org/wiki/Omar_al-Bashir",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Omar_al-Bashir%2C_12th_AU_Summit%2C_090202-N-0506A-137_cropped.jpg/500px-Omar_al-Bashir%2C_12th_AU_Summit%2C_090202-N-0506A-137_cropped.jpg",
+    "alt": "Omar al-Bashir",
+    "credit": "U.S. Navy photo by Mass Communication Specialist 2nd Class Jesse B. Awalt",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Omar_al-Bashir,_12th_AU_Summit,_090202-N-0506A-137_cropped.jpg"
+  }
+}

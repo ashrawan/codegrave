@@ -1,0 +1,59 @@
+{
+  "id": "raila-odinga",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Raila Odinga",
+      "from": "1945"
+    }
+  ],
+  "summary": "Opposition leader and former prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57657",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-01-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Raila Odinga (Q57657)",
+      "url": "https://www.wikidata.org/wiki/Q57657",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Raila Odinga",
+      "url": "https://en.wikipedia.org/wiki/Raila_Odinga",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Raila_Amolo_Odinga_2009_%28cropped%29.jpg/500px-Raila_Amolo_Odinga_2009_%28cropped%29.jpg",
+    "alt": "Raila Odinga",
+    "credit": "World Economic Forum from Cologny, Switzerland",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Raila_Amolo_Odinga_2009_(cropped).jpg"
+  }
+}

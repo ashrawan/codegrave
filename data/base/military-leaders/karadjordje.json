@@ -1,0 +1,59 @@
+{
+  "id": "karadjordje",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Karađorđe",
+      "from": "1768"
+    }
+  ],
+  "summary": "Leader of the first rising of 1804.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q315172",
+  "events": [
+    {
+      "type": "born",
+      "date": "1768-11-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1817-07-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Karađorđe (Q315172)",
+      "url": "https://www.wikidata.org/wiki/Q315172",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Karađorđe",
+      "url": "https://en.wikipedia.org/wiki/Karađorđe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Kara%C4%91or%C4%91e_Petrovi%C4%87%2C_by_Vladimir_Borovikovsky%2C_1816.jpg/500px-Kara%C4%91or%C4%91e_Petrovi%C4%87%2C_by_Vladimir_Borovikovsky%2C_1816.jpg",
+    "alt": "Karađorđe",
+    "credit": "Vladimir Borovikovsky",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kara%C4%91or%C4%91e_Petrovi%C4%87,_by_Vladimir_Borovikovsky,_1816.jpg"
+  }
+}

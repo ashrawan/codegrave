@@ -1,0 +1,59 @@
+{
+  "id": "1953-iranian-coup",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "1953 Iranian coup d'état",
+      "from": "1953"
+    }
+  ],
+  "summary": "The coup, backed by Britain and the United States, that removed Prime Minister Mosaddegh.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q593774",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-08-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1953-08-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1953 Iranian coup d'état (Q593774)",
+      "url": "https://www.wikidata.org/wiki/Q593774",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1953 Iranian coup d'état",
+      "url": "https://en.wikipedia.org/wiki/1953_Iranian_coup_d'état",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Operationajax.jpg/500px-Operationajax.jpg",
+    "alt": "1953 Iranian coup d'état",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Operationajax.jpg"
+  }
+}

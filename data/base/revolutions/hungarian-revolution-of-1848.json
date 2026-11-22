@@ -1,0 +1,59 @@
+{
+  "id": "hungarian-revolution-of-1848",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Hungarian Revolution of 1848",
+      "from": "1848"
+    }
+  ],
+  "summary": "The rising against Habsburg rule, crushed with Russian help.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q473716",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-03-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1849-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hungarian Revolution of 1848 (Q473716)",
+      "url": "https://www.wikidata.org/wiki/Q473716",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hungarian Revolution of 1848",
+      "url": "https://en.wikipedia.org/wiki/Hungarian_Revolution_of_1848",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Hungarian_Revolution_of_1848_%28montage%29.png/500px-Hungarian_Revolution_of_1848_%28montage%29.png",
+    "alt": "Hungarian Revolution of 1848",
+    "credit": "Imoti95",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hungarian_Revolution_of_1848_(montage).png"
+  }
+}

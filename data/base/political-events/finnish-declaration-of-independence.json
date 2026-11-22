@@ -1,0 +1,54 @@
+{
+  "id": "finnish-declaration-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Finnish Declaration of Independence",
+      "from": "1917"
+    }
+  ],
+  "summary": "The declaration of independence from Russia on 6 December 1917.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1994771",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-12-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Finnish Declaration of Independence (Q1994771)",
+      "url": "https://www.wikidata.org/wiki/Q1994771",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Finnish Declaration of Independence",
+      "url": "https://en.wikipedia.org/wiki/Finnish_Declaration_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Suomen_kansalle.jpg/500px-Suomen_kansalle.jpg",
+    "alt": "Finnish Declaration of Independence",
+    "credit": "Senate of Finland",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Suomen_kansalle.jpg"
+  }
+}

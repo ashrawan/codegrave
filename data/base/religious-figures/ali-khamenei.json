@@ -1,0 +1,59 @@
+{
+  "id": "ali-khamenei",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Ali Khamenei",
+      "from": "1939"
+    }
+  ],
+  "summary": "Supreme Leader of Iran since 1989.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q57336",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-04-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2026-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ali Khamenei (Q57336)",
+      "url": "https://www.wikidata.org/wiki/Q57336",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ali Khamenei",
+      "url": "https://en.wikipedia.org/wiki/Ali_Khamenei",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg/500px-Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg",
+    "alt": "Ali Khamenei",
+    "credit": "khamenei.ir",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ali_Khamenei_Nowruz_message_official_portrait_1397_02.jpg"
+  }
+}

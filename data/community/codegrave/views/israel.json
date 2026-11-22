@@ -1,0 +1,83 @@
+{
+  "id": "israel",
+  "name": "Israel",
+  "description": "Israel and the land around it from Jericho and the kingdoms of the Bible to Rome, the crusades, the Ottomans, the founding of the state and its wars.",
+  "category": "places",
+  "tags": [
+    "israel",
+    "jerusalem",
+    "tel aviv",
+    "zionism",
+    "judaism",
+    "palestine"
+  ],
+  "entries": [
+    "dead-sea",
+    "jericho",
+    "jerusalem",
+    "david",
+    "second-temple",
+    "dead-sea-scrolls",
+    "church-of-the-holy-sepulchre",
+    "theodor-herzl",
+    "david-ben-gurion",
+    "golda-meir",
+    "balfour-declaration",
+    "yitzhak-rabin",
+    "israel",
+    "israeli-declaration-of-independence",
+    "1948-arab-israeli-war",
+    "benjamin-netanyahu",
+    "mossad",
+    "yad-vashem",
+    "trial-of-adolf-eichmann",
+    "six-day-war",
+    "camp-david-accords",
+    "oslo-accords",
+    "gaza-war-2023"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-ancient-land",
+      "name": "The ancient land",
+      "from": -9000,
+      "to": 135,
+      "note": "Jericho is one of the oldest towns. The kingdoms of Israel and Judah rose, the Temple was rebuilt after the exile, and the Romans destroyed it in 70 and crushed the last revolt in 135."
+    },
+    {
+      "id": "empires",
+      "name": "Empires",
+      "from": 136,
+      "to": 1896,
+      "note": "The land was ruled by Romans, Byzantines, Arab caliphs, crusaders, Mamluks and Ottomans, and Jerusalem's holy places drew pilgrims of three faiths."
+    },
+    {
+      "id": "zionism-and-mandate",
+      "name": "Zionism and mandate",
+      "from": 1897,
+      "to": 1947,
+      "note": "Herzl's Zionist movement brought Jewish settlers. Britain took Palestine in the First World War and promised a Jewish national home, and Arab and Jewish claims clashed."
+    },
+    {
+      "id": "the-state-of-israel",
+      "name": "The state of Israel",
+      "from": 1948,
+      "to": 2026,
+      "note": "Israel was declared in 1948, and war and Palestinian flight followed. Wars came in 1967 and 1973, peace with Egypt in 1979 and the Oslo Accords in the 1990s, and the war in Gaza began in 2023."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Israel.svg/330px-Flag_of_Israel.svg.png",
+    "alt": "Flag of Israel",
+    "credit": "Israel Belkind and Fanny Abramovitch (original) “The Provisional Council of State Proclamation of the Flag of the State ",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Israel.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/19/Hatikvah_%28first_recording%29.ogg/Hatikvah_%28first_recording%29.ogg.mp3",
+    "title": "Hatikvah",
+    "credit": "Hulda Lashanska",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hatikvah_(first_recording).ogg"
+  }
+}

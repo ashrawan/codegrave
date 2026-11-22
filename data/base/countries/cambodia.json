@@ -1,0 +1,51 @@
+{
+  "id": "cambodia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Cambodia",
+      "from": "1953"
+    }
+  ],
+  "summary": "A South East Asian kingdom, heir to the Khmer Empire of Angkor, independent from France since 1953.",
+  "wikidata": "Q424",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cambodia (Q424)",
+      "url": "https://www.wikidata.org/wiki/Q424",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cambodia",
+      "url": "https://en.wikipedia.org/wiki/Cambodia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Angkor_Wat_W-Seite.jpg/500px-Angkor_Wat_W-Seite.jpg",
+    "alt": "Cambodia",
+    "credit": "Manfred Werner (talk · contribs)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Angkor_Wat_W-Seite.jpg"
+  }
+}

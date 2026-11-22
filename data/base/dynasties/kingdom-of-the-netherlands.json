@@ -1,0 +1,47 @@
+{
+  "id": "kingdom-of-the-netherlands",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of the Netherlands",
+      "from": "1815"
+    }
+  ],
+  "summary": "The kingdom created after Napoleon's fall under the House of Orange, which lost Belgium in 1830.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q29999",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815-03-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "netherlands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of the Netherlands (Q29999)",
+      "url": "https://www.wikidata.org/wiki/Q29999",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of the Netherlands",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_the_Netherlands",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

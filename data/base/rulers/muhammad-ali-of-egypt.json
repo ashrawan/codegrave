@@ -1,0 +1,59 @@
+{
+  "id": "muhammad-ali-of-egypt",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Muhammad Ali of Egypt",
+      "from": "1769"
+    }
+  ],
+  "summary": "Ottoman governor who made Egypt a strong state of its own in the early 1800s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q182781",
+  "events": [
+    {
+      "type": "born",
+      "date": "1769-03-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1849-08-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Muhammad Ali of Egypt (Q182781)",
+      "url": "https://www.wikidata.org/wiki/Q182781",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Muhammad Ali of Egypt",
+      "url": "https://en.wikipedia.org/wiki/Muhammad_Ali_of_Egypt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/ModernEgypt%2C_Muhammad_Ali_by_Auguste_Couder%2C_BAP_17996.jpg/500px-ModernEgypt%2C_Muhammad_Ali_by_Auguste_Couder%2C_BAP_17996.jpg",
+    "alt": "Muhammad Ali of Egypt",
+    "credit": "Auguste Couder",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ModernEgypt,_Muhammad_Ali_by_Auguste_Couder,_BAP_17996.jpg"
+  }
+}

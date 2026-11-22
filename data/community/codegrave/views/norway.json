@@ -1,0 +1,72 @@
+{
+  "id": "norway",
+  "name": "Norway",
+  "description": "Norway from the Vikings and Harald Fairhair to union with Denmark and Sweden, independence, polar explorers, occupation, oil and peace prizes.",
+  "category": "places",
+  "tags": [
+    "norway",
+    "oslo",
+    "vikings",
+    "fjords",
+    "polar",
+    "oil"
+  ],
+  "entries": [
+    "harald-fairhair",
+    "norway",
+    "leif-erikson",
+    "battle-of-stiklestad",
+    "denmark-norway",
+    "constitution-of-norway",
+    "henrik-ibsen",
+    "edvard-grieg",
+    "fridtjof-nansen",
+    "edvard-munch",
+    "roald-amundsen",
+    "nobel-peace-prize",
+    "dissolution-of-the-union-between-norway-and-sweden",
+    "german-occupation-of-norway",
+    "kon-tiki-expedition",
+    "ekofisk",
+    "magnus-carlsen",
+    "erling-haaland",
+    "2011-norway-attacks"
+  ],
+  "checkpoints": [
+    {
+      "id": "vikings-and-kings",
+      "name": "Vikings and kings",
+      "from": 793,
+      "to": 1396,
+      "note": "Norwegian Vikings sailed to Britain, Iceland, Greenland and America. Harald Fairhair united the land, and Saint Olaf brought Christianity."
+    },
+    {
+      "id": "unions",
+      "name": "Unions",
+      "from": 1397,
+      "to": 1904,
+      "note": "Norway was joined with Denmark for four centuries and then with Sweden. It wrote its own constitution in 1814, and Ibsen, Grieg and Munch made its name."
+    },
+    {
+      "id": "independent-norway",
+      "name": "Independent Norway",
+      "from": 1905,
+      "to": 2026,
+      "note": "Norway became independent in 1905 and its explorers reached the South Pole. Germany occupied it in the Second World War, and North Sea oil made it one of the richest countries."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/330px-Flag_of_Norway.svg.png",
+    "alt": "Flag of Norway",
+    "credit": "Original: Fredrik Meltzer Vector: Gutten på Hemsen",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Norway.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f6/Norway_%28National_Anthem%29.ogg/Norway_%28National_Anthem%29.ogg.mp3",
+    "title": "Ja, vi elsker dette landet",
+    "credit": "https://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Norway_(National_Anthem).ogg"
+  }
+}

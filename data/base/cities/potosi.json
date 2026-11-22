@@ -1,0 +1,51 @@
+{
+  "id": "potosi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Potosí",
+      "from": "1545"
+    }
+  ],
+  "summary": "The silver city at the foot of the Cerro Rico.",
+  "wikidata": "Q35045",
+  "events": [
+    {
+      "type": "born",
+      "date": "1545",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bolivia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Potosí (Q35045)",
+      "url": "https://www.wikidata.org/wiki/Q35045",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Potosí",
+      "url": "https://en.wikipedia.org/wiki/Potosí",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Vista_de_la_Villa_Imperial_de_Potos%C3%AD.jpg/500px-Vista_de_la_Villa_Imperial_de_Potos%C3%AD.jpg",
+    "alt": "Potosí",
+    "credit": "Parallelepiped09",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vista_de_la_Villa_Imperial_de_Potos%C3%AD.jpg"
+  }
+}

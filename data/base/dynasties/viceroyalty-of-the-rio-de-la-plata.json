@@ -1,0 +1,52 @@
+{
+  "id": "viceroyalty-of-the-rio-de-la-plata",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Viceroyalty of the Río de la Plata",
+      "from": "1776"
+    }
+  ],
+  "summary": "The Spanish colony ruled from Buenos Aires from 1776.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q210551",
+  "events": [
+    {
+      "type": "born",
+      "date": "1776-08-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1810",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Viceroyalty of the Río de la Plata (Q210551)",
+      "url": "https://www.wikidata.org/wiki/Q210551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Viceroyalty of the Río de la Plata",
+      "url": "https://en.wikipedia.org/wiki/Viceroyalty_of_the_Río_de_la_Plata",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

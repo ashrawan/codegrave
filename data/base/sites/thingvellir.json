@@ -1,0 +1,51 @@
+{
+  "id": "thingvellir",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Thingvellir",
+      "from": "0930"
+    }
+  ],
+  "summary": "The rift valley where the Althing met.",
+  "wikidata": "Q107370",
+  "events": [
+    {
+      "type": "born",
+      "date": "0930",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iceland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thingvellir (Q107370)",
+      "url": "https://www.wikidata.org/wiki/Q107370",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Þingvellir",
+      "url": "https://en.wikipedia.org/wiki/Þingvellir",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Thingvellir.jpg/500px-Thingvellir.jpg",
+    "alt": "Thingvellir",
+    "credit": "Andreas Tille",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Thingvellir.jpg"
+  }
+}

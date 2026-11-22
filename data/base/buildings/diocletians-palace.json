@@ -1,0 +1,54 @@
+{
+  "id": "diocletians-palace",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Diocletian's Palace",
+      "from": "0293"
+    }
+  ],
+  "summary": "The palace of a Roman emperor, now the old town of Split.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q322287",
+  "events": [
+    {
+      "type": "born",
+      "date": "0293",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "croatia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Diocletian's Palace (Q322287)",
+      "url": "https://www.wikidata.org/wiki/Q322287",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Diocletian's Palace",
+      "url": "https://en.wikipedia.org/wiki/Diocletian's_Palace",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Diocletian%27s_Palace_%28original_appearance%29.jpg/500px-Diocletian%27s_Palace_%28original_appearance%29.jpg",
+    "alt": "Diocletian's Palace",
+    "credit": "Ernest Hébrard (recoloured by DIREKTOR)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Diocletian%27s_Palace_(original_appearance).jpg"
+  }
+}

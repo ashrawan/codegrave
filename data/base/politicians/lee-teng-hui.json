@@ -1,0 +1,59 @@
+{
+  "id": "lee-teng-hui",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Lee Teng-hui",
+      "from": "1923"
+    }
+  ],
+  "summary": "President who led Taiwan's move to democracy and won its first direct presidential election in 1996.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q315528",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-01-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "taiwan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lee Teng-hui (Q315528)",
+      "url": "https://www.wikidata.org/wiki/Q315528",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lee Teng-hui",
+      "url": "https://en.wikipedia.org/wiki/Lee_Teng-hui",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Lee_Teng-hui_official_portrait.png/500px-Lee_Teng-hui_official_portrait.png",
+    "alt": "Lee Teng-hui",
+    "credit": "李登輝基金會（Lee Teng-hui Foundation）",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lee_Teng-hui_official_portrait.png"
+  }
+}

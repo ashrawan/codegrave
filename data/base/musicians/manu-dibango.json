@@ -1,0 +1,59 @@
+{
+  "id": "manu-dibango",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Manu Dibango",
+      "from": "1933"
+    }
+  ],
+  "summary": "Saxophonist whose Soul Makossa became a world hit.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q445829",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933-12-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-03-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cameroon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manu Dibango (Q445829)",
+      "url": "https://www.wikidata.org/wiki/Q445829",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manu Dibango",
+      "url": "https://en.wikipedia.org/wiki/Manu_Dibango",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/LesEscales2019ManuDibango_03_%28cropped%29.jpg/500px-LesEscales2019ManuDibango_03_%28cropped%29.jpg",
+    "alt": "Manu Dibango",
+    "credit": "Selbymay",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LesEscales2019ManuDibango_03_(cropped).jpg"
+  }
+}

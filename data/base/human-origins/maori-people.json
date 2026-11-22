@@ -1,0 +1,51 @@
+{
+  "id": "maori-people",
+  "category": "human-origins",
+  "names": [
+    {
+      "name": "Māori people",
+      "from": "1300"
+    }
+  ],
+  "summary": "The Polynesian people who reached Aotearoa around 1300, the last major land to be settled by humans.",
+  "wikidata": "Q6122670",
+  "events": [
+    {
+      "type": "born",
+      "date": "1300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Māori people (Q6122670)",
+      "url": "https://www.wikidata.org/wiki/Q6122670",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Māori people",
+      "url": "https://en.wikipedia.org/wiki/Māori_people",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/00_3451_Maori%2C_indigenous_people_of_New_Zealand.jpg/500px-00_3451_Maori%2C_indigenous_people_of_New_Zealand.jpg",
+    "alt": "Māori people",
+    "credit": "W. Bulach",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:00_3451_Maori,_indigenous_people_of_New_Zealand.jpg"
+  }
+}

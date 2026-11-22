@@ -1,0 +1,54 @@
+{
+  "id": "felix-tshisekedi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Félix Tshisekedi",
+      "from": "1963"
+    }
+  ],
+  "summary": "President since 2019.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q29032770",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-06-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Félix Tshisekedi (Q29032770)",
+      "url": "https://www.wikidata.org/wiki/Q29032770",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Félix Tshisekedi",
+      "url": "https://en.wikipedia.org/wiki/Félix_Tshisekedi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Felix_Tshisekedi%2C_President_of_the_Democratic_Republic_of_the_Congo_%2855078564106%29_%28cropped%29.jpg/500px-Felix_Tshisekedi%2C_President_of_the_Democratic_Republic_of_the_Congo_%2855078564106%29_%28cropped%29.jpg",
+    "alt": "Félix Tshisekedi",
+    "credit": "U.S. Department of State",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Felix_Tshisekedi,_President_of_the_Democratic_Republic_of_the_Congo_(55078564106)_(cropped).jpg"
+  }
+}

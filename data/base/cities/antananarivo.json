@@ -1,0 +1,51 @@
+{
+  "id": "antananarivo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Antananarivo",
+      "from": "1625"
+    }
+  ],
+  "summary": "The capital in the highlands.",
+  "wikidata": "Q3915",
+  "events": [
+    {
+      "type": "born",
+      "date": "1625",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Antananarivo (Q3915)",
+      "url": "https://www.wikidata.org/wiki/Q3915",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Antananarivo",
+      "url": "https://en.wikipedia.org/wiki/Antananarivo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Lake_Anosy%2C_Central_Antananarivo%2C_Capital_of_Madagascar%2C_Photo_by_Sascha_Grabow.jpg/500px-Lake_Anosy%2C_Central_Antananarivo%2C_Capital_of_Madagascar%2C_Photo_by_Sascha_Grabow.jpg",
+    "alt": "Antananarivo",
+    "credit": "Sascha Grabow www.saschagrabow.com",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lake_Anosy,_Central_Antananarivo,_Capital_of_Madagascar,_Photo_by_Sascha_Grabow.jpg"
+  }
+}

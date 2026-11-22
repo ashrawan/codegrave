@@ -1,0 +1,54 @@
+{
+  "id": "brest-fortress",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Brest Fortress",
+      "from": "1836"
+    }
+  ],
+  "summary": "The fortress that held out in 1941.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q23868",
+  "events": [
+    {
+      "type": "born",
+      "date": "1836",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belarus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brest Fortress (Q23868)",
+      "url": "https://www.wikidata.org/wiki/Q23868",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brest Fortress",
+      "url": "https://en.wikipedia.org/wiki/Brest_Fortress",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/BrestFortress7.JPG/500px-BrestFortress7.JPG",
+    "alt": "Brest Fortress",
+    "credit": "Szeder László",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BrestFortress7.JPG"
+  }
+}

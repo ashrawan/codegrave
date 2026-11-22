@@ -1,0 +1,59 @@
+{
+  "id": "harald-fairhair",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Harald Fairhair",
+      "from": "0851"
+    }
+  ],
+  "summary": "King remembered as the first to unite Norway, around 900.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q206123",
+  "events": [
+    {
+      "type": "born",
+      "date": "0851",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0933",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Harald Fairhair (Q206123)",
+      "url": "https://www.wikidata.org/wiki/Q206123",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Harald Fairhair",
+      "url": "https://en.wikipedia.org/wiki/Harald_Fairhair",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flateyjarbok_Haraldr_Halfdan.jpg/500px-Flateyjarbok_Haraldr_Halfdan.jpg",
+    "alt": "Harald Fairhair",
+    "credit": "Tokle",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flateyjarbok_Haraldr_Halfdan.jpg"
+  }
+}

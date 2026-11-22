@@ -1,0 +1,59 @@
+{
+  "id": "spanish-american-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Spanish–American War",
+      "from": "1898"
+    }
+  ],
+  "summary": "The war of 1898 that ended Spanish rule.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q12583",
+  "events": [
+    {
+      "type": "born",
+      "date": "1898-04-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1898-08-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cuba"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish–American War (Q12583)",
+      "url": "https://www.wikidata.org/wiki/Q12583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish–American War",
+      "url": "https://en.wikipedia.org/wiki/Spanish–American_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Maine_explosion.jpg/500px-Maine_explosion.jpg",
+    "alt": "Spanish–American War",
+    "credit": "Original uploader was Fouquet at nl.wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Maine_explosion.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "malacca-sultanate",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Malacca Sultanate",
+      "from": "1400"
+    }
+  ],
+  "summary": "A great trading kingdom on the Strait of Malacca that spread Islam through the region.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q46652",
+  "events": [
+    {
+      "type": "born",
+      "date": "1400",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1511-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malaysia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Malacca Sultanate (Q46652)",
+      "url": "https://www.wikidata.org/wiki/Q46652",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malacca Sultanate",
+      "url": "https://en.wikipedia.org/wiki/Malacca_Sultanate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

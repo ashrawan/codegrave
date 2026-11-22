@@ -1,0 +1,51 @@
+{
+  "id": "tassili-najjer",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Tassili n'Ajjer",
+      "from": "-10000"
+    }
+  ],
+  "summary": "A Saharan plateau with thousands of rock paintings from a time when the desert was green.",
+  "wikidata": "Q190048",
+  "events": [
+    {
+      "type": "born",
+      "date": "-10000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "algeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tassili n'Ajjer (Q190048)",
+      "url": "https://www.wikidata.org/wiki/Q190048",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tassili n'Ajjer",
+      "url": "https://en.wikipedia.org/wiki/Tassili_n'Ajjer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Tassili_Desert_Algeria.jpg/500px-Tassili_Desert_Algeria.jpg",
+    "alt": "Tassili n'Ajjer",
+    "credit": "magharebia",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tassili_Desert_Algeria.jpg"
+  }
+}

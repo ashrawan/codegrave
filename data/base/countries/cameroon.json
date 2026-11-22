@@ -1,0 +1,44 @@
+{
+  "id": "cameroon",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Cameroon",
+      "from": "1960"
+    }
+  ],
+  "summary": "A country of central Africa, once ruled by Germany and then split between France and Britain, independent since 1960.",
+  "wikidata": "Q1009",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cameroon (Q1009)",
+      "url": "https://www.wikidata.org/wiki/Q1009",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cameroon",
+      "url": "https://en.wikipedia.org/wiki/Cameroon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

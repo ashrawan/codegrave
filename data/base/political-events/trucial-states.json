@@ -1,0 +1,52 @@
+{
+  "id": "trucial-states",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Trucial States",
+      "from": "1820"
+    }
+  ],
+  "summary": "The sheikhdoms of the coast bound to Britain by treaties from 1820 until 1971.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1852345",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820-01-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-arab-emirates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Trucial States (Q1852345)",
+      "url": "https://www.wikidata.org/wiki/Q1852345",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trucial States",
+      "url": "https://en.wikipedia.org/wiki/Trucial_States",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

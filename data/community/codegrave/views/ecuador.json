@@ -1,0 +1,68 @@
+{
+  "id": "ecuador",
+  "name": "Ecuador",
+  "description": "Ecuador from Valdivia pottery and the Inca north to Spanish Quito, independence, the Galápagos and today.",
+  "category": "places",
+  "tags": [
+    "ecuador",
+    "quito",
+    "galapagos",
+    "andes",
+    "amazon",
+    "equator"
+  ],
+  "entries": [
+    "galapagos-islands",
+    "valdivia-culture",
+    "inca-empire",
+    "atahualpa",
+    "cotopaxi",
+    "quito",
+    "antonio-jose-de-sucre",
+    "chimborazo",
+    "charles-darwin",
+    "gran-colombia",
+    "ecuador",
+    "eloy-alfaro",
+    "rafael-correa",
+    "daniel-noboa",
+    "2016-ecuador-earthquake"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-the-incas",
+      "name": "Before the Incas",
+      "from": -3500,
+      "to": 1462,
+      "note": "The Valdivia people made some of the first pottery of the Americas. Many peoples lived on the coast and in the highlands."
+    },
+    {
+      "id": "incas-and-spain",
+      "name": "Incas and Spain",
+      "from": 1463,
+      "to": 1808,
+      "note": "The Incas conquered the land in the late 1400s. Spain took it in the 1530s and ruled from Quito."
+    },
+    {
+      "id": "republic",
+      "name": "Republic",
+      "from": 1809,
+      "to": 2026,
+      "note": "Quito rose in 1809, Sucre won at Pichincha in 1822, and Ecuador left Gran Colombia in 1830."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Flag_of_Ecuador.svg/330px-Flag_of_Ecuador.svg.png",
+    "alt": "Flag of Ecuador",
+    "credit": "President of the Republic of Ecuador, first uploaded by Denelson83 as Flag of Ecuador.svg, modifications by Husunqu, Zsc",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ecuador.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6e/Anthem_of_Ecuador.ogg/Anthem_of_Ecuador.ogg.mp3",
+    "title": "Salve, Oh Patria",
+    "credit": "https://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Anthem_of_Ecuador.ogg"
+  }
+}

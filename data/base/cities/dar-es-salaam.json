@@ -1,0 +1,51 @@
+{
+  "id": "dar-es-salaam",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Dar es Salaam",
+      "from": "1862"
+    }
+  ],
+  "summary": "The largest city.",
+  "wikidata": "Q1960",
+  "events": [
+    {
+      "type": "born",
+      "date": "1862",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tanzania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dar es Salaam (Q1960)",
+      "url": "https://www.wikidata.org/wiki/Q1960",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dar es Salaam",
+      "url": "https://en.wikipedia.org/wiki/Dar_es_Salaam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Dar_es_Salaam_before_dusk.jpg/500px-Dar_es_Salaam_before_dusk.jpg",
+    "alt": "Dar es Salaam",
+    "credit": "Muhammad Mahdi Karim",
+    "licence": "GFDL 1.2",
+    "source": "https://commons.wikimedia.org/wiki/File:Dar_es_Salaam_before_dusk.jpg"
+  }
+}

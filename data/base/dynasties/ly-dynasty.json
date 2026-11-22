@@ -1,0 +1,59 @@
+{
+  "id": "ly-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Lý dynasty",
+      "from": "1009"
+    }
+  ],
+  "summary": "The dynasty that founded Hanoi as its capital in 1010.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q878309",
+  "events": [
+    {
+      "type": "born",
+      "date": "1009-11-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1226-01-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lý dynasty (Q878309)",
+      "url": "https://www.wikidata.org/wiki/Q878309",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lý dynasty",
+      "url": "https://en.wikipedia.org/wiki/Lý_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Temple_in_Vietnam_1.jpg/500px-Temple_in_Vietnam_1.jpg",
+    "alt": "Lý dynasty",
+    "credit": "Silveringking",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Temple_in_Vietnam_1.jpg"
+  }
+}

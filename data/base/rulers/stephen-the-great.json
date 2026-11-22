@@ -1,0 +1,59 @@
+{
+  "id": "stephen-the-great",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Stephen the Great",
+      "from": "1433"
+    }
+  ],
+  "summary": "Prince of Moldavia who fought off the Ottomans and built painted monasteries.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q218134",
+  "events": [
+    {
+      "type": "born",
+      "date": "1433",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1504-07-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stephen the Great (Q218134)",
+      "url": "https://www.wikidata.org/wiki/Q218134",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stephen the Great",
+      "url": "https://en.wikipedia.org/wiki/Stephen_the_Great",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Stefan_cel_Mare.jpg/500px-Stefan_cel_Mare.jpg",
+    "alt": "Stephen the Great",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Stefan_cel_Mare.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "operation-bagration",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Operation Bagration",
+      "from": "1944"
+    }
+  ],
+  "summary": "The Soviet offensive of 1944.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q151052",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-06-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belarus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Operation Bagration (Q151052)",
+      "url": "https://www.wikidata.org/wiki/Q151052",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Operation Bagration",
+      "url": "https://en.wikipedia.org/wiki/Operation_Bagration",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/BagrationMap2.jpg/500px-BagrationMap2.jpg",
+    "alt": "Operation Bagration",
+    "credit": "United States Army",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BagrationMap2.jpg"
+  }
+}

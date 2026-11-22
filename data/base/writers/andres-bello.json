@@ -1,0 +1,59 @@
+{
+  "id": "andres-bello",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Andrés Bello",
+      "from": "1781"
+    }
+  ],
+  "summary": "Poet, lawyer and teacher of Bolívar.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q439195",
+  "events": [
+    {
+      "type": "born",
+      "date": "1781-11-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1865-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Andrés Bello (Q439195)",
+      "url": "https://www.wikidata.org/wiki/Q439195",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andrés Bello",
+      "url": "https://en.wikipedia.org/wiki/Andrés_Bello",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/AndresBello.jpg/500px-AndresBello.jpg",
+    "alt": "Andrés Bello",
+    "credit": "Raymond Monvoisin",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:AndresBello.jpg"
+  }
+}

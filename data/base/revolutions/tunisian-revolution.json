@@ -1,0 +1,59 @@
+{
+  "id": "tunisian-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Tunisian revolution",
+      "from": "2010"
+    }
+  ],
+  "summary": "The revolution of 2011 that began the Arab Spring.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q46959",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-12-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-01-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tunisia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tunisian revolution (Q46959)",
+      "url": "https://www.wikidata.org/wiki/Q46959",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tunisian revolution",
+      "url": "https://en.wikipedia.org/wiki/Tunisian_revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Caravane_de_la_lib%C3%A9ration_5.jpg/500px-Caravane_de_la_lib%C3%A9ration_5.jpg",
+    "alt": "Tunisian revolution",
+    "credit": "M.Rais",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caravane_de_la_lib%C3%A9ration_5.jpg"
+  }
+}

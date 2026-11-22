@@ -1,0 +1,59 @@
+{
+  "id": "dacia",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Dacia",
+      "from": "-0060"
+    }
+  ],
+  "summary": "The kingdom of the Dacians north of the Danube, conquered by the Roman emperor Trajan in 106 CE.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q173082",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0060",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0106",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dacia (Q173082)",
+      "url": "https://www.wikidata.org/wiki/Q173082",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dacia",
+      "url": "https://en.wikipedia.org/wiki/Dacia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sarmizegetusa_Regia_2011_2.jpg/500px-Sarmizegetusa_Regia_2011_2.jpg",
+    "alt": "Dacia",
+    "credit": "TudorTulok",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarmizegetusa_Regia_2011_2.jpg"
+  }
+}

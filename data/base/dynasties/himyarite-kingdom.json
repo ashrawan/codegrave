@@ -1,0 +1,59 @@
+{
+  "id": "himyarite-kingdom",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Himyarite Kingdom",
+      "from": "-0110"
+    }
+  ],
+  "summary": "The last great kingdom of ancient Yemen.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q289577",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0110",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0525",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Himyarite Kingdom (Q289577)",
+      "url": "https://www.wikidata.org/wiki/Q289577",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Himyarite Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Himyarite_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Himyarite_Kingdom.png/500px-Himyarite_Kingdom.png",
+    "alt": "Himyarite Kingdom",
+    "credit": "DamiKarv",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Himyarite_Kingdom.png"
+  }
+}

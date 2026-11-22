@@ -1,0 +1,59 @@
+{
+  "id": "operation-entebbe",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Entebbe raid",
+      "from": "1976"
+    }
+  ],
+  "summary": "The Israeli rescue of hostages in 1976.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q33933",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-07-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Entebbe raid (Q33933)",
+      "url": "https://www.wikidata.org/wiki/Q33933",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Entebbe raid",
+      "url": "https://en.wikipedia.org/wiki/Entebbe_raid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Operation_Thunderbolt._IV.jpg/500px-Operation_Thunderbolt._IV.jpg",
+    "alt": "Entebbe raid",
+    "credit": "IDF Spokesperson's Unit photographer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Operation_Thunderbolt._IV.jpg"
+  }
+}

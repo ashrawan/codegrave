@@ -1,0 +1,59 @@
+{
+  "id": "george-enescu",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "George Enescu",
+      "from": "1881"
+    }
+  ],
+  "summary": "Composer and violinist, the greatest figure of Romanian music.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q77177",
+  "events": [
+    {
+      "type": "born",
+      "date": "1881-08-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1955-05-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: George Enescu (Q77177)",
+      "url": "https://www.wikidata.org/wiki/Q77177",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George Enescu",
+      "url": "https://en.wikipedia.org/wiki/George_Enescu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/George-Enesco_crop.jpg/500px-George-Enesco_crop.jpg",
+    "alt": "George Enescu",
+    "credit": "Unknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:George-Enesco_crop.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "amadou-bamba",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Amadou Bamba",
+      "from": "1853"
+    }
+  ],
+  "summary": "Sufi founder of the Mouride brotherhood.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q452264",
+  "events": [
+    {
+      "type": "born",
+      "date": "1853",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1927-07-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "senegal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Amadou Bamba (Q452264)",
+      "url": "https://www.wikidata.org/wiki/Q452264",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amadou Bamba",
+      "url": "https://en.wikipedia.org/wiki/Amadou_Bamba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/AhmaduBamba.jpg/500px-AhmaduBamba.jpg",
+    "alt": "Amadou Bamba",
+    "credit": "en:Image:AhmaduBamba.jpg",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:AhmaduBamba.jpg"
+  }
+}

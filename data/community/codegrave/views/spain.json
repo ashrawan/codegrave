@@ -1,0 +1,106 @@
+{
+  "id": "spain",
+  "name": "Spain",
+  "description": "Spain from the cave painters of Altamira and Roman Hispania to al-Andalus, the Catholic Monarchs, the empire, civil war, Franco and democracy.",
+  "category": "places",
+  "tags": [
+    "spain",
+    "madrid",
+    "barcelona",
+    "al-andalus",
+    "flamenco",
+    "la liga"
+  ],
+  "entries": [
+    "cave-of-altamira",
+    "hispania",
+    "visigothic-kingdom",
+    "al-andalus",
+    "reconquista",
+    "mezquita-of-cordoba",
+    "university-of-salamanca",
+    "alhambra",
+    "house-of-bourbon",
+    "isabella-i-of-castile",
+    "spain",
+    "voyages-of-columbus",
+    "alhambra-decree",
+    "spanish-empire",
+    "new-spain",
+    "miguel-de-cervantes",
+    "spanish-armada",
+    "diego-velazquez",
+    "las-meninas",
+    "francisco-goya",
+    "battle-of-trafalgar",
+    "peninsular-war",
+    "antoni-gaudi",
+    "pablo-picasso",
+    "sagrada-familia",
+    "francisco-franco",
+    "fc-barcelona",
+    "real-madrid",
+    "salvador-dali",
+    "spanish-civil-war",
+    "juan-carlos-i",
+    "la-tomatina",
+    "pedro-sanchez",
+    "spanish-transition-to-democracy",
+    "world-cup-1982",
+    "rafael-nadal",
+    "olympics-1992",
+    "2004-madrid-train-bombings",
+    "world-cup-2010"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-spain",
+      "name": "Before Spain",
+      "from": -36000,
+      "to": 710,
+      "note": "Painters decorated Altamira in the Ice Age. Iberians, Celts, Phoenicians and Greeks came before Rome made the land Hispania, and the Visigoths ruled from Toledo after Rome fell."
+    },
+    {
+      "id": "al-andalus",
+      "name": "Al-Andalus",
+      "from": 711,
+      "to": 1491,
+      "note": "Muslim armies crossed from Africa in 711. Córdoba became one of the great cities of the world, while the Christian kingdoms of the north slowly pushed south."
+    },
+    {
+      "id": "empire",
+      "name": "Empire",
+      "from": 1492,
+      "to": 1807,
+      "note": "In 1492 Granada fell, the Jews were expelled and Columbus reached the Americas. Spain built an empire from Mexico to the Philippines, and its golden age gave the world Cervantes and Velázquez."
+    },
+    {
+      "id": "war-and-dictatorship",
+      "name": "War and dictatorship",
+      "from": 1808,
+      "to": 1974,
+      "note": "Napoleon's invasion was followed by a century of lost colonies and unrest. The Civil War of 1936 to 1939 ended in Franco's long dictatorship."
+    },
+    {
+      "id": "democracy",
+      "name": "Democracy",
+      "from": 1975,
+      "to": 2026,
+      "note": "After Franco's death King Juan Carlos backed democracy. Spain joined Europe in 1986, hosted the Barcelona Olympics, and won the World Cup in 2010."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Spain.svg/330px-Flag_of_Spain.svg.png",
+    "alt": "Flag of Spain",
+    "credit": "RelShot 263, Echando una mano; earlier version was Pedro A. Gracia Fajardo, escudo de Manual de Imagen Institucional de ",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Spain.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c8/Marcha_Real-Royal_March_by_US_Navy_Band.ogg/Marcha_Real-Royal_March_by_US_Navy_Band.ogg.mp3",
+    "title": "Marcha Real",
+    "credit": "http://www.navyband.navy.mil/national_anthems_spain.html https://web.archive.org/web/20041019083808/http://www.navyband.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marcha_Real-Royal_March_by_US_Navy_Band.ogg"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "czech-republic",
+  "name": "Czech Republic",
+  "description": "The Czech lands from Great Moravia and the kings of Bohemia to Hus, the Habsburgs, Czechoslovakia, 1968, the Velvet Revolution and today.",
+  "category": "places",
+  "tags": [
+    "czech republic",
+    "czechia",
+    "prague",
+    "bohemia",
+    "moravia",
+    "velvet revolution"
+  ],
+  "entries": [
+    "great-moravia",
+    "czech-republic",
+    "kingdom-of-bohemia",
+    "charles-university",
+    "charles-bridge",
+    "jan-hus",
+    "defenestrations-of-prague",
+    "battle-of-austerlitz",
+    "gregor-mendel",
+    "antonin-dvorak",
+    "franz-kafka",
+    "skoda-auto",
+    "czechoslovakia",
+    "vaclav-havel",
+    "munich-agreement",
+    "andrej-babis",
+    "prague-spring",
+    "velvet-revolution",
+    "dissolution-of-czechoslovakia"
+  ],
+  "checkpoints": [
+    {
+      "id": "moravia-and-bohemia",
+      "name": "Moravia and Bohemia",
+      "from": 833,
+      "to": 1414,
+      "note": "Great Moravia rose in the 800s, and Bohemia became a kingdom. Charles IV made Prague the capital of the empire and founded its university."
+    },
+    {
+      "id": "hussites-and-habsburgs",
+      "name": "Hussites and Habsburgs",
+      "from": 1415,
+      "to": 1917,
+      "note": "Hus was burned in 1415, and his followers fought off crusades. The Habsburgs took the crown in 1526, and the Czech language and music revived in the 1800s."
+    },
+    {
+      "id": "czechoslovakia",
+      "name": "Czechoslovakia",
+      "from": 1918,
+      "to": 1992,
+      "note": "Czechoslovakia was born in 1918. It was given up to Hitler in 1938, ruled by communists from 1948, crushed in 1968, and freed by the Velvet Revolution."
+    },
+    {
+      "id": "czech-republic",
+      "name": "Czech Republic",
+      "from": 1993,
+      "to": 2026,
+      "note": "The Czech Republic began in 1993 and joined NATO and the European Union."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/330px-Flag_of_the_Czech_Republic.svg.png",
+    "alt": "Flag of Czech Republic",
+    "credit": "Jaroslav Kursa",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Czech_Republic.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/de/Kde_domov_muj.ogg/Kde_domov_muj.ogg.mp3",
+    "title": "Kde domov můj",
+    "credit": "Alton C. Morris, Works Progress Administration",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kde_domov_muj.ogg"
+  }
+}

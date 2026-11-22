@@ -1,0 +1,71 @@
+{
+  "id": "sri-lanka",
+  "name": "Sri Lanka",
+  "description": "Sri Lanka from Anuradhapura and Buddhism to Polonnaruwa, the Portuguese, Dutch and British, independence, civil war and today.",
+  "category": "places",
+  "tags": [
+    "sri lanka",
+    "ceylon",
+    "colombo",
+    "buddhism",
+    "tea",
+    "kandy"
+  ],
+  "entries": [
+    "anuradhapura-kingdom",
+    "sigiriya",
+    "polonnaruwa-kingdom",
+    "galle-fort",
+    "british-ceylon",
+    "ceylon-tea",
+    "s-w-r-d-bandaranaike",
+    "sirimavo-bandaranaike",
+    "mahinda-rajapaksa",
+    "sri-lanka",
+    "anura-kumara-dissanayake",
+    "sanath-jayasuriya",
+    "muttiah-muralitharan",
+    "sri-lankan-civil-war",
+    "cricket-world-cup-1996",
+    "indian-ocean-tsunami-2004",
+    "sri-lankan-economic-crisis",
+    "aragalaya"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-kingdoms",
+      "name": "Ancient kingdoms",
+      "from": -377,
+      "to": 1504,
+      "note": "Anuradhapura and then Polonnaruwa ruled great irrigation works and Buddhist shrines."
+    },
+    {
+      "id": "colonies",
+      "name": "Colonies",
+      "from": 1505,
+      "to": 1947,
+      "note": "The Portuguese and Dutch held the coasts. Britain took the whole island in 1815 and planted tea."
+    },
+    {
+      "id": "independent-sri-lanka",
+      "name": "Independent Sri Lanka",
+      "from": 1948,
+      "to": 2026,
+      "note": "Ceylon became independent in 1948 and Sri Lanka in 1972. Civil war lasted until 2009, and the crisis of 2022 brought a new government."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Sri_Lanka.svg/330px-Flag_of_Sri_Lanka.svg.png",
+    "alt": "Flag of Sri Lanka",
+    "credit": "Original: Sri Lanka Vectorization: Zscout370, Mike Rohsopht",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Sri_Lanka.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8c/Sri_Lankan_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga/Sri_Lankan_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga.mp3",
+    "title": "Sri Lanka Matha",
+    "credit": "https://web.archive.org/web/20181103185139if_/http://www.navyband.navy.mil/anthems/anthems/sri_lanka_jan2017.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sri_Lankan_national_anthem,_performed_by_the_United_States_Navy_Band.oga"
+  }
+}

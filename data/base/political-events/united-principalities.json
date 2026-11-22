@@ -1,0 +1,52 @@
+{
+  "id": "united-principalities",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "United Principalities",
+      "from": "1859"
+    }
+  ],
+  "summary": "The union of Wallachia and Moldavia in 1859 under one prince, the beginning of Romania.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q958291",
+  "events": [
+    {
+      "type": "born",
+      "date": "1859-01-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1881-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Principalities (Q958291)",
+      "url": "https://www.wikidata.org/wiki/Q958291",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Principalities",
+      "url": "https://en.wikipedia.org/wiki/United_Principalities",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

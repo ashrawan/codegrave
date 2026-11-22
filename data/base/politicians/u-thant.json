@@ -1,0 +1,59 @@
+{
+  "id": "u-thant",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "U Thant",
+      "from": "1909"
+    }
+  ],
+  "summary": "Secretary-General of the United Nations.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1264",
+  "events": [
+    {
+      "type": "born",
+      "date": "1909-01-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-11-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: U Thant (Q1264)",
+      "url": "https://www.wikidata.org/wiki/Q1264",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: U Thant",
+      "url": "https://en.wikipedia.org/wiki/U_Thant",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/U_Thant_%281963%29.jpg/500px-U_Thant_%281963%29.jpg",
+    "alt": "U Thant",
+    "credit": "Jack de Nijs for Anefo / Anefo",
+    "licence": "CC BY-SA 3.0 nl",
+    "source": "https://commons.wikimedia.org/wiki/File:U_Thant_(1963).jpg"
+  }
+}

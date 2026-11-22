@@ -1,0 +1,59 @@
+{
+  "id": "syngman-rhee",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Syngman Rhee",
+      "from": "1875"
+    }
+  ],
+  "summary": "First president of South Korea, who led it through the Korean War and was driven out by student protests in 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q171684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1875-03-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-07-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Syngman Rhee (Q171684)",
+      "url": "https://www.wikidata.org/wiki/Q171684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Syngman Rhee",
+      "url": "https://en.wikipedia.org/wiki/Syngman_Rhee",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Rhee_Syng-Man_in_1948.jpg/500px-Rhee_Syng-Man_in_1948.jpg",
+    "alt": "Syngman Rhee",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rhee_Syng-Man_in_1948.jpg"
+  }
+}

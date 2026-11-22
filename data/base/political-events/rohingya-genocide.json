@@ -1,0 +1,54 @@
+{
+  "id": "rohingya-genocide",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Rohingya genocide",
+      "from": "2016"
+    }
+  ],
+  "summary": "The army's campaign against the Rohingya in 2017.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q28136551",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-10-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rohingya genocide (Q28136551)",
+      "url": "https://www.wikidata.org/wiki/Q28136551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rohingya genocide",
+      "url": "https://en.wikipedia.org/wiki/Rohingya_genocide",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/A_Rohingya_Woman_named_Mumtaz_brutally_injured_by_the_Myanmar_military.jpg/500px-A_Rohingya_Woman_named_Mumtaz_brutally_injured_by_the_Myanmar_military.jpg",
+    "alt": "Rohingya genocide",
+    "credit": "Saahmadbulbul",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:A_Rohingya_Woman_named_Mumtaz_brutally_injured_by_the_Myanmar_military.jpg"
+  }
+}

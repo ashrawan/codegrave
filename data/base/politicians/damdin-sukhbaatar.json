@@ -1,0 +1,59 @@
+{
+  "id": "damdin-sukhbaatar",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Damdin Sükhbaatar",
+      "from": "1893"
+    }
+  ],
+  "summary": "Leader of the revolution of 1921.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q314105",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893-02-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1923-02-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Damdin Sükhbaatar (Q314105)",
+      "url": "https://www.wikidata.org/wiki/Q314105",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Damdin Sükhbaatar",
+      "url": "https://en.wikipedia.org/wiki/Damdin_Sükhbaatar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Sukhbaatar.jpg/500px-Sukhbaatar.jpg",
+    "alt": "Damdin Sükhbaatar",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sukhbaatar.jpg"
+  }
+}

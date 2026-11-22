@@ -1,0 +1,54 @@
+{
+  "id": "badshahi-mosque",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Badshahi Mosque",
+      "from": "1671"
+    }
+  ],
+  "summary": "The great red mosque of Lahore built by the emperor Aurangzeb.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q330872",
+  "events": [
+    {
+      "type": "born",
+      "date": "1671",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Badshahi Mosque (Q330872)",
+      "url": "https://www.wikidata.org/wiki/Q330872",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Badshahi Mosque",
+      "url": "https://en.wikipedia.org/wiki/Badshahi_Mosque",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Badshahi_Mosque_July_1_2005_pic32_by_Ali_Imran_%281%29.jpg/500px-Badshahi_Mosque_July_1_2005_pic32_by_Ali_Imran_%281%29.jpg",
+    "alt": "Badshahi Mosque",
+    "credit": "Ali Imran",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Badshahi_Mosque_July_1_2005_pic32_by_Ali_Imran_(1).jpg"
+  }
+}

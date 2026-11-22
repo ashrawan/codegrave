@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-iraq",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Iraq",
+      "from": "1921"
+    }
+  ],
+  "summary": "The kingdom set up under British mandate in 1921, overthrown in 1958.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q149805",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1958-07-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Iraq (Q149805)",
+      "url": "https://www.wikidata.org/wiki/Q149805",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Iraq",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Iraq",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

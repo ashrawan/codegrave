@@ -1,0 +1,56 @@
+{
+  "id": "varna-necropolis",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Varna Necropolis",
+      "from": "-4500"
+    }
+  ],
+  "summary": "A burial ground holding the oldest worked gold in the world.",
+  "wikidata": "Q946052",
+  "events": [
+    {
+      "type": "born",
+      "date": "-4500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-4400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Varna Necropolis (Q946052)",
+      "url": "https://www.wikidata.org/wiki/Q946052",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Varna Necropolis",
+      "url": "https://en.wikipedia.org/wiki/Varna_Necropolis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Or_de_Varna_-_N%C3%A9cropole.jpg/500px-Or_de_Varna_-_N%C3%A9cropole.jpg",
+    "alt": "Varna Necropolis",
+    "credit": "Yelkrokoyade",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Or_de_Varna_-_N%C3%A9cropole.jpg"
+  }
+}

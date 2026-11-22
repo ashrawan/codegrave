@@ -1,0 +1,59 @@
+{
+  "id": "bela-bartok",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Béla Bartók",
+      "from": "1881"
+    }
+  ],
+  "summary": "Composer who gathered folk songs and made them into modern music.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q83326",
+  "events": [
+    {
+      "type": "born",
+      "date": "1881-03-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945-09-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Béla Bartók (Q83326)",
+      "url": "https://www.wikidata.org/wiki/Q83326",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Béla Bartók",
+      "url": "https://en.wikipedia.org/wiki/Béla_Bartók",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/B%C3%A9la_Bart%C3%B3k_1943.jpg/500px-B%C3%A9la_Bart%C3%B3k_1943.jpg",
+    "alt": "Béla Bartók",
+    "credit": "RIA Novosti",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:B%C3%A9la_Bart%C3%B3k_1943.jpg"
+  }
+}

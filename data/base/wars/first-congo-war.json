@@ -1,0 +1,59 @@
+{
+  "id": "first-congo-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Congo War",
+      "from": "1996"
+    }
+  ],
+  "summary": "The war that overthrew Mobutu in 1997.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q838695",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-10-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Congo War (Q838695)",
+      "url": "https://www.wikidata.org/wiki/Q838695",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Congo War",
+      "url": "https://en.wikipedia.org/wiki/First_Congo_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/First_Congo_War_offensive_map_en.svg/500px-First_Congo_War_offensive_map_en.svg.png",
+    "alt": "First Congo War",
+    "credit": "Don-kun, Uwe Dedering",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:First_Congo_War_offensive_map_en.svg"
+  }
+}

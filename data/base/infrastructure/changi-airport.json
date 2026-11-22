@@ -1,0 +1,51 @@
+{
+  "id": "changi-airport",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Changi Airport",
+      "from": "1981"
+    }
+  ],
+  "summary": "The airport opened in 1981, often named the best in the world.",
+  "wikidata": "Q32159",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Changi Airport (Q32159)",
+      "url": "https://www.wikidata.org/wiki/Q32159",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Changi Airport",
+      "url": "https://en.wikipedia.org/wiki/Changi_Airport",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Singapore_Airport%2C_Jewel_Changi%2C_20230722_%281%29_%2853337065497%29.jpg/500px-Singapore_Airport%2C_Jewel_Changi%2C_20230722_%281%29_%2853337065497%29.jpg",
+    "alt": "Changi Airport",
+    "credit": "Takeshi Aida from Hong Kong, Hong Kong",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Singapore_Airport,_Jewel_Changi,_20230722_(1)_(53337065497).jpg"
+  }
+}

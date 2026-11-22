@@ -1,0 +1,77 @@
+{
+  "id": "venezuela",
+  "name": "Venezuela",
+  "description": "Venezuela from its Indigenous peoples to Spanish rule, Bolívar and independence, oil, Chávez and the crisis of today.",
+  "category": "places",
+  "tags": [
+    "venezuela",
+    "caracas",
+    "bolivar",
+    "oil",
+    "angel falls",
+    "andes"
+  ],
+  "entries": [
+    "caracas",
+    "francisco-de-miranda",
+    "andres-bello",
+    "simon-bolivar",
+    "venezuelan-war-of-independence",
+    "venezuela",
+    "venezuelan-declaration-of-independence",
+    "gran-colombia",
+    "romulo-betancourt",
+    "angel-falls",
+    "hugo-chavez",
+    "nicolas-maduro",
+    "maria-corina-machado",
+    "pdvsa",
+    "caracazo",
+    "february-1992-coup-attempt",
+    "venezuelan-refugee-crisis"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-spain",
+      "name": "Before Spain",
+      "from": -1000,
+      "to": 1497,
+      "note": "Many Indigenous peoples lived on the coast, in the Andes and on the plains."
+    },
+    {
+      "id": "colony",
+      "name": "Colony",
+      "from": 1498,
+      "to": 1809,
+      "note": "Columbus reached the coast in 1498, and Spain founded Caracas in 1567."
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "from": 1810,
+      "to": 1913,
+      "note": "Venezuela declared independence in 1811, and Bolívar led the war. Strongmen ruled for a century."
+    },
+    {
+      "id": "oil",
+      "name": "Oil",
+      "from": 1914,
+      "to": 2026,
+      "note": "Oil was struck in 1914. Democracy came in 1958, Chávez in 1999, and economic collapse under Maduro drove millions abroad."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Venezuela.svg/330px-Flag_of_Venezuela.svg.png",
+    "alt": "Flag of Venezuela",
+    "credit": "Various, see File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Venezuela.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6f/Gloria_al_Bravo_Pueblo_instrumental.ogg/Gloria_al_Bravo_Pueblo_instrumental.ogg.mp3",
+    "title": "gloria al bravo pueblo",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gloria_al_Bravo_Pueblo_instrumental.ogg"
+  }
+}

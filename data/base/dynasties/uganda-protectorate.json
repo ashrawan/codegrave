@@ -1,0 +1,52 @@
+{
+  "id": "uganda-protectorate",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Uganda Protectorate",
+      "from": "1894"
+    }
+  ],
+  "summary": "British rule from 1894 to 1962.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1097943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1894",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Uganda Protectorate (Q1097943)",
+      "url": "https://www.wikidata.org/wiki/Q1097943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Uganda Protectorate",
+      "url": "https://en.wikipedia.org/wiki/Uganda_Protectorate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

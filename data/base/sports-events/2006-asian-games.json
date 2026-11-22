@@ -1,0 +1,52 @@
+{
+  "id": "2006-asian-games",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2006 Asian Games",
+      "from": "2006"
+    }
+  ],
+  "summary": "The Asian Games held in Doha, the first great sports event in the Gulf.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q329679",
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-12-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-12-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "qatar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2006 Asian Games (Q329679)",
+      "url": "https://www.wikidata.org/wiki/Q329679",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2006 Asian Games",
+      "url": "https://en.wikipedia.org/wiki/2006_Asian_Games",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

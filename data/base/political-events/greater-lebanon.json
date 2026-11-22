@@ -1,0 +1,52 @@
+{
+  "id": "greater-lebanon",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "State of Greater Lebanon",
+      "from": "1920"
+    }
+  ],
+  "summary": "The state made by France in 1920.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q130842",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-09-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: State of Greater Lebanon (Q130842)",
+      "url": "https://www.wikidata.org/wiki/Q130842",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: State of Greater Lebanon",
+      "url": "https://en.wikipedia.org/wiki/State_of_Greater_Lebanon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

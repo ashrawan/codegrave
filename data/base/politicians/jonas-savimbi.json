@@ -1,0 +1,59 @@
+{
+  "id": "jonas-savimbi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jonas Savimbi",
+      "from": "1934"
+    }
+  ],
+  "summary": "Leader of UNITA, killed in 2002.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q273051",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-08-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jonas Savimbi (Q273051)",
+      "url": "https://www.wikidata.org/wiki/Q273051",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jonas Savimbi",
+      "url": "https://en.wikipedia.org/wiki/Jonas_Savimbi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Jonas_Savimbi.jpg/500px-Jonas_Savimbi.jpg",
+    "alt": "Jonas Savimbi",
+    "credit": "Ernmuhl",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jonas_Savimbi.jpg"
+  }
+}

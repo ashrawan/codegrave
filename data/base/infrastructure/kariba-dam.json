@@ -1,0 +1,51 @@
+{
+  "id": "kariba-dam",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Kariba Dam",
+      "from": "1955"
+    }
+  ],
+  "summary": "The great dam on the Zambezi.",
+  "wikidata": "Q1367609",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zimbabwe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kariba Dam (Q1367609)",
+      "url": "https://www.wikidata.org/wiki/Q1367609",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kariba Dam",
+      "url": "https://en.wikipedia.org/wiki/Kariba_Dam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/KaribaDam.jpg/500px-KaribaDam.jpg",
+    "alt": "Kariba Dam",
+    "credit": "Rhys Jones",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:KaribaDam.jpg"
+  }
+}

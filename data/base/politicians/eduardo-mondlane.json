@@ -1,0 +1,59 @@
+{
+  "id": "eduardo-mondlane",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Eduardo Mondlane",
+      "from": "1920"
+    }
+  ],
+  "summary": "Founder of FRELIMO, killed in 1969.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q443434",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-06-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1969-02-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eduardo Mondlane (Q443434)",
+      "url": "https://www.wikidata.org/wiki/Q443434",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eduardo Mondlane",
+      "url": "https://en.wikipedia.org/wiki/Eduardo_Mondlane",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/de/Eduardo_Mondlane%2C_1953.jpg_unscaled",
+    "alt": "Eduardo Mondlane",
+    "credit": "Oberlin College",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eduardo_Mondlane,_1953.jpg"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "naadam",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Naadam",
+      "from": "1206"
+    }
+  ],
+  "summary": "The summer games of wrestling, archery and horse racing.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q721133",
+  "events": [
+    {
+      "type": "born",
+      "date": "1206",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Naadam (Q721133)",
+      "url": "https://www.wikidata.org/wiki/Q721133",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Naadam",
+      "url": "https://en.wikipedia.org/wiki/Naadam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

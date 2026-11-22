@@ -1,0 +1,54 @@
+{
+  "id": "hamid-karzai",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Hamid Karzai",
+      "from": "1957"
+    }
+  ],
+  "summary": "President after the fall of the Taliban in 2001.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q43944",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957-12-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "afghanistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hamid Karzai (Q43944)",
+      "url": "https://www.wikidata.org/wiki/Q43944",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hamid Karzai",
+      "url": "https://en.wikipedia.org/wiki/Hamid_Karzai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Hamid_Karzai_listens_to_Barack_Obama_in_Kabul_2012_%28cropped%29.jpg/500px-Hamid_Karzai_listens_to_Barack_Obama_in_Kabul_2012_%28cropped%29.jpg",
+    "alt": "Hamid Karzai",
+    "credit": "Pete Souza",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hamid_Karzai_listens_to_Barack_Obama_in_Kabul_2012_(cropped).jpg"
+  }
+}

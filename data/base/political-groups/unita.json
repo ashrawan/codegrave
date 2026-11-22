@@ -1,0 +1,47 @@
+{
+  "id": "unita",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "UNITA",
+      "from": "1966"
+    }
+  ],
+  "summary": "The rebel movement of the civil war, now a political party.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q28699",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966-03-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: UNITA (Q28699)",
+      "url": "https://www.wikidata.org/wiki/Q28699",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: UNITA",
+      "url": "https://en.wikipedia.org/wiki/UNITA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

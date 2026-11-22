@@ -1,0 +1,77 @@
+{
+  "id": "hungary",
+  "name": "Hungary",
+  "description": "Hungary from the Magyar conquest and Saint Stephen to the Ottoman wars, Austria-Hungary, 1956, the fall of communism and today.",
+  "category": "places",
+  "tags": [
+    "hungary",
+    "budapest",
+    "magyar",
+    "danube",
+    "1956",
+    "central europe"
+  ],
+  "entries": [
+    "hungarian-conquest-of-the-carpathian-basin",
+    "stephen-i-of-hungary",
+    "hungary",
+    "matthias-corvinus",
+    "battle-of-mohacs",
+    "franz-liszt",
+    "hungarian-revolution-of-1848",
+    "austria-hungary",
+    "budapest",
+    "bela-bartok",
+    "hungarian-parliament-building",
+    "treaty-of-trianon",
+    "ferenc-puskas",
+    "erno-rubik",
+    "hungarian-revolution-of-1956",
+    "viktor-orban",
+    "rubiks-cube"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-magyar-kingdom",
+      "name": "The Magyar kingdom",
+      "from": 895,
+      "to": 1525,
+      "note": "The Magyars settled the Danube basin around 895. Stephen was crowned in 1000, and Matthias made Buda a Renaissance court."
+    },
+    {
+      "id": "ottomans-and-habsburgs",
+      "name": "Ottomans and Habsburgs",
+      "from": 1526,
+      "to": 1866,
+      "note": "After Mohács in 1526 the Ottomans held the centre for 150 years. The Habsburgs then ruled, and the revolution of 1848 was crushed."
+    },
+    {
+      "id": "austria-hungary",
+      "name": "Austria-Hungary",
+      "from": 1867,
+      "to": 1945,
+      "note": "The compromise of 1867 gave Hungary its own government, and Budapest boomed. Defeat in 1918 and the treaty of Trianon cut the country down."
+    },
+    {
+      "id": "communism-and-after",
+      "name": "Communism and after",
+      "from": 1946,
+      "to": 2026,
+      "note": "Communists took power, and the revolution of 1956 was crushed. Hungary opened its border in 1989 and joined the European Union in 2004."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/330px-Flag_of_Hungary.svg.png",
+    "alt": "Flag of Hungary",
+    "credit": "SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Hungary.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/61/Himnusz_1920s.ogg/Himnusz_1920s.ogg.mp3",
+    "title": "Himnusz",
+    "credit": "Military Band of Hungary",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Himnusz_1920s.ogg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "christchurch-mosque-shootings",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Christchurch mosque shootings",
+      "from": "2019"
+    }
+  ],
+  "summary": "The attack on two mosques in 2019 that killed fifty-one people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q62066211",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-03-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2019-03-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Christchurch mosque shootings (Q62066211)",
+      "url": "https://www.wikidata.org/wiki/Q62066211",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Christchurch mosque shootings",
+      "url": "https://en.wikipedia.org/wiki/Christchurch_mosque_shootings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Christchurch_Mosque%2C_New_Zealand.jpg/500px-Christchurch_Mosque%2C_New_Zealand.jpg",
+    "alt": "Christchurch mosque shootings",
+    "credit": "Michal Klajban",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Christchurch_Mosque,_New_Zealand.jpg"
+  }
+}

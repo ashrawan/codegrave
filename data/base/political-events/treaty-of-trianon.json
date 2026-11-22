@@ -1,0 +1,59 @@
+{
+  "id": "treaty-of-trianon",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Treaty of Trianon",
+      "from": "1920"
+    }
+  ],
+  "summary": "The treaty of 1920 that took two thirds of Hungary's land.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q181902",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-06-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1920-06-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Treaty of Trianon (Q181902)",
+      "url": "https://www.wikidata.org/wiki/Q181902",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Treaty of Trianon",
+      "url": "https://en.wikipedia.org/wiki/Treaty_of_Trianon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Treaty_of_trianon_negotiations.jpg_unscaled",
+    "alt": "Treaty of Trianon",
+    "credit": "Digitalized by User:Cserlajos",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Treaty_of_trianon_negotiations.jpg"
+  }
+}

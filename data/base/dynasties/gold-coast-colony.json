@@ -1,0 +1,59 @@
+{
+  "id": "gold-coast-colony",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Gold Coast",
+      "from": "1821"
+    }
+  ],
+  "summary": "The British colony that became Ghana.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q503623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1957",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ghana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gold Coast (Q503623)",
+      "url": "https://www.wikidata.org/wiki/Q503623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gold Coast (British colony)",
+      "url": "https://en.wikipedia.org/wiki/Gold_Coast_(British_colony)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_the_Gold_Coast_%281877%E2%80%931957%29.svg/500px-Flag_of_the_Gold_Coast_%281877%E2%80%931957%29.svg.png",
+    "alt": "Gold Coast",
+    "credit": "No machine-readable author provided. Yaddah assumed (based on copyright claims).",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Gold_Coast_(1877%E2%80%931957).svg"
+  }
+}

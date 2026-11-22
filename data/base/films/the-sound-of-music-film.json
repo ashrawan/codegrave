@@ -1,0 +1,54 @@
+{
+  "id": "the-sound-of-music-film",
+  "category": "films",
+  "names": [
+    {
+      "name": "The Sound of Music",
+      "from": "1965"
+    }
+  ],
+  "summary": "The film musical of 1965 set in Salzburg.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q60072",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-03-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Sound of Music (Q60072)",
+      "url": "https://www.wikidata.org/wiki/Q60072",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Sound of Music (film)",
+      "url": "https://en.wikipedia.org/wiki/The_Sound_of_Music_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/The_Sound_of_Music_Christopher_Plummer_and_Julie_Andrews.jpg/500px-The_Sound_of_Music_Christopher_Plummer_and_Julie_Andrews.jpg",
+    "alt": "The Sound of Music",
+    "credit": "20th Century Fox",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Sound_of_Music_Christopher_Plummer_and_Julie_Andrews.jpg"
+  }
+}

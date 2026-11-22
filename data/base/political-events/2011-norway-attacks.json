@@ -1,0 +1,59 @@
+{
+  "id": "2011-norway-attacks",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2011 Norway attacks",
+      "from": "2011"
+    }
+  ],
+  "summary": "The bombing in Oslo and the massacre at Utøya by a far-right terrorist that killed seventy-seven people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q79967",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-07-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-07-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2011 Norway attacks (Q79967)",
+      "url": "https://www.wikidata.org/wiki/Q79967",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2011 Norway attacks",
+      "url": "https://en.wikipedia.org/wiki/2011_Norway_attacks",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Regjeringsbygget_22.7.2011.jpg/500px-Regjeringsbygget_22.7.2011.jpg",
+    "alt": "2011 Norway attacks",
+    "credit": "Johannesen, Nærings- og handelsdepartementet, https://www.flickr.com/photos/nhd-info/",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Regjeringsbygget_22.7.2011.jpg"
+  }
+}

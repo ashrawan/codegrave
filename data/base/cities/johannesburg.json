@@ -1,0 +1,51 @@
+{
+  "id": "johannesburg",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Johannesburg",
+      "from": "1886"
+    }
+  ],
+  "summary": "The city that sprang up after gold was found in 1886.",
+  "wikidata": "Q34647",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-africa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Johannesburg (Q34647)",
+      "url": "https://www.wikidata.org/wiki/Q34647",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Johannesburg",
+      "url": "https://en.wikipedia.org/wiki/Johannesburg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Johannesburg_CBD.jpg/500px-Johannesburg_CBD.jpg",
+    "alt": "Johannesburg",
+    "credit": "Evan Bench",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Johannesburg_CBD.jpg"
+  }
+}

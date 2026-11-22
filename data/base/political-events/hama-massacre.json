@@ -1,0 +1,59 @@
+{
+  "id": "hama-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "1982 Hama massacre",
+      "from": "1982"
+    }
+  ],
+  "summary": "The crushing of a rising in Hama, which killed thousands.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q730878",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-02-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1982-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "syria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1982 Hama massacre (Q730878)",
+      "url": "https://www.wikidata.org/wiki/Q730878",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1982 Hama massacre",
+      "url": "https://en.wikipedia.org/wiki/1982_Hama_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/1982HamaMassacre.png/500px-1982HamaMassacre.png",
+    "alt": "1982 Hama massacre",
+    "credit": "MrPenguin20",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1982HamaMassacre.png"
+  }
+}

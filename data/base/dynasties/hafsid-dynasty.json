@@ -1,0 +1,52 @@
+{
+  "id": "hafsid-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Hafsid dynasty",
+      "from": "1229"
+    }
+  ],
+  "summary": "The dynasty that ruled from Tunis.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q752662",
+  "events": [
+    {
+      "type": "born",
+      "date": "1229",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1574",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tunisia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hafsid dynasty (Q752662)",
+      "url": "https://www.wikidata.org/wiki/Q752662",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hafsid dynasty",
+      "url": "https://en.wikipedia.org/wiki/Hafsid_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

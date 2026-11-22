@@ -1,0 +1,44 @@
+{
+  "id": "bhutan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Bhutan",
+      "from": "1949"
+    }
+  ],
+  "summary": "A Himalayan Buddhist kingdom, unified in the 1600s and a democracy since 2008.",
+  "wikidata": "Q917",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-08-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bhutan (Q917)",
+      "url": "https://www.wikidata.org/wiki/Q917",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bhutan",
+      "url": "https://en.wikipedia.org/wiki/Bhutan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ferenc-puskas",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Ferenc Puskás",
+      "from": "1927"
+    }
+  ],
+  "summary": "Star of the Golden Team of the 1950s and of Real Madrid.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q482931",
+  "events": [
+    {
+      "type": "born",
+      "date": "1927-04-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-11-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ferenc Puskás (Q482931)",
+      "url": "https://www.wikidata.org/wiki/Q482931",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ferenc Puskás",
+      "url": "https://en.wikipedia.org/wiki/Ferenc_Puskás",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Puskas_%281971%29.tif/lossy-page1-500px-Puskas_%281971%29.tif.jpg",
+    "alt": "Ferenc Puskás",
+    "credit": "UnknownUnknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Puskas_(1971).tif"
+  }
+}

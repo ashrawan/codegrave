@@ -1,0 +1,54 @@
+{
+  "id": "kalevala",
+  "category": "books",
+  "names": [
+    {
+      "name": "Kalevala",
+      "from": "1828"
+    }
+  ],
+  "summary": "The national epic, gathered from folk songs by Elias Lönnrot.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q130924",
+  "events": [
+    {
+      "type": "born",
+      "date": "1828",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "finland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kalevala (Q130924)",
+      "url": "https://www.wikidata.org/wiki/Q130924",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kalevala",
+      "url": "https://en.wikipedia.org/wiki/Kalevala",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Kalevala1.jpg/500px-Kalevala1.jpg",
+    "alt": "Kalevala",
+    "credit": "Elias Lönnrot",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kalevala1.jpg"
+  }
+}

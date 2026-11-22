@@ -1,0 +1,70 @@
+{
+  "id": "angola",
+  "name": "Angola",
+  "description": "Angola from the Kingdom of Kongo and Queen Nzinga to Portuguese rule, the slave trade, independence, civil war and oil.",
+  "category": "places",
+  "tags": [
+    "angola",
+    "luanda",
+    "kongo",
+    "nzinga",
+    "africa",
+    "oil"
+  ],
+  "entries": [
+    "kingdom-of-kongo",
+    "afonso-i-of-kongo",
+    "kingdom-of-ndongo",
+    "luanda",
+    "njinga",
+    "portuguese-angola",
+    "agostinho-neto",
+    "jonas-savimbi",
+    "jose-eduardo-dos-santos",
+    "sonangol",
+    "joao-lourenco",
+    "mpla",
+    "angolan-war-of-independence",
+    "unita",
+    "angolan-civil-war",
+    "battle-of-cuito-cuanavale",
+    "angola"
+  ],
+  "checkpoints": [
+    {
+      "id": "kingdoms",
+      "name": "Kingdoms",
+      "from": 1390,
+      "to": 1574,
+      "note": "The Kingdom of Kongo and Ndongo ruled the land, and the Portuguese came in the 1480s."
+    },
+    {
+      "id": "colony",
+      "name": "Colony",
+      "from": 1575,
+      "to": 1960,
+      "note": "Portugal founded Luanda in 1576. Millions of Angolans were taken as slaves, and Queen Nzinga fought back."
+    },
+    {
+      "id": "war-and-peace",
+      "name": "War and peace",
+      "from": 1961,
+      "to": 2026,
+      "note": "War against Portugal began in 1961. Independence in 1975 led to civil war until 2002, and oil made a few rich."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Flag_of_Angola.svg/330px-Flag_of_Angola.svg.png",
+    "alt": "Flag of Angola",
+    "credit": "Original: Henrique de Carvalho Santos Vector: SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Angola.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/dd/Angolan-National-Anthem-_US-Navy-Band.ogg/Angolan-National-Anthem-_US-Navy-Band.ogg.mp3",
+    "title": "Angola Avante",
+    "credit": "US navy band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Angolan-National-Anthem-_US-Navy-Band.ogg"
+  }
+}

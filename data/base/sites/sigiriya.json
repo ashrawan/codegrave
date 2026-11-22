@@ -1,0 +1,56 @@
+{
+  "id": "sigiriya",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Sigiriya",
+      "from": "0477"
+    }
+  ],
+  "summary": "The rock fortress of King Kashyapa with its painted maidens.",
+  "wikidata": "Q272153",
+  "events": [
+    {
+      "type": "born",
+      "date": "0477",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0495",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sigiriya (Q272153)",
+      "url": "https://www.wikidata.org/wiki/Q272153",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sigiriya",
+      "url": "https://en.wikipedia.org/wiki/Sigiriya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Beauty_of_Sigiriya_by_Binuka.jpg/500px-Beauty_of_Sigiriya_by_Binuka.jpg",
+    "alt": "Sigiriya",
+    "credit": "Binuka poojan",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Beauty_of_Sigiriya_by_Binuka.jpg"
+  }
+}

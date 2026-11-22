@@ -1,0 +1,59 @@
+{
+  "id": "war-of-the-pacific",
+  "category": "wars",
+  "names": [
+    {
+      "name": "War of the Pacific",
+      "from": "1879"
+    }
+  ],
+  "summary": "The war of 1879 to 1884 in which Chile won the nitrate deserts from Peru and Bolivia.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q152004",
+  "events": [
+    {
+      "type": "born",
+      "date": "1879-04-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1884-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: War of the Pacific (Q152004)",
+      "url": "https://www.wikidata.org/wiki/Q152004",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: War of the Pacific",
+      "url": "https://en.wikipedia.org/wiki/War_of_the_Pacific",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sinking_of_the_Esmeralda_during_the_battle_of_Iquique.jpg/500px-Sinking_of_the_Esmeralda_during_the_battle_of_Iquique.jpg",
+    "alt": "War of the Pacific",
+    "credit": "Thomas Somerscales",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sinking_of_the_Esmeralda_during_the_battle_of_Iquique.jpg"
+  }
+}

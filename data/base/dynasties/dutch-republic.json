@@ -1,0 +1,52 @@
+{
+  "id": "dutch-republic",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Dutch Republic",
+      "from": "1581"
+    }
+  ],
+  "summary": "The republic of seven provinces that grew rich on trade and became a great sea power in the 1600s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q170072",
+  "events": [
+    {
+      "type": "born",
+      "date": "1581-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1795-01-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "netherlands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dutch Republic (Q170072)",
+      "url": "https://www.wikidata.org/wiki/Q170072",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dutch Republic",
+      "url": "https://en.wikipedia.org/wiki/Dutch_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

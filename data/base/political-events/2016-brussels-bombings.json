@@ -1,0 +1,59 @@
+{
+  "id": "2016-brussels-bombings",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2016 Brussels bombings",
+      "from": "2016"
+    }
+  ],
+  "summary": "Suicide bombings at Brussels airport and a metro station that killed thirty-two people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q23365300",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-03-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-03-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2016 Brussels bombings (Q23365300)",
+      "url": "https://www.wikidata.org/wiki/Q23365300",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2016 Brussels bombings",
+      "url": "https://en.wikipedia.org/wiki/2016_Brussels_bombings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Atentados_de_Bruselas_de_marzo_de_2016.jpg/500px-Atentados_de_Bruselas_de_marzo_de_2016.jpg",
+    "alt": "2016 Brussels bombings",
+    "credit": "Rauletemunoz",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Atentados_de_Bruselas_de_marzo_de_2016.jpg"
+  }
+}

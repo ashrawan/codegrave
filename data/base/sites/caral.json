@@ -1,0 +1,56 @@
+{
+  "id": "caral",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Caral",
+      "from": "-2600"
+    }
+  ],
+  "summary": "One of the oldest cities of the Americas, built about five thousand years ago.",
+  "wikidata": "Q219279",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2600",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Caral (Q219279)",
+      "url": "https://www.wikidata.org/wiki/Q219279",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caral",
+      "url": "https://en.wikipedia.org/wiki/Caral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/PeruCaral01.jpg/500px-PeruCaral01.jpg",
+    "alt": "Caral",
+    "credit": "Håkan Svensson Xauxa",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:PeruCaral01.jpg"
+  }
+}

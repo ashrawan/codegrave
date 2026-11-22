@@ -1,0 +1,59 @@
+{
+  "id": "congo-crisis",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Congo Crisis",
+      "from": "1960"
+    }
+  ],
+  "summary": "The turmoil of 1960 to 1965 after independence.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1773926",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1966-11",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Congo Crisis (Q1773926)",
+      "url": "https://www.wikidata.org/wiki/Q1773926",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Congo Crisis",
+      "url": "https://en.wikipedia.org/wiki/Congo_Crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Congo_Crisis_Belgians_at_Kamina.jpg_unscaled",
+    "alt": "Congo Crisis",
+    "credit": "from http://www-cgsc.army.mil/carl/resources/csi/odom/odom.asp (archive), original caption states: \"U.S. Air Force photo",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Congo_Crisis_Belgians_at_Kamina.jpg"
+  }
+}

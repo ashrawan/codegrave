@@ -1,0 +1,56 @@
+{
+  "id": "stamford-raffles",
+  "category": "founders",
+  "names": [
+    {
+      "name": "Stamford Raffles",
+      "from": "1781"
+    }
+  ],
+  "summary": "British colonial official who founded a trading post at Singapore in 1819.",
+  "wikidata": "Q130327",
+  "events": [
+    {
+      "type": "born",
+      "date": "1781-07-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1826-07-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stamford Raffles (Q130327)",
+      "url": "https://www.wikidata.org/wiki/Q130327",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stamford Raffles",
+      "url": "https://en.wikipedia.org/wiki/Stamford_Raffles",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/George_Francis_Joseph_-_Sir_Thomas_Stamford_Bingley_Raffles.jpg/500px-George_Francis_Joseph_-_Sir_Thomas_Stamford_Bingley_Raffles.jpg",
+    "alt": "Stamford Raffles",
+    "credit": "George Francis Joseph",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:George_Francis_Joseph_-_Sir_Thomas_Stamford_Bingley_Raffles.jpg"
+  }
+}

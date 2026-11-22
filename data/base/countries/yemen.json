@@ -1,0 +1,51 @@
+{
+  "id": "yemen",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Yemen",
+      "from": "1990"
+    }
+  ],
+  "summary": "A country at the south-west tip of Arabia, home of the ancient kingdom of Saba, united in 1990.",
+  "wikidata": "Q805",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-05-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yemen (Q805)",
+      "url": "https://www.wikidata.org/wiki/Q805",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yemen",
+      "url": "https://en.wikipedia.org/wiki/Yemen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Sanaa_HDR_%2816482367935%29.jpg/500px-Sanaa_HDR_%2816482367935%29.jpg",
+    "alt": "Yemen",
+    "credit": "المصور أنس الحاج",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sanaa_HDR_(16482367935).jpg"
+  }
+}

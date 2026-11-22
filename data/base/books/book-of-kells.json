@@ -1,0 +1,54 @@
+{
+  "id": "book-of-kells",
+  "category": "books",
+  "names": [
+    {
+      "name": "Book of Kells",
+      "from": "0800"
+    }
+  ],
+  "summary": "A gospel book painted by monks around 800, one of the treasures of medieval art.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q204221",
+  "events": [
+    {
+      "type": "born",
+      "date": "0800",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ireland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Book of Kells (Q204221)",
+      "url": "https://www.wikidata.org/wiki/Q204221",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Book of Kells",
+      "url": "https://en.wikipedia.org/wiki/Book_of_Kells",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/KellsFol292rIncipJohn.jpg/500px-KellsFol292rIncipJohn.jpg",
+    "alt": "Book of Kells",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:KellsFol292rIncipJohn.jpg"
+  }
+}

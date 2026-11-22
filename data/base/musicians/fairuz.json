@@ -1,0 +1,54 @@
+{
+  "id": "fairuz",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Fairuz",
+      "from": "1935"
+    }
+  ],
+  "summary": "Singer, the voice of Lebanon.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q3247658",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-11-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fairuz (Q3247658)",
+      "url": "https://www.wikidata.org/wiki/Q3247658",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fairuz",
+      "url": "https://en.wikipedia.org/wiki/Fairuz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Fairuz_1971.jpg/500px-Fairuz_1971.jpg",
+    "alt": "Fairuz",
+    "credit": "photographer unknown, published by AP",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fairuz_1971.jpg"
+  }
+}

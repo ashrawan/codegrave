@@ -1,0 +1,52 @@
+{
+  "id": "british-malaya",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "British Malaya",
+      "from": "1826"
+    }
+  ],
+  "summary": "The Malay states under British rule, where tin and rubber made fortunes.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q871091",
+  "events": [
+    {
+      "type": "born",
+      "date": "1826",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1957",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malaysia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Malaya (Q871091)",
+      "url": "https://www.wikidata.org/wiki/Q871091",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Malaya",
+      "url": "https://en.wikipedia.org/wiki/British_Malaya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

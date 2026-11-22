@@ -1,0 +1,59 @@
+{
+  "id": "invasion-of-poland",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Invasion of Poland",
+      "from": "1939"
+    }
+  ],
+  "summary": "The German and Soviet invasion of September 1939 that started the Second World War in Europe.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q150812",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-09-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1939-10-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Invasion of Poland (Q150812)",
+      "url": "https://www.wikidata.org/wiki/Q150812",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Invasion of Poland",
+      "url": "https://en.wikipedia.org/wiki/Invasion_of_Poland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Defenders_of_Warsaw_%281939%29.jpg/500px-Defenders_of_Warsaw_%281939%29.jpg",
+    "alt": "Invasion of Poland",
+    "credit": "Central Photographic Agency Warsaw / Centralna Agencja Fotograficzna (CAF), Military Photographic Agency Warsaw (WAF)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Defenders_of_Warsaw_(1939).jpg"
+  }
+}

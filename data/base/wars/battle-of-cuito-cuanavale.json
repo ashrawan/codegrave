@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-cuito-cuanavale",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Cuito Cuanavale",
+      "from": "1987"
+    }
+  ],
+  "summary": "The battle of 1987 and 1988 between Angolan and Cuban forces and South Africa.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q386051",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-08-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1987-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Cuito Cuanavale (Q386051)",
+      "url": "https://www.wikidata.org/wiki/Q386051",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Cuito Cuanavale",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Cuito_Cuanavale",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1b/Angola_Cuito_Cuanavale.jpg_unscaled",
+    "alt": "Battle of Cuito Cuanavale",
+    "credit": "Ceresnet",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Angola_Cuito_Cuanavale.jpg"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "volubilis",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Volubilis",
+      "from": "-0400"
+    }
+  ],
+  "summary": "A Roman city in the north of Morocco.",
+  "wikidata": "Q391215",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0400",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1710",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "morocco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Volubilis (Q391215)",
+      "url": "https://www.wikidata.org/wiki/Q391215",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Volubilis",
+      "url": "https://en.wikipedia.org/wiki/Volubilis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Volubilis%2CMorocco.jpg/500px-Volubilis%2CMorocco.jpg",
+    "alt": "Volubilis",
+    "credit": "Marcin Sochacki (Wanted)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Volubilis,Morocco.jpg"
+  }
+}

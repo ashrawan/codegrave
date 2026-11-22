@@ -1,0 +1,54 @@
+{
+  "id": "ac-dc",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "AC/DC",
+      "from": "1973"
+    }
+  ],
+  "summary": "Hard rock band formed in Sydney by Malcolm and Angus Young, whose Back in Black is one of the best-selling albums.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q27593",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-12-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: AC/DC (Q27593)",
+      "url": "https://www.wikidata.org/wiki/Q27593",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: AC/DC",
+      "url": "https://en.wikipedia.org/wiki/AC/DC",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/AC_DC_at_London%27s_Olympic_Stadium.jpg/500px-AC_DC_at_London%27s_Olympic_Stadium.jpg",
+    "alt": "AC/DC",
+    "credit": "Egghead06",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:AC_DC_at_London%27s_Olympic_Stadium.jpg"
+  }
+}

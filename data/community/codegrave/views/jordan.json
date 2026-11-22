@@ -1,0 +1,67 @@
+{
+  "id": "jordan",
+  "name": "Jordan",
+  "description": "Jordan from Jericho's neighbours and Petra to the Romans, Islam, the Ottomans, the Hashemite kingdom and today.",
+  "category": "places",
+  "tags": [
+    "jordan",
+    "amman",
+    "petra",
+    "hashemite",
+    "levant",
+    "dead sea"
+  ],
+  "entries": [
+    "dead-sea",
+    "nabataean-kingdom",
+    "petra",
+    "abdullah-i-of-jordan",
+    "talal-of-jordan",
+    "arab-revolt",
+    "emirate-of-transjordan",
+    "hussein-of-jordan",
+    "jordan",
+    "abdullah-ii-of-jordan",
+    "lawrence-of-arabia-film",
+    "rania-of-jordan",
+    "black-september",
+    "israel-jordan-peace-treaty"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-lands",
+      "name": "Ancient lands",
+      "from": -9000,
+      "to": 105,
+      "note": "Early farmers settled. The Nabataeans built Petra."
+    },
+    {
+      "id": "rome-to-the-ottomans",
+      "name": "Rome to the Ottomans",
+      "from": 106,
+      "to": 1915,
+      "note": "Rome took Petra in 106. The land became Muslim, and the Ottomans ruled from 1516."
+    },
+    {
+      "id": "the-kingdom",
+      "name": "The kingdom",
+      "from": 1916,
+      "to": 2026,
+      "note": "The Arab Revolt began in 1916. Abdullah founded Transjordan, independent in 1946."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Flag_of_Jordan.svg/330px-Flag_of_Jordan.svg.png",
+    "alt": "Flag of Jordan",
+    "credit": "Unknown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Jordan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/ee/National_anthem_of_Jordan_instrumental.ogg/National_anthem_of_Jordan_instrumental.ogg.mp3",
+    "title": "The Royal Anthem of Jordan",
+    "credit": "United States Navy Band, uploaded to Wikimedia by Bart133",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Jordan_instrumental.ogg"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "mpla",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "MPLA",
+      "from": "1956"
+    }
+  ],
+  "summary": "The movement that has ruled Angola since independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q28551",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-12-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: MPLA (Q28551)",
+      "url": "https://www.wikidata.org/wiki/Q28551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: MPLA",
+      "url": "https://en.wikipedia.org/wiki/MPLA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

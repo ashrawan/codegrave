@@ -1,0 +1,59 @@
+{
+  "id": "war-in-iraq-2013-2017",
+  "category": "wars",
+  "names": [
+    {
+      "name": "War in Iraq",
+      "from": "2014"
+    }
+  ],
+  "summary": "The war in which Iraq retook its cities from the Islamic State.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q17984356",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-01-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-12-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: War in Iraq (Q17984356)",
+      "url": "https://www.wikidata.org/wiki/Q17984356",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: War in Iraq (2013–2017)",
+      "url": "https://en.wikipedia.org/wiki/War_in_Iraq_(2013–2017)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Al-Hashd_Al-Sha%27abi_forces_in_Fallujah_after_defeating_ISIL.jpg/500px-Al-Hashd_Al-Sha%27abi_forces_in_Fallujah_after_defeating_ISIL.jpg",
+    "alt": "War in Iraq",
+    "credit": "Mahmoud Hosseini",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Al-Hashd_Al-Sha%27abi_forces_in_Fallujah_after_defeating_ISIL.jpg"
+  }
+}

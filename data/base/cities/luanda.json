@@ -1,0 +1,51 @@
+{
+  "id": "luanda",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Luanda",
+      "from": "1575"
+    }
+  ],
+  "summary": "The capital, founded by the Portuguese in 1576.",
+  "wikidata": "Q3897",
+  "events": [
+    {
+      "type": "born",
+      "date": "1575",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "angola"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Luanda (Q3897)",
+      "url": "https://www.wikidata.org/wiki/Q3897",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luanda",
+      "url": "https://en.wikipedia.org/wiki/Luanda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Luanda_feb09_ost01.jpg/500px-Luanda_feb09_ost01.jpg",
+    "alt": "Luanda",
+    "credit": "Lars Rohwer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Luanda_feb09_ost01.jpg"
+  }
+}

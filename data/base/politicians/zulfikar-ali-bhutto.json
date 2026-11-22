@@ -1,0 +1,59 @@
+{
+  "id": "zulfikar-ali-bhutto",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Zulfikar Ali Bhutto",
+      "from": "1928"
+    }
+  ],
+  "summary": "Prime minister who was overthrown and hanged by the army.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q131355",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-01-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-04-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zulfikar Ali Bhutto (Q131355)",
+      "url": "https://www.wikidata.org/wiki/Q131355",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zulfikar Ali Bhutto",
+      "url": "https://en.wikipedia.org/wiki/Zulfikar_Ali_Bhutto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Zulfikar_Ali_Bhutto_Portrait_%28cropped_2%29.jpg/500px-Zulfikar_Ali_Bhutto_Portrait_%28cropped_2%29.jpg",
+    "alt": "Zulfikar Ali Bhutto",
+    "credit": "Bernard Gotfryd",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Zulfikar_Ali_Bhutto_Portrait_(cropped_2).jpg"
+  }
+}

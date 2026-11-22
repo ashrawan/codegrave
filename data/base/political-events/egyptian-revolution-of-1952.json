@@ -1,0 +1,59 @@
+{
+  "id": "egyptian-revolution-of-1952",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Egyptian revolution of 1952",
+      "from": "1952"
+    }
+  ],
+  "summary": "The army coup that ended the monarchy.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1780431",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-07-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1952-07-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "egypt"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Egyptian revolution of 1952 (Q1780431)",
+      "url": "https://www.wikidata.org/wiki/Q1780431",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Egyptian revolution of 1952",
+      "url": "https://en.wikipedia.org/wiki/Egyptian_revolution_of_1952",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Free_Officers%2C_1953.jpg/500px-Free_Officers%2C_1953.jpg",
+    "alt": "Egyptian revolution of 1952",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Free_Officers,_1953.jpg"
+  }
+}

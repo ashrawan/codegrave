@@ -1,0 +1,77 @@
+{
+  "id": "romania",
+  "name": "Romania",
+  "description": "Romania from Dacia and Roman rule to Wallachia and Moldavia, Vlad the Impaler, union, the kingdom, Ceaușescu and the revolution of 1989.",
+  "category": "places",
+  "tags": [
+    "romania",
+    "bucharest",
+    "dacia",
+    "transylvania",
+    "wallachia",
+    "moldavia"
+  ],
+  "entries": [
+    "dacia",
+    "bran-castle",
+    "wallachia",
+    "romania",
+    "moldavia",
+    "vlad-the-impaler",
+    "stephen-the-great",
+    "bucharest",
+    "united-principalities",
+    "constantin-brancusi",
+    "kingdom-of-romania",
+    "george-enescu",
+    "nicolae-ceausescu",
+    "nadia-comaneci",
+    "nicusor-dan",
+    "palace-of-the-parliament",
+    "romanian-revolution"
+  ],
+  "checkpoints": [
+    {
+      "id": "dacia-and-rome",
+      "name": "Dacia and Rome",
+      "from": -82,
+      "to": 1309,
+      "note": "The Dacian kingdom was conquered by Trajan in 106, and its people came to speak a Latin tongue. Migrating peoples crossed the land for centuries after Rome left."
+    },
+    {
+      "id": "the-principalities",
+      "name": "The principalities",
+      "from": 1310,
+      "to": 1858,
+      "note": "Wallachia and Moldavia grew up as princely states. Vlad and Stephen fought the Ottomans, under whose overlordship the lands then lived."
+    },
+    {
+      "id": "romania",
+      "name": "Romania",
+      "from": 1859,
+      "to": 1946,
+      "note": "The two lands united in 1859 and became a kingdom. Romania won independence in 1878 and gained Transylvania after the First World War."
+    },
+    {
+      "id": "communism-and-after",
+      "name": "Communism and after",
+      "from": 1947,
+      "to": 2026,
+      "note": "The communists took power in 1947, and Ceaușescu ruled harshly until the revolution of 1989. Romania joined NATO and the European Union."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/330px-Flag_of_Romania.svg.png",
+    "alt": "Flag of Romania",
+    "credit": "AdiJapan",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Romania.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/77/Desteapta-te%2C_romane%21.ogg/Desteapta-te%2C_romane%21.ogg.mp3",
+    "title": "Deșteaptă-te, române!",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Desteapta-te,_romane!.ogg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-romania",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Romania",
+      "from": "1881"
+    }
+  ],
+  "summary": "The kingdom of 1881 to 1947, which gained Transylvania after the First World War.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q203493",
+  "events": [
+    {
+      "type": "born",
+      "date": "1881-03-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1947",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Romania (Q203493)",
+      "url": "https://www.wikidata.org/wiki/Q203493",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Romania",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Romania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "eusebio",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Eusébio",
+      "from": "1942"
+    }
+  ],
+  "summary": "Footballer born in Mozambique, a star for Portugal and Benfica.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q162043",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-01-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-01-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eusébio (Q162043)",
+      "url": "https://www.wikidata.org/wiki/Q162043",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eusébio",
+      "url": "https://en.wikipedia.org/wiki/Eusébio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Eusebio_en_1973.jpg/500px-Eusebio_en_1973.jpg",
+    "alt": "Eusébio",
+    "credit": "Panini",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eusebio_en_1973.jpg"
+  }
+}

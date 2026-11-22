@@ -1,0 +1,54 @@
+{
+  "id": "laurent-gbagbo",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Laurent Gbagbo",
+      "from": "1945"
+    }
+  ],
+  "summary": "President from 2000 to 2011.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q179242",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-05-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Laurent Gbagbo (Q179242)",
+      "url": "https://www.wikidata.org/wiki/Q179242",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Laurent Gbagbo",
+      "url": "https://en.wikipedia.org/wiki/Laurent_Gbagbo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Laurent_Gbagbo_%282008%29.jpg/500px-Laurent_Gbagbo_%282008%29.jpg",
+    "alt": "Laurent Gbagbo",
+    "credit": "Zenman",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Laurent_Gbagbo_(2008).jpg"
+  }
+}

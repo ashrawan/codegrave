@@ -1,0 +1,59 @@
+{
+  "id": "padmasambhava",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Padmasambhava",
+      "from": "0717"
+    }
+  ],
+  "summary": "Guru Rinpoche, who brought Buddhism to Bhutan.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q231582",
+  "events": [
+    {
+      "type": "born",
+      "date": "0717",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0762",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bhutan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Padmasambhava (Q231582)",
+      "url": "https://www.wikidata.org/wiki/Q231582",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Padmasambhava",
+      "url": "https://en.wikipedia.org/wiki/Padmasambhava",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Guru_-_Boudha.jpg/500px-Guru_-_Boudha.jpg",
+    "alt": "Padmasambhava",
+    "credit": "Christopher J. Fynn",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Guru_-_Boudha.jpg"
+  }
+}

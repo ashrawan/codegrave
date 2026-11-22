@@ -1,0 +1,52 @@
+{
+  "id": "seljuk-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Seljuk Empire",
+      "from": "1037"
+    }
+  ],
+  "summary": "The empire of Turkish rulers that took much of Anatolia from Byzantium after the battle of Manzikert in 1071.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3708094",
+  "events": [
+    {
+      "type": "born",
+      "date": "1037",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1194-03-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seljuk Empire (Q3708094)",
+      "url": "https://www.wikidata.org/wiki/Q3708094",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seljuk Empire",
+      "url": "https://en.wikipedia.org/wiki/Seljuk_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

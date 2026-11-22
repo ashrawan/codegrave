@@ -1,0 +1,54 @@
+{
+  "id": "nursultan-nazarbayev",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Nursultan Nazarbayev",
+      "from": "1940"
+    }
+  ],
+  "summary": "First president, who ruled from independence until 2019.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57394",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kazakhstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nursultan Nazarbayev (Q57394)",
+      "url": "https://www.wikidata.org/wiki/Q57394",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nursultan Nazarbayev",
+      "url": "https://en.wikipedia.org/wiki/Nursultan_Nazarbayev",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Nursultan_Nazarbayev_%282020-03-10%29_%28cropped%29.jpg/500px-Nursultan_Nazarbayev_%282020-03-10%29_%28cropped%29.jpg",
+    "alt": "Nursultan Nazarbayev",
+    "credit": "http://en.kremlin.ru",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nursultan_Nazarbayev_(2020-03-10)_(cropped).jpg"
+  }
+}

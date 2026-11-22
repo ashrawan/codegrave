@@ -1,0 +1,59 @@
+{
+  "id": "first-ivorian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Ivorian Civil War",
+      "from": "2002"
+    }
+  ],
+  "summary": "The war of 2002 to 2007.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1021175",
+  "events": [
+    {
+      "type": "born",
+      "date": "2002-09-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2007-03-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ivory-coast"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Ivorian Civil War (Q1021175)",
+      "url": "https://www.wikidata.org/wiki/Q1021175",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Ivorian Civil War",
+      "url": "https://en.wikipedia.org/wiki/First_Ivorian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/C%C3%B4te_d%27Ivoire_ZDC.png/500px-C%C3%B4te_d%27Ivoire_ZDC.png",
+    "alt": "First Ivorian Civil War",
+    "credit": "Hégésippe Cormier aka Hégésippe",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:C%C3%B4te_d%27Ivoire_ZDC.png"
+  }
+}

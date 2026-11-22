@@ -1,0 +1,52 @@
+{
+  "id": "denmark-norway",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Denmark–Norway",
+      "from": "1536"
+    }
+  ],
+  "summary": "The union under the Danish crown from 1524 to 1814.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q62651",
+  "events": [
+    {
+      "type": "born",
+      "date": "1536",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1814",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Denmark–Norway (Q62651)",
+      "url": "https://www.wikidata.org/wiki/Q62651",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Denmark–Norway",
+      "url": "https://en.wikipedia.org/wiki/Denmark–Norway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

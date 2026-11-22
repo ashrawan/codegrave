@@ -1,0 +1,51 @@
+{
+  "id": "romania",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Romania",
+      "from": "1330"
+    }
+  ],
+  "summary": "A country on the lower Danube and the Black Sea, formed by the union of Wallachia and Moldavia in 1859, whose language comes from Latin.",
+  "wikidata": "Q218",
+  "events": [
+    {
+      "type": "born",
+      "date": "1330",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Romania (Q218)",
+      "url": "https://www.wikidata.org/wiki/Q218",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Romania",
+      "url": "https://en.wikipedia.org/wiki/Romania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Many_Stamps_of_Romania.jpg/500px-Many_Stamps_of_Romania.jpg",
+    "alt": "Romania",
+    "credit": "https://www.flickr.com/people/klmircea/ KLmircea",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Many_Stamps_of_Romania.jpg"
+  }
+}

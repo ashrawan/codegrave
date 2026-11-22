@@ -1,0 +1,54 @@
+{
+  "id": "reformasi",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Reformasi",
+      "from": "1998"
+    }
+  ],
+  "summary": "The era of democracy and freedom that began when Suharto fell in 1998.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q491776",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "indonesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Reformasi (Q491776)",
+      "url": "https://www.wikidata.org/wiki/Q491776",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Post-Suharto era in Indonesia",
+      "url": "https://en.wikipedia.org/wiki/Post-Suharto_era_in_Indonesia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Suharto_resigns.jpg/500px-Suharto_resigns.jpg",
+    "alt": "Reformasi",
+    "credit": "Unknown photographer, attributed to the Office of the Vice President of the Republic of Indonesia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Suharto_resigns.jpg"
+  }
+}

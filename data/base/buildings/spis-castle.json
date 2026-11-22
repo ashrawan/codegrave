@@ -1,0 +1,54 @@
+{
+  "id": "spis-castle",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Spiš Castle",
+      "from": "1150"
+    }
+  ],
+  "summary": "One of the largest castles in Central Europe.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q205558",
+  "events": [
+    {
+      "type": "born",
+      "date": "1150",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spiš Castle (Q205558)",
+      "url": "https://www.wikidata.org/wiki/Q205558",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spiš Castle",
+      "url": "https://en.wikipedia.org/wiki/Spiš_Castle",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/SK_SN_Spis_castle_2024_1.jpg/500px-SK_SN_Spis_castle_2024_1.jpg",
+    "alt": "Spiš Castle",
+    "credit": "Andrei Stroe",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:SK_SN_Spis_castle_2024_1.jpg"
+  }
+}

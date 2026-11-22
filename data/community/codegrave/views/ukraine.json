@@ -1,0 +1,76 @@
+{
+  "id": "ukraine",
+  "name": "Ukraine",
+  "description": "Ukraine from Trypillia and the Scythians to Kievan Rus, the Cossacks, Russian and Soviet rule, the Holodomor, Chernobyl, independence and the war.",
+  "category": "places",
+  "tags": [
+    "ukraine",
+    "kyiv",
+    "cossacks",
+    "holodomor",
+    "chernobyl",
+    "independence"
+  ],
+  "entries": [
+    "black-sea",
+    "cucuteni-trypillia-culture",
+    "kyiv",
+    "kievan-rus",
+    "saint-sophia-cathedral-kyiv",
+    "bohdan-khmelnytsky",
+    "cossack-hetmanate",
+    "taras-shevchenko",
+    "ukraine",
+    "ukrainian-peoples-republic",
+    "holodomor",
+    "babi-yar",
+    "pripyat",
+    "andriy-shevchenko",
+    "volodymyr-zelenskyy",
+    "chernobyl-disaster",
+    "chernobyl-exclusion-zone",
+    "declaration-of-independence-of-ukraine",
+    "orange-revolution",
+    "euromaidan",
+    "russo-ukrainian-war",
+    "annexation-of-crimea",
+    "russian-invasion-of-ukraine"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-steppe-and-rus",
+      "name": "The steppe and Rus",
+      "from": -5500,
+      "to": 1239,
+      "note": "Trypillian farmers built great towns, and Scythians rode the steppe. Kyiv became the capital of Rus in the 800s."
+    },
+    {
+      "id": "cossacks-and-empires",
+      "name": "Cossacks and empires",
+      "from": 1240,
+      "to": 1916,
+      "note": "The Mongols sacked Kyiv in 1240. Poland-Lithuania ruled, the Cossacks rose in 1648, and Russia took most of the land."
+    },
+    {
+      "id": "soviet-ukraine",
+      "name": "Soviet Ukraine",
+      "from": 1917,
+      "to": 1990,
+      "note": "A Ukrainian state was crushed after 1917. The Holodomor, the Nazi occupation and the Chernobyl disaster struck."
+    },
+    {
+      "id": "independent-ukraine",
+      "name": "Independent Ukraine",
+      "from": 1991,
+      "to": 2026,
+      "note": "Ukraine became independent in 1991. The Orange Revolution and Euromaidan pushed it west, and Russia took Crimea in 2014 and invaded in full in 2022."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/330px-Flag_of_Ukraine.svg.png",
+    "alt": "Flag of Ukraine",
+    "credit": "Government of Ukraine",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ukraine.svg"
+  }
+}

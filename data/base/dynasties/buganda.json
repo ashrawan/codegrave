@@ -1,0 +1,59 @@
+{
+  "id": "buganda",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Buganda",
+      "from": "1420"
+    }
+  ],
+  "summary": "A kingdom on the shore of Lake Victoria.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q473748",
+  "events": [
+    {
+      "type": "born",
+      "date": "1420",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uganda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Buganda (Q473748)",
+      "url": "https://www.wikidata.org/wiki/Q473748",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Buganda",
+      "url": "https://en.wikipedia.org/wiki/Buganda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Buganda_map.jpg/500px-Buganda_map.jpg",
+    "alt": "Buganda",
+    "credit": "Nkuluze Trust",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Buganda_map.jpg"
+  }
+}

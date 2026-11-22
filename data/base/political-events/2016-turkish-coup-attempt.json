@@ -1,0 +1,54 @@
+{
+  "id": "2016-turkish-coup-attempt",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2016 Turkish coup attempt",
+      "from": "2016"
+    }
+  ],
+  "summary": "An attempt by part of the army to overthrow the government, defeated within a night.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q25906338",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-07-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkey"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2016 Turkish coup attempt (Q25906338)",
+      "url": "https://www.wikidata.org/wiki/Q25906338",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2016 Turkish coup attempt",
+      "url": "https://en.wikipedia.org/wiki/2016_Turkish_coup_attempt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Turkish_protesters_in_Istanbul.jpg/500px-Turkish_protesters_in_Istanbul.jpg",
+    "alt": "2016 Turkish coup attempt",
+    "credit": "Maurice Flesier",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Turkish_protesters_in_Istanbul.jpg"
+  }
+}

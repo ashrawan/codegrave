@@ -1,0 +1,52 @@
+{
+  "id": "great-moravia",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Great Moravia",
+      "from": "0833"
+    }
+  ],
+  "summary": "The first great Slavic state of Central Europe, where Cyril and Methodius preached.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q193152",
+  "events": [
+    {
+      "type": "born",
+      "date": "0833",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0907",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czech-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Moravia (Q193152)",
+      "url": "https://www.wikidata.org/wiki/Q193152",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Moravia",
+      "url": "https://en.wikipedia.org/wiki/Great_Moravia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

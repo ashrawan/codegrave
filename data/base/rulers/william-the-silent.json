@@ -1,0 +1,59 @@
+{
+  "id": "william-the-silent",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "William the Silent",
+      "from": "1533"
+    }
+  ],
+  "summary": "Prince of Orange who led the Dutch revolt against Spain and is called the father of the fatherland.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q78454",
+  "events": [
+    {
+      "type": "born",
+      "date": "1533-04-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1584-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "netherlands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: William the Silent (Q78454)",
+      "url": "https://www.wikidata.org/wiki/Q78454",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: William the Silent",
+      "url": "https://en.wikipedia.org/wiki/William_the_Silent",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/William_I%2C_Prince_of_Orange_by_Adriaen_Thomasz._Key_Rijksmuseum_Amsterdam_SK-A-3148.jpg/500px-William_I%2C_Prince_of_Orange_by_Adriaen_Thomasz._Key_Rijksmuseum_Amsterdam_SK-A-3148.jpg",
+    "alt": "William the Silent",
+    "credit": "Adriaen Thomasz. Key",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:William_I,_Prince_of_Orange_by_Adriaen_Thomasz._Key_Rijksmuseum_Amsterdam_SK-A-3148.jpg"
+  }
+}

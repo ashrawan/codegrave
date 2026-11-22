@@ -1,0 +1,80 @@
+{
+  "id": "kenya",
+  "name": "Kenya",
+  "description": "Kenya from Turkana Boy and the Swahili coast to British East Africa, the Mau Mau rising, independence and today.",
+  "category": "places",
+  "tags": [
+    "kenya",
+    "nairobi",
+    "mombasa",
+    "maasai",
+    "swahili",
+    "safari"
+  ],
+  "entries": [
+    "lamu",
+    "mombasa",
+    "fort-jesus",
+    "swahili",
+    "jomo-kenyatta",
+    "nairobi",
+    "uganda-railway",
+    "mwai-kibaki",
+    "ngugi-wa-thiongo",
+    "wangari-maathai",
+    "raila-odinga",
+    "mau-mau-rebellion",
+    "maasai-mara",
+    "kenya",
+    "william-ruto",
+    "eliud-kipchoge",
+    "david-rudisha",
+    "2007-kenyan-crisis",
+    "constitution-of-kenya",
+    "mombasa-nairobi-sgr"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-kenya",
+      "name": "Ancient Kenya",
+      "from": -1500000,
+      "to": 999,
+      "note": "Early humans lived by Lake Turkana. Herders and farmers spread through the land."
+    },
+    {
+      "id": "the-swahili-coast",
+      "name": "The Swahili coast",
+      "from": 1000,
+      "to": 1894,
+      "note": "Swahili towns such as Mombasa and Lamu traded across the Indian Ocean. The Portuguese and then Oman held the coast."
+    },
+    {
+      "id": "british-east-africa",
+      "name": "British East Africa",
+      "from": 1895,
+      "to": 1962,
+      "note": "Britain built the railway and took the highlands for settlers. The Mau Mau rose in the 1950s."
+    },
+    {
+      "id": "independent-kenya",
+      "name": "Independent Kenya",
+      "from": 1963,
+      "to": 2026,
+      "note": "Kenya became independent in 1963 under Kenyatta. Its runners became famous."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Kenya.svg/330px-Flag_of_Kenya.svg.png",
+    "alt": "Flag of Kenya",
+    "credit": "User:Pumbaa80",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Kenya.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/29/National_anthem_of_Kenya%2C_performed_by_the_United_States_Navy_Band.wav/National_anthem_of_Kenya%2C_performed_by_the_United_States_Navy_Band.wav.mp3",
+    "title": "Ee Mungu Nguvu Yetu",
+    "credit": "http://www.navyband.navy.mil/anthems/national_anthems.htm http://www.navyband.navy.mil/anthems/anthems/kenya_jul2014.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Kenya,_performed_by_the_United_States_Navy_Band.wav"
+  }
+}

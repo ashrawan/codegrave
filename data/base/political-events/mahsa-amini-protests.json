@@ -1,0 +1,59 @@
+{
+  "id": "mahsa-amini-protests",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Mahsa Amini protests",
+      "from": "2022"
+    }
+  ],
+  "summary": "Protests led by women after a young woman died in police custody in 2022.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q114065797",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-09-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023-09",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iran"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mahsa Amini protests (Q114065797)",
+      "url": "https://www.wikidata.org/wiki/Q114065797",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mahsa Amini protests",
+      "url": "https://en.wikipedia.org/wiki/Mahsa_Amini_protests",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Amir_Kabir_University_uprising_September_2022_%283%29.jpg/500px-Amir_Kabir_University_uprising_September_2022_%283%29.jpg",
+    "alt": "Mahsa Amini protests",
+    "credit": "Darafsh",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Amir_Kabir_University_uprising_September_2022_(3).jpg"
+  }
+}

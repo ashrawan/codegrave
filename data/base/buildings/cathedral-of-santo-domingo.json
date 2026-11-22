@@ -1,0 +1,54 @@
+{
+  "id": "cathedral-of-santo-domingo",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Cathedral of Santa María la Menor",
+      "from": "1514"
+    }
+  ],
+  "summary": "The first cathedral of the Americas.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q4868419",
+  "events": [
+    {
+      "type": "born",
+      "date": "1514",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominican-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cathedral of Santa María la Menor (Q4868419)",
+      "url": "https://www.wikidata.org/wiki/Q4868419",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cathedral of Santa María la Menor",
+      "url": "https://en.wikipedia.org/wiki/Cathedral_of_Santa_María_la_Menor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Dominikanische_Republik_Santo_Domingo_Basilica_Catedral_Menor_de_Santa_Maria_02.jpg/500px-Dominikanische_Republik_Santo_Domingo_Basilica_Catedral_Menor_de_Santa_Maria_02.jpg",
+    "alt": "Cathedral of Santa María la Menor",
+    "credit": "Georg Karl Ell",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dominikanische_Republik_Santo_Domingo_Basilica_Catedral_Menor_de_Santa_Maria_02.jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "singapore-airlines",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Singapore Airlines",
+      "from": "1964"
+    }
+  ],
+  "summary": "The national airline, known for its service.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q32245",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Singapore Airlines (Q32245)",
+      "url": "https://www.wikidata.org/wiki/Q32245",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Singapore Airlines",
+      "url": "https://en.wikipedia.org/wiki/Singapore_Airlines",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Singapore_Airlines_A380-800%289V-SKH%29_%285441780270%29.jpg/500px-Singapore_Airlines_A380-800%289V-SKH%29_%285441780270%29.jpg",
+    "alt": "Singapore Airlines",
+    "credit": "Kentaro Iemoto from Tokyo, Japan",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Singapore_Airlines_A380-800(9V-SKH)_(5441780270).jpg"
+  }
+}

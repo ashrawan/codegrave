@@ -1,0 +1,59 @@
+{
+  "id": "baptist-war",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Baptist War",
+      "from": "1831"
+    }
+  ],
+  "summary": "The great slave rising of 1831.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4077534",
+  "events": [
+    {
+      "type": "born",
+      "date": "1831-12-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1832-01-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jamaica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Baptist War (Q4077534)",
+      "url": "https://www.wikidata.org/wiki/Q4077534",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baptist War",
+      "url": "https://en.wikipedia.org/wiki/Baptist_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Duperly_%281833%29_Destruction_of_the_Roehampton_Estate_January_1832.png/500px-Duperly_%281833%29_Destruction_of_the_Roehampton_Estate_January_1832.png",
+    "alt": "Baptist War",
+    "credit": "Adolphe Duperly",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Duperly_(1833)_Destruction_of_the_Roehampton_Estate_January_1832.png"
+  }
+}

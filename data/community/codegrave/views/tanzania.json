@@ -1,0 +1,80 @@
+{
+  "id": "tanzania",
+  "name": "Tanzania",
+  "description": "Tanzania from Olduvai and Laetoli to Kilwa and Zanzibar, German and British rule, Nyerere and the union of 1964.",
+  "category": "places",
+  "tags": [
+    "tanzania",
+    "kilimanjaro",
+    "zanzibar",
+    "serengeti",
+    "swahili",
+    "dar es salaam"
+  ],
+  "entries": [
+    "lake-tanganyika",
+    "laetoli-footprints",
+    "mount-kilimanjaro",
+    "ngorongoro-crater",
+    "lake-victoria",
+    "kilwa-sultanate",
+    "swahili",
+    "sultanate-of-zanzibar",
+    "dar-es-salaam",
+    "german-east-africa",
+    "anglo-zanzibar-war",
+    "maji-maji-rebellion",
+    "julius-nyerere",
+    "olduvai-gorge",
+    "freddie-mercury",
+    "abdulrazak-gurnah",
+    "serengeti-national-park",
+    "samia-suluhu-hassan",
+    "zanzibar-revolution",
+    "tanzania"
+  ],
+  "checkpoints": [
+    {
+      "id": "cradle",
+      "name": "Cradle",
+      "from": -3700000,
+      "to": 999,
+      "note": "Early humans walked at Laetoli and made tools at Olduvai."
+    },
+    {
+      "id": "swahili-coast",
+      "name": "Swahili coast",
+      "from": 1000,
+      "to": 1884,
+      "note": "Kilwa and Zanzibar grew rich on the Indian Ocean trade, and Omani sultans ruled Zanzibar."
+    },
+    {
+      "id": "colony",
+      "name": "Colony",
+      "from": 1885,
+      "to": 1960,
+      "note": "Germany took the mainland, which rose in the Maji Maji war. Britain ruled after 1919."
+    },
+    {
+      "id": "tanzania",
+      "name": "Tanzania",
+      "from": 1961,
+      "to": 2026,
+      "note": "Tanganyika became free in 1961 and joined Zanzibar in 1964. Nyerere led for over twenty years."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tanzania.svg/330px-Flag_of_Tanzania.svg.png",
+    "alt": "Flag of Tanzania",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Tanzania.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c4/Tanzanian_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga/Tanzanian_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga.mp3",
+    "title": "Mungu ibariki Afrika",
+    "credit": "https://web.archive.org/web/20041019052052/http://www.navyband.navy.mil/anthems/ANTHEMS/Tanzania.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tanzanian_national_anthem,_performed_by_the_United_States_Navy_Band.oga"
+  }
+}

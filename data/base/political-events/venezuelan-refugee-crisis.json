@@ -1,0 +1,54 @@
+{
+  "id": "venezuelan-refugee-crisis",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Venezuelan refugee crisis",
+      "from": "1999"
+    }
+  ],
+  "summary": "The flight of some eight million people from the crisis.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q56316467",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Venezuelan refugee crisis (Q56316467)",
+      "url": "https://www.wikidata.org/wiki/Q56316467",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venezuelan refugee crisis",
+      "url": "https://en.wikipedia.org/wiki/Venezuelan_refugee_crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/%C2%A9UNICEF-ECU-2018-Arcos.jpg/500px-%C2%A9UNICEF-ECU-2018-Arcos.jpg",
+    "alt": "Venezuelan refugee crisis",
+    "credit": "UNICEF Ecuador from Ecuador",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%C2%A9UNICEF-ECU-2018-Arcos.jpg"
+  }
+}

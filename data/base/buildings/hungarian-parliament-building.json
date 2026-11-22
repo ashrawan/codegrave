@@ -1,0 +1,54 @@
+{
+  "id": "hungarian-parliament-building",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Hungarian Parliament Building",
+      "from": "1904"
+    }
+  ],
+  "summary": "The great parliament on the Danube, finished in 1904.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q11819",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "hungary"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hungarian Parliament Building (Q11819)",
+      "url": "https://www.wikidata.org/wiki/Q11819",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hungarian Parliament Building",
+      "url": "https://en.wikipedia.org/wiki/Hungarian_Parliament_Building",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Budapest-Parliament-0001.jpg/500px-Budapest-Parliament-0001.jpg",
+    "alt": "Hungarian Parliament Building",
+    "credit": "Source: User:Godot13 Derivative: User:MathKnight",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Budapest-Parliament-0001.jpg"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "jamaica",
+  "name": "Jamaica",
+  "description": "Jamaica from the Taíno to Spanish and British rule, slavery and the Maroons, independence, reggae and sprinters.",
+  "category": "places",
+  "tags": [
+    "jamaica",
+    "kingston",
+    "reggae",
+    "caribbean",
+    "bob marley",
+    "usain bolt"
+  ],
+  "entries": [
+    "taino",
+    "colony-of-jamaica",
+    "jamaican-maroons",
+    "kingston",
+    "baptist-war",
+    "morant-bay-rebellion",
+    "marcus-garvey",
+    "norman-manley",
+    "michael-manley",
+    "rastafari",
+    "bob-marley",
+    "jamaica",
+    "andrew-holness",
+    "usain-bolt",
+    "shelly-ann-fraser-pryce"
+  ],
+  "checkpoints": [
+    {
+      "id": "before-britain",
+      "name": "Before Britain",
+      "from": 1200,
+      "to": 1654,
+      "note": "The Taíno lived here, and Spain took the island in 1509."
+    },
+    {
+      "id": "british-jamaica",
+      "name": "British Jamaica",
+      "from": 1655,
+      "to": 1961,
+      "note": "Britain took Jamaica in 1655. Sugar was worked by enslaved Africans until slavery ended in 1838."
+    },
+    {
+      "id": "independent-jamaica",
+      "name": "Independent Jamaica",
+      "from": 1962,
+      "to": 2026,
+      "note": "Jamaica became independent in 1962. Reggae and its sprinters made it known."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Jamaica.svg/330px-Flag_of_Jamaica.svg.png",
+    "alt": "Flag of Jamaica",
+    "credit": "The SVG code is valid. This vector image was created with Inkscape by SKopp, and then manually edited by Zscout370, Madd",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Jamaica.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7a/%22Jamaica%2C_Land_We_Love%22%2C_performed_by_the_United_States_Navy_Band.oga/%22Jamaica%2C_Land_We_Love%22%2C_performed_by_the_United_States_Navy_Band.oga.mp3",
+    "title": "Jamaica, Land We Love",
+    "credit": "https://web.archive.org/web/20041019070441/http://www.navyband.navy.mil/anthems/ANTHEMS/Jamaica.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:%22Jamaica,_Land_We_Love%22,_performed_by_the_United_States_Navy_Band.oga"
+  }
+}

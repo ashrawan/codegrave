@@ -1,0 +1,78 @@
+{
+  "id": "ethiopia",
+  "name": "Ethiopia",
+  "description": "Ethiopia from Lucy and Aksum to Lalibela, the Solomonic emperors, Adwa, Haile Selassie, the Derg and today.",
+  "category": "places",
+  "tags": [
+    "ethiopia",
+    "addis ababa",
+    "aksum",
+    "lalibela",
+    "coffee",
+    "africa"
+  ],
+  "entries": [
+    "lucy-fossil",
+    "kingdom-of-aksum",
+    "obelisk-of-axum",
+    "lalibela-churches",
+    "ethiopian-empire",
+    "ethiopia",
+    "solomonic-dynasty",
+    "menelik-ii",
+    "addis-ababa",
+    "haile-selassie",
+    "battle-of-adwa",
+    "abebe-bikila",
+    "second-italo-ethiopian-war",
+    "derg",
+    "abiy-ahmed",
+    "1983-1985-famine-in-ethiopia",
+    "tigray-war",
+    "grand-ethiopian-renaissance-dam"
+  ],
+  "checkpoints": [
+    {
+      "id": "cradle",
+      "name": "Cradle",
+      "from": -3200000,
+      "to": -100,
+      "note": "Lucy walked here over three million years ago."
+    },
+    {
+      "id": "aksum-and-zagwe",
+      "name": "Aksum and Zagwe",
+      "from": -99,
+      "to": 1269,
+      "note": "Aksum traded across the Red Sea and became Christian. The Zagwe kings carved the churches of Lalibela."
+    },
+    {
+      "id": "the-empire",
+      "name": "The empire",
+      "from": 1270,
+      "to": 1973,
+      "note": "The Solomonic emperors ruled the highlands. Menelik beat Italy at Adwa in 1896, and Haile Selassie led the country into the modern age."
+    },
+    {
+      "id": "revolution-and-after",
+      "name": "Revolution and after",
+      "from": 1974,
+      "to": 2026,
+      "note": "The Derg overthrew the emperor in 1974, and famine struck in the 1980s."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Flag_of_Ethiopia.svg/330px-Flag_of_Ethiopia.svg.png",
+    "alt": "Flag of Ethiopia",
+    "credit": "Drawn by User:SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ethiopia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/83/Wedefit_Gesgeshi_Widd_Innat_Ittyoppya.ogg/Wedefit_Gesgeshi_Widd_Innat_Ittyoppya.ogg.mp3",
+    "title": "March Forward, Dear Mother Ethiopia",
+    "credit": "United States Navy Band, uploaded to Wikimedia by Arbegne",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Wedefit_Gesgeshi_Widd_Innat_Ittyoppya.ogg"
+  }
+}

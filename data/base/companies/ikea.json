@@ -1,0 +1,54 @@
+{
+  "id": "ikea",
+  "category": "companies",
+  "names": [
+    {
+      "name": "IKEA",
+      "from": "1943"
+    }
+  ],
+  "summary": "Furniture company founded by Ingvar Kamprad in 1943, known for flat-pack furniture.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q54078",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943-07-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: IKEA (Q54078)",
+      "url": "https://www.wikidata.org/wiki/Q54078",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: IKEA",
+      "url": "https://en.wikipedia.org/wiki/IKEA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/IKEA_%288020223012%29.jpg/500px-IKEA_%288020223012%29.jpg",
+    "alt": "IKEA",
+    "credit": "Montgomery County Planning Commission",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:IKEA_(8020223012).jpg"
+  }
+}

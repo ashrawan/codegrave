@@ -1,0 +1,54 @@
+{
+  "id": "pemex",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Pemex",
+      "from": "1938"
+    }
+  ],
+  "summary": "The state oil company formed when President Lázaro Cárdenas took over foreign oil firms in 1938.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q871308",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pemex (Q871308)",
+      "url": "https://www.wikidata.org/wiki/Q871308",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pemex",
+      "url": "https://en.wikipedia.org/wiki/Pemex",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/TorreDePemex1907p1.jpg/500px-TorreDePemex1907p1.jpg",
+    "alt": "Pemex",
+    "credit": "Carlos Valenzuela",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TorreDePemex1907p1.jpg"
+  }
+}

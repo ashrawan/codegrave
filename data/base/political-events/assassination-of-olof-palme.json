@@ -1,0 +1,59 @@
+{
+  "id": "assassination-of-olof-palme",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Assassination of Olof Palme",
+      "from": "1986"
+    }
+  ],
+  "summary": "The shooting of Prime Minister Olof Palme on a Stockholm street in 1986.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3284177",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-02-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Assassination of Olof Palme (Q3284177)",
+      "url": "https://www.wikidata.org/wiki/Q3284177",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Assassination of Olof Palme",
+      "url": "https://en.wikipedia.org/wiki/Assassination_of_Olof_Palme",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Palme_Trauer_1986.jpg/500px-Palme_Trauer_1986.jpg",
+    "alt": "Assassination of Olof Palme",
+    "credit": "Holger Ellgaard",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palme_Trauer_1986.jpg"
+  }
+}

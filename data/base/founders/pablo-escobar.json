@@ -1,0 +1,56 @@
+{
+  "id": "pablo-escobar",
+  "category": "founders",
+  "names": [
+    {
+      "name": "Pablo Escobar",
+      "from": "1949"
+    }
+  ],
+  "summary": "Leader of the Medellín drug cartel.",
+  "wikidata": "Q187447",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-12-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "colombia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pablo Escobar (Q187447)",
+      "url": "https://www.wikidata.org/wiki/Q187447",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pablo Escobar",
+      "url": "https://en.wikipedia.org/wiki/Pablo_Escobar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Pablo_Escobar_Mug.jpg/500px-Pablo_Escobar_Mug.jpg",
+    "alt": "Pablo Escobar",
+    "credit": "Colombian National Police",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pablo_Escobar_Mug.jpg"
+  }
+}

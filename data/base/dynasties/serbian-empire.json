@@ -1,0 +1,52 @@
+{
+  "id": "serbian-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Serbian Empire",
+      "from": "1346"
+    }
+  ],
+  "summary": "The empire of Stefan Dušan.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1406298",
+  "events": [
+    {
+      "type": "born",
+      "date": "1346-04-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1371",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Serbian Empire (Q1406298)",
+      "url": "https://www.wikidata.org/wiki/Q1406298",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Serbian Empire",
+      "url": "https://en.wikipedia.org/wiki/Serbian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

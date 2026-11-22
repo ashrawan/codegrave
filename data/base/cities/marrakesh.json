@@ -1,0 +1,51 @@
+{
+  "id": "marrakesh",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Marrakesh",
+      "from": "1065"
+    }
+  ],
+  "summary": "The red city founded by the Almoravids.",
+  "wikidata": "Q101625",
+  "events": [
+    {
+      "type": "born",
+      "date": "1065",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "morocco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Marrakesh (Q101625)",
+      "url": "https://www.wikidata.org/wiki/Q101625",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Marrakesh",
+      "url": "https://en.wikipedia.org/wiki/Marrakesh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Djemaa_el_Fna%2C_evening.JPG/500px-Djemaa_el_Fna%2C_evening.JPG",
+    "alt": "Marrakesh",
+    "credit": "Donar Reiskoffer",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djemaa_el_Fna,_evening.JPG"
+  }
+}

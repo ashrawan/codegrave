@@ -1,0 +1,52 @@
+{
+  "id": "parsley-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Parsley massacre",
+      "from": "1937"
+    }
+  ],
+  "summary": "The killing of thousands of Haitians in 1937 on Trujillo's orders.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q124693",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-10-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1937-10-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominican-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Parsley massacre (Q124693)",
+      "url": "https://www.wikidata.org/wiki/Q124693",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Parsley massacre",
+      "url": "https://en.wikipedia.org/wiki/Parsley_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,79 @@
+{
+  "id": "syria",
+  "name": "Syria",
+  "description": "Syria from Ebla and Ugarit to Damascus, the Umayyads, the crusades, the Ottomans, the French mandate, the Assads and the civil war.",
+  "category": "places",
+  "tags": [
+    "syria",
+    "damascus",
+    "aleppo",
+    "palmyra",
+    "umayyad",
+    "levant"
+  ],
+  "entries": [
+    "ebla",
+    "damascus",
+    "seleucid-empire",
+    "zenobia",
+    "umayyad-caliphate",
+    "umayyad-mosque",
+    "saladin",
+    "krak-des-chevaliers",
+    "syria",
+    "mandate-for-syria",
+    "nizar-qabbani",
+    "hafez-al-assad",
+    "united-arab-republic",
+    "bashar-al-assad",
+    "hama-massacre",
+    "ahmed-al-sharaa",
+    "islamic-state",
+    "syrian-civil-war",
+    "fall-of-the-assad-regime"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-syria",
+      "name": "Ancient Syria",
+      "from": -3500,
+      "to": 635,
+      "note": "Ebla and Ugarit flourished, and Damascus is among the oldest cities. Rome held Syria, and Zenobia ruled Palmyra."
+    },
+    {
+      "id": "caliphs-and-crusaders",
+      "name": "Caliphs and crusaders",
+      "from": 636,
+      "to": 1515,
+      "note": "Damascus was capital of the Umayyads. Crusaders built castles, and Saladin and the Mamluks drove them out."
+    },
+    {
+      "id": "ottomans-and-france",
+      "name": "Ottomans and France",
+      "from": 1516,
+      "to": 1945,
+      "note": "The Ottomans ruled for four centuries, then France."
+    },
+    {
+      "id": "syria",
+      "name": "Syria",
+      "from": 1946,
+      "to": 2026,
+      "note": "Syria became independent in 1946. The Assads ruled from 1971 until 2024, and civil war tore the country."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Flag_of_Syria_%282025-%29.svg/330px-Flag_of_Syria_%282025-%29.svg.png",
+    "alt": "Flag of Syria",
+    "credit": "Modification by AnonMoos of PD image File:Flag of Syria (1930–1958, 1961–1963).svg (previous non-vector versions were by",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Syria_(2025-).svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fc/National_Anthem_of_Syria.ogg/National_Anthem_of_Syria.ogg.mp3",
+    "title": "Humat ad-Diyar",
+    "credit": "https://web.archive.org/web/20030505044151/http://www.navyband.navy.mil:80/anthems/asia.htm https://web.archive.org/web/",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Syria.ogg"
+  }
+}

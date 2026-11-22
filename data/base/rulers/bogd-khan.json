@@ -1,0 +1,59 @@
+{
+  "id": "bogd-khan",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Bogd Khan",
+      "from": "1869"
+    }
+  ],
+  "summary": "Religious ruler who declared independence in 1911.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q353547",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869-10-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1924-04-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mongolia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bogd Khan (Q353547)",
+      "url": "https://www.wikidata.org/wiki/Q353547",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bogd Khan",
+      "url": "https://en.wikipedia.org/wiki/Bogd_Khan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Sharav_bogd_khan.jpg/500px-Sharav_bogd_khan.jpg",
+    "alt": "Bogd Khan",
+    "credit": "Marzan Sharav",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sharav_bogd_khan.jpg"
+  }
+}

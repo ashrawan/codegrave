@@ -1,0 +1,52 @@
+{
+  "id": "ukrainian-peoples-republic",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Ukrainian People's Republic",
+      "from": "1917"
+    }
+  ],
+  "summary": "The independent state of 1917 to 1921.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q243610",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-11-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1921-03-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ukrainian People's Republic (Q243610)",
+      "url": "https://www.wikidata.org/wiki/Q243610",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ukrainian People's Republic",
+      "url": "https://en.wikipedia.org/wiki/Ukrainian_People's_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

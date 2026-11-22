@@ -1,0 +1,52 @@
+{
+  "id": "british-ceylon",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "British Ceylon",
+      "from": "1815"
+    }
+  ],
+  "summary": "British rule from 1815 to 1948, when tea was planted in the hills.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q918153",
+  "events": [
+    {
+      "type": "born",
+      "date": "1815-03-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-02-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Ceylon (Q918153)",
+      "url": "https://www.wikidata.org/wiki/Q918153",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Ceylon",
+      "url": "https://en.wikipedia.org/wiki/British_Ceylon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

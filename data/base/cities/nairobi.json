@@ -1,0 +1,51 @@
+{
+  "id": "nairobi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Nairobi",
+      "from": "1899"
+    }
+  ],
+  "summary": "The capital, which grew from a railway camp.",
+  "wikidata": "Q3870",
+  "events": [
+    {
+      "type": "born",
+      "date": "1899",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kenya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nairobi (Q3870)",
+      "url": "https://www.wikidata.org/wiki/Q3870",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nairobi",
+      "url": "https://en.wikipedia.org/wiki/Nairobi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Nairobi%2C_view_from_KICC.JPG/500px-Nairobi%2C_view_from_KICC.JPG",
+    "alt": "Nairobi",
+    "credit": "Daryona",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nairobi,_view_from_KICC.JPG"
+  }
+}

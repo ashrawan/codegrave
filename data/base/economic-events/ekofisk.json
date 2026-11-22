@@ -1,0 +1,54 @@
+{
+  "id": "ekofisk",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Ekofisk oil field",
+      "from": "1969"
+    }
+  ],
+  "summary": "The North Sea oil field found in 1969 that made Norway rich and paid for its great oil fund.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q1323379",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-12-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ekofisk oil field (Q1323379)",
+      "url": "https://www.wikidata.org/wiki/Q1323379",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ekofisk oil field",
+      "url": "https://en.wikipedia.org/wiki/Ekofisk_oil_field",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Ekofisk_complex.jpg/500px-Ekofisk_complex.jpg",
+    "alt": "Ekofisk oil field",
+    "credit": "BoH",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ekofisk_complex.jpg"
+  }
+}

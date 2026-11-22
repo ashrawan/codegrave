@@ -1,0 +1,59 @@
+{
+  "id": "vasil-levski",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Vasil Levski",
+      "from": "1837"
+    }
+  ],
+  "summary": "Revolutionary who organised the fight for freedom and was hanged in 1873.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q318461",
+  "events": [
+    {
+      "type": "born",
+      "date": "1837-07-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1873-02-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bulgaria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vasil Levski (Q318461)",
+      "url": "https://www.wikidata.org/wiki/Q318461",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vasil Levski",
+      "url": "https://en.wikipedia.org/wiki/Vasil_Levski",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/BASA-600K-1-1865-15-Vasil_Levski-retouched.jpeg/500px-BASA-600K-1-1865-15-Vasil_Levski-retouched.jpeg",
+    "alt": "Vasil Levski",
+    "credit": "File:BASA-600K-1-1865-15-Vasil Levski.jpeg: Unknown authorUnknown author derivative work: Iliev",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BASA-600K-1-1865-15-Vasil_Levski-retouched.jpeg"
+  }
+}

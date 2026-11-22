@@ -1,0 +1,81 @@
+{
+  "id": "chile",
+  "name": "Chile",
+  "description": "Chile from the Chinchorro mummies and the Mapuche to Spanish rule, independence, saltpetre, Allende, Pinochet and democracy.",
+  "category": "places",
+  "tags": [
+    "chile",
+    "santiago",
+    "andes",
+    "atacama",
+    "mapuche",
+    "pinochet"
+  ],
+  "entries": [
+    "andes",
+    "atacama-desert",
+    "chinchorro-mummies",
+    "mapuche",
+    "moai",
+    "santiago",
+    "bernardo-ohiggins",
+    "chile",
+    "war-of-the-pacific",
+    "gabriela-mistral",
+    "pablo-neruda",
+    "salvador-allende",
+    "augusto-pinochet",
+    "valdivia-earthquake-1960",
+    "world-cup-1962",
+    "chilean-coup-of-1973",
+    "gabriel-boric",
+    "1988-chilean-national-plebiscite",
+    "2010-chile-earthquake",
+    "2010-copiapo-mining-accident",
+    "2019-chilean-protests"
+  ],
+  "checkpoints": [
+    {
+      "id": "first-peoples",
+      "name": "First peoples",
+      "from": -5050,
+      "to": 1540,
+      "note": "Fishing people of the north made the world's oldest mummies. The Incas reached the centre, but the Mapuche of the south held them off."
+    },
+    {
+      "id": "colony-and-independence",
+      "name": "Colony and independence",
+      "from": 1541,
+      "to": 1878,
+      "note": "Valdivia founded Santiago in 1541. The Mapuche resisted for centuries, and O'Higgins and San Martín won independence in 1818."
+    },
+    {
+      "id": "nitrates-and-reform",
+      "name": "Nitrates and reform",
+      "from": 1879,
+      "to": 1972,
+      "note": "Victory in the War of the Pacific brought nitrate riches. Mistral and Neruda wrote, and Allende was elected in 1970."
+    },
+    {
+      "id": "dictatorship-and-democracy",
+      "name": "Dictatorship and democracy",
+      "from": 1973,
+      "to": 2026,
+      "note": "The coup of 1973 began Pinochet's long rule. Chileans voted him out in 1988, and democracy returned in 1990."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Flag_of_Chile.svg/330px-Flag_of_Chile.svg.png",
+    "alt": "Flag of Chile",
+    "credit": "See file history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Chile.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Gob_2022-2026_Material_audiovisual_Himno_Nacional_Cantado.mp3",
+    "title": "National Anthem of Chile",
+    "credit": "Gobierno de Chile",
+    "licence": "CC BY 3.0 cl",
+    "source": "https://commons.wikimedia.org/wiki/File:Gob_2022-2026_Material_audiovisual_Himno_Nacional_Cantado.mp3"
+  }
+}

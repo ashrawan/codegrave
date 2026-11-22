@@ -1,0 +1,74 @@
+{
+  "id": "belgium",
+  "name": "Belgium",
+  "description": "Belgium from the rich towns of Flanders and the Burgundian court to independence, the Congo, two world wars and the capital of Europe.",
+  "category": "places",
+  "tags": [
+    "belgium",
+    "brussels",
+    "flanders",
+    "wallonia",
+    "europe",
+    "comics"
+  ],
+  "entries": [
+    "jan-van-eyck",
+    "ghent-altarpiece",
+    "pieter-bruegel-the-elder",
+    "peter-paul-rubens",
+    "battle-of-waterloo",
+    "belgian-revolution",
+    "belgium",
+    "leopold-ii-of-belgium",
+    "congo-free-state",
+    "georges-lemaitre",
+    "rene-magritte",
+    "herge",
+    "battle-of-passchendaele",
+    "battle-of-the-bulge",
+    "eddy-merckx",
+    "nato",
+    "european-commission",
+    "brussels-expo-58",
+    "atomium",
+    "bart-de-wever",
+    "2016-brussels-bombings"
+  ],
+  "checkpoints": [
+    {
+      "id": "flanders-and-burgundy",
+      "name": "Flanders and Burgundy",
+      "from": 1100,
+      "to": 1829,
+      "note": "The cloth towns of Flanders grew rich, Bruges and then Antwerp became great ports, and painters from van Eyck to Rubens worked there. The land passed from Burgundy to Spain, Austria and France."
+    },
+    {
+      "id": "the-new-kingdom",
+      "name": "The new kingdom",
+      "from": 1830,
+      "to": 1944,
+      "note": "Belgium broke away in 1830. Leopold II's Congo brought wealth and horror, and the country was overrun and fought over in both world wars."
+    },
+    {
+      "id": "heart-of-europe",
+      "name": "Heart of Europe",
+      "from": 1945,
+      "to": 2026,
+      "note": "Belgium helped found the European Community and NATO, both of which made Brussels their home. Its regions won more and more self-rule."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/330px-Flag_of_Belgium.svg.png",
+    "alt": "Flag of Belgium",
+    "credit": "Dbenbenn and others",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Belgium.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/La_Braban%C3%A7onne.oga/La_Braban%C3%A7onne.oga.mp3",
+    "title": "The Brabançonne",
+    "credit": "https://web.archive.org/web/20041019013310/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Braban%C3%A7onne.oga"
+  }
+}

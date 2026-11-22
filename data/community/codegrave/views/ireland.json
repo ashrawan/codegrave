@@ -1,0 +1,83 @@
+{
+  "id": "ireland",
+  "name": "Ireland",
+  "description": "Ireland from Newgrange and the Celts to Saint Patrick, the monasteries, the Vikings, English rule, the famine, the Easter Rising and the republic.",
+  "category": "places",
+  "tags": [
+    "ireland",
+    "dublin",
+    "celtic",
+    "famine",
+    "easter rising",
+    "irish"
+  ],
+  "entries": [
+    "newgrange",
+    "saint-patrick",
+    "book-of-kells",
+    "dublin",
+    "battle-of-clontarf",
+    "cromwellian-conquest-of-ireland",
+    "jonathan-swift",
+    "act-of-union-1800",
+    "great-irish-famine",
+    "oscar-wilde",
+    "w-b-yeats",
+    "james-joyce",
+    "eamon-de-valera",
+    "michael-collins-politician",
+    "lusitania-sinking",
+    "easter-rising",
+    "irish-war-of-independence",
+    "ireland",
+    "catherine-connolly",
+    "the-troubles",
+    "u2",
+    "celtic-tiger",
+    "good-friday-agreement"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-ireland",
+      "name": "Ancient Ireland",
+      "from": -3200,
+      "to": 794,
+      "note": "Farmers built Newgrange more than five thousand years ago. Celtic kingdoms followed, Saint Patrick brought Christianity, and monks made Ireland a land of saints and scholars."
+    },
+    {
+      "id": "vikings-and-normans",
+      "name": "Vikings and Normans",
+      "from": 795,
+      "to": 1640,
+      "note": "Vikings raided and founded Dublin. Normans from England came in 1169, and English rule slowly spread over the island."
+    },
+    {
+      "id": "under-britain",
+      "name": "Under Britain",
+      "from": 1641,
+      "to": 1915,
+      "note": "Cromwell crushed the Catholics, the union of 1801 joined Ireland to Britain, and the Great Famine killed or drove away millions."
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "from": 1916,
+      "to": 2026,
+      "note": "The Easter Rising of 1916 led to war and a free state in 1922. Ireland became a republic, the Troubles tore the north until 1998, and the Celtic Tiger made it rich."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/330px-Flag_of_Ireland.svg.png",
+    "alt": "Flag of Ireland",
+    "credit": "Éire",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Ireland.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/27/Ireland_National_Anthem_%28Amhr%C3%A1n_na_bhFiann%29_1960s.ogg/Ireland_National_Anthem_%28Amhr%C3%A1n_na_bhFiann%29_1960s.ogg.mp3",
+    "title": "Amhrán na bhFiann",
+    "credit": "RTÉ",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ireland_National_Anthem_(Amhr%C3%A1n_na_bhFiann)_1960s.ogg"
+  }
+}

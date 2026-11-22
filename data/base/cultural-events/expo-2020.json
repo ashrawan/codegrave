@@ -1,0 +1,56 @@
+{
+  "id": "expo-2020",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Expo 2020",
+      "from": "2021"
+    }
+  ],
+  "summary": "The world's fair held in Dubai in 2021 and 2022.",
+  "wikidata": "Q2629370",
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-10-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-03-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-arab-emirates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Expo 2020 (Q2629370)",
+      "url": "https://www.wikidata.org/wiki/Q2629370",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Expo 2020",
+      "url": "https://en.wikipedia.org/wiki/Expo_2020",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/EXPO-01-concourse-rendering-%28c%29-querkraft-patricia-bagienski.jpg/500px-EXPO-01-concourse-rendering-%28c%29-querkraft-patricia-bagienski.jpg",
+    "alt": "Expo 2020",
+    "credit": "Patricia Bagienski",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:EXPO-01-concourse-rendering-(c)-querkraft-patricia-bagienski.jpg"
+  }
+}

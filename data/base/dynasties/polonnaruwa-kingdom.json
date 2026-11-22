@@ -1,0 +1,52 @@
+{
+  "id": "polonnaruwa-kingdom",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Polonnaruwa",
+      "from": "1017"
+    }
+  ],
+  "summary": "The medieval kingdom whose capital is a city of ruins.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3167772",
+  "events": [
+    {
+      "type": "born",
+      "date": "1017",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1236",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Polonnaruwa (Q3167772)",
+      "url": "https://www.wikidata.org/wiki/Q3167772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Polonnaruwa",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Polonnaruwa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

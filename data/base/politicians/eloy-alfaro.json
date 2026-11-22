@@ -1,0 +1,59 @@
+{
+  "id": "eloy-alfaro",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Eloy Alfaro",
+      "from": "1842"
+    }
+  ],
+  "summary": "Liberal president who built the railway to Quito.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q378158",
+  "events": [
+    {
+      "type": "born",
+      "date": "1842-06-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1912-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ecuador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eloy Alfaro (Q378158)",
+      "url": "https://www.wikidata.org/wiki/Q378158",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eloy Alfaro",
+      "url": "https://en.wikipedia.org/wiki/Eloy_Alfaro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Eloy_Alfaro2.jpg/500px-Eloy_Alfaro2.jpg",
+    "alt": "Eloy Alfaro",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eloy_Alfaro2.jpg"
+  }
+}

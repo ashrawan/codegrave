@@ -1,0 +1,59 @@
+{
+  "id": "aragalaya",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2022 Sri Lankan protests",
+      "from": "2022"
+    }
+  ],
+  "summary": "Protests that drove out President Gotabaya Rajapaksa in 2022.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q111458253",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-03-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-11-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2022 Sri Lankan protests (Q111458253)",
+      "url": "https://www.wikidata.org/wiki/Q111458253",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2022 Sri Lankan protests",
+      "url": "https://en.wikipedia.org/wiki/2022_Sri_Lankan_protests",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Anti-government_protest_in_Sri_Lanka_2022.jpg/500px-Anti-government_protest_in_Sri_Lanka_2022.jpg",
+    "alt": "2022 Sri Lankan protests",
+    "credit": "AntanO",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Anti-government_protest_in_Sri_Lanka_2022.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "fall-of-the-assad-regime",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Fall of the Assad regime",
+      "from": "2024"
+    }
+  ],
+  "summary": "The fall of Damascus to rebels in December 2024.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q131404510",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-12-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "syria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fall of the Assad regime (Q131404510)",
+      "url": "https://www.wikidata.org/wiki/Q131404510",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fall of the Assad regime",
+      "url": "https://en.wikipedia.org/wiki/Fall_of_the_Assad_regime",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

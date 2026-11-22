@@ -1,0 +1,56 @@
+{
+  "id": "magan",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Magan",
+      "from": "-2200"
+    }
+  ],
+  "summary": "An ancient land of copper miners in what are now the Emirates and Oman, which traded with Sumer.",
+  "wikidata": "Q1429914",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0550",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-arab-emirates"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Magan (Q1429914)",
+      "url": "https://www.wikidata.org/wiki/Q1429914",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Magan (civilization)",
+      "url": "https://en.wikipedia.org/wiki/Magan_(civilization)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Gudea_cylinder_A_%28IX_19%29_Magan_Meluha_with_transcription.jpg/500px-Gudea_cylinder_A_%28IX_19%29_Magan_Meluha_with_transcription.jpg",
+    "alt": "Magan",
+    "credit": "Ernest de Sarzec - Choquin de Sarzec, Ernest (1832-1901)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gudea_cylinder_A_(IX_19)_Magan_Meluha_with_transcription.jpg"
+  }
+}

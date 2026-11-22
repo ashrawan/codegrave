@@ -1,0 +1,54 @@
+{
+  "id": "benjamin-netanyahu",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Benjamin Netanyahu",
+      "from": "1949"
+    }
+  ],
+  "summary": "Israel's longest-serving prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q43723",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-10-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "israel"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benjamin Netanyahu (Q43723)",
+      "url": "https://www.wikidata.org/wiki/Q43723",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Benjamin Netanyahu",
+      "url": "https://en.wikipedia.org/wiki/Benjamin_Netanyahu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Benjamin_Netanyahu%2C_February_2023.jpg/500px-Benjamin_Netanyahu%2C_February_2023.jpg",
+    "alt": "Benjamin Netanyahu",
+    "credit": "Avi Ohayon",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Benjamin_Netanyahu,_February_2023.jpg"
+  }
+}

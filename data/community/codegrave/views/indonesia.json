@@ -1,0 +1,86 @@
+{
+  "id": "indonesia",
+  "name": "Indonesia",
+  "description": "Indonesia from the first humans of Java to Srivijaya, Majapahit, the spice trade, Dutch rule, independence and the world's largest island nation.",
+  "category": "places",
+  "tags": [
+    "indonesia",
+    "java",
+    "bali",
+    "jakarta",
+    "spice islands",
+    "sukarno"
+  ],
+  "entries": [
+    "toba-eruption",
+    "srivijaya",
+    "borobudur",
+    "prambanan",
+    "samalas-eruption",
+    "majapahit",
+    "jakarta",
+    "mataram-sultanate",
+    "dutch-east-india-company",
+    "dutch-east-indies",
+    "krakatoa-1883",
+    "sukarno",
+    "suharto",
+    "pramoedya-ananta-toer",
+    "indonesia",
+    "proclamation-of-indonesian-independence",
+    "indonesian-national-revolution",
+    "prabowo-subianto",
+    "bandung-conference",
+    "bali",
+    "joko-widodo",
+    "indonesian-mass-killings",
+    "reformasi",
+    "east-timor-independence",
+    "indian-ocean-tsunami-2004",
+    "nusantara"
+  ],
+  "checkpoints": [
+    {
+      "id": "early-islands",
+      "name": "Early islands",
+      "from": -1500000,
+      "to": 1292,
+      "note": "Early humans lived on Java more than a million years ago. Rice growers and seafarers settled the islands, and the Buddhist empire of Srivijaya and the builders of Borobudur flourished."
+    },
+    {
+      "id": "kingdoms-and-spice",
+      "name": "Kingdoms and spice",
+      "from": 1293,
+      "to": 1799,
+      "note": "Majapahit ruled the islands from Java, and Islam spread along the trade routes. The Dutch East India Company seized the spice trade and made Batavia its base."
+    },
+    {
+      "id": "dutch-indies",
+      "name": "Dutch Indies",
+      "from": 1800,
+      "to": 1944,
+      "note": "The Dutch state took over the colony and forced farmers to grow crops for export. Krakatoa exploded in 1883, and a national movement grew in the 1900s."
+    },
+    {
+      "id": "independent-indonesia",
+      "name": "Independent Indonesia",
+      "from": 1945,
+      "to": 2026,
+      "note": "Sukarno declared independence in 1945. Suharto's army took power after the killings of 1965 and ruled until 1998, when democracy returned."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/330px-Flag_of_Indonesia.svg.png",
+    "alt": "Flag of Indonesia",
+    "credit": "Jayakatwang",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Indonesia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1a/Indonesia_Raya_Simfoni_dan_Vokal_3_Bait.ogg/Indonesia_Raya_Simfoni_dan_Vokal_3_Bait.ogg.mp3",
+    "title": "Indonesia Raya",
+    "credit": "Song: Wage Rudolf SupratmanArrangement: Jos CleberPerformance: Gita Bahana Nusantara Choir and Orchestra",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Indonesia_Raya_Simfoni_dan_Vokal_3_Bait.ogg"
+  }
+}

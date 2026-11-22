@@ -1,0 +1,51 @@
+{
+  "id": "copenhagen",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Copenhagen",
+      "from": "1167"
+    }
+  ],
+  "summary": "The capital, a fishing village that became a royal city.",
+  "wikidata": "Q1748",
+  "events": [
+    {
+      "type": "born",
+      "date": "1167",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "denmark"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Copenhagen (Q1748)",
+      "url": "https://www.wikidata.org/wiki/Q1748",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Copenhagen",
+      "url": "https://en.wikipedia.org/wiki/Copenhagen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Copenhagen_-_view_from_Christiansborg_castle.jpg/500px-Copenhagen_-_view_from_Christiansborg_castle.jpg",
+    "alt": "Copenhagen",
+    "credit": "Pudelek",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Copenhagen_-_view_from_Christiansborg_castle.jpg"
+  }
+}

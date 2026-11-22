@@ -1,0 +1,52 @@
+{
+  "id": "old-swiss-confederacy",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Old Swiss Confederacy",
+      "from": "1291"
+    }
+  ],
+  "summary": "The loose league of cantons that won freedom from the Habsburgs and lasted until Napoleon's invasion.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q435583",
+  "events": [
+    {
+      "type": "born",
+      "date": "1291-08",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1798-03-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Old Swiss Confederacy (Q435583)",
+      "url": "https://www.wikidata.org/wiki/Q435583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Old Swiss Confederacy",
+      "url": "https://en.wikipedia.org/wiki/Old_Swiss_Confederacy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

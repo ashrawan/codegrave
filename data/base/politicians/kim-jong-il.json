@@ -1,0 +1,59 @@
+{
+  "id": "kim-jong-il",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Kim Jong Il",
+      "from": "1941"
+    }
+  ],
+  "summary": "Leader from 1994 to 2011.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q10665",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-02-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kim Jong Il (Q10665)",
+      "url": "https://www.wikidata.org/wiki/Q10665",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kim Jong Il",
+      "url": "https://en.wikipedia.org/wiki/Kim_Jong_Il",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Kim_Jong-il_on_August_24%2C_2011.jpg/500px-Kim_Jong-il_on_August_24%2C_2011.jpg",
+    "alt": "Kim Jong Il",
+    "credit": "Presidential Press and Information Office",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kim_Jong-il_on_August_24,_2011.jpg"
+  }
+}

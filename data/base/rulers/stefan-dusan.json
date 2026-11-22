@@ -1,0 +1,59 @@
+{
+  "id": "stefan-dusan",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Stefan Dušan",
+      "from": "1308"
+    }
+  ],
+  "summary": "Tsar of the Serbian empire and maker of its law code.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q207303",
+  "events": [
+    {
+      "type": "born",
+      "date": "1308-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1355-12-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stefan Dušan (Q207303)",
+      "url": "https://www.wikidata.org/wiki/Q207303",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stefan Dušan",
+      "url": "https://en.wikipedia.org/wiki/Stefan_Dušan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/0/09/Car_Du%C5%A1an%2C_Manastir_Lesnovo%2C_XIV_vek.jpg_unscaled",
+    "alt": "Stefan Dušan",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Car_Du%C5%A1an,_Manastir_Lesnovo,_XIV_vek.jpg"
+  }
+}

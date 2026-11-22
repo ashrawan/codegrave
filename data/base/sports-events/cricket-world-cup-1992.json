@@ -1,0 +1,52 @@
+{
+  "id": "cricket-world-cup-1992",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1992 Cricket World Cup",
+      "from": "1992"
+    }
+  ],
+  "summary": "The World Cup won by Pakistan under Imran Khan.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1139945",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1992-03-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1992 Cricket World Cup (Q1139945)",
+      "url": "https://www.wikidata.org/wiki/Q1139945",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1992 Cricket World Cup",
+      "url": "https://en.wikipedia.org/wiki/1992_Cricket_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

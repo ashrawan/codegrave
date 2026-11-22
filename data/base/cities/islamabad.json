@@ -1,0 +1,51 @@
+{
+  "id": "islamabad",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Islamabad",
+      "from": "1960"
+    }
+  ],
+  "summary": "The planned capital built in the 1960s below the Margalla Hills.",
+  "wikidata": "Q1362",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "pakistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Islamabad (Q1362)",
+      "url": "https://www.wikidata.org/wiki/Q1362",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Islamabad",
+      "url": "https://en.wikipedia.org/wiki/Islamabad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/King_Faisal_Mosque.jpg/500px-King_Faisal_Mosque.jpg",
+    "alt": "Islamabad",
+    "credit": "Tahsin Shah",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Faisal_Mosque.jpg"
+  }
+}

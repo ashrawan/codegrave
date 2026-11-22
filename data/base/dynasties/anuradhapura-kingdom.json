@@ -1,0 +1,52 @@
+{
+  "id": "anuradhapura-kingdom",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Anuradhapura Kingdom",
+      "from": "-0377"
+    }
+  ],
+  "summary": "The first great kingdom of the island, where Buddhism arrived in the 200s BCE.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1965597",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0377",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1017",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Anuradhapura Kingdom (Q1965597)",
+      "url": "https://www.wikidata.org/wiki/Q1965597",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Anuradhapura Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Anuradhapura_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

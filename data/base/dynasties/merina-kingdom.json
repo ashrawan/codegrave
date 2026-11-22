@@ -1,0 +1,59 @@
+{
+  "id": "merina-kingdom",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Merina Kingdom",
+      "from": "1540"
+    }
+  ],
+  "summary": "The highland kingdom that united most of the island.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1071439",
+  "events": [
+    {
+      "type": "born",
+      "date": "1540",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1897",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Merina Kingdom (Q1071439)",
+      "url": "https://www.wikidata.org/wiki/Q1071439",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Merina Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Merina_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Temple_du_rova_d%27Antananarivo.jpg/500px-Temple_du_rova_d%27Antananarivo.jpg",
+    "alt": "Merina Kingdom",
+    "credit": "Privatemajory",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Temple_du_rova_d%27Antananarivo.jpg"
+  }
+}

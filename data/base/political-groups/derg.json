@@ -1,0 +1,52 @@
+{
+  "id": "derg",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Derg",
+      "from": "1974"
+    }
+  ],
+  "summary": "The military junta that overthrew the emperor in 1974.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q828005",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974-06-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1987-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ethiopia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Derg (Q828005)",
+      "url": "https://www.wikidata.org/wiki/Q828005",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Derg",
+      "url": "https://en.wikipedia.org/wiki/Derg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

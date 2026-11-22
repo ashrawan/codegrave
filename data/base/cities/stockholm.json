@@ -1,0 +1,51 @@
+{
+  "id": "stockholm",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Stockholm",
+      "from": "1187"
+    }
+  ],
+  "summary": "The capital, built on islands where Lake Mälaren meets the Baltic.",
+  "wikidata": "Q1754",
+  "events": [
+    {
+      "type": "born",
+      "date": "1187",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stockholm (Q1754)",
+      "url": "https://www.wikidata.org/wiki/Q1754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stockholm",
+      "url": "https://en.wikipedia.org/wiki/Stockholm",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Stockholm_gamlastan_etc.jpg/500px-Stockholm_gamlastan_etc.jpg",
+    "alt": "Stockholm",
+    "credit": "JZ",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Stockholm_gamlastan_etc.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "french-madagascar",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Colony of Madagascar and Dependencies",
+      "from": "1897"
+    }
+  ],
+  "summary": "French rule from 1897 to 1958.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5501842",
+  "events": [
+    {
+      "type": "born",
+      "date": "1897",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1958-10-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colony of Madagascar and Dependencies (Q5501842)",
+      "url": "https://www.wikidata.org/wiki/Q5501842",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colony of Madagascar and Dependencies",
+      "url": "https://en.wikipedia.org/wiki/Colony_of_Madagascar_and_Dependencies",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

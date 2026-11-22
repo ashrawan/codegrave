@@ -1,0 +1,59 @@
+{
+  "id": "niki-lauda",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Niki Lauda",
+      "from": "1949"
+    }
+  ],
+  "summary": "Racing driver who won three Formula One titles and came back from a terrible crash.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q78489",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-02-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2019-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Niki Lauda (Q78489)",
+      "url": "https://www.wikidata.org/wiki/Q78489",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Niki Lauda",
+      "url": "https://en.wikipedia.org/wiki/Niki_Lauda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lauda_at_1982_Dutch_Grand_Prix.jpg/500px-Lauda_at_1982_Dutch_Grand_Prix.jpg",
+    "alt": "Niki Lauda",
+    "credit": "Hans van Dijk for Anefo / neg. stroken, 1945-1989, 2.24.01.05, item number 932-2315",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lauda_at_1982_Dutch_Grand_Prix.jpg"
+  }
+}

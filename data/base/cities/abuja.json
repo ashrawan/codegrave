@@ -1,0 +1,51 @@
+{
+  "id": "abuja",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Abuja",
+      "from": "1976"
+    }
+  ],
+  "summary": "A planned city in the middle of the country, built to replace Lagos as the capital and made the seat of government in 1991.",
+  "wikidata": "Q3787",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Abuja (Q3787)",
+      "url": "https://www.wikidata.org/wiki/Q3787",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Abuja",
+      "url": "https://en.wikipedia.org/wiki/Abuja",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/The_National_Assembly_Globe.jpg/500px-The_National_Assembly_Globe.jpg",
+    "alt": "Abuja",
+    "credit": "Ovinuchi Prince Ejiohuo",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_National_Assembly_Globe.jpg"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "ulugh-beg",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Ulugh Beg",
+      "from": "1394"
+    }
+  ],
+  "summary": "Ruler and astronomer who built a great observatory at Samarkand.",
+  "wikidata": "Q486088",
+  "events": [
+    {
+      "type": "born",
+      "date": "1394-03-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1449-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uzbekistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ulugh Beg (Q486088)",
+      "url": "https://www.wikidata.org/wiki/Q486088",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ulugh Beg",
+      "url": "https://en.wikipedia.org/wiki/Ulugh_Beg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ulugh_Beg%2C_Timurid_painting_1425-50.jpg/500px-Ulugh_Beg%2C_Timurid_painting_1425-50.jpg",
+    "alt": "Ulugh Beg",
+    "credit": "Unknown artistUnknown artist",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ulugh_Beg,_Timurid_painting_1425-50.jpg"
+  }
+}

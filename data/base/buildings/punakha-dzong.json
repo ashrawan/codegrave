@@ -1,0 +1,54 @@
+{
+  "id": "punakha-dzong",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Punakha Dzong",
+      "from": "1638"
+    }
+  ],
+  "summary": "The fortress of Punakha.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q4383728",
+  "events": [
+    {
+      "type": "born",
+      "date": "1638",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bhutan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Punakha Dzong (Q4383728)",
+      "url": "https://www.wikidata.org/wiki/Q4383728",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Punakha Dzong",
+      "url": "https://en.wikipedia.org/wiki/Punakha_Dzong",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/PunakhaDzongInSpring.jpg/500px-PunakhaDzongInSpring.jpg",
+    "alt": "Punakha Dzong",
+    "credit": "Jean-Marie Hullot",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:PunakhaDzongInSpring.jpg"
+  }
+}

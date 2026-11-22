@@ -1,0 +1,51 @@
+{
+  "id": "fez",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Fez, Morocco",
+      "from": "0789"
+    }
+  ],
+  "summary": "The old capital and home of the world's oldest university.",
+  "wikidata": "Q80985",
+  "events": [
+    {
+      "type": "born",
+      "date": "0789",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "morocco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fez, Morocco (Q80985)",
+      "url": "https://www.wikidata.org/wiki/Q80985",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fez, Morocco",
+      "url": "https://en.wikipedia.org/wiki/Fez,_Morocco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Medina_of_Fes%2C_Marocco.jpg/500px-Medina_of_Fes%2C_Marocco.jpg",
+    "alt": "Fez, Morocco",
+    "credit": "Petar Milošević",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Medina_of_Fes,_Marocco.jpg"
+  }
+}

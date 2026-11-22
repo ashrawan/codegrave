@@ -1,0 +1,54 @@
+{
+  "id": "saudi-vision-2030",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Saudi Vision 2030",
+      "from": "2016"
+    }
+  ],
+  "summary": "The plan announced in 2016 to move the economy away from oil, opening cinemas and tourism.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q23906335",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-04-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saudi Vision 2030 (Q23906335)",
+      "url": "https://www.wikidata.org/wiki/Q23906335",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saudi Vision 2030",
+      "url": "https://en.wikipedia.org/wiki/Saudi_Vision_2030",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Adel_al-Jubeir_%285%29.jpg/500px-Adel_al-Jubeir_%285%29.jpg",
+    "alt": "Saudi Vision 2030",
+    "credit": "Elekes Andor",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Adel_al-Jubeir_(5).jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "hafez-al-assad",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Hafez al-Assad",
+      "from": "1930"
+    }
+  ],
+  "summary": "Ruler from 1971 to 2000.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q118725",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-10-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-06-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "syria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hafez al-Assad (Q118725)",
+      "url": "https://www.wikidata.org/wiki/Q118725",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hafez al-Assad",
+      "url": "https://en.wikipedia.org/wiki/Hafez_al-Assad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Hafez_al-Assad_official_portrait.jpg/500px-Hafez_al-Assad_official_portrait.jpg",
+    "alt": "Hafez al-Assad",
+    "credit": "Government of Syria",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hafez_al-Assad_official_portrait.jpg"
+  }
+}

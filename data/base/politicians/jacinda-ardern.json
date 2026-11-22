@@ -1,0 +1,54 @@
+{
+  "id": "jacinda-ardern",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jacinda Ardern",
+      "from": "1980"
+    }
+  ],
+  "summary": "Prime minister from 2017 to 2023.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3606816",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-07-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "new-zealand"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jacinda Ardern (Q3606816)",
+      "url": "https://www.wikidata.org/wiki/Q3606816",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jacinda Ardern",
+      "url": "https://en.wikipedia.org/wiki/Jacinda_Ardern",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Jacinda_Ardern_-_Waitangi_2022_%28cropped%29.jpg/500px-Jacinda_Ardern_-_Waitangi_2022_%28cropped%29.jpg",
+    "alt": "Jacinda Ardern",
+    "credit": "New Zealand Government, Office of the Governor-General",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jacinda_Ardern_-_Waitangi_2022_(cropped).jpg"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "mapungubwe",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Kingdom of Mapungubwe",
+      "from": "1075"
+    }
+  ],
+  "summary": "An early kingdom on the Limpopo, famous for its golden rhino.",
+  "wikidata": "Q98085401",
+  "events": [
+    {
+      "type": "born",
+      "date": "1075",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1220",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-africa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Mapungubwe (Q98085401)",
+      "url": "https://www.wikidata.org/wiki/Q98085401",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Mapungubwe",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Mapungubwe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

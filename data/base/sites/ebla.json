@@ -1,0 +1,56 @@
+{
+  "id": "ebla",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Ebla",
+      "from": "-3000"
+    }
+  ],
+  "summary": "An ancient city with an archive of clay tablets.",
+  "wikidata": "Q5743",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-2240",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "syria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ebla (Q5743)",
+      "url": "https://www.wikidata.org/wiki/Q5743",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ebla",
+      "url": "https://en.wikipedia.org/wiki/Ebla",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Ebla.jpg/500px-Ebla.jpg",
+    "alt": "Ebla",
+    "credit": "Inge at en.wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ebla.jpg"
+  }
+}

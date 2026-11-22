@@ -1,0 +1,59 @@
+{
+  "id": "invasion-of-kuwait",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Iraqi invasion of Kuwait",
+      "from": "1990"
+    }
+  ],
+  "summary": "Iraq's invasion of August 1990.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q856650",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-08-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-08-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kuwait"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Iraqi invasion of Kuwait (Q856650)",
+      "url": "https://www.wikidata.org/wiki/Q856650",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Iraqi invasion of Kuwait",
+      "url": "https://en.wikipedia.org/wiki/Iraqi_invasion_of_Kuwait",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/An_abandoned_Iraqi_Type_69_tank_on_the_road_into_Kuwait_City_during_the_Gulf_War.JPEG/500px-An_abandoned_Iraqi_Type_69_tank_on_the_road_into_Kuwait_City_during_the_Gulf_War.JPEG",
+    "alt": "Iraqi invasion of Kuwait",
+    "credit": "J.R. Roark, US Marines",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:An_abandoned_Iraqi_Type_69_tank_on_the_road_into_Kuwait_City_during_the_Gulf_War.JPEG"
+  }
+}

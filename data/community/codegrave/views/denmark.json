@@ -1,0 +1,69 @@
+{
+  "id": "denmark",
+  "name": "Denmark",
+  "description": "Denmark from the Vikings and Harald Bluetooth to the Kalmar Union, Hans Christian Andersen, occupation, the welfare state and LEGO.",
+  "category": "places",
+  "tags": [
+    "denmark",
+    "copenhagen",
+    "vikings",
+    "hans christian andersen",
+    "lego",
+    "scandinavia"
+  ],
+  "entries": [
+    "harald-bluetooth",
+    "denmark",
+    "jelling-stones",
+    "cnut",
+    "copenhagen",
+    "margaret-i-of-denmark",
+    "tycho-brahe",
+    "hans-christian-andersen",
+    "soren-kierkegaard",
+    "niels-bohr",
+    "maersk",
+    "the-little-mermaid-statue",
+    "novo-nordisk",
+    "rescue-of-the-danish-jews",
+    "lego",
+    "frederik-x"
+  ],
+  "checkpoints": [
+    {
+      "id": "vikings",
+      "name": "Vikings",
+      "from": 793,
+      "to": 1396,
+      "note": "Danish Vikings raided and settled England. Harald Bluetooth made Denmark Christian, and Cnut ruled a North Sea empire."
+    },
+    {
+      "id": "kings-of-the-north",
+      "name": "Kings of the north",
+      "from": 1397,
+      "to": 1848,
+      "note": "Margaret united the north in the Kalmar Union. Denmark ruled Norway until 1814, and Tycho Brahe watched the stars."
+    },
+    {
+      "id": "modern-denmark",
+      "name": "Modern Denmark",
+      "from": 1849,
+      "to": 2026,
+      "note": "A constitution came in 1849. Andersen and Kierkegaard wrote, the Danes saved their Jews in 1943, and the country built a welfare state."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/330px-Flag_of_Denmark.svg.png",
+    "alt": "Flag of Denmark",
+    "credit": "Madden and others",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Denmark.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/06/United_States_Navy_Band_-_Der_er_et_yndigt_land.ogg/United_States_Navy_Band_-_Der_er_et_yndigt_land.ogg.mp3",
+    "title": "Der er et yndigt land",
+    "credit": "Performed by the United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Der_er_et_yndigt_land.ogg"
+  }
+}

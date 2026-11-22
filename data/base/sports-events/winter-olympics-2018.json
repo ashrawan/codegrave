@@ -1,0 +1,59 @@
+{
+  "id": "winter-olympics-2018",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2018 Winter Olympics",
+      "from": "2018"
+    }
+  ],
+  "summary": "The Winter Games held at Pyeongchang, where the two Koreas marched together.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q9680",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-02-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018-02-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2018 Winter Olympics (Q9680)",
+      "url": "https://www.wikidata.org/wiki/Q9680",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2018 Winter Olympics",
+      "url": "https://en.wikipedia.org/wiki/2018_Winter_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/2018_PyeongChang_Winter_Olympic_001.jpg/500px-2018_PyeongChang_Winter_Olympic_001.jpg",
+    "alt": "2018 Winter Olympics",
+    "credit": "Korea.net",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2018_PyeongChang_Winter_Olympic_001.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "grand-duchy-of-lithuania",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Grand Duchy of Lithuania",
+      "from": "1236"
+    }
+  ],
+  "summary": "The great state of which Belarus was a part.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q49683",
+  "events": [
+    {
+      "type": "born",
+      "date": "1236",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1795",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belarus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grand Duchy of Lithuania (Q49683)",
+      "url": "https://www.wikidata.org/wiki/Q49683",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand Duchy of Lithuania",
+      "url": "https://en.wikipedia.org/wiki/Grand_Duchy_of_Lithuania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

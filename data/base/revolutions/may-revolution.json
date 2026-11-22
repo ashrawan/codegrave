@@ -1,0 +1,54 @@
+{
+  "id": "may-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "May Revolution",
+      "from": "1810"
+    }
+  ],
+  "summary": "The week of May 1810 when Buenos Aires replaced the Spanish viceroy with its own government.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q838980",
+  "events": [
+    {
+      "type": "born",
+      "date": "1810-05-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: May Revolution (Q838980)",
+      "url": "https://www.wikidata.org/wiki/Q838980",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: May Revolution",
+      "url": "https://en.wikipedia.org/wiki/May_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Cabildoabierto-Subercaseaux.jpg/500px-Cabildoabierto-Subercaseaux.jpg",
+    "alt": "May Revolution",
+    "credit": "Pedro Subercaseaux",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cabildoabierto-Subercaseaux.jpg"
+  }
+}

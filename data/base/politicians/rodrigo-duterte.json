@@ -1,0 +1,54 @@
+{
+  "id": "rodrigo-duterte",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Rodrigo Duterte",
+      "from": "1945"
+    }
+  ],
+  "summary": "President from 2016 to 2022 whose drug war killed thousands.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q457786",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-03-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rodrigo Duterte (Q457786)",
+      "url": "https://www.wikidata.org/wiki/Q457786",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rodrigo Duterte",
+      "url": "https://en.wikipedia.org/wiki/Rodrigo_Duterte",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/President_Rodrigo_Duterte_portrait_%28half-body_crop%29.jpg/500px-President_Rodrigo_Duterte_portrait_%28half-body_crop%29.jpg",
+    "alt": "Rodrigo Duterte",
+    "credit": "Government of the Philippines",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:President_Rodrigo_Duterte_portrait_(half-body_crop).jpg"
+  }
+}

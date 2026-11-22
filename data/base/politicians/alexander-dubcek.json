@@ -1,0 +1,59 @@
+{
+  "id": "alexander-dubcek",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Alexander Dubček",
+      "from": "1921"
+    }
+  ],
+  "summary": "Slovak leader of the Prague Spring.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q150543",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921-11-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-11-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alexander Dubček (Q150543)",
+      "url": "https://www.wikidata.org/wiki/Q150543",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alexander Dubček",
+      "url": "https://en.wikipedia.org/wiki/Alexander_Dubček",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Dub%C4%8Dek_in_1990_%28Fortepan_138485%29.jpg/500px-Dub%C4%8Dek_in_1990_%28Fortepan_138485%29.jpg",
+    "alt": "Alexander Dubček",
+    "credit": "Fortepan/Szalay Zoltán",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dub%C4%8Dek_in_1990_(Fortepan_138485).jpg"
+  }
+}

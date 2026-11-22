@@ -1,0 +1,56 @@
+{
+  "id": "otzi",
+  "category": "human-origins",
+  "names": [
+    {
+      "name": "Ötzi",
+      "from": "-3275"
+    }
+  ],
+  "summary": "A man who died in the Alps more than five thousand years ago and was found frozen in 1991.",
+  "wikidata": "Q171291",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3275",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-3230",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "austria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ötzi (Q171291)",
+      "url": "https://www.wikidata.org/wiki/Q171291",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ötzi",
+      "url": "https://en.wikipedia.org/wiki/Ötzi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Otzi-Quinson.jpg/500px-Otzi-Quinson.jpg",
+    "alt": "Ötzi",
+    "credit": "120",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Otzi-Quinson.jpg"
+  }
+}

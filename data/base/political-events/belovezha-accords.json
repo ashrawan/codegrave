@@ -1,0 +1,54 @@
+{
+  "id": "belovezha-accords",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Belovezha Accords",
+      "from": "1991"
+    }
+  ],
+  "summary": "The agreement of 1991 that ended the Soviet Union.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q76986",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belarus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Belovezha Accords (Q76986)",
+      "url": "https://www.wikidata.org/wiki/Q76986",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belovezha Accords",
+      "url": "https://en.wikipedia.org/wiki/Belovezha_Accords",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/RIAN_archive_848095_Signing_the_Agreement_to_eliminate_the_USSR_and_establish_the_Commonwealth_of_Independent_States.jpg/500px-RIAN_archive_848095_Signing_the_Agreement_to_eliminate_the_USSR_and_establish_the_Commonwealth_of_Independent_States.jpg",
+    "alt": "Belovezha Accords",
+    "credit": "U. Ivanov / Ю. Иванов",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:RIAN_archive_848095_Signing_the_Agreement_to_eliminate_the_USSR_and_establish_the_Commonwealth_of_Independent_States.jpg"
+  }
+}

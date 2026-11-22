@@ -1,0 +1,51 @@
+{
+  "id": "madagascar",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Madagascar",
+      "from": "1960"
+    }
+  ],
+  "summary": "A great island in the Indian Ocean, home of lemurs, independent from France since 1960.",
+  "wikidata": "Q1019",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Madagascar (Q1019)",
+      "url": "https://www.wikidata.org/wiki/Q1019",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Madagascar",
+      "url": "https://en.wikipedia.org/wiki/Madagascar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Satellite_image_of_Madagascar_in_September_2003.jpg/500px-Satellite_image_of_Madagascar_in_September_2003.jpg",
+    "alt": "Madagascar",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Satellite_image_of_Madagascar_in_September_2003.jpg"
+  }
+}

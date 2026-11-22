@@ -1,0 +1,59 @@
+{
+  "id": "annexation-of-crimea",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Annexation of Crimea by the Russian Federation",
+      "from": "2014"
+    }
+  ],
+  "summary": "Russia's seizure of Crimea in 2014.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q15920546",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-02-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-03-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Annexation of Crimea by the Russian Federation (Q15920546)",
+      "url": "https://www.wikidata.org/wiki/Q15920546",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Annexation of Crimea by the Russian Federation",
+      "url": "https://en.wikipedia.org/wiki/Annexation_of_Crimea_by_the_Russian_Federation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flags_over_Supreme_Council_of_Crimea_%283_March_2014%29.png/500px-Flags_over_Supreme_Council_of_Crimea_%283_March_2014%29.png",
+    "alt": "Annexation of Crimea by the Russian Federation",
+    "credit": "Elizabeth Arrott",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flags_over_Supreme_Council_of_Crimea_(3_March_2014).png"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "pagan-kingdom",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Pagan Kingdom",
+      "from": "0849"
+    }
+  ],
+  "summary": "The first kingdom to unite the land, which built thousands of temples at Bagan.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q888574",
+  "events": [
+    {
+      "type": "born",
+      "date": "0849-12-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1297-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "myanmar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pagan Kingdom (Q888574)",
+      "url": "https://www.wikidata.org/wiki/Q888574",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pagan Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Pagan_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Buddha_Statue_NGFA.jpg_unscaled",
+    "alt": "Pagan Kingdom",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Buddha_Statue_NGFA.jpg"
+  }
+}

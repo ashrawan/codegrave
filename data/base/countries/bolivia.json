@@ -1,0 +1,51 @@
+{
+  "id": "bolivia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Bolivia",
+      "from": "1825"
+    }
+  ],
+  "summary": "A landlocked Andean country, named after Bolívar, independent since 1825.",
+  "wikidata": "Q750",
+  "events": [
+    {
+      "type": "born",
+      "date": "1825",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bolivia (Q750)",
+      "url": "https://www.wikidata.org/wiki/Q750",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bolivia",
+      "url": "https://en.wikipedia.org/wiki/Bolivia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/LagunaChiarKhota2013.jpg/500px-LagunaChiarKhota2013.jpg",
+    "alt": "Bolivia",
+    "credit": "Albert Backer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LagunaChiarKhota2013.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-luba",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Luba Empire",
+      "from": "1585"
+    }
+  ],
+  "summary": "A kingdom of the south-east known for its art of memory.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1768252",
+  "events": [
+    {
+      "type": "born",
+      "date": "1585",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1889",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "democratic-republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Luba Empire (Q1768252)",
+      "url": "https://www.wikidata.org/wiki/Q1768252",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luba Empire",
+      "url": "https://en.wikipedia.org/wiki/Luba_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

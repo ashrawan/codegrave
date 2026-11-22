@@ -1,0 +1,59 @@
+{
+  "id": "samora-machel",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Samora Machel",
+      "from": "1933"
+    }
+  ],
+  "summary": "First president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q219918",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933-09-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1986-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samora Machel (Q219918)",
+      "url": "https://www.wikidata.org/wiki/Q219918",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samora Machel",
+      "url": "https://en.wikipedia.org/wiki/Samora_Machel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Samora_Moises_Machel_detail_DF-SC-88-01383.jpg/500px-Samora_Moises_Machel_detail_DF-SC-88-01383.jpg",
+    "alt": "Samora Machel",
+    "credit": "Department of Defense. American Forces Information Service. Defense Visual Information Center. 1994",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Samora_Moises_Machel_detail_DF-SC-88-01383.jpg"
+  }
+}

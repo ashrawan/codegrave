@@ -1,0 +1,59 @@
+{
+  "id": "cedar-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Cedar Revolution",
+      "from": "2005"
+    }
+  ],
+  "summary": "The protests of 2005 that ended Syria's occupation.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q184310",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-02-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lebanon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cedar Revolution (Q184310)",
+      "url": "https://www.wikidata.org/wiki/Q184310",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cedar Revolution",
+      "url": "https://en.wikipedia.org/wiki/Cedar_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Cedar_Revolution_Demonstrators.jpg/500px-Cedar_Revolution_Demonstrators.jpg",
+    "alt": "Cedar Revolution",
+    "credit": "Elie Ghobeira",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cedar_Revolution_Demonstrators.jpg"
+  }
+}

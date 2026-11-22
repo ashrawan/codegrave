@@ -1,0 +1,59 @@
+{
+  "id": "porfirio-diaz",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Porfirio Díaz",
+      "from": "1830"
+    }
+  ],
+  "summary": "General who ruled for over thirty years, building railways while the poor lost their land.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q150688",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830-09-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1915-07-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Porfirio Díaz (Q150688)",
+      "url": "https://www.wikidata.org/wiki/Q150688",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Porfirio Díaz",
+      "url": "https://en.wikipedia.org/wiki/Porfirio_Díaz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Porfirio_Diaz.jpg/500px-Porfirio_Diaz.jpg",
+    "alt": "Porfirio Díaz",
+    "credit": "El Ágora",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Porfirio_Diaz.jpg"
+  }
+}

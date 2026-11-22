@@ -1,0 +1,54 @@
+{
+  "id": "magnus-carlsen",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Magnus Carlsen",
+      "from": "1990"
+    }
+  ],
+  "summary": "Chess world champion from 2013 to 2023 and the highest-rated player in history.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q106807",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-11-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "norway"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Magnus Carlsen (Q106807)",
+      "url": "https://www.wikidata.org/wiki/Q106807",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Magnus Carlsen",
+      "url": "https://en.wikipedia.org/wiki/Magnus_Carlsen",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Magnus_Carlsen_in_2025.jpg/500px-Magnus_Carlsen_in_2025.jpg",
+    "alt": "Magnus Carlsen",
+    "credit": "Miroslav.vajdic",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Magnus_Carlsen_in_2025.jpg"
+  }
+}

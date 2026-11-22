@@ -1,0 +1,49 @@
+{
+  "id": "north-korean-famine",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "North Korean famine",
+      "from": "1994"
+    }
+  ],
+  "summary": "The famine of the 1990s.",
+  "wikidata": "Q698323",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2000",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: North Korean famine (Q698323)",
+      "url": "https://www.wikidata.org/wiki/Q698323",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: North Korean famine",
+      "url": "https://en.wikipedia.org/wiki/North_Korean_famine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

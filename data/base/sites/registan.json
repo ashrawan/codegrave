@@ -1,0 +1,56 @@
+{
+  "id": "registan",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Registan",
+      "from": "1417"
+    }
+  ],
+  "summary": "The great square of Samarkand.",
+  "wikidata": "Q1373583",
+  "events": [
+    {
+      "type": "born",
+      "date": "1417",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1420",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uzbekistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Registan (Q1373583)",
+      "url": "https://www.wikidata.org/wiki/Q1373583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Registan",
+      "url": "https://en.wikipedia.org/wiki/Registan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Registan_01.jpg/500px-Registan_01.jpg",
+    "alt": "Registan",
+    "credit": "Bernard Gagnon",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Registan_01.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "wallachia",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Wallachia",
+      "from": "1310"
+    }
+  ],
+  "summary": "The principality between the Carpathians and the Danube, one of the two lands that formed Romania.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q171393",
+  "events": [
+    {
+      "type": "born",
+      "date": "1310",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1859",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Wallachia (Q171393)",
+      "url": "https://www.wikidata.org/wiki/Q171393",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Wallachia",
+      "url": "https://en.wikipedia.org/wiki/Wallachia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Man_Curtea_de_Arges.SV.jpg/500px-Man_Curtea_de_Arges.SV.jpg",
+    "alt": "Wallachia",
+    "credit": "Alexandru Baboş Albabos",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Man_Curtea_de_Arges.SV.jpg"
+  }
+}

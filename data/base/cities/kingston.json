@@ -1,0 +1,51 @@
+{
+  "id": "kingston",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kingston, Jamaica",
+      "from": "1692"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q34692",
+  "events": [
+    {
+      "type": "born",
+      "date": "1692",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jamaica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingston, Jamaica (Q34692)",
+      "url": "https://www.wikidata.org/wiki/Q34692",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingston, Jamaica",
+      "url": "https://en.wikipedia.org/wiki/Kingston,_Jamaica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/99/PortofKingston.jpg_unscaled",
+    "alt": "Kingston, Jamaica",
+    "credit": "The original uploader was Blofeld of SPECTRE at English Wikipedia. (Original text: W. Harris)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:PortofKingston.jpg"
+  }
+}

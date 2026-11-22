@@ -1,0 +1,54 @@
+{
+  "id": "pedro-sanchez",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Pedro Sánchez",
+      "from": "1972"
+    }
+  ],
+  "summary": "Socialist leader who has been prime minister of Spain since 2018.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q6070218",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-02-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pedro Sánchez (Q6070218)",
+      "url": "https://www.wikidata.org/wiki/Q6070218",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pedro Sánchez",
+      "url": "https://en.wikipedia.org/wiki/Pedro_Sánchez",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Obisk_%C5%A1panskega_predsednika_vlade_v_Sloveniji_%2853658605930%29_%28cropped%29.jpg/500px-Obisk_%C5%A1panskega_predsednika_vlade_v_Sloveniji_%2853658605930%29_%28cropped%29.jpg",
+    "alt": "Pedro Sánchez",
+    "credit": "Foto: Nebojša Tejić/STA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Obisk_%C5%A1panskega_predsednika_vlade_v_Sloveniji_(53658605930)_(cropped).jpg"
+  }
+}

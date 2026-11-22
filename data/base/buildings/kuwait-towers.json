@@ -1,0 +1,54 @@
+{
+  "id": "kuwait-towers",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Kuwait Towers",
+      "from": "1977"
+    }
+  ],
+  "summary": "Three towers on the bay, opened in 1979.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1335640",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kuwait"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kuwait Towers (Q1335640)",
+      "url": "https://www.wikidata.org/wiki/Q1335640",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kuwait Towers",
+      "url": "https://en.wikipedia.org/wiki/Kuwait_Towers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Kuwait_towers.jpg/500px-Kuwait_towers.jpg",
+    "alt": "Kuwait Towers",
+    "credit": "Mikael Lindmark",
+    "licence": "CC BY-SA 2.5 se",
+    "source": "https://commons.wikimedia.org/wiki/File:Kuwait_towers.jpg"
+  }
+}

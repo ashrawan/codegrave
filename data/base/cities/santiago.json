@@ -1,0 +1,51 @@
+{
+  "id": "santiago",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Santiago",
+      "from": "1541"
+    }
+  ],
+  "summary": "The capital, founded by Pedro de Valdivia in 1541.",
+  "wikidata": "Q2887",
+  "events": [
+    {
+      "type": "born",
+      "date": "1541",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Santiago (Q2887)",
+      "url": "https://www.wikidata.org/wiki/Q2887",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Santiago",
+      "url": "https://en.wikipedia.org/wiki/Santiago",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Santiago_de_Chile%2C_Desde_Cerro_San_Crist%C3%B3bal_%28cropped%29.jpg/500px-Santiago_de_Chile%2C_Desde_Cerro_San_Crist%C3%B3bal_%28cropped%29.jpg",
+    "alt": "Santiago",
+    "credit": "Omnespsx (D•ES)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Santiago_de_Chile,_Desde_Cerro_San_Crist%C3%B3bal_(cropped).jpg"
+  }
+}

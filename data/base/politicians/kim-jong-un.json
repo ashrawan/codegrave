@@ -1,0 +1,54 @@
+{
+  "id": "kim-jong-un",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Kim Jong Un",
+      "from": "1984"
+    }
+  ],
+  "summary": "Leader since 2011.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q56226",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-korea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kim Jong Un (Q56226)",
+      "url": "https://www.wikidata.org/wiki/Q56226",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kim Jong Un",
+      "url": "https://en.wikipedia.org/wiki/Kim_Jong_Un",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kim_Jong-un_and_Vladimir_Putin_%282023-09-13%29_12_%28cropped%29.jpg/500px-Kim_Jong-un_and_Vladimir_Putin_%282023-09-13%29_12_%28cropped%29.jpg",
+    "alt": "Kim Jong Un",
+    "credit": "Владимир Смирнов / ТАСС",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kim_Jong-un_and_Vladimir_Putin_(2023-09-13)_12_(cropped).jpg"
+  }
+}

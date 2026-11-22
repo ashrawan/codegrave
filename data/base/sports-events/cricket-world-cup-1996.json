@@ -1,0 +1,52 @@
+{
+  "id": "cricket-world-cup-1996",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1996 Cricket World Cup",
+      "from": "1996"
+    }
+  ],
+  "summary": "The World Cup won by Sri Lanka.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1139943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1996-03-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1996 Cricket World Cup (Q1139943)",
+      "url": "https://www.wikidata.org/wiki/Q1139943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1996 Cricket World Cup",
+      "url": "https://en.wikipedia.org/wiki/1996_Cricket_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

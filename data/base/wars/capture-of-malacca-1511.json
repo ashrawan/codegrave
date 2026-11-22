@@ -1,0 +1,59 @@
+{
+  "id": "capture-of-malacca-1511",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Capture of Malacca",
+      "from": "1511"
+    }
+  ],
+  "summary": "The Portuguese conquest of Malacca in 1511.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q4110453",
+  "events": [
+    {
+      "type": "born",
+      "date": "1511-07-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1511-08-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malaysia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Capture of Malacca (Q4110453)",
+      "url": "https://www.wikidata.org/wiki/Q4110453",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Capture of Malacca (1511)",
+      "url": "https://en.wikipedia.org/wiki/Capture_of_Malacca_(1511)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Conquista_de_Malaca%2C_estudo_-_Ernesto_Condeixa_%28cropped%29.png/500px-Conquista_de_Malaca%2C_estudo_-_Ernesto_Condeixa_%28cropped%29.png",
+    "alt": "Capture of Malacca",
+    "credit": "Ernesto Ferreira Condeixa",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Conquista_de_Malaca,_estudo_-_Ernesto_Condeixa_(cropped).png"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "stolen-generations",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Stolen Generations",
+      "from": "1905"
+    }
+  ],
+  "summary": "The long period in which governments took Aboriginal and Torres Strait Islander children from their families.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q639836",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1970",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Stolen Generations (Q639836)",
+      "url": "https://www.wikidata.org/wiki/Q639836",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stolen Generations",
+      "url": "https://en.wikipedia.org/wiki/Stolen_Generations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

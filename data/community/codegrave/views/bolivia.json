@@ -1,0 +1,70 @@
+{
+  "id": "bolivia",
+  "name": "Bolivia",
+  "description": "Bolivia from Tiwanaku to the Incas, the silver of Potosí, independence, revolution and today.",
+  "category": "places",
+  "tags": [
+    "bolivia",
+    "la paz",
+    "potosi",
+    "andes",
+    "titicaca",
+    "tiwanaku"
+  ],
+  "entries": [
+    "lake-titicaca",
+    "tiwanaku",
+    "inca-empire",
+    "potosi",
+    "cerro-rico",
+    "la-paz",
+    "antonio-jose-de-sucre",
+    "bolivia",
+    "simon-patino",
+    "war-of-the-pacific",
+    "che-guevara",
+    "chaco-war",
+    "bolivian-national-revolution",
+    "evo-morales",
+    "rodrigo-paz",
+    "salar-de-uyuni",
+    "bolivian-gas-conflict"
+  ],
+  "checkpoints": [
+    {
+      "id": "tiwanaku",
+      "name": "Tiwanaku",
+      "from": -1500,
+      "to": 1437,
+      "note": "Tiwanaku ruled the Titicaca basin."
+    },
+    {
+      "id": "incas-and-spain",
+      "name": "Incas and Spain",
+      "from": 1438,
+      "to": 1808,
+      "note": "The Incas took the land, and Spain dug silver at Potosí."
+    },
+    {
+      "id": "republic",
+      "name": "Republic",
+      "from": 1809,
+      "to": 2026,
+      "note": "Bolivia became independent in 1825. Wars lost land, and revolution came in 1952."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Bolivia.svg/330px-Flag_of_Bolivia.svg.png",
+    "alt": "Flag of Bolivia",
+    "credit": "See file history' below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bolivia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/54/Himno_Nacional_de_Bolivia_instrumental.ogg/Himno_Nacional_de_Bolivia_instrumental.ogg.mp3",
+    "title": "National Anthem of Bolivia",
+    "credit": "http://www.navyband.navy.mil/anthems/ANTHEMS/Bolivia.mp3 from http://www.navyband.navy.mil/national_anthems.shtml",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Himno_Nacional_de_Bolivia_instrumental.ogg"
+  }
+}

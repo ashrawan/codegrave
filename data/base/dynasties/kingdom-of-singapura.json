@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-singapura",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Singapura",
+      "from": "1299"
+    }
+  ],
+  "summary": "A Malay kingdom on the island in the 1300s, remembered in the Malay Annals.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q27842",
+  "events": [
+    {
+      "type": "born",
+      "date": "1299",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1398",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Singapura (Q27842)",
+      "url": "https://www.wikidata.org/wiki/Q27842",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Singapura",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Singapura",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "grand-duchy-of-moscow",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Grand Duchy of Moscow",
+      "from": "1263"
+    }
+  ],
+  "summary": "The principality of Moscow, which grew under Mongol rule, threw off the Horde and gathered the Russian lands into one state.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q170770",
+  "events": [
+    {
+      "type": "born",
+      "date": "1263",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1547",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grand Duchy of Moscow (Q170770)",
+      "url": "https://www.wikidata.org/wiki/Q170770",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grand Duchy of Moscow",
+      "url": "https://en.wikipedia.org/wiki/Grand_Duchy_of_Moscow",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Muscovy_1390_1525.png_unscaled",
+    "alt": "Grand Duchy of Moscow",
+    "credit": "Dbachmann",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Muscovy_1390_1525.png"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "islamic-state",
+  "category": "political-groups",
+  "names": [
+    {
+      "name": "Islamic State",
+      "from": "1999"
+    }
+  ],
+  "summary": "The jihadist group that seized much of Iraq and Syria in 2014.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2429253",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "iraq"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Islamic State (Q2429253)",
+      "url": "https://www.wikidata.org/wiki/Q2429253",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Islamic State",
+      "url": "https://en.wikipedia.org/wiki/Islamic_State",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

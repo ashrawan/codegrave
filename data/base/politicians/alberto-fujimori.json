@@ -1,0 +1,59 @@
+{
+  "id": "alberto-fujimori",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Alberto Fujimori",
+      "from": "1938"
+    }
+  ],
+  "summary": "President who crushed the Shining Path and ruled harshly, later jailed.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q133040",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-09-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "peru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alberto Fujimori (Q133040)",
+      "url": "https://www.wikidata.org/wiki/Q133040",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alberto Fujimori",
+      "url": "https://en.wikipedia.org/wiki/Alberto_Fujimori",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Alberto_Fujimori_en_1991.jpg/500px-Alberto_Fujimori_en_1991.jpg",
+    "alt": "Alberto Fujimori",
+    "credit": "Christian Lambiotte / European Communities, 1991 / EC - Audiovisual Service",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alberto_Fujimori_en_1991.jpg"
+  }
+}

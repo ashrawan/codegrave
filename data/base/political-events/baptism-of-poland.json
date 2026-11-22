@@ -1,0 +1,52 @@
+{
+  "id": "baptism-of-poland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Baptism of Poland",
+      "from": "0966"
+    }
+  ],
+  "summary": "The baptism of Duke Mieszko I in 966, seen as the founding of the Polish state.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q60863552",
+  "events": [
+    {
+      "type": "born",
+      "date": "0966-04-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "0966-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "poland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Baptism of Poland (Q60863552)",
+      "url": "https://www.wikidata.org/wiki/Q60863552",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baptism of Poland",
+      "url": "https://en.wikipedia.org/wiki/Baptism_of_Poland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

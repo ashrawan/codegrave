@@ -1,0 +1,47 @@
+{
+  "id": "madagascar-film",
+  "category": "films",
+  "names": [
+    {
+      "name": "Madagascar",
+      "from": "2005"
+    }
+  ],
+  "summary": "The animated film that made the island known to children everywhere.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q174555",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-05-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "madagascar"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Madagascar (Q174555)",
+      "url": "https://www.wikidata.org/wiki/Q174555",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Madagascar (2005 film)",
+      "url": "https://en.wikipedia.org/wiki/Madagascar_(2005_film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

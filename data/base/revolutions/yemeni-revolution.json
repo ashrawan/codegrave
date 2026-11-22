@@ -1,0 +1,59 @@
+{
+  "id": "yemeni-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Yemeni revolution",
+      "from": "2011"
+    }
+  ],
+  "summary": "The uprising of 2011.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q210005",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-01-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012-02-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "yemen"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yemeni revolution (Q210005)",
+      "url": "https://www.wikidata.org/wiki/Q210005",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yemeni revolution",
+      "url": "https://en.wikipedia.org/wiki/Yemeni_revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Yemen_protest.jpg/500px-Yemen_protest.jpg",
+    "alt": "Yemeni revolution",
+    "credit": "Sallam from Yemen",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yemen_protest.jpg"
+  }
+}

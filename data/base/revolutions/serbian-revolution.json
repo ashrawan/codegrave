@@ -1,0 +1,54 @@
+{
+  "id": "serbian-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Serbian Revolution",
+      "from": "1804"
+    }
+  ],
+  "summary": "The risings of 1804 to 1817 that won self-rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2092429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1804-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Serbian Revolution (Q2092429)",
+      "url": "https://www.wikidata.org/wiki/Q2092429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Serbian Revolution",
+      "url": "https://en.wikipedia.org/wiki/Serbian_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Battle_of_Mi%C5%A1ar%2C_Afanasij_Scheloumoff.jpg/500px-Battle_of_Mi%C5%A1ar%2C_Afanasij_Scheloumoff.jpg",
+    "alt": "Serbian Revolution",
+    "credit": "Afanasij Scheloumoff",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Battle_of_Mi%C5%A1ar,_Afanasij_Scheloumoff.jpg"
+  }
+}

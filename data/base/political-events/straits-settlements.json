@@ -1,0 +1,52 @@
+{
+  "id": "straits-settlements",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Straits Settlements",
+      "from": "1826"
+    }
+  ],
+  "summary": "The British colony of Singapore, Penang and Malacca from 1826 to 1946.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q376178",
+  "events": [
+    {
+      "type": "born",
+      "date": "1826",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1946",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "singapore"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Straits Settlements (Q376178)",
+      "url": "https://www.wikidata.org/wiki/Q376178",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Straits Settlements",
+      "url": "https://en.wikipedia.org/wiki/Straits_Settlements",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "edmund-barton",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Edmund Barton",
+      "from": "1849"
+    }
+  ],
+  "summary": "Leader of the federation movement and the first prime minister of Australia.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q23342",
+  "events": [
+    {
+      "type": "born",
+      "date": "1849-01-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1920-01-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Edmund Barton (Q23342)",
+      "url": "https://www.wikidata.org/wiki/Q23342",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edmund Barton",
+      "url": "https://en.wikipedia.org/wiki/Edmund_Barton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Edmund_Barton%2C_Q.C.%2C_M.L.C.%2C_ca._1889_-_unknown_photographer_%285932628140%29.jpg/500px-Edmund_Barton%2C_Q.C.%2C_M.L.C.%2C_ca._1889_-_unknown_photographer_%285932628140%29.jpg",
+    "alt": "Edmund Barton",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edmund_Barton,_Q.C.,_M.L.C.,_ca._1889_-_unknown_photographer_(5932628140).jpg"
+  }
+}

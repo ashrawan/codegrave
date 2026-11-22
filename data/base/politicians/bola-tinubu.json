@@ -1,0 +1,54 @@
+{
+  "id": "bola-tinubu",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Bola Tinubu",
+      "from": "1952"
+    }
+  ],
+  "summary": "Former governor of Lagos State who was elected president of Nigeria in 2023.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3510872",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-03-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bola Tinubu (Q3510872)",
+      "url": "https://www.wikidata.org/wiki/Q3510872",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bola Tinubu",
+      "url": "https://en.wikipedia.org/wiki/Bola_Tinubu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Bola_Tinubu_portrait.jpg/500px-Bola_Tinubu_portrait.jpg",
+    "alt": "Bola Tinubu",
+    "credit": "Nosa Asemota",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bola_Tinubu_portrait.jpg"
+  }
+}

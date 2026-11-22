@@ -1,0 +1,54 @@
+{
+  "id": "nicolas-maduro",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Nicolás Maduro",
+      "from": "1962"
+    }
+  ],
+  "summary": "President since 2013, whose rule saw economic collapse.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q58132",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-11-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "venezuela"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nicolás Maduro (Q58132)",
+      "url": "https://www.wikidata.org/wiki/Q58132",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nicolás Maduro",
+      "url": "https://en.wikipedia.org/wiki/Nicolás_Maduro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Nicol%C3%A1s_Maduro_in_2023_%28cropped%29.jpg/500px-Nicol%C3%A1s_Maduro_in_2023_%28cropped%29.jpg",
+    "alt": "Nicolás Maduro",
+    "credit": "Ricardo Stuckert",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nicol%C3%A1s_Maduro_in_2023_(cropped).jpg"
+  }
+}

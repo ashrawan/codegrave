@@ -1,0 +1,56 @@
+{
+  "id": "black-summer-bushfires",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Black Summer",
+      "from": "2019"
+    }
+  ],
+  "summary": "The worst bushfire season on record, which burned more than twenty million hectares.",
+  "wikidata": "Q77924746",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2020-05",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Black Summer (Q77924746)",
+      "url": "https://www.wikidata.org/wiki/Q77924746",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2019–20 Australian bushfire season",
+      "url": "https://en.wikipedia.org/wiki/2019–20_Australian_bushfire_season",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/NSW_%26_QLD_bushfires_Dec_17%2C_2019.png/500px-NSW_%26_QLD_bushfires_Dec_17%2C_2019.png",
+    "alt": "Black Summer",
+    "credit": "NOAA / NESDIS",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:NSW_%26_QLD_bushfires_Dec_17,_2019.png"
+  }
+}

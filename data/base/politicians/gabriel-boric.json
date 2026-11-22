@@ -1,0 +1,54 @@
+{
+  "id": "gabriel-boric",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Gabriel Boric",
+      "from": "1986"
+    }
+  ],
+  "summary": "Student leader who became president in 2022.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q16297876",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-02-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gabriel Boric (Q16297876)",
+      "url": "https://www.wikidata.org/wiki/Q16297876",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gabriel Boric",
+      "url": "https://en.wikipedia.org/wiki/Gabriel_Boric",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Retrato_Oficial_Presidente_Boric_Font.jpg/500px-Retrato_Oficial_Presidente_Boric_Font.jpg",
+    "alt": "Gabriel Boric",
+    "credit": "Gobierno de Chile",
+    "licence": "CC BY 3.0 cl",
+    "source": "https://commons.wikimedia.org/wiki/File:Retrato_Oficial_Presidente_Boric_Font.jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "galle-fort",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Galle Fort",
+      "from": "1588"
+    }
+  ],
+  "summary": "The sea fort of Galle built by the Portuguese and the Dutch.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q2507050",
+  "events": [
+    {
+      "type": "born",
+      "date": "1588",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sri-lanka"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Galle Fort (Q2507050)",
+      "url": "https://www.wikidata.org/wiki/Q2507050",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Galle Fort",
+      "url": "https://en.wikipedia.org/wiki/Galle_Fort",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/SL_Galle_Fort_asv2020-01_img23.jpg/500px-SL_Galle_Fort_asv2020-01_img23.jpg",
+    "alt": "Galle Fort",
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:SL_Galle_Fort_asv2020-01_img23.jpg"
+  }
+}

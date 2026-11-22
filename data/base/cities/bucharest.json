@@ -1,0 +1,51 @@
+{
+  "id": "bucharest",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bucharest",
+      "from": "1459"
+    }
+  ],
+  "summary": "The capital, once called the little Paris of the east.",
+  "wikidata": "Q19660",
+  "events": [
+    {
+      "type": "born",
+      "date": "1459",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "romania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bucharest (Q19660)",
+      "url": "https://www.wikidata.org/wiki/Q19660",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bucharest",
+      "url": "https://en.wikipedia.org/wiki/Bucharest",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bucharest-Skyline-01.jpg/500px-Bucharest-Skyline-01.jpg",
+    "alt": "Bucharest",
+    "credit": "seisdeagosto",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bucharest-Skyline-01.jpg"
+  }
+}

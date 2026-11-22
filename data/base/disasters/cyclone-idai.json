@@ -1,0 +1,56 @@
+{
+  "id": "cyclone-idai",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Cyclone Idai",
+      "from": "2019"
+    }
+  ],
+  "summary": "The cyclone of 2019 that flooded Beira.",
+  "wikidata": "Q62023294",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-03-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2019-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mozambique"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cyclone Idai (Q62023294)",
+      "url": "https://www.wikidata.org/wiki/Q62023294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cyclone Idai",
+      "url": "https://en.wikipedia.org/wiki/Cyclone_Idai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Idai_2019-03-14_1135Z.jpg/500px-Idai_2019-03-14_1135Z.jpg",
+    "alt": "Cyclone Idai",
+    "credit": "MODIS image captured by NASA’s Aqua satellite",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Idai_2019-03-14_1135Z.jpg"
+  }
+}

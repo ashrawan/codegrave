@@ -1,0 +1,71 @@
+{
+  "id": "mozambique",
+  "name": "Mozambique",
+  "description": "Mozambique from the Swahili coast and Mutapa to Portuguese rule, the liberation war, civil war and peace.",
+  "category": "places",
+  "tags": [
+    "mozambique",
+    "maputo",
+    "africa",
+    "frelimo",
+    "indian ocean",
+    "swahili"
+  ],
+  "entries": [
+    "kingdom-of-mutapa",
+    "portuguese-mozambique",
+    "island-of-mozambique",
+    "maputo",
+    "ngungunhane",
+    "eduardo-mondlane",
+    "samora-machel",
+    "eusebio",
+    "graca-machel",
+    "mia-couto",
+    "frelimo",
+    "mozambican-war-of-independence",
+    "cahora-bassa-dam",
+    "renamo",
+    "mozambique",
+    "daniel-chapo",
+    "mozambican-civil-war",
+    "cyclone-idai"
+  ],
+  "checkpoints": [
+    {
+      "id": "kingdoms-and-coast",
+      "name": "Kingdoms and coast",
+      "from": 1000,
+      "to": 1497,
+      "note": "Swahili traders settled the coast, and Mutapa ruled the gold lands inland."
+    },
+    {
+      "id": "portuguese-rule",
+      "name": "Portuguese rule",
+      "from": 1498,
+      "to": 1963,
+      "note": "Vasco da Gama came in 1498, and Portugal slowly took the land."
+    },
+    {
+      "id": "independence-and-war",
+      "name": "Independence and war",
+      "from": 1964,
+      "to": 2026,
+      "note": "FRELIMO fought for freedom, won in 1975. Civil war lasted until 1992."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Mozambique.svg/330px-Flag_of_Mozambique.svg.png",
+    "alt": "Flag of Mozambique",
+    "credit": "FRELIMO",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mozambique.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9f/Mozambican_national_anthem%2C_performed_by_the_United_States_Navy_Band.wav/Mozambican_national_anthem%2C_performed_by_the_United_States_Navy_Band.wav.mp3",
+    "title": "Pátria Amada",
+    "credit": "https://web.archive.org/web/20161019064149/http://www.navyband.navy.mil/anthems/anthems/mozambique.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mozambican_national_anthem,_performed_by_the_United_States_Navy_Band.wav"
+  }
+}

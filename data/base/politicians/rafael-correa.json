@@ -1,0 +1,54 @@
+{
+  "id": "rafael-correa",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Rafael Correa",
+      "from": "1963"
+    }
+  ],
+  "summary": "President from 2007 to 2017.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q19581",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-04-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ecuador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rafael Correa (Q19581)",
+      "url": "https://www.wikidata.org/wiki/Q19581",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rafael Correa",
+      "url": "https://en.wikipedia.org/wiki/Rafael_Correa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Rafael_Correa%2C_Ecuador_expresident.jpg_unscaled",
+    "alt": "Rafael Correa",
+    "credit": "Wilfredor",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rafael_Correa,_Ecuador_expresident.jpg"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "id": "iceland",
+  "name": "Iceland",
+  "description": "Iceland from Norse settlement and the Althing to the sagas, Danish rule, independence, the Cod Wars and volcanoes.",
+  "category": "places",
+  "tags": [
+    "iceland",
+    "reykjavik",
+    "vikings",
+    "sagas",
+    "volcanoes",
+    "althing"
+  ],
+  "entries": [
+    "settlement-of-iceland",
+    "althing",
+    "thingvellir",
+    "leif-erikson",
+    "snorri-sturluson",
+    "njals-saga",
+    "laki-eruption",
+    "reykjavik",
+    "halldor-laxness",
+    "vigdis-finnbogadottir",
+    "iceland",
+    "cod-wars",
+    "bjork",
+    "2008-icelandic-financial-crisis",
+    "eyjafjallajokull-eruption"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-commonwealth",
+      "name": "The commonwealth",
+      "from": 874,
+      "to": 1261,
+      "note": "Norse settlers came from 874, founded the Althing in 930, and wrote the sagas."
+    },
+    {
+      "id": "norway-and-denmark",
+      "name": "Norway and Denmark",
+      "from": 1262,
+      "to": 1917,
+      "note": "Iceland came under Norway and then Denmark. Laki's eruption brought famine."
+    },
+    {
+      "id": "independent-iceland",
+      "name": "Independent Iceland",
+      "from": 1918,
+      "to": 2026,
+      "note": "Iceland won home rule in 1918 and became a republic in 1944."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/330px-Flag_of_Iceland.svg.png",
+    "alt": "Flag of Iceland",
+    "credit": "Original: Matthías Þórðarson Vector: Árni Dagur and Magasjukur2",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Iceland.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/20/Lofs%C3%B6ngur_%28first_recording%29.ogg/Lofs%C3%B6ngur_%28first_recording%29.ogg.mp3",
+    "title": "Lofsöngur",
+    "credit": "YouTube: https://www.youtube.com/watch?v=uZad5vPlrP0 – View/save archived versions on archive.org",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lofs%C3%B6ngur_(first_recording).ogg"
+  }
+}

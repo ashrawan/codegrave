@@ -1,0 +1,51 @@
+{
+  "id": "jamaica",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Jamaica",
+      "from": "1962"
+    }
+  ],
+  "summary": "A Caribbean island, a British colony until 1962, home of reggae.",
+  "wikidata": "Q766",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jamaica (Q766)",
+      "url": "https://www.wikidata.org/wiki/Q766",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jamaica",
+      "url": "https://en.wikipedia.org/wiki/Jamaica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Satellite_image_of_Jamaica_in_November_2001.jpg/500px-Satellite_image_of_Jamaica_in_November_2001.jpg",
+    "alt": "Jamaica",
+    "credit": "Jacques Descloitres, MODIS Land Rapid Response Team, NASA/GSFC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Satellite_image_of_Jamaica_in_November_2001.jpg"
+  }
+}

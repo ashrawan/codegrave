@@ -1,0 +1,59 @@
+{
+  "id": "nigerian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Nigerian Civil War",
+      "from": "1967"
+    }
+  ],
+  "summary": "The war that followed the secession of the south-eastern Republic of Biafra. Blockade and famine killed perhaps a million people before Biafra surrendered in 1970.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q829875",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-07-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1970-01-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nigeria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nigerian Civil War (Q829875)",
+      "url": "https://www.wikidata.org/wiki/Q829875",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nigerian Civil War",
+      "url": "https://en.wikipedia.org/wiki/Nigerian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Biafra_independent_state_map-en.svg/500px-Biafra_independent_state_map-en.svg.png",
+    "alt": "Nigerian Civil War",
+    "credit": "Eric Gaba (Sting - fr:Sting)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Biafra_independent_state_map-en.svg"
+  }
+}

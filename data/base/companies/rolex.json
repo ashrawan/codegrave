@@ -1,0 +1,54 @@
+{
+  "id": "rolex",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Rolex",
+      "from": "1905"
+    }
+  ],
+  "summary": "Watchmaker founded in London and based in Geneva since 1919, maker of the best-known luxury watches.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q62288",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "switzerland"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rolex (Q62288)",
+      "url": "https://www.wikidata.org/wiki/Q62288",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rolex",
+      "url": "https://en.wikipedia.org/wiki/Rolex",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Rolex_Geneva_13.jpg/500px-Rolex_Geneva_13.jpg",
+    "alt": "Rolex",
+    "credit": "MHM55",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Rolex_Geneva_13.jpg"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "el-mirador",
+  "category": "sites",
+  "names": [
+    {
+      "name": "El Mirador",
+      "from": "-0600"
+    }
+  ],
+  "summary": "A great early Maya city in the jungle.",
+  "wikidata": "Q504904",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0600",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0150",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guatemala"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: El Mirador (Q504904)",
+      "url": "https://www.wikidata.org/wiki/Q504904",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: El Mirador",
+      "url": "https://en.wikipedia.org/wiki/El_Mirador",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/80/Elmiradortigre.jpg_unscaled",
+    "alt": "El Mirador",
+    "credit": "No machine-readable author provided. Authenticmaya~commonswiki assumed (based on copyright claims).",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Elmiradortigre.jpg"
+  }
+}

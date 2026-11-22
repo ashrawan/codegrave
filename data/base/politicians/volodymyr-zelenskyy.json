@@ -1,0 +1,54 @@
+{
+  "id": "volodymyr-zelenskyy",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Volodymyr Zelenskyy",
+      "from": "1978"
+    }
+  ],
+  "summary": "Comic actor elected president in 2019 who led Ukraine through the full Russian invasion.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3874799",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-01-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "ukraine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Volodymyr Zelenskyy (Q3874799)",
+      "url": "https://www.wikidata.org/wiki/Q3874799",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Volodymyr Zelenskyy",
+      "url": "https://en.wikipedia.org/wiki/Volodymyr_Zelenskyy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/New_Year%27s_Eve_from_President_of_Ukraine_Volodymyr_Zelensky_%2831-12-2025%29_%28cropped%29.jpg/500px-New_Year%27s_Eve_from_President_of_Ukraine_Volodymyr_Zelensky_%2831-12-2025%29_%28cropped%29.jpg",
+    "alt": "Volodymyr Zelenskyy",
+    "credit": "Press Service of the President of Ukraine",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:New_Year%27s_Eve_from_President_of_Ukraine_Volodymyr_Zelensky_(31-12-2025)_(cropped).jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "visigothic-kingdom",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Visigothic Kingdom",
+      "from": "0476"
+    }
+  ],
+  "summary": "The kingdom of the Visigoths, ruled from Toledo, which held Spain after Rome until the Muslim conquest of 711.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q126936",
+  "events": [
+    {
+      "type": "born",
+      "date": "0476",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0718",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Visigothic Kingdom (Q126936)",
+      "url": "https://www.wikidata.org/wiki/Q126936",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Visigothic Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Visigothic_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Visigothic_Kingdom.png/500px-Visigothic_Kingdom.png",
+    "alt": "Visigothic Kingdom",
+    "credit": "Javierfv1212 (talk)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Visigothic_Kingdom.png"
+  }
+}

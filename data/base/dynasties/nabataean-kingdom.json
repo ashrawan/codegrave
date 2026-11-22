@@ -1,0 +1,59 @@
+{
+  "id": "nabataean-kingdom",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Nabataean Kingdom",
+      "from": "-0300"
+    }
+  ],
+  "summary": "The Arab kingdom of Petra.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11029653",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0300",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0106",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "jordan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nabataean Kingdom (Q11029653)",
+      "url": "https://www.wikidata.org/wiki/Q11029653",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nabataean Kingdom",
+      "url": "https://en.wikipedia.org/wiki/Nabataean_Kingdom",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Al-Khazneh%2C_Petra%2C_Jordan.jpg/500px-Al-Khazneh%2C_Petra%2C_Jordan.jpg",
+    "alt": "Nabataean Kingdom",
+    "credit": "Vyacheslav Argenberg",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Al-Khazneh,_Petra,_Jordan.jpg"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "democratic-republic-of-the-congo",
+  "name": "DR Congo",
+  "description": "The Democratic Republic of the Congo from the Kingdom of Kongo to Leopold's Congo, Belgian rule, independence, Mobutu and the wars.",
+  "category": "places",
+  "tags": [
+    "congo",
+    "kinshasa",
+    "drc",
+    "congo river",
+    "mobutu",
+    "africa"
+  ],
+  "entries": [
+    "congo-river",
+    "kingdom-of-kongo",
+    "kingdom-of-luba",
+    "kinshasa",
+    "congo-free-state",
+    "belgian-congo",
+    "virunga-national-park",
+    "patrice-lumumba",
+    "mobutu-sese-seko",
+    "denis-mukwege",
+    "congo-crisis",
+    "democratic-republic-of-the-congo",
+    "felix-tshisekedi",
+    "rumble-in-the-jungle",
+    "first-congo-war",
+    "second-congo-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "kingdoms",
+      "name": "Kingdoms",
+      "from": 1390,
+      "to": 1884,
+      "note": "Kongo, Luba and Kuba kingdoms ruled, and the slave trade took many."
+    },
+    {
+      "id": "leopold-and-belgium",
+      "name": "Leopold and Belgium",
+      "from": 1885,
+      "to": 1959,
+      "note": "Leopold ruled the Congo by terror until 1908, and Belgium then ruled."
+    },
+    {
+      "id": "zaire",
+      "name": "Zaire",
+      "from": 1960,
+      "to": 1996,
+      "note": "Independence in 1960 brought chaos and Lumumba's murder. Mobutu ruled until 1997."
+    },
+    {
+      "id": "wars-and-after",
+      "name": "Wars and after",
+      "from": 1997,
+      "to": 2026,
+      "note": "Wars drew in many neighbours, and the east is still unsettled."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg/330px-Flag_of_the_Democratic_Republic_of_the_Congo.svg.png",
+    "alt": "Flag of DR Congo",
+    "credit": "Nightstallion",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Democratic_Republic_of_the_Congo.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8a/Debout_Congolais.ogg/Debout_Congolais.ogg.mp3",
+    "title": "Debout Congolaise",
+    "credit": "Moi premier",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Debout_Congolais.ogg"
+  }
+}

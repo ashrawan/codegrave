@@ -1,0 +1,54 @@
+{
+  "id": "skoda-auto",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Škoda Auto",
+      "from": "1895"
+    }
+  ],
+  "summary": "Car maker of Mladá Boleslav founded in 1895.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q29637",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "czech-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Škoda Auto (Q29637)",
+      "url": "https://www.wikidata.org/wiki/Q29637",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Škoda Auto",
+      "url": "https://en.wikipedia.org/wiki/Škoda_Auto",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/%C5%A0koda_nov%C3%A9_s%C3%ADdlo.jpg/500px-%C5%A0koda_nov%C3%A9_s%C3%ADdlo.jpg",
+    "alt": "Škoda Auto",
+    "credit": "Vojta 012",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%C5%A0koda_nov%C3%A9_s%C3%ADdlo.jpg"
+  }
+}

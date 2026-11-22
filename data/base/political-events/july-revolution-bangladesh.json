@@ -1,0 +1,59 @@
+{
+  "id": "july-revolution-bangladesh",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "July Revolution",
+      "from": "2024"
+    }
+  ],
+  "summary": "The student-led uprising of 2024 that toppled Sheikh Hasina.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q130255015",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bangladesh"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: July Revolution (Q130255015)",
+      "url": "https://www.wikidata.org/wiki/Q130255015",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: July Revolution (Bangladesh)",
+      "url": "https://en.wikipedia.org/wiki/July_Revolution_(Bangladesh)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/The_victory_celebration_of_Bangladeshi_student%27s_one_point_movement.jpg/500px-The_victory_celebration_of_Bangladeshi_student%27s_one_point_movement.jpg",
+    "alt": "July Revolution",
+    "credit": "Rayhan9d",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_victory_celebration_of_Bangladeshi_student%27s_one_point_movement.jpg"
+  }
+}

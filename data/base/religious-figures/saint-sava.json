@@ -1,0 +1,59 @@
+{
+  "id": "saint-sava",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Saint Sava",
+      "from": "1169"
+    }
+  ],
+  "summary": "The first archbishop of the Serbian church.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q138465",
+  "events": [
+    {
+      "type": "born",
+      "date": "1169",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1235-01-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "serbia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint Sava (Q138465)",
+      "url": "https://www.wikidata.org/wiki/Q138465",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint Sava",
+      "url": "https://en.wikipedia.org/wiki/Saint_Sava",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Saint_Sava%2C_Patriarchate_of_Pe%C4%87_%282%29.jpg_unscaled",
+    "alt": "Saint Sava",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Sava,_Patriarchate_of_Pe%C4%87_(2).jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "manny-pacquiao",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Manny Pacquiao",
+      "from": "1978"
+    }
+  ],
+  "summary": "Boxer who won world titles in eight weight classes.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q486359",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "philippines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manny Pacquiao (Q486359)",
+      "url": "https://www.wikidata.org/wiki/Q486359",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manny Pacquiao",
+      "url": "https://en.wikipedia.org/wiki/Manny_Pacquiao",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Pacquiao_and_Didal_%28cropped%29.jpg/500px-Pacquiao_and_Didal_%28cropped%29.jpg",
+    "alt": "Manny Pacquiao",
+    "credit": "Avito C. Dalan for the Philippine News Agency",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Pacquiao_and_Didal_(cropped).jpg"
+  }
+}

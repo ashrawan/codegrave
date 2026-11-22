@@ -1,0 +1,54 @@
+{
+  "id": "eddy-merckx",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Eddy Merckx",
+      "from": "1945"
+    }
+  ],
+  "summary": "Cyclist who won the Tour de France five times, thought by many the greatest of all.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q103756",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-06-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belgium"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eddy Merckx (Q103756)",
+      "url": "https://www.wikidata.org/wiki/Q103756",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eddy Merckx",
+      "url": "https://en.wikipedia.org/wiki/Eddy_Merckx",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Eddy_Merckx_Molteni_1973.jpg/500px-Eddy_Merckx_Molteni_1973.jpg",
+    "alt": "Eddy Merckx",
+    "credit": "Nationaal Archief",
+    "licence": "No restrictions",
+    "source": "https://commons.wikimedia.org/wiki/File:Eddy_Merckx_Molteni_1973.jpg"
+  }
+}

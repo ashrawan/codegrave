@@ -1,0 +1,51 @@
+{
+  "id": "riyadh",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Riyadh",
+      "from": "1746"
+    }
+  ],
+  "summary": "The capital, which grew from a mud-walled oasis town into a city of millions.",
+  "wikidata": "Q3692",
+  "events": [
+    {
+      "type": "born",
+      "date": "1746",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saudi-arabia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Riyadh (Q3692)",
+      "url": "https://www.wikidata.org/wiki/Q3692",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Riyadh",
+      "url": "https://en.wikipedia.org/wiki/Riyadh",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Riyadh_Skyline.jpg/500px-Riyadh_Skyline.jpg",
+    "alt": "Riyadh",
+    "credit": "B.alotaby",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Riyadh_Skyline.jpg"
+  }
+}

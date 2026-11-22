@@ -1,0 +1,47 @@
+{
+  "id": "doi-moi",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Đổi Mới",
+      "from": "1986"
+    }
+  ],
+  "summary": "The reforms of 1986 that opened Vietnam's economy to markets.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q342587",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-12",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vietnam"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Đổi Mới (Q342587)",
+      "url": "https://www.wikidata.org/wiki/Q342587",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Đổi Mới",
+      "url": "https://en.wikipedia.org/wiki/Đổi_Mới",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

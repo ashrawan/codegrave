@@ -1,0 +1,59 @@
+{
+  "id": "gustav-i-of-sweden",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Gustav I of Sweden",
+      "from": "1496"
+    }
+  ],
+  "summary": "King who freed Sweden from the Kalmar Union and brought in the Reformation.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q52947",
+  "events": [
+    {
+      "type": "born",
+      "date": "1496-05-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1560-09-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sweden"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gustav I of Sweden (Q52947)",
+      "url": "https://www.wikidata.org/wiki/Q52947",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gustav I of Sweden",
+      "url": "https://en.wikipedia.org/wiki/Gustav_I_of_Sweden",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/58/Gustav_Vasa.jpg_unscaled",
+    "alt": "Gustav I of Sweden",
+    "credit": "Jacob Binck",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gustav_Vasa.jpg"
+  }
+}

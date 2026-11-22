@@ -1,0 +1,52 @@
+{
+  "id": "lusitania",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Lusitania",
+      "from": "0027"
+    }
+  ],
+  "summary": "The Roman province of the west of Iberia, named after the Lusitanian people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q188650",
+  "events": [
+    {
+      "type": "born",
+      "date": "0027",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0409",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "portugal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lusitania (Q188650)",
+      "url": "https://www.wikidata.org/wiki/Q188650",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lusitania",
+      "url": "https://en.wikipedia.org/wiki/Lusitania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

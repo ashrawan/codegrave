@@ -1,0 +1,51 @@
+{
+  "id": "banska-stiavnica",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Banská Štiavnica",
+      "from": "1156"
+    }
+  ],
+  "summary": "A silver-mining town that had one of the first schools of mining.",
+  "wikidata": "Q208110",
+  "events": [
+    {
+      "type": "born",
+      "date": "1156",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovakia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Banská Štiavnica (Q208110)",
+      "url": "https://www.wikidata.org/wiki/Q208110",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Banská Štiavnica",
+      "url": "https://en.wikipedia.org/wiki/Banská_Štiavnica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Bansk%C3%A1_%C5%A0tiavnica_from_Nov%C3%BD_z%C3%A1mok_2007.jpg/500px-Bansk%C3%A1_%C5%A0tiavnica_from_Nov%C3%BD_z%C3%A1mok_2007.jpg",
+    "alt": "Banská Štiavnica",
+    "credit": "Adrian Tync",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bansk%C3%A1_%C5%A0tiavnica_from_Nov%C3%BD_z%C3%A1mok_2007.jpg"
+  }
+}

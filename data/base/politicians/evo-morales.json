@@ -1,0 +1,54 @@
+{
+  "id": "evo-morales",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Evo Morales",
+      "from": "1959"
+    }
+  ],
+  "summary": "The first Indigenous president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q42410",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-10-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bolivia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Evo Morales (Q42410)",
+      "url": "https://www.wikidata.org/wiki/Q42410",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Evo Morales",
+      "url": "https://en.wikipedia.org/wiki/Evo_Morales",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Evo_Morales_Ayma_%28cropped%29.jpg/500px-Evo_Morales_Ayma_%28cropped%29.jpg",
+    "alt": "Evo Morales",
+    "credit": "EneasMx",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Evo_Morales_Ayma_(cropped).jpg"
+  }
+}

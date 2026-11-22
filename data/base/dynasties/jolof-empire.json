@@ -1,0 +1,52 @@
+{
+  "id": "jolof-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Jolof Empire",
+      "from": "1350"
+    }
+  ],
+  "summary": "The Wolof empire.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q760893",
+  "events": [
+    {
+      "type": "born",
+      "date": "1350",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1549",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "senegal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jolof Empire (Q760893)",
+      "url": "https://www.wikidata.org/wiki/Q760893",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jolof Empire",
+      "url": "https://en.wikipedia.org/wiki/Jolof_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
