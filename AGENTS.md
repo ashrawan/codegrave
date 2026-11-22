@@ -246,25 +246,18 @@ How the page is put together:
   speed, down to the turn limit and to a stop on pause (`road.vel`), so the
   road never jerks under the reader. Space plays and pauses. At the far end the button offers to
   play again from the beginning.
-- **Cards take turns while play travels.** The uneven scale keeps starts
-  apart along the road, but cards are wide, so on a narrow screen or a
-  crowded lane they would still cover one another, and before this the one
-  behind passed without ever being shown. Now every start is owed a moment
-  as a full card. A card that is up keeps its place for `DWELL` seconds
-  once it has opened (`dwellFor()`: less when more than two wait); then it
-  gives way to one it was hiding, and those come nearest first, in the
-  order things happened (`orderOf()` in `site/road.js` decides the order
-  for every name; `road.turn` counts each card's seconds). Play never
-  stands still for this. It slows down early instead: each frame
-  `turnPace()` works out how fast the reader may travel so that every card
-  still owed its turn has had it by the time the reader is nearly on it
-  (`road.limit`), and it never goes below `CRAWL`. A full stop was tried
-  and was not wanted, so keep the floor. The open entry's card takes its
-  turn like any other. Moving by hand, or any change to what is drawn,
-  starts the turns afresh (`turnsOver()`). Standing still and travelling by
-  hand, nothing takes turns: a card does not leave while someone reads it.
-  Keep it this simple: no queue, no timers, only an order and a speed limit
-  worked out each frame.
+- **Cards take turns while play travels.** One rule, asked for in Nov
+  2026 ("cards are popping up twice"): while play travels, each start opens
+  as a full card once, when it comes near enough (size `FULL`), stands for
+  `dwellFor()` seconds (about 2, less when others wait), then closes to its
+  small card and does not open again on that run (`closed` in `roadDraw()`,
+  honoured by `placeLabels()`). Ends stay small plates in play, so one entry
+  never seems to open twice. Cards that would cover one another wait,
+  nearest first (`orderOf()`), and play slows early so each gets its turn
+  before the reader reaches it (`turnPace()`, never below `CRAWL`). Moving
+  by hand, or any change to what is drawn, starts the turns afresh
+  (`turnsOver()`). Standing still, nothing takes turns: a card stays while
+  someone reads it. Keep it this simple: no queue, no timers.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
@@ -325,8 +318,9 @@ How the page is put together:
   then the editors' topics from `data/editors-choice.json`, today History,
   Science, Technology, Culture and Countries), then the list of community views in the
   order `boot.json` gives them (topic by topic; under All each topic has a
-  small heading), then the filters: the year range (`state.span`) and how
-  much to show (`state.level`). On a phone the filters fold into one line
+  small heading), then the filter: the year range (`state.span`). "How much to show" was
+  removed on request (Nov 2026): every entry of a view is on the road, and
+  the road's scale and the cards by distance do the rest. On a phone the filters fold into one line
   (`#filters-btn`) so the list has the sheet. Only community views are
   listed. Classical views are found by the search, where every result
   carries an icon that says which sort it is. A row is a thumbnail made by

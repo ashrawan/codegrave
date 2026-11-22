@@ -221,7 +221,6 @@ body.side-open #dock { right: var(--side); }
 .seg button { flex: 1; height: 30px; padding: 0 4px; font-size: 12.5px; color: var(--muted); background: transparent; border: 0; border-radius: 5px; }
 .seg button:hover { color: var(--text); }
 .seg button[aria-checked="true"] { font-weight: 600; color: var(--text); background: var(--bg); box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
-#shown-n { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .ticks { font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; }
 .field.form { gap: 6px; }
 

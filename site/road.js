@@ -14,7 +14,7 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 // and `warp` says which moment lies at which place. D is the focal length in
 // those years: something D ahead is drawn at half size.
 export const NEAR = -0.42, GONE = -0.16, FAR = 10.8;   // in focal lengths: the edge of the screen behind the reader, where a name lets go, the horizon
-export const FULL = 0.64, SMALL = 0.3;                  // the size from which a name is a full card, and from which it is a small card
+export const FULL = 0.56, SMALL = 0.3;                  // the size from which a name is a full card, and from which it is a small card
 export const CARD_MIN = 0.7;                            // a full card is never drawn smaller than this, so it can be read from where it first shows
 export const sizeAt = (u, D) => D / (D + u);
 
@@ -180,7 +180,7 @@ export function openFrom(small, card, g) {
   return { x, y, k, h, ax: clamp(card.gx, x - half + 12 * k, x + half - 12 * k) };
 }
 
-// Which names are shown. `cands` come best first: { key, end, s, gx, gy, m, lean }.
+// Which names are shown. `cands` come best first: { key, end, s, gx, gy, m, lean, closed }.
 // Each takes the biggest form its distance allows that fits. Near cards may
 // overlap a little, as things do in depth; smaller names never touch
 // anything, and one that would is left out. The small ones are capped.
@@ -199,6 +199,7 @@ export function placeLabels(cands, G, caps = {}) {
   };
   for (const c of cands) {
     for (const mode of modesOf(c.end, zoneOf(c.s))) {
+      if (c.closed && isBig(mode)) continue;        // a card that has had its turn and closed stays closed
       const isSmall = mode === 'compact' || mode === 'endc';
       if ((isSmall && small >= maxSmall) || (mode === 'tag' && tags >= maxTags)) continue;
       const r = labelRect(mode, c.s, c.gx, c.gy, c.m, G, c.lean);
@@ -304,7 +305,7 @@ export function paceFor(cards, within1, within3) {
 // the cards in front still need, so that each has had its turn by the time
 // the reader reaches it (HOLD_AT focal lengths short of it), and it never
 // travels slower than CRAWL.
-export const DWELL = 2.0, DWELL_BUSY = 1.4, DWELL_CROWD = 1.0, HOLD_AT = 0.03, CRAWL = 0.035;
+export const DWELL = 2.2, DWELL_BUSY = 1.6, DWELL_CROWD = 1.1, HOLD_AT = 0.03, CRAWL = 0.035;
 export const dwellFor = (waiting) => (waiting > 5 ? DWELL_CROWD : waiting > 2 ? DWELL_BUSY : DWELL);
 // The most play may travel, in focal lengths a second. `owed` are the starts
 // still owed their turn: { ahead (focal lengths), up (its card is up), left

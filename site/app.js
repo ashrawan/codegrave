@@ -16,10 +16,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const REPO = 'https://github.com/ashrawan/codegrave';
   const EDITORS = 'codegrave';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
-  const LEVELS = [
-    { name: 'Landmarks', pct: 10 }, { name: 'Notable', pct: 30 },
-    { name: 'Most', pct: 60 }, { name: 'All', pct: 100 },
-  ];
   const MAX_ROWS = 160;         // the most lines drawn at once
   const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
   // How a link reads from the entry that carries it, and from the entry it points to.
@@ -490,7 +486,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     for (const id of ids) addView(alias.get(id) || id);
     if (state.views.length === 1) {
       const v = viewById.get(state.views[0]);
-      state.level = v.level || 100;
       if (v.order) state.order = v.order;
     }
     return state.views.length > 0;
@@ -511,7 +506,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function readUrl(ids) {
     const q = new URLSearchParams(location.search);
     if (!ids.length || !setViews(ids)) return false;
-    if (q.has('lv')) state.level = clamp(Number(q.get('lv')) || 100, 5, 100);
     state.span = readSpan(q.get('yr'));
     if (q.get('o') === 'old') state.order = 'old'; else if (q.get('o') === 'new') state.order = 'new';
     const cs = (q.get('c') || '').split(',').map(Number);
@@ -521,7 +515,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function writeUrl() {
     const q = new URLSearchParams();
     q.set('views', state.views.join(','));
-    if (state.level !== 100) q.set('lv', state.level);
     if (state.order === 'new') q.set('o', 'new');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
@@ -918,14 +911,20 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (fast && !up && id !== state.open) return;
       // A name already up keeps its place, and a card keeps being a card: a newcomer waits rather than pushing it out.
       // While play travels, a card that has stood its time gives way to one it was hiding (orderOf in road.js).
-      let turn = null;
-      if (play.on && zone === 0) {
+      // While play travels, each start opens as a card once: it is 'due' until it has stood `dwell` seconds,
+      // then 'done', closes to its small card and does not open again on this run of play. Ends stay small
+      // plates, so one entry never seems to open twice. The open entry and the one pointed at are exempt.
+      let turn = null, closed = false;
+      if (play.on) {
         const had = road.turn.get(key) || 0;
-        if (had >= dwell && had !== Infinity) road.turn.set(key, Infinity);
-        turn = had >= dwell ? 'done' : 'due';
+        if (!end && zone === 0) {
+          if (had >= dwell && had !== Infinity) road.turn.set(key, Infinity);
+          turn = had >= dwell ? 'done' : 'due';
+        }
+        closed = (end || had === Infinity || turn === 'done') && id !== state.open && id !== road.hover;
       }
       const pri = orderOf({ open: id === state.open, hover: id === road.hover, zone, end, up, score: p.t.score || 0, turn, ahead: u / D });
-      cands.push({ key, p, end, u, s, zone, turn, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
+      cands.push({ key, p, end, u, s, zone, turn, closed, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
     };
     let within1 = 0, within3 = 0;
     const count = (time) => { const u = U(time); if (u > 0 && u <= 3 * D) { within3++; if (u <= D) within1++; } };
@@ -986,8 +985,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     for (const c of cands) {
       if (c.turn !== 'due' || c.end || c.u < -0.05 * D) continue;
       const r = placed.get(c.key);
-      const n = still ? null : road.nodes.get(c.key + ':full');       // its turn begins once it has opened
-      owed.push({ ahead: c.u / D, up: !!r && r.big, left: dwell - (road.turn.get(c.key) || 0) + (still ? 0 : OPENS * (1 - (n ? n.g : 0))) });
+      owed.push({ ahead: c.u / D, up: !!r && r.big, left: dwell - (road.turn.get(c.key) || 0) });
     }
     road.waiting = owed.filter((c) => !c.up).length; road.limit = turnPace(owed);
     const hotNow = (id) => id === state.open || id === road.hover || id === road.focus;
@@ -1003,7 +1001,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       seen.add(nk);
       n.r = r; n.s = c.s;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
-      if (c.turn === 'due' && r.big && n.o > 0.45 && n.g >= 1) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
+      if (c.turn === 'due' && r.big) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
       // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
       if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }
@@ -1575,8 +1573,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   function renderSide() {
     // The views on the timeline: one pill each in the strip under the years.
-    const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
-    $('shown-n').textContent = !state.views.length ? '' : !more ? `${n} ${n === 1 ? 'entry' : 'entries'}` : `${n}${more} on the road`;
     const many = state.views.length > 1;
     $('pills').innerHTML = state.views.map((id) => {
       const v = viewById.get(id);
@@ -1588,11 +1584,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
 
-    // How much to show: the nearest of the four named levels is marked.
-    const near = LEVELS.reduce((a, l) => Math.abs(l.pct - state.level) < Math.abs(a.pct - state.level) ? l : a);
-    for (const b of $('level').querySelectorAll('[data-lv]')) b.setAttribute('aria-checked', Number(b.dataset.lv) === near.pct);
     drawYears();
-    $('filters-sum').textContent = state.views.length ? `${$('years-out').textContent} · ${near.name}` : '';
+    $('filters-sum').textContent = state.views.length ? $('years-out').textContent : '';
     drawChips();
     runSearch();
   }
@@ -1801,7 +1794,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   function applyMine(v) {
     setViews(v.views);
-    state.level = clamp(Number(v.level) || 100, 5, 100);
     state.order = v.order === 'new' ? 'new' : 'old';
     state.span = Array.isArray(v.span) && v.span.length === 2 && v.span.every(Number.isFinite) ? v.span : null;
   }
@@ -2266,10 +2258,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
 
     // The bars redraw as they move, and record the link once let go.
-    $('level').addEventListener('click', (e) => {
-      const b = e.target.closest('[data-lv]');
-      if (b) { state.level = Number(b.dataset.lv); changed(); }
-    });
     const years = () => {
       if (!L) return;
       let a = Number($('y-from').value), b = Number($('y-to').value);
