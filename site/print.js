@@ -508,7 +508,7 @@ async function getJSON(path) {
   if (!r.ok) throw new Error(path + ' ' + r.status);
   return r.json();
 }
-const FONTS = ['400 9px "Source Serif 4"', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
+const FONTS = ['400 9px Literata', '500 9px Literata', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
 let shaped = null;
 function lay(paper, fmt) {
   const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
