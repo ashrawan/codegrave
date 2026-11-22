@@ -53,7 +53,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode: carry on */ } },
   };
   const ICON = {
-    shuffle: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h3.5c4 0 6 10 10 10H21M18 14l3 3-3 3M3 17h3.5c1.6 0 2.8-1.6 3.9-3.6M13.6 9.6C14.7 8.1 15.8 7 16.5 7H21M18 4l3 3-3 3"/></svg>',
+    // Shuffle colours: three dots in the views' colours on a turning arrow.
+    shuffle: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/><circle cx="12" cy="8.6" r="1.9" fill="var(--p0)" stroke="none"/><circle cx="8.8" cy="14" r="1.9" fill="var(--p1)" stroke="none"/><circle cx="15.2" cy="14" r="1.9" fill="var(--p2)" stroke="none"/></svg>',
     // Community views are written by someone (a pen nib); classical views are part of the map (a folded map).
     community: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5 6.5 12 12 3l5.5 9z"/><path d="M12 13.5v8"/><circle cx="12" cy="11.5" r="1.6"/></svg>',
     classical: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6.5 9 4.5l6 2 5.5-2v13l-5.5 2-6-2-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></svg>',
@@ -1484,11 +1485,20 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const away = !data ? [] : y != null ? entriesInYear(data, y, onPage, L ? 6 : 8) : searchEntries(data, qt, onPage, L ? 5 : 8).map((e) => ({ e }));
       waiting = !data;
       hits = hits.slice(0, away.length ? 6 : 9);
+      // Views whose name matches, community and classical, that are not on the timeline: picking one shows it alone.
+      if (qt && y == null) {
+        const vs = [], seen = new Set(state.views);
+        const add = (v, name) => { if (seen.has(v.id)) return; const n = fold(name); const s = n === q ? 3 : n.startsWith(q) ? 2 : n.includes(q) ? 1 : 0; if (s) { seen.add(v.id); vs.push({ v, s }); } };
+        for (const v of boot?.views || []) add(v, v.name);
+        if (data) for (const v of data.views) add(v, v.name);
+        vs.sort((a, b) => b.s - a.s || a.v.name.length - b.v.name.length);
+        for (const { v } of vs.slice(0, 3)) hits.push({ view: viewById.get(v.id) || v, away: true });
+      }
       for (const a of away) hits.push({ e: a.e, how: a.how, y, away: true });
       if (data && y != null && !hits.length) hits.push({ none: `Nothing on record began or ended in ${yearText(y)}.` });
       // Nothing in the data has this name: offer to suggest it, so a failed
       // search tells the editors what people came looking for.
-      if (data && q.length > 1 && y == null && !away.length && !hits.some((h) => h.p && !h.m) && !searchEntries(data, qt, null, 1).length) hits.push({ suggest: raw });
+      if (data && q.length > 1 && y == null && !away.length && !hits.some((h) => (h.p && !h.m) || h.view) && !searchEntries(data, qt, null, 1).length) hits.push({ suggest: raw });
     }
     hit = hits.findIndex((h) => !h.none);
     drawHits(q, waiting);
@@ -1518,6 +1528,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         if (h.suggest) {
           return `<li class="sep" role="presentation">Not here yet</li><li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b>Suggest “${esc(h.suggest)}”</b><small>Tell us about it on GitHub; no code needed</small></span><span class="add">${ICON.plus}</span></li>`;
         }
+        if (h.view) {
+          if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
+          const v = h.view, kind = v.type === 'classical' ? 'classical' : 'community';
+          return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b><span>${mk(v.name)}</span></b><small>View · ${esc(viewSub(v))}</small></span><i class="vk" title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i></li>`;
+        }
         if (h.away) {
           if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
           const e = h.e, comm = e.tier === 2 ? ' · <span class="ctag">community</span>' : '';
@@ -1539,6 +1554,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('q').value = ''; $('q').dispatchEvent(new Event('input')); $('q').blur();
     if (h.year != null) return flashYear(h.year);
     if (h.era) return openEra(h.era.key);
+    if (h.view) return void showOnly(h.view.id);
     if (h.away) return bringIn(h.e.id);
     openThing(h.p.t.id, { scroll: !h.m, focus: false });
     if (h.m) jumpTo(h.p.t.id, h.m.t);
@@ -1870,7 +1886,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const w = t.words;
     const years = (t.end ?? NOW) - t.born;
     const status = t.status === 'dead' ? w.dead : t.status === 'fading' ? 'fading' : t.end != null ? w.dead : w.alive;
-    const kind = `${esc(t.cat.name)}${t.dom ? ' · ' + esc(t.dom.name) : ''}`;
+    // The kind and the branch are classical views: each opens its view alone (asked for, Nov 2026).
+    const kind = `<button type="button" class="vlink" data-show-view="${esc(t.cat.id)}" title="Show the view ${esc(t.cat.name)}">${esc(t.cat.name)}</button>${t.dom ? ' · <button type="button" class="vlink" data-show-view="' + esc(t.dom.id) + '" title="Show the view ' + esc(t.dom.name) + '">' + esc(t.dom.name) + '</button>' : ''}`;
     const meta = `${esc(spanOf(t).replace(/^since (.*)$/, '$1 to today'))} · ${t.endEv ? 'lasted ' + fmtSpan(years) : fmtSpan(years) + ' so far'} · <b>${esc(status.toLowerCase())}</b>`;
     const labels = (t.labels || []).map((l) => labelName.get(l)).filter(Boolean);
     const aliases = (t.aliases || []).filter((a) => !t.names.some((n) => n.name === a));
@@ -2197,6 +2214,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const go = el('[data-go]');
       if (go) return jumpTo(state.open, Number(go.dataset.go));
       if (el('#vlist [data-shuffle]')) return shuffleColours();
+      const sv = el('[data-show-view]');
+      if (sv) return void showOnly(sv.dataset.showView);
       const beside = el('#vlist [data-beside]');
       if (beside) return pick(Number(beside.dataset.beside), true);
       const li = el('#vlist [data-i]');

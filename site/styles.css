@@ -560,3 +560,8 @@ body.playing.peek .top, body.playing .top:focus-within { transform: none; opacit
 .rc.end, .rc.end.near { background: color-mix(in srgb, var(--glass) 45%, transparent); border-color: color-mix(in srgb, var(--rule2) 60%, transparent); box-shadow: none; filter: saturate(0); }
 .rc.end.near .rk b, .rc.end.small b { color: var(--faint); font-weight: 500; }
 .rc.end .rs, .rc.end small { color: var(--faint); opacity: .85; }
+
+/* The kind and branch of an entry are links to their views. */
+.th-head .kind .vlink { font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s, color .15s; }
+.th-head .kind .vlink:hover, .th-head .kind .vlink:focus-visible { color: var(--text); text-decoration-color: currentColor; }
+#qlist .vk { margin-left: auto; color: var(--faint); display: inline-flex; }

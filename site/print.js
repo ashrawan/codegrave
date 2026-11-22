@@ -113,7 +113,7 @@ function single(D) {
   const T = (ci) => (ci < 0 ? BEFORE : TINTS[ci % TINTS.length]);
   const link = linkOf([D]);
   function frame(p, chName, withLink) {
-    p.insertAdjacentHTML('beforeend', '<div class="head"><b>' + esc(D.name) + '</b><span>' + esc(chName || '') + '</span></div><div class="foot"><span>' + (withLink ? esc(link) : '') + '</span><span>' + pageNo + '</span></div><div class="main"></div><div class="rail"></div>');
+    p.insertAdjacentHTML('beforeend', '<div class="head"><b>' + esc(D.name) + '</b><span>' + esc(chName || '') + '</span></div><div class="foot"><span class="lnk">' + (withLink ? esc(link) : '') + '</span><span>' + pageNo + '</span></div><div class="main"></div><div class="rail"></div>');
     return p.querySelector('.main');
   }
   // the cover: title, numbers, the best pictures, the chapters, and the whole view as bands
@@ -254,7 +254,7 @@ function many(V, inks) {
   function newManyPage(cls, sect, withLink) {
     const p = newPage(cls);
     const names = (s) => V.map((v, i) => (sideOf(i) === s ? '<b><i style="background:' + inks[i] + '"></i>' + esc(v.name) + '</b>' : '')).join('');
-    p.innerHTML = '<div class="head"><div class="vs">' + names('l') + '</div><span class="sp">' + esc(sect || '') + '</span><div class="vs r">' + names('r') + '</div></div><div class="foot"><span>' + (withLink ? esc(link) : '') + '</span><span>' + pageNo + '</span></div>';
+    p.innerHTML = '<div class="head"><div class="vs">' + names('l') + '</div><span class="sp">' + esc(sect || '') + '</span><div class="vs r">' + names('r') + '</div></div><div class="foot"><span class="lnk">' + (withLink ? esc(link) : '') + '</span><span>' + pageNo + '</span></div>';
     return p;
   }
   // the cover: the views as tiles around the middle, in the same places their entries will stand
@@ -352,7 +352,7 @@ const script = (src) => new Promise((ok, no) => { const s = document.createEleme
 export const fileName = (names) => (names.join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'codegrave') + '.pdf';
 async function download(paper) {
   const btn = $('save'), msg = $('msg'), was = msg.textContent;
-  btn.disabled = true; $('order').disabled = true;
+  btn.disabled = true; $('paper').disabled = true; $('order').disabled = true;
   try {
     msg.textContent = 'Making the PDF…';
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
@@ -370,7 +370,7 @@ async function download(paper) {
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { btn.disabled = false; $('order').disabled = false; }
+  } finally { btn.disabled = false; $('paper').disabled = false; $('order').disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -412,16 +412,17 @@ async function start() {
   await Promise.all(FONTS.map((f) => document.fonts.load(f).catch(() => null)));
   await document.fonts.ready;
   shaped = { views, inks: keep };
-  // One paper, chosen by where the reader is: Letter in the US and a few others, A4 elsewhere (no switch, asked for in Nov 2026).
-  const paper = PAPERS[q.get('paper')] ? q.get('paper') : paperFor(navigator.language);
-  await lay(paper);
-  const relay = async () => { $('save').disabled = true; await lay(paper); $('save').disabled = false; };
+  // The paper starts as the one used where the reader is (Letter in the US and a few others, A4 elsewhere); both stay in the switch.
+  const sel = $('paper'); sel.value = PAPERS[q.get('paper')] ? q.get('paper') : paperFor(navigator.language);
+  await lay(sel.value);
+  const relay = async () => { $('save').disabled = true; await lay(sel.value); $('save').disabled = false; };
+  sel.addEventListener('change', relay);
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';
     q.set('o', rev ? 'backward' : 'forward'); history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/'));
     relay(); });
   $('save').disabled = false;
-  $('save').addEventListener('click', () => download(paper));
+  $('save').addEventListener('click', () => download(sel.value));
   document.body.dataset.done = '1';
 }
 if (typeof document !== 'undefined') start().catch((err) => { $('msg').textContent = 'Something went wrong: ' + err.message; });

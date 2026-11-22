@@ -173,3 +173,5 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .one .cover .main.tight .toc{margin-top:5mm}
 .one .cover .main.tight .toc div{padding:1.1mm 0;font-size:13px}
 #doc .pg:last-child { page-break-after: auto; }
+
+.foot .lnk{text-transform:none;letter-spacing:.04em}
