@@ -1,0 +1,45 @@
+{
+  "id": "insect",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Insect",
+      "from": "-400000000"
+    }
+  ],
+  "summary": "Six-legged arthropods with a body in three parts, the most varied animals on Earth, whose earliest relatives date from the Devonian.",
+  "wikidata": "Q1390",
+  "events": [
+    {
+      "type": "born",
+      "date": "-400000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Insect (Q1390)",
+      "url": "https://www.wikidata.org/wiki/Q1390",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Insect",
+      "url": "https://en.wikipedia.org/wiki/Insect",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Insekter.jpg/500px-Insekter.jpg",
+    "alt": "Insect",
+    "credit": "Publicerad i A history of the earth and animated nature : with an introductory view of the animal kingdom av A. Fullarto",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Insekter.jpg"
+  }
+}

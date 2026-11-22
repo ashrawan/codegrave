@@ -1,0 +1,38 @@
+{
+  "id": "eukaryote",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Eukaryote",
+      "from": "-1650000000"
+    }
+  ],
+  "summary": "Living things whose cells keep their DNA inside a nucleus: every animal, plant and fungus. They first appear in the fossil record about 1.65 billion years ago.",
+  "wikidata": "Q19088",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1650000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Eukaryote (Q19088)",
+      "url": "https://www.wikidata.org/wiki/Q19088",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eukaryote",
+      "url": "https://en.wikipedia.org/wiki/Eukaryote",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,45 @@
+{
+  "id": "fish",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Fish",
+      "from": "-535000000"
+    }
+  ],
+  "summary": "Water-dwelling animals with gills and a backbone, the first vertebrates, found from the Cambrian onward.",
+  "wikidata": "Q152",
+  "events": [
+    {
+      "type": "born",
+      "date": "-535000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Fish (Q152)",
+      "url": "https://www.wikidata.org/wiki/Q152",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fish",
+      "url": "https://en.wikipedia.org/wiki/Fish",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Fish-coll002.jpg/500px-Fish-coll002.jpg",
+    "alt": "Fish",
+    "credit": "MathKnight",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish-coll002.jpg"
+  }
+}

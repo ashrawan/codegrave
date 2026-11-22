@@ -1,0 +1,45 @@
+{
+  "id": "amphibian",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Amphibian",
+      "from": "-330000000"
+    }
+  ],
+  "summary": "Frogs, salamanders and their kin, which live part of their lives in water and part on land; the living groups trace back about 330 million years.",
+  "wikidata": "Q10908",
+  "events": [
+    {
+      "type": "born",
+      "date": "-330000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Amphibian (Q10908)",
+      "url": "https://www.wikidata.org/wiki/Q10908",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amphibian",
+      "url": "https://en.wikipedia.org/wiki/Amphibian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Fire_salamander_%28Salamandra_Salamandra%29.jpg/500px-Fire_salamander_%28Salamandra_Salamandra%29.jpg",
+    "alt": "Amphibian",
+    "credit": "Petar Milošević",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fire_salamander_(Salamandra_Salamandra).jpg"
+  }
+}

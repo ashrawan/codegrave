@@ -1,0 +1,45 @@
+{
+  "id": "fungus",
+  "category": "plants-fungi",
+  "names": [
+    {
+      "name": "Fungus",
+      "from": "-460000000"
+    }
+  ],
+  "summary": "Mushrooms, moulds and yeasts, a kingdom of their own that feeds by breaking down other matter; clear fossils go back about 460 million years.",
+  "wikidata": "Q764",
+  "events": [
+    {
+      "type": "born",
+      "date": "-460000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Fungus (Q764)",
+      "url": "https://www.wikidata.org/wiki/Q764",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fungus",
+      "url": "https://en.wikipedia.org/wiki/Fungus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/2006-08-09_Amanita_citrina_46465_cropped.jpg/500px-2006-08-09_Amanita_citrina_46465_cropped.jpg",
+    "alt": "Fungus",
+    "credit": "This image was created by user Andreas Gminder (mollisia) at Mushroom Observer, a source for mycological images.You can ",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2006-08-09_Amanita_citrina_46465_cropped.jpg"
+  }
+}

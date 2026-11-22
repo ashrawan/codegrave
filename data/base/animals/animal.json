@@ -1,0 +1,45 @@
+{
+  "id": "animal",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Animal",
+      "from": "-665000000"
+    }
+  ],
+  "summary": "The kingdom of many-celled living things that eat other organisms and move about, from sponges to people. The earliest signs are about 665 million years old.",
+  "wikidata": "Q729",
+  "events": [
+    {
+      "type": "born",
+      "date": "-665000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Animal (Q729)",
+      "url": "https://www.wikidata.org/wiki/Q729",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Animal",
+      "url": "https://en.wikipedia.org/wiki/Animal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/14/Animal_diversity.png",
+    "alt": "Animal",
+    "credit": "creator of composite, User:Medeis; original authors, as credited individually above:User:Bkmiles, User:Panda3, Hans Hill",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Animal_diversity.png"
+  }
+}

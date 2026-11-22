@@ -1,0 +1,45 @@
+{
+  "id": "bird",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Bird",
+      "from": "-72000000"
+    }
+  ],
+  "summary": "Feathered, beaked, egg-laying animals, the dinosaurs that survived. Modern birds are known from about 72 million years ago.",
+  "wikidata": "Q5113",
+  "events": [
+    {
+      "type": "born",
+      "date": "-72000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bird (Q5113)",
+      "url": "https://www.wikidata.org/wiki/Q5113",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bird",
+      "url": "https://en.wikipedia.org/wiki/Bird",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Bird_Diversity_2011.png/500px-Bird_Diversity_2011.png",
+    "alt": "Bird",
+    "credit": "Southern_cassowary.jpg: Frank Wouters of Antwerp, Belgium Head_Peacock.jpg: http://commons.wikimedia.org/wiki/User:Jkath",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bird_Diversity_2011.png"
+  }
+}
