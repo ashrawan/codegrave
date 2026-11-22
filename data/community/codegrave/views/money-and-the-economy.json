@@ -17,6 +17,7 @@
     "financial crisis"
   ],
   "entries": [
+    "code-of-hammurabi",
     "shell-money",
     "croeseid",
     "chinese-cash-coin",
@@ -25,16 +26,23 @@
     "islamic-dinar",
     "pound-sterling",
     "banknote",
+    "hanseatic-league",
     "florin",
     "venetian-ducat",
+    "medici-bank",
+    "columbian-exchange",
     "spanish-dollar",
     "price-revolution",
+    "atlantic-slave-trade",
     "east-india-company",
     "dutch-east-india-company",
     "amsterdam-stock-exchange",
     "tulip-mania",
     "bank-of-england",
+    "south-sea-company",
     "adam-smith",
+    "industrial-revolution",
+    "david-ricardo",
     "wealth-of-nations",
     "us-dollar",
     "new-york-stock-exchange",
@@ -43,29 +51,42 @@
     "california-gold-rush",
     "das-kapital",
     "john-maynard-keynes",
+    "friedrich-hayek",
+    "panic-of-1907",
+    "milton-friedman",
     "federal-reserve",
     "weimar-hyperinflation",
+    "five-year-plans-of-the-soviet-union",
     "wall-street-crash-1929",
     "great-depression",
+    "new-deal",
     "bretton-woods-system",
     "international-monetary-fund",
     "world-bank",
     "marshall-plan",
     "credit-card",
+    "european-economic-community",
+    "opec",
+    "automated-teller-machine",
     "nixon-shock",
     "oil-crisis-1973",
+    "reform-and-opening-up",
+    "japanese-asset-bubble",
     "black-monday-1987",
     "dot-com-bubble",
     "world-trade-organization",
     "asian-financial-crisis",
     "euro",
+    "paypal",
     "financial-crisis-of-2007-2008",
     "zimbabwe-hyperinflation",
     "m-pesa",
     "bitcoin",
     "european-debt-crisis",
+    "unified-payments-interface",
     "china-united-states-trade-war",
     "covid-19-recession",
+    "2021-2023-inflation-surge",
     "trump-tariffs"
   ],
   "checkpoints": [
@@ -74,49 +95,49 @@
       "name": "The first money",
       "from": -3000,
       "to": 499,
-      "note": "People trade goods and use shells, grain and metal as money. Lydia strikes the first coins, China casts bronze coins with a hole, and the Roman denarius pays soldiers across an empire."
+      "note": "People trade goods and use shells, grain and metal as money. Hammurabi writes rules for loans and interest, Lydia strikes the first coins, China casts bronze coins with a hole, and the Roman denarius pays soldiers across an empire."
     },
     {
       "id": "coins-paper-and-trade",
       "name": "Coins, paper and trade",
       "from": 500,
       "to": 1599,
-      "note": "The gold dinar spreads with Islam, China prints the first paper money, Venice and Florence mint coins trusted across Europe, and Spanish silver from the Americas floods the world."
+      "note": "The gold dinar spreads with Islam, China prints the first paper money, the Hanseatic League and the Medici Bank tie Europe's trade together, and Spanish silver from the Americas floods the world and drives prices up."
     },
     {
       "id": "banks-and-stock-markets",
       "name": "Banks and stock markets",
       "from": 1600,
       "to": 1799,
-      "note": "The Dutch East India Company sells shares in Amsterdam, tulip prices soar and crash, the Bank of England is founded and Adam Smith explains how markets work."
+      "note": "The Dutch East India Company sells shares in Amsterdam, tulip prices soar and crash, the Bank of England is founded, the South Sea Bubble bursts and Adam Smith explains how markets work."
     },
     {
       "id": "gold-and-industry",
       "name": "Gold and industry",
       "from": 1800,
       "to": 1913,
-      "note": "Britain ties the pound to gold, gold rushes draw people to California and Australia, Marx attacks capitalism, and after a run of panics the United States founds the Federal Reserve."
+      "note": "Industry transforms Britain, Ricardo explains why trade pays both sides, the pound is tied to gold, gold rushes draw people to California and Australia, Marx attacks capitalism, and after the panic of 1907 the United States founds the Federal Reserve."
     },
     {
       "id": "crash-depression-and-bretton-woods",
       "name": "Crash, depression and Bretton Woods",
       "from": 1914,
       "to": 1970,
-      "note": "Germany's money becomes worthless, Wall Street crashes and the Great Depression follows. After the war the world ties its money to the dollar at Bretton Woods, and the credit card is born."
+      "note": "Germany's money becomes worthless, Wall Street crashes and the Great Depression follows. The New Deal and Keynes answer it, the Soviet Union plans its economy, and after the war the world ties its money to the dollar at Bretton Woods. Europe opens a common market and the first cash machine appears."
     },
     {
       "id": "free-markets-and-new-crises",
       "name": "Free markets and new crises",
       "from": 1971,
       "to": 2007,
-      "note": "The dollar leaves gold, oil shocks and stock market crashes follow, the euro is launched, the dot-com bubble bursts and phones start to carry money."
+      "note": "The dollar leaves gold, OPEC's oil shocks follow, Friedman and Hayek argue for free markets, China opens its economy, Japan's bubble bursts, the euro is launched, the dot-com bubble bursts and phones start to carry money."
     },
     {
       "id": "from-the-crash-to-crypto",
       "name": "From the crash to crypto",
       "from": 2008,
       "to": 2026,
-      "note": "The financial crisis of 2008 shakes the world, Bitcoin is invented, Europe faces a debt crisis, the pandemic brings a sharp recession and new tariffs start trade wars."
+      "note": "The financial crisis of 2008 shakes the world, Bitcoin is invented, Europe faces a debt crisis, India pays by phone with UPI, the pandemic brings a sharp recession, prices surge after it, and new tariffs start trade wars."
     }
   ]
 }

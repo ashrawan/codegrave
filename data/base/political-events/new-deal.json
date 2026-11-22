@@ -1,0 +1,53 @@
+{
+  "id": "new-deal",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "New Deal",
+      "from": "1933"
+    }
+  ],
+  "summary": "Franklin Roosevelt's programmes of public works, relief and bank reform that fought the Great Depression in the United States.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q186356",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1939",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: New Deal (Q186356)",
+      "url": "https://www.wikidata.org/wiki/Q186356",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Deal",
+      "url": "https://en.wikipedia.org/wiki/New_Deal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/New_Deal_collage.jpg/500px-New_Deal_collage.jpg",
+    "alt": "New Deal",
+    "credit": "LordHarris at English Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:New_Deal_collage.jpg"
+  }
+}
