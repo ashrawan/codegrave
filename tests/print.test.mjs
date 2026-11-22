@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, fileName, INKS, PAPERS } from '../site/print.js';
+import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, fileName, coverPictures, INKS, PAPERS } from '../site/print.js';
 
 test('dates are written as the page writes them', () => {
   assert.equal(yearText(1969), '1969');
@@ -56,4 +56,15 @@ test('a year range keeps only the entries begun in it', { skip: !fs.existsSync('
   const v = shapeView(payload, boot, 0, [1960, 1975]);
   assert.ok(v.es.length > 0 && v.es.every((e) => e.y >= 1960 && e.y <= 1975));
   assert.ok(v.chs.every((c) => c.to >= 1960 && c.from <= 1975));
+});
+
+test('cover pictures spread over time and kinds, in date order', () => {
+  const es = [];
+  for (let y = 1900; y < 2000; y++) es.push({ t: y, y, rank: y % 7, kind: y < 1990 ? 'Astronaut' : 'Rocket', img: { src: 'p' + y } });
+  const p = coverPictures(es, 12);
+  assert.equal(p.length, 12);
+  for (let i = 1; i < p.length; i++) assert.ok(p[i - 1].t < p[i].t);
+  assert.ok(p[0].y < 1910 && p.at(-1).y >= 1990);       // from the start to the end
+  assert.ok(p.some((e) => e.kind === 'Rocket'));         // not all of one kind
+  assert.equal(coverPictures(es.slice(0, 3), 12).length, 3);
 });

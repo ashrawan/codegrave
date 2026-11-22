@@ -113,7 +113,7 @@ function single(D) {
   // the cover: title, numbers, the best pictures, the chapters, and the whole view as bands
   {
     const p = newPage('cover'); const m = frame(p, 'A timeline from codegrave.com');
-    const pics = D.es.filter((e) => e.img).sort((a, b) => a.rank - b.rank).slice(0, 8).sort((a, b) => a.t - b.t);
+    const pics = coverPictures(D.es, 12);
     m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
       + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
@@ -208,6 +208,21 @@ function flowCredits(list, open, link) {
   }
   c.p.querySelector('.foot span').textContent = link;
 }
+// The cover's pictures: `n` of them spread over the whole view and over its kinds, in date order.
+// The entries with a picture are cut into `n` stretches in date order; from each comes the best ranked
+// of a kind used least so far, and never the same picture twice.
+export function coverPictures(es, n) {
+  const withImg = es.filter((e) => e.img).sort((a, b) => a.t - b.t);
+  const used = new Map(), srcs = new Set(), out = [];
+  const k = Math.min(n, withImg.length);
+  for (let i = 0; i < k; i++) {
+    const part = withImg.slice(Math.floor(i * withImg.length / k), Math.floor((i + 1) * withImg.length / k)).filter((e) => !srcs.has(e.img.src));
+    if (!part.length) continue;
+    const pick = part.reduce((b, e) => ((used.get(e.kind) || 0) < (used.get(b.kind) || 0) || ((used.get(e.kind) || 0) === (used.get(b.kind) || 0) && e.rank < b.rank) ? e : b));
+    out.push(pick); srcs.add(pick.img.src); used.set(pick.kind, (used.get(pick.kind) || 0) + 1);
+  }
+  return out.sort((a, b) => a.t - b.t);
+}
 function entryHtml(e) {
   return '<div class="e' + (e.img ? '' : ' noimg') + '">' + (e.img ? '<div class="ph"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>' : '')
     + '<div><div class="d"><b>' + esc(e.date) + '</b> · ' + esc(e.kind) + '</div><h3>' + esc(e.name) + '</h3><p>' + esc(e.summary) + '</p>' + (e.endText ? '<div class="end">' + esc(e.endText) + '</div>' : '') + '</div></div>';
@@ -236,8 +251,8 @@ function many(V, inks) {
     V.forEach((v, i) => {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
-      const pics = v.es.filter((e) => e.img).sort((a, b) => a.rank - b.rank).slice(0, 4);
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+      const pics = coverPictures(v.es, N <= 2 ? 6 : 4);
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 3 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
         + (N > 4 ? '' : '<ol>' + v.chs.map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
