@@ -56,5 +56,4 @@ test('a year range keeps only the entries begun in it', { skip: !fs.existsSync('
   const v = shapeView(payload, boot, 0, [1960, 1975]);
   assert.ok(v.es.length > 0 && v.es.every((e) => e.y >= 1960 && e.y <= 1975));
   assert.ok(v.chs.every((c) => c.to >= 1960 && c.from <= 1975));
-  assert.deepEqual(v.chs.map((c) => c.num), v.chs.map((c, k) => k + 1));
 });

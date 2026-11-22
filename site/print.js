@@ -69,9 +69,9 @@ export function shapeView(payload, boot, i, span) {
   const words = Object.fromEntries(boot.domains.map((d) => [d.id, d.words]));
   const v = payload.view;
   const inSpan = (y) => !span || (y >= span[0] && y <= span[1]);
-  // chapters that overlap the range, numbered from 1 within it
+  // chapters that overlap the range; they are not numbered (asked for, Nov 2026)
   const chs = (v.checkpoints || []).map((c) => ({ name: c.name, from: c.from, to: c.to ?? 1e9, note: c.note || '' }))
-    .filter((c) => !span || (c.to >= span[0] && c.from <= span[1])).map((c, k) => ({ ...c, num: k + 1 }));
+    .filter((c) => !span || (c.to >= span[0] && c.from <= span[1]));
   const es = payload.entries.filter((e) => inSpan(dateParts(e.events.find((x) => x.type === 'born').date).y)).map((e) => {
     const born = e.events.find((x) => x.type === 'born');
     const end = e.events.find((x) => x.type === 'ended');
@@ -117,7 +117,7 @@ function single(D) {
     m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
       + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-      + '<div class="toc">' + D.chs.map((c, i) => '<div><i>' + c.num + '</i>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
+      + '<div class="toc">' + D.chs.map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
     const r = p.querySelector('.rail'); const H = r.clientHeight;
     const keys = D.chs.map((c, i) => ({ c, i, n: Math.max(1, D.es.filter((e) => e.ci === i).length) }));
     const total = keys.reduce((s, k) => s + k.n, 0) || 1; let y = 6 * MM;
@@ -184,7 +184,7 @@ function single(D) {
     const c = D.chs[e.ci];
     if (e.ci !== lastCi) {
       lastCi = e.ci;
-      if (c) place('<div class="ch"><div class="k">Chapter ' + c.num + ' · ' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>', { chName: c.name });
+      if (c) place('<div class="ch"><div class="k">' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>', { chName: c.name });
     }
     place(entryHtml(e), { e, chName: c?.name });
   }
@@ -259,7 +259,7 @@ function many(V, inks) {
   }
   function chapHtml(e) {
     const c = V[e.vi].chs[e.ci];
-    return '<div class="ch"><div class="k">Chapter ' + c.num + ' · ' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>';
+    return '<div class="ch"><div class="k">' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</div><h2>' + esc(c.name) + '</h2>' + (c.note ? '<p>' + esc(c.note) + '</p>' : '') + '</div>';
   }
   function add(e, force) {
     const s = sideOf(e.vi); const prev = open[s], prevY = colY[s]; let b = prev, fresh = false;
