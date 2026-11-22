@@ -9,6 +9,7 @@
   ],
   "maker": "MIT (Joseph Weizenbaum)",
   "summary": "One of the first chatbots. Its best-known script, DOCTOR, played a therapist who turned your own words back into questions. It understood nothing, yet people confided in it, which troubled its maker and gave a name to the “ELIZA effect”: our habit of seeing a mind in a machine that only matches patterns.",
+  "wikidata": "Q580318",
   "events": [
     {
       "type": "project_start",
@@ -38,5 +39,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/ELIZA_conversation.png/500px-ELIZA_conversation.png",
+    "alt": "ELIZA",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:ELIZA_conversation.png"
+  }
 }

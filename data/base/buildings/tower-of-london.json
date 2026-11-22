@@ -31,8 +31,16 @@
   "events": [
     {
       "type": "born",
-      "date": "1100",
-      "precision": "circa"
+      "date": "1066",
+      "precision": "year",
+      "note": "William the Conqueror raises a fort in the corner of the old Roman walls."
+    },
+    {
+      "type": "milestone",
+      "date": "1078",
+      "precision": "circa",
+      "label": "White Tower",
+      "note": "Work begins on the great stone keep at the centre of the castle."
     }
   ],
   "status": "alive",

@@ -1,0 +1,48 @@
+{
+  "id": "google-earth",
+  "category": "applications",
+  "names": [
+    {
+      "name": "Google Earth",
+      "from": "2005"
+    }
+  ],
+  "maker": "Google",
+  "summary": "A program that shows the whole Earth as a turning globe built from satellite and aerial photographs, which users can fly over and zoom into. It grew out of Keyhole's EarthViewer, which Google bought in 2004.",
+  "labels": [],
+  "wikidata": "Q42274",
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Google Earth (Q42274)",
+      "url": "https://www.wikidata.org/wiki/Q42274",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Google Earth",
+      "url": "https://en.wikipedia.org/wiki/Google_Earth",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/NASA_World_Wind_-_Google_Earth_bar.png/500px-NASA_World_Wind_-_Google_Earth_bar.png",
+    "alt": "Google Earth",
+    "credit": "EEIM",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:NASA_World_Wind_-_Google_Earth_bar.png"
+  }
+}

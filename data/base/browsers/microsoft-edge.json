@@ -1,0 +1,41 @@
+{
+  "id": "microsoft-edge",
+  "category": "browsers",
+  "names": [
+    {
+      "name": "Microsoft Edge",
+      "from": "2015"
+    }
+  ],
+  "maker": "Microsoft",
+  "summary": "The web browser that replaced Internet Explorer in Windows 10. In 2020 Microsoft rebuilt it on Chromium, the open-source code behind Google Chrome.",
+  "labels": [],
+  "wikidata": "Q133247080",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-07-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Microsoft Edge (Q133247080)",
+      "url": "https://www.wikidata.org/wiki/Q133247080",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Microsoft Edge",
+      "url": "https://en.wikipedia.org/wiki/Microsoft_Edge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

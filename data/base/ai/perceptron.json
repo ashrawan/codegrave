@@ -1,0 +1,41 @@
+{
+  "id": "perceptron",
+  "category": "ai",
+  "names": [
+    {
+      "name": "Perceptron",
+      "from": "1958"
+    }
+  ],
+  "maker": "Frank Rosenblatt",
+  "summary": "An early learning machine built by Frank Rosenblatt at Cornell, a single layer of artificial neurons that learned to tell simple shapes apart by adjusting its weights. It is the ancestor of today's neural networks.",
+  "labels": [],
+  "wikidata": "Q690207",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Perceptron (Q690207)",
+      "url": "https://www.wikidata.org/wiki/Q690207",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Perceptron",
+      "url": "https://en.wikipedia.org/wiki/Perceptron",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

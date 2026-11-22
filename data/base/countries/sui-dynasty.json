@@ -1,0 +1,52 @@
+{
+  "id": "sui-dynasty",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Sui dynasty",
+      "from": "0581"
+    }
+  ],
+  "summary": "A short Chinese dynasty that reunited north and south China after nearly three centuries of division. It built the Grand Canal and rebuilt the Great Wall, but its costly wars led to rebellion and the rise of the Tang.",
+  "labels": [],
+  "wikidata": "Q7405",
+  "events": [
+    {
+      "type": "born",
+      "date": "0581",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0618",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Sui dynasty (Q7405)",
+      "url": "https://www.wikidata.org/wiki/Q7405",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sui dynasty",
+      "url": "https://en.wikipedia.org/wiki/Sui_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Map_of_the_Sui_Dynasty.png/500px-Map_of_the_Sui_Dynasty.png",
+    "alt": "Sui dynasty",
+    "credit": "naturalearthdata.com, offered to the Public Domain per Terms of Use",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Map_of_the_Sui_Dynasty.png"
+  }
+}

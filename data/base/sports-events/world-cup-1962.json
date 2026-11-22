@@ -1,0 +1,59 @@
+{
+  "id": "world-cup-1962",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1962 FIFA World Cup",
+      "from": "1962"
+    }
+  ],
+  "summary": "The World Cup held in Chile two years after a great earthquake there. Brazil won its second title in a row, led by Garrincha after Pelé was injured early in the tournament.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q160813",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-05-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-06-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chile"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1962 FIFA World Cup (Q160813)",
+      "url": "https://www.wikidata.org/wiki/Q160813",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1962 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1962_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Hist%C3%B3rica_chilenita_de_Honorino_Landa_contra_Brasil_en_el_mundial_del_62.jpg/500px-Hist%C3%B3rica_chilenita_de_Honorino_Landa_contra_Brasil_en_el_mundial_del_62.jpg",
+    "alt": "1962 FIFA World Cup",
+    "credit": "Natiarizbernales",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hist%C3%B3rica_chilenita_de_Honorino_Landa_contra_Brasil_en_el_mundial_del_62.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "olympics-1996",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1996 Summer Olympics",
+      "from": "1996"
+    }
+  ],
+  "summary": "The centennial Games, in Atlanta, where Muhammad Ali lit the flame. A bomb in the Centennial Olympic Park killed two people, and Michael Johnson won both the 200 and 400 metres.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8531",
+  "events": [
+    {
+      "type": "born",
+      "date": "1996-07-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-08-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1996 Summer Olympics (Q8531)",
+      "url": "https://www.wikidata.org/wiki/Q8531",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1996 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1996_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

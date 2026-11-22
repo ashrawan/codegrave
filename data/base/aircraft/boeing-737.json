@@ -1,0 +1,48 @@
+{
+  "id": "boeing-737",
+  "category": "aircraft",
+  "names": [
+    {
+      "name": "Boeing 737",
+      "from": "1967"
+    }
+  ],
+  "maker": "Boeing",
+  "summary": "Narrow-body jet airliner for short and medium routes that first flew in 1967. It became the best-selling airliner of the twentieth century. Two crashes of the 737 MAX in 2018 and 2019 grounded that version worldwide.",
+  "labels": [],
+  "wikidata": "Q6387",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-04-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Boeing 737 (Q6387)",
+      "url": "https://www.wikidata.org/wiki/Q6387",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Boeing 737",
+      "url": "https://en.wikipedia.org/wiki/Boeing_737",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Aviogenex_b737-200_yu-anp_arp.jpg/500px-Aviogenex_b737-200_yu-anp_arp.jpg",
+    "alt": "Boeing 737",
+    "credit": "Photographed by Adrian Pingstone and released to the public domain. Public…",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Aviogenex_b737-200_yu-anp_arp.jpg"
+  }
+}

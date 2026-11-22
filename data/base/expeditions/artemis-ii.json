@@ -1,0 +1,55 @@
+{
+  "id": "artemis-ii",
+  "category": "expeditions",
+  "names": [
+    {
+      "name": "Artemis II",
+      "from": "2026"
+    }
+  ],
+  "maker": "NASA",
+  "summary": "The first crewed flight of NASA's Artemis programme, which flew four astronauts around the Moon and back in the Orion capsule Integrity. It was the first time people had travelled beyond low Earth orbit since Apollo 17 in 1972.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q16947045",
+  "events": [
+    {
+      "type": "born",
+      "date": "2026-04-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2026-04-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Artemis II (Q16947045)",
+      "url": "https://www.wikidata.org/wiki/Q16947045",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Artemis II",
+      "url": "https://en.wikipedia.org/wiki/Artemis_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Artemis_2_Crew_Portrait.jpg/500px-Artemis_2_Crew_Portrait.jpg",
+    "alt": "Artemis II",
+    "credit": "Josh Valcarcel",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Artemis_2_Crew_Portrait.jpg"
+  }
+}

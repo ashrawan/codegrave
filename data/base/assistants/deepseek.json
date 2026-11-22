@@ -1,0 +1,41 @@
+{
+  "id": "deepseek",
+  "category": "assistants",
+  "names": [
+    {
+      "name": "DeepSeek",
+      "from": "2023"
+    }
+  ],
+  "maker": "DeepSeek",
+  "summary": "A family of large language models from a Chinese company of the same name. Its model R1, released in January 2025 and said to have been trained at a fraction of the usual cost, topped app charts and shook technology shares.",
+  "labels": [],
+  "wikidata": "Q132324293",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-11",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: DeepSeek (Q132324293)",
+      "url": "https://www.wikidata.org/wiki/Q132324293",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: DeepSeek (AI)",
+      "url": "https://en.wikipedia.org/wiki/DeepSeek_(AI)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

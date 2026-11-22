@@ -9,6 +9,7 @@
   ],
   "maker": "YouTube, later Google",
   "summary": "The place where anyone can post a video and anyone can watch it. It is the second most visited website in the world.",
+  "wikidata": "Q866",
   "events": [
     {
       "type": "project_start",
@@ -44,5 +45,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/YouTube_results_screenshot.jpg/500px-YouTube_results_screenshot.jpg",
+    "alt": "YouTube",
+    "credit": "Smile and Learn - English, Rockin Robin Cooks, Nicky's Kitchen",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:YouTube_results_screenshot.jpg"
+  }
 }

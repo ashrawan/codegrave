@@ -1,0 +1,52 @@
+{
+  "id": "olympics-1976",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1976 Summer Olympics",
+      "from": "1976"
+    }
+  ],
+  "summary": "The Montreal Games, where the fourteen-year-old gymnast Nadia Comăneci scored the first perfect ten. Most African countries stayed away in protest, and the cost left the city in debt for thirty years.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8444",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-07-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1976-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1976 Summer Olympics (Q8444)",
+      "url": "https://www.wikidata.org/wiki/Q8444",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1976 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1976_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

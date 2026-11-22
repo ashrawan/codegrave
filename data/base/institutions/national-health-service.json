@@ -11,6 +11,7 @@
   "labels": [
     "medicine"
   ],
+  "wikidata": "Q918396",
   "events": [
     {
       "type": "born",
@@ -37,5 +38,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/National_Health_Service_leaflet%2C_May_1948.jpg/500px-National_Health_Service_leaflet%2C_May_1948.jpg",
+    "alt": "National Health Service",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Health_Service_leaflet,_May_1948.jpg"
+  }
 }

@@ -9,6 +9,7 @@
   ],
   "maker": "OpenAI",
   "summary": "OpenAI's models that draw a picture from a written description. The first version made the idea famous; DALL-E 2 and 3 made the pictures realistic and put them inside ChatGPT, until a newer image model took over there in 2025.",
+  "wikidata": "Q105078662",
   "events": [
     {
       "type": "born",
@@ -53,5 +54,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/DALL-E_2_artificial_intelligence_digital_image_generated_photo.jpg/500px-DALL-E_2_artificial_intelligence_digital_image_generated_photo.jpg",
+    "alt": "DALL-E",
+    "credit": "DALL·E 2",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DALL-E_2_artificial_intelligence_digital_image_generated_photo.jpg"
+  }
 }

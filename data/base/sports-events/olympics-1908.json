@@ -1,0 +1,59 @@
+{
+  "id": "olympics-1908",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1908 Summer Olympics",
+      "from": "1908"
+    }
+  ],
+  "summary": "London's first Olympics, held at a new stadium in White City. Its marathon, run from Windsor Castle to the stadium, set the distance of 42.195 kilometres that later became the standard.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8111",
+  "events": [
+    {
+      "type": "born",
+      "date": "1908-04-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1908-10-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "london"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1908 Summer Olympics (Q8111)",
+      "url": "https://www.wikidata.org/wiki/Q8111",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1908 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1908_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Olympic_games_1908_London.jpg/500px-Olympic_games_1908_London.jpg",
+    "alt": "1908 Summer Olympics",
+    "credit": "Arthur Stockdale Cope",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Olympic_games_1908_London.jpg"
+  }
+}

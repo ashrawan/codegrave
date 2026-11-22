@@ -9,6 +9,7 @@
   ],
   "maker": "Siri Inc. (from SRI International), then Apple",
   "summary": "The voice assistant that came out of an SRI International research project. Apple bought it and made it a headline feature of the iPhone 4S, putting a talking assistant in millions of pockets years before chatbots.",
+  "wikidata": "Q582159",
   "events": [
     {
       "type": "project_start",
@@ -56,5 +57,12 @@
       "kind": "primary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Siri_in_macOS_Ventura.png/500px-Siri_in_macOS_Ventura.png",
+    "alt": "Siri",
+    "credit": "ResearchAgent007",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Siri_in_macOS_Ventura.png"
+  }
 }

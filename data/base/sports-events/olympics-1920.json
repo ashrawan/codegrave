@@ -1,0 +1,54 @@
+{
+  "id": "olympics-1920",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1920 Summer Olympics",
+      "from": "1920"
+    }
+  ],
+  "summary": "The first Games after the First World War, held in Antwerp in Belgium, which had suffered badly in the war. The Olympic flag with its five rings and the athletes' oath appeared here for the first time.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8128",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-04-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1920-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: 1920 Summer Olympics (Q8128)",
+      "url": "https://www.wikidata.org/wiki/Q8128",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1920 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1920_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Spain_national_football_team_in_the_1920_Summer_Olympics_in_Antwerp.jpg/500px-Spain_national_football_team_in_the_1920_Summer_Olympics_in_Antwerp.jpg",
+    "alt": "1920 Summer Olympics",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Spain_national_football_team_in_the_1920_Summer_Olympics_in_Antwerp.jpg"
+  }
+}

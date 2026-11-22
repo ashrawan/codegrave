@@ -1,0 +1,59 @@
+{
+  "id": "olympics-1904",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1904 Summer Olympics",
+      "from": "1904"
+    }
+  ],
+  "summary": "The first Olympics held outside Europe, in St. Louis alongside a world's fair. Few athletes made the long journey, so most competitors were American. Gold, silver and bronze medals were given for the first time.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8098",
+  "events": [
+    {
+      "type": "born",
+      "date": "1904-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1904-11-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1904 Summer Olympics (Q8098)",
+      "url": "https://www.wikidata.org/wiki/Q8098",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1904 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1904_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/1904summerolympicsposter.jpg/500px-1904summerolympicsposter.jpg",
+    "alt": "1904 Summer Olympics",
+    "credit": "unknown. Signed at the bottom, center right, “St. John”. See the Daily Official…",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1904summerolympicsposter.jpg"
+  }
+}

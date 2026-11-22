@@ -9,6 +9,7 @@
   ],
   "maker": "OpenAI",
   "summary": "OpenAI's 175-billion-parameter language model, which showed that a large enough model can do new tasks from a few examples. Offered only through an API, it was the base of ChatGPT's first model and was switched off as newer models replaced it.",
+  "wikidata": "Q95726734",
   "events": [
     {
       "type": "project_start",
@@ -78,5 +79,12 @@
       "kind": "primary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/%D7%A9%D7%99%D7%97%D7%94_%D7%A2%D7%9D_GPT-3_%D7%A2%D7%9C_%D7%95%D7%99%D7%A7%D7%99%D7%A4%D7%93%D7%99%D7%94.png/500px-%D7%A9%D7%99%D7%97%D7%94_%D7%A2%D7%9D_GPT-3_%D7%A2%D7%9C_%D7%95%D7%99%D7%A7%D7%99%D7%A4%D7%93%D7%99%D7%94.png",
+    "alt": "GPT-3",
+    "credit": "איתן ברוך",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%D7%A9%D7%99%D7%97%D7%94_%D7%A2%D7%9D_GPT-3_%D7%A2%D7%9C_%D7%95%D7%99%D7%A7%D7%99%D7%A4%D7%93%D7%99%D7%94.png"
+  }
 }

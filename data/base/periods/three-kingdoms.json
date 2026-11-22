@@ -1,0 +1,52 @@
+{
+  "id": "three-kingdoms",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Three Kingdoms",
+      "from": "0220"
+    }
+  ],
+  "summary": "The period after the fall of the Han dynasty when China was split between the states of Wei, Shu and Wu. Its generals and battles, retold in the novel Romance of the Three Kingdoms, are among the best-known stories in Chinese history.",
+  "labels": [],
+  "wikidata": "Q185043",
+  "events": [
+    {
+      "type": "born",
+      "date": "0220",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0280",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: Three Kingdoms (Q185043)",
+      "url": "https://www.wikidata.org/wiki/Q185043",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Three Kingdoms",
+      "url": "https://en.wikipedia.org/wiki/Three_Kingdoms",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Saam_Gwok_262_CE.png/500px-Saam_Gwok_262_CE.png",
+    "alt": "Three Kingdoms",
+    "credit": "Ian Kiu",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Saam_Gwok_262_CE.png"
+  }
+}

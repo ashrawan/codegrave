@@ -11,6 +11,7 @@
   "labels": [
     "sport"
   ],
+  "wikidata": "Q995653",
   "events": [
     {
       "type": "born",
@@ -42,5 +43,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/2024_Summer_Olympics_-_30_July_%28tennis%29.jpg/500px-2024_Summer_Olympics_-_30_July_%28tennis%29.jpg",
+    "alt": "2024 Summer Olympics",
+    "credit": "Sander van",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Summer_Olympics_-_30_July_(tennis).jpg"
+  }
 }

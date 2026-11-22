@@ -11,6 +11,7 @@
   "labels": [
     "sport"
   ],
+  "wikidata": "Q8613",
   "events": [
     {
       "type": "born",
@@ -42,5 +43,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Rio_de_Janeiro_2016_Committee_in_Geneva.jpg/500px-Rio_de_Janeiro_2016_Committee_in_Geneva.jpg",
+    "alt": "2016 Summer Olympics",
+    "credit": "Ricardo Stuckert/PR",
+    "licence": "CC BY 3.0 br",
+    "source": "https://commons.wikimedia.org/wiki/File:Rio_de_Janeiro_2016_Committee_in_Geneva.jpg"
+  }
 }

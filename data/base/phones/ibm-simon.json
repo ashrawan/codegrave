@@ -9,6 +9,7 @@
   ],
   "maker": "IBM",
   "summary": "A phone with a touchscreen, a calendar, email and apps, more than a decade before the iPhone. It is often called the first smartphone, though the word did not exist yet. It was heavy, the battery lasted about an hour, and it was on sale for only a few months.",
+  "wikidata": "Q1321356",
   "events": [
     {
       "type": "project_start",
@@ -44,5 +45,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/IBM_Simon_Personal_Communicator.png/500px-IBM_Simon_Personal_Communicator.png",
+    "alt": "IBM Simon",
+    "credit": "Bcos47",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:IBM_Simon_Personal_Communicator.png"
+  }
 }

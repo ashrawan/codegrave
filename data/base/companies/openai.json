@@ -1,0 +1,47 @@
+{
+  "id": "openai",
+  "category": "companies",
+  "names": [
+    {
+      "name": "OpenAI",
+      "from": "2015"
+    }
+  ],
+  "summary": "American artificial intelligence company founded as a non-profit research lab by Sam Altman, Elon Musk and others. It made the GPT models and ChatGPT, which started the race to build large language models.",
+  "labels": [],
+  "wikidata": "Q21708200",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-12-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikidata: OpenAI (Q21708200)",
+      "url": "https://www.wikidata.org/wiki/Q21708200",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: OpenAI",
+      "url": "https://en.wikipedia.org/wiki/OpenAI",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Pioneer_Building%2C_San_Francisco_%282019%29_-1.jpg/500px-Pioneer_Building%2C_San_Francisco_%282019%29_-1.jpg",
+    "alt": "OpenAI",
+    "credit": "HaeB",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pioneer_Building,_San_Francisco_(2019)_-1.jpg"
+  }
+}

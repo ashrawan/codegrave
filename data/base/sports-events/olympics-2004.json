@@ -1,0 +1,59 @@
+{
+  "id": "olympics-2004",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2004 Summer Olympics",
+      "from": "2004"
+    }
+  ],
+  "summary": "The Olympics returned to Athens, where the modern Games began in 1896. The shot put was held at ancient Olympia, and Michael Phelps won six gold medals in swimming.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8558",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-08-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2004-08-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "athens"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2004 Summer Olympics (Q8558)",
+      "url": "https://www.wikidata.org/wiki/Q8558",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2004 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/2004_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ath%C3%A8nes_flamme_olympique_2004small.JPG",
+    "alt": "2004 Summer Olympics",
+    "credit": "FilRB",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ath%C3%A8nes_flamme_olympique_2004small.JPG"
+  }
+}

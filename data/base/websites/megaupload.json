@@ -9,6 +9,7 @@
   ],
   "maker": "Megaupload Limited",
   "summary": "A site for storing and sharing large files, used heavily for films and music that people had no right to share. At its peak it was one of the busiest sites on the internet.",
+  "wikidata": "Q483",
   "events": [
     {
       "type": "born",
@@ -42,5 +43,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/MegaUpload_FBI-Banner.jpg/500px-MegaUpload_FBI-Banner.jpg",
+    "alt": "Megaupload",
+    "credit": "FBI Anti-Piracy",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:MegaUpload_FBI-Banner.jpg"
+  }
 }

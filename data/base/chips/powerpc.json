@@ -9,6 +9,7 @@
   ],
   "maker": "Apple, IBM and Motorola",
   "summary": "A processor design made by an alliance of Apple, IBM and Motorola to challenge Intel. It ran Macs from 1994 to 2006 and the GameCube, Xbox 360 and PlayStation 3.",
+  "wikidata": "Q209860",
   "events": [
     {
       "type": "project_start",
@@ -45,5 +46,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/IBM_PowerPC601_PPC601FD-080-2_top.jpg/500px-IBM_PowerPC601_PPC601FD-080-2_top.jpg",
+    "alt": "PowerPC",
+    "credit": "Unknown author",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:IBM_PowerPC601_PPC601FD-080-2_top.jpg"
+  }
 }

@@ -48,7 +48,8 @@
     "sichuan-earthquake-2008",
     "haiti-earthquake-2010",
     "tohoku-earthquake-2011",
-    "fukushima-accident"
+    "fukushima-accident",
+    "turkey-syria-earthquakes-2023"
   ],
   "checkpoints": [
     {
@@ -74,10 +75,10 @@
     },
     {
       "id": "chernobyl-to-fukushima",
-      "name": "Chernobyl to Fukushima",
+      "name": "Chernobyl to today",
       "from": 1976,
-      "to": 2011,
-      "note": "Nuclear plants, spacecraft and chemical factories bring risks no earlier century knew, while the world watches tsunamis and storms on live television and learns the cost of weak warnings. The Tangshan quake of 1976 and the Sichuan and Haiti quakes of 2008 and 2010 show how weak buildings raise the toll."
+      "to": 2026,
+      "note": "Nuclear plants, spacecraft and chemical factories bring risks no earlier century knew, while the world watches tsunamis and storms on live television and learns the cost of weak warnings. The Tangshan quake of 1976 and the Sichuan and Haiti quakes of 2008 and 2010 show how weak buildings raise the toll. In 2023 two great earthquakes in Turkey and Syria killed more than fifty thousand people."
     }
   ]
 }

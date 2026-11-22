@@ -1,0 +1,37 @@
+{
+  "id": "jurassic-park-film",
+  "category": "films",
+  "names": [
+    {
+      "name": "Jurassic Park",
+      "from": "1993"
+    }
+  ],
+  "maker": "Steven Spielberg",
+  "summary": "Steven Spielberg's film about a theme park of cloned dinosaurs that break loose. Its computer-generated dinosaurs changed how films were made, and it became the highest-earning film of its time.",
+  "labels": [
+    "film"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-06-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [],
+  "sources": [
+    {
+      "title": "Wikipedia: Jurassic Park (film)",
+      "url": "https://en.wikipedia.org/wiki/Jurassic_Park_(film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

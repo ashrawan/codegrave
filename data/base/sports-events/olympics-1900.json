@@ -1,0 +1,59 @@
+{
+  "id": "olympics-1900",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1900 Summer Olympics",
+      "from": "1900"
+    }
+  ],
+  "summary": "The second modern Olympics, spread over five months in Paris alongside the World's Fair. Women took part for the first time, in tennis, golf and a few other sports.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q8088",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1900-10-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paris"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1900 Summer Olympics (Q8088)",
+      "url": "https://www.wikidata.org/wiki/Q8088",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1900 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/1900_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Exposition_universelle_de_Paris%2C_1900.jpg/500px-Exposition_universelle_de_Paris%2C_1900.jpg",
+    "alt": "1900 Summer Olympics",
+    "credit": "GTC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Exposition_universelle_de_Paris,_1900.jpg"
+  }
+}

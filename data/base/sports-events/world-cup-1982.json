@@ -1,0 +1,59 @@
+{
+  "id": "world-cup-1982",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1982 FIFA World Cup",
+      "from": "1982"
+    }
+  ],
+  "summary": "The first World Cup with twenty-four teams, held in Spain. Italy, led by the goals of Paolo Rossi, beat West Germany in the final in Madrid to win its third title.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q46934",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-06-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1982-07-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "spain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1982 FIFA World Cup (Q46934)",
+      "url": "https://www.wikidata.org/wiki/Q46934",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1982 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1982_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/1982_opening_ceremony.jpg/500px-1982_opening_ceremony.jpg",
+    "alt": "1982 FIFA World Cup",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:1982_opening_ceremony.jpg"
+  }
+}

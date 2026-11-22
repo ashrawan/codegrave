@@ -319,15 +319,20 @@ How the page is put together:
   timeline holds brings its own view alone too (`bringIn()`); only a link
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
-- **The views pane** is search, then a row of chips (`drawChips()`: All,
-  then the editors' topics from `data/editors-choice.json`, today History,
-  Science, Technology, Culture and Countries), then the list of community views in the
-  order `boot.json` gives them (topic by topic; under All each topic has a
-  small heading), then the filter: the year range (`state.span`). "How much to show" was
+- **The views pane** is search, then a row of chips (`drawChips()`: the
+  editors' topics from `data/editors-choice.json`, today Countries,
+  Culture, History, Science and Technology), then the list, then the
+  filter: the year range (`state.span`). With no chip pressed and nothing
+  searched, the list holds only the views on the timeline ("On the
+  timeline"); there is no "All" list (removed on request, Nov 2026: "just
+  have a current showing there, and anything we search"). Pressing a chip
+  lists that topic's views; pressing it again goes back. A search finds
+  every view, community and classical, and entries and years. "How much to show" was
   removed on request (Nov 2026): every entry of a view is on the road, and
   the road's scale and the cards by distance do the rest. On a phone the filters fold into one line
-  (`#filters-btn`) so the list has the sheet. Only community views are
-  listed. Classical views are found by the search, where every result
+  (`#filters-btn`) so the list has the sheet. Only community views sit
+  under the chips.
+  Classical views are found by the search, where every result
   carries an icon that says which sort it is. A row is a thumbnail made by
   the build (`scripts/thumb.mjs`), then the name and one quiet line
   (`viewSub()`: the years the view covers and how many entries it holds).

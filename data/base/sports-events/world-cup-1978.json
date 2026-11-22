@@ -1,0 +1,59 @@
+{
+  "id": "world-cup-1978",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1978 FIFA World Cup",
+      "from": "1978"
+    }
+  ],
+  "summary": "Held in Argentina under its military government. The hosts, with Mario Kempes scoring twice in the final, beat the Netherlands after extra time to win their first World Cup.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q46943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-06-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1978-06-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "argentina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1978 FIFA World Cup (Q46943)",
+      "url": "https://www.wikidata.org/wiki/Q46943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1978 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1978_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Festejo_gente_campo_juego.jpg/500px-Festejo_gente_campo_juego.jpg",
+    "alt": "1978 FIFA World Cup",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Festejo_gente_campo_juego.jpg"
+  }
+}

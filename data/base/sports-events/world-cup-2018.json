@@ -1,0 +1,59 @@
+{
+  "id": "world-cup-2018",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2018 FIFA World Cup",
+      "from": "2018"
+    }
+  ],
+  "summary": "The World Cup held in Russia, the first to use video review of referees' decisions. France beat Croatia 4 to 2 in the final in Moscow to win its second title.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q170645",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-06-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018-07-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "russia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2018 FIFA World Cup (Q170645)",
+      "url": "https://www.wikidata.org/wiki/Q170645",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2018 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/2018_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/France_champion_of_the_Football_World_Cup_Russia_2018.jpg/500px-France_champion_of_the_Football_World_Cup_Russia_2018.jpg",
+    "alt": "2018 FIFA World Cup",
+    "credit": "Russian Presidential Press and Information Office",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:France_champion_of_the_Football_World_Cup_Russia_2018.jpg"
+  }
+}

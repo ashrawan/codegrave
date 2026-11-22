@@ -438,7 +438,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     level: 100, order: 'old',  // everything that fits; 'old': the reader faces the future, 'new': the past
     pinned: new Set(), open: null, pane: 'views', era: null, trail: [],
     span: null,               // [from, to] written years when the reader narrows the timeline
-    topic: '',                // the chip the list of views is narrowed to, '' for all
+    topic: '',                // the pressed chip: the list shows that topic's views; '' for the views on the timeline
   };
   let L = null;               // the current layout
 
@@ -1655,8 +1655,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     return y;
   }
 
-  // A compact filter above the list: All, then the editors' topics (History,
-  // Science and so on). A community view outside every topic sits under More.
+  // A compact filter above the list: the editors' topics (History, Science and
+  // so on). Pressed, a chip lists that topic's views; pressed again, the list
+  // goes back to what is on the timeline. A view outside every topic sits under More.
   // Where the editors name no topics, the chips are the branches that have a view.
   const REST = '~';
   function chipList() {
@@ -1673,9 +1674,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     box.hidden = !list.length || !!$('vq').value.trim();
     if (state.topic && !list.some((d) => d.id === state.topic)) state.topic = '';
     const chip = (id, name) => `<button type="button" role="radio" data-chip="${esc(id)}" aria-checked="${state.topic === id}">${esc(name)}</button>`;
-    const ids = ['', ...list.map((d) => d.id)].join(',');
+    const ids = list.map((d) => d.id).join(',');
     // Redrawn only when the chips change, so the row keeps its sideways scroll.
-    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'All') + list.map((d) => chip(d.id, d.name)).join(''); }
+    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = list.map((d) => chip(d.id, d.name)).join(''); }
     else for (const b of box.querySelectorAll('[data-chip]')) b.setAttribute('aria-checked', b.dataset.chip === state.topic);
     requestAnimationFrame(chipEdges);
   }
@@ -1686,23 +1687,19 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     bar.classList.toggle('more-r', c.scrollLeft < c.scrollWidth - c.clientWidth - 2);
   }
 
-  // The list: the community views, in the editors' order, under a heading for
-  // each topic, or narrowed to one by its chip. Search finds classical views too
-  // (the map: everything, each branch, each kind), and entries and years.
+  // The list: the views on the timeline, or one topic's views when its chip is
+  // pressed. Search finds every view, community and classical (the map:
+  // everything, each branch, each kind), and entries and years.
   let found = [], active = -1;
   function runSearch() {
     const raw = $('vq').value.trim(), q = fold(raw);
     found = [];
     if (!q) {
-      const mine = myView();
-      if (mine && !state.topic) found.push({ mine });
-      const chips = chipList(), heads = !state.topic && !!boot?.topics?.length;
-      let last = null;
-      for (const v of boot?.views || []) {
-        const c = chipOf(v);
-        if (state.topic && c !== state.topic) continue;
-        if (heads && c !== last) { last = c; found.push({ head: chips.find((d) => d.id === c)?.name || 'More' }); }
-        found.push({ v: viewById.get(v.id) || v });
+      if (state.topic) {
+        for (const v of boot?.views || []) if (chipOf(v) === state.topic) found.push({ v: viewById.get(v.id) || v });
+      } else {
+        found.push({ head: 'On the timeline' });
+        for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
       }
       found.push({ propose: true });
       active = -1;
@@ -2177,7 +2174,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const rm = el('[data-remove]');
       if (rm) { removeView(rm.dataset.remove); return changed(); }
       const br = el('[data-chip]');
-      if (br) { state.topic = br.dataset.chip; drawChips(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
+      if (br) { state.topic = state.topic === br.dataset.chip ? '' : br.dataset.chip; drawChips(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
       const era = el('[data-era]');
       if (era && !el('#side')) return openEra(era.dataset.era);
       const zoom = el('[data-zoom]');

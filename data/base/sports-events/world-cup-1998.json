@@ -1,0 +1,59 @@
+{
+  "id": "world-cup-1998",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "1998 FIFA World Cup",
+      "from": "1998"
+    }
+  ],
+  "summary": "The first World Cup with thirty-two teams, held in France. The hosts won their first title, beating Brazil 3 to 0 in the final at the new Stade de France, with two headed goals by Zinedine Zidane.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q101730",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-06-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1998-07-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1998 FIFA World Cup (Q101730)",
+      "url": "https://www.wikidata.org/wiki/Q101730",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1998 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/1998_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/R%C3%A9ception_de_l%27%C3%A9quipe_de_France_de_football_%C3%A0_l%27Elys%C3%A9e_1998.jpg/500px-R%C3%A9ception_de_l%27%C3%A9quipe_de_France_de_football_%C3%A0_l%27Elys%C3%A9e_1998.jpg",
+    "alt": "1998 FIFA World Cup",
+    "credit": "Service photographique de la Présidence",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:R%C3%A9ception_de_l%27%C3%A9quipe_de_France_de_football_%C3%A0_l%27Elys%C3%A9e_1998.jpg"
+  }
+}

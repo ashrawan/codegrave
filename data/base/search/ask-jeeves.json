@@ -13,6 +13,7 @@
   ],
   "maker": "Ask Jeeves",
   "summary": "A search engine you could ask in plain English, with a butler called Jeeves as its face. It was one of the best-known names of the early web. It dropped the butler in 2006, stopped building its own search in 2010 and closed in 2026.",
+  "wikidata": "Q847564",
   "events": [
     {
       "type": "born",
@@ -56,5 +57,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Askcomheadquarters.jpg/500px-Askcomheadquarters.jpg",
+    "alt": "Ask Jeeves",
+    "credit": "Original uploader was Coolcaesar at en.wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Askcomheadquarters.jpg"
+  }
 }

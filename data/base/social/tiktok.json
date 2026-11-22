@@ -9,6 +9,7 @@
   ],
   "maker": "ByteDance",
   "summary": "An endless feed of short videos chosen for you by software. It grew faster than any social app before it.",
+  "wikidata": "Q48938223",
   "events": [
     {
       "type": "project_start",
@@ -37,5 +38,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/TikTok_app.jpg/500px-TikTok_app.jpg",
+    "alt": "TikTok",
+    "credit": "Solen Feyissa",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:TikTok_app.jpg"
+  }
 }

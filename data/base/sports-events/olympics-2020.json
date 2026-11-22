@@ -11,6 +11,7 @@
   "labels": [
     "sport"
   ],
+  "wikidata": "Q181278",
   "events": [
     {
       "type": "born",
@@ -42,5 +43,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Tokyo_2020_Olympics_in_Ariake%2C_tennis_courts.jpg/500px-Tokyo_2020_Olympics_in_Ariake%2C_tennis_courts.jpg",
+    "alt": "2020 Summer Olympics",
+    "credit": "Syced",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tokyo_2020_Olympics_in_Ariake,_tennis_courts.jpg"
+  }
 }
