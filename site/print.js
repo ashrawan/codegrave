@@ -188,9 +188,23 @@ function single(D) {
   }
   finishPage();
   // credits
-  const p = newPage(); const m = frame(p, 'Pictures and sources', true); m.style.width = 'auto'; m.style.right = '14mm';
-  m.innerHTML = '<div class="ch"><div class="k">Credits</div><h2>Pictures and sources</h2><p>' + esc(creditLine()) + '</p></div><div class="cred">' + D.es.map((e) => creditHtml(e)).join('') + '</div>';
-  p.querySelector('.rail').remove();
+  flowCredits(D.es.map((e) => creditHtml(e)), (first) => {
+    const p = newPage(); const m = frame(p, 'Pictures and sources'); m.style.width = 'auto'; m.style.right = '14mm';
+    m.innerHTML = (first ? '<div class="ch"><div class="k">Credits</div><h2>Pictures and sources</h2><p>' + esc(creditLine()) + '</p></div>' : '') + '<div class="cred"></div>';
+    p.querySelector('.rail').remove();
+    const box = m.querySelector('.cred'); box.style.height = (m.clientHeight - box.offsetTop) + 'px';
+    return { p, box };
+  }, link);
+}
+// The credits fill as many pages as they need, two columns a page; the link to the views is on the last.
+function flowCredits(list, open, link) {
+  let c = open(true);
+  const over = () => c.box.scrollWidth > c.box.clientWidth + 1;
+  for (const html of list) {
+    c.box.insertAdjacentHTML('beforeend', html);
+    if (over() && c.box.children.length > 1) { c.box.lastElementChild.remove(); c = open(false); c.box.insertAdjacentHTML('beforeend', html); }
+  }
+  c.p.querySelector('.foot span').textContent = link;
 }
 function entryHtml(e) {
   return '<div class="e' + (e.img ? '' : ' noimg') + '">' + (e.img ? '<div class="ph"><img src="' + esc(e.img.src) + '" alt=""></div>' : '')
@@ -290,8 +304,12 @@ function many(V, inks) {
     if (k === k0) { add(all[k], true); k++; }
     finishPage();
   }
-  const p = newManyPage('', 'Pictures and sources', true);
-  p.insertAdjacentHTML('beforeend', '<div class="cred"><div style="column-span:all;margin-bottom:3mm">' + esc(creditLine()) + '</div>' + all.map((e) => creditHtml(e, inks[e.vi])).join('') + '</div>');
+  flowCredits(all.map((e) => creditHtml(e, inks[e.vi])), (first) => {
+    const p = newManyPage('', 'Pictures and sources');
+    if (first) p.insertAdjacentHTML('beforeend', '<div class="credl">' + esc(creditLine()) + '</div>');
+    p.insertAdjacentHTML('beforeend', '<div class="cred" style="top:' + (first ? 30 : 22) + 'mm"></div>');
+    return { p, box: p.querySelector('.cred') };
+  }, link);
 }
 
 // ---------------------------------------------------------------- start
