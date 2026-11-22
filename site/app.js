@@ -600,7 +600,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     roadLayout();
     // Other views on the road: the pictures of the ones that left go at once, not after their hold.
     const sig = state.views.join();
-    if (wall && sig !== road.sig) wall.reset();
+    if (sig !== road.sig) { turnsOver(); if (wall) wall.reset(); }    // other views: every card is owed its turn afresh
     road.sig = sig;
     if (was) road.t = road.prev = L.place(was.t) + was.off;
     if (aim) road.target = L.place(aim.t) + aim.off;
@@ -712,7 +712,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       }
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
-    turnsOver();
     // Do the views bring pictures of their own for the media wall? Enough of them (15 in 100 entries) and the wall shows only those.
     const own = shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
     L = { own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
@@ -2201,10 +2200,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (beside) return pick(Number(beside.dataset.beside), true);
       const li = el('#vlist [data-i]');
       if (li) return pick(Number(li.dataset.i), e.shiftKey || e.ctrlKey || e.metaKey);
-      // A name on the road opens its entry and brings the reader to it.
+      // A name on the road opens its entry and brings the reader to it. While play travels it only opens
+      // the entry: play goes on, so reading a card never stops the journey (asked for, Nov 2026).
       const card = el('#road-labels [data-id]');
       if (card) {
         openThing(card.dataset.id, { focus: false });
+        if (play.on) return;
         const p = L && L.byKey.get(card.dataset.key);      // its own spot on the road, which need not be where its year begins
         return p ? roadTo('end' in card.dataset ? p.b : p.a) : undefined;
       }

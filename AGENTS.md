@@ -254,8 +254,9 @@ How the page is put together:
   never seems to open twice. Cards that would cover one another wait,
   nearest first (`orderOf()`), and play slows early so each gets its turn
   before the reader reaches it (`turnPace()`, never below `CRAWL`). Moving
-  by hand, or any change to what is drawn, starts the turns afresh
-  (`turnsOver()`). Standing still, nothing takes turns: a card stays while
+  by hand, or other views, starts the turns afresh (`turnsOver()`);
+  opening the panel does not. Clicking a card while play travels opens
+  its entry and play goes on (asked for, Nov 2026). Standing still, nothing takes turns: a card stays while
   someone reads it. Keep it this simple: no queue, no timers.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
