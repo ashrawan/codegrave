@@ -234,9 +234,8 @@ How the page is put together:
   events written along it, like the open and the hovered entry
   (`road.heat` eases the colour). It is not `state.open`; do not write one
   to the other.
-- **The bar** (`#axisbar`) stands upright on the right: reverse
-  (`state.order`) at the top, play at the bottom, the whole span between
-  them with ahead upwards, on the road's own scale so the marker climbs
+- **The bar** (`#axisbar`) stands upright on the right: play at the
+  bottom and the whole span above it with ahead upwards, on the road's own scale so the marker climbs
   steadily (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
   marker moves the reader. Play moves the reader `PLAY_PACE` focal lengths
@@ -303,7 +302,8 @@ How the page is put together:
   colour, and the cross removes one of several. The strip starts at the
   left with the "Views" button and the pills; at its right end stand what
   the era of the year in sight stands for (BCE or CE, from `roadHud()`),
-  then shuffle. There is no bookmark: "Your view" was
+  then shuffle, then reverse (`state.order`), small, last in the strip
+  (moved there on request, Nov 2026). There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
 - **One view at a time.** Picking a view shows it alone (`showOnly()`): the

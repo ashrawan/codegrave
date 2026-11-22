@@ -1131,7 +1131,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       // The years: a line across the road at each written year, ticks on both edges.
       const fsOf = (s) => (G.phone ? Math.max(9.5, 8 + 13 * s) : Math.max(10, 9 + 25 * s));
       const ticks = ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when });
-      const marked = eraMarked(ticks.filter((tk) => tk.label).map((tk) => tk.y));
+      // The era goes on the years in sight: on screen, not faded and not behind a card.
+      const marked = eraMarked(ticks.filter((tk) => {
+        if (!tk.label) return false;
+        const y = py(tk.s), x = px(G.RW, tk.s) + 15 * tk.s + 1 + (G.phone ? 4 : 7);
+        return far(tk.s) > 0.3 && y > G.top + 8 && y < G.SH - tk.fs * 0.5 && !covered(x - 4, y - tk.fs * 0.55, x + tk.fs * 3.2, y + tk.fs * 0.55);
+      }).map((tk) => tk.y));
       for (const tk of ticks) {
         // A year fades in from the horizon, and out as it slides under the reader's feet.
         const s = tk.s, y = py(s), xl = px(-G.RW, s), xr = px(G.RW, s), a = far(s) * clamp(2.4 - s * 1.5, 0, 1) * clamp((G.SH - y) / (tk.fs * 0.9), 0, 1);
