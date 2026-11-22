@@ -1,0 +1,50 @@
+{
+  "id": "pachycephalosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Pachycephalosaurus",
+      "from": "-70000000"
+    }
+  ],
+  "summary": "A dinosaur with a dome of solid bone on top of its head, up to 25 centimetres thick.",
+  "wikidata": "Q14455",
+  "events": [
+    {
+      "type": "born",
+      "date": "-70000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Pachycephalosaurus (Q14455)",
+      "url": "https://www.wikidata.org/wiki/Q14455",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pachycephalosaurus",
+      "url": "https://en.wikipedia.org/wiki/Pachycephalosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Pachycephalosaurus_skull.JPG/500px-Pachycephalosaurus_skull.JPG",
+    "alt": "Pachycephalosaurus",
+    "credit": "Credit to - user Ballista from the English wikipedia.",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pachycephalosaurus_skull.JPG"
+  }
+}

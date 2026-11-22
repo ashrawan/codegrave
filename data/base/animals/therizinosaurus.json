@@ -1,0 +1,50 @@
+{
+  "id": "therizinosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Therizinosaurus",
+      "from": "-72100000"
+    }
+  ],
+  "summary": "A strange plant-eating theropod from Mongolia with claws up to a metre long.",
+  "wikidata": "Q131264",
+  "events": [
+    {
+      "type": "born",
+      "date": "-72100000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Therizinosaurus (Q131264)",
+      "url": "https://www.wikidata.org/wiki/Q131264",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Therizinosaurus",
+      "url": "https://en.wikipedia.org/wiki/Therizinosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Therizinosaurus_arms.jpg/500px-Therizinosaurus_arms.jpg",
+    "alt": "Therizinosaurus",
+    "credit": "Yuya Tamai from Gifu, Japan",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Therizinosaurus_arms.jpg"
+  }
+}

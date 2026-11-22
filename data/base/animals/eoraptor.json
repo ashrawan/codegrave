@@ -1,0 +1,50 @@
+{
+  "id": "eoraptor",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Eoraptor",
+      "from": "-231400000"
+    }
+  ],
+  "summary": "One of the earliest known dinosaurs, a small two-legged animal about a metre long from what is now Argentina.",
+  "wikidata": "Q130988",
+  "events": [
+    {
+      "type": "born",
+      "date": "-231400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-228910000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Eoraptor (Q130988)",
+      "url": "https://www.wikidata.org/wiki/Q130988",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eoraptor",
+      "url": "https://en.wikipedia.org/wiki/Eoraptor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Eoraptor_Japan.jpg/500px-Eoraptor_Japan.jpg",
+    "alt": "Eoraptor",
+    "credit": "Kentaro Ohno",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Eoraptor_Japan.jpg"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "sue-dinosaur",
+  "category": "famous-animals",
+  "names": [
+    {
+      "name": "Sue",
+      "from": "1990"
+    }
+  ],
+  "summary": "The largest and most complete Tyrannosaurus skeleton ever found, discovered in South Dakota in 1990 and now in Chicago's Field Museum.",
+  "wikidata": "Q1514294",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-08-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sue (Q1514294)",
+      "url": "https://www.wikidata.org/wiki/Q1514294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sue (dinosaur)",
+      "url": "https://en.wikipedia.org/wiki/Sue_(dinosaur)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Sues_skeleton.jpg/500px-Sues_skeleton.jpg",
+    "alt": "Sue",
+    "credit": "Connie Ma from Chicago, United States of America",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sues_skeleton.jpg"
+  }
+}

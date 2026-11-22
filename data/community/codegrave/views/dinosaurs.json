@@ -1,0 +1,103 @@
+{
+  "id": "dinosaurs",
+  "name": "Dinosaurs",
+  "description": "The dinosaurs from their first appearance in the Triassic to the asteroid that ended their reign, the reptiles of the sky and sea beside them, and how people dug them up and pieced them together.",
+  "category": "earth-space",
+  "tags": [
+    "dinosaurs",
+    "jurassic",
+    "cretaceous",
+    "triassic",
+    "fossils",
+    "t rex",
+    "extinction",
+    "paleontology"
+  ],
+  "entries": [
+    "triassic",
+    "mesozoic",
+    "dinosaur",
+    "eoraptor",
+    "herrerasaurus",
+    "plateosaurus",
+    "coelophysis",
+    "jurassic",
+    "triassic-jurassic-extinction",
+    "plesiosaur",
+    "ichthyosaurus",
+    "dilophosaurus",
+    "megalosaurus",
+    "allosaurus",
+    "stegosaurus",
+    "brachiosaurus",
+    "diplodocus",
+    "apatosaurus",
+    "archaeopteryx",
+    "compsognathus",
+    "cretaceous",
+    "spinosaurus",
+    "iguanodon",
+    "sinosauropteryx",
+    "deinonychus",
+    "giganotosaurus",
+    "argentinosaurus",
+    "pteranodon",
+    "mosasaurus",
+    "parasaurolophus",
+    "velociraptor",
+    "protoceratops",
+    "oviraptor",
+    "therizinosaurus",
+    "pachycephalosaurus",
+    "carnotaurus",
+    "ankylosaurus",
+    "triceratops",
+    "tyrannosaurus-rex",
+    "quetzalcoatlus",
+    "cretaceous-paleogene-extinction",
+    "chicxulub-impact",
+    "mary-anning",
+    "richard-owen",
+    "crystal-palace-dinosaurs",
+    "bone-wars",
+    "sue-dinosaur",
+    "jurassic-park-film"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-triassic",
+      "name": "The Triassic",
+      "from": -252000000,
+      "to": -201400001,
+      "note": "After the greatest extinction in Earth's history, the first dinosaurs appear: small, two-legged animals in a hot, dry world where the continents are still joined."
+    },
+    {
+      "id": "the-jurassic",
+      "name": "The Jurassic",
+      "from": -201400000,
+      "to": -145000001,
+      "note": "The supercontinent breaks up and the dinosaurs take over. Giant long-necked sauropods, plated stegosaurs and big hunters spread across the land, and the first birds take to the air."
+    },
+    {
+      "id": "the-cretaceous",
+      "name": "The Cretaceous",
+      "from": -145000000,
+      "to": -66000001,
+      "note": "Flowering plants appear and dinosaurs reach their greatest variety: horned and duck-billed plant eaters, armoured giants and Tyrannosaurus. Pterosaurs fly overhead and mosasaurs rule the seas."
+    },
+    {
+      "id": "after-the-asteroid",
+      "name": "After the asteroid",
+      "from": -66000000,
+      "to": 1799,
+      "note": "An asteroid strikes Mexico and the non-bird dinosaurs die out. Only the birds carry their line on."
+    },
+    {
+      "id": "finding-the-dinosaurs",
+      "name": "Finding the dinosaurs",
+      "from": 1800,
+      "to": 2026,
+      "note": "From Mary Anning's sea reptiles and the first named dinosaurs to the Bone Wars, feathered fossils and Jurassic Park, people slowly learn who the dinosaurs were."
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "id": "sinosauropteryx",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Sinosauropteryx",
+      "from": "-125460000"
+    }
+  ],
+  "summary": "A small Chinese dinosaur found in 1996, the first known with feathers that were not on a bird, and whose colours could be worked out.",
+  "wikidata": "Q131379",
+  "events": [
+    {
+      "type": "born",
+      "date": "-125460000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-124120000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Sinosauropteryx (Q131379)",
+      "url": "https://www.wikidata.org/wiki/Q131379",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sinosauropteryx",
+      "url": "https://en.wikipedia.org/wiki/Sinosauropteryx",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Sinosauropteryx_color.jpg/500px-Sinosauropteryx_color.jpg",
+    "alt": "Sinosauropteryx",
+    "credit": "Fiann M. Smithwick, Robert Nicholls, Innes C. Cuthill, Jakob Vinther",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sinosauropteryx_color.jpg"
+  }
+}

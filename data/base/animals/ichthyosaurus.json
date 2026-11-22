@@ -1,0 +1,50 @@
+{
+  "id": "ichthyosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Ichthyosaurus",
+      "from": "-199500000"
+    }
+  ],
+  "summary": "A dolphin-shaped marine reptile of the early Jurassic seas. Mary Anning found some of the first complete skeletons.",
+  "wikidata": "Q131565",
+  "events": [
+    {
+      "type": "born",
+      "date": "-199500000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-192900000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ichthyosaurus (Q131565)",
+      "url": "https://www.wikidata.org/wiki/Q131565",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ichthyosaurus",
+      "url": "https://en.wikipedia.org/wiki/Ichthyosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Ichthyosaurus_BW.jpg/500px-Ichthyosaurus_BW.jpg",
+    "alt": "Ichthyosaurus",
+    "credit": "Nobu Tamura (http://spinops.blogspot.com)",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ichthyosaurus_BW.jpg"
+  }
+}

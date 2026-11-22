@@ -1,0 +1,50 @@
+{
+  "id": "oviraptor",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Oviraptor",
+      "from": "-75000000"
+    }
+  ],
+  "summary": "A beaked, feathered dinosaur first thought to steal eggs; later finds showed it was sitting on its own nest.",
+  "wikidata": "Q131070",
+  "events": [
+    {
+      "type": "born",
+      "date": "-75000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-71000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Oviraptor (Q131070)",
+      "url": "https://www.wikidata.org/wiki/Q131070",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oviraptor",
+      "url": "https://en.wikipedia.org/wiki/Oviraptor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Oviraptor_holotype.jpg/500px-Oviraptor_holotype.jpg",
+    "alt": "Oviraptor",
+    "credit": "Internet Archive Book Images",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Oviraptor_holotype.jpg"
+  }
+}

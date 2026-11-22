@@ -1,0 +1,50 @@
+{
+  "id": "compsognathus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Compsognathus",
+      "from": "-150800000"
+    }
+  ],
+  "summary": "A small, light meat eater the size of a turkey, for many years the smallest dinosaur known.",
+  "wikidata": "Q130880",
+  "events": [
+    {
+      "type": "born",
+      "date": "-150800000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-145000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Compsognathus (Q130880)",
+      "url": "https://www.wikidata.org/wiki/Q130880",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Compsognathus",
+      "url": "https://en.wikipedia.org/wiki/Compsognathus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Compsognathus_TD.png/500px-Compsognathus_TD.png",
+    "alt": "Compsognathus",
+    "credit": "TotalDino",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Compsognathus_TD.png"
+  }
+}
