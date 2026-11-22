@@ -99,13 +99,13 @@ function newPage(cls) {
   doc.appendChild(p); pageNo++; return p;
 }
 let yr = null;   // the year range the timeline was narrowed to, if any
-let rev = false; // newest first, like the timeline turned round (`o=new`)
+let rev = false; // newest first, like the timeline turned round (`o=backward`)
 // Entries in reading order: oldest first, or newest first when reversed; the better ranked first within a moment.
 export const inOrder = (es, newest) => es.slice().sort((a, b) => (newest ? b.t - a.t : a.t - b.t) || a.rank - b.rank || a.vi - b.vi);
 // A span in reading order: "1957 – 1966", or "1966 – 1957" and "today – 1957" when reversed.
 const rs = (a, b) => (rev ? (b == null ? 'today' : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
 const ends = (first) => (rev ? ['today', yearText(first)] : [yearText(first), 'today']);
-const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '') + (rev ? '&o=new' : '');
+const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '') + '&o=' + (rev ? 'backward' : 'forward');
 const today = () => { const d = new Date(); return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); };
 
 // ---------------------------------------------------------------- one view
@@ -400,7 +400,7 @@ async function start() {
   if (!ids.length) { $('msg').textContent = 'No views named. Open a timeline and press Download PDF.'; return; }
   const m = /^(-?\d+)-(-?\d+)$/.exec(q.get('yr') || '');
   if (m && Number(m[1]) < Number(m[2])) yr = [Number(m[1]), Number(m[2])];
-  rev = q.get('o') === 'new';
+  rev = q.get('o') === 'backward';
   const cs = (q.get('c') || '').split(',').map(Number);
   const inks = ids.map((_, i) => INKS[(cs.length === ids.length && cs[i] >= 0 && cs[i] < 8 ? cs[i] : i) % INKS.length]);
   const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => getJSON('v/' + id + '.json').catch(() => null))]);
@@ -417,7 +417,9 @@ async function start() {
   const relay = async () => { $('save').disabled = true; await lay(sel.value); $('save').disabled = false; };
   sel.addEventListener('change', relay);
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
-  ord.addEventListener('change', () => { rev = ord.value === 'new'; relay(); });
+  ord.addEventListener('change', () => { rev = ord.value === 'new';
+    q.set('o', rev ? 'backward' : 'forward'); history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/'));
+    relay(); });
   $('save').disabled = false;
   $('save').addEventListener('click', () => download(sel.value));
   document.body.dataset.done = '1';

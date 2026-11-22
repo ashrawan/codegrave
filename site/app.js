@@ -519,7 +519,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const q = new URLSearchParams(location.search);
     if (!ids.length || !setViews(ids)) return false;
     state.span = readSpan(q.get('yr'));
-    if (q.get('o') === 'old') state.order = 'old'; else if (q.get('o') === 'new') state.order = 'new';
+    if (q.get('o') === 'forward') state.order = 'old'; else if (q.get('o') === 'backward') state.order = 'new';
     const cs = (q.get('c') || '').split(',').map(Number);
     if (cs.length === state.views.length && cs.every((n) => n >= 0 && n < 8) && new Set(cs).size === cs.length) state.views.forEach((id, i) => state.colors.set(id, cs[i]));
     return true;
@@ -527,7 +527,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function writeUrl() {
     const q = new URLSearchParams();
     q.set('views', state.views.join(','));
-    if (state.order === 'new') q.set('o', 'new');
+    q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
     history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
@@ -2310,7 +2310,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // Download PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html).
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
-      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + (state.order === 'new' ? '&o=new' : '');
+      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
       window.open('print.html?' + q, '_blank', 'noopener');
     });
 
