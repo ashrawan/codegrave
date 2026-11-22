@@ -165,6 +165,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   const eraText = (y, step, marked) => (y > -1e5 && !marked.has(y) ? (y > 0 ? String(y) : y > -1e4 ? String(-y) : group(-y)) : axisText(y, step, y > 0));
   const AXIS_UNITS = { ka: 'thousand', Ma: 'million', Ga: 'billion' };
+  const AXIS_NAMES = { ka: 'kilo-annum', Ma: 'mega-annum', Ga: 'giga-annum' };
   // A year typed by the reader: "1969", "44 BCE", "-44", "500 bc", "66 ma", "4.6 billion years ago".
   function parseYearQuery(q) {
     let m = /^(-?\d{1,4})$/.exec(q);
@@ -1348,7 +1349,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
       const units = [(/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean);
-      const under = [era, ...units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
+      const under = [era, ...units.map((u) => `${u}: ${AXIS_NAMES[u]}, ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
       if (under !== L.unitsSaid) {
         L.unitsSaid = under;
         $('road-unit').textContent = under;
