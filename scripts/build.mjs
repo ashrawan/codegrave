@@ -472,8 +472,22 @@ for (const v of views) {
   }
   if (v.checkpoints != null) checkEras(at, v.checkpoints);
   if (v.image != null) checkMedia(at, '"image"', v.image, true);
+  // A view may bring its own music for play: a sound file under data/media/ or an https link, with its credit.
+  if (v.audio != null) {
+    const a = v.audio, FILE = /\.(mp3|ogg|oga|m4a|mp4|webm|wav)$/i;
+    if (typeof a !== 'object' || !a) err(at, '"audio" must be an object with a "src"');
+    else {
+      const local = /^[a-z0-9][a-z0-9/._-]*$/.test(a.src || '') && !a.src.includes('..');
+      if (!(URL_OK(a.src) || local) || !FILE.test((a.src || '').replace(/[?#].*$/, ''))) err(at, '"audio" "src" must be an https link or a path under data/media/, ending in mp3, ogg, oga, m4a, mp4, webm or wav');
+      else if (local && !existsSync(join(mediaDir, a.src))) err(at, `"audio" file data/media/${a.src} does not exist`);
+      if (!a.credit) err(at, '"audio" needs a "credit"');
+      if (!a.licence) err(at, '"audio" needs a "licence"');
+      if (!/^https:\/\//.test(a.source || '')) err(at, '"audio" needs an https "source"');
+      for (const k of Object.keys(a)) if (!['src', 'title', 'credit', 'licence', 'source'].includes(k)) err(at, `"audio" has an unknown field "${k}"`);
+    }
+  }
   // A view only chooses what to show, and may name its own eras. It can never change the facts.
-  const allowed = ['id', 'name', 'description', 'author', 'category', 'labels', 'tags', 'categories', 'domains', 'level', 'year', 'order', 'things', 'entries', 'checkpoints', 'image'];
+  const allowed = ['id', 'name', 'description', 'author', 'category', 'labels', 'tags', 'categories', 'domains', 'level', 'year', 'order', 'things', 'entries', 'checkpoints', 'image', 'audio'];
   for (const k of Object.keys(v)) if (!k.startsWith('_') && !allowed.includes(k)) err(at, `unknown field "${k}"`);
 }
 const resolveView = (id) => (viewById.has(id) ? id : viewById.has(viewRedirects[id]) ? viewRedirects[id] : null);
@@ -598,7 +612,7 @@ if (!process.argv.includes('--check')) {
       id: v._id, name: v.name, description: v.description, author: v._owner || v.author, type: v._type,
       tags: v.tags || [], level: v.level ?? 100, count: v._members.length,
     };
-    for (const k of ['category', 'labels', 'year', 'order']) if (v[k] != null) out[k] = v[k];
+    for (const k of ['category', 'labels', 'year', 'order', 'audio']) if (v[k] != null) out[k] = v[k];
     if (topicOf.has(v._id)) out.topic = topicOf.get(v._id);
     // The years a community view covers, for its line in the list: its chapters, or else its entries.
     if (v._type === 'community' && v._members.length) {

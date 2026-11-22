@@ -9,8 +9,9 @@
    media come in as plain data, from two places:
 
    - `cards`, each frame: the cards on show on the road and their own media,
-       { id, name, side: -1 | 0 | 1, col, media: [item] }
-     A card's media go up on its side (0: either), framed in `col` when given.
+       { id, name, side: -1 | 0 | 1, col, media: [item], quiet }
+     A card's media go up on its side (0: either), framed in `col` when given,
+   and smaller when `quiet` (a name that is near but not up as a card).
    `own` says the views on the road have media of their own; then the frames
    show only those, and the eras only lend their light.
    - eras, once: what fills the frames no card needs,
@@ -192,6 +193,7 @@ export function createWall(host, { eras = [] } = {}) {
     f.card = m ? card : null; f.live = !!card; f.gone = 0;
     if (card && card.col) f.el.style.setProperty('--wf-c', card.col); else f.el.style.removeProperty('--wf-c');
     f.el.classList.toggle('mine', !!(card && card.col));
+    f.el.classList.toggle('quiet', !!(card && card.quiet));
     if (m === f.item) return;
     f.item = m;
     const next = 1 - f.on, layer = f.layers[next], old = f.layers[f.on];
@@ -390,7 +392,7 @@ export function createWall(host, { eras = [] } = {}) {
       }
       // The frames: the pictures of the cards on show, and the era's in the frames they leave free.
       let key = i + (own ? 'o' : 'e');
-      for (const c of cards) key += '|' + c.id + c.side;
+      for (const c of cards) key += '|' + c.id + c.side + (c.quiet ? 'q' : '');
       const now = performance.now();
       if (key !== W.key || now >= W.due) { W.key = key; W.cards = cards; W.own = own; share(now); }
       if (W.due < Infinity) busy = true;

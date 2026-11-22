@@ -499,6 +499,9 @@ small > .ctag, small .ctag { margin-left: 0; }
 /* a picture that belongs to a card on the road wears its view's colour */
 .wf.mine { border-color: color-mix(in srgb, var(--wf-c) 78%, white); border-width: 2px; }
 #wall.light .wf.mine { border-color: var(--wf-c); }
+/* a picture of a name that is near but not up as a card: smaller and softer */
+.wf { scale: 1; transition: opacity 1.2s ease, border-color .3s, scale .8s ease; }
+.wf.quiet { scale: .72; opacity: .78; }
 /* what a frame shows, said under it while it is pointed at */
 .w-cap { position: absolute; z-index: 3; max-width: min(340px, 80vw); padding: 8px 11px; border-radius: 8px; pointer-events: none;
   background: var(--glass, rgba(14, 18, 28, .82)); border: 1px solid var(--glass-edge, rgba(255, 255, 255, .16)); color: var(--text);

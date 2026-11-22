@@ -224,7 +224,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function sayScope() {
     if (!boot) return;
     const n = group(boot.counts?.entries || 0), views = (boot.views || []).length;
-    $('q').placeholder = matchMedia(PHONE).matches ? `Search ${n} entries` : `Search ${n} entries: a person, a place, an event or a year`;
+    $('q').placeholder = matchMedia(PHONE).matches ? 'Search the timeline' : 'Search the timeline: a person, a place, an event or a year';
     $('vscope').textContent = `${group(views)} ${views === 1 ? 'view' : 'views'} · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.
@@ -458,6 +458,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (play.on) pausePlay();
       state.span = null; state.pinned.clear();
       setViews([got]);
+      musicAgain();
       road.t = road.target = null; road.vel = 0;      // render() then opens the road where this view begins
       drawReverse();
       if (done) done(got); else changed();
@@ -960,6 +961,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const lean = c.p.lane.lean;
       shows.push({ id: t.id, name: t.name, side: Math.sign(lean),
         col: L.lanes.length > 1 ? `var(--p${c.p.lane.col})` : null, media: wallMedia(t) });
+    }
+    // With several views, a side whose lane has no card up would stand empty beside a full one. It shows one
+    // picture, small, of the nearest name on that side that has one: what comes next, else what has just passed.
+    if (L.lanes.length > 1) for (const sd of [-1, 1]) {
+      if (shows.some((x) => x.side === sd)) continue;
+      let near = null;
+      for (const c of cands) {
+        if (Math.sign(c.p.lane.lean) !== sd || !placed.has(c.key) || !wallMedia(c.p.t).length || shows.some((x) => x.id === c.p.t.id)) continue;
+        if (!near || (c.u > 0) !== (near.u > 0) ? c.u > 0 || !near : Math.abs(c.u) < Math.abs(near.u)) near = c;
+      }
+      if (near) shows.push({ id: near.p.t.id, name: near.p.t.name, side: sd, col: `var(--p${near.p.lane.col})`, media: wallMedia(near.p.t).slice(0, 1), quiet: true });
     }
     road.shows = shows;
     road.focus = front && !openUp ? front.p.t.id : null;
@@ -1959,7 +1971,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
-    if (from != null || camAtEnd()) turnsOver();
+    if (from != null || camAtEnd()) { turnsOver(); musicAgain(); }
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1;
@@ -2020,16 +2032,28 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     else gain.connect(ctx.destination);
     src.start(at, Math.random() * 0.2, 0.74);
   }
-  // The music of play: one track (`media/gallery-of-glass.mp3`) that sounds while play travels and starts over
-  // when it ends. It is fetched only when play is first pressed with the sound on, it eases in and out so
-  // nothing starts or stops with a jolt, and pausing keeps its place. The sound button silences it too.
+  // The music of play: one track that sounds while play travels and starts over when it ends. A view may
+  // bring its own (`audio` on the view); otherwise it is `media/gallery-of-glass.mp3`. It is fetched only
+  // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
+  // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
+  // the track from its beginning too. The sound button silences it.
   const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4;
-  const music = { el: null, vol: 0, want: 0, tick: 0 };
+  const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
+  // The track for what is on the road: the first view that brings its own, else the house track.
+  function trackNow() {
+    for (const id of state.views) { const a = viewById.get(id)?.audio; if (a && a.src) return mediaUrl(a.src); }
+    return MUSIC;
+  }
+  const musicAgain = () => { music.fresh = true; };
   function tune() {
     music.want = play.on && sound.on ? MUSIC_VOL : 0;
-    if (music.want && !music.el) {
-      try { music.el = new Audio(MUSIC); music.el.loop = true; music.el.preload = 'auto'; music.el.volume = 0; }
-      catch { music.el = null; }
+    if (music.want) {
+      const src = trackNow();
+      try {
+        if (!music.el) { music.el = new Audio(); music.el.loop = true; music.el.preload = 'auto'; music.el.volume = 0; }
+        if (src !== music.src) { music.src = src; music.el.src = src; music.vol = 0; music.el.volume = 0; music.fresh = false; }
+        else if (music.fresh) { music.fresh = false; try { music.el.currentTime = 0; } catch { /* not loaded yet: it starts at the beginning anyway */ } }
+      } catch { music.el = null; }
     }
     const el = music.el;
     if (!el) return;

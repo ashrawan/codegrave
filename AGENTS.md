@@ -218,7 +218,10 @@ How the page is put together:
   in its view's colour, and on a road of one view they fill both sides in
   turn; `placeLabels()` already knows which cards are up, so the
   page only hands that list over (`road.shows`) and the wall shares the
-  frames out when the list changes, never per frame. This was asked for:
+  frames out when the list changes, never per frame. With several views, a
+  side whose lane has no card up shows one small picture of the nearest
+  name there (what comes next, else what just passed), so it never stands
+  empty beside a full one. This was asked for:
   the wall follows the views and the cards on show. The eras of
   `data/wall.json` fill the frames only for views with few pictures of
   their own (`L.own`), and always give the light of the rails and the
@@ -273,11 +276,14 @@ How the page is put together:
   and from the right. Nothing sounds before play is pressed, travelling by
   hand is silent, and the small button above play turns the sound off
   (`cg-sound` in this browser).
-  Play also has music: one track, `site/media/gallery-of-glass.mp3`, that
-  sounds only while play travels, eases in and out, keeps its place on
-  pause and starts over when it ends (`tune()`). It is fetched when play is
-  first pressed with the sound on, and the same button silences it. This
-  was asked for with this file; do not swap the track without asking.
+  Play also has music (`tune()`): one track, looped, that sounds only
+  while play travels, eases in and out and keeps its place on pause. A view
+  may bring its own (`audio` on the view, `docs/VIEWS.md`); otherwise it is
+  `site/media/gallery-of-glass.mp3`. Showing another view, or playing again
+  from the beginning, starts the track from its beginning. It is fetched
+  when play is first pressed with the sound on, and the same button
+  silences it. The house track was asked for with this file; do not swap it
+  without asking.
 - **The panel** is hidden until its button, the "Views" button in the strip
   or a name is clicked. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)

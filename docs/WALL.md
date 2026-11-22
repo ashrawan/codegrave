@@ -16,6 +16,9 @@ places:
    side of the road, and each frame's border takes its view's colour. On a
    road of one view they fill both sides in turn. A picture stays while its
    card does, and a little longer.
+   With several views, a side whose lane has no card up shows one picture,
+   smaller, of the nearest name on that side that has one: what comes next,
+   else what has just passed.
 2. **The era**, from `data/wall.json`. When the views on the road have few
    pictures of their own (fewer than 15 in 100 entries), the frames no card
    needs show the era the reader is in. Views with pictures of their own
