@@ -1,0 +1,54 @@
+{
+  "id": "santos-dumont",
+  "category": "inventors",
+  "names": [
+    {
+      "name": "Alberto Santos-Dumont",
+      "from": "1873"
+    }
+  ],
+  "summary": "Brazilian pioneer of flight who steered airships around Paris and in 1906 made the first public powered aeroplane flight in Europe.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Alberto_Santos-Dumont_by_Zaida_Ben-Yusuf.jpg/500px-Alberto_Santos-Dumont_by_Zaida_Ben-Yusuf.jpg",
+    "alt": "Alberto Santos-Dumont by Zaida Ben-Yusuf",
+    "credit": "Zaida Ben-Yusuf / Adam Cuerden",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Alberto_Santos-Dumont_by_Zaida_Ben-Yusuf.jpg"
+  },
+  "labels": [
+    "transport",
+    "firsts"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1873-07-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1932-07-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Alberto Santos-Dumont",
+      "url": "https://en.wikipedia.org/wiki/Alberto_Santos-Dumont",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

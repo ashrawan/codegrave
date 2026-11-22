@@ -72,20 +72,22 @@ export function slotFor(frames) {
 // (a share of the half width), `y` its height (a share of the eye's height above the ground, negative
 // above the horizon), and `w` its size.
 export const FRAMES = [
-  { d: 1.10, x: 0.40, y: 0.16, w: 0.90 },     // upper row, middle
-  { d: 0.45, x: 0.76, y: 0.52, w: 0.65 },     // lower row, outer
-  { d: 0.50, x: 0.72, y: 0.17, w: 0.81 },     // upper row, outer
-  { d: 0.90, x: 0.46, y: 0.58, w: 0.74 },     // lower row, inner
-  { d: 2.00, x: 0.19, y: 0.146, w: 0.96 },    // upper row, far down the road
-  { d: 0.30, x: 0.80, y: 0.78, w: 0.52 },     // lowest, outer
+  { d: 1.10, x: 0.40, y: 0.16, w: 1.07 },     // upper row, middle
+  { d: 0.45, x: 0.76, y: 0.52, w: 0.69 },     // lower row, outer
+  { d: 0.50, x: 0.72, y: 0.17, w: 0.82 },     // upper row, outer
+  { d: 0.90, x: 0.46, y: 0.58, w: 0.75 },     // lower row, inner
+  { d: 2.00, x: 0.19, y: 0.146, w: 1.14 },    // upper row, far down the road
+  { d: 0.30, x: 0.80, y: 0.78, w: 0.55 },     // lowest, outer
 ];
+export const TALL = 1.1;     // how much taller than its place a frame may grow for a portrait (the tests keep it clear)
 export const TILT = 36;      // degrees each frame is turned towards the road
 // The box a frame covers on the screen, from the middle of the screen (x, outwards positive) and the
 // horizon (y, downwards): the frame's four corners, turned by TILT and seen in the road's perspective.
 // `fw` is the width of a frame of size 1, `half` the half width of the screen on its side, `gh` the eye's
-// height and F the focal length, all in pixels. The tests use it to keep the frames clear of one another.
-export function frameBox(s, { fw, half, gh, F }) {
-  const w = fw * s.w, h = w * 0.6, a = (TILT * Math.PI) / 180, cx = s.x * half * (1 + s.d), cy = s.y * gh;
+// height and F the focal length, all in pixels; `sw` and `sh` scale the width and height when a frame takes
+// the shape of its picture (fit()). The tests use it to keep the frames clear of one another.
+export function frameBox(s, { fw, half, gh, F }, sw = 1, sh = 1) {
+  const w = fw * s.w * sw, h = fw * s.w * 0.6 * sh, a = (TILT * Math.PI) / 180, cx = s.x * half * (1 + s.d), cy = s.y * gh;
   let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
   for (const u of [-1, 1]) for (const v of [-1, 1]) {
     // the outer edge of a frame stands nearer the reader, the inner edge further off
@@ -186,6 +188,21 @@ export function createWall(host, { eras = [] } = {}) {
     cap.style.top = Math.min(r.bottom - h.top + 8, h.height - cap.offsetHeight - 8).toFixed(0) + 'px';
   }
 
+  // A frame takes the shape of what it shows, so a picture fills it whole: wide for a landscape, tall for a
+  // portrait, a little taller than its place at most (TALL), centred where it stands, so a picture is never
+  // cut and never sits small inside a box of the wrong shape.
+  function fit(f) {
+    if (!f.bw) return;
+    const r = f.ar || f.bw / f.bh, wMax = f.bw, hMax = f.bh * TALL;
+    let w = wMax, h = w / r;
+    if (h > hMax) { h = hMax; w = h * r; }
+    f.el.style.width = w.toFixed(0) + 'px'; f.el.style.height = h.toFixed(0) + 'px';
+  }
+  const aspect = (el) => {
+    const w = el.naturalWidth || el.videoWidth, h = el.naturalHeight || el.videoHeight;
+    return w && h ? Math.min(2.2, Math.max(0.5, w / h)) : 0;
+  };
+
   // Puts one picture or film in one frame: it fades from what it held to what it now holds. `card` is the
   // card on the road it belongs to (its border takes the card's colour), or null for a picture of the era.
   function put(f, m, card) {
@@ -199,6 +216,9 @@ export function createWall(host, { eras = [] } = {}) {
     const next = 1 - f.on, layer = f.layers[next], old = f.layers[f.on];
     const el = fill(layer, m);
     f.on = next;
+    // Once its size is known, the frame takes the picture's shape.
+    const shape = () => { const r = f.item === m && aspect(el); if (r) { f.ar = r; fit(f); } };
+    if (el) { if (el.tagName === 'VIDEO') el.addEventListener('loadedmetadata', shape, { once: true }); else if (el.complete) shape(); else el.addEventListener('load', shape, { once: true }); }
     if (m) f.el.href = m.source || m.src; else f.el.removeAttribute('href');
     f.el.setAttribute('aria-label', m ? m.alt || '' : '');
     f.el.classList.toggle('video', !!m && m.type === 'video');
@@ -312,7 +332,7 @@ export function createWall(host, { eras = [] } = {}) {
       if (hide) continue;
       const half = f.side < 0 ? G.vx : G.SW - G.vx;
       const w = fw * s.w, h = w * 0.6, d = s.d, x = f.side * s.x * half * (1 + d), y = s.y * G.gh;
-      f.el.style.width = w.toFixed(0) + 'px'; f.el.style.height = h.toFixed(0) + 'px';
+      f.bw = w; f.bh = h; fit(f);
       f.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,${(-F * d).toFixed(1)}px) rotateY(${f.side < 0 ? TILT : -TILT}deg) translate(-50%,-50%)`;
     }
     host.style.setProperty('--wall-h', (100 * G.vy / G.SH).toFixed(1) + '%');

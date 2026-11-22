@@ -1,0 +1,53 @@
+{
+  "id": "swami-vivekananda",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Swami Vivekananda",
+      "from": "1863"
+    }
+  ],
+  "summary": "Indian monk whose speech at the Parliament of the World's Religions in Chicago in 1893 brought Hindu thought to the West.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Swami_Vivekananda-1893-09-signed.jpg/500px-Swami_Vivekananda-1893-09-signed.jpg",
+    "alt": "Swami Vivekananda-1893-09-signed",
+    "credit": "The original uploader was Dziewa at English Wikipedia.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Swami_Vivekananda-1893-09-signed.jpg"
+  },
+  "labels": [
+    "religion"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1863-01-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1902-07-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Swami Vivekananda",
+      "url": "https://en.wikipedia.org/wiki/Swami_Vivekananda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1322,6 +1322,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
+      // What the era of the year in sight stands for, in the strip at the bottom.
+      const era = /\bBCE$/.test(label) ? '<b>BCE</b> Before the Common Era' : /\bCE$/.test(label) ? '<b>CE</b> Common Era' : '';
+      if ($('era-key').innerHTML !== era) $('era-key').innerHTML = era;
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the units in sight are spelled out once, under the year.
@@ -1972,7 +1975,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     drawPlay();
     roadKick();
   }
-  function drawPlay() { if (L) roadHud(true); tune(); }
+  // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
+  // pointer nears the top edge, when anything in it has focus, and when play stops.
+  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek'); }
   function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // Dragging along the bar moves the reader, playing or not.
@@ -2106,6 +2111,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // ---------------------------------------------------------------- events
   function wire() {
     let rt = null, lastW = innerWidth, lastH = innerHeight;
+    addEventListener('pointermove', (e) => {
+      if (!play.on || e.pointerType === 'touch') return;
+      const b = document.body.classList;
+      if (e.clientY < 48) b.add('peek'); else if (e.clientY > 110) b.remove('peek');
+    }, { passive: true });
     addEventListener('resize', () => {
       clearTimeout(rt);
       rt = setTimeout(() => {

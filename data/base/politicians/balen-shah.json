@@ -1,0 +1,48 @@
+{
+  "id": "balen-shah",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Balen Shah",
+      "from": "1990"
+    }
+  ],
+  "summary": "Structural engineer and rapper who was elected mayor of Kathmandu as an independent in 2022, and became a hero to the young Nepalis who led the protests of 2025.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-04-27",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2022-05",
+      "precision": "month",
+      "label": "Mayor",
+      "note": "Won the election for mayor of Kathmandu as an independent."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Balen Shah",
+      "url": "https://en.wikipedia.org/wiki/Balen_Shah",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

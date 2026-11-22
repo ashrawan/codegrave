@@ -1,0 +1,54 @@
+{
+  "id": "lester-b-pearson",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Lester B. Pearson",
+      "from": "1897"
+    }
+  ],
+  "summary": "Canadian diplomat who won the Nobel Peace Prize for proposing the first UN peacekeeping force in the Suez Crisis, and was later prime minister.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Lester_B._Pearson_%281963_ABC_press_photo%29.jpg/500px-Lester_B._Pearson_%281963_ABC_press_photo%29.jpg",
+    "alt": "Lester B. Pearson (1963 ABC press photo)",
+    "credit": "ABC Television",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Lester_B._Pearson_(1963_ABC_press_photo).jpg"
+  },
+  "labels": [
+    "politics",
+    "nobel-prize"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1897-04-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1972-12-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Lester B. Pearson",
+      "url": "https://en.wikipedia.org/wiki/Lester_B._Pearson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

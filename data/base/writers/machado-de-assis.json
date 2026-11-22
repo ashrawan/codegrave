@@ -1,0 +1,53 @@
+{
+  "id": "machado-de-assis",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Machado de Assis",
+      "from": "1839"
+    }
+  ],
+  "summary": "Brazilian novelist of Rio de Janeiro, the grandson of freed slaves, whose ironic novels such as Dom Casmurro made him the country's greatest writer.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Machado_de_Assis_by_Marc_Ferrez.jpg/500px-Machado_de_Assis_by_Marc_Ferrez.jpg",
+    "alt": "Machado de Assis by Marc Ferrez",
+    "credit": "Marc Ferrez / Adam Cuerden",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Machado_de_Assis_by_Marc_Ferrez.jpg"
+  },
+  "labels": [
+    "literature"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1839-06-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1908-09-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Machado de Assis",
+      "url": "https://en.wikipedia.org/wiki/Machado_de_Assis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

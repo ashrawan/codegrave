@@ -1,0 +1,53 @@
+{
+  "id": "terry-fox",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Terry Fox",
+      "from": "1958"
+    }
+  ],
+  "summary": "Young Canadian who, after losing a leg to cancer, ran a marathon a day across Canada to raise money for research until the cancer returned.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2c/TerryFoxToronto19800712.JPG",
+    "alt": "TerryFoxToronto19800712",
+    "credit": "Jeremy Gilbert",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:TerryFoxToronto19800712.JPG"
+  },
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1958-07-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1981-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Terry Fox",
+      "url": "https://en.wikipedia.org/wiki/Terry_Fox",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

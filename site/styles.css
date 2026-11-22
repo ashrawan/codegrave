@@ -484,7 +484,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 .wf { position: absolute; left: 0; top: 0; display: block; overflow: hidden; border-radius: 5px; pointer-events: auto; cursor: pointer;
   background: rgba(12, 18, 30, .35); border: 1px solid rgba(210, 225, 255, .28);
   box-shadow: 0 0 34px -4px color-mix(in srgb, var(--wf-c) 45%, transparent), 0 18px 40px rgba(0, 0, 0, .5);
-  transition: opacity 1.2s ease, border-color .3s; backface-visibility: hidden; --wf-c: var(--wall-warm); }
+  transition: opacity 1.2s ease, border-color .3s, width .8s ease, height .8s ease; backface-visibility: hidden; --wf-c: var(--wall-warm); }
 .wf:nth-child(n+7) { --wf-c: var(--wall-cool); }
 .wf.empty, .wf.off { opacity: 0; pointer-events: none; }
 .wf:hover { border-color: color-mix(in srgb, var(--wf-c) 80%, white); }
@@ -500,7 +500,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 .wf.mine { border-color: color-mix(in srgb, var(--wf-c) 78%, white); border-width: 2px; }
 #wall.light .wf.mine { border-color: var(--wf-c); }
 /* a picture of a name that is near but not up as a card: smaller and softer */
-.wf { scale: 1; transition: opacity 1.2s ease, border-color .3s, scale .8s ease; }
+.wf { scale: 1; transition: opacity 1.2s ease, border-color .3s, scale .8s ease, width .8s ease, height .8s ease; }
 .wf.quiet { scale: .72; opacity: .78; }
 /* what a frame shows, said under it while it is pointed at */
 .w-cap { position: absolute; z-index: 3; max-width: min(340px, 80vw); padding: 8px 11px; border-radius: 8px; pointer-events: none;
@@ -518,5 +518,13 @@ small > .ctag, small .ctag { margin-left: 0; }
 /* What BCE and CE stand for, quietly at the right end of the strip. */
 .era-key { font-size: 12px; color: var(--faint); white-space: nowrap; margin-right: 6px; }
 .era-key b { font-weight: 600; opacity: 1; }
-.era-key i { font-style: normal; margin: 0 4px; opacity: .6; }
-@media (max-width: 700px) { .era-key { font-size: 10px; white-space: normal; line-height: 1.25; max-width: 140px; text-align: right; } .era-key i { display: block; height: 0; overflow: hidden; } }
+
+@media (max-width: 700px) { .era-key { font-size: 10px; white-space: normal; line-height: 1.25; max-width: 140px; text-align: right; } }
+
+/* Play takes the whole screen: the top bar slides up and the road grows into its place. Pointing at the
+   top edge brings the bar back over the road; it also stays while anything in it has focus. */
+.top { transition: transform .35s ease, opacity .35s ease; }
+body.playing .top { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+body.playing.peek .top, body.playing .top:focus-within { transform: none; opacity: 1; pointer-events: auto; }
+body.playing #stage, body.playing #axisbar { top: 0; }
+@media (min-width: 701px) { body.playing #side { top: 0; } }

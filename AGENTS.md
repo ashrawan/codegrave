@@ -304,7 +304,8 @@ How the page is put together:
   pill first, because a finger scrolls the strip), the dot picks the
   colour, and the cross removes one of several. The strip starts at the
   left with the "Views" button and the pills; at its right end stand what
-  BCE and CE stand for, then shuffle. There is no bookmark: "Your view" was
+  the era of the year in sight stands for (BCE or CE, from `roadHud()`),
+  then shuffle. There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
 - **One view at a time.** Picking a view shows it alone (`showOnly()`): the
@@ -357,9 +358,15 @@ How the page is put together:
   A link to an entry that is not loaded shows its name and loads on click.
 - "Propose a view" at the end of the list opens the "Propose a view" issue
   form with the current link filled in.
+- **Play takes the whole screen.** While play travels the top bar slides
+  away (`body.playing`) and the road grows into its place; pointing at the
+  top edge brings it back over the road (`body.peek`), and it returns when
+  play stops. Asked for in Nov 2026.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or
-  landscape. When other views take the road, `wall.reset()` empties every
+  landscape. A wall frame takes the shape of its picture (`fit()` in
+  `site/wall.js`, at most `TALL` taller than its place; the tests keep
+  every shape clear of the other frames). When other views take the road, `wall.reset()` empties every
   frame at once so no picture of the old views lingers.
 - Lines are neutral. Colour is only for view names and the selected line.
 - Whether a name is a card is decided by distance, not by rank.

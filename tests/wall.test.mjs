@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { eraAt, sidesOf, SLOTS, FRAMES, FRAMES_PHONE, rgbOf, slotFor, frameBox } from '../site/wall.js';
+import { eraAt, sidesOf, SLOTS, FRAMES, FRAMES_PHONE, rgbOf, slotFor, frameBox, TALL } from '../site/wall.js';
 
 const eras = [
   { id: 'a', from: -3000, to: 0, media: [] },
@@ -65,11 +65,16 @@ test('a card\'s picture takes a free frame first, then the one left longest ago'
 test('the frames of a wall stand clear of one another and inside the screen', () => {
   // The stage at 1440 x 900 and at 1280 x 720, as the page measures it.
   for (const g of [{ fw: 329, half: 684, gh: 631, F: 757 }, { fw: 291, half: 604, gh: 487, F: 584 }]) {
-    const boxes = FRAMES.map((s) => frameBox(s, g));
-    for (const b of boxes) assert.ok(b.x0 > 0 && b.x1 < g.half, 'inside its half of the screen');
-    for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
-      const a = boxes[i], b = boxes[j];
-      assert.ok(a.x1 < b.x0 || b.x1 < a.x0 || a.y1 < b.y0 || b.y1 < a.y0, `frames ${i} and ${j} overlap`);
+    // Each frame takes the shape of its picture, from tall portraits to wide panoramas.
+    for (const r of [0.5, 0.75, 1, 1.33, 1.78, 2.2]) {
+      let w = 1, h = w / r;
+      if (h > 0.6 * TALL) { h = 0.6 * TALL; w = h * r; }
+      const boxes = FRAMES.map((s) => frameBox(s, g, w, h / 0.6));
+      for (const b of boxes) assert.ok(b.x0 > 0 && b.x1 < g.half, 'inside its half of the screen');
+      for (let i = 0; i < boxes.length; i++) for (let j = i + 1; j < boxes.length; j++) {
+        const a = boxes[i], b = boxes[j];
+        assert.ok(a.x1 < b.x0 || b.x1 < a.x0 || a.y1 < b.y0 || b.y1 < a.y0, `frames ${i} and ${j} overlap at shape ${r}`);
+      }
     }
   }
 });
