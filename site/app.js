@@ -1346,8 +1346,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const yr = writtenOf(L.when(t)), era = label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
-      // Deep time is counted in years ago: the units in sight are spelled out once, under the year.
-      const units = [...new Set([...L.units, (/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean))];
+      // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
+      const units = [(/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean);
       const under = [era, ...units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
       if (under !== L.unitsSaid) {
         L.unitsSaid = under;
