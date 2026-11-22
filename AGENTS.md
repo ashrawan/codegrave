@@ -282,7 +282,8 @@ How the page is put together:
   silences it. The house track was asked for with this file; do not swap it
   without asking.
 - **The panel** is hidden until its button, the "Views" button in the strip
-  or a name is clicked. It never covers the road: on wide screens and
+  or a name is clicked. The "Views" button toggles: pressed again while the
+  views pane is open, it closes the panel. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)
   it is a sheet over the lower half, and the road and the bar move up above
   it. It has three panes: views, the history of one entry, and one era. The
@@ -335,7 +336,10 @@ How the page is put together:
   to a billion), so single years are written where much happens and only
   round ones where little does. It is bounded by what fits on the screen, whatever the
   span; keep it so. There is no year 0; deep time is labelled ka, Ma and
-  Ga. When a few entries start far earlier than the rest, the view opens on
+  Ga. BCE and CE are written only where the era changes (`eraMarked()`):
+  on the BCE year nearest the change and the CE year nearest it; the note
+  in the strip spells out the era of the year in sight, whether playing or
+  scrolling. Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
   the rest and "Show all years" reaches back. Every date on the page goes
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates.
 - **Words.** A person is born and dies; a city is founded; a species goes

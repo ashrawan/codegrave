@@ -150,6 +150,18 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     while (d < 3 && Math.abs(r * 10 ** d - Math.round(r * 10 ** d)) > 1e-9) d++;
     return Number((a / unit).toFixed(d)) + ' ' + name;
   }
+  // Along the road and the bar the era is written only where it changes: on the BCE year nearest the change
+  // and the CE year nearest it (CE only when BCE is also in sight). `ys` are the years written; returns those
+  // that carry their era. Every other year is a bare number, and deep time keeps its unit (ka, Ma, Ga).
+  function eraMarked(ys) {
+    let bce = null, ce = null, before = false;
+    for (const y of ys) {
+      if (y < 0) { before = true; if (y > -1e5 && (bce == null || y > bce)) bce = y; }
+      else if (ce == null || y < ce) ce = y;
+    }
+    return new Set([bce, before ? ce : null].filter((y) => y != null));
+  }
+  const eraText = (y, step, marked) => (y > -1e5 && !marked.has(y) ? (y > 0 ? String(y) : y > -1e4 ? String(-y) : group(-y)) : axisText(y, step, y > 0));
   const AXIS_UNITS = { ka: 'thousand', Ma: 'million', Ga: 'billion' };
   // A year typed by the reader: "1969", "44 BCE", "-44", "500 bc", "66 ma", "4.6 billion years ago".
   function parseYearQuery(q) {
@@ -1118,8 +1130,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
       // The years: a line across the road at each written year, ticks on both edges.
       const fsOf = (s) => (G.phone ? Math.max(9.5, 8 + 13 * s) : Math.max(10, 9 + 25 * s));
-      const ce = writtenOf(L.tMin) < 0 && writtenOf(L.tMax) > 0;
-      for (const tk of ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when })) {
+      const ticks = ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when });
+      const marked = eraMarked(ticks.filter((tk) => tk.label).map((tk) => tk.y));
+      for (const tk of ticks) {
         // A year fades in from the horizon, and out as it slides under the reader's feet.
         const s = tk.s, y = py(s), xl = px(-G.RW, s), xr = px(G.RW, s), a = far(s) * clamp(2.4 - s * 1.5, 0, 1) * clamp((G.SH - y) / (tk.fs * 0.9), 0, 1);
         if (tk.label) { c.strokeStyle = rgba(P.ink, 0.1 * a); c.beginPath(); c.moveTo(xl, y); c.lineTo(xr, y); c.stroke(); }
@@ -1127,7 +1140,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         c.strokeStyle = rgba(P.ink, (tk.label ? 0.75 : 0.42) * a);
         c.beginPath(); c.moveTo(xl, y); c.lineTo(xl - len, y); c.moveTo(xr, y); c.lineTo(xr + len, y); c.stroke();
         if (!tk.label) continue;
-        const text = axisText(tk.y, tk.step, ce), x = xr + len + (G.phone ? 4 : 7), room = G.SW - x - 3;
+        const text = eraText(tk.y, tk.step, marked), x = xr + len + (G.phone ? 4 : 7), room = G.SW - x - 3;
         let fs = tk.fs;
         font(500, fs);
         const tw = c.measureText(text).width;
@@ -1294,13 +1307,15 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // are written where there is room (yearMarks in road.js), BCE marked, and deep time in thousands,
   // millions or billions of years.
   function barTicks() {
-    const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9), ce = yMin < 0 && yMax > 0;    // both eras on the bar: say which is which
+    const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9);
     const atNow = L.tMax >= NOW - 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
-    const text = (k) => esc(axisText(k.y, k.step, ce)).replace(/ (BCE|CE|ka|Ma|Ga)$/, ' <small>$1</small>');
+    const marks = yearMarks(yMin, yMax, (y) => barY(L.place(lineYear(y))), () => gap, 7);
+    const marked = eraMarked(marks.filter((k) => k.label && !(atNow && Math.abs(k.p - yEnd) < 22)).map((k) => k.y));
+    const text = (k) => esc(eraText(k.y, k.step, marked)).replace(/ (BCE|CE|ka|Ma|Ga)$/, ' <small>$1</small>');
     const used = new Set();
     let html = '';
-    for (const k of yearMarks(yMin, yMax, (y) => barY(L.place(lineYear(y))), () => gap, 7)) {
+    for (const k of marks) {
       const y = k.p.toFixed(1);
       if (!k.label) html += `<i class="tk" style="top:${y}px"></i>`;
       else if (atNow && Math.abs(k.p - yEnd) < 22) html += `<i class="tk big" style="top:${y}px"></i>`;
@@ -1322,7 +1337,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       road.said = label;
       $('road-year').textContent = label;
       // What the era of the year in sight stands for, in the strip at the bottom.
-      const era = /\bBCE$/.test(label) ? '<b>BCE</b> Before the Common Era' : /\bCE$/.test(label) ? '<b>CE</b> Common Era' : '';
+      const yr = writtenOf(L.when(t)), era = yr <= -1e5 ? '' : yr < 0 ? '<b>BCE</b> Before the Common Era' : '<b>CE</b> Common Era';
       if ($('era-key').innerHTML !== era) $('era-key').innerHTML = era;
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
@@ -2289,7 +2304,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.views.forEach((id, i) => state.colors.set(id, next[i]));
       changed();
     });
-    $('views-btn').addEventListener('click', () => { showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
+    $('views-btn').addEventListener('click', () => {
+      if (!$('side').hidden && !$('p-views').hidden) return showSide(false);    // a second press closes it
+      showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
     $('pills').addEventListener('scroll', pillEdges, { passive: true });
     $('pills').addEventListener('click', (e) => {
       const dot = e.target.closest('[data-colour]');
