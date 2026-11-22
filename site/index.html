@@ -14,11 +14,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
-// Set the theme before first paint so the page never flashes the wrong one. Light unless the visitor chose dark.
+// Set the theme before first paint so the page never flashes the wrong one. Dark unless the visitor chose light.
 (function () {
   var t = null;
   try { t = localStorage.getItem('cg-theme'); } catch (e) {}
-  if (t !== 'dark' && t !== 'light') t = 'light';
+  if (t !== 'dark' && t !== 'light') t = 'dark';
   document.documentElement.dataset.theme = t;
 })();
 </script>
@@ -48,6 +48,7 @@
 <main id="stage">
   <!-- The timeline in depth: the ground on a canvas, the year and the views at the top left, the names standing on the road -->
   <div id="road" aria-label="Timeline">
+    <div id="wall" aria-hidden="true"></div>
     <canvas id="road-cv" aria-hidden="true"></canvas>
     <div id="road-head"><div id="road-year" aria-hidden="true"></div><p id="road-unit" class="fine" hidden></p><div id="road-views"></div></div>
     <div id="road-labels"></div>

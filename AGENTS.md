@@ -44,6 +44,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | Labels | `data/labels.json` | |
 | An old address that must keep working | `data/redirects.json` | |
 | An icon or image | `data/media/`, then name it on the entry or event | `site/data/media/` (generated) |
+| The pictures and films on the walls beside the road, era by era | `data/wall.json` (`docs/WALL.md`) | |
 | How ranking works | `site/rank.js`, then `tests/rank.test.mjs` and `docs/DATA_RULES.md` | |
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
@@ -199,6 +200,19 @@ How the page is put together:
   thing. A card that leaves fades where it stands. This was asked for in so
   many words ("think like opening scroll"), so do not bring back a slide or
   a pop.
+- **The look.** Dark by default, like a museum at night: a sky of stars,
+  glass cards with a lit edge, the road lit warm from the left and cool from
+  the right. Light stays as a softer gallery (`cg-theme`).
+- **The media wall** (`site/wall.js`, `docs/WALL.md`). Either side of the
+  road stands a wall of points that flows past as the reader travels, with
+  six frames floating in front of each (two on a phone) that show the
+  pictures and films of the era in front of the reader, from
+  `data/wall.json` by way of `boot.json`. Crossing into another era fades
+  the frames one after another and eases the light of the walls and the
+  road's edges to the era's `tone`. `roadFrame()` calls `wall.frame()` once
+  a frame; the wall knows nothing about entries or views. Films play muted
+  and only for the era in sight; less motion shows posters. Keep it behind
+  the road (`#wall`, under `#road-cv`) and keep the frames few.
 - **The front card** is selected by itself: the nearest card in front of
   the reader (`road.focus`) has its line drawn in its view's colour and its
   events written along it, like the open and the hovered entry

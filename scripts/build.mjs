@@ -151,6 +151,42 @@ const kindsUnder = (domainId) => categories.filter((c) => lineage(c.domain).some
 
 // Labels say what an entry or a view is about. One shared list, so the same idea is always spelled the same way.
 const labelFile = readJson(join(dataDir, 'labels.json')) || {};
+// The media wall beside the road (docs/WALL.md): eras in order, each with free-licence pictures and films.
+const wall = existsSync(join(dataDir, 'wall.json')) ? (readJson(join(dataDir, 'wall.json')) || { eras: [] }) : { eras: [] };
+{
+  const at = 'data/wall.json', HEX = /^#[0-9a-f]{6}$/i;
+  const FILM = /^https:\/\/upload\.wikimedia\.org\/wikipedia\/commons\/transcoded\/[^\s"'<>]+\.webm$/;
+  if (!Array.isArray(wall.eras)) err(at, '"eras" must be a list');
+  const seen = new Set();
+  let last = -Infinity;
+  for (const [i, e] of (wall.eras || []).entries()) {
+    const w = `${at} era ${e.id || i + 1}`;
+    if (!ID.test(e.id || '') || seen.has(e.id)) err(w, 'needs a unique id');
+    seen.add(e.id);
+    if (!e.name) err(w, 'needs a "name"');
+    if (!Number.isInteger(e.from) || !Number.isInteger(e.to) || e.from >= e.to) err(w, '"from" and "to" must be written years, from before to');
+    else { if (e.from < last) err(w, 'eras must be in order and must not overlap'); last = e.to; }
+    if (!e.tone || !HEX.test(e.tone.warm || '') || !HEX.test(e.tone.cool || '')) err(w, '"tone" needs "warm" and "cool" colours like "#e3b25f"');
+    if (!Array.isArray(e.media)) { err(w, '"media" must be a list'); continue; }
+    for (const [k, m] of e.media.entries()) {
+      const mw = `${w} media ${k + 1}`;
+      if (m.type === 'video') {
+        if (!FILM.test(m.src || '')) err(mw, 'a film\'s "src" must be a .webm transcode on upload.wikimedia.org/wikipedia/commons/transcoded/');
+        if (!REMOTE_MEDIA.test(m.poster || '')) err(mw, 'a film needs a "poster" picture from upload.wikimedia.org');
+        for (const t of ['start', 'end']) if (m[t] != null && !(typeof m[t] === 'number' && m[t] >= 0)) err(mw, `"${t}" must be a number of seconds`);
+        if (m.start != null && m.end != null && m.end <= m.start) err(mw, '"end" must come after "start"');
+      } else if (m.type === 'image') {
+        if (!REMOTE_MEDIA.test(m.src || '') && !(/^[a-z0-9][a-z0-9/._-]*\.(png|jpg|jpeg|webp)$/.test(m.src || '') && existsSync(join(mediaDir, m.src || '')))) err(mw, '"src" must be an upload.wikimedia.org url or a file under data/media/');
+      } else err(mw, '"type" must be "image" or "video"');
+      if (!m.alt) err(mw, 'needs an "alt" text');
+      if (!m.credit) err(mw, 'needs a "credit"');
+      if (!m.licence) err(mw, 'needs a "licence"');
+      if (!/^https:\/\//.test(m.source || '')) err(mw, 'needs an https "source"');
+      if (m.side != null && m.side !== 'left' && m.side !== 'right') err(mw, '"side" must be "left" or "right"');
+      for (const key of Object.keys(m)) if (!['type', 'src', 'poster', 'alt', 'credit', 'licence', 'source', 'start', 'end', 'side'].includes(key)) err(mw, `unknown field "${key}"`);
+    }
+  }
+}
 const labelList = [...(labelFile.subject || []), ...(labelFile.theme || [])];
 const labelIds = new Set(labelList.map((l) => l.id));
 if (labelIds.size !== labelList.length) err('data/labels.json', 'duplicate label id');
@@ -660,6 +696,7 @@ if (!process.argv.includes('--check')) {
     top: entryLines.slice(0, 12).map((l) => [l[0], l[1], l[2]]),
     detail: { chars },
     search: split ? { mode: 'prefix' } : { mode: 'all' },
+    wall: wall.eras,
   });
 
   if (existsSync(mediaDir)) cpSync(mediaDir, join(outDir, 'media'), { recursive: true });

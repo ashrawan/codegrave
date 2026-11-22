@@ -1,22 +1,27 @@
 /* codegrave. Lines are neutral; colour is kept for view names and the selected line. */
 :root {
-  --bg: #0e0f12; --surf: #16181d; --raised: #22252c; --ph: #1c1f25;
-  --text: #f1efe9; --muted: #c4c6cd; --faint: #a3a6af;
-  --rule: rgba(255, 255, 255, .12); --rule2: rgba(255, 255, 255, .38);
-  --band-hot: rgba(214, 196, 140, .15); --bandtext: #cdbf8f;
-  --line: #e2e0d9; --acc: #f0cf6a;
-  --p0: #9fb2d8; --p1: #d9b27a; --p2: #dc9ab3; --p3: #8fcdb2; --p4: #bba6e3; --p5: #cfc489; --p6: #93c7d9; --p7: #e3a08c;
+  /* dark: a museum at night. Deep blue-black, warm amber and cool blue light, glass over it */
+  --bg: #070a10; --surf: #0d121b; --raised: #1a2232; --ph: #141b28;
+  --text: #ece7dc; --muted: #bcc2cf; --faint: #8f97a8;
+  --rule: rgba(190, 210, 255, .10); --rule2: rgba(200, 215, 255, .26);
+  --band-hot: rgba(231, 180, 90, .16); --bandtext: #e2bf7c;
+  --line: #d9deea; --acc: #e7b45a; --cool: #78a9f0;
+  --p0: #e3b25f; --p1: #7fb0f5; --p2: #dc9ab3; --p3: #8fcdb2; --p4: #bba6e3; --p5: #cfc489; --p6: #93c7d9; --p7: #e3a08c;
+  --glass: rgba(16, 22, 34, .52); --glass-hi: rgba(255, 255, 255, .07); --glass-edge: rgba(210, 225, 255, .22);
+  --chrome: rgba(7, 10, 16, .72);
   --serif: 'Instrument Serif', Georgia, serif;
   --side: 380px;
   color-scheme: dark;
 }
 :root[data-theme="light"] {
-  --bg: #faf8f3; --surf: #f1eee5; --raised: #e5e1d4; --ph: #e9e5d9;
+  --bg: #f6f3ec; --surf: #efebe1; --raised: #e3ddcd; --ph: #e9e5d9;
   --text: #121211; --muted: #3f3f3a; --faint: #55554e;
-  --rule: rgba(0, 0, 0, .14); --rule2: rgba(0, 0, 0, .5);
+  --rule: rgba(0, 0, 0, .12); --rule2: rgba(0, 0, 0, .4);
   --band-hot: rgba(120, 95, 20, .16); --bandtext: #66520f;
-  --line: #1c1c1a; --acc: #9a6c00;
-  --p0: #2c58a6; --p1: #a5621a; --p2: #a23b67; --p3: #1f7a5c; --p4: #6a4aa8; --p5: #7a6a1c; --p6: #1f7187; --p7: #a2492f;
+  --line: #1c1c1a; --acc: #9a6c00; --cool: #2c58a6;
+  --p0: #a5621a; --p1: #2c58a6; --p2: #a23b67; --p3: #1f7a5c; --p4: #6a4aa8; --p5: #7a6a1c; --p6: #1f7187; --p7: #a2492f;
+  --glass: rgba(255, 253, 247, .72); --glass-hi: rgba(255, 255, 255, .5); --glass-edge: rgba(0, 0, 0, .16);
+  --chrome: rgba(246, 243, 236, .82);
   color-scheme: light;
 }
 * { box-sizing: border-box; }
@@ -427,3 +432,62 @@ small > .ctag, small .ctag { margin-left: 0; }
   .rv:has(.rch[hidden]) { display: none; }
   .rch { font-size: 11.5px; line-height: 1.25; color: var(--muted); }
 }
+
+/* ---- the dark revamp: a museum at night. The page's chrome is glass over the scene. */
+.top { background: var(--chrome); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
+.tsearch { background: rgba(255, 255, 255, .04); border-color: var(--rule2); }
+[data-theme="light"] .tsearch { background: rgba(0, 0, 0, .03); }
+#dock { background: var(--chrome); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
+#axisbar { background: var(--chrome); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); border-left-color: var(--rule); }
+/* the bar of years: thin lit ticks, an amber marker and a round amber play button */
+#axis-win { background: linear-gradient(to bottom, color-mix(in srgb, var(--acc) 14%, transparent), color-mix(in srgb, var(--cool) 10%, transparent)); opacity: 1; border-left: 2px solid color-mix(in srgb, var(--acc) 55%, transparent); }
+#playhead i { background: var(--acc); box-shadow: 0 0 0 2px var(--bg), 0 0 12px color-mix(in srgb, var(--acc) 60%, transparent); }
+#playhead span { color: #17120a; background: var(--acc); box-shadow: 0 0 14px color-mix(in srgb, var(--acc) 45%, transparent); }
+[data-theme="light"] #playhead span { color: #fff; }
+#play.abtn.solid { color: #17120a; background: var(--acc); border-color: var(--acc); box-shadow: 0 0 18px color-mix(in srgb, var(--acc) 45%, transparent); }
+[data-theme="light"] #play.abtn.solid { color: #fff; }
+.abtn { background: rgba(255, 255, 255, .03); }
+#ticks .yr.now { color: var(--acc); }
+/* the head: the year large, the view and its chapter under a hairline */
+#road-year { text-shadow: 0 0 30px rgba(120, 150, 220, .25); }
+[data-theme="light"] #road-year { text-shadow: none; }
+.rv { border-top: 1px solid color-mix(in srgb, var(--c) 70%, transparent); }
+.rch { color: var(--muted); }
+/* the cards are glass: the scene shows through, blurred, with a lit edge */
+.rc { background: var(--glass); border-color: var(--glass-edge); }
+.rc.full, .rc.end.near { background: linear-gradient(180deg, var(--glass-hi), transparent 42%), var(--glass); -webkit-backdrop-filter: blur(12px) saturate(1.25); backdrop-filter: blur(12px) saturate(1.25); border-radius: 6px; }
+.rc.full.hot { box-shadow: 0 0 0 1px var(--c), 0 0 28px color-mix(in srgb, var(--c) 30%, transparent), var(--card-sh); }
+.rc.compact { background: linear-gradient(180deg, var(--glass-hi), transparent 60%), var(--glass); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.rc.end { background: var(--glass); }
+.rc.end.small { -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.tile { background: rgba(255, 255, 255, .04); }
+[data-theme="light"] .tile { background: var(--bg); }
+.rc.tag { text-shadow: 0 0 4px var(--bg), 0 0 8px var(--bg); }
+
+/* ---- the media wall: the sky, the walls of points, and the frames floating in front of them */
+#wall { position: absolute; inset: 0; z-index: 0; pointer-events: none; --wall-warm: #e3b25f; --wall-cool: #78a9f0; }
+#wall canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#road-cv { z-index: 1; pointer-events: none; }
+#road-labels { position: relative; z-index: 2; }
+.w-scene { position: absolute; inset: 0; overflow: hidden; }
+.w-o { position: absolute; width: 0; height: 0; transform-style: preserve-3d; }
+.wf { position: absolute; left: 0; top: 0; display: block; overflow: hidden; border-radius: 5px; pointer-events: auto; cursor: pointer;
+  background: rgba(12, 18, 30, .35); border: 1px solid rgba(210, 225, 255, .28);
+  box-shadow: 0 0 34px -4px color-mix(in srgb, var(--wf-c) 45%, transparent), 0 18px 40px rgba(0, 0, 0, .5);
+  transition: opacity 1.2s ease, border-color .3s; backface-visibility: hidden; --wf-c: var(--wall-warm); }
+.wf:nth-child(n+7) { --wf-c: var(--wall-cool); }
+.wf.empty, .wf.off { opacity: 0; pointer-events: none; }
+.wf:hover { border-color: color-mix(in srgb, var(--wf-c) 80%, white); }
+.wm { position: absolute; inset: 0; opacity: 0; transform: scale(1.04); transition: opacity 1.2s ease, transform 2.4s ease; transition-delay: calc(var(--k, 0) * 110ms); }
+.wm.on { opacity: 1; transform: none; }
+.wm.broken { display: none; }
+.wm img, .wm video { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; filter: saturate(.72) contrast(1.06) brightness(.82); }
+/* the light of the era over each picture, and a sheen of glass */
+.wf::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .14), transparent 38%), linear-gradient(to top, color-mix(in srgb, var(--wf-c) 22%, transparent), transparent 55%); }
+.wf.video::before { content: ''; position: absolute; z-index: 2; right: 7px; bottom: 7px; width: 7px; height: 7px; border-radius: 50%; background: #ff5a4a; box-shadow: 0 0 8px #ff5a4a; opacity: .85; }
+#wall.light .wf { background: rgba(255, 255, 255, .5); border-color: rgba(0, 0, 0, .14); box-shadow: 0 14px 30px rgba(40, 30, 10, .16); }
+#wall.light .wm img, #wall.light .wm video { filter: saturate(.6) sepia(.15) contrast(1.02); }
+#road.short .wf { opacity: 0; }
+/* the head reads clearly where a frame floats behind it */
+#road-head { text-shadow: 0 1px 2px var(--bg), 0 0 12px var(--bg); }

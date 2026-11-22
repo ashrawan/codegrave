@@ -7,6 +7,7 @@
    with rank.js, file keys come from keys.js. */
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf } from './keys.js';
+import { createWall } from './wall.js';
 import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, dwellFor, turnPace } from './road.js';
 
 (() => {
@@ -205,8 +206,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     return name.slice(0, 2);
   }
 
+  let wall = null;       // the media wall either side of the road (wall.js), fed by the eras in boot.json
   function useBoot(b) {
     boot = b;
+    wall = createWall($('wall'), { eras: b.wall || [] });
     cats = b.categories || [];
     cats.forEach((c, i) => { c.i = i; });
     catById = new Map(cats.map((c) => [c.id, c]));
@@ -712,6 +715,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('road-views').innerHTML = ''; $('road-year').textContent = '';
     const cv = $('road-cv');
     cv.getContext('2d').clearRect(0, 0, cv.width, cv.height);
+    if (wall) wall.clear();
   }
   // Where a view begins on the road: its first start, or its first chapter when that opens a little
   // before it. A chapter that opens long before anything happens does not make the road open on empty years.
@@ -813,7 +817,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     }
     const speed = dt > 0 && road.prev != null ? Math.abs(road.t - road.prev) / dt : 0;
     road.prev = road.t;
-    const busy = roadDraw(dt, speed, now);
+    let busy = roadDraw(dt, speed, now);
+    // The media wall either side of the road follows the reader: the era in front of them, and the distance travelled.
+    if (wall && wall.frame({ year: writtenOf(L.when(road.t + camDir() * 0.2 * L.D)), travel: camDir() * road.t / L.D, G: L.G, dark: roadPalette().dark, dt })) busy = true;
     if (moving || busy || now < road.until) roadKick();
   }
 
@@ -1039,7 +1045,21 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const haze = (col, a) => { const g = c.createLinearGradient(0, hazeY, 0, G.vy + gh * 0.3); g.addColorStop(0, rgba(col, 0)); g.addColorStop(1, rgba(col, a)); return g; };
     const quad = (x0, x1, sa, sb) => { c.beginPath(); c.moveTo(px(x0, sa), py(sa)); c.lineTo(px(x1, sa), py(sa)); c.lineTo(px(x1, sb), py(sb)); c.lineTo(px(x0, sb), py(sb)); c.closePath(); };
     if (L.lanes.length) {
-      quad(-G.RW, G.RW, sTop, sB); c.fillStyle = haze(P.surf, 1); c.fill();
+      quad(-G.RW, G.RW, sTop, sB); c.fillStyle = haze(P.surf, P.dark ? 0.82 : 1); c.fill();
+      // In the dark the road is glass lit from both sides, the era's warm light on the left and its cool light on the right,
+      // with faint lines running along it.
+      const lit = wall ? wall.light() : null;
+      if (P.dark && lit) {
+        const yb = py(sB), side = c.createLinearGradient(px(-G.RW, sB), yb, px(G.RW, sB), yb);
+        side.addColorStop(0, rgba(lit.warm, 0.13)); side.addColorStop(0.5, rgba(lit.warm, 0)); side.addColorStop(0.5, rgba(lit.cool, 0)); side.addColorStop(1, rgba(lit.cool, 0.13));
+        quad(-G.RW, G.RW, sTop, sB); c.fillStyle = side; c.fill();
+        c.lineWidth = 1;
+        for (let k = -5; k <= 5; k++) {
+          const xn = (G.RW * k) / 6, g = c.createLinearGradient(0, py(sTop), 0, py(sB));
+          g.addColorStop(0, rgba(P.ink, 0)); g.addColorStop(1, rgba(k < 0 ? lit.warm : k > 0 ? lit.cool : P.ink, 0.07));
+          c.strokeStyle = g; c.beginPath(); c.moveTo(px(xn, sTop), py(sTop)); c.lineTo(px(xn, sB), py(sB)); c.stroke();
+        }
+      }
       if (L.lanes.length > 1) for (const ln of L.lanes) { quad(ln.x0, ln.x1, sTop, sB); c.fillStyle = haze(P.p[ln.col], P.dark ? 0.07 : 0.055); c.fill(); }
       c.lineWidth = 1;
 
@@ -1089,7 +1109,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         c.beginPath(); c.moveTo(px(xn, sTop), py(sTop)); c.lineTo(px(xn, sB), py(sB)); c.stroke();
         c.setLineDash([]);
       };
-      edge(-G.RW); edge(G.RW);
+      if (P.dark && lit) {
+        // The edges glow in the light of their side.
+        c.save(); c.lineWidth = 1.4;
+        for (const [xn, col] of [[-G.RW, lit.warm], [G.RW, lit.cool]]) {
+          const g = c.createLinearGradient(0, py(sTop), 0, py(sB));
+          g.addColorStop(0, rgba(col, 0.1)); g.addColorStop(0.5, rgba(col, 0.6)); g.addColorStop(1, rgba(col, 0.85));
+          c.shadowColor = rgba(col, 0.9); c.shadowBlur = 10; c.strokeStyle = g;
+          c.beginPath(); c.moveTo(px(xn, sTop), py(sTop)); c.lineTo(px(xn, sB), py(sB)); c.stroke();
+        }
+        c.restore();
+      } else { edge(-G.RW); edge(G.RW); }
       for (let i = 1; i < L.lanes.length; i++) edge(L.lanes[i].x0, [5, 6]);
 
       // A view's chapters: a line across its lane where each begins, named in the view's colour.
