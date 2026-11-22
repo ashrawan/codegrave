@@ -1,0 +1,53 @@
+{
+  "id": "north-west-rebellion",
+  "category": "wars",
+  "names": [
+    {
+      "name": "North-West Rebellion",
+      "from": "1885"
+    }
+  ],
+  "summary": "A rising of Métis and First Nations people in what is now Saskatchewan, led by Louis Riel. Troops sent west on the new railway put it down within weeks.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Battle_of_Batoche_Print_by_Seargent_Grundy.jpg/500px-Battle_of_Batoche_Print_by_Seargent_Grundy.jpg",
+    "alt": "Battle of Batoche Print by Seargent Grundy",
+    "credit": "Seargent Grundy",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Battle_of_Batoche_Print_by_Seargent_Grundy.jpg"
+  },
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1885-03-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1885-06-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: North-West Rebellion",
+      "url": "https://en.wikipedia.org/wiki/North-West_Rebellion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

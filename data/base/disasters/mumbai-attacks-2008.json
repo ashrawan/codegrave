@@ -1,0 +1,50 @@
+{
+  "id": "mumbai-attacks-2008",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "2008 Mumbai attacks",
+      "from": "2008"
+    }
+  ],
+  "summary": "Coordinated shootings and bombings by gunmen from Pakistan at a railway station, hotels and other places in Mumbai, which killed more than 160 people over four days.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/2008_Mumbai_terror_attacks_Taj_dome_burned_2.jpg/500px-2008_Mumbai_terror_attacks_Taj_dome_burned_2.jpg",
+    "alt": "2008 Mumbai terror attacks Taj dome burned 2",
+    "credit": "Nicholas (Nichalp)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2008_Mumbai_terror_attacks_Taj_dome_burned_2.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-11-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2008-11-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2008 Mumbai attacks",
+      "url": "https://en.wikipedia.org/wiki/2008_Mumbai_attacks",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

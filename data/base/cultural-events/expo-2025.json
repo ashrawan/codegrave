@@ -1,0 +1,43 @@
+{
+  "id": "expo-2025",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Expo 2025",
+      "from": "2025"
+    }
+  ],
+  "summary": "A world's fair on an artificial island in Osaka Bay, built around a great ring of wood.",
+  "events": [
+    {
+      "type": "born",
+      "date": "2025-04-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-10-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Expo 2025",
+      "url": "https://en.wikipedia.org/wiki/Expo_2025",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

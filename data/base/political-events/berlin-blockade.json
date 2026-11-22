@@ -8,6 +8,13 @@
     }
   ],
   "summary": "The Soviet Union closed road and rail routes to West Berlin, and the Western Allies supplied the city by air for almost a year. The crisis helped lead to the founding of NATO.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/92/C-54_landing_at_Tempelhof.jpg",
+    "alt": "C-54 landing at Tempelhof",
+    "credit": "Henry Ries / USAF",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:C-54_landing_at_Tempelhof.jpg"
+  },
   "labels": [
     "politics"
   ],
@@ -48,5 +55,25 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/ae/Berlin_Airlift_40th_Anniversary_Airforce_Now_1983.webm/Berlin_Airlift_40th_Anniversary_Airforce_Now_1983.webm.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Berlin_Airlift_40th_Anniversary_Airforce_Now_1983.webm/500px--Berlin_Airlift_40th_Anniversary_Airforce_Now_1983.webm.jpg",
+      "alt": "Berlin Airlift 40th Anniversary Airforce Now 1983",
+      "credit": "USDoD / USAF",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Berlin_Airlift_40th_Anniversary_Airforce_Now_1983.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/32/Berlin_airlift.ogv/Berlin_airlift.ogv.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Berlin_airlift.ogv/330px--Berlin_airlift.ogv.jpg",
+      "alt": "Berlin airlift",
+      "credit": "United Kingdom Government (several agencies)",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Berlin_airlift.ogv"
+    }
+  ]
 }

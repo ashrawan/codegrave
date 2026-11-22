@@ -1,0 +1,54 @@
+{
+  "id": "frederick-banting",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Frederick Banting",
+      "from": "1891"
+    }
+  ],
+  "summary": "Canadian doctor who, with Charles Best in Toronto, discovered insulin and shared the Nobel Prize for it in 1923.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/57/F._G._Banting_1923.jpg",
+    "alt": "F. G. Banting 1923",
+    "credit": "Louis Schmidt",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:F._G._Banting_1923.jpg"
+  },
+  "labels": [
+    "medicine",
+    "nobel-prize"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1891-11-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1941-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Frederick Banting",
+      "url": "https://en.wikipedia.org/wiki/Frederick_Banting",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -30,8 +30,8 @@
   "events": [
     {
       "type": "born",
-      "date": "1967",
-      "precision": "year"
+      "date": "1967-04-23",
+      "precision": "day"
     }
   ],
   "status": "alive",
@@ -53,5 +53,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Soyuz_MS.jpg/500px-Soyuz_MS.jpg",
+    "alt": "Soyuz spacecraft",
+    "credit": "CactiStaccingCrane",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Soyuz_MS.jpg"
+  }
 }

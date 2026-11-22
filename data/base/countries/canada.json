@@ -8,6 +8,13 @@
     }
   ],
   "summary": "The second largest country in the world by area, formed in 1867 as a federation of British colonies. It has two official languages, English and French, and gained full legal independence in stages.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/500px-Flag_of_Canada_%28Pantone%29.svg.png",
+    "alt": "Flag of Canada (Pantone)",
+    "credit": "Original: George F. G. Stanley Modified by: The original uploader was Illegitimate Barrister at Wikimedia Commons. The c",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada_(Pantone).svg"
+  },
   "labels": [
     "independence",
     "politics"
@@ -22,6 +29,13 @@
       "type": "born",
       "date": "1867-07-01",
       "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "1982-04-17",
+      "precision": "day",
+      "label": "Constitution",
+      "note": "The constitution came under Canada's own control."
     }
   ],
   "status": "alive",

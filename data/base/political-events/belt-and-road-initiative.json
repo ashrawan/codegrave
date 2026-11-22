@@ -1,0 +1,49 @@
+{
+  "id": "belt-and-road-initiative",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Belt and Road Initiative",
+      "from": "2013"
+    }
+  ],
+  "summary": "China's plan, announced by Xi Jinping, to fund ports, railways, roads and power plants across Asia, Africa and Europe, making it the largest lender to many poorer countries.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/%22Belt_and_Road%22_economic_corridor_and_its_path_city_topographic_map.jpg/500px-%22Belt_and_Road%22_economic_corridor_and_its_path_city_topographic_map.jpg",
+    "alt": "\"Belt and Road\" economic corridor and its path city topographic map",
+    "credit": "未来智者",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%22Belt_and_Road%22_economic_corridor_and_its_path_city_topographic_map.jpg"
+  },
+  "labels": [
+    "economics",
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-09",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Belt and Road Initiative",
+      "url": "https://en.wikipedia.org/wiki/Belt_and_Road_Initiative",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

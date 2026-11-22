@@ -1,0 +1,122 @@
+{
+  "id": "italy",
+  "name": "Italy",
+  "description": "Italy from the founding of Rome and its empire through the Renaissance and unification to Fascism and the republic.",
+  "category": "places",
+  "tags": [
+    "italy",
+    "rome",
+    "renaissance",
+    "venice",
+    "florence",
+    "garibaldi"
+  ],
+  "entries": [
+    "rome",
+    "roman-republic",
+    "second-punic-war",
+    "julius-caesar",
+    "augustus",
+    "roman-empire",
+    "colosseum",
+    "vesuvius-79",
+    "fall-of-the-western-roman-empire",
+    "venice",
+    "republic-of-venice",
+    "papal-states",
+    "university-of-bologna",
+    "francis-of-assisi",
+    "marco-polo",
+    "dante-alighieri",
+    "divine-comedy",
+    "renaissance",
+    "house-of-medici",
+    "florence-cathedral",
+    "leonardo-da-vinci",
+    "christopher-columbus",
+    "mona-lisa",
+    "michelangelo",
+    "niccolo-machiavelli",
+    "galileo-galilei",
+    "st-peters-basilica",
+    "antonio-vivaldi",
+    "giuseppe-verdi",
+    "giuseppe-garibaldi",
+    "expedition-of-the-thousand",
+    "italian-unification",
+    "italy",
+    "guglielmo-marconi",
+    "march-on-rome",
+    "benito-mussolini",
+    "fascism",
+    "world-war-ii",
+    "enrico-fermi",
+    "treaty-of-rome",
+    "la-dolce-vita",
+    "vespa",
+    "euro",
+    "european-debt-crisis",
+    "morandi-bridge-collapse",
+    "covid-19-pandemic",
+    "giorgia-meloni",
+    "winter-olympics-2026",
+    "thomas-aquinas",
+    "amerigo-vespucci",
+    "raphael",
+    "caravaggio",
+    "alessandro-volta",
+    "giacomo-puccini",
+    "federico-fellini"
+  ],
+  "checkpoints": [
+    {
+      "id": "rome",
+      "name": "Rome",
+      "from": -753,
+      "to": 476,
+      "note": "Rome grew from a small town into a republic, beat Carthage and, under Caesar and Augustus, ruled an empire around the Mediterranean. Vesuvius buried Pompeii in 79, and the western empire fell in 476."
+    },
+    {
+      "id": "cities-and-popes",
+      "name": "Cities and popes",
+      "from": 477,
+      "to": 1349,
+      "note": "Venice grew rich on trade and the popes ruled central Italy. Bologna opened the oldest university, Francis of Assisi founded his order, Marco Polo went to China and Dante wrote the Divine Comedy."
+    },
+    {
+      "id": "the-renaissance",
+      "name": "The Renaissance",
+      "from": 1350,
+      "to": 1599,
+      "note": "Florence under the Medici led a rebirth of art and learning. Leonardo painted the Mona Lisa, Michelangelo the Sistine ceiling, and Machiavelli wrote on power."
+    },
+    {
+      "id": "science-music-and-unity",
+      "name": "Science, music and unity",
+      "from": 1600,
+      "to": 1920,
+      "note": "Galileo turned his telescope to the sky, Vivaldi and Verdi wrote music, and Garibaldi's Thousand helped unite Italy as a kingdom in 1861."
+    },
+    {
+      "id": "fascism-and-the-republic",
+      "name": "Fascism and the republic",
+      "from": 1921,
+      "to": 2026,
+      "note": "Mussolini marched on Rome in 1922 and took Italy into the Second World War. A republic followed, which helped found the European Community. In this century Italy took up the euro, was hit early by COVID-19, chose Meloni and hosted the Winter Olympics of 2026."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Flag_of_Italy.svg/330px-Flag_of_Italy.svg.png",
+    "alt": "Flag of Italy",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Italy.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/47/Canto_degli_Italiani_-_Marina_Militare_%28strumentale%29.wav/Canto_degli_Italiani_-_Marina_Militare_%28strumentale%29.wav.mp3",
+    "title": "Il Canto degli Italiani",
+    "credit": "Band of the Italian Navy (Marina Militare)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Canto_degli_Italiani_-_Marina_Militare_(strumentale).wav"
+  }
+}

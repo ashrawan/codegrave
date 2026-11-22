@@ -1,0 +1,53 @@
+{
+  "id": "winter-olympics-2026",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2026 Winter Olympics",
+      "from": "2026"
+    }
+  ],
+  "summary": "The Winter Games shared by Milan and Cortina d'Ampezzo, the first Olympics officially held by two cities.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/2026_Winter_Olympics_logo.svg/500px-2026_Winter_Olympics_logo.svg.png",
+    "alt": "2026 Winter Olympics logo",
+    "credit": "Fondazione Milano-Cortina 2026 (FMC26 (Milano-Cortina 2026))",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:2026_Winter_Olympics_logo.svg"
+  },
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2026-02-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2026-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2026 Winter Olympics",
+      "url": "https://en.wikipedia.org/wiki/2026_Winter_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

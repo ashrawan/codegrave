@@ -1,0 +1,50 @@
+{
+  "id": "nepal-earthquake-2015",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Nepal earthquake",
+      "from": "2015"
+    }
+  ],
+  "summary": "A great earthquake centred in Gorkha district that killed nearly nine thousand people, destroyed old temples in the Kathmandu Valley and set off a deadly avalanche on Everest.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/2015_Nepal_depremi_%287%29.jpg/500px-2015_Nepal_depremi_%287%29.jpg",
+    "alt": "2015 Nepal depremi (7)",
+    "credit": "Hilmi Hacaloğlu",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:2015_Nepal_depremi_(7).jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-04-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2015-04-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: April 2015 Nepal earthquake",
+      "url": "https://en.wikipedia.org/wiki/April_2015_Nepal_earthquake",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

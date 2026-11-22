@@ -25,8 +25,8 @@
     },
     {
       "type": "ended",
-      "date": "1966",
-      "precision": "year"
+      "date": "1966-02-06",
+      "precision": "day"
     }
   ],
   "status": "dead",
@@ -49,5 +49,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Luna_9_Musee_du_Bourget_P1010505.JPG/500px-Luna_9_Musee_du_Bourget_P1010505.JPG",
+    "alt": "Luna 9",
+    "credit": "Pline",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Luna_9_Musee_du_Bourget_P1010505.JPG"
+  }
 }

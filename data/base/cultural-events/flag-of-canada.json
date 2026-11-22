@@ -1,0 +1,45 @@
+{
+  "id": "flag-of-canada",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Maple Leaf flag",
+      "from": "1965"
+    }
+  ],
+  "summary": "The red and white flag with a red maple leaf, raised for the first time on Parliament Hill in 1965 after a long debate, in place of a flag with the British Union Jack.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/500px-Flag_of_Canada_%28Pantone%29.svg.png",
+    "alt": "Flag of Canada (Pantone)",
+    "credit": "Original: George F. G. Stanley Modified by: The original uploader was Illegitimate Barrister at Wikimedia Commons. The c",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Canada_(Pantone).svg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-02-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Flag of Canada",
+      "url": "https://en.wikipedia.org/wiki/Flag_of_Canada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

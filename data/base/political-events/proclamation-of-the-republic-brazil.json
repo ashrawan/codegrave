@@ -1,0 +1,53 @@
+{
+  "id": "proclamation-of-the-republic-brazil",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Proclamation of the Republic",
+      "from": "1889"
+    }
+  ],
+  "summary": "A military coup led by Marshal Deodoro da Fonseca that ended the Brazilian monarchy and sent Emperor Pedro II into exile.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_by_Benedito_Calixto_1893.jpg/500px-Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_by_Benedito_Calixto_1893.jpg",
+    "alt": "Proclamação da República by Benedito Calixto 1893",
+    "credit": "Benedito Calixto",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Proclama%C3%A7%C3%A3o_da_Rep%C3%BAblica_by_Benedito_Calixto_1893.jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-11-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1889-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Proclamation of the Republic (Brazil)",
+      "url": "https://en.wikipedia.org/wiki/Proclamation_of_the_Republic_(Brazil)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

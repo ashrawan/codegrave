@@ -8,6 +8,13 @@
     }
   ],
   "summary": "Queen of the United Kingdom for over sixty-three years and Empress of India. Her reign saw rapid industrial change and the growth of the British Empire, and an age is named after her.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Queen_Victoria_by_Bassano.jpg/500px-Queen_Victoria_by_Bassano.jpg",
+    "alt": "Queen Victoria by Bassano",
+    "credit": "Alexander Bassano",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Queen_Victoria_by_Bassano.jpg"
+  },
   "labels": [
     "politics"
   ],
@@ -62,5 +69,16 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7c/Queen_Victoria_In_Dublin_%28Rare_archive_footage_from_1900%29.webm/Queen_Victoria_In_Dublin_%28Rare_archive_footage_from_1900%29.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Queen_Victoria_In_Dublin_%28Rare_archive_footage_from_1900%29.webm/500px--Queen_Victoria_In_Dublin_%28Rare_archive_footage_from_1900%29.webm.jpg",
+      "alt": "Queen Victoria In Dublin (Rare archive footage from 1900)",
+      "credit": "British Pathé",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Queen_Victoria_In_Dublin_(Rare_archive_footage_from_1900).webm"
+    }
+  ]
 }

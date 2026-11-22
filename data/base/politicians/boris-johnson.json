@@ -1,0 +1,48 @@
+{
+  "id": "boris-johnson",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Boris Johnson",
+      "from": "1964"
+    }
+  ],
+  "summary": "Mayor of London and then prime minister from 2019 to 2022, who took the United Kingdom out of the European Union.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Boris_Johnson_official_portrait_%28cropped%29.jpg/500px-Boris_Johnson_official_portrait_%28cropped%29.jpg",
+    "alt": "Boris Johnson official portrait",
+    "credit": "Ben Shread",
+    "licence": "OGL 3",
+    "source": "https://commons.wikimedia.org/wiki/File:Boris_Johnson_official_portrait_(cropped).jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-06-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Boris Johnson",
+      "url": "https://en.wikipedia.org/wiki/Boris_Johnson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

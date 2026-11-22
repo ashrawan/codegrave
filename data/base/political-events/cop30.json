@@ -1,0 +1,53 @@
+{
+  "id": "cop30",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "COP30",
+      "from": "2025"
+    }
+  ],
+  "summary": "The United Nations climate conference held in Belém, at the edge of the Amazon rainforest.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/COP30_Official_Logo.svg/500px-COP30_Official_Logo.svg.png",
+    "alt": "COP30 Official Logo",
+    "credit": "United Nations Framework Convention on Climate Change",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:COP30_Official_Logo.svg"
+  },
+  "labels": [
+    "environment"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2025-11",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2025-11",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2025 United Nations Climate Change Conference",
+      "url": "https://en.wikipedia.org/wiki/2025_United_Nations_Climate_Change_Conference",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

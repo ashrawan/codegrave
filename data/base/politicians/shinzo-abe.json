@@ -1,0 +1,53 @@
+{
+  "id": "shinzo-abe",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Shinzo Abe",
+      "from": "1954"
+    }
+  ],
+  "summary": "The longest-serving prime minister of Japan, in office in 2006-07 and again from 2012 to 2020, whose \"Abenomics\" tried to lift the economy out of deflation. He was shot dead while giving a campaign speech in Nara.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Shinz%C5%8D_Abe_20200101.jpg/500px-Shinz%C5%8D_Abe_20200101.jpg",
+    "alt": "Shinzō Abe 20200101",
+    "credit": "首相官邸",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shinz%C5%8D_Abe_20200101.jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-09-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-07-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Shinzo Abe",
+      "url": "https://en.wikipedia.org/wiki/Shinzo_Abe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

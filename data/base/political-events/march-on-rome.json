@@ -1,0 +1,53 @@
+{
+  "id": "march-on-rome",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "March on Rome",
+      "from": "1922"
+    }
+  ],
+  "summary": "The march of Fascist squads on the capital that led King Victor Emmanuel III to make Benito Mussolini prime minister.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Naples_Fascist_rally_on_24_October_1922_%282%29.jpg/500px-Naples_Fascist_rally_on_24_October_1922_%282%29.jpg",
+    "alt": "Naples Fascist rally on 24 October 1922 (2)",
+    "credit": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Naples_Fascist_rally_on_24_October_1922_(2).jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1922-10",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: March on Rome",
+      "url": "https://en.wikipedia.org/wiki/March_on_Rome",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

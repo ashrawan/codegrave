@@ -1,0 +1,59 @@
+{
+  "id": "brandenburg-gate",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Brandenburg Gate",
+      "from": "1791"
+    }
+  ],
+  "summary": "Neoclassical gateway in Berlin topped by a chariot of victory. It stood beside the Berlin Wall in the Cold War and became a symbol of reunification.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Brandenburger_Tor_abends.jpg/500px-Brandenburger_Tor_abends.jpg",
+    "alt": "Brandenburger Tor abends",
+    "credit": "Thomas Wolf, www.foto-tw.de",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Brandenburger_Tor_abends.jpg"
+  },
+  "labels": [
+    "architecture"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1791",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Brandenburg Gate",
+      "url": "https://en.wikipedia.org/wiki/Brandenburg_Gate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cc/SFP_186_-_Brandenburger_Tor.ogv/SFP_186_-_Brandenburger_Tor.ogv.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/SFP_186_-_Brandenburger_Tor.ogv/500px--SFP_186_-_Brandenburger_Tor.ogv.jpg",
+      "alt": "SFP 186 - Brandenburger Tor",
+      "credit": "Kameramann des Special Film Project 186 der United States Army Air Forces (USAAF)",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:SFP_186_-_Brandenburger_Tor.ogv"
+    }
+  ]
+}

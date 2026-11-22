@@ -8,6 +8,13 @@
     }
   ],
   "summary": "In August 1945 the United States dropped atomic bombs on two Japanese cities, killing about a hundred thousand people at once and many more later. Japan announced its surrender days later.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Atomic_bombing_of_Japan.jpg/500px-Atomic_bombing_of_Japan.jpg",
+    "alt": "Atomic bombing of Japan",
+    "credit": "George R. Caron / Charles Levy",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Atomic_bombing_of_Japan.jpg"
+  },
   "labels": [
     "war",
     "physics"
@@ -57,5 +64,34 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/04/342-usaf-11075_Physical_Damage-Hiroshima.webm/342-usaf-11075_Physical_Damage-Hiroshima.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/342-usaf-11075_Physical_Damage-Hiroshima.webm/500px--342-usaf-11075_Physical_Damage-Hiroshima.webm.jpg",
+      "alt": "342-usaf-11075 Physical Damage-Hiroshima",
+      "credit": "Unknown author",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:342-usaf-11075_Physical_Damage-Hiroshima.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f5/342-usaf-11080_Hiroshima-Blast_Effects.webm/342-usaf-11080_Hiroshima-Blast_Effects.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/342-usaf-11080_Hiroshima-Blast_Effects.webm/500px--342-usaf-11080_Hiroshima-Blast_Effects.webm.jpg",
+      "alt": "342-usaf-11080 Hiroshima-Blast Effects",
+      "credit": "Lieutenant Daniel A. McGovern and Harry Mimura for the United States government",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:342-usaf-11080_Hiroshima-Blast_Effects.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/fa/President_Harry_S._Truman_on_the_Atomic_Bombing_of_Hiroshima_%281945%29.webm/President_Harry_S._Truman_on_the_Atomic_Bombing_of_Hiroshima_%281945%29.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/President_Harry_S._Truman_on_the_Atomic_Bombing_of_Hiroshima_%281945%29.webm/500px--President_Harry_S._Truman_on_the_Atomic_Bombing_of_Hiroshima_%281945%29.webm.jpg",
+      "alt": "President Harry S. Truman on the Atomic Bombing of Hiroshima (1945)",
+      "credit": "Harry S. Truman Presidential Library",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:President_Harry_S._Truman_on_the_Atomic_Bombing_of_Hiroshima_(1945).webm"
+    }
+  ]
 }

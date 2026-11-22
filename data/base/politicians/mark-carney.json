@@ -1,0 +1,55 @@
+{
+  "id": "mark-carney",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Mark Carney",
+      "from": "1965"
+    }
+  ],
+  "summary": "Economist who led the Bank of Canada and the Bank of England, then became prime minister of Canada in March 2025.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Mark_Carney_Argentina_v_Spain_19_July_2026-303_%283x4_close_up_cropped%29.jpg/500px-Mark_Carney_Argentina_v_Spain_19_July_2026-303_%283x4_close_up_cropped%29.jpg",
+    "alt": "Mark Carney Argentina v Spain 19 July 2026-303 (3x4 close up cropped)",
+    "credit": "Bryan Berlin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mark_Carney_Argentina_v_Spain_19_July_2026-303_(3x4_close_up_cropped).jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-03-16",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2025-03-14",
+      "precision": "day",
+      "label": "Prime minister",
+      "note": "Sworn in as prime minister."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mark Carney",
+      "url": "https://en.wikipedia.org/wiki/Mark_Carney",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,46 @@
+{
+  "id": "winter-olympics-2010",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2010 Winter Olympics",
+      "from": "2010"
+    }
+  ],
+  "summary": "The Winter Games in Vancouver and Whistler, where Canada won the most gold medals, among them men's ice hockey.",
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-02-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2010-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2010 Winter Olympics",
+      "url": "https://en.wikipedia.org/wiki/2010_Winter_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

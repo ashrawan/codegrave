@@ -1,0 +1,46 @@
+{
+  "id": "nepalese-revolution-of-1951",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Revolution of 1951",
+      "from": "1950"
+    }
+  ],
+  "summary": "An armed rising led by the Nepali Congress, with the support of King Tribhuvan and India, that ended a hundred years of Rana rule and opened Nepal to the outside world.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-11",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1951-02",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 1951 revolution (Nepal)",
+      "url": "https://en.wikipedia.org/wiki/1951_revolution_(Nepal)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

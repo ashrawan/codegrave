@@ -14,7 +14,7 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 // and `warp` says which moment lies at which place. D is the focal length in
 // those years: something D ahead is drawn at half size.
 export const NEAR = -0.42, GONE = -0.16, FAR = 10.8;   // in focal lengths: the edge of the screen behind the reader, where a name lets go, the horizon
-export const FULL = 0.64, SMALL = 0.3;                  // the size from which a name is a full card, and from which it is a small card
+export const FULL = 0.56, SMALL = 0.3;                  // the size from which a name is a full card, and from which it is a small card
 export const CARD_MIN = 0.7;                            // a full card is never drawn smaller than this, so it can be read from where it first shows
 export const sizeAt = (u, D) => D / (D + u);
 
@@ -127,12 +127,13 @@ export function tracks(items, rest = 0) {
 // The stage: where the horizon and the foot of the road sit in a box SW by SH
 // pixels, how wide the road is at the reader's feet, and how big cards are.
 // On a narrow stage the road sits a little left, so the years have a margin.
-export function stageOf(SW, SH) {
+// `top` is the band at the top that the page's bar may cover: the road stands below it, and so do the names.
+export function stageOf(SW, SH, top = 0) {
   const phone = SW < 700;
-  const vx = phone ? SW * 0.43 : SW / 2, vy = Math.round(SH * (phone ? 0.17 : 0.2)), by = SH - (phone ? 8 : 12);
+  const vx = phone ? SW * 0.43 : SW / 2, vy = top + Math.round((SH - top) * (phone ? 0.17 : 0.2)), by = SH - (phone ? 8 : 12);
   const RW = phone ? SW * 0.385 : Math.min(SW * 0.4, 640);
-  const short = SH < 430, ks = short ? 0.84 : clamp(SH / (phone ? 560 : 620), 0.8, 1);
-  return { SW, SH, phone, vx, vy, by, gh: by - vy, RW, short, ks, FW: phone ? 216 : 288, NW: phone ? 200 : 244 };
+  const short = SH - top < 430, ks = short ? 0.84 : clamp((SH - top) / (phone ? 560 : 620), 0.8, 1);
+  return { SW, SH, top, phone, vx, vy, by, gh: by - vy, RW, short, ks, FW: phone ? 216 : 288, NW: phone ? 200 : 244 };
 }
 
 // How a name is drawn at each size: a start is a full card, a small card or a
@@ -179,7 +180,7 @@ export function openFrom(small, card, g) {
   return { x, y, k, h, ax: clamp(card.gx, x - half + 12 * k, x + half - 12 * k) };
 }
 
-// Which names are shown. `cands` come best first: { key, end, s, gx, gy, m, lean }.
+// Which names are shown. `cands` come best first: { key, end, s, gx, gy, m, lean, closed }.
 // Each takes the biggest form its distance allows that fits. Near cards may
 // overlap a little, as things do in depth; smaller names never touch
 // anything, and one that would is left out. The small ones are capped.
@@ -188,7 +189,7 @@ export function placeLabels(cands, G, caps = {}) {
   const taken = [], out = new Map();
   let small = 0, tags = 0;
   const blocked = (r) => {
-    if (r.y1 < 4 || r.y0 > G.SH) return true;
+    if (r.y1 < (G.top || 0) + 4 || r.y0 > G.SH) return true;
     for (const a of taken) {
       const both = r.big && a.big, m = both ? 0 : 5;
       const ox = Math.min(r.x1, a.x1) - Math.max(r.x0, a.x0) + m, oy = Math.min(r.y1, a.y1) - Math.max(r.y0, a.y0) + m;
@@ -198,10 +199,12 @@ export function placeLabels(cands, G, caps = {}) {
   };
   for (const c of cands) {
     for (const mode of modesOf(c.end, zoneOf(c.s))) {
+      if (c.closed && isBig(mode)) continue;        // a card that has had its turn and closed stays closed
       const isSmall = mode === 'compact' || mode === 'endc';
       if ((isSmall && small >= maxSmall) || (mode === 'tag' && tags >= maxTags)) continue;
       const r = labelRect(mode, c.s, c.gx, c.gy, c.m, G, c.lean);
-      if (blocked(r)) continue;
+      // The card whose turn it is (`lead`) may overlap the others; it only has to be on the stage.
+      if (c.lead && r.big ? r.y1 < (G.top || 0) + 4 || r.y0 > G.SH : blocked(r)) continue;
       taken.push(r); out.set(c.key, r);
       if (mode === 'tag') tags++; else if (isSmall) small++;
       break;
@@ -294,31 +297,27 @@ export function paceFor(cards, within1, within3) {
   return 1 / (1 + 0.42 * Math.max(0, cards));
 }
 
-// Taking turns. Where things begin close together their cards would cover one
-// another, and the one behind would pass without ever being shown. So while
-// play travels, every start is owed a moment as a full card. A card that is up
-// keeps its place for a few seconds (less the more wait behind it); then it
-// gives way to one it was hiding, and those come nearest first, in the order
-// things happened. Play does not stop for them: it slows early, by as much as
-// the cards in front still need, so that each has had its turn by the time
-// the reader reaches it (HOLD_AT focal lengths short of it), and it never
-// travels slower than CRAWL.
-export const DWELL = 2.3, DWELL_BUSY = 1.6, DWELL_CROWD = 1.2, HOLD_AT = 0.03, CRAWL = 0.035;
-export const dwellFor = (waiting) => (waiting > 5 ? DWELL_CROWD : waiting > 2 ? DWELL_BUSY : DWELL);
-// The most play may travel, in focal lengths a second. `owed` are the starts
-// still owed their turn: { ahead (focal lengths), up (its card is up), left
-// (the seconds it still needs) }. Cards that are up spend their time together;
-// those that wait follow one after another, nearest first. With nothing owed
-// there is no limit.
-export function turnPace(owed) {
-  const line = [...owed].sort((a, b) => a.ahead - b.ahead);
-  let together = 0, queue = 0, pace = Infinity;
-  for (const c of line) if (c.up) together = Math.max(together, c.left);
-  for (const c of line) {
-    const need = c.up ? c.left : together + (queue += Math.max(0, c.left));
-    if (need > 0) pace = Math.min(pace, Math.max(0, c.ahead - HOLD_AT) / need);
+// Cards in play. While play travels a start is a full card exactly while it
+// stands in a window ahead of the reader: it opens when it comes within
+// OPEN_AT focal lengths (where a name first becomes a card) and closes when
+// it is CLOSE_AT short of the reader. Distance alone decides, the same in
+// every lane, so cards open in the order things happened and always at the
+// same point. Cards in the window may overlap; the nearer one stands in
+// front, and when it closes the next comes forward. Play slows where starts
+// are close together so that each has at least MIN_FRONT seconds in front
+// of its lane, and never travels slower than CRAWL.
+export const OPEN_AT = 0.5, CLOSE_AT = 0.06, MIN_FRONT = 1.0, HOLD_AT = CLOSE_AT, CRAWL = 0.035;
+export const inWindow = (ahead) => ahead > CLOSE_AT && ahead <= OPEN_AT;
+// The most play may travel, in focal lengths a second. `lanes` holds, for
+// each lane, how far ahead its starts stand (focal lengths). With no starts
+// close together there is no limit.
+export function windowPace(lanes) {
+  let pace = Infinity;
+  for (const ahead of lanes) {
+    const s = ahead.filter((a) => a > CLOSE_AT && a <= OPEN_AT * 1.5).sort((a, b) => a - b);
+    for (let i = 1; i < s.length; i++) pace = Math.min(pace, (s[i] - s[i - 1]) / MIN_FRONT);
   }
-  return Math.max(CRAWL, pace);
+  return pace === Infinity ? pace : Math.max(CRAWL, pace);
 }
 
 // The order in which names are offered a place, lowest first. The open entry

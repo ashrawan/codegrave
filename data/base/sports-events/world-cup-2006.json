@@ -1,0 +1,46 @@
+{
+  "id": "world-cup-2006",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2006 FIFA World Cup",
+      "from": "2006"
+    }
+  ],
+  "summary": "The World Cup held in Germany, remembered for its festive mood. Italy won the final in Berlin on penalties.",
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2006-06-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-07-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2006 FIFA World Cup",
+      "url": "https://en.wikipedia.org/wiki/2006_FIFA_World_Cup",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

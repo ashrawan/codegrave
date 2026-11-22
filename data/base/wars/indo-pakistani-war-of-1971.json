@@ -1,0 +1,54 @@
+{
+  "id": "indo-pakistani-war-of-1971",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Indo-Pakistani War of 1971",
+      "from": "1971"
+    }
+  ],
+  "summary": "A war between India and Pakistan that grew out of the Bangladesh Liberation War and ended with the surrender of Pakistani forces in Dhaka and the independence of Bangladesh.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/1971_Instrument_of_Surrender.jpg/500px-1971_Instrument_of_Surrender.jpg",
+    "alt": "1971 Instrument of Surrender",
+    "credit": "Indian Navy",
+    "licence": "GODL-India",
+    "source": "https://commons.wikimedia.org/wiki/File:1971_Instrument_of_Surrender.jpg"
+  },
+  "labels": [
+    "war",
+    "independence"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-12-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1971-12-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Indo-Pakistani war of 1971",
+      "url": "https://en.wikipedia.org/wiki/Indo-Pakistani_war_of_1971",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

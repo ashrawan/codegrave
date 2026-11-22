@@ -1,0 +1,46 @@
+{
+  "id": "winter-olympics-2022",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2022 Winter Olympics",
+      "from": "2022"
+    }
+  ],
+  "summary": "The Winter Games in Beijing, which made it the first city to host both the Summer and Winter Olympics.",
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-02-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-02-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2022 Winter Olympics",
+      "url": "https://en.wikipedia.org/wiki/2022_Winter_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

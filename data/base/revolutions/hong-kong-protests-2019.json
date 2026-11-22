@@ -1,0 +1,54 @@
+{
+  "id": "hong-kong-protests-2019",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Hong Kong protests",
+      "from": "2019"
+    }
+  ],
+  "summary": "Months of mass protests in Hong Kong, first against a bill allowing extradition to mainland China and then for democracy. They ended after Beijing imposed a national security law in 2020.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Hong_Kong_anti-extradition_bill_protest_%2848108527758%29.jpg/500px-Hong_Kong_anti-extradition_bill_protest_%2848108527758%29.jpg",
+    "alt": "Hong Kong anti-extradition bill protest (48108527758)",
+    "credit": "Studio Incendo",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hong_Kong_anti-extradition_bill_protest_(48108527758).jpg"
+  },
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-06",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "2020",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "china"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2019–2020 Hong Kong protests",
+      "url": "https://en.wikipedia.org/wiki/2019%E2%80%932020_Hong_Kong_protests",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

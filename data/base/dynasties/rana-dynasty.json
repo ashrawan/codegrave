@@ -1,0 +1,46 @@
+{
+  "id": "rana-dynasty",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Rana dynasty",
+      "from": "1846"
+    }
+  ],
+  "summary": "Family of hereditary prime ministers who ruled Nepal for a century while the Shah kings reigned in name only. They kept the country closed to most foreigners until the revolution of 1951.",
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1846-09-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1951",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nepal"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Rana dynasty",
+      "url": "https://en.wikipedia.org/wiki/Rana_dynasty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

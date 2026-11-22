@@ -1,0 +1,53 @@
+{
+  "id": "sino-indian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Sino-Indian War",
+      "from": "1962"
+    }
+  ],
+  "summary": "A short border war in the Himalayas in which China defeated India, then declared a ceasefire and pulled back in the east.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Indian_soldiers_on_patrol_during_the_1962_Sino-Indian_border_war.jpg/500px-Indian_soldiers_on_patrol_during_the_1962_Sino-Indian_border_war.jpg",
+    "alt": "Indian soldiers on patrol during the 1962 Sino-Indian border war",
+    "credit": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Indian_soldiers_on_patrol_during_the_1962_Sino-Indian_border_war.jpg"
+  },
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-10-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-11-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sino-Indian War",
+      "url": "https://en.wikipedia.org/wiki/Sino-Indian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

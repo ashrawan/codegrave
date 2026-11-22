@@ -1,0 +1,47 @@
+{
+  "id": "vichy-france",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Vichy France",
+      "from": "1940"
+    }
+  ],
+  "summary": "The French state led by Marshal Pétain after the defeat of 1940, based in the spa town of Vichy. It worked with the German occupiers, including in the deportation of Jews.",
+  "labels": [
+    "politics",
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-07",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1944-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Vichy France",
+      "url": "https://en.wikipedia.org/wiki/Vichy_France",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

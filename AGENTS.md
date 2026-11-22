@@ -133,7 +133,7 @@ still goes through `render()`.
 How the page is put together:
 
 - **Loading.** `start()` asks for `boot.json` and, at the same time, the
-  views the link names (or the saved "Your view", else `home.json`).
+  views the link names (else `home.json`).
   `loadView()` and `loadEntry()` fetch one file each, once; `ingest()` keeps
   every loaded entry as a single object in `byId`. A view that fails to load
   leaves a note and the page keeps working. An old address is answered by
@@ -155,8 +155,8 @@ How the page is put together:
   The ground (road, lanes, years, lines, starts, ends, chapters) is one
   canvas, `#road-cv`. Names are elements in `#road-labels`: a start is a
   card when near (from size `FULL`, never drawn smaller than `CARD_MIN`), a
-  small card further off, then a bare name; an end is a dashed plate with
-  its cause. `placeLabels()` decides every frame which fit, best first and
+  small card further off, then a bare name; an end is a grey, see-through
+  dashed plate with its cause, quieter than any card (asked for, Nov 2026). `placeLabels()` decides every frame which fit, best first and
   capped, and they fade in and out. Writing on the ground (a chapter's
   name, a year at the edge) steps aside while a name stands over it
   (`covered()`, `soft()`). Wheel, drag and the arrow keys travel
@@ -197,13 +197,15 @@ How the page is put together:
   for how far it has opened, `n.g`; the page cuts the card to that height,
   and what the card holds keeps to its foot, so nothing in it moves). The
   small card goes with it and dissolves into it, so the two read as one
-  thing. A card that leaves fades where it stands. This was asked for in so
+  thing. A card that closes while its small card is on the stage rolls back
+  down into it the same way (`n.roll`, asked for in Nov 2026); a card that
+  leaves the stage fades where it stands. This was asked for in so
   many words ("think like opening scroll"), so do not bring back a slide or
   a pop.
 - **The look.** Dark by default, like a museum at night: a sky of stars,
   glass cards with a lit edge, the road lit warm from the left and cool from
   the right. The light theme is the same place by day: a blue sky, the sun
-  low over the far end of the road, a pale moon and soft clouds (`cg-theme`).
+  low over the far end of the road, a pale moon and soft clouds (`cg-theme2`; the key was renamed in Nov 2026 so everyone starts on dark).
 - **The media wall** (`site/wall.js`, `docs/WALL.md`). The road runs
   through open air (a CSS gradient; stars or clouds drawn once), with rails
   of light either side whose pulses rush towards the reader and about 200
@@ -234,9 +236,8 @@ How the page is put together:
   events written along it, like the open and the hovered entry
   (`road.heat` eases the colour). It is not `state.open`; do not write one
   to the other.
-- **The bar** (`#axisbar`) stands upright on the right: reverse
-  (`state.order`) at the top, play at the bottom, the whole span between
-  them with ahead upwards, on the road's own scale so the marker climbs
+- **The bar** (`#axisbar`) stands upright on the right: play at the
+  bottom and the whole span above it with ahead upwards, on the road's own scale so the marker climbs
   steadily (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
   marker moves the reader. Play moves the reader `PLAY_PACE` focal lengths
@@ -246,25 +247,20 @@ How the page is put together:
   speed, down to the turn limit and to a stop on pause (`road.vel`), so the
   road never jerks under the reader. Space plays and pauses. At the far end the button offers to
   play again from the beginning.
-- **Cards take turns while play travels.** The uneven scale keeps starts
-  apart along the road, but cards are wide, so on a narrow screen or a
-  crowded lane they would still cover one another, and before this the one
-  behind passed without ever being shown. Now every start is owed a moment
-  as a full card. A card that is up keeps its place for `DWELL` seconds
-  once it has opened (`dwellFor()`: less when more than two wait); then it
-  gives way to one it was hiding, and those come nearest first, in the
-  order things happened (`orderOf()` in `site/road.js` decides the order
-  for every name; `road.turn` counts each card's seconds). Play never
-  stands still for this. It slows down early instead: each frame
-  `turnPace()` works out how fast the reader may travel so that every card
-  still owed its turn has had it by the time the reader is nearly on it
-  (`road.limit`), and it never goes below `CRAWL`. A full stop was tried
-  and was not wanted, so keep the floor. The open entry's card takes its
-  turn like any other. Moving by hand, or any change to what is drawn,
-  starts the turns afresh (`turnsOver()`). Standing still and travelling by
-  hand, nothing takes turns: a card does not leave while someone reads it.
-  Keep it this simple: no queue, no timers, only an order and a speed limit
-  worked out each frame.
+- **Cards open by distance while play travels.** One rule, asked for in Nov
+  2026 ("on multiple lanes the order is not there"): while play travels, a
+  start is a full card exactly while it stands in one window ahead of the
+  reader (`inWindow()`: from `OPEN_AT` to `CLOSE_AT` focal lengths), the
+  same in every lane, so cards open in the order of their dates and close
+  just before the reader reaches them. Outside the window it is a small
+  card. Cards in the window may overlap; the nearer stands on top. Ends stay
+  small plates in play, so one entry never seems to open twice. Where starts
+  in a lane come close, play slows so each stands in front about
+  `MIN_FRONT` seconds (`windowPace()`, never below `CRAWL`). The open entry
+  is exempt; pointing at a card never keeps it open. Clicking a card while play travels opens
+  its entry and play goes on (asked for, Nov 2026). Standing still, nothing
+  takes turns: a card stays while someone reads it. Keep it this simple: no
+  queue, no timers, no turns.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
@@ -279,13 +275,18 @@ How the page is put together:
   Play also has music (`tune()`): one track, looped, that sounds only
   while play travels, eases in and out and keeps its place on pause. A view
   may bring its own (`audio` on the view, `docs/VIEWS.md`); otherwise it is
-  `site/media/gallery-of-glass.mp3`. Showing another view, or playing again
+  `site/media/gallery-of-glass.mp3`. A view with its own music gets two
+  plays side by side in one pill (one above the other on a phone): the
+  house play, and a second dressed in the view's thumbnail (a country's
+  flag) that plays its own track (`play.own`, `playWith()`). Pressing the
+  other while playing changes the music without stopping. Showing another view, or playing again
   from the beginning, starts the track from its beginning. It is fetched
   when play is first pressed with the sound on, and the same button
   silences it. The house track was asked for with this file; do not swap it
   without asking.
 - **The panel** is hidden until its button, the "Views" button in the strip
-  or a name is clicked. It never covers the road: on wide screens and
+  or a name is clicked. The "Views" button toggles: pressed again while the
+  views pane is open, it closes the panel. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)
   it is a sheet over the lower half, and the road and the bar move up above
   it. It has three panes: views, the history of one entry, and one era. The
@@ -303,9 +304,12 @@ How the page is put together:
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
   colour, and the cross removes one of several. The strip starts at the
-  left with the "Views" button and the pills; shuffle and the bookmark
-  stand at its right end, the bookmark last. This was asked for; do not
-  centre the strip again.
+  left with the "Views" button and the pills; at its right end stand what
+  the era of the year in sight stands for (BCE or CE, from `roadHud()`),
+  then shuffle, then reverse (`state.order`), small, last in the strip
+  (moved there on request, Nov 2026). There is no bookmark: "Your view" was
+  removed on request (Nov 2026). This was asked for; do not centre the
+  strip again.
 - **One view at a time.** Picking a view shows it alone (`showOnly()`): the
   others leave and the road opens at its beginning. Putting a view beside
   the others is the second action (`turnOn()`): the small plus at the end
@@ -317,10 +321,11 @@ How the page is put together:
   again: it was changed on purpose.
 - **The views pane** is search, then a row of chips (`drawChips()`: All,
   then the editors' topics from `data/editors-choice.json`, today History,
-  Science, Technology and Culture), then the list of community views in the
+  Science, Technology, Culture and Countries), then the list of community views in the
   order `boot.json` gives them (topic by topic; under All each topic has a
-  small heading), then the filters: the year range (`state.span`) and how
-  much to show (`state.level`). On a phone the filters fold into one line
+  small heading), then the filter: the year range (`state.span`). "How much to show" was
+  removed on request (Nov 2026): every entry of a view is on the road, and
+  the road's scale and the cards by distance do the rest. On a phone the filters fold into one line
   (`#filters-btn`) so the list has the sheet. Only community views are
   listed. Classical views are found by the search, where every result
   carries an icon that says which sort it is. A row is a thumbnail made by
@@ -335,7 +340,10 @@ How the page is put together:
   to a billion), so single years are written where much happens and only
   round ones where little does. It is bounded by what fits on the screen, whatever the
   span; keep it so. There is no year 0; deep time is labelled ka, Ma and
-  Ga. When a few entries start far earlier than the rest, the view opens on
+  Ga. BCE and CE are written only where the era changes (`eraMarked()`):
+  on the BCE year nearest the change and the CE year nearest it; the note
+  in the strip spells out the era of the year in sight, whether playing or
+  scrolling. Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
   the rest and "Show all years" reaches back. Every date on the page goes
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates.
 - **Words.** A person is born and dies; a city is founded; a species goes
@@ -355,9 +363,21 @@ How the page is put together:
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
 - "Propose a view" at the end of the list opens the "Propose a view" issue
-  form with the current link filled in. The bookmark icon saves the timeline
-  as "Your view" in this browser (`cg-mine`, one slot), and the page opens
-  on it when the link names no views.
+  form with the current link filled in.
+- **Play takes the whole screen.** The top bar floats over the road: the
+  road (`#stage`) always fills the page from the top, and keeps a band of
+  `TOP` pixels clear (`stageOf(SW, SH, top)` puts the road and the names
+  below it), so nothing moves when the bar comes and goes. While play
+  travels the bar slides away (`body.playing`); pointing at the top edge
+  brings it back over the road (`body.peek`), never over the open panel,
+  and it returns when play stops. Asked for in Nov 2026: do not make the
+  road move with the bar again.
+- Pictures are never cropped: cards, the walls, the panel and the view
+  thumbnails show the whole picture (`object-fit: contain`), portrait or
+  landscape. A wall frame takes the shape of its picture (`fit()` in
+  `site/wall.js`, at most `TALL` taller than its place; the tests keep
+  every shape clear of the other frames). When other views take the road, `wall.reset()` empties every
+  frame at once so no picture of the old views lingers.
 - Lines are neutral. Colour is only for view names and the selected line.
 - Whether a name is a card is decided by distance, not by rank.
 

@@ -1,0 +1,54 @@
+{
+  "id": "european-migrant-crisis",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2015 European migrant crisis",
+      "from": "2015"
+    }
+  ],
+  "summary": "More than a million people, many fleeing the war in Syria, reached Europe in 2015. Germany under Angela Merkel took in the largest number.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Map_of_the_European_Migrant_Crisis_2015.png/500px-Map_of_the_European_Migrant_Crisis_2015.png",
+    "alt": "Map of the European Migrant Crisis 2015",
+    "credit": "Maximilian Dörrbecker (Chumwa)",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Map_of_the_European_Migrant_Crisis_2015.png"
+  },
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2015",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "2016",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2015 European migrant crisis",
+      "url": "https://en.wikipedia.org/wiki/2015_European_migrant_crisis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

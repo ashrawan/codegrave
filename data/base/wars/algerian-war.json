@@ -8,6 +8,13 @@
     }
   ],
   "summary": "A war between France and Algerian nationalists, led by the National Liberation Front, fought in Algeria and in France. It ended with the Evian Accords and Algerian independence in 1962, and caused very heavy losses among civilians.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/National_Liberation_Army_Soldiers_%287%29.jpg/500px-National_Liberation_Army_Soldiers_%287%29.jpg",
+    "alt": "National Liberation Army Soldiers (7)",
+    "credit": "Zdravko Pečar",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Liberation_Army_Soldiers_(7).jpg"
+  },
   "labels": [
     "war",
     "independence"
@@ -63,5 +70,34 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/45/1955-08-25_Rebellion_Spreads_in_North_Africa.ogv/1955-08-25_Rebellion_Spreads_in_North_Africa.ogv.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/1955-08-25_Rebellion_Spreads_in_North_Africa.ogv/500px--1955-08-25_Rebellion_Spreads_in_North_Africa.ogv.jpg",
+      "alt": "1955-08-25 Rebellion Spreads in North Africa",
+      "credit": "Universal Newsreels",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:1955-08-25_Rebellion_Spreads_in_North_Africa.ogv"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/72/1956-05-21_France_Digs_in_For_Total_War_in_Algeria.ogv/1956-05-21_France_Digs_in_For_Total_War_in_Algeria.ogv.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/1956-05-21_France_Digs_in_For_Total_War_in_Algeria.ogv/500px--1956-05-21_France_Digs_in_For_Total_War_in_Algeria.ogv.jpg",
+      "alt": "1956-05-21 France Digs in For Total War in Algeria",
+      "credit": "Universal Newsreel",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:1956-05-21_France_Digs_in_For_Total_War_in_Algeria.ogv"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c5/1962-03-22_Algeria_tense_cease_fire.ogv/1962-03-22_Algeria_tense_cease_fire.ogv.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/1962-03-22_Algeria_tense_cease_fire.ogv/500px--1962-03-22_Algeria_tense_cease_fire.ogv.jpg",
+      "alt": "1962-03-22 Algeria tense cease fire",
+      "credit": "Universal Newsreels",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:1962-03-22_Algeria_tense_cease_fire.ogv"
+    }
+  ]
 }

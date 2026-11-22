@@ -8,6 +8,13 @@
     }
   ],
   "summary": "A Himalayan country with eight of the world's fourteen highest mountains, including Everest. It was unified by Prithvi Narayan Shah in 1768 and became a republic in 2008.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Emblem_of_Nepal.svg/500px-Emblem_of_Nepal.svg.png",
+    "alt": "Emblem of Nepal",
+    "credit": "Biplab Anand",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Emblem_of_Nepal.svg"
+  },
   "labels": [
     "world-heritage"
   ],
@@ -24,6 +31,13 @@
       "type": "born",
       "date": "1768-09-25",
       "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2008-05-28",
+      "precision": "day",
+      "label": "Republic",
+      "note": "The elected assembly abolished the monarchy."
     }
   ],
   "status": "alive",

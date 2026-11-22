@@ -8,6 +8,13 @@
     }
   ],
   "summary": "A huge undersea earthquake off the coast of Japan sent a tsunami onto the north-east shore and swept away towns. It was the strongest quake ever recorded in Japan and set off the Fukushima nuclear accident.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/SH-60B_helicopter_flies_over_Sendai.jpg/500px-SH-60B_helicopter_flies_over_Sendai.jpg",
+    "alt": "SH-60B helicopter flies over Sendai",
+    "credit": "U.S. Navy photo",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:SH-60B_helicopter_flies_over_Sendai.jpg"
+  },
   "labels": [
     "environment"
   ],
@@ -54,5 +61,34 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/29/20110311Houshu.ogv/20110311Houshu.ogv.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/20110311Houshu.ogv/500px--20110311Houshu.ogv.jpg",
+      "alt": "20110311Houshu",
+      "credit": "The original uploader was Amgine at English Wikinews.",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:20110311Houshu.ogv"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e8/Narita_Airport_20110311.webm/Narita_Airport_20110311.webm.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Narita_Airport_20110311.webm/500px--Narita_Airport_20110311.webm.jpg",
+      "alt": "Narita Airport 20110311",
+      "credit": "https://m.youtube.com/@flysoda?ra=m",
+      "licence": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Narita_Airport_20110311.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4e/Tsunami_in_Kitaibaraki_20110311.webm/Tsunami_in_Kitaibaraki_20110311.webm.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Tsunami_in_Kitaibaraki_20110311.webm/330px--Tsunami_in_Kitaibaraki_20110311.webm.jpg",
+      "alt": "Tsunami in Kitaibaraki 20110311",
+      "credit": "https://www.youtube.com/user/edomurasaki0/about",
+      "licence": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tsunami_in_Kitaibaraki_20110311.webm"
+    }
+  ]
 }

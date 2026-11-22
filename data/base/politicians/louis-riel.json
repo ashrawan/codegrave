@@ -1,0 +1,54 @@
+{
+  "id": "louis-riel",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Louis Riel",
+      "from": "1844"
+    }
+  ],
+  "summary": "Métis leader who led two risings against the Canadian government in the west, in 1869 and 1885. He founded the province of Manitoba and was hanged for treason after the second.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/21/Louis_Riel.jpg",
+    "alt": "Louis Riel",
+    "credit": "Photographer: I. Bennetto &amp; Co. (Israel Bennetto, 1860-1946[2])(possibly) Engraver: Octave-Henri Julien (1852-1908)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Louis_Riel.jpg"
+  },
+  "labels": [
+    "politics",
+    "human-rights"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1844-10-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1885-11-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Louis Riel",
+      "url": "https://en.wikipedia.org/wiki/Louis_Riel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

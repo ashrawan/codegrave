@@ -7,72 +7,36 @@
 
 <p align="center"><em>Nothing ships forever.</em></p>
 
-[codegrave.com](https://codegrave.com) is one page: an encyclopedia drawn as a
-timeline. Every entry is one line from its start to its end: a person from
-birth to death, an empire from founding to fall, a species to its
-extinction, a programming language from first release to end of support.
-The timeline is drawn in depth: time runs into the screen like a road, with
-the years along its edge, and play carries you along it. It began as a
-timeline of computing, and computing is still its deepest shelf. Click a
-card or a line to read its history, with dates, sources, links and images.
-
-The base holds about 4,400 entries on one map of ten branches: People,
-Places, Organisations, Events, Arts & media, Knowledge & belief, Society &
-daily life, Life, Earth & space, and Technology (with Computing). On top of
-it sit the views: about sixty subjects people look for, such as Ancient
-Egypt, World War II, US Presidents, Dinosaurs, Video Games and Discontinued
-Tech. Each is a plain name, a hand-picked set of entries and chapters that
-tell the story in order.
+[codegrave.com](https://codegrave.com) is an encyclopedia drawn as a
+timeline. Time runs into the screen like a road, every entry is a line from
+its start to its end, and play carries you along it: a person from birth to
+death, an empire from founding to fall, a computer from launch to retirement.
+Click any card to read its history, with dates, sources and pictures.
 
 <table>
   <tr>
-    <td width="74%" valign="top"><img src="docs/screenshots/road.png" alt="codegrave on a wide screen: the views The Space Race and Computers as two lanes of a road that runs into the distance, with cards standing where things began"></td>
-    <td width="26%" valign="top"><img src="docs/screenshots/road-phone.png" alt="codegrave on a phone: one view as a road, with the year, the cards and the upright bar on the right"></td>
-  </tr>
-  <tr>
-    <td align="center"><sub>Wide screen, light theme</sub></td>
-    <td align="center"><sub>Phone</sub></td>
+    <td width="74%" valign="top"><img src="docs/screenshots/road.jpg" alt="The Space Race and Computers as two lanes of a road running into the distance, with cards where things began and pictures floating beside the road"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/road-phone.jpg" alt="The Space Race on a phone"></td>
   </tr>
 </table>
 
-## What the page does
+## What you can do
 
-- **One subject, one view.** The panel lists the views under four topics:
-  History, Science, Technology and Culture. Pick one and the road shows it
-  alone, from its beginning, with its chapters drawn across it in its
-  colour. Click a chapter to read it.
-- **Any stretch of time.** The same axis shows a decade of software, three
-  thousand years of empires, or four billion years of the Earth. Dates
-  before the common era and deep time are first-class.
-- **Busy periods get more road.** The road is not an even ruler: where much
-  happens it is drawn longer, and where nothing does it is drawn shorter, so
-  the journey keeps an even pace. Things that share a date stand one after
-  another. The years along the edge show how the road is stretched.
-- **Side by side.** The small plus at the end of a row (or a right click)
-  puts a view beside the ones already there, each in a lane of its own, so
-  you see what was happening at the same moment in different stories. The
-  left lane's cards stand on the left and the right lane's on the right.
-  Two lanes are comfortable; up to eight fit.
-- **Search.** The top search finds entries, events, chapters and years on
-  the timeline (try `44 BCE`). Below them it lists matches from the whole
-  encyclopedia, and picking one brings it onto the timeline. The panel's
-  search finds views: the listed ones, and the classical shelves (Everything,
-  each branch, each kind) with their type marked.
-- **Play and reverse.** Play carries you along the road at an even pace,
-  because the road itself gives busy periods more room. Where cards would
-  still cover one another they take turns, and play slows down, without ever
-  stopping, so that each is shown. A card opens out of its small card like a scroll
-  unrolling, with a quiet breath of air (the button above play turns the
-  sound off), and fades away when its turn is over.
-  The wheel, a drag, the arrow keys and the upright bar on the right travel
-  too. Reverse turns you round to start at the present and go back.
-- **One link for everything.** The address holds the views, their order and
-  colours, the year range and the open entry, so any state can be shared.
-- **Fast at any size.** The page never loads the whole dataset. Each action
-  fetches one small ready-made file ([`docs/BUILD.md`](docs/BUILD.md)).
+- **Pick a subject.** About seventy views under five topics: Countries,
+  Culture, History, Science and Technology (for example Ancient Egypt,
+  World War II, Dinosaurs, Video Games, Nepal).
+- **Play.** The road moves at an even pace; each card opens for a moment
+  as you reach it, and pictures and films of what is on screen float
+  beside the road. Country views can play their national anthem.
+- **Compare.** Put two views side by side, each in its own lane, to see
+  what happened at the same time.
+- **Search.** Find a person, a place, an event or a year (try `44 BCE`).
+- **Share.** The link keeps the views and the open entry.
 
-The encyclopedia is built in the open. Anyone can correct a fact, add an
-entry, or publish a view of their own.
+<p align="center"><img src="docs/screenshots/countries.jpg" width="80%" alt="The Nepal view with the panel open on the Countries topic, each country shown by its flag"></p>
+
+The data is open: about 4,500 entries, each one file with its sources.
+Anyone can fix a fact, add an entry or publish a view.
 
 ## Quick start
 

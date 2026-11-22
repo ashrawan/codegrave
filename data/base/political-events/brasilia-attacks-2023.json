@@ -1,0 +1,53 @@
+{
+  "id": "brasilia-attacks-2023",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2023 Brasília attacks",
+      "from": "2023"
+    }
+  ],
+  "summary": "Supporters of Jair Bolsonaro stormed and wrecked the Congress, Supreme Court and presidential palace a week after Lula took office.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Invas%C3%A3o_do_Pal%C3%A1cio_do_Congresso_Nacional_durante_o_8_de_Janeiro_%28closer_crop%29.png/500px-Invas%C3%A3o_do_Pal%C3%A1cio_do_Congresso_Nacional_durante_o_8_de_Janeiro_%28closer_crop%29.png",
+    "alt": "Invasão do Palácio do Congresso Nacional durante o 8 de Janeiro (closer crop)",
+    "credit": "CCTV camera near Brazil's National Congress Palace",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Invas%C3%A3o_do_Pal%C3%A1cio_do_Congresso_Nacional_durante_o_8_de_Janeiro_(closer_crop).png"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-01-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2023-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2023 Brazilian Congress attack",
+      "url": "https://en.wikipedia.org/wiki/2023_Brazilian_Congress_attack",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

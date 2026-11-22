@@ -8,7 +8,7 @@
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf } from './keys.js';
 import { createWall } from './wall.js';
-import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, dwellFor, turnPace } from './road.js';
+import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
   'use strict';
@@ -16,11 +16,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const REPO = 'https://github.com/ashrawan/codegrave';
   const EDITORS = 'codegrave';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
-  const LEVELS = [
-    { name: 'Landmarks', pct: 10 }, { name: 'Notable', pct: 30 },
-    { name: 'Most', pct: 60 }, { name: 'All', pct: 100 },
-  ];
   const MAX_ROWS = 160;         // the most lines drawn at once
+  const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
     succeeded_by: 'succeeded by', forked_from: 'forked from', merged_into: 'merged into',
@@ -153,6 +150,18 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     while (d < 3 && Math.abs(r * 10 ** d - Math.round(r * 10 ** d)) > 1e-9) d++;
     return Number((a / unit).toFixed(d)) + ' ' + name;
   }
+  // Along the road and the bar the era is written only where it changes: on the BCE year nearest the change
+  // and the CE year nearest it (CE only when BCE is also in sight). `ys` are the years written; returns those
+  // that carry their era. Every other year is a bare number, and deep time keeps its unit (ka, Ma, Ga).
+  function eraMarked(ys) {
+    let bce = null, ce = null, before = false;
+    for (const y of ys) {
+      if (y < 0) { before = true; if (y > -1e5 && (bce == null || y > bce)) bce = y; }
+      else if (ce == null || y < ce) ce = y;
+    }
+    return new Set([bce, before ? ce : null].filter((y) => y != null));
+  }
+  const eraText = (y, step, marked) => (y > -1e5 && !marked.has(y) ? (y > 0 ? String(y) : y > -1e4 ? String(-y) : group(-y)) : axisText(y, step, y > 0));
   const AXIS_UNITS = { ka: 'thousand', Ma: 'million', Ga: 'billion' };
   // A year typed by the reader: "1969", "44 BCE", "-44", "500 bc", "66 ma", "4.6 billion years ago".
   function parseYearQuery(q) {
@@ -489,7 +498,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     for (const id of ids) addView(alias.get(id) || id);
     if (state.views.length === 1) {
       const v = viewById.get(state.views[0]);
-      state.level = v.level || 100;
       if (v.order) state.order = v.order;
     }
     return state.views.length > 0;
@@ -510,7 +518,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function readUrl(ids) {
     const q = new URLSearchParams(location.search);
     if (!ids.length || !setViews(ids)) return false;
-    if (q.has('lv')) state.level = clamp(Number(q.get('lv')) || 100, 5, 100);
     state.span = readSpan(q.get('yr'));
     if (q.get('o') === 'old') state.order = 'old'; else if (q.get('o') === 'new') state.order = 'new';
     const cs = (q.get('c') || '').split(',').map(Number);
@@ -520,7 +527,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function writeUrl() {
     const q = new URLSearchParams();
     q.set('views', state.views.join(','));
-    if (state.level !== 100) q.set('lv', state.level);
     if (state.order === 'new') q.set('o', 'new');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
@@ -592,6 +598,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const keep = (x) => { if (!L || x == null) return null; const t = L.when(x); return { t, off: x - L.place(t) }; };
     const was = keep(road.t), aim = keep(road.target);
     roadLayout();
+    // Other views on the road: the pictures of the ones that left go at once, not after their hold.
+    const sig = state.views.join();
+    if (sig !== road.sig) { turnsOver(); if (wall) wall.reset(); }    // other views: every card is owed its turn afresh
+    road.sig = sig;
     if (was) road.t = road.prev = L.place(was.t) + was.off;
     if (aim) road.target = L.place(aim.t) + aim.off;
     if (road.t == null) road.t = road.prev = roadOpening();
@@ -639,8 +649,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // and how big, and each fades in and out as its own element, so nothing
   // jumps. The card at the front is drawn as selected (road.focus): its line
   // and the dated points of its history light up as it arrives. While play
-  // travels, cards that would cover one another take turns (road.turn), and
-  // play slows for the ones that have not had theirs (road.limit).
+  // travels, a start is a card while it stands in a window ahead (inWindow), and
+  // play slows where starts come close (road.limit).
   const road = {
     t: null, target: null, rate: 6,           // where the reader stands, where a glide is heading, and how briskly
     raf: 0, live: false, last: 0, prev: null, pace: 1, vel: 0, cards: 0, within1: 0, within3: 0,    // vel: how fast play is carrying the reader, in focal lengths a second
@@ -667,7 +677,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
   function roadLayout() {
     const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan } = chosen();
-    const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight);
+    const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight, TOP);
     const lanes = [];
     for (const v of selected) {
       const mine = all.filter((t) => rowsOf.get(v).has(t) && inSpan(t));
@@ -702,7 +712,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       }
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
-    turnsOver();
     // Do the views bring pictures of their own for the media wall? Enough of them (15 in 100 entries) and the wall shows only those.
     const own = shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
     L = { own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
@@ -741,7 +750,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const first = viewById.get(state.views[0]), ln = L.lanes[0];
     if (!ln) return L.tMin;
     if (first && first.type === 'classical') return camClamp((first.year ? L.place(lineYear(first.year)) : roadBusiest()) - camDir() * 0.2 * L.D);
-    return camDir() > 0 ? camClamp(laneStart(ln) - 0.25 * L.D) : camLimits()[1];
+    // With several views the road opens where the earliest of them begins, so no lane starts half way.
+    return camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
   }
   // Takes the reader to a place on the road: it ends up a little in front of them.
   function roadTo(x, smooth = true) {
@@ -904,7 +914,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
     // The names in range, best first: the open entry, the one under the pointer, then the nearest, then by rank.
     // While the reader is swept along (a long jump) no new name is put up; they return as the road slows.
-    const fast = speed > 2.5 * D, cands = [], dwell = dwellFor(road.waiting);
+    const fast = speed > 2.5 * D, cands = [];
     if (fast) busy = true;
     const add = (p, end, time) => {
       const u = U(time);
@@ -912,15 +922,15 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const key = (end ? 'e:' : 's:') + p.key, id = p.t.id, s = S(u), up = road.vis.get(key), zone = zoneOf(s);
       if (fast && !up && id !== state.open) return;
       // A name already up keeps its place, and a card keeps being a card: a newcomer waits rather than pushing it out.
-      // While play travels, a card that has stood its time gives way to one it was hiding (orderOf in road.js).
-      let turn = null;
-      if (play.on && zone === 0) {
-        const had = road.turn.get(key) || 0;
-        if (had >= dwell && had !== Infinity) road.turn.set(key, Infinity);
-        turn = had >= dwell ? 'done' : 'due';
+      // While play travels, distance alone decides (inWindow in road.js): a start is a card while it stands in the
+      // window ahead of the reader, and may overlap other cards there; ends stay small plates. The open entry is
+      // exempt; pointing at a card changes nothing, so it never flickers.
+      let lead = false, closed = false;
+      if (play.on && id !== state.open) {
+        if (!end && inWindow(u / D)) lead = true; else closed = true;
       }
-      const pri = orderOf({ open: id === state.open, hover: id === road.hover, zone, end, up, score: p.t.score || 0, turn, ahead: u / D });
-      cands.push({ key, p, end, u, s, zone, turn, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
+      const pri = orderOf({ open: id === state.open, hover: id === road.hover, zone, end, up, score: p.t.score || 0, ahead: u / D }) - (lead ? 1000 : 0);
+      cands.push({ key, p, end, u, s, zone, lead, closed, gx: px(p.xn, s), gy: py(s), m: roadSizes(p.t), lean: p.lane.lean, pri });
     };
     let within1 = 0, within3 = 0;
     const count = (time) => { const u = U(time); if (u > 0 && u <= 3 * D) { within3++; if (u <= D) within1++; } };
@@ -975,16 +985,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     }
     road.shows = shows;
     road.focus = front && !openUp ? front.p.t.id : null;
-    // Turns: the starts still owed theirs, how many of them wait behind another card, and how fast play
-    // may travel so that each has had its turn by the time the reader reaches it (turnPace in road.js).
-    const owed = [];
-    for (const c of cands) {
-      if (c.turn !== 'due' || c.end || c.u < -0.05 * D) continue;
-      const r = placed.get(c.key);
-      const n = still ? null : road.nodes.get(c.key + ':full');       // its turn begins once it has opened
-      owed.push({ ahead: c.u / D, up: !!r && r.big, left: dwell - (road.turn.get(c.key) || 0) + (still ? 0 : OPENS * (1 - (n ? n.g : 0))) });
-    }
-    road.waiting = owed.filter((c) => !c.up).length; road.limit = turnPace(owed);
+    // How fast play may travel: slow enough that each card has its moment in front of its lane (windowPace).
+    const ahead = new Map();
+    for (const c of cands) if (!c.end) { const a = ahead.get(c.p.lane) || []; a.push(c.u / D); ahead.set(c.p.lane, a); }
+    road.waiting = cands.filter((c) => c.lead).length; road.limit = play.on ? windowPace([...ahead.values()]) : Infinity;
     const hotNow = (id) => id === state.open || id === road.hover || id === road.focus;
 
     // Each name shown has its element; one that is no longer shown keeps its place on the ground while it fades.
@@ -996,37 +1000,43 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       boxes.push(r);
       const nk = c.key + ':' + r.mode, n = road.nodes.get(nk) || roadNode(nk, c.p, c.end, r.mode);
       seen.add(nk);
-      n.r = r; n.s = c.s;
+      n.r = r; n.s = c.s; n.roll = false;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
-      if (c.turn === 'due' && r.big && n.o > 0.6 && n.g >= 1) road.turn.set(c.key, (road.turn.get(c.key) || 0) + dt);
       // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
       if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }
     // A card opens out of its small card, like a scroll unrolling: it starts as that box, where that
     // stands, and grows upwards into its own place (openFrom in road.js; `n.g` is how far it has opened,
     // and the card is cut to the height it has reached). The small card goes with it and dissolves into
-    // it, so the two are one thing opening. A card that leaves fades where it is, more slowly than a
-    // small name does.
+    // it, so the two are one thing opening. A card that closes while its small card stays on the stage
+    // rolls back down into it the same way (`n.roll`); a card that leaves the stage fades where it is,
+    // more slowly than a small name does.
     const ease = still ? 1 : 1 - Math.exp(-dt * 12), easeBig = still ? 1 : 1 - Math.exp(-dt * 5.5), easeInto = still ? 1 : 1 - Math.exp(-dt * 8);
     for (const [nk, n] of road.nodes) {
       const p = L.byKey.get(n.pk);
+      const big = n.mode === 'full' || n.mode === 'near', side = (n.end ? 'e:' : 's:') + n.pk;
       if (!seen.has(nk)) {
         const u = p ? U(n.end ? p.b : p.a) : -Infinity;
         if (!p || u <= uNear * 0.9 || u >= uFar) { n.el.remove(); road.nodes.delete(nk); continue; }
         n.s = S(u); n.want = 0; n.live = false;
         n.r = labelRect(n.mode, n.s, px(p.xn, n.s), py(n.s), roadSizes(p.t), G, p.lane.lean);
+        // Closing: roll back down while the small card it closes into is on the stage.
+        n.roll = big && n.g > 0 && !still && placed.get(side) && !placed.get(side).big;
+        if (n.roll) { n.g = Math.max(0, n.g - dt / OPENS); busy = true; if (n.g > 0) n.want = n.o; }
       }
-      const big = n.mode === 'full' || n.mode === 'near', side = (n.end ? 'e:' : 's:') + n.pk;
-      // The card this small card is opening into, if it is.
-      const card = !big && n.mode !== 'tag' && !seen.has(nk) && placed.get(side)?.big ? road.nodes.get(side + ':' + placed.get(side).mode) : null;
-      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * (!big ? (card ? easeInto : ease) : n.g < 1 && n.want > n.o ? ease : easeBig);
+      // The card this small card is opening into, or the card rolling back down into it.
+      const card = big || n.mode === 'tag' ? null
+        : !seen.has(nk) && placed.get(side)?.big ? road.nodes.get(side + ':' + placed.get(side).mode)
+        : seen.has(nk) ? [road.nodes.get(side + ':full'), road.nodes.get(side + ':near')].find((m) => m && m.roll) || null : null;
+      if (card && card.roll) n.want = Math.min(n.want, 1 - card.g);
+      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * (!big ? (card ? easeInto : ease) : n.roll || (n.g < 1 && n.want > n.o) ? ease : easeBig);
       if (n.o !== n.want) busy = true;
       if (!n.want && !n.o && !seen.has(nk)) { n.el.remove(); road.nodes.delete(nk); continue; }
       const hot = hotNow(p.t.id), r = n.r;
       let x = r.cx, y = r.y1, k = r.k, ax = r.ax;
       if (big) {
         if (still) n.g = 1;
-        else if (n.want > 0 && n.g < 1) { n.g = Math.min(1, n.g + dt / OPENS); busy = true; }
+        else if (n.want > 0 && n.g < 1 && !n.roll) { n.g = Math.min(1, n.g + dt / OPENS); busy = true; }
         let cut = '';
         if (n.g < 1) {
           const o = openFrom(labelRect(n.end ? 'endc' : 'compact', n.s, r.gx, r.gy, roadSizes(p.t), G, p.lane.lean), r, n.g);
@@ -1115,8 +1125,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
       // The years: a line across the road at each written year, ticks on both edges.
       const fsOf = (s) => (G.phone ? Math.max(9.5, 8 + 13 * s) : Math.max(10, 9 + 25 * s));
-      const ce = writtenOf(L.tMin) < 0 && writtenOf(L.tMax) > 0;
-      for (const tk of ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when })) {
+      const ticks = ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when });
+      // The era goes on the years in sight: on screen, not faded and not behind a card.
+      const marked = eraMarked(ticks.filter((tk) => {
+        if (!tk.label) return false;
+        const y = py(tk.s), x = px(G.RW, tk.s) + 15 * tk.s + 1 + (G.phone ? 4 : 7);
+        return far(tk.s) > 0.3 && y > G.top + 8 && y < G.SH - tk.fs * 0.5 && !covered(x - 4, y - tk.fs * 0.55, x + tk.fs * 3.2, y + tk.fs * 0.55);
+      }).map((tk) => tk.y));
+      for (const tk of ticks) {
         // A year fades in from the horizon, and out as it slides under the reader's feet.
         const s = tk.s, y = py(s), xl = px(-G.RW, s), xr = px(G.RW, s), a = far(s) * clamp(2.4 - s * 1.5, 0, 1) * clamp((G.SH - y) / (tk.fs * 0.9), 0, 1);
         if (tk.label) { c.strokeStyle = rgba(P.ink, 0.1 * a); c.beginPath(); c.moveTo(xl, y); c.lineTo(xr, y); c.stroke(); }
@@ -1124,7 +1140,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         c.strokeStyle = rgba(P.ink, (tk.label ? 0.75 : 0.42) * a);
         c.beginPath(); c.moveTo(xl, y); c.lineTo(xl - len, y); c.moveTo(xr, y); c.lineTo(xr + len, y); c.stroke();
         if (!tk.label) continue;
-        const text = axisText(tk.y, tk.step, ce), x = xr + len + (G.phone ? 4 : 7), room = G.SW - x - 3;
+        const text = eraText(tk.y, tk.step, marked), x = xr + len + (G.phone ? 4 : 7), room = G.SW - x - 3;
         let fs = tk.fs;
         font(500, fs);
         const tw = c.measureText(text).width;
@@ -1291,13 +1307,15 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // are written where there is room (yearMarks in road.js), BCE marked, and deep time in thousands,
   // millions or billions of years.
   function barTicks() {
-    const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9), ce = yMin < 0 && yMax > 0;    // both eras on the bar: say which is which
+    const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9);
     const atNow = L.tMax >= NOW - 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
-    const text = (k) => esc(axisText(k.y, k.step, ce)).replace(/ (BCE|CE|ka|Ma|Ga)$/, ' <small>$1</small>');
+    const marks = yearMarks(yMin, yMax, (y) => barY(L.place(lineYear(y))), () => gap, 7);
+    const marked = eraMarked(marks.filter((k) => k.label && !(atNow && Math.abs(k.p - yEnd) < 22)).map((k) => k.y));
+    const text = (k) => esc(eraText(k.y, k.step, marked)).replace(/ (BCE|CE|ka|Ma|Ga)$/, ' <small>$1</small>');
     const used = new Set();
     let html = '';
-    for (const k of yearMarks(yMin, yMax, (y) => barY(L.place(lineYear(y))), () => gap, 7)) {
+    for (const k of marks) {
       const y = k.p.toFixed(1);
       if (!k.label) html += `<i class="tk" style="top:${y}px"></i>`;
       else if (atNow && Math.abs(k.p - yEnd) < 22) html += `<i class="tk big" style="top:${y}px"></i>`;
@@ -1318,6 +1336,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
+      // What the era of the year in sight stands for, in the strip at the bottom.
+      const yr = writtenOf(L.when(t)), era = yr <= -1e5 ? '' : yr < 0 ? '<b>BCE</b> Before the Common Era' : '<b>CE</b> Common Era';
+      if ($('era-key').innerHTML !== era) $('era-key').innerHTML = era;
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the units in sight are spelled out once, under the year.
@@ -1346,12 +1367,34 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (cur) { b.textContent = cur.name; b.dataset.era = cur.key; b.title = cur.years; }
     });
     if (!all) return;
-    const b = $('play'), end = camAtEnd();
-    b.setAttribute('aria-pressed', play.on);
-    b.setAttribute('aria-label', play.on ? 'Pause' : end ? 'Play from the beginning' : 'Play: travel along the road');
-    b.title = play.on ? 'Pause' : end ? 'Play again from the beginning' : 'Play';
-    const icon = play.on ? ICON_PAUSE : end ? ICON_AGAIN : ICON_PLAY;
+    const b = $('play'), end = camAtEnd(), own = ownAudio(), mine = play.on && !(own && play.own);
+    b.setAttribute('aria-pressed', mine);
+    b.setAttribute('aria-label', mine ? 'Pause' : end ? 'Play from the beginning' : own ? 'Play with the house music' : 'Play: travel along the road');
+    b.title = mine ? 'Pause' : end ? 'Play again from the beginning' : own ? 'Play with the house music' : 'Play';
+    const icon = mine ? ICON_PAUSE : end ? ICON_AGAIN : ICON_PLAY;
     if (b.dataset.icon !== icon) { b.dataset.icon = icon; b.innerHTML = icon; }
+    // A view with its own music gets a second play beside the first, dressed in its picture (a country's flag).
+    const o = $('play-own'), ownOn = !!own && play.on && play.own;
+    $('axisbar').classList.toggle('two', !!own); $('axisbar').classList.toggle('own-on', ownOn);
+    o.hidden = !own;
+    if (own) {
+      const look = (own.img || '') + (ownOn ? '|on' : end ? '|again' : '');
+      if (o.dataset.look !== look) {
+        o.dataset.look = look;
+        o.style.backgroundImage = own.img ? `url("${own.img.replace(/"/g, '%22')}")` : '';
+        o.innerHTML = `<i>${ownOn ? ICON_PAUSE : end ? ICON_AGAIN : ICON_PLAY}</i>`;
+      }
+      const say = ownOn ? 'Pause' : `Play with ${own.title || 'its own music'}`;
+      o.setAttribute('aria-label', say); o.title = say; o.setAttribute('aria-pressed', ownOn);
+    }
+  }
+  // The first view on the road that brings its own music: its track, its title and its picture.
+  function ownAudio() {
+    for (const id of state.views) {
+      const v = viewById.get(id), a = v?.audio;
+      if (a && a.src) return { src: mediaUrl(a.src), title: a.title, img: v.thumb?.image ? mediaUrl(v.thumb.image) : v.image?.src ? mediaUrl(v.image.src) : null };
+    }
+    return null;
   }
 
   // The wheel, a drag and the arrow keys carry the reader along the road.
@@ -1545,8 +1588,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   function renderSide() {
     // The views on the timeline: one pill each in the strip under the years.
-    const n = L ? L.at.size : 0, more = L && L.total > L.at.size ? ` of ${L.total}` : '';
-    $('shown-n').textContent = !state.views.length ? '' : !more ? `${n} ${n === 1 ? 'entry' : 'entries'}` : `${n}${more} on the road`;
     const many = state.views.length > 1;
     $('pills').innerHTML = state.views.map((id) => {
       const v = viewById.get(id);
@@ -1554,16 +1595,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
         (many ? `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button>` : '') + '</div>';
     }).join('');
-    $('save-mine').disabled = !state.views.length;
     $('shuffle').hidden = !many;
     requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
 
-    // How much to show: the nearest of the four named levels is marked.
-    const near = LEVELS.reduce((a, l) => Math.abs(l.pct - state.level) < Math.abs(a.pct - state.level) ? l : a);
-    for (const b of $('level').querySelectorAll('[data-lv]')) b.setAttribute('aria-checked', Number(b.dataset.lv) === near.pct);
     drawYears();
-    $('filters-sum').textContent = state.views.length ? `${$('years-out').textContent} · ${near.name}` : '';
+    $('filters-sum').textContent = state.views.length ? $('years-out').textContent : '';
     drawChips();
     runSearch();
   }
@@ -1764,25 +1801,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     showOnly(f.v.id).then((got) => { if (got && matchMedia(PHONE).matches) showSide(false); });
   }
 
-  // One saved view per visitor, kept in this browser. Saving again replaces it.
-  function myView() {
-    try { const v = JSON.parse(store.get('cg-mine') || 'null'); return v && Array.isArray(v.views) && v.views.length ? v : null; }
-    catch (e) { return null; }
-  }
-  function saveMine() {
-    if (!state.views.length) return;
-    store.set('cg-mine', JSON.stringify({ views: state.views, level: state.level, order: state.order, span: state.span }));
-    const b = $('save-mine');
-    b.innerHTML = ICON.check; b.classList.add('done'); b.title = 'Saved as your view';
-    setTimeout(() => { b.innerHTML = ICON.save; b.classList.remove('done'); b.title = 'Save as your view'; }, 1600);
-    runSearch();
-  }
+  // "Your view" was a view saved in this browser with a bookmark button. The button was removed, so an
+  // old saved view no longer takes over the page; links and the default views open as they say.
+  function myView() { return null; }
   function loadMine(v) {
     Promise.all(v.views.map(loadView)).then(() => { if (play.on) pausePlay(); state.pinned.clear(); applyMine(v); road.t = road.target = null; road.vel = 0; drawReverse(); changed(); });
   }
   function applyMine(v) {
     setViews(v.views);
-    state.level = clamp(Number(v.level) || 100, 5, 100);
     state.order = v.order === 'new' ? 'new' : 'old';
     state.span = Array.isArray(v.span) && v.span.length === 2 && v.span.every(Number.isFinite) ? v.span : null;
   }
@@ -1955,7 +1981,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // ---------------------------------------------------------------- play and scrub
   // Play carries the reader along the road; the marker on the bar is where
   // they stand. Drag it, or press play. The reader's place is road.t.
-  const play = { on: false, drag: false };
+  const play = { on: false, drag: false, own: false };   // own: play to the view's own music (a country's anthem)
   const ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>';
   const ICON_AGAIN = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5"/><path d="M4.5 4.5v4.2h4.2"/></svg>';
   const ICON_PAUSE = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>';
@@ -1979,9 +2005,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     drawPlay();
     roadKick();
   }
-  function drawPlay() { if (L) roadHud(true); tune(); }
+  // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
+  // pointer nears the top edge, when anything in it has focus, and when play stops.
+  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek'); }
   function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
+  // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
+  function playWith(own) {
+    if (play.on && play.own === own) return pausePlay();
+    play.own = own;
+    if (play.on) drawPlay(); else startPlay();
+  }
   // Dragging along the bar moves the reader, playing or not.
   function scrubTo(e) {
     if (!L) return;
@@ -2039,10 +2073,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // the track from its beginning too. The sound button silences it.
   const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4;
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
-  // The track for what is on the road: the first view that brings its own, else the house track.
+  // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
-    for (const id of state.views) { const a = viewById.get(id)?.audio; if (a && a.src) return mediaUrl(a.src); }
-    return MUSIC;
+    const own = play.own && ownAudio();
+    return own ? own.src : MUSIC;
   }
   const musicAgain = () => { music.fresh = true; };
   function tune() {
@@ -2113,6 +2147,13 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // ---------------------------------------------------------------- events
   function wire() {
     let rt = null, lastW = innerWidth, lastH = innerHeight;
+    addEventListener('pointermove', (e) => {
+      if (!play.on || e.pointerType === 'touch') return;
+      const b = document.body.classList;
+      // Over the open panel the bar stays away: the panel keeps its own head and nothing covers it.
+      const sd = b.contains('side-open') ? $('side').getBoundingClientRect() : null;
+      if (e.clientY < 48 && !(sd && e.clientX >= sd.left)) b.add('peek'); else if (e.clientY > 110 || (sd && e.clientX >= sd.left)) b.remove('peek');
+    }, { passive: true });
     addEventListener('resize', () => {
       clearTimeout(rt);
       rt = setTimeout(() => {
@@ -2154,10 +2195,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (beside) return pick(Number(beside.dataset.beside), true);
       const li = el('#vlist [data-i]');
       if (li) return pick(Number(li.dataset.i), e.shiftKey || e.ctrlKey || e.metaKey);
-      // A name on the road opens its entry and brings the reader to it.
+      // A name on the road opens its entry and brings the reader to it. While play travels it only opens
+      // the entry: play goes on, so reading a card never stops the journey (asked for, Nov 2026).
       const card = el('#road-labels [data-id]');
       if (card) {
         openThing(card.dataset.id, { focus: false });
+        if (play.on) return;
         const p = L && L.byKey.get(card.dataset.key);      // its own spot on the road, which need not be where its year begins
         return p ? roadTo('end' in card.dataset ? p.b : p.a) : undefined;
       }
@@ -2167,7 +2210,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
     $('toggle-side').addEventListener('click', () => showSide($('side').hidden));
     wireRoad();
-    $('play').addEventListener('click', togglePlay);
+    $('play').addEventListener('click', () => playWith(false));
+    $('play-own').addEventListener('click', () => playWith(true));
     $('sound').addEventListener('click', toggleSound);
     drawSound();
     $('axis').addEventListener('pointerdown', (e) => {
@@ -2194,7 +2238,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
     $('theme').addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
-      document.documentElement.dataset.theme = next; store.set('cg-theme', next); roadKick();
+      document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick();
     });
 
     $('q').addEventListener('input', findOnTimeline);
@@ -2231,10 +2275,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
 
     // The bars redraw as they move, and record the link once let go.
-    $('level').addEventListener('click', (e) => {
-      const b = e.target.closest('[data-lv]');
-      if (b) { state.level = Number(b.dataset.lv); changed(); }
-    });
     const years = () => {
       if (!L) return;
       let a = Number($('y-from').value), b = Number($('y-to').value);
@@ -2249,7 +2289,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.span = $('years-reset').dataset.mode === 'all' && L ? [writtenOf(L.fitMin), writtenOf(L.fitMax - 1e-9)] : null;
       changed();
     });
-    $('save-mine').addEventListener('click', saveMine);
     $('filters-btn').addEventListener('click', () => {
       const open = $('filters').classList.toggle('open');
       $('filters-btn').setAttribute('aria-expanded', open);
@@ -2267,7 +2306,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.views.forEach((id, i) => state.colors.set(id, next[i]));
       changed();
     });
-    $('views-btn').addEventListener('click', () => { showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
+    $('views-btn').addEventListener('click', () => {
+      if (!$('side').hidden && !$('p-views').hidden) return showSide(false);    // a second press closes it
+      showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
     $('pills').addEventListener('scroll', pillEdges, { passive: true });
     $('pills').addEventListener('click', (e) => {
       const dot = e.target.closest('[data-colour]');

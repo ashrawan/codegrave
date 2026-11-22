@@ -1,0 +1,120 @@
+{
+  "id": "japan",
+  "name": "Japan",
+  "description": "Japan from the early emperors and the court of Heian-kyo to the samurai, the shoguns, the Meiji modernisation, war and the postwar boom.",
+  "category": "places",
+  "tags": [
+    "japan",
+    "samurai",
+    "shogun",
+    "tokyo",
+    "meiji",
+    "edo"
+  ],
+  "entries": [
+    "imperial-house-of-japan",
+    "japan",
+    "shinto",
+    "nara-period",
+    "kyoto",
+    "heian-period",
+    "tale-of-genji",
+    "kamakura-shogunate",
+    "mongol-invasions-of-japan",
+    "kinkaku-ji",
+    "tokyo",
+    "sengoku-period",
+    "oda-nobunaga",
+    "toyotomi-hideyoshi",
+    "tokugawa-ieyasu",
+    "battle-of-sekigahara",
+    "tokugawa-shogunate",
+    "edo-period",
+    "himeji-castle",
+    "matsuo-basho",
+    "great-wave-off-kanagawa",
+    "perry-expedition",
+    "emperor-meiji",
+    "meiji-restoration",
+    "empire-of-japan",
+    "meiji-constitution",
+    "russo-japanese-war",
+    "great-kanto-earthquake",
+    "hirohito",
+    "second-sino-japanese-war",
+    "attack-on-pearl-harbor",
+    "atomic-bombings-of-hiroshima-and-nagasaki",
+    "occupation-of-japan",
+    "sony",
+    "godzilla-1954",
+    "shinkansen",
+    "olympics-1964",
+    "nintendo",
+    "japanese-asset-bubble",
+    "kobe-earthquake",
+    "tohoku-earthquake-2011",
+    "fukushima-accident",
+    "naruhito",
+    "shinzo-abe",
+    "olympics-2020",
+    "expo-2025",
+    "sanae-takaichi",
+    "murasaki-shikibu",
+    "katsushika-hokusai",
+    "akira-kurosawa",
+    "osamu-tezuka",
+    "hayao-miyazaki",
+    "akio-morita"
+  ],
+  "checkpoints": [
+    {
+      "id": "early-japan",
+      "name": "Early Japan",
+      "from": 300,
+      "to": 793,
+      "note": "The Yamato kings united much of Japan and Shinto shrines honoured the kami. In the Nara period the court built its first great capital and its Buddhist temples."
+    },
+    {
+      "id": "heian-and-the-samurai",
+      "name": "Heian and the samurai",
+      "from": 794,
+      "to": 1466,
+      "note": "The court moved to Heian-kyo, now Kyoto, where Murasaki Shikibu wrote The Tale of Genji. From 1185 warriors ruled through shoguns and drove back two Mongol fleets."
+    },
+    {
+      "id": "warring-states-and-edo",
+      "name": "Warring states and Edo",
+      "from": 1467,
+      "to": 1852,
+      "note": "A century of civil war ended with Nobunaga, Hideyoshi and Tokugawa Ieyasu, who won at Sekigahara. The Tokugawa shoguns kept peace for two and a half centuries; Basho wrote haiku and Hokusai drew the Great Wave."
+    },
+    {
+      "id": "meiji-and-empire",
+      "name": "Meiji and empire",
+      "from": 1853,
+      "to": 1945,
+      "note": "American warships forced Japan open. The Meiji Restoration made it an industrial power that beat Russia and built an empire, then went to war with China and the United States until the atomic bombings."
+    },
+    {
+      "id": "postwar-japan",
+      "name": "Postwar Japan",
+      "from": 1946,
+      "to": 2026,
+      "note": "Under occupation Japan took a new constitution. The bullet train, Sony and Nintendo marked a boom that ended in the bubble of 1991. The Tōhoku tsunami struck in 2011, Shinzo Abe was shot in 2022, Osaka held Expo 2025 and Sanae Takaichi became the first woman prime minister."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/330px-Flag_of_Japan.svg.png",
+    "alt": "Flag of Japan",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Japan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a3/Kimi_ga_Yo_instrumental.ogg/Kimi_ga_Yo_instrumental.ogg.mp3",
+    "title": "Kimigayo",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kimi_ga_Yo_instrumental.ogg"
+  }
+}

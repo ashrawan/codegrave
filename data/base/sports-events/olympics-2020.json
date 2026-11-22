@@ -1,0 +1,46 @@
+{
+  "id": "olympics-2020",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2020 Summer Olympics",
+      "from": "2021"
+    }
+  ],
+  "summary": "The Tokyo Games, put off for a year by the COVID-19 pandemic and held with almost no spectators.",
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-07-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-08-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2020 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/2020_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

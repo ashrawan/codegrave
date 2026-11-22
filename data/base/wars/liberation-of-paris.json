@@ -1,0 +1,64 @@
+{
+  "id": "liberation-of-paris",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Liberation of Paris",
+      "from": "1944"
+    }
+  ],
+  "summary": "A rising of the French Resistance in Paris, followed by the arrival of French and American troops, that ended four years of German occupation.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg/500px-Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg",
+    "alt": "Crowds of French patriots line the Champs Elysees-edit2",
+    "credit": "Jack Downey, U.S. Office of War Information",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Crowds_of_French_patriots_line_the_Champs_Elysees-edit2.jpg"
+  },
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-08-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-08-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Liberation of Paris",
+      "url": "https://en.wikipedia.org/wiki/Liberation_of_Paris",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c8/La_Lib%C3%A9ration_de_Paris%2C_1944.ogv/La_Lib%C3%A9ration_de_Paris%2C_1944.ogv.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/La_Lib%C3%A9ration_de_Paris%2C_1944.ogv/330px--La_Lib%C3%A9ration_de_Paris%2C_1944.ogv.jpg",
+      "alt": "La Libération de Paris, 1944",
+      "credit": "Unknown author",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:La_Lib%C3%A9ration_de_Paris,_1944.ogv"
+    }
+  ]
+}

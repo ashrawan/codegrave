@@ -9,6 +9,13 @@
   ],
   "maker": "Wright brothers",
   "summary": "The aeroplane built by Wilbur and Orville Wright that made the first powered, controlled flights on 17 December 1903 at Kitty Hawk, North Carolina. The longest flight that day lasted 59 seconds.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/First_flight2.jpg/500px-First_flight2.jpg",
+    "alt": "First flight2",
+    "credit": "John T. Daniels",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:First_flight2.jpg"
+  },
   "labels": [
     "firsts",
     "transport"
@@ -58,5 +65,16 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a8/First_flights_in_aviation_history.ogv/First_flights_in_aviation_history.ogv.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/First_flights_in_aviation_history.ogv/330px--First_flights_in_aviation_history.ogv.jpg",
+      "alt": "First flights in aviation history",
+      "credit": "Unknown author",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:First_flights_in_aviation_history.ogv"
+    }
+  ]
 }

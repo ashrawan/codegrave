@@ -1,0 +1,53 @@
+{
+  "id": "battle-of-the-plains-of-abraham",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of the Plains of Abraham",
+      "from": "1759"
+    }
+  ],
+  "summary": "A short battle outside Quebec in which British troops under James Wolfe defeated the French under Montcalm. Both generals died, and New France passed to Britain soon after.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Benjamin_West_005.jpg/500px-Benjamin_West_005.jpg",
+    "alt": "Benjamin West 005",
+    "credit": "Benjamin West",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Benjamin_West_005.jpg"
+  },
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1759-09-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1759-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "canada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Battle of the Plains of Abraham",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_the_Plains_of_Abraham",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

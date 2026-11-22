@@ -8,7 +8,7 @@
     }
   ],
   "maker": "NASA and Jet Propulsion Laboratory",
-  "summary": "The first American satellite, launched on 31 January 1958. Its instruments found a belt of radiation around Earth, later named after James Van Allen.",
+  "summary": "The first American satellite, launched on the evening of 31 January 1958, Florida time (1 February by universal time). Its instruments found a belt of radiation around Earth, later named after James Van Allen.",
   "labels": [
     "space-race",
     "astronomy"
@@ -64,5 +64,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/73/Explorer1.jpg",
+    "alt": "Explorer 1",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Explorer1.jpg"
+  }
 }

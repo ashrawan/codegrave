@@ -8,6 +8,13 @@
     }
   ],
   "summary": "Gothic cathedral on an island in the Seine, begun in 1163. It was restored in the 1800s, was badly damaged by fire in 2019, and reopened after a long restoration in December 2024.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Notre-Dame_de_Paris%2C_4_October_2017.jpg/500px-Notre-Dame_de_Paris%2C_4_October_2017.jpg",
+    "alt": "Notre-Dame de Paris, 4 October 2017",
+    "credit": "Ali Sabbagh",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris,_4_October_2017.jpg"
+  },
   "labels": [
     "religion",
     "architecture"
@@ -49,5 +56,34 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/77/Notre-Dame_of_Paris_-_A_Sketch_of_the_Contruction_Sequence.webm/Notre-Dame_of_Paris_-_A_Sketch_of_the_Contruction_Sequence.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Notre-Dame_of_Paris_-_A_Sketch_of_the_Contruction_Sequence.webm/500px--Notre-Dame_of_Paris_-_A_Sketch_of_the_Contruction_Sequence.webm.jpg",
+      "alt": "Notre-Dame of Paris - A Sketch of the Contruction Sequence",
+      "credit": "Myles Zhang",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Notre-Dame_of_Paris_-_A_Sketch_of_the_Contruction_Sequence.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bf/Notre_Dame._Paris_111256.webm/Notre_Dame._Paris_111256.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Notre_Dame._Paris_111256.webm/500px--Notre_Dame._Paris_111256.webm.jpg",
+      "alt": "Notre Dame. Paris 111256",
+      "credit": "Quahadi",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Notre_Dame._Paris_111256.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cb/Notre_Dame_de_Paris_roof_damage_aerial.webm/Notre_Dame_de_Paris_roof_damage_aerial.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Notre_Dame_de_Paris_roof_damage_aerial.webm/500px--Notre_Dame_de_Paris_roof_damage_aerial.webm.jpg",
+      "alt": "Notre Dame de Paris roof damage aerial",
+      "credit": "Tasnim News Agency",
+      "licence": "CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Notre_Dame_de_Paris_roof_damage_aerial.webm"
+    }
+  ]
 }

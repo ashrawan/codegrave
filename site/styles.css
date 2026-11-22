@@ -78,14 +78,14 @@ ul, ol { list-style: none; }
 /* stage: the road fills the page between the top bar, the bar of years on the right and the strip of views along the bottom */
 :root { --bar: 72px; --card-sh: 0 12px 28px rgba(0, 0, 0, .55); }
 :root[data-theme="light"] { --card-sh: 0 10px 26px rgba(40, 30, 10, .14); }
-#stage { position: fixed; top: 52px; left: 0; right: var(--bar); bottom: 44px; overflow: hidden; }
+#stage { position: fixed; top: 0; left: 0; right: var(--bar); bottom: 44px; overflow: hidden; }
 body.side-open #stage { right: calc(var(--side) + var(--bar)); }
 .status { padding: 80px 24px; text-align: center; color: var(--muted); }
 
 /* the bar on the right: the whole span upright, ahead is up; turn round at its head, play at its foot */
 #axisbar { user-select: none; -webkit-user-select: none; position: fixed; top: 52px; right: 0; bottom: 44px; z-index: 18; width: var(--bar); background: var(--bg); border-left: 1px solid var(--rule2); }
 body.side-open #axisbar { right: var(--side); }
-#axis { position: absolute; inset: 52px 0 88px 0; cursor: ns-resize; touch-action: none; outline-offset: -3px; }
+#axis { position: absolute; inset: 18px 0 88px 0; cursor: ns-resize; touch-action: none; outline-offset: -3px; }
 #axis-in { position: absolute; inset: 0; }
 #axis-win { position: absolute; left: 0; right: 0; background: var(--raised); opacity: .7; }
 #ticks .yr { position: absolute; left: 15px; transform: translateY(-50%); font-size: 11.5px; line-height: 16px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; transition: color .15s; }
@@ -151,7 +151,7 @@ body.side-open #axisbar { right: var(--side); }
 .tb { position: relative; flex: none; width: 56px; height: 36px; display: flex; align-items: center; justify-content: center; overflow: hidden; color: var(--faint); background: var(--bg); border: 1px solid var(--rule); border-radius: 5px; }
 .tb svg.th { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
 .tb .th .dead { opacity: .45; }
-.tb img { width: 100%; height: 100%; object-fit: cover; }
+.tb img { width: 100%; height: 100%; object-fit: contain; }
 .tb.icon { color: var(--faint); }
 #vlist li[aria-checked="true"] { background: color-mix(in srgb, var(--c) 8%, var(--surf)); }
 #vlist li[aria-checked="true"]:hover, #vlist li[aria-checked="true"][aria-selected="true"] { background: color-mix(in srgb, var(--c) 14%, var(--surf)); }
@@ -221,7 +221,6 @@ body.side-open #dock { right: var(--side); }
 .seg button { flex: 1; height: 30px; padding: 0 4px; font-size: 12.5px; color: var(--muted); background: transparent; border: 0; border-radius: 5px; }
 .seg button:hover { color: var(--text); }
 .seg button[aria-checked="true"] { font-weight: 600; color: var(--text); background: var(--bg); box-shadow: 0 1px 2px rgba(0, 0, 0, .12); }
-#shown-n { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
 .ticks { font-size: 11px; color: var(--faint); font-variant-numeric: tabular-nums; }
 .field.form { gap: 6px; }
 
@@ -235,7 +234,7 @@ body.side-open #dock { right: var(--side); }
 .official a { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; }
 .ev-src { display: inline-block; margin-top: 3px; font-size: 11.5px; color: var(--faint); }
 .ev-src:hover { color: var(--text); }
-figure img { display: block; width: 100%; max-height: 220px; object-fit: cover; background: var(--ph); }
+figure img { display: block; width: 100%; max-height: 220px; object-fit: contain; background: var(--ph); }
 figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 .ev-img { margin-top: 8px; }
 #p-thing section, #p-era section { padding-top: 14px; border-top: 1px solid var(--rule2); }
@@ -299,7 +298,7 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
   #side { top: auto; left: 0; width: auto; height: var(--sheet); border-left: 0; border-top: 1px solid var(--rule2); border-radius: 14px 14px 0 0; box-shadow: 0 -12px 32px rgba(0, 0, 0, .18); }
   body.side-open #stage { right: var(--bar); bottom: var(--sheet); }
   body.side-open #axisbar { right: 0; bottom: var(--sheet); }
-  #axis { inset: 46px 0 82px 0; }
+  #axis { inset: 14px 0 82px 0; }
   .ends.head { height: 46px; }
   .ends.foot { height: 82px; }
   #ticks .yr { left: 9px; font-size: 10.5px; line-height: 12px; }
@@ -372,7 +371,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road { position: absolute; inset: 0; z-index: 1; overflow: hidden; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
 #road.dragging { cursor: grabbing; }
 #road-cv { position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block; }
-#road-head { position: absolute; left: 24px; top: 18px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; max-width: 240px; pointer-events: none; }
+#road-head { position: absolute; left: 24px; top: 70px; z-index: 3000; display: flex; flex-direction: column; gap: 10px; max-width: 240px; pointer-events: none; }
 #road-year { font-family: var(--serif); font-size: 68px; line-height: .95; font-variant-numeric: tabular-nums; white-space: nowrap; }
 #road-unit { margin-top: -6px; }
 #road-views { display: flex; flex-direction: column; gap: 10px; }
@@ -393,7 +392,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 /* a card that opens while play travels: a ring in its view's colour that fades into the card's own edge */
 .rc.full.ring { animation: rcring .8s ease-out; }
 @keyframes rcring { from { border-color: var(--c); box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 32%, transparent), var(--card-sh); } }
-.rc.full img { display: block; width: 100%; height: 110px; margin-bottom: 8px; object-fit: cover; background: var(--ph); border-radius: 2px; }
+.rc.full img { display: block; width: 100%; height: 110px; margin-bottom: 8px; object-fit: contain; background: var(--ph); border-radius: 2px; }
 .rc .rk { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .rc.full .rk b { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 10.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--c); }
 .rc .rk small { flex: none; font-size: 11.5px; color: var(--faint); font-variant-numeric: tabular-nums; }
@@ -423,7 +422,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road.short #road-year { font-size: 34px; }
 #road.short .rc.full .rs, #road.short .rc.full img { display: none; }
 @media (max-width: 699px) {
-  #road-head { left: 14px; top: 10px; gap: 6px; max-width: 62%; }
+  #road-head { left: 14px; top: 62px; gap: 6px; max-width: 62%; }
   #road-year { font-size: 44px; }
   /* under the year, only the chapter the reader is in, marked in its view's colour */
   #road-views { gap: 4px; }
@@ -484,14 +483,14 @@ small > .ctag, small .ctag { margin-left: 0; }
 .wf { position: absolute; left: 0; top: 0; display: block; overflow: hidden; border-radius: 5px; pointer-events: auto; cursor: pointer;
   background: rgba(12, 18, 30, .35); border: 1px solid rgba(210, 225, 255, .28);
   box-shadow: 0 0 34px -4px color-mix(in srgb, var(--wf-c) 45%, transparent), 0 18px 40px rgba(0, 0, 0, .5);
-  transition: opacity 1.2s ease, border-color .3s; backface-visibility: hidden; --wf-c: var(--wall-warm); }
+  transition: opacity 1.2s ease, border-color .3s, width .8s ease, height .8s ease; backface-visibility: hidden; --wf-c: var(--wall-warm); }
 .wf:nth-child(n+7) { --wf-c: var(--wall-cool); }
 .wf.empty, .wf.off { opacity: 0; pointer-events: none; }
 .wf:hover { border-color: color-mix(in srgb, var(--wf-c) 80%, white); }
 .wm { position: absolute; inset: 0; opacity: 0; transform: scale(1.04); transition: opacity 1.2s ease, transform 2.4s ease; transition-delay: calc(var(--k, 0) * 110ms); }
 .wm.on { opacity: 1; transform: none; }
 .wm.broken { display: none; }
-.wm img, .wm video { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; filter: saturate(.72) contrast(1.06) brightness(.82); }
+.wm img, .wm video { width: 100%; height: 100%; object-fit: contain; display: block; filter: saturate(.72) contrast(1.06) brightness(.82); }
 /* the light of the era over each picture, and a sheen of glass */
 .wf::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(135deg, rgba(255, 255, 255, .14), transparent 38%), linear-gradient(to top, color-mix(in srgb, var(--wf-c) 22%, transparent), transparent 55%); }
@@ -500,7 +499,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 .wf.mine { border-color: color-mix(in srgb, var(--wf-c) 78%, white); border-width: 2px; }
 #wall.light .wf.mine { border-color: var(--wf-c); }
 /* a picture of a name that is near but not up as a card: smaller and softer */
-.wf { scale: 1; transition: opacity 1.2s ease, border-color .3s, scale .8s ease; }
+.wf { scale: 1; transition: opacity 1.2s ease, border-color .3s, scale .8s ease, width .8s ease, height .8s ease; }
 .wf.quiet { scale: .72; opacity: .78; }
 /* what a frame shows, said under it while it is pointed at */
 .w-cap { position: absolute; z-index: 3; max-width: min(340px, 80vw); padding: 8px 11px; border-radius: 8px; pointer-events: none;
@@ -514,3 +513,42 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road.short .wf { opacity: 0; }
 /* the head reads clearly where a frame floats behind it */
 #road-head { text-shadow: 0 1px 2px var(--bg), 0 0 12px var(--bg); }
+
+/* What BCE and CE stand for, quietly at the right end of the strip. */
+.era-key { font-size: 12px; color: var(--faint); white-space: nowrap; margin-right: 6px; }
+.era-key b { font-weight: 600; opacity: 1; }
+
+@media (max-width: 700px) { .era-key { font-size: 10px; white-space: normal; line-height: 1.25; max-width: 140px; text-align: right; } }
+
+/* Play takes the whole screen: the top bar slides up and the road grows into its place. Pointing at the
+   top edge brings the bar back over the road; it also stays while anything in it has focus. */
+.top { transition: transform .35s ease, opacity .35s ease; }
+body.playing .top { transform: translateY(-100%); opacity: 0; pointer-events: none; }
+body.playing.peek .top, body.playing .top:focus-within { transform: none; opacity: 1; pointer-events: auto; }
+
+/* Two plays for a view with its own music (a country's anthem): one pill, the house play and the flag's play,
+   side by side on a wide screen and one above the other on a phone, where the bar is narrow. */
+.plays { display: flex; align-items: center; gap: 2px; }
+.pown { position: relative; width: 28px; height: 28px; flex: none; padding: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--rule2); border-radius: 50%; background: var(--raised, #222) center / 80% auto no-repeat; color: #fff; overflow: hidden; cursor: pointer; }
+.pown[hidden] { display: none; }
+.pown i { display: inline-flex; align-items: center; justify-content: center; width: 18px; height: 18px; border-radius: 50%; background: rgba(0, 0, 0, .5); backdrop-filter: blur(2px); }
+.pown svg { width: 9px; height: 9px; }
+.pown:hover { border-color: var(--text); }
+.pown[aria-pressed="true"] { border-color: var(--acc); box-shadow: 0 0 0 1px var(--acc), 0 0 14px color-mix(in srgb, var(--acc) 45%, transparent); }
+#axisbar.two .plays { padding: 2px; border: 1px solid var(--rule2); border-radius: 18px; background: rgba(255, 255, 255, .04); }
+#axisbar.two #play { width: 28px; height: 28px; flex: none; }
+#axisbar.own-on #play:not(:hover) { color: var(--text); background: transparent; border-color: var(--rule2); box-shadow: none; }
+@media (max-width: 699px) {
+  #axisbar.two .plays { flex-direction: column; }
+  #axisbar.two .ends.foot { height: 116px; }
+  #axisbar.two #axis { bottom: 116px; }
+}
+
+/* reverse: the last button of the strip, after the era note; pressed when facing the past */
+#reverse[aria-pressed="true"] { color: var(--acc); }
+
+/* An end is quieter than a start: a grey, see-through plate with a faint dashed edge, so the cards stand
+   out and an end never reads as another card (asked for, Nov 2026). */
+.rc.end, .rc.end.near { background: color-mix(in srgb, var(--glass) 45%, transparent); border-color: color-mix(in srgb, var(--rule2) 60%, transparent); box-shadow: none; filter: saturate(0); }
+.rc.end.near .rk b, .rc.end.small b { color: var(--faint); font-weight: 500; }
+.rc.end .rs, .rc.end small { color: var(--faint); opacity: .85; }

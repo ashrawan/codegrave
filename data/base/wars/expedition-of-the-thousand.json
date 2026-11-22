@@ -1,0 +1,53 @@
+{
+  "id": "expedition-of-the-thousand",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Expedition of the Thousand",
+      "from": "1860"
+    }
+  ],
+  "summary": "Garibaldi's landing in Sicily with about a thousand volunteers in red shirts. They took Sicily and Naples from the Bourbon king and handed them to Victor Emmanuel II, a big step to a united Italy.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Partenza_da_Quarto.jpg",
+    "alt": "Partenza da Quarto",
+    "credit": "Unknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Partenza_da_Quarto.jpg"
+  },
+  "labels": [
+    "war"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1860-05",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1860",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Expedition of the Thousand",
+      "url": "https://en.wikipedia.org/wiki/Expedition_of_the_Thousand",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

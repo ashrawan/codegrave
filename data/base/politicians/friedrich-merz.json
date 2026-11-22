@@ -1,0 +1,55 @@
+{
+  "id": "friedrich-merz",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Friedrich Merz",
+      "from": "1955"
+    }
+  ],
+  "summary": "Christian Democrat who became chancellor of Germany in May 2025.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/2024-08-21_Friedrich_Merz_in_Erfurt_2024_STP_3041_by_Stepro_%283x4_cropped%29.jpg/500px-2024-08-21_Friedrich_Merz_in_Erfurt_2024_STP_3041_by_Stepro_%283x4_cropped%29.jpg",
+    "alt": "2024-08-21 Friedrich Merz in Erfurt 2024 STP 3041 by Stepro (3x4 cropped)",
+    "credit": "Steffen Prößdorf",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2024-08-21_Friedrich_Merz_in_Erfurt_2024_STP_3041_by_Stepro_(3x4_cropped).jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-11-11",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2025-05-06",
+      "precision": "day",
+      "label": "Chancellor",
+      "note": "Elected chancellor by the Bundestag."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "germany"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Friedrich Merz",
+      "url": "https://en.wikipedia.org/wiki/Friedrich_Merz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}
