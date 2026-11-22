@@ -8,6 +8,13 @@
     }
   ],
   "summary": "Barrier built by East Germany in 1961 that split Berlin in two and stopped people leaving the east. It came down after the border opened on 9 November 1989, a step toward the end of the Cold War.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Berlinermauer.jpg/500px-Berlinermauer.jpg",
+    "alt": "Berlinermauer",
+    "credit": "Noir",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Berlinermauer.jpg"
+  },
   "labels": [
     "politics",
     "war"
@@ -54,5 +61,34 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/85/1962-08-16_The_Wall.ogv/1962-08-16_The_Wall.ogv.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/1962-08-16_The_Wall.ogv/330px--1962-08-16_The_Wall.ogv.jpg",
+      "alt": "1962-08-16 The Wall",
+      "credit": "Production Company Universal Studios",
+      "licence": "CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:1962-08-16_The_Wall.ogv"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4a/Aerial_View_of_Divided_Berlin.webm/Aerial_View_of_Divided_Berlin.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Aerial_View_of_Divided_Berlin.webm/500px--Aerial_View_of_Divided_Berlin.webm.jpg",
+      "alt": "Aerial View of Divided Berlin",
+      "credit": "Central Intelligence Agency",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Aerial_View_of_Divided_Berlin.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/15/Ich_bin_ein_Berliner_Speech_%28June_26%2C_1963%29_John_Fitzgerald_Kennedy_trimmed.theora.ogv/Ich_bin_ein_Berliner_Speech_%28June_26%2C_1963%29_John_Fitzgerald_Kennedy_trimmed.theora.ogv.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Ich_bin_ein_Berliner_Speech_%28June_26%2C_1963%29_John_Fitzgerald_Kennedy_trimmed.theora.ogv/250px--Ich_bin_ein_Berliner_Speech_%28June_26%2C_1963%29_John_Fitzgerald_Kennedy_trimmed.theora.ogv.jpg",
+      "alt": "Ich bin ein Berliner Speech (June 26, 1963) John Fitzgerald Kennedy trimmed",
+      "credit": "AFTV (Air Force Television); edited by Miller Center of Public Affairs",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Ich_bin_ein_Berliner_Speech_(June_26,_1963)_John_Fitzgerald_Kennedy_trimmed.theora.ogv"
+    }
+  ]
 }

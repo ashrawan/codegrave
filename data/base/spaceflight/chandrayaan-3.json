@@ -9,6 +9,13 @@
   ],
   "maker": "ISRO",
   "summary": "An Indian lunar mission whose lander and rover touched down near the Moon's south pole in August 2023. India became the fourth country to land softly on the Moon.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Chandrayaan-3_%E2%80%93_Image_of_Vikram_lander_on_lunar_surface_taken_by_Pragyan_rover_navcam_at_1104_IST%2C_30_August_2023_from_15_meters_away_%28with_text%29.webp/500px-Chandrayaan-3_%E2%80%93_Image_of_Vikram_lander_on_lunar_surface_taken_by_Pragyan_rover_navcam_at_1104_IST%2C_30_August_2023_from_15_meters_away_%28with_text%29.webp",
+    "alt": "Chandrayaan-3 – Image of Vikram lander on lunar surface taken by Pragyan rover navcam at 1104 IST, 30 August 2023 from 15 meters away (with text)",
+    "credit": "Indian Space Research Organisation",
+    "licence": "GODL-India",
+    "source": "https://commons.wikimedia.org/wiki/File:Chandrayaan-3_%E2%80%93_Image_of_Vikram_lander_on_lunar_surface_taken_by_Pragyan_rover_navcam_at_1104_IST,_30_August_2023_from_15_meters_away_(with_text).webp"
+  },
   "labels": [
     "astronomy",
     "exploration"
@@ -54,5 +61,34 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3c/Chandrayaan-3_Pragyan_rapid_deployment_of_the_ramp_and_rover_solar_panel.webm/Chandrayaan-3_Pragyan_rapid_deployment_of_the_ramp_and_rover_solar_panel.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Chandrayaan-3_Pragyan_rapid_deployment_of_the_ramp_and_rover_solar_panel.webm/500px--Chandrayaan-3_Pragyan_rapid_deployment_of_the_ramp_and_rover_solar_panel.webm.jpg",
+      "alt": "Chandrayaan-3 Pragyan rapid deployment of the ramp and rover solar panel",
+      "credit": "Indian Space Research Organisation",
+      "licence": "GODL-India",
+      "source": "https://commons.wikimedia.org/wiki/File:Chandrayaan-3_Pragyan_rapid_deployment_of_the_ramp_and_rover_solar_panel.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/2d/Chandrayaan_3_Pragyan_rampdown_%2853163897565%29.webm/Chandrayaan_3_Pragyan_rampdown_%2853163897565%29.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Chandrayaan_3_Pragyan_rampdown_%2853163897565%29.webm/500px--Chandrayaan_3_Pragyan_rampdown_%2853163897565%29.webm.jpg",
+      "alt": "Chandrayaan 3 Pragyan rampdown (53163897565)",
+      "credit": "semeion.photo",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chandrayaan_3_Pragyan_rampdown_(53163897565).webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b0/Chandrayaan_3_Vikram_hop_%2853163360576%29.webm/Chandrayaan_3_Vikram_hop_%2853163360576%29.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Chandrayaan_3_Vikram_hop_%2853163360576%29.webm/500px--Chandrayaan_3_Vikram_hop_%2853163360576%29.webm.jpg",
+      "alt": "Chandrayaan 3 Vikram hop (53163360576)",
+      "credit": "semeion.photo",
+      "licence": "CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chandrayaan_3_Vikram_hop_(53163360576).webm"
+    }
+  ]
 }

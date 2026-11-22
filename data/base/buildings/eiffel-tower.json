@@ -8,6 +8,13 @@
     }
   ],
   "summary": "Wrought-iron lattice tower in Paris, built for the 1889 World's Fair. It was the tallest structure in the world until 1930, and it was nearly taken down after twenty years.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg/500px-Tour_Eiffel_Wikimedia_Commons_%28cropped%29.jpg",
+    "alt": "Tour Eiffel Wikimedia Commons",
+    "credit": "Benh LIEU SONG",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons_(cropped).jpg"
+  },
   "labels": [
     "architecture",
     "engineering"
@@ -51,5 +58,25 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/90/Eiffel_Tower_Drone_4k-Qx_c1X3zfEc-313-251.webm/Eiffel_Tower_Drone_4k-Qx_c1X3zfEc-313-251.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Eiffel_Tower_Drone_4k-Qx_c1X3zfEc-313-251.webm/500px--Eiffel_Tower_Drone_4k-Qx_c1X3zfEc-313-251.webm.jpg",
+      "alt": "Eiffel Tower Drone 4k-Qx c1X3zfEc-313-251",
+      "credit": "the Dronalist",
+      "licence": "CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_Drone_4k-Qx_c1X3zfEc-313-251.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6e/Vue_Lumi%C3%A8re_No_992_-_Panorama_pendant_l%27ascension_de_la_Tour_Eiffel_%281898%29.ogv/Vue_Lumi%C3%A8re_No_992_-_Panorama_pendant_l%27ascension_de_la_Tour_Eiffel_%281898%29.ogv.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Vue_Lumi%C3%A8re_No_992_-_Panorama_pendant_l%27ascension_de_la_Tour_Eiffel_%281898%29.ogv/330px--Vue_Lumi%C3%A8re_No_992_-_Panorama_pendant_l%27ascension_de_la_Tour_Eiffel_%281898%29.ogv.jpg",
+      "alt": "Vue Lumière No 992 - Panorama pendant l'ascension de la Tour Eiffel (1898)",
+      "credit": "les copains Lumière",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Vue_Lumi%C3%A8re_No_992_-_Panorama_pendant_l%27ascension_de_la_Tour_Eiffel_(1898).ogv"
+    }
+  ]
 }

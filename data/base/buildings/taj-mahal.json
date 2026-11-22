@@ -8,6 +8,13 @@
     }
   ],
   "summary": "White marble tomb at Agra, built by the Mughal emperor Shah Jahan for his wife Mumtaz Mahal. It is regarded as a high point of Mughal architecture and is among the most visited monuments in India.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Taj_Mahal_%28Edited%29.jpeg/500px-Taj_Mahal_%28Edited%29.jpeg",
+    "alt": "Taj Mahal (Edited)",
+    "credit": "Yann; edited by Jim Carter",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_(Edited).jpeg"
+  },
   "labels": [
     "architecture",
     "world-heritage"
@@ -52,5 +59,16 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/43/Taj_Mahal_-_Mausoleum_der_Liebe_%28CC_BY-SA_4.0%29.webm/Taj_Mahal_-_Mausoleum_der_Liebe_%28CC_BY-SA_4.0%29.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Taj_Mahal_-_Mausoleum_der_Liebe_%28CC_BY-SA_4.0%29.webm/500px--Taj_Mahal_-_Mausoleum_der_Liebe_%28CC_BY-SA_4.0%29.webm.jpg",
+      "alt": "Taj Mahal - Mausoleum der Liebe (CC BY-SA 4.0)",
+      "credit": "ZDF/Terra X/interscience film/Faber Courtial/Gero von Boehm/Alexander Hein/Andreas Tiletzek, Jörg Courtial",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_-_Mausoleum_der_Liebe_(CC_BY-SA_4.0).webm"
+    }
+  ]
 }

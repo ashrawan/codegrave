@@ -8,6 +8,13 @@
     }
   ],
   "summary": "Four planes were hijacked by al-Qaeda members on 11 September 2001. Two struck the World Trade Center towers in New York, one hit the Pentagon and one crashed in Pennsylvania, killing nearly 3,000 people.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/500px-WTC_smoking_on_9-11.jpeg",
+    "alt": "WTC smoking on 9-11",
+    "credit": "Flickr user Michael Foran",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:WTC_smoking_on_9-11.jpeg"
+  },
   "labels": [
     "politics",
     "war"
@@ -56,5 +63,34 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/80/9_11_Terror_Attacks_Historical_Pentagon_Briefing.webm/9_11_Terror_Attacks_Historical_Pentagon_Briefing.webm.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/9_11_Terror_Attacks_Historical_Pentagon_Briefing.webm/500px--9_11_Terror_Attacks_Historical_Pentagon_Briefing.webm.jpg",
+      "alt": "9 11 Terror Attacks Historical Pentagon Briefing",
+      "credit": "Unknown author",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:9_11_Terror_Attacks_Historical_Pentagon_Briefing.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Address_to_the_Nation_by_President_George_W._Bush_on_September_11%2C_2001.webm/Address_to_the_Nation_by_President_George_W._Bush_on_September_11%2C_2001.webm.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Address_to_the_Nation_by_President_George_W._Bush_on_September_11%2C_2001.webm/500px--Address_to_the_Nation_by_President_George_W._Bush_on_September_11%2C_2001.webm.jpg",
+      "alt": "Address to the Nation by President George W. Bush on September 11, 2001",
+      "credit": "The White House",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Address_to_the_Nation_by_President_George_W._Bush_on_September_11,_2001.webm"
+    },
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/67/Pentagon_Security_Camera_1.ogv/Pentagon_Security_Camera_1.ogv.240p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Pentagon_Security_Camera_1.ogv/250px--Pentagon_Security_Camera_1.ogv.jpg",
+      "alt": "Pentagon Security Camera 1",
+      "credit": "Unmanned security camera owned by the US government.",
+      "licence": "Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Pentagon_Security_Camera_1.ogv"
+    }
+  ]
 }

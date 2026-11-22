@@ -9,6 +9,13 @@
   ],
   "maker": "Japanese National Railways",
   "summary": "Japan's network of high-speed trains, the first of its kind, which opened between Tokyo and Osaka in 1964 just before the Olympic Games. It has an exceptional record for punctuality and safety.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Shinkansen_map_202405_en.png/500px-Shinkansen_map_202405_en.png",
+    "alt": "Shinkansen map 202405 en",
+    "credit": "Texent",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shinkansen_map_202405_en.png"
+  },
   "labels": [
     "transport",
     "engineering"
@@ -50,5 +57,16 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "media": [
+    {
+      "type": "video",
+      "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/96/Tokyo_to_Kyoto_on_the_bullet_train_by_Don_Ramey_Logan.webm/Tokyo_to_Kyoto_on_the_bullet_train_by_Don_Ramey_Logan.webm.480p.vp9.webm",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Tokyo_to_Kyoto_on_the_bullet_train_by_Don_Ramey_Logan.webm/500px--Tokyo_to_Kyoto_on_the_bullet_train_by_Don_Ramey_Logan.webm.jpg",
+      "alt": "Tokyo to Kyoto on the bullet train by Don Ramey Logan",
+      "credit": "Don Ramey Logan",
+      "licence": "CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Tokyo_to_Kyoto_on_the_bullet_train_by_Don_Ramey_Logan.webm"
+    }
+  ]
 }
