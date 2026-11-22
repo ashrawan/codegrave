@@ -256,8 +256,8 @@ How the page is put together:
   card. Cards in the window may overlap; the nearer stands on top. Ends stay
   small plates in play, so one entry never seems to open twice. Where starts
   in a lane come close, play slows so each stands in front about
-  `MIN_FRONT` seconds (`windowPace()`, never below `CRAWL`). The open and
-  the hovered entry are exempt. Clicking a card while play travels opens
+  `MIN_FRONT` seconds (`windowPace()`, never below `CRAWL`). The open entry
+  is exempt; pointing at a card never keeps it open. Clicking a card while play travels opens
   its entry and play goes on (asked for, Nov 2026). Standing still, nothing
   takes turns: a card stays while someone reads it. Keep it this simple: no
   queue, no timers, no turns.

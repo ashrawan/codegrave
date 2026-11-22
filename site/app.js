@@ -923,10 +923,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (fast && !up && id !== state.open) return;
       // A name already up keeps its place, and a card keeps being a card: a newcomer waits rather than pushing it out.
       // While play travels, distance alone decides (inWindow in road.js): a start is a card while it stands in the
-      // window ahead of the reader, and may overlap other cards there; ends stay small plates. The open entry and
-      // the one pointed at are exempt.
+      // window ahead of the reader, and may overlap other cards there; ends stay small plates. The open entry is
+      // exempt; pointing at a card changes nothing, so it never flickers.
       let lead = false, closed = false;
-      if (play.on && id !== state.open && id !== road.hover) {
+      if (play.on && id !== state.open) {
         if (!end && inWindow(u / D)) lead = true; else closed = true;
       }
       const pri = orderOf({ open: id === state.open, hover: id === road.hover, zone, end, up, score: p.t.score || 0, ahead: u / D }) - (lead ? 1000 : 0);
