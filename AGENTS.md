@@ -155,8 +155,8 @@ How the page is put together:
   The ground (road, lanes, years, lines, starts, ends, chapters) is one
   canvas, `#road-cv`. Names are elements in `#road-labels`: a start is a
   card when near (from size `FULL`, never drawn smaller than `CARD_MIN`), a
-  small card further off, then a bare name; an end is a dashed plate with
-  its cause. `placeLabels()` decides every frame which fit, best first and
+  small card further off, then a bare name; an end is a grey, see-through
+  dashed plate with its cause, quieter than any card (asked for, Nov 2026). `placeLabels()` decides every frame which fit, best first and
   capped, and they fade in and out. Writing on the ground (a chapter's
   name, a year at the edge) steps aside while a name stands over it
   (`covered()`, `soft()`). Wheel, drag and the arrow keys travel

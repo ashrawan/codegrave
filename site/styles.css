@@ -546,3 +546,9 @@ body.playing.peek .top, body.playing .top:focus-within { transform: none; opacit
 
 /* reverse: the last button of the strip, after the era note; pressed when facing the past */
 #reverse[aria-pressed="true"] { color: var(--acc); }
+
+/* An end is quieter than a start: a grey, see-through plate with a faint dashed edge, so the cards stand
+   out and an end never reads as another card (asked for, Nov 2026). */
+.rc.end, .rc.end.near { background: color-mix(in srgb, var(--glass) 45%, transparent); border-color: color-mix(in srgb, var(--rule2) 60%, transparent); box-shadow: none; filter: saturate(0); }
+.rc.end.near .rk b, .rc.end.small b { color: var(--faint); font-weight: 500; }
+.rc.end .rs, .rc.end small { color: var(--faint); opacity: .85; }
