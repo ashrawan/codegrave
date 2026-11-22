@@ -16,9 +16,12 @@
 <div id="tools">
   <a class="logo" href="./">codegrave</a>
   <span class="msg" id="msg" role="status">Preparing the pages…</span>
-  <label>Timeline <select id="order"><option value="old">Forward (past to today)</option><option value="new">Backward (today to past)</option></select></label>
-  <label>Format <select id="fmt"><option value="book">Book</option><option value="poster">Poster</option></select></label>
-  <label>Paper <select id="paper"><option value="a4">A4</option><option value="letter">Letter (US)</option></select></label>
+  <label>Template <select id="fmt"><option value="book">Book</option><option value="poster">Poster</option></select></label>
+  <details id="opts"><summary>Export options</summary><div class="opts">
+    <label>Timeline <select id="order"><option value="old">Forward (past to today)</option><option value="new">Backward (today to past)</option></select></label>
+    <label>Paper <select id="paper"><option value="a4">A4</option><option value="letter">Letter (US)</option></select></label>
+    <label>Font <select id="font"></select></label>
+  </div></details>
   <button id="save" type="button" disabled>Download PDF</button>
 </div>
 <div id="doc"></div>

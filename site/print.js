@@ -17,10 +17,24 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 export const INKS = ['#a5621a', '#2c58a6', '#a23b67', '#1f7a5c', '#6a4aa8', '#7a6a1c', '#1f7187', '#a2492f'];
 // Chapter tints of a single view.
 const TINTS = ['#b5651d', '#2f6b9a', '#7a4f9e', '#2e7d6b', '#a83b3b', '#8a7a2a', '#5b6b7a', '#9a5a7a'];
-const BEFORE = '#9a8f7e';   // entries before the first chapter
+const BEFORE = '#8f8f8f';   // entries before the first chapter
 // The poster's paper, always landscape: A2 as designed, A3, or A4 and Letter for a home printer.
 export const POSTER_PAPERS = { a2: { w: 594, h: 420, css: 'A2 landscape', name: 'A2' }, a3: { w: 420, h: 297, css: 'A3 landscape', name: 'A3' },
   a4: { w: 297, h: 210, css: 'A4 landscape', name: 'A4' }, letter: { w: 279.4, h: 215.9, css: 'letter landscape', name: 'Letter' } };
+// The fonts offered in Export options (asked for, Nov 2026): free fonts (SIL Open Font License) from
+// Google Fonts, fetched only when picked. Literata, a book face made for e-books, is the default.
+export const FONTS_OFFERED = {
+  literata: { name: 'Literata', q: 'Literata:opsz,wght@7..72,400;7..72,500;7..72,600' },
+  'source-serif': { name: 'Source Serif 4', q: 'Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600' },
+  newsreader: { name: 'Newsreader', q: 'Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600' },
+  merriweather: { name: 'Merriweather', q: 'Merriweather:wght@400;700' },
+  lora: { name: 'Lora', q: 'Lora:wght@400;500;600' },
+  'eb-garamond': { name: 'EB Garamond', q: 'EB+Garamond:wght@400;500;600' },
+  'libre-baskerville': { name: 'Libre Baskerville', q: 'Libre+Baskerville:wght@400;700' },
+  'crimson-pro': { name: 'Crimson Pro', q: 'Crimson+Pro:wght@400;500;600' },
+  atkinson: { name: 'Atkinson Hyperlegible', q: 'Atkinson+Hyperlegible:wght@400;700', sans: true },
+  inter: { name: 'Inter', q: null, sans: true },
+};
 export const PAPERS = { a4: { w: 210, h: 297, css: 'A4' }, letter: { w: 215.9, h: 279.4, css: 'letter' } };
 const MM = 96 / 25.4;
 
@@ -448,7 +462,7 @@ function poster(vs, inks, paper) {
       }
       h += '<div class="tick" style="left:' + x + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + x + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>';
       h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + '">'
-        + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""><figcaption>' + esc([e.img.credit, e.img.licence].filter(Boolean).join(' · ')) + '</figcaption></figure>' : '')
+        + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
     }
     // where this sheet sits in the whole span, when there are several
@@ -460,9 +474,18 @@ function poster(vs, inks, paper) {
     const head = pi === 0
       ? '<div class="t"><h1>' + title + '</h1><p>' + esc(one ? vs[0].description : '') + '</p><div class="y">' + esc(rs(first, last)) + mini + '</div></div>'
       : '<div class="t sm"><h1>' + title + '</h1><div class="y">' + mini + '</div></div>';
-    const foot = '<div class="foot"><span class="lnk">' + (lastSheet ? esc(link) + ' · Pictures from Wikimedia Commons, credited on each card. Text CC BY-NC-SA 4.0.' : '') + '</span><span>A timeline from codegrave</span></div>';
+    const foot = '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave</span></div>';
     p.innerHTML = head + h + foot;
   });
+  // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
+  const sheetOf = () => { const pg = newPage('sheet'), v = document.createElement('div'); v.className = 'vs'; pg.appendChild(v);
+    v.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')'; return v; };
+  flowCredits(all.filter((e) => e.img || e.src).map((e) => creditHtml(e, one ? null : inks[e.vi])), (first) => {
+    const p = sheetOf();
+    p.innerHTML = '<div class="cr-h"><h1>' + (first ? 'Pictures and sources' : '&nbsp;') + '</h1>' + (first ? '<p>' + esc(creditLine()) + '</p>' : '') + '</div><div class="cred"></div>'
+      + '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave</span></div>';
+    return { p, box: p.querySelector('.cred') };
+  }, link);
   // a chapter's stretch of the band too short for its label drops the years, then the label
   for (const el of doc.querySelectorAll('.sheet .seg')) {
     if (el.scrollWidth > el.clientWidth + 1) el.querySelector('span')?.remove();
@@ -482,7 +505,7 @@ const script = (src) => new Promise((ok, no) => { const s = document.createEleme
 export const fileName = (names) => (names.join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'codegrave') + '.pdf';
 async function download(paper, fmt) {
   const btn = $('save'), msg = $('msg'), was = msg.textContent;
-  btn.disabled = true; $('paper').disabled = true; $('order').disabled = true; $('fmt').disabled = true;
+  btn.disabled = true; for (const id of ['paper', 'order', 'fmt', 'font']) $(id).disabled = true;
   try {
     msg.textContent = 'Making the PDF…';
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
@@ -501,7 +524,7 @@ async function download(paper, fmt) {
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { btn.disabled = false; $('paper').disabled = false; $('order').disabled = false; $('fmt').disabled = false; }
+  } finally { btn.disabled = false; for (const id of ['paper', 'order', 'fmt', 'font']) $(id).disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -524,6 +547,16 @@ function lay(paper, fmt) {
   if (fmt === 'poster') poster(vs, inks, P); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
   $('msg').textContent = fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
+}
+// Sets the export's reading font, fetching it from Google Fonts first if needed.
+async function useFont(key) {
+  const f = FONTS_OFFERED[key] || FONTS_OFFERED.literata, id = 'font-' + key;
+  if (f.q && !document.getElementById(id)) {
+    const l = document.createElement('link'); l.id = id; l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=' + f.q + '&display=swap';
+    await new Promise((ok) => { l.onload = l.onerror = ok; document.head.appendChild(l); });
+  }
+  await Promise.all(['400', '500', '600'].map((w) => document.fonts.load(w + ' 9px "' + f.name + '"').catch(() => null)));
+  document.documentElement.style.setProperty('--serif', '"' + f.name + '", ' + (f.sans ? 'Inter, sans-serif' : 'Georgia, serif'));
 }
 async function start() {
   const q = new URLSearchParams(location.search);
@@ -553,9 +586,16 @@ async function start() {
     sel.innerHTML = Object.entries(set).map(([k, v]) => '<option value="' + k + '">' + (v.name || v.css.replace('letter', 'Letter (US)')) + '</option>').join('');
     sel.value = set[was] ? was : home; };
   sel.textContent = ''; papers();
+  // Font: kept in the link as `font`; a font other than Literata or Inter is fetched when picked
+  const fo = $('font');
+  fo.innerHTML = Object.entries(FONTS_OFFERED).map(([k, f]) => '<option value="' + k + '">' + f.name + (k === 'literata' ? ' (default)' : '') + '</option>').join('');
+  fo.value = FONTS_OFFERED[q.get('font')] ? q.get('font') : 'literata';
+  await useFont(fo.value);
   await lay(sel.value, fm.value);
   const relay = async () => { $('save').disabled = true; await lay(sel.value, fm.value); $('save').disabled = false; };
   sel.addEventListener('change', () => { q.set('paper', sel.value); keepLink(); relay(); });
+  fo.addEventListener('change', async () => { if (fo.value === 'literata') q.delete('font'); else q.set('font', fo.value); keepLink();
+    $('save').disabled = true; await useFont(fo.value); relay(); });
   fm.addEventListener('change', () => { if (fm.value === 'poster') q.set('fmt', 'poster'); else q.delete('fmt'); papers(); keepLink(); relay(); });
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';
