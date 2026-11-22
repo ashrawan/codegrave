@@ -1,0 +1,56 @@
+{
+  "id": "sanae-takaichi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Sanae Takaichi",
+      "from": "1961"
+    }
+  ],
+  "summary": "Conservative politician who became the first woman to be prime minister of Japan in October 2025.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Sanae_Takaichi_portrait_%28HD%29_%28cropped_1%29.jpg/500px-Sanae_Takaichi_portrait_%28HD%29_%28cropped_1%29.jpg",
+    "alt": "Sanae Takaichi portrait (HD) (cropped 1)",
+    "credit": "Unknown author",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sanae_Takaichi_portrait_(HD)_(cropped_1).jpg"
+  },
+  "labels": [
+    "politics",
+    "firsts"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-03-07",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2025-10-21",
+      "precision": "day",
+      "label": "Prime minister",
+      "note": "Elected prime minister by the Diet."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "japan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Sanae Takaichi",
+      "url": "https://en.wikipedia.org/wiki/Sanae_Takaichi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "scottish-independence-referendum-2014",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Scottish independence referendum",
+      "from": "2014"
+    }
+  ],
+  "summary": "A vote on whether Scotland should leave the United Kingdom. About 55 percent voted to stay.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Flag_of_Scotland.svg/500px-Flag_of_Scotland.svg.png",
+    "alt": "Flag of Scotland",
+    "credit": "none known",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Scotland.svg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-09-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-09-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2014 Scottish independence referendum",
+      "url": "https://en.wikipedia.org/wiki/2014_Scottish_independence_referendum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

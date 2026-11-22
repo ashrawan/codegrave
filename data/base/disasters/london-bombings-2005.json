@@ -1,0 +1,50 @@
+{
+  "id": "london-bombings-2005",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "7 July 2005 London bombings",
+      "from": "2005"
+    }
+  ],
+  "summary": "Four suicide bombings on three Underground trains and a bus in London during the morning rush hour, which killed 52 people.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Russell_square_ambulances.jpg/500px-Russell_square_ambulances.jpg",
+    "alt": "Russell square ambulances",
+    "credit": "Francis Tyers",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Russell_square_ambulances.jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2005-07-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-07-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 7 July 2005 London bombings",
+      "url": "https://en.wikipedia.org/wiki/7_July_2005_London_bombings",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

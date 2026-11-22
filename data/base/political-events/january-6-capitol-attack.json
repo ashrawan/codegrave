@@ -1,0 +1,53 @@
+{
+  "id": "january-6-capitol-attack",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "January 6 Capitol attack",
+      "from": "2021"
+    }
+  ],
+  "summary": "A mob of supporters of Donald Trump stormed the United States Capitol to try to stop Congress from certifying Joe Biden's election win.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/2021_storming_of_the_United_States_Capitol_DSC09254-2_%2850820534063%29_%28retouched%29.jpg/500px-2021_storming_of_the_United_States_Capitol_DSC09254-2_%2850820534063%29_%28retouched%29.jpg",
+    "alt": "2021 storming of the United States Capitol DSC09254-2 (50820534063) (retouched)",
+    "credit": "Tyler Merbler from USA",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_storming_of_the_United_States_Capitol_DSC09254-2_(50820534063)_(retouched).jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2021-01-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-01-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: January 6 United States Capitol attack",
+      "url": "https://en.wikipedia.org/wiki/January_6_United_States_Capitol_attack",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,46 @@
+{
+  "id": "murder-of-george-floyd",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Murder of George Floyd",
+      "from": "2020"
+    }
+  ],
+  "summary": "The killing of a Black man by a Minneapolis police officer who knelt on his neck for more than nine minutes. It set off protests against racism and police violence across the United States and the world.",
+  "labels": [
+    "human-rights"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-05-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-05-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-states"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Murder of George Floyd",
+      "url": "https://en.wikipedia.org/wiki/Murder_of_George_Floyd",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

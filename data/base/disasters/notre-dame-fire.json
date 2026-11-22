@@ -1,0 +1,53 @@
+{
+  "id": "notre-dame-fire",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Notre-Dame de Paris fire",
+      "from": "2019"
+    }
+  ],
+  "summary": "A fire that destroyed the roof and spire of Notre-Dame cathedral. It was rebuilt and reopened in December 2024.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Incendie_Notre_Dame_de_Paris.jpg/500px-Incendie_Notre_Dame_de_Paris.jpg",
+    "alt": "Incendie Notre Dame de Paris",
+    "credit": "LeLaisserPasserA38",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Incendie_Notre_Dame_de_Paris.jpg"
+  },
+  "labels": [
+    "architecture"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-04-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2019-04-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Notre-Dame de Paris fire",
+      "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris_fire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

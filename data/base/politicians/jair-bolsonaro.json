@@ -1,0 +1,48 @@
+{
+  "id": "jair-bolsonaro",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Jair Bolsonaro",
+      "from": "1955"
+    }
+  ],
+  "summary": "Former army captain and far-right president of Brazil from 2019 to 2022. In 2025 the Supreme Court convicted him of plotting a coup to stay in power.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jair_Bolsonaro_em_24_de_abril_de_2019_%281%29_%28cropped%29.jpg/500px-Jair_Bolsonaro_em_24_de_abril_de_2019_%281%29_%28cropped%29.jpg",
+    "alt": "Jair Bolsonaro em 24 de abril de 2019 (1)",
+    "credit": "Isac Nóbrega/PR",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jair_Bolsonaro_em_24_de_abril_de_2019_(1)_(cropped).jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Jair Bolsonaro",
+      "url": "https://en.wikipedia.org/wiki/Jair_Bolsonaro",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

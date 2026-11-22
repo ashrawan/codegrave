@@ -592,6 +592,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const keep = (x) => { if (!L || x == null) return null; const t = L.when(x); return { t, off: x - L.place(t) }; };
     const was = keep(road.t), aim = keep(road.target);
     roadLayout();
+    // Other views on the road: the pictures of the ones that left go at once, not after their hold.
+    const sig = state.views.join();
+    if (wall && sig !== road.sig) wall.reset();
+    road.sig = sig;
     if (was) road.t = road.prev = L.place(was.t) + was.off;
     if (aim) road.target = L.place(aim.t) + aim.off;
     if (road.t == null) road.t = road.prev = roadOpening();
@@ -1554,7 +1558,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
         (many ? `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button>` : '') + '</div>';
     }).join('');
-    $('save-mine').disabled = !state.views.length;
     $('shuffle').hidden = !many;
     requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
@@ -1764,19 +1767,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     showOnly(f.v.id).then((got) => { if (got && matchMedia(PHONE).matches) showSide(false); });
   }
 
-  // One saved view per visitor, kept in this browser. Saving again replaces it.
-  function myView() {
-    try { const v = JSON.parse(store.get('cg-mine') || 'null'); return v && Array.isArray(v.views) && v.views.length ? v : null; }
-    catch (e) { return null; }
-  }
-  function saveMine() {
-    if (!state.views.length) return;
-    store.set('cg-mine', JSON.stringify({ views: state.views, level: state.level, order: state.order, span: state.span }));
-    const b = $('save-mine');
-    b.innerHTML = ICON.check; b.classList.add('done'); b.title = 'Saved as your view';
-    setTimeout(() => { b.innerHTML = ICON.save; b.classList.remove('done'); b.title = 'Save as your view'; }, 1600);
-    runSearch();
-  }
+  // "Your view" was a view saved in this browser with a bookmark button. The button was removed, so an
+  // old saved view no longer takes over the page; links and the default views open as they say.
+  function myView() { return null; }
   function loadMine(v) {
     Promise.all(v.views.map(loadView)).then(() => { if (play.on) pausePlay(); state.pinned.clear(); applyMine(v); road.t = road.target = null; road.vel = 0; drawReverse(); changed(); });
   }
@@ -2249,7 +2242,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.span = $('years-reset').dataset.mode === 'all' && L ? [writtenOf(L.fitMin), writtenOf(L.fitMax - 1e-9)] : null;
       changed();
     });
-    $('save-mine').addEventListener('click', saveMine);
     $('filters-btn').addEventListener('click', () => {
       const open = $('filters').classList.toggle('open');
       $('filters-btn').setAttribute('aria-expanded', open);

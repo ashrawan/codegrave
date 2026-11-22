@@ -1,0 +1,46 @@
+{
+  "id": "olympics-2024",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "2024 Summer Olympics",
+      "from": "2024"
+    }
+  ],
+  "summary": "The Paris Games, opened with a parade of boats along the Seine, a hundred years after Paris last hosted the Olympics.",
+  "labels": [
+    "sport"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-07-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-08-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: 2024 Summer Olympics",
+      "url": "https://en.wikipedia.org/wiki/2024_Summer_Olympics",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

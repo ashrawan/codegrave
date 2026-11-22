@@ -133,7 +133,7 @@ still goes through `render()`.
 How the page is put together:
 
 - **Loading.** `start()` asks for `boot.json` and, at the same time, the
-  views the link names (or the saved "Your view", else `home.json`).
+  views the link names (else `home.json`).
   `loadView()` and `loadEntry()` fetch one file each, once; `ingest()` keeps
   every loaded entry as a single object in `byId`. A view that fails to load
   leaves a note and the page keeps working. An old address is answered by
@@ -303,9 +303,10 @@ How the page is put together:
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
   colour, and the cross removes one of several. The strip starts at the
-  left with the "Views" button and the pills; shuffle and the bookmark
-  stand at its right end, the bookmark last. This was asked for; do not
-  centre the strip again.
+  left with the "Views" button and the pills; at its right end stand what
+  BCE and CE stand for, then shuffle. There is no bookmark: "Your view" was
+  removed on request (Nov 2026). This was asked for; do not centre the
+  strip again.
 - **One view at a time.** Picking a view shows it alone (`showOnly()`): the
   others leave and the road opens at its beginning. Putting a view beside
   the others is the second action (`turnOn()`): the small plus at the end
@@ -355,9 +356,11 @@ How the page is put together:
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
 - "Propose a view" at the end of the list opens the "Propose a view" issue
-  form with the current link filled in. The bookmark icon saves the timeline
-  as "Your view" in this browser (`cg-mine`, one slot), and the page opens
-  on it when the link names no views.
+  form with the current link filled in.
+- Pictures are never cropped: cards, the walls, the panel and the view
+  thumbnails show the whole picture (`object-fit: contain`), portrait or
+  landscape. When other views take the road, `wall.reset()` empties every
+  frame at once so no picture of the old views lingers.
 - Lines are neutral. Colour is only for view names and the selected line.
 - Whether a name is a card is decided by distance, not by rank.
 

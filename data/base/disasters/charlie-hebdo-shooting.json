@@ -1,0 +1,53 @@
+{
+  "id": "charlie-hebdo-shooting",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Charlie Hebdo shooting",
+      "from": "2015"
+    }
+  ],
+  "summary": "Two gunmen attacked the Paris office of the satirical weekly Charlie Hebdo and killed twelve people, including several of its cartoonists.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Charlie-Hebdo-2015-11.JPG/500px-Charlie-Hebdo-2015-11.JPG",
+    "alt": "Charlie-Hebdo-2015-11",
+    "credit": "Thierry Caro / Jérémie Hartmann",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Charlie-Hebdo-2015-11.JPG"
+  },
+  "labels": [
+    "media"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-01-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2015-01-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "france"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Charlie Hebdo shooting",
+      "url": "https://en.wikipedia.org/wiki/Charlie_Hebdo_shooting",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

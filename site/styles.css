@@ -151,7 +151,7 @@ body.side-open #axisbar { right: var(--side); }
 .tb { position: relative; flex: none; width: 56px; height: 36px; display: flex; align-items: center; justify-content: center; overflow: hidden; color: var(--faint); background: var(--bg); border: 1px solid var(--rule); border-radius: 5px; }
 .tb svg.th { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; }
 .tb .th .dead { opacity: .45; }
-.tb img { width: 100%; height: 100%; object-fit: cover; }
+.tb img { width: 100%; height: 100%; object-fit: contain; }
 .tb.icon { color: var(--faint); }
 #vlist li[aria-checked="true"] { background: color-mix(in srgb, var(--c) 8%, var(--surf)); }
 #vlist li[aria-checked="true"]:hover, #vlist li[aria-checked="true"][aria-selected="true"] { background: color-mix(in srgb, var(--c) 14%, var(--surf)); }
@@ -235,7 +235,7 @@ body.side-open #dock { right: var(--side); }
 .official a { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; }
 .ev-src { display: inline-block; margin-top: 3px; font-size: 11.5px; color: var(--faint); }
 .ev-src:hover { color: var(--text); }
-figure img { display: block; width: 100%; max-height: 220px; object-fit: cover; background: var(--ph); }
+figure img { display: block; width: 100%; max-height: 220px; object-fit: contain; background: var(--ph); }
 figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 .ev-img { margin-top: 8px; }
 #p-thing section, #p-era section { padding-top: 14px; border-top: 1px solid var(--rule2); }
@@ -393,7 +393,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 /* a card that opens while play travels: a ring in its view's colour that fades into the card's own edge */
 .rc.full.ring { animation: rcring .8s ease-out; }
 @keyframes rcring { from { border-color: var(--c); box-shadow: 0 0 0 5px color-mix(in srgb, var(--c) 32%, transparent), var(--card-sh); } }
-.rc.full img { display: block; width: 100%; height: 110px; margin-bottom: 8px; object-fit: cover; background: var(--ph); border-radius: 2px; }
+.rc.full img { display: block; width: 100%; height: 110px; margin-bottom: 8px; object-fit: contain; background: var(--ph); border-radius: 2px; }
 .rc .rk { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
 .rc.full .rk b { min-width: 0; overflow: hidden; text-overflow: ellipsis; font-size: 10.5px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--c); }
 .rc .rk small { flex: none; font-size: 11.5px; color: var(--faint); font-variant-numeric: tabular-nums; }
@@ -491,7 +491,7 @@ small > .ctag, small .ctag { margin-left: 0; }
 .wm { position: absolute; inset: 0; opacity: 0; transform: scale(1.04); transition: opacity 1.2s ease, transform 2.4s ease; transition-delay: calc(var(--k, 0) * 110ms); }
 .wm.on { opacity: 1; transform: none; }
 .wm.broken { display: none; }
-.wm img, .wm video { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; filter: saturate(.72) contrast(1.06) brightness(.82); }
+.wm img, .wm video { width: 100%; height: 100%; object-fit: contain; display: block; filter: saturate(.72) contrast(1.06) brightness(.82); }
 /* the light of the era over each picture, and a sheen of glass */
 .wf::after { content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
   background: linear-gradient(135deg, rgba(255, 255, 255, .14), transparent 38%), linear-gradient(to top, color-mix(in srgb, var(--wf-c) 22%, transparent), transparent 55%); }
@@ -514,3 +514,9 @@ small > .ctag, small .ctag { margin-left: 0; }
 #road.short .wf { opacity: 0; }
 /* the head reads clearly where a frame floats behind it */
 #road-head { text-shadow: 0 1px 2px var(--bg), 0 0 12px var(--bg); }
+
+/* What BCE and CE stand for, quietly at the right end of the strip. */
+.era-key { font-size: 12px; color: var(--faint); white-space: nowrap; margin-right: 6px; }
+.era-key b { font-weight: 600; opacity: 1; }
+.era-key i { font-style: normal; margin: 0 4px; opacity: .6; }
+@media (max-width: 700px) { .era-key { font-size: 10px; white-space: normal; line-height: 1.25; max-width: 140px; text-align: right; } .era-key i { display: block; height: 0; overflow: hidden; } }

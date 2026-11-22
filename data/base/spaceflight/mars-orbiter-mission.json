@@ -1,0 +1,54 @@
+{
+  "id": "mars-orbiter-mission",
+  "category": "spaceflight",
+  "names": [
+    {
+      "name": "Mars Orbiter Mission",
+      "from": "2013"
+    }
+  ],
+  "summary": "India's first mission to Mars, also called Mangalyaan. It reached Mars orbit in 2014 on its first try, at a very low cost.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg/500px-Mars_Orbiter_Mission_Over_Mars_%2815237158879%29.jpg",
+    "alt": "Mars Orbiter Mission Over Mars (15237158879)",
+    "credit": "Kevin Gill from Nashua, NH, United States",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mars_Orbiter_Mission_Over_Mars_(15237158879).jpg"
+  },
+  "labels": [
+    "space-race",
+    "firsts"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-11-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "india"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Mars Orbiter Mission",
+      "url": "https://en.wikipedia.org/wiki/Mars_Orbiter_Mission",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

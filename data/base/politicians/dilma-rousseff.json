@@ -1,0 +1,49 @@
+{
+  "id": "dilma-rousseff",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Dilma Rousseff",
+      "from": "1947"
+    }
+  ],
+  "summary": "Economist and former guerrilla who became Brazil's first woman president in 2011. She was impeached and removed in 2016.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Dilma_Rousseff_-_foto_oficial_2011-01-09_%28cropped%29.jpg/500px-Dilma_Rousseff_-_foto_oficial_2011-01-09_%28cropped%29.jpg",
+    "alt": "Dilma Rousseff - foto oficial 2011-01-09",
+    "credit": "Roberto Stuckert Filho/Presidência da República",
+    "licence": "CC BY 3.0 br",
+    "source": "https://commons.wikimedia.org/wiki/File:Dilma_Rousseff_-_foto_oficial_2011-01-09_(cropped).jpg"
+  },
+  "labels": [
+    "politics",
+    "firsts"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1947-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brazil"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Dilma Rousseff",
+      "url": "https://en.wikipedia.org/wiki/Dilma_Rousseff",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

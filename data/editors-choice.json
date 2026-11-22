@@ -5,6 +5,42 @@
   ],
   "topics": [
     {
+      "id": "countries",
+      "name": "Countries",
+      "views": [
+        "codegrave/brazil",
+        "codegrave/canada",
+        "codegrave/china",
+        "codegrave/france",
+        "codegrave/germany",
+        "codegrave/india",
+        "codegrave/italy",
+        "codegrave/japan",
+        "codegrave/nepal",
+        "codegrave/united-kingdom",
+        "codegrave/united-states"
+      ]
+    },
+    {
+      "id": "culture",
+      "name": "Culture",
+      "views": [
+        "codegrave/famous-paintings",
+        "codegrave/classical-music",
+        "codegrave/rock-and-pop",
+        "codegrave/movies",
+        "codegrave/tv-shows",
+        "codegrave/famous-books",
+        "codegrave/comics-and-superheroes",
+        "codegrave/anime-and-manga",
+        "codegrave/philosophers",
+        "codegrave/world-religions",
+        "codegrave/football",
+        "codegrave/the-olympic-games",
+        "codegrave/greatest-athletes"
+      ]
+    },
+    {
       "id": "history",
       "name": "History",
       "views": [
@@ -68,42 +104,6 @@
         "codegrave/inventions",
         "codegrave/cars",
         "codegrave/aviation"
-      ]
-    },
-    {
-      "id": "culture",
-      "name": "Culture",
-      "views": [
-        "codegrave/famous-paintings",
-        "codegrave/classical-music",
-        "codegrave/rock-and-pop",
-        "codegrave/movies",
-        "codegrave/tv-shows",
-        "codegrave/famous-books",
-        "codegrave/comics-and-superheroes",
-        "codegrave/anime-and-manga",
-        "codegrave/philosophers",
-        "codegrave/world-religions",
-        "codegrave/football",
-        "codegrave/the-olympic-games",
-        "codegrave/greatest-athletes"
-      ]
-    },
-    {
-      "id": "countries",
-      "name": "Countries",
-      "views": [
-        "codegrave/brazil",
-        "codegrave/canada",
-        "codegrave/china",
-        "codegrave/france",
-        "codegrave/germany",
-        "codegrave/india",
-        "codegrave/italy",
-        "codegrave/japan",
-        "codegrave/nepal",
-        "codegrave/united-kingdom",
-        "codegrave/united-states"
       ]
     }
   ]

@@ -1,0 +1,55 @@
+{
+  "id": "keir-starmer",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Keir Starmer",
+      "from": "1962"
+    }
+  ],
+  "summary": "Lawyer and Labour leader who became prime minister after a landslide election win in July 2024.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg/500px-Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg",
+    "alt": "Prime Minister Keir Starmer Portrait",
+    "credit": "Prime Minister's Office",
+    "licence": "OGL 3",
+    "source": "https://commons.wikimedia.org/wiki/File:Prime_Minister_Keir_Starmer_Portrait_(cropped).jpg"
+  },
+  "labels": [
+    "politics"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-09-02",
+      "precision": "day"
+    },
+    {
+      "type": "milestone",
+      "date": "2024-07-05",
+      "precision": "day",
+      "label": "Prime minister",
+      "note": "Took office after Labour won the general election."
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Keir Starmer",
+      "url": "https://en.wikipedia.org/wiki/Keir_Starmer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

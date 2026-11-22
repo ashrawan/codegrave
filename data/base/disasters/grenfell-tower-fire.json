@@ -1,0 +1,50 @@
+{
+  "id": "grenfell-tower-fire",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Grenfell Tower fire",
+      "from": "2017"
+    }
+  ],
+  "summary": "A fire in a London tower block that spread up its flammable cladding and killed 72 people.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Grenfell_Tower_fire_%28wider_view%29.jpg/500px-Grenfell_Tower_fire_%28wider_view%29.jpg",
+    "alt": "Grenfell Tower fire (wider view)",
+    "credit": "Natalie Oxford",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grenfell_Tower_fire_(wider_view).jpg"
+  },
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-06-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-06-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Grenfell Tower fire",
+      "url": "https://en.wikipedia.org/wiki/Grenfell_Tower_fire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

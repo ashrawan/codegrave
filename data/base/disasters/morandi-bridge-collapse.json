@@ -1,0 +1,53 @@
+{
+  "id": "morandi-bridge-collapse",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Morandi Bridge collapse",
+      "from": "2018"
+    }
+  ],
+  "summary": "A section of a motorway bridge in Genoa fell during a storm, killing 43 people. A new bridge opened in 2020.",
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Genova-panorama_dal_santuario_di_ns_incoronata3.jpg/500px-Genova-panorama_dal_santuario_di_ns_incoronata3.jpg",
+    "alt": "Genova-panorama dal santuario di ns incoronata3",
+    "credit": "Davide Papalini",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Genova-panorama_dal_santuario_di_ns_incoronata3.jpg"
+  },
+  "labels": [
+    "engineering"
+  ],
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-08-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "italy"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia: Ponte Morandi",
+      "url": "https://en.wikipedia.org/wiki/Ponte_Morandi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

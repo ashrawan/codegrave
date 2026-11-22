@@ -411,6 +411,11 @@ export function createWall(host, { eras = [] } = {}) {
     },
     // The light on each wall now, for the road to borrow.
     light() { return { warm: W.warm, cool: W.cool }; },
+    // Empties every frame, for when other views take the road: what the old ones showed must not linger.
+    reset() {
+      for (const f of frames) { f.live = false; f.gone = 0; put(f, null, null); }
+      W.cards = []; W.key = ''; W.due = Infinity;
+    },
     clear() {
       for (const k of [sky, cv]) k.getContext('2d').clearRect(0, 0, k.width, k.height);
       W.geo = '';
