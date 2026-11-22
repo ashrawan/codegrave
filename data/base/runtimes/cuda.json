@@ -40,5 +40,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Nvidia_CUDA_Logo.jpg",
+    "alt": "CUDA",
+    "credit": "Nvidia",
+    "licence": "Apache License 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nvidia_CUDA_Logo.jpg"
+  }
 }

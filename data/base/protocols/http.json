@@ -55,5 +55,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": true
+  "verified": true,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/HTTP_logo.svg/500px-HTTP_logo.svg.png",
+    "alt": "HTTP",
+    "credit": "IETF HTTP Working Group (HTTPbis)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:HTTP_logo.svg"
+  }
 }

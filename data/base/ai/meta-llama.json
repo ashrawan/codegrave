@@ -13,7 +13,11 @@
   ],
   "maker": "Meta AI",
   "summary": "A family of large language models from Meta. The first version was offered to researchers and its weights soon spread online; later versions were released openly for anyone to download, run and build on, which made it the base of many other models.",
-  "aliases": ["Llama 2", "Llama 3", "Large Language Model Meta AI"],
+  "aliases": [
+    "Llama 2",
+    "Llama 3",
+    "Large Language Model Meta AI"
+  ],
   "events": [
     {
       "type": "born",
@@ -42,5 +46,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Llama_chatbot_example_screenshot.webp/500px-Llama_chatbot_example_screenshot.webp",
+    "alt": "Llama",
+    "credit": "Software: Meta AI Screenshot: VulcanSphere",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Llama_chatbot_example_screenshot.webp"
+  }
 }

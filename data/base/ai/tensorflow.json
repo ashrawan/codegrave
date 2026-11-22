@@ -39,5 +39,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/TensorFlow_logo.svg/500px-TensorFlow_logo.svg.png",
+    "alt": "TensorFlow",
+    "credit": "Google LLC",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:TensorFlow_logo.svg"
+  }
 }
