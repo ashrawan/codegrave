@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, fileName, coverPictures, INKS, PAPERS } from '../site/print.js';
+import { yearText, fmtDate, when, spanText, sideOf, paperFor, shapeView, fileName, coverPictures, INKS, PAPERS, POSTER, posterSheets, posterSlots, posterCardWidth } from '../site/print.js';
 
 test('dates are written as the page writes them', () => {
   assert.equal(yearText(1969), '1969');
@@ -67,4 +67,28 @@ test('cover pictures spread over time and kinds, in date order', () => {
   assert.ok(p[0].y < 1910 && p.at(-1).y >= 1990);       // from the start to the end
   assert.ok(p.some((e) => e.kind === 'Rocket'));         // not all of one kind
   assert.equal(coverPictures(es.slice(0, 3), 12).length, 3);
+});
+
+test('the poster uses the fewest sheets whose cards stay readable', () => {
+  const one = posterSheets(20);
+  assert.equal(one.sizes.length, 1);
+  const space = posterSheets(85);
+  assert.deepEqual(space.sizes, [29, 29, 27]);
+  assert.ok(posterCardWidth(space.C) >= POSTER.minCard);
+  const big = posterSheets(1000);
+  assert.equal(big.sizes.reduce((a, b) => a + b, 0), 1000);
+  assert.ok(posterCardWidth(big.C) >= POSTER.minCard);
+});
+
+test('poster slots run in date order, top to bottom, and keep the first and last columns full', () => {
+  for (const [n, C] of [[29, 8], [27, 8], [32, 8], [9, 3]]) {
+    const s = posterSlots(n, C);
+    assert.equal(s.length, n);
+    // date order is column by column, then slot by slot
+    for (let i = 1; i < s.length; i++) assert.ok(s[i][0] > s[i - 1][0] || (s[i][0] === s[i - 1][0] && s[i][1] > s[i - 1][1]));
+    if (n >= 4 * C - (C - 2)) {
+      assert.equal(s.filter(([c]) => c === 0).length, 4);
+      assert.equal(s.filter(([c]) => c === C - 1).length, 4);
+    }
+  }
 });

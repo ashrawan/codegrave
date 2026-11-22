@@ -18,6 +18,8 @@ export const INKS = ['#a5621a', '#2c58a6', '#a23b67', '#1f7a5c', '#6a4aa8', '#7a
 // Chapter tints of a single view.
 const TINTS = ['#b5651d', '#2f6b9a', '#7a4f9e', '#2e7d6b', '#a83b3b', '#8a7a2a', '#5b6b7a', '#9a5a7a'];
 const BEFORE = '#9a8f7e';   // entries before the first chapter
+// The poster's sheet: A2 landscape.
+const POSTER_PAPER = { w: 594, h: 420, css: 'A2 landscape' };
 export const PAPERS = { a4: { w: 210, h: 297, css: 'A4' }, letter: { w: 215.9, h: 279.4, css: 'letter' } };
 const MM = 96 / 25.4;
 
@@ -80,7 +82,7 @@ export function shapeView(payload, boot, i, span) {
     const img = e.image || (e.media || []).find((m) => m.type === 'image');
     return {
       vi: i, id: e.id, name: e.names.at(-1).name, kind: catName[e.category] || e.category, summary: e.summary || '',
-      t: when(born.date), y, date: fmtDate(born.date, born.precision), rank: e.rank ?? 1e9,
+      t: when(born.date), y, end: end ? dateParts(end.date).y : null, date: fmtDate(born.date, born.precision), rank: e.rank ?? 1e9,
       endText: end ? `${w.ended} ${fmtDate(end.date, end.precision)}${e.cause ? '. ' + e.cause : ''}` : '',
       ci: chs.findIndex((c) => y >= c.from && y <= c.to),
       img: img ? { src: img.src, credit: String(img.credit || '').replace(/<[^>]*>/g, '').slice(0, 90), licence: img.licence || '' } : null,
@@ -345,32 +347,141 @@ function many(V, inks) {
   }, link);
 }
 
+// ---------------------------------------------------------------- the poster
+// "Poster" in the Format switch (asked for, Nov 2026, after several rounds): A2 landscape sheets, as
+// few as the cards need. One thick line across the middle, coloured by chapter and named on itself;
+// every entry is a card (picture, kind, name, years, summary, the picture's credit). The cards stand
+// on one grid of columns shared by four rows, so every row starts at the left edge and ends at the
+// right. A column holds up to four entries in date order, read from top to bottom: top outer, top
+// inner, bottom inner, bottom outer. The inner cards' lines drop straight to the line; the outer
+// cards' lines run down the gutter beside the column, so no line crosses a card. A small ring marks
+// where each line meets the band, with the year written beside it (not a pill: asked for).
+export const POSTER = { w: 594, h: 420, side: 22, gutter: 7, minCard: 44, maxCard: 62 };
+// Card width for C columns on a sheet: a gutter before the first and after the last for their lines.
+export const posterCardWidth = (C) => Math.min(POSTER.maxCard, (POSTER.w - 2 * POSTER.side - (C + 1) * POSTER.gutter) / C);
+// How the entries share the sheets: the fewest sheets whose cards are at least minCard wide.
+// Returns the number of entries on each sheet and the columns per sheet.
+export function posterSheets(n) {
+  for (let P = 1; ; P++) {
+    const per = Math.ceil(n / P), C = Math.ceil(per / 4);
+    if (posterCardWidth(C) >= POSTER.minCard || per <= 4) {
+      const sizes = []; for (let i = 0; i < n; i += per) sizes.push(Math.min(per, n - i));
+      return { sizes, C };
+    }
+  }
+}
+// The slots of one sheet, [column, slot] in date order. A sheet with fewer entries than 4 × C gives
+// up an outer slot in columns inside it (top and bottom in turn), so its first and last columns stay
+// full and the edges line up.
+export function posterSlots(n, C) {
+  const empty = Math.max(0, C * 4 - n), short = new Set();
+  for (let k = 0; k < empty; k++) short.add(Math.min(C - 1, Math.max(0, Math.round((k + 1) * (C - 1) / (empty + 1)))));
+  const out = [];
+  for (let c = 0; c < C; c++) out.push(...(short.has(c) ? (c % 2 ? [0, 1, 2] : [1, 2, 3]) : [0, 1, 2, 3]).map((s) => [c, s]));
+  return out.slice(0, n);
+}
+
+function poster(vs, inks) {
+  const S = POSTER, one = vs.length === 1, link = linkOf(vs);
+  const all = one ? vs[0].es : inOrder(vs.flatMap((v) => v.es), rev);
+  const chs = one ? vs[0].chs : [];
+  const ink = (e) => (one ? (e.ci < 0 ? BEFORE : TINTS[e.ci % TINTS.length]) : inks[e.vi]);
+  const { sizes, C } = posterSheets(all.length), CW = posterCardWidth(C);
+  const PIC = CW * 0.56, CH = PIC + 42, BAND = 8, MID = 40 + (S.h - 14 - 40) / 2;
+  const name = vs.map((v) => v.name).join(', ');
+  // with several views the title names them in their colours, which are the cards' colours
+  const title = one ? esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + esc(v.name) + '</span>').join(', ');
+  const first = Math.min(...vs.map((v) => v.first)), last = vs.every((v) => v.last != null) ? Math.max(...vs.map((v) => v.last)) : null;
+  const yearsOf = (e) => (e.end != null && e.end !== e.y ? (rev ? yearText(e.end) + ' – ' + yearText(e.y) : yearText(e.y) + ' – ' + yearText(e.end)) : yearText(e.y));
+  let at = 0;
+  sizes.forEach((n, pi) => {
+    const part = all.slice(at, at + n); at += n;
+    const p = newPage('sheet'), lastSheet = pi === sizes.length - 1;
+    p.style.setProperty('--mid', MID + 'mm');
+    const slots = posterSlots(n, C);
+    const items = part.map((e, i) => {
+      const [c, s] = slots[i], a = S.side + S.gutter + c * (CW + S.gutter);
+      const x = s === 0 ? a - S.gutter / 2 + 1.4 : s === 1 ? a + CW * 0.35 : s === 2 ? a + CW * 0.65 : a + CW + S.gutter / 2 - 1.4;
+      return { e, a, x, up: s <= 1, outer: s === 0 || s === 3 };
+    });
+    let h = '';
+    // the band: one stretch per chapter (one view) or a plain line (several views)
+    const key = (e) => (one ? e.ci : -2);
+    const runs = [];
+    items.forEach((it, i) => { if (!i || key(it.e) !== key(items[i - 1].e)) runs.push({ k: key(it.e), a: i ? (it.x + items[i - 1].x) / 2 : S.side - 4 }); });
+    runs.forEach((r, j) => {
+      const b = j < runs.length - 1 ? runs[j + 1].a : S.w - S.side + 4, c = chs[r.k];
+      const col = r.k === -2 ? '#3a3631' : r.k < 0 ? BEFORE : TINTS[r.k % TINTS.length];
+      h += '<div class="seg" style="left:' + r.a + 'mm;width:' + (b - r.a) + 'mm;background:' + col + '">' + (c ? '<b>' + esc(c.name) + '</b><span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span>' : '') + '</div>';
+    });
+    h += '<div class="arrow" style="left:' + (S.w - S.side + 4) + 'mm;top:' + MID + 'mm"></div>';
+    for (const { e, a, x, up, outer } of items) {
+      const k = ink(e), near = up ? MID - BAND / 2 - 7 - CH : MID + BAND / 2 + 7, top = outer ? (up ? near - CH - 6 : near + CH + 6) : near;
+      const edge = up ? MID - BAND / 2 : MID + BAND / 2;
+      if (outer) {
+        const my = top + CH / 2;
+        h += '<div class="arm" style="left:' + (up ? x : a + CW) + 'mm;top:' + my + 'mm;width:' + (up ? a - x : x - a - CW) + 'mm;background:' + k + '"></div>'
+          + '<div class="stem" style="left:' + x + 'mm;top:' + Math.min(my, edge) + 'mm;height:' + Math.abs(edge - my) + 'mm;background:' + k + '"></div>';
+      } else {
+        const s0 = up ? top + CH : edge, s1 = up ? edge : top;
+        h += '<div class="stem" style="left:' + x + 'mm;top:' + s0 + 'mm;height:' + (s1 - s0) + 'mm;background:' + k + '"></div>';
+      }
+      h += '<div class="tick" style="left:' + x + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + x + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>';
+      h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + '">'
+        + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""><figcaption>' + esc([e.img.credit, e.img.licence].filter(Boolean).join(' · ')) + '</figcaption></figure>' : '')
+        + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
+    }
+    // where this sheet sits in the whole span, when there are several
+    const t0 = Math.min(...all.map((e) => e.y)), t1 = new Date().getFullYear(), pos = (y) => ((y - t0) / Math.max(1, t1 - t0)) * 100;
+    const ys = part.map((e) => e.y), toNow = rev ? pi === 0 : lastSheet;
+    const lo = Math.min(...ys), hi = toNow ? t1 : Math.max(...ys);
+    const from = rev && pi === 0 ? 'Today' : yearText(part[0].y), to = !rev && lastSheet ? 'Today' : yearText(part.at(-1).y);
+    const mini = sizes.length > 1 ? '<div class="mini"><div class="w" style="left:' + pos(lo) + '%;width:' + Math.max(2, pos(hi) - pos(lo)) + '%"></div></div><div class="pn">Part ' + (pi + 1) + ' of ' + sizes.length + ' · ' + esc(from + ' – ' + to) + '</div>' : '';
+    const head = pi === 0
+      ? '<div class="t"><h1>' + title + '</h1><p>' + esc(one ? vs[0].description : '') + '</p><div class="y">' + esc(rs(first, last)) + mini + '</div></div>'
+      : '<div class="t sm"><h1>' + title + '</h1><div class="y">' + mini + '</div></div>';
+    const foot = '<div class="foot"><span class="lnk">' + (lastSheet ? esc(link) + ' · Pictures from Wikimedia Commons, credited on each card. Text CC BY-NC-SA 4.0.' : '') + '</span><span>A timeline from codegrave</span></div>';
+    p.innerHTML = head + h + foot;
+  });
+  // a chapter's stretch of the band too short for its label drops the years, then the label
+  for (const el of doc.querySelectorAll('.sheet .seg')) {
+    if (el.scrollWidth > el.clientWidth + 1) el.querySelector('span')?.remove();
+    if (el.scrollWidth > el.clientWidth + 1) el.textContent = '';
+  }
+  // each summary keeps the whole words that fit its card
+  for (const el of doc.querySelectorAll('.sheet .tx p')) {
+    const words = el.textContent.split(' ');
+    while (words.length > 1 && el.scrollHeight > el.clientHeight + 1) { words.pop(); el.textContent = words.join(' ').replace(/[,;:]?$/, '…'); }
+  }
+}
+
 // ---------------------------------------------------------------- download
 const LIBS = ['https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'];
 const script = (src) => new Promise((ok, no) => { const s = document.createElement('script'); s.src = src; s.onload = ok; s.onerror = () => no(new Error('could not load ' + src)); document.head.appendChild(s); });
 // A file name from the views' names: "space-exploration-computers.pdf".
 export const fileName = (names) => (names.join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'codegrave') + '.pdf';
-async function download(paper) {
+async function download(paper, fmt) {
   const btn = $('save'), msg = $('msg'), was = msg.textContent;
-  btn.disabled = true; $('paper').disabled = true; $('order').disabled = true;
+  btn.disabled = true; $('paper').disabled = true; $('order').disabled = true; $('fmt').disabled = true;
   try {
     msg.textContent = 'Making the PDF…';
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
-    const P = PAPERS[paper] || PAPERS.a4;
-    const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: 'portrait', compress: true });
+    const P = fmt === 'poster' ? POSTER_PAPER : PAPERS[paper] || PAPERS.a4, turn = P.w > P.h ? 'landscape' : 'portrait';
+    const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: turn, compress: true });
     const pages = [...doc.querySelectorAll('.pg')];
     for (let i = 0; i < pages.length; i++) {
       msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
-      const c = await window.html2canvas(pages[i], { scale: 2, useCORS: true, backgroundColor: '#ffffff', logging: false });
-      if (i) pdf.addPage([P.w, P.h], 'portrait');
+      // a poster sheet is large: 1.5 keeps it sharp at A2 without a huge file
+      const c = await window.html2canvas(pages[i], { scale: fmt === 'poster' ? 1.5 : 2, useCORS: true, backgroundColor: '#ffffff', logging: false });
+      if (i) pdf.addPage([P.w, P.h], turn);
       pdf.addImage(c.toDataURL('image/jpeg', 0.85), 'JPEG', 0, 0, P.w, P.h, undefined, 'FAST');
     }
     pdf.setProperties({ title: shaped.views.map((v) => v.name).join(', '), creator: 'codegrave.com' });
-    pdf.save(fileName(shaped.views.map((v) => v.name)));
+    pdf.save(fileName(shaped.views.map((v) => v.name).concat(fmt === 'poster' ? ['poster'] : [])));
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { btn.disabled = false; $('paper').disabled = false; $('order').disabled = false; }
+  } finally { btn.disabled = false; $('paper').disabled = fmt === 'poster'; $('order').disabled = false; $('fmt').disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -379,19 +490,19 @@ async function getJSON(path) {
   if (!r.ok) throw new Error(path + ' ' + r.status);
   return r.json();
 }
-const FONTS = ['400 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
+const FONTS = ['400 9px "Source Serif 4"', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
 let shaped = null;
-function lay(paper) {
-  const P = PAPERS[paper] || PAPERS.a4;
+function lay(paper, fmt) {
+  const P = fmt === 'poster' ? POSTER_PAPER : PAPERS[paper] || PAPERS.a4;
   document.documentElement.style.setProperty('--pw', P.w + 'mm');
   document.documentElement.style.setProperty('--ph', P.h + 'mm');
   $('page-size').textContent = '@page { size: ' + P.css + '; }';
   doc.textContent = ''; pageNo = 0;
   const { views, inks } = shaped;
-  document.body.className = views.length === 1 ? 'one' : 'many';
+  document.body.className = fmt === 'poster' ? 'poster' : views.length === 1 ? 'one' : 'many';
   const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
-  if (vs.length === 1) single(vs[0]); else many(vs, inks);
-  $('msg').textContent = pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
+  if (fmt === 'poster') poster(vs, inks); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
+  $('msg').textContent = fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', A2 landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
 async function start() {
@@ -414,15 +525,20 @@ async function start() {
   shaped = { views, inks: keep };
   // The paper starts as the one used where the reader is (Letter in the US and a few others, A4 elsewhere); both stay in the switch.
   const sel = $('paper'); sel.value = PAPERS[q.get('paper')] ? q.get('paper') : paperFor(navigator.language);
-  await lay(sel.value);
-  const relay = async () => { $('save').disabled = true; await lay(sel.value); $('save').disabled = false; };
+  // Format: the book (A4 or Letter pages) or the poster (A2 sheets); kept in the link as `fmt=poster`
+  const fm = $('fmt'); fm.value = q.get('fmt') === 'poster' ? 'poster' : 'book';
+  const keepLink = () => history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/'));
+  sel.disabled = fm.value === 'poster';
+  await lay(sel.value, fm.value);
+  const relay = async () => { $('save').disabled = true; sel.disabled = fm.value === 'poster'; await lay(sel.value, fm.value); $('save').disabled = false; };
   sel.addEventListener('change', relay);
+  fm.addEventListener('change', () => { if (fm.value === 'poster') q.set('fmt', 'poster'); else q.delete('fmt'); keepLink(); relay(); });
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';
-    q.set('o', rev ? 'backward' : 'forward'); history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/'));
+    q.set('o', rev ? 'backward' : 'forward'); keepLink();
     relay(); });
   $('save').disabled = false;
-  $('save').addEventListener('click', () => download(sel.value));
+  $('save').addEventListener('click', () => download(sel.value, fm.value));
   document.body.dataset.done = '1';
 }
 if (typeof document !== 'undefined') start().catch((err) => { $('msg').textContent = 'Something went wrong: ' + err.message; });
