@@ -2310,7 +2310,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // Download PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html).
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
-      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '');
+      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + (state.order === 'new' ? '&o=new' : '');
       window.open('print.html?' + q, '_blank', 'noopener');
     });
 

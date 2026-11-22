@@ -99,7 +99,11 @@ function newPage(cls) {
   doc.appendChild(p); pageNo++; return p;
 }
 let yr = null;   // the year range the timeline was narrowed to, if any
-const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '');
+let rev = false; // newest first, like the timeline turned round (`o=new`)
+// Entries in reading order: oldest first, or newest first when reversed; the better ranked first within a moment.
+export const inOrder = (es, newest) => es.slice().sort((a, b) => (newest ? b.t - a.t : a.t - b.t) || a.rank - b.rank || a.vi - b.vi);
+const ends = (first) => (rev ? ['today', yearText(first)] : [yearText(first), 'today']);
+const linkOf = (views) => 'codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '') + (rev ? '&o=new' : '');
 const today = () => { const d = new Date(); return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); };
 
 // ---------------------------------------------------------------- one view
@@ -113,11 +117,11 @@ function single(D) {
   // the cover: title, numbers, the best pictures, the chapters, and the whole view as bands
   {
     const p = newPage('cover'); const m = frame(p, 'A timeline from codegrave.com');
-    const pics = coverPictures(D.es, 12);
+    const pics = coverPictures(D.es, 12); if (rev) pics.reverse();
     m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
       + '<div class="stats"><div><b>' + esc(spanText(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-      + '<div class="toc">' + D.chs.map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
+      + '<div class="toc">' + (rev ? D.chs.slice().reverse() : D.chs).map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
     // The cover is one page: 12 small pictures in rows of 6 (picked, Nov 2026), 6 in one row when the
     // chapters need the room, and a long list of chapters closes up last.
     const mos = m.querySelector('.mos'), over = () => m.scrollHeight > m.clientHeight + 1;
@@ -129,14 +133,15 @@ function single(D) {
     if (over()) m.classList.add('tight');
     const r = p.querySelector('.rail'); const H = r.clientHeight;
     const keys = D.chs.map((c, i) => ({ c, i, n: Math.max(1, D.es.filter((e) => e.ci === i).length) }));
+    if (rev) keys.reverse();   // newest at the top
     const total = keys.reduce((s, k) => s + k.n, 0) || 1; let y = 6 * MM;
     r.insertAdjacentHTML('beforeend', '<div class="mini"><div class="lab" style="padding-left:12.6mm">The whole view</div></div><div class="ax" style="top:6mm"></div>');
     keys.forEach((k) => {
       const h = (H - 8 * MM) * k.n / total;
-      r.insertAdjacentHTML('beforeend', '<div class="band" style="top:' + y + 'px;height:' + (h - 2) + 'px;background:' + T(k.i) + '"></div><div class="tl" style="top:' + y + 'px">' + esc(yearText(k.c.from)) + '</div><div class="bn" style="top:' + (y + 2) + 'px">' + esc(k.c.name) + '<span>' + k.n + ' entries</span></div>');
+      r.insertAdjacentHTML('beforeend', '<div class="band" style="top:' + y + 'px;height:' + (h - 2) + 'px;background:' + T(k.i) + '"></div><div class="tl" style="top:' + y + 'px">' + esc(rev ? (k.c.to >= 1e9 ? 'today' : yearText(k.c.to)) : yearText(k.c.from)) + '</div><div class="bn" style="top:' + (y + 2) + 'px">' + esc(k.c.name) + '<span>' + k.n + ' entries</span></div>');
       y += h;
     });
-    if (keys.length) r.insertAdjacentHTML('beforeend', '<div class="tl" style="top:' + y + 'px">today</div>');
+    if (keys.length) r.insertAdjacentHTML('beforeend', '<div class="tl" style="top:' + y + 'px">' + esc(rev ? yearText(keys.at(-1).c.from) : 'today') + '</div>');
   }
   // the pages: chapters and entries flow down the left; a page ends when the next one does not fit
   let page, main, items = [];
@@ -162,7 +167,7 @@ function single(D) {
       const ks = D.es.map((e, k) => (e.ci === i ? k : -1)).filter((k) => k >= 0); if (!ks.length) return;
       mini += '<div class="seg" style="left:' + (ks[0] / N * 100) + '%;width:' + ((ks.at(-1) - ks[0] + 1) / N * 100) + '%;background:' + T(i) + ';opacity:.45"></div>';
     });
-    mini += '<div class="win" style="left:' + (i0 / N * 100) + '%;width:' + Math.max(2, (i1 - i0 + 1) / N * 100) + '%"></div></div><div class="ends"><span>' + esc(yearText(D.es[0].y)) + '</span><span>today</span></div></div>';
+    mini += '<div class="win" style="left:' + (i0 / N * 100) + '%;width:' + Math.max(2, (i1 - i0 + 1) / N * 100) + '%"></div></div><div class="ends"><span>' + esc(ends(D.first)[0]) + '</span><span>' + esc(ends(D.first)[1]) + '</span></div></div>';
     r.insertAdjacentHTML('beforeend', mini + '<div class="scale"><div class="ax"></div></div>');
     const sc = r.querySelector('.scale'); const H = sc.clientHeight;
     const pr = page.getBoundingClientRect(), sr = sc.getBoundingClientRect(); const off = sr.top - pr.top;
@@ -242,7 +247,7 @@ const creditHtml = (e, c) => '<div><b' + (c ? ' style="color:' + c + '"' : '') +
 // ---------------------------------------------------------------- several views
 function many(V, inks) {
   const N = V.length;
-  const all = V.flatMap((v) => v.es).sort((a, b) => a.t - b.t || a.vi - b.vi);
+  const all = inOrder(V.flatMap((v) => v.es), rev);
   const link = linkOf(V);
   function newManyPage(cls, sect, withLink) {
     const p = newPage(cls);
@@ -255,14 +260,14 @@ function many(V, inks) {
     const p = newManyPage('cover', 'Timelines from codegrave.com');
     p.insertAdjacentHTML('beforeend', '<div class="title"><h1>' + V.map((v) => esc(v.name)).join(' <span>·</span> ') + '</h1><p>' + N + ' views read side by side, ' + all.length + ' entries. The years run down the middle in order; each view keeps its side and its colour.</p></div>'
       + '<div class="body"><div class="col L"></div><div class="hub"><div class="ln"></div><div class="yr a"></div><div class="yr b">today</div></div><div class="col R"></div></div>');
-    p.querySelector('.yr.a').textContent = yearText(Math.min(...V.map((v) => v.first)));
-    if (V[0].last != null) p.querySelector('.yr.b').textContent = yearText(V[0].last);
+    const top = yearText(Math.min(...V.map((v) => v.first))), bot = V[0].last != null ? yearText(V[0].last) : 'today';
+    p.querySelector('.yr.a').textContent = rev ? bot : top; p.querySelector('.yr.b').textContent = rev ? top : bot;
     V.forEach((v, i) => {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
-      const pics = coverPictures(v.es, N <= 2 ? 18 : 4);   // two views: three rows of 6 each (asked for, Nov 2026)
+      const pics = coverPictures(v.es, N <= 2 ? 18 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
       el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(spanText(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-        + (N > 4 ? '' : '<ol>' + v.chs.map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
+        + (N > 4 ? '' : '<ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(spanText(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
   }
@@ -308,7 +313,7 @@ function many(V, inks) {
     const es = dots.flatMap((d) => d.pts.map((p) => p.e)); if (!es.length) return;
     page.querySelector('.head .sp').textContent = spanText(es[0].y, es.at(-1).y);
     const i0 = all.indexOf(es[0]), i1 = all.indexOf(es.at(-1)), NN = all.length;
-    page.querySelector('.mini').innerHTML = '<div class="lab">Page ' + pageNo + ' in the whole timeline</div><div class="bar"><div class="win" style="left:' + (i0 / NN * 100) + '%;width:' + Math.max(2, (i1 - i0 + 1) / NN * 100) + '%"></div></div><div class="ends"><span>' + esc(yearText(all[0].y)) + '</span><span>today</span></div>';
+    page.querySelector('.mini').innerHTML = '<div class="lab">Page ' + pageNo + ' in the whole timeline</div><div class="bar"><div class="win" style="left:' + (i0 / NN * 100) + '%;width:' + Math.max(2, (i1 - i0 + 1) / NN * 100) + '%"></div></div><div class="ends"><span>' + esc(ends(Math.min(...V.map((v) => v.first)))[0]) + '</span><span>' + esc(ends(Math.min(...V.map((v) => v.first)))[1]) + '</span></div>';
     const fr = flow.getBoundingClientRect(); const X = CW + 8 * MM;
     let svg = '<svg class="links">', html = '';
     dots.forEach((d) => {
@@ -345,7 +350,7 @@ const script = (src) => new Promise((ok, no) => { const s = document.createEleme
 export const fileName = (names) => (names.join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'codegrave') + '.pdf';
 async function download(paper) {
   const btn = $('save'), msg = $('msg'), was = msg.textContent;
-  btn.disabled = true; $('paper').disabled = true;
+  btn.disabled = true; $('paper').disabled = true; $('order').disabled = true;
   try {
     msg.textContent = 'Making the PDF…';
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
@@ -363,7 +368,7 @@ async function download(paper) {
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { btn.disabled = false; $('paper').disabled = false; }
+  } finally { btn.disabled = false; $('paper').disabled = false; $('order').disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -382,7 +387,8 @@ function lay(paper) {
   doc.textContent = ''; pageNo = 0;
   const { views, inks } = shaped;
   document.body.className = views.length === 1 ? 'one' : 'many';
-  if (views.length === 1) single(views[0]); else many(views, inks);
+  const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
+  if (vs.length === 1) single(vs[0]); else many(vs, inks);
   $('msg').textContent = pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
@@ -392,6 +398,7 @@ async function start() {
   if (!ids.length) { $('msg').textContent = 'No views named. Open a timeline and press Download PDF.'; return; }
   const m = /^(-?\d+)-(-?\d+)$/.exec(q.get('yr') || '');
   if (m && Number(m[1]) < Number(m[2])) yr = [Number(m[1]), Number(m[2])];
+  rev = q.get('o') === 'new';
   const cs = (q.get('c') || '').split(',').map(Number);
   const inks = ids.map((_, i) => INKS[(cs.length === ids.length && cs[i] >= 0 && cs[i] < 8 ? cs[i] : i) % INKS.length]);
   const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => getJSON('v/' + id + '.json').catch(() => null))]);
@@ -405,7 +412,10 @@ async function start() {
   shaped = { views, inks: keep };
   const sel = $('paper'); sel.value = PAPERS[q.get('paper')] ? q.get('paper') : paperFor(navigator.language);
   await lay(sel.value);
-  sel.addEventListener('change', async () => { $('save').disabled = true; await lay(sel.value); $('save').disabled = false; });
+  const relay = async () => { $('save').disabled = true; await lay(sel.value); $('save').disabled = false; };
+  sel.addEventListener('change', relay);
+  const ord = $('order'); ord.value = rev ? 'new' : 'old';
+  ord.addEventListener('change', () => { rev = ord.value === 'new'; relay(); });
   $('save').disabled = false;
   $('save').addEventListener('click', () => download(sel.value));
   document.body.dataset.done = '1';
