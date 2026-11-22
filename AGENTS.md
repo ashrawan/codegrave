@@ -203,9 +203,13 @@ How the page is put together:
 - **The look.** Dark by default, like a museum at night: a sky of stars,
   glass cards with a lit edge, the road lit warm from the left and cool from
   the right. Light stays as a softer gallery (`cg-theme`).
-- **The media wall** (`site/wall.js`, `docs/WALL.md`). Either side of the
-  road stands a wall of points that flows past as the reader travels, with
-  six frames floating in front of each (two on a phone) that show the
+- **The media wall** (`site/wall.js`, `docs/WALL.md`). The road runs
+  through a dark void (a CSS gradient, stars drawn once), with rails of
+  light either side whose pulses rush towards the reader and about 200 motes
+  of dust fading into fog, all on one 2D canvas and only while something
+  moves. Asked for as "great performance on all devices": no WebGL, no
+  library, no grid on the flanks. Six frames float either side (two on a
+  phone) and show the
   pictures and films of the era in front of the reader, from
   `data/wall.json` by way of `boot.json`. Crossing into another era fades
   the frames one after another and eases the light of the walls and the

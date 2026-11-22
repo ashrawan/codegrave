@@ -465,7 +465,16 @@ small > .ctag, small .ctag { margin-left: 0; }
 .rc.tag { text-shadow: 0 0 4px var(--bg), 0 0 8px var(--bg); }
 
 /* ---- the media wall: the sky, the walls of points, and the frames floating in front of them */
-#wall { position: absolute; inset: 0; z-index: 0; pointer-events: none; --wall-warm: #e3b25f; --wall-cool: #78a9f0; }
+#wall { position: absolute; inset: 0; z-index: 0; pointer-events: none; --wall-warm: #e3b25f; --wall-cool: #78a9f0;
+  /* the void: a dark slate gradient, with the era's warm and cool light low on either side. It costs nothing to draw. */
+  background:
+    radial-gradient(60% 45% at 0% 22%, color-mix(in srgb, var(--wall-warm) 16%, transparent), transparent 70%),
+    radial-gradient(60% 45% at 100% 22%, color-mix(in srgb, var(--wall-cool) 14%, transparent), transparent 70%),
+    linear-gradient(to bottom, #05070c 0%, #0c101a 30%, #090c14 70%, #05070c 100%); }
+#wall.light { background:
+    radial-gradient(60% 45% at 0% 22%, color-mix(in srgb, var(--wall-warm) 14%, transparent), transparent 70%),
+    radial-gradient(60% 45% at 100% 22%, color-mix(in srgb, var(--wall-cool) 12%, transparent), transparent 70%),
+    linear-gradient(to bottom, #f6f3ec, #ece7dc); }
 #wall canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 #road-cv { z-index: 1; pointer-events: none; }
 #road-labels { position: relative; z-index: 2; }

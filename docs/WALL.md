@@ -1,7 +1,9 @@
 # The media wall
 
-Either side of the road stands a wall: a fine grid of points that flows past
-as the reader travels, with frames floating in front of it. The frames show
+The road runs through a dark void: a slate gradient drawn in CSS, faint
+stars and haze, rails of light either side whose pulses rush towards the
+reader as they travel, and about 200 motes of dust that drift past and fade
+into the fog. Frames float in the dark either side of the road. The frames show
 pictures and short films of the era the reader is in. When the reader
 crosses into another era, the frames fade one after another to the new
 era's media, and the light on the walls and along the edges of the road
@@ -65,15 +67,19 @@ wall.light();                                    // { warm, cool }: the light no
 ```
 
 - `year`: the written year in front of the reader; picks the era.
-- `travel`: how far the reader has come, in focal lengths; the points flow
-  past with it.
+- `travel`: how far the reader has come, in focal lengths; the rails' pulses
+  and the dust come towards the reader with it.
 - `G`: the stage from `stageOf()` in `road.js`. The walls are drawn in the
   road's own perspective: a frame at depth `d` stands where the road's
   `u / D` is `d`.
 - `frame()` returns true while the light is still easing, so the road keeps
   drawing until it settles.
 
-The sky and the walls of points are two canvases; the frames are a dozen
-elements placed with CSS 3D transforms around the road's vanishing point.
+It is built to cost almost nothing on any device. The void is a CSS
+gradient. The stars and haze are drawn once per screen size. Each frame the
+reader moves, one 2D canvas draws five rails, their pulses and `DUST` motes,
+faded by `FOG`; nothing is drawn while the reader stands still. The frames
+are a dozen elements placed with CSS 3D transforms around the road's
+vanishing point.
 `FRAMES` and `FRAMES_PHONE` say where they stand. `eraAt()` and `sidesOf()`
 are pure and tested in `tests/wall.test.mjs`.

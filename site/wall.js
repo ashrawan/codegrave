@@ -67,19 +67,29 @@ export const rgbOf = (hex, fall = [200, 200, 200]) => {
   return m ? [0, 2, 4].map((i) => parseInt(m[1].slice(i, i + 2), 16)) : fall;
 };
 
-// A small steady random number for a whole number: the same point always twinkles the same way.
-import { createScene } from './scene.js';
-
+// A small steady random number for a whole number: the same mote always drifts the same way.
 const hash = (n) => { let x = Math.imul(n ^ 0x9e3779b9, 0x85ebca6b); x ^= x >>> 13; x = Math.imul(x, 0xc2b2ae35); x ^= x >>> 16; return (x >>> 0) / 4294967296; };
 
+export const DUST = 200;      // motes of dust floating in the dark either side of the road
+export const FOG = 0.24;      // how thick the fog is: a mote at depth d shows exp(-(FOG d)^2) of its light
+
+// The rails of light either side of the road: how far out each runs (in road half widths), and how often
+// its pulses come (per focal length). Three warm on the left, two cool on the right.
+export const RAILS = [
+  { x: -1.14, f: 0.9 }, { x: -1.42, f: 1.07 }, { x: -1.78, f: 0.8 },
+  { x: 1.16, f: 1.0 }, { x: 1.55, f: 0.85 },
+];
+
 export function createWall(host, { eras = [] } = {}) {
-  host.innerHTML = '<canvas class="w-gl"></canvas><canvas class="w-sky"></canvas><canvas class="w-cv"></canvas><div class="w-scene"><div class="w-o"></div></div>';
-  const sky = host.children[1], cv = host.children[2], scene = host.children[3], origin = scene.firstChild;
-  // The world in 3D (scene.js): the lit grid to the horizon, the rails of light and the sky. Where WebGL2 is
-  // missing, the walls of points and the sky are drawn flat instead.
-  const world = createScene(host.children[0]);
-  if (!world) host.children[0].remove();
-  host.classList.toggle('gl', !!world);
+  // The void behind it all is a gradient in CSS (#wall). On it: the stars and haze, drawn once per size;
+  // the rails and the dust, drawn each frame the reader moves; and the frames of the era.
+  host.innerHTML = '<canvas class="w-sky"></canvas><canvas class="w-cv"></canvas><div class="w-scene"><div class="w-o"></div></div>';
+  const sky = host.children[0], cv = host.children[1], scene = host.children[2], origin = scene.firstChild;
+  // The dust: a place for each mote, along the road and out to the sides, and how high it floats.
+  const motes = Array.from({ length: DUST }, (_, i) => {
+    const side = hash(i * 5 + 1) < 0.5 ? -1 : 1, out = 0.15 + 3.2 * Math.pow(hash(i * 5 + 2), 1.4);
+    return { x: side * out, y: -1.1 + 2.0 * hash(i * 5 + 3), d: hash(i * 5 + 4) * 9, b: 0.4 + 0.6 * hash(i * 5 + 5) };
+  });
   const frames = [];
   for (const side of [-1, 1]) for (let k = 0; k < SLOTS; k++) {
     const el = document.createElement('a');
@@ -142,55 +152,30 @@ export function createWall(host, { eras = [] } = {}) {
     }
   }
 
-  // The sky: a dark field, a glow at the horizon, a scatter of stars joined here and there. Drawn once per size and theme.
+  // The sky: a scatter of faint stars and a few soft clouds of haze, on the gradient of the void. Drawn once per size and theme.
   function drawSky(G, dark, dpr) {
     const c = sky.getContext('2d');
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
     c.clearRect(0, 0, G.SW, G.SH);
-    if (!dark) {
-      const g = c.createRadialGradient(G.vx, G.vy, 0, G.vx, G.vy, Math.max(G.SW, G.SH) * 0.8);
-      g.addColorStop(0, 'rgba(255,250,236,1)'); g.addColorStop(1, 'rgba(238,233,220,1)');
-      c.fillStyle = g; c.fillRect(0, 0, G.SW, G.SH);
-      return;
+    if (!dark) return;
+    for (let i = 0; i < 7; i++) {
+      const x = hash(i * 9 + 11) * G.SW, y = G.vy * 0.3 + hash(i * 9 + 12) * G.SH * 0.6, r = (0.12 + 0.2 * hash(i * 9 + 13)) * Math.max(G.SW, G.SH);
+      const g = c.createRadialGradient(x, y, 0, x, y, r);
+      g.addColorStop(0, 'rgba(120,135,165,0.07)'); g.addColorStop(1, 'rgba(120,135,165,0)');
+      c.fillStyle = g; c.fillRect(x - r, y - r, 2 * r, 2 * r);
     }
-    const g = c.createRadialGradient(G.vx, G.vy, 0, G.vx, G.vy, Math.max(G.SW, G.SH) * 0.9);
-    g.addColorStop(0, '#1b2333'); g.addColorStop(0.35, '#0e131d'); g.addColorStop(1, '#05070b');
-    c.fillStyle = g; c.fillRect(0, 0, G.SW, G.SH);
-    // The stars and a few constellations, above the horizon mostly.
-    const n = Math.round((G.SW * G.SH) / 5200), pts = [];
+    // A faint light where the road meets the horizon.
+    const h = c.createRadialGradient(G.vx, G.vy, 0, G.vx, G.vy, G.SW * 0.22);
+    h.addColorStop(0, 'rgba(190,205,235,0.16)'); h.addColorStop(1, 'rgba(190,205,235,0)');
+    c.fillStyle = h; c.fillRect(0, 0, G.SW, G.SH);
+    const n = Math.round((G.SW * G.SH) / 4200);
     for (let i = 0; i < n; i++) {
-      const x = hash(i * 3 + 1) * G.SW, y = Math.pow(hash(i * 3 + 2), 1.6) * G.SH * 0.9, b = hash(i * 3 + 3);
-      pts.push([x, y]);
-      c.fillStyle = `rgba(220,228,255,${(0.15 + 0.6 * b * b).toFixed(3)})`;
-      const r = b > 0.97 ? 1.6 : b > 0.85 ? 1.1 : 0.7;
+      const x = hash(i * 3 + 1) * G.SW, y = Math.pow(hash(i * 3 + 2), 1.5) * G.SH * 0.85, b = hash(i * 3 + 3);
+      const r = b > 0.985 ? 1.6 : b > 0.9 ? 1.1 : 0.7;
+      c.fillStyle = `rgba(215,225,250,${(0.12 + 0.55 * b * b * b).toFixed(3)})`;
       c.fillRect(x - r / 2, y - r / 2, r, r);
     }
-    c.lineWidth = 0.6;
-    for (let i = 0; i < pts.length; i++) {
-      if (hash(i + 999) > 0.18) continue;
-      const [x, y] = pts[i];
-      let best = null, bd = Infinity;
-      for (let j = 0; j < pts.length; j++) { if (j === i) continue; const d = Math.hypot(pts[j][0] - x, pts[j][1] - y); if (d < bd && d > 12) { bd = d; best = pts[j]; } }
-      if (!best || bd > 150) continue;
-      c.strokeStyle = 'rgba(160,185,235,0.16)';
-      c.beginPath(); c.moveTo(x, y); c.lineTo(best[0], best[1]); c.stroke();
-    }
-    // A bright star over the far end of the road.
-    const sx = G.vx, sy = G.vy * 0.42, h = c.createRadialGradient(sx, sy, 0, sx, sy, 60);
-    h.addColorStop(0, 'rgba(235,242,255,0.9)'); h.addColorStop(0.08, 'rgba(200,220,255,0.35)'); h.addColorStop(1, 'rgba(160,190,255,0)');
-    c.fillStyle = h; c.fillRect(sx - 60, sy - 60, 120, 120);
-    c.strokeStyle = 'rgba(225,235,255,0.5)'; c.lineWidth = 1;
-    c.beginPath(); c.moveTo(sx - 26, sy); c.lineTo(sx + 26, sy); c.moveTo(sx, sy - 26); c.lineTo(sx, sy + 26); c.stroke();
-    // A haze along the horizon.
-    const hz = c.createLinearGradient(0, G.vy - 60, 0, G.vy + 90);
-    hz.addColorStop(0, 'rgba(120,150,210,0)'); hz.addColorStop(0.5, 'rgba(120,150,210,0.10)'); hz.addColorStop(1, 'rgba(120,150,210,0)');
-    c.fillStyle = hz; c.fillRect(0, G.vy - 60, G.SW, 150);
   }
-
-  // The shape of a wall: how far from the middle of the road it stands at a depth (in focal lengths),
-  // in the road's own units at the reader's feet. It bends away as it goes, so it reads as curved.
-  const wallX = (G, d) => G.RW * (G.phone ? 1.12 : 1.22) + G.RW * 0.5 * Math.max(0, d);
-  const wallTop = (G, d) => -G.gh * (0.95 - 0.04 * Math.min(d, 8));
 
   function layout(G) {
     const dpr = Math.min(2, devicePixelRatio || 1);
@@ -210,75 +195,54 @@ export function createWall(host, { eras = [] } = {}) {
       f.el.style.width = w.toFixed(0) + 'px'; f.el.style.height = h.toFixed(0) + 'px';
       f.el.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,${(-F * d).toFixed(1)}px) rotateY(${f.side < 0 ? 36 : -36}deg) translate(-50%,-50%)`;
     }
-    if (!world) drawSky(G, W.dark, dpr);
+    drawSky(G, W.dark, dpr);
   }
 
-  // Draws the walls: a grid of points that flows past as the reader travels, brighter near, lit by the era.
-  function draw(G, travel) {
+  // Each frame the reader moves: the rails of light and the dust, in the road's perspective. A point at
+  // depth d (focal lengths) and place x (road half widths) is seen at vx + x RW / (1 + d). Both stand still
+  // in the world, so as the reader travels they come towards them.
+  function draw(G, travel, dark) {
     const dpr = Math.min(2, devicePixelRatio || 1), c = cv.getContext('2d');
     c.setTransform(dpr, 0, 0, dpr, 0, 0);
     c.clearRect(0, 0, G.SW, G.SH);
-    const dark = W.dark, STEP = 0.14, ROWS = G.phone ? 14 : 20, SPAN = 8.4;
-    const shift = ((travel % STEP) + STEP) % STEP, base = Math.floor(travel / STEP);
-    for (const side of [-1, 1]) {
-      const col = side < 0 ? W.warm : W.cool, rgb = `${col[0]},${col[1]},${col[2]}`;
-      // The foot of the wall glows where it meets the ground.
-      c.lineWidth = 1.2;
-      c.beginPath();
-      for (let d = -0.2; d <= SPAN; d += 0.2) { const k = 1 / (1 + d), x = G.vx + side * wallX(G, d) * k, y = G.vy + G.gh * k; d <= -0.2 ? c.moveTo(x, y) : c.lineTo(x, y); }
-      const gl = c.createLinearGradient(0, G.vy, 0, G.SH);
-      gl.addColorStop(0, `rgba(${rgb},0)`); gl.addColorStop(1, `rgba(${rgb},${dark ? 0.75 : 0.5})`);
-      c.strokeStyle = gl; c.stroke();
-      // The face of the wall: a faint light rising from its foot.
-      c.beginPath();
-      for (let d = -0.2; d <= SPAN; d += 0.25) { const k = 1 / (1 + d); c.lineTo(G.vx + side * wallX(G, d) * k, G.vy + G.gh * k); }
-      for (let d = SPAN; d >= -0.2; d -= 0.25) { const k = 1 / (1 + d); c.lineTo(G.vx + side * wallX(G, d) * k, G.vy + wallTop(G, d) * k); }
-      c.closePath();
-      const face = c.createLinearGradient(side < 0 ? 0 : G.SW, 0, G.vx + side * G.RW * 0.4, 0);
-      face.addColorStop(0, `rgba(${rgb},${dark ? 0.10 : 0.06})`); face.addColorStop(1, `rgba(${rgb},0)`);
-      c.fillStyle = face; c.fill();
-      const stars = [];
-      // The points: columns along the depth, rows up the wall. Every fourth is a faint line.
-      for (let i = 0; i * STEP < SPAN + STEP; i++) {
-        const d = i * STEP - shift - 0.2, k = 1 / (1 + d);
-        if (d < -0.2) continue;
-        const id = base + i, x = G.vx + side * wallX(G, d) * k;
-        if (x < -4 || x > G.SW + 4) continue;
-        const near = clamp(1 - d / SPAN, 0, 1), top = wallTop(G, d), yb = G.vy + G.gh * k, yt = G.vy + top * k;
-        const fade = near * near * clamp((d + 0.2) / 0.5, 0, 1);
-        if (id % 4 === 0) {
-          c.strokeStyle = `rgba(${rgb},${(0.2 * fade).toFixed(3)})`; c.lineWidth = 0.8;
-          c.beginPath(); c.moveTo(x, yb); c.lineTo(x, yt); c.stroke();
-        }
-        for (let j = 0; j <= ROWS; j++) {
-          const v = j / ROWS, y = yb + (yt - yb) * v, r = hash(id * 131 + j * 7 + (side > 0 ? 5 : 0));
-          if (r < 0.35) continue;
-          const a = fade * (dark ? 1 : 0.7) * (0.3 + 0.7 * Math.pow(r, 5)) * (1 - v * 0.45);
-          if (a < 0.02) continue;
-          const sz = (r > 0.985 ? 2.8 : r > 0.9 ? 1.8 : 1.2) * Math.max(0.5, k * 1.3);
-          if (r > 0.975 && a > 0.08) stars.push([x, y, a]);
-          c.fillStyle = `rgba(${rgb},${a.toFixed(3)})`;
-          c.fillRect(x - sz / 2, y - sz / 2, sz, sz);
-        }
-      }
-      // The brightest points are joined here and there, like a constellation.
-      c.lineWidth = 0.7;
-      for (let n = 1; n < stars.length; n++) {
-        const [x0, y0, a0] = stars[n - 1], [x1, y1, a1] = stars[n];
-        if (Math.hypot(x1 - x0, y1 - y0) > 140) continue;
-        c.strokeStyle = `rgba(${rgb},${(0.45 * Math.min(a0, a1)).toFixed(3)})`;
-        c.beginPath(); c.moveTo(x0, y0); c.lineTo(x1, y1); c.stroke();
-      }
-      // A few rows as faint lines across the wall.
-      for (let j = 0; j <= ROWS; j += 5) {
-        const v = j / ROWS;
-        c.beginPath();
-        for (let d = -0.2; d <= SPAN; d += 0.25) { const k = 1 / (1 + d), yb = G.vy + G.gh * k, yt = G.vy + wallTop(G, d) * k, x = G.vx + side * wallX(G, d) * k, y = yb + (yt - yb) * v; d <= -0.2 ? c.moveTo(x, y) : c.lineTo(x, y); }
-        const g = c.createLinearGradient(side < 0 ? 0 : G.SW, 0, G.vx, 0);
-        g.addColorStop(0, `rgba(${rgb},${dark ? 0.14 : 0.1})`); g.addColorStop(1, `rgba(${rgb},0)`);
-        c.strokeStyle = g; c.lineWidth = 0.8; c.stroke();
+    const fog = (d) => Math.exp(-(FOG * d) * (FOG * d));
+    c.globalCompositeOperation = dark ? 'lighter' : 'source-over';
+    for (const [i, r] of RAILS.entries()) {
+      const col = r.x < 0 ? W.warm : W.cool, rgb = `${Math.round(col[0])},${Math.round(col[1])},${Math.round(col[2])}`;
+      const at = (d) => { const k = 1 / (1 + d); return [G.vx + r.x * G.RW * k, G.vy + G.gh * k]; };
+      // The rail: faint, fading into the fog.
+      const [x0, y0] = at(-0.15), [x1, y1] = at(9);
+      const g = c.createLinearGradient(x0, y0, x1, y1);
+      g.addColorStop(0, `rgba(${rgb},${dark ? 0.6 : 0.5})`); g.addColorStop(0.5, `rgba(${rgb},${dark ? 0.22 : 0.2})`); g.addColorStop(1, `rgba(${rgb},0)`);
+      c.strokeStyle = g; c.lineWidth = 1;
+      c.beginPath(); c.moveTo(x0, y0); c.lineTo(x1, y1); c.stroke();
+      // Its pulses: streaks of light that stand still on the ground, so they rush past as the reader travels.
+      const off = hash(i + 40);
+      for (let n = Math.ceil((travel - 0.15) * r.f - off); ; n++) {
+        const d = (n + off) / r.f - travel;
+        if (d > 7) break;
+        const len = 0.28 + 0.24 * hash(n * 7 + i), [ax, ay] = at(d), [bx, by] = at(d + len), a = fog(d) * (dark ? 0.95 : 0.6);
+        const s = c.createLinearGradient(ax, ay, bx, by);
+        s.addColorStop(0, `rgba(${rgb},${a.toFixed(3)})`); s.addColorStop(1, `rgba(${rgb},0)`);
+        c.strokeStyle = s;
+        const w = Math.max(1, 3.2 / (1 + d));
+        c.lineWidth = w * 3; c.globalAlpha = 0.25; c.beginPath(); c.moveTo(ax, ay); c.lineTo(bx, by); c.stroke();
+        c.lineWidth = w; c.globalAlpha = 1; c.beginPath(); c.moveTo(ax, ay); c.lineTo(bx, by); c.stroke();
       }
     }
+    // The dust: tiny motes that drift towards the reader with the road and fade into the fog.
+    const span = 9, ink = dark ? '205,215,235' : '70,70,70';
+    for (const m of motes) {
+      const d = (((m.d - travel) % span) + span) % span - 0.3, k = 1 / (1 + d);
+      const x = G.vx + m.x * G.RW * k, y = G.vy + m.y * G.gh * k;
+      if (x < -4 || x > G.SW + 4 || y < -4 || y > G.SH + 4) continue;
+      const a = m.b * fog(d) * Math.min(1, (d + 0.3) / 0.6) * (dark ? 0.6 : 0.35);
+      if (a < 0.015) continue;
+      const sz = Math.max(0.7, 2.4 * k);
+      c.fillStyle = `rgba(${ink},${a.toFixed(3)})`;
+      c.fillRect(x - sz / 2, y - sz / 2, sz, sz);
+    }
+    c.globalCompositeOperation = 'source-over';
   }
 
   // A film rests while the page is not in sight.
@@ -316,8 +280,7 @@ export function createWall(host, { eras = [] } = {}) {
         host.style.setProperty('--wall-warm', `rgb(${W.warm.map(Math.round).join(',')})`);
         host.style.setProperty('--wall-cool', `rgb(${W.cool.map(Math.round).join(',')})`);
       }
-      if (world) world.frame({ G, travel, time: performance.now() / 1000, warm: W.warm, cool: W.cool, dark });
-      else draw(G, travel);
+      draw(G, travel, dark);
       return busy;
     },
     // The light on each wall now, for the road to borrow.
