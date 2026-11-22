@@ -197,7 +197,9 @@ How the page is put together:
   for how far it has opened, `n.g`; the page cuts the card to that height,
   and what the card holds keeps to its foot, so nothing in it moves). The
   small card goes with it and dissolves into it, so the two read as one
-  thing. A card that leaves fades where it stands. This was asked for in so
+  thing. A card that closes while its small card is on the stage rolls back
+  down into it the same way (`n.roll`, asked for in Nov 2026); a card that
+  leaves the stage fades where it stands. This was asked for in so
   many words ("think like opening scroll"), so do not bring back a slide or
   a pop.
 - **The look.** Dark by default, like a museum at night: a sky of stars,

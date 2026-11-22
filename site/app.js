@@ -1000,7 +1000,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       boxes.push(r);
       const nk = c.key + ':' + r.mode, n = road.nodes.get(nk) || roadNode(nk, c.p, c.end, r.mode);
       seen.add(nk);
-      n.r = r; n.s = c.s;
+      n.r = r; n.s = c.s; n.roll = false;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
       // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
       if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
@@ -1008,28 +1008,35 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // A card opens out of its small card, like a scroll unrolling: it starts as that box, where that
     // stands, and grows upwards into its own place (openFrom in road.js; `n.g` is how far it has opened,
     // and the card is cut to the height it has reached). The small card goes with it and dissolves into
-    // it, so the two are one thing opening. A card that leaves fades where it is, more slowly than a
-    // small name does.
+    // it, so the two are one thing opening. A card that closes while its small card stays on the stage
+    // rolls back down into it the same way (`n.roll`); a card that leaves the stage fades where it is,
+    // more slowly than a small name does.
     const ease = still ? 1 : 1 - Math.exp(-dt * 12), easeBig = still ? 1 : 1 - Math.exp(-dt * 5.5), easeInto = still ? 1 : 1 - Math.exp(-dt * 8);
     for (const [nk, n] of road.nodes) {
       const p = L.byKey.get(n.pk);
+      const big = n.mode === 'full' || n.mode === 'near', side = (n.end ? 'e:' : 's:') + n.pk;
       if (!seen.has(nk)) {
         const u = p ? U(n.end ? p.b : p.a) : -Infinity;
         if (!p || u <= uNear * 0.9 || u >= uFar) { n.el.remove(); road.nodes.delete(nk); continue; }
         n.s = S(u); n.want = 0; n.live = false;
         n.r = labelRect(n.mode, n.s, px(p.xn, n.s), py(n.s), roadSizes(p.t), G, p.lane.lean);
+        // Closing: roll back down while the small card it closes into is on the stage.
+        n.roll = big && n.g > 0 && !still && placed.get(side) && !placed.get(side).big;
+        if (n.roll) { n.g = Math.max(0, n.g - dt / OPENS); busy = true; if (n.g > 0) n.want = n.o; }
       }
-      const big = n.mode === 'full' || n.mode === 'near', side = (n.end ? 'e:' : 's:') + n.pk;
-      // The card this small card is opening into, if it is.
-      const card = !big && n.mode !== 'tag' && !seen.has(nk) && placed.get(side)?.big ? road.nodes.get(side + ':' + placed.get(side).mode) : null;
-      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * (!big ? (card ? easeInto : ease) : n.g < 1 && n.want > n.o ? ease : easeBig);
+      // The card this small card is opening into, or the card rolling back down into it.
+      const card = big || n.mode === 'tag' ? null
+        : !seen.has(nk) && placed.get(side)?.big ? road.nodes.get(side + ':' + placed.get(side).mode)
+        : seen.has(nk) ? [road.nodes.get(side + ':full'), road.nodes.get(side + ':near')].find((m) => m && m.roll) || null : null;
+      if (card && card.roll) n.want = Math.min(n.want, 1 - card.g);
+      n.o = Math.abs(n.want - n.o) < 0.01 ? n.want : n.o + (n.want - n.o) * (!big ? (card ? easeInto : ease) : n.roll || (n.g < 1 && n.want > n.o) ? ease : easeBig);
       if (n.o !== n.want) busy = true;
       if (!n.want && !n.o && !seen.has(nk)) { n.el.remove(); road.nodes.delete(nk); continue; }
       const hot = hotNow(p.t.id), r = n.r;
       let x = r.cx, y = r.y1, k = r.k, ax = r.ax;
       if (big) {
         if (still) n.g = 1;
-        else if (n.want > 0 && n.g < 1) { n.g = Math.min(1, n.g + dt / OPENS); busy = true; }
+        else if (n.want > 0 && n.g < 1 && !n.roll) { n.g = Math.min(1, n.g + dt / OPENS); busy = true; }
         let cut = '';
         if (n.g < 1) {
           const o = openFrom(labelRect(n.end ? 'endc' : 'compact', n.s, r.gx, r.gy, roadSizes(p.t), G, p.lane.lean), r, n.g);
