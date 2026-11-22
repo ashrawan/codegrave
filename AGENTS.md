@@ -321,12 +321,13 @@ How the page is put together:
   again: it was changed on purpose.
 - **The views pane** is search, then a row of chips (`drawChips()`: the
   editors' topics from `data/editors-choice.json`, today Countries,
-  Culture, History, Science and Technology), then the list, then the
-  filter: the year range (`state.span`). With no chip pressed and nothing
-  searched, the list holds only the views on the timeline ("On the
-  timeline"); there is no "All" list (removed on request, Nov 2026: "just
+  Culture, History, Science and Technology, after a first chip "My view"),
+  then the list, then the filter: the year range (`state.span`). "My view"
+  is pressed when no topic is, and the list then holds only the views on
+  the timeline; there is no "All" list (removed on request, Nov 2026: "just
   have a current showing there, and anything we search"). Pressing a chip
-  lists that topic's views; pressing it again goes back. A search finds
+  lists that topic's views; pressing it again, or "My view", goes back.
+  Both search boxes have a cross that clears them (`.clr`). A search finds
   every view, community and classical, and entries and years. "How much to show" was
   removed on request (Nov 2026): every entry of a view is on the road, and
   the road's scale and the cards by distance do the rest. On a phone the filters fold into one line
@@ -338,7 +339,7 @@ How the page is put together:
   (`viewSub()`: the years the view covers and how many entries it holds).
   The description is the row's tooltip and is searched; it is not printed
   in the list. Keep the row to those two lines.
-- **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter the reader is in (`#road-views`); the year the reader stands in is written large on the right (`#road-year`), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
+- **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter the reader is in below it in small capitals in its colour, with no lines (`#road-views`; style "A", picked from six); the year the reader stands in is written large on the right (`#road-year`), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
 - **The years.** `ruler()` writes the years along the edge of the road and
   `barTicks()` those on the bar. Because the scale is uneven there is no
   fixed step: `yearMarks()` in `site/road.js` writes a year where the years
@@ -375,8 +376,8 @@ How the page is put together:
   `TOP` pixels clear (`stageOf(SW, SH, top)` puts the road and the names
   below it), so nothing moves when the bar comes and goes. While play
   travels the bar slides away (`body.playing`); pointing at the top edge
-  brings it back over the road (`body.peek`), never over the open panel,
-  and it returns when play stops. Asked for in Nov 2026: do not make the
+  brings it back (`body.peek`), over the open panel too (asked for, Nov
+  2026), and it returns when play stops. Asked for in Nov 2026: do not make the
   road move with the bar again.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or

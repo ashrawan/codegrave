@@ -1535,7 +1535,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const h = hits[i];
     if (h && h.suggest) return void window.open(`${REPO}/issues/new?template=new-thing.yml&title=${encodeURIComponent('Add: ' + h.suggest)}&name=${encodeURIComponent(h.suggest)}`, '_blank', 'noopener');
     if (!h || h.none) return;
-    $('q').value = ''; drawHits(''); $('q').blur();
+    $('q').value = ''; $('q').dispatchEvent(new Event('input')); $('q').blur();
     if (h.year != null) return flashYear(h.year);
     if (h.era) return openEra(h.era.key);
     if (h.away) return bringIn(h.e.id);
@@ -1679,8 +1679,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (state.topic && !list.some((d) => d.id === state.topic)) state.topic = '';
     const chip = (id, name) => `<button type="button" role="radio" data-chip="${esc(id)}" aria-checked="${state.topic === id}">${esc(name)}</button>`;
     const ids = list.map((d) => d.id).join(',');
+    // "My view" comes first: the views on the timeline, pressed when no topic is.
     // Redrawn only when the chips change, so the row keeps its sideways scroll.
-    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = list.map((d) => chip(d.id, d.name)).join(''); }
+    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'My view') + list.map((d) => chip(d.id, d.name)).join(''); }
     else for (const b of box.querySelectorAll('[data-chip]')) b.setAttribute('aria-checked', b.dataset.chip === state.topic);
     requestAnimationFrame(chipEdges);
   }
@@ -1702,7 +1703,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (state.topic) {
         for (const v of boot?.views || []) if (chipOf(v) === state.topic) found.push({ v: viewById.get(v.id) || v });
       } else {
-        found.push({ head: 'On the timeline' });
+        found.push({ head: 'My view' });
         for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
       }
       found.push({ propose: true });
@@ -1790,8 +1791,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!f || f.wait || f.head) return;
     if (f.mine) return loadMine(f.mine);
     if (f.propose) return void window.open(`${REPO}/issues/new?template=propose-view.yml&link=${encodeURIComponent(location.href)}`, '_blank', 'noopener');
-    if (f.year != null) { $('vq').value = ''; runSearch(); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
-    if (f.e) { $('vq').value = ''; runSearch(); return bringIn(f.e.id, { focus: true }); }
+    if (f.year != null) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
+    if (f.e) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); return bringIn(f.e.id, { focus: true }); }
     if (pending.has(f.v.id)) return;
     if (beside) {
       if (!state.views.includes(f.v.id)) turnOn(f.v.id);
@@ -2151,9 +2152,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     addEventListener('pointermove', (e) => {
       if (!play.on || e.pointerType === 'touch') return;
       const b = document.body.classList;
-      // Over the open panel the bar stays away: the panel keeps its own head and nothing covers it.
-      const sd = b.contains('side-open') ? $('side').getBoundingClientRect() : null;
-      if (e.clientY < 48 && !(sd && e.clientX >= sd.left)) b.add('peek'); else if (e.clientY > 110 || (sd && e.clientX >= sd.left)) b.remove('peek');
+      // The top edge brings the bar back anywhere, over the open panel too (asked for, Nov 2026).
+      if (e.clientY < 48) b.add('peek'); else if (e.clientY > 110) b.remove('peek');
     }, { passive: true });
     addEventListener('resize', () => {
       clearTimeout(rt);
@@ -2243,12 +2243,20 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     });
 
     $('q').addEventListener('input', findOnTimeline);
+    // A cross in each search box clears it, shown while there is something to clear.
+    for (const c of document.querySelectorAll('.clr')) {
+      const box = $(c.dataset.for), sync = () => { c.hidden = !box.value; };
+      box.addEventListener('input', sync);
+      c.addEventListener('pointerdown', (e) => e.preventDefault());
+      c.addEventListener('click', (e) => { e.preventDefault(); box.value = ''; box.dispatchEvent(new Event('input')); box.focus(); });
+      sync();
+    }
     $('q').addEventListener('focus', () => { indexFor('a'); if ($('q').value) findOnTimeline(); });
     $('q').addEventListener('blur', () => setTimeout(() => drawHits(''), 150));
     $('q').addEventListener('keydown', (e) => {
       if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && hits.length) { e.preventDefault(); hit = (hit + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length; drawHits(fold($('q').value.trim())); }
       else if (e.key === 'Enter') { e.preventDefault(); goHit(Math.max(0, hit)); }
-      else if (e.key === 'Escape') { e.stopPropagation(); $('q').value = ''; drawHits(''); $('q').blur(); }
+      else if (e.key === 'Escape') { e.stopPropagation(); $('q').value = ''; $('q').dispatchEvent(new Event('input')); $('q').blur(); }
     });
     $('qlist').addEventListener('pointerdown', (e) => { const li = e.target.closest('[data-h]'); if (li) { e.preventDefault(); goHit(Number(li.dataset.h)); } });
     $('vq').addEventListener('input', () => { drawChips(); runSearch(); });
@@ -2272,7 +2280,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         $('vlist').querySelector('[aria-selected="true"]')?.scrollIntoView({ block: 'nearest' });
       }
       else if (e.key === 'Enter') { e.preventDefault(); if (active >= 0) pick(active, e.shiftKey); }
-      else if (e.key === 'Escape' && $('vq').value) { e.stopPropagation(); $('vq').value = ''; drawChips(); runSearch(); }
+      else if (e.key === 'Escape' && $('vq').value) { e.stopPropagation(); $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); }
     });
 
     // The bars redraw as they move, and record the link once let go.
