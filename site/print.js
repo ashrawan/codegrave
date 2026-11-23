@@ -475,7 +475,7 @@ function poster(vs, inks, paper, fs) {
         h += '<div class="stem" style="left:' + x + 'mm;top:' + s0 + 'mm;height:' + (s1 - s0) + 'mm;background:' + k + '"></div>';
       }
       h += '<div class="tick" style="left:' + x + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + x + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>';
-      h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.4) + '">'
+      h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
     }
