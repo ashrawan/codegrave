@@ -233,5 +233,5 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster .cr-h{position:absolute;left:22mm;top:12mm;right:22mm}.poster .cr-h h1{font:500 12mm/1 var(--serif)}.poster .cr-h p{font-size:3.4mm;line-height:1.5;color:#666;margin-top:3mm;max-width:260mm}
 .poster .cred{position:absolute;left:22mm;right:22mm;top:44mm;bottom:20mm;columns:4;column-gap:10mm;column-fill:auto;font-size:2.6mm;line-height:1.5;color:#5c5c5c}
 .poster .cred div{break-inside:avoid;margin-bottom:1.6mm}.poster .cred b{color:var(--ink)}
-.poster .foot .brand{flex:none;position:absolute;right:0;bottom:-2mm;font-family:'Instrument Serif',serif;font-size:2.8mm;letter-spacing:0;color:#aaa}
+.poster .brand{position:absolute;left:0;right:0;bottom:3.5mm;text-align:center;line-height:1;font-family:'Instrument Serif',serif;font-size:2.8mm;letter-spacing:0;color:#aaa}
 .poster .foot .lnk{flex:1;min-width:0}
