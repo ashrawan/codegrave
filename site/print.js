@@ -47,9 +47,6 @@ export function dateParts(s) {
   const [y, m, d] = (neg ? s.slice(1) : s).split('-').map(Number);
   return { y: neg ? -y : y, m, d };
 }
-// the period of an entry beside its dot on the book's rail: the name is already beside the dot on the
-// left, so the rail gives only the years (asked for, Nov 2026)
-export function period(e) { return e.end != null && e.end !== e.y ? yearText(e.y) + ' – ' + yearText(e.end) : yearText(e.y); }
 export function yearText(y) {
   if (y > 0) return y < 1000 ? y + ' CE' : String(y);
   const a = -y;
@@ -206,7 +203,7 @@ function single(D) {
     let svg = '<svg class="links">';
     const x2 = sr.left - pr.left + 14 * MM - 1.4 * MM;
     groups.forEach((g) => {
-      sc.insertAdjacentHTML('beforeend', '<div class="dot" style="top:' + g.y + 'px;border-color:' + T(g[0].e.ci) + '"></div><div class="dl" style="top:' + g.y + 'px">' + [...new Set(g.map((p) => period(p.e)))].map(esc).join('<br>') + '</div>');
+      sc.insertAdjacentHTML('beforeend', '<div class="dot" style="top:' + g.y + 'px;border-color:' + T(g[0].e.ci) + '"></div><div class="dl" style="top:' + g.y + 'px">' + esc(yearText(g[0].e.y)) + '</div>');
       g.forEach((p) => {
         const c = T(p.e.ci);
         const d = Math.abs(p.y2 - p.y1) < 1.5 ? 'M' + p.xe + ' ' + p.y1 + ' H ' + x2 : 'M' + p.xe + ' ' + p.y1 + ' H ' + (x2 - 12 * MM) + ' C ' + (x2 - 5 * MM) + ' ' + p.y1 + ', ' + (x2 - 7 * MM) + ' ' + p.y2 + ', ' + x2 + ' ' + p.y2;
