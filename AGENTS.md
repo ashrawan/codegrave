@@ -308,8 +308,8 @@ How the page is put together:
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
   colour, and the cross removes one of several. The strip starts at the
-  left with the "Views" button and the pills; at its right end stand
-  Export as PDF, then reverse (`state.order`), small, last in the strip
+  left with the pills; at its right end stand the "Views" button (moved
+  there on request, Nov 2026), Export as PDF, then reverse (`state.order`), small, last in the strip
   (moved there on request, Nov 2026). There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
