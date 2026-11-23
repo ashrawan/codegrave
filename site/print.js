@@ -491,6 +491,9 @@ function poster(vs, inks, paper, fs) {
       h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
+      // with several views a small thumbnail of the card's view (a flag) sits on its top border, like the book's tabs (asked for, Nov 2026)
+      const vf = !one && vs[e.vi]?.flag;
+      if (vf) h += '<img class="cflag" crossorigin="anonymous" src="' + esc(vf) + '" alt="" style="left:' + (a + 3) + 'mm;top:' + top + 'mm">';
     });
     if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
