@@ -475,18 +475,21 @@ function poster(vs, inks, paper, fs) {
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
     }
     // where this sheet sits in the whole span, when there are several
-    const t0 = Math.min(...all.map((e) => e.y)), t1 = new Date().getFullYear(), pos = (y) => ((y - t0) / Math.max(1, t1 - t0)) * 100;
-    const ys = part.map((e) => e.y), toNow = rev ? pi === 0 : lastSheet;
-    const lo = Math.min(...ys), hi = toNow ? t1 : Math.max(...ys);
+    const t0 = Math.min(...all.map((e) => e.y));
     const from = rev && pi === 0 ? 'Today' : yearText(part[0].y), to = !rev && lastSheet ? 'Today' : yearText(part.at(-1).y);
     // top right: the whole span as a bar in the chapters' colours (one view) or the views' (several),
-    // with this sheet's stretch outlined, and which part this is
-    const clamp = (v) => Math.max(0, Math.min(100, v));
-    const pre = one && chs.length && pos(chs[0].from) > 0 ? '<i style="left:0;width:' + clamp(pos(chs[0].from)) + '%;background:' + BEFORE + '"></i>' : '';
-    const bands = pre + (one
-      ? chs.map((c, i) => { const a = clamp(pos(c.from)), b = clamp(pos(c.to >= 1e9 ? t1 : c.to)); return b > a ? '<i style="left:' + a + '%;width:' + (b - a) + '%;background:' + TINTS[i % TINTS.length] + '"></i>' : ''; }).join('')
-      : vs.map((v, i) => { const a = clamp(pos(v.first)), b = clamp(pos(v.last ?? t1)); return '<i style="left:' + a + '%;width:' + Math.max(1, b - a) + '%;top:' + (i * 100 / vs.length) + '%;height:' + (100 / vs.length) + '%;background:' + inks[i] + '"></i>'; }).join(''));
-    const win = sizes.length > 1 ? '<b style="left:' + clamp(pos(lo)) + '%;width:' + Math.max(1.5, clamp(pos(hi)) - clamp(pos(lo))) + '%"></b>' : '';
+    // with this sheet's stretch outlined. Like the book's bar (and the road), it is measured in entries,
+    // not in years, so a long empty stretch of years does not swallow the chapters.
+    const asc = all.slice().sort((a, b) => a.y - b.y), NA = Math.max(1, asc.length);
+    const idxOf = new Map(asc.map((e, k) => [e, k]));
+    const seg = (k0, k1) => { const a = k0 / NA * 100, w = (k1 - k0 + 1) / NA * 100; return rev ? [100 - a - w, w] : [a, w]; };
+    const range = (pick) => { const ks = asc.map((e, k) => (pick(e) ? k : -1)).filter((k) => k >= 0); return ks.length ? [ks[0], ks.at(-1)] : null; };
+    const bar = (r, col, extra) => { if (!r) return ''; const [l, w] = seg(r[0], r[1]); return '<i style="left:' + l + '%;width:' + w + '%;background:' + col + (extra || '') + '"></i>'; };
+    const bands = one
+      ? bar(range((e) => e.ci < 0), BEFORE) + chs.map((c, i) => bar(range((e) => e.ci === i), TINTS[i % TINTS.length])).join('')
+      : vs.map((v, i) => bar(range((e) => e.vi === i), inks[i], ';top:' + (i * 100 / vs.length) + '%;height:' + (100 / vs.length) + '%')).join('');
+    const pk = part.map((e) => idxOf.get(e)).filter((k) => k != null);
+    const win = sizes.length > 1 && pk.length ? (([l, w]) => '<b style="left:' + l + '%;width:' + Math.max(1.5, w) + '%"></b>')(seg(Math.min(...pk), Math.max(...pk))) : '';
     const label = sizes.length > 1 ? esc(from + ' – ' + to) : esc(rs(first, last));
     const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
     // the heading: the span alone in the top right corner; below it the title on the left and the description on the right (first sheet)
