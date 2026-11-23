@@ -67,7 +67,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .one .rail .bn{position:absolute;left:18.5mm;right:0;font-family:var(--serif);font-size:8.58px;line-height:1.05}
 .one .rail .bn span{display:block;font-family:Inter;font-size:6px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin-top:.5mm}
 .one .rail .dot{position:absolute;left:14mm;width:2.4mm;height:2.4mm;margin:-1.2mm 0 0 -1.1mm;border-radius:50%;background:#fff;border:1.2px solid var(--ink)}
-.one .rail .dl{position:absolute;left:18mm;transform:translateY(-50%);font-size:6.5px;color:var(--ink);white-space:nowrap;max-width:22mm;overflow:hidden;text-overflow:ellipsis}
+.one .rail .dl{position:absolute;left:18mm;right:0;transform:translateY(-50%);font:500 10.5px/1.2 Inter,sans-serif;color:var(--ink);font-variant-numeric:tabular-nums}
 .one .rail .life{position:absolute;left:14mm;width:1.2mm;margin-left:-.5mm;background:var(--acc);opacity:.35}
 .one .cover .main{top:26mm}
 .one .cover .brand{font-family:'Instrument Serif';font-size:20px}
