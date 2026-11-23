@@ -559,11 +559,14 @@ async function getJSON(path) {
 }
 const FONTS = ['400 9px Lora', '500 9px Lora', '600 9px Lora', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
 let shaped = null;
-// The text size (`fs`, 0.8 to 2, Export options, `&size=` in the link; asked for, Nov 2026). The book
+// The text size (`fs`, Export options, `&size=` in the link; asked for, Nov 2026). The slider reads
+// 60 to 150 %, and its 100 % is TEXT_BASE times the size the layout was drawn for (picked by eye, Nov
+// 2026: the first sizes read too small, and 140 % was best). The book
 // scales its text (`--fs` in print.css) and keeps its page layout, so larger text means fewer entries
 // a page and more pages. The poster scales the whole sheet in posterSheet() as far as two rows of
 // cards still fit the paper, then the cards' text alone (`--tf`), which shortens the summaries.
-let fs = 1;
+export const TEXT_BASE = 1.4;
+let fs = TEXT_BASE;
 function lay(paper, fmt) {
   const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
   document.documentElement.style.setProperty('--pw', P.w + 'mm');
@@ -622,17 +625,17 @@ async function start() {
   fo.innerHTML = Object.entries(FONTS_OFFERED).map(([k, f]) => '<option value="' + k + '">' + f.name + (k === FONT_DEFAULT ? ' (default)' : '') + '</option>').join('');
   fo.value = FONTS_OFFERED[q.get('font')] ? q.get('font') : FONT_DEFAULT;
   await useFont(fo.value);
-  { const a = Number(q.get('size')); if (a >= 80 && a <= 200) fs = a / 100; }
+  { const a = Number(q.get('size')); if (a >= 60 && a <= 150) fs = a / 100 * TEXT_BASE; }
   await lay(sel.value, fm.value);
   const relay = async () => { $('save').disabled = true; await lay(sel.value, fm.value); $('save').disabled = false; };
   sel.addEventListener('change', () => { q.set('paper', sel.value); keepLink(); relay(); });
   fo.addEventListener('change', async () => { if (fo.value === FONT_DEFAULT) q.delete('font'); else q.set('font', fo.value); keepLink();
     $('save').disabled = true; await useFont(fo.value); relay(); });
-  // Text size: a slider from 80 % to 200 %; the pages are laid out again when it is let go
+  // Text size: a slider from 60 % to 150 %; the pages are laid out again when it is let go
   const sz = $('size'), szv = $('size-v'), showSize = () => { szv.textContent = sz.value + '%'; };
-  sz.value = Math.round(fs * 100); showSize();
+  sz.value = Math.round(fs / TEXT_BASE * 100); showSize();
   sz.addEventListener('input', showSize);
-  sz.addEventListener('change', () => { fs = sz.value / 100; if (fs === 1) q.delete('size'); else q.set('size', sz.value); keepLink(); relay(); });
+  sz.addEventListener('change', () => { fs = sz.value / 100 * TEXT_BASE; if (Number(sz.value) === 100) q.delete('size'); else q.set('size', sz.value); keepLink(); relay(); });
   fm.addEventListener('change', () => { if (fm.value === 'book') q.set('fmt', 'book'); else q.delete('fmt'); papers(); keepLink(); relay(); });
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';
