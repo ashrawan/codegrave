@@ -592,7 +592,7 @@ let fitWidth = 0;
 if (typeof window !== 'undefined') window.addEventListener('resize', () => { if (innerWidth !== fitWidth) { fitWidth = innerWidth; fit(); } });
 // A poster sheet's own "Download image" button: one sheet as a PNG (asked for, Nov 2026).
 // A small icon in the sheet's top right corner (asked for: no big text), never printed or drawn.
-const SHOT_ICON = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+const SHOT_ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="9.5" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5 4.5 4"/></svg>';
 function addShots(paper) {
   const pages = [...doc.querySelectorAll('.pg')];
   pages.forEach((pg, i) => {
