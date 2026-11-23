@@ -491,8 +491,8 @@ function poster(vs, inks, paper, fs) {
       h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
-      // with several views the card's view is named on its top border in its colour, like the book's tabs; no thumbnail (asked for, Nov 2026)
-      if (!one) h += '<div class="ctab" style="left:' + (a + 3) + 'mm;top:' + top + 'mm;color:' + k + '">' + esc(vs[e.vi].name) + '</div>';
+      // with several views the card's view is named on its bottom border, at the right, in its colour; no thumbnail (asked for, Nov 2026)
+      if (!one) h += '<div class="ctab" style="left:' + (a + CW - 3) + 'mm;top:' + (top + CH) + 'mm;color:' + k + '">' + esc(vs[e.vi].name) + '</div>';
     });
     if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
