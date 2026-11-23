@@ -1,0 +1,50 @@
+{
+  "id": "imhotep",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Imhotep",
+      "from": "-2650"
+    }
+  ],
+  "summary": "An Egyptian official and architect of the first pyramid, later honoured as a god of medicine and healing.",
+  "wikidata": "Q131171",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2650",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Imhotep (Q131171)",
+      "url": "https://www.wikidata.org/wiki/Q131171",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Imhotep",
+      "url": "https://en.wikipedia.org/wiki/Imhotep",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Imhotep-E_3639-IMG_4607-gradient.jpg/500px-Imhotep-E_3639-IMG_4607-gradient.jpg",
+    "alt": "Imhotep",
+    "credit": "Rama",
+    "licence": "CC BY-SA 3.0 fr",
+    "source": "https://commons.wikimedia.org/wiki/File:Imhotep-E_3639-IMG_4607-gradient.jpg"
+  }
+}

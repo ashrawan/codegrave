@@ -1,0 +1,48 @@
+{
+  "id": "edwin-smith-papyrus",
+  "category": "books",
+  "names": [
+    {
+      "name": "Edwin Smith Papyrus",
+      "from": "-1600"
+    }
+  ],
+  "summary": "The oldest known surgical text, an Egyptian scroll describing wounds and how to treat them.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q842363",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Edwin Smith Papyrus (Q842363)",
+      "url": "https://www.wikidata.org/wiki/Q842363",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Edwin Smith Papyrus",
+      "url": "https://en.wikipedia.org/wiki/Edwin_Smith_Papyrus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Edwin_Smith_Papyrus_v2.jpg/500px-Edwin_Smith_Papyrus_v2.jpg",
+    "alt": "Edwin Smith Papyrus",
+    "credit": "Jeff Dahl",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Edwin_Smith_Papyrus_v2.jpg"
+  }
+}

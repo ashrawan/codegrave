@@ -1,0 +1,45 @@
+{
+  "id": "pubg",
+  "category": "games",
+  "names": [
+    {
+      "name": "PUBG: Battlegrounds",
+      "from": "2017"
+    }
+  ],
+  "summary": "The game that made battle royale, a hundred players fighting until one is left, a worldwide craze.",
+  "wikidata": "Q28937399",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-03-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: PUBG: Battlegrounds (Q28937399)",
+      "url": "https://www.wikidata.org/wiki/Q28937399",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: PUBG: Battlegrounds",
+      "url": "https://en.wikipedia.org/wiki/PUBG:_Battlegrounds",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/PUBGCorpABHC.png/500px-PUBGCorpABHC.png",
+    "alt": "PUBG: Battlegrounds",
+    "credit": "Toobadtoogood",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:PUBGCorpABHC.png"
+  }
+}

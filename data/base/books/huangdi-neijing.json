@@ -1,0 +1,48 @@
+{
+  "id": "huangdi-neijing",
+  "category": "books",
+  "names": [
+    {
+      "name": "Huangdi Neijing",
+      "from": "-0200"
+    }
+  ],
+  "summary": "The founding text of traditional Chinese medicine, written as dialogues between the Yellow Emperor and his ministers.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q428448",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Huangdi Neijing (Q428448)",
+      "url": "https://www.wikidata.org/wiki/Q428448",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Huangdi Neijing",
+      "url": "https://en.wikipedia.org/wiki/Huangdi_Neijing",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/The_Su_Wen_of_the_Huangdi_Neijing.djvu/page1-500px-The_Su_Wen_of_the_Huangdi_Neijing.djvu.jpg",
+    "alt": "Huangdi Neijing",
+    "credit": "unknown (这个版本为王冰所编)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:The_Su_Wen_of_the_Huangdi_Neijing.djvu"
+  }
+}
