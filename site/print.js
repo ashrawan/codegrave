@@ -428,7 +428,7 @@ function poster(vs, inks, paper, fs) {
   const CH = sheet.rows === 4 ? CW * 0.56 + 42 : Math.min(room, CW * 0.8 + 46), PIC = sheet.rows === 4 ? CW * 0.56 : CH - 46;
   const name = vs.map((v) => v.name).join(', ');
   // with several views the title names them in their colours, which are the cards' colours
-  // a view's thumbnail (a flag) stands just before its name, a little taller than the letters (asked for, Nov 2026)
+  // a view's thumbnail (a flag) stands just before its name on the first sheet only, a little taller than the letters (asked for, Nov 2026)
   const th = (v) => (v.flag ? '<img class="th" crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '');
   const title = one ? th(vs[0]) + esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + th(v) + esc(v.name) + '</span>').join(', ');
   const first = Math.min(...vs.map((v) => v.first)), last = vs.every((v) => v.last != null) ? Math.max(...vs.map((v) => v.last)) : null;
@@ -498,7 +498,7 @@ function poster(vs, inks, paper, fs) {
     const label = sizes.length > 1 ? esc(from + ' – ' + to) : esc(rs(first, last));
     const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
     // the heading: the span alone in the top right corner; below it the title on the left and the description on the right (first sheet)
-    const head = mini + '<div class="t' + (pi ? ' sm' : '') + '"><h1>' + title + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>';
+    const head = mini + '<div class="t' + (pi ? ' sm' : '') + '"><h1>' + (pi ? title.replace(/<img class="th"[^>]*>/g, '') : title) + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>';
     // the footer tells the story of this sheet: each chapter on it, in its colour, with its note
     // (several views: a key of the views in their colours)
     const here = one ? [...new Set(part.map((e) => e.ci).filter((i) => i >= 0))].map((i) => ({ c: chs[i], col: TINTS[i % TINTS.length] })) : [];
