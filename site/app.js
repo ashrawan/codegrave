@@ -1298,7 +1298,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (uEnd < uFar) {
         const uRun = Math.min(uFar, uEnd + RUN_OUT * D), xs = [-G.RW, G.RW];
         if (L.lanes.length > 1) for (const ln of L.lanes.slice(1)) xs.push(ln.x0);
-        c.setLineDash([3, 6]); c.lineWidth = 1.2;
+        c.setLineDash([0.1, 9]); c.lineCap = 'round'; c.lineWidth = 2.6;
         const steps = 6;
         for (let i = 0; i < steps; i++) {
           const ua = uEnd + (uRun - uEnd) * i / steps, ub = uEnd + (uRun - uEnd) * (i + 1) / steps, sa = S(ua), sb = S(ub);
@@ -1307,7 +1307,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
           c.strokeStyle = rgba(P.ink, a);
           c.beginPath(); for (const x of xs) { c.moveTo(px(x, sa), py(sa)); c.lineTo(px(x, sb), py(sb)); } c.stroke();
         }
-        c.setLineDash([]);
+        c.setLineDash([]); c.lineCap = 'butt';
       }
 
       // Where the road stops.
