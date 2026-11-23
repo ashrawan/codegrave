@@ -545,7 +545,7 @@ async function download(paper, fmt) {
     for (let i = 0; i < pages.length; i++) {
       msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
       // a poster is drawn as sharp as an A2 sheet at 1.5, whatever the paper, without a huge file
-      const c = await window.html2canvas(pages[i], { scale: fmt === 'poster' ? Math.min(3, 1.5 * 594 / P.w) : 2, useCORS: true, backgroundColor: '#ffffff', logging: false });
+      const c = await window.html2canvas(pages[i], { scale: fmt === 'poster' ? Math.min(3, 1.5 * 594 / P.w) : 2, useCORS: true, backgroundColor: '#ffffff', logging: false, ignoreElements: notShot, onclone: unzoom });
       if (i) pdf.addPage([P.w, P.h], turn);
       pdf.addImage(c.toDataURL('image/jpeg', 0.85), 'JPEG', 0, 0, P.w, P.h, undefined, 'FAST');
     }
@@ -574,6 +574,54 @@ let shaped = null;
 // cards still fit the paper, then the cards' text alone (`--tf`), which shortens the summaries.
 export const TEXT_BASE = 1.4;
 let fs = TEXT_BASE;
+// On a screen narrower than the paper (a phone), the pages are shown zoomed out to the screen's
+// width, like a picture of them: a CSS transform, so the layout is exactly the full-size one and
+// nothing reflows (CSS zoom drew the pages wrongly on phones; asked for, Nov 2026). Pinch to read.
+function fit() {
+  doc.style.transform = doc.style.width = doc.style.marginBottom = '';
+  doc.style.removeProperty('--z');
+  const w = doc.querySelector('.pg')?.offsetWidth, pad = 24;
+  const z = w ? Math.min(1, (innerWidth - pad) / w) : 1;
+  if (z >= 1) return;
+  doc.style.width = (innerWidth / z) + 'px';
+  doc.style.transform = 'scale(' + z + ')';
+  doc.style.setProperty('--z', z);
+  doc.style.marginBottom = -(doc.offsetHeight * (1 - z)) + 'px';
+}
+let fitWidth = 0;
+if (typeof window !== 'undefined') window.addEventListener('resize', () => { if (innerWidth !== fitWidth) { fitWidth = innerWidth; fit(); } });
+// A poster sheet's own "Download image" button: one sheet as a PNG (asked for, Nov 2026).
+// It stands under its sheet, outside it, and is never printed.
+function addShots(paper) {
+  const pages = [...doc.querySelectorAll('.pg')];
+  pages.forEach((pg, i) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'shot'; b.innerHTML = '<span>Download image</span>';
+    b.title = 'Download sheet ' + (i + 1) + ' as a picture (PNG)';
+    b.addEventListener('click', () => sheetImage(pg, i, pages.length, paper, b.firstChild));
+    pg.after(b);
+  });
+}
+const notShot = (el) => el.classList?.contains('shot');
+// the PDF and the images are drawn at full size, whatever the zoom on screen
+const unzoom = (d) => { const e = d.getElementById('doc'); if (e) { e.style.transform = 'none'; e.style.width = ''; } };
+async function sheetImage(pg, i, n, paper, b) {
+  const was = b.textContent;
+  b.parentNode.disabled = true; b.textContent = 'Making…';
+  try {
+    if (!window.html2canvas) await script(LIBS[0]);
+    const P = POSTER_PAPERS[paper] || POSTER_PAPERS.a2;
+    const c = await window.html2canvas(pg, { scale: Math.min(3, 1.5 * 594 / P.w), useCORS: true, backgroundColor: '#ffffff', logging: false, ignoreElements: notShot, onclone: unzoom });
+    const a = document.createElement('a');
+    a.download = fileName(shaped.views.map((v) => v.name).concat(['poster', paper], n > 1 ? ['sheet ' + (i + 1)] : [])).replace(/\.pdf$/, '.png');
+    a.href = c.toDataURL('image/png');
+    document.body.appendChild(a); a.click(); a.remove();
+    b.textContent = was;
+  } catch (err) {
+    b.textContent = 'Could not make it';
+    setTimeout(() => { b.textContent = was; }, 3000);
+  } finally { b.parentNode.disabled = false; }
+}
 function lay(paper, fmt) {
   const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
   document.documentElement.style.setProperty('--pw', P.w + 'mm');
@@ -585,7 +633,9 @@ function lay(paper, fmt) {
   document.body.className = fmt === 'poster' ? 'poster' : views.length === 1 ? 'one' : 'many';
   const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
   if (fmt === 'poster') poster(vs, inks, P, fs); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
+  if (fmt === 'poster') addShots(paper);
   $('msg').textContent = (fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.');
+  fit();
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
 // Sets the export's reading font, fetching it from Google Fonts first if needed.

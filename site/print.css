@@ -26,15 +26,20 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 #tools .size input { flex: 1; accent-color: #f4f1ea; }
 #tools .size .a1 { font-size: 11px; } #tools .size .a2 { font-size: 18px; }
 #tools .size output { min-width: 3.2em; text-align: right; color: #f4f1ea; font-variant-numeric: tabular-nums; }
-/* Full size on every screen: on a phone the pages scroll sideways inside #doc rather than shrinking
-   (asked for, Nov 2026), so the page itself, and the bar, keep the screen's width. Auto margins centre
-   a page that fits and fall to 0 for one that does not, so its left edge stays in reach. */
-#doc { padding: 64px 16px 32px; overflow-x: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 8mm; }
+/* On a phone #doc is zoomed out with a transform by fit() in print.js, so the layout stays the
+   full-size one. Auto margins centre a page that fits. */
+#doc { transform-origin: 0 0; padding: 64px 16px 32px; overflow-x: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 8mm; }
 #doc .pg { margin-inline: auto; box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.08); flex: none; }
 @media (max-width: 860px) { body { padding: 60px 0 16px; } #doc { padding: 0 12px; gap: 6mm; } #tools .msg { display: none; } }
 @media (max-width: 560px) { #tools { gap: 8px; padding: 10px 12px; } #tools summary .k::after { content: none; } #layout-s, #text-s { display: none; } #tools .opts { position: fixed; left: 12px; right: 12px; top: 56px; min-width: 0; } }
+/* a poster sheet's "Download image" button, under the sheet at its right edge, readable at any zoom */
+#doc .shot { display: block; width: var(--pw); margin: calc(-4mm + 2px / var(--z, 1)) auto 0; padding: 0; border: 0; background: none; text-align: right; cursor: pointer; flex: none; }
+#doc .shot span { display: inline-block; font: 500 calc(12px / var(--z, 1))/1 Inter, system-ui, sans-serif; padding: .5em .9em; border-radius: 999px; border: 1px solid #cfcac0; background: #fff; color: #444; }
+#doc .shot:hover span, #doc .shot:focus-visible span { color: #000; border-color: #999; }
+#doc .shot:disabled { cursor: default; }
 @media print {
-  #tools { display: none; }
+  #tools, #doc .shot { display: none; }
+  #doc { transform: none !important; width: auto !important; margin: 0 !important; }
   body { background: #fff; }
   #doc { padding: 0; gap: 0; display: block; }
   #doc .pg { box-shadow: none; }
@@ -190,7 +195,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .one .cover .main.tight .stats{margin:5mm 0 6mm}
 .one .cover .main.tight .toc{margin-top:5mm}
 .one .cover .main.tight .toc div{padding:1.1mm 0;font-size:calc(13px * var(--fs, 1))}
-#doc .pg:last-child { page-break-after: auto; }
+#doc .pg:last-of-type { page-break-after: auto; }
 
 .foot .lnk{text-transform:none;letter-spacing:.04em}
 
