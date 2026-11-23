@@ -16,7 +16,7 @@ function copyOfRepo() {
   cpSync(join(root, 'data'), join(copy, 'data'), { recursive: true });
   cpSync(join(root, 'scripts'), join(copy, 'scripts'), { recursive: true });
   mkdirSync(join(copy, 'site'));
-  for (const f of ['rank.js', 'keys.js']) cpSync(join(root, 'site', f), join(copy, 'site', f));
+  for (const f of ['rank.js', 'keys.js', 'index.html']) cpSync(join(root, 'site', f), join(copy, 'site', f));
   return copy;
 }
 function build(copy, ...args) {
@@ -162,4 +162,19 @@ test('the build writes one ready-made file per view, old addresses, detail files
   assert.ok(index.views.some((l) => l[0] === 'languages' && l[2] === 1) && index.views.some((l) => l[0] === 'wiki/the-internet' && l[2] === 0));
   assert.ok(existsSync(join(copy, 'site', 'data', 'c', 'wiki.json')));
   assert.ok(!readdirSync(join(copy, 'site', 'data')).includes('things.json'), 'the old all-in-one bundle is gone');
+});
+
+test('every view gets its own page for search engines and link previews, served at its address', () => {
+  const copy = copyOfRepo();
+  build(copy);
+  const page = readFileSync(join(copy, 'site', 'data', 'pages', 'wiki', 'the-internet.html'), 'utf8');
+  assert.match(page, /<title>The Internet: a timeline · codegrave<\/title>/);
+  assert.match(page, /<link rel="canonical" href="https:\/\/codegrave\.com\/wiki\/the-internet">/);
+  assert.match(page, /<meta property="og:image" content="https:\/\//);
+  assert.equal((page.match(/<title>/g) || []).length, 1, 'the home page\'s own title is replaced, not added to');
+  const rules = readFileSync(join(copy, 'site', '_redirects'), 'utf8');
+  assert.match(rules, /^\/wiki\/the-internet {2}\/data\/pages\/wiki\/the-internet\.html {2}200$/m);
+  assert.match(rules, /^\/classical\/everything {2}\/data\/pages\/classical\/everything\.html {2}200$/m);
+  const map = readFileSync(join(copy, 'site', 'sitemap.xml'), 'utf8');
+  assert.match(map, /<loc>https:\/\/codegrave\.com\/wiki\/the-internet<\/loc>/);
 });

@@ -105,7 +105,7 @@ export function shapeView(payload, boot, i, span) {
       src: (e.sources || [])[0]?.title || '',
     };
   }).sort((a, b) => a.t - b.t || a.rank - b.rank);
-  return { id: v.id, name: v.name, description: v.description || '', chs, es, first: span ? span[0] : es[0]?.y ?? 0, last: span ? span[1] : null, flag: v.thumb?.image || null };
+  return { id: v.id, name: v.name, description: v.description || '', chs, es, first: span ? span[0] : es[0]?.y ?? 0, last: span ? span[1] : null, thumb: v.thumb?.image || null };
 }
 
 // ---------------------------------------------------------------- the page shell
@@ -140,7 +140,7 @@ function single(D) {
   {
     const p = newPage('cover'); const m = frame(p, 'A timeline from codegrave.com');
     const pics = coverPictures(D.es, 12); if (rev) pics.reverse();
-    m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
+    m.innerHTML = '<div class="ttl">' + (D.thumb ? '<img class="thumb" src="' + esc(D.thumb) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
       + '<div class="stats"><div><b>' + esc(rs(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
       + '<div class="toc">' + (rev ? D.chs.slice().reverse() : D.chs).map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
@@ -267,6 +267,32 @@ const creditLine = () => 'Pictures are free-licensed and credited below. Text is
 const creditHtml = (e, c) => '<div><b' + (c ? ' style="color:' + c + '"' : '') + '>' + esc(e.name) + '.</b> ' + (e.img ? 'Picture: ' + esc(e.img.credit) + (e.img.licence ? ', ' + esc(e.img.licence) : '') + '. ' : '') + (e.src ? 'Source: ' + esc(e.src) + '.' : '') + '</div>';
 
 // ---------------------------------------------------------------- several views
+// Each cover tile must fit its box, for 2 views or 8 (asked for, Nov 2026). The chapter list is cut short first, with
+// a last line "… and N more"; if not even one chapter fits, the description is cut to two lines, then the pictures
+// give way if that lets chapters in; whatever still does not fit goes, pictures last.
+function fitTiles(p) {
+  for (const el of p.querySelectorAll('.panel')) {
+    const over = () => el.scrollHeight > el.clientHeight + 1;
+    const tile = el.querySelector('.tile'), ol = el.querySelector('ol'), chl = el.querySelector('.chl');
+    const all = ol ? [...ol.children] : [];
+    const trim = () => {   // keep as many chapters as fit, at least one, else none
+      if (!ol) return;
+      ol.replaceChildren(...all); tile.append(chl, ol);
+      if (!over()) return;
+      const more = document.createElement('li'); more.className = 'more'; ol.appendChild(more);
+      let keep = all.length;
+      while (over() && keep > 1) { keep--; all[keep].remove(); more.textContent = '… and ' + (all.length - keep) + ' more'; }
+      if (over()) { chl.remove(); ol.remove(); }
+    };
+    trim();
+    // no chapter fits: the description gives two lines, then the pictures make way if that lets chapters in
+    if (ol && !ol.isConnected) { el.querySelector('.tile p')?.classList.add('clip'); trim(); }
+    const pics = el.querySelector('.pics');
+    if (ol && !ol.isConnected && pics) { const at = pics.nextSibling; pics.remove(); trim(); if (!ol.isConnected) tile.insertBefore(pics, at); }
+    if (over()) el.querySelector('.tile p')?.classList.add('clip');
+    if (over()) el.querySelector('.pics')?.remove();
+  }
+}
 function many(V, inks) {
   const N = V.length;
   const all = inOrder(V.flatMap((v) => v.es), rev);
@@ -286,12 +312,16 @@ function many(V, inks) {
     p.querySelector('.yr.a').textContent = rev ? bot : top; p.querySelector('.yr.b').textContent = rev ? top : bot;
     V.forEach((v, i) => {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
-      el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
-      const pics = coverPictures(v.es, N <= 2 ? 18 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(rs(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-        + (N > 4 ? '' : '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
+      el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) { el.style.minHeight = '0'; el.classList.add('small'); }
+      const pics = coverPictures(v.es, N <= 2 ? 18 : N > 4 ? 6 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.thumb ? '<img crossorigin="anonymous" src="' + esc(v.thumb) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(rs(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 || N > 4 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+        + (v.chs.length ? '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>' : '') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
+    // the tiles start just under the title, however many lines it takes
+    const ttl = p.querySelector('.title'), body = p.querySelector('.body');
+    body.style.top = (ttl.offsetTop + ttl.offsetHeight) / MM + 7 + 'mm';
+    fitTiles(p);
   }
   // the pages: entries in date order, each on its view's side, level with its year's dot
   const lastCh = V.map(() => -2);
@@ -305,7 +335,8 @@ function many(V, inks) {
   function openBox(vi, s, y) {
     const v = V[vi]; const el = document.createElement('div'); el.className = 'panel ' + s;
     el.style.cssText = '--c:' + inks[vi] + ';position:absolute;top:' + y + 'px;width:' + CW + 'px;' + (s === 'l' ? 'left:0' : 'right:0');
-    el.innerHTML = '<div class="tab"><b>' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + esc(v.name) + '</b><span></span></div><div class="list"></div>';
+    // the box's tab shows the view's thumbnail when it has one, else its name in its colour (asked for, Nov 2026)
+    el.innerHTML = '<div class="tab"><b>' + (v.thumb ? '<img crossorigin="anonymous" src="' + esc(v.thumb) + '" alt="' + esc(v.name) + '">' : esc(v.name)) + '</b><span></span></div><div class="list"></div>';
     flow.appendChild(el); return { el, vi, list: el.querySelector('.list') };
   }
   function chapHtml(e) {
@@ -428,7 +459,9 @@ function poster(vs, inks, paper, fs) {
   const CH = sheet.rows === 4 ? CW * 0.56 + 42 : Math.min(room, CW * 0.8 + 46), PIC = sheet.rows === 4 ? CW * 0.56 : CH - 46;
   const name = vs.map((v) => v.name).join(', ');
   // with several views the title names them in their colours, which are the cards' colours
-  const title = one ? esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + esc(v.name) + '</span>').join(', ');
+  // a view's thumbnail (today a country's flag) stands just before its name on the first sheet only, a little taller than the letters (asked for, Nov 2026)
+  const th = (v) => (v.thumb ? '<img class="th" crossorigin="anonymous" src="' + esc(v.thumb) + '" alt="">' : '');
+  const title = one ? th(vs[0]) + esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + th(v) + esc(v.name) + '</span>').join(', ');
   const first = Math.min(...vs.map((v) => v.first)), last = vs.every((v) => v.last != null) ? Math.max(...vs.map((v) => v.last)) : null;
   const yearsOf = (e) => (e.end != null && e.end !== e.y ? (rev ? yearText(e.end) + ' – ' + yearText(e.y) : yearText(e.y) + ' – ' + yearText(e.end)) : yearText(e.y));
   let at = 0;
@@ -437,7 +470,7 @@ function poster(vs, inks, paper, fs) {
     const pg = newPage('sheet'), lastSheet = pi === sizes.length - 1;
     // everything stands on the sheet in A2 sizes, scaled down to the paper
     const p = document.createElement('div'); p.className = 'vs'; pg.appendChild(p);
-    p.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')';
+    p.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;--pk:' + sheet.k + ';transform:scale(' + sheet.k + ')';
     p.style.setProperty('--mid', MID + 'mm'); p.style.setProperty('--tf', sheet.tf);
     const slots = posterSlots(n, C, sheet.rows);
     // the grid stands in the middle of the sheet, also when its cards are at their widest and it is narrower than the sheet
@@ -461,22 +494,39 @@ function poster(vs, inks, paper, fs) {
     // from the right edge as the band's start from the left, so nothing comes near the edge (printers cut it)
     const endCol = ((k) => (k === -2 ? '#3a3631' : k < 0 ? BEFORE : TINTS[k % TINTS.length]))(runs.at(-1).k);
     h += '<div class="arrow" style="left:' + (S.w - S.side - 1) + 'mm;top:' + MID + 'mm;border-left-color:' + endCol + '"></div>';
-    for (const { e, a, x, up, outer } of items) {
+    // Cards that share a year meet the band at one point, the middle of their own points, with the year
+    // written once on each side a line comes from; their lines bend to it in a short curve, so the order along the band holds (asked for, Nov 2026).
+    const meet = items.map((it) => it.x), said = new Set(), CURVE = 5;
+    for (let i = 0; i < items.length;) {
+      let j = i; while (j + 1 < items.length && yearText(items[j + 1].e.y) === yearText(items[i].e.y)) j++;
+      if (j > i) { const m = items.slice(i, j + 1).reduce((t, it) => t + it.x, 0) / (j - i + 1); for (let q = i; q <= j; q++) meet[q] = m; }
+      i = j + 1;
+    }
+    let curves = '';
+    items.forEach(({ e, a, x, up, outer }, i) => {
       const k = ink(e), near = up ? MID - BAND / 2 - 7 - CH : MID + BAND / 2 + 7, top = outer ? (up ? near - CH - 6 : near + CH + 6) : near;
-      const edge = up ? MID - BAND / 2 : MID + BAND / 2;
+      const edge = up ? MID - BAND / 2 : MID + BAND / 2, px = meet[i], bend = Math.abs(px - x) > 0.05;
+      const end = bend ? edge + (up ? -CURVE : CURVE) : edge;   // a bent line stops short of the band and curves the rest
       if (outer) {
         const my = top + CH / 2;
         h += '<div class="arm" style="left:' + (up ? x : a + CW) + 'mm;top:' + my + 'mm;width:' + (up ? a - x : x - a - CW) + 'mm;background:' + k + '"></div>'
-          + '<div class="stem" style="left:' + x + 'mm;top:' + Math.min(my, edge) + 'mm;height:' + Math.abs(edge - my) + 'mm;background:' + k + '"></div>';
+          + '<div class="stem" style="left:' + x + 'mm;top:' + Math.min(my, end) + 'mm;height:' + Math.abs(end - my) + 'mm;background:' + k + '"></div>';
       } else {
-        const s0 = up ? top + CH : edge, s1 = up ? edge : top;
+        const s0 = up ? top + CH : end, s1 = up ? end : top;
         h += '<div class="stem" style="left:' + x + 'mm;top:' + s0 + 'mm;height:' + (s1 - s0) + 'mm;background:' + k + '"></div>';
       }
-      h += '<div class="tick" style="left:' + x + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + x + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>';
-      h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.4) + '">'
+      if (bend) curves += '<path d="M' + x + ' ' + end + 'C' + x + ' ' + (end + (edge - end) * 0.6) + ' ' + px + ' ' + (end + (edge - end) * 0.4) + ' ' + px + ' ' + edge + '" stroke="' + k + '"/>';
+      // one ring and one year on each side of the band that a line comes from; the year stands clear of the curve
+      const sideKey = px.toFixed(2) + (up ? 'u' : 'd');
+      if (!said.has(sideKey)) { said.add(sideKey); h += '<div class="tick" style="left:' + px + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + (bend && x > px ? ' l' : '') + '" style="left:' + px + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>'; }
+      h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
-    }
+      // with several views a card whose view has a thumbnail (today a country's flag) carries it small on its top border, at the left; no name (asked for, Nov 2026)
+      const vt = !one && vs[e.vi].thumb;
+      if (vt) h += '<img class="cthumb" crossorigin="anonymous" src="' + esc(vt) + '" alt="" style="left:' + (a + 3) + 'mm;top:' + top + 'mm">';
+    });
+    if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
     const t0 = Math.min(...all.map((e) => e.y));
     const from = rev && pi === 0 ? 'Today' : yearText(part[0].y), to = !rev && lastSheet ? 'Today' : yearText(part.at(-1).y);
@@ -496,7 +546,7 @@ function poster(vs, inks, paper, fs) {
     const label = sizes.length > 1 ? esc(from + ' – ' + to) : esc(rs(first, last));
     const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
     // the heading: the span alone in the top right corner; below it the title on the left and the description on the right (first sheet)
-    const head = mini + '<div class="t' + (pi ? ' sm' : '') + '"><h1>' + title + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>';
+    const head = mini + '<div class="t' + (pi ? ' sm' : '') + '"><h1>' + (pi ? title.replace(/<img class="th"[^>]*>/g, '') : title) + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>';
     // the footer tells the story of this sheet: each chapter on it, in its colour, with its note
     // (several views: a key of the views in their colours)
     const here = one ? [...new Set(part.map((e) => e.ci).filter((i) => i >= 0))].map((i) => ({ c: chs[i], col: TINTS[i % TINTS.length] })) : [];
@@ -509,7 +559,7 @@ function poster(vs, inks, paper, fs) {
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
   const sheetOf = () => { const pg = newPage('sheet'), v = document.createElement('div'); v.className = 'vs'; pg.appendChild(v);
-    v.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')'; return v; };
+    v.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;--pk:' + sheet.k + ';transform:scale(' + sheet.k + ')'; return v; };
   flowCredits(all.filter((e) => e.img || e.src).map((e) => creditHtml(e, one ? null : inks[e.vi])), (first) => {
     const p = sheetOf();
     p.innerHTML = '<div class="cr-h"><h1>' + (first ? 'Pictures and sources' : '&nbsp;') + '</h1>' + (first ? '<p>' + esc(creditLine()) + '</p>' : '') + '</div><div class="cred"></div>'
@@ -541,12 +591,11 @@ async function download(paper, fmt) {
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
     const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4, turn = P.w > P.h ? 'landscape' : 'portrait';
     const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: turn, compress: true });
-    doc.style.zoom = '';
-    const pages = [...doc.querySelectorAll('.pg')];
+      const pages = [...doc.querySelectorAll('.pg')];
     for (let i = 0; i < pages.length; i++) {
       msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
       // a poster is drawn as sharp as an A2 sheet at 1.5, whatever the paper, without a huge file
-      const c = await window.html2canvas(pages[i], { scale: fmt === 'poster' ? Math.min(3, 1.5 * 594 / P.w) : 2, useCORS: true, backgroundColor: '#ffffff', logging: false });
+      const c = await window.html2canvas(pages[i], { scale: fmt === 'poster' ? Math.min(3, 1.5 * 594 / P.w) : 2, useCORS: true, backgroundColor: '#ffffff', logging: false, ignoreElements: notShot, onclone: unzoom });
       if (i) pdf.addPage([P.w, P.h], turn);
       pdf.addImage(c.toDataURL('image/jpeg', 0.85), 'JPEG', 0, 0, P.w, P.h, undefined, 'FAST');
     }
@@ -556,7 +605,7 @@ async function download(paper, fmt) {
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { fit(); btn.disabled = false; for (const id of ['paper', 'order', 'fmt', 'font', 'size']) $(id).disabled = false; }
+  } finally { btn.disabled = false; for (const id of ['paper', 'order', 'fmt', 'font', 'size']) $(id).disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -575,19 +624,53 @@ let shaped = null;
 // cards still fit the paper, then the cards' text alone (`--tf`), which shortens the summaries.
 export const TEXT_BASE = 1.4;
 let fs = TEXT_BASE;
-// On a screen narrower than the paper (a phone), the pages are shown shrunk to the screen's width
-// (CSS zoom on #doc) instead of cut off or scrolled sideways (asked for, Nov 2026). Layout and the
-// PDF are always made at full size, so the zoom is taken off first.
+// On a screen narrower than the paper (a phone), the pages are shown zoomed out to the screen's
+// width, like a picture of them: a CSS transform, so the layout is exactly the full-size one and
+// nothing reflows (CSS zoom drew the pages wrongly on phones; asked for, Nov 2026). Pinch to read.
 function fit() {
-  doc.style.zoom = '';
-  const w = doc.querySelector('.pg')?.offsetWidth;
-  // a phone widens its layout to what overflows, so the screen's own width is the measure there
-  const z = w ? Math.min(1, (Math.min(innerWidth, screen.width || innerWidth) - 24) / w) : 1;
-  if (z < 1) doc.style.zoom = z;
+  doc.style.transform = doc.style.width = doc.style.marginBottom = '';
+  doc.style.removeProperty('--z');
+  const w = doc.querySelector('.pg')?.offsetWidth, pad = 24;
+  const z = w ? Math.min(1, (innerWidth - pad) / w) : 1;
+  if (z >= 1) return;
+  doc.style.width = (innerWidth / z) + 'px';
+  doc.style.transform = 'scale(' + z + ')';
+  doc.style.setProperty('--z', z);
+  doc.style.marginBottom = -(doc.offsetHeight * (1 - z)) + 'px';
 }
-if (typeof window !== 'undefined') window.addEventListener('resize', () => fit());
+let fitWidth = 0;
+if (typeof window !== 'undefined') window.addEventListener('resize', () => { if (innerWidth !== fitWidth) { fitWidth = innerWidth; fit(); } });
+// A poster sheet's own "Download image" button: one sheet as a PNG (asked for, Nov 2026).
+// A folded corner on each sheet's top right with a small download arrow (picked from four, Nov 2026), never printed or drawn.
+const DL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
+function addShots(paper) {
+  const pages = [...doc.querySelectorAll('.pg')];
+  pages.forEach((pg, i) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'shot'; b.innerHTML = DL;
+    b.title = b.ariaLabel = 'Download sheet ' + (i + 1) + ' as an image (PNG)';
+    b.addEventListener('click', () => sheetImage(pg, i, pages.length, paper, b));
+    pg.appendChild(b);
+  });
+}
+const notShot = (el) => el.classList?.contains('shot');
+// the PDF and the images are drawn at full size, whatever the zoom on screen
+const unzoom = (d) => { const e = d.getElementById('doc'); if (e) { e.style.transform = 'none'; e.style.width = ''; } };
+async function sheetImage(pg, i, n, paper, b) {
+  b.disabled = true; b.classList.add('busy');
+  try {
+    if (!window.html2canvas) await script(LIBS[0]);
+    const P = POSTER_PAPERS[paper] || POSTER_PAPERS.a2;
+    const c = await window.html2canvas(pg, { scale: Math.min(3, 1.5 * 594 / P.w), useCORS: true, backgroundColor: '#ffffff', logging: false, ignoreElements: notShot, onclone: unzoom });
+    const a = document.createElement('a');
+    a.download = fileName(shaped.views.map((v) => v.name).concat(['poster', paper], n > 1 ? ['sheet ' + (i + 1)] : [])).replace(/\.pdf$/, '.png');
+    a.href = c.toDataURL('image/png');
+    document.body.appendChild(a); a.click(); a.remove();
+  } catch (err) {
+    b.title = 'The image could not be made (' + err.message + '). Try again.';
+  } finally { b.disabled = false; b.classList.remove('busy'); }
+}
 function lay(paper, fmt) {
-  doc.style.zoom = '';
   const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
   document.documentElement.style.setProperty('--pw', P.w + 'mm');
   document.documentElement.style.setProperty('--ph', P.h + 'mm');
@@ -598,6 +681,7 @@ function lay(paper, fmt) {
   document.body.className = fmt === 'poster' ? 'poster' : views.length === 1 ? 'one' : 'many';
   const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
   if (fmt === 'poster') poster(vs, inks, P, fs); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
+  if (fmt === 'poster') addShots(paper);
   $('msg').textContent = (fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.');
   fit();
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
@@ -613,14 +697,17 @@ async function useFont(key) {
   document.documentElement.style.setProperty('--serif', '"' + f.name + '", ' + (f.sans ? 'Inter, sans-serif' : 'Georgia, serif'));
 }
 async function start() {
+  // opened in the same tab from the timeline: the logo leads back to it (asked for, Nov 2026)
+  try { const r = new URL(document.referrer); if (r.origin === location.origin && !r.pathname.endsWith('print.html')) document.querySelector('#tools .logo')?.setAttribute('href', r.href); } catch {}
   const q = new URLSearchParams(location.search);
   const ids = (q.get('views') || '').split(',').map((s) => s.trim()).filter((s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..')).map((s) => s.replace(/^classical\//, ''));
   if (!ids.length) { $('msg').textContent = 'No views named. Open a timeline and press Download PDF.'; return; }
   const m = /^(-?\d+)-(-?\d+)$/.exec(q.get('yr') || '');
   if (m && Number(m[1]) < Number(m[2])) yr = [Number(m[1]), Number(m[2])];
   rev = q.get('o') === 'backward';
-  const cs = (q.get('c') || '').split(',').map(Number);
-  const inks = ids.map((_, i) => INKS[(cs.length === ids.length && cs[i] >= 0 && cs[i] < 8 ? cs[i] : i) % INKS.length]);
+  const cs = (q.get('c') || '').split(',');
+  // a view's colour from the link: one of the eight (0 to 7), or any colour picked by hand (six hex digits)
+  const inks = ids.map((_, i) => { const c = cs.length === ids.length ? String(cs[i] ?? '') : ''; return /^[0-9a-f]{6}$/i.test(c) ? '#' + c.toLowerCase() : INKS[(/^[0-7]$/.test(c) ? Number(c) : i) % INKS.length]; });
   const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => getJSON('v/' + id + '.json').catch(() => null))]);
   const views = [], keep = [];
   payloads.forEach((p, i) => { const sv = p && p.entries?.length ? shapeView(p, boot, views.length, yr) : null;

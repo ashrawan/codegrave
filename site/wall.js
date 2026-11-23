@@ -412,7 +412,7 @@ export function createWall(host, { eras = [] } = {}) {
       }
       // The frames: the pictures of the cards on show, and the era's in the frames they leave free.
       let key = i + (own ? 'o' : 'e');
-      for (const c of cards) key += '|' + c.id + c.side + (c.quiet ? 'q' : '');
+      for (const c of cards) key += '|' + c.id + c.side + (c.quiet ? 'q' : '') + (c.col || '');   // a view given another colour reframes too
       const now = performance.now();
       if (key !== W.key || now >= W.due) { W.key = key; W.cards = cards; W.own = own; share(now); }
       if (W.due < Infinity) busy = true;

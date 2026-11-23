@@ -63,6 +63,23 @@ by the first two letters of every word (`s/cu.json` holds everything with a
 word that starts "cu"), and `boot.json` says which form is in use
 (`search.mode`). The page handles both.
 
+## Pages for search engines and link previews
+
+Search engines and link previews (chat apps, social sites) read a page
+before any script runs, so the one page would say the same thing for every
+view. The build therefore also writes, outside `site/data/`'s JSON:
+
+| File | What it is |
+| --- | --- |
+| `site/data/pages/<address>.html` | a copy of `site/index.html` for each view, with the block between `<!-- page meta` and `<!-- /page meta -->` filled in for that view: its title, description, canonical link, Open Graph and Twitter tags, and its own picture (a flag) or else `site/media/og.jpg` |
+| `site/_redirects` | one Netlify rewrite per view: `/wiki/nepal` serves `/data/pages/wiki/nepal.html` and the address stays as it is |
+| `site/sitemap.xml` | the home page and every view's address |
+
+All three are generated and git-ignored. `site/robots.txt` is a plain file
+that points at the sitemap. The addresses use `https://codegrave.com`
+(`SITE` in the build). Once the page runs, it names the views shown in the
+tab title itself (`writeUrl()`).
+
 ## Sizes to expect
 
 Measured on 4,420 entries and 202 views (61 of them community views): the

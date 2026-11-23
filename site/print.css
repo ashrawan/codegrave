@@ -26,13 +26,25 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 #tools .size input { flex: 1; accent-color: #f4f1ea; }
 #tools .size .a1 { font-size: 11px; } #tools .size .a2 { font-size: 18px; }
 #tools .size output { min-width: 3.2em; text-align: right; color: #f4f1ea; font-variant-numeric: tabular-nums; }
-#doc { padding: 64px 16px 32px; display: flex; flex-direction: column; align-items: center; gap: 8mm; }
-#doc .pg { box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.08); flex: none; }
+/* On a phone #doc is zoomed out with a transform by fit() in print.js, so the layout stays the
+   full-size one. Auto margins centre a page that fits. */
+#doc { transform-origin: 0 0; padding: 64px 16px 32px; overflow-x: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 8mm; }
+#doc .pg { margin-inline: auto; box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.08); flex: none; }
 @media (max-width: 860px) { body { padding: 60px 0 16px; } #doc { padding: 0 12px; gap: 6mm; } #tools .msg { display: none; } }
 @media (max-width: 560px) { #tools { gap: 8px; padding: 10px 12px; } #tools summary .k::after { content: none; } #layout-s, #text-s { display: none; } #tools .opts { position: fixed; left: 12px; right: 12px; top: 56px; min-width: 0; } }
+/* a poster sheet's download: its top right corner folded down like glass, see-through and lightly
+   frosted, with a small arrow on the fold (picked from four, Nov 2026); screen pixels at any zoom (--z) */
+#doc .shot { --u: calc(1px / var(--z, 1)); position: absolute; top: 0; right: 0; z-index: 5; width: calc(26 * var(--u)); height: calc(26 * var(--u)); padding: 0; border: 0; cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  background: linear-gradient(225deg, rgba(255,255,255,.18), rgba(190,184,172,.22) 46%, rgba(255,255,255,.85) 49%, rgba(255,255,255,0) 51%);
+  -webkit-backdrop-filter: blur(calc(2 * var(--u))) saturate(1.3); backdrop-filter: blur(calc(2 * var(--u))) saturate(1.3);
+  color: rgba(70,65,58,.5); display: flex; align-items: flex-start; justify-content: flex-end; transition: background .15s, color .15s; }
+#doc .shot svg { width: calc(11 * var(--u)); height: calc(11 * var(--u)); margin: calc(2 * var(--u)) calc(2 * var(--u)) 0 0; }
+#doc .shot:hover, #doc .shot:focus-visible { background: linear-gradient(225deg, rgba(255,255,255,.3), rgba(180,173,160,.38) 46%, rgba(255,255,255,.95) 49%, rgba(255,255,255,0) 51%); color: rgba(30,28,25,.85); }
+#doc .shot.busy { cursor: progress; opacity: .4; }
 @media print {
-  #tools { display: none; }
-  #doc { zoom: 1 !important; }
+  #tools, #doc .shot { display: none; }
+  #doc { transform: none !important; width: auto !important; margin: 0 !important; }
   body { background: #fff; }
   #doc { padding: 0; gap: 0; display: block; }
   #doc .pg { box-shadow: none; }
@@ -88,7 +100,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .one .cover .toc span{margin-left:auto;font-family:Inter;font-size:calc(7.5px * var(--fs, 1));color:var(--mute);letter-spacing:.1em}
 .one .cover .ttl{display:flex;align-items:center;gap:6mm;margin:8mm 0 5mm}
 .one .cover .ttl h1{margin:0}
-.one .flag{width:auto;height:auto;max-height:22mm;max-width:40mm;object-fit:contain;display:block;flex:none}
+.one .thumb{width:auto;height:auto;max-height:22mm;max-width:40mm;object-fit:contain;display:block;flex:none}
 .one .cred{columns:2;column-gap:6mm;column-fill:auto;font-size:calc(7px * var(--fs, 1));line-height:1.5;color:var(--soft)}
 .one .cred div{break-inside:avoid;margin-bottom:1.2mm}
 .one .cred b{color:var(--ink)}
@@ -119,8 +131,8 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .panel{position:relative;border:1.2px solid var(--c);border-radius:2.5mm;padding:6.5mm 0 1.5mm;flex:0 0 auto;min-height:24mm;display:flex}
 .many .panel.empty{min-height:9mm;padding:0}
 .many .panel .tab{position:absolute;top:-.1mm;left:3mm;right:3mm;display:flex;justify-content:space-between;align-items:baseline;transform:translateY(-50%)}
-.many .panel .tab b{font-family:var(--serif);font-weight:500;font-size:10.92px;background:#fff;padding:0 1.6mm;color:var(--ink);display:flex;align-items:center;gap:1.3mm}
-.many .panel .tab b img{height:4mm}
+.many .panel .tab b{font-family:var(--serif);font-weight:500;font-size:10.92px;background:#fff;padding:0 1.6mm;color:var(--c);display:flex;align-items:center;gap:1.3mm}
+.many .panel .tab b img{height:4mm;display:block}
 .many .panel .tab span{font-size:6.3px;letter-spacing:.14em;text-transform:uppercase;color:var(--c);background:#fff;padding:0 1.6mm}
 .many .panel .list{flex:1;min-width:0;padding:0 3.5mm}
 .many .panel .rail{display:none}
@@ -166,8 +178,8 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .cover h1 span{color:var(--mute)}
 .many .cover .title p{font-size:9.5px;line-height:1.55;color:var(--soft);margin-top:2mm;max-width:150mm}
 .many .cover .body{top:48mm}
-.many .tile{padding:7mm 4mm 4mm}
-.many .tile .top{display:flex;align-items:center;gap:3mm}
+.many .tile{padding:6mm 4mm 4mm}
+.many .tile .top{display:flex;align-items:center;gap:3mm;min-height:10mm}
 .many .tile .top img{width:auto;height:auto;max-height:10mm;max-width:16mm;object-fit:contain}
 .many .tile h2{font-family:var(--serif);font-weight:500;font-size:calc(17.16px * var(--fs, 1));line-height:1}
 .many .tile .m{font-size:calc(6.5px * var(--fs, 1));letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin:1.5mm 0 2mm}
@@ -180,6 +192,14 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .tile ol{list-style:none;margin-top:1.5mm;border-top:.5pt solid var(--line)}
 .many .tile li{display:flex;justify-content:space-between;gap:2mm;font-size:calc(7.5px * var(--fs, 1));padding:1mm 0;border-bottom:.5pt solid var(--line)}
 .many .tile li span{color:var(--mute);white-space:nowrap}
+.many .panel.small .tile{padding-top:3.5mm}
+.many .panel.small .tile .chl{margin-top:2.5mm}
+.many .panel.small .tile .top{min-height:8mm}
+.many .panel.small .tile .top img{max-height:8mm}
+.many .panel.small .tile .m{margin:1mm 0 1.5mm}
+.many .panel.small .tile .pics{margin:2mm 0 0}
+.many .tile li.more{color:var(--mute);font-style:italic;justify-content:flex-start}
+.many .tile p.clip{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .many .cred{position:absolute;left:10mm;right:10mm;top:22mm;bottom:14mm;column-fill:auto;columns:2;column-gap:6mm;font-size:calc(6.8px * var(--fs, 1));line-height:1.5;color:var(--soft)}
 .many .cred div{break-inside:avoid;margin-bottom:1mm}
 .many .cred b{color:var(--ink)}
@@ -188,18 +208,20 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .one .cover .main.tight .stats{margin:5mm 0 6mm}
 .one .cover .main.tight .toc{margin-top:5mm}
 .one .cover .main.tight .toc div{padding:1.1mm 0;font-size:calc(13px * var(--fs, 1))}
-#doc .pg:last-child { page-break-after: auto; }
+#doc .pg:last-of-type { page-break-after: auto; }
 
 .foot .lnk{text-transform:none;letter-spacing:.04em}
 
 /* The poster (".poster"): landscape sheets laid out in A2 sizes (.vs) and scaled to the paper, see poster() in print.js */
-.poster #doc { align-items: center; }
+.poster #doc { align-items: flex-start; }
 .poster #doc .pg { margin: 0 auto; }
 .poster .pg{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;page-break-after:always;background:#fff}
 .poster .vs{position:absolute;left:0;top:0;transform-origin:0 0}
 .poster .t{position:absolute;left:22mm;top:19mm;right:22mm;display:flex;justify-content:flex-start;align-items:baseline;gap:7mm;padding-bottom:2.5mm;border-bottom:.3mm solid #e6e6e6}
-.poster .t h1{font:400 9mm/1 var(--serif);letter-spacing:.1mm;white-space:nowrap}
-.poster .t.sm h1{font-size:6.5mm}
+.poster .t h1{font:400 7.5mm/1 var(--serif);letter-spacing:.1mm;white-space:nowrap}
+.poster .t.sm h1{font-size:5.5mm}
+/* the title thumbnail is 4 mm high on paper whatever the paper: the sheet is scaled by --pk */
+.poster .t h1 .th{height:calc(4mm / var(--pk,1));width:auto;max-width:calc(6.4mm / var(--pk,1));object-fit:contain;vertical-align:.02em;margin-right:.3em;border-radius:.06em;box-shadow:0 0 0 .2mm rgba(0,0,0,.08)}
 .poster .t p{font-size:2.8mm;line-height:1.45;color:#777;max-width:190mm;text-align:left;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
 .poster .where{position:absolute;top:8mm;right:22mm;width:130mm}
 .poster .mini{position:relative;height:2.6mm;background:#ececec;border-radius:1.3mm;overflow:visible}
@@ -213,12 +235,18 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster .seg span{font:500 2.6mm Inter,sans-serif;opacity:.85}
 .poster .arrow{position:absolute;width:0;height:0;margin-top:-5mm;border-left:5mm solid var(--ink);border-top:5mm solid transparent;border-bottom:5mm solid transparent}
 .poster .stem{position:absolute;width:.4mm;margin-left:-.2mm;opacity:.55}
+.poster svg.bends{position:absolute;left:0;top:0;pointer-events:none;overflow:visible;fill:none;stroke-width:.45;opacity:.7}
 .poster .arm{position:absolute;height:.4mm;margin-top:-.2mm;opacity:.55}
 .poster .tick{position:absolute;width:1.8mm;height:1.8mm;margin:-.9mm 0 0 -.9mm;border-radius:50%;background:#fff;border:.5mm solid;z-index:2}
 .poster .yr{position:absolute;margin-left:1.3mm;font:600 2.3mm/1 Inter,sans-serif;letter-spacing:.1mm;white-space:nowrap;z-index:3}
 .poster .yr.u{transform:translateY(-140%)}
 .poster .yr.d{transform:translateY(55%)}
+.poster .yr.l{margin-left:-1.3mm}
+.poster .yr.u.l{transform:translate(-100%,-140%)}
+.poster .yr.d.l{transform:translate(-100%,55%)}
 .poster .card{position:absolute;background:#fff;border:.4mm solid var(--kb, var(--k));border-radius:1.6mm;overflow:hidden;box-shadow:0 .5mm 1.4mm rgba(0,0,0,.07);display:flex;flex-direction:column}
+/* with several views, the card's view thumbnail small on its top border (2.4 mm on paper) */
+.poster .cthumb{position:absolute;height:calc(2.4mm / var(--pk,1));width:auto;max-width:calc(4mm / var(--pk,1));transform:translateY(-50%);background:#fff;padding:0 calc(.5mm / var(--pk,1));box-sizing:content-box;z-index:2}
 .poster figure{position:relative;flex:none;background:#f5f5f5;display:flex;align-items:center;justify-content:center;overflow:hidden}
 /* sized by the browser within the frame, not by object-fit, which html2canvas ignores (it stretched pictures in the PDF) */
 .poster figure img{width:auto;height:auto;max-width:100%;max-height:100%;flex:none;display:block}

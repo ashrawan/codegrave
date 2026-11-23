@@ -40,6 +40,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // The words for an entry whose branch is unknown, and for text about many kinds at once.
   const NEUTRAL = { born: 'Began', ended: 'Ended', alive: 'Still going', dead: 'Ended', from: 'begun in' };
   const PHONE = '(max-width: 699px)';    // on a phone the open panel is a sheet over the lower half
+  // A view's colour is one of the eight of the theme (0 to 7, `--p0` to `--p7`) or any colour picked by hand ('#rrggbb').
+  const isHex = (c) => typeof c === 'string' && /^#[0-9a-f]{6}$/i.test(c);
+  const colVar = (c) => (isHex(c) ? c : `var(--p${c % 8})`);
+  const colRgb = (P, c) => (isHex(c) ? [1, 3, 5].map((i) => parseInt(c.slice(i, i + 2), 16)) : P.p[c % 8]);
+  const colOut = (c) => (isHex(c) ? c.slice(1).toLowerCase() : String(c));          // in the link: 3, or f05a28
+  const colIn = (s) => (/^[0-9a-f]{6}$/i.test(s) ? '#' + s.toLowerCase() : /^[0-7]$/.test(s) ? Number(s) : null);
 
   const today = new Date();
   const NOW_YEAR = today.getFullYear();
@@ -95,9 +101,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const a = -y;
     if (a < 10000) return a + ' BCE';
     if (a < 1e5) return group(sig(a)) + ' BCE';
-    if (a < 1e6) return group(sig(a)) + ' years ago';
-    if (a < 1e9) return sig(a / 1e6) + ' million years ago';
-    return sig(a / 1e9) + ' billion years ago';
+    // on a phone the deep-time words are short: 100k, 66M, 13.8B years ago (asked for, Nov 2026)
+    const ph = matchMedia(PHONE).matches;
+    if (a < 1e6) return (ph ? sig(a / 1e3) + 'k' : group(sig(a))) + ' years ago';
+    if (a < 1e9) return sig(a / 1e6) + (ph ? 'M' : ' million') + ' years ago';
+    return sig(a / 1e9) + (ph ? 'B' : ' billion') + ' years ago';
   }
   const deep = (y) => y <= -1e5;    // said as an age, so "circa" adds nothing
   function fmtDate(s, precision) {
@@ -131,8 +139,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function fmtSpan(years) {
     if (years < 1) return 'under a year';
     const n = Math.round(years);
-    if (n >= 1e9) return sig(n / 1e9) + ' billion years';
-    if (n >= 1e6) return sig(n / 1e6) + ' million years';
+    const ph = matchMedia(PHONE).matches;
+    if (n >= 1e9) return sig(n / 1e9) + (ph ? 'B' : ' billion') + ' years';
+    if (n >= 1e6) return sig(n / 1e6) + (ph ? 'M' : ' million') + ' years';
     if (n >= 1e4) return group(sig(n)) + ' years';
     return group(n) + (n === 1 ? ' year' : ' years');
   }
@@ -173,7 +182,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if ((m = /^-(\d{5,11})$/.exec(q))) return -Number(m[1]);
     if ((m = /^(\d[\d,]*)\s*(bce|bc|b\.c\.|b\.c\.e\.)$/.exec(q))) { const y = Number(m[1].replace(/,/g, '')); return y ? -y : null; }
     if ((m = /^(\d{1,4})\s*(ce|ad|a\.d\.|c\.e\.)$/.exec(q))) return Number(m[1]) || null;
-    if ((m = /^(\d+(?:\.\d+)?)\s*(ka|kya|thousand years ago|ma|mya|million years ago|ga|bya|billion years ago)$/.exec(q))) {
+    if ((m = /^(\d+(?:\.\d+)?)\s*(ka|kya|thousand years ago|k years ago|ma|mya|million years ago|m years ago|ga|bya|billion years ago|b years ago)$/.exec(q))) {
       const mult = /^(k|t)/.test(m[2]) ? 1e3 : /^(m)/.test(m[2]) ? 1e6 : 1e9;
       return -Math.round(Number(m[1]) * mult);
     }
@@ -528,8 +537,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!ids.length || !setViews(ids)) return false;
     state.span = readSpan(q.get('yr'));
     if (q.get('o') === 'forward') state.order = 'old'; else if (q.get('o') === 'backward') state.order = 'new';
-    const cs = (q.get('c') || '').split(',').map(Number);
-    if (cs.length === state.views.length && cs.every((n) => n >= 0 && n < 8) && new Set(cs).size === cs.length) state.views.forEach((id, i) => state.colors.set(id, cs[i]));
+    const cs = (q.get('c') || '').split(',').map(colIn);
+    if (cs.length === state.views.length && cs.every((c) => c != null) && new Set(cs).size === cs.length) state.views.forEach((id, i) => state.colors.set(id, cs[i]));
     return true;
   }
   function writeUrl() {
@@ -537,7 +546,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (state.views.length > 1) q.set('with', state.views.slice(1).map(addressOf).join(','));
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
-    if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
+    if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => colOut(state.colors.get(id))).join(','));
+    // The tab names the views shown, as the view's own page does before the script runs.
+    const names = state.views.map((id) => viewById.get(id)?.name).filter(Boolean);
+    document.title = names.length ? names.join(', ') + ': a timeline · codegrave' : 'codegrave: a timeline of everything. Nothing ships forever.';
     history.replaceState(null, '', '/' + (state.views[0] ? addressOf(state.views[0]) : '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
   }
 
@@ -625,7 +637,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('road-views').dataset.n = L.lanes.length;
     $('road-views').classList.toggle('bare', G.phone && L.lanes.length > 2);
     $('road-views').innerHTML = G.short ? '' : L.lanes.map((ln, i) =>
-      `<div class="rv" style="--c:var(--p${ln.col})"><b>${esc(ln.view.name)}</b><button type="button" class="rch" data-lane="${i}" hidden></button></div>`).join('');
+      `<div class="rv" style="--c:${colVar(ln.col)}"><b>${esc(ln.view.name)}</b><button type="button" class="rch" data-lane="${i}" hidden></button></div>`).join('');
     for (const ln of L.lanes) ln.cur = undefined;
     barTicks();
     renderSide();
@@ -713,7 +725,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const laneW = lanes.length ? (2 * G.RW) / lanes.length : 0, pad = Math.min(G.phone ? 14 : 24, laneW * 0.15);
     const shown = [], groups = [];
     lanes.forEach((ln, k) => {
-      ln.x0 = -G.RW + laneW * k; ln.x1 = ln.x0 + laneW; ln.col = state.colors.get(ln.view.id) % 8;
+      ln.x0 = -G.RW + laneW * k; ln.x1 = ln.x0 + laneW; ln.col = state.colors.get(ln.view.id);
       // Which side of the road it is on: -1 the left lane, 0 the middle (or the only one), 1 the right lane.
       ln.lean = lanes.length > 1 ? clamp((ln.x0 + ln.x1) / G.RW, -1, 1) : 0;
       ln.eras = viewEras(ln.view).filter((c) => c.b > tMin && c.a < tMax);
@@ -891,7 +903,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // One name on the road, in one of its forms. It is made when first shown and removed once it has faded.
   function roadNode(nk, p, end, mode) {
     const t = p.t, el = document.createElement('div'), m = roadSizes(t);
-    const at = `data-id="${esc(t.id)}" data-key="${esc(p.key)}"${end ? ' data-end' : ''} style="--c:var(--p${p.lane.col})"`, name = esc(t.name), years = esc(spanOf(t));
+    const at = `data-id="${esc(t.id)}" data-key="${esc(p.key)}"${end ? ' data-end' : ''} style="--c:${colVar(p.lane.col)}"`, name = esc(t.name), years = esc(spanOf(t));
     el.className = 'rl';
     el.innerHTML = mode === 'full'
       ? `<button type="button" class="rc full" ${at}>${t.image && !t.noImage && !L.G.short ? `<img src="${esc(mediaUrl(t.image.src))}" alt="">` : ''}` +
@@ -983,7 +995,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (!r || !r.big || shows.length >= 4 || !wallMedia(t).length || shows.some((x) => x.id === t.id)) continue;
       const lean = c.p.lane.lean;
       shows.push({ id: t.id, name: t.name, side: Math.sign(lean),
-        col: L.lanes.length > 1 ? `var(--p${c.p.lane.col})` : null, media: wallMedia(t) });
+        col: L.lanes.length > 1 ? colVar(c.p.lane.col) : null, media: wallMedia(t) });
     }
     // With several views, a side whose lane has no card up would stand empty beside a full one. It shows one
     // picture, small, of the nearest name on that side that has one: what comes next, else what has just passed.
@@ -994,7 +1006,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         if (Math.sign(c.p.lane.lean) !== sd || !placed.has(c.key) || !wallMedia(c.p.t).length || shows.some((x) => x.id === c.p.t.id)) continue;
         if (!near || (c.u > 0) !== (near.u > 0) ? c.u > 0 || !near : Math.abs(c.u) < Math.abs(near.u)) near = c;
       }
-      if (near) shows.push({ id: near.p.t.id, name: near.p.t.name, side: sd, col: `var(--p${near.p.lane.col})`, media: wallMedia(near.p.t).slice(0, 1), quiet: true });
+      if (near) shows.push({ id: near.p.t.id, name: near.p.t.name, side: sd, col: colVar(near.p.lane.col), media: wallMedia(near.p.t).slice(0, 1), quiet: true });
     }
     road.shows = shows;
     road.focus = front && !openUp ? front.p.t.id : null;
@@ -1013,6 +1025,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       boxes.push(r);
       const nk = c.key + ':' + r.mode, n = road.nodes.get(nk) || roadNode(nk, c.p, c.end, r.mode);
       seen.add(nk);
+      const cv = colVar(c.p.lane.col); if (n.btn.style.getPropertyValue('--c') !== cv) n.btn.style.setProperty('--c', cv);   // a view given another colour
       n.r = r; n.s = c.s; n.roll = false;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
       // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
@@ -1118,7 +1131,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
           c.strokeStyle = g; c.beginPath(); c.moveTo(px(xn, sTop), py(sTop)); c.lineTo(px(xn, sB), py(sB)); c.stroke();
         }
       }
-      if (L.lanes.length > 1) for (const ln of L.lanes) { quad(ln.x0, ln.x1, sTop, sB); c.fillStyle = haze(P.p[ln.col], P.dark ? 0.07 : 0.055); c.fill(); }
+      if (L.lanes.length > 1) for (const ln of L.lanes) { quad(ln.x0, ln.x1, sTop, sB); c.fillStyle = haze(colRgb(P, ln.col), P.dark ? 0.07 : 0.055); c.fill(); }
       c.lineWidth = 1;
 
       // A year the reader asked for: its stretch of road is lit for a few seconds.
@@ -1190,7 +1203,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       for (const [li, ln] of L.lanes.entries()) for (const e of ln.eras) {
         const at = dir > 0 ? e.xa : e.xb, u = U(at);
         if (at < L.tMin || at > L.tMax || u <= uGone || u >= uFar * 0.6) continue;
-        const s = S(u), y = py(s), a = far(s) * clamp(1 + (u + 0.06 * D) / (0.1 * D), 0, 1), col = P.p[ln.col];
+        const s = S(u), y = py(s), a = far(s) * clamp(1 + (u + 0.06 * D) / (0.1 * D), 0, 1), col = colRgb(P, ln.col);
         c.strokeStyle = rgba(col, 0.55 * a); c.lineWidth = 1.2;
         c.beginPath(); c.moveTo(px(ln.x0, s), y); c.lineTo(px(ln.x1, s), y); c.stroke();
         if (s < 0.4) continue;      // far off, the line alone
@@ -1214,7 +1227,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         const a0 = Math.max(p.a, L.tMin), b0 = Math.min(p.b, L.tMax), u1 = U(a0), u2 = U(b0);
         const lo = Math.max(uNear, Math.min(u1, u2)), hi = Math.min(uFar, Math.max(u1, u2));
         if (hi < lo) continue;
-        const h = road.heat.get(p.t.id) || 0, col = h ? mix(P.ink, P.p[p.lane.col], h) : P.ink, s1 = S(lo), s2 = S(hi);
+        const h = road.heat.get(p.t.id) || 0, col = h ? mix(P.ink, colRgb(P, p.lane.col), h) : P.ink, s1 = S(lo), s2 = S(hi);
         const x1 = px(p.xn, s1), y1 = py(s1), x2 = px(p.xn, s2), y2 = py(s2);
         if (hi > lo) {
           const g = c.createLinearGradient(x1, y1, x2, y2 === y1 ? y1 - 1 : y2);
@@ -1243,7 +1256,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         }
         // The dated points of a selected entry, written along its line.
         if (h > 0.03 && (p.t.id === state.open || p.t.id === road.focus) && L.at.get(p.t.id) === p) {
-          const pc = P.p[p.lane.col];
+          const pc = colRgb(P, p.lane.col);
           let lastY = Infinity;
           const ms = dir > 0 ? p.t.marks : [...p.t.marks].reverse();
           for (const m of ms) {
@@ -1290,7 +1303,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       // The stem under each name.
       c.lineWidth = 1;
       for (const st of stems) {
-        c.strokeStyle = st.hot ? rgba(P.p[st.col], st.a) : rgba(P.ink, 0.45 * st.a);
+        c.strokeStyle = st.hot ? rgba(colRgb(P, st.col), st.a) : rgba(P.ink, 0.45 * st.a);
         c.beginPath(); c.moveTo(st.x1, st.y1); c.lineTo(st.x2, st.y2); c.stroke();
       }
 
@@ -1374,7 +1387,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
       const units = [(/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean);
-      const under = [era, ...units.map((u) => `${u}: ${AXIS_NAMES[u]}, ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
+      const under = [era, ...units.map((u) => matchMedia(PHONE).matches ? `${u}: ${AXIS_UNITS[u]} years ago` : `${u}: ${AXIS_NAMES[u]}, ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
       if (under !== L.unitsSaid) {
         L.unitsSaid = under;
         $('road-unit').textContent = under;
@@ -1544,7 +1557,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const box = $('qlist');
     if (!q) { box.hidden = true; $('q').setAttribute('aria-expanded', false); return; }
     box.hidden = false; $('q').setAttribute('aria-expanded', true);
-    const col = (p) => `--c:var(--p${state.colors.get(p.group.id) % 8})`;
+    const col = (p) => `--c:${colVar(state.colors.get(p.group.id))}`;
     let divided = false;
     const mk = (text) => mark(text, q);
     box.innerHTML = (!hits.length ? `<li class="none" role="presentation">${waiting ? 'Searching…' : 'Nothing matches. Try a name, an event or a year.'}</li>`
@@ -1638,7 +1651,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const many = state.views.length > 1;
     $('pills').innerHTML = state.views.map((id) => {
       const v = viewById.get(id);
-      return `<div class="pill${many ? '' : ' one'}" data-pill="${esc(id)}" style="--c:var(--p${state.colors.get(id) % 8})"${many ? ' title="Drag to reorder"' : ''}>` +
+      return `<div class="pill${many ? '' : ' one'}" data-pill="${esc(id)}" style="--c:${colVar(state.colors.get(id))}"${many ? ' title="Drag to reorder"' : ''}>` +
         `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
         (many ? `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button>` : '') + '</div>';
     }).join('');
@@ -1819,7 +1832,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         name = `<span>${mark(v.name, q)}</span>${q ? `<i title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i>` : ''}`;
         sub = (on ? '<span class="st">On the timeline</span> · ' : wait ? '<span class="st">Loading…</span> · ' : bad ? '<span class="st bad">Could not load</span> · ' : '') + esc(viewSub(v));
         tb = `<span class="tb">${thumb(v)}</span>`;
-        attrs = `${v.description ? ` title="${esc(v.description)}"` : ''} aria-checked="${on}"${on ? ` style="--c:var(--p${state.colors.get(v.id) % 8})"` : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
+        attrs = `${v.description ? ` title="${esc(v.description)}"` : ''} aria-checked="${on}"${on ? ` style="--c:${colVar(state.colors.get(v.id))}"` : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
         // Beside the others: add it, or take it off when it is one of several.
         if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}</button>`;
         else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}</button>`;
@@ -1957,7 +1970,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const owner = t.owner ? ownerTitle.get(t.owner) || t.owner : 'a contributor';
 
     const onLine = L && L.at.get(id);
-    $('p-thing').style.setProperty('--c', onLine ? `var(--p${state.colors.get(onLine.group.id) % 8})` : 'var(--acc)');
+    $('p-thing').style.setProperty('--c', onLine ? colVar(state.colors.get(onLine.group.id)) : 'var(--acc)');
     $('p-thing').innerHTML = `
       <div class="pane-head">${crumbs()}<button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
       <div class="th-head"><span class="tile big">${icon}</span><div><p class="kind">${kind}</p><h2 id="thing-title" tabindex="-1">${esc(t.name)}</h2><p class="meta">${meta}</p></div></div>
@@ -1978,7 +1991,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (opts.scroll) roadToThing(id, !opts.jump);
     // Re-colour after render: the entry may have just been placed under a view.
     const placed = L && L.at.get(id);
-    if (placed) $('p-thing').style.setProperty('--c', `var(--p${state.colors.get(placed.group.id) % 8})`);
+    if (placed) $('p-thing').style.setProperty('--c', colVar(state.colors.get(placed.group.id)));
     if (location.hash !== '#' + id) history_replace('#' + id);
     if (opts.focus !== false) $('thing-title').focus({ preventScroll: true });
   }
@@ -2002,7 +2015,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const pool = new Set();
     for (const id of state.views) for (const t of viewById.get(id).members) pool.add(t);
     const list0 = [...pool];
-    const colourOf = (t) => { const p = L && L.at.get(t.id); return p ? `var(--p${state.colors.get(p.group.id) % 8})` : 'var(--rule2)'; };
+    const colourOf = (t) => { const p = L && L.at.get(t.id); return p ? `${colVar(state.colors.get(p.group.id))}` : 'var(--rule2)'; };
     const row = (t, date) => `<li style="--c:${colourOf(t)}"><i></i>${thingButton(t.id)}<small>${esc(date)}</small></li>`;
     const born = list0.filter((t) => t.born >= from && t.born < to).sort((a, b) => a.born - b.born);
     const ended = list0.filter((t) => t.end != null && t.end >= from && t.end < to).sort((a, b) => a.end - b.end);
@@ -2354,11 +2367,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('filters-btn').setAttribute('aria-expanded', open);
     });
 
-    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html).
+    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in the same tab.
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
-      const q = 'views=' + state.views.map(addressOf).join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
-      window.open('print.html?' + q, '_blank', 'noopener');
+      const q = 'views=' + state.views.map(addressOf).join(',') + '&c=' + state.views.map((id) => colOut(state.colors.get(id))).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
+      location.href = 'print.html?' + q;   // in the same tab (asked for, Nov 2026); the print page's logo leads back
     });
 
     // The pills: drag one to change the order of the lanes, tap its dot to
@@ -2383,10 +2396,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       e.stopPropagation();
       const sw = $('swatches'), id = dot.dataset.colour;
       if (!sw.hidden && sw.dataset.for === id) { sw.hidden = true; return; }
-      const mine = state.colors.get(id) % 8;
+      const mine = state.colors.get(id);
       sw.dataset.for = id;
       sw.innerHTML = [0, 1, 2, 3, 4, 5, 6, 7].map((n) =>
-        `<button type="button" role="option" data-swatch="${n}" aria-selected="${n === mine}" style="--c:var(--p${n})" aria-label="Colour ${n + 1}"></button>`).join('');
+        `<button type="button" role="option" data-swatch="${n}" aria-selected="${n === mine}" style="--c:var(--p${n})" aria-label="Colour ${n + 1}"></button>`).join('') +
+        // a ninth: any colour, from the system's own picker (asked for, Nov 2026)
+        `<label class="any${isHex(mine) ? ' on' : ''}" title="Any colour" aria-label="Any colour"${isHex(mine) ? ` style="--c:${mine}"` : ''}><input type="color" value="${isHex(mine) ? mine : '#ff7a59'}"></label>`;
       sw.hidden = false;
       // The colours open just above the dot, kept inside the strip.
       const box = $('dock').getBoundingClientRect(), r = dot.getBoundingClientRect();
@@ -2402,6 +2417,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.colors.set(id, n);
       changed();
     });
+    // any colour: the view keeps it as it is picked; the link and the export carry it
+    $('swatches').addEventListener('input', (e) => {
+      if (e.target.type !== 'color') return;
+      const id = $('swatches').dataset.for, c = e.target.value.toLowerCase();
+      if (state.views.some((v) => v !== id && state.colors.get(v) === c)) return;
+      state.colors.set(id, c); e.target.parentElement.classList.add('on'); e.target.parentElement.style.setProperty('--c', c);
+      for (const b of $('swatches').querySelectorAll('[data-swatch]')) b.setAttribute('aria-selected', 'false');
+      // redraw at most once a frame while the picker is dragged; the open picker and its row stay as they are
+      cancelAnimationFrame(anyFrame); anyFrame = requestAnimationFrame(() => { changed(); $('swatches').hidden = false; });
+    });
+    let anyFrame = 0;
     document.addEventListener('pointerdown', (e) => { if (!e.target.closest('#swatches, [data-colour]')) $('swatches').hidden = true; });
 
     // Dragging a pill reorders the lanes. With a mouse it starts at once. A finger scrolls the
