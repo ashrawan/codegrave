@@ -591,17 +591,16 @@ function fit() {
 let fitWidth = 0;
 if (typeof window !== 'undefined') window.addEventListener('resize', () => { if (innerWidth !== fitWidth) { fitWidth = innerWidth; fit(); } });
 // A poster sheet's own "Download image" button: one sheet as a PNG (asked for, Nov 2026).
-// A small download icon just above the sheet's top right corner (asked for: small, no text, no menu), never printed.
+// A folded corner on each sheet's top right with a small download arrow (picked from four, Nov 2026), never printed or drawn.
 const DL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
 function addShots(paper) {
   const pages = [...doc.querySelectorAll('.pg')];
   pages.forEach((pg, i) => {
-    const row = document.createElement('div');
-    row.className = 'shot';
-    row.innerHTML = `<button type="button" title="Download sheet ${i + 1} as an image (PNG)" aria-label="Download sheet ${i + 1} as an image">${DL}</button>`;
-    const b = row.firstElementChild;
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'shot'; b.innerHTML = DL;
+    b.title = b.ariaLabel = 'Download sheet ' + (i + 1) + ' as an image (PNG)';
     b.addEventListener('click', () => sheetImage(pg, i, pages.length, paper, b));
-    pg.before(row);
+    pg.appendChild(b);
   });
 }
 const notShot = (el) => el.classList?.contains('shot');
