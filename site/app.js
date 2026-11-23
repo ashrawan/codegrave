@@ -95,9 +95,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const a = -y;
     if (a < 10000) return a + ' BCE';
     if (a < 1e5) return group(sig(a)) + ' BCE';
-    if (a < 1e6) return group(sig(a)) + ' years ago';
-    if (a < 1e9) return sig(a / 1e6) + ' million years ago';
-    return sig(a / 1e9) + ' billion years ago';
+    // on a phone the deep-time words are short: 100k, 66M, 13.8B years ago (asked for, Nov 2026)
+    const ph = matchMedia(PHONE).matches;
+    if (a < 1e6) return (ph ? sig(a / 1e3) + 'k' : group(sig(a))) + ' years ago';
+    if (a < 1e9) return sig(a / 1e6) + (ph ? 'M' : ' million') + ' years ago';
+    return sig(a / 1e9) + (ph ? 'B' : ' billion') + ' years ago';
   }
   const deep = (y) => y <= -1e5;    // said as an age, so "circa" adds nothing
   function fmtDate(s, precision) {
@@ -131,8 +133,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function fmtSpan(years) {
     if (years < 1) return 'under a year';
     const n = Math.round(years);
-    if (n >= 1e9) return sig(n / 1e9) + ' billion years';
-    if (n >= 1e6) return sig(n / 1e6) + ' million years';
+    const ph = matchMedia(PHONE).matches;
+    if (n >= 1e9) return sig(n / 1e9) + (ph ? 'B' : ' billion') + ' years';
+    if (n >= 1e6) return sig(n / 1e6) + (ph ? 'M' : ' million') + ' years';
     if (n >= 1e4) return group(sig(n)) + ' years';
     return group(n) + (n === 1 ? ' year' : ' years');
   }
@@ -173,7 +176,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if ((m = /^-(\d{5,11})$/.exec(q))) return -Number(m[1]);
     if ((m = /^(\d[\d,]*)\s*(bce|bc|b\.c\.|b\.c\.e\.)$/.exec(q))) { const y = Number(m[1].replace(/,/g, '')); return y ? -y : null; }
     if ((m = /^(\d{1,4})\s*(ce|ad|a\.d\.|c\.e\.)$/.exec(q))) return Number(m[1]) || null;
-    if ((m = /^(\d+(?:\.\d+)?)\s*(ka|kya|thousand years ago|ma|mya|million years ago|ga|bya|billion years ago)$/.exec(q))) {
+    if ((m = /^(\d+(?:\.\d+)?)\s*(ka|kya|thousand years ago|k years ago|ma|mya|million years ago|m years ago|ga|bya|billion years ago|b years ago)$/.exec(q))) {
       const mult = /^(k|t)/.test(m[2]) ? 1e3 : /^(m)/.test(m[2]) ? 1e6 : 1e9;
       return -Math.round(Number(m[1]) * mult);
     }
@@ -1377,7 +1380,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
       const units = [(/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean);
-      const under = [era, ...units.map((u) => `${u}: ${AXIS_NAMES[u]}, ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
+      const under = [era, ...units.map((u) => matchMedia(PHONE).matches ? `${u}: ${AXIS_UNITS[u]} years ago` : `${u}: ${AXIS_NAMES[u]}, ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
       if (under !== L.unitsSaid) {
         L.unitsSaid = under;
         $('road-unit').textContent = under;
