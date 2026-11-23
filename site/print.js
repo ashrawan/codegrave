@@ -498,7 +498,7 @@ function poster(vs, inks, paper, fs) {
       ? here.slice(0, 3).map(({ c, col }) => '<div class="fn"><b style="color:' + col + '">' + esc(c.name) + '</b><p>' + esc(c.note) + '</p></div>').join('')
       : '<div class="fk">' + vs.map((v, i) => '<span><i style="background:' + inks[i] + '"></i>' + esc(v.name) + '</span>').join('') + '</div>';
     // the footer runs under the line, from where it starts to its point; the name goes to the top corner
-    const foot = '<div class="foot" style="left:' + (S.side - 4) + 'mm;right:' + (S.side - 9) + 'mm"><div class="story">' + story + '</div><span class="brand">A timeline from codegrave.com</span></div>';
+    const foot = '<div class="foot" style="left:' + (S.side - 4) + 'mm;right:' + (S.side - 9) + 'mm"><div class="story">' + story + '</div><span class="brand">codegrave.com</span></div>';
     p.innerHTML = head + h + foot;
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
@@ -507,7 +507,7 @@ function poster(vs, inks, paper, fs) {
   flowCredits(all.filter((e) => e.img || e.src).map((e) => creditHtml(e, one ? null : inks[e.vi])), (first) => {
     const p = sheetOf();
     p.innerHTML = '<div class="cr-h"><h1>' + (first ? 'Pictures and sources' : '&nbsp;') + '</h1>' + (first ? '<p>' + esc(creditLine()) + '</p>' : '') + '</div><div class="cred"></div>'
-      + '<div class="foot"><span class="lnk"></span><span class="brand">A timeline from codegrave.com</span></div>';
+      + '<div class="foot"><span class="lnk"></span><span class="brand">codegrave.com</span></div>';
     return { p, box: p.querySelector('.cred') };
   }, link);
   // a chapter's stretch of the band too short for its label drops the years, then the label
