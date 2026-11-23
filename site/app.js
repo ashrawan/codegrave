@@ -14,7 +14,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   'use strict';
 
   const REPO = 'https://github.com/ashrawan/codegrave';
-  const EDITORS = 'codegrave';      // the editors' folder: its views are not signed in the list
+  const EDITORS = 'wiki';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
   const MAX_ROWS = 800;         // the most lines drawn at once
   const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
@@ -506,10 +506,15 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     return state.views.length > 0;
   }
 
-  // The ids a link names. They may hold "/" (community views are <owner>/<id>).
+  // The ids a link names. The address is the first view, like a repository on
+  // GitHub: /wiki/the-universe (an editors' view), /<owner>/<id> (someone's
+  // view), /<id> (a classical view). Any others follow in "with".
+  const okId = (s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..');
   function urlViews() {
     const q = new URLSearchParams(location.search);
-    return (q.get('views') || q.get('view') || '').split(',').map((s) => s.trim()).filter((s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..'));
+    const path = decodeURIComponent(location.pathname).split('/').filter((s) => s && s !== 'index.html').join('/');
+    const ids = [path, ...(q.get('with') || q.get('views') || '').split(',')].map((s) => s.trim());
+    return [...new Set(ids.filter(okId))];
   }
   // Year range in a link: "1995-2001", "-500-1500" (500 BCE to 1500), "-66000000--1000".
   function readSpan(s) {
@@ -529,11 +534,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   function writeUrl() {
     const q = new URLSearchParams();
-    q.set('views', state.views.join(','));
+    if (state.views.length > 1) q.set('with', state.views.slice(1).join(','));
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
-    history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
+    history.replaceState(null, '', '/' + (state.views[0] || '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
   }
 
   // ---------------------------------------------------------------- what is drawn

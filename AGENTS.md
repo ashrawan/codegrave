@@ -19,7 +19,8 @@ The data has two layers:
 - **Community folders** (`data/community/<github-name>/`): what one person or
   group publishes. A view is one subject under a plain name ("Ancient Egypt",
   "US Presidents", "Video Games"): a hand-picked list of entries, and
-  chapters. The folder `codegrave` belongs to the editors.
+  chapters. The folder `wiki` belongs to the editors, so their
+  views live at `codegrave.com/wiki/<view>`.
 
 ## Commands
 
@@ -27,7 +28,7 @@ The data has two layers:
 node scripts/build.mjs --check      # check all data; must print "0 errors"
 node scripts/build.mjs              # also write site/data/ so the page can load
 node --test                         # run the tests
-python3 -m http.server 8080 --directory site    # view the page
+node scripts/serve.mjs 8080                     # view the page (view paths such as /wiki/<id> work)
 node scripts/new.mjs entry <kind> <id> "<Name>" <born-date>
 node scripts/new.mjs view <github-name> <id> "<Title>"
 ```
@@ -410,7 +411,7 @@ answer one click.
 - If what the page shows changed (a view, an entry, or `site/`), take
   screenshots at 1440 and 390 pixels wide for the pull request. With
   Playwright: build, serve `site/` on a local port, open
-  `http://localhost:<port>/?views=<owner>/<id>` (or `#<entry-id>`), and save
+  `http://localhost:<port>/<owner>/<id>` (or `#<entry-id>`), and save
   a full-window screenshot at each width.
 
 ## Opening the pull request

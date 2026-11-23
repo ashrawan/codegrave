@@ -12,3 +12,16 @@
   for = "/data/*"
   [headers.values]
     Cache-Control = "public, max-age=300"
+
+# A view's address is a path, like a repository on GitHub: /wiki/the-universe,
+# /<owner>/<view>. Files that exist are served as they are; a missing data file
+# stays a 404; every other path is the page, which reads the view from the path.
+[[redirects]]
+  from = "/data/*"
+  to = "/data/missing.json"
+  status = 404
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

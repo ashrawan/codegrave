@@ -47,7 +47,7 @@ test('the build rejects a long label, an unknown link type, a plain-http link an
 
 test('the build rejects a view whose eras overlap', () => {
   const copy = copyOfRepo();
-  edit(join(copy, 'data', 'community', 'codegrave', 'views', 'the-internet.json'), (view) => {
+  edit(join(copy, 'data', 'community', 'wiki', 'views', 'the-internet.json'), (view) => {
     view.checkpoints.push({ id: 'overlap', name: 'Overlap', from: 2000, to: 2005, note: 'x' });
   });
   assert.match(build(copy, '--check'), /overlap/);
@@ -82,7 +82,7 @@ test('the build rejects an unknown label, a second entry for one Wikidata item, 
   const copy = copyOfRepo();
   edit(join(copy, 'data', 'base', 'languages', 'typescript.json'), (t) => { t.labels = ['no-such-label']; t.wikidata = 'Q1'; });
   edit(join(copy, 'data', 'base', 'languages', 'javascript.json'), (t) => { t.wikidata = 'Q1'; });
-  edit(join(copy, 'data', 'community', 'codegrave', 'views', 'the-internet.json'), (v) => { v.entries.push('no-such-entry'); });
+  edit(join(copy, 'data', 'community', 'wiki', 'views', 'the-internet.json'), (v) => { v.entries.push('no-such-entry'); });
   const out = build(copy, '--check');
   assert.match(out, /unknown label "no-such-label"/);
   assert.match(out, /is the same Wikidata item \(Q1\)/);
@@ -92,11 +92,11 @@ test('the build rejects an unknown label, a second entry for one Wikidata item, 
 test('the editors\' topics name real community views, each in one topic only', () => {
   const copy = copyOfRepo();
   const file = join(copy, 'data', 'editors-choice.json');
-  edit(file, (c) => { c.topics = [{ id: 'one', name: 'One', views: ['codegrave/the-internet', 'languages', 'codegrave/no-such-view'] }, { id: 'two', name: 'Two', views: ['codegrave/the-internet'] }]; });
+  edit(file, (c) => { c.topics = [{ id: 'one', name: 'One', views: ['wiki/the-internet', 'languages', 'wiki/no-such-view'] }, { id: 'two', name: 'Two', views: ['wiki/the-internet'] }]; });
   const out = build(copy, '--check');
   assert.match(out, /topic "one" names "languages", which is not a community view/);
-  assert.match(out, /topic "one" names the view "codegrave\/no-such-view", which does not exist/);
-  assert.match(out, /the view "codegrave\/the-internet" is in two topics/);
+  assert.match(out, /topic "one" names the view "wiki\/no-such-view", which does not exist/);
+  assert.match(out, /the view "wiki\/the-internet" is in two topics/);
   edit(file, (c) => { delete c.topics; });
   assert.match(build(copy, '--check'), / 0 errors/);
 });
@@ -137,14 +137,14 @@ test('the build writes one ready-made file per view, old addresses, detail files
   assert.ok(boot.views.every((v) => Array.isArray(v.span) && (v.span[1] == null || v.span[0] <= v.span[1])));
 
   // A community view: everything it shows is in its one file.
-  const view = read('v/codegrave/the-internet.json');
-  assert.equal(view.view.id, 'codegrave/the-internet');
+  const view = read('v/wiki/the-internet.json');
+  assert.equal(view.view.id, 'wiki/the-internet');
   assert.equal(view.entries.length, view.view.count);
   const netscape = view.entries.find((t) => t.id === 'netscape');
   for (const k of ['rank', 'score', 'topPct', 'peers', 'inbound', 'home', 'tier']) assert.ok(k in netscape, `an entry carries "${k}"`);
   assert.ok(netscape.links.every((l) => typeof l.n === 'string'), 'links carry the name of the other entry');
   // Its old address still answers, with the new id inside.
-  assert.equal(read('v/browser-wars.json').view.id, 'codegrave/the-internet');
+  assert.equal(read('v/browser-wars.json').view.id, 'wiki/the-internet');
   // A classical view never carries more than the cap, and says how many it really holds.
   const everything = read('v/everything.json');
   assert.ok(everything.entries.length <= 200 && everything.view.count >= everything.entries.length);
@@ -159,7 +159,7 @@ test('the build writes one ready-made file per view, old addresses, detail files
   const index = read('s/all.json');
   assert.equal(index.entries.length, boot.counts.entries);
   assert.ok(index.entries.some((l) => l[0] === 'cobol' && l[1] === 'COBOL' && boot.categories[l[2]].id === 'languages'));
-  assert.ok(index.views.some((l) => l[0] === 'languages' && l[2] === 1) && index.views.some((l) => l[0] === 'codegrave/the-internet' && l[2] === 0));
-  assert.ok(existsSync(join(copy, 'site', 'data', 'c', 'codegrave.json')));
+  assert.ok(index.views.some((l) => l[0] === 'languages' && l[2] === 1) && index.views.some((l) => l[0] === 'wiki/the-internet' && l[2] === 0));
+  assert.ok(existsSync(join(copy, 'site', 'data', 'c', 'wiki.json')));
   assert.ok(!readdirSync(join(copy, 'site', 'data')).includes('things.json'), 'the old all-in-one bundle is gone');
 });

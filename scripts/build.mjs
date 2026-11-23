@@ -68,6 +68,7 @@ function isBefore(a, b) {
 }
 const ID = /^[a-z0-9][a-z0-9-]*$/;
 const OWNER = /^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/;   // a GitHub name, lower case
+const RESERVED = new Set(['data', 'media']);   // site/ folders: /<owner>/<id> is a view's address, so these cannot be owners
 const PRECISIONS = ['day', 'month', 'year', 'circa'];
 const STATUSES = ['alive', 'fading', 'dead'];
 const EVENT_TYPES = ['project_start', 'born', 'released', 'changed_hands', 'milestone', 'deprecated', 'ended', 'afterlife'];
@@ -225,6 +226,7 @@ if (existsSync(communityDir)) {
     if (!dir.isDirectory()) continue;
     const owner = dir.name, at = `data/community/${owner}`;
     if (!OWNER.test(owner)) { err(at, 'a community folder is named after a GitHub user or organisation, in lower case'); continue; }
+    if (RESERVED.has(owner)) { err(at, `"${owner}" is a folder of the site itself, so it cannot be a view's address`); continue; }
     const profile = existsSync(join(communityDir, owner, 'profile.json')) ? readJson(join(communityDir, owner, 'profile.json')) : null;
     if (!profile) err(at, 'needs a profile.json');
     else {
@@ -426,7 +428,7 @@ const classical = [
   ...domains.map((d) => ({ id: d.id, name: d.name, description: d.description, tags: ['domain'], categories: [], domains: [d.id], category: d.id })),
   ...categories.filter((c) => !domainById.has(c.id)).map((c) => ({ id: c.id, name: c.name, description: describeKind(c).slice(0, 200), tags: ['kind'], categories: [c.id], category: c.domain })),
 ];
-for (const v of classical) { v.author = 'codegrave'; v.level = 100; v._id = v.id; v._type = 'classical'; v._at = 'data/categories.json'; }
+for (const v of classical) { v.author = 'wiki'; v.level = 100; v._id = v.id; v._type = 'classical'; v._at = 'data/categories.json'; }
 if (catById.has('everything') || domainById.has('everything')) err('data/categories.json', '"everything" is taken by the view of that name');
 const homeOf = (kindId) => (domainById.has(kindId) ? kindId : kindId);   // a kind's own view, or the branch view of the same id
 

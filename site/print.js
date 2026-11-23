@@ -123,7 +123,7 @@ export const inOrder = (es, newest) => es.slice().sort((a, b) => (newest ? b.t -
 // A span in reading order: "1957 – 1966", or "1966 – 1957" and "Today – 1957" when reversed.
 const rs = (a, b) => (rev ? (b == null ? 'Today' : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
 const ends = (first) => (rev ? ['Today', yearText(first)] : [yearText(first), 'Today']);
-const linkOf = (views) => 'https://codegrave.com/?views=' + views.map((v) => v.id).join(',') + (yr ? '&yr=' + yr.join('-') : '') + '&o=' + (rev ? 'backward' : 'forward');
+const linkOf = (views) => 'https://codegrave.com/' + views[0].id + '?' + (views.length > 1 ? 'with=' + views.slice(1).map((v) => v.id).join(',') + '&' : '') + (yr ? 'yr=' + yr.join('-') + '&' : '') + 'o=' + (rev ? 'backward' : 'forward');
 const today = () => { const d = new Date(); return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); };
 
 // ---------------------------------------------------------------- one view
