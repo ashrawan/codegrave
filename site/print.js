@@ -489,8 +489,8 @@ function poster(vs, inks, paper, fs) {
     const win = sizes.length > 1 ? '<b style="left:' + clamp(pos(lo)) + '%;width:' + Math.max(1.5, clamp(pos(hi)) - clamp(pos(lo))) + '%"></b>' : '';
     const label = sizes.length > 1 ? esc(from + ' – ' + to) : esc(rs(first, last));
     const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
-    // the heading in three: the description on the left (first sheet), the title in the centre, the span on the right
-    const head = '<div class="t' + (pi ? ' sm' : '') + '"><div class="ti">' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div><h1>' + title + '</h1>' + mini + '</div>';
+    // the heading: the span alone in the top right corner; below it the title on the left and the description on the right (first sheet)
+    const head = mini + '<div class="t' + (pi ? ' sm' : '') + '"><h1>' + title + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>';
     // the footer tells the story of this sheet: each chapter on it, in its colour, with its note
     // (several views: a key of the views in their colours)
     const here = one ? [...new Set(part.map((e) => e.ci).filter((i) => i >= 0))].map((i) => ({ c: chs[i], col: TINTS[i % TINTS.length] })) : [];
@@ -498,7 +498,7 @@ function poster(vs, inks, paper, fs) {
       ? here.slice(0, 3).map(({ c, col }) => '<div class="fn"><b style="color:' + col + '">' + esc(c.name) + '</b><p>' + esc(c.note) + '</p></div>').join('')
       : '<div class="fk">' + vs.map((v, i) => '<span><i style="background:' + inks[i] + '"></i>' + esc(v.name) + '</span>').join('') + '</div>';
     // the footer runs under the line, from where it starts to its point; the name goes to the top corner
-    const foot = '<div class="foot" style="left:' + (S.side - 4) + 'mm;right:' + (S.side - 9) + 'mm"><div class="story">' + story + '</div></div><div class="brand-top">A timeline from codegrave.com</div>';
+    const foot = '<div class="foot" style="left:' + (S.side - 4) + 'mm;right:' + (S.side - 9) + 'mm"><div class="story">' + story + '</div><span class="brand">A timeline from codegrave.com</span></div>';
     p.innerHTML = head + h + foot;
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
