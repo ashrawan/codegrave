@@ -2360,11 +2360,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('filters-btn').setAttribute('aria-expanded', open);
     });
 
-    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html).
+    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in the same tab.
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
       const q = 'views=' + state.views.map(addressOf).join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
-      window.open('print.html?' + q, '_blank', 'noopener');
+      location.href = 'print.html?' + q;   // in the same tab (asked for, Nov 2026); the print page's logo leads back
     });
 
     // The pills: drag one to change the order of the lanes, tap its dot to
