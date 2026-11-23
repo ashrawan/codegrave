@@ -324,7 +324,9 @@ How the page is put together:
   timeline holds brings its own view alone too (`bringIn()`); only a link
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
-- **The views pane** is search, then a row of chips (`drawChips()`: the
+- **The views pane** heads with one slim line: "Views" with how many views
+  and entries there are, then the GitHub link (moved there from the top bar
+  on request, Nov 2026), the info button and the cross. Below it is search, then a row of chips (`drawChips()`: the
   editors' topics from `data/editors-choice.json`, today Countries,
   Culture, History, Science and Technology, after a first chip "My view"),
   then the list, then the filter: the year range (`state.span`). "My view"
