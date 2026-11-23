@@ -1,0 +1,50 @@
+{
+  "id": "pteranodon",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Pteranodon",
+      "from": "-86000000"
+    }
+  ],
+  "summary": "A flying reptile with a long toothless beak and wings up to seven metres across; a pterosaur, not a dinosaur.",
+  "wikidata": "Q245060",
+  "events": [
+    {
+      "type": "born",
+      "date": "-86000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-78250000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Pteranodon (Q245060)",
+      "url": "https://www.wikidata.org/wiki/Q245060",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pteranodon",
+      "url": "https://en.wikipedia.org/wiki/Pteranodon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Pteranodon_TD.png/500px-Pteranodon_TD.png",
+    "alt": "Pteranodon",
+    "credit": "TotalDino",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pteranodon_TD.png"
+  }
+}

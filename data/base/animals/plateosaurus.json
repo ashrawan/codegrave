@@ -1,0 +1,50 @@
+{
+  "id": "plateosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Plateosaurus",
+      "from": "-227000000"
+    }
+  ],
+  "summary": "A long-necked plant eater of Triassic Europe, an early relative of the giant sauropods and one of the best-known dinosaurs from fossils.",
+  "wikidata": "Q131046",
+  "events": [
+    {
+      "type": "born",
+      "date": "-227000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-204000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Plateosaurus (Q131046)",
+      "url": "https://www.wikidata.org/wiki/Q131046",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Plateosaurus",
+      "url": "https://en.wikipedia.org/wiki/Plateosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Plateosaurus_Scale.svg/500px-Plateosaurus_Scale.svg.png",
+    "alt": "Plateosaurus",
+    "credit": "Slate Weasel",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Plateosaurus_Scale.svg"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "megalosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Megalosaurus",
+      "from": "-166000000"
+    }
+  ],
+  "summary": "A Middle Jurassic meat eater from England and, in 1824, the first dinosaur ever to be given a scientific name.",
+  "wikidata": "Q131056",
+  "events": [
+    {
+      "type": "born",
+      "date": "-166000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-165000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Megalosaurus (Q131056)",
+      "url": "https://www.wikidata.org/wiki/Q131056",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Megalosaurus",
+      "url": "https://en.wikipedia.org/wiki/Megalosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Megalosaurus_0289.JPG/500px-Megalosaurus_0289.JPG",
+    "alt": "Megalosaurus",
+    "credit": "Conty",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Megalosaurus_0289.JPG"
+  }
+}

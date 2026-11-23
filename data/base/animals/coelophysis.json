@@ -1,0 +1,50 @@
+{
+  "id": "coelophysis",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Coelophysis",
+      "from": "-227000000"
+    }
+  ],
+  "summary": "A slender, fast meat eater of the Late Triassic, known from hundreds of skeletons found together at Ghost Ranch in New Mexico.",
+  "wikidata": "Q309392",
+  "events": [
+    {
+      "type": "born",
+      "date": "-227000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-208500000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Coelophysis (Q309392)",
+      "url": "https://www.wikidata.org/wiki/Q309392",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coelophysis",
+      "url": "https://en.wikipedia.org/wiki/Coelophysis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Coelophysis_%281%29.jpg/500px-Coelophysis_%281%29.jpg",
+    "alt": "Coelophysis",
+    "credit": "Matt Celeskey from Albuquerque",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Coelophysis_(1).jpg"
+  }
+}

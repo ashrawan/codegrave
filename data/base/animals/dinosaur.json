@@ -1,0 +1,45 @@
+{
+  "id": "dinosaur",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Dinosaur",
+      "from": "-233230000"
+    }
+  ],
+  "summary": "The group of reptiles that ruled the land for over 160 million years. All of them died out 66 million years ago except one branch, the birds, which are living dinosaurs.",
+  "wikidata": "Q430",
+  "events": [
+    {
+      "type": "born",
+      "date": "-233230000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Dinosaur (Q430)",
+      "url": "https://www.wikidata.org/wiki/Q430",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dinosaur",
+      "url": "https://en.wikipedia.org/wiki/Dinosaur",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Various_dinosaurs2.png/500px-Various_dinosaurs2.png",
+    "alt": "Dinosaur",
+    "credit": "J. Spencer, Tadek Kurpaski, Daderot, Gary Todd, Domser, Captmondo. Collage by Matthew Martyniuk",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Various_dinosaurs2.png"
+  }
+}

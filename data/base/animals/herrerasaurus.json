@@ -1,0 +1,50 @@
+{
+  "id": "herrerasaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Herrerasaurus",
+      "from": "-231400000"
+    }
+  ],
+  "summary": "An early meat-eating dinosaur from Argentina, up to six metres long, from the first days of the dinosaurs.",
+  "wikidata": "Q131014",
+  "events": [
+    {
+      "type": "born",
+      "date": "-231400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-228910000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Herrerasaurus (Q131014)",
+      "url": "https://www.wikidata.org/wiki/Q131014",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Herrerasaurus",
+      "url": "https://en.wikipedia.org/wiki/Herrerasaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Frenguellisaurus_ischigualastensis_DSC_6185.jpg/500px-Frenguellisaurus_ischigualastensis_DSC_6185.jpg",
+    "alt": "Herrerasaurus",
+    "credit": "Eva K.",
+    "licence": "GFDL 1.2",
+    "source": "https://commons.wikimedia.org/wiki/File:Frenguellisaurus_ischigualastensis_DSC_6185.jpg"
+  }
+}

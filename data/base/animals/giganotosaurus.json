@@ -1,0 +1,50 @@
+{
+  "id": "giganotosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Giganotosaurus",
+      "from": "-111000000"
+    }
+  ],
+  "summary": "One of the largest meat-eating dinosaurs, from Argentina, as long as Tyrannosaurus or longer.",
+  "wikidata": "Q14438",
+  "events": [
+    {
+      "type": "born",
+      "date": "-111000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-106000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Giganotosaurus (Q14438)",
+      "url": "https://www.wikidata.org/wiki/Q14438",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Giganotosaurus",
+      "url": "https://en.wikipedia.org/wiki/Giganotosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Giganotos_Db.jpg/500px-Giganotos_Db.jpg",
+    "alt": "Giganotosaurus",
+    "credit": "Dmitry Bogdanov",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Giganotos_Db.jpg"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "apatosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Apatosaurus",
+      "from": "-152000000"
+    }
+  ],
+  "summary": "A giant long-necked, whip-tailed sauropod of Late Jurassic North America, long confused with Brontosaurus.",
+  "wikidata": "Q14326",
+  "events": [
+    {
+      "type": "born",
+      "date": "-152000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-151000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Apatosaurus (Q14326)",
+      "url": "https://www.wikidata.org/wiki/Q14326",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apatosaurus",
+      "url": "https://en.wikipedia.org/wiki/Apatosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Louisae.jpg/500px-Louisae.jpg",
+    "alt": "Apatosaurus",
+    "credit": "Tadek Kurpaski from London, Poland",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Louisae.jpg"
+  }
+}

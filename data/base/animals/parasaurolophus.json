@@ -1,0 +1,50 @@
+{
+  "id": "parasaurolophus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Parasaurolophus",
+      "from": "-76500000"
+    }
+  ],
+  "summary": "A duck-billed dinosaur with a long hollow crest it may have used to make loud calls.",
+  "wikidata": "Q203583",
+  "events": [
+    {
+      "type": "born",
+      "date": "-76500000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-73000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Parasaurolophus (Q203583)",
+      "url": "https://www.wikidata.org/wiki/Q203583",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Parasaurolophus",
+      "url": "https://en.wikipedia.org/wiki/Parasaurolophus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Parasaurolophus_walkeri.png/500px-Parasaurolophus_walkeri.png",
+    "alt": "Parasaurolophus",
+    "credit": "Leandra Walters, Phil Senter, James H. Robins",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Parasaurolophus_walkeri.png"
+  }
+}

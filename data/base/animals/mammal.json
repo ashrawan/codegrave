@@ -1,0 +1,38 @@
+{
+  "id": "mammal",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Mammal",
+      "from": "-179000000"
+    }
+  ],
+  "summary": "Warm-blooded animals with hair that feed their young on milk. They appeared alongside the dinosaurs and spread widely after them.",
+  "wikidata": "Q7377",
+  "events": [
+    {
+      "type": "born",
+      "date": "-179000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Mammal (Q7377)",
+      "url": "https://www.wikidata.org/wiki/Q7377",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mammal",
+      "url": "https://en.wikipedia.org/wiki/Mammal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

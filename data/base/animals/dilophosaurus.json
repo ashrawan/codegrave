@@ -1,0 +1,50 @@
+{
+  "id": "dilophosaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Dilophosaurus",
+      "from": "-195200000"
+    }
+  ],
+  "summary": "A large early Jurassic predator with two thin crests on its head, made famous by a fictional version in Jurassic Park.",
+  "wikidata": "Q271710",
+  "events": [
+    {
+      "type": "born",
+      "date": "-195200000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-183700000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Dilophosaurus (Q271710)",
+      "url": "https://www.wikidata.org/wiki/Q271710",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dilophosaurus",
+      "url": "https://en.wikipedia.org/wiki/Dilophosaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Dilophosaurus_wetherilli.PNG/500px-Dilophosaurus_wetherilli.PNG",
+    "alt": "Dilophosaurus",
+    "credit": "Leandra Walters, published by Phil Senter and James H. Robins",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Dilophosaurus_wetherilli.PNG"
+  }
+}

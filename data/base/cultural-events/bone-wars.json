@@ -1,0 +1,50 @@
+{
+  "id": "bone-wars",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "Bone Wars",
+      "from": "1877"
+    }
+  ],
+  "summary": "The bitter race between American fossil hunters Edward Drinker Cope and Othniel Charles Marsh, which found dozens of new dinosaurs.",
+  "wikidata": "Q152646",
+  "events": [
+    {
+      "type": "born",
+      "date": "1877",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1892",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Bone Wars (Q152646)",
+      "url": "https://www.wikidata.org/wiki/Q152646",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bone Wars",
+      "url": "https://en.wikipedia.org/wiki/Bone_Wars",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Othniel_Charles_Marsh_%26_Edward_Drinker_Cope_bw.jpg/500px-Othniel_Charles_Marsh_%26_Edward_Drinker_Cope_bw.jpg",
+    "alt": "Bone Wars",
+    "credit": "Frederick Gutekunst",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Othniel_Charles_Marsh_%26_Edward_Drinker_Cope_bw.jpg"
+  }
+}

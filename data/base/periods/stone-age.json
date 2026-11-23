@@ -1,0 +1,50 @@
+{
+  "id": "stone-age",
+  "category": "periods",
+  "names": [
+    {
+      "name": "Stone Age",
+      "from": "-3400000"
+    }
+  ],
+  "summary": "The long age when people made their tools from stone, from about 3.4 million years ago until metalworking spread, between 4000 and 2000 BCE depending on the region.",
+  "wikidata": "Q11759",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3400000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-3000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Stone Age (Q11759)",
+      "url": "https://www.wikidata.org/wiki/Q11759",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Stone Age",
+      "url": "https://en.wikipedia.org/wiki/Stone_Age",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Ggantija_Temples_%281%29.jpg/500px-Ggantija_Temples_%281%29.jpg",
+    "alt": "Stone Age",
+    "credit": "Norum at English Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ggantija_Temples_(1).jpg"
+  }
+}

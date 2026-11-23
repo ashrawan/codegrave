@@ -1,0 +1,50 @@
+{
+  "id": "protoceratops",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Protoceratops",
+      "from": "-75000000"
+    }
+  ],
+  "summary": "A sheep-sized horned plant eater from Mongolia, once found locked in a fight with a Velociraptor.",
+  "wikidata": "Q14506",
+  "events": [
+    {
+      "type": "born",
+      "date": "-75000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-71000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Protoceratops (Q14506)",
+      "url": "https://www.wikidata.org/wiki/Q14506",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Protoceratops",
+      "url": "https://en.wikipedia.org/wiki/Protoceratops",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Carnegie_Protoceratops_andrewsi.jpg/500px-Carnegie_Protoceratops_andrewsi.jpg",
+    "alt": "Protoceratops",
+    "credit": "Karen",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Carnegie_Protoceratops_andrewsi.jpg"
+  }
+}

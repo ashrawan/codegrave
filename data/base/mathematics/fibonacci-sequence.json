@@ -42,5 +42,12 @@
       "kind": "secondary"
     }
   ],
-  "verified": false
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Fibonacci_Squares.svg/500px-Fibonacci_Squares.svg.png",
+    "alt": "Fibonacci sequence",
+    "credit": "Romain",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fibonacci_Squares.svg"
+  }
 }

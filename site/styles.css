@@ -180,6 +180,8 @@ mark { background: none; color: var(--text); font-weight: 600; text-decoration: 
 #vnote:empty { display: none; }
 .ibtn.sm { width: 30px; height: 30px; }
 .ibtn[hidden] { display: none; }
+#pdf img { filter: saturate(.7); opacity: .9; transition: filter .2s, opacity .2s; }
+#pdf:hover img, #pdf:focus-visible img { filter: none; opacity: 1; }
 .ibtn.done { color: var(--acc); }
 /* the views on the timeline: a strip of pills along the bottom, which scrolls sideways when they do not fit */
 #dock { position: fixed; left: 0; right: 0; bottom: 0; z-index: 18; height: 44px; display: flex; align-items: center; justify-content: flex-start; gap: 6px; padding: 0 20px; background: var(--surf); border-top: 1px solid var(--rule); }
@@ -354,6 +356,9 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 #vlist li.vhead { padding: 14px 8px 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); cursor: default; }
 #vlist li.vhead:first-child { padding-top: 4px; }
 #vlist li.vhead:hover { background: none; color: var(--faint); }
+#vlist li.vhead { display: flex; align-items: center; justify-content: space-between; }
+#vlist li.vhead .shuf { display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 6px; margin: -6px -4px -6px 0; color: var(--muted); background: transparent; border: 0; border-radius: 6px; cursor: pointer; }
+#vlist li.vhead .shuf:hover { color: var(--text); background: var(--raised); }
 .st.bad { color: var(--p7); font-weight: 600; }
 /* a classical view not loaded yet has no thumbnail: the folded map stands in */
 .th-map { display: flex; color: var(--faint); }
@@ -555,3 +560,8 @@ body.playing.peek .top, body.playing .top:focus-within { transform: none; opacit
 .rc.end, .rc.end.near { background: color-mix(in srgb, var(--glass) 45%, transparent); border-color: color-mix(in srgb, var(--rule2) 60%, transparent); box-shadow: none; filter: saturate(0); }
 .rc.end.near .rk b, .rc.end.small b { color: var(--faint); font-weight: 500; }
 .rc.end .rs, .rc.end small { color: var(--faint); opacity: .85; }
+
+/* The kind and branch of an entry are links to their views. */
+.th-head .kind .vlink { font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s, color .15s; }
+.th-head .kind .vlink:hover, .th-head .kind .vlink:focus-visible { color: var(--text); text-decoration-color: currentColor; }
+#qlist .vk { margin-left: auto; color: var(--faint); display: inline-flex; }

@@ -53,6 +53,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode: carry on */ } },
   };
   const ICON = {
+    // Shuffle colours: three dots in the views' colours on a turning arrow.
+    shuffle: '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.34-5.66"/><path d="M20 4v4h-4"/><circle cx="12" cy="8.6" r="1.9" fill="var(--p0)" stroke="none"/><circle cx="8.8" cy="14" r="1.9" fill="var(--p1)" stroke="none"/><circle cx="15.2" cy="14" r="1.9" fill="var(--p2)" stroke="none"/></svg>',
     // Community views are written by someone (a pen nib); classical views are part of the map (a folded map).
     community: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5 6.5 12 12 3l5.5 9z"/><path d="M12 13.5v8"/><circle cx="12" cy="11.5" r="1.6"/></svg>',
     classical: '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 6.5 9 4.5l6 2 5.5-2v13l-5.5 2-6-2-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></svg>',
@@ -163,6 +165,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   const eraText = (y, step, marked) => (y > -1e5 && !marked.has(y) ? (y > 0 ? String(y) : y > -1e4 ? String(-y) : group(-y)) : axisText(y, step, y > 0));
   const AXIS_UNITS = { ka: 'thousand', Ma: 'million', Ga: 'billion' };
+  const AXIS_NAMES = { ka: 'kilo-annum', Ma: 'mega-annum', Ga: 'giga-annum' };
   // A year typed by the reader: "1969", "44 BCE", "-44", "500 bc", "66 ma", "4.6 billion years ago".
   function parseYearQuery(q) {
     let m = /^(-?\d{1,4})$/.exec(q);
@@ -519,7 +522,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const q = new URLSearchParams(location.search);
     if (!ids.length || !setViews(ids)) return false;
     state.span = readSpan(q.get('yr'));
-    if (q.get('o') === 'old') state.order = 'old'; else if (q.get('o') === 'new') state.order = 'new';
+    if (q.get('o') === 'forward') state.order = 'old'; else if (q.get('o') === 'backward') state.order = 'new';
     const cs = (q.get('c') || '').split(',').map(Number);
     if (cs.length === state.views.length && cs.every((n) => n >= 0 && n < 8) && new Set(cs).size === cs.length) state.views.forEach((id, i) => state.colors.set(id, cs[i]));
     return true;
@@ -527,7 +530,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function writeUrl() {
     const q = new URLSearchParams();
     q.set('views', state.views.join(','));
-    if (state.order === 'new') q.set('o', 'new');
+    q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
     history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
@@ -1344,9 +1347,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const yr = writtenOf(L.when(t)), era = label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
-      // Deep time is counted in years ago: the units in sight are spelled out once, under the year.
-      const units = [...new Set([...L.units, (/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean))];
-      const under = [era, ...units.map((u) => `${u}: ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
+      // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
+      const units = [(/(ka|Ma|Ga)$/.exec(label) || [])[1]].filter(Boolean);
+      const under = [era, ...units.map((u) => `${u}: ${AXIS_NAMES[u]}, ${AXIS_UNITS[u]} years ago`)].filter(Boolean).join(' · ');
       if (under !== L.unitsSaid) {
         L.unitsSaid = under;
         $('road-unit').textContent = under;
@@ -1483,11 +1486,20 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const away = !data ? [] : y != null ? entriesInYear(data, y, onPage, L ? 6 : 8) : searchEntries(data, qt, onPage, L ? 5 : 8).map((e) => ({ e }));
       waiting = !data;
       hits = hits.slice(0, away.length ? 6 : 9);
+      // Views whose name matches, community and classical, that are not on the timeline: picking one shows it alone.
+      if (qt && y == null) {
+        const vs = [], seen = new Set(state.views);
+        const add = (v, name) => { if (seen.has(v.id)) return; const n = fold(name); const s = n === q ? 3 : n.startsWith(q) ? 2 : n.includes(q) ? 1 : 0; if (s) { seen.add(v.id); vs.push({ v, s }); } };
+        for (const v of boot?.views || []) add(v, v.name);
+        if (data) for (const v of data.views) add(v, v.name);
+        vs.sort((a, b) => b.s - a.s || a.v.name.length - b.v.name.length);
+        for (const { v } of vs.slice(0, 3)) hits.push({ view: viewById.get(v.id) || v, away: true });
+      }
       for (const a of away) hits.push({ e: a.e, how: a.how, y, away: true });
       if (data && y != null && !hits.length) hits.push({ none: `Nothing on record began or ended in ${yearText(y)}.` });
       // Nothing in the data has this name: offer to suggest it, so a failed
       // search tells the editors what people came looking for.
-      if (data && q.length > 1 && y == null && !away.length && !hits.some((h) => h.p && !h.m) && !searchEntries(data, qt, null, 1).length) hits.push({ suggest: raw });
+      if (data && q.length > 1 && y == null && !away.length && !hits.some((h) => (h.p && !h.m) || h.view) && !searchEntries(data, qt, null, 1).length) hits.push({ suggest: raw });
     }
     hit = hits.findIndex((h) => !h.none);
     drawHits(q, waiting);
@@ -1517,6 +1529,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         if (h.suggest) {
           return `<li class="sep" role="presentation">Not here yet</li><li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b>Suggest “${esc(h.suggest)}”</b><small>Tell us about it on GitHub; no code needed</small></span><span class="add">${ICON.plus}</span></li>`;
         }
+        if (h.view) {
+          if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
+          const v = h.view, kind = v.type === 'classical' ? 'classical' : 'community';
+          return pre + `<li role="option" id="qo-${i}" aria-selected="${i === hit}" data-h="${i}" class="k-thing away">${KIND_ICON['k-thing']}<span class="r-txt"><b><span>${mk(v.name)}</span></b><small>View · ${esc(viewSub(v))}</small></span><i class="vk" title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i></li>`;
+        }
         if (h.away) {
           if (!divided) { divided = true; pre = '<li class="sep" role="presentation">Not on the timeline</li>'; }
           const e = h.e, comm = e.tier === 2 ? ' · <span class="ctag">community</span>' : '';
@@ -1538,6 +1555,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('q').value = ''; $('q').dispatchEvent(new Event('input')); $('q').blur();
     if (h.year != null) return flashYear(h.year);
     if (h.era) return openEra(h.era.key);
+    if (h.view) return void showOnly(h.view.id);
     if (h.away) return bringIn(h.e.id);
     openThing(h.p.t.id, { scroll: !h.m, focus: false });
     if (h.m) jumpTo(h.p.t.id, h.m.t);
@@ -1599,7 +1617,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
         (many ? `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button>` : '') + '</div>';
     }).join('');
-    $('shuffle').hidden = !many;
     requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
 
@@ -1703,7 +1720,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (state.topic) {
         for (const v of boot?.views || []) if (chipOf(v) === state.topic) found.push({ v: viewById.get(v.id) || v });
       } else {
-        found.push({ head: 'My view' });
+        found.push({ head: 'My view', shuffle: true });
         for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
       }
       active = -1;
@@ -1764,7 +1781,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     function row(f, i) {
       let name, sub, tb, attrs = '', side = '';
       if (f.wait) return '<li class="none" role="presentation">Searching every view…</li>';
-      if (f.head) return `<li class="vhead" role="presentation">${esc(f.head)}</li>`;
+      // "My view" carries shuffle, which mixes the colours of the views on the timeline (moved here from the strip, Nov 2026).
+      if (f.head) return `<li class="vhead" role="presentation"><span>${esc(f.head)}</span>${f.shuffle && state.views.length > 1 ? `<button type="button" class="shuf" data-shuffle aria-label="Shuffle colours" title="Shuffle colours">${ICON.shuffle}</button>` : ''}</li>`;
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(alias.get(id) || id)?.name || id).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
       else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; tb = `<span class="tb icon">${ICON.plus}</span>`; }
       else if (f.year != null) { name = 'Go to ' + esc(yearText(f.year)); sub = 'On the timeline'; tb = `<span class="tb icon">${ICON.dot}</span>`; }
@@ -1869,7 +1887,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const w = t.words;
     const years = (t.end ?? NOW) - t.born;
     const status = t.status === 'dead' ? w.dead : t.status === 'fading' ? 'fading' : t.end != null ? w.dead : w.alive;
-    const kind = `${esc(t.cat.name)}${t.dom ? ' · ' + esc(t.dom.name) : ''}`;
+    // The kind and the branch are classical views: each opens its view alone (asked for, Nov 2026).
+    const kind = `<button type="button" class="vlink" data-show-view="${esc(t.cat.id)}" title="Show the view ${esc(t.cat.name)}">${esc(t.cat.name)}</button>${t.dom ? ' · <button type="button" class="vlink" data-show-view="' + esc(t.dom.id) + '" title="Show the view ' + esc(t.dom.name) + '">' + esc(t.dom.name) + '</button>' : ''}`;
     const meta = `${esc(spanOf(t).replace(/^since (.*)$/, '$1 to today'))} · ${t.endEv ? 'lasted ' + fmtSpan(years) : fmtSpan(years) + ' so far'} · <b>${esc(status.toLowerCase())}</b>`;
     const labels = (t.labels || []).map((l) => labelName.get(l)).filter(Boolean);
     const aliases = (t.aliases || []).filter((a) => !t.names.some((n) => n.name === a));
@@ -2195,6 +2214,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (playFrom) return startPlay(playFrom.dataset.playFrom);
       const go = el('[data-go]');
       if (go) return jumpTo(state.open, Number(go.dataset.go));
+      if (el('#vlist [data-shuffle]')) return shuffleColours();
+      const sv = el('[data-show-view]');
+      if (sv) return void showOnly(sv.dataset.showView);
       const beside = el('#vlist [data-beside]');
       if (beside) return pick(Number(beside.dataset.beside), true);
       const li = el('#vlist [data-i]');
@@ -2307,9 +2329,16 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       $('filters-btn').setAttribute('aria-expanded', open);
     });
 
+    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html).
+    $('pdf').addEventListener('click', () => {
+      if (!state.views.length) return;
+      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
+      window.open('print.html?' + q, '_blank', 'noopener');
+    });
+
     // The pills: drag one to change the order of the lanes, tap its dot to
-    // pick its colour, or shuffle every colour at once.
-    $('shuffle').addEventListener('click', () => {
+    // pick its colour; "My view" in the panel shuffles every colour at once.
+    function shuffleColours() {
       const pool = [0, 1, 2, 3, 4, 5, 6, 7];
       let next;
       do {
@@ -2318,7 +2347,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       } while (state.views.every((id, i) => state.colors.get(id) === next[i]));
       state.views.forEach((id, i) => state.colors.set(id, next[i]));
       changed();
-    });
+    }
     $('views-btn').addEventListener('click', () => {
       if (!$('side').hidden && !$('p-views').hidden) return showSide(false);    // a second press closes it
       showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });

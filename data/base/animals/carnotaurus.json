@@ -1,0 +1,50 @@
+{
+  "id": "carnotaurus",
+  "category": "animals",
+  "names": [
+    {
+      "name": "Carnotaurus",
+      "from": "-69000000"
+    }
+  ],
+  "summary": "A South American predator with two horns above its eyes and tiny arms.",
+  "wikidata": "Q18510948",
+  "events": [
+    {
+      "type": "born",
+      "date": "-69000000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-66000000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Carnotaurus (Q18510948)",
+      "url": "https://www.wikidata.org/wiki/Q18510948",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Carnotaurus",
+      "url": "https://en.wikipedia.org/wiki/Carnotaurus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Carnotaurus_Reconstruction_%282022%29.png/500px-Carnotaurus_Reconstruction_%282022%29.png",
+    "alt": "Carnotaurus",
+    "credit": "Fred Wierum",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Carnotaurus_Reconstruction_(2022).png"
+  }
+}
