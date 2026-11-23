@@ -1,0 +1,59 @@
+{
+  "id": "death-and-state-funeral-of-elizabeth-ii",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Death and state funeral of Elizabeth II",
+      "from": "2022"
+    }
+  ],
+  "summary": "The death of Queen Elizabeth II in September 2022 after seventy years on the throne.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q113846055",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-09-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-09-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "united-kingdom"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Death and state funeral of Elizabeth II (Q113846055)",
+      "url": "https://www.wikidata.org/wiki/Q113846055",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Death and state funeral of Elizabeth II",
+      "url": "https://en.wikipedia.org/wiki/Death_and_state_funeral_of_Elizabeth_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Elizabeth_II_Death_Notice_at_Holyrood_Palace.jpg/500px-Elizabeth_II_Death_Notice_at_Holyrood_Palace.jpg",
+    "alt": "Death and state funeral of Elizabeth II",
+    "credit": "Taras Young",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Elizabeth_II_Death_Notice_at_Holyrood_Palace.jpg"
+  }
+}

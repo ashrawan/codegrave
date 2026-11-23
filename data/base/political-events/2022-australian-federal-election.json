@@ -1,0 +1,59 @@
+{
+  "id": "2022-australian-federal-election",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2022 Australian federal election",
+      "from": "2022"
+    }
+  ],
+  "summary": "The election that made Anthony Albanese prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q65091319",
+  "events": [
+    {
+      "type": "born",
+      "date": "2022-05-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2022-05-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "australia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2022 Australian federal election (Q65091319)",
+      "url": "https://www.wikidata.org/wiki/Q65091319",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2022 Australian federal election",
+      "url": "https://en.wikipedia.org/wiki/2022_Australian_federal_election",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/2022_Australian_federal_election.svg/500px-2022_Australian_federal_election.svg.png",
+    "alt": "2022 Australian federal election",
+    "credit": "PoliticsMaps",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Australian_federal_election.svg"
+  }
+}

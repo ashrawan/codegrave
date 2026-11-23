@@ -1,0 +1,59 @@
+{
+  "id": "2024-mexican-general-election",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2024 Mexican general election",
+      "from": "2024"
+    }
+  ],
+  "summary": "The election that made Claudia Sheinbaum the first woman president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q113317928",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-06-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2024-06-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mexico"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2024 Mexican general election (Q113317928)",
+      "url": "https://www.wikidata.org/wiki/Q113317928",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2024 Mexican general election",
+      "url": "https://en.wikipedia.org/wiki/2024_Mexican_general_election",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Elecciones_federales_de_M%C3%A9xico%2C_2024_07.jpg/500px-Elecciones_federales_de_M%C3%A9xico%2C_2024_07.jpg",
+    "alt": "2024 Mexican general election",
+    "credit": "Wotancito",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Elecciones_federales_de_M%C3%A9xico,_2024_07.jpg"
+  }
+}

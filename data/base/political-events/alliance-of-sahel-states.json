@@ -1,0 +1,54 @@
+{
+  "id": "alliance-of-sahel-states",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Alliance of Sahel States",
+      "from": "2023"
+    }
+  ],
+  "summary": "The alliance of Mali, Burkina Faso and Niger, formed in 2023 after they turned from France.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q122624387",
+  "events": [
+    {
+      "type": "born",
+      "date": "2023-09-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burkina-faso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alliance of Sahel States (Q122624387)",
+      "url": "https://www.wikidata.org/wiki/Q122624387",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alliance of Sahel States",
+      "url": "https://en.wikipedia.org/wiki/Alliance_of_Sahel_States",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Alliance_des_Etats_du_Sahel_AES_02.jpg/500px-Alliance_des_Etats_du_Sahel_AES_02.jpg",
+    "alt": "Alliance of Sahel States",
+    "credit": "Barke11",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alliance_des_Etats_du_Sahel_AES_02.jpg"
+  }
+}

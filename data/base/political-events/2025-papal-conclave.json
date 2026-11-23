@@ -1,0 +1,59 @@
+{
+  "id": "2025-papal-conclave",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2025 papal conclave",
+      "from": "2025"
+    }
+  ],
+  "summary": "The conclave of May 2025 that elected Leo XIV, the first pope from the United States.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q133999044",
+  "events": [
+    {
+      "type": "born",
+      "date": "2025-05-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-05-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vatican-city"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2025 papal conclave (Q133999044)",
+      "url": "https://www.wikidata.org/wiki/Q133999044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2025 papal conclave",
+      "url": "https://en.wikipedia.org/wiki/2025_papal_conclave",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Pope_Leo_XIV_3.jpg/500px-Pope_Leo_XIV_3.jpg",
+    "alt": "2025 papal conclave",
+    "credit": "Edgar Beltrán / The Pillar",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pope_Leo_XIV_3.jpg"
+  }
+}
