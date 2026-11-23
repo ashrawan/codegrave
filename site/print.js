@@ -305,7 +305,8 @@ function many(V, inks) {
   function openBox(vi, s, y) {
     const v = V[vi]; const el = document.createElement('div'); el.className = 'panel ' + s;
     el.style.cssText = '--c:' + inks[vi] + ';position:absolute;top:' + y + 'px;width:' + CW + 'px;' + (s === 'l' ? 'left:0' : 'right:0');
-    el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span></span></div><div class="list"></div>';
+    // the box's tab shows the view's thumbnail when it has one, else its name in its colour (asked for, Nov 2026)
+    el.innerHTML = '<div class="tab"><b>' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="' + esc(v.name) + '">' : esc(v.name)) + '</b><span></span></div><div class="list"></div>';
     flow.appendChild(el); return { el, vi, list: el.querySelector('.list') };
   }
   function chapHtml(e) {
@@ -491,6 +492,9 @@ function poster(vs, inks, paper, fs) {
       h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
+      // with several views a card whose view has a thumbnail (today a country's flag) carries it small on its top border, at the left; no name (asked for, Nov 2026)
+      const vf = !one && vs[e.vi].flag;
+      if (vf) h += '<img class="cflag" crossorigin="anonymous" src="' + esc(vf) + '" alt="" style="left:' + (a + 3) + 'mm;top:' + top + 'mm">';
     });
     if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
