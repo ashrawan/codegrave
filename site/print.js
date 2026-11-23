@@ -591,28 +591,18 @@ function fit() {
 let fitWidth = 0;
 if (typeof window !== 'undefined') window.addEventListener('resize', () => { if (innerWidth !== fitWidth) { fitWidth = innerWidth; fit(); } });
 // A poster sheet's own "Download image" button: one sheet as a PNG (asked for, Nov 2026).
-// A small icon in the sheet's top right corner (asked for: no big text), never printed or drawn.
-const DOTS = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="1.8"/><circle cx="12" cy="12" r="1.8"/><circle cx="19" cy="12" r="1.8"/></svg>';
-const PIC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="4.5" width="17" height="15" rx="2"/><circle cx="9" cy="9.5" r="1.6"/><path d="M4 17l5-4.5 3.5 3 3-2.5 4.5 4"/></svg>';
+// A small download icon just above the sheet's top right corner (asked for: small, no text, no menu), never printed.
+const DL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
 function addShots(paper) {
   const pages = [...doc.querySelectorAll('.pg')];
   pages.forEach((pg, i) => {
-    const box = document.createElement('div');
-    box.className = 'shot';
-    box.innerHTML = `<button type="button" class="dots" aria-haspopup="menu" aria-expanded="false" aria-label="Sheet ${i + 1} options">${DOTS}</button>`
-      + `<div class="menu" role="menu" hidden><button type="button" role="menuitem">${PIC}<span>Download as image</span></button></div>`;
-    const dots = box.firstElementChild, menu = box.lastElementChild, item = menu.firstElementChild;
-    dots.addEventListener('click', (e) => { e.stopPropagation(); const open = menu.hidden; closeShots(); if (open) { menu.hidden = false; dots.setAttribute('aria-expanded', 'true'); box.classList.add('open'); item.focus(); } });
-    item.addEventListener('click', async (e) => { e.stopPropagation(); closeShots(); await sheetImage(pg, i, pages.length, paper, dots); dots.focus(); });
-    pg.appendChild(box);
+    const row = document.createElement('div');
+    row.className = 'shot';
+    row.innerHTML = `<button type="button" title="Download sheet ${i + 1} as an image (PNG)" aria-label="Download sheet ${i + 1} as an image">${DL}</button>`;
+    const b = row.firstElementChild;
+    b.addEventListener('click', () => sheetImage(pg, i, pages.length, paper, b));
+    pg.before(row);
   });
-}
-function closeShots() {
-  for (const box of doc.querySelectorAll('.shot.open')) { box.classList.remove('open'); box.lastElementChild.hidden = true; box.firstElementChild.setAttribute('aria-expanded', 'false'); }
-}
-if (typeof document !== 'undefined') {
-  document.addEventListener('click', closeShots);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeShots(); });
 }
 const notShot = (el) => el.classList?.contains('shot');
 // the PDF and the images are drawn at full size, whatever the zoom on screen
