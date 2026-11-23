@@ -451,13 +451,14 @@ function poster(vs, inks, paper, fs) {
     const runs = [];
     items.forEach((it, i) => { if (!i || key(it.e) !== key(items[i - 1].e)) runs.push({ k: key(it.e), a: i ? (it.x + items[i - 1].x) / 2 : S.side - 4 }); });
     runs.forEach((r, j) => {
-      const b = j < runs.length - 1 ? runs[j + 1].a : S.w - S.side + 4, c = chs[r.k];
+      const b = j < runs.length - 1 ? runs[j + 1].a : S.w - S.side - 1, c = chs[r.k];
       const col = r.k === -2 ? '#3a3631' : r.k < 0 ? BEFORE : TINTS[r.k % TINTS.length];
       h += '<div class="seg" style="left:' + r.a + 'mm;width:' + (b - r.a) + 'mm;background:' + col + '">' + (c ? '<b>' + esc(c.name) + '</b><span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span>' : '') + '</div>';
     });
-    // the band ends in a point of its own last colour, so line and arrow read as one
+    // the band ends in a point of its own last colour, so line and arrow read as one; its tip stands as far
+    // from the right edge as the band's start from the left, so nothing comes near the edge (printers cut it)
     const endCol = ((k) => (k === -2 ? '#3a3631' : k < 0 ? BEFORE : TINTS[k % TINTS.length]))(runs.at(-1).k);
-    h += '<div class="arrow" style="left:' + (S.w - S.side + 4) + 'mm;top:' + MID + 'mm;border-left-color:' + endCol + '"></div>';
+    h += '<div class="arrow" style="left:' + (S.w - S.side - 1) + 'mm;top:' + MID + 'mm;border-left-color:' + endCol + '"></div>';
     for (const { e, a, x, up, outer } of items) {
       const k = ink(e), near = up ? MID - BAND / 2 - 7 - CH : MID + BAND / 2 + 7, top = outer ? (up ? near - CH - 6 : near + CH + 6) : near;
       const edge = up ? MID - BAND / 2 : MID + BAND / 2;
@@ -498,7 +499,7 @@ function poster(vs, inks, paper, fs) {
       ? here.slice(0, 3).map(({ c, col }) => '<div class="fn"><b style="color:' + col + '">' + esc(c.name) + '</b><p>' + esc(c.note) + '</p></div>').join('')
       : '<div class="fk">' + vs.map((v, i) => '<span><i style="background:' + inks[i] + '"></i>' + esc(v.name) + '</span>').join('') + '</div>';
     // the footer runs under the line, from where it starts to its point; the name goes to the top corner
-    const foot = '<div class="foot" style="left:' + (S.side - 4) + 'mm;right:' + (S.side - 9) + 'mm"><div class="story">' + story + '</div><span class="brand">codegrave.com</span></div>';
+    const foot = '<div class="foot" style="left:' + (S.side - 4) + 'mm;right:' + (S.side - 4) + 'mm"><div class="story">' + story + '</div><span class="brand">codegrave.com</span></div>';
     p.innerHTML = head + h + foot;
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
@@ -544,7 +545,8 @@ async function download(paper, fmt) {
       pdf.addImage(c.toDataURL('image/jpeg', 0.85), 'JPEG', 0, 0, P.w, P.h, undefined, 'FAST');
     }
     pdf.setProperties({ title: shaped.views.map((v) => v.name).join(', '), creator: 'codegrave.com' });
-    pdf.save(fileName(shaped.views.map((v) => v.name).concat(fmt === 'poster' ? ['poster'] : [])));
+    // the file is named after the views, the template and the paper: space-exploration-poster-a4.pdf (asked for, Nov 2026)
+    pdf.save(fileName(shaped.views.map((v) => v.name).concat(fmt === 'poster' ? ['poster'] : [], [paper])));
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';

@@ -48,6 +48,7 @@ test('the downloaded file is named after the views', () => {
   assert.equal(fileName(['Space Exploration', 'Computers']), 'space-exploration-computers.pdf');
   assert.equal(fileName(['Côte d’Ivoire']), 'cote-d-ivoire.pdf');
   assert.equal(fileName(['']), 'codegrave.pdf');
+  assert.equal(fileName(['Space Exploration', 'poster', 'a4']), 'space-exploration-poster-a4.pdf');
 });
 
 test('a year range keeps only the entries begun in it', { skip: !fs.existsSync('site/data/boot.json') && 'run node scripts/build.mjs first' }, () => {

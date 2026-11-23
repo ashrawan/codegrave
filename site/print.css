@@ -193,11 +193,11 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster #doc .pg { margin: 0 auto; }
 .poster .pg{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;page-break-after:always;background:#fff}
 .poster .vs{position:absolute;left:0;top:0;transform-origin:0 0}
-.poster .t{position:absolute;left:22mm;top:18mm;right:22mm;display:flex;justify-content:flex-start;align-items:baseline;gap:7mm;padding-bottom:2.5mm;border-bottom:.3mm solid #e6e6e6}
+.poster .t{position:absolute;left:22mm;top:19mm;right:22mm;display:flex;justify-content:flex-start;align-items:baseline;gap:7mm;padding-bottom:2.5mm;border-bottom:.3mm solid #e6e6e6}
 .poster .t h1{font:400 9mm/1 var(--serif);letter-spacing:.1mm;white-space:nowrap}
 .poster .t.sm h1{font-size:6.5mm}
 .poster .t p{font-size:2.8mm;line-height:1.45;color:#777;max-width:190mm;text-align:left;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
-.poster .where{position:absolute;top:6mm;right:22mm;width:130mm}
+.poster .where{position:absolute;top:8mm;right:22mm;width:130mm}
 .poster .mini{position:relative;height:2.6mm;background:#ececec;border-radius:1.3mm;overflow:visible}
 .poster .mini i{position:absolute;top:0;height:100%;opacity:.9}
 .poster .mini i:first-child{border-radius:1.3mm 0 0 1.3mm}
@@ -223,7 +223,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster .tx b{font:600 calc(3.8mm * var(--tf, 1))/1.15 var(--serif);color:var(--ink)}
 .poster .tx small{font:600 calc(2.3mm * var(--tf, 1)) Inter,sans-serif;color:var(--k)}
 .poster .tx p{font:400 calc(2.35mm * var(--tf, 1))/1.45 var(--serif);color:#5c5c5c;margin-top:.6mm;overflow:hidden;flex:1;min-height:0}
-.poster .foot{position:absolute;left:22mm;right:22mm;bottom:3mm;display:flex;justify-content:space-between;align-items:flex-end;gap:14mm;font-size:2.6mm;color:#888;letter-spacing:.2mm;padding-top:2.5mm;border-top:.3mm solid #e6e6e6}
+.poster .foot{position:absolute;left:22mm;right:22mm;bottom:8mm;display:flex;justify-content:space-between;align-items:flex-end;gap:14mm;font-size:2.6mm;color:#888;letter-spacing:.2mm;padding-top:2.5mm;border-top:.3mm solid #e6e6e6}
 .poster .story{display:flex;gap:10mm;flex:1;min-width:0}
 .poster .fn{flex:1;min-width:0}
 .poster .fn b{display:block;font:700 2.2mm Inter,sans-serif;text-transform:uppercase;letter-spacing:.25mm;margin-bottom:.8mm}
@@ -233,5 +233,5 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster .cr-h{position:absolute;left:22mm;top:12mm;right:22mm}.poster .cr-h h1{font:500 12mm/1 var(--serif)}.poster .cr-h p{font-size:3.4mm;line-height:1.5;color:#666;margin-top:3mm;max-width:260mm}
 .poster .cred{position:absolute;left:22mm;right:22mm;top:44mm;bottom:20mm;columns:4;column-gap:10mm;column-fill:auto;font-size:2.6mm;line-height:1.5;color:#5c5c5c}
 .poster .cred div{break-inside:avoid;margin-bottom:1.6mm}.poster .cred b{color:var(--ink)}
-.poster .foot .brand{flex:none;position:absolute;right:0;bottom:-1.5mm;font-family:'Instrument Serif',serif;font-size:2.8mm;letter-spacing:0;color:#aaa}
+.poster .foot .brand{flex:none;position:absolute;right:0;bottom:-2mm;font-family:'Instrument Serif',serif;font-size:2.8mm;letter-spacing:0;color:#aaa}
 .poster .foot .lnk{flex:1;min-width:0}
