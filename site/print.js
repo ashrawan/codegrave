@@ -267,6 +267,32 @@ const creditLine = () => 'Pictures are free-licensed and credited below. Text is
 const creditHtml = (e, c) => '<div><b' + (c ? ' style="color:' + c + '"' : '') + '>' + esc(e.name) + '.</b> ' + (e.img ? 'Picture: ' + esc(e.img.credit) + (e.img.licence ? ', ' + esc(e.img.licence) : '') + '. ' : '') + (e.src ? 'Source: ' + esc(e.src) + '.' : '') + '</div>';
 
 // ---------------------------------------------------------------- several views
+// Each cover tile must fit its box, for 2 views or 8 (asked for, Nov 2026). The chapter list is cut short first, with
+// a last line "… and N more"; if not even one chapter fits, the description is cut to two lines, then the pictures
+// give way if that lets chapters in; whatever still does not fit goes, pictures last.
+function fitTiles(p) {
+  for (const el of p.querySelectorAll('.panel')) {
+    const over = () => el.scrollHeight > el.clientHeight + 1;
+    const tile = el.querySelector('.tile'), ol = el.querySelector('ol'), chl = el.querySelector('.chl');
+    const all = ol ? [...ol.children] : [];
+    const trim = () => {   // keep as many chapters as fit, at least one, else none
+      if (!ol) return;
+      ol.replaceChildren(...all); tile.append(chl, ol);
+      if (!over()) return;
+      const more = document.createElement('li'); more.className = 'more'; ol.appendChild(more);
+      let keep = all.length;
+      while (over() && keep > 1) { keep--; all[keep].remove(); more.textContent = '… and ' + (all.length - keep) + ' more'; }
+      if (over()) { chl.remove(); ol.remove(); }
+    };
+    trim();
+    // no chapter fits: the description gives two lines, then the pictures make way if that lets chapters in
+    if (ol && !ol.isConnected) { el.querySelector('.tile p')?.classList.add('clip'); trim(); }
+    const pics = el.querySelector('.pics');
+    if (ol && !ol.isConnected && pics) { const at = pics.nextSibling; pics.remove(); trim(); if (!ol.isConnected) tile.insertBefore(pics, at); }
+    if (over()) el.querySelector('.tile p')?.classList.add('clip');
+    if (over()) el.querySelector('.pics')?.remove();
+  }
+}
 function many(V, inks) {
   const N = V.length;
   const all = inOrder(V.flatMap((v) => v.es), rev);
@@ -286,12 +312,16 @@ function many(V, inks) {
     p.querySelector('.yr.a').textContent = rev ? bot : top; p.querySelector('.yr.b').textContent = rev ? top : bot;
     V.forEach((v, i) => {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
-      el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) el.style.minHeight = '0';
-      const pics = coverPictures(v.es, N <= 2 ? 18 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(rs(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
-        + (N > 4 ? '' : '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>') + '</div>';
+      el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) { el.style.minHeight = '0'; el.classList.add('small'); }
+      const pics = coverPictures(v.es, N <= 2 ? 18 : N > 4 ? 6 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(rs(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 || N > 4 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+        + (v.chs.length ? '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>' : '') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
+    // the tiles start just under the title, however many lines it takes
+    const ttl = p.querySelector('.title'), body = p.querySelector('.body');
+    body.style.top = (ttl.offsetTop + ttl.offsetHeight) / MM + 7 + 'mm';
+    fitTiles(p);
   }
   // the pages: entries in date order, each on its view's side, level with its year's dot
   const lastCh = V.map(() => -2);
