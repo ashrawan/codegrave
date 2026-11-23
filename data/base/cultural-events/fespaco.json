@@ -1,0 +1,51 @@
+{
+  "id": "fespaco",
+  "category": "cultural-events",
+  "names": [
+    {
+      "name": "FESPACO",
+      "from": "1969"
+    }
+  ],
+  "summary": "The pan-African film festival held in Ouagadougou since 1969.",
+  "wikidata": "Q1202380",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burkina-faso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: FESPACO (Q1202380)",
+      "url": "https://www.wikidata.org/wiki/Q1202380",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: FESPACO",
+      "url": "https://en.wikipedia.org/wiki/FESPACO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Siege_FESPACO_Ouaga.jpg/500px-Siege_FESPACO_Ouaga.jpg",
+    "alt": "FESPACO",
+    "credit": "Sputniktilt",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Siege_FESPACO_Ouaga.jpg"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "lesotho",
+  "name": "Lesotho",
+  "description": "Lesotho, the mountain kingdom, from Moshoeshoe I to British Basutoland, independence in 1966 and the water it sells to South Africa.",
+  "category": "places",
+  "tags": [
+    "lesotho",
+    "maseru",
+    "basotho",
+    "mountains",
+    "africa"
+  ],
+  "entries": [
+    "moshoeshoe-i",
+    "thaba-bosiu",
+    "maseru",
+    "basutoland",
+    "leabua-jonathan",
+    "moshoeshoe-ii",
+    "letsie-iii",
+    "lesotho",
+    "sehlabathebe-national-park",
+    "lesotho-highlands-water-project"
+  ],
+  "checkpoints": [
+    {
+      "id": "moshoeshoe-s-kingdom",
+      "name": "Moshoeshoe's kingdom",
+      "from": 1820,
+      "to": 1867,
+      "note": "Moshoeshoe gathered people scattered by war and held off Boers and Zulus from Thaba Bosiu."
+    },
+    {
+      "id": "basutoland",
+      "name": "Basutoland",
+      "from": 1868,
+      "to": 1965,
+      "note": "Moshoeshoe asked for British protection in 1868, which kept Lesotho out of South Africa."
+    },
+    {
+      "id": "independent-lesotho",
+      "name": "Independent Lesotho",
+      "from": 1966,
+      "to": 2026,
+      "note": "Independence came in 1966, then coups and unrest. The mountains' water became a main export."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Flag_of_Lesotho.svg/330px-Flag_of_Lesotho.svg.png",
+    "alt": "Flag of Lesotho",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Lesotho.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/aa/National_anthem_of_Lesotho%2C_performed_by_the_U.S._Navy_Band.wav/National_anthem_of_Lesotho%2C_performed_by_the_U.S._Navy_Band.wav.mp3",
+    "title": "Lesotho Fatse La Bontata Rona",
+    "credit": "http://www.navyband.navy.mil/anthems/anthems/lesotho_jul1985.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Lesotho,_performed_by_the_U.S._Navy_Band.wav"
+  }
+}

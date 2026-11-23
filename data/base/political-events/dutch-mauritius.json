@@ -1,0 +1,59 @@
+{
+  "id": "dutch-mauritius",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Dutch Mauritius",
+      "from": "1638"
+    }
+  ],
+  "summary": "The Dutch settlement of 1638 to 1710, which named the island.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5245668",
+  "events": [
+    {
+      "type": "born",
+      "date": "1638",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1710",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mauritius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dutch Mauritius (Q5245668)",
+      "url": "https://www.wikidata.org/wiki/Q5245668",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dutch Mauritius",
+      "url": "https://en.wikipedia.org/wiki/Dutch_Mauritius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/VOC.svg/500px-VOC.svg.png",
+    "alt": "Dutch Mauritius",
+    "credit": "Unknown authorUnknown author (vector graphics by Greatswrd)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:VOC.svg"
+  }
+}

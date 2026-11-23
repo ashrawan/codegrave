@@ -1,0 +1,54 @@
+{
+  "id": "kfor",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Kosovo Force",
+      "from": "1999"
+    }
+  ],
+  "summary": "The NATO-led force that has kept the peace since 1999.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q159470",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kosovo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kosovo Force (Q159470)",
+      "url": "https://www.wikidata.org/wiki/Q159470",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kosovo Force",
+      "url": "https://en.wikipedia.org/wiki/Kosovo_Force",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Coat_of_arms_of_the_Kosovo_Force.svg/500px-Coat_of_arms_of_the_Kosovo_Force.svg.png",
+    "alt": "Kosovo Force",
+    "credit": "Madboy74.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Coat_of_arms_of_the_Kosovo_Force.svg"
+  }
+}

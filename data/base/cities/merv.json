@@ -1,0 +1,56 @@
+{
+  "id": "merv",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Merv",
+      "from": "-0500"
+    }
+  ],
+  "summary": "A great oasis city of the Silk Road, among the largest in the world in the 1100s, sacked by the Mongols.",
+  "wikidata": "Q193325",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1221",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkmenistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Merv (Q193325)",
+      "url": "https://www.wikidata.org/wiki/Q193325",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Merv",
+      "url": "https://en.wikipedia.org/wiki/Merv",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Merv_City_Walls_%2810%29_%2844747325714%29.jpg/500px-Merv_City_Walls_%2810%29_%2844747325714%29.jpg",
+    "alt": "Merv",
+    "credit": "Hans Birger Nilsen",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Merv_City_Walls_(10)_(44747325714).jpg"
+  }
+}

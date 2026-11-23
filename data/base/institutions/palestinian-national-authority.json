@@ -1,0 +1,44 @@
+{
+  "id": "palestinian-national-authority",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Palestinian National Authority",
+      "from": "1994"
+    }
+  ],
+  "summary": "The authority set up in 1994 under the Oslo Accords.",
+  "wikidata": "Q42620",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Palestinian National Authority (Q42620)",
+      "url": "https://www.wikidata.org/wiki/Q42620",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palestinian National Authority",
+      "url": "https://en.wikipedia.org/wiki/Palestinian_National_Authority",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

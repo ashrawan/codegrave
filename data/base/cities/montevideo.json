@@ -1,0 +1,51 @@
+{
+  "id": "montevideo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Montevideo",
+      "from": "1724"
+    }
+  ],
+  "summary": "The capital, founded by the Spanish in 1724.",
+  "wikidata": "Q1335",
+  "events": [
+    {
+      "type": "born",
+      "date": "1724",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uruguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Montevideo (Q1335)",
+      "url": "https://www.wikidata.org/wiki/Q1335",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Montevideo",
+      "url": "https://en.wikipedia.org/wiki/Montevideo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/The_City_%28198895997%29.jpeg/500px-The_City_%28198895997%29.jpeg",
+    "alt": "Montevideo",
+    "credit": "Marcelo Campi",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_City_(198895997).jpeg"
+  }
+}

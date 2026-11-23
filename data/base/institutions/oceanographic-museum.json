@@ -1,0 +1,51 @@
+{
+  "id": "oceanographic-museum",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Oceanographic Museum",
+      "from": "1889"
+    }
+  ],
+  "summary": "The sea museum on the cliff, opened in 1910.",
+  "wikidata": "Q851527",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "monaco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Oceanographic Museum (Q851527)",
+      "url": "https://www.wikidata.org/wiki/Q851527",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oceanographic Museum",
+      "url": "https://en.wikipedia.org/wiki/Oceanographic_Museum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Monaco_BW_2011-06-07_17-50-43.jpg/500px-Monaco_BW_2011-06-07_17-50-43.jpg",
+    "alt": "Oceanographic Museum",
+    "credit": "Berthold Werner",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Monaco_BW_2011-06-07_17-50-43.jpg"
+  }
+}

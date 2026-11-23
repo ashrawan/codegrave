@@ -1,0 +1,54 @@
+{
+  "id": "georgian-wine",
+  "category": "food-drink",
+  "names": [
+    {
+      "name": "Georgian wine",
+      "from": "-6000"
+    }
+  ],
+  "summary": "Wine made in clay jars, qvevri, for some 8,000 years.",
+  "labels": [
+    "food"
+  ],
+  "wikidata": "Q1859167",
+  "events": [
+    {
+      "type": "born",
+      "date": "-6000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Georgian wine (Q1859167)",
+      "url": "https://www.wikidata.org/wiki/Q1859167",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Georgian wine",
+      "url": "https://en.wikipedia.org/wiki/Georgian_wine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/GWS_Versuchsweinberge.JPG/500px-GWS_Versuchsweinberge.JPG",
+    "alt": "Georgian wine",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:GWS_Versuchsweinberge.JPG"
+  }
+}

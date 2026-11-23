@@ -1,0 +1,63 @@
+{
+  "id": "botswana",
+  "name": "Botswana",
+  "description": "Botswana from the San and the Tswana chiefs to the Bechuanaland protectorate, independence in 1966, diamonds and steady democracy.",
+  "category": "places",
+  "tags": [
+    "botswana",
+    "gaborone",
+    "kalahari",
+    "okavango",
+    "diamonds"
+  ],
+  "entries": [
+    "khama-iii",
+    "bechuanaland-protectorate",
+    "seretse-khama",
+    "quett-masire",
+    "festus-mogae",
+    "gaborone",
+    "botswana",
+    "debswana",
+    "duma-boko",
+    "orapa-diamond-mine",
+    "okavango-delta"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-san-and-the-tswana",
+      "name": "The San and the Tswana",
+      "from": -1000,
+      "to": 1884,
+      "note": "San hunters painted the Tsodilo Hills. Tswana chiefdoms grew strong on cattle."
+    },
+    {
+      "id": "bechuanaland",
+      "name": "Bechuanaland",
+      "from": 1885,
+      "to": 1965,
+      "note": "Britain made the land a protectorate in 1885 at the request of chiefs such as Khama III."
+    },
+    {
+      "id": "independent-botswana",
+      "name": "Independent Botswana",
+      "from": 1966,
+      "to": 2026,
+      "note": "Botswana became independent in 1966. Diamonds turned one of the poorest countries into a middle-income one."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_Botswana.svg/330px-Flag_of_Botswana.svg.png",
+    "alt": "Flag of Botswana",
+    "credit": "SKopp, Gabbe, Madden",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Botswana.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/cb/United_States_Navy_Band_-_Fatshe_leno_la_rona.ogg/United_States_Navy_Band_-_Fatshe_leno_la_rona.ogg.mp3",
+    "title": "Fatshe leno la rona",
+    "credit": "United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Fatshe_leno_la_rona.ogg"
+  }
+}

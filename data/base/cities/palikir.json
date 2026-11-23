@@ -1,0 +1,51 @@
+{
+  "id": "palikir",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Palikir",
+      "from": "1989"
+    }
+  ],
+  "summary": "The capital since 1989.",
+  "wikidata": "Q42751",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "micronesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Palikir (Q42751)",
+      "url": "https://www.wikidata.org/wiki/Q42751",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palikir",
+      "url": "https://en.wikipedia.org/wiki/Palikir",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Palikir_Government_Buildings.jpg/500px-Palikir_Government_Buildings.jpg",
+    "alt": "Palikir",
+    "credit": "MaxMonaco",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palikir_Government_Buildings.jpg"
+  }
+}

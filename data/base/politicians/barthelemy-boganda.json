@@ -1,0 +1,59 @@
+{
+  "id": "barthelemy-boganda",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Barthélemy Boganda",
+      "from": "1910"
+    }
+  ],
+  "summary": "Priest and independence leader, the first prime minister, killed in a plane crash in 1959.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q346690",
+  "events": [
+    {
+      "type": "born",
+      "date": "1910-04-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1959-03-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "central-african-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Barthélemy Boganda (Q346690)",
+      "url": "https://www.wikidata.org/wiki/Q346690",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Barthélemy Boganda",
+      "url": "https://en.wikipedia.org/wiki/Barthélemy_Boganda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Barth%C3%A9lemy_Boganda_in_1958.jpg/500px-Barth%C3%A9lemy_Boganda_in_1958.jpg",
+    "alt": "Barthélemy Boganda",
+    "credit": "unknown, Présence Congolaise",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Barth%C3%A9lemy_Boganda_in_1958.jpg"
+  }
+}

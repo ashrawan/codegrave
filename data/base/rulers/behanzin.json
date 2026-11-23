@@ -1,0 +1,59 @@
+{
+  "id": "behanzin",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Béhanzin",
+      "from": "1844"
+    }
+  ],
+  "summary": "The last independent king of Dahomey, who fought the French invasion of 1892.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2366953",
+  "events": [
+    {
+      "type": "born",
+      "date": "1844-09-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1906-12-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "benin"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Béhanzin (Q2366953)",
+      "url": "https://www.wikidata.org/wiki/Q2366953",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Béhanzin",
+      "url": "https://en.wikipedia.org/wiki/Béhanzin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Behanzin_%282%29.jpg/500px-Behanzin_%282%29.jpg",
+    "alt": "Béhanzin",
+    "credit": "Aublet, Edouard Edmond, born 1854",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Behanzin_(2).jpg"
+  }
+}

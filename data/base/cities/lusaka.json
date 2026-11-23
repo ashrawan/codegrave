@@ -1,0 +1,51 @@
+{
+  "id": "lusaka",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Lusaka",
+      "from": "1905"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q3881",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lusaka (Q3881)",
+      "url": "https://www.wikidata.org/wiki/Q3881",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lusaka",
+      "url": "https://en.wikipedia.org/wiki/Lusaka",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Downtown_Lusaka.JPG/500px-Downtown_Lusaka.JPG",
+    "alt": "Lusaka",
+    "credit": "Matthew Grollnek",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Downtown_Lusaka.JPG"
+  }
+}

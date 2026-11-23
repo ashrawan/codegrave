@@ -1,0 +1,52 @@
+{
+  "id": "bob-denard",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Bob Denard",
+      "from": "1929"
+    }
+  ],
+  "summary": "French mercenary who took part in four coups in the Comoros.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q437248",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-04-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2007-10-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "comoros"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bob Denard (Q437248)",
+      "url": "https://www.wikidata.org/wiki/Q437248",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bob Denard",
+      "url": "https://en.wikipedia.org/wiki/Bob_Denard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

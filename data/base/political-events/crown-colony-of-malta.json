@@ -1,0 +1,52 @@
+{
+  "id": "crown-colony-of-malta",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Crown Colony of Malta",
+      "from": "1813"
+    }
+  ],
+  "summary": "British rule from 1813 to 1964.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q6744657",
+  "events": [
+    {
+      "type": "born",
+      "date": "1813",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1964-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Crown Colony of Malta (Q6744657)",
+      "url": "https://www.wikidata.org/wiki/Q6744657",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Crown Colony of Malta",
+      "url": "https://en.wikipedia.org/wiki/Crown_Colony_of_Malta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

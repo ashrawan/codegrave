@@ -1,0 +1,51 @@
+{
+  "id": "banjul",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Banjul",
+      "from": "1816"
+    }
+  ],
+  "summary": "The capital, founded by the British as Bathurst in 1816.",
+  "wikidata": "Q3726",
+  "events": [
+    {
+      "type": "born",
+      "date": "1816",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Banjul (Q3726)",
+      "url": "https://www.wikidata.org/wiki/Q3726",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Banjul",
+      "url": "https://en.wikipedia.org/wiki/Banjul",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Banjul_Gambia_skyline.jpg/500px-Banjul_Gambia_skyline.jpg",
+    "alt": "Banjul",
+    "credit": "IsaacTuray",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Banjul_Gambia_skyline.jpg"
+  }
+}

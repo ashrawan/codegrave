@@ -1,0 +1,51 @@
+{
+  "id": "grenada",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Grenada",
+      "from": "1974"
+    }
+  ],
+  "summary": "An island country of the southern Caribbean, known for nutmeg, independent from Britain since 1974.",
+  "wikidata": "Q769",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grenada (Q769)",
+      "url": "https://www.wikidata.org/wiki/Q769",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grenada",
+      "url": "https://en.wikipedia.org/wiki/Grenada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/f/fa/StGeorgesGrenada2000.jpg",
+    "alt": "Grenada",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:StGeorgesGrenada2000.jpg"
+  }
+}

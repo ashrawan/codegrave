@@ -1,0 +1,63 @@
+{
+  "id": "zambia",
+  "name": "Zambia",
+  "description": "Zambia from its first peoples to Northern Rhodesia and the copper belt, independence in 1964, Kenneth Kaunda and Victoria Falls.",
+  "category": "places",
+  "tags": [
+    "zambia",
+    "lusaka",
+    "copper",
+    "africa",
+    "victoria falls"
+  ],
+  "entries": [
+    "kabwe-1",
+    "david-livingstone",
+    "victoria-falls",
+    "lusaka",
+    "northern-rhodesia",
+    "kenneth-kaunda",
+    "copperbelt",
+    "kariba-dam",
+    "hakainde-hichilema",
+    "zambia",
+    "tazara-railway"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-peoples",
+      "name": "The first peoples",
+      "from": -300000,
+      "to": 1888,
+      "note": "Early humans lived at Kabwe. Bantu kingdoms such as the Lozi and Bemba followed."
+    },
+    {
+      "id": "northern-rhodesia",
+      "name": "Northern Rhodesia",
+      "from": 1889,
+      "to": 1963,
+      "note": "The British South Africa Company took the land, and copper was mined from the 1920s."
+    },
+    {
+      "id": "independent-zambia",
+      "name": "Independent Zambia",
+      "from": 1964,
+      "to": 2026,
+      "note": "Zambia became independent in 1964. Kaunda ruled until 1991, when multi-party elections returned."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Flag_of_Zambia.svg/330px-Flag_of_Zambia.svg.png",
+    "alt": "Flag of Zambia",
+    "credit": "Gabriel Ellison",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Zambia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/25/National_anthem_of_Zambia.oga/National_anthem_of_Zambia.oga.mp3",
+    "title": "Stand and Sing of Zambia, Proud and Free",
+    "credit": "http://www.nationalanthems.info/zm.htm",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Zambia.oga"
+  }
+}

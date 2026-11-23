@@ -1,0 +1,60 @@
+{
+  "id": "suriname",
+  "name": "Suriname",
+  "description": "Suriname from its first peoples to the Dutch plantations, the Maroons, Asian labourers, independence in 1975 and the coup of 1980.",
+  "category": "places",
+  "tags": [
+    "suriname",
+    "paramaribo",
+    "south america",
+    "dutch"
+  ],
+  "entries": [
+    "paramaribo",
+    "treaty-of-breda-1667",
+    "slavery-abolition-suriname",
+    "desi-bouterse",
+    "jennifer-geerlings-simons",
+    "suriname",
+    "clarence-seedorf",
+    "december-murders",
+    "central-suriname-nature-reserve"
+  ],
+  "checkpoints": [
+    {
+      "id": "dutch-suriname",
+      "name": "Dutch Suriname",
+      "from": 1667,
+      "to": 1862,
+      "note": "The Dutch took Suriname in 1667 and built plantations worked by enslaved Africans; Maroons won their freedom in the forest."
+    },
+    {
+      "id": "freedom-and-new-peoples",
+      "name": "Freedom and new peoples",
+      "from": 1863,
+      "to": 1974,
+      "note": "Slavery ended in 1863, and labourers came from India, Java and China."
+    },
+    {
+      "id": "independent-suriname",
+      "name": "Independent Suriname",
+      "from": 1975,
+      "to": 2026,
+      "note": "Suriname became independent in 1975. Bouterse led a coup in 1980."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Flag_of_Suriname.svg/330px-Flag_of_Suriname.svg.png",
+    "alt": "Flag of Suriname",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Suriname.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d9/Surinamese_national_anthem%2C_performed_by_the_U.S._Navy_Band.ogg/Surinamese_national_anthem%2C_performed_by_the_U.S._Navy_Band.ogg.mp3",
+    "title": "God zij met ons Suriname",
+    "credit": "https://web.archive.org/web/20191122055336/https://www.navyband.navy.mil/national_anthems.html https://web.archive.org/w",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Surinamese_national_anthem,_performed_by_the_U.S._Navy_Band.ogg"
+  }
+}

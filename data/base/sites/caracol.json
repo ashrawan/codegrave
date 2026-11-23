@@ -1,0 +1,56 @@
+{
+  "id": "caracol",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Caracol",
+      "from": "-1200"
+    }
+  ],
+  "summary": "A great Maya city that defeated Tikal in 562.",
+  "wikidata": "Q1035336",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1050",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belize"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Caracol (Q1035336)",
+      "url": "https://www.wikidata.org/wiki/Q1035336",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Caracol",
+      "url": "https://en.wikipedia.org/wiki/Caracol",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Caracol-Temple.jpg/500px-Caracol-Temple.jpg",
+    "alt": "Caracol",
+    "credit": "Devon Jones",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Caracol-Temple.jpg"
+  }
+}

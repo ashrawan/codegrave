@@ -1,0 +1,59 @@
+{
+  "id": "operation-hailstone",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Operation Hailstone",
+      "from": "1944"
+    }
+  ],
+  "summary": "The American air attack of 1944 on the Japanese fleet base at Chuuk.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2026138",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-02-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-02-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "micronesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Operation Hailstone (Q2026138)",
+      "url": "https://www.wikidata.org/wiki/Q2026138",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Operation Hailstone",
+      "url": "https://en.wikipedia.org/wiki/Operation_Hailstone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/HailstoneTorpedo.jpg/500px-HailstoneTorpedo.jpg",
+    "alt": "Operation Hailstone",
+    "credit": "Photographed by War Correspondent Smith. Torpedo dropped by pilot Lt. Paul Eugene Dickson.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:HailstoneTorpedo.jpg"
+  }
+}

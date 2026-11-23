@@ -1,0 +1,54 @@
+{
+  "id": "contras",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Contras",
+      "from": "1979"
+    }
+  ],
+  "summary": "The rebels backed by the United States against the Sandinistas.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q286810",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nicaragua"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Contras (Q286810)",
+      "url": "https://www.wikidata.org/wiki/Q286810",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Contras",
+      "url": "https://en.wikipedia.org/wiki/Contras",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Frente_Sur_Contras_1987.jpg/500px-Frente_Sur_Contras_1987.jpg",
+    "alt": "Contras",
+    "credit": "Tiomono (talk) Original uploader was Tiomono at en wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Frente_Sur_Contras_1987.jpg"
+  }
+}

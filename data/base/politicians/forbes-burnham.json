@@ -1,0 +1,59 @@
+{
+  "id": "forbes-burnham",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Forbes Burnham",
+      "from": "1923"
+    }
+  ],
+  "summary": "The first prime minister, who ruled from 1964 to 1985.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q718256",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-02-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-08-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guyana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Forbes Burnham (Q718256)",
+      "url": "https://www.wikidata.org/wiki/Q718256",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Forbes Burnham",
+      "url": "https://en.wikipedia.org/wiki/Forbes_Burnham",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Forbes_Burnham_%281966%29.jpg",
+    "alt": "Forbes Burnham",
+    "credit": "Fotograaf Onbekend / Anefo",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Forbes_Burnham_(1966).jpg"
+  }
+}

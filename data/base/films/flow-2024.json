@@ -1,0 +1,54 @@
+{
+  "id": "flow-2024",
+  "category": "films",
+  "names": [
+    {
+      "name": "Flow",
+      "from": "2024"
+    }
+  ],
+  "summary": "Gints Zilbalodis's animated film of a cat in a flood, which won the Oscar in 2025.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q125622088",
+  "events": [
+    {
+      "type": "born",
+      "date": "2024-05-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "latvia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Flow (Q125622088)",
+      "url": "https://www.wikidata.org/wiki/Q125622088",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Flow (2024 film)",
+      "url": "https://en.wikipedia.org/wiki/Flow_(2024_film)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Blender_4.4-splash_screen.png/500px-Blender_4.4-splash_screen.png",
+    "alt": "Flow",
+    "credit": "Gints ZilbalodisFlow (film), Dream Well Studio, Sacrebleu Productions, Take Five",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Blender_4.4-splash_screen.png"
+  }
+}

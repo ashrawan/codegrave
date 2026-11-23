@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-kwajalein",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Kwajalein",
+      "from": "1944"
+    }
+  ],
+  "summary": "The American attack of 1944.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1789376",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-01-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-02-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "marshall-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Kwajalein (Q1789376)",
+      "url": "https://www.wikidata.org/wiki/Q1789376",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Kwajalein",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Kwajalein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Men_of_the_7th_Div_HD-SN-99-02846.jpg/500px-Men_of_the_7th_Div_HD-SN-99-02846.jpg",
+    "alt": "Battle of Kwajalein",
+    "credit": "CORDRAY",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Men_of_the_7th_Div_HD-SN-99-02846.jpg"
+  }
+}

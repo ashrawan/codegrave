@@ -1,0 +1,54 @@
+{
+  "id": "ali-bongo",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Ali Bongo Ondimba",
+      "from": "1959"
+    }
+  ],
+  "summary": "Omar Bongo's son, president from 2009 until a coup in 2023.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57521",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-02-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gabon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ali Bongo Ondimba (Q57521)",
+      "url": "https://www.wikidata.org/wiki/Q57521",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ali Bongo Ondimba",
+      "url": "https://en.wikipedia.org/wiki/Ali_Bongo_Ondimba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Ali_Bongo_on_December_14%2C_2022_%28cropped%29.jpg/500px-Ali_Bongo_on_December_14%2C_2022_%28cropped%29.jpg",
+    "alt": "Ali Bongo Ondimba",
+    "credit": "United States Department of State Africa U.S.-Africa Leaders Summit: Photos and Videos",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ali_Bongo_on_December_14,_2022_(cropped).jpg"
+  }
+}

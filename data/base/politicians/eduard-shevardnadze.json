@@ -1,0 +1,59 @@
+{
+  "id": "eduard-shevardnadze",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Eduard Shevardnadze",
+      "from": "1928"
+    }
+  ],
+  "summary": "Soviet foreign minister who ended the Cold War with Gorbachev, then president of Georgia.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q151929",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-01-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-07-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eduard Shevardnadze (Q151929)",
+      "url": "https://www.wikidata.org/wiki/Q151929",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eduard Shevardnadze",
+      "url": "https://en.wikipedia.org/wiki/Eduard_Shevardnadze",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Eduard_shevardnadze_%28cropped%29.jpg/500px-Eduard_shevardnadze_%28cropped%29.jpg",
+    "alt": "Eduard Shevardnadze",
+    "credit": "Robert D. Ward",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eduard_shevardnadze_(cropped).jpg"
+  }
+}

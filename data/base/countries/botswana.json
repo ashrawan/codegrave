@@ -1,0 +1,51 @@
+{
+  "id": "botswana",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Botswana",
+      "from": "1966"
+    }
+  ],
+  "summary": "A country of southern Africa, the former Bechuanaland, independent since 1966 and one of Africa's most stable democracies.",
+  "wikidata": "Q963",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966-09-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Botswana (Q963)",
+      "url": "https://www.wikidata.org/wiki/Q963",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Botswana",
+      "url": "https://en.wikipedia.org/wiki/Botswana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Okavango_Delta%2C_Botswana_%282674364913%29.jpg/500px-Okavango_Delta%2C_Botswana_%282674364913%29.jpg",
+    "alt": "Botswana",
+    "credit": "Joachim Huber from Switzerland",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Okavango_Delta,_Botswana_(2674364913).jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "sistine-chapel",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Sistine Chapel",
+      "from": "1473"
+    }
+  ],
+  "summary": "The chapel where cardinals elect the Pope.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q2943",
+  "events": [
+    {
+      "type": "born",
+      "date": "1473",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vatican-city"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sistine Chapel (Q2943)",
+      "url": "https://www.wikidata.org/wiki/Q2943",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sistine Chapel",
+      "url": "https://en.wikipedia.org/wiki/Sistine_Chapel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Sistina-interno.jpg/500px-Sistina-interno.jpg",
+    "alt": "Sistine Chapel",
+    "credit": "The original uploader was Snowdog at Italian Wikipedia.",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sistina-interno.jpg"
+  }
+}

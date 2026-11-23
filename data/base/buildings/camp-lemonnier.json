@@ -1,0 +1,54 @@
+{
+  "id": "camp-lemonnier",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Camp Lemonnier",
+      "from": "2001"
+    }
+  ],
+  "summary": "The American military base, one of several foreign bases in the country.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q2935221",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "djibouti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Camp Lemonnier (Q2935221)",
+      "url": "https://www.wikidata.org/wiki/Q2935221",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Camp Lemonnier",
+      "url": "https://en.wikipedia.org/wiki/Camp_Lemonnier",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Marineswithm16.jpg/500px-Marineswithm16.jpg",
+    "alt": "Camp Lemonnier",
+    "credit": "Matthew J. Apprendi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Marineswithm16.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "honiara",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Honiara",
+      "from": "1942"
+    }
+  ],
+  "summary": "The capital, which grew from an American base of the war.",
+  "wikidata": "Q40921",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "solomon-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Honiara (Q40921)",
+      "url": "https://www.wikidata.org/wiki/Q40921",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Honiara",
+      "url": "https://en.wikipedia.org/wiki/Honiara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Honiara_aerial_crop.jpg",
+    "alt": "Honiara",
+    "credit": "Xploredive cropped by Dr. Blofeld",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Honiara_aerial_crop.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "ouadane",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ouadane",
+      "from": "1147"
+    }
+  ],
+  "summary": "A caravan town on the trade routes of the Sahara.",
+  "wikidata": "Q843127",
+  "events": [
+    {
+      "type": "born",
+      "date": "1147",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mauritania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ouadane (Q843127)",
+      "url": "https://www.wikidata.org/wiki/Q843127",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ouadane",
+      "url": "https://en.wikipedia.org/wiki/Ouadane",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Oudane_old_tower.jpg/500px-Oudane_old_tower.jpg",
+    "alt": "Ouadane",
+    "credit": "www.Bildtankstelle.de",
+    "licence": "CC BY-SA 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oudane_old_tower.jpg"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "chad",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Chad",
+      "from": "1960"
+    }
+  ],
+  "summary": "A large landlocked country where the Sahara meets the Sahel, independent from France since 1960.",
+  "wikidata": "Q657",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-08-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Chad (Q657)",
+      "url": "https://www.wikidata.org/wiki/Q657",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chad",
+      "url": "https://en.wikipedia.org/wiki/Chad",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

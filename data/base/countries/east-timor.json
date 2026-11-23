@@ -1,0 +1,51 @@
+{
+  "id": "east-timor",
+  "category": "countries",
+  "names": [
+    {
+      "name": "East Timor",
+      "from": "1975"
+    }
+  ],
+  "summary": "A country on the eastern half of the island of Timor, a Portuguese colony for centuries, independent since 2002.",
+  "wikidata": "Q574",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-11-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: East Timor (Q574)",
+      "url": "https://www.wikidata.org/wiki/Q574",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: East Timor",
+      "url": "https://en.wikipedia.org/wiki/East_Timor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Lospalos_klein.jpg/500px-Lospalos_klein.jpg",
+    "alt": "East Timor",
+    "credit": "J. Patrick Fischer",
+    "licence": "CC BY 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Lospalos_klein.jpg"
+  }
+}

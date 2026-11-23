@@ -1,0 +1,59 @@
+{
+  "id": "guinea-bissau-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Guinea-Bissau Civil War",
+      "from": "1998"
+    }
+  ],
+  "summary": "The civil war of 1998 and 1999.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1781457",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-06-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-05-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea-bissau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Guinea-Bissau Civil War (Q1781457)",
+      "url": "https://www.wikidata.org/wiki/Q1781457",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guinea-Bissau Civil War",
+      "url": "https://en.wikipedia.org/wiki/Guinea-Bissau_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Bissau_-_Abandoned_tank.JPG/500px-Bissau_-_Abandoned_tank.JPG",
+    "alt": "Guinea-Bissau Civil War",
+    "credit": "Mariomassone",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bissau_-_Abandoned_tank.JPG"
+  }
+}

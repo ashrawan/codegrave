@@ -1,0 +1,59 @@
+{
+  "id": "ahmed-abdallah",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Ahmed Abdallah",
+      "from": "1919"
+    }
+  ],
+  "summary": "The first president, who declared independence in 1975.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q401076",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-06-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-11-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "comoros"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ahmed Abdallah (Q401076)",
+      "url": "https://www.wikidata.org/wiki/Q401076",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ahmed Abdallah",
+      "url": "https://en.wikipedia.org/wiki/Ahmed_Abdallah",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/52/Ahmed_Abdallah_illustration.png",
+    "alt": "Ahmed Abdallah",
+    "credit": "Voice of America",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ahmed_Abdallah_illustration.png"
+  }
+}

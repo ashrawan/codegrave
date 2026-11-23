@@ -1,0 +1,52 @@
+{
+  "id": "burundian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Burundian Civil War",
+      "from": "1993"
+    }
+  ],
+  "summary": "The civil war of 1993 to 2005.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q647239",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993-10-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-05-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burundi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Burundian Civil War (Q647239)",
+      "url": "https://www.wikidata.org/wiki/Q647239",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Burundian Civil War",
+      "url": "https://en.wikipedia.org/wiki/Burundian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

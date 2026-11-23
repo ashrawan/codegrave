@@ -1,0 +1,59 @@
+{
+  "id": "citadelle-laferriere",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Citadelle Laferrière",
+      "from": "1820"
+    }
+  ],
+  "summary": "The mountain fortress built by King Henri Christophe.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q206194",
+  "events": [
+    {
+      "type": "born",
+      "date": "1820",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1842-05-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "haiti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Citadelle Laferrière (Q206194)",
+      "url": "https://www.wikidata.org/wiki/Q206194",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Citadelle Laferrière",
+      "url": "https://en.wikipedia.org/wiki/Citadelle_Laferrière",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Citadelle_Laferri%C3%A8re_Aerial_View.jpg/500px-Citadelle_Laferri%C3%A8re_Aerial_View.jpg",
+    "alt": "Citadelle Laferrière",
+    "credit": "SPC Gibran Torres, United States Army",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Citadelle_Laferri%C3%A8re_Aerial_View.jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "flame-towers",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Flame Towers",
+      "from": "2012"
+    }
+  ],
+  "summary": "Three skyscrapers in Baku shaped like flames.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q80499",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-04",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "azerbaijan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Flame Towers (Q80499)",
+      "url": "https://www.wikidata.org/wiki/Q80499",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Flame Towers",
+      "url": "https://en.wikipedia.org/wiki/Flame_Towers",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/View_From_Maidens_Tower_%28221090097%29.jpeg/500px-View_From_Maidens_Tower_%28221090097%29.jpeg",
+    "alt": "Flame Towers",
+    "credit": "Francisco Anzola",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_From_Maidens_Tower_(221090097).jpeg"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "hurricane-david",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane David",
+      "from": "1979"
+    }
+  ],
+  "summary": "The hurricane of 1979 that left most of the island homeless.",
+  "wikidata": "Q3048258",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-08-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-09-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane David (Q3048258)",
+      "url": "https://www.wikidata.org/wiki/Q3048258",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane David",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_David",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

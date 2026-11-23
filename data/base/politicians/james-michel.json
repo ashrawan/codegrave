@@ -1,0 +1,54 @@
+{
+  "id": "james-michel",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "James Michel",
+      "from": "1944"
+    }
+  ],
+  "summary": "President from 2004 to 2016.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57476",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "seychelles"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James Michel (Q57476)",
+      "url": "https://www.wikidata.org/wiki/Q57476",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Michel",
+      "url": "https://en.wikipedia.org/wiki/James_Michel",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/53/James_Michel_2014.png",
+    "alt": "James Michel",
+    "credit": "Amanda Lucidon / White House",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:James_Michel_2014.png"
+  }
+}

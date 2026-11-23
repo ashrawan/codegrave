@@ -1,0 +1,59 @@
+{
+  "id": "luis-cabral",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Luís Cabral",
+      "from": "1931"
+    }
+  ],
+  "summary": "Amílcar Cabral's half-brother, the first president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q311443",
+  "events": [
+    {
+      "type": "born",
+      "date": "1931-04-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-05-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea-bissau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Luís Cabral (Q311443)",
+      "url": "https://www.wikidata.org/wiki/Q311443",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luís Cabral",
+      "url": "https://en.wikipedia.org/wiki/Luís_Cabral",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Lu%C3%ADs_Cabral_1979.png/500px-Lu%C3%ADs_Cabral_1979.png",
+    "alt": "Luís Cabral",
+    "credit": "EC Audiovisual Center",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lu%C3%ADs_Cabral_1979.png"
+  }
+}

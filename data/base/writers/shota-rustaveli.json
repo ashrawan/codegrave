@@ -1,0 +1,59 @@
+{
+  "id": "shota-rustaveli",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Shota Rustaveli",
+      "from": "1172"
+    }
+  ],
+  "summary": "Poet of The Knight in the Panther's Skin, written in Tamar's time.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q132984",
+  "events": [
+    {
+      "type": "born",
+      "date": "1172",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1216",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Shota Rustaveli (Q132984)",
+      "url": "https://www.wikidata.org/wiki/Q132984",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Shota Rustaveli",
+      "url": "https://en.wikipedia.org/wiki/Shota_Rustaveli",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Shota_Rustaveli_fresco_in_the_Monastery_of_the_Cross_in_Jerusalem.jpg/500px-Shota_Rustaveli_fresco_in_the_Monastery_of_the_Cross_in_Jerusalem.jpg",
+    "alt": "Shota Rustaveli",
+    "credit": "DerFuchs",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Shota_Rustaveli_fresco_in_the_Monastery_of_the_Cross_in_Jerusalem.jpg"
+  }
+}

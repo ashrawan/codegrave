@@ -1,0 +1,54 @@
+{
+  "id": "dua-lipa",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Dua Lipa",
+      "from": "1995"
+    }
+  ],
+  "summary": "Singer born in London to Kosovo Albanian parents, who grew up partly in Pristina.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q21914464",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-08-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kosovo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dua Lipa (Q21914464)",
+      "url": "https://www.wikidata.org/wiki/Q21914464",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dua Lipa",
+      "url": "https://en.wikipedia.org/wiki/Dua_Lipa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Dua_Lipa-69798_%28cropped%29.jpg/500px-Dua_Lipa-69798_%28cropped%29.jpg",
+    "alt": "Dua Lipa",
+    "credit": "Harald Krichel",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dua_Lipa-69798_(cropped).jpg"
+  }
+}

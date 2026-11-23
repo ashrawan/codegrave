@@ -1,0 +1,59 @@
+{
+  "id": "samori-toure",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Samori Ture",
+      "from": "1830"
+    }
+  ],
+  "summary": "Founder of the Wassoulou Empire, who fought the French for sixteen years.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q469314",
+  "events": [
+    {
+      "type": "born",
+      "date": "1830",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1900-06-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samori Ture (Q469314)",
+      "url": "https://www.wikidata.org/wiki/Q469314",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samori Ture",
+      "url": "https://en.wikipedia.org/wiki/Samori_Ture",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/79/Almamy_Samory_Tour%C3%A9.jpg",
+    "alt": "Samori Ture",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Almamy_Samory_Tour%C3%A9.jpg"
+  }
+}

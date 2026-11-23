@@ -1,0 +1,51 @@
+{
+  "id": "lesotho",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Lesotho",
+      "from": "1966"
+    }
+  ],
+  "summary": "A mountain kingdom completely surrounded by South Africa, independent from Britain since 1966.",
+  "wikidata": "Q1013",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lesotho (Q1013)",
+      "url": "https://www.wikidata.org/wiki/Q1013",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lesotho",
+      "url": "https://en.wikipedia.org/wiki/Lesotho",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Lesotho_-_Location_Map_%282013%29_-_LSO_-_UNOCHA.svg/500px-Lesotho_-_Location_Map_%282013%29_-_LSO_-_UNOCHA.svg.png",
+    "alt": "Lesotho",
+    "credit": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lesotho_-_Location_Map_(2013)_-_LSO_-_UNOCHA.svg"
+  }
+}

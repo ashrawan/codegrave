@@ -1,0 +1,54 @@
+{
+  "id": "kalinago-territory",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Kalinago Territory",
+      "from": "1903"
+    }
+  ],
+  "summary": "The land set aside in 1903 for the Kalinago, the island's first people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5039330",
+  "events": [
+    {
+      "type": "born",
+      "date": "1903",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kalinago Territory (Q5039330)",
+      "url": "https://www.wikidata.org/wiki/Q5039330",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kalinago Territory",
+      "url": "https://en.wikipedia.org/wiki/Kalinago_Territory",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Dominica_IMG_5451.jpg/500px-Dominica_IMG_5451.jpg",
+    "alt": "Kalinago Territory",
+    "credit": "Dirk.heldmaier",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dominica_IMG_5451.jpg"
+  }
+}

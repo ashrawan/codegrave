@@ -1,0 +1,51 @@
+{
+  "id": "kyrgyzstan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kyrgyzstan",
+      "from": "1991"
+    }
+  ],
+  "summary": "A mountainous country of Central Asia, independent from the Soviet Union since 1991.",
+  "wikidata": "Q813",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kyrgyzstan (Q813)",
+      "url": "https://www.wikidata.org/wiki/Q813",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kyrgyzstan",
+      "url": "https://en.wikipedia.org/wiki/Kyrgyzstan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Kichi_Ak_Suu_Sanctuary%2C_Issyk_Kul_Region%2C_Kyrgyzstan_001.jpg/500px-Kichi_Ak_Suu_Sanctuary%2C_Issyk_Kul_Region%2C_Kyrgyzstan_001.jpg",
+    "alt": "Kyrgyzstan",
+    "credit": "Vilya Shoni",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kichi_Ak_Suu_Sanctuary,_Issyk_Kul_Region,_Kyrgyzstan_001.jpg"
+  }
+}

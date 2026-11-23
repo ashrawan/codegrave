@@ -1,0 +1,54 @@
+{
+  "id": "peter-mutharika",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Peter Mutharika",
+      "from": "1940"
+    }
+  ],
+  "summary": "President from 2014 to 2020 and again from 2025.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q7176020",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-07-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malawi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Peter Mutharika (Q7176020)",
+      "url": "https://www.wikidata.org/wiki/Q7176020",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Peter Mutharika",
+      "url": "https://en.wikipedia.org/wiki/Peter_Mutharika",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/16/Arthur_Peter_Mutharika_2014_%28cropped%29.jpg",
+    "alt": "Peter Mutharika",
+    "credit": "U.S. Department of State",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Arthur_Peter_Mutharika_2014_(cropped).jpg"
+  }
+}

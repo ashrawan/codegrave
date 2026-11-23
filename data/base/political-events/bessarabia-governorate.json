@@ -1,0 +1,59 @@
+{
+  "id": "bessarabia-governorate",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Bessarabia Governorate",
+      "from": "1812"
+    }
+  ],
+  "summary": "Russian rule of the land east of the Prut, from 1812.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1190582",
+  "events": [
+    {
+      "type": "born",
+      "date": "1812",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1917-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "moldova"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bessarabia Governorate (Q1190582)",
+      "url": "https://www.wikidata.org/wiki/Q1190582",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bessarabia Governorate",
+      "url": "https://en.wikipedia.org/wiki/Bessarabia_Governorate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Bessarabia_Governorate_%281913%29.png/500px-Bessarabia_Governorate_%281913%29.png",
+    "alt": "Bessarabia Governorate",
+    "credit": "Рябченко А.Е.Руднев Д.М.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bessarabia_Governorate_(1913).png"
+  }
+}

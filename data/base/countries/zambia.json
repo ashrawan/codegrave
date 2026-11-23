@@ -1,0 +1,51 @@
+{
+  "id": "zambia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Zambia",
+      "from": "1964"
+    }
+  ],
+  "summary": "A landlocked country of southern Africa, rich in copper, independent from Britain since 1964.",
+  "wikidata": "Q953",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zambia (Q953)",
+      "url": "https://www.wikidata.org/wiki/Q953",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zambia",
+      "url": "https://en.wikipedia.org/wiki/Zambia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Zambia_-_Location_Map_%282011%29_-_ZMB_-_UNOCHA.svg/500px-Zambia_-_Location_Map_%282011%29_-_ZMB_-_UNOCHA.svg.png",
+    "alt": "Zambia",
+    "credit": "UN Office for the Coordination of Humanitarian Affairs (OCHA)",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Zambia_-_Location_Map_(2011)_-_ZMB_-_UNOCHA.svg"
+  }
+}

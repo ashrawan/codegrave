@@ -1,0 +1,52 @@
+{
+  "id": "german-new-guinea",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "German New Guinea",
+      "from": "1884"
+    }
+  ],
+  "summary": "The German colony that took in the Marshalls from 1885.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q165008",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1919-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "marshall-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German New Guinea (Q165008)",
+      "url": "https://www.wikidata.org/wiki/Q165008",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German New Guinea",
+      "url": "https://en.wikipedia.org/wiki/German_New_Guinea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

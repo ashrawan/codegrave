@@ -1,0 +1,56 @@
+{
+  "id": "adulis",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Adulis",
+      "from": "-0200"
+    }
+  ],
+  "summary": "The Red Sea port of the kingdom of Aksum.",
+  "wikidata": "Q378940",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "eritrea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Adulis (Q378940)",
+      "url": "https://www.wikidata.org/wiki/Q378940",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Adulis",
+      "url": "https://en.wikipedia.org/wiki/Adulis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/MapHymiariteKingdom.jpg/500px-MapHymiariteKingdom.jpg",
+    "alt": "Adulis",
+    "credit": "PHGCOM",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:MapHymiariteKingdom.jpg"
+  }
+}

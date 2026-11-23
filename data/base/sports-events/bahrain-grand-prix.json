@@ -1,0 +1,54 @@
+{
+  "id": "bahrain-grand-prix",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "Bahrain Grand Prix",
+      "from": "2004"
+    }
+  ],
+  "summary": "The Formula One race held since 2004, the first in the Middle East.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q7885",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bahrain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bahrain Grand Prix (Q7885)",
+      "url": "https://www.wikidata.org/wiki/Q7885",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bahrain Grand Prix",
+      "url": "https://en.wikipedia.org/wiki/Bahrain_Grand_Prix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Bahrain_International_Circuit--Grand_Prix_Layout.svg/500px-Bahrain_International_Circuit--Grand_Prix_Layout.svg.png",
+    "alt": "Bahrain Grand Prix",
+    "credit": "Will Pittenger",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bahrain_International_Circuit--Grand_Prix_Layout.svg"
+  }
+}

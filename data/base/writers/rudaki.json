@@ -1,0 +1,59 @@
+{
+  "id": "rudaki",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Rudaki",
+      "from": "0859"
+    }
+  ],
+  "summary": "Poet of the Samanid court, called the father of Persian poetry.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q312954",
+  "events": [
+    {
+      "type": "born",
+      "date": "0859",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0941",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tajikistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rudaki (Q312954)",
+      "url": "https://www.wikidata.org/wiki/Q312954",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rudaki",
+      "url": "https://en.wikipedia.org/wiki/Rudaki",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Miniature_of_Rudaki_by_Hossein_Behzad.jpg/500px-Miniature_of_Rudaki_by_Hossein_Behzad.jpg",
+    "alt": "Rudaki",
+    "credit": "Hossein Behzad",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Miniature_of_Rudaki_by_Hossein_Behzad.jpg"
+  }
+}

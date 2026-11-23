@@ -1,0 +1,52 @@
+{
+  "id": "second-intifada",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Second Intifada",
+      "from": "2000"
+    }
+  ],
+  "summary": "The uprising of 2000 to 2005.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q49106",
+  "events": [
+    {
+      "type": "born",
+      "date": "2000-09-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-02-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Second Intifada (Q49106)",
+      "url": "https://www.wikidata.org/wiki/Q49106",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Second Intifada",
+      "url": "https://en.wikipedia.org/wiki/Second_Intifada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "british-somaliland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "British Somaliland",
+      "from": "1884"
+    }
+  ],
+  "summary": "Britain's protectorate in the north.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q662653",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1960-06-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "somalia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Somaliland (Q662653)",
+      "url": "https://www.wikidata.org/wiki/Q662653",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Somaliland",
+      "url": "https://en.wikipedia.org/wiki/British_Somaliland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

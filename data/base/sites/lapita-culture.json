@@ -1,0 +1,56 @@
+{
+  "id": "lapita-culture",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Lapita culture",
+      "from": "-1600"
+    }
+  ],
+  "summary": "The people of the decorated pottery who first settled Fiji and the islands east of it.",
+  "wikidata": "Q1021436",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1600",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0500",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "fiji"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lapita culture (Q1021436)",
+      "url": "https://www.wikidata.org/wiki/Q1021436",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lapita culture",
+      "url": "https://en.wikipedia.org/wiki/Lapita_culture",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/PortVilaLapita.jpg/500px-PortVilaLapita.jpg",
+    "alt": "Lapita culture",
+    "credit": "Torbenbrinker",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:PortVilaLapita.jpg"
+  }
+}

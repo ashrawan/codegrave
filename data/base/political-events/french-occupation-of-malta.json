@@ -1,0 +1,52 @@
+{
+  "id": "french-occupation-of-malta",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "French occupation of Malta",
+      "from": "1798"
+    }
+  ],
+  "summary": "Napoleon's two years on Malta, 1798 to 1800.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2984282",
+  "events": [
+    {
+      "type": "born",
+      "date": "1798",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1800",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French occupation of Malta (Q2984282)",
+      "url": "https://www.wikidata.org/wiki/Q2984282",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French occupation of Malta",
+      "url": "https://en.wikipedia.org/wiki/French_occupation_of_Malta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

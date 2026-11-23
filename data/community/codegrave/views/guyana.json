@@ -1,0 +1,62 @@
+{
+  "id": "guyana",
+  "name": "Guyana",
+  "description": "Guyana from its first peoples and Dutch plantations to British Guiana, independence in 1966, Jonestown and the oil boom.",
+  "category": "places",
+  "tags": [
+    "guyana",
+    "georgetown",
+    "south america",
+    "caribbean",
+    "oil"
+  ],
+  "entries": [
+    "berbice-slave-uprising",
+    "georgetown-guyana",
+    "british-guiana",
+    "cheddi-jagan",
+    "forbes-burnham",
+    "kaieteur-falls",
+    "clive-lloyd",
+    "guyana",
+    "jonestown",
+    "irfaan-ali"
+  ],
+  "checkpoints": [
+    {
+      "id": "dutch-and-british-plantations",
+      "name": "Dutch and British plantations",
+      "from": 1616,
+      "to": 1965,
+      "note": "The Dutch built sugar plantations, and Berbice rose in 1763. Britain took the colonies and brought Indian labourers after slavery ended."
+    },
+    {
+      "id": "independent-guyana",
+      "name": "Independent Guyana",
+      "from": 1966,
+      "to": 2014,
+      "note": "Guyana became independent in 1966 and was led by Burnham, then Jagan."
+    },
+    {
+      "id": "oil",
+      "name": "Oil",
+      "from": 2015,
+      "to": 2026,
+      "note": "Oil was found offshore in 2015 and began to flow in 2019."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Flag_of_Guyana.svg/330px-Flag_of_Guyana.svg.png",
+    "alt": "Flag of Guyana",
+    "credit": "Whitney Smith",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Guyana.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/85/National_Anthem_of_Guyana.ogg/National_Anthem_of_Guyana.ogg.mp3",
+    "title": "National anthem of Guyana",
+    "credit": "Robert Cyril Gladstone Potter",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Guyana.ogg"
+  }
+}

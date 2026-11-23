@@ -1,0 +1,52 @@
+{
+  "id": "operation-grapple",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Operation Grapple",
+      "from": "1957"
+    }
+  ],
+  "summary": "British hydrogen bomb tests at Malden and Kiritimati in 1957 and 1958.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3293979",
+  "events": [
+    {
+      "type": "born",
+      "date": "1957",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1958",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kiribati"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Operation Grapple (Q3293979)",
+      "url": "https://www.wikidata.org/wiki/Q3293979",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Operation Grapple",
+      "url": "https://en.wikipedia.org/wiki/Operation_Grapple",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

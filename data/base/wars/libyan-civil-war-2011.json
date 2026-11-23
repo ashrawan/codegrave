@@ -1,0 +1,59 @@
+{
+  "id": "libyan-civil-war-2011",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Libyan civil war",
+      "from": "2011"
+    }
+  ],
+  "summary": "The war of 2011 in which Gaddafi was overthrown and killed.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q81545",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-02-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-10-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Libyan civil war (Q81545)",
+      "url": "https://www.wikidata.org/wiki/Q81545",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Libyan civil war (2011)",
+      "url": "https://en.wikipedia.org/wiki/Libyan_civil_war_(2011)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/First_Libyan_Civil_War_%282011%29.png/500px-First_Libyan_Civil_War_%282011%29.png",
+    "alt": "Libyan civil war",
+    "credit": "LLs",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:First_Libyan_Civil_War_(2011).png"
+  }
+}

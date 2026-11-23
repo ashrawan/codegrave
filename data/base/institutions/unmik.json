@@ -1,0 +1,51 @@
+{
+  "id": "unmik",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "United Nations Interim Administration Mission in Kosovo",
+      "from": "1999"
+    }
+  ],
+  "summary": "The UN mission that ran Kosovo after 1999.",
+  "wikidata": "Q504557",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-06-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kosovo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Nations Interim Administration Mission in Kosovo (Q504557)",
+      "url": "https://www.wikidata.org/wiki/Q504557",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Nations Interim Administration Mission in Kosovo",
+      "url": "https://en.wikipedia.org/wiki/United_Nations_Interim_Administration_Mission_in_Kosovo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/UNMIK_map.png/500px-UNMIK_map.png",
+    "alt": "United Nations Interim Administration Mission in Kosovo",
+    "credit": "Cartographer of the United Nations",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:UNMIK_map.png"
+  }
+}

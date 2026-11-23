@@ -1,0 +1,52 @@
+{
+  "id": "tarrafal-camp",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Tarrafal camp",
+      "from": "1936"
+    }
+  ],
+  "summary": "The prison camp Portugal ran on Santiago for its opponents.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1031493",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1974",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cape-verde"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tarrafal camp (Q1031493)",
+      "url": "https://www.wikidata.org/wiki/Q1031493",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tarrafal camp",
+      "url": "https://en.wikipedia.org/wiki/Tarrafal_camp",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

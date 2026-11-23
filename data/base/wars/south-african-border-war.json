@@ -1,0 +1,59 @@
+{
+  "id": "south-african-border-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "South African Border War",
+      "from": "1966"
+    }
+  ],
+  "summary": "The war of 1966 to 1990 between South Africa and SWAPO.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1993848",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966-08-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-03-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "namibia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South African Border War (Q1993848)",
+      "url": "https://www.wikidata.org/wiki/Q1993848",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South African Border War",
+      "url": "https://en.wikipedia.org/wiki/South_African_Border_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/1e/SWAPO_and_SA_operations_1978-1980%2C_Angola_civil_war_es.png",
+    "alt": "South African Border War",
+    "credit": "No machine-readable author provided. Ceresnet assumed (based on copyright claims).",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:SWAPO_and_SA_operations_1978-1980,_Angola_civil_war_es.png"
+  }
+}

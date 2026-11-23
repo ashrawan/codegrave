@@ -1,0 +1,51 @@
+{
+  "id": "basseterre",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Basseterre",
+      "from": "1627"
+    }
+  ],
+  "summary": "The capital, founded by the French.",
+  "wikidata": "Q41295",
+  "events": [
+    {
+      "type": "born",
+      "date": "1627",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saint-kitts-and-nevis"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Basseterre (Q41295)",
+      "url": "https://www.wikidata.org/wiki/Q41295",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Basseterre",
+      "url": "https://en.wikipedia.org/wiki/Basseterre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Basseterre.jpeg/500px-Basseterre.jpeg",
+    "alt": "Basseterre",
+    "credit": "J. Stephen Conn",
+    "licence": "CC BY-SA 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Basseterre.jpeg"
+  }
+}

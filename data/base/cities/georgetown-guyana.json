@@ -1,0 +1,51 @@
+{
+  "id": "georgetown-guyana",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Georgetown, Guyana",
+      "from": "1781"
+    }
+  ],
+  "summary": "The capital, built below sea level behind sea walls.",
+  "wikidata": "Q10717",
+  "events": [
+    {
+      "type": "born",
+      "date": "1781",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guyana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Georgetown, Guyana (Q10717)",
+      "url": "https://www.wikidata.org/wiki/Q10717",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Georgetown, Guyana",
+      "url": "https://en.wikipedia.org/wiki/Georgetown,_Guyana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/St_George%27s_Cathedral.jpg/500px-St_George%27s_Cathedral.jpg",
+    "alt": "Georgetown, Guyana",
+    "credit": "Johnldasilva",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:St_George%27s_Cathedral.jpg"
+  }
+}

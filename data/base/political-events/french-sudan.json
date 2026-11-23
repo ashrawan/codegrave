@@ -1,0 +1,52 @@
+{
+  "id": "french-sudan",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "French Sudan",
+      "from": "1880"
+    }
+  ],
+  "summary": "The French colony that became Mali.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q508014",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1959",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Sudan (Q508014)",
+      "url": "https://www.wikidata.org/wiki/Q508014",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Sudan",
+      "url": "https://en.wikipedia.org/wiki/French_Sudan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

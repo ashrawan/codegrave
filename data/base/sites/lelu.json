@@ -1,0 +1,56 @@
+{
+  "id": "lelu",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Lelu Island",
+      "from": "1200"
+    }
+  ],
+  "summary": "The stone town of the rulers of Kosrae.",
+  "wikidata": "Q1816727",
+  "events": [
+    {
+      "type": "born",
+      "date": "1200",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1800",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "micronesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lelu Island (Q1816727)",
+      "url": "https://www.wikidata.org/wiki/Q1816727",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lelu Island",
+      "url": "https://en.wikipedia.org/wiki/Lelu_Island",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Kosrae.png",
+    "alt": "Lelu Island",
+    "credit": "No machine-readable author provided. Aotearoa assumed (based on copyright claims).",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Kosrae.png"
+  }
+}

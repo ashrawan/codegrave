@@ -1,0 +1,51 @@
+{
+  "id": "maseru",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Maseru",
+      "from": "1869"
+    }
+  ],
+  "summary": "The capital, founded as a police camp in 1869.",
+  "wikidata": "Q3909",
+  "events": [
+    {
+      "type": "born",
+      "date": "1869",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lesotho"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maseru (Q3909)",
+      "url": "https://www.wikidata.org/wiki/Q3909",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maseru",
+      "url": "https://en.wikipedia.org/wiki/Maseru",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Maseru_from_Parliament_Hill.jpg/500px-Maseru_from_Parliament_Hill.jpg",
+    "alt": "Maseru",
+    "credit": "OER Africa",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Maseru_from_Parliament_Hill.jpg"
+  }
+}

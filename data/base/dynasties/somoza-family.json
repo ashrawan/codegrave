@@ -1,0 +1,52 @@
+{
+  "id": "somoza-family",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Somoza family",
+      "from": "1936"
+    }
+  ],
+  "summary": "The family that ruled Nicaragua from 1936 to 1979.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q254219",
+  "events": [
+    {
+      "type": "born",
+      "date": "1936",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1979",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nicaragua"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Somoza family (Q254219)",
+      "url": "https://www.wikidata.org/wiki/Q254219",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Somoza family",
+      "url": "https://en.wikipedia.org/wiki/Somoza_family",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

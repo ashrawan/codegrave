@@ -1,0 +1,59 @@
+{
+  "id": "mahmoud-darwish",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Mahmoud Darwish",
+      "from": "1941"
+    }
+  ],
+  "summary": "The national poet.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q207720",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-03-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2008-08-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mahmoud Darwish (Q207720)",
+      "url": "https://www.wikidata.org/wiki/Q207720",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mahmoud Darwish",
+      "url": "https://en.wikipedia.org/wiki/Mahmoud_Darwish",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/2/2a/MahmoudDarwish.jpg",
+    "alt": "Mahmoud Darwish",
+    "credit": "Amer Shomali",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:MahmoudDarwish.jpg"
+  }
+}

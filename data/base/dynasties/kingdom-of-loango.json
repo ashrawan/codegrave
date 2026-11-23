@@ -1,0 +1,59 @@
+{
+  "id": "kingdom-of-loango",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Loango",
+      "from": "1550"
+    }
+  ],
+  "summary": "The kingdom of the Atlantic coast that traded with Europeans for centuries.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1479630",
+  "events": [
+    {
+      "type": "born",
+      "date": "1550",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1883",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Loango (Q1479630)",
+      "url": "https://www.wikidata.org/wiki/Q1479630",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Loango",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Loango",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Liste_des_monarques_du_Royaume_Loango.jpg/500px-Liste_des_monarques_du_Royaume_Loango.jpg",
+    "alt": "Kingdom of Loango",
+    "credit": "Roly USD",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Liste_des_monarques_du_Royaume_Loango.jpg"
+  }
+}

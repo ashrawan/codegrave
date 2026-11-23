@@ -1,0 +1,51 @@
+{
+  "id": "burundi",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Burundi",
+      "from": "1962"
+    }
+  ],
+  "summary": "A small, crowded country in the hills of the African Great Lakes, independent from Belgium since 1962.",
+  "wikidata": "Q967",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-07-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Burundi (Q967)",
+      "url": "https://www.wikidata.org/wiki/Q967",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Burundi",
+      "url": "https://en.wikipedia.org/wiki/Burundi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4e/By-map-fr.png",
+    "alt": "Burundi",
+    "credit": "The original uploader was Luna04 at French Wikipedia. Later versions were uploaded by Nécropotame at fr.wikipedia.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:By-map-fr.png"
+  }
+}

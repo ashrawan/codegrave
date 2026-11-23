@@ -1,0 +1,59 @@
+{
+  "id": "milton-cato",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Milton Cato",
+      "from": "1915"
+    }
+  ],
+  "summary": "The first prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q165402",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915-06-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-02-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saint-vincent-and-the-grenadines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Milton Cato (Q165402)",
+      "url": "https://www.wikidata.org/wiki/Q165402",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Milton Cato",
+      "url": "https://en.wikipedia.org/wiki/Milton_Cato",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/da/Milton_Cato_%281982%29_%28cropped%29.jpg",
+    "alt": "Milton Cato",
+    "credit": "Associated Press",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Milton_Cato_(1982)_(cropped).jpg"
+  }
+}

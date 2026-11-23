@@ -1,0 +1,52 @@
+{
+  "id": "basutoland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Basutoland",
+      "from": "1884"
+    }
+  ],
+  "summary": "The British protectorate of 1868 to 1966.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2340665",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lesotho"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Basutoland (Q2340665)",
+      "url": "https://www.wikidata.org/wiki/Q2340665",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Basutoland",
+      "url": "https://en.wikipedia.org/wiki/Basutoland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

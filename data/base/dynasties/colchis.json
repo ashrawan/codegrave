@@ -1,0 +1,52 @@
+{
+  "id": "colchis",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Colchis",
+      "from": "-1300"
+    }
+  ],
+  "summary": "The western kingdom of the Golden Fleece story.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q183150",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1300",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0164",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colchis (Q183150)",
+      "url": "https://www.wikidata.org/wiki/Q183150",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colchis",
+      "url": "https://en.wikipedia.org/wiki/Colchis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "bosnian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Bosnian War",
+      "from": "1992"
+    }
+  ],
+  "summary": "The war of 1992 to 1995 between Bosniaks, Serbs and Croats, the worst in Europe since 1945.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q181533",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-04-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bosnia-and-herzegovina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bosnian War (Q181533)",
+      "url": "https://www.wikidata.org/wiki/Q181533",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bosnian War",
+      "url": "https://en.wikipedia.org/wiki/Bosnian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

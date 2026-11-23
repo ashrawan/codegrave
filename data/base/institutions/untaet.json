@@ -1,0 +1,49 @@
+{
+  "id": "untaet",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "United Nations Transitional Administration in East Timor",
+      "from": "1999"
+    }
+  ],
+  "summary": "The UN administration that ran the country from 1999 to 2002.",
+  "wikidata": "Q332358",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-10-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-05-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "east-timor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Nations Transitional Administration in East Timor (Q332358)",
+      "url": "https://www.wikidata.org/wiki/Q332358",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Nations Transitional Administration in East Timor",
+      "url": "https://en.wikipedia.org/wiki/United_Nations_Transitional_Administration_in_East_Timor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

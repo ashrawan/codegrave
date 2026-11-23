@@ -1,0 +1,56 @@
+{
+  "id": "cape-verde",
+  "name": "Cape Verde",
+  "description": "Cape Verde from empty islands and Portuguese settlement to the slave trade, emigration, independence in 1975 and the music of Cesária Évora.",
+  "category": "places",
+  "tags": [
+    "cape verde",
+    "cabo verde",
+    "praia",
+    "atlantic",
+    "morna"
+  ],
+  "entries": [
+    "cidade-velha",
+    "praia",
+    "morna",
+    "aristides-pereira",
+    "amilcar-cabral",
+    "pedro-pires",
+    "tarrafal-camp",
+    "cesaria-evora",
+    "paigc",
+    "ulisses-correia-e-silva",
+    "cape-verde"
+  ],
+  "checkpoints": [
+    {
+      "id": "portuguese-islands",
+      "name": "Portuguese islands",
+      "from": 1456,
+      "to": 1974,
+      "note": "The empty islands were found by the Portuguese around 1456. Cidade Velha became a hub of the Atlantic slave trade, and many islanders later emigrated."
+    },
+    {
+      "id": "independent-cape-verde",
+      "name": "Independent Cape Verde",
+      "from": 1975,
+      "to": 2026,
+      "note": "Cape Verde became independent in 1975, became a democracy in 1991 and is one of Africa's most stable countries."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Cape_Verde_%2810-17%29.svg/330px-Flag_of_Cape_Verde_%2810-17%29.svg.png",
+    "alt": "Flag of Cape Verde",
+    "credit": "Original: Pedro Gregório Vector: SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Cape_Verde_(10-17).svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b6/C%C3%A2ntico_da_Liberdade_%28instrumental%29.ogg/C%C3%A2ntico_da_Liberdade_%28instrumental%29.ogg.mp3",
+    "title": "Cântico da Liberdade",
+    "credit": "https://web.archive.org/web/20060614105428/http://www.navyband.navy.mil:80/anthems/all_countries.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:C%C3%A2ntico_da_Liberdade_(instrumental).ogg"
+  }
+}

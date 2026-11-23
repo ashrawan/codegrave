@@ -1,0 +1,51 @@
+{
+  "id": "prespa-agreement",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Prespa agreement",
+      "from": "2018"
+    }
+  ],
+  "summary": "The agreement with Greece that renamed the country North Macedonia in 2019.",
+  "wikidata": "Q55153903",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-06-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-macedonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Prespa agreement (Q55153903)",
+      "url": "https://www.wikidata.org/wiki/Q55153903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prespa agreement",
+      "url": "https://en.wikipedia.org/wiki/Prespa_agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Prespa_agreement.pdf/page1-500px-Prespa_agreement.pdf.jpg",
+    "alt": "Prespa agreement",
+    "credit": "Government of North Macedonia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Prespa_agreement.pdf"
+  }
+}

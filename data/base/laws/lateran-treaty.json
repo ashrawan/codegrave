@@ -1,0 +1,51 @@
+{
+  "id": "lateran-treaty",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Lateran Treaty",
+      "from": "1929"
+    }
+  ],
+  "summary": "The treaty of 1929 with Italy that made Vatican City a state.",
+  "wikidata": "Q193270",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-06-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vatican-city"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lateran Treaty (Q193270)",
+      "url": "https://www.wikidata.org/wiki/Q193270",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lateran Treaty",
+      "url": "https://en.wikipedia.org/wiki/Lateran_Treaty",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Firma_dei_Patti_Lateranensi_1929.jpg/500px-Firma_dei_Patti_Lateranensi_1929.jpg",
+    "alt": "Lateran Treaty",
+    "credit": "Istituto Luce",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Firma_dei_Patti_Lateranensi_1929.jpg"
+  }
+}

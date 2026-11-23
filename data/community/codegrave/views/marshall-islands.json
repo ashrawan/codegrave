@@ -1,0 +1,64 @@
+{
+  "id": "marshall-islands",
+  "name": "Marshall Islands",
+  "description": "The Marshall Islands from the navigators of the stick charts to German, Japanese and American rule, the nuclear tests and independence in 1986.",
+  "category": "places",
+  "tags": [
+    "marshall islands",
+    "majuro",
+    "pacific",
+    "bikini",
+    "micronesia"
+  ],
+  "entries": [
+    "marshall-islands-stick-chart",
+    "german-new-guinea",
+    "amata-kabua",
+    "battle-of-kwajalein",
+    "operation-crossroads",
+    "bikini",
+    "trust-territory-of-the-pacific-islands",
+    "hilda-heine",
+    "castle-bravo",
+    "compact-of-free-association",
+    "runit-dome",
+    "marshall-islands"
+  ],
+  "checkpoints": [
+    {
+      "id": "navigators-and-colonists",
+      "name": "Navigators and colonists",
+      "from": -1000,
+      "to": 1945,
+      "note": "Marshallese sailors crossed the ocean with stick charts. Germany and then Japan ruled the atolls, and America took them in 1944."
+    },
+    {
+      "id": "the-nuclear-tests",
+      "name": "The nuclear tests",
+      "from": 1946,
+      "to": 1985,
+      "note": "The United States tested 67 nuclear weapons at Bikini and Enewetak from 1946 to 1958."
+    },
+    {
+      "id": "free-association",
+      "name": "Free association",
+      "from": 1986,
+      "to": 2026,
+      "note": "The Marshall Islands became self-governing in free association with the United States in 1986."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flag_of_the_Marshall_Islands.svg/330px-Flag_of_the_Marshall_Islands.svg.png",
+    "alt": "Flag of Marshall Islands",
+    "credit": "No machine-readable author provided. SKopp assumed (based on copyright claims).",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Marshall_Islands.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a3/National_Anthem_of_Marshall_Islands_by_US_Navy_Band.ogg/National_Anthem_of_Marshall_Islands_by_US_Navy_Band.ogg.mp3",
+    "title": "Forever Marshall Islands",
+    "credit": "http://www.navyband.navy.mil/anthems/all_countries.htm",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Marshall_Islands_by_US_Navy_Band.ogg"
+  }
+}

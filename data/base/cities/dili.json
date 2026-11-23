@@ -1,0 +1,51 @@
+{
+  "id": "dili",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Dili",
+      "from": "1769"
+    }
+  ],
+  "summary": "The capital, made so by the Portuguese in 1769.",
+  "wikidata": "Q9310",
+  "events": [
+    {
+      "type": "born",
+      "date": "1769",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "east-timor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dili (Q9310)",
+      "url": "https://www.wikidata.org/wiki/Q9310",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dili",
+      "url": "https://en.wikipedia.org/wiki/Dili",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Aussenministerium_und_Avenida_de_Portugal.jpg/500px-Aussenministerium_und_Avenida_de_Portugal.jpg",
+    "alt": "Dili",
+    "credit": "Jose Fernando Real",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Aussenministerium_und_Avenida_de_Portugal.jpg"
+  }
+}

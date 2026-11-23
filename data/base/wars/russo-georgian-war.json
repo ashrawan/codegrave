@@ -1,0 +1,59 @@
+{
+  "id": "russo-georgian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Russo-Georgian War",
+      "from": "2008"
+    }
+  ],
+  "summary": "The five-day war of August 2008 with Russia.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q620735",
+  "events": [
+    {
+      "type": "born",
+      "date": "2008-08-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2008-08-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Russo-Georgian War (Q620735)",
+      "url": "https://www.wikidata.org/wiki/Q620735",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Russo-Georgian War",
+      "url": "https://en.wikipedia.org/wiki/Russo-Georgian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Tskhinval_Yana_Amelina_10.jpg/500px-Tskhinval_Yana_Amelina_10.jpg",
+    "alt": "Russo-Georgian War",
+    "credit": "Yana Amelina (Амелина Я. А.)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tskhinval_Yana_Amelina_10.jpg"
+  }
+}

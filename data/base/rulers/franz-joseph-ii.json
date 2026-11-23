@@ -1,0 +1,59 @@
+{
+  "id": "franz-joseph-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Franz Joseph II, Prince of Liechtenstein",
+      "from": "1906"
+    }
+  ],
+  "summary": "Prince from 1938 to 1989, the first to live in the country.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q165674",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-08-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-11-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liechtenstein"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Franz Joseph II, Prince of Liechtenstein (Q165674)",
+      "url": "https://www.wikidata.org/wiki/Q165674",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Franz Joseph II, Prince of Liechtenstein",
+      "url": "https://en.wikipedia.org/wiki/Franz_Joseph_II,_Prince_of_Liechtenstein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/F%C3%BCrst_Franz_Josef_II..jpg/500px-F%C3%BCrst_Franz_Josef_II..jpg",
+    "alt": "Franz Joseph II, Prince of Liechtenstein",
+    "credit": "Presse- und Informationsamt, Vaduz",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:F%C3%BCrst_Franz_Josef_II..jpg"
+  }
+}

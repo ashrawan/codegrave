@@ -1,0 +1,59 @@
+{
+  "id": "seretse-khama",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Seretse Khama",
+      "from": "1921"
+    }
+  ],
+  "summary": "First president, whose marriage to an Englishwoman caused a scandal.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q219962",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-07-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "botswana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seretse Khama (Q219962)",
+      "url": "https://www.wikidata.org/wiki/Q219962",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seretse Khama",
+      "url": "https://en.wikipedia.org/wiki/Seretse_Khama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Seretse_Khama_1977_%282%29.png/500px-Seretse_Khama_1977_%282%29.png",
+    "alt": "Seretse Khama",
+    "credit": "European Communities Director: Allan Watson Architect: Jean Polak,Jean Gilson,Lucien De Vestel,André Polak",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Seretse_Khama_1977_(2).png"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "north-macedonia",
+  "name": "North Macedonia",
+  "description": "North Macedonia from Paeonia and Ohrid to the Byzantine, Bulgarian and Ottoman years, Yugoslavia, independence in 1991 and the new name of 2019.",
+  "category": "places",
+  "tags": [
+    "north macedonia",
+    "skopje",
+    "ohrid",
+    "balkans"
+  ],
+  "entries": [
+    "ohrid",
+    "clement-of-ohrid",
+    "ilinden-uprising",
+    "mother-teresa",
+    "gordana-siljanovska-davkova",
+    "1963-skopje-earthquake",
+    "goran-pandev",
+    "north-macedonia",
+    "2001-insurgency-in-macedonia",
+    "prespa-agreement",
+    "north-macedonia-nato"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-and-medieval",
+      "name": "Ancient and medieval",
+      "from": -400,
+      "to": 1394,
+      "note": "Paeonians, Macedonians and Romans held the land. Ohrid was a centre of Slavic learning and Samuel's capital."
+    },
+    {
+      "id": "ottoman-rule",
+      "name": "Ottoman rule",
+      "from": 1395,
+      "to": 1912,
+      "note": "The Ottomans ruled for five centuries. The rising of 1903 was crushed."
+    },
+    {
+      "id": "yugoslavia",
+      "name": "Yugoslavia",
+      "from": 1913,
+      "to": 1990,
+      "note": "Serbia took the land in 1913. It became a republic of Yugoslavia, and Skopje was rebuilt after 1963."
+    },
+    {
+      "id": "independent-north-macedonia",
+      "name": "Independent North Macedonia",
+      "from": 1991,
+      "to": 2026,
+      "note": "Independence came in 1991. The country took a new name in 2019 and joined NATO in 2020."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/330px-Flag_of_North_Macedonia.svg.png",
+    "alt": "Flag of North Macedonia",
+    "credit": "User:SKopp, redrawn by User:Gabbe",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_North_Macedonia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/8f/North_Macedonia%27s_National_Anthem.ogg/North_Macedonia%27s_National_Anthem.ogg.mp3",
+    "title": "Denes nad Makedonija",
+    "credit": "Todor Skalovski (composition), United States Navy Band (performance)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:North_Macedonia%27s_National_Anthem.ogg"
+  }
+}

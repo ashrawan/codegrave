@@ -1,0 +1,52 @@
+{
+  "id": "nyasaland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Nyasaland",
+      "from": "1907"
+    }
+  ],
+  "summary": "The British protectorate of 1907 to 1964.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1649306",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1964",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malawi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nyasaland (Q1649306)",
+      "url": "https://www.wikidata.org/wiki/Q1649306",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nyasaland",
+      "url": "https://en.wikipedia.org/wiki/Nyasaland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

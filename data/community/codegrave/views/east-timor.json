@@ -1,0 +1,62 @@
+{
+  "id": "east-timor",
+  "name": "East Timor",
+  "description": "East Timor from its kingdoms and Portuguese Timor to the Indonesian occupation, the vote of 1999 and independence in 2002.",
+  "category": "places",
+  "tags": [
+    "east timor",
+    "timor-leste",
+    "dili",
+    "southeast asia"
+  ],
+  "entries": [
+    "portuguese-timor",
+    "dili",
+    "xanana-gusmao",
+    "carlos-filipe-ximenes-belo",
+    "jose-ramos-horta",
+    "east-timor",
+    "indonesian-invasion-of-east-timor",
+    "santa-cruz-massacre",
+    "1999-east-timorese-independence-referendum",
+    "untaet",
+    "east-timor-independence"
+  ],
+  "checkpoints": [
+    {
+      "id": "portuguese-timor",
+      "name": "Portuguese Timor",
+      "from": 1515,
+      "to": 1974,
+      "note": "Portuguese traders came for sandalwood in the 1500s, and Timor stayed a Portuguese colony for centuries."
+    },
+    {
+      "id": "occupation",
+      "name": "Occupation",
+      "from": 1975,
+      "to": 1998,
+      "note": "Indonesia invaded in 1975. Perhaps a quarter of the people died under the occupation, and the resistance fought on."
+    },
+    {
+      "id": "independence",
+      "name": "Independence",
+      "from": 1999,
+      "to": 2026,
+      "note": "East Timor voted for independence in 1999 and became independent in 2002. In 2025 it joined ASEAN."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Flag_of_East_Timor.svg/330px-Flag_of_East_Timor.svg.png",
+    "alt": "Flag of East Timor",
+    "credit": "See File history, below, for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_East_Timor.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/20/East_Timorese_national_anthem.wav/East_Timorese_national_anthem.wav.mp3",
+    "title": "Pátria",
+    "credit": "https://web.archive.org/web/20060614105428/http://www.navyband.navy.mil:80/anthems/all_countries.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:East_Timorese_national_anthem.wav"
+  }
+}

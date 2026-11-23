@@ -1,0 +1,59 @@
+{
+  "id": "tigranes-the-great",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Tigranes the Great",
+      "from": "-0140"
+    }
+  ],
+  "summary": "King under whom Armenia briefly became an empire from the Caspian to the Mediterranean.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q201303",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0140",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "-0055",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "armenia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tigranes the Great (Q201303)",
+      "url": "https://www.wikidata.org/wiki/Q201303",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tigranes the Great",
+      "url": "https://en.wikipedia.org/wiki/Tigranes_the_Great",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Coin_of_Tigranes_II_the_Great%2C_Antioch_mint.jpg",
+    "alt": "Tigranes the Great",
+    "credit": "Classical Numismatic Group; [1]",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Coin_of_Tigranes_II_the_Great,_Antioch_mint.jpg"
+  }
+}

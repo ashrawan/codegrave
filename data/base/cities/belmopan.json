@@ -1,0 +1,51 @@
+{
+  "id": "belmopan",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Belmopan",
+      "from": "1970"
+    }
+  ],
+  "summary": "The capital, built inland after Hurricane Hattie of 1961 flooded Belize City.",
+  "wikidata": "Q3043",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belize"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Belmopan (Q3043)",
+      "url": "https://www.wikidata.org/wiki/Q3043",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belmopan",
+      "url": "https://en.wikipedia.org/wiki/Belmopan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Belmopan_Parliament.jpg/500px-Belmopan_Parliament.jpg",
+    "alt": "Belmopan",
+    "credit": "Haakon S. Krohn",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Belmopan_Parliament.jpg"
+  }
+}

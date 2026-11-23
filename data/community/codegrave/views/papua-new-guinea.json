@@ -1,0 +1,62 @@
+{
+  "id": "papua-new-guinea",
+  "name": "Papua New Guinea",
+  "description": "Papua New Guinea from the first farmers of Kuk to its hundreds of peoples, German and Australian rule, the Kokoda Track and independence in 1975.",
+  "category": "places",
+  "tags": [
+    "papua new guinea",
+    "port moresby",
+    "pacific",
+    "melanesia",
+    "languages"
+  ],
+  "entries": [
+    "kuk-swamp",
+    "port-moresby",
+    "german-new-guinea",
+    "territory-of-papua",
+    "michael-somare",
+    "kokoda-track-campaign",
+    "james-marape",
+    "papua-new-guinea",
+    "bougainville-civil-war",
+    "2019-bougainvillean-independence-referendum"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-farmers",
+      "name": "The first farmers",
+      "from": -50000,
+      "to": 1883,
+      "note": "People reached New Guinea at least 50,000 years ago and farmed the highlands at Kuk 9,000 years ago."
+    },
+    {
+      "id": "colonial-rule",
+      "name": "Colonial rule",
+      "from": 1884,
+      "to": 1974,
+      "note": "Germany took the north and Britain the south in 1884; Australia ran both. The Kokoda Track was fought in 1942."
+    },
+    {
+      "id": "independent-png",
+      "name": "Independent PNG",
+      "from": 1975,
+      "to": 2026,
+      "note": "Papua New Guinea became independent in 1975. Bougainville's war lasted a decade."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Flag_of_Papua_New_Guinea.svg/330px-Flag_of_Papua_New_Guinea.svg.png",
+    "alt": "Flag of Papua New Guinea",
+    "credit": "User:Nightstallion",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Papua_New_Guinea.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/29/O_Arise%2C_All_You_Sons_%28instrumental%29.ogg/O_Arise%2C_All_You_Sons_%28instrumental%29.ogg.mp3",
+    "title": "O Arise, All You Sons",
+    "credit": "Adapted by uploader from United States Navy Band website.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:O_Arise,_All_You_Sons_(instrumental).ogg"
+  }
+}

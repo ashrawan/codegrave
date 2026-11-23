@@ -1,0 +1,59 @@
+{
+  "id": "festus-mogae",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Festus Mogae",
+      "from": "1939"
+    }
+  ],
+  "summary": "President from 1998 to 2008, who led the fight against HIV.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q193238",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-08-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2026-05-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "botswana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Festus Mogae (Q193238)",
+      "url": "https://www.wikidata.org/wiki/Q193238",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Festus Mogae",
+      "url": "https://en.wikipedia.org/wiki/Festus_Mogae",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Festus_Mogae_2009-06-23.jpg/500px-Festus_Mogae_2009-06-23.jpg",
+    "alt": "Festus Mogae",
+    "credit": "Greenweek",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Festus_Mogae_2009-06-23.jpg"
+  }
+}

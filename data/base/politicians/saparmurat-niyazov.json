@@ -1,0 +1,59 @@
+{
+  "id": "saparmurat-niyazov",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Saparmurat Niyazov",
+      "from": "1940"
+    }
+  ],
+  "summary": "President from 1991 to 2006, who named months after himself and his mother.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q82918",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-02-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-12-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkmenistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saparmurat Niyazov (Q82918)",
+      "url": "https://www.wikidata.org/wiki/Q82918",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saparmurat Niyazov",
+      "url": "https://en.wikipedia.org/wiki/Saparmurat_Niyazov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Nyyazov_in_February_1998.jpg/500px-Nyyazov_in_February_1998.jpg",
+    "alt": "Saparmurat Niyazov",
+    "credit": "Danny Gys",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nyyazov_in_February_1998.jpg"
+  }
+}

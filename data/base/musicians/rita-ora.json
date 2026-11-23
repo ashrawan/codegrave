@@ -1,0 +1,54 @@
+{
+  "id": "rita-ora",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Rita Ora",
+      "from": "1990"
+    }
+  ],
+  "summary": "Singer born in Pristina.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q229760",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-11-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kosovo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rita Ora (Q229760)",
+      "url": "https://www.wikidata.org/wiki/Q229760",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rita Ora",
+      "url": "https://en.wikipedia.org/wiki/Rita_Ora",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Oliver_Mark_-_Rita_Ora%2C_Berlin_2018.jpg/500px-Oliver_Mark_-_Rita_Ora%2C_Berlin_2018.jpg",
+    "alt": "Rita Ora",
+    "credit": "Oliver Mark",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Oliver_Mark_-_Rita_Ora,_Berlin_2018.jpg"
+  }
+}

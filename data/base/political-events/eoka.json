@@ -1,0 +1,52 @@
+{
+  "id": "eoka",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "EOKA",
+      "from": "1955"
+    }
+  ],
+  "summary": "The Greek Cypriot fighters who sought union with Greece in the 1950s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q847314",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1959",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: EOKA (Q847314)",
+      "url": "https://www.wikidata.org/wiki/Q847314",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: EOKA",
+      "url": "https://en.wikipedia.org/wiki/EOKA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

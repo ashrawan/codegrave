@@ -1,0 +1,59 @@
+{
+  "id": "2010-kyrgyz-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Kyrgyz Revolution of 2010",
+      "from": "2010"
+    }
+  ],
+  "summary": "The rising of 2010 that drove out President Bakiyev.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q236023",
+  "events": [
+    {
+      "type": "born",
+      "date": "2010-04-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2010-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kyrgyzstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kyrgyz Revolution of 2010 (Q236023)",
+      "url": "https://www.wikidata.org/wiki/Q236023",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kyrgyz Revolution of 2010",
+      "url": "https://en.wikipedia.org/wiki/Kyrgyz_Revolution_of_2010",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/LocationKyrgyzstan.svg/500px-LocationKyrgyzstan.svg.png",
+    "alt": "Kyrgyz Revolution of 2010",
+    "credit": "By Rei-artur pt en Rei-artur blog",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:LocationKyrgyzstan.svg"
+  }
+}

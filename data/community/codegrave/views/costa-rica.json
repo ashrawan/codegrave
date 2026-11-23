@@ -1,0 +1,72 @@
+{
+  "id": "costa-rica",
+  "name": "Costa Rica",
+  "description": "Costa Rica from its first peoples and the stone spheres to independence in 1821, the abolition of the army in 1948, coffee and green tourism.",
+  "category": "places",
+  "tags": [
+    "costa rica",
+    "san jose",
+    "central america",
+    "rainforest",
+    "pura vida"
+  ],
+  "entries": [
+    "guayabo-national-monument",
+    "stone-spheres-of-costa-rica",
+    "san-jose-costa-rica",
+    "costa-rica",
+    "act-of-independence-of-central-america",
+    "filibuster-war",
+    "jose-figueres-ferrer",
+    "oscar-arias",
+    "costa-rican-civil-war",
+    "rodrigo-chaves-robles",
+    "golden-toad",
+    "monteverde-cloud-forest-reserve",
+    "keylor-navas"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-peoples",
+      "name": "The first peoples",
+      "from": -1000,
+      "to": 1501,
+      "note": "Peoples such as the Diquís carved stone spheres, and Guayabo was a town of roads and aqueducts."
+    },
+    {
+      "id": "spanish-rule",
+      "name": "Spanish rule",
+      "from": 1502,
+      "to": 1820,
+      "note": "Columbus reached the coast in 1502. A poor, remote colony grew up in the central valley."
+    },
+    {
+      "id": "coffee-republic",
+      "name": "Coffee republic",
+      "from": 1821,
+      "to": 1947,
+      "note": "Independence came in 1821. Coffee made the country prosper, and it beat back William Walker in 1857."
+    },
+    {
+      "id": "no-army",
+      "name": "No army",
+      "from": 1948,
+      "to": 2026,
+      "note": "After the war of 1948 Figueres abolished the army. Costa Rica became a stable democracy known for its forests."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Flag_of_Costa_Rica.svg/330px-Flag_of_Costa_Rica.svg.png",
+    "alt": "Flag of Costa Rica",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Costa_Rica.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/79/Costa_Rica_National_Anthem.ogg/Costa_Rica_National_Anthem.ogg.mp3",
+    "title": "Noble patria, tu hermosa bandera",
+    "credit": "José María Zeledón Brenes / Manuel María Gutiérrez / United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Costa_Rica_National_Anthem.ogg"
+  }
+}

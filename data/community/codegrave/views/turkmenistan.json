@@ -1,0 +1,63 @@
+{
+  "id": "turkmenistan",
+  "name": "Turkmenistan",
+  "description": "Turkmenistan from the cities of the Silk Road and Merv to Russian and Soviet rule, independence in 1991 and the cult of its presidents.",
+  "category": "places",
+  "tags": [
+    "turkmenistan",
+    "ashgabat",
+    "central asia",
+    "merv",
+    "desert"
+  ],
+  "entries": [
+    "caspian-sea",
+    "gonur-depe",
+    "merv",
+    "nisa-parthia",
+    "ashgabat",
+    "saparmurat-niyazov",
+    "1948-ashgabat-earthquake",
+    "gurbanguly-berdimuhamedow",
+    "darvaza-gas-crater",
+    "serdar-berdimuhamedow",
+    "turkmenistan"
+  ],
+  "checkpoints": [
+    {
+      "id": "oasis-cities",
+      "name": "Oasis cities",
+      "from": -2400,
+      "to": 1880,
+      "note": "Gonur Depe, the Parthian kings at Nisa and the great city of Merv, sacked by the Mongols in 1221."
+    },
+    {
+      "id": "russian-and-soviet-rule",
+      "name": "Russian and Soviet rule",
+      "from": 1881,
+      "to": 1990,
+      "note": "Russia conquered the Turkmen in 1881, and the land became a Soviet republic."
+    },
+    {
+      "id": "independent-turkmenistan",
+      "name": "Independent Turkmenistan",
+      "from": 1991,
+      "to": 2026,
+      "note": "Independence came in 1991. Its presidents built a cult round themselves and the gas fields."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Turkmenistan.svg/330px-Flag_of_Turkmenistan.svg.png",
+    "alt": "Flag of Turkmenistan",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Turkmenistan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f0/National_anthem_of_Turkmenistan%2C_performed_by_the_United_States_Navy_Band.oga/National_anthem_of_Turkmenistan%2C_performed_by_the_United_States_Navy_Band.oga.mp3",
+    "title": "National anthem of Turkmenistan",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil:80/anthems/national_anthems.htm https://web.arch",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Turkmenistan,_performed_by_the_United_States_Navy_Band.oga"
+  }
+}

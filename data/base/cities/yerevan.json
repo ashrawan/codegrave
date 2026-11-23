@@ -1,0 +1,51 @@
+{
+  "id": "yerevan",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Yerevan",
+      "from": "-0782"
+    }
+  ],
+  "summary": "The capital, which grew from the Urartian fortress of Erebuni founded in 782 BCE.",
+  "wikidata": "Q1953",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0782",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "armenia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yerevan (Q1953)",
+      "url": "https://www.wikidata.org/wiki/Q1953",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yerevan",
+      "url": "https://en.wikipedia.org/wiki/Yerevan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Mount_Ararat_and_the_Yerevan_skyline_in_spring_%2828mm%29.jpg/500px-Mount_Ararat_and_the_Yerevan_skyline_in_spring_%2828mm%29.jpg",
+    "alt": "Yerevan",
+    "credit": "Սէրուժ Ուրիշեան (Serouj Ourishian)",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mount_Ararat_and_the_Yerevan_skyline_in_spring_(28mm).jpg"
+  }
+}

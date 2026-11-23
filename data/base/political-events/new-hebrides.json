@@ -1,0 +1,52 @@
+{
+  "id": "new-hebrides",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "New Hebrides",
+      "from": "1907"
+    }
+  ],
+  "summary": "The islands ruled jointly by Britain and France, 1906 to 1980.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q752431",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907-12-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1980-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vanuatu"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: New Hebrides (Q752431)",
+      "url": "https://www.wikidata.org/wiki/Q752431",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: New Hebrides",
+      "url": "https://en.wikipedia.org/wiki/New_Hebrides",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

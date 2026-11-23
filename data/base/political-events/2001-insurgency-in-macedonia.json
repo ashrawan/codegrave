@@ -1,0 +1,59 @@
+{
+  "id": "2001-insurgency-in-macedonia",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "2001 insurgency in the Republic of Macedonia",
+      "from": "2001"
+    }
+  ],
+  "summary": "The conflict of 2001, ended by the Ohrid Agreement.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q817137",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-01-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2001-08-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-macedonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 2001 insurgency in the Republic of Macedonia (Q817137)",
+      "url": "https://www.wikidata.org/wiki/Q817137",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 2001 insurgency in the Republic of Macedonia",
+      "url": "https://en.wikipedia.org/wiki/2001_insurgency_in_the_Republic_of_Macedonia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/2001_Macedonian_insurgency_map.svg/500px-2001_Macedonian_insurgency_map.svg.png",
+    "alt": "2001 insurgency in the Republic of Macedonia",
+    "credit": "Orlovic",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2001_Macedonian_insurgency_map.svg"
+  }
+}

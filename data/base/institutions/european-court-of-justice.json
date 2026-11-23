@@ -1,0 +1,44 @@
+{
+  "id": "european-court-of-justice",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "European Court of Justice",
+      "from": "1952"
+    }
+  ],
+  "summary": "The court of the European Union, seated in Luxembourg.",
+  "wikidata": "Q1518827",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "luxembourg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: European Court of Justice (Q1518827)",
+      "url": "https://www.wikidata.org/wiki/Q1518827",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: European Court of Justice",
+      "url": "https://en.wikipedia.org/wiki/European_Court_of_Justice",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

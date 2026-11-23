@@ -1,0 +1,59 @@
+{
+  "id": "ruben-dario",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Rubén Darío",
+      "from": "1867"
+    }
+  ],
+  "summary": "Poet who founded modernismo in Spanish-language literature.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q173767",
+  "events": [
+    {
+      "type": "born",
+      "date": "1867-01-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1916-02-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nicaragua"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rubén Darío (Q173767)",
+      "url": "https://www.wikidata.org/wiki/Q173767",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rubén Darío",
+      "url": "https://en.wikipedia.org/wiki/Rubén_Darío",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Portrait_of_Rub%C3%A9n_Dar%C3%ADo.jpg/500px-Portrait_of_Rub%C3%A9n_Dar%C3%ADo.jpg",
+    "alt": "Rubén Darío",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Portrait_of_Rub%C3%A9n_Dar%C3%ADo.jpg"
+  }
+}

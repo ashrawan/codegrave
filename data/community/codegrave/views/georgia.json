@@ -1,0 +1,75 @@
+{
+  "id": "georgia",
+  "name": "Georgia",
+  "description": "Georgia from Colchis and Iberia to Queen Tamar's golden age, Russian rule, Stalin, independence, the Rose Revolution and the war of 2008.",
+  "category": "places",
+  "tags": [
+    "georgia",
+    "tbilisi",
+    "caucasus",
+    "wine",
+    "christianity"
+  ],
+  "entries": [
+    "dmanisi",
+    "georgian-wine",
+    "colchis",
+    "saint-nino",
+    "tbilisi",
+    "georgia",
+    "svetitskhoveli-cathedral",
+    "david-iv-of-georgia",
+    "tamar-of-georgia",
+    "shota-rustaveli",
+    "treaty-of-georgievsk",
+    "joseph-stalin",
+    "eduard-shevardnadze",
+    "rose-revolution",
+    "russo-georgian-war",
+    "2024-georgian-protests"
+  ],
+  "checkpoints": [
+    {
+      "id": "colchis-and-iberia",
+      "name": "Colchis and Iberia",
+      "from": -1300,
+      "to": 336,
+      "note": "Colchis in the west and Iberia in the east were the first Georgian kingdoms."
+    },
+    {
+      "id": "christian-kingdoms",
+      "name": "Christian kingdoms",
+      "from": 337,
+      "to": 1782,
+      "note": "Saint Nino brought Christianity. David the Builder and Queen Tamar ruled a golden age, before Mongols, Persians and Ottomans."
+    },
+    {
+      "id": "russian-and-soviet-rule",
+      "name": "Russian and Soviet rule",
+      "from": 1783,
+      "to": 1990,
+      "note": "Russia took Georgia in the 1800s. A republic of 1918 fell to the Red Army in 1921, and Stalin, a Georgian, ruled the Soviet Union."
+    },
+    {
+      "id": "independent-georgia",
+      "name": "Independent Georgia",
+      "from": 1991,
+      "to": 2026,
+      "note": "Independence came in 1991, then civil war, the Rose Revolution, war with Russia in 2008 and a struggle over the road to Europe."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Georgia.svg/330px-Flag_of_Georgia.svg.png",
+    "alt": "Flag of Georgia",
+    "credit": "Last update by MapGrid SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Georgia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/e/e3/Tavisupleba_instrumental.ogg/Tavisupleba_instrumental.ogg.mp3",
+    "title": "Tavisupleba",
+    "credit": "http://www.president.gov.ge/others/hymnAudio.htm",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tavisupleba_instrumental.ogg"
+  }
+}

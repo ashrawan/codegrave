@@ -1,0 +1,52 @@
+{
+  "id": "fedons-rebellion",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Fédon's rebellion",
+      "from": "1795"
+    }
+  ],
+  "summary": "The rebellion of 1795 against British rule.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5511513",
+  "events": [
+    {
+      "type": "born",
+      "date": "1795-03-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1796-06-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "grenada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fédon's rebellion (Q5511513)",
+      "url": "https://www.wikidata.org/wiki/Q5511513",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fédon's rebellion",
+      "url": "https://en.wikipedia.org/wiki/Fédon's_rebellion",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-bosnia",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Bosnia",
+      "from": "1377"
+    }
+  ],
+  "summary": "The medieval kingdom crowned in 1377, which fell to the Ottomans in 1463.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2980623",
+  "events": [
+    {
+      "type": "born",
+      "date": "1377-10-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1463-05",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bosnia-and-herzegovina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Bosnia (Q2980623)",
+      "url": "https://www.wikidata.org/wiki/Q2980623",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Bosnia",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Bosnia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

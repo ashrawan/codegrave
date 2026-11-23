@@ -1,0 +1,44 @@
+{
+  "id": "guyana",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Guyana",
+      "from": "1966"
+    }
+  ],
+  "summary": "The only English-speaking country of South America, independent from Britain since 1966.",
+  "wikidata": "Q734",
+  "events": [
+    {
+      "type": "born",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Guyana (Q734)",
+      "url": "https://www.wikidata.org/wiki/Q734",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guyana",
+      "url": "https://en.wikipedia.org/wiki/Guyana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

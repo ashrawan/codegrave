@@ -1,0 +1,59 @@
+{
+  "id": "sylvanus-olympio",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Sylvanus Olympio",
+      "from": "1902"
+    }
+  ],
+  "summary": "The first president, killed in a coup in 1963.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q312667",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902-09-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1963-01-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "togo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sylvanus Olympio (Q312667)",
+      "url": "https://www.wikidata.org/wiki/Q312667",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sylvanus Olympio",
+      "url": "https://en.wikipedia.org/wiki/Sylvanus_Olympio",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Sylvanus_Olympio_on_March_20%2C_1962_%28cropped%29.jpg/500px-Sylvanus_Olympio_on_March_20%2C_1962_%28cropped%29.jpg",
+    "alt": "Sylvanus Olympio",
+    "credit": "Robert LeRoy Knudsen",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sylvanus_Olympio_on_March_20,_1962_(cropped).jpg"
+  }
+}

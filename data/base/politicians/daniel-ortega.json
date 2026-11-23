@@ -1,0 +1,54 @@
+{
+  "id": "daniel-ortega",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Daniel Ortega",
+      "from": "1945"
+    }
+  ],
+  "summary": "Sandinista leader, president in the 1980s and again since 2007.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57402",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nicaragua"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Daniel Ortega (Q57402)",
+      "url": "https://www.wikidata.org/wiki/Q57402",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Daniel Ortega",
+      "url": "https://en.wikipedia.org/wiki/Daniel_Ortega",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Daniel_Ortega_on_July_20%2C_2024.jpg/500px-Daniel_Ortega_on_July_20%2C_2024.jpg",
+    "alt": "Daniel Ortega",
+    "credit": "State Duma of the Russian Federation",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Daniel_Ortega_on_July_20,_2024.jpg"
+  }
+}

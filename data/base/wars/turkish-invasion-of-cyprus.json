@@ -1,0 +1,59 @@
+{
+  "id": "turkish-invasion-of-cyprus",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Turkish invasion of Cyprus",
+      "from": "1974"
+    }
+  ],
+  "summary": "The invasion of 1974 after which the island was divided.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1050999",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974-07-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1974-08-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Turkish invasion of Cyprus (Q1050999)",
+      "url": "https://www.wikidata.org/wiki/Q1050999",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Turkish invasion of Cyprus",
+      "url": "https://en.wikipedia.org/wiki/Turkish_invasion_of_Cyprus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Cyprus_1973_ethnic_en.svg/500px-Cyprus_1973_ethnic_en.svg.png",
+    "alt": "Turkish invasion of Cyprus",
+    "credit": "Badseed, modified by DankJae",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Cyprus_1973_ethnic_en.svg"
+  }
+}

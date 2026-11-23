@@ -1,0 +1,74 @@
+{
+  "id": "azerbaijan",
+  "name": "Azerbaijan",
+  "description": "Azerbaijan from Caucasian Albania and the Shirvanshahs to the Baku oil boom, the first Muslim republic, Soviet rule and independence.",
+  "category": "places",
+  "tags": [
+    "azerbaijan",
+    "baku",
+    "caucasus",
+    "oil",
+    "caspian"
+  ],
+  "entries": [
+    "caspian-sea",
+    "nizami-ganjavi",
+    "baku-oil-fields",
+    "azerbaijan",
+    "azerbaijan-democratic-republic",
+    "heydar-aliyev",
+    "ilham-aliyev",
+    "garry-kasparov",
+    "gobustan-national-park",
+    "first-nagorno-karabakh-war",
+    "black-january",
+    "baku-tbilisi-ceyhan-pipeline",
+    "flame-towers",
+    "2020-nagorno-karabakh-war",
+    "2023-azerbaijani-offensive-in-nagorno-karabakh"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-and-medieval",
+      "name": "Ancient and medieval",
+      "from": -1000,
+      "to": 1805,
+      "note": "Caucasian Albania, Persian rule and the Shirvanshahs. Nizami wrote his poems in Ganja."
+    },
+    {
+      "id": "oil-and-empire",
+      "name": "Oil and empire",
+      "from": 1806,
+      "to": 1919,
+      "note": "Russia took the north. Oil made Baku rich, and in 1918 the first republic of the Muslim world was declared."
+    },
+    {
+      "id": "soviet-azerbaijan",
+      "name": "Soviet Azerbaijan",
+      "from": 1920,
+      "to": 1990,
+      "note": "The Red Army took Baku in 1920. The Soviet years ended in bloodshed in Black January."
+    },
+    {
+      "id": "independent-azerbaijan",
+      "name": "Independent Azerbaijan",
+      "from": 1991,
+      "to": 2026,
+      "note": "Independence came in 1991, then war over Karabakh, oil wealth and rule by the Aliyev family."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Azerbaijan.svg/330px-Flag_of_Azerbaijan.svg.png",
+    "alt": "Flag of Azerbaijan",
+    "credit": "SKopp and others",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Azerbaijan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/31/Azerbaijan_national_anthem_%28vocal_version%29.ogg/Azerbaijan_national_anthem_%28vocal_version%29.ogg.mp3",
+    "title": "Azərbaycan marşı",
+    "credit": "Government of Azerbaijan",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Azerbaijan_national_anthem_(vocal_version).ogg"
+  }
+}

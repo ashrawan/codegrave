@@ -1,0 +1,51 @@
+{
+  "id": "vatican-museums",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Vatican Museums",
+      "from": "1506"
+    }
+  ],
+  "summary": "The museums founded by Pope Julius II.",
+  "wikidata": "Q182955",
+  "events": [
+    {
+      "type": "born",
+      "date": "1506",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vatican-city"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vatican Museums (Q182955)",
+      "url": "https://www.wikidata.org/wiki/Q182955",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vatican Museums",
+      "url": "https://en.wikipedia.org/wiki/Vatican_Museums",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Mura_vaticane_-_ingresso_ai_Musei_00410.JPG/500px-Mura_vaticane_-_ingresso_ai_Musei_00410.JPG",
+    "alt": "Vatican Museums",
+    "credit": "user:Lalupa",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mura_vaticane_-_ingresso_ai_Musei_00410.JPG"
+  }
+}

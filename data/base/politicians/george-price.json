@@ -1,0 +1,59 @@
+{
+  "id": "george-price",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "George Cadle Price",
+      "from": "1919"
+    }
+  ],
+  "summary": "Father of the nation, first prime minister after independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q542559",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-01-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2011-09-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belize"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: George Cadle Price (Q542559)",
+      "url": "https://www.wikidata.org/wiki/Q542559",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: George Cadle Price",
+      "url": "https://en.wikipedia.org/wiki/George_Cadle_Price",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/61/George_Cadle_Price.jpg",
+    "alt": "George Cadle Price",
+    "credit": "Unknown authorUnknown author",
+    "licence": "No restrictions",
+    "source": "https://commons.wikimedia.org/wiki/File:George_Cadle_Price.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "cyprus",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Cyprus",
+      "from": "1960"
+    }
+  ],
+  "summary": "An island in the eastern Mediterranean, independent from Britain since 1960 and divided since 1974.",
+  "wikidata": "Q229",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-08-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cyprus (Q229)",
+      "url": "https://www.wikidata.org/wiki/Q229",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cyprus",
+      "url": "https://en.wikipedia.org/wiki/Cyprus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/CGI_Cyprus_Flag.png/500px-CGI_Cyprus_Flag.png",
+    "alt": "Cyprus",
+    "credit": "Aerra Carnicom",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CGI_Cyprus_Flag.png"
+  }
+}

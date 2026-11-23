@@ -1,0 +1,61 @@
+{
+  "id": "brunei",
+  "name": "Brunei",
+  "description": "Brunei from a sultanate that once ruled much of Borneo to British protection, oil, independence in 1984 and one of the world's longest reigns.",
+  "category": "places",
+  "tags": [
+    "brunei",
+    "borneo",
+    "sultanate",
+    "oil",
+    "southeast asia"
+  ],
+  "entries": [
+    "bruneian-empire",
+    "omar-ali-saifuddien-iii",
+    "seria-oil-field",
+    "hassanal-bolkiah",
+    "omar-ali-saifuddien-mosque",
+    "brunei-revolt",
+    "royal-brunei-airlines",
+    "brunei",
+    "istana-nurul-iman"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-sultanate",
+      "name": "The sultanate",
+      "from": 1368,
+      "to": 1887,
+      "note": "Brunei became a Muslim sultanate and in the 1500s ruled much of Borneo, before losing land to Sarawak and North Borneo."
+    },
+    {
+      "id": "british-protection",
+      "name": "British protection",
+      "from": 1888,
+      "to": 1983,
+      "note": "Brunei became a British protectorate in 1888. Oil was struck at Seria in 1929, and a revolt in 1962 was put down."
+    },
+    {
+      "id": "independent-brunei",
+      "name": "Independent Brunei",
+      "from": 1984,
+      "to": 2026,
+      "note": "Brunei became independent in 1984 and lives from oil and gas under Sultan Hassanal Bolkiah."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Brunei.svg/330px-Flag_of_Brunei.svg.png",
+    "alt": "Flag of Brunei",
+    "credit": "Nightstallion",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Brunei.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b2/United_States_Navy_Band_-_Allah_Peliharakan_Sultan.oga/United_States_Navy_Band_-_Allah_Peliharakan_Sultan.oga.mp3",
+    "title": "Allah Peliharakan Sultan",
+    "credit": "Performed by the United States Navy Band (part of the US Federal Government).",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Allah_Peliharakan_Sultan.oga"
+  }
+}

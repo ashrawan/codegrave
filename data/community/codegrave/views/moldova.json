@@ -1,0 +1,62 @@
+{
+  "id": "moldova",
+  "name": "Moldova",
+  "description": "Moldova from the principality of Moldavia and Stephen the Great to Russian Bessarabia, Soviet rule, independence in 1991, Transnistria and the road to Europe.",
+  "category": "places",
+  "tags": [
+    "moldova",
+    "chisinau",
+    "bessarabia",
+    "europe",
+    "wine"
+  ],
+  "entries": [
+    "moldavia",
+    "stephen-the-great",
+    "chisinau",
+    "bessarabia-governorate",
+    "milestii-mici",
+    "maia-sandu",
+    "transnistria-war",
+    "moldova",
+    "moldovan-declaration-of-independence",
+    "o-zone"
+  ],
+  "checkpoints": [
+    {
+      "id": "moldavia",
+      "name": "Moldavia",
+      "from": 1359,
+      "to": 1811,
+      "note": "The principality of Moldavia was founded in the 1300s. Stephen the Great held off the Ottomans, but the land later paid them tribute."
+    },
+    {
+      "id": "bessarabia",
+      "name": "Bessarabia",
+      "from": 1812,
+      "to": 1990,
+      "note": "Russia took the land in 1812. It joined Romania in 1918 and was taken by the Soviet Union in 1940."
+    },
+    {
+      "id": "independent-moldova",
+      "name": "Independent Moldova",
+      "from": 1991,
+      "to": 2026,
+      "note": "Moldova became independent in 1991, lost Transnistria in 1992 and began talks to join the EU in 2024."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/330px-Flag_of_Moldova.svg.png",
+    "alt": "Flag of Moldova",
+    "credit": "Gheorghe Vrabie",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Moldova.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3c/National_Anthem_of_Moldova_%28Vocal%29.ogg/National_Anthem_of_Moldova_%28Vocal%29.ogg.mp3",
+    "title": "Limba noastră",
+    "credit": "Composer: Alexandru Cristea Lyrics: Alexei Mateevici",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Moldova_(Vocal).ogg"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "choirokoitia",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Choirokoitia",
+      "from": "-7000"
+    }
+  ],
+  "summary": "A Stone Age village of round houses, one of the oldest in the Mediterranean.",
+  "wikidata": "Q385086",
+  "events": [
+    {
+      "type": "born",
+      "date": "-7000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-4000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Choirokoitia (Q385086)",
+      "url": "https://www.wikidata.org/wiki/Q385086",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Choirokoitia",
+      "url": "https://en.wikipedia.org/wiki/Choirokoitia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Khirokitia2.jpg/500px-Khirokitia2.jpg",
+    "alt": "Choirokoitia",
+    "credit": "Ophelia2",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Khirokitia2.jpg"
+  }
+}

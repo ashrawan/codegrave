@@ -1,0 +1,59 @@
+{
+  "id": "siad-barre",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Siad Barre",
+      "from": "1919"
+    }
+  ],
+  "summary": "Soldier who ruled from 1969 to 1991.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q209828",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-10-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1995-01-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "somalia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siad Barre (Q209828)",
+      "url": "https://www.wikidata.org/wiki/Q209828",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siad Barre",
+      "url": "https://en.wikipedia.org/wiki/Siad_Barre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Siad_Barre.png/500px-Siad_Barre.png",
+    "alt": "Siad Barre",
+    "credit": "Government of Somalia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Siad_Barre.png"
+  }
+}

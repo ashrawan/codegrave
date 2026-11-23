@@ -1,0 +1,51 @@
+{
+  "id": "albania",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Albania",
+      "from": "1912"
+    }
+  ],
+  "summary": "A Balkan country on the Adriatic, independent from the Ottoman Empire since 1912, whose capital is Tirana.",
+  "wikidata": "Q222",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912-11-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Albania (Q222)",
+      "url": "https://www.wikidata.org/wiki/Q222",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Albania",
+      "url": "https://en.wikipedia.org/wiki/Albania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Albania_map-en.svg/500px-Albania_map-en.svg.png",
+    "alt": "Albania",
+    "credit": "PZmaps",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Albania_map-en.svg"
+  }
+}

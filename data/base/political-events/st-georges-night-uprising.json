@@ -1,0 +1,59 @@
+{
+  "id": "st-georges-night-uprising",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "St. George's Night Uprising",
+      "from": "1343"
+    }
+  ],
+  "summary": "The Estonian rising of 1343 against the Danes and Germans.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q627656",
+  "events": [
+    {
+      "type": "born",
+      "date": "1343-04-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1345",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: St. George's Night Uprising (Q627656)",
+      "url": "https://www.wikidata.org/wiki/Q627656",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: St. George's Night Uprising",
+      "url": "https://en.wikipedia.org/wiki/St._George's_Night_Uprising",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Medieval_Livonia_1260.svg/500px-Medieval_Livonia_1260.svg.png",
+    "alt": "St. George's Night Uprising",
+    "credit": "No machine-readable author provided. Termer assumed (based on copyright claims).",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Medieval_Livonia_1260.svg"
+  }
+}

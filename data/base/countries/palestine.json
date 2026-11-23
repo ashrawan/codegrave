@@ -1,0 +1,51 @@
+{
+  "id": "palestine",
+  "category": "countries",
+  "names": [
+    {
+      "name": "State of Palestine",
+      "from": "1988"
+    }
+  ],
+  "summary": "A state declared in 1988 for the West Bank, East Jerusalem and Gaza, a UN observer state recognised by most countries.",
+  "wikidata": "Q219060",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: State of Palestine (Q219060)",
+      "url": "https://www.wikidata.org/wiki/Q219060",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: State of Palestine",
+      "url": "https://en.wikipedia.org/wiki/State_of_Palestine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Palestine_-_20190204-DSC_0007.jpg/500px-Palestine_-_20190204-DSC_0007.jpg",
+    "alt": "State of Palestine",
+    "credit": "Ilya Varlamov",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palestine_-_20190204-DSC_0007.jpg"
+  }
+}

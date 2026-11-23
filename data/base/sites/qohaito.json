@@ -1,0 +1,56 @@
+{
+  "id": "qohaito",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Qohaito",
+      "from": "-0500"
+    }
+  ],
+  "summary": "A highland town of the Aksumite age.",
+  "wikidata": "Q4236500",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "eritrea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Qohaito (Q4236500)",
+      "url": "https://www.wikidata.org/wiki/Q4236500",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Qohaito",
+      "url": "https://en.wikipedia.org/wiki/Qohaito",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Kohaito%2C_zona_dei_palazzi_axumiti_09.JPG/500px-Kohaito%2C_zona_dei_palazzi_axumiti_09.JPG",
+    "alt": "Qohaito",
+    "credit": "Sailko",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kohaito,_zona_dei_palazzi_axumiti_09.JPG"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "juba",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Juba",
+      "from": "1922"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q1947",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Juba (Q1947)",
+      "url": "https://www.wikidata.org/wiki/Q1947",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Juba",
+      "url": "https://en.wikipedia.org/wiki/Juba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Juba_City.jpg/500px-Juba_City.jpg",
+    "alt": "Juba",
+    "credit": "Rigan123",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Juba_City.jpg"
+  }
+}

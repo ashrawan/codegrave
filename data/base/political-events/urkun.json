@@ -1,0 +1,52 @@
+{
+  "id": "urkun",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Urkun",
+      "from": "1917"
+    }
+  ],
+  "summary": "The revolt of 1916 against Russian rule and the flight of the Kyrgyz to China.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4438492",
+  "events": [
+    {
+      "type": "born",
+      "date": "1917-02",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1917-02",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kyrgyzstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Urkun (Q4438492)",
+      "url": "https://www.wikidata.org/wiki/Q4438492",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Urkun",
+      "url": "https://en.wikipedia.org/wiki/Urkun",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

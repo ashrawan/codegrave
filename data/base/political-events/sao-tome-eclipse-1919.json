@@ -1,0 +1,59 @@
+{
+  "id": "sao-tome-eclipse-1919",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Eddington's eclipse on Príncipe",
+      "from": "1919"
+    }
+  ],
+  "summary": "Eddington watched the eclipse of 1919 from Príncipe and showed that Einstein was right about light bending.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q65041294",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-05-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1919-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sao-tome-and-principe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eddington's eclipse on Príncipe (Q65041294)",
+      "url": "https://www.wikidata.org/wiki/Q65041294",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eddington experiment",
+      "url": "https://en.wikipedia.org/wiki/Eddington_experiment",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Eclipse_instruments_at_Sobral.jpg/500px-Eclipse_instruments_at_Sobral.jpg",
+    "alt": "Eddington's eclipse on Príncipe",
+    "credit": "C. Davidson",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eclipse_instruments_at_Sobral.jpg"
+  }
+}

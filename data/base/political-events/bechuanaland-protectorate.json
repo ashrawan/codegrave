@@ -1,0 +1,52 @@
+{
+  "id": "bechuanaland-protectorate",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Bechuanaland Protectorate",
+      "from": "1885"
+    }
+  ],
+  "summary": "The British protectorate of 1885 to 1966.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q747314",
+  "events": [
+    {
+      "type": "born",
+      "date": "1885",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "botswana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bechuanaland Protectorate (Q747314)",
+      "url": "https://www.wikidata.org/wiki/Q747314",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bechuanaland Protectorate",
+      "url": "https://en.wikipedia.org/wiki/Bechuanaland_Protectorate",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

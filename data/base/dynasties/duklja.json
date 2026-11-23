@@ -1,0 +1,59 @@
+{
+  "id": "duklja",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Duklja",
+      "from": "0854"
+    }
+  ],
+  "summary": "The medieval Slavic state on the coast.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1252942",
+  "events": [
+    {
+      "type": "born",
+      "date": "0854",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1252",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "montenegro"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Duklja (Q1252942)",
+      "url": "https://www.wikidata.org/wiki/Q1252942",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Duklja",
+      "url": "https://en.wikipedia.org/wiki/Duklja",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Srbsko_IX_es.svg/500px-Srbsko_IX_es.svg.png",
+    "alt": "Duklja",
+    "credit": "Srbsko IX ru.svg: Jaspe derivative work: Rowanwindwhistler (talk)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Srbsko_IX_es.svg"
+  }
+}

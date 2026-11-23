@@ -1,0 +1,63 @@
+{
+  "id": "benin",
+  "name": "Benin",
+  "description": "Benin from the kingdom of Dahomey and the slave coast to French rule, independence in 1960, Marxism and a democracy since 1991.",
+  "category": "places",
+  "tags": [
+    "benin",
+    "dahomey",
+    "porto-novo",
+    "cotonou",
+    "vodun",
+    "west africa"
+  ],
+  "entries": [
+    "kingdom-of-dahomey",
+    "royal-palaces-of-abomey",
+    "dahomey-amazons",
+    "ghezo",
+    "behanzin",
+    "mathieu-kerekou",
+    "nicephore-soglo",
+    "patrice-talon",
+    "angelique-kidjo",
+    "benin"
+  ],
+  "checkpoints": [
+    {
+      "id": "dahomey",
+      "name": "Dahomey",
+      "from": 1600,
+      "to": 1893,
+      "note": "The kingdom of Dahomey rose at Abomey and grew rich in the slave trade, with a famous female regiment."
+    },
+    {
+      "id": "french-dahomey",
+      "name": "French Dahomey",
+      "from": 1894,
+      "to": 1959,
+      "note": "France conquered Dahomey in 1894 and ruled it as part of French West Africa."
+    },
+    {
+      "id": "independent-benin",
+      "name": "Independent Benin",
+      "from": 1960,
+      "to": 2026,
+      "note": "Independence came in 1960. Kérékou's Marxist state ended with the national conference of 1990, and Benin became a democracy."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_Benin.svg/330px-Flag_of_Benin.svg.png",
+    "alt": "Flag of Benin",
+    "credit": "Drawn by User:SKopp, rewritten by User:Gabbe",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Benin.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/74/L%27Aube_Nouvelle.ogg/L%27Aube_Nouvelle.ogg.mp3",
+    "title": "L'Aube Nouvelle",
+    "credit": "https://web.archive.org/web/200001010101/www.navyband.navy.mil/Anthems/ANTHEMS/Benin.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:L%27Aube_Nouvelle.ogg"
+  }
+}

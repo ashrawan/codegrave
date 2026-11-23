@@ -1,0 +1,59 @@
+{
+  "id": "augusto-cesar-sandino",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Augusto César Sandino",
+      "from": "1895"
+    }
+  ],
+  "summary": "Rebel who fought the American marines from 1927 to 1933.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q213746",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895-05-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1934-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nicaragua"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Augusto César Sandino (Q213746)",
+      "url": "https://www.wikidata.org/wiki/Q213746",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Augusto César Sandino",
+      "url": "https://en.wikipedia.org/wiki/Augusto_César_Sandino",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Augusto_C%C3%A9sar_Sandino.jpg/500px-Augusto_C%C3%A9sar_Sandino.jpg",
+    "alt": "Augusto César Sandino",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Augusto_C%C3%A9sar_Sandino.jpg"
+  }
+}

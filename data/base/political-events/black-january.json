@@ -1,0 +1,52 @@
+{
+  "id": "black-january",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Black January",
+      "from": "1990"
+    }
+  ],
+  "summary": "The night in January 1990 when Soviet troops entered Baku and killed scores of people.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q734004",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-01-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-01-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "azerbaijan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Black January (Q734004)",
+      "url": "https://www.wikidata.org/wiki/Q734004",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Black January",
+      "url": "https://en.wikipedia.org/wiki/Black_January",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

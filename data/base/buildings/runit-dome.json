@@ -1,0 +1,54 @@
+{
+  "id": "runit-dome",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Runit Dome",
+      "from": "1980"
+    }
+  ],
+  "summary": "The concrete dome over radioactive waste on Enewetak.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q138482166",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "marshall-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Runit Dome (Q138482166)",
+      "url": "https://www.wikidata.org/wiki/Q138482166",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Runit Dome",
+      "url": "https://en.wikipedia.org/wiki/Runit_Dome",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Runit_Dome_001.jpg/500px-Runit_Dome_001.jpg",
+    "alt": "Runit Dome",
+    "credit": "US Defense Special Weapons Agency",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Runit_Dome_001.jpg"
+  }
+}

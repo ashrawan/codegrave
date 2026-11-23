@@ -1,0 +1,59 @@
+{
+  "id": "modibo-keita",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Modibo Keïta",
+      "from": "1915"
+    }
+  ],
+  "summary": "The first president, from 1960 to 1968.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q313240",
+  "events": [
+    {
+      "type": "born",
+      "date": "1915-06-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1977-05-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Modibo Keïta (Q313240)",
+      "url": "https://www.wikidata.org/wiki/Q313240",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Modibo Keïta",
+      "url": "https://en.wikipedia.org/wiki/Modibo_Keïta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/JFKWHP-KN-C18793-A_%28cropped2%29.jpg/500px-JFKWHP-KN-C18793-A_%28cropped2%29.jpg",
+    "alt": "Modibo Keïta",
+    "credit": "Robert LeRoy Knudsen",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JFKWHP-KN-C18793-A_(cropped2).jpg"
+  }
+}

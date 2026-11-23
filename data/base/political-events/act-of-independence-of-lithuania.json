@@ -1,0 +1,59 @@
+{
+  "id": "act-of-independence-of-lithuania",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Act of Independence of Lithuania",
+      "from": "1918"
+    }
+  ],
+  "summary": "The act of 16 February 1918.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q166981",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-02-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1918-02-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lithuania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Act of Independence of Lithuania (Q166981)",
+      "url": "https://www.wikidata.org/wiki/Q166981",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Act of Independence of Lithuania",
+      "url": "https://en.wikipedia.org/wiki/Act_of_Independence_of_Lithuania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Manuscript_of_the_Resolution_of_the_Council_of_Lithuania_on_Reinstating_Independence_of_Lithuania_in_the_Lithuanian_language%2C_which_was_adopted_on_16_February_1918_in_Vilnius.jpg/500px-thumbnail.jpg",
+    "alt": "Act of Independence of Lithuania",
+    "credit": "Tomas Stasiulevičius",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Manuscript_of_the_Resolution_of_the_Council_of_Lithuania_on_Reinstating_Independence_of_Lithuania_in_the_Lithuanian_language,_which_was_adopted_on_16_February_1918_in_Vilnius.jpg"
+  }
+}

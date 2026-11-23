@@ -1,0 +1,51 @@
+{
+  "id": "mauritania",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Mauritania",
+      "from": "1960"
+    }
+  ],
+  "summary": "A desert country of north-west Africa on the Atlantic, independent from France since 1960.",
+  "wikidata": "Q1025",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-11-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mauritania (Q1025)",
+      "url": "https://www.wikidata.org/wiki/Q1025",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mauritania",
+      "url": "https://en.wikipedia.org/wiki/Mauritania",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_map_of_Mauritania.svg/500px-Flag_map_of_Mauritania.svg.png",
+    "alt": "Mauritania",
+    "credit": "Darwinek",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_map_of_Mauritania.svg"
+  }
+}

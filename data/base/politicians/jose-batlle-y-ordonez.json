@@ -1,0 +1,59 @@
+{
+  "id": "jose-batlle-y-ordonez",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "José Batlle y Ordóñez",
+      "from": "1856"
+    }
+  ],
+  "summary": "President who built the welfare state in the early 1900s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q15145",
+  "events": [
+    {
+      "type": "born",
+      "date": "1856-05-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1929-10-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uruguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: José Batlle y Ordóñez (Q15145)",
+      "url": "https://www.wikidata.org/wiki/Q15145",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: José Batlle y Ordóñez",
+      "url": "https://en.wikipedia.org/wiki/José_Batlle_y_Ordóñez",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/41/JoseBatlle1900.jpg",
+    "alt": "José Batlle y Ordóñez",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:JoseBatlle1900.jpg"
+  }
+}

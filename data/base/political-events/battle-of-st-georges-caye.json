@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-st-georges-caye",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Battle of St. George's Caye",
+      "from": "1798"
+    }
+  ],
+  "summary": "The battle of 1798 in which the settlers beat off a Spanish fleet.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2890055",
+  "events": [
+    {
+      "type": "born",
+      "date": "1798-09-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1798-09-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belize"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of St. George's Caye (Q2890055)",
+      "url": "https://www.wikidata.org/wiki/Q2890055",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of St. George's Caye",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_St._George's_Caye",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Plano_Geografico_de_la_mayor_parte_de_el_Reyno_de_Goatemala_%28cropped%29.jpg/500px-Plano_Geografico_de_la_mayor_parte_de_el_Reyno_de_Goatemala_%28cropped%29.jpg",
+    "alt": "Battle of St. George's Caye",
+    "credit": "Luis Díez Navarro",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Plano_Geografico_de_la_mayor_parte_de_el_Reyno_de_Goatemala_(cropped).jpg"
+  }
+}

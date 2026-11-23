@@ -1,0 +1,59 @@
+{
+  "id": "james-mancham",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "James Mancham",
+      "from": "1939"
+    }
+  ],
+  "summary": "The first president, overthrown in 1977.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q362948",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-08-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "seychelles"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: James Mancham (Q362948)",
+      "url": "https://www.wikidata.org/wiki/Q362948",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: James Mancham",
+      "url": "https://en.wikipedia.org/wiki/James_Mancham",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ec/James_Mancham_2014.jpg",
+    "alt": "James Mancham",
+    "credit": "Seychelles News Agency",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:James_Mancham_2014.jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "timbuktu-manuscripts",
+  "category": "books",
+  "names": [
+    {
+      "name": "Timbuktu Manuscripts",
+      "from": "1300"
+    }
+  ],
+  "summary": "Hundreds of thousands of old manuscripts kept by the families of Timbuktu.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q2209578",
+  "events": [
+    {
+      "type": "born",
+      "date": "1300",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Timbuktu Manuscripts (Q2209578)",
+      "url": "https://www.wikidata.org/wiki/Q2209578",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Timbuktu Manuscripts",
+      "url": "https://en.wikipedia.org/wiki/Timbuktu_Manuscripts",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/41/Loc_timbuktu_manuscripts_amm0001rs.jpg",
+    "alt": "Timbuktu Manuscripts",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Loc_timbuktu_manuscripts_amm0001rs.jpg"
+  }
+}

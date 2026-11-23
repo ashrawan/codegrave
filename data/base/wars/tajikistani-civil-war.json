@@ -1,0 +1,52 @@
+{
+  "id": "tajikistani-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Tajikistani Civil War",
+      "from": "1992"
+    }
+  ],
+  "summary": "The civil war of 1992 to 1997.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1122110",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-05-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-06-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tajikistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tajikistani Civil War (Q1122110)",
+      "url": "https://www.wikidata.org/wiki/Q1122110",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tajikistani Civil War",
+      "url": "https://en.wikipedia.org/wiki/Tajikistani_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

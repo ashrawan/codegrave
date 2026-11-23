@@ -1,0 +1,51 @@
+{
+  "id": "cyrene",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Cyrene, Libya",
+      "from": "-0631"
+    }
+  ],
+  "summary": "The Greek city founded around 631 BCE, rich from the plant silphium.",
+  "wikidata": "Q44112",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0631",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cyrene, Libya (Q44112)",
+      "url": "https://www.wikidata.org/wiki/Q44112",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cyrene, Libya",
+      "url": "https://en.wikipedia.org/wiki/Cyrene,_Libya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Archaeological_Site_of_Cyrene-109025.jpg/500px-Archaeological_Site_of_Cyrene-109025.jpg",
+    "alt": "Cyrene, Libya",
+    "credit": "Giovanni Boccardi",
+    "licence": "CC BY-SA 3.0 igo",
+    "source": "https://commons.wikimedia.org/wiki/File:Archaeological_Site_of_Cyrene-109025.jpg"
+  }
+}

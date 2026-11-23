@@ -1,0 +1,54 @@
+{
+  "id": "charles-taylor-liberia",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Charles Taylor",
+      "from": "1948"
+    }
+  ],
+  "summary": "Warlord and president, later convicted of war crimes in Sierra Leone.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q49090",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-01-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liberia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles Taylor (Q49090)",
+      "url": "https://www.wikidata.org/wiki/Q49090",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles Taylor (Liberian politician)",
+      "url": "https://en.wikipedia.org/wiki/Charles_Taylor_(Liberian_politician)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/77/Charles_Taylor_1984_mugshot_%28cropped%29.jpg",
+    "alt": "Charles Taylor",
+    "credit": "Plymouth County Sheriff's Office",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Charles_Taylor_1984_mugshot_(cropped).jpg"
+  }
+}

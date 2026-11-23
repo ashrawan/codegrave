@@ -1,0 +1,59 @@
+{
+  "id": "quett-masire",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Quett Masire",
+      "from": "1925"
+    }
+  ],
+  "summary": "The second president, from 1980 to 1998.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q310574",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-07-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-06-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "botswana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Quett Masire (Q310574)",
+      "url": "https://www.wikidata.org/wiki/Q310574",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Quett Masire",
+      "url": "https://en.wikipedia.org/wiki/Quett_Masire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Masire_1980_%28cropped%29.jpg/500px-Masire_1980_%28cropped%29.jpg",
+    "alt": "Quett Masire",
+    "credit": "European Communities / Jean-Louis Debaize",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Masire_1980_(cropped).jpg"
+  }
+}

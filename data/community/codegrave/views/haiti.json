@@ -1,0 +1,75 @@
+{
+  "id": "haiti",
+  "name": "Haiti",
+  "description": "Haiti from the Taíno and Saint-Domingue to the only successful slave revolution, independence in 1804, the Duvaliers and the earthquake of 2010.",
+  "category": "places",
+  "tags": [
+    "haiti",
+    "port-au-prince",
+    "caribbean",
+    "revolution",
+    "vodou"
+  ],
+  "entries": [
+    "saint-domingue",
+    "haitian-vodou",
+    "toussaint-louverture",
+    "port-au-prince",
+    "jean-jacques-dessalines",
+    "henri-christophe",
+    "haitian-revolution",
+    "haiti",
+    "citadelle-laferriere",
+    "haitian-occupation",
+    "francois-duvalier",
+    "jean-claude-duvalier",
+    "jean-bertrand-aristide",
+    "haiti-earthquake-2010",
+    "haitian-crisis-2018",
+    "2021-assassination-of-jovenel-moise"
+  ],
+  "checkpoints": [
+    {
+      "id": "saint-domingue",
+      "name": "Saint-Domingue",
+      "from": 1492,
+      "to": 1790,
+      "note": "Columbus landed in 1492, and the Taíno died out. France's Saint-Domingue grew rich on sugar worked by enslaved Africans."
+    },
+    {
+      "id": "revolution-and-independence",
+      "name": "Revolution and independence",
+      "from": 1791,
+      "to": 1914,
+      "note": "The enslaved rose in 1791 and won. Haiti became independent in 1804, the first black republic."
+    },
+    {
+      "id": "occupation-and-dictators",
+      "name": "Occupation and dictators",
+      "from": 1915,
+      "to": 1989,
+      "note": "The United States occupied Haiti from 1915 to 1934. The Duvaliers ruled from 1957 to 1986."
+    },
+    {
+      "id": "democracy-and-crisis",
+      "name": "Democracy and crisis",
+      "from": 1990,
+      "to": 2026,
+      "note": "Aristide was elected in 1990. Coups, the earthquake of 2010, the killing of a president and gang rule followed."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Flag_of_Haiti.svg/330px-Flag_of_Haiti.svg.png",
+    "alt": "Flag of Haiti",
+    "credit": "(colours and size changes of the now deleted versions) Madden, Vzb83, Denelson83, Chanheigeorge, Zscout370 and Nightstal",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Haiti.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4f/Haiti_National_Anthem.ogg/Haiti_National_Anthem.ogg.mp3",
+    "title": "La Dessalinienne",
+    "credit": "https://web.archive.org/web/20041019072435im_/http://www.navyband.navy.mil/anthems/ANTHEMS/Haiti.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Haiti_National_Anthem.ogg"
+  }
+}

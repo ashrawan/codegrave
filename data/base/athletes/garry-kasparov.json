@@ -1,0 +1,54 @@
+{
+  "id": "garry-kasparov",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Garry Kasparov",
+      "from": "1963"
+    }
+  ],
+  "summary": "Chess player born in Baku, world champion from 1985 to 2000.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q28614",
+  "events": [
+    {
+      "type": "born",
+      "date": "1963-04-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "azerbaijan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Garry Kasparov (Q28614)",
+      "url": "https://www.wikidata.org/wiki/Q28614",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Garry Kasparov",
+      "url": "https://en.wikipedia.org/wiki/Garry_Kasparov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Garry_Kasparov_European_Union_2023_%28cropped%29.jpg/500px-Garry_Kasparov_European_Union_2023_%28cropped%29.jpg",
+    "alt": "Garry Kasparov",
+    "credit": "Lukasz Kobus",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Garry_Kasparov_European_Union_2023_(cropped).jpg"
+  }
+}

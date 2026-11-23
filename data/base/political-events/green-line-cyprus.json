@@ -1,0 +1,54 @@
+{
+  "id": "green-line-cyprus",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "United Nations Buffer Zone in Cyprus",
+      "from": "1974"
+    }
+  ],
+  "summary": "The line held by UN peacekeepers across the island and through Nicosia.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q116970",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United Nations Buffer Zone in Cyprus (Q116970)",
+      "url": "https://www.wikidata.org/wiki/Q116970",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United Nations Buffer Zone in Cyprus",
+      "url": "https://en.wikipedia.org/wiki/United_Nations_Buffer_Zone_in_Cyprus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/FamagustaDistrict_01-2017_img04_Paralimni_view_of_Varosha.jpg/500px-FamagustaDistrict_01-2017_img04_Paralimni_view_of_Varosha.jpg",
+    "alt": "United Nations Buffer Zone in Cyprus",
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:FamagustaDistrict_01-2017_img04_Paralimni_view_of_Varosha.jpg"
+  }
+}

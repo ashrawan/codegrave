@@ -1,0 +1,59 @@
+{
+  "id": "latvian-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Latvian War of Independence",
+      "from": "1918"
+    }
+  ],
+  "summary": "The war of 1918 to 1920.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q543042",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-12-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1920-08-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "latvia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Latvian War of Independence (Q543042)",
+      "url": "https://www.wikidata.org/wiki/Q543042",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Latvian War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Latvian_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Loty%C5%A1sko-mapa.png/500px-Loty%C5%A1sko-mapa.png",
+    "alt": "Latvian War of Independence",
+    "credit": "CIA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Loty%C5%A1sko-mapa.png"
+  }
+}

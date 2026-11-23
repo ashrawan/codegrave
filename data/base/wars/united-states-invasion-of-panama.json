@@ -1,0 +1,59 @@
+{
+  "id": "united-states-invasion-of-panama",
+  "category": "wars",
+  "names": [
+    {
+      "name": "United States invasion of Panama",
+      "from": "1989"
+    }
+  ],
+  "summary": "The invasion of December 1989.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q459282",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-12-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-01-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "panama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: United States invasion of Panama (Q459282)",
+      "url": "https://www.wikidata.org/wiki/Q459282",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: United States invasion of Panama",
+      "url": "https://en.wikipedia.org/wiki/United_States_invasion_of_Panama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Panama_clashes_1989.JPEG/500px-Panama_clashes_1989.JPEG",
+    "alt": "United States invasion of Panama",
+    "credit": "SPEC. MORLAND",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Panama_clashes_1989.JPEG"
+  }
+}

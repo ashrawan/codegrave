@@ -1,0 +1,52 @@
+{
+  "id": "italian-libya",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Italian Libya",
+      "from": "1934"
+    }
+  ],
+  "summary": "Italy's colony, 1911 to 1947.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q284568",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1943",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Italian Libya (Q284568)",
+      "url": "https://www.wikidata.org/wiki/Q284568",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Italian Libya",
+      "url": "https://en.wikipedia.org/wiki/Italian_Libya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

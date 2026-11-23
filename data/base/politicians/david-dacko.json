@@ -1,0 +1,59 @@
+{
+  "id": "david-dacko",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "David Dacko",
+      "from": "1930"
+    }
+  ],
+  "summary": "The first president, from 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q310860",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-03-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003-11-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "central-african-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: David Dacko (Q310860)",
+      "url": "https://www.wikidata.org/wiki/Q310860",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: David Dacko",
+      "url": "https://en.wikipedia.org/wiki/David_Dacko",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/ca/David_Dacko_1962_crop.jpg",
+    "alt": "David Dacko",
+    "credit": "David Eldan",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:David_Dacko_1962_crop.jpg"
+  }
+}

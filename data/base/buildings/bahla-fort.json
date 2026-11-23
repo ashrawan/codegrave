@@ -1,0 +1,54 @@
+{
+  "id": "bahla-fort",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Bahla Fort",
+      "from": "1250"
+    }
+  ],
+  "summary": "A great mud-brick fort of the 1200s.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1408909",
+  "events": [
+    {
+      "type": "born",
+      "date": "1250",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "oman"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bahla Fort (Q1408909)",
+      "url": "https://www.wikidata.org/wiki/Q1408909",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bahla Fort",
+      "url": "https://en.wikipedia.org/wiki/Bahla_Fort",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Bahla_Fort.jpg/500px-Bahla_Fort.jpg",
+    "alt": "Bahla Fort",
+    "credit": "Francisco Anzola",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bahla_Fort.jpg"
+  }
+}

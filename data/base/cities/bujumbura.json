@@ -1,0 +1,51 @@
+{
+  "id": "bujumbura",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bujumbura",
+      "from": "1889"
+    }
+  ],
+  "summary": "The largest city, on Lake Tanganyika, founded as a German post.",
+  "wikidata": "Q3854",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burundi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bujumbura (Q3854)",
+      "url": "https://www.wikidata.org/wiki/Q3854",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bujumbura",
+      "url": "https://en.wikipedia.org/wiki/Bujumbura",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/BUJUMBURA_MAIRIE_3.jpg/500px-BUJUMBURA_MAIRIE_3.jpg",
+    "alt": "Bujumbura",
+    "credit": "Edouard mhg",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BUJUMBURA_MAIRIE_3.jpg"
+  }
+}

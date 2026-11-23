@@ -1,0 +1,74 @@
+{
+  "id": "panama",
+  "name": "Panama",
+  "description": "Panama from the first peoples and Balboa to the gold road, Colombia, independence in 1903, the canal and its handover in 1999.",
+  "category": "places",
+  "tags": [
+    "panama",
+    "canal",
+    "central america",
+    "isthmus"
+  ],
+  "entries": [
+    "vasco-nunez-de-balboa",
+    "panama-viejo",
+    "panama-city",
+    "thousand-days-war",
+    "panama",
+    "separation-of-panama-from-colombia",
+    "panama-canal",
+    "omar-torrijos",
+    "manuel-noriega",
+    "ruben-blades",
+    "jose-raul-mulino",
+    "mariano-rivera",
+    "torrijos-carter-treaties",
+    "united-states-invasion-of-panama",
+    "panama-canal-expansion",
+    "panama-papers"
+  ],
+  "checkpoints": [
+    {
+      "id": "spanish-isthmus",
+      "name": "Spanish isthmus",
+      "from": 1501,
+      "to": 1820,
+      "note": "Balboa crossed to the Pacific in 1513. Gold and silver from Peru crossed Panama, and Morgan sacked the city in 1671."
+    },
+    {
+      "id": "part-of-colombia",
+      "name": "Part of Colombia",
+      "from": 1821,
+      "to": 1902,
+      "note": "Panama joined Colombia in 1821. A French canal failed in the 1880s."
+    },
+    {
+      "id": "the-canal",
+      "name": "The canal",
+      "from": 1903,
+      "to": 1999,
+      "note": "Panama broke away in 1903, and the United States built the canal, opened in 1914. Noriega was removed in 1989."
+    },
+    {
+      "id": "panama-s-canal",
+      "name": "Panama's canal",
+      "from": 2000,
+      "to": 2026,
+      "note": "Panama took over the canal at the end of 1999 and widened it in 2016."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/330px-Flag_of_Panama.svg.png",
+    "alt": "Flag of Panama",
+    "credit": "Zscout370 et al.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Panama.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4a/Panama_National_Anthem.ogg/Panama_National_Anthem.ogg.mp3",
+    "title": "National anthem of Panama",
+    "credit": "http://www.navyband.navy.mil/anthems/ANTHEMS/Panama.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Panama_National_Anthem.ogg"
+  }
+}

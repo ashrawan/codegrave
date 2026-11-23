@@ -1,0 +1,47 @@
+{
+  "id": "seria-oil-field",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Seria oil field",
+      "from": "1929"
+    }
+  ],
+  "summary": "The oil field struck in 1929 that made Brunei rich.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q17055766",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brunei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seria oil field (Q17055766)",
+      "url": "https://www.wikidata.org/wiki/Q17055766",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seria oil field",
+      "url": "https://en.wikipedia.org/wiki/Seria_oil_field",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "praia",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Praia",
+      "from": "1615"
+    }
+  ],
+  "summary": "The capital, on the island of Santiago.",
+  "wikidata": "Q3751",
+  "events": [
+    {
+      "type": "born",
+      "date": "1615",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cape-verde"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Praia (Q3751)",
+      "url": "https://www.wikidata.org/wiki/Q3751",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Praia",
+      "url": "https://en.wikipedia.org/wiki/Praia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Praia_Harbor.jpg/500px-Praia_Harbor.jpg",
+    "alt": "Praia",
+    "credit": "Xandu",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Praia_Harbor.jpg"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "guinea-bissau",
+  "name": "Guinea-Bissau",
+  "description": "Guinea-Bissau from the Kaabu kingdom and Portuguese Guinea to the war of liberation, independence in 1973 and many coups.",
+  "category": "places",
+  "tags": [
+    "guinea-bissau",
+    "bissau",
+    "west africa",
+    "cashew",
+    "bijagos"
+  ],
+  "entries": [
+    "portuguese-guinea",
+    "kaabu",
+    "bissau",
+    "amilcar-cabral",
+    "luis-cabral",
+    "joao-bernardo-vieira",
+    "pidjiguiti-massacre",
+    "guinea-bissau-war-of-independence",
+    "umaro-sissoco-embalo",
+    "guinea-bissau",
+    "bolama-bijagos-archipelago",
+    "guinea-bissau-civil-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "kaabu-and-portugal",
+      "name": "Kaabu and Portugal",
+      "from": 1446,
+      "to": 1962,
+      "note": "Portuguese ships came in 1446. Kaabu ruled much of the land until 1867, and Portugal made it a colony."
+    },
+    {
+      "id": "liberation",
+      "name": "Liberation",
+      "from": 1963,
+      "to": 1973,
+      "note": "Cabral's party fought Portugal from 1963 and declared independence in 1973."
+    },
+    {
+      "id": "independent-guinea-bissau",
+      "name": "Independent Guinea-Bissau",
+      "from": 1974,
+      "to": 2026,
+      "note": "Portugal recognised independence in 1974. Coups and a civil war followed, and no elected president served a full term until 2019."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Flag_of_Guinea-Bissau.svg/330px-Flag_of_Guinea-Bissau.svg.png",
+    "alt": "Flag of Guinea-Bissau",
+    "credit": "Drawn by User:SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Guinea-Bissau.svg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "dilmun",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Dilmun",
+      "from": "-3000"
+    }
+  ],
+  "summary": "The Bronze Age civilisation of trade centred on Bahrain.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q748846",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-0600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bahrain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dilmun (Q748846)",
+      "url": "https://www.wikidata.org/wiki/Q748846",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dilmun",
+      "url": "https://en.wikipedia.org/wiki/Dilmun",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Moyen_Orient_3mil_aC.svg/500px-Moyen_Orient_3mil_aC.svg.png",
+    "alt": "Dilmun",
+    "credit": "Middle_East_topographic_map-blank.svg: Sémhur (talk) derivative work: Zunkir (talk)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Moyen_Orient_3mil_aC.svg"
+  }
+}

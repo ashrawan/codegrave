@@ -1,0 +1,59 @@
+{
+  "id": "heydar-aliyev",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Heydar Aliyev",
+      "from": "1923"
+    }
+  ],
+  "summary": "Communist leader and later president, who founded the ruling family.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q157451",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-05-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2003-12-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "azerbaijan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Heydar Aliyev (Q157451)",
+      "url": "https://www.wikidata.org/wiki/Q157451",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Heydar Aliyev",
+      "url": "https://en.wikipedia.org/wiki/Heydar_Aliyev",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Heydar_Aliyev_%28crop%29.jpg/500px-Heydar_Aliyev_%28crop%29.jpg",
+    "alt": "Heydar Aliyev",
+    "credit": "Press Service of the President of the Republic of Azerbaijan",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Heydar_Aliyev_(crop).jpg"
+  }
+}

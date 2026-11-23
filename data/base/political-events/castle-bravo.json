@@ -1,0 +1,52 @@
+{
+  "id": "castle-bravo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Castle Bravo",
+      "from": "1954"
+    }
+  ],
+  "summary": "The largest American hydrogen bomb test, at Bikini in 1954, which poisoned nearby atolls.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q304419",
+  "events": [
+    {
+      "type": "born",
+      "date": "1954-03-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1954-03-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "marshall-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Castle Bravo (Q304419)",
+      "url": "https://www.wikidata.org/wiki/Q304419",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Castle Bravo",
+      "url": "https://en.wikipedia.org/wiki/Castle_Bravo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

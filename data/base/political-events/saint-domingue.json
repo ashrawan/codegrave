@@ -1,0 +1,59 @@
+{
+  "id": "saint-domingue",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Saint-Domingue",
+      "from": "1626"
+    }
+  ],
+  "summary": "France's colony, the richest in the world in the 1700s, worked by enslaved Africans.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q861551",
+  "events": [
+    {
+      "type": "born",
+      "date": "1626",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1804-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "haiti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint-Domingue (Q861551)",
+      "url": "https://www.wikidata.org/wiki/Q861551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint-Domingue",
+      "url": "https://en.wikipedia.org/wiki/Saint-Domingue",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/SaintDomingue.360.jpg/500px-SaintDomingue.360.jpg",
+    "alt": "Saint-Domingue",
+    "credit": "Mathew Carey (engravers/printers: Bellin, Jacques Nicolas, 1703-1772; Scott, Joseph T.; Varle, P.C.)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:SaintDomingue.360.jpg"
+  }
+}

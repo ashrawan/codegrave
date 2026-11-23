@@ -1,0 +1,52 @@
+{
+  "id": "british-guiana",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "British Guiana",
+      "from": "1814"
+    }
+  ],
+  "summary": "The British colony of 1831 to 1966.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q918126",
+  "events": [
+    {
+      "type": "born",
+      "date": "1814",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1966",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guyana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Guiana (Q918126)",
+      "url": "https://www.wikidata.org/wiki/Q918126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Guiana",
+      "url": "https://en.wikipedia.org/wiki/British_Guiana",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

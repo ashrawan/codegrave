@@ -1,0 +1,54 @@
+{
+  "id": "copperbelt",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Zambian Copperbelt",
+      "from": "1928"
+    }
+  ],
+  "summary": "The copper mines of the north, worked from the 1920s.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q1131523",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zambian Copperbelt (Q1131523)",
+      "url": "https://www.wikidata.org/wiki/Q1131523",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Copperbelt Province",
+      "url": "https://en.wikipedia.org/wiki/Copperbelt_Province",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/White_Sands_Mufulira.jpg/500px-White_Sands_Mufulira.jpg",
+    "alt": "Zambian Copperbelt",
+    "credit": "Wachi Mukuka",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:White_Sands_Mufulira.jpg"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "vatican-city",
+  "name": "Vatican City",
+  "description": "Vatican City from the tomb of Saint Peter and the basilica of Constantine to the Papal States, the Lateran Treaty of 1929 and the smallest state in the world.",
+  "category": "places",
+  "tags": [
+    "vatican",
+    "pope",
+    "rome",
+    "catholic",
+    "europe"
+  ],
+  "entries": [
+    "saint-peter",
+    "papal-states",
+    "pope-julius-ii",
+    "sistine-chapel",
+    "vatican-library",
+    "vatican-museums",
+    "swiss-guard",
+    "st-peters-basilica",
+    "school-of-athens",
+    "sistine-chapel-ceiling",
+    "pope-john-paul-ii",
+    "vatican-city",
+    "lateran-treaty",
+    "pope-francis",
+    "pope-leo-xiv",
+    "second-vatican-council"
+  ],
+  "checkpoints": [
+    {
+      "id": "saint-peter-s-hill",
+      "name": "Saint Peter's hill",
+      "from": 64,
+      "to": 1928,
+      "note": "Saint Peter was buried on the Vatican hill, and Constantine built a basilica over the tomb. The popes ruled the Papal States until 1870."
+    },
+    {
+      "id": "the-state",
+      "name": "The state",
+      "from": 1929,
+      "to": 2026,
+      "note": "The Lateran Treaty of 1929 made Vatican City a sovereign state."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Flag_of_Vatican_City_%282023%E2%80%93present%29.svg/330px-Flag_of_Vatican_City_%282023%E2%80%93present%29.svg.png",
+    "alt": "Flag of Vatican City",
+    "credit": "Goran_tek-en",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Vatican_City_(2023%E2%80%93present).svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d1/United_States_Navy_Band_-_Inno_e_Marcia_Pontificale.ogg/United_States_Navy_Band_-_Inno_e_Marcia_Pontificale.ogg.mp3",
+    "title": "Inno e Marcia Pontificale",
+    "credit": "https://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Inno_e_Marcia_Pontificale.ogg"
+  }
+}

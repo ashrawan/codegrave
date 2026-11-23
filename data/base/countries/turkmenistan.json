@@ -1,0 +1,51 @@
+{
+  "id": "turkmenistan",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Turkmenistan",
+      "from": "1991"
+    }
+  ],
+  "summary": "A desert country of Central Asia on the Caspian Sea, independent from the Soviet Union since 1991.",
+  "wikidata": "Q874",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Turkmenistan (Q874)",
+      "url": "https://www.wikidata.org/wiki/Q874",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Turkmenistan",
+      "url": "https://en.wikipedia.org/wiki/Turkmenistan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Historical_turkmen_wedding_of_the_bride.jpg/500px-Historical_turkmen_wedding_of_the_bride.jpg",
+    "alt": "Turkmenistan",
+    "credit": "Gulzar Nurlyyeva",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Historical_turkmen_wedding_of_the_bride.jpg"
+  }
+}

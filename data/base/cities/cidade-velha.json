@@ -1,0 +1,51 @@
+{
+  "id": "cidade-velha",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Cidade Velha",
+      "from": "1462"
+    }
+  ],
+  "summary": "The first European colonial town in the tropics, founded in 1462, a World Heritage Site.",
+  "wikidata": "Q464913",
+  "events": [
+    {
+      "type": "born",
+      "date": "1462",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cape-verde"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cidade Velha (Q464913)",
+      "url": "https://www.wikidata.org/wiki/Q464913",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cidade Velha",
+      "url": "https://en.wikipedia.org/wiki/Cidade_Velha",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Cidade_Velha-Bord_de_mer_%282%29.jpg/500px-Cidade_Velha-Bord_de_mer_%282%29.jpg",
+    "alt": "Cidade Velha",
+    "credit": "Ji-Elle",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cidade_Velha-Bord_de_mer_(2).jpg"
+  }
+}

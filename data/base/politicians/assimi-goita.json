@@ -1,0 +1,54 @@
+{
+  "id": "assimi-goita",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Assimi Goïta",
+      "from": "1983"
+    }
+  ],
+  "summary": "Colonel who led coups in 2020 and 2021.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q98497406",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-11-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Assimi Goïta (Q98497406)",
+      "url": "https://www.wikidata.org/wiki/Q98497406",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Assimi Goïta",
+      "url": "https://en.wikipedia.org/wiki/Assimi_Goïta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Assimi_Goita_at_the_Kremlin_%282026-10-30%29_%28cropped%29.jpg/500px-Assimi_Goita_at_the_Kremlin_%282026-10-30%29_%28cropped%29.jpg",
+    "alt": "Assimi Goïta",
+    "credit": "Presidential Press and Information Office of Russia",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Assimi_Goita_at_the_Kremlin_(2026-10-30)_(cropped).jpg"
+  }
+}

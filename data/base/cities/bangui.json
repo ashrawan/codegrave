@@ -1,0 +1,51 @@
+{
+  "id": "bangui",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bangui",
+      "from": "1889"
+    }
+  ],
+  "summary": "The capital, founded as a French post on the Ubangi River.",
+  "wikidata": "Q3832",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "central-african-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bangui (Q3832)",
+      "url": "https://www.wikidata.org/wiki/Q3832",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bangui",
+      "url": "https://en.wikipedia.org/wiki/Bangui",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bangui_City_Centre.jpg/500px-Bangui_City_Centre.jpg",
+    "alt": "Bangui",
+    "credit": "Alllexxxis",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bangui_City_Centre.jpg"
+  }
+}

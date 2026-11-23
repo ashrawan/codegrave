@@ -1,0 +1,51 @@
+{
+  "id": "comoros",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Comoros",
+      "from": "1975"
+    }
+  ],
+  "summary": "An island country in the Indian Ocean between Mozambique and Madagascar, independent from France since 1975.",
+  "wikidata": "Q970",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Comoros (Q970)",
+      "url": "https://www.wikidata.org/wiki/Q970",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Comoros",
+      "url": "https://en.wikipedia.org/wiki/Comoros",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Fish_Harvest.jpg/500px-Fish_Harvest.jpg",
+    "alt": "Comoros",
+    "credit": "Sarahmcq",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fish_Harvest.jpg"
+  }
+}

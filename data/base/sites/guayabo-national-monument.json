@@ -1,0 +1,56 @@
+{
+  "id": "guayabo-national-monument",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Guayabo National Monument",
+      "from": "-1000"
+    }
+  ],
+  "summary": "The largest old settlement of Costa Rica, with roads and aqueducts.",
+  "wikidata": "Q5614364",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1000",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1400",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "costa-rica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Guayabo National Monument (Q5614364)",
+      "url": "https://www.wikidata.org/wiki/Q5614364",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Guayabo National Monument",
+      "url": "https://en.wikipedia.org/wiki/Guayabo_National_Monument",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Guayabo.jpg/500px-Guayabo.jpg",
+    "alt": "Guayabo National Monument",
+    "credit": "Lutz Maertens",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Guayabo.jpg"
+  }
+}

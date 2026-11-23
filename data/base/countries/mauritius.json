@@ -1,0 +1,51 @@
+{
+  "id": "mauritius",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Mauritius",
+      "from": "1968"
+    }
+  ],
+  "summary": "An island country in the Indian Ocean east of Madagascar, independent from Britain since 1968.",
+  "wikidata": "Q1027",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-03-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mauritius (Q1027)",
+      "url": "https://www.wikidata.org/wiki/Q1027",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mauritius",
+      "url": "https://en.wikipedia.org/wiki/Mauritius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Mauritius_23.08.2009_11-42-31.jpg/500px-Mauritius_23.08.2009_11-42-31.jpg",
+    "alt": "Mauritius",
+    "credit": "Simisa (talk · contribs)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mauritius_23.08.2009_11-42-31.jpg"
+  }
+}

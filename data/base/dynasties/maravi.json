@@ -1,0 +1,52 @@
+{
+  "id": "maravi",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Maravi",
+      "from": "1480"
+    }
+  ],
+  "summary": "The kingdom that gave the country its name.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1292987",
+  "events": [
+    {
+      "type": "born",
+      "date": "1480",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1720",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malawi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maravi (Q1292987)",
+      "url": "https://www.wikidata.org/wiki/Q1292987",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maravi",
+      "url": "https://en.wikipedia.org/wiki/Maravi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "tegucigalpa",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tegucigalpa",
+      "from": "1578"
+    }
+  ],
+  "summary": "The capital, founded as a mining town in 1578.",
+  "wikidata": "Q3238",
+  "events": [
+    {
+      "type": "born",
+      "date": "1578",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "honduras"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tegucigalpa (Q3238)",
+      "url": "https://www.wikidata.org/wiki/Q3238",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tegucigalpa",
+      "url": "https://en.wikipedia.org/wiki/Tegucigalpa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Centro_historico_de_Tegucigalpa_y_Comayag%C3%BCela.jpg/500px-Centro_historico_de_Tegucigalpa_y_Comayag%C3%BCela.jpg",
+    "alt": "Tegucigalpa",
+    "credit": "Luis Alfredo Romero",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Centro_historico_de_Tegucigalpa_y_Comayag%C3%BCela.jpg"
+  }
+}

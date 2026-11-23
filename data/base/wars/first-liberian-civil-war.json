@@ -1,0 +1,52 @@
+{
+  "id": "first-liberian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Liberian Civil War",
+      "from": "1989"
+    }
+  ],
+  "summary": "The war of 1989 to 1997.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1477500",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-12-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-08-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liberia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Liberian Civil War (Q1477500)",
+      "url": "https://www.wikidata.org/wiki/Q1477500",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Liberian Civil War",
+      "url": "https://en.wikipedia.org/wiki/First_Liberian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

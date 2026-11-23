@@ -1,0 +1,51 @@
+{
+  "id": "ohrid",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ohrid",
+      "from": "-0353"
+    }
+  ],
+  "summary": "A lake town of churches, one of the oldest in Europe, a World Heritage Site.",
+  "wikidata": "Q1223508",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0353",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-macedonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ohrid (Q1223508)",
+      "url": "https://www.wikidata.org/wiki/Q1223508",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ohrid",
+      "url": "https://en.wikipedia.org/wiki/Ohrid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Ohrid_from_Samuel%27s_Fortress_2.jpg/500px-Ohrid_from_Samuel%27s_Fortress_2.jpg",
+    "alt": "Ohrid",
+    "credit": "kallerna",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Ohrid_from_Samuel%27s_Fortress_2.jpg"
+  }
+}

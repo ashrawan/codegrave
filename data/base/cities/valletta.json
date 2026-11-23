@@ -1,0 +1,51 @@
+{
+  "id": "valletta",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Valletta",
+      "from": "1566"
+    }
+  ],
+  "summary": "The capital, built by the Knights after the siege.",
+  "wikidata": "Q23800",
+  "events": [
+    {
+      "type": "born",
+      "date": "1566",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Valletta (Q23800)",
+      "url": "https://www.wikidata.org/wiki/Q23800",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Valletta",
+      "url": "https://en.wikipedia.org/wiki/Valletta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Malta%2C_2010_-_panoramio_-_Bengt_Nyman_%2823%29.jpg/500px-Malta%2C_2010_-_panoramio_-_Bengt_Nyman_%2823%29.jpg",
+    "alt": "Valletta",
+    "credit": "Bengt Nyman",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Malta,_2010_-_panoramio_-_Bengt_Nyman_(23).jpg"
+  }
+}

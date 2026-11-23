@@ -1,0 +1,52 @@
+{
+  "id": "first-intifada",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "First Intifada",
+      "from": "1987"
+    }
+  ],
+  "summary": "The uprising of 1987 to 1993.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q49105",
+  "events": [
+    {
+      "type": "born",
+      "date": "1987-12-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Intifada (Q49105)",
+      "url": "https://www.wikidata.org/wiki/Q49105",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Intifada",
+      "url": "https://en.wikipedia.org/wiki/First_Intifada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

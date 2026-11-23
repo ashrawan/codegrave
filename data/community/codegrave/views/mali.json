@@ -1,0 +1,75 @@
+{
+  "id": "mali",
+  "name": "Mali",
+  "description": "Mali from the empires of Ghana, Mali and Songhai and the city of Timbuktu to French Sudan, independence in 1960 and the war in the north.",
+  "category": "places",
+  "tags": [
+    "mali",
+    "bamako",
+    "timbuktu",
+    "sahel",
+    "west africa"
+  ],
+  "entries": [
+    "djenne",
+    "ghana-empire",
+    "timbuktu",
+    "sundiata-keita",
+    "mali-empire",
+    "mansa-musa",
+    "timbuktu-manuscripts",
+    "songhai-empire",
+    "french-sudan",
+    "great-mosque-of-djenne",
+    "modibo-keita",
+    "ali-farka-toure",
+    "salif-keita",
+    "mali",
+    "assimi-goita",
+    "mali-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-empires",
+      "name": "The empires",
+      "from": -250,
+      "to": 1590,
+      "note": "Djenné grew from 250 BCE. The empires of Ghana, Mali and Songhai ruled the Sahel, and Mansa Musa made Mali famous for its gold."
+    },
+    {
+      "id": "after-songhai",
+      "name": "After Songhai",
+      "from": 1591,
+      "to": 1891,
+      "note": "Morocco broke Songhai in 1591. Bambara and Fula states followed."
+    },
+    {
+      "id": "french-sudan",
+      "name": "French Sudan",
+      "from": 1892,
+      "to": 1959,
+      "note": "France conquered the land in the 1890s and ruled it as French Sudan."
+    },
+    {
+      "id": "independent-mali",
+      "name": "Independent Mali",
+      "from": 1960,
+      "to": 2026,
+      "note": "Mali became independent in 1960. Since 2012 war in the north and coups have shaken it."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_Mali.svg/330px-Flag_of_Mali.svg.png",
+    "alt": "Flag of Mali",
+    "credit": "SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mali.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f7/Malian_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga/Malian_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga.mp3",
+    "title": "Pour l'Afrique et pour toi",
+    "credit": "https://web.archive.org/web/20181103172904if_/http://www.navyband.navy.mil/anthems/anthems/mali_may2016.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Malian_national_anthem,_performed_by_the_United_States_Navy_Band.oga"
+  }
+}

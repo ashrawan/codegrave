@@ -1,0 +1,59 @@
+{
+  "id": "nicaraguan-revolution",
+  "category": "revolutions",
+  "names": [
+    {
+      "name": "Nicaraguan Revolution",
+      "from": "1978"
+    }
+  ],
+  "summary": "The revolution that drove out the Somozas in 1979.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1463516",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nicaragua"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nicaraguan Revolution (Q1463516)",
+      "url": "https://www.wikidata.org/wiki/Q1463516",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nicaraguan Revolution",
+      "url": "https://en.wikipedia.org/wiki/Nicaraguan_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Revoluci%C3%B3n_sandinista.png/500px-Revoluci%C3%B3n_sandinista.png",
+    "alt": "Nicaraguan Revolution",
+    "credit": "Puskechina",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Revoluci%C3%B3n_sandinista.png"
+  }
+}

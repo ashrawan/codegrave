@@ -1,0 +1,59 @@
+{
+  "id": "khama-iii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Khama III",
+      "from": "1837"
+    }
+  ],
+  "summary": "King of the Bamangwato who sought British protection against the Boers.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3078487",
+  "events": [
+    {
+      "type": "born",
+      "date": "1837",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1923-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "botswana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Khama III (Q3078487)",
+      "url": "https://www.wikidata.org/wiki/Q3078487",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Khama III",
+      "url": "https://en.wikipedia.org/wiki/Khama_III",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Chief-khama-III.jpg",
+    "alt": "Khama III",
+    "credit": "Photograph by S.B. Bernard, Cape Town",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Chief-khama-III.jpg"
+  }
+}

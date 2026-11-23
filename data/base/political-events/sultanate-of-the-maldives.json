@@ -1,0 +1,52 @@
+{
+  "id": "sultanate-of-the-maldives",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Sultanate of the Maldives",
+      "from": "1153"
+    }
+  ],
+  "summary": "The sultans who ruled until 1968.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q11344632",
+  "events": [
+    {
+      "type": "born",
+      "date": "1153-07-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-11-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "maldives"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sultanate of the Maldives (Q11344632)",
+      "url": "https://www.wikidata.org/wiki/Q11344632",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sultanate of the Maldives",
+      "url": "https://en.wikipedia.org/wiki/Sultanate_of_the_Maldives",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

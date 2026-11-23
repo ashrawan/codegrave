@@ -1,0 +1,59 @@
+{
+  "id": "john-garang",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "John Garang",
+      "from": "1945"
+    }
+  ],
+  "summary": "Leader of the southern rebels, killed in a helicopter crash in 2005.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q167444",
+  "events": [
+    {
+      "type": "born",
+      "date": "1945-06-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Garang (Q167444)",
+      "url": "https://www.wikidata.org/wiki/Q167444",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Garang",
+      "url": "https://en.wikipedia.org/wiki/John_Garang",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/aa/John_Garang_of_Sudan.jpg",
+    "alt": "John Garang",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Garang_of_Sudan.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "tallinn",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tallinn",
+      "from": "1248"
+    }
+  ],
+  "summary": "The capital, whose medieval old town is a World Heritage Site.",
+  "wikidata": "Q1770",
+  "events": [
+    {
+      "type": "born",
+      "date": "1248",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tallinn (Q1770)",
+      "url": "https://www.wikidata.org/wiki/Q1770",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tallinn",
+      "url": "https://en.wikipedia.org/wiki/Tallinn",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Tallinna_vanalinn_2015.jpg/500px-Tallinna_vanalinn_2015.jpg",
+    "alt": "Tallinn",
+    "credit": "Hiiumaamudeliklubi",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tallinna_vanalinn_2015.jpg"
+  }
+}

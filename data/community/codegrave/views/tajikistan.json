@@ -1,0 +1,63 @@
+{
+  "id": "tajikistan",
+  "name": "Tajikistan",
+  "description": "Tajikistan from Sogdiana and the Samanids to Russian and Soviet rule, independence in 1991, civil war and the Pamirs.",
+  "category": "places",
+  "tags": [
+    "tajikistan",
+    "dushanbe",
+    "central asia",
+    "pamir",
+    "persian"
+  ],
+  "entries": [
+    "sarazm",
+    "sogdia",
+    "persian-language",
+    "samanid-empire",
+    "rudaki",
+    "avicenna",
+    "emomali-rahmon",
+    "rogun-dam",
+    "tajikistan",
+    "tajik-national-park",
+    "tajikistani-civil-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "sogdiana-and-the-samanids",
+      "name": "Sogdiana and the Samanids",
+      "from": -3500,
+      "to": 1867,
+      "note": "Sarazm, the Sogdians and the Samanids. Rudaki and Avicenna worked in their lands."
+    },
+    {
+      "id": "russian-and-soviet-rule",
+      "name": "Russian and Soviet rule",
+      "from": 1868,
+      "to": 1990,
+      "note": "Russia took the land, and it became a Soviet republic in 1929."
+    },
+    {
+      "id": "independent-tajikistan",
+      "name": "Independent Tajikistan",
+      "from": 1991,
+      "to": 2026,
+      "note": "Independence came in 1991, then civil war until 1997 and the long rule of Rahmon."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Flag_of_Tajikistan.svg/330px-Flag_of_Tajikistan.svg.png",
+    "alt": "Flag of Tajikistan",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Tajikistan.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b9/Tajikistan_anthem.ogg/Tajikistan_anthem.ogg.mp3",
+    "title": "National anthem of Tajikistan",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tajikistan_anthem.ogg"
+  }
+}

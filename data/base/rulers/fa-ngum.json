@@ -1,0 +1,59 @@
+{
+  "id": "fa-ngum",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Fa Ngum",
+      "from": "1316"
+    }
+  ],
+  "summary": "The founder of Lan Xang.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q532364",
+  "events": [
+    {
+      "type": "born",
+      "date": "1316",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1393",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "laos"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fa Ngum (Q532364)",
+      "url": "https://www.wikidata.org/wiki/Q532364",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fa Ngum",
+      "url": "https://en.wikipedia.org/wiki/Fa_Ngum",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Fangum.JPG/500px-Fangum.JPG",
+    "alt": "Fa Ngum",
+    "credit": "en:User:Adam Carr",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fangum.JPG"
+  }
+}

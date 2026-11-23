@@ -1,0 +1,59 @@
+{
+  "id": "clement-of-ohrid",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Clement of Ohrid",
+      "from": "0840"
+    }
+  ],
+  "summary": "Saint and scholar who taught Slavic letters at Ohrid.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q158504",
+  "events": [
+    {
+      "type": "born",
+      "date": "0840",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0916-07-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-macedonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Clement of Ohrid (Q158504)",
+      "url": "https://www.wikidata.org/wiki/Q158504",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Clement of Ohrid",
+      "url": "https://en.wikipedia.org/wiki/Clement_of_Ohrid",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Saint_Clement_of_Ohrid_%28icon%2C_13th-14th_century%29.jpg/500px-Saint_Clement_of_Ohrid_%28icon%2C_13th-14th_century%29.jpg",
+    "alt": "Clement of Ohrid",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Clement_of_Ohrid_(icon,_13th-14th_century).jpg"
+  }
+}

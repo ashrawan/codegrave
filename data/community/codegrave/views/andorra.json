@@ -1,0 +1,59 @@
+{
+  "id": "andorra",
+  "name": "Andorra",
+  "description": "Andorra, a small country in the Pyrenees ruled by two co-princes, from the Paréage of 1278 to its constitution of 1993 and today.",
+  "category": "places",
+  "tags": [
+    "andorra",
+    "pyrenees",
+    "co-princes",
+    "europe"
+  ],
+  "entries": [
+    "andorra",
+    "pareage-of-andorra",
+    "casa-de-la-vall",
+    "oscar-ribas-reig",
+    "joan-enric-vives",
+    "xavier-espot-zamora",
+    "general-council-of-andorra",
+    "constitution-of-andorra"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-par-age",
+      "name": "The Paréage",
+      "from": 1278,
+      "to": 1418,
+      "note": "The Paréage of 1278 split rule over the valleys between a bishop and a count, an arrangement that still holds."
+    },
+    {
+      "id": "the-valleys",
+      "name": "The valleys",
+      "from": 1419,
+      "to": 1992,
+      "note": "The Council of the Land met from 1419. The valleys lived from farming and later from trade and tourism."
+    },
+    {
+      "id": "modern-andorra",
+      "name": "Modern Andorra",
+      "from": 1993,
+      "to": 2026,
+      "note": "The constitution of 1993 made Andorra a modern state, and it joined the United Nations the same year."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/330px-Flag_of_Andorra.svg.png",
+    "alt": "Flag of Andorra",
+    "credit": "Original: Napoleon III Vector: HansenBCN",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Andorra.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5b/El_Gran_Carlemany.ogg/El_Gran_Carlemany.ogg.mp3",
+    "title": "El gran Carlemany",
+    "credit": "Juan Benlloch i Vivó / Enric Marfany Bons",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Gran_Carlemany.ogg"
+  }
+}

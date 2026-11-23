@@ -1,0 +1,51 @@
+{
+  "id": "sao-tome-and-principe",
+  "category": "countries",
+  "names": [
+    {
+      "name": "São Tomé and Príncipe",
+      "from": "1975"
+    }
+  ],
+  "summary": "An island country in the Gulf of Guinea, a Portuguese colony from 1470, independent since 1975.",
+  "wikidata": "Q1039",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-07-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: São Tomé and Príncipe (Q1039)",
+      "url": "https://www.wikidata.org/wiki/Q1039",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: São Tomé and Príncipe",
+      "url": "https://en.wikipedia.org/wiki/São_Tomé_and_Príncipe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe_administrative_divisions%2Blocation_in_Africa.svg/500px-S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe_administrative_divisions%2Blocation_in_Africa.svg.png",
+    "alt": "São Tomé and Príncipe",
+    "credit": "AryKun",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe_administrative_divisions%2Blocation_in_Africa.svg"
+  }
+}

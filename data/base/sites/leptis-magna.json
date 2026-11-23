@@ -1,0 +1,56 @@
+{
+  "id": "leptis-magna",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Leptis Magna",
+      "from": "-0700"
+    }
+  ],
+  "summary": "A Roman city of great ruins, birthplace of the emperor Septimius Severus.",
+  "wikidata": "Q191504",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0637",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Leptis Magna (Q191504)",
+      "url": "https://www.wikidata.org/wiki/Q191504",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Leptis Magna",
+      "url": "https://en.wikipedia.org/wiki/Leptis_Magna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Leptis_Magna_%2829%29_%288288918733%29.jpg/500px-Leptis_Magna_%2829%29_%288288918733%29.jpg",
+    "alt": "Leptis Magna",
+    "credit": "joepyrek from Richmond, Va, USA",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Leptis_Magna_(29)_(8288918733).jpg"
+  }
+}

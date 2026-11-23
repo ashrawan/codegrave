@@ -1,0 +1,51 @@
+{
+  "id": "bahamas",
+  "category": "countries",
+  "names": [
+    {
+      "name": "The Bahamas",
+      "from": "1973"
+    }
+  ],
+  "summary": "A country of some seven hundred islands in the Atlantic, independent from Britain since 1973.",
+  "wikidata": "Q778",
+  "events": [
+    {
+      "type": "born",
+      "date": "1973-07-10",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: The Bahamas (Q778)",
+      "url": "https://www.wikidata.org/wiki/Q778",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The Bahamas",
+      "url": "https://en.wikipedia.org/wiki/The_Bahamas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bahamas_regions_map-es.svg/500px-Bahamas_regions_map-es.svg.png",
+    "alt": "The Bahamas",
+    "credit": "Peter Fitzgerald, NordNordWest",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bahamas_regions_map-es.svg"
+  }
+}

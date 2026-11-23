@@ -1,0 +1,51 @@
+{
+  "id": "apollo-11-cave",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Apollo 11 Cave",
+      "from": "-28000"
+    }
+  ],
+  "summary": "A cave with painted stones some 30,000 years old, among the oldest art in Africa.",
+  "wikidata": "Q14755864",
+  "events": [
+    {
+      "type": "born",
+      "date": "-28000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "namibia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apollo 11 Cave (Q14755864)",
+      "url": "https://www.wikidata.org/wiki/Q14755864",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apollo 11 Cave",
+      "url": "https://en.wikipedia.org/wiki/Apollo_11_Cave",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/7/7d/Apollo-11_stone_slab.jpg",
+    "alt": "Apollo 11 Cave",
+    "credit": "José-Manuel Benito Álvarez —&gt;Locutus BorgReference:*Bednarik, Robert G. (2003), The earliest evidence of Paleoart art",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Apollo-11_stone_slab.jpg"
+  }
+}

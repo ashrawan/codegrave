@@ -1,0 +1,59 @@
+{
+  "id": "great-siege-of-malta",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Great Siege of Malta",
+      "from": "1565"
+    }
+  ],
+  "summary": "The Ottoman siege of 1565, beaten off by the Knights.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q58732",
+  "events": [
+    {
+      "type": "born",
+      "date": "1565-05-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1565-09-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Great Siege of Malta (Q58732)",
+      "url": "https://www.wikidata.org/wiki/Q58732",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Great Siege of Malta",
+      "url": "https://en.wikipedia.org/wiki/Great_Siege_of_Malta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Siege_of_malta_1.jpg/500px-Siege_of_malta_1.jpg",
+    "alt": "Great Siege of Malta",
+    "credit": "Matteo Perez d'Aleccio",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Siege_of_malta_1.jpg"
+  }
+}

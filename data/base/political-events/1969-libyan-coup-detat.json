@@ -1,0 +1,59 @@
+{
+  "id": "1969-libyan-coup-detat",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "1969 Libyan revolution",
+      "from": "1969"
+    }
+  ],
+  "summary": "Gaddafi's coup of 1969 that ended the monarchy.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q6107218",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-09-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1969-09-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: 1969 Libyan revolution (Q6107218)",
+      "url": "https://www.wikidata.org/wiki/Q6107218",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: 1969 Libyan revolution",
+      "url": "https://en.wikipedia.org/wiki/1969_Libyan_revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Nasser_Qaddafi_Atassi_1969.jpg/500px-Nasser_Qaddafi_Atassi_1969.jpg",
+    "alt": "1969 Libyan revolution",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nasser_Qaddafi_Atassi_1969.jpg"
+  }
+}

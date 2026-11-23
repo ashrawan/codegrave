@@ -1,0 +1,52 @@
+{
+  "id": "spanish-east-indies",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Spanish East Indies",
+      "from": "1565"
+    }
+  ],
+  "summary": "Spain's Pacific lands, which took in the Carolines until 1899.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q910648",
+  "events": [
+    {
+      "type": "born",
+      "date": "1565",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1898",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "micronesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish East Indies (Q910648)",
+      "url": "https://www.wikidata.org/wiki/Q910648",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish East Indies",
+      "url": "https://en.wikipedia.org/wiki/Spanish_East_Indies",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

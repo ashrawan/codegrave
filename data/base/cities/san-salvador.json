@@ -1,0 +1,44 @@
+{
+  "id": "san-salvador",
+  "category": "cities",
+  "names": [
+    {
+      "name": "San Salvador",
+      "from": "1525"
+    }
+  ],
+  "summary": "The capital, founded by the Spanish in 1525.",
+  "wikidata": "Q3110",
+  "events": [
+    {
+      "type": "born",
+      "date": "1525",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "el-salvador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: San Salvador (Q3110)",
+      "url": "https://www.wikidata.org/wiki/Q3110",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: San Salvador",
+      "url": "https://en.wikipedia.org/wiki/San_Salvador",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

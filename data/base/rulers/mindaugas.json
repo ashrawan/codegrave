@@ -1,0 +1,59 @@
+{
+  "id": "mindaugas",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Mindaugas",
+      "from": "1203"
+    }
+  ],
+  "summary": "The first and only crowned king of Lithuania, in 1253.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q242436",
+  "events": [
+    {
+      "type": "born",
+      "date": "1203",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1263-09-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lithuania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mindaugas (Q242436)",
+      "url": "https://www.wikidata.org/wiki/Q242436",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mindaugas",
+      "url": "https://en.wikipedia.org/wiki/Mindaugas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Mindaugas_1831_%28117707054%29.jpg/500px-Mindaugas_1831_%28117707054%29.jpg",
+    "alt": "Mindaugas",
+    "credit": "Bernard Zaydler",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mindaugas_1831_(117707054).jpg"
+  }
+}

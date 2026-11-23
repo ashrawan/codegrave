@@ -1,0 +1,59 @@
+{
+  "id": "first-sudanese-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "First Sudanese Civil War",
+      "from": "1955"
+    }
+  ],
+  "summary": "The war of 1955 to 1972 between the south and the north.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q823730",
+  "events": [
+    {
+      "type": "born",
+      "date": "1955-08-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1972-03-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: First Sudanese Civil War (Q823730)",
+      "url": "https://www.wikidata.org/wiki/Q823730",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: First Sudanese Civil War",
+      "url": "https://en.wikipedia.org/wiki/First_Sudanese_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Sudan_%26_Southern_Sudan_map_%282005-2011%29.png/500px-Sudan_%26_Southern_Sudan_map_%282005-2011%29.png",
+    "alt": "First Sudanese Civil War",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sudan_%26_Southern_Sudan_map_(2005-2011).png"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "bahrain",
+  "name": "Bahrain",
+  "description": "Bahrain from Dilmun to the pearl trade, the Al Khalifa, British protection, oil, independence in 1971 and the uprising of 2011.",
+  "category": "places",
+  "tags": [
+    "bahrain",
+    "manama",
+    "gulf",
+    "dilmun",
+    "pearls"
+  ],
+  "entries": [
+    "dilmun",
+    "qal-at-al-bahrain",
+    "manama",
+    "house-of-khalifa",
+    "oil-in-bahrain",
+    "isa-bin-salman-al-khalifa",
+    "hamad-bin-isa-al-khalifa",
+    "bahrain",
+    "king-fahd-causeway",
+    "bahrain-grand-prix",
+    "bahraini-uprising-of-2011",
+    "pearling-path",
+    "abraham-accords"
+  ],
+  "checkpoints": [
+    {
+      "id": "dilmun-born-3000-end-0600",
+      "name": "Dilmun born=~-3000 end=~-0600",
+      "from": -3000,
+      "to": 600,
+      "note": "Bahrain was Dilmun, a trading land between Mesopotamia and the Indus."
+    },
+    {
+      "id": "pearls-and-the-al-khalifa",
+      "name": "Pearls and the Al Khalifa",
+      "from": 601,
+      "to": 1931,
+      "note": "Islam came, then Portuguese and Persians. The Al Khalifa took the islands in 1783, and pearls were the wealth of the Gulf."
+    },
+    {
+      "id": "oil-and-independence",
+      "name": "Oil and independence",
+      "from": 1932,
+      "to": 2026,
+      "note": "Oil was struck in 1932. Bahrain left British protection in 1971, saw protests in 2011 and made peace with Israel in 2020."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Bahrain.svg/330px-Flag_of_Bahrain.svg.png",
+    "alt": "Flag of Bahrain",
+    "credit": "Source: Drawn by SKopp, rewritten by Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bahrain.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/61/Bahrainona_%28vocal%29.ogg/Bahrainona_%28vocal%29.ogg.mp3",
+    "title": "Bahrainona",
+    "credit": "Choir of the Royal Bahraini Army and the Bahrain Orchestra on behalf of the Government of Bahrain",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Bahrainona_(vocal).ogg"
+  }
+}

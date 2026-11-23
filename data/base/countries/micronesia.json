@@ -1,0 +1,44 @@
+{
+  "id": "micronesia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Federated States of Micronesia",
+      "from": "1986"
+    }
+  ],
+  "summary": "A Pacific country of more than six hundred islands in four states, freely associated with the United States since 1986.",
+  "wikidata": "Q702",
+  "events": [
+    {
+      "type": "born",
+      "date": "1986-11-03",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Federated States of Micronesia (Q702)",
+      "url": "https://www.wikidata.org/wiki/Q702",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Federated States of Micronesia",
+      "url": "https://en.wikipedia.org/wiki/Federated_States_of_Micronesia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,52 @@
+{
+  "id": "la-matanza",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "La Matanza",
+      "from": "1932"
+    }
+  ],
+  "summary": "The killing of thousands of peasants after a rising in 1932.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q939859",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1932",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "el-salvador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: La Matanza (Q939859)",
+      "url": "https://www.wikidata.org/wiki/Q939859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: La Matanza",
+      "url": "https://en.wikipedia.org/wiki/La_Matanza",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

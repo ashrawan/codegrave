@@ -1,0 +1,51 @@
+{
+  "id": "tbilisi",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tbilisi",
+      "from": "0479"
+    }
+  ],
+  "summary": "The capital, made so in the 400s by King Vakhtang Gorgasali.",
+  "wikidata": "Q994",
+  "events": [
+    {
+      "type": "born",
+      "date": "0479",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tbilisi (Q994)",
+      "url": "https://www.wikidata.org/wiki/Q994",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tbilisi",
+      "url": "https://en.wikipedia.org/wiki/Tbilisi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/View_of_Tbilisi_from_Tabori_Church_2023-10-08-2.jpg/500px-View_of_Tbilisi_from_Tabori_Church_2023-10-08-2.jpg",
+    "alt": "Tbilisi",
+    "credit": "Alexey Komarov",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Tbilisi_from_Tabori_Church_2023-10-08-2.jpg"
+  }
+}

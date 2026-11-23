@@ -1,0 +1,59 @@
+{
+  "id": "british-cyprus",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "British Cyprus",
+      "from": "1878"
+    }
+  ],
+  "summary": "British rule of the island, 1878 to 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q15240466",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1947",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Cyprus (Q15240466)",
+      "url": "https://www.wikidata.org/wiki/Q15240466",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Cyprus",
+      "url": "https://en.wikipedia.org/wiki/British_Cyprus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Hosting_the_British_flag_at_Nicosia.jpg/500px-Hosting_the_British_flag_at_Nicosia.jpg",
+    "alt": "British Cyprus",
+    "credit": "Illustrated London News",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hosting_the_British_flag_at_Nicosia.jpg"
+  }
+}

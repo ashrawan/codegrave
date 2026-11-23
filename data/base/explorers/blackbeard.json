@@ -1,0 +1,59 @@
+{
+  "id": "blackbeard",
+  "category": "explorers",
+  "names": [
+    {
+      "name": "Blackbeard",
+      "from": "1680"
+    }
+  ],
+  "summary": "Pirate who used Nassau as a base in the early 1700s.",
+  "labels": [
+    "exploration"
+  ],
+  "wikidata": "Q213518",
+  "events": [
+    {
+      "type": "born",
+      "date": "1680",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1718-11-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bahamas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Blackbeard (Q213518)",
+      "url": "https://www.wikidata.org/wiki/Q213518",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Blackbeard",
+      "url": "https://en.wikipedia.org/wiki/Blackbeard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Teach_alias_Blackbeard%2C_colored.jpg/500px-Teach_alias_Blackbeard%2C_colored.jpg",
+    "alt": "Blackbeard",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Teach_alias_Blackbeard,_colored.jpg"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "burkina-faso",
+  "name": "Burkina Faso",
+  "description": "Burkina Faso from the Mossi kingdoms to French Upper Volta, independence in 1960, Thomas Sankara and the coups and insurgency of today.",
+  "category": "places",
+  "tags": [
+    "burkina faso",
+    "ouagadougou",
+    "mossi",
+    "sankara",
+    "sahel",
+    "west africa"
+  ],
+  "entries": [
+    "ruins-of-loropeni",
+    "mossi-kingdoms",
+    "ouagadougou",
+    "french-upper-volta",
+    "maurice-yameogo",
+    "thomas-sankara",
+    "blaise-compaore",
+    "burkina-faso",
+    "francis-kere",
+    "fespaco",
+    "ibrahim-traore",
+    "2014-burkinabe-uprising"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-mossi",
+      "name": "The Mossi",
+      "from": 1100,
+      "to": 1895,
+      "note": "The Mossi kingdoms ruled the plateau around Ouagadougou for centuries."
+    },
+    {
+      "id": "upper-volta",
+      "name": "Upper Volta",
+      "from": 1896,
+      "to": 1959,
+      "note": "France conquered the Mossi in 1896, and the land became the colony of Upper Volta."
+    },
+    {
+      "id": "upper-volta-to-burkina",
+      "name": "Upper Volta to Burkina",
+      "from": 1960,
+      "to": 1987,
+      "note": "Independence came in 1960. Thomas Sankara took power in 1983 and renamed the country before he was killed in 1987."
+    },
+    {
+      "id": "compaor-and-after",
+      "name": "Compaoré and after",
+      "from": 1988,
+      "to": 2026,
+      "note": "Compaoré ruled until 2014. Since 2015 jihadist attacks and two coups in 2022 have shaken the country."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Burkina_Faso.svg/330px-Flag_of_Burkina_Faso.svg.png",
+    "alt": "Flag of Burkina Faso",
+    "credit": "Drawn by SKopp, rewritten by Gabbe and Андрей Перцев",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Burkina_Faso.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b0/National_anthem_of_Burkina_Faso.oga/National_anthem_of_Burkina_Faso.oga.mp3",
+    "title": "National anthem",
+    "credit": "Thomas Sankara",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Burkina_Faso.oga"
+  }
+}

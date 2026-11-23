@@ -1,0 +1,59 @@
+{
+  "id": "jean-rhys",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Jean Rhys",
+      "from": "1890"
+    }
+  ],
+  "summary": "Novelist born in Roseau, author of Wide Sargasso Sea.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q230598",
+  "events": [
+    {
+      "type": "born",
+      "date": "1890-08-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-05-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jean Rhys (Q230598)",
+      "url": "https://www.wikidata.org/wiki/Q230598",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jean Rhys",
+      "url": "https://en.wikipedia.org/wiki/Jean_Rhys",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Jean_Rhys_circa_1921.webp/500px-Jean_Rhys_circa_1921.webp",
+    "alt": "Jean Rhys",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Jean_Rhys_circa_1921.webp"
+  }
+}

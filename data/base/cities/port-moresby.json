@@ -1,0 +1,51 @@
+{
+  "id": "port-moresby",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Port Moresby",
+      "from": "1873"
+    }
+  ],
+  "summary": "The capital, named in 1873 after the explorer's father.",
+  "wikidata": "Q36526",
+  "events": [
+    {
+      "type": "born",
+      "date": "1873",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "papua-new-guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Port Moresby (Q36526)",
+      "url": "https://www.wikidata.org/wiki/Q36526",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Port Moresby",
+      "url": "https://en.wikipedia.org/wiki/Port_Moresby",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Port_Moresby_Town2_Mschlauch.jpg/500px-Port_Moresby_Town2_Mschlauch.jpg",
+    "alt": "Port Moresby",
+    "credit": "MSchlauch",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Port_Moresby_Town2_Mschlauch.jpg"
+  }
+}

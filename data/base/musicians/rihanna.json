@@ -1,0 +1,54 @@
+{
+  "id": "rihanna",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Rihanna",
+      "from": "1988"
+    }
+  ],
+  "summary": "Singer from Bridgetown and one of the best-selling musicians in the world.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q36844",
+  "events": [
+    {
+      "type": "born",
+      "date": "1988-02-20",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "barbados"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rihanna (Q36844)",
+      "url": "https://www.wikidata.org/wiki/Q36844",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rihanna",
+      "url": "https://en.wikipedia.org/wiki/Rihanna",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/1/16/Rihanna_visits_U.S._Embassy_in_Barbados_2024_%28cropped%29.jpg",
+    "alt": "Rihanna",
+    "credit": "U.S. Embassy Bridgetown",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rihanna_visits_U.S._Embassy_in_Barbados_2024_(cropped).jpg"
+  }
+}

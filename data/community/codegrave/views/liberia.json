@@ -1,0 +1,73 @@
+{
+  "id": "liberia",
+  "name": "Liberia",
+  "description": "Liberia from its founding by freed American slaves in 1822 to Africa's first republic, the Americo-Liberian elite, two civil wars and Ellen Johnson Sirleaf.",
+  "category": "places",
+  "tags": [
+    "liberia",
+    "monrovia",
+    "west africa",
+    "republic"
+  ],
+  "entries": [
+    "joseph-jenkins-roberts",
+    "american-colonization-society",
+    "monrovia",
+    "liberia",
+    "william-tubman",
+    "firestone-tire-and-rubber-company",
+    "ellen-johnson-sirleaf",
+    "joseph-boakai",
+    "charles-taylor-liberia",
+    "samuel-doe",
+    "george-weah",
+    "leymah-gbowee",
+    "first-liberian-civil-war",
+    "second-liberian-civil-war",
+    "ebola-epidemic-west-africa"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-settlers",
+      "name": "The settlers",
+      "from": 1822,
+      "to": 1846,
+      "note": "Freed black Americans landed in 1822 and founded Monrovia."
+    },
+    {
+      "id": "the-old-republic",
+      "name": "The old republic",
+      "from": 1847,
+      "to": 1979,
+      "note": "Liberia became independent in 1847. The settlers' descendants ruled the native peoples, and Firestone ran the rubber."
+    },
+    {
+      "id": "coups-and-wars",
+      "name": "Coups and wars",
+      "from": 1980,
+      "to": 2003,
+      "note": "Doe seized power in 1980. Two civil wars from 1989 to 2003 killed some 250,000 people."
+    },
+    {
+      "id": "peace",
+      "name": "Peace",
+      "from": 2004,
+      "to": 2026,
+      "note": "Peace came in 2003. Ellen Johnson Sirleaf was elected in 2005, and Ebola struck in 2014."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Flag_of_Liberia.svg/330px-Flag_of_Liberia.svg.png",
+    "alt": "Flag of Liberia",
+    "credit": "Government of Liberia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Liberia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/65/Liberia_National_Anthem.ogg/Liberia_National_Anthem.ogg.mp3",
+    "title": "All Hail, Liberia, Hail!",
+    "credit": "Olmstead Luca (lyrics by Daniel Bashiel Warner not included)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Liberia_National_Anthem.ogg"
+  }
+}

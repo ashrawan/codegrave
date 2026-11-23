@@ -1,0 +1,52 @@
+{
+  "id": "ruanda-urundi",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Ruanda-Urundi",
+      "from": "1922"
+    }
+  ],
+  "summary": "The territory Belgium ruled from 1916 for the League of Nations and then the UN.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q590743",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-07-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burundi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ruanda-Urundi (Q590743)",
+      "url": "https://www.wikidata.org/wiki/Q590743",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ruanda-Urundi",
+      "url": "https://en.wikipedia.org/wiki/Ruanda-Urundi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,59 @@
+{
+  "id": "idris-of-libya",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Idris of Libya",
+      "from": "1889"
+    }
+  ],
+  "summary": "The only king of Libya, from 1951 to 1969.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q116430",
+  "events": [
+    {
+      "type": "born",
+      "date": "1889-03-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1983-05-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Idris of Libya (Q116430)",
+      "url": "https://www.wikidata.org/wiki/Q116430",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Idris of Libya",
+      "url": "https://en.wikipedia.org/wiki/Idris_of_Libya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Koning_van_Lybie_Mohammed_Sayed_el_Idriss%2C_Bestanddeelnr_905-4130.jpg/500px-Koning_van_Lybie_Mohammed_Sayed_el_Idriss%2C_Bestanddeelnr_905-4130.jpg",
+    "alt": "Idris of Libya",
+    "credit": "Anefo",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Koning_van_Lybie_Mohammed_Sayed_el_Idriss,_Bestanddeelnr_905-4130.jpg"
+  }
+}

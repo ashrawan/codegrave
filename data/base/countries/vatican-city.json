@@ -1,0 +1,51 @@
+{
+  "id": "vatican-city",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Vatican City",
+      "from": "1929"
+    }
+  ],
+  "summary": "The smallest country in the world, inside Rome, ruled by the Pope, made a state by the Lateran Treaty of 1929.",
+  "wikidata": "Q237",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-02-11",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "related",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vatican City (Q237)",
+      "url": "https://www.wikidata.org/wiki/Q237",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vatican City",
+      "url": "https://en.wikipedia.org/wiki/Vatican_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/0_Basilique_Saint-Pierre_-_Rome_%281%29.JPG/500px-0_Basilique_Saint-Pierre_-_Rome_%281%29.JPG",
+    "alt": "Vatican City",
+    "credit": "Jean-Pol GRANDMONT",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:0_Basilique_Saint-Pierre_-_Rome_(1).JPG"
+  }
+}

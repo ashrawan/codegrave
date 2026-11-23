@@ -1,0 +1,49 @@
+{
+  "id": "hurricane-ivan",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Ivan",
+      "from": "2004"
+    }
+  ],
+  "summary": "The hurricane of 2004 that damaged nine in ten homes.",
+  "wikidata": "Q933067",
+  "events": [
+    {
+      "type": "born",
+      "date": "2004-09-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2004-09-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "grenada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Ivan (Q933067)",
+      "url": "https://www.wikidata.org/wiki/Q933067",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Ivan",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Ivan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

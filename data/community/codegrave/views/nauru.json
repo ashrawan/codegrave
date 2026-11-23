@@ -1,0 +1,60 @@
+{
+  "id": "nauru",
+  "name": "Nauru",
+  "description": "Nauru, the world's smallest island republic, from its twelve clans to German rule, phosphate, Japanese occupation, independence in 1968 and its rise and fall.",
+  "category": "places",
+  "tags": [
+    "nauru",
+    "pacific",
+    "phosphate",
+    "micronesia"
+  ],
+  "entries": [
+    "nauruan-civil-war",
+    "phosphate-mining-in-nauru",
+    "hammer-deroburt",
+    "japanese-occupation-of-nauru",
+    "baron-waqa",
+    "nauru",
+    "marcus-stephen",
+    "david-adeang",
+    "nauru-regional-processing-centre"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-clans",
+      "name": "The clans",
+      "from": -1000,
+      "to": 1887,
+      "note": "Micronesians and Polynesians settled the island. Guns brought a ten-year war from 1878."
+    },
+    {
+      "id": "phosphate",
+      "name": "Phosphate",
+      "from": 1888,
+      "to": 1967,
+      "note": "Germany took the island in 1888, and phosphate mining began in 1906. Australia ran it after the war."
+    },
+    {
+      "id": "independent-nauru",
+      "name": "Independent Nauru",
+      "from": 1968,
+      "to": 2026,
+      "note": "Nauru became independent in 1968, grew rich on phosphate and then lost its wealth when the rock ran out."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Flag_of_Nauru.svg/330px-Flag_of_Nauru.svg.png",
+    "alt": "Flag of Nauru",
+    "credit": "User:Skimel",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Nauru.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c0/Nauru_Bwiema.ogg/Nauru_Bwiema.ogg.mp3",
+    "title": "Nauru Bwiema",
+    "credit": "Keith Terrett",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Nauru_Bwiema.ogg"
+  }
+}

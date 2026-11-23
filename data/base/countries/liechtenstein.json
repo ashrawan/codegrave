@@ -1,0 +1,51 @@
+{
+  "id": "liechtenstein",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Liechtenstein",
+      "from": "1719"
+    }
+  ],
+  "summary": "A small principality in the Alps between Switzerland and Austria, made in 1719.",
+  "wikidata": "Q347",
+  "events": [
+    {
+      "type": "born",
+      "date": "1719-01-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Liechtenstein (Q347)",
+      "url": "https://www.wikidata.org/wiki/Q347",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Liechtenstein",
+      "url": "https://en.wikipedia.org/wiki/Liechtenstein",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Liechtenstein_asv2022-10_img02_Vaduz_Aussicht_beim_Schloss.jpg/500px-Liechtenstein_asv2022-10_img02_Vaduz_Aussicht_beim_Schloss.jpg",
+    "alt": "Liechtenstein",
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:Liechtenstein_asv2022-10_img02_Vaduz_Aussicht_beim_Schloss.jpg"
+  }
+}

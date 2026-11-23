@@ -1,0 +1,51 @@
+{
+  "id": "seychelles",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Seychelles",
+      "from": "1976"
+    }
+  ],
+  "summary": "An island country of 115 islands in the Indian Ocean, independent from Britain since 1976.",
+  "wikidata": "Q1042",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-06-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Seychelles (Q1042)",
+      "url": "https://www.wikidata.org/wiki/Q1042",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Seychelles",
+      "url": "https://en.wikipedia.org/wiki/Seychelles",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/La_Digue_asv2024-10_img56_Anse_Patates.jpg/500px-La_Digue_asv2024-10_img56_Anse_Patates.jpg",
+    "alt": "Seychelles",
+    "credit": "A.Savin",
+    "licence": "FAL",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Digue_asv2024-10_img56_Anse_Patates.jpg"
+  }
+}

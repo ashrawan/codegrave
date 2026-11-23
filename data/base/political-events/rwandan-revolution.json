@@ -1,0 +1,52 @@
+{
+  "id": "rwandan-revolution",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Rwandan Revolution",
+      "from": "1959"
+    }
+  ],
+  "summary": "The Hutu uprising of 1959 to 1961 that ended the monarchy and drove many Tutsi abroad.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4162685",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-11-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1961-09",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rwanda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rwandan Revolution (Q4162685)",
+      "url": "https://www.wikidata.org/wiki/Q4162685",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rwandan Revolution",
+      "url": "https://en.wikipedia.org/wiki/Rwandan_Revolution",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

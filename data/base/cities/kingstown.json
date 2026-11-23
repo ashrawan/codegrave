@@ -1,0 +1,51 @@
+{
+  "id": "kingstown",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kingstown",
+      "from": "1722"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q41474",
+  "events": [
+    {
+      "type": "born",
+      "date": "1722",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saint-vincent-and-the-grenadines"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingstown (Q41474)",
+      "url": "https://www.wikidata.org/wiki/Q41474",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingstown",
+      "url": "https://en.wikipedia.org/wiki/Kingstown",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/St._Vincent%2C_Karibik_-_Kingstown_City_-_panoramio.jpg/500px-St._Vincent%2C_Karibik_-_Kingstown_City_-_panoramio.jpg",
+    "alt": "Kingstown",
+    "credit": "giggel",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:St._Vincent,_Karibik_-_Kingstown_City_-_panoramio.jpg"
+  }
+}

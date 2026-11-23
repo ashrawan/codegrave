@@ -1,0 +1,52 @@
+{
+  "id": "colony-of-fiji",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Colony of Fiji",
+      "from": "1874"
+    }
+  ],
+  "summary": "British rule of 1874 to 1970.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q5148320",
+  "events": [
+    {
+      "type": "born",
+      "date": "1874",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1970",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "fiji"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colony of Fiji (Q5148320)",
+      "url": "https://www.wikidata.org/wiki/Q5148320",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colony of Fiji",
+      "url": "https://en.wikipedia.org/wiki/Colony_of_Fiji",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

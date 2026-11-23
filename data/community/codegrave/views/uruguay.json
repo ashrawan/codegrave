@@ -1,0 +1,67 @@
+{
+  "id": "uruguay",
+  "name": "Uruguay",
+  "description": "Uruguay from the Charrúa and the Banda Oriental to independence in 1828, Batlle's welfare state, the first World Cup, dictatorship and Mujica.",
+  "category": "places",
+  "tags": [
+    "uruguay",
+    "montevideo",
+    "south america",
+    "football",
+    "tango"
+  ],
+  "entries": [
+    "colonia-del-sacramento",
+    "montevideo",
+    "jose-gervasio-artigas",
+    "uruguay",
+    "treaty-of-montevideo-1828",
+    "jose-batlle-y-ordonez",
+    "war-of-the-triple-alliance",
+    "tango-music",
+    "estadio-centenario",
+    "world-cup-1930",
+    "jose-mujica",
+    "world-cup-1950",
+    "yamandu-orsi",
+    "civic-military-dictatorship-of-uruguay",
+    "luis-suarez"
+  ],
+  "checkpoints": [
+    {
+      "id": "banda-oriental",
+      "name": "Banda Oriental",
+      "from": 1680,
+      "to": 1827,
+      "note": "Portugal founded Colonia in 1680 and Spain Montevideo in 1724. Artigas led the fight for independence."
+    },
+    {
+      "id": "the-republic",
+      "name": "The republic",
+      "from": 1828,
+      "to": 1972,
+      "note": "Uruguay became independent in 1828. Batlle built a welfare state, and Uruguay won the first World Cup in 1930."
+    },
+    {
+      "id": "dictatorship-and-democracy",
+      "name": "Dictatorship and democracy",
+      "from": 1973,
+      "to": 2026,
+      "note": "The army ruled from 1973 to 1985. Democracy returned, and Mujica was elected in 2009."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/330px-Flag_of_Uruguay.svg.png",
+    "alt": "Flag of Uruguay",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Uruguay.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/bb/HimnoNacionalUruguay.ogg/HimnoNacionalUruguay.ogg.mp3",
+    "title": "National Anthem of Uruguay",
+    "credit": "http://web.archive.org/web/1/https://www.ejercito.mil.uy/simbolos/himno.html",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:HimnoNacionalUruguay.ogg"
+  }
+}

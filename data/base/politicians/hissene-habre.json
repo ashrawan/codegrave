@@ -1,0 +1,59 @@
+{
+  "id": "hissene-habre",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Hissène Habré",
+      "from": "1942"
+    }
+  ],
+  "summary": "Ruler from 1982 to 1990, later convicted of crimes against humanity.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q310886",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942-08-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-08-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chad"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hissène Habré (Q310886)",
+      "url": "https://www.wikidata.org/wiki/Q310886",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hissène Habré",
+      "url": "https://en.wikipedia.org/wiki/Hissène_Habré",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/President_Hiss%C3%A8ne_Habr%C3%A9_of_Chad.jpg/500px-President_Hiss%C3%A8ne_Habr%C3%A9_of_Chad.jpg",
+    "alt": "Hissène Habré",
+    "credit": "Series: Reagan White House Photographs, 1/20/1981 - 1/20/1989 Collection: White House Photographic Collection, 1/20/1981",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:President_Hiss%C3%A8ne_Habr%C3%A9_of_Chad.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "territory-of-papua",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Territory of Papua",
+      "from": "1902"
+    }
+  ],
+  "summary": "Australia's territory in the south from 1906.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q530560",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902-03-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1949",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "papua-new-guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Territory of Papua (Q530560)",
+      "url": "https://www.wikidata.org/wiki/Q530560",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Territory of Papua",
+      "url": "https://en.wikipedia.org/wiki/Territory_of_Papua",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

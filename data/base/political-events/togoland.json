@@ -1,0 +1,52 @@
+{
+  "id": "togoland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Togoland",
+      "from": "1884"
+    }
+  ],
+  "summary": "The German colony of 1884 to 1914.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q161062",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1914",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "togo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Togoland (Q161062)",
+      "url": "https://www.wikidata.org/wiki/Q161062",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Togoland",
+      "url": "https://en.wikipedia.org/wiki/Togoland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

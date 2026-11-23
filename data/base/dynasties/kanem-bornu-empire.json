@@ -1,0 +1,52 @@
+{
+  "id": "kanem-bornu-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kanem–Bornu Empire",
+      "from": "0700"
+    }
+  ],
+  "summary": "The empire round Lake Chad that lasted from the 700s to the 1800s.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1139762",
+  "events": [
+    {
+      "type": "born",
+      "date": "0700",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1900",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chad"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kanem–Bornu Empire (Q1139762)",
+      "url": "https://www.wikidata.org/wiki/Q1139762",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kanem–Bornu Empire",
+      "url": "https://en.wikipedia.org/wiki/Kanem–Bornu_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

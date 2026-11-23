@@ -1,0 +1,59 @@
+{
+  "id": "baltic-way",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Baltic Way",
+      "from": "1989"
+    }
+  ],
+  "summary": "The human chain of some two million people across three countries in August 1989.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q389646",
+  "events": [
+    {
+      "type": "born",
+      "date": "1989-08-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-08-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Baltic Way (Q389646)",
+      "url": "https://www.wikidata.org/wiki/Q389646",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baltic Way",
+      "url": "https://en.wikipedia.org/wiki/Baltic_Way",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Baltsk%C3%BD%C5%98et%C4%9Bz.jpg/500px-Baltsk%C3%BD%C5%98et%C4%9Bz.jpg",
+    "alt": "Baltic Way",
+    "credit": "Kusurija",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baltsk%C3%BD%C5%98et%C4%9Bz.jpg"
+  }
+}

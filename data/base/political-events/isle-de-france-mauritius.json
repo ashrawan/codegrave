@@ -1,0 +1,52 @@
+{
+  "id": "isle-de-france-mauritius",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Isle de France",
+      "from": "1715"
+    }
+  ],
+  "summary": "French rule of 1715 to 1810.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q12060804",
+  "events": [
+    {
+      "type": "born",
+      "date": "1715",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1810",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mauritius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Isle de France (Q12060804)",
+      "url": "https://www.wikidata.org/wiki/Q12060804",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Isle de France (Mauritius)",
+      "url": "https://en.wikipedia.org/wiki/Isle_de_France_(Mauritius)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

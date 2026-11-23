@@ -1,0 +1,51 @@
+{
+  "id": "tuvalu",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Tuvalu",
+      "from": "1978"
+    }
+  ],
+  "summary": "A Pacific country of nine low islands, one of the smallest in the world, independent from Britain since 1978.",
+  "wikidata": "Q672",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tuvalu (Q672)",
+      "url": "https://www.wikidata.org/wiki/Q672",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tuvalu",
+      "url": "https://en.wikipedia.org/wiki/Tuvalu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/Nui_atoll.jpg/500px-Nui_atoll.jpg",
+    "alt": "Tuvalu",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Nui_atoll.jpg"
+  }
+}

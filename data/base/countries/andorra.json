@@ -1,0 +1,51 @@
+{
+  "id": "andorra",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Andorra",
+      "from": "1278"
+    }
+  ],
+  "summary": "A small country in the Pyrenees between France and Spain, with two co-princes: the Bishop of Urgell and the President of France.",
+  "wikidata": "Q228",
+  "events": [
+    {
+      "type": "born",
+      "date": "1278-09-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Andorra (Q228)",
+      "url": "https://www.wikidata.org/wiki/Q228",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Andorra",
+      "url": "https://en.wikipedia.org/wiki/Andorra",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Andorra_la_Vella_-_footpath.jpg/500px-Andorra_la_Vella_-_footpath.jpg",
+    "alt": "Andorra",
+    "credit": "Tiia Monto",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Andorra_la_Vella_-_footpath.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "vanuatu",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Vanuatu",
+      "from": "1980"
+    }
+  ],
+  "summary": "A Pacific country of some eighty islands in Melanesia, independent since 1980.",
+  "wikidata": "Q686",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980-07-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vanuatu (Q686)",
+      "url": "https://www.wikidata.org/wiki/Q686",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vanuatu",
+      "url": "https://en.wikipedia.org/wiki/Vanuatu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Satellite_image_of_Vanuatu_in_October_1998.jpg",
+    "alt": "Vanuatu",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Satellite_image_of_Vanuatu_in_October_1998.jpg"
+  }
+}

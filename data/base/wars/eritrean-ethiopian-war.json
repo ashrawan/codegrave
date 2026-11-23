@@ -1,0 +1,59 @@
+{
+  "id": "eritrean-ethiopian-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Eritrean–Ethiopian War",
+      "from": "1998"
+    }
+  ],
+  "summary": "The border war of 1998 to 2000 with Ethiopia.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q832273",
+  "events": [
+    {
+      "type": "born",
+      "date": "1998-05-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2000-05-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "eritrea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eritrean–Ethiopian War (Q832273)",
+      "url": "https://www.wikidata.org/wiki/Q832273",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eritrean–Ethiopian War",
+      "url": "https://en.wikipedia.org/wiki/Eritrean–Ethiopian_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/65/Eritrea_CIA_map_PL.png",
+    "alt": "Eritrean–Ethiopian War",
+    "credit": "Central Intelligence Agency",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eritrea_CIA_map_PL.png"
+  }
+}

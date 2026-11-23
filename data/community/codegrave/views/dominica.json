@@ -1,0 +1,54 @@
+{
+  "id": "dominica",
+  "name": "Dominica",
+  "description": "Dominica, the \"nature island\", from the Kalinago to French and British rule, independence in 1978 and Hurricane Maria.",
+  "category": "places",
+  "tags": [
+    "dominica",
+    "roseau",
+    "caribbean",
+    "kalinago",
+    "nature"
+  ],
+  "entries": [
+    "jean-rhys",
+    "kalinago-territory",
+    "eugenia-charles",
+    "patrick-john",
+    "roosevelt-skerrit",
+    "morne-trois-pitons-national-park",
+    "dominica",
+    "hurricane-david",
+    "hurricane-maria"
+  ],
+  "checkpoints": [
+    {
+      "id": "kalinago-and-colonists",
+      "name": "Kalinago and colonists",
+      "from": 1493,
+      "to": 1977,
+      "note": "Columbus named the island in 1493, but the Kalinago held it for two centuries. France and Britain fought over it, and Britain kept it from 1763."
+    },
+    {
+      "id": "independent-dominica",
+      "name": "Independent Dominica",
+      "from": 1978,
+      "to": 2026,
+      "note": "Dominica became independent in 1978. Hurricanes David in 1979 and Maria in 2017 devastated the island."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Flag_of_Dominica.svg/330px-Flag_of_Dominica.svg.png",
+    "alt": "Flag of Dominica",
+    "credit": "Alwin Bully",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Dominica.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/9a/National_Anthem_of_Dominica_by_US_Navy_Band.ogg/National_Anthem_of_Dominica_by_US_Navy_Band.ogg.mp3",
+    "title": "Isle of Beauty, Isle of Splendour",
+    "credit": "United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Dominica_by_US_Navy_Band.ogg"
+  }
+}

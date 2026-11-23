@@ -1,0 +1,59 @@
+{
+  "id": "idriss-deby",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Idriss Déby",
+      "from": "1952"
+    }
+  ],
+  "summary": "Ruler from 1990 until he was killed fighting rebels in 2021.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57350",
+  "events": [
+    {
+      "type": "born",
+      "date": "1952-06-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-04-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chad"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Idriss Déby (Q57350)",
+      "url": "https://www.wikidata.org/wiki/Q57350",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Idriss Déby",
+      "url": "https://en.wikipedia.org/wiki/Idriss_Déby",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Idriss_D%C3%A9by_at_the_White_House_in_2014.jpg",
+    "alt": "Idriss Déby",
+    "credit": "Office of the White House (Amanda Lucidon)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Idriss_D%C3%A9by_at_the_White_House_in_2014.jpg"
+  }
+}

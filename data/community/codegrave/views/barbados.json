@@ -1,0 +1,63 @@
+{
+  "id": "barbados",
+  "name": "Barbados",
+  "description": "Barbados from its first peoples and English sugar to slave rebellion, freedom, independence in 1966 and the republic of 2021.",
+  "category": "places",
+  "tags": [
+    "barbados",
+    "bridgetown",
+    "caribbean",
+    "sugar",
+    "cricket",
+    "rihanna"
+  ],
+  "entries": [
+    "bridgetown",
+    "mount-gay-rum",
+    "bussas-rebellion",
+    "errol-barrow",
+    "garfield-sobers",
+    "sandra-mason",
+    "mia-mottley",
+    "barbados",
+    "barbados-independence",
+    "rihanna"
+  ],
+  "checkpoints": [
+    {
+      "id": "sugar-island",
+      "name": "Sugar island",
+      "from": 1627,
+      "to": 1833,
+      "note": "English settlers came in 1627 and the island became a sugar colony worked by enslaved Africans. Bussa led the revolt of 1816."
+    },
+    {
+      "id": "freedom-and-self-rule",
+      "name": "Freedom and self-rule",
+      "from": 1834,
+      "to": 1965,
+      "note": "Slavery ended in 1834. Workers' riots in 1937 led to the labour movement and self-government."
+    },
+    {
+      "id": "independent-barbados",
+      "name": "Independent Barbados",
+      "from": 1966,
+      "to": 2026,
+      "note": "Barbados became independent in 1966 and a republic in 2021."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Flag_of_Barbados.svg/330px-Flag_of_Barbados.svg.png",
+    "alt": "Flag of Barbados",
+    "credit": "User:Denelson83",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Barbados.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/95/United_States_Navy_Band_-_In_Plenty_and_In_Time_of_Need.ogg/United_States_Navy_Band_-_In_Plenty_and_In_Time_of_Need.ogg.mp3",
+    "title": "National Anthem of Barbados",
+    "credit": "United States Navy Band Anthems Website https://www.navyband.navy.mil/national_anthems.html",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_In_Plenty_and_In_Time_of_Need.ogg"
+  }
+}

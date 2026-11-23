@@ -1,0 +1,59 @@
+{
+  "id": "livonian-crusade",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Livonian Crusade",
+      "from": "1198"
+    }
+  ],
+  "summary": "The crusade of the 1200s in which German and Danish knights conquered the land.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q196409",
+  "events": [
+    {
+      "type": "born",
+      "date": "1198",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1290",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Livonian Crusade (Q196409)",
+      "url": "https://www.wikidata.org/wiki/Q196409",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Livonian Crusade",
+      "url": "https://en.wikipedia.org/wiki/Livonian_Crusade",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Danmarks_flag_1219_Lorentzen.jpg/500px-Danmarks_flag_1219_Lorentzen.jpg",
+    "alt": "Livonian Crusade",
+    "credit": "Christian August Lorentzen",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Danmarks_flag_1219_Lorentzen.jpg"
+  }
+}

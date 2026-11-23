@@ -1,0 +1,59 @@
+{
+  "id": "thomas-sankara",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Thomas Sankara",
+      "from": "1949"
+    }
+  ],
+  "summary": "Revolutionary leader from 1983 to 1987 who renamed the country Burkina Faso, \"land of upright people\".",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q202155",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-12-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1987-10-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burkina-faso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Thomas Sankara (Q202155)",
+      "url": "https://www.wikidata.org/wiki/Q202155",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Thomas Sankara",
+      "url": "https://en.wikipedia.org/wiki/Thomas_Sankara",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Thomas_Sankara_in_Harlem_%281984%29.png/500px-Thomas_Sankara_in_Harlem_%281984%29.png",
+    "alt": "Thomas Sankara",
+    "credit": "The Militant/ Ernest Harsch",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Thomas_Sankara_in_Harlem_(1984).png"
+  }
+}

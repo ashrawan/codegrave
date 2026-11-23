@@ -1,0 +1,59 @@
+{
+  "id": "henry-vii-holy-roman-emperor",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Henry VII, Holy Roman Emperor",
+      "from": "1275"
+    }
+  ],
+  "summary": "Count of Luxembourg who became emperor in 1312.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q152717",
+  "events": [
+    {
+      "type": "born",
+      "date": "1275-07-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1313-08-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "luxembourg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Henry VII, Holy Roman Emperor (Q152717)",
+      "url": "https://www.wikidata.org/wiki/Q152717",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henry VII, Holy Roman Emperor",
+      "url": "https://en.wikipedia.org/wiki/Henry_VII,_Holy_Roman_Emperor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Henry_Lux_head.jpg",
+    "alt": "Henry VII, Holy Roman Emperor",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Henry_Lux_head.jpg"
+  }
+}

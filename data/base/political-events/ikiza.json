@@ -1,0 +1,52 @@
+{
+  "id": "ikiza",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Ikiza",
+      "from": "1972"
+    }
+  ],
+  "summary": "The killings of 1972 in which the army killed many thousands of Hutu.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q65067658",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-04",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1972-08",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burundi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ikiza (Q65067658)",
+      "url": "https://www.wikidata.org/wiki/Q65067658",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ikiza",
+      "url": "https://en.wikipedia.org/wiki/Ikiza",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

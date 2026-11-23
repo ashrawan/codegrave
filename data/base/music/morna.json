@@ -1,0 +1,51 @@
+{
+  "id": "morna",
+  "category": "music",
+  "names": [
+    {
+      "name": "Morna",
+      "from": "1800"
+    }
+  ],
+  "summary": "The slow, sad song of Cape Verde, on UNESCO's list of intangible heritage.",
+  "wikidata": "Q502535",
+  "events": [
+    {
+      "type": "born",
+      "date": "1800",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cape-verde"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Morna (Q502535)",
+      "url": "https://www.wikidata.org/wiki/Q502535",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Morna (music)",
+      "url": "https://en.wikipedia.org/wiki/Morna_(music)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Morna_group.jpg/500px-Morna_group.jpg",
+    "alt": "Morna",
+    "credit": "Original uploader was Kotoviski at sv.wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Morna_group.jpg"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "republic-of-the-congo",
+  "name": "Republic of the Congo",
+  "description": "The Republic of the Congo from the kingdoms of Loango and Teke to French Congo, independence in 1960, Marxism, civil war and oil.",
+  "category": "places",
+  "tags": [
+    "congo",
+    "brazzaville",
+    "africa",
+    "congo river"
+  ],
+  "entries": [
+    "kingdom-of-loango",
+    "pierre-savorgnan-de-brazza",
+    "brazzaville",
+    "fulbert-youlou",
+    "odzala-kokoua-national-park",
+    "denis-sassou-nguesso",
+    "brazzaville-conference",
+    "republic-of-the-congo",
+    "peoples-republic-of-the-congo",
+    "republic-of-the-congo-civil-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "kingdoms-of-the-coast",
+      "name": "Kingdoms of the coast",
+      "from": 1550,
+      "to": 1879,
+      "note": "Loango on the coast and the Teke on the plateaus traded ivory and slaves with Europeans."
+    },
+    {
+      "id": "french-congo",
+      "name": "French Congo",
+      "from": 1880,
+      "to": 1959,
+      "note": "Brazza claimed the land for France in 1880. Brazzaville became the capital of French Equatorial Africa."
+    },
+    {
+      "id": "independent-congo",
+      "name": "Independent Congo",
+      "from": 1960,
+      "to": 2026,
+      "note": "Independence came in 1960, then a Marxist state, civil war in the late 1990s and the long rule of Sassou Nguesso."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Flag_of_the_Republic_of_the_Congo.svg/330px-Flag_of_the_Republic_of_the_Congo.svg.png",
+    "alt": "Flag of Republic of the Congo",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Republic_of_the_Congo.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/dc/National_anthem_of_the_Republic_of_the_Congo.oga/National_anthem_of_the_Republic_of_the_Congo.oga.mp3",
+    "title": "La Congolaise",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_the_Republic_of_the_Congo.oga"
+  }
+}

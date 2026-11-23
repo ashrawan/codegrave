@@ -1,0 +1,52 @@
+{
+  "id": "nauruan-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Nauruan Civil War",
+      "from": "1878"
+    }
+  ],
+  "summary": "The ten-year war between clans after guns arrived.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q519546",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nauru"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nauruan Civil War (Q519546)",
+      "url": "https://www.wikidata.org/wiki/Q519546",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nauruan Civil War",
+      "url": "https://en.wikipedia.org/wiki/Nauruan_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

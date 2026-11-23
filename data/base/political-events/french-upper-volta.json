@@ -1,0 +1,52 @@
+{
+  "id": "french-upper-volta",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "French Upper Volta",
+      "from": "1919"
+    }
+  ],
+  "summary": "The French colony of Upper Volta, made in 1919.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q797440",
+  "events": [
+    {
+      "type": "born",
+      "date": "1919-03-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1958-12-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burkina-faso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Upper Volta (Q797440)",
+      "url": "https://www.wikidata.org/wiki/Q797440",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Upper Volta",
+      "url": "https://en.wikipedia.org/wiki/French_Upper_Volta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

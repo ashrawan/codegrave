@@ -1,0 +1,60 @@
+{
+  "id": "eswatini",
+  "name": "Eswatini",
+  "description": "Eswatini, Africa's last absolute monarchy, from the Swazi kings to British rule, independence in 1968 and the change of name in 2018.",
+  "category": "places",
+  "tags": [
+    "eswatini",
+    "swaziland",
+    "mbabane",
+    "monarchy",
+    "africa"
+  ],
+  "entries": [
+    "mswati-ii",
+    "sobhuza-ii",
+    "mbabane",
+    "mlilwane-wildlife-sanctuary",
+    "hlane-royal-national-park",
+    "mswati-iii",
+    "eswatini",
+    "2021-eswatini-protests"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-swazi-kingdom",
+      "name": "The Swazi kingdom",
+      "from": 1745,
+      "to": 1902,
+      "note": "The Dlamini kings led the Swazi into today's land, and Mswati II made them a nation."
+    },
+    {
+      "id": "british-rule",
+      "name": "British rule",
+      "from": 1903,
+      "to": 1967,
+      "note": "Britain ran Swaziland as a protectorate. Sobhuza II reigned throughout."
+    },
+    {
+      "id": "independent-eswatini",
+      "name": "Independent Eswatini",
+      "from": 1968,
+      "to": 2026,
+      "note": "Independence came in 1968. Sobhuza banned parties in 1973, and the monarchy rules still."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Flag_of_Eswatini.svg/330px-Flag_of_Eswatini.svg.png",
+    "alt": "Flag of Eswatini",
+    "credit": "Sobhuza II",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Eswatini.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6a/National_anthem_of_the_Kingdom_of_Eswatini.ogg/National_anthem_of_the_Kingdom_of_Eswatini.ogg.mp3",
+    "title": "Nkulunkulu Mnikati wetibusiso temaSwati",
+    "credit": "https://www.cia.gov/library/publications/the-world-factbook/geos/wz.html (The World Factbook: Eswatini)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_the_Kingdom_of_Eswatini.ogg"
+  }
+}

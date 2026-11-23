@@ -1,0 +1,59 @@
+{
+  "id": "eritrean-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Eritrean War of Independence",
+      "from": "1961"
+    }
+  ],
+  "summary": "The war of 1961 to 1991 against Ethiopian rule.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q607257",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-09-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "eritrea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eritrean War of Independence (Q607257)",
+      "url": "https://www.wikidata.org/wiki/Q607257",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eritrean War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Eritrean_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/War_Memory_Square_in_Massawa.jpg/500px-War_Memory_Square_in_Massawa.jpg",
+    "alt": "Eritrean War of Independence",
+    "credit": "Dawit Rezenè",
+    "licence": "CC BY-SA 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:War_Memory_Square_in_Massawa.jpg"
+  }
+}

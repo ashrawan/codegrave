@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-peleliu",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Peleliu",
+      "from": "1944"
+    }
+  ],
+  "summary": "One of the hardest battles of the Pacific war, in 1944.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q609030",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-09-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1944-11-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Peleliu (Q609030)",
+      "url": "https://www.wikidata.org/wiki/Q609030",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Peleliu",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Peleliu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/First_wave_of_LVTs_moves_toward_the_invasion_beaches_-_Peleliu.jpg/500px-First_wave_of_LVTs_moves_toward_the_invasion_beaches_-_Peleliu.jpg",
+    "alt": "Battle of Peleliu",
+    "credit": "USGov-Military, Post-Work: User:W.wolny",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:First_wave_of_LVTs_moves_toward_the_invasion_beaches_-_Peleliu.jpg"
+  }
+}

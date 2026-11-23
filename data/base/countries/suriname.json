@@ -1,0 +1,44 @@
+{
+  "id": "suriname",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Suriname",
+      "from": "1975"
+    }
+  ],
+  "summary": "A country on the north-east coast of South America, a Dutch colony until 1975.",
+  "wikidata": "Q730",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-11-25",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Suriname (Q730)",
+      "url": "https://www.wikidata.org/wiki/Q730",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Suriname",
+      "url": "https://en.wikipedia.org/wiki/Suriname",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

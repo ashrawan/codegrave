@@ -1,0 +1,59 @@
+{
+  "id": "siege-of-famagusta",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Famagusta",
+      "from": "1570"
+    }
+  ],
+  "summary": "The Ottoman siege that took Famagusta from Venice in 1571.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1086625",
+  "events": [
+    {
+      "type": "born",
+      "date": "1570-09-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1571-08-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Famagusta (Q1086625)",
+      "url": "https://www.wikidata.org/wiki/Q1086625",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Famagusta",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Famagusta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Famagosta_-_Camocio_Giovanni_Francesco_-_1574.jpg/500px-Famagosta_-_Camocio_Giovanni_Francesco_-_1574.jpg",
+    "alt": "Siege of Famagusta",
+    "credit": "Giovanni Francesco Camocio",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Famagosta_-_Camocio_Giovanni_Francesco_-_1574.jpg"
+  }
+}

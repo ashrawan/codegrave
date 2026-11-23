@@ -1,0 +1,59 @@
+{
+  "id": "leon-mba",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Léon M'ba",
+      "from": "1902"
+    }
+  ],
+  "summary": "The first president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q299629",
+  "events": [
+    {
+      "type": "born",
+      "date": "1902-02-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967-11-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gabon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Léon M'ba (Q299629)",
+      "url": "https://www.wikidata.org/wiki/Q299629",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Léon M'ba",
+      "url": "https://en.wikipedia.org/wiki/Léon_M'ba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Leon_M%27ba%2C_1962._D789-083_%28cropped%29.jpg/500px-Leon_M%27ba%2C_1962._D789-083_%28cropped%29.jpg",
+    "alt": "Léon M'ba",
+    "credit": "Israeli GPO photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Leon_M%27ba,_1962._D789-083_(cropped).jpg"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "id": "palestine",
+  "name": "Palestine",
+  "description": "Palestine from Canaan and Jericho to the Romans, Arabs, Crusaders and Ottomans, the British Mandate, the Nakba, the occupation, Oslo and the war in Gaza.",
+  "category": "places",
+  "tags": [
+    "palestine",
+    "gaza",
+    "west bank",
+    "jerusalem",
+    "ramallah"
+  ],
+  "entries": [
+    "dead-sea",
+    "jericho",
+    "gaza-city",
+    "balfour-declaration",
+    "mandatory-palestine",
+    "yasser-arafat",
+    "mahmoud-abbas",
+    "mahmoud-darwish",
+    "nakba",
+    "1948-arab-israeli-war",
+    "unrwa",
+    "plo",
+    "six-day-war",
+    "first-intifada",
+    "palestine",
+    "oslo-accords",
+    "palestinian-national-authority",
+    "second-intifada",
+    "gaza-war-2023"
+  ],
+  "checkpoints": [
+    {
+      "id": "ancient-palestine",
+      "name": "Ancient Palestine",
+      "from": -9000,
+      "to": 1516,
+      "note": "Jericho, Canaan, Israelite kingdoms, Romans, Byzantines, Arabs and Crusaders."
+    },
+    {
+      "id": "ottoman-and-british-rule",
+      "name": "Ottoman and British rule",
+      "from": 1517,
+      "to": 1947,
+      "note": "The Ottomans ruled for four centuries. Britain took the land in 1917 and ruled under a mandate."
+    },
+    {
+      "id": "nakba-and-occupation",
+      "name": "Nakba and occupation",
+      "from": 1948,
+      "to": 1992,
+      "note": "Some 700,000 Palestinians fled or were driven out in 1948. Israel took the West Bank and Gaza in 1967."
+    },
+    {
+      "id": "oslo-and-after",
+      "name": "Oslo and after",
+      "from": 1993,
+      "to": 2026,
+      "note": "The Oslo Accords set up the Palestinian Authority. Gaza fell to Hamas in 2007, and the war that began in 2023 destroyed most of it."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Palestine.svg/330px-Flag_of_Palestine.svg.png",
+    "alt": "Flag of Palestine",
+    "credit": "Orionist, previous versions by Makaristos, Mysid, etc.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Palestine.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f1/Anthem_of_Palestine.ogg/Anthem_of_Palestine.ogg.mp3",
+    "title": "Fida'i",
+    "credit": "https://nationalanthems.info/",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Anthem_of_Palestine.ogg"
+  }
+}

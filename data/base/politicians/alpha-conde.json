@@ -1,0 +1,54 @@
+{
+  "id": "alpha-conde",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Alpha Condé",
+      "from": "1938"
+    }
+  ],
+  "summary": "The first freely elected president, from 2010 until the coup of 2021.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4413",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-03-04",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Alpha Condé (Q4413)",
+      "url": "https://www.wikidata.org/wiki/Q4413",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Alpha Condé",
+      "url": "https://en.wikipedia.org/wiki/Alpha_Condé",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Alpha_Conde_-_World_Economic_Forum_Annual_Meeting_2012.jpg/500px-Alpha_Conde_-_World_Economic_Forum_Annual_Meeting_2012.jpg",
+    "alt": "Alpha Condé",
+    "credit": "World Economic Forum",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Alpha_Conde_-_World_Economic_Forum_Annual_Meeting_2012.jpg"
+  }
+}

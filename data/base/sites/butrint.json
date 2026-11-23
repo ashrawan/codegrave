@@ -1,0 +1,51 @@
+{
+  "id": "butrint",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Butrint",
+      "from": "-0700"
+    }
+  ],
+  "summary": "A ruined Greek and Roman city in the south, near the Greek border, a World Heritage Site.",
+  "wikidata": "Q188694",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "albania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Butrint (Q188694)",
+      "url": "https://www.wikidata.org/wiki/Q188694",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Butrint",
+      "url": "https://en.wikipedia.org/wiki/Butrint",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Butrint%2C_Albania.jpg/500px-Butrint%2C_Albania.jpg",
+    "alt": "Butrint",
+    "credit": "Marc Morell",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Butrint,_Albania.jpg"
+  }
+}

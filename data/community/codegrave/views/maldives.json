@@ -1,0 +1,61 @@
+{
+  "id": "maldives",
+  "name": "Maldives",
+  "description": "The Maldives from Buddhist islanders to the sultanate of 1153, British protection, independence in 1965, tourism and the threat of the sea.",
+  "category": "places",
+  "tags": [
+    "maldives",
+    "male",
+    "indian ocean",
+    "atolls",
+    "climate"
+  ],
+  "entries": [
+    "conversion-of-the-maldives-to-islam",
+    "sultanate-of-the-maldives",
+    "male-friday-mosque",
+    "maumoon-abdul-gayoom",
+    "maldives",
+    "mohamed-nasheed",
+    "mohamed-muizzu",
+    "indian-ocean-tsunami-2004",
+    "sinamale-bridge"
+  ],
+  "checkpoints": [
+    {
+      "id": "buddhists-and-sultans",
+      "name": "Buddhists and sultans",
+      "from": 500,
+      "to": 1886,
+      "note": "Buddhist islanders became Muslim in 1153, and sultans ruled for centuries."
+    },
+    {
+      "id": "british-protection",
+      "name": "British protection",
+      "from": 1887,
+      "to": 1964,
+      "note": "The islands were a British protectorate from 1887."
+    },
+    {
+      "id": "independent-maldives",
+      "name": "Independent Maldives",
+      "from": 1965,
+      "to": 2026,
+      "note": "Independence came in 1965 and a republic in 1968. Tourism made the islands rich, and the tsunami of 2004 showed how low they lie."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Flag_of_Maldives.svg/330px-Flag_of_Maldives.svg.png",
+    "alt": "Flag of Maldives",
+    "credit": "See File history, below, for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Maldives.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c4/Gaumii_salaam.ogg/Gaumii_salaam.ogg.mp3",
+    "title": "Gaumiii salaaam",
+    "credit": "http://www.navyband.navy.mil/anthems/all_countries.htm",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gaumii_salaam.ogg"
+  }
+}

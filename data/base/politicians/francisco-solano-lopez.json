@@ -1,0 +1,59 @@
+{
+  "id": "francisco-solano-lopez",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Francisco Solano López",
+      "from": "1826"
+    }
+  ],
+  "summary": "The president who led Paraguay into the war of the Triple Alliance, which killed most of its men.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q37677",
+  "events": [
+    {
+      "type": "born",
+      "date": "1826-07-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1870-03-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paraguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Francisco Solano López (Q37677)",
+      "url": "https://www.wikidata.org/wiki/Q37677",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Francisco Solano López",
+      "url": "https://en.wikipedia.org/wiki/Francisco_Solano_López",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Solano_Lopez_1866_by_Garcia.jpg/500px-Solano_Lopez_1866_by_Garcia.jpg",
+    "alt": "Francisco Solano López",
+    "credit": "Aurelio García (1846–1869)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Solano_Lopez_1866_by_Garcia.jpg"
+  }
+}

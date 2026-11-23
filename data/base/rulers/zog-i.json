@@ -1,0 +1,59 @@
+{
+  "id": "zog-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Zog I",
+      "from": "1895"
+    }
+  ],
+  "summary": "President and then king of Albania from 1925 until the Italian invasion of 1939.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q60699",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895-10-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1961-04-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "albania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Zog I (Q60699)",
+      "url": "https://www.wikidata.org/wiki/Q60699",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Zog I",
+      "url": "https://en.wikipedia.org/wiki/Zog_I",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/King_Zog_I.jpg/500px-King_Zog_I.jpg",
+    "alt": "Zog I",
+    "credit": "The original uploader was J.J. at English Wikipedia. (see en:Wikipedia:Upload log archive/April 2003); Tonysmith at zh.w",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Zog_I.jpg"
+  }
+}

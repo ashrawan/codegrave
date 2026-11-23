@@ -1,0 +1,59 @@
+{
+  "id": "france-albert-rene",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "France-Albert René",
+      "from": "1935"
+    }
+  ],
+  "summary": "President from 1977 to 2004.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q224986",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-11-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2019-02-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "seychelles"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: France-Albert René (Q224986)",
+      "url": "https://www.wikidata.org/wiki/Q224986",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: France-Albert René",
+      "url": "https://en.wikipedia.org/wiki/France-Albert_René",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cd/France_Albert-Ren%C3%A9.png",
+    "alt": "France-Albert René",
+    "credit": "Seychelles Nation",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:France_Albert-Ren%C3%A9.png"
+  }
+}

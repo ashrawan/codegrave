@@ -1,0 +1,54 @@
+{
+  "id": "epic-of-manas",
+  "category": "books",
+  "names": [
+    {
+      "name": "Epic of Manas",
+      "from": "1700"
+    }
+  ],
+  "summary": "The Kyrgyz epic poem, one of the longest in the world.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q690174",
+  "events": [
+    {
+      "type": "born",
+      "date": "1700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kyrgyzstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Epic of Manas (Q690174)",
+      "url": "https://www.wikidata.org/wiki/Q690174",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Epic of Manas",
+      "url": "https://en.wikipedia.org/wiki/Epic_of_Manas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Manas-serijalary.jpg/500px-Manas-serijalary.jpg",
+    "alt": "Epic of Manas",
+    "credit": "Qyrgyz",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Manas-serijalary.jpg"
+  }
+}

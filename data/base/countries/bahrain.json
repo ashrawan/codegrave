@@ -1,0 +1,51 @@
+{
+  "id": "bahrain",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Bahrain",
+      "from": "1971"
+    }
+  ],
+  "summary": "An island kingdom in the Persian Gulf, independent since 1971, ruled by the Al Khalifa family.",
+  "wikidata": "Q398",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971-08-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bahrain (Q398)",
+      "url": "https://www.wikidata.org/wiki/Q398",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bahrain",
+      "url": "https://en.wikipedia.org/wiki/Bahrain",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Manama%2C_Bahrain_Decembre_2014.jpg/500px-Manama%2C_Bahrain_Decembre_2014.jpg",
+    "alt": "Bahrain",
+    "credit": "Wadiia",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Manama,_Bahrain_Decembre_2014.jpg"
+  }
+}

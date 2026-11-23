@@ -1,0 +1,59 @@
+{
+  "id": "charles-aznavour",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Charles Aznavour",
+      "from": "1924"
+    }
+  ],
+  "summary": "French-Armenian singer, one of the great voices of French song.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q1785",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924-05-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2018-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "armenia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles Aznavour (Q1785)",
+      "url": "https://www.wikidata.org/wiki/Q1785",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles Aznavour",
+      "url": "https://en.wikipedia.org/wiki/Charles_Aznavour",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/2014.06.23._Charles_Aznavour_Fot_Mariusz_Kubik_01.jpg/500px-2014.06.23._Charles_Aznavour_Fot_Mariusz_Kubik_01.jpg",
+    "alt": "Charles Aznavour",
+    "credit": "Mariusz Kubik",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2014.06.23._Charles_Aznavour_Fot_Mariusz_Kubik_01.jpg"
+  }
+}

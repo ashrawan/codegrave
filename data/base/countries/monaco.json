@@ -1,0 +1,51 @@
+{
+  "id": "monaco",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Monaco",
+      "from": "1297"
+    }
+  ],
+  "summary": "A tiny principality on the French Riviera, ruled by the Grimaldi family since 1297.",
+  "wikidata": "Q235",
+  "events": [
+    {
+      "type": "born",
+      "date": "1297-01-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Monaco (Q235)",
+      "url": "https://www.wikidata.org/wiki/Q235",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Monaco",
+      "url": "https://en.wikipedia.org/wiki/Monaco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Panorama_von_Monaco-La_Turbie.jpg/500px-Panorama_von_Monaco-La_Turbie.jpg",
+    "alt": "Monaco",
+    "credit": "Tobi 87",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Panorama_von_Monaco-La_Turbie.jpg"
+  }
+}

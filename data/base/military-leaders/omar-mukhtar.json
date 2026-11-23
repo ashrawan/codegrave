@@ -1,0 +1,59 @@
+{
+  "id": "omar-mukhtar",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Omar Mukhtar",
+      "from": "1858"
+    }
+  ],
+  "summary": "Leader of the resistance to Italy, hanged in 1931.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q212388",
+  "events": [
+    {
+      "type": "born",
+      "date": "1858-08-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1931-09-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Omar Mukhtar (Q212388)",
+      "url": "https://www.wikidata.org/wiki/Q212388",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Omar Mukhtar",
+      "url": "https://en.wikipedia.org/wiki/Omar_Mukhtar",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Omar_Mukhtar_13.jpg/500px-Omar_Mukhtar_13.jpg",
+    "alt": "Omar Mukhtar",
+    "credit": "Italian colonial administration of Libya [1]",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Omar_Mukhtar_13.jpg"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "luxembourg",
+  "name": "Luxembourg",
+  "description": "Luxembourg from Count Siegfried's castle of 963 to a grand duchy, two German occupations, a founder of Europe and a centre of finance.",
+  "category": "places",
+  "tags": [
+    "luxembourg",
+    "grand duchy",
+    "europe",
+    "benelux"
+  ],
+  "entries": [
+    "siegfried-count-of-luxembourg",
+    "luxembourg",
+    "house-of-bourbon",
+    "henry-vii-holy-roman-emperor",
+    "charles-iv-holy-roman-emperor",
+    "treaty-of-london-1867",
+    "robert-schuman",
+    "german-occupation-of-luxembourg-in-world-war-ii",
+    "benelux",
+    "european-court-of-justice",
+    "jean-claude-juncker",
+    "guillaume-v",
+    "rtl-group"
+  ],
+  "checkpoints": [
+    {
+      "id": "counts-and-emperors",
+      "name": "Counts and emperors",
+      "from": 963,
+      "to": 1442,
+      "note": "Siegfried built a castle in 963. His heirs became counts and dukes, and four Luxembourgs became emperors."
+    },
+    {
+      "id": "fortress-of-europe",
+      "name": "Fortress of Europe",
+      "from": 1443,
+      "to": 1866,
+      "note": "Burgundy, Spain, France and Austria held the great fortress in turn."
+    },
+    {
+      "id": "the-grand-duchy",
+      "name": "The grand duchy",
+      "from": 1867,
+      "to": 1944,
+      "note": "Luxembourg was made neutral in 1867, but Germany occupied it in both world wars."
+    },
+    {
+      "id": "heart-of-europe",
+      "name": "Heart of Europe",
+      "from": 1945,
+      "to": 2026,
+      "note": "Luxembourg helped found Benelux, NATO and the European Communities and became a centre of banking."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/330px-Flag_of_Luxembourg.svg.png",
+    "alt": "Flag of Luxembourg",
+    "credit": "Drawn by User:SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Luxembourg.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/45/Luxembourg_National_Anthem.ogg/Luxembourg_National_Anthem.ogg.mp3",
+    "title": "Ons Heemecht",
+    "credit": "http://www.navyband.navy.mil/anthems/ANTHEMS/Luxembourg.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Luxembourg_National_Anthem.ogg"
+  }
+}
