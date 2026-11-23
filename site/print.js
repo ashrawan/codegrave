@@ -428,7 +428,9 @@ function poster(vs, inks, paper, fs) {
   const CH = sheet.rows === 4 ? CW * 0.56 + 42 : Math.min(room, CW * 0.8 + 46), PIC = sheet.rows === 4 ? CW * 0.56 : CH - 46;
   const name = vs.map((v) => v.name).join(', ');
   // with several views the title names them in their colours, which are the cards' colours
-  const title = one ? esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + esc(v.name) + '</span>').join(', ');
+  // a view's thumbnail (a flag) stands just before its name, a little taller than the letters (asked for, Nov 2026)
+  const th = (v) => (v.flag ? '<img class="th" crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '');
+  const title = one ? th(vs[0]) + esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + th(v) + esc(v.name) + '</span>').join(', ');
   const first = Math.min(...vs.map((v) => v.first)), last = vs.every((v) => v.last != null) ? Math.max(...vs.map((v) => v.last)) : null;
   const yearsOf = (e) => (e.end != null && e.end !== e.y ? (rev ? yearText(e.end) + ' – ' + yearText(e.y) : yearText(e.y) + ' – ' + yearText(e.end)) : yearText(e.y));
   let at = 0;
