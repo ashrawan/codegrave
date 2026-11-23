@@ -650,6 +650,16 @@ async function start() {
     relay(); });
   $('save').disabled = false;
   $('save').addEventListener('click', () => download(sel.value, fm.value));
+  // The two menus: Layout (the shape of the document) and Text (how it reads). Each names its choices on its button,
+  // and opening one closes the other.
+  const sums = () => {
+    $('layout-s').textContent = fm.options[fm.selectedIndex].text + ' · ' + sel.options[sel.selectedIndex]?.text.replace(' (US)', '') + ' · ' + (ord.value === 'new' ? 'Backward' : 'Forward');
+    $('text-s').textContent = (fo.options[fo.selectedIndex]?.text || '').replace(' (default)', '') + ' · ' + sz.value + '%';
+  };
+  for (const ev of ['change', 'input']) $('tools').addEventListener(ev, () => setTimeout(sums));
+  for (const d of document.querySelectorAll('#tools .menu')) d.addEventListener('toggle', () => { if (d.open) for (const o of document.querySelectorAll('#tools .menu')) if (o !== d) o.open = false; });
+  document.addEventListener('click', (e) => { if (!e.target.closest('#tools .menu')) for (const o of document.querySelectorAll('#tools .menu')) o.open = false; });
+  sums();
   document.body.dataset.done = '1';
 }
 if (typeof document !== 'undefined') start().catch((err) => { $('msg').textContent = 'Something went wrong: ' + err.message; });

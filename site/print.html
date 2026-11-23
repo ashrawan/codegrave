@@ -17,12 +17,14 @@
 <div id="tools">
   <a class="logo" href="./">codegrave</a>
   <span class="msg" id="msg" role="status">Preparing the pages…</span>
-  <label>Template <select id="fmt"><option value="book">Book</option><option value="poster">Poster</option></select></label>
-  <details id="opts"><summary>Export options</summary><div class="opts">
-    <label>Timeline <select id="order"><option value="old">Forward (past to today)</option><option value="new">Backward (today to past)</option></select></label>
+  <details id="layout" class="menu"><summary><span class="k">Layout</span> <span id="layout-s"></span></summary><div class="opts">
+    <label>Template <select id="fmt"><option value="poster">Poster</option><option value="book">Book</option></select></label>
     <label>Paper <select id="paper"><option value="a4">A4</option><option value="letter">Letter (US)</option></select></label>
+    <label>Timeline <select id="order"><option value="old">Forward (past to today)</option><option value="new">Backward (today to past)</option></select></label>
+  </div></details>
+  <details id="text" class="menu"><summary><span class="k">Text</span> <span id="text-s"></span></summary><div class="opts">
     <label>Font <select id="font"></select></label>
-    <label>Text size <span class="size"><span class="a1">A</span><input id="size" type="range" min="60" max="150" step="10" value="100" aria-label="Text size"><span class="a2">A</span><output id="size-v">100%</output></span></label>
+    <label>Size <span class="size"><span class="a1">A</span><input id="size" type="range" min="60" max="150" step="10" value="100" aria-label="Text size"><span class="a2">A</span><output id="size-v">100%</output></span></label>
   </div></details>
   <button id="save" type="button" disabled>Download PDF</button>
 </div>
