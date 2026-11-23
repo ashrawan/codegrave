@@ -1,0 +1,54 @@
+{
+  "id": "mikhail-baryshnikov",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Mikhail Baryshnikov",
+      "from": "1948"
+    }
+  ],
+  "summary": "Ballet dancer born in Riga.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q295420",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-01-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "latvia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mikhail Baryshnikov (Q295420)",
+      "url": "https://www.wikidata.org/wiki/Q295420",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mikhail Baryshnikov",
+      "url": "https://en.wikipedia.org/wiki/Mikhail_Baryshnikov",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Mikhail_Baryshnikov.jpg/500px-Mikhail_Baryshnikov.jpg",
+    "alt": "Mikhail Baryshnikov",
+    "credit": "Saeima",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mikhail_Baryshnikov.jpg"
+  }
+}

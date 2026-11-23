@@ -1,0 +1,61 @@
+{
+  "id": "samoa",
+  "name": "Samoa",
+  "description": "Samoa from the Lapita voyagers to the Tui Manu'a and fa'a Samoa, German and New Zealand rule, the Mau movement and independence in 1962.",
+  "category": "places",
+  "tags": [
+    "samoa",
+    "apia",
+    "pacific",
+    "polynesia"
+  ],
+  "entries": [
+    "lapita-culture",
+    "polynesian-navigation",
+    "apia",
+    "robert-louis-stevenson",
+    "german-samoa",
+    "spanish-flu",
+    "fiame-naomi-mataafa",
+    "samoa",
+    "dwayne-johnson",
+    "samoa-date-line"
+  ],
+  "checkpoints": [
+    {
+      "id": "polynesians",
+      "name": "Polynesians",
+      "from": -1000,
+      "to": 1899,
+      "note": "Samoa was settled some 3,000 years ago and became a heart of Polynesia."
+    },
+    {
+      "id": "german-and-new-zealand-rule",
+      "name": "German and New Zealand rule",
+      "from": 1900,
+      "to": 1961,
+      "note": "Germany took the western islands in 1900; New Zealand took them in 1914, and the Mau movement began."
+    },
+    {
+      "id": "independent-samoa",
+      "name": "Independent Samoa",
+      "from": 1962,
+      "to": 2026,
+      "note": "Samoa became independent in 1962, the first in the Pacific."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Flag_of_Samoa.svg/330px-Flag_of_Samoa.svg.png",
+    "alt": "Flag of Samoa",
+    "credit": "Original: Malietoa Tanumafili II and Tupua Tamasese Meaʻole Vector: See the file history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Samoa.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a6/Samoa_Tula%CA%BBi.ogg/Samoa_Tula%CA%BBi.ogg.mp3",
+    "title": "The Banner of Freedom",
+    "credit": "Sauni Iiga Kuresa",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samoa_Tula%CA%BBi.ogg"
+  }
+}

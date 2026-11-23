@@ -1,0 +1,51 @@
+{
+  "id": "sinamale-bridge",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Sinamalé Bridge",
+      "from": "2018"
+    }
+  ],
+  "summary": "The bridge of 2018 linking Malé to the airport island.",
+  "wikidata": "Q39045567",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-08-30",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "maldives"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sinamalé Bridge (Q39045567)",
+      "url": "https://www.wikidata.org/wiki/Q39045567",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sinamalé Bridge",
+      "url": "https://en.wikipedia.org/wiki/Sinamalé_Bridge",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Sinamal%C3%A9_Bridge_immediately_after_completion.jpg/500px-Sinamal%C3%A9_Bridge_immediately_after_completion.jpg",
+    "alt": "Sinamalé Bridge",
+    "credit": "Panda 51",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sinamal%C3%A9_Bridge_immediately_after_completion.jpg"
+  }
+}

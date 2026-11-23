@@ -1,0 +1,51 @@
+{
+  "id": "honduras",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Honduras",
+      "from": "1821"
+    }
+  ],
+  "summary": "A Central American country with coasts on the Caribbean and the Pacific, independent since 1821.",
+  "wikidata": "Q783",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Honduras (Q783)",
+      "url": "https://www.wikidata.org/wiki/Q783",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Honduras",
+      "url": "https://en.wikipedia.org/wiki/Honduras",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Copan_sculpture.jpg/500px-Copan_sculpture.jpg",
+    "alt": "Honduras",
+    "credit": "Adalberto Hernandez Vega from Copan Ruinas, Honduras",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Copan_sculpture.jpg"
+  }
+}

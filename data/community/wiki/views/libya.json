@@ -1,0 +1,75 @@
+{
+  "id": "libya",
+  "name": "Libya",
+  "description": "Libya from Greek Cyrene and Roman Leptis Magna to the Ottomans, Italy, a kingdom, Gaddafi's rule and the war since 2011.",
+  "category": "places",
+  "tags": [
+    "libya",
+    "tripoli",
+    "benghazi",
+    "sahara",
+    "gaddafi"
+  ],
+  "entries": [
+    "tadrart-acacus",
+    "silphium",
+    "leptis-magna",
+    "tripoli",
+    "cyrene",
+    "septimius-severus",
+    "omar-mukhtar",
+    "idris-of-libya",
+    "italian-libya",
+    "muammar-gaddafi",
+    "libya",
+    "1969-libyan-coup-detat",
+    "great-man-made-river",
+    "libyan-civil-war-2011",
+    "second-libyan-civil-war",
+    "libya-floods-2023"
+  ],
+  "checkpoints": [
+    {
+      "id": "greeks-romans-and-arabs",
+      "name": "Greeks, Romans and Arabs",
+      "from": -12000,
+      "to": 1550,
+      "note": "The Sahara's rock art, Greek Cyrene, Phoenician Tripoli and Roman Leptis Magna. Arabs came in the 600s."
+    },
+    {
+      "id": "ottoman-and-italian-rule",
+      "name": "Ottoman and Italian rule",
+      "from": 1551,
+      "to": 1950,
+      "note": "The Ottomans ruled from 1551. Italy invaded in 1911, and Omar Mukhtar led the resistance."
+    },
+    {
+      "id": "kingdom-and-gaddafi",
+      "name": "Kingdom and Gaddafi",
+      "from": 1951,
+      "to": 2010,
+      "note": "Libya became independent in 1951 under King Idris. Oil was found, and Gaddafi ruled from 1969."
+    },
+    {
+      "id": "war",
+      "name": "War",
+      "from": 2011,
+      "to": 2026,
+      "note": "Gaddafi fell in 2011. Libya has been split between rival governments, and the floods of 2023 destroyed much of Derna."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Libya.svg/330px-Flag_of_Libya.svg.png",
+    "alt": "Flag of Libya",
+    "credit": "Various The SVG code is valid. This vector image was created with a text editor.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Libya.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1d/Libya%2C_Libya%2C_Libya_instrumental.ogg/Libya%2C_Libya%2C_Libya_instrumental.ogg.mp3",
+    "title": "Libya, Libya, Libya",
+    "credit": "https://web.archive.org/web/20140827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Libya,_Libya,_Libya_instrumental.ogg"
+  }
+}

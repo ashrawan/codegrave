@@ -1,0 +1,47 @@
+{
+  "id": "north-macedonia-nato",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "North Macedonia joins NATO",
+      "from": "2020"
+    }
+  ],
+  "summary": "North Macedonia joined NATO in 2020.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q112717000",
+  "events": [
+    {
+      "type": "born",
+      "date": "2020-03-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "north-macedonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: North Macedonia joins NATO (Q112717000)",
+      "url": "https://www.wikidata.org/wiki/Q112717000",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: North Macedonia–NATO relations",
+      "url": "https://en.wikipedia.org/wiki/North_Macedonia–NATO_relations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

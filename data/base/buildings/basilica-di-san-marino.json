@@ -1,0 +1,54 @@
+{
+  "id": "basilica-di-san-marino",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Basilica di San Marino",
+      "from": "1838"
+    }
+  ],
+  "summary": "The church of the patron saint, built in 1838.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q810102",
+  "events": [
+    {
+      "type": "born",
+      "date": "1838",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "san-marino"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Basilica di San Marino (Q810102)",
+      "url": "https://www.wikidata.org/wiki/Q810102",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Basilica di San Marino",
+      "url": "https://en.wikipedia.org/wiki/Basilica_di_San_Marino",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Contrada_della_Pieve%2C_1%2C_Citt%C3%A0_di_San_Marino%2C_San_Marino_-_panoramio.jpg/500px-Contrada_della_Pieve%2C_1%2C_Citt%C3%A0_di_San_Marino%2C_San_Marino_-_panoramio.jpg",
+    "alt": "Basilica di San Marino",
+    "credit": "trolvag",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Contrada_della_Pieve,_1,_Citt%C3%A0_di_San_Marino,_San_Marino_-_panoramio.jpg"
+  }
+}

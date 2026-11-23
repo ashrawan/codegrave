@@ -1,0 +1,71 @@
+{
+  "id": "rwanda",
+  "name": "Rwanda",
+  "description": "Rwanda from its kingdom to German and Belgian rule, independence in 1962, the genocide against the Tutsi in 1994 and the rebuilding since.",
+  "category": "places",
+  "tags": [
+    "rwanda",
+    "kigali",
+    "great lakes",
+    "africa"
+  ],
+  "entries": [
+    "kingdom-of-rwanda",
+    "kigeli-iv-rwabugiri",
+    "german-east-africa",
+    "kigali",
+    "ruanda-urundi",
+    "volcanoes-national-park",
+    "dian-fossey",
+    "paul-kagame",
+    "rwandan-revolution",
+    "rwanda",
+    "rwandan-civil-war",
+    "rwandan-genocide",
+    "kigali-genocide-memorial"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-kingdom",
+      "name": "The kingdom",
+      "from": 1350,
+      "to": 1896,
+      "note": "The kings of Rwanda ruled the hills for centuries."
+    },
+    {
+      "id": "colonial-rule",
+      "name": "Colonial rule",
+      "from": 1897,
+      "to": 1961,
+      "note": "Germany and then Belgium ruled, and Belgium made Hutu and Tutsi into fixed groups on identity cards."
+    },
+    {
+      "id": "independence-and-genocide",
+      "name": "Independence and genocide",
+      "from": 1962,
+      "to": 1994,
+      "note": "Rwanda became independent in 1962. In 1994 some 800,000 people, mostly Tutsi, were killed in a hundred days."
+    },
+    {
+      "id": "rebuilding",
+      "name": "Rebuilding",
+      "from": 1995,
+      "to": 2026,
+      "note": "The RPF ended the genocide, and Rwanda has rebuilt under Kagame."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Flag_of_Rwanda.svg/330px-Flag_of_Rwanda.svg.png",
+    "alt": "Flag of Rwanda",
+    "credit": "Original: Unknown Vector: Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Rwanda.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0e/Hymne_National_du_Rwanda.ogg/Hymne_National_du_Rwanda.ogg.mp3",
+    "title": "Rwanda Nziza",
+    "credit": "United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Hymne_National_du_Rwanda.ogg"
+  }
+}

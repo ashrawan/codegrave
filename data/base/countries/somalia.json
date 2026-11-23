@@ -1,0 +1,51 @@
+{
+  "id": "somalia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Somalia",
+      "from": "1960"
+    }
+  ],
+  "summary": "A country on the Horn of Africa with the longest coastline of mainland Africa, independent since 1960.",
+  "wikidata": "Q1045",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Somalia (Q1045)",
+      "url": "https://www.wikidata.org/wiki/Q1045",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Somalia",
+      "url": "https://en.wikipedia.org/wiki/Somalia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Flag_of_Somalia.svg/500px-Flag_of_Somalia.svg.png",
+    "alt": "Somalia",
+    "credit": "see upload history",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Somalia.svg"
+  }
+}

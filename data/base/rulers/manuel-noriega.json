@@ -1,0 +1,59 @@
+{
+  "id": "manuel-noriega",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Manuel Noriega",
+      "from": "1934"
+    }
+  ],
+  "summary": "Military ruler removed by the United States in 1989.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q192667",
+  "events": [
+    {
+      "type": "born",
+      "date": "1934-02-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "panama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manuel Noriega (Q192667)",
+      "url": "https://www.wikidata.org/wiki/Q192667",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manuel Noriega",
+      "url": "https://en.wikipedia.org/wiki/Manuel_Noriega",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Manuel_Noriega_mug_shot.jpg",
+    "alt": "Manuel Noriega",
+    "credit": "U.S. Marshals Service in Miami, Florida",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Manuel_Noriega_mug_shot.jpg"
+  }
+}

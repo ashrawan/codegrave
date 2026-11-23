@@ -1,0 +1,51 @@
+{
+  "id": "monrovia",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Monrovia",
+      "from": "1822"
+    }
+  ],
+  "summary": "The capital, named after the American president James Monroe.",
+  "wikidata": "Q3748",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liberia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Monrovia (Q3748)",
+      "url": "https://www.wikidata.org/wiki/Q3748",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Monrovia",
+      "url": "https://en.wikipedia.org/wiki/Monrovia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Liberia%2C_Africa_-_panoramio_%28256%29.jpg/500px-Liberia%2C_Africa_-_panoramio_%28256%29.jpg",
+    "alt": "Monrovia",
+    "credit": "blk24ga",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Liberia,_Africa_-_panoramio_(256).jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "italian-somaliland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Italian Somaliland",
+      "from": "1880"
+    }
+  ],
+  "summary": "Italy's colony in the south.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q319984",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1936",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "somalia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Italian Somaliland (Q319984)",
+      "url": "https://www.wikidata.org/wiki/Q319984",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Italian Somaliland",
+      "url": "https://en.wikipedia.org/wiki/Italian_Somaliland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

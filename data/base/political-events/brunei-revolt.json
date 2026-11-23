@@ -1,0 +1,59 @@
+{
+  "id": "brunei-revolt",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Brunei revolt",
+      "from": "1962"
+    }
+  ],
+  "summary": "The revolt of December 1962 against the sultan, put down by British troops.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3299246",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-12-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1962-12-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brunei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brunei revolt (Q3299246)",
+      "url": "https://www.wikidata.org/wiki/Q3299246",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brunei revolt",
+      "url": "https://en.wikipedia.org/wiki/Brunei_revolt",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/THE_BRITISH_ARMY_IN_BRUNEI%2C_JANUARY_1963.jpg/500px-THE_BRITISH_ARMY_IN_BRUNEI%2C_JANUARY_1963.jpg",
+    "alt": "Brunei revolt",
+    "credit": "British Army official photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:THE_BRITISH_ARMY_IN_BRUNEI,_JANUARY_1963.jpg"
+  }
+}

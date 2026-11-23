@@ -1,0 +1,47 @@
+{
+  "id": "jonestown",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Jonestown",
+      "from": "1974"
+    }
+  ],
+  "summary": "The settlement where more than nine hundred followers of an American cult died in 1978.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q985684",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guyana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jonestown (Q985684)",
+      "url": "https://www.wikidata.org/wiki/Q985684",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jonestown",
+      "url": "https://en.wikipedia.org/wiki/Jonestown",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

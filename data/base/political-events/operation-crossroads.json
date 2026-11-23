@@ -1,0 +1,52 @@
+{
+  "id": "operation-crossroads",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Operation Crossroads",
+      "from": "1946"
+    }
+  ],
+  "summary": "The first atomic tests at Bikini, in 1946.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q569545",
+  "events": [
+    {
+      "type": "born",
+      "date": "1946-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1946-07-25",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "marshall-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Operation Crossroads (Q569545)",
+      "url": "https://www.wikidata.org/wiki/Q569545",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Operation Crossroads",
+      "url": "https://en.wikipedia.org/wiki/Operation_Crossroads",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,53 @@
+{
+  "id": "saint-kitts-and-nevis",
+  "name": "Saint Kitts and Nevis",
+  "description": "Saint Kitts and Nevis from the Kalinago to the first English and French settlements in the Caribbean, sugar, independence in 1983 and Alexander Hamilton.",
+  "category": "places",
+  "tags": [
+    "saint kitts",
+    "nevis",
+    "caribbean",
+    "basseterre"
+  ],
+  "entries": [
+    "kalinago-genocide",
+    "basseterre",
+    "brimstone-hill-fortress-national-park",
+    "alexander-hamilton",
+    "robert-llewellyn-bradshaw",
+    "kennedy-simmonds",
+    "kim-collins",
+    "terrance-drew",
+    "saint-kitts-and-nevis"
+  ],
+  "checkpoints": [
+    {
+      "id": "sugar-islands",
+      "name": "Sugar islands",
+      "from": 1623,
+      "to": 1982,
+      "note": "English settlers arrived in 1623, the first in the Caribbean, then the French. Sugar was grown by enslaved Africans."
+    },
+    {
+      "id": "independent",
+      "name": "Independent",
+      "from": 1983,
+      "to": 2026,
+      "note": "The islands became independent in 1983."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Saint_Kitts_and_Nevis.svg/330px-Flag_of_Saint_Kitts_and_Nevis.svg.png",
+    "alt": "Flag of Saint Kitts and Nevis",
+    "credit": "Edrice Lewis",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Saint_Kitts_and_Nevis.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/3f/United_States_Navy_Band_-_O_Land_of_Beauty.ogg/United_States_Navy_Band_-_O_Land_of_Beauty.ogg.mp3",
+    "title": "O Land of Beauty!",
+    "credit": "https://web.archive.org/web/20030827154715/http://www.navyband.navy.mil/anthems/all_countries.htm https://web.archive.or",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_O_Land_of_Beauty.ogg"
+  }
+}

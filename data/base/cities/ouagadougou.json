@@ -1,0 +1,51 @@
+{
+  "id": "ouagadougou",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Ouagadougou",
+      "from": "1441"
+    }
+  ],
+  "summary": "The capital, once the seat of the Mossi emperor, the Mogho Naba.",
+  "wikidata": "Q3777",
+  "events": [
+    {
+      "type": "born",
+      "date": "1441",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burkina-faso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ouagadougou (Q3777)",
+      "url": "https://www.wikidata.org/wiki/Q3777",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ouagadougou",
+      "url": "https://en.wikipedia.org/wiki/Ouagadougou",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Monument_aux_h%C3%A9ros_nationaux_-_Ouagadougou_-_2024.jpg/500px-Monument_aux_h%C3%A9ros_nationaux_-_Ouagadougou_-_2024.jpg",
+    "alt": "Ouagadougou",
+    "credit": "The black photographer",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Monument_aux_h%C3%A9ros_nationaux_-_Ouagadougou_-_2024.jpg"
+  }
+}

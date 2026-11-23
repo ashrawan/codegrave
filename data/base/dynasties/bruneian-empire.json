@@ -1,0 +1,52 @@
+{
+  "id": "bruneian-empire",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Bruneian Empire",
+      "from": "1368"
+    }
+  ],
+  "summary": "The sultanate that at its height in the 1500s ruled the coasts of Borneo and parts of the Philippines.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q887803",
+  "events": [
+    {
+      "type": "born",
+      "date": "1368",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "brunei"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bruneian Empire (Q887803)",
+      "url": "https://www.wikidata.org/wiki/Q887803",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bruneian Empire",
+      "url": "https://en.wikipedia.org/wiki/Bruneian_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

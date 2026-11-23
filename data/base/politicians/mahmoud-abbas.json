@@ -1,0 +1,54 @@
+{
+  "id": "mahmoud-abbas",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Mahmoud Abbas",
+      "from": "1935"
+    }
+  ],
+  "summary": "President of the Palestinian Authority since 2005.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q127998",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-11-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mahmoud Abbas (Q127998)",
+      "url": "https://www.wikidata.org/wiki/Q127998",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mahmoud Abbas",
+      "url": "https://en.wikipedia.org/wiki/Mahmoud_Abbas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Mahmoud_Abbas_2026-01-22.jpg/500px-Mahmoud_Abbas_2026-01-22.jpg",
+    "alt": "Mahmoud Abbas",
+    "credit": "kremlin.ru",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mahmoud_Abbas_2026-01-22.jpg"
+  }
+}

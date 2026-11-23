@@ -1,0 +1,59 @@
+{
+  "id": "saint-marinus",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Saint Marinus",
+      "from": "0275"
+    }
+  ],
+  "summary": "The stonemason who, the story goes, founded the community on Monte Titano in 301.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q544981",
+  "events": [
+    {
+      "type": "born",
+      "date": "0275",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0366-09-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "san-marino"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint Marinus (Q544981)",
+      "url": "https://www.wikidata.org/wiki/Q544981",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint Marinus",
+      "url": "https://en.wikipedia.org/wiki/Saint_Marinus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/San_Marino_che_benedice_la_citt%C3%A0%2C_Bartolomeo_Gennari.jpg/500px-San_Marino_che_benedice_la_citt%C3%A0%2C_Bartolomeo_Gennari.jpg",
+    "alt": "Saint Marinus",
+    "credit": "Bartolomeo Gennari",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:San_Marino_che_benedice_la_citt%C3%A0,_Bartolomeo_Gennari.jpg"
+  }
+}

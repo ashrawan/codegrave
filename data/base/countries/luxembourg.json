@@ -1,0 +1,51 @@
+{
+  "id": "luxembourg",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Luxembourg",
+      "from": "0963"
+    }
+  ],
+  "summary": "A small grand duchy between Belgium, France and Germany, which grew from a castle bought in 963.",
+  "wikidata": "Q32",
+  "events": [
+    {
+      "type": "born",
+      "date": "0963",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Luxembourg (Q32)",
+      "url": "https://www.wikidata.org/wiki/Q32",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luxembourg",
+      "url": "https://en.wikipedia.org/wiki/Luxembourg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Luxemburg.jpg/500px-Luxemburg.jpg",
+    "alt": "Luxembourg",
+    "credit": "Streppel",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Luxemburg.jpg"
+  }
+}

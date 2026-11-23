@@ -1,0 +1,47 @@
+{
+  "id": "samoa-date-line",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Samoa skips a day",
+      "from": "2011"
+    }
+  ],
+  "summary": "Samoa moved across the date line at the end of 2011, skipping 30 December.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q131389",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011-12-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "samoa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samoa skips a day (Q131389)",
+      "url": "https://www.wikidata.org/wiki/Q131389",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: International Date Line",
+      "url": "https://en.wikipedia.org/wiki/International_Date_Line",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

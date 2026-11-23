@@ -1,0 +1,51 @@
+{
+  "id": "conakry",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Conakry",
+      "from": "1887"
+    }
+  ],
+  "summary": "The capital, on a peninsula in the Atlantic.",
+  "wikidata": "Q3733",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Conakry (Q3733)",
+      "url": "https://www.wikidata.org/wiki/Q3733",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Conakry",
+      "url": "https://en.wikipedia.org/wiki/Conakry",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Un_aper%C3%A7u_de_la_ville_de_conakry.jpg/500px-Un_aper%C3%A7u_de_la_ville_de_conakry.jpg",
+    "alt": "Conakry",
+    "credit": "Alpha hmd",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Un_aper%C3%A7u_de_la_ville_de_conakry.jpg"
+  }
+}

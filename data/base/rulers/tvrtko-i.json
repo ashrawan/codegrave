@@ -1,0 +1,59 @@
+{
+  "id": "tvrtko-i",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Tvrtko I of Bosnia",
+      "from": "1338"
+    }
+  ],
+  "summary": "The first king of Bosnia, crowned in 1377.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q319605",
+  "events": [
+    {
+      "type": "born",
+      "date": "1338-08-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1391-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bosnia-and-herzegovina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tvrtko I of Bosnia (Q319605)",
+      "url": "https://www.wikidata.org/wiki/Q319605",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tvrtko I of Bosnia",
+      "url": "https://en.wikipedia.org/wiki/Tvrtko_I_of_Bosnia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/4/45/Tvrtko_and_his_brother_Vuk.PNG",
+    "alt": "Tvrtko I of Bosnia",
+    "credit": "Francesco of Milano",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tvrtko_and_his_brother_Vuk.PNG"
+  }
+}

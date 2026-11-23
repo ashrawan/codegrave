@@ -46,7 +46,7 @@ You need [Node 22](https://nodejs.org/). There is nothing to install.
 git clone https://github.com/ashrawan/codegrave.git
 cd codegrave
 node scripts/build.mjs                         # checks data/ and writes site/data/
-python3 -m http.server 8080 --directory site   # serves the page on http://localhost:8080
+node scripts/serve.mjs 8080                    # serves the page on http://localhost:8080
 ```
 
 | Command | What it does |
@@ -56,7 +56,9 @@ python3 -m http.server 8080 --directory site   # serves the page on http://local
 | `node scripts/new.mjs entry <kind> <id> "<Name>" <born-date>` | Starts a new entry file in the base. |
 | `node scripts/new.mjs view <github-name> <id> "<Title>"` | Starts a new view file in your community folder. |
 
-Any static file server works in place of `python3 -m http.server`.
+A plain static file server shows the home page, but not a view's own
+address (`/wiki/<id>`): that needs every unknown path to serve `index.html`,
+as `scripts/serve.mjs` and Netlify do.
 
 ## How to take part
 
@@ -99,7 +101,7 @@ most wanted are built first.
    `data/base/<kind>/`, with sources, following `docs/DATA_RULES.md`.
 4. **Check it.** `node scripts/build.mjs --check` must report 0 errors and
    `node --test` must pass. Open
-   `http://localhost:8080/?views=<your-github-name>/<id>` and look at the
+   `http://localhost:8080/<your-github-name>/<id>` and look at the
    result on a wide screen and a phone-sized window.
 5. **Take screenshots** of the page showing your view: one wide, one narrow.
 6. **Open a pull request** with your folder, any new base entries, and the
@@ -107,7 +109,7 @@ most wanted are built first.
    why it is worth having, and where the facts come from.
 
 Once it is merged, the view is listed in the panel, has its
-own address (`codegrave.com/?views=<your-github-name>/<id>`) and can be put
+own address (`codegrave.com/<your-github-name>/<id>`) and can be put
 beside any other view.
 
 ## Layout of this repository

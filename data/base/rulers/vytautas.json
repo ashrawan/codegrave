@@ -1,0 +1,59 @@
+{
+  "id": "vytautas",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Vytautas",
+      "from": "1350"
+    }
+  ],
+  "summary": "Grand duke under whom Lithuania stretched from the Baltic to the Black Sea.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q218186",
+  "events": [
+    {
+      "type": "born",
+      "date": "1350",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1430-10-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lithuania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vytautas (Q218186)",
+      "url": "https://www.wikidata.org/wiki/Q218186",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vytautas",
+      "url": "https://en.wikipedia.org/wiki/Vytautas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Vytautas_dydysis.jpg/500px-Vytautas_dydysis.jpg",
+    "alt": "Vytautas",
+    "credit": "Jan Matejko",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vytautas_dydysis.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "rai-stones",
+  "category": "money",
+  "names": [
+    {
+      "name": "Rai stones",
+      "from": "1000"
+    }
+  ],
+  "summary": "The great stone discs used as money on Yap.",
+  "wikidata": "Q917019",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "micronesia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rai stones (Q917019)",
+      "url": "https://www.wikidata.org/wiki/Q917019",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rai stones",
+      "url": "https://en.wikipedia.org/wiki/Rai_stones",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Yap_Stone_Money.jpg/500px-Yap_Stone_Money.jpg",
+    "alt": "Rai stones",
+    "credit": "Eric Guinther",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yap_Stone_Money.jpg"
+  }
+}

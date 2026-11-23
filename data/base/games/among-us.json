@@ -1,0 +1,45 @@
+{
+  "id": "among-us",
+  "category": "games",
+  "names": [
+    {
+      "name": "Among Us",
+      "from": "2018"
+    }
+  ],
+  "summary": "A party game of crewmates and hidden impostors that became a global hit during the pandemic.",
+  "wikidata": "Q96417649",
+  "events": [
+    {
+      "type": "born",
+      "date": "2018-06-15",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Among Us (Q96417649)",
+      "url": "https://www.wikidata.org/wiki/Q96417649",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Among Us",
+      "url": "https://en.wikipedia.org/wiki/Among_Us",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Pyrkon_2022_-_Among_Us_cosplay.jpg/500px-Pyrkon_2022_-_Among_Us_cosplay.jpg",
+    "alt": "Among Us",
+    "credit": "Tomasz Molina",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pyrkon_2022_-_Among_Us_cosplay.jpg"
+  }
+}

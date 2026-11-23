@@ -1,0 +1,49 @@
+{
+  "id": "panama-canal-expansion",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Panama Canal expansion project",
+      "from": "2007"
+    }
+  ],
+  "summary": "The new, larger locks opened in 2016.",
+  "wikidata": "Q2702346",
+  "events": [
+    {
+      "type": "born",
+      "date": "2007-09-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2016-06-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "panama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Panama Canal expansion project (Q2702346)",
+      "url": "https://www.wikidata.org/wiki/Q2702346",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Panama Canal expansion project",
+      "url": "https://en.wikipedia.org/wiki/Panama_Canal_expansion_project",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

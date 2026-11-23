@@ -1,0 +1,54 @@
+{
+  "id": "geghard",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Geghard",
+      "from": "1215"
+    }
+  ],
+  "summary": "A monastery cut partly into the rock of a mountain gorge.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q499285",
+  "events": [
+    {
+      "type": "born",
+      "date": "1215",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "armenia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Geghard (Q499285)",
+      "url": "https://www.wikidata.org/wiki/Q499285",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Geghard",
+      "url": "https://en.wikipedia.org/wiki/Geghard",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Monasterio_de_Geghard%2C_Armenia%2C_2016-10-02%2C_DD_63.jpg/500px-Monasterio_de_Geghard%2C_Armenia%2C_2016-10-02%2C_DD_63.jpg",
+    "alt": "Geghard",
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Monasterio_de_Geghard,_Armenia,_2016-10-02,_DD_63.jpg"
+  }
+}

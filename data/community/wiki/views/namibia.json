@@ -1,0 +1,71 @@
+{
+  "id": "namibia",
+  "name": "Namibia",
+  "description": "Namibia from the oldest rock art to German South West Africa and the Herero and Nama genocide, South African rule, independence in 1990 and the Namib.",
+  "category": "places",
+  "tags": [
+    "namibia",
+    "windhoek",
+    "namib",
+    "africa",
+    "desert"
+  ],
+  "entries": [
+    "namib-desert",
+    "apollo-11-cave",
+    "twyfelfontein",
+    "german-south-west-africa",
+    "windhoek",
+    "herero-and-nama-genocide",
+    "kolmanskop",
+    "sam-nujoma",
+    "netumbo-nandi-ndaitwah",
+    "swapo",
+    "south-african-border-war",
+    "namibia"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-artists",
+      "name": "The first artists",
+      "from": -28000,
+      "to": 1883,
+      "note": "San hunters painted the Apollo 11 cave and carved Twyfelfontein. Herero, Nama and Ovambo lived on the land."
+    },
+    {
+      "id": "german-rule",
+      "name": "German rule",
+      "from": 1884,
+      "to": 1914,
+      "note": "Germany seized the land in 1884 and killed most of the Herero and Nama from 1904."
+    },
+    {
+      "id": "south-african-rule",
+      "name": "South African rule",
+      "from": 1915,
+      "to": 1989,
+      "note": "South Africa took the colony in 1915 and brought apartheid. SWAPO fought from 1966."
+    },
+    {
+      "id": "independent-namibia",
+      "name": "Independent Namibia",
+      "from": 1990,
+      "to": 2026,
+      "note": "Namibia became independent in 1990."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/330px-Flag_of_Namibia.svg.png",
+    "alt": "Flag of Namibia",
+    "credit": "SVG by Vzb83~commonswiki et al.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Namibia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/40/Namibia%2C_Land_of_the_Brave_%28OGG%29.ogg/Namibia%2C_Land_of_the_Brave_%28OGG%29.ogg.mp3",
+    "title": "Namibia, Land of the Brave",
+    "credit": "For the anthem who made this: Axali Doëseb (1954 – 27 October 2023)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Namibia,_Land_of_the_Brave_(OGG).ogg"
+  }
+}

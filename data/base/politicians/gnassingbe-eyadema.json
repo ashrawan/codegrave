@@ -1,0 +1,59 @@
+{
+  "id": "gnassingbe-eyadema",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Gnassingbé Eyadéma",
+      "from": "1935"
+    }
+  ],
+  "summary": "Soldier who ruled from 1967 to 2005.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q155385",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-12-26",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-02-05",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "togo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gnassingbé Eyadéma (Q155385)",
+      "url": "https://www.wikidata.org/wiki/Q155385",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gnassingbé Eyadéma",
+      "url": "https://en.wikipedia.org/wiki/Gnassingbé_Eyadéma",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Gnassingbe_Eyadema_detail1_DF-SC-84-10025.jpg/500px-Gnassingbe_Eyadema_detail1_DF-SC-84-10025.jpg",
+    "alt": "Gnassingbé Eyadéma",
+    "credit": "SrA Felicia Wilson",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gnassingbe_Eyadema_detail1_DF-SC-84-10025.jpg"
+  }
+}

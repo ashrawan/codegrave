@@ -1,0 +1,52 @@
+{
+  "id": "south-sudanese-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "South Sudanese Civil War",
+      "from": "2013"
+    }
+  ],
+  "summary": "The war of 2013 to 2020 between the president and his deputy.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q15353665",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-12-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "south-sudan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: South Sudanese Civil War (Q15353665)",
+      "url": "https://www.wikidata.org/wiki/Q15353665",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: South Sudanese Civil War",
+      "url": "https://en.wikipedia.org/wiki/South_Sudanese_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

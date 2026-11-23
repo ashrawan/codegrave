@@ -1,0 +1,45 @@
+{
+  "id": "dota-2",
+  "category": "games",
+  "names": [
+    {
+      "name": "Dota 2",
+      "from": "2013"
+    }
+  ],
+  "summary": "Valve's team battle game, one of the most played games on Steam and the biggest prize pools in esports.",
+  "wikidata": "Q771541",
+  "events": [
+    {
+      "type": "born",
+      "date": "2013-07-09",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Dota 2 (Q771541)",
+      "url": "https://www.wikidata.org/wiki/Q771541",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dota 2",
+      "url": "https://en.wikipedia.org/wiki/Dota_2",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Dota-2-simplified-logo.svg/500px-Dota-2-simplified-logo.svg.png",
+    "alt": "Dota 2",
+    "credit": "Good Will Hunting",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dota-2-simplified-logo.svg"
+  }
+}

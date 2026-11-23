@@ -1,0 +1,44 @@
+{
+  "id": "eswatini",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Eswatini",
+      "from": "1968"
+    }
+  ],
+  "summary": "A small kingdom in southern Africa, formerly Swaziland, independent from Britain since 1968.",
+  "wikidata": "Q1050",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-09-06",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eswatini (Q1050)",
+      "url": "https://www.wikidata.org/wiki/Q1050",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eswatini",
+      "url": "https://en.wikipedia.org/wiki/Eswatini",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

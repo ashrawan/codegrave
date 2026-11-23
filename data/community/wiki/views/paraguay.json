@@ -1,0 +1,62 @@
+{
+  "id": "paraguay",
+  "name": "Paraguay",
+  "description": "Paraguay from the Guaraní and the Jesuit missions to independence, Francia, the war of the Triple Alliance, the Chaco War, Stroessner and Itaipú.",
+  "category": "places",
+  "tags": [
+    "paraguay",
+    "asuncion",
+    "guarani",
+    "south america"
+  ],
+  "entries": [
+    "asuncion",
+    "jesuit-missions-of-la-santisima-trinidad-de-parana-and-jesus-de-tavarangue",
+    "jose-gaspar-rodriguez-de-francia",
+    "paraguay",
+    "francisco-solano-lopez",
+    "war-of-the-triple-alliance",
+    "alfredo-stroessner",
+    "augusto-roa-bastos",
+    "chaco-war",
+    "itaipu-dam",
+    "santiago-pena"
+  ],
+  "checkpoints": [
+    {
+      "id": "guaran-and-jesuits",
+      "name": "Guaraní and Jesuits",
+      "from": 1537,
+      "to": 1810,
+      "note": "Spain founded Asunción in 1537. Jesuit missions gathered the Guaraní until 1767."
+    },
+    {
+      "id": "independence-and-war",
+      "name": "Independence and war",
+      "from": 1811,
+      "to": 1935,
+      "note": "Paraguay won independence in 1811. The war of 1864 to 1870 ruined it, and it won the Chaco War with Bolivia in 1935."
+    },
+    {
+      "id": "stroessner-and-after",
+      "name": "Stroessner and after",
+      "from": 1936,
+      "to": 2026,
+      "note": "Stroessner ruled from 1954 to 1989. Itaipú opened in 1984."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Paraguay.svg/330px-Flag_of_Paraguay.svg.png",
+    "alt": "Flag of Paraguay",
+    "credit": "Republica del Paraguay",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Paraguay.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a6/Paraguayan_National_Anthem.oga/Paraguayan_National_Anthem.oga.mp3",
+    "title": "national anthem of Paraguay",
+    "credit": "https://web-beta.archive.org/web/20080913132321/http://www.navyband.navy.mil:80/anthems/national_anthems.htm https://web",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Paraguayan_National_Anthem.oga"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "south-africa",
+  "name": "South Africa",
+  "description": "South Africa from the Cradle of Humankind to the Zulu kingdom, colonial rule, diamonds and gold, apartheid, Mandela and democracy.",
+  "category": "places",
+  "tags": [
+    "south africa",
+    "cape town",
+    "johannesburg",
+    "mandela",
+    "apartheid",
+    "rainbow nation"
+  ],
+  "entries": [
+    "blombos-cave",
+    "mapungubwe",
+    "robben-island",
+    "cape-town",
+    "zulu-kingdom",
+    "great-trek",
+    "kimberley-mine",
+    "anglo-zulu-war",
+    "johannesburg",
+    "de-beers",
+    "second-boer-war",
+    "south-africa",
+    "african-national-congress",
+    "nelson-mandela",
+    "kruger-national-park",
+    "desmond-tutu",
+    "f-w-de-klerk",
+    "jacob-zuma",
+    "thabo-mbeki",
+    "steve-biko",
+    "apartheid",
+    "cyril-ramaphosa",
+    "sharpeville-massacre",
+    "rivonia-trial",
+    "soweto-uprising",
+    "1994-south-african-general-election",
+    "rugby-world-cup-1995",
+    "truth-and-reconciliation-commission",
+    "cradle-of-humankind",
+    "world-cup-2010",
+    "2024-south-african-general-election"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-first-people",
+      "name": "The first people",
+      "from": -3000000,
+      "to": 1651,
+      "note": "Some of the earliest human ancestors lived here. San hunters painted rocks, and Bantu farmers built kingdoms such as Mapungubwe."
+    },
+    {
+      "id": "colony",
+      "name": "Colony",
+      "from": 1652,
+      "to": 1947,
+      "note": "The Dutch founded Cape Town in 1652. Britain took the Cape, the Zulu rose under Shaka, and diamonds and gold brought war and wealth."
+    },
+    {
+      "id": "apartheid",
+      "name": "Apartheid",
+      "from": 1948,
+      "to": 1989,
+      "note": "The National Party made apartheid law in 1948. Resistance grew through Sharpeville and Soweto, and Mandela was jailed on Robben Island."
+    },
+    {
+      "id": "democracy",
+      "name": "Democracy",
+      "from": 1990,
+      "to": 2026,
+      "note": "Mandela walked free in 1990 and was elected president in 1994. The country hosted the World Cup in 2010."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Flag_of_South_Africa.svg/330px-Flag_of_South_Africa.svg.png",
+    "alt": "Flag of South Africa",
+    "credit": "Flag design by Frederick Brownell, image by Wikimedia Commons users",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_South_Africa.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1d/South_African_national_anthem.oga/South_African_national_anthem.oga.mp3",
+    "title": "national anthem of Mzansi",
+    "credit": "https://web.archive.org/web/20160304095955/http://www.navyband.navy.mil/Anthems/ANTHEMS/South%20Africa.mp3 https://web.a",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:South_African_national_anthem.oga"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "senegambia-confederation",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Senegambia Confederation",
+      "from": "1982"
+    }
+  ],
+  "summary": "The union with Senegal, 1982 to 1989.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q828443",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-02-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-08-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Senegambia Confederation (Q828443)",
+      "url": "https://www.wikidata.org/wiki/Q828443",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Senegambia Confederation",
+      "url": "https://en.wikipedia.org/wiki/Senegambia_Confederation",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

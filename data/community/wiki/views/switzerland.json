@@ -1,0 +1,84 @@
+{
+  "id": "switzerland",
+  "name": "Switzerland",
+  "description": "Switzerland from the Old Swiss Confederacy to the Reformation, neutrality, the Red Cross, banks and the home of world bodies.",
+  "category": "places",
+  "tags": [
+    "switzerland",
+    "geneva",
+    "zurich",
+    "alps",
+    "red cross",
+    "neutrality"
+  ],
+  "entries": [
+    "switzerland",
+    "federal-charter-of-1291",
+    "old-swiss-confederacy",
+    "battle-of-morgarten",
+    "huldrych-zwingli",
+    "john-calvin",
+    "jean-jacques-rousseau",
+    "swiss-neutrality",
+    "henry-dunant",
+    "swiss-federal-constitution",
+    "rodolphe-lindt",
+    "international-committee-of-the-red-cross",
+    "first-ascent-of-the-matterhorn",
+    "nestle",
+    "albert-einstein",
+    "le-corbusier",
+    "international-olympic-committee",
+    "fifa",
+    "rolex",
+    "league-of-nations",
+    "bank-for-international-settlements",
+    "united-nations-geneva",
+    "world-health-organization",
+    "world-cup-1954",
+    "cern",
+    "world-economic-forum",
+    "swiss-womens-suffrage",
+    "roger-federer",
+    "large-hadron-collider",
+    "gotthard-base-tunnel",
+    "acquisition-of-credit-suisse-by-ubs"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-confederacy",
+      "name": "The confederacy",
+      "from": 1291,
+      "to": 1797,
+      "note": "Three valleys swore an alliance in 1291, and other cantons joined. The Swiss beat Habsburg armies, Zwingli and Calvin led the Reformation in Zürich and Geneva, and the confederacy became independent in 1648."
+    },
+    {
+      "id": "the-federal-state",
+      "name": "The federal state",
+      "from": 1798,
+      "to": 1918,
+      "note": "Napoleon invaded in 1798. The powers recognised Swiss neutrality in 1815, a federal state was founded in 1848, and Dunant founded the Red Cross in Geneva."
+    },
+    {
+      "id": "neutral-switzerland",
+      "name": "Neutral Switzerland",
+      "from": 1919,
+      "to": 2026,
+      "note": "Geneva became the home of the League of Nations and later of many world bodies. Switzerland stayed out of both world wars, grew rich on banks, watches and chemicals, and gave women the vote in 1971."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Switzerland.svg/330px-Flag_of_Switzerland.svg.png",
+    "alt": "Flag of Switzerland",
+    "credit": "Original: Unknown Vector: User:Marc Mongenet Credits: User:-xfi- User:Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Switzerland.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/00/Swiss_Psalm.ogg/Swiss_Psalm.ogg.mp3",
+    "title": "Swiss Psalm",
+    "credit": "http://web.archive.org/web/1/www.navyband.navy.mil/anthems/all_countries.htm (converted to Ogg Vorbis file format by upl",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Swiss_Psalm.ogg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "saint-lucia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Saint Lucia",
+      "from": "1979"
+    }
+  ],
+  "summary": "An island of the eastern Caribbean, fought over by France and Britain, independent since 1979.",
+  "wikidata": "Q760",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-02-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint Lucia (Q760)",
+      "url": "https://www.wikidata.org/wiki/Q760",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint Lucia",
+      "url": "https://en.wikipedia.org/wiki/Saint_Lucia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/6/66/Saint_Lucia.png",
+    "alt": "Saint Lucia",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Saint_Lucia.png"
+  }
+}

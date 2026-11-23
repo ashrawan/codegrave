@@ -1,0 +1,56 @@
+{
+  "id": "gonur-depe",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Gonur Depe",
+      "from": "-2400"
+    }
+  ],
+  "summary": "A Bronze Age city of the Oxus civilisation.",
+  "wikidata": "Q3110595",
+  "events": [
+    {
+      "type": "born",
+      "date": "-2400",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-1600",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "turkmenistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gonur Depe (Q3110595)",
+      "url": "https://www.wikidata.org/wiki/Q3110595",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gonur Depe",
+      "url": "https://en.wikipedia.org/wiki/Gonur_Depe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Gonur_ruins.jpg/500px-Gonur_ruins.jpg",
+    "alt": "Gonur Depe",
+    "credit": "David Stanley",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gonur_ruins.jpg"
+  }
+}

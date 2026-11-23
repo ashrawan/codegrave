@@ -1,0 +1,44 @@
+{
+  "id": "maldives",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Maldives",
+      "from": "1965"
+    }
+  ],
+  "summary": "A country of some 1,200 coral islands in the Indian Ocean, independent from Britain since 1965.",
+  "wikidata": "Q826",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965-07-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maldives (Q826)",
+      "url": "https://www.wikidata.org/wiki/Q826",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maldives",
+      "url": "https://en.wikipedia.org/wiki/Maldives",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

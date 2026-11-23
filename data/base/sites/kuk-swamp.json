@@ -1,0 +1,51 @@
+{
+  "id": "kuk-swamp",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Kuk Early Agricultural Site",
+      "from": "-7000"
+    }
+  ],
+  "summary": "Swamp gardens where people farmed some 9,000 years ago, among the first farmers in the world.",
+  "wikidata": "Q1165562",
+  "events": [
+    {
+      "type": "born",
+      "date": "-7000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "papua-new-guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kuk Early Agricultural Site (Q1165562)",
+      "url": "https://www.wikidata.org/wiki/Q1165562",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kuk Early Agricultural Site",
+      "url": "https://en.wikipedia.org/wiki/Kuk_Early_Agricultural_Site",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Kuk_New_Guinea_2002.jpg/500px-Kuk_New_Guinea_2002.jpg",
+    "alt": "Kuk Early Agricultural Site",
+    "credit": "NASA: JPL",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kuk_New_Guinea_2002.jpg"
+  }
+}

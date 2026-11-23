@@ -1,0 +1,51 @@
+{
+  "id": "itaipu-dam",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Itaipu Dam",
+      "from": "1970"
+    }
+  ],
+  "summary": "The great dam on the Paraná, shared with Brazil, opened in 1984.",
+  "wikidata": "Q244169",
+  "events": [
+    {
+      "type": "born",
+      "date": "1970",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paraguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Itaipu Dam (Q244169)",
+      "url": "https://www.wikidata.org/wiki/Q244169",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Itaipu Dam",
+      "url": "https://en.wikipedia.org/wiki/Itaipu_Dam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/ItaipuAerea2AAL.jpg/500px-ItaipuAerea2AAL.jpg",
+    "alt": "Itaipu Dam",
+    "credit": "Angelo Leithold",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ItaipuAerea2AAL.jpg"
+  }
+}

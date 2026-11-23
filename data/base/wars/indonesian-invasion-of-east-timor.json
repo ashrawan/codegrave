@@ -1,0 +1,59 @@
+{
+  "id": "indonesian-invasion-of-east-timor",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Indonesian invasion of East Timor",
+      "from": "1975"
+    }
+  ],
+  "summary": "The invasion of December 1975, which began 24 years of occupation.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2583734",
+  "events": [
+    {
+      "type": "born",
+      "date": "1975-12-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-03-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "east-timor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Indonesian invasion of East Timor (Q2583734)",
+      "url": "https://www.wikidata.org/wiki/Q2583734",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Indonesian invasion of East Timor",
+      "url": "https://en.wikipedia.org/wiki/Indonesian_invasion_of_East_Timor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Capture_of_Portuguese_flag.jpg/500px-Capture_of_Portuguese_flag.jpg",
+    "alt": "Indonesian invasion of East Timor",
+    "credit": "Streitkräfte Indonesiens (Indonesian Armed Forces)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Capture_of_Portuguese_flag.jpg"
+  }
+}

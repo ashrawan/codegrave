@@ -1,0 +1,44 @@
+{
+  "id": "costa-rica",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Costa Rica",
+      "from": "1821"
+    }
+  ],
+  "summary": "A Central American country between Nicaragua and Panama, independent since 1821, which has had no army since 1948.",
+  "wikidata": "Q800",
+  "events": [
+    {
+      "type": "born",
+      "date": "1821",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Costa Rica (Q800)",
+      "url": "https://www.wikidata.org/wiki/Q800",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Costa Rica",
+      "url": "https://en.wikipedia.org/wiki/Costa_Rica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

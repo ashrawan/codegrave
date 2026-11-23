@@ -1,0 +1,52 @@
+{
+  "id": "german-south-west-africa",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "German South West Africa",
+      "from": "1884"
+    }
+  ],
+  "summary": "The German colony of 1884 to 1915.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q153665",
+  "events": [
+    {
+      "type": "born",
+      "date": "1884",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1915",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "namibia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German South West Africa (Q153665)",
+      "url": "https://www.wikidata.org/wiki/Q153665",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German South West Africa",
+      "url": "https://en.wikipedia.org/wiki/German_South_West_Africa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

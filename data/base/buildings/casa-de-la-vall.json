@@ -1,0 +1,54 @@
+{
+  "id": "casa-de-la-vall",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Casa de la Vall",
+      "from": "1580"
+    }
+  ],
+  "summary": "The old stone house where the parliament met for centuries.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1046548",
+  "events": [
+    {
+      "type": "born",
+      "date": "1580",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "andorra"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Casa de la Vall (Q1046548)",
+      "url": "https://www.wikidata.org/wiki/Q1046548",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Casa de la Vall",
+      "url": "https://en.wikipedia.org/wiki/Casa_de_la_Vall",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Casa_de_la_Vall%2C_Andorra_la_Vieja%2C_Andorra%2C_2013-12-30%2C_DD_01.JPG/500px-Casa_de_la_Vall%2C_Andorra_la_Vieja%2C_Andorra%2C_2013-12-30%2C_DD_01.JPG",
+    "alt": "Casa de la Vall",
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Casa_de_la_Vall,_Andorra_la_Vieja,_Andorra,_2013-12-30,_DD_01.JPG"
+  }
+}

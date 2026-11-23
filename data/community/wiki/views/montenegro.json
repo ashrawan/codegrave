@@ -1,0 +1,69 @@
+{
+  "id": "montenegro",
+  "name": "Montenegro",
+  "description": "Montenegro from Duklja and the prince-bishops to a kingdom, Yugoslavia, independence in 2006 and the Bay of Kotor.",
+  "category": "places",
+  "tags": [
+    "montenegro",
+    "podgorica",
+    "balkans",
+    "kotor",
+    "adriatic"
+  ],
+  "entries": [
+    "duklja",
+    "cetinje",
+    "petar-ii-petrovic-njegos",
+    "nicholas-i-of-montenegro",
+    "montenegro",
+    "milo-dukanovic",
+    "jakov-milatovic",
+    "serbia-and-montenegro",
+    "2006-montenegrin-independence-referendum",
+    "montenegro-nato"
+  ],
+  "checkpoints": [
+    {
+      "id": "duklja-and-zeta",
+      "name": "Duklja and Zeta",
+      "from": 1000,
+      "to": 1515,
+      "note": "Duklja and then Zeta ruled the coast and mountains."
+    },
+    {
+      "id": "the-prince-bishops",
+      "name": "The prince-bishops",
+      "from": 1516,
+      "to": 1917,
+      "note": "Prince-bishops ruled from Cetinje and kept the mountains free of the Ottomans. Montenegro was recognised in 1878 and became a kingdom in 1910."
+    },
+    {
+      "id": "yugoslavia",
+      "name": "Yugoslavia",
+      "from": 1918,
+      "to": 2005,
+      "note": "Montenegro joined Yugoslavia in 1918 and stayed with Serbia after the break-up."
+    },
+    {
+      "id": "independent-montenegro",
+      "name": "Independent Montenegro",
+      "from": 2006,
+      "to": 2026,
+      "note": "Montenegro voted for independence in 2006 and joined NATO in 2017."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/330px-Flag_of_Montenegro.svg.png",
+    "alt": "Flag of Montenegro",
+    "credit": "B1mbo, Froztbyte, Great Brightstar",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Montenegro.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a2/National_Anthem_of_Montenegro.ogg/National_Anthem_of_Montenegro.ogg.mp3",
+    "title": "Oj, svijetla majska zoro",
+    "credit": "https://web.archive.org/web/20080913132321/http://www.navyband.navy.mil:80/anthems/national_anthems.htm https://web.arch",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Montenegro.ogg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "gabon",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Gabon",
+      "from": "1960"
+    }
+  ],
+  "summary": "A country of Central Africa on the Atlantic, mostly rainforest, independent from France since 1960.",
+  "wikidata": "Q1000",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gabon (Q1000)",
+      "url": "https://www.wikidata.org/wiki/Q1000",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gabon",
+      "url": "https://en.wikipedia.org/wiki/Gabon",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Topographic_map_of_Gabon-fr.svg/500px-Topographic_map_of_Gabon-fr.svg.png",
+    "alt": "Gabon",
+    "credit": "Mysid (English version); Bourrichon (French translation)",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Topographic_map_of_Gabon-fr.svg"
+  }
+}

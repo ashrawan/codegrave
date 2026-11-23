@@ -1,0 +1,59 @@
+{
+  "id": "confederation-of-the-rhine",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Confederation of the Rhine",
+      "from": "1806"
+    }
+  ],
+  "summary": "Napoleon's league of German states, through which Liechtenstein became sovereign in 1806.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154741",
+  "events": [
+    {
+      "type": "born",
+      "date": "1806-08-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1813-12-11",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liechtenstein"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Confederation of the Rhine (Q154741)",
+      "url": "https://www.wikidata.org/wiki/Q154741",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Confederation of the Rhine",
+      "url": "https://en.wikipedia.org/wiki/Confederation_of_the_Rhine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Huldigungderf%C3%BCrsten.jpg/500px-Huldigungderf%C3%BCrsten.jpg",
+    "alt": "Confederation of the Rhine",
+    "credit": "Charles Étienne Pierre Motte",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Huldigungderf%C3%BCrsten.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "siege-of-malta-world-war-ii",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Siege of Malta",
+      "from": "1940"
+    }
+  ],
+  "summary": "The bombing of 1940 to 1942, after which the whole island was given the George Cross.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q682452",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-06-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1942-11-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Malta (Q682452)",
+      "url": "https://www.wikidata.org/wiki/Q682452",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Malta (World War II)",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Malta_(World_War_II)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/BombDamageMalta.jpg/500px-BombDamageMalta.jpg",
+    "alt": "Siege of Malta",
+    "credit": "Russell, J E (Lt) - Royal Navy official photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:BombDamageMalta.jpg"
+  }
+}

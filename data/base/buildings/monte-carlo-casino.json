@@ -1,0 +1,54 @@
+{
+  "id": "monte-carlo-casino",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Monte Carlo Casino",
+      "from": "1865"
+    }
+  ],
+  "summary": "The casino opened in 1863 that made Monaco rich.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1779905",
+  "events": [
+    {
+      "type": "born",
+      "date": "1865-07",
+      "precision": "month"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "monaco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Monte Carlo Casino (Q1779905)",
+      "url": "https://www.wikidata.org/wiki/Q1779905",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Monte Carlo Casino",
+      "url": "https://en.wikipedia.org/wiki/Monte_Carlo_Casino",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Le_casino_de_Monte-Carlo.JPG/500px-Le_casino_de_Monte-Carlo.JPG",
+    "alt": "Monte Carlo Casino",
+    "credit": "Fruitpunchline",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Le_casino_de_Monte-Carlo.JPG"
+  }
+}

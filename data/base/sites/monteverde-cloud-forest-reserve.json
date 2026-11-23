@@ -1,0 +1,51 @@
+{
+  "id": "monteverde-cloud-forest-reserve",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Monteverde Cloud Forest Reserve",
+      "from": "1972"
+    }
+  ],
+  "summary": "A cloud forest reserve, once home of the golden toad.",
+  "wikidata": "Q864538",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "costa-rica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Monteverde Cloud Forest Reserve (Q864538)",
+      "url": "https://www.wikidata.org/wiki/Q864538",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Monteverde Cloud Forest Reserve",
+      "url": "https://en.wikipedia.org/wiki/Monteverde_Cloud_Forest_Reserve",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Monteverde_puente.jpg/500px-Monteverde_puente.jpg",
+    "alt": "Monteverde Cloud Forest Reserve",
+    "credit": "Haakon S. Krohn",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Monteverde_puente.jpg"
+  }
+}

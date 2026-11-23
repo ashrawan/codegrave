@@ -1,0 +1,51 @@
+{
+  "id": "freetown",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Freetown",
+      "from": "1792"
+    }
+  ],
+  "summary": "The capital, founded in 1792 for freed black people from Nova Scotia.",
+  "wikidata": "Q3780",
+  "events": [
+    {
+      "type": "born",
+      "date": "1792",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sierra-leone"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Freetown (Q3780)",
+      "url": "https://www.wikidata.org/wiki/Q3780",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Freetown",
+      "url": "https://en.wikipedia.org/wiki/Freetown",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Freetown-aerialview.jpg/500px-Freetown-aerialview.jpg",
+    "alt": "Freetown",
+    "credit": "David Hond",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Freetown-aerialview.jpg"
+  }
+}

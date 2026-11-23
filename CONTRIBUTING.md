@@ -40,7 +40,7 @@ fill them in rather than deleting them.
   or changed entry, or any change in `site/`. Take one at a wide window
   (about 1440 pixels) and one at phone width (about 390 pixels). For a fix,
   show before and after. Drag the images into the description on GitHub.
-- **The link** to see it locally, such as `?views=<your-name>/<id>` or `#<entry-id>`.
+- **The link** to see it locally, such as `/<your-name>/<id>` or `#<entry-id>`.
 - **The checklist** in the template, ticked honestly.
 
 If an AI assistant wrote part of the change, that is welcome. Say so in the

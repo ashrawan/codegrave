@@ -1,0 +1,56 @@
+{
+  "id": "monaco",
+  "name": "Monaco",
+  "description": "Monaco from the Grimaldi seizure of 1297 to the casino of Monte Carlo, Grace Kelly, the Grand Prix and a tiny rich state.",
+  "category": "places",
+  "tags": [
+    "monaco",
+    "monte carlo",
+    "grimaldi",
+    "riviera",
+    "europe"
+  ],
+  "entries": [
+    "house-of-grimaldi",
+    "princes-palace-of-monaco",
+    "monaco",
+    "albert-i-of-monaco",
+    "monte-carlo-casino",
+    "oceanographic-museum",
+    "rainier-iii",
+    "monaco-grand-prix",
+    "grace-kelly",
+    "albert-ii-of-monaco",
+    "charles-leclerc"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-grimaldis",
+      "name": "The Grimaldis",
+      "from": 1297,
+      "to": 1860,
+      "note": "The Grimaldis took the rock in 1297 and held it under the protection of Spain and then France."
+    },
+    {
+      "id": "monte-carlo",
+      "name": "Monte Carlo",
+      "from": 1861,
+      "to": 2026,
+      "note": "Monaco gave up most of its land in 1861, opened its casino in 1863 and grew rich on gambling, racing and wealth."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/330px-Flag_of_Monaco.svg.png",
+    "alt": "Flag of Monaco",
+    "credit": "Drawn by User:SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Monaco.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c2/Monaco_National_Anthem.ogg/Monaco_National_Anthem.ogg.mp3",
+    "title": "Hymne monégasque",
+    "credit": "http://www.navyband.navy.mil/national_anthems.html http://web.archive.org/web/20041019052653/http://www.navyband.navy.mi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Monaco_National_Anthem.ogg"
+  }
+}

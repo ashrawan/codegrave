@@ -1,0 +1,52 @@
+{
+  "id": "patrick-john",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Patrick John",
+      "from": "1938"
+    }
+  ],
+  "summary": "The first prime minister, at independence.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1281003",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-01-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-07-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "dominica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Patrick John (Q1281003)",
+      "url": "https://www.wikidata.org/wiki/Q1281003",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Patrick John",
+      "url": "https://en.wikipedia.org/wiki/Patrick_John",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "malabo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Malabo",
+      "from": "1827"
+    }
+  ],
+  "summary": "The capital, on Bioko, founded by the British as Port Clarence.",
+  "wikidata": "Q3818",
+  "events": [
+    {
+      "type": "born",
+      "date": "1827",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "equatorial-guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Malabo (Q3818)",
+      "url": "https://www.wikidata.org/wiki/Q3818",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malabo",
+      "url": "https://en.wikipedia.org/wiki/Malabo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Malabo_a_13-oct-01.jpg/500px-Malabo_a_13-oct-01.jpg",
+    "alt": "Malabo",
+    "credit": "Ipisking at English Wikipedia",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Malabo_a_13-oct-01.jpg"
+  }
+}

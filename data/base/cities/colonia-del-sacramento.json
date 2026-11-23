@@ -1,0 +1,51 @@
+{
+  "id": "colonia-del-sacramento",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Colonia del Sacramento",
+      "from": "1680"
+    }
+  ],
+  "summary": "A Portuguese town of 1680, a World Heritage Site.",
+  "wikidata": "Q56064",
+  "events": [
+    {
+      "type": "born",
+      "date": "1680",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uruguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Colonia del Sacramento (Q56064)",
+      "url": "https://www.wikidata.org/wiki/Q56064",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Colonia del Sacramento",
+      "url": "https://en.wikipedia.org/wiki/Colonia_del_Sacramento",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Basilica_del_Sanct%C3%ADsimo_Sacramento.jpg/500px-Basilica_del_Sanct%C3%ADsimo_Sacramento.jpg",
+    "alt": "Colonia del Sacramento",
+    "credit": "JGHowes, photographer (Canon AE-1 camera).",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Basilica_del_Sanct%C3%ADsimo_Sacramento.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "central-african-empire",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Central African Empire",
+      "from": "1976"
+    }
+  ],
+  "summary": "Bokassa's empire, 1976 to 1979.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q189988",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-12-04",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1979-09-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "central-african-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Central African Empire (Q189988)",
+      "url": "https://www.wikidata.org/wiki/Q189988",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Central African Empire",
+      "url": "https://en.wikipedia.org/wiki/Central_African_Empire",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,47 @@
+{
+  "id": "plo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Palestine Liberation Organization",
+      "from": "1964"
+    }
+  ],
+  "summary": "The organisation founded in 1964 to speak for Palestinians.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q26683",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-05-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Palestine Liberation Organization (Q26683)",
+      "url": "https://www.wikidata.org/wiki/Q26683",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palestine Liberation Organization",
+      "url": "https://en.wikipedia.org/wiki/Palestine_Liberation_Organization",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

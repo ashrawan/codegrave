@@ -1,0 +1,54 @@
+{
+  "id": "san-marino-grand-prix",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "San Marino Grand Prix",
+      "from": "1981"
+    }
+  ],
+  "summary": "The Formula One race held at Imola under San Marino's name from 1981 to 2006.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q9122",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "san-marino"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: San Marino Grand Prix (Q9122)",
+      "url": "https://www.wikidata.org/wiki/Q9122",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: San Marino Grand Prix",
+      "url": "https://en.wikipedia.org/wiki/San_Marino_Grand_Prix",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Imola.svg/500px-Imola.svg.png",
+    "alt": "San Marino Grand Prix",
+    "credit": "Will Pittenger",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Imola.svg"
+  }
+}

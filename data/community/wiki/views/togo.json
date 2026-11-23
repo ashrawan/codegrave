@@ -1,0 +1,58 @@
+{
+  "id": "togo",
+  "name": "Togo",
+  "description": "Togo from its kingdoms to German Togoland, French rule, independence in 1960 and the Gnassingbé family.",
+  "category": "places",
+  "tags": [
+    "togo",
+    "lome",
+    "west africa"
+  ],
+  "entries": [
+    "togoland",
+    "sylvanus-olympio",
+    "french-togoland",
+    "gnassingbe-eyadema",
+    "togo",
+    "faure-gnassingbe",
+    "emmanuel-adebayor",
+    "koutammakou"
+  ],
+  "checkpoints": [
+    {
+      "id": "german-togoland",
+      "name": "German Togoland",
+      "from": 1884,
+      "to": 1915,
+      "note": "Germany made Togoland a colony in 1884."
+    },
+    {
+      "id": "french-togo",
+      "name": "French Togo",
+      "from": 1916,
+      "to": 1959,
+      "note": "Britain and France split the colony; the French part became Togo."
+    },
+    {
+      "id": "independent-togo",
+      "name": "Independent Togo",
+      "from": 1960,
+      "to": 2026,
+      "note": "Independence came in 1960. Olympio was killed in 1963, and the Gnassingbé family has ruled since 1967."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Flag_of_Togo_%283-2%29.svg/330px-Flag_of_Togo_%283-2%29.svg.png",
+    "alt": "Flag of Togo",
+    "credit": "Sangjinhwa",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Togo_(3-2).svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/1f/Hymne_du_Togo_-_salut_a_toi.ogg/Hymne_du_Togo_-_salut_a_toi.ogg.mp3",
+    "title": "Salut à toi, pays de nos aïeux",
+    "credit": "Komavo",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Hymne_du_Togo_-_salut_a_toi.ogg"
+  }
+}

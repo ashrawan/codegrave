@@ -1,0 +1,51 @@
+{
+  "id": "apia",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Apia",
+      "from": "1850"
+    }
+  ],
+  "summary": "The capital, on Upolu.",
+  "wikidata": "Q36260",
+  "events": [
+    {
+      "type": "born",
+      "date": "1850",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "samoa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Apia (Q36260)",
+      "url": "https://www.wikidata.org/wiki/Q36260",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Apia",
+      "url": "https://en.wikipedia.org/wiki/Apia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Samoa_-_Apia_Govt_buildings.jpg/500px-Samoa_-_Apia_Govt_buildings.jpg",
+    "alt": "Apia",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Samoa_-_Apia_Govt_buildings.jpg"
+  }
+}

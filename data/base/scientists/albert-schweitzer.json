@@ -1,0 +1,56 @@
+{
+  "id": "albert-schweitzer",
+  "category": "scientists",
+  "names": [
+    {
+      "name": "Albert Schweitzer",
+      "from": "1875"
+    }
+  ],
+  "summary": "Doctor and thinker who founded a hospital at Lambaréné in 1913 and won the Nobel Peace Prize.",
+  "wikidata": "Q49325",
+  "events": [
+    {
+      "type": "born",
+      "date": "1875-01-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1965-09-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gabon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Albert Schweitzer (Q49325)",
+      "url": "https://www.wikidata.org/wiki/Q49325",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Albert Schweitzer",
+      "url": "https://en.wikipedia.org/wiki/Albert_Schweitzer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Bundesarchiv_Bild_183-D0116-0041-019%2C_Albert_Schweitzer.jpg/500px-Bundesarchiv_Bild_183-D0116-0041-019%2C_Albert_Schweitzer.jpg",
+    "alt": "Albert Schweitzer",
+    "credit": "UnknownUnknown",
+    "licence": "CC BY-SA 3.0 de",
+    "source": "https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_183-D0116-0041-019,_Albert_Schweitzer.jpg"
+  }
+}

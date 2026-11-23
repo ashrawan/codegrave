@@ -1,0 +1,59 @@
+{
+  "id": "john-compton",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "John Compton",
+      "from": "1925"
+    }
+  ],
+  "summary": "The first prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q716020",
+  "events": [
+    {
+      "type": "born",
+      "date": "1925-04-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2007-09-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saint-lucia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: John Compton (Q716020)",
+      "url": "https://www.wikidata.org/wiki/Q716020",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: John Compton",
+      "url": "https://en.wikipedia.org/wiki/John_Compton",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/John_Compton.png/500px-John_Compton.png",
+    "alt": "John Compton",
+    "credit": "Saint Lucian goverment",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:John_Compton.png"
+  }
+}

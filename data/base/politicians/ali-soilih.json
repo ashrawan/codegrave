@@ -1,0 +1,59 @@
+{
+  "id": "ali-soilih",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Ali Soilih",
+      "from": "1937"
+    }
+  ],
+  "summary": "Revolutionary who ruled from 1976 until he was killed in 1978.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q878868",
+  "events": [
+    {
+      "type": "born",
+      "date": "1937-01-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1978-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "comoros"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ali Soilih (Q878868)",
+      "url": "https://www.wikidata.org/wiki/Q878868",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ali Soilih",
+      "url": "https://en.wikipedia.org/wiki/Ali_Soilih",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Ali_Soilih_illustration.png",
+    "alt": "Ali Soilih",
+    "credit": "Voice of America",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ali_Soilih_illustration.png"
+  }
+}

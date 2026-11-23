@@ -1,0 +1,51 @@
+{
+  "id": "nassau",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Nassau, Bahamas",
+      "from": "1695"
+    }
+  ],
+  "summary": "The capital, on New Providence.",
+  "wikidata": "Q2467",
+  "events": [
+    {
+      "type": "born",
+      "date": "1695",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bahamas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nassau, Bahamas (Q2467)",
+      "url": "https://www.wikidata.org/wiki/Q2467",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nassau, Bahamas",
+      "url": "https://en.wikipedia.org/wiki/Nassau,_Bahamas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/BHA_Nassau%2C_Paradise_Island%2C_Atlantis_Bridge_001.jpg/500px-BHA_Nassau%2C_Paradise_Island%2C_Atlantis_Bridge_001.jpg",
+    "alt": "Nassau, Bahamas",
+    "credit": "Der-wuppertaler",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BHA_Nassau,_Paradise_Island,_Atlantis_Bridge_001.jpg"
+  }
+}

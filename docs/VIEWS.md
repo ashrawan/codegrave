@@ -15,10 +15,15 @@ The panel lists community views only. Classical views are found by search,
 where every result says which sort it is, and their links work like any
 other.
 
-Every view has its own link. A community view's address is its owner and its
-id, as on GitHub: `codegrave.com/?views=codegrave/space-exploration`. A
-classical view's address is its id: `?views=rulers`. A link can name
-several: `?views=people,codegrave/the-space-race`. Each view on the
+Every view has its own link, a path like a repository on GitHub. A
+community view's address is its owner and its id:
+`codegrave.com/wiki/space-exploration` for the editors' views,
+`codegrave.com/<github-name>/<id>` for anyone else's. A classical view's
+address is `classical/` and its id: `codegrave.com/classical/rulers`.
+`wiki` and `classical` are reserved, so no one can take them as a name. A
+link can name several: the first is the path and the others follow in
+`with`: `codegrave.com/classical/people?with=wiki/the-space-race`. `o=forward` or
+`o=backward` gives the direction, `yr=` the year range and `c=` the colours. Each view on the
 timeline gets a lane of its own on the road. Picking a view in the panel
 shows it alone; the small plus at the end of its row, or a right click, puts
 it beside the ones already there.
@@ -44,7 +49,7 @@ data/community/<github-name>/
 
 `title` is required (at most 60 characters); `about` (at most 300) and `url`
 are optional. You only ever edit your own folder, so two people never touch
-the same file. The folder `codegrave` belongs to the editors.
+the same file. The folder `wiki` belongs to the editors.
 
 Start a view by hand or with
 `node scripts/new.mjs view <github-name> <id> "<Title>"`, which also makes
@@ -124,7 +129,7 @@ the build refuses it: use the base entry.
 A view that moves keeps its old address in `data/redirects.json`:
 
 ```json
-{ "views": { "browser-wars": "codegrave/browser-wars" }, "entries": {} }
+{ "views": { "browser-wars": "wiki/browser-wars" }, "entries": {} }
 ```
 
 The old link keeps working at the same speed.
@@ -136,11 +141,11 @@ panel is ordered:
 
 ```json
 {
-  "default": ["codegrave/space-exploration", "codegrave/computer-generations"],
-  "phone": ["codegrave/computer-generations"],
+  "default": ["wiki/space-exploration", "wiki/computer-generations"],
+  "phone": ["wiki/computer-generations"],
   "topics": [
-    { "id": "history", "name": "History", "views": ["codegrave/the-ancient-world", "codegrave/wars"] },
-    { "id": "science", "name": "Science", "views": ["codegrave/evolution-of-life", "codegrave/space-exploration"] }
+    { "id": "history", "name": "History", "views": ["wiki/the-ancient-world", "wiki/wars"] },
+    { "id": "science", "name": "Science", "views": ["wiki/evolution-of-life", "wiki/space-exploration"] }
   ]
 }
 ```

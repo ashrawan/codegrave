@@ -1,0 +1,51 @@
+{
+  "id": "gaborone",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Gaborone",
+      "from": "1965"
+    }
+  ],
+  "summary": "The capital, built for independence.",
+  "wikidata": "Q3919",
+  "events": [
+    {
+      "type": "born",
+      "date": "1965",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "botswana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gaborone (Q3919)",
+      "url": "https://www.wikidata.org/wiki/Q3919",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gaborone",
+      "url": "https://en.wikipedia.org/wiki/Gaborone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Gaborone_skyline.JPG/500px-Gaborone_skyline.JPG",
+    "alt": "Gaborone",
+    "credit": "Njengabenngugi",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gaborone_skyline.JPG"
+  }
+}

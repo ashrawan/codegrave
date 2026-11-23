@@ -1,0 +1,52 @@
+{
+  "id": "british-solomon-islands",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "British Solomon Islands",
+      "from": "1893"
+    }
+  ],
+  "summary": "The British protectorate of 1893 to 1978.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q13410267",
+  "events": [
+    {
+      "type": "born",
+      "date": "1893-03-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1978",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "solomon-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: British Solomon Islands (Q13410267)",
+      "url": "https://www.wikidata.org/wiki/Q13410267",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: British Solomon Islands",
+      "url": "https://en.wikipedia.org/wiki/British_Solomon_Islands",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

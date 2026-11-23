@@ -1,0 +1,51 @@
+{
+  "id": "malta",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Malta",
+      "from": "1964"
+    }
+  ],
+  "summary": "An island country in the middle of the Mediterranean, independent from Britain since 1964.",
+  "wikidata": "Q233",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Malta (Q233)",
+      "url": "https://www.wikidata.org/wiki/Q233",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Malta",
+      "url": "https://en.wikipedia.org/wiki/Malta",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Malta%2C_2010_-_panoramio_-_Bengt_Nyman_%2823%29.jpg/500px-Malta%2C_2010_-_panoramio_-_Bengt_Nyman_%2823%29.jpg",
+    "alt": "Malta",
+    "credit": "Bengt Nyman",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Malta,_2010_-_panoramio_-_Bengt_Nyman_(23).jpg"
+  }
+}

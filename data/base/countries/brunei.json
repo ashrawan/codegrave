@@ -1,0 +1,51 @@
+{
+  "id": "brunei",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Brunei",
+      "from": "1984"
+    }
+  ],
+  "summary": "A small sultanate on the north coast of Borneo, rich from oil and gas, independent from Britain since 1984.",
+  "wikidata": "Q921",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brunei (Q921)",
+      "url": "https://www.wikidata.org/wiki/Q921",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brunei",
+      "url": "https://en.wikipedia.org/wiki/Brunei",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/BN-bsb-jame-asr-hassanil-m-2.jpg/500px-BN-bsb-jame-asr-hassanil-m-2.jpg",
+    "alt": "Brunei",
+    "credit": "Balou46",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:BN-bsb-jame-asr-hassanil-m-2.jpg"
+  }
+}

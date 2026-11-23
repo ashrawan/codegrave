@@ -1,0 +1,47 @@
+{
+  "id": "orapa-diamond-mine",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Orapa diamond mine",
+      "from": "1971"
+    }
+  ],
+  "summary": "The diamond mine found in 1967 that made Botswana rich.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q859817",
+  "events": [
+    {
+      "type": "born",
+      "date": "1971",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "botswana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Orapa diamond mine (Q859817)",
+      "url": "https://www.wikidata.org/wiki/Q859817",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Orapa diamond mine",
+      "url": "https://en.wikipedia.org/wiki/Orapa_diamond_mine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

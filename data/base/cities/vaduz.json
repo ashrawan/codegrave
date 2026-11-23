@@ -1,0 +1,51 @@
+{
+  "id": "vaduz",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Vaduz",
+      "from": "1150"
+    }
+  ],
+  "summary": "The capital, under its castle.",
+  "wikidata": "Q1844",
+  "events": [
+    {
+      "type": "born",
+      "date": "1150",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liechtenstein"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vaduz (Q1844)",
+      "url": "https://www.wikidata.org/wiki/Q1844",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vaduz",
+      "url": "https://en.wikipedia.org/wiki/Vaduz",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/View_of_Vaduz.jpg/500px-View_of_Vaduz.jpg",
+    "alt": "Vaduz",
+    "credit": "Lucas Kendall",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:View_of_Vaduz.jpg"
+  }
+}

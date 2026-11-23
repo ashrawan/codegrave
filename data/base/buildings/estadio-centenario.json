@@ -1,0 +1,54 @@
+{
+  "id": "estadio-centenario",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Estadio Centenario",
+      "from": "1930"
+    }
+  ],
+  "summary": "The stadium built for the first World Cup, in 1930.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q498245",
+  "events": [
+    {
+      "type": "born",
+      "date": "1930-01-18",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uruguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Estadio Centenario (Q498245)",
+      "url": "https://www.wikidata.org/wiki/Q498245",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Estadio Centenario",
+      "url": "https://en.wikipedia.org/wiki/Estadio_Centenario",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Estadio_Centenario_%28vista_a%C3%A9rea%29.jpg/500px-Estadio_Centenario_%28vista_a%C3%A9rea%29.jpg",
+    "alt": "Estadio Centenario",
+    "credit": "Marcelo Campi from Costa de Oro, Uruguay",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Estadio_Centenario_(vista_a%C3%A9rea).jpg"
+  }
+}

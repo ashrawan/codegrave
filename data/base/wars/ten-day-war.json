@@ -1,0 +1,59 @@
+{
+  "id": "ten-day-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Ten-Day War",
+      "from": "1991"
+    }
+  ],
+  "summary": "The short war of 1991 in which Slovenia broke from Yugoslavia.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q163883",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-06-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-07-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovenia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ten-Day War (Q163883)",
+      "url": "https://www.wikidata.org/wiki/Q163883",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ten-Day War",
+      "url": "https://en.wikipedia.org/wiki/Ten-Day_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/War_of_Independence_of_Slovenia.png/500px-War_of_Independence_of_Slovenia.png",
+    "alt": "Ten-Day War",
+    "credit": "LLs",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:War_of_Independence_of_Slovenia.png"
+  }
+}

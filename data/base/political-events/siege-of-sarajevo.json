@@ -1,0 +1,52 @@
+{
+  "id": "siege-of-sarajevo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Siege of Sarajevo",
+      "from": "1992"
+    }
+  ],
+  "summary": "The siege of the capital from 1992 to 1996, the longest of a capital in modern war.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q175653",
+  "events": [
+    {
+      "type": "born",
+      "date": "1992-04-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-02-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bosnia-and-herzegovina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siege of Sarajevo (Q175653)",
+      "url": "https://www.wikidata.org/wiki/Q175653",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siege of Sarajevo",
+      "url": "https://en.wikipedia.org/wiki/Siege_of_Sarajevo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

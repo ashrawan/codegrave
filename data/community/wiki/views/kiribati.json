@@ -1,0 +1,53 @@
+{
+  "id": "kiribati",
+  "name": "Kiribati",
+  "description": "Kiribati from the I-Kiribati voyagers to the Gilbert Islands, the battle of Tarawa, independence in 1979 and the rising sea.",
+  "category": "places",
+  "tags": [
+    "kiribati",
+    "tarawa",
+    "pacific",
+    "micronesia",
+    "climate"
+  ],
+  "entries": [
+    "gilbert-and-ellice-islands",
+    "battle-of-tarawa",
+    "ieremia-tabai",
+    "anote-tong",
+    "operation-grapple",
+    "taneti-maamau",
+    "kiribati",
+    "phoenix-islands-protected-area"
+  ],
+  "checkpoints": [
+    {
+      "id": "voyagers-and-the-colony",
+      "name": "Voyagers and the colony",
+      "from": -1000,
+      "to": 1978,
+      "note": "Micronesians settled the atolls some 3,000 years ago. Britain made the Gilberts a colony, and Tarawa was a bloody battlefield in 1943."
+    },
+    {
+      "id": "independent-kiribati",
+      "name": "Independent Kiribati",
+      "from": 1979,
+      "to": 2026,
+      "note": "Kiribati became independent in 1979. Its low atolls are threatened by the rising sea."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Flag_of_Kiribati.svg/330px-Flag_of_Kiribati.svg.png",
+    "alt": "Flag of Kiribati",
+    "credit": "User:Hanzlan",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Kiribati.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/20/Kiribati_Anthem_Performed_by_US_Navy_Band.oga/Kiribati_Anthem_Performed_by_US_Navy_Band.oga.mp3",
+    "title": "Teirake Kaini Kiribati",
+    "credit": "US Navy Band",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kiribati_Anthem_Performed_by_US_Navy_Band.oga"
+  }
+}

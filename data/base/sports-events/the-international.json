@@ -1,0 +1,48 @@
+{
+  "id": "the-international",
+  "category": "sports-events",
+  "names": [
+    {
+      "name": "The International",
+      "from": "2011"
+    }
+  ],
+  "summary": "Dota 2's yearly world championship, whose crowd-funded prize pools were the largest in esports.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q3334740",
+  "events": [
+    {
+      "type": "born",
+      "date": "2011",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: The International (Q3334740)",
+      "url": "https://www.wikidata.org/wiki/Q3334740",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: The International (esports)",
+      "url": "https://en.wikipedia.org/wiki/The_International_(esports)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/The_International_2012.jpg/500px-The_International_2012.jpg",
+    "alt": "The International",
+    "credit": "DarthBotto",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:The_International_2012.jpg"
+  }
+}

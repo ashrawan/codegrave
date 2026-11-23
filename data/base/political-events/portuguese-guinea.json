@@ -1,0 +1,52 @@
+{
+  "id": "portuguese-guinea",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Portuguese Guinea",
+      "from": "1474"
+    }
+  ],
+  "summary": "Portugal's colony, until 1974.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2002279",
+  "events": [
+    {
+      "type": "born",
+      "date": "1474",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1974-09-10",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea-bissau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Portuguese Guinea (Q2002279)",
+      "url": "https://www.wikidata.org/wiki/Q2002279",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portuguese Guinea",
+      "url": "https://en.wikipedia.org/wiki/Portuguese_Guinea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

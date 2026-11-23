@@ -1,0 +1,59 @@
+{
+  "id": "jean-bedel-bokassa",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Jean-Bédel Bokassa",
+      "from": "1921"
+    }
+  ],
+  "summary": "Soldier who seized power in 1966 and crowned himself emperor in 1977.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q162708",
+  "events": [
+    {
+      "type": "born",
+      "date": "1921-02-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-11-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "central-african-republic"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jean-Bédel Bokassa (Q162708)",
+      "url": "https://www.wikidata.org/wiki/Q162708",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jean-Bédel Bokassa",
+      "url": "https://en.wikipedia.org/wiki/Jean-Bédel_Bokassa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Bokassa_portrait.jpg/500px-Bokassa_portrait.jpg",
+    "alt": "Jean-Bédel Bokassa",
+    "credit": "Jean-Bedel Bokassa &amp; Nicolae Ceaușescu, 1970.jpg: unknown, image comes from the National Archives derivative work: M",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Bokassa_portrait.jpg"
+  }
+}

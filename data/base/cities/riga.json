@@ -1,0 +1,51 @@
+{
+  "id": "riga",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Riga",
+      "from": "1201"
+    }
+  ],
+  "summary": "The capital, founded in 1201, whose Art Nouveau centre is a World Heritage Site.",
+  "wikidata": "Q1773",
+  "events": [
+    {
+      "type": "born",
+      "date": "1201",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "latvia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Riga (Q1773)",
+      "url": "https://www.wikidata.org/wiki/Q1773",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Riga",
+      "url": "https://en.wikipedia.org/wiki/Riga",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Vistas_desde_la_iglesia_de_San_Pedro%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_12.JPG/500px-Vistas_desde_la_iglesia_de_San_Pedro%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_12.JPG",
+    "alt": "Riga",
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Vistas_desde_la_iglesia_de_San_Pedro,_Riga,_Letonia,_2012-08-07,_DD_12.JPG"
+  }
+}

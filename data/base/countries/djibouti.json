@@ -1,0 +1,51 @@
+{
+  "id": "djibouti",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Djibouti",
+      "from": "1977"
+    }
+  ],
+  "summary": "A small country in the Horn of Africa at the mouth of the Red Sea, independent from France since 1977.",
+  "wikidata": "Q977",
+  "events": [
+    {
+      "type": "born",
+      "date": "1977-06-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Djibouti (Q977)",
+      "url": "https://www.wikidata.org/wiki/Q977",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Djibouti",
+      "url": "https://en.wikipedia.org/wiki/Djibouti",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/An_aerial_view_of_Djibouti_City.jpg/500px-An_aerial_view_of_Djibouti_City.jpg",
+    "alt": "Djibouti",
+    "credit": "Skilla1st",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:An_aerial_view_of_Djibouti_City.jpg"
+  }
+}

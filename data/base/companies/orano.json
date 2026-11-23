@@ -1,0 +1,54 @@
+{
+  "id": "orano",
+  "category": "companies",
+  "names": [
+    {
+      "name": "Orano",
+      "from": "1984"
+    }
+  ],
+  "summary": "The French company that mined Niger's uranium for half a century.",
+  "labels": [
+    "business"
+  ],
+  "wikidata": "Q61585271",
+  "events": [
+    {
+      "type": "born",
+      "date": "1984",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "niger"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Orano (Q61585271)",
+      "url": "https://www.wikidata.org/wiki/Q61585271",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Orano",
+      "url": "https://en.wikipedia.org/wiki/Orano",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/2148_AREVA_SWL_Offshore_BW_M5000_349_tons_Trianel_alpha_Ventus.jpg/500px-2148_AREVA_SWL_Offshore_BW_M5000_349_tons_Trianel_alpha_Ventus.jpg",
+    "alt": "Orano",
+    "credit": "Andre Hospers",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2148_AREVA_SWL_Offshore_BW_M5000_349_tons_Trianel_alpha_Ventus.jpg"
+  }
+}

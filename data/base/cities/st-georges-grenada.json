@@ -1,0 +1,51 @@
+{
+  "id": "st-georges-grenada",
+  "category": "cities",
+  "names": [
+    {
+      "name": "St. George's, Grenada",
+      "from": "1650"
+    }
+  ],
+  "summary": "The capital, round a horseshoe harbour.",
+  "wikidata": "Q41547",
+  "events": [
+    {
+      "type": "born",
+      "date": "1650",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "grenada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: St. George's, Grenada (Q41547)",
+      "url": "https://www.wikidata.org/wiki/Q41547",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: St. George's, Grenada",
+      "url": "https://en.wikipedia.org/wiki/St._George's,_Grenada",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Grenada_-_St._George.jpg/500px-Grenada_-_St._George.jpg",
+    "alt": "St. George's, Grenada",
+    "credit": "P. Hughes",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Grenada_-_St._George.jpg"
+  }
+}

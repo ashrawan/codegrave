@@ -1,0 +1,54 @@
+{
+  "id": "estonian-declaration-of-independence",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Estonian Declaration of Independence",
+      "from": "1918"
+    }
+  ],
+  "summary": "The declaration of 24 February 1918.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2412892",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-02-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Estonian Declaration of Independence (Q2412892)",
+      "url": "https://www.wikidata.org/wiki/Q2412892",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Estonian Declaration of Independence",
+      "url": "https://en.wikipedia.org/wiki/Estonian_Declaration_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Estonian_Declaration_of_Independence.jpg/500px-Estonian_Declaration_of_Independence.jpg",
+    "alt": "Estonian Declaration of Independence",
+    "credit": "The Elders of Estonian National Council",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Estonian_Declaration_of_Independence.jpg"
+  }
+}

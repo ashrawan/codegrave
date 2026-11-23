@@ -1,0 +1,52 @@
+{
+  "id": "costa-rican-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Costa Rican Civil War",
+      "from": "1948"
+    }
+  ],
+  "summary": "The short war of 1948 after which José Figueres abolished the army.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q3434218",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948-03-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-04-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "costa-rica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Costa Rican Civil War (Q3434218)",
+      "url": "https://www.wikidata.org/wiki/Q3434218",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Costa Rican Civil War",
+      "url": "https://en.wikipedia.org/wiki/Costa_Rican_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

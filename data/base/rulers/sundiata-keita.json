@@ -1,0 +1,52 @@
+{
+  "id": "sundiata-keita",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Sundiata Keita",
+      "from": "1190"
+    }
+  ],
+  "summary": "Founder of the Mali Empire, whose story is told in the Epic of Sundiata.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q175772",
+  "events": [
+    {
+      "type": "born",
+      "date": "1190",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1255",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sundiata Keita (Q175772)",
+      "url": "https://www.wikidata.org/wiki/Q175772",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sundiata Keita",
+      "url": "https://en.wikipedia.org/wiki/Sundiata_Keita",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

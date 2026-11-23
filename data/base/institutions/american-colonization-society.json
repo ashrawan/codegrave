@@ -1,0 +1,56 @@
+{
+  "id": "american-colonization-society",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "American Colonization Society",
+      "from": "1816"
+    }
+  ],
+  "summary": "The society that sent freed black Americans to settle in Liberia from 1822.",
+  "wikidata": "Q210911",
+  "events": [
+    {
+      "type": "born",
+      "date": "1816-12-21",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liberia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: American Colonization Society (Q210911)",
+      "url": "https://www.wikidata.org/wiki/Q210911",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: American Colonization Society",
+      "url": "https://en.wikipedia.org/wiki/American_Colonization_Society",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/%281896%29_Departure_of_colored_emigrants_for_Liberia_-_The_Illustrated_American%2C_March_21%2C_1896.jpg/500px-%281896%29_Departure_of_colored_emigrants_for_Liberia_-_The_Illustrated_American%2C_March_21%2C_1896.jpg",
+    "alt": "American Colonization Society",
+    "credit": "Digital Collections, The New York Public Library. (still image) , (1890-1896). The New York Public Library, Astor, Lenno",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:(1896)_Departure_of_colored_emigrants_for_Liberia_-_The_Illustrated_American,_March_21,_1896.jpg"
+  }
+}

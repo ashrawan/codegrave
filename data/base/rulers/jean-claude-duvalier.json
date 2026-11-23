@@ -1,0 +1,59 @@
+{
+  "id": "jean-claude-duvalier",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Jean-Claude Duvalier",
+      "from": "1951"
+    }
+  ],
+  "summary": "\"Baby Doc\", who ruled from 1971 until he was driven out in 1986.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q310775",
+  "events": [
+    {
+      "type": "born",
+      "date": "1951-07-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2014-10-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "haiti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Jean-Claude Duvalier (Q310775)",
+      "url": "https://www.wikidata.org/wiki/Q310775",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Jean-Claude Duvalier",
+      "url": "https://en.wikipedia.org/wiki/Jean-Claude_Duvalier",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Baby_Doc_%28centr%C3%A9e%29.jpg/500px-Baby_Doc_%28centr%C3%A9e%29.jpg",
+    "alt": "Jean-Claude Duvalier",
+    "credit": "Marcello Casal Jr/ABr",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Baby_Doc_(centr%C3%A9e).jpg"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "dwayne-johnson",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Dwayne Johnson",
+      "from": "1972"
+    }
+  ],
+  "summary": "Wrestler and actor of Samoan descent.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q10738",
+  "events": [
+    {
+      "type": "born",
+      "date": "1972-05-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "samoa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dwayne Johnson (Q10738)",
+      "url": "https://www.wikidata.org/wiki/Q10738",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dwayne Johnson",
+      "url": "https://en.wikipedia.org/wiki/Dwayne_Johnson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Dwayne_Johnson-1809_%28cropped%29.jpg/500px-Dwayne_Johnson-1809_%28cropped%29.jpg",
+    "alt": "Dwayne Johnson",
+    "credit": "Harald Krichel",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dwayne_Johnson-1809_(cropped).jpg"
+  }
+}

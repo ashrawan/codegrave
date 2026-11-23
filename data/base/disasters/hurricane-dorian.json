@@ -1,0 +1,49 @@
+{
+  "id": "hurricane-dorian",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Dorian",
+      "from": "2019"
+    }
+  ],
+  "summary": "The hurricane of 2019 that stalled over the Abaco Islands and Grand Bahama.",
+  "wikidata": "Q66764432",
+  "events": [
+    {
+      "type": "born",
+      "date": "2019-08-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2019-09-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bahamas"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Dorian (Q66764432)",
+      "url": "https://www.wikidata.org/wiki/Q66764432",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Dorian",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Dorian",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

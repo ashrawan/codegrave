@@ -1,0 +1,51 @@
+{
+  "id": "kigali",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Kigali",
+      "from": "1907"
+    }
+  ],
+  "summary": "The capital, founded as a German post in 1907.",
+  "wikidata": "Q3859",
+  "events": [
+    {
+      "type": "born",
+      "date": "1907",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rwanda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kigali (Q3859)",
+      "url": "https://www.wikidata.org/wiki/Q3859",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kigali",
+      "url": "https://en.wikipedia.org/wiki/Kigali",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Kigali2018Cropped.jpg/500px-Kigali2018Cropped.jpg",
+    "alt": "Kigali",
+    "credit": "Adrien K",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Kigali2018Cropped.jpg"
+  }
+}

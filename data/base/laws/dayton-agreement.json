@@ -1,0 +1,51 @@
+{
+  "id": "dayton-agreement",
+  "category": "laws",
+  "names": [
+    {
+      "name": "Dayton Agreement",
+      "from": "1995"
+    }
+  ],
+  "summary": "The peace agreement of 1995 that ended the war and drew today's state.",
+  "wikidata": "Q190315",
+  "events": [
+    {
+      "type": "born",
+      "date": "1995-12-14",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bosnia-and-herzegovina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dayton Agreement (Q190315)",
+      "url": "https://www.wikidata.org/wiki/Q190315",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dayton Agreement",
+      "url": "https://en.wikipedia.org/wiki/Dayton_Agreement",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/DaytonAgreement.jpg/500px-DaytonAgreement.jpg",
+    "alt": "Dayton Agreement",
+    "credit": "U.S. Air Force/Staff Sgt. Brian Schlumbohm",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:DaytonAgreement.jpg"
+  }
+}

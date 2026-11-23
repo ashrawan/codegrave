@@ -1,0 +1,59 @@
+{
+  "id": "battle-of-tarawa",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Battle of Tarawa",
+      "from": "1943"
+    }
+  ],
+  "summary": "The battle of November 1943 between American and Japanese forces.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q250309",
+  "events": [
+    {
+      "type": "born",
+      "date": "1943-11-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1943-11-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kiribati"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Battle of Tarawa (Q250309)",
+      "url": "https://www.wikidata.org/wiki/Q250309",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Battle of Tarawa",
+      "url": "https://en.wikipedia.org/wiki/Battle_of_Tarawa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Tarawa.jpg/500px-Tarawa.jpg",
+    "alt": "Battle of Tarawa",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Tarawa.jpg"
+  }
+}

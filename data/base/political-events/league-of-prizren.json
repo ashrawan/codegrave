@@ -1,0 +1,59 @@
+{
+  "id": "league-of-prizren",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "League of Prizren",
+      "from": "1878"
+    }
+  ],
+  "summary": "The Albanian league of 1878, a start of the national movement.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q829597",
+  "events": [
+    {
+      "type": "born",
+      "date": "1878",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1881-04",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kosovo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: League of Prizren (Q829597)",
+      "url": "https://www.wikidata.org/wiki/Q829597",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: League of Prizren",
+      "url": "https://en.wikipedia.org/wiki/League_of_Prizren",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/2011_Prizren%2C_Budynek_Ligi_Prizre%C5%84skiej_02.jpg/500px-2011_Prizren%2C_Budynek_Ligi_Prizre%C5%84skiej_02.jpg",
+    "alt": "League of Prizren",
+    "credit": "Marcin Konsek",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:2011_Prizren,_Budynek_Ligi_Prizre%C5%84skiej_02.jpg"
+  }
+}

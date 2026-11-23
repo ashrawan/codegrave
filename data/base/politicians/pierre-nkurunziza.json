@@ -1,0 +1,59 @@
+{
+  "id": "pierre-nkurunziza",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Pierre Nkurunziza",
+      "from": "1964"
+    }
+  ],
+  "summary": "Rebel leader and president from 2005 to 2020.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57343",
+  "events": [
+    {
+      "type": "born",
+      "date": "1964-12-18",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-06-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burundi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Pierre Nkurunziza (Q57343)",
+      "url": "https://www.wikidata.org/wiki/Q57343",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Pierre Nkurunziza",
+      "url": "https://en.wikipedia.org/wiki/Pierre_Nkurunziza",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Pierre_Nkurunziza_-_World_Economic_Forum_on_Africa_2008.jpg/500px-Pierre_Nkurunziza_-_World_Economic_Forum_on_Africa_2008.jpg",
+    "alt": "Pierre Nkurunziza",
+    "credit": "Copyright World Economic Forum/Eric Miller, (mailto:emiller@iafrica.com)",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pierre_Nkurunziza_-_World_Economic_Forum_on_Africa_2008.jpg"
+  }
+}

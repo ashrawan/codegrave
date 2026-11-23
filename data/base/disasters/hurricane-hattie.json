@@ -1,0 +1,49 @@
+{
+  "id": "hurricane-hattie",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Hattie",
+      "from": "1961"
+    }
+  ],
+  "summary": "The hurricane of 1961 that wrecked Belize City.",
+  "wikidata": "Q1638597",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-10-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1961-11-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "belize"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Hattie (Q1638597)",
+      "url": "https://www.wikidata.org/wiki/Q1638597",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Hattie",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Hattie",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

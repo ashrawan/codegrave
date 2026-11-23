@@ -1,0 +1,51 @@
+{
+  "id": "port-louis",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Port Louis",
+      "from": "1735"
+    }
+  ],
+  "summary": "The capital, founded by the French governor Mahé de La Bourdonnais.",
+  "wikidata": "Q3929",
+  "events": [
+    {
+      "type": "born",
+      "date": "1735",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mauritius"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Port Louis (Q3929)",
+      "url": "https://www.wikidata.org/wiki/Q3929",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Port Louis",
+      "url": "https://en.wikipedia.org/wiki/Port_Louis",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Mauritius_port_louis.jpg/500px-Mauritius_port_louis.jpg",
+    "alt": "Port Louis",
+    "credit": "Arne Müseler",
+    "licence": "CC BY-SA 3.0 de",
+    "source": "https://commons.wikimedia.org/wiki/File:Mauritius_port_louis.jpg"
+  }
+}

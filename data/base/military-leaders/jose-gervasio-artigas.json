@@ -1,0 +1,59 @@
+{
+  "id": "jose-gervasio-artigas",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "José Gervasio Artigas",
+      "from": "1764"
+    }
+  ],
+  "summary": "The national hero, leader of the fight for independence.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q252847",
+  "events": [
+    {
+      "type": "born",
+      "date": "1764-06-19",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1850-09-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uruguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: José Gervasio Artigas (Q252847)",
+      "url": "https://www.wikidata.org/wiki/Q252847",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: José Gervasio Artigas",
+      "url": "https://en.wikipedia.org/wiki/José_Gervasio_Artigas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Juan_Manuel_Blanes_-_Artigas_en_la_Ciudadela.jpg/500px-Juan_Manuel_Blanes_-_Artigas_en_la_Ciudadela.jpg",
+    "alt": "José Gervasio Artigas",
+    "credit": "Juan Manuel Blanes",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Juan_Manuel_Blanes_-_Artigas_en_la_Ciudadela.jpg"
+  }
+}

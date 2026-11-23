@@ -1,0 +1,77 @@
+{
+  "id": "afghanistan",
+  "name": "Afghanistan",
+  "description": "Afghanistan from Bactria and the Buddhas of Bamiyan to the Durrani Empire, the Great Game, Soviet war, the Taliban and today.",
+  "category": "places",
+  "tags": [
+    "afghanistan",
+    "kabul",
+    "bamiyan",
+    "taliban",
+    "silk road",
+    "central asia"
+  ],
+  "entries": [
+    "herat",
+    "kushan-empire",
+    "buddhas-of-bamiyan",
+    "ghaznavids",
+    "minaret-of-jam",
+    "ahmad-shah-durrani",
+    "afghanistan",
+    "durrani-empire",
+    "kabul",
+    "first-anglo-afghan-war",
+    "second-anglo-afghan-war",
+    "amanullah-khan",
+    "mohammad-daoud-khan",
+    "mohammed-zahir-shah",
+    "afghan-independence-1919",
+    "ashraf-ghani",
+    "ahmad-shah-massoud",
+    "hamid-karzai",
+    "saur-revolution",
+    "soviet-afghan-war",
+    "taliban",
+    "war-in-afghanistan-2001-2021",
+    "fall-of-kabul-2021",
+    "2023-herat-earthquakes"
+  ],
+  "checkpoints": [
+    {
+      "id": "bactria-and-kushans",
+      "name": "Bactria and Kushans",
+      "from": -500,
+      "to": 976,
+      "note": "Persians and Greeks ruled Bactria, the Kushans spread Buddhism, and the Buddhas of Bamiyan were carved."
+    },
+    {
+      "id": "dynasties",
+      "name": "Dynasties",
+      "from": 977,
+      "to": 1746,
+      "note": "The Ghaznavids and Ghurids raided India, and the Mongols and Timurids passed through."
+    },
+    {
+      "id": "afghan-kingdom",
+      "name": "Afghan kingdom",
+      "from": 1747,
+      "to": 1978,
+      "note": "Ahmad Shah founded the Durrani Empire. Britain fought wars here in the Great Game."
+    },
+    {
+      "id": "wars",
+      "name": "Wars",
+      "from": 1979,
+      "to": 2026,
+      "note": "The Soviet invasion began decades of war. The Taliban ruled from 1996, were driven out in 2001 and returned in 2021."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_the_Taliban.svg/330px-Flag_of_the_Taliban.svg.png",
+    "alt": "Flag of Afghanistan",
+    "credit": "Original: Taliban Vector: Lexicon",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Taliban.svg"
+  }
+}

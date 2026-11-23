@@ -1,0 +1,59 @@
+{
+  "id": "maurice-bishop",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Maurice Bishop",
+      "from": "1944"
+    }
+  ],
+  "summary": "Leader of the revolution of 1979, killed by rivals in 1983.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q468234",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-05-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1983-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "grenada"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Maurice Bishop (Q468234)",
+      "url": "https://www.wikidata.org/wiki/Q468234",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Maurice Bishop",
+      "url": "https://en.wikipedia.org/wiki/Maurice_Bishop",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Maurice_Bishop_%28AP%29.jpg/500px-Maurice_Bishop_%28AP%29.jpg",
+    "alt": "Maurice Bishop",
+    "credit": "Associated Press",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Maurice_Bishop_(AP).jpg"
+  }
+}

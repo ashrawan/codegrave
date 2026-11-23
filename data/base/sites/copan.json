@@ -1,0 +1,56 @@
+{
+  "id": "copan",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Copán",
+      "from": "0426"
+    }
+  ],
+  "summary": "A great Maya city famous for its carved stelae and hieroglyphic stairway.",
+  "wikidata": "Q214827",
+  "events": [
+    {
+      "type": "born",
+      "date": "0426",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "0900",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "honduras"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Copán (Q214827)",
+      "url": "https://www.wikidata.org/wiki/Q214827",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Copán",
+      "url": "https://en.wikipedia.org/wiki/Copán",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Cop%C3%A1n_Stela_B.jpg/500px-Cop%C3%A1n_Stela_B.jpg",
+    "alt": "Copán",
+    "credit": "Nosferattus",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cop%C3%A1n_Stela_B.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "nouakchott",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Nouakchott",
+      "from": "1958"
+    }
+  ],
+  "summary": "The capital, built from scratch for independence.",
+  "wikidata": "Q3688",
+  "events": [
+    {
+      "type": "born",
+      "date": "1958",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mauritania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nouakchott (Q3688)",
+      "url": "https://www.wikidata.org/wiki/Q3688",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nouakchott",
+      "url": "https://en.wikipedia.org/wiki/Nouakchott",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/15-Nouakchott-eH-R0058185.jpg/500px-15-Nouakchott-eH-R0058185.jpg",
+    "alt": "Nouakchott",
+    "credit": "Laminesall96",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:15-Nouakchott-eH-R0058185.jpg"
+  }
+}

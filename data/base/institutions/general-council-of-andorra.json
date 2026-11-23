@@ -1,0 +1,51 @@
+{
+  "id": "general-council-of-andorra",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "General Council",
+      "from": "1993"
+    }
+  ],
+  "summary": "The parliament, one of the oldest in Europe, founded in 1419.",
+  "wikidata": "Q24824",
+  "events": [
+    {
+      "type": "born",
+      "date": "1993",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "andorra"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: General Council (Q24824)",
+      "url": "https://www.wikidata.org/wiki/Q24824",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: General Council (Andorra)",
+      "url": "https://en.wikipedia.org/wiki/General_Council_(Andorra)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Consell_General_d%27Andorra%2C_interior.jpg/500px-Consell_General_d%27Andorra%2C_interior.jpg",
+    "alt": "General Council",
+    "credit": "Servei Fotogràfic del Consell General d'Andorra",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Consell_General_d%27Andorra,_interior.jpg"
+  }
+}

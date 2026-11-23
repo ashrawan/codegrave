@@ -1,0 +1,59 @@
+{
+  "id": "sam-nujoma",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Sam Nujoma",
+      "from": "1929"
+    }
+  ],
+  "summary": "Founding president, from 1990 to 2005.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q154104",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-05-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-02-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "namibia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sam Nujoma (Q154104)",
+      "url": "https://www.wikidata.org/wiki/Q154104",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sam Nujoma",
+      "url": "https://en.wikipedia.org/wiki/Sam_Nujoma",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/5/54/Sam_Nujoma_%282004%29_cropped.jpg",
+    "alt": "Sam Nujoma",
+    "credit": "Ana Nascimento/ABr",
+    "licence": "CC BY 3.0 br",
+    "source": "https://commons.wikimedia.org/wiki/File:Sam_Nujoma_(2004)_cropped.jpg"
+  }
+}

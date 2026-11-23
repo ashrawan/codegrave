@@ -1,0 +1,54 @@
+{
+  "id": "seychelles",
+  "name": "Seychelles",
+  "description": "Seychelles from empty islands to French settlers, British rule, independence in 1976, the coup of 1977 and the giant tortoises of Aldabra.",
+  "category": "places",
+  "tags": [
+    "seychelles",
+    "victoria",
+    "indian ocean",
+    "aldabra"
+  ],
+  "entries": [
+    "victoria-seychelles",
+    "france-albert-rene",
+    "james-mancham",
+    "james-michel",
+    "wavel-ramkalawan",
+    "patrick-herminie",
+    "seychelles",
+    "1981-seychelles-coup-attempt",
+    "aldabra",
+    "vallee-de-mai"
+  ],
+  "checkpoints": [
+    {
+      "id": "french-and-british",
+      "name": "French and British",
+      "from": 1770,
+      "to": 1975,
+      "note": "French settlers arrived in 1770. Britain took the islands in 1810."
+    },
+    {
+      "id": "independent",
+      "name": "Independent",
+      "from": 1976,
+      "to": 2026,
+      "note": "Seychelles became independent in 1976 and was a one-party state until 1993."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Seychelles.svg/330px-Flag_of_Seychelles.svg.png",
+    "alt": "Flag of Seychelles",
+    "credit": "User:Vxb83",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Seychelles.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/81/Koste_Seselwa_%28instrumental%29.ogg/Koste_Seselwa_%28instrumental%29.ogg.mp3",
+    "title": "Koste Seselwa",
+    "credit": "United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Koste_Seselwa_(instrumental).ogg"
+  }
+}

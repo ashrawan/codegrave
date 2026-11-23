@@ -1,0 +1,59 @@
+{
+  "id": "gediminas",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Gediminas",
+      "from": "1275"
+    }
+  ],
+  "summary": "Grand duke who founded Vilnius as his capital.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q244852",
+  "events": [
+    {
+      "type": "born",
+      "date": "1275",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1341-12",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lithuania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gediminas (Q244852)",
+      "url": "https://www.wikidata.org/wiki/Q244852",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gediminas",
+      "url": "https://en.wikipedia.org/wiki/Gediminas",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Gediminas_1581_%28118503418%29.jpg/500px-Gediminas_1581_%28118503418%29.jpg",
+    "alt": "Gediminas",
+    "credit": "Alessandro Guagnini",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gediminas_1581_(118503418).jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "namibia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Namibia",
+      "from": "1990"
+    }
+  ],
+  "summary": "A country of south-west Africa, with the Namib desert on its coast, independent from South Africa since 1990.",
+  "wikidata": "Q1030",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Namibia (Q1030)",
+      "url": "https://www.wikidata.org/wiki/Q1030",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Namibia",
+      "url": "https://en.wikipedia.org/wiki/Namibia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Duna_en_Sossusvlei%2C_Namibia%2C_2018-08-06%2C_DD_002.jpg/500px-Duna_en_Sossusvlei%2C_Namibia%2C_2018-08-06%2C_DD_002.jpg",
+    "alt": "Namibia",
+    "credit": "Diego Delso",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Duna_en_Sossusvlei,_Namibia,_2018-08-06,_DD_002.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "vere-bird",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Vere Bird",
+      "from": "1910"
+    }
+  ],
+  "summary": "First prime minister of Antigua and Barbuda.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q561911",
+  "events": [
+    {
+      "type": "born",
+      "date": "1910-12-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1999-06-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "antigua-and-barbuda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vere Bird (Q561911)",
+      "url": "https://www.wikidata.org/wiki/Q561911",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vere Bird",
+      "url": "https://en.wikipedia.org/wiki/Vere_Bird",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Vere_Bird_1986_%28cropped%29.jpg",
+    "alt": "Vere Bird",
+    "credit": "Pete Souza, White House",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vere_Bird_1986_(cropped).jpg"
+  }
+}

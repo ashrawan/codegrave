@@ -1,0 +1,52 @@
+{
+  "id": "december-murders",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "December murders",
+      "from": "1982"
+    }
+  ],
+  "summary": "The killing of fifteen opponents of the military regime in 1982.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q583569",
+  "events": [
+    {
+      "type": "born",
+      "date": "1982-12-08",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1982-12-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "suriname"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: December murders (Q583569)",
+      "url": "https://www.wikidata.org/wiki/Q583569",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: December murders",
+      "url": "https://en.wikipedia.org/wiki/December_murders",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

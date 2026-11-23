@@ -1,0 +1,52 @@
+{
+  "id": "nakba",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Nakba",
+      "from": "1948"
+    }
+  ],
+  "summary": "The flight and expulsion of some 700,000 Palestinians in 1948.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3266633",
+  "events": [
+    {
+      "type": "born",
+      "date": "1948",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1948",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nakba (Q3266633)",
+      "url": "https://www.wikidata.org/wiki/Q3266633",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nakba",
+      "url": "https://en.wikipedia.org/wiki/Nakba",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

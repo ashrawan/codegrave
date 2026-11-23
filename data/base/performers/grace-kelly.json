@@ -1,0 +1,59 @@
+{
+  "id": "grace-kelly",
+  "category": "performers",
+  "names": [
+    {
+      "name": "Grace Kelly",
+      "from": "1929"
+    }
+  ],
+  "summary": "Hollywood star who married Prince Rainier in 1956.",
+  "labels": [
+    "film"
+  ],
+  "wikidata": "Q3925",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-11-12",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1982-09-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "monaco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Grace Kelly (Q3925)",
+      "url": "https://www.wikidata.org/wiki/Q3925",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Grace Kelly",
+      "url": "https://en.wikipedia.org/wiki/Grace_Kelly",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Gracia_van_Monaco_%281972%29.jpg/500px-Gracia_van_Monaco_%281972%29.jpg",
+    "alt": "Grace Kelly",
+    "credit": "Hans Peters for Anefo",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gracia_van_Monaco_(1972).jpg"
+  }
+}

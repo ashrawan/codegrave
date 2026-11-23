@@ -1,0 +1,67 @@
+{
+  "id": "kosovo",
+  "name": "Kosovo",
+  "description": "Kosovo from Dardania and medieval Serbia to the Ottomans, Yugoslavia, the war of 1998 and 1999 and independence in 2008.",
+  "category": "places",
+  "tags": [
+    "kosovo",
+    "pristina",
+    "balkans",
+    "albanians",
+    "serbia"
+  ],
+  "entries": [
+    "visoki-decani",
+    "battle-of-kosovo",
+    "league-of-prizren",
+    "ibrahim-rugova",
+    "albin-kurti",
+    "vjosa-osmani",
+    "rita-ora",
+    "majlinda-kelmendi",
+    "dua-lipa",
+    "kosovo-war",
+    "kfor",
+    "nato-bombing-of-yugoslavia",
+    "unmik",
+    "kosovo-declaration-of-independence",
+    "kosovo"
+  ],
+  "checkpoints": [
+    {
+      "id": "medieval-kosovo",
+      "name": "Medieval Kosovo",
+      "from": 1180,
+      "to": 1454,
+      "note": "Kosovo was a heart of the medieval Serbian state, with its great monasteries. The Ottomans won the battle of Kosovo in 1389."
+    },
+    {
+      "id": "ottoman-and-yugoslav-rule",
+      "name": "Ottoman and Yugoslav rule",
+      "from": 1455,
+      "to": 1997,
+      "note": "The Ottomans ruled for four centuries. Kosovo went to Serbia in 1912 and was part of Yugoslavia, where Albanians became the great majority."
+    },
+    {
+      "id": "war-and-independence",
+      "name": "War and independence",
+      "from": 1998,
+      "to": 2026,
+      "note": "War broke out in 1998 and NATO bombed Yugoslavia in 1999. Kosovo declared independence in 2008; many states recognise it and Serbia does not."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Flag_of_Kosovo.svg/330px-Flag_of_Kosovo.svg.png",
+    "alt": "Flag of Kosovo",
+    "credit": "Cradel (current version), earlier version by Ningyou",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Kosovo.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0a/National_Anthem_of_the_Republic_of_Kosovo.ogg/National_Anthem_of_the_Republic_of_Kosovo.ogg.mp3",
+    "title": "Europe",
+    "credit": "https://web.archive.org/web/20100412190118/http://www.navyband.navy.mil:80/anthems/all_countries.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_the_Republic_of_Kosovo.ogg"
+  }
+}

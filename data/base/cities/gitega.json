@@ -1,0 +1,51 @@
+{
+  "id": "gitega",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Gitega",
+      "from": "1912"
+    }
+  ],
+  "summary": "The capital since 2019, the old royal seat.",
+  "wikidata": "Q167551",
+  "events": [
+    {
+      "type": "born",
+      "date": "1912",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burundi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Gitega (Q167551)",
+      "url": "https://www.wikidata.org/wiki/Q167551",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Gitega",
+      "url": "https://en.wikipedia.org/wiki/Gitega",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Gitega.JPG/500px-Gitega.JPG",
+    "alt": "Gitega",
+    "credit": "No machine-readable author provided. Tequendamia assumed (based on copyright claims).",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Gitega.JPG"
+  }
+}

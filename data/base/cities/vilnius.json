@@ -1,0 +1,51 @@
+{
+  "id": "vilnius",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Vilnius",
+      "from": "1323"
+    }
+  ],
+  "summary": "The capital, first named in 1323, with a great baroque old town.",
+  "wikidata": "Q216",
+  "events": [
+    {
+      "type": "born",
+      "date": "1323",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lithuania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vilnius (Q216)",
+      "url": "https://www.wikidata.org/wiki/Q216",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vilnius",
+      "url": "https://en.wikipedia.org/wiki/Vilnius",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Gedimino_pilis_by_Augustas_Didzgalvis.jpg/500px-Gedimino_pilis_by_Augustas_Didzgalvis.jpg",
+    "alt": "Vilnius",
+    "credit": "BigHead",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Gedimino_pilis_by_Augustas_Didzgalvis.jpg"
+  }
+}

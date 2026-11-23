@@ -1,0 +1,59 @@
+{
+  "id": "amata-kabua",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Amata Kabua",
+      "from": "1928"
+    }
+  ],
+  "summary": "The first president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q12915",
+  "events": [
+    {
+      "type": "born",
+      "date": "1928-11-17",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-12-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "marshall-islands"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Amata Kabua (Q12915)",
+      "url": "https://www.wikidata.org/wiki/Q12915",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Amata Kabua",
+      "url": "https://en.wikipedia.org/wiki/Amata_Kabua",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Amata_Kabua_MH_%28cropped2%29.jpg",
+    "alt": "Amata Kabua",
+    "credit": "Office of the President and Cabinet",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Amata_Kabua_MH_(cropped2).jpg"
+  }
+}

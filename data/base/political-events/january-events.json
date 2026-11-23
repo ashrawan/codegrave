@@ -1,0 +1,52 @@
+{
+  "id": "january-events",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "January Events",
+      "from": "1991"
+    }
+  ],
+  "summary": "The Soviet attack on the Vilnius television tower in January 1991.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1540695",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-01-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1991-01-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lithuania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: January Events (Q1540695)",
+      "url": "https://www.wikidata.org/wiki/Q1540695",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: January Events",
+      "url": "https://en.wikipedia.org/wiki/January_Events",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

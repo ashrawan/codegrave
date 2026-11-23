@@ -1,0 +1,52 @@
+{
+  "id": "portuguese-timor",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Portuguese Timor",
+      "from": "1702"
+    }
+  ],
+  "summary": "Portugal's colony on Timor, from the 1500s to 1975.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q142965",
+  "events": [
+    {
+      "type": "born",
+      "date": "1702",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1975-12-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "east-timor"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Portuguese Timor (Q142965)",
+      "url": "https://www.wikidata.org/wiki/Q142965",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Portuguese Timor",
+      "url": "https://en.wikipedia.org/wiki/Portuguese_Timor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

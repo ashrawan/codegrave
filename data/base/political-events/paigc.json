@@ -1,0 +1,54 @@
+{
+  "id": "paigc",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "African Party for the Independence of Guinea and Cape Verde",
+      "from": "1956"
+    }
+  ],
+  "summary": "The party that fought for the freedom of Guinea-Bissau and Cape Verde.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q776352",
+  "events": [
+    {
+      "type": "born",
+      "date": "1956-09-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cape-verde"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: African Party for the Independence of Guinea and Cape Verde (Q776352)",
+      "url": "https://www.wikidata.org/wiki/Q776352",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: African Party for the Independence of Guinea and Cape Verde",
+      "url": "https://en.wikipedia.org/wiki/African_Party_for_the_Independence_of_Guinea_and_Cape_Verde",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/PAIGC_headquarter%2C_Bissau_9.jpg/500px-PAIGC_headquarter%2C_Bissau_9.jpg",
+    "alt": "African Party for the Independence of Guinea and Cape Verde",
+    "credit": "Jcornelius",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:PAIGC_headquarter,_Bissau_9.jpg"
+  }
+}

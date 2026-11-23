@@ -1,0 +1,51 @@
+{
+  "id": "equatorial-guinea",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Equatorial Guinea",
+      "from": "1968"
+    }
+  ],
+  "summary": "A Central African country of the island of Bioko and the mainland of Río Muni, independent from Spain since 1968.",
+  "wikidata": "Q983",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-10-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Equatorial Guinea (Q983)",
+      "url": "https://www.wikidata.org/wiki/Q983",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Equatorial Guinea",
+      "url": "https://en.wikipedia.org/wiki/Equatorial_Guinea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Equatorialguinea_w1_locator.svg/500px-Equatorialguinea_w1_locator.svg.png",
+    "alt": "Equatorial Guinea",
+    "credit": "Sanjay Rao",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Equatorialguinea_w1_locator.svg"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "gambia",
+  "name": "The Gambia",
+  "description": "The Gambia from the river kingdoms and the slave trade to a British colony, independence in 1965, Jammeh's rule and democracy since 2017.",
+  "category": "places",
+  "tags": [
+    "gambia",
+    "banjul",
+    "gambia river",
+    "west africa"
+  ],
+  "entries": [
+    "senegambian-stone-circles",
+    "kunta-kinteh-island",
+    "banjul",
+    "dawda-jawara",
+    "gambia",
+    "adama-barrow",
+    "yahya-jammeh",
+    "roots-alex-haley",
+    "senegambia-confederation",
+    "2016-17-gambian-constitutional-crisis"
+  ],
+  "checkpoints": [
+    {
+      "id": "river-kingdoms",
+      "name": "River kingdoms",
+      "from": -300,
+      "to": 1815,
+      "note": "The stone circles were raised over centuries. Kingdoms of Mali's world lined the river, and Europeans came for gold and slaves."
+    },
+    {
+      "id": "british-gambia",
+      "name": "British Gambia",
+      "from": 1816,
+      "to": 1964,
+      "note": "Britain founded Bathurst in 1816 and ruled the river as a colony."
+    },
+    {
+      "id": "independent-gambia",
+      "name": "Independent Gambia",
+      "from": 1965,
+      "to": 2026,
+      "note": "Independence came in 1965. Jammeh ruled from 1994 to 2017, when he lost an election and was forced out."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_The_Gambia.svg/330px-Flag_of_The_Gambia.svg.png",
+    "alt": "Flag of The Gambia",
+    "credit": "Vzb83 iThe source code of the previous SVG was invalid due to 39 errors.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_The_Gambia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/05/For_The_Gambia_Our_Homeland_%28instrumental%29.ogg/For_The_Gambia_Our_Homeland_%28instrumental%29.ogg.mp3",
+    "title": "For The Gambia, Our Homeland",
+    "credit": "https://web.archive.org/web/20000101043105/http://www.navyband.navy.mil/anthems/ANTHEMS/Gambia.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:For_The_Gambia_Our_Homeland_(instrumental).ogg"
+  }
+}

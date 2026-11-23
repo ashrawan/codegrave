@@ -1,0 +1,63 @@
+{
+  "id": "oman",
+  "name": "Oman",
+  "description": "Oman from the copper of Magan to the forts of the imams, a sea empire reaching Zanzibar, Sultan Qaboos and a modern state.",
+  "category": "places",
+  "tags": [
+    "oman",
+    "muscat",
+    "arabia",
+    "gulf",
+    "frankincense"
+  ],
+  "entries": [
+    "bat-al-khutm-and-al-ayn",
+    "magan",
+    "bahla-fort",
+    "oman",
+    "al-said",
+    "said-bin-sultan",
+    "sultanate-of-zanzibar",
+    "qaboos-bin-said",
+    "haitham-bin-tariq",
+    "sultan-qaboos-grand-mosque",
+    "land-of-frankincense"
+  ],
+  "checkpoints": [
+    {
+      "id": "magan-and-the-incense",
+      "name": "Magan and the incense",
+      "from": -3000,
+      "to": 1649,
+      "note": "Oman was Magan, a land of copper. Its incense was traded far, and the imams built great forts."
+    },
+    {
+      "id": "the-sea-empire",
+      "name": "The sea empire",
+      "from": 1650,
+      "to": 1969,
+      "note": "Oman drove out the Portuguese in 1650 and built an empire along the coast of East Africa, ruled from Zanzibar until 1856."
+    },
+    {
+      "id": "qaboos-and-after",
+      "name": "Qaboos and after",
+      "from": 1970,
+      "to": 2026,
+      "note": "Qaboos took power in 1970 and used oil money to build schools, roads and hospitals."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Flag_of_Oman.svg/330px-Flag_of_Oman.svg.png",
+    "alt": "Flag of Oman",
+    "credit": "See File history below for details.",
+    "licence": "OGL-om 1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Oman.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/5a/Peace_to_the_Sultan_%28%D9%86%D8%B4%D9%8A%D8%AF_%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85_%D8%A7%D9%84%D8%B3%D9%84%D8%B7%D8%A7%D9%86%D9%8A%29.ogg/Peace_to_the_Sultan_%28%D9%86%D8%B4%D9%8A%D8%AF_%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85_%D8%A7%D9%84%D8%B3%D9%84%D8%B7%D8%A7%D9%86%D9%8A%29.ogg.mp3",
+    "title": "Nashid as-Salaam as-Sultani",
+    "credit": "https://web.archive.org/web/20041019030827if_/http://www.navyband.navy.mil/anthems/ANTHEMS/Oman.mp3",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Peace_to_the_Sultan_(%D9%86%D8%B4%D9%8A%D8%AF_%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85_%D8%A7%D9%84%D8%B3%D9%84%D8%B7%D8%A7%D9%86%D9%8A).ogg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "charles-iv-holy-roman-emperor",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Charles IV, Holy Roman Emperor",
+      "from": "1316"
+    }
+  ],
+  "summary": "Emperor of the house of Luxembourg, who ruled from Prague.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q155669",
+  "events": [
+    {
+      "type": "born",
+      "date": "1316-05-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1378-11-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "luxembourg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Charles IV, Holy Roman Emperor (Q155669)",
+      "url": "https://www.wikidata.org/wiki/Q155669",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Charles IV, Holy Roman Emperor",
+      "url": "https://en.wikipedia.org/wiki/Charles_IV,_Holy_Roman_Emperor",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Charles_IV-John_Ocko_votive_picture-fragment.jpg/500px-Charles_IV-John_Ocko_votive_picture-fragment.jpg",
+    "alt": "Charles IV, Holy Roman Emperor",
+    "credit": "Circle of Theodoric of Prague",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Charles_IV-John_Ocko_votive_picture-fragment.jpg"
+  }
+}

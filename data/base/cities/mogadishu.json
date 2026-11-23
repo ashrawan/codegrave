@@ -1,0 +1,51 @@
+{
+  "id": "mogadishu",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Mogadishu",
+      "from": "0900"
+    }
+  ],
+  "summary": "The capital, an old trading port of the Indian Ocean.",
+  "wikidata": "Q2449",
+  "events": [
+    {
+      "type": "born",
+      "date": "0900",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "somalia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mogadishu (Q2449)",
+      "url": "https://www.wikidata.org/wiki/Q2449",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mogadishu",
+      "url": "https://en.wikipedia.org/wiki/Mogadishu",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Pictures_from_an_armed_convoy_trip_in_Mogadishu.jpg/500px-Pictures_from_an_armed_convoy_trip_in_Mogadishu.jpg",
+    "alt": "Mogadishu",
+    "credit": "CT Snow",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pictures_from_an_armed_convoy_trip_in_Mogadishu.jpg"
+  }
+}

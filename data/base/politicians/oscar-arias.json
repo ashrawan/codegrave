@@ -1,0 +1,54 @@
+{
+  "id": "oscar-arias",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Óscar Arias",
+      "from": "1941"
+    }
+  ],
+  "summary": "President who won the Nobel Peace Prize in 1987 for the Central American peace plan.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q49344",
+  "events": [
+    {
+      "type": "born",
+      "date": "1941-09-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "costa-rica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Óscar Arias (Q49344)",
+      "url": "https://www.wikidata.org/wiki/Q49344",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Óscar Arias",
+      "url": "https://en.wikipedia.org/wiki/Óscar_Arias",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/%C3%93scar_Arias_%28cropped%29.jpg/500px-%C3%93scar_Arias_%28cropped%29.jpg",
+    "alt": "Óscar Arias",
+    "credit": "MadriCR",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:%C3%93scar_Arias_(cropped).jpg"
+  }
+}

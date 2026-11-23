@@ -1,0 +1,71 @@
+{
+  "id": "eritrea",
+  "name": "Eritrea",
+  "description": "Eritrea from Aksum and the Red Sea coast to Italian rule, federation with Ethiopia, a thirty-year war, independence in 1993 and a closed state.",
+  "category": "places",
+  "tags": [
+    "eritrea",
+    "asmara",
+    "horn of africa",
+    "red sea"
+  ],
+  "entries": [
+    "qohaito",
+    "adulis",
+    "kingdom-of-aksum",
+    "asmara",
+    "eritrean-railway",
+    "italian-eritrea",
+    "fiat-tagliero-building",
+    "isaias-afwerki",
+    "eritrean-war-of-independence",
+    "eritrean-independence-referendum",
+    "eritrea",
+    "eritrean-ethiopian-war",
+    "biniam-girmay"
+  ],
+  "checkpoints": [
+    {
+      "id": "aksum-and-the-coast",
+      "name": "Aksum and the coast",
+      "from": -500,
+      "to": 1881,
+      "note": "Adulis was the port of Aksum. Ethiopian kings, Ottomans and Egyptians later held parts of the land."
+    },
+    {
+      "id": "italian-eritrea",
+      "name": "Italian Eritrea",
+      "from": 1882,
+      "to": 1951,
+      "note": "Italy made Eritrea its first colony and built Asmara. Britain ran it from 1941."
+    },
+    {
+      "id": "war-for-freedom",
+      "name": "War for freedom",
+      "from": 1952,
+      "to": 1992,
+      "note": "Eritrea was joined to Ethiopia, and a thirty-year war for independence began in 1961."
+    },
+    {
+      "id": "independent-eritrea",
+      "name": "Independent Eritrea",
+      "from": 1993,
+      "to": 2026,
+      "note": "Eritrea became independent in 1993. After a border war with Ethiopia it became one of the world's most closed states."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Flag_of_Eritrea.svg/330px-Flag_of_Eritrea.svg.png",
+    "alt": "Flag of Eritrea",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Eritrea.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4f/National_Anthem_of_Eritrea_by_US_Navy_Band.ogg/National_Anthem_of_Eritrea_by_US_Navy_Band.ogg.mp3",
+    "title": "Ertra, Ertra, Ertra",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil:80/anthems/national_anthems.htm https://web.arch",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Eritrea_by_US_Navy_Band.ogg"
+  }
+}

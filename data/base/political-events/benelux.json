@@ -1,0 +1,47 @@
+{
+  "id": "benelux",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Benelux",
+      "from": "1944"
+    }
+  ],
+  "summary": "The union of Belgium, the Netherlands and Luxembourg.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q13116",
+  "events": [
+    {
+      "type": "born",
+      "date": "1944-09-05",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "luxembourg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benelux (Q13116)",
+      "url": "https://www.wikidata.org/wiki/Q13116",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Benelux",
+      "url": "https://en.wikipedia.org/wiki/Benelux",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

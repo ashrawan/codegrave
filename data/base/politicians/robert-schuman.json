@@ -1,0 +1,59 @@
+{
+  "id": "robert-schuman",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Robert Schuman",
+      "from": "1886"
+    }
+  ],
+  "summary": "Statesman born in Luxembourg City, a founder of the European Union.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q15981",
+  "events": [
+    {
+      "type": "born",
+      "date": "1886-06-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1963-09-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "luxembourg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Robert Schuman (Q15981)",
+      "url": "https://www.wikidata.org/wiki/Q15981",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Schuman",
+      "url": "https://en.wikipedia.org/wiki/Robert_Schuman",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Robert_Schuman_1958.jpg/500px-Robert_Schuman_1958.jpg",
+    "alt": "Robert Schuman",
+    "credit": "European Commission",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Robert_Schuman_1958.jpg"
+  }
+}

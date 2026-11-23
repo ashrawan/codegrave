@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-burundi",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Burundi",
+      "from": "1680"
+    }
+  ],
+  "summary": "The kingdom ruled by the mwami, the king, from the 1600s until 1966.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1192936",
+  "events": [
+    {
+      "type": "born",
+      "date": "1680",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1966-11-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burundi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Burundi (Q1192936)",
+      "url": "https://www.wikidata.org/wiki/Q1192936",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Burundi",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Burundi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

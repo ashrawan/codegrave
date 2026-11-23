@@ -1,0 +1,45 @@
+{
+  "id": "oculus-rift",
+  "category": "media-devices",
+  "names": [
+    {
+      "name": "Oculus Rift",
+      "from": "2016"
+    }
+  ],
+  "summary": "The headset that brought virtual reality to home gamers, after a crowd-funding campaign and Facebook's purchase of Oculus.",
+  "wikidata": "Q3274429",
+  "events": [
+    {
+      "type": "born",
+      "date": "2016-03-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Oculus Rift (Q3274429)",
+      "url": "https://www.wikidata.org/wiki/Q3274429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Oculus Rift",
+      "url": "https://en.wikipedia.org/wiki/Oculus_Rift",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Oculus-Rift-CV1-Headset-Front_with_transparent_background.png/500px-Oculus-Rift-CV1-Headset-Front_with_transparent_background.png",
+    "alt": "Oculus Rift",
+    "credit": "Evan-Amos",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Oculus-Rift-CV1-Headset-Front_with_transparent_background.png"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "omar-bongo",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Omar Bongo",
+      "from": "1935"
+    }
+  ],
+  "summary": "President from 1967 until his death in 2009, one of the longest-serving rulers in the world.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q172083",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-12-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2009-06-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gabon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Omar Bongo (Q172083)",
+      "url": "https://www.wikidata.org/wiki/Q172083",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Omar Bongo",
+      "url": "https://en.wikipedia.org/wiki/Omar_Bongo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

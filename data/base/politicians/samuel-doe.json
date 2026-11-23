@@ -1,0 +1,59 @@
+{
+  "id": "samuel-doe",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Samuel Doe",
+      "from": "1951"
+    }
+  ],
+  "summary": "Soldier who seized power in 1980, ending the Americo-Liberian rule, and was killed in 1990.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q294618",
+  "events": [
+    {
+      "type": "born",
+      "date": "1951-05-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-09-09",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "liberia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Samuel Doe (Q294618)",
+      "url": "https://www.wikidata.org/wiki/Q294618",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Samuel Doe",
+      "url": "https://en.wikipedia.org/wiki/Samuel_Doe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Samuel_Kanyon_Doe_-_Liberian.jpg/500px-Samuel_Kanyon_Doe_-_Liberian.jpg",
+    "alt": "Samuel Doe",
+    "credit": "Photographer: Frank Hall, Treatment: Frank C. Müller",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Samuel_Kanyon_Doe_-_Liberian.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "rwanda",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Rwanda",
+      "from": "1962"
+    }
+  ],
+  "summary": "A small country of hills in the African Great Lakes, independent from Belgium since 1962.",
+  "wikidata": "Q1037",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rwanda (Q1037)",
+      "url": "https://www.wikidata.org/wiki/Q1037",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rwanda",
+      "url": "https://en.wikipedia.org/wiki/Rwanda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/An_aerial_of_Kigali_Convention_Center_on_June_19%2C_2019._Photo_by_Emmanuel_Kwizera.jpg/500px-An_aerial_of_Kigali_Convention_Center_on_June_19%2C_2019._Photo_by_Emmanuel_Kwizera.jpg",
+    "alt": "Rwanda",
+    "credit": "Emmanuelkwizera",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:An_aerial_of_Kigali_Convention_Center_on_June_19,_2019._Photo_by_Emmanuel_Kwizera.jpg"
+  }
+}

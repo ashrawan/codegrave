@@ -1,0 +1,53 @@
+{
+  "id": "solomon-islands",
+  "name": "Solomon Islands",
+  "description": "Solomon Islands from the first settlers to British rule, Guadalcanal, independence in 1978 and the tensions of 1998 to 2003.",
+  "category": "places",
+  "tags": [
+    "solomon islands",
+    "honiara",
+    "pacific",
+    "melanesia"
+  ],
+  "entries": [
+    "british-solomon-islands",
+    "honiara",
+    "guadalcanal-campaign",
+    "peter-kenilorea",
+    "manasseh-sogavare",
+    "jeremiah-manele",
+    "solomon-islands",
+    "east-rennell",
+    "ramsi"
+  ],
+  "checkpoints": [
+    {
+      "id": "islanders-and-the-protectorate",
+      "name": "Islanders and the protectorate",
+      "from": -1000,
+      "to": 1977,
+      "note": "Austronesian peoples settled the islands. Britain made them a protectorate in 1893, and Guadalcanal was fought over in 1942."
+    },
+    {
+      "id": "independent",
+      "name": "Independent",
+      "from": 1978,
+      "to": 2026,
+      "note": "The Solomon Islands became independent in 1978."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Flag_of_the_Solomon_Islands.svg/330px-Flag_of_the_Solomon_Islands.svg.png",
+    "alt": "Flag of Solomon Islands",
+    "credit": "User:SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Solomon_Islands.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/69/National_Anthem_of_Solomon_Islands_%28instrumental%29.wav/National_Anthem_of_Solomon_Islands_%28instrumental%29.wav.mp3",
+    "title": "God Save Our Solomon Islands",
+    "credit": "Ddis tts",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Solomon_Islands_(instrumental).wav"
+  }
+}

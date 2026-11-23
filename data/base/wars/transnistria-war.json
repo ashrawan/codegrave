@@ -1,0 +1,59 @@
+{
+  "id": "transnistria-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Transnistria War",
+      "from": "1990"
+    }
+  ],
+  "summary": "The war of 1992 after which the east bank of the Dniester broke away.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q285280",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-11-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-07-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "moldova"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Transnistria War (Q285280)",
+      "url": "https://www.wikidata.org/wiki/Q285280",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Transnistria War",
+      "url": "https://en.wikipedia.org/wiki/Transnistria_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Bender_1992.jpg/500px-Bender_1992.jpg",
+    "alt": "Transnistria War",
+    "credit": "Unknown authorUnknown author",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bender_1992.jpg"
+  }
+}

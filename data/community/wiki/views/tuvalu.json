@@ -1,0 +1,54 @@
+{
+  "id": "tuvalu",
+  "name": "Tuvalu",
+  "description": "Tuvalu from Polynesian voyagers to the Ellice Islands, independence in 1978, the .tv domain and the rising sea.",
+  "category": "places",
+  "tags": [
+    "tuvalu",
+    "funafuti",
+    "pacific",
+    "polynesia",
+    "climate"
+  ],
+  "entries": [
+    "gilbert-and-ellice-islands",
+    "toaripi-lauti",
+    "enele-sopoaga",
+    "kausea-natano",
+    "feleti-teo",
+    "1974-ellice-islands-self-determination-referendum",
+    "tuvalu",
+    "tv-domain",
+    "falepili-union"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-ellice-islands",
+      "name": "The Ellice Islands",
+      "from": -1000,
+      "to": 1977,
+      "note": "Polynesians settled the islands. Britain ruled them with the Gilberts."
+    },
+    {
+      "id": "independent-tuvalu",
+      "name": "Independent Tuvalu",
+      "from": 1978,
+      "to": 2026,
+      "note": "Tuvalu became independent in 1978 and has warned the world of the rising sea."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Tuvalu.svg/330px-Flag_of_Tuvalu.svg.png",
+    "alt": "Flag of Tuvalu",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Tuvalu.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6d/Tuvalu_mo_te_Atua.ogg/Tuvalu_mo_te_Atua.ogg.mp3",
+    "title": "Tuvalu mo te Atua",
+    "credit": "Afaese Manoa",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tuvalu_mo_te_Atua.ogg"
+  }
+}

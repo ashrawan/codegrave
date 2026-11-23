@@ -1,0 +1,51 @@
+{
+  "id": "castries",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Castries",
+      "from": "1650"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q41699",
+  "events": [
+    {
+      "type": "born",
+      "date": "1650",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "saint-lucia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Castries (Q41699)",
+      "url": "https://www.wikidata.org/wiki/Q41699",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Castries",
+      "url": "https://en.wikipedia.org/wiki/Castries",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/CastriesStLucia.JPG/500px-CastriesStLucia.JPG",
+    "alt": "Castries",
+    "credit": "UpstateNYer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:CastriesStLucia.JPG"
+  }
+}

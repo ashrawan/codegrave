@@ -1,0 +1,44 @@
+{
+  "id": "palau",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Palau",
+      "from": "1994"
+    }
+  ],
+  "summary": "A Pacific country of some three hundred islands, freely associated with the United States since 1994.",
+  "wikidata": "Q695",
+  "events": [
+    {
+      "type": "born",
+      "date": "1994-10-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Palau (Q695)",
+      "url": "https://www.wikidata.org/wiki/Q695",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Palau",
+      "url": "https://en.wikipedia.org/wiki/Palau",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

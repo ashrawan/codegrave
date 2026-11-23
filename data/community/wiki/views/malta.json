@@ -1,0 +1,74 @@
+{
+  "id": "malta",
+  "name": "Malta",
+  "description": "Malta from the temples older than the pyramids to the Phoenicians, the Knights of St John, the Great Siege, Britain, independence and the EU.",
+  "category": "places",
+  "tags": [
+    "malta",
+    "valletta",
+    "mediterranean",
+    "knights",
+    "europe"
+  ],
+  "entries": [
+    "hal-saflieni-hypogeum",
+    "megalithic-temples-of-malta",
+    "knights-hospitaller",
+    "great-siege-of-malta",
+    "valletta",
+    "caravaggio",
+    "st-johns-co-cathedral",
+    "french-occupation-of-malta",
+    "crown-colony-of-malta",
+    "dom-mintoff",
+    "siege-of-malta-world-war-ii",
+    "assassination-of-daphne-caruana-galizia",
+    "malta",
+    "robert-abela",
+    "slovakia-joins-eu"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-temple-builders",
+      "name": "The temple builders",
+      "from": -4000,
+      "to": 1529,
+      "note": "The temples of Malta were built from about 3600 BCE. Phoenicians, Romans and Arabs came, and then the Normans."
+    },
+    {
+      "id": "the-knights",
+      "name": "The Knights",
+      "from": 1530,
+      "to": 1799,
+      "note": "The Knights of St John held Malta from 1530, beat off the Great Siege of 1565 and built Valletta."
+    },
+    {
+      "id": "british-malta",
+      "name": "British Malta",
+      "from": 1800,
+      "to": 1963,
+      "note": "Britain made Malta a naval base. The island held out under bombing from 1940 to 1942."
+    },
+    {
+      "id": "independent-malta",
+      "name": "Independent Malta",
+      "from": 1964,
+      "to": 2026,
+      "note": "Malta became independent in 1964, a republic in 1974 and a member of the EU in 2004."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/330px-Flag_of_Malta.svg.png",
+    "alt": "Flag of Malta",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Malta.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/8/80/Malta_anthem_%28instrumental%29.ogg/Malta_anthem_%28instrumental%29.ogg.mp3",
+    "title": "L-Innu Malti",
+    "credit": "Manoel Theatre on behalf of the Government of Malta",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Malta_anthem_(instrumental).ogg"
+  }
+}

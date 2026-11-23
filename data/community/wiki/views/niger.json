@@ -1,0 +1,62 @@
+{
+  "id": "niger",
+  "name": "Niger",
+  "description": "Niger from the Sahara's dinosaurs and Agadez to the Songhai and Hausa states, French rule, independence in 1960, uranium and coups.",
+  "category": "places",
+  "tags": [
+    "niger",
+    "niamey",
+    "sahara",
+    "sahel",
+    "west africa"
+  ],
+  "entries": [
+    "agadez",
+    "songhai-empire",
+    "hamani-diori",
+    "mahamadou-issoufou",
+    "w-national-park",
+    "niger",
+    "abdourahamane-tchiani",
+    "orano",
+    "2023-nigerien-coup-detat",
+    "alliance-of-sahel-states"
+  ],
+  "checkpoints": [
+    {
+      "id": "sahara-and-sahel",
+      "name": "Sahara and Sahel",
+      "from": 1000,
+      "to": 1899,
+      "note": "Tuareg sultans ruled Agadez, the Songhai held the river, and Hausa states the south."
+    },
+    {
+      "id": "french-niger",
+      "name": "French Niger",
+      "from": 1900,
+      "to": 1959,
+      "note": "France conquered the land and made it a colony in 1922."
+    },
+    {
+      "id": "independent-niger",
+      "name": "Independent Niger",
+      "from": 1960,
+      "to": 2026,
+      "note": "Niger became independent in 1960. Uranium was mined from the 1970s, and coups came in 1974, 1996, 1999, 2010 and 2023."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_Niger.svg/330px-Flag_of_Niger.svg.png",
+    "alt": "Flag of Niger",
+    "credit": "Made by: Philippe Verdy User:verdy_p, see also fr:Utilisateur:verdy_p.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Niger.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/1/10/THE_HONOR_OF_THE_FATHERLAND.ogg/THE_HONOR_OF_THE_FATHERLAND.ogg.mp3",
+    "title": "L'Honneur de la Patrie",
+    "credit": "Camelista27",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:THE_HONOR_OF_THE_FATHERLAND.ogg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "panama-viejo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Panamá Viejo",
+      "from": "1519"
+    }
+  ],
+  "summary": "The ruins of the first Spanish city on the Pacific, sacked by Henry Morgan in 1671.",
+  "wikidata": "Q712335",
+  "events": [
+    {
+      "type": "born",
+      "date": "1519",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "panama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Panamá Viejo (Q712335)",
+      "url": "https://www.wikidata.org/wiki/Q712335",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Panamá Viejo",
+      "url": "https://en.wikipedia.org/wiki/Panamá_Viejo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Torre_de_Panama_Viejo.jpg/500px-Torre_de_Panama_Viejo.jpg",
+    "alt": "Panamá Viejo",
+    "credit": "Editorpana",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Torre_de_Panama_Viejo.jpg"
+  }
+}

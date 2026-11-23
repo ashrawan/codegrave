@@ -1,0 +1,51 @@
+{
+  "id": "laos",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Laos",
+      "from": "1953"
+    }
+  ],
+  "summary": "A landlocked country of Southeast Asia on the Mekong River, a communist state since 1975.",
+  "wikidata": "Q819",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-10-22",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Laos (Q819)",
+      "url": "https://www.wikidata.org/wiki/Q819",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Laos",
+      "url": "https://en.wikipedia.org/wiki/Laos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Karst_peaks_and_green_paddy_fields_under_a_stormy_sky%2C_South_view_from_Mount_Nam_Xay%2C_Vang_Vieng%2C_Laos.jpg/500px-Karst_peaks_and_green_paddy_fields_under_a_stormy_sky%2C_South_view_from_Mount_Nam_Xay%2C_Vang_Vieng%2C_Laos.jpg",
+    "alt": "Laos",
+    "credit": "Basile Morin",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Karst_peaks_and_green_paddy_fields_under_a_stormy_sky,_South_view_from_Mount_Nam_Xay,_Vang_Vieng,_Laos.jpg"
+  }
+}

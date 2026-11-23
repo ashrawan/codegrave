@@ -1,0 +1,47 @@
+{
+  "id": "swapo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "SWAPO",
+      "from": "1960"
+    }
+  ],
+  "summary": "The movement that fought for independence and has ruled since.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q467711",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-04-19",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "namibia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: SWAPO (Q467711)",
+      "url": "https://www.wikidata.org/wiki/Q467711",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: SWAPO",
+      "url": "https://en.wikipedia.org/wiki/SWAPO",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

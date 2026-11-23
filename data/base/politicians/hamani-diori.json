@@ -1,0 +1,59 @@
+{
+  "id": "hamani-diori",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Hamani Diori",
+      "from": "1916"
+    }
+  ],
+  "summary": "The first president, from 1960 to 1974.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q314355",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-06-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1989-04-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "niger"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hamani Diori (Q314355)",
+      "url": "https://www.wikidata.org/wiki/Q314355",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hamani Diori",
+      "url": "https://en.wikipedia.org/wiki/Hamani_Diori",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Hamani_Diori_1968b.jpg/500px-Hamani_Diori_1968b.jpg",
+    "alt": "Hamani Diori",
+    "credit": "Kroon, Ron / Anefo",
+    "licence": "CC BY-SA 3.0 nl",
+    "source": "https://commons.wikimedia.org/wiki/File:Hamani_Diori_1968b.jpg"
+  }
+}

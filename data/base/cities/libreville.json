@@ -1,0 +1,51 @@
+{
+  "id": "libreville",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Libreville",
+      "from": "1849"
+    }
+  ],
+  "summary": "The capital, founded in 1849 by freed slaves.",
+  "wikidata": "Q3825",
+  "events": [
+    {
+      "type": "born",
+      "date": "1849",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gabon"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Libreville (Q3825)",
+      "url": "https://www.wikidata.org/wiki/Q3825",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Libreville",
+      "url": "https://en.wikipedia.org/wiki/Libreville",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Libreville1.jpg/500px-Libreville1.jpg",
+    "alt": "Libreville",
+    "credit": "Global Photographer",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Libreville1.jpg"
+  }
+}

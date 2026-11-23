@@ -1,0 +1,59 @@
+{
+  "id": "coconut-war",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Coconut War",
+      "from": "1980"
+    }
+  ],
+  "summary": "The short rebellion on Espiritu Santo in 1980.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q3446722",
+  "events": [
+    {
+      "type": "born",
+      "date": "1980",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1980",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vanuatu"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Coconut War (Q3446722)",
+      "url": "https://www.wikidata.org/wiki/Q3446722",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Coconut War",
+      "url": "https://en.wikipedia.org/wiki/Coconut_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Vanuatu_-_Espiritu_Santo.PNG/500px-Vanuatu_-_Espiritu_Santo.PNG",
+    "alt": "Coconut War",
+    "credit": "edited by M.Minderhoud",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Vanuatu_-_Espiritu_Santo.PNG"
+  }
+}

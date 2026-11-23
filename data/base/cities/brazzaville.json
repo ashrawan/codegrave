@@ -1,0 +1,51 @@
+{
+  "id": "brazzaville",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Brazzaville",
+      "from": "1880"
+    }
+  ],
+  "summary": "The capital, across the river from Kinshasa, and the capital of Free France in 1940.",
+  "wikidata": "Q3844",
+  "events": [
+    {
+      "type": "born",
+      "date": "1880",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Brazzaville (Q3844)",
+      "url": "https://www.wikidata.org/wiki/Q3844",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Brazzaville",
+      "url": "https://en.wikipedia.org/wiki/Brazzaville",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Quartier_OCH.jpg/500px-Quartier_OCH.jpg",
+    "alt": "Brazzaville",
+    "credit": "Prével EPOTA",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Quartier_OCH.jpg"
+  }
+}

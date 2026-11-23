@@ -1,0 +1,59 @@
+{
+  "id": "henri-christophe",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Henri Christophe",
+      "from": "1767"
+    }
+  ],
+  "summary": "Revolutionary general who made himself king of the north.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q353458",
+  "events": [
+    {
+      "type": "born",
+      "date": "1767-10-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1820-10-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "haiti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Henri Christophe (Q353458)",
+      "url": "https://www.wikidata.org/wiki/Q353458",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Henri Christophe",
+      "url": "https://en.wikipedia.org/wiki/Henri_Christophe",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Henri_Christophe.jpg/500px-Henri_Christophe.jpg",
+    "alt": "Henri Christophe",
+    "credit": "Richard Evans",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Henri_Christophe.jpg"
+  }
+}

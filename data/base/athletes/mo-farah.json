@@ -1,0 +1,54 @@
+{
+  "id": "mo-farah",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Mo Farah",
+      "from": "1983"
+    }
+  ],
+  "summary": "Runner born in Mogadishu who won four Olympic golds for Britain.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q1671",
+  "events": [
+    {
+      "type": "born",
+      "date": "1983-03-23",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "somalia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mo Farah (Q1671)",
+      "url": "https://www.wikidata.org/wiki/Q1671",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mo Farah",
+      "url": "https://en.wikipedia.org/wiki/Mo_Farah",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Mo_Farah_%28cropped%29.jpg/500px-Mo_Farah_%28cropped%29.jpg",
+    "alt": "Mo Farah",
+    "credit": "Foreign and Commonwealth Office",
+    "licence": "OGL v1.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mo_Farah_(cropped).jpg"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "armenia",
+  "name": "Armenia",
+  "description": "Armenia from Urartu and the first Christian nation to the genocide of 1915, Soviet rule, independence and the wars over Karabakh.",
+  "category": "places",
+  "tags": [
+    "armenia",
+    "yerevan",
+    "caucasus",
+    "christianity",
+    "ararat"
+  ],
+  "entries": [
+    "urartu",
+    "yerevan",
+    "kingdom-of-armenia-antiquity",
+    "tigranes-the-great",
+    "gregory-the-illuminator",
+    "etchmiadzin-cathedral",
+    "mesrop-mashtots",
+    "geghard",
+    "aram-khachaturian",
+    "armenian-genocide",
+    "armenia",
+    "charles-aznavour",
+    "nikol-pashinyan",
+    "first-nagorno-karabakh-war",
+    "1988-armenian-earthquake",
+    "2018-armenian-revolution",
+    "2020-nagorno-karabakh-war",
+    "2023-azerbaijani-offensive-in-nagorno-karabakh"
+  ],
+  "checkpoints": [
+    {
+      "id": "urartu-and-the-kingdoms",
+      "name": "Urartu and the kingdoms",
+      "from": -860,
+      "to": 300,
+      "note": "The kingdom of Urartu built Erebuni, the start of Yerevan. Armenian kings followed, and Tigranes made a short-lived empire."
+    },
+    {
+      "id": "the-first-christian-nation",
+      "name": "The first Christian nation",
+      "from": 301,
+      "to": 1914,
+      "note": "Armenia took up Christianity around 301 and its own alphabet soon after. Persians, Arabs, Byzantines, Mongols and Ottomans ruled it in turn."
+    },
+    {
+      "id": "genocide-and-soviet-armenia",
+      "name": "Genocide and Soviet Armenia",
+      "from": 1915,
+      "to": 1990,
+      "note": "The Ottoman genocide of 1915 killed most Armenians of Anatolia. A short republic of 1918 fell to the Soviets."
+    },
+    {
+      "id": "independent-armenia",
+      "name": "Independent Armenia",
+      "from": 1991,
+      "to": 2026,
+      "note": "Armenia became independent in 1991 and fought Azerbaijan over Karabakh, winning in 1994 and losing in 2020 and 2023."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Flag_of_Armenia.svg/330px-Flag_of_Armenia.svg.png",
+    "alt": "Flag of Armenia",
+    "credit": "Original: Stepan Malkhasyants Vector: SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Armenia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/c7/Mer_Hayrenik_instrumental.ogg/Mer_Hayrenik_instrumental.ogg.mp3",
+    "title": "Mer Hayrenik",
+    "credit": "https://web.archive.org/web/20111121093148/http://www.navyband.navy.mil/national_anthems.shtml http://web.archive.org/we",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Mer_Hayrenik_instrumental.ogg"
+  }
+}

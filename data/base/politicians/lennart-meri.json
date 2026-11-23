@@ -1,0 +1,59 @@
+{
+  "id": "lennart-meri",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Lennart Meri",
+      "from": "1929"
+    }
+  ],
+  "summary": "Writer and film-maker, president from 1992 to 2001.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q153149",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-03-29",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-03-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Lennart Meri (Q153149)",
+      "url": "https://www.wikidata.org/wiki/Q153149",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Lennart Meri",
+      "url": "https://en.wikipedia.org/wiki/Lennart_Meri",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Lennart_Meri%2C_Raekoja_platsil_99.jpg/500px-Lennart_Meri%2C_Raekoja_platsil_99.jpg",
+    "alt": "Lennart Meri",
+    "credit": "Jaan Künnap",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Lennart_Meri,_Raekoja_platsil_99.jpg"
+  }
+}

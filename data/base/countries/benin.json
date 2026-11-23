@@ -1,0 +1,44 @@
+{
+  "id": "benin",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Benin",
+      "from": "1960"
+    }
+  ],
+  "summary": "A West African country between Togo and Nigeria, formerly Dahomey, independent from France since 1960.",
+  "wikidata": "Q962",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-08-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Benin (Q962)",
+      "url": "https://www.wikidata.org/wiki/Q962",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Benin",
+      "url": "https://en.wikipedia.org/wiki/Benin",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

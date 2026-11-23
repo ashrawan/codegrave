@@ -1,0 +1,51 @@
+{
+  "id": "sao-tome",
+  "category": "cities",
+  "names": [
+    {
+      "name": "São Tomé",
+      "from": "1485"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q3932",
+  "events": [
+    {
+      "type": "born",
+      "date": "1485",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sao-tome-and-principe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: São Tomé (Q3932)",
+      "url": "https://www.wikidata.org/wiki/Q3932",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: São Tomé",
+      "url": "https://en.wikipedia.org/wiki/São_Tomé",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Org_4cd8129a56d8fa1d_1582100284000.jpg/500px-Org_4cd8129a56d8fa1d_1582100284000.jpg",
+    "alt": "São Tomé",
+    "credit": "wsrolim",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Org_4cd8129a56d8fa1d_1582100284000.jpg"
+  }
+}

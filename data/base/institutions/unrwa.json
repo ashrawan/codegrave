@@ -1,0 +1,44 @@
+{
+  "id": "unrwa",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "UNRWA",
+      "from": "1949"
+    }
+  ],
+  "summary": "The UN agency for Palestinian refugees, founded in 1949.",
+  "wikidata": "Q846656",
+  "events": [
+    {
+      "type": "born",
+      "date": "1949-12-08",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: UNRWA (Q846656)",
+      "url": "https://www.wikidata.org/wiki/Q846656",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: UNRWA",
+      "url": "https://en.wikipedia.org/wiki/UNRWA",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

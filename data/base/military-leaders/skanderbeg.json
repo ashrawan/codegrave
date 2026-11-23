@@ -1,0 +1,59 @@
+{
+  "id": "skanderbeg",
+  "category": "military-leaders",
+  "names": [
+    {
+      "name": "Skanderbeg",
+      "from": "1405"
+    }
+  ],
+  "summary": "Lord who led the Albanians against the Ottomans for a quarter of a century and became the national hero.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q160614",
+  "events": [
+    {
+      "type": "born",
+      "date": "1405-05-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1468-01-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "albania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Skanderbeg (Q160614)",
+      "url": "https://www.wikidata.org/wiki/Q160614",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Skanderbeg",
+      "url": "https://en.wikipedia.org/wiki/Skanderbeg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Skanderbeg_by_Antonio_Maria_Crespi.jpg/500px-Skanderbeg_by_Antonio_Maria_Crespi.jpg",
+    "alt": "Skanderbeg",
+    "credit": "Antonio Maria Crespi Castoldi",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Skanderbeg_by_Antonio_Maria_Crespi.jpg"
+  }
+}

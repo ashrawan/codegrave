@@ -1,0 +1,54 @@
+{
+  "id": "liechtenstein",
+  "name": "Liechtenstein",
+  "description": "Liechtenstein from two lordships bought by a prince to a principality of the Holy Roman Empire, independence in 1806 and a rich small state.",
+  "category": "places",
+  "tags": [
+    "liechtenstein",
+    "vaduz",
+    "alps",
+    "principality",
+    "europe"
+  ],
+  "entries": [
+    "house-of-liechtenstein",
+    "vaduz",
+    "liechtenstein",
+    "confederation-of-the-rhine",
+    "franz-joseph-ii",
+    "customs-union-switzerland",
+    "hilti",
+    "hans-adam-ii",
+    "1984-liechtenstein-womens-suffrage-referendum"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-principality",
+      "name": "The principality",
+      "from": 1719,
+      "to": 1866,
+      "note": "The Liechtenstein princes bought Vaduz and Schellenberg and in 1719 made them a principality. It became sovereign in 1806."
+    },
+    {
+      "id": "a-small-neutral-state",
+      "name": "A small neutral state",
+      "from": 1867,
+      "to": 2026,
+      "note": "Liechtenstein gave up its army in 1868 and tied itself to Switzerland in 1923. Banking and industry made it one of the richest countries."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/330px-Flag_of_Liechtenstein.svg.png",
+    "alt": "Flag of Liechtenstein",
+    "credit": "Mnmazur and others",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Liechtenstein.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a6/God_Save_the_King_%281927%29.ogg/God_Save_the_King_%281927%29.ogg.mp3",
+    "title": "Oben am jungen Rhein",
+    "credit": "This image includes elements that have been taken or adapted from this file:",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:God_Save_the_King_(1927).ogg"
+  }
+}

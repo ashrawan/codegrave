@@ -1,0 +1,59 @@
+{
+  "id": "robert-louis-stevenson",
+  "category": "writers",
+  "names": [
+    {
+      "name": "Robert Louis Stevenson",
+      "from": "1850"
+    }
+  ],
+  "summary": "Scottish writer of Treasure Island, who lived his last years in Samoa.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q1512",
+  "events": [
+    {
+      "type": "born",
+      "date": "1850-11-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1894-12-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "samoa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Robert Louis Stevenson (Q1512)",
+      "url": "https://www.wikidata.org/wiki/Q1512",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Robert Louis Stevenson",
+      "url": "https://en.wikipedia.org/wiki/Robert_Louis_Stevenson",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Robert_Louis_Stevenson_by_Henry_Walter_Barnett_bw.jpg/500px-Robert_Louis_Stevenson_by_Henry_Walter_Barnett_bw.jpg",
+    "alt": "Robert Louis Stevenson",
+    "credit": "Henry Walter Barnett",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Robert_Louis_Stevenson_by_Henry_Walter_Barnett_bw.jpg"
+  }
+}

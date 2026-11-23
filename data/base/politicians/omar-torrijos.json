@@ -1,0 +1,59 @@
+{
+  "id": "omar-torrijos",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Omar Torrijos",
+      "from": "1929"
+    }
+  ],
+  "summary": "Military leader from 1968 to 1981 who won the canal treaties.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q332055",
+  "events": [
+    {
+      "type": "born",
+      "date": "1929-02-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1981-07-31",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "panama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Omar Torrijos (Q332055)",
+      "url": "https://www.wikidata.org/wiki/Q332055",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Omar Torrijos",
+      "url": "https://en.wikipedia.org/wiki/Omar_Torrijos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Omar_Torrijos_with_Panamanian_farmers.jpg/500px-Omar_Torrijos_with_Panamanian_farmers.jpg",
+    "alt": "Omar Torrijos",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Omar_Torrijos_with_Panamanian_farmers.jpg"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "albert-i-of-monaco",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Albert I, Prince of Monaco",
+      "from": "1848"
+    }
+  ],
+  "summary": "Prince and ocean scientist who gave Monaco its first constitution.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q159646",
+  "events": [
+    {
+      "type": "born",
+      "date": "1848-11-13",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1922-06-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "monaco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Albert I, Prince of Monaco (Q159646)",
+      "url": "https://www.wikidata.org/wiki/Q159646",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Albert I, Prince of Monaco",
+      "url": "https://en.wikipedia.org/wiki/Albert_I,_Prince_of_Monaco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Prince_Albert_I_of_Monaco_-_circa_1910.jpg/500px-Prince_Albert_I_of_Monaco_-_circa_1910.jpg",
+    "alt": "Albert I, Prince of Monaco",
+    "credit": "J. B. E. Detaille",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Prince_Albert_I_of_Monaco_-_circa_1910.jpg"
+  }
+}

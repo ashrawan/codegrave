@@ -1,0 +1,51 @@
+{
+  "id": "el-salvador",
+  "category": "countries",
+  "names": [
+    {
+      "name": "El Salvador",
+      "from": "1841"
+    }
+  ],
+  "summary": "The smallest country of Central America, on the Pacific, independent since 1821.",
+  "wikidata": "Q792",
+  "events": [
+    {
+      "type": "born",
+      "date": "1841-02-02",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: El Salvador (Q792)",
+      "url": "https://www.wikidata.org/wiki/Q792",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: El Salvador",
+      "url": "https://en.wikipedia.org/wiki/El_Salvador",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/ES_JoyadeCeren_06_2011_Estructura_9_Area_2_Tamazcal_2106_zoom_out.jpg/500px-ES_JoyadeCeren_06_2011_Estructura_9_Area_2_Tamazcal_2106_zoom_out.jpg",
+    "alt": "El Salvador",
+    "credit": "Mariordo (Mario Roberto Durán Ortiz)",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:ES_JoyadeCeren_06_2011_Estructura_9_Area_2_Tamazcal_2106_zoom_out.jpg"
+  }
+}

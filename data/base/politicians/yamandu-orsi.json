@@ -1,0 +1,54 @@
+{
+  "id": "yamandu-orsi",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Yamandú Orsi",
+      "from": "1967"
+    }
+  ],
+  "summary": "President since 2025.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q19946921",
+  "events": [
+    {
+      "type": "born",
+      "date": "1967-06-13",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uruguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Yamandú Orsi (Q19946921)",
+      "url": "https://www.wikidata.org/wiki/Q19946921",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Yamandú Orsi",
+      "url": "https://en.wikipedia.org/wiki/Yamandú_Orsi",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Yamand%C3%BA_Orsi.jpg/500px-Yamand%C3%BA_Orsi.jpg",
+    "alt": "Yamandú Orsi",
+    "credit": "Marcelo Cúneo",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Yamand%C3%BA_Orsi.jpg"
+  }
+}

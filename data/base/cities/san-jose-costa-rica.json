@@ -1,0 +1,51 @@
+{
+  "id": "san-jose-costa-rica",
+  "category": "cities",
+  "names": [
+    {
+      "name": "San José, Costa Rica",
+      "from": "1736"
+    }
+  ],
+  "summary": "The capital, founded in 1736.",
+  "wikidata": "Q3070",
+  "events": [
+    {
+      "type": "born",
+      "date": "1736",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "costa-rica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: San José, Costa Rica (Q3070)",
+      "url": "https://www.wikidata.org/wiki/Q3070",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: San José, Costa Rica",
+      "url": "https://en.wikipedia.org/wiki/San_José,_Costa_Rica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Cityscape_of_San_Jos%C3%A9%2C_Costa_Rica_%28253552473%29.jpg/500px-Cityscape_of_San_Jos%C3%A9%2C_Costa_Rica_%28253552473%29.jpg",
+    "alt": "San José, Costa Rica",
+    "credit": "Xlionheartx",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Cityscape_of_San_Jos%C3%A9,_Costa_Rica_(253552473).jpg"
+  }
+}

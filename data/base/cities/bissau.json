@@ -1,0 +1,51 @@
+{
+  "id": "bissau",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Bissau",
+      "from": "1687"
+    }
+  ],
+  "summary": "The capital, founded as a Portuguese fort in 1687.",
+  "wikidata": "Q3739",
+  "events": [
+    {
+      "type": "born",
+      "date": "1687",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea-bissau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Bissau (Q3739)",
+      "url": "https://www.wikidata.org/wiki/Q3739",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Bissau",
+      "url": "https://en.wikipedia.org/wiki/Bissau",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/20130610_-_Monumento_aos_Her%C3%B3is_da_Independ%C3%AAncia.jpg/500px-20130610_-_Monumento_aos_Her%C3%B3is_da_Independ%C3%AAncia.jpg",
+    "alt": "Bissau",
+    "credit": "jbdodane",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:20130610_-_Monumento_aos_Her%C3%B3is_da_Independ%C3%AAncia.jpg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "republic-of-the-congo-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Republic of the Congo Civil War",
+      "from": "1997"
+    }
+  ],
+  "summary": "The civil war of 1997 to 1999.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1021172",
+  "events": [
+    {
+      "type": "born",
+      "date": "1997",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1999",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Republic of the Congo Civil War (Q1021172)",
+      "url": "https://www.wikidata.org/wiki/Q1021172",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Republic of the Congo Civil War (1997–1999)",
+      "url": "https://en.wikipedia.org/wiki/Republic_of_the_Congo_Civil_War_(1997–1999)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

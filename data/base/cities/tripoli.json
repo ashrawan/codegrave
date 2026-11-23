@@ -1,0 +1,51 @@
+{
+  "id": "tripoli",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Tripoli, Libya",
+      "from": "-0700"
+    }
+  ],
+  "summary": "The capital, founded by the Phoenicians.",
+  "wikidata": "Q3579",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0700",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tripoli, Libya (Q3579)",
+      "url": "https://www.wikidata.org/wiki/Q3579",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tripoli, Libya",
+      "url": "https://en.wikipedia.org/wiki/Tripoli,_Libya",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Marcus_Aurelius_Arch_Tripoli_Libya.jpg/500px-Marcus_Aurelius_Arch_Tripoli_Libya.jpg",
+    "alt": "Tripoli, Libya",
+    "credit": "Daniel and Kate Pett",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Marcus_Aurelius_Arch_Tripoli_Libya.jpg"
+  }
+}

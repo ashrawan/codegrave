@@ -1,0 +1,59 @@
+{
+  "id": "mandatory-palestine",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Mandatory Palestine",
+      "from": "1920"
+    }
+  ],
+  "summary": "British rule of 1920 to 1948.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q193714",
+  "events": [
+    {
+      "type": "born",
+      "date": "1920-07-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1948-05-14",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palestine"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mandatory Palestine (Q193714)",
+      "url": "https://www.wikidata.org/wiki/Q193714",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mandatory Palestine",
+      "url": "https://en.wikipedia.org/wiki/Mandatory_Palestine",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/VE_day_Jerusalem_1945.jpg/500px-VE_day_Jerusalem_1945.jpg",
+    "alt": "Mandatory Palestine",
+    "credit": "Matson Photo Service, photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:VE_day_Jerusalem_1945.jpg"
+  }
+}

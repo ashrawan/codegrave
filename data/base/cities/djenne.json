@@ -1,0 +1,51 @@
+{
+  "id": "djenne",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Djenné",
+      "from": "-0250"
+    }
+  ],
+  "summary": "One of the oldest towns south of the Sahara.",
+  "wikidata": "Q213507",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0250",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Djenné (Q213507)",
+      "url": "https://www.wikidata.org/wiki/Q213507",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Djenné",
+      "url": "https://en.wikipedia.org/wiki/Djenné",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Djenn%C3%A9.jpg/500px-Djenn%C3%A9.jpg",
+    "alt": "Djenné",
+    "credit": "Devriese",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djenn%C3%A9.jpg"
+  }
+}

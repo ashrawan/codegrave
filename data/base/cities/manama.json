@@ -1,0 +1,51 @@
+{
+  "id": "manama",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Manama",
+      "from": "1345"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q3882",
+  "events": [
+    {
+      "type": "born",
+      "date": "1345",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bahrain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Manama (Q3882)",
+      "url": "https://www.wikidata.org/wiki/Q3882",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Manama",
+      "url": "https://en.wikipedia.org/wiki/Manama",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Bahrain_World_trade_Center_.jpg/500px-Bahrain_World_trade_Center_.jpg",
+    "alt": "Manama",
+    "credit": "B.alotaby",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Bahrain_World_trade_Center_.jpg"
+  }
+}

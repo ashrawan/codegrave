@@ -1,0 +1,62 @@
+{
+  "id": "belize",
+  "name": "Belize",
+  "description": "Belize from the Maya cities to the Baymen, British Honduras, independence in 1981 and its reefs and forests.",
+  "category": "places",
+  "tags": [
+    "belize",
+    "maya",
+    "caribbean",
+    "central america",
+    "reef"
+  ],
+  "entries": [
+    "caracol",
+    "battle-of-st-georges-caye",
+    "george-price",
+    "johnny-briceno",
+    "andy-palacio",
+    "hurricane-hattie",
+    "belmopan",
+    "belize",
+    "belize-independence",
+    "belize-barrier-reef"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-maya",
+      "name": "The Maya",
+      "from": -1000,
+      "to": 1637,
+      "note": "Maya cities such as Caracol, Xunantunich and Altun Ha flourished in the forests."
+    },
+    {
+      "id": "british-honduras",
+      "name": "British Honduras",
+      "from": 1638,
+      "to": 1980,
+      "note": "Loggers from Britain cut logwood and mahogany, beat off Spain in 1798, and the land became the colony of British Honduras."
+    },
+    {
+      "id": "independent-belize",
+      "name": "Independent Belize",
+      "from": 1981,
+      "to": 2026,
+      "note": "Belize became independent in 1981 and protects one of the world's great reefs."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Flag_of_Belize.svg/330px-Flag_of_Belize.svg.png",
+    "alt": "Flag of Belize",
+    "credit": "Caleb Moore",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Belize.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/00/Land_of_the_Free_instrumental.ogg/Land_of_the_Free_instrumental.ogg.mp3",
+    "title": "Land of the Free",
+    "credit": "United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Land_of_the_Free_instrumental.ogg"
+  }
+}

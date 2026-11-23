@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-cyprus",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Cyprus",
+      "from": "1192"
+    }
+  ],
+  "summary": "The crusader kingdom of the Lusignan family, 1192 to 1489.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q213638",
+  "events": [
+    {
+      "type": "born",
+      "date": "1192",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1489",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Cyprus (Q213638)",
+      "url": "https://www.wikidata.org/wiki/Q213638",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Cyprus",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Cyprus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

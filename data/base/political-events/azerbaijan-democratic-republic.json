@@ -1,0 +1,52 @@
+{
+  "id": "azerbaijan-democratic-republic",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Azerbaijan Democratic Republic",
+      "from": "1918"
+    }
+  ],
+  "summary": "The first republic of the Muslim world, 1918 to 1920.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q206411",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-05-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1920-04-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "azerbaijan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Azerbaijan Democratic Republic (Q206411)",
+      "url": "https://www.wikidata.org/wiki/Q206411",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Azerbaijan Democratic Republic",
+      "url": "https://en.wikipedia.org/wiki/Azerbaijan_Democratic_Republic",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

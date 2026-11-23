@@ -1,0 +1,59 @@
+{
+  "id": "filibuster-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Filibuster War",
+      "from": "1855"
+    }
+  ],
+  "summary": "The war of 1856 and 1857 against the American adventurer William Walker.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q5027839",
+  "events": [
+    {
+      "type": "born",
+      "date": "1855-06-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1857-05-01",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "costa-rica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Filibuster War (Q5027839)",
+      "url": "https://www.wikidata.org/wiki/Q5027839",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Filibuster War",
+      "url": "https://en.wikipedia.org/wiki/Filibuster_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Walker_Nicaragua_map.JPG/500px-Walker_Nicaragua_map.JPG",
+    "alt": "Filibuster War",
+    "credit": "Unattributed",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Walker_Nicaragua_map.JPG"
+  }
+}

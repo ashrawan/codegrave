@@ -1,0 +1,53 @@
+{
+  "id": "djibouti",
+  "name": "Djibouti",
+  "description": "Djibouti from the land of Punt to French Somaliland, independence in 1977 and a port and military base at the mouth of the Red Sea.",
+  "category": "places",
+  "tags": [
+    "djibouti",
+    "horn of africa",
+    "red sea",
+    "port"
+  ],
+  "entries": [
+    "djibouti-city",
+    "french-somaliland",
+    "hassan-gouled-aptidon",
+    "ismail-omar-guelleh",
+    "french-territory-of-the-afars-and-the-issas",
+    "djibouti",
+    "djiboutian-civil-war",
+    "camp-lemonnier",
+    "addis-ababa-djibouti-railway"
+  ],
+  "checkpoints": [
+    {
+      "id": "french-somaliland",
+      "name": "French Somaliland",
+      "from": 1883,
+      "to": 1976,
+      "note": "France bought land on the coast in the 1880s, and the port grew with the railway to Ethiopia."
+    },
+    {
+      "id": "independent-djibouti",
+      "name": "Independent Djibouti",
+      "from": 1977,
+      "to": 2026,
+      "note": "Djibouti became independent in 1977 and has grown as a port for Ethiopia and a base for foreign armies."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_Djibouti.svg/330px-Flag_of_Djibouti.svg.png",
+    "alt": "Flag of Djibouti",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Djibouti.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/55/Djibouti_anthem_Somali_lyrics.ogg/Djibouti_anthem_Somali_lyrics.ogg.mp3",
+    "title": "Djibouti",
+    "credit": "Skilla1st",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djibouti_anthem_Somali_lyrics.ogg"
+  }
+}

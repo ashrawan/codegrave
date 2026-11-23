@@ -1,0 +1,52 @@
+{
+  "id": "sierra-leone-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Sierra Leone Civil War",
+      "from": "1991"
+    }
+  ],
+  "summary": "The war of 1991 to 2002, fought over diamonds.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q795269",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-03-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2002-01-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sierra-leone"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sierra Leone Civil War (Q795269)",
+      "url": "https://www.wikidata.org/wiki/Q795269",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sierra Leone Civil War",
+      "url": "https://en.wikipedia.org/wiki/Sierra_Leone_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

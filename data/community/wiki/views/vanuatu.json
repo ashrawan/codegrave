@@ -1,0 +1,60 @@
+{
+  "id": "vanuatu",
+  "name": "Vanuatu",
+  "description": "Vanuatu from the Lapita voyagers to the Anglo-French condominium of the New Hebrides, independence in 1980 and the land diving of Pentecost.",
+  "category": "places",
+  "tags": [
+    "vanuatu",
+    "port vila",
+    "pacific",
+    "melanesia"
+  ],
+  "entries": [
+    "lapita-culture",
+    "chief-roi-maras-domain",
+    "new-hebrides",
+    "walter-lini",
+    "jotham-napat",
+    "coconut-war",
+    "vanuatu",
+    "cyclone-pam",
+    "2024-port-vila-earthquake"
+  ],
+  "checkpoints": [
+    {
+      "id": "voyagers-and-chiefs",
+      "name": "Voyagers and chiefs",
+      "from": -1000,
+      "to": 1905,
+      "note": "The Lapita people settled the islands. Roi Mata ruled in the 1600s."
+    },
+    {
+      "id": "the-new-hebrides",
+      "name": "The New Hebrides",
+      "from": 1906,
+      "to": 1979,
+      "note": "Britain and France ruled the islands together from 1906."
+    },
+    {
+      "id": "independent-vanuatu",
+      "name": "Independent Vanuatu",
+      "from": 1980,
+      "to": 2026,
+      "note": "Vanuatu became independent in 1980."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Vanuatu.svg/330px-Flag_of_Vanuatu.svg.png",
+    "alt": "Flag of Vanuatu",
+    "credit": "Kalontas Mahlon",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Vanuatu.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/7f/United_States_Navy_Band_-_Yumi%2C_Yumi%2C_Yumi.ogg/United_States_Navy_Band_-_Yumi%2C_Yumi%2C_Yumi.ogg.mp3",
+    "title": "Yumi, Yumi",
+    "credit": "Performed by the United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Yumi,_Yumi,_Yumi.ogg"
+  }
+}

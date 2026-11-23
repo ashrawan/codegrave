@@ -1,0 +1,59 @@
+{
+  "id": "francois-tombalbaye",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "François Tombalbaye",
+      "from": "1918"
+    }
+  ],
+  "summary": "The first president, killed in a coup in 1975.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q297812",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-06-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-04-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chad"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: François Tombalbaye (Q297812)",
+      "url": "https://www.wikidata.org/wiki/Q297812",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: François Tombalbaye",
+      "url": "https://en.wikipedia.org/wiki/François_Tombalbaye",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Fran%C3%A7ois_Tombalbaye_p1959.jpg/500px-Fran%C3%A7ois_Tombalbaye_p1959.jpg",
+    "alt": "François Tombalbaye",
+    "credit": "Moshe Pridan",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fran%C3%A7ois_Tombalbaye_p1959.jpg"
+  }
+}

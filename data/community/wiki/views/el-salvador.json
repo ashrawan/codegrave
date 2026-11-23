@@ -1,0 +1,71 @@
+{
+  "id": "el-salvador",
+  "name": "El Salvador",
+  "description": "El Salvador from Joya de Cerén and the Pipil to independence, coffee, the massacre of 1932, the civil war and Bukele.",
+  "category": "places",
+  "tags": [
+    "el salvador",
+    "san salvador",
+    "central america",
+    "coffee"
+  ],
+  "entries": [
+    "joya-de-ceren",
+    "tazumal",
+    "san-salvador",
+    "el-salvador",
+    "oscar-romero",
+    "la-matanza",
+    "football-war",
+    "salvadoran-civil-war",
+    "nayib-bukele",
+    "el-mozote-massacre",
+    "chapultepec-peace-accords",
+    "dollarization-el-salvador",
+    "bitcoin-in-el-salvador"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-maya-and-the-pipil",
+      "name": "The Maya and the Pipil",
+      "from": -1200,
+      "to": 1524,
+      "note": "Maya towns such as Joya de Cerén and Tazumal, and later the Pipil people, lived in the volcanic valleys."
+    },
+    {
+      "id": "spanish-rule",
+      "name": "Spanish rule",
+      "from": 1525,
+      "to": 1820,
+      "note": "Spain founded San Salvador in 1525 and ruled the land from Guatemala."
+    },
+    {
+      "id": "coffee-republic",
+      "name": "Coffee republic",
+      "from": 1821,
+      "to": 1978,
+      "note": "Independence came in 1821. Coffee made a few families rich, and the rising of 1932 ended in a massacre."
+    },
+    {
+      "id": "war-and-after",
+      "name": "War and after",
+      "from": 1979,
+      "to": 2026,
+      "note": "Civil war from 1979 to 1992 killed some 75,000. Gangs grew after the war, and Bukele's crackdown since 2022 has changed the country."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Flag_of_El_Salvador.svg/330px-Flag_of_El_Salvador.svg.png",
+    "alt": "Flag of El Salvador",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_El_Salvador.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/4/4e/El_Salvador_National_Anthem.ogg/El_Salvador_National_Anthem.ogg.mp3",
+    "title": "National anthem of El Salvador",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Salvador_National_Anthem.ogg"
+  }
+}

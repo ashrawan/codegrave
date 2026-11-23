@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-armenia-antiquity",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Armenia",
+      "from": "-0553"
+    }
+  ],
+  "summary": "The ancient kingdom that, around 301, became the first to take Christianity as its state religion.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q208404",
+  "events": [
+    {
+      "type": "born",
+      "date": "-0553",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0428",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "armenia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Armenia (Q208404)",
+      "url": "https://www.wikidata.org/wiki/Q208404",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Armenia (antiquity)",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Armenia_(antiquity)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

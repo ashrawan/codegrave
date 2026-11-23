@@ -1,0 +1,52 @@
+{
+  "id": "italian-eritrea",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Italian Eritrea",
+      "from": "1890"
+    }
+  ],
+  "summary": "Italy's colony, 1882 to 1941.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1232988",
+  "events": [
+    {
+      "type": "born",
+      "date": "1890",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1936",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "eritrea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Italian Eritrea (Q1232988)",
+      "url": "https://www.wikidata.org/wiki/Q1232988",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Italian Eritrea",
+      "url": "https://en.wikipedia.org/wiki/Italian_Eritrea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

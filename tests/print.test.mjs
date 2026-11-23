@@ -35,9 +35,9 @@ test('paper: Letter where it is usual, else A4', () => {
 
 test('a built view file becomes chapters and entries in date order', { skip: !fs.existsSync('site/data/boot.json') && 'run node scripts/build.mjs first' }, () => {
   const boot = JSON.parse(fs.readFileSync('site/data/boot.json'));
-  const payload = JSON.parse(fs.readFileSync('site/data/v/codegrave/space-exploration.json'));
+  const payload = JSON.parse(fs.readFileSync('site/data/v/wiki/space-exploration.json'));
   const v = shapeView(payload, boot, 0);
-  assert.equal(v.id, 'codegrave/space-exploration');
+  assert.equal(v.id, 'wiki/space-exploration');
   assert.equal(v.es.length, payload.entries.length);
   assert.ok(v.chs.length > 0);
   for (let i = 1; i < v.es.length; i++) assert.ok(v.es[i - 1].t <= v.es[i].t);
@@ -53,7 +53,7 @@ test('the downloaded file is named after the views', () => {
 
 test('a year range keeps only the entries begun in it', { skip: !fs.existsSync('site/data/boot.json') && 'run node scripts/build.mjs first' }, () => {
   const boot = JSON.parse(fs.readFileSync('site/data/boot.json'));
-  const payload = JSON.parse(fs.readFileSync('site/data/v/codegrave/space-exploration.json'));
+  const payload = JSON.parse(fs.readFileSync('site/data/v/wiki/space-exploration.json'));
   const v = shapeView(payload, boot, 0, [1960, 1975]);
   assert.ok(v.es.length > 0 && v.es.every((e) => e.y >= 1960 && e.y <= 1975));
   assert.ok(v.chs.every((c) => c.to >= 1960 && c.from <= 1975));

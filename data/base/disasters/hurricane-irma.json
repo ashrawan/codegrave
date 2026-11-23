@@ -1,0 +1,49 @@
+{
+  "id": "hurricane-irma",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Hurricane Irma",
+      "from": "2017"
+    }
+  ],
+  "summary": "The hurricane of 2017 that wrecked almost every building on Barbuda.",
+  "wikidata": "Q38685186",
+  "events": [
+    {
+      "type": "born",
+      "date": "2017-08-30",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2017-09-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "antigua-and-barbuda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Hurricane Irma (Q38685186)",
+      "url": "https://www.wikidata.org/wiki/Q38685186",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Hurricane Irma",
+      "url": "https://en.wikipedia.org/wiki/Hurricane_Irma",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

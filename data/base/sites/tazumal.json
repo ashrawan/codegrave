@@ -1,0 +1,56 @@
+{
+  "id": "tazumal",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Tazumal",
+      "from": "0100"
+    }
+  ],
+  "summary": "A Maya city with stepped pyramids.",
+  "wikidata": "Q690372",
+  "events": [
+    {
+      "type": "born",
+      "date": "0100",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "el-salvador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Tazumal (Q690372)",
+      "url": "https://www.wikidata.org/wiki/Q690372",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Tazumal",
+      "url": "https://en.wikipedia.org/wiki/Tazumal",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/El_Tazumal%2C_Chalchuapa.jpg/500px-El_Tazumal%2C_Chalchuapa.jpg",
+    "alt": "Tazumal",
+    "credit": "ARamirez69",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:El_Tazumal,_Chalchuapa.jpg"
+  }
+}

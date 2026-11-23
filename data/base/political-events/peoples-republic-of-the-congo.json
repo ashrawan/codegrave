@@ -1,0 +1,52 @@
+{
+  "id": "peoples-republic-of-the-congo",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "People's Republic of the Congo",
+      "from": "1969"
+    }
+  ],
+  "summary": "The Marxist state of 1969 to 1992.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1152126",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-01-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-03-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "republic-of-the-congo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: People's Republic of the Congo (Q1152126)",
+      "url": "https://www.wikidata.org/wiki/Q1152126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: People's Republic of the Congo",
+      "url": "https://en.wikipedia.org/wiki/People's_Republic_of_the_Congo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,61 @@
+{
+  "id": "mauritius",
+  "name": "Mauritius",
+  "description": "Mauritius from an empty island and the dodo to Dutch, French and British rule, Indian labourers, independence in 1968 and a stable democracy.",
+  "category": "places",
+  "tags": [
+    "mauritius",
+    "port louis",
+    "indian ocean",
+    "dodo"
+  ],
+  "entries": [
+    "dodo",
+    "dutch-mauritius",
+    "isle-de-france-mauritius",
+    "port-louis",
+    "battle-of-grand-port",
+    "aapravasi-ghat",
+    "seewoosagur-ramgoolam",
+    "navin-ramgoolam",
+    "mauritius",
+    "le-morne-brabant"
+  ],
+  "checkpoints": [
+    {
+      "id": "dutch-and-french",
+      "name": "Dutch and French",
+      "from": 1598,
+      "to": 1809,
+      "note": "The Dutch named the island in 1598, and the dodo was gone by 1662. France ran it as Isle de France from 1715."
+    },
+    {
+      "id": "british-mauritius",
+      "name": "British Mauritius",
+      "from": 1810,
+      "to": 1967,
+      "note": "Britain took the island in 1810. After slavery ended, labourers came from India."
+    },
+    {
+      "id": "independent-mauritius",
+      "name": "Independent Mauritius",
+      "from": 1968,
+      "to": 2026,
+      "note": "Independence came in 1968. Mauritius became one of Africa's richest democracies."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Flag_of_Mauritius.svg/330px-Flag_of_Mauritius.svg.png",
+    "alt": "Flag of Mauritius",
+    "credit": "Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mauritius.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/75/Motherland_%28instrumental%29.ogg/Motherland_%28instrumental%29.ogg.mp3",
+    "title": "Motherland",
+    "credit": "United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Motherland_(instrumental).ogg"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "spanish-guinea",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Spanish Guinea",
+      "from": "1926"
+    }
+  ],
+  "summary": "The Spanish colony of 1778 to 1968.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1232509",
+  "events": [
+    {
+      "type": "born",
+      "date": "1926-08-11",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1968-10-12",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "equatorial-guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Spanish Guinea (Q1232509)",
+      "url": "https://www.wikidata.org/wiki/Q1232509",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Spanish Guinea",
+      "url": "https://en.wikipedia.org/wiki/Spanish_Guinea",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

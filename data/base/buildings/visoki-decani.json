@@ -1,0 +1,54 @@
+{
+  "id": "visoki-decani",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Visoki Dečani",
+      "from": "1335"
+    }
+  ],
+  "summary": "A Serbian Orthodox monastery of the 1300s, a World Heritage Site.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q849517",
+  "events": [
+    {
+      "type": "born",
+      "date": "1335",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kosovo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Visoki Dečani (Q849517)",
+      "url": "https://www.wikidata.org/wiki/Q849517",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Visoki Dečani",
+      "url": "https://en.wikipedia.org/wiki/Visoki_Dečani",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Visoki_De%C4%8Dani%2C_exterior_view_%28Julian_Ny%C4%8Da%29.jpg/500px-Visoki_De%C4%8Dani%2C_exterior_view_%28Julian_Ny%C4%8Da%29.jpg",
+    "alt": "Visoki Dečani",
+    "credit": "Julian Nyča",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Visoki_De%C4%8Dani,_exterior_view_(Julian_Ny%C4%8Da).jpg"
+  }
+}

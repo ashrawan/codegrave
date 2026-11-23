@@ -39,7 +39,7 @@ For a fix, show before and after. -->
 | --- | --- |
 |  |  |
 
-Local link to see it, such as `?views=<owner>/<id>` or `#<entry-id>`:
+Local link to see it, such as `/<owner>/<id>` or `#<entry-id>`:
 
 ## Checklist
 

@@ -1,0 +1,54 @@
+{
+  "id": "grenada",
+  "name": "Grenada",
+  "description": "Grenada, the spice island, from the Kalinago to French and British rule, independence in 1974, the revolution and the American invasion of 1983.",
+  "category": "places",
+  "tags": [
+    "grenada",
+    "st georges",
+    "caribbean",
+    "nutmeg"
+  ],
+  "entries": [
+    "st-georges-grenada",
+    "fedons-rebellion",
+    "eric-gairy",
+    "maurice-bishop",
+    "grenada",
+    "dickon-mitchell",
+    "united-states-invasion-of-grenada",
+    "kirani-james",
+    "hurricane-ivan",
+    "hurricane-beryl"
+  ],
+  "checkpoints": [
+    {
+      "id": "spice-colony",
+      "name": "Spice colony",
+      "from": 1650,
+      "to": 1973,
+      "note": "France settled the island in 1650 and Britain took it in 1763. Sugar and later nutmeg grew there."
+    },
+    {
+      "id": "independent-grenada",
+      "name": "Independent Grenada",
+      "from": 1974,
+      "to": 2026,
+      "note": "Grenada became independent in 1974. Bishop's revolution of 1979 ended in his murder and an American invasion in 1983."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Grenada.svg/330px-Flag_of_Grenada.svg.png",
+    "alt": "Flag of Grenada",
+    "credit": "See file history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Grenada.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/76/HailGrenada.ogg/HailGrenada.ogg.mp3",
+    "title": "Hail Grenada",
+    "credit": "Zuanzuanfuwa",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:HailGrenada.ogg"
+  }
+}

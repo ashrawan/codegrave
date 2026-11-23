@@ -1,0 +1,51 @@
+{
+  "id": "djibouti-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Djibouti",
+      "from": "1888"
+    }
+  ],
+  "summary": "The capital and port, founded in 1888.",
+  "wikidata": "Q3604",
+  "events": [
+    {
+      "type": "born",
+      "date": "1888",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "djibouti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Djibouti (Q3604)",
+      "url": "https://www.wikidata.org/wiki/Q3604",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Djibouti (city)",
+      "url": "https://en.wikipedia.org/wiki/Djibouti_(city)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Djibouti_City.jpg/500px-Djibouti_City.jpg",
+    "alt": "Djibouti",
+    "credit": "Skilla1st",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Djibouti_City.jpg"
+  }
+}

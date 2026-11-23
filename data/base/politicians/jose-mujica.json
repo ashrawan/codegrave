@@ -1,0 +1,59 @@
+{
+  "id": "jose-mujica",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "José Mujica",
+      "from": "1935"
+    }
+  ],
+  "summary": "Former guerrilla and president from 2010 to 2015, known as the world's poorest president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q9094",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935-05-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2025-05-13",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "uruguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: José Mujica (Q9094)",
+      "url": "https://www.wikidata.org/wiki/Q9094",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: José Mujica",
+      "url": "https://en.wikipedia.org/wiki/José_Mujica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/13.07.2023_-_59%C2%BA_Congresso_da_Uni%C3%A3o_Nacional_dos_Estudantes_%E2%80%93_UNE_%2853044654694%29_%28cropped2%29.jpg/500px-13.07.2023_-_59%C2%BA_Congresso_da_Uni%C3%A3o_Nacional_dos_Estudantes_%E2%80%93_UNE_%2853044654694%29_%28cropped2%29.jpg",
+    "alt": "José Mujica",
+    "credit": "Palácio do Planalto from Brasilia, Brasil",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:13.07.2023_-_59%C2%BA_Congresso_da_Uni%C3%A3o_Nacional_dos_Estudantes_%E2%80%93_UNE_(53044654694)_(cropped2).jpg"
+  }
+}

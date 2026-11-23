@@ -1,0 +1,54 @@
+{
+  "id": "king-fahd-causeway",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "King Fahd Causeway",
+      "from": "1981"
+    }
+  ],
+  "summary": "The bridge to Saudi Arabia, opened in 1986.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q827735",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bahrain"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: King Fahd Causeway (Q827735)",
+      "url": "https://www.wikidata.org/wiki/Q827735",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: King Fahd Causeway",
+      "url": "https://en.wikipedia.org/wiki/King_Fahd_Causeway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/King_Fahd_Causeway_bridge_num4.jpg/500px-King_Fahd_Causeway_bridge_num4.jpg",
+    "alt": "King Fahd Causeway",
+    "credit": "Greens n cornbread",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:King_Fahd_Causeway_bridge_num4.jpg"
+  }
+}

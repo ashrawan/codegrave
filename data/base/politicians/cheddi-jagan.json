@@ -1,0 +1,59 @@
+{
+  "id": "cheddi-jagan",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Cheddi Jagan",
+      "from": "1918"
+    }
+  ],
+  "summary": "Dentist and leader of the independence movement, president from 1992 to 1997.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q724156",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-03-22",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1997-03-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guyana"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cheddi Jagan (Q724156)",
+      "url": "https://www.wikidata.org/wiki/Q724156",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cheddi Jagan",
+      "url": "https://en.wikipedia.org/wiki/Cheddi_Jagan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/95/President_Cheddi_Jagan.png",
+    "alt": "Cheddi Jagan",
+    "credit": "Government Information Agency, Guyana",
+    "licence": "Copyrighted free use",
+    "source": "https://commons.wikimedia.org/wiki/File:President_Cheddi_Jagan.png"
+  }
+}

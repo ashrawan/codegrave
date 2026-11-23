@@ -1,0 +1,52 @@
+{
+  "id": "german-samoa",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "German Samoa",
+      "from": "1900"
+    }
+  ],
+  "summary": "German rule of the western islands, 1900 to 1914.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q701025",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1920",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "samoa"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German Samoa (Q701025)",
+      "url": "https://www.wikidata.org/wiki/Q701025",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: German Samoa",
+      "url": "https://en.wikipedia.org/wiki/German_Samoa",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

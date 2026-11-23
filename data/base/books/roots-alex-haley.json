@@ -1,0 +1,54 @@
+{
+  "id": "roots-alex-haley",
+  "category": "books",
+  "names": [
+    {
+      "name": "Roots: The Saga of an American Family",
+      "from": "1976"
+    }
+  ],
+  "summary": "Alex Haley's book of 1976 tracing his family to the Gambian village of Juffureh.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q743223",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976-08-17",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "gambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Roots: The Saga of an American Family (Q743223)",
+      "url": "https://www.wikidata.org/wiki/Q743223",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Roots: The Saga of an American Family",
+      "url": "https://en.wikipedia.org/wiki/Roots:_The_Saga_of_an_American_Family",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Roots_The_Saga_of_an_American_Family_%281976_1st_ed_dust_jacket_cover%29.jpg/500px-Roots_The_Saga_of_an_American_Family_%281976_1st_ed_dust_jacket_cover%29.jpg",
+    "alt": "Roots: The Saga of an American Family",
+    "credit": "Jacket design by Al Nagy. Published by Doubleday.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Roots_The_Saga_of_an_American_Family_(1976_1st_ed_dust_jacket_cover).jpg"
+  }
+}

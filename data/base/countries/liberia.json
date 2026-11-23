@@ -1,0 +1,51 @@
+{
+  "id": "liberia",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Liberia",
+      "from": "1822"
+    }
+  ],
+  "summary": "A West African country founded by freed slaves from the United States, independent since 1847.",
+  "wikidata": "Q1014",
+  "events": [
+    {
+      "type": "born",
+      "date": "1822-01-07",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Liberia (Q1014)",
+      "url": "https://www.wikidata.org/wiki/Q1014",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Liberia",
+      "url": "https://en.wikipedia.org/wiki/Liberia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Liberian_Capitol_Building.jpg/500px-Liberian_Capitol_Building.jpg",
+    "alt": "Liberia",
+    "credit": "David Stanley",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Liberian_Capitol_Building.jpg"
+  }
+}

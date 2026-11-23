@@ -1,0 +1,59 @@
+{
+  "id": "rainier-iii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Rainier III, Prince of Monaco",
+      "from": "1923"
+    }
+  ],
+  "summary": "Prince from 1949 to 2005, who built Monaco into a modern state.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q185025",
+  "events": [
+    {
+      "type": "born",
+      "date": "1923-05-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2005-04-06",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "monaco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rainier III, Prince of Monaco (Q185025)",
+      "url": "https://www.wikidata.org/wiki/Q185025",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rainier III, Prince of Monaco",
+      "url": "https://en.wikipedia.org/wiki/Rainier_III,_Prince_of_Monaco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Rainier_III_%28JFKWHP-KN-C17888%2C_cropped%29.jpg/500px-Rainier_III_%28JFKWHP-KN-C17888%2C_cropped%29.jpg",
+    "alt": "Rainier III, Prince of Monaco",
+    "credit": "Robert LeRoy Knudsen",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Rainier_III_(JFKWHP-KN-C17888,_cropped).jpg"
+  }
+}

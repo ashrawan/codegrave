@@ -1,0 +1,53 @@
+{
+  "id": "saint-lucia",
+  "name": "Saint Lucia",
+  "description": "Saint Lucia from the Kalinago to the island that changed hands fourteen times, independence in 1979, the Pitons and two Nobel laureates.",
+  "category": "places",
+  "tags": [
+    "saint lucia",
+    "castries",
+    "caribbean",
+    "pitons"
+  ],
+  "entries": [
+    "castries",
+    "battle-of-the-saintes",
+    "w-arthur-lewis",
+    "john-compton",
+    "derek-walcott",
+    "philip-j-pierre",
+    "saint-lucia",
+    "julien-alfred",
+    "pitons-management-area"
+  ],
+  "checkpoints": [
+    {
+      "id": "french-and-british",
+      "name": "French and British",
+      "from": 1650,
+      "to": 1978,
+      "note": "France settled the island in 1650. It changed hands between France and Britain many times until Britain kept it in 1814."
+    },
+    {
+      "id": "independent-saint-lucia",
+      "name": "Independent Saint Lucia",
+      "from": 1979,
+      "to": 2026,
+      "note": "Saint Lucia became independent in 1979, the year one of its sons won a Nobel Prize."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Saint_Lucia.svg/330px-Flag_of_Saint_Lucia.svg.png",
+    "alt": "Flag of Saint Lucia",
+    "credit": "Dunstan St Omer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Saint_Lucia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/6/6f/National_Anthem_of_Saint_Lucia.ogg/National_Anthem_of_Saint_Lucia.ogg.mp3",
+    "title": "Sons and Daughters of Saint Lucia",
+    "credit": "https://web.archive.org/web/20191122055336/https://www.navyband.navy.mil/national_anthems.html https://web.archive.org/w",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_Anthem_of_Saint_Lucia.ogg"
+  }
+}

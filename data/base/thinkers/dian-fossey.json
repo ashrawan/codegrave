@@ -1,0 +1,59 @@
+{
+  "id": "dian-fossey",
+  "category": "thinkers",
+  "names": [
+    {
+      "name": "Dian Fossey",
+      "from": "1932"
+    }
+  ],
+  "summary": "American scientist who studied the gorillas of Rwanda for eighteen years.",
+  "labels": [
+    "philosophy"
+  ],
+  "wikidata": "Q234224",
+  "events": [
+    {
+      "type": "born",
+      "date": "1932-01-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-12-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rwanda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dian Fossey (Q234224)",
+      "url": "https://www.wikidata.org/wiki/Q234224",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dian Fossey",
+      "url": "https://en.wikipedia.org/wiki/Dian_Fossey",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Dian_Fossey_October_1968.jpg/500px-Dian_Fossey_October_1968.jpg",
+    "alt": "Dian Fossey",
+    "credit": "Tribune Publishing, no photographer credited",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dian_Fossey_October_1968.jpg"
+  }
+}

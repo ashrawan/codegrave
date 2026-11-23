@@ -1,0 +1,59 @@
+{
+  "id": "siegfried-count-of-luxembourg",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Siegfried, Count of Luxembourg",
+      "from": "0919"
+    }
+  ],
+  "summary": "The count who bought the castle rock in 963.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q469856",
+  "events": [
+    {
+      "type": "born",
+      "date": "0919",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0998-10-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "luxembourg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siegfried, Count of Luxembourg (Q469856)",
+      "url": "https://www.wikidata.org/wiki/Q469856",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siegfried, Count of Luxembourg",
+      "url": "https://en.wikipedia.org/wiki/Siegfried,_Count_of_Luxembourg",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/3/31/Siegfried_van_Luxemburg.jpg",
+    "alt": "Siegfried, Count of Luxembourg",
+    "credit": "Mister J. at Dutch Wikipedia",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Siegfried_van_Luxemburg.jpg"
+  }
+}

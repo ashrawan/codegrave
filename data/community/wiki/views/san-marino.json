@@ -1,0 +1,52 @@
+{
+  "id": "san-marino",
+  "name": "San Marino",
+  "description": "San Marino, said to be the oldest republic in the world, from Saint Marinus in 301 to its statutes, Napoleon, Garibaldi and today.",
+  "category": "places",
+  "tags": [
+    "san marino",
+    "republic",
+    "italy",
+    "europe"
+  ],
+  "entries": [
+    "saint-marinus",
+    "san-marino",
+    "captains-regent",
+    "giuseppe-garibaldi",
+    "basilica-di-san-marino",
+    "grand-and-general-council",
+    "san-marino-grand-prix",
+    "1994-san-marino-grand-prix"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-republic",
+      "name": "The republic",
+      "from": 301,
+      "to": 1860,
+      "note": "The story says Marinus founded the community in 301. The statutes of 1600 still stand, and Napoleon left the republic alone."
+    },
+    {
+      "id": "in-italy",
+      "name": "In Italy",
+      "from": 1861,
+      "to": 2026,
+      "note": "San Marino stayed free when Italy united and is one of the world's smallest states."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/330px-Flag_of_San_Marino.svg.png",
+    "alt": "Flag of San Marino",
+    "credit": "Zscout370",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_San_Marino.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/d/d9/Inno_Nazionale_della_Repubblica.ogg/Inno_Nazionale_della_Repubblica.ogg.mp3",
+    "title": "National anthem",
+    "credit": "Government of San Marino",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Inno_Nazionale_della_Repubblica.ogg"
+  }
+}

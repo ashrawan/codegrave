@@ -1,0 +1,54 @@
+{
+  "id": "dollarization-el-salvador",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "El Salvador adopts the US dollar",
+      "from": "2001"
+    }
+  ],
+  "summary": "El Salvador made the US dollar its currency in 2001.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q2397105",
+  "events": [
+    {
+      "type": "born",
+      "date": "2001-01-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "el-salvador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: El Salvador adopts the US dollar (Q2397105)",
+      "url": "https://www.wikidata.org/wiki/Q2397105",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Economy of El Salvador",
+      "url": "https://en.wikipedia.org/wiki/Economy_of_El_Salvador",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/World_Trade_Center_San_Salvador.jpg/500px-World_Trade_Center_San_Salvador.jpg",
+    "alt": "El Salvador adopts the US dollar",
+    "credit": "JMRAFFi",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:World_Trade_Center_San_Salvador.jpg"
+  }
+}

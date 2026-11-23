@@ -1,0 +1,59 @@
+{
+  "id": "said-bin-sultan",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Said bin Sultan",
+      "from": "1791"
+    }
+  ],
+  "summary": "Sultan who ruled Oman and Zanzibar and moved his court to Zanzibar.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q506193",
+  "events": [
+    {
+      "type": "born",
+      "date": "1791-06-05",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1856-10-19",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "oman"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Said bin Sultan (Q506193)",
+      "url": "https://www.wikidata.org/wiki/Q506193",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Said bin Sultan",
+      "url": "https://en.wikipedia.org/wiki/Said_bin_Sultan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Said_bin_Sultan.jpg/500px-Said_bin_Sultan.jpg",
+    "alt": "Said bin Sultan",
+    "credit": "Lieutenant Henry Blosse Lynch",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Said_bin_Sultan.jpg"
+  }
+}

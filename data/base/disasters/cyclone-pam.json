@@ -1,0 +1,49 @@
+{
+  "id": "cyclone-pam",
+  "category": "disasters",
+  "names": [
+    {
+      "name": "Cyclone Pam",
+      "from": "2015"
+    }
+  ],
+  "summary": "The cyclone of 2015 that wrecked much of the country.",
+  "wikidata": "Q19567333",
+  "events": [
+    {
+      "type": "born",
+      "date": "2015-03-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2015-03-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vanuatu"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Cyclone Pam (Q19567333)",
+      "url": "https://www.wikidata.org/wiki/Q19567333",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Cyclone Pam",
+      "url": "https://en.wikipedia.org/wiki/Cyclone_Pam",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

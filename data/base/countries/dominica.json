@@ -1,0 +1,51 @@
+{
+  "id": "dominica",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Dominica",
+      "from": "1978"
+    }
+  ],
+  "summary": "A mountainous island of the eastern Caribbean, independent from Britain since 1978.",
+  "wikidata": "Q784",
+  "events": [
+    {
+      "type": "born",
+      "date": "1978",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dominica (Q784)",
+      "url": "https://www.wikidata.org/wiki/Q784",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dominica",
+      "url": "https://en.wikipedia.org/wiki/Dominica",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Dominica_from_ISS.jpg/500px-Dominica_from_ISS.jpg",
+    "alt": "Dominica",
+    "credit": "NASA",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Dominica_from_ISS.jpg"
+  }
+}

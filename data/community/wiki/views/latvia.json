@@ -1,0 +1,73 @@
+{
+  "id": "latvia",
+  "name": "Latvia",
+  "description": "Latvia from the Baltic tribes and Riga of the Hanseatic League to independence in 1918, Soviet occupation, the Baltic Way and the EU.",
+  "category": "places",
+  "tags": [
+    "latvia",
+    "riga",
+    "baltic",
+    "europe"
+  ],
+  "entries": [
+    "livonian-crusade",
+    "riga",
+    "terra-mariana",
+    "duchy-of-courland-and-semigallia",
+    "latvian-song-and-dance-festival",
+    "mark-rothko",
+    "latvia",
+    "latvian-war-of-independence",
+    "soviet-occupation-of-the-baltic-states-1940",
+    "mikhail-baryshnikov",
+    "edgars-rinkevics",
+    "singing-revolution",
+    "baltic-way",
+    "slovakia-joins-eu",
+    "flow-2024"
+  ],
+  "checkpoints": [
+    {
+      "id": "crusaders-and-dukes",
+      "name": "Crusaders and dukes",
+      "from": 1201,
+      "to": 1917,
+      "note": "German crusaders founded Riga in 1201. Poland, Sweden and Russia ruled in turn, while Courland was a duchy of its own."
+    },
+    {
+      "id": "the-first-republic",
+      "name": "The first republic",
+      "from": 1918,
+      "to": 1939,
+      "note": "Latvia proclaimed independence in 1918 and won it in war."
+    },
+    {
+      "id": "soviet-occupation",
+      "name": "Soviet occupation",
+      "from": 1940,
+      "to": 1990,
+      "note": "The Soviet Union occupied Latvia in 1940 and again in 1944."
+    },
+    {
+      "id": "free-latvia",
+      "name": "Free Latvia",
+      "from": 1991,
+      "to": 2026,
+      "note": "Latvia regained independence in 1991 and joined the EU and NATO in 2004."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/330px-Flag_of_Latvia.svg.png",
+    "alt": "Flag of Latvia",
+    "credit": "Original: Ansis Cīrulis Vector: SKopp",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Latvia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/5/55/Latvian_National_Anthem.ogg/Latvian_National_Anthem.ogg.mp3",
+    "title": "Dievs, svētī Latviju!",
+    "credit": "https://web.archive.org/web/2003050101011/www.navyband.navy.mil/national_anthems.html",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Latvian_National_Anthem.ogg"
+  }
+}

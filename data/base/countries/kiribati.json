@@ -1,0 +1,44 @@
+{
+  "id": "kiribati",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Kiribati",
+      "from": "1979"
+    }
+  ],
+  "summary": "A Pacific country of thirty-three atolls spread across the equator, independent from Britain since 1979.",
+  "wikidata": "Q710",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-07-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kiribati (Q710)",
+      "url": "https://www.wikidata.org/wiki/Q710",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kiribati",
+      "url": "https://en.wikipedia.org/wiki/Kiribati",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

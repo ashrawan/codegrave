@@ -1,0 +1,47 @@
+{
+  "id": "baku-oil-fields",
+  "category": "economic-events",
+  "names": [
+    {
+      "name": "Baku oil boom",
+      "from": "1846"
+    }
+  ],
+  "summary": "The oil wells round Baku, which by 1900 gave half the world's oil.",
+  "labels": [
+    "economics"
+  ],
+  "wikidata": "Q2666778",
+  "events": [
+    {
+      "type": "born",
+      "date": "1846",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "azerbaijan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Baku oil boom (Q2666778)",
+      "url": "https://www.wikidata.org/wiki/Q2666778",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Baku oil fields",
+      "url": "https://en.wikipedia.org/wiki/Baku_oil_fields",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

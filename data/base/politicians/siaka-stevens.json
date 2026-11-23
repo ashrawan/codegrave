@@ -1,0 +1,59 @@
+{
+  "id": "siaka-stevens",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Siaka Stevens",
+      "from": "1905"
+    }
+  ],
+  "summary": "President from 1971 to 1985, who made a one-party state.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q515657",
+  "events": [
+    {
+      "type": "born",
+      "date": "1905-08-24",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1988-05-29",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sierra-leone"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Siaka Stevens (Q515657)",
+      "url": "https://www.wikidata.org/wiki/Q515657",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Siaka Stevens",
+      "url": "https://en.wikipedia.org/wiki/Siaka_Stevens",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Siaka_Stevens_%28I-002364%2C_cropped%2C_processing_version%29.jpg/500px-Siaka_Stevens_%28I-002364%2C_cropped%2C_processing_version%29.jpg",
+    "alt": "Siaka Stevens",
+    "credit": "European Communities, 1979 / EC - Audiovisual Service",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Siaka_Stevens_(I-002364,_cropped,_processing_version).jpg"
+  }
+}

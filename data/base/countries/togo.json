@@ -1,0 +1,51 @@
+{
+  "id": "togo",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Togo",
+      "from": "1960"
+    }
+  ],
+  "summary": "A narrow country of West Africa, independent from France since 1960.",
+  "wikidata": "Q945",
+  "events": [
+    {
+      "type": "born",
+      "date": "1960-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Togo (Q945)",
+      "url": "https://www.wikidata.org/wiki/Q945",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Togo",
+      "url": "https://en.wikipedia.org/wiki/Togo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Kpalime.jpg",
+    "alt": "Togo",
+    "credit": "HpBob",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kpalime.jpg"
+  }
+}

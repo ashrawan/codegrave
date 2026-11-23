@@ -1,0 +1,71 @@
+{
+  "id": "burundi",
+  "name": "Burundi",
+  "description": "Burundi from its old kingdom to German and Belgian rule, independence in 1962, decades of ethnic killing, civil war and peace.",
+  "category": "places",
+  "tags": [
+    "burundi",
+    "gitega",
+    "bujumbura",
+    "great lakes",
+    "africa"
+  ],
+  "entries": [
+    "kingdom-of-burundi",
+    "german-east-africa",
+    "bujumbura",
+    "gitega",
+    "ruanda-urundi",
+    "louis-rwagasore",
+    "melchior-ndadaye",
+    "burundi",
+    "pierre-nkurunziza",
+    "evariste-ndayishimiye",
+    "ikiza",
+    "burundian-civil-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-kingdom",
+      "name": "The kingdom",
+      "from": 1680,
+      "to": 1889,
+      "note": "The mwami ruled the hills of Burundi for some two centuries."
+    },
+    {
+      "id": "german-and-belgian-rule",
+      "name": "German and Belgian rule",
+      "from": 1890,
+      "to": 1961,
+      "note": "Burundi became part of German East Africa and then, from 1916, Belgian Ruanda-Urundi."
+    },
+    {
+      "id": "independence-and-killings",
+      "name": "Independence and killings",
+      "from": 1962,
+      "to": 2004,
+      "note": "Burundi became independent in 1962. The killings of 1972 and the murder of Ndadaye in 1993 led to a long civil war."
+    },
+    {
+      "id": "peace",
+      "name": "Peace",
+      "from": 2005,
+      "to": 2026,
+      "note": "The war ended in 2005. Nkurunziza's third term caused a crisis in 2015, and Gitega became the capital in 2019."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Flag_of_Burundi.svg/330px-Flag_of_Burundi.svg.png",
+    "alt": "Flag of Burundi",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Burundi.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/7/71/Burundi_Bwacu_instrumental.ogg/Burundi_Bwacu_instrumental.ogg.mp3",
+    "title": "Burundi Bwacu",
+    "credit": "Marc Barengayabo",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Burundi_Bwacu_instrumental.ogg"
+  }
+}

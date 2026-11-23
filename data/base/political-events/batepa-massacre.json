@@ -1,0 +1,52 @@
+{
+  "id": "batepa-massacre",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Batepá massacre",
+      "from": "1953"
+    }
+  ],
+  "summary": "The killing of hundreds of islanders by the Portuguese in 1953.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q1851212",
+  "events": [
+    {
+      "type": "born",
+      "date": "1953-02-03",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1953-02-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sao-tome-and-principe"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Batepá massacre (Q1851212)",
+      "url": "https://www.wikidata.org/wiki/Q1851212",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Batepá massacre",
+      "url": "https://en.wikipedia.org/wiki/Batepá_massacre",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

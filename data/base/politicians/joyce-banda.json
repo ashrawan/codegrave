@@ -1,0 +1,54 @@
+{
+  "id": "joyce-banda",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Joyce Banda",
+      "from": "1950"
+    }
+  ],
+  "summary": "President from 2012 to 2014, the first woman to lead Malawi.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q57388",
+  "events": [
+    {
+      "type": "born",
+      "date": "1950-04-12",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malawi"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Joyce Banda (Q57388)",
+      "url": "https://www.wikidata.org/wiki/Q57388",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Joyce Banda",
+      "url": "https://en.wikipedia.org/wiki/Joyce_Banda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Joyce_Banda_Department_for_International_Development_photo_crop.jpg/500px-Joyce_Banda_Department_for_International_Development_photo_crop.jpg",
+    "alt": "Joyce Banda",
+    "credit": "Lindsay Mgbor/Department for International Development",
+    "licence": "CC BY 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Joyce_Banda_Department_for_International_Development_photo_crop.jpg"
+  }
+}

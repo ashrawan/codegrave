@@ -1,0 +1,62 @@
+{
+  "id": "fiji",
+  "name": "Fiji",
+  "description": "Fiji from its first voyagers to the chiefs, British rule and Indian labourers, independence in 1970, four coups and rugby.",
+  "category": "places",
+  "tags": [
+    "fiji",
+    "suva",
+    "pacific",
+    "rugby",
+    "melanesia"
+  ],
+  "entries": [
+    "lapita-culture",
+    "tui-tonga-empire",
+    "seru-epenisa-cakobau",
+    "colony-of-fiji",
+    "suva",
+    "ratu-sir-kamisese-mara",
+    "sitiveni-rabuka",
+    "fiji",
+    "1987-fijian-coups-detat",
+    "2006-fijian-coup-detat"
+  ],
+  "checkpoints": [
+    {
+      "id": "voyagers-and-chiefs",
+      "name": "Voyagers and chiefs",
+      "from": -1600,
+      "to": 1873,
+      "note": "The Lapita people settled Fiji some 3,500 years ago. Chiefs fought for power, and Cakobau rose in the 1800s."
+    },
+    {
+      "id": "british-fiji",
+      "name": "British Fiji",
+      "from": 1874,
+      "to": 1969,
+      "note": "Fiji became a British colony in 1874, and Indian labourers came to work the sugar fields."
+    },
+    {
+      "id": "independent-fiji",
+      "name": "Independent Fiji",
+      "from": 1970,
+      "to": 2026,
+      "note": "Fiji became independent in 1970. Coups in 1987, 2000 and 2006 followed, and its rugby players won Olympic gold."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Flag_of_Fiji.svg/330px-Flag_of_Fiji.svg.png",
+    "alt": "Flag of Fiji",
+    "credit": "Tessa Mackenzie",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Fiji.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/c/ca/Fiji_National_Anthem.ogg/Fiji_National_Anthem.ogg.mp3",
+    "title": "God Bless Fiji",
+    "credit": "Charles Austin Miles",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Fiji_National_Anthem.ogg"
+  }
+}

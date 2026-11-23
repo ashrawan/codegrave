@@ -1,0 +1,59 @@
+{
+  "id": "estonian-war-of-independence",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Estonian War of Independence",
+      "from": "1918"
+    }
+  ],
+  "summary": "The war of 1918 to 1920 against Soviet Russia.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1127302",
+  "events": [
+    {
+      "type": "born",
+      "date": "1918-11-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1920-01-03",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "estonia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Estonian War of Independence (Q1127302)",
+      "url": "https://www.wikidata.org/wiki/Q1127302",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Estonian War of Independence",
+      "url": "https://en.wikipedia.org/wiki/Estonian_War_of_Independence",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Estonian_heavy_machinegun.jpg/500px-Estonian_heavy_machinegun.jpg",
+    "alt": "Estonian War of Independence",
+    "credit": "Unknown authorUnknown author",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Estonian_heavy_machinegun.jpg"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "asuncion",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Asunción",
+      "from": "1537"
+    }
+  ],
+  "summary": "The capital, founded in 1537, one of the oldest cities of South America.",
+  "wikidata": "Q2933",
+  "events": [
+    {
+      "type": "born",
+      "date": "1537",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "paraguay"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Asunción (Q2933)",
+      "url": "https://www.wikidata.org/wiki/Q2933",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Asunción",
+      "url": "https://en.wikipedia.org/wiki/Asunción",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Asunci%C3%B3n_Paraguay.jpg/500px-Asunci%C3%B3n_Paraguay.jpg",
+    "alt": "Asunción",
+    "credit": "AnonymousUnknown author",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Asunci%C3%B3n_Paraguay.jpg"
+  }
+}

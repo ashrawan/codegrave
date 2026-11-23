@@ -1,0 +1,59 @@
+{
+  "id": "rwandan-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Rwandan Civil War",
+      "from": "1990"
+    }
+  ],
+  "summary": "The war of 1990 to 1994 between the government and the RPF rebels.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q426722",
+  "events": [
+    {
+      "type": "born",
+      "date": "1990-10-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1993-08-04",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rwanda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Rwandan Civil War (Q426722)",
+      "url": "https://www.wikidata.org/wiki/Q426722",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Rwandan Civil War",
+      "url": "https://en.wikipedia.org/wiki/Rwandan_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/RwandaRoads.jpg/500px-RwandaRoads.jpg",
+    "alt": "Rwandan Civil War",
+    "credit": "No machine-readable author provided. Amakuru assumed (based on copyright claims).",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:RwandaRoads.jpg"
+  }
+}

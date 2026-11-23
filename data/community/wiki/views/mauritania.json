@@ -1,0 +1,62 @@
+{
+  "id": "mauritania",
+  "name": "Mauritania",
+  "description": "Mauritania from the Almoravids and the libraries of Chinguetti to French rule, independence in 1960, slavery and the desert.",
+  "category": "places",
+  "tags": [
+    "mauritania",
+    "nouakchott",
+    "sahara",
+    "west africa",
+    "chinguetti"
+  ],
+  "entries": [
+    "chinguetti",
+    "almoravid-dynasty",
+    "ouadane",
+    "moktar-ould-daddah",
+    "mohamed-ould-ghazouani",
+    "nouakchott",
+    "mauritania",
+    "richat-structure",
+    "banc-darguin-national-park",
+    "slavery-in-mauritania"
+  ],
+  "checkpoints": [
+    {
+      "id": "almoravids-and-caravans",
+      "name": "Almoravids and caravans",
+      "from": 1040,
+      "to": 1902,
+      "note": "The Almoravids rose here in the 1000s. Caravan towns such as Chinguetti and Ouadane held libraries of Islamic learning."
+    },
+    {
+      "id": "french-mauritania",
+      "name": "French Mauritania",
+      "from": 1903,
+      "to": 1959,
+      "note": "France made Mauritania a colony, ruled from Saint-Louis in Senegal."
+    },
+    {
+      "id": "independent-mauritania",
+      "name": "Independent Mauritania",
+      "from": 1960,
+      "to": 2026,
+      "note": "Mauritania became independent in 1960 and built Nouakchott. Slavery was abolished only in 1981."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Flag_of_Mauritania.svg/330px-Flag_of_Mauritania.svg.png",
+    "alt": "Flag of Mauritania",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Mauritania.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/9/93/United_States_Navy_Band_-_Bil%C4%81da_l-%CA%BEub%C4%81ti_l-hud%C4%81ti_l-kir%C4%81m.ogg/United_States_Navy_Band_-_Bil%C4%81da_l-%CA%BEub%C4%81ti_l-hud%C4%81ti_l-kir%C4%81m.ogg.mp3",
+    "title": "National anthem of Mauritania",
+    "credit": "Lyrics Unknown Music Rageh Daoud",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:United_States_Navy_Band_-_Bil%C4%81da_l-%CA%BEub%C4%81ti_l-hud%C4%81ti_l-kir%C4%81m.ogg"
+  }
+}

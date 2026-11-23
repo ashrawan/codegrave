@@ -1,0 +1,51 @@
+{
+  "id": "panama-city",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Panama City",
+      "from": "1673"
+    }
+  ],
+  "summary": "The capital, rebuilt on a new site in 1673.",
+  "wikidata": "Q3306",
+  "events": [
+    {
+      "type": "born",
+      "date": "1673",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "panama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Panama City (Q3306)",
+      "url": "https://www.wikidata.org/wiki/Q3306",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Panama City",
+      "url": "https://en.wikipedia.org/wiki/Panama_City",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Panor%C3%A1mica_nocturna_de_la_ciudad_de_Panam%C3%A1.jpg/500px-Panor%C3%A1mica_nocturna_de_la_ciudad_de_Panam%C3%A1.jpg",
+    "alt": "Panama City",
+    "credit": "JAVR2020",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Panor%C3%A1mica_nocturna_de_la_ciudad_de_Panam%C3%A1.jpg"
+  }
+}

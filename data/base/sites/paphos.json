@@ -1,0 +1,51 @@
+{
+  "id": "paphos",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Paphos",
+      "from": "-1200"
+    }
+  ],
+  "summary": "The city of Aphrodite's cult, with Roman mosaics, a World Heritage Site.",
+  "wikidata": "Q180918",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1200",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paphos (Q180918)",
+      "url": "https://www.wikidata.org/wiki/Q180918",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paphos",
+      "url": "https://en.wikipedia.org/wiki/Paphos",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Fort_pafos.jpg/500px-Fort_pafos.jpg",
+    "alt": "Paphos",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Fort_pafos.jpg"
+  }
+}

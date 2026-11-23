@@ -1,0 +1,59 @@
+{
+  "id": "laotian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Laotian Civil War",
+      "from": "1959"
+    }
+  ],
+  "summary": "The war of 1959 to 1975 in which the Pathet Lao took power.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q877450",
+  "events": [
+    {
+      "type": "born",
+      "date": "1959-05-23",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1975-12-02",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "laos"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Laotian Civil War (Q877450)",
+      "url": "https://www.wikidata.org/wiki/Q877450",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Laotian Civil War",
+      "url": "https://en.wikipedia.org/wiki/Laotian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Zones_bombard%C3%A9es_par_l%27Arm%C3%A9e_am%C3%A9ricaine_au_Laos_de_1964_%C3%A0_1973.JPG",
+    "alt": "Laotian Civil War",
+    "credit": "Thira",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Zones_bombard%C3%A9es_par_l%27Arm%C3%A9e_am%C3%A9ricaine_au_Laos_de_1964_%C3%A0_1973.JPG"
+  }
+}

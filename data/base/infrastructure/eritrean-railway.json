@@ -1,0 +1,56 @@
+{
+  "id": "eritrean-railway",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "Eritrean Railway",
+      "from": "1887"
+    }
+  ],
+  "summary": "The mountain railway from Massawa to Asmara, built by Italy.",
+  "wikidata": "Q1862429",
+  "events": [
+    {
+      "type": "born",
+      "date": "1887",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1975",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "eritrea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Eritrean Railway (Q1862429)",
+      "url": "https://www.wikidata.org/wiki/Q1862429",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Eritrean Railway",
+      "url": "https://en.wikipedia.org/wiki/Eritrean_Railway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Eritrean_Railway_-_2008-11-04-edit1.jpg/500px-Eritrean_Railway_-_2008-11-04-edit1.jpg",
+    "alt": "Eritrean Railway",
+    "credit": "Original photograph taken by User:Voice of Clam, edited by jjron - adjusted levels, reduced highlights, sharpened.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Eritrean_Railway_-_2008-11-04-edit1.jpg"
+  }
+}

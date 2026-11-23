@@ -1,0 +1,51 @@
+{
+  "id": "sierra-leone",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Sierra Leone",
+      "from": "1961"
+    }
+  ],
+  "summary": "A West African country on the Atlantic, independent from Britain since 1961.",
+  "wikidata": "Q1044",
+  "events": [
+    {
+      "type": "born",
+      "date": "1961-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sierra Leone (Q1044)",
+      "url": "https://www.wikidata.org/wiki/Q1044",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sierra Leone",
+      "url": "https://en.wikipedia.org/wiki/Sierra_Leone",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Sierra_Leone-Mappa.gif",
+    "alt": "Sierra Leone",
+    "credit": "Central Intelligence Agency",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Sierra_Leone-Mappa.gif"
+  }
+}

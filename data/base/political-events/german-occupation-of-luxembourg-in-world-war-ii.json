@@ -1,0 +1,52 @@
+{
+  "id": "german-occupation-of-luxembourg-in-world-war-ii",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "German occupation of Luxembourg",
+      "from": "1940"
+    }
+  ],
+  "summary": "Nazi Germany's occupation of 1940 to 1944.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q13175718",
+  "events": [
+    {
+      "type": "born",
+      "date": "1940-05-10",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1945",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "luxembourg"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: German occupation of Luxembourg (Q13175718)",
+      "url": "https://www.wikidata.org/wiki/Q13175718",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luxembourg in World War II",
+      "url": "https://en.wikipedia.org/wiki/Luxembourg_in_World_War_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

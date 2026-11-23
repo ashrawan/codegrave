@@ -1,0 +1,54 @@
+{
+  "id": "mariano-rivera",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Mariano Rivera",
+      "from": "1969"
+    }
+  ],
+  "summary": "Baseball pitcher, the first player voted into the Hall of Fame by every voter.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q382303",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-11-29",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "panama"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mariano Rivera (Q382303)",
+      "url": "https://www.wikidata.org/wiki/Q382303",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mariano Rivera",
+      "url": "https://en.wikipedia.org/wiki/Mariano_Rivera",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Mariano_Rivera_allison_7_29_07.jpg/500px-Mariano_Rivera_allison_7_29_07.jpg",
+    "alt": "Mariano Rivera",
+    "credit": "User Keith Allison on Flickr",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Mariano_Rivera_allison_7_29_07.jpg"
+  }
+}

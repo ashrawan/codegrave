@@ -1,0 +1,61 @@
+{
+  "id": "central-african-republic",
+  "name": "Central African Republic",
+  "description": "The Central African Republic from Ubangi-Shari to independence in 1960, Bokassa's empire, coups and the war since 2012.",
+  "category": "places",
+  "tags": [
+    "central african republic",
+    "bangui",
+    "africa",
+    "bokassa"
+  ],
+  "entries": [
+    "ubangi-shari",
+    "bangui",
+    "barthelemy-boganda",
+    "jean-bedel-bokassa",
+    "david-dacko",
+    "faustin-archange-touadera",
+    "central-african-republic",
+    "central-african-empire",
+    "dzanga-sangha",
+    "central-african-republic-civil-war"
+  ],
+  "checkpoints": [
+    {
+      "id": "ubangi-shari",
+      "name": "Ubangi-Shari",
+      "from": 1889,
+      "to": 1959,
+      "note": "France founded Bangui in 1889 and ruled the land as Ubangi-Shari, much of it leased to concession companies."
+    },
+    {
+      "id": "independence-and-bokassa",
+      "name": "Independence and Bokassa",
+      "from": 1960,
+      "to": 1979,
+      "note": "Independence came in 1960. Bokassa seized power in 1966 and crowned himself emperor before France removed him in 1979."
+    },
+    {
+      "id": "coups-and-war",
+      "name": "Coups and war",
+      "from": 1980,
+      "to": 2026,
+      "note": "Coups followed, and since 2012 armed groups have fought over much of the country."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Flag_of_the_Central_African_Republic.svg/330px-Flag_of_the_Central_African_Republic.svg.png",
+    "alt": "Flag of Central African Republic",
+    "credit": "Barthélemy Boganda",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Central_African_Republic.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/af/La_Renaissance_%281960s_recording%29.ogg/La_Renaissance_%281960s_recording%29.ogg.mp3",
+    "title": "La Renaissance",
+    "credit": "Herbert Pepper",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:La_Renaissance_(1960s_recording).ogg"
+  }
+}

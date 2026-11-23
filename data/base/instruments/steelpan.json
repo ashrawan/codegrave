@@ -1,0 +1,51 @@
+{
+  "id": "steelpan",
+  "category": "instruments",
+  "names": [
+    {
+      "name": "Steelpan",
+      "from": "1935"
+    }
+  ],
+  "summary": "The drum made from oil barrels, born in Trinidad in the 1930s.",
+  "wikidata": "Q6610630",
+  "events": [
+    {
+      "type": "born",
+      "date": "1935",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "trinidad-and-tobago"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Steelpan (Q6610630)",
+      "url": "https://www.wikidata.org/wiki/Q6610630",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Steelpan",
+      "url": "https://en.wikipedia.org/wiki/Steelpan",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Pan_player.jpg/500px-Pan_player.jpg",
+    "alt": "Steelpan",
+    "credit": "Shanel",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pan_player.jpg"
+  }
+}

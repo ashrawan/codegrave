@@ -1,0 +1,52 @@
+{
+  "id": "djiboutian-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Djiboutian Civil War",
+      "from": "1991"
+    }
+  ],
+  "summary": "The rebellion of the Afar from 1991 to 1994.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1262084",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-10",
+      "precision": "month"
+    },
+    {
+      "type": "ended",
+      "date": "1994-12",
+      "precision": "month"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "djibouti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Djiboutian Civil War (Q1262084)",
+      "url": "https://www.wikidata.org/wiki/Q1262084",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Djiboutian Civil War",
+      "url": "https://en.wikipedia.org/wiki/Djiboutian_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": "nauru",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Nauru",
+      "from": "1968"
+    }
+  ],
+  "summary": "A single coral island in the Pacific, the smallest republic in the world, independent since 1968.",
+  "wikidata": "Q697",
+  "events": [
+    {
+      "type": "born",
+      "date": "1968-01-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Nauru (Q697)",
+      "url": "https://www.wikidata.org/wiki/Q697",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Nauru",
+      "url": "https://en.wikipedia.org/wiki/Nauru",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Coral_reef_on_Nauru.jpg/500px-Coral_reef_on_Nauru.jpg",
+    "alt": "Nauru",
+    "credit": "d-online",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Coral_reef_on_Nauru.jpg"
+  }
+}

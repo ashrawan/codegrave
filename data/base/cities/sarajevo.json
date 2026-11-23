@@ -1,0 +1,51 @@
+{
+  "id": "sarajevo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Sarajevo",
+      "from": "1462"
+    }
+  ],
+  "summary": "The capital, founded by the Ottomans in the 1400s.",
+  "wikidata": "Q11194",
+  "events": [
+    {
+      "type": "born",
+      "date": "1462",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "bosnia-and-herzegovina"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sarajevo (Q11194)",
+      "url": "https://www.wikidata.org/wiki/Q11194",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sarajevo",
+      "url": "https://en.wikipedia.org/wiki/Sarajevo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Sarajevo_City_Panorama.JPG/500px-Sarajevo_City_Panorama.JPG",
+    "alt": "Sarajevo",
+    "credit": "Julian Nyča",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarajevo_City_Panorama.JPG"
+  }
+}

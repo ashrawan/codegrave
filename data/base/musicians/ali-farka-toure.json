@@ -1,0 +1,59 @@
+{
+  "id": "ali-farka-toure",
+  "category": "musicians",
+  "names": [
+    {
+      "name": "Ali Farka Touré",
+      "from": "1939"
+    }
+  ],
+  "summary": "Guitarist of the desert blues.",
+  "labels": [
+    "music"
+  ],
+  "wikidata": "Q334947",
+  "events": [
+    {
+      "type": "born",
+      "date": "1939-10-31",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2006-03-07",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ali Farka Touré (Q334947)",
+      "url": "https://www.wikidata.org/wiki/Q334947",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ali Farka Touré",
+      "url": "https://en.wikipedia.org/wiki/Ali_Farka_Touré",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ali_Farka_Toure.jpg/500px-Ali_Farka_Toure.jpg",
+    "alt": "Ali Farka Touré",
+    "credit": "Tagles",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ali_Farka_Toure.jpg"
+  }
+}

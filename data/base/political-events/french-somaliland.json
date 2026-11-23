@@ -1,0 +1,59 @@
+{
+  "id": "french-somaliland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "French Somaliland",
+      "from": "1896"
+    }
+  ],
+  "summary": "The French colony on the Gulf of Tadjoura, 1883 to 1967.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q333126",
+  "events": [
+    {
+      "type": "born",
+      "date": "1896-05-20",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1967",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "djibouti"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Somaliland (Q333126)",
+      "url": "https://www.wikidata.org/wiki/Q333126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Somaliland",
+      "url": "https://en.wikipedia.org/wiki/French_Somaliland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Horn_of_Africa_1900s.png/500px-Horn_of_Africa_1900s.png",
+    "alt": "French Somaliland",
+    "credit": "Randomastwritter",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Horn_of_Africa_1900s.png"
+  }
+}

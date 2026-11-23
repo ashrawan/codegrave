@@ -1,0 +1,52 @@
+{
+  "id": "salvadoran-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Salvadoran Civil War",
+      "from": "1979"
+    }
+  ],
+  "summary": "The war of 1979 to 1992 between the government and the FMLN guerrillas.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q1783607",
+  "events": [
+    {
+      "type": "born",
+      "date": "1979-10-15",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1992-01-16",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "el-salvador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Salvadoran Civil War (Q1783607)",
+      "url": "https://www.wikidata.org/wiki/Q1783607",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Salvadoran Civil War",
+      "url": "https://en.wikipedia.org/wiki/Salvadoran_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

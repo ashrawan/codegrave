@@ -1,0 +1,51 @@
+{
+  "id": "burana-tower",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Burana Tower",
+      "from": "1000"
+    }
+  ],
+  "summary": "A minaret of the old Silk Road city of Balasagun.",
+  "wikidata": "Q852032",
+  "events": [
+    {
+      "type": "born",
+      "date": "1000",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "kyrgyzstan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Burana Tower (Q852032)",
+      "url": "https://www.wikidata.org/wiki/Q852032",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Burana Tower",
+      "url": "https://en.wikipedia.org/wiki/Burana_Tower",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Burana_Tower%2C_Kyrgyzstan.jpg/500px-Burana_Tower%2C_Kyrgyzstan.jpg",
+    "alt": "Burana Tower",
+    "credit": "Bernard Gagnon",
+    "licence": "CC0",
+    "source": "https://commons.wikimedia.org/wiki/File:Burana_Tower,_Kyrgyzstan.jpg"
+  }
+}

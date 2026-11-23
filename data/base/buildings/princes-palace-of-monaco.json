@@ -1,0 +1,54 @@
+{
+  "id": "princes-palace-of-monaco",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Prince's Palace of Monaco",
+      "from": "1191"
+    }
+  ],
+  "summary": "The palace on the rock, begun as a Genoese fortress in 1191.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1164788",
+  "events": [
+    {
+      "type": "born",
+      "date": "1191",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "monaco"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Prince's Palace of Monaco (Q1164788)",
+      "url": "https://www.wikidata.org/wiki/Q1164788",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Prince's Palace of Monaco",
+      "url": "https://en.wikipedia.org/wiki/Prince's_Palace_of_Monaco",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Palais_Princier_de_Monaco.jpg/500px-Palais_Princier_de_Monaco.jpg",
+    "alt": "Prince's Palace of Monaco",
+    "credit": "Jorge Franganillo",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Palais_Princier_de_Monaco.jpg"
+  }
+}

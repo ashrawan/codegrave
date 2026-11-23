@@ -1,0 +1,59 @@
+{
+  "id": "jose-figueres-ferrer",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "José Figueres Ferrer",
+      "from": "1906"
+    }
+  ],
+  "summary": "Leader who abolished the army in 1948 and was three times president.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q311126",
+  "events": [
+    {
+      "type": "born",
+      "date": "1906-09-25",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1990-06-08",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "costa-rica"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: José Figueres Ferrer (Q311126)",
+      "url": "https://www.wikidata.org/wiki/Q311126",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: José Figueres Ferrer",
+      "url": "https://en.wikipedia.org/wiki/José_Figueres_Ferrer",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Jos%C3%A9_Figueres_Ferrer_1.png",
+    "alt": "José Figueres Ferrer",
+    "credit": "fototeca.iiccr.ro",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Figueres_Ferrer_1.png"
+  }
+}

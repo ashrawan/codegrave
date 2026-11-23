@@ -1,0 +1,59 @@
+{
+  "id": "milton-margai",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Milton Margai",
+      "from": "1895"
+    }
+  ],
+  "summary": "The first prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q879302",
+  "events": [
+    {
+      "type": "born",
+      "date": "1895-12-07",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1964-04-28",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "sierra-leone"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Milton Margai (Q879302)",
+      "url": "https://www.wikidata.org/wiki/Q879302",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Milton Margai",
+      "url": "https://en.wikipedia.org/wiki/Milton_Margai",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Sierra_Leone_1964_Half_Cent_Obv.jpg",
+    "alt": "Milton Margai",
+    "credit": "Kratzbyrste",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sierra_Leone_1964_Half_Cent_Obv.jpg"
+  }
+}

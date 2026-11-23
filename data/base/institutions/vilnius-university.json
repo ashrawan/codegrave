@@ -1,0 +1,51 @@
+{
+  "id": "vilnius-university",
+  "category": "institutions",
+  "names": [
+    {
+      "name": "Vilnius University",
+      "from": "1579"
+    }
+  ],
+  "summary": "University founded in 1579.",
+  "wikidata": "Q658192",
+  "events": [
+    {
+      "type": "born",
+      "date": "1579",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lithuania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Vilnius University (Q658192)",
+      "url": "https://www.wikidata.org/wiki/Q658192",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Vilnius University",
+      "url": "https://en.wikipedia.org/wiki/Vilnius_University",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Senamiestis%2C_Vilnius%2C_Lithuania_-_panoramio_%28165%29.jpg/500px-Senamiestis%2C_Vilnius%2C_Lithuania_-_panoramio_%28165%29.jpg",
+    "alt": "Vilnius University",
+    "credit": "Michal Gorski",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Senamiestis,_Vilnius,_Lithuania_-_panoramio_(165).jpg"
+  }
+}

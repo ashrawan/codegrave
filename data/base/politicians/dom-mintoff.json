@@ -1,0 +1,59 @@
+{
+  "id": "dom-mintoff",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Dom Mintoff",
+      "from": "1916"
+    }
+  ],
+  "summary": "Prime minister who made Malta a republic in 1974.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q167307",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-08-06",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2012-08-20",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "malta"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Dom Mintoff (Q167307)",
+      "url": "https://www.wikidata.org/wiki/Q167307",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Dom Mintoff",
+      "url": "https://en.wikipedia.org/wiki/Dom_Mintoff",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Dom_Mintoff_%281974%29.jpg/500px-Dom_Mintoff_%281974%29.jpg",
+    "alt": "Dom Mintoff",
+    "credit": "W. Punt for Anefo",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Dom_Mintoff_(1974).jpg"
+  }
+}

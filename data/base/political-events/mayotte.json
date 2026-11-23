@@ -1,0 +1,54 @@
+{
+  "id": "mayotte",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Mayotte",
+      "from": "1974"
+    }
+  ],
+  "summary": "The island that voted to stay with France in 1974.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q17063",
+  "events": [
+    {
+      "type": "born",
+      "date": "1974",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "comoros"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mayotte (Q17063)",
+      "url": "https://www.wikidata.org/wiki/Q17063",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mayotte",
+      "url": "https://en.wikipedia.org/wiki/Mayotte",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Mayotte%2C_vue_par_Sentinel_2_%28cropped%29.jpg/500px-Mayotte%2C_vue_par_Sentinel_2_%28cropped%29.jpg",
+    "alt": "Mayotte",
+    "credit": "European Space Agency / CNES",
+    "licence": "Attribution",
+    "source": "https://commons.wikimedia.org/wiki/File:Mayotte,_vue_par_Sentinel_2_(cropped).jpg"
+  }
+}

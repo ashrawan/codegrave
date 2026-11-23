@@ -1,0 +1,52 @@
+{
+  "id": "football-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Football War",
+      "from": "1969"
+    }
+  ],
+  "summary": "The hundred-hour war with Honduras in 1969.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q223085",
+  "events": [
+    {
+      "type": "born",
+      "date": "1969-07-14",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1969-07-18",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "el-salvador"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Football War (Q223085)",
+      "url": "https://www.wikidata.org/wiki/Q223085",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Football War",
+      "url": "https://en.wikipedia.org/wiki/Football_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

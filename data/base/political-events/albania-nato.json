@@ -1,0 +1,47 @@
+{
+  "id": "albania-nato",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Albania joins NATO",
+      "from": "2009"
+    }
+  ],
+  "summary": "Albania joined NATO in 2009.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q4709246",
+  "events": [
+    {
+      "type": "born",
+      "date": "2009-04-01",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "albania"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Albania joins NATO (Q4709246)",
+      "url": "https://www.wikidata.org/wiki/Q4709246",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Albania–NATO relations",
+      "url": "https://en.wikipedia.org/wiki/Albania–NATO_relations",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

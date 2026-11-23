@@ -1,0 +1,59 @@
+{
+  "id": "saint-nino",
+  "category": "religious-figures",
+  "names": [
+    {
+      "name": "Saint Nino",
+      "from": "0296"
+    }
+  ],
+  "summary": "The woman who brought Christianity to Georgia around 337.",
+  "labels": [
+    "religion"
+  ],
+  "wikidata": "Q236779",
+  "events": [
+    {
+      "type": "born",
+      "date": "0296",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "0335-01-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "georgia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Saint Nino (Q236779)",
+      "url": "https://www.wikidata.org/wiki/Q236779",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Saint Nino",
+      "url": "https://en.wikipedia.org/wiki/Saint_Nino",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/St._Nino_Icon1.jpg/500px-St._Nino_Icon1.jpg",
+    "alt": "Saint Nino",
+    "credit": "Ackerman200",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:St._Nino_Icon1.jpg"
+  }
+}

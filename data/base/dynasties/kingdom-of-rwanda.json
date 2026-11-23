@@ -1,0 +1,52 @@
+{
+  "id": "kingdom-of-rwanda",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Kingdom of Rwanda",
+      "from": "1350"
+    }
+  ],
+  "summary": "The kingdom ruled by the mwami until 1961.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q889884",
+  "events": [
+    {
+      "type": "born",
+      "date": "1350",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1961",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "rwanda"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kingdom of Rwanda (Q889884)",
+      "url": "https://www.wikidata.org/wiki/Q889884",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kingdom of Rwanda",
+      "url": "https://en.wikipedia.org/wiki/Kingdom_of_Rwanda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

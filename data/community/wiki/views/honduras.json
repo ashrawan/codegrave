@@ -1,0 +1,63 @@
+{
+  "id": "honduras",
+  "name": "Honduras",
+  "description": "Honduras from the Maya city of Copán to Spanish rule, independence, the banana republic, the coup of 2009 and today.",
+  "category": "places",
+  "tags": [
+    "honduras",
+    "tegucigalpa",
+    "central america",
+    "copan",
+    "maya"
+  ],
+  "entries": [
+    "copan",
+    "lempira",
+    "tegucigalpa",
+    "francisco-morazan",
+    "honduras",
+    "united-fruit-company",
+    "xiomara-castro",
+    "juan-orlando-hernandez",
+    "football-war",
+    "hurricane-mitch",
+    "2009-honduran-coup-detat"
+  ],
+  "checkpoints": [
+    {
+      "id": "cop-n",
+      "name": "Copán",
+      "from": 426,
+      "to": 1501,
+      "note": "The Maya kings of Copán ruled from 426 until the city faded around 900."
+    },
+    {
+      "id": "spanish-rule",
+      "name": "Spanish rule",
+      "from": 1502,
+      "to": 1820,
+      "note": "Columbus reached the coast in 1502. Lempira fought the conquest, and silver mines grew up round Tegucigalpa."
+    },
+    {
+      "id": "republic",
+      "name": "Republic",
+      "from": 1821,
+      "to": 2026,
+      "note": "Independence came in 1821. Banana companies ruled the north. Hurricane Mitch struck in 1998, and a coup removed the president in 2009."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Honduras_%281949%E2%80%932022%2C_2026%E2%80%93present%29.svg/330px-Flag_of_Honduras_%281949%E2%80%932022%2C_2026%E2%80%93present%29.svg.png",
+    "alt": "Flag of Honduras",
+    "credit": "Kes47",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Honduras_(1949%E2%80%932022,_2026%E2%80%93present).svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/Honduras_National_Anthem.ogg/Honduras_National_Anthem.ogg.mp3",
+    "title": "National Anthem of Honduras",
+    "credit": "Augusto Coello / Carlos Hartling / United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Honduras_National_Anthem.ogg"
+  }
+}

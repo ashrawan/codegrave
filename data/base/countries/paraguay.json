@@ -1,0 +1,44 @@
+{
+  "id": "paraguay",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Paraguay",
+      "from": "1811"
+    }
+  ],
+  "summary": "A landlocked country in the middle of South America, independent from Spain since 1811, where most people speak Guaraní.",
+  "wikidata": "Q733",
+  "events": [
+    {
+      "type": "born",
+      "date": "1811",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paraguay (Q733)",
+      "url": "https://www.wikidata.org/wiki/Q733",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paraguay",
+      "url": "https://en.wikipedia.org/wiki/Paraguay",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

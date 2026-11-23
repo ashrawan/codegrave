@@ -1,0 +1,52 @@
+{
+  "id": "northern-rhodesia",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Northern Rhodesia",
+      "from": "1924"
+    }
+  ],
+  "summary": "The British protectorate of 1911 to 1964.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q953903",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1964-10-24",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Northern Rhodesia (Q953903)",
+      "url": "https://www.wikidata.org/wiki/Q953903",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Northern Rhodesia",
+      "url": "https://en.wikipedia.org/wiki/Northern_Rhodesia",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

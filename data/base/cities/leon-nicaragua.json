@@ -1,0 +1,51 @@
+{
+  "id": "leon-nicaragua",
+  "category": "cities",
+  "names": [
+    {
+      "name": "León, Nicaragua",
+      "from": "1524"
+    }
+  ],
+  "summary": "The old colonial capital, founded in 1524.",
+  "wikidata": "Q208151",
+  "events": [
+    {
+      "type": "born",
+      "date": "1524",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "nicaragua"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: León, Nicaragua (Q208151)",
+      "url": "https://www.wikidata.org/wiki/Q208151",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: León, Nicaragua",
+      "url": "https://en.wikipedia.org/wiki/León,_Nicaragua",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Leon_Cathedral_2018.jpg/500px-Leon_Cathedral_2018.jpg",
+    "alt": "León, Nicaragua",
+    "credit": "Byralaal",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Leon_Cathedral_2018.jpg"
+  }
+}

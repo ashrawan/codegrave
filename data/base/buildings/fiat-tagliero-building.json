@@ -1,0 +1,54 @@
+{
+  "id": "fiat-tagliero-building",
+  "category": "buildings",
+  "names": [
+    {
+      "name": "Fiat Tagliero Building",
+      "from": "1938"
+    }
+  ],
+  "summary": "A filling station of 1938 shaped like an aeroplane.",
+  "labels": [
+    "architecture"
+  ],
+  "wikidata": "Q1410651",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "eritrea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Fiat Tagliero Building (Q1410651)",
+      "url": "https://www.wikidata.org/wiki/Q1410651",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Fiat Tagliero Building",
+      "url": "https://en.wikipedia.org/wiki/Fiat_Tagliero_Building",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Fiat_tagliero%2C_08.JPG/500px-Fiat_tagliero%2C_08.JPG",
+    "alt": "Fiat Tagliero Building",
+    "credit": "sailko",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Fiat_tagliero,_08.JPG"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "ebers-papyrus",
+  "category": "books",
+  "names": [
+    {
+      "name": "Ebers Papyrus",
+      "from": "-1550"
+    }
+  ],
+  "summary": "An Egyptian medical scroll of hundreds of remedies and spells, one of the oldest medical texts that survive.",
+  "labels": [
+    "literature"
+  ],
+  "wikidata": "Q310301",
+  "events": [
+    {
+      "type": "born",
+      "date": "-1550",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Ebers Papyrus (Q310301)",
+      "url": "https://www.wikidata.org/wiki/Q310301",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ebers Papyrus",
+      "url": "https://en.wikipedia.org/wiki/Ebers_Papyrus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Ebers7766.jpg",
+    "alt": "Ebers Papyrus",
+    "credit": "Wikimedia Commons contributors",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ebers7766.jpg"
+  }
+}

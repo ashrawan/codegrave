@@ -1,0 +1,51 @@
+{
+  "id": "paramaribo",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Paramaribo",
+      "from": "1613"
+    }
+  ],
+  "summary": "The capital, whose Dutch wooden centre is a World Heritage Site.",
+  "wikidata": "Q3001",
+  "events": [
+    {
+      "type": "born",
+      "date": "1613",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "suriname"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Paramaribo (Q3001)",
+      "url": "https://www.wikidata.org/wiki/Q3001",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Paramaribo",
+      "url": "https://en.wikipedia.org/wiki/Paramaribo",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Waterkant_Paramaribo_with_the_Unesco_Heritage_Buildings.jpg/500px-Waterkant_Paramaribo_with_the_Unesco_Heritage_Buildings.jpg",
+    "alt": "Paramaribo",
+    "credit": "Rafaeljantz",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Waterkant_Paramaribo_with_the_Unesco_Heritage_Buildings.jpg"
+  }
+}

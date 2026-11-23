@@ -1,0 +1,51 @@
+{
+  "id": "trinidad-and-tobago",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Trinidad and Tobago",
+      "from": "1962"
+    }
+  ],
+  "summary": "An island country at the south of the Caribbean near Venezuela, independent from Britain since 1962.",
+  "wikidata": "Q754",
+  "events": [
+    {
+      "type": "born",
+      "date": "1962-08-31",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Trinidad and Tobago (Q754)",
+      "url": "https://www.wikidata.org/wiki/Q754",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Trinidad and Tobago",
+      "url": "https://en.wikipedia.org/wiki/Trinidad_and_Tobago",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Pigeon_Point_beach.jpg/500px-Pigeon_Point_beach.jpg",
+    "alt": "Trinidad and Tobago",
+    "credit": "Kp93",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Pigeon_Point_beach.jpg"
+  }
+}

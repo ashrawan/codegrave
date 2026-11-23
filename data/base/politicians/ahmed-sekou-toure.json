@@ -1,0 +1,59 @@
+{
+  "id": "ahmed-sekou-toure",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Ahmed Sékou Touré",
+      "from": "1922"
+    }
+  ],
+  "summary": "Independence leader who said no to France in 1958 and ruled until 1984.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q155402",
+  "events": [
+    {
+      "type": "born",
+      "date": "1922-01-09",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1984-03-26",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "guinea"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Ahmed Sékou Touré (Q155402)",
+      "url": "https://www.wikidata.org/wiki/Q155402",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Ahmed Sékou Touré",
+      "url": "https://en.wikipedia.org/wiki/Ahmed_Sékou_Touré",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Ahmed_Seko%C3%BA_in_1962_at_White_House_cropped.jpg/500px-Ahmed_Seko%C3%BA_in_1962_at_White_House_cropped.jpg",
+    "alt": "Ahmed Sékou Touré",
+    "credit": "Robert Knudsen. White House Photographs. John F. Kennedy Presidential Library and Museum, Boston",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Ahmed_Seko%C3%BA_in_1962_at_White_House_cropped.jpg"
+  }
+}

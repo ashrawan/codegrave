@@ -1,0 +1,52 @@
+{
+  "id": "second-libyan-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Libyan civil war",
+      "from": "2014"
+    }
+  ],
+  "summary": "The war between rival governments in the east and west.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q16911838",
+  "events": [
+    {
+      "type": "born",
+      "date": "2014-05-16",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2020-10-23",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "libya"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Libyan civil war (Q16911838)",
+      "url": "https://www.wikidata.org/wiki/Q16911838",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Libyan civil war (2014–2020)",
+      "url": "https://en.wikipedia.org/wiki/Libyan_civil_war_(2014–2020)",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

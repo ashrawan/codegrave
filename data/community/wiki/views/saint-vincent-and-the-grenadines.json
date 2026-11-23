@@ -1,0 +1,53 @@
+{
+  "id": "saint-vincent-and-the-grenadines",
+  "name": "Saint Vincent and the Grenadines",
+  "description": "Saint Vincent and the Grenadines from the Garifuna to British rule, independence in 1979 and the volcano La Soufrière.",
+  "category": "places",
+  "tags": [
+    "saint vincent",
+    "grenadines",
+    "kingstown",
+    "caribbean",
+    "garifuna"
+  ],
+  "entries": [
+    "kingstown",
+    "second-carib-war",
+    "milton-cato",
+    "james-fitz-allen-mitchell",
+    "ralph-gonsalves",
+    "kevin-lyttle",
+    "saint-vincent-and-the-grenadines",
+    "hurricane-beryl"
+  ],
+  "checkpoints": [
+    {
+      "id": "garifuna-and-british",
+      "name": "Garifuna and British",
+      "from": 1719,
+      "to": 1978,
+      "note": "The Garifuna held the island long. Britain fought them and deported them in 1797."
+    },
+    {
+      "id": "independent",
+      "name": "Independent",
+      "from": 1979,
+      "to": 2026,
+      "note": "Independence came in 1979, months after La Soufrière erupted. It erupted again in 2021."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Flag_of_Saint_Vincent_and_the_Grenadines.svg/330px-Flag_of_Saint_Vincent_and_the_Grenadines.svg.png",
+    "alt": "Flag of Saint Vincent and the Grenadines",
+    "credit": "No machine-readable author provided. SKopp assumed (based on copyright claims).",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Saint_Vincent_and_the_Grenadines.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b3/National_anthem_of_Saint_Vincent_and_the_Grenadines%2C_performed_by_the_United_States_Navy_Band.oga/National_anthem_of_Saint_Vincent_and_the_Grenadines%2C_performed_by_the_United_States_Navy_Band.oga.mp3",
+    "title": "Saint Vincent, Land so Beautiful",
+    "credit": "https://www.navyband.navy.mil/national_anthems.html https://web.archive.org/web/20191116054623if_/https://www.navyband.n",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:National_anthem_of_Saint_Vincent_and_the_Grenadines,_performed_by_the_United_States_Navy_Band.oga"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "mali-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Mali War",
+      "from": "2012"
+    }
+  ],
+  "summary": "The war that began in 2012 when rebels and jihadists took the north.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q2946372",
+  "events": [
+    {
+      "type": "born",
+      "date": "2012-01-16",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "mali"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mali War (Q2946372)",
+      "url": "https://www.wikidata.org/wiki/Q2946372",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mali War",
+      "url": "https://en.wikipedia.org/wiki/Mali_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

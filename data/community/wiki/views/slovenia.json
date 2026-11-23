@@ -1,0 +1,63 @@
+{
+  "id": "slovenia",
+  "name": "Slovenia",
+  "description": "Slovenia from Carantania to the Habsburg lands, Yugoslavia, the ten-day war of 1991, the EU and the euro.",
+  "category": "places",
+  "tags": [
+    "slovenia",
+    "ljubljana",
+    "alps",
+    "europe"
+  ],
+  "entries": [
+    "ljubljana-marshes-wheel",
+    "carantania",
+    "primoz-trubar",
+    "france-preseren",
+    "slavoj-zizek",
+    "natasa-pirc-musar",
+    "yugoslav-wars",
+    "slovenia",
+    "ten-day-war",
+    "tadej-pogacar",
+    "luka-doncic",
+    "slovakia-joins-eu"
+  ],
+  "checkpoints": [
+    {
+      "id": "carantania-and-the-habsburgs",
+      "name": "Carantania and the Habsburgs",
+      "from": 600,
+      "to": 1917,
+      "note": "Slavs founded Carantania. The land then was part of the Habsburg lands for centuries."
+    },
+    {
+      "id": "yugoslavia",
+      "name": "Yugoslavia",
+      "from": 1918,
+      "to": 1990,
+      "note": "Slovenia joined Yugoslavia in 1918."
+    },
+    {
+      "id": "independent-slovenia",
+      "name": "Independent Slovenia",
+      "from": 1991,
+      "to": 2026,
+      "note": "Slovenia broke away in 1991 after a ten-day war, joined the EU and NATO in 2004 and took the euro in 2007."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/330px-Flag_of_Slovenia.svg.png",
+    "alt": "Flag of Slovenia",
+    "credit": "Original: Marko Pogačnik Vector: Achim1999",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Slovenia.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/3/30/Slovenia%27s_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga/Slovenia%27s_national_anthem%2C_performed_by_the_United_States_Navy_Band.oga.mp3",
+    "title": "Zdravljica",
+    "credit": "https://web.archive.org/web/20030504023804/http://www.navyband.navy.mil/anthems/national_anthems.htm https://web.archive",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Slovenia%27s_national_anthem,_performed_by_the_United_States_Navy_Band.oga"
+  }
+}

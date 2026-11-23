@@ -1,0 +1,59 @@
+{
+  "id": "moshoeshoe-ii",
+  "category": "rulers",
+  "names": [
+    {
+      "name": "Moshoeshoe II",
+      "from": "1938"
+    }
+  ],
+  "summary": "King at independence, twice sent into exile.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q544951",
+  "events": [
+    {
+      "type": "born",
+      "date": "1938-05-02",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1996-01-15",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "lesotho"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Moshoeshoe II (Q544951)",
+      "url": "https://www.wikidata.org/wiki/Q544951",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Moshoeshoe II",
+      "url": "https://en.wikipedia.org/wiki/Moshoeshoe_II",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Moshoeshoe_II_van_Lesotho.jpg/500px-Moshoeshoe_II_van_Lesotho.jpg",
+    "alt": "Moshoeshoe II",
+    "credit": "Joost Evers / Anefo",
+    "licence": "CC BY-SA 3.0 nl",
+    "source": "https://commons.wikimedia.org/wiki/File:Moshoeshoe_II_van_Lesotho.jpg"
+  }
+}

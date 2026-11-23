@@ -1,0 +1,51 @@
+{
+  "id": "agadez",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Agadez",
+      "from": "1430"
+    }
+  ],
+  "summary": "A desert town of the Tuareg with a great mud-brick minaret.",
+  "wikidata": "Q320049",
+  "events": [
+    {
+      "type": "born",
+      "date": "1430",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "niger"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Agadez (Q320049)",
+      "url": "https://www.wikidata.org/wiki/Q320049",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Agadez",
+      "url": "https://en.wikipedia.org/wiki/Agadez",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/1997_277-16A_Agadez_hotel.jpg/500px-1997_277-16A_Agadez_hotel.jpg",
+    "alt": "Agadez",
+    "credit": "Dan Lundberg",
+    "licence": "CC BY-SA 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:1997_277-16A_Agadez_hotel.jpg"
+  }
+}

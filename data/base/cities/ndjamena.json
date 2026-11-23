@@ -1,0 +1,51 @@
+{
+  "id": "ndjamena",
+  "category": "cities",
+  "names": [
+    {
+      "name": "N'Djamena",
+      "from": "1900"
+    }
+  ],
+  "summary": "The capital, founded as Fort-Lamy in 1900.",
+  "wikidata": "Q3659",
+  "events": [
+    {
+      "type": "born",
+      "date": "1900",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "chad"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: N'Djamena (Q3659)",
+      "url": "https://www.wikidata.org/wiki/Q3659",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: N'Djamena",
+      "url": "https://en.wikipedia.org/wiki/N'Djamena",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Place_de_la_nation4_%28Tchad%29.jpg/500px-Place_de_la_nation4_%28Tchad%29.jpg",
+    "alt": "N'Djamena",
+    "credit": "Yacoub",
+    "licence": "CC BY-SA 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Place_de_la_nation4_(Tchad).jpg"
+  }
+}

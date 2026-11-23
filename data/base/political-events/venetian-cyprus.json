@@ -1,0 +1,52 @@
+{
+  "id": "venetian-cyprus",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "Venetian Cyprus",
+      "from": "1489"
+    }
+  ],
+  "summary": "The Venetian rule of 1489 to 1571.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q18639863",
+  "events": [
+    {
+      "type": "born",
+      "date": "1489",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1571",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "cyprus"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Venetian Cyprus (Q18639863)",
+      "url": "https://www.wikidata.org/wiki/Q18639863",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Venetian Cyprus",
+      "url": "https://en.wikipedia.org/wiki/Venetian_Cyprus",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

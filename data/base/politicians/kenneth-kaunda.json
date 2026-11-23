@@ -1,0 +1,59 @@
+{
+  "id": "kenneth-kaunda",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Kenneth Kaunda",
+      "from": "1924"
+    }
+  ],
+  "summary": "The first president, from 1964 to 1991.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q105480",
+  "events": [
+    {
+      "type": "born",
+      "date": "1924-04-28",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "2021-06-17",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Kenneth Kaunda (Q105480)",
+      "url": "https://www.wikidata.org/wiki/Q105480",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Kenneth Kaunda",
+      "url": "https://en.wikipedia.org/wiki/Kenneth_Kaunda",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Kenneth_David_Kaunda.jpg/500px-Kenneth_David_Kaunda.jpg",
+    "alt": "Kenneth Kaunda",
+    "credit": "Unknown photographer",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Kenneth_David_Kaunda.jpg"
+  }
+}

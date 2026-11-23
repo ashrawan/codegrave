@@ -1,0 +1,45 @@
+{
+  "id": "chemotherapy",
+  "category": "medicine",
+  "names": [
+    {
+      "name": "Chemotherapy",
+      "from": "1942"
+    }
+  ],
+  "summary": "Treating cancer with drugs that kill dividing cells, begun in the 1940s with nitrogen mustard.",
+  "wikidata": "Q974135",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942",
+      "precision": "circa"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 4,
+    "standard": 0,
+    "editor": 0
+  },
+  "sources": [
+    {
+      "title": "Wikidata: Chemotherapy (Q974135)",
+      "url": "https://www.wikidata.org/wiki/Q974135",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Chemotherapy",
+      "url": "https://en.wikipedia.org/wiki/Chemotherapy",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Chemotherapy_vials_%284%29.jpg/500px-Chemotherapy_vials_%284%29.jpg",
+    "alt": "Chemotherapy",
+    "credit": "Bill Branson (Photographer)",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Chemotherapy_vials_(4).jpg"
+  }
+}

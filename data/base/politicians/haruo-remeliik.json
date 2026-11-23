@@ -1,0 +1,59 @@
+{
+  "id": "haruo-remeliik",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Haruo Remeliik",
+      "from": "1933"
+    }
+  ],
+  "summary": "The first president, killed in 1985.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q878351",
+  "events": [
+    {
+      "type": "born",
+      "date": "1933-06-01",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1985-06-30",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "palau"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Haruo Remeliik (Q878351)",
+      "url": "https://www.wikidata.org/wiki/Q878351",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Haruo Remeliik",
+      "url": "https://en.wikipedia.org/wiki/Haruo_Remeliik",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Haruo_Ignacio_Remeliik.jpg",
+    "alt": "Haruo Remeliik",
+    "credit": "TTPI(Trust Territory of the Pacific Islands) Headquarters",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Haruo_Ignacio_Remeliik.jpg"
+  }
+}

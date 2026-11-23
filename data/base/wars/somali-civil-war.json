@@ -1,0 +1,47 @@
+{
+  "id": "somali-civil-war",
+  "category": "wars",
+  "names": [
+    {
+      "name": "Somali Civil War",
+      "from": "1991"
+    }
+  ],
+  "summary": "The civil war that began in 1991.",
+  "labels": [
+    "war"
+  ],
+  "wikidata": "Q243620",
+  "events": [
+    {
+      "type": "born",
+      "date": "1991-01-26",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "somalia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Somali Civil War (Q243620)",
+      "url": "https://www.wikidata.org/wiki/Q243620",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Somali Civil War",
+      "url": "https://en.wikipedia.org/wiki/Somali_Civil_War",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

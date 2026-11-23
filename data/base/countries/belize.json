@@ -1,0 +1,51 @@
+{
+  "id": "belize",
+  "category": "countries",
+  "names": [
+    {
+      "name": "Belize",
+      "from": "1981"
+    }
+  ],
+  "summary": "A country on the Caribbean coast of Central America, once British Honduras, independent since 1981.",
+  "wikidata": "Q242",
+  "events": [
+    {
+      "type": "born",
+      "date": "1981-09-21",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "member_of",
+      "to": "united-nations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Belize (Q242)",
+      "url": "https://www.wikidata.org/wiki/Q242",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Belize",
+      "url": "https://en.wikipedia.org/wiki/Belize",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Belize_Topography.png/500px-Belize_Topography.png",
+    "alt": "Belize",
+    "credit": "Sadalmelik",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Belize_Topography.png"
+  }
+}

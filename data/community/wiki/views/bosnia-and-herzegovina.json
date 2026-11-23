@@ -1,0 +1,76 @@
+{
+  "id": "bosnia-and-herzegovina",
+  "name": "Bosnia and Herzegovina",
+  "description": "Bosnia and Herzegovina from its medieval kingdom to Ottoman and Habsburg rule, Sarajevo 1914, Yugoslavia, the war of the 1990s and today.",
+  "category": "places",
+  "tags": [
+    "bosnia",
+    "herzegovina",
+    "sarajevo",
+    "mostar",
+    "balkans"
+  ],
+  "entries": [
+    "tvrtko-i",
+    "kingdom-of-bosnia",
+    "sarajevo",
+    "gazi-husrev-beg-mosque",
+    "stari-most",
+    "mehmed-pasa-sokolovic-bridge",
+    "ivo-andric",
+    "assassination-of-franz-ferdinand",
+    "1984-winter-olympics",
+    "edin-dzeko",
+    "yugoslav-wars",
+    "bosnia-and-herzegovina",
+    "siege-of-sarajevo",
+    "bosnian-war",
+    "srebrenica-massacre",
+    "dayton-agreement",
+    "no-mans-land-2001"
+  ],
+  "checkpoints": [
+    {
+      "id": "the-medieval-kingdom",
+      "name": "The medieval kingdom",
+      "from": 1154,
+      "to": 1462,
+      "note": "Bosnian bans and then kings ruled; Tvrtko was crowned in 1377."
+    },
+    {
+      "id": "ottoman-bosnia",
+      "name": "Ottoman Bosnia",
+      "from": 1463,
+      "to": 1877,
+      "note": "The Ottomans took Bosnia in 1463. Sarajevo and Mostar grew as Ottoman towns, and many Bosnians became Muslim."
+    },
+    {
+      "id": "habsburgs-and-yugoslavia",
+      "name": "Habsburgs and Yugoslavia",
+      "from": 1878,
+      "to": 1991,
+      "note": "Austria-Hungary took Bosnia in 1878, and the shots in Sarajevo in 1914 started the First World War. Bosnia then became part of Yugoslavia."
+    },
+    {
+      "id": "war-and-peace",
+      "name": "War and peace",
+      "from": 1992,
+      "to": 2026,
+      "note": "Bosnia declared independence in 1992. Three and a half years of war followed, and the Dayton Agreement of 1995 made the state of today."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/330px-Flag_of_Bosnia_and_Herzegovina.svg.png",
+    "alt": "Flag of Bosnia and Herzegovina",
+    "credit": "Mladen Kolobarić",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_Bosnia_and_Herzegovina.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/2/20/Jedna_si_Jedina.oga/Jedna_si_Jedina.oga.mp3",
+    "title": "Jedna si jedina",
+    "credit": "nationalanthem.info",
+    "licence": "CC BY 4.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Jedna_si_Jedina.oga"
+  }
+}

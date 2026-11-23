@@ -1,0 +1,53 @@
+{
+  "id": "sao-tome-and-principe",
+  "name": "São Tomé and Príncipe",
+  "description": "São Tomé and Príncipe from empty islands to Portuguese sugar, slavery and cocoa, the massacre of 1953, independence in 1975 and democracy.",
+  "category": "places",
+  "tags": [
+    "sao tome",
+    "principe",
+    "africa",
+    "cocoa",
+    "gulf of guinea"
+  ],
+  "entries": [
+    "sao-tome",
+    "sao-tome-eclipse-1919",
+    "miguel-trovoada",
+    "manuel-pinto-da-costa",
+    "fradique-de-menezes",
+    "batepa-massacre",
+    "carlos-vila-nova",
+    "sao-tome-and-principe"
+  ],
+  "checkpoints": [
+    {
+      "id": "sugar-and-cocoa",
+      "name": "Sugar and cocoa",
+      "from": 1470,
+      "to": 1974,
+      "note": "Portugal found the empty islands around 1470 and built sugar plantations; later cocoa made them the world's leading grower in 1908."
+    },
+    {
+      "id": "independent",
+      "name": "Independent",
+      "from": 1975,
+      "to": 2026,
+      "note": "Independence came in 1975, and free elections in 1991."
+    }
+  ],
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg/330px-Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg.png",
+    "alt": "Flag of São Tomé and Príncipe",
+    "credit": "See File history below for details.",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Flag_of_S%C3%A3o_Tom%C3%A9_and_Pr%C3%ADncipe.svg"
+  },
+  "audio": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a5/Independ%C3%AAncia_total_%28instrumental%29.ogg/Independ%C3%AAncia_total_%28instrumental%29.ogg.mp3",
+    "title": "Independência total",
+    "credit": "United States Navy Band",
+    "licence": "Public domain",
+    "source": "https://commons.wikimedia.org/wiki/File:Independ%C3%AAncia_total_(instrumental).ogg"
+  }
+}

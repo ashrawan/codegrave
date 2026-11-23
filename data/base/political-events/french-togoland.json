@@ -1,0 +1,52 @@
+{
+  "id": "french-togoland",
+  "category": "political-events",
+  "names": [
+    {
+      "name": "French Togoland",
+      "from": "1916"
+    }
+  ],
+  "summary": "French rule of 1916 to 1960.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q797214",
+  "events": [
+    {
+      "type": "born",
+      "date": "1916-12-27",
+      "precision": "day"
+    },
+    {
+      "type": "ended",
+      "date": "1960-04-27",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "togo"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: French Togoland (Q797214)",
+      "url": "https://www.wikidata.org/wiki/Q797214",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: French Togoland",
+      "url": "https://en.wikipedia.org/wiki/French_Togoland",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

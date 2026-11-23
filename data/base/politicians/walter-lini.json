@@ -1,0 +1,59 @@
+{
+  "id": "walter-lini",
+  "category": "politicians",
+  "names": [
+    {
+      "name": "Walter Lini",
+      "from": "1942"
+    }
+  ],
+  "summary": "Priest and the first prime minister.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q724686",
+  "events": [
+    {
+      "type": "born",
+      "date": "1942",
+      "precision": "year"
+    },
+    {
+      "type": "ended",
+      "date": "1999-02-21",
+      "precision": "day"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "vanuatu"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Walter Lini (Q724686)",
+      "url": "https://www.wikidata.org/wiki/Q724686",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Walter Lini",
+      "url": "https://en.wikipedia.org/wiki/Walter_Lini",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Walter_Lini_profile_1983_%28cropped%29.jpg",
+    "alt": "Walter Lini",
+    "credit": "Archives New Zealand from New Zealand",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Walter_Lini_profile_1983_(cropped).jpg"
+  }
+}

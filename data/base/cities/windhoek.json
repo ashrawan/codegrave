@@ -1,0 +1,51 @@
+{
+  "id": "windhoek",
+  "category": "cities",
+  "names": [
+    {
+      "name": "Windhoek",
+      "from": "1890"
+    }
+  ],
+  "summary": "The capital.",
+  "wikidata": "Q3935",
+  "events": [
+    {
+      "type": "born",
+      "date": "1890",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 5,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "namibia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Windhoek (Q3935)",
+      "url": "https://www.wikidata.org/wiki/Q3935",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Windhoek",
+      "url": "https://en.wikipedia.org/wiki/Windhoek",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Windhoek-Skyline.jpg/500px-Windhoek-Skyline.jpg",
+    "alt": "Windhoek",
+    "credit": "Bries",
+    "licence": "CC BY-SA 2.5",
+    "source": "https://commons.wikimedia.org/wiki/File:Windhoek-Skyline.jpg"
+  }
+}

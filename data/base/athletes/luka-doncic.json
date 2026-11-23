@@ -1,0 +1,54 @@
+{
+  "id": "luka-doncic",
+  "category": "athletes",
+  "names": [
+    {
+      "name": "Luka Dončić",
+      "from": "1999"
+    }
+  ],
+  "summary": "Basketball star.",
+  "labels": [
+    "sport"
+  ],
+  "wikidata": "Q19844712",
+  "events": [
+    {
+      "type": "born",
+      "date": "1999-02-28",
+      "precision": "day"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "slovenia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Luka Dončić (Q19844712)",
+      "url": "https://www.wikidata.org/wiki/Q19844712",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Luka Dončić",
+      "url": "https://en.wikipedia.org/wiki/Luka_Dončić",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Luka_Doncic_%2851914951721%29_%28cropped1%29.jpg/500px-Luka_Doncic_%2851914951721%29_%28cropped1%29.jpg",
+    "alt": "Luka Dončić",
+    "credit": "Erik Drost",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Luka_Doncic_(51914951721)_(cropped1).jpg"
+  }
+}

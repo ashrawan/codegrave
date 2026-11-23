@@ -1,0 +1,52 @@
+{
+  "id": "mossi-kingdoms",
+  "category": "dynasties",
+  "names": [
+    {
+      "name": "Mossi Kingdoms",
+      "from": "1100"
+    }
+  ],
+  "summary": "The kingdoms of the Mossi people, which held out against Mali and Songhai for centuries.",
+  "labels": [
+    "politics"
+  ],
+  "wikidata": "Q862522",
+  "events": [
+    {
+      "type": "born",
+      "date": "1100",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "1896",
+      "precision": "year"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "burkina-faso"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Mossi Kingdoms (Q862522)",
+      "url": "https://www.wikidata.org/wiki/Q862522",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Mossi Kingdoms",
+      "url": "https://en.wikipedia.org/wiki/Mossi_Kingdoms",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false
+}

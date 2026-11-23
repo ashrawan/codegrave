@@ -1,0 +1,51 @@
+{
+  "id": "tazara-railway",
+  "category": "infrastructure",
+  "names": [
+    {
+      "name": "TAZARA Railway",
+      "from": "1976"
+    }
+  ],
+  "summary": "The railway to Dar es Salaam built by China in the 1970s.",
+  "wikidata": "Q1432750",
+  "events": [
+    {
+      "type": "born",
+      "date": "1976",
+      "precision": "year"
+    }
+  ],
+  "status": "alive",
+  "signals": {
+    "adoption": 2,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "zambia"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: TAZARA Railway (Q1432750)",
+      "url": "https://www.wikidata.org/wiki/Q1432750",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: TAZARA Railway",
+      "url": "https://en.wikipedia.org/wiki/TAZARA_Railway",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Tazara_crossing_bridge.jpg/500px-Tazara_crossing_bridge.jpg",
+    "alt": "TAZARA Railway",
+    "credit": "Richard Stupart",
+    "licence": "CC BY 2.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Tazara_crossing_bridge.jpg"
+  }
+}

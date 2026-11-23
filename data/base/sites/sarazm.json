@@ -1,0 +1,56 @@
+{
+  "id": "sarazm",
+  "category": "sites",
+  "names": [
+    {
+      "name": "Sarazm",
+      "from": "-3500"
+    }
+  ],
+  "summary": "One of the oldest towns of Central Asia.",
+  "wikidata": "Q422929",
+  "events": [
+    {
+      "type": "born",
+      "date": "-3500",
+      "precision": "circa"
+    },
+    {
+      "type": "ended",
+      "date": "-2000",
+      "precision": "circa"
+    }
+  ],
+  "status": "dead",
+  "signals": {
+    "adoption": 3,
+    "standard": 0,
+    "editor": 0
+  },
+  "links": [
+    {
+      "type": "in",
+      "to": "tajikistan"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikidata: Sarazm (Q422929)",
+      "url": "https://www.wikidata.org/wiki/Q422929",
+      "kind": "secondary"
+    },
+    {
+      "title": "Wikipedia: Sarazm",
+      "url": "https://en.wikipedia.org/wiki/Sarazm",
+      "kind": "secondary"
+    }
+  ],
+  "verified": false,
+  "image": {
+    "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Sarazm%2Carea12-W.jpg/500px-Sarazm%2Carea12-W.jpg",
+    "alt": "Sarazm",
+    "credit": "Bertramz",
+    "licence": "CC BY-SA 3.0",
+    "source": "https://commons.wikimedia.org/wiki/File:Sarazm,area12-W.jpg"
+  }
+}
