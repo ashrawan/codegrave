@@ -464,7 +464,7 @@ function poster(vs, inks, paper, fs) {
     const endCol = ((k) => (k === -2 ? '#3a3631' : k < 0 ? BEFORE : TINTS[k % TINTS.length]))(runs.at(-1).k);
     h += '<div class="arrow" style="left:' + (S.w - S.side - 1) + 'mm;top:' + MID + 'mm;border-left-color:' + endCol + '"></div>';
     // Cards that share a year meet the band at one point, the middle of their own points, with the year
-    // written once; their lines bend to it in a short curve, so the order along the band holds (asked for, Nov 2026).
+    // written once on each side a line comes from; their lines bend to it in a short curve, so the order along the band holds (asked for, Nov 2026).
     const meet = items.map((it) => it.x), said = new Set(), CURVE = 5;
     for (let i = 0; i < items.length;) {
       let j = i; while (j + 1 < items.length && yearText(items[j + 1].e.y) === yearText(items[i].e.y)) j++;
@@ -485,9 +485,9 @@ function poster(vs, inks, paper, fs) {
         h += '<div class="stem" style="left:' + x + 'mm;top:' + s0 + 'mm;height:' + (s1 - s0) + 'mm;background:' + k + '"></div>';
       }
       if (bend) curves += '<path d="M' + x + ' ' + end + 'C' + x + ' ' + (end + (edge - end) * 0.6) + ' ' + px + ' ' + (end + (edge - end) * 0.4) + ' ' + px + ' ' + edge + '" stroke="' + k + '"/>';
-      const sideKey = px.toFixed(2) + (up ? 'u' : 'd'), yrKey = px.toFixed(2) + yearText(e.y);
-      if (!said.has(sideKey)) { said.add(sideKey); h += '<div class="tick" style="left:' + px + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div>'; }
-      if (!said.has(yrKey)) { said.add(yrKey); h += '<div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + px + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>'; }
+      // one ring and one year on each side of the band that a line comes from; the year stands clear of the curve
+      const sideKey = px.toFixed(2) + (up ? 'u' : 'd');
+      if (!said.has(sideKey)) { said.add(sideKey); h += '<div class="tick" style="left:' + px + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + (bend && x > px ? ' l' : '') + '" style="left:' + px + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>'; }
       h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
