@@ -591,23 +591,23 @@ function fit() {
 let fitWidth = 0;
 if (typeof window !== 'undefined') window.addEventListener('resize', () => { if (innerWidth !== fitWidth) { fitWidth = innerWidth; fit(); } });
 // A poster sheet's own "Download image" button: one sheet as a PNG (asked for, Nov 2026).
-// It stands under its sheet, outside it, and is never printed.
+// A small icon in the sheet's top right corner (asked for: no big text), never printed or drawn.
+const SHOT_ICON = '<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
 function addShots(paper) {
   const pages = [...doc.querySelectorAll('.pg')];
   pages.forEach((pg, i) => {
     const b = document.createElement('button');
-    b.type = 'button'; b.className = 'shot'; b.innerHTML = '<span>Download image</span>';
-    b.title = 'Download sheet ' + (i + 1) + ' as a picture (PNG)';
-    b.addEventListener('click', () => sheetImage(pg, i, pages.length, paper, b.firstChild));
-    pg.after(b);
+    b.type = 'button'; b.className = 'shot'; b.innerHTML = SHOT_ICON;
+    b.title = b.ariaLabel = 'Download sheet ' + (i + 1) + ' as an image (PNG)';
+    b.addEventListener('click', () => sheetImage(pg, i, pages.length, paper, b));
+    pg.appendChild(b);
   });
 }
 const notShot = (el) => el.classList?.contains('shot');
 // the PDF and the images are drawn at full size, whatever the zoom on screen
 const unzoom = (d) => { const e = d.getElementById('doc'); if (e) { e.style.transform = 'none'; e.style.width = ''; } };
 async function sheetImage(pg, i, n, paper, b) {
-  const was = b.textContent;
-  b.parentNode.disabled = true; b.textContent = 'Making…';
+  b.disabled = true; b.classList.add('busy');
   try {
     if (!window.html2canvas) await script(LIBS[0]);
     const P = POSTER_PAPERS[paper] || POSTER_PAPERS.a2;
@@ -616,11 +616,9 @@ async function sheetImage(pg, i, n, paper, b) {
     a.download = fileName(shaped.views.map((v) => v.name).concat(['poster', paper], n > 1 ? ['sheet ' + (i + 1)] : [])).replace(/\.pdf$/, '.png');
     a.href = c.toDataURL('image/png');
     document.body.appendChild(a); a.click(); a.remove();
-    b.textContent = was;
   } catch (err) {
-    b.textContent = 'Could not make it';
-    setTimeout(() => { b.textContent = was; }, 3000);
-  } finally { b.parentNode.disabled = false; }
+    b.title = 'The image could not be made (' + err.message + '). Try again.';
+  } finally { b.disabled = false; b.classList.remove('busy'); }
 }
 function lay(paper, fmt) {
   const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
