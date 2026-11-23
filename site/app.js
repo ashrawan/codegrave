@@ -6,7 +6,7 @@
    by scripts/build.mjs. Ranking is worked out by the build; dates are read
    with rank.js, file keys come from keys.js. */
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
-import { shardOf, fold, tokens, prefixOf } from './keys.js';
+import { shardOf, fold, tokens, prefixOf, addressOf, idOfAddress } from './keys.js';
 import { createWall } from './wall.js';
 import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
@@ -508,13 +508,13 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
   // The ids a link names. The address is the first view, like a repository on
   // GitHub: /wiki/the-universe (an editors' view), /<owner>/<id> (someone's
-  // view), /<id> (a classical view). Any others follow in "with".
+  // view), /classical/<id> (a classical view). Any others follow in "with".
   const okId = (s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..');
   function urlViews() {
     const q = new URLSearchParams(location.search);
     const path = decodeURIComponent(location.pathname).split('/').filter((s) => s && s !== 'index.html').join('/');
     const ids = [path, ...(q.get('with') || q.get('views') || '').split(',')].map((s) => s.trim());
-    return [...new Set(ids.filter(okId))];
+    return [...new Set(ids.filter(okId).map(idOfAddress))];
   }
   // Year range in a link: "1995-2001", "-500-1500" (500 BCE to 1500), "-66000000--1000".
   function readSpan(s) {
@@ -534,11 +534,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   function writeUrl() {
     const q = new URLSearchParams();
-    if (state.views.length > 1) q.set('with', state.views.slice(1).join(','));
+    if (state.views.length > 1) q.set('with', state.views.slice(1).map(addressOf).join(','));
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
-    history.replaceState(null, '', '/' + (state.views[0] || '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
+    history.replaceState(null, '', '/' + (state.views[0] ? addressOf(state.views[0]) : '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
   }
 
   // ---------------------------------------------------------------- what is drawn
@@ -2337,7 +2337,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html).
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
-      const q = 'views=' + state.views.join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
+      const q = 'views=' + state.views.map(addressOf).join(',') + '&c=' + state.views.map((id) => state.colors.get(id)).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
       window.open('print.html?' + q, '_blank', 'noopener');
     });
 

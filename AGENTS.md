@@ -20,7 +20,8 @@ The data has two layers:
   group publishes. A view is one subject under a plain name ("Ancient Egypt",
   "US Presidents", "Video Games"): a hand-picked list of entries, and
   chapters. The folder `wiki` belongs to the editors, so their
-  views live at `codegrave.com/wiki/<view>`.
+  views live at `codegrave.com/wiki/<view>`. Classical views live at
+  `codegrave.com/classical/<view>`; `wiki` and `classical` are reserved names.
 
 ## Commands
 

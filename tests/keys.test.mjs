@@ -16,3 +16,11 @@ test('search ignores case and accents', () => {
   assert.equal(prefixOf('curie'), 'cu');
   assert.equal(prefixOf('r'), 'r_');
 });
+
+test('a view address is owner/view, and classical/view for a classical view', async () => {
+  const { addressOf, idOfAddress } = await import('../site/keys.js');
+  assert.equal(addressOf('wiki/nepal'), 'wiki/nepal');
+  assert.equal(addressOf('languages'), 'classical/languages');
+  assert.equal(idOfAddress('classical/languages'), 'languages');
+  assert.equal(idOfAddress('wiki/nepal'), 'wiki/nepal');
+});

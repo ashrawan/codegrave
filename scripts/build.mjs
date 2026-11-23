@@ -68,7 +68,9 @@ function isBefore(a, b) {
 }
 const ID = /^[a-z0-9][a-z0-9-]*$/;
 const OWNER = /^[a-z0-9](?:[a-z0-9-]{0,37}[a-z0-9])?$/;   // a GitHub name, lower case
-const RESERVED = new Set(['data', 'media']);   // site/ folders: /<owner>/<id> is a view's address, so these cannot be owners
+// /<owner>/<id> is a view's address: classical/<id> is a classical view, data/ and media/ are the site's
+// own folders, so none of these can be an owner. wiki is the editors' own folder (keys.js RESERVED_OWNERS).
+const RESERVED = new Set(['classical', 'data', 'media']);
 const PRECISIONS = ['day', 'month', 'year', 'circa'];
 const STATUSES = ['alive', 'fading', 'dead'];
 const EVENT_TYPES = ['project_start', 'born', 'released', 'changed_hands', 'milestone', 'deprecated', 'ended', 'afterlife'];

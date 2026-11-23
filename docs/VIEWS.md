@@ -19,9 +19,10 @@ Every view has its own link, a path like a repository on GitHub. A
 community view's address is its owner and its id:
 `codegrave.com/wiki/space-exploration` for the editors' views,
 `codegrave.com/<github-name>/<id>` for anyone else's. A classical view's
-address is its id: `codegrave.com/rulers`. A link can name several: the
-first is the path and the others follow in `with`:
-`codegrave.com/people?with=wiki/the-space-race`. `o=forward` or
+address is `classical/` and its id: `codegrave.com/classical/rulers`.
+`wiki` and `classical` are reserved, so no one can take them as a name. A
+link can name several: the first is the path and the others follow in
+`with`: `codegrave.com/classical/people?with=wiki/the-space-race`. `o=forward` or
 `o=backward` gives the direction, `yr=` the year range and `c=` the colours. Each view on the
 timeline gets a lane of its own on the road. Picking a view in the panel
 shows it alone; the small plus at the end of its row, or a right click, puts

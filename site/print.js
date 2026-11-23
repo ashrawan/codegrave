@@ -123,7 +123,9 @@ export const inOrder = (es, newest) => es.slice().sort((a, b) => (newest ? b.t -
 // A span in reading order: "1957 – 1966", or "1966 – 1957" and "Today – 1957" when reversed.
 const rs = (a, b) => (rev ? (b == null ? 'Today' : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
 const ends = (first) => (rev ? ['Today', yearText(first)] : [yearText(first), 'Today']);
-const linkOf = (views) => 'https://codegrave.com/' + views[0].id + '?' + (views.length > 1 ? 'with=' + views.slice(1).map((v) => v.id).join(',') + '&' : '') + (yr ? 'yr=' + yr.join('-') + '&' : '') + 'o=' + (rev ? 'backward' : 'forward');
+// A view's address: <owner>/<view>, classical/<view> for a classical view (as addressOf() in keys.js).
+const addr = (id) => (id.includes('/') ? id : 'classical/' + id);
+const linkOf = (views) => 'https://codegrave.com/' + addr(views[0].id) + '?' + (views.length > 1 ? 'with=' + views.slice(1).map((v) => addr(v.id)).join(',') + '&' : '') + (yr ? 'yr=' + yr.join('-') + '&' : '') + 'o=' + (rev ? 'backward' : 'forward');
 const today = () => { const d = new Date(); return d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear(); };
 
 // ---------------------------------------------------------------- one view
@@ -596,7 +598,7 @@ async function useFont(key) {
 }
 async function start() {
   const q = new URLSearchParams(location.search);
-  const ids = (q.get('views') || '').split(',').map((s) => s.trim()).filter((s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..'));
+  const ids = (q.get('views') || '').split(',').map((s) => s.trim()).filter((s) => /^[a-z0-9][a-z0-9/_-]*$/i.test(s) && !s.includes('..')).map((s) => s.replace(/^classical\//, ''));
   if (!ids.length) { $('msg').textContent = 'No views named. Open a timeline and press Download PDF.'; return; }
   const m = /^(-?\d+)-(-?\d+)$/.exec(q.get('yr') || '');
   if (m && Number(m[1]) < Number(m[2])) yr = [Number(m[1]), Number(m[2])];
