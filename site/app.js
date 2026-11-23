@@ -689,7 +689,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
 
   function roadLayout() {
     const { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan } = chosen();
-    const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight, TOP);
+    const box = $('road'), G = stageOf(box.clientWidth, box.clientHeight, TOP, ($('axisbar')?.offsetWidth || 0) / 2);
+    $('road-views').style.left = G.vx + 'px';
     const lanes = [];
     for (const v of selected) {
       const mine = all.filter((t) => rowsOf.get(v).has(t) && inSpan(t));

@@ -128,9 +128,11 @@ export function tracks(items, rest = 0) {
 // pixels, how wide the road is at the reader's feet, and how big cards are.
 // On a narrow stage the road sits a little left, so the years have a margin.
 // `top` is the band at the top that the page's bar may cover: the road stands below it, and so do the names.
-export function stageOf(SW, SH, top = 0) {
+// `shift` moves the vanishing point right (half the bar's width), so the road
+// stands in the middle of the page, not of the space left of the bar (asked for, Nov 2026).
+export function stageOf(SW, SH, top = 0, shift = 0) {
   const phone = SW < 700;
-  const vx = phone ? SW * 0.43 : SW / 2, vy = top + Math.round((SH - top) * (phone ? 0.17 : 0.2)), by = SH - (phone ? 8 : 12);
+  const vx = (phone ? SW * 0.43 : SW / 2) + shift, vy = top + Math.round((SH - top) * (phone ? 0.17 : 0.2)), by = SH - (phone ? 8 : 12);
   const RW = phone ? SW * 0.385 : Math.min(SW * 0.4, 640);
   const short = SH - top < 430, ks = short ? 0.84 : clamp((SH - top) / (phone ? 560 : 620), 0.8, 1);
   return { SW, SH, top, phone, vx, vy, by, gh: by - vy, RW, short, ks, FW: phone ? 216 : 288, NW: phone ? 200 : 244 };

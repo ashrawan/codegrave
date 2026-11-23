@@ -151,7 +151,9 @@ How the page is put together:
   timeline was removed in November 2026; an old link with `?m=flat` or
   `?h=expand` simply opens the road.
 - **The road.** Time runs into the screen, towards one vanishing point (not
-  evenly: see the next point). Each view is a lane and each entry a line
+  evenly: see the next point), which stands in the middle of the page,
+  under the search, not of the space left of the bar (`stageOf()`'s
+  `shift`, asked for, Nov 2026). Each view is a lane and each entry a line
   along it, on a track of its own (`tracks()`). The reader stands at
   `road.t` facing the future, or the past when reversed (`camDir()`). `L.D`
   is the focal length, a length of road (`focalYears()`): what is `D` ahead
