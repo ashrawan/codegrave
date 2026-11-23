@@ -439,7 +439,7 @@ function poster(vs, inks, paper, fs) {
     const pg = newPage('sheet'), lastSheet = pi === sizes.length - 1;
     // everything stands on the sheet in A2 sizes, scaled down to the paper
     const p = document.createElement('div'); p.className = 'vs'; pg.appendChild(p);
-    p.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')';
+    p.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;--pk:' + sheet.k + ';transform:scale(' + sheet.k + ')';
     p.style.setProperty('--mid', MID + 'mm'); p.style.setProperty('--tf', sheet.tf);
     const slots = posterSlots(n, C, sheet.rows);
     // the grid stands in the middle of the sheet, also when its cards are at their widest and it is narrower than the sheet
@@ -525,7 +525,7 @@ function poster(vs, inks, paper, fs) {
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
   const sheetOf = () => { const pg = newPage('sheet'), v = document.createElement('div'); v.className = 'vs'; pg.appendChild(v);
-    v.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')'; return v; };
+    v.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;--pk:' + sheet.k + ';transform:scale(' + sheet.k + ')'; return v; };
   flowCredits(all.filter((e) => e.img || e.src).map((e) => creditHtml(e, one ? null : inks[e.vi])), (first) => {
     const p = sheetOf();
     p.innerHTML = '<div class="cr-h"><h1>' + (first ? 'Pictures and sources' : '&nbsp;') + '</h1>' + (first ? '<p>' + esc(creditLine()) + '</p>' : '') + '</div><div class="cred"></div>'
