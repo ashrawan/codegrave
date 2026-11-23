@@ -451,7 +451,9 @@ function poster(vs, inks, paper, fs) {
       const col = r.k === -2 ? '#3a3631' : r.k < 0 ? BEFORE : TINTS[r.k % TINTS.length];
       h += '<div class="seg" style="left:' + r.a + 'mm;width:' + (b - r.a) + 'mm;background:' + col + '">' + (c ? '<b>' + esc(c.name) + '</b><span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span>' : '') + '</div>';
     });
-    h += '<div class="arrow" style="left:' + (S.w - S.side + 4) + 'mm;top:' + MID + 'mm"></div>';
+    // the band ends in a point of its own last colour, so line and arrow read as one
+    const endCol = ((k) => (k === -2 ? '#3a3631' : k < 0 ? BEFORE : TINTS[k % TINTS.length]))(runs.at(-1).k);
+    h += '<div class="arrow" style="left:' + (S.w - S.side + 4) + 'mm;top:' + MID + 'mm;border-left-color:' + endCol + '"></div>';
     for (const { e, a, x, up, outer } of items) {
       const k = ink(e), near = up ? MID - BAND / 2 - 7 - CH : MID + BAND / 2 + 7, top = outer ? (up ? near - CH - 6 : near + CH + 6) : near;
       const edge = up ? MID - BAND / 2 : MID + BAND / 2;
@@ -476,14 +478,21 @@ function poster(vs, inks, paper, fs) {
     // top right: the whole span as a bar in the chapters' colours (one view) or the views' (several),
     // with this sheet's stretch outlined, and which part this is
     const clamp = (v) => Math.max(0, Math.min(100, v));
-    const bands = one
+    const pre = one && chs.length && pos(chs[0].from) > 0 ? '<i style="left:0;width:' + clamp(pos(chs[0].from)) + '%;background:' + BEFORE + '"></i>' : '';
+    const bands = pre + (one
       ? chs.map((c, i) => { const a = clamp(pos(c.from)), b = clamp(pos(c.to >= 1e9 ? t1 : c.to)); return b > a ? '<i style="left:' + a + '%;width:' + (b - a) + '%;background:' + TINTS[i % TINTS.length] + '"></i>' : ''; }).join('')
-      : vs.map((v, i) => { const a = clamp(pos(v.first)), b = clamp(pos(v.last ?? t1)); return '<i style="left:' + a + '%;width:' + Math.max(1, b - a) + '%;top:' + (i * 100 / vs.length) + '%;height:' + (100 / vs.length) + '%;background:' + inks[i] + '"></i>'; }).join('');
+      : vs.map((v, i) => { const a = clamp(pos(v.first)), b = clamp(pos(v.last ?? t1)); return '<i style="left:' + a + '%;width:' + Math.max(1, b - a) + '%;top:' + (i * 100 / vs.length) + '%;height:' + (100 / vs.length) + '%;background:' + inks[i] + '"></i>'; }).join(''));
     const win = sizes.length > 1 ? '<b style="left:' + clamp(pos(lo)) + '%;width:' + Math.max(1.5, clamp(pos(hi)) - clamp(pos(lo))) + '%"></b>' : '';
-    const label = sizes.length > 1 ? 'Part ' + (pi + 1) + ' of ' + sizes.length + ' · ' + esc(from + ' – ' + to) : esc(rs(first, last));
+    const label = sizes.length > 1 ? esc(from + ' – ' + to) : esc(rs(first, last));
     const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
     const head = '<div class="t' + (pi ? ' sm' : '') + '"><div class="ti"><h1>' + title + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>' + mini + '</div>';
-    const foot = '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave.com</span></div>';
+    // the footer tells the story of this sheet: each chapter on it, in its colour, with its note
+    // (several views: a key of the views in their colours)
+    const here = one ? [...new Set(part.map((e) => e.ci).filter((i) => i >= 0))].map((i) => ({ c: chs[i], col: TINTS[i % TINTS.length] })) : [];
+    const story = one
+      ? here.slice(0, 3).map(({ c, col }) => '<div class="fn"><b style="color:' + col + '">' + esc(c.name) + '</b><p>' + esc(c.note) + '</p></div>').join('')
+      : '<div class="fk">' + vs.map((v, i) => '<span><i style="background:' + inks[i] + '"></i>' + esc(v.name) + '</span>').join('') + '</div>';
+    const foot = '<div class="foot"><div class="story">' + story + '</div><span class="brand">A timeline from codegrave.com</span></div>';
     p.innerHTML = head + h + foot;
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
@@ -492,7 +501,7 @@ function poster(vs, inks, paper, fs) {
   flowCredits(all.filter((e) => e.img || e.src).map((e) => creditHtml(e, one ? null : inks[e.vi])), (first) => {
     const p = sheetOf();
     p.innerHTML = '<div class="cr-h"><h1>' + (first ? 'Pictures and sources' : '&nbsp;') + '</h1>' + (first ? '<p>' + esc(creditLine()) + '</p>' : '') + '</div><div class="cred"></div>'
-      + '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave.com</span></div>';
+      + '<div class="foot"><span class="lnk"></span><span class="brand">A timeline from codegrave.com</span></div>';
     return { p, box: p.querySelector('.cred') };
   }, link);
   // a chapter's stretch of the band too short for its label drops the years, then the label
@@ -500,8 +509,8 @@ function poster(vs, inks, paper, fs) {
     if (el.scrollWidth > el.clientWidth + 1) el.querySelector('span')?.remove();
     if (el.scrollWidth > el.clientWidth + 1) el.textContent = '';
   }
-  // each summary keeps the whole words that fit its card
-  for (const el of doc.querySelectorAll('.sheet .tx p')) {
+  // each summary, and each chapter's note in a footer, keeps the whole words that fit
+  for (const el of doc.querySelectorAll('.sheet .tx p, .sheet .fn p')) {
     const words = el.textContent.split(' ');
     while (words.length > 1 && el.scrollHeight > el.clientHeight + 1) { words.pop(); el.textContent = words.join(' ').replace(/[,;:]?$/, '…'); }
   }
