@@ -382,7 +382,8 @@ export const POSTER = { w: 594, h: 420, side: 22, gutter: 7, minCard: 44, maxCar
 export function posterSheet(P, fs = 1) {
   const base = P.h / POSTER.h >= 0.7 ? P.h / POSTER.h : 0.8, fit = P.h / 232;
   const k = Math.min(base * fs, fit), h = P.h / k;
-  return { w: P.w / k, h, rows: h >= 392 ? 4 : 2, k, capped: base * fs > fit + 1e-9 };
+  // past that, the cards' text grows on its own by tf
+  return { w: P.w / k, h, rows: h >= 392 ? 4 : 2, k, capped: base * fs > fit + 1e-9, tf: Math.max(1, base * fs / k) };
 }
 // Card width for C columns on a sheet W wide: a gutter before the first and after the last for their lines.
 export const posterCardWidth = (C, W = POSTER.w) => Math.min(POSTER.maxCard, (W - 2 * POSTER.side - (C + 1) * POSTER.gutter) / C);
@@ -416,9 +417,10 @@ function poster(vs, inks, paper, fs) {
   const chs = one ? vs[0].chs : [];
   const ink = (e) => (one ? (e.ci < 0 ? BEFORE : TINTS[e.ci % TINTS.length]) : inks[e.vi]);
   const { sizes, C } = posterSheets(all.length, sheet), CW = posterCardWidth(C, S.w);
-  const BAND = 8, MID = 40 + (S.h - 14 - 40) / 2;
+  // the heading takes the top 32 mm and the footer with its chapter notes the bottom 22 mm
+  const BAND = 8, MID = 32 + (S.h - 22 - 32) / 2;
   // two rows leave room above and below: the cards grow taller, with a larger picture and more words
-  const room = MID - 40 - BAND / 2 - 7 - 4;
+  const room = MID - 32 - BAND / 2 - 7 - 4;
   const CH = sheet.rows === 4 ? CW * 0.56 + 42 : Math.min(room, CW * 0.8 + 46), PIC = sheet.rows === 4 ? CW * 0.56 : CH - 46;
   const name = vs.map((v) => v.name).join(', ');
   // with several views the title names them in their colours, which are the cards' colours
@@ -432,7 +434,7 @@ function poster(vs, inks, paper, fs) {
     // everything stands on the sheet in A2 sizes, scaled down to the paper
     const p = document.createElement('div'); p.className = 'vs'; pg.appendChild(p);
     p.style.cssText = 'width:' + S.w + 'mm;height:' + S.h + 'mm;transform:scale(' + sheet.k + ')';
-    p.style.setProperty('--mid', MID + 'mm');
+    p.style.setProperty('--mid', MID + 'mm'); p.style.setProperty('--tf', sheet.tf);
     const slots = posterSlots(n, C, sheet.rows);
     // the grid stands in the middle of the sheet, also when its cards are at their widest and it is narrower than the sheet
     const x0 = (S.w - C * CW - (C - 1) * S.gutter) / 2;
@@ -492,7 +494,8 @@ function poster(vs, inks, paper, fs) {
     const story = one
       ? here.slice(0, 3).map(({ c, col }) => '<div class="fn"><b style="color:' + col + '">' + esc(c.name) + '</b><p>' + esc(c.note) + '</p></div>').join('')
       : '<div class="fk">' + vs.map((v, i) => '<span><i style="background:' + inks[i] + '"></i>' + esc(v.name) + '</span>').join('') + '</div>';
-    const foot = '<div class="foot"><div class="story">' + story + '</div><span class="brand">A timeline from codegrave.com</span></div>';
+    // the footer runs under the line, from where it starts to its point; the name goes to the top corner
+    const foot = '<div class="foot" style="left:' + (S.side - 4) + 'mm;right:' + (S.side - 9) + 'mm"><div class="story">' + story + '</div></div><div class="brand-top">A timeline from codegrave.com</div>';
     p.innerHTML = head + h + foot;
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
@@ -529,7 +532,7 @@ async function download(paper, fmt) {
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
     const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4, turn = P.w > P.h ? 'landscape' : 'portrait';
     const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: turn, compress: true });
-    const pages = [...doc.children];   // a page, or the frame a scaled book page stands in
+    const pages = [...doc.querySelectorAll('.pg')];
     for (let i = 0; i < pages.length; i++) {
       msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
       // a poster is drawn as sharp as an A2 sheet at 1.5, whatever the paper, without a huge file
@@ -553,27 +556,23 @@ async function getJSON(path) {
 }
 const FONTS = ['400 9px Lora', '500 9px Lora', '600 9px Lora', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
 let shaped = null;
-// The text size (`fs`, 0.8 to 1.6, Export options, `&size=` in the link) scales whole pages: the book is
-// laid out on a page 1/fs the paper's size and each page is scaled up by fs, so larger text means
-// fewer entries a page and more pages (asked for, Nov 2026). The poster does the same in posterSheet().
+// The text size (`fs`, 0.8 to 2, Export options, `&size=` in the link; asked for, Nov 2026). The book
+// scales its text (`--fs` in print.css) and keeps its page layout, so larger text means fewer entries
+// a page and more pages. The poster scales the whole sheet in posterSheet() as far as two rows of
+// cards still fit the paper, then the cards' text alone (`--tf`), which shortens the summaries.
 let fs = 1;
 function lay(paper, fmt) {
-  const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4, z = fmt === 'poster' ? 1 : fs;
-  document.documentElement.style.setProperty('--pw', P.w / z + 'mm');
-  document.documentElement.style.setProperty('--ph', P.h / z + 'mm');
+  const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
+  document.documentElement.style.setProperty('--pw', P.w + 'mm');
+  document.documentElement.style.setProperty('--ph', P.h + 'mm');
+  document.documentElement.style.setProperty('--fs', fmt === 'poster' ? 1 : fs);
   $('page-size').textContent = '@page { size: ' + P.css + '; }';
   doc.textContent = ''; pageNo = 0;
   const { views, inks } = shaped;
   document.body.className = fmt === 'poster' ? 'poster' : views.length === 1 ? 'one' : 'many';
   const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
   if (fmt === 'poster') poster(vs, inks, P, fs); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
-  // each book page stands in a frame of the paper's size, scaled up to fill it
-  if (z !== 1) for (const pg of [...doc.children]) {
-    const o = document.createElement('div'); o.className = 'pgo'; o.style.width = P.w + 'mm'; o.style.height = P.h + 'mm';
-    pg.replaceWith(o); o.appendChild(pg); pg.style.transform = 'scale(' + z + ')';
-  }
-  const cap = fmt === 'poster' && posterSheet(P, fs).capped ? ' Text is at the largest size that fits this paper.' : '';
-  $('msg').textContent = (fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.') + cap;
+  $('msg').textContent = (fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.');
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
 // Sets the export's reading font, fetching it from Google Fonts first if needed.
@@ -619,13 +618,13 @@ async function start() {
   fo.innerHTML = Object.entries(FONTS_OFFERED).map(([k, f]) => '<option value="' + k + '">' + f.name + (k === FONT_DEFAULT ? ' (default)' : '') + '</option>').join('');
   fo.value = FONTS_OFFERED[q.get('font')] ? q.get('font') : FONT_DEFAULT;
   await useFont(fo.value);
-  { const a = Number(q.get('size')); if (a >= 80 && a <= 160) fs = a / 100; }
+  { const a = Number(q.get('size')); if (a >= 80 && a <= 200) fs = a / 100; }
   await lay(sel.value, fm.value);
   const relay = async () => { $('save').disabled = true; await lay(sel.value, fm.value); $('save').disabled = false; };
   sel.addEventListener('change', () => { q.set('paper', sel.value); keepLink(); relay(); });
   fo.addEventListener('change', async () => { if (fo.value === FONT_DEFAULT) q.delete('font'); else q.set('font', fo.value); keepLink();
     $('save').disabled = true; await useFont(fo.value); relay(); });
-  // Text size: a slider from 80 % to 160 %; the pages are laid out again when it is let go
+  // Text size: a slider from 80 % to 200 %; the pages are laid out again when it is let go
   const sz = $('size'), szv = $('size-v'), showSize = () => { szv.textContent = sz.value + '%'; };
   sz.value = Math.round(fs * 100); showSize();
   sz.addEventListener('input', showSize);
