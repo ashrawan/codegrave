@@ -115,3 +115,10 @@ test('the poster fits every paper: A3 is A2 scaled, A4 and Letter take two rows'
     assert.deepEqual(slots.filter(([c]) => c === 4).length, 2);
   }
 });
+
+test('the book rail gives the period, not the name', async () => {
+  const { period } = await import('../site/print.js');
+  assert.equal(period({ y: 1882, end: 1945 }), '1882 – 1945');
+  assert.equal(period({ y: 1930, end: null }), '1930');
+  assert.equal(period({ y: -44, end: -44 }), '44 BCE');
+});
