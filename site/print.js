@@ -411,6 +411,8 @@ export function posterSlots(n, C, rows = 4) {
   return out.slice(0, n);
 }
 
+// A colour mixed with white (a = how much of the colour is kept), as a plain hex that html2canvas reads.
+export const soften = (hex, a) => '#' + [1, 3, 5].map((i) => Math.round(parseInt(hex.slice(i, i + 2), 16) * a + 255 * (1 - a)).toString(16).padStart(2, '0')).join('');
 function poster(vs, inks, paper, fs) {
   const sheet = posterSheet(paper, fs), S = { ...POSTER, w: sheet.w, h: sheet.h }, one = vs.length === 1, link = linkOf(vs);
   const all = one ? vs[0].es : inOrder(vs.flatMap((v) => v.es), rev);
@@ -468,7 +470,7 @@ function poster(vs, inks, paper, fs) {
         h += '<div class="stem" style="left:' + x + 'mm;top:' + s0 + 'mm;height:' + (s1 - s0) + 'mm;background:' + k + '"></div>';
       }
       h += '<div class="tick" style="left:' + x + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + x + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>';
-      h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + '">'
+      h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.4) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
     }
