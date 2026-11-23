@@ -310,7 +310,7 @@ How the page is put together:
   sit as pills in a strip along the bottom (`#dock`), which scrolls
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
-  colour, and the cross removes one of several. The strip starts at the
+  colour (a row of the theme's eight, then a ninth, a rainbow ring, that opens the system's colour picker for any colour; asked for, Nov 2026: a colour is 0 to 7 or '#rrggbb', `colVar()` and `colRgb()` read either, and the link and the export carry it as `c=3` or `c=f05a28`), and the cross removes one of several. The strip starts at the
   left with the pills; at its right end stand the "Views" button (moved
   there on request, Nov 2026), Export as PDF, then reverse (`state.order`), small, last in the strip
   (moved there on request, Nov 2026). There is no bookmark: "Your view" was

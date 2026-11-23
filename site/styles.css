@@ -201,11 +201,16 @@ body.side-open #dock { right: var(--side); }
 .pill button:not(.dot):hover { color: var(--bg); background: var(--text); }
 .padd { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; font-size: 12.5px; color: var(--text); background: transparent; border: 1px solid var(--rule2); border-radius: 14px; }
 .padd:hover { background: var(--bg); border-color: var(--text); }
-#swatches { position: absolute; bottom: 40px; z-index: 20; display: grid; grid-template-columns: repeat(8, 22px); gap: 6px; padding: 8px; background: var(--surf); border: 1px solid var(--rule2); border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); }
+#swatches { position: absolute; bottom: 40px; z-index: 20; display: grid; grid-template-columns: repeat(9, 22px); gap: 6px; padding: 8px; background: var(--surf); border: 1px solid var(--rule2); border-radius: 10px; box-shadow: 0 6px 20px rgba(0, 0, 0, .12); }
 #swatches[hidden] { display: none; }
 #swatches button { width: 22px; height: 22px; padding: 0; border-radius: 50%; background: var(--c); border: 2px solid var(--surf); box-shadow: 0 0 0 1px var(--rule2); cursor: pointer; }
 #swatches button[aria-selected="true"] { box-shadow: 0 0 0 2px var(--text); }
 #swatches button:hover { transform: scale(1.12); }
+/* the ninth: any colour, from the system's picker. A rainbow ring until a colour is picked, then that colour in the ring. */
+#swatches .any { position: relative; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; background: conic-gradient(#f44, #fb3, #6d4, #3cf, #66f, #d4f, #f44); border: 2px solid var(--surf); box-shadow: 0 0 0 1px var(--rule2); }
+#swatches .any.on { background: radial-gradient(var(--c) 0 45%, transparent 47%), conic-gradient(#f44, #fb3, #6d4, #3cf, #66f, #d4f, #f44); box-shadow: 0 0 0 2px var(--text); }
+#swatches .any:hover { transform: scale(1.12); }
+#swatches .any input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; border: 0; padding: 0; }
 /* the filters sit at the bottom of the panel, whatever is above them */
 .filters { position: sticky; bottom: 0; z-index: 2; display: flex; flex-direction: column; gap: 18px; margin: auto -20px 0 !important; padding: 16px 20px 20px; background: var(--surf); border-top: 1px solid var(--rule); }
 .field { display: flex; flex-direction: column; gap: 7px; }

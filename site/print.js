@@ -705,8 +705,9 @@ async function start() {
   const m = /^(-?\d+)-(-?\d+)$/.exec(q.get('yr') || '');
   if (m && Number(m[1]) < Number(m[2])) yr = [Number(m[1]), Number(m[2])];
   rev = q.get('o') === 'backward';
-  const cs = (q.get('c') || '').split(',').map(Number);
-  const inks = ids.map((_, i) => INKS[(cs.length === ids.length && cs[i] >= 0 && cs[i] < 8 ? cs[i] : i) % INKS.length]);
+  const cs = (q.get('c') || '').split(',');
+  // a view's colour from the link: one of the eight (0 to 7), or any colour picked by hand (six hex digits)
+  const inks = ids.map((_, i) => { const c = cs.length === ids.length ? String(cs[i] ?? '') : ''; return /^[0-9a-f]{6}$/i.test(c) ? '#' + c.toLowerCase() : INKS[(/^[0-7]$/.test(c) ? Number(c) : i) % INKS.length]; });
   const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => getJSON('v/' + id + '.json').catch(() => null))]);
   const views = [], keep = [];
   payloads.forEach((p, i) => { const sv = p && p.entries?.length ? shapeView(p, boot, views.length, yr) : null;
