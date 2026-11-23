@@ -105,7 +105,7 @@ export function shapeView(payload, boot, i, span) {
       src: (e.sources || [])[0]?.title || '',
     };
   }).sort((a, b) => a.t - b.t || a.rank - b.rank);
-  return { id: v.id, name: v.name, description: v.description || '', chs, es, first: span ? span[0] : es[0]?.y ?? 0, last: span ? span[1] : null, flag: v.thumb?.image || null };
+  return { id: v.id, name: v.name, description: v.description || '', chs, es, first: span ? span[0] : es[0]?.y ?? 0, last: span ? span[1] : null, thumb: v.thumb?.image || null };
 }
 
 // ---------------------------------------------------------------- the page shell
@@ -140,7 +140,7 @@ function single(D) {
   {
     const p = newPage('cover'); const m = frame(p, 'A timeline from codegrave.com');
     const pics = coverPictures(D.es, 12); if (rev) pics.reverse();
-    m.innerHTML = '<div class="ttl">' + (D.flag ? '<img class="flag" src="' + esc(D.flag) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
+    m.innerHTML = '<div class="ttl">' + (D.thumb ? '<img class="thumb" src="' + esc(D.thumb) + '" alt="">' : '') + '<h1>' + esc(D.name) + '</h1></div><div class="desc">' + esc(D.description) + '</div>'
       + '<div class="stats"><div><b>' + esc(rs(D.first, D.last)) + '</b>Years</div><div><b>' + D.es.length + '</b>Entries</div><div><b>' + D.chs.length + '</b>Chapters</div></div>'
       + '<div class="mos">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
       + '<div class="toc">' + (rev ? D.chs.slice().reverse() : D.chs).map((c, i) => '<div>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></div>').join('') + '</div>';
@@ -314,7 +314,7 @@ function many(V, inks) {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
       el.style.flex = '1 1 0'; el.style.display = 'block'; if (N > 4) { el.style.minHeight = '0'; el.classList.add('small'); }
       const pics = coverPictures(v.es, N <= 2 ? 18 : N > 4 ? 6 : 4); if (rev) pics.reverse();   // two views: three rows of 6 each (asked for, Nov 2026)
-      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(rs(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 || N > 4 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
+      el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span>' + v.es.length + ' entries</span></div><div class="tile' + (N <= 2 ? ' roomy' : '') + '"><div class="top">' + (v.thumb ? '<img crossorigin="anonymous" src="' + esc(v.thumb) + '" alt="">' : '') + '<h2>' + esc(v.name) + '</h2></div><div class="m">' + esc(rs(v.first, v.last)) + ' · ' + v.chs.length + ' chapters</div><p>' + esc(v.description) + '</p><div class="pics" style="grid-template-columns:repeat(' + (N <= 2 || N > 4 ? 6 : 4) + ',1fr)">' + pics.map((e) => '<div><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></div>').join('') + '</div>'
         + (v.chs.length ? '<div class="chl">Chapters</div><ol>' + (rev ? v.chs.slice().reverse() : v.chs).map((c) => '<li>' + esc(c.name) + '<span>' + esc(rs(c.from, c.to >= 1e9 ? null : c.to)) + '</span></li>').join('') + '</ol>' : '') + '</div>';
       p.querySelector(sideOf(i) === 'l' ? '.col.L' : '.col.R').appendChild(el);
     });
@@ -336,7 +336,7 @@ function many(V, inks) {
     const v = V[vi]; const el = document.createElement('div'); el.className = 'panel ' + s;
     el.style.cssText = '--c:' + inks[vi] + ';position:absolute;top:' + y + 'px;width:' + CW + 'px;' + (s === 'l' ? 'left:0' : 'right:0');
     // the box's tab shows the view's thumbnail when it has one, else its name in its colour (asked for, Nov 2026)
-    el.innerHTML = '<div class="tab"><b>' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="' + esc(v.name) + '">' : esc(v.name)) + '</b><span></span></div><div class="list"></div>';
+    el.innerHTML = '<div class="tab"><b>' + (v.thumb ? '<img crossorigin="anonymous" src="' + esc(v.thumb) + '" alt="' + esc(v.name) + '">' : esc(v.name)) + '</b><span></span></div><div class="list"></div>';
     flow.appendChild(el); return { el, vi, list: el.querySelector('.list') };
   }
   function chapHtml(e) {
@@ -459,8 +459,8 @@ function poster(vs, inks, paper, fs) {
   const CH = sheet.rows === 4 ? CW * 0.56 + 42 : Math.min(room, CW * 0.8 + 46), PIC = sheet.rows === 4 ? CW * 0.56 : CH - 46;
   const name = vs.map((v) => v.name).join(', ');
   // with several views the title names them in their colours, which are the cards' colours
-  // a view's thumbnail (a flag) stands just before its name on the first sheet only, a little taller than the letters (asked for, Nov 2026)
-  const th = (v) => (v.flag ? '<img class="th" crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '');
+  // a view's thumbnail (today a country's flag) stands just before its name on the first sheet only, a little taller than the letters (asked for, Nov 2026)
+  const th = (v) => (v.thumb ? '<img class="th" crossorigin="anonymous" src="' + esc(v.thumb) + '" alt="">' : '');
   const title = one ? th(vs[0]) + esc(name) : vs.map((v, i) => '<span style="color:' + inks[i] + '">' + th(v) + esc(v.name) + '</span>').join(', ');
   const first = Math.min(...vs.map((v) => v.first)), last = vs.every((v) => v.last != null) ? Math.max(...vs.map((v) => v.last)) : null;
   const yearsOf = (e) => (e.end != null && e.end !== e.y ? (rev ? yearText(e.end) + ' – ' + yearText(e.y) : yearText(e.y) + ' – ' + yearText(e.end)) : yearText(e.y));
@@ -523,8 +523,8 @@ function poster(vs, inks, paper, fs) {
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
       // with several views a card whose view has a thumbnail (today a country's flag) carries it small on its top border, at the left; no name (asked for, Nov 2026)
-      const vf = !one && vs[e.vi].flag;
-      if (vf) h += '<img class="cflag" crossorigin="anonymous" src="' + esc(vf) + '" alt="" style="left:' + (a + 3) + 'mm;top:' + top + 'mm">';
+      const vt = !one && vs[e.vi].thumb;
+      if (vt) h += '<img class="cthumb" crossorigin="anonymous" src="' + esc(vt) + '" alt="" style="left:' + (a + 3) + 'mm;top:' + top + 'mm">';
     });
     if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
