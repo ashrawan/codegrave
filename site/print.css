@@ -133,6 +133,9 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .many .panel .tab{position:absolute;top:-.1mm;left:3mm;right:3mm;display:flex;justify-content:space-between;align-items:baseline;transform:translateY(-50%)}
 .many .panel .tab b{font-family:var(--serif);font-weight:500;font-size:10.92px;background:#fff;padding:0 1.6mm;color:var(--c);display:flex;align-items:center;gap:1.3mm}
 .many .panel .tab span{font-size:6.3px;letter-spacing:.14em;text-transform:uppercase;color:var(--c);background:#fff;padding:0 1.6mm}
+.many .panel.low{padding:3.5mm 0 4.5mm}
+.many .panel.low .tab{top:auto;bottom:-.1mm;transform:translateY(50%)}
+.many .panel.low .tab b{color:var(--ct)}
 .many .panel .list{flex:1;min-width:0;padding:0 3.5mm}
 .many .panel .rail{display:none}
 .many .panel.r .rail{order:-1}
