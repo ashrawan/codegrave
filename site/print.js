@@ -463,22 +463,36 @@ function poster(vs, inks, paper, fs) {
     // from the right edge as the band's start from the left, so nothing comes near the edge (printers cut it)
     const endCol = ((k) => (k === -2 ? '#3a3631' : k < 0 ? BEFORE : TINTS[k % TINTS.length]))(runs.at(-1).k);
     h += '<div class="arrow" style="left:' + (S.w - S.side - 1) + 'mm;top:' + MID + 'mm;border-left-color:' + endCol + '"></div>';
-    for (const { e, a, x, up, outer } of items) {
+    // Cards that share a year meet the band at one point, the middle of their own points, with the year
+    // written once; their lines bend to it in a short curve, so the order along the band holds (asked for, Nov 2026).
+    const meet = items.map((it) => it.x), said = new Set(), CURVE = 5;
+    for (let i = 0; i < items.length;) {
+      let j = i; while (j + 1 < items.length && yearText(items[j + 1].e.y) === yearText(items[i].e.y)) j++;
+      if (j > i) { const m = items.slice(i, j + 1).reduce((t, it) => t + it.x, 0) / (j - i + 1); for (let q = i; q <= j; q++) meet[q] = m; }
+      i = j + 1;
+    }
+    let curves = '';
+    items.forEach(({ e, a, x, up, outer }, i) => {
       const k = ink(e), near = up ? MID - BAND / 2 - 7 - CH : MID + BAND / 2 + 7, top = outer ? (up ? near - CH - 6 : near + CH + 6) : near;
-      const edge = up ? MID - BAND / 2 : MID + BAND / 2;
+      const edge = up ? MID - BAND / 2 : MID + BAND / 2, px = meet[i], bend = Math.abs(px - x) > 0.05;
+      const end = bend ? edge + (up ? -CURVE : CURVE) : edge;   // a bent line stops short of the band and curves the rest
       if (outer) {
         const my = top + CH / 2;
         h += '<div class="arm" style="left:' + (up ? x : a + CW) + 'mm;top:' + my + 'mm;width:' + (up ? a - x : x - a - CW) + 'mm;background:' + k + '"></div>'
-          + '<div class="stem" style="left:' + x + 'mm;top:' + Math.min(my, edge) + 'mm;height:' + Math.abs(edge - my) + 'mm;background:' + k + '"></div>';
+          + '<div class="stem" style="left:' + x + 'mm;top:' + Math.min(my, end) + 'mm;height:' + Math.abs(end - my) + 'mm;background:' + k + '"></div>';
       } else {
-        const s0 = up ? top + CH : edge, s1 = up ? edge : top;
+        const s0 = up ? top + CH : end, s1 = up ? end : top;
         h += '<div class="stem" style="left:' + x + 'mm;top:' + s0 + 'mm;height:' + (s1 - s0) + 'mm;background:' + k + '"></div>';
       }
-      h += '<div class="tick" style="left:' + x + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div><div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + x + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>';
+      if (bend) curves += '<path d="M' + x + ' ' + end + 'C' + x + ' ' + (end + (edge - end) * 0.6) + ' ' + px + ' ' + (end + (edge - end) * 0.4) + ' ' + px + ' ' + edge + '" stroke="' + k + '"/>';
+      const sideKey = px.toFixed(2) + (up ? 'u' : 'd'), yrKey = px.toFixed(2) + yearText(e.y);
+      if (!said.has(sideKey)) { said.add(sideKey); h += '<div class="tick" style="left:' + px + 'mm;top:' + edge + 'mm;border-color:' + k + '"></div>'; }
+      if (!said.has(yrKey)) { said.add(yrKey); h += '<div class="yr ' + (up ? 'u' : 'd') + '" style="left:' + px + 'mm;top:' + edge + 'mm;color:' + k + '">' + esc(yearText(e.y)) + '</div>'; }
       h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
-    }
+    });
+    if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
     const t0 = Math.min(...all.map((e) => e.y));
     const from = rev && pi === 0 ? 'Today' : yearText(part[0].y), to = !rev && lastSheet ? 'Today' : yearText(part.at(-1).y);
