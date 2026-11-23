@@ -28,10 +28,11 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 #tools .size output { min-width: 3.2em; text-align: right; color: #f4f1ea; font-variant-numeric: tabular-nums; }
 #doc { padding: 64px 16px 32px; display: flex; flex-direction: column; align-items: center; gap: 8mm; }
 #doc .pg { box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.08); flex: none; }
-@media (max-width: 860px) { #doc { align-items: flex-start; overflow-x: auto; } #tools .msg { display: none; } }
+@media (max-width: 860px) { body { padding: 60px 0 16px; } #doc { padding: 0 12px; gap: 6mm; } #tools .msg { display: none; } }
 @media (max-width: 560px) { #tools { gap: 8px; padding: 10px 12px; } #tools summary .k::after { content: none; } #layout-s, #text-s { display: none; } #tools .opts { position: fixed; left: 12px; right: 12px; top: 56px; min-width: 0; } }
 @media print {
   #tools { display: none; }
+  #doc { zoom: 1 !important; }
   body { background: #fff; }
   #doc { padding: 0; gap: 0; display: block; }
   #doc .pg { box-shadow: none; }
@@ -192,7 +193,7 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .foot .lnk{text-transform:none;letter-spacing:.04em}
 
 /* The poster (".poster"): landscape sheets laid out in A2 sizes (.vs) and scaled to the paper, see poster() in print.js */
-.poster #doc { align-items: flex-start; overflow-x: auto; }
+.poster #doc { align-items: center; }
 .poster #doc .pg { margin: 0 auto; }
 .poster .pg{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;page-break-after:always;background:#fff}
 .poster .vs{position:absolute;left:0;top:0;transform-origin:0 0}
