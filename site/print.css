@@ -193,12 +193,12 @@ body { font-family: Inter, system-ui, sans-serif; color: var(--ink); background:
 .poster #doc .pg { margin: 0 auto; }
 .poster .pg{width:var(--pw);height:var(--ph);position:relative;overflow:hidden;page-break-after:always;background:#fff}
 .poster .vs{position:absolute;left:0;top:0;transform-origin:0 0}
-.poster .t{position:absolute;left:22mm;top:13mm;right:22mm;display:flex;align-items:flex-end;justify-content:space-between;gap:14mm;padding-bottom:3mm;border-bottom:.3mm solid #e6e6e6}
-.poster .ti{display:flex;align-items:baseline;gap:6mm;min-width:0}
-.poster .t h1{font:600 9mm/1 var(--serif);letter-spacing:-.1mm;white-space:nowrap}
+.poster .t{position:absolute;left:22mm;top:13mm;right:22mm;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:end;gap:12mm;padding-bottom:3mm;border-bottom:.3mm solid #e6e6e6}
+.poster .ti{min-width:0}
+.poster .t h1{font:400 9mm/1 var(--serif);letter-spacing:.1mm;white-space:nowrap;text-align:center}
 .poster .t.sm h1{font-size:6.5mm}
-.poster .t p{font-size:3mm;line-height:1.45;color:#777;max-width:150mm}
-.poster .where{flex:none;width:130mm}
+.poster .t p{font-size:2.8mm;line-height:1.45;color:#777;max-width:140mm;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden}
+.poster .where{justify-self:end;width:100%;max-width:130mm;min-width:0}
 .poster .mini{position:relative;height:2.6mm;background:#ececec;border-radius:1.3mm;overflow:visible}
 .poster .mini i{position:absolute;top:0;height:100%;opacity:.9}
 .poster .mini i:first-child{border-radius:1.3mm 0 0 1.3mm}

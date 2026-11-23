@@ -489,7 +489,8 @@ function poster(vs, inks, paper, fs) {
     const win = sizes.length > 1 ? '<b style="left:' + clamp(pos(lo)) + '%;width:' + Math.max(1.5, clamp(pos(hi)) - clamp(pos(lo))) + '%"></b>' : '';
     const label = sizes.length > 1 ? esc(from + ' – ' + to) : esc(rs(first, last));
     const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
-    const head = '<div class="t' + (pi ? ' sm' : '') + '"><div class="ti"><h1>' + title + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>' + mini + '</div>';
+    // the heading in three: the description on the left (first sheet), the title in the centre, the span on the right
+    const head = '<div class="t' + (pi ? ' sm' : '') + '"><div class="ti">' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div><h1>' + title + '</h1>' + mini + '</div>';
     // the footer tells the story of this sheet: each chapter on it, in its colour, with its note
     // (several views: a key of the views in their colours)
     const here = one ? [...new Set(part.map((e) => e.ci).filter((i) => i >= 0))].map((i) => ({ c: chs[i], col: TINTS[i % TINTS.length] })) : [];
@@ -606,7 +607,8 @@ async function start() {
   await document.fonts.ready;
   shaped = { views, inks: keep };
   // Format: the book (A4 or Letter pages) or the poster (landscape sheets, A2 to A4); kept in the link as `fmt=poster`
-  const fm = $('fmt'); fm.value = q.get('fmt') === 'poster' ? 'poster' : 'book';
+  // the poster is the default (asked for, Nov 2026); the book is kept in the link as `fmt=book`
+  const fm = $('fmt'); fm.value = q.get('fmt') === 'book' ? 'book' : 'poster';
   const keepLink = () => history.replaceState(null, '', '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/'));
   // The paper starts as the one used where the reader is (Letter in the US and a few others, A4 elsewhere).
   // The book offers A4 and Letter; the poster A2, A3, A4 and Letter. Kept in the link as `paper`.
@@ -631,7 +633,7 @@ async function start() {
   sz.value = Math.round(fs * 100); showSize();
   sz.addEventListener('input', showSize);
   sz.addEventListener('change', () => { fs = sz.value / 100; if (fs === 1) q.delete('size'); else q.set('size', sz.value); keepLink(); relay(); });
-  fm.addEventListener('change', () => { if (fm.value === 'poster') q.set('fmt', 'poster'); else q.delete('fmt'); papers(); keepLink(); relay(); });
+  fm.addEventListener('change', () => { if (fm.value === 'book') q.set('fmt', 'book'); else q.delete('fmt'); papers(); keepLink(); relay(); });
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';
     q.set('o', rev ? 'backward' : 'forward'); keepLink();
