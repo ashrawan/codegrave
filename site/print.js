@@ -305,7 +305,7 @@ function many(V, inks) {
   function openBox(vi, s, y) {
     const v = V[vi]; const el = document.createElement('div'); el.className = 'panel ' + s;
     el.style.cssText = '--c:' + inks[vi] + ';position:absolute;top:' + y + 'px;width:' + CW + 'px;' + (s === 'l' ? 'left:0' : 'right:0');
-    el.innerHTML = '<div class="tab"><b>' + (v.flag ? '<img crossorigin="anonymous" src="' + esc(v.flag) + '" alt="">' : '') + esc(v.name) + '</b><span></span></div><div class="list"></div>';
+    el.innerHTML = '<div class="tab"><b>' + esc(v.name) + '</b><span></span></div><div class="list"></div>';
     flow.appendChild(el); return { el, vi, list: el.querySelector('.list') };
   }
   function chapHtml(e) {
@@ -491,11 +491,8 @@ function poster(vs, inks, paper, fs) {
       h += '<div class="card" style="left:' + a + 'mm;top:' + top + 'mm;width:' + CW + 'mm;height:' + CH + 'mm;--k:' + k + ';--kb:' + soften(k, 0.65) + '">'
         + (e.img ? '<figure style="height:' + PIC + 'mm"><img crossorigin="anonymous" src="' + esc(e.img.src) + '" alt=""></figure>' : '')
         + '<div class="tx"><em>' + esc(e.kind) + '</em><b>' + esc(e.name) + '</b><small>' + esc(yearsOf(e)) + '</small><p>' + esc(e.summary) + '</p></div></div>';
-      // with several views the card's view sits on its top border in small, like the book's tabs: its thumbnail
-      // (today a country's flag; any view's thumbnail works), then its name (asked for, Nov 2026)
-      const cv = !one && vs[e.vi];
-      if (cv) h += '<div class="ctab" style="left:' + (a + 3) + 'mm;top:' + top + 'mm;color:' + k + '">'
-        + (cv.flag ? '<img crossorigin="anonymous" src="' + esc(cv.flag) + '" alt="">' : '') + esc(cv.name) + '</div>';
+      // with several views the card's view is named on its top border in its colour, like the book's tabs; no thumbnail (asked for, Nov 2026)
+      if (!one) h += '<div class="ctab" style="left:' + (a + 3) + 'mm;top:' + top + 'mm;color:' + k + '">' + esc(vs[e.vi].name) + '</div>';
     });
     if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
