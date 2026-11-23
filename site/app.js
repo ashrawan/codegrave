@@ -677,9 +677,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const BAR_PAD = 10;                          // room at each end of the bar on the right
   const calm = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
   const camDir = () => (state.order === 'new' ? -1 : 1);
-  // The reader stops a little short of the end they face, so the last stretch of road stays in front of them.
+  // The reader can travel to just short of the end they face, close enough that the last starts stand open in
+  // front of them (inWindow: more than CLOSE_AT ahead), with the dotted run-out beyond (RUN_OUT, asked for, Nov 2026).
+  const RUN_OUT = 1.2;                         // focal lengths of dotted road drawn past the end
   function camLimits() {
-    const m = 0.5 * L.D;
+    const m = 0.22 * L.D;
     return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), L.tMax];
   }
   const camClamp = (t) => { const [lo, hi] = camLimits(); return clamp(t, lo, hi); };
@@ -1289,6 +1291,23 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       for (const st of stems) {
         c.strokeStyle = st.hot ? rgba(P.p[st.col], st.a) : rgba(P.ink, 0.45 * st.a);
         c.beginPath(); c.moveTo(st.x1, st.y1); c.lineTo(st.x2, st.y2); c.stroke();
+      }
+
+      // Past where the road stops, its edges and lanes run on as dotted lines for a little way, so the reader
+      // can travel up to the last cards and still see road ahead (asked for, Nov 2026).
+      if (uEnd < uFar) {
+        const uRun = Math.min(uFar, uEnd + RUN_OUT * D), xs = [-G.RW, G.RW];
+        if (L.lanes.length > 1) for (const ln of L.lanes.slice(1)) xs.push(ln.x0);
+        c.setLineDash([3, 6]); c.lineWidth = 1.2;
+        const steps = 6;
+        for (let i = 0; i < steps; i++) {
+          const ua = uEnd + (uRun - uEnd) * i / steps, ub = uEnd + (uRun - uEnd) * (i + 1) / steps, sa = S(ua), sb = S(ub);
+          const a = 0.75 * (1 - i / steps) * far(sb);
+          if (a <= 0.01) continue;
+          c.strokeStyle = rgba(P.ink, a);
+          c.beginPath(); for (const x of xs) { c.moveTo(px(x, sa), py(sa)); c.lineTo(px(x, sb), py(sb)); } c.stroke();
+        }
+        c.setLineDash([]);
       }
 
       // Where the road stops.

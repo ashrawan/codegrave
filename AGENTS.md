@@ -249,7 +249,7 @@ How the page is put together:
   empty years (`paceFor()`). Because the road gives every start its own
   room, that pace stays nearly even. Every change of speed is eased, up to
   speed, down to the turn limit and to a stop on pause (`road.vel`), so the
-  road never jerks under the reader. Space plays and pauses. At the far end the button offers to
+  road never jerks under the reader. The reader can travel to just short of the end (`camLimits()`), close enough that the last starts stand open in front of them, and past the end the road's edges and lanes run on as dotted lines for `RUN_OUT` focal lengths, so the road does not stop at the reader's feet (asked for, Nov 2026). Space plays and pauses. At the far end the button offers to
   play again from the beginning.
 - **Cards open by distance while play travels.** One rule, asked for in Nov
   2026 ("on multiple lanes the order is not there"): while play travels, a
