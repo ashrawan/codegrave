@@ -538,6 +538,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => state.colors.get(id)).join(','));
+    // The tab names the views shown, as the view's own page does before the script runs.
+    const names = state.views.map((id) => viewById.get(id)?.name).filter(Boolean);
+    document.title = names.length ? names.join(', ') + ': a timeline · codegrave' : 'codegrave: a timeline of everything. Nothing ships forever.';
     history.replaceState(null, '', '/' + (state.views[0] ? addressOf(state.views[0]) : '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
   }
 

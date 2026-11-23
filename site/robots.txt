@@ -1,0 +1,7 @@
+# codegrave.com: every view is open to search engines. The print page only
+# repeats a view as a document, so it is left out.
+User-agent: *
+Allow: /
+Disallow: /print.html
+
+Sitemap: https://codegrave.com/sitemap.xml
