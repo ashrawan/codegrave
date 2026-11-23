@@ -124,7 +124,7 @@ body.side-open #axisbar { right: var(--side); }
 .pane { display: flex; flex-direction: column; min-height: 100%; padding: 0 20px; }
 .pane[hidden] { display: none; }
 .pane > * + * { margin-top: 16px; }
-.pane-head { position: sticky; top: 0; z-index: 3; display: flex; align-items: center; gap: 2px; margin: 0 -20px; padding: 10px 12px 10px 20px; min-height: 56px; background: var(--surf); border-bottom: 1px solid var(--rule); }
+.pane-head { position: sticky; top: 0; z-index: 3; display: flex; align-items: center; gap: 2px; margin: 0 -20px; padding: 6px 10px 6px 20px; min-height: 46px; background: var(--surf); border-bottom: 1px solid var(--rule); }
 .pane-head h2 { flex: 1; font-size: 15px; font-weight: 600; }
 .pane-foot { position: sticky; bottom: 0; z-index: 3; display: flex; gap: 8px; margin: auto -20px 0; padding: 12px 20px 16px; background: var(--surf); border-top: 1px solid var(--rule); }
 .pane-foot .btn { flex: 1; }
@@ -351,7 +351,9 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 .chips button:hover { color: var(--text); border-color: var(--rule2); }
 .chips button[aria-checked="true"] { color: var(--text); font-weight: 600; background: var(--bg); border-color: var(--rule2); }
 #p-views > .chipbar + #vlist { margin-top: 6px; }
-#p-views > .scope { margin-top: 12px; margin-bottom: -6px; }
+#p-views .pane-head h2 { display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+#p-views .pane-head .scope { font-size: 12px; font-weight: 400; color: var(--faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+#p-views .pane-head + .search { margin-top: 12px; }
 /* the name of a topic above its views, when the list shows them all */
 #vlist li.vhead { padding: 14px 8px 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); cursor: default; }
 #vlist li.vhead:first-child { padding-top: 4px; }
@@ -565,3 +567,4 @@ body.playing.peek .top, body.playing .top:focus-within { transform: none; opacit
 .th-head .kind .vlink { font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s, color .15s; }
 .th-head .kind .vlink:hover, .th-head .kind .vlink:focus-visible { color: var(--text); text-decoration-color: currentColor; }
 #qlist .vk { margin-left: auto; color: var(--faint); display: inline-flex; }
+.dock-tools #views-btn { margin-right: 6px; }

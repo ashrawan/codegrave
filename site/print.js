@@ -541,6 +541,7 @@ async function download(paper, fmt) {
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
     const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4, turn = P.w > P.h ? 'landscape' : 'portrait';
     const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: turn, compress: true });
+    doc.style.zoom = '';
     const pages = [...doc.querySelectorAll('.pg')];
     for (let i = 0; i < pages.length; i++) {
       msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
@@ -555,7 +556,7 @@ async function download(paper, fmt) {
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { btn.disabled = false; for (const id of ['paper', 'order', 'fmt', 'font', 'size']) $(id).disabled = false; }
+  } finally { fit(); btn.disabled = false; for (const id of ['paper', 'order', 'fmt', 'font', 'size']) $(id).disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -574,7 +575,19 @@ let shaped = null;
 // cards still fit the paper, then the cards' text alone (`--tf`), which shortens the summaries.
 export const TEXT_BASE = 1.4;
 let fs = TEXT_BASE;
+// On a screen narrower than the paper (a phone), the pages are shown shrunk to the screen's width
+// (CSS zoom on #doc) instead of cut off or scrolled sideways (asked for, Nov 2026). Layout and the
+// PDF are always made at full size, so the zoom is taken off first.
+function fit() {
+  doc.style.zoom = '';
+  const w = doc.querySelector('.pg')?.offsetWidth;
+  // a phone widens its layout to what overflows, so the screen's own width is the measure there
+  const z = w ? Math.min(1, (Math.min(innerWidth, screen.width || innerWidth) - 24) / w) : 1;
+  if (z < 1) doc.style.zoom = z;
+}
+if (typeof window !== 'undefined') window.addEventListener('resize', () => fit());
 function lay(paper, fmt) {
+  doc.style.zoom = '';
   const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
   document.documentElement.style.setProperty('--pw', P.w + 'mm');
   document.documentElement.style.setProperty('--ph', P.h + 'mm');
@@ -586,6 +599,7 @@ function lay(paper, fmt) {
   const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
   if (fmt === 'poster') poster(vs, inks, P, fs); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
   $('msg').textContent = (fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.');
+  fit();
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
 // Sets the export's reading font, fetching it from Google Fonts first if needed.
@@ -650,6 +664,16 @@ async function start() {
     relay(); });
   $('save').disabled = false;
   $('save').addEventListener('click', () => download(sel.value, fm.value));
+  // The two menus: Layout (the shape of the document) and Text (how it reads). Each names its choices on its button,
+  // and opening one closes the other.
+  const sums = () => {
+    $('layout-s').textContent = fm.options[fm.selectedIndex].text + ' · ' + sel.options[sel.selectedIndex]?.text.replace(' (US)', '') + ' · ' + (ord.value === 'new' ? 'Backward' : 'Forward');
+    $('text-s').textContent = (fo.options[fo.selectedIndex]?.text || '').replace(' (default)', '') + ' · ' + sz.value + '%';
+  };
+  for (const ev of ['change', 'input']) $('tools').addEventListener(ev, () => setTimeout(sums));
+  for (const d of document.querySelectorAll('#tools .menu')) d.addEventListener('toggle', () => { if (d.open) for (const o of document.querySelectorAll('#tools .menu')) if (o !== d) o.open = false; });
+  document.addEventListener('click', (e) => { if (!e.target.closest('#tools .menu')) for (const o of document.querySelectorAll('#tools .menu')) o.open = false; });
+  sums();
   document.body.dataset.done = '1';
 }
 if (typeof document !== 'undefined') start().catch((err) => { $('msg').textContent = 'Something went wrong: ' + err.message; });
