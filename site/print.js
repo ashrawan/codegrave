@@ -22,13 +22,14 @@ const BEFORE = '#8f8f8f';   // entries before the first chapter
 export const POSTER_PAPERS = { a2: { w: 594, h: 420, css: 'A2 landscape', name: 'A2' }, a3: { w: 420, h: 297, css: 'A3 landscape', name: 'A3' },
   a4: { w: 297, h: 210, css: 'A4 landscape', name: 'A4' }, letter: { w: 279.4, h: 215.9, css: 'letter landscape', name: 'Letter' } };
 // The fonts offered in Export options (asked for, Nov 2026): free fonts (SIL Open Font License) from
-// Google Fonts, fetched only when picked. Literata, a book face made for e-books, is the default.
+// Google Fonts, fetched only when picked. Lora is the default (picked from the ten, Nov 2026).
+export const FONT_DEFAULT = 'lora';
 export const FONTS_OFFERED = {
+  lora: { name: 'Lora', q: 'Lora:wght@400;500;600' },
   literata: { name: 'Literata', q: 'Literata:opsz,wght@7..72,400;7..72,500;7..72,600' },
   'source-serif': { name: 'Source Serif 4', q: 'Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600' },
   newsreader: { name: 'Newsreader', q: 'Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600' },
   merriweather: { name: 'Merriweather', q: 'Merriweather:wght@400;700' },
-  lora: { name: 'Lora', q: 'Lora:wght@400;500;600' },
   'eb-garamond': { name: 'EB Garamond', q: 'EB+Garamond:wght@400;500;600' },
   'libre-baskerville': { name: 'Libre Baskerville', q: 'Libre+Baskerville:wght@400;700' },
   'crimson-pro': { name: 'Crimson Pro', q: 'Crimson+Pro:wght@400;500;600' },
@@ -375,11 +376,13 @@ export const POSTER = { w: 594, h: 420, side: 22, gutter: 7, minCard: 44, maxCar
 // Smaller paper (asked for, Nov 2026: "we cannot print in the A4 or letter"). The poster is laid out
 // on a sheet of the paper's shape in the A2 sizes, then the whole sheet is scaled down by k. A3 is A2
 // at 0.71 with the same four rows. A4 and Letter would be too small that way, so they keep two rows
-// (the inner cards only) at 0.8 and take more sheets.
-export function posterSheet(P) {
-  const k = P.h / POSTER.h;
-  if (k >= 0.7) return { w: P.w / k, h: POSTER.h, rows: 4, k };
-  return { w: P.w / 0.8, h: P.h / 0.8, rows: 2, k: 0.8 };
+// (the inner cards only) at 0.8 and take more sheets. The text size (`fs`, Export options) scales the
+// sheet the same way: larger text lays the poster out on a smaller sheet, so it takes more sheets, and
+// a sheet too low for four rows takes two. Two rows need 232 mm before scaling, which caps the size.
+export function posterSheet(P, fs = 1) {
+  const base = P.h / POSTER.h >= 0.7 ? P.h / POSTER.h : 0.8, fit = P.h / 232;
+  const k = Math.min(base * fs, fit), h = P.h / k;
+  return { w: P.w / k, h, rows: h >= 392 ? 4 : 2, k, capped: base * fs > fit + 1e-9 };
 }
 // Card width for C columns on a sheet W wide: a gutter before the first and after the last for their lines.
 export const posterCardWidth = (C, W = POSTER.w) => Math.min(POSTER.maxCard, (W - 2 * POSTER.side - (C + 1) * POSTER.gutter) / C);
@@ -407,8 +410,8 @@ export function posterSlots(n, C, rows = 4) {
   return out.slice(0, n);
 }
 
-function poster(vs, inks, paper) {
-  const sheet = posterSheet(paper), S = { ...POSTER, w: sheet.w, h: sheet.h }, one = vs.length === 1, link = linkOf(vs);
+function poster(vs, inks, paper, fs) {
+  const sheet = posterSheet(paper, fs), S = { ...POSTER, w: sheet.w, h: sheet.h }, one = vs.length === 1, link = linkOf(vs);
   const all = one ? vs[0].es : inOrder(vs.flatMap((v) => v.es), rev);
   const chs = one ? vs[0].chs : [];
   const ink = (e) => (one ? (e.ci < 0 ? BEFORE : TINTS[e.ci % TINTS.length]) : inks[e.vi]);
@@ -470,11 +473,17 @@ function poster(vs, inks, paper) {
     const ys = part.map((e) => e.y), toNow = rev ? pi === 0 : lastSheet;
     const lo = Math.min(...ys), hi = toNow ? t1 : Math.max(...ys);
     const from = rev && pi === 0 ? 'Today' : yearText(part[0].y), to = !rev && lastSheet ? 'Today' : yearText(part.at(-1).y);
-    const mini = sizes.length > 1 ? '<div class="mini"><div class="w" style="left:' + pos(lo) + '%;width:' + Math.max(2, pos(hi) - pos(lo)) + '%"></div></div><div class="pn">Part ' + (pi + 1) + ' of ' + sizes.length + ' · ' + esc(from + ' – ' + to) + '</div>' : '';
-    const head = pi === 0
-      ? '<div class="t"><h1>' + title + '</h1><p>' + esc(one ? vs[0].description : '') + '</p><div class="y">' + esc(rs(first, last)) + mini + '</div></div>'
-      : '<div class="t sm"><h1>' + title + '</h1><div class="y">' + mini + '</div></div>';
-    const foot = '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave</span></div>';
+    // top right: the whole span as a bar in the chapters' colours (one view) or the views' (several),
+    // with this sheet's stretch outlined, and which part this is
+    const clamp = (v) => Math.max(0, Math.min(100, v));
+    const bands = one
+      ? chs.map((c, i) => { const a = clamp(pos(c.from)), b = clamp(pos(c.to >= 1e9 ? t1 : c.to)); return b > a ? '<i style="left:' + a + '%;width:' + (b - a) + '%;background:' + TINTS[i % TINTS.length] + '"></i>' : ''; }).join('')
+      : vs.map((v, i) => { const a = clamp(pos(v.first)), b = clamp(pos(v.last ?? t1)); return '<i style="left:' + a + '%;width:' + Math.max(1, b - a) + '%;top:' + (i * 100 / vs.length) + '%;height:' + (100 / vs.length) + '%;background:' + inks[i] + '"></i>'; }).join('');
+    const win = sizes.length > 1 ? '<b style="left:' + clamp(pos(lo)) + '%;width:' + Math.max(1.5, clamp(pos(hi)) - clamp(pos(lo))) + '%"></b>' : '';
+    const label = sizes.length > 1 ? 'Part ' + (pi + 1) + ' of ' + sizes.length + ' · ' + esc(from + ' – ' + to) : esc(rs(first, last));
+    const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
+    const head = '<div class="t' + (pi ? ' sm' : '') + '"><div class="ti"><h1>' + title + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>' + mini + '</div>';
+    const foot = '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave.com</span></div>';
     p.innerHTML = head + h + foot;
   });
   // the pictures' credits on their own sheet at the end (asked for: no credit over the pictures)
@@ -483,7 +492,7 @@ function poster(vs, inks, paper) {
   flowCredits(all.filter((e) => e.img || e.src).map((e) => creditHtml(e, one ? null : inks[e.vi])), (first) => {
     const p = sheetOf();
     p.innerHTML = '<div class="cr-h"><h1>' + (first ? 'Pictures and sources' : '&nbsp;') + '</h1>' + (first ? '<p>' + esc(creditLine()) + '</p>' : '') + '</div><div class="cred"></div>'
-      + '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave</span></div>';
+      + '<div class="foot"><span class="lnk"></span><span>A timeline from codegrave.com</span></div>';
     return { p, box: p.querySelector('.cred') };
   }, link);
   // a chapter's stretch of the band too short for its label drops the years, then the label
@@ -505,13 +514,13 @@ const script = (src) => new Promise((ok, no) => { const s = document.createEleme
 export const fileName = (names) => (names.join(' ').toLowerCase().normalize('NFKD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 80) || 'codegrave') + '.pdf';
 async function download(paper, fmt) {
   const btn = $('save'), msg = $('msg'), was = msg.textContent;
-  btn.disabled = true; for (const id of ['paper', 'order', 'fmt', 'font']) $(id).disabled = true;
+  btn.disabled = true; for (const id of ['paper', 'order', 'fmt', 'font', 'size']) $(id).disabled = true;
   try {
     msg.textContent = 'Making the PDF…';
     if (!window.html2canvas || !window.jspdf) for (const src of LIBS) await script(src);
     const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4, turn = P.w > P.h ? 'landscape' : 'portrait';
     const pdf = new window.jspdf.jsPDF({ unit: 'mm', format: [P.w, P.h], orientation: turn, compress: true });
-    const pages = [...doc.querySelectorAll('.pg')];
+    const pages = [...doc.children];   // a page, or the frame a scaled book page stands in
     for (let i = 0; i < pages.length; i++) {
       msg.textContent = 'Making the PDF: page ' + (i + 1) + ' of ' + pages.length + '…';
       // a poster is drawn as sharp as an A2 sheet at 1.5, whatever the paper, without a huge file
@@ -524,7 +533,7 @@ async function download(paper, fmt) {
     msg.textContent = was;
   } catch (err) {
     msg.textContent = 'The PDF could not be made (' + err.message + '). Try again, or print the page to PDF.';
-  } finally { btn.disabled = false; for (const id of ['paper', 'order', 'fmt', 'font']) $(id).disabled = false; }
+  } finally { btn.disabled = false; for (const id of ['paper', 'order', 'fmt', 'font', 'size']) $(id).disabled = false; }
 }
 
 // ---------------------------------------------------------------- start
@@ -533,24 +542,34 @@ async function getJSON(path) {
   if (!r.ok) throw new Error(path + ' ' + r.status);
   return r.json();
 }
-const FONTS = ['400 9px Literata', '500 9px Literata', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
+const FONTS = ['400 9px Lora', '500 9px Lora', '600 9px Lora', '400 9px Inter', '700 9px Inter', '500 9px Inter', '600 9px Inter', 'italic 400 9px Inter', '17px "Instrument Serif"', 'italic 17px "Instrument Serif"'];
 let shaped = null;
+// The text size (`fs`, 0.8 to 1.6, Export options, `&size=` in the link) scales whole pages: the book is
+// laid out on a page 1/fs the paper's size and each page is scaled up by fs, so larger text means
+// fewer entries a page and more pages (asked for, Nov 2026). The poster does the same in posterSheet().
+let fs = 1;
 function lay(paper, fmt) {
-  const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4;
-  document.documentElement.style.setProperty('--pw', P.w + 'mm');
-  document.documentElement.style.setProperty('--ph', P.h + 'mm');
+  const P = fmt === 'poster' ? POSTER_PAPERS[paper] || POSTER_PAPERS.a2 : PAPERS[paper] || PAPERS.a4, z = fmt === 'poster' ? 1 : fs;
+  document.documentElement.style.setProperty('--pw', P.w / z + 'mm');
+  document.documentElement.style.setProperty('--ph', P.h / z + 'mm');
   $('page-size').textContent = '@page { size: ' + P.css + '; }';
   doc.textContent = ''; pageNo = 0;
   const { views, inks } = shaped;
   document.body.className = fmt === 'poster' ? 'poster' : views.length === 1 ? 'one' : 'many';
   const vs = views.map((v) => ({ ...v, es: inOrder(v.es, rev) }));
-  if (fmt === 'poster') poster(vs, inks, P); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
-  $('msg').textContent = fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.';
+  if (fmt === 'poster') poster(vs, inks, P, fs); else if (vs.length === 1) single(vs[0]); else many(vs, inks);
+  // each book page stands in a frame of the paper's size, scaled up to fill it
+  if (z !== 1) for (const pg of [...doc.children]) {
+    const o = document.createElement('div'); o.className = 'pgo'; o.style.width = P.w + 'mm'; o.style.height = P.h + 'mm';
+    pg.replaceWith(o); o.appendChild(pg); pg.style.transform = 'scale(' + z + ')';
+  }
+  const cap = fmt === 'poster' && posterSheet(P, fs).capped ? ' Text is at the largest size that fits this paper.' : '';
+  $('msg').textContent = (fmt === 'poster' ? pageNo + (pageNo === 1 ? ' sheet' : ' sheets') + ', ' + P.name + ' landscape.' : pageNo + ' pages, ' + PAPERS[paper].css.replace('letter', 'Letter') + '.') + cap;
   return Promise.all([...doc.querySelectorAll('img')].map((im) => (im.complete ? null : new Promise((ok) => { im.onload = im.onerror = ok; }))));
 }
 // Sets the export's reading font, fetching it from Google Fonts first if needed.
 async function useFont(key) {
-  const f = FONTS_OFFERED[key] || FONTS_OFFERED.literata, id = 'font-' + key;
+  const f = FONTS_OFFERED[key] || FONTS_OFFERED[FONT_DEFAULT], id = 'font-' + key;
   if (f.q && !document.getElementById(id)) {
     const l = document.createElement('link'); l.id = id; l.rel = 'stylesheet'; l.href = 'https://fonts.googleapis.com/css2?family=' + f.q + '&display=swap';
     await new Promise((ok) => { l.onload = l.onerror = ok; document.head.appendChild(l); });
@@ -586,16 +605,22 @@ async function start() {
     sel.innerHTML = Object.entries(set).map(([k, v]) => '<option value="' + k + '">' + (v.name || v.css.replace('letter', 'Letter (US)')) + '</option>').join('');
     sel.value = set[was] ? was : home; };
   sel.textContent = ''; papers();
-  // Font: kept in the link as `font`; a font other than Literata or Inter is fetched when picked
+  // Font: kept in the link as `font`; a font other than Lora or Inter is fetched when picked
   const fo = $('font');
-  fo.innerHTML = Object.entries(FONTS_OFFERED).map(([k, f]) => '<option value="' + k + '">' + f.name + (k === 'literata' ? ' (default)' : '') + '</option>').join('');
-  fo.value = FONTS_OFFERED[q.get('font')] ? q.get('font') : 'literata';
+  fo.innerHTML = Object.entries(FONTS_OFFERED).map(([k, f]) => '<option value="' + k + '">' + f.name + (k === FONT_DEFAULT ? ' (default)' : '') + '</option>').join('');
+  fo.value = FONTS_OFFERED[q.get('font')] ? q.get('font') : FONT_DEFAULT;
   await useFont(fo.value);
+  { const a = Number(q.get('size')); if (a >= 80 && a <= 160) fs = a / 100; }
   await lay(sel.value, fm.value);
   const relay = async () => { $('save').disabled = true; await lay(sel.value, fm.value); $('save').disabled = false; };
   sel.addEventListener('change', () => { q.set('paper', sel.value); keepLink(); relay(); });
-  fo.addEventListener('change', async () => { if (fo.value === 'literata') q.delete('font'); else q.set('font', fo.value); keepLink();
+  fo.addEventListener('change', async () => { if (fo.value === FONT_DEFAULT) q.delete('font'); else q.set('font', fo.value); keepLink();
     $('save').disabled = true; await useFont(fo.value); relay(); });
+  // Text size: a slider from 80 % to 160 %; the pages are laid out again when it is let go
+  const sz = $('size'), szv = $('size-v'), showSize = () => { szv.textContent = sz.value + '%'; };
+  sz.value = Math.round(fs * 100); showSize();
+  sz.addEventListener('input', showSize);
+  sz.addEventListener('change', () => { fs = sz.value / 100; if (fs === 1) q.delete('size'); else q.set('size', sz.value); keepLink(); relay(); });
   fm.addEventListener('change', () => { if (fm.value === 'poster') q.set('fmt', 'poster'); else q.delete('fmt'); papers(); keepLink(); relay(); });
   const ord = $('order'); ord.value = rev ? 'new' : 'old';
   ord.addEventListener('change', () => { rev = ord.value === 'new';

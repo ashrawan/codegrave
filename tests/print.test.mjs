@@ -94,7 +94,13 @@ test('poster slots run in date order, top to bottom, and keep the first and last
 });
 
 test('the poster fits every paper: A3 is A2 scaled, A4 and Letter take two rows', () => {
-  assert.deepEqual(posterSheet(POSTER_PAPERS.a2), { w: 594, h: 420, rows: 4, k: 1 });
+  assert.deepEqual(posterSheet(POSTER_PAPERS.a2), { w: 594, h: 420, rows: 4, k: 1, capped: false });
+  // larger text: a smaller sheet scaled up; A2 at 150 % takes two rows; A4 stops at the largest size that fits
+  const big = posterSheet(POSTER_PAPERS.a2, 1.5);
+  assert.equal(big.k, 1.5); assert.equal(big.rows, 2); assert.ok(big.h >= 232 - 1e-9);
+  const a4big = posterSheet(POSTER_PAPERS.a4, 1.6);
+  assert.ok(a4big.capped && Math.abs(a4big.h - 232) < 1e-9);
+  assert.ok(posterSheet(POSTER_PAPERS.a4, 0.8).w > posterSheet(POSTER_PAPERS.a4).w);
   const a3 = posterSheet(POSTER_PAPERS.a3);
   assert.equal(a3.rows, 4); assert.ok(Math.abs(a3.w - 594) < 1 && a3.k < 0.71);
   for (const k of ['a4', 'letter']) {

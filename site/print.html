@@ -8,7 +8,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='6' fill='%23faf8f3' stroke='none'/%3E%3Cpath d='M3 27.5H29' stroke='%23121211' stroke-width='1.8'/%3E%3Cpath d='M6.5 27.5V12.5a6.5 6.5 0 0 1 13 0V27.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M21.5 27.5V20a3.5 3.5 0 0 1 7 0v7.5' stroke='%23121211' stroke-width='1.8' opacity='.55'/%3E%3Cpath d='M10 14.5l3 2.5-3 2.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M14 22.5h3.5' stroke='%239a6c00' stroke-width='2.6'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="print.css">
 <style id="page-size">@page { size: A4; }</style>
 </head>
@@ -21,6 +21,7 @@
     <label>Timeline <select id="order"><option value="old">Forward (past to today)</option><option value="new">Backward (today to past)</option></select></label>
     <label>Paper <select id="paper"><option value="a4">A4</option><option value="letter">Letter (US)</option></select></label>
     <label>Font <select id="font"></select></label>
+    <label>Text size <span class="size"><span class="a1">A</span><input id="size" type="range" min="80" max="160" step="10" value="100" aria-label="Text size"><span class="a2">A</span><output id="size-v">100%</output></span></label>
   </div></details>
   <button id="save" type="button" disabled>Download PDF</button>
 </div>
