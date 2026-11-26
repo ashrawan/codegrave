@@ -840,7 +840,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     cancelAnimationFrame(road.raf); road.raf = 0; road.live = false; road.vel = 0;
     for (const n of road.nodes.values()) n.el.remove();
     road.nodes.clear(); road.vis = new Map(); road.heat.clear(); road.soft.clear(); road.side.clear();
-    road.hover = road.focus = road.jump = road.year = null;
+    road.hover = road.focus = road.jump = road.year = road.seen = road.aim = null;
     $('road-views').innerHTML = ''; $('road-year').textContent = '';
     const cv = $('road-cv');
     cv.getContext('2d').clearRect(0, 0, cv.width, cv.height);
@@ -1440,7 +1440,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       }
     }
     for (const k of road.soft.keys()) if (!inked.has(k)) { road.soft.delete(k); road.side.delete(k); }
-    roadHud(false);
+    if (roadHud(false, dt)) busy = true;
     return busy;
   }
 
@@ -1504,11 +1504,18 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     return L.tMax - L.tMin < 4 / 365.25 ? [time, `${long} ${d} ${mon} ${y}`] : [d + ' ' + mon, long + ', ' + y];
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
-  function roadHud(all) {
-    // The year and the chapters follow the card drawn as selected in front (road.focus) as the road moves, not
-    // the reader's own place (asked for, Nov 2026: "should be as per card selected"); with none, the reader's place.
+  function roadHud(all, dt = 0) {
+    // The year and the chapters follow the card drawn as selected in front (road.focus), not the reader's own
+    // place (asked for, Nov 2026: "should be as per card selected"). They do not jump from card to card: the
+    // year counts along the road to the next one and stands on its year while it is selected ("the year should
+    // move also"). With no card in front it waits, and moves on with the reader once the reader passes it.
     const t = road.t, D = L.D, dir = camDir(), fp = road.focus && L.at.get(road.focus);
-    const seen = clamp(fp ? fp.a : t, L.tMin, L.tMax), m = L.when(seen);
+    const want = clamp(fp ? fp.a : road.aim != null && dir * (road.aim - t) > 0 ? road.aim : t, L.tMin, L.tMax);
+    road.aim = want;
+    if (road.seen == null || Math.abs(road.seen - want) > 4 * D || !(dt > 0)) road.seen = road.seen == null || Math.abs(road.seen - want) > 4 * D ? want : road.seen;
+    else road.seen += (want - road.seen) * (1 - Math.exp(-dt / 0.3));
+    if (Math.abs(want - road.seen) < 1e-4 * D) road.seen = want;
+    const seen = road.seen, m = L.when(seen), easing = seen !== want;
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
     const fine = !RANKED && L.tMax - L.tMin < FINE ? fineLabel(m) : null;
     const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : fine ? fine[0] : playLabel(m);
@@ -1545,7 +1552,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       b.hidden = !cur;
       if (cur) { b.textContent = cur.name; b.dataset.era = cur.key; b.title = cur.years; }
     });
-    if (!all) return;
+    if (!all) return easing;
     const b = $('play'), end = camAtEnd(), own = ownAudio(), mine = play.on && !(own && play.own);
     b.setAttribute('aria-pressed', mine);
     b.setAttribute('aria-label', mine ? 'Pause' : end ? 'Play from the beginning' : own ? 'Play with the house music' : 'Play: travel along the road');
