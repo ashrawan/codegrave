@@ -52,6 +52,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | What search engines and link previews read (title, description, Open Graph, `robots.txt`, the sitemap) | The `page meta` block in `site/index.html`, `site/robots.txt`, `writePages()` in `scripts/build.mjs` | `site/_redirects`, `site/sitemap.xml` (generated) |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
 | The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
+| Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
@@ -312,13 +313,38 @@ How the page is put together:
   when play is first pressed with the sound on, and the same button
   silences it. The house track was asked for with this file; do not swap it
   without asking.
-- **Explore lives in the bar on the left** (asked for, Nov 2026: "even
-  those explorer can go to sidebars, but the item click can be on right
-  side"). Pressing Explore swaps the bar's own list for the views pane
-  (`#p-views`, which sits inside `#sb`; `account.explore(on)` sets
-  `body.sb-explore` and the bar widens to 320 px); its cross goes back to
-  the bar's list. On a phone, picking a view puts the drawer away. There is
-  no "Views" button in the strip any more (removed on request).
+- **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
+  "think it is like community posted, meaning even the admin ones", after a
+  list in the sidebar was found "not professional"). Explore in the bar on
+  the left opens it and closes it; Escape and picking a timeline close it
+  too (`account.explore(on)`, `body.exploring`). It is a gallery: a large
+  search, the topic chips ("All" first), then every timeline as a card
+  (its thumbnail, name, two lines of description, who made it, its years
+  and size). "All" shows what people have published lately
+  (`account.published()`, one request the first time), then eight cards of
+  each topic with "See all" (`SHELF`); Countries come last. The editors'
+  timelines are listed as the community's, by `wiki`. A community page of
+  people's own creations is planned; keep this page able to grow into it.
+  There is no "Views" button in the strip (removed on request).
+- **New timeline is a page with one box** (`#create`, filled by
+  `account.js`): "Make a timeline of anything.", a prompt, a choice of
+  model (DeepSeek, Claude, GPT; `MODELS` in `site/ai.js`, `cg-model` in
+  this browser) and a few ideas. The Edge Function
+  `supabase/functions/ai-timeline` asks the model through OpenRouter for a
+  small "spec" and adds free pictures from Wikipedia; `specToView()` in
+  `site/ai.js` turns it into a view file, which is stored like any other
+  timeline, with the spec beside it. For such a timeline of the reader's
+  own, "Ask for a change" is a box under the road (`#ask`): the model gets
+  the spec and the request and writes the whole spec again; the toast says
+  what changed and offers Undo. An entry made this way names its kind in
+  words (`category`) and its branch in `domain`, and its id starts with
+  `x`. The centre of the page is meant as a canvas where a reader can make
+  anything (asked for, Nov 2026); a timeline is the first kind, so keep the
+  spec and the function free of anything only a timeline could use.
+- **The year range** (`#filters`, `state.span`) is a quiet, see-through pill
+  at the bottom right of the road; pressed, it opens the range with its
+  picture of busy years (moved there from the views pane on request, Nov
+  2026). It hides while play travels.
 - **The three-dot menu** (`#more-btn`, `#more-menu`, top right; asked for,
   Nov 2026) holds what is used rarely: Turn round (reverse, `state.order`,
   `#reverse`), How to read the timeline, and the GitHub link.
@@ -354,30 +380,17 @@ How the page is put together:
   timeline holds brings its own view alone too (`bringIn()`); only a link
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
-- **The views pane** (in the bar on the left, under Explore) heads with one
-  slim line: "Explore" with how many views and entries there are, and the
-  cross (the GitHub link and the info button are in the three-dot menu). Below it is search, then a row of chips (`drawChips()`: the
-  editors' topics from `data/editors-choice.json`, today Countries,
-  Culture, History, Science and Technology, after a first chip "My view"),
-  then the list, then the filter: the year range (`state.span`). "My view"
-  is pressed when no topic is, and the list then holds only the views on
-  the timeline; there is no "All" list (removed on request, Nov 2026: "just
-  have a current showing there, and anything we search"). With several
-  views, the "My view" heading of that list carries shuffle (dots in the views' colours on a turning arrow), which mixes
-  their colours (moved there from the strip on request, Nov 2026). Pressing a chip
-  lists that topic's views; pressing it again, or "My view", goes back.
-  Both search boxes have a cross that clears them (`.clr`). A search finds
-  every view, community and classical, and entries and years. "How much to show" was
-  removed on request (Nov 2026): every entry of a view is on the road, and
-  the road's scale and the cards by distance do the rest. On a phone the filters fold into one line
-  (`#filters-btn`) so the list has the sheet. Only community views sit
-  under the chips.
+- **The search and chips of Explore.** The search finds every timeline,
+  community and classical, and entries and years (`runSearch()`,
+  `drawResults()`); entries and years are slim rows under the cards.
+  Pressing a chip lists that topic's timelines; pressing it again, or
+  "All", goes back. Both search boxes have a cross that clears them
+  (`.clr`). With several views on the road, shuffle (which mixes their
+  colours) sits in the strip beside Export as PDF (`#shuffle`).
   Classical views are found by the search, where every result
-  carries an icon that says which sort it is. A row is a thumbnail made by
-  the build (`scripts/thumb.mjs`), then the name and one quiet line
-  (`viewSub()`: the years the view covers and how many entries it holds).
-  The description is the row's tooltip and is searched; it is not printed
-  in the list. Keep the row to those two lines.
+  carries an icon that says which sort it is. A card's picture is the
+  thumbnail made by the build (`scripts/thumb.mjs`); a timeline someone
+  stored shows its initials.
 - **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter the reader is in below it in small capitals in its colour, with no lines (`#road-views`; style "A", picked from six); the year the reader stands in is written large on the right (`#road-year`), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
 - **The years.** `ruler()` writes the years along the edge of the road and
   `barTicks()` those on the bar. Because the scale is uneven there is no
@@ -412,8 +425,7 @@ How the page is put together:
 - **The entry pane** shows the kind and branch, labels, other names, every
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
-- "Propose a view" at the foot of the panel, under the filters (moved
-  there on request, Nov 2026), opens the "Propose a view" issue
+- "Propose it to the editors" at the foot of Explore opens the "Propose a view" issue
   form with the current link filled in.
 - **Play takes the whole screen.** The top bar floats over the road: the
   road (`#stage`) always fills the page from the top, and keeps a band of

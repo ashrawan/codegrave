@@ -9,8 +9,11 @@ repository into static files, exactly as before.
 
 - **Sign in** with Google, GitHub or a link sent by email. Nothing asks for
   it until they press "New timeline" or "Sign in".
-- **New timeline**: a private copy of the view on the road, under a name of
-  their own. Creating one from a sentence with AI is the next phase.
+- **New timeline**: say what it is about and a model writes it (see
+  "Create with AI" below), or start from a private copy of the view on the
+  road.
+- **Ask for a change** to a timeline made with AI, in the box under the
+  road: "add the women of jazz", "start in 1900". The toast offers Undo.
 - **Change it**: rename or delete it (the three dots on its row), add an
   entry ("Add to a timeline" in any entry's pane) or remove one ("Remove
   from this timeline", with Undo).
@@ -35,6 +38,31 @@ and usernames; only the owner reads, changes or deletes the rest.
 can be opened by id but never listed. The key in `site/account.js` is the
 publishable one and is meant to be public.
 
+## Create with AI
+
+The page sends `{ prompt, model, current? }` and the reader's session to
+the Edge Function `ai-timeline` (`supabase/functions/ai-timeline/`). The
+function checks who is asking, counts the day's requests in `ai_requests`
+(20 a day per account by default), asks the model through OpenRouter for a
+**spec**, adds a free picture from Wikipedia to each entry that names its
+article, and sends the spec back. The page turns the spec into a view file
+(`specToView()` in `site/ai.js`) and stores it itself, so row level
+security still decides who writes what. The spec is stored beside the view
+file (`data.spec`), which is what "Ask for a change" sends back to the
+model.
+
+| Name in the page | OpenRouter model (default) | To change it, set the secret |
+| --- | --- | --- |
+| DeepSeek | `deepseek/deepseek-v4.1-flash` | `MODEL_DEEPSEEK` |
+| Claude | `anthropic/claude-haiku-5.5` | `MODEL_CLAUDE` |
+| GPT | `openai/gpt-6-luna` | `MODEL_GPT` |
+
+Secrets of the function (Supabase → Edge Functions → Secrets):
+`OPENROUTER_API_KEY` (required; without it the page says Create with AI is
+not switched on yet), the three `MODEL_…` names above and `AI_DAILY`
+(optional). Entries made this way are not reviewed: they are marked
+unverified and carry a link to their Wikipedia article as the source.
+
 ## Setting up sign-in (once, in the Supabase dashboard)
 
 1. **Authentication → URL Configuration**: set the Site URL to
@@ -52,7 +80,10 @@ publishable one and is meant to be public.
 
 - "Export as PDF" is hidden for stored timelines: the print page reads
   built view files only.
-- A stored timeline does not appear in the search or the views pane yet,
-  and has no link preview of its own.
+- A public stored timeline is listed in Explore under "New from the
+  community", but the search does not find it yet, and it has no link
+  preview of its own.
+- Only a timeline made with AI can be changed with AI; a copied one is
+  edited by hand.
 - A copied timeline keeps its entries as they were when copied; later
   corrections to the base do not reach it.

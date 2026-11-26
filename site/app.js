@@ -247,7 +247,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!boot) return;
     const n = group(boot.counts?.entries || 0), views = (boot.views || []).length;
     $('q').placeholder = matchMedia(PHONE).matches ? 'Search the timeline' : 'Search the timeline: a person, a place, an event or a year';
-    $('vscope').textContent = `${group(views)} ${views === 1 ? 'view' : 'views'} · ${n} entries`;
+    $('vscope').textContent = `${group(views)} ${views === 1 ? 'timeline' : 'timelines'} · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.
   function lineage(id) {
@@ -269,7 +269,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function ingest(e) {
     if (byId.has(e.id)) return byId.get(e.id);
     const t = e;
-    t.cat = catById.get(t.category) || { id: t.category, name: t.category, domain: null, i: 1e4 };
+    // An entry someone made (with AI) names its kind in words and its branch in `domain`.
+    t.cat = catById.get(t.category) || { id: t.category, name: t.category, domain: t.domain || null, i: 1e4 };
     t.dom = domById.get(t.cat.domain) || null;
     t.words = (t.dom && t.dom.words) || NEUTRAL;
     const ev = (type) => t.events.find((x) => x.type === type);
@@ -1672,6 +1673,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     }).join('');
     requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
+    $('shuffle').hidden = !many;
 
     drawYears();
     $('filters-sum').textContent = state.views.length ? $('years-out').textContent : '';
@@ -1749,9 +1751,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (state.topic && !list.some((d) => d.id === state.topic)) state.topic = '';
     const chip = (id, name) => `<button type="button" role="radio" data-chip="${esc(id)}" aria-checked="${state.topic === id}">${esc(name)}</button>`;
     const ids = list.map((d) => d.id).join(',');
-    // "My view" comes first: the views on the timeline, pressed when no topic is.
+    // "All" comes first, pressed when no topic is: a few timelines of every topic.
     // Redrawn only when the chips change, so the row keeps its sideways scroll.
-    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'My view') + list.map((d) => chip(d.id, d.name)).join(''); }
+    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'All') + list.map((d) => chip(d.id, d.name)).join(''); }
     else for (const b of box.querySelectorAll('[data-chip]')) b.setAttribute('aria-checked', b.dataset.chip === state.topic);
     requestAnimationFrame(chipEdges);
   }
@@ -1766,6 +1768,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // pressed. Search finds every view, community and classical (the map:
   // everything, each branch, each kind), and entries and years.
   let found = [], active = -1;
+  const SHELF = 8;               // cards of one topic on the first page of Explore
   function runSearch() {
     const raw = $('vq').value.trim(), q = fold(raw);
     found = [];
@@ -1773,8 +1776,16 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (state.topic) {
         for (const v of boot?.views || []) if (chipOf(v) === state.topic) found.push({ v: viewById.get(v.id) || v });
       } else {
-        found.push({ head: 'My view', shuffle: true });
-        for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
+        // All: what people have published lately, then a row or two of every topic with a way to see the rest.
+        const people = account.published();
+        if (people.length) { found.push({ head: 'New from the community' }); for (const v of people.slice(0, SHELF)) found.push({ v: viewById.get(v.id) || v }); }
+        // Countries come last: there are nearly two hundred of them, and they would bury the rest.
+        for (const d of [...chipList()].sort((a, b) => (a.id === 'countries') - (b.id === 'countries'))) {
+          const all = (boot?.views || []).filter((v) => chipOf(v) === d.id);
+          if (!all.length) continue;
+          found.push({ head: d.name, chip: d.id, n: all.length });
+          for (const v of all.slice(0, SHELF)) found.push({ v: viewById.get(v.id) || v });
+        }
       }
       active = -1;
     } else {
@@ -1833,26 +1844,30 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('vnote').textContent = msg;
     function row(f, i) {
       let name, sub, tb, attrs = '', side = '';
-      if (f.wait) return '<li class="none" role="presentation">Searching every view…</li>';
-      // "My view" carries shuffle, which mixes the colours of the views on the timeline (moved here from the strip, Nov 2026).
-      if (f.head) return `<li class="vhead" role="presentation"><span>${esc(f.head)}</span>${f.shuffle && state.views.length > 1 ? `<button type="button" class="shuf" data-shuffle aria-label="Shuffle colours" title="Shuffle colours">${ICON.shuffle}</button>` : ''}</li>`;
+      if (f.wait) return '<li class="none" role="presentation">Searching every timeline…</li>';
+      if (f.head) return `<li class="vhead" role="presentation"><span>${esc(f.head)}</span>${f.chip && f.n > SHELF ? `<button type="button" class="lnk" data-chip="${esc(f.chip)}">See all ${group(f.n)}</button>` : ''}</li>`;
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(alias.get(id) || id)?.name || id).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
       else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; tb = `<span class="tb icon">${ICON.plus}</span>`; }
       else if (f.year != null) { name = 'Go to ' + esc(yearText(f.year)); sub = 'On the timeline'; tb = `<span class="tb icon">${ICON.dot}</span>`; }
       else if (f.e) { name = mark(f.e.name, q); sub = `${esc(kindName(f.e.kind))} · ${f.how ? `<em class="yw">${esc(yearWord(f.e, f.how, f.how === 'born' ? f.e.born : f.e.end))}</em>` : esc(lineSpan(f.e))}${f.e.tier === 2 ? ' · community' : ''}`; tb = `<span class="tb icon">${ICON.dot}</span>`; }
       else {
+        // A timeline is a card: its picture, its name, what it is about, and who made it.
         const v = f.v, on = state.views.includes(v.id), wait = pending.has(v.id), bad = broken.has(v.id);
         const kind = v.type === 'classical' ? 'classical' : 'community';
-        // The icon tells the two sorts apart where a search mixes them; the list itself holds one sort.
-        name = `<span>${mark(v.name, q)}</span>${q ? `<i title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i>` : ''}`;
-        sub = (on ? '<span class="st">On the timeline</span> · ' : wait ? '<span class="st">Loading…</span> · ' : bad ? '<span class="st bad">Could not load</span> · ' : '') + esc(viewSub(v));
-        tb = `<span class="tb">${thumb(v)}</span>`;
-        attrs = `${v.description ? ` title="${esc(v.description)}"` : ''} aria-checked="${on}"${on ? ` style="--c:${colVar(state.colors.get(v.id))}"` : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
+        const who = v.type === 'classical' ? 'codegrave' : v.author || EDITORS;
+        const st = on ? '<span class="st">On the timeline</span>' : wait ? '<span class="st">Loading…</span>' : bad ? '<span class="st bad">Could not load</span>' : '';
+        const facts = [v.span ? spanText(v.span[0], v.span[1]) : '', v.count != null ? `${group(v.count)} ${v.count === 1 ? 'entry' : 'entries'}` : ''].filter(Boolean).join(' · ');
+        const card = `<li role="option" class="card${wait ? ' loading' : ''}" aria-selected="${i === active}" aria-checked="${on}"${on ? ` style="--c:${colVar(state.colors.get(v.id))}"` : ''}${wait ? ' aria-busy="true"' : ''} data-i="${i}">` +
+          `<span class="tb">${v.thumb ? thumb(v) : `<span class="th-mono">${esc(initials(v.name))}</span>`}${st}</span>` +
+          `<span class="r-txt"><b><span>${mark(v.name, q)}</span>${q ? `<i title="${kind === 'classical' ? 'Classical view' : 'Community timeline'}">${ICON[kind]}</i>` : ''}</b>` +
+          `<small class="desc">${esc(v.description || (v.type === 'classical' ? viewSub(v) : ''))}</small>` +
+          `<small class="meta"><i class="av" aria-hidden="true">${esc(who.slice(0, 1).toUpperCase())}</i><span>${esc(who)}</span>${facts ? `<span class="fx">${esc(facts)}</span>` : ''}</small></span>`;
         // Beside the others: add it, or take it off when it is one of several.
         if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}</button>`;
         else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}</button>`;
+        return card + side + '</li>';
       }
-      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
+      return `<li role="option" class="line" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
     }
   }
   // "Propose a view" at the foot of the panel opens the issue form with this link filled in.
@@ -1865,16 +1880,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!f || f.wait || f.head) return;
     if (f.mine) return loadMine(f.mine);
     if (f.propose) return propose();
-    if (f.year != null) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
-    if (f.e) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); return bringIn(f.e.id, { focus: true }); }
+    if (f.year != null) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); account.explore(false); return flashYear(f.year); }
+    if (f.e) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); account.explore(false); return bringIn(f.e.id, { focus: true }); }
     if (pending.has(f.v.id)) return;
     if (beside) {
       if (!state.views.includes(f.v.id)) turnOn(f.v.id);
       else if (state.views.length > 1) { removeView(f.v.id); changed(); }
       return;
     }
-    // On a phone the list is a sheet over the road: it steps aside to show what was picked.
-    showOnly(f.v.id).then((got) => { if (got && matchMedia(PHONE).matches) showSide(false); });
+    // Explore is a page over the road: it steps aside to show what was picked.
+    account.explore(false);
+    showOnly(f.v.id);
   }
 
   // "Your view" was a view saved in this browser with a bookmark button. The button was removed, so an
@@ -2253,7 +2269,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const rm = el('[data-remove]');
       if (rm) { removeView(rm.dataset.remove); return changed(); }
       const br = el('[data-chip]');
-      if (br) { state.topic = state.topic === br.dataset.chip ? '' : br.dataset.chip; drawChips(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
+      if (br) { state.topic = state.topic === br.dataset.chip ? '' : br.dataset.chip; drawChips(); runSearch(); $('explore').scrollTop = 0; $('topics').querySelector('[aria-checked="true"]')?.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
       const era = el('[data-era]');
       if (era && !el('#side')) return openEra(era.dataset.era);
       const zoom = el('[data-zoom]');
@@ -2267,7 +2283,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (playFrom) return startPlay(playFrom.dataset.playFrom);
       const go = el('[data-go]');
       if (go) return jumpTo(state.open, Number(go.dataset.go));
-      if (el('#vlist [data-shuffle]')) return shuffleColours();
+      if (el('[data-shuffle]')) return shuffleColours();
       const sv = el('[data-show-view]');
       if (sv) return void showOnly(sv.dataset.showView);
       const beside = el('#vlist [data-beside]');
@@ -2382,10 +2398,10 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.span = $('years-reset').dataset.mode === 'all' && L ? [writtenOf(L.fitMin), writtenOf(L.fitMax - 1e-9)] : null;
       changed();
     });
-    $('filters-btn').addEventListener('click', () => {
-      const open = $('filters').classList.toggle('open');
-      $('filters-btn').setAttribute('aria-expanded', open);
-    });
+    // The year range is a quiet pill at the bottom right of the road; pressed, it opens (asked for, Nov 2026).
+    const yearsOpen = (on) => { $('filters').classList.toggle('open', on); $('filters-btn').setAttribute('aria-expanded', on); };
+    $('filters-btn').addEventListener('click', () => yearsOpen(!$('filters').classList.contains('open')));
+    document.addEventListener('pointerdown', (e) => { if (!e.target.closest('#filters')) yearsOpen(false); });
 
     // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in the same tab.
     $('pdf').addEventListener('click', () => {
@@ -2572,7 +2588,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   // Accounts and the reader's own timelines (account.js): the bar on the left. It borrows these from the page.
   const account = createAccount({
-    $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => showOnly(id),
+    $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => { account.explore(false); return showOnly(id); },
+    listChanged: () => runSearch(),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,

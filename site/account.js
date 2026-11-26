@@ -6,6 +6,7 @@
    The page knows a stored timeline as "t/<its id>". Its address is
    /t/<id>, or /<username>/<slug> once it is public. */
 import { shardOf } from './keys.js';
+import { MODELS, specToView } from './ai.js';
 
 // Public by design: the key only allows what the database's row level security allows.
 export const CONFIG = {
@@ -55,7 +56,7 @@ const ICON = {
 const LOGO = '<svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 27.5H29" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 27.5V12.5a6.5 6.5 0 0 1 13 0V27.5" stroke="currentColor" stroke-width="1.8"/><path d="M21.5 27.5V20a3.5 3.5 0 0 1 7 0v7.5" stroke="currentColor" stroke-width="1.6" opacity=".55"/><path d="M10 14.5l3 2.5-3 2.5" stroke="currentColor" stroke-width="1.8"/><path d="M14 22.5h3.5" stroke="var(--acc)" stroke-width="2.2"/></svg>';
 const SEEN = { private: 'Private draft', link: 'Link only', public: 'Public' };
 const PHONE = '(max-width: 699px)';
-const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent';
+const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt';
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
    show(id), replace(payload) (a stored view changed), forget(id), home(),
@@ -157,20 +158,23 @@ export function createAccount(app) {
     if (!res.ok) throw new Error('That view could not be read.');
     return res.json();
   }
-  async function create(title, from) {
-    const src = await rawView(from);
-    const { id: _i, name: _n, author: _a, type: _t, topic: _o, count: _c, stored: _s, mine: _m, level: _l, ...meta } = src.view || {};
-    const data = { view: meta, entries: src.entries || [] };
+  // A new row, under a slug of its own.
+  async function insert(title, description, data, from = null) {
     const base = slugOf(title);
     for (let n = 1; n < 20; n++) {
       try {
-        const got = await api('/rest/v1/timelines?select=id', { method: 'POST', headers: { Prefer: 'return=representation' }, body: { title, slug: n === 1 ? base : `${base.slice(0, 56)}-${n}`, description: (src.view?.description || '').slice(0, 600), forked_from: from, data } });
+        const got = await api('/rest/v1/timelines?select=id', { method: 'POST', headers: { Prefer: 'return=representation' }, body: { title, slug: n === 1 ? base : `${base.slice(0, 56)}-${n}`, description: (description || '').slice(0, 600), ...(from ? { forked_from: from } : {}), data } });
         return 't/' + got[0].id;
       } catch (e) {
-        if (e.code !== '23505') throw e.code === '23514' ? new Error('That view is too large to copy for now.') : e;
+        if (e.code !== '23505') throw e.code === '23514' ? new Error('That timeline is too large to keep for now.') : e;
       }
     }
     throw new Error('Pick another name: that one is taken.');
+  }
+  async function create(title, from) {
+    const src = await rawView(from);
+    const { id: _i, name: _n, author: _a, type: _t, topic: _o, count: _c, stored: _s, mine: _m, level: _l, ...meta } = src.view || {};
+    return insert(title, src.view?.description, { view: meta, entries: src.entries || [] }, from);
   }
   async function patch(row, body) {
     const got = await api(`/rest/v1/timelines?id=eq.${row.id}&select=id,slug,title,description,visibility,entries,updated_at`, { method: 'PATCH', headers: { Prefer: 'return=representation' }, body });
@@ -269,19 +273,113 @@ export function createAccount(app) {
     });
   }
 
-  async function newTimeline() {
+  async function copyTimeline() {
     if (!user) { try { sessionStorage.setItem(INTENT, 'new'); } catch (e) { /* fine */ } return signIn('Sign in to start a timeline of your own.'); }
     const from = app.views()[0], src = from && app.view(from);
     if (!src) return;
-    const a = await ask({ title: 'New timeline', text: `It starts as a copy of “${src.name}”, private until you publish it. You can then add and remove entries. Creating one from a sentence with AI comes next.`, label: 'Name', value: isMine(from) ? src.name + ' 2' : 'My ' + src.name, ok: 'Create' });
+    const a = await ask({ title: 'New timeline', text: `It starts as a copy of “${src.name}”, private until you publish it. You can then add and remove entries.`, label: 'Name', value: isMine(from) ? src.name + ' 2' : 'My ' + src.name, ok: 'Create' });
     if (!a.value) return;
     a.busy();
     try {
       const id = await create(a.value, from);
       closeLayer();
+      closeCreate();
       await refreshList();
       app.show(id);
     } catch (e) { a.fail(e.message); }
+  }
+
+  // ---- create with AI: a sentence in, a timeline out (docs/ACCOUNTS.md)
+  let model = 'deepseek', working = false, ticker = 0;
+  try { const m = localStorage.getItem(MODEL); if (MODELS.some((x) => x.id === m)) model = m; } catch (e) { /* fine */ }
+  const modelName = () => MODELS.find((m) => m.id === model).name;
+  const IDEAS = ['The history of jazz', 'Every mission to Mars', 'The life of Marie Curie', 'The Roman Republic', 'How the internet was built', 'The Himalaya, from rock to Everest'];
+  const STEPS = ['Reading up on the subject…', 'Choosing what belongs…', 'Checking the dates…', 'Writing the chapters…', 'Looking for pictures…', 'Laying out the road…'];
+  const seed = () => Math.random().toString(36).slice(2, 8);
+  const modelBtn = (id) => `<button type="button" class="cr-model" id="${id}" data-model-menu aria-haspopup="menu"><i></i><span>${esc(modelName())}</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>`;
+  const SEND = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>';
+  // The page in the middle: one box to say what the timeline is about.
+  function openCreate(text = '') {
+    explore(false);
+    const from = app.views()[0], src = from && app.view(from);
+    $('create').innerHTML = `<button class="ibtn ex-x" type="button" data-create-close aria-label="Close" title="Back to the timeline">${ICON.x}</button>
+      <div class="cr-in">
+        <h1>Make a timeline of anything.</h1>
+        <p class="ex-sub">Say the subject. codegrave writes the entries, the dates and the chapters, and draws the road.</p>
+        <form id="cr-form" class="cr-box">
+          <textarea id="cr-q" rows="2" maxlength="600" placeholder="The history of jazz, from New Orleans to today" aria-label="What is the timeline about?" required>${esc(text)}</textarea>
+          <div class="cr-row">${modelBtn('cr-model')}<span class="grow"></span><button type="submit" class="cr-go" aria-label="Make the timeline" title="Make the timeline">${SEND}</button></div>
+        </form>
+        <p id="cr-status" class="cr-status" role="status"></p>
+        <div class="cr-ideas">${IDEAS.map((t) => `<button type="button" data-idea>${esc(t)}</button>`).join('')}</div>
+        ${src ? `<p class="cr-alt">Or <button type="button" class="lnk" data-copy-view>start from a copy of “${esc(src.name)}”</button> and edit it by hand.</p>` : ''}
+      </div>`;
+    $('create').hidden = false;
+    document.body.classList.add('creating');
+    if (phone()) setOpen(false);
+    const q = $('cr-q');
+    q.focus(); q.setSelectionRange(q.value.length, q.value.length);
+    q.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); $('cr-form').requestSubmit(); } });
+    $('cr-form').addEventListener('submit', (e) => { e.preventDefault(); make(q.value.trim()); });
+  }
+  function closeCreate() { if (working) return; $('create').hidden = true; $('create').innerHTML = ''; document.body.classList.remove('creating'); }
+  function progress(el, on) {
+    clearInterval(ticker);
+    working = on;
+    document.body.classList.toggle('ai-busy', on);
+    if (!el) return;
+    el.classList.toggle('busy', on);
+    el.classList.remove('err');
+    if (!on) { el.textContent = ''; return; }
+    let i = 0;
+    el.textContent = STEPS[0];
+    ticker = setInterval(() => { i = Math.min(STEPS.length - 1, i + 1); el.textContent = STEPS[i]; }, 3500);
+  }
+  const fail = (el, e) => { if (el) { el.classList.add('err'); el.textContent = e.status === 401 ? 'Sign in again to make a timeline.' : e.message || 'That did not work. Try again.'; } else toast(e.message); };
+  const ask_ai = (prompt, current) => api('/functions/v1/ai-timeline', { method: 'POST', body: { prompt, model, ...(current ? { current } : {}) } });
+  async function make(prompt) {
+    if (working || prompt.length < 3) return;
+    if (!user) { try { sessionStorage.setItem(PROMPT, prompt); } catch (e) { /* fine */ } return signIn('Sign in to make this timeline. It is kept under your account, private until you publish it.'); }
+    const st = $('cr-status');
+    progress(st, true);
+    try {
+      const got = await ask_ai(prompt);
+      const file = specToView(got.spec, seed());
+      if (!file.entries.length) throw new Error('The model wrote no entries with dates. Try saying more about the subject.');
+      const id = await insert(file.spec.title, file.spec.description, { view: file.view, entries: file.entries, spec: file.spec, prompt });
+      progress(st, false);
+      closeCreate();
+      await refreshList();
+      await app.show(id);
+      toast(`Made with ${modelName()}: ${file.entries.length} entries. Ask for a change below, or publish it.`);
+    } catch (e) { progress(st, false); fail(st, e); }
+  }
+  // "Ask for a change": the same model reads the timeline and the request, and writes it again.
+  const specOf = (row) => { try { return JSON.parse(row.text).spec || null; } catch (e) { return null; } };
+  async function change(prompt) {
+    const row = current(), spec = row && specOf(row);
+    if (working || !spec || prompt.length < 3) return;
+    const st = $('ask-status');
+    progress(st, true);
+    try {
+      const got = await ask_ai(prompt, spec);
+      const file = specToView(got.spec, seed());
+      if (!file.entries.length) throw new Error('That change would leave the timeline empty.');
+      const before = { title: row.title, description: row.description, data: JSON.parse(row.text) };
+      await patch(row, { title: file.spec.title, description: file.spec.description, data: { view: file.view, entries: file.entries, spec: file.spec, prompt: before.data.prompt } });
+      progress(st, false);
+      $('ask-q').value = '';
+      toast(got.changed || 'Changed.', { undo: () => patch(row, before).catch((e) => toast(e.message)) });
+    } catch (e) { progress(st, false); fail(st, e); setTimeout(() => { if (st.classList.contains('err')) { st.textContent = ''; st.classList.remove('err'); } }, 7000); }
+  }
+  function pickModel(anchor) {
+    popover(anchor, MODELS.map((m) => `<button type="button" class="nv" data-model="${m.id}" role="menuitemradio" aria-checked="${m.id === model}"><span class="lbl">${esc(m.name)}</span><small>${esc(m.note)}</small>${m.id === model ? ICON.check || '' : ''}</button>`).join(''), 'menu models');
+  }
+  function setModel(id) {
+    model = id;
+    try { localStorage.setItem(MODEL, id); } catch (e) { /* fine */ }
+    closeLayer();
+    document.querySelectorAll('.cr-model span').forEach((n) => { n.textContent = modelName(); });
   }
   async function rename(row) {
     const a = await ask({ title: 'Rename', label: 'Name', value: row.title, ok: 'Save' });
@@ -366,10 +464,21 @@ export function createAccount(app) {
     $('sb-fold').setAttribute('aria-expanded', on);
     if (keep && !phone()) { try { localStorage.setItem(FOLD, on ? '1' : '0'); } catch (e) { /* fine */ } }
   }
-  // Explore: the views (search, topics, the list, the year filter) take the bar in place of the reader's own lists.
+  // Explore: a page over the road with every published timeline as a card (asked for, Nov 2026:
+  // the editors' own count as community timelines too). It steps aside when one is picked.
+  let people = [], asked = false;
   function explore(on) {
-    document.body.classList.toggle('sb-explore', on);
-    if (on) { setOpen(true, false); if (!phone()) $('vq').focus(); }
+    $('explore').hidden = !on;
+    document.body.classList.toggle('exploring', on);
+    $('sb-explore').classList.toggle('on', on);
+    if (!on) return;
+    if (phone()) setOpen(false); else $('vq').focus();
+    if (asked) return;
+    asked = true;
+    // What people have published, newest first: one request, the first time Explore opens.
+    api('/rest/v1/timelines?visibility=eq.public&select=id,title,description,entries,profiles(username)&order=updated_at.desc&limit=24')
+      .then((l) => { people = l.map((t) => ({ id: 't/' + t.id, name: t.title, description: t.description || '', author: t.profiles?.username || 'someone', type: 'community', count: t.entries })); app.listChanged(); })
+      .catch(() => { asked = false; });
   }
   function draw(force) {
     const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility].join('|');
@@ -384,6 +493,11 @@ export function createAccount(app) {
     // Beside the search: what this timeline is, and the way to publish it.
     $('tl-state').innerHTML = cur ? `<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
     document.body.classList.toggle('mine', !!cur);
+    const canAsk = !!cur && cur.text.includes('"spec":{');
+    if ($('ask').hidden === canAsk) {
+      $('ask').hidden = !canAsk;
+      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><input id="ask-q" type="text" maxlength="600" placeholder="Ask for a change: add the women of jazz, start in 1900…" aria-label="Ask for a change" autocomplete="off">${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Make the change" title="Make the change">${SEND}</button></div>` : '';
+    }
     $('pdf').hidden = on.some(isStored);        // the print page reads built view files only
   }
   // The buttons the entry pane shows for a signed-in reader.
@@ -397,16 +511,27 @@ export function createAccount(app) {
   function wire() {
     // On a phone, picking a view puts the drawer away. Caught on the way down: the list is redrawn by the pick.
     document.addEventListener('click', (e) => {
-      if (phone() && e.target.closest('#vlist li') && !e.target.closest('.radd, .vhead, .none')) setTimeout(() => setOpen(false), 0);
+      if (phone() && e.target.closest('#sb-list [data-open]')) setTimeout(() => setOpen(false), 0);
     }, true);
+    $('ask').addEventListener('submit', (e) => { e.preventDefault(); change($('ask-q').value.trim()); });
+    addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('create').hidden && $('layer').hidden) { e.stopImmediatePropagation(); closeCreate(); } }, true);
+    addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('explore').hidden && $('layer').hidden && !$('vq').value) { e.stopImmediatePropagation(); explore(false); } }, true);
     document.addEventListener('click', async (e) => {
       const el = (s) => e.target.closest(s);
       const layer = $('layer');
       if (!layer.hidden && (el('[data-close]') || e.target === layer)) return closeLayer();
       if (el('#sb-fold') || el('#sb-btn') || el('#sb-scrim')) return setOpen(!document.body.classList.contains('sb-open'));
-      if (el('#sb-new')) { if (phone()) setOpen(false); return newTimeline(); }
+      if (el('#sb-new')) return $('create').hidden ? openCreate() : closeCreate();
+      if (el('[data-create-close]')) return closeCreate();
+      if (el('[data-copy-view]')) return copyTimeline();
+      const idea = el('[data-idea]');
+      if (idea) { $('cr-q').value = idea.textContent; return $('cr-q').focus(); }
+      const mm = el('[data-model-menu]');
+      if (mm) return pickModel(mm);
+      const md = el('[data-model]');
+      if (md) return setModel(md.dataset.model);
       if (el('#sb-search')) { if (phone()) setOpen(false); return app.focusSearch(); }
-      if (el('#sb-explore')) return explore(true);
+      if (el('#sb-explore')) { closeCreate(); return explore($('explore').hidden); }
       if (el('[data-sb-home]')) return explore(false);
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
@@ -460,9 +585,12 @@ export function createAccount(app) {
       if (!user) await whoAmI();
       await refreshList();
       let intent = null; try { intent = sessionStorage.getItem(INTENT); sessionStorage.removeItem(INTENT); } catch (e) { /* fine */ }
-      if (intent === 'new') newTimeline();
+      if (intent === 'new') copyTimeline();
+      // A sentence typed before signing in: carry on with it.
+      let kept = ''; try { kept = sessionStorage.getItem(PROMPT) || ''; sessionStorage.removeItem(PROMPT); } catch (e) { /* fine */ }
+      if (kept) { openCreate(kept); make(kept); }
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { boot, start, explore, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
+  return { boot, start, explore, published: () => people, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
 }
