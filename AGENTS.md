@@ -342,10 +342,10 @@ How the page is put together:
   light runs along the way from place to place (`trail()`), so going on is seen even where the
   camera has no need to move. Livelier motions were tried and rejected ("not steady at all", "if you
   change orientation it will feel flaky, and user will find difficult to focus"), so do not add
-  swings or a camera that dives at every pin. Three clean ways are being picked from (`MOVES`,
-  `?move=turn|flight|frame`): the globe turns under a camera that keeps its height (the default);
-  the camera also comes down to each place; the camera frames a part of the world and stands still
-  while the story stays inside it. Near places are a short glide and only far ones pull back to the
+  swings or a camera that dives at every pin. The way it travels is "turn", picked from three clean ways: the globe turns
+  under a camera that keeps its height (`cams()`: a height that suits the place's neighbourhood and
+  changes by at most `STEP` from one place to the next, never tilted), so each place comes to the
+  same spot of the picture and its card to the same place. Near places are a short glide and only far ones pull back to the
   whole globe (asked for: "it doesn't need to jump out to the full globe"). Play takes a set time from each entry to the next (`globe.legSecs()`), longer for a long way. An
   entry with no place is a row on the time line at the foot; its card rises over its row while the
   map dims, and where most of a view has no place, or five or more in a row have none, the map goes
