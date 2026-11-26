@@ -9,6 +9,8 @@ import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf, addressOf, idOfAddress } from './keys.js';
 import { createWall } from './wall.js';
 import { createAccount } from './account.js';
+import { createViewer } from './picture.js';
+import { axisLabel } from './ai.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
@@ -98,7 +100,15 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     return { y: neg ? -y : y, m, d, time: time || '' };
   }
   // A written year in words. From 10,000 BCE back it is rounded and said as an age.
+  // A ranked list ("the 100 most popular foods", `axis: 'rank'` on its view) stands on the road by rank:
+  // rank n where the year n would be, written "#n" (asked for, Nov 2026). True while every view on the road is one.
+  // A measured list (`axis: 'scale'`: "the tallest buildings") stands on the road by its value, written "828 m".
+  // `AX` is the first view while the road is not in time, else null; `RANKED` says the road is not in time.
+  let RANKED = false, AX = null;
+  const axisKey = (v) => (v?.axis === 'scale' ? 'scale:' + v.id : v?.axis === 'rank' ? 'rank' : 'time');
+  const isRanked = () => state.views.length > 0 && axisKey(viewById.get(state.views[0])) !== 'time';
   function yearText(y) {
+    if (RANKED) return axisLabel(AX, y);
     if (y > 0) return y < 1000 ? y + ' CE' : String(y);
     const a = -y;
     if (a < 10000) return a + ' BCE';
@@ -124,6 +134,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const yearOfDate = (s) => yearText(writtenYear(s));
   // From one written year to another (null: to today), as briefly as reads well.
   function spanText(a, b) {
+    if (RANKED) return a === b || b == null ? yearText(a) : yearText(a) + ' – ' + yearText(b);
     if (b == null) return 'since ' + yearText(a);
     if (a === b) return yearText(a);
     const unit = (y) => (y > 0 ? 'ce' : -y < 1e4 ? 'bce' : -y < 1e5 ? 'kbce' : -y < 1e6 ? 'ago' : -y < 1e9 ? 'm' : 'b');
@@ -150,7 +161,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (a.m === b.m) return (a.d === b.d ? a.d : a.d + '–' + b.d) + ' ' + mon(a.m) + ' ' + a.y;
     return `${a.d} ${mon(a.m)} – ${b.d} ${mon(b.m)} ${a.y}`;
   }
-  const spanOf = (t) => daysOf(t) || spanText(writtenYear(t.bornEv.date), t.endEv ? writtenYear(t.endEv.date) : null);
+  const spanOf = (t) => (t.val || (t.pos ? '#' + t.pos : '')) || daysOf(t) || spanText(writtenYear(t.bornEv.date), t.endEv ? writtenYear(t.endEv.date) : null);
   function fmtSpan(years) {
     // Under a year it is told in months, weeks, days or hours (a step of a plan).
     if (years < 1) {
@@ -174,6 +185,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // A year on the bar, in at most four characters (asked for, Nov 2026): 1969, 500B (BCE), 3kB
   // (3000 BCE), 12k, 66M, 4.5G (thousand, million, billion years ago). The whole year is its title.
   function shortYear(y) {
+    if (RANKED) return axisLabel(AX, y, true);
     if (y > 0) return y < 1e4 ? String(y) : Math.round(y / 1e3) + 'k';
     const a = -y;
     if (a < 1e3) return a + 'B';
@@ -205,7 +217,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     }
     return new Set([bce, before ? ce : null].filter((y) => y != null));
   }
-  const eraText = (y, step, marked) => (y > -1e5 && !marked.has(y) ? (y > 0 ? String(y) : y > -1e4 ? String(-y) : group(-y)) : axisText(y, step, y > 0));
+  const eraText = (y, step, marked) => (RANKED ? axisLabel(AX, y) : y > -1e5 && !marked.has(y) ? (y > 0 ? String(y) : y > -1e4 ? String(-y) : group(-y)) : axisText(y, step, y > 0));
   const AXIS_UNITS = { ka: 'thousand', Ma: 'million', Ga: 'billion' };
   const AXIS_NAMES = { ka: 'kilo-annum', Ma: 'mega-annum', Ga: 'giga-annum' };
   // A year typed by the reader: "1969", "44 BCE", "-44", "500 bc", "66 ma", "4.6 billion years ago".
@@ -312,7 +324,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     t.startEv = ev('project_start') || null;
     t.depEv = ev('deprecated') || null;
     t.born = parseDate(t.bornEv.date);
-    t.end = t.endEv ? Math.max(parseDate(t.endEv.date), t.born) : null;
+    t.end = t.endEv ? Math.max(parseDate(t.endEv.date), t.born) : t.pos ? t.born : null;
     t.dep = t.depEv ? clamp(parseDate(t.depEv.date), t.born, t.end ?? NOW) : null;
     t.after = t.afterEv ? Math.min(NOW, t.afterEv.until ? parseDate(t.afterEv.until) : NOW) : null;
     t.lead = t.startEv ? Math.min(parseDate(t.startEv.date), t.born) : null;
@@ -552,6 +564,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (L || !state.views.length) drawResults();
     return loadView(real).then((got) => {
       pending.delete(real);
+      // A ranked or measured list does not share the road with years, nor with another list: it is shown alone.
+      if (got && state.views.length && state.views.some((x) => axisKey(viewById.get(x)) !== axisKey(viewById.get(got)))) {
+        note(`“${viewById.get(got)?.name}” is not laid out in years like the others, so it is shown on its own.`);
+        return showOnly(got, done);
+      }
       if (got && addView(got)) { if (done) done(got); else { changed(); roadToView(got); } }
       else { if (!got) note(`“${viewById.get(real)?.name || real}” could not be loaded. Try again in a moment.`); drawResults(); }
       return got;
@@ -563,7 +580,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   function setViews(ids) {
     state.views = []; state.colors.clear();
-    for (const id of ids) addView(alias.get(id) || id);
+    for (const id of ids) {
+      const v = viewById.get(alias.get(id) || id);
+      if (state.views.length && axisKey(v) !== axisKey(viewById.get(state.views[0]))) continue;
+      addView(alias.get(id) || id);
+    }
     if (state.views.length === 1) {
       const v = viewById.get(state.views[0]);
       if (v.order) state.order = v.order;
@@ -646,6 +667,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const around = (from, to) => {
       // A plan of days or weeks, or a few busy months, keeps its own length: the road is then drawn in
       // days and hours, not years (asked for, Nov 2026: "not forcefully always year").
+      if (RANKED) { const pad = Math.max(0.6, (to - from) * 0.02); return [from - pad, to + pad]; }
       if (to - from < FINE * 0.75) {
         const pad = Math.max(0.5 / 365.25, (to - from) * 0.04);
         const b = to <= NOW && to + pad > NOW ? NOW : to + pad;
@@ -671,12 +693,15 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       tMax = clamp(lineYear(state.span[1]) + 1, tMin + minGap, fitMax);
       if (tMax >= NOW_YEAR && fitMax <= NOW) tMax = Math.min(tMax, NOW);
     }
-    const inSpan = (t) => (t.lead ?? t.born) < tMax && (t.end ?? NOW) >= tMin;
+    // A step of a plan with no end that starts after today still stands where it starts.
+    const inSpan = (t) => (t.lead ?? t.born) < tMax && Math.max(t.end ?? NOW, t.born) >= tMin;
     return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
   }
   // ---------------------------------------------------------------- render
   function render() {
     if (!state.views.length) return renderEmpty();
+    RANKED = isRanked(); AX = RANKED ? viewById.get(state.views[0]) : null;
+    document.body.classList.toggle('ranked', RANKED);
     // The scale of the road changes with what is drawn, so the reader's place is carried over as a moment
     // (and how far into that moment's stretch of road, where several things share it).
     const keep = (x) => { if (!L || x == null) return null; const t = L.when(x); return { t, off: x - L.place(t) }; };
@@ -967,6 +992,17 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     for (const e of t.events || []) add(e.image);
     return (t.wm = out);
   }
+  // Every picture and film of an entry, for the full view: its own, its list, its events'.
+  function picturesOf(t) {
+    const out = [], add = (m, caption) => {
+      if (!m || !m.src || out.some((x) => x.src === mediaUrl(m.src))) return;
+      out.push({ type: m.type === 'video' ? 'video' : 'image', ...m, caption: m.caption || caption || '', src: mediaUrl(m.src), poster: m.poster ? mediaUrl(m.poster) : '' });
+    };
+    add(t.image);
+    for (const m of t.media || []) add(m);
+    for (const e of t.events || []) add(e.image, e.label);
+    return out;
+  }
   // One name on the road, in one of its forms. It is made when first shown and removed once it has faded.
   function roadNode(nk, p, end, mode) {
     const t = p.t, el = document.createElement('div'), m = roadSizes(t);
@@ -1218,7 +1254,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
 
       // The years: a line across the road at each written year, ticks on both edges.
       const fsOf = (s) => (G.phone ? Math.max(9.5, 8 + 13 * s) : Math.max(10, 9 + 25 * s));
-      const ticks = ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when });
+      const ticks = ruler({ t, dir, D, tMin: L.tMin, tMax: L.tMax, gh, fsOf, place: L.place, when: L.when, plain: RANKED });
       // The era goes on the years in sight: on screen, not faded and not behind a card.
       const marked = eraMarked(ticks.filter((tk) => {
         if (!tk.label) return false;
@@ -1418,8 +1454,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // millions or billions of years.
   function barTicks() {
     // A road of days has no use for the year range.
-    document.body.classList.toggle('fine', L.tMax - L.tMin < FINE);
-    if (L.tMax - L.tMin < FINE) return fineBarTicks();
+    const fine = !RANKED && L.tMax - L.tMin < FINE;
+    document.body.classList.toggle('fine', fine);
+    if (fine) return fineBarTicks();
     const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9);
     const atNow = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
@@ -1470,13 +1507,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function roadHud(all) {
     const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
-    const fine = L.tMax - L.tMin < FINE ? fineLabel(m) : null;
+    const fine = !RANKED && L.tMax - L.tMin < FINE ? fineLabel(m) : null;
     const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : fine ? fine[0] : playLabel(m);
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
       // What the era of the year in sight stands for, under the year, as deep time's units are (asked for, Nov 2026).
-      const yr = writtenOf(L.when(t)), era = fine ? (label === 'Today' ? '' : fine[1]) : label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
+      const yr = writtenOf(L.when(t)), era = RANKED ? '' : fine ? (label === 'Today' ? '' : fine[1]) : label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
@@ -1746,7 +1783,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     $('pills').innerHTML = state.views.map((id) => {
       const v = viewById.get(id);
       return `<div class="pill${many ? '' : ' one'}" data-pill="${esc(id)}" style="--c:${colVar(state.colors.get(id))}"${many ? ' title="Drag to reorder"' : ''}>` +
-        `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}</span>` +
+        `<button type="button" class="dot" data-colour="${esc(id)}" aria-label="Colour of ${esc(v.name)}" title="Colour"></button><span>${esc(v.name)}${v.count != null ? ` <small class="pn">(${group(v.count)})</small>` : ''}</span>` +
         (many ? `<button type="button" data-remove="${esc(id)}" aria-label="Remove ${esc(v.name)}" title="Remove">${ICON.xs}</button>` : '') + '</div>';
     }).join('');
     requestAnimationFrame(pillEdges);
@@ -1877,6 +1914,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       };
       for (const v of boot?.views || []) { const k = viewById.get(v.id); consider(k, fold(k.name), k.hay); }
       if (data) for (const v of data.views) consider(v, v.f, v.hay);
+      // People's published timelines, only when the filter asks for them (off by default; asked for, Nov 2026).
+      if ($('vpeople').checked) for (const v of account.searchPeople(raw, () => { if (fold($('vq').value.trim()) === q) runSearch(); })) consider(v, fold(v.name), fold(v.name + ' ' + v.description + ' ' + v.author));
       scored.sort((a, b) => b.s - a.s || (a.v.type === 'classical') - (b.v.type === 'classical') || a.v.name.localeCompare(b.v.name));
       found = scored.slice(0, 10);
       // A year: jump to it when it is drawn, and list what began or ended in it.
@@ -1988,9 +2027,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // ---------------------------------------------------------------- panel: history of one entry
   // A link to another entry: its name travels with the link, so it shows before that entry is loaded.
   function thingButton(id, name) { return `<button type="button" class="tlink" data-id="${esc(id)}">${esc(byId.get(id)?.name || name || id)}</button>`; }
+  // A picture in the panel opens in full over the page (site/picture.js).
   function figure(m, cls) {
     if (!m) return '';
-    return `<figure class="${cls}"><img src="${esc(mediaUrl(m.src))}" alt="${esc(m.alt)}" loading="lazy"><figcaption>${m.caption ? esc(m.caption) + ' ' : ''}<a href="${esc(m.source)}" target="_blank" rel="noopener">${esc(m.credit)}</a> · ${esc(m.licence)}</figcaption></figure>`;
+    return `<figure class="${cls}"><button type="button" class="pv-open" data-pv="${esc(mediaUrl(m.src))}" aria-label="View the picture in full"><img src="${esc(mediaUrl(m.src))}" alt="${esc(m.alt)}" loading="lazy"><span>View full</span></button><figcaption>${m.caption ? esc(m.caption) + ' ' : ''}<a href="${esc(m.source)}" target="_blank" rel="noopener">${esc(m.credit)}</a> · ${esc(m.licence)}</figcaption></figure>`;
   }
 
   // The way back: Timeline / an era / an entry / another entry. Opening something
@@ -2025,6 +2065,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
 
   function openThing(id, opts = {}) {
+    // While the editor is open, a card clicked on the road opens its row there.
+    if (account.editing() && account.editEntry(id)) return;
     const t = byId.get(id);
     // An entry not loaded yet (a link in the panel): fetch its detail file first.
     if (!t) { loadEntry(id).then((got) => { if (got) openThing(id, opts); }); return; }
@@ -2036,7 +2078,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const status = t.status === 'dead' ? w.dead : t.status === 'fading' ? 'fading' : t.end != null ? w.dead : w.alive;
     // The kind and the branch are classical views: each opens its view alone (asked for, Nov 2026).
     const kind = `<button type="button" class="vlink" data-show-view="${esc(t.cat.id)}" title="Show the view ${esc(t.cat.name)}">${esc(t.cat.name)}</button>${t.dom ? ' · <button type="button" class="vlink" data-show-view="' + esc(t.dom.id) + '" title="Show the view ' + esc(t.dom.name) + '">' + esc(t.dom.name) + '</button>' : ''}`;
-    const meta = `${esc(spanOf(t).replace(/^since (.*)$/, '$1 to today'))} · ${t.endEv ? 'lasted ' + fmtSpan(years) : fmtSpan(years) + ' so far'} · <b>${esc(status.toLowerCase())}</b>`;
+    const meta = t.val ? esc(t.val) : t.pos ? `Number ${t.pos} of ${L?.shown?.length || ''}`.trim() : `${esc(spanOf(t).replace(/^since (.*)$/, '$1 to today'))} · ${t.endEv ? 'lasted ' + fmtSpan(years) : fmtSpan(years) + ' so far'} · <b>${esc(status.toLowerCase())}</b>`;
     const labels = (t.labels || []).map((l) => labelName.get(l)).filter(Boolean);
     const aliases = (t.aliases || []).filter((a) => !t.names.some((n) => n.name === a));
 
@@ -2091,7 +2133,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       ${aliases.length ? `<p class="fine">Also known as ${aliases.map(esc).join(', ')}.</p>` : ''}
       ${t.names.length > 1 ? `<p class="fine">Names over time: ${t.names.map((n) => `${esc(n.name)} (${esc(yearOfDate(n.from))})`).join(', ')}.</p>` : ''}
       ${labels.length ? `<p class="labels" aria-label="Labels">${labels.map((l) => `<span>${esc(l)}</span>`).join('')}</p>` : ''}
-      <section><h3 class="cap">History</h3><ol class="history">${history}</ol></section>
+      ${t.pos ? '' : `<section><h3 class="cap">History</h3><ol class="history">${history}</ol></section>`}
       ${rel.length ? `<section><h3 class="cap">Connections</h3>${rel.join('')}</section>` : ''}
       <section><h3 class="cap">Sources</h3><ol class="sources">${(t.sources || []).map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.kind ? ` <small>${esc(s.kind)}</small>` : ''}</li>`).join('')}</ol>
         <p class="fine">${t.verified ? 'Dates checked against these sources.' : 'Its dates are not yet checked against a source.'}${t.topPct ? ` Ranked in the top ${t.topPct}% of ${esc(t.peers)}.` : ''}</p></section>
@@ -2145,7 +2187,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       ${list(`${w.ended} in these years`, ended, (t) => fmtDate(t.endEv.date, t.endEv.precision))}
       ${list('Carried on through it', lived, (t) => 'since ' + yearOfDate(t.bornEv.date))}
       ${!born.length && !ended.length ? '<p class="fine">Nothing in the views on the timeline began or ended in these years.</p>' : ''}
-      <div class="pane-foot">${c.dated ? '' : `<button type="button" class="btn solid" data-zoom="${c.from},${c.to}">Only these years</button>`}<button type="button" class="btn" data-play-from="${c.a}">Play from ${esc(c.dated ? fmtDate(c.from) : yearText(c.from))}</button></div>`;
+      <div class="pane-foot">${c.dated || RANKED ? '' : `<button type="button" class="btn solid" data-zoom="${c.from},${c.to}">Only these years</button>`}<button type="button" class="btn" data-play-from="${c.a}">Play from ${esc(c.dated ? fmtDate(c.from) : yearText(c.from))}</button></div>`;
     showPane('era');
     if ($('side').hidden) showSide(true);
     for (const el of document.querySelectorAll('[data-era]')) el.classList.toggle('hot', el.dataset.era === key);
@@ -2162,6 +2204,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // The year the reader stands in, said as briefly as the bar says it.
   function playLabel(t) {
     const y = writtenOf(t);
+    if (RANKED) return axisLabel(AX, Math.max(1, y));
     if (y > -1e5) return y > 0 ? String(y) : (-y) + ' BCE';
     return axisText(-sig(-y));
   }
@@ -2337,6 +2380,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     document.addEventListener('click', (e) => {
       const el = (sel) => e.target.closest(sel);
       if (el('[data-hide-side]')) return showSide(false);
+      const pv = el('[data-pv]');
+      if (pv) { const t = byId.get(state.open), list = t ? picturesOf(t) : []; return viewer.open(t?.name || '', list, Math.max(0, list.findIndex((m) => m.src === pv.dataset.pv))); }
       const crumb = el('[data-crumb]');
       if (crumb) return goCrumb(Number(crumb.dataset.crumb));
       if (el('[data-info-close]')) { $('info').hidden = true; $('info-btn').setAttribute('aria-expanded', false); return; }
@@ -2455,6 +2500,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     });
     $('qlist').addEventListener('pointerdown', (e) => { const li = e.target.closest('[data-h]'); if (li) { e.preventDefault(); goHit(Number(li.dataset.h)); } });
     $('vq').addEventListener('input', () => { drawChips(); runSearch(); });
+    // The search's filter: one switch, whether people's published timelines are searched too.
+    const fpop = (on) => { $('vfpop').hidden = !on; $('vfilter').setAttribute('aria-expanded', on); };
+    $('vfilter').addEventListener('click', (e) => { e.preventDefault(); fpop($('vfpop').hidden); });
+    $('vpeople').addEventListener('change', () => { $('vfilter').classList.toggle('on', $('vpeople').checked); runSearch(); });
+    document.addEventListener('click', (e) => { if (!$('vfpop').hidden && !e.target.closest('#vfpop, #vfilter')) fpop(false); });
     $('vq').addEventListener('focus', () => indexFor('a'));
     // A right click on a view puts it beside the others, like the plus at the end of its row.
     $('vlist').addEventListener('contextmenu', (e) => {
@@ -2707,9 +2757,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     followHash(false);     // otherwise the road opens where roadOpening() says
   }
   // Accounts and the reader's own timelines (account.js): the bar on the left. It borrows these from the page.
+  const viewer = createViewer(esc);
   const account = createAccount({
     $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => { account.explore(false); return showOnly(id); },
     open: (id) => { if (L) roadToView(id); },
+    // The editor: the road travels to the entry being edited, so its card stands open a little ahead.
+    goTo: (id) => { const p = L && L.at.get(id); if (p) roadTo(clamp(p.a - 0.3 * L.D * camDir(), L.tMin, L.tMax)); },
+    relayout: () => { showSide(false); if (state.views.length) render(); },
     listChanged: () => runSearch(),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),

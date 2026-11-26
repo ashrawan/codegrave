@@ -11,6 +11,7 @@
    The pages are measured in the browser, so everything is placed where it really fits. "Download PDF"
    then draws each page to an image (html2canvas) and saves them as one file (jsPDF), both fetched
    from cdnjs only when pressed; printing is left to the browser, whose print uses print.css. Pure helpers are exported for tests/print.test.mjs. */
+import { axisLabel } from './ai.js';
 
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 // The light theme's view colours (--p0 to --p7 in styles.css): inks that print well on white.
@@ -47,7 +48,11 @@ export function dateParts(s) {
   const [y, m, d] = (neg ? s.slice(1) : s).split('-').map(Number);
   return { y: neg ? -y : y, m, d };
 }
+// A ranked or measured list (`axis` on the view) is written by rank or value, not by year, and has no "Today".
+let AX = null;
+const TODAY = () => (AX ? '' : 'Today');
 export function yearText(y) {
+  if (AX) return axisLabel(AX, y);
   if (y > 0) return y < 1000 ? y + ' CE' : String(y);
   const a = -y;
   if (a < 10000) return a + ' BCE';
@@ -69,7 +74,7 @@ export function when(s) {
   const { y, m, d } = dateParts(s);
   return y + ((m || 1) - 1) / 12 + ((d || 1) - 1) / 365;
 }
-export const spanText = (a, b) => (b == null ? yearText(a) + ' – Today' : yearText(a) + ' – ' + yearText(b));
+export const spanText = (a, b) => (b == null ? yearText(a) + (AX ? '' : ' – Today') : yearText(a) + ' – ' + yearText(b));
 // Which side of the middle timeline a view stands on: like a die, read left to right, then down.
 export const sideOf = (i) => (i % 2 === 0 ? 'l' : 'r');
 // Letter where it is the usual paper (the US, Canada, Mexico, the Philippines, Chile, Colombia), else A4.
@@ -98,7 +103,7 @@ export function shapeView(payload, boot, i, span) {
     const img = e.image || (e.media || []).find((m) => m.type === 'image');
     return {
       vi: i, id: e.id, name: e.names.at(-1).name, kind: catName[e.category] || e.category, summary: e.summary || '',
-      t: when(born.date), y, end: end ? dateParts(end.date).y : null, date: fmtDate(born.date, born.precision), rank: e.rank ?? 1e9,
+      t: when(born.date), y, end: end ? dateParts(end.date).y : null, date: e.val || (e.pos ? '#' + e.pos : fmtDate(born.date, born.precision)), rank: e.rank ?? 1e9,
       endText: end ? `${w.ended} ${fmtDate(end.date, end.precision)}${e.cause ? '. ' + e.cause : ''}` : '',
       ci: chs.findIndex((c) => y >= c.from && y <= c.to),
       img: img ? { src: img.src, credit: String(img.credit || '').replace(/<[^>]*>/g, '').slice(0, 90), licence: img.licence || '' } : null,
@@ -121,8 +126,8 @@ let rev = false; // newest first, like the timeline turned round (`o=backward`)
 // Entries in reading order: oldest first, or newest first when reversed; the better ranked first within a moment.
 export const inOrder = (es, newest) => es.slice().sort((a, b) => (newest ? b.t - a.t : a.t - b.t) || a.rank - b.rank || a.vi - b.vi);
 // A span in reading order: "1957 – 1966", or "1966 – 1957" and "Today – 1957" when reversed.
-const rs = (a, b) => (rev ? (b == null ? 'Today' : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
-const ends = (first) => (rev ? ['Today', yearText(first)] : [yearText(first), 'Today']);
+const rs = (a, b) => (rev ? (b == null ? TODAY() : yearText(b)) + ' – ' + yearText(a) : spanText(a, b));
+const ends = (first) => (rev ? [TODAY(), yearText(first)] : [yearText(first), TODAY()]);
 // A view's address: <owner>/<view>, classical/<view> for a classical view (as addressOf() in keys.js).
 const addr = (id) => (id.includes('/') ? id : 'classical/' + id);
 const linkOf = (views) => 'https://codegrave.com/' + addr(views[0].id) + '?' + (views.length > 1 ? 'with=' + views.slice(1).map((v) => addr(v.id)).join(',') + '&' : '') + (yr ? 'yr=' + yr.join('-') + '&' : '') + 'o=' + (rev ? 'backward' : 'forward');
@@ -160,10 +165,10 @@ function single(D) {
     r.insertAdjacentHTML('beforeend', '<div class="mini"><div class="lab" style="padding-left:12.6mm">The whole view</div></div><div class="ax" style="top:6mm"></div>');
     keys.forEach((k) => {
       const h = (H - 8 * MM) * k.n / total;
-      r.insertAdjacentHTML('beforeend', '<div class="band" style="top:' + y + 'px;height:' + (h - 2) + 'px;background:' + T(k.i) + '"></div><div class="tl" style="top:' + y + 'px">' + esc(rev ? (k.c.to >= 1e9 ? 'Today' : yearText(k.c.to)) : yearText(k.c.from)) + '</div><div class="bn" style="top:' + (y + 2) + 'px">' + esc(k.c.name) + '<span>' + k.n + ' entries</span></div>');
+      r.insertAdjacentHTML('beforeend', '<div class="band" style="top:' + y + 'px;height:' + (h - 2) + 'px;background:' + T(k.i) + '"></div><div class="tl" style="top:' + y + 'px">' + esc(rev ? (k.c.to >= 1e9 ? TODAY() : yearText(k.c.to)) : yearText(k.c.from)) + '</div><div class="bn" style="top:' + (y + 2) + 'px">' + esc(k.c.name) + '<span>' + k.n + ' entries</span></div>');
       y += h;
     });
-    if (keys.length) r.insertAdjacentHTML('beforeend', '<div class="tl" style="top:' + y + 'px">' + esc(rev ? yearText(keys.at(-1).c.from) : 'Today') + '</div>');
+    if (keys.length) r.insertAdjacentHTML('beforeend', '<div class="tl" style="top:' + y + 'px">' + esc(rev ? yearText(keys.at(-1).c.from) : TODAY()) + '</div>');
   }
   // the pages: chapters and entries flow down the left; a page ends when the next one does not fit
   let page, main, items = [];
@@ -308,7 +313,7 @@ function many(V, inks) {
     const p = newManyPage('cover', 'Timelines from codegrave.com');
     p.insertAdjacentHTML('beforeend', '<div class="title"><h1>' + V.map((v) => esc(v.name)).join(' <span>·</span> ') + '</h1><p>' + N + ' views read side by side, ' + all.length + ' entries. The years run down the middle in order; each view keeps its side and its colour.</p></div>'
       + '<div class="body"><div class="col L"></div><div class="hub"><div class="ln"></div><div class="yr a"></div><div class="yr b">Today</div></div><div class="col R"></div></div>');
-    const top = yearText(Math.min(...V.map((v) => v.first))), bot = V[0].last != null ? yearText(V[0].last) : 'Today';
+    const top = yearText(Math.min(...V.map((v) => v.first))), bot = V[0].last != null ? yearText(V[0].last) : TODAY();
     p.querySelector('.yr.a').textContent = rev ? bot : top; p.querySelector('.yr.b').textContent = rev ? top : bot;
     V.forEach((v, i) => {
       const el = document.createElement('div'); el.className = 'panel ' + sideOf(i); el.style.setProperty('--c', inks[i]);
@@ -529,7 +534,7 @@ function poster(vs, inks, paper, fs) {
     if (curves) h += '<svg class="bends" viewBox="0 0 ' + S.w + ' ' + S.h + '" style="width:' + S.w + 'mm;height:' + S.h + 'mm">' + curves + '</svg>';
     // where this sheet sits in the whole span, when there are several
     const t0 = Math.min(...all.map((e) => e.y));
-    const from = rev && pi === 0 ? 'Today' : yearText(part[0].y), to = !rev && lastSheet ? 'Today' : yearText(part.at(-1).y);
+    const from = rev && pi === 0 ? TODAY() : yearText(part[0].y), to = !rev && lastSheet ? TODAY() : yearText(part.at(-1).y);
     // top right: the whole span as a bar in the chapters' colours (one view) or the views' (several),
     // with this sheet's stretch outlined. Like the book's bar (and the road), it is measured in entries,
     // not in years, so a long empty stretch of years does not swallow the chapters.
@@ -544,7 +549,7 @@ function poster(vs, inks, paper, fs) {
     const pk = part.map((e) => idxOf.get(e)).filter((k) => k != null);
     const win = sizes.length > 1 && pk.length ? (([l, w]) => '<b style="left:' + l + '%;width:' + Math.max(1.5, w) + '%"></b>')(seg(Math.min(...pk), Math.max(...pk))) : '';
     const label = sizes.length > 1 ? esc(from + ' – ' + to) : esc(rs(first, last));
-    const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? 'Today' : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : 'Today') + '</span></div></div>';
+    const mini = '<div class="where"><div class="mini">' + bands + win + '</div><div class="ends"><span>' + esc(rev ? TODAY() : yearText(t0)) + '</span><span class="pn">' + label + '</span><span>' + esc(rev ? yearText(t0) : TODAY()) + '</span></div></div>';
     // the heading: the span alone in the top right corner; below it the title on the left and the description on the right (first sheet)
     const head = mini + '<div class="t' + (pi ? ' sm' : '') + '"><h1>' + (pi ? title.replace(/<img class="th"[^>]*>/g, '') : title) + '</h1>' + (pi === 0 && one && vs[0].description ? '<p>' + esc(vs[0].description) + '</p>' : '') + '</div>';
     // the footer tells the story of this sheet: each chapter on it, in its colour, with its note
@@ -713,7 +718,9 @@ async function start() {
   try { kept = JSON.parse(sessionStorage.getItem('cg-print') || '{}') || {}; } catch (e) { kept = {}; }
   const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => (kept[id] ? Promise.resolve(kept[id]) : getJSON('v/' + id + '.json').catch(() => null)))]);
   const views = [], keep = [];
-  payloads.forEach((p, i) => { const sv = p && p.entries?.length ? shapeView(p, boot, views.length, yr) : null;
+  // Only views laid out the same way share a print: the first decides.
+  AX = payloads.find(Boolean)?.view?.axis ? payloads.find(Boolean).view : null;
+  payloads.forEach((p, i) => { if (p && (p.view?.axis || null) !== (AX?.axis || null)) return; const sv = p && p.entries?.length ? shapeView(p, boot, views.length, yr) : null;
     if (sv && sv.es.length) { views.push(sv); keep.push(inks[i]); } });
   if (!views.length) { $('msg').textContent = yr ? 'Nothing in these views begins between ' + yearText(yr[0]) + ' and ' + yearText(yr[1]) + '.' : 'These views could not be loaded.'; return; }
   document.title = views.map((v) => v.name).join(', ') + ' — codegrave';

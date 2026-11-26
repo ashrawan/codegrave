@@ -52,6 +52,8 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | What search engines and link previews read (title, description, Open Graph, `robots.txt`, the sitemap) | The `page meta` block in `site/index.html`, `site/robots.txt`, `writePages()` in `scripts/build.mjs` | `site/_redirects`, `site/sitemap.xml` (generated) |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
 | The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
+| Open in editor (a timeline of one's own as rows, the road live beside it) | `site/editor.js`, `site/editor.css`; the date reading and checks in `site/ai.js`, then `tests/ai.test.mjs` and `docs/ACCOUNTS.md` | |
+| The full picture (a picture in the panel opened over the page) | `site/picture.js`, its styles at the end of `site/styles.css` | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
@@ -156,7 +158,9 @@ How the page is put together:
   knows it as `t/<id>`; `loadView()` asks `account.fetchView()` for it,
   and its address is `/t/<id>`, or `/<username>/<slug>` once it is public
   (`addr()`). The username is picked once, when first publishing. One
-  username per account for now. Publish and its state sit beside the
+  username per account for now. The bar and the account menu show the
+  person who signed in (name or email), never the username, which is only
+  the space they publish under (asked for, Nov 2026). Publish and its state sit beside the
   search only while the road shows one timeline of the reader's own. The
   module borrows what it needs from the page through the object given to
   `createAccount()` and never reaches into `state`.
@@ -367,10 +371,10 @@ How the page is put together:
   the function always streams and refuses a model it does not offer.
   `specToView()` in `site/ai.js` turns a spec into a view file, stored
   with the spec beside it. For such a timeline of the reader's own, "Ask
-  AI" is a box of two rows attached to the strip at the foot of the road
-  (`#ask`, asked for in those words), in the strip's own colour and edge,
-  rising out of it with two soft shoulders (asked for: "resting on the
-  footer... not behind"): the model gets the spec and the
+  AI" is a lit, one-line pill standing just above the strip at the foot
+  of the road (`#ask`; design B of four, asked for in Nov 2026 with "that
+  should be above that footer"), growing to a few lines as it is typed
+  into: the model gets the spec and the
   request and writes the whole spec again; the toast says what changed and
   offers Undo. A timeline the reader keeps shows only its own pictures on
   the walls, never the eras' stand-ins (`L.own`). An entry made this way names its kind in
@@ -442,7 +446,9 @@ How the page is put together:
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
 - **The search and chips of Explore.** The search finds every timeline,
-  community and classical, and entries and years (`runSearch()`,
+  community and classical (people's published timelines too when the
+  filter at the end of the box has People's timelines on; off by default,
+  asked for, Nov 2026: `account.searchPeople()`), and entries and years (`runSearch()`,
   `drawResults()`); entries and years are slim rows under the cards.
   Pressing a chip lists that topic's timelines; pressing it again, or
   "All", goes back. Both search boxes have a cross that clears them
@@ -499,6 +505,36 @@ How the page is put together:
   above it). While play travels, what floats at the top (the phone's menu
   button, Publish) slides away (`body.playing`); pointing at the top edge
   brings it back (`body.peek`), and it returns when play stops.
+- **Open in editor** (`site/editor.js`, `docs/ACCOUNTS.md`; option 2 of
+  the designs, asked for in Nov 2026 with "no multiple tabs"): beside
+  Publish on a timeline of the reader's own made with AI. One page over the
+  left of the road (`#editor`, `body.editing`): the title and description
+  typed in place, every entry a row under its chapter, a row opening in
+  place; the road narrows to `--edroad` on the right and travels to the row
+  being edited (`goTo` lent by the page). It edits the spec and redraws
+  through `specToView()`; it saves by itself, with Undo and Redo. On a
+  phone an entry opens as a sheet with the road above it (`body.ed-sheet`).
+- **A ranked list** ("top 100 foods"; asked for, Nov 2026, because the
+  model laid such a list out by year): a spec with `axis: "rank"` gives
+  each entry a `rank` instead of dates (`cleanSpec()` numbers them again
+  1, 2, 3); rank n stands where the year n would, and its entry carries
+  `pos`. While every view on the road is ranked (`RANKED`, `body.ranked`)
+  every year is written "#n", the calendar marks and the year pill are off,
+  and the panel says "Number n of N". The pill in the strip shows a view's
+  number of entries in grey brackets (asked for, Nov 2026).
+  A measured list ("tallest buildings", "richest people") has
+  `axis: "scale"`: each entry a `value` and the spec a `unit`; entries
+  stand from smallest to largest, mapped onto years 1 to 1001 (`scaleYear()`
+  in `site/ai.js`, on a log scale when the values spread a hundredfold),
+  and the road writes the value (`axisLabel()`, `fmtValue()`). When the
+  model names no axis, `axisOfSpec()` infers it from what the entries
+  carry. Rank and scale entries have no events. Views on another axis than
+  the road's are shown alone, never side by side (`axisKey()`).
+- **The full picture** (`site/picture.js`; asked for, Nov 2026): a picture
+  in the panel shows "View full" and opens over the whole page, whole,
+  with its caption, credit, licence and the original, stepping through the
+  entry's pictures and films (arrows, keys, the strip, a swipe). A click
+  shows the picture at its own size; the page itself never zooms.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or
   landscape. A wall frame takes the shape of its picture (`fit()` in

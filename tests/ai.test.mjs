@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -111,4 +111,83 @@ test('a plan may be dated by the day and the hour, and its chapters by full date
   const f = specToView(s, 'p');
   assert.equal(f.entries[0].events[0].precision, 'minute');
   assert.ok(Math.abs(parseDate('2027-04-05T12:00') - parseDate('2027-04-05') - 0.5 / 365) < 1e-9);
+});
+
+test('readDate reads dates as people type them, and showDate writes them back', () => {
+  const pairs = [['20 Jul 1969', '1969-07-20'], ['July 1969', '1969-07'], ['Jul 20, 1969', '1969-07-20'], ['44 BCE', '-0044'],
+    ['Sat 3 Apr 2027, 09:30', '2027-04-03T09:30'], ['1969-07-20', '1969-07-20'], ['2027', '2027'], ['30 Feb 2026', ''], ['soon', ''], ['', '']];
+  for (const [typed, iso] of pairs) assert.equal(readDate(typed), iso, typed);
+  assert.equal(showDate('1969-07-20'), '20 Jul 1969');
+  assert.equal(showDate('2027-04-03T09:30'), '3 Apr 2027, 09:30');
+  assert.equal(showDate('-0044'), '44 BCE');
+  assert.equal(showDate(-44), '44 BCE');
+  for (const iso of ['1969', '1969-07', '1969-07-20', '2027-04-03T09:30', '-0044']) assert.equal(readDate(showDate(iso)), iso, iso);
+});
+
+test('readBound takes whole years or full dates for a chapter', () => {
+  assert.equal(readBound('1969'), 1969);
+  assert.equal(readBound('44 BCE'), -44);
+  assert.equal(readBound('27 Nov 2026'), '2026-11-27');
+  assert.equal(readBound('Nov 2026'), null);
+  assert.equal(readBound('later'), null);
+});
+
+test('chapterOf puts each entry in the chapter it starts in', () => {
+  const spec = cleanSpec({ chapters: [{ name: 'Week 1', from: '2026-11-27', to: '2026-12-03' }, { name: 'Week 2', from: '2026-12-04', to: '2026-12-10' }],
+    entries: [{ name: 'A', start: '2026-11-27' }, { name: 'B', start: '2026-12-03T18:00' }, { name: 'C', start: '2026-12-04' }, { name: 'D', start: '2027-01-01' }] });
+  assert.deepEqual(chapterOf(spec), [0, 0, 1, -1]);
+  const years = cleanSpec({ chapters: [{ name: 'Sixties', from: 1960, to: 1969 }], entries: [{ name: 'A', start: '1969-12-31' }, { name: 'B', start: '1970' }] });
+  assert.deepEqual(chapterOf(years), [0, -1]);
+});
+
+test('specProblem says why an edit cannot be kept', () => {
+  const ok = { entries: [{ name: 'A', start: '1969' }], chapters: [{ name: 'One', from: 1960, to: 1969 }] };
+  assert.equal(specProblem(ok), '');
+  assert.match(specProblem({ entries: [] }), /at least one/);
+  assert.match(specProblem({ entries: [{ name: '', start: '1969' }] }), /needs a name/);
+  assert.match(specProblem({ entries: [{ name: 'A', start: '1969' }, { name: 'a', start: '1970' }] }), /Two entries/);
+  assert.match(specProblem({ entries: [{ name: 'A', start: 'soon' }] }), /needs the date/);
+  assert.match(specProblem({ entries: [{ name: 'A', start: '1970', end: '1969' }] }), /ends before/);
+  assert.match(specProblem({ ...ok, chapters: [{ name: 'One', from: 1960, to: '1969-01-01' }] }), /same at both ends/);
+  assert.match(specProblem({ ...ok, chapters: [{ name: 'One', from: 1960, to: 1969 }, { name: 'Two', from: 1969, to: 1975 }] }), /overlap/);
+});
+
+test('a ranked list is laid out by rank, #1 first, with no dates', () => {
+  const spec = cleanSpec({ axis: 'rank', chapters: [{ name: 'Top 2', from: 1, to: 2 }], entries: [
+    { name: 'Rice', rank: 2 }, { name: 'Bread', rank: 1 }, { name: 'Noodles' }, { name: 'Rice', rank: 4 } ] });
+  assert.equal(spec.axis, 'rank');
+  assert.deepEqual(spec.entries.map((e) => [e.name, e.rank, e.start, e.end]), [['Bread', 1, '0001', ''], ['Rice', 2, '0002', ''], ['Noodles', 3, '0003', '']]);
+  const f = specToView(spec, 's1');
+  assert.equal(f.view.axis, 'rank');
+  assert.deepEqual(f.entries.map((e) => e.pos), [1, 2, 3]);
+  assert.ok(f.entries.every((e) => e.status === 'alive' && e.events.length === 1));
+  assert.deepEqual(chapterOf(spec), [0, 0, -1]);
+  assert.equal(specProblem({ axis: 'rank', entries: [{ name: 'Rice' }] }), '');
+  assert.equal(partialSpec('{"title":"Foods","axis":"rank","entries":[{"name":"Rice","rank":1}').axis, 'rank');
+});
+
+test('a measured list is laid out by value, with its unit', () => {
+  const spec = cleanSpec({ axis: 'scale', unit: 'm', chapters: [{ name: 'Under 500 m', from: 0, to: 500 }],
+    entries: [{ name: 'Burj Khalifa', value: 828 }, { name: 'Eiffel Tower', value: '330' }, { name: 'No height' }] });
+  assert.deepEqual(spec.entries.map((e) => [e.name, e.value]), [['Eiffel Tower', 330], ['Burj Khalifa', 828]]);
+  assert.equal(spec.log, false);
+  const f = specToView(spec, 's2');
+  assert.deepEqual(f.entries.map((e) => e.val), ['330 m', '828 m']);
+  assert.equal(f.entries[0].events[0].date, '0001-01-01');
+  assert.equal(f.entries[1].events[0].date, '1001-01-01');
+  assert.equal(axisLabel(f.view, 1001), '830 m');
+  assert.equal(axisLabel(f.view, 1001, true), '830');
+  assert.deepEqual(chapterOf(spec), [0, -1]);
+  // Values that span powers of ten get a log scale.
+  const far = cleanSpec({ axis: 'scale', unit: 'km', entries: [{ name: 'ISS', value: 400 }, { name: 'Moon', value: 384400 }, { name: 'Sun', value: 149600000 }] });
+  assert.equal(far.log, true);
+  assert.equal(fmtValue(149600000, 'km'), '150 million km');
+  assert.equal(fmtValue(999, '$'), '$999');
+  assert.match(specProblem({ axis: 'scale', entries: [{ name: 'A' }] }), /needs a value/);
+});
+
+test('a spec that names no axis takes the one its entries show', () => {
+  assert.equal(axisOfSpec({ entries: [{ name: 'A', start: '1969' }, { name: 'B', rank: 2 }] }), 'time');
+  assert.equal(axisOfSpec({ entries: [{ name: 'A', rank: 1 }, { name: 'B', rank: 2 }] }), 'rank');
+  assert.equal(axisOfSpec({ entries: [{ name: 'A', value: '1,200' }, { name: 'B', value: 3 }] }), 'scale');
 });

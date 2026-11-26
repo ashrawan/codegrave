@@ -7,6 +7,7 @@
    /t/<id>, or /<username>/<slug> once it is public. */
 import { shardOf } from './keys.js';
 import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js';
+import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
 export const CONFIG = {
@@ -112,7 +113,7 @@ export function createAccount(app) {
   }
   async function whoAmI() {
     const u = await api('/auth/v1/user');
-    user = { id: u.id, email: u.email || '', name: u.user_metadata?.user_name || u.user_metadata?.name || '' };
+    user = { id: u.id, email: u.email || '', name: u.user_metadata?.full_name || u.user_metadata?.name || u.user_metadata?.user_name || '' };
     session.user = user; save();
   }
   async function refreshList() {
@@ -126,7 +127,9 @@ export function createAccount(app) {
     for (const t of l) { const r = rows.get(t.id); if (r) Object.assign(r, t, { username: profile.username }); }
     draw(true);
   }
-  const shown = () => profile?.username || user?.name || (user?.email || '').split('@')[0] || 'You';
+  // The account is the person who signed in (their name or email); a username is only the space they
+  // publish under, kept apart from it (asked for, Nov 2026).
+  const shown = () => user?.name || (user?.email || '').split('@')[0] || 'You';
 
   // ---- timelines
   function payloadOf(row) {
@@ -186,6 +189,7 @@ export function createAccount(app) {
     Object.assign(row, got[0]);
     if (body.data) row.text = JSON.stringify(body.data);
     app.replace(payloadOf(row));
+    if (editor.row() === row) editor.reload();
     await refreshList();
   }
   async function ensureRow(uuid) { if (!rows.has(uuid)) await fetchView('t/' + uuid); return rows.get(uuid); }
@@ -211,6 +215,19 @@ export function createAccount(app) {
     toast('Removed from this timeline.', { undo: () => addEntryBack(row, entryId) });
   }
   async function addEntryBack(row, entryId) { try { await addEntry(row.id, entryId); } catch (e) { toast(e.message); } }
+
+  // "Open in editor": the timeline as rows, the road live beside it (site/editor.js).
+  const editor = createEditor({
+    $, esc, phone: () => matchMedia(PHONE).matches, toast: (t, o) => toast(t, o), popover: (a, h, c) => popover(a, h, c), closeLayer: () => closeLayer(),
+    async write(row, body) {
+      let got;
+      try { got = await api(`/rest/v1/timelines?id=eq.${row.id}&select=id,visibility,entries,updated_at`, { method: 'PATCH', headers: { Prefer: 'return=representation' }, body }); } catch (e) { throw e.code === '23514' ? new Error('That timeline is too large to keep.') : e; }
+      if (!got[0]) throw new Error('That timeline is no longer there.');
+      Object.assign(row, got[0]);
+    },
+    show: (row) => app.replace(payloadOf(row)), goTo: (id) => app.goTo(id), relayout: () => app.relayout(),
+    publish: (anchor) => publish(anchor), listChanged: () => refreshList().catch(() => {}),
+  });
 
   // ---- small pieces of interface
   let toastTimer = null;
@@ -619,6 +636,27 @@ export function createAccount(app) {
   // Explore: a page over the road with every published timeline as a card (asked for, Nov 2026:
   // the editors' own count as community timelines too). It steps aside when one is picked.
   let people = [], asked = false;
+  // People's published timelines that match a search, by name, description or username: two requests
+  // the first time a search is made, then kept. Returns what is known now; `again` runs when more arrives.
+  const found = new Map();
+  const asView = (t) => ({ id: 't/' + t.id, name: t.title, description: t.description || '', author: t.profiles?.username || 'someone', type: 'community', count: t.entries });
+  function searchPeople(raw, again) {
+    const q = raw.toLowerCase().replace(/[^\p{L}\p{N}_ -]/gu, ' ').replace(/\s+/g, ' ').trim().slice(0, 60);
+    if (q.length < 2) return [];
+    if (found.has(q)) return found.get(q) || [];
+    found.set(q, null);
+    const pat = encodeURIComponent('*' + q.replace(/ /g, '*') + '*'), sel = 'id,title,description,entries,profiles!inner(username)';
+    Promise.all([
+      api(`/rest/v1/timelines?visibility=eq.public&select=${sel}&or=(title.ilike.${pat},description.ilike.${pat})&order=updated_at.desc&limit=12`),
+      api(`/rest/v1/timelines?visibility=eq.public&select=${sel}&profiles.username=ilike.${pat}&order=updated_at.desc&limit=12`),
+    ]).then(([a, b]) => {
+      const m = new Map();
+      for (const t of [...a, ...b]) m.set(t.id, asView(t));
+      found.set(q, [...m.values()]);
+      again();
+    }).catch(() => { found.delete(q); });
+    return [];
+  }
   function explore(on) {
     $('explore').hidden = !on;
     document.body.classList.toggle('exploring', on);
@@ -629,7 +667,7 @@ export function createAccount(app) {
     asked = true;
     // What people have published, newest first: one request, the first time Explore opens.
     api('/rest/v1/timelines?visibility=eq.public&select=id,title,description,entries,profiles(username)&order=updated_at.desc&limit=24')
-      .then((l) => { people = l.map((t) => ({ id: 't/' + t.id, name: t.title, description: t.description || '', author: t.profiles?.username || 'someone', type: 'community', count: t.entries })); app.listChanged(); })
+      .then((l) => { people = l.map(asView); app.listChanged(); })
       .catch(() => { asked = false; });
   }
   function draw(force) {
@@ -642,15 +680,17 @@ export function createAccount(app) {
       ? `<h2 class="cap">Your timelines</h2>${NEW}<p class="sb-note">Sign in to make your own timelines and keep them here.</p>`
       : `<h2 class="cap">Your timelines</h2>${NEW}${!listed ? '' : list.length ? list.map((t, i) => `<div class="sb-row${on.length === 1 && on[0] === 't/' + t.id ? ' on' : ''}"><button type="button" class="nv" data-open="${t.id}" title="${esc(t.title)}"><i class="dot" style="background: var(--p${i % 8})"></i><span class="lbl">${esc(t.title)}</span>${t.visibility === 'private' ? '<small class="lbl">Draft</small>' : ''}</button><button type="button" class="ibtn sm more" data-more="${t.id}" aria-label="More for ${esc(t.title)}">${ICON.dots}</button></div>`).join('') : '<p class="sb-note">None yet. “New timeline” starts one from what is on the road.</p>'}`;
     $('sb-foot').innerHTML = user
-      ? `<button type="button" class="nv who" id="sb-me" aria-haspopup="menu"><i class="av">${esc(shown()[0].toUpperCase())}</i><span class="lbl"><b>${esc(shown())}</b><small>Free plan</small></span><span class="lbl chev">${ICON.chev}</span></button>`
+      ? `<button type="button" class="nv who" id="sb-me" aria-haspopup="menu"><i class="av">${esc(shown()[0].toUpperCase())}</i><span class="lbl"><b>${esc(shown())}</b><small>${esc(user.email || 'Free plan')}</small></span><span class="lbl chev">${ICON.chev}</span></button>`
       : `<button type="button" class="big" id="sb-in" title="Sign in">${ICON.login}<span class="lbl">Sign in</span></button>`;
     // Beside the search: what this timeline is, and the way to publish it.
-    $('tl-state').innerHTML = cur ? `<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
+    if (editor.isOpen() && editor.row() !== cur) editor.close();
+    const editable = !!cur && !working && cur.text.includes('"spec":{');
+    $('tl-state').innerHTML = cur ? `${editable ? '<button type="button" class="ebtn" id="ed-open"><span class="wide">Open in editor</span><span class="narrow">Edit</span></button>' : ''}<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
     document.body.classList.toggle('mine', !!cur);
     const canAsk = !!cur && cur.text.includes('"spec":{');
     if ($('ask').hidden === canAsk) {
       $('ask').hidden = !canAsk;
-      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><textarea id="ask-q" rows="2" maxlength="600" placeholder="Ask AI" aria-label="Ask AI to change this timeline"></textarea>${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Send" title="Send">${SEND}</button></div>` : '';
+      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><span class="ask-spark" aria-hidden="true">✦</span><textarea id="ask-q" rows="1" maxlength="600" placeholder="Ask AI for a change…" aria-label="Ask AI to change this timeline"></textarea>${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Send" title="Send">${SEND}</button></div>` : '';
     }
   }
   // The buttons the entry pane shows for a signed-in reader.
@@ -694,6 +734,7 @@ export function createAccount(app) {
       if (el('[data-sb-home]')) return explore(false);
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
+      if (el('#ed-open')) { const r = current(); if (r && !editor.open(r)) toast('This timeline cannot be opened in the editor.'); return undefined; }
       const open = el('[data-open]');
       if (open) { if (phone()) setOpen(false); return app.show('t/' + open.dataset.open); }
       const more = el('[data-more]');
@@ -704,7 +745,7 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>${esc(profile?.username ? location.host + '/' + profile.username : user.email)}</small></div><hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
+        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
         d.addEventListener('click', (x) => { const a = x.target.closest('[data-act]')?.dataset.act; if (!a) return; closeLayer(); if (a === 'out') signOut(); else $('theme').click(); });
         return undefined;
       }
@@ -751,5 +792,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { boot, start, explore, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
+  return { boot, start, explore, searchPeople, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
 }

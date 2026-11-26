@@ -113,6 +113,66 @@ would need one key per account (OpenRouter's key-provisioning API); that
 is not built. Entries made this way are not reviewed: they are marked
 unverified and carry a link to their Wikipedia article as the source.
 
+## Who is signed in, and where they publish
+
+The bar on the left and the account menu show the person who signed in:
+their name from Google or GitHub, else their email. A username is kept
+apart from that: it is only the space a person publishes under
+(`codegrave.com/<username>/<slug>`), picked on first publishing, and the
+menu shows it as "Publishes as" (asked for, Nov 2026).
+
+## Finding people's timelines
+
+The search in Explore has a filter (the sliders at its right end) with one
+switch, People's timelines, off by default. When it is on, the search also
+asks the database for public timelines whose name or description matches,
+or whose owner's username does (two requests per search, kept for the
+session; `searchPeople()` in `site/account.js`). Lately published ones are
+listed under All without it.
+
+## Ranked lists
+
+Not everything is a story in time. A request for a ranking ("the 100 most
+popular foods") gets `"axis": "rank"` from the model and a `rank` on each
+entry instead of dates; the road then stands them in rank order, #1 first,
+and writes "#n" wherever it would write a year. Chapters run from rank to
+rank. In the editor the Starts column becomes Rank: typing a rank moves the
+entry there. A timeline holds at most 100 entries.
+
+A measured list ("the tallest buildings", "the largest countries by area")
+gets `"axis": "scale"`, a `unit` on the spec and a `value` on each entry.
+The road stands them from smallest to largest and writes values ("828 m",
+"$1.2 trillion") instead of years; a spread of a hundredfold or more is
+drawn on a log scale. Entries without a value are dropped. If the model
+forgets the axis, the page works it out from what the entries carry
+(`axisOfSpec()`). Rank and scale entries have no events, and a view on one
+axis is never put beside a view on another: it is shown alone.
+
+## Open in editor
+
+A timeline made with AI can also be changed by hand. "Open in editor",
+beside Publish, swaps the road for one page (asked for, Nov 2026: one page,
+no tabs): the title and description typed in place, then every entry as a
+row under its chapter (picture, name, kind, starts, ends, weight). A click
+opens a row in place for its summary and Wikipedia article; Enter or a
+click elsewhere keeps it. A chapter is a heading that can be renamed, given
+other dates or deleted (its entries stay). The road stays live on the right
+and travels to the row being edited; a card clicked there opens its row.
+On a phone the list fills the screen and an entry opens as a sheet with the
+road above it.
+
+The editor changes the spec, the same file Ask AI rewrites, and turns it
+into the view file with `specToView()` after every change
+(`site/editor.js`), so the road, Ask AI and the export read one thing.
+Dates are typed as people write them ("20 Jul 1969", "44 BCE",
+"3 Apr 2027, 09:30"; `readDate()` and `showDate()` in `site/ai.js`). An
+edit that `cleanSpec()` would quietly drop (a date it cannot read, two
+entries of one name, chapters that overlap) is refused with the reason
+(`specProblem()`). Every change is kept by itself 0.7 s after the last one,
+and Undo and Redo (also Ctrl+Z and Ctrl+Shift+Z outside a field) step
+through the session's changes. A timeline without a spec (a copy of a view)
+is not offered the editor.
+
 ## Setting up sign-in (once, in the Supabase dashboard)
 
 1. **Authentication → URL Configuration**: set the Site URL to
