@@ -53,6 +53,8 @@ export function between(a, b, f) {
 
 // The zoom at which `km` on the ground, at latitude `lat`, is `px` pixels long.
 export const zoomFor = (km, px, lat = 0) => Math.log2((ROUND * Math.max(0.2, Math.cos(lat * RAD)) * px) / (TILE * Math.max(km, 0.05)));
+// The kilometres that `px` pixels show at a zoom, at latitude `lat`: zoomFor the other way round.
+export const spanKm = (zoom, px, lat = 0) => (ROUND * Math.max(0.2, Math.cos(lat * RAD)) * px) / (TILE * 2 ** zoom);
 // The camera tilts as it comes down: flat over the whole globe, about 55 degrees in a street.
 export function pitchFor(zoom) {
   const stops = [[3, 0], [6.2, 35], [10.4, 45], [14.6, 55]];

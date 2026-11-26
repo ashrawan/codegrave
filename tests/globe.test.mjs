@@ -98,3 +98,9 @@ test('between: a point on the way, along the shortest way', async () => {
   const d = between([10, 170], [10, -170], 0.5);
   assert.ok(Math.abs(Math.abs(d[1]) - 180) < 1e-6);
 });
+
+test('spanKm is zoomFor the other way round', async () => {
+  const { spanKm } = await import('../site/globe-path.js');
+  const z = zoomFor(1200, 400, 35);
+  assert.ok(Math.abs(spanKm(z, 400, 35) - 1200) < 1e-6);
+});

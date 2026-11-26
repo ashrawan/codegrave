@@ -21,24 +21,21 @@
    warm line, a faint grid of latitude and longitude, and the same map with
    streets close in. It is all lines and flat colour, so no pictures load.
    The module knows nothing about views or the road; the page hands it steps. */
-import { opening, greatCircle, between, distance, stageFor, coords, levelZoom, zoomFor, pitchFor, farAt, LEVELS } from './globe-path.js';
+import { opening, greatCircle, between, distance, stageFor, levelZoom, zoomFor, spanKm, pitchFor, farAt, LEVELS } from './globe-path.js';
 
 const LIB = 'https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.0/maplibre-gl.min';
 const TILES = 'https://tiles.openfreemap.org';
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
 const STARS = 240;        // stars that fly past in space
-// How the camera travels from place to place. It never stops: where the reader is between two entries decides
-// where the camera is between their places. `lin` is how much it lingers near a place (0: an even pace, 1: almost
-// a halt), `dip` how far it pulls back on the way (in zoom levels, for places far apart), `turn` how many degrees
-// it swings round as it passes a place, `secs` the seconds from one entry to the next (near, far).
-export const MOVES = {
-  glide: { lin: 0.75, dip: 0.9, turn: 0, secs: [3.6, 6.2] },
-  steady: { lin: 0.3, dip: 0.5, turn: 0, secs: [3, 5] },
-  orbit: { lin: 0.75, dip: 1.2, turn: 16, secs: [4.2, 7] },
-};
-// The designs of the time line at the foot, while one is being picked: a (dots, and rows for what has no place),
-// b (a scale of ticks, the entry in front named over the marker), c (the entries' names along the line).
-export const LINES = ['a', 'b', 'c'];
+// How the camera travels. It never stops, and it keeps the globe steady (asked for, Nov 2026: three livelier
+// motions were tried and all found "not steady at all": "if you change orientation it will feel flaky"). So it
+// does not turn, it does not dive and climb, and it moves the middle of the picture only as far as it must:
+const LINGER = 0.8;       // how much it slows near a place (0: an even pace, 1: a halt); between places it is quick
+const KEEP = 0.3;         // a place may stand this far from the middle, as a share of the way to the edge, before the camera follows
+const STEP = 0.9;         // zoom levels the height may change from one place to the next
+const SECS = [3, 4.4];    // seconds from one entry to the next: where the camera hardly moves, and where it goes far
+// The designs of the card, while one is being picked: a (a glass box), b (a label written on the map), c (a plate, picture beside the text).
+export const CARDS = ['a', 'b', 'c'];
 const PAST = 4;           // small pictures of the entries just passed, in space
 const clamp01 = (v) => Math.max(0, Math.min(1, v));
 
@@ -99,13 +96,12 @@ function styleOf() {
   };
 }
 
-export function createGlobe(host, { open, goTo, esc, calm, move, line }) {
-  const M = MOVES[move] || MOVES.glide, LINE = LINES.includes(line) ? line : 'a';
-  host.dataset.line = LINE;
+export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
+  host.dataset.card = CARDS.includes(design) ? design : 'a';
   host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
-    '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i><div class="g-cap"></div></div></div><p class="g-note" hidden></p>';
+    '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
   const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], shelf = host.children[4], note = host.children[5];
-  const rows = shelf.querySelector('.g-rows'), track = shelf.querySelector('.g-track'), cap = shelf.querySelector('.g-cap');
+  const rows = shelf.querySelector('.g-rows'), track = shelf.querySelector('.g-track');
   const S = { map: null, ready: false, steps: [], index: new Map(), cur: -1, last: null, stage: 'map', sig: '', until: 0, cardFor: -1, shown: 0, phone: false,
     xs: [], frac: 0, pos: null, was: 0, now: -1, vis: 0, dimv: 0, spv: 0, cam: [], placed: [], open: null, playing: false, warp: 0, stars: null, raf: 0, then: 0 };
   const far = () => (S.phone ? 0.9 : LEVELS.globe);
@@ -169,47 +165,50 @@ export function createGlobe(host, { open, goTo, esc, calm, move, line }) {
   }
 
   // ---- the camera: where it is follows from where the reader is, so it moves whenever they do
-  // Each place's own view: as close as the place is exact, but with the place before it still in the frame.
+  // Each place's own view. Its height: as close as the place is exact (its level), but with the places before and
+  // after it in the frame, and never more than STEP from its neighbours' heights, so a run of near places is one
+  // level glide. Its middle: where the last view's middle was, moved towards the place only until the place stands
+  // within KEEP of it. So between places in one part of the world the globe does not turn at all.
   function cams() {
     const sz = size(), f = far();
-    let prev = null;
     S.placed = [];
-    const pl = S.steps.map((s) => s.place).filter(Boolean);
-    S.cam = S.steps.map((s, i) => {
-      if (!s.place) return null;
-      let zoom = levelZoom(s.place[2]);
-      if (prev) { const km = distance(prev, s.place); if (km > 0.5) zoom = Math.min(zoom, zoomFor(km, 0.46 * sz, s.place[0])); }
-      // Nor does it dive far below the height it must climb to for the next place: two zoom levels at most.
-      const next = pl[S.placed.length + 1];
-      if (next) { const km = distance(next, s.place); if (km > 0.5) zoom = Math.min(zoom, zoomFor(km, 0.46 * sz, s.place[0]) + 2); }
-      prev = s.place; S.placed.push(i);
-      return { at: s.place, zoom: Math.max(farAt(f, s.place[0]), Math.min(zoom, LEVELS.spot)) };
-    });
-    const o = opening(S.steps.filter((s) => s.place).map((s) => s.place), sz, f);
+    S.steps.forEach((s, i) => { if (s.place) S.placed.push(i); });
+    const pl = S.placed.map((i) => S.steps[i].place);
+    const o = opening(pl, sz, f);
     S.open = { at: [o.center[1], o.center[0]], zoom: o.zoom };
+    const zs = pl.map((p, k) => {
+      let z = levelZoom(p[2]);
+      for (const q of [pl[k - 1], pl[k + 1]]) if (q) { const km = distance(q, p); if (km > 0.5) z = Math.min(z, zoomFor(km, 0.4 * sz, p[0])); }
+      return Math.max(farAt(f, p[0]), z);
+    });
+    for (let k = 1; k < zs.length; k++) zs[k] = Math.min(zs[k], zs[k - 1] + STEP);
+    for (let k = zs.length - 2; k >= 0; k--) zs[k] = Math.min(zs[k], zs[k + 1] + STEP);
+    let mid = S.open.at;
+    S.cam = S.steps.map(() => null);
+    pl.forEach((p, k) => {
+      const keep = Math.min(2400, KEEP * spanKm(zs[k], sz / 2, p[0])), d = distance(mid, p);
+      if (d > keep) mid = between(mid, p, 1 - keep / d);
+      S.cam[S.placed[k]] = { at: mid, zoom: Math.max(farAt(f, mid[0]), zs[k]) };
+    });
     S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.18) }) };
   }
   // The camera for a reader at `pos` (the number of the entry in front, and on towards the next): on the way from
-  // the last place before to the next one after, pulling back on the way when they lie far apart.
+  // the view of the last place before to the view of the next one after, slow near each and quick between.
   function camAt(pos) {
     if (!S.placed.length) return null;
     let P = -1, Q = -1;
     for (const i of S.placed) { if (i <= pos) P = i; else { Q = i; break; } }
     const A = P < 0 ? S.open : S.cam[P], B = Q < 0 ? A : S.cam[Q];
     const u = Q < 0 ? 0 : clamp01((pos - P) / (Q - P));
-    const e = u - (M.lin * Math.sin(2 * Math.PI * u)) / (2 * Math.PI), w = Math.sin(Math.PI * e) ** 2;
-    const km = distance(A.at, B.at), at = between(A.at, B.at, e);
-    const low = farAt(far(), at[0]);
-    const mid = Math.max(low, Math.min(A.zoom, B.zoom) - M.dip * Math.min(1, km / 1200));
-    const zoom = Math.max(low, (A.zoom + (B.zoom - A.zoom) * e) * (1 - w) + mid * w);
-    return { center: [at[1], at[0]], zoom, pitch: pitchFor(zoom), bearing: M.turn * Math.sin(Math.PI * pos), padding: S.pad };
+    const e = u - (LINGER * Math.sin(2 * Math.PI * u)) / (2 * Math.PI);
+    const at = between(A.at, B.at, e), zoom = Math.max(farAt(far(), at[0]), A.zoom + (B.zoom - A.zoom) * e);
+    return { center: [at[1], at[0]], zoom, pitch: pitchFor(zoom), bearing: 0, padding: S.pad };
   }
 
   // ---- the card of the entry in front
   function build(i) {
     const s = S.steps[i];
     S.cardFor = i;
-    cap.innerHTML = s ? `<i style="color:${s.col}">${esc(s.kind)}</i><b>${esc(s.name)}</b><span>${esc(s.when)}</span>` : '';
     // In space the picture of the entry in front fills the sky behind its card, and the last few passed stand small beside it.
     const space = S.stage === 'space', pic = space && s && s.img ? s.img : '';
     if (bimg.dataset.src !== pic) { bimg.dataset.src = pic; bimg.hidden = !pic; if (pic) bimg.src = pic; }
@@ -219,8 +218,7 @@ export function createGlobe(host, { open, goTo, esc, calm, move, line }) {
     if (!s) { card.hidden = true; lead.hidden = true; return; }
     card.hidden = false; card.classList.toggle('bare', !!pic);
     card.dataset.id = s.id; card.style.setProperty('--c', s.col); lead.style.setProperty('--c', s.col);
-    const where = s.place ? `<span class="g-pl">◎ ${esc(s.place[3] || coords(s.place))}${s.place[3] ? ` · ${coords(s.place)}` : ''}</span>` : `<span class="g-pl off">${S.stage === 'space' ? 'No place on the map' : 'No single place · shown off the map'}</span>`;
-    card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}${where}`;
+    card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
     if (img) img.addEventListener('error', () => { img.remove(); place(); });
     place();
@@ -244,34 +242,27 @@ export function createGlobe(host, { open, goTo, esc, calm, move, line }) {
       return;
     }
     const chip = track.querySelector('.on');
-    const mid = S.stage === 'space' || !chip ? W / 2 : chip.getBoundingClientRect().left - host.getBoundingClientRect().left + 14;
+    const mid = S.stage === 'space' || !chip ? W / 2 : chip.getBoundingClientRect().left - host.getBoundingClientRect().left + 4;
     const y = S.stage === 'space' ? Math.max(top0, card.classList.contains('bare') ? low - 34 : (H - foot - ch) * 0.42) : Math.max(top0, low - 26);
     card.style.transform = `translate(${Math.round(Math.max(12, Math.min(W - cw - 12, mid - cw / 2)))}px, ${Math.round(y)}px)`;
   }
 
-  // ---- the time line at the foot: it slides under a marker that stands still. Entries with a place are
-  // dots on it, entries with none are rows; a year is written where it changes and there is room.
+  // ---- the time line at the foot: it slides under a marker that stands still. The entries stand on it by name
+  // (picked from three designs, Nov 2026), one with no place in italics; a year is written where it changes.
   function drawShelf() {
     shelf.hidden = !S.steps.length;
     if (shelf.hidden) return;
-    let said = '', room = 1e9;
-    const wide = { a: [23, 170], b: [9, 9], c: [130, 130] }[LINE];
+    let said = '';
     track.innerHTML = S.steps.map((s, i) => {
-      const yr = s.mark && s.mark !== said && room >= 58 ? `<u>${esc(s.mark)}</u>` : '';
-      if (yr) { said = s.mark; room = 0; }
-      room += wide[s.place ? 0 : 1];
-      const tip = `title="${esc(s.name)}, ${esc(s.when)}" aria-label="${esc(s.name)}"`, off = s.place ? '' : ' off';
-      if (LINE === 'b') return `<button type="button" class="g-tk${off}" data-i="${i}" style="--c:${s.col}" ${tip}>${yr}</button>`;
-      if (LINE === 'c') return `<button type="button" class="g-nm${off}" data-i="${i}" style="--c:${s.col}"><b></b>${esc(s.name)}${yr}</button>`;
-      return s.place
-        ? `<button type="button" class="g-dot" data-i="${i}" style="--c:${s.col}" ${tip}>${yr}</button>`
-        : `<button type="button" class="g-chip" data-i="${i}" style="--c:${s.col}"><i>${esc(s.kind)}</i>${esc(s.name)}<span>${esc(s.when)}</span>${yr}</button>`;
+      const yr = s.mark && s.mark !== said ? `<u>${esc(s.mark)}</u>` : '';
+      if (yr) said = s.mark;
+      return `<button type="button" class="g-nm${s.place ? '' : ' off'}" data-i="${i}" style="--c:${s.col}" title="${esc(s.when)}"><b></b>${esc(s.name)}${yr}</button>`;
     }).join('');
     measure();
   }
   // Where each entry stands on the strip.
   function measure() {
-    S.xs = Array.from(track.children, (el) => el.offsetLeft + (el.classList.contains('g-chip') ? 14 : el.classList.contains('g-nm') ? 4 : el.offsetWidth / 2));
+    S.xs = Array.from(track.children, (el) => el.offsetLeft + 4);
     rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
   }
   function markShelf() {
@@ -410,9 +401,10 @@ export function createGlobe(host, { open, goTo, esc, calm, move, line }) {
     // The seconds play should take from the entry in front to the next: longer when the camera has far to go.
     legSecs() {
       const a = S.steps[S.cur], b = S.steps[S.cur + 1];
-      if (!a || !b) return M.secs[0] * 0.8;
-      if (!a.place || !b.place) return S.stage === 'space' ? M.secs[0] + 0.8 : M.secs[0];
-      return M.secs[0] + (M.secs[1] - M.secs[0]) * Math.min(1, distance(a.place, b.place) / 7000);
+      if (!a || !b) return SECS[0] * 0.8;
+      const A = S.cam[S.cur], B = S.cam[S.cur + 1];
+      if (!A || !B) return S.stage === 'space' ? SECS[0] + 0.8 : SECS[0] + 0.3;
+      return SECS[0] + (SECS[1] - SECS[0]) * Math.min(1, distance(A.at, B.at) / 4000);
     },
     resize() {
       S.phone = host.clientWidth < 700;

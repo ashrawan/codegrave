@@ -24,8 +24,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // The globe (globe.js): the same timeline drawn on the Earth. A first version, shown only when the link says `?globe`.
   const GLOBE = new URLSearchParams(location.search).has('globe');
   const DEEP = -5e6;
-  const LINE = new URLSearchParams(location.search).get('line');      // the design of the globe's time line, while that is being picked
-  const MOVE = new URLSearchParams(location.search).get('move');      // how the globe's camera travels, while that is being picked            // older than this, the continents stood elsewhere: such an entry has no place on today's map
+  const CARD = new URLSearchParams(location.search).get('card');      // the design of the globe's cards, while one is being picked
   const TOP = 14;               // a little air above the road. There is no bar across the top any more (asked for, Nov 2026)
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
@@ -627,7 +626,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function writeUrl() {
     const q = new URLSearchParams();
     if (state.views.length > 1) q.set('with', state.views.slice(1).map(addr).join(','));
-    if (GLOBE) { q.set('globe', '1'); if (MOVE) q.set('move', MOVE); if (LINE) q.set('line', LINE); }
+    if (GLOBE) { q.set('globe', '1'); if (CARD) q.set('card', CARD); }
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => colOut(state.colors.get(id))).join(','));
@@ -974,7 +973,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!globe) {
       document.body.classList.add('globe');
       $('globe').hidden = false;
-      globe = createGlobe($('globe'), { esc, calm, move: MOVE, line: LINE, open: (id) => openThing(id), goTo: (id) => roadToThing(id) });
+      globe = createGlobe($('globe'), { esc, calm, card: CARD, open: (id) => openThing(id), goTo: (id) => roadToThing(id) });
     }
     const dir = camDir(), P = roadPalette(), seen = new Set(), steps = [];
     road.gorder = L.shown.filter((p) => p.a >= L.tMin && p.a <= L.tMax && L.at.get(p.t.id) === p).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
