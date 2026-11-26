@@ -280,3 +280,18 @@ test('play slows where starts in one lane come close, so each stands in front a 
   // Starts already passed or far off do not count.
   assert.equal(windowPace([[0.01, 0.02, 5, 5.1]]), Infinity);
 });
+
+test('a short road is marked in months, weeks, days and hours, not years', async () => {
+  const { calMarks, dayText, FINE } = await import('../site/road.js');
+  const { parseDate } = await import('../site/rank.js');
+  assert.ok(FINE > 1);
+  const a = parseDate('2026-11-30'), b = parseDate('2026-12-30'), at = (t) => ((t - a) / (b - a)) * 800;
+  const m = calMarks(a, b, at, () => 40, 4).filter((k) => k.label);
+  assert.ok(m.some((k) => k.text === '1 Dec' && k.short === 'Dec'));
+  assert.ok(m.some((k) => k.text === 'Mon 7 Dec'));
+  for (let i = 1; i < m.length; i++) for (let j = 0; j < i; j++) assert.ok(Math.abs(m[i].p - m[j].p) >= 40);
+  assert.ok(m.every((k) => k.short.length <= 4));
+  assert.equal(dayText(parseDate('2027-04-03T09:30'), true), 'Sat 3 Apr 2027, 09:30');
+  const w = calMarks(a, a + 2 / 365, (t) => ((t - a) * 365) * 400, () => 40, 4, false);
+  assert.ok(w.every((k) => !/:/.test(k.text)));
+});

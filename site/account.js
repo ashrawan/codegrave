@@ -399,12 +399,23 @@ export function createAccount(app) {
       await patch(row, { data: { ...data, view: f.view, entries: f.entries, spec: f.spec } });
     } catch (e) { /* fine */ }
   }
-  // While a timeline is made, one line over the road says how far it has come.
-  function live(text) {
-    let el = $('ai-live');
-    if (!el) { el = document.createElement('p'); el.id = 'ai-live'; el.setAttribute('role', 'status'); document.body.append(el); }
-    el.hidden = !text;
-    el.textContent = text || '';
+  // While a timeline is made, a bar runs along the top edge of the strip at the foot, and the steps stand in
+  // the middle of the road, the one under way lit (asked for, Nov 2026: "a proper loading").
+  // `step` is 0 (reading up), 1 (writing entries, `n` so far) or 2 (finding pictures); null takes it away.
+  const MAKE_STEPS = ['Reading up on the subject', 'Writing the entries', 'Finding pictures'];
+  function live(step, n = 0) {
+    let el = $('ai-live'), bar = $('ai-bar');
+    if (!el) {
+      el = document.createElement('div'); el.id = 'ai-live'; el.setAttribute('role', 'status');
+      bar = document.createElement('div'); bar.id = 'ai-bar'; bar.innerHTML = '<i></i>';
+      document.body.append(el, bar);
+    }
+    el.hidden = bar.hidden = step == null;
+    if (step == null) { bar.firstChild.style.width = '0'; return; }
+    el.innerHTML = '<ol>' + MAKE_STEPS.map((s, i) => `<li class="${i < step ? 'done' : i === step ? 'now' : ''}">${s}${i === 1 && n ? ` <b>${n}</b>` : ''}</li>`).join('') + '</ol>';
+    // How far it has come: the entries are not counted ahead, so writing fills the bar more slowly as it goes.
+    const f = step === 0 ? 0.1 : step === 1 ? 0.15 + 0.65 * (1 - Math.exp(-n / 18)) : 0.9;
+    bar.firstChild.style.width = (f * 100).toFixed(1) + '%';
   }
   const draftTitle = (prompt) => prompt.replace(/\s+/g, ' ').trim().slice(0, 80).replace(/[.,;:!?\s]+$/, '') || 'New timeline';
   // Make a timeline: the page goes to the road at once and the timeline grows on it as the model writes.
@@ -424,9 +435,9 @@ export function createAccount(app) {
     working = true; document.body.classList.add('ai-busy');
     closeCreate(true);
     refreshList();
-    live('Reading up on the subject…');
+    live(0);
     await app.show(id);
-    let shown = 0, last = 0, opened = false, words = 'Writing…';
+    let shown = 0, last = 0, opened = false, pics = false;
     const put = (spec, data) => {
       const f = specToView(spec, sd);
       row.title = f.spec.title !== 'Untitled timeline' ? f.spec.title : row.title;
@@ -442,12 +453,12 @@ export function createAccount(app) {
         last = Date.now();
         const p = partialSpec(text);
         if (p.entries.length > shown || (p.title && row.title === draftTitle(prompt))) { shown = p.entries.length; put(p); }
-        live(shown ? `Writing… ${shown} ${shown === 1 ? 'entry' : 'entries'} so far` : words);
-      }, (note) => { words = note; if (!shown || /pictures/.test(note)) live(note); });
+        if (shown && !pics) live(1, shown);
+      }, (note) => { if (/pictures/.test(note)) { pics = true; live(2); } else if (/Writ/.test(note) && !shown) live(1); });
       const f = put(got.spec, (x) => ({ view: x.view, entries: x.entries, spec: x.spec, prompt }));
       if (!f.entries.length) throw new Error('The model wrote no entries with dates. Try saying more about what you want.');
       if (!got.saved) await patch(row, { title: f.spec.title, description: f.spec.description, data: JSON.parse(row.text) });
-      live('');
+      live(null);
       working = false; document.body.classList.remove('ai-busy');
       await refreshList();
       draw(true);
@@ -455,7 +466,7 @@ export function createAccount(app) {
       toast(`Made with ${modelName()}: ${f.entries.length} entries. Ask AI below to change it, or publish it.`);
       morePictures(row, sd);
     } catch (e) {
-      live('');
+      live(null);
       working = false; document.body.classList.remove('ai-busy');
       if (/connection was lost/.test(e.message)) return toast(e.message);
       // Nothing was made: the empty draft goes, and the request comes back to try again.

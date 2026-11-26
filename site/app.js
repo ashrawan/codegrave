@@ -9,7 +9,7 @@ import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf, addressOf, idOfAddress } from './keys.js';
 import { createWall } from './wall.js';
 import { createAccount } from './account.js';
-import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
+import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
   'use strict';
@@ -93,8 +93,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const sig = (v) => Number(v.toPrecision(3));
   function dateParts(s) {
     const neg = s[0] === '-';
-    const [y, m, d] = (neg ? s.slice(1) : s).split('-').map(Number);
-    return { y: neg ? -y : y, m, d };
+    const [day, time] = (neg ? s.slice(1) : s).split('T');
+    const [y, m, d] = day.split('-').map(Number);
+    return { y: neg ? -y : y, m, d, time: time || '' };
   }
   // A written year in words. From 10,000 BCE back it is rounded and said as an age.
   function yearText(y) {
@@ -115,7 +116,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (precision === 'circa') return deep(y) ? Y : 'c. ' + Y;
     if (!m || precision === 'year') return Y;
     if (!d || precision === 'month') return MONTHS[m - 1] + ' ' + Y;
-    return d + ' ' + MONTHS[m - 1] + ' ' + Y;
+    const { time } = dateParts(s);
+    return d + ' ' + MONTHS[m - 1] + ' ' + Y + (time ? ', ' + time : '');
   }
   // The short form used on the line itself: a month and year at most.
   const fmtShort = (s, precision) => fmtDate(s, precision === 'day' || precision == null ? 'month' : precision);
@@ -143,12 +145,21 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const a = dateParts(t.bornEv.date), b = dateParts(t.endEv.date);
     if (!a.d || !b.d || a.y !== b.y) return '';
     const mon = (m) => MONTHS[m - 1].slice(0, 3);
+    // A step by the hour: "3 Apr 2027, 09:00–11:30".
+    if (a.time && a.m === b.m && a.d === b.d) return `${a.d} ${mon(a.m)} ${a.y}, ${a.time}${b.time && b.time !== a.time ? '–' + b.time : ''}`;
     if (a.m === b.m) return (a.d === b.d ? a.d : a.d + '–' + b.d) + ' ' + mon(a.m) + ' ' + a.y;
     return `${a.d} ${mon(a.m)} – ${b.d} ${mon(b.m)} ${a.y}`;
   }
   const spanOf = (t) => daysOf(t) || spanText(writtenYear(t.bornEv.date), t.endEv ? writtenYear(t.endEv.date) : null);
   function fmtSpan(years) {
-    if (years < 1) return 'under a year';
+    // Under a year it is told in months, weeks, days or hours (a step of a plan).
+    if (years < 1) {
+      const d = years * 365.25;
+      if (d < 1) { const h = Math.round(d * 24); return h <= 1 ? 'an hour' : h + ' hours'; }
+      if (d < 14) { const n = Math.round(d); return n + (n === 1 ? ' day' : ' days'); }
+      if (d < 60) return Math.round(d / 7) + ' weeks';
+      return Math.round(d / 30.44) + ' months';
+    }
     const n = Math.round(years);
     const ph = matchMedia(PHONE).matches;
     if (n >= 1e9) return sig(n / 1e9) + (ph ? 'B' : ' billion') + ' years';
@@ -352,8 +363,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function replaceView(payload) {
     const id = payload.view.id;
     viewById.delete(id);
+    // Its entries are taken afresh too: one being made with AI gets its picture only at the end.
+    for (const e of payload.entries || []) byId.delete(e.id);
     useView(payload);
-    if (state.views.includes(id)) changed();
+    // The cards on the road are drawn afresh from the new entries (a picture may have come in).
+    if (state.views.includes(id)) { for (const n of road.nodes.values()) n.el.remove(); road.nodes.clear(); changed(); }
   }
   function forgetView(id) { viewById.delete(id); removeView(id); }
   // A stored timeline's address is its owner's once it is public; any other view's is its id.
@@ -464,7 +478,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // The named eras (chapters). Each belongs to a view and is drawn across its lane, in its colour.
   // Era years are whole written years; `a` and `b` are where they start and end on the line.
   function viewEras(v) {
-    return (v.checkpoints || []).map((c) => ({ ...c, view: v, key: v.id + '/' + c.id, a: lineYear(c.from), b: lineYear(c.to) + 1, years: spanText(c.from, c.to) }))
+    // A plan's chapters may be full dates ("2027-04-01"); then the chapter runs to the end of its last day.
+    const dated = (c) => typeof c.from === 'string';
+    const dayEnd = (s) => (/T/.test(s) ? parseDate(s) : parseDate(s) + 1 / 365.25);
+    return (v.checkpoints || []).map((c) => ({ ...c, view: v, key: v.id + '/' + c.id, dated: dated(c),
+      a: dated(c) ? parseDate(c.from) : lineYear(c.from), b: dated(c) ? dayEnd(c.to) : lineYear(c.to) + 1,
+      years: dated(c) ? (c.from === c.to ? fmtDate(c.from) : fmtDate(c.from) + ' – ' + fmtDate(c.to)) : spanText(c.from, c.to) }))
       .sort((x, y) => x.a - y.a);
   }
   function erasNow() { return state.views.flatMap((id) => viewEras(viewById.get(id))); }
@@ -625,6 +644,13 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const last = all.length ? Math.max(...all.map((t) => Math.max(t.end ?? NOW, t.born, t.after ?? -Infinity))) : NOW;
     // Rounded out to a step that suits the span, with a little room at each end.
     const around = (from, to) => {
+      // A plan of days or weeks, or a few busy months, keeps its own length: the road is then drawn in
+      // days and hours, not years (asked for, Nov 2026: "not forcefully always year").
+      if (to - from < FINE * 0.75) {
+        const pad = Math.max(0.5 / 365.25, (to - from) * 0.04);
+        const b = to <= NOW && to + pad > NOW ? NOW : to + pad;
+        return [from - pad, b];
+      }
       const room = Math.max(10, to - from), pad0 = Math.max(1, room * 0.03), unit = niceStep(room / 40);
       const b = to > NOW + 0.003 ? Math.ceil(to + 0.1) : to >= NOW - 0.5 ? NOW : Math.min(NOW, Math.ceil((to + pad0) / unit) * unit);
       return [Math.floor(Math.min(from - pad0, b - 10) / unit) * unit, b];
@@ -640,7 +666,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     }
     let tMin = autoMin, tMax = fitMax;
     if (state.span) {
-      const minGap = Math.max(2, (fitMax - fitMin) / 500);
+      const minGap = Math.max(fitMax - fitMin < FINE ? 1 / 365.25 : 2, (fitMax - fitMin) / 500);
       tMin = clamp(lineYear(state.span[0]), fitMin, fitMax - minGap);
       tMax = clamp(lineYear(state.span[1]) + 1, tMin + minGap, fitMax);
       if (tMax >= NOW_YEAR && fitMax <= NOW) tMax = Math.min(tMax, NOW);
@@ -778,8 +804,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // Do the views bring pictures of their own for the media wall? Enough of them (15 in 100 entries) and the wall shows only those.
     // A timeline someone made shows only its own pictures, never the stand-ins of the eras, which belong to
     // other subjects (reported, Nov 2026: "it was showing all other images from previous loaded view").
-    const own = lanes.some((ln) => ln.view.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
-    L = { own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
+    // A stored timeline counts even while it is still empty, being made, so no stand-in shows behind it.
+    const own = state.views.some((id) => viewById.get(id)?.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
+    L = { eps: Math.min(0.01, (tMax - tMin) / 2000), own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
   }
@@ -1197,7 +1224,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         if (!tk.label) return false;
         const y = py(tk.s), x = px(G.RW, tk.s) + 15 * tk.s + 1 + (G.phone ? 4 : 7);
         return far(tk.s) > 0.3 && y > G.top + 8 && y < G.SH - tk.fs * 0.5 && !covered(x - 4, y - tk.fs * 0.55, x + tk.fs * 3.2, y + tk.fs * 0.55);
-      }).map((tk) => tk.y));
+      }).map((tk) => tk.y).filter((y) => y != null));
       for (const tk of ticks) {
         // A year fades in from the horizon, and out as it slides under the reader's feet.
         const s = tk.s, y = py(s), xl = px(-G.RW, s), xr = px(G.RW, s), a = far(s) * clamp(2.4 - s * 1.5, 0, 1) * clamp((G.SH - y) / (tk.fs * 0.9), 0, 1);
@@ -1206,13 +1233,13 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         c.strokeStyle = rgba(P.ink, (tk.label ? 0.75 : 0.42) * a);
         c.beginPath(); c.moveTo(xl, y); c.lineTo(xl - len, y); c.moveTo(xr, y); c.lineTo(xr + len, y); c.stroke();
         if (!tk.label) continue;
-        const text = eraText(tk.y, tk.step, marked), x = xr + len + (G.phone ? 4 : 7), room = G.SW - x - 3;
+        const text = tk.text ?? eraText(tk.y, tk.step, marked), x = xr + len + (G.phone ? 4 : 7), room = G.SW - x - 3;
         let fs = tk.fs;
         font(500, fs);
         const tw = c.measureText(text).width;
         if (tw > room) { fs = Math.max(8.5, (fs * room) / tw); font(500, fs); }
         // A year steps aside while a card stands over it, rather than show half its digits.
-        const ya = soft('y' + tk.y, covered(x - 4, y - fs * 0.55, x + Math.min(tw, room) + 4, y + fs * 0.55) ? 0 : 1);
+        const ya = soft('y' + (tk.key ?? tk.y), covered(x - 4, y - fs * 0.55, x + Math.min(tw, room) + 4, y + fs * 0.55) ? 0 : 1);
         if (ya < 0.01) continue;
         c.textBaseline = 'middle'; c.textAlign = 'left'; c.fillStyle = rgba(P.text, (0.45 + 0.5 * Math.min(1, s)) * a * ya);
         c.fillText(text, x, y);
@@ -1300,7 +1327,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
           let lastY = Infinity;
           const ms = dir > 0 ? p.t.marks : [...p.t.marks].reverse();
           for (const m of ms) {
-            if (m.t <= p.t.born + 0.01 || m.t >= (p.t.end ?? NOW) - 0.01 || m.t < L.tMin || m.t > L.tMax) continue;
+            if (m.t <= p.t.born + L.eps || m.t >= (p.t.end ?? NOW) - L.eps || m.t < L.tMin || m.t > L.tMax) continue;
             const u = U(L.place(m.t));
             if (u <= uGone || u >= uFar * 0.5) continue;
             const s = S(u), x = px(p.xn, s), y = py(s), hl = 6 * s + 1.5, a = far(s) * h * clamp(1 + (u + 0.06 * D) / (0.1 * D), 0, 1);
@@ -1369,7 +1396,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         const s = S(uEnd), y = py(s), a = far(s);
         c.strokeStyle = rgba(P.text, 0.85 * a); c.lineWidth = 1.4;
         c.beginPath(); c.moveTo(px(-G.RW, s) - 10 * s, y); c.lineTo(px(G.RW, s) + 10 * s, y); c.stroke();
-        if (dir > 0 && L.tMax >= NOW - 0.5 && L.tMax <= NOW + 0.01) {
+        if (dir > 0 && L.tMax >= NOW - (L.tMax - L.tMin < FINE ? 0.003 : 0.5) && L.tMax <= NOW + 0.01) {
           font(600, Math.max(10, 9 + 9 * s));
           c.textBaseline = 'middle'; c.textAlign = 'right'; c.fillStyle = rgba(P.text, 0.9 * a);
           c.fillText('Today', px(-G.RW, s) - 16 * s - 4, y);
@@ -1390,6 +1417,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // are written where there is room (yearMarks in road.js), BCE marked, and deep time in thousands,
   // millions or billions of years.
   function barTicks() {
+    // A road of days has no use for the year range.
+    document.body.classList.toggle('fine', L.tMax - L.tMin < FINE);
+    if (L.tMax - L.tMin < FINE) return fineBarTicks();
     const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9);
     const atNow = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
@@ -1413,16 +1443,40 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     L.barYears = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, y: parseFloat(el.style.top), under: false }));
     L.units = [...used];
   }
+  // The bar of a fine road: months, Mondays, days or hours, in at most four characters ("Apr", "12", "9h").
+  function fineBarTicks() {
+    const atNow = L.tMax >= NOW - 0.003 && L.tMax <= NOW + 0.003, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
+    const marks = calMarks(L.tMin, L.tMax, (t) => barY(L.place(t)), () => gap, 7, L.tMax - L.tMin < 8 / 365.25);
+    let html = '';
+    for (const k of marks) {
+      const y = k.p.toFixed(1);
+      if (!k.label) html += `<i class="tk" style="top:${y}px"></i>`;
+      else if (atNow && Math.abs(k.p - yEnd) < 22) html += `<i class="tk big" style="top:${y}px"></i>`;
+      else html += `<span class="yr" style="top:${y}px" title="${esc(k.title)}">${esc(k.short)}</span>`;
+    }
+    if (atNow) html += `<span class="yr now" style="top:${yEnd}px" title="Today">Now</span>`;
+    $('ticks').innerHTML = html;
+    L.barYears = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, y: parseFloat(el.style.top), under: false }));
+    L.units = [];
+  }
+  // Where the reader stands on a fine road: the day large ("30 Nov"), or the hour when the road is a few
+  // days long, and under it the rest ("Monday, 2026").
+  function fineLabel(t) {
+    const [wd, d, mon, y, time] = dayText(t, true).replace(',', '').split(' ');
+    const long = { Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday', Fri: 'Friday', Sat: 'Saturday', Sun: 'Sunday' }[wd];
+    return L.tMax - L.tMin < 4 / 365.25 ? [time, `${long} ${d} ${mon} ${y}`] : [d + ' ' + mon, long + ', ' + y];
+  }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
     const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
-    const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : playLabel(m);
+    const fine = L.tMax - L.tMin < FINE ? fineLabel(m) : null;
+    const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : fine ? fine[0] : playLabel(m);
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
       // What the era of the year in sight stands for, under the year, as deep time's units are (asked for, Nov 2026).
-      const yr = writtenOf(L.when(t)), era = label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
+      const yr = writtenOf(L.when(t)), era = fine ? (label === 'Today' ? '' : fine[1]) : label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
@@ -1978,7 +2032,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     state.open = id;
     if (!L || !L.at.has(id)) state.pinned.add(id);
     const w = t.words;
-    const years = (t.end ?? NOW) - t.born;
+    const years = Math.max(0, (t.end ?? NOW) - t.born);
     const status = t.status === 'dead' ? w.dead : t.status === 'fading' ? 'fading' : t.end != null ? w.dead : w.alive;
     // The kind and the branch are classical views: each opens its view alone (asked for, Nov 2026).
     const kind = `<button type="button" class="vlink" data-show-view="${esc(t.cat.id)}" title="Show the view ${esc(t.cat.name)}">${esc(t.cat.name)}</button>${t.dom ? ' · <button type="button" class="vlink" data-show-view="' + esc(t.dom.id) + '" title="Show the view ' + esc(t.dom.name) + '">' + esc(t.dom.name) + '</button>' : ''}`;
@@ -2080,16 +2134,18 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const ws = new Set([...born, ...ended].map((t) => t.words));
     const w = ws.size === 1 ? [...ws][0] : NEUTRAL;
     const list = (title, arr, date) => arr.length ? `<section><h3 class="cap">${esc(title)} · ${arr.length}</h3><ul class="era-list">${arr.map((t) => row(t, date(t))).join('')}</ul></section>` : '';
-    const n = c.to - c.from + 1 - (c.from < 0 && c.to > 0 ? 1 : 0);
+    const n = c.dated ? 0 : c.to - c.from + 1 - (c.from < 0 && c.to > 0 ? 1 : 0);
+    const days = c.dated ? Math.max(1, Math.round((c.b - c.a) * 365.25)) : 0;
+    const length = c.dated ? (days % 7 === 0 && days > 7 ? days / 7 + ' weeks' : days + (days === 1 ? ' day' : ' days')) : fmtSpan(n);
     $('p-era').innerHTML = `
       <div class="pane-head">${crumbs()}<button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
-      <div><h2 class="serif" id="era-title" tabindex="-1">${esc(c.name)}</h2><p class="era-years">${esc(c.years)} · ${fmtSpan(n)}${c.view ? ' · a chapter of ' + esc(c.view.name) : ''}</p></div>
+      <div><h2 class="serif" id="era-title" tabindex="-1">${esc(c.name)}</h2><p class="era-years">${esc(c.years)} · ${length}${c.view ? ' · a chapter of ' + esc(c.view.name) : ''}</p></div>
       ${c.note ? `<p class="summary">${esc(c.note)}</p>` : ''}
       ${list(`${w.born} in these years`, born, (t) => fmtDate(t.bornEv.date, t.bornEv.precision))}
       ${list(`${w.ended} in these years`, ended, (t) => fmtDate(t.endEv.date, t.endEv.precision))}
       ${list('Carried on through it', lived, (t) => 'since ' + yearOfDate(t.bornEv.date))}
       ${!born.length && !ended.length ? '<p class="fine">Nothing in the views on the timeline began or ended in these years.</p>' : ''}
-      <div class="pane-foot"><button type="button" class="btn solid" data-zoom="${c.from},${c.to}">Only these years</button><button type="button" class="btn" data-play-from="${c.a}">Play from ${esc(yearText(c.from))}</button></div>`;
+      <div class="pane-foot">${c.dated ? '' : `<button type="button" class="btn solid" data-zoom="${c.from},${c.to}">Only these years</button>`}<button type="button" class="btn" data-play-from="${c.a}">Play from ${esc(c.dated ? fmtDate(c.from) : yearText(c.from))}</button></div>`;
     showPane('era');
     if ($('side').hidden) showSide(true);
     for (const el of document.querySelectorAll('[data-era]')) el.classList.toggle('hot', el.dataset.era === key);
