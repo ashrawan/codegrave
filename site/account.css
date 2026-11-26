@@ -37,10 +37,10 @@ body.sb-open { --sb: 260px; }
 
 /* Explore: a page over the road, like the gallery of a community. Every published timeline is a card. */
 .nv.on { color: var(--text); background: var(--raised); }
-#explore { position: fixed; top: 52px; left: var(--sb); right: 0; bottom: 0; z-index: 30; overflow-y: auto; overscroll-behavior: contain; background: var(--bg); }
+#explore { position: fixed; top: 0; left: var(--sb); right: 0; bottom: 0; z-index: 30; overflow-y: auto; overscroll-behavior: contain; background: var(--bg); }
 #explore[hidden] { display: none; }
 #explore::before { content: ''; position: absolute; inset: 0 0 auto; height: 380px; pointer-events: none; background: radial-gradient(55% 100% at 50% 0, color-mix(in srgb, var(--acc) 10%, transparent), transparent 70%); }
-.ex-x { position: fixed; top: 62px; right: 14px; z-index: 2; }
+.ex-x { position: fixed; top: 14px; right: 14px; z-index: 2; }
 body.exploring .tsearch, body.exploring #tl-state { display: none; }
 .ex-in { position: relative; max-width: 1160px; margin: 0 auto; padding: 44px 36px 72px; }
 .ex-head { text-align: center; }
@@ -84,7 +84,7 @@ body.exploring .tsearch, body.exploring #tl-state { display: none; }
 .ex-foot .lnk { font-size: 13px; }
 
 /* New timeline: a page over the road with one box, like the first screen of a chat. */
-#create { position: fixed; top: 52px; left: var(--sb); right: 0; bottom: 0; z-index: 30; display: flex; overflow-y: auto; background: var(--bg); }
+#create { position: fixed; top: 0; left: var(--sb); right: 0; bottom: 0; z-index: 30; display: flex; overflow-y: auto; background: var(--bg); }
 #create[hidden] { display: none; }
 #create::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(50% 55% at 50% 38%, color-mix(in srgb, var(--acc) 9%, transparent), transparent 70%); }
 body.creating .tsearch, body.creating #tl-state { display: none; }
@@ -138,7 +138,7 @@ body.side-open .yr { right: calc(var(--side) + var(--bar) + 14px); }
 .yr.open .yr-pop { display: block; }
 body.playing .yr:not(.open), body.exploring .yr { display: none; }
 #toggle-side { display: none; }
-#more-menu { position: fixed; top: 56px; right: 12px; z-index: 40; min-width: 240px; padding: 6px; background: var(--surf); border: 1px solid var(--glass-edge); border-radius: 14px; box-shadow: 0 16px 40px rgba(0, 0, 0, .45); }
+#more-menu { position: fixed; left: calc(var(--sb) + 8px); bottom: 62px; z-index: 40; min-width: 240px; padding: 6px; background: var(--surf); border: 1px solid var(--glass-edge); border-radius: 14px; box-shadow: 0 16px 40px rgba(0, 0, 0, .45); }
 #more-menu[hidden] { display: none; }
 #more-menu .nv { text-decoration: none; }
 @media (min-width: 861px) { #info { left: calc(var(--sb) + 12px); right: auto; } }
@@ -221,15 +221,42 @@ body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
 #toast[hidden] { display: none; }
 #toast button { padding: 0; font-weight: 600; color: var(--acc); background: none; border: 0; }
 
-@media (max-width: 860px) {
-  .tsearch { left: 16px; }
-}
+/* No bar across the top (asked for, Nov 2026: "only on the left side, so the middle canvas stays
+   full"). What it held is in the bar on the left; the search is a box that shows while it is used. */
+.top { height: 52px; padding: 0 calc(var(--bar) + 14px) 0 14px; background: none !important; border: 0; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; pointer-events: none; }
+.top > * { pointer-events: auto; }
+body.side-open .top { right: var(--side); }
+#axisbar { top: 0; }
+@media (min-width: 700px) { #side { top: 0; } }
+#info { top: 16px; }
+#road-views { top: 22px; }
+#road-head { top: 26px; }
+body.mine #road-head { top: 58px; }
+.tsearch { position: fixed; left: calc(var(--sb) + (100vw - var(--sb)) / 2); top: 72px; z-index: 45; width: min(580px, calc(100vw - var(--sb) - 32px)); height: 50px; padding: 0 14px 0 18px; gap: 12px; background: var(--surf) !important; border-color: var(--glass-edge) !important; border-radius: 25px; box-shadow: 0 24px 64px rgba(0, 0, 0, .5); opacity: 0; pointer-events: none !important; transition: opacity .12s; }
+body.searching .tsearch { opacity: 1; pointer-events: auto !important; }
+.tsearch input { font-size: 15px; }
+.tsearch kbd { display: none; }
+#sb-search kbd { flex: none; padding: 0 6px; font: 11px/18px Inter, sans-serif; color: var(--faint); border: 1px solid var(--rule2); border-radius: 4px; }
+#sb-tools { flex: none; display: flex; gap: 2px; padding: 2px; }
+body:not(.sb-open) #sb-tools { flex-direction: column; align-items: center; }
+#unzoom { position: fixed; z-index: 90; display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; font-size: 14px; font-weight: 600; color: #141005; background: var(--acc); border: 0; border-radius: 20px; box-shadow: 0 8px 24px rgba(0, 0, 0, .5); transform-origin: 50% 0; }
+#unzoom[hidden] { display: none; }
+/* Two fingers travel the road; they do not zoom the page. */
+html, body { touch-action: pan-x pan-y; }
 /* Phones: the bar slides in from the left, over the road, behind a menu button. */
 @media (max-width: 699px) {
   :root, body.sb-open { --sb: 0px; }
-  #sb-btn { display: inline-flex; width: 44px; height: 44px; margin-left: -8px; color: var(--text); }
-  .top { padding-left: 12px; }
-  .tsearch { left: 56px; }
+  /* the menu button floats over the road, top left */
+  #sb-btn { display: inline-flex; flex: none; width: 42px; height: 42px; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 50%; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+  .top { padding: 0 calc(var(--bar) + 8px) 0 10px; }
+  .tsearch { left: 50%; top: 60px; width: calc(100vw - 20px); }
+  #road-views { top: 18px; max-width: calc(100% - 124px); }
+  #road-head { top: 64px; }
+  body.mine #road-head { top: 64px; }
+  #more-menu { left: 12px; bottom: 124px; }
+  #sb-search kbd { display: none; }
+  /* a field under 16px makes a phone's browser zoom in when it is tapped */
+  input, textarea, select { font-size: 16px !important; }
   #sb { width: min(310px, 82vw); padding-bottom: 18px; transform: translateX(-102%); transition: transform .22s ease; box-shadow: 12px 0 40px rgba(0, 0, 0, .4); }
   body.sb-open #sb { transform: none; }
   body:not(.sb-open) #sb .lbl { display: revert; }
@@ -256,7 +283,6 @@ body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
   #sb-scrim { position: fixed; inset: 0; z-index: 31; background: rgba(5, 7, 12, .6); opacity: 0; pointer-events: none; transition: opacity .22s; }
   body.sb-open #sb-scrim { opacity: 1; pointer-events: auto; }
   #tl-state .st { display: none; }
-  body.mine .tsearch { right: 200px; }
   .modal .dlg { padding: 32px 22px 24px; }
   .nv { min-height: 44px; }
 }

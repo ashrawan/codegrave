@@ -18,7 +18,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const EDITORS = 'wiki';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
   const MAX_ROWS = 800;         // the most lines drawn at once
-  const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
+  const TOP = 14;               // a little air above the road. There is no bar across the top any more (asked for, Nov 2026)
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
     succeeded_by: 'succeeded by', forked_from: 'forked from', merged_into: 'merged into',
@@ -2351,8 +2351,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       c.addEventListener('click', (e) => { e.preventDefault(); box.value = ''; box.dispatchEvent(new Event('input')); box.focus(); });
       sync();
     }
-    $('q').addEventListener('focus', () => { indexFor('a'); if ($('q').value) findOnTimeline(); });
-    $('q').addEventListener('blur', () => setTimeout(() => drawHits(''), 150));
+    // The search shows only while it is used: a box over the road, opened from the bar on the left or with "/".
+    $('q').addEventListener('focus', () => { document.body.classList.add('searching'); indexFor('a'); if ($('q').value) findOnTimeline(); });
+    $('q').addEventListener('blur', () => setTimeout(() => { drawHits(''); if (document.activeElement !== $('q')) document.body.classList.remove('searching'); }, 150));
     $('q').addEventListener('keydown', (e) => {
       if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && hits.length) { e.preventDefault(); hit = (hit + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length; drawHits(fold($('q').value.trim())); }
       else if (e.key === 'Enter') { e.preventDefault(); goHit(Math.max(0, hit)); }
@@ -2525,6 +2526,25 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       else showSide(false);
     });
     addEventListener('hashchange', () => followHash(true));
+
+    // A phone that is zoomed in (two fingers, or a browser that zooms into a field) is hard to get back
+    // from, because the page does not scroll. "Reset zoom" appears while it is, and puts the page back.
+    const vv = window.visualViewport, meta = document.querySelector('meta[name="viewport"]');
+    if (vv && meta) {
+      const was = meta.content;
+      const place = () => {
+        const on = vv.scale > 1.05;
+        $('unzoom').hidden = !on;
+        if (on) { $('unzoom').style.left = vv.offsetLeft + vv.width / 2 + 'px'; $('unzoom').style.top = vv.offsetTop + 10 / vv.scale + 'px'; $('unzoom').style.transform = `translateX(-50%) scale(${1 / vv.scale})`; }
+      };
+      vv.addEventListener('resize', place);
+      vv.addEventListener('scroll', place);
+      $('unzoom').addEventListener('click', () => {
+        document.activeElement?.blur?.();
+        meta.content = was + ', maximum-scale=1';
+        setTimeout(() => { meta.content = was; place(); }, 350);
+      });
+    }
   }
   function drawReverse() {
     const b = $('reverse'), rev = state.order === 'new';

@@ -299,9 +299,7 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 @media (max-width: 1100px) { :root { --side: 340px; } }
 @media (max-width: 860px) {
   #info { right: 12px; left: 12px; width: auto; z-index: 26; }
-  .top { padding-left: 16px; }
   .logo span { display: none; }
-  .tsearch { left: 56px; right: 130px; width: auto; transform: none; }
   .tsearch kbd { display: none; }
 }
 /* Phones: the panel is a sheet over the lower half. The road and its bar

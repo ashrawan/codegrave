@@ -345,7 +345,21 @@ How the page is put together:
   at the bottom right of the road; pressed, it opens the range with its
   picture of busy years (moved there from the views pane on request, Nov
   2026). It hides while play travels.
-- **The three-dot menu** (`#more-btn`, `#more-menu`, top right; asked for,
+- **There is no bar across the top** (asked for, Nov 2026: "the top
+  navigation bar we only want on the left side, so the middle canvas stays
+  full"). What it held is in the bar on the left: Search, and at its foot
+  the theme switch and the three dots (`#sb-tools`). The search box
+  (`.tsearch`, `#q`) is a box over the road that shows only while it is
+  used (`body.searching`): Search in the bar or "/" opens it. `.top` is
+  now an unseen strip that holds the phone's round menu button (top left)
+  and, top right, the state and Publish button of a timeline of the
+  reader's own. `TOP` is only a little air above the road.
+- **A phone must never get stuck zoomed in** (reported, Nov 2026). Two
+  fingers do not zoom the page (`touch-action: pan-x pan-y`), fields are
+  16px on a phone so the browser does not zoom into them, and if the page
+  is zoomed anyway a "Reset zoom" button appears at the top of what is in
+  sight (`#unzoom`, placed from `visualViewport`) and puts it back.
+- **The three-dot menu** (`#more-btn`, `#more-menu`, at the foot of the bar on the left; asked for,
   Nov 2026) holds what is used rarely: Turn round (reverse, `state.order`,
   `#reverse`), How to read the timeline, and the GitHub link.
 - **The panel** on the right is only for one thing at a time: it is hidden
@@ -427,14 +441,11 @@ How the page is put together:
   A link to an entry that is not loaded shows its name and loads on click.
 - "Propose it to the editors" at the foot of Explore opens the "Propose a view" issue
   form with the current link filled in.
-- **Play takes the whole screen.** The top bar floats over the road: the
-  road (`#stage`) always fills the page from the top, and keeps a band of
-  `TOP` pixels clear (`stageOf(SW, SH, top)` puts the road and the names
-  below it), so nothing moves when the bar comes and goes. While play
-  travels the bar slides away (`body.playing`); pointing at the top edge
-  brings it back (`body.peek`), over the open panel too (asked for, Nov
-  2026), and it returns when play stops. Asked for in Nov 2026: do not make the
-  road move with the bar again.
+- **Play takes the whole screen.** The road (`#stage`) always fills the
+  page from the top (`stageOf(SW, SH, top)` keeps `TOP` pixels of air
+  above it). While play travels, what floats at the top (the phone's menu
+  button, Publish) slides away (`body.playing`); pointing at the top edge
+  brings it back (`body.peek`), and it returns when play stops.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or
   landscape. A wall frame takes the shape of its picture (`fit()` in
