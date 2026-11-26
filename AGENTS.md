@@ -337,16 +337,16 @@ How the page is put together:
   waits: it all moves exactly while the reader does. This was asked for after a first version that
   flew to a place and stood there ("it shows the card and freezes there. But should be more like it
   keeps moving", "we wanted a smooth approach"); do not bring back a flight with a hold. The camera
-  is on the way from the view of the last place to the view of the next (`camAt()`), slow near each
-  and quick between (`LINGER`), and it keeps the globe steady: it never turns, and each place's view
-  (`cams()`) is as close as the place is exact (its level: spot, city, region, country) but with the
-  places before and after it in the frame and at most `STEP` zoom levels from its neighbours', and
-  its middle moves towards the place only until the place stands within `KEEP` of it, so between
-  places in one part of the world the globe does not turn at all. Three livelier motions were tried
-  first and all rejected ("not steady at all", "if you change orientation it will feel flaky, and
-  user will find difficult to focus"), so do not add swings, dives or a camera centred on every pin.
-  Near places are a short glide and only far ones pull back to the whole globe (asked for: "it
-  doesn't need to jump out to the full globe"). Play takes a set time from each entry to the next (`globe.legSecs()`), longer for a long way. An
+  is on the way from the view of the last place to the view of the next (`camAt()`); it comes to
+  rest at each place and is quickest half way, with no speed ever jumped to, north stays up, and a
+  light runs along the way from place to place (`trail()`), so going on is seen even where the
+  camera has no need to move. Livelier motions were tried and rejected ("not steady at all", "if you
+  change orientation it will feel flaky, and user will find difficult to focus"), so do not add
+  swings or a camera that dives at every pin. Three clean ways are being picked from (`MOVES`,
+  `?move=turn|flight|frame`): the globe turns under a camera that keeps its height (the default);
+  the camera also comes down to each place; the camera frames a part of the world and stands still
+  while the story stays inside it. Near places are a short glide and only far ones pull back to the
+  whole globe (asked for: "it doesn't need to jump out to the full globe"). Play takes a set time from each entry to the next (`globe.legSecs()`), longer for a long way. An
   entry with no place is a row on the time line at the foot; its card rises over its row while the
   map dims, and where most of a view has no place, or five or more in a row have none, the map goes
   out of sight and the reader flies on among the stars with no Earth (`stageFor()`; asked for: "it
@@ -359,8 +359,9 @@ How the page is put together:
   sound button stand at the strip's right end (asked for), and the strip slides under a marker that
   stands still, with a year written where it changes. The entries stand on it by name, one with no place in italics (design C, picked from three).
   A card shows the picture, kind, dates, name and summary, and neither coordinates nor a note that
-  an entry has no place (asked for: "it will be in details"). Three designs of the card are being
-  picked from (`CARDS`, `?card=a|b|c`): a glass box, a label written on the map, a plate. The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
+  an entry has no place (asked for: "it will be in details"). The card is a label written on the map, with no box and a rule in the view's colour
+  (design B, picked from three; a glass box on a phone). The credits the map's licences ask for
+  are folded behind a small button, not written on the map (asked for). The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
   first and found "a bit heavy"): dark land, coasts in a warm line, a faint grid, the same map with
   streets close in. From far off the land is Natural Earth's small-scale coast
   (`site/media/land.json`, public domain); from country height down it is OpenFreeMap's tiles, free

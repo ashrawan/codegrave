@@ -21,21 +21,23 @@
    warm line, a faint grid of latitude and longitude, and the same map with
    streets close in. It is all lines and flat colour, so no pictures load.
    The module knows nothing about views or the road; the page hands it steps. */
-import { opening, greatCircle, between, distance, stageFor, levelZoom, zoomFor, spanKm, pitchFor, farAt, LEVELS } from './globe-path.js';
+import { opening, greatCircle, between, distance, stageFor, levelZoom, zoomFor, pitchFor, farAt, LEVELS } from './globe-path.js';
 
 const LIB = 'https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.0/maplibre-gl.min';
 const TILES = 'https://tiles.openfreemap.org';
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
 const STARS = 240;        // stars that fly past in space
-// How the camera travels. It never stops, and it keeps the globe steady (asked for, Nov 2026: three livelier
-// motions were tried and all found "not steady at all": "if you change orientation it will feel flaky"). So it
-// does not turn, it does not dive and climb, and it moves the middle of the picture only as far as it must:
-const LINGER = 0.8;       // how much it slows near a place (0: an even pace, 1: a halt); between places it is quick
-const KEEP = 0.3;         // a place may stand this far from the middle, as a share of the way to the edge, before the camera follows
-const STEP = 0.9;         // zoom levels the height may change from one place to the next
-const SECS = [3, 4.4];    // seconds from one entry to the next: where the camera hardly moves, and where it goes far
-// The designs of the card, while one is being picked: a (a glass box), b (a label written on the map), c (a plate, picture beside the text).
-export const CARDS = ['a', 'b', 'c'];
+// How the camera travels, while one way is being picked (?move=). All three share what was asked for: the camera's
+// place follows from the reader's, it comes to rest at each place and is quickest half way (no speed is ever
+// jumped to: the pace of the classic "smooth and efficient zooming and panning" path, made smooth at its ends),
+// north stays up, and a light runs along the way from place to place so that going on is seen even where the
+// camera has no need to move.
+//   turn    the globe turns under a camera that keeps its height: each place comes to the same spot of the picture.
+//   flight  the camera also comes down to each place and rises between far ones, as a flight would.
+//   frame   the camera frames a part of the world and stands still while the story stays inside it; only the light moves.
+export const MOVES = ['turn', 'flight', 'frame'];
+const STEP = 0.5;         // turn: zoom levels the height may change from one place to the next
+const SCENE = 3000;       // frame: kilometres across which places share one framing
 const PAST = 4;           // small pictures of the entries just passed, in space
 const clamp01 = (v) => Math.max(0, Math.min(1, v));
 
@@ -96,8 +98,9 @@ function styleOf() {
   };
 }
 
-export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
-  host.dataset.card = CARDS.includes(design) ? design : 'a';
+export function createGlobe(host, { open, goTo, esc, calm, move }) {
+  const MOVE = MOVES.includes(move) ? move : 'turn';
+  host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
   host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
     '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
   const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], shelf = host.children[4], note = host.children[5];
@@ -112,12 +115,17 @@ export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
     const map = new gl.Map({ container: box, style: styleOf(), center: [0, 20], zoom: far(), attributionControl: false, fadeDuration: 0, scrollZoom: false, dragRotate: false, pitchWithRotate: false, keyboard: false, maxPitch: 60 });
     map.addControl(new gl.AttributionControl({ compact: true }), 'bottom-left');
     map.touchZoomRotate.disableRotation();
-    // On a phone the credits start folded behind their button, so they do not lie over the heading.
-    if (S.phone) map.once('load', () => box.querySelector('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show'));
+    // The credits the map's licences ask for are folded behind their small button (asked for, Nov 2026: no line of text on the map).
+    map.once('load', () => box.querySelector('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show'));
+    map.on('idle', () => { host.dataset.idle = '1'; }); map.on('dataloading', () => { host.dataset.idle = '0'; });
     map.on('load', () => {
       map.addSource('arc', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
-      map.addLayer({ id: 'arc-glow', type: 'line', source: 'arc', paint: { 'line-color': ['get', 'c'], 'line-width': 7, 'line-opacity': 0.16, 'line-blur': 4 } });
-      map.addLayer({ id: 'arc', type: 'line', source: 'arc', paint: { 'line-color': ['get', 'c'], 'line-width': 1.6, 'line-opacity': 0.9, 'line-dasharray': [2, 1.5] } });
+      const kind = (k) => ['==', ['get', 'k'], k];
+      map.addLayer({ id: 'way', type: 'line', source: 'arc', filter: kind('way'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.2, 'line-opacity': 0.4, 'line-dasharray': [2, 2] } });
+      map.addLayer({ id: 'done-glow', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 7, 'line-opacity': 0.18, 'line-blur': 4 } });
+      map.addLayer({ id: 'done', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.8, 'line-opacity': 0.95 } });
+      map.addLayer({ id: 'head-glow', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 11, 'circle-color': ['get', 'c'], 'circle-opacity': 0.3, 'circle-blur': 0.9 } });
+      map.addLayer({ id: 'head', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 3.2, 'circle-color': '#fff6e2' } });
       map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       const now = ['==', ['get', 'st'], 'now'];
       map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.2, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
@@ -144,7 +152,7 @@ export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
     return map;
   }
 
-  // ---- the pins and the arc
+  // ---- the pins
   function pins() {
     if (!S.ready) return;
     const feats = [];
@@ -154,21 +162,10 @@ export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
         geometry: { type: 'Point', coordinates: [s.place[1], s.place[0]] } });
     });
     S.map.getSource('pins').setData({ type: 'FeatureCollection', features: feats });
-    // The way here: from the last place before this one, when it is not next door.
-    const cur = S.steps[S.now], arc = [];
-    if (cur && cur.place) {
-      let k = S.now - 1; while (k >= 0 && !S.steps[k].place) k--;
-      const from = k >= 0 ? S.steps[k].place : null;
-      if (from && distance(from, cur.place) > 1) arc.push({ type: 'Feature', properties: { c: cur.rgb }, geometry: { type: 'LineString', coordinates: greatCircle(from, cur.place) } });
-    }
-    S.map.getSource('arc').setData({ type: 'FeatureCollection', features: arc });
   }
 
   // ---- the camera: where it is follows from where the reader is, so it moves whenever they do
-  // Each place's own view. Its height: as close as the place is exact (its level), but with the places before and
-  // after it in the frame, and never more than STEP from its neighbours' heights, so a run of near places is one
-  // level glide. Its middle: where the last view's middle was, moved towards the place only until the place stands
-  // within KEEP of it. So between places in one part of the world the globe does not turn at all.
+  // Each place's own view, by the way of travelling.
   function cams() {
     const sz = size(), f = far();
     S.placed = [];
@@ -176,33 +173,75 @@ export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
     const pl = S.placed.map((i) => S.steps[i].place);
     const o = opening(pl, sz, f);
     S.open = { at: [o.center[1], o.center[0]], zoom: o.zoom };
-    const zs = pl.map((p, k) => {
-      let z = levelZoom(p[2]);
-      for (const q of [pl[k - 1], pl[k + 1]]) if (q) { const km = distance(q, p); if (km > 0.5) z = Math.min(z, zoomFor(km, 0.4 * sz, p[0])); }
-      return Math.max(farAt(f, p[0]), z);
-    });
-    for (let k = 1; k < zs.length; k++) zs[k] = Math.min(zs[k], zs[k - 1] + STEP);
-    for (let k = zs.length - 2; k >= 0; k--) zs[k] = Math.min(zs[k], zs[k + 1] + STEP);
-    let mid = S.open.at;
+    const fit = (p, q, share) => (q && distance(q, p) > 0.5 ? zoomFor(distance(q, p), share * sz, p[0]) : 99);
+    let views;
+    if (MOVE === 'frame') {
+      // Places that lie within SCENE of each other, one after another, share one framing.
+      const across = (list) => { let d = 0; for (const a of list) for (const b of list) d = Math.max(d, distance(a, b)); return d; };
+      views = [];
+      for (let a = 0; a < pl.length;) {
+        let b = a + 1;
+        while (b < pl.length && across(pl.slice(a, b + 1)) <= SCENE) b++;
+        const v = opening(pl.slice(a, b), sz, f), view = { at: [v.center[1], v.center[0]], zoom: Math.min(v.zoom, LEVELS.region) };
+        for (; a < b; a++) views.push(view);
+      }
+    } else {
+      const zs = pl.map((p, k) => {
+        if (MOVE === 'flight') return Math.min(levelZoom(p[2]), fit(p, pl[k - 1], 0.46), fit(p, pl[k + 1], 0.46) + 2);
+        // turn: the height suits the neighbourhood (two places either side), and changes by small steps only.
+        let z = Math.min(levelZoom(p[2]), LEVELS.region + 1);
+        for (let j = k - 2; j <= k + 2; j++) if (j !== k) z = Math.min(z, fit(p, pl[j], 0.4));
+        return z;
+      });
+      if (MOVE === 'turn') {
+        for (let k = 0; k < zs.length; k++) zs[k] = Math.max(farAt(f, pl[k][0]), zs[k]);
+        for (let k = 1; k < zs.length; k++) zs[k] = Math.min(zs[k], zs[k - 1] + STEP);
+        for (let k = zs.length - 2; k >= 0; k--) zs[k] = Math.min(zs[k], zs[k + 1] + STEP);
+      }
+      views = pl.map((p, k) => ({ at: p, zoom: Math.max(farAt(f, p[0]), zs[k]) }));
+    }
     S.cam = S.steps.map(() => null);
-    pl.forEach((p, k) => {
-      const keep = Math.min(2400, KEEP * spanKm(zs[k], sz / 2, p[0])), d = distance(mid, p);
-      if (d > keep) mid = between(mid, p, 1 - keep / d);
-      S.cam[S.placed[k]] = { at: mid, zoom: Math.max(farAt(f, mid[0]), zs[k]) };
-    });
+    views.forEach((v, k) => { S.cam[S.placed[k]] = v; });
     S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.18) }) };
   }
-  // The camera for a reader at `pos` (the number of the entry in front, and on towards the next): on the way from
-  // the view of the last place before to the view of the next one after, slow near each and quick between.
-  function camAt(pos) {
-    if (!S.placed.length) return null;
+  // Between which places a reader at `pos` is, and how far: by the count of entries (u), and as the camera goes (e),
+  // which rests at each place and is quickest half way.
+  function leg(pos) {
     let P = -1, Q = -1;
     for (const i of S.placed) { if (i <= pos) P = i; else { Q = i; break; } }
-    const A = P < 0 ? S.open : S.cam[P], B = Q < 0 ? A : S.cam[Q];
     const u = Q < 0 ? 0 : clamp01((pos - P) / (Q - P));
-    const e = u - (LINGER * Math.sin(2 * Math.PI * u)) / (2 * Math.PI);
-    const at = between(A.at, B.at, e), zoom = Math.max(farAt(far(), at[0]), A.zoom + (B.zoom - A.zoom) * e);
-    return { center: [at[1], at[0]], zoom, pitch: pitchFor(zoom), bearing: 0, padding: S.pad };
+    return { P, Q, e: u - Math.sin(2 * Math.PI * u) / (2 * Math.PI) };
+  }
+  function camAt(pos) {
+    if (!S.placed.length) return null;
+    const { P, Q, e } = leg(pos), A = P < 0 ? S.open : S.cam[P], B = Q < 0 ? A : S.cam[Q];
+    const at = between(A.at, B.at, e), low = farAt(far(), at[0]);
+    let zoom = A.zoom + (B.zoom - A.zoom) * e;
+    if (MOVE !== 'turn' && A !== B) {
+      // Far apart, the camera rises on the way until both ends are in the picture, and comes down again.
+      const w = Math.sin(Math.PI * e) ** 2, high = Math.min(A.zoom, B.zoom, zoomFor(distance(A.at, B.at), 0.7 * size(), at[0]));
+      zoom = zoom * (1 - w) + high * w;
+    }
+    zoom = Math.max(low, zoom);
+    return { center: [at[1], at[0]], zoom, pitch: MOVE === 'flight' ? pitchFor(zoom) : 0, bearing: 0, padding: S.pad };
+  }
+  // The way from the last place to the next, and the light that runs along it as far as the reader has come.
+  function trail(pos) {
+    const { P, Q, e } = leg(pos), A = P < 0 ? null : S.steps[P].place, B = Q < 0 ? null : S.steps[Q].place;
+    const key = A && B ? `${P} ${Q} ${Math.round(e * 400)}` : '';
+    if (key === S.trail) return;
+    S.trail = key;
+    const feats = [];
+    if (key && distance(A, B) > 1) {
+      const N = 48, c = S.steps[Q].rgb, way = greatCircle(A, B, N), n = Math.min(N, Math.floor(e * N));
+      const last = way[n], h = between(A, B, e);
+      let lon = h[1]; while (lon - last[0] > 180) lon -= 360; while (lon - last[0] < -180) lon += 360;
+      const done = way.slice(0, n + 1).concat([[lon, h[0]]]);
+      feats.push({ type: 'Feature', properties: { k: 'way', c }, geometry: { type: 'LineString', coordinates: way } });
+      if (e > 0.002) feats.push({ type: 'Feature', properties: { k: 'done', c }, geometry: { type: 'LineString', coordinates: done } });
+      if (e > 0.002 && e < 0.998) feats.push({ type: 'Feature', properties: { k: 'head', c }, geometry: { type: 'Point', coordinates: [lon, h[0]] } });
+    }
+    S.map.getSource('arc').setData({ type: 'FeatureCollection', features: feats });
   }
 
   // ---- the card of the entry in front
@@ -337,6 +376,7 @@ export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
     if (S.ready && sp < 0.995) {
       const cam = camAt(S.pos);
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
+      trail(S.pos);
     }
     if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
@@ -381,7 +421,7 @@ export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
       S.phone = host.clientWidth < 700;
       if (sig === S.sig) { this.resize(); return; }
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
-      S.cur = -1; S.frac = 0; S.pos = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
+      S.cur = -1; S.frac = 0; S.pos = null; S.trail = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
       drawShelf(); cams();
       if (!S.map && steps.some((s) => s.place)) {
         note.hidden = true;
@@ -401,10 +441,11 @@ export function createGlobe(host, { open, goTo, esc, calm, card: design }) {
     // The seconds play should take from the entry in front to the next: longer when the camera has far to go.
     legSecs() {
       const a = S.steps[S.cur], b = S.steps[S.cur + 1];
-      if (!a || !b) return SECS[0] * 0.8;
+      if (!a || !b) return 2.6;
       const A = S.cam[S.cur], B = S.cam[S.cur + 1];
-      if (!A || !B) return S.stage === 'space' ? SECS[0] + 0.8 : SECS[0] + 0.3;
-      return SECS[0] + (SECS[1] - SECS[0]) * Math.min(1, distance(A.at, B.at) / 4000);
+      if (!A || !B) return S.stage === 'space' ? 3.8 : 3.3;
+      if (MOVE === 'frame') return A === B ? 2.8 : 4.4;
+      return 3.2 + 1.6 * Math.min(1, distance(A.at, B.at) / 6000);
     },
     resize() {
       S.phone = host.clientWidth < 700;
