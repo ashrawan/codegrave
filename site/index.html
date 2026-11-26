@@ -64,11 +64,16 @@
     <header class="ex-head">
       <h1>Explore</h1>
       <p class="ex-sub">Timelines made by the community, on anything. <span id="vscope" class="scope"></span></p>
+      <div class="ex-sw">
       <label class="search ex-search">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
       <input id="vq" type="search" placeholder="Search timelines, people, places or a year" autocomplete="off" role="combobox" aria-expanded="true" aria-controls="vlist" aria-label="Search timelines, people, places or a year">
       <button type="button" class="clr" data-for="vq" aria-label="Clear the search" hidden><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          <button type="button" class="ex-filter" id="vfilter" aria-haspopup="true" aria-expanded="false" aria-label="Search filters" title="Search filters"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg></button>
+
     </label>
+      <div class="ex-fpop" id="vfpop" hidden><label class="ex-fopt"><input type="checkbox" id="vpeople"><span><b>People's timelines</b><small>Also search what people have published, by name or by their username</small></span></label></div>
+      </div>
       <div class="chipbar" id="chipbar"><div id="topics" class="chips" role="radiogroup" aria-label="Show timelines about" hidden></div></div>
     </header>
     <ul id="vlist" role="listbox" aria-label="Timelines" aria-multiselectable="true"></ul>

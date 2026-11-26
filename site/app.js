@@ -1890,6 +1890,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       };
       for (const v of boot?.views || []) { const k = viewById.get(v.id); consider(k, fold(k.name), k.hay); }
       if (data) for (const v of data.views) consider(v, v.f, v.hay);
+      // People's published timelines, only when the filter asks for them (off by default; asked for, Nov 2026).
+      if ($('vpeople').checked) for (const v of account.searchPeople(raw, () => { if (fold($('vq').value.trim()) === q) runSearch(); })) consider(v, fold(v.name), fold(v.name + ' ' + v.description + ' ' + v.author));
       scored.sort((a, b) => b.s - a.s || (a.v.type === 'classical') - (b.v.type === 'classical') || a.v.name.localeCompare(b.v.name));
       found = scored.slice(0, 10);
       // A year: jump to it when it is drawn, and list what began or ended in it.
@@ -2473,6 +2475,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     });
     $('qlist').addEventListener('pointerdown', (e) => { const li = e.target.closest('[data-h]'); if (li) { e.preventDefault(); goHit(Number(li.dataset.h)); } });
     $('vq').addEventListener('input', () => { drawChips(); runSearch(); });
+    // The search's filter: one switch, whether people's published timelines are searched too.
+    const fpop = (on) => { $('vfpop').hidden = !on; $('vfilter').setAttribute('aria-expanded', on); };
+    $('vfilter').addEventListener('click', (e) => { e.preventDefault(); fpop($('vfpop').hidden); });
+    $('vpeople').addEventListener('change', () => { $('vfilter').classList.toggle('on', $('vpeople').checked); runSearch(); });
+    document.addEventListener('click', (e) => { if (!$('vfpop').hidden && !e.target.closest('#vfpop, #vfilter')) fpop(false); });
     $('vq').addEventListener('focus', () => indexFor('a'));
     // A right click on a view puts it beside the others, like the plus at the end of its row.
     $('vlist').addEventListener('contextmenu', (e) => {

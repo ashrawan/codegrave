@@ -158,7 +158,9 @@ How the page is put together:
   knows it as `t/<id>`; `loadView()` asks `account.fetchView()` for it,
   and its address is `/t/<id>`, or `/<username>/<slug>` once it is public
   (`addr()`). The username is picked once, when first publishing. One
-  username per account for now. Publish and its state sit beside the
+  username per account for now. The bar and the account menu show the
+  person who signed in (name or email), never the username, which is only
+  the space they publish under (asked for, Nov 2026). Publish and its state sit beside the
   search only while the road shows one timeline of the reader's own. The
   module borrows what it needs from the page through the object given to
   `createAccount()` and never reaches into `state`.
@@ -444,7 +446,9 @@ How the page is put together:
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
 - **The search and chips of Explore.** The search finds every timeline,
-  community and classical, and entries and years (`runSearch()`,
+  community and classical (people's published timelines too when the
+  filter at the end of the box has People's timelines on; off by default,
+  asked for, Nov 2026: `account.searchPeople()`), and entries and years (`runSearch()`,
   `drawResults()`); entries and years are slim rows under the cards.
   Pressing a chip lists that topic's timelines; pressing it again, or
   "All", goes back. Both search boxes have a cross that clears them

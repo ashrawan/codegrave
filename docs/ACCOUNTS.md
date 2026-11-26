@@ -113,6 +113,23 @@ would need one key per account (OpenRouter's key-provisioning API); that
 is not built. Entries made this way are not reviewed: they are marked
 unverified and carry a link to their Wikipedia article as the source.
 
+## Who is signed in, and where they publish
+
+The bar on the left and the account menu show the person who signed in:
+their name from Google or GitHub, else their email. A username is kept
+apart from that: it is only the space a person publishes under
+(`codegrave.com/<username>/<slug>`), picked on first publishing, and the
+menu shows it as "Publishes as" (asked for, Nov 2026).
+
+## Finding people's timelines
+
+The search in Explore has a filter (the sliders at its right end) with one
+switch, People's timelines, off by default. When it is on, the search also
+asks the database for public timelines whose name or description matches,
+or whose owner's username does (two requests per search, kept for the
+session; `searchPeople()` in `site/account.js`). Lately published ones are
+listed under All without it.
+
 ## Open in editor
 
 A timeline made with AI can also be changed by hand. "Open in editor",
