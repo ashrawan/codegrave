@@ -130,6 +130,15 @@ or whose owner's username does (two requests per search, kept for the
 session; `searchPeople()` in `site/account.js`). Lately published ones are
 listed under All without it.
 
+## Ranked lists
+
+Not everything is a story in time. A request for a ranking ("the 100 most
+popular foods") gets `"axis": "rank"` from the model and a `rank` on each
+entry instead of dates; the road then stands them in rank order, #1 first,
+and writes "#n" wherever it would write a year. Chapters run from rank to
+rank. In the editor the Starts column becomes Rank: typing a rank moves the
+entry there. A timeline holds at most 100 entries.
+
 ## Open in editor
 
 A timeline made with AI can also be changed by hand. "Open in editor",

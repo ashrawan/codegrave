@@ -343,8 +343,8 @@ export function calMarks(from, to, at, room, tick = 4, byHour = true) {
 // Years are written years (no year 0); `at` is where each sits on the number
 // line. `place` and `when` are the road's scale (warp); `fsOf(s)` is the size
 // of the writing at scale s, in pixels, and gh the height of the ground.
-export function ruler({ t, dir, D, tMin, tMax, gh, fsOf, place = (v) => v, when = (v) => v }) {
-  if (tMax - tMin < FINE) return fineRuler({ t, dir, D, tMin, tMax, gh, fsOf, place, when });
+export function ruler({ t, dir, D, tMin, tMax, gh, fsOf, place = (v) => v, when = (v) => v, plain = false }) {
+  if (!plain && tMax - tMin < FINE) return fineRuler({ t, dir, D, tMin, tMax, gh, fsOf, place, when });
   const lineOf = (y) => (y < 0 ? y + 1 : y), written = (v) => { const y = Math.floor(v); return y <= 0 ? y - 1 : y; };
   const x0 = Math.max(tMin, dir > 0 ? t + NEAR * D : t - FAR * D), x1 = Math.min(tMax, dir > 0 ? t + FAR * D : t - NEAR * D);
   if (!(x1 > x0)) return [];

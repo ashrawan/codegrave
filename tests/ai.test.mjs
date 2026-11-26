@@ -151,3 +151,17 @@ test('specProblem says why an edit cannot be kept', () => {
   assert.match(specProblem({ ...ok, chapters: [{ name: 'One', from: 1960, to: '1969-01-01' }] }), /same at both ends/);
   assert.match(specProblem({ ...ok, chapters: [{ name: 'One', from: 1960, to: 1969 }, { name: 'Two', from: 1969, to: 1975 }] }), /overlap/);
 });
+
+test('a ranked list is laid out by rank, #1 first, with no dates', () => {
+  const spec = cleanSpec({ axis: 'rank', chapters: [{ name: 'Top 2', from: 1, to: 2 }], entries: [
+    { name: 'Rice', rank: 2 }, { name: 'Bread', rank: 1 }, { name: 'Noodles' }, { name: 'Rice', rank: 4 } ] });
+  assert.equal(spec.axis, 'rank');
+  assert.deepEqual(spec.entries.map((e) => [e.name, e.rank, e.start, e.end]), [['Bread', 1, '0001', ''], ['Rice', 2, '0002', ''], ['Noodles', 3, '0003', '']]);
+  const f = specToView(spec, 's1');
+  assert.equal(f.view.axis, 'rank');
+  assert.deepEqual(f.entries.map((e) => e.pos), [1, 2, 3]);
+  assert.ok(f.entries.every((e) => e.status === 'alive' && e.events.length === 1));
+  assert.deepEqual(chapterOf(spec), [0, 0, -1]);
+  assert.equal(specProblem({ axis: 'rank', entries: [{ name: 'Rice' }] }), '');
+  assert.equal(partialSpec('{"title":"Foods","axis":"rank","entries":[{"name":"Rice","rank":1}').axis, 'rank');
+});

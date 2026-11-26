@@ -130,14 +130,14 @@ export function createEditor(deps) {
   function row(e, i) {
     const k = ed.keys[i];
     if (ed.open === k) return openRow(e, k);
-    return `<div class="ed-row" data-k="${k}" tabindex="0" role="button" aria-label="Edit ${esc(e.name)}">${pic(e)}<span class="ed-name">${esc(e.name)}</span><span class="ed-kind">${esc(e.kind)}</span><span class="ed-d">${esc(showDate(e.start))}</span><span class="ed-d">${e.end ? esc(showDate(e.end)) : '<i>still going</i>'}</span>${dots(k, e.importance)}<button type="button" class="ibtn sm ed-more" data-ed-menu="${k}" aria-label="More for ${esc(e.name)}">${DOTS}</button>
-      <span class="ed-sub">${esc(showDate(e.start))}${e.end ? ' – ' + esc(showDate(e.end)) : ''} · ${esc(e.kind)}${e.image ? '' : ' · no picture'}</span></div>`;
+    return `<div class="ed-row" data-k="${k}" tabindex="0" role="button" aria-label="Edit ${esc(e.name)}">${pic(e)}<span class="ed-name">${esc(e.name)}</span><span class="ed-kind">${esc(e.kind)}</span>${e.rank ? `<span class="ed-d">#${e.rank}</span><span class="ed-d"></span>` : `<span class="ed-d">${esc(showDate(e.start))}</span><span class="ed-d">${e.end ? esc(showDate(e.end)) : '<i>still going</i>'}</span>`}${dots(k, e.importance)}<button type="button" class="ibtn sm ed-more" data-ed-menu="${k}" aria-label="More for ${esc(e.name)}">${DOTS}</button>
+      <span class="ed-sub">${e.rank ? '#' + e.rank : esc(showDate(e.start))}${e.end ? ' – ' + esc(showDate(e.end)) : ''} · ${esc(e.kind)}${e.image ? '' : ' · no picture'}</span></div>`;
   }
   function openRow(e, k) {
     const f = (name, label, value, cls = '') => `<label class="ed-f ${cls}"><span>${label}</span><input type="text" data-f="${name}" value="${esc(value)}" autocomplete="off" spellcheck="${name === 'name' || name === 'kind' ? 'true' : 'false'}"></label>`;
     return `<div class="ed-row open" data-k="${k}">
       <div class="ed-sheet-head"><button type="button" class="lnk" data-ed-cancel>Cancel</button><b>Edit entry</b><button type="button" class="lnk acc" data-ed-done>Done</button></div>
-      <div class="ed-grid">${pic(e)}${f('name', 'Name', e.name, 'grow')}${f('kind', 'Kind', e.kind)}${f('start', 'Starts', showDate(e.start))}${f('end', 'Ends', e.end ? showDate(e.end) : '')}<div class="ed-f"><span>Weight</span>${dots(k, e.importance)}</div></div>
+      <div class="ed-grid">${pic(e)}${f('name', 'Name', e.name, 'grow')}${f('kind', 'Kind', e.kind)}${e.rank ? f('start', 'Rank', String(e.rank)) : f('start', 'Starts', showDate(e.start)) + f('end', 'Ends', e.end ? showDate(e.end) : '')}<div class="ed-f"><span>Weight</span>${dots(k, e.importance)}</div></div>
       <label class="ed-f"><span>Summary</span><textarea data-f="summary" rows="2" maxlength="400">${esc(e.summary)}</textarea></label>
       <div class="ed-line">${f('wikipedia', 'Wikipedia article', e.wikipedia, 'grow')}${e.image ? '<button type="button" class="btn" data-ed-nopic>Remove picture</button>' : `<button type="button" class="btn" data-ed-pic${e.wikipedia ? '' : ' disabled title="Name its Wikipedia article first"'}>Find a picture</button>`}</div>
       <p class="ed-err" role="alert"></p>
@@ -184,7 +184,7 @@ export function createEditor(deps) {
         <input type="text" class="ed-title" data-f="title" data-top="1" value="${esc(s.title)}" maxlength="80" aria-label="Title">
         <textarea class="ed-desc" data-f="description" data-top="1" rows="2" maxlength="300" placeholder="A line on what this timeline is about" aria-label="Description">${esc(s.description)}</textarea>
         <div class="ed-tools"><input type="search" data-ed-find value="${esc(ed.find)}" placeholder="Find an entry" aria-label="Find an entry"><span class="ed-count">${s.entries.length} ${s.entries.length === 1 ? 'entry' : 'entries'}</span><button type="button" class="btn" data-ed-add="end"${s.entries.length >= MAX_ENTRIES ? ' disabled' : ''}>+ Add entry</button></div>
-        <div class="ed-cols" aria-hidden="true"><span></span><span>Name</span><span>Kind</span><span>Starts</span><span>Ends</span><span>Weight</span><span></span></div>
+        <div class="ed-cols" aria-hidden="true"><span></span><span>Name</span><span>Kind</span><span>${s.axis === 'rank' ? 'Rank' : 'Starts'}</span><span>${s.axis === 'rank' ? '' : 'Ends'}</span><span>Weight</span><span></span></div>
         <div class="ed-list">${list()}</div>
         <div class="ed-foot"><button type="button" class="ed-add" data-ed-addch${s.chapters.length >= 12 ? ' disabled' : ''}>+ Add chapter</button></div>
       </div></div>`;
@@ -228,7 +228,12 @@ export function createEditor(deps) {
     const k = Number(input.closest('[data-k]')?.dataset.k), f = input.dataset.f, v = input.value;
     if (input.dataset.top) return change((s) => { s[f] = v; });
     let why = '';
-    if (f === 'start' || f === 'end') {
+    if (f === 'start' && ed.spec.axis === 'rank') {
+      // A ranked list: the entry moves to that place, and the others close up behind it.
+      const n = Math.round(Number(v.replace(/^#/, ''))), was = entryAt(ed.spec, k)?.rank;
+      if (!(n >= 1)) why = `Write a rank: 1 for the first.`;
+      else why = change((s) => { s.entries.forEach((e, i) => { e.rank = e.rank ?? i + 1; }); entryAt(s, k).rank = n < was ? n - 0.5 : n + 0.5; });
+    } else if (f === 'start' || f === 'end') {
       const d = readDate(v);
       if (!d && (f === 'start' || v.trim())) why = `“${v.trim()}” is not a date the timeline can read. Write 1969, Jul 1969, 20 Jul 1969 or 44 BCE.`;
       else why = change((s) => { entryAt(s, k)[f] = d; });
@@ -258,7 +263,7 @@ export function createEditor(deps) {
     for (let n = 2; s.entries.some((e) => norm(e.name) === norm(name)); n++) name = 'New entry ' + n;
     const ch = where >= 0 ? s.chapters[where] : null, last = s.entries[s.entries.length - 1];
     const start = ch ? startOf(ch.from) : where === -1 && s.chapters.length ? last.start : last ? last.start : String(new Date().getFullYear());
-    const why = change((d) => { d.entries.push({ name, kind: last?.kind || 'Entry', type: last?.type || 'events', start, end: '', summary: '', wikipedia: '', importance: 3, events: [] }); });
+    const why = change((d) => { d.entries.push({ ...(d.axis === 'rank' ? { rank: ch ? ch.to + 0.5 : d.entries.length + 1 } : {}), name, kind: last?.kind || 'Entry', type: last?.type || 'events', start, end: '', summary: '', wikipedia: '', importance: 3, events: [] }); });
     if (why) return fail(near, why);
     const i = ed.spec.entries.findIndex((e) => norm(e.name) === norm(name));
     openEntry(ed.keys[i]);

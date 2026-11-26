@@ -514,6 +514,14 @@ How the page is put together:
   being edited (`goTo` lent by the page). It edits the spec and redraws
   through `specToView()`; it saves by itself, with Undo and Redo. On a
   phone an entry opens as a sheet with the road above it (`body.ed-sheet`).
+- **A ranked list** ("top 100 foods"; asked for, Nov 2026, because the
+  model laid such a list out by year): a spec with `axis: "rank"` gives
+  each entry a `rank` instead of dates (`cleanSpec()` numbers them again
+  1, 2, 3); rank n stands where the year n would, and its entry carries
+  `pos`. While every view on the road is ranked (`RANKED`, `body.ranked`)
+  every year is written "#n", the calendar marks and the year pill are off,
+  and the panel says "Number n of N". The pill in the strip shows a view's
+  number of entries in grey brackets (asked for, Nov 2026).
 - **The full picture** (`site/picture.js`; asked for, Nov 2026): a picture
   in the panel shows "View full" and opens over the whole page, whole,
   with its caption, credit, licence and the original, stepping through the

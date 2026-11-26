@@ -4,7 +4,7 @@
    A spec is small and plain, so any model can write it and a later request
    can change it:
 
-   { title, description,
+   { title, description, axis,                         axis "rank": a ranked list (see below)
      chapters: [{ name, from, to, note }],            whole years, or full dates for a plan
      entries:  [{ name, kind, type, start, end, summary, wikipedia,
                   importance, events: [{ date, label, note }], image }] }
@@ -12,7 +12,11 @@
    Dates are text: "1969", "1969-07", "1969-07-20", and "2027-04-03T09:30" for
    a plan made by the hour; before the common era a
    minus sign and four or more digits ("-0044-03-15"); deep time a negative
-   year ("-66000000"). There is no year 0. */
+   year ("-66000000"). There is no year 0.
+
+   A ranked list ("the 100 most popular foods") has no dates: "axis": "rank",
+   and each entry a "rank" from 1. It is drawn in rank order along the road,
+   #1 first; its chapters run from one rank to another ("from": 1, "to": 10). */
 
 // The models a reader may pick, by their OpenRouter id: open models, the cheapest and most used of
 // OpenRouter's ranking (asked for, Nov 2026: "fastest and cheapest, open source, top and popular").
@@ -37,7 +41,7 @@ export const EFFORTS = [
 ];
 // The branches of the map, which give an entry its words (a person is born and dies, a city is founded).
 export const TYPES = ['people', 'places', 'organisations', 'events', 'arts', 'knowledge', 'society', 'life', 'earth-space', 'technology', 'computing'];
-export const MAX_ENTRIES = 80;
+export const MAX_ENTRIES = 100;
 
 const text = (v, max) => (typeof v === 'string' ? v : v == null ? '' : String(v)).replace(/\s+/g, ' ').trim().slice(0, max);
 export const slug = (s) => text(s, 80).toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 48) || 'entry';
@@ -54,6 +58,8 @@ export function cleanDate(v) {
   if (d && m[5] != null && Number(m[5]) < 24 && Number(m[6]) < 60) out += 'T' + m[5].padStart(2, '0') + ':' + m[6];
   return out;
 }
+// A rank as the road keeps it: rank n stands where the year n would.
+export const rankDate = (n) => String(n).padStart(4, '0');
 const precisionOf = (date) => (/T/.test(date) ? 'minute' : date.replace(/^-/, '').split('-').length === 3 ? 'day' : date.replace(/^-/, '').split('-').length === 2 ? 'month' : 'year');
 // The whole year a date falls in, negative before the common era (never 0).
 export const yearOfDate = (date) => { const neg = date[0] === '-'; const y = Number((neg ? date.slice(1) : date).split('-')[0]); return neg ? -y : y; };
@@ -68,25 +74,30 @@ const at = (v) => (typeof v === 'number' ? v : order(v));
 // A spec made safe: every field the right type and length, nothing unknown kept.
 export function cleanSpec(raw) {
   const s = raw && typeof raw === 'object' ? raw : {};
+  const ranked = s.axis === 'rank';
   const seen = new Set(), entries = [];
-  for (const e of Array.isArray(s.entries) ? s.entries : []) {
+  // A ranked list: each entry's place, by its rank (else its place in the list), numbered again 1, 2, 3...
+  const list = (Array.isArray(s.entries) ? s.entries : []).map((e, i) => ({ e, r: Number(e?.rank) > 0 ? Number(e.rank) : i + 1, i }));
+  if (ranked) list.sort((a, b) => a.r - b.r || a.i - b.i);
+  for (const { e } of list) {
     if (!e || typeof e !== 'object' || entries.length >= MAX_ENTRIES) continue;
-    const name = text(e.name, 90), start = cleanDate(e.start);
+    const name = text(e.name, 90), start = ranked ? rankDate(entries.length + 1) : cleanDate(e.start);
     if (!name || !start || seen.has(name.toLowerCase())) continue;
     seen.add(name.toLowerCase());
-    let end = cleanDate(e.end);
+    let end = ranked ? '' : cleanDate(e.end);
     if (end && order(end) < order(start)) end = '';
     // Pictures only from Wikimedia's own servers (upload. and, since 2026, thumb.wikimedia.org), without the tracking query.
     const img = e.image && typeof e.image === 'object' && /^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(e.image.src || '')
       ? { src: text(String(e.image.src).replace(/\?utm_[^#]*$/, ''), 400), source: /^https:\/\//.test(e.image.source || '') ? text(e.image.source, 400) : '' } : null;
     entries.push({
+      ...(ranked ? { rank: entries.length + 1 } : {}),
       name, kind: text(e.kind, 40) || 'Entry', type: TYPES.includes(e.type) ? e.type : 'events', start, end,
       summary: text(e.summary, 400), wikipedia: text(e.wikipedia, 120), importance: Math.min(5, Math.max(1, Math.round(Number(e.importance)) || 3)),
       events: (Array.isArray(e.events) ? e.events : []).map((x) => ({ date: cleanDate(x?.date), label: text(x?.label, 80), note: text(x?.note, 200) })).filter((x) => x.date && x.label).slice(0, 6),
       ...(img ? { image: img } : {}),
     });
   }
-  entries.sort((a, b) => order(a.start) - order(b.start));
+  if (!ranked) entries.sort((a, b) => order(a.start) - order(b.start));
   // Chapters: whole years, in order, never overlapping.
   const chapters = [];
   for (const c of (Array.isArray(s.chapters) ? s.chapters : []).map((c) => ({ name: text(c?.name, 60), from: bound(c?.from), to: bound(c?.to), note: text(c?.note, 400) }))
@@ -95,7 +106,7 @@ export function cleanSpec(raw) {
     if (last && (typeof last.to === 'number' ? at(c.from) <= last.to : at(c.from) < at(last.to))) continue;
     if (chapters.length < 12) chapters.push(c);
   }
-  return { title: text(s.title, 80) || 'Untitled timeline', description: text(s.description, 300), chapters, entries };
+  return { title: text(s.title, 80) || 'Untitled timeline', description: text(s.description, 300), ...(ranked ? { axis: 'rank' } : {}), chapters, entries };
 }
 
 // The view file the page draws, from a spec. `seed` makes the entries' ids
@@ -110,7 +121,7 @@ export function specToView(raw, seed) {
     const p = precisionOf(e.start);
     const wiki = e.wikipedia ? 'https://en.wikipedia.org/wiki/' + encodeURIComponent(e.wikipedia.replace(/ /g, '_')) : '';
     return {
-      id, category: e.kind, domain: e.type, tier: 2, made: 'ai',
+      id, category: e.kind, domain: e.type, tier: 2, made: 'ai', ...(e.rank ? { pos: e.rank } : {}),
       names: [{ name: e.name, from: e.start }],
       summary: e.summary,
       events: [
@@ -135,7 +146,7 @@ export function specToView(raw, seed) {
   });
   const years = spec.entries.map((e) => yearOfDate(e.start));
   return {
-    view: { description: spec.description, checkpoints, picked: true, made: 'ai', span: years.length ? [Math.min(...years), null] : null },
+    view: { description: spec.description, checkpoints, picked: true, made: 'ai', ...(spec.axis ? { axis: spec.axis } : {}), span: years.length ? [Math.min(...years), null] : null },
     entries, spec,
   };
 }
@@ -151,6 +162,7 @@ export function partialSpec(text) {
   };
   out.title = field('title');
   out.description = field('description');
+  if (field('axis') === 'rank') out.axis = 'rank';
   for (const key of ['chapters', 'entries']) {
     const at = text.search(new RegExp('"' + key + '"\\s*:\\s*\\['));
     if (at < 0) continue;
@@ -286,6 +298,7 @@ export function specProblem(raw) {
     if (!name) return 'Every entry needs a name.';
     if (seen.has(name.toLowerCase())) return `Two entries are called “${name}”. Give one another name.`;
     seen.add(name.toLowerCase());
+    if (s.axis === 'rank') continue;
     const a = cleanDate(e.start), b = cleanDate(e.end);
     if (!a) return `“${name}” needs the date it starts, such as 1969, Jul 1969 or 20 Jul 1969.`;
     if (e.end && !b) return `When “${name}” ends is not a date the timeline can read.`;
