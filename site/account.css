@@ -294,7 +294,7 @@ html, body { touch-action: pan-x pan-y; }
   /* the menu button floats over the road, top left */
   #sb-btn { display: inline-flex; flex: none; width: 42px; height: 42px; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 50%; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
   .top { padding: 0 calc(var(--bar) + 8px) 0 10px; }
-  .tsearch { left: 60px; top: 12px; width: 108px; height: 40px; padding: 0 10px 0 12px; border-radius: 20px; }
+  .tsearch { left: 60px; top: 5px; width: 108px; height: 42px; padding: 0 10px 0 12px; border-radius: 21px; }
   .tsearch:focus-within, body.searching .tsearch { left: 10px; width: calc(100vw - 20px); z-index: 60; }
   .tsearch kbd { display: none; }
   /* the search stands top left beside the menu button, so the names of the views go under it */
@@ -341,3 +341,4 @@ html, body { touch-action: pan-x pan-y; }
   #sb .sb-head:hover #sb-fold, #sb-fold:focus-visible, body:not(.sb-open) #sb:hover #sb-fold { opacity: 1; }
 }
 #sb-list #sb-new { margin-bottom: 2px; }
+#more-menu .state { margin-left: auto; font-size: 12px; color: var(--faint); }

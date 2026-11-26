@@ -312,8 +312,8 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
   #axis { inset: 14px 0 82px 0; }
   .ends.head { height: 46px; }
   .ends.foot { height: 82px; }
-  #ticks .yr { left: 7px; font-size: 9.5px; line-height: 11px; letter-spacing: -.2px; }
-  #ticks .yr::before { left: -7px; width: 4px; }
+  #ticks .yr { left: 6px; font-size: 9px; line-height: 11px; letter-spacing: -.3px; }
+  #ticks .yr::before { left: -6px; width: 4px; }
   #play { width: 30px; height: 30px; }
   #ticks .yr small { display: block; font-size: 9px; line-height: 10px; color: var(--faint); }
   /* the bar is slim: the marker's year shows while it is dragged; the year at the top left says it otherwise */
@@ -575,9 +575,14 @@ body.playing.peek .top, body.playing .top:focus-within { transform: none; opacit
 .th-head .kind .vlink:hover, .th-head .kind .vlink:focus-visible { color: var(--text); text-decoration-color: currentColor; }
 #qlist .vk { margin-left: auto; color: var(--faint); display: inline-flex; }
 
-/* The bar is a slim scale: tick marks and the marker, no years written on it (asked for, Nov 2026:
-   the year is already written large on the road). The marker shows its year only while dragged. */
-#ticks .yr { display: none; }
+/* The bar is a slim scale: tick marks, the marker and short years of at most four characters
+   (shortYear()); the three-dot menu can hide the years (body.bar-bare). Asked for, Nov 2026.
+   The marker shows its year only while dragged, since the year is written large on the road. */
+#ticks .yr { left: 10px; font-size: 10px; letter-spacing: -.2px; }
+#ticks .yr::before { left: -10px; width: 6px; }
+body.bar-bare #ticks .yr { display: none; }
+#ticks .yr.under { color: var(--muted); }
+@media (max-width: 699px) { #ticks .yr { left: 6px; font-size: 9px; letter-spacing: -.3px; } #ticks .yr::before { left: -6px; width: 4px; } }
 #playhead span { right: 6px; opacity: 0; transition: opacity .15s; }
 #axisbar.dragging #playhead span { opacity: 1; }
 #play { width: 32px; height: 32px; }

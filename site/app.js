@@ -160,6 +160,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // and billions (Ga) of years ago for deep time.
   // `step` (the years between ticks) sets how many decimals a deep-time label needs;
   // `ce` marks the common era when the axis also shows years before it.
+  // A year on the bar, in at most four characters (asked for, Nov 2026): 1969, 500B (BCE), 3kB
+  // (3000 BCE), 12k, 66M, 4.5G (thousand, million, billion years ago). The whole year is its title.
+  function shortYear(y) {
+    if (y > 0) return y < 1e4 ? String(y) : Math.round(y / 1e3) + 'k';
+    const a = -y;
+    if (a < 1e3) return a + 'B';
+    if (a < 1e5) return Math.round(a / 1e3) + 'kB';
+    const [unit, ch] = a < 1e6 ? [1e3, 'k'] : a < 1e9 ? [1e6, 'M'] : [1e9, 'G'];
+    const v = a / unit, n = v < 10 ? String(Math.round(v * 10) / 10) : String(Math.round(v));
+    return n.slice(0, 3).replace(/\.$/, '') + ch;
+  }
   function axisText(y, step = 0, ce = false) {
     if (y > 0) return ce ? y + ' CE' : String(y);
     const a = -y;
@@ -1392,12 +1403,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (!k.label) html += `<i class="tk" style="top:${y}px"></i>`;
       else if (atNow && Math.abs(k.p - yEnd) < 22) html += `<i class="tk big" style="top:${y}px"></i>`;
       else {
-        html += `<span class="yr" style="top:${y}px">${text(k)}</span>`;
+        html += `<span class="yr" style="top:${y}px" title="${esc(axisText(k.y, k.step))}">${esc(shortYear(k.y))}</span>`;
         const m = /\s(ka|Ma|Ga)$/.exec(axisText(k.y, k.step));
         if (m) used.add(m[1]);
       }
     }
-    if (atNow) html += `<span class="yr now" style="top:${yEnd}px">Today</span>`;
+    if (atNow) html += `<span class="yr now" style="top:${yEnd}px" title="Today">Now</span>`;
     $('ticks').innerHTML = html;
     L.barYears = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, y: parseFloat(el.style.top), under: false }));
     L.units = [...used];
@@ -2349,6 +2360,19 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const on = $('info').hidden;
       if (on) drawInfo();
       $('info').hidden = !on; $('info-btn').setAttribute('aria-expanded', on);
+    });
+    // Years on the bar: shown unless the reader hides them from the three-dot menu (cg-bar-years in this browser).
+    const barYears = (on) => {
+      document.body.classList.toggle('bar-bare', !on);
+      $('bar-labels').setAttribute('aria-checked', on);
+      $('bar-labels').querySelector('.state').textContent = on ? 'Shown' : 'Hidden';
+    };
+    let bareSaved = null; try { bareSaved = localStorage.getItem('cg-bar-years'); } catch (e) { /* fine */ }
+    barYears(bareSaved !== '0');
+    $('bar-labels').addEventListener('click', () => {
+      const on = document.body.classList.contains('bar-bare');
+      barYears(on);
+      try { localStorage.setItem('cg-bar-years', on ? '1' : '0'); } catch (e) { /* fine */ }
     });
     $('theme').addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
