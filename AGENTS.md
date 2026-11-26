@@ -338,9 +338,21 @@ How the page is put together:
   rises over its row while the map steps back and dims, and where most of a view has no place, or
   five or more in a row have none, the map goes out of sight and the card stands among the stars
   with no Earth (`stageFor()`; asked for: "it can hide away"). Play waits while the camera flies
-  and the card is read (`globe.hold()`). The look is "Day", picked from four for every theme:
-  NASA's Blue Marble far out, a dark street map from OpenFreeMap close in, both free and without a
-  key; MapLibre GL JS comes from cdnjs only when a globe first opens. Places come from
+  and the card is read (`globe.hold()`), but the camera never stands still in play: once it arrives it
+  keeps coming a little closer and turning (`DRIFT`), then leaves for the next place (asked for: "it
+  shows the card and freezes there. But should be more like it keeps moving"). In space the reader
+  flies on among the stars (`.g-space`, one small 2D canvas, drawn only while something moves): they
+  stream past while play travels and rush at each new entry, the card that was up passes by the
+  reader and the next comes out of the distance (asked for: the Universe "didn't feel like moving
+  forward"). The time line runs along the foot, not upright on the right (asked for: "so it shows
+  moving", "so right side can be cleaned up"): `body.globe` sets `--bar` to 0 and hides `#axis`, play
+  and the sound button stand at the strip's left end, and the strip slides under a marker that stands
+  still, by how far the reader is from the entry in front to the next (`globe.tick()`), with a year
+  written where it changes. The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
+  first and found "a bit heavy"): dark land, coasts in a warm line, a faint grid, the same map with
+  streets close in. From far off the land is Natural Earth's small-scale coast
+  (`site/media/land.json`, public domain); from country height down it is OpenFreeMap's tiles, free
+  and without a key; MapLibre GL JS comes from cdnjs only when a globe first opens. Places come from
   `data/places.json`, made by `scripts/places.mjs` from Wikidata and never guessed; an entry older
   than five million years has no place on today's map (`DEEP`). Still to come, in this order: a
   place on the entry itself (`where`, which needs an agreed issue), places for timelines made with

@@ -980,7 +980,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (seen.has(t.id)) continue;
       seen.add(t.id);
       steps.push({ id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
-        col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: !RANKED && t.born > DEEP ? places[t.id] || null : null });
+        mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: !RANKED && t.born > DEEP ? places[t.id] || null : null });
     }
     road.gcur = undefined;
     globe.show(steps);
@@ -990,8 +990,12 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!globe || !road.gorder) return;
     const dir = camDir(), edge = road.t + dir * AHEAD * L.D;
     let cur = state.open && L.at.has(state.open) ? L.at.get(state.open) : null;
-    if (!cur) for (const p of road.gorder) { if (dir * (p.a - edge) > 0) break; cur = p; }
+    let next = null;
+    if (!cur) for (const p of road.gorder) { if (dir * (p.a - edge) > 0) { next = p; break; } cur = p; }
     const id = cur ? cur.t.id : null;
+    // How far on from the entry in front towards the next: the time line at the foot slides by it.
+    const from = cur ? cur.a : dir > 0 ? L.tMin : L.tMax;
+    globe.tick(play.on, next && next.a !== from ? clamp((edge - from) / (next.a - from), 0, 1) : 0);
     if (id === road.gcur) return;
     road.gcur = id;
     road.gshows = cur && wallMedia(cur.t).length ? [{ id, name: cur.t.name, side: 0, col: null, media: wallMedia(cur.t) }] : [];

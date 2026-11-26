@@ -639,7 +639,7 @@ body.globe #road { cursor: default; }
 /* An entry with no place: the map steps back and dims; where a view has few places, it goes out of sight. */
 #globe[data-stage="dim"] .g-map { filter: brightness(.45) saturate(.6); transform: scale(.97); }
 #globe[data-stage="space"] .g-map { opacity: 0; pointer-events: none; }
-#globe .maplibregl-ctrl-bottom-left { bottom: 108px; left: 10px; }
+#globe .maplibregl-ctrl-bottom-left { bottom: 118px; left: 10px; }
 #globe .maplibregl-ctrl-attrib { font-size: 10px; color: #8f97a8; background: rgba(7, 10, 16, .55); }
 #globe .maplibregl-ctrl-attrib a { color: inherit; }
 #globe .maplibregl-ctrl-attrib-button { opacity: .6; }
@@ -663,19 +663,22 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 #globe .g-pl { display: block; margin-top: 9px; padding-top: 8px; border-top: 1px solid rgba(190, 210, 255, .14); font-size: 11.5px; color: #8f97a8; }
 #globe[data-stage="space"] .g-card { width: 360px; }
 /* The strip at the foot: one time line. Entries with a place are dots on it; entries with none are rows. */
-#globe .g-shelf { position: absolute; left: 0; right: 0; bottom: 0; height: 104px; z-index: 3; display: flex; align-items: stretch; padding-bottom: 12px; background: linear-gradient(transparent, rgba(5, 7, 12, .86) 38%); }
+#globe .g-shelf { position: absolute; left: 0; right: 0; bottom: 0; height: 116px; z-index: 3; display: flex; align-items: stretch; padding: 0 0 0 104px; background: linear-gradient(transparent, rgba(5, 7, 12, .88) 40%); }
 #globe .g-shelf[hidden] { display: none; }
-#globe .g-lab { flex: none; width: 150px; padding: 30px 0 0 22px; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: #8f97a8; line-height: 1.5; }
-#globe .g-lab[hidden] { display: none; }
-#globe .g-lab b { display: block; font-family: var(--serif); font-size: 22px; font-weight: 400; letter-spacing: 0; color: #bcc2cf; }
-#globe .g-rows { position: relative; flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 90%, transparent); }
-#globe .g-ax { position: absolute; left: 0; right: 0; bottom: 14px; height: 1px; background: rgba(200, 215, 255, .26); }
-#globe .g-now { position: absolute; left: var(--now, 36%); bottom: 5px; width: 1px; height: 19px; background: var(--acc); box-shadow: 0 0 8px var(--acc); }
-#globe .g-track { position: absolute; left: 0; bottom: 0; height: 100%; display: flex; align-items: flex-end; gap: 16px; white-space: nowrap; transition: transform .7s cubic-bezier(.3, .1, .2, 1); will-change: transform; }
-#globe .g-dot { flex: none; width: 7px; height: 7px; margin: 0 0 11px; padding: 0; border-radius: 50%; border: 1px solid rgba(236, 231, 220, .55); background: none; cursor: pointer; }
+
+
+
+#globe .g-rows { position: relative; flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 92%, transparent); }
+#globe .g-ax { position: absolute; left: 0; right: 0; bottom: 30px; height: 1px; background: rgba(200, 215, 255, .26); }
+#globe .g-now { position: absolute; left: var(--now, 40%); bottom: 20px; width: 2px; margin-left: -1px; height: 21px; border-radius: 1px; background: var(--acc); box-shadow: 0 0 10px var(--acc); }
+#globe .g-track { position: absolute; left: 0; bottom: 0; height: 100%; display: flex; align-items: flex-end; gap: 16px; white-space: nowrap; will-change: transform; }
+#globe .g-track u { position: absolute; left: 50%; top: calc(100% + 8px); transform: translateX(-50%); text-decoration: none; font-size: 10.5px; line-height: 12px; letter-spacing: .02em; font-variant-numeric: tabular-nums; color: #8f97a8; pointer-events: none; }
+#globe .g-chip u { left: 14px; top: calc(100% + 19px); }
+#globe .g-track .on u { color: #ece7dc; }
+#globe .g-dot { position: relative; flex: none; width: 7px; height: 7px; margin: 0 0 27px; padding: 0; border-radius: 50%; border: 1px solid rgba(236, 231, 220, .55); background: none; cursor: pointer; }
 #globe .g-dot.past { background: var(--c); border-color: transparent; opacity: .6; }
 #globe .g-dot.on { background: var(--c); border-color: transparent; box-shadow: 0 0 8px var(--c); }
-#globe .g-chip { position: relative; flex: none; height: 52px; margin-bottom: 22px; padding: 7px 11px; text-align: left; font-size: 12.5px; color: #bcc2cf; background: rgba(13, 18, 27, .88); border: 1px solid rgba(200, 215, 255, .26); border-radius: 4px; cursor: pointer; }
+#globe .g-chip { position: relative; flex: none; height: 52px; margin-bottom: 38px; padding: 7px 11px; text-align: left; font-size: 12.5px; color: #bcc2cf; background: rgba(13, 18, 27, .88); border: 1px solid rgba(200, 215, 255, .26); border-radius: 4px; cursor: pointer; }
 #globe .g-chip i { display: block; margin-bottom: 2px; font-style: normal; font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: #8f97a8; }
 #globe .g-chip span { margin-left: 6px; font-size: 11.5px; color: #8f97a8; }
 #globe .g-chip::after { content: ''; position: absolute; left: 14px; bottom: -9px; width: 1px; height: 8px; background: rgba(200, 215, 255, .26); }
@@ -686,8 +689,7 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 #globe .g-note { position: absolute; left: 50%; top: 45%; transform: translateX(-50%); margin: 0; font-size: 13px; color: var(--muted); }
 #globe .g-note[hidden] { display: none; }
 @media (max-width: 699px) {
-  #globe .g-shelf { height: 84px; }
-  #globe .g-lab { display: none; }
+  #globe .g-shelf { height: 100px; padding-left: 58px; }
   #globe .g-chip { height: 46px; padding: 6px 9px; font-size: 12px; }
   #globe .g-chip span { display: none; }
   #globe .g-card, #globe[data-stage="space"] .g-card { width: calc(100% - 24px); padding: 10px; display: grid; grid-template-columns: 92px 1fr; gap: 0 12px; align-items: start; }
@@ -700,5 +702,26 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
   body.globe #filters { display: none; }
 }
 /* What floats at the foot of the road stands above the strip. */
-body.globe:has(.g-shelf:not([hidden])) #filters { bottom: 156px; }
-body.globe:has(.g-shelf:not([hidden])) #ask { bottom: 160px; }
+body.globe:has(.g-shelf:not([hidden])) #filters { bottom: 168px; }
+body.globe:has(.g-shelf:not([hidden])) #ask { bottom: 172px; }
+/* The bar that stood upright on the right is the time line at the foot here (asked for, Nov 2026: "so right side can be
+   cleaned up"). Play and the sound button stand at its left end; the stage takes the whole width. */
+body.globe { --bar: 0px; }
+body.globe #axisbar, body.globe.side-open #axisbar { top: auto; right: auto; left: calc(var(--sb, 0px) + 18px); bottom: 62px; width: auto; background: none; border: 0; -webkit-backdrop-filter: none; backdrop-filter: none; }
+body.globe #axis { display: none; }
+body.globe #axisbar .ends.foot, body.globe #axisbar.two .ends.foot { position: static; height: auto; flex-direction: row; gap: 8px; }
+body.globe #axisbar.two .plays { flex-direction: row; }
+/* Space: the stars the reader flies through, and cards that come out of the distance and pass by. */
+#globe .g-space { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity .8s ease; pointer-events: none; }
+#globe[data-stage="space"] .g-space { opacity: 1; }
+#globe[data-stage="space"] .g-card.in { animation: gfar .8s cubic-bezier(.2, .7, .2, 1); }
+#globe .g-card.out { animation: gpast .5s ease-in forwards; pointer-events: none; }
+@keyframes gfar { from { scale: .45; opacity: 0; } to { scale: 1; opacity: 1; } }
+@keyframes gpast { to { scale: 1.8; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { #globe[data-stage="space"] .g-card.in, #globe .g-card.out { animation: none; } }
+@media (max-width: 699px) {
+  body.globe #axisbar, body.globe.side-open #axisbar { left: 8px; bottom: 58px; }
+  body.globe.side-open #axisbar { bottom: calc(var(--sheet) + 14px); }
+  body.globe.playing:not(.peek) #axisbar { bottom: 14px; }
+  body.globe #axisbar .ends.foot { flex-direction: column-reverse; gap: 4px; }
+}
