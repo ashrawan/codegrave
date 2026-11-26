@@ -350,24 +350,36 @@ How the page is put together:
   and the Edge Function `supabase/functions/ai-timeline` reads up on the
   subject in Wikipedia, asks the model through OpenRouter for a small
   "spec" and streams it; the page draws each entry as soon as its JSON is
-  closed (`partialSpec()`), with one line over the road saying how far it
-  has come (`#ai-live`). The function then finds free pictures
+  closed (`partialSpec()`). While it is made, it says how far it
+  has come: its three steps (reading up, writing the entries with their
+  count, finding pictures) stand at the horizon (`#ai-live`) and a bar runs
+  along the top edge of the strip at the foot (`#ai-bar`; asked for, Nov
+  2026: "a proper loading"). The function then finds free pictures
   (`findPictures()`: the article's picture, else Wikidata's; Wikimedia now
   serves thumbnails from `thumb.wikimedia.org`) and writes the finished
   view file into the row itself, so it is kept on every device even when
   the tab is closed. `site/ai.js` is shared by the page and the function
   (`supabase/functions/ai-timeline/ai.js` links to it; deploy both files).
-  The models are open, cheap and fast (DeepSeek V4.1 Flash first; asked
-  for, Nov 2026), and Quick (thinking off) is the default effort.
+  The models are cheap and fast (DeepSeek V4.1 Flash first; asked
+  for, Nov 2026), with the cheapest of OpenAI, Anthropic and Google beside
+  them (GPT-6 Luna, Claude Haiku 5.5, Gemini 3.1 Flash-Lite), and Quick
+  (thinking off) is the default effort. Nothing is kept for older pages:
+  the function always streams and refuses a model it does not offer.
   `specToView()` in `site/ai.js` turns a spec into a view file, stored
   with the spec beside it. For such a timeline of the reader's own, "Ask
   AI" is a box of two rows attached to the strip at the foot of the road
-  (`#ask`, asked for in those words): the model gets the spec and the
+  (`#ask`, asked for in those words), in the strip's own colour and edge,
+  rising out of it with two soft shoulders (asked for: "resting on the
+  footer... not behind"): the model gets the spec and the
   request and writes the whole spec again; the toast says what changed and
   offers Undo. A timeline the reader keeps shows only its own pictures on
   the walls, never the eras' stand-ins (`L.own`). An entry made this way names its kind in
   words (`category`) and its branch in `domain`, and its id starts with
-  `x`. The centre of the page is meant as a canvas where a reader can make
+  `x`. A plan is dated by the day, or by the hour (`2027-04-05T09:00`), and
+  its chapters may be full dates; the function's prompt asks for the units of
+  the subject's own length ("in 30 days" is 30 days, not a year). The cards
+  on the road are drawn afresh when the finished timeline arrives
+  (`replaceView()`), so its pictures show at once. The centre of the page is meant as a canvas where a reader can make
   anything (asked for, Nov 2026); a timeline is the first kind, so keep the
   spec and the function free of anything only a timeline could use.
 - **The year range** (`#filters`, `state.span`) is a quiet, see-through pill
@@ -452,7 +464,13 @@ How the page is put together:
   on the BCE year nearest the change and the CE year nearest it; the line
   under the big year spells out the era of the year in sight ("BCE: Before
   the Common Era"), as it does deep time's units (`#road-unit`, moved there
-  from the strip on request, Nov 2026). Asked for in Nov 2026. When a few entries start far earlier than the rest, the view opens on
+  from the strip on request, Nov 2026). Asked for in Nov 2026. A road shorter than `FINE` (four years) is marked in
+  the calendar instead: months, Mondays, days and hours (`calMarks()` in
+  `site/road.js`; on the bar "Dec", "7", "9h"); the big label reads the day
+  ("30 Nov", "Monday, 2026") or, on a road of a few days, the hour, and the
+  year range is hidden (`body.fine`). Asked for, Nov 2026: time is "not
+  forcefully always year". `parseDate()` counts true days of the calendar
+  and reads a time of day. When a few entries start far earlier than the rest, the view opens on
   the rest and "Show all years" reaches back. Every date on the page goes
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates;
   on a phone deep time is written short (100k, 66M, 13.8B years ago, asked

@@ -14,14 +14,23 @@ export function yearOf(s) {
 // A leading minus is a year before the common era, counted as historians do
 // (there is no year zero), so 1 BCE sits at 0 on the number line and 44 BCE at -43.
 // The same form carries deep time: "-66000000" is 66 million years back.
+// A full date may carry a time of day, "2027-04-03T09:30", for a plan made by the hour.
 export function parseDate(s) {
   const neg = s[0] === '-';
-  const [y, m, d] = (neg ? s.slice(1) : s).split('-').map(Number);
+  const [day, time] = (neg ? s.slice(1) : s).split('T');
+  const [y, m, d] = day.split('-').map(Number);
   const year = neg ? 1 - y : y;
   if (!m) return year + 0.5;
   if (!d) return year + (m - 0.5) / 12;
-  return year + (m - 1) / 12 + (d - 1) / 365.25;
+  const [h = 0, mi = 0] = time ? time.split(':').map(Number) : [];
+  // A day is a true day of the calendar, so a road drawn in days spaces them evenly across the months.
+  return year + (dayOfYear(year, m, d) + (h + mi / 60) / 24) / daysInYear(year);
 }
+const CUM = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+// Leap years of the Gregorian calendar, carried back: `year` is on the number line (1 BCE is 0).
+export const daysInYear = (year) => ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0 ? 366 : 365);
+// Days before the given month and day in that year, from 0.
+export const dayOfYear = (year, m, d) => CUM[m - 1] + (m > 2 && daysInYear(year) === 366 ? 1 : 0) + d - 1;
 
 // The stretch of time whose entries count as peers of one born at `born` (a
 // decimal year): a decade since 1800, a century back to the year 1, a

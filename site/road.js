@@ -7,6 +7,8 @@
    scale, the projection, where each line runs across its lane, which names
    are shown, and the years along the edge. app.js draws what these return. */
 
+import { daysInYear, dayOfYear } from './rank.js';
+
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
 // Distance is counted along the road ahead of the reader (u), in the road's own
@@ -267,12 +269,82 @@ export function yearMarks(from, to, at, room, tick = 4) {
   return out;
 }
 
+// A road shorter than FINE years is marked in the calendar's own units, not in
+// years: months, weeks (Mondays), days and hours (asked for, Nov 2026: a plan
+// for 30 days or a working week "should not always be years").
+export const FINE = 4;
+const WD = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+// A moment of the calendar (year, month, day, hour) on the number line, as parseDate counts it.
+export const momentOf = (y, m = 1, d = 1, h = 0) => y + (dayOfYear(y, m, d) + h / 24) / daysInYear(y);
+// The calendar day a moment falls in, and its hour: the inverse of momentOf, for years of the common era.
+export function calOf(t) {
+  const y = Math.floor(t), n = daysInYear(y), f = (t - y) * n, doy = Math.floor(f + 1e-7);
+  let m = 12;
+  while (m > 1 && dayOfYear(y, m, 1) > doy) m--;
+  return { y, m, d: doy - dayOfYear(y, m, 1) + 1, h: Math.max(0, (f - doy) * 24) };
+}
+const weekday = (y, m, d) => { const dt = new Date(Date.UTC(2000, m - 1, d)); dt.setUTCFullYear(y); return dt.getUTCDay(); };
+// How a moment reads on a fine road: the day ("Tue 6 Apr 2027"), with its time when `withTime`.
+export function dayText(t, withTime = false) {
+  const c = calOf(t), wd = WD[weekday(c.y, c.m, c.d)];
+  const hh = Math.floor(c.h + 1e-6), mm = Math.round((c.h - hh) * 60);
+  const time = withTime ? ', ' + String(hh).padStart(2, '0') + ':' + String(mm === 60 ? 59 : mm).padStart(2, '0') : '';
+  return `${wd} ${c.d} ${MON[c.m - 1]} ${c.y}${time}`;
+}
+// The marks of a fine road between moments `from` and `to`: years, then the first of each month, Mondays,
+// days, six hours and hours (unless `byHour` is false), coarse first. `at(t)` is where a moment is drawn (null: not drawn); a mark is
+// written where it has `room(p, q)` from every written one, and a bare tick where it is `tick` from every
+// mark. Each mark has its words (`text`) and, for the slim bar, at most four characters (`short`).
+export function calMarks(from, to, at, room, tick = 4, byHour = true) {
+  if (!(to > from) || from < 1) return [];
+  const levels = [
+    { n: (to - from), each: function* () { for (let y = Math.ceil(from); y <= to; y++) yield [y, 1, 1, 0]; }, text: (c) => String(c.y), short: (c) => String(c.y) },
+    { n: (to - from) * 12, each: function* () { const a = calOf(from); for (let y = a.y, m = a.m; momentOf(y, m) <= to; m === 12 ? (y++, m = 1) : m++) yield [y, m, 1, 0]; }, text: (c) => '1 ' + MON[c.m - 1], short: (c) => MON[c.m - 1] },
+    { n: (to - from) * 52, days: 7, text: (c) => 'Mon ' + c.d + ' ' + MON[c.m - 1], short: (c) => String(c.d) },
+    { n: (to - from) * 366, days: 1, text: (c) => WD[weekday(c.y, c.m, c.d)] + ' ' + c.d, short: (c) => String(c.d) },
+    { n: (to - from) * 1464, hours: 6, text: (c) => String(Math.round(c.h)).padStart(2, '0') + ':00', short: (c) => Math.round(c.h) + 'h' },
+    { n: (to - from) * 8784, hours: 1, text: (c) => String(Math.round(c.h)).padStart(2, '0') + ':00', short: (c) => Math.round(c.h) + 'h' },
+  ];
+  // Every day (or every Monday) in the stretch, and every few hours of each day.
+  const days = function* (step) {
+    const a = calOf(from);
+    let t = momentOf(a.y, a.m, a.d);
+    if (step === 7) { const c = calOf(t); t += ((8 - weekday(c.y, c.m, c.d)) % 7) / daysInYear(c.y); }
+    for (; t <= to; ) { const c = calOf(t); yield [c.y, c.m, c.d, 0]; t = momentOf(c.y, c.m, c.d) + step / daysInYear(c.y) + 1e-9; }
+  };
+  const hours = function* (step) {
+    for (const [y, m, d] of days(1)) for (let h = step; h < 24; h += step) yield [y, m, d, h];
+  };
+  const out = [], written = [], all = [], seen = new Set();
+  const near = (list, p) => { let best = Infinity; for (const q of list) best = Math.min(best, Math.abs(p - q)); return best; };
+  for (const L of levels) {
+    if (L.n > 4000 || (L.hours && !byHour)) break;
+    const gen = L.each ? L.each() : L.days ? days(L.days) : hours(L.hours);
+    for (const [y, m, d, h] of gen) {
+      const t = momentOf(y, m, d, h), key = y + '-' + m + '-' + d + '-' + h;
+      if (t < from || t > to || seen.has(key)) continue;
+      seen.add(key);
+      const p = at(t);
+      if (p == null) continue;
+      const c = { y, m, d, h };
+      const label = written.every((q) => Math.abs(p - q) >= room(p, q));
+      if (!label && near(all, p) < tick) continue;
+      out.push({ t, key, p, label, major: label, text: L.text(c), short: L.short(c), title: dayText(t, !!h) });
+      all.push(p);
+      if (label) written.push(p);
+    }
+  }
+  return out;
+}
+
 // The years along the edge of the road, nearest first: a tick where there is
 // room for one and the year written where there is room for that (yearMarks).
 // Years are written years (no year 0); `at` is where each sits on the number
 // line. `place` and `when` are the road's scale (warp); `fsOf(s)` is the size
 // of the writing at scale s, in pixels, and gh the height of the ground.
 export function ruler({ t, dir, D, tMin, tMax, gh, fsOf, place = (v) => v, when = (v) => v }) {
+  if (tMax - tMin < FINE) return fineRuler({ t, dir, D, tMin, tMax, gh, fsOf, place, when });
   const lineOf = (y) => (y < 0 ? y + 1 : y), written = (v) => { const y = Math.floor(v); return y <= 0 ? y - 1 : y; };
   const x0 = Math.max(tMin, dir > 0 ? t + NEAR * D : t - FAR * D), x1 = Math.min(tMax, dir > 0 ? t + FAR * D : t - NEAR * D);
   if (!(x1 > x0)) return [];
@@ -286,6 +358,17 @@ export function ruler({ t, dir, D, tMin, tMax, gh, fsOf, place = (v) => v, when 
     out.push({ y: k.y, at: line, s, fs: fsOf(s), step: k.step, label: k.label, major: k.major });
   }
   return out.sort((a, b) => b.s - a.s);
+}
+
+// The ruler of a fine road: days and hours instead of years (calMarks).
+function fineRuler({ t, dir, D, tMin, tMax, gh, fsOf, place, when }) {
+  const x0 = Math.max(tMin, dir > 0 ? t + NEAR * D : t - FAR * D), x1 = Math.min(tMax, dir > 0 ? t + FAR * D : t - NEAR * D);
+  if (!(x1 > x0)) return [];
+  const ahead = (m) => dir * (place(m) - t);
+  const at = (m) => { const u = ahead(m); return u <= NEAR * D || u >= FAR * D ? null : gh * sizeAt(u, D); };
+  const room = (p, q) => 1.5 * fsOf(Math.max(p, q ?? 0) / gh);
+  return calMarks(when(x0), when(x1), at, room).map((k) => ({ y: null, key: k.key, text: k.text, at: k.t, s: k.p / gh, fs: fsOf(k.p / gh), step: 0, label: k.label, major: k.major }))
+    .sort((a, b) => b.s - a.s);
 }
 
 // How fast play travels, as a share of its usual speed: slower while cards

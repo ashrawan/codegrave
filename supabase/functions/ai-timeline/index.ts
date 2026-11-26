@@ -14,7 +14,6 @@
 //   { "r": 1 }             the model is thinking (nothing to draw yet)
 //   { "note": "..." }      what the function is doing ("Looking for pictures…")
 //   { "done": { spec, changed, model, left } }   or   { "error": "..." }
-// (only when the page sends stream: true; otherwise the answer is the "done" object as plain JSON).
 // What goes wrong before the model is asked is answered as plain JSON with a status.
 //
 // Secrets (Supabase → Edge Functions → Secrets):
@@ -27,12 +26,11 @@
 import { findPictures, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
 
 // The models this function will run, by OpenRouter id (site/ai.js lists the same ones for the page):
-// open models, the cheapest and most used of OpenRouter's ranking (asked for, Nov 2026).
-const OFFERED = ["deepseek/deepseek-v4.1-flash", "z-ai/glm-5.3-flash", "tencent/hy4-flash", "qwen/qwen3.8-flash", "minimax/minimax-m3.1-flash"];
+// the cheapest and most used of OpenRouter's ranking, and the cheapest of OpenAI, Anthropic and Google (asked for, Nov 2026).
+const OFFERED = ["deepseek/deepseek-v4.1-flash", "openai/gpt-6-luna", "anthropic/claude-haiku-5.5", "google/gemini-3.1-flash-lite", "minimax/minimax-m3.1-flash", "z-ai/glm-5.3-flash", "qwen/qwen3.8-flash", "tencent/hy4-flash"];
 const EXTRA = (Deno.env.get("AI_MODELS") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
-// A model this function no longer offers (an older page may still ask for it) is answered by the first one.
-const modelFor = (id: string) =>
-  OFFERED.includes(id) || EXTRA.includes(id) || (EXTRA.includes("*") && /^[a-z0-9-]+\/[a-z0-9.:_-]+$/i.test(id)) ? id : OFFERED[0];
+// Only a model this function offers is run; any other is refused.
+const allowed = (id: string) => OFFERED.includes(id) || EXTRA.includes(id) || (EXTRA.includes("*") && /^[a-z0-9-]+\/[a-z0-9.:_-]+$/i.test(id));
 // How long the model may think before it writes. "none" switches thinking off: the fastest, and the default.
 const EFFORTS = ["none", "low", "medium", "high"];
 const DAILY = Number(Deno.env.get("AI_DAILY") ?? "20");
@@ -70,11 +68,12 @@ const system = (today: string) => `You make timelines for codegrave.com, where a
 }
 
 Rules:
-- Dates are text: "1969", "1969-07" or "1969-07-20". Before the common era use a minus sign and four digits: "-0044-03-15". Deep time is a negative year: "-66000000". There is no year 0. Give only the precision you are sure of; a year alone is fine. Never invent the date of something that happened: leave out an entry rather than guess.
-- Chapters use whole years ("from" and "to" are numbers, negative before the common era), run in order, do not overlap, and together cover the entries. Use 3 to 7 chapters. When everything falls inside one or two years, use one chapter or none ("chapters": []).
+- Time is whatever the subject needs: billions of years, centuries, years, months, weeks, days or hours. Never stretch a short subject into years; the road is drawn in the units of its own length.
+- Dates are text: "1969", "1969-07" or "1969-07-20", and with a time of day "2027-04-03T09:30" (24-hour clock) for something planned by the hour. Before the common era use a minus sign and four digits: "-0044-03-15". Deep time is a negative year: "-66000000". There is no year 0. Give only the precision you are sure of; a year alone is fine. Never invent the date of something that happened: leave out an entry rather than guess.
+- Chapters use whole years ("from" and "to" are numbers, negative before the common era), run in order, do not overlap, and together cover the entries. Use 3 to 7 chapters. For a plan, or anything inside a year or two, a chapter's "from" and "to" are full dates instead ("2027-04-01" to "2027-04-07": a week, a phase, a day of a working week), or there are none ("chapters": []).
 - Write 20 to 40 entries unless the subject is small or the request names a number; never more than 70. Pick what a good book on the subject would cover, spread across its whole span, in date order.
 - Give "wikipedia" for every entry that has an article of its own: the picture comes from it. For a product or an event without one, name the closest article that shows it.
-- A plan (a trip, a course, a training schedule, a project) is dated forward: from the day or month the request names, else starting tomorrow. Each step is one entry with a full date for "start" and for "end" ("2027-04-03"; the same day twice for one day): a day of a trip, a week of a course, a milestone. "name" says what happens ("Day 3: Kyoto temples", "Week 2: loops and functions"), "kind" is Day, Week, Lesson, Milestone and the like, "summary" says what to do and why, "type" is the nearest fit (a place visited: places; a lesson: knowledge), and "wikipedia" names the article of the place or subject of that step, so it gets a picture. Write as many steps as the plan has.
+- A plan (a trip, a course, a training schedule, a project, a working week) is dated forward: from the day or month the request names ("Monday to Friday" means the coming Monday to Friday), else starting tomorrow, and lasts exactly as long as the request says ("in 30 days" is 30 days, not a year). Each step is one entry with a full date for "start" and for "end" ("2027-04-03"; the same day twice for one day), and a time of day when the plan is by the hour ("2027-04-05T09:00" to "2027-04-05T11:00"): a day of a trip, a day of a course, a task, a meeting, a milestone. Keep the steps of one day in the order they happen. "name" says what happens ("Day 3: Kyoto temples", "Week 2: loops and functions"), "kind" is Day, Week, Lesson, Task, Milestone and the like, "summary" says what to do and why, "type" is the nearest fit (a place visited: places; a lesson: knowledge), and "wikipedia" names the article of the place or subject of that step, so it gets a picture. Write as many steps as the plan has.
 - A subject to learn: order it the way it is best understood, which is usually the order in which it was discovered, and let each summary teach one idea.
 - The news: tell the story up to today. Reading from Wikipedia, fetched now, may follow the request: trust it over your memory for recent facts and dates, use it only where it is about the subject, and never copy its sentences.
 - "events" are optional, at most 3 per entry, and only for the most important entries.
@@ -133,7 +132,8 @@ Deno.serve(async (req) => {
   let body: Record<string, any>;
   try { body = await req.json(); } catch (_e) { return json({ error: "That request could not be read." }, 400); }
   const prompt = String(body.prompt ?? "").replace(/\s+/g, " ").trim().slice(0, 600);
-  const model = modelFor(String(body.model ?? ""));
+  const model = String(body.model ?? "");
+  if (!allowed(model)) return json({ error: "That model is not offered. Pick another." }, 400);
   const effort = EFFORTS.includes(body.effort) ? String(body.effort) : "none";
   if (prompt.length < 3) return json({ error: "Say what you want to make." }, 400);
   const current = body.current && typeof body.current === "object" ? body.current : null;
@@ -158,7 +158,7 @@ Deno.serve(async (req) => {
       try {
         send({ note: "Reading up on the subject…" });
         const read = current ? "" : await reading(prompt);
-        const SYSTEM = system(new Date().toISOString().slice(0, 10));
+        const now = new Date(), SYSTEM = system(now.toISOString().slice(0, 10) + ", a " + now.toLocaleDateString("en-US", { weekday: "long", timeZone: "UTC" }));
         const messages = current
           ? [{ role: "system", content: SYSTEM + "\n\n" + CHANGE }, { role: "user", content: "The timeline now:\n" + JSON.stringify(current) + "\n\nThe change asked for: " + prompt }]
           : [{ role: "system", content: SYSTEM }, { role: "user", content: "Make this: " + prompt + (read ? "\n\nReading from Wikipedia, fetched today:\n\n" + read : "") }];
@@ -235,12 +235,6 @@ Deno.serve(async (req) => {
         send({ error: "The model took too long. Try again, or ask for something smaller." });
       }
   };
-  // A page that does not ask for the stream (one loaded before Nov 26 2026) gets the whole answer at once.
-  if (body.stream !== true) {
-    let last: Record<string, any> = {};
-    await work((o) => { if (o.done || o.error) last = o; });
-    return last.done ? json(last.done) : json({ error: last.error ?? "That did not work. Try again." }, 502);
-  }
   const enc = new TextEncoder();
   const stream = new ReadableStream({
     async start(ctl) {

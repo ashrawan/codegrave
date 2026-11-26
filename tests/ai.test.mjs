@@ -96,3 +96,19 @@ test('partialSpec reads what is whole of a spec still being written', () => {
   assert.deepEqual(partialSpec('').entries, []);
   assert.equal(EFFORTS[0].id, 'none');
 });
+
+test('a plan may be dated by the day and the hour, and its chapters by full dates', () => {
+  assert.equal(cleanDate('2027-04-03T9:30'), '2027-04-03T09:30');
+  assert.equal(cleanDate('2027-04-03 14:00:00'), '2027-04-03T14:00');
+  assert.equal(cleanDate('2027-04T09:30'), '2027-04');   // a time only on a full date
+  assert.equal(cleanDate('2027-02-30'), '');
+  const s = cleanSpec({
+    chapters: [{ name: 'Week 1', from: '2027-04-01', to: '2027-04-07' }, { name: 'Week 2', from: '2027-04-07', to: '2027-04-14' }, { name: 'Mixed', from: 2027, to: '2027-05-01' }],
+    entries: [{ name: 'Stand-up', start: '2027-04-05T09:00', end: '2027-04-05T09:15' }, { name: 'Review', start: '2027-04-05T14:00', end: '2027-04-05T13:00' }],
+  });
+  assert.deepEqual(s.chapters.map((c) => c.from), ['2027-04-01', '2027-04-07']);
+  assert.equal(s.entries[1].end, '');                  // an end before the start is dropped, by the hour too
+  const f = specToView(s, 'p');
+  assert.equal(f.entries[0].events[0].precision, 'minute');
+  assert.ok(Math.abs(parseDate('2027-04-05T12:00') - parseDate('2027-04-05') - 0.5 / 365) < 1e-9);
+});
