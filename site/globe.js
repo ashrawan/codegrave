@@ -21,14 +21,26 @@
    warm line, a faint grid of latitude and longitude, and the same map with
    streets close in. It is all lines and flat colour, so no pictures load.
    The module knows nothing about views or the road; the page hands it steps. */
-import { cameraFor, opening, flightSeconds, greatCircle, distance, stageFor, coords, LEVELS } from './globe-path.js';
+import { opening, greatCircle, between, distance, stageFor, coords, levelZoom, zoomFor, pitchFor, farAt, LEVELS } from './globe-path.js';
 
 const LIB = 'https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.0/maplibre-gl.min';
 const TILES = 'https://tiles.openfreemap.org';
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
 const STARS = 240;        // stars that fly past in space
-const READ = 2.4;         // seconds a card stands before play moves on, after the flight to it
-const DRIFT = [0.3, 7];   // while it stands the camera keeps moving: this much closer (zoom) and round (degrees), slowly
+// How the camera travels from place to place. It never stops: where the reader is between two entries decides
+// where the camera is between their places. `lin` is how much it lingers near a place (0: an even pace, 1: almost
+// a halt), `dip` how far it pulls back on the way (in zoom levels, for places far apart), `turn` how many degrees
+// it swings round as it passes a place, `secs` the seconds from one entry to the next (near, far).
+export const MOVES = {
+  glide: { lin: 0.75, dip: 0.9, turn: 0, secs: [3.6, 6.2] },
+  steady: { lin: 0.3, dip: 0.5, turn: 0, secs: [3, 5] },
+  orbit: { lin: 0.75, dip: 1.2, turn: 16, secs: [4.2, 7] },
+};
+// The designs of the time line at the foot, while one is being picked: a (dots, and rows for what has no place),
+// b (a scale of ticks, the entry in front named over the marker), c (the entries' names along the line).
+export const LINES = ['a', 'b', 'c'];
+const PAST = 4;           // small pictures of the entries just passed, in space
+const clamp01 = (v) => Math.max(0, Math.min(1, v));
 
 let lib = null;
 function loadLib() {
@@ -87,13 +99,15 @@ function styleOf() {
   };
 }
 
-export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
-  host.innerHTML = '<canvas class="g-space"></canvas><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
-    '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
-  const sky = host.children[0], box = host.children[1], ov = host.children[2], lead = ov.children[0], card = ov.children[1], shelf = host.children[3], note = host.children[4];
-  const rows = shelf.querySelector('.g-rows'), track = shelf.querySelector('.g-track');
+export function createGlobe(host, { open, goTo, esc, calm, move, line }) {
+  const M = MOVES[move] || MOVES.glide, LINE = LINES.includes(line) ? line : 'a';
+  host.dataset.line = LINE;
+  host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
+    '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i><div class="g-cap"></div></div></div><p class="g-note" hidden></p>';
+  const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], shelf = host.children[4], note = host.children[5];
+  const rows = shelf.querySelector('.g-rows'), track = shelf.querySelector('.g-track'), cap = shelf.querySelector('.g-cap');
   const S = { map: null, ready: false, steps: [], index: new Map(), cur: -1, last: null, stage: 'map', sig: '', until: 0, cardFor: -1, shown: 0, phone: false,
-    xs: [], frac: 0, sx: null, playing: false, warp: 0, stars: null, raf: 0, then: 0 };
+    xs: [], frac: 0, pos: null, was: 0, now: -1, vis: 0, dimv: 0, spv: 0, cam: [], placed: [], open: null, playing: false, warp: 0, stars: null, raf: 0, then: 0 };
   const far = () => (S.phone ? 0.9 : LEVELS.globe);
   const size = () => Math.min(box.clientWidth, box.clientHeight);
 
@@ -127,7 +141,7 @@ export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
         map.on('mouseleave', id, () => { map.getCanvas().style.cursor = ''; });
       }
       S.ready = true;
-      pins(); move(true);
+      pins(); run();
     });
     map.on('move', place);
     map.on('error', () => {});      // a tile that fails leaves a gap; the page carries on
@@ -140,62 +154,75 @@ export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
     const feats = [];
     S.steps.forEach((s, i) => {
       if (!s.place) return;
-      feats.push({ type: 'Feature', properties: { id: s.id, name: s.name, c: s.rgb, st: i === S.cur ? 'now' : i < S.cur ? 'past' : 'next', near: Math.abs(i - S.cur) <= NAMED },
+      feats.push({ type: 'Feature', properties: { id: s.id, name: s.name, c: s.rgb, st: i === S.now ? 'now' : i < S.now ? 'past' : 'next', near: Math.abs(i - S.now) <= NAMED },
         geometry: { type: 'Point', coordinates: [s.place[1], s.place[0]] } });
     });
     S.map.getSource('pins').setData({ type: 'FeatureCollection', features: feats });
     // The way here: from the last place before this one, when it is not next door.
-    const cur = S.steps[S.cur], arc = [];
+    const cur = S.steps[S.now], arc = [];
     if (cur && cur.place) {
-      let k = S.cur - 1; while (k >= 0 && !S.steps[k].place) k--;
+      let k = S.now - 1; while (k >= 0 && !S.steps[k].place) k--;
       const from = k >= 0 ? S.steps[k].place : null;
       if (from && distance(from, cur.place) > 1) arc.push({ type: 'Feature', properties: { c: cur.rgb }, geometry: { type: 'LineString', coordinates: greatCircle(from, cur.place) } });
     }
     S.map.getSource('arc').setData({ type: 'FeatureCollection', features: arc });
   }
 
-  // ---- the camera, and what the stage does for the entry in front
-  function move(instant) {
-    const cur = S.steps[S.cur], stage = stageFor(S.steps.map((s) => !!s.place), S.cur);
-    if (stage !== S.stage) { S.stage = stage; }
-    host.dataset.stage = stage;
-    if (!S.ready) return 0;
-    const map = S.map, still = instant || calm();
-    let secs = 0.6;
-    if (cur && cur.place) {
-      let k = S.cur - 1; while (k >= 0 && !S.steps[k].place) k--;
-      const prev = k >= 0 ? S.steps[k].place : null;
-      const cam = cameraFor(cur.place, prev, size(), far());
-      const here = map.getCenter(), km = distance([here.lat, here.lng], cur.place);
-      secs = flightSeconds(km);
-      // The card stands beside the pin, so the pin sits a little to the side of the middle, where there is room.
-      const pad = S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.18) };
-      const to = { ...cam, bearing: 0, padding: { top: 0, left: 0, right: 0, bottom: 0, ...pad } };
-      if (still) map.jumpTo(to); else map.flyTo({ ...to, duration: secs * 1000, essential: true, curve: 1.3 });
-      S.last = cur.place;
-    } else if (!cur) {
-      const to = { ...opening(S.steps.filter((s) => s.place).map((s) => s.place), size(), far()), bearing: 0, padding: { top: 0, left: 0, right: 0, bottom: 0 } };
-      if (still) map.jumpTo(to); else map.easeTo({ ...to, duration: 900 });
-    } else if (stage === 'dim' && !still) {
-      map.easeTo({ zoom: Math.max(far() - 0.3, map.getZoom() - 0.35), duration: 700 });     // a small step back; the map stays where it was
-    }
-    host.classList.toggle('close', !!(cur && cur.place) && map.getZoom() > 4.6 && cameraFor(cur.place, null, size(), far()).zoom > 4.6);
-    if (onStage) onStage(stage);
-    return still ? 0 : secs;
+  // ---- the camera: where it is follows from where the reader is, so it moves whenever they do
+  // Each place's own view: as close as the place is exact, but with the place before it still in the frame.
+  function cams() {
+    const sz = size(), f = far();
+    let prev = null;
+    S.placed = [];
+    const pl = S.steps.map((s) => s.place).filter(Boolean);
+    S.cam = S.steps.map((s, i) => {
+      if (!s.place) return null;
+      let zoom = levelZoom(s.place[2]);
+      if (prev) { const km = distance(prev, s.place); if (km > 0.5) zoom = Math.min(zoom, zoomFor(km, 0.46 * sz, s.place[0])); }
+      // Nor does it dive far below the height it must climb to for the next place: two zoom levels at most.
+      const next = pl[S.placed.length + 1];
+      if (next) { const km = distance(next, s.place); if (km > 0.5) zoom = Math.min(zoom, zoomFor(km, 0.46 * sz, s.place[0]) + 2); }
+      prev = s.place; S.placed.push(i);
+      return { at: s.place, zoom: Math.max(farAt(f, s.place[0]), Math.min(zoom, LEVELS.spot)) };
+    });
+    const o = opening(S.steps.filter((s) => s.place).map((s) => s.place), sz, f);
+    S.open = { at: [o.center[1], o.center[0]], zoom: o.zoom };
+    S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.18) }) };
+  }
+  // The camera for a reader at `pos` (the number of the entry in front, and on towards the next): on the way from
+  // the last place before to the next one after, pulling back on the way when they lie far apart.
+  function camAt(pos) {
+    if (!S.placed.length) return null;
+    let P = -1, Q = -1;
+    for (const i of S.placed) { if (i <= pos) P = i; else { Q = i; break; } }
+    const A = P < 0 ? S.open : S.cam[P], B = Q < 0 ? A : S.cam[Q];
+    const u = Q < 0 ? 0 : clamp01((pos - P) / (Q - P));
+    const e = u - (M.lin * Math.sin(2 * Math.PI * u)) / (2 * Math.PI), w = Math.sin(Math.PI * e) ** 2;
+    const km = distance(A.at, B.at), at = between(A.at, B.at, e);
+    const low = farAt(far(), at[0]);
+    const mid = Math.max(low, Math.min(A.zoom, B.zoom) - M.dip * Math.min(1, km / 1200));
+    const zoom = Math.max(low, (A.zoom + (B.zoom - A.zoom) * e) * (1 - w) + mid * w);
+    return { center: [at[1], at[0]], zoom, pitch: pitchFor(zoom), bearing: M.turn * Math.sin(Math.PI * pos), padding: S.pad };
   }
 
   // ---- the card of the entry in front
-  function showCard() {
-    const s = S.steps[S.cur];
-    S.cardFor = S.cur;
+  function build(i) {
+    const s = S.steps[i];
+    S.cardFor = i;
+    cap.innerHTML = s ? `<i style="color:${s.col}">${esc(s.kind)}</i><b>${esc(s.name)}</b><span>${esc(s.when)}</span>` : '';
+    // In space the picture of the entry in front fills the sky behind its card, and the last few passed stand small beside it.
+    const space = S.stage === 'space', pic = space && s && s.img ? s.img : '';
+    if (bimg.dataset.src !== pic) { bimg.dataset.src = pic; bimg.hidden = !pic; if (pic) bimg.src = pic; }
+    const before = [];
+    if (space) for (let k = i - 1; k >= 0 && before.length < PAST; k--) if (S.steps[k].img) before.push(S.steps[k]);
+    past.innerHTML = before.map((b) => `<img src="${esc(b.img)}" alt="" title="${esc(b.name)}">`).join('');
     if (!s) { card.hidden = true; lead.hidden = true; return; }
-    card.hidden = false;
+    card.hidden = false; card.classList.toggle('bare', !!pic);
     card.dataset.id = s.id; card.style.setProperty('--c', s.col); lead.style.setProperty('--c', s.col);
     const where = s.place ? `<span class="g-pl">◎ ${esc(s.place[3] || coords(s.place))}${s.place[3] ? ` · ${coords(s.place)}` : ''}</span>` : `<span class="g-pl off">${S.stage === 'space' ? 'No place on the map' : 'No single place · shown off the map'}</span>`;
-    card.innerHTML = `${s.img ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}${where}`;
+    card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}${where}`;
     const img = card.querySelector('img');
     if (img) img.addEventListener('error', () => { img.remove(); place(); });
-    card.classList.remove('in', 'out'); void card.offsetWidth; card.classList.add('in');
     place();
   }
   // Where the card stands: beside its pin, on the side with room; for an entry with no place, over its
@@ -218,7 +245,7 @@ export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
     }
     const chip = track.querySelector('.on');
     const mid = S.stage === 'space' || !chip ? W / 2 : chip.getBoundingClientRect().left - host.getBoundingClientRect().left + 14;
-    const y = S.stage === 'space' ? Math.max(top0, (H - foot - ch) * 0.42) : Math.max(top0, low - 26);
+    const y = S.stage === 'space' ? Math.max(top0, card.classList.contains('bare') ? low - 34 : (H - foot - ch) * 0.42) : Math.max(top0, low - 26);
     card.style.transform = `translate(${Math.round(Math.max(12, Math.min(W - cw - 12, mid - cw / 2)))}px, ${Math.round(y)}px)`;
   }
 
@@ -228,38 +255,39 @@ export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
     shelf.hidden = !S.steps.length;
     if (shelf.hidden) return;
     let said = '', room = 1e9;
+    const wide = { a: [23, 170], b: [9, 9], c: [130, 130] }[LINE];
     track.innerHTML = S.steps.map((s, i) => {
       const yr = s.mark && s.mark !== said && room >= 58 ? `<u>${esc(s.mark)}</u>` : '';
       if (yr) { said = s.mark; room = 0; }
-      room += s.place ? 23 : 170;
+      room += wide[s.place ? 0 : 1];
+      const tip = `title="${esc(s.name)}, ${esc(s.when)}" aria-label="${esc(s.name)}"`, off = s.place ? '' : ' off';
+      if (LINE === 'b') return `<button type="button" class="g-tk${off}" data-i="${i}" style="--c:${s.col}" ${tip}>${yr}</button>`;
+      if (LINE === 'c') return `<button type="button" class="g-nm${off}" data-i="${i}" style="--c:${s.col}"><b></b>${esc(s.name)}${yr}</button>`;
       return s.place
-        ? `<button type="button" class="g-dot" data-i="${i}" style="--c:${s.col}" title="${esc(s.name)}, ${esc(s.when)}" aria-label="${esc(s.name)}">${yr}</button>`
+        ? `<button type="button" class="g-dot" data-i="${i}" style="--c:${s.col}" ${tip}>${yr}</button>`
         : `<button type="button" class="g-chip" data-i="${i}" style="--c:${s.col}"><i>${esc(s.kind)}</i>${esc(s.name)}<span>${esc(s.when)}</span>${yr}</button>`;
     }).join('');
     measure();
   }
   // Where each entry stands on the strip.
   function measure() {
-    S.xs = Array.from(track.children, (el) => el.offsetLeft + (el.classList.contains('g-chip') ? 14 : el.offsetWidth / 2));
+    S.xs = Array.from(track.children, (el) => el.offsetLeft + (el.classList.contains('g-chip') ? 14 : el.classList.contains('g-nm') ? 4 : el.offsetWidth / 2));
+    rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
   }
   function markShelf() {
-    if (shelf.hidden) return;
     const els = track.children;
-    for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.cur ? 'on' : i < S.cur ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
-    rows.style.setProperty('--now', Math.round(nowAt()) + 'px');
-    run();
+    for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
   const nowAt = () => rows.clientWidth * (S.phone ? 0.3 : 0.4);
-  // The place on the strip that belongs under the marker: the entry in front, and on towards the next as the reader travels.
-  function want() {
+  // The place on the strip that belongs under the marker for a reader at `pos`.
+  function xAt(pos) {
     if (!S.xs.length) return 0;
-    if (S.cur < 0) return S.xs[0] - 34 * (1 - S.frac);
-    const a = S.xs[S.cur], b = S.xs[S.cur + 1];
-    return b == null ? a : a + (b - a) * S.frac;
+    if (pos < 0) return S.xs[0] + 34 * pos;
+    const i = Math.min(S.xs.length - 1, Math.floor(pos)), a = S.xs[i], b = S.xs[i + 1];
+    return b == null ? a : a + (b - a) * (pos - i);
   }
 
-  // ---- space: where a view has no place on the Earth the reader flies on among the stars. They stream past
-  // while play travels and rush at each new entry; standing still, they stand still.
+  // ---- space: where a view has no place on the Earth the reader flies on among the stars, as fast as they travel.
   function stars(dt) {
     const W = host.clientWidth, H = host.clientHeight, dpr = Math.min(2, window.devicePixelRatio || 1);
     if (sky.width !== Math.round(W * dpr) || sky.height !== Math.round(H * dpr)) { sky.width = Math.round(W * dpr); sky.height = Math.round(H * dpr); }
@@ -272,6 +300,7 @@ export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
       const z0 = st.z;
       st.z -= S.warp * dt;
       if (st.z <= 0.02) { st.z += 0.98; continue; }
+      if (st.z > 1) { st.z -= 0.98; continue; }
       const x = cx + (st.x / st.z) * f * 0.5, y = cy + (st.y / st.z) * f * 0.5;
       if (x < -20 || x > W + 20 || y < -20 || y > H + 20) continue;
       const near = 1 - st.z, a = Math.min(1, near * 1.3) * 0.85, r = 0.4 + near * 1.5;
@@ -280,22 +309,70 @@ export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
       c.beginPath(); c.moveTo(x0, y0); c.lineTo(x + 0.01, y); c.stroke();
     }
   }
-  // One loop for what moves by itself: the strip easing to its place, and the stars.
+
+  // ---- one frame. Everything follows from `S.pos`, where the reader is among the entries (2.4: four tenths of
+  // the way from the third to the fourth): the camera, the strip, the stars, which card is up and how far it has
+  // come. So nothing waits for anything, and it all moves for exactly as long as the reader does.
+  const toward = (v, to, k) => (Math.abs(to - v) < 0.004 ? to : v + (to - v) * Math.min(1, k));
   function frame(now) {
     S.raf = 0;
-    const dt = Math.min(0.05, (now - S.then) / 1000 || 0.016); S.then = now;
+    const dt = Math.min(0.05, Math.max(0.001, (now - S.then) / 1000)); S.then = now;
+    const still = calm(), goal = S.cur + S.frac;
     let busy = false;
-    const to = nowAt() - want();
-    if (S.sx == null || calm()) S.sx = to;
-    else if (Math.abs(to - S.sx) > 0.4) { S.sx += (to - S.sx) * Math.min(1, dt * 7); busy = true; } else S.sx = to;
-    track.style.transform = `translateX(${S.sx.toFixed(1)}px)`;
-    if (S.stage === 'space') {
-      const cruise = S.playing && !calm() ? 0.07 : 0;
-      S.warp += (cruise - S.warp) * Math.min(1, dt * 1.6);
-      if (Math.abs(S.warp - cruise) < 0.002) S.warp = cruise;
-      stars(dt);
-      if (S.warp > 0) busy = true;
+    // The reader's place follows the page's a moment behind, so a jump to a far entry is travelled, not cut to.
+    if (S.pos == null || still) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
+    if (S.pos !== goal) busy = true;
+    const speed = (S.pos - S.was) / dt; S.was = S.pos;
+
+    // The entry whose card is up: it comes up a fifth of the way before the reader reaches it, and goes when the
+    // camera has left its place behind.
+    // In space nothing else is in sight, so the next card is on its way sooner and the last one gone later.
+    const early = S.stage === 'space' ? 0.32 : 0.2, late = S.stage === 'space' ? 0.66 : 0.5;
+    const c = Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
+    if (c !== S.now) {
+      S.now = c;
+      S.stage = stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.stage;
+      pins(); markShelf(); build(c);
     }
+
+    // The stage: the map dims for an entry with no place, and goes out of sight for space.
+    const dim = toward(S.dimv, S.stage === 'dim' ? 1 : 0, still ? 1 : dt * 3), sp = toward(S.spv, S.stage === 'space' ? 1 : 0, still ? 1 : dt * 2.2);
+    if (dim !== S.dimv || sp !== S.spv || S.styled == null) {
+      S.dimv = dim; S.spv = sp; S.styled = 1; busy = true;
+      box.style.opacity = (1 - sp).toFixed(3); box.style.pointerEvents = sp > 0.5 ? 'none' : '';
+      box.style.filter = dim > 0.01 ? `brightness(${(1 - 0.5 * dim).toFixed(3)}) saturate(${(1 - 0.4 * dim).toFixed(3)})` : '';
+      sky.style.opacity = sp.toFixed(3);
+    }
+    if (S.ready && sp < 0.995) {
+      const cam = camAt(S.pos);
+      if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
+    }
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - xAt(S.pos)).toFixed(1)}px)`;
+    if (sp > 0.005) {
+      S.warp = still ? 0 : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
+      stars(dt);
+      if (S.warp) busy = true;
+    }
+
+    // The card: up while the reader is near its entry. In play it fades in as they come and out as they go on;
+    // in space it comes out of the distance and passes by. Standing still, it stays.
+    let vis = 0, scale = 1, drop = 0;
+    if (S.steps[c]) {
+      vis = S.playing && !still ? clamp01(Math.min((g + early) / 0.12, (late - g) / 0.16)) : 1;
+      // In space the reader flies on like a craft: a card comes out of the distance, and passes away below them.
+      if (S.stage === 'space' && S.playing && !still) {
+        const out = clamp01((g - 0.36) / 0.3) ** 2;
+        scale = g < 0 ? 0.6 + 0.4 * (1 - (g / early) ** 2) : 1 + 0.05 * clamp01(g / 0.36) + 0.75 * out;
+        drop = (g < 0 ? -0.1 * (g / early) ** 2 : 0.55 * out) * host.clientHeight;
+      }
+    }
+    S.vis = toward(S.vis, vis, still ? 1 : dt * 12);
+    if (S.vis !== vis) busy = true;
+    card.style.opacity = S.vis.toFixed(3); card.style.scale = scale.toFixed(3); card.style.translate = `0 ${drop.toFixed(1)}px`; card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
+    lead.style.opacity = (0.75 * S.vis).toFixed(3);
+    back.style.opacity = sp.toFixed(3);
+    if (sp > 0.005) { bimg.style.opacity = (0.8 * S.vis).toFixed(3); bimg.style.scale = (0.94 + 0.12 * clamp01(g + early)).toFixed(4); }
+    if (S.stage !== 'map' || !S.ready) place();
     if (busy) run();
   }
   function run() { if (!S.raf) { S.then = performance.now(); S.raf = requestAnimationFrame(frame); } }
@@ -306,64 +383,42 @@ export function createGlobe(host, { open, goTo, esc, calm, onStage }) {
   for (const ev of ['pointerdown', 'pointermove', 'pointerup']) box.addEventListener(ev, (e) => e.stopPropagation());
 
   return {
-    // The entries on the timeline, in the order play meets them. Each step: id, name, kind, when, summary,
-    // img, col (a CSS colour), rgb (the same for the map), place ([lat, lon, level, name] or null).
+    // The entries on the timeline, in the order play meets them. Each step: id, name, kind, when, mark (its year, short),
+    // summary, img, col (a CSS colour), rgb (the same for the map), place ([lat, lon, level, name] or null).
     show(steps) {
       const sig = steps.map((s) => s.id + (s.place ? 1 : 0) + s.rgb).join();
       S.phone = host.clientWidth < 700;
       if (sig === S.sig) { this.resize(); return; }
-      const first = !S.sig;
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
-      S.cur = -1; S.cardFor = -1; card.hidden = true; lead.hidden = true;
-      S.sx = null; S.frac = 0;
-      drawShelf(); markShelf();
-      host.dataset.stage = stageFor(steps.map((s) => !!s.place), -1);
+      S.cur = -1; S.frac = 0; S.pos = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
+      drawShelf(); cams();
       if (!S.map && steps.some((s) => s.place)) {
         note.hidden = true;
         loadLib().then((gl) => { if (!S.map) S.map = make(gl); }).catch(() => { note.hidden = false; note.textContent = 'The map could not be loaded. The entries are in the strip below.'; });
-      } else { pins(); move(first); }
-    },
-    // The entry in front of the reader (null before the first). Returns nothing; `hold()` says whether play should wait.
-    at(id, playing) {
-      const i = id == null ? -1 : S.index.get(id) ?? -1;
-      if (i === S.cur) return false;
-      S.cur = i;
-      pins(); markShelf();
-      const was = S.stage, secs = move(false);
-      // In space the card that was up flies past the reader, and the stars rush towards the next.
-      const fly = was === 'space' && S.stage === 'space' && !card.hidden && !calm();
-      if (S.stage === 'space' && !calm()) S.warp = Math.max(S.warp, 0.55);
-      lead.hidden = true; S.cardFor = -1;
-      if (fly) { card.classList.remove('in'); card.classList.add('out'); } else card.hidden = true;
-      clearTimeout(S.timer); clearTimeout(S.drift);
-      // The camera never stands still in play (asked for, Nov 2026: "it shows the card and freezes"): once it
-      // has arrived it keeps coming closer and turning a little, until it leaves for the next place.
-      if (playing && S.ready && S.stage !== 'space' && !calm()) {
-        S.turn = -(S.turn || 1);
-        S.drift = setTimeout(() => {
-          const map = S.map, long = READ + 4;
-          map.easeTo({ zoom: map.getZoom() + DRIFT[0] * (S.stage === 'dim' ? 0.5 : 1), bearing: map.getBearing() + S.turn * DRIFT[1], duration: long * 1000, easing: (t) => 1 - (1 - t) * (1 - t), essential: true });
-        }, Math.max(0.05, secs) * 1000 + 30);
       }
-      // The card opens as the camera arrives, not before.
-      const wait = S.steps[i] && S.steps[i].place ? Math.max(0, secs - 0.35) : fly ? 0.5 : 0.15;
-      S.timer = setTimeout(showCard, wait * 1000);
-      S.until = performance.now() + (secs + READ) * 1000;
-      return playing && !!S.steps[i];
-    },
-    // While the camera flies and the card has not been up long enough to read, play waits.
-    hold: () => S.cur >= 0 && performance.now() < S.until,
-    // Every frame the reader moves: whether play travels, and how far they are from the entry in front to the next (0 to 1).
-    tick(playing, frac) {
-      if (playing === S.playing && Math.abs(frac - S.frac) < 0.001) return;
-      S.playing = playing; S.frac = frac;
       run();
+    },
+    // The entry in front of the reader (null before the first), and how far on they are towards the next (0 to 1).
+    // Called whenever the reader moves. Says whether a new entry has come to the front in play.
+    at(id, frac, playing) {
+      const i = id == null ? -1 : S.index.get(id) ?? -1, fresh = i !== S.cur;
+      if (!fresh && playing === S.playing && Math.abs(frac - S.frac) < 0.0005) return false;
+      S.cur = i; S.frac = frac; S.playing = playing;
+      run();
+      return fresh && playing && !!S.steps[i];
+    },
+    // The seconds play should take from the entry in front to the next: longer when the camera has far to go.
+    legSecs() {
+      const a = S.steps[S.cur], b = S.steps[S.cur + 1];
+      if (!a || !b) return M.secs[0] * 0.8;
+      if (!a.place || !b.place) return S.stage === 'space' ? M.secs[0] + 0.8 : M.secs[0];
+      return M.secs[0] + (M.secs[1] - M.secs[0]) * Math.min(1, distance(a.place, b.place) / 7000);
     },
     resize() {
       S.phone = host.clientWidth < 700;
       if (S.map) S.map.resize();
       if (!shelf.hidden) measure();
-      markShelf(); place();
+      cams(); place(); run();
     },
     stage: () => S.stage,
     zoom: () => (S.map ? S.map.getZoom() : null),

@@ -330,25 +330,32 @@ How the page is put together:
   in the order play meets them and `globeFrame()` tells it which one stands in front (the open
   entry, else the last one within `AHEAD` of the reader). An entry with a place is a pin: the camera
   flies to it and its card stands beside it (above the strip on a phone), opening upwards like a
-  scroll. How close the camera comes is one rule (`cameraFor()`): as close as the place is exact
-  (its level: spot, city, region, country) but never so close that the place the reader comes from
-  leaves the frame, so near places are a short glide and only far ones pull back to the whole
-  globe (asked for: "it doesn't need to jump out to the full globe"). An entry with no place is a
-  row in the strip at the foot, on one time line with the pins, which are dots on it; its card
-  rises over its row while the map steps back and dims, and where most of a view has no place, or
-  five or more in a row have none, the map goes out of sight and the card stands among the stars
-  with no Earth (`stageFor()`; asked for: "it can hide away"). Play waits while the camera flies
-  and the card is read (`globe.hold()`), but the camera never stands still in play: once it arrives it
-  keeps coming a little closer and turning (`DRIFT`), then leaves for the next place (asked for: "it
-  shows the card and freezes there. But should be more like it keeps moving"). In space the reader
-  flies on among the stars (`.g-space`, one small 2D canvas, drawn only while something moves): they
-  stream past while play travels and rush at each new entry, the card that was up passes by the
-  reader and the next comes out of the distance (asked for: the Universe "didn't feel like moving
-  forward"). The time line runs along the foot, not upright on the right (asked for: "so it shows
-  moving", "so right side can be cleaned up"): `body.globe` sets `--bar` to 0 and hides `#axis`, play
-  and the sound button stand at the strip's left end, and the strip slides under a marker that stands
-  still, by how far the reader is from the entry in front to the next (`globe.tick()`), with a year
-  written where it changes. The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
+  scroll. Everything on the globe follows from one number, where the reader is among the entries
+  (`S.pos` in `site/globe.js`: 2.4 is four tenths of the way from the third entry to the fourth), which
+  the page gives it whenever the reader moves (`globe.at(id, frac, playing)`): the camera, the time
+  line, the stars, which card is up and how far it has come. So nothing flies by itself and nothing
+  waits: it all moves exactly while the reader does. This was asked for after a first version that
+  flew to a place and stood there ("it shows the card and freezes there. But should be more like it
+  keeps moving", "we wanted a smooth approach"); do not bring back a flight with a hold. The camera
+  is on the way from the last place to the next (`camAt()`), lingering near each and pulling back
+  between places that lie far apart (`MOVES`; `?move=glide|steady|orbit` while one is picked). Each
+  place's own height is one rule (`cams()`): as close as the place is exact (its level: spot, city,
+  region, country) but never so close that the place the reader comes from leaves the frame, nor more
+  than two zoom levels below what the next place needs, so near places are a short glide and only
+  far ones pull back to the whole globe (asked for: "it doesn't need to jump out to the full globe").
+  Play takes a set time from each entry to the next (`globe.legSecs()`), longer for a long way. An
+  entry with no place is a row on the time line at the foot; its card rises over its row while the
+  map dims, and where most of a view has no place, or five or more in a row have none, the map goes
+  out of sight and the reader flies on among the stars with no Earth (`stageFor()`; asked for: "it
+  can hide away"). In space (`.g-space`, one small 2D canvas) the stars stream past as fast as the
+  reader travels, a card comes out of the distance and passes away below the reader ("think like we
+  are flying in the space craft"), its picture is not in the card but fills the sky behind it
+  (`.g-bimg`), and the pictures of the last few entries passed stand small at the left (`.g-past`).
+  The time line runs along the foot, not upright on the right (asked for: "so it shows moving", "so
+  right side can be cleaned up"): `body.globe` sets `--bar` to 0 and hides `#axis`, play and the
+  sound button stand at the strip's right end (asked for), and the strip slides under a marker that
+  stands still, with a year written where it changes. Three designs of it are being picked from
+  (`LINES`, `?line=a|b|c`): dots with rows, a scale of ticks, and names. The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
   first and found "a bit heavy"): dark land, coasts in a warm line, a faint grid, the same map with
   streets close in. From far off the land is Natural Earth's small-scale coast
   (`site/media/land.json`, public domain); from country height down it is OpenFreeMap's tiles, free

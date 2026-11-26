@@ -23,7 +23,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const MAX_ROWS = 800;         // the most lines drawn at once
   // The globe (globe.js): the same timeline drawn on the Earth. A first version, shown only when the link says `?globe`.
   const GLOBE = new URLSearchParams(location.search).has('globe');
-  const DEEP = -5e6;            // older than this, the continents stood elsewhere: such an entry has no place on today's map
+  const DEEP = -5e6;
+  const LINE = new URLSearchParams(location.search).get('line');      // the design of the globe's time line, while that is being picked
+  const MOVE = new URLSearchParams(location.search).get('move');      // how the globe's camera travels, while that is being picked            // older than this, the continents stood elsewhere: such an entry has no place on today's map
   const TOP = 14;               // a little air above the road. There is no bar across the top any more (asked for, Nov 2026)
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
@@ -625,7 +627,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function writeUrl() {
     const q = new URLSearchParams();
     if (state.views.length > 1) q.set('with', state.views.slice(1).map(addr).join(','));
-    if (GLOBE) q.set('globe', '1');
+    if (GLOBE) { q.set('globe', '1'); if (MOVE) q.set('move', MOVE); if (LINE) q.set('line', LINE); }
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => colOut(state.colors.get(id))).join(','));
@@ -942,8 +944,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (play.on) road.pace += (paceFor(road.cards + road.waiting, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
       // Play slows for cards that have not had their turn, by as much as they still need, and never stands still.
       // It eases down to that limit as it eases up to speed, so the road never jerks under the reader.
-      // On the globe, play waits while the camera flies to a place and its card is read (globe.hold()).
-      const want = play.on ? Math.min(road.limit, PLAY_PACE * road.pace, GLOBE && globe && globe.hold() ? 0.004 : Infinity) : 0;
+      // On the globe, play takes each stretch between two entries in a set time (globe.legSecs()), whatever its
+      // length, so the camera, which follows the reader, travels evenly and never waits.
+      const want = !play.on ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() : Math.min(road.limit, PLAY_PACE * road.pace);
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       road.t += dir * road.vel * L.D * dt;
@@ -971,7 +974,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!globe) {
       document.body.classList.add('globe');
       $('globe').hidden = false;
-      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => roadToThing(id) });
+      globe = createGlobe($('globe'), { esc, calm, move: MOVE, line: LINE, open: (id) => openThing(id), goTo: (id) => roadToThing(id) });
     }
     const dir = camDir(), P = roadPalette(), seen = new Set(), steps = [];
     road.gorder = L.shown.filter((p) => p.a >= L.tMin && p.a <= L.tMax && L.at.get(p.t.id) === p).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
@@ -989,17 +992,18 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function globeFrame() {
     if (!globe || !road.gorder) return;
     const dir = camDir(), edge = road.t + dir * AHEAD * L.D;
-    let cur = state.open && L.at.has(state.open) ? L.at.get(state.open) : null;
+    let cur = !play.on && state.open && L.at.has(state.open) ? L.at.get(state.open) : null;
     let next = null;
     if (!cur) for (const p of road.gorder) { if (dir * (p.a - edge) > 0) { next = p; break; } cur = p; }
     const id = cur ? cur.t.id : null;
-    // How far on from the entry in front towards the next: the time line at the foot slides by it.
-    const from = cur ? cur.a : dir > 0 ? L.tMin : L.tMax;
-    globe.tick(play.on, next && next.a !== from ? clamp((edge - from) / (next.a - from), 0, 1) : 0);
+    // How far on from the entry in front towards the next: the camera and the time line at the foot go by it.
+    const from = cur ? cur.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
+    road.gleg = next && next.a !== from ? Math.abs(next.a - from) : 0;
+    const fresh = globe.at(id, road.gleg ? clamp((edge - from) / (next.a - from), 0, 1) : 0, play.on);
     if (id === road.gcur) return;
     road.gcur = id;
     road.gshows = cur && wallMedia(cur.t).length ? [{ id, name: cur.t.name, side: 0, col: null, media: wallMedia(cur.t) }] : [];
-    if (globe.at(id, play.on)) breath(0);
+    if (fresh) breath(0);
   }
 
   // The colours of the theme, as numbers the canvas can fade.

@@ -38,6 +38,19 @@ export function greatCircle(a, b, n = 64) {
   return out;
 }
 
+// The place a fraction `f` of the way from a to b, along the shortest way over the globe: [lat, lon].
+export function between(a, b, f) {
+  const d = distance(a, b) / EARTH;
+  if (d < 1e-6 || f <= 0) return [a[0], a[1]];
+  if (f >= 1) return [b[0], b[1]];
+  const [p1, l1] = [a[0] * RAD, a[1] * RAD], [p2, l2] = [b[0] * RAD, b[1] * RAD];
+  const A = Math.sin((1 - f) * d) / Math.sin(d), B = Math.sin(f * d) / Math.sin(d);
+  const x = A * Math.cos(p1) * Math.cos(l1) + B * Math.cos(p2) * Math.cos(l2);
+  const y = A * Math.cos(p1) * Math.sin(l1) + B * Math.cos(p2) * Math.sin(l2);
+  const z = A * Math.sin(p1) + B * Math.sin(p2);
+  return [Math.atan2(z, Math.hypot(x, y)) / RAD, Math.atan2(y, x) / RAD];
+}
+
 // The zoom at which `km` on the ground, at latitude `lat`, is `px` pixels long.
 export const zoomFor = (km, px, lat = 0) => Math.log2((ROUND * Math.max(0.2, Math.cos(lat * RAD)) * px) / (TILE * Math.max(km, 0.05)));
 // The camera tilts as it comes down: flat over the whole globe, about 55 degrees in a street.

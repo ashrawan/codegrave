@@ -86,3 +86,15 @@ test('coordinates are written for people', () => {
   assert.equal(coords(MIDWAY), '28.2° N, 177.4° W');
   assert.equal(coords([-33.9, 18.4]), '33.9° S, 18.4° E');
 });
+
+test('between: a point on the way, along the shortest way', async () => {
+  const { between } = await import('../site/globe-path.js');
+  const a = [0, 0], b = [0, 90];
+  assert.deepEqual(between(a, b, 0), [0, 0]);
+  assert.deepEqual(between(a, b, 1), [0, 90]);
+  const m = between(a, b, 0.5);
+  assert.ok(Math.abs(m[0]) < 1e-9 && Math.abs(m[1] - 45) < 1e-9);
+  // Across the date line it goes the short way, not round the world.
+  const d = between([10, 170], [10, -170], 0.5);
+  assert.ok(Math.abs(Math.abs(d[1]) - 180) < 1e-6);
+});
