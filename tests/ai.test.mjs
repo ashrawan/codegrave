@@ -71,5 +71,7 @@ test('a spec becomes a view file the page can draw', () => {
 test('names make ids, and there are three models to pick from', () => {
   assert.equal(slug('  Café  Müller! '), 'cafe-muller');
   assert.equal(slug('???'), 'entry');
-  assert.deepEqual(MODELS.map((m) => m.id), ['deepseek', 'claude', 'gpt']);
+  assert.ok(MODELS.length >= 3 && MODELS.every((m) => /^[a-z0-9-]+\/[a-z0-9.-]+$/.test(m.id) && m.name && m.note));
+  assert.ok(!MODELS[0].more, 'the first model is offered at once');
+  assert.equal(new Set(MODELS.map((m) => m.id)).size, MODELS.length);
 });

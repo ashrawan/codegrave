@@ -40,7 +40,7 @@ publishable one and is meant to be public.
 
 ## Create with AI
 
-The page sends `{ prompt, model, current? }` and the reader's session to
+The page sends `{ prompt, model, effort, current? }` and the reader's session to
 the Edge Function `ai-timeline` (`supabase/functions/ai-timeline/`). The
 function checks who is asking, counts the day's requests in `ai_requests`
 (20 a day per account by default), asks the model through OpenRouter for a
@@ -51,16 +51,35 @@ security still decides who writes what. The spec is stored beside the view
 file (`data.spec`), which is what "Ask for a change" sends back to the
 model.
 
-| Name in the page | OpenRouter model (default) | To change it, set the secret |
+A request can be anything that happens in time: a history, a company, a
+life, a subject to learn, a news story so far, or a plan dated ahead of
+today (a trip day by day, a course week by week). The function tells the
+model today's date for that.
+
+The model menu offers these, by their OpenRouter ids (`MODELS` in
+`site/ai.js`, and the same list as `OFFERED` in the function):
+
+| Name in the page | OpenRouter model | Shown |
 | --- | --- | --- |
-| DeepSeek | `deepseek/deepseek-v4.1-flash` | `MODEL_DEEPSEEK` |
-| Claude | `anthropic/claude-haiku-5.5` | `MODEL_CLAUDE` |
-| GPT | `openai/gpt-6-luna` | `MODEL_GPT` |
+| DeepSeek V4.1 Flash | `deepseek/deepseek-v4.1-flash` | at once (the default) |
+| Claude Haiku 5.5 | `anthropic/claude-haiku-5.5` | at once |
+| GPT-6 Luna | `openai/gpt-6-luna` | at once |
+| Claude Sonnet 5.5 | `anthropic/claude-sonnet-5.5` | under "More models" |
+| GPT-6.1 Terra | `openai/gpt-6.1-terra` | under "More models" |
+| DeepSeek V4 Pro | `deepseek/deepseek-v4-pro` | under "More models" |
+
+Effort (Quick, Balanced, Thorough) is sent as OpenRouter's
+`reasoning.effort` (low, medium, high).
 
 Secrets of the function (Supabase → Edge Functions → Secrets):
 `OPENROUTER_API_KEY` (required; without it the page says Create with AI is
-not switched on yet), the three `MODEL_…` names above and `AI_DAILY`
-(optional). Entries made this way are not reviewed: they are marked
+not switched on yet), `AI_MODELS` (optional: more OpenRouter ids to allow,
+separated by commas; `*` allows any id, for the day the page lists
+everything OpenRouter has) and `AI_DAILY` (optional). Spending is capped
+twice: by the credit limit set on the OpenRouter key itself, and by
+`AI_DAILY` requests per account a day. A cap per person inside OpenRouter
+would need one key per account (OpenRouter's key-provisioning API); that
+is not built. Entries made this way are not reviewed: they are marked
 unverified and carry a link to their Wikipedia article as the source.
 
 ## Setting up sign-in (once, in the Supabase dashboard)
@@ -78,8 +97,11 @@ unverified and carry a link to their Wikipedia article as the source.
 
 ## Limits known today
 
-- "Export as PDF" is hidden for stored timelines: the print page reads
-  built view files only.
+- "Export as PDF" of a stored timeline works from the page (the view file
+  is handed over in the tab's storage); the print page's own address does
+  not open such a timeline in another tab or for another person.
+- A plan is drawn by day on its cards, but the road's scale and the export
+  still write only years.
 - A public stored timeline is listed in Explore under "New from the
   community", but the search does not find it yet, and it has no link
   preview of its own.

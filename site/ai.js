@@ -13,11 +13,22 @@
    minus sign and four or more digits ("-0044-03-15"); deep time a negative
    year ("-66000000"). There is no year 0. */
 
-// The models a reader may pick. The server decides which model each name means.
+// The models a reader may pick, by their OpenRouter id. The first ones are offered at once, the rest under
+// "More models". The server keeps its own list of what it will run (supabase/functions/ai-timeline), so a
+// model is added in both places; the plan is to offer everything OpenRouter has (asked for, Nov 2026).
 export const MODELS = [
-  { id: 'deepseek', name: 'DeepSeek', note: 'Fast' },
-  { id: 'claude', name: 'Claude', note: 'Careful' },
-  { id: 'gpt', name: 'GPT', note: 'Balanced' },
+  { id: 'deepseek/deepseek-v4.1-flash', name: 'DeepSeek V4.1 Flash', note: 'Fast. Right for most things.' },
+  { id: 'anthropic/claude-haiku-5.5', name: 'Claude Haiku 5.5', note: 'Careful with dates and wording.' },
+  { id: 'openai/gpt-6-luna', name: 'GPT-6 Luna', note: 'Quick and balanced.' },
+  { id: 'anthropic/claude-sonnet-5.5', name: 'Claude Sonnet 5.5', note: 'Deeper on hard subjects. Slower.', more: true },
+  { id: 'openai/gpt-6.1-terra', name: 'GPT-6.1 Terra', note: 'Stronger reasoning. Slower.', more: true },
+  { id: 'deepseek/deepseek-v4-pro', name: 'DeepSeek V4 Pro', note: 'The larger DeepSeek.', more: true },
+];
+// How long the model thinks before it writes (OpenRouter's "reasoning effort", which each model reads its own way).
+export const EFFORTS = [
+  { id: 'low', name: 'Quick' },
+  { id: 'medium', name: 'Balanced' },
+  { id: 'high', name: 'Thorough' },
 ];
 // The branches of the map, which give an entry its words (a person is born and dies, a city is founded).
 export const TYPES = ['people', 'places', 'organisations', 'events', 'arts', 'knowledge', 'society', 'life', 'earth-space', 'technology', 'computing'];

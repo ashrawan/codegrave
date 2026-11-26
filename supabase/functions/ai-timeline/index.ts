@@ -1,6 +1,6 @@
 // Create with AI: a sentence in, a timeline out.
 //
-// The page sends { prompt, model, current? } with the reader's session. This
+// The page sends { prompt, model, effort?, current? } with the reader's session. This
 // function asks a model through OpenRouter for a "spec" (site/ai.js says what
 // that is), adds a free picture from Wikipedia where there is one, and sends
 // the spec back. The page turns it into a view file and stores it itself, so
@@ -8,14 +8,19 @@
 //
 // Secrets (Supabase → Edge Functions → Secrets):
 //   OPENROUTER_API_KEY   required
-//   MODEL_DEEPSEEK, MODEL_CLAUDE, MODEL_GPT   optional: another OpenRouter model id for a name
+//   AI_MODELS            optional: more OpenRouter model ids to allow, separated by commas; "*" allows any
+//                        (the plan: offer everything OpenRouter has, and let the key's own limit cap the spending)
 //   AI_DAILY             optional: requests one account may make in a day (default 20)
 
-const MODELS: Record<string, string> = {
-  deepseek: Deno.env.get("MODEL_DEEPSEEK") ?? "deepseek/deepseek-v4.1-flash",
-  claude: Deno.env.get("MODEL_CLAUDE") ?? "anthropic/claude-haiku-5.5",
-  gpt: Deno.env.get("MODEL_GPT") ?? "openai/gpt-6-luna",
+// The models this function will run, by OpenRouter id (site/ai.js lists the same ones for the page).
+const OFFERED = ["deepseek/deepseek-v4.1-flash", "anthropic/claude-haiku-5.5", "openai/gpt-6-luna", "anthropic/claude-sonnet-5.5", "openai/gpt-6.1-terra", "deepseek/deepseek-v4-pro"];
+const EXTRA = (Deno.env.get("AI_MODELS") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
+const OLD: Record<string, string> = { deepseek: OFFERED[0], claude: OFFERED[1], gpt: OFFERED[2] };   // names an older page sent
+const modelFor = (name: string) => {
+  const id = OLD[name] ?? name;
+  return OFFERED.includes(id) || EXTRA.includes(id) || (EXTRA.includes("*") && /^[a-z0-9-]+\/[a-z0-9.:_-]+$/i.test(id)) ? id : null;
 };
+const EFFORTS = ["low", "medium", "high"];
 const DAILY = Number(Deno.env.get("AI_DAILY") ?? "20");
 const URL_ = Deno.env.get("SUPABASE_URL")!;
 const ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
@@ -29,7 +34,7 @@ const cors = {
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { ...cors, "Content-Type": "application/json" } });
 
 const TYPES = "people, places, organisations, events, arts, knowledge, society, life, earth-space, technology, computing";
-const SYSTEM = `You write timelines for codegrave.com, an encyclopedia drawn in time. Given a subject, answer with one JSON object and nothing else:
+const system = (today: string) => `You make timelines for codegrave.com, where anything that happens in time is drawn along a road. People ask for anything: a history, the story of a company, the life of a person, a subject to learn, a news story so far, or a plan that has not happened yet (a trip, a course for learning a skill, a project). Whatever it is, lay it out in time. Today is ${today}. Answer with one JSON object and nothing else:
 
 {
   "title": "the subject in the plain words people search for, at most 6 words, no subtitle",
@@ -49,11 +54,14 @@ const SYSTEM = `You write timelines for codegrave.com, an encyclopedia drawn in 
 }
 
 Rules:
-- Dates are text: "1969", "1969-07" or "1969-07-20". Before the common era use a minus sign and four digits: "-0044-03-15". Deep time is a negative year: "-66000000". There is no year 0. Give only the precision you are sure of; a year alone is fine. Never invent a date: leave out an entry rather than guess.
-- Chapters use whole years ("from" and "to" are numbers, negative before the common era), run in order, do not overlap, and together cover the entries. Use 3 to 7 chapters.
+- Dates are text: "1969", "1969-07" or "1969-07-20". Before the common era use a minus sign and four digits: "-0044-03-15". Deep time is a negative year: "-66000000". There is no year 0. Give only the precision you are sure of; a year alone is fine. Never invent the date of something that happened: leave out an entry rather than guess.
+- Chapters use whole years ("from" and "to" are numbers, negative before the common era), run in order, do not overlap, and together cover the entries. Use 3 to 7 chapters. When everything falls inside one or two years, use one chapter or none ("chapters": []).
 - Write 20 to 40 entries unless the subject is small or the request names a number; never more than 70. Pick what a good book on the subject would cover, spread across its whole span, in date order.
+- A plan (a trip, a course, a training schedule, a project) is dated forward: from the day or month the request names, else starting tomorrow. Each step is one entry with a full date for "start" and for "end" ("2027-04-03"; the same day twice for one day): a day of a trip, a week of a course, a milestone. "name" says what happens ("Day 3: Kyoto temples", "Week 2: loops and functions"), "kind" is Day, Week, Lesson, Milestone and the like, "summary" says what to do and why, "type" is the nearest fit (a place visited: places; a lesson: knowledge), and "wikipedia" names the article of the place or subject of that step, so it gets a picture. Write as many steps as the plan has.
+- A subject to learn: order it the way it is best understood, which is usually the order in which it was discovered, and let each summary teach one idea.
+- The news: tell the story as far as you know it, and say in "description" up to when that is.
 - "events" are optional, at most 3 per entry, and only for the most important entries.
-- People: public figures and the public record only. Nothing hateful, sexual or defamatory. If the request is not something a timeline can be made of, answer {"error": "a short sentence saying why"}.
+- People: public figures and the public record only. Nothing hateful, sexual or defamatory. Only if the request cannot be laid out in time at all, answer {"error": "a short sentence saying why"}.
 - Write in the language of the request. Everything in the JSON is plain text: no Markdown, no links.`;
 
 const CHANGE = `The reader already has the timeline below and asks for a change. Apply the change and answer with the whole timeline again in the same JSON shape, keeping everything they did not ask to change (the same names, dates and wording). Add a field "changed": one short sentence saying what you changed.`;
@@ -109,7 +117,8 @@ Deno.serve(async (req) => {
   try { body = await req.json(); } catch (_e) { return json({ error: "That request could not be read." }, 400); }
   const prompt = String(body.prompt ?? "").replace(/\s+/g, " ").trim().slice(0, 600);
   const name = String(body.model ?? "deepseek");
-  const model = MODELS[name];
+  const model = modelFor(name);
+  const effort = EFFORTS.includes(body.effort) ? String(body.effort) : "medium";
   if (prompt.length < 3) return json({ error: "Say what the timeline is about." }, 400);
   if (!model) return json({ error: "That model is not offered." }, 400);
   const current = body.current && typeof body.current === "object" ? body.current : null;
@@ -127,16 +136,17 @@ Deno.serve(async (req) => {
   const log = (ok: boolean, usage: Record<string, number> = {}) =>
     service("/rest/v1/ai_requests", { method: "POST", body: JSON.stringify({ owner: user.id, model, kind: current ? "change" : "create", prompt, ok, tokens_in: usage.prompt_tokens ?? 0, tokens_out: usage.completion_tokens ?? 0 }) }).catch(() => {});
 
+  const SYSTEM = system(new Date().toISOString().slice(0, 10));
   const messages = current
     ? [{ role: "system", content: SYSTEM + "\n\n" + CHANGE }, { role: "user", content: "The timeline now:\n" + JSON.stringify(current) + "\n\nThe change asked for: " + prompt }]
-    : [{ role: "system", content: SYSTEM }, { role: "user", content: "Make a timeline of: " + prompt }];
+    : [{ role: "system", content: SYSTEM }, { role: "user", content: "Make this: " + prompt }];
   let out: Record<string, any>;
   try {
     const r = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: { Authorization: "Bearer " + key, "Content-Type": "application/json", "HTTP-Referer": "https://codegrave.com", "X-Title": "codegrave" },
-      body: JSON.stringify({ model, messages, response_format: { type: "json_object" }, max_tokens: 16000, temperature: 0.3 }),
-      signal: AbortSignal.timeout(120_000),
+      body: JSON.stringify({ model, messages, response_format: { type: "json_object" }, reasoning: { effort }, max_tokens: 20000 }),
+      signal: AbortSignal.timeout(140_000),
     });
     out = await r.json();
     if (!r.ok) { await log(false); return json({ error: "The model could not be reached. Try again, or pick another model.", detail: out?.error?.message ?? "" }, 502); }

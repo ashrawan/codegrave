@@ -136,7 +136,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const A = yearText(a), B = yearText(b);
     return (A.includes(' ') || B.includes(' ')) && ua !== 'bce' ? A + ' – ' + B : A + '–' + B;
   }
-  const spanOf = (t) => spanText(writtenYear(t.bornEv.date), t.endEv ? writtenYear(t.endEv.date) : null);
+  // A step of a plan someone made (a day of a trip, a week of a course) is told by its days, not its year:
+  // "3 Apr 2027", "5–11 Apr 2027". Only for entries made with AI (their ids start with "x") that fall inside one year.
+  function daysOf(t) {
+    if (!t.endEv || !/^x/.test(t.id.split('/').pop())) return '';
+    const a = dateParts(t.bornEv.date), b = dateParts(t.endEv.date);
+    if (!a.d || !b.d || a.y !== b.y) return '';
+    const mon = (m) => MONTHS[m - 1].slice(0, 3);
+    if (a.m === b.m) return (a.d === b.d ? a.d : a.d + '–' + b.d) + ' ' + mon(a.m) + ' ' + a.y;
+    return `${a.d} ${mon(a.m)} – ${b.d} ${mon(b.m)} ${a.y}`;
+  }
+  const spanOf = (t) => daysOf(t) || spanText(writtenYear(t.bornEv.date), t.endEv ? writtenYear(t.endEv.date) : null);
   function fmtSpan(years) {
     if (years < 1) return 'under a year';
     const n = Math.round(years);
@@ -600,11 +610,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // ended long ago. The reader can narrow it with the year range in the panel.
     const starts = all.map((t) => t.lead ?? t.born).sort((a, b) => a - b);
     const earliest = all.length ? starts[0] : NOW - 30;
-    const last = all.length ? Math.max(...all.map((t) => Math.max(t.end ?? NOW, t.after ?? -Infinity))) : NOW;
+    // A plan (a trip, a course) is dated ahead of today, and then the road runs on to its last step (asked for, Nov 2026).
+    const last = all.length ? Math.max(...all.map((t) => Math.max(t.end ?? NOW, t.born, t.after ?? -Infinity))) : NOW;
     // Rounded out to a step that suits the span, with a little room at each end.
     const around = (from, to) => {
       const room = Math.max(10, to - from), pad0 = Math.max(1, room * 0.03), unit = niceStep(room / 40);
-      const b = to >= NOW - 0.5 ? NOW : Math.min(NOW, Math.ceil((to + pad0) / unit) * unit);
+      const b = to > NOW + 0.003 ? Math.ceil(to + 0.1) : to >= NOW - 0.5 ? NOW : Math.min(NOW, Math.ceil((to + pad0) / unit) * unit);
       return [Math.floor(Math.min(from - pad0, b - 10) / unit) * unit, b];
     };
     const [fitMin, fitMax] = around(earliest, last);
@@ -621,7 +632,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const minGap = Math.max(2, (fitMax - fitMin) / 500);
       tMin = clamp(lineYear(state.span[0]), fitMin, fitMax - minGap);
       tMax = clamp(lineYear(state.span[1]) + 1, tMin + minGap, fitMax);
-      if (tMax >= NOW_YEAR) tMax = Math.min(tMax, NOW);
+      if (tMax >= NOW_YEAR && fitMax <= NOW) tMax = Math.min(tMax, NOW);
     }
     const inSpan = (t) => (t.lead ?? t.born) < tMax && (t.end ?? NOW) >= tMin;
     return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
@@ -736,7 +747,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const { place, when, at } = warp(marks.map((m) => [m.at, m.w]), tMin, tMax);
     const spot = [new Map(), new Map()];      // where each entry starts, and where it ends
     marks.forEach((m, i) => spot[m.end].set(m.t, at[i]));
-    const from = (t) => spot[0].get(t), to = (t) => (t.end == null ? place(NOW) : spot[1].get(t) ?? from(t));
+    const from = (t) => spot[0].get(t), to = (t) => (t.end == null ? Math.max(from(t), place(NOW)) : spot[1].get(t) ?? from(t));
     const D = focalYears(lanes.flatMap((l) => l.mine.map(from)), tMin, tMax);
     const laneW = lanes.length ? (2 * G.RW) / lanes.length : 0, pad = Math.min(G.phone ? 14 : 24, laneW * 0.15);
     const shown = [], groups = [];
@@ -1345,7 +1356,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         const s = S(uEnd), y = py(s), a = far(s);
         c.strokeStyle = rgba(P.text, 0.85 * a); c.lineWidth = 1.4;
         c.beginPath(); c.moveTo(px(-G.RW, s) - 10 * s, y); c.lineTo(px(G.RW, s) + 10 * s, y); c.stroke();
-        if (dir > 0 && L.tMax >= NOW - 0.5) {
+        if (dir > 0 && L.tMax >= NOW - 0.5 && L.tMax <= NOW + 0.01) {
           font(600, Math.max(10, 9 + 9 * s));
           c.textBaseline = 'middle'; c.textAlign = 'right'; c.fillStyle = rgba(P.text, 0.9 * a);
           c.fillText('Today', px(-G.RW, s) - 16 * s - 4, y);
@@ -1367,7 +1378,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // millions or billions of years.
   function barTicks() {
     const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9);
-    const atNow = L.tMax >= NOW - 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
+    const atNow = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
     const marks = yearMarks(yMin, yMax, (y) => barY(L.place(lineYear(y))), () => gap, 7);
     const marked = eraMarked(marks.filter((k) => k.label && !(atNow && Math.abs(k.p - yEnd) < 22)).map((k) => k.y));
@@ -1393,7 +1404,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function roadHud(all) {
     const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
-    const label = L.tMax >= NOW - 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : playLabel(m);
+    const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : playLabel(m);
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
@@ -2407,7 +2418,11 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in the same tab.
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
-      const q = 'views=' + state.views.map(addressOf).join(',') + '&c=' + state.views.map((id) => colOut(state.colors.get(id))).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
+      // A timeline someone keeps is not a built file: it is handed to the print page through this tab's storage.
+      const kept = {};
+      for (const id of state.views) { const pl = account.payload(id); if (pl) kept[id] = pl; }
+      try { if (Object.keys(kept).length) sessionStorage.setItem('cg-print', JSON.stringify(kept)); else sessionStorage.removeItem('cg-print'); } catch (e) { /* too large: the print page will say it could not load */ }
+      const q = 'views=' + state.views.map((id) => (kept[id] ? id : addressOf(id))).join(',') + '&c=' + state.views.map((id) => colOut(state.colors.get(id))).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
       location.href = 'print.html?' + q;   // in the same tab (asked for, Nov 2026); the print page's logo leads back
     });
 

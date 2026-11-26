@@ -6,7 +6,7 @@
    The page knows a stored timeline as "t/<its id>". Its address is
    /t/<id>, or /<username>/<slug> once it is public. */
 import { shardOf } from './keys.js';
-import { MODELS, specToView } from './ai.js';
+import { EFFORTS, MODELS, specToView } from './ai.js';
 
 // Public by design: the key only allows what the database's row level security allows.
 export const CONFIG = {
@@ -235,7 +235,7 @@ export function createAccount(app) {
     l.hidden = false;
     const d = l.querySelector('.dlg'), w = d.offsetWidth, h = d.offsetHeight, up = r.top > innerHeight / 2;
     d.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.right > innerWidth / 2 && !anchor.closest('#sb') ? r.right - w : r.left)) + 'px';
-    d.style.top = Math.max(8, up ? r.top - h - 8 : r.bottom + 8) + 'px';
+    d.style.top = Math.max(8, Math.min(innerHeight - h - 8, up ? r.top - h - 8 : r.bottom + 8)) + 'px';
     return d;
   }
   // Asks for one line of text, or just a yes.
@@ -275,7 +275,6 @@ export function createAccount(app) {
 
   async function copyTimeline() {
     if (!user) { try { sessionStorage.setItem(INTENT, 'new'); } catch (e) { /* fine */ } return signIn('Sign in to start a timeline of your own.'); }
-    const from = app.views()[0], src = from && app.view(from);
     if (!src) return;
     const a = await ask({ title: 'New timeline', text: `It starts as a copy of “${src.name}”, private until you publish it. You can then add and remove entries.`, label: 'Name', value: isMine(from) ? src.name + ' 2' : 'My ' + src.name, ok: 'Create' });
     if (!a.value) return;
@@ -290,13 +289,28 @@ export function createAccount(app) {
   }
 
   // ---- create with AI: a sentence in, a timeline out (docs/ACCOUNTS.md)
-  let model = 'deepseek', working = false, ticker = 0;
-  try { const m = localStorage.getItem(MODEL); if (MODELS.some((x) => x.id === m)) model = m; } catch (e) { /* fine */ }
+  let model = MODELS[0].id, effort = 'medium', working = false, ticker = 0, moreModels = false;
+  try {
+    const m = localStorage.getItem(MODEL), f = localStorage.getItem(MODEL + '-effort');
+    if (MODELS.some((x) => x.id === m)) model = m;
+    if (EFFORTS.some((x) => x.id === f)) effort = f;
+  } catch (e) { /* fine */ }
   const modelName = () => MODELS.find((m) => m.id === model).name;
-  const IDEAS = ['The history of jazz', 'Every mission to Mars', 'The life of Marie Curie', 'The Roman Republic', 'How the internet was built', 'The Himalaya, from rock to Everest'];
+  const modelLabel = () => modelName() + (effort === 'medium' ? '' : ' · ' + EFFORTS.find((x) => x.id === effort).name);
+  // What people come to make, and for each a few requests that work well as they stand. The reader can
+  // make anything (asked for, Nov 2026: a company, a life, something to learn, a trip, a skill, the news).
+  const KINDS = [
+    { id: 'company', name: 'A company', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V6l8-2v16M12 9h8v11M3 20h18M7.5 9v.1M7.5 12.5v.1M7.5 16v.1M16 12.5v.1M16 16v.1"/></svg>', ideas: ['How Apple went from a garage to the iPhone', 'NVIDIA, from graphics cards to AI', 'The rise and fall of Nokia\'s phones', 'Toyota since 1937: every turning point'] },
+    { id: 'person', name: 'A life', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.8-3.6 3.6-5.5 7-5.5s6.2 1.9 7 5.5"/></svg>', ideas: ['The life of Marie Curie', 'Nelson Mandela, year by year', 'Steve Jobs: every product and turning point', 'Leonardo da Vinci\'s works in the order he made them'] },
+    { id: 'learn', name: 'Learn a subject', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5C6.5 4.5 9.5 4.7 12 6c2.5-1.3 5.5-1.5 8-.5v13c-2.5-1-5.5-.8-8 .5-2.5-1.3-5.5-1.5-8-.5zM12 6v13"/></svg>', ideas: ['Quantum physics, from Planck to quantum computers', 'How DNA was found, read and edited', 'The story of vaccines, from smallpox to mRNA', 'Life on Earth in 30 steps'] },
+    { id: 'trip', name: 'Plan a trip', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-10.5a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.3"/></svg>', ideas: ['Ten days in Japan in April: Tokyo, Kyoto and Osaka, day by day', 'Two weeks trekking to Everest Base Camp in October', 'A long weekend in Rome for a first visit', 'Three weeks by road down the west coast of the United States'] },
+    { id: 'skill', name: 'Learn a skill', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r=".8"/></svg>', ideas: ['Learn Python in 12 weeks, starting from zero', 'From the couch to a 5 km run in nine weeks', 'Guitar in six months at 20 minutes a day', 'Conversational Spanish in 90 days'] },
+    { id: 'news', name: 'The news', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h11v14H6.5A1.5 1.5 0 0 1 5 17.5zM16 9h3v8.5a1.5 1.5 0 0 1-3 0M8 9h5M8 12.5h5M8 16h3"/></svg>', note: 'A model knows the news only up to the day its training ended.', ideas: ['The AI race since ChatGPT', 'The return to the Moon: Artemis so far', 'Electric cars over the last ten years', 'Climate summits from Kyoto to today'] },
+    { id: 'history', name: 'History', icon: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10M7 20h10M8 4c0 4 8 4.5 8 8s-8 4-8 8M16 4c0 4-8 4.5-8 8s8 4 8 8"/></svg>', ideas: ['The history of jazz, from New Orleans to today', 'The Roman Republic, from the kings to Augustus', 'Every mission to Mars', 'The Cold War in 30 moments'] },
+  ];
   const STEPS = ['Reading up on the subject…', 'Choosing what belongs…', 'Checking the dates…', 'Writing the chapters…', 'Looking for pictures…', 'Laying out the road…'];
   const seed = () => Math.random().toString(36).slice(2, 8);
-  const modelBtn = (id) => `<button type="button" class="cr-model" id="${id}" data-model-menu aria-haspopup="menu"><i></i><span>${esc(modelName())}</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>`;
+  const modelBtn = (id) => `<button type="button" class="cr-model" id="${id}" data-model-menu aria-haspopup="menu"><i></i><span>${esc(modelLabel())}</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>`;
   const SEND = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>';
   // The page in the middle: one box to say what the timeline is about.
   function openCreate(text = '') {
@@ -304,15 +318,15 @@ export function createAccount(app) {
     const from = app.views()[0], src = from && app.view(from);
     $('create').innerHTML = `<button class="ibtn ex-x" type="button" data-create-close aria-label="Close" title="Back to the timeline">${ICON.x}</button>
       <div class="cr-in">
-        <h1>Make a timeline of anything.</h1>
-        <p class="ex-sub">Say the subject. codegrave writes the entries, the dates and the chapters, and draws the road.</p>
+        <h1>What do you want to make?</h1>
+        <p class="ex-sub">Anything that happens in time: a company, a life, a subject, a trip, a new skill, the news. Say it in a sentence and codegrave lays it out along the road.</p>
         <form id="cr-form" class="cr-box">
-          <textarea id="cr-q" rows="2" maxlength="600" placeholder="The history of jazz, from New Orleans to today" aria-label="What is the timeline about?" required>${esc(text)}</textarea>
-          <div class="cr-row">${modelBtn('cr-model')}<span class="grow"></span><button type="submit" class="cr-go" aria-label="Make the timeline" title="Make the timeline">${SEND}</button></div>
+          <textarea id="cr-q" rows="2" maxlength="600" placeholder="Describe what you want to make…" aria-label="What do you want to make?" required>${esc(text)}</textarea>
+          <div class="cr-row">${modelBtn('cr-model')}<span class="grow"></span><button type="submit" class="cr-go" aria-label="Make it" title="Make it">${SEND}</button></div>
         </form>
         <p id="cr-status" class="cr-status" role="status"></p>
-        <div class="cr-ideas">${IDEAS.map((t) => `<button type="button" data-idea>${esc(t)}</button>`).join('')}</div>
-        ${src ? `<p class="cr-alt">Or <button type="button" class="lnk" data-copy-view>start from a copy of “${esc(src.name)}”</button> and edit it by hand.</p>` : ''}
+        <div class="cr-ideas" role="group" aria-label="Ideas">${KINDS.map((k) => `<button type="button" data-kind="${k.id}" aria-expanded="false">${k.icon}${esc(k.name)}</button>`).join('')}</div>
+        <div id="cr-list" class="cr-list" hidden></div>
       </div>`;
     $('create').hidden = false;
     document.body.classList.add('creating');
@@ -336,7 +350,7 @@ export function createAccount(app) {
     ticker = setInterval(() => { i = Math.min(STEPS.length - 1, i + 1); el.textContent = STEPS[i]; }, 3500);
   }
   const fail = (el, e) => { if (el) { el.classList.add('err'); el.textContent = e.status === 401 ? 'Sign in again to make a timeline.' : e.message || 'That did not work. Try again.'; } else toast(e.message); };
-  const ask_ai = (prompt, current) => api('/functions/v1/ai-timeline', { method: 'POST', body: { prompt, model, ...(current ? { current } : {}) } });
+  const ask_ai = (prompt, current) => api('/functions/v1/ai-timeline', { method: 'POST', body: { prompt, model, effort, ...(current ? { current } : {}) } });
   async function make(prompt) {
     if (working || prompt.length < 3) return;
     if (!user) { try { sessionStorage.setItem(PROMPT, prompt); } catch (e) { /* fine */ } return signIn('Sign in to make this timeline. It is kept under your account, private until you publish it.'); }
@@ -372,14 +386,39 @@ export function createAccount(app) {
       toast(got.changed || 'Changed.', { undo: () => patch(row, before).catch((e) => toast(e.message)) });
     } catch (e) { progress(st, false); fail(st, e); setTimeout(() => { if (st.classList.contains('err')) { st.textContent = ''; st.classList.remove('err'); } }, 7000); }
   }
-  function pickModel(anchor) {
-    popover(anchor, MODELS.map((m) => `<button type="button" class="nv" data-model="${m.id}" role="menuitemradio" aria-checked="${m.id === model}"><span class="lbl">${esc(m.name)}</span><small>${esc(m.note)}</small>${m.id === model ? ICON.check || '' : ''}</button>`).join(''), 'menu models');
+  // The requests offered under one kind: pressing the kind again folds them away.
+  function showKind(id) {
+    const list = $('cr-list'), k = KINDS.find((x) => x.id === id), same = !list.hidden && list.dataset.kind === id;
+    document.querySelectorAll('.cr-ideas [data-kind]').forEach((b) => b.setAttribute('aria-expanded', !same && b.dataset.kind === id));
+    list.hidden = same;
+    if (same) return;
+    list.dataset.kind = id;
+    list.innerHTML = k.ideas.map((t) => `<button type="button" data-idea>${esc(t)}</button>`).join('') + (k.note ? `<p>${esc(k.note)}</p>` : '');
   }
+  // The model menu, like the one of a chat app: the models, more of them folded away, and the effort.
+  let modelAnchor = null;
+  function pickModel(anchor) {
+    modelAnchor = anchor;
+    const open = moreModels || MODELS.some((m) => m.more && m.id === model);
+    const row = (m) => `<button type="button" class="mrow" data-model="${esc(m.id)}" role="menuitemradio" aria-checked="${m.id === model}"><span><b>${esc(m.name)}</b><small>${esc(m.note)}</small></span>${m.id === model ? ICON.check : ''}</button>`;
+    popover(anchor, `<div class="cap">Model</div>${MODELS.filter((m) => !m.more).map(row).join('')}
+      ${open ? MODELS.filter((m) => m.more).map(row).join('') : `<button type="button" class="mrow more" data-more-models><span><b>More models</b></span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>`}
+      <hr><div class="cap">Effort</div>
+      <div class="seg" role="radiogroup" aria-label="Effort">${EFFORTS.map((x) => `<button type="button" role="radio" data-effort="${x.id}" aria-checked="${x.id === effort}">${esc(x.name)}</button>`).join('')}</div>
+      <p class="dlg-fine">Thorough thinks longer before it writes: slower, and better on hard subjects.</p>`, 'menu models');
+  }
+  const modelShown = () => document.querySelectorAll('.cr-model span').forEach((n) => { n.textContent = modelLabel(); });
   function setModel(id) {
     model = id;
     try { localStorage.setItem(MODEL, id); } catch (e) { /* fine */ }
     closeLayer();
-    document.querySelectorAll('.cr-model span').forEach((n) => { n.textContent = modelName(); });
+    modelShown();
+  }
+  function setEffort(id) {
+    effort = id;
+    try { localStorage.setItem(MODEL + '-effort', id); } catch (e) { /* fine */ }
+    modelShown();
+    if (modelAnchor) pickModel(modelAnchor);
   }
   async function rename(row) {
     const a = await ask({ title: 'Rename', label: 'Name', value: row.title, ok: 'Save' });
@@ -498,7 +537,6 @@ export function createAccount(app) {
       $('ask').hidden = !canAsk;
       $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><input id="ask-q" type="text" maxlength="600" placeholder="Ask for a change: add the women of jazz, start in 1900…" aria-label="Ask for a change" autocomplete="off">${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Make the change" title="Make the change">${SEND}</button></div>` : '';
     }
-    $('pdf').hidden = on.some(isStored);        // the print page reads built view files only
   }
   // The buttons the entry pane shows for a signed-in reader.
   function entryActions(entryId) {
@@ -523,13 +561,17 @@ export function createAccount(app) {
       if (el('#sb-fold') || el('#sb-btn') || el('#sb-scrim')) return setOpen(!document.body.classList.contains('sb-open'));
       if (el('#sb-new')) return $('create').hidden ? openCreate() : closeCreate();
       if (el('[data-create-close]')) return closeCreate();
-      if (el('[data-copy-view]')) return copyTimeline();
       const idea = el('[data-idea]');
       if (idea) { $('cr-q').value = idea.textContent; return $('cr-q').focus(); }
       const mm = el('[data-model-menu]');
       if (mm) return pickModel(mm);
       const md = el('[data-model]');
       if (md) return setModel(md.dataset.model);
+      if (el('[data-more-models]')) { moreModels = true; return pickModel(modelAnchor); }
+      const ef = el('[data-effort]');
+      if (ef) return setEffort(ef.dataset.effort);
+      const kd = el('[data-kind]');
+      if (kd) return showKind(kd.dataset.kind);
       if (el('#sb-search')) { if (phone()) setOpen(false); return app.focusSearch(); }
       if (el('#sb-explore')) { closeCreate(); return explore($('explore').hidden); }
       if (el('[data-sb-home]')) return explore(false);
@@ -592,5 +634,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { boot, start, explore, published: () => people, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
+  return { boot, start, explore, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
 }
