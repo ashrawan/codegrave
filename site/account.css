@@ -342,3 +342,5 @@ html, body { touch-action: pan-x pan-y; }
 }
 #sb-list #sb-new { margin-bottom: 2px; }
 #more-menu .state { margin-left: auto; font-size: 12px; color: var(--faint); }
+.ex-gh { display: flex; align-items: center; justify-content: center; gap: 8px; width: max-content; margin: 14px auto 0; font-size: 13px; color: var(--muted); text-decoration: none; }
+.ex-gh:hover { color: var(--text); }

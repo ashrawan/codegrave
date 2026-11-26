@@ -475,7 +475,7 @@ How the page is put together:
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
 - "Propose it to the editors" at the foot of Explore opens the "Propose a view" issue
-  form with the current link filled in.
+  form with the current link filled in; under it a quiet link says the data and code are on GitHub (asked for, Nov 2026, in place of the menu item).
 - **Play takes the whole screen.** The road (`#stage`) always fills the
   page from the top (`stageOf(SW, SH, top)` keeps `TOP` pixels of air
   above it). While play travels, what floats at the top (the phone's menu
