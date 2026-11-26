@@ -2018,6 +2018,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('p-thing').innerHTML = `
       <div class="pane-head">${crumbs()}<button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
       <div class="th-head"><span class="tile big">${icon}</span><div><p class="kind">${kind}</p><h2 id="thing-title" tabindex="-1">${esc(t.name)}</h2><p class="meta">${meta}</p></div></div>
+      ${t.made === 'ai' ? `<p class="community-note">${ICON.community}<span>Written by AI from Wikipedia. Check the dates against the source below.</span></p>` : ''}
       ${t.tier === 'community' ? `<p class="community-note">${ICON.community}<span>A community entry by <b>${esc(owner)}</b>. It is not yet in the reviewed base.</span></p>` : ''}
       ${figure(t.image, 'lead-img')}
       ${text ? `<p class="summary">${esc(text)}</p>` : ''}
