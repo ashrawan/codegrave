@@ -46,8 +46,9 @@ database from the first moment, so it is there on every device and is
 finished even when the tab is closed.
 
 1. The page stores an empty row for the timeline (`data.making`), goes to
-   the road at once and sends `{ prompt, model, effort, timeline, seed,
-   stream: true }` with the reader's session.
+   the road at once and sends `{ prompt, model, effort, timeline, seed }`
+   with the reader's session. The answer is always a stream; a model the
+   function does not offer is refused (there is no support for older pages).
 2. The function checks who is asking and counts the day's requests in
    `ai_requests` (20 a day per account by default).
 3. It reads up on the subject in Wikipedia (the best article whole, the

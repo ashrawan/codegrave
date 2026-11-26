@@ -360,8 +360,11 @@ How the page is put together:
   view file into the row itself, so it is kept on every device even when
   the tab is closed. `site/ai.js` is shared by the page and the function
   (`supabase/functions/ai-timeline/ai.js` links to it; deploy both files).
-  The models are open, cheap and fast (DeepSeek V4.1 Flash first; asked
-  for, Nov 2026), and Quick (thinking off) is the default effort.
+  The models are cheap and fast (DeepSeek V4.1 Flash first; asked
+  for, Nov 2026), with the cheapest of OpenAI, Anthropic and Google beside
+  them (GPT-6 Luna, Claude Haiku 5.5, Gemini 3.1 Flash-Lite), and Quick
+  (thinking off) is the default effort. Nothing is kept for older pages:
+  the function always streams and refuses a model it does not offer.
   `specToView()` in `site/ai.js` turns a spec into a view file, stored
   with the spec beside it. For such a timeline of the reader's own, "Ask
   AI" is a box of two rows attached to the strip at the foot of the road

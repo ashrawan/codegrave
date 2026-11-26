@@ -361,7 +361,7 @@ export function createAccount(app) {
     const r = await fetch(CONFIG.url + '/functions/v1/ai-timeline', {
       method: 'POST',
       headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...body, model, effort, stream: true }),
+      body: JSON.stringify({ ...body, model, effort }),
     });
     if (!/event-stream/.test(r.headers.get('content-type') || '')) {
       const d = await r.json().catch(() => null);

@@ -14,7 +14,6 @@
 //   { "r": 1 }             the model is thinking (nothing to draw yet)
 //   { "note": "..." }      what the function is doing ("Looking for pictures…")
 //   { "done": { spec, changed, model, left } }   or   { "error": "..." }
-// (only when the page sends stream: true; otherwise the answer is the "done" object as plain JSON).
 // What goes wrong before the model is asked is answered as plain JSON with a status.
 //
 // Secrets (Supabase → Edge Functions → Secrets):
@@ -28,11 +27,10 @@ import { findPictures, specToView } from "./ai.js";   // the page's own site/ai.
 
 // The models this function will run, by OpenRouter id (site/ai.js lists the same ones for the page):
 // open models, the cheapest and most used of OpenRouter's ranking (asked for, Nov 2026).
-const OFFERED = ["deepseek/deepseek-v4.1-flash", "z-ai/glm-5.3-flash", "tencent/hy4-flash", "qwen/qwen3.8-flash", "minimax/minimax-m3.1-flash"];
+const OFFERED = ["deepseek/deepseek-v4.1-flash", "openai/gpt-6-luna", "anthropic/claude-haiku-5.5", "google/gemini-3.1-flash-lite", "minimax/minimax-m3.1-flash", "z-ai/glm-5.3-flash", "qwen/qwen3.8-flash", "tencent/hy4-flash"];
 const EXTRA = (Deno.env.get("AI_MODELS") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
-// A model this function no longer offers (an older page may still ask for it) is answered by the first one.
-const modelFor = (id: string) =>
-  OFFERED.includes(id) || EXTRA.includes(id) || (EXTRA.includes("*") && /^[a-z0-9-]+\/[a-z0-9.:_-]+$/i.test(id)) ? id : OFFERED[0];
+// Only a model this function offers is run; any other is refused.
+const allowed = (id: string) => OFFERED.includes(id) || EXTRA.includes(id) || (EXTRA.includes("*") && /^[a-z0-9-]+\/[a-z0-9.:_-]+$/i.test(id));
 // How long the model may think before it writes. "none" switches thinking off: the fastest, and the default.
 const EFFORTS = ["none", "low", "medium", "high"];
 const DAILY = Number(Deno.env.get("AI_DAILY") ?? "20");
@@ -134,7 +132,8 @@ Deno.serve(async (req) => {
   let body: Record<string, any>;
   try { body = await req.json(); } catch (_e) { return json({ error: "That request could not be read." }, 400); }
   const prompt = String(body.prompt ?? "").replace(/\s+/g, " ").trim().slice(0, 600);
-  const model = modelFor(String(body.model ?? ""));
+  const model = String(body.model ?? "");
+  if (!allowed(model)) return json({ error: "That model is not offered. Pick another." }, 400);
   const effort = EFFORTS.includes(body.effort) ? String(body.effort) : "none";
   if (prompt.length < 3) return json({ error: "Say what you want to make." }, 400);
   const current = body.current && typeof body.current === "object" ? body.current : null;
@@ -236,12 +235,6 @@ Deno.serve(async (req) => {
         send({ error: "The model took too long. Try again, or ask for something smaller." });
       }
   };
-  // A page that does not ask for the stream (one loaded before Nov 26 2026) gets the whole answer at once.
-  if (body.stream !== true) {
-    let last: Record<string, any> = {};
-    await work((o) => { if (o.done || o.error) last = o; });
-    return last.done ? json(last.done) : json({ error: last.error ?? "That did not work. Try again." }, 502);
-  }
   const enc = new TextEncoder();
   const stream = new ReadableStream({
     async start(ctl) {
