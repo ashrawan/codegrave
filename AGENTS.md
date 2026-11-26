@@ -343,14 +343,27 @@ How the page is put together:
   spending. A plan (a trip, a course) is dated ahead of today: then the
   road runs on past today to its last step (`chosen()`), "Today" is not
   written at its end, and a step shows its days ("5 Apr 2027", `daysOf()`).
-  The Edge Function
-  `supabase/functions/ai-timeline` asks the model through OpenRouter for a
-  small "spec" and adds free pictures from Wikipedia; `specToView()` in
-  `site/ai.js` turns it into a view file, which is stored like any other
-  timeline, with the spec beside it. For such a timeline of the reader's
-  own, "Ask for a change" is a box under the road (`#ask`): the model gets
-  the spec and the request and writes the whole spec again; the toast says
-  what changed and offers Undo. An entry made this way names its kind in
+  Pressing Enter goes to the road at once (asked for, Nov 2026: it "should
+  be on timeline", streamed while it comes): the page stores an empty row,
+  and the Edge Function `supabase/functions/ai-timeline` reads up on the
+  subject in Wikipedia, asks the model through OpenRouter for a small
+  "spec" and streams it; the page draws each entry as soon as its JSON is
+  closed (`partialSpec()`), with one line over the road saying how far it
+  has come (`#ai-live`). The function then finds free pictures
+  (`findPictures()`: the article's picture, else Wikidata's; Wikimedia now
+  serves thumbnails from `thumb.wikimedia.org`) and writes the finished
+  view file into the row itself, so it is kept on every device even when
+  the tab is closed. `site/ai.js` is shared by the page and the function
+  (`supabase/functions/ai-timeline/ai.js` links to it; deploy both files).
+  The models are open, cheap and fast (DeepSeek V4.1 Flash first; asked
+  for, Nov 2026), and Quick (thinking off) is the default effort.
+  `specToView()` in `site/ai.js` turns a spec into a view file, stored
+  with the spec beside it. For such a timeline of the reader's own, "Ask
+  AI" is a box of two rows attached to the strip at the foot of the road
+  (`#ask`, asked for in those words): the model gets the spec and the
+  request and writes the whole spec again; the toast says what changed and
+  offers Undo. A timeline the reader keeps shows only its own pictures on
+  the walls, never the eras' stand-ins (`L.own`). An entry made this way names its kind in
   words (`category`) and its branch in `domain`, and its id starts with
   `x`. The centre of the page is meant as a canvas where a reader can make
   anything (asked for, Nov 2026); a timeline is the first kind, so keep the

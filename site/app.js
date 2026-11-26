@@ -765,7 +765,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
     // Do the views bring pictures of their own for the media wall? Enough of them (15 in 100 entries) and the wall shows only those.
-    const own = shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
+    // A timeline someone made shows only its own pictures, never the stand-ins of the eras, which belong to
+    // other subjects (reported, Nov 2026: "it was showing all other images from previous loaded view").
+    const own = lanes.some((ln) => ln.view.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
     L = { own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
@@ -2624,6 +2626,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // Accounts and the reader's own timelines (account.js): the bar on the left. It borrows these from the page.
   const account = createAccount({
     $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => { account.explore(false); return showOnly(id); },
+    open: (id) => { if (L) roadToView(id); },
     listChanged: () => runSearch(),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),
