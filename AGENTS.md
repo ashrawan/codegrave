@@ -458,7 +458,7 @@ How the page is put together:
   carries an icon that says which sort it is. A card's picture is the
   thumbnail made by the build (`scripts/thumb.mjs`); a timeline someone
   stored shows its initials.
-- **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter the reader is in below it in small capitals in its colour, with no lines (`#road-views`; style "A", picked from six); the year the reader stands in is written large on the right (`#road-year`), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
+- **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter in sight below it in small capitals in its colour, with no lines (`#road-views`; style "A", picked from six); the year in sight is written large on the right (`#road-year`); both are read where the cards stand open, `SIGHT` focal lengths ahead of the reader, not at the reader's feet (asked for, Nov 2026), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
 - **The years.** `ruler()` writes the years along the edge of the road and
   `barTicks()` those on the bar. Because the scale is uneven there is no
   fixed step: `yearMarks()` in `site/road.js` writes a year where the years

@@ -11,7 +11,7 @@ import { createWall } from './wall.js';
 import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
-import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
+import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, SIGHT } from './road.js';
 
 (() => {
   'use strict';
@@ -1505,7 +1505,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
-    const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
+    // The year and the chapters are read where the reader looks (SIGHT ahead, among the open cards), not where they stand.
+    const t = road.t, D = L.D, dir = camDir(), seen = clamp(t + dir * SIGHT * D, L.tMin, L.tMax), m = L.when(seen);
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
     const fine = !RANKED && L.tMax - L.tMin < FINE ? fineLabel(m) : null;
     const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : fine ? fine[0] : playLabel(m);
@@ -1513,7 +1514,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       road.said = label;
       $('road-year').textContent = label;
       // What the era of the year in sight stands for, under the year, as deep time's units are (asked for, Nov 2026).
-      const yr = writtenOf(L.when(t)), era = RANKED ? '' : fine ? (label === 'Today' ? '' : fine[1]) : label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
+      const yr = writtenOf(m), era = RANKED ? '' : fine ? (label === 'Today' ? '' : fine[1]) : label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
@@ -1531,8 +1532,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     for (const k of L.barYears) { const under = Math.abs(k.y - y) < 15; if (under !== k.under) { k.under = under; k.el.classList.toggle('under', under); } }
     $('axis-win').style.top = Math.min(y, y2).toFixed(1) + 'px';
     $('axis-win').style.height = Math.abs(y - y2).toFixed(1) + 'px';
-    // The chapter in front of the reader.
-    const at = t + dir * 0.2 * D;
+    // The chapter where the reader looks.
+    const at = seen;
     L.lanes.forEach((ln, i) => {
       const cur = ln.eras.find((e) => e.xa <= at && at < e.xb) || null;
       if (cur === ln.cur) return;
