@@ -11,7 +11,7 @@ import { createWall } from './wall.js';
 import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
-import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, SIGHT } from './road.js';
+import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
   'use strict';
@@ -1505,8 +1505,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
-    // The year and the chapters are read where the reader looks (SIGHT ahead, among the open cards), not where they stand.
-    const t = road.t, D = L.D, dir = camDir(), seen = clamp(t + dir * SIGHT * D, L.tMin, L.tMax), m = L.when(seen);
+    // The year and the chapters follow the card drawn as selected in front (road.focus) as the road moves, not
+    // the reader's own place (asked for, Nov 2026: "should be as per card selected"); with none, the reader's place.
+    const t = road.t, D = L.D, dir = camDir(), fp = road.focus && L.at.get(road.focus);
+    const seen = clamp(fp ? fp.a : t, L.tMin, L.tMax), m = L.when(seen);
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
     const fine = !RANKED && L.tMax - L.tMin < FINE ? fineLabel(m) : null;
     const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : fine ? fine[0] : playLabel(m);

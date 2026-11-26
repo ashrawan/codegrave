@@ -393,10 +393,6 @@ export function paceFor(cards, within1, within3) {
 // of its lane, and never travels slower than CRAWL.
 export const OPEN_AT = 0.5, CLOSE_AT = 0.06, MIN_FRONT = 1.0, HOLD_AT = CLOSE_AT, CRAWL = 0.035;
 export const inWindow = (ahead) => ahead > CLOSE_AT && ahead <= OPEN_AT;
-// Where the big year and each view's chapter are read, in focal lengths ahead of the reader: at the far
-// edge of the window, where a card has just opened, not at the reader's feet (asked for, Nov 2026: the year
-// "should be in sync with" the road, then "show the top of stretch", where the card that just opens stands).
-export const SIGHT = OPEN_AT;
 // The most play may travel, in focal lengths a second. `lanes` holds, for
 // each lane, how far ahead its starts stand (focal lengths). With no starts
 // close together there is no limit.
