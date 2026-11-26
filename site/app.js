@@ -668,7 +668,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('status').hidden = false;
     $('status').textContent = pending.size ? 'Loading the timeline…' : 'Pick a view to draw its timeline.';
     renderSide();
-    if (!pending.size) showSide(true);
+    if (!pending.size) account.explore(true);
   }
 
   // ---------------------------------------------------------------- the road
@@ -1645,14 +1645,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('side').hidden = !on;
     document.body.classList.toggle('side-open', on);
     $('toggle-side').setAttribute('aria-expanded', on);
-    if (!on) $('info').hidden = true;
     if (was !== on && state.views.length) render();
   }
   function showPane(name) {
     state.pane = name;
-    for (const p of ['views', 'thing', 'era']) $('p-' + p).hidden = p !== name;
+    // The panel on the right holds one entry or one era. The views (Explore) are in the bar on the left.
+    for (const p of ['thing', 'era']) $('p-' + p).hidden = p !== name;
     $('side').scrollTop = 0;
-    if (name !== 'views') $('info').hidden = true;
+    if (name === 'views' && !$('side').hidden) showSide(false);
   }
   let noteText = '', noteTimer = 0;
   function note(text, ms = 6000) {
@@ -2287,7 +2287,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (thing) return openThing(thing.dataset.id, { scroll: !!thing.closest('#side'), push: !!thing.closest('#side') });
     });
 
-    $('toggle-side').addEventListener('click', () => showSide($('side').hidden));
+    $('toggle-side').addEventListener('click', () => { if (state.pane !== 'views') showSide($('side').hidden); });
+    // The three dots: turn round, how to read the timeline, the repository.
+    const more = (on) => { $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    $('more-btn').addEventListener('click', (e) => { e.stopPropagation(); more($('more-menu').hidden); });
+    document.addEventListener('click', () => more(false));
+    $('more-info').addEventListener('click', (e) => { e.stopPropagation(); more(false); $('info-btn').click(); });
     wireRoad();
     $('play').addEventListener('click', () => playWith(false));
     $('play-own').addEventListener('click', () => playWith(true));
@@ -2401,9 +2406,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.views.forEach((id, i) => state.colors.set(id, next[i]));
       changed();
     }
-    $('views-btn').addEventListener('click', () => {
-      if (!$('side').hidden && !$('p-views').hidden) return showSide(false);    // a second press closes it
-      showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
     $('pills').addEventListener('scroll', pillEdges, { passive: true });
     $('pills').addEventListener('click', (e) => {
       const dot = e.target.closest('[data-colour]');
@@ -2513,6 +2515,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     b.setAttribute('aria-pressed', rev);
     b.setAttribute('aria-label', rev ? 'Turn round and face the future' : 'Turn round and face the past');
     b.title = rev ? 'Facing the past' : 'Facing the future';
+    b.lastElementChild.textContent = rev ? 'Turn round: face the future' : 'Turn round: face the past';
   }
 
   // "#1969" or "#-44" goes to a year; "#<id>" opens an entry, fetching it and
@@ -2571,7 +2574,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const account = createAccount({
     $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => showOnly(id),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
-    focusSearch: () => $('q').focus(), openViews: () => $('views-btn').click(),
+    focusSearch: () => $('q').focus(),
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });
   const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"

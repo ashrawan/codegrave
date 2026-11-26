@@ -572,4 +572,3 @@ body.playing.peek .top, body.playing .top:focus-within { transform: none; opacit
 .th-head .kind .vlink { font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s, color .15s; }
 .th-head .kind .vlink:hover, .th-head .kind .vlink:focus-visible { color: var(--text); text-decoration-color: currentColor; }
 #qlist .vk { margin-left: auto; color: var(--faint); display: inline-flex; }
-.dock-tools #views-btn { margin-right: 6px; }

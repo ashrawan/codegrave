@@ -59,7 +59,7 @@ const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent';
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
    show(id), replace(payload) (a stored view changed), forget(id), home(),
-   focusSearch(), openViews(), redraw(), detailChars(). */
+   focusSearch(), redraw(), detailChars(). */
 export function createAccount(app) {
   const { $, esc } = app;
   let session = null, user = null, profile = null, list = [], listed = false, refreshing = null, drawn = '';
@@ -366,6 +366,11 @@ export function createAccount(app) {
     $('sb-fold').setAttribute('aria-expanded', on);
     if (keep && !phone()) { try { localStorage.setItem(FOLD, on ? '1' : '0'); } catch (e) { /* fine */ } }
   }
+  // Explore: the views (search, topics, the list, the year filter) take the bar in place of the reader's own lists.
+  function explore(on) {
+    document.body.classList.toggle('sb-explore', on);
+    if (on) { setOpen(true, false); if (!phone()) $('vq').focus(); }
+  }
   function draw(force) {
     const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility].join('|');
     if (!force && key === drawn) return;
@@ -390,6 +395,10 @@ export function createAccount(app) {
   }
 
   function wire() {
+    // On a phone, picking a view puts the drawer away. Caught on the way down: the list is redrawn by the pick.
+    document.addEventListener('click', (e) => {
+      if (phone() && e.target.closest('#vlist li') && !e.target.closest('.radd, .vhead, .none')) setTimeout(() => setOpen(false), 0);
+    }, true);
     document.addEventListener('click', async (e) => {
       const el = (s) => e.target.closest(s);
       const layer = $('layer');
@@ -397,7 +406,8 @@ export function createAccount(app) {
       if (el('#sb-fold') || el('#sb-btn') || el('#sb-scrim')) return setOpen(!document.body.classList.contains('sb-open'));
       if (el('#sb-new')) { if (phone()) setOpen(false); return newTimeline(); }
       if (el('#sb-search')) { if (phone()) setOpen(false); return app.focusSearch(); }
-      if (el('#sb-explore')) { if (phone()) setOpen(false); return app.openViews(); }
+      if (el('#sb-explore')) return explore(true);
+      if (el('[data-sb-home]')) return explore(false);
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
       const open = el('[data-open]');
@@ -454,5 +464,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { boot, start, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
+  return { boot, start, explore, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
 }

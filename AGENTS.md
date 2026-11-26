@@ -141,7 +141,7 @@ How the page is put together:
 - **The bar on the left and your own timelines** (`site/account.js`,
   `docs/ACCOUNTS.md`; asked for and designed in Nov 2026, like the sidebar
   of an AI chat app, "so it is scalable"). From the top: the logo, New
-  timeline, Search, Explore (the views pane), the reader's timelines, and
+  timeline, Search, Explore, the reader's timelines, and
   the account at the bottom left (Sign in when signed out; the account's
   menu opens upward). It folds to a strip of icons (`cg-sb` in this
   browser) and is a drawer behind a menu button on a phone. The road, the
@@ -312,12 +312,21 @@ How the page is put together:
   when play is first pressed with the sound on, and the same button
   silences it. The house track was asked for with this file; do not swap it
   without asking.
-- **The panel** is hidden until its button, the "Views" button in the strip
-  or a name is clicked. The "Views" button toggles: pressed again while the
-  views pane is open, it closes the panel. It never covers the road: on wide screens and
+- **Explore lives in the bar on the left** (asked for, Nov 2026: "even
+  those explorer can go to sidebars, but the item click can be on right
+  side"). Pressing Explore swaps the bar's own list for the views pane
+  (`#p-views`, which sits inside `#sb`; `account.explore(on)` sets
+  `body.sb-explore` and the bar widens to 320 px); its cross goes back to
+  the bar's list. On a phone, picking a view puts the drawer away. There is
+  no "Views" button in the strip any more (removed on request).
+- **The three-dot menu** (`#more-btn`, `#more-menu`, top right; asked for,
+  Nov 2026) holds what is used rarely: Turn round (reverse, `state.order`,
+  `#reverse`), How to read the timeline, and the GitHub link.
+- **The panel** on the right is only for one thing at a time: it is hidden
+  until a name or a chapter is clicked. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)
   it is a sheet over the lower half, and the road and the bar move up above
-  it. It has three panes: views, the history of one entry, and one era. The
+  it. It has two panes: the history of one entry, and one era. The
   entry and era panes head with a trail back (`state.trail`, `crumbs()`).
   Opening something from inside the panel adds a step, opening it from the
   road starts over, and Escape goes back one step.
@@ -332,9 +341,8 @@ How the page is put together:
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
   colour (a row of the theme's eight, then a ninth, a rainbow ring, that opens the system's colour picker for any colour; asked for, Nov 2026: a colour is 0 to 7 or '#rrggbb', `colVar()` and `colRgb()` read either, and the link and the export carry it as `c=3` or `c=f05a28`), and the cross removes one of several. The strip starts at the
-  left with the pills; at its right end stand the "Views" button (moved
-  there on request, Nov 2026), Export as PDF, then reverse (`state.order`), small, last in the strip
-  (moved there on request, Nov 2026). There is no bookmark: "Your view" was
+  left with the pills; at its right end stands Export as PDF (reverse moved
+  to the three-dot menu on request, Nov 2026). There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
 - **One view at a time.** Picking a view shows it alone (`showOnly()`): the
@@ -346,9 +354,9 @@ How the page is put together:
   timeline holds brings its own view alone too (`bringIn()`); only a link
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
-- **The views pane** heads with one slim line: "Views" with how many views
-  and entries there are, then the GitHub link (moved there from the top bar
-  on request, Nov 2026), the info button and the cross. Below it is search, then a row of chips (`drawChips()`: the
+- **The views pane** (in the bar on the left, under Explore) heads with one
+  slim line: "Explore" with how many views and entries there are, and the
+  cross (the GitHub link and the info button are in the three-dot menu). Below it is search, then a row of chips (`drawChips()`: the
   editors' topics from `data/editors-choice.json`, today Countries,
   Culture, History, Science and Technology, after a first chip "My view"),
   then the list, then the filter: the year range (`state.span`). "My view"
