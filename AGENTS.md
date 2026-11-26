@@ -141,11 +141,13 @@ How the page is put together:
 
 - **The bar on the left and your own timelines** (`site/account.js`,
   `docs/ACCOUNTS.md`; asked for and designed in Nov 2026, like the sidebar
-  of an AI chat app, "so it is scalable"). From the top: the logo, New
-  timeline, Search, Explore, the reader's timelines, and
+  of an AI chat app, "so it is scalable"). From the top: the logo, Explore, "Your
+  timelines" with New timeline first under it (asked for, Nov 2026), and
   the account at the bottom left (Sign in when signed out; the account's
   menu opens upward). It folds to a strip of icons (`cg-sb` in this
-  browser) and is a drawer behind a menu button on a phone. The road, the
+  browser); like a chat app, the fold button shows while the pointer is over
+  the head, and on the folded strip the logo turns into the open button
+  while the pointer is over it, and a click on the empty strip opens it and is a drawer behind a menu button on a phone. The road, the
   top bar and the strip start where it ends (`--sb`). Signing in is asked
   only when something needs it, with Google, GitHub or an emailed link
   (Supabase Auth, called over HTTPS with no library). A timeline someone
@@ -265,7 +267,7 @@ How the page is put together:
   events written along it, like the open and the hovered entry
   (`road.heat` eases the colour). It is not `state.open`; do not write one
   to the other.
-- **The bar** (`#axisbar`) stands upright on the right, slim (`--bar`: 58 px, 38 px on a phone; asked for, Nov 2026), its years written during play too (the year pill is `#filters`; its rules once hid them). On a phone the strip at the foot steps away while play travels and the road takes its place. It stands play at the
+- **The bar** (`#axisbar`) stands upright on the right, slim (`--bar`: 44 px, 34 px on a phone; asked for, Nov 2026): tick marks, the shaded stretch in sight and the marker, with no years written on it, since the year is written large on the road; the marker shows its year only while dragged. The year pill is `#filters` (not `.yr`, which is a year on the bar). On a phone the strip at the foot steps away while play travels and the road takes its place. It stands play at the
   bottom and the whole span above it with ahead upwards, on the road's own scale so the marker climbs
   steadily (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
@@ -374,9 +376,12 @@ How the page is put together:
   2026). It hides while play travels.
 - **There is no bar across the top** (asked for, Nov 2026: "the top
   navigation bar we only want on the left side, so the middle canvas stays
-  full"). What it held is in the bar on the left (Search) and in the three-dot menu. The search box
-  (`.tsearch`, `#q`) is a box over the road that shows only while it is
-  used (`body.searching`): Search in the bar or "/" opens it. `.top` is
+  full"). What it held is in the three-dot menu. The search box
+  (`.tsearch`, `#q`) stands at the top left of the road, always: a
+  see-through pill, "Search: person, place, event…" ("Search" on a phone,
+  beside the menu button), that widens while it is used; it steps away
+  with the top while play travels, and "/" opens it (asked for, Nov 2026,
+  instead of Search in the bar on the left). `.top` is
   now an unseen strip that holds the phone's round menu button (top left)
   and, top right, the state and Publish button of a timeline of the
   reader's own. `TOP` is only a little air above the road.

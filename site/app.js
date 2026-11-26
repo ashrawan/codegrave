@@ -256,7 +256,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function sayScope() {
     if (!boot) return;
     const n = group(boot.counts?.entries || 0), views = (boot.views || []).length;
-    $('q').placeholder = matchMedia(PHONE).matches ? 'Search the timeline' : 'Search the timeline: a person, a place, an event or a year';
+    $('q').placeholder = matchMedia(PHONE).matches ? 'Search' : 'Search: person, place, event…';   // asked for, Nov 2026
     $('vscope').textContent = `${group(views)} ${views === 1 ? 'timeline' : 'timelines'} · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.

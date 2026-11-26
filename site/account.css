@@ -181,8 +181,15 @@ body #more-menu .nv { justify-content: flex-start; padding: 0 10px; text-decorat
 /* folded: icons only */
 body:not(.sb-open) #sb { padding: 0 8px 10px; }
 body:not(.sb-open) #sb .lbl, body:not(.sb-open) #sb-list .cap, body:not(.sb-open) .sb-note, body:not(.sb-open) .sb-row .more { display: none; }
-body:not(.sb-open) #sb .sb-head { flex-direction: column; height: auto; padding: 14px 0 6px; gap: 8px; }
-body:not(.sb-open) #sb .logo { flex: none; }
+/* Like a chat app (asked for, Nov 2026): open, the fold button shows while the pointer is over the
+   head; folded, the logo turns into the open button while the pointer is over the strip, and a click
+   anywhere on the empty strip opens it. */
+body:not(.sb-open) #sb .sb-head { position: relative; justify-content: center; padding: 0; }
+body:not(.sb-open) #sb .logo { flex: none; transition: opacity .12s; }
+body:not(.sb-open) #sb-fold { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+body:not(.sb-open) #sb:hover .logo { opacity: 0; }
+body:not(.sb-open) #sb { cursor: e-resize; }
+body:not(.sb-open) #sb button, body:not(.sb-open) #sb a { cursor: pointer; }
 body:not(.sb-open) .nv { justify-content: center; padding: 0; }
 body:not(.sb-open) #sb-foot .big { height: 40px; padding: 0; }
 body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
@@ -267,11 +274,16 @@ body.side-open .top { right: var(--side); }
 #road-views { top: 22px; }
 #road-head { top: 26px; }
 body.mine #road-head { top: 58px; }
-.tsearch { position: fixed; left: calc(var(--sb) + (100vw - var(--sb)) / 2); top: 72px; z-index: 45; width: min(580px, calc(100vw - var(--sb) - 32px)); height: 50px; padding: 0 14px 0 18px; gap: 12px; background: var(--surf) !important; border-color: var(--glass-edge) !important; border-radius: 25px; box-shadow: 0 24px 64px rgba(0, 0, 0, .5); opacity: 0; pointer-events: none !important; transition: opacity .12s; }
-body.searching .tsearch { opacity: 1; pointer-events: auto !important; }
-.tsearch input { font-size: 15px; }
-.tsearch kbd { display: none; }
-#sb-search kbd { flex: none; padding: 0 6px; font: 11px/18px Inter, sans-serif; color: var(--faint); border: 1px solid var(--rule2); border-radius: 4px; }
+/* The search stands at the top left, always (asked for, Nov 2026: "search: person, place, event"),
+   see-through until it is used, then wider; it steps away with the rest of the top while play travels. */
+.tsearch { position: fixed; left: calc(var(--sb) + 16px); top: 12px; z-index: 45; transform: none; width: 280px; height: 38px; padding: 0 12px 0 14px; gap: 10px; color: var(--muted); background: var(--glass) !important; border-color: var(--glass-edge) !important; border-radius: 19px; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); transition: width .18s ease, background .15s; }
+.tsearch:focus-within, body.searching .tsearch { width: min(480px, calc(100vw - var(--sb) - var(--bar) - 32px)); background: var(--surf) !important; box-shadow: 0 18px 48px rgba(0, 0, 0, .45); }
+.tsearch input { font-size: 14px; }
+.tsearch input::placeholder { color: var(--muted); }
+.tsearch kbd { display: inline; }
+.tsearch:focus-within kbd { display: none; }
+.tsearch #qlist { top: 44px; border-radius: 12px; }
+body.side-open .tsearch:focus-within { width: min(480px, calc(100vw - var(--sb) - var(--side) - var(--bar) - 32px)); }
 #unzoom { position: fixed; z-index: 90; display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 16px; font-size: 14px; font-weight: 600; color: #141005; background: var(--acc); border: 0; border-radius: 20px; box-shadow: 0 8px 24px rgba(0, 0, 0, .5); transform-origin: 50% 0; }
 #unzoom[hidden] { display: none; }
 /* Two fingers travel the road; they do not zoom the page. */
@@ -282,12 +294,14 @@ html, body { touch-action: pan-x pan-y; }
   /* the menu button floats over the road, top left */
   #sb-btn { display: inline-flex; flex: none; width: 42px; height: 42px; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 50%; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
   .top { padding: 0 calc(var(--bar) + 8px) 0 10px; }
-  .tsearch { left: 50%; top: 60px; width: calc(100vw - 20px); }
-  #road-views { top: 18px; max-width: calc(100% - 124px); }
-  #road-head { top: 64px; }
-  body.mine #road-head { top: 64px; }
+  .tsearch { left: 60px; top: 12px; width: 108px; height: 40px; padding: 0 10px 0 12px; border-radius: 20px; }
+  .tsearch:focus-within, body.searching .tsearch { left: 10px; width: calc(100vw - 20px); z-index: 60; }
+  .tsearch kbd { display: none; }
+  /* the search stands top left beside the menu button, so the names of the views go under it */
+  #road-views { top: 62px; max-width: calc(100% - 28px); }
+  #road-head { top: 100px; }
+  body.mine #road-head { top: 100px; }
   body.side-open #more-menu { right: 8px; }
-  #sb-search kbd { display: none; }
   /* a field under 16px makes a phone's browser zoom in when it is tapped */
   input, textarea, select { font-size: 16px !important; }
   #sb { width: min(310px, 82vw); padding-bottom: 18px; transform: translateX(-102%); transition: transform .22s ease; box-shadow: 12px 0 40px rgba(0, 0, 0, .4); }
@@ -321,3 +335,9 @@ html, body { touch-action: pan-x pan-y; }
   .nv { min-height: 44px; }
 }
 @media (prefers-reduced-motion: reduce) { #sb, #sb-scrim { transition: none; } }
+
+@media (min-width: 700px) {
+  #sb-fold { opacity: 0; transition: opacity .12s; }
+  #sb .sb-head:hover #sb-fold, #sb-fold:focus-visible, body:not(.sb-open) #sb:hover #sb-fold { opacity: 1; }
+}
+#sb-list #sb-new { margin-bottom: 2px; }
