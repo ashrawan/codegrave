@@ -628,3 +628,77 @@ body.bar-bare #ticks .yr { display: none; }
 }
 .pill .pn { font-size: .9em; font-weight: 400; color: var(--faint); }
 body.ranked #filters { display: none; }
+
+/* ---- the globe (globe.js), behind ?globe: the timeline on the Earth. The road is laid out as ever, only not shown. */
+body.globe #road-cv, body.globe #road-labels { visibility: hidden; }
+body.globe #wall .w-cv { display: none; }
+body.globe #road { cursor: default; }
+#globe { position: absolute; inset: 0; z-index: 1; --c: var(--acc); }
+#globe .g-map { position: absolute; left: 0; right: 0; top: 0; bottom: 0; transition: opacity .8s ease, filter .6s ease, transform .6s ease; }
+#globe .g-map canvas { outline: none; }
+/* An entry with no place: the map steps back and dims; where a view has few places, it goes out of sight. */
+#globe[data-stage="dim"] .g-map { filter: brightness(.45) saturate(.6); transform: scale(.97); }
+#globe[data-stage="space"] .g-map { opacity: 0; pointer-events: none; }
+#globe .maplibregl-ctrl-bottom-left { bottom: 108px; left: 10px; }
+#globe .maplibregl-ctrl-attrib { font-size: 10px; color: #8f97a8; background: rgba(7, 10, 16, .55); }
+#globe .maplibregl-ctrl-attrib a { color: inherit; }
+#globe .maplibregl-ctrl-attrib-button { opacity: .6; }
+/* Close in, the map fills the stage, so the frames of the wall step away. */
+body.globe #wall .w-scene { transition: opacity .6s; }
+body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
+#globe .g-ov { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
+#globe .g-lead { position: absolute; left: 0; top: 0; width: 34px; height: 1px; background: var(--c); opacity: .75; }
+#globe .g-card { position: absolute; left: 0; top: 0; width: 300px; padding: 13px 14px 14px; display: block; text-align: left; color: #ece7dc; background: rgba(7, 10, 16, .88); border: 1px solid var(--c); border-radius: 4px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .4), 0 18px 50px rgba(0, 0, 0, .55), 0 0 28px -6px var(--c); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); pointer-events: auto; cursor: pointer; }
+#globe .g-card[hidden], #globe .g-lead[hidden] { display: none; }
+/* The card opens like a scroll, upwards, as on the road. */
+#globe .g-card.in { animation: gopen .55s cubic-bezier(.3, .1, .2, 1); }
+@keyframes gopen { from { clip-path: inset(100% 0 0 0); opacity: .4; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { #globe .g-card.in { animation: none; } #globe .g-map { transition: none; } }
+#globe .g-card img { display: block; width: 100%; height: 150px; margin-bottom: 11px; object-fit: contain; background: #0b0f17; border-radius: 2px; }
+#globe .g-k { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+#globe .g-k b { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--c); }
+#globe .g-k small { flex: none; font-size: 11.5px; color: #bcc2cf; }
+#globe .g-card strong { display: block; margin: 4px 0 5px; font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.04; }
+#globe .g-s { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; font-size: 13px; line-height: 1.45; color: #bcc2cf; }
+#globe .g-pl { display: block; margin-top: 9px; padding-top: 8px; border-top: 1px solid rgba(190, 210, 255, .14); font-size: 11.5px; color: #8f97a8; }
+#globe[data-stage="space"] .g-card { width: 360px; }
+/* The strip at the foot: one time line. Entries with a place are dots on it; entries with none are rows. */
+#globe .g-shelf { position: absolute; left: 0; right: 0; bottom: 0; height: 104px; z-index: 3; display: flex; align-items: stretch; padding-bottom: 12px; background: linear-gradient(transparent, rgba(5, 7, 12, .86) 38%); }
+#globe .g-shelf[hidden] { display: none; }
+#globe .g-lab { flex: none; width: 150px; padding: 30px 0 0 22px; font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; color: #8f97a8; line-height: 1.5; }
+#globe .g-lab[hidden] { display: none; }
+#globe .g-lab b { display: block; font-family: var(--serif); font-size: 22px; font-weight: 400; letter-spacing: 0; color: #bcc2cf; }
+#globe .g-rows { position: relative; flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 90%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 90%, transparent); }
+#globe .g-ax { position: absolute; left: 0; right: 0; bottom: 14px; height: 1px; background: rgba(200, 215, 255, .26); }
+#globe .g-now { position: absolute; left: var(--now, 36%); bottom: 5px; width: 1px; height: 19px; background: var(--acc); box-shadow: 0 0 8px var(--acc); }
+#globe .g-track { position: absolute; left: 0; bottom: 0; height: 100%; display: flex; align-items: flex-end; gap: 16px; white-space: nowrap; transition: transform .7s cubic-bezier(.3, .1, .2, 1); will-change: transform; }
+#globe .g-dot { flex: none; width: 7px; height: 7px; margin: 0 0 11px; padding: 0; border-radius: 50%; border: 1px solid rgba(236, 231, 220, .55); background: none; cursor: pointer; }
+#globe .g-dot.past { background: var(--c); border-color: transparent; opacity: .6; }
+#globe .g-dot.on { background: var(--c); border-color: transparent; box-shadow: 0 0 8px var(--c); }
+#globe .g-chip { position: relative; flex: none; height: 52px; margin-bottom: 22px; padding: 7px 11px; text-align: left; font-size: 12.5px; color: #bcc2cf; background: rgba(13, 18, 27, .88); border: 1px solid rgba(200, 215, 255, .26); border-radius: 4px; cursor: pointer; }
+#globe .g-chip i { display: block; margin-bottom: 2px; font-style: normal; font-size: 9.5px; letter-spacing: .14em; text-transform: uppercase; color: #8f97a8; }
+#globe .g-chip span { margin-left: 6px; font-size: 11.5px; color: #8f97a8; }
+#globe .g-chip::after { content: ''; position: absolute; left: 14px; bottom: -9px; width: 1px; height: 8px; background: rgba(200, 215, 255, .26); }
+#globe .g-chip.past { opacity: .55; }
+#globe .g-chip.on { color: #ece7dc; border-color: var(--c); box-shadow: 0 0 0 1px var(--c), 0 0 22px -6px var(--c); }
+#globe .g-chip.on i { color: var(--c); }
+#globe .g-chip.on::after { background: var(--c); }
+#globe .g-note { position: absolute; left: 50%; top: 45%; transform: translateX(-50%); margin: 0; font-size: 13px; color: var(--muted); }
+#globe .g-note[hidden] { display: none; }
+@media (max-width: 699px) {
+  #globe .g-shelf { height: 84px; }
+  #globe .g-lab { display: none; }
+  #globe .g-chip { height: 46px; padding: 6px 9px; font-size: 12px; }
+  #globe .g-chip span { display: none; }
+  #globe .g-card, #globe[data-stage="space"] .g-card { width: calc(100% - 24px); padding: 10px; display: grid; grid-template-columns: 92px 1fr; gap: 0 12px; align-items: start; }
+  #globe .g-card img { grid-row: span 3; height: 92px; margin: 0; }
+  #globe .g-card:not(:has(img)) { display: block; }
+  #globe .g-card strong { font-size: 23px; margin: 1px 0 2px; }
+  #globe .g-s { display: none; }
+  #globe .g-pl { grid-column: 1 / -1; }
+  #globe .maplibregl-ctrl-bottom-left { bottom: auto; top: 108px; left: 4px; }
+  body.globe #filters { display: none; }
+}
+/* What floats at the foot of the road stands above the strip. */
+body.globe:has(.g-shelf:not([hidden])) #filters { bottom: 156px; }
+body.globe:has(.g-shelf:not([hidden])) #ask { bottom: 160px; }

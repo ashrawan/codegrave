@@ -58,6 +58,8 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
+| The globe (the timeline on the Earth, behind `?globe`): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
+| Where entries are on the Earth | `node scripts/places.mjs` writes `data/places.json` from Wikidata | `data/places.json` by hand |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
 To find an entry without listing folders: its path is always
@@ -319,6 +321,31 @@ How the page is put together:
   when play is first pressed with the sound on, and the same button
   silences it. The house track was asked for with this file; do not swap it
   without asking.
+- **The globe** (`site/globe.js`, `site/globe-path.js`; asked for and designed in Nov 2026, plan and
+  mockups in the design doc "3D world map"). The same timeline drawn on the Earth. It is a first
+  version and shows only when the link says `?globe`; the plan is that the road goes once the globe
+  does all the road does, so keep the two apart until then. The road stays the clock: in globe mode
+  it is laid out and travelled as ever, only not shown (`body.globe`), so the bar, play, the wheel,
+  the year on top, the panel and the links work unchanged. `globeShow()` hands the globe the entries
+  in the order play meets them and `globeFrame()` tells it which one stands in front (the open
+  entry, else the last one within `AHEAD` of the reader). An entry with a place is a pin: the camera
+  flies to it and its card stands beside it (above the strip on a phone), opening upwards like a
+  scroll. How close the camera comes is one rule (`cameraFor()`): as close as the place is exact
+  (its level: spot, city, region, country) but never so close that the place the reader comes from
+  leaves the frame, so near places are a short glide and only far ones pull back to the whole
+  globe (asked for: "it doesn't need to jump out to the full globe"). An entry with no place is a
+  row in the strip at the foot, on one time line with the pins, which are dots on it; its card
+  rises over its row while the map steps back and dims, and where most of a view has no place, or
+  five or more in a row have none, the map goes out of sight and the card stands among the stars
+  with no Earth (`stageFor()`; asked for: "it can hide away"). Play waits while the camera flies
+  and the card is read (`globe.hold()`). The look is "Day", picked from four for every theme:
+  NASA's Blue Marble far out, a dark street map from OpenFreeMap close in, both free and without a
+  key; MapLibre GL JS comes from cdnjs only when a globe first opens. Places come from
+  `data/places.json`, made by `scripts/places.mjs` from Wikidata and never guessed; an entry older
+  than five million years has no place on today's map (`DEEP`). Still to come, in this order: a
+  place on the entry itself (`where`, which needs an agreed issue), places for timelines made with
+  AI, places that are not sure (an area, a traditional site), the Earth as it was for deep time, and
+  other looks. Never draw a pin for a guessed place.
 - **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
   "think it is like community posted, meaning even the admin ones", after a
   list in the sidebar was found "not professional"). Explore in the bar on

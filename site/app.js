@@ -11,6 +11,7 @@ import { createWall } from './wall.js';
 import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
+import { createGlobe } from './globe.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -20,6 +21,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const EDITORS = 'wiki';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
   const MAX_ROWS = 800;         // the most lines drawn at once
+  // The globe (globe.js): the same timeline drawn on the Earth. A first version, shown only when the link says `?globe`.
+  const GLOBE = new URLSearchParams(location.search).has('globe');
+  const DEEP = -5e6;            // older than this, the continents stood elsewhere: such an entry has no place on today's map
   const TOP = 14;               // a little air above the road. There is no bar across the top any more (asked for, Nov 2026)
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
@@ -621,6 +625,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function writeUrl() {
     const q = new URLSearchParams();
     if (state.views.length > 1) q.set('with', state.views.slice(1).map(addr).join(','));
+    if (GLOBE) q.set('globe', '1');
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => colOut(state.colors.get(id))).join(','));
@@ -731,6 +736,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     barTicks();
     renderSide();
     $('status').hidden = true;
+    if (GLOBE) globeShow();
     drawPlay();
     roadKick();
   }
@@ -936,7 +942,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (play.on) road.pace += (paceFor(road.cards + road.waiting, road.within1, road.within3) - road.pace) * (1 - Math.exp(-dt * 2.5));
       // Play slows for cards that have not had their turn, by as much as they still need, and never stands still.
       // It eases down to that limit as it eases up to speed, so the road never jerks under the reader.
-      const want = play.on ? Math.min(road.limit, PLAY_PACE * road.pace) : 0;
+      // On the globe, play waits while the camera flies to a place and its card is read (globe.hold()).
+      const want = play.on ? Math.min(road.limit, PLAY_PACE * road.pace, GLOBE && globe && globe.hold() ? 0.004 : Infinity) : 0;
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       road.t += dir * road.vel * L.D * dt;
@@ -949,9 +956,46 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const speed = dt > 0 && road.prev != null ? Math.abs(road.t - road.prev) / dt : 0;
     road.prev = road.t;
     let busy = roadDraw(dt, speed, now);
+    if (GLOBE) globeFrame();
     // The media wall either side of the road follows the reader: the era in front of them, and the distance travelled.
-    if (wall && wall.frame({ year: writtenOf(L.when(road.t + camDir() * 0.2 * L.D)), travel: camDir() * road.t / L.D, G: L.G, dark: roadPalette().dark, dt, cards: road.shows || [], own: L.own })) busy = true;
+    if (wall && wall.frame({ year: writtenOf(L.when(road.t + camDir() * 0.2 * L.D)), travel: camDir() * road.t / L.D, G: L.G, dark: roadPalette().dark, dt, cards: (GLOBE ? road.gshows : road.shows) || [], own: L.own })) busy = true;
     if (moving || busy || now < road.until) roadKick();
+  }
+
+  // ---- the globe (globe.js), behind `?globe`. The road stays the clock: it is laid out and travelled as ever,
+  // only not shown, so the bar, play, the year on top and the links work unchanged. The globe is told which
+  // entries there are, in the order play meets them (globeShow), and which one stands in front (globeFrame).
+  let globe = null, places = {};
+  const AHEAD = 0.3;                           // focal lengths ahead of the reader at which an entry is the one in front
+  function globeShow() {
+    if (!globe) {
+      document.body.classList.add('globe');
+      $('globe').hidden = false;
+      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => roadToThing(id) });
+    }
+    const dir = camDir(), P = roadPalette(), seen = new Set(), steps = [];
+    road.gorder = L.shown.filter((p) => p.a >= L.tMin && p.a <= L.tMax && L.at.get(p.t.id) === p).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
+    for (const p of road.gorder) {
+      const t = p.t;
+      if (seen.has(t.id)) continue;
+      seen.add(t.id);
+      steps.push({ id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
+        col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: !RANKED && t.born > DEEP ? places[t.id] || null : null });
+    }
+    road.gcur = undefined;
+    globe.show(steps);
+  }
+  // The entry in front: the open one, else the last the reader has come up to. Its pictures go to the frames of the wall.
+  function globeFrame() {
+    if (!globe || !road.gorder) return;
+    const dir = camDir(), edge = road.t + dir * AHEAD * L.D;
+    let cur = state.open && L.at.has(state.open) ? L.at.get(state.open) : null;
+    if (!cur) for (const p of road.gorder) { if (dir * (p.a - edge) > 0) break; cur = p; }
+    const id = cur ? cur.t.id : null;
+    if (id === road.gcur) return;
+    road.gcur = id;
+    road.gshows = cur && wallMedia(cur.t).length ? [{ id, name: cur.t.name, side: 0, col: null, media: wallMedia(cur.t) }] : [];
+    if (globe.at(id, play.on)) breath(0);
   }
 
   // The colours of the theme, as numbers the canvas can fade.
@@ -1141,7 +1185,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       n.r = r; n.s = c.s; n.roll = false;
       n.want = fade(c.u, c.s) * (state.open && !r.big && !hotNow(c.p.t.id) ? 0.6 : 1);
       // A card that opens while play travels says so: a ring in its colour and a quiet breath of air.
-      if (!n.live) { n.live = true; if (play.on && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
+      if (!n.live) { n.live = true; if (play.on && !GLOBE && r.mode === 'full' && n.o < 0.3) cardArrives(n, c.lean); }
     }
     // A card opens out of its small card, like a scroll unrolling: it starts as that box, where that
     // stands, and grows upwards into its own place (openFrom in road.js; `n.g` is how far it has opened,
@@ -1639,7 +1683,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       e.preventDefault();
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
-    if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); }).observe(box);
+    if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) globe.resize(); }).observe(box);
   }
 
   // ---------------------------------------------------------------- search the timeline
@@ -2752,6 +2796,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const ids = urlViews();
     const mine = ids.length ? null : myView();
     bootReady = getJSON('boot.json').then(useBoot);
+    const placesReady = GLOBE ? getJSON('places.json').then((p) => { places = p || {}; }).catch(() => {}) : null;
     let asked = ids.length ? ids : mine ? mine.views : null;
     const viewsReady = asked ? Promise.all(asked.map(loadView))
       : Promise.all([getJSON('home.json'), bootReady]).then(([home]) => homeViews(home));
@@ -2777,6 +2822,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     drawReverse();
     if (document.fonts && document.fonts.ready) await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 1200))]);
     if (!state.views.length) $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
+    if (placesReady) await placesReady;
     render();
     if (ids.length) writeUrl();
     followHash(false);     // otherwise the road opens where roadOpening() says

@@ -13,6 +13,7 @@ request and never a chain of lookups, however large the data grows.
 | `d/<key>.json` | Full entries by id. `key` is the first hex digits of a hash of the id (`shardOf` in `site/keys.js`). | A link or a search result points at an entry that is not loaded. |
 | `s/all.json` | The search index: one short line per entry and per view. | A search box is first used. |
 | `c/<owner>.json` | One community folder: its profile, its views and its own entries. | A page about one contributor (not built yet). |
+| `places.json` | Where entries are on the Earth: `{ id: [lat, lon, level, place name] }`, copied from `data/places.json` (made by `scripts/places.mjs` from Wikidata) for the entries that exist. A stand-in until entries carry their place themselves. | Only when the link says `?globe`, once. |
 | `media/` | A copy of `data/media/`. | An icon or picture is shown. |
 
 Old addresses keep working at the same cost: a view that moved (listed in
