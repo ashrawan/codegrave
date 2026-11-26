@@ -944,7 +944,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // It eases down to that limit as it eases up to speed, so the road never jerks under the reader.
       // On the globe, play takes each stretch between two entries in a set time (globe.legSecs()), whatever its
       // length, so the camera, which follows the reader, travels evenly and never waits.
-      const want = !play.on ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() : Math.min(road.limit, PLAY_PACE * road.pace);
+      const want = !play.on ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       road.t += dir * road.vel * L.D * dt;
@@ -972,7 +972,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!globe) {
       document.body.classList.add('globe');
       $('globe').hidden = false;
-      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => roadToThing(id) });
+      globe = createGlobe($('globe'), { esc, calm, open: (id) => openThing(id), goTo: (id) => roadToThing(id), seek: globeSeek, credit: document.querySelector('.dock-tools') });
     }
     const dir = camDir(), P = roadPalette(), seen = new Set(), steps = [];
     road.gorder = L.shown.filter((p) => p.a >= L.tMin && p.a <= L.tMax && L.at.get(p.t.id) === p).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
@@ -983,14 +983,31 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       steps.push({ id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
         mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: !RANKED && t.born > DEEP ? places[t.id] || null : null });
     }
+    road.gsteps = new Map(road.gorder.map((p) => [p.t.id, p]).reverse());
     road.gcur = undefined;
     globe.show(steps);
+  }
+  // The time line at the foot was dragged: the reader goes to `frac` of the way from this entry to the next
+  // (null: from before the first). An open entry no longer holds the globe once the reader drags away from it.
+  function globeSeek(id, frac) {
+    if (!L || !road.gorder || !road.gorder.length) return;
+    const dir = camDir(), i = id == null ? -1 : road.gorder.indexOf(road.gsteps.get(id));
+    if (id != null && i < 0) return;
+    let j = i + 1;
+    while (j < road.gorder.length && i >= 0 && road.gorder[j].t.id === road.gorder[i].t.id) j++;
+    const from = i < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : road.gorder[i].a, next = road.gorder[j];
+    const edge = next ? from + (next.a - from) * clamp(frac, 0, 1) : from;
+    road.gfree = state.open || null;
+    road.target = null; road.vel = 0;
+    road.t = camClamp(edge - dir * AHEAD * L.D + dir * 1e-6 * L.D);
+    roadKick();
   }
   // The entry in front: the open one, else the last the reader has come up to. Its pictures go to the frames of the wall.
   function globeFrame() {
     if (!globe || !road.gorder) return;
     const dir = camDir(), edge = road.t + dir * AHEAD * L.D;
-    let cur = !play.on && state.open && L.at.has(state.open) ? L.at.get(state.open) : null;
+    if (road.gfree && road.gfree !== state.open) road.gfree = null;
+    let cur = !play.on && state.open && state.open !== road.gfree && L.at.has(state.open) ? L.at.get(state.open) : null;
     let next = null;
     if (!cur) for (const p of road.gorder) { if (dir * (p.a - edge) > 0) { next = p; break; } cur = p; }
     const id = cur ? cur.t.id : null;
@@ -2272,7 +2289,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // ---------------------------------------------------------------- play and scrub
   // Play carries the reader along the road; the marker on the bar is where
   // they stand. Drag it, or press play. The reader's place is road.t.
-  const play = { on: false, drag: false, own: false };   // own: play to the view's own music (a country's anthem)
+  const play = { on: false, drag: false, own: false, speed: 1 };   // own: play to the view's own music (a country's anthem)
   const ICON_PLAY = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg>';
   const ICON_AGAIN = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.4-5.5"/><path d="M4.5 4.5v4.2h4.2"/></svg>';
   const ICON_PAUSE = '<svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z" fill="currentColor"/></svg>';
@@ -2550,6 +2567,12 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       barYears(on);
       try { localStorage.setItem('cg-bar-years', on ? '1' : '0'); } catch (e) { /* fine */ }
     });
+    // How fast play travels (cg-pace in this browser): 1x is the pace it was made for, less lingers on each card.
+    const paceShow = () => { $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
+    play.speed = clamp(Number(store.get('cg-pace')) || 1, 0.25, 2);
+    paceShow();
+    $('pace').addEventListener('input', () => { play.speed = clamp(Number($('pace').value) || 1, 0.25, 2); store.set('cg-pace', String(play.speed)); paceShow(); });
+    $('pace-row').addEventListener('click', (e) => e.stopPropagation());
     $('theme').addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
       document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick();

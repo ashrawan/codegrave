@@ -65,12 +65,12 @@ function styleOf() {
   return {
     version: 8, projection: { type: 'globe' }, glyphs: TILES + '/fonts/{fontstack}/{range}.pbf',
     sources: {
-      omt: { type: 'vector', url: TILES + '/planet', attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a>' },
+      omt: { type: 'vector', url: TILES + '/planet' },
       grat: { type: 'geojson', data: graticule() },
       // The land from far off: Natural Earth's small-scale coast (public domain), one small file
       // (the land, and its coast as lines without the cut at the date line). The tiles' own
       // coast takes over from country height down; from far off their edges at the pole would be drawn as coast.
-      land: { type: 'geojson', data: new URL('./media/land.json', import.meta.url).href, attribution: 'Natural Earth' },
+      land: { type: 'geojson', data: new URL('./media/land.json', import.meta.url).href },
     },
     sky: { 'sky-color': '#05070c', 'horizon-color': '#4a3f2c', 'fog-color': '#0b0b0d', 'sky-horizon-blend': 0.6, 'horizon-fog-blend': 0.7, 'fog-ground-blend': 0.35, 'atmosphere-blend': ['interpolate', ['linear'], ['zoom'], 0, 0.7, 6, 0.35, 10, 0] },
     layers: [
@@ -94,7 +94,7 @@ function styleOf() {
   };
 }
 
-export function createGlobe(host, { open, goTo, esc, calm }) {
+export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
   host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
     '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
@@ -108,10 +108,8 @@ export function createGlobe(host, { open, goTo, esc, calm }) {
   // ---- the map
   function make(gl) {
     const map = new gl.Map({ container: box, style: styleOf(), center: [0, 20], zoom: far(), attributionControl: false, fadeDuration: 0, scrollZoom: false, dragRotate: false, pitchWithRotate: false, keyboard: false, maxPitch: 60 });
-    map.addControl(new gl.AttributionControl({ compact: true }), 'bottom-left');
     map.touchZoomRotate.disableRotation();
     // The credits the map's licences ask for are folded behind their small button (asked for, Nov 2026: no line of text on the map).
-    map.once('load', () => box.querySelector('.maplibregl-ctrl-attrib')?.classList.remove('maplibregl-compact-show'));
     map.on('idle', () => { host.dataset.idle = '1'; }); map.on('dataloading', () => { host.dataset.idle = '0'; });
     map.on('load', () => {
       map.addSource('arc', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
@@ -378,7 +376,42 @@ export function createGlobe(host, { open, goTo, esc, calm }) {
   }
   function run() { if (!S.raf) { S.then = performance.now(); S.raf = requestAnimationFrame(frame); } }
 
-  track.addEventListener('click', (e) => { const el = e.target.closest('[data-i]'); if (el) goTo(S.steps[Number(el.dataset.i)].id); });
+  // The time line is dragged like a strip of paper under the marker: the reader goes where it is pulled to.
+  const drag = { on: false, moved: false, x: 0, at: 0 };
+  function posAt(x) {
+    const xs = S.xs;
+    if (!xs.length) return 0;
+    if (x <= xs[0]) return Math.max(-1, (x - xs[0]) / 34);
+    for (let i = 0; i < xs.length - 1; i++) if (x < xs[i + 1]) return i + (x - xs[i]) / (xs[i + 1] - xs[i]);
+    return xs.length - 1;
+  }
+  rows.addEventListener('pointerdown', (e) => {
+    e.stopPropagation();
+    if (e.button || S.pos == null) return;
+    drag.on = true; drag.moved = false; drag.x = e.clientX; drag.at = xAt(S.pos);
+  });
+  rows.addEventListener('pointermove', (e) => {
+    if (!drag.on) return;
+    e.stopPropagation();
+    if (!drag.moved && Math.abs(e.clientX - drag.x) < 5) return;
+    if (!drag.moved) { drag.moved = true; rows.setPointerCapture(e.pointerId); rows.classList.add('drag'); }
+    const pos = posAt(drag.at - (e.clientX - drag.x)), i = Math.floor(pos);
+    seek(i < 0 ? null : S.steps[i].id, pos - i);
+  });
+  const dragEnd = (e) => { if (!drag.on) return; drag.on = false; rows.classList.remove('drag'); if (drag.moved) e.stopPropagation(); };
+  rows.addEventListener('pointerup', dragEnd); rows.addEventListener('pointercancel', dragEnd);
+  track.addEventListener('click', (e) => { if (drag.moved) { drag.moved = false; return; } const el = e.target.closest('[data-i]'); if (el) goTo(S.steps[Number(el.dataset.i)].id); });
+  // The credits the map's licences ask for, behind a small button in the corner of the page.
+  if (credit && !credit.querySelector('.g-credit')) {
+    const el = document.createElement('span');
+    el.className = 'g-credit';
+    el.innerHTML = '<button type="button" class="ibtn sm" aria-label="Map credits" title="Map credits" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></svg></button>' +
+      '<p hidden>Map: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> · Natural Earth · <a href="https://maplibre.org" target="_blank" rel="noopener">MapLibre</a></p>';
+    credit.prepend(el);
+    const btn = el.firstChild, tip = el.lastChild;
+    btn.addEventListener('click', (e) => { e.stopPropagation(); tip.hidden = !tip.hidden; btn.setAttribute('aria-expanded', !tip.hidden); });
+    document.addEventListener('pointerdown', (e) => { if (!el.contains(e.target)) { tip.hidden = true; btn.setAttribute('aria-expanded', 'false'); } });
+  }
   card.addEventListener('click', () => { if (card.dataset.id) open(card.dataset.id); });
   // A drag turns the globe; it must not also carry the reader through time, which the stage under it does.
   for (const ev of ['pointerdown', 'pointermove', 'pointerup']) box.addEventListener(ev, (e) => e.stopPropagation());

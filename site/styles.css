@@ -636,10 +636,17 @@ body.globe #road { cursor: default; }
 #globe { position: absolute; inset: 0; z-index: 1; --c: var(--acc); }
 #globe .g-map { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
 #globe .g-map canvas { outline: none; }
-#globe .maplibregl-ctrl-bottom-left { bottom: 118px; left: 10px; }
-#globe .maplibregl-ctrl-attrib { font-size: 10px; color: #8f97a8; background: rgba(7, 10, 16, .55); }
-#globe .maplibregl-ctrl-attrib a { color: inherit; }
-#globe .maplibregl-ctrl-attrib-button { opacity: .6; }
+.g-credit { position: relative; display: none; }
+body.globe .g-credit { display: inline-flex; }
+.g-credit .ibtn { opacity: .6; }
+.g-credit p { position: absolute; right: 0; bottom: calc(100% + 8px); margin: 0; padding: 6px 10px; white-space: nowrap; font-size: 11px; color: #bcc2cf; background: rgba(7, 10, 16, .94); border: 1px solid rgba(200, 215, 255, .16); border-radius: 6px; }
+.g-credit p[hidden] { display: none; }
+.g-credit a { color: inherit; }
+#more-menu .pace { cursor: default; }
+#more-menu .pace input { flex: 1; min-width: 70px; width: 90px; accent-color: var(--acc); }
+#globe .g-rows { cursor: grab; touch-action: none; }
+#globe .g-rows.drag { cursor: grabbing; }
+#globe .g-rows.drag .g-nm { pointer-events: none; }
 /* Close in, the map fills the stage, so the frames of the wall step away. */
 body.globe #wall .w-scene { transition: opacity .6s; }
 body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
@@ -675,7 +682,6 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
   #globe .g-card:not(:has(img)) { display: block; }
   #globe .g-card strong { font-size: 23px; margin: 1px 0 2px; }
   #globe .g-s { display: none; }
-  #globe .maplibregl-ctrl-bottom-left { bottom: auto; top: 108px; left: 4px; }
   body.globe #filters { display: none; }
 }
 /* What floats at the foot of the road stands above the strip. */
@@ -703,7 +709,7 @@ body.globe #axisbar .ends.foot { flex-direction: row-reverse; }
    On a phone it is the glass box above, resting over the time line. */
 @media (min-width: 700px) {
   #globe[data-card="b"] .g-card { width: 340px; padding: 2px 0 4px 18px; background: none; border: 0; border-left: 2px solid var(--c); border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .9); }
-  #globe[data-card="b"] .g-card::before { content: ''; position: absolute; inset: -34px -60px -34px -30px; z-index: -1; background: radial-gradient(closest-side, rgba(5, 7, 12, .9), rgba(5, 7, 12, .72) 62%, transparent); }
+  #globe[data-card="b"] .g-card::before { content: ''; position: absolute; inset: -34px -60px -34px -30px; z-index: -1; background: radial-gradient(closest-side, rgba(5, 7, 12, .96), rgba(5, 7, 12, .88) 66%, transparent); }
   #globe[data-card="b"] .g-card img { width: auto; max-width: 220px; height: 120px; margin-bottom: 12px; background: none; border: 1px solid rgba(255, 255, 255, .16); }
   #globe[data-card="b"] .g-k { justify-content: flex-start; gap: 12px; }
   #globe[data-card="b"] .g-card strong { font-size: 40px; margin: 3px 0 7px; }
