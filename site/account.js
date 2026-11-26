@@ -6,7 +6,7 @@
    The page knows a stored timeline as "t/<its id>". Its address is
    /t/<id>, or /<username>/<slug> once it is public. */
 import { shardOf } from './keys.js';
-import { EFFORTS, MODELS, specToView } from './ai.js';
+import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js';
 
 // Public by design: the key only allows what the database's row level security allows.
 export const CONFIG = {
@@ -43,6 +43,8 @@ export const isStored = (id) => /^t\/[0-9a-f-]{36}$/.test(id);
 export const uuidOf = (id) => id.slice(2);
 
 const ICON = {
+  // a door with an arrow going in: Sign in (asked for, Nov 2026)
+  login: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M3.5 12H14M10 8l4 4-4 4"/></svg>',
   plus: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M12 5.5v13M5.5 12h13"/></svg>',
   search: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>',
   compass: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>',
@@ -59,7 +61,7 @@ const PHONE = '(max-width: 699px)';
 const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt';
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
-   show(id), replace(payload) (a stored view changed), forget(id), home(),
+   show(id), open(id) (travel to a view's beginning), replace(payload) (a stored view changed), forget(id), home(),
    focusSearch(), redraw(), detailChars(). */
 export function createAccount(app) {
   const { $, esc } = app;
@@ -140,8 +142,10 @@ export function createAccount(app) {
     const r = got && got[0];
     if (!r) throw new Error('not found');
     const row = { id: r.id, username: r.username, slug: r.slug, title: r.title, description: r.description, visibility: r.visibility, mine: r.mine, entries: (r.data?.entries || []).length, text: JSON.stringify(r.data) };
-    rows.set(row.id, row);
-    return payloadOf(row);
+    // One object per timeline, kept up to date in place: a timeline being made holds on to its row.
+    const old = rows.get(row.id);
+    if (old) Object.assign(old, row); else rows.set(row.id, row);
+    return payloadOf(old || row);
   }
   const rowOf = (id) => (isStored(id) ? rows.get(uuidOf(id)) : null);
   const isMine = (id) => !!rowOf(id)?.mine;
@@ -289,14 +293,14 @@ export function createAccount(app) {
   }
 
   // ---- create with AI: a sentence in, a timeline out (docs/ACCOUNTS.md)
-  let model = MODELS[0].id, effort = 'medium', working = false, ticker = 0, moreModels = false;
+  let model = MODELS[0].id, effort = 'none', working = false, ticker = 0, moreModels = false;
   try {
     const m = localStorage.getItem(MODEL), f = localStorage.getItem(MODEL + '-effort');
     if (MODELS.some((x) => x.id === m)) model = m;
     if (EFFORTS.some((x) => x.id === f)) effort = f;
   } catch (e) { /* fine */ }
   const modelName = () => MODELS.find((m) => m.id === model).name;
-  const modelLabel = () => modelName() + (effort === 'medium' ? '' : ' · ' + EFFORTS.find((x) => x.id === effort).name);
+  const modelLabel = () => modelName() + (effort === 'none' ? '' : ' · ' + EFFORTS.find((x) => x.id === effort).name);
   // What people come to make, and for each a few requests that work well as they stand. The reader can
   // make anything (asked for, Nov 2026: a company, a life, something to learn, a trip, a skill, the news).
   const KINDS = [
@@ -336,7 +340,7 @@ export function createAccount(app) {
     q.addEventListener('keydown', (e) => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); $('cr-form').requestSubmit(); } });
     $('cr-form').addEventListener('submit', (e) => { e.preventDefault(); make(q.value.trim()); });
   }
-  function closeCreate() { if (working) return; $('create').hidden = true; $('create').innerHTML = ''; document.body.classList.remove('creating'); }
+  function closeCreate(force) { if (working && !force) return; $('create').hidden = true; $('create').innerHTML = ''; document.body.classList.remove('creating'); }
   function progress(el, on) {
     clearInterval(ticker);
     working = on;
@@ -350,41 +354,139 @@ export function createAccount(app) {
     ticker = setInterval(() => { i = Math.min(STEPS.length - 1, i + 1); el.textContent = STEPS[i]; }, 3500);
   }
   const fail = (el, e) => { if (el) { el.classList.add('err'); el.textContent = e.status === 401 ? 'Sign in again to make a timeline.' : e.message || 'That did not work. Try again.'; } else toast(e.message); };
-  const ask_ai = (prompt, current) => api('/functions/v1/ai-timeline', { method: 'POST', body: { prompt, model, effort, ...(current ? { current } : {}) } });
+  // Asks the function and reads its answer as it comes: `onText` gets the JSON written so far, `onNote`
+  // what the function is doing. Resolves with the finished answer, or throws with a sentence to show.
+  async function ask_ai(body, onText, onNote) {
+    const t = await token();
+    const r = await fetch(CONFIG.url + '/functions/v1/ai-timeline', {
+      method: 'POST',
+      headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...body, model, effort, stream: true }),
+    });
+    if (!/event-stream/.test(r.headers.get('content-type') || '')) {
+      const d = await r.json().catch(() => null);
+      const err = new Error(d?.error || 'That did not work. Try again.'); err.status = r.status; throw err;
+    }
+    const rd = r.body.getReader(), dec = new TextDecoder();
+    let buf = '', text = '';
+    for (;;) {
+      const { value, done } = await rd.read();
+      if (done) break;
+      buf += dec.decode(value, { stream: true });
+      let i;
+      while ((i = buf.indexOf('\n\n')) >= 0) {
+        const line = buf.slice(0, i); buf = buf.slice(i + 2);
+        if (!line.startsWith('data:')) continue;
+        let o; try { o = JSON.parse(line.slice(5)); } catch (e) { continue; }
+        if (o.error) throw new Error(o.error);
+        if (o.done) return o.done;
+        if (o.note) onNote?.(o.note);
+        if (o.r) onNote?.('Thinking…');
+        if (o.d) { text += o.d; onText?.(text); }
+      }
+    }
+    throw new Error('The connection was lost. Your timeline is still being made: it will be in the list in a moment.');
+  }
+  // Pictures the server could not get (Wikimedia sometimes turns a busy server away) are looked for
+  // once more from the reader's own browser, and kept in the row. Quietly: a timeline works without them.
+  async function morePictures(row, sd) {
+    const data = JSON.parse(row.text), spec = data.spec;
+    if (!spec || !spec.entries.some((e) => !e.image && e.wikipedia)) return;
+    const get = (host, q) => fetch(`https://${host}/w/api.php?format=json&origin=*&${q}`).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    try {
+      if (!(await findPictures(spec.entries, get))) return;
+      const f = specToView(spec, sd);
+      await patch(row, { data: { ...data, view: f.view, entries: f.entries, spec: f.spec } });
+    } catch (e) { /* fine */ }
+  }
+  // While a timeline is made, one line over the road says how far it has come.
+  function live(text) {
+    let el = $('ai-live');
+    if (!el) { el = document.createElement('p'); el.id = 'ai-live'; el.setAttribute('role', 'status'); document.body.append(el); }
+    el.hidden = !text;
+    el.textContent = text || '';
+  }
+  const draftTitle = (prompt) => prompt.replace(/\s+/g, ' ').trim().slice(0, 80).replace(/[.,;:!?\s]+$/, '') || 'New timeline';
+  // Make a timeline: the page goes to the road at once and the timeline grows on it as the model writes.
+  // The row is kept from the first moment, and the function fills it in itself when it is done, so the
+  // timeline is finished and saved under the account even when the tab is closed (asked for, Nov 2026).
   async function make(prompt) {
     if (working || prompt.length < 3) return;
     if (!user) { try { sessionStorage.setItem(PROMPT, prompt); } catch (e) { /* fine */ } return signIn('Sign in to make this timeline. It is kept under your account, private until you publish it.'); }
-    const st = $('cr-status');
+    const st = $('cr-status'), sd = seed();
     progress(st, true);
+    let id, row;
     try {
-      const got = await ask_ai(prompt);
-      const file = specToView(got.spec, seed());
-      if (!file.entries.length) throw new Error('The model wrote no entries with dates. Try saying more about the subject.');
-      const id = await insert(file.spec.title, file.spec.description, { view: file.view, entries: file.entries, spec: file.spec, prompt });
-      progress(st, false);
-      closeCreate();
+      id = await insert(draftTitle(prompt), '', { view: { checkpoints: [] }, entries: [], prompt, making: true });
+      row = await ensureRow(uuidOf(id));
+    } catch (e) { progress(st, false); return fail(st, e); }
+    progress(st, false);
+    working = true; document.body.classList.add('ai-busy');
+    closeCreate(true);
+    refreshList();
+    live('Reading up on the subject…');
+    await app.show(id);
+    let shown = 0, last = 0, opened = false, words = 'Writing…';
+    const put = (spec, data) => {
+      const f = specToView(spec, sd);
+      row.title = f.spec.title !== 'Untitled timeline' ? f.spec.title : row.title;
+      row.description = f.spec.description;
+      row.text = JSON.stringify(data ? { ...data(f) } : { view: f.view, entries: f.entries, prompt, making: true });
+      app.replace(payloadOf(row));
+      if (!opened && f.entries.length) { opened = true; setTimeout(() => app.open(id), 30); }
+      return f;
+    };
+    try {
+      const got = await ask_ai({ prompt, timeline: uuidOf(id), seed: sd }, (text) => {
+        if (Date.now() - last < 600) return;
+        last = Date.now();
+        const p = partialSpec(text);
+        if (p.entries.length > shown || (p.title && row.title === draftTitle(prompt))) { shown = p.entries.length; put(p); }
+        live(shown ? `Writing… ${shown} ${shown === 1 ? 'entry' : 'entries'} so far` : words);
+      }, (note) => { words = note; if (!shown || /pictures/.test(note)) live(note); });
+      const f = put(got.spec, (x) => ({ view: x.view, entries: x.entries, spec: x.spec, prompt }));
+      if (!f.entries.length) throw new Error('The model wrote no entries with dates. Try saying more about what you want.');
+      if (!got.saved) await patch(row, { title: f.spec.title, description: f.spec.description, data: JSON.parse(row.text) });
+      live('');
+      working = false; document.body.classList.remove('ai-busy');
       await refreshList();
-      await app.show(id);
-      toast(`Made with ${modelName()}: ${file.entries.length} entries. Ask for a change below, or publish it.`);
-    } catch (e) { progress(st, false); fail(st, e); }
+      draw(true);
+      app.open(id);
+      toast(`Made with ${modelName()}: ${f.entries.length} entries. Ask AI below to change it, or publish it.`);
+      morePictures(row, sd);
+    } catch (e) {
+      live('');
+      working = false; document.body.classList.remove('ai-busy');
+      if (/connection was lost/.test(e.message)) return toast(e.message);
+      // Nothing was made: the empty draft goes, and the request comes back to try again.
+      api(`/rest/v1/timelines?id=eq.${uuidOf(id)}`, { method: 'DELETE' }).catch(() => {});
+      rows.delete(uuidOf(id)); app.forget(id);
+      await refreshList();
+      app.home();
+      openCreate(prompt);
+      fail($('cr-status'), e);
+    }
   }
-  // "Ask for a change": the same model reads the timeline and the request, and writes it again.
+  // "Ask AI": the same model reads the timeline and the request, and writes it again.
   const specOf = (row) => { try { return JSON.parse(row.text).spec || null; } catch (e) { return null; } };
   async function change(prompt) {
     const row = current(), spec = row && specOf(row);
     if (working || !spec || prompt.length < 3) return;
     const st = $('ask-status');
-    progress(st, true);
+    working = true; document.body.classList.add('ai-busy');
+    st.classList.add('busy'); st.classList.remove('err'); st.textContent = 'Reading your timeline…';
     try {
-      const got = await ask_ai(prompt, spec);
+      const got = await ask_ai({ prompt, current: spec }, (text) => { st.textContent = `Writing… ${partialSpec(text).entries.length} entries`; }, (note) => { st.textContent = note; });
       const file = specToView(got.spec, seed());
       if (!file.entries.length) throw new Error('That change would leave the timeline empty.');
       const before = { title: row.title, description: row.description, data: JSON.parse(row.text) };
       await patch(row, { title: file.spec.title, description: file.spec.description, data: { view: file.view, entries: file.entries, spec: file.spec, prompt: before.data.prompt } });
-      progress(st, false);
+      st.classList.remove('busy'); st.textContent = '';
       $('ask-q').value = '';
       toast(got.changed || 'Changed.', { undo: () => patch(row, before).catch((e) => toast(e.message)) });
-    } catch (e) { progress(st, false); fail(st, e); setTimeout(() => { if (st.classList.contains('err')) { st.textContent = ''; st.classList.remove('err'); } }, 7000); }
+      morePictures(row, file.entries[0].id.split('-')[0].slice(1));
+    } catch (e) { st.classList.remove('busy'); fail(st, e); setTimeout(() => { if (st.classList.contains('err')) { st.textContent = ''; st.classList.remove('err'); } }, 7000); }
+    working = false; document.body.classList.remove('ai-busy');
   }
   // The requests offered under one kind: pressing the kind again folds them away.
   function showKind(id) {
@@ -523,19 +625,21 @@ export function createAccount(app) {
     const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility].join('|');
     if (!force && key === drawn) return;
     drawn = key;
+    // "New timeline" stands first under "Your timelines" (asked for, Nov 2026).
+    const NEW = `<button id="sb-new" class="nv${document.body.classList.contains('creating') ? ' on' : ''}" type="button" title="New timeline">${ICON.plus}<span class="lbl">New timeline</span></button>`;
     $('sb-list').innerHTML = !user
-      ? '<p class="sb-note">Sign in to make your own timelines and keep them here.</p>'
-      : `<h2 class="cap">Your timelines</h2>${!listed ? '' : list.length ? list.map((t, i) => `<div class="sb-row${on.length === 1 && on[0] === 't/' + t.id ? ' on' : ''}"><button type="button" class="nv" data-open="${t.id}" title="${esc(t.title)}"><i class="dot" style="background: var(--p${i % 8})"></i><span class="lbl">${esc(t.title)}</span>${t.visibility === 'private' ? '<small class="lbl">Draft</small>' : ''}</button><button type="button" class="ibtn sm more" data-more="${t.id}" aria-label="More for ${esc(t.title)}">${ICON.dots}</button></div>`).join('') : '<p class="sb-note">None yet. “New timeline” starts one from what is on the road.</p>'}`;
+      ? `<h2 class="cap">Your timelines</h2>${NEW}<p class="sb-note">Sign in to make your own timelines and keep them here.</p>`
+      : `<h2 class="cap">Your timelines</h2>${NEW}${!listed ? '' : list.length ? list.map((t, i) => `<div class="sb-row${on.length === 1 && on[0] === 't/' + t.id ? ' on' : ''}"><button type="button" class="nv" data-open="${t.id}" title="${esc(t.title)}"><i class="dot" style="background: var(--p${i % 8})"></i><span class="lbl">${esc(t.title)}</span>${t.visibility === 'private' ? '<small class="lbl">Draft</small>' : ''}</button><button type="button" class="ibtn sm more" data-more="${t.id}" aria-label="More for ${esc(t.title)}">${ICON.dots}</button></div>`).join('') : '<p class="sb-note">None yet. “New timeline” starts one from what is on the road.</p>'}`;
     $('sb-foot').innerHTML = user
       ? `<button type="button" class="nv who" id="sb-me" aria-haspopup="menu"><i class="av">${esc(shown()[0].toUpperCase())}</i><span class="lbl"><b>${esc(shown())}</b><small>Free plan</small></span><span class="lbl chev">${ICON.chev}</span></button>`
-      : `<button type="button" class="big" id="sb-in"><span class="lbl">Sign in</span><i class="rail-only">${ICON.chev}</i></button>`;
+      : `<button type="button" class="big" id="sb-in" title="Sign in">${ICON.login}<span class="lbl">Sign in</span></button>`;
     // Beside the search: what this timeline is, and the way to publish it.
     $('tl-state').innerHTML = cur ? `<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
     document.body.classList.toggle('mine', !!cur);
     const canAsk = !!cur && cur.text.includes('"spec":{');
     if ($('ask').hidden === canAsk) {
       $('ask').hidden = !canAsk;
-      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><input id="ask-q" type="text" maxlength="600" placeholder="Ask for a change: add the women of jazz, start in 1900…" aria-label="Ask for a change" autocomplete="off">${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Make the change" title="Make the change">${SEND}</button></div>` : '';
+      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><textarea id="ask-q" rows="2" maxlength="600" placeholder="Ask AI" aria-label="Ask AI to change this timeline"></textarea>${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Send" title="Send">${SEND}</button></div>` : '';
     }
   }
   // The buttons the entry pane shows for a signed-in reader.
@@ -552,6 +656,7 @@ export function createAccount(app) {
       if (phone() && e.target.closest('#sb-list [data-open]')) setTimeout(() => setOpen(false), 0);
     }, true);
     $('ask').addEventListener('submit', (e) => { e.preventDefault(); change($('ask-q').value.trim()); });
+    $('ask').addEventListener('keydown', (e) => { if (e.target.id === 'ask-q' && e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); $('ask').requestSubmit(); } });
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('create').hidden && $('layer').hidden) { e.stopImmediatePropagation(); closeCreate(); } }, true);
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('explore').hidden && $('layer').hidden && !$('vq').value) { e.stopImmediatePropagation(); explore(false); } }, true);
     document.addEventListener('click', async (e) => {
@@ -559,6 +664,8 @@ export function createAccount(app) {
       const layer = $('layer');
       if (!layer.hidden && (el('[data-close]') || e.target === layer)) return closeLayer();
       if (el('#sb-fold') || el('#sb-btn') || el('#sb-scrim')) return setOpen(!document.body.classList.contains('sb-open'));
+      // A click on the empty part of the folded strip opens it.
+      if (!phone() && !document.body.classList.contains('sb-open') && el('#sb') && !el('button, a, input')) return setOpen(true);
       if (el('#sb-new')) return $('create').hidden ? openCreate() : closeCreate();
       if (el('[data-create-close]')) return closeCreate();
       const idea = el('[data-idea]');
@@ -572,7 +679,6 @@ export function createAccount(app) {
       if (ef) return setEffort(ef.dataset.effort);
       const kd = el('[data-kind]');
       if (kd) return showKind(kd.dataset.kind);
-      if (el('#sb-search')) { if (phone()) setOpen(false); return app.focusSearch(); }
       if (el('#sb-explore')) { closeCreate(); return explore($('explore').hidden); }
       if (el('[data-sb-home]')) return explore(false);
       if (el('#sb-in')) return signIn();

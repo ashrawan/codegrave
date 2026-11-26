@@ -160,6 +160,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // and billions (Ga) of years ago for deep time.
   // `step` (the years between ticks) sets how many decimals a deep-time label needs;
   // `ce` marks the common era when the axis also shows years before it.
+  // A year on the bar, in at most four characters (asked for, Nov 2026): 1969, 500B (BCE), 3kB
+  // (3000 BCE), 12k, 66M, 4.5G (thousand, million, billion years ago). The whole year is its title.
+  function shortYear(y) {
+    if (y > 0) return y < 1e4 ? String(y) : Math.round(y / 1e3) + 'k';
+    const a = -y;
+    if (a < 1e3) return a + 'B';
+    if (a < 1e5) return Math.round(a / 1e3) + 'kB';
+    const [unit, ch] = a < 1e6 ? [1e3, 'k'] : a < 1e9 ? [1e6, 'M'] : [1e9, 'G'];
+    const v = a / unit, n = v < 10 ? String(Math.round(v * 10) / 10) : String(Math.round(v));
+    return n.slice(0, 3).replace(/\.$/, '') + ch;
+  }
   function axisText(y, step = 0, ce = false) {
     if (y > 0) return ce ? y + ' CE' : String(y);
     const a = -y;
@@ -256,7 +267,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function sayScope() {
     if (!boot) return;
     const n = group(boot.counts?.entries || 0), views = (boot.views || []).length;
-    $('q').placeholder = matchMedia(PHONE).matches ? 'Search the timeline' : 'Search the timeline: a person, a place, an event or a year';
+    $('q').placeholder = matchMedia(PHONE).matches ? 'Search' : 'Search: person, place, event…';   // asked for, Nov 2026
     $('vscope').textContent = `${group(views)} ${views === 1 ? 'timeline' : 'timelines'} · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.
@@ -765,7 +776,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       groups.push({ view: ln.view, n: ln.mine.length, total: ln.mine.length, eras: ln.eras.map((c) => ({ c })) });
     });
     // Do the views bring pictures of their own for the media wall? Enough of them (15 in 100 entries) and the wall shows only those.
-    const own = shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
+    // A timeline someone made shows only its own pictures, never the stand-ins of the eras, which belong to
+    // other subjects (reported, Nov 2026: "it was showing all other images from previous loaded view").
+    const own = lanes.some((ln) => ln.view.stored) || shown.filter((p) => wallMedia(p.t).length).length >= Math.max(3, 0.15 * shown.length);
     L = { own, tMin, tMax, fitMin, fitMax, autoMin, shown, groups, total: groupsOf.size, D, G, lanes, place, when,
       at: new Map([...shown].reverse().map((p) => [p.t.id, p])), byKey: new Map(shown.map((p) => [p.key, p])), barH: $('axis').clientHeight };
     return L;
@@ -1390,12 +1403,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (!k.label) html += `<i class="tk" style="top:${y}px"></i>`;
       else if (atNow && Math.abs(k.p - yEnd) < 22) html += `<i class="tk big" style="top:${y}px"></i>`;
       else {
-        html += `<span class="yr" style="top:${y}px">${text(k)}</span>`;
+        html += `<span class="yr" style="top:${y}px" title="${esc(axisText(k.y, k.step))}">${esc(shortYear(k.y))}</span>`;
         const m = /\s(ka|Ma|Ga)$/.exec(axisText(k.y, k.step));
         if (m) used.add(m[1]);
       }
     }
-    if (atNow) html += `<span class="yr now" style="top:${yEnd}px">Today</span>`;
+    if (atNow) html += `<span class="yr now" style="top:${yEnd}px" title="Today">Now</span>`;
     $('ticks').innerHTML = html;
     L.barYears = [...$('ticks').querySelectorAll('.yr')].map((el) => ({ el, y: parseFloat(el.style.top), under: false }));
     L.units = [...used];
@@ -2016,6 +2029,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('p-thing').innerHTML = `
       <div class="pane-head">${crumbs()}<button class="ibtn" type="button" data-hide-side aria-label="Hide the panel">${ICON.x}</button></div>
       <div class="th-head"><span class="tile big">${icon}</span><div><p class="kind">${kind}</p><h2 id="thing-title" tabindex="-1">${esc(t.name)}</h2><p class="meta">${meta}</p></div></div>
+      ${t.made === 'ai' ? `<p class="community-note">${ICON.community}<span>Written by AI from Wikipedia. Check the dates against the source below.</span></p>` : ''}
       ${t.tier === 'community' ? `<p class="community-note">${ICON.community}<span>A community entry by <b>${esc(owner)}</b>. It is not yet in the reviewed base.</span></p>` : ''}
       ${figure(t.image, 'lead-img')}
       ${text ? `<p class="summary">${esc(text)}</p>` : ''}
@@ -2347,6 +2361,19 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (on) drawInfo();
       $('info').hidden = !on; $('info-btn').setAttribute('aria-expanded', on);
     });
+    // Years on the bar: shown unless the reader hides them from the three-dot menu (cg-bar-years in this browser).
+    const barYears = (on) => {
+      document.body.classList.toggle('bar-bare', !on);
+      $('bar-labels').setAttribute('aria-checked', on);
+      $('bar-labels').querySelector('.state').textContent = on ? 'Shown' : 'Hidden';
+    };
+    let bareSaved = null; try { bareSaved = localStorage.getItem('cg-bar-years'); } catch (e) { /* fine */ }
+    barYears(bareSaved !== '0');
+    $('bar-labels').addEventListener('click', () => {
+      const on = document.body.classList.contains('bar-bare');
+      barYears(on);
+      try { localStorage.setItem('cg-bar-years', on ? '1' : '0'); } catch (e) { /* fine */ }
+    });
     $('theme').addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
       document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick();
@@ -2415,7 +2442,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('filters-btn').addEventListener('click', () => yearsOpen(!$('filters').classList.contains('open')));
     document.addEventListener('pointerdown', (e) => { if (!e.target.closest('#filters')) yearsOpen(false); });
 
-    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in the same tab.
+    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in a new tab (asked for, Nov 2026; it was the same tab before).
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
       // A timeline someone keeps is not a built file: it is handed to the print page through this tab's storage.
@@ -2423,7 +2450,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       for (const id of state.views) { const pl = account.payload(id); if (pl) kept[id] = pl; }
       try { if (Object.keys(kept).length) sessionStorage.setItem('cg-print', JSON.stringify(kept)); else sessionStorage.removeItem('cg-print'); } catch (e) { /* too large: the print page will say it could not load */ }
       const q = 'views=' + state.views.map((id) => (kept[id] ? id : addressOf(id))).join(',') + '&c=' + state.views.map((id) => colOut(state.colors.get(id))).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
-      location.href = 'print.html?' + q;   // in the same tab (asked for, Nov 2026); the print page's logo leads back
+      // A new tab opened from this one starts with a copy of this tab's storage, so cg-print reaches it.
+      const w = window.open(new URL('print.html?' + q, document.baseURI).href, '_blank');
+      if (!w) location.href = 'print.html?' + q;   // a blocked pop-up: open it here instead
     });
 
     // The pills: drag one to change the order of the lanes, tap its dot to
@@ -2624,6 +2653,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // Accounts and the reader's own timelines (account.js): the bar on the left. It borrows these from the page.
   const account = createAccount({
     $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => { account.explore(false); return showOnly(id); },
+    open: (id) => { if (L) roadToView(id); },
     listChanged: () => runSearch(),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),

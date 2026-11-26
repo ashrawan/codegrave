@@ -13,21 +13,21 @@
    minus sign and four or more digits ("-0044-03-15"); deep time a negative
    year ("-66000000"). There is no year 0. */
 
-// The models a reader may pick, by their OpenRouter id. The first ones are offered at once, the rest under
-// "More models". The server keeps its own list of what it will run (supabase/functions/ai-timeline), so a
-// model is added in both places; the plan is to offer everything OpenRouter has (asked for, Nov 2026).
+// The models a reader may pick, by their OpenRouter id: open models, the cheapest and most used of
+// OpenRouter's ranking (asked for, Nov 2026: "fastest and cheapest, open source, top and popular").
+// The first ones are offered at once, the rest under "More models". The server keeps its own list of
+// what it will run (supabase/functions/ai-timeline), so a model is added in both places.
 export const MODELS = [
-  { id: 'deepseek/deepseek-v4.1-flash', name: 'DeepSeek V4.1 Flash', note: 'Fast. Right for most things.' },
-  { id: 'anthropic/claude-haiku-5.5', name: 'Claude Haiku 5.5', note: 'Careful with dates and wording.' },
-  { id: 'openai/gpt-6-luna', name: 'GPT-6 Luna', note: 'Quick and balanced.' },
-  { id: 'anthropic/claude-sonnet-5.5', name: 'Claude Sonnet 5.5', note: 'Deeper on hard subjects. Slower.', more: true },
-  { id: 'openai/gpt-6.1-terra', name: 'GPT-6.1 Terra', note: 'Stronger reasoning. Slower.', more: true },
-  { id: 'deepseek/deepseek-v4-pro', name: 'DeepSeek V4 Pro', note: 'The larger DeepSeek.', more: true },
+  { id: 'deepseek/deepseek-v4.1-flash', name: 'DeepSeek V4.1 Flash', note: 'The fastest. Right for most things.' },
+  { id: 'minimax/minimax-m3.1-flash', name: 'MiniMax M3.1 Flash', note: 'Fast, and finds the most pictures.' },
+  { id: 'z-ai/glm-5.3-flash', name: 'GLM 5.3 Flash', note: 'Careful with dates. A little slower.' },
+  { id: 'qwen/qwen3.8-flash', name: 'Qwen3.8 Flash', note: 'Good in many languages.', more: true },
+  { id: 'tencent/hy4-flash', name: 'Hy4 Flash', note: 'The cheapest. Slower to start.', more: true },
 ];
-// How long the model thinks before it writes (OpenRouter's "reasoning effort", which each model reads its own way).
+// How long the model thinks before it writes (OpenRouter's reasoning; "none" switches it off).
 export const EFFORTS = [
-  { id: 'low', name: 'Quick' },
-  { id: 'medium', name: 'Balanced' },
+  { id: 'none', name: 'Quick' },
+  { id: 'low', name: 'Balanced' },
   { id: 'high', name: 'Thorough' },
 ];
 // The branches of the map, which give an entry its words (a person is born and dies, a city is founded).
@@ -63,8 +63,9 @@ export function cleanSpec(raw) {
     seen.add(name.toLowerCase());
     let end = cleanDate(e.end);
     if (end && order(end) < order(start)) end = '';
-    const img = e.image && typeof e.image === 'object' && /^https:\/\/upload\.wikimedia\.org\//.test(e.image.src || '')
-      ? { src: text(e.image.src, 400), source: /^https:\/\//.test(e.image.source || '') ? text(e.image.source, 400) : '' } : null;
+    // Pictures only from Wikimedia's own servers (upload. and, since 2026, thumb.wikimedia.org), without the tracking query.
+    const img = e.image && typeof e.image === 'object' && /^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(e.image.src || '')
+      ? { src: text(String(e.image.src).replace(/\?utm_[^#]*$/, ''), 400), source: /^https:\/\//.test(e.image.source || '') ? text(e.image.source, 400) : '' } : null;
     entries.push({
       name, kind: text(e.kind, 40) || 'Entry', type: TYPES.includes(e.type) ? e.type : 'events', start, end,
       summary: text(e.summary, 400), wikipedia: text(e.wikipedia, 120), importance: Math.min(5, Math.max(1, Math.round(Number(e.importance)) || 3)),
@@ -124,4 +125,84 @@ export function specToView(raw, seed) {
     view: { description: spec.description, checkpoints, picked: true, made: 'ai', span: years.length ? [Math.min(...years), null] : null },
     entries, spec,
   };
+}
+
+// What can be drawn of a spec while the model is still writing it: the title and description once
+// they are written, and every chapter and entry whose object is closed. `text` is the JSON so far.
+export function partialSpec(text) {
+  const out = { title: '', description: '', chapters: [], entries: [] };
+  const field = (k) => {
+    const m = text.match(new RegExp('"' + k + '"\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"'));
+    if (!m) return '';
+    try { return JSON.parse('"' + m[1] + '"'); } catch (e) { return ''; }
+  };
+  out.title = field('title');
+  out.description = field('description');
+  for (const key of ['chapters', 'entries']) {
+    const at = text.search(new RegExp('"' + key + '"\\s*:\\s*\\['));
+    if (at < 0) continue;
+    let depth = 0, from = -1, inStr = false, esc = false;
+    for (let i = text.indexOf('[', at) + 1; i < text.length; i++) {
+      const ch = text[i];
+      if (inStr) { if (esc) esc = false; else if (ch === '\\') esc = true; else if (ch === '"') inStr = false; continue; }
+      if (ch === '"') inStr = true;
+      else if (ch === '{') { if (depth++ === 0) from = i; }
+      else if (ch === '}') { if (--depth === 0 && from >= 0) { try { out[key].push(JSON.parse(text.slice(from, i + 1))); } catch (e) { /* not yet whole */ } from = -1; } }
+      else if (ch === ']' && depth === 0) break;
+    }
+  }
+  return out;
+}
+
+// A free picture for each entry that names its Wikipedia article, written onto the entries (`image`).
+// First the article's own lead picture when it is free; then, for the many articles whose lead picture
+// is not (a logo, a product shot), the picture Wikidata keeps for the subject (P18, else its logo P154),
+// always a file on Wikimedia Commons. About three requests for a whole timeline. `get(host, query)`
+// answers one API request (the server and the page each pass their own). Returns how many it found.
+export async function findPictures(entries, get) {
+  const want = entries.filter((e) => !e.image && typeof e.wikipedia === 'string' && e.wikipedia.trim());
+  const titles = [...new Set(want.map((e) => e.wikipedia.trim()))].slice(0, 100);
+  const found = new Map(), item = new Map(), file = new Map();
+  for (let i = 0; i < titles.length; i += 50) {
+    try {
+      const d = await get('en.wikipedia.org', 'action=query&redirects=1&prop=pageimages%7Cpageprops&ppprop=wikibase_item&piprop=thumbnail%7Cname&pilicense=free&pithumbsize=500&pilimit=50&titles=' + encodeURIComponent(titles.slice(i, i + 50).join('|')));
+      const back = new Map();      // the title Wikipedia settled on -> the title asked for
+      for (const n of d.query?.normalized ?? []) back.set(n.to, n.from);
+      for (const n of d.query?.redirects ?? []) back.set(n.to, back.get(n.from) ?? n.from);
+      for (const p of Object.values(d.query?.pages ?? {})) {
+        const asked = back.get(p.title) ?? p.title;
+        if (p.thumbnail?.source) found.set(asked, { src: p.thumbnail.source, source: p.pageimage ? 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(p.pageimage) : '' });
+        else if (p.pageprops?.wikibase_item) item.set(asked, p.pageprops.wikibase_item);
+      }
+    } catch (e) { /* a timeline without pictures is still a timeline */ }
+  }
+  const ids = [...new Set(item.values())];
+  for (let i = 0; i < ids.length; i += 50) {
+    try {
+      const d = await get('www.wikidata.org', 'action=wbgetentities&props=claims&ids=' + ids.slice(i, i + 50).join('%7C'));
+      for (const [asked, q] of item) {
+        const c = d.entities?.[q]?.claims, name = c?.P18?.[0]?.mainsnak?.datavalue?.value ?? c?.P154?.[0]?.mainsnak?.datavalue?.value;
+        if (typeof name === 'string') file.set(asked, name);
+      }
+    } catch (e) { /* fine */ }
+  }
+  const names = [...new Set(file.values())];
+  for (let i = 0; i < names.length; i += 50) {
+    try {
+      const d = await get('commons.wikimedia.org', 'action=query&prop=imageinfo&iiprop=url&iiurlwidth=500&titles=' + encodeURIComponent(names.slice(i, i + 50).map((n) => 'File:' + n).join('|')));
+      const thumb = new Map(), back = new Map();
+      for (const n of d.query?.normalized ?? []) back.set(n.to, n.from);
+      for (const p of Object.values(d.query?.pages ?? {})) {
+        const u = p.imageinfo?.[0]?.thumburl;
+        if (u) { thumb.set(p.title, u); if (back.has(p.title)) thumb.set(back.get(p.title), u); }
+      }
+      for (const [asked, name] of file) {
+        const u = thumb.get('File:' + name) ?? thumb.get('File:' + name.replace(/_/g, ' '));
+        if (u) found.set(asked, { src: u, source: 'https://commons.wikimedia.org/wiki/File:' + encodeURIComponent(name.replace(/ /g, '_')) });
+      }
+    } catch (e) { /* fine */ }
+  }
+  let n = 0;
+  for (const e of want) { const hit = found.get(e.wikipedia.trim()); if (hit) { e.image = hit; n++; } }
+  return n;
 }

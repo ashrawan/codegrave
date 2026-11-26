@@ -12,8 +12,8 @@ repository into static files, exactly as before.
 - **New timeline**: say what it is about and a model writes it (see
   "Create with AI" below), or start from a private copy of the view on the
   road.
-- **Ask for a change** to a timeline made with AI, in the box under the
-  road: "add the women of jazz", "start in 1900". The toast offers Undo.
+- **Ask AI** for a change to a timeline made with AI, in the box at the
+  foot of the road: "add the women of jazz", "start in 1900". The toast offers Undo.
 - **Change it**: rename or delete it (the three dots on its row), add an
   entry ("Add to a timeline" in any entry's pane) or remove one ("Remove
   from this timeline", with Undo).
@@ -40,42 +40,72 @@ publishable one and is meant to be public.
 
 ## Create with AI
 
-The page sends `{ prompt, model, effort, current? }` and the reader's session to
-the Edge Function `ai-timeline` (`supabase/functions/ai-timeline/`). The
-function checks who is asking, counts the day's requests in `ai_requests`
-(20 a day per account by default), asks the model through OpenRouter for a
-**spec**, adds a free picture from Wikipedia to each entry that names its
-article, and sends the spec back. The page turns the spec into a view file
-(`specToView()` in `site/ai.js`) and stores it itself, so row level
-security still decides who writes what. The spec is stored beside the view
-file (`data.spec`), which is what "Ask for a change" sends back to the
-model.
+Everything happens on the server, in the Edge Function `ai-timeline`
+(`supabase/functions/ai-timeline/`), and the timeline is kept in the
+database from the first moment, so it is there on every device and is
+finished even when the tab is closed.
+
+1. The page stores an empty row for the timeline (`data.making`), goes to
+   the road at once and sends `{ prompt, model, effort, timeline, seed,
+   stream: true }` with the reader's session.
+2. The function checks who is asking and counts the day's requests in
+   `ai_requests` (20 a day per account by default).
+3. It reads up on the subject in Wikipedia (the best article whole, the
+   openings of three more), so recent facts come from today's Wikipedia
+   and not only from the model's memory.
+4. It asks the model through OpenRouter for a **spec** and streams the
+   answer to the page as it is written (`data: {"d": "..."}` lines; also
+   `{"note"}`, `{"r": 1}` while the model thinks, then `{"done"}` or
+   `{"error"}`). The page draws every entry whose JSON is closed
+   (`partialSpec()`), so the timeline grows on the road.
+5. It finds a free picture for each entry from its Wikipedia article, else
+   the picture Wikidata keeps for the subject (`findPictures()` in
+   `site/ai.js`; never a picture named by the model).
+6. It writes the view file (`specToView()`) into the row, only if the row
+   is the reader's own, and sends the spec back.
+
+If Wikimedia turned the server away, the page looks for the missing
+pictures once more from the reader's browser. The spec is stored beside the
+view file (`data.spec`), which is what "Ask AI" (the box at the foot of a
+timeline made this way) sends back to the model with the request.
+
+`site/ai.js` is used by both sides: in the repository
+`supabase/functions/ai-timeline/ai.js` is a link to it, and it is deployed
+as a file beside `index.ts`. Deploy the function again whenever it changes.
 
 A request can be anything that happens in time: a history, a company, a
 life, a subject to learn, a news story so far, or a plan dated ahead of
 today (a trip day by day, a course week by week). The function tells the
 model today's date for that.
 
-The model menu offers these, by their OpenRouter ids (`MODELS` in
-`site/ai.js`, and the same list as `OFFERED` in the function):
+The models are open ones, the cheapest and most used on OpenRouter's
+ranking (asked for, Nov 2026). Measured on a request with Wikipedia
+reading and effort Quick:
 
-| Name in the page | OpenRouter model | Shown |
-| --- | --- | --- |
-| DeepSeek V4.1 Flash | `deepseek/deepseek-v4.1-flash` | at once (the default) |
-| Claude Haiku 5.5 | `anthropic/claude-haiku-5.5` | at once |
-| GPT-6 Luna | `openai/gpt-6-luna` | at once |
-| Claude Sonnet 5.5 | `anthropic/claude-sonnet-5.5` | under "More models" |
-| GPT-6.1 Terra | `openai/gpt-6.1-terra` | under "More models" |
-| DeepSeek V4 Pro | `deepseek/deepseek-v4-pro` | under "More models" |
+| Name in the page | OpenRouter model | Shown | Time | Price per million tokens, in / out |
+| --- | --- | --- | --- | --- |
+| DeepSeek V4.1 Flash | `deepseek/deepseek-v4.1-flash` | at once (the default) | 11 s | $0.14 / $0.42 |
+| MiniMax M3.1 Flash | `minimax/minimax-m3.1-flash` | at once | 16 s | $0.15 / $0.60 |
+| GLM 5.3 Flash | `z-ai/glm-5.3-flash` | at once | 27 s | $0.15 / $0.50 |
+| Qwen3.8 Flash | `qwen/qwen3.8-flash` | under "More models" | 42 s | $0.15 / $0.47 |
+| Hy4 Flash | `tencent/hy4-flash` | under "More models" | 39 s | $0.035 / $0.14 |
 
-Effort (Quick, Balanced, Thorough) is sent as OpenRouter's
-`reasoning.effort` (low, medium, high).
+Effort (Quick, Balanced, Thorough) is OpenRouter's reasoning: Quick
+switches thinking off (`reasoning.enabled: false`) and is the default,
+because thinking made a timeline take a minute or more; Balanced and
+Thorough are `effort` low and high. GLM and MiniMax cannot switch thinking
+off, so for them Quick is sent again as low.
+
+None of these models searches the web by itself. The Wikipedia reading
+covers most requests for free. OpenRouter's web search tool can be turned
+on with the secret `AI_WEB=1`; it is paid per search (about half a cent a
+request plus the results) and was not tested with the stream.
 
 Secrets of the function (Supabase → Edge Functions → Secrets):
 `OPENROUTER_API_KEY` (required; without it the page says Create with AI is
 not switched on yet), `AI_MODELS` (optional: more OpenRouter ids to allow,
 separated by commas; `*` allows any id, for the day the page lists
-everything OpenRouter has) and `AI_DAILY` (optional). Spending is capped
+everything OpenRouter has), `AI_DAILY` (optional) and `AI_WEB` (optional). Spending is capped
 twice: by the credit limit set on the OpenRouter key itself, and by
 `AI_DAILY` requests per account a day. A cap per person inside OpenRouter
 would need one key per account (OpenRouter's key-provisioning API); that

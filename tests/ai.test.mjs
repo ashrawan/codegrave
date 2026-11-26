@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, cleanDate, cleanSpec, specToView, yearOfDate, slug } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -68,10 +68,31 @@ test('a spec becomes a view file the page can draw', () => {
   assert.notEqual(specToView(f.spec, 'zzz').entries[0].id, a.id);
 });
 
+test('pictures from Wikimedia thumbnails are kept, others are not', () => {
+  const pic = (src) => specToView({ entries: [{ name: 'A', start: '1960', image: { src } }] }, 's').entries[0].image?.src;
+  // Wikimedia serves thumbnails from thumb.wikimedia.org since 2026, with a tracking query that is dropped.
+  assert.equal(pic('https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/A.jpg/500px-A.jpg?utm_source=en.wikipedia.org&utm_campaign=api'), 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/A.jpg/500px-A.jpg');
+  assert.equal(pic('https://upload.wikimedia.org/wikipedia/commons/4/43/B.jpg'), 'https://upload.wikimedia.org/wikipedia/commons/4/43/B.jpg');
+  assert.equal(pic('https://example.com/c.jpg'), undefined);
+});
+
 test('names make ids, and there are three models to pick from', () => {
   assert.equal(slug('  Café  Müller! '), 'cafe-muller');
   assert.equal(slug('???'), 'entry');
   assert.ok(MODELS.length >= 3 && MODELS.every((m) => /^[a-z0-9-]+\/[a-z0-9.-]+$/.test(m.id) && m.name && m.note));
   assert.ok(!MODELS[0].more, 'the first model is offered at once');
   assert.equal(new Set(MODELS.map((m) => m.id)).size, MODELS.length);
+});
+
+test('partialSpec reads what is whole of a spec still being written', () => {
+  const full = JSON.stringify({ title: 'Jazz "now"', description: 'From New Orleans.', chapters: [{ name: 'Early', from: 1900, to: 1930, note: 'a {brace}' }], entries: [{ name: 'Louis Armstrong', start: '1901', summary: 'He said "hi" }' }, { name: 'Kind of Blue', start: '1959' }] });
+  const cut = full.slice(0, full.indexOf('Kind of Blue') + 6);
+  const p = partialSpec(cut);
+  assert.equal(p.title, 'Jazz "now"');
+  assert.equal(p.description, 'From New Orleans.');
+  assert.equal(p.chapters.length, 1);
+  assert.deepEqual(p.entries.map((e) => e.name), ['Louis Armstrong']);
+  assert.equal(partialSpec(full).entries.length, 2);
+  assert.deepEqual(partialSpec('').entries, []);
+  assert.equal(EFFORTS[0].id, 'none');
 });
