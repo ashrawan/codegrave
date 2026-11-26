@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -111,4 +111,43 @@ test('a plan may be dated by the day and the hour, and its chapters by full date
   const f = specToView(s, 'p');
   assert.equal(f.entries[0].events[0].precision, 'minute');
   assert.ok(Math.abs(parseDate('2027-04-05T12:00') - parseDate('2027-04-05') - 0.5 / 365) < 1e-9);
+});
+
+test('readDate reads dates as people type them, and showDate writes them back', () => {
+  const pairs = [['20 Jul 1969', '1969-07-20'], ['July 1969', '1969-07'], ['Jul 20, 1969', '1969-07-20'], ['44 BCE', '-0044'],
+    ['Sat 3 Apr 2027, 09:30', '2027-04-03T09:30'], ['1969-07-20', '1969-07-20'], ['2027', '2027'], ['30 Feb 2026', ''], ['soon', ''], ['', '']];
+  for (const [typed, iso] of pairs) assert.equal(readDate(typed), iso, typed);
+  assert.equal(showDate('1969-07-20'), '20 Jul 1969');
+  assert.equal(showDate('2027-04-03T09:30'), '3 Apr 2027, 09:30');
+  assert.equal(showDate('-0044'), '44 BCE');
+  assert.equal(showDate(-44), '44 BCE');
+  for (const iso of ['1969', '1969-07', '1969-07-20', '2027-04-03T09:30', '-0044']) assert.equal(readDate(showDate(iso)), iso, iso);
+});
+
+test('readBound takes whole years or full dates for a chapter', () => {
+  assert.equal(readBound('1969'), 1969);
+  assert.equal(readBound('44 BCE'), -44);
+  assert.equal(readBound('27 Nov 2026'), '2026-11-27');
+  assert.equal(readBound('Nov 2026'), null);
+  assert.equal(readBound('later'), null);
+});
+
+test('chapterOf puts each entry in the chapter it starts in', () => {
+  const spec = cleanSpec({ chapters: [{ name: 'Week 1', from: '2026-11-27', to: '2026-12-03' }, { name: 'Week 2', from: '2026-12-04', to: '2026-12-10' }],
+    entries: [{ name: 'A', start: '2026-11-27' }, { name: 'B', start: '2026-12-03T18:00' }, { name: 'C', start: '2026-12-04' }, { name: 'D', start: '2027-01-01' }] });
+  assert.deepEqual(chapterOf(spec), [0, 0, 1, -1]);
+  const years = cleanSpec({ chapters: [{ name: 'Sixties', from: 1960, to: 1969 }], entries: [{ name: 'A', start: '1969-12-31' }, { name: 'B', start: '1970' }] });
+  assert.deepEqual(chapterOf(years), [0, -1]);
+});
+
+test('specProblem says why an edit cannot be kept', () => {
+  const ok = { entries: [{ name: 'A', start: '1969' }], chapters: [{ name: 'One', from: 1960, to: 1969 }] };
+  assert.equal(specProblem(ok), '');
+  assert.match(specProblem({ entries: [] }), /at least one/);
+  assert.match(specProblem({ entries: [{ name: '', start: '1969' }] }), /needs a name/);
+  assert.match(specProblem({ entries: [{ name: 'A', start: '1969' }, { name: 'a', start: '1970' }] }), /Two entries/);
+  assert.match(specProblem({ entries: [{ name: 'A', start: 'soon' }] }), /needs the date/);
+  assert.match(specProblem({ entries: [{ name: 'A', start: '1970', end: '1969' }] }), /ends before/);
+  assert.match(specProblem({ ...ok, chapters: [{ name: 'One', from: 1960, to: '1969-01-01' }] }), /same at both ends/);
+  assert.match(specProblem({ ...ok, chapters: [{ name: 'One', from: 1960, to: 1969 }, { name: 'Two', from: 1969, to: 1975 }] }), /overlap/);
 });

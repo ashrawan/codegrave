@@ -9,6 +9,7 @@ import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf, addressOf, idOfAddress } from './keys.js';
 import { createWall } from './wall.js';
 import { createAccount } from './account.js';
+import { createViewer } from './picture.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
@@ -671,7 +672,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       tMax = clamp(lineYear(state.span[1]) + 1, tMin + minGap, fitMax);
       if (tMax >= NOW_YEAR && fitMax <= NOW) tMax = Math.min(tMax, NOW);
     }
-    const inSpan = (t) => (t.lead ?? t.born) < tMax && (t.end ?? NOW) >= tMin;
+    // A step of a plan with no end that starts after today still stands where it starts.
+    const inSpan = (t) => (t.lead ?? t.born) < tMax && Math.max(t.end ?? NOW, t.born) >= tMin;
     return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
   }
   // ---------------------------------------------------------------- render
@@ -966,6 +968,17 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     for (const m of t.media || []) add(m);
     for (const e of t.events || []) add(e.image);
     return (t.wm = out);
+  }
+  // Every picture and film of an entry, for the full view: its own, its list, its events'.
+  function picturesOf(t) {
+    const out = [], add = (m, caption) => {
+      if (!m || !m.src || out.some((x) => x.src === mediaUrl(m.src))) return;
+      out.push({ type: m.type === 'video' ? 'video' : 'image', ...m, caption: m.caption || caption || '', src: mediaUrl(m.src), poster: m.poster ? mediaUrl(m.poster) : '' });
+    };
+    add(t.image);
+    for (const m of t.media || []) add(m);
+    for (const e of t.events || []) add(e.image, e.label);
+    return out;
   }
   // One name on the road, in one of its forms. It is made when first shown and removed once it has faded.
   function roadNode(nk, p, end, mode) {
@@ -1988,9 +2001,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // ---------------------------------------------------------------- panel: history of one entry
   // A link to another entry: its name travels with the link, so it shows before that entry is loaded.
   function thingButton(id, name) { return `<button type="button" class="tlink" data-id="${esc(id)}">${esc(byId.get(id)?.name || name || id)}</button>`; }
+  // A picture in the panel opens in full over the page (site/picture.js).
   function figure(m, cls) {
     if (!m) return '';
-    return `<figure class="${cls}"><img src="${esc(mediaUrl(m.src))}" alt="${esc(m.alt)}" loading="lazy"><figcaption>${m.caption ? esc(m.caption) + ' ' : ''}<a href="${esc(m.source)}" target="_blank" rel="noopener">${esc(m.credit)}</a> · ${esc(m.licence)}</figcaption></figure>`;
+    return `<figure class="${cls}"><button type="button" class="pv-open" data-pv="${esc(mediaUrl(m.src))}" aria-label="View the picture in full"><img src="${esc(mediaUrl(m.src))}" alt="${esc(m.alt)}" loading="lazy"><span>View full</span></button><figcaption>${m.caption ? esc(m.caption) + ' ' : ''}<a href="${esc(m.source)}" target="_blank" rel="noopener">${esc(m.credit)}</a> · ${esc(m.licence)}</figcaption></figure>`;
   }
 
   // The way back: Timeline / an era / an entry / another entry. Opening something
@@ -2025,6 +2039,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
 
   function openThing(id, opts = {}) {
+    // While the editor is open, a card clicked on the road opens its row there.
+    if (account.editing() && account.editEntry(id)) return;
     const t = byId.get(id);
     // An entry not loaded yet (a link in the panel): fetch its detail file first.
     if (!t) { loadEntry(id).then((got) => { if (got) openThing(id, opts); }); return; }
@@ -2337,6 +2353,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     document.addEventListener('click', (e) => {
       const el = (sel) => e.target.closest(sel);
       if (el('[data-hide-side]')) return showSide(false);
+      const pv = el('[data-pv]');
+      if (pv) { const t = byId.get(state.open), list = t ? picturesOf(t) : []; return viewer.open(t?.name || '', list, Math.max(0, list.findIndex((m) => m.src === pv.dataset.pv))); }
       const crumb = el('[data-crumb]');
       if (crumb) return goCrumb(Number(crumb.dataset.crumb));
       if (el('[data-info-close]')) { $('info').hidden = true; $('info-btn').setAttribute('aria-expanded', false); return; }
@@ -2707,9 +2725,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     followHash(false);     // otherwise the road opens where roadOpening() says
   }
   // Accounts and the reader's own timelines (account.js): the bar on the left. It borrows these from the page.
+  const viewer = createViewer(esc);
   const account = createAccount({
     $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => { account.explore(false); return showOnly(id); },
     open: (id) => { if (L) roadToView(id); },
+    // The editor: the road travels to the entry being edited, so its card stands open a little ahead.
+    goTo: (id) => { const p = L && L.at.get(id); if (p) roadTo(clamp(p.a - 0.3 * L.D * camDir(), L.tMin, L.tMax)); },
+    relayout: () => { showSide(false); if (state.views.length) render(); },
     listChanged: () => runSearch(),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),

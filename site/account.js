@@ -7,6 +7,7 @@
    /t/<id>, or /<username>/<slug> once it is public. */
 import { shardOf } from './keys.js';
 import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js';
+import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
 export const CONFIG = {
@@ -186,6 +187,7 @@ export function createAccount(app) {
     Object.assign(row, got[0]);
     if (body.data) row.text = JSON.stringify(body.data);
     app.replace(payloadOf(row));
+    if (editor.row() === row) editor.reload();
     await refreshList();
   }
   async function ensureRow(uuid) { if (!rows.has(uuid)) await fetchView('t/' + uuid); return rows.get(uuid); }
@@ -211,6 +213,19 @@ export function createAccount(app) {
     toast('Removed from this timeline.', { undo: () => addEntryBack(row, entryId) });
   }
   async function addEntryBack(row, entryId) { try { await addEntry(row.id, entryId); } catch (e) { toast(e.message); } }
+
+  // "Open in editor": the timeline as rows, the road live beside it (site/editor.js).
+  const editor = createEditor({
+    $, esc, phone: () => matchMedia(PHONE).matches, toast: (t, o) => toast(t, o), popover: (a, h, c) => popover(a, h, c), closeLayer: () => closeLayer(),
+    async write(row, body) {
+      let got;
+      try { got = await api(`/rest/v1/timelines?id=eq.${row.id}&select=id,visibility,entries,updated_at`, { method: 'PATCH', headers: { Prefer: 'return=representation' }, body }); } catch (e) { throw e.code === '23514' ? new Error('That timeline is too large to keep.') : e; }
+      if (!got[0]) throw new Error('That timeline is no longer there.');
+      Object.assign(row, got[0]);
+    },
+    show: (row) => app.replace(payloadOf(row)), goTo: (id) => app.goTo(id), relayout: () => app.relayout(),
+    publish: (anchor) => publish(anchor), listChanged: () => refreshList().catch(() => {}),
+  });
 
   // ---- small pieces of interface
   let toastTimer = null;
@@ -645,7 +660,9 @@ export function createAccount(app) {
       ? `<button type="button" class="nv who" id="sb-me" aria-haspopup="menu"><i class="av">${esc(shown()[0].toUpperCase())}</i><span class="lbl"><b>${esc(shown())}</b><small>Free plan</small></span><span class="lbl chev">${ICON.chev}</span></button>`
       : `<button type="button" class="big" id="sb-in" title="Sign in">${ICON.login}<span class="lbl">Sign in</span></button>`;
     // Beside the search: what this timeline is, and the way to publish it.
-    $('tl-state').innerHTML = cur ? `<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
+    if (editor.isOpen() && editor.row() !== cur) editor.close();
+    const editable = !!cur && !working && cur.text.includes('"spec":{');
+    $('tl-state').innerHTML = cur ? `${editable ? '<button type="button" class="ebtn" id="ed-open">Open in editor</button>' : ''}<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
     document.body.classList.toggle('mine', !!cur);
     const canAsk = !!cur && cur.text.includes('"spec":{');
     if ($('ask').hidden === canAsk) {
@@ -694,6 +711,7 @@ export function createAccount(app) {
       if (el('[data-sb-home]')) return explore(false);
       if (el('#sb-in')) return signIn();
       if (el('#publish')) return publish(el('#publish'));
+      if (el('#ed-open')) { const r = current(); if (r && !editor.open(r)) toast('This timeline cannot be opened in the editor.'); return undefined; }
       const open = el('[data-open]');
       if (open) { if (phone()) setOpen(false); return app.show('t/' + open.dataset.open); }
       const more = el('[data-more]');
@@ -751,5 +769,5 @@ export function createAccount(app) {
     } catch (e) { if (e.status === 401 || e.status === 403) signedOut(); }
   }
 
-  return { boot, start, explore, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session };
+  return { boot, start, explore, published: () => people, payload: (id) => { const r = rowOf(id); return r ? payloadOf(r) : null; }, sync: () => draw(false), fetchView, addressOf, isMine, entryActions, signedIn: () => !!session, editing: () => editor.isOpen(), editEntry: (id) => editor.openById(id) };
 }

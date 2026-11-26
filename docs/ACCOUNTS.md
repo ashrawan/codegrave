@@ -113,6 +113,31 @@ would need one key per account (OpenRouter's key-provisioning API); that
 is not built. Entries made this way are not reviewed: they are marked
 unverified and carry a link to their Wikipedia article as the source.
 
+## Open in editor
+
+A timeline made with AI can also be changed by hand. "Open in editor",
+beside Publish, swaps the road for one page (asked for, Nov 2026: one page,
+no tabs): the title and description typed in place, then every entry as a
+row under its chapter (picture, name, kind, starts, ends, weight). A click
+opens a row in place for its summary and Wikipedia article; Enter or a
+click elsewhere keeps it. A chapter is a heading that can be renamed, given
+other dates or deleted (its entries stay). The road stays live on the right
+and travels to the row being edited; a card clicked there opens its row.
+On a phone the list fills the screen and an entry opens as a sheet with the
+road above it.
+
+The editor changes the spec, the same file Ask AI rewrites, and turns it
+into the view file with `specToView()` after every change
+(`site/editor.js`), so the road, Ask AI and the export read one thing.
+Dates are typed as people write them ("20 Jul 1969", "44 BCE",
+"3 Apr 2027, 09:30"; `readDate()` and `showDate()` in `site/ai.js`). An
+edit that `cleanSpec()` would quietly drop (a date it cannot read, two
+entries of one name, chapters that overlap) is refused with the reason
+(`specProblem()`). Every change is kept by itself 0.7 s after the last one,
+and Undo and Redo (also Ctrl+Z and Ctrl+Shift+Z outside a field) step
+through the session's changes. A timeline without a spec (a copy of a view)
+is not offered the editor.
+
 ## Setting up sign-in (once, in the Supabase dashboard)
 
 1. **Authentication → URL Configuration**: set the Site URL to

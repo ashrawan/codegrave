@@ -219,3 +219,91 @@ export async function findPictures(entries, get) {
   for (const e of want) { const hit = found.get(e.wikipedia.trim()); if (hit) { e.image = hit; n++; } }
   return n;
 }
+
+// ---- the editor ("Open in editor"): reading and writing dates as people type them, and saying why an
+// edit cannot be kept. cleanSpec() drops what it cannot read without a word; the editor asks first.
+const MON = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const MONTH_NAMES = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+// A date as it is typed ("20 Jul 1969", "July 1969", "44 BCE", "Sat 3 Apr 2027, 09:30", "1969-07-20") as
+// the spec keeps it ("1969-07-20"), or '' when it is not one.
+export function readDate(v) {
+  const s = text(v, 40);
+  if (!s) return '';
+  const iso = cleanDate(s);
+  if (iso) return iso;
+  let t = ' ' + s.toLowerCase().replace(/[,.]/g, ' ').replace(/\b(mon|tue|wed|thu|fri|sat|sun)[a-z]*\b/g, ' ') + ' ';
+  let time = '', neg = false, mo = 0;
+  t = t.replace(/\b(\d{1,2}):(\d{2})\b/, (_, h, m) => { time = h.padStart(2, '0') + ':' + m; return ' '; });
+  t = t.replace(/\b(bce|bc)\b/, () => { neg = true; return ' '; }).replace(/\b(ce|ad)\b/, ' ');
+  t = t.replace(/\b([a-z]{3,9})\b/, (w) => {
+    const i = MONTH_NAMES.findIndex((n) => n.startsWith(w) && w.length >= 3);
+    if (i < 0) return w;
+    mo = i + 1; return ' ';
+  });
+  if (/[a-z]/.test(t)) return '';
+  const nums = t.trim().split(/\s+/).filter(Boolean).map(Number);
+  if (!nums.length || nums.length > 2 || nums.some((n) => !Number.isInteger(n))) return '';
+  let y = nums[nums.length - 1], d = 0;
+  if (nums.length === 2) {
+    if (!mo) return '';
+    [d, y] = nums[0] > 31 ? [nums[1], nums[0]] : nums;
+  }
+  if (!mo && (d || time)) return '';
+  let out = (neg ? '-' : '') + String(y).padStart(4, '0');
+  if (mo) out += '-' + String(mo).padStart(2, '0') + (d ? '-' + String(d).padStart(2, '0') + (time ? 'T' + time : '') : '');
+  return cleanDate(out);
+}
+// A date of the spec as people read it: "1969", "Jul 1969", "20 Jul 1969", "3 Apr 2027, 09:30", "44 BCE".
+export function showDate(v) {
+  const m = /^(-?)(\d+)(?:-(\d\d))?(?:-(\d\d))?(?:T(\d\d:\d\d))?$/.exec(typeof v === 'number' ? (v < 0 ? '-' + -v : String(v)) : v || '');
+  if (!m) return '';
+  const y = Number(m[2]) + (m[1] ? ' BCE' : '');
+  if (!m[3]) return y;
+  return (m[4] ? Number(m[4]) + ' ' : '') + MON[Number(m[3]) - 1] + ' ' + y + (m[5] ? ', ' + m[5] : '');
+}
+// A chapter's end as typed: a whole year (a number) or a full date (text), else null.
+export function readBound(v) {
+  const d = readDate(v);
+  if (!d) return null;
+  const parts = d.replace(/^-/, '').split('T')[0].split('-');
+  return parts.length === 1 ? yearOfDate(d) : parts.length === 3 ? d.split('T')[0] : null;
+}
+// Which chapter each entry of a clean spec falls in (its index, or -1 for none), by when it starts.
+export function chapterOf(spec) {
+  return spec.entries.map((e) => spec.chapters.findIndex((c) => (typeof c.from === 'number'
+    ? yearOfDate(e.start) >= c.from && yearOfDate(e.start) <= c.to
+    : order(e.start) >= order(c.from) && order(e.start) < order(c.to) + 1 / 372)));
+}
+// Why a spec the editor was handed cannot be kept as it is, in words; '' when it can.
+export function specProblem(raw) {
+  const s = raw && typeof raw === 'object' ? raw : {};
+  const es = Array.isArray(s.entries) ? s.entries : [], cs = Array.isArray(s.chapters) ? s.chapters : [];
+  if (!es.length) return 'A timeline keeps at least one entry.';
+  if (es.length > MAX_ENTRIES) return `A timeline holds at most ${MAX_ENTRIES} entries.`;
+  const seen = new Set();
+  for (const e of es) {
+    const name = text(e?.name, 90);
+    if (!name) return 'Every entry needs a name.';
+    if (seen.has(name.toLowerCase())) return `Two entries are called “${name}”. Give one another name.`;
+    seen.add(name.toLowerCase());
+    const a = cleanDate(e.start), b = cleanDate(e.end);
+    if (!a) return `“${name}” needs the date it starts, such as 1969, Jul 1969 or 20 Jul 1969.`;
+    if (e.end && !b) return `When “${name}” ends is not a date the timeline can read.`;
+    if (b && order(b) < order(a)) return `“${name}” ends before it starts.`;
+  }
+  if (cs.length > 12) return 'A timeline holds at most 12 chapters.';
+  const ok = [];
+  for (const c of cs) {
+    const name = text(c?.name, 60), from = bound(c?.from), to = bound(c?.to);
+    if (!name) return 'Every chapter needs a name.';
+    if (from == null || to == null || typeof from !== typeof to) return `The chapter “${name}” starts and ends on a year (1969) or on a full date (20 Jul 1969), the same at both ends.`;
+    if (at(to) < at(from)) return `The chapter “${name}” ends before it starts.`;
+    ok.push({ name, from, to });
+  }
+  ok.sort((x, y) => at(x.from) - at(y.from));
+  for (let i = 1; i < ok.length; i++) {
+    const last = ok[i - 1], c = ok[i];
+    if (typeof last.to === 'number' ? at(c.from) <= last.to : at(c.from) < at(last.to)) return `The chapters “${last.name}” and “${c.name}” overlap.`;
+  }
+  return '';
+}

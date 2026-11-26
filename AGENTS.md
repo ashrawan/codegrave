@@ -52,6 +52,8 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | What search engines and link previews read (title, description, Open Graph, `robots.txt`, the sitemap) | The `page meta` block in `site/index.html`, `site/robots.txt`, `writePages()` in `scripts/build.mjs` | `site/_redirects`, `site/sitemap.xml` (generated) |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
 | The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
+| Open in editor (a timeline of one's own as rows, the road live beside it) | `site/editor.js`, `site/editor.css`; the date reading and checks in `site/ai.js`, then `tests/ai.test.mjs` and `docs/ACCOUNTS.md` | |
+| The full picture (a picture in the panel opened over the page) | `site/picture.js`, its styles at the end of `site/styles.css` | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
@@ -499,6 +501,20 @@ How the page is put together:
   above it). While play travels, what floats at the top (the phone's menu
   button, Publish) slides away (`body.playing`); pointing at the top edge
   brings it back (`body.peek`), and it returns when play stops.
+- **Open in editor** (`site/editor.js`, `docs/ACCOUNTS.md`; option 2 of
+  the designs, asked for in Nov 2026 with "no multiple tabs"): beside
+  Publish on a timeline of the reader's own made with AI. One page over the
+  left of the road (`#editor`, `body.editing`): the title and description
+  typed in place, every entry a row under its chapter, a row opening in
+  place; the road narrows to `--edroad` on the right and travels to the row
+  being edited (`goTo` lent by the page). It edits the spec and redraws
+  through `specToView()`; it saves by itself, with Undo and Redo. On a
+  phone an entry opens as a sheet with the road above it (`body.ed-sheet`).
+- **The full picture** (`site/picture.js`; asked for, Nov 2026): a picture
+  in the panel shows "View full" and opens over the whole page, whole,
+  with its caption, credit, licence and the original, stepping through the
+  entry's pictures and films (arrows, keys, the strip, a swipe). A click
+  shows the picture at its own size; the page itself never zooms.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or
   landscape. A wall frame takes the shape of its picture (`fit()` in
