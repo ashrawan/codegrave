@@ -141,21 +141,21 @@ body.ai-busy .cr-ideas, body.ai-busy .cr-list { visibility: hidden; }
 .pop.models .dlg-fine { margin: 8px 10px 6px; text-align: left; }
 
 /* Ask for a change: one box under the road, for a timeline made with AI. */
-#ask { position: fixed; left: calc(var(--sb) + (100vw - var(--sb) - var(--bar)) / 2); bottom: 43px; z-index: 19; width: min(560px, calc(100vw - var(--sb) - var(--bar) - 32px)); transform: translateX(-50%); }
+#ask { position: fixed; left: calc(var(--sb) + (100vw - var(--sb) - var(--bar)) / 2); bottom: 56px; z-index: 19; width: min(560px, calc(100vw - var(--sb) - var(--bar) - 32px)); transform: translateX(-50%); }
 #ask[hidden], body.playing #ask, body.exploring #ask, body.creating #ask { display: none; }
 body.side-open #ask { left: calc(var(--sb) + (100vw - var(--sb) - var(--bar) - var(--side)) / 2); width: min(560px, calc(100vw - var(--sb) - var(--bar) - var(--side) - 32px)); }
 /* The box rises out of the strip at the foot, in its colour and with its edge, and meets it in two soft
    shoulders, so the two read as one piece (asked for, Nov 2026: "resting on the footer... not behind"). */
-.ask-box { position: relative; display: flex; align-items: flex-end; gap: 8px; padding: 10px 8px 10px 18px; background: var(--surf); border: 1px solid var(--rule); border-bottom: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -12px 28px rgba(0, 0, 0, .25); }
-.ask-box::before, .ask-box::after { content: ''; position: absolute; bottom: 0; width: 16px; height: 16px; pointer-events: none; }
-.ask-box::before { left: -17px; background: radial-gradient(circle at 0 0, transparent 15px, var(--rule) 15px, var(--rule) 16px, var(--surf) 16.5px); }
-.ask-box::after { right: -17px; background: radial-gradient(circle at 100% 0, transparent 15px, var(--rule) 15px, var(--rule) 16px, var(--surf) 16.5px); }
+/* Ask AI (design B, Nov 2026): a lit pill standing just above the footer, clear of it. */
+.ask-box { position: relative; display: flex; align-items: center; gap: 8px; min-height: 50px; padding: 7px 8px 7px 16px; background: var(--surf); border: 1px solid color-mix(in srgb, var(--acc) 45%, transparent); border-radius: 25px; box-shadow: 0 10px 30px rgba(0, 0, 0, .3), 0 0 22px color-mix(in srgb, var(--acc) 14%, transparent); }
+.ask-box:focus-within { border-color: color-mix(in srgb, var(--acc) 75%, transparent); }
+.ask-spark { flex: none; color: var(--acc); font-size: 15px; line-height: 1; }
 .ask-box:hover, .ask-box:focus-within, body.ai-busy .ask-box { opacity: 1; }
-.ask-box textarea { flex: 1; min-width: 0; height: 44px; padding: 3px 0 0; resize: none; font: inherit; font-size: 14.5px; line-height: 1.45; color: var(--text); background: transparent; border: 0; outline: 0; }
+.ask-box textarea { flex: 1; min-width: 0; height: auto; min-height: 22px; max-height: 88px; field-sizing: content; padding: 0; resize: none; font: inherit; font-size: 14.5px; line-height: 1.45; color: var(--text); background: transparent; border: 0; outline: 0; }
 .ask-box .cr-model, .ask-box .cr-go { flex: none; }
 #ask .cr-status { margin: 0 0 8px; text-align: center; text-shadow: 0 1px 8px var(--bg); }
 #ask .cr-status:empty { display: none; }
-body:has(#ask:not([hidden])) #toast { bottom: 140px; }
+body:has(#ask:not([hidden])) #toast { bottom: 124px; }
 /* While a timeline is being made: one line over the road, saying how far it has come. */
 /* While a timeline is made: its steps at the horizon in the middle of the road, and a bar along the top edge of the strip at the foot. */
 #ai-live { position: fixed; left: calc(var(--sb) + (100vw - var(--sb) - var(--bar)) / 2); top: 30%; z-index: 19; transform: translateX(-50%); padding: 16px 22px 14px; color: var(--text); background: color-mix(in srgb, var(--surf) 82%, transparent); border: 1px solid var(--rule2); border-radius: 16px; box-shadow: 0 18px 50px rgba(0, 0, 0, .4); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); pointer-events: none; }
@@ -219,6 +219,8 @@ body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
 #tl-state .st { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); white-space: nowrap; }
 #tl-state .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--faint); }
 #tl-state .dot.live { background: #8fcdb2; }
+#tl-state .ebtn .narrow { display: none; }
+@media (max-width: 699px) { #tl-state .ebtn .narrow { display: inline; } }
 .pbtn { height: 34px; padding: 0 14px; font-size: 13.5px; font-weight: 600; color: var(--bg); background: var(--text); border: 0; border-radius: 17px; }
 .pbtn:hover { opacity: .9; }
 
@@ -339,14 +341,14 @@ html, body { touch-action: pan-x pan-y; }
   .card .meta .fx { display: none; }
   .cr-in { padding: 24px 16px 64px; }
   .cr-in h1 { font-size: 38px; }
-  #ask { left: 16px; right: calc(var(--bar) + 16px); bottom: 43px; width: auto; transform: none; }
+  #ask { left: 12px; right: calc(var(--bar) + 12px); bottom: 52px; width: auto; transform: none; }
   #ai-live { left: calc((100vw - var(--bar)) / 2); top: 26%; }
   #ai-bar { left: 0; }
   body.side-open #ai-live { left: calc((100vw - var(--bar)) / 2); }
   body.side-open #ai-bar { right: 0; bottom: var(--sheet); }
   body.side-open #ask { display: none; }
   #ask .cr-model span { display: none; }
-  body:has(#ask:not([hidden])) #filters { bottom: 126px; }
+  body:has(#ask:not([hidden])) #filters { bottom: 114px; }
   #filters { right: calc(var(--bar) + 8px); bottom: 52px; }
   body.side-open #filters { right: calc(var(--bar) + 8px); bottom: calc(var(--sheet) + 8px); }
   .yr-pop { width: min(290px, calc(100vw - var(--bar) - 24px)); }
@@ -354,6 +356,7 @@ html, body { touch-action: pan-x pan-y; }
   #sb-scrim { position: fixed; inset: 0; z-index: 31; background: rgba(5, 7, 12, .6); opacity: 0; pointer-events: none; transition: opacity .22s; }
   body.sb-open #sb-scrim { opacity: 1; pointer-events: auto; }
   #tl-state .st { display: none; }
+  #tl-state .ebtn .wide { display: none; }
   .modal .dlg { padding: 32px 22px 24px; }
   .nv { min-height: 44px; }
 }

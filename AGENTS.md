@@ -371,10 +371,10 @@ How the page is put together:
   the function always streams and refuses a model it does not offer.
   `specToView()` in `site/ai.js` turns a spec into a view file, stored
   with the spec beside it. For such a timeline of the reader's own, "Ask
-  AI" is a box of two rows attached to the strip at the foot of the road
-  (`#ask`, asked for in those words), in the strip's own colour and edge,
-  rising out of it with two soft shoulders (asked for: "resting on the
-  footer... not behind"): the model gets the spec and the
+  AI" is a lit, one-line pill standing just above the strip at the foot
+  of the road (`#ask`; design B of four, asked for in Nov 2026 with "that
+  should be above that footer"), growing to a few lines as it is typed
+  into: the model gets the spec and the
   request and writes the whole spec again; the toast says what changed and
   offers Undo. A timeline the reader keeps shows only its own pictures on
   the walls, never the eras' stand-ins (`L.own`). An entry made this way names its kind in

@@ -685,12 +685,12 @@ export function createAccount(app) {
     // Beside the search: what this timeline is, and the way to publish it.
     if (editor.isOpen() && editor.row() !== cur) editor.close();
     const editable = !!cur && !working && cur.text.includes('"spec":{');
-    $('tl-state').innerHTML = cur ? `${editable ? '<button type="button" class="ebtn" id="ed-open">Open in editor</button>' : ''}<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
+    $('tl-state').innerHTML = cur ? `${editable ? '<button type="button" class="ebtn" id="ed-open"><span class="wide">Open in editor</span><span class="narrow">Edit</span></button>' : ''}<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
     document.body.classList.toggle('mine', !!cur);
     const canAsk = !!cur && cur.text.includes('"spec":{');
     if ($('ask').hidden === canAsk) {
       $('ask').hidden = !canAsk;
-      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><textarea id="ask-q" rows="2" maxlength="600" placeholder="Ask AI" aria-label="Ask AI to change this timeline"></textarea>${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Send" title="Send">${SEND}</button></div>` : '';
+      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><span class="ask-spark" aria-hidden="true">✦</span><textarea id="ask-q" rows="1" maxlength="600" placeholder="Ask AI for a change…" aria-label="Ask AI to change this timeline"></textarea>${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Send" title="Send">${SEND}</button></div>` : '';
     }
   }
   // The buttons the entry pane shows for a signed-in reader.
