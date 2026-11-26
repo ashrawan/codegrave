@@ -11,7 +11,7 @@ import { createWall } from './wall.js';
 import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
-import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
+import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
   'use strict';
@@ -781,6 +781,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // The reader can travel to just short of the end they face, close enough that the last starts stand open in
   // front of them (inWindow: more than CLOSE_AT ahead), with the dotted run-out beyond (RUN_OUT, asked for, Nov 2026).
   const RUN_OUT = 1.2;                         // focal lengths of dotted road drawn past the end
+  const PASSED = 0.05;                         // focal lengths behind the reader at which the selected card is passed
   function camLimits() {
     const m = 0.22 * L.D;
     return camDir() > 0 ? [L.tMin, Math.max(L.tMin, L.tMax - m)] : [Math.min(L.tMax, L.tMin + m), L.tMax];
@@ -840,7 +841,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     cancelAnimationFrame(road.raf); road.raf = 0; road.live = false; road.vel = 0;
     for (const n of road.nodes.values()) n.el.remove();
     road.nodes.clear(); road.vis = new Map(); road.heat.clear(); road.soft.clear(); road.side.clear();
-    road.hover = road.focus = road.jump = road.year = null;
+    road.hover = road.focus = road.jump = road.year = road.sel = road.after = null;
     $('road-views').innerHTML = ''; $('road-year').textContent = '';
     const cv = $('road-cv');
     cv.getContext('2d').clearRect(0, 0, cv.width, cv.height);
@@ -1086,7 +1087,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!r || !r.big) continue;
       if (c.u > 0) cards++;
       if (c.p.t.id === state.open) openUp = true;
-      if (c.u <= -0.05 * D) continue;
+      if (c.u <= -PASSED * D) continue;
       if (!front || (leads(c) !== leads(front) ? leads(c) : c.u < front.u || (c.u === front.u && c.key < front.key))) front = c;
     }
     road.cards = cards; road.within1 = within1; road.within3 = within3;
@@ -1113,6 +1114,14 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     }
     road.shows = shows;
     road.focus = front && !openUp ? front.p.t.id : null;
+    // The card that will be selected after this one: the next big card ahead that leads, for the period on top (roadHud).
+    let after = null;
+    if (front) for (const c of cands) {
+      const r = placed.get(c.key);
+      if (!r || !r.big || leads(c) !== leads(front) || c.u <= front.u || c.p.a === front.p.a) continue;
+      if (!after || c.u < after.u) after = c;
+    }
+    road.after = after ? after.p.a : null;
     // How fast play may travel: slow enough that each card has its moment in front of its lane (windowPace).
     const ahead = new Map();
     for (const c of cands) if (!c.end) { const a = ahead.get(c.p.lane) || []; a.push(c.u / D); ahead.set(c.p.lane, a); }
@@ -1505,7 +1514,23 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // The year the reader stands in, the marker on the bar, and each view's chapter. `all` also redraws the play button.
   function roadHud(all) {
-    const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
+    // The period on top (the year, a rank, a value: whatever the road is in) keeps moving with the road and
+    // reads exactly the selected card's own period at the moment that card is selected (asked for, Nov 2026).
+    // With no card selected it reads where cards open (OPEN_AT ahead), so it arrives at a card as it opens.
+    // While a card is selected (from that moment until it is PASSED), it runs on from the card's place to
+    // where the next card is (or, with none, to where cards open), so it never jumps.
+    const t = road.t, D = L.D, dir = camDir(), fp = road.focus && L.at.get(road.focus);
+    const ahead = t + dir * OPEN_AT * D;
+    let seen = ahead;
+    if (fp) {
+      const cur = fp.a;
+      if (road.sel !== cur) { road.sel = cur; road.selT = t; }
+      const span = dir * (cur - road.selT) + PASSED * D;
+      const f = span > 0 ? clamp(dir * (t - road.selT) / span, 0, 1) : 1;
+      seen = cur + f * ((road.after ?? ahead) - cur);
+    } else road.sel = null;
+    seen = clamp(seen, L.tMin, L.tMax);
+    const m = L.when(seen);
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
     const fine = !RANKED && L.tMax - L.tMin < FINE ? fineLabel(m) : null;
     const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : fine ? fine[0] : playLabel(m);
@@ -1513,7 +1538,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       road.said = label;
       $('road-year').textContent = label;
       // What the era of the year in sight stands for, under the year, as deep time's units are (asked for, Nov 2026).
-      const yr = writtenOf(L.when(t)), era = RANKED ? '' : fine ? (label === 'Today' ? '' : fine[1]) : label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
+      const yr = writtenOf(m), era = RANKED ? '' : fine ? (label === 'Today' ? '' : fine[1]) : label === 'Today' || yr <= -1e5 ? '' : yr < 0 ? 'BCE: Before the Common Era' : 'CE: Common Era';
       $('playhead').firstElementChild.textContent = label;
       $('axis').setAttribute('aria-valuetext', label);
       // Deep time is counted in years ago: the unit of the year in sight is spelled out under it, and only that one (asked for, Nov 2026).
@@ -1531,8 +1556,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     for (const k of L.barYears) { const under = Math.abs(k.y - y) < 15; if (under !== k.under) { k.under = under; k.el.classList.toggle('under', under); } }
     $('axis-win').style.top = Math.min(y, y2).toFixed(1) + 'px';
     $('axis-win').style.height = Math.abs(y - y2).toFixed(1) + 'px';
-    // The chapter in front of the reader.
-    const at = t + dir * 0.2 * D;
+    // The chapter where the reader looks.
+    const at = seen;
     L.lanes.forEach((ln, i) => {
       const cur = ln.eras.find((e) => e.xa <= at && at < e.xb) || null;
       if (cur === ln.cur) return;
