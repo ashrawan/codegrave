@@ -26,7 +26,7 @@
 import { findPictures, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
 
 // The models this function will run, by OpenRouter id (site/ai.js lists the same ones for the page):
-// open models, the cheapest and most used of OpenRouter's ranking (asked for, Nov 2026).
+// the cheapest and most used of OpenRouter's ranking, and the cheapest of OpenAI, Anthropic and Google (asked for, Nov 2026).
 const OFFERED = ["deepseek/deepseek-v4.1-flash", "openai/gpt-6-luna", "anthropic/claude-haiku-5.5", "google/gemini-3.1-flash-lite", "minimax/minimax-m3.1-flash", "z-ai/glm-5.3-flash", "qwen/qwen3.8-flash", "tencent/hy4-flash"];
 const EXTRA = (Deno.env.get("AI_MODELS") ?? "").split(",").map((s) => s.trim()).filter(Boolean);
 // Only a model this function offers is run; any other is refused.
