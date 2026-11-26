@@ -361,7 +361,10 @@ How the page is put together:
   A card shows the picture, kind, dates, name and summary, and neither coordinates nor a note that
   an entry has no place (asked for: "it will be in details"). The card is a label written on the map, with no box and a rule in the view's colour
   (design B, picked from three; a glass box on a phone). The credits the map's licences ask for
-  are folded behind a small button, not written on the map (asked for). The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
+  are behind a small button in the bottom right corner, beside the three dots (`.g-credit`, asked for), not
+  written on the map. The time line at the foot is dragged like a strip under its marker (`globeSeek()`, asked
+  for: "like we had before"). "Play speed" in the three-dot menu (`play.speed`, `cg-pace` in this browser; 0.25x
+  to 2x, 1x by default) slows or quickens play, on the road too (asked for, to linger longer on the cards). The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
   first and found "a bit heavy"): dark land, coasts in a warm line, a faint grid, the same map with
   streets close in. From far off the land is Natural Earth's small-scale coast
   (`site/media/land.json`, public domain); from country height down it is OpenFreeMap's tiles, free
