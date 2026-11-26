@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -164,4 +164,30 @@ test('a ranked list is laid out by rank, #1 first, with no dates', () => {
   assert.deepEqual(chapterOf(spec), [0, 0, -1]);
   assert.equal(specProblem({ axis: 'rank', entries: [{ name: 'Rice' }] }), '');
   assert.equal(partialSpec('{"title":"Foods","axis":"rank","entries":[{"name":"Rice","rank":1}').axis, 'rank');
+});
+
+test('a measured list is laid out by value, with its unit', () => {
+  const spec = cleanSpec({ axis: 'scale', unit: 'm', chapters: [{ name: 'Under 500 m', from: 0, to: 500 }],
+    entries: [{ name: 'Burj Khalifa', value: 828 }, { name: 'Eiffel Tower', value: '330' }, { name: 'No height' }] });
+  assert.deepEqual(spec.entries.map((e) => [e.name, e.value]), [['Eiffel Tower', 330], ['Burj Khalifa', 828]]);
+  assert.equal(spec.log, false);
+  const f = specToView(spec, 's2');
+  assert.deepEqual(f.entries.map((e) => e.val), ['330 m', '828 m']);
+  assert.equal(f.entries[0].events[0].date, '0001-01-01');
+  assert.equal(f.entries[1].events[0].date, '1001-01-01');
+  assert.equal(axisLabel(f.view, 1001), '830 m');
+  assert.equal(axisLabel(f.view, 1001, true), '830');
+  assert.deepEqual(chapterOf(spec), [0, -1]);
+  // Values that span powers of ten get a log scale.
+  const far = cleanSpec({ axis: 'scale', unit: 'km', entries: [{ name: 'ISS', value: 400 }, { name: 'Moon', value: 384400 }, { name: 'Sun', value: 149600000 }] });
+  assert.equal(far.log, true);
+  assert.equal(fmtValue(149600000, 'km'), '150 million km');
+  assert.equal(fmtValue(999, '$'), '$999');
+  assert.match(specProblem({ axis: 'scale', entries: [{ name: 'A' }] }), /needs a value/);
+});
+
+test('a spec that names no axis takes the one its entries show', () => {
+  assert.equal(axisOfSpec({ entries: [{ name: 'A', start: '1969' }, { name: 'B', rank: 2 }] }), 'time');
+  assert.equal(axisOfSpec({ entries: [{ name: 'A', rank: 1 }, { name: 'B', rank: 2 }] }), 'rank');
+  assert.equal(axisOfSpec({ entries: [{ name: 'A', value: '1,200' }, { name: 'B', value: 3 }] }), 'scale');
 });

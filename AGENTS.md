@@ -522,6 +522,14 @@ How the page is put together:
   every year is written "#n", the calendar marks and the year pill are off,
   and the panel says "Number n of N". The pill in the strip shows a view's
   number of entries in grey brackets (asked for, Nov 2026).
+  A measured list ("tallest buildings", "richest people") has
+  `axis: "scale"`: each entry a `value` and the spec a `unit`; entries
+  stand from smallest to largest, mapped onto years 1 to 1001 (`scaleYear()`
+  in `site/ai.js`, on a log scale when the values spread a hundredfold),
+  and the road writes the value (`axisLabel()`, `fmtValue()`). When the
+  model names no axis, `axisOfSpec()` infers it from what the entries
+  carry. Rank and scale entries have no events. Views on another axis than
+  the road's are shown alone, never side by side (`axisKey()`).
 - **The full picture** (`site/picture.js`; asked for, Nov 2026): a picture
   in the panel shows "View full" and opens over the whole page, whole,
   with its caption, credit, licence and the original, stepping through the

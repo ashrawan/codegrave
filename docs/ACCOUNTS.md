@@ -139,6 +139,15 @@ and writes "#n" wherever it would write a year. Chapters run from rank to
 rank. In the editor the Starts column becomes Rank: typing a rank moves the
 entry there. A timeline holds at most 100 entries.
 
+A measured list ("the tallest buildings", "the largest countries by area")
+gets `"axis": "scale"`, a `unit` on the spec and a `value` on each entry.
+The road stands them from smallest to largest and writes values ("828 m",
+"$1.2 trillion") instead of years; a spread of a hundredfold or more is
+drawn on a log scale. Entries without a value are dropped. If the model
+forgets the axis, the page works it out from what the entries carry
+(`axisOfSpec()`). Rank and scale entries have no events, and a view on one
+axis is never put beside a view on another: it is shown alone.
+
 ## Open in editor
 
 A timeline made with AI can also be changed by hand. "Open in editor",

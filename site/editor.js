@@ -5,7 +5,7 @@
    it into the view file with specToView() after every change, so the road, Ask AI and the export all
    read one thing. Every change is kept by itself (a moment after the last one) and can be undone.
    The page lends what it needs through `deps`; the editor never reaches into the page's state. */
-import { cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, yearOfDate, MAX_ENTRIES } from './ai.js';
+import { cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, yearOfDate, fmtValue, MAX_ENTRIES } from './ai.js';
 
 const SAVE_AFTER = 700;      // ms of quiet before a change is written to the database
 const KEEP = 100;            // steps of undo
@@ -124,20 +124,20 @@ export function createEditor(deps) {
   // ---- what is drawn
   const idOf = (k) => { const i = ed.keys.indexOf(k); return i < 0 ? null : ed.data.entries[i]?.id; };
   function follow(k) { const id = idOf(k); if (id) deps.goTo(id); }
-  const boundText = (b) => showDate(b);
+  const boundText = (b) => (ed.spec.axis === 'scale' ? String(b) : showDate(b));
   const dots = (k, n) => `<span class="ed-wt" role="group" aria-label="How much it matters">${[1, 2, 3, 4, 5].map((i) => `<button type="button" data-ed-wt="${k}:${i}" class="${i <= n ? 'on' : ''}" aria-label="${i} of 5"></button>`).join('')}</span>`;
   const pic = (e) => (e.image ? `<span class="ed-pic"><img src="${esc(e.image.src)}" alt="" loading="lazy"></span>` : '<span class="ed-pic none" title="No picture"></span>');
   function row(e, i) {
     const k = ed.keys[i];
     if (ed.open === k) return openRow(e, k);
-    return `<div class="ed-row" data-k="${k}" tabindex="0" role="button" aria-label="Edit ${esc(e.name)}">${pic(e)}<span class="ed-name">${esc(e.name)}</span><span class="ed-kind">${esc(e.kind)}</span>${e.rank ? `<span class="ed-d">#${e.rank}</span><span class="ed-d"></span>` : `<span class="ed-d">${esc(showDate(e.start))}</span><span class="ed-d">${e.end ? esc(showDate(e.end)) : '<i>still going</i>'}</span>`}${dots(k, e.importance)}<button type="button" class="ibtn sm ed-more" data-ed-menu="${k}" aria-label="More for ${esc(e.name)}">${DOTS}</button>
-      <span class="ed-sub">${e.rank ? '#' + e.rank : esc(showDate(e.start))}${e.end ? ' – ' + esc(showDate(e.end)) : ''} · ${esc(e.kind)}${e.image ? '' : ' · no picture'}</span></div>`;
+    return `<div class="ed-row" data-k="${k}" tabindex="0" role="button" aria-label="Edit ${esc(e.name)}">${pic(e)}<span class="ed-name">${esc(e.name)}</span><span class="ed-kind">${esc(e.kind)}</span>${e.value != null ? `<span class="ed-d">${esc(fmtValue(e.value, ed.spec.unit))}</span><span class="ed-d"></span>` : e.rank ? `<span class="ed-d">#${e.rank}</span><span class="ed-d"></span>` : `<span class="ed-d">${esc(showDate(e.start))}</span><span class="ed-d">${e.end ? esc(showDate(e.end)) : '<i>still going</i>'}</span>`}${dots(k, e.importance)}<button type="button" class="ibtn sm ed-more" data-ed-menu="${k}" aria-label="More for ${esc(e.name)}">${DOTS}</button>
+      <span class="ed-sub">${e.value != null ? esc(fmtValue(e.value, ed.spec.unit)) : e.rank ? '#' + e.rank : esc(showDate(e.start))}${e.end ? ' – ' + esc(showDate(e.end)) : ''} · ${esc(e.kind)}${e.image ? '' : ' · no picture'}</span></div>`;
   }
   function openRow(e, k) {
     const f = (name, label, value, cls = '') => `<label class="ed-f ${cls}"><span>${label}</span><input type="text" data-f="${name}" value="${esc(value)}" autocomplete="off" spellcheck="${name === 'name' || name === 'kind' ? 'true' : 'false'}"></label>`;
     return `<div class="ed-row open" data-k="${k}">
       <div class="ed-sheet-head"><button type="button" class="lnk" data-ed-cancel>Cancel</button><b>Edit entry</b><button type="button" class="lnk acc" data-ed-done>Done</button></div>
-      <div class="ed-grid">${pic(e)}${f('name', 'Name', e.name, 'grow')}${f('kind', 'Kind', e.kind)}${e.rank ? f('start', 'Rank', String(e.rank)) : f('start', 'Starts', showDate(e.start)) + f('end', 'Ends', e.end ? showDate(e.end) : '')}<div class="ed-f"><span>Weight</span>${dots(k, e.importance)}</div></div>
+      <div class="ed-grid">${pic(e)}${f('name', 'Name', e.name, 'grow')}${f('kind', 'Kind', e.kind)}${e.value != null ? f('value', 'Value' + (ed.spec.unit ? ` (${esc(ed.spec.unit)})` : ''), String(e.value)) : e.rank ? f('start', 'Rank', String(e.rank)) : f('start', 'Starts', showDate(e.start)) + f('end', 'Ends', e.end ? showDate(e.end) : '')}<div class="ed-f"><span>Weight</span>${dots(k, e.importance)}</div></div>
       <label class="ed-f"><span>Summary</span><textarea data-f="summary" rows="2" maxlength="400">${esc(e.summary)}</textarea></label>
       <div class="ed-line">${f('wikipedia', 'Wikipedia article', e.wikipedia, 'grow')}${e.image ? '<button type="button" class="btn" data-ed-nopic>Remove picture</button>' : `<button type="button" class="btn" data-ed-pic${e.wikipedia ? '' : ' disabled title="Name its Wikipedia article first"'}>Find a picture</button>`}</div>
       <p class="ed-err" role="alert"></p>
@@ -184,7 +184,7 @@ export function createEditor(deps) {
         <input type="text" class="ed-title" data-f="title" data-top="1" value="${esc(s.title)}" maxlength="80" aria-label="Title">
         <textarea class="ed-desc" data-f="description" data-top="1" rows="2" maxlength="300" placeholder="A line on what this timeline is about" aria-label="Description">${esc(s.description)}</textarea>
         <div class="ed-tools"><input type="search" data-ed-find value="${esc(ed.find)}" placeholder="Find an entry" aria-label="Find an entry"><span class="ed-count">${s.entries.length} ${s.entries.length === 1 ? 'entry' : 'entries'}</span><button type="button" class="btn" data-ed-add="end"${s.entries.length >= MAX_ENTRIES ? ' disabled' : ''}>+ Add entry</button></div>
-        <div class="ed-cols" aria-hidden="true"><span></span><span>Name</span><span>Kind</span><span>${s.axis === 'rank' ? 'Rank' : 'Starts'}</span><span>${s.axis === 'rank' ? '' : 'Ends'}</span><span>Weight</span><span></span></div>
+        <div class="ed-cols" aria-hidden="true"><span></span><span>Name</span><span>Kind</span><span>${s.axis === 'rank' ? 'Rank' : s.axis === 'scale' ? 'Value' : 'Starts'}</span><span>${s.axis ? '' : 'Ends'}</span><span>Weight</span><span></span></div>
         <div class="ed-list">${list()}</div>
         <div class="ed-foot"><button type="button" class="ed-add" data-ed-addch${s.chapters.length >= 12 ? ' disabled' : ''}>+ Add chapter</button></div>
       </div></div>`;
@@ -228,7 +228,10 @@ export function createEditor(deps) {
     const k = Number(input.closest('[data-k]')?.dataset.k), f = input.dataset.f, v = input.value;
     if (input.dataset.top) return change((s) => { s[f] = v; });
     let why = '';
-    if (f === 'start' && ed.spec.axis === 'rank') {
+    if (f === 'value') {
+      const n = Number(v.replace(/[, _]/g, ''));
+      why = Number.isFinite(n) && v.trim() ? change((s) => { entryAt(s, k).value = n; }) : 'Write a number, such as 828 or 1.5.';
+    } else if (f === 'start' && ed.spec.axis === 'rank') {
       // A ranked list: the entry moves to that place, and the others close up behind it.
       const n = Math.round(Number(v.replace(/^#/, ''))), was = entryAt(ed.spec, k)?.rank;
       if (!(n >= 1)) why = `Write a rank: 1 for the first.`;
@@ -248,7 +251,7 @@ export function createEditor(deps) {
     const i = Number(input.dataset.ch), f = input.dataset.chF, v = input.value;
     let why = '';
     if (f === 'from' || f === 'to') {
-      const b = readBound(v);
+      const b = ed.spec.axis === 'scale' ? (Number.isFinite(Number(v.replace(/[, _]/g, ''))) && v.trim() ? Number(v.replace(/[, _]/g, '')) : null) : readBound(v);
       why = b == null ? `“${v.trim()}” is not a year (1969) or a full date (27 Nov 2026).` : change((s) => { s.chapters[i][f] = b; });
     } else why = change((s) => { s.chapters[i][f] = v; });
     const p = $('editor').querySelector(`.ed-chform[data-ch="${i}"] .ed-err`);
@@ -263,7 +266,7 @@ export function createEditor(deps) {
     for (let n = 2; s.entries.some((e) => norm(e.name) === norm(name)); n++) name = 'New entry ' + n;
     const ch = where >= 0 ? s.chapters[where] : null, last = s.entries[s.entries.length - 1];
     const start = ch ? startOf(ch.from) : where === -1 && s.chapters.length ? last.start : last ? last.start : String(new Date().getFullYear());
-    const why = change((d) => { d.entries.push({ ...(d.axis === 'rank' ? { rank: ch ? ch.to + 0.5 : d.entries.length + 1 } : {}), name, kind: last?.kind || 'Entry', type: last?.type || 'events', start, end: '', summary: '', wikipedia: '', importance: 3, events: [] }); });
+    const why = change((d) => { d.entries.push({ ...(d.axis === 'rank' ? { rank: ch ? ch.to + 0.5 : d.entries.length + 1 } : d.axis === 'scale' ? { value: ch ? ch.from : last.value } : {}), name, kind: last?.kind || 'Entry', type: last?.type || 'events', start, end: '', summary: '', wikipedia: '', importance: 3, events: [] }); });
     if (why) return fail(near, why);
     const i = ed.spec.entries.findIndex((e) => norm(e.name) === norm(name));
     openEntry(ed.keys[i]);
@@ -276,7 +279,9 @@ export function createEditor(deps) {
     for (let n = 2; s.chapters.some((c) => norm(c.name) === norm(name)); n++) name = 'New chapter ' + n;
     const last = s.chapters[s.chapters.length - 1], lastStart = s.entries[s.entries.length - 1].start;
     let from, to;
-    if (last && typeof last.from === 'string') {
+    const vals = s.entries.map((e) => e.value).filter((v) => v != null);
+    if (s.axis === 'scale') { from = last ? last.to : Math.min(...vals); to = Math.max(from, ...vals); if (last) from = +(from + (to - from) / 1000).toPrecision(6); }
+    else if (last && typeof last.from === 'string') {
       const day = new Date(last.to + 'T00:00:00Z'); day.setUTCDate(day.getUTCDate() + 1);
       from = day.toISOString().slice(0, 10);
       to = lastStart.slice(0, 10) > from && /^\d{4}-\d\d-\d\d/.test(lastStart) ? lastStart.slice(0, 10) : from;
