@@ -8,6 +8,7 @@
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf, addressOf, idOfAddress } from './keys.js';
 import { createWall } from './wall.js';
+import { createAccount } from './account.js';
 import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
@@ -317,10 +318,24 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const real = alias.get(id) || id;
     const v = viewById.get(real);
     if (v && v.members) return Promise.resolve(real);
-    return Promise.all([getJSON('v/' + real + '.json'), bootReady])
-      .then(([payload]) => { broken.delete(real); return useView(payload, id).id; })
+    // A built view (the editors', a classical one) is a file. A timeline someone keeps (account.js) is read
+    // from the database: "t/<id>", or "<username>/<slug>" where no community folder has that name.
+    const built = !real.includes('/') || real.startsWith('wiki/');
+    const read = built ? Promise.all([getJSON('v/' + real + '.json'), bootReady]).then(([p]) => p)
+      : bootReady.then(() => (ownerTitle.has(real.split('/')[0]) ? getJSON('v/' + real + '.json') : account.fetchView(real)));
+    return read.then((payload) => { broken.delete(real); return useView(payload, id).id; })
       .catch(() => { broken.add(real); return null; });
   }
+  // A stored timeline changed (renamed, an entry added or removed): the page takes the new one.
+  function replaceView(payload) {
+    const id = payload.view.id;
+    viewById.delete(id);
+    useView(payload);
+    if (state.views.includes(id)) changed();
+  }
+  function forgetView(id) { viewById.delete(id); removeView(id); }
+  // A stored timeline's address is its owner's once it is public; any other view's is its id.
+  const addr = (id) => account.addressOf(id) || addressOf(id);
   // One entry by id, from its detail file: one request, whatever the size of the data.
   function loadEntry(id) {
     if (byId.has(id)) return Promise.resolve(byId.get(id));
@@ -543,14 +558,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   function writeUrl() {
     const q = new URLSearchParams();
-    if (state.views.length > 1) q.set('with', state.views.slice(1).map(addressOf).join(','));
+    if (state.views.length > 1) q.set('with', state.views.slice(1).map(addr).join(','));
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => colOut(state.colors.get(id))).join(','));
     // The tab names the views shown, as the view's own page does before the script runs.
     const names = state.views.map((id) => viewById.get(id)?.name).filter(Boolean);
     document.title = names.length ? names.join(', ') + ': a timeline · codegrave' : 'codegrave: a timeline of everything. Nothing ships forever.';
-    history.replaceState(null, '', '/' + (state.views[0] ? addressOf(state.views[0]) : '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
+    history.replaceState(null, '', '/' + (state.views[0] ? addr(state.views[0]) : '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
   }
 
   // ---------------------------------------------------------------- what is drawn
@@ -1874,7 +1889,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     state.span = Array.isArray(v.span) && v.span.length === 2 && v.span.every(Number.isFinite) ? v.span : null;
   }
 
-  function changed() { render(); writeUrl(); }
+  function changed() { render(); writeUrl(); account.sync(); }
 
   // ---------------------------------------------------------------- panel: history of one entry
   // A link to another entry: its name travels with the link, so it shows before that entry is loaded.
@@ -1985,7 +2000,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       ${rel.length ? `<section><h3 class="cap">Connections</h3>${rel.join('')}</section>` : ''}
       <section><h3 class="cap">Sources</h3><ol class="sources">${(t.sources || []).map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.kind ? ` <small>${esc(s.kind)}</small>` : ''}</li>`).join('')}</ol>
         <p class="fine">${t.verified ? 'Dates checked against these sources.' : 'Its dates are not yet checked against a source.'}${t.topPct ? ` Ranked in the top ${t.topPct}% of ${esc(t.peers)}.` : ''}</p></section>
-      <div class="pane-foot"><button type="button" class="btn" data-copy="${esc(link)}">Copy link</button><a class="btn" href="${esc(issue)}" target="_blank" rel="noopener">Suggest a correction</a></div>`;
+      <div class="pane-foot">${account.entryActions(t.id)}<button type="button" class="btn" data-copy="${esc(link)}">Copy link</button><a class="btn" href="${esc(issue)}" target="_blank" rel="noopener">Suggest a correction</a></div>`;
     showPane('thing');
     if ($('side').hidden) showSide(true); else render();
     if (opts.scroll) roadToThing(id, !opts.jump);
@@ -2544,6 +2559,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     else setViews(got.length ? got : [].concat(boot.default || []));
     if (ids.length && got.length < ids.length) note('Some views in this link could not be loaded.');
     wire();
+    account.start(authFailed);
     drawReverse();
     if (document.fonts && document.fonts.ready) await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 1200))]);
     if (!state.views.length) $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
@@ -2551,5 +2567,13 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (ids.length) writeUrl();
     followHash(false);     // otherwise the road opens where roadOpening() says
   }
+  // Accounts and the reader's own timelines (account.js): the bar on the left. It borrows these from the page.
+  const account = createAccount({
+    $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => showOnly(id),
+    replace: replaceView, forget: forgetView, home: () => location.assign('/'),
+    focusSearch: () => $('q').focus(), openViews: () => $('views-btn').click(),
+    redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
+  });
+  const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"
   start();
 })();

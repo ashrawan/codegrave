@@ -51,6 +51,8 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | What search engines and link previews read (title, description, Open Graph, `robots.txt`, the sitemap) | The `page meta` block in `site/index.html`, `site/robots.txt`, `writePages()` in `scripts/build.mjs` | `site/_redirects`, `site/sitemap.xml` (generated) |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
+| The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
+| The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
@@ -136,6 +138,25 @@ still goes through `render()`.
 
 How the page is put together:
 
+- **The bar on the left and your own timelines** (`site/account.js`,
+  `docs/ACCOUNTS.md`; asked for and designed in Nov 2026, like the sidebar
+  of an AI chat app, "so it is scalable"). From the top: the logo, New
+  timeline, Search, Explore (the views pane), the reader's timelines, and
+  the account at the bottom left (Sign in when signed out; the account's
+  menu opens upward). It folds to a strip of icons (`cg-sb` in this
+  browser) and is a drawer behind a menu button on a phone. The road, the
+  top bar and the strip start where it ends (`--sb`). Signing in is asked
+  only when something needs it, with Google, GitHub or an emailed link
+  (Supabase Auth, called over HTTPS with no library). A timeline someone
+  keeps is one row in the database holding a whole view file
+  (`{ view, entries }`), so opening it is still one request. The page
+  knows it as `t/<id>`; `loadView()` asks `account.fetchView()` for it,
+  and its address is `/t/<id>`, or `/<username>/<slug>` once it is public
+  (`addr()`). The username is picked once, when first publishing. One
+  username per account for now. Publish and its state sit beside the
+  search only while the road shows one timeline of the reader's own. The
+  module borrows what it needs from the page through the object given to
+  `createAccount()` and never reaches into `state`.
 - **Loading.** `start()` asks for `boot.json` and, at the same time, the
   views the link names (else `home.json`; a phone opens only on its
   `phone` views, from `data/editors-choice.json`, asked for in Nov 2026).
