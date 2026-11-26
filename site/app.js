@@ -2442,7 +2442,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('filters-btn').addEventListener('click', () => yearsOpen(!$('filters').classList.contains('open')));
     document.addEventListener('pointerdown', (e) => { if (!e.target.closest('#filters')) yearsOpen(false); });
 
-    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in the same tab.
+    // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in a new tab (asked for, Nov 2026; it was the same tab before).
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
       // A timeline someone keeps is not a built file: it is handed to the print page through this tab's storage.
@@ -2450,7 +2450,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       for (const id of state.views) { const pl = account.payload(id); if (pl) kept[id] = pl; }
       try { if (Object.keys(kept).length) sessionStorage.setItem('cg-print', JSON.stringify(kept)); else sessionStorage.removeItem('cg-print'); } catch (e) { /* too large: the print page will say it could not load */ }
       const q = 'views=' + state.views.map((id) => (kept[id] ? id : addressOf(id))).join(',') + '&c=' + state.views.map((id) => colOut(state.colors.get(id))).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
-      location.href = 'print.html?' + q;   // in the same tab (asked for, Nov 2026); the print page's logo leads back
+      // A new tab opened from this one starts with a copy of this tab's storage, so cg-print reaches it.
+      const w = window.open(new URL('print.html?' + q, document.baseURI).href, '_blank');
+      if (!w) location.href = 'print.html?' + q;   // a blocked pop-up: open it here instead
     });
 
     // The pills: drag one to change the order of the lanes, tap its dot to

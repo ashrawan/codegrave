@@ -43,6 +43,8 @@ export const isStored = (id) => /^t\/[0-9a-f-]{36}$/.test(id);
 export const uuidOf = (id) => id.slice(2);
 
 const ICON = {
+  // a door with an arrow going in: Sign in (asked for, Nov 2026)
+  login: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M3.5 12H14M10 8l4 4-4 4"/></svg>',
   plus: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M12 5.5v13M5.5 12h13"/></svg>',
   search: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>',
   compass: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>',
@@ -630,7 +632,7 @@ export function createAccount(app) {
       : `<h2 class="cap">Your timelines</h2>${NEW}${!listed ? '' : list.length ? list.map((t, i) => `<div class="sb-row${on.length === 1 && on[0] === 't/' + t.id ? ' on' : ''}"><button type="button" class="nv" data-open="${t.id}" title="${esc(t.title)}"><i class="dot" style="background: var(--p${i % 8})"></i><span class="lbl">${esc(t.title)}</span>${t.visibility === 'private' ? '<small class="lbl">Draft</small>' : ''}</button><button type="button" class="ibtn sm more" data-more="${t.id}" aria-label="More for ${esc(t.title)}">${ICON.dots}</button></div>`).join('') : '<p class="sb-note">None yet. “New timeline” starts one from what is on the road.</p>'}`;
     $('sb-foot').innerHTML = user
       ? `<button type="button" class="nv who" id="sb-me" aria-haspopup="menu"><i class="av">${esc(shown()[0].toUpperCase())}</i><span class="lbl"><b>${esc(shown())}</b><small>Free plan</small></span><span class="lbl chev">${ICON.chev}</span></button>`
-      : `<button type="button" class="big" id="sb-in"><span class="lbl">Sign in</span><i class="rail-only">${ICON.chev}</i></button>`;
+      : `<button type="button" class="big" id="sb-in" title="Sign in">${ICON.login}<span class="lbl">Sign in</span></button>`;
     // Beside the search: what this timeline is, and the way to publish it.
     $('tl-state').innerHTML = cur ? `<span class="st"><i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}</span><button type="button" class="pbtn" id="publish">${cur.visibility === 'private' ? 'Publish' : 'Share'}</button>` : '';
     document.body.classList.toggle('mine', !!cur);
