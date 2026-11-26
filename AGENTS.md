@@ -265,7 +265,7 @@ How the page is put together:
   events written along it, like the open and the hovered entry
   (`road.heat` eases the colour). It is not `state.open`; do not write one
   to the other.
-- **The bar** (`#axisbar`) stands upright on the right: play at the
+- **The bar** (`#axisbar`) stands upright on the right, slim (`--bar`: 58 px, 38 px on a phone; asked for, Nov 2026), its years written during play too (the year pill is `#filters`; its rules once hid them). On a phone the strip at the foot steps away while play travels and the road takes its place. It stands play at the
   bottom and the whole span above it with ahead upwards, on the road's own scale so the marker climbs
   steadily (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the

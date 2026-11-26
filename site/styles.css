@@ -76,7 +76,7 @@ ul, ol { list-style: none; }
 .btn:disabled, .btn.off { opacity: .4; pointer-events: none; }
 
 /* stage: the road fills the page between the top bar, the bar of years on the right and the strip of views along the bottom */
-:root { --bar: 72px; --card-sh: 0 12px 28px rgba(0, 0, 0, .55); }
+:root { --bar: 58px; --card-sh: 0 12px 28px rgba(0, 0, 0, .55); }
 :root[data-theme="light"] { --card-sh: 0 10px 26px rgba(40, 30, 10, .14); }
 #stage { position: fixed; top: 0; left: 0; right: var(--bar); bottom: 44px; overflow: hidden; }
 body.side-open #stage { right: calc(var(--side) + var(--bar)); }
@@ -88,8 +88,8 @@ body.side-open #axisbar { right: var(--side); }
 #axis { position: absolute; inset: 18px 0 88px 0; cursor: ns-resize; touch-action: none; outline-offset: -3px; }
 #axis-in { position: absolute; inset: 0; }
 #axis-win { position: absolute; left: 0; right: 0; background: var(--raised); opacity: .7; }
-#ticks .yr { position: absolute; left: 15px; transform: translateY(-50%); font-size: 11.5px; line-height: 16px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; transition: color .15s; }
-#ticks .yr::before { content: ''; position: absolute; left: -15px; top: 50%; width: 9px; height: 1px; background: var(--rule2); }
+#ticks .yr { position: absolute; left: 13px; transform: translateY(-50%); font-size: 11.5px; line-height: 16px; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; transition: color .15s; }
+#ticks .yr::before { content: ''; position: absolute; left: -13px; top: 50%; width: 9px; height: 1px; background: var(--rule2); }
 #ticks .yr small { font-size: inherit; }
 #ticks .yr.now { font-weight: 600; color: var(--text); }
 #ticks .yr.under, #ticks .yr.under small { color: transparent; }
@@ -305,19 +305,24 @@ figcaption { margin-top: 4px; font-size: 11px; color: var(--faint); }
 /* Phones: the panel is a sheet over the lower half. The road and its bar
    move up above it, so both stay in sight and can still be used. */
 @media (max-width: 699px) {
-  :root { --sheet: 50vh; --sheet: 50dvh; --bar: 46px; }
+  :root { --sheet: 50vh; --sheet: 50dvh; --bar: 38px; }
   #side { top: auto; left: 0; width: auto; height: var(--sheet); border-left: 0; border-top: 1px solid var(--rule2); border-radius: 14px 14px 0 0; box-shadow: 0 -12px 32px rgba(0, 0, 0, .18); }
   body.side-open #stage { right: var(--bar); bottom: var(--sheet); }
   body.side-open #axisbar { right: 0; bottom: var(--sheet); }
   #axis { inset: 14px 0 82px 0; }
   .ends.head { height: 46px; }
   .ends.foot { height: 82px; }
-  #ticks .yr { left: 9px; font-size: 10.5px; line-height: 12px; }
-  #ticks .yr::before { left: -9px; width: 5px; }
+  #ticks .yr { left: 7px; font-size: 9.5px; line-height: 11px; letter-spacing: -.2px; }
+  #ticks .yr::before { left: -7px; width: 4px; }
+  #play { width: 30px; height: 30px; }
   #ticks .yr small { display: block; font-size: 9px; line-height: 10px; color: var(--faint); }
   /* the bar is slim: the marker's year shows while it is dragged; the year at the top left says it otherwise */
   #playhead span { right: 2px; padding: 1px 5px; font-size: 10.5px; opacity: 0; transition: opacity .15s; }
-  #axisbar.dragging #playhead span { opacity: 1; }
+  #axisbar.dragging #playhead span, body.playing #playhead span { opacity: 1; }
+  /* While play travels, the strip at the foot steps away and the road takes its place (asked for, Nov 2026). */
+  #dock { transition: transform .3s ease, opacity .3s ease; }
+  body.playing:not(.peek) #dock { transform: translateY(100%); opacity: 0; pointer-events: none; }
+  body.playing:not(.peek) #stage, body.playing:not(.peek) #axisbar { bottom: 0; }
   #ticks .yr.under, #ticks .yr.under small { color: var(--muted); }
   #p-views > #vlist { min-height: 0; }
   body.side-open #dock { display: none; }
