@@ -51,6 +51,9 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | What the build writes for the page | `scripts/build.mjs`, then `docs/BUILD.md` and `tests/build.test.mjs` | |
 | What search engines and link previews read (title, description, Open Graph, `robots.txt`, the sitemap) | The `page meta` block in `site/index.html`, `site/robots.txt`, `writePages()` in `scripts/build.mjs` | `site/_redirects`, `site/sitemap.xml` (generated) |
 | How the page looks or behaves | `site/app.js`, `site/styles.css`, `site/index.html` | |
+| The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
+| Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
+| The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
@@ -136,6 +139,25 @@ still goes through `render()`.
 
 How the page is put together:
 
+- **The bar on the left and your own timelines** (`site/account.js`,
+  `docs/ACCOUNTS.md`; asked for and designed in Nov 2026, like the sidebar
+  of an AI chat app, "so it is scalable"). From the top: the logo, New
+  timeline, Search, Explore, the reader's timelines, and
+  the account at the bottom left (Sign in when signed out; the account's
+  menu opens upward). It folds to a strip of icons (`cg-sb` in this
+  browser) and is a drawer behind a menu button on a phone. The road, the
+  top bar and the strip start where it ends (`--sb`). Signing in is asked
+  only when something needs it, with Google, GitHub or an emailed link
+  (Supabase Auth, called over HTTPS with no library). A timeline someone
+  keeps is one row in the database holding a whole view file
+  (`{ view, entries }`), so opening it is still one request. The page
+  knows it as `t/<id>`; `loadView()` asks `account.fetchView()` for it,
+  and its address is `/t/<id>`, or `/<username>/<slug>` once it is public
+  (`addr()`). The username is picked once, when first publishing. One
+  username per account for now. Publish and its state sit beside the
+  search only while the road shows one timeline of the reader's own. The
+  module borrows what it needs from the page through the object given to
+  `createAccount()` and never reaches into `state`.
 - **Loading.** `start()` asks for `boot.json` and, at the same time, the
   views the link names (else `home.json`; a phone opens only on its
   `phone` views, from `data/editors-choice.json`, asked for in Nov 2026).
@@ -291,12 +313,77 @@ How the page is put together:
   when play is first pressed with the sound on, and the same button
   silences it. The house track was asked for with this file; do not swap it
   without asking.
-- **The panel** is hidden until its button, the "Views" button in the strip
-  or a name is clicked. The "Views" button toggles: pressed again while the
-  views pane is open, it closes the panel. It never covers the road: on wide screens and
+- **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
+  "think it is like community posted, meaning even the admin ones", after a
+  list in the sidebar was found "not professional"). Explore in the bar on
+  the left opens it and closes it; Escape and picking a timeline close it
+  too (`account.explore(on)`, `body.exploring`). It is a gallery: a large
+  search, the topic chips ("All" first), then every timeline as a card
+  (its thumbnail, name, two lines of description, who made it, its years
+  and size). "All" shows what people have published lately
+  (`account.published()`, one request the first time), then eight cards of
+  each topic with "See all" (`SHELF`); Countries come last. The editors'
+  timelines are listed as the community's, by `wiki`. A community page of
+  people's own creations is planned; keep this page able to grow into it.
+  There is no "Views" button in the strip (removed on request).
+- **New timeline is a page with one box** (`#create`, filled by
+  `account.js`): "What do you want to make?", a prompt, the model menu and,
+  under the box, the kinds of thing people come to make (`KINDS`: a
+  company, a life, a subject to learn, a trip, a skill, the news, history),
+  each opening four requests that work as they stand. Asked for, Nov 2026:
+  "user can build anything", with ideas chosen for what people need, no
+  "copy this view" link, and a see-through page: the road shows, blurred,
+  behind it. The model menu is like a chat app's (asked for): the models by
+  name with a line each, "More models" folded away, and the effort (Quick,
+  Balanced, Thorough: OpenRouter's reasoning effort); `MODELS` and
+  `EFFORTS` in `site/ai.js` (ids are OpenRouter ids), `cg-model` and
+  `cg-model-effort` in this browser. The function runs only the ids it
+  lists (`OFFERED`, plus the secret `AI_MODELS`, where `*` allows any); the
+  plan is to offer everything OpenRouter has and let OpenRouter cap the
+  spending. A plan (a trip, a course) is dated ahead of today: then the
+  road runs on past today to its last step (`chosen()`), "Today" is not
+  written at its end, and a step shows its days ("5 Apr 2027", `daysOf()`).
+  The Edge Function
+  `supabase/functions/ai-timeline` asks the model through OpenRouter for a
+  small "spec" and adds free pictures from Wikipedia; `specToView()` in
+  `site/ai.js` turns it into a view file, which is stored like any other
+  timeline, with the spec beside it. For such a timeline of the reader's
+  own, "Ask for a change" is a box under the road (`#ask`): the model gets
+  the spec and the request and writes the whole spec again; the toast says
+  what changed and offers Undo. An entry made this way names its kind in
+  words (`category`) and its branch in `domain`, and its id starts with
+  `x`. The centre of the page is meant as a canvas where a reader can make
+  anything (asked for, Nov 2026); a timeline is the first kind, so keep the
+  spec and the function free of anything only a timeline could use.
+- **The year range** (`#filters`, `state.span`) is a quiet, see-through pill
+  at the bottom right of the road; pressed, it opens the range with its
+  picture of busy years (moved there from the views pane on request, Nov
+  2026). It hides while play travels.
+- **There is no bar across the top** (asked for, Nov 2026: "the top
+  navigation bar we only want on the left side, so the middle canvas stays
+  full"). What it held is in the bar on the left (Search) and in the three-dot menu. The search box
+  (`.tsearch`, `#q`) is a box over the road that shows only while it is
+  used (`body.searching`): Search in the bar or "/" opens it. `.top` is
+  now an unseen strip that holds the phone's round menu button (top left)
+  and, top right, the state and Publish button of a timeline of the
+  reader's own. `TOP` is only a little air above the road.
+- **A phone must never get stuck zoomed in** (reported, Nov 2026). Two
+  fingers do not zoom the page (`touch-action: pan-x pan-y`), fields are
+  16px on a phone so the browser does not zoom into them, and if the page
+  is zoomed anyway a "Reset zoom" button appears at the top of what is in
+  sight (`#unzoom`, placed from `visualViewport`) and puts it back.
+- **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
+  right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
+  It is in three parts: This timeline (Export as PDF, `#pdf`; Turn round, `#reverse`,
+  `state.order`), Settings (the theme, `#theme`) and Info (How to read the timeline, and
+  codegrave on GitHub). Export as PDF lives only here. For a timeline someone keeps, which is
+  not a built file, the page hands the view file to the print page through this tab's storage
+  (`cg-print`).
+- **The panel** on the right is only for one thing at a time: it is hidden
+  until a name or a chapter is clicked. It never covers the road: on wide screens and
   tablets it sits beside it and the road narrows; on phones (under 700 px)
   it is a sheet over the lower half, and the road and the bar move up above
-  it. It has three panes: views, the history of one entry, and one era. The
+  it. It has two panes: the history of one entry, and one era. The
   entry and era panes head with a trail back (`state.trail`, `crumbs()`).
   Opening something from inside the panel adds a step, opening it from the
   road starts over, and Escape goes back one step.
@@ -311,9 +398,8 @@ How the page is put together:
   sideways when they do not fit: drag to reorder (with a finger, hold a
   pill first, because a finger scrolls the strip), the dot picks the
   colour (a row of the theme's eight, then a ninth, a rainbow ring, that opens the system's colour picker for any colour; asked for, Nov 2026: a colour is 0 to 7 or '#rrggbb', `colVar()` and `colRgb()` read either, and the link and the export carry it as `c=3` or `c=f05a28`), and the cross removes one of several. The strip starts at the
-  left with the pills; at its right end stand the "Views" button (moved
-  there on request, Nov 2026), Export as PDF, then reverse (`state.order`), small, last in the strip
-  (moved there on request, Nov 2026). There is no bookmark: "Your view" was
+  left with the pills; at its right end stand shuffle and the three dots (Export as PDF and reverse
+  moved into that menu on request, Nov 2026). There is no bookmark: "Your view" was
   removed on request (Nov 2026). This was asked for; do not centre the
   strip again.
 - **One view at a time.** Picking a view shows it alone (`showOnly()`): the
@@ -325,30 +411,17 @@ How the page is put together:
   timeline holds brings its own view alone too (`bringIn()`); only a link
   that names its views keeps them and adds. Do not make adding the default
   again: it was changed on purpose.
-- **The views pane** heads with one slim line: "Views" with how many views
-  and entries there are, then the GitHub link (moved there from the top bar
-  on request, Nov 2026), the info button and the cross. Below it is search, then a row of chips (`drawChips()`: the
-  editors' topics from `data/editors-choice.json`, today Countries,
-  Culture, History, Science and Technology, after a first chip "My view"),
-  then the list, then the filter: the year range (`state.span`). "My view"
-  is pressed when no topic is, and the list then holds only the views on
-  the timeline; there is no "All" list (removed on request, Nov 2026: "just
-  have a current showing there, and anything we search"). With several
-  views, the "My view" heading of that list carries shuffle (dots in the views' colours on a turning arrow), which mixes
-  their colours (moved there from the strip on request, Nov 2026). Pressing a chip
-  lists that topic's views; pressing it again, or "My view", goes back.
-  Both search boxes have a cross that clears them (`.clr`). A search finds
-  every view, community and classical, and entries and years. "How much to show" was
-  removed on request (Nov 2026): every entry of a view is on the road, and
-  the road's scale and the cards by distance do the rest. On a phone the filters fold into one line
-  (`#filters-btn`) so the list has the sheet. Only community views sit
-  under the chips.
+- **The search and chips of Explore.** The search finds every timeline,
+  community and classical, and entries and years (`runSearch()`,
+  `drawResults()`); entries and years are slim rows under the cards.
+  Pressing a chip lists that topic's timelines; pressing it again, or
+  "All", goes back. Both search boxes have a cross that clears them
+  (`.clr`). With several views on the road, shuffle (which mixes their
+  colours) sits in the strip beside the three dots (`#shuffle`).
   Classical views are found by the search, where every result
-  carries an icon that says which sort it is. A row is a thumbnail made by
-  the build (`scripts/thumb.mjs`), then the name and one quiet line
-  (`viewSub()`: the years the view covers and how many entries it holds).
-  The description is the row's tooltip and is searched; it is not printed
-  in the list. Keep the row to those two lines.
+  carries an icon that says which sort it is. A card's picture is the
+  thumbnail made by the build (`scripts/thumb.mjs`); a timeline someone
+  stored shows its initials.
 - **The heading.** The views on the road are named across the top centre, in the order of their lanes, each with the chapter the reader is in below it in small capitals in its colour, with no lines (`#road-views`; style "A", picked from six); the year the reader stands in is written large on the right (`#road-year`), and where the road stops at the present it reads "Today". Asked for in Nov 2026.
 - **The years.** `ruler()` writes the years along the edge of the road and
   `barTicks()` those on the bar. Because the scale is uneven there is no
@@ -366,7 +439,7 @@ How the page is put together:
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates;
   on a phone deep time is written short (100k, 66M, 13.8B years ago, asked
   for, Nov 2026).
-- **Export as PDF.** The PDF icon in the strip (`site/media/pdf.svg`, from Wikimedia Commons, asked for, its red muted until pointed at; tooltip "Export as PDF"), beside reverse, opens `print.html` in the same tab (asked for, Nov 2026; its codegrave logo leads back to the timeline) with the views on the timeline, their order and colours (`?views=…&c=…`, `&yr=` when the year range is narrowed: then only the entries begun in that range are printed, and `&o=forward` or `&o=backward`, the direction of the timeline (the page's own link carries it too): backward: then every page reads from today back, newest first; the print page also has a Timeline switch: Forward, past to today, or Backward, today to past, which rewrites `o` in its link). `site/print.js` loads the same view files, lays the pages out by measuring them in the browser, and waits (nothing opens by itself, asked for in Nov 2026). Its "Download PDF" button saves a .pdf in one click (picked over the print dialog and over a server, Nov 2026): each page is drawn to an image by html2canvas and the images are put into one file by jsPDF, both fetched from cdnjs only when pressed; so the text in the file is not selectable, and pictures must allow CORS (`crossorigin` on every picture; Wikimedia does). Printing is left to the browser, which uses `print.css`. With a year range, only the chapters that overlap it are shown. Chapters are not numbered anywhere in the export (asked for, Nov 2026). The reading font (names, headings, summaries; `--serif`) is picked under Text from ten free fonts (`FONTS_OFFERED`, SIL Open Font License, fetched from Google Fonts only when picked, `&font=` in the link); Lora is the default (picked from the ten, Nov 2026; Bookerly was asked for first, but it is Amazon's and cannot be served). Text size, a slider from 60 to 150 % under Text (`&size=`); its 100 % is 1.4 times the size the layout was drawn for (`TEXT_BASE`; asked for, Nov 2026: the old 140 % read best, so it became the default): the book scales its reading text (`--fs`; the headers, rails and cover titles keep their size) and keeps its layout, so larger text takes more pages; the poster scales whole sheets in `posterSheet()` as far as two rows of cards fit the paper, then the cards' text alone (`--tf`). Only the codegrave name keeps Instrument Serif. The bar has two menus, each naming its current choices on its button (asked for, Nov 2026, as the old Template plus Export options felt mixed): Layout, the shape of the document (Template, Paper, Timeline), and Text, how it reads (Font, Size); opening one closes the other, and on a phone their buttons read just Layout and Text. On a screen narrower than the paper the pages are zoomed out to its width with a CSS transform (`fit()`), so the layout is exactly the full-size one and nothing reflows (CSS zoom drew the pages wrongly on phones and was replaced, Nov 2026); the PDF and images are drawn at full size (`onclone` takes the transform off). A folded top right corner on each poster sheet, like frosted glass, with a small download arrow, saves that sheet as a PNG (`sheetImage()`, asked for, Nov 2026), never printed. The paper is A4 or Letter: `paperFor()` picks the one used where the reader is (Letter for the US and a few others), and the Paper switch offers both. One style for every view, asked for in Nov 2026 after several rounds: no full-page pictures, printable pages. One view: a cover with its thumbnail picture (a flag), then entries on the left under their chapters and the page's stretch of the timeline down the right, with a bar at its top showing where the page sits, no scale numbers, a dot level with each name and a straight dotted line, beside the dot only the year it began, in a size that fills the rail (not its name again, nor the year it ended; asked for, Nov 2026), a curve only where entries share a year, chapter tints (grey before the first chapter). Several views: a cover whose tiles start just under the title and fit their boxes for 2 to 8 views (`fitTiles()`: the chapter list is cut short with "… and N more", then the description to two lines, then the pictures; asked for, Nov 2026), then one timeline down the exact middle in strict date order, each year written once; views stand left and right like the pips of a die (1st left, 2nd right, 3rd left…), each in a box bordered in its colour that appears where its entries fall; the heading names the left views on the left and the right views on the right. The cover's heading reads "A timeline from codegrave.com"; the link in the footer is printed only on the last page. The Template switch (the poster is the default, asked for in Nov 2026; `fmt=book` for the book) also offers a Poster ( `poster()` in `site/print.js`, picked from four designs and reworked over several rounds, Nov 2026): landscape sheets on A2, A3, A4 or Letter (the Paper switch; asked for, Nov 2026, so it prints at home): laid out in A2 sizes and scaled to the paper (`posterSheet()`), A3 as A2 at 0.71 with four rows, A4 and Letter at 0.8 with two rows of taller cards, as few sheets as keep the cards at least 44 mm wide before scaling (Space Exploration: three on A2 or A3, eight on A4, nine on Letter); one thick line across the middle coloured by chapter and named on itself; every entry a card (picture, kind, name, years, summary; no credit over the picture: the credits are listed on a sheet of their own at the end, asked for), on white paper with few colours: the chapters' colours on the band, the cards' top edges and years, the rest grey on one grid shared by four rows, so every row starts at the left edge and ends at the right, with any gaps inside; each column reads top to bottom in date order, the inner cards' lines drop straight to the line and the outer cards' run down the gutter, so no line crosses a card; a small ring and the year in plain text where each line meets the band (pills were rejected); cards that share a year meet the band at one point with the year written once on each side a line comes from, their lines bending to it in a short curve so the order holds (asked for, Nov 2026); a small heading on every sheet (on the first sheet the view's thumbnail, a flag, stands just before its name in the title, 4 mm high on paper, asked for, Nov 2026): alone in the top right corner the whole span as a bar in the chapters' colours with this sheet's stretch outlined and its years (no "Part 2 of 3"), and below it the title in a light weight with, on the first sheet, the description just after it (asked for: the heading is not the focus); cards bordered all round in a soft tint of their chapter's colour (`soften()`, asked for); with several views a card whose view has a thumbnail carries it small (2.4 mm on paper) on its top border at the left, with no name (`.cthumb`); the book's view boxes show the thumbnail at the top left when there is one, else the view's name in its colour (asked for, Nov 2026); the band ends in a point of its own last colour; a footer from the start of the line to its point with the note of each chapter on the sheet in its colour (several views: a key of the views); "codegrave.com" very small at the bottom centre of every sheet, under the footer, so the chapter notes have the footer's whole width and nothing overlaps (asked for, Nov 2026); nothing stands nearer than about 5 mm to the edge of the paper, and the band's point stands as far from the right edge as its start from the left, because home printers cut the edges (asked for, Nov 2026). The downloaded file is named after the views, the template and the paper (`space-exploration-poster-a4.pdf`). Keep the rules above unless asked.
+- **Export as PDF.** "Export as PDF" in the three-dot menu (with the PDF icon, `site/media/pdf.svg`, from Wikimedia Commons, asked for) opens `print.html` in the same tab (asked for, Nov 2026; its codegrave logo leads back to the timeline) with the views on the timeline, their order and colours (`?views=…&c=…`, `&yr=` when the year range is narrowed: then only the entries begun in that range are printed, and `&o=forward` or `&o=backward`, the direction of the timeline (the page's own link carries it too): backward: then every page reads from today back, newest first; the print page also has a Timeline switch: Forward, past to today, or Backward, today to past, which rewrites `o` in its link). `site/print.js` loads the same view files, lays the pages out by measuring them in the browser, and waits (nothing opens by itself, asked for in Nov 2026). Its "Download PDF" button saves a .pdf in one click (picked over the print dialog and over a server, Nov 2026): each page is drawn to an image by html2canvas and the images are put into one file by jsPDF, both fetched from cdnjs only when pressed; so the text in the file is not selectable, and pictures must allow CORS (`crossorigin` on every picture; Wikimedia does). Printing is left to the browser, which uses `print.css`. With a year range, only the chapters that overlap it are shown. Chapters are not numbered anywhere in the export (asked for, Nov 2026). The reading font (names, headings, summaries; `--serif`) is picked under Text from ten free fonts (`FONTS_OFFERED`, SIL Open Font License, fetched from Google Fonts only when picked, `&font=` in the link); Lora is the default (picked from the ten, Nov 2026; Bookerly was asked for first, but it is Amazon's and cannot be served). Text size, a slider from 60 to 150 % under Text (`&size=`); its 100 % is 1.4 times the size the layout was drawn for (`TEXT_BASE`; asked for, Nov 2026: the old 140 % read best, so it became the default): the book scales its reading text (`--fs`; the headers, rails and cover titles keep their size) and keeps its layout, so larger text takes more pages; the poster scales whole sheets in `posterSheet()` as far as two rows of cards fit the paper, then the cards' text alone (`--tf`). Only the codegrave name keeps Instrument Serif. The bar has two menus, each naming its current choices on its button (asked for, Nov 2026, as the old Template plus Export options felt mixed): Layout, the shape of the document (Template, Paper, Timeline), and Text, how it reads (Font, Size); opening one closes the other, and on a phone their buttons read just Layout and Text. On a screen narrower than the paper the pages are zoomed out to its width with a CSS transform (`fit()`), so the layout is exactly the full-size one and nothing reflows (CSS zoom drew the pages wrongly on phones and was replaced, Nov 2026); the PDF and images are drawn at full size (`onclone` takes the transform off). A folded top right corner on each poster sheet, like frosted glass, with a small download arrow, saves that sheet as a PNG (`sheetImage()`, asked for, Nov 2026), never printed. The paper is A4 or Letter: `paperFor()` picks the one used where the reader is (Letter for the US and a few others), and the Paper switch offers both. One style for every view, asked for in Nov 2026 after several rounds: no full-page pictures, printable pages. One view: a cover with its thumbnail picture (a flag), then entries on the left under their chapters and the page's stretch of the timeline down the right, with a bar at its top showing where the page sits, no scale numbers, a dot level with each name and a straight dotted line, beside the dot only the year it began, in a size that fills the rail (not its name again, nor the year it ended; asked for, Nov 2026), a curve only where entries share a year, chapter tints (grey before the first chapter). Several views: a cover whose tiles start just under the title and fit their boxes for 2 to 8 views (`fitTiles()`: the chapter list is cut short with "… and N more", then the description to two lines, then the pictures; asked for, Nov 2026), then one timeline down the exact middle in strict date order, each year written once; views stand left and right like the pips of a die (1st left, 2nd right, 3rd left…), each in a box bordered in its colour that appears where its entries fall; the heading names the left views on the left and the right views on the right. The cover's heading reads "A timeline from codegrave.com"; the link in the footer is printed only on the last page. The Template switch (the poster is the default, asked for in Nov 2026; `fmt=book` for the book) also offers a Poster ( `poster()` in `site/print.js`, picked from four designs and reworked over several rounds, Nov 2026): landscape sheets on A2, A3, A4 or Letter (the Paper switch; asked for, Nov 2026, so it prints at home): laid out in A2 sizes and scaled to the paper (`posterSheet()`), A3 as A2 at 0.71 with four rows, A4 and Letter at 0.8 with two rows of taller cards, as few sheets as keep the cards at least 44 mm wide before scaling (Space Exploration: three on A2 or A3, eight on A4, nine on Letter); one thick line across the middle coloured by chapter and named on itself; every entry a card (picture, kind, name, years, summary; no credit over the picture: the credits are listed on a sheet of their own at the end, asked for), on white paper with few colours: the chapters' colours on the band, the cards' top edges and years, the rest grey on one grid shared by four rows, so every row starts at the left edge and ends at the right, with any gaps inside; each column reads top to bottom in date order, the inner cards' lines drop straight to the line and the outer cards' run down the gutter, so no line crosses a card; a small ring and the year in plain text where each line meets the band (pills were rejected); cards that share a year meet the band at one point with the year written once on each side a line comes from, their lines bending to it in a short curve so the order holds (asked for, Nov 2026); a small heading on every sheet (on the first sheet the view's thumbnail, a flag, stands just before its name in the title, 4 mm high on paper, asked for, Nov 2026): alone in the top right corner the whole span as a bar in the chapters' colours with this sheet's stretch outlined and its years (no "Part 2 of 3"), and below it the title in a light weight with, on the first sheet, the description just after it (asked for: the heading is not the focus); cards bordered all round in a soft tint of their chapter's colour (`soften()`, asked for); with several views a card whose view has a thumbnail carries it small (2.4 mm on paper) on its top border at the left, with no name (`.cthumb`); the book's view boxes show the thumbnail at the top left when there is one, else the view's name in its colour (asked for, Nov 2026); the band ends in a point of its own last colour; a footer from the start of the line to its point with the note of each chapter on the sheet in its colour (several views: a key of the views); "codegrave.com" very small at the bottom centre of every sheet, under the footer, so the chapter notes have the footer's whole width and nothing overlaps (asked for, Nov 2026); nothing stands nearer than about 5 mm to the edge of the paper, and the band's point stands as far from the right edge as its start from the left, because home printers cut the edges (asked for, Nov 2026). The downloaded file is named after the views, the template and the paper (`space-exploration-poster-a4.pdf`). Keep the rules above unless asked.
 - **Words.** A person is born and dies; a city is founded; a species goes
   extinct. The words come from the entry's branch (`words` in `boot.json`,
   `wordsNow()` for mixed text).
@@ -383,17 +456,13 @@ How the page is put together:
 - **The entry pane** shows the kind and branch, labels, other names, every
   event, link and source, and a note when the entry is a community entry.
   A link to an entry that is not loaded shows its name and loads on click.
-- "Propose a view" at the foot of the panel, under the filters (moved
-  there on request, Nov 2026), opens the "Propose a view" issue
+- "Propose it to the editors" at the foot of Explore opens the "Propose a view" issue
   form with the current link filled in.
-- **Play takes the whole screen.** The top bar floats over the road: the
-  road (`#stage`) always fills the page from the top, and keeps a band of
-  `TOP` pixels clear (`stageOf(SW, SH, top)` puts the road and the names
-  below it), so nothing moves when the bar comes and goes. While play
-  travels the bar slides away (`body.playing`); pointing at the top edge
-  brings it back (`body.peek`), over the open panel too (asked for, Nov
-  2026), and it returns when play stops. Asked for in Nov 2026: do not make the
-  road move with the bar again.
+- **Play takes the whole screen.** The road (`#stage`) always fills the
+  page from the top (`stageOf(SW, SH, top)` keeps `TOP` pixels of air
+  above it). While play travels, what floats at the top (the phone's menu
+  button, Publish) slides away (`body.playing`); pointing at the top edge
+  brings it back (`body.peek`), and it returns when play stops.
 - Pictures are never cropped: cards, the walls, the panel and the view
   thumbnails show the whole picture (`object-fit: contain`), portrait or
   landscape. A wall frame takes the shape of its picture (`fit()` in

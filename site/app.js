@@ -8,6 +8,7 @@
 import { WEIGHTS, parseDate, yearOf as writtenYear } from './rank.js';
 import { shardOf, fold, tokens, prefixOf, addressOf, idOfAddress } from './keys.js';
 import { createWall } from './wall.js';
+import { createAccount } from './account.js';
 import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace } from './road.js';
 
 (() => {
@@ -17,7 +18,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   const EDITORS = 'wiki';      // the editors' folder: its views are not signed in the list
   const MAX_VIEWS = 8;
   const MAX_ROWS = 800;         // the most lines drawn at once
-  const TOP = 52;               // the top bar's height: it floats over the road, which keeps this band clear
+  const TOP = 14;               // a little air above the road. There is no bar across the top any more (asked for, Nov 2026)
   // How a link reads from the entry that carries it, and from the entry it points to.
   const LINK_LABELS = {
     succeeded_by: 'succeeded by', forked_from: 'forked from', merged_into: 'merged into',
@@ -135,7 +136,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const A = yearText(a), B = yearText(b);
     return (A.includes(' ') || B.includes(' ')) && ua !== 'bce' ? A + ' – ' + B : A + '–' + B;
   }
-  const spanOf = (t) => spanText(writtenYear(t.bornEv.date), t.endEv ? writtenYear(t.endEv.date) : null);
+  // A step of a plan someone made (a day of a trip, a week of a course) is told by its days, not its year:
+  // "3 Apr 2027", "5–11 Apr 2027". Only for entries made with AI (their ids start with "x") that fall inside one year.
+  function daysOf(t) {
+    if (!t.endEv || !/^x/.test(t.id.split('/').pop())) return '';
+    const a = dateParts(t.bornEv.date), b = dateParts(t.endEv.date);
+    if (!a.d || !b.d || a.y !== b.y) return '';
+    const mon = (m) => MONTHS[m - 1].slice(0, 3);
+    if (a.m === b.m) return (a.d === b.d ? a.d : a.d + '–' + b.d) + ' ' + mon(a.m) + ' ' + a.y;
+    return `${a.d} ${mon(a.m)} – ${b.d} ${mon(b.m)} ${a.y}`;
+  }
+  const spanOf = (t) => daysOf(t) || spanText(writtenYear(t.bornEv.date), t.endEv ? writtenYear(t.endEv.date) : null);
   function fmtSpan(years) {
     if (years < 1) return 'under a year';
     const n = Math.round(years);
@@ -246,7 +257,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!boot) return;
     const n = group(boot.counts?.entries || 0), views = (boot.views || []).length;
     $('q').placeholder = matchMedia(PHONE).matches ? 'Search the timeline' : 'Search the timeline: a person, a place, an event or a year';
-    $('vscope').textContent = `${group(views)} ${views === 1 ? 'view' : 'views'} · ${n} entries`;
+    $('vscope').textContent = `${group(views)} ${views === 1 ? 'timeline' : 'timelines'} · ${n} entries`;
   }
   // The branches above a domain, nearest first: software, computing, technology.
   function lineage(id) {
@@ -268,7 +279,8 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function ingest(e) {
     if (byId.has(e.id)) return byId.get(e.id);
     const t = e;
-    t.cat = catById.get(t.category) || { id: t.category, name: t.category, domain: null, i: 1e4 };
+    // An entry someone made (with AI) names its kind in words and its branch in `domain`.
+    t.cat = catById.get(t.category) || { id: t.category, name: t.category, domain: t.domain || null, i: 1e4 };
     t.dom = domById.get(t.cat.domain) || null;
     t.words = (t.dom && t.dom.words) || NEUTRAL;
     const ev = (type) => t.events.find((x) => x.type === type);
@@ -317,10 +329,24 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const real = alias.get(id) || id;
     const v = viewById.get(real);
     if (v && v.members) return Promise.resolve(real);
-    return Promise.all([getJSON('v/' + real + '.json'), bootReady])
-      .then(([payload]) => { broken.delete(real); return useView(payload, id).id; })
+    // A built view (the editors', a classical one) is a file. A timeline someone keeps (account.js) is read
+    // from the database: "t/<id>", or "<username>/<slug>" where no community folder has that name.
+    const built = !real.includes('/') || real.startsWith('wiki/');
+    const read = built ? Promise.all([getJSON('v/' + real + '.json'), bootReady]).then(([p]) => p)
+      : bootReady.then(() => (ownerTitle.has(real.split('/')[0]) ? getJSON('v/' + real + '.json') : account.fetchView(real)));
+    return read.then((payload) => { broken.delete(real); return useView(payload, id).id; })
       .catch(() => { broken.add(real); return null; });
   }
+  // A stored timeline changed (renamed, an entry added or removed): the page takes the new one.
+  function replaceView(payload) {
+    const id = payload.view.id;
+    viewById.delete(id);
+    useView(payload);
+    if (state.views.includes(id)) changed();
+  }
+  function forgetView(id) { viewById.delete(id); removeView(id); }
+  // A stored timeline's address is its owner's once it is public; any other view's is its id.
+  const addr = (id) => account.addressOf(id) || addressOf(id);
   // One entry by id, from its detail file: one request, whatever the size of the data.
   function loadEntry(id) {
     if (byId.has(id)) return Promise.resolve(byId.get(id));
@@ -543,14 +569,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   }
   function writeUrl() {
     const q = new URLSearchParams();
-    if (state.views.length > 1) q.set('with', state.views.slice(1).map(addressOf).join(','));
+    if (state.views.length > 1) q.set('with', state.views.slice(1).map(addr).join(','));
     q.set('o', state.order === 'new' ? 'backward' : 'forward');
     if (state.span) q.set('yr', state.span.join('-'));
     if (state.views.some((id, i) => state.colors.get(id) !== i)) q.set('c', state.views.map((id) => colOut(state.colors.get(id))).join(','));
     // The tab names the views shown, as the view's own page does before the script runs.
     const names = state.views.map((id) => viewById.get(id)?.name).filter(Boolean);
     document.title = names.length ? names.join(', ') + ': a timeline · codegrave' : 'codegrave: a timeline of everything. Nothing ships forever.';
-    history.replaceState(null, '', '/' + (state.views[0] ? addressOf(state.views[0]) : '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
+    history.replaceState(null, '', '/' + (state.views[0] ? addr(state.views[0]) : '') + '?' + q.toString().replace(/%2C/g, ',').replace(/%2F/g, '/') + location.hash);
   }
 
   // ---------------------------------------------------------------- what is drawn
@@ -584,11 +610,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     // ended long ago. The reader can narrow it with the year range in the panel.
     const starts = all.map((t) => t.lead ?? t.born).sort((a, b) => a - b);
     const earliest = all.length ? starts[0] : NOW - 30;
-    const last = all.length ? Math.max(...all.map((t) => Math.max(t.end ?? NOW, t.after ?? -Infinity))) : NOW;
+    // A plan (a trip, a course) is dated ahead of today, and then the road runs on to its last step (asked for, Nov 2026).
+    const last = all.length ? Math.max(...all.map((t) => Math.max(t.end ?? NOW, t.born, t.after ?? -Infinity))) : NOW;
     // Rounded out to a step that suits the span, with a little room at each end.
     const around = (from, to) => {
       const room = Math.max(10, to - from), pad0 = Math.max(1, room * 0.03), unit = niceStep(room / 40);
-      const b = to >= NOW - 0.5 ? NOW : Math.min(NOW, Math.ceil((to + pad0) / unit) * unit);
+      const b = to > NOW + 0.003 ? Math.ceil(to + 0.1) : to >= NOW - 0.5 ? NOW : Math.min(NOW, Math.ceil((to + pad0) / unit) * unit);
       return [Math.floor(Math.min(from - pad0, b - 10) / unit) * unit, b];
     };
     const [fitMin, fitMax] = around(earliest, last);
@@ -605,7 +632,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const minGap = Math.max(2, (fitMax - fitMin) / 500);
       tMin = clamp(lineYear(state.span[0]), fitMin, fitMax - minGap);
       tMax = clamp(lineYear(state.span[1]) + 1, tMin + minGap, fitMax);
-      if (tMax >= NOW_YEAR) tMax = Math.min(tMax, NOW);
+      if (tMax >= NOW_YEAR && fitMax <= NOW) tMax = Math.min(tMax, NOW);
     }
     const inSpan = (t) => (t.lead ?? t.born) < tMax && (t.end ?? NOW) >= tMin;
     return { selected, groupsOf, rowsOf, all, fitMin, fitMax, autoMin, tMin, tMax, inSpan };
@@ -653,7 +680,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('status').hidden = false;
     $('status').textContent = pending.size ? 'Loading the timeline…' : 'Pick a view to draw its timeline.';
     renderSide();
-    if (!pending.size) showSide(true);
+    if (!pending.size) account.explore(true);
   }
 
   // ---------------------------------------------------------------- the road
@@ -720,7 +747,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     const { place, when, at } = warp(marks.map((m) => [m.at, m.w]), tMin, tMax);
     const spot = [new Map(), new Map()];      // where each entry starts, and where it ends
     marks.forEach((m, i) => spot[m.end].set(m.t, at[i]));
-    const from = (t) => spot[0].get(t), to = (t) => (t.end == null ? place(NOW) : spot[1].get(t) ?? from(t));
+    const from = (t) => spot[0].get(t), to = (t) => (t.end == null ? Math.max(from(t), place(NOW)) : spot[1].get(t) ?? from(t));
     const D = focalYears(lanes.flatMap((l) => l.mine.map(from)), tMin, tMax);
     const laneW = lanes.length ? (2 * G.RW) / lanes.length : 0, pad = Math.min(G.phone ? 14 : 24, laneW * 0.15);
     const shown = [], groups = [];
@@ -1329,7 +1356,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
         const s = S(uEnd), y = py(s), a = far(s);
         c.strokeStyle = rgba(P.text, 0.85 * a); c.lineWidth = 1.4;
         c.beginPath(); c.moveTo(px(-G.RW, s) - 10 * s, y); c.lineTo(px(G.RW, s) + 10 * s, y); c.stroke();
-        if (dir > 0 && L.tMax >= NOW - 0.5) {
+        if (dir > 0 && L.tMax >= NOW - 0.5 && L.tMax <= NOW + 0.01) {
           font(600, Math.max(10, 9 + 9 * s));
           c.textBaseline = 'middle'; c.textAlign = 'right'; c.fillStyle = rgba(P.text, 0.9 * a);
           c.fillText('Today', px(-G.RW, s) - 16 * s - 4, y);
@@ -1351,7 +1378,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // millions or billions of years.
   function barTicks() {
     const yMin = writtenOf(L.tMin), yMax = writtenOf(L.tMax - 1e-9);
-    const atNow = L.tMax >= NOW - 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
+    const atNow = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01, yEnd = barY(L.tMax), gap = L.G.phone ? 34 : 30;
     // On a phone the bar is slim: "BCE" or "Ma" goes under its number.
     const marks = yearMarks(yMin, yMax, (y) => barY(L.place(lineYear(y))), () => gap, 7);
     const marked = eraMarked(marks.filter((k) => k.label && !(atNow && Math.abs(k.p - yEnd) < 22)).map((k) => k.y));
@@ -1377,7 +1404,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   function roadHud(all) {
     const t = road.t, D = L.D, dir = camDir(), m = L.when(t);
     // Where the road stops at the present, the year reads "Today" (asked for, Nov 2026).
-    const label = L.tMax >= NOW - 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : playLabel(m);
+    const label = L.tMax >= NOW - 0.01 && L.tMax <= NOW + 0.01 && camDir() > 0 && camAtEnd() ? 'Today' : playLabel(m);
     if (label !== road.said) {
       road.said = label;
       $('road-year').textContent = label;
@@ -1630,14 +1657,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('side').hidden = !on;
     document.body.classList.toggle('side-open', on);
     $('toggle-side').setAttribute('aria-expanded', on);
-    if (!on) $('info').hidden = true;
     if (was !== on && state.views.length) render();
   }
   function showPane(name) {
     state.pane = name;
-    for (const p of ['views', 'thing', 'era']) $('p-' + p).hidden = p !== name;
+    // The panel on the right holds one entry or one era. The views (Explore) are in the bar on the left.
+    for (const p of ['thing', 'era']) $('p-' + p).hidden = p !== name;
     $('side').scrollTop = 0;
-    if (name !== 'views') $('info').hidden = true;
+    if (name === 'views' && !$('side').hidden) showSide(false);
   }
   let noteText = '', noteTimer = 0;
   function note(text, ms = 6000) {
@@ -1657,6 +1684,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     }).join('');
     requestAnimationFrame(pillEdges);
     $('swatches').hidden = true;
+    $('shuffle').hidden = !many;
 
     drawYears();
     $('filters-sum').textContent = state.views.length ? $('years-out').textContent : '';
@@ -1734,9 +1762,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (state.topic && !list.some((d) => d.id === state.topic)) state.topic = '';
     const chip = (id, name) => `<button type="button" role="radio" data-chip="${esc(id)}" aria-checked="${state.topic === id}">${esc(name)}</button>`;
     const ids = list.map((d) => d.id).join(',');
-    // "My view" comes first: the views on the timeline, pressed when no topic is.
+    // "All" comes first, pressed when no topic is: a few timelines of every topic.
     // Redrawn only when the chips change, so the row keeps its sideways scroll.
-    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'My view') + list.map((d) => chip(d.id, d.name)).join(''); }
+    if (box.dataset.ids !== ids) { box.dataset.ids = ids; box.innerHTML = chip('', 'All') + list.map((d) => chip(d.id, d.name)).join(''); }
     else for (const b of box.querySelectorAll('[data-chip]')) b.setAttribute('aria-checked', b.dataset.chip === state.topic);
     requestAnimationFrame(chipEdges);
   }
@@ -1751,6 +1779,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
   // pressed. Search finds every view, community and classical (the map:
   // everything, each branch, each kind), and entries and years.
   let found = [], active = -1;
+  const SHELF = 8;               // cards of one topic on the first page of Explore
   function runSearch() {
     const raw = $('vq').value.trim(), q = fold(raw);
     found = [];
@@ -1758,8 +1787,16 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (state.topic) {
         for (const v of boot?.views || []) if (chipOf(v) === state.topic) found.push({ v: viewById.get(v.id) || v });
       } else {
-        found.push({ head: 'My view', shuffle: true });
-        for (const id of [...state.views, ...pending]) if (viewById.get(id)) found.push({ v: viewById.get(id) });
+        // All: what people have published lately, then a row or two of every topic with a way to see the rest.
+        const people = account.published();
+        if (people.length) { found.push({ head: 'New from the community' }); for (const v of people.slice(0, SHELF)) found.push({ v: viewById.get(v.id) || v }); }
+        // Countries come last: there are nearly two hundred of them, and they would bury the rest.
+        for (const d of [...chipList()].sort((a, b) => (a.id === 'countries') - (b.id === 'countries'))) {
+          const all = (boot?.views || []).filter((v) => chipOf(v) === d.id);
+          if (!all.length) continue;
+          found.push({ head: d.name, chip: d.id, n: all.length });
+          for (const v of all.slice(0, SHELF)) found.push({ v: viewById.get(v.id) || v });
+        }
       }
       active = -1;
     } else {
@@ -1818,26 +1855,30 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     $('vnote').textContent = msg;
     function row(f, i) {
       let name, sub, tb, attrs = '', side = '';
-      if (f.wait) return '<li class="none" role="presentation">Searching every view…</li>';
-      // "My view" carries shuffle, which mixes the colours of the views on the timeline (moved here from the strip, Nov 2026).
-      if (f.head) return `<li class="vhead" role="presentation"><span>${esc(f.head)}</span>${f.shuffle && state.views.length > 1 ? `<button type="button" class="shuf" data-shuffle aria-label="Shuffle colours" title="Shuffle colours">${ICON.shuffle}</button>` : ''}</li>`;
+      if (f.wait) return '<li class="none" role="presentation">Searching every timeline…</li>';
+      if (f.head) return `<li class="vhead" role="presentation"><span>${esc(f.head)}</span>${f.chip && f.n > SHELF ? `<button type="button" class="lnk" data-chip="${esc(f.chip)}">See all ${group(f.n)}</button>` : ''}</li>`;
       if (f.mine) { name = 'Your view'; sub = f.mine.views.map((id) => viewById.get(alias.get(id) || id)?.name || id).join(', '); tb = `<span class="tb icon">${ICON.save}</span>`; }
       else if (f.propose) { name = 'Propose a view'; sub = 'Send the timeline you see now, or describe a new one'; tb = `<span class="tb icon">${ICON.plus}</span>`; }
       else if (f.year != null) { name = 'Go to ' + esc(yearText(f.year)); sub = 'On the timeline'; tb = `<span class="tb icon">${ICON.dot}</span>`; }
       else if (f.e) { name = mark(f.e.name, q); sub = `${esc(kindName(f.e.kind))} · ${f.how ? `<em class="yw">${esc(yearWord(f.e, f.how, f.how === 'born' ? f.e.born : f.e.end))}</em>` : esc(lineSpan(f.e))}${f.e.tier === 2 ? ' · community' : ''}`; tb = `<span class="tb icon">${ICON.dot}</span>`; }
       else {
+        // A timeline is a card: its picture, its name, what it is about, and who made it.
         const v = f.v, on = state.views.includes(v.id), wait = pending.has(v.id), bad = broken.has(v.id);
         const kind = v.type === 'classical' ? 'classical' : 'community';
-        // The icon tells the two sorts apart where a search mixes them; the list itself holds one sort.
-        name = `<span>${mark(v.name, q)}</span>${q ? `<i title="${kind === 'classical' ? 'Classical view' : 'Community view'}">${ICON[kind]}</i>` : ''}`;
-        sub = (on ? '<span class="st">On the timeline</span> · ' : wait ? '<span class="st">Loading…</span> · ' : bad ? '<span class="st bad">Could not load</span> · ' : '') + esc(viewSub(v));
-        tb = `<span class="tb">${thumb(v)}</span>`;
-        attrs = `${v.description ? ` title="${esc(v.description)}"` : ''} aria-checked="${on}"${on ? ` style="--c:${colVar(state.colors.get(v.id))}"` : ''}${wait ? ' aria-busy="true" class="loading"' : ''}`;
+        const who = v.type === 'classical' ? 'codegrave' : v.author || EDITORS;
+        const st = on ? '<span class="st">On the timeline</span>' : wait ? '<span class="st">Loading…</span>' : bad ? '<span class="st bad">Could not load</span>' : '';
+        const facts = [v.span ? spanText(v.span[0], v.span[1]) : '', v.count != null ? `${group(v.count)} ${v.count === 1 ? 'entry' : 'entries'}` : ''].filter(Boolean).join(' · ');
+        const card = `<li role="option" class="card${wait ? ' loading' : ''}" aria-selected="${i === active}" aria-checked="${on}"${on ? ` style="--c:${colVar(state.colors.get(v.id))}"` : ''}${wait ? ' aria-busy="true"' : ''} data-i="${i}">` +
+          `<span class="tb">${v.thumb ? thumb(v) : `<span class="th-mono">${esc(initials(v.name))}</span>`}${st}</span>` +
+          `<span class="r-txt"><b><span>${mark(v.name, q)}</span>${q ? `<i title="${kind === 'classical' ? 'Classical view' : 'Community timeline'}">${ICON[kind]}</i>` : ''}</b>` +
+          `<small class="desc">${esc(v.description || (v.type === 'classical' ? viewSub(v) : ''))}</small>` +
+          `<small class="meta"><i class="av" aria-hidden="true">${esc(who.slice(0, 1).toUpperCase())}</i><span>${esc(who)}</span>${facts ? `<span class="fx">${esc(facts)}</span>` : ''}</small></span>`;
         // Beside the others: add it, or take it off when it is one of several.
         if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}</button>`;
         else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}</button>`;
+        return card + side + '</li>';
       }
-      return `<li role="option" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
+      return `<li role="option" class="line" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
     }
   }
   // "Propose a view" at the foot of the panel opens the issue form with this link filled in.
@@ -1850,16 +1891,17 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (!f || f.wait || f.head) return;
     if (f.mine) return loadMine(f.mine);
     if (f.propose) return propose();
-    if (f.year != null) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); if (matchMedia(PHONE).matches) showSide(false); return flashYear(f.year); }
-    if (f.e) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); return bringIn(f.e.id, { focus: true }); }
+    if (f.year != null) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); account.explore(false); return flashYear(f.year); }
+    if (f.e) { $('vq').value = ''; $('vq').dispatchEvent(new Event('input')); account.explore(false); return bringIn(f.e.id, { focus: true }); }
     if (pending.has(f.v.id)) return;
     if (beside) {
       if (!state.views.includes(f.v.id)) turnOn(f.v.id);
       else if (state.views.length > 1) { removeView(f.v.id); changed(); }
       return;
     }
-    // On a phone the list is a sheet over the road: it steps aside to show what was picked.
-    showOnly(f.v.id).then((got) => { if (got && matchMedia(PHONE).matches) showSide(false); });
+    // Explore is a page over the road: it steps aside to show what was picked.
+    account.explore(false);
+    showOnly(f.v.id);
   }
 
   // "Your view" was a view saved in this browser with a bookmark button. The button was removed, so an
@@ -1874,7 +1916,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     state.span = Array.isArray(v.span) && v.span.length === 2 && v.span.every(Number.isFinite) ? v.span : null;
   }
 
-  function changed() { render(); writeUrl(); }
+  function changed() { render(); writeUrl(); account.sync(); }
 
   // ---------------------------------------------------------------- panel: history of one entry
   // A link to another entry: its name travels with the link, so it shows before that entry is loaded.
@@ -1985,7 +2027,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       ${rel.length ? `<section><h3 class="cap">Connections</h3>${rel.join('')}</section>` : ''}
       <section><h3 class="cap">Sources</h3><ol class="sources">${(t.sources || []).map((s) => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>${s.kind ? ` <small>${esc(s.kind)}</small>` : ''}</li>`).join('')}</ol>
         <p class="fine">${t.verified ? 'Dates checked against these sources.' : 'Its dates are not yet checked against a source.'}${t.topPct ? ` Ranked in the top ${t.topPct}% of ${esc(t.peers)}.` : ''}</p></section>
-      <div class="pane-foot"><button type="button" class="btn" data-copy="${esc(link)}">Copy link</button><a class="btn" href="${esc(issue)}" target="_blank" rel="noopener">Suggest a correction</a></div>`;
+      <div class="pane-foot">${account.entryActions(t.id)}<button type="button" class="btn" data-copy="${esc(link)}">Copy link</button><a class="btn" href="${esc(issue)}" target="_blank" rel="noopener">Suggest a correction</a></div>`;
     showPane('thing');
     if ($('side').hidden) showSide(true); else render();
     if (opts.scroll) roadToThing(id, !opts.jump);
@@ -2238,7 +2280,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       const rm = el('[data-remove]');
       if (rm) { removeView(rm.dataset.remove); return changed(); }
       const br = el('[data-chip]');
-      if (br) { state.topic = state.topic === br.dataset.chip ? '' : br.dataset.chip; drawChips(); runSearch(); $('vlist').scrollTop = 0; br.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
+      if (br) { state.topic = state.topic === br.dataset.chip ? '' : br.dataset.chip; drawChips(); runSearch(); $('explore').scrollTop = 0; $('topics').querySelector('[aria-checked="true"]')?.scrollIntoView({ inline: 'nearest', block: 'nearest' }); return; }
       const era = el('[data-era]');
       if (era && !el('#side')) return openEra(era.dataset.era);
       const zoom = el('[data-zoom]');
@@ -2252,7 +2294,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (playFrom) return startPlay(playFrom.dataset.playFrom);
       const go = el('[data-go]');
       if (go) return jumpTo(state.open, Number(go.dataset.go));
-      if (el('#vlist [data-shuffle]')) return shuffleColours();
+      if (el('[data-shuffle]')) return shuffleColours();
       const sv = el('[data-show-view]');
       if (sv) return void showOnly(sv.dataset.showView);
       const beside = el('#vlist [data-beside]');
@@ -2272,7 +2314,12 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       if (thing) return openThing(thing.dataset.id, { scroll: !!thing.closest('#side'), push: !!thing.closest('#side') });
     });
 
-    $('toggle-side').addEventListener('click', () => showSide($('side').hidden));
+    $('toggle-side').addEventListener('click', () => { if (state.pane !== 'views') showSide($('side').hidden); });
+    // The three dots: turn round, how to read the timeline, the repository.
+    const more = (on) => { $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    $('more-btn').addEventListener('click', (e) => { e.stopPropagation(); more($('more-menu').hidden); });
+    document.addEventListener('click', () => more(false));
+    $('more-info').addEventListener('click', (e) => { e.stopPropagation(); more(false); $('info-btn').click(); });
     wireRoad();
     $('play').addEventListener('click', () => playWith(false));
     $('play-own').addEventListener('click', () => playWith(true));
@@ -2315,8 +2362,9 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       c.addEventListener('click', (e) => { e.preventDefault(); box.value = ''; box.dispatchEvent(new Event('input')); box.focus(); });
       sync();
     }
-    $('q').addEventListener('focus', () => { indexFor('a'); if ($('q').value) findOnTimeline(); });
-    $('q').addEventListener('blur', () => setTimeout(() => drawHits(''), 150));
+    // The search shows only while it is used: a box over the road, opened from the bar on the left or with "/".
+    $('q').addEventListener('focus', () => { document.body.classList.add('searching'); indexFor('a'); if ($('q').value) findOnTimeline(); });
+    $('q').addEventListener('blur', () => setTimeout(() => { drawHits(''); if (document.activeElement !== $('q')) document.body.classList.remove('searching'); }, 150));
     $('q').addEventListener('keydown', (e) => {
       if ((e.key === 'ArrowDown' || e.key === 'ArrowUp') && hits.length) { e.preventDefault(); hit = (hit + (e.key === 'ArrowDown' ? 1 : -1) + hits.length) % hits.length; drawHits(fold($('q').value.trim())); }
       else if (e.key === 'Enter') { e.preventDefault(); goHit(Math.max(0, hit)); }
@@ -2362,15 +2410,19 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.span = $('years-reset').dataset.mode === 'all' && L ? [writtenOf(L.fitMin), writtenOf(L.fitMax - 1e-9)] : null;
       changed();
     });
-    $('filters-btn').addEventListener('click', () => {
-      const open = $('filters').classList.toggle('open');
-      $('filters-btn').setAttribute('aria-expanded', open);
-    });
+    // The year range is a quiet pill at the bottom right of the road; pressed, it opens (asked for, Nov 2026).
+    const yearsOpen = (on) => { $('filters').classList.toggle('open', on); $('filters-btn').setAttribute('aria-expanded', on); };
+    $('filters-btn').addEventListener('click', () => yearsOpen(!$('filters').classList.contains('open')));
+    document.addEventListener('pointerdown', (e) => { if (!e.target.closest('#filters')) yearsOpen(false); });
 
     // Export as PDF: the views on the timeline, in their order and colours and within the year range, as printable pages (print.html), opened in the same tab.
     $('pdf').addEventListener('click', () => {
       if (!state.views.length) return;
-      const q = 'views=' + state.views.map(addressOf).join(',') + '&c=' + state.views.map((id) => colOut(state.colors.get(id))).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
+      // A timeline someone keeps is not a built file: it is handed to the print page through this tab's storage.
+      const kept = {};
+      for (const id of state.views) { const pl = account.payload(id); if (pl) kept[id] = pl; }
+      try { if (Object.keys(kept).length) sessionStorage.setItem('cg-print', JSON.stringify(kept)); else sessionStorage.removeItem('cg-print'); } catch (e) { /* too large: the print page will say it could not load */ }
+      const q = 'views=' + state.views.map((id) => (kept[id] ? id : addressOf(id))).join(',') + '&c=' + state.views.map((id) => colOut(state.colors.get(id))).join(',') + (state.span ? '&yr=' + state.span.join('-') : '') + '&o=' + (state.order === 'new' ? 'backward' : 'forward');
       location.href = 'print.html?' + q;   // in the same tab (asked for, Nov 2026); the print page's logo leads back
     });
 
@@ -2386,9 +2438,6 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       state.views.forEach((id, i) => state.colors.set(id, next[i]));
       changed();
     }
-    $('views-btn').addEventListener('click', () => {
-      if (!$('side').hidden && !$('p-views').hidden) return showSide(false);    // a second press closes it
-      showPane('views'); showSide(true); if (!matchMedia(PHONE).matches) $('vq').focus(); });
     $('pills').addEventListener('scroll', pillEdges, { passive: true });
     $('pills').addEventListener('click', (e) => {
       const dot = e.target.closest('[data-colour]');
@@ -2492,12 +2541,32 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
       else showSide(false);
     });
     addEventListener('hashchange', () => followHash(true));
+
+    // A phone that is zoomed in (two fingers, or a browser that zooms into a field) is hard to get back
+    // from, because the page does not scroll. "Reset zoom" appears while it is, and puts the page back.
+    const vv = window.visualViewport, meta = document.querySelector('meta[name="viewport"]');
+    if (vv && meta) {
+      const was = meta.content;
+      const place = () => {
+        const on = vv.scale > 1.05;
+        $('unzoom').hidden = !on;
+        if (on) { $('unzoom').style.left = vv.offsetLeft + vv.width / 2 + 'px'; $('unzoom').style.top = vv.offsetTop + 10 / vv.scale + 'px'; $('unzoom').style.transform = `translateX(-50%) scale(${1 / vv.scale})`; }
+      };
+      vv.addEventListener('resize', place);
+      vv.addEventListener('scroll', place);
+      $('unzoom').addEventListener('click', () => {
+        document.activeElement?.blur?.();
+        meta.content = was + ', maximum-scale=1';
+        setTimeout(() => { meta.content = was; place(); }, 350);
+      });
+    }
   }
   function drawReverse() {
     const b = $('reverse'), rev = state.order === 'new';
     b.setAttribute('aria-pressed', rev);
     b.setAttribute('aria-label', rev ? 'Turn round and face the future' : 'Turn round and face the past');
     b.title = rev ? 'Facing the past' : 'Facing the future';
+    b.lastElementChild.textContent = rev ? 'Turn round: face the future' : 'Turn round: face the past';
   }
 
   // "#1969" or "#-44" goes to a year; "#<id>" opens an entry, fetching it and
@@ -2544,6 +2613,7 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     else setViews(got.length ? got : [].concat(boot.default || []));
     if (ids.length && got.length < ids.length) note('Some views in this link could not be loaded.');
     wire();
+    account.start(authFailed);
     drawReverse();
     if (document.fonts && document.fonts.ready) await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 1200))]);
     if (!state.views.length) $('status').textContent = 'The timeline data could not be loaded. Please reload the page.';
@@ -2551,5 +2621,14 @@ import { NEAR, GONE, FAR, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, lab
     if (ids.length) writeUrl();
     followHash(false);     // otherwise the road opens where roadOpening() says
   }
+  // Accounts and the reader's own timelines (account.js): the bar on the left. It borrows these from the page.
+  const account = createAccount({
+    $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => { account.explore(false); return showOnly(id); },
+    listChanged: () => runSearch(),
+    replace: replaceView, forget: forgetView, home: () => location.assign('/'),
+    focusSearch: () => $('q').focus(),
+    redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
+  });
+  const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"
   start();
 })();

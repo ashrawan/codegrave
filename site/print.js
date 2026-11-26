@@ -708,7 +708,10 @@ async function start() {
   const cs = (q.get('c') || '').split(',');
   // a view's colour from the link: one of the eight (0 to 7), or any colour picked by hand (six hex digits)
   const inks = ids.map((_, i) => { const c = cs.length === ids.length ? String(cs[i] ?? '') : ''; return /^[0-9a-f]{6}$/i.test(c) ? '#' + c.toLowerCase() : INKS[(/^[0-7]$/.test(c) ? Number(c) : i) % INKS.length]; });
-  const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => getJSON('v/' + id + '.json').catch(() => null))]);
+  // A timeline someone keeps ("t/<id>") is not a built file: the page hands it over through this tab's storage.
+  let kept = {};
+  try { kept = JSON.parse(sessionStorage.getItem('cg-print') || '{}') || {}; } catch (e) { kept = {}; }
+  const [boot, ...payloads] = await Promise.all([getJSON('boot.json'), ...ids.map((id) => (kept[id] ? Promise.resolve(kept[id]) : getJSON('v/' + id + '.json').catch(() => null)))]);
   const views = [], keep = [];
   payloads.forEach((p, i) => { const sv = p && p.entries?.length ? shapeView(p, boot, views.length, yr) : null;
     if (sv && sv.es.length) { views.push(sv); keep.push(inks[i]); } });
