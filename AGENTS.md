@@ -321,8 +321,8 @@ How the page is put together:
   user know what's happening"). Each line made is timed (`cg-voice-speed`); on a device slower than real time
   (`SLOW`) the dialog warns and the foot says play waits at each card (asked for). Where Kokoro cannot run, the
   browser's own voice says the line. Where the browser finds a real graphics card (`gpuOk()`: WebGPU, not a software
-  fallback), "Faster voice" is offered in the voice dialog and in the settings (`#gpu-row`, `cg-voice-gpu`, off by
-  default; asked for, Nov 2026, for "users who have a good PC, like good internet"): the same model at full precision
+  fallback), "Faster voice" is offered in the voice dialog and in the menu by play (`#gpu-row`, `cg-voice-gpu`; first off by
+  default, now on by default, see "The graphics card is the default" below): the same model at full precision
   on the graphics card, a 326 MB download (`GPU_MB`). The worker asks for the card before downloading, and if it
   cannot run there the voice goes back to the processor by itself (`engine()`). Speed is kept per engine.
   Kokoro speaks English only. While play travels every line is made in order from where play is (`prepare()`), the
@@ -424,8 +424,17 @@ How the page is put together:
   the preview beside the choices.
 - **Listen says the script, and Faster voice is gone (Nov 2026, asked for).** In the voice dialog of a timeline
   that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
-  (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
-  stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
+  (`listen()` takes the text). (For a while "Faster voice" was hidden; it is offered again, see below.)
+- **The graphics card is the default, and a voiceover is rewritten (Nov 2026, asked for).** Where the device has
+  a real graphics card (`gpuOk()`), the voice is made on it without asking: the 326 MB model is the one
+  downloaded ("by default, it should download that and it should select that one"). `cg-voice-gpu` is '1' on,
+  '0' off, unset follows the device (`gpuChoice()`, `gpuPick()`); the speaker asks the device before anything
+  is downloaded (`settle()` in `createSpeaker()`). "Faster voice" shows again in the menu by play and, ticked,
+  in the voice dialog, only on such a device, so it can be turned off and on. In the dialog of a timeline that
+  has a voiceover the prompt is "What should change?" with Rewrite: the page sends the script as it is
+  (`prior`) with the reader's words, and the function `voiceover` has the writer change it, or start over when
+  asked; with no words it is written afresh from the timeline. There is no "Remove voiceover" button: a small
+  "Delete" stands by the script's title and asks first.
 - **Stopping an export is asked once more (Nov 2026, asked for).** In the export dialog Stop turns the foot into
   "Stop the export?" with "Yes, stop" and "Keep exporting"; from the note under the pill it is a small dialog.
   The export goes on until the reader answers.

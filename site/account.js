@@ -582,10 +582,12 @@ export function createAccount(app) {
   }
   const onNow = () => app.views().join();
   // `guide` is the reader's own words on how to tell it (asked for, Nov 2026; not needed): the function gives
-  // them to the writer, and they are kept beside the script so Write again starts from them.
+  // them to the writer, and they are kept beside the script. `prior` is the script as it is now, for a
+  // rewrite (asked for, Nov 2026: "AI will use the current voiceover and update that accordingly"): with words
+  // from the reader the writer changes that script; with none it is written afresh.
   // `span` is the part of the timeline to tell, by entry ([from, to]; asked for, Nov 2026, like the period of
   // an export: not needed, and without it the whole timeline is told).
-  async function voiceover(row, voice, guide = '', span = null) {
+  async function voiceover(row, voice, guide = '', span = null, prior = null) {
     if (voicing || working) return;
     voicing = { key: onNow(), step: 1, note: 'Writing the script…', open: true };
     draw();
@@ -593,7 +595,7 @@ export function createAccount(app) {
       const src = app.told();
       if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
       const part = span ? src.entries.slice(span[0], span[1] + 1) : src.entries;
-      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: part, ...(guide ? { guide } : {}) } });
+      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: part, ...(guide ? { guide } : {}), ...(prior && guide ? { prior } : {}) } });
       await row.set({ at: Date.now(), voice, style: script.style || '', ...(guide ? { guide } : {}), lines: script.lines });
       await record(voice, script.lines);
       if (!voicing.early) toast('The voiceover is ready. Press play to hear it.');
@@ -638,7 +640,7 @@ export function createAccount(app) {
   async function unvoice(row) {
     try {
       await row.set(null);
-      toast('The voiceover is removed.');
+      toast('The voiceover is deleted.');
     } catch (e) { toast(e.message); } finally { draw(true); }
   }
   // From the menu by play (asked for, Nov 2026): with no voiceover yet it is made at once in the voice the
@@ -781,10 +783,10 @@ export function createAccount(app) {
     const d = modal(has ? `<form class="vo-form vb">
       <div class="vo-list"><h2>Voiceover</h2><div class="cap">Voice</div>
         <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
-      <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span><button type="submit" class="big" title="Writes the script again from the timeline as it is now. Uses one of today's requests.">Write again</button></div>
-        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>${span.html}
+      <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span><button type="button" class="vo-del" data-unvoice title="Delete this voiceover">Delete</button></div>
+        <label class="vo-guide"><span>What should change? <small>Leave empty to write it afresh</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: make it shorter · funnier, for children · more on the early years · write it again from scratch"></textarea></label>${span.html}<div class="vo-re"><small>Uses one of today’s requests.</small><button type="submit" class="big">Rewrite</button></div>
         <ol>${has.lines.map(lineEl).join('')}</ol></div>
-      <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big vo-rm" data-unvoice>Remove voiceover</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
+      <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big" data-close>Close</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
       : `<form class="vo-form va">
       <div class="vo-head"><h2>Choose a voice</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
       <div class="vo-body"><div class="vo-voices cards" role="radiogroup" aria-label="Voice">${kok.map((v) => voiceEl(v, 'card')).join('')}</div>
@@ -794,15 +796,14 @@ export function createAccount(app) {
     const nameIt = () => { const n = d.querySelector('[data-vname]'); if (n) n.textContent = voiceLabel(d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE); };
     nameIt(); d.addEventListener('change', nameIt); span.wire(d);
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
-    // graphics card can make it, the faster voice is offered (off unless the reader turned it on).
+    // graphics card can make it, the faster voice is used and shown ticked; the reader can untick it.
     const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
     const sp = app.speaker(), gp = d.querySelector('.vo-gpu'), slow = d.querySelector('.vo-slow');
     const drawSlow = () => { slow.hidden = !isSlow(); };
     // "This device" downloads nothing: the model is fetched only once a Kokoro voice is picked.
     let gpuFine = false;
     const kokoro = () => pick() !== 'device';
-    const drawPick = () => { gp.hidden = true;   // "Faster voice" is not offered any more (asked for, Nov 2026); the engine stays
-      if (kokoro()) sp.warm(); };
+    const drawPick = () => { gp.hidden = !gpuFine || !kokoro(); if (kokoro()) sp.warm(); };
     gpuOk().then((ok) => { gpuFine = ok; gp.querySelector('input').checked = sp.gpu(); drawPick(); });
     gp.querySelector('input').addEventListener('change', (e) => { sp.engine(e.target.checked); drawSlow(); sp.warm(); });
     d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });
@@ -815,9 +816,9 @@ export function createAccount(app) {
     }, 250);
     const err = d.querySelector('.dlg-err');
     d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }, has && has.lines.length ? has.lines.map((l) => l.text) : ''); } });
-    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v, d.querySelector('[name=guide]')?.value.trim().slice(0, 400) || '', span.get()); });
+    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v, d.querySelector('[name=guide]')?.value.trim().slice(0, 400) || '', span.get(), has?.lines || null); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
-    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
+    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); ask({ title: 'Delete this voiceover?', text: 'Its script is deleted. The timeline itself stays as it is.', ok: 'Delete', danger: true }).then(() => { closeLayer(); unvoice(row); }); });
   }
   // Export video (site/export.js): one press makes the file in this browser; the pill at the top right says how
   // far it has come and the timeline can be used meanwhile (asked for, Nov 2026: three files to choose from).

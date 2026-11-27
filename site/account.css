@@ -579,6 +579,11 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vo-shead small { font-size: 12px; font-weight: 600; color: var(--muted); }
 .vo-shead b { font-family: var(--serif, 'Instrument Serif', serif); font-size: 24px; font-weight: 400; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .vo-shead .big { flex: none; width: auto; height: 34px; margin: 0; padding: 0 14px; font-size: 13px; border-radius: 9px; }
+.vo-del { flex: none; padding: 4px 6px; border: 0; background: none; font: inherit; font-size: 12px; color: var(--muted); cursor: pointer; border-radius: 6px; }
+.vo-del:hover { color: #e58a7a; }
+.vo-re { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin: 0 26px 12px 0; }
+.vo-re small { font-size: 12px; color: var(--muted); }
+.vo-re .big { flex: none; width: auto; height: 34px; margin: 0; padding: 0 16px; font-size: 13px; border-radius: 9px; }
 .vo-guide { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: var(--muted); }
 .vo-guide small { margin-left: 6px; font-weight: 400; }
 .vo-guide textarea { width: 100%; min-height: 44px; max-height: 96px; box-sizing: border-box; padding: 9px 12px; resize: vertical; font: inherit; font-size: 13.5px; font-weight: 400; line-height: 1.45; color: var(--text); background: color-mix(in srgb, var(--text) 5%, transparent); border: 1px solid var(--rule2); border-radius: 10px; outline: 0; }
