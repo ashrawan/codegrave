@@ -45,6 +45,7 @@ export const uuidOf = (id) => id.slice(2);
 
 const ICON = {
   // a door with an arrow going in: Sign in (asked for, Nov 2026)
+  out: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h3"/><path d="M15 8l4 4-4 4"/><path d="M19 12H9"/></svg>',
   login: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/><path d="M3.5 12H14M10 8l4 4-4 4"/></svg>',
   plus: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M12 5.5v13M5.5 12h13"/></svg>',
   search: '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>',
@@ -760,9 +761,17 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<div class="me" id="me-ai" hidden><small>Create with AI</small><span></span><i><u></u></i></div><hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
-        d.addEventListener('click', (x) => { const a = x.target.closest('[data-act]')?.dataset.act; if (!a) return; closeLayer(); if (a === 'out') signOut(); else $('theme').click(); });
-        // How many requests are left today (asked for, Nov 2026): the account's own requests of the last 24
+        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><div class="me" id="me-ai"><small>Create with AI</small><span>&nbsp;</span><i><u></u></i></div><hr><div class="me-row"><span>Theme</span><div class="seg" role="radiogroup" aria-label="Theme"><button type="button" role="radio" data-theme-to="light">Light</button><button type="button" role="radio" data-theme-to="dark">Dark</button></div></div><hr><button type="button" class="nv out" data-act="out">${ICON.out}<span>Sign out</span></button>`, 'menu wide acct');
+        // Light or dark: said as it is, and the menu stays open (asked for, Nov 2026, in place of "Switch theme").
+        const themed = () => { const now = document.documentElement.dataset.theme === 'light' ? 'light' : 'dark'; for (const b of d.querySelectorAll('[data-theme-to]')) b.setAttribute('aria-checked', String(b.dataset.themeTo === now)); return now; };
+        themed();
+        d.addEventListener('click', (x) => {
+          const to = x.target.closest('[data-theme-to]')?.dataset.themeTo;
+          if (to) { if (to !== themed()) $('theme').click(); themed(); return; }
+          if (x.target.closest('[data-act="out"]')) { closeLayer(); signOut(); }
+        });
+        // How many requests are left today (asked for, Nov 2026; the line has its room from the start, since the
+        // menu is placed by its height when it opens): the account's own requests of the last 24
         // hours against its allowance (its own number when it has one, else AI_PER_DAY).
         Promise.all([
           api(`/rest/v1/ai_requests?select=id&created_at=gte.${new Date(Date.now() - 864e5).toISOString()}&limit=20000`),
@@ -773,7 +782,6 @@ export function createAccount(app) {
           box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} requests left today`;
           box.querySelector('u').style.width = (most ? 100 * left / most : 0) + '%';
           box.classList.toggle('none', !left);
-          box.hidden = false;
         }).catch(() => {});
         return undefined;
       }
