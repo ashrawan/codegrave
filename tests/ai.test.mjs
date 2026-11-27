@@ -251,3 +251,25 @@ test('an address gives the exact spot, and only near the place Wikipedia gave', 
   assert.deepEqual(entries[5].where, [47.6038, -122.3301]);   // the wrong town is refused, then the town itself is found
   assert.ok(!asked.includes('Bellevue, Washington, USA'));
 });
+
+test("the model's coordinates only refine a place that is already known", async () => {
+  const entries = [
+    { name: 'A hall in town', place: 'Bellevue, Washington', coordinates: [47.6101, -122.2015] },
+    { name: 'Numbers in another city', place: 'Bellevue, Washington', coordinates: [45.52, -122.68] },
+    { name: 'Numbers with nothing to check them', coordinates: [47.61, -122.2] },
+    { name: 'A building with its own article', wikipedia: 'Space Needle', coordinates: [47.6, -122.3] },
+    { name: 'An address that is found', place: 'Bellevue, Washington', address: 'Downtown Park, Bellevue, Washington, USA', coordinates: [47.6101, -122.2015] },
+  ];
+  const get = async () => ({ query: { pages: {
+    1: { title: 'Bellevue, Washington', coordinates: [{ lat: 47.6144, lon: -122.1536, type: 'city' }] },
+    2: { title: 'Space Needle', coordinates: [{ lat: 47.6204, lon: -122.3491, type: 'landmark' }] },
+  } } });
+  const json = async () => ({ features: [{ geometry: { coordinates: [-122.2046, 47.6125] }, properties: { city: 'Bellevue' } }] });
+  assert.equal(await findPlaces(entries, get, json), 4);
+  assert.deepEqual(entries[0].where, [47.6101, -122.2015]);
+  assert.deepEqual(entries[1].where, [47.6144, -122.1536]);
+  assert.equal(entries[2].where, undefined);
+  assert.deepEqual(entries[3].where, [47.6204, -122.3491]);
+  assert.deepEqual(entries[4].where, [47.6125, -122.2046]);
+  assert.deepEqual(cleanSpec({ title: 'T', entries: [{ name: 'A', start: '2026', coordinates: [47.61012, -122.20151] }, { name: 'B', start: '2026', coordinates: 'Seattle' }] }).entries.map((e) => e.coordinates), [[47.6101, -122.2015], undefined]);
+});

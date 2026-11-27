@@ -443,13 +443,16 @@ How the page is put together:
   and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
   entry in front and shows only its pin. The countries are Natural Earth's (`site/media/countries.json`, public
   domain, names and label points included); `landOf()` in `site/globe.js` finds the one a place falls in.
-- **Places for timelines made with AI.** The model says where an entry is in words, never in coordinates:
+- **Places for timelines made with AI.** The model says where an entry is in words first:
   `place`, the Wikipedia article of the most exact place (a venue before its city), and, for something at one
   spot (an event, a restaurant, a stop on a trip), `address`, the venue's name with its city, region and
   country. `findPlaces()` in `site/ai.js` writes `where: [lat, lon]` from the most exact of these it can
   find: the address looked up in OpenStreetMap (Photon, free and without a key; only the function passes it,
   and a hit counts only within `NEAR_KM` of the place Wikipedia gave, so a namesake is never drawn), else the
-  entry's own article when Wikipedia calls it one spot, else the article of `place`, else the entry's article.
+  entry's own article when Wikipedia calls it one spot, else the model's own `coordinates` when they fall
+  within `GUESS_KM` of the place Wikipedia gave (asked for, Nov 2026: a model knows where famous spots are;
+  its numbers only refine a known place and never stand alone), else the article of `place`, else the
+  entry's article. An entry with no picture of its own shows the picture of its `place` (`findPictures()`).
   Asked for, Nov 2026, after "events in Seattle and Bellevue" put every pin on the middle of its city. The
   function does it after the pictures, and the editor (Wikipedia only) when an entry's article changes.
 - **Explore is a page over the road** (`#explore`; asked for, Nov 2026:

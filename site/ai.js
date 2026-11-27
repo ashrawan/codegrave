@@ -157,6 +157,7 @@ export function cleanSpec(raw) {
       ...(img ? { image: img } : {}),
       ...(text(e.place, 120) ? { place: text(e.place, 120) } : {}),
       ...(text(e.address, 160) ? { address: text(e.address, 160) } : {}),
+      ...(whereOf(e.coordinates) ? { coordinates: whereOf(e.coordinates) } : {}),
       ...(whereOf(e.where) ? { where: whereOf(e.where) } : {}),
     });
   }
@@ -268,8 +269,11 @@ export function whereOf(w) {
 //   3. Those of the article of the place it names (`place`: a venue, a neighbourhood, a city), else whatever
 //      its own article has. The place comes before the article because the article may only stand in for the
 //      picture (an event shown by its city's article).
-// An entry with none of these has no place, and none is guessed. Returns how many were found.
-const NEAR_KM = 80, GEO_MAX = 60, GEO_AT_ONCE = 3;
+//   4. The model's own `coordinates`, the one thing taken from it, and only as a finer point inside a place that
+//      is already known: they count when they fall within `GUESS_KM` of the place Wikipedia gave (a venue in
+//      its town), never alone. A cheap model writes a confident pair of numbers for a hall it has never heard of.
+// An entry with none of these has no place. Returns how many were found.
+const NEAR_KM = 80, GUESS_KM = 30, GEO_MAX = 60, GEO_AT_ONCE = 3;
 const SPOTS = ['landmark', 'edu', 'airport', 'railwaystation', 'event'];   // Wikipedia's types of place that are one spot
 export function kmBetween(a, b) {
   const r = Math.PI / 180, h = Math.sin((b[0] - a[0]) * r / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin((b[1] - a[1]) * r / 2) ** 2;
@@ -292,11 +296,12 @@ export async function findPlaces(entries, get, json) {
       }
     } catch (e) { /* a timeline without places is still a timeline */ }
   }
-  const wide = new Map();
+  const wide = new Map(), fine = new Map();
   for (const e of entries) {
     const own = at.get(title(e.wikipedia)), named = at.get(title(e.place));
-    const spot = own?.spot ? own : named ?? own;
+    const spot = own?.spot ? own : named ?? own, guess = whereOf(e.coordinates);
     if (spot) wide.set(e, spot.w);
+    if (spot && !spot.spot && guess && kmBetween(guess, spot.w) <= GUESS_KM) fine.set(e, guess);
   }
   // The exact spot, from the address. Each address is asked once, a few at a time, near the place Wikipedia gave.
   const exact = new Map();
@@ -329,11 +334,22 @@ export async function findPlaces(entries, get, json) {
     for (let i = 0; i < list.length; i += GEO_AT_ONCE) await Promise.all(list.slice(i, i + GEO_AT_ONCE).map(one));
   }
   let n = 0;
-  for (const e of entries) { const w = exact.get(title(e.address)) ?? wide.get(e); if (w) { e.where = w; n++; } }
+  for (const e of entries) { const w = exact.get(title(e.address)) ?? fine.get(e) ?? wide.get(e); if (w) { e.where = w; n++; } }
   return n;
 }
 
 export async function findPictures(entries, get) {
+  const n = await picturesFor(entries, get);
+  // An entry with no picture of its own (a local event, a meeting) shows the place it names: its venue or town.
+  const bare = entries.filter((e) => !e.image && typeof e.place === 'string' && e.place.trim() && e.place.trim() !== (e.wikipedia ?? '').trim());
+  if (!bare.length) return n;
+  const stand = bare.map((e) => ({ wikipedia: e.place }));
+  await picturesFor(stand, get);
+  let m = 0;
+  bare.forEach((e, i) => { if (stand[i].image) { e.image = stand[i].image; m++; } });
+  return n + m;
+}
+async function picturesFor(entries, get) {
   const want = entries.filter((e) => !e.image && typeof e.wikipedia === 'string' && e.wikipedia.trim());
   const titles = [...new Set(want.map((e) => e.wikipedia.trim()))].slice(0, 100);
   const found = new Map(), item = new Map(), file = new Map();
