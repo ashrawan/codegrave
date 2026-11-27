@@ -15,7 +15,7 @@
 // the check.
 //
 // Secrets (Supabase → Edge Functions → Secrets):
-//   FILM_KEY   required, at least 24 characters. Without it film mode is off for everyone.
+//   FILM_KEY   required, at least 20 characters. Without it film mode is off for everyone.
 //              To rotate it, set a new value: every token signed with the old one stops working.
 
 const KEY = Deno.env.get("FILM_KEY") ?? "";
@@ -95,7 +95,7 @@ async function open(id: string) {
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   if (req.method !== "POST") return json({ error: "POST only" }, 405);
-  if (KEY.length < 24) return json({ error: "off" }, 503);
+  if (KEY.length < 20) return json({ error: "off" }, 503);
   const ip = (req.headers.get("x-forwarded-for") ?? "").split(",")[0].trim() || "unknown";
   let body: Record<string, unknown> = {};
   try { body = await req.json(); } catch { return json({ error: "bad request" }, 400); }

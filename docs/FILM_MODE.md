@@ -117,7 +117,7 @@ nothing remembered from the frame before. Add it to the schema and to `tests/fil
 
 `FILM_KEY` is a secret of the Supabase function `film-auth` (Supabase, Edge Functions, Secrets)
 and a line in `tools/film/.env` on the computer that renders. It is never in the repository and
-never in the page. Use at least 24 random characters, for example `openssl rand -base64 32`.
+never in the page. Use at least 20 random characters, for example `openssl rand -base64 32`.
 
 To rotate it: set a new value in Supabase and in `.env`. Tokens are signed with a key made from
 it, so every token given for the old key stops working at once. Every call of `film-auth` is
