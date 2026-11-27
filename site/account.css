@@ -579,6 +579,13 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vo-shead small { font-size: 12px; font-weight: 600; color: var(--muted); }
 .vo-shead b { font-family: var(--serif, 'Instrument Serif', serif); font-size: 24px; font-weight: 400; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .vo-shead .big { flex: none; width: auto; height: 34px; margin: 0; padding: 0 14px; font-size: 13px; border-radius: 9px; }
+.vo-fetch { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+.vo-fetch[hidden] { display: none; }
+.vo-del { flex: none; padding: 4px 6px; border: 0; background: none; font: inherit; font-size: 12px; color: var(--muted); cursor: pointer; border-radius: 6px; }
+.vo-del:hover { color: #e58a7a; }
+.vo-re { display: flex; align-items: center; justify-content: flex-end; gap: 12px; margin: 0 26px 12px 0; }
+.vo-re small { font-size: 12px; color: var(--muted); }
+.vo-re .big { flex: none; width: auto; height: 34px; margin: 0; padding: 0 16px; font-size: 13px; border-radius: 9px; }
 .vo-guide { display: flex; flex-direction: column; gap: 6px; font-size: 12px; font-weight: 600; color: var(--muted); }
 .vo-guide small { margin-left: 6px; font-weight: 400; }
 .vo-guide textarea { width: 100%; min-height: 44px; max-height: 96px; box-sizing: border-box; padding: 9px 12px; resize: vertical; font: inherit; font-size: 13.5px; font-weight: 400; line-height: 1.45; color: var(--text); background: color-mix(in srgb, var(--text) 5%, transparent); border: 1px solid var(--rule2); border-radius: 10px; outline: 0; }
@@ -601,9 +608,11 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
   .vo-script { padding: 16px 0 0 16px; } .vo-script ol { overflow: visible; padding-right: 16px; }
   .vo-script li { grid-template-columns: 1fr; gap: 2px; }
 }
-.vo-gpu { display: flex; gap: 10px; align-items: flex-start; margin: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.vo-gpu { display: flex; gap: 10px; align-items: center; margin: 0; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; }
 .vo-gpu[hidden] { display: none; }
-.vo-gpu input { margin: 3px 0 0; accent-color: var(--accent); }
+.vo-gpu > span { flex: 1; min-width: 0; }
+.vo-gpu .big { flex: none; width: auto; height: 32px; margin: 0; padding: 0 12px; font-size: 12.5px; border-radius: 9px; white-space: nowrap; }
+.vo-gpu:not(.on) .big { color: var(--acc); border-color: color-mix(in srgb, var(--acc) 55%, transparent); }
 .vo-gpu b { display: block; font-size: 13.5px; font-weight: 600; }
 .vo-gpu small { display: block; margin-top: 2px; font-size: 12.5px; line-height: 1.45; color: var(--muted); }
 .vo-slow[hidden] { display: none; }

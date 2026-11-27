@@ -37,8 +37,9 @@ export const SLOW = 1.2;
 export function speedOf(gpu = gpuOn()) { try { const v = Number(localStorage.getItem(SPEED + (gpu ? '-gpu' : ''))); return v > 0 ? v : null; } catch (e) { return null; } }
 // The faster voice (asked for, Nov 2026: "for the users who have a good PC, like good internet"): the same model
 // at full precision on the graphics card (WebGPU), a 326 MB download instead of 92 MB. It is offered only where
-// the browser has a real graphics adapter (`gpuOk()`), off by default, and the reader turns it on
-// (`cg-voice-gpu`). If it fails to load, the voice goes back to the processor by itself.
+// the browser has a real graphics adapter (`gpuOk()`), and never downloaded by itself: the reader presses
+// Download on its row, and can switch back and forth afterwards (`cg-voice-gpu`; asked for, Nov 2026: "not auto
+// download, only when the user clicks download"). If it fails to load, the voice goes back to the processor.
 export const GPU_MB = 326;
 const GPU = 'cg-voice-gpu';
 export function gpuOn() { try { return localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
@@ -317,7 +318,9 @@ export function createVoice({ ctx, said, speaker }) {
 // A few words in one voice, to choose by ear: `done()` is called when they end. Returns a way to stop them.
 // `text` is what it says: the opening of the timeline's own script where there is one (asked for, Nov 2026: "the
 // script is already there. It can just speak that"), else the sample line.
-export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
+export function listen(speaker, voice, ctx, done, fail, text = SAMPLE, began = () => {}) {
+  // `began()` is called when the first sound starts: until then the voice may still be fetching its own file
+  // or making the line, and the button shows that it is working (asked for, Nov 2026).
   // Given several lines it says them one after another until stopped, so a script can be heard through in a
   // voice (asked for, Nov 2026: "it should continue playing"). The line after the one being said is made meanwhile.
   const lines = Array.isArray(text) ? text.filter(Boolean) : [text];
@@ -333,6 +336,7 @@ export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
       u.voice = en.find((v) => /natural|neural|premium|enhanced/i.test(v.name)) || en.find((v) => v.default) || en[0] || null;
       u.onend = () => { if (!stopped) say(k + 1); };
       speechSynthesis.speak(u);
+      if (!k) began();
       return;
     }
     speaker.line(lines[k], voice, true).then(({ audio, rate }) => {
@@ -343,6 +347,7 @@ export function listen(speaker, voice, ctx, done, fail, text = SAMPLE) {
       src = c.createBufferSource(); src.buffer = buf; src.connect(c.destination);
       src.onended = () => { if (!stopped) setTimeout(() => say(k + 1), 350); };
       src.start();
+      if (!k) began();
       if (lines[k + 1]) speaker.line(lines[k + 1], voice, true).catch(() => {});
     }, (e) => { if (!stopped) fail(e); });
   };

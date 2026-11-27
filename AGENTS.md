@@ -321,8 +321,8 @@ How the page is put together:
   user know what's happening"). Each line made is timed (`cg-voice-speed`); on a device slower than real time
   (`SLOW`) the dialog warns and the foot says play waits at each card (asked for). Where Kokoro cannot run, the
   browser's own voice says the line. Where the browser finds a real graphics card (`gpuOk()`: WebGPU, not a software
-  fallback), "Faster voice" is offered in the voice dialog and in the settings (`#gpu-row`, `cg-voice-gpu`, off by
-  default; asked for, Nov 2026, for "users who have a good PC, like good internet"): the same model at full precision
+  fallback), "Faster voice" is offered in the voice dialog and in the menu by play (`#gpu-row`, `cg-voice-gpu`, off until
+  the reader downloads it; see "The GPU voice is offered" below): the same model at full precision
   on the graphics card, a 326 MB download (`GPU_MB`). The worker asks for the card before downloading, and if it
   cannot run there the voice goes back to the processor by itself (`engine()`). Speed is kept per engine.
   Kokoro speaks English only. While play travels every line is made in order from where play is (`prepare()`), the
@@ -424,8 +424,28 @@ How the page is put together:
   the preview beside the choices.
 - **Listen says the script, and Faster voice is gone (Nov 2026, asked for).** In the voice dialog of a timeline
   that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
-  (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
-  stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
+  (`listen()` takes the text). (For a while "Faster voice" was hidden; it is offered again, see below.)
+- **The GPU voice is offered, and a voiceover is rewritten (Nov 2026, asked for).** Where the device has a
+  real graphics card (`gpuOk()`), "GPU voice" shows with its size (326 MB) in the voice dialog, with a Download
+  button, and as a row in the menu by play. It is never downloaded by itself ("not auto download, only when the
+  user clicks download"; a round that made it the default was taken back the same day), and once on it can be
+  turned off and on (`cg-voice-gpu`). Listen turns until the sound starts and a line names the voice being got
+  ready (`.vo-fetch`), since a voice not used before fetches its own file first. In the dialog of a timeline that
+  has a voiceover the prompt is "What should change?" with Rewrite: the page sends the script as it is
+  (`prior`) with the reader's words, and the function `voiceover` has the writer change it, or start over when
+  asked; with no words it is written afresh from the timeline. There is no "Remove voiceover" button: a small
+  "Delete" stands by the script's title and asks first.
+- **A view that begins with no place opens among the stars (Nov 2026, asked for).** When the first entry has no
+  place on the map (The Universe), the view and its play start in space, not on the globe: `stageFor()` answers
+  'space' before the first entry and for a run without places at the very beginning, however short, and
+  `globe.intro()` does no glide from the whole globe. The globe comes in at the first entry that has a place.
+- **A default voiceover for a built timeline (Nov 2026, asked for).** `data/community/<owner>/voices/<view>.json`
+  holds the words (`{ style, lines: [{ id, text }] }`; ids are `intro`, `outro` and entry ids), and the build puts
+  them into the view's own file as `voice` (`docs/VIEWS.md`). The page tells them unless the reader made their
+  own for that view in this browser (`voiceNow()`: theirs first; the default is marked `base`). A default has no
+  Delete; rewriting it or choosing another voice makes the reader's own copy. It downloads no model until play
+  is pressed. `scripts/voices.mjs` writes these files with the function's own instructions (needs
+  `OPENROUTER_API_KEY`); the first, Dinosaurs, was written by hand as a sample.
 - **Stopping an export is asked once more (Nov 2026, asked for).** In the export dialog Stop turns the foot into
   "Stop the export?" with "Yes, stop" and "Keep exporting"; from the note under the pill it is a small dialog.
   The export goes on until the reader answers.

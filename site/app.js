@@ -1005,8 +1005,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     globe.show(steps);
     globePanes(steps);
     voice.set(voiceNow()); drawTold();
-    // A timeline with a voiceover gets its voice ready at once, so play need not wait for the download.
-    if (told.on && voice.any() && !voice.device()) speaker.warm();
+    // A timeline with a voiceover gets its voice ready at once, so play need not wait for the download. A
+    // default voiceover downloads nothing until play is pressed: most readers of a wiki timeline only look.
+    if (told.on && voice.any() && !voice.device() && !voiceNow()?.base) speaker.warm();
   }
   // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
   // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
@@ -2395,6 +2396,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1; document.body.classList.add('film');
+    if (telling() && !voice.device()) speaker.warm();
     // Once a timeline has been played, the Ask AI box folds to a small pill until it is pressed (asked for, Nov
     // 2026: "after they hit play and they come back ... make it collapse"). A newly made timeline shows it whole.
     if (!$('ask-q') || !$('ask-q').value) { document.body.classList.add('ask-min'); $('ask').classList.remove('open'); }
@@ -2581,9 +2583,18 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // else's) the script is kept in this browser alone (`cg-vo:<view>`; asked for, Nov 2026: "for the existing
   // views, we should be able to generate the voiceover").
   const localVoice = (id) => { try { return JSON.parse(localStorage.getItem('cg-vo:' + id)) || null; } catch (e) { return null; } };
-  const voiceNow = () => (state.views.length === 1 && (viewById.get(state.views[0])?.voice || localVoice(state.views[0]))) || null;
+  // A built view may bring a default voiceover (`voice` in its file, from the repository; asked for, Nov 2026:
+  // "we're going to have the default voiceover for those existing ones too"). The reader's own, kept in this
+  // browser, comes before it; `base` marks the default, which the reader cannot delete, only rewrite as theirs.
+  const voiceNow = () => {
+    if (state.views.length !== 1) return null;
+    const v = viewById.get(state.views[0]);
+    if (v?.stored) return v.voice || null;
+    return localVoice(state.views[0]) || (v?.voice ? { ...v.voice, base: true } : null);
+  };
   function keepLocalVoice(v) {
     if (state.views.length !== 1) return;
+    if (v) { v = { ...v }; delete v.base; }
     try { if (v) localStorage.setItem('cg-vo:' + state.views[0], JSON.stringify(v)); else localStorage.removeItem('cg-vo:' + state.views[0]); } catch (e) { throw new Error('This browser could not keep the voiceover.'); }
     voice.set(voiceNow()); drawTold();
     if (told.on && voice.any() && !voice.device()) speaker.warm();
@@ -2595,7 +2606,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const loading = told.load != null && told.load < 1 && told.on && voice.any() && !voice.device();
     const el = $('subs'), wait = loading || (told.wait && play.on && telling()), on = wait || (told.subs && !!told.text);
     if (loading && told.load >= 0.95) el.textContent = 'Getting the voice ready…';
-    else if (loading) el.textContent = `Downloading the ${speaker.gpu() ? 'faster ' : ''}voice, first time only: ${Math.round(told.load * 100)}% of ${Math.round((told.bytes || 0) / 1e6) || MODEL_MB} MB`;
+    else if (loading) el.textContent = `Downloading the ${speaker.gpu() ? 'GPU ' : ''}voice, first time only: ${Math.round(told.load * 100)}% of ${Math.round((told.bytes || 0) / 1e6) || MODEL_MB} MB`;
     else if (wait) el.textContent = told.slow ? 'This device makes the voice slowly, so play waits at each card until its line is ready.' : 'Preparing the voice…';
     else if (on) el.textContent = told.text;
     el.classList.toggle('on', on);
@@ -2642,7 +2653,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     $('gen-row').hidden = any || state.views.length !== 1;
     if (any) $('vo-name').textContent = voiceLabel(voice.name());
     drawChip(); keptSoon();
-    $('gpu-row').hidden = true;   // not offered any more (asked for, Nov 2026: "we don't need that option")
+    // Offered where the device has a graphics card; off until the reader turns it on (asked for, Nov 2026).
+    $('gpu-row').hidden = !told.gpuOk;
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
     for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));

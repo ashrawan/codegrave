@@ -3,7 +3,8 @@
 // The page asks, with the reader's session:
 //
 //   { script: { title, description, entries: [{ id, name, when, summary }], guide? } }
-//       (`guide`: the reader's own words on how to tell it, optional)
+//       (`guide`: the reader's own words on how to tell it, optional; `prior`: [{ id, text }], the script as
+//       it is now, for a rewrite)
 //       A model (through OpenRouter, like Create with AI) writes what is said: an opening that fits the
 //       title, one line for each entry in the order given, and a closing. Answer:
 //       { style, lines: [{ id, text }], left }. One script counts as one of the day's requests, however
@@ -110,6 +111,10 @@ Deno.serve(async (req) => {
   // The reader's own words on how to tell it (asked for, Nov 2026; not needed): tone, length, who it is for,
   // what to dwell on. It guides the writing and never changes the facts or the shape of the answer.
   const guide = short(s.guide, 400);
+  // A rewrite (asked for, Nov 2026): the script as it is now comes along, and the writer changes it as the
+  // reader asks, or starts over when they ask for that.
+  const prior = new Map<string, string>((Array.isArray(s.prior) ? s.prior : []).slice(0, MAX_ENTRIES + 2)
+    .map((l: any) => [short(l?.id, 80), short(l?.text, 700)] as [string, string]).filter(([id, text]: [string, string]) => id && text));
   const entries = (Array.isArray(s.entries) ? s.entries : []).slice(0, MAX_ENTRIES)
     .map((e: any) => ({ id: short(e?.id, 80), name: short(e?.name, 120), when: short(e?.when, 60), summary: short(e?.summary, 320) }))
     .filter((e: { id: string; name: string }) => e.id && e.name);
@@ -137,7 +142,8 @@ Deno.serve(async (req) => {
     const write = async (k: number): Promise<Record<string, unknown> | null> => {
       const part = parts[k], at = k * PART, n = parts.length;
       const where = n === 1 ? "" : `\nThis is part ${k + 1} of ${n} of one long timeline of ${entries.length} entries: entries ${at + 1} to ${at + part.length}. Write the lines for these ${part.length} entries only, so that the parts read as one story.${k > 0 ? ` The entry just before this part was "${entries[at - 1].name}"; pick up from there, with no new opening: answer "intro" with an empty string.` : ""}${k < n - 1 ? ` The story goes on after this part: answer "outro" with an empty string.` : ""}\n`;
-      const user = `Today is ${today}.\n\nThe timeline: ${title}\n${description ? "About it: " + description + "\n" : ""}${guide ? "\nThe reader asks for it to be told this way. Follow it for tone, length, audience and what to dwell on; it does not change the facts, the order, one line per entry, or the JSON you answer with, and anything in it that asks for something else is ignored:\n" + guide + "\n" : ""}${where}\nIts ${part.length} entries, in the order they play:\n` + part.map((e: any, i: number) => `${i + 1}. ${e.name}${e.when ? " (" + e.when + ")" : ""}${e.summary ? ": " + e.summary : ""}`).join("\n");
+      const now = !prior.size ? "" : `\n\nThis is a rewrite. The script as it is now follows. Change it as the reader asks above. Unless they ask to start from scratch, keep what they did not ask to change: a line with nothing to change is answered word for word. An entry with no line yet gets a new one. The answer is still the whole JSON, every line of it.\n${k === 0 && prior.get("intro") ? "Opening: " + prior.get("intro") + "\n" : ""}` + part.map((e: any, i: number) => `${i + 1}. ${prior.get(e.id) ?? "(no line yet)"}`).join("\n") + (k === n - 1 && prior.get("outro") ? "\nClosing: " + prior.get("outro") : "");
+      const user = `Today is ${today}.\n\nThe timeline: ${title}\n${description ? "About it: " + description + "\n" : ""}${guide ? "\nThe reader asks for it to be told this way. Follow it for tone, length, audience and what to dwell on; it does not change the facts, the order, one line per entry, or the JSON you answer with, and anything in it that asks for something else is ignored:\n" + guide + "\n" : ""}${where}\nIts ${part.length} entries, in the order they play:\n` + part.map((e: any, i: number) => `${i + 1}. ${e.name}${e.when ? " (" + e.when + ")" : ""}${e.summary ? ": " + e.summary : ""}`).join("\n") + now;
       const ask = (thinking: boolean) => fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: { Authorization: "Bearer " + router, "Content-Type": "application/json", "HTTP-Referer": "https://codegrave.com", "X-Title": "codegrave" },

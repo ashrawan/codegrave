@@ -144,9 +144,10 @@ right, opens a list of voices, each with Listen, and then:
    Where the model cannot run, the device's own voice is used. A minute of speech takes from about a minute (a
    good laptop) to two (a small one) to make; play only waits for the line in front. When the device turns out
    slower than real time, the dialog warns and the foot says that play waits at each card.
-   On a device with a graphics card the browser can use (WebGPU), "Faster voice" can be turned on in the voice
-   dialog or the settings: the model then runs on the graphics card, a one-time 326 MB download instead of
-   92 MB. It is off by default, and if the card cannot run it the voice goes back to the processor.
+   On a device with a graphics card the browser can use (WebGPU), "GPU voice" is offered in the voice
+   dialog and the menu by play: the full model on the graphics card, a one-time 326 MB download, fetched only
+   when the reader presses Download. It can be turned off and on, and if the card cannot run it the voice
+   goes back to the processor.
 
 Changing the voice later is free ("Use this voice"); "Write again" writes a new script after the timeline
 changes; "Remove the voiceover" takes the words away. An entry without a line is simply shown without one.

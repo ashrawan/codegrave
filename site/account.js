@@ -582,10 +582,12 @@ export function createAccount(app) {
   }
   const onNow = () => app.views().join();
   // `guide` is the reader's own words on how to tell it (asked for, Nov 2026; not needed): the function gives
-  // them to the writer, and they are kept beside the script so Write again starts from them.
+  // them to the writer, and they are kept beside the script. `prior` is the script as it is now, for a
+  // rewrite (asked for, Nov 2026: "AI will use the current voiceover and update that accordingly"): with words
+  // from the reader the writer changes that script; with none it is written afresh.
   // `span` is the part of the timeline to tell, by entry ([from, to]; asked for, Nov 2026, like the period of
   // an export: not needed, and without it the whole timeline is told).
-  async function voiceover(row, voice, guide = '', span = null) {
+  async function voiceover(row, voice, guide = '', span = null, prior = null) {
     if (voicing || working) return;
     voicing = { key: onNow(), step: 1, note: 'Writing the script…', open: true };
     draw();
@@ -593,7 +595,7 @@ export function createAccount(app) {
       const src = app.told();
       if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
       const part = span ? src.entries.slice(span[0], span[1] + 1) : src.entries;
-      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: part, ...(guide ? { guide } : {}) } });
+      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: part, ...(guide ? { guide } : {}), ...(prior && guide ? { prior } : {}) } });
       await row.set({ at: Date.now(), voice, style: script.style || '', ...(guide ? { guide } : {}), lines: script.lines });
       await record(voice, script.lines);
       if (!voicing.early) toast('The voiceover is ready. Press play to hear it.');
@@ -638,7 +640,7 @@ export function createAccount(app) {
   async function unvoice(row) {
     try {
       await row.set(null);
-      toast('The voiceover is removed.');
+      toast('The voiceover is deleted.');
     } catch (e) { toast(e.message); } finally { draw(true); }
   }
   // From the menu by play (asked for, Nov 2026): with no voiceover yet it is made at once in the voice the
@@ -731,10 +733,15 @@ export function createAccount(app) {
     if (same) return;
     const me = { b, stop: () => {} };
     sample = me;
-    const loaded = app.speaker().ready();
-    b.classList.add(loaded ? 'on' : 'wait'); b.innerHTML = loaded ? HALT + '<span>Stop</span>' : '<span>Loading…</span>';
-    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined);
-    if (!loaded) { const t = setInterval(() => { if (sample !== me) return clearInterval(t); if (app.speaker().ready()) { clearInterval(t); b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } }, 300); }
+    // The button turns until the sound starts: the model may still be coming, and a voice not used before
+    // fetches its own small file first (asked for, Nov 2026: "it's not showing that loading").
+    b.classList.add('wait'); b.innerHTML = '<span>Loading…</span>';
+    const note = b.closest('.dlg, form')?.querySelector('.vo-fetch');
+    if (note && b.dataset.sample !== 'device') { note.textContent = `Getting ${voiceLabel(b.dataset.sample)} ready…`; note.hidden = false; }
+    const quiet = () => { if (note) note.hidden = true; };
+    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { quiet(); if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined,
+      () => { quiet(); if (sample === me) { b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } });
+    const stop = me.stop; me.stop = () => { quiet(); stop(); };
   }
   // The part of the timeline a voiceover tells: the same strip with two handles as in the export dialog.
   function spanPick(ents) {
@@ -765,14 +772,16 @@ export function createAccount(app) {
   }
   function voiceMenu(anchor, row) {
     if (voicing) return;
+    const base = !!row.get()?.base;   // the default that came with a built timeline: rewritten as the reader's own, never deleted
     const has = voiceOf(row.get()), was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
     // Two dialogs (designs A and B, picked from three each, Nov 2026). With no voiceover yet: the voices as
     // cards, each with Listen, and one button that names the voice. With one: the voices at the left and the
     // script as it is told at the right, "this is your script", to write again or to try in another voice.
     const kok = VOICES.filter(([v]) => v !== 'device'), dev = VOICES.find(([v]) => v === 'device');
     const voiceEl = ([v, name, w], cls = '') => `<label class="vo-voice ${cls}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}" title="Listen">${PLAY}<span>Listen</span></button><span><b>${esc(name)}</b><small>${esc(w)}</small></span><i aria-hidden="true"></i></label>`;
-    const notes = `<label class="vo-gpu" hidden><input type="checkbox"><span><b>Faster voice</b><small>Uses your graphics card: a one-time ${GPU_MB} MB download instead of ${MODEL_MB} MB.</small></span></label>
+    const notes = `<div class="vo-gpu" hidden><span><b></b><small></small></span><button type="button" class="big"></button></div>
       <p class="vo-load" hidden></p>
+      <p class="vo-fetch" hidden></p>
       <p class="vo-slow" hidden>This device makes the voice slowly. Play will pause at each card until its line is ready.</p>
       <p class="dlg-err" role="alert"></p>`;
     const ents = app.told()?.entries || [], span = spanPick(ents);
@@ -781,10 +790,10 @@ export function createAccount(app) {
     const d = modal(has ? `<form class="vo-form vb">
       <div class="vo-list"><h2>Voiceover</h2><div class="cap">Voice</div>
         <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
-      <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span><button type="submit" class="big" title="Writes the script again from the timeline as it is now. Uses one of today's requests.">Write again</button></div>
-        <label class="vo-guide"><span>How should it be told? <small>Optional</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: for children, in short lines · light and funny · in more detail">${esc(has?.guide || '')}</textarea></label>${span.html}
+      <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : base ? ', the default for this timeline' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span>${base ? '' : '<button type="button" class="vo-del" data-unvoice title="Delete this voiceover">Delete</button>'}</div>
+        <label class="vo-guide"><span>What should change? <small>Leave empty to write it afresh</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: make it shorter · funnier, for children · more on the early years · write it again from scratch"></textarea></label>${span.html}<div class="vo-re"><small>Uses one of today’s requests.</small><button type="submit" class="big">Rewrite</button></div>
         <ol>${has.lines.map(lineEl).join('')}</ol></div>
-      <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big vo-rm" data-unvoice>Remove voiceover</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
+      <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big" data-close>Close</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
       : `<form class="vo-form va">
       <div class="vo-head"><h2>Choose a voice</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
       <div class="vo-body"><div class="vo-voices cards" role="radiogroup" aria-label="Voice">${kok.map((v) => voiceEl(v, 'card')).join('')}</div>
@@ -794,30 +803,38 @@ export function createAccount(app) {
     const nameIt = () => { const n = d.querySelector('[data-vname]'); if (n) n.textContent = voiceLabel(d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE); };
     nameIt(); d.addEventListener('change', nameIt); span.wire(d);
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
-    // graphics card can make it, the faster voice is offered (off unless the reader turned it on).
+    // graphics card can make it, the GPU voice is offered with its size.
     const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
     const sp = app.speaker(), gp = d.querySelector('.vo-gpu'), slow = d.querySelector('.vo-slow');
     const drawSlow = () => { slow.hidden = !isSlow(); };
     // "This device" downloads nothing: the model is fetched only once a Kokoro voice is picked.
     let gpuFine = false;
     const kokoro = () => pick() !== 'device';
-    const drawPick = () => { gp.hidden = true;   // "Faster voice" is not offered any more (asked for, Nov 2026); the engine stays
-      if (kokoro()) sp.warm(); };
-    gpuOk().then((ok) => { gpuFine = ok; gp.querySelector('input').checked = sp.gpu(); drawPick(); });
-    gp.querySelector('input').addEventListener('change', (e) => { sp.engine(e.target.checked); drawSlow(); sp.warm(); });
+    // The GPU voice (asked for, Nov 2026): shown with its size where the device can run it, downloaded only
+    // when Download is pressed, and switched off and on afterwards.
+    const drawGpu = () => {
+      const on = sp.gpu();
+      gp.classList.toggle('on', on);
+      gp.querySelector('b').textContent = on ? 'GPU voice enabled' : 'GPU voice';
+      gp.querySelector('small').textContent = on ? `Made on your graphics card with the full model (${GPU_MB} MB).` : `Faster, with the full model, on your graphics card. A one-time ${GPU_MB} MB download.`;
+      gp.querySelector('button').textContent = on ? 'Turn off' : `Download ${GPU_MB} MB`;
+    };
+    const drawPick = () => { gp.hidden = !gpuFine || !kokoro(); drawGpu(); if (kokoro()) sp.warm(); };
+    gpuOk().then((ok) => { gpuFine = ok; drawPick(); });
+    gp.querySelector('button').addEventListener('click', () => { sp.engine(!sp.gpu()); drawGpu(); drawSlow(); sp.warm(); });
     d.addEventListener('change', (e) => { if (e.target.name === 'voice') drawPick(); });
     const ld = d.querySelector('.vo-load'), tick = setInterval(() => {
       if (!d.isConnected) return clearInterval(tick);
       const l = kokoro() ? app.voiceLoad() : null;
       ld.hidden = !l;
-      drawSlow(); slow.hidden ||= !kokoro(); gp.querySelector('input').checked = sp.gpu();
-      if (l) ld.innerHTML = `<span>${l.part >= 0.95 ? 'Getting the voice ready' : `Downloading the ${sp.gpu() ? 'faster ' : ''}voice, first time only`}</span><b>${Math.round(l.part * 100)}% of ${l.mb} MB</b><i><u style="width: ${Math.round(l.part * 100)}%"></u></i>`;
+      drawSlow(); slow.hidden ||= !kokoro(); drawGpu();
+      if (l) ld.innerHTML = `<span>${l.part >= 0.95 ? 'Getting the voice ready' : `Downloading the ${sp.gpu() ? 'GPU ' : ''}voice, first time only`}</span><b>${Math.round(l.part * 100)}% of ${l.mb} MB</b><i><u style="width: ${Math.round(l.part * 100)}%"></u></i>`;
     }, 250);
     const err = d.querySelector('.dlg-err');
     d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }, has && has.lines.length ? has.lines.map((l) => l.text) : ''); } });
-    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v, d.querySelector('[name=guide]')?.value.trim().slice(0, 400) || '', span.get()); });
+    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v, d.querySelector('[name=guide]')?.value.trim().slice(0, 400) || '', span.get(), has?.lines || null); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
-    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
+    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); ask({ title: 'Delete this voiceover?', text: 'Its script is deleted. The timeline itself stays as it is.', ok: 'Delete', danger: true }).then(() => { closeLayer(); unvoice(row); }); });
   }
   // Export video (site/export.js): one press makes the file in this browser; the pill at the top right says how
   // far it has come and the timeline can be used meanwhile (asked for, Nov 2026: three files to choose from).

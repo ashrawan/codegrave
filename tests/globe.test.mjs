@@ -80,6 +80,8 @@ test('an entry with no place dims the map, or sends the reader out to space', ()
   assert.equal(stageFor([N, N, N, Y, N], 0), 'space', 'so does a view that mostly has none');
   assert.equal(stageFor([N, N, N, Y, N], 3), 'map');
   assert.equal(stageFor([N, N], -1), 'space'); assert.equal(stageFor([Y, N], -1), 'map');
+  assert.equal(stageFor([N, Y, Y, Y, Y, Y], 0), 'space', 'a view that begins with no place opens among the stars');
+  assert.equal(stageFor([N, N, Y, Y, Y, Y, Y], 1), 'space');
 });
 
 test('coordinates are written for people', () => {

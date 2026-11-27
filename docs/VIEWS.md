@@ -177,3 +177,19 @@ the pull request.
 - It does not repeat an existing view under a new name.
 - Every fact in a chapter note is one the entries themselves support. Notes
   are written in your own words.
+
+## A default voiceover
+
+A view may come with the words of a voiceover, so that play is told aloud for everyone without a request.
+They live beside the view, in `data/community/<owner>/voices/<view-id>.json`:
+
+```json
+{ "style": "curious, precise science narrator",
+  "lines": [ { "id": "intro", "text": "…" }, { "id": "<entry-id>", "text": "…" }, { "id": "outro", "text": "…" } ] }
+```
+
+One line for an entry (at most 400 characters), plus an opening (`intro`) and a closing (`outro`). The words
+follow the same rule as a summary: your own, and nothing the entries do not say. The build puts them into the
+view's own file; the reader's browser makes the sound. A reader who writes their own voiceover for the view
+hears theirs instead. `node scripts/voices.mjs` writes these files with a model (it needs
+`OPENROUTER_API_KEY`); read what it wrote before you commit it.
