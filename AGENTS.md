@@ -426,6 +426,9 @@ How the page is put together:
   that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
   (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
   stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
+- **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide
+  to the entry before or the next one and play goes on (`playSkip()` in `site/app.js`); they no longer pause it.
+  Standing still they travel by hand as before, and with "Play: Arrow keys" they step (`playStep()`).
 - **Ask AI folds (Nov 2026, asked for).** Folded (`body.ask-min`) the Ask AI box is a small "Ask AI" pill in the
   middle, a little lower than the open box; a press opens it again (`#ask.open`), and the small arrow at the end of
   the open box (`.ask-fold`) folds it at any time. Pressing play folds it too.

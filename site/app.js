@@ -1769,6 +1769,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '') || e.target.closest?.('#side, #axis, #info, .tsearch')) return;
       e.preventDefault();
       if (play.on && play.step) return playStep(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1);
+      // While play travels by itself the arrows go to the next entry or the one before, and play goes on
+      // (asked for, Nov 2026: "it should not pause").
+      if (play.on && road.gorder?.length) return playSkip(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1);
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
     if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) { globe.resize(); for (const pn of panes.values()) pn.g.resize(); } }).observe(box);
@@ -2436,6 +2439,22 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     road.stepEnd = camClamp(j < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D);
     road.stepI = Math.max(j, -1);
     if (calm()) { road.t = road.prev = road.stepEnd; road.stepEnd = null; }
+    roadKick();
+  }
+  // An arrow key during automatic play: a quick glide to the next entry, or back to the one before, without a pause.
+  function playSkip(n) {
+    const o = road.gorder, dir = camDir(), edge = road.t + dir * AHEAD * L.D;
+    let i = -1;
+    for (let k = 0; k < o.length; k++) { if (dir * (o[k].a - edge) > 1e-5 * L.D) break; i = k; }
+    // A press while still gliding counts from where the last press was going.
+    if (road.target != null && road.skipI != null && o[road.skipI]) i = road.skipI;
+    let j = i + n;
+    while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
+    j = clamp(j, 0, o.length - 1);
+    if (j === i) return;
+    road.intro = 0; road.vel = 0; road.skipI = j;
+    road.target = camClamp(o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D); road.rate = 4;
+    if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
   }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
