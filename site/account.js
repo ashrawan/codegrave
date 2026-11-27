@@ -880,11 +880,18 @@ export function createAccount(app) {
           if (!voicing.stop) say(`Step ${order.indexOf(what) + 1} of ${order.length} · ${voicing.note}`, part);
           if (Date.now() - last > 250) { last = Date.now(); draw(); }
         }, () => !voicing || voicing.stop);
-        toast(`Saved ${name}.`);
+        exported(name);
       } catch (x) {
         if (x.message !== 'stopped') toast(x.message || 'The export could not be made.');
       } finally { voicing = null; if (d.isConnected && busy) closeLayer(); draw(true); }
     });
+  }
+  // When the film is saved a note stands at the top right until the reader closes it (asked for, Nov 2026: a
+  // toast was gone before anyone looked): what was downloaded, and a cross.
+  function exported(name) {
+    let n = $('ex-done');
+    if (!n) { n = document.createElement('div'); n.id = 'ex-done'; n.setAttribute('role', 'status'); document.body.appendChild(n); n.addEventListener('click', (e) => { if (e.target.closest('button')) n.remove(); }); }
+    n.innerHTML = `<span class="ok" aria-hidden="true">✓</span><span class="tx"><b>Video downloaded</b><small>${esc(name)} is in your downloads.</small></span><button type="button" aria-label="Close" title="Close">×</button>`;
   }
   function showKind(id) {
     const list = $('cr-list'), k = KINDS.find((x) => x.id === id), same = !list.hidden && list.dataset.kind === id;

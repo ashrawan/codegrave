@@ -426,6 +426,8 @@ How the page is put together:
   that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
   (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
   stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
+- **When an export is saved (Nov 2026, asked for)** a note stands at the top right, "Video downloaded" with the
+  file's name, until the reader closes it with its cross (`exported()` in `site/account.js`, `#ex-done`); not a toast.
 - **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide
   to the entry before or the next one and play goes on (`playSkip()` in `site/app.js`); they no longer pause it.
   Standing still they travel by hand as before, and with "Play: Arrow keys" they step (`playStep()`).
