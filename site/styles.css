@@ -671,7 +671,7 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 
 
 
-#globe .g-rows { position: relative; flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 92%, transparent); }
+#globe .g-rows { position: relative; flex: 1; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 14px, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 14px, #000 92%, transparent); }
 #globe .g-ax { position: absolute; left: 0; right: 0; bottom: 30px; height: 1px; background: rgba(200, 215, 255, .26); }
 #globe .g-now { position: absolute; left: var(--now, 40%); bottom: 20px; width: 2px; margin-left: -1px; height: 21px; border-radius: 1px; background: var(--acc); box-shadow: 0 0 10px var(--acc); }
 #globe .g-track { position: absolute; left: 0; bottom: 0; height: 100%; display: flex; align-items: flex-end; gap: 30px; white-space: nowrap; will-change: transform; }
@@ -811,3 +811,7 @@ body.multi #road-views, body.multi #wall .w-scene { display: none; }
 #globe .g-pane:not(.live) .g-map { filter: brightness(.55) saturate(.7); }
 #globe .g-pane:not(.live) .g-title { opacity: .55; }
 #globe .g-pane:not(.live) .g-card { opacity: 0 !important; pointer-events: none !important; transition: opacity .35s; }
+/* Full screen is the whole screen, like a film (asked for, Nov 2026): the search and the menu button go too, and
+   come back while the pointer is at the top edge, after a click on the stage, or while the search is used. */
+.tsearch, #film-menu, .top { transition: opacity .3s, transform .3s; }
+body.fullscreen:not(.peek) .tsearch:not(:focus-within), body.fullscreen:not(.peek) #film-menu, body.fullscreen:not(.peek) .top:not(:focus-within) { opacity: 0; pointer-events: none; }

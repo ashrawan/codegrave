@@ -13,14 +13,14 @@
 <meta property="og:url" content="https://codegrave.com/">
 <meta property="og:title" content="codegrave: a timeline of everything">
 <meta property="og:description" content="Nothing ships forever. One timeline of everything that begins and ends, drawn as a road you travel through time.">
-<meta property="og:image" content="https://codegrave.com/media/og.jpg">
+<meta property="og:image" content="https://codegrave.com/media/og.jpg?v=2">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The codegrave timeline: a road running into the distance, with cards and pictures standing beside it">
+<meta property="og:image:alt" content="The codegrave timeline: a globe with a place marked on it, the card of that moment beside it and a time line along the foot">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="codegrave: a timeline of everything">
 <meta name="twitter:description" content="Nothing ships forever. One timeline of everything that begins and ends, drawn as a road you travel through time.">
-<meta name="twitter:image" content="https://codegrave.com/media/og.jpg">
+<meta name="twitter:image" content="https://codegrave.com/media/og.jpg?v=2">
 <!-- /page meta -->
 <meta name="theme-color" content="#070a10">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='32' height='32' rx='6' fill='%23faf8f3' stroke='none'/%3E%3Cpath d='M3 27.5H29' stroke='%23121211' stroke-width='1.8'/%3E%3Cpath d='M6.5 27.5V12.5a6.5 6.5 0 0 1 13 0V27.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M21.5 27.5V20a3.5 3.5 0 0 1 7 0v7.5' stroke='%23121211' stroke-width='1.8' opacity='.55'/%3E%3Cpath d='M10 14.5l3 2.5-3 2.5' stroke='%23121211' stroke-width='2.2'/%3E%3Cpath d='M14 22.5h3.5' stroke='%239a6c00' stroke-width='2.6'/%3E%3C/svg%3E">
@@ -188,6 +188,11 @@
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17a8.5 8.5 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.5" r="1.2"/></svg>
     <span class="lbl">Play speed</span><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small>
   </label>
+  <div id="step-row" class="nv pace">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="8" height="10" rx="2"/><rect x="13" y="7" width="8" height="10" rx="2"/><path d="M8.300 10l-2 2 2 2M15.700 10l2 2-2 2"/></svg>
+    <span class="lbl">Play</span>
+    <span id="step" class="seg" role="group" aria-label="Play"><button type="button" data-v="auto">Auto</button><button type="button" data-v="keys">Arrow keys</button></span>
+  </div>
   <div id="mode-row" class="nv pace">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 15l4.5-4 4 3.5 3-2.5 5.5 4.5"/></svg>
     <span class="lbl">View</span>
@@ -197,6 +202,11 @@
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg>
     <span class="lbl">Several views</span>
     <span id="grid-seg" class="seg" role="group" aria-label="Several views"><button type="button" data-v="grid">Grid</button><button type="button" data-v="one">One globe</button></span>
+  </div>
+  <div id="look-row" class="nv pace">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 8.2c1.6.4 2.4 1.5 2 2.8-.4 1.2-2 1.3-2.3 2.7-.2 1.200.6 2.300 1.800 2.700M15 6.5c-.6 1.400.2 2.400 1.400 2.900 1.300.5 2.300 1.300 2.600 2.600"/></svg>
+    <span class="lbl">Globe look</span>
+    <span id="look" class="seg" role="group" aria-label="Globe look"><button type="button" data-v="atlas">Atlas</button><button type="button" data-v="day">Day</button><button type="button" data-v="dots">Dots</button></span>
   </div>
   <div id="detail-row" class="nv pace">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>

@@ -25,6 +25,9 @@ import { opening, greatCircle, between, distance, stageFor, levelZoom, zoomFor, 
 
 const LIB = 'https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.0/maplibre-gl.min';
 const TILES = 'https://tiles.openfreemap.org';
+// The "Day" look: NASA's Blue Marble with relief and sea floor, from NASA's own tile service (GIBS), public domain.
+const DAY = 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg';
+const LOOKS = ['atlas', 'day', 'dots'];
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
 const NEARER = 0.4;      // how far in from the whole globe the camera may come, in zoom levels
 const TURN = 0.11;       // the part of the way over which one card goes and the next comes
@@ -97,6 +100,33 @@ function styleOf() {
   };
 }
 
+// The "Dots" look: the land as a field of points, about as far apart everywhere on the globe. Made once, in the
+// browser, from the same small coast file, and only when the look is first picked.
+let dotted = null;
+function landDots() {
+  if (dotted) return dotted;
+  dotted = fetch(new URL('./media/land.json', import.meta.url)).then((r) => r.json()).then((d) => {
+    const lands = [];
+    for (const f of d.features) {
+      if (f.properties.k !== 'land') continue;
+      for (const poly of f.geometry.type === 'MultiPolygon' ? f.geometry.coordinates : [f.geometry.coordinates]) {
+        let x0 = 180, x1 = -180, y0 = 90, y1 = -90;
+        for (const [x, y] of poly[0]) { if (x < x0) x0 = x; if (x > x1) x1 = x; if (y < y0) y0 = y; if (y > y1) y1 = y; }
+        lands.push({ poly, x0, x1, y0, y1 });
+      }
+    }
+    const inRing = (r, x, y) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) { const a = r[i], b = r[j]; if ((a[1] > y) !== (b[1] > y) && x < ((b[0] - a[0]) * (y - a[1])) / (b[1] - a[1]) + a[0]) c = !c; } return c; };
+    const onLand = (x, y) => lands.some((l) => x >= l.x0 && x <= l.x1 && y >= l.y0 && y <= l.y1 && inRing(l.poly[0], x, y) && !l.poly.slice(1).some((h) => inRing(h, x, y)));
+    const feats = [], GAP = 1.25;
+    for (let y = -58; y <= 82; y += GAP) {
+      const n = Math.max(1, Math.round((360 * Math.cos((y * Math.PI) / 180)) / GAP));
+      for (let i = 0; i < n; i++) { const x = -180 + ((i + 0.5) * 360) / n; if (onLand(x, y)) feats.push({ type: 'Feature', properties: {}, geometry: { type: 'Point', coordinates: [Math.round(x * 100) / 100, y] } }); }
+    }
+    return { type: 'FeatureCollection', features: feats };
+  }).catch((e) => { dotted = null; throw e; });
+  return dotted;
+}
+
 // With `pane`, this is one view's own globe in a grid of several (asked for, Nov 2026: each view its own globe and
 // cards, the one time line below): it has no time line of its own, and its card and camera suit a small box.
 export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane }) {
@@ -117,6 +147,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
   // How much the map says (asked for, Nov 2026, so the globe is less crowded; `cg-detail` in this browser):
   // 'full' names every country; 'medium' names and tints only the countries the timeline's entries fall in;
   // 'less' only the country of the entry in front, and shows only its pin.
+  // The look of the globe (asked for, Nov 2026; `cg-look` in this browser): 'atlas', the default, 'day' or
+  // 'dots'. What a look needs is fetched only when that look is picked.
+  try { const l = localStorage.getItem('cg-look'); S.look = LOOKS.includes(l) ? l : 'atlas'; } catch (e) { S.look = 'atlas'; }
   try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'medium' || d === 'full' ? d : 'less'; } catch (e) { S.detail = 'less'; }
   // The countries (Natural Earth, public domain; one small file, fetched once): which one a place falls in.
   const inRing = (r, x, y) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) if ((r[i][1] > y) !== (r[j][1] > y) && x < ((r[j][0] - r[i][0]) * (y - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) c = !c; return c; };
@@ -131,6 +164,31 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     S.landsAsked = true;
     fetch(new URL('./media/countries.json', import.meta.url)).then((r) => r.json()).then((d) => { S.lands = d.features; homes(); detail(); }).catch(() => {});
   }
+  // Applies the look to the map. From country height down every look is the same map of streets.
+  function look() {
+    if (!S.ready) return;
+    const map = S.map, v = S.look, near = ['interpolate', ['linear'], ['zoom'], 4.6, 1, 5.4, 0];
+    const under = () => (map.getLayer('c-fill') ? 'c-fill' : 'grat');
+    if (v === 'day' && !map.getSource('day')) {
+      map.addSource('day', { type: 'raster', tiles: [DAY], tileSize: 256, maxzoom: 8 });
+      map.addLayer({ id: 'day', type: 'raster', source: 'day', maxzoom: 7.5, paint: { 'raster-opacity': ['interpolate', ['linear'], ['zoom'], 5.5, 1, 7.5, 0], 'raster-fade-duration': 0 } }, under());
+    }
+    if (v === 'dots' && !map.getSource('dots') && !S.dotsAsked) {
+      S.dotsAsked = true;
+      landDots().then((data) => {
+        if (map.getSource('dots')) return;
+        map.addSource('dots', { type: 'geojson', data });
+        map.addLayer({ id: 'dots', type: 'circle', source: 'dots', maxzoom: 5.4, paint: { 'circle-color': 'rgba(236,200,140,.8)', 'circle-radius': ['interpolate', ['exponential', 2], ['zoom'], 0, 0.7, 2, 1.7, 5, 9], 'circle-opacity': near, 'circle-pitch-alignment': 'map' } }, map.getLayer('c-edge') ? 'c-edge' : 'way');
+        look();
+      }).catch(() => { S.dotsAsked = false; });
+    }
+    const show = (id, on) => { if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none'); };
+    show('day', v === 'day'); show('dots', v === 'dots');
+    show('land', v !== 'dots'); show('coast-glow', v === 'atlas'); show('coast-far', v === 'atlas');
+    // Over the picture of the Earth a country is shown by its outline alone; its dark tint would hide the land.
+    show('c-fill', v !== 'day');
+    map.setPaintProperty('grat', 'line-color', v === 'day' ? 'rgba(255,255,255,.07)' : 'rgba(231,200,150,.1)');
+  }
   // Applies the detail to the map. Until the countries are loaded the map keeps its own names.
   function detail() {
     if (!S.ready) return;
@@ -144,6 +202,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
       map.addLayer({ id: 'c-name', type: 'symbol', source: 'land-names', maxzoom: 6, filter: ['==', ['get', 'n'], ''],
         layout: { 'text-field': ['get', 'n'], 'text-font': ['Noto Sans Regular'], 'text-size': 10.5, 'text-letter-spacing': 0.18, 'text-transform': 'uppercase', 'text-max-width': 8 },
         paint: { 'text-color': 'rgba(236,222,196,.72)', 'text-halo-color': 'rgba(10,10,12,.85)', 'text-halo-width': 1.2 } }, 'way');
+      look();
     }
     const names = full ? [] : S.detail === 'less' ? [S.homes[S.now] || ''] : [...new Set(S.homes.filter(Boolean))];
     const sig = S.detail + '|' + full + '|' + names.join();
@@ -188,7 +247,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
         map.on('mouseleave', id, () => { map.getCanvas().style.cursor = ''; });
       }
       S.ready = true;
-      pins(); run();
+      look(); pins(); run();
     });
     map.on('move', place);
     map.on('error', () => {});      // a tile that fails leaves a gap; the page carries on
@@ -337,7 +396,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  const nowAt = () => rows.clientWidth * (S.phone ? 0.2 : 0.16);
+  // The marker stands at the left end, so a view opens with its first entry at the left edge (asked for, Nov 2026).
+  const nowAt = () => (S.phone ? 22 : 34);
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
@@ -486,7 +546,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     const el = document.createElement('span');
     el.className = 'g-credit';
     el.innerHTML = '<button type="button" class="ibtn sm" aria-label="Map credits" title="Map credits" aria-expanded="false"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></svg></button>' +
-      '<p hidden>Map: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> · Natural Earth · <a href="https://maplibre.org" target="_blank" rel="noopener">MapLibre</a></p>';
+      '<p hidden>Map: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> · <a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> · Natural Earth · NASA Blue Marble · <a href="https://maplibre.org" target="_blank" rel="noopener">MapLibre</a></p>';
     credit.prepend(el);
     const btn = el.firstChild, tip = el.lastChild;
     btn.addEventListener('click', (e) => { e.stopPropagation(); tip.hidden = !tip.hidden; btn.setAttribute('aria-expanded', !tip.hidden); });
@@ -555,6 +615,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     mode(v) {
       if ((v === 'globe' || v === 'full') && v !== S.mode) { S.mode = v; try { localStorage.setItem('cg-stage', v); } catch (e) { /* fine */ } S.now = -2; run(); }
       return S.mode;
+    },
+    // The look of the globe: 'atlas', 'day' or 'dots'. Given one, it is kept in this browser.
+    look(v) {
+      if (LOOKS.includes(v)) { S.look = v; try { localStorage.setItem('cg-look', v); } catch (e) { /* fine */ } look(); }
+      return S.look;
     },
     // How much the map says: 'less', 'medium' or 'full'. Given one, it is kept in this browser.
     detail(v) {
