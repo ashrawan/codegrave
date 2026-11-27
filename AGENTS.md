@@ -273,7 +273,7 @@ How the page is put together:
   events written along it, like the open and the hovered entry
   (`road.heat` eases the colour). It is not `state.open`; do not write one
   to the other.
-- **The bar** (`#axisbar`) stands upright on the right, slim (`--bar`: 44 px, 34 px on a phone; asked for, Nov 2026): tick marks, the shaded stretch in sight, the marker and short years of at most four characters (`shortYear()`: 1969, 500B, 3kB, 66M, 4.5G; the end of the road at the present reads Now), which "Years on the bar" in the three-dot menu hides (`body.bar-bare`, `cg-bar-years` in this browser; shown by default). The marker shows its year only while dragged, since the year is written large on the road. The year pill is `#filters` (not `.yr`, which is a year on the bar). On a phone the strip at the foot steps away while play travels and the road takes its place. It stands play at the
+- **The bar** (`#axisbar`) stands upright on the right, slim (`--bar`: 44 px, 34 px on a phone; asked for, Nov 2026): tick marks, the shaded stretch in sight, the marker and short years of at most four characters (`shortYear()`: 1969, 500B, 3kB, 66M, 4.5G; the end of the road at the present reads Now) ("Years on the bar" in the three-dot menu was removed on request, Nov 2026). The marker shows its year only while dragged, since the year is written large on the road. The year pill is `#filters` (not `.yr`, which is a year on the bar). On a phone the strip at the foot steps away while play travels and the road takes its place. It stands play at the
   bottom and the whole span above it with ahead upwards, on the road's own scale so the marker climbs
   steadily (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
@@ -464,7 +464,7 @@ How the page is put together:
 - **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
   right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
   It is in three parts: This timeline (Export as PDF, `#pdf`; Turn round, `#reverse`,
-  `state.order`), Settings (the theme, `#theme`; Years on the bar) and Info (How to read the timeline; the
+  `state.order`), Settings (the theme, `#theme`; Play speed) and Info (How to read the timeline; the
   GitHub link was removed on request, Nov 2026). Export as PDF lives only here. For a timeline someone keeps, which is
   not a built file, the page hands the view file to the print page through this tab's storage
   (`cg-print`).

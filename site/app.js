@@ -2554,19 +2554,6 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (on) drawInfo();
       $('info').hidden = !on; $('info-btn').setAttribute('aria-expanded', on);
     });
-    // Years on the bar: shown unless the reader hides them from the three-dot menu (cg-bar-years in this browser).
-    const barYears = (on) => {
-      document.body.classList.toggle('bar-bare', !on);
-      $('bar-labels').setAttribute('aria-checked', on);
-      $('bar-labels').querySelector('.state').textContent = on ? 'Shown' : 'Hidden';
-    };
-    let bareSaved = null; try { bareSaved = localStorage.getItem('cg-bar-years'); } catch (e) { /* fine */ }
-    barYears(bareSaved !== '0');
-    $('bar-labels').addEventListener('click', () => {
-      const on = document.body.classList.contains('bar-bare');
-      barYears(on);
-      try { localStorage.setItem('cg-bar-years', on ? '1' : '0'); } catch (e) { /* fine */ }
-    });
     // How fast play travels (cg-pace in this browser): 1x is the pace it was made for, less lingers on each card.
     const paceShow = () => { $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
     play.speed = clamp(Number(store.get('cg-pace')) || 1, 0.25, 2);

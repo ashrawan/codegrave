@@ -35,6 +35,22 @@ Click any card to read its history, with dates, sources and pictures.
 
 <p align="center"><img src="docs/screenshots/countries.jpg" width="80%" alt="The Nepal view with the panel open on the Countries topic, each country shown by its flag"></p>
 
+### The globe (preview)
+
+Add `?globe` to any link (for example
+[`/wiki/wars?globe&yr=1939-1945`](https://codegrave.com/wiki/wars?globe&yr=1939-1945))
+to travel the same timeline on the Earth: play turns the globe from place to
+place, each entry is written beside its pin, the time line along the bottom
+can be dragged, and subjects with no place on Earth fly on among the stars.
+It is a first version, built on MapLibre, OpenFreeMap and Natural Earth.
+
+<table>
+  <tr>
+    <td width="74%" valign="top"><img src="docs/screenshots/globe.jpg" alt="World War II on the globe: the Manhattan Project written beside its pin in the United States, with the time line of entries along the bottom"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/globe-phone.jpg" alt="The globe on a phone"></td>
+  </tr>
+</table>
+
 The data is open: about 4,500 entries, each one file with its sources.
 Anyone can fix a fact, add an entry or publish a view.
 

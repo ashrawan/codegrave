@@ -643,7 +643,8 @@ body.globe .g-credit { display: inline-flex; }
 .g-credit p[hidden] { display: none; }
 .g-credit a { color: inherit; }
 #more-menu .pace { cursor: default; }
-#more-menu .pace input { flex: 1; min-width: 70px; width: 90px; accent-color: var(--acc); }
+#more-menu .pace input { flex: none; width: 96px; margin: 0; accent-color: var(--acc); touch-action: none; }
+#more-menu .pace .state { flex: none; width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
 #globe .g-rows { cursor: grab; touch-action: none; }
 #globe .g-rows.drag { cursor: grabbing; }
 #globe .g-rows.drag .g-nm { pointer-events: none; }
