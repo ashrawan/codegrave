@@ -924,4 +924,3 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
   body.playing #globe .g-card[data-pan="1"] img { animation-name: g-pan-b; }
   body.playing #globe .g-card[data-pan="2"] img { animation-name: g-pan-c; }
 }
-}
