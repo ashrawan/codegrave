@@ -393,6 +393,16 @@ How the page is put together:
   foot step away (`body.playing` sets `--sb` to 0); play, sound and full screen (`#full`, the browser's own
   full screen; a double click on the stage does the same) fade while the pointer rests (`body.idle`) and
   come back when it moves.
+- **The card on the globe is one piece** (asked for, Nov 2026): on a wide screen the picture stands in the card,
+  over its text, on one plate, the same on the map and in full view, and a thin line in the view's colour
+  runs from the place on the map to the card (`.g-lead`, drawn in `place()`). On a phone the period stands in
+  the top corner. With the buttons of play comes a menu button at the top left (`#film-menu`): it brings the
+  bar on the left and the strip back while play goes on (`body.unfilm`), and takes them away again.
+- **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser, Medium by default; asked
+  for, Nov 2026, so the globe is less crowded). Full names every country, as the map's tiles do. Medium names
+  and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
+  entry in front and shows only its pin. The countries are Natural Earth's (`site/media/countries.json`, public
+  domain, names and label points included); `landOf()` in `site/globe.js` finds the one a place falls in.
 - **Places for timelines made with AI.** The model names a `place` in words where an entry has one;
   `findPlaces()` in `site/ai.js` reads the coordinates of the entry's own Wikipedia article, else of the
   article of that place, and writes `where: [lat, lon]` on the entry. Coordinates are never taken from the

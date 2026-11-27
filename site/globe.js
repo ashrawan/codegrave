@@ -107,6 +107,44 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     xs: [], frac: 0, pos: null, was: 0, now: -1, vis: 0, dimv: 0, spv: 0, cam: [], placed: [], open: null, playing: false, warp: 0, stars: null, raf: 0, then: 0 };
   // Globe or full view (asked for, Nov 2026): in full view there is no Earth, only the sky, the picture and the text.
   try { S.mode = localStorage.getItem('cg-stage') === 'full' ? 'full' : 'globe'; } catch (e) { S.mode = 'globe'; }
+  // How much the map says (asked for, Nov 2026, so the globe is less crowded; `cg-detail` in this browser):
+  // 'full' names every country; 'medium' names and tints only the countries the timeline's entries fall in;
+  // 'less' only the country of the entry in front, and shows only its pin.
+  try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'less' || d === 'full' ? d : 'medium'; } catch (e) { S.detail = 'medium'; }
+  // The countries (Natural Earth, public domain; one small file, fetched once): which one a place falls in.
+  const inRing = (r, x, y) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) if ((r[i][1] > y) !== (r[j][1] > y) && x < ((r[j][0] - r[i][0]) * (y - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) c = !c; return c; };
+  const inPoly = (poly, x, y) => inRing(poly[0], x, y) && !poly.slice(1).some((h) => inRing(h, x, y));
+  const landOf = (lat, lon) => {
+    for (const f of S.lands || []) { const g = f.geometry; if ((g.type === 'Polygon' ? [g.coordinates] : g.coordinates).some((p) => inPoly(p, lon, lat))) return f.properties.n; }
+    return '';
+  };
+  function homes() { S.homes = S.lands ? S.steps.map((s) => (s.place ? landOf(s.place[0], s.place[1]) : '')) : null; S.said = null; }
+  function loadLands() {
+    if (S.landsAsked) return;
+    S.landsAsked = true;
+    fetch(new URL('./media/countries.json', import.meta.url)).then((r) => r.json()).then((d) => { S.lands = d.features; homes(); detail(); }).catch(() => {});
+  }
+  // Applies the detail to the map. Until the countries are loaded the map keeps its own names.
+  function detail() {
+    if (!S.ready) return;
+    const map = S.map, full = S.detail === 'full' || !S.lands || !S.homes;
+    if (S.lands && !map.getSource('lands')) {
+      map.addSource('lands', { type: 'geojson', data: { type: 'FeatureCollection', features: S.lands } });
+      map.addSource('land-names', { type: 'geojson', data: { type: 'FeatureCollection', features: S.lands.map((f) => ({ type: 'Feature', properties: { n: f.properties.n }, geometry: { type: 'Point', coordinates: [f.properties.x, f.properties.y] } })) } });
+      const fade = ['interpolate', ['linear'], ['zoom'], 4.6, 1, 6, 0];
+      map.addLayer({ id: 'c-fill', type: 'fill', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'fill-color': '#3a3329', 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 4.6, 0.75, 6, 0] } }, 'grat');
+      map.addLayer({ id: 'c-edge', type: 'line', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'line-color': 'rgba(236,196,128,.5)', 'line-width': 0.8, 'line-opacity': fade } }, 'way');
+      map.addLayer({ id: 'c-name', type: 'symbol', source: 'land-names', maxzoom: 6, filter: ['==', ['get', 'n'], ''],
+        layout: { 'text-field': ['get', 'n'], 'text-font': ['Noto Sans Regular'], 'text-size': 10.5, 'text-letter-spacing': 0.18, 'text-transform': 'uppercase', 'text-max-width': 8 },
+        paint: { 'text-color': 'rgba(236,222,196,.72)', 'text-halo-color': 'rgba(10,10,12,.85)', 'text-halo-width': 1.2 } }, 'way');
+    }
+    const names = full ? [] : S.detail === 'less' ? [S.homes[S.now] || ''] : [...new Set(S.homes.filter(Boolean))];
+    const sig = S.detail + '|' + full + '|' + names.join();
+    if (sig === S.said) return;
+    S.said = sig;
+    map.setLayoutProperty('country', 'visibility', full ? 'visible' : 'none');
+    if (map.getLayer('c-fill')) for (const id of ['c-fill', 'c-edge', 'c-name']) map.setFilter(id, ['in', ['get', 'n'], ['literal', names]]);
+  }
   const far = () => (S.phone ? 0.9 : LEVELS.globe);
   const size = () => Math.min(box.clientWidth, box.clientHeight);
 
@@ -155,11 +193,12 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     if (!S.ready) return;
     const feats = [];
     S.steps.forEach((s, i) => {
-      if (!s.place) return;
+      if (!s.place || (S.detail === 'less' && i !== S.now)) return;
       feats.push({ type: 'Feature', properties: { id: s.id, name: s.name, c: s.rgb, st: i === S.now ? 'now' : i < S.now ? 'past' : 'next', near: Math.abs(i - S.now) <= NAMED },
         geometry: { type: 'Point', coordinates: [s.place[1], s.place[0]] } });
     });
     S.map.getSource('pins').setData({ type: 'FeatureCollection', features: feats });
+    detail();
   }
 
   // ---- the camera: where it is follows from where the reader is, so it moves whenever they do
@@ -228,7 +267,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     S.cardFor = i;
     // The picture of the entry in front stands large with its text under it, the same on the globe as in full
     // view (asked for, Nov 2026); on a phone, on the globe, it is a small picture in the card instead.
-    const pic = s && s.img && (S.stage === 'space' || !S.phone) ? s.img : '';
+    // On a wide screen the picture and the text are one card (asked for, Nov 2026); on a phone among the
+    // stars the picture stands in the sky behind the card.
+    const pic = s && s.img && S.phone && S.stage === 'space' ? s.img : '';
     if (bimg.dataset.src !== pic) { bimg.dataset.src = pic; bimg.hidden = !pic; if (pic) bimg.src = pic; }
     // Beside it, small: the picture of the entry in front on top, then the last few passed. Never the ones ahead.
     const want = [];
@@ -245,7 +286,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     card.dataset.id = s.id; card.style.setProperty('--c', s.col);
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
-    if (img) img.addEventListener('error', () => { img.remove(); place(); });
+    if (img) { img.addEventListener('error', () => { img.remove(); place(); }); img.addEventListener('load', place); }
     place();
   }
   // Where the card stands. Its place, drop and size are written as one transform, so growing never moves it
@@ -262,7 +303,17 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 10); put(); return; }
     const low = H - foot - ch - 30;
     S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, W * midX() - cw / 2)));
-    S.ty = Math.round(Math.max(96, card.classList.contains('bare') ? low : Math.min(low, (H - foot - ch) * 0.46))); put();
+    S.ty = Math.round(Math.max(84, low)); put();
+    // A line from the place on the map to its card (asked for, Nov 2026): only on the globe, only for an entry
+    // with a place, and only while that place is on the near side.
+    if (!s.place || !S.ready || S.spv > 0.6 || !(S.vis > 0.02)) return;
+    const q = S.map.project([s.place[1], s.place[0]]), pic = card.querySelector('img');
+    const ex = S.tx - 10, ey = S.ty + (S.drop || 0) + (pic ? pic.offsetTop + pic.offsetHeight / 2 : ch / 2);
+    const dx = ex - q.x, dy = ey - q.y, len = Math.hypot(dx, dy);
+    if (!(len > 24) || dx < 0 || q.x < 0 || q.y < 0 || q.y > H) return;
+    lead.hidden = false; lead.style.setProperty('--c', s.col);
+    lead.style.width = len.toFixed(1) + 'px'; lead.style.opacity = (0.8 * S.vis * (1 - S.spv / 0.6)).toFixed(3);
+    lead.style.transform = `translate(${q.x.toFixed(1)}px, ${q.y.toFixed(1)}px) rotate(${Math.atan2(dy, dx).toFixed(4)}rad)`;
   }
 
   // ---- the time line at the foot: it slides under a marker that stands still. The entries stand on it by name
@@ -451,7 +502,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       if (sig === S.sig) { this.resize(); return; }
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
       S.cur = -1; S.frac = 0; S.pos = null; S.trail = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
-      drawShelf(); cams(); drawMode(); past.innerHTML = '';
+      drawShelf(); cams(); drawMode(); past.innerHTML = ''; homes();
+      if (steps.some((s) => s.place)) loadLands();
       if (!S.map && steps.some((s) => s.place)) {
         note.hidden = true;
         loadLib().then((gl) => { if (!S.map) S.map = make(gl); }).catch(() => { note.hidden = false; note.textContent = 'The map could not be loaded. The entries are in the strip below.'; });
@@ -482,6 +534,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       cams(); place(); run();
     },
     stage: () => S.stage,
+    // How much the map says: 'less', 'medium' or 'full'. Given one, it is kept in this browser.
+    detail(v) {
+      if (v === 'less' || v === 'medium' || v === 'full') { S.detail = v; try { localStorage.setItem('cg-detail', v); } catch (e) { /* fine */ } S.said = null; pins(); run(); }
+      return S.detail;
+    },
     zoom: () => (S.map ? S.map.getZoom() : null),
   };
 }

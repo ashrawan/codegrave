@@ -2315,7 +2315,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
-  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek', 'idle'); else dispatchEvent(new Event('pointermove')); }
+  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek', 'idle', 'unfilm'); else dispatchEvent(new Event('pointermove')); }
   function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
@@ -2472,6 +2472,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     addEventListener('pointermove', stir, { passive: true, capture: true });
     addEventListener('pointerdown', stir, { passive: true, capture: true });
     addEventListener('keydown', stir);
+    $('film-menu').addEventListener('click', () => {
+      const on = document.body.classList.toggle('unfilm');
+      // On a phone the bar on the left is a drawer: open it.
+      if (on && innerWidth < 700 && !document.body.classList.contains('sb-open')) $('sb-btn').click();
+    });
     const fullBtn = $('full'), root = document.documentElement;
     const fullOn = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
     const toggleFull = () => {
@@ -2583,6 +2588,16 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     paceShow();
     $('pace').addEventListener('input', () => { play.speed = clamp(Number($('pace').value) || 1, 0.25, 2); store.set('cg-pace', String(play.speed)); paceShow(); });
     $('pace-row').addEventListener('click', (e) => e.stopPropagation());
+    // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
+    const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
+    { const d = store.get('cg-detail'); detailShow(d === 'less' || d === 'full' ? d : 'medium'); }
+    $('detail-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      if (globe) globe.detail(b.dataset.v); else store.set('cg-detail', b.dataset.v);
+      detailShow(b.dataset.v);
+    });
     $('theme').addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
       document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick();

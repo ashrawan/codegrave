@@ -321,7 +321,8 @@ html, body { touch-action: pan-x pan-y; }
   .tsearch kbd { display: none; }
   /* the search stands top left beside the menu button, so the names of the views go under it */
   #road-views { top: 62px; max-width: calc(100% - 28px); }
-  #road-head { top: 100px; }
+  /* On a phone the period stands in the top corner, level with the search (asked for, Nov 2026). */
+  #road-head { top: 16px; }
   body.mine #road-head { top: 100px; }
   body.side-open #more-menu { right: 8px; }
   /* a field under 16px makes a phone's browser zoom in when it is tapped */

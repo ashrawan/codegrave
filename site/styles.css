@@ -645,6 +645,9 @@ body.globe .g-credit { display: inline-flex; }
 #more-menu .pace { cursor: default; }
 #more-menu .pace input { flex: none; width: 96px; margin: 0; accent-color: var(--acc); touch-action: none; }
 #more-menu .pace .state { flex: none; width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
+#more-menu .seg { margin-left: auto; display: inline-flex; padding: 2px; border: 1px solid var(--rule2); border-radius: 9px; }
+#more-menu .seg button { height: 24px; padding: 0 8px; font-size: 12px; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; }
+#more-menu .seg button[aria-pressed="true"] { color: var(--text); background: var(--raised); }
 #globe .g-rows { cursor: grab; touch-action: none; }
 #globe .g-rows.drag { cursor: grabbing; }
 #globe .g-rows.drag .g-nm { pointer-events: none; }
@@ -652,7 +655,7 @@ body.globe .g-credit { display: inline-flex; }
 body.globe #wall .w-scene { transition: opacity .6s; }
 body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 #globe .g-ov { position: absolute; inset: 0; pointer-events: none; z-index: 2; }
-#globe .g-lead { position: absolute; left: 0; top: 0; width: 34px; height: 1px; background: var(--c); opacity: .75; }
+#globe .g-lead { position: absolute; left: 0; top: 0; width: 34px; height: 1.5px; transform-origin: 0 50%; background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 45%, transparent)); border-radius: 1px; pointer-events: none; }
 #globe .g-card { position: absolute; left: 0; top: 0; width: 300px; padding: 13px 14px 14px; display: block; text-align: left; color: #ece7dc; background: rgba(7, 10, 16, .88); border: 1px solid var(--c); border-radius: 4px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .4), 0 18px 50px rgba(0, 0, 0, .55), 0 0 28px -6px var(--c); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); pointer-events: auto; cursor: pointer; }
 #globe .g-card[hidden], #globe .g-lead[hidden] { display: none; }
 #globe .g-card img { display: block; width: 100%; height: 150px; margin-bottom: 11px; object-fit: contain; background: #0b0f17; border-radius: 2px; }
@@ -713,10 +716,12 @@ body.globe #axisbar .ends.foot { flex-direction: row-reverse; }
 @media (min-width: 700px) {
   /* The text of the entry in front stands under its large picture, the same on the globe as in full view (asked for,
      Nov 2026): centred text on a plain plate, so it reads over the map and over the picture alike. */
-  #globe[data-card="b"] .g-card { width: 560px; padding: 0; text-align: center; background: none; border: 0; border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .9); }
+  #globe[data-card="b"] .g-card { width: calc(540px + var(--sp) * 120px); padding: 0; text-align: center; background: none; border: 0; border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .9); }
   #globe[data-card="b"] .g-card::before { content: ''; position: absolute; inset: -14px -22px; z-index: -1; border-radius: 6px; background: rgba(6, 8, 13, .8); box-shadow: 0 0 14px 4px rgba(6, 8, 13, .45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
   #globe[data-card="b"] .g-k { justify-content: center; gap: 12px; }
   #globe[data-card="b"] .g-card strong { font-size: 52px; margin: 3px 0 7px; }
+  /* The picture and the text are one card: the picture on top, whole, the text under it on the same plate. */
+  #globe[data-card="b"] .g-card img { width: auto; height: auto; max-width: 100%; max-height: calc(36vh + var(--sp) * 12vh); margin: 0 auto 14px; background: none; border-radius: 3px; }
   #globe[data-card="b"] .g-s { color: #d7dbe4; font-size: 13.5px; }
 }
 /* The picture of the entry in front stands large (to the right of the middle on the globe, in the middle and larger
@@ -740,17 +745,22 @@ body.globe.playing #wall .w-scene { opacity: 0; }
 body.playing.idle #globe .g-mode { opacity: 0; pointer-events: none; }
 /* Play is watched like a film (asked for, Nov 2026): the bar on the left and the strip at the foot step
    away, and the buttons fade while the pointer rests. */
-body.playing, body.playing.sb-open { --sb: 0px; }
-body.playing #sb, body.playing #sb-scrim { display: none; }
-body.playing #dock, body.playing.peek #dock { transform: translateY(100%); opacity: 0; pointer-events: none; }
-body.playing #stage, body.playing.peek #stage { bottom: 0; }
-body.globe.playing #axisbar { bottom: 18px; }
+body.playing:not(.unfilm), body.playing.sb-open:not(.unfilm) { --sb: 0px; }
+body.playing:not(.unfilm) #sb, body.playing:not(.unfilm) #sb-scrim { display: none; }
+body.playing:not(.unfilm) #dock, body.playing.peek:not(.unfilm) #dock { transform: translateY(100%); opacity: 0; pointer-events: none; }
+body.playing:not(.unfilm) #stage, body.playing.peek:not(.unfilm) #stage { bottom: 0; }
+body.globe.playing:not(.unfilm) #axisbar { bottom: 18px; }
 #axisbar { transition: opacity .3s; }
 body.playing.idle #axisbar { opacity: 0; }
 body.playing.idle #stage { cursor: none; }
+/* With the buttons comes a menu button at the top left: it brings the bar on the left and the strip back
+   (and takes them away again), so the reader can leave the film without stopping it. */
+#film-menu { position: fixed; left: 12px; top: 12px; z-index: 46; display: none; width: 42px; height: 42px; align-items: center; justify-content: center; padding: 0; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 50%; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); cursor: pointer; transition: opacity .3s; }
+body.playing #film-menu { display: inline-flex; left: calc(var(--sb) + 12px); }
+body.playing.idle #film-menu { opacity: 0; pointer-events: none; }
 #full[aria-pressed="true"] { color: var(--text); }
 #full[hidden] { display: none; }
-@media (max-width: 699px) { #globe .g-past { display: none; } #globe .g-bimg { left: 50%; top: 36%; max-width: 96%; max-height: 50%; box-shadow: none; } #globe .g-card.bare { background: rgba(7, 10, 16, .72); } #globe .g-mode { right: 10px; top: 150px; } }
+@media (max-width: 699px) { #globe .g-past { display: none; } #globe .g-bimg { left: 50%; top: 36%; max-width: 96%; max-height: 50%; box-shadow: none; } #globe .g-card.bare { background: rgba(7, 10, 16, .72); } #globe .g-mode { right: 10px; top: 84px; } }
 /* Space: the stars the reader flies through, and cards that come out of the distance and pass by. */
 #globe .g-space { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
 @media (max-width: 699px) {
