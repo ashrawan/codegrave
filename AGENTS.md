@@ -376,6 +376,13 @@ How the page is put together:
   square one (`layout()`). `posAt()` says where the reader is at a time: travelling in the first `MOVE` seconds
   of a scene, then at rest. A map that does not finish loading in its time is not waited for again until it
   has, so the export never hangs on a tile.
+- **The editor: place and pictures (Nov 2026, asked for).** An open row also has "More pictures" (up to
+  `MORE_PICS` links, one a line: `more` on the spec's entry, `media` on the view's), "Place" (a Wikipedia name;
+  `locate()` finds where it is), "On the map" (latitude and longitude typed by hand, `where`) and "Find on the
+  map". The globe draws a changed card at once: `show()` in `site/globe.js` compares what the cards say
+  (`S.face`), not only which entries there are, so a new picture link shows without a reload. An entry with
+  several pictures (`imgs` on its step) shows them in turn while its card is up in play, `PIC_SECS` each; the
+  card gets no more time for it.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

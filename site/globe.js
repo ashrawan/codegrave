@@ -362,7 +362,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     card.dataset.id = s.id; card.style.setProperty('--c', s.col);
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
-    if (img) { img.addEventListener('error', () => { img.remove(); place(); }); img.addEventListener('load', place); }
+    if (img) { img.addEventListener('error', () => { if (S.picI) return; img.remove(); place(); }); img.addEventListener('load', place); }
+    // An entry with several pictures shows them in turn while its card is up (asked for, Nov 2026: "the card
+    // still gets the same time, but it can show the other images"). They are fetched now so a change is not a wait.
+    S.picT = 0; S.picI = 0;
+    if (img && s.imgs && s.imgs.length > 1) for (const u of s.imgs.slice(1)) { const pre = new Image(); pre.src = u; }
     place();
   }
   // Where the card stands. Its place, drop and size are written as one transform, so growing never moves it
@@ -443,6 +447,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // ---- one frame. Everything follows from `S.pos`, where the reader is among the entries (2.4: four tenths of
   // the way from the third to the fourth): the camera, the strip, the stars, which card is up and how far it has
   // come. So nothing waits for anything, and it all moves for exactly as long as the reader does.
+  const PIC_SECS = 3;
   const DRIFT_ZOOM = 0.35, DRIFT_PAN = 0.05, DRIFT_SECS = 12;
   const toward = (v, to, k) => (Math.abs(to - v) < 0.004 ? to : v + (to - v) * Math.min(1, k));
   function frame(now) {
@@ -520,6 +525,16 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
         grow = 0.97 + 0.05 * (d ? d.g : clamp01(g + early)) + 0.2 * z * z;
         if (S.playing) S.hold = { c, pos: S.pos };
       } else if (!held) S.hold = null;
+    }
+    // The pictures of the card in front take turns, `PIC_SECS` each, only while play goes on.
+    const turn = S.steps[c] && S.steps[c].imgs;
+    if (turn && turn.length > 1 && S.cardFor === c && S.playing && !still && !o) {
+      S.picT += dt; busy = true;
+      const n = Math.floor(S.picT / PIC_SECS) % turn.length, img = card.querySelector('img');
+      if (n !== S.picI && img) {
+        S.picI = n; img.style.transition = 'opacity .3s'; img.style.opacity = '0';
+        setTimeout(() => { if (S.cardFor === c && img.isConnected) { img.src = turn[n]; img.style.opacity = '1'; } }, 300);
+      }
     }
     S.vis = toward(S.vis, vis, snap ? 1 : dt * 14);
     if (S.vis !== vis) busy = true;
@@ -609,7 +624,14 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     show(steps) {
       const sig = steps.map((s) => s.id + (s.place ? 1 : 0) + s.rgb).join();
       S.phone = !pane && host.clientWidth < 700;
-      if (sig === S.sig) { this.resize(); return; }
+      // The same entries with other words or pictures (the editor changed one): the cards are drawn again
+      // where the reader is, and nothing travels.
+      const face = JSON.stringify(steps.map((s) => [s.name, s.kind, s.when, s.summary, s.img, s.imgs, s.place]));
+      if (sig === S.sig) {
+        if (face !== S.face) { S.face = face; S.steps = steps; S.now = -2; past.innerHTML = ''; drawShelf(); }
+        this.resize(); return;
+      }
+      S.face = face;
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
       S.cur = -1; S.frac = 0; S.pos = null; S.trail = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
       drawShelf(); cams(); drawMode(); past.innerHTML = ''; homes();

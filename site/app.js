@@ -981,6 +981,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function stepOf(p) {
     const t = p.t, P = roadPalette();
     return { id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
+      imgs: t.image && !t.noImage ? [t.image, ...(t.media || []).filter((m) => m && m.src && (!m.type || m.type === 'image'))].map((m) => mediaUrl(m.src)).filter((u, i, a) => a.indexOf(u) === i).slice(0, 4) : [],
       mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
   }
   function globeShow() {
