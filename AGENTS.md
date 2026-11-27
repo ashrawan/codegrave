@@ -448,6 +448,14 @@ How the page is put together:
   Ask AI work on it as on a timeline made with AI. A spec holds `MAX_ENTRIES`, so a longer timeline keeps its
   best ranked, and the dialog says so. The copy's entries are its own (`x…` ids): later changes to the wiki's
   entries do not reach it.
+- **The menu of the three dots at the top right (design A with B's publish row, picked from three, Nov 2026),
+  which replaces what the points on that menu say where they differ.** `timelineMenu()` draws: a heading that
+  names the timeline, its number of entries, its years and, for the reader's own, its state (`.tl-head`); for the
+  reader's own, Publish on top as a bordered row of its own with a Share button (`.tl-pub`), which opens the
+  sharing box and never shares by itself (asked for); then Export (Video, Document), Sound (the voiceover, with
+  its voice and "Ready" once there is one) and Edit (Open in editor, or "Make it your own" on a timeline that is
+  not the reader's; Turn round); Rename and Delete stand quietly at the foot (`.tl-foot`). A published timeline
+  stays the reader's to change, at the same address.
 - **When an export is saved (Nov 2026, asked for)** a note stands at the top right, "Video downloaded" with the
   file's name, until the reader closes it with its cross (`exported()` in `site/account.js`, `#ex-done`); not a toast.
 - **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide

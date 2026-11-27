@@ -466,7 +466,24 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
    while a voiceover is recorded, and the small form of the voiceover. */
 #tl-more { position: relative; width: 36px; height: 36px; color: var(--text); background: var(--glass); border: 1px solid var(--glass-edge); border-radius: 50%; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 #tl-more.live::after { content: ''; position: absolute; right: 1px; top: 1px; width: 8px; height: 8px; background: #8fcdb2; border: 2px solid var(--bg); border-radius: 50%; }
-.pop.menu.tl .dlg { width: 248px; }
+.pop.menu.tl .dlg { width: 300px; padding: 8px; }
+.pop.menu.tl .cap { padding: 10px 10px 4px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.tl-head { display: flex; flex-direction: column; gap: 3px; padding: 8px 10px 12px; margin-bottom: 8px; border-bottom: 1px solid var(--rule); }
+.tl-head b { font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tl-head small { font-size: 12px; color: var(--muted); }
+.tl-pub { display: flex; align-items: center; gap: 12px; width: 100%; box-sizing: border-box; padding: 10px 10px 10px 12px; font: inherit; color: var(--text); text-align: left; background: transparent; border: 1px solid var(--rule2); border-radius: 12px; cursor: pointer; }
+.tl-pub:hover { background: var(--raised); }
+.tl-pub > svg { flex: none; }
+.tl-pub span { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.tl-pub b { font-size: 14px; font-weight: 500; }
+.tl-pub small { font-size: 12px; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tl-pub i { flex: none; padding: 6px 10px; font-size: 12px; font-style: normal; font-weight: 600; color: var(--bg); background: var(--acc); border-radius: 8px; }
+.pop.menu.tl .nv.has small { color: var(--acc); }
+.tl-foot { display: flex; justify-content: space-between; gap: 4px; }
+.tl-foot button { min-height: 34px; padding: 0 10px; font: inherit; font-size: 13px; color: var(--muted); background: transparent; border: 0; border-radius: 9px; cursor: pointer; }
+.tl-foot button:hover { color: var(--text); background: var(--raised); }
+.tl-foot button.danger { color: #e58f8f; }
+.tl-foot button.danger:hover { background: rgba(229, 143, 143, .1); }
 .pop.menu.tl .nv span { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
 .pop.menu.tl .nv small { display: inline-flex; align-items: center; gap: 2px; }
 .pop.menu.tl .nv img { flex: none; margin: 0 1px; }

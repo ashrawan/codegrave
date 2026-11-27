@@ -686,17 +686,24 @@ export function createAccount(app) {
   function timelineMenu(anchor) {
     const cur = current(), free = !!cur && !working, hold = working ? null : holder(), told = !!hold && !!voiceOf(hold.get());
     const item = (act, icon, label, note = '', cls = '') => `<button type="button" class="nv${cls}" data-act="${act}" role="menuitem">${icon}<span>${label}</span>${note ? `<small>${note}</small>` : ''}</button>`;
-    // In groups, what is taken away first (asked for, Nov 2026: "export could be top", the voiceover below).
-    const d = popover(anchor, `<div class="cap">Export</div>
-      ${item('video', TL.film, 'Export video', 'MP4')}
-      ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Export as PDF', 'PDF')}
-      ${hold ? '<hr><div class="cap">Voiceover</div>' + item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', told ? 'Ready' : '', told ? '' : ' lit') : ''}
-      <hr><div class="cap">This timeline</div>
+    // Design A with B's publish row (picked from three, Nov 2026): a heading that names the timeline, its size
+    // and state; Publish on top as a row of its own with a Share button, which opens the sharing box and never
+    // shares by itself; then Export, Sound and Edit as short rows with their state at the right; Rename and
+    // Delete quietly at the foot.
+    const ents = app.told()?.entries || [], one = hold || {}, vo = told ? voiceOf(hold.get()) : null;
+    const span = ents.length ? `${ents[0].mark || ''}${ents[0].mark && ents[ents.length - 1].mark && ents[0].mark !== ents[ents.length - 1].mark ? ' to ' + ents[ents.length - 1].mark : ''}` : '';
+    const priv = cur?.visibility === 'private';
+    const d = popover(anchor, `<div class="tl-head"><b>${esc(one.title || 'This timeline')}</b><small>${[ents.length ? `${ents.length} ${ents.length === 1 ? 'entry' : 'entries'}` : '', esc(span), cur ? SEEN[cur.visibility] : ''].filter(Boolean).join(' · ')}</small></div>
+      ${cur ? `<button type="button" class="tl-pub" data-act="publish" role="menuitem">${TL.share}<span><b>${priv ? 'Publish' : 'Sharing'}</b><small>${priv ? 'Private: only you can open it' : cur.visibility === 'public' ? 'Public: anyone can find it' : 'Anyone with the link can open it'}</small></span><i>${priv ? 'Share' : 'Manage'}</i></button>` : ''}
+      <div class="cap">Export</div>
+      ${item('video', TL.film, 'Video', 'MP4')}
+      ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Document', 'PDF')}
+      ${hold ? '<div class="cap">Sound</div>' + item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', vo ? `${esc(voiceLabel(vo.voice))} · Ready` : '', told ? ' has' : ' lit') : ''}
+      <div class="cap">${cur ? 'Edit' : 'This timeline'}</div>
       ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
       ${!cur && hold ? item('mine', TL.edit, 'Make it your own', 'Edit a copy') : ''}
-      ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) : ''}
       ${item('turn', TL.turn, esc($('reverse').textContent.trim() || 'Turn round'))}
-      ${cur ? item('rename', TL.name, 'Rename') + item('delete', TL.bin, 'Delete', '', ' danger') : ''}`, 'menu tl');
+      ${cur ? `<hr><div class="tl-foot"><button type="button" data-act="rename" role="menuitem">Rename</button><button type="button" class="danger" data-act="delete" role="menuitem">Delete</button></div>` : ''}`, 'menu tl');
     d.addEventListener('click', (x) => {
       const a = x.target.closest('[data-act]')?.dataset.act, at = $('tl-more');
       if (!a) return;
