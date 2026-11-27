@@ -60,7 +60,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The globe (the timeline on the Earth, the only way it is drawn): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
 | Where entries are on the Earth | `node scripts/places.mjs` writes `data/places.json` from Wikidata | `data/places.json` by hand |
-| Film mode (frames for videos, driven by a script; hidden, behind a key, never for a reader) | `site/film/`, `tools/film/`, `supabase/functions/film-auth/`, then `tests/film.test.mjs` and `docs/FILM_MODE.md`. Keep the normal page's part to the one line at the end of `site/app.js` | |
+| Film mode (frames for videos, driven by a script; hidden, only for signed-in accounts switched on for it with `film` on their row, never for a reader; no key and nothing of its own on the server) | `site/film/`, `tools/film/`, then `tests/film.test.mjs` and `docs/FILM_MODE.md`. Keep the normal page's part to the one line at the end of `site/app.js` | |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
 To find an entry without listing folders: its path is always

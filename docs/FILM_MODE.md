@@ -2,7 +2,8 @@
 
 Film mode turns the page into a camera for making videos: a script says what to show, second by
 second, and takes exact frames. It is not a feature of the site. No reader sees it, nothing links
-to it, and a page opened without the key behaves exactly as it always does.
+to it, and it opens only for a signed-in account that has been switched on for it. For everyone
+else a film address is the normal page.
 
 This guide is written stage by stage. **Stage 1** is here: the clock, `seek(t)`, the shot types
 `fly`, `hold`, `camera` and `step`, and the `render` command, in landscape. Vertical video,
@@ -15,24 +16,27 @@ presets, layers, generating, runtime scenes and the other shot types follow; ask
   `site/app.js`: if the address has `?film=1`, fetch `film/boot.js`. Without `?film=1` nothing of
   film mode is fetched. (`site/globe.js` also takes an optional clock and a `drive()` call, which
   only film mode uses.)
-- `film/boot.js` reads the key from after the `#` (`#k=<key>`), takes it out of the address at
-  once, and asks the Supabase function `film-auth` whether it is right. Only then is the engine
-  (`film/film.js`) fetched. With no key or a wrong one the page starts normally.
-- The code is public. What is protected is data: private timelines (and, from stage 3, the
-  generator) are reached only through `film-auth`, which wants the short-lived token it gave for
-  the key and the signed-in account ("The account" below).
+- `film/boot.js` looks at who is signed in in this browser and asks whether that account is
+  switched on for film mode. Only then is the engine (`film/film.js`) fetched. Signed out, or
+  with an account that is not switched on, the page starts normally.
+- There is no key and nothing of film mode on the server. It runs in the browser of the person
+  using it, on their computer, as their account: it reads what that account may read and (from
+  stage 3) generates through the site's own generator on that account's daily allowance. The
+  switch keeps it out of sight; it is not what protects anything. Private data is protected by
+  the database's own rules, which film mode does not touch.
 - Film pages carry `noindex,nofollow`, and `robots.txt` closes `/film` and any `?film=` address.
-- Film mode writes nothing: storage is switched off, no sound is made, nothing is sent anywhere.
+- Film mode writes nothing: storage is switched off (only the session may be renewed), no sound
+  is made, nothing is sent anywhere.
 
 ## The address
 
 ```
-https://codegrave.com/<owner>/<slug>?film=1&w=1920&h=1080#k=<key>
+https://codegrave.com/<owner>/<slug>?film=1&w=1920&h=1080
 ```
 
 | Option | Meaning |
 | --- | --- |
-| `film=1` | asks for film mode (the key decides) |
+| `film=1` | asks for film mode (the account decides) |
 | `w`, `h` | the stage in CSS pixels; give the browser window the same size |
 | `dpr` | 1 or 2: the pixels of the result are `w × dpr` by `h × dpr`. Set the browser's device scale to match (the command line does) |
 | `fps` | 30 (default) or 60 |
@@ -40,7 +44,7 @@ https://codegrave.com/<owner>/<slug>?film=1&w=1920&h=1080#k=<key>
 | `detail` | `less` (default), `medium`, `full` |
 | `seed` | the seed of anything drawn by chance (default 1) |
 
-The timeline is the path: `wiki/japan`, `<username>/<slug>`, or `t/<id>` for a private one.
+The timeline is the path: `wiki/japan`, `<username>/<slug>`, or `t/<id>` for one of the account's own.
 
 ## The API: `window.codegraveFilm`
 
@@ -89,7 +93,7 @@ An entry with no place is told among the stars or over a dimmed map, as on the s
 
 ```sh
 cd tools/film && npm install && npx playwright install chromium    # once
-cp .env.example .env                                               # put FILM_KEY in it
+node tools/film/film.mjs login                                      # once: sign in in the window that opens
 node tools/film/film.mjs render <folder>                            # <folder>/shots.json -> <folder>/film.mov
 ```
 
@@ -103,11 +107,11 @@ Several browsers draw at once (`--workers`, 6 by default on a Mac), each taking 
 frames; a frame depends only on its time, so the film is the same however many draw it. On a Mac
 the full Chromium is used so the globe is drawn by the graphics chip.
 
-`--mock-auth` answers the key check on this computer. It is for trying things on built views
-without a key; it opens nothing private, because private data is checked on the server.
+`--mock-auth` answers the account check on this computer with a made-up account. It is for trying
+things on built views with nobody signed in; it opens nothing stored, because it reaches no database.
 
 Checks: `node --test` (the arithmetic, the gate, that the normal page has no film code) and
-`node tools/film/check.mjs` (a real browser: requests, keys, identical frames, no writes).
+`node tools/film/check.mjs` (a real browser: requests, the gate, identical frames, no writes).
 
 ## Adding a shot type
 
@@ -119,22 +123,14 @@ nothing remembered from the frame before. Add it to the schema and to `tests/fil
 
 ## The account
 
-The key says film mode may be used; the account signed in says for whom. The page sends its
-session with the key, and the token that comes back carries that account. It opens public
-timelines and that account's own private ones, never another account's, and what `generate()`
-makes (stage 3) is that account's own and counts against its daily allowance like any other
-request. With nobody signed in, only public timelines and built views open.
+Film mode is switched on per account: the field `film` on the account's row (Supabase, Table
+Editor, `profiles`), off for everyone until it is set by hand. An account can write only its
+username, so nobody switches it on for themselves.
+
+Everything film mode does, it does as that account: it opens public timelines and the account's
+own, and what `generate()` makes (stage 3) is the account's own and counts against its daily
+allowance like any other request.
 
 For the tools: `node tools/film/film.mjs login` opens a window on the site; sign in as usual and
 it closes. The session is kept in `tools/film/.session.json` (never committed) and every render
 starts signed in with it. Delete the file to sign out.
-
-## The key
-
-`FILM_KEY` is a secret of the Supabase function `film-auth` (Supabase, Edge Functions, Secrets)
-and a line in `tools/film/.env` on the computer that renders. It is never in the repository and
-never in the page. Use at least 20 random characters, for example `openssl rand -base64 32`.
-
-To rotate it: set a new value in Supabase and in `.env`. Tokens are signed with a key made from
-it, so every token given for the old key stops working at once. Every call of `film-auth` is
-logged, and wrong keys are limited to a few a minute.

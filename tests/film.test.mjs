@@ -1,8 +1,8 @@
 // Film mode (site/film/, docs/FILM_MODE.md): what can be checked without a browser. The checks that
-// need one (frames, requests, the key) are in tools/film/check.mjs.
+// need one (frames, requests, the gate) are in tools/film/check.mjs.
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, readdirSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { compile, stateAt, toOver, cuesOf, FilmError, EASES, mixCam } from '../site/film/timeline.js';
 import { SHOTS } from '../site/film/shots/index.js';
 
@@ -37,31 +37,28 @@ test('film routes are closed to search engines', () => {
   assert.match(read('film/film.js'), /noindex,nofollow/);
 });
 
-test('the key is never in the repository', () => {
-  for (const f of ['film/boot.js', 'film/film.js']) assert.ok(!/FILM_KEY\s*=\s*['"][^'"]+/.test(read(f)));
-  assert.match(readFileSync(new URL('../.gitignore', import.meta.url), 'utf8'), /^\.env$/m);
+test('there is no key and no film function: film mode has nothing of its own on the server', () => {
+  for (const f of ['film/boot.js', 'film/film.js']) assert.ok(!/FILM_KEY|film-auth|#k=/.test(read(f)), f);
+  assert.ok(!existsSync(new URL('../supabase/functions/film-auth', import.meta.url)));
 });
 
-test('without a key the gate does nothing: no request, and the page is told to start as ever', async () => {
-  const calls = [];
-  globalThis.location = { hash: '', pathname: '/wiki/japan', search: '?film=1' };
-  globalThis.history = { replaceState: () => calls.push('history') };
-  globalThis.fetch = async () => { calls.push('fetch'); return { ok: false, json: async () => ({}) }; };
+test('the gate: nobody signed in, or an account not switched on, and the page is told to start as ever', async () => {
+  const asked = [], kit = (film) => ({ api: async (path) => { asked.push(path); return film === undefined ? [] : [{ film }]; } });
+  globalThis.localStorage = { getItem: () => null };
   const { default: boot } = await import('../site/film/boot.js');
-  assert.equal(await boot({}), false);
-  assert.deepEqual(calls, []);
-  // An entry's own link is not taken for a key, and is left in the address.
-  globalThis.location.hash = '#kyoto';
-  assert.equal(await boot({}), false);
-  assert.deepEqual(calls, []);
-  // A wrong key: asked once, refused, and still nothing happens. The key is taken out of the address.
-  globalThis.location.hash = '#k=wrong';
-  let sent = null;
-  globalThis.fetch = async (u, o) => { calls.push('fetch'); sent = JSON.parse(o.body); return { ok: false, json: async () => ({}) }; };
-  assert.equal(await boot({ token: async () => 'session-of-the-account' }), false);
-  assert.deepEqual(calls, ['history', 'fetch']);
-  // The account signed in goes with the key, so the token is that account's and no one else's.
-  assert.deepEqual(sent, { key: 'wrong', user: 'session-of-the-account' });
+  assert.equal(await boot(kit(true)), false);
+  assert.deepEqual(asked, [], 'signed out: nothing is asked');
+  // Signed in: the account's own row is asked for its switch, and only `true` opens film mode.
+  const id = '3f2b8c1e-0d4a-4c6b-9e7f-1a2b3c4d5e6f';
+  globalThis.localStorage = { getItem: (k) => (k === 'cg-session' ? JSON.stringify({ user: { id } }) : null) };
+  for (const film of [false, undefined, 'true', 1]) assert.equal(await boot(kit(film)), false);
+  assert.equal(asked.length, 4);
+  assert.equal(asked[0], `/rest/v1/profiles?id=eq.${id}&select=film`);
+  assert.equal(await boot({ api: async () => { throw new Error('offline'); } }), false);
+  // A session that is not a session asks nothing.
+  globalThis.localStorage = { getItem: () => JSON.stringify({ user: { id: 'x&select=*' } }) };
+  assert.equal(await boot(kit(true)), false);
+  assert.equal(asked.length, 4);
 });
 
 test('every fault in a shot list is named', () => {

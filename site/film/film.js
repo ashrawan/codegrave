@@ -6,14 +6,13 @@
    It writes nothing: storage is switched off, nothing sounds, nothing is sent anywhere. */
 import { idOfAddress } from '../keys.js';
 import { stageFor } from '../globe-path.js';
-import { AUTH } from './boot.js';
 import { VERSION, EASES, TRACKS, compile, stateAt, toOver, cuesOf, FilmError } from './timeline.js';
 import { SHOTS } from './shots/index.js';
 
 const LOOKS = ['atlas', 'day', 'dots'], DETAILS = ['less', 'medium', 'full'];
 const DEEP = -5e6;      // older than this an entry has no place on today's map (as on the site)
 
-export function startFilm(kit, auth) {
+export function startFilm(kit) {
   const q = new URLSearchParams(location.search);
   const num = (k, d, lo, hi) => { const v = Number(q.get(k)); return q.get(k) != null && Number.isFinite(v) && v >= lo && v <= hi ? v : d; };
   const W = Math.round(num('w', innerWidth, 64, 8192)), H = Math.round(num('h', innerHeight, 64, 8192));
@@ -49,23 +48,15 @@ export function startFilm(kit, auth) {
   // ---- data
   const tl = { id: null, slug: null, view: null, entries: [], steps: [], spec: null };
   let places = null, film = null, ctx = null, cur = null, mapSeen = null;
-  const call = async (body) => {
-    const r = await fetch(AUTH, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ token: auth.token, ...body }) });
-    const j = await r.json().catch(() => ({}));
-    if (!r.ok) throw new Error(j.error || 'film-auth ' + r.status);
-    return j;
-  };
   const placeOf = (t) => (t.where ? [t.where[0], t.where[1], 'city', ''] : !t.pos && !t.val && t.born > DEEP ? (places && places[t.id]) || null : null);
   async function loadTimeline(slug) {
     await booted;
     const id = idOfAddress(String(slug).replace(/^\/+|\/+$/g, ''));
-    let real = null, spec = null;
-    // A timeline someone keeps is read with the film token, the account's own private ones too; a built view is a file.
-    const kept = /^t\//.test(id) || (id.includes('/') && !id.startsWith('wiki/'));
-    if (kept) {
-      try { const got = await call({ open: id }); if (got.view) { real = kit.useView({ view: got.view, entries: got.entries }).id; spec = got.spec || null; } } catch (e) { /* a community folder's view is a file too */ }
-    }
-    if (!real) real = await kit.loadView(id);
+    // The page's own loader: a built view is a file, and a timeline someone keeps is read as the account signed
+    // in, so its own private ones open and nobody else's. A kept one has its spec beside it.
+    const real = await kit.loadView(id).catch(() => null);
+    const stored = real && /^t\//.test(real) ? await kit.api('/rest/v1/rpc/open_timeline', { method: 'POST', body: { p_id: real.slice(2) } }).catch(() => null) : null;
+    const spec = (stored && stored[0] && stored[0].data && stored[0].data.spec) || null;
     if (!real) throw new Error(`Film: the timeline "${slug}" could not be read`);
     const v = kit.viewById.get(real);
     tl.id = real; tl.slug = id; tl.view = v; tl.spec = spec;

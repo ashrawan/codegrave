@@ -4,8 +4,8 @@
 //   node tools/film/film.mjs render <folder> [options]
 //
 // <folder> holds shots.json (a list of shots, or { timeline, preset, shots }) and gets the result.
-// The key is read from tools/film/.env (FILM_KEY); it is never printed and never written anywhere.
-// `film.mjs login` signs an account in once (a window opens); films are then made as that account.
+// Film mode opens for a signed-in account that has been switched on for it; there is no key.
+// `film.mjs login` signs the account in once (a window opens); films are then made as that account.
 //
 // Options (each may also stand in <folder>/film.json):
 //   --timeline <owner/slug>   the timeline to film: wiki/japan, <username>/<slug>, t/<id>
@@ -19,8 +19,8 @@
 //   --from <s> --to <s>       only this stretch of the film
 //   --headed                  show the browser while it works
 //   --workers <n>             browsers that draw at once (on a Mac 6 by default, elsewhere 1)
-//   --mock-auth               answer the key check locally: for trying things on built views, with
-//                             no key and no access to anything private
+//   --mock-auth               answer the account check locally: for trying things on built views, with
+//                             nobody signed in and no access to anything private
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
@@ -99,8 +99,8 @@ async function launch(headless) {
 }
 
 // The account films are made for: `login` keeps its session in tools/film/.session.json (never committed), and
-// every page opened here starts signed in with it. Film mode sends it with the key, so the token it gets reads
-// that account's own timelines and nobody else's private ones. The page renews a session; what it renewed is kept.
+// every page opened here starts signed in with it, so film mode reads that account's own timelines and nobody
+// else's private ones. The page renews a session; what it renewed is kept.
 const SESSION = join(here, '.session.json'), SKEY = 'cg-session';
 async function signIn(page, base) {
   if (!existsSync(SESSION)) return;
@@ -123,20 +123,26 @@ async function login(args, env) {
   console.error('film: signed in as ' + (JSON.parse(got).user?.email || 'your account') + '. The session is kept in tools/film/.session.json.');
 }
 
-// Opens the timeline in film mode and waits until it is ready. The key goes after "#", so it is never sent in a request for the page.
-async function open(job, env) {
-  const key = job.mock ? 'mock' : env.FILM_KEY;
-  if (!key) fail('FILM_KEY is not set. Put it in tools/film/.env (see .env.example), or use --mock-auth for a built view.');
+// --mock-auth: a made-up account that is switched on, answered on this computer. Nothing of Supabase is reached,
+// so only built views open.
+export const MOCK = { access_token: 'mock', refresh_token: 'mock', expires_at: 4102444800, user: { id: '00000000-0000-4000-8000-000000000000' } };
+export async function mockAccount(page, film = true) {
+  await page.addInitScript((s) => { try { localStorage.setItem('cg-session', s); } catch (e) { /* no storage */ } }, JSON.stringify(MOCK));
+  await page.route(/supabase\.co\/(rest|auth|functions)\/v1\//, (r) => r.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*', 'access-control-allow-headers': '*' }, body: /select=film/.test(r.request().url()) ? JSON.stringify([{ film }]) : '[]' }));
+}
+
+// Opens the timeline in film mode and waits until it is ready.
+async function open(job) {
+  if (!job.mock && !existsSync(SESSION)) fail('nobody is signed in. Run: node tools/film/film.mjs login   (or use --mock-auth for a built view)');
   const browser = await launch(!job.headed);
   const page = await browser.newPage({ viewport: { width: job.w, height: job.h }, deviceScaleFactor: job.dpr });
-  await signIn(page, job.base);
-  if (job.mock) await page.route('**/functions/v1/film-auth', (r) => r.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(r.request().postDataJSON()?.key ? { token: 'mock', scopes: ['read'] } : { error: 'mock' }), status: r.request().method() === 'OPTIONS' || r.request().postDataJSON()?.key ? 200 : 404 }));
+  if (job.mock) await mockAccount(page); else await signIn(page, job.base);
   const q = new URLSearchParams({ film: '1', w: job.w, h: job.h, dpr: job.dpr, fps: job.fps, ...(job.look ? { look: job.look } : {}), ...(job.detail ? { detail: job.detail } : {}) });
-  await page.goto(`${job.base}/${job.timeline}?${q}#k=${encodeURIComponent(key)}`);
+  await page.goto(`${job.base}/${job.timeline}?${q}`);
   const on = await page.waitForFunction(() => !!window.codegraveFilm, null, { timeout: 30000 }).catch(() => null);
-  if (!on) { await browser.close(); fail('film mode did not start: the key was not accepted, or this site has no film mode yet'); }
+  if (!on) { await browser.close(); fail('film mode did not start: the session has run out (run film.mjs login again), this account is not switched on for film mode, or this site has no film mode yet'); }
   await page.evaluate(() => window.codegraveFilm.ready).catch(async (e) => { await browser.close(); fail(e.message.split('\n')[0]); });
-  await keepSession(page);
+  if (!job.mock) await keepSession(page);
   return { browser, page };
 }
 async function load(page, job) {
@@ -159,11 +165,11 @@ async function render(args, env) {
   const crew = [];
   const film = !(job.format === 'png'), frames = film ? join(job.dir, '.frames') : job.out;
   try {
-    crew.push(await open(job, env));
+    crew.push(await open(job));
     const total = await load(crew[0].page, job), a = Math.max(0, job.from), b = Math.min(total, job.to ?? total);
     const first = Math.round(a * job.fps), last = Math.round(b * job.fps), count = Math.max(1, Math.min(job.workers, Math.ceil((last - first) / 30)));
     console.log(`film: ${total.toFixed(2)}s, frames ${first} to ${last - 1} at ${job.fps} fps, ${job.w * job.dpr}×${job.h * job.dpr}, ${count} ${count === 1 ? 'browser' : 'browsers'}`);
-    crew.push(...await Promise.all(Array.from({ length: count - 1 }, async () => { const w = await open(job, env); await load(w.page, job); return w; })));
+    crew.push(...await Promise.all(Array.from({ length: count - 1 }, async () => { const w = await open(job); await load(w.page, job); return w; })));
     const pre = (await Promise.all(crew.map((w) => w.page.evaluate(() => window.codegraveFilm.prefetch()))))[0];
     for (const m of pre.failed) console.log(`film: could not get ${m.kind}: ${m.what}`);
     if (film) rmSync(frames, { recursive: true, force: true });
@@ -198,7 +204,9 @@ async function render(args, env) {
   }
 }
 
-const COMMANDS = { render, login };
-const args = readArgs(process.argv.slice(3)), cmd = COMMANDS[process.argv[2]];
-if (!cmd) fail(`give a command: ${Object.keys(COMMANDS).join(', ')}. The options are at the top of tools/film/film.mjs and in docs/FILM_MODE.md.`);
-await cmd(args, readEnv());
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  const COMMANDS = { render, login };
+  const args = readArgs(process.argv.slice(3)), cmd = COMMANDS[process.argv[2]];
+  if (!cmd) fail(`give a command: ${Object.keys(COMMANDS).join(', ')}. The options are at the top of tools/film/film.mjs and in docs/FILM_MODE.md.`);
+  await cmd(args, readEnv());
+}
