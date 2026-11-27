@@ -2,9 +2,6 @@
 -- account gets the function's default (AI_DAILY, 20 a day). Rows are written
 -- by hand in the database; only the Edge Function reads them, with the
 -- service role, so nobody can raise their own.
---   insert into public.ai_limits (owner, daily)
---   select id, 100 from auth.users where email = 'someone@example.com'
---   on conflict (owner) do update set daily = excluded.daily;
 create table public.ai_limits (
   owner uuid primary key references public.profiles (id) on delete cascade,
   daily integer not null check (daily >= 0),
