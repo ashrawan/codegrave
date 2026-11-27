@@ -435,7 +435,8 @@ How the page is put together:
   left, a year where it changes, one with no place in italics. The picture of the entry in front moves as it does
   in play (`panAt()`, the same five ways as `g-pan` to `g-pan-e`; change the two together). The export dialog has
   "Period": From and To, by entry, opening on all the timeline shows (which already follows the year range of the
-  page), so a film can be a part of a timeline. Quality is Quick test (240p), 720p or 1080p.
+  page), so a film can be a part of a timeline. On a wide frame the pictures of the entry in front and
+  the last few passed stand small at the left, as `.g-past` does. Quality is Quick test (240p), 720p or 1080p.
 - **Export says when the graphics hardware helps (Nov 2026, asked for).** The browser's encoder already uses the
   device's video hardware where there is one; `canFast()` in `site/export.js` only asks whether it can, and the
   dialog's foot then reads "Made on your device, sped up by its graphics hardware. Nothing is uploaded."

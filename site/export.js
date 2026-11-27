@@ -276,6 +276,21 @@ export function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
     const { i, into, fade } = sceneAt(scenes, t), st = steps[i], plate = shown > 0.5;
     if (fade > 0 && i > 0) card(steps[i - 1], fade, scenes[i - 1].t1 - scenes[i - 1].t0 + into, plate);
     card(st, 1 - fade, into, plate);
+    // At the left, as in play on a wide screen: the picture of the entry in front, on top and lit, then the last
+    // few passed, each smaller and dimmer; never one that is still ahead.
+    if (lay.wide) {
+      const sizes = [[208, 140, 1], [176, 118, 0.6], [156, 104, 0.4], [136, 92, 0.2], [136, 92, 0.2]];
+      let y = Math.round(H * 0.24), k = 0;
+      for (let n = i; n >= 0 && k < sizes.length; n--) {
+        const b = steps[n].bmp; if (!b) continue;
+        const [bw, bh, al] = sizes[k++], w = px(bw), h = px(bh), x = px(52), f = Math.min(w / b.width, h / b.height);
+        c.globalAlpha = al * (n === i ? 1 - fade : 1); c.fillStyle = 'rgba(7,10,16,.6)'; c.fillRect(x, y, w, h);
+        c.drawImage(b, x + (w - b.width * f) / 2, y + (h - b.height * f) / 2, b.width * f, b.height * f);
+        c.strokeStyle = n === i ? (steps[n].rgb || '#e8b04a') : 'rgba(200,215,255,.2)'; c.lineWidth = Math.max(1, px(2)); c.strokeRect(x, y, w, h);
+        y += h + px(24);
+      }
+      c.globalAlpha = 1;
+    }
     // The heading and the period of the entry in front: side by side on a wide frame, one over the other else.
     c.textBaseline = 'alphabetic'; c.textAlign = 'center';
     let ts = px(44); c.font = `400 ${ts}px ${serif}`;
