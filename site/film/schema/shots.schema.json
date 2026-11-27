@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codegrave.com/film/schema/shots.schema.json",
+  "title": "A film mode shot list",
+  "description": "A list of shots, or an object with the timeline and the list. The engine's own checks (loadShots) are the authority; this file is for editor hints. More shot types arrive with later stages: ask capabilities() what a site supports.",
+  "oneOf": [
+    { "$ref": "#/$defs/shots" },
+    { "type": "object", "required": ["shots"], "properties": { "timeline": { "type": "string", "description": "wiki/japan, <username>/<slug> or t/<id>" }, "preset": { "type": "string" }, "shots": { "$ref": "#/$defs/shots" } } }
+  ],
+  "$defs": {
+    "shots": { "type": "array", "items": { "oneOf": [{ "$ref": "#/$defs/fly" }, { "$ref": "#/$defs/hold" }, { "$ref": "#/$defs/camera" }, { "$ref": "#/$defs/step" }] } },
+    "place": { "description": "An entry's id, or a place on the Earth", "oneOf": [
+      { "type": "string" },
+      { "type": "object", "required": ["lat", "lng"], "properties": { "lat": { "type": "number" }, "lng": { "type": "number" }, "zoom": { "type": "number" }, "altitude": { "type": "number", "description": "kilometres" }, "heading": { "type": "number" }, "tilt": { "type": "number" } } }
+    ] },
+    "common": { "type": "object", "properties": {
+      "start": { "type": "number", "minimum": 0, "description": "Seconds from the start of the film. Left out, a camera shot follows the one before it, and an overlay starts with the camera shot listed before it." },
+      "duration": { "type": "number", "minimum": 0, "description": "Seconds" },
+      "ease": { "enum": ["smooth", "linear", "in", "out", "inOut"] },
+      "track": { "enum": ["camera", "overlay"] }
+    } },
+    "fly": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "to", "duration"], "properties": {
+      "type": { "const": "fly" }, "to": { "$ref": "#/$defs/place" }, "from": { "$ref": "#/$defs/place" },
+      "zoom": { "type": "number" }, "shift": { "type": "number", "minimum": 0, "maximum": 1 }, "trail": { "type": "boolean" } } },
+    "hold": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "duration"], "properties": {
+      "type": { "const": "hold" }, "entry": { "type": "string" }, "card": { "type": "boolean" }, "picture": { "type": "boolean" },
+      "in": { "type": "number", "minimum": 0 }, "out": { "type": "number", "minimum": 0 }, "zoom": { "type": "number" } } },
+    "camera": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "duration"], "properties": {
+      "type": { "const": "camera" }, "lat": { "type": "number", "minimum": -85, "maximum": 85 }, "lng": { "type": "number" },
+      "altitude": { "type": "number", "description": "kilometres" }, "zoom": { "type": "number", "minimum": 0, "maximum": 20 },
+      "heading": { "type": "number" }, "tilt": { "type": "number", "minimum": 0, "maximum": 60 }, "shift": { "type": "number", "minimum": 0, "maximum": 1 } } },
+    "step": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "entries", "durations"], "properties": {
+      "type": { "const": "step" }, "entries": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+      "durations": { "oneOf": [{ "type": "number", "exclusiveMinimum": 0 }, { "type": "array", "items": { "type": "number", "exclusiveMinimum": 0 } }] },
+      "travel": { "type": "number", "minimum": 0 }, "card": { "type": "boolean" }, "picture": { "type": "boolean" }, "in": { "type": "number" }, "out": { "type": "number" } } }
+  }
+}

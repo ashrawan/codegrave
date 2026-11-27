@@ -3,5 +3,7 @@
 User-agent: *
 Allow: /
 Disallow: /print.html
+Disallow: /film
+Disallow: /*film=
 
 Sitemap: https://codegrave.com/sitemap.xml

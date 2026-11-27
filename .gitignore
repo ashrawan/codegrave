@@ -5,3 +5,8 @@ node_modules/
 site/data/
 site/_redirects
 site/sitemap.xml
+
+# Film tools: the key and what they render stay on the machine
+.env
+tools/film/node_modules/
+tools/film/package-lock.json

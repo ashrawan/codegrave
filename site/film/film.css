@@ -1,0 +1,16 @@
+/* Film mode: only the stage is on the page, at the exact size asked for, and nothing moves by
+   itself. This file is fetched only by film mode. */
+html, body { margin: 0 !important; overflow: hidden !important; background: #05070c !important; }
+body.cg-film > :not(#film-stage) { display: none !important; }
+body.cg-film, body.cg-film * { cursor: none !important; }
+body.cg-film *, body.cg-film *::before, body.cg-film *::after { transition: none !important; animation: none !important; caret-color: transparent; }
+#film-stage { position: fixed; left: 0; top: 0; overflow: hidden; background: #05070c; contain: strict; }
+#film-stage #globe { position: absolute; inset: 0; }
+#film-stage .g-mode, #film-stage .g-note { display: none !important; }
+#film-stage #globe.nopic .g-card img, #film-stage #globe.nopic .g-card canvas { display: none; }
+/* The site dims its map with a filter, which a browser draws a shade differently from one frame to the next.
+   Here a plain dark sheet over the map does the same, the same way every time. */
+#film-stage .g-map { filter: none !important; }
+#film-stage .film-dim { position: absolute; inset: 0; background: #05070c; opacity: calc(var(--film-dim, 0) * 0.55); pointer-events: none; }
+/* Rounded corners over the moving map are smoothed a shade differently from frame to frame too. */
+#film-stage .g-past img, #film-stage .g-past canvas { border-radius: 0 !important; }
