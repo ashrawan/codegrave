@@ -367,7 +367,10 @@ html, body { touch-action: pan-x pan-y; }
   #sb-fold { opacity: 0; transition: opacity .12s; }
   #sb .sb-head:hover #sb-fold, #sb-fold:focus-visible, body:not(.sb-open) #sb:hover #sb-fold { opacity: 1; }
 }
-#sb-list #sb-new { margin-bottom: 2px; }
+/* Create timeline: the one lit button of the bar, so it is seen at once (asked for, Nov 2026). */
+#sb-list #sb-new { margin: 2px 0 10px; min-height: 38px; font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 13%, transparent); border: 1px solid color-mix(in srgb, var(--acc) 46%, transparent); border-radius: 10px; transition: background .15s, border-color .15s; }
+#sb-list #sb-new:hover, #sb-list #sb-new.on { color: var(--acc); background: color-mix(in srgb, var(--acc) 22%, transparent); border-color: var(--acc); }
+body:not(.sb-open) #sb-list #sb-new { width: 36px; margin-inline: auto; }
 #more-menu .state { margin-left: auto; font-size: 12px; color: var(--faint); }
 .ex-gh { display: flex; align-items: center; justify-content: center; gap: 8px; width: max-content; margin: 14px auto 0; font-size: 13px; color: var(--muted); text-decoration: none; }
 .ex-gh:hover { color: var(--text); }
@@ -409,3 +412,13 @@ body.multi #road-unit { display: none; }
 #explore .card .radd { width: auto; height: 30px; gap: 5px; padding: 0 12px 0 9px; font-size: 12.5px; font-weight: 600; border-radius: 15px; opacity: 1; -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
 #explore .card .radd:hover { color: var(--bg); background: var(--text); border-color: var(--text); }
 #explore .card .radd:disabled { opacity: 0 !important; }
+/* Ask AI: its steps stand in a row just above its box at the foot while the timeline is rewritten (asked for, Nov 2026). */
+#ai-live.low { top: auto; bottom: 122px; padding: 10px 18px; border-radius: 22px; }
+#ai-live.low ol { display: flex; gap: 6px 20px; }
+#ai-live.low li { font-size: 13px; }
+body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
+@media (max-width: 699px) {
+  #ai-live.low { top: auto; bottom: 116px; max-width: calc(100vw - 24px); }
+  #ai-live.low ol { display: grid; grid-template-columns: auto auto; }
+  body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 232px; }
+}
