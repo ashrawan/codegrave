@@ -146,7 +146,7 @@ How the page is put together:
 - **The bar on the left and your own timelines** (`site/account.js`,
   `docs/ACCOUNTS.md`; asked for and designed in Nov 2026, like the sidebar
   of an AI chat app, "so it is scalable"). From the top: the logo, Explore, "Your
-  timelines" with New timeline first under it (asked for, Nov 2026), and
+  timelines" with "Create timeline" first under it, the one lit button of the bar, in the accent colour (`#sb-new`; asked for, Nov 2026, after a plain "New timeline" row went unseen), and
   the account at the bottom left (Sign in when signed out; the account's
   menu opens upward). It folds to a strip of icons (`cg-sb` in this
   browser); like a chat app, the fold button shows while the pointer is over

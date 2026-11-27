@@ -367,7 +367,10 @@ html, body { touch-action: pan-x pan-y; }
   #sb-fold { opacity: 0; transition: opacity .12s; }
   #sb .sb-head:hover #sb-fold, #sb-fold:focus-visible, body:not(.sb-open) #sb:hover #sb-fold { opacity: 1; }
 }
-#sb-list #sb-new { margin-bottom: 2px; }
+/* Create timeline: the one lit button of the bar, so it is seen at once (asked for, Nov 2026). */
+#sb-list #sb-new { margin: 2px 0 10px; min-height: 38px; font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 13%, transparent); border: 1px solid color-mix(in srgb, var(--acc) 46%, transparent); border-radius: 10px; transition: background .15s, border-color .15s; }
+#sb-list #sb-new:hover, #sb-list #sb-new.on { color: var(--acc); background: color-mix(in srgb, var(--acc) 22%, transparent); border-color: var(--acc); }
+body:not(.sb-open) #sb-list #sb-new { width: 36px; margin-inline: auto; }
 #more-menu .state { margin-left: auto; font-size: 12px; color: var(--faint); }
 .ex-gh { display: flex; align-items: center; justify-content: center; gap: 8px; width: max-content; margin: 14px auto 0; font-size: 13px; color: var(--muted); text-decoration: none; }
 .ex-gh:hover { color: var(--text); }

@@ -680,11 +680,11 @@ export function createAccount(app) {
     const on = app.views(), cur = current(), key = [user?.id, profile?.username, listed, on.join(), list.map((t) => t.id + t.title + t.visibility).join(), cur?.visibility].join('|');
     if (!force && key === drawn) return;
     drawn = key;
-    // "New timeline" stands first under "Your timelines" (asked for, Nov 2026).
-    const NEW = `<button id="sb-new" class="nv${document.body.classList.contains('creating') ? ' on' : ''}" type="button" title="New timeline">${ICON.plus}<span class="lbl">New timeline</span></button>`;
+    // "Create timeline" stands first under "Your timelines", as a lit button so it is seen (asked for, Nov 2026).
+    const NEW = `<button id="sb-new" class="nv${document.body.classList.contains('creating') ? ' on' : ''}" type="button" title="Create a timeline">${ICON.plus}<span class="lbl">Create timeline</span></button>`;
     $('sb-list').innerHTML = !user
       ? `<h2 class="cap">Your timelines</h2>${NEW}<p class="sb-note">Sign in to make your own timelines and keep them here.</p>`
-      : `<h2 class="cap">Your timelines</h2>${NEW}${!listed ? '' : list.length ? list.map((t, i) => `<div class="sb-row${on.length === 1 && on[0] === 't/' + t.id ? ' on' : ''}"><button type="button" class="nv" data-open="${t.id}" title="${esc(t.title)}"><i class="dot" style="background: var(--p${i % 8})"></i><span class="lbl">${esc(t.title)}</span>${t.visibility === 'private' ? '<small class="lbl">Draft</small>' : ''}</button><button type="button" class="ibtn sm more" data-more="${t.id}" aria-label="More for ${esc(t.title)}">${ICON.dots}</button></div>`).join('') : '<p class="sb-note">None yet. “New timeline” starts one from what is on the road.</p>'}`;
+      : `<h2 class="cap">Your timelines</h2>${NEW}${!listed ? '' : list.length ? list.map((t, i) => `<div class="sb-row${on.length === 1 && on[0] === 't/' + t.id ? ' on' : ''}"><button type="button" class="nv" data-open="${t.id}" title="${esc(t.title)}"><i class="dot" style="background: var(--p${i % 8})"></i><span class="lbl">${esc(t.title)}</span>${t.visibility === 'private' ? '<small class="lbl">Draft</small>' : ''}</button><button type="button" class="ibtn sm more" data-more="${t.id}" aria-label="More for ${esc(t.title)}">${ICON.dots}</button></div>`).join('') : '<p class="sb-note">None yet. “Create timeline” makes one from a sentence.</p>'}`;
     $('sb-foot').innerHTML = user
       ? `<button type="button" class="nv who" id="sb-me" aria-haspopup="menu"><i class="av">${esc(shown()[0].toUpperCase())}</i><span class="lbl"><b>${esc(shown())}</b><small>${esc(user.email || 'Free plan')}</small></span><span class="lbl chev">${ICON.chev}</span></button>`
       : `<button type="button" class="big" id="sb-in" title="Sign in">${ICON.login}<span class="lbl">Sign in</span></button>`;
