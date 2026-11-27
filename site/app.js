@@ -550,6 +550,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!got || !viewById.get(got)?.members) { note(`“${viewById.get(real)?.name || real}” could not be loaded. Try again in a moment.`); return null; }
       if (play.on) pausePlay();
       state.span = null; state.pinned.clear();
+      // The entry that was open belongs to the views that leave: its panel closes and its id leaves the link,
+      // or a reload would bring its view back beside this one (reported, Nov 2026).
+      if (state.open || state.era || location.hash) { state.open = null; state.era = null; state.trail = []; showPane('views'); history_replace(''); }
       setViews([got]);
       musicAgain();
       road.t = road.target = null; road.vel = 0;      // render() then opens the road where this view begins
@@ -967,6 +970,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // entries there are, in the order play meets them (globeShow), and which one stands in front (globeFrame).
   let globe = null, places = {};
   const AHEAD = 0.3;                           // focal lengths ahead of the reader at which an entry is the one in front
+  function stepOf(p) {
+    const t = p.t, P = roadPalette();
+    return { id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
+      mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
+  }
   function globeShow() {
     if (!globe) {
       document.body.classList.add('globe');
@@ -979,12 +987,40 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       const t = p.t;
       if (seen.has(t.id)) continue;
       seen.add(t.id);
-      steps.push({ id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
-        mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: !RANKED && t.born > DEEP ? places[t.id] || null : null });
+      steps.push(stepOf(p));
     }
     road.gsteps = new Map(road.gorder.map((p) => [p.t.id, p]).reverse());
     road.gcur = undefined;
     globe.show(steps);
+    globePanes(steps);
+  }
+  // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
+  // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
+  const panes = new Map();
+  let grid = null;
+  function globePanes(steps) {
+    // 'Several views' in the three-dot menu: a grid (the default), or all on one globe (`cg-grid` in this browser).
+    const lanes = L.lanes.length > 1 && store.get('cg-grid') !== 'one' ? L.lanes : [];
+    document.body.classList.toggle('multi', lanes.length > 0);
+    globe.bare(lanes.length > 0);
+    if (!grid) { grid = document.createElement('div'); grid.className = 'g-grid'; $('globe').appendChild(grid); }
+    grid.hidden = !lanes.length; grid.dataset.n = lanes.length;
+    for (const [id, pn] of panes) if (!lanes.some((ln) => ln.view.id === id)) { pn.g.remove(); panes.delete(id); }
+    const byStep = new Map(steps.map((s) => [s.id, s])), dir = camDir();
+    lanes.forEach((ln, i) => {
+      let pn = panes.get(ln.view.id);
+      if (!pn) {
+        const el = document.createElement('div');
+        pn = { el, g: createGlobe(el, { esc, calm, pane: true, open: (id) => openThing(id), goTo: (id) => roadToThing(id), seek: () => {} }) };
+        panes.set(ln.view.id, pn);
+      }
+      if (grid.children[i] !== pn.el) grid.insertBefore(pn.el, grid.children[i] || null);
+      pn.order = L.shown.filter((p) => p.lane === ln && p.a >= L.tMin && p.a <= L.tMax).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
+      pn.live = undefined; pn.el.style.setProperty('--pc', colVar(ln.col));
+      pn.g.title(ln.view.name, colVar(ln.col));
+      pn.g.show(pn.order.map((p) => ({ ...(byStep.get(p.t.id) || {}), ...stepOf(p) })));
+    });
+    requestAnimationFrame(() => { for (const pn of panes.values()) pn.g.resize(); });
   }
   // The time line at the foot was dragged: the reader goes to `frac` of the way from this entry to the next
   // (null: from before the first). An open entry no longer holds the globe once the reader drags away from it.
@@ -1014,6 +1050,17 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const from = cur ? cur.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
     road.gleg = next && next.a !== from ? Math.abs(next.a - from) : 0;
     const fresh = globe.at(id, road.gleg ? clamp((edge - from) / (next.a - from), 0, 1) : 0, play.on);
+    // Each view's own globe goes by the same reader: its entry in front is the last of its own the reader has come to.
+    for (const pn of panes.values()) {
+      let c = !play.on && state.open && state.open !== road.gfree ? pn.order.find((p) => p.t.id === state.open) || null : null, n = null;
+      if (!c) for (const p of pn.order) { if (dir * (p.a - edge) > 0) { n = p; break; } c = p; }
+      const f = c ? c.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
+      pn.g.at(c ? c.t.id : null, n && n.a !== f ? clamp((edge - f) / (n.a - f), 0, 1) : 0, play.on);
+      // The panes the entry in front belongs to are lit, and the others put their card away, so it is plain
+      // which globe is being told about (asked for, Nov 2026). Views with an entry at the same date light together.
+      const live = !!(c && cur && (c.t.id === cur.t.id || c.t.born === cur.t.born));
+      if (pn.live !== live) { pn.live = live; pn.el.classList.toggle('live', live); }
+    }
     if (id === road.gcur) return;
     road.gcur = id;
     road.gshows = cur && wallMedia(cur.t).length ? [{ id, name: cur.t.name, side: 0, col: null, media: wallMedia(cur.t) }] : [];
@@ -1655,8 +1702,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       o.setAttribute('aria-label', say); o.title = say; o.setAttribute('aria-pressed', ownOn);
     }
   }
-  // The first view on the road that brings its own music: its track, its title and its picture.
+  // A view's own music (a country's anthem), only while it is the one view shown: with several views there is
+  // just the house track (asked for, Nov 2026).
   function ownAudio() {
+    if (state.views.length !== 1) return null;
     for (const id of state.views) {
       const v = viewById.get(id), a = v?.audio;
       if (a && a.src) return { src: mediaUrl(a.src), title: a.title, img: v.thumb?.image ? mediaUrl(v.thumb.image) : v.image?.src ? mediaUrl(v.image.src) : null };
@@ -1705,7 +1754,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       e.preventDefault();
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
-    if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) globe.resize(); }).observe(box);
+    if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) { globe.resize(); for (const pn of panes.values()) pn.g.resize(); } }).observe(box);
   }
 
   // ---------------------------------------------------------------- search the timeline
@@ -2048,6 +2097,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const q = fold($('vq').value.trim());
     const full = state.views.length + pending.size >= MAX_VIEWS;
     $('vlist').innerHTML = found.map(row).join('') || '<li class="none" role="presentation">No views here yet.</li>';
+    drawNow();
     const msg = noteText || (q && !found.length ? 'Nothing matches. Try a name, a topic or a year.' : '') || (!q && full ? `${MAX_VIEWS} views is the most at once. Remove one to add another.` : '');
     $('vnote').textContent = msg;
     function row(f, i) {
@@ -2071,12 +2121,24 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
           `<small class="desc">${esc(v.description || (v.type === 'classical' ? viewSub(v) : ''))}</small>` +
           `<small class="meta"><i class="av" aria-hidden="true">${esc(who.slice(0, 1).toUpperCase())}</i><span>${esc(who)}</span>${facts ? `<span class="fx">${esc(facts)}</span>` : ''}</small></span>`;
         // Beside the others: add it, or take it off when it is one of several.
-        if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}</button>`;
-        else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}</button>`;
+        if (on && state.views.length > 1) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Take ${esc(v.name)} off the timeline" title="Take off the timeline">${ICON.xs}<span>Remove</span></button>`;
+        else if (!on && !wait && state.views.length) side = `<button type="button" class="radd" data-beside="${i}" aria-label="Show ${esc(v.name)} beside ${state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name)}" title="${full ? `${MAX_VIEWS} views is the most at once` : 'Show beside ' + (state.views.length > 1 ? 'the others' : esc(viewById.get(state.views[0]).name))}"${full ? ' disabled' : ''}>${ICON.plus}<span>Add</span></button>`;
         return card + side + '</li>';
       }
       return `<li role="option" class="line" aria-selected="${i === active}"${attrs} data-i="${i}">${tb}<span class="r-txt"><b>${/^<span>/.test(name) ? name : `<span>${name}</span>`}</b><small>${sub}</small></span>${side}</li>`;
     }
+  }
+  // What is on the timeline now, at the top of Explore: one pill a view, with a cross to take it off when there
+  // are several. A card shows its timeline alone; its Add button puts it beside these (asked for, Nov 2026).
+  function drawNow() {
+    const el = $('vnow');
+    el.hidden = !state.views.length;
+    if (el.hidden) return;
+    const many = state.views.length > 1, full = state.views.length + pending.size >= MAX_VIEWS;
+    el.innerHTML = `<span class="cap">On the timeline now</span><span class="pills">` + state.views.map((id) => {
+      const v = viewById.get(id);
+      return `<span class="now-p" style="--c:${colVar(state.colors.get(id))}"><i></i><b>${esc(v?.name || id)}</b>${many ? `<button type="button" data-remove="${esc(id)}" aria-label="Take ${esc(v?.name || id)} off the timeline" title="Take off the timeline">${ICON.xs}</button>` : ''}</span>`;
+    }).join('') + `</span><small>${full ? `${MAX_VIEWS} timelines is the most at once.` : 'Click a timeline to show it alone, or press Add to show it beside ' + (many ? 'these' : 'this one') + ', each on its own globe.'}</small>`;
   }
   // "Propose a view" at the foot of the panel opens the issue form with this link filled in.
   function propose() {
@@ -2113,7 +2175,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     state.span = Array.isArray(v.span) && v.span.length === 2 && v.span.every(Number.isFinite) ? v.span : null;
   }
 
-  function changed() { render(); writeUrl(); account.sync(); }
+  function changed() { render(); writeUrl(); account.sync(); if (!$('explore').hidden) drawResults(); }
 
   // ---------------------------------------------------------------- panel: history of one entry
   // A link to another entry: its name travels with the link, so it shows before that entry is loaded.
@@ -2301,22 +2363,27 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
 
   // From the far end, play starts again at the beginning.
+  // Pressing play takes the whole screen by itself, like a film (asked for, Nov 2026). wire() fills it in where
+  // the browser can; it works because play is always pressed, clicked or keyed by the reader.
+  let goFull = () => {};
   function startPlay(from) {
+    goFull();
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
     if (from != null || camAtEnd()) { turnsOver(); musicAgain(); }
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
-    play.on = true; road.pace = 1;
+    play.on = true; road.pace = 1; document.body.classList.add('film');
     soundReady();
     drawPlay();
     roadKick();
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
-  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek'); }
-  function pausePlay() { play.on = false; drawPlay(); }
+  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
+  // On the globe a pause stops dead, exactly where play was (asked for, Nov 2026); the road eased to a stop.
+  function pausePlay() { play.on = false; if (GLOBE) road.vel = 0; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
   function playWith(own) {
@@ -2461,6 +2528,39 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // The top edge brings the bar back anywhere, over the open panel too (asked for, Nov 2026).
       if (e.clientY < 48) b.add('peek'); else if (e.clientY > 110) b.remove('peek');
     }, { passive: true });
+    // Play is watched like a film (asked for, Nov 2026): the bar on the left and the strip at the foot
+    // step away, play, sound and full screen fade while the pointer rests and come back when it moves,
+    // and a double click on the stage turns the browser's full screen on or off.
+    let idleT = null;
+    const stir = () => {
+      document.body.classList.remove('idle'); clearTimeout(idleT);
+      if (play.on) idleT = setTimeout(() => { if (play.on) document.body.classList.add('idle'); }, 2600);
+    };
+    addEventListener('pointermove', stir, { passive: true, capture: true });
+    addEventListener('pointerdown', stir, { passive: true, capture: true });
+    addEventListener('keydown', stir);
+    // The film layout stays through a pause, so nothing moves when play stops (asked for, Nov 2026). The menu
+    // button beside the search brings the bar on the left and the strip back, and takes them away again.
+    $('film-menu').addEventListener('click', () => {
+      const film = document.body.classList.toggle('film');
+      if (!film && innerWidth < 700 && !document.body.classList.contains('sb-open')) $('sb-btn').click();
+    });
+    const fullBtn = $('full'), root = document.documentElement;
+    const fullOn = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
+    const toggleFull = () => {
+      const p = fullOn() ? (document.exitFullscreen || document.webkitExitFullscreen)?.call(document) : (root.requestFullscreen || root.webkitRequestFullscreen)?.call(root);
+      if (p && p.catch) p.catch(() => {});
+    };
+    if (root.requestFullscreen || root.webkitRequestFullscreen) {
+      fullBtn.hidden = false;
+      goFull = () => { if (!fullOn()) toggleFull(); };
+      fullBtn.addEventListener('click', toggleFull);
+      $('stage').addEventListener('dblclick', (e) => { if (!e.target.closest('button, a, input, .g-card, .g-rows')) toggleFull(); });
+      // Full screen is the film layout: going in closes the bar on the left and the strip of views at the foot, and
+      // coming out brings them back (asked for, Nov 2026).
+      const drawFull = () => { fullBtn.setAttribute('aria-pressed', String(fullOn())); document.body.classList.toggle('fullscreen', fullOn()); document.body.classList.toggle('film', fullOn()); };
+      document.addEventListener('fullscreenchange', drawFull); document.addEventListener('webkitfullscreenchange', drawFull);
+    }
     addEventListener('resize', () => {
       clearTimeout(rt);
       rt = setTimeout(() => {
@@ -2559,6 +2659,36 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     paceShow();
     $('pace').addEventListener('input', () => { play.speed = clamp(Number($('pace').value) || 1, 0.25, 2); store.set('cg-pace', String(play.speed)); paceShow(); });
     $('pace-row').addEventListener('click', (e) => e.stopPropagation());
+    // Globe, or Full view: the stars for every entry (cg-stage in this browser, kept by the globe).
+    const modeShow = (v) => { for (const b of $('mode').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
+    modeShow(store.get('cg-stage') === 'full' ? 'full' : 'globe');
+    $('mode-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      if (globe) { globe.mode(b.dataset.v); for (const pn of panes.values()) pn.g.mode(b.dataset.v); } else store.set('cg-stage', b.dataset.v);
+      modeShow(b.dataset.v);
+    });
+    // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
+    const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
+    { const d = store.get('cg-detail'); detailShow(d === 'medium' || d === 'full' ? d : 'less'); }
+    // Several views: each on a globe of its own in a grid, or all on one globe.
+    const gridShow = (v) => { for (const b of $('grid-seg').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
+    gridShow(store.get('cg-grid') === 'one' ? 'one' : 'grid');
+    $('grid-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      store.set('cg-grid', b.dataset.v); gridShow(b.dataset.v);
+      if (state.views.length) render();
+    });
+    $('detail-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      if (globe) { globe.detail(b.dataset.v); for (const pn of panes.values()) pn.g.detail(b.dataset.v); } else store.set('cg-detail', b.dataset.v);
+      detailShow(b.dataset.v);
+    });
     $('theme').addEventListener('click', () => {
       const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
       document.documentElement.dataset.theme = next; store.set('cg-theme2', next); roadKick();

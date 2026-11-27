@@ -5,7 +5,7 @@
    it into the view file with specToView() after every change, so the road, Ask AI and the export all
    read one thing. Every change is kept by itself (a moment after the last one) and can be undone.
    The page lends what it needs through `deps`; the editor never reaches into the page's state. */
-import { cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, yearOfDate, fmtValue, MAX_ENTRIES } from './ai.js';
+import { cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, findPlaces, yearOfDate, fmtValue, MAX_ENTRIES } from './ai.js';
 
 const SAVE_AFTER = 700;      // ms of quiet before a change is written to the database
 const KEEP = 100;            // steps of undo
@@ -323,10 +323,11 @@ export function createEditor(deps) {
     if (!e?.wikipedia) return;
     const one = [{ wikipedia: e.wikipedia }];
     const get = (host, q) => fetch(`https://${host}/w/api.php?format=json&origin=*&${q}`).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
-    try { await findPictures(one, get); } catch (x) { /* none */ }
+    try { await findPictures(one, get); await findPlaces(one, get); } catch (x) { /* none */ }
     if (ed !== me) return;
-    if (!one[0].image) { if (!quiet) deps.toast('No free picture was found for that article.'); return; }
-    change((s) => { const t = entryAt(s, k); if (t && t.wikipedia === e.wikipedia) t.image = one[0].image; });
+    if (!one[0].image && !quiet) deps.toast('No free picture was found for that article.');
+    if (!one[0].image && !one[0].where) return;
+    change((s) => { const t = entryAt(s, k); if (t && t.wikipedia === e.wikipedia) { if (one[0].image) t.image = one[0].image; if (one[0].where) t.where = one[0].where; else delete t.where; } });
   }
 
   // ---- events

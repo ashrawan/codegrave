@@ -26,6 +26,9 @@ import { opening, greatCircle, between, distance, stageFor, levelZoom, zoomFor, 
 const LIB = 'https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.0/maplibre-gl.min';
 const TILES = 'https://tiles.openfreemap.org';
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
+const NEARER = 0.4;      // how far in from the whole globe the camera may come, in zoom levels
+const TURN = 0.11;       // the part of the way over which one card goes and the next comes
+const STAY = 0.45;       // the part of the way from one place to the next that the camera rests before it goes
 const STARS = 240;        // stars that fly past in space
 // How the camera travels ("turn", picked from three clean ways in Nov 2026, after livelier ones were found "not
 // steady at all"): the globe turns under a camera that keeps its height, so each place comes to the same spot of
@@ -94,15 +97,62 @@ function styleOf() {
   };
 }
 
-export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
+// With `pane`, this is one view's own globe in a grid of several (asked for, Nov 2026: each view its own globe and
+// cards, the one time line below): it has no time line of its own, and its card and camera suit a small box.
+export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane }) {
+  if (pane) host.classList.add('g-pane');
   host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
   host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
-    '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
-  const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], shelf = host.children[4], note = host.children[5];
+    '<button type="button" class="g-mode" hidden></button><div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
+  const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], modeBtn = host.children[4], shelf = host.children[5], note = host.children[6];
   const rows = shelf.querySelector('.g-rows'), track = shelf.querySelector('.g-track');
+  // The small pictures at the left stand over the map so they can be pressed: one goes back to its entry (asked for, Nov 2026).
+  ov.appendChild(past);
+  past.addEventListener('click', (e) => { const el = e.target.closest('img[data-i]'), st = el && S.steps[Number(el.dataset.i)]; if (st) goTo(st.id); });
+  past.addEventListener('dblclick', (e) => e.stopPropagation());
   const S = { map: null, ready: false, steps: [], index: new Map(), cur: -1, last: null, stage: 'map', sig: '', until: 0, cardFor: -1, shown: 0, phone: false,
     xs: [], frac: 0, pos: null, was: 0, now: -1, vis: 0, dimv: 0, spv: 0, cam: [], placed: [], open: null, playing: false, warp: 0, stars: null, raf: 0, then: 0 };
-  const far = () => (S.phone ? 0.9 : LEVELS.globe);
+  // Globe or full view (asked for, Nov 2026): in full view there is no Earth, only the sky, the picture and the text.
+  try { S.mode = localStorage.getItem('cg-stage') === 'full' ? 'full' : 'globe'; } catch (e) { S.mode = 'globe'; }
+  // How much the map says (asked for, Nov 2026, so the globe is less crowded; `cg-detail` in this browser):
+  // 'full' names every country; 'medium' names and tints only the countries the timeline's entries fall in;
+  // 'less' only the country of the entry in front, and shows only its pin.
+  try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'medium' || d === 'full' ? d : 'less'; } catch (e) { S.detail = 'less'; }
+  // The countries (Natural Earth, public domain; one small file, fetched once): which one a place falls in.
+  const inRing = (r, x, y) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) if ((r[i][1] > y) !== (r[j][1] > y) && x < ((r[j][0] - r[i][0]) * (y - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) c = !c; return c; };
+  const inPoly = (poly, x, y) => inRing(poly[0], x, y) && !poly.slice(1).some((h) => inRing(h, x, y));
+  const landOf = (lat, lon) => {
+    for (const f of S.lands || []) { const g = f.geometry; if ((g.type === 'Polygon' ? [g.coordinates] : g.coordinates).some((p) => inPoly(p, lon, lat))) return f.properties.n; }
+    return '';
+  };
+  function homes() { S.homes = S.lands ? S.steps.map((s) => (s.place ? landOf(s.place[0], s.place[1]) : '')) : null; S.said = null; }
+  function loadLands() {
+    if (S.landsAsked) return;
+    S.landsAsked = true;
+    fetch(new URL('./media/countries.json', import.meta.url)).then((r) => r.json()).then((d) => { S.lands = d.features; homes(); detail(); }).catch(() => {});
+  }
+  // Applies the detail to the map. Until the countries are loaded the map keeps its own names.
+  function detail() {
+    if (!S.ready) return;
+    const map = S.map, full = S.detail === 'full' || !S.lands || !S.homes;
+    if (S.lands && !map.getSource('lands')) {
+      map.addSource('lands', { type: 'geojson', data: { type: 'FeatureCollection', features: S.lands } });
+      map.addSource('land-names', { type: 'geojson', data: { type: 'FeatureCollection', features: S.lands.map((f) => ({ type: 'Feature', properties: { n: f.properties.n }, geometry: { type: 'Point', coordinates: [f.properties.x, f.properties.y] } })) } });
+      const fade = ['interpolate', ['linear'], ['zoom'], 4.6, 1, 6, 0];
+      map.addLayer({ id: 'c-fill', type: 'fill', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'fill-color': '#3a3329', 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 4.6, 0.75, 6, 0] } }, 'grat');
+      map.addLayer({ id: 'c-edge', type: 'line', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'line-color': 'rgba(236,196,128,.5)', 'line-width': 0.8, 'line-opacity': fade } }, 'way');
+      map.addLayer({ id: 'c-name', type: 'symbol', source: 'land-names', maxzoom: 6, filter: ['==', ['get', 'n'], ''],
+        layout: { 'text-field': ['get', 'n'], 'text-font': ['Noto Sans Regular'], 'text-size': 10.5, 'text-letter-spacing': 0.18, 'text-transform': 'uppercase', 'text-max-width': 8 },
+        paint: { 'text-color': 'rgba(236,222,196,.72)', 'text-halo-color': 'rgba(10,10,12,.85)', 'text-halo-width': 1.2 } }, 'way');
+    }
+    const names = full ? [] : S.detail === 'less' ? [S.homes[S.now] || ''] : [...new Set(S.homes.filter(Boolean))];
+    const sig = S.detail + '|' + full + '|' + names.join();
+    if (sig === S.said) return;
+    S.said = sig;
+    map.setLayoutProperty('country', 'visibility', full ? 'visible' : 'none');
+    if (map.getLayer('c-fill')) for (const id of ['c-fill', 'c-edge', 'c-name']) map.setFilter(id, ['in', ['get', 'n'], ['literal', names]]);
+  }
+  const far = () => (pane ? LEVELS.globe + Math.log2(Math.max(150, size()) / 820) : S.phone ? 0.9 : LEVELS.globe);
   const size = () => Math.min(box.clientWidth, box.clientHeight);
 
   // ---- the map
@@ -150,11 +200,12 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     if (!S.ready) return;
     const feats = [];
     S.steps.forEach((s, i) => {
-      if (!s.place) return;
+      if (!s.place || (S.detail === 'less' && i !== S.now)) return;
       feats.push({ type: 'Feature', properties: { id: s.id, name: s.name, c: s.rgb, st: i === S.now ? 'now' : i < S.now ? 'past' : 'next', near: Math.abs(i - S.now) <= NAMED },
         geometry: { type: 'Point', coordinates: [s.place[1], s.place[0]] } });
     });
     S.map.getSource('pins').setData({ type: 'FeatureCollection', features: feats });
+    detail();
   }
 
   // ---- the camera: where it is follows from where the reader is, so it moves whenever they do
@@ -166,10 +217,12 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     S.steps.forEach((s, i) => { if (s.place) S.placed.push(i); });
     const pl = S.placed.map((i) => S.steps[i].place);
     const o = opening(pl, sz, f);
-    S.open = { at: [o.center[1], o.center[0]], zoom: o.zoom };
+    // A view opens on the whole globe, not zoomed in to its places (asked for, Nov 2026).
+    S.open = { at: [o.center[1], o.center[0]], zoom: farAt(f, o.center[1]) };
     const fit = (p, q) => (q && distance(q, p) > 0.5 ? zoomFor(distance(q, p), 0.4 * sz, p[0]) : 99);
     const zs = pl.map((p, k) => {
-      let z = Math.min(levelZoom(p[2]), LEVELS.region + 1);
+      // Never so close that the Earth stops reading as a globe (asked for, Nov 2026: "show the globe from a bit far").
+      let z = Math.min(levelZoom(p[2]), f + NEARER);
       for (let j = k - 2; j <= k + 2; j++) if (j !== k) z = Math.min(z, fit(p, pl[j]));
       return Math.max(farAt(f, p[0]), z);
     });
@@ -177,7 +230,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     for (let k = zs.length - 2; k >= 0; k--) zs[k] = Math.min(zs[k], zs[k + 1] + STEP);
     S.cam = S.steps.map(() => null);
     pl.forEach((p, k) => { S.cam[S.placed[k]] = { at: p, zoom: Math.max(farAt(f, p[0]), zs[k]) }; });
-    S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.18) }) };
+    S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * (pane ? 0.44 : 0.36)) }) };
   }
   // Between which places a reader at `pos` is, and how far: by the count of entries (u), and as the camera goes (e),
   // which rests at each place and is quickest half way.
@@ -185,7 +238,10 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     let P = -1, Q = -1;
     for (const i of S.placed) { if (i <= pos) P = i; else { Q = i; break; } }
     const u = Q < 0 ? 0 : clamp01((pos - P) / (Q - P));
-    return { P, Q, e: u - Math.sin(2 * Math.PI * u) / (2 * Math.PI) };
+    // It stays with the entry in front for the first part of the way, then goes: there is no stretch where the
+    // reader watches the map travel with no card up (asked for, Nov 2026).
+    const w = clamp01((u - STAY) / (1 - STAY));
+    return { P, Q, e: w - Math.sin(2 * Math.PI * w) / (2 * Math.PI) };
   }
   function camAt(pos) {
     if (!S.placed.length) return null;
@@ -216,52 +272,50 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   function build(i) {
     const s = S.steps[i];
     S.cardFor = i;
-    // In space the picture of the entry in front fills the sky behind its card, and the last few passed stand small beside it.
-    const space = S.stage === 'space', pic = space && s && s.img ? s.img : '';
+    // The picture of the entry in front stands large with its text under it, the same on the globe as in full
+    // view (asked for, Nov 2026); on a phone, on the globe, it is a small picture in the card instead.
+    // On a wide screen the picture and the text are one card (asked for, Nov 2026); on a phone among the
+    // stars the picture stands in the sky behind the card.
+    const pic = s && s.img && S.phone && S.stage === 'space' ? s.img : '';
     if (bimg.dataset.src !== pic) { bimg.dataset.src = pic; bimg.hidden = !pic; if (pic) bimg.src = pic; }
-    const before = [];
-    if (space) for (let k = i - 1; k >= 0 && before.length < PAST; k--) if (S.steps[k].img) before.push(S.steps[k]);
-    past.innerHTML = before.map((b) => `<img src="${esc(b.img)}" alt="" title="${esc(b.name)}">`).join('');
+    // Beside it, small: the picture of the entry in front on top, then the last few passed. Never the ones ahead.
+    const want = [];
+    for (let k = i; k >= 0 && want.length < PAST; k--) if (S.steps[k].img) want.push(k);
+    const have = new Map(Array.from(past.children, (el) => [Number(el.dataset.i), el]));
+    for (const [k, el] of have) if (!want.includes(k)) el.remove();
+    want.forEach((k, n) => {
+      let el = have.get(k);
+      if (!el) { el = document.createElement('img'); el.dataset.i = k; el.alt = ''; el.title = S.steps[k].name; el.src = S.steps[k].img; el.addEventListener('error', () => el.remove()); }
+      if (past.children[n] !== el) past.insertBefore(el, past.children[n] || null);
+    });
     if (!s) { card.hidden = true; lead.hidden = true; return; }
     card.hidden = false; card.classList.toggle('bare', !!pic);
-    card.dataset.id = s.id; card.style.setProperty('--c', s.col); lead.style.setProperty('--c', s.col);
+    card.dataset.id = s.id; card.style.setProperty('--c', s.col);
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
-    if (img) img.addEventListener('error', () => { img.remove(); place(); });
+    if (img) { img.addEventListener('error', () => { img.remove(); place(); }); img.addEventListener('load', place); }
     place();
   }
-  // Where the card stands: beside its pin, on the side with room; for an entry with no place, over its
-  // row in the strip (or in the middle of the sky). On a phone it rests above the strip.
-  // The card's place, drop and size are written as one transform, so growing never moves it sideways: it grows
-  // and shrinks about its own centre and drops straight down (asked for, Nov 2026).
+  // Where the card stands. Its place, drop and size are written as one transform, so growing never moves it
+  // sideways: it grows and shrinks about its own centre and drops straight down (asked for, Nov 2026).
   function put() { card.style.transform = `translate(${S.tx || 0}px, ${((S.ty || 0) + (S.drop || 0)).toFixed(1)}px) scale(${(S.sc || 1).toFixed(3)})`; }
+  // The text stands under the picture: in the middle of the sky in full view, to the right of the middle on the
+  // globe, so the place it belongs to shows beside it. On a phone it rests above the strip.
+  const midX = () => (S.phone ? 0.5 : pane ? 0.71 - 0.21 * S.spv : 0.62 - 0.12 * S.spv);
   function place() {
     const s = S.steps[S.cardFor];
-    if (!s || card.hidden) { lead.hidden = true; return; }
-    const W = host.clientWidth, H = host.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight, foot = shelf.hidden ? 0 : shelf.offsetHeight;
     lead.hidden = true;
-    if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 10); put(); return; }
-    const top0 = 96, low = H - foot - ch - 14;
-    if (s.place && S.ready) {
-      // In play the card keeps the place its pin comes to rest at, so it never slides sideways as the globe turns
-      // on: it only comes and goes (asked for, Nov 2026). Standing still or dragged, it follows its pin.
-      const q = S.map.project([s.place[1], s.place[0]]), f = S.fix || 0;
-      const rx = (W + S.pad.left - S.pad.right) / 2, ry = (H + S.pad.top - S.pad.bottom) / 2;
-      const p = { x: q.x + (rx - q.x) * f, y: q.y + (ry - q.y) * f };
-      const right = p.x + 46 + cw < W - 20, x = right ? p.x + 46 : p.x - 46 - cw;
-      const y = Math.max(top0, Math.min(low, p.y - ch * 0.42));
-      S.tx = Math.round(Math.max(12, x)); S.ty = Math.round(y); put();
-      lead.hidden = false;
-      lead.style.transform = `translate(${Math.round(right ? p.x + 12 : p.x - 46)}px, ${Math.round(p.y)}px)`;
-      return;
-    }
-    const chip = track.querySelector('.on');
-    const mid = S.stage === 'space' || !chip ? W / 2 : chip.getBoundingClientRect().left - host.getBoundingClientRect().left + 4;
-    const y = S.stage === 'space' ? Math.max(top0, card.classList.contains('bare') ? low - 34 : (H - foot - ch) * 0.42) : Math.max(top0, low - 26);
-    S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, mid - cw / 2))); S.ty = Math.round(y); put();
+    if (!s || card.hidden) return;
+    const W = host.clientWidth, H = host.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight, foot = shelf.hidden ? 0 : shelf.offsetHeight;
+    if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 2); put(); return; }
+    const low = H - foot - ch - (pane ? 8 : 30);
+    S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, W * midX() - cw / 2)));
+    // The card stands in the middle of the stage, top to bottom (asked for, Nov 2026), clear of the strip.
+    S.ty = Math.round(Math.max(pane ? 8 : 70, Math.min(low, (H - ch) / 2))); put();
   }
 
-  // ---- the time line at the foot: it slides under a marker that stands still. The entries stand on it by name
+  // ---- the time line at the foot: it slides under a marker that stands still, near the left
+  // end (asked for, Nov 2026: the line began in the middle of the screen), so most of what shows is still to come. The entries stand on it by name
   // (picked from three designs, Nov 2026), one with no place in italics; a year is written where it changes.
   function drawShelf() {
     shelf.hidden = !S.steps.length;
@@ -283,7 +337,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  const nowAt = () => rows.clientWidth * (S.phone ? 0.3 : 0.4);
+  const nowAt = () => rows.clientWidth * (S.phone ? 0.2 : 0.16);
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;
@@ -332,11 +386,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     // The entry whose card is up: it comes up a fifth of the way before the reader reaches it, and goes when the
     // camera has left its place behind.
     // In space nothing else is in sight, so the next card is on its way sooner and the last one gone later.
-    const early = S.stage === 'space' ? 0.32 : 0.2, late = S.stage === 'space' ? 0.66 : 0.5;
+    const early = 0.2;
     const c = Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
     if (c !== S.now) {
       S.now = c;
-      S.stage = stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.stage;
+      S.stage = S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
       pins(); markShelf(); build(c);
     }
 
@@ -346,9 +400,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       S.dimv = dim; S.spv = sp; S.styled = 1; busy = true;
       box.style.opacity = (1 - sp).toFixed(3); box.style.pointerEvents = sp > 0.5 ? 'none' : '';
       box.style.filter = dim > 0.01 ? `brightness(${(1 - 0.5 * dim).toFixed(3)}) saturate(${(1 - 0.4 * dim).toFixed(3)})` : '';
-      sky.style.opacity = sp.toFixed(3);
+      sky.style.opacity = sp.toFixed(3); host.style.setProperty('--sp', sp.toFixed(3));
     }
-    if (S.ready && sp < 0.995) {
+    if (S.ready && !S.bare && sp < 0.995) {
       const cam = camAt(S.pos);
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
       trail(S.pos);
@@ -360,31 +414,29 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       if (S.warp) busy = true;
     }
 
-    // The card: up while the reader is near its entry. In play it fades in as they come and out as they go on;
-    // in space it comes out of the distance and passes by. Standing still, it stays.
-    let vis = 0, scale = 1, drop = 0;
+    // The card is up for as long as its entry is the one in front: in play one card goes as the next comes, with
+    // no empty wait between them (asked for, Nov 2026). It comes out of the distance and passes away below the
+    // reader, about its own centre. Standing still, it stays.
+    let vis = 0, scale = 1, drop = 0, grow = 1;
     if (S.steps[c]) {
-      vis = S.playing && !still ? clamp01(Math.min((g + early) / 0.12, (late - g) / 0.16)) : 1;
-      // In space the reader flies on like a craft: a card comes out of the distance, and passes away below them.
-      if (S.stage === 'space' && S.playing && !still) {
-        const out = clamp01((g - 0.36) / 0.3) ** 2;
-        scale = g < 0 ? 0.6 + 0.4 * (1 - (g / early) ** 2) : 1 + 0.05 * clamp01(g / 0.36) + 0.75 * out;
-        drop = (g < 0 ? -0.1 * (g / early) ** 2 : 0.55 * out) * host.clientHeight;
-      } else if (S.playing && !still && !S.phone) {
-        // On the map it goes away into its own centre, growing a little smaller, never to a side.
-        scale = g < 0 ? 0.94 + 0.06 * (1 - (g / early) ** 2) : 1 - 0.14 * clamp01(g / late) ** 2;
-        drop = g < 0 ? 0 : 46 * clamp01(g / late) ** 2;
-      }
+      vis = 1;
+      // A pause leaves everything exactly where play had it (asked for, Nov 2026): the card keeps the size
+      // and place it had, until the reader moves on by hand.
+      const held = !S.playing && S.hold && S.hold.c === c && Math.abs(S.hold.pos - S.pos) < 0.004;
+      if ((S.playing || held) && !still) {
+        const last = c >= S.steps.length - 1, a = clamp01((g + early) / TURN), z = last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
+        vis = Math.min(a, 1 - z);
+        if (!S.phone || S.stage === 'space') { scale = 0.82 + 0.18 * (1 - (1 - a) ** 2) + 0.45 * z * z; drop = 0.24 * z * z * host.clientHeight; }
+        grow = 0.97 + 0.05 * clamp01(g + early) + 0.2 * z * z;
+        if (S.playing) S.hold = { c, pos: S.pos };
+      } else if (!held) S.hold = null;
     }
-    const fix = S.playing && !still ? 1 : 0;
-    if ((S.fix || 0) !== fix) { S.fix = toward(S.fix || 0, fix, dt * 5); busy = true; place(); }
-    S.vis = toward(S.vis, vis, still ? 1 : dt * 12);
+    S.vis = toward(S.vis, vis, still ? 1 : dt * 14);
     if (S.vis !== vis) busy = true;
-    card.style.opacity = S.vis.toFixed(3); S.sc = scale; S.drop = drop; put(); card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
-    lead.style.opacity = (0.75 * S.vis).toFixed(3);
-    back.style.opacity = sp.toFixed(3);
-    if (sp > 0.005) { bimg.style.opacity = (0.8 * S.vis).toFixed(3); bimg.style.scale = (0.94 + 0.12 * clamp01(g + early)).toFixed(4); }
-    if (S.stage !== 'map' || !S.ready) place();
+    card.style.opacity = S.vis.toFixed(3); S.sc = scale; S.drop = drop; card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
+    back.style.opacity = '1';
+    bimg.style.opacity = ((0.8 + 0.12 * (1 - sp)) * S.vis).toFixed(3); bimg.style.scale = grow.toFixed(4);
+    place();
     if (busy) run();
   }
   function run() { if (!S.raf) { S.then = performance.now(); S.raf = requestAnimationFrame(frame); } }
@@ -414,6 +466,21 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   const dragEnd = (e) => { if (!drag.on) return; drag.on = false; rows.classList.remove('drag'); if (drag.moved) e.stopPropagation(); };
   rows.addEventListener('pointerup', dragEnd); rows.addEventListener('pointercancel', dragEnd);
   track.addEventListener('click', (e) => { if (drag.moved) { drag.moved = false; return; } const el = e.target.closest('[data-i]'); if (el) goTo(S.steps[Number(el.dataset.i)].id); });
+  const ICON_GLOBE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>';
+  const ICON_FULL = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+  function drawMode() {
+    modeBtn.hidden = true;      // the switch is in the three-dot menu (asked for, Nov 2026)
+    modeBtn.innerHTML = (S.mode === 'full' ? ICON_FULL + '<span>Full view</span>' : ICON_GLOBE + '<span>Globe</span>');
+    modeBtn.title = S.mode === 'full' ? 'Full view: show the globe' : 'Globe: switch to full view';
+    modeBtn.setAttribute('aria-label', modeBtn.title);
+  }
+  modeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    S.mode = S.mode === 'full' ? 'globe' : 'full';
+    try { localStorage.setItem('cg-stage', S.mode); } catch (x) { /* fine */ }
+    S.now = -2; drawMode(); run();
+  });
+  for (const ev of ['pointerdown', 'pointerup']) modeBtn.addEventListener(ev, (e) => e.stopPropagation());
   // The credits the map's licences ask for, behind a small button in the corner of the page.
   if (credit && !credit.querySelector('.g-credit')) {
     const el = document.createElement('span');
@@ -429,20 +496,35 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   // A drag turns the globe; it must not also carry the reader through time, which the stage under it does.
   for (const ev of ['pointerdown', 'pointermove', 'pointerup']) box.addEventListener(ev, (e) => e.stopPropagation());
 
+  function needMap() {
+    if (S.bare || S.map || S.asked || !S.steps.some((s) => s.place)) return;
+    S.asked = true; note.hidden = true;
+    loadLib().then((gl) => { if (!S.map && !S.gone) S.map = make(gl); }).catch(() => { S.asked = false; if (!pane) { note.hidden = false; note.textContent = 'The map could not be loaded. The entries are in the strip below.'; } });
+  }
+  const title = pane ? host.appendChild(document.createElement('span')) : null;
+  if (title) title.className = 'g-title';
+
   return {
+    // With several views each has a globe of its own, and this one, the page's, keeps only the time line.
+    bare(on) {
+      if (!!S.bare === !!on) return;
+      S.bare = !!on; host.classList.toggle('bare', S.bare); host.classList.remove('close');
+      S.now = -2; needMap(); run();
+    },
+    // A pane's heading: the name of its view, in its colour.
+    title(name, col) { if (title) { title.textContent = name; title.style.color = col; } },
+    remove() { S.gone = true; if (S.raf) cancelAnimationFrame(S.raf); S.raf = -1; if (S.map) S.map.remove(); host.remove(); },
     // The entries on the timeline, in the order play meets them. Each step: id, name, kind, when, mark (its year, short),
     // summary, img, col (a CSS colour), rgb (the same for the map), place ([lat, lon, level, name] or null).
     show(steps) {
       const sig = steps.map((s) => s.id + (s.place ? 1 : 0) + s.rgb).join();
-      S.phone = host.clientWidth < 700;
+      S.phone = !pane && host.clientWidth < 700;
       if (sig === S.sig) { this.resize(); return; }
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
       S.cur = -1; S.frac = 0; S.pos = null; S.trail = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
-      drawShelf(); cams();
-      if (!S.map && steps.some((s) => s.place)) {
-        note.hidden = true;
-        loadLib().then((gl) => { if (!S.map) S.map = make(gl); }).catch(() => { note.hidden = false; note.textContent = 'The map could not be loaded. The entries are in the strip below.'; });
-      }
+      drawShelf(); cams(); drawMode(); past.innerHTML = ''; homes();
+      if (steps.some((s) => s.place)) loadLands();
+      needMap();
       run();
     },
     // The entry in front of the reader (null before the first), and how far on they are towards the next (0 to 1).
@@ -463,12 +545,22 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       return 3.2 + 1.6 * Math.min(1, distance(A.at, B.at) / 6000);
     },
     resize() {
-      S.phone = host.clientWidth < 700;
+      S.phone = !pane && host.clientWidth < 700;
       if (S.map) S.map.resize();
       if (!shelf.hidden) measure();
       cams(); place(); run();
     },
     stage: () => S.stage,
+    // 'globe' (the map where entries have places) or 'full' (the stars for every entry). Kept in this browser.
+    mode(v) {
+      if ((v === 'globe' || v === 'full') && v !== S.mode) { S.mode = v; try { localStorage.setItem('cg-stage', v); } catch (e) { /* fine */ } S.now = -2; run(); }
+      return S.mode;
+    },
+    // How much the map says: 'less', 'medium' or 'full'. Given one, it is kept in this browser.
+    detail(v) {
+      if (v === 'less' || v === 'medium' || v === 'full') { S.detail = v; try { localStorage.setItem('cg-detail', v); } catch (e) { /* fine */ } S.said = null; pins(); run(); }
+      return S.detail;
+    },
     zoom: () => (S.map ? S.map.getZoom() : null),
   };
 }

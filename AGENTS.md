@@ -378,6 +378,61 @@ How the page is put together:
   place on the entry itself (`where`, which needs an agreed issue), places for timelines made with
   AI, places that are not sure (an area, a traditional site), the Earth as it was for deep time, and
   other looks. Never draw a pin for a guessed place.
+- **Play on the globe is watched like a film** (asked for, Nov 2026). The entry in front is shown the same
+  way on the map as among the stars: its picture large (`.g-bimg`), its text under it on a plain plate
+  (`.g-card`), a little right of the middle on the map so the globe shows at the left, in the middle and
+  larger in full view (`--sp` runs from 0 to 1 between the two, `midX()`), so a change of stage is a glide and
+  never a cut. On a phone it is a glass box over the time line (kind, dates, name, three lines of summary).
+  At the left stand the picture of the entry in front, on top and lit, then the last few passed (`.g-past`,
+  keyed by step so nothing is rebuilt); never one that is still ahead. The frames of the wall are hidden
+  while play travels. The camera rests at a place for `STAY` of the way and then moves, and the next card
+  comes in `early` before its place, so the map is never shown travelling with no card up. A view opens on
+  the whole globe and a place is at most `NEARER` closer than that while travelling, however narrow the
+  years. A quiet pill at the top right (`.g-mode`, `cg-stage` in this browser) switches between Globe and
+  Full view, which is the stars for every entry. While play travels the bar on the left and the strip at the
+  foot step away (`body.playing` sets `--sb` to 0); play, sound and full screen (`#full`, the browser's own
+  full screen; a double click on the stage does the same) fade while the pointer rests (`body.idle`) and
+  come back when it moves.
+- **The card on the globe is one piece** (asked for, Nov 2026): on a wide screen the picture stands in the card,
+  over its text, on one plate, the same on the map and in full view, and a thin line in the view's colour
+  runs from the place on the map to the card (`.g-lead`, drawn in `place()`). On a phone the period stands in
+  the top corner. With the buttons of play comes a menu button at the top left (`#film-menu`): it brings the
+  bar on the left and the strip back while play goes on (`body.unfilm`), and takes them away again.
+- **Round 3 of the same asks (Nov 2026), which replace what the points above say where they differ.** There is
+  no line from the place to the card (tried, not wanted). The card stands in the middle of the stage top to
+  bottom. Globe or Full view is chosen in the three-dot menu ("View", `globe.mode()`), not by a pill on the
+  stage. A pause stops dead and leaves everything where play had it: the card keeps its size and place
+  (`S.hold`), and the film layout stays (`body.film`, set when play starts) until the menu button at the top
+  left, which is the search's height and glass and stands just before it, brings the bar and the strip back.
+  Globe detail is Less by default.
+- **Round 4 (Nov 2026).** Pressing play takes the browser's full screen by itself (`goFull()` in `startPlay()`);
+  the button and a double click still toggle it. The marker of the time line at the foot stands near the left
+  end (`nowAt()`: 16 % of the strip, 20 % on a phone), not in the middle, so a view opens with its line running
+  from the left. Showing another view alone closes the open entry and takes its id out of the link
+  (`showOnly()`), or a reload would bring that entry's view back beside the new one.
+- **Several views are a grid of globes** (asked for, Nov 2026: "each one may have their own globe and own cards",
+  "while the timeline runs a single one below"). With more than one view, each gets a pane of its own in
+  `.g-grid` inside `#globe` (`globePanes()` in `site/app.js`; a pane is `createGlobe(el, { pane: true })`, with
+  no time line, a smaller card sized by the pane with container units, and its view's name in its colour): two
+  side by side, three as two over one, then two rows of two, three or four (CSS on `data-n`); on a phone two
+  stand one over the other and more go two across. The page's own globe keeps only the time line
+  (`globe.bare(true)`). Every pane goes by the same reader: `globeFrame()` tells each the last of its own
+  entries the reader has come to. "Several views" in the three-dot menu (`cg-grid` in this browser) switches
+  between Grid, the default, and One globe, which is all the views on the page's one globe. The small pictures
+  at the left of a single globe are pressed to go back to their entry.
+  The panes the entry in front belongs to are lit with a border in their view's colour (`.g-pane.live`; views
+  with an entry at the same date light together); the others dim and put their card away, so it is plain which
+  globe is being told about (asked for). The film layout belongs to full screen: leaving full screen brings the
+  bar on the left and the strip of views back, playing or not (asked for).
+- **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser; asked
+  for, Nov 2026, so the globe is less crowded). Full names every country, as the map's tiles do. Medium names
+  and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
+  entry in front and shows only its pin. The countries are Natural Earth's (`site/media/countries.json`, public
+  domain, names and label points included); `landOf()` in `site/globe.js` finds the one a place falls in.
+- **Places for timelines made with AI.** The model names a `place` in words where an entry has one;
+  `findPlaces()` in `site/ai.js` reads the coordinates of the entry's own Wikipedia article, else of the
+  article of that place, and writes `where: [lat, lon]` on the entry. Coordinates are never taken from the
+  model. The function does it after the pictures, and the editor when an entry's article changes.
 - **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
   "think it is like community posted, meaning even the admin ones", after a
   list in the sidebar was found "not professional"). Explore in the bar on
@@ -391,6 +446,10 @@ How the page is put together:
   timelines are listed as the community's, by `wiki`. A community page of
   people's own creations is planned; keep this page able to grow into it.
   There is no "Views" button in the strip (removed on request).
+  Under the chips a bar says what is on the timeline now (`#vnow`, `drawNow()`): a pill a view, with a cross
+  to take one of several off. A click on a card shows that timeline alone and closes Explore; the card's Add
+  button (a plain, always visible "+ Add", "Remove" once it is on) puts it beside the others and leaves
+  Explore open, so several can be added in a row (asked for, Nov 2026).
 - **New timeline is a page with one box** (`#create`, filled by
   `account.js`): "What do you want to make?", a prompt, the model menu and,
   under the box, the kinds of thing people come to make (`KINDS`: a
