@@ -415,6 +415,13 @@ How the page is put together:
   and edge (`c-now`, `c-now-edge` in `site/globe.js`), at every detail. Pressing play at the beginning opens
   on the whole globe while the sound starts, comes down to the first place and only then sets off
   (`globe.intro()`: `INTRO_HOLD` then `INTRO_GLIDE` seconds; `road.intro` keeps the reader still meanwhile).
+- **The voice dialog (designs A and B, picked from three each, Nov 2026).** `voiceMenu()` in `site/account.js`
+  draws two dialogs. With no voiceover yet: "Choose a voice", the Kokoro voices as cards (`.vo-voice.card`, a
+  round Listen on each), This device as a dashed row, and one lit button that names the voice ("Generate with
+  Heart"). With one: the voices at the left and the script as it is told at the right (`.vo-form.vb`: opening,
+  a line under each entry's name and period, closing), with Write again, Remove voiceover and "Use <voice>"
+  (asked for: "this is your script", to write again or try other voices). The export dialog keeps design A,
+  the preview beside the choices.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

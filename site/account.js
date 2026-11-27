@@ -704,17 +704,30 @@ export function createAccount(app) {
   function voiceMenu(anchor, row) {
     if (voicing) return;
     const has = voiceOf(row.get()), was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
-    const d = modal(`<form class="vo-form"><h2>${has ? 'Voiceover' : 'Generate a voiceover'}</h2>
-      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays, in ${has.lines.length} lines. Change the voice for free, or write the script again after you change the timeline.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}${row.own ? '' : ' It is kept in this browser, for you alone.'}</p>
-      <div class="cap">Choose a voice</div>
-      <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map(([v, name, w]) => `<label class="vo-voice"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><i></i><span><b>${esc(name)}</b><small>${esc(w)}</small></span><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}">${PLAY}<span>Listen</span></button></label>`).join('')}</div>
-      <label class="vo-gpu" hidden><input type="checkbox"><span><b>Faster voice</b><small>Your device has a graphics card that can make the voice much faster. It is a one-time ${GPU_MB} MB download instead of ${MODEL_MB} MB, so it suits a good computer on fast internet.</small></span></label>
+    // Two dialogs (designs A and B, picked from three each, Nov 2026). With no voiceover yet: the voices as
+    // cards, each with Listen, and one button that names the voice. With one: the voices at the left and the
+    // script as it is told at the right, "this is your script", to write again or to try in another voice.
+    const kok = VOICES.filter(([v]) => v !== 'device'), dev = VOICES.find(([v]) => v === 'device');
+    const voiceEl = ([v, name, w], cls = '') => `<label class="vo-voice ${cls}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}" title="Listen">${PLAY}<span>Listen</span></button><span><b>${esc(name)}</b><small>${esc(w)}</small></span><i aria-hidden="true"></i></label>`;
+    const notes = `<label class="vo-gpu" hidden><input type="checkbox"><span><b>Faster voice</b><small>Uses your graphics card: a one-time ${GPU_MB} MB download instead of ${MODEL_MB} MB.</small></span></label>
       <p class="vo-load" hidden></p>
-      <p class="vo-slow" hidden>This device makes the voice slowly. Play will pause at each card until its line is ready, so a long timeline may wait a while.</p>
-      <p class="dlg-err" role="alert"></p>
-      <div class="dlg-row">${has ? '<button type="button" class="big" data-revoice>Use this voice</button><button type="submit" class="big pri">Write again</button>' : '<button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate voiceover</button>'}</div>
-      ${has ? '<button type="button" class="linkish" data-unvoice>Remove the voiceover</button>' : ''}
-      <p class="dlg-fine center">Writing the script uses one of today's requests. The voice is made on your device for free: the named voices share one download, about ${MODEL_MB} MB; This device needs none.</p></form>`, 'small vo');
+      <p class="vo-slow" hidden>This device makes the voice slowly. Play will pause at each card until its line is ready.</p>
+      <p class="dlg-err" role="alert"></p>`;
+    const byId = new Map((app.told()?.entries || []).map((e) => [e.id, e]));
+    const lineEl = (l) => { const e = byId.get(l.id), edge = l.id === 'intro' ? 'Opening' : l.id === 'outro' ? 'Closing' : ''; return `<li${edge ? ' class="edge"' : ''}><span>${esc(edge || e?.when || '')}</span><div>${e ? `<b>${esc(e.name)}</b>` : ''}<p>${esc(l.text)}</p></div></li>`; };
+    const d = modal(has ? `<form class="vo-form vb">
+      <div class="vo-list"><h2>Voiceover</h2><div class="cap">Voice</div>
+        <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
+      <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span><button type="submit" class="big" title="Writes the script again from the timeline as it is now. Uses one of today's requests.">Write again</button></div>
+        <ol>${has.lines.map(lineEl).join('')}</ol></div>
+      <div class="exf"><span class="ex-say"><span>${has.lines.length} lines. Made on your device; changing the voice is free.</span></span><button type="button" class="big vo-rm" data-unvoice>Remove voiceover</button><button type="button" class="big pri" data-revoice>Use <span data-vname></span></button></div></form>`
+      : `<form class="vo-form va">
+      <div class="vo-head"><h2>Choose a voice</h2><p class="dlg-sub">It tells ${esc(row.title || 'this timeline')} while it plays: an opening, a line for each entry${byId.size ? ` (${byId.size})` : ''}, and a closing.${row.own ? '' : ' Kept in this browser, for you alone.'}</p></div>
+      <div class="vo-body"><div class="vo-voices cards" role="radiogroup" aria-label="Voice">${kok.map((v) => voiceEl(v, 'card')).join('')}</div>
+        ${voiceEl(dev, 'row dev')}${notes}</div>
+      <div class="exf"><span class="ex-say"><span>Uses one of today's requests.</span></span><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate with <span data-vname></span></button></div></form>`, 'vodlg ' + (has ? 'vb' : 'va'));
+    const nameIt = () => { const n = d.querySelector('[data-vname]'); if (n) n.textContent = voiceLabel(d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE); };
+    nameIt(); d.addEventListener('change', nameIt);
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
     // graphics card can make it, the faster voice is offered (off unless the reader turned it on).
     const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
