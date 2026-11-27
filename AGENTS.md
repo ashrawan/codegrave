@@ -426,8 +426,9 @@ How the page is put together:
   that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
   (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
   stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
-- **Ask AI folds after play (Nov 2026, asked for).** Pressing play sets `body.ask-min`: the Ask AI box becomes a
-  small "Ask AI" pill at the left above the strip, and a press opens it again (`#ask.open`) until the next play.
+- **Ask AI folds (Nov 2026, asked for).** Folded (`body.ask-min`) the Ask AI box is a small "Ask AI" pill in the
+  middle, a little lower than the open box; a press opens it again (`#ask.open`), and the small arrow at the end of
+  the open box (`.ask-fold`) folds it at any time. Pressing play folds it too.
   Showing another timeline, or making one, shows the box whole; a box with words typed in it is not folded.
 - **The film shows what play shows (Nov 2026, asked for: "however the timeline is built, the same would be the
   exported video").** At the foot of every frame is the page's time line, not a bar of progress (`shelf()` in

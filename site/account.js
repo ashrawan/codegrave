@@ -1065,7 +1065,7 @@ export function createAccount(app) {
     const canAsk = !!cur && cur.text.includes('"spec":{');
     if ($('ask').hidden === canAsk) {
       $('ask').hidden = !canAsk;
-      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><span class="ask-spark" aria-hidden="true">✦</span><textarea id="ask-q" rows="1" maxlength="600" placeholder="Ask AI for a change…" aria-label="Ask AI to change this timeline"></textarea>${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Send" title="Send">${SEND}</button></div>` : '';
+      $('ask').innerHTML = canAsk ? `<p id="ask-status" class="cr-status" role="status"></p><div class="ask-box"><span class="ask-spark" aria-hidden="true">✦</span><textarea id="ask-q" rows="1" maxlength="600" placeholder="Ask AI for a change…" aria-label="Ask AI to change this timeline"></textarea>${modelBtn('ask-model')}<button type="submit" class="cr-go" aria-label="Send" title="Send">${SEND}</button><span class="ask-lab">Ask AI</span><button type="button" class="ask-fold" aria-label="Fold or open Ask AI" title="Fold or open"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button></div>` : '';
     }
   }
   // The buttons the entry pane shows for a signed-in reader.
@@ -1081,7 +1081,13 @@ export function createAccount(app) {
     document.addEventListener('click', (e) => {
       if (phone() && e.target.closest('#sb-list [data-open]')) setTimeout(() => setOpen(false), 0);
     }, true);
-    $('ask').addEventListener('click', () => { if (document.body.classList.contains('ask-min') && !$('ask').classList.contains('open')) { $('ask').classList.add('open'); $('ask-q')?.focus(); } });
+    // The box folds to a small pill in the middle and opens again at any time (asked for, Nov 2026): the small
+    // arrow at its end folds it, and a press anywhere on the pill opens it.
+    $('ask').addEventListener('click', (e) => {
+      const folded = document.body.classList.contains('ask-min') && !$('ask').classList.contains('open');
+      if (folded) { $('ask').classList.add('open'); $('ask-q')?.focus(); }
+      else if (e.target.closest('.ask-fold')) { document.body.classList.add('ask-min'); $('ask').classList.remove('open'); }
+    });
     $('ask').addEventListener('submit', (e) => { e.preventDefault(); change($('ask-q').value.trim()); });
     $('ask').addEventListener('keydown', (e) => { if (e.target.id === 'ask-q' && e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); $('ask').requestSubmit(); } });
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('create').hidden && $('layer').hidden) { e.stopImmediatePropagation(); closeCreate(); } }, true);
