@@ -10,8 +10,10 @@
 
 // The voices offered, of Gemini's thirty: its name, and Google's one word for it.
 export const VOICES = [['Charon', 'Informative'], ['Sulafat', 'Warm'], ['Algieba', 'Smooth'], ['Kore', 'Firm'], ['Achird', 'Friendly'], ['Gacrux', 'Mature']];
-export const PART_LINES = 6;      // lines spoken in one request: few enough that every pause between them is found
-export const PART_CHARS = 760;
+// Where the few words kept to choose a voice by ear are, in the clips' bucket (the function makes them once).
+export const sampleOf = (v) => 'samples/' + (v.includes(':') ? v.replace(':', '-') : 'gemini-' + v).toLowerCase() + '.wav';
+export const PART_LINES = 10;     // lines spoken in one request: as many as keeps every pause between them found, since a voice allows few requests
+export const PART_CHARS = 1300;
 export const LINE_CHARS = 320;    // the longest line that is spoken
 const PAD = 0.07;                 // seconds of quiet kept before and after a line
 
@@ -108,18 +110,6 @@ export function cuts(pcm, rate, weights) {
   }
   const pick = best.filter(Boolean).reduce((a, b) => (b.c < a.c ? b : a)).path.map((j) => inner[j]);
   return weights.map((_, k) => open(k ? pick[k - 1][1] : head, k < n - 1 ? pick[k][0] : tail));
-}
-
-// How fast play travels from an entry to the next while its line is told, in parts of the way a second.
-// `base` is the pace without a voice, `frac` how far along the reader is, `left` the seconds of the line
-// still to be said. The line is over by the time the card starts to go (`TOLD` of the way): until then the
-// reader goes just fast enough to be there as it ends, never faster than without a voice, and waits there if
-// it is not over. Once it is over the rest of the way is travelled at the usual pace.
-export const TOLD = 0.7;
-export function toldPace(base, frac, left, by = TOLD) {
-  if (!(left > 0)) return base;
-  if (frac >= by) return 0;
-  return Math.min(base, (by - frac) / (left + 0.25));
 }
 
 // What is kept on the timeline's row: who speaks, how, and each line with its clip and length.

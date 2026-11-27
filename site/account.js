@@ -10,7 +10,7 @@ import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js'
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
-import { VOICES, pcmOf, cuts, voiceOf } from './voice.js';
+import { VOICES, sampleOf, pcmOf, cuts, voiceOf } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -245,7 +245,7 @@ export function createAccount(app) {
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => { t.hidden = true; }, opt.undo ? 8000 : 4000);
   }
-  function closeLayer() { $('layer').hidden = true; $('layer').innerHTML = ''; $('layer').className = ''; }
+  function closeLayer() { hush(); $('layer').hidden = true; $('layer').innerHTML = ''; $('layer').className = ''; }
   function modal(html, cls = '') {
     const l = $('layer');
     l.className = 'modal ' + cls;
@@ -546,15 +546,17 @@ export function createAccount(app) {
   const MIC = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v2.5"/></svg>';
   let voicing = null, lameReady = null;
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-  async function voiceFn(body, tries = 1) {
+  // `tries`: how often a part is asked for again when the voice says to wait (it allows only a few
+  // requests a minute); `waiting(secs)` is told how long each wait is.
+  async function voiceFn(body, tries = 1, waiting = null) {
     for (let i = 0; ; i++) {
       const t = await token();
       const r = await fetch(CONFIG.url + '/functions/v1/voiceover', { method: 'POST', headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
       const d = await r.json().catch(() => null);
       if (r.ok && d) return d;
-      // The voice may be busy for a moment: a part is asked for again after a pause.
-      if (i + 1 < tries && (r.status === 429 || r.status >= 500) && d?.code !== 'limit' && d?.code !== 'not_configured') { await wait(6000 * (i + 1) * (i + 1)); continue; }
-      const err = new Error(d?.error || (r.status === 404 ? 'Voiceover is not switched on yet.' : 'That did not work. Try again.')); err.status = r.status; throw err;
+      if (i + 1 < tries && d?.code === 'wait') { const secs = Math.max(5, Math.min(90, Number(d.wait) || 30)); waiting?.(secs); await wait(secs * 1000); waiting?.(0); continue; }
+      if (i + 1 < tries && r.status >= 500 && d?.code !== 'not_configured') { await wait(5000 * (i + 1)); continue; }
+      const err = new Error(d?.error || (r.status === 404 ? 'Voiceover is not switched on yet.' : 'That did not work. Try again.')); err.status = r.status; err.code = d?.code; throw err;
     }
   }
   function lame() {
@@ -596,8 +598,9 @@ export function createAccount(app) {
       for (let k = 0; k < script.parts.length; k++) {
         const part = script.parts[k];
         st.done = lines.length; st.to = st.done + part.texts.length;
-        say(`Recording ${st.done + 1} of ${st.lines.length}`);
-        const got = await voiceFn({ speak: { texts: part.texts, sig: part.sig }, voice, style: script.style }, 3);
+        const rec = `Recording ${st.done + 1} of ${st.lines.length}`;
+        say(rec);
+        const got = await voiceFn({ speak: { texts: part.texts, sig: part.sig }, voice, style: script.style }, 8, (secs) => { st.held = secs; say(secs ? 'Waiting for the voice' : rec); });
         const bytes = new Uint8Array(await (await fetch('data:application/octet-stream;base64,' + got.audio)).arrayBuffer());
         const m = /rate=(\d+)/.exec(got.mime || ''), { pcm, rate } = pcmOf(bytes, m ? Number(m[1]) : 24000);
         const at2 = cuts(pcm, rate, part.texts.map((t) => t.length + 12));
@@ -634,7 +637,7 @@ export function createAccount(app) {
     p.innerHTML = `<div class="vp-head"><b>Voiceover</b><small>${esc(v.voice)}${n ? ` · ${n} lines` : ''}</small></div>
       <div class="vp-bar"><i style="width: ${n ? Math.round(v.done / n * 100) : 4}%"></i></div>
       ${n ? `<ol class="vp-lines">${v.lines.map((t, i) => `<li class="${i < v.done ? 'done' : i < v.to ? 'now' : 'next'}"><i>${i < v.done ? ICON.check : ''}</i><span>${esc(t)}</span></li>`).join('')}</ol>` : '<p class="vp-note">Writing a script that fits the title and every entry<span class="dots"><i></i><i></i><i></i></span></p>'}
-      <p class="vp-foot">${n ? 'You can keep using the timeline while it records.' : 'This takes a moment.'}</p>`;
+      <p class="vp-foot">${v.held ? 'The voice takes only a few requests a minute. It goes on by itself in under a minute and a half.' : n ? 'You can keep using the timeline while it records.' : 'This takes a moment.'}</p>`;
     const now = p.querySelector('.now'), ol = p.querySelector('.vp-lines');
     if (now && ol) ol.scrollTop = now.offsetTop - ol.offsetTop - 44;
   }
@@ -671,22 +674,48 @@ export function createAccount(app) {
       else if (a === 'delete') remove(cur);
     });
   }
+  // The voiceover of one timeline: the voices, each with a few words to hear before choosing (asked for,
+  // Nov 2026: "to try which voice is good"), then Generate.
+  const PLAY = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>', HALT = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5.5" y="5" width="4.5" height="14" rx="1"/><rect x="14" y="5" width="4.5" height="14" rx="1"/></svg>';
+  let sample = null;
+  function hush() { if (sample) { sample.a.pause(); sample.b.classList.remove('on', 'wait'); sample.b.innerHTML = PLAY + '<span>Listen</span>'; sample = null; } }
+  async function listen(b, fail) {
+    const v = b.dataset.sample, same = sample && sample.b === b;
+    hush();
+    if (same) return;
+    const a = new Audio(), me = sample = { a, b };
+    b.classList.add('wait'); b.innerHTML = '<span>Loading…</span>';
+    const start = (url) => new Promise((ok, no) => { a.oncanplay = ok; a.onerror = no; a.src = url; });
+    try {
+      // The kept sample; where there is none yet the function speaks it once, and keeps it.
+      try { await start(CLIPS + 'public/voice/' + sampleOf(v)); } catch (e) { await start((await voiceFn({ sample: v }, 2)).url); }
+      if (sample !== me) return;
+      a.onended = () => { if (sample === me) hush(); };
+      await a.play();
+      b.classList.remove('wait'); b.classList.add('on'); b.innerHTML = HALT + '<span>Stop</span>';
+    } catch (e) {
+      if (sample === me) { hush(); fail(e.code === 'quota' ? 'No sample of this voice yet: the voice has reached its limit for today.' : e.code === 'wait' ? 'The voice is busy. Try the sample again in a minute.' : 'The sample could not be played. Try again.'); }
+    }
+  }
   function voiceMenu(anchor, row) {
     if (voicing) return;
     const has = voiceOf(JSON.parse(row.text).voice), was = has?.voice || (() => { try { return localStorage.getItem('cg-voice-name'); } catch (e) { return null; } })() || VOICES[0][0];
-    const d = popover(anchor, `<form class="vo-form"><h2>Voiceover</h2>
-      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays: ${has.lines.length} lines. Change the timeline, and you can record it again.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}</p>
-      <label class="fld"><span>Voice</span><select name="voice">${VOICES.map(([v, w]) => `<option value="${v}"${v === was ? ' selected' : ''}>${v} · ${w}</option>`).join('')}</select></label>
-      <button type="submit" class="big pri">${has ? 'Record again' : 'Generate voiceover'}</button>
-      ${has ? '<button type="button" class="big" data-unvoice>Remove voiceover</button>' : ''}
-      <p class="dlg-sub">Uses one of today's requests.</p></form>`);
+    const d = modal(`<form class="vo-form"><h2>${has ? 'Voiceover' : 'Generate a voiceover'}</h2>
+      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays, in ${has.lines.length} lines. Record it again after you change the timeline, or to try another voice.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}</p>
+      <div class="cap">Choose a voice</div>
+      <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map(([v, w]) => `<label class="vo-voice"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><i></i><span><b>${v}</b><small>${w}</small></span><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${v}">${PLAY}<span>Listen</span></button></label>`).join('')}</div>
+      <p class="dlg-err" role="alert"></p>
+      <div class="dlg-row">${has ? '<button type="button" class="big" data-unvoice>Remove</button>' : '<button type="button" class="big" data-close>Cancel</button>'}<button type="submit" class="big pri">${has ? 'Record again' : 'Generate voiceover'}</button></div>
+      <p class="dlg-fine center">Uses one of today's requests. A long timeline takes a few minutes to record.</p></form>`, 'small vo');
+    const err = d.querySelector('.dlg-err');
+    d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; listen(b, (m) => { err.textContent = m; }); } });
     d.querySelector('form').addEventListener('submit', (e) => {
       e.preventDefault();
-      const v = d.querySelector('select').value;
+      const v = d.querySelector('input[name=voice]:checked')?.value || VOICES[0][0];
       try { localStorage.setItem('cg-voice-name', v); } catch (x) { /* private window */ }
-      closeLayer(); voiceover(row, v);
+      hush(); closeLayer(); voiceover(row, v);
     });
-    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
+    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { hush(); closeLayer(); unvoice(row); });
   }
   function showKind(id) {
     const list = $('cr-list'), k = KINDS.find((x) => x.id === id), same = !list.hidden && list.dataset.kind === id;

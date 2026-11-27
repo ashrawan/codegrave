@@ -485,8 +485,26 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vp-note .dots i:nth-child(3) { animation-delay: .4s; }
 .vp-foot { margin: 8px 0 0; font-size: 11.5px; color: var(--faint); }
 @media (max-width: 699px) { #vo-panel { right: 12px; } .vo-pill { padding: 0 11px; } }
-.pop .vo-form { width: min(330px, calc(100vw - 48px)); padding: 4px 2px 0; }
-.pop .vo-form .dlg-sub { margin: 6px 0 14px; line-height: 1.45; }
-.pop .vo-form .big + .dlg-sub { margin: 10px 0 0; font-size: 12.5px; text-align: center; color: var(--faint); }
-.vo-form select { width: 100%; height: 42px; padding: 0 10px; font-size: 14.5px; color: var(--text); background: var(--bg); border: 1px solid var(--rule2); border-radius: 12px; }
+.modal.vo .dlg { width: min(430px, calc(100vw - 24px)); }
+.vo-form .dlg-sub { margin: 6px 0 16px; line-height: 1.45; }
+.vo-form .cap { margin: 0 0 8px; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--faint); }
+.vo-voices { display: grid; gap: 6px; }
+.vo-voice { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 0 8px 0 14px; border: 1px solid var(--rule2); border-radius: 13px; cursor: pointer; }
+.vo-voice:hover { background: var(--raised); }
+.vo-voice:has(input:checked) { border-color: var(--acc); background: color-mix(in srgb, var(--acc) 9%, transparent); }
+.vo-voice input { position: absolute; opacity: 0; pointer-events: none; }
+.vo-voice > i { flex: none; width: 16px; height: 16px; border: 1.5px solid var(--faint); border-radius: 50%; }
+.vo-voice input:checked + i { border: 5px solid var(--acc); }
+.vo-voice input:focus-visible + i { outline: 2px solid var(--acc); outline-offset: 2px; }
+.vo-voice > span { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.25; }
+.vo-voice b { font-size: 14.5px; font-weight: 600; }
+.vo-voice small { font-size: 12.5px; color: var(--muted); }
+.vo-listen { flex: none; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-width: 92px; height: 34px; padding: 0 12px; font-size: 13px; color: var(--text); background: var(--bg); border: 1px solid var(--rule2); border-radius: 17px; cursor: pointer; }
+.vo-listen:hover { border-color: var(--faint); }
+.vo-listen.on { color: var(--acc); border-color: var(--acc); }
+.vo-listen.wait { color: var(--muted); }
+.vo-form .dlg-err:empty { display: none; }
+.vo-form .dlg-err { margin: 10px 0 0; }
+.vo-form .dlg-row { margin-top: 16px; }
+.vo-form .dlg-fine { margin: 12px 0 0; }
 

@@ -12,7 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice, toldPace } from './voice.js';
+import { createVoice } from './voice.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -949,9 +949,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // length, so the camera, which follows the reader, travels evenly and never waits.
       const stepping = play.on && play.step && road.stepEnd != null, back = stepping && dir * (road.stepEnd - road.t) < 0;
       let want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
-      // With a voiceover, the reader goes no faster than the line being said, and waits where it is not over
-      // when its card would go (toldPace; asked for, Nov 2026).
-      if (want && !play.step && telling() && voice.busy()) want = road.gleg ? road.gleg / L.D * toldPace(play.speed / globe.legSecs(), road.gfrac, voice.left()) : 0;
+      // With a voiceover, the reader stops at each card until its line is said, then goes on, like Arrow keys
+      // play (asked for, Nov 2026: "we need to stop in the card").
+      if (want && !play.step && telling() && voice.busy()) { want = 0; road.vel = 0; }
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       if (play.on && play.step && !stepping) road.vel = 0;

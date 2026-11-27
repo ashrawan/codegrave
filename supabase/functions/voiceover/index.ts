@@ -12,11 +12,21 @@
 //       One part is spoken by Gemini's text to speech, with a pause between its lines. Answer:
 //       { audio: "<base64>", mime }, 24 kHz 16-bit sound (a WAV file, or bare samples). The page cuts it into
 //       one clip a line, makes MP3 of them and keeps them in the account's own folder (site/voice.js).
+//       When the voice's own limits are met the answer is 429 with { code: "wait", wait: <seconds> } (ask
+//       again then) or { code: "quota" } (no more today).
+//
+//   { sample: "<voice>" }
+//       A few words in that voice, to choose by ear. It is spoken once ever and kept (voice/samples/), so
+//       the page plays the kept file and asks here only when there is none. Answer: { url }.
+//
+// Who speaks is a provider (PROVIDERS below): Gemini today. Another is added as one more entry there with
+// its own secret, and named in VOICE_PROVIDERS; a voice of another provider is written "<provider>:<voice>".
 //
 // Secrets (Supabase → Edge Functions → Secrets):
 //   GEMINI_API_KEY       required: a Gemini API key (Google AI Studio)
 //   OPENROUTER_API_KEY   required: the same one Create with AI uses, for writing the script
-//   VOICE_MODEL          optional: the text-to-speech model, instead of the ones below
+//   VOICE_MODEL          optional: Gemini's text-to-speech models, in the order tried, instead of the ones below
+//   VOICE_PROVIDERS      optional: the providers in the order tried, by their names in PROVIDERS ("gemini")
 //   VOICE_SCRIPT_MODEL   optional: the OpenRouter model that writes the script
 
 // The cheapest of Gemini's Flash text-to-speech models first (asked for, Nov 2026); the next is tried when a
@@ -24,7 +34,7 @@
 const TTS = (Deno.env.get("VOICE_MODEL") ?? "gemini-3.8-flash-lite-tts,gemini-3.8-flash-tts").split(",").map((s) => s.trim()).filter(Boolean);
 const WRITER = Deno.env.get("VOICE_SCRIPT_MODEL") ?? "deepseek/deepseek-v4.1-flash";
 const VOICES = ["Charon", "Sulafat", "Algieba", "Kore", "Achird", "Gacrux"];
-const MAX_ENTRIES = 120, LINE_CHARS = 320, PART_LINES = 6, PART_CHARS = 760;   // as in site/voice.js
+const MAX_ENTRIES = 120, LINE_CHARS = 320, PART_LINES = 10, PART_CHARS = 1300;   // as in site/voice.js
 const DAILY = 20;
 const URL_ = Deno.env.get("SUPABASE_URL")!;
 const ANON = Deno.env.get("SUPABASE_ANON_KEY")!;
@@ -110,10 +120,17 @@ function soundIn(o: unknown): { data: string; mime: string } | null {
   return best;
 }
 
-// One part, spoken. Gemini's Interactions API first; a model that is only served the older way is asked that way.
-async function speak(key: string, text: string, voice: string, style: string): Promise<{ data: string; mime: string } | { error: string; status: number }> {
+type Spoken = { data: string; mime: string } | { error: string; status: number; code?: string; wait?: number };
+
+// One part, spoken by Gemini. Its Interactions API first; a model that is only served the older way is asked
+// that way. Each model has limits of its own (on a free key: a few requests a minute and a day), so a model
+// that is at its limit is passed over for the next, and only when all are does the page hear of it.
+async function gemini(text: string, voice: string, style: string): Promise<Spoken> {
+  const key = Deno.env.get("GEMINI_API_KEY");
+  if (!key) return { error: "Voiceover is not switched on yet.", status: 503, code: "not_configured" };
   const head = { "x-goog-api-key": key, "Content-Type": "application/json" };
-  let last = { error: "The voice could not be reached. Try again.", status: 502 };
+  let last: Spoken = { error: "The voice could not be reached. Try again.", status: 502 };
+  let wait = 0, full = 0;
   for (const model of TTS) {
     const asks = [
       () => fetch("https://generativelanguage.googleapis.com/v1beta/interactions", {
@@ -144,12 +161,46 @@ async function speak(key: string, text: string, voice: string, style: string): P
       }
       const why = (await r.text().catch(() => "")).slice(0, 400);
       console.error("tts", model, r.status, why);
-      if (r.status === 429) return { error: "The voice is busy just now. Try again in a minute.", status: 429 };
-      if (r.status === 401 || r.status === 403) return { error: "The voice is not switched on yet.", status: 503 };
+      if (r.status === 429) {
+        // "…per day…" is over for today; anything else passes: how long is read from "retry in 44s".
+        const m = /retry in (?:(\d+)h)?(?:(\d+)m)?(?:([\d.]+)s)?/i.exec(why);
+        const secs = m ? Number(m[1] || 0) * 3600 + Number(m[2] || 0) * 60 + Math.ceil(Number(m[3] || 0)) : 30;
+        if (/per day/i.test(why) || secs > 600) full++; else wait = wait ? Math.min(wait, secs) : secs;
+        break;   // the other way of asking meets the same limit: on to the next model
+      }
+      if (r.status === 401 || r.status === 403) return { error: "The voice is not switched on yet.", status: 503, code: "not_configured" };
     }
   }
+  if (wait) return { error: "The voice is busy just now. Try again in a minute.", status: 429, code: "wait", wait: Math.min(90, wait + 2) };
+  if (full) return { error: "The voice has reached its limit for today. Try again tomorrow.", status: 429, code: "quota" };
   return last;
 }
+
+// Who can speak. A provider is its voices and one function; the first that is named in VOICE_PROVIDERS and
+// has the voice asked for speaks. To add one: an entry here, its secret, and its voices in site/voice.js.
+const PROVIDERS: Record<string, { voices: string[]; speak: (text: string, voice: string, style: string) => Promise<Spoken>; pause: string }> = {
+  gemini: { voices: VOICES, speak: gemini, pause: "\n\n<long pause>\n\n" },
+};
+const ORDER = (Deno.env.get("VOICE_PROVIDERS") ?? "gemini").split(",").map((s) => s.trim()).filter((n) => PROVIDERS[n]);
+// "Charon" is a voice of the first provider that has it; "gemini:Charon" names the provider.
+function voiceFor(raw: unknown): { name: string; voice: string } {
+  const s = String(raw ?? ""), i = s.indexOf(":"), want = i > 0 ? s.slice(0, i) : "", v = i > 0 ? s.slice(i + 1) : s;
+  for (const name of want && PROVIDERS[want] ? [want] : ORDER) if (PROVIDERS[name].voices.includes(v)) return { name, voice: v };
+  const name = ORDER[0] ?? "gemini";
+  return { name, voice: PROVIDERS[name].voices[0] };
+}
+const bytesOf = (b64: string) => Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+// Bare samples are given the few bytes that make them a WAV file a browser plays.
+function wavOf(pcm: Uint8Array, mime: string): Uint8Array {
+  if (pcm.length > 12 && String.fromCharCode(...pcm.subarray(0, 4)) === "RIFF") return pcm;
+  const rate = Number(/rate=(\d+)/.exec(mime)?.[1] ?? 24000), out = new Uint8Array(44 + pcm.length), dv = new DataView(out.buffer);
+  const put = (at: number, t: string) => { for (let i = 0; i < t.length; i++) out[at + i] = t.charCodeAt(i); };
+  put(0, "RIFF"); dv.setUint32(4, 36 + pcm.length, true); put(8, "WAVEfmt "); dv.setUint32(16, 16, true); dv.setUint16(20, 1, true); dv.setUint16(22, 1, true);
+  dv.setUint32(24, rate, true); dv.setUint32(28, rate * 2, true); dv.setUint16(32, 2, true); dv.setUint16(34, 16, true); put(36, "data"); dv.setUint32(40, pcm.length, true);
+  out.set(pcm, 44);
+  return out;
+}
+const SAMPLE = "Every timeline has a story. This is how I would tell yours.";
 
 Deno.serve(async (req) => {
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
@@ -163,19 +214,31 @@ Deno.serve(async (req) => {
   let body: Record<string, any>;
   try { body = await req.json(); } catch (_e) { return json({ error: "That request could not be read." }, 400); }
 
-  const gemini = Deno.env.get("GEMINI_API_KEY"), router = Deno.env.get("OPENROUTER_API_KEY");
-  if (!gemini || !router) return json({ error: "Voiceover is not switched on yet.", code: "not_configured" }, 503);
+  const router = Deno.env.get("OPENROUTER_API_KEY");
+  if (!router || !ORDER.length) return json({ error: "Voiceover is not switched on yet.", code: "not_configured" }, 503);
+
+  // ---- a few words in one voice, to choose by ear: spoken once ever, then kept
+  if (body.sample) {
+    const { name, voice } = voiceFor(body.sample);
+    const path = `samples/${name}-${voice.toLowerCase()}.wav`, url = `${URL_}/storage/v1/object/public/voice/${path}`;
+    if ((await fetch(url, { method: "HEAD" }).catch(() => null))?.ok) return json({ url });
+    const got = await PROVIDERS[name].speak(SAMPLE, voice, "warm, clear documentary narrator");
+    if ("error" in got) return json({ error: got.error, code: got.code, wait: got.wait }, got.status);
+    const put = await fetch(`${URL_}/storage/v1/object/voice/${path}`, { method: "POST", headers: { apikey: SERVICE, Authorization: "Bearer " + SERVICE, "Content-Type": "audio/wav", "cache-control": "max-age=31536000", "x-upsert": "true" }, body: wavOf(bytesOf(got.data), got.mime) });
+    if (!put.ok) { console.error("sample", put.status, (await put.text().catch(() => "")).slice(0, 200)); return json({ error: "The sample could not be kept. Try again." }, 502); }
+    return json({ url });
+  }
 
   // ---- one part, spoken
   if (body.speak) {
     const texts: string[] = Array.isArray(body.speak.texts) ? body.speak.texts.map((t: unknown) => String(t)) : [];
     if (!texts.length || texts.length > PART_LINES || texts.join("").length > PART_CHARS + LINE_CHARS) return json({ error: "That part cannot be spoken." }, 400);
     if (String(body.speak.sig ?? "") !== await sign(user.id, texts)) return json({ error: "That part cannot be spoken." }, 403);
-    const voice = VOICES.includes(body.voice) ? String(body.voice) : VOICES[0];
+    const { name, voice } = voiceFor(body.voice);
     const style = short(body.style, 80).replace(/[<>"]/g, "") || "calm, clear documentary narrator";
     // A long pause between the lines, so the page can tell where one ends and the next begins.
-    const got = await speak(gemini, texts.join("\n\n<long pause>\n\n"), voice, style);
-    if ("error" in got) return json({ error: got.error }, got.status);
+    const got = await PROVIDERS[name].speak(texts.join(PROVIDERS[name].pause), voice, style);
+    if ("error" in got) return json({ error: got.error, code: got.code, wait: got.wait }, got.status);
     return json({ audio: got.data, mime: got.mime });
   }
 

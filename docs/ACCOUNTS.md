@@ -141,11 +141,16 @@ voice (six of Gemini's) and then:
    can open the timeline can hear them; only the owner can write there.
 4. The words, and each clip's name and length, are written on the timeline's row under `voice`.
 
+The voice is picked in a dialog where each voice has Listen: a few words in that voice, made once and kept
+for everyone. Who speaks is a provider in the function (Gemini today); others can be added there with their
+own secret. A free Gemini key allows only a few requests a minute and a few a day: the page speaks up to ten
+lines a request and waits by itself when the voice asks it to, but the daily limit needs a paid key.
+
 Recording again replaces the clips; "Remove voiceover" takes them away. A change to the timeline keeps the
 voiceover: an entry without a line is simply shown without one, so record again after a large change.
 
-While play travels, the line of the entry in front is said, the music plays softly under it, and play goes no
-faster than the line: it waits at a card whose line is not over. "Voiceover" and "Subtitles" in the three-dot
+While play travels, the line of the entry in front is said, the music plays softly under it, and play stops on
+each card until its line is said, then goes on to the next. "Voiceover" and "Subtitles" in the settings
 menu turn the voice off and write each line at the foot while it is said.
 
 The function needs the secrets `GEMINI_API_KEY` and `OPENROUTER_API_KEY`. `VOICE_MODEL` names another

@@ -54,7 +54,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
 | Open in editor (a timeline of one's own as rows, the road live beside it) | `site/editor.js`, `site/editor.css`; the date reading and checks in `site/ai.js`, then `tests/ai.test.mjs` and `docs/ACCOUNTS.md` | |
 | The full picture (a picture in the panel opened over the page) | `site/picture.js`, its styles at the end of `site/styles.css` | |
-| Voiceover (a timeline told aloud: the script, the speech, the clips, how play waits for a line) | `site/voice.js` (arithmetic and the player), `site/account.js` (making one), `site/app.js` (`tell()`, `toldPace`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
+| Voiceover (a timeline told aloud: the script, the speech, the clips, how play waits for a line) | `site/voice.js` (arithmetic and the player), `site/account.js` (making one), `site/app.js` (`tell()`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
@@ -309,12 +309,20 @@ How the page is put together:
   clips' names and lengths are written on the row (`voice`), so opening the timeline is still one request. It
   counts as one of the day's requests. While play travels the line of the entry in front is said (`tell()`;
   the opening on the first entry, the closing after the last), the music sinks to `MUSIC_UNDER`, and the
-  reader goes no faster than the line and waits where it is not over when its card would go (`toldPace()`,
-  `TOLD`), then goes on at the usual pace. A pause holds the line where it is. "Voiceover" and "Subtitles"
+  reader stops on each card until its line is said, then goes on to the next, like Arrow keys play (asked for, Nov 2026:
+  "we need to stop in the card"; a first version slowed down to fit the line instead). A pause holds the line where it is. "Voiceover" and "Subtitles"
   in the three-dot menu (`cg-voice`, on; `cg-subs`, off) show only for a timeline that has one; the subtitle
   is the line being said, at the foot (`#subs`; at the top on a phone, where the card stands at the foot).
   Only a road of one view is told, and play by the arrow keys says a line as its entry arrives without
   waiting. The script's prompt has many short examples by kind of timeline; add to them rather than cut them.
+  The voice is chosen in a dialog that lists the voices, each with Listen (asked for, Nov 2026: "to try which voice
+  is good"): a few words in that voice, spoken once ever by the function (`{ sample }`) and kept in the bucket
+  (`sampleOf()`), so a sample costs nothing after the first time. Who speaks is a provider (`PROVIDERS` in the
+  function, Gemini today; asked for, Nov 2026: other, cheaper or free ones will be added): one entry with its voices,
+  its secret and how it marks a pause, picked by `VOICE_PROVIDERS`; a voice of another provider is written
+  `provider:voice`. A voice's own limits (a free Gemini key allows a few requests a minute and a few a day) are
+  met by speaking up to `PART_LINES` lines a request, trying the next model when one is at its limit, and, when
+  the answer is `code: "wait"`, waiting the seconds it gives and going on by itself ("Waiting for the voice").
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

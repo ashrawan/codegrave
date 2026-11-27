@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parts, pcmOf, pauses, cuts, toldPace, voiceOf, PART_LINES } from '../site/voice.js';
+import { parts, pcmOf, pauses, cuts, voiceOf, PART_LINES } from '../site/voice.js';
 
 const RATE = 24000;
 // Speech stood in for by a tone: [seconds of sound, seconds of quiet, ...].
@@ -21,7 +21,7 @@ test('lines are shared out into parts no longer than asked', () => {
   const p = parts(lines);
   assert.equal(p.flat().length, 14);
   assert.ok(p.every((x) => x.length <= PART_LINES));
-  assert.deepEqual(parts([{ id: 'a', text: 'x'.repeat(700) }, { id: 'b', text: 'x'.repeat(200) }]).map((x) => x.length), [1, 1]);
+  assert.deepEqual(parts([{ id: 'a', text: 'x'.repeat(1200) }, { id: 'b', text: 'x'.repeat(200) }]).map((x) => x.length), [1, 1]);
 });
 
 test('a WAV file and bare samples read the same', () => {
@@ -55,13 +55,6 @@ test('with too few pauses the lines are cut by their share', () => {
   assert.equal(c.length, 3);
   assert.ok(Math.abs(c[1][0] / RATE - 2) < 0.2 && Math.abs(c[2][0] / RATE - 4) < 0.2);
   assert.equal(cuts(pcm, RATE, [10]).length, 1);
-});
-
-test('play goes no faster than the line, waits for it, and goes on at its own pace after', () => {
-  assert.equal(toldPace(0.3, 0.2, 0), 0.3);             // nothing being said: the usual pace
-  assert.equal(toldPace(0.3, 0, 1), 0.3);               // a short line: never faster than usual
-  assert.ok(Math.abs(toldPace(0.3, 0, 6.75) - 0.1) < 1e-9);   // a long one: there as it ends
-  assert.equal(toldPace(0.3, 0.7, 2), 0);               // not over when the card would go: wait
 });
 
 test('a stored voiceover is read, and a broken one is none', () => {
