@@ -1702,8 +1702,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       o.setAttribute('aria-label', say); o.title = say; o.setAttribute('aria-pressed', ownOn);
     }
   }
-  // The first view on the road that brings its own music: its track, its title and its picture.
+  // A view's own music (a country's anthem), only while it is the one view shown: with several views there is
+  // just the house track (asked for, Nov 2026).
   function ownAudio() {
+    if (state.views.length !== 1) return null;
     for (const id of state.views) {
       const v = viewById.get(id), a = v?.audio;
       if (a && a.src) return { src: mediaUrl(a.src), title: a.title, img: v.thumb?.image ? mediaUrl(v.thumb.image) : v.image?.src ? mediaUrl(v.image.src) : null };
@@ -2541,8 +2543,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       goFull = () => { if (!fullOn()) toggleFull(); };
       fullBtn.addEventListener('click', toggleFull);
       $('stage').addEventListener('dblclick', (e) => { if (!e.target.closest('button, a, input, .g-card, .g-rows')) toggleFull(); });
-      // Out of full screen the bar on the left and the strip of views at the foot are there again (asked for, Nov 2026).
-      const drawFull = () => { fullBtn.setAttribute('aria-pressed', String(fullOn())); document.body.classList.toggle('fullscreen', fullOn()); if (!fullOn()) document.body.classList.remove('film'); };
+      // Full screen is the film layout: going in closes the bar on the left and the strip of views at the foot, and
+      // coming out brings them back (asked for, Nov 2026).
+      const drawFull = () => { fullBtn.setAttribute('aria-pressed', String(fullOn())); document.body.classList.toggle('fullscreen', fullOn()); document.body.classList.toggle('film', fullOn()); };
       document.addEventListener('fullscreenchange', drawFull); document.addEventListener('webkitfullscreenchange', drawFull);
     }
     addEventListener('resize', () => {
