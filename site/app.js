@@ -12,6 +12,8 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
+import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel } from './voice.js';
+import { exportFilm, canExport, canSize, canFast } from './export.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -539,6 +541,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // others off, and the road opens at its beginning. The last one asked for wins.
   let wanted = null;
   function showOnly(id, done) {
+    document.body.classList.remove('ask-min');
     const real = alias.get(id) || id;
     wanted = real;
     if (state.views.length === 1 && state.views[0] === real) { if (done) done(real); return Promise.resolve(real); }
@@ -947,7 +950,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // On the globe, play takes each stretch between two entries in a set time (globe.legSecs()), whatever its
       // length, so the camera, which follows the reader, travels evenly and never waits.
       const stepping = play.on && play.step && road.stepEnd != null, back = stepping && dir * (road.stepEnd - road.t) < 0;
-      const want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
+      let want = !play.on || (play.step && !stepping) ? 0 : GLOBE && globe && road.gleg ? road.gleg / L.D / globe.legSecs() * play.speed : Math.min(road.limit, PLAY_PACE * road.pace) * play.speed;
+      // With a voiceover, the reader stops at each card until its line is said, then goes on, like Arrow keys
+      // play (asked for, Nov 2026: "we need to stop in the card").
+      if (want && !play.step && telling() && voice.busy()) { want = 0; road.vel = 0; }
+      if (road.intro) { if (performance.now() < road.intro) { want = 0; road.vel = 0; } else road.intro = 0; }
       road.vel = calm() ? want : road.vel + (want - road.vel) * (1 - Math.exp(-dt * (play.on && want > road.vel ? 4 : 6)));
       if (!play.on && road.vel < 0.004) road.vel = 0;
       if (play.on && play.step && !stepping) road.vel = 0;
@@ -976,6 +983,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function stepOf(p) {
     const t = p.t, P = roadPalette();
     return { id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
+      imgs: t.image && !t.noImage ? [t.image, ...(t.media || []).filter((m) => m && m.src && (!m.type || m.type === 'image'))].map((m) => mediaUrl(m.src)).filter((u, i, a) => a.indexOf(u) === i).slice(0, 4) : [],
       mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
   }
   function globeShow() {
@@ -996,6 +1004,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     road.gcur = undefined;
     globe.show(steps);
     globePanes(steps);
+    voice.set(voiceNow()); drawTold();
+    // A timeline with a voiceover gets its voice ready at once, so play need not wait for the download.
+    if (told.on && voice.any() && !voice.device()) speaker.warm();
   }
   // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
   // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
@@ -1052,7 +1063,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // How far on from the entry in front towards the next: the camera and the time line at the foot go by it.
     const from = cur ? cur.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
     road.gleg = next && next.a !== from ? Math.abs(next.a - from) : 0;
-    const fresh = globe.at(id, road.gleg ? clamp((edge - from) / (next.a - from), 0, 1) : 0, play.on);
+    road.gfrac = road.gleg ? clamp((edge - from) / (next.a - from), 0, 1) : 0;
+    const fresh = globe.at(id, road.gfrac, play.on);
+    tell(id, next);
     // Each view's own globe goes by the same reader: its entry in front is the last of its own the reader has come to.
     for (const pn of panes.values()) {
       let c = !play.on && state.open && state.open !== road.gfree ? pn.order.find((p) => p.t.id === state.open) || null : null, n = null;
@@ -1756,6 +1769,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '') || e.target.closest?.('#side, #axis, #info, .tsearch')) return;
       e.preventDefault();
       if (play.on && play.step) return playStep(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1);
+      // While play travels by itself the arrows go to the next entry or the one before, and play goes on
+      // (asked for, Nov 2026: "it should not pause").
+      if (play.on && road.gorder?.length) return playSkip(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 1 : -1);
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
     if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) { globe.resize(); for (const pn of panes.values()) pn.g.resize(); } }).observe(box);
@@ -2375,10 +2391,24 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
-    if (from != null || camAtEnd()) { turnsOver(); musicAgain(); }
+    if (from != null || camAtEnd()) { turnsOver(); musicAgain(); voice.stop(); told.cue = undefined; }
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1; document.body.classList.add('film');
+    // Once a timeline has been played, the Ask AI box folds to a small pill until it is pressed (asked for, Nov
+    // 2026: "after they hit play and they come back ... make it collapse"). A newly made timeline shows it whole.
+    if (!$('ask-q') || !$('ask-q').value) { document.body.classList.add('ask-min'); $('ask').classList.remove('open'); }
+    // From the beginning, play opens on the whole globe while the sound starts, comes down to the first place
+    // and only then sets off (asked for, Nov 2026: coming straight in close, "it's very hard to know" where one is).
+    road.intro = 0;
+    if (GLOBE && globe && road.gorder && road.gorder.length && !state.open) {
+      const dir = camDir(), edge = road.t + dir * AHEAD * L.D, o = road.gorder;
+      if (!o.some((p) => p.t.id !== o[0].t.id && dir * (p.a - edge) <= 0)) {
+        const secs = globe.intro();
+        for (const pn of panes.values()) pn.g.intro();
+        road.intro = performance.now() + secs * 1000;
+      }
+    }
     soundReady();
     drawPlay();
     roadKick();
@@ -2386,7 +2416,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
-  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
+  function drawPlay() { if (L) roadHud(true); tune(); if (play.on) { voice.resume(); if (telling()) voice.prepare(told.cue); } else voice.pause(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
   // On the globe a pause stops dead, exactly where play was (asked for, Nov 2026); the road eased to a stop.
   function pausePlay() { play.on = false; road.stepEnd = null; if (GLOBE) road.vel = 0; drawPlay(); }
   // Play by the arrow keys ("Play" in the three-dot menu, `cg-step` in this browser; asked for, Nov 2026): play
@@ -2409,6 +2439,22 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     road.stepEnd = camClamp(j < 0 ? (dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D) : o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D);
     road.stepI = Math.max(j, -1);
     if (calm()) { road.t = road.prev = road.stepEnd; road.stepEnd = null; }
+    roadKick();
+  }
+  // An arrow key during automatic play: a quick glide to the next entry, or back to the one before, without a pause.
+  function playSkip(n) {
+    const o = road.gorder, dir = camDir(), edge = road.t + dir * AHEAD * L.D;
+    let i = -1;
+    for (let k = 0; k < o.length; k++) { if (dir * (o[k].a - edge) > 1e-5 * L.D) break; i = k; }
+    // A press while still gliding counts from where the last press was going.
+    if (road.target != null && road.skipI != null && o[road.skipI]) i = road.skipI;
+    let j = i + n;
+    while (j >= 0 && j < o.length && i >= 0 && o[j].t.id === o[i].t.id) j += n;
+    j = clamp(j, 0, o.length - 1);
+    if (j === i) return;
+    road.intro = 0; road.vel = 0; road.skipI = j;
+    road.target = camClamp(o[j].a - dir * AHEAD * L.D + dir * 1e-6 * L.D); road.rate = 4;
+    if (calm()) { road.t = road.prev = road.target; road.target = null; }
     roadKick();
   }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
@@ -2473,7 +2519,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
   // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
   // the track from its beginning too. The sound button silences it.
-  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4;
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.14;   // under a voiceover the music is only a background
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
   // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
@@ -2482,7 +2528,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   const musicAgain = () => { music.fresh = true; };
   function tune() {
-    music.want = play.on && sound.on ? MUSIC_VOL : 0;
+    music.want = play.on && sound.on ? (telling() ? MUSIC_UNDER : MUSIC_VOL) : 0;
     if (music.want) {
       const src = trackNow();
       try {
@@ -2505,6 +2551,104 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       }
     }, 50);
   }
+  // The voiceover (voice.js): a timeline someone keeps may be told aloud, a line for each entry. While play
+  // travels the line of the entry in front is said, the music sinks under it, and the reader stops on each card
+  // until its line is over. The speech is made in this browser (voice.js), all the lines in order from where play
+  // starts; a line not made yet holds play at its card, with "Preparing the voice" at the foot. "Voiceover" in the three-dot menu turns it off (`cg-voice` in this browser), and
+  // "Subtitles" writes each line at the foot while it is said (`cg-subs`). Only a road of one view is told.
+  // ---- export video (site/export.js): the timeline on show made into a file in this browser, with one press.
+  // The page only hands over what is on show: the entries in the order play meets them, the voiceover, the music.
+  function exportVideo(o, step, stop) {
+    const steps = [], seen = new Set();
+    for (const p of road.gorder || []) if (!seen.has(p.t.id)) { seen.add(p.t.id); steps.push(stepOf(p)); }
+    // Only the part of the timeline the reader chose in the dialog (From and To, by entry).
+    if (Number.isInteger(o.from) && Number.isInteger(o.to)) { steps.splice(o.to + 1); steps.splice(0, o.from); }
+    const css = getComputedStyle(document.documentElement);
+    return exportFilm({
+      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, voice: voiceNow(),
+      makeGlobe: (host, opts) => createGlobe(host, { esc, calm: () => false, open() {}, goTo() {}, seek() {}, credit: null, ...opts }),
+      title: L && L.lanes.length ? L.lanes.map((ln) => ln.view.name).join(' and ') : 'timeline',
+      music: new URL(trackNow() || MUSIC, document.baseURI).href,
+      fonts: { serif: css.getPropertyValue('--serif').trim() || 'Georgia, serif', sans: getComputedStyle(document.body).fontFamily || 'sans-serif' },
+    });
+  }
+  const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
+  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine) drawTold(); if (s.made) keptSoon(); drawSubs(); });
+  told.slow = isSlow();
+  gpuOk().then((ok) => { told.gpuOk = ok; drawTold(); });
+  const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
+  // A timeline of the reader's own carries its voiceover on its row. For any other view (the editors', someone
+  // else's) the script is kept in this browser alone (`cg-vo:<view>`; asked for, Nov 2026: "for the existing
+  // views, we should be able to generate the voiceover").
+  const localVoice = (id) => { try { return JSON.parse(localStorage.getItem('cg-vo:' + id)) || null; } catch (e) { return null; } };
+  const voiceNow = () => (state.views.length === 1 && (viewById.get(state.views[0])?.voice || localVoice(state.views[0]))) || null;
+  function keepLocalVoice(v) {
+    if (state.views.length !== 1) return;
+    try { if (v) localStorage.setItem('cg-vo:' + state.views[0], JSON.stringify(v)); else localStorage.removeItem('cg-vo:' + state.views[0]); } catch (e) { throw new Error('This browser could not keep the voiceover.'); }
+    voice.set(voiceNow()); drawTold();
+    if (told.on && voice.any() && !voice.device()) speaker.warm();
+  }
+  const telling = () => told.on && sound.on && voice.any();
+  function drawSubs() {
+    // While the voice is downloaded (the first time in a browser) or a line is made, the foot says so, subtitles
+    // or not: play waits for it (asked for, Nov 2026: "so user know what's happening").
+    const loading = told.load != null && told.load < 1 && told.on && voice.any() && !voice.device();
+    const el = $('subs'), wait = loading || (told.wait && play.on && telling()), on = wait || (told.subs && !!told.text);
+    if (loading && told.load >= 0.95) el.textContent = 'Getting the voice ready…';
+    else if (loading) el.textContent = `Downloading the ${speaker.gpu() ? 'faster ' : ''}voice, first time only: ${Math.round(told.load * 100)}% of ${Math.round((told.bytes || 0) / 1e6) || MODEL_MB} MB`;
+    else if (wait) el.textContent = told.slow ? 'This device makes the voice slowly, so play waits at each card until its line is ready.' : 'Preparing the voice…';
+    else if (on) el.textContent = told.text;
+    el.classList.toggle('on', on);
+    el.classList.toggle('wait', wait);
+  }
+  // Called whenever the reader moves: `id` is the entry in front (null before the first), `next` the one after.
+  function tell(id, next) {
+    if (!telling()) { if (told.cue !== undefined) { voice.stop(); told.cue = undefined; } return; }
+    const key = id ?? 'intro';
+    // Standing still, a line that was being said belongs to where the reader was: moving on ends it.
+    if (!play.on) { if (told.cue !== undefined && key !== told.cue && told.cue !== 'outro') { voice.stop(); told.cue = undefined; } return; }
+    if (told.cue === 'outro') return;
+    const after = next ? next.t.id : 'outro';
+    if (key !== told.cue) {
+      told.cue = key; told.then = null;
+      // The opening is said on the first entry that has a line and the closing after the last that has one:
+      // the whole timeline, or the part a voiceover was written for (asked for, Nov 2026).
+      told.first = road.gorder.find((p) => voice.has(p.t.id))?.t.id; told.last = road.gorder.findLast((p) => voice.has(p.t.id))?.t.id;
+      if (id != null && told.first === id && voice.has('intro')) { told.then = key; voice.cue('intro', key); }
+      else voice.cue(key, after);
+    } else if (told.then && !voice.busy()) { voice.cue(told.then, after); told.then = null; }
+    else if (id != null && (!next || id === told.last) && !voice.busy()) { told.cue = 'outro'; voice.cue('outro'); }
+  }
+  // The chip by play: how many of this timeline's lines this browser has already made in its voice.
+  let keptAt = 0;
+  function keptSoon() { clearTimeout(keptAt); keptAt = setTimeout(async () => {
+    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() ? texts.length : await speaker.kept(texts, voice.name());
+    told.kept = n; told.lines = texts.length; drawChip();
+  }, 300); }
+  function drawChip() {
+    const el = $('vo-chip'), one = state.views.length === 1, any = voice.any() && one, ready = any && told.kept >= told.lines;
+    el.classList.toggle('voiced', any); el.classList.toggle('ready', ready); el.classList.toggle('off', any && !told.on);
+    el.classList.toggle('x1', play.speed === 1); el.classList.toggle('can', one && !any);
+    $('vo-x').textContent = String(play.speed) + 'x';
+    $('vo-cap').textContent = 'Sound and voice';
+    el.title = !any ? (one ? `No voiceover yet. Play speed: ${play.speed}x.` : `Play speed: ${play.speed}x`) : !told.on ? 'This timeline has a voiceover. It is off.' : ready ? 'This timeline has a voiceover, ready on this device.' : `This timeline has a voiceover. Its voice is made on this device as it plays (${told.kept || 0} of ${told.lines || 0} lines ready).`;
+    el.setAttribute('aria-label', el.title + ' Open the voiceover and speed.');
+  }
+  function drawTold() {
+    const any = voice.any();
+    $('voice-row').hidden = $('subs-row').hidden = $('pick-row').hidden = !any;
+    // With no voiceover yet, the menu by play offers to make one there and then (asked for, Nov 2026: "the user
+    // doesn't even need to go over click on the 3 dot").
+    $('gen-row').hidden = any || state.views.length !== 1;
+    if (any) $('vo-name').textContent = voiceLabel(voice.name());
+    drawChip(); keptSoon();
+    $('gpu-row').hidden = true;   // not offered any more (asked for, Nov 2026: "we don't need that option")
+    for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
+    for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
+    for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));
+    if (!telling()) { voice.stop(); told.cue = undefined; }
+    drawSubs(); tune();
+  }
   // The road rests while the tab is hidden, so the music does too.
   document.addEventListener('visibilitychange', () => {
     if (!music.el) return;
@@ -2520,6 +2664,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     b.setAttribute('aria-pressed', sound.on);
     b.title = sound.on ? 'Sound is on: music while play travels, and a quiet breath of air as each card opens' : 'Sound is off';
     b.innerHTML = sound.on ? ICON_SOUND : ICON_MUTED;
+    // The switch itself is in the menu by play (asked for, Nov 2026: "that can go inside that voiceover option").
+    for (const x of $('sound-seg').children) x.setAttribute('aria-pressed', String((x.dataset.v === 'on') === sound.on));
+    $('vo-chip').classList.toggle('mute', !sound.on);
   }
   function toggleSound() {
     sound.on = !sound.on;
@@ -2528,6 +2675,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // Turning it on lets you hear what you turned on.
     if (sound.on) { soundReady(); setTimeout(() => breath(0), 60); }
     tune();
+    drawTold();
   }
 
   // The symbols, and where the data comes from. Opened from the panel's info button.
@@ -2649,7 +2797,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
 
     $('toggle-side').addEventListener('click', () => { if (state.pane !== 'views') showSide($('side').hidden); });
     // The three dots: turn round, how to read the timeline, the repository.
-    const more = (on) => { $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    // The settings are in groups that fold (asked for, Nov 2026: "collapsible, like for the globe", so the menu
+    // stays quiet however many settings come). A folded group says what is chosen in it; Globe opens folded.
+    const groupsSay = () => { for (const g of $('more-menu').querySelectorAll('details.grp')) g.querySelector('summary small').textContent = [...g.querySelectorAll('.set:not([hidden]) .seg button[aria-pressed="true"]')].map((b) => b.textContent).join(' · '); };
+    const more = (on) => { if (on) groupsSay(); $('more-menu').hidden = !on; $('more-btn').setAttribute('aria-expanded', on); };
+    $('more-menu').addEventListener('click', (e) => { e.stopPropagation(); setTimeout(groupsSay); });
     $('more-btn').addEventListener('click', (e) => { e.stopPropagation(); more($('more-menu').hidden); });
     document.addEventListener('click', () => more(false));
     $('more-info').addEventListener('click', (e) => { e.stopPropagation(); more(false); $('info-btn').click(); });
@@ -2681,7 +2833,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       $('info').hidden = !on; $('info-btn').setAttribute('aria-expanded', on);
     });
     // How fast play travels (cg-pace in this browser): 1x is the pace it was made for, less lingers on each card.
-    const paceShow = () => { $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
+    const paceShow = () => { voice.rate(play.speed); drawChip(); $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
     play.speed = clamp(Number(store.get('cg-pace')) || 1, 0.25, 2);
     paceShow();
     $('pace').addEventListener('input', () => { play.speed = clamp(Number($('pace').value) || 1, 0.25, 2); store.set('cg-pace', String(play.speed)); paceShow(); });
@@ -2709,6 +2861,35 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (globe) { globe.look(b.dataset.v); for (const pn of panes.values()) pn.g.look(b.dataset.v); } else store.set('cg-look', b.dataset.v);
       lookShow(b.dataset.v);
     });
+    // The voiceover and its subtitles, for a timeline that has one.
+    $('voice-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      told.on = b.dataset.v === 'on'; store.set('cg-voice', told.on ? '1' : '0'); drawTold();
+    });
+    const voMenu = (on) => {
+      const m = $('vo-menu'), r = $('vo-chip').getBoundingClientRect();
+      // Just over the chip, wherever play stands (the strip steps away in the film layout).
+      if (on) { m.style.bottom = Math.round(innerHeight - r.top + 14) + 'px'; m.style.right = Math.max(8, Math.round(innerWidth - r.right - 60)) + 'px'; }
+      m.hidden = !on; $('vo-chip').setAttribute('aria-expanded', on);
+    };
+    $('vo-chip').addEventListener('click', (e) => { e.stopPropagation(); const on = $('vo-menu').hidden; document.body.click(); voMenu(on); });
+    $('vo-menu').addEventListener('click', (e) => e.stopPropagation());
+    $('sound-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b && (b.dataset.v === 'on') !== sound.on) toggleSound(); });
+    for (const id of ['vo-gen', 'vo-change']) $(id).addEventListener('click', () => { voMenu(false); account.voiceQuick(); });
+    document.addEventListener('click', () => voMenu(false));
+    $('gpu-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (b) speaker.engine(b.dataset.v === 'on');
+    });
+    $('subs-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      told.subs = b.dataset.v === 'on'; store.set('cg-subs', told.subs ? '1' : '0'); drawTold();
+    });
     // Play: by itself, or one entry at a time by the arrow keys.
     const stepShow = () => { for (const b of $('step').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'keys') === play.step)); };
     play.step = store.get('cg-step') === 'keys'; stepShow();
@@ -2735,6 +2916,17 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       store.set('cg-grid', b.dataset.v); gridShow(b.dataset.v);
       if (state.views.length) render();
+    });
+    // The country of the entry in front, lit or not (cg-land in this browser, kept by the globe; on by default).
+    const landShow = (on) => { for (const b of $('land-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === on)); };
+    landShow(store.get('cg-land') !== 'off');
+    $('land-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      const on = b.dataset.v === 'on';
+      if (globe) { globe.land(on); for (const pn of panes.values()) pn.g.land(on); } else store.set('cg-land', on ? 'on' : 'off');
+      landShow(on);
     });
     $('detail-row').addEventListener('click', (e) => {
       e.stopPropagation();
@@ -3045,6 +3237,19 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     listChanged: () => runSearch(),
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),
+    // What a voiceover tells: the entries in the order play meets them.
+    // The voice made in this browser, and an audio context for hearing a voice before choosing it.
+    speaker: () => speaker,
+    exportVideo: (kind, step, stop) => exportVideo(kind, step, stop),
+    canExport, canSize, canFast,
+    one: () => { const v = state.views.length === 1 ? viewById.get(state.views[0]) : null; return v ? { id: v.id, title: v.name || '', description: v.description || '', voice: voiceNow() } : null; },
+    keepVoice: keepLocalVoice,
+    // What only the page knows of a base entry, for a copy of a timeline that becomes the reader's own.
+    about: (e) => { const c = catById.get(e.category), w = places[e.id]; return { kind: c?.name || e.category || '', type: c?.domain || e.domain || '', where: !e.where && w ? [w[0], w[1]] : null }; },
+    first: () => { const p = (road.gorder || [])[0]; return p ? stepOf(p) : null; },
+    voiceLoad: () => (told.load != null && told.load < 1 ? { part: told.load, mb: Math.round((told.bytes || 0) / 1e6) || MODEL_MB } : null),
+    audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
+    told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), mark: stepOf(p).mark || '', summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });
   const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"

@@ -54,8 +54,10 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
 | Open in editor (a timeline of one's own as rows, the road live beside it) | `site/editor.js`, `site/editor.css`; the date reading and checks in `site/ai.js`, then `tests/ai.test.mjs` and `docs/ACCOUNTS.md` | |
 | The full picture (a picture in the panel opened over the page) | `site/picture.js`, its styles at the end of `site/styles.css` | |
+| Voiceover (a timeline told aloud: the script, the voices, the speech made in the browser, how play waits for a line) | `site/voice.js` (the voices, the speaker and the player), `site/account.js` (making one), `site/app.js` (`tell()`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
+| Export video (the timeline drawn and encoded into one file in the browser: video, voiceover, or both; landscape, vertical or square; on the globe or in full view) | `site/export.js`, `exportVideo()` in `site/app.js`, `videoMenu()` in `site/account.js`, then `tests/export.test.mjs` | |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The globe (the timeline on the Earth, the only way it is drawn): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
@@ -299,6 +301,183 @@ How the page is put together:
   its entry and play goes on (asked for, Nov 2026). Standing still, nothing
   takes turns: a card stays while someone reads it. Keep it this simple: no
   queue, no timers, no turns.
+- **Voiceover** (`site/voice.js`, `docs/ACCOUNTS.md`; asked for, Nov 2026: "voiceover will be main", the music "should
+  be subtle", play "should wait on the cards if its corresponding voiceover not done", "and also a subtitle. if
+  its on"). On a timeline of the reader's own, "Generate voiceover" is in the three dots at the top right (`#tl-more`).
+  It opens a dialog of voices, each with Listen (asked for: "to try which voice is good"). The function `voiceover`
+  writes an opening that fits the title, a line for each entry in the order play meets them (`told` lent by the
+  page) and a closing; only those words and the voice are kept, on the row (`voice`: `{ at, voice, style, lines }`),
+  so opening the timeline is still one request. It counts as one of the day's requests; changing the voice later
+  costs nothing. **The sound is made in the reader's own browser, never on the server and never stored there**
+  (asked for, Nov 2026, after a first version recorded MP3s with Gemini into Supabase: no files on the server, and a
+  cost that does not grow with the hours people listen). `createSpeaker()` runs Kokoro (82M, Apache 2.0; `kokoro-js`
+  from jsDelivr, the q8 model from Hugging Face, about 92 MB once, then kept by the browser) in a Web Worker on the
+  CPU (wasm), one line at a time, the line asked for now first; each line made is kept in this browser's Cache
+  Storage (`lineKey()`), so playing again is instant. Two voices are offered, Heart (warm, American; the default)
+  and Michael (calm, American) (asked for, Nov 2026), and third "This device", the browser's own voice
+  (`speechSynthesis`: no download, instant, plainer; asked for, Nov 2026, and good for testing); the Kokoro two share the model and each adds about half a MB, fetched
+  only when used. The model starts downloading as soon as a timeline with a voiceover opens, or the voice dialog
+  does (`speaker.warm()`), and the foot and the dialog say how far it has come, first time only (asked for: "so
+  user know what's happening"). Each line made is timed (`cg-voice-speed`); on a device slower than real time
+  (`SLOW`) the dialog warns and the foot says play waits at each card (asked for). Where Kokoro cannot run, the
+  browser's own voice says the line. Where the browser finds a real graphics card (`gpuOk()`: WebGPU, not a software
+  fallback), "Faster voice" is offered in the voice dialog and in the settings (`#gpu-row`, `cg-voice-gpu`, off by
+  default; asked for, Nov 2026, for "users who have a good PC, like good internet"): the same model at full precision
+  on the graphics card, a 326 MB download (`GPU_MB`). The worker asks for the card before downloading, and if it
+  cannot run there the voice goes back to the processor by itself (`engine()`). Speed is kept per engine.
+  Kokoro speaks English only. While play travels every line is made in order from where play is (`prepare()`), the
+  line of the entry in front is said (`tell()`; the opening on the first entry, the closing after the last), the
+  music sinks to `MUSIC_UNDER`, and the reader stops on each card until its line is said, then goes on, like Arrow
+  keys play (asked for: "we need to stop in the card"). A line not made yet holds play at its card, and the foot
+  says "Preparing the voice" (`#subs.wait`). A pause holds the line where it is. "Voiceover" and "Subtitles" in the
+  settings (`cg-voice`, on; `cg-subs`, off) show only for a timeline that has one; the subtitle is the line being
+  said, at the foot (`#subs`; at the top on a phone, where the card stands at the foot). Only a road of one view is
+  told, and play by the arrow keys says a line as its entry arrives without waiting. The script's prompt has many
+  short examples by kind of timeline; add to them rather than cut them. Another engine (a cheaper paid voice, or
+  another free model) would go beside Kokoro in `voice.js`, with its voices in `VOICES`.
+- **Voiceover, round 2 (Nov 2026, asked for).** By play stands a chip, "Voiceover" (`#vo-chip`, `drawChip()`), on
+  a timeline that has one: its dot is lit when every line is already made in this browser (`speaker.kept()`),
+  hollow while they still have to be; a press turns the voiceover off and on. Play speed changes the voice's speed
+  too, at the same pitch (`stretch()` in `site/voice.js`, WSOLA; `voiceRate()` keeps it between 0.7x and 1.6x).
+  The voices are Heart and Michael first, then Bella, Nicole, Emma and George, then This device. While play
+  rests at a place the map comes slowly closer and glides a little east (`DRIFT_*` in `site/globe.js`), so the
+  picture is never still; north stays up and a pause stops it dead.
+- **Export video** (`site/export.js`; asked for, Nov 2026: "just like export as PDF, you can have the export
+  video", then, after a first version that recorded the tab: "it should not control the browser and record",
+  "you just click, and the MP4 ... should process and download"). In the three dots at the top right, for any
+  timeline: Video with voiceover, Video only (music, no voice) or Voiceover only (a WAV). Nothing is recorded
+  from the screen and nothing is uploaded. `exportFilm()` draws the film frame by frame on a 1920 by 1080 canvas
+  (`painter()`: the entry in front as in Full view, its picture whole and coming slowly closer, its text under
+  it, stars drifting, the title, the period, how far along), hands each frame to the browser's encoder
+  (WebCodecs: H.264 where there is one, else VP9 or AV1; AAC, else Opus), mixes the voice's lines and the music
+  off-line (`mix()`, `schedule()` says when each entry is up and each line said) and joins them with
+  `mp4-muxer` from jsDelivr, fetched only then. It runs as fast as the device draws. The pill at the top right
+  says how far it has come (`voicing.exporting` in `account.js`) and can cancel. The map is not in the film yet,
+  and the voice of This device cannot be saved to a file. Exact frames of the page itself are film mode's job
+  (`docs/FILM_MODE.md`). Generate voiceover is two steps (asked for): the script, then the voice made for every
+  line at once (`record()` in `account.js`), so play never waits.
+- **Voiceover and export, round 3 (Nov 2026, asked for), which replaces what the points above say where they
+  differ.** The chip by play is a person speaking (`#vo-chip`, no word; "Just some symbols like some person
+  speaking"), with the speed beside it when it is not 1x and a dot that is lit when every line is made. A press
+  opens a small menu over it (`#vo-menu`): Voiceover, Subtitles, Speed and Faster voice. Those rows left the
+  settings ("remove that play speed ... from the settings. Just have it in the side of voiceover"); on a
+  timeline with no voiceover the chip shows only the speed. **Any single view can have a voiceover**, not only
+  the reader's own ("for the existing views, we should be able to generate the voiceover"): for a timeline that
+  is not a row of the reader's, the script is kept in this browser alone (`cg-vo:<view>`, `holder()` in
+  `site/account.js`, `localVoice()` in `site/app.js`); writing it still needs a signed-in reader, since it is
+  one of the day's requests. **Export** asks, in this order: What (video with voiceover, video only, voiceover
+  only), Format (`SHAPES`: Landscape 16:9, Vertical 9:16, Square 1:1; "the first important thing is the
+  format"), Scene (Globe or Full view; "we should see the option to export in full view or as a globe"),
+  Subtitles and Quality; it always opens on Landscape, Default, voiceover on and 1080p (asked for). For the globe, `stageGlobe()` in
+  `site/export.js` runs the page's own `createGlobe()` on a stage out of sight and tells it for each frame only
+  where the reader is (`drive({ auto: true, dt, pos, pad })`: unlike film mode's full say, the camera, pins,
+  trail, drift and the dimming for an entry with no place follow as they do in play); the frame is the map's
+  canvas with the card drawn over it on a plate, at the right of a wide frame and at the foot of a tall or
+  square one (`layout()`). `posAt()` says where the reader is at a time: travelling in the first `MOVE` seconds
+  of a scene, then at rest. A map that does not finish loading in its time is not waited for again until it
+  has, so the export never hangs on a tile.
+- **The editor: place and pictures (Nov 2026, asked for).** An open row also has "More pictures" (up to
+  `MORE_PICS` links, one a line: `more` on the spec's entry, `media` on the view's), "Place" (a Wikipedia name;
+  `locate()` finds where it is), "On the map" (latitude and longitude typed by hand, `where`) and "Find on the
+  map". The globe draws a changed card at once: `show()` in `site/globe.js` compares what the cards say
+  (`S.face`), not only which entries there are, so a new picture link shows without a reload. An entry with
+  several pictures (`imgs` on its step) shows them in turn while its card is up in play, `PIC_SECS` each; the
+  card gets no more time for it.
+- **Voiceover and export, round 4 (Nov 2026, asked for), which replaces round 3 where they differ.** The
+  speaking icon by play shows on every single view, dim while there is no voiceover. Its menu then has
+  "Voiceover: Generate" (`#gen-row`, `account.voiceQuick()`): it writes the script at once in the voice the
+  reader chose last (`cg-voice-name`), and shows the voices first only to someone who never chose one ("the
+  user doesn't even need to go over click on the 3 dot"); with a voiceover the row is "Voice: <name> · Change".
+  Making the voice no longer has to be waited for: after `READY_AT` (3) lines the note folds to its pill, which
+  reads "Ready to play", and the rest is made in the background, the line play needs next always first
+  ("should be able to play while the rest could happen in the background"). The export dialog was rebuilt after
+  the first was called junior work ("like the Canva standard"): on the left the film as it will look, drawn in
+  CSS from the timeline's own title and first entry and following every choice (`.ex-frame`, `data-shape`,
+  `data-scene`), with its size and length under it; on the right the tabs Video and Audio only, Format and
+  Scene as tiles, Voiceover and Subtitles as switches, Quality as a pair, and one lit button. Keep new export
+  choices in those shapes.
+- **Voiceover and export, round 5 (Nov 2026, asked for), which replaces the rounds above where they differ.**
+  The sound switch is a row in the menu by play ("Sound", `#sound-seg`), not a button of its own beside play
+  (`#sound` is kept, unseen); the menu is headed "Sound and voice" and its one speed is "Play speed", which the
+  voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.14 on the page, 0.16 in a
+  film; it was found "a little bit too subtle"). The export dialog has no "Audio only" (the engine can still
+  make the WAV). Scene is "Default" (as play shows it: the globe, and the stars where entries have no place)
+  or "Full view". Quality is Quick test (240p, the smallest and fastest, for checking a film first), 720p or 1080p (4K and 8K were offered and then removed on request, Nov 2026; `QUALITY`; `canSize()` in `site/export.js` asks the
+  browser's encoder, and a size it cannot make is not offered). The dialog has a foot of its own (`.exf`):
+  "Made on your device. Nothing is uploaded." at its left, Cancel and Export at its right. The dialog stays
+  open while the film is made: a line runs along the foot's top edge, the note becomes the step and how far
+  it has come, and the buttons become Stop and Hide (hidden, the export goes on behind the pill at the top right).
+- **Settings that fold, the lit country, and play's opening (Nov 2026, asked for).** The settings menu
+  (`#more-menu`) is headed "Settings" and its groups are `<details class="grp">` that fold: Play and Appearance
+  open, Globe folded, and a folded group names what is chosen in it (`groupsSay()` in `site/app.js`). Put a new
+  setting in a group, or add a group; do not go back to one long list. "Highlight country" (Globe group,
+  `cg-land`, on by default, `globe.land()`) lights the country the entry in front falls in with a warm wash
+  and edge (`c-now`, `c-now-edge` in `site/globe.js`), at every detail. Pressing play at the beginning opens
+  on the whole globe while the sound starts, comes down to the first place and only then sets off
+  (`globe.intro()`: one glide of `INTRO_GLIDE` seconds from the whole globe to the first place, led by the frame and not by `pos`; a hold and then a draw-back were both tried and found restless, so keep it one move; `road.intro` keeps the reader still meanwhile). The pin of the entry in front is see-through so the map's names under it can be read, the way the reader came is dotted like the way ahead (`came`), and while play rests the map comes plainly closer (`DRIFT_*`) and the picture in front is shown as stills are in a video, zoomed in and gliding inside a frame that keeps its place (`g-pan` to `g-pan-e` in `site/styles.css`: five ways, each starting already cut in, a tall picture moved along its height and a wide one across (`data-shape`), an entry's several pictures dissolving one into the next with a new move each, two entries each in turn by `data-pan`, never by chance; made plain on request and then eased a little, the picture cut to about three quarters of itself, since a gentle version still "feels like the still images"; paused, the whole picture shows): all asked for, because play "feels like it's freezing".
+- **The voice dialog (designs A and B, picked from three each, Nov 2026).** `voiceMenu()` in `site/account.js`
+  draws two dialogs. With no voiceover yet: "Choose a voice", the Kokoro voices as cards (`.vo-voice.card`, a
+  round Listen on each), This device as a dashed row, and one lit button that names the voice ("Generate with
+  Heart"). With one: the voices at the left and the script as it is told at the right (`.vo-form.vb`: opening,
+  a line under each entry's name and period, closing), with Write again, Remove voiceover and "Use <voice>"
+  (asked for: "this is your script", to write again or try other voices). The export dialog keeps design A,
+  the preview beside the choices.
+- **Listen says the script, and Faster voice is gone (Nov 2026, asked for).** In the voice dialog of a timeline
+  that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
+  (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
+  stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
+- **Stopping an export is asked once more (Nov 2026, asked for).** In the export dialog Stop turns the foot into
+  "Stop the export?" with "Yes, stop" and "Keep exporting"; from the note under the pill it is a small dialog.
+  The export goes on until the reader answers.
+- **A prompt for the voiceover (Nov 2026, asked for; not needed).** Both voice dialogs have "How should it be
+  told?" (`.vo-guide`): the reader's own words on tone, length, audience or what to dwell on. The page sends them
+  as `guide` with the script request, the function `voiceover` gives them to the writer as guidance that never
+  changes the facts or the shape of the answer, and they are kept beside the script (`voice.guide`) so Write again
+  starts from them. The quick Generate in the menu by play sends none.
+- **A long timeline is told to its end, and a part of one can be told (Nov 2026, asked for).** The function
+  `voiceover` writes a long timeline in parts of `PART` entries, side by side, and joins them (the opening from the
+  first part, the closing from the last), after a timeline of two or three hundred entries came back with no
+  lines at its end; it is still one request. Both voice dialogs have "Period" under the prompt (`spanPick()` in
+  `site/account.js`, the same strip with two handles as the export's; not needed): then only those entries are
+  sent and told. The opening is said on the first entry that has a line and the closing after the last that has
+  one (`told.first`, `told.last` in `tell()`).
+- **Make it your own (Nov 2026, asked for).** Nobody changes a wiki timeline from the page: it is a file in the
+  repository. For a single timeline that is not the reader's own, the three dots at the top right have "Make it
+  your own" (`makeMine()` in `site/account.js`): a private copy, written as a spec (`viewToSpec()` in
+  `site/ai.js`, which the page helps with `app.about`: the kind's name, its branch, the place), so the editor and
+  Ask AI work on it as on a timeline made with AI. A spec holds `MAX_ENTRIES`, so a longer timeline keeps its
+  best ranked, and the dialog says so. The copy's entries are its own (`x…` ids): later changes to the wiki's
+  entries do not reach it.
+- **The menu of the three dots at the top right (design A with B's publish row, picked from three, Nov 2026),
+  which replaces what the points on that menu say where they differ.** `timelineMenu()` draws: a heading that
+  names the timeline, its number of entries, its years and, for the reader's own, its state (`.tl-head`); for the
+  reader's own, Publish on top as a bordered row of its own with a Share button (`.tl-pub`), which opens the
+  sharing box and never shares by itself (asked for); then Export (Video, Document), Sound (the voiceover, with
+  its voice and "Ready" once there is one) and Edit (Open in editor, or "Make it your own" on a timeline that is
+  not the reader's; Turn round); Rename and Delete stand quietly at the foot (`.tl-foot`). A published timeline
+  stays the reader's to change, at the same address.
+- **When an export is saved (Nov 2026, asked for)** a note stands at the top right, "Video downloaded" with the
+  file's name, until the reader closes it with its cross (`exported()` in `site/account.js`, `#ex-done`); not a toast.
+- **Arrows during play (Nov 2026, asked for).** While automatic play travels, the left and right arrow keys glide
+  to the entry before or the next one and play goes on (`playSkip()` in `site/app.js`); they no longer pause it.
+  Standing still they travel by hand as before, and with "Play: Arrow keys" they step (`playStep()`).
+- **Ask AI folds (Nov 2026, asked for).** Folded (`body.ask-min`) the Ask AI box is a small "Ask AI" pill in the
+  middle, a little lower than the open box; a press opens it again (`#ask.open`), and the small arrow at the end of
+  the open box (`.ask-fold`) folds it at any time. Pressing play folds it too.
+  Showing another timeline, or making one, shows the box whole; a box with words typed in it is not folded.
+- **The film shows what play shows (Nov 2026, asked for: "however the timeline is built, the same would be the
+  exported video").** At the foot of every frame is the page's time line, not a bar of progress (`shelf()` in
+  `painter()`, `site/export.js`): the entries by name on a strip that slides under a marker standing still at the
+  left, a year where it changes, one with no place in italics. The picture of the entry in front moves as it does
+  in play (`panAt()`, the same five ways as `g-pan` to `g-pan-e`; change the two together). The export dialog has
+  "Period" under the picture at the left, chosen as the years are on the page: a strip with two handles, by entry
+  (`.ex-yb`), a line that says from which year to which and how many entries, and the names of the first and
+  last. It opens on all the timeline shows (which already follows the year range of the page), so a film can be
+  a part of a timeline. On a wide frame the pictures of the entry in front and
+  the last few passed stand small at the left, as `.g-past` does. Quality is Quick test (240p), 720p or 1080p.
+- **Export says when the graphics hardware helps (Nov 2026, asked for).** The browser's encoder already uses the
+  device's video hardware where there is one; `canFast()` in `site/export.js` only asks whether it can, and the
+  dialog's foot then reads "Made on your device, sped up by its graphics hardware. Nothing is uploaded."
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
@@ -566,6 +745,18 @@ How the page is put together:
   16px on a phone so the browser does not zoom into them, and if the page
   is zoomed anyway a "Reset zoom" button appears at the top of what is in
   sight (`#unzoom`, placed from `visualViewport`) and puts it back.
+- **Two menus, one for the timeline and one for settings** (asked for, Nov 2026: "remove that publish and
+  voiceover into the 3 dot in the top", "the bottom footer 3 dots should be like the settings"; this replaces
+  what the point below and the points above say where they differ). At the top right stands one quiet
+  three-dot button (`#tl-more`, drawn by `account.js` in `#tl-state`; `timelineMenu()`): "This timeline" holds
+  Generate voiceover (lit until there is one), Open in editor, Publish with its state, Export as PDF, Turn
+  round, Rename and Delete. For a timeline that is not the reader's own it holds Export as PDF and Turn round
+  only. Publish, Open in editor and the voiceover no longer stand as buttons at the top. Export as PDF and
+  Turn round are still done by the page: `#pdf` and `#reverse` are kept as two unseen buttons that the menu
+  presses. The button at the foot (`#more-btn`) is a gear and its menu (`#more-menu`) holds settings only:
+  Play, Globe, Appearance and How to read the timeline. While a voiceover is made the three dots become a
+  pill ("Writing the script…", `#vo-pill`), with a note under it (`#vo-panel`, `drawVoicing()`); pressing the
+  pill hides or shows the note, and the timeline can be used meanwhile. The year on the road stands under the button.
 - **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
   right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
   It is in groups under small headings (restructured on request, Nov 2026, after a first list was found
@@ -644,7 +835,7 @@ How the page is put together:
   through `fmtDate()` and `spanText()`, which read BCE and deep-time dates;
   on a phone deep time is written short (100k, 66M, 13.8B years ago, asked
   for, Nov 2026).
-- **Export as PDF.** "Export as PDF" in the three-dot menu (with the PDF icon, `site/media/pdf.svg`, from Wikimedia Commons, asked for) opens `print.html` in a new tab (asked for, Nov 2026, after a round in the same tab; a stored timeline reaches it through `cg-print` in this tab's storage, which a tab opened from it copies) with the views on the timeline, their order and colours (`?views=…&c=…`, `&yr=` when the year range is narrowed: then only the entries begun in that range are printed, and `&o=forward` or `&o=backward`, the direction of the timeline (the page's own link carries it too): backward: then every page reads from today back, newest first; the print page also has a Timeline switch: Forward, past to today, or Backward, today to past, which rewrites `o` in its link). `site/print.js` loads the same view files, lays the pages out by measuring them in the browser, and waits (nothing opens by itself, asked for in Nov 2026). Its "Download PDF" button saves a .pdf in one click (picked over the print dialog and over a server, Nov 2026): each page is drawn to an image by html2canvas and the images are put into one file by jsPDF, both fetched from cdnjs only when pressed; so the text in the file is not selectable, and pictures must allow CORS (`crossorigin` on every picture; Wikimedia does). Printing is left to the browser, which uses `print.css`. With a year range, only the chapters that overlap it are shown. Chapters are not numbered anywhere in the export (asked for, Nov 2026). The reading font (names, headings, summaries; `--serif`) is picked under Text from ten free fonts (`FONTS_OFFERED`, SIL Open Font License, fetched from Google Fonts only when picked, `&font=` in the link); Lora is the default (picked from the ten, Nov 2026; Bookerly was asked for first, but it is Amazon's and cannot be served). Text size, a slider from 60 to 150 % under Text (`&size=`); its 100 % is 1.4 times the size the layout was drawn for (`TEXT_BASE`; asked for, Nov 2026: the old 140 % read best, so it became the default): the book scales its reading text (`--fs`; the headers, rails and cover titles keep their size) and keeps its layout, so larger text takes more pages; the poster scales whole sheets in `posterSheet()` as far as two rows of cards fit the paper, then the cards' text alone (`--tf`). Only the codegrave name keeps Instrument Serif. The bar has two menus, each naming its current choices on its button (asked for, Nov 2026, as the old Template plus Export options felt mixed): Layout, the shape of the document (Template, Paper, Timeline), and Text, how it reads (Font, Size); opening one closes the other, and on a phone their buttons read just Layout and Text. On a screen narrower than the paper the pages are zoomed out to its width with a CSS transform (`fit()`), so the layout is exactly the full-size one and nothing reflows (CSS zoom drew the pages wrongly on phones and was replaced, Nov 2026); the PDF and images are drawn at full size (`onclone` takes the transform off). A folded top right corner on each poster sheet, like frosted glass, with a small download arrow, saves that sheet as a PNG (`sheetImage()`, asked for, Nov 2026), never printed. The paper is A4 or Letter: `paperFor()` picks the one used where the reader is (Letter for the US and a few others), and the Paper switch offers both. One style for every view, asked for in Nov 2026 after several rounds: no full-page pictures, printable pages. One view: a cover with its thumbnail picture (a flag), then entries on the left under their chapters and the page's stretch of the timeline down the right, with a bar at its top showing where the page sits, no scale numbers, a dot level with each name and a straight dotted line, beside the dot only the year it began, in a size that fills the rail (not its name again, nor the year it ended; asked for, Nov 2026), a curve only where entries share a year, chapter tints (grey before the first chapter). Several views: a cover whose tiles start just under the title and fit their boxes for 2 to 8 views (`fitTiles()`: the chapter list is cut short with "… and N more", then the description to two lines, then the pictures; asked for, Nov 2026), then one timeline down the exact middle in strict date order, each year written once; views stand left and right like the pips of a die (1st left, 2nd right, 3rd left…), each in a box bordered in its colour that appears where its entries fall; the heading names the left views on the left and the right views on the right. The cover's heading reads "A timeline from codegrave.com"; the link in the footer is printed only on the last page. The Template switch (the poster is the default, asked for in Nov 2026; `fmt=book` for the book) also offers a Poster ( `poster()` in `site/print.js`, picked from four designs and reworked over several rounds, Nov 2026): landscape sheets on A2, A3, A4 or Letter (the Paper switch; asked for, Nov 2026, so it prints at home): laid out in A2 sizes and scaled to the paper (`posterSheet()`), A3 as A2 at 0.71 with four rows, A4 and Letter at 0.8 with two rows of taller cards, as few sheets as keep the cards at least 44 mm wide before scaling (Space Exploration: three on A2 or A3, eight on A4, nine on Letter); one thick line across the middle coloured by chapter and named on itself; every entry a card (picture, kind, name, years, summary; no credit over the picture: the credits are listed on a sheet of their own at the end, asked for), on white paper with few colours: the chapters' colours on the band, the cards' top edges and years, the rest grey on one grid shared by four rows, so every row starts at the left edge and ends at the right, with any gaps inside; each column reads top to bottom in date order, the inner cards' lines drop straight to the line and the outer cards' run down the gutter, so no line crosses a card; a small ring and the year in plain text where each line meets the band (pills were rejected); cards that share a year meet the band at one point with the year written once on each side a line comes from, their lines bending to it in a short curve so the order holds (asked for, Nov 2026); a small heading on every sheet (on the first sheet the view's thumbnail, a flag, stands just before its name in the title, 4 mm high on paper, asked for, Nov 2026): alone in the top right corner the whole span as a bar in the chapters' colours with this sheet's stretch outlined and its years (no "Part 2 of 3"), and below it the title in a light weight with, on the first sheet, the description just after it (asked for: the heading is not the focus); cards bordered all round in a soft tint of their chapter's colour (`soften()`, asked for); with several views a card whose view has a thumbnail carries it small (2.4 mm on paper) on its top border at the left, with no name (`.cthumb`); the book's view boxes show the thumbnail at the top left when there is one, else the view's name in its colour (asked for, Nov 2026); the band ends in a point of its own last colour; a footer from the start of the line to its point with the note of each chapter on the sheet in its colour (several views: a key of the views); "codegrave.com" very small at the bottom centre of every sheet, under the footer, so the chapter notes have the footer's whole width and nothing overlaps (asked for, Nov 2026); nothing stands nearer than about 5 mm to the edge of the paper, and the band's point stands as far from the right edge as its start from the left, because home printers cut the edges (asked for, Nov 2026). The downloaded file is named after the views, the template and the paper (`space-exploration-poster-a4.pdf`). Keep the rules above unless asked.
+- **Export as PDF.** "Export as PDF" in the three-dot menu (with the PDF icon, `site/media/pdf.svg`, from Wikimedia Commons, asked for) opens `print.html` in a new tab (asked for, Nov 2026, after a round in the same tab; a stored timeline reaches it through `cg-print` in this tab's storage, which a tab opened from it copies) with the views on the timeline, their order and colours (`?views=…&c=…`, `&yr=` when the year range is narrowed: then only the entries begun in that range are printed, and `&o=forward` or `&o=backward`, the direction of the timeline (the page's own link carries it too): backward: then every page reads from today back, newest first; the print page also has a Timeline switch: Forward, past to today, or Backward, today to past, which rewrites `o` in its link). `site/print.js` loads the same view files, lays the pages out by measuring them in the browser, and waits (nothing opens by itself, asked for in Nov 2026). Its "Download PDF" button saves a .pdf in one click (picked over the print dialog and over a server, Nov 2026): each page is drawn to an image by html2canvas and the images are put into one file by jsPDF, both fetched from cdnjs only when pressed; so the text in the file is not selectable, and pictures must allow CORS (`crossorigin` on every picture; Wikimedia does). Printing is left to the browser, which uses `print.css`. With a year range, only the chapters that overlap it are shown. Chapters are not numbered anywhere in the export (asked for, Nov 2026). The reading font (names, headings, summaries; `--serif`) is picked under Text from ten free fonts (`FONTS_OFFERED`, SIL Open Font License, fetched from Google Fonts only when picked, `&font=` in the link); Lora is the default (picked from the ten, Nov 2026; Bookerly was asked for first, but it is Amazon's and cannot be served). Text size, a slider from 60 to 150 % under Text (`&size=`); its 100 % is 1.4 times the size the layout was drawn for (`TEXT_BASE`; asked for, Nov 2026: the old 140 % read best, so it became the default): the book scales its reading text (`--fs`; the headers, rails and cover titles keep their size) and keeps its layout, so larger text takes more pages; the poster scales whole sheets in `posterSheet()` as far as two rows of cards fit the paper, then the cards' text alone (`--tf`). Only the codegrave name keeps Instrument Serif. The bar has two menus, each naming its current choices on its button (asked for, Nov 2026, as the old Template plus Export options felt mixed): Layout, the shape of the document (Template, Paper, Timeline), and Text, how it reads (Font, Size); opening one closes the other, and on a phone their buttons read just Layout and Text. On a screen narrower than the paper the pages are zoomed out to its width with a CSS transform (`fit()`), so the layout is exactly the full-size one and nothing reflows (CSS zoom drew the pages wrongly on phones and was replaced, Nov 2026); the PDF and images are drawn at full size (`onclone` takes the transform off). A folded top right corner on each poster sheet, like frosted glass, with a small download arrow, saves that sheet as a PNG (`sheetImage()`, asked for, Nov 2026), never printed. The paper is A4 or Letter: `paperFor()` picks the one used where the reader is (Letter for the US and a few others), and the Paper switch offers both. One style for every view, asked for in Nov 2026 after several rounds: no full-page pictures, printable pages. One view: a cover with its thumbnail picture (a flag), then entries on the left under their chapters and the page's stretch of the timeline down the right, with a bar at its top showing where the page sits, no scale numbers, a dot level with each name and a straight dotted line, beside the dot only the year it began, in a size that fills the rail (not its name again, nor the year it ended; asked for, Nov 2026), a curve only where entries share a year, chapter tints (grey before the first chapter). Several views: a cover whose tiles start just under the title and fit their boxes for 2 to 8 views (`fitTiles()`: the chapter list is cut short with "… and N more", then the description to two lines, then the pictures; asked for, Nov 2026), then one timeline down the exact middle in strict date order, each year written once; views stand left and right like the pips of a die (1st left, 2nd right, 3rd left…), each in a box bordered in its colour that appears where its entries fall; the heading names the left views on the left and the right views on the right. The cover's heading reads "A timeline from codegrave.com"; the link in the footer is printed only on the last page. The Template switch (the book is the default, asked for in Nov 2026 after the poster had been; `fmt=poster` for the poster) also offers a Poster ( `poster()` in `site/print.js`, picked from four designs and reworked over several rounds, Nov 2026): landscape sheets on A2, A3, A4 or Letter (the Paper switch; asked for, Nov 2026, so it prints at home): laid out in A2 sizes and scaled to the paper (`posterSheet()`), A3 as A2 at 0.71 with four rows, A4 and Letter at 0.8 with two rows of taller cards, as few sheets as keep the cards at least 44 mm wide before scaling (Space Exploration: three on A2 or A3, eight on A4, nine on Letter); one thick line across the middle coloured by chapter and named on itself; every entry a card (picture, kind, name, years, summary; no credit over the picture: the credits are listed on a sheet of their own at the end, asked for), on white paper with few colours: the chapters' colours on the band, the cards' top edges and years, the rest grey on one grid shared by four rows, so every row starts at the left edge and ends at the right, with any gaps inside; each column reads top to bottom in date order, the inner cards' lines drop straight to the line and the outer cards' run down the gutter, so no line crosses a card; a small ring and the year in plain text where each line meets the band (pills were rejected); cards that share a year meet the band at one point with the year written once on each side a line comes from, their lines bending to it in a short curve so the order holds (asked for, Nov 2026); a small heading on every sheet (on the first sheet the view's thumbnail, a flag, stands just before its name in the title, 4 mm high on paper, asked for, Nov 2026): alone in the top right corner the whole span as a bar in the chapters' colours with this sheet's stretch outlined and its years (no "Part 2 of 3"), and below it the title in a light weight with, on the first sheet, the description just after it (asked for: the heading is not the focus); cards bordered all round in a soft tint of their chapter's colour (`soften()`, asked for); with several views a card whose view has a thumbnail carries it small (2.4 mm on paper) on its top border at the left, with no name (`.cthumb`); the book's view boxes show the thumbnail at the top left when there is one, else the view's name in its colour (asked for, Nov 2026); the band ends in a point of its own last colour; a footer from the start of the line to its point with the note of each chapter on the sheet in its colour (several views: a key of the views); "codegrave.com" very small at the bottom centre of every sheet, under the footer, so the chapter notes have the footer's whole width and nothing overlaps (asked for, Nov 2026); nothing stands nearer than about 5 mm to the edge of the paper, and the band's point stands as far from the right edge as its start from the left, because home printers cut the edges (asked for, Nov 2026). The downloaded file is named after the views, the template and the paper (`space-exploration-poster-a4.pdf`). Keep the rules above unless asked.
 - **Words.** A person is born and dies; a city is founded; a species goes
   extinct. The words come from the entry's branch (`words` in `boot.json`,
   `wordsNow()` for mixed text).

@@ -219,6 +219,31 @@ export function specToView(raw, seed) {
   };
 }
 
+// The other way round: a spec from a view file, so a timeline that was not made with AI (one of the wiki's, a
+// classical one) can become the reader's own and be changed in the editor or by Ask AI (asked for, Nov 2026).
+// `about(entry)` lends what only the page knows of a base entry: `{ kind, type, where }`. Only the best
+// MAX_ENTRIES are kept, since a spec holds no more.
+export function viewToSpec(file, title, about = () => ({})) {
+  const v = file?.view || {}, all = Array.isArray(file?.entries) ? file.entries : [];
+  const best = all.length > MAX_ENTRIES ? [...all].sort((a, b) => (a.rank ?? 9) - (b.rank ?? 9) || (b.score ?? 0) - (a.score ?? 0)).slice(0, MAX_ENTRIES) : all;
+  const entries = best.map((e) => {
+    const ev = Array.isArray(e.events) ? e.events : [], born = ev.find((x) => x.type === 'born'), ended = ev.find((x) => x.type === 'ended');
+    const k = about(e) || {}, wiki = (e.sources || []).map((x) => /^https:\/\/en\.wikipedia\.org\/wiki\/([^?#]+)/.exec(x?.url || '')).find(Boolean);
+    const img = picOf(e.image), more = (Array.isArray(e.media) ? e.media : []).filter((m) => !m.type || m.type === 'image').map(picOf).filter((m) => m && m.src !== img?.src).slice(0, MORE_PICS);
+    return {
+      name: e.names?.[0]?.name || e.name || '', kind: k.kind || e.category || '', type: k.type || e.domain || 'events',
+      start: born?.date || '', end: ended?.date || '', summary: e.summary || '',
+      wikipedia: wiki ? decodeURIComponent(wiki[1]).replace(/_/g, ' ') : '',
+      importance: Math.min(5, Math.max(1, 6 - (Number(e.rank) || 3))),
+      events: ev.filter((x) => x.type !== 'born' && x.type !== 'ended' && x.date && x.label).map((x) => ({ date: x.date, label: x.label, note: x.note || '' })),
+      ...(img ? { image: img } : {}), ...(img && more.length ? { more } : {}),
+      ...(whereOf(e.where || k.where) ? { where: whereOf(e.where || k.where) } : {}),
+    };
+  });
+  const chapters = (Array.isArray(v.checkpoints) ? v.checkpoints : []).map((c) => ({ name: c.name, from: c.from, to: c.to, note: c.note || '' }));
+  return cleanSpec({ title: title || v.name || '', description: v.description || '', chapters, entries });
+}
+
 // What can be drawn of a spec while the model is still writing it: the title and description once
 // they are written, and every chapter and entry whose object is closed. `text` is the JSON so far.
 export function partialSpec(text) {

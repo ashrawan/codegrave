@@ -645,18 +645,31 @@ body.globe .g-credit { display: inline-flex; }
 /* The three-dot menu (restructured on request, Nov 2026): groups under small headings, and in each a row is a
    name on the left and its control on the right, every control the same width so they stand in one column. The
    choice that is on is lit in the accent colour. */
-#more-menu { width: 318px; max-width: calc(100vw - 16px); max-height: calc(100vh - 64px); overflow-y: auto; padding: 8px; }
-#more-menu .cap { margin: 8px 10px 6px; }
-#more-menu hr { margin: 8px -8px; }
-#more-menu .set { display: grid; grid-template-columns: minmax(0, 1fr) 186px; align-items: center; gap: 12px; min-height: 36px; padding: 0 6px 0 10px; font-size: 13.5px; color: var(--text); cursor: default; }
-#more-menu .set .lbl { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-#more-menu .rng { display: flex; align-items: center; gap: 10px; }
-#more-menu .rng input { flex: 1; min-width: 0; margin: 0; accent-color: var(--acc); touch-action: none; }
-#more-menu .rng .state { flex: none; width: 34px; text-align: right; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--muted); }
-#more-menu .seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border: 1px solid var(--rule2); border-radius: 9px; }
-#more-menu .seg button { height: 26px; padding: 0 2px; font-size: 12px; white-space: nowrap; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; transition: color .15s, background .15s; }
-#more-menu .seg button:hover { color: var(--text); }
-#more-menu .seg button[aria-pressed="true"] { font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 55%, transparent); }
+:is(#more-menu, #vo-menu) { width: 318px; max-width: calc(100vw - 16px); max-height: calc(100vh - 64px); overflow-y: auto; padding: 8px; }
+:is(#more-menu, #vo-menu) .cap { margin: 8px 10px 6px; }
+/* The settings: a little larger, in groups that fold (asked for, Nov 2026) */
+#more-menu { width: 348px; }
+#more-menu .head { margin: 6px 10px 8px; font-size: 15px; font-weight: 600; color: var(--text); }
+#more-menu .grp { border-top: 1px solid var(--rule); margin: 0 -8px; padding: 0 8px; }
+#more-menu .grp summary { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 6px 0 8px; font-size: 13.5px; font-weight: 600; color: var(--text); list-style: none; border-radius: 8px; cursor: pointer; user-select: none; }
+#more-menu .grp summary::-webkit-details-marker { display: none; }
+#more-menu .grp summary:hover { background: color-mix(in srgb, var(--text) 6%, transparent); }
+#more-menu .grp summary .chev { flex: none; color: var(--faint); transition: transform .15s; }
+#more-menu .grp[open] summary .chev { transform: rotate(90deg); }
+#more-menu .grp summary small { margin-left: auto; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 12px; font-weight: 400; color: var(--faint); }
+#more-menu .grp[open] summary small { display: none; }
+#more-menu .grp[open] { padding-bottom: 6px; }
+#more-menu .grp + hr { margin-top: 0; }
+:is(#more-menu, #vo-menu) hr { margin: 8px -8px; }
+:is(#more-menu, #vo-menu) .set { display: grid; grid-template-columns: minmax(0, 1fr) 186px; align-items: center; gap: 12px; min-height: 36px; padding: 0 6px 0 10px; font-size: 13.5px; color: var(--text); cursor: default; }
+:is(#more-menu, #vo-menu) .set .lbl { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+:is(#more-menu, #vo-menu) .rng { display: flex; align-items: center; gap: 10px; }
+:is(#more-menu, #vo-menu) .rng input { flex: 1; min-width: 0; margin: 0; accent-color: var(--acc); touch-action: none; }
+:is(#more-menu, #vo-menu) .rng .state { flex: none; width: 34px; text-align: right; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--muted); }
+:is(#more-menu, #vo-menu) .seg { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border: 1px solid var(--rule2); border-radius: 9px; }
+:is(#more-menu, #vo-menu) .seg button { height: 26px; padding: 0 2px; font-size: 12px; white-space: nowrap; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; transition: color .15s, background .15s; }
+:is(#more-menu, #vo-menu) .seg button:hover { color: var(--text); }
+:is(#more-menu, #vo-menu) .seg button[aria-pressed="true"] { font-weight: 600; color: var(--acc); background: color-mix(in srgb, var(--acc) 18%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--acc) 55%, transparent); }
 #globe .g-rows { cursor: grab; touch-action: none; }
 #globe .g-rows.drag { cursor: grabbing; }
 #globe .g-rows.drag .g-nm { pointer-events: none; }
@@ -824,3 +837,120 @@ body.multi #road-views, body.multi #wall .w-scene { display: none; }
    come back while the pointer is at the top edge, after a click on the stage, or while the search is used. */
 .tsearch, #film-menu, .top { transition: opacity .3s, transform .3s; }
 body.fullscreen:not(.peek) .tsearch:not(:focus-within), body.fullscreen:not(.peek) #film-menu, body.fullscreen:not(.peek) .top:not(:focus-within) { opacity: 0; pointer-events: none; }
+
+/* The voiceover: its two settings show only for a timeline that has one, and the line being said is written
+   at the foot while it is said (subtitles), over the map and under nothing. */
+:is(#more-menu, #vo-menu) .set[hidden] { display: none; }
+#subs { position: fixed; left: calc(var(--sb) + (100vw - var(--sb)) / 2); bottom: 96px; z-index: 18; width: max-content; max-width: min(760px, calc(100vw - var(--sb) - 48px)); margin: 0; padding: 8px 16px; transform: translateX(-50%); font-size: 17px; line-height: 1.45; text-align: center; text-wrap: balance; color: #fff; background: rgba(8, 10, 16, .72); border-radius: 10px; opacity: 0; pointer-events: none; transition: opacity .25s; }
+#subs.on { opacity: 1; }
+#subs.wait { font-size: 13.5px; color: rgba(255, 255, 255, .8); }
+body.globe:has(.g-shelf:not([hidden])):not(.film) #subs { bottom: 150px; }
+body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
+@media (max-width: 699px) {
+  #subs { top: 108px; bottom: auto; left: 50%; max-width: calc(100vw - 24px); font-size: 14.5px; padding: 6px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { #subs { transition: none; } }
+
+/* By play: a person speaking when this timeline has a voiceover (asked for, Nov 2026: a symbol, not the word),
+   with a dot that is lit when its voice is ready on this device and hollow while it still has to be made here;
+   on any timeline the speed of play when it is not 1x. A press opens the voiceover and the speed (#vo-menu). */
+.vochip { display: inline-flex; align-items: center; gap: 5px; height: 28px; min-width: 28px; justify-content: center; padding: 0 7px; font-size: 11.5px; color: var(--muted); background: transparent; border: 0; border-radius: 14px; white-space: nowrap; }
+.vochip:hover, .vochip[aria-expanded="true"] { color: var(--text); background: var(--raised); }
+.vochip b { font-weight: 600; font-variant-numeric: tabular-nums; }
+.vochip i { width: 6px; height: 6px; border-radius: 50%; border: 1.5px solid var(--acc); }
+.vochip.ready i { background: var(--acc); }
+.vochip:not(.voiced):not(.can) svg, .vochip:not(.voiced) i { display: none; }
+.vochip.can svg { opacity: .55; }
+.vochip.mute svg { opacity: .4; }
+.vochip.can.x1 b { display: none; }
+.vo-gen { justify-self: end; height: 28px; padding: 0 14px; font-size: 12.5px; font-weight: 600; color: var(--bg); background: var(--acc); border: 0; border-radius: 8px; cursor: pointer; }
+.vo-gen:hover { filter: brightness(1.08); }
+.vo-gen.quiet { padding: 0 4px; font-weight: 500; color: var(--muted); background: none; }
+.vo-gen.quiet:hover { color: var(--text); filter: none; }
+.vochip.voiced.x1 b { display: none; }
+.vochip.voiced { color: var(--text); }
+.vochip.off svg { opacity: .45; }
+.vochip.off i { border-color: var(--faint); background: none; }
+#vo-menu { bottom: 104px; width: 300px; }
+#vo-menu .set { grid-template-columns: minmax(0, 1fr) 170px; }
+#vo-menu :is(#gen-row, #pick-row) { grid-template-columns: minmax(0, 1fr) auto; }
+@media (max-width: 699px) { #vo-menu { bottom: 150px; } }
+#sound[hidden] { display: none !important; }
+
+/* While play travels the picture of the entry in front is shown as stills are in a video (asked for, Nov 2026:
+   "zoomed in and showing from the side", so it "feels like a video"): zoomed in, it glides from one side to the
+   other and comes closer. Its frame keeps its place and size: the cut-out moves against the picture. A pause
+   holds it where it is. */
+/* Five ways, taken in turn two entries at a time (`data-pan`): across to the right coming closer, across to the
+   left coming closer, drawing back while it rises, corner to corner, and a slow push in on the upper middle.
+   Each starts already cut in (asked for, Nov 2026: "it doesn't always have to start with the full one"; the
+   whole picture is what a pause shows) and goes there and back. The picture is cut to about three quarters of
+   itself: a first, gentler set still read as a still picture and a stronger one was "a little bit strong". The steps between keep the frame's edge
+   still, since the cut-out does not run in a straight line against the zoom. */
+@keyframes g-pan {
+  0% { scale: 1.2200; translate: -9.00% 0.00%; clip-path: inset(9.016% 1.639% 9.016% 16.393% round 3px); }
+  20% { scale: 1.2520; translate: -5.40% 0.00%; clip-path: inset(10.064% 5.751% 10.064% 14.377% round 3px); }
+  40% { scale: 1.2840; translate: -1.80% 0.00%; clip-path: inset(11.059% 9.657% 11.059% 12.461% round 3px); }
+  60% { scale: 1.3160; translate: 1.80% 0.00%; clip-path: inset(12.006% 13.374% 12.006% 10.638% round 3px); }
+  80% { scale: 1.3480; translate: 5.40% 0.00%; clip-path: inset(12.908% 16.914% 12.908% 8.902% round 3px); }
+  100% { scale: 1.3800; translate: 9.00% 0.00%; clip-path: inset(13.768% 20.290% 13.768% 7.246% round 3px); }
+}
+@keyframes g-pan-b {
+  0% { scale: 1.2200; translate: 9.00% 0.00%; clip-path: inset(9.016% 16.393% 9.016% 1.639% round 3px); }
+  20% { scale: 1.2520; translate: 5.40% 0.00%; clip-path: inset(10.064% 14.377% 10.064% 5.751% round 3px); }
+  40% { scale: 1.2840; translate: 1.80% 0.00%; clip-path: inset(11.059% 12.461% 11.059% 9.657% round 3px); }
+  60% { scale: 1.3160; translate: -1.80% 0.00%; clip-path: inset(12.006% 10.638% 12.006% 13.374% round 3px); }
+  80% { scale: 1.3480; translate: -5.40% 0.00%; clip-path: inset(12.908% 8.902% 12.908% 16.914% round 3px); }
+  100% { scale: 1.3800; translate: -9.00% 0.00%; clip-path: inset(13.768% 7.246% 13.768% 20.290% round 3px); }
+}
+@keyframes g-pan-c {
+  0% { scale: 1.4500; translate: 0.00% 7.00%; clip-path: inset(10.690% 15.517% 20.345% 15.517% round 3px); }
+  20% { scale: 1.4000; translate: 0.00% 4.20%; clip-path: inset(11.286% 14.286% 17.286% 14.286% round 3px); }
+  40% { scale: 1.3500; translate: 0.00% 1.40%; clip-path: inset(11.926% 12.963% 14.000% 12.963% round 3px); }
+  60% { scale: 1.3000; translate: 0.00% -1.40%; clip-path: inset(12.615% 11.538% 10.462% 11.538% round 3px); }
+  80% { scale: 1.2500; translate: 0.00% -4.20%; clip-path: inset(13.360% 10.000% 6.640% 10.000% round 3px); }
+  100% { scale: 1.2000; translate: 0.00% -7.00%; clip-path: inset(14.167% 8.333% 2.500% 8.333% round 3px); }
+}
+@keyframes g-pan-d {
+  0% { scale: 1.2500; translate: -8.00% -6.00%; clip-path: inset(14.800% 3.600% 5.200% 16.400% round 3px); }
+  20% { scale: 1.2800; translate: -4.80% -3.60%; clip-path: inset(13.750% 7.188% 8.125% 14.688% round 3px); }
+  40% { scale: 1.3100; translate: -1.60% -1.20%; clip-path: inset(12.748% 10.611% 10.916% 13.053% round 3px); }
+  60% { scale: 1.3400; translate: 1.60% 1.20%; clip-path: inset(11.791% 13.881% 13.582% 11.493% round 3px); }
+  80% { scale: 1.3700; translate: 4.80% 3.60%; clip-path: inset(10.876% 17.007% 16.131% 10.000% round 3px); }
+  100% { scale: 1.4000; translate: 8.00% 6.00%; clip-path: inset(10.000% 20.000% 18.571% 8.571% round 3px); }
+}
+@keyframes g-pan-e {
+  0% { scale: 1.1800; translate: 0.00% 3.00%; clip-path: inset(5.085% 7.627% 10.169% 7.627% round 3px); }
+  20% { scale: 1.2440; translate: 0.00% 4.20%; clip-path: inset(6.431% 9.807% 13.183% 9.807% round 3px); }
+  40% { scale: 1.3080; translate: 0.00% 5.40%; clip-path: inset(7.645% 11.774% 15.902% 11.774% round 3px); }
+  60% { scale: 1.3720; translate: 0.00% 6.60%; clip-path: inset(8.746% 13.557% 18.367% 13.557% round 3px); }
+  80% { scale: 1.4360; translate: 0.00% 7.80%; clip-path: inset(9.749% 15.181% 20.613% 15.181% round 3px); }
+  100% { scale: 1.5000; translate: 0.00% 9.00%; clip-path: inset(10.667% 16.667% 22.667% 16.667% round 3px); }
+}
+/* A tall picture (`data-shape`, set when it loads) is moved along its height instead of across: down it coming
+   closer, and up it drawing back. */
+@keyframes g-pan-t {
+  0% { scale: 1.2500; translate: 0.00% 10.00%; clip-path: inset(2.000% 10.000% 18.000% 10.000% round 3px); }
+  20% { scale: 1.2800; translate: 0.00% 6.00%; clip-path: inset(6.250% 10.938% 15.625% 10.938% round 3px); }
+  40% { scale: 1.3100; translate: 0.00% 2.00%; clip-path: inset(10.305% 11.832% 13.359% 11.832% round 3px); }
+  60% { scale: 1.3400; translate: 0.00% -2.00%; clip-path: inset(14.179% 12.687% 11.194% 12.687% round 3px); }
+  80% { scale: 1.3700; translate: 0.00% -6.00%; clip-path: inset(17.883% 13.504% 9.124% 13.504% round 3px); }
+  100% { scale: 1.4000; translate: 0.00% -10.00%; clip-path: inset(21.429% 14.286% 7.143% 14.286% round 3px); }
+}
+@keyframes g-pan-u {
+  0% { scale: 1.3500; translate: 0.00% -10.00%; clip-path: inset(20.370% 12.963% 5.556% 12.963% round 3px); }
+  20% { scale: 1.3240; translate: 0.00% -6.00%; clip-path: inset(16.767% 12.236% 7.704% 12.236% round 3px); }
+  40% { scale: 1.2980; translate: 0.00% -2.00%; clip-path: inset(13.020% 11.479% 9.938% 11.479% round 3px); }
+  60% { scale: 1.2720; translate: 0.00% 2.00%; clip-path: inset(9.119% 10.692% 12.264% 10.692% round 3px); }
+  80% { scale: 1.2460; translate: 0.00% 6.00%; clip-path: inset(5.056% 9.872% 14.687% 9.872% round 3px); }
+  100% { scale: 1.2200; translate: 0.00% 10.00%; clip-path: inset(0.820% 9.016% 17.213% 9.016% round 3px); }
+}
+@media (prefers-reduced-motion: no-preference) and (min-width: 700px) {
+  body.playing #globe .g-card img { animation: g-pan 9s linear infinite alternate; }
+  body.playing #globe .g-card[data-pan="1"] img { animation-name: g-pan-b; }
+  body.playing #globe .g-card[data-pan="2"] img { animation-name: g-pan-c; }
+  body.playing #globe .g-card[data-pan="3"] img { animation-name: g-pan-d; }
+  body.playing #globe .g-card[data-pan="4"] img { animation-name: g-pan-e; animation-duration: 11s; }
+  body.playing #globe .g-card[data-shape="tall"]:is([data-pan="0"], [data-pan="3"]) img { animation-name: g-pan-t; }
+  body.playing #globe .g-card[data-shape="tall"][data-pan="1"] img { animation-name: g-pan-u; }
+}

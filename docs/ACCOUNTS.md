@@ -126,6 +126,51 @@ would need one key per account (OpenRouter's key-provisioning API); that
 is not built. Entries made this way are not reviewed: they are marked
 unverified and carry a link to their Wikipedia article as the source.
 
+## Voiceover
+
+A timeline of your own can be told aloud while it plays. "Generate voiceover", in the three dots at the top
+right, opens a list of voices, each with Listen, and then:
+
+1. The function `voiceover` has a model write the script: an opening that fits the title, one line for each
+   entry in the order play meets them, and a closing, in a tone that suits the subject. This counts as one of
+   the day's requests.
+2. The words and the chosen voice are written on the timeline's row under `voice`. Nothing else is kept on
+   the server: there are no sound files.
+3. When anyone plays the timeline, their own browser speaks the lines. The voices, Heart (the default) and
+   Michael, are Kokoro's, a small free voice model that runs on the device: about 92 MB downloaded once, then
+   kept by the browser, with its progress shown while it comes; each voice adds about half a MB. Each line made
+   is kept in that browser, so playing again is instant. A third choice, This device, is the browser's own voice: nothing
+   to download and instant, if plainer. It costs nothing however many hours people listen.
+   Where the model cannot run, the device's own voice is used. A minute of speech takes from about a minute (a
+   good laptop) to two (a small one) to make; play only waits for the line in front. When the device turns out
+   slower than real time, the dialog warns and the foot says that play waits at each card.
+   On a device with a graphics card the browser can use (WebGPU), "Faster voice" can be turned on in the voice
+   dialog or the settings: the model then runs on the graphics card, a one-time 326 MB download instead of
+   92 MB. It is off by default, and if the card cannot run it the voice goes back to the processor.
+
+Changing the voice later is free ("Use this voice"); "Write again" writes a new script after the timeline
+changes; "Remove the voiceover" takes the words away. An entry without a line is simply shown without one.
+
+While play travels, the line of the entry in front is said, the music plays softly under it, and play stops on
+each card until its line is said, then goes on to the next. A line that is not ready yet holds play at its card
+with "Preparing the voice" at the foot. The person speaking beside play opens a small menu: "Voiceover" and
+"Subtitles" turn the voice off and write each line at the foot while it is said, and "Speed" sets how fast play
+and the voice go. Kokoro speaks English only.
+
+A view that is not the reader's own (the editors', someone else's published timeline) can have a voiceover too:
+"Generate voiceover" is in its three dots. Its script is kept in the reader's browser alone, not on the server,
+so only they hear it, on that device. Writing it needs a signed-in reader and counts as one of the day's requests.
+
+## Export video
+
+"Export video" in the three dots makes a file on the reader's device; nothing is uploaded. It asks what to make
+(video with voiceover, video only, or the voiceover alone as a WAV), the format (Landscape 16:9, Vertical 9:16,
+Square 1:1), the scene (Globe, with the map travelling from place to place as in play, or Full view, the card
+among the stars), subtitles, and the quality (1080p, or 720p which is quicker). The voice of "This device" cannot
+be saved to a file.
+
+The function needs the secret `OPENROUTER_API_KEY`; `VOICE_SCRIPT_MODEL` names another model for the script.
+
 ## Who is signed in, and where they publish
 
 The bar on the left and the account menu show the person who signed in:
@@ -164,7 +209,7 @@ axis is never put beside a view on another: it is shown alone.
 ## Open in editor
 
 A timeline made with AI can also be changed by hand. "Open in editor",
-beside Publish, swaps the road for one page (asked for, Nov 2026: one page,
+in the three dots at the top right, swaps the road for one page (asked for, Nov 2026: one page,
 no tabs): the title and description typed in place, then every entry as a
 row under its chapter (picture, name, kind, starts, ends, weight). A click
 opens a row in place for its summary and Wikipedia article; Enter or a

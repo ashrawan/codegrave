@@ -32,6 +32,7 @@ const NAMED = 5;          // pins this many steps either side of the one in fron
 const LOCAL = 7;         // a view whose places all fit the frame at this zoom (about 100 km across) is told from close
 const NEARER = 0.4;      // how far in from the whole globe the camera comes for a view of one place, in zoom levels
 const TURN = 0.11;       // the part of the way over which one card goes and the next comes
+const INTRO_GLIDE = 5;   // play's opening: seconds from the whole globe down to the first place, in one move
 const STAY = 0.45;       // the part of the way from one place to the next that the camera rests before it goes
 const STARS = 240;        // stars that fly past in space
 // How the camera travels ("turn", picked from three clean ways in Nov 2026, after livelier ones were found "not
@@ -132,7 +133,7 @@ function landDots() {
 // cards, the one time line below): it has no time line of its own, and its card and camera suit a small box.
 // `clock` says where time and frames come from: the browser's own for a reader. Film mode (site/film/) hands in
 // its own, so a frame is drawn when it says and not when the screen is ready.
-export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, clock }) {
+export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, clock, ratio }) {
   const K = clock || { now: () => performance.now(), raf: (f) => requestAnimationFrame(f), caf: (i) => cancelAnimationFrame(i) };
   if (pane) host.classList.add('g-pane');
   host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
@@ -155,6 +156,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // 'dots'. What a look needs is fetched only when that look is picked.
   try { const l = localStorage.getItem('cg-look'); S.look = LOOKS.includes(l) ? l : 'atlas'; } catch (e) { S.look = 'atlas'; }
   try { const d = localStorage.getItem('cg-detail'); S.detail = d === 'medium' || d === 'full' ? d : 'less'; } catch (e) { S.detail = 'less'; }
+  // The country the entry in front falls in is lit in the accent colour, whatever the detail (asked for, Nov 2026:
+  // "when that map falls into the particular country, we want that country to be highlighted"; `cg-land`, on).
+  try { S.land = localStorage.getItem('cg-land') !== 'off'; } catch (e) { S.land = true; }
   // The countries (Natural Earth, public domain; one small file, fetched once): which one a place falls in.
   const inRing = (r, x, y) => { let c = false; for (let i = 0, j = r.length - 1; i < r.length; j = i++) if ((r[i][1] > y) !== (r[j][1] > y) && x < ((r[j][0] - r[i][0]) * (y - r[i][1])) / (r[j][1] - r[i][1]) + r[i][0]) c = !c; return c; };
   const inPoly = (poly, x, y) => inRing(poly[0], x, y) && !poly.slice(1).some((h) => inRing(h, x, y));
@@ -206,12 +210,17 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       map.addLayer({ id: 'c-name', type: 'symbol', source: 'land-names', maxzoom: 6, filter: ['==', ['get', 'n'], ''],
         layout: { 'text-field': ['get', 'n'], 'text-font': ['Noto Sans Regular'], 'text-size': 10.5, 'text-letter-spacing': 0.18, 'text-transform': 'uppercase', 'text-max-width': 8 },
         paint: { 'text-color': 'rgba(236,222,196,.72)', 'text-halo-color': 'rgba(10,10,12,.85)', 'text-halo-width': 1.2 } }, 'way');
+      // The lit country: a warm wash that thins out close in, and an edge that stays to street height.
+      map.addLayer({ id: 'c-now', type: 'fill', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'fill-color': '#e8b04a', 'fill-opacity': ['interpolate', ['linear'], ['zoom'], 1, 0.3, 4.6, 0.2, 7, 0.05, 9, 0], 'fill-opacity-transition': { duration: 500 } } }, 'way');
+      map.addLayer({ id: 'c-now-edge', type: 'line', source: 'lands', filter: ['==', ['get', 'n'], ''], paint: { 'line-color': 'rgba(244,196,104,.95)', 'line-width': ['interpolate', ['linear'], ['zoom'], 1, 1.2, 6, 2], 'line-opacity': ['interpolate', ['linear'], ['zoom'], 8, 1, 10.5, 0] } }, 'way');
       look();
     }
     const names = full ? [] : S.detail === 'less' ? [S.homes[S.now] || ''] : [...new Set(S.homes.filter(Boolean))];
-    const sig = S.detail + '|' + full + '|' + names.join();
+    const lit = S.land && S.homes ? S.homes[S.now] || '' : '';
+    const sig = S.detail + '|' + full + '|' + names.join() + '|' + lit;
     if (sig === S.said) return;
     S.said = sig;
+    if (map.getLayer('c-now')) for (const id of ['c-now', 'c-now-edge']) map.setFilter(id, ['==', ['get', 'n'], lit]);
     map.setLayoutProperty('country', 'visibility', full ? 'visible' : 'none');
     if (map.getLayer('c-fill')) for (const id of ['c-fill', 'c-edge', 'c-name']) map.setFilter(id, ['in', ['get', 'n'], ['literal', names]]);
   }
@@ -220,7 +229,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
 
   // ---- the map
   function make(gl) {
-    const map = new gl.Map({ container: box, style: styleOf(), center: [0, 20], zoom: far(), attributionControl: false, fadeDuration: 0, scrollZoom: false, dragRotate: false, pitchWithRotate: false, keyboard: false, maxPitch: 60 });
+    const map = new gl.Map({ container: box, style: styleOf(), center: [0, 20], zoom: far(), attributionControl: false, fadeDuration: 0, ...(ratio ? { pixelRatio: ratio } : {}), scrollZoom: false, dragRotate: false, pitchWithRotate: false, keyboard: false, maxPitch: 60 });
     map.touchZoomRotate.disableRotation();
     // The credits the map's licences ask for are folded behind their small button (asked for, Nov 2026: no line of text on the map).
     map.on('idle', () => { host.dataset.idle = '1'; }); map.on('dataloading', () => { host.dataset.idle = '0'; });
@@ -228,20 +237,23 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       map.addSource('arc', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       const kind = (k) => ['==', ['get', 'k'], k];
       map.addLayer({ id: 'way', type: 'line', source: 'arc', filter: kind('way'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.2, 'line-opacity': 0.4, 'line-dasharray': [2, 2] } });
+      map.addLayer({ id: 'came', type: 'line', source: 'arc', filter: kind('came'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.2, 'line-opacity': 0.28, 'line-dasharray': [1, 3] } });
       map.addLayer({ id: 'done-glow', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 7, 'line-opacity': 0.18, 'line-blur': 4 } });
       map.addLayer({ id: 'done', type: 'line', source: 'arc', filter: kind('done'), paint: { 'line-color': ['get', 'c'], 'line-width': 1.8, 'line-opacity': 0.95 } });
       map.addLayer({ id: 'head-glow', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 11, 'circle-color': ['get', 'c'], 'circle-opacity': 0.3, 'circle-blur': 0.9 } });
       map.addLayer({ id: 'head', type: 'circle', source: 'arc', filter: kind('head'), paint: { 'circle-radius': 3.2, 'circle-color': '#fff6e2' } });
       map.addSource('pins', { type: 'geojson', data: { type: 'FeatureCollection', features: [] } });
       const now = ['==', ['get', 'st'], 'now'];
-      map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.2, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
+      map.addLayer({ id: 'halo', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 26, 'circle-color': ['get', 'c'], 'circle-opacity': 0.12, 'circle-blur': 0.8, 'circle-pitch-alignment': 'map' } });
       map.addLayer({ id: 'ring', type: 'circle', source: 'pins', filter: now, paint: { 'circle-radius': 12, 'circle-color': 'rgba(0,0,0,0)', 'circle-stroke-color': ['get', 'c'], 'circle-stroke-width': 1.3, 'circle-stroke-opacity': 0.8, 'circle-pitch-alignment': 'map' } });
       // What has happened is a filled point, what is ahead an empty ring, the one in front is lit.
       map.addLayer({ id: 'pin', type: 'circle', source: 'pins', paint: {
         'circle-radius': ['match', ['get', 'st'], 'now', 5.5, 'past', 3.6, 3.2],
         'circle-color': ['match', ['get', 'st'], 'next', 'rgba(0,0,0,.25)', ['get', 'c']],
-        'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 1],
-        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1 } });
+        // The one in front is see-through, so the map's own names under it can be read (asked for, Nov 2026).
+        'circle-opacity': ['match', ['get', 'st'], 'past', 0.75, 'now', 0.28, 1],
+        // The edge of the pin in front is its own colour, not a dark ring (asked for, Nov 2026: the black did not match).
+        'circle-stroke-color': ['match', ['get', 'st'], 'next', 'rgba(255,255,255,.75)', 'now', ['get', 'c'], 'rgba(5,8,15,.7)'], 'circle-stroke-width': 1, 'circle-stroke-opacity': ['match', ['get', 'st'], 'now', 0.85, 1] } });
       map.addLayer({ id: 'pin-name', type: 'symbol', source: 'pins', filter: ['all', ['get', 'near'], ['!=', ['get', 'st'], 'now']],
         layout: { 'text-field': ['get', 'name'], 'text-font': ['Noto Sans Regular'], 'text-size': 12, 'text-anchor': 'left', 'text-offset': [0.8, 0], 'text-max-width': 14, 'text-optional': true },
         paint: { 'text-color': ['match', ['get', 'st'], 'past', '#ffffff', 'rgba(255,255,255,.72)'], 'text-halo-color': 'rgba(5,8,15,.85)', 'text-halo-width': 1.4 } });
@@ -319,13 +331,16 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // The way from the last place to the next, and the light that runs along it as far as the reader has come.
   function trail(pos) {
     const { P, Q, e } = leg(pos), A = P < 0 ? null : S.steps[P].place, B = Q < 0 ? null : S.steps[Q].place;
-    light(A, B, e, A && B ? `${P} ${Q} ${Math.round(e * 400)}` : '', Q < 0 ? '' : S.steps[Q].rgb);
+    // Where the reader came from is drawn too, dotted like the way ahead (asked for, Nov 2026).
+    let C = null; for (let i = P - 1; i >= 0 && A && !C; i--) C = S.steps[i].place || null;
+    light(A, B, e, A && B ? `${P} ${Q} ${Math.round(e * 400)}` : A && C ? `${P} came` : '', Q < 0 ? (P < 0 ? '' : S.steps[P].rgb) : S.steps[Q].rgb, C);
   }
-  function light(A, B, e, key, c) {
+  function light(A, B, e, key, c, C) {
     if (key === S.trail) return;
     S.trail = key;
     const feats = [];
-    if (key && distance(A, B) > 1) {
+    if (key && C && A && distance(C, A) > 1) feats.push({ type: 'Feature', properties: { k: 'came', c }, geometry: { type: 'LineString', coordinates: greatCircle(C, A, 48) } });
+    if (key && A && B && distance(A, B) > 1) {
       const N = 48, way = greatCircle(A, B, N), n = Math.min(N, Math.floor(e * N));
       const last = way[n], h = between(A, B, e);
       let lon = h[1]; while (lon - last[0] > 180) lon -= 360; while (lon - last[0] < -180) lon += 360;
@@ -360,9 +375,18 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     if (!s) { card.hidden = true; lead.hidden = true; return; }
     card.hidden = false; card.classList.toggle('bare', !!pic);
     card.dataset.id = s.id; card.style.setProperty('--c', s.col);
+    // How its picture moves in play: five ways, two entries each in turn, so it never reads as one effect on a
+    // loop (asked for, Nov 2026: "2 3 variations of style"). By the entry's number, never by chance.
+    card.dataset.pan = Math.floor(i / 2) % 5;
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
-    if (img) { img.addEventListener('error', () => { img.remove(); place(); }); img.addEventListener('load', place); }
+    if (img) { img.addEventListener('error', () => { if (S.picI) return; img.remove(); place(); }); img.addEventListener('load', place);
+      // A tall picture is moved up and down, a wide one from side to side (the styles of `g-pan` in styles.css).
+      img.addEventListener('load', () => { card.dataset.shape = img.naturalHeight > img.naturalWidth * 1.1 ? 'tall' : 'wide'; }); }
+    // An entry with several pictures shows them in turn while its card is up (asked for, Nov 2026: "the card
+    // still gets the same time, but it can show the other images"). They are fetched now so a change is not a wait.
+    S.picT = 0; S.picI = 0;
+    if (img && s.imgs && s.imgs.length > 1) for (const u of s.imgs.slice(1)) { const pre = new Image(); pre.src = u; }
     place();
   }
   // Where the card stands. Its place, drop and size are written as one transform, so growing never moves it
@@ -443,16 +467,30 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // ---- one frame. Everything follows from `S.pos`, where the reader is among the entries (2.4: four tenths of
   // the way from the third to the fourth): the camera, the strip, the stars, which card is up and how far it has
   // come. So nothing waits for anything, and it all moves for exactly as long as the reader does.
+  const PIC_SECS = 3;
+  const DRIFT_ZOOM = 0.9, DRIFT_PAN = 0.09, DRIFT_SECS = 10;   // made plainer on request (Nov 2026: "very subtle, which feels like it's freezing")
   const toward = (v, to, k) => (Math.abs(to - v) < 0.004 ? to : v + (to - v) * Math.min(1, k));
   function frame(now) {
     S.raf = 0;
     // `o` is set only by film mode (site/film/): it tells the frame everything, so nothing eases by the clock
     // and the same `o` always draws the same picture.
-    const o = S.over, dt = o ? o.dt : Math.min(0.05, Math.max(0.001, (now - S.then) / 1000)); S.then = now;
+    // The video export (site/export.js) says only where the reader is and how long a frame lasts (`o.auto`):
+    // the rest follows as it does for a reader, so the film shows what play shows. `d` is film mode's full say.
+    const o = S.over, d = o && !o.auto ? o : null, dt = o ? o.dt : Math.min(0.05, Math.max(0.001, (now - S.then) / 1000)); S.then = now;
     const still = calm(), snap = still || !!o, goal = o ? o.pos : S.cur + S.frac;
     let busy = false;
     // The reader's place follows the page's a moment behind, so a jump to a far entry is travelled, not cut to.
-    if (S.pos == null || snap) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
+    let opens = false;
+    if (S.intro && !o) {
+      // One move (asked for, Nov 2026, after a hold and then a draw-back were both found restless: "from the globe
+      // and it directly comes to that point ... like one smooth flow"). The camera is led here, not by `pos`, so
+      // the rest-then-go of a leg is not in it; the card unrolls as the camera arrives.
+      const u = clamp01((now - S.intro) / 1000 / INTRO_GLIDE);
+      if (u >= 1 || !S.playing || goal >= 1) S.intro = 0;
+      else { opens = true; S.pos = Math.min(goal, -0.3 + 0.3 * clamp01((u - 0.7) / 0.3)); S.introE = u * u * u * (u * (u * 6 - 15) + 10); }
+    }
+    if (opens) busy = true;
+    else if (S.pos == null || snap) S.pos = goal; else S.pos = Math.abs(goal - S.pos) < 0.0004 ? goal : S.pos + (goal - S.pos) * Math.min(1, dt * 7);
     if (S.pos !== goal) busy = true;
     const speed = (S.pos - S.was) / dt; S.was = S.pos;
 
@@ -460,15 +498,15 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     // camera has left its place behind.
     // In space nothing else is in sight, so the next card is on its way sooner and the last one gone later.
     const early = 0.2;
-    const c = o ? o.c : Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
-    if (c !== S.now || (o && o.stage !== S.stage)) {
+    const c = d ? d.c : Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
+    if (c !== S.now || (d && d.stage !== S.stage)) {
       S.now = c;
-      S.stage = o ? o.stage : S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
+      S.stage = d ? d.stage : S.mode === 'full' && !o ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
       pins(); markShelf(); build(c);
     }
 
     // The stage: the map dims for an entry with no place, and goes out of sight for space.
-    const dim = o ? o.dim : toward(S.dimv, S.stage === 'dim' ? 1 : 0, still ? 1 : dt * 3), sp = o ? o.sp : toward(S.spv, S.stage === 'space' ? 1 : 0, still ? 1 : dt * 2.2);
+    const dim = d ? d.dim : toward(S.dimv, S.stage === 'dim' ? 1 : 0, still ? 1 : dt * 3), sp = d ? d.sp : toward(S.spv, S.stage === 'space' ? 1 : 0, still ? 1 : dt * 2.2);
     if (dim !== S.dimv || sp !== S.spv || S.styled == null) {
       S.dimv = dim; S.spv = sp; S.styled = 1; busy = true;
       box.style.opacity = (1 - sp).toFixed(3); box.style.pointerEvents = sp > 0.5 ? 'none' : '';
@@ -476,13 +514,33 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       sky.style.opacity = sp.toFixed(3); host.style.setProperty('--sp', sp.toFixed(3));
     }
     if (S.ready && !S.bare && sp < 0.995) {
-      const cam = o ? o.cam : camAt(S.pos);
+      let cam = d ? d.cam : camAt(S.pos);
+      if (opens && cam && S.placed.length) {
+        const A = S.open, B = S.cam[S.placed[0]], e = S.introE, at = between(A.at, B.at, e);
+        cam = { center: [at[1], at[0]], zoom: Math.max(farAt(far(), at[0]), A.zoom + (B.zoom - A.zoom) * e), pitch: 0, bearing: 0, padding: S.pad };
+      }
+      // While play rests at a place (a line is being said) the map does not stand still: it comes slowly
+      // closer and glides a little east, like a camera held on a subject, and gives that back as it travels
+      // on (asked for, Nov 2026: "it feels very static", "more like the video"). North stays up, nothing
+      // swings, and a pause stops it dead. `DRIFT` is how far: most of a zoom level and 9 % of the view.
+      if (cam && !d && !still) {
+        if ((S.playing || o) && Math.abs(speed) < 0.02) { S.drift = (S.drift || 0) + dt; busy = true; }
+        else if (S.drift && Math.abs(speed) >= 0.02) { S.drift = Math.max(0, S.drift - dt * 6); busy = true; }
+        if (S.drift) {
+          const k = 1 - Math.exp(-S.drift / DRIFT_SECS);
+          cam.zoom += DRIFT_ZOOM * k;
+          cam.center = [cam.center[0] + (360 / 2 ** cam.zoom) * DRIFT_PAN * k, cam.center[1]];
+        }
+      }
+      if (cam && o && o.pad) cam.padding = o.pad;
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
-      if (o) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
+      if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - xAt(S.pos)).toFixed(1)}px)`;
+    // The dot of the entry in front stands just after the marker, not under it (asked for, Nov 2026: the line "should
+    // be on the left, and the first dot ... a little bit right after that").
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
-      S.warp = still ? 0 : o ? o.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
+      S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);
       if (S.warp) busy = true;
     }
@@ -497,12 +555,23 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       // and place it had, until the reader moves on by hand.
       const held = !S.playing && S.hold && S.hold.c === c && Math.abs(S.hold.pos - S.pos) < 0.004;
       if (o || ((S.playing || held) && !still)) {
-        const last = c >= S.steps.length - 1, a = o ? o.a : clamp01((g + early) / TURN), z = o ? o.z : last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
+        const last = c >= S.steps.length - 1, a = d ? d.a : clamp01((g + early) / TURN), z = d ? d.z : last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
         vis = Math.min(a, 1 - z);
         if (!S.phone || S.stage === 'space') { scale = 0.82 + 0.18 * (1 - (1 - a) ** 2) + 0.45 * z * z; drop = 0.24 * z * z * host.clientHeight; }
-        grow = 0.97 + 0.05 * (o ? o.g : clamp01(g + early)) + 0.2 * z * z;
+        grow = 0.97 + 0.05 * (d ? d.g : clamp01(g + early)) + 0.2 * z * z;
         if (S.playing) S.hold = { c, pos: S.pos };
       } else if (!held) S.hold = null;
+    }
+    // The pictures of the card in front take turns, `PIC_SECS` each, only while play goes on.
+    const turn = S.steps[c] && S.steps[c].imgs;
+    if (turn && turn.length > 1 && S.cardFor === c && S.playing && !still && !o) {
+      S.picT += dt; busy = true;
+      const n = Math.floor(S.picT / PIC_SECS) % turn.length, img = card.querySelector('img');
+      if (n !== S.picI && img) {
+        // One dissolves into the next, and the next moves another way.
+        S.picI = n; img.style.transition = 'opacity .5s'; img.style.opacity = '0';
+        setTimeout(() => { if (S.cardFor === c && img.isConnected) { card.dataset.pan = (Number(card.dataset.pan) + 1) % 5; img.src = turn[n]; img.style.opacity = '1'; } }, 500);
+      }
     }
     S.vis = toward(S.vis, vis, snap ? 1 : dt * 14);
     if (S.vis !== vis) busy = true;
@@ -592,7 +661,14 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     show(steps) {
       const sig = steps.map((s) => s.id + (s.place ? 1 : 0) + s.rgb).join();
       S.phone = !pane && host.clientWidth < 700;
-      if (sig === S.sig) { this.resize(); return; }
+      // The same entries with other words or pictures (the editor changed one): the cards are drawn again
+      // where the reader is, and nothing travels.
+      const face = JSON.stringify(steps.map((s) => [s.name, s.kind, s.when, s.summary, s.img, s.imgs, s.place]));
+      if (sig === S.sig) {
+        if (face !== S.face) { S.face = face; S.steps = steps; S.now = -2; past.innerHTML = ''; drawShelf(); }
+        this.resize(); return;
+      }
+      S.face = face;
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
       S.cur = -1; S.frac = 0; S.pos = null; S.trail = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
       drawShelf(); cams(); drawMode(); past.innerHTML = ''; homes();
@@ -639,9 +715,22 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (v === 'less' || v === 'medium' || v === 'full') { S.detail = v; try { localStorage.setItem('cg-detail', v); } catch (e) { /* fine */ } S.said = null; pins(); run(); }
       return S.detail;
     },
+    // Whether the country of the entry in front is lit. Given true or false, it is kept in this browser.
+    land(v) {
+      if (v === true || v === false) { S.land = v; try { localStorage.setItem('cg-land', v ? 'on' : 'off'); } catch (e) { /* fine */ } S.said = null; detail(); run(); }
+      return S.land;
+    },
+    // Play begins from far off (asked for, Nov 2026: "show the globe from the far, start playing the sound, and
+    // then zoom in"): from the whole globe, one glide of INTRO_GLIDE seconds.
+    // It answers how long that takes, so the page keeps the reader still meanwhile.
+    intro() {
+      if (calm() || !S.steps.length) return 0;
+      S.intro = K.now(); S.playing = true; run();
+      return INTRO_GLIDE;
+    },
     zoom: () => (S.map ? S.map.getZoom() : null),
     // For film mode (site/film/) only: one frame drawn now from what `o` says, and what it needs to say it.
     drive(o) { S.over = o; if (S.raf) K.caf(S.raf); S.raf = 0; frame(K.now()); },
-    film: () => ({ map: S.ready ? S.map : null, lands: !!S.lands, far: far(), open: S.open, cams: S.cam }),
+    film: () => ({ sp: S.spv || 0, dim: S.dimv || 0, map: S.ready ? S.map : null, lands: !!S.lands, far: far(), open: S.open, cams: S.cam }),
   };
 }

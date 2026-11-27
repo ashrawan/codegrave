@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces, kmBetween, linkPictures, pictureLink } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces, kmBetween, linkPictures, pictureLink, viewToSpec } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -295,4 +295,20 @@ test("the model's picture links come after Wikipedia's and only when they open",
   assert.equal(f.entries[0].media[0].credit, 'example.com');
   assert.equal(f.entries[0].image.credit, 'Wikimedia Commons');
   assert.equal(f.entries[2].image, undefined);
+});
+
+test('a view file becomes a spec the editor and Ask AI can work on', () => {
+  const file = { view: { name: 'Space', description: 'Rockets.', checkpoints: [{ id: 'a', name: 'First', from: 1926, to: 1956, note: 'n' }] }, entries: [
+    { id: 'nasa', category: 'agencies', names: [{ name: 'NASA' }], summary: 'An agency.', rank: 1, events: [{ type: 'born', date: '1958-07-29' }, { type: 'milestone', date: '1969-07-20', label: 'Moon landing' }], sources: [{ url: 'https://en.wikipedia.org/wiki/NASA' }], image: { src: 'https://upload.wikimedia.org/a.jpg' } },
+    { id: 'v2', category: 'rockets', names: [{ name: 'V-2' }], summary: 'A rocket.', rank: 3, events: [{ type: 'born', date: '1942' }, { type: 'ended', date: '1952' }] },
+  ] };
+  const spec = viewToSpec(file, 'My Space', (e) => ({ kind: 'Agency', type: 'organisations', where: e.id === 'nasa' ? [38.9, -77] : null }));
+  assert.equal(spec.title, 'My Space');
+  assert.deepEqual(spec.entries.map((e) => e.name), ['V-2', 'NASA']);
+  const nasa = spec.entries[1];
+  assert.equal(nasa.start, '1958-07-29'); assert.equal(nasa.wikipedia, 'NASA'); assert.equal(nasa.importance, 5);
+  assert.equal(nasa.events[0].label, 'Moon landing'); assert.deepEqual(nasa.where, [38.9, -77]); assert.equal(nasa.type, 'organisations');
+  assert.equal(spec.entries[0].end, '1952'); assert.equal(spec.chapters[0].name, 'First');
+  const back = specToView(spec, 's1');
+  assert.equal(back.entries.length, 2); assert.ok(back.entries[1].image.src);
 });

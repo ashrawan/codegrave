@@ -5,7 +5,7 @@
    it into the view file with specToView() after every change, so the road, Ask AI and the export all
    read one thing. Every change is kept by itself (a moment after the last one) and can be undone.
    The page lends what it needs through `deps`; the editor never reaches into the page's state. */
-import { picOf, cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, findPlaces, yearOfDate, fmtValue, MAX_ENTRIES } from './ai.js';
+import { picOf, pictureLink, whereOf, MORE_PICS, cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, findPlaces, yearOfDate, fmtValue, MAX_ENTRIES } from './ai.js';
 
 const SAVE_AFTER = 700;      // ms of quiet before a change is written to the database
 const KEEP = 100;            // steps of undo
@@ -141,6 +141,8 @@ export function createEditor(deps) {
       <label class="ed-f"><span>Summary</span><textarea data-f="summary" rows="2" maxlength="400">${esc(e.summary)}</textarea></label>
       <div class="ed-line">${f('wikipedia', 'Wikipedia article', e.wikipedia, 'grow')}${e.image ? '<button type="button" class="btn" data-ed-nopic>Remove picture</button>' : `<button type="button" class="btn" data-ed-pic${e.wikipedia ? '' : ' disabled title="Name its Wikipedia article first"'}>Find a picture</button>`}</div>
       <div class="ed-line">${f('picture', 'Picture link', e.image?.src ?? '', 'grow')}</div>
+      <label class="ed-f"><span>More pictures (up to ${MORE_PICS} links, one on each line; play shows them in turn)</span><textarea data-f="more" rows="2" spellcheck="false" placeholder="https://…">${esc((e.more || []).map((m) => m.src).join('\n'))}</textarea></label>
+      <div class="ed-line">${f('place', 'Place (a venue, a city, a country)', e.place ?? '', 'grow')}${f('where', 'On the map (latitude, longitude)', e.where ? e.where.map((n) => +n.toFixed(5)).join(', ') : '')}<button type="button" class="btn" data-ed-place${e.place || e.wikipedia ? '' : ' disabled title="Name a place first"'}>Find on the map</button></div>
       <p class="ed-err" role="alert"></p>
       <div class="ed-line end"><button type="button" class="lnk danger" data-ed-del="${k}">Delete entry</button><span class="ed-hint">Enter or a click elsewhere keeps it. Ends empty means still going.</span><button type="button" class="btn" data-ed-close>Done</button></div>
     </div>`;
@@ -247,6 +249,20 @@ export function createEditor(deps) {
       const m = picOf(v.trim());
       if (v.trim() && !m) why = 'Paste the https link of a picture.';
       else why = change((s) => { const t = entryAt(s, k); if (m) t.image = { src: m.src, source: m.src }; else delete t.image; });
+    } else if (f === 'more') {
+      // More pictures by their links (asked for, Nov 2026): they stand beside the first, and play shows them in turn.
+      const links = v.split(/[\s,]+/).filter(Boolean), pics = links.map((x) => pictureLink(x) || picOf(x));
+      if (pics.some((m) => !m)) why = 'Each line must be the https link of a picture.';
+      else if (pics.length && !entryAt(ed.spec, k)?.image) why = 'Set the first picture in “Picture link”, then add more here.';
+      else why = change((s) => { const t = entryAt(s, k); if (pics.length) t.more = pics.slice(0, MORE_PICS); else delete t.more; });
+    } else if (f === 'where') {
+      // Where it is on the map, by hand (asked for, Nov 2026): "47.6205, -122.3493". Empty takes it off the map.
+      const m = v.trim().match(/^(-?\d+(?:\.\d+)?)\s*[, ]\s*(-?\d+(?:\.\d+)?)$/), w = m ? whereOf([Number(m[1]), Number(m[2])]) : null;
+      if (v.trim() && !w) why = 'Write the latitude and the longitude, such as 47.6205, -122.3493.';
+      else why = change((s) => { const t = entryAt(s, k); if (w) t.where = w; else delete t.where; });
+    } else if (f === 'place') {
+      why = change((s) => { const t = entryAt(s, k); if (v.trim()) t.place = v.trim(); else delete t.place; });
+      if (!why && v.trim()) locate(k, true);
     } else {
       why = change((s) => { entryAt(s, k)[f] = v; });
       if (!why && f === 'wikipedia' && v.trim() && !entryAt(ed.spec, k)?.image) picture(k, true);
@@ -333,7 +349,18 @@ export function createEditor(deps) {
     if (ed !== me) return;
     if (!one[0].image && !quiet) deps.toast('No free picture was found for that article.');
     if (!one[0].image && !one[0].where) return;
-    change((s) => { const t = entryAt(s, k); if (t && t.wikipedia === e.wikipedia) { if (one[0].image) t.image = one[0].image; if (one[0].where) t.where = one[0].where; else delete t.where; } });
+    change((s) => { const t = entryAt(s, k); if (t && t.wikipedia === e.wikipedia) { if (one[0].image) t.image = one[0].image; if (one[0].where) t.where = one[0].where; } });
+  }
+  // Where one entry is, from the place it names (a Wikipedia article: a venue, a city, a country), else its own article.
+  async function locate(k, quiet = false) {
+    const me = ed, e = entryAt(me.spec, k);
+    if (!e || (!e.place && !e.wikipedia)) return;
+    const one = [{ wikipedia: e.wikipedia, place: e.place }];
+    const get = (host, q) => fetch(`https://${host}/w/api.php?format=json&origin=*&${q}`).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); });
+    try { await findPlaces(one, get); } catch (x) { /* none */ }
+    if (ed !== me) return;
+    if (!one[0].where) { if (!quiet) deps.toast('That place was not found. Write its Wikipedia name, or its latitude and longitude.'); return; }
+    change((s) => { const t = entryAt(s, k); if (t) t.where = one[0].where; });
   }
 
   // ---- events
@@ -378,6 +405,7 @@ export function createEditor(deps) {
       if (c('[data-ed-addch]')) return addChapter();
       const del = c('[data-ed-del]');
       if (del) return remove(Number(del.dataset.edDel));
+      if (c('[data-ed-place]')) return locate(Number(c('[data-k]').dataset.k));
       if (c('[data-ed-pic]')) return picture(Number(c('[data-k]').dataset.k));
       if (c('[data-ed-nopic]')) { const k = Number(c('[data-k]').dataset.k); return change((s) => { delete entryAt(s, k).image; }); }
       const ch = c('[data-ed-ch]');
