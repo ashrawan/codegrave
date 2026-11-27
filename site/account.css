@@ -470,6 +470,12 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 #vo-panel[hidden], body.playing #vo-panel, body.exploring #vo-panel, body.creating #vo-panel, body.editing #vo-panel { display: none; }
 .vp-head { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; font-size: 14px; }
 .vp-head small { font-size: 12px; color: var(--faint); }
+.vp-steps { display: grid; gap: 6px; margin: 10px 0 0; padding: 0; list-style: none; font-size: 13px; color: var(--faint); }
+.vp-steps li { display: flex; align-items: center; gap: 8px; }
+.vp-steps i { display: grid; place-items: center; width: 18px; height: 18px; font-size: 11px; font-style: normal; border: 1px solid var(--line); border-radius: 50%; }
+.vp-steps .now { color: var(--text); }
+.vp-steps .now i { border-color: var(--acc); color: var(--acc); }
+.vp-steps .done i { background: var(--acc); border-color: var(--acc); color: #111; }
 .vp-bar { height: 3px; margin: 10px 0 8px; background: var(--raised); border-radius: 2px; overflow: hidden; }
 .vp-bar i { display: block; height: 100%; background: var(--acc); border-radius: 2px; transition: width .5s ease; }
 .vp-bar.run i { width: 35%; animation: vprun 1.4s ease-in-out infinite; }

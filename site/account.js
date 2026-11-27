@@ -552,7 +552,7 @@ export function createAccount(app) {
   const keepVoice = (v) => { try { localStorage.setItem('cg-voice-name', v); } catch (x) { /* private window */ } };
   async function voiceover(row, voice) {
     if (voicing || working) return;
-    voicing = { row, note: 'Writing the script…', open: true };
+    voicing = { row, step: 1, note: 'Writing the script…', open: true };
     draw();
     try {
       const src = app.told();
@@ -560,18 +560,41 @@ export function createAccount(app) {
       const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } });
       const data = JSON.parse(row.text);
       await patch(row, { data: { ...data, voice: { at: Date.now(), voice, style: script.style || '', lines: script.lines } } });
+      await record(voice, script.lines);
       toast('The voiceover is ready. Press play to hear it.');
     } catch (e) {
       toast(e.message || 'The voiceover could not be made. Try again.');
     } finally { voicing = null; draw(true); }
   }
-  // Another voice for the same words: nothing is asked of the server but the change to the row.
+  // The second step (asked for, Nov 2026: "generate the voiceover script, then generate the voice"): every
+  // line is spoken once now, in this browser, and kept there, so play never waits. The device's own voice has
+  // nothing to make. A line that cannot be made is left for play, which makes it again or uses the device.
+  async function record(voice, lines) {
+    if (voice === 'device' || !lines?.length) return;
+    voicing.step = 2; voicing.total = lines.length; voicing.made = 0;
+    const tick = setInterval(() => { if (voicing) { noteOf(); draw(); } }, 400);
+    try {
+      for (const l of lines) {
+        await app.speaker().line(l.text, voice).catch(() => null);
+        voicing.made++;
+      }
+    } finally { clearInterval(tick); }
+  }
+  function noteOf() {
+    const l = app.voiceLoad();
+    voicing.note = l ? `Downloading the voice: ${Math.round(l.part * 100)}%` : `Making the voice: ${voicing.made} of ${voicing.total}`;
+  }
+  // Another voice for the same words: nothing is asked of the server but the change to the row, then the voice.
   async function revoice(row, voice) {
+    if (voicing || working) return;
     try {
       const data = JSON.parse(row.text);
       await patch(row, { data: { ...data, voice: { ...data.voice, at: Date.now(), voice } } });
+      voicing = { row, step: 2, note: 'Making the voice…', open: true, skip: true };
+      draw();
+      await record(voice, data.voice?.lines || []);
       toast(`${voiceLabel(voice)} will tell this timeline.`);
-    } catch (e) { toast(e.message); } finally { draw(true); }
+    } catch (e) { toast(e.message); } finally { voicing = null; draw(true); }
   }
   async function unvoice(row) {
     try {
@@ -584,9 +607,14 @@ export function createAccount(app) {
   function drawVoicing(on) {
     const p = $('vo-panel');
     p.hidden = !on || !voicing.open;
-    p.innerHTML = p.hidden ? '' : `<div class="vp-head"><b>Voiceover</b></div><div class="vp-bar run"><i></i></div>
-      <p class="vp-note">Writing a script that fits the title and every entry<span class="dots"><i></i><i></i><i></i></span></p>
-      <p class="vp-foot">This takes a few seconds. The voice is made on your device when you press play.</p>`;
+    if (p.hidden) { p.innerHTML = ''; return; }
+    const two = voicing.step === 2, part = two && voicing.total ? voicing.made / voicing.total : 0;
+    const step = (n, label, state) => `<li class="${state}"><i>${state === 'done' ? '✓' : n}</i><span>${label}</span></li>`;
+    p.innerHTML = `<div class="vp-head"><b>Voiceover</b><small>Step ${voicing.step} of 2</small></div>
+      <ol class="vp-steps">${voicing.skip ? '' : step(1, 'Write the script', two ? 'done' : 'now')}${step(2, 'Make the voice', two ? 'now' : '')}</ol>
+      <div class="vp-bar${two ? '' : ' run'}"><i${two ? ` style="width: ${Math.round(part * 100)}%"` : ''}></i></div>
+      <p class="vp-note">${two ? esc(voicing.note) : 'Writing a script that fits the title and every entry'}<span class="dots"><i></i><i></i><i></i></span></p>
+      <p class="vp-foot">${two ? 'Each line is spoken once on your device and kept in this browser, so play never waits.' : 'This takes a few seconds. Then each line is spoken on your device.'}</p>`;
   }
   // The three dots at the top right: what can be done with the timeline on show (asked for, Nov 2026: Publish
   // and the voiceover moved in here, and the menu at the foot became settings only).
