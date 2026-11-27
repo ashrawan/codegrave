@@ -29,6 +29,7 @@ const TILES = 'https://tiles.openfreemap.org';
 const DAY = 'https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/BlueMarble_ShadedRelief_Bathymetry/default/GoogleMapsCompatible_Level8/{z}/{y}/{x}.jpeg';
 const LOOKS = ['atlas', 'day', 'dots'];
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
+const LOCAL = 7;         // a view whose places all fit the frame at this zoom (about 100 km across) is told from close
 const NEARER = 0.4;      // how far in from the whole globe the camera may come, in zoom levels
 const TURN = 0.11;       // the part of the way over which one card goes and the next comes
 const STAY = 0.45;       // the part of the way from one place to the next that the camera rests before it goes
@@ -280,8 +281,10 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane })
     S.open = { at: [o.center[1], o.center[0]], zoom: farAt(f, o.center[1]) };
     const fit = (p, q) => (q && distance(q, p) > 0.5 ? zoomFor(distance(q, p), 0.4 * sz, p[0]) : 99);
     const zs = pl.map((p, k) => {
-      // Never so close that the Earth stops reading as a globe (asked for, Nov 2026: "show the globe from a bit far").
-      let z = Math.min(levelZoom(p[2]), f + NEARER);
+      // Never so close that the Earth stops reading as a globe (asked for, Nov 2026: "show the globe from a bit far"),
+      // unless the whole view lies in one small area ("things to do in Seattle"): then it is told from as close as
+      // frames all its places, or every pin would stand on one dot (asked for, Nov 2026).
+      let z = Math.max(Math.min(levelZoom(p[2]), f + NEARER), pl.length > 1 && o.fit >= LOCAL ? o.fit : 0);
       for (let j = k - 2; j <= k + 2; j++) if (j !== k) z = Math.min(z, fit(p, pl[j]));
       return Math.max(farAt(f, p[0]), z);
     });

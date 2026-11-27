@@ -104,3 +104,10 @@ test('spanKm is zoomFor the other way round', async () => {
   const z = zoomFor(1200, 400, 35);
   assert.ok(Math.abs(spanKm(z, 400, 35) - 1200) < 1e-6);
 });
+
+test('a view of one town is framed from close, a view of the world is not', () => {
+  const town = opening([[47.6205, -122.3493], [47.6097, -122.3422], [47.6163, -122.2040]], 800);
+  assert.ok(town.fit > 9 && town.fit <= 13);
+  const world = opening([[47.6, -122.3], [35.7, 139.7], [51.5, -0.1]], 800);
+  assert.ok(world.fit < 3);
+});
