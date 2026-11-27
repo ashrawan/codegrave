@@ -307,7 +307,8 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     S.ty = Math.round(Math.max(70, Math.min(low, (H - ch) / 2))); put();
   }
 
-  // ---- the time line at the foot: it slides under a marker that stands still. The entries stand on it by name
+  // ---- the time line at the foot: it slides under a marker that stands still, near the left
+  // end (asked for, Nov 2026: the line began in the middle of the screen), so most of what shows is still to come. The entries stand on it by name
   // (picked from three designs, Nov 2026), one with no place in italics; a year is written where it changes.
   function drawShelf() {
     shelf.hidden = !S.steps.length;
@@ -329,7 +330,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     const els = track.children;
     for (let i = 0; i < els.length; i++) { const el = els[i], st = i === S.now ? 'on' : i < S.now ? 'past' : ''; if (el.dataset.st !== st) { el.dataset.st = st; el.classList.toggle('on', st === 'on'); el.classList.toggle('past', st === 'past'); } }
   }
-  const nowAt = () => rows.clientWidth * (S.phone ? 0.3 : 0.4);
+  const nowAt = () => rows.clientWidth * (S.phone ? 0.2 : 0.16);
   // The place on the strip that belongs under the marker for a reader at `pos`.
   function xAt(pos) {
     if (!S.xs.length) return 0;

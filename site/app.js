@@ -550,6 +550,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!got || !viewById.get(got)?.members) { note(`“${viewById.get(real)?.name || real}” could not be loaded. Try again in a moment.`); return null; }
       if (play.on) pausePlay();
       state.span = null; state.pinned.clear();
+      // The entry that was open belongs to the views that leave: its panel closes and its id leaves the link,
+      // or a reload would bring its view back beside this one (reported, Nov 2026).
+      if (state.open || state.era || location.hash) { state.open = null; state.era = null; state.trail = []; showPane('views'); history_replace(''); }
       setViews([got]);
       musicAgain();
       road.t = road.target = null; road.vel = 0;      // render() then opens the road where this view begins
@@ -2301,7 +2304,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
 
   // From the far end, play starts again at the beginning.
+  // Pressing play takes the whole screen by itself, like a film (asked for, Nov 2026). wire() fills it in where
+  // the browser can; it works because play is always pressed, clicked or keyed by the reader.
+  let goFull = () => {};
   function startPlay(from) {
+    goFull();
     if (!L) return;
     if (matchMedia(PHONE).matches) showSide(false);
     road.target = null;
@@ -2487,6 +2494,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     };
     if (root.requestFullscreen || root.webkitRequestFullscreen) {
       fullBtn.hidden = false;
+      goFull = () => { if (!fullOn()) toggleFull(); };
       fullBtn.addEventListener('click', toggleFull);
       $('stage').addEventListener('dblclick', (e) => { if (!e.target.closest('button, a, input, .g-card, .g-rows')) toggleFull(); });
       const drawFull = () => { fullBtn.setAttribute('aria-pressed', String(fullOn())); document.body.classList.toggle('fullscreen', fullOn()); };

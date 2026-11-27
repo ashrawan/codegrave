@@ -405,6 +405,11 @@ How the page is put together:
   (`S.hold`), and the film layout stays (`body.film`, set when play starts) until the menu button at the top
   left, which is the search's height and glass and stands just before it, brings the bar and the strip back.
   Globe detail is Less by default.
+- **Round 4 (Nov 2026).** Pressing play takes the browser's full screen by itself (`goFull()` in `startPlay()`);
+  the button and a double click still toggle it. The marker of the time line at the foot stands near the left
+  end (`nowAt()`: 16 % of the strip, 20 % on a phone), not in the middle, so a view opens with its line running
+  from the left. Showing another view alone closes the open entry and takes its id out of the link
+  (`showOnly()`), or a reload would bring that entry's view back beside the new one.
 - **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser; asked
   for, Nov 2026, so the globe is less crowded). Full names every country, as the map's tiles do. Medium names
   and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
