@@ -1063,6 +1063,7 @@ export function createAccount(app) {
     document.addEventListener('click', (e) => {
       if (phone() && e.target.closest('#sb-list [data-open]')) setTimeout(() => setOpen(false), 0);
     }, true);
+    $('ask').addEventListener('click', () => { if (document.body.classList.contains('ask-min') && !$('ask').classList.contains('open')) { $('ask').classList.add('open'); $('ask-q')?.focus(); } });
     $('ask').addEventListener('submit', (e) => { e.preventDefault(); change($('ask-q').value.trim()); });
     $('ask').addEventListener('keydown', (e) => { if (e.target.id === 'ask-q' && e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); $('ask').requestSubmit(); } });
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && !$('create').hidden && $('layer').hidden) { e.stopImmediatePropagation(); closeCreate(); } }, true);

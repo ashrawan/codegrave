@@ -426,6 +426,9 @@ How the page is put together:
   that has a voiceover, Listen says its own script in that voice, from the opening on, line after line until stopped or another voice is tried, not the sample sentence
   (`listen()` takes the text). "Faster voice" is no longer offered, in the menu by play or in the dialog (its rows
   stay hidden; the graphics-card engine is still in `site/voice.js`, used only by someone who turned it on before).
+- **Ask AI folds after play (Nov 2026, asked for).** Pressing play sets `body.ask-min`: the Ask AI box becomes a
+  small "Ask AI" pill at the left above the strip, and a press opens it again (`#ask.open`) until the next play.
+  Showing another timeline, or making one, shows the box whole; a box with words typed in it is not folded.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

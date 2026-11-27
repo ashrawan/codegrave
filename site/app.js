@@ -541,6 +541,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // others off, and the road opens at its beginning. The last one asked for wins.
   let wanted = null;
   function showOnly(id, done) {
+    document.body.classList.remove('ask-min');
     const real = alias.get(id) || id;
     wanted = real;
     if (state.views.length === 1 && state.views[0] === real) { if (done) done(real); return Promise.resolve(real); }
@@ -2391,6 +2392,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     if (from != null) road.t = camClamp(L.place(Number(from)) - camDir() * 0.1 * L.D);
     else if (camAtEnd()) road.t = road.prev = camDir() > 0 ? camClamp(Math.min(...L.lanes.map(laneStart)) - 0.25 * L.D) : camLimits()[1];
     play.on = true; road.pace = 1; document.body.classList.add('film');
+    // Once a timeline has been played, the Ask AI box folds to a small pill until it is pressed (asked for, Nov
+    // 2026: "after they hit play and they come back ... make it collapse"). A newly made timeline shows it whole.
+    if (!$('ask-q') || !$('ask-q').value) { document.body.classList.add('ask-min'); $('ask').classList.remove('open'); }
     // From the beginning, play opens on the whole globe while the sound starts, comes down to the first place
     // and only then sets off (asked for, Nov 2026: coming straight in close, "it's very hard to know" where one is).
     road.intro = 0;

@@ -154,6 +154,12 @@ body.side-open #ask { left: calc(var(--sb) + (100vw - var(--sb) - var(--bar) - v
 .ask-box:hover, .ask-box:focus-within, body.ai-busy .ask-box { opacity: 1; }
 .ask-box textarea { flex: 1; min-width: 0; height: auto; min-height: 22px; max-height: 88px; field-sizing: content; padding: 0; resize: none; font: inherit; font-size: 14.5px; line-height: 1.45; color: var(--text); background: transparent; border: 0; outline: 0; }
 .ask-box .cr-model, .ask-box .cr-go { flex: none; }
+/* Folded (asked for, Nov 2026): after play has been pressed the box is a small pill at the left of where it
+   stood, and a press opens it again. */
+body.ask-min:not(.ai-busy) #ask:not(.open) { left: calc(var(--sb) + 16px); width: auto; transform: none; cursor: pointer; }
+body.ask-min:not(.ai-busy) #ask:not(.open) .ask-box { min-height: 38px; padding: 0 14px; gap: 7px; border-radius: 19px; }
+body.ask-min:not(.ai-busy) #ask:not(.open) .ask-box::after { content: 'Ask AI'; font-size: 13.5px; font-weight: 500; color: var(--text); }
+body.ask-min:not(.ai-busy) #ask:not(.open) :is(textarea, .cr-model, .cr-go, .cr-status) { display: none; }
 #ask .cr-status { margin: 0 0 8px; text-align: center; text-shadow: 0 1px 8px var(--bg); }
 #ask .cr-status:empty { display: none; }
 body:has(#ask:not([hidden])) #toast { bottom: 124px; }
