@@ -477,6 +477,8 @@ export function createAccount(app) {
       }, (note) => { if (/pictures/.test(note)) { pics = true; live(2); } else if (/Writ/.test(note) && !shown) live(1); });
       const f = put(got.spec, (x) => ({ view: x.view, entries: x.entries, spec: x.spec, prompt }));
       if (!f.entries.length) throw new Error('The model wrote no entries with dates. Try saying more about what you want.');
+      // The finished timeline opens at its beginning, wherever the reader stood while it was written (asked for, Nov 2026).
+      setTimeout(() => app.start(id), 60);
       if (!got.saved) await patch(row, { title: f.spec.title, description: f.spec.description, data: JSON.parse(row.text) });
       live(null);
       working = false; document.body.classList.remove('ai-busy');
