@@ -678,11 +678,13 @@ body.globe:has(#globe.close) #wall .w-scene { opacity: 0; }
 #globe .g-note[hidden] { display: none; }
 @media (max-width: 699px) {
   #globe .g-shelf { height: 100px; padding: 0 52px 0 0; }
-  #globe .g-card, #globe[data-stage="space"] .g-card { width: calc(100% - 24px); padding: 10px; display: grid; grid-template-columns: 92px 1fr; gap: 0 12px; align-items: start; }
+  /* On a phone the card is a glass box over the time line: kind and dates, the name, three lines of summary;
+     with a picture of its own (on the map) the picture stands at its left. */
+  #globe .g-card, #globe[data-stage="space"] .g-card { width: calc(100% - 24px); padding: 11px 13px 12px; display: block; }
+  #globe .g-card:has(img), #globe[data-stage="space"] .g-card:has(img) { display: grid; grid-template-columns: 92px 1fr; gap: 0 12px; align-items: start; }
   #globe .g-card img { grid-row: span 3; height: 92px; margin: 0; }
-  #globe .g-card:not(:has(img)) { display: block; }
-  #globe .g-card strong { font-size: 23px; margin: 1px 0 2px; }
-  #globe .g-s { display: none; }
+  #globe .g-card strong { font-size: 24px; margin: 3px 0 4px; }
+  #globe .g-s { -webkit-line-clamp: 3; font-size: 12.5px; line-height: 1.4; }
   body.globe #filters { display: none; }
 }
 /* What floats at the foot of the road stands above the strip. */
@@ -709,29 +711,46 @@ body.globe #axisbar .ends.foot { flex-direction: row-reverse; }
 /* The card is a label written on the map: no box, a rule in the view's colour (design B, picked from three, Nov 2026).
    On a phone it is the glass box above, resting over the time line. */
 @media (min-width: 700px) {
-  #globe[data-card="b"] .g-card { width: 340px; padding: 2px 0 4px 18px; background: none; border: 0; border-left: 2px solid var(--c); border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .9); }
-  /* The backing is a plain plate just behind the card's text, even from edge to edge, with a short soft rim: a round glow left the corners, where the text is, uncovered (asked for, Nov 2026). */
-  #globe[data-card="b"] .g-card::before { content: ''; position: absolute; inset: -12px -16px -12px 0; z-index: -1; border-radius: 0 6px 6px 0; background: rgba(6, 8, 13, .86); box-shadow: 0 0 14px 4px rgba(6, 8, 13, .5); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
-  #globe[data-card="b"][data-stage="space"] .g-card::before { inset: -14px -22px; border-radius: 6px; background: rgba(6, 8, 13, .72); }
-  #globe[data-card="b"] .g-card img { width: auto; max-width: 220px; height: 120px; margin-bottom: 12px; background: none; border: 1px solid rgba(255, 255, 255, .16); }
-  #globe[data-card="b"] .g-k { justify-content: flex-start; gap: 12px; }
-  #globe[data-card="b"] .g-card strong { font-size: 40px; margin: 3px 0 7px; }
+  /* The text of the entry in front stands under its large picture, the same on the globe as in full view (asked for,
+     Nov 2026): centred text on a plain plate, so it reads over the map and over the picture alike. */
+  #globe[data-card="b"] .g-card { width: 560px; padding: 0; text-align: center; background: none; border: 0; border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .9); }
+  #globe[data-card="b"] .g-card::before { content: ''; position: absolute; inset: -14px -22px; z-index: -1; border-radius: 6px; background: rgba(6, 8, 13, .8); box-shadow: 0 0 14px 4px rgba(6, 8, 13, .45); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  #globe[data-card="b"] .g-k { justify-content: center; gap: 12px; }
+  #globe[data-card="b"] .g-card strong { font-size: 52px; margin: 3px 0 7px; }
   #globe[data-card="b"] .g-s { color: #d7dbe4; font-size: 13.5px; }
-  #globe[data-card="b"][data-stage="space"] .g-card { width: 640px; padding: 0; border-left: 0; text-align: center; }
-  #globe[data-card="b"][data-stage="space"] .g-k { justify-content: center; }
-  #globe[data-card="b"][data-stage="space"] .g-card strong { font-size: 58px; }
-  #globe[data-card="b"][data-stage="space"] .g-card img { margin: 0 auto 12px; }
 }
-/* Space: the picture of the entry in front fills the sky, the last few passed stand small at the side. */
-#globe .g-back { position: absolute; inset: 0; opacity: 0; pointer-events: none; overflow: hidden; }
-#globe .g-bimg { position: absolute; left: 50%; top: 44%; max-width: 82%; max-height: 74%; translate: -50% -50%; object-fit: contain; -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 52%, transparent 100%); mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 52%, transparent 100%); }
+/* The picture of the entry in front stands large (to the right of the middle on the globe, in the middle and larger
+   in full view: --sp runs from 0 to 1 between them), the last few passed stand small at the side. */
+#globe { --sp: 0; }
+#globe .g-back { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+#globe .g-bimg { position: absolute; left: calc(62% - var(--sp) * 12%); top: calc(37% + var(--sp) * 7%); max-width: calc(38% + var(--sp) * 44%); max-height: calc(46% + var(--sp) * 28%); translate: -50% -50%; object-fit: contain; border-radius: 3px; box-shadow: 0 18px 60px rgba(0, 0, 0, calc(.55 * (1 - var(--sp)))); -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, #000 calc(100% - var(--sp) * 48%), transparent 100%); mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, #000 calc(100% - var(--sp) * 48%), transparent 100%); }
 #globe .g-bimg[hidden] { display: none; }
-#globe .g-past { position: absolute; left: 26px; top: 26%; display: flex; flex-direction: column; gap: 12px; }
-#globe .g-past img { display: block; width: 92px; height: 62px; object-fit: contain; background: rgba(7, 10, 16, .6); border: 1px solid rgba(200, 215, 255, .2); border-radius: 2px; }
-#globe .g-past img:nth-child(1) { opacity: .75; } #globe .g-past img:nth-child(2) { opacity: .5; width: 80px; height: 54px; } #globe .g-past img:nth-child(3) { opacity: .32; width: 68px; height: 46px; } #globe .g-past img:nth-child(4) { opacity: .18; width: 58px; height: 39px; }
-#globe .g-card.bare { background: rgba(7, 10, 16, .72); }
+#globe .g-past { position: absolute; left: 26px; top: 24%; display: flex; flex-direction: column; gap: 12px; }
+#globe .g-past img { display: block; width: 68px; height: 46px; object-fit: contain; opacity: .2; background: rgba(7, 10, 16, .6); border: 1px solid rgba(200, 215, 255, .2); border-radius: 2px; transition: width .4s, height .4s, opacity .4s; }
+#globe .g-past img:nth-child(1) { opacity: 1; width: 104px; height: 70px; border-color: var(--acc); } #globe .g-past img:nth-child(2) { opacity: .6; width: 88px; height: 59px; } #globe .g-past img:nth-child(3) { opacity: .4; width: 78px; height: 52px; }
+#globe .g-card.bare { background: none; }
 body.globe:has(#globe[data-stage="space"]) #wall .w-scene { opacity: 0; }
-@media (max-width: 699px) { #globe .g-past { display: none; } #globe .g-bimg { top: 36%; max-width: 96%; max-height: 50%; } }
+/* While play travels the frames of the wall stand down: the picture in front and the last few are enough, and
+   frames that changed with every card made the page flicker (asked for, Nov 2026). Standing still they show. */
+body.globe.playing #wall .w-scene { opacity: 0; }
+/* Globe or full view: a quiet pill at the top right, like the year range. */
+#globe .g-mode { position: absolute; right: 22px; top: 136px; z-index: 4; display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; font-size: 12px; color: #8f97a8; background: rgba(7, 10, 16, .35); border: 1px solid rgba(200, 215, 255, .14); border-radius: 14px; cursor: pointer; opacity: .75; transition: opacity .25s, color .25s; }
+#globe .g-mode:hover { opacity: 1; color: #ece7dc; }
+#globe .g-mode[hidden] { display: none; }
+body.playing.idle #globe .g-mode { opacity: 0; pointer-events: none; }
+/* Play is watched like a film (asked for, Nov 2026): the bar on the left and the strip at the foot step
+   away, and the buttons fade while the pointer rests. */
+body.playing, body.playing.sb-open { --sb: 0px; }
+body.playing #sb, body.playing #sb-scrim { display: none; }
+body.playing #dock, body.playing.peek #dock { transform: translateY(100%); opacity: 0; pointer-events: none; }
+body.playing #stage, body.playing.peek #stage { bottom: 0; }
+body.globe.playing #axisbar { bottom: 18px; }
+#axisbar { transition: opacity .3s; }
+body.playing.idle #axisbar { opacity: 0; }
+body.playing.idle #stage { cursor: none; }
+#full[aria-pressed="true"] { color: var(--text); }
+#full[hidden] { display: none; }
+@media (max-width: 699px) { #globe .g-past { display: none; } #globe .g-bimg { left: 50%; top: 36%; max-width: 96%; max-height: 50%; box-shadow: none; } #globe .g-card.bare { background: rgba(7, 10, 16, .72); } #globe .g-mode { right: 10px; top: 150px; } }
 /* Space: the stars the reader flies through, and cards that come out of the distance and pass by. */
 #globe .g-space { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; }
 @media (max-width: 699px) {

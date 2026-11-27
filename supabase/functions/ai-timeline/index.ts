@@ -23,7 +23,7 @@
 //   AI_DAILY             optional: requests one account may make in a day (default 20)
 //   AI_WEB               optional: "1" also lets the model search the web (OpenRouter's web search tool, paid per search)
 
-import { findPictures, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
+import { findPictures, findPlaces, specToView } from "./ai.js";   // the page's own site/ai.js, deployed beside this file
 
 // The models this function will run, by OpenRouter id (site/ai.js lists the same ones for the page):
 // the cheapest and most used of OpenRouter's ranking, and the cheapest of OpenAI, Anthropic and Google (asked for, Nov 2026).
@@ -64,6 +64,7 @@ const system = (today: string) => `You make timelines for codegrave.com, where a
     "end": "when it ended or died, or null if it still exists",
     "summary": "one or two sentences in your own words, at most 280 characters, facts only",
     "wikipedia": "the exact title of its English Wikipedia article, or null if unsure",
+    "place": "the exact title of the English Wikipedia article of the place where it is, was made or happened (a city, a building, a site), or null if it has none",
     "importance": 1 to 5 (5 = nobody could leave it out),
     "events": [ { "date": "...", "label": "a turning point in a few words", "note": "one sentence" } ]
   } ]
@@ -74,6 +75,7 @@ Rules:
 - Dates are text: "1969", "1969-07" or "1969-07-20", and with a time of day "2027-04-03T09:30" (24-hour clock) for something planned by the hour. Before the common era use a minus sign and four digits: "-0044-03-15". Deep time is a negative year: "-66000000". There is no year 0. Give only the precision you are sure of; a year alone is fine. Never invent the date of something that happened: leave out an entry rather than guess.
 - Chapters use whole years ("from" and "to" are numbers, negative before the common era), run in order, do not overlap, and together cover the entries. Use 3 to 7 chapters. For a plan, or anything inside a year or two, a chapter's "from" and "to" are full dates instead ("2027-04-01" to "2027-04-07": a week, a phase, a day of a working week), or there are none ("chapters": []).
 - Write 20 to 40 entries unless the subject is small or the request names a number; never more than 100. Pick what a good book on the subject would cover, spread across its whole span, in date order.
+- Give "place" whenever the entry has a place on the Earth: a building its city or itself, a person the city they were born in, a company the city of its head office, a battle its site, a work the city it was made in. Never write coordinates.
 - Give "wikipedia" for every entry that has an article of its own: the picture comes from it. For a product or an event without one, name the closest article that shows it.
 - A plan (a trip, a course, a training schedule, a project, a working week) is dated forward: from the day or month the request names ("Monday to Friday" means the coming Monday to Friday), else starting tomorrow, and lasts exactly as long as the request says ("in 30 days" is 30 days, not a year). Each step is one entry with a full date for "start" and for "end" ("2027-04-03"; the same day twice for one day), and a time of day when the plan is by the hour ("2027-04-05T09:00" to "2027-04-05T11:00"): a day of a trip, a day of a course, a task, a meeting, a milestone. Keep the steps of one day in the order they happen. "name" says what happens ("Day 3: Kyoto temples", "Week 2: loops and functions"), "kind" is Day, Week, Lesson, Task, Milestone and the like, "summary" says what to do and why, "type" is the nearest fit (a place visited: places; a lesson: knowledge), and "wikipedia" names the article of the place or subject of that step, so it gets a picture. Write as many steps as the plan has.
 - Pick the axis from what the request is about, not from its words. Most things happen in time: use "time". Use "rank" when the request asks for an order with no measure behind it that you can give for every entry: the most popular, the best, the most influential, "top 100 ...", the steps of a recipe or a process. Use "scale" when it asks to compare things by a measure you can give as a number for every entry: the tallest buildings (height), the planets by distance from the Sun, the biggest animals (mass), the most populous countries (people), phones by price. A count in the request ("the 20 tallest", "top 10 richest") does not make it a rank: when the order comes from a measure (tallest, longest, biggest, richest, fastest, farthest, oldest by a number), it is a scale. When in doubt between the two, prefer "scale" if a number exists for every entry, else "rank".
@@ -220,6 +222,9 @@ Deno.serve(async (req) => {
         // Pictures are found here, never taken from the model; a change keeps the ones the timeline had.
         if (!current) for (const e of spec.entries as Record<string, unknown>[]) delete e.image;
         const pics = await findPictures(spec.entries, wiki);
+        // Where each entry is on the Earth: from Wikipedia's coordinates, never from the model.
+        const spots = await findPlaces(spec.entries, wiki);
+        console.log("places", spots);
         console.log("pictures", pics, "of", (spec.entries as unknown[]).length);
         // The new timeline is written into the reader's row (only theirs: owner is checked), the same view file the page makes.
         let saved = false;

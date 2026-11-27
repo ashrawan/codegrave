@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -190,4 +190,28 @@ test('a spec that names no axis takes the one its entries show', () => {
   assert.equal(axisOfSpec({ entries: [{ name: 'A', start: '1969' }, { name: 'B', rank: 2 }] }), 'time');
   assert.equal(axisOfSpec({ entries: [{ name: 'A', rank: 1 }, { name: 'B', rank: 2 }] }), 'rank');
   assert.equal(axisOfSpec({ entries: [{ name: 'A', value: '1,200' }, { name: 'B', value: 3 }] }), 'scale');
+});
+
+test('a place is read from Wikipedia, never taken from the model', async () => {
+  assert.deepEqual(whereOf([25.19722, 55.27417]), [25.1972, 55.2742]);
+  assert.equal(whereOf([91, 0]), null);
+  assert.equal(whereOf([null, 3]), null);
+  assert.equal(whereOf('London'), null);
+  const entries = [
+    { name: 'Burj Khalifa', wikipedia: 'Burj Khalifa', where: [1, 1] },
+    { name: 'Ada Lovelace', wikipedia: 'Ada Lovelace', place: 'London' },
+    { name: 'Democracy', wikipedia: 'Democracy', where: [5, 5] },
+    { name: 'Olympus Mons', wikipedia: 'Olympus Mons' },
+  ];
+  const get = async () => ({ query: { pages: {
+    1: { title: 'Burj Khalifa', coordinates: [{ lat: 25.19722, lon: 55.27417, globe: 'earth' }] },
+    2: { title: 'London', coordinates: [{ lat: 51.5072, lon: -0.1275 }] },
+    3: { title: 'Ada Lovelace' }, 4: { title: 'Democracy' },
+    5: { title: 'Olympus Mons', coordinates: [{ lat: 18.65, lon: 226.2, globe: 'mars' }] },
+  } } });
+  assert.equal(await findPlaces(entries, get), 2);
+  assert.deepEqual(entries[0].where, [25.1972, 55.2742]);
+  assert.deepEqual(entries[1].where, [51.5072, -0.1275]);
+  assert.equal(entries[2].where, undefined);
+  assert.equal(entries[3].where, undefined);
 });

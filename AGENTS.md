@@ -378,6 +378,25 @@ How the page is put together:
   place on the entry itself (`where`, which needs an agreed issue), places for timelines made with
   AI, places that are not sure (an area, a traditional site), the Earth as it was for deep time, and
   other looks. Never draw a pin for a guessed place.
+- **Play on the globe is watched like a film** (asked for, Nov 2026). The entry in front is shown the same
+  way on the map as among the stars: its picture large (`.g-bimg`), its text under it on a plain plate
+  (`.g-card`), a little right of the middle on the map so the globe shows at the left, in the middle and
+  larger in full view (`--sp` runs from 0 to 1 between the two, `midX()`), so a change of stage is a glide and
+  never a cut. On a phone it is a glass box over the time line (kind, dates, name, three lines of summary).
+  At the left stand the picture of the entry in front, on top and lit, then the last few passed (`.g-past`,
+  keyed by step so nothing is rebuilt); never one that is still ahead. The frames of the wall are hidden
+  while play travels. The camera rests at a place for `STAY` of the way and then moves, and the next card
+  comes in `early` before its place, so the map is never shown travelling with no card up. A view opens on
+  the whole globe and a place is at most `NEARER` closer than that while travelling, however narrow the
+  years. A quiet pill at the top right (`.g-mode`, `cg-stage` in this browser) switches between Globe and
+  Full view, which is the stars for every entry. While play travels the bar on the left and the strip at the
+  foot step away (`body.playing` sets `--sb` to 0); play, sound and full screen (`#full`, the browser's own
+  full screen; a double click on the stage does the same) fade while the pointer rests (`body.idle`) and
+  come back when it moves.
+- **Places for timelines made with AI.** The model names a `place` in words where an entry has one;
+  `findPlaces()` in `site/ai.js` reads the coordinates of the entry's own Wikipedia article, else of the
+  article of that place, and writes `where: [lat, lon]` on the entry. Coordinates are never taken from the
+  model. The function does it after the pictures, and the editor when an entry's article changes.
 - **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
   "think it is like community posted, meaning even the admin ones", after a
   list in the sidebar was found "not professional"). Explore in the bar on

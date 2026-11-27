@@ -980,7 +980,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (seen.has(t.id)) continue;
       seen.add(t.id);
       steps.push({ id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
-        mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: !RANKED && t.born > DEEP ? places[t.id] || null : null });
+        mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null });
     }
     road.gsteps = new Map(road.gorder.map((p) => [p.t.id, p]).reverse());
     road.gcur = undefined;
@@ -2315,7 +2315,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
-  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek'); }
+  function drawPlay() { if (L) roadHud(true); tune(); document.body.classList.toggle('playing', !!play.on); if (!play.on) document.body.classList.remove('peek', 'idle'); else dispatchEvent(new Event('pointermove')); }
   function pausePlay() { play.on = false; drawPlay(); }
   function togglePlay() { if (play.on) pausePlay(); else startPlay(); }
   // The two plays: pressing the one that sounds pauses; pressing the other while playing changes the music.
@@ -2461,6 +2461,30 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       // The top edge brings the bar back anywhere, over the open panel too (asked for, Nov 2026).
       if (e.clientY < 48) b.add('peek'); else if (e.clientY > 110) b.remove('peek');
     }, { passive: true });
+    // Play is watched like a film (asked for, Nov 2026): the bar on the left and the strip at the foot
+    // step away, play, sound and full screen fade while the pointer rests and come back when it moves,
+    // and a double click on the stage turns the browser's full screen on or off.
+    let idleT = null;
+    const stir = () => {
+      document.body.classList.remove('idle'); clearTimeout(idleT);
+      if (play.on) idleT = setTimeout(() => { if (play.on) document.body.classList.add('idle'); }, 2600);
+    };
+    addEventListener('pointermove', stir, { passive: true, capture: true });
+    addEventListener('pointerdown', stir, { passive: true, capture: true });
+    addEventListener('keydown', stir);
+    const fullBtn = $('full'), root = document.documentElement;
+    const fullOn = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
+    const toggleFull = () => {
+      const p = fullOn() ? (document.exitFullscreen || document.webkitExitFullscreen)?.call(document) : (root.requestFullscreen || root.webkitRequestFullscreen)?.call(root);
+      if (p && p.catch) p.catch(() => {});
+    };
+    if (root.requestFullscreen || root.webkitRequestFullscreen) {
+      fullBtn.hidden = false;
+      fullBtn.addEventListener('click', toggleFull);
+      $('stage').addEventListener('dblclick', (e) => { if (!e.target.closest('button, a, input, .g-card, .g-rows')) toggleFull(); });
+      const drawFull = () => { fullBtn.setAttribute('aria-pressed', String(fullOn())); document.body.classList.toggle('fullscreen', fullOn()); };
+      document.addEventListener('fullscreenchange', drawFull); document.addEventListener('webkitfullscreenchange', drawFull);
+    }
     addEventListener('resize', () => {
       clearTimeout(rt);
       rt = setTimeout(() => {

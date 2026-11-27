@@ -26,6 +26,9 @@ import { opening, greatCircle, between, distance, stageFor, levelZoom, zoomFor, 
 const LIB = 'https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.6.0/maplibre-gl.min';
 const TILES = 'https://tiles.openfreemap.org';
 const NAMED = 5;          // pins this many steps either side of the one in front carry their name
+const NEARER = 0.4;      // how far in from the whole globe the camera may come, in zoom levels
+const TURN = 0.11;       // the part of the way over which one card goes and the next comes
+const STAY = 0.45;       // the part of the way from one place to the next that the camera rests before it goes
 const STARS = 240;        // stars that fly past in space
 // How the camera travels ("turn", picked from three clean ways in Nov 2026, after livelier ones were found "not
 // steady at all"): the globe turns under a camera that keeps its height, so each place comes to the same spot of
@@ -97,11 +100,13 @@ function styleOf() {
 export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
   host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
-    '<div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
-  const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], shelf = host.children[4], note = host.children[5];
+    '<button type="button" class="g-mode" hidden></button><div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
+  const sky = host.children[0], back = host.children[1], bimg = back.children[0], past = back.children[1], box = host.children[2], ov = host.children[3], lead = ov.children[0], card = ov.children[1], modeBtn = host.children[4], shelf = host.children[5], note = host.children[6];
   const rows = shelf.querySelector('.g-rows'), track = shelf.querySelector('.g-track');
   const S = { map: null, ready: false, steps: [], index: new Map(), cur: -1, last: null, stage: 'map', sig: '', until: 0, cardFor: -1, shown: 0, phone: false,
     xs: [], frac: 0, pos: null, was: 0, now: -1, vis: 0, dimv: 0, spv: 0, cam: [], placed: [], open: null, playing: false, warp: 0, stars: null, raf: 0, then: 0 };
+  // Globe or full view (asked for, Nov 2026): in full view there is no Earth, only the sky, the picture and the text.
+  try { S.mode = localStorage.getItem('cg-stage') === 'full' ? 'full' : 'globe'; } catch (e) { S.mode = 'globe'; }
   const far = () => (S.phone ? 0.9 : LEVELS.globe);
   const size = () => Math.min(box.clientWidth, box.clientHeight);
 
@@ -166,10 +171,12 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     S.steps.forEach((s, i) => { if (s.place) S.placed.push(i); });
     const pl = S.placed.map((i) => S.steps[i].place);
     const o = opening(pl, sz, f);
-    S.open = { at: [o.center[1], o.center[0]], zoom: o.zoom };
+    // A view opens on the whole globe, not zoomed in to its places (asked for, Nov 2026).
+    S.open = { at: [o.center[1], o.center[0]], zoom: farAt(f, o.center[1]) };
     const fit = (p, q) => (q && distance(q, p) > 0.5 ? zoomFor(distance(q, p), 0.4 * sz, p[0]) : 99);
     const zs = pl.map((p, k) => {
-      let z = Math.min(levelZoom(p[2]), LEVELS.region + 1);
+      // Never so close that the Earth stops reading as a globe (asked for, Nov 2026: "show the globe from a bit far").
+      let z = Math.min(levelZoom(p[2]), f + NEARER);
       for (let j = k - 2; j <= k + 2; j++) if (j !== k) z = Math.min(z, fit(p, pl[j]));
       return Math.max(farAt(f, p[0]), z);
     });
@@ -177,7 +184,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     for (let k = zs.length - 2; k >= 0; k--) zs[k] = Math.min(zs[k], zs[k + 1] + STEP);
     S.cam = S.steps.map(() => null);
     pl.forEach((p, k) => { S.cam[S.placed[k]] = { at: p, zoom: Math.max(farAt(f, p[0]), zs[k]) }; });
-    S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.18) }) };
+    S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.36) }) };
   }
   // Between which places a reader at `pos` is, and how far: by the count of entries (u), and as the camera goes (e),
   // which rests at each place and is quickest half way.
@@ -185,7 +192,10 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     let P = -1, Q = -1;
     for (const i of S.placed) { if (i <= pos) P = i; else { Q = i; break; } }
     const u = Q < 0 ? 0 : clamp01((pos - P) / (Q - P));
-    return { P, Q, e: u - Math.sin(2 * Math.PI * u) / (2 * Math.PI) };
+    // It stays with the entry in front for the first part of the way, then goes: there is no stretch where the
+    // reader watches the map travel with no card up (asked for, Nov 2026).
+    const w = clamp01((u - STAY) / (1 - STAY));
+    return { P, Q, e: w - Math.sin(2 * Math.PI * w) / (2 * Math.PI) };
   }
   function camAt(pos) {
     if (!S.placed.length) return null;
@@ -216,49 +226,43 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   function build(i) {
     const s = S.steps[i];
     S.cardFor = i;
-    // In space the picture of the entry in front fills the sky behind its card, and the last few passed stand small beside it.
-    const space = S.stage === 'space', pic = space && s && s.img ? s.img : '';
+    // The picture of the entry in front stands large with its text under it, the same on the globe as in full
+    // view (asked for, Nov 2026); on a phone, on the globe, it is a small picture in the card instead.
+    const pic = s && s.img && (S.stage === 'space' || !S.phone) ? s.img : '';
     if (bimg.dataset.src !== pic) { bimg.dataset.src = pic; bimg.hidden = !pic; if (pic) bimg.src = pic; }
-    const before = [];
-    if (space) for (let k = i - 1; k >= 0 && before.length < PAST; k--) if (S.steps[k].img) before.push(S.steps[k]);
-    past.innerHTML = before.map((b) => `<img src="${esc(b.img)}" alt="" title="${esc(b.name)}">`).join('');
+    // Beside it, small: the picture of the entry in front on top, then the last few passed. Never the ones ahead.
+    const want = [];
+    for (let k = i; k >= 0 && want.length < PAST; k--) if (S.steps[k].img) want.push(k);
+    const have = new Map(Array.from(past.children, (el) => [Number(el.dataset.i), el]));
+    for (const [k, el] of have) if (!want.includes(k)) el.remove();
+    want.forEach((k, n) => {
+      let el = have.get(k);
+      if (!el) { el = document.createElement('img'); el.dataset.i = k; el.alt = ''; el.title = S.steps[k].name; el.src = S.steps[k].img; el.addEventListener('error', () => el.remove()); }
+      if (past.children[n] !== el) past.insertBefore(el, past.children[n] || null);
+    });
     if (!s) { card.hidden = true; lead.hidden = true; return; }
     card.hidden = false; card.classList.toggle('bare', !!pic);
-    card.dataset.id = s.id; card.style.setProperty('--c', s.col); lead.style.setProperty('--c', s.col);
+    card.dataset.id = s.id; card.style.setProperty('--c', s.col);
     card.innerHTML = `${s.img && !pic ? `<img src="${esc(s.img)}" alt="">` : ''}<span class="g-k"><b>${esc(s.kind)}</b><small>${esc(s.when)}</small></span><strong>${esc(s.name)}</strong>${s.summary ? `<span class="g-s">${esc(s.summary)}</span>` : ''}`;
     const img = card.querySelector('img');
     if (img) img.addEventListener('error', () => { img.remove(); place(); });
     place();
   }
-  // Where the card stands: beside its pin, on the side with room; for an entry with no place, over its
-  // row in the strip (or in the middle of the sky). On a phone it rests above the strip.
-  // The card's place, drop and size are written as one transform, so growing never moves it sideways: it grows
-  // and shrinks about its own centre and drops straight down (asked for, Nov 2026).
+  // Where the card stands. Its place, drop and size are written as one transform, so growing never moves it
+  // sideways: it grows and shrinks about its own centre and drops straight down (asked for, Nov 2026).
   function put() { card.style.transform = `translate(${S.tx || 0}px, ${((S.ty || 0) + (S.drop || 0)).toFixed(1)}px) scale(${(S.sc || 1).toFixed(3)})`; }
+  // The text stands under the picture: in the middle of the sky in full view, to the right of the middle on the
+  // globe, so the place it belongs to shows beside it. On a phone it rests above the strip.
+  const midX = () => (S.phone ? 0.5 : 0.62 - 0.12 * S.spv);
   function place() {
     const s = S.steps[S.cardFor];
-    if (!s || card.hidden) { lead.hidden = true; return; }
-    const W = host.clientWidth, H = host.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight, foot = shelf.hidden ? 0 : shelf.offsetHeight;
     lead.hidden = true;
+    if (!s || card.hidden) return;
+    const W = host.clientWidth, H = host.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight, foot = shelf.hidden ? 0 : shelf.offsetHeight;
     if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 10); put(); return; }
-    const top0 = 96, low = H - foot - ch - 14;
-    if (s.place && S.ready) {
-      // In play the card keeps the place its pin comes to rest at, so it never slides sideways as the globe turns
-      // on: it only comes and goes (asked for, Nov 2026). Standing still or dragged, it follows its pin.
-      const q = S.map.project([s.place[1], s.place[0]]), f = S.fix || 0;
-      const rx = (W + S.pad.left - S.pad.right) / 2, ry = (H + S.pad.top - S.pad.bottom) / 2;
-      const p = { x: q.x + (rx - q.x) * f, y: q.y + (ry - q.y) * f };
-      const right = p.x + 46 + cw < W - 20, x = right ? p.x + 46 : p.x - 46 - cw;
-      const y = Math.max(top0, Math.min(low, p.y - ch * 0.42));
-      S.tx = Math.round(Math.max(12, x)); S.ty = Math.round(y); put();
-      lead.hidden = false;
-      lead.style.transform = `translate(${Math.round(right ? p.x + 12 : p.x - 46)}px, ${Math.round(p.y)}px)`;
-      return;
-    }
-    const chip = track.querySelector('.on');
-    const mid = S.stage === 'space' || !chip ? W / 2 : chip.getBoundingClientRect().left - host.getBoundingClientRect().left + 4;
-    const y = S.stage === 'space' ? Math.max(top0, card.classList.contains('bare') ? low - 34 : (H - foot - ch) * 0.42) : Math.max(top0, low - 26);
-    S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, mid - cw / 2))); S.ty = Math.round(y); put();
+    const low = H - foot - ch - 30;
+    S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, W * midX() - cw / 2)));
+    S.ty = Math.round(Math.max(96, card.classList.contains('bare') ? low : Math.min(low, (H - foot - ch) * 0.46))); put();
   }
 
   // ---- the time line at the foot: it slides under a marker that stands still. The entries stand on it by name
@@ -332,11 +336,11 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     // The entry whose card is up: it comes up a fifth of the way before the reader reaches it, and goes when the
     // camera has left its place behind.
     // In space nothing else is in sight, so the next card is on its way sooner and the last one gone later.
-    const early = S.stage === 'space' ? 0.32 : 0.2, late = S.stage === 'space' ? 0.66 : 0.5;
+    const early = 0.2;
     const c = Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
     if (c !== S.now) {
       S.now = c;
-      S.stage = stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.stage;
+      S.stage = S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.stage;
       pins(); markShelf(); build(c);
     }
 
@@ -346,7 +350,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       S.dimv = dim; S.spv = sp; S.styled = 1; busy = true;
       box.style.opacity = (1 - sp).toFixed(3); box.style.pointerEvents = sp > 0.5 ? 'none' : '';
       box.style.filter = dim > 0.01 ? `brightness(${(1 - 0.5 * dim).toFixed(3)}) saturate(${(1 - 0.4 * dim).toFixed(3)})` : '';
-      sky.style.opacity = sp.toFixed(3);
+      sky.style.opacity = sp.toFixed(3); host.style.setProperty('--sp', sp.toFixed(3));
     }
     if (S.ready && sp < 0.995) {
       const cam = camAt(S.pos);
@@ -360,31 +364,25 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       if (S.warp) busy = true;
     }
 
-    // The card: up while the reader is near its entry. In play it fades in as they come and out as they go on;
-    // in space it comes out of the distance and passes by. Standing still, it stays.
-    let vis = 0, scale = 1, drop = 0;
+    // The card is up for as long as its entry is the one in front: in play one card goes as the next comes, with
+    // no empty wait between them (asked for, Nov 2026). It comes out of the distance and passes away below the
+    // reader, about its own centre. Standing still, it stays.
+    let vis = 0, scale = 1, drop = 0, grow = 1;
     if (S.steps[c]) {
-      vis = S.playing && !still ? clamp01(Math.min((g + early) / 0.12, (late - g) / 0.16)) : 1;
-      // In space the reader flies on like a craft: a card comes out of the distance, and passes away below them.
-      if (S.stage === 'space' && S.playing && !still) {
-        const out = clamp01((g - 0.36) / 0.3) ** 2;
-        scale = g < 0 ? 0.6 + 0.4 * (1 - (g / early) ** 2) : 1 + 0.05 * clamp01(g / 0.36) + 0.75 * out;
-        drop = (g < 0 ? -0.1 * (g / early) ** 2 : 0.55 * out) * host.clientHeight;
-      } else if (S.playing && !still && !S.phone) {
-        // On the map it goes away into its own centre, growing a little smaller, never to a side.
-        scale = g < 0 ? 0.94 + 0.06 * (1 - (g / early) ** 2) : 1 - 0.14 * clamp01(g / late) ** 2;
-        drop = g < 0 ? 0 : 46 * clamp01(g / late) ** 2;
+      vis = 1;
+      if (S.playing && !still) {
+        const last = c >= S.steps.length - 1, a = clamp01((g + early) / TURN), z = last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
+        vis = Math.min(a, 1 - z);
+        if (!S.phone || S.stage === 'space') { scale = 0.82 + 0.18 * (1 - (1 - a) ** 2) + 0.45 * z * z; drop = 0.24 * z * z * host.clientHeight; }
+        grow = 0.97 + 0.05 * clamp01(g + early) + 0.2 * z * z;
       }
     }
-    const fix = S.playing && !still ? 1 : 0;
-    if ((S.fix || 0) !== fix) { S.fix = toward(S.fix || 0, fix, dt * 5); busy = true; place(); }
-    S.vis = toward(S.vis, vis, still ? 1 : dt * 12);
+    S.vis = toward(S.vis, vis, still ? 1 : dt * 14);
     if (S.vis !== vis) busy = true;
-    card.style.opacity = S.vis.toFixed(3); S.sc = scale; S.drop = drop; put(); card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
-    lead.style.opacity = (0.75 * S.vis).toFixed(3);
-    back.style.opacity = sp.toFixed(3);
-    if (sp > 0.005) { bimg.style.opacity = (0.8 * S.vis).toFixed(3); bimg.style.scale = (0.94 + 0.12 * clamp01(g + early)).toFixed(4); }
-    if (S.stage !== 'map' || !S.ready) place();
+    card.style.opacity = S.vis.toFixed(3); S.sc = scale; S.drop = drop; card.style.pointerEvents = S.vis > 0.5 ? '' : 'none';
+    back.style.opacity = '1';
+    bimg.style.opacity = ((0.8 + 0.12 * (1 - sp)) * S.vis).toFixed(3); bimg.style.scale = grow.toFixed(4);
+    place();
     if (busy) run();
   }
   function run() { if (!S.raf) { S.then = performance.now(); S.raf = requestAnimationFrame(frame); } }
@@ -414,6 +412,21 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   const dragEnd = (e) => { if (!drag.on) return; drag.on = false; rows.classList.remove('drag'); if (drag.moved) e.stopPropagation(); };
   rows.addEventListener('pointerup', dragEnd); rows.addEventListener('pointercancel', dragEnd);
   track.addEventListener('click', (e) => { if (drag.moved) { drag.moved = false; return; } const el = e.target.closest('[data-i]'); if (el) goTo(S.steps[Number(el.dataset.i)].id); });
+  const ICON_GLOBE = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>';
+  const ICON_FULL = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>';
+  function drawMode() {
+    modeBtn.hidden = !S.placed.length;
+    modeBtn.innerHTML = (S.mode === 'full' ? ICON_FULL + '<span>Full view</span>' : ICON_GLOBE + '<span>Globe</span>');
+    modeBtn.title = S.mode === 'full' ? 'Full view: show the globe' : 'Globe: switch to full view';
+    modeBtn.setAttribute('aria-label', modeBtn.title);
+  }
+  modeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    S.mode = S.mode === 'full' ? 'globe' : 'full';
+    try { localStorage.setItem('cg-stage', S.mode); } catch (x) { /* fine */ }
+    S.now = -2; drawMode(); run();
+  });
+  for (const ev of ['pointerdown', 'pointerup']) modeBtn.addEventListener(ev, (e) => e.stopPropagation());
   // The credits the map's licences ask for, behind a small button in the corner of the page.
   if (credit && !credit.querySelector('.g-credit')) {
     const el = document.createElement('span');
@@ -438,7 +451,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       if (sig === S.sig) { this.resize(); return; }
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
       S.cur = -1; S.frac = 0; S.pos = null; S.trail = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
-      drawShelf(); cams();
+      drawShelf(); cams(); drawMode(); past.innerHTML = '';
       if (!S.map && steps.some((s) => s.place)) {
         note.hidden = true;
         loadLib().then((gl) => { if (!S.map) S.map = make(gl); }).catch(() => { note.hidden = false; note.textContent = 'The map could not be loaded. The entries are in the strip below.'; });

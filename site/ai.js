@@ -155,6 +155,8 @@ export function cleanSpec(raw) {
       summary: text(e.summary, 400), wikipedia: text(e.wikipedia, 120), importance: Math.min(5, Math.max(1, Math.round(Number(e.importance)) || 3)),
       events: (Array.isArray(e.events) ? e.events : []).map((x) => ({ date: cleanDate(x?.date), label: text(x?.label, 80), note: text(x?.note, 200) })).filter((x) => x.date && x.label).slice(0, 6),
       ...(img ? { image: img } : {}),
+      ...(text(e.place, 120) ? { place: text(e.place, 120) } : {}),
+      ...(whereOf(e.where) ? { where: whereOf(e.where) } : {}),
     });
   }
   if (!ranked && !scaled) entries.sort((a, b) => order(a.start) - order(b.start));
@@ -195,6 +197,7 @@ export function specToView(raw, seed) {
       links: [], inbound: [],
       sources: wiki ? [{ title: 'Wikipedia: ' + e.wikipedia, url: wiki, kind: 'secondary' }] : [],
       verified: false,
+      ...(e.where ? { where: e.where } : {}),
       ...(e.image ? { image: { src: e.image.src, alt: e.name, credit: 'Wikimedia Commons', licence: 'See the source', source: e.image.source || wiki } } : {}),
     };
   });
@@ -249,6 +252,38 @@ export function partialSpec(text) {
 // is not (a logo, a product shot), the picture Wikidata keeps for the subject (P18, else its logo P154),
 // always a file on Wikimedia Commons. About three requests for a whole timeline. `get(host, query)`
 // answers one API request (the server and the page each pass their own). Returns how many it found.
+// A place on the Earth, [lat, lon], or null: only what is a real pair of numbers in range.
+export function whereOf(w) {
+  if (!Array.isArray(w) || w.length < 2) return null;
+  const lat = Number(w[0]), lon = Number(w[1]);
+  return Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180 && w[0] !== null && w[1] !== null ? [Math.round(lat * 1e4) / 1e4, Math.round(lon * 1e4) / 1e4] : null;
+}
+// Where each entry is on the Earth, written onto the entries (`where`: [lat, lon]). It is never taken from the
+// model: it is the coordinates of the entry's own Wikipedia article, else of the article of the place it names
+// (`place`: a city, a building, a site). An entry with neither has no place, and none is guessed.
+// Returns how many were found.
+export async function findPlaces(entries, get) {
+  const title = (v) => (typeof v === 'string' ? v.trim() : '');
+  for (const e of entries) delete e.where;
+  const titles = [...new Set(entries.flatMap((e) => [title(e.wikipedia), title(e.place)]).filter(Boolean))].slice(0, 200);
+  const at = new Map();
+  for (let i = 0; i < titles.length; i += 50) {
+    try {
+      const d = await get('en.wikipedia.org', 'action=query&redirects=1&prop=coordinates&coprimary=primary&colimit=50&titles=' + encodeURIComponent(titles.slice(i, i + 50).join('|')));
+      const back = new Map();
+      for (const n of d.query?.normalized ?? []) back.set(n.to, n.from);
+      for (const n of d.query?.redirects ?? []) back.set(n.to, back.get(n.from) ?? n.from);
+      for (const p of Object.values(d.query?.pages ?? {})) {
+        const c = p.coordinates?.[0], w = c && (c.globe ?? 'earth') === 'earth' ? whereOf([c.lat, c.lon]) : null;
+        if (w) { at.set(p.title, w); at.set(back.get(p.title) ?? p.title, w); }
+      }
+    } catch (e) { /* a timeline without places is still a timeline */ }
+  }
+  let n = 0;
+  for (const e of entries) { const w = at.get(title(e.wikipedia)) ?? at.get(title(e.place)); if (w) { e.where = w; n++; } }
+  return n;
+}
+
 export async function findPictures(entries, get) {
   const want = entries.filter((e) => !e.image && typeof e.wikipedia === 'string' && e.wikipedia.trim());
   const titles = [...new Set(want.map((e) => e.wikipedia.trim()))].slice(0, 100);
