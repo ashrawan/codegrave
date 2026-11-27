@@ -243,6 +243,12 @@ body:not(.sb-open) .rail-only { display: flex; transform: rotate(90deg); }
 .pop.menu.wide .dlg { width: 240px; max-height: 60vh; overflow-y: auto; }
 .pop.menu hr { height: 1px; margin: 6px -6px; border: 0; background: var(--rule); }
 .pop.menu .me { display: flex; flex-direction: column; padding: 8px 10px; }
+/* Requests left today: a line and a thin bar that empties (asked for, Nov 2026). */
+.pop.menu #me-ai span { font-size: 13.5px; }
+.pop.menu #me-ai i { display: block; height: 3px; margin-top: 7px; background: var(--raised); border-radius: 2px; overflow: hidden; }
+.pop.menu #me-ai u { display: block; height: 100%; background: var(--acc); border-radius: 2px; }
+.pop.menu #me-ai.none span { color: #e58f8f; }
+.pop.menu #me-ai[hidden] { display: none; }
 .pop.menu .me small, .pop.menu .cap { color: var(--faint); font-size: 12.5px; overflow: hidden; text-overflow: ellipsis; }
 .pop.menu .cap { display: block; padding: 6px 10px; }
 .pop.publish .dlg { width: min(410px, calc(100vw - 16px)); max-height: calc(100vh - 16px); overflow-y: auto; padding: 22px 22px 18px; border-radius: 20px; }

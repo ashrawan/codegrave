@@ -60,6 +60,7 @@ const LOGO = '<svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke
 const SEEN = { private: 'Private draft', link: 'Link only', public: 'Public' };
 const PHONE = '(max-width: 699px)';
 const KEY = 'cg-session', FOLD = 'cg-sb', INTENT = 'cg-intent', MODEL = 'cg-model', PROMPT = 'cg-prompt', FAILED = 'cg-ai-failed';
+const AI_PER_DAY = 20;      // the function's default allowance (AI_DAILY)
 
 /* `app` is what the page lends: $, esc, views() (ids on the road), view(id),
    show(id), open(id) (travel to a view's beginning), replace(payload) (a stored view changed), forget(id), home(),
@@ -759,8 +760,21 @@ export function createAccount(app) {
         return undefined;
       }
       if (el('#sb-me')) {
-        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
+        const d = popover(el('#sb-me'), `<div class="me"><b>${esc(shown())}</b><small>Signed in as ${esc(user.email || shown())}</small></div>${profile?.username ? `<div class="me"><small>Publishes as</small><span>${esc(location.host)}/${esc(profile.username)}</span></div>` : ''}<div class="me" id="me-ai" hidden><small>Create with AI</small><span></span><i><u></u></i></div><hr><button type="button" class="nv" data-act="theme">Switch theme</button><hr><button type="button" class="nv" data-act="out">Sign out</button>`, 'menu wide');
         d.addEventListener('click', (x) => { const a = x.target.closest('[data-act]')?.dataset.act; if (!a) return; closeLayer(); if (a === 'out') signOut(); else $('theme').click(); });
+        // How many requests are left today (asked for, Nov 2026): the account's own requests of the last 24
+        // hours against its allowance (its own number when it has one, else AI_PER_DAY).
+        Promise.all([
+          api(`/rest/v1/ai_requests?select=id&created_at=gte.${new Date(Date.now() - 864e5).toISOString()}&limit=20000`),
+          api('/rest/v1/ai_limits?select=daily').catch(() => []),
+        ]).then(([used, own]) => {
+          const box = d.querySelector('#me-ai'); if (!box) return;
+          const most = Number.isFinite(Number(own?.[0]?.daily)) ? Number(own[0].daily) : AI_PER_DAY, left = Math.max(0, most - (used?.length || 0));
+          box.querySelector('span').textContent = `${left.toLocaleString('en-US')} of ${most.toLocaleString('en-US')} requests left today`;
+          box.querySelector('u').style.width = (most ? 100 * left / most : 0) + '%';
+          box.classList.toggle('none', !left);
+          box.hidden = false;
+        }).catch(() => {});
         return undefined;
       }
       const add = el('[data-tl-add]');
