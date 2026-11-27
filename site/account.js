@@ -550,16 +550,24 @@ export function createAccount(app) {
     throw new Error(d?.error || (r.status === 404 ? 'Voiceover is not switched on yet.' : 'That did not work. Try again.'));
   }
   const keepVoice = (v) => { try { localStorage.setItem('cg-voice-name', v); } catch (x) { /* private window */ } };
+  // What holds the voiceover of the timeline on show: the row of a timeline of the reader's own, or, for any
+  // other single view, this browser (asked for, Nov 2026: Generate voiceover on the existing views too).
+  function holder() {
+    const cur = current();
+    if (cur) return { own: true, title: cur.title, description: cur.description || '', get: () => JSON.parse(cur.text).voice, set: (v) => { const data = JSON.parse(cur.text); if (v) data.voice = v; else delete data.voice; return patch(cur, { data }); } };
+    const o = app.one();
+    return o ? { own: false, title: o.title, description: o.description, get: () => app.one()?.voice, set: async (v) => app.keepVoice(v) } : null;
+  }
+  const onNow = () => app.views().join();
   async function voiceover(row, voice) {
     if (voicing || working) return;
-    voicing = { row, step: 1, note: 'Writing the script…', open: true };
+    voicing = { key: onNow(), step: 1, note: 'Writing the script…', open: true };
     draw();
     try {
       const src = app.told();
       if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
       const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } });
-      const data = JSON.parse(row.text);
-      await patch(row, { data: { ...data, voice: { at: Date.now(), voice, style: script.style || '', lines: script.lines } } });
+      await row.set({ at: Date.now(), voice, style: script.style || '', lines: script.lines });
       await record(voice, script.lines);
       toast('The voiceover is ready. Press play to hear it.');
     } catch (e) {
@@ -588,18 +596,17 @@ export function createAccount(app) {
   async function revoice(row, voice) {
     if (voicing || working) return;
     try {
-      const data = JSON.parse(row.text);
-      await patch(row, { data: { ...data, voice: { ...data.voice, at: Date.now(), voice } } });
-      voicing = { row, step: 2, note: 'Making the voice…', open: true, skip: true };
+      const was = row.get();
+      await row.set({ ...was, at: Date.now(), voice });
+      voicing = { key: onNow(), step: 2, note: 'Making the voice…', open: true, skip: true };
       draw();
-      await record(voice, data.voice?.lines || []);
+      await record(voice, was?.lines || []);
       toast(`${voiceLabel(voice)} will tell this timeline.`);
     } catch (e) { toast(e.message); } finally { voicing = null; draw(true); }
   }
   async function unvoice(row) {
     try {
-      const data = JSON.parse(row.text); delete data.voice;
-      await patch(row, { data });
+      await row.set(null);
       toast('The voiceover is removed.');
     } catch (e) { toast(e.message); } finally { draw(true); }
   }
@@ -635,10 +642,10 @@ export function createAccount(app) {
     bin: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 7h15M9.5 7V4.5h5V7M6.5 7l1 12.5h9l1-12.5"/></svg>',
   };
   function timelineMenu(anchor) {
-    const cur = current(), free = !!cur && !working, told = free && cur.text.includes('"voice":{');
+    const cur = current(), free = !!cur && !working, hold = working ? null : holder(), told = !!hold && !!voiceOf(hold.get());
     const item = (act, icon, label, note = '', cls = '') => `<button type="button" class="nv${cls}" data-act="${act}" role="menuitem">${icon}<span>${label}</span>${note ? `<small>${note}</small>` : ''}</button>`;
     const d = popover(anchor, `<div class="cap">This timeline</div>
-      ${free ? item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', told ? 'Ready' : '', told ? '' : ' lit') : ''}
+      ${hold ? item('voice', MIC, told ? 'Voiceover' : 'Generate voiceover', told ? 'Ready' : '', told ? '' : ' lit') : ''}
       ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
       ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) + '<hr>' : ''}
       ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Export as PDF')}
@@ -649,7 +656,7 @@ export function createAccount(app) {
       const a = x.target.closest('[data-act]')?.dataset.act, at = $('tl-more');
       if (!a) return;
       x.stopPropagation();
-      if (a === 'voice') return voiceMenu(at, cur);
+      if (a === 'voice') return voiceMenu(at, hold);
       if (a === 'video') { closeLayer(); return videoMenu(); }
       if (a === 'publish') return publish(at);
       closeLayer();
@@ -678,9 +685,9 @@ export function createAccount(app) {
   }
   function voiceMenu(anchor, row) {
     if (voicing) return;
-    const has = voiceOf(JSON.parse(row.text).voice), was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
+    const has = voiceOf(row.get()), was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
     const d = modal(`<form class="vo-form"><h2>${has ? 'Voiceover' : 'Generate a voiceover'}</h2>
-      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays, in ${has.lines.length} lines. Change the voice for free, or write the script again after you change the timeline.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}</p>
+      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays, in ${has.lines.length} lines. Change the voice for free, or write the script again after you change the timeline.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}${row.own ? '' : ' It is kept in this browser, for you alone.'}</p>
       <div class="cap">Choose a voice</div>
       <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map(([v, name, w]) => `<label class="vo-voice"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><i></i><span><b>${esc(name)}</b><small>${esc(w)}</small></span><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}">${PLAY}<span>Listen</span></button></label>`).join('')}</div>
       <label class="vo-gpu" hidden><input type="checkbox"><span><b>Faster voice</b><small>Your device has a graphics card that can make the voice much faster. It is a one-time ${GPU_MB} MB download instead of ${MODEL_MB} MB, so it suits a good computer on fast internet.</small></span></label>
@@ -711,7 +718,7 @@ export function createAccount(app) {
     }, 250);
     const err = d.querySelector('.dlg-err');
     d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }); } });
-    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); voiceover(row, v); });
+    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); if (!user) return signIn('Sign in to generate a voiceover. Writing the script uses one of your requests for the day.'); voiceover(row, v); });
     d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
     d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
   }
@@ -725,7 +732,7 @@ export function createAccount(app) {
   const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', video: 'Drawing the video', saving: 'Saving the file' };
   function videoMenu() {
     if (voicing) return;
-    const can = app.canExport(), cur = current(), has = !!cur && voiceOf(JSON.parse(cur.text).voice), dev = has && has.voice === 'device', told = !!has && !dev;
+    const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && has.voice === 'device', told = !!has && !dev;
     const off = (k) => (k !== 'video' && !told) || (k !== 'voice' && !can);
     const first = EXPORTS.find(([k]) => !off(k))?.[0];
     const d = modal(`<form class="vo-form"><h2>Export</h2>
@@ -738,7 +745,7 @@ export function createAccount(app) {
       const kind = d.querySelector('input[name=kind]:checked')?.value;
       if (!kind) return;
       closeLayer();
-      voicing = { row: cur, exporting: true, note: 'Exporting…', part: 0, open: true, stop: false };
+      voicing = { key: onNow(), exporting: true, note: 'Exporting…', part: 0, open: true, stop: false };
       draw();
       let last = 0;
       try {
@@ -923,7 +930,7 @@ export function createAccount(app) {
     const editable = !!cur && !working && cur.text.includes('"spec":{');
     // One quiet button at the top right opens what can be done with the timeline; while a voiceover is
     // made it is a pill that says how far it has come, with the script under it (asked for, Nov 2026).
-    const busyHere = !!voicing && voicing.row === cur;
+    const busyHere = !!voicing && voicing.key === on.join();
     $('tl-state').innerHTML = busyHere
       ? `<button type="button" class="ebtn vo-pill" id="vo-pill" aria-expanded="${voicing.open}" aria-controls="vo-panel" title="Show or hide the script"><i class="rec"></i><span>${esc(voicing.note)}</span></button>`
       : `<button type="button" class="ibtn tl-more${cur && cur.visibility !== 'private' ? ' live' : ''}" id="tl-more" aria-haspopup="menu" aria-label="This timeline: voiceover, publish, export" title="This timeline">${ICON.dots}</button>`;

@@ -2538,7 +2538,17 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   told.slow = isSlow();
   gpuOk().then((ok) => { told.gpuOk = ok; drawTold(); });
   const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
-  const voiceNow = () => (state.views.length === 1 && viewById.get(state.views[0])?.voice) || null;
+  // A timeline of the reader's own carries its voiceover on its row. For any other view (the editors', someone
+  // else's) the script is kept in this browser alone (`cg-vo:<view>`; asked for, Nov 2026: "for the existing
+  // views, we should be able to generate the voiceover").
+  const localVoice = (id) => { try { return JSON.parse(localStorage.getItem('cg-vo:' + id)) || null; } catch (e) { return null; } };
+  const voiceNow = () => (state.views.length === 1 && (viewById.get(state.views[0])?.voice || localVoice(state.views[0]))) || null;
+  function keepLocalVoice(v) {
+    if (state.views.length !== 1) return;
+    try { if (v) localStorage.setItem('cg-vo:' + state.views[0], JSON.stringify(v)); else localStorage.removeItem('cg-vo:' + state.views[0]); } catch (e) { throw new Error('This browser could not keep the voiceover.'); }
+    voice.set(voiceNow()); drawTold();
+    if (told.on && voice.any() && !voice.device()) speaker.warm();
+  }
   const telling = () => told.on && sound.on && voice.any();
   function drawSubs() {
     // While the voice is downloaded (the first time in a browser) or a line is made, the foot says so, subtitles
@@ -3167,6 +3177,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     speaker: () => speaker,
     exportVideo: (kind, step, stop) => exportVideo(kind, step, stop),
     canExport,
+    one: () => { const v = state.views.length === 1 ? viewById.get(state.views[0]) : null; return v ? { id: v.id, title: v.name || '', description: v.description || '', voice: voiceNow() } : null; },
+    keepVoice: keepLocalVoice,
     voiceLoad: () => (told.load != null && told.load < 1 ? { part: told.load, mb: Math.round((told.bytes || 0) / 1e6) || MODEL_MB } : null),
     audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), summary: p.t.summary || '' })) }; },
