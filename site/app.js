@@ -2572,7 +2572,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   const view0Title = () => (L && L.lanes.length ? L.lanes.map((ln) => ln.view.name).join(' and ') : 'timeline');
   const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
-  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine) drawTold(); drawSubs(); });
+  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine) drawTold(); if (s.made) keptSoon(); drawSubs(); });
   told.slow = isSlow();
   gpuOk().then((ok) => { told.gpuOk = ok; drawTold(); });
   const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
@@ -2606,9 +2606,24 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     } else if (told.then && !voice.busy()) { voice.cue(told.then, after); told.then = null; }
     else if (!next && id != null && !voice.busy()) { told.cue = 'outro'; voice.cue('outro'); }
   }
+  // The chip by play: how many of this timeline's lines this browser has already made in its voice.
+  let keptAt = 0;
+  function keptSoon() { clearTimeout(keptAt); keptAt = setTimeout(async () => {
+    const texts = voice.texts(), n = !texts.length ? 0 : voice.device() ? texts.length : await speaker.kept(texts, voice.name());
+    told.kept = n; told.lines = texts.length; drawChip();
+  }, 300); }
+  function drawChip() {
+    const el = $('vo-chip'), any = voice.any() && state.views.length === 1, ready = any && told.kept >= told.lines;
+    el.hidden = !any;
+    el.classList.toggle('ready', ready);
+    el.setAttribute('aria-pressed', String(told.on));
+    el.title = !told.on ? 'This timeline has a voiceover. It is off: press to turn it on.' : ready ? 'This timeline has a voiceover, ready on this device. Press to turn it off.' : `This timeline has a voiceover. Its voice is made on this device as it plays (${told.kept || 0} of ${told.lines || 0} lines ready). Press to turn it off.`;
+    el.setAttribute('aria-label', el.title);
+  }
   function drawTold() {
     const any = voice.any();
     $('voice-row').hidden = $('subs-row').hidden = !any;
+    drawChip(); keptSoon();
     $('gpu-row').hidden = !any || !told.gpuOk || voice.device();
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
@@ -2793,7 +2808,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       $('info').hidden = !on; $('info-btn').setAttribute('aria-expanded', on);
     });
     // How fast play travels (cg-pace in this browser): 1x is the pace it was made for, less lingers on each card.
-    const paceShow = () => { $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
+    const paceShow = () => { voice.rate(play.speed); $('pace').value = play.speed; $('pace-now').textContent = String(play.speed).replace(/^0\./, '0.') + 'x'; };
     play.speed = clamp(Number(store.get('cg-pace')) || 1, 0.25, 2);
     paceShow();
     $('pace').addEventListener('input', () => { play.speed = clamp(Number($('pace').value) || 1, 0.25, 2); store.set('cg-pace', String(play.speed)); paceShow(); });
@@ -2828,6 +2843,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!b) return;
       told.on = b.dataset.v === 'on'; store.set('cg-voice', told.on ? '1' : '0'); drawTold();
     });
+    $('vo-chip').addEventListener('click', (e) => { e.stopPropagation(); told.on = !told.on; store.set('cg-voice', told.on ? '1' : '0'); drawTold(); });
     $('gpu-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');

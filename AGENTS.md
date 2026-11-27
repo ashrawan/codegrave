@@ -335,6 +335,13 @@ How the page is put together:
   told, and play by the arrow keys says a line as its entry arrives without waiting. The script's prompt has many
   short examples by kind of timeline; add to them rather than cut them. Another engine (a cheaper paid voice, or
   another free model) would go beside Kokoro in `voice.js`, with its voices in `VOICES`.
+- **Voiceover, round 2 (Nov 2026, asked for).** By play stands a chip, "Voiceover" (`#vo-chip`, `drawChip()`), on
+  a timeline that has one: its dot is lit when every line is already made in this browser (`speaker.kept()`),
+  hollow while they still have to be; a press turns the voiceover off and on. Play speed changes the voice's speed
+  too, at the same pitch (`stretch()` in `site/voice.js`, WSOLA; `voiceRate()` keeps it between 0.7x and 1.6x).
+  The voices are Heart and Michael first, then Bella, Nicole, Emma and George, then This device. While play
+  rests at a place the map comes slowly closer and glides a little east (`DRIFT_*` in `site/globe.js`), so the
+  picture is never still; north stays up and a pause stops it dead.
 - **Export video** (`site/record.js`; asked for, Nov 2026: "just like export as PDF, you can have the export
   video", to upload to YouTube later). In the three dots at the top right, for any timeline. The browser records
   this tab (`getDisplayMedia`, it asks once), the page's own sound goes to the recording too (`sound.rec`: the

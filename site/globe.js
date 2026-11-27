@@ -443,6 +443,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
   // ---- one frame. Everything follows from `S.pos`, where the reader is among the entries (2.4: four tenths of
   // the way from the third to the fourth): the camera, the strip, the stars, which card is up and how far it has
   // come. So nothing waits for anything, and it all moves for exactly as long as the reader does.
+  const DRIFT_ZOOM = 0.35, DRIFT_PAN = 0.05, DRIFT_SECS = 12;
   const toward = (v, to, k) => (Math.abs(to - v) < 0.004 ? to : v + (to - v) * Math.min(1, k));
   function frame(now) {
     S.raf = 0;
@@ -477,6 +478,19 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     }
     if (S.ready && !S.bare && sp < 0.995) {
       const cam = o ? o.cam : camAt(S.pos);
+      // While play rests at a place (a line is being said) the map does not stand still: it comes slowly
+      // closer and glides a little east, like a camera held on a subject, and gives that back as it travels
+      // on (asked for, Nov 2026: "it feels very static", "more like the video"). North stays up, nothing
+      // swings, and a pause stops it dead. `DRIFT` is how far: a third of a zoom level and 5 % of the view.
+      if (cam && !o && !still) {
+        if (S.playing && Math.abs(speed) < 0.02) { S.drift = (S.drift || 0) + dt; busy = true; }
+        else if (S.drift && Math.abs(speed) >= 0.02) { S.drift = Math.max(0, S.drift - dt * 6); busy = true; }
+        if (S.drift) {
+          const k = 1 - Math.exp(-S.drift / DRIFT_SECS);
+          cam.zoom += DRIFT_ZOOM * k;
+          cam.center = [cam.center[0] + (360 / 2 ** cam.zoom) * DRIFT_PAN * k, cam.center[1]];
+        }
+      }
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
       if (o) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }

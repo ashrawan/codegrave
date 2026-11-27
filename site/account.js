@@ -681,7 +681,7 @@ export function createAccount(app) {
       <p class="dlg-err" role="alert"></p>
       <div class="dlg-row">${has ? '<button type="button" class="big" data-revoice>Use this voice</button><button type="submit" class="big pri">Write again</button>' : '<button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate voiceover</button>'}</div>
       ${has ? '<button type="button" class="linkish" data-unvoice>Remove the voiceover</button>' : ''}
-      <p class="dlg-fine center">Writing the script uses one of today's requests. The voice is made on your device for free: Heart and Michael download once, about ${MODEL_MB} MB for both; This device needs no download.</p></form>`, 'small vo');
+      <p class="dlg-fine center">Writing the script uses one of today's requests. The voice is made on your device for free: the named voices share one download, about ${MODEL_MB} MB; This device needs none.</p></form>`, 'small vo');
     // The voice starts downloading as the dialog opens, and the dialog says how far it has come. Where the
     // graphics card can make it, the faster voice is offered (off unless the reader turned it on).
     const pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;

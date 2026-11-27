@@ -842,3 +842,15 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 body.recording, body.recording * { cursor: none !important; }
 body.recording #axisbar .ends, body.recording #film-menu, body.recording .top, body.recording .tsearch, body.recording #tl-state,
 body.recording #vo-panel, body.recording #more-btn, body.recording #ask, body.recording #toast { opacity: 0 !important; pointer-events: none !important; }
+
+/* By play: this timeline has a voiceover (asked for, Nov 2026). The dot is lit when its voice is ready on this
+   device, hollow while it still has to be made here; a press turns the voiceover off and on. */
+.vochip { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; font-size: 12px; color: var(--text); background: color-mix(in srgb, var(--bg) 55%, transparent); border: 1px solid var(--line); border-radius: 14px; white-space: nowrap; }
+.vochip[hidden] { display: none; }
+.vochip i { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid var(--accent); }
+.vochip.ready i { background: var(--accent); }
+.vochip[aria-pressed="false"] { color: var(--faint); }
+.vochip[aria-pressed="false"] span { text-decoration: line-through; }
+.vochip[aria-pressed="false"] i { border-color: var(--faint); background: none; }
+@media (max-width: 699px) { .vochip span { display: none; } .vochip { padding: 0 8px; } }
+body.recording .vochip { opacity: 0 !important; }

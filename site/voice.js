@@ -15,6 +15,11 @@
 export const VOICES = [
   ['af_heart', 'Heart', 'Warm, American'],
   ['am_michael', 'Michael', 'Calm, American'],
+  // More of Kokoro's best, after the two picked first (asked for, Nov 2026: "we can give others after that").
+  ['af_bella', 'Bella', 'Bright, American'],
+  ['af_nicole', 'Nicole', 'Soft, close to the ear'],
+  ['bf_emma', 'Emma', 'Clear, British'],
+  ['bm_george', 'George', 'Steady, British'],
   // The browser's own voice: nothing to download and instant, if plainer (asked for, Nov 2026, as a third choice).
   ['device', 'This device', 'Your browser’s own voice, no download'],
 ];
@@ -72,6 +77,38 @@ export function madeOrder(ids, from) {
   return [...ids.slice(i), ...ids.slice(0, i)];
 }
 
+// Speech made quicker or slower without changing its pitch (Play speed, asked for, Nov 2026): the sound is cut
+// into short overlapping pieces that are laid down closer together or further apart, each taken from where it
+// joins the one before best (WSOLA). `rate` 1.5 is half as long again as fast.
+export const voiceRate = (speed) => Math.min(1.6, Math.max(0.7, Number(speed) || 1));
+export function stretch(x, rate, sr = 24000) {
+  if (!(rate > 0) || Math.abs(rate - 1) < 0.02 || x.length < sr * 0.1) return x;
+  const win = Math.round(sr * 0.04) & ~1, hop = win >> 1, seek = Math.round(sr * 0.008), n = Math.floor(x.length / rate);
+  const out = new Float32Array(n + win), w = new Float32Array(win);
+  for (let i = 0; i < win; i++) w[i] = 0.5 - 0.5 * Math.cos((2 * Math.PI * i) / win);
+  let prev = 0;
+  for (let k = 0; k * hop < n; k++) {
+    let at = Math.round(k * hop * rate);
+    if (k) {
+      // The piece that would follow the last one naturally starts at prev + hop: find the one most like it.
+      const want = prev + hop;
+      let best = -Infinity, pick = at;
+      for (let d = -seek; d <= seek; d += 2) {
+        const c = at + d;
+        if (c < 0 || c + hop >= x.length || want + hop >= x.length) continue;
+        let sum = 0;
+        for (let i = 0; i < hop; i += 2) sum += x[c + i] * x[want + i];
+        if (sum > best) { best = sum; pick = c; }
+      }
+      at = pick;
+    }
+    prev = at;
+    const o = k * hop;
+    for (let i = 0; i < win && at + i < x.length; i++) out[o + i] += x[at + i] * w[i];
+  }
+  return out.subarray(0, n);
+}
+
 // ---- making the sound. One worker holds Kokoro and makes one line at a time; a line asked for `now` goes to
 // the front. `status(s)` is told how it goes: { loading: 0..1 }, { ready: true } or { failed: message }.
 export function createSpeaker(status = () => {}) {
@@ -112,6 +149,7 @@ export function createSpeaker(status = () => {}) {
         if (data.error) { made.delete(job.key); job.no(new Error(data.error)); status({ failed: data.error }); }
         else {
           job.ok({ audio: data.audio, rate: data.rate });
+          status({ made: true });
           timed(data.ms / 1000, data.audio.length / data.rate);
           opened().then((c) => c?.put(job.key, new Response(data.audio, { headers: { 'x-rate': String(data.rate) } }))).catch(() => {});
         }
@@ -172,13 +210,21 @@ export function createSpeaker(status = () => {}) {
     status({ engine: gpu ? 'gpu' : 'cpu', failed: failed ? 'The graphics card could not run the voice, so it uses the processor.' : undefined, speed: speedOf(gpu) });
     if (queue.length) { boot(); next(); } else if (was) warm();
   }
-  return { line, warm, engine, gpu: () => gpu, ready: () => booted };
+  // How many of these lines this browser already has in this voice (made here before).
+  async function kept(texts, voice) {
+    const c = await opened();
+    if (!c) return 0;
+    let n = 0;
+    for (const t of texts) if (await c.match(lineKey(voice, t)).catch(() => null)) n++;
+    return n;
+  }
+  return { line, warm, engine, kept, gpu: () => gpu, ready: () => booted };
 }
 
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);
 // `said(text, waiting)` is told the line being spoken ('' when none), or that the voice is being got ready.
 export function createVoice({ ctx, said, speaker }) {
-  const S = { sig: '', lines: new Map(), order: [], voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, tap: null };
+  const S = { sig: '', lines: new Map(), order: [], voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, tap: null, rate: 1 };
   const device = () => S.voice === 'device';
   function quit() {
     const s = S.src; S.src = null;
@@ -202,7 +248,7 @@ export function createVoice({ ctx, said, speaker }) {
     const u = new SpeechSynthesisUtterance(cur.text);
     const en = speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));
     u.voice = en.find((v) => /natural|neural|premium|enhanced/i.test(v.name)) || en.find((v) => v.default) || en[0] || null;
-    u.rate = 0.98;
+    u.rate = 0.98 * S.rate;
     u.onend = u.onerror = () => { if (S.utter === u) end(cur); };
     S.utter = u;
     speechSynthesis.speak(u);
@@ -236,8 +282,8 @@ export function createVoice({ ctx, said, speaker }) {
       // A line that cannot be made is passed over, so play never waits for nothing.
       speaker.line(l.text, S.voice, true).then(({ audio, rate }) => {
         if (S.cur !== cur || cur.done) return;
-        const buf = c.createBuffer(1, audio.length, rate);
-        buf.copyToChannel(audio, 0);
+        const a = stretch(audio, S.rate, rate), buf = c.createBuffer(1, a.length, rate);
+        buf.copyToChannel(a, 0);
         cur.buf = buf;
         if (!S.held) begin(cur, buf, 0);
       }, () => { if (S.cur === cur && !cur.done) speakDevice(cur); });
@@ -247,6 +293,10 @@ export function createVoice({ ctx, said, speaker }) {
     // A line is being said, or is being made.
     busy: () => !!S.cur && !S.cur.done,
     device,
+    // Play speed: lines begun from now on are said this much quicker (1 is as made), at the same pitch.
+    rate(r) { S.rate = voiceRate(r); },
+    name: () => S.voice,
+    texts: () => [...S.lines.values()].map((l) => l.text),
     // Export video: the voice also goes to `node` (a recording), or no longer when null.
     tap(node) {
       if (S.gain && S.tap) { try { S.gain.disconnect(S.tap); } catch (e) { /* not joined */ } }
