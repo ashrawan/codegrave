@@ -439,6 +439,12 @@ How the page is put together:
   place on the map (The Universe), the view and its play start in space, not on the globe: `stageFor()` answers
   'space' before the first entry and for a run without places at the very beginning, however short, and
   `globe.intro()` does no glide from the whole globe. The globe comes in at the first entry that has a place.
+- **The time line at the foot shows what has been told, not what is to come (Nov 2026, asked for; this replaces
+  what the points above say about the marker standing at the left).** The marker of the strip stands at the right
+  end (`nowAt()` in `site/globe.js`): the entry in front stands just before it, what was passed stays in sight at
+  its left, and what is still to come is not shown until its turn, coming in from the right ("those items not yet
+  visible should not be in timeline"). It is so in both directions of the timeline, and the exported film draws
+  its time line the same way (`shelf()` in `site/export.js`; change the two together).
 - **A default voiceover for a built timeline (Nov 2026, asked for).** `data/community/<owner>/voices/<view>.json`
   holds the words (`{ style, lines: [{ id, text }] }`; ids are `intro`, `outro` and entry ids), and the build puts
   them into the view's own file as `voice` (`docs/VIEWS.md`). The page tells them unless the reader made their
