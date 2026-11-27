@@ -97,7 +97,11 @@ node tools/film/film.mjs render <folder>                            # <folder>/s
 `seek(t)` and joins them with ffmpeg into ProRes 422 HQ (`--format mp4` for a high-bitrate MP4,
 `--format png` for a frame sequence). The options are listed at the top of `tools/film/film.mjs`:
 `--timeline`, `--base`, `--serve` (film this checkout's `site/`), `--w`, `--h`, `--dpr`, `--fps`,
-`--look`, `--detail`, `--from`, `--to`, `--headed`.
+`--look`, `--detail`, `--from`, `--to`, `--headed`, `--workers`.
+
+Several browsers draw at once (`--workers`, 6 by default on a Mac), each taking the next stretch of
+frames; a frame depends only on its time, so the film is the same however many draw it. On a Mac
+the full Chromium is used so the globe is drawn by the graphics chip.
 
 `--mock-auth` answers the key check on this computer. It is for trying things on built views
 without a key; it opens nothing private, because private data is checked on the server.

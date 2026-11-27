@@ -18,11 +18,13 @@
 //   --out <file>              where the film goes (default: <folder>/film.mov or .mp4, or <folder>/frames/)
 //   --from <s> --to <s>       only this stretch of the film
 //   --headed                  show the browser while it works
+//   --workers <n>             browsers that draw at once (on a Mac 6 by default, elsewhere 1)
 //   --mock-auth               answer the key check locally: for trying things on built views, with
 //                             no key and no access to anything private
 import { spawn } from 'node:child_process';
 import { createRequire } from 'node:module';
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { cpus } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -77,7 +79,7 @@ function jobOf(folder, args, env) {
   const n = (k, d) => (o[k] == null ? d : Number(o[k]));
   const job = { dir, shots: Array.isArray(raw) ? raw : raw.shots, timeline: o.timeline || '', preset: o.preset || null, base: (o.base || env.FILM_BASE || 'https://codegrave.com').replace(/\/+$/, ''),
     w: n('w', 1920), h: n('h', 1080), dpr: n('dpr', 1), fps: n('fps', 30), look: o.look || null, detail: o.detail || null, format: o.format || 'prores',
-    from: n('from', 0), to: o.to == null ? null : Number(o.to), headed: !!o.headed, mock: !!o.mockAuth, serve: !!o.serve, out: o.out ? resolve(o.out) : null };
+    from: n('from', 0), to: o.to == null ? null : Number(o.to), headed: !!o.headed, workers: Math.max(1, Math.min(16, Math.round(n('workers', process.platform === 'darwin' ? Math.min(6, Math.ceil(cpus().length / 2)) : 1)))), mock: !!o.mockAuth, serve: !!o.serve, out: o.out ? resolve(o.out) : null };
   if (!Array.isArray(job.shots)) fail(`${file}: give a list of shots, or { "timeline": "...", "shots": [...] }`);
   if (!job.timeline) fail('which timeline? Give --timeline <owner/slug>, or "timeline" in shots.json');
   if (!['prores', 'mp4', 'png'].includes(job.format)) fail('--format is prores, mp4 or png');
@@ -152,35 +154,46 @@ async function render(args, env) {
   const job = jobOf(args._[0], args, env);
   const site = job.serve ? await serve() : null;
   if (site) job.base = site.base;
-  const { browser, page } = await open(job, env);
+  // Several browsers draw at once, each taking the next stretch of frames. A frame depends only on its time, so
+  // the film is the same however many draw it; a Mac with many cores is several times faster this way.
+  const crew = [];
+  const film = !(job.format === 'png'), frames = film ? join(job.dir, '.frames') : job.out;
   try {
-    const total = await load(page, job), a = Math.max(0, job.from), b = Math.min(total, job.to ?? total);
-    const first = Math.round(a * job.fps), last = Math.round(b * job.fps);
-    console.log(`film: ${total.toFixed(2)}s, frames ${first} to ${last - 1} at ${job.fps} fps, ${job.w * job.dpr}×${job.h * job.dpr}`);
-    const pre = await page.evaluate(() => window.codegraveFilm.prefetch());
+    crew.push(await open(job, env));
+    const total = await load(crew[0].page, job), a = Math.max(0, job.from), b = Math.min(total, job.to ?? total);
+    const first = Math.round(a * job.fps), last = Math.round(b * job.fps), count = Math.max(1, Math.min(job.workers, Math.ceil((last - first) / 30)));
+    console.log(`film: ${total.toFixed(2)}s, frames ${first} to ${last - 1} at ${job.fps} fps, ${job.w * job.dpr}×${job.h * job.dpr}, ${count} ${count === 1 ? 'browser' : 'browsers'}`);
+    crew.push(...await Promise.all(Array.from({ length: count - 1 }, async () => { const w = await open(job, env); await load(w.page, job); return w; })));
+    const pre = (await Promise.all(crew.map((w) => w.page.evaluate(() => window.codegraveFilm.prefetch()))))[0];
     for (const m of pre.failed) console.log(`film: could not get ${m.kind}: ${m.what}`);
-    let ff = null;
-    if (job.format === 'png') mkdirSync(job.out, { recursive: true });
-    else {
-      ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(job.fps), '-c:v', 'png', '-i', '-', ...CODECS[job.format],
-        '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709', '-r', String(job.fps), job.out], { stdio: ['pipe', 'inherit', 'inherit'] });
-      ff.on('error', () => fail('ffmpeg is not installed (brew install ffmpeg), or use --format png'));
+    if (film) rmSync(frames, { recursive: true, force: true });
+    mkdirSync(frames, { recursive: true });
+    const t0 = Date.now(), CHUNK = 15;
+    let next = first, done = 0;
+    const said = () => process.stdout.write(`\rfilm: ${done}/${last - first} frames, ${(done / ((Date.now() - t0) / 1000)).toFixed(1)} a second   `);
+    await Promise.all(crew.map(async ({ page }) => {
+      while (next < last) {
+        const from = next, to = Math.min(last, from + CHUNK); next = to;
+        for (let i = from; i < to; i++) {
+          await page.evaluate((t) => window.codegraveFilm.seek(t), i / job.fps);
+          writeFileSync(join(frames, String(i).padStart(6, '0') + '.png'), await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: job.w, height: job.h } }));
+          if (++done % job.fps === 0) said();
+        }
+      }
+    }));
+    said(); process.stdout.write('\n');
+    if (film) {
+      const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(job.fps), '-start_number', String(first), '-i', join(frames, '%06d.png'), ...CODECS[job.format],
+        '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709', '-r', String(job.fps), job.out], { stdio: ['ignore', 'inherit', 'inherit'] });
+      const code = await new Promise((r) => { ff.on('error', () => r(-1)); ff.on('close', r); });
+      if (code) fail(code === -1 ? `ffmpeg is not installed (brew install ffmpeg). The frames are in ${frames}` : 'ffmpeg stopped with an error');
+      rmSync(frames, { recursive: true, force: true });
     }
-    const t0 = Date.now();
-    for (let i = first; i < last; i++) {
-      await page.evaluate((t) => window.codegraveFilm.seek(t), i / job.fps);
-      const png = await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: job.w, height: job.h } });
-      if (ff) { if (!ff.stdin.write(png)) await new Promise((r) => ff.stdin.once('drain', r)); }
-      else writeFileSync(join(job.out, String(i).padStart(6, '0') + '.png'), png);
-      if ((i - first) % job.fps === job.fps - 1 || i === last - 1) process.stdout.write(`\rfilm: ${i - first + 1}/${last - first} frames, ${((i - first + 1) / ((Date.now() - t0) / 1000)).toFixed(1)} a second   `);
-    }
-    process.stdout.write('\n');
-    if (ff) { ff.stdin.end(); const code = await new Promise((r) => ff.on('close', r)); if (code) fail('ffmpeg stopped with an error'); }
-    const lost = await page.evaluate(() => window.codegraveFilm.missing());
-    for (const m of lost) console.log(`film: missing ${m.kind}: ${m.what}`);
+    const lost = (await Promise.all(crew.map((w) => w.page.evaluate(() => window.codegraveFilm.missing())))).flat();
+    for (const m of new Map(lost.map((m) => [m.kind + m.what, m])).values()) console.log(`film: missing ${m.kind}: ${m.what}`);
     console.log('film: wrote ' + job.out);
   } finally {
-    await browser.close();
+    await Promise.all(crew.map((w) => w.browser.close().catch(() => {})));
     if (site) site.stop();
   }
 }

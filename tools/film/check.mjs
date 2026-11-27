@@ -15,7 +15,10 @@ const { chromium } = await import('playwright').catch(() => createRequire(import
 const port = 8900 + Math.floor(Math.random() * 90), base = `http://localhost:${port}`;
 const server = spawn(process.execPath, [join(repo, 'scripts', 'serve.mjs'), String(port)], { stdio: ['ignore', 'pipe', 'inherit'] });
 await new Promise((r) => server.stdout.once('data', r));
-const browser = await chromium.launch({ args: ['--ignore-gpu-blocklist', ...(process.platform === 'linux' ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : [])] });
+// The same browser the films are made with (launch() in film.mjs): on a Mac the full Chromium, drawing with Metal.
+const flags = ['--ignore-gpu-blocklist', '--enable-webgl'];
+const browser = process.platform === 'linux' ? await chromium.launch({ args: [...flags, '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+  : await chromium.launch({ channel: 'chromium', args: [...flags, '--enable-gpu', ...(process.platform === 'darwin' ? ['--use-angle=metal'] : [])] }).catch(() => chromium.launch({ args: flags }));
 let failed = 0;
 const check = (ok, what) => { console.log((ok ? 'ok   ' : 'FAIL ') + what); if (!ok) failed++; };
 
