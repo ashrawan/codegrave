@@ -1016,7 +1016,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       }
       if (grid.children[i] !== pn.el) grid.insertBefore(pn.el, grid.children[i] || null);
       pn.order = L.shown.filter((p) => p.lane === ln && p.a >= L.tMin && p.a <= L.tMax).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
-      pn.cur = undefined;
+      pn.live = undefined; pn.el.style.setProperty('--pc', colVar(ln.col));
       pn.g.title(ln.view.name, colVar(ln.col));
       pn.g.show(pn.order.map((p) => ({ ...(byStep.get(p.t.id) || {}), ...stepOf(p) })));
     });
@@ -1056,6 +1056,10 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       if (!c) for (const p of pn.order) { if (dir * (p.a - edge) > 0) { n = p; break; } c = p; }
       const f = c ? c.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
       pn.g.at(c ? c.t.id : null, n && n.a !== f ? clamp((edge - f) / (n.a - f), 0, 1) : 0, play.on);
+      // The panes the entry in front belongs to are lit, and the others put their card away, so it is plain
+      // which globe is being told about (asked for, Nov 2026). Views with an entry at the same date light together.
+      const live = !!(c && cur && (c.t.id === cur.t.id || c.t.born === cur.t.born));
+      if (pn.live !== live) { pn.live = live; pn.el.classList.toggle('live', live); }
     }
     if (id === road.gcur) return;
     road.gcur = id;
@@ -2537,7 +2541,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       goFull = () => { if (!fullOn()) toggleFull(); };
       fullBtn.addEventListener('click', toggleFull);
       $('stage').addEventListener('dblclick', (e) => { if (!e.target.closest('button, a, input, .g-card, .g-rows')) toggleFull(); });
-      const drawFull = () => { fullBtn.setAttribute('aria-pressed', String(fullOn())); document.body.classList.toggle('fullscreen', fullOn()); };
+      // Out of full screen the bar on the left and the strip of views at the foot are there again (asked for, Nov 2026).
+      const drawFull = () => { fullBtn.setAttribute('aria-pressed', String(fullOn())); document.body.classList.toggle('fullscreen', fullOn()); if (!fullOn()) document.body.classList.remove('film'); };
       document.addEventListener('fullscreenchange', drawFull); document.addEventListener('webkitfullscreenchange', drawFull);
     }
     addEventListener('resize', () => {

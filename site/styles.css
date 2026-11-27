@@ -802,3 +802,10 @@ body.multi #road-views, body.multi #wall .w-scene { display: none; }
   #globe .g-grid[data-n="3"] .g-pane:nth-child(3) { grid-column: 4 / span 6 !important; }
   #globe[data-card] .g-pane .g-s { display: none; }
 }
+/* The globes being told about are lit in their view's colour; the others dim and put their card away (asked for, Nov 2026). */
+#globe .g-pane { transition: border-color .35s, box-shadow .35s; }
+#globe .g-pane.live { border-color: var(--pc); box-shadow: inset 0 0 0 1px var(--pc), inset 0 0 46px -20px var(--pc); }
+#globe .g-pane .g-map, #globe .g-pane .g-title { transition: filter .45s, opacity .45s; }
+#globe .g-pane:not(.live) .g-map { filter: brightness(.55) saturate(.7); }
+#globe .g-pane:not(.live) .g-title { opacity: .55; }
+#globe .g-pane:not(.live) .g-card { opacity: 0 !important; pointer-events: none !important; transition: opacity .35s; }

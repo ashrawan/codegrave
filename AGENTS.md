@@ -420,6 +420,10 @@ How the page is put together:
   entries the reader has come to. "Several views" in the three-dot menu (`cg-grid` in this browser) switches
   between Grid, the default, and One globe, which is all the views on the page's one globe. The small pictures
   at the left of a single globe are pressed to go back to their entry.
+  The panes the entry in front belongs to are lit with a border in their view's colour (`.g-pane.live`; views
+  with an entry at the same date light together); the others dim and put their card away, so it is plain which
+  globe is being told about (asked for). The film layout belongs to full screen: leaving full screen brings the
+  bar on the left and the strip of views back, playing or not (asked for).
 - **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser; asked
   for, Nov 2026, so the globe is less crowded). Full names every country, as the map's tiles do. Medium names
   and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
