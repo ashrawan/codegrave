@@ -758,7 +758,7 @@ function writePages(views) {
     const title = `${v.name}: a timeline · codegrave`;
     const desc = (v.description || `${v.name} on one timeline, from first to last.`).trim();
     const own = /^https:\/\//.test(v.image?.src || '');
-    const img = own ? v.image.src : `${SITE}/media/og.jpg`;
+    const img = own ? v.image.src : `${SITE}/media/og.jpg?v=2`;
     const meta = [
       `<title>${attr(title)}</title>`,
       `<meta name="description" content="${attr(desc)}">`,
