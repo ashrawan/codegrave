@@ -616,7 +616,7 @@ export function createAccount(app) {
     p.hidden = !on || !voicing.open;
     if (p.hidden) { p.innerHTML = ''; return; }
     if (voicing.exporting) {
-      const order = ['voice', 'sound', 'pictures', 'video', 'saving'], at = order.indexOf(voicing.what);
+      const order = ['voice', 'sound', 'pictures', 'map', 'video', 'saving'], at = order.indexOf(voicing.what);
       if (!p.querySelector('.vp-ex')) p.innerHTML = `<div class="vp-head"><b>Export</b><small></small></div><div class="vp-bar vp-ex"><i></i></div><p class="vp-note"></p><p class="vp-foot">Made on your device. Keep this tab open until the file is saved.</p><button type="button" class="linkish" id="ex-stop">Cancel the export</button>`;
       p.querySelector('.vp-head small').textContent = at >= 0 ? `Step ${at + 1} of ${order.length}` : '';
       p.querySelector('.vp-bar i').style.width = Math.round((voicing.part || 0) * 100) + '%';
@@ -649,7 +649,7 @@ export function createAccount(app) {
       ${free && cur.text.includes('"spec":{') ? item('edit', TL.edit, 'Open in editor') : ''}
       ${cur ? item('publish', TL.share, cur.visibility === 'private' ? 'Publish' : 'Share', `<i class="dot${cur.visibility === 'private' ? '' : ' live'}"></i>${SEEN[cur.visibility]}`) + '<hr>' : ''}
       ${item('pdf', '<img src="media/pdf.svg" width="13" height="16" alt="">', 'Export as PDF')}
-      ${item('video', TL.film, 'Export video', 'MP4')}
+      ${item('video', TL.film, 'Export video')}
       ${item('turn', TL.turn, esc($('reverse').textContent.trim() || 'Turn round'))}
       ${cur ? '<hr>' + item('rename', TL.name, 'Rename') + item('delete', TL.bin, 'Delete', '', ' danger') : ''}`, 'menu tl');
     d.addEventListener('click', (x) => {
@@ -725,33 +725,59 @@ export function createAccount(app) {
   // Export video (site/export.js): one press makes the file in this browser; the pill at the top right says how
   // far it has come and the timeline can be used meanwhile (asked for, Nov 2026: three files to choose from).
   const EXPORTS = [
-    ['both', 'Video with voiceover', 'The film with its voice and music, as one MP4.'],
-    ['video', 'Video only', 'The film with its music and no voice, as an MP4.'],
+    ['both', 'Video with voiceover', 'The film with its voice and music.'],
+    ['video', 'Video only', 'The film with its music and no voice.'],
     ['voice', 'Voiceover only', 'The voice alone, as a sound file (WAV).'],
   ];
-  const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', video: 'Drawing the video', saving: 'Saving the file' };
+  // The shape of the film (asked for, Nov 2026: "the first important thing is the format"): each is drawn as its
+  // own small frame, with where it is usually watched.
+  const SHAPES = [
+    ['wide', 'Landscape', '16:9', 'YouTube, a screen', 44, 25],
+    ['tall', 'Vertical', '9:16', 'Shorts, Reels, TikTok', 20, 36],
+    ['square', 'Square', '1:1', 'A feed', 30, 30],
+  ];
+  const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', map: 'Getting the map ready', video: 'Drawing the video', saving: 'Saving the file' };
+  const exKept = () => { try { return JSON.parse(localStorage.getItem('cg-export')) || {}; } catch (e) { return {}; } };
   function videoMenu() {
     if (voicing) return;
     const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && has.voice === 'device', told = !!has && !dev;
     const off = (k) => (k !== 'video' && !told) || (k !== 'voice' && !can);
-    const first = EXPORTS.find(([k]) => !off(k))?.[0];
-    const d = modal(`<form class="vo-form"><h2>Export</h2>
+    const was = exKept(), first = (!off(was.kind) && EXPORTS.some(([k]) => k === was.kind) ? was.kind : null) || EXPORTS.find(([k]) => !off(k))?.[0];
+    const seg = (name, list, on) => `<div class="seg" data-seg="${name}">${list.map(([v, label]) => `<button type="button" data-v="${v}" aria-pressed="${v === on}">${label}</button>`).join('')}</div>`;
+    const shape = SHAPES.some(([k]) => k === was.shape) ? was.shape : 'wide';
+    const d = modal(`<form class="vo-form ex-form"><h2>Export</h2>
       <p class="dlg-sub">The file is made on your device and downloaded. Nothing is uploaded, and you can keep using the timeline while it works.</p>
+      <div class="cap">What</div>
       <div class="vo-voices" role="radiogroup" aria-label="What to export">${EXPORTS.map(([k, name, w]) => `<label class="vo-voice${off(k) ? ' off' : ''}"><input type="radio" name="kind" value="${k}"${k === first ? ' checked' : ''}${off(k) ? ' disabled' : ''}><i></i><span><b>${name}</b><small>${w}</small></span></label>`).join('')}</div>
-      <p class="dlg-err" role="alert">${!can ? 'This browser cannot make a video file. Try Chrome or Edge.' : dev ? 'The voice of This device cannot be saved to a file. Choose another voice for a video with the voiceover.' : !has ? (cur ? 'Generate a voiceover first to export with a voice.' : '') : ''}</p>
+      <div class="ex-video">
+        <div class="cap">Format</div>
+        <div class="ex-shapes" role="radiogroup" aria-label="Format">${SHAPES.map(([k, name, ratio, where, w, h]) => `<label class="ex-shape"><input type="radio" name="shape" value="${k}"${k === shape ? ' checked' : ''}><span class="ex-fr"><i style="width: ${w}px; height: ${h}px"></i></span><b>${name} <small>${ratio}</small></b><small>${where}</small></label>`).join('')}</div>
+        <div class="set"><span class="lbl">Scene</span>${seg('scene', [['globe', 'Globe'], ['full', 'Full view']], was.scene === 'full' ? 'full' : 'globe')}</div>
+        <div class="set ex-subs"><span class="lbl">Subtitles</span>${seg('subs', [['1', 'On'], ['0', 'Off']], was.subs ? '1' : '0')}</div>
+        <div class="set"><span class="lbl">Quality</span>${seg('short', [['1080', '1080p'], ['720', '720p, quicker']], was.short === 720 ? '720' : '1080')}</div>
+      </div>
+      <p class="dlg-err" role="alert">${!can ? 'This browser cannot make a video file. Try Chrome or Edge.' : dev ? 'The voice of This device cannot be saved to a file. Choose another voice for a video with the voiceover.' : !has ? 'Generate a voiceover first to export with a voice.' : ''}</p>
       <div class="dlg-row"><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri"${first ? '' : ' disabled'}>Export</button></div></form>`, 'small vo');
+    const kindNow = () => d.querySelector('input[name=kind]:checked')?.value, segNow = (n) => d.querySelector(`[data-seg=${n}] [aria-pressed=true]`)?.dataset.v;
+    // The voice alone has no picture to choose, and subtitles are the voice's words.
+    const show = () => { const k = kindNow(); d.querySelector('.ex-video').hidden = k === 'voice'; d.querySelector('.ex-subs').hidden = k !== 'both'; d.querySelector('button[type=submit]').textContent = k === 'voice' ? 'Export WAV' : 'Export MP4'; };
+    show();
+    d.addEventListener('change', show);
+    d.addEventListener('click', (e) => { const b = e.target.closest('[data-seg] button'); if (!b) return; e.preventDefault(); b.parentNode.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b)); });
     d.querySelector('form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const kind = d.querySelector('input[name=kind]:checked')?.value;
+      const kind = kindNow();
       if (!kind) return;
+      const o = { kind, shape: d.querySelector('input[name=shape]:checked')?.value || 'wide', scene: segNow('scene') || 'globe', subs: kind === 'both' && segNow('subs') === '1', short: Number(segNow('short')) || 1080 };
+      try { localStorage.setItem('cg-export', JSON.stringify(o)); } catch (x) { /* private window */ }
       closeLayer();
       voicing = { key: onNow(), exporting: true, note: 'Exporting…', part: 0, open: true, stop: false };
       draw();
       let last = 0;
       try {
-        const name = await app.exportVideo(kind, (what, part) => {
+        const name = await app.exportVideo(o, (what, part) => {
           if (!voicing) return;
-          voicing.note = `${EX_STEP[what] || 'Exporting'}: ${Math.round(part * 100)}%`; voicing.what = what; voicing.part = part;
+          voicing.note = `${EX_STEP[what] || 'Exporting'}${what === 'map' ? '…' : ': ' + Math.round(part * 100) + '%'}`; voicing.what = what; voicing.part = part;
           if (Date.now() - last > 250) { last = Date.now(); draw(); }
         }, () => !voicing || voicing.stop);
         toast(`Saved ${name}.`);

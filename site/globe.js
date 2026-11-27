@@ -132,7 +132,7 @@ function landDots() {
 // cards, the one time line below): it has no time line of its own, and its card and camera suit a small box.
 // `clock` says where time and frames come from: the browser's own for a reader. Film mode (site/film/) hands in
 // its own, so a frame is drawn when it says and not when the screen is ready.
-export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, clock }) {
+export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, clock, ratio }) {
   const K = clock || { now: () => performance.now(), raf: (f) => requestAnimationFrame(f), caf: (i) => cancelAnimationFrame(i) };
   if (pane) host.classList.add('g-pane');
   host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
@@ -220,7 +220,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
 
   // ---- the map
   function make(gl) {
-    const map = new gl.Map({ container: box, style: styleOf(), center: [0, 20], zoom: far(), attributionControl: false, fadeDuration: 0, scrollZoom: false, dragRotate: false, pitchWithRotate: false, keyboard: false, maxPitch: 60 });
+    const map = new gl.Map({ container: box, style: styleOf(), center: [0, 20], zoom: far(), attributionControl: false, fadeDuration: 0, ...(ratio ? { pixelRatio: ratio } : {}), scrollZoom: false, dragRotate: false, pitchWithRotate: false, keyboard: false, maxPitch: 60 });
     map.touchZoomRotate.disableRotation();
     // The credits the map's licences ask for are folded behind their small button (asked for, Nov 2026: no line of text on the map).
     map.on('idle', () => { host.dataset.idle = '1'; }); map.on('dataloading', () => { host.dataset.idle = '0'; });
@@ -449,7 +449,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     S.raf = 0;
     // `o` is set only by film mode (site/film/): it tells the frame everything, so nothing eases by the clock
     // and the same `o` always draws the same picture.
-    const o = S.over, dt = o ? o.dt : Math.min(0.05, Math.max(0.001, (now - S.then) / 1000)); S.then = now;
+    // The video export (site/export.js) says only where the reader is and how long a frame lasts (`o.auto`):
+    // the rest follows as it does for a reader, so the film shows what play shows. `d` is film mode's full say.
+    const o = S.over, d = o && !o.auto ? o : null, dt = o ? o.dt : Math.min(0.05, Math.max(0.001, (now - S.then) / 1000)); S.then = now;
     const still = calm(), snap = still || !!o, goal = o ? o.pos : S.cur + S.frac;
     let busy = false;
     // The reader's place follows the page's a moment behind, so a jump to a far entry is travelled, not cut to.
@@ -461,15 +463,15 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     // camera has left its place behind.
     // In space nothing else is in sight, so the next card is on its way sooner and the last one gone later.
     const early = 0.2;
-    const c = o ? o.c : Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
-    if (c !== S.now || (o && o.stage !== S.stage)) {
+    const c = d ? d.c : Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
+    if (c !== S.now || (d && d.stage !== S.stage)) {
       S.now = c;
-      S.stage = o ? o.stage : S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
+      S.stage = d ? d.stage : S.mode === 'full' && !o ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
       pins(); markShelf(); build(c);
     }
 
     // The stage: the map dims for an entry with no place, and goes out of sight for space.
-    const dim = o ? o.dim : toward(S.dimv, S.stage === 'dim' ? 1 : 0, still ? 1 : dt * 3), sp = o ? o.sp : toward(S.spv, S.stage === 'space' ? 1 : 0, still ? 1 : dt * 2.2);
+    const dim = d ? d.dim : toward(S.dimv, S.stage === 'dim' ? 1 : 0, still ? 1 : dt * 3), sp = d ? d.sp : toward(S.spv, S.stage === 'space' ? 1 : 0, still ? 1 : dt * 2.2);
     if (dim !== S.dimv || sp !== S.spv || S.styled == null) {
       S.dimv = dim; S.spv = sp; S.styled = 1; busy = true;
       box.style.opacity = (1 - sp).toFixed(3); box.style.pointerEvents = sp > 0.5 ? 'none' : '';
@@ -477,13 +479,13 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       sky.style.opacity = sp.toFixed(3); host.style.setProperty('--sp', sp.toFixed(3));
     }
     if (S.ready && !S.bare && sp < 0.995) {
-      const cam = o ? o.cam : camAt(S.pos);
+      const cam = d ? d.cam : camAt(S.pos);
       // While play rests at a place (a line is being said) the map does not stand still: it comes slowly
       // closer and glides a little east, like a camera held on a subject, and gives that back as it travels
       // on (asked for, Nov 2026: "it feels very static", "more like the video"). North stays up, nothing
       // swings, and a pause stops it dead. `DRIFT` is how far: a third of a zoom level and 5 % of the view.
-      if (cam && !o && !still) {
-        if (S.playing && Math.abs(speed) < 0.02) { S.drift = (S.drift || 0) + dt; busy = true; }
+      if (cam && !d && !still) {
+        if ((S.playing || o) && Math.abs(speed) < 0.02) { S.drift = (S.drift || 0) + dt; busy = true; }
         else if (S.drift && Math.abs(speed) >= 0.02) { S.drift = Math.max(0, S.drift - dt * 6); busy = true; }
         if (S.drift) {
           const k = 1 - Math.exp(-S.drift / DRIFT_SECS);
@@ -491,12 +493,13 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
           cam.center = [cam.center[0] + (360 / 2 ** cam.zoom) * DRIFT_PAN * k, cam.center[1]];
         }
       }
+      if (cam && o && o.pad) cam.padding = o.pad;
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
-      if (o) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
+      if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
     if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
-      S.warp = still ? 0 : o ? o.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
+      S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);
       if (S.warp) busy = true;
     }
@@ -511,10 +514,10 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       // and place it had, until the reader moves on by hand.
       const held = !S.playing && S.hold && S.hold.c === c && Math.abs(S.hold.pos - S.pos) < 0.004;
       if (o || ((S.playing || held) && !still)) {
-        const last = c >= S.steps.length - 1, a = o ? o.a : clamp01((g + early) / TURN), z = o ? o.z : last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
+        const last = c >= S.steps.length - 1, a = d ? d.a : clamp01((g + early) / TURN), z = d ? d.z : last ? 0 : clamp01((g - (1 - early - TURN)) / TURN);
         vis = Math.min(a, 1 - z);
         if (!S.phone || S.stage === 'space') { scale = 0.82 + 0.18 * (1 - (1 - a) ** 2) + 0.45 * z * z; drop = 0.24 * z * z * host.clientHeight; }
-        grow = 0.97 + 0.05 * (o ? o.g : clamp01(g + early)) + 0.2 * z * z;
+        grow = 0.97 + 0.05 * (d ? d.g : clamp01(g + early)) + 0.2 * z * z;
         if (S.playing) S.hold = { c, pos: S.pos };
       } else if (!held) S.hold = null;
     }
@@ -656,6 +659,6 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
     zoom: () => (S.map ? S.map.getZoom() : null),
     // For film mode (site/film/) only: one frame drawn now from what `o` says, and what it needs to say it.
     drive(o) { S.over = o; if (S.raf) K.caf(S.raf); S.raf = 0; frame(K.now()); },
-    film: () => ({ map: S.ready ? S.map : null, lands: !!S.lands, far: far(), open: S.open, cams: S.cam }),
+    film: () => ({ sp: S.spv || 0, dim: S.dimv || 0, map: S.ready ? S.map : null, lands: !!S.lands, far: far(), open: S.open, cams: S.cam }),
   };
 }

@@ -57,7 +57,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | Voiceover (a timeline told aloud: the script, the voices, the speech made in the browser, how play waits for a line) | `site/voice.js` (the voices, the speaker and the player), `site/account.js` (making one), `site/app.js` (`tell()`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
-| Export video (the timeline drawn and encoded into one file in the browser: video, voiceover, or both) | `site/export.js`, `exportVideo()` in `site/app.js`, `videoMenu()` in `site/account.js`, then `tests/export.test.mjs` | |
+| Export video (the timeline drawn and encoded into one file in the browser: video, voiceover, or both; landscape, vertical or square; on the globe or in full view) | `site/export.js`, `exportVideo()` in `site/app.js`, `videoMenu()` in `site/account.js`, then `tests/export.test.mjs` | |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
 | The globe (the timeline on the Earth, the only way it is drawn): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
@@ -356,6 +356,26 @@ How the page is put together:
   and the voice of This device cannot be saved to a file. Exact frames of the page itself are film mode's job
   (`docs/FILM_MODE.md`). Generate voiceover is two steps (asked for): the script, then the voice made for every
   line at once (`record()` in `account.js`), so play never waits.
+- **Voiceover and export, round 3 (Nov 2026, asked for), which replaces what the points above say where they
+  differ.** The chip by play is a person speaking (`#vo-chip`, no word; "Just some symbols like some person
+  speaking"), with the speed beside it when it is not 1x and a dot that is lit when every line is made. A press
+  opens a small menu over it (`#vo-menu`): Voiceover, Subtitles, Speed and Faster voice. Those rows left the
+  settings ("remove that play speed ... from the settings. Just have it in the side of voiceover"); on a
+  timeline with no voiceover the chip shows only the speed. **Any single view can have a voiceover**, not only
+  the reader's own ("for the existing views, we should be able to generate the voiceover"): for a timeline that
+  is not a row of the reader's, the script is kept in this browser alone (`cg-vo:<view>`, `holder()` in
+  `site/account.js`, `localVoice()` in `site/app.js`); writing it still needs a signed-in reader, since it is
+  one of the day's requests. **Export** asks, in this order: What (video with voiceover, video only, voiceover
+  only), Format (`SHAPES`: Landscape 16:9, Vertical 9:16, Square 1:1; "the first important thing is the
+  format"), Scene (Globe or Full view; "we should see the option to export in full view or as a globe"),
+  Subtitles and Quality (1080p or 720p); the choices are kept in `cg-export`. For the globe, `stageGlobe()` in
+  `site/export.js` runs the page's own `createGlobe()` on a stage out of sight and tells it for each frame only
+  where the reader is (`drive({ auto: true, dt, pos, pad })`: unlike film mode's full say, the camera, pins,
+  trail, drift and the dimming for an entry with no place follow as they do in play); the frame is the map's
+  canvas with the card drawn over it on a plate, at the right of a wide frame and at the foot of a tall or
+  square one (`layout()`). `posAt()` says where the reader is at a time: travelling in the first `MOVE` seconds
+  of a scene, then at rest. A map that does not finish loading in its time is not waited for again until it
+  has, so the export never hangs on a tile.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

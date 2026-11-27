@@ -10,7 +10,7 @@
 //
 // The first half is plain functions with tests (tests/export.test.mjs).
 
-export const FPS = 30, W = 1920, H = 1080, RATE = 48000;
+export const FPS = 30, RATE = 48000;
 const MUXER = 'https://cdn.jsdelivr.net/npm/mp4-muxer@5.2.1/build/mp4-muxer.mjs';
 // With no voice an entry is up this long; with one, as long as its line and a breath.
 export const SILENT = 4.2, LEAD = 0.7, GAP = 0.6, FADE = 0.6;
@@ -107,77 +107,177 @@ async function mix({ total, cues, sounds, music, voiced }) {
   return ctx.startRendering();
 }
 
-// ---- the picture: one frame at time `t`.
-function painter(cv, { title, steps, scenes, fonts, subsOf }) {
-  const c = cv.getContext('2d'), serif = fonts.serif, sans = fonts.sans;
+// ---- the shape of the film. Asked for, Nov 2026: "the first important thing is the format". Three shapes,
+// each at 1080 or 720 on its short side: wide for a screen or YouTube, tall for a phone, square for a feed.
+export const SHAPES = { wide: [16, 9], tall: [9, 16], square: [1, 1] };
+export function sizeOf(shape = 'wide', short = 1080) {
+  const [a, b] = SHAPES[shape] || SHAPES.wide, k = short / Math.min(a, b), even = (n) => Math.round(n / 2) * 2;
+  return { w: even(a * k), h: even(b * k) };
+}
+// Where the reader is among the entries at time `t`, for the globe: at rest on the entry of the scene, having
+// travelled there from the one before in the scene's first `MOVE` seconds (-1 is the whole globe, before the first).
+export const MOVE = 2.4;
+export function posAt(scenes, t) {
+  const { i, into } = sceneAt(scenes, t), s = scenes[i], m = Math.min(MOVE, (s.t1 - s.t0) * 0.45);
+  return i - 1 + Math.min(1, Math.max(0, into / m));
+}
+// Where things stand in a frame of `w` by `h`. On the globe the card keeps to one side (the right of a wide
+// frame, the foot of a tall or square one) and the map is asked to keep its place clear of it (`pad`, as parts
+// of the frame).
+export function layout(w, h, globe) {
+  const u = Math.min(w, h) / 1080, wide = w > h * 1.2, m = Math.round(70 * u);
+  const head = Math.round((wide ? 150 : 250) * u), foot = Math.round((wide ? 120 : 190) * u);
+  if (!globe) return { u, wide, m, card: { x: m, y: head, w: w - 2 * m, h: h - head - foot }, pad: null };
+  return wide
+    ? { u, wide, m, card: { x: Math.round(w * 0.53), y: head, w: Math.round(w * 0.47) - m, h: h - head - foot }, pad: { right: 0.44, bottom: 0 } }
+    : { u, wide, m, card: { x: m, y: Math.round(h * 0.5), w: w - 2 * m, h: Math.round(h * 0.5) - foot }, pad: { right: 0, bottom: w === h ? 0.5 : 0.46 } };
+}
+
+// ---- the picture: one frame at time `t`. `map` (when the film shows the globe) gives the map's own canvas
+// for this frame and how far the map has gone out of sight for an entry with no place.
+function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
+  const c = cv.getContext('2d'), serif = fonts.serif, sans = fonts.sans, W = cv.width, H = cv.height;
+  const lay = layout(W, H, globe), u = lay.u, px = (n) => Math.round(n * u);
+  const sp = (v) => { try { c.letterSpacing = v + 'px'; } catch (e) { /* older canvas */ } };
   // The stars: fixed places, drawn a little further left as time goes, the near ones quicker.
   let seed = 7; const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
   const stars = Array.from({ length: 260 }, () => ({ x: rnd(), y: rnd(), z: 0.3 + rnd() * 0.7, r: 0.5 + rnd() * 1.3 }));
   const wraps = new Map();
-  function card(st, a, into) {
+  const rounded = (x, y, w, h, r) => { c.beginPath(); if (c.roundRect) c.roundRect(x, y, w, h, r); else c.rect(x, y, w, h); };
+  function card(st, a, into, plate) {
     if (a <= 0.003) return;
+    const R = lay.card, pad = plate ? px(34) : 0, tw = Math.min(R.w - 2 * pad, px(plate ? 900 : 1180));
+    const nameSize = px(plate ? 58 : 76), sumSize = px(plate ? 25 : 27), lineH = Math.round(sumSize * 1.48), kindSize = px(21);
+    c.font = `400 ${sumSize}px ${sans}`;
+    if (!wraps.has(st.id)) wraps.set(st.id, wrap((s) => c.measureText(s).width, st.summary, tw, st.bmp ? 3 : 5));
+    const rows = wraps.get(st.id), textH = kindSize + Math.round(nameSize * 1.22) + (rows.length ? px(14) + rows.length * lineH : 0);
+    const gap = px(40), picMax = st.bmp ? Math.max(0, R.h - 2 * pad - textH - gap) : 0;
+    let pw = 0, ph = 0;
+    if (st.bmp && picMax > px(120)) { const k = Math.min(tw / st.bmp.width, picMax / st.bmp.height); pw = st.bmp.width * k; ph = st.bmp.height * k; }
+    const total = (ph ? ph + gap : 0) + textH + 2 * pad, cx = R.x + R.w / 2;
+    const rise = (1 - Math.min(1, into / FADE)) * px(26);
+    let y = R.y + (R.h - total) / 2 + rise;
     c.save(); c.globalAlpha = a;
-    const rise = (1 - Math.min(1, into / FADE)) * 26, cx = W / 2;
-    let y = 150 + rise;
-    const boxW = 1060, boxH = st.bmp ? 520 : 0;
-    if (st.bmp) {
+    if (plate) {
+      // On the map the card stands on a plain plate, as it does on the page.
+      const bw = Math.max(pw, tw) + 2 * pad;
+      c.fillStyle = 'rgba(7,9,14,.78)'; rounded(cx - bw / 2, y, bw, total, px(16)); c.fill();
+      c.strokeStyle = 'rgba(255,255,255,.09)'; c.lineWidth = 1; c.stroke();
+    }
+    y += pad;
+    if (ph) {
       // The whole picture, never cropped, coming slowly closer while it is up.
-      const k = Math.min(boxW / st.bmp.width, boxH / st.bmp.height) * (1 + 0.035 * Math.min(1, into / 12));
-      const w = st.bmp.width * k, h = st.bmp.height * k;
-      c.shadowColor = 'rgba(0,0,0,.55)'; c.shadowBlur = 50; c.shadowOffsetY = 18;
-      c.drawImage(st.bmp, cx - w / 2, y + (boxH - h) / 2, w, h);
-      c.shadowColor = 'transparent';
-      y += boxH + 50;
-    } else y += 210;
-    c.textAlign = 'center'; c.textBaseline = 'alphabetic';
-    c.font = `600 21px ${sans}`; c.fillStyle = st.rgb || '#e8b04a';
+      const z = 1 + 0.035 * Math.min(1, into / 12), w = pw * z, h = ph * z;
+      c.save(); rounded(cx - pw / 2, y, pw, ph, px(6)); if (plate) c.clip();
+      if (!plate) { c.shadowColor = 'rgba(0,0,0,.55)'; c.shadowBlur = px(50); c.shadowOffsetY = px(18); }
+      c.drawImage(st.bmp, cx - w / 2, y + (ph - h) / 2, w, h);
+      c.restore();
+      y += ph + gap;
+    }
+    c.textBaseline = 'alphabetic'; c.textAlign = 'left';
     const kind = String(st.kind || '').toUpperCase(), when = st.when || '';
-    try { c.letterSpacing = '2px'; } catch (e) { /* older canvas */ }
-    const kw = c.measureText(kind).width; try { c.letterSpacing = '0px'; } catch (e) { /* older canvas */ }
-    c.font = `400 21px ${sans}`; const ww = when ? c.measureText(when).width + 18 : 0;
-    c.textAlign = 'left';
-    c.font = `600 21px ${sans}`; try { c.letterSpacing = '2px'; } catch (e) { /* older canvas */ } c.fillText(kind, cx - (kw + ww) / 2, y); try { c.letterSpacing = '0px'; } catch (e) { /* older canvas */ }
-    c.font = `400 21px ${sans}`; c.fillStyle = 'rgba(255,255,255,.72)'; c.fillText(when, cx - (kw + ww) / 2 + kw + 18, y);
+    c.font = `600 ${kindSize}px ${sans}`; sp(2); const kw = c.measureText(kind).width; sp(0);
+    c.font = `400 ${kindSize}px ${sans}`; const ww = when ? c.measureText(when).width + px(18) : 0;
+    y += kindSize;
+    c.font = `600 ${kindSize}px ${sans}`; c.fillStyle = st.rgb || '#e8b04a'; sp(2); c.fillText(kind, cx - (kw + ww) / 2, y); sp(0);
+    c.font = `400 ${kindSize}px ${sans}`; c.fillStyle = 'rgba(255,255,255,.72)'; c.fillText(when, cx - (kw + ww) / 2 + kw + px(18), y);
     c.textAlign = 'center';
-    y += 78; c.font = `400 76px ${serif}`; c.fillStyle = '#f4efe6';
-    let name = st.name; while (c.measureText(name).width > 1500 && name.length > 8) name = name.slice(0, -2); c.fillText(name === st.name ? name : name + '…', cx, y);
-    y += 56; c.font = `400 27px ${sans}`; c.fillStyle = 'rgba(255,255,255,.82)';
-    if (!wraps.has(st.id)) wraps.set(st.id, wrap((s) => c.measureText(s).width, st.summary, 1080, st.bmp ? 3 : 5));
-    for (const ln of wraps.get(st.id)) { c.fillText(ln, cx, y); y += 40; }
+    y += Math.round(nameSize * 1.1); c.fillStyle = '#f4efe6';
+    let size = nameSize; c.font = `400 ${size}px ${serif}`;
+    while (c.measureText(st.name).width > tw && size > nameSize * 0.55) { size -= 2; c.font = `400 ${size}px ${serif}`; }
+    let name = st.name; while (c.measureText(name).width > tw && name.length > 8) name = name.slice(0, -2);
+    c.fillText(name === st.name ? name : name + '…', cx, y);
+    y += px(14) + Math.round(sumSize * 1.1); c.font = `400 ${sumSize}px ${sans}`; c.fillStyle = 'rgba(255,255,255,.84)';
+    for (const ln of rows) { c.fillText(ln, cx, y); y += lineH; }
     c.restore();
   }
-  return function draw(t) {
+  return function draw(t, map) {
     const g = c.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#06080f'); g.addColorStop(1, '#0c1120');
     c.globalAlpha = 1; c.fillStyle = g; c.fillRect(0, 0, W, H);
-    const glow = c.createRadialGradient(W * 0.2, H * 0.1, 0, W * 0.2, H * 0.1, W * 0.7); glow.addColorStop(0, 'rgba(232,176,74,.07)'); glow.addColorStop(1, 'rgba(232,176,74,0)');
+    const glow = c.createRadialGradient(W * 0.2, H * 0.1, 0, W * 0.2, H * 0.1, Math.max(W, H) * 0.7); glow.addColorStop(0, 'rgba(232,176,74,.07)'); glow.addColorStop(1, 'rgba(232,176,74,0)');
     c.fillStyle = glow; c.fillRect(0, 0, W, H);
     for (const s of stars) {
       const x = (((s.x - t * 0.006 * s.z) % 1) + 1) % 1;
-      c.globalAlpha = 0.25 + 0.6 * s.z; c.fillStyle = '#fff'; c.beginPath(); c.arc(x * W, s.y * H, s.r * s.z, 0, 6.3); c.fill();
+      c.globalAlpha = 0.25 + 0.6 * s.z; c.fillStyle = '#fff'; c.beginPath(); c.arc(x * W, s.y * H, s.r * s.z * u, 0, 6.3); c.fill();
     }
     c.globalAlpha = 1;
-    const { i, into, fade } = sceneAt(scenes, t), st = steps[i];
-    if (fade > 0 && i > 0) card(steps[i - 1], fade, 99);
-    card(st, 1 - fade, into);
-    // The heading and the period of the entry in front.
-    c.textBaseline = 'alphabetic'; c.textAlign = 'center'; c.font = `400 44px ${serif}`; c.fillStyle = 'rgba(244,239,230,.92)'; c.fillText(title, W / 2, 86);
-    c.textAlign = 'right'; c.font = `400 84px ${serif}`; c.fillStyle = 'rgba(244,239,230,.9)'; c.fillText(st.mark || '', W - 70, 130);
+    // The map, under everything else: out of sight for an entry with no place, dimmer for one among placed ones.
+    const shown = map && map.canvas ? 1 - map.sp : 0;
+    if (shown > 0.004) {
+      c.globalAlpha = shown; c.drawImage(map.canvas, 0, 0, W, H);
+      if (map.dim > 0.01) { c.globalAlpha = shown * 0.5 * map.dim; c.fillStyle = '#05070c'; c.fillRect(0, 0, W, H); }
+      // A soft shade at the top and the foot, so the words read over any land.
+      c.globalAlpha = shown;
+      const top = c.createLinearGradient(0, 0, 0, px(240)); top.addColorStop(0, 'rgba(5,7,12,.8)'); top.addColorStop(1, 'rgba(5,7,12,0)'); c.fillStyle = top; c.fillRect(0, 0, W, px(240));
+      const low = c.createLinearGradient(0, H - px(200), 0, H); low.addColorStop(0, 'rgba(5,7,12,0)'); low.addColorStop(1, 'rgba(5,7,12,.8)'); c.fillStyle = low; c.fillRect(0, H - px(200), W, px(200));
+      c.globalAlpha = 1;
+    }
+    const { i, into, fade } = sceneAt(scenes, t), st = steps[i], plate = shown > 0.5;
+    if (fade > 0 && i > 0) card(steps[i - 1], fade, 99, plate);
+    card(st, 1 - fade, into, plate);
+    // The heading and the period of the entry in front: side by side on a wide frame, one over the other else.
+    c.textBaseline = 'alphabetic'; c.textAlign = 'center';
+    let ts = px(44); c.font = `400 ${ts}px ${serif}`;
+    while (c.measureText(title).width > W - (lay.wide ? px(620) : 2 * lay.m) && ts > px(26)) { ts -= 2; c.font = `400 ${ts}px ${serif}`; }
+    c.fillStyle = 'rgba(244,239,230,.92)'; c.fillText(title, W / 2, lay.wide ? px(86) : px(96));
+    if (lay.wide) { c.textAlign = 'right'; c.font = `400 ${px(84)}px ${serif}`; c.fillStyle = 'rgba(244,239,230,.9)'; c.fillText(st.mark || '', W - lay.m, px(130)); }
+    else { c.font = `400 ${px(92)}px ${serif}`; c.fillStyle = 'rgba(244,239,230,.9)'; c.fillText(st.mark || '', W / 2, px(200)); }
     // How far along, at the foot.
-    const total = scenes[scenes.length - 1].t1, x0 = 70, x1 = W - 70, yb = H - 46;
+    const total = scenes[scenes.length - 1].t1, x0 = lay.m, x1 = W - lay.m, yb = H - px(lay.wide ? 46 : 96);
     c.fillStyle = 'rgba(255,255,255,.14)'; c.fillRect(x0, yb, x1 - x0, 2);
     c.fillStyle = st.rgb || '#e8b04a'; c.fillRect(x0, yb, (x1 - x0) * Math.min(1, t / total), 2);
-    for (const s of scenes) { c.globalAlpha = t >= s.t0 ? 1 : 0.35; c.beginPath(); c.arc(x0 + (x1 - x0) * (s.t0 / total), yb + 1, 4, 0, 6.3); c.fill(); }
+    if (scenes.length <= 60) for (const s of scenes) { c.globalAlpha = t >= s.t0 ? 1 : 0.35; c.beginPath(); c.arc(x0 + (x1 - x0) * (s.t0 / total), yb + 1, px(4), 0, 6.3); c.fill(); }
     c.globalAlpha = 1;
     const sub = subsOf ? subsOf(t) : '';
     if (sub) {
-      c.textAlign = 'center'; c.font = `500 30px ${sans}`;
-      const rows = wrap((s) => c.measureText(s).width, sub, 1300, 2);
+      const fs = px(lay.wide ? 30 : 34); c.textAlign = 'center'; c.font = `500 ${fs}px ${sans}`;
+      const rows = wrap((s) => c.measureText(s).width, sub, Math.min(W - 2 * lay.m - px(36), px(1300)), lay.wide ? 2 : 4), lh = Math.round(fs * 1.47);
       rows.forEach((r, k) => {
-        const w = c.measureText(r).width + 36, y = H - 92 - (rows.length - 1 - k) * 44;
-        c.fillStyle = 'rgba(0,0,0,.6)'; c.fillRect(W / 2 - w / 2, y - 31, w, 42);
+        const w = c.measureText(r).width + px(36), y = yb - px(46) - (rows.length - 1 - k) * lh;
+        c.fillStyle = 'rgba(0,0,0,.66)'; c.fillRect(W / 2 - w / 2, y - Math.round(fs * 1.03), w, Math.round(fs * 1.4));
         c.fillStyle = '#fff'; c.fillText(r, W / 2, y);
       });
     }
+  };
+}
+
+// The globe of the film: the page's own globe code on a stage out of sight, told where the reader is for each
+// frame, so the film shows the camera, the pins and the way between places as play does (asked for, Nov 2026:
+// "even in the export, we should see the option to export in full view or as a globe"). `make(host, opts)` is
+// lent by the page. Gives null when no entry has a place or the map cannot be had.
+async function stageGlobe(make, steps, w, h, lay) {
+  if (!make || !steps.some((s) => s.place)) return null;
+  const host = document.createElement('div');
+  host.className = 'g-pane'; host.setAttribute('aria-hidden', 'true');
+  host.style.cssText = `position: fixed; left: -20000px; top: 0; width: ${w / 2}px; height: ${h / 2}px; pointer-events: none; contain: strict;`;
+  document.body.appendChild(host);
+  const clock = { t: 0, now: () => clock.t * 1000, raf: () => 1, caf: () => {} };
+  const globe = make(host, { clock, ratio: 2, pane: true });
+  host.querySelector('.g-map').style.cssText = 'position: absolute; inset: 0;';
+  globe.show(steps);
+  const until = Date.now() + 20000;
+  while (!(globe.film().map && globe.film().lands) && Date.now() < until) await new Promise((r) => setTimeout(r, 120));
+  const map = globe.film().map;
+  if (!map) { globe.remove(); return null; }
+  const idle = (ms) => new Promise((done) => { const to = setTimeout(() => done(false), ms); map.once('idle', () => { clearTimeout(to); done(true); }); map.triggerRepaint(); });
+  let late = false;
+  const pad = { top: 0, left: 0, right: Math.round((w / 2) * lay.pad.right), bottom: Math.round((h / 2) * lay.pad.bottom) };
+  return {
+    // One frame: the map is put where the reader is, given a moment for what it still has to fetch (longer
+    // when the camera rests, so a place is never shown half drawn), and drawn now.
+    async at(t, pos, resting) {
+      clock.t = t;
+      globe.drive({ auto: true, dt: 1 / FPS, pos, pad });
+      // A map that did not finish in its time (a tile that never comes) is not waited for again until it has
+      // finished by itself, so one missing tile cannot hold every frame.
+      const ready = map.loaded() && map.areTilesLoaded();
+      if (ready) late = false;
+      else if (!late) late = !(await idle(resting ? 5000 : 900));
+      map.redraw();
+      const f = globe.film();
+      return { canvas: map.getCanvas(), sp: f.sp, dim: f.dim };
+    },
+    remove() { globe.remove(); },
   };
 }
 
@@ -185,7 +285,9 @@ function painter(cv, { title, steps, scenes, fonts, subsOf }) {
 // ({ id, name, kind, when, summary, img, mark, rgb }); `voice` is { voice, lines } or null; `speaker` makes a
 // line's sound; `step(what, part)` is told how far it has come (what: 'voice', 'sound', 'pictures', 'video',
 // 'saving'; part 0 to 1); `stop()` says the reader gave up. Returns the name of the file saved.
-export async function exportFilm({ kind, title, steps, voice, speaker, music, fonts, subs = false, step = () => {}, stop = () => false }) {
+// `shape` is 'wide', 'tall' or 'square' and `short` 1080 or 720; `scene` is 'globe' or 'full'; `makeGlobe` is lent by the page.
+export async function exportFilm({ kind, title, steps, voice, speaker, music, fonts, subs = false, shape = 'wide', short = 1080, scene = 'full', makeGlobe = null, step = () => {}, stop = () => false }) {
+  const { w: W, h: H } = sizeOf(shape, short);
   if (!steps.length) throw new Error('There is nothing on the timeline to export.');
   const voiced = kind !== 'video' && !!voice && voice.voice !== 'device' && voice.lines.length > 0;
   if (kind === 'voice' && !voiced) throw new Error(voice && voice.voice === 'device' ? 'The voice of This device cannot be saved to a file. Choose another voice first.' : 'This timeline has no voiceover yet.');
@@ -239,23 +341,30 @@ export async function exportFilm({ kind, title, steps, voice, speaker, music, fo
   // Then every frame, as fast as the encoder takes them.
   const cv = typeof OffscreenCanvas !== 'undefined' ? new OffscreenCanvas(W, H) : Object.assign(document.createElement('canvas'), { width: W, height: H });
   const subsOf = subs && voiced ? (t) => { const c = plan.cues.find((x) => t >= x.at && t < x.at + x.secs); return c ? texts.get(c.id) || '' : ''; } : null;
-  const draw = painter(cv, { title, steps: drawn, scenes: plan.scenes, fonts, subsOf });
+  const lay = layout(W, H, true);
+  step('map', 0);
+  const stage = scene === 'globe' ? await stageGlobe(makeGlobe, steps, W, H, lay).catch(() => null) : null;
+  const draw = painter(cv, { title, steps: drawn, scenes: plan.scenes, fonts, subsOf, globe: !!stage });
   const frames = Math.ceil(plan.total * FPS);
   for (let f = 0; f < frames; f++) {
     if (failed) throw failed;
     if (f % 15 === 0) { gone(); step('video', f / frames); await new Promise((r) => setTimeout(r)); }
     while (venc.encodeQueueSize > 6) await new Promise((r) => setTimeout(r, 4));
-    draw(f / FPS);
+    const t = f / FPS;
+    let map = null;
+    if (stage) { const sc = sceneAt(plan.scenes, t), s = plan.scenes[sc.i]; map = await stage.at(t, posAt(plan.scenes, t), sc.into >= Math.min(MOVE, (s.t1 - s.t0) * 0.45)); }
+    draw(t, map);
     const vf = new VideoFrame(cv, { timestamp: Math.round((f / FPS) * 1e6), duration: Math.round(1e6 / FPS) });
     venc.encode(vf, { keyFrame: f % (FPS * 2) === 0 }); vf.close();
   }
+  if (stage) stage.remove();
   step('saving', 0.5);
   await Promise.all([venc.flush(), aenc.flush()]);
   if (failed) throw failed;
   venc.close(); aenc.close();
   muxer.finalize();
   for (const s of drawn) if (s.bmp && s.bmp.close) s.bmp.close();
-  const name = fileOf(title, 'mp4');
+  const name = fileOf(title + (shape === 'wide' ? '' : ' ' + shape), 'mp4');
   save(new Blob([muxer.target.buffer], { type: 'video/mp4' }), name);
   step('saving', 1);
   return name;

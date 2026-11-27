@@ -2522,12 +2522,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // "Subtitles" writes each line at the foot while it is said (`cg-subs`). Only a road of one view is told.
   // ---- export video (site/export.js): the timeline on show made into a file in this browser, with one press.
   // The page only hands over what is on show: the entries in the order play meets them, the voiceover, the music.
-  function exportVideo(kind, step, stop) {
+  function exportVideo(o, step, stop) {
     const steps = [], seen = new Set();
     for (const p of road.gorder || []) if (!seen.has(p.t.id)) { seen.add(p.t.id); steps.push(stepOf(p)); }
     const css = getComputedStyle(document.documentElement);
     return exportFilm({
-      kind, steps, step, stop, speaker, voice: voiceNow(), subs: told.subs,
+      kind: o.kind, shape: o.shape, short: o.short, scene: o.scene, subs: !!o.subs, steps, step, stop, speaker, voice: voiceNow(),
+      makeGlobe: (host, opts) => createGlobe(host, { esc, calm: () => false, open() {}, goTo() {}, seek() {}, credit: null, ...opts }),
       title: L && L.lanes.length ? L.lanes.map((ln) => ln.view.name).join(' and ') : 'timeline',
       music: new URL(trackNow() || MUSIC, document.baseURI).href,
       fonts: { serif: css.getPropertyValue('--serif').trim() || 'Georgia, serif', sans: getComputedStyle(document.body).fontFamily || 'sans-serif' },

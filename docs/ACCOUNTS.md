@@ -153,8 +153,21 @@ changes; "Remove the voiceover" takes the words away. An entry without a line is
 
 While play travels, the line of the entry in front is said, the music plays softly under it, and play stops on
 each card until its line is said, then goes on to the next. A line that is not ready yet holds play at its card
-with "Preparing the voice" at the foot. "Voiceover" and "Subtitles" in the settings menu turn the voice off and
-write each line at the foot while it is said. Kokoro speaks English only.
+with "Preparing the voice" at the foot. The person speaking beside play opens a small menu: "Voiceover" and
+"Subtitles" turn the voice off and write each line at the foot while it is said, and "Speed" sets how fast play
+and the voice go. Kokoro speaks English only.
+
+A view that is not the reader's own (the editors', someone else's published timeline) can have a voiceover too:
+"Generate voiceover" is in its three dots. Its script is kept in the reader's browser alone, not on the server,
+so only they hear it, on that device. Writing it needs a signed-in reader and counts as one of the day's requests.
+
+## Export video
+
+"Export video" in the three dots makes a file on the reader's device; nothing is uploaded. It asks what to make
+(video with voiceover, video only, or the voiceover alone as a WAV), the format (Landscape 16:9, Vertical 9:16,
+Square 1:1), the scene (Globe, with the map travelling from place to place as in play, or Full view, the card
+among the stars), subtitles, and the quality (1080p, or 720p which is quicker). The voice of "This device" cannot
+be saved to a file.
 
 The function needs the secret `OPENROUTER_API_KEY`; `VOICE_SCRIPT_MODEL` names another model for the script.
 
