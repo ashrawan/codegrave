@@ -778,14 +778,14 @@ export function createAccount(app) {
     const first = app.first() || {}, count = app.told()?.entries.length || 0;
     // It always opens on the same choices (asked for, Nov 2026): Landscape, Default, the voiceover on where there is one, 1080p.
     const st = { voice: told, subs: false, shape: 'wide', scene: 'globe', short: 1080 };
-    const sw = (name, label, hint) => `<div class="ex-opt"><span><b>${label}</b><small data-hint="${name}">${hint}</small></span><button type="button" class="ex-sw" role="switch" data-sw="${name}" aria-label="${label}"><i></i></button></div>`;
+    const sw = (name, label, hint) => `<div class="ex-opt"><span><b>${label}</b><small data-hint="${name}">${hint}</small></span><button type="button" class="ex-tog" role="switch" data-sw="${name}" aria-label="${label}"><i></i></button></div>`;
     const d = modal(`<form class="ex">
       <div class="ex-prev" aria-hidden="true">
         <div class="ex-stage"><div class="ex-frame">
           <i class="ex-globe"><u></u></i>
           <span class="ex-title">${esc(cur?.title || 'Timeline')}</span><span class="ex-year">${esc(first.mark || '')}</span>
           <div class="ex-card">${first.img ? `<span class="ex-img" style="background-image: url('${esc(first.img)}')"></span>` : ''}<small>${esc(first.kind || 'Entry')}</small><b>${esc(first.name || 'The first entry')}</b><i></i><i></i></div>
-          <span class="ex-sub">The line being said is written here</span>
+          <span class="ex-line">The line being said is written here</span>
           <span class="ex-bar"><u></u></span>
         </div></div>
         <p class="ex-meta"></p>

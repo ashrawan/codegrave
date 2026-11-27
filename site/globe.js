@@ -535,7 +535,9 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane, c
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
       if (d) light(o.way && o.way.a, o.way && o.way.b, o.way ? o.way.e : 0, o.way ? o.way.key : '', o.way && o.way.c); else trail(S.pos);
     }
-    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() - xAt(S.pos)).toFixed(1)}px)`;
+    // The dot of the entry in front stands just after the marker, not under it (asked for, Nov 2026: the line "should
+    // be on the left, and the first dot ... a little bit right after that").
+    if (!shelf.hidden) track.style.transform = `translateX(${(nowAt() + (S.phone ? 12 : 16) - xAt(S.pos)).toFixed(1)}px)`;
     if (sp > 0.005) {
       S.warp = still ? 0 : d ? d.warp : toward(S.warp, Math.max(-1.2, Math.min(1.2, speed * 0.34)), dt * 4);
       stars(dt);
