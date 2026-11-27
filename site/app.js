@@ -12,7 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice, createSpeaker, MODEL_MB, isSlow } from './voice.js';
+import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk } from './voice.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -2520,8 +2520,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // starts; a line not made yet holds play at its card, with "Preparing the voice" at the foot. "Voiceover" in the three-dot menu turns it off (`cg-voice` in this browser), and
   // "Subtitles" writes each line at the foot while it is said (`cg-subs`). Only a road of one view is told.
   const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
-  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); drawSubs(); });
+  const speaker = createSpeaker((s) => { if ('loading' in s) { told.load = s.loading; told.bytes = s.bytes; } if (s.ready || s.failed) told.load = null; if ('speed' in s) told.slow = isSlow(s.speed); if (s.engine) drawTold(); drawSubs(); });
   told.slow = isSlow();
+  gpuOk().then((ok) => { told.gpuOk = ok; drawTold(); });
   const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
   const voiceNow = () => (state.views.length === 1 && viewById.get(state.views[0])?.voice) || null;
   const telling = () => told.on && sound.on && voice.any();
@@ -2530,7 +2531,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // or not: play waits for it (asked for, Nov 2026: "so user know what's happening").
     const loading = told.load != null && told.load < 1 && told.on && voice.any();
     const el = $('subs'), wait = loading || (told.wait && play.on && telling()), on = wait || (told.subs && !!told.text);
-    if (loading) el.textContent = `Downloading the voice, first time only: ${Math.round(told.load * 100)}% of ${Math.round((told.bytes || 0) / 1e6) || MODEL_MB} MB`;
+    if (loading && told.load >= 0.95) el.textContent = 'Getting the voice ready…';
+    else if (loading) el.textContent = `Downloading the ${speaker.gpu() ? 'faster ' : ''}voice, first time only: ${Math.round(told.load * 100)}% of ${Math.round((told.bytes || 0) / 1e6) || MODEL_MB} MB`;
     else if (wait) el.textContent = told.slow ? 'This device makes the voice slowly, so play waits at each card until its line is ready.' : 'Preparing the voice…';
     else if (on) el.textContent = told.text;
     el.classList.toggle('on', on);
@@ -2555,6 +2557,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   function drawTold() {
     const any = voice.any();
     $('voice-row').hidden = $('subs-row').hidden = !any;
+    $('gpu-row').hidden = !any || !told.gpuOk;
+    for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
     for (const b of $('voice-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.on));
     for (const b of $('subs-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === told.subs));
     if (!telling()) { voice.stop(); told.cue = undefined; }
@@ -2771,6 +2775,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       const b = e.target.closest('button[data-v]');
       if (!b) return;
       told.on = b.dataset.v === 'on'; store.set('cg-voice', told.on ? '1' : '0'); drawTold();
+    });
+    $('gpu-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (b) speaker.engine(b.dataset.v === 'on');
     });
     $('subs-row').addEventListener('click', (e) => {
       e.stopPropagation();

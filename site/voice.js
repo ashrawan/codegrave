@@ -27,7 +27,24 @@ const KEEP = 'cg-voice-lines';
 // made, and the page says so (asked for, Nov 2026: "just show a warning").
 const SPEED = 'cg-voice-speed';
 export const SLOW = 1.2;
-export function speedOf() { try { const v = Number(localStorage.getItem(SPEED)); return v > 0 ? v : null; } catch (e) { return null; } }
+export function speedOf(gpu = gpuOn()) { try { const v = Number(localStorage.getItem(SPEED + (gpu ? '-gpu' : ''))); return v > 0 ? v : null; } catch (e) { return null; } }
+// The faster voice (asked for, Nov 2026: "for the users who have a good PC, like good internet"): the same model
+// at full precision on the graphics card (WebGPU), a 326 MB download instead of 92 MB. It is offered only where
+// the browser has a real graphics adapter (`gpuOk()`), off by default, and the reader turns it on
+// (`cg-voice-gpu`). If it fails to load, the voice goes back to the processor by itself.
+export const GPU_MB = 326;
+const GPU = 'cg-voice-gpu';
+export function gpuOn() { try { return localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
+let gpuAsk = null;
+export function gpuOk() {
+  return (gpuAsk ??= (async () => {
+    try {
+      if (typeof navigator === 'undefined' || !navigator.gpu) return false;
+      const a = await navigator.gpu.requestAdapter({ powerPreference: 'high-performance' });
+      return !!a && !(a.isFallbackAdapter || a.info?.isFallbackAdapter);
+    } catch (e) { return false; }
+  })());
+}
 export const isSlow = (r = speedOf()) => r != null && r > SLOW;
 
 export const isVoice = (v) => VOICES.some(([id]) => id === v);
@@ -56,7 +73,7 @@ export function madeOrder(ids, from) {
 // ---- making the sound. One worker holds Kokoro and makes one line at a time; a line asked for `now` goes to
 // the front. `status(s)` is told how it goes: { loading: 0..1 }, { ready: true } or { failed: message }.
 export function createSpeaker(status = () => {}) {
-  let worker = null, busy = false, booted = false;
+  let worker = null, busy = false, booted = false, gpu = gpuOn();
   const queue = [], made = new Map();
   let store = null;
   const opened = () => (store ??= (typeof caches !== 'undefined' ? caches.open(KEEP).catch(() => null) : Promise.resolve(null)));
@@ -68,7 +85,9 @@ export function createSpeaker(status = () => {}) {
       onmessage = async ({ data: { id, text, voice } }) => {
         try {
           // One load, whoever asks first; the others wait for it.
-          loading ??= KokoroTTS.from_pretrained('${MODEL}', { dtype: 'q8', device: 'wasm', progress_callback: (p) => {
+          // The graphics card is asked first, so a device without one does not download the large model.
+          ${gpu ? "if (!loading && !(await navigator.gpu?.requestAdapter({ powerPreference: 'high-performance' }))) throw new Error('No graphics adapter');" : ''}
+          loading ??= KokoroTTS.from_pretrained('${MODEL}', { dtype: '${gpu ? 'fp32' : 'q8'}', device: '${gpu ? 'webgpu' : 'wasm'}', progress_callback: (p) => {
             if (p.status === 'progress' && p.total) { files.set(p.file, [p.loaded, p.total]); let a = 0, b = 0; for (const [x, y] of files.values()) { a += x; b += y; } postMessage({ loading: a / b, bytes: b }); }
           } });
           const tts = await loading;
@@ -82,6 +101,7 @@ export function createSpeaker(status = () => {}) {
     worker.onmessage = ({ data }) => {
       if ('loading' in data) return status({ loading: data.loading, bytes: data.bytes });
       if (data.ready) { if (!booted) { booted = true; status({ ready: true }); } return; }
+      if (data.error && gpu && !booted) return engine(false, true);
       if (data.id === 0) { if (data.error) { warmed = false; status({ failed: data.error }); } return; }
       const job = queue.find((j) => j.id === data.id);
       busy = false;
@@ -96,7 +116,7 @@ export function createSpeaker(status = () => {}) {
       }
       next();
     };
-    worker.onerror = (e) => { status({ failed: e.message || 'The voice could not be loaded.' }); for (const j of queue.splice(0)) j.no(new Error('no voice')); busy = false; };
+    worker.onerror = (e) => { if (gpu && !booted) return engine(false, true); status({ failed: e.message || 'The voice could not be loaded.' }); for (const j of queue.splice(0)) j.no(new Error('no voice')); busy = false; };
   }
   function next() {
     if (busy || !queue.length) return;
@@ -129,15 +149,28 @@ export function createSpeaker(status = () => {}) {
   let lines = 0;
   function timed(took, secs) {
     if (++lines < 2 || secs < 1) return;
-    const r = took / secs, was = speedOf();
+    const r = took / secs, was = speedOf(gpu);
     const now = was ? was * 0.6 + r * 0.4 : r;
-    try { localStorage.setItem(SPEED, now.toFixed(2)); } catch (e) {}
+    try { localStorage.setItem(SPEED + (gpu ? '-gpu' : ''), now.toFixed(2)); } catch (e) {}
     status({ speed: now });
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
   function warm() { if (warmed || booted) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
-  return { line, warm, ready: () => booted };
+  // Change between the processor and the graphics card: the worker starts again on the other model; lines
+  // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
+  function engine(on, failed = false) {
+    on = !!on;
+    try { localStorage.setItem(GPU, on ? '1' : '0'); } catch (e) {}
+    if (on === gpu && !failed) return;
+    gpu = on;
+    const was = warmed || booted;
+    if (worker) worker.terminate();
+    worker = null; busy = false; booted = false; warmed = false; lines = 0;
+    status({ engine: gpu ? 'gpu' : 'cpu', failed: failed ? 'The graphics card could not run the voice, so it uses the processor.' : undefined, speed: speedOf(gpu) });
+    if (queue.length) { boot(); next(); } else if (was) warm();
+  }
+  return { line, warm, engine, gpu: () => gpu, ready: () => booted };
 }
 
 // ---- playing it. `ctx()` gives the page's audio context once the reader has pressed play (null: no sound);

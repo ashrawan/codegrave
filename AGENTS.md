@@ -317,7 +317,11 @@ How the page is put together:
   does (`speaker.warm()`), and the foot and the dialog say how far it has come, first time only (asked for: "so
   user know what's happening"). Each line made is timed (`cg-voice-speed`); on a device slower than real time
   (`SLOW`) the dialog warns and the foot says play waits at each card (asked for). Where Kokoro cannot run, the
-  browser's own voice says the line. WebGPU (much faster, but a 320 MB full-precision model) is not used yet.
+  browser's own voice says the line. Where the browser finds a real graphics card (`gpuOk()`: WebGPU, not a software
+  fallback), "Faster voice" is offered in the voice dialog and in the settings (`#gpu-row`, `cg-voice-gpu`, off by
+  default; asked for, Nov 2026, for "users who have a good PC, like good internet"): the same model at full precision
+  on the graphics card, a 326 MB download (`GPU_MB`). The worker asks for the card before downloading, and if it
+  cannot run there the voice goes back to the processor by itself (`engine()`). Speed is kept per engine.
   Kokoro speaks English only. While play travels every line is made in order from where play is (`prepare()`), the
   line of the entry in front is said (`tell()`; the opening on the first entry, the closing after the last), the
   music sinks to `MUSIC_UNDER`, and the reader stops on each card until its line is said, then goes on, like Arrow

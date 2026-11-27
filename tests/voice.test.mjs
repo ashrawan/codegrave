@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { voiceOf, lineKey, madeOrder, isVoice, isSlow, DEFAULT_VOICE, VOICES } from '../site/voice.js';
+import { voiceOf, lineKey, madeOrder, isVoice, isSlow, gpuOk, DEFAULT_VOICE, VOICES } from '../site/voice.js';
 
 test('a stored voiceover is read, and a broken one is none', () => {
   assert.equal(voiceOf(null), null);
@@ -34,4 +34,8 @@ test('a device slower than real time is warned about', () => {
   assert.equal(isSlow(null), false);
   assert.equal(isSlow(0.6), false);
   assert.equal(isSlow(2), true);
+});
+
+test('without WebGPU the faster voice is not offered', async () => {
+  assert.equal(await gpuOk(), false);
 });
