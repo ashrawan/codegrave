@@ -567,9 +567,12 @@ How the page is put together:
   sight (`#unzoom`, placed from `visualViewport`) and puts it back.
 - **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
   right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
-  It is in three parts: This timeline (Export as PDF, `#pdf`; Turn round, `#reverse`,
-  `state.order`), Settings (the theme, `#theme`; Play speed) and Info (How to read the timeline; the
-  GitHub link was removed on request, Nov 2026). Export as PDF lives only here. For a timeline someone keeps, which is
+  It is in groups under small headings (restructured on request, Nov 2026, after a first list was found
+  "crappy"): This timeline (Export as PDF, `#pdf`; Turn round, `#reverse`, `state.order`), Play (Speed,
+  Advance), Globe (View, Look, Detail, Several views), Appearance (Theme: Dark or Light, `#theme-seg`) and
+  How to read the timeline. A setting is a row (`.set`): its name on the left and its control on the right,
+  every control the same width so they stand in one column, with no icon; the choice that is on is lit in the
+  accent colour. Keep new settings in that shape. Export as PDF lives only here. For a timeline someone keeps, which is
   not a built file, the page hands the view file to the print page through this tab's storage
   (`cg-print`).
 - **The panel** on the right is only for one thing at a time: it is hidden
