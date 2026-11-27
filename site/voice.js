@@ -42,12 +42,19 @@ export function speedOf(gpu = gpuOn()) { try { const v = Number(localStorage.get
 // download, only when the user clicks download"). If it fails to load, the voice goes back to the processor.
 export const GPU_MB = 326;
 const GPU = 'cg-voice-gpu';
-export function gpuOn() { try { return localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
+// A phone or a tablet never loads the model (asked for, Nov 2026, after the page crashed on a phone: "avoid
+// those heavy gpu usage and voiceover downloads for phone"): there a voiceover is said by the device's own
+// voice, whichever voice the timeline names, the graphics card is never asked for and the GPU voice is not
+// offered. `light()` is a narrow screen, or one worked by touch alone.
+export function light() {
+  try { return typeof matchMedia === 'function' && (matchMedia('(max-width: 699px)').matches || matchMedia('(hover: none) and (pointer: coarse)').matches); } catch (e) { return false; }
+}
+export function gpuOn() { try { return !light() && localStorage.getItem(GPU) === '1'; } catch (e) { return false; } }
 let gpuAsk = null;
 export function gpuOk() {
   return (gpuAsk ??= (async () => {
     try {
-      if (typeof navigator === 'undefined' || !navigator.gpu) return false;
+      if (typeof navigator === 'undefined' || !navigator.gpu || light()) return false;
       const a = await navigator.gpu.requestAdapter({ powerPreference: 'high-performance' });
       return !!a && !(a.isFallbackAdapter || a.info?.isFallbackAdapter);
     } catch (e) { return false; }
@@ -168,6 +175,7 @@ export function createSpeaker(status = () => {}) {
   let n = 0;
   // The sound of one line, as { audio: Float32Array, rate }. Asked for again, it is the same promise.
   function line(text, voice, now = false) {
+    if (light()) return Promise.reject(new Error('On a phone the voice is the phone’s own.'));
     const key = lineKey(voice, text);
     if (made.has(key)) {
       if (now) { const j = queue.find((x) => x.key === key); if (j && queue.indexOf(j) > (busy ? 1 : 0)) { queue.splice(queue.indexOf(j), 1); queue.splice(busy ? 1 : 0, 0, j); } }
@@ -197,7 +205,7 @@ export function createSpeaker(status = () => {}) {
   }
   // Have the model ready before anything is said: when a timeline with a voiceover is opened.
   let warmed = false;
-  function warm() { if (warmed || booted) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
+  function warm() { if (warmed || booted || light()) return; warmed = true; boot(); worker.postMessage({ id: 0 }); }
   // Change between the processor and the graphics card: the worker starts again on the other model; lines
   // waiting to be made are made by it. `failed` is set when the graphics card could not load it.
   function engine(on, failed = false) {
@@ -226,7 +234,7 @@ export function createSpeaker(status = () => {}) {
 // `said(text, waiting)` is told the line being spoken ('' when none), or that the voice is being got ready.
 export function createVoice({ ctx, said, speaker }) {
   const S = { sig: '', lines: new Map(), order: [], voice: DEFAULT_VOICE, cur: null, src: null, gain: null, t0: 0, off: 0, held: false, utter: null, rate: 1 };
-  const device = () => S.voice === 'device';
+  const device = () => S.voice === 'device' || light();
   function quit() {
     const s = S.src; S.src = null;
     if (s) { s.onended = null; try { s.stop(); } catch (e) { /* not started */ } }
@@ -329,7 +337,7 @@ export function listen(speaker, voice, ctx, done, fail, text = SAMPLE, began = (
   const say = (k) => {
     if (stopped) return;
     if (k >= lines.length) return done();
-    if (voice === 'device') {
+    if (voice === 'device' || light()) {
       if (typeof speechSynthesis === 'undefined') return fail(new Error('This browser has no voice of its own.'));
       u = new SpeechSynthesisUtterance(lines[k]);
       const en = speechSynthesis.getVoices().filter((v) => /^en/i.test(v.lang));

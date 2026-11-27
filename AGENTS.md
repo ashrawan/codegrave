@@ -452,6 +452,12 @@ How the page is put together:
   Delete; rewriting it or choosing another voice makes the reader's own copy. It downloads no model until play
   is pressed. `scripts/voices.mjs` writes these files with the function's own instructions (needs
   `OPENROUTER_API_KEY`); the first, Dinosaurs, was written by hand as a sample.
+- **A phone never loads the voice model (Nov 2026, asked for, after the page crashed on a phone: "avoid those
+  heavy gpu usage and voiceover downloads for phone").** On a phone or a tablet (`light()` in `site/voice.js`: a
+  narrow screen, or one worked by touch alone) a voiceover is said by the device's own voice, whichever voice the
+  timeline names: the speaker makes no line and `warm()` does nothing, `gpuOk()` answers no without asking for
+  the graphics card, the GPU voice is not offered, the voice dialog lists only This device with a line that says
+  so, and an export there has no voiceover. The voice kept on the timeline is not changed by this.
 - **Stopping an export is asked once more (Nov 2026, asked for).** In the export dialog Stop turns the foot into
   "Stop the export?" with "Yes, stop" and "Keep exporting"; from the note under the pill it is a small dialog.
   The export goes on until the reader answers.

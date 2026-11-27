@@ -10,7 +10,7 @@ import { EFFORTS, MAX_ENTRIES, MODELS, findPictures, partialSpec, specToView, vi
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
-import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, listen as hear } from './voice.js';
+import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, isSlow, gpuOk, GPU_MB, MODEL_MB, light, listen as hear } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -607,7 +607,7 @@ export function createAccount(app) {
   // line is spoken once now, in this browser, and kept there, so play never waits. The device's own voice has
   // nothing to make. A line that cannot be made is left for play, which makes it again or uses the device.
   async function record(voice, lines) {
-    if (voice === 'device' || !lines?.length) return;
+    if (voice === 'device' || light() || !lines?.length) return;
     voicing.step = 2; voicing.total = lines.length; voicing.made = 0;
     const tick = setInterval(() => { if (voicing) { noteOf(); draw(); } }, 400);
     try {
@@ -737,7 +737,7 @@ export function createAccount(app) {
     // fetches its own small file first (asked for, Nov 2026: "it's not showing that loading").
     b.classList.add('wait'); b.innerHTML = '<span>Loading…</span>';
     const note = b.closest('.dlg, form')?.querySelector('.vo-fetch');
-    if (note && b.dataset.sample !== 'device') { note.textContent = `Getting ${voiceLabel(b.dataset.sample)} ready…`; note.hidden = false; }
+    if (note && b.dataset.sample !== 'device' && !light()) { note.textContent = `Getting ${voiceLabel(b.dataset.sample)} ready…`; note.hidden = false; }
     const quiet = () => { if (note) note.hidden = true; };
     me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { quiet(); if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Play will use the device’s own voice instead.' : 'The voice could not be played. Try again.'); } }, text || undefined,
       () => { quiet(); if (sample === me) { b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } });
@@ -773,13 +773,16 @@ export function createAccount(app) {
   function voiceMenu(anchor, row) {
     if (voicing) return;
     const base = !!row.get()?.base;   // the default that came with a built timeline: rewritten as the reader's own, never deleted
-    const has = voiceOf(row.get()), was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
+    const has = voiceOf(row.get()); let was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
     // Two dialogs (designs A and B, picked from three each, Nov 2026). With no voiceover yet: the voices as
     // cards, each with Listen, and one button that names the voice. With one: the voices at the left and the
     // script as it is told at the right, "this is your script", to write again or to try in another voice.
-    const kok = VOICES.filter(([v]) => v !== 'device'), dev = VOICES.find(([v]) => v === 'device');
+    // On a phone only the phone's own voice is offered, and nothing is downloaded (asked for, Nov 2026).
+    const lite = light(), dev = VOICES.find(([v]) => v === 'device'), kok = lite ? [] : VOICES.filter(([v]) => v !== 'device'), all = lite ? [dev] : VOICES;
+    if (lite) was = 'device';
     const voiceEl = ([v, name, w], cls = '') => `<label class="vo-voice ${cls}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}" title="Listen">${PLAY}<span>Listen</span></button><span><b>${esc(name)}</b><small>${esc(w)}</small></span><i aria-hidden="true"></i></label>`;
     const notes = `<div class="vo-gpu" hidden><span><b></b><small></small></span><button type="button" class="big"></button></div>
+      <p class="vo-lite"${light() ? '' : ' hidden'}>On a phone the voiceover is said by the phone’s own voice, so nothing is downloaded. The other voices are on a computer.</p>
       <p class="vo-load" hidden></p>
       <p class="vo-fetch" hidden></p>
       <p class="vo-slow" hidden>This device makes the voice slowly. Play will pause at each card until its line is ready.</p>
@@ -789,7 +792,7 @@ export function createAccount(app) {
     const lineEl = (l) => { const e = byId.get(l.id), edge = l.id === 'intro' ? 'Opening' : l.id === 'outro' ? 'Closing' : ''; return `<li${edge ? ' class="edge"' : ''}><span>${esc(edge || e?.when || '')}</span><div>${e ? `<b>${esc(e.name)}</b>` : ''}<p>${esc(l.text)}</p></div></li>`; };
     const d = modal(has ? `<form class="vo-form vb">
       <div class="vo-list"><h2>Voiceover</h2><div class="cap">Voice</div>
-        <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
+        <div class="vo-voices" role="radiogroup" aria-label="Voice">${all.map((v) => voiceEl(v, 'row')).join('')}</div>${notes}</div>
       <div class="vo-script"><div class="vo-shead"><span><small>Script${row.own ? '' : base ? ', the default for this timeline' : ', kept in this browser'}</small><b>${esc(row.title || 'This timeline')}</b></span>${base ? '' : '<button type="button" class="vo-del" data-unvoice title="Delete this voiceover">Delete</button>'}</div>
         <label class="vo-guide"><span>What should change? <small>Leave empty to write it afresh</small></span><textarea name="guide" rows="2" maxlength="400" placeholder="For example: make it shorter · funnier, for children · more on the early years · write it again from scratch"></textarea></label>${span.html}<div class="vo-re"><small>Uses one of today’s requests.</small><button type="submit" class="big">Rewrite</button></div>
         <ol>${has.lines.map(lineEl).join('')}</ol></div>
@@ -809,7 +812,7 @@ export function createAccount(app) {
     const drawSlow = () => { slow.hidden = !isSlow(); };
     // "This device" downloads nothing: the model is fetched only once a Kokoro voice is picked.
     let gpuFine = false;
-    const kokoro = () => pick() !== 'device';
+    const kokoro = () => !lite && pick() !== 'device';
     // The GPU voice (asked for, Nov 2026): shown with its size where the device can run it, downloaded only
     // when Download is pressed, and switched off and on afterwards.
     const drawGpu = () => {
@@ -857,7 +860,7 @@ export function createAccount(app) {
   // the choices on the right; one button. Nothing here asks the server for anything.
   function videoMenu() {
     if (voicing) return;
-    const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && has.voice === 'device', told = !!has && !dev;
+    const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && (has.voice === 'device' || light()), told = !!has && !dev;
     const first = app.first() || {}, ents = app.told()?.entries || [], all0 = ents.length;
     // It always opens on the same choices (asked for, Nov 2026): Landscape, Default, the voiceover on where there is one, 1080p.
     const st = { voice: told, subs: false, shape: 'wide', scene: 'globe', short: 1080, from: 0, to: Math.max(0, all0 - 1) };
