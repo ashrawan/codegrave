@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces, kmBetween } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -214,4 +214,40 @@ test('a place is read from Wikipedia, never taken from the model', async () => {
   assert.deepEqual(entries[1].where, [51.5072, -0.1275]);
   assert.equal(entries[2].where, undefined);
   assert.equal(entries[3].where, undefined);
+});
+
+test('an address gives the exact spot, and only near the place Wikipedia gave', async () => {
+  assert.ok(Math.abs(kmBetween([47.6062, -122.3321], [47.6101, -122.2015]) - 9.8) < 0.5);
+  const entries = [
+    { name: 'Ice rink opens', place: 'Bellevue, Washington', address: 'Bellevue Downtown Park, Bellevue, Washington, USA' },
+    { name: 'A namesake far away', place: 'Bellevue, Washington', address: 'Main Street Hall, Bellevue, Washington, USA' },
+    { name: 'No such hall', place: 'Bellevue, Washington', address: 'Nowhere Hall, Bellevue, Washington, USA' },
+    { name: 'A fair', wikipedia: 'Seattle', place: 'Seattle Center' },
+    { name: 'No wider place', address: 'Space Needle, Seattle, Washington, USA' },
+    { name: 'No wider place, wrong town', address: 'Old Museum, Seattle, Washington, USA' },
+  ];
+  const get = async () => ({ query: { pages: {
+    1: { title: 'Bellevue, Washington', coordinates: [{ lat: 47.6144, lon: -122.1536, type: 'city' }] },
+    2: { title: 'Seattle', coordinates: [{ lat: 47.6039, lon: -122.33, type: 'city' }] },
+    3: { title: 'Seattle Center', coordinates: [{ lat: 47.6213, lon: -122.3497, type: 'landmark' }] },
+  } } });
+  const hit = (lat, lon, city, name) => ({ geometry: { coordinates: [lon, lat] }, properties: { city, name } });
+  const asked = [];
+  const json = async (url) => {
+    const q = decodeURIComponent(url.split('&q=')[1].split('&')[0]); asked.push(q);
+    if (q.startsWith('Bellevue Downtown Park')) return { features: [hit(41.15, -95.9, 'Bellevue', 'Downtown Park'), hit(47.6125, -122.2046, 'Bellevue', 'Bellevue Downtown Park')] };
+    if (q.startsWith('Main Street Hall')) return { features: [hit(41.15, -95.9, 'Bellevue', 'Main Street Hall')] };
+    if (q.startsWith('Space Needle')) return { features: [hit(47.6205, -122.3493, 'Seattle', 'Space Needle')] };
+    if (q.startsWith('Old Museum')) return { features: [hit(32.86, -83.69, 'Macon', 'Museum')] };
+    if (q.startsWith('Seattle,')) return { features: [hit(47.6038, -122.3301, undefined, 'Seattle')] };
+    return { features: [] };
+  };
+  assert.equal(await findPlaces(entries, get, json), 6);
+  assert.deepEqual(entries[0].where, [47.6125, -122.2046]);   // the park, not the Bellevue in Nebraska
+  assert.deepEqual(entries[1].where, [47.6144, -122.1536]);   // too far: the city stands
+  assert.deepEqual(entries[2].where, [47.6144, -122.1536]);   // not found: the city stands
+  assert.deepEqual(entries[3].where, [47.6213, -122.3497]);   // the venue before the city its picture comes from
+  assert.deepEqual(entries[4].where, [47.6205, -122.3493]);
+  assert.deepEqual(entries[5].where, [47.6038, -122.3301]);   // the wrong town is refused, then the town itself is found
+  assert.ok(!asked.includes('Bellevue, Washington, USA'));
 });

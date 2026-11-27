@@ -156,6 +156,7 @@ export function cleanSpec(raw) {
       events: (Array.isArray(e.events) ? e.events : []).map((x) => ({ date: cleanDate(x?.date), label: text(x?.label, 80), note: text(x?.note, 200) })).filter((x) => x.date && x.label).slice(0, 6),
       ...(img ? { image: img } : {}),
       ...(text(e.place, 120) ? { place: text(e.place, 120) } : {}),
+      ...(text(e.address, 160) ? { address: text(e.address, 160) } : {}),
       ...(whereOf(e.where) ? { where: whereOf(e.where) } : {}),
     });
   }
@@ -259,28 +260,76 @@ export function whereOf(w) {
   return Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180 && w[0] !== null && w[1] !== null ? [Math.round(lat * 1e4) / 1e4, Math.round(lon * 1e4) / 1e4] : null;
 }
 // Where each entry is on the Earth, written onto the entries (`where`: [lat, lon]). It is never taken from the
-// model: it is the coordinates of the entry's own Wikipedia article, else of the article of the place it names
-// (`place`: a city, a building, a site). An entry with neither has no place, and none is guessed.
-// Returns how many were found.
-export async function findPlaces(entries, get) {
+// model, which only says where in words. From the most exact to the least:
+//   1. `address` ("Bellevue Downtown Park, Bellevue, Washington, USA"), looked up in OpenStreetMap (`json`, when
+//      given: Photon, a free geocoder that needs no key). It counts only when it falls within `NEAR_KM` of the
+//      place Wikipedia gave, so a namesake in another town is never drawn.
+//   2. The coordinates of its own Wikipedia article when that is one spot (a building, a campus, a station).
+//   3. Those of the article of the place it names (`place`: a venue, a neighbourhood, a city), else whatever
+//      its own article has. The place comes before the article because the article may only stand in for the
+//      picture (an event shown by its city's article).
+// An entry with none of these has no place, and none is guessed. Returns how many were found.
+const NEAR_KM = 80, GEO_MAX = 60, GEO_AT_ONCE = 3;
+const SPOTS = ['landmark', 'edu', 'airport', 'railwaystation', 'event'];   // Wikipedia's types of place that are one spot
+export function kmBetween(a, b) {
+  const r = Math.PI / 180, h = Math.sin((b[0] - a[0]) * r / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin((b[1] - a[1]) * r / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+export async function findPlaces(entries, get, json) {
   const title = (v) => (typeof v === 'string' ? v.trim() : '');
   for (const e of entries) delete e.where;
   const titles = [...new Set(entries.flatMap((e) => [title(e.wikipedia), title(e.place)]).filter(Boolean))].slice(0, 200);
   const at = new Map();
   for (let i = 0; i < titles.length; i += 50) {
     try {
-      const d = await get('en.wikipedia.org', 'action=query&redirects=1&prop=coordinates&coprimary=primary&colimit=50&titles=' + encodeURIComponent(titles.slice(i, i + 50).join('|')));
+      const d = await get('en.wikipedia.org', 'action=query&redirects=1&prop=coordinates&coprimary=primary&coprop=type%7Cglobe&colimit=50&titles=' + encodeURIComponent(titles.slice(i, i + 50).join('|')));
       const back = new Map();
       for (const n of d.query?.normalized ?? []) back.set(n.to, n.from);
       for (const n of d.query?.redirects ?? []) back.set(n.to, back.get(n.from) ?? n.from);
       for (const p of Object.values(d.query?.pages ?? {})) {
         const c = p.coordinates?.[0], w = c && (c.globe ?? 'earth') === 'earth' ? whereOf([c.lat, c.lon]) : null;
-        if (w) { at.set(p.title, w); at.set(back.get(p.title) ?? p.title, w); }
+        if (w) { const spot = { w, spot: SPOTS.includes(c.type) }; at.set(p.title, spot); at.set(back.get(p.title) ?? p.title, spot); }
       }
     } catch (e) { /* a timeline without places is still a timeline */ }
   }
+  const wide = new Map();
+  for (const e of entries) {
+    const own = at.get(title(e.wikipedia)), named = at.get(title(e.place));
+    const spot = own?.spot ? own : named ?? own;
+    if (spot) wide.set(e, spot.w);
+  }
+  // The exact spot, from the address. Each address is asked once, a few at a time, near the place Wikipedia gave.
+  const exact = new Map();
+  if (json) {
+    const asks = new Map();
+    for (const e of entries) { const a = title(e.address); if (a && !asks.has(a) && asks.size < GEO_MAX) asks.set(a, wide.get(e) ?? null); }
+    const list = [...asks];
+    // A hit counts when it is near the place Wikipedia gave; with no such place, when it is in a town the address names.
+    const fits = (f, a, near) => {
+      const g = f?.geometry?.coordinates, w = g ? whereOf([g[1], g[0]]) : null, p = f?.properties ?? {};
+      if (!w) return null;
+      if (near) return kmBetween(w, near) <= NEAR_KM ? w : null;
+      const town = String(p.city || p.name || '').toLowerCase();
+      return town && a.toLowerCase().includes(town) ? w : null;
+    };
+    const one = async ([a, near]) => {
+      // The whole address first; then, with no wider place to fall back on, without its first part (the venue).
+      const tries = [a, ...(near || a.split(',').length < 3 ? [] : [a.split(',').slice(1).join(',').trim()])];
+      for (const q of tries) {
+        const url = 'https://photon.komoot.io/api/?limit=5&lang=en&q=' + encodeURIComponent(q) + (near ? `&lat=${near[0]}&lon=${near[1]}` : '');
+        for (let go = 0; go < 2; go++) {
+          try {
+            const d = await json(url);
+            for (const f of d?.features ?? []) { const w = fits(f, a, near); if (w) { exact.set(a, w); return; } }
+            break;
+          } catch (x) { /* once more, then the wider place stands */ }
+        }
+      }
+    };
+    for (let i = 0; i < list.length; i += GEO_AT_ONCE) await Promise.all(list.slice(i, i + GEO_AT_ONCE).map(one));
+  }
   let n = 0;
-  for (const e of entries) { const w = at.get(title(e.wikipedia)) ?? at.get(title(e.place)); if (w) { e.where = w; n++; } }
+  for (const e of entries) { const w = exact.get(title(e.address)) ?? wide.get(e); if (w) { e.where = w; n++; } }
   return n;
 }
 
