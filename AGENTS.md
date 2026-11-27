@@ -455,6 +455,10 @@ How the page is put together:
   entry's article. An entry with no picture of its own shows the picture of its `place` (`findPictures()`).
   Asked for, Nov 2026, after "events in Seattle and Bellevue" put every pin on the middle of its city. The
   function does it after the pictures, and the editor (Wikipedia only) when an entry's article changes.
+- **The prompt for timelines made with AI** (`supabase/functions/ai-timeline/index.ts`) is written in sections
+  (time and dates, where things are, pictures, kinds of request, lists, always) with many short examples; the
+  examples were asked for (Nov 2026), so add to them rather than cut them. The Wikipedia reading before the
+  model is skipped for plans, local requests and lists (`NO_READING`), where it never helped.
 - **Pictures for timelines made with AI** (asked for, Nov 2026: "Wikipedia goes first", then the model's own
   links, and the reader can always set one). `findPictures()` takes the article's free picture, else the picture
   of the `place`. Then `linkPictures()` opens every link the model gave (`pictures`: a Commons file page or a
