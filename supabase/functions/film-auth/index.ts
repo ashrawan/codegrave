@@ -2,11 +2,18 @@
 //
 // Film mode's code is public; what it may reach is decided here. Two calls, both POST with JSON:
 //
-//   { key }                 the film key, checked against the FILM_KEY secret without leaking by
-//                           timing how much of it was right. Answers { token, expires, scopes }:
-//                           a signed token good for a quarter of an hour.
-//   { token, open }         one stored timeline, private ones too, by "t/<id>" or
-//                           "<username>/<slug>". Read only. Answers { view, entries, spec }.
+//   { key, user }           the film key, checked against the FILM_KEY secret without leaking by
+//                           timing how much of it was right, and with it the session of the account
+//                           signed in on the page (`user`, its access token; may be absent).
+//                           Answers { token, expires, scopes, user }: a signed token good for a
+//                           quarter of an hour, which carries that account's id.
+//   { token, open }         one stored timeline by "t/<id>" or "<username>/<slug>": a public one,
+//                           or any of the token's own account, private ones too. Read only.
+//                           Answers { view, entries, spec }.
+//
+// The key says film mode may be used; the account says for whom. So a film key never opens
+// another account's private timelines, and what is generated (stage 3) is that account's own and
+// counts against its own daily allowance.
 //
 // Every call is written to the film log, and the log is the rate limit: a few wrong keys a minute
 // from one address, or a burst from anywhere, and the door stays shut for that minute.
@@ -48,17 +55,17 @@ async function same(a: string, b: string) {
 }
 // Tokens are signed with a key that follows from FILM_KEY, so a new FILM_KEY ends the old tokens.
 const signer = () => hmacKey("film-token:" + KEY);
-async function sign(scopes: string[]) {
-  const body = b64(enc.encode(JSON.stringify({ s: scopes, e: Math.floor(Date.now() / 1000) + TOKEN_SECONDS })));
+async function sign(scopes: string[], u: string | null) {
+  const body = b64(enc.encode(JSON.stringify({ s: scopes, u, e: Math.floor(Date.now() / 1000) + TOKEN_SECONDS })));
   return body + "." + b64(await mac(await signer(), body));
 }
-async function read(token: unknown): Promise<string[] | null> {
+async function read(token: unknown): Promise<{ s: string[]; u: string | null } | null> {
   if (typeof token !== "string" || token.length > 600) return null;
   const [body, sig] = token.split(".");
   if (!body || !sig || !(await same(sig, b64(await mac(await signer(), body))))) return null;
   try {
     const p = JSON.parse(new TextDecoder().decode(unb64(body)));
-    return Array.isArray(p.s) && Number(p.e) > Date.now() / 1000 ? p.s : null;
+    return Array.isArray(p.s) && Number(p.e) > Date.now() / 1000 ? { s: p.s, u: typeof p.u === "string" ? p.u : null } : null;
   } catch { return null; }
 }
 
@@ -71,10 +78,18 @@ async function lately(what: string): Promise<{ ip: string; ok: boolean }[] | nul
   return r && r.ok ? await r.json() : null;
 }
 
+// The account a session belongs to, asked of Supabase Auth itself, so a made-up or expired session is nobody.
+async function whose(session: unknown): Promise<string | null> {
+  if (typeof session !== "string" || session.length > 4000) return null;
+  const r = await fetch(URL_ + "/auth/v1/user", { headers: { apikey: SERVICE, Authorization: "Bearer " + session } }).catch(() => null);
+  const id = r && r.ok ? (await r.json().catch(() => null))?.id : null;
+  return typeof id === "string" && UUID.test(id) ? id : null;
+}
+
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/, NAME = /^[a-z0-9][a-z0-9_-]{0,63}$/i;
-async function open(id: string) {
+async function open(id: string, u: string | null) {
   let row = null, username = "";
-  const cols = "select=id,owner,slug,title,description,data";
+  const cols = "select=id,owner,slug,title,description,visibility,data";
   if (id.startsWith("t/") && UUID.test(id.slice(2))) {
     row = (await (await rest(`timelines?id=eq.${id.slice(2)}&${cols}`)).json())[0];
     if (row) username = (await (await rest(`profiles?id=eq.${row.owner}&select=username`)).json())[0]?.username ?? "";
@@ -85,7 +100,8 @@ async function open(id: string) {
     if (owner) row = (await (await rest(`timelines?owner=eq.${owner}&slug=eq.${slug}&${cols}`)).json())[0];
     username = user;
   }
-  if (!row) return null;
+  // Somebody else's timeline opens only when it is public (by its id, also when it is shared by link).
+  if (!row || !(row.owner === u || row.visibility === "public" || (row.visibility === "link" && id.startsWith("t/")))) return null;
   // The same view file the page makes of a stored timeline (payloadOf in site/account.js), with its spec beside it.
   const d = row.data ?? {}, view = { ...(d.view ?? {}), id: "t/" + row.id, name: row.title, description: row.description ?? "", author: username || "you", type: "community", picked: true, count: (d.entries ?? []).length, stored: true };
   delete view.topic;
@@ -106,16 +122,17 @@ Deno.serve(async (req) => {
     const ok = body.key.length <= 400 && await same(body.key, KEY);
     await log(ip, "key", ok);
     if (!ok) return json({ error: "no" }, 403);
-    return json({ token: await sign(["read"]), expires: TOKEN_SECONDS, scopes: ["read"] });
+    const u = await whose(body.user);
+    return json({ token: await sign(["read"], u), expires: TOKEN_SECONDS, scopes: ["read"], user: u });
   }
 
-  const scopes = await read(body.token);
-  if (!scopes) return json({ error: "no" }, 403);
+  const who = await read(body.token), scopes = who?.s;
+  if (!who || !scopes) return json({ error: "no" }, 403);
   if (typeof body.open === "string" && scopes.includes("read")) {
     const seen = await lately("open");
     if (!seen || seen.length >= READS_PER_MINUTE) return json({ error: "slow down" }, 429);
-    const got = await open(body.open.slice(0, 200)).catch(() => null);
-    await log(ip, "open", !!got, body.open.slice(0, 200));
+    const got = await open(body.open.slice(0, 200), who.u).catch(() => null);
+    await log(ip, "open", !!got, (who.u ?? "nobody") + " " + body.open.slice(0, 200));
     return got ? json(got) : json({ error: "not found" }, 404);
   }
   return json({ error: "bad request" }, 400);

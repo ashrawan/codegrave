@@ -5,6 +5,7 @@
 //
 // <folder> holds shots.json (a list of shots, or { timeline, preset, shots }) and gets the result.
 // The key is read from tools/film/.env (FILM_KEY); it is never printed and never written anywhere.
+// `film.mjs login` signs an account in once (a window opens); films are then made as that account.
 //
 // Options (each may also stand in <folder>/film.json):
 //   --timeline <owner/slug>   the timeline to film: wiki/japan, <username>/<slug>, t/<id>
@@ -85,19 +86,55 @@ function jobOf(folder, args, env) {
   return job;
 }
 
+// The browser. On a Mac the full Chromium draws the globe on the graphics chip (Metal), many times faster than
+// the headless shell, which draws in software; where that build is missing the shell is used.
+async function launch(headless) {
+  const { chromium } = await playwright();
+  const args = ['--ignore-gpu-blocklist', '--enable-webgl'];
+  if (process.platform === 'linux') return chromium.launch({ headless, args: [...args, '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] });
+  const gpu = [...args, '--enable-gpu', ...(process.platform === 'darwin' ? ['--use-angle=metal'] : [])];
+  return chromium.launch({ headless, channel: 'chromium', args: gpu }).catch(() => chromium.launch({ headless, args: gpu }));
+}
+
+// The account films are made for: `login` keeps its session in tools/film/.session.json (never committed), and
+// every page opened here starts signed in with it. Film mode sends it with the key, so the token it gets reads
+// that account's own timelines and nobody else's private ones. The page renews a session; what it renewed is kept.
+const SESSION = join(here, '.session.json'), SKEY = 'cg-session';
+async function signIn(page, base) {
+  if (!existsSync(SESSION)) return;
+  await page.addInitScript(([k, v, origin]) => { try { if (location.origin === origin && !sessionStorage.getItem('film-in')) { localStorage.setItem(k, v); sessionStorage.setItem('film-in', '1'); } } catch (e) { /* no storage */ } }, [SKEY, readFileSync(SESSION, 'utf8'), new URL(base).origin]);
+}
+async function keepSession(page) {
+  const now = await page.evaluate((k) => localStorage.getItem(k), SKEY).catch(() => null);
+  if (now && now.includes('refresh_token') && (!existsSync(SESSION) || readFileSync(SESSION, 'utf8') !== now)) writeFileSync(SESSION, now, { mode: 0o600 });
+}
+// login: a window on the site; sign in there as usual and it closes by itself.
+async function login(args, env) {
+  const server = args.serve ? await serve() : null, base = (server ? server.base : args.base || env.FILM_BASE || 'https://codegrave.com').replace(/\/+$/, '');
+  const browser = await launch(false), page = await browser.newPage();
+  await page.goto(base + '/');
+  console.error('film: sign in in the window that opened (Sign in, at the bottom left). It closes when you are in.');
+  const got = await page.waitForFunction((k) => { try { return JSON.parse(localStorage.getItem(k)).refresh_token ? localStorage.getItem(k) : null; } catch (e) { return null; } }, SKEY, { timeout: 10 * 60000, polling: 500 }).then((h) => h.jsonValue(), () => null);
+  await browser.close(); if (server) server.stop();
+  if (!got) fail('nobody signed in within ten minutes');
+  writeFileSync(SESSION, got, { mode: 0o600 });
+  console.error('film: signed in as ' + (JSON.parse(got).user?.email || 'your account') + '. The session is kept in tools/film/.session.json.');
+}
+
 // Opens the timeline in film mode and waits until it is ready. The key goes after "#", so it is never sent in a request for the page.
 async function open(job, env) {
   const key = job.mock ? 'mock' : env.FILM_KEY;
   if (!key) fail('FILM_KEY is not set. Put it in tools/film/.env (see .env.example), or use --mock-auth for a built view.');
-  const { chromium } = await playwright();
-  const browser = await chromium.launch({ headless: !job.headed, args: ['--ignore-gpu-blocklist', '--enable-webgl', ...(process.platform === 'linux' ? ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] : [])] });
+  const browser = await launch(!job.headed);
   const page = await browser.newPage({ viewport: { width: job.w, height: job.h }, deviceScaleFactor: job.dpr });
+  await signIn(page, job.base);
   if (job.mock) await page.route('**/functions/v1/film-auth', (r) => r.fulfill({ contentType: 'application/json', headers: { 'access-control-allow-origin': '*' }, body: JSON.stringify(r.request().postDataJSON()?.key ? { token: 'mock', scopes: ['read'] } : { error: 'mock' }), status: r.request().method() === 'OPTIONS' || r.request().postDataJSON()?.key ? 200 : 404 }));
   const q = new URLSearchParams({ film: '1', w: job.w, h: job.h, dpr: job.dpr, fps: job.fps, ...(job.look ? { look: job.look } : {}), ...(job.detail ? { detail: job.detail } : {}) });
   await page.goto(`${job.base}/${job.timeline}?${q}#k=${encodeURIComponent(key)}`);
   const on = await page.waitForFunction(() => !!window.codegraveFilm, null, { timeout: 30000 }).catch(() => null);
   if (!on) { await browser.close(); fail('film mode did not start: the key was not accepted, or this site has no film mode yet'); }
   await page.evaluate(() => window.codegraveFilm.ready).catch(async (e) => { await browser.close(); fail(e.message.split('\n')[0]); });
+  await keepSession(page);
   return { browser, page };
 }
 async function load(page, job) {
@@ -148,7 +185,7 @@ async function render(args, env) {
   }
 }
 
-const COMMANDS = { render };
+const COMMANDS = { render, login };
 const args = readArgs(process.argv.slice(3)), cmd = COMMANDS[process.argv[2]];
 if (!cmd) fail(`give a command: ${Object.keys(COMMANDS).join(', ')}. The options are at the top of tools/film/film.mjs and in docs/FILM_MODE.md.`);
 await cmd(args, readEnv());

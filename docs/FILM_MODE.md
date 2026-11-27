@@ -20,7 +20,7 @@ presets, layers, generating, runtime scenes and the other shot types follow; ask
   (`film/film.js`) fetched. With no key or a wrong one the page starts normally.
 - The code is public. What is protected is data: private timelines (and, from stage 3, the
   generator) are reached only through `film-auth`, which wants the short-lived token it gave for
-  the key.
+  the key and the signed-in account ("The account" below).
 - Film pages carry `noindex,nofollow`, and `robots.txt` closes `/film` and any `?film=` address.
 - Film mode writes nothing: storage is switched off, no sound is made, nothing is sent anywhere.
 
@@ -112,6 +112,18 @@ One file in `site/film/shots/`, and a line in `shots/index.js`. A type is an obj
 (worked out once) and `draw(u, F, data, env)`, which writes the frame `F` for `u` from 0 to 1.
 `site/film/timeline.js` describes `F`. A type must be a pure function of `u`: no clock, no chance,
 nothing remembered from the frame before. Add it to the schema and to `tests/film.test.mjs`.
+
+## The account
+
+The key says film mode may be used; the account signed in says for whom. The page sends its
+session with the key, and the token that comes back carries that account. It opens public
+timelines and that account's own private ones, never another account's, and what `generate()`
+makes (stage 3) is that account's own and counts against its daily allowance like any other
+request. With nobody signed in, only public timelines and built views open.
+
+For the tools: `node tools/film/film.mjs login` opens a window on the site; sign in as usual and
+it closes. The session is kept in `tools/film/.session.json` (never committed) and every render
+starts signed in with it. Delete the file to sign out.
 
 ## The key
 

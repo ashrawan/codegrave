@@ -20,8 +20,8 @@ export function startFilm(kit, auth) {
   const opts = { w: W, h: H, dpr: num('dpr', devicePixelRatio || 1, 0.5, 4), fps: num('fps', 30, 1, 240), seed: num('seed', 1, 0, 2 ** 32),
     look: LOOKS.includes(q.get('look')) ? q.get('look') : 'atlas', detail: DETAILS.includes(q.get('detail')) ? q.get('detail') : 'less' };
 
-  // Nothing is written: not this browser's settings, not a session.
-  try { Storage.prototype.setItem = () => {}; Storage.prototype.removeItem = () => {}; Storage.prototype.clear = () => {}; } catch (e) { /* fine */ }
+  // Nothing is written: not this browser's settings. Only the session may be renewed, or a long render would sign its account out.
+  try { const set = Storage.prototype.setItem; Storage.prototype.setItem = function (k, v) { if (k === 'cg-session') set.call(this, k, v); }; Storage.prototype.removeItem = () => {}; Storage.prototype.clear = () => {}; } catch (e) { /* fine */ }
   // Chance is seeded, so what little of the page draws by it draws the same every run.
   let seed = opts.seed >>> 0;
   Math.random = () => { seed = (seed + 0x6d2b79f5) >>> 0; let x = seed; x = Math.imul(x ^ (x >>> 15), x | 1); x ^= x + Math.imul(x ^ (x >>> 7), x | 61); return ((x ^ (x >>> 14)) >>> 0) / 4294967296; };
@@ -60,7 +60,7 @@ export function startFilm(kit, auth) {
     await booted;
     const id = idOfAddress(String(slug).replace(/^\/+|\/+$/g, ''));
     let real = null, spec = null;
-    // A timeline someone keeps is read with the film token, private ones too; a built view is a file.
+    // A timeline someone keeps is read with the film token, the account's own private ones too; a built view is a file.
     const kept = /^t\//.test(id) || (id.includes('/') && !id.startsWith('wiki/'));
     if (kept) {
       try { const got = await call({ open: id }); if (got.view) { real = kit.useView({ view: got.view, entries: got.entries }).id; spec = got.spec || null; } } catch (e) { /* a community folder's view is a file too */ }

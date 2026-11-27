@@ -56,8 +56,12 @@ test('without a key the gate does nothing: no request, and the page is told to s
   assert.deepEqual(calls, []);
   // A wrong key: asked once, refused, and still nothing happens. The key is taken out of the address.
   globalThis.location.hash = '#k=wrong';
-  assert.equal(await boot({}), false);
+  let sent = null;
+  globalThis.fetch = async (u, o) => { calls.push('fetch'); sent = JSON.parse(o.body); return { ok: false, json: async () => ({}) }; };
+  assert.equal(await boot({ token: async () => 'session-of-the-account' }), false);
   assert.deepEqual(calls, ['history', 'fetch']);
+  // The account signed in goes with the key, so the token is that account's and no one else's.
+  assert.deepEqual(sent, { key: 'wrong', user: 'session-of-the-account' });
 });
 
 test('every fault in a shot list is named', () => {
