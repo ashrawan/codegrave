@@ -17,6 +17,7 @@
 //   d/<key>.json       full entries by a hash of their id, for links to an entry that is not on screen
 //   s/all.json         the search index (s/<two letters>.json once it is large)
 //   c/<owner>.json     one community folder: its profile and what it holds
+//   places.json        where entries are on the Earth, for the globe (from data/places.json, made by scripts/places.mjs)
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync, cpSync, rmSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, basename } from 'node:path';
@@ -730,6 +731,11 @@ if (!process.argv.includes('--check')) {
     wall: wall.eras,
   });
 
+  // The globe's places: only those of entries that exist, so a removed entry leaves nothing behind.
+  if (existsSync(join(dataDir, 'places.json'))) {
+    const all = readJson(join(dataDir, 'places.json')) || {}, ids = new Set(entries.map((e) => e.id));
+    write('places.json', Object.fromEntries(Object.entries(all).filter(([id]) => ids.has(id))));
+  }
   if (existsSync(mediaDir)) cpSync(mediaDir, join(outDir, 'media'), { recursive: true });
   writePages(live);
   console.log(`wrote site/data/ (${entries.length} entries, ${live.length} views, ${files} files, ${Math.round(bytes / 1024)} KB)`);

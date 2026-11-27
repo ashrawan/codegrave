@@ -58,6 +58,8 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
 | The arithmetic of the road (its scale, which stretches busy periods; sizes in depth, tracks, which names fit and in what order, how a card opens, turns during play, the years) | `site/road.js`, then `tests/road.test.mjs` | |
+| The globe (the timeline on the Earth, behind `?globe`): the map, pins, cards, the strip of rows | `site/globe.js`; its arithmetic (camera heights, arcs, when to dim or go to space) in `site/globe-path.js`, then `tests/globe.test.mjs` | |
+| Where entries are on the Earth | `node scripts/places.mjs` writes `data/places.json` from Wikidata | `data/places.json` by hand |
 | The data rules themselves | `scripts/build.mjs`, then `docs/` and `schema/` to match | |
 
 To find an entry without listing folders: its path is always
@@ -271,7 +273,7 @@ How the page is put together:
   events written along it, like the open and the hovered entry
   (`road.heat` eases the colour). It is not `state.open`; do not write one
   to the other.
-- **The bar** (`#axisbar`) stands upright on the right, slim (`--bar`: 44 px, 34 px on a phone; asked for, Nov 2026): tick marks, the shaded stretch in sight, the marker and short years of at most four characters (`shortYear()`: 1969, 500B, 3kB, 66M, 4.5G; the end of the road at the present reads Now), which "Years on the bar" in the three-dot menu hides (`body.bar-bare`, `cg-bar-years` in this browser; shown by default). The marker shows its year only while dragged, since the year is written large on the road. The year pill is `#filters` (not `.yr`, which is a year on the bar). On a phone the strip at the foot steps away while play travels and the road takes its place. It stands play at the
+- **The bar** (`#axisbar`) stands upright on the right, slim (`--bar`: 44 px, 34 px on a phone; asked for, Nov 2026): tick marks, the shaded stretch in sight, the marker and short years of at most four characters (`shortYear()`: 1969, 500B, 3kB, 66M, 4.5G; the end of the road at the present reads Now) ("Years on the bar" in the three-dot menu was removed on request, Nov 2026). The marker shows its year only while dragged, since the year is written large on the road. The year pill is `#filters` (not `.yr`, which is a year on the bar). On a phone the strip at the foot steps away while play travels and the road takes its place. It stands play at the
   bottom and the whole span above it with ahead upwards, on the road's own scale so the marker climbs
   steadily (`barY()`, `barT()`, `barTicks()`), the stretch
   in sight shaded (`#axis-win`) and the marker at the reader. Dragging the
@@ -319,6 +321,59 @@ How the page is put together:
   when play is first pressed with the sound on, and the same button
   silences it. The house track was asked for with this file; do not swap it
   without asking.
+- **The globe** (`site/globe.js`, `site/globe-path.js`; asked for and designed in Nov 2026, plan and
+  mockups in the design doc "3D world map"). The same timeline drawn on the Earth. It is a first
+  version and shows only when the link says `?globe`; the plan is that the road goes once the globe
+  does all the road does, so keep the two apart until then. The road stays the clock: in globe mode
+  it is laid out and travelled as ever, only not shown (`body.globe`), so the bar, play, the wheel,
+  the year on top, the panel and the links work unchanged. `globeShow()` hands the globe the entries
+  in the order play meets them and `globeFrame()` tells it which one stands in front (the open
+  entry, else the last one within `AHEAD` of the reader). An entry with a place is a pin: the camera
+  flies to it and its card stands beside it (above the strip on a phone), opening upwards like a
+  scroll. Everything on the globe follows from one number, where the reader is among the entries
+  (`S.pos` in `site/globe.js`: 2.4 is four tenths of the way from the third entry to the fourth), which
+  the page gives it whenever the reader moves (`globe.at(id, frac, playing)`): the camera, the time
+  line, the stars, which card is up and how far it has come. So nothing flies by itself and nothing
+  waits: it all moves exactly while the reader does. This was asked for after a first version that
+  flew to a place and stood there ("it shows the card and freezes there. But should be more like it
+  keeps moving", "we wanted a smooth approach"); do not bring back a flight with a hold. The camera
+  is on the way from the view of the last place to the view of the next (`camAt()`); it comes to
+  rest at each place and is quickest half way, with no speed ever jumped to, north stays up, and a
+  light runs along the way from place to place (`trail()`), so going on is seen even where the
+  camera has no need to move. Livelier motions were tried and rejected ("not steady at all", "if you
+  change orientation it will feel flaky, and user will find difficult to focus"), so do not add
+  swings or a camera that dives at every pin. The way it travels is "turn", picked from three clean ways: the globe turns
+  under a camera that keeps its height (`cams()`: a height that suits the place's neighbourhood and
+  changes by at most `STEP` from one place to the next, never tilted), so each place comes to the
+  same spot of the picture and its card to the same place. Near places are a short glide and only far ones pull back to the
+  whole globe (asked for: "it doesn't need to jump out to the full globe"). Play takes a set time from each entry to the next (`globe.legSecs()`), longer for a long way. An
+  entry with no place is a row on the time line at the foot; its card rises over its row while the
+  map dims, and where most of a view has no place, or five or more in a row have none, the map goes
+  out of sight and the reader flies on among the stars with no Earth (`stageFor()`; asked for: "it
+  can hide away"). In space (`.g-space`, one small 2D canvas) the stars stream past as fast as the
+  reader travels, a card comes out of the distance and passes away below the reader ("think like we
+  are flying in the space craft"), its picture is not in the card but fills the sky behind it
+  (`.g-bimg`), and the pictures of the last few entries passed stand small at the left (`.g-past`).
+  The time line runs along the foot, not upright on the right (asked for: "so it shows moving", "so
+  right side can be cleaned up"): `body.globe` sets `--bar` to 0 and hides `#axis`, play and the
+  sound button stand at the strip's right end (asked for), and the strip slides under a marker that
+  stands still, with a year written where it changes. The entries stand on it by name, one with no place in italics (design C, picked from three).
+  A card shows the picture, kind, dates, name and summary, and neither coordinates nor a note that
+  an entry has no place (asked for: "it will be in details"). The card is a label written on the map, with no box and a rule in the view's colour
+  (design B, picked from three; a glass box on a phone). The credits the map's licences ask for
+  are behind a small button in the bottom right corner, beside the three dots (`.g-credit`, asked for), not
+  written on the map. The time line at the foot is dragged like a strip under its marker (`globeSeek()`, asked
+  for: "like we had before"). "Play speed" in the three-dot menu (`play.speed`, `cg-pace` in this browser; 0.25x
+  to 2x, 1x by default) slows or quickens play, on the road too (asked for, to linger longer on the cards). The look is "Atlas" (picked after "Day", NASA's Blue Marble, was built
+  first and found "a bit heavy"): dark land, coasts in a warm line, a faint grid, the same map with
+  streets close in. From far off the land is Natural Earth's small-scale coast
+  (`site/media/land.json`, public domain); from country height down it is OpenFreeMap's tiles, free
+  and without a key; MapLibre GL JS comes from cdnjs only when a globe first opens. Places come from
+  `data/places.json`, made by `scripts/places.mjs` from Wikidata and never guessed; an entry older
+  than five million years has no place on today's map (`DEEP`). Still to come, in this order: a
+  place on the entry itself (`where`, which needs an agreed issue), places for timelines made with
+  AI, places that are not sure (an area, a traditional site), the Earth as it was for deep time, and
+  other looks. Never draw a pin for a guessed place.
 - **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
   "think it is like community posted, meaning even the admin ones", after a
   list in the sidebar was found "not professional"). Explore in the bar on
@@ -409,7 +464,7 @@ How the page is put together:
 - **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
   right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
   It is in three parts: This timeline (Export as PDF, `#pdf`; Turn round, `#reverse`,
-  `state.order`), Settings (the theme, `#theme`; Years on the bar) and Info (How to read the timeline; the
+  `state.order`), Settings (the theme, `#theme`; Play speed) and Info (How to read the timeline; the
   GitHub link was removed on request, Nov 2026). Export as PDF lives only here. For a timeline someone keeps, which is
   not a built file, the page hands the view file to the print page through this tab's storage
   (`cg-print`).

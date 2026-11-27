@@ -8,34 +8,45 @@
 <p align="center"><em>Nothing ships forever.</em></p>
 
 [codegrave.com](https://codegrave.com) is an encyclopedia drawn as a
-timeline. Time runs into the screen like a road, every entry is a line from
-its start to its end, and play carries you along it: a person from birth to
-death, an empire from founding to fall, a computer from launch to retirement.
+timeline on the Earth. Every entry stands where it happened, and play
+carries you through time from place to place: a person from birth to death,
+an empire from founding to fall, a computer from launch to retirement.
 Click any card to read its history, with dates, sources and pictures.
 
 <table>
   <tr>
-    <td width="74%" valign="top"><img src="docs/screenshots/road.jpg" alt="The Space Race and Computers as two lanes of a road running into the distance, with cards where things began and pictures floating beside the road"></td>
-    <td width="26%" valign="top"><img src="docs/screenshots/road-phone.jpg" alt="The Space Race on a phone"></td>
+    <td width="74%" valign="top"><img src="docs/screenshots/globe.jpg" alt="The Computers view on the globe: Charles Babbage written beside his pin in England, with the entries named along the time line at the bottom"></td>
+    <td width="26%" valign="top"><img src="docs/screenshots/globe-phone.jpg" alt="The Computers view on a phone"></td>
   </tr>
 </table>
 
+The globe is a preview: add `?globe` to a link to open it, for example
+[`/wiki/computer-generations?globe`](https://codegrave.com/wiki/computer-generations?globe)
+or [`/wiki/the-universe?globe`](https://codegrave.com/wiki/the-universe?globe).
+
 ## What you can do
 
-- **Pick a subject.** About seventy views under five topics: Countries,
+- **Pick a subject.** About 230 views under five topics: Countries,
   Culture, History, Science and Technology (for example Ancient Egypt,
-  World War II, Dinosaurs, Video Games, Nepal).
-- **Play.** The road moves at an even pace; each card opens for a moment
-  as you reach it, and pictures and films of what is on screen float
-  beside the road. Country views can play their national anthem.
-- **Compare.** Put two views side by side, each in its own lane, to see
-  what happened at the same time.
+  Wars, Dinosaurs, Video Games, Nepal).
+- **Play.** The globe turns from one place to the next at a steady pace,
+  and each entry is written beside its pin as you reach it. Set the speed
+  in the three-dot menu. Country views can play their national anthem.
+- **Drag the time line.** The entries stand by name along the bottom; drag
+  it, or click a name, to go there.
+- **Leave the Earth.** A subject with no place on the map, such as The
+  Universe, flies on among the stars, each picture filling the sky.
 - **Search.** Find a person, a place, an event or a year (try `44 BCE`).
+- **Make your own.** Describe a timeline in a sentence and it is written
+  for you, to keep, edit and publish.
 - **Share.** The link keeps the views and the open entry.
 
-<p align="center"><img src="docs/screenshots/countries.jpg" width="80%" alt="The Nepal view with the panel open on the Countries topic, each country shown by its flag"></p>
+<p align="center"><img src="docs/screenshots/globe-space.jpg" width="80%" alt="The Universe view: its first entry among the stars, with a deep-field picture of galaxies filling the sky behind it"></p>
 
-The data is open: about 4,500 entries, each one file with its sources.
+The map is drawn with MapLibre, OpenFreeMap and Natural Earth, and places
+come from Wikidata.
+
+The data is open: about 7,500 entries, each one file with its sources.
 Anyone can fix a fact, add an entry or publish a view.
 
 ## Quick start

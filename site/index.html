@@ -129,6 +129,7 @@
   <!-- The timeline in depth: the ground on a canvas, the year and the views at the top left, the names standing on the road -->
   <div id="road" aria-label="Timeline">
     <div id="wall" aria-hidden="true"></div>
+    <div id="globe" hidden></div>
     <canvas id="road-cv" aria-hidden="true"></canvas>
     <div id="road-views"></div>
     <div id="road-head"><div id="road-year" aria-hidden="true"></div><p id="road-unit" class="fine" hidden></p></div>
@@ -180,10 +181,10 @@
     <svg class="to-dark" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
     <span class="to-light">Light theme</span><span class="to-dark">Dark theme</span>
   </button>
-  <button id="bar-labels" class="nv" type="button" role="menuitemcheckbox" aria-checked="true">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M19 4v16M15 7h4M15 12h4M15 17h4M4 7h7M4 12h5M4 17h7"/></svg>
-    <span class="lbl">Years on the bar</span><small class="state">Shown</small>
-  </button>
+  <label id="pace-row" class="nv pace">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 17a8.5 8.5 0 1 1 15 0M12 13l4-5"/><circle cx="12" cy="13.5" r="1.2"/></svg>
+    <span class="lbl">Play speed</span><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small>
+  </label>
   <hr>
   <p class="cap">Info</p>
   <button id="more-info" class="nv" type="button" role="menuitem"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 11v5.5M12 7.6v.1"/></svg><span>How to read the timeline</span></button>
