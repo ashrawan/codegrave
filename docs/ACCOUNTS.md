@@ -25,7 +25,8 @@ repository into static files, exactly as before.
 
 A free Supabase project holds two tables (`supabase/migrations/`):
 
-- `profiles`: one row per account, with its `username` (one for now).
+- `profiles`: one row per account, with its `username` (one for now) and
+  `ai_daily`, how many AI requests it may make in a day.
 - `timelines`: one row per timeline. `data` is a whole view file,
   `{ view, entries }`, the same shape the build writes to
   `site/data/v/`, so the page draws it with the code it already has and
@@ -50,7 +51,7 @@ finished even when the tab is closed.
    with the reader's session. The answer is always a stream; a model the
    function does not offer is refused (there is no support for older pages).
 2. The function checks who is asking and counts the day's requests in
-   `ai_requests` (20 a day per account by default; a row in `ai_limits`, written by hand, gives one account its own number).
+   `ai_requests` against the allowance on the account's own row, `profiles.ai_daily` (20 a day unless changed; see "The day's allowance" below).
 3. It reads up on the subject in Wikipedia (the best article whole, the
    openings of three more), so recent facts come from today's Wikipedia
    and not only from the model's memory.
@@ -102,13 +103,25 @@ covers most requests for free. OpenRouter's web search tool can be turned
 on with the secret `AI_WEB=1`; it is paid per search (about half a cent a
 request plus the results) and was not tested with the stream.
 
+### The day's allowance
+
+How many AI requests an account may make in a day is one number on its own
+row: `profiles.ai_daily`, 20 for every new account. The function reads it
+by the row's key, at the same time as it counts the account's requests of
+the last 24 hours in `ai_requests` (by the index on owner and time), and
+refuses the request once the count reaches the number. The account menu
+shows the same two numbers ("12 of 20 requests left today"). To give one
+account more, change `ai_daily` on its row in Supabase's table editor; it
+holds from the next request. Nobody can change their own: an account may
+write only its `username`. A paid plan will set the same number.
+
 Secrets of the function (Supabase → Edge Functions → Secrets):
 `OPENROUTER_API_KEY` (required; without it the page says Create with AI is
 not switched on yet), `AI_MODELS` (optional: more OpenRouter ids to allow,
 separated by commas; `*` allows any id, for the day the page lists
-everything OpenRouter has), `AI_DAILY` (optional) and `AI_WEB` (optional). Spending is capped
+everything OpenRouter has), and `AI_WEB` (optional). Spending is capped
 twice: by the credit limit set on the OpenRouter key itself, and by
-`AI_DAILY` requests per account a day. A cap per person inside OpenRouter
+the day's allowance of each account. A cap per person inside OpenRouter
 would need one key per account (OpenRouter's key-provisioning API); that
 is not built. Entries made this way are not reviewed: they are marked
 unverified and carry a link to their Wikipedia article as the source.
