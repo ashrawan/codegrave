@@ -1,0 +1,44 @@
+{
+  "name": "short-question",
+  "description": "A vertical Short that asks one question and answers it fast: quick moves, bold words, the globe by day.",
+  "format": "vertical",
+  "look": "day",
+  "detail": "less",
+  "safe": "shorts",
+  "layers": {
+    "strip": false,
+    "clock": false,
+    "title": false
+  },
+  "label": "title",
+  "pace": {
+    "open": 0.8,
+    "travel": 0.9,
+    "hold": 4,
+    "picture": 1.6
+  },
+  "defaults": {
+    "all": {
+      "ease": "inOut"
+    },
+    "hold": {
+      "in": 0.3,
+      "out": 0.25
+    },
+    "label": {
+      "in": 0.25,
+      "out": 0.2
+    },
+    "stamp": {
+      "color": "red"
+    },
+    "highlight": {
+      "color": "yellow",
+      "pulse": true
+    },
+    "route": {
+      "color": "yellow",
+      "width": 4
+    }
+  }
+}

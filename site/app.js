@@ -3049,6 +3049,6 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   });
   const authFailed = account.boot();      // before the address is read: a returning sign-in leaves its tokens after "#"
   // Only a link with ?film=1 fetches site/film/, and without its key that does nothing and the page starts as ever.
-  if (/[?&]film=1(&|$)/.test(location.search)) import('./film/boot.js').then((m) => m.default({ esc, loadView, useView, viewById, stepOf, picturesOf, createGlobe, api: account.api, boot: () => (bootReady = getJSON('boot.json').then(useBoot)) })).then((on) => on || start(), start);
+  if (/[?&]film=1(&|$)/.test(location.search)) import('./film/boot.js').then((m) => m.default({ esc, loadView, useView, viewById, stepOf, picturesOf, createGlobe, api: account.api, ask: account.ask, replaceView, boot: () => (bootReady = getJSON('boot.json').then(useBoot)) })).then((on) => on || start(), start);
   else start();
 })();

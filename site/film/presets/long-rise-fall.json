@@ -1,0 +1,40 @@
+{
+  "name": "long-rise-fall",
+  "description": "A landscape rise and fall: regions that grow and go, true-size comparisons, the atlas with its time line.",
+  "format": "landscape",
+  "look": "atlas",
+  "detail": "medium",
+  "safe": "none",
+  "layers": {
+    "strip": true,
+    "clock": true,
+    "title": false
+  },
+  "label": "title",
+  "pace": {
+    "open": 1.6,
+    "travel": 1.5,
+    "hold": 8,
+    "picture": 3.5
+  },
+  "defaults": {
+    "all": {
+      "ease": "inOut"
+    },
+    "hold": {
+      "in": 0.5,
+      "out": 0.45
+    },
+    "highlight": {
+      "color": "green",
+      "opacity": 0.45
+    },
+    "compare": {
+      "color": "blue"
+    },
+    "route": {
+      "color": "gold",
+      "width": 3
+    }
+  }
+}

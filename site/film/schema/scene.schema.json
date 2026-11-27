@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://codegrave.com/film/schema/scene.schema.json",
+  "title": "A film mode scene",
+  "description": "Places, routes, regions and labels a script gives for one film (loadScene). It is kept nowhere. The engine's own checks are the authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "places": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "lat",
+          "lng"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[\\w.-]{1,64}$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "lat": {
+            "type": "number",
+            "minimum": -85,
+            "maximum": 85
+          },
+          "lng": {
+            "type": "number"
+          },
+          "zoom": {
+            "type": "number"
+          },
+          "altitude": {
+            "type": "number",
+            "description": "kilometres"
+          },
+          "summary": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "kind": {
+            "type": "string"
+          },
+          "picture": {
+            "type": "string",
+            "description": "The address of a picture for its card"
+          }
+        }
+      }
+    },
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "from",
+          "to"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[\\w.-]{1,64}$"
+          },
+          "from": {
+            "description": "A place's id, an entry's id, or { lat, lng }",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "lat",
+                  "lng"
+                ],
+                "properties": {
+                  "lat": {
+                    "type": "number"
+                  },
+                  "lng": {
+                    "type": "number"
+                  }
+                }
+              }
+            ]
+          },
+          "to": {
+            "description": "A place's id, an entry's id, or { lat, lng }",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "lat",
+                  "lng"
+                ],
+                "properties": {
+                  "lat": {
+                    "type": "number"
+                  },
+                  "lng": {
+                    "type": "number"
+                  }
+                }
+              }
+            ]
+          },
+          "via": {
+            "type": "array",
+            "items": {
+              "description": "A place's id, an entry's id, or { lat, lng }",
+              "oneOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "lat",
+                    "lng"
+                  ],
+                  "properties": {
+                    "lat": {
+                      "type": "number"
+                    },
+                    "lng": {
+                      "type": "number"
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "style": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "type": "string"
+              },
+              "width": {
+                "type": "number"
+              },
+              "dash": {
+                "type": "boolean"
+              },
+              "icon": {
+                "enum": [
+                  "dot",
+                  "plane",
+                  "ship",
+                  "none"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id"
+        ],
+        "oneOf": [
+          {
+            "required": [
+              "iso"
+            ]
+          },
+          {
+            "required": [
+              "geojson"
+            ]
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[\\w.-]{1,64}$"
+          },
+          "iso": {
+            "type": "string",
+            "description": "A country's two-letter code or name"
+          },
+          "geojson": {
+            "type": "object",
+            "description": "A Polygon or MultiPolygon, or a Feature holding one"
+          },
+          "style": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[\\w.-]{1,64}$"
+          },
+          "text": {
+            "type": "string"
+          },
+          "place": {
+            "description": "A place's id, an entry's id, or { lat, lng }",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "required": [
+                  "lat",
+                  "lng"
+                ],
+                "properties": {
+                  "lat": {
+                    "type": "number"
+                  },
+                  "lng": {
+                    "type": "number"
+                  }
+                }
+              }
+            ]
+          },
+          "x": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "y": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 1
+          },
+          "style": {
+            "oneOf": [
+              {
+                "enum": [
+                  "plain",
+                  "title",
+                  "caption",
+                  "chip",
+                  "quote"
+                ]
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "color": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "number"
+                  },
+                  "align": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

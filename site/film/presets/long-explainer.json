@@ -1,0 +1,36 @@
+{
+  "name": "long-explainer",
+  "description": "A landscape explainer: the atlas, the time line at the foot, steady moves and plain labels.",
+  "format": "landscape",
+  "look": "atlas",
+  "detail": "medium",
+  "safe": "none",
+  "layers": {
+    "strip": true,
+    "clock": true,
+    "title": false
+  },
+  "label": "plain",
+  "pace": {
+    "open": 1.5,
+    "travel": 1.4,
+    "hold": 7,
+    "picture": 3
+  },
+  "defaults": {
+    "all": {
+      "ease": "smooth"
+    },
+    "hold": {
+      "in": 0.45,
+      "out": 0.4
+    },
+    "highlight": {
+      "color": "gold"
+    },
+    "route": {
+      "color": "gold",
+      "width": 3
+    }
+  }
+}

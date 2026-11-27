@@ -2,36 +2,817 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://codegrave.com/film/schema/shots.schema.json",
   "title": "A film mode shot list",
-  "description": "A list of shots, or an object with the timeline and the list. The engine's own checks (loadShots) are the authority; this file is for editor hints. More shot types arrive with later stages: ask capabilities() what a site supports.",
+  "description": "A list of shots, or an object with the timeline, the preset and the list. The engine's own checks (loadShots) are the authority; this file is for editor hints. Ask capabilities() what a site supports.",
   "oneOf": [
-    { "$ref": "#/$defs/shots" },
-    { "type": "object", "required": ["shots"], "properties": { "timeline": { "type": "string", "description": "wiki/japan, <username>/<slug> or t/<id>" }, "preset": { "type": "string" }, "shots": { "$ref": "#/$defs/shots" } } }
+    {
+      "$ref": "#/$defs/shots"
+    },
+    {
+      "type": "object",
+      "required": [
+        "shots"
+      ],
+      "properties": {
+        "timeline": {
+          "type": "string",
+          "description": "wiki/japan, <username>/<slug> or t/<id>"
+        },
+        "preset": {
+          "enum": [
+            "short-question",
+            "short-mystery",
+            "long-explainer",
+            "long-mystery",
+            "long-map-story",
+            "long-rise-fall",
+            "long-chronicle"
+          ]
+        },
+        "shots": {
+          "$ref": "#/$defs/shots"
+        },
+        "auto": {
+          "type": "boolean",
+          "description": "Written by film.mjs shots: it may be written again when the voice timings change"
+        },
+        "durations": {}
+      }
+    }
   ],
   "$defs": {
-    "shots": { "type": "array", "items": { "oneOf": [{ "$ref": "#/$defs/fly" }, { "$ref": "#/$defs/hold" }, { "$ref": "#/$defs/camera" }, { "$ref": "#/$defs/step" }] } },
-    "place": { "description": "An entry's id, or a place on the Earth", "oneOf": [
-      { "type": "string" },
-      { "type": "object", "required": ["lat", "lng"], "properties": { "lat": { "type": "number" }, "lng": { "type": "number" }, "zoom": { "type": "number" }, "altitude": { "type": "number", "description": "kilometres" }, "heading": { "type": "number" }, "tilt": { "type": "number" } } }
-    ] },
-    "common": { "type": "object", "properties": {
-      "start": { "type": "number", "minimum": 0, "description": "Seconds from the start of the film. Left out, a camera shot follows the one before it, and an overlay starts with the camera shot listed before it." },
-      "duration": { "type": "number", "minimum": 0, "description": "Seconds" },
-      "ease": { "enum": ["smooth", "linear", "in", "out", "inOut"] },
-      "track": { "enum": ["camera", "overlay"] }
-    } },
-    "fly": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "to", "duration"], "properties": {
-      "type": { "const": "fly" }, "to": { "$ref": "#/$defs/place" }, "from": { "$ref": "#/$defs/place" },
-      "zoom": { "type": "number" }, "shift": { "type": "number", "minimum": 0, "maximum": 1 }, "trail": { "type": "boolean" } } },
-    "hold": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "duration"], "properties": {
-      "type": { "const": "hold" }, "entry": { "type": "string" }, "card": { "type": "boolean" }, "picture": { "type": "boolean" },
-      "in": { "type": "number", "minimum": 0 }, "out": { "type": "number", "minimum": 0 }, "zoom": { "type": "number" } } },
-    "camera": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "duration"], "properties": {
-      "type": { "const": "camera" }, "lat": { "type": "number", "minimum": -85, "maximum": 85 }, "lng": { "type": "number" },
-      "altitude": { "type": "number", "description": "kilometres" }, "zoom": { "type": "number", "minimum": 0, "maximum": 20 },
-      "heading": { "type": "number" }, "tilt": { "type": "number", "minimum": 0, "maximum": 60 }, "shift": { "type": "number", "minimum": 0, "maximum": 1 } } },
-    "step": { "allOf": [{ "$ref": "#/$defs/common" }], "required": ["type", "entries", "durations"], "properties": {
-      "type": { "const": "step" }, "entries": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-      "durations": { "oneOf": [{ "type": "number", "exclusiveMinimum": 0 }, { "type": "array", "items": { "type": "number", "exclusiveMinimum": 0 } }] },
-      "travel": { "type": "number", "minimum": 0 }, "card": { "type": "boolean" }, "picture": { "type": "boolean" }, "in": { "type": "number" }, "out": { "type": "number" } } }
+    "shots": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "$ref": "#/$defs/fly"
+          },
+          {
+            "$ref": "#/$defs/hold"
+          },
+          {
+            "$ref": "#/$defs/camera"
+          },
+          {
+            "$ref": "#/$defs/step"
+          },
+          {
+            "$ref": "#/$defs/orbit"
+          },
+          {
+            "$ref": "#/$defs/pushIn"
+          },
+          {
+            "$ref": "#/$defs/overview"
+          },
+          {
+            "$ref": "#/$defs/picture"
+          },
+          {
+            "$ref": "#/$defs/highlight"
+          },
+          {
+            "$ref": "#/$defs/route"
+          },
+          {
+            "$ref": "#/$defs/marker"
+          },
+          {
+            "$ref": "#/$defs/label"
+          },
+          {
+            "$ref": "#/$defs/stamp"
+          },
+          {
+            "$ref": "#/$defs/compare"
+          }
+        ]
+      }
+    },
+    "place": {
+      "description": "An entry's id, or a place on the Earth",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "required": [
+            "lat",
+            "lng"
+          ],
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lng": {
+              "type": "number"
+            },
+            "zoom": {
+              "type": "number"
+            },
+            "altitude": {
+              "type": "number",
+              "description": "kilometres"
+            },
+            "heading": {
+              "type": "number"
+            },
+            "tilt": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "common": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Seconds from the start of the film. Left out, a camera shot follows the one before it, and an overlay starts with the camera shot listed before it."
+        },
+        "duration": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Seconds"
+        },
+        "ease": {
+          "enum": [
+            "smooth",
+            "linear",
+            "in",
+            "out",
+            "inOut"
+          ]
+        },
+        "track": {
+          "enum": [
+            "camera",
+            "overlay"
+          ]
+        },
+        "id": {
+          "type": "string",
+          "description": "Your own name for the shot: it comes back in getCues()"
+        }
+      }
+    },
+    "fly": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "to",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "fly"
+        },
+        "to": {
+          "$ref": "#/$defs/place"
+        },
+        "from": {
+          "$ref": "#/$defs/place"
+        },
+        "zoom": {
+          "type": "number"
+        },
+        "shift": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "trail": {
+          "type": "boolean"
+        }
+      }
+    },
+    "hold": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "hold"
+        },
+        "entry": {
+          "type": "string"
+        },
+        "card": {
+          "type": "boolean"
+        },
+        "picture": {
+          "type": "boolean"
+        },
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        },
+        "zoom": {
+          "type": "number"
+        }
+      }
+    },
+    "camera": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "camera"
+        },
+        "lat": {
+          "type": "number",
+          "minimum": -85,
+          "maximum": 85
+        },
+        "lng": {
+          "type": "number"
+        },
+        "altitude": {
+          "type": "number",
+          "description": "kilometres"
+        },
+        "zoom": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "heading": {
+          "type": "number"
+        },
+        "tilt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "shift": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "step": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "entries",
+        "durations"
+      ],
+      "properties": {
+        "type": {
+          "const": "step"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        },
+        "durations": {
+          "oneOf": [
+            {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              }
+            }
+          ]
+        },
+        "travel": {
+          "type": "number",
+          "minimum": 0
+        },
+        "card": {
+          "type": "boolean"
+        },
+        "picture": {
+          "type": "boolean"
+        },
+        "in": {
+          "type": "number"
+        },
+        "out": {
+          "type": "number"
+        }
+      }
+    },
+    "spot": {
+      "description": "An entry's id, a place of the scene, or { lat, lng }",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "required": [
+            "lat",
+            "lng"
+          ],
+          "properties": {
+            "lat": {
+              "type": "number"
+            },
+            "lng": {
+              "type": "number"
+            }
+          }
+        }
+      ]
+    },
+    "color": {
+      "description": "gold, red, orange, yellow, green, teal, blue, purple, pink, white, black, grey, or #rrggbb",
+      "type": "string"
+    },
+    "orbit": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "degrees",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "orbit"
+        },
+        "around": {
+          "$ref": "#/$defs/place"
+        },
+        "degrees": {
+          "type": "number"
+        },
+        "tilt": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 60
+        },
+        "zoom": {
+          "type": "number"
+        },
+        "altitude": {
+          "type": "number"
+        },
+        "card": {
+          "type": "boolean"
+        }
+      }
+    },
+    "pushIn": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "place",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "pushIn"
+        },
+        "place": {
+          "$ref": "#/$defs/place"
+        },
+        "from": {
+          "type": "number",
+          "description": "kilometres"
+        },
+        "to": {
+          "type": "number",
+          "description": "kilometres"
+        },
+        "fromZoom": {
+          "type": "number"
+        },
+        "toZoom": {
+          "type": "number"
+        },
+        "tilt": {
+          "type": "number"
+        },
+        "heading": {
+          "type": "number"
+        },
+        "card": {
+          "type": "boolean"
+        }
+      }
+    },
+    "overview": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "overview"
+        },
+        "zoom": {
+          "type": "number"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "lng": {
+          "type": "number"
+        }
+      }
+    },
+    "picture": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "entry",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "picture"
+        },
+        "entry": {
+          "type": "string"
+        },
+        "index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kenBurns": {
+          "enum": [
+            "in",
+            "out",
+            "left",
+            "right",
+            "up",
+            "down",
+            false
+          ]
+        },
+        "back": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "highlight": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "region",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "highlight"
+        },
+        "region": {
+          "type": "string",
+          "description": "A country's name or two-letter code, or a region of the scene"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "pulse": {
+          "type": "boolean"
+        },
+        "opacity": {
+          "type": "number"
+        },
+        "outline": {
+          "type": "boolean"
+        },
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "route": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "route"
+        },
+        "route": {
+          "type": "string",
+          "description": "A route of the scene"
+        },
+        "from": {
+          "$ref": "#/$defs/spot"
+        },
+        "to": {
+          "$ref": "#/$defs/spot"
+        },
+        "via": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/spot"
+          }
+        },
+        "draw": {
+          "type": "boolean"
+        },
+        "icon": {
+          "enum": [
+            "dot",
+            "plane",
+            "ship",
+            "none"
+          ]
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "width": {
+          "type": "number"
+        },
+        "dash": {
+          "type": "boolean"
+        },
+        "stay": {
+          "type": "number"
+        },
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "marker": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "place",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "marker"
+        },
+        "place": {
+          "$ref": "#/$defs/spot"
+        },
+        "label": {
+          "type": "string"
+        },
+        "style": {
+          "enum": [
+            "pin",
+            "dot",
+            "pulse"
+          ]
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "label": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "label"
+        },
+        "text": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string",
+          "description": "A label of the scene"
+        },
+        "place": {
+          "$ref": "#/$defs/spot"
+        },
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "style": {
+          "enum": [
+            "plain",
+            "title",
+            "caption",
+            "chip",
+            "quote"
+          ]
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "size": {
+          "type": "number"
+        },
+        "align": {
+          "enum": [
+            "left",
+            "center",
+            "right"
+          ]
+        },
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "stamp": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "text",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "stamp"
+        },
+        "text": {
+          "type": "string"
+        },
+        "place": {
+          "$ref": "#/$defs/spot"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "angle": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "size": {
+          "type": "number"
+        },
+        "out": {
+          "type": "number"
+        }
+      }
+    },
+    "compare": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/common"
+        }
+      ],
+      "required": [
+        "type",
+        "region",
+        "onto",
+        "duration"
+      ],
+      "properties": {
+        "type": {
+          "const": "compare"
+        },
+        "region": {
+          "type": "string"
+        },
+        "onto": {
+          "description": "A place, or another region",
+          "oneOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "object"
+            }
+          ]
+        },
+        "travel": {
+          "type": "number"
+        },
+        "color": {
+          "$ref": "#/$defs/color"
+        },
+        "opacity": {
+          "type": "number"
+        },
+        "ghost": {
+          "type": "boolean"
+        },
+        "in": {
+          "type": "number",
+          "minimum": 0
+        },
+        "out": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
   }
 }

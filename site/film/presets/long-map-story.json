@@ -1,0 +1,42 @@
+{
+  "name": "long-map-story",
+  "description": "A landscape story told on the map: routes drawn from place to place, regions lit, the globe by day.",
+  "format": "landscape",
+  "look": "day",
+  "detail": "medium",
+  "safe": "none",
+  "layers": {
+    "strip": false,
+    "clock": true,
+    "title": false
+  },
+  "label": "chip",
+  "pace": {
+    "open": 1.8,
+    "travel": 1.6,
+    "hold": 6,
+    "picture": 3
+  },
+  "defaults": {
+    "all": {
+      "ease": "smooth"
+    },
+    "hold": {
+      "in": 0.45,
+      "out": 0.4
+    },
+    "route": {
+      "color": "orange",
+      "width": 4,
+      "icon": "plane"
+    },
+    "highlight": {
+      "color": "orange",
+      "opacity": 0.4
+    },
+    "marker": {
+      "style": "pin",
+      "color": "orange"
+    }
+  }
+}

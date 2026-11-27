@@ -1,0 +1,54 @@
+{
+  "name": "long-mystery",
+  "description": "A landscape mystery: the night globe, long slow moves in, few words, no time line.",
+  "format": "landscape",
+  "look": "night",
+  "detail": "less",
+  "safe": "none",
+  "layers": {
+    "strip": false,
+    "clock": false,
+    "title": false
+  },
+  "label": "caption",
+  "pace": {
+    "open": 2.2,
+    "travel": 1.8,
+    "hold": 9,
+    "picture": 4
+  },
+  "defaults": {
+    "all": {
+      "ease": "smooth"
+    },
+    "hold": {
+      "in": 0.8,
+      "out": 0.7
+    },
+    "pushIn": {
+      "ease": "linear"
+    },
+    "orbit": {
+      "ease": "linear",
+      "tilt": 50
+    },
+    "label": {
+      "in": 0.8,
+      "out": 0.6
+    },
+    "highlight": {
+      "color": "red",
+      "pulse": true,
+      "opacity": 0.35
+    },
+    "route": {
+      "color": "red",
+      "width": 2.5,
+      "dash": true
+    },
+    "marker": {
+      "style": "pulse",
+      "color": "red"
+    }
+  }
+}
