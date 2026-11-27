@@ -2977,6 +2977,8 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   const account = createAccount({
     $, esc, views: () => state.views, view: (id) => viewById.get(id), show: (id) => { account.explore(false); return showOnly(id); },
     open: (id) => { if (L) roadToView(id); },
+    // A timeline just made with AI: to its beginning, whatever is in sight.
+    start: (id) => { if (L) roadToView(id, false); },
     // The editor: the road travels to the entry being edited, so its card stands open a little ahead.
     goTo: (id) => { const p = L && L.at.get(id); if (p) roadTo(clamp(p.a - 0.3 * L.D * camDir(), L.tMin, L.tMax)); },
     relayout: () => { showSide(false); if (state.views.length) render(); },

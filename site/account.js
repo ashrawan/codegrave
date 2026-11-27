@@ -432,7 +432,7 @@ export function createAccount(app) {
     el.hidden = bar.hidden = step == null; el.classList.toggle('low', steps === ASK_STEPS);
     const w = steps.length - 2;      // the step that writes entries
     if (step == null) { bar.firstChild.style.width = '0'; return; }
-    el.innerHTML = '<ol>' + steps.map((s, i) => `<li class="${i < step ? 'done' : i === step ? 'now' : ''}">${s}${i === w && n ? ` <b>${n}</b>` : ''}</li>`).join('') + '</ol>';
+    el.innerHTML = '<ol>' + steps.map((s, i) => `<li class="${i < step ? 'done' : i === step ? 'now' : ''}">${s}${i === w && n ? ` <b>${n}</b>` : ''}${i === step ? '<span class="dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span>' : ''}</li>`).join('') + '</ol>';
     // How far it has come: the entries are not counted ahead, so writing fills the bar more slowly as it goes.
     const f = step < w ? 0.06 + 0.08 * step / Math.max(1, w) + 0.04 : step === w ? 0.15 + 0.65 * (1 - Math.exp(-n / 18)) : 0.9;
     bar.firstChild.style.width = (f * 100).toFixed(1) + '%';
@@ -457,14 +457,16 @@ export function createAccount(app) {
     refreshList();
     live(0);
     await app.show(id);
-    let shown = 0, last = 0, opened = false, pics = false;
+    let shown = 0, last = 0, seen = 0, pics = false;
     const put = (spec, data) => {
       const f = specToView(spec, sd);
       row.title = f.spec.title !== 'Untitled timeline' ? f.spec.title : row.title;
       row.description = f.spec.description;
       row.text = JSON.stringify(data ? { ...data(f) } : { view: f.view, entries: f.entries, prompt, making: true });
       app.replace(payloadOf(row));
-      if (!opened && f.entries.length) { opened = true; setTimeout(() => app.open(id), 30); }
+      // While it is written the reader goes along to each new entry, so all of it passes by; at the end the
+      // timeline goes back to its beginning (asked for, Nov 2026).
+      if (!data && f.entries.length > seen) { seen = f.entries.length; const last = f.entries[seen - 1].id; setTimeout(() => app.goTo(last), 30); }
       return f;
     };
     try {
@@ -477,6 +479,8 @@ export function createAccount(app) {
       }, (note) => { if (/pictures/.test(note)) { pics = true; live(2); } else if (/Writ/.test(note) && !shown) live(1); });
       const f = put(got.spec, (x) => ({ view: x.view, entries: x.entries, spec: x.spec, prompt }));
       if (!f.entries.length) throw new Error('The model wrote no entries with dates. Try saying more about what you want.');
+      // The finished timeline opens at its beginning, wherever the reader stood while it was written (asked for, Nov 2026).
+      setTimeout(() => app.start(id), 60);
       if (!got.saved) await patch(row, { title: f.spec.title, description: f.spec.description, data: JSON.parse(row.text) });
       live(null);
       working = false; document.body.classList.remove('ai-busy');
