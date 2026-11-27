@@ -21,11 +21,11 @@ export default {
     e.push(...colorError(s.color));
     return e;
   },
-  prepare(s, { ctx, seconds, index }) {
+  prepare(s, { ctx, seconds, index, raw = s }) {
     const R = s.route != null ? ctx.route(s.route) : s, st = (R && R.style) || {};
     const pts = [R.from, ...(Array.isArray(R.via) ? R.via : R.via != null ? [R.via] : []), R.to].map((p) => { const a = spot(p, ctx); return [a.lat, a.lng]; });
     const stay = Math.min(seconds, Math.max(0, s.stay ?? 0));
-    return { line: path(pts, greatCircle, distance), draw: s.draw !== false, icon: s.icon ?? st.icon ?? 'dot', c: colorOf(s.color ?? st.color), w: s.width ?? st.width ?? 3, dash: !!(s.dash ?? st.dash),
+    return { line: path(pts, greatCircle, distance), draw: s.draw !== false, icon: raw.icon ?? st.icon ?? s.icon ?? 'dot', c: colorOf(raw.color ?? st.color ?? s.color), w: raw.width ?? st.width ?? s.width ?? 3, dash: !!(raw.dash ?? st.dash ?? s.dash),
       d: seconds, run: Math.max(1e-6, seconds - stay), out: s.out ?? 0.4, in: s.draw === false ? s.in ?? 0.4 : 0, ease: s.ease || 'inOut', id: `rt${index}` };
   },
   draw(u, F, D) {

@@ -57,6 +57,7 @@ for (const [name, who] of [['signed out', null], ['an account not switched on', 
   check(await page.evaluate(() => document.querySelector('meta[name=robots]')?.content === 'noindex,nofollow' && getComputedStyle(document.querySelector('#sb')).display === 'none'), 'film mode: noindex is set and the chrome is hidden');
   const total = await page.evaluate(() => window.codegraveFilm.loadShots([{ type: 'fly', to: 'kyoto', duration: 2 }, { type: 'hold', entry: 'kyoto', duration: 3 }, { type: 'step', entries: ['kinkaku-ji', 'tokyo'], durations: 3 }, { type: 'camera', lat: 35.36, lng: 138.73, altitude: 300, heading: 30, tilt: 45, duration: 3 }]));
   check(total === 14, `the shot list loads and runs ${total}s`);
+  await page.evaluate(() => window.codegraveFilm.prefetch());      // as a render does: every tile and picture is in before a frame is taken
   const hash = async (t) => { await page.evaluate((x) => window.codegraveFilm.seek(x), t); return createHash('sha256').update(await page.screenshot()).digest('hex').slice(0, 16); };
   for (const t of [1.2, 4, 9.5, 12.5]) { const a = await hash(t); await hash(6.7); const b = await hash(t); check(a === b, `seek(${t}) twice gives the same frame (${a})`); }
   check(await page.evaluate(() => Object.keys(localStorage).join() === 'cg-session' && sessionStorage.length === 0), 'nothing is written to storage but the session');
@@ -77,6 +78,7 @@ for (const [name, who] of [['signed out', null], ['an account not switched on', 
   const total = await page.evaluate(() => window.codegraveFilm.loadShots([{ type: 'fly', to: 'lisbon', duration: 1 }, { type: 'hold', entry: 'lisbon', duration: 2 }, { type: 'highlight', region: 'home', duration: 2 }, { type: 'label', text: 'The sea road', x: 0.5, y: 0.15, duration: 2 },
     { type: 'camera', lat: 20, lng: 35, altitude: 12000, duration: 1 }, { type: 'hold', duration: 2 }, { type: 'route', route: 'gama', icon: 'ship', duration: 2 }, { type: 'marker', place: 'calicut', label: 'Calicut', duration: 2 }], { preset: 'short-question' }));
   check(total === 6, `overlays run during the camera shots: ${total}s`);
+  await page.evaluate(() => window.codegraveFilm.prefetch());
   const shot = async (t) => { await page.evaluate((x) => window.codegraveFilm.seek(x), t); return page.screenshot(); };
   const first = await shot(2);
   check(first.readUInt32BE(16) === 1080 && first.readUInt32BE(20) === 1920, `a vertical frame is ${first.readUInt32BE(16)} by ${first.readUInt32BE(20)} pixels`);

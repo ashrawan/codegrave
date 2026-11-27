@@ -17,9 +17,9 @@ export default {
     e.push(...colorError(s.color));
     return e;
   },
-  prepare(s, { ctx, seconds, index }) {
+  prepare(s, { ctx, seconds, index, raw = s }) {
     const R = ctx.region(s.region), g = thin(R.geometry);
-    return { g, key: R.key, from: middle(R.geometry), to: target(s.onto, ctx), c: colorOf(s.color ?? R.color, '#3e8bff'), o: clamp01(s.opacity ?? 0.4), ghost: s.ghost !== false,
+    return { g, key: R.key, from: middle(R.geometry), to: target(s.onto, ctx), c: colorOf(raw.color ?? R.color ?? s.color, '#3e8bff'), o: clamp01(s.opacity ?? 0.4), ghost: s.ghost !== false,
       d: seconds, travel: Math.min(seconds, s.travel ?? Math.min(2.5, 0.4 * seconds)), in: s.in ?? 0.3, out: s.out ?? 0.4, ease: s.ease || 'inOut', id: `cp${index}` };
   },
   draw(u, F, D) {

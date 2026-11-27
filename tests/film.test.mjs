@@ -201,6 +201,11 @@ test('every preset loads, and its defaults reach the shots unless a shot says ot
   }
   const f = compile([{ type: 'highlight', region: 'japan', color: 'red', duration: 1 }], richCtx(), SHOTS, { highlight: { color: 'gold', pulse: true } });
   assert.equal(f.items[0].shot.color, 'red'); assert.equal(f.items[0].shot.pulse, true);
+  // What the shot says wins over the scene's style, which wins over the preset's default.
+  const s = readScene({ places: [{ id: 'a', lat: 0, lng: 0 }, { id: 'b', lat: 10, lng: 10 }], routes: [{ id: 'r', from: 'a', to: 'b', style: { color: 'teal', icon: 'ship' } }] });
+  const head = (shot) => stateAt(compile([{ type: 'hold', duration: 2 }, shot], richCtx(s), SHOTS, { route: { color: 'gold', icon: 'plane' } }), 1).ov.find((o) => o.k === 'head');
+  assert.equal(head({ type: 'route', route: 'r', duration: 2 }).icon, 'ship'); assert.equal(head({ type: 'route', route: 'r', duration: 2 }).c, '#12a594');
+  assert.equal(head({ type: 'route', route: 'r', color: 'red', duration: 2 }).c, '#e5484d'); assert.equal(head({ type: 'route', from: 'a', to: 'b', duration: 2 }).icon, 'plane');
 });
 
 test('a vertical stage: the card stands under the place, clear of a Short\'s own buttons', () => {

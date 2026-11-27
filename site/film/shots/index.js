@@ -2,7 +2,7 @@
    file and a line here, and touches none of the others (docs/FILM_MODE.md, "Adding a shot type"):
      type, track          its name, and the track it runs on unless a shot says otherwise
      validate(shot, ctx)  a list of faults in plain words, empty when the shot is sound
-     prepare(shot, env)   worked out once: what draw needs (env: ctx, from, prev, next, index, seconds)
+     prepare(shot, env)   worked out once: what draw needs (env: ctx, from, prev, next, index, seconds; for an overlay also raw, the shot as written, before a preset's defaults)
      draw(u, F, data, env) writes the frame `F` for `u`, how far through the shot (0 to 1)
      duration(shot)?      for a type whose length follows from its parts
      cues(item)?          times inside the shot worth knowing

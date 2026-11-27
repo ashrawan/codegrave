@@ -115,7 +115,7 @@ export function compile(shots, ctx, registry, defaults = {}) {
       if (start < cursor - 1e-6) errors.push(`${at} (${raw.type}): starts at ${start}s, before the camera shot ahead of it ends (${cursor}s); only overlays may run during another shot`);
       cursor = start + duration; camStart = start;
     }
-    items.push({ index: i, type: raw.type, shot, plugin, track, start, end: start + duration });
+    items.push({ index: i, type: raw.type, shot, raw, plugin, track, start, end: start + duration });
   });
   if (errors.length) throw new FilmError(errors);
   const cams = items.filter((it) => it.track === 'camera');
@@ -128,7 +128,7 @@ export function compile(shots, ctx, registry, defaults = {}) {
   });
     const film = { items, cams, total: items.reduce((m, it) => Math.max(m, it.end), 0), first: initial(ctx) };
   // An overlay is worked out against the picture the camera has when it begins.
-  for (const it of items) if (it.track !== 'camera') { it.env = { ctx, index: it.index, from: cameraAt(film, it.start), seconds: it.end - it.start }; it.data = it.plugin.prepare(it.shot, it.env); }
+  for (const it of items) if (it.track !== 'camera') { it.env = { ctx, index: it.index, raw: it.raw, from: cameraAt(film, it.start), seconds: it.end - it.start }; it.data = it.plugin.prepare(it.shot, it.env); }
   for (const it of cams) it.env.seconds = it.end - it.start;
   return film;
 }

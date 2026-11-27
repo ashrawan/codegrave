@@ -9,7 +9,7 @@ import { idOfAddress } from '../keys.js';
 import { stageFor } from '../globe-path.js';
 import { specToView, partialSpec, MODELS, EFFORTS } from '../ai.js';
 import { slugOf } from '../account.js';
-import { VERSION, EASES, TRACKS, COLORS, compile, stateAt, toOver, cuesOf, FilmError } from './timeline.js';
+import { VERSION, EASES, TRACKS, COLORS, compile, stateAt, toOver, cuesOf, zoomOfAltitude, FilmError } from './timeline.js';
 import { SHOTS } from './shots/index.js';
 import { LABEL_STYLES } from './shots/label.js';
 import { createOverlays } from './overlays.js';
@@ -115,7 +115,7 @@ export function startFilm(kit) {
     const list = [...scene.places].map(([id, p]) => ({ id, p }));
     tl.id = tl.slug = null; tl.title = ''; tl.description = ''; tl.chapters = []; tl.spec = null; tl.saved = 'none';
     tl.steps = list.map(({ id, p }) => ({ id, name: p.name, kind: p.kind || '', when: p.date || '', summary: p.summary || '', img: typeof p.picture === 'string' ? p.picture : '', mark: p.date || '', col: COLORS.gold, rgb: 'rgb(236,196,128)',
-      place: [p.lat, p.lng, 'city', p.name], ...(Number.isFinite(p.zoom) ? { zoom: p.zoom } : {}) }));
+      place: [p.lat, p.lng, 'city', p.name], near: Number.isFinite(p.zoom) ? p.zoom : Number.isFinite(p.altitude) ? zoomOfAltitude(p.altitude, CH, p.lat) : null }));
     tl.rows = tl.steps.map((s) => ({ id: s.id, title: s.name, kind: s.kind, date: s.when || null, end: null, when: s.when, summary: s.summary, place: s.name, lat: s.place[0], lng: s.place[1],
       pics: s.img ? [{ type: 'image', src: s.img, source: '', credit: '', licence: '' }] : [] }));
   }
@@ -150,6 +150,8 @@ export function startFilm(kit) {
     }
     const set = (id, on) => { if (map.getLayer(id) && (map.getLayoutProperty(id, 'visibility') !== 'none') !== on) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none'); };
     set('film-night', night);
+    // With nothing behind the globe its haze would show as a bright rim, so a see-through stage has none.
+    if (opts.bg === 'transparent' && !map.filmClear) { map.filmClear = true; try { map.setSky({ 'atmosphere-blend': 0 }); } catch (e) { /* an older map: the rim stays */ } }
     if (night) set('c-fill', false);
   }
   function regionOf(v) {
@@ -163,7 +165,7 @@ export function startFilm(kit) {
     const f = globe.film(), placed = tl.steps.map((s) => !!s.place);
     ctx = { steps: tl.steps, index: new Map(tl.steps.map((s, i) => [s.id, i])), w: CW, h: CH, size: Math.min(CW, CH), far: f.far, fps: opts.fps,
       opening: { lat: f.open ? f.open.at[0] : 20, lng: f.open ? f.open.at[1] : 0, zoom: f.open ? f.open.zoom : f.far },
-      view: (i) => { const c = globe.film().cams[i]; return c ? { lat: c.at[0], lng: c.at[1], zoom: tl.steps[i].zoom ?? c.zoom } : null; },
+      view: (i) => { const c = globe.film().cams[i]; return c ? { lat: c.at[0], lng: c.at[1], zoom: tl.id ? c.zoom : tl.steps[i].near ?? Math.max(c.zoom, f.far + 2.4) } : null; },
       stage: (i) => stageFor(placed, i),
       places: tl.id ? scene.places : new Map(), region: regionOf, route: (id) => scene.routes.get(id) || null, label: (id) => scene.labels.get(id) || null,
       labelStyle: (preset && preset.label) || 'plain', pictures: (i) => tl.rows[i].pics };
