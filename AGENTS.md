@@ -54,7 +54,7 @@ node scripts/new.mjs view <github-name> <id> "<Title>"
 | The bar on the left, signing in, and the timelines people keep | `site/account.js`, `site/account.css`, then `tests/account.test.mjs` and `docs/ACCOUNTS.md` | |
 | Open in editor (a timeline of one's own as rows, the road live beside it) | `site/editor.js`, `site/editor.css`; the date reading and checks in `site/ai.js`, then `tests/ai.test.mjs` and `docs/ACCOUNTS.md` | |
 | The full picture (a picture in the panel opened over the page) | `site/picture.js`, its styles at the end of `site/styles.css` | |
-| Voiceover (a timeline told aloud: the script, the speech, the clips, how play waits for a line) | `site/voice.js` (arithmetic and the player), `site/account.js` (making one), `site/app.js` (`tell()`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
+| Voiceover (a timeline told aloud: the script, the voices, the speech made in the browser, how play waits for a line) | `site/voice.js` (the voices, the speaker and the player), `site/account.js` (making one), `site/app.js` (`tell()`), then `tests/voice.test.mjs` and `docs/ACCOUNTS.md`; the server side is `supabase/functions/voiceover/index.ts`, deployed to the Supabase project | |
 | Create with AI (the prompt page, the models offered, what a model must write and how it becomes a view file) | `site/ai.js` and `site/account.js`, then `tests/ai.test.mjs`; the server side is `supabase/functions/ai-timeline/index.ts`, deployed to the Supabase project | |
 | The database (tables, who may read and write what) | A new file in `supabase/migrations/`, applied to the Supabase project | a migration that has been applied |
 | The printable export ("Export as PDF") | `site/print.js`, `site/print.css`, `site/print.html`, then `tests/print.test.mjs` | |
@@ -301,28 +301,27 @@ How the page is put together:
   queue, no timers, no turns.
 - **Voiceover** (`site/voice.js`, `docs/ACCOUNTS.md`; asked for, Nov 2026: "voiceover will be main", the music "should
   be subtle", play "should wait on the cards if its corresponding voiceover not done", "and also a subtitle. if
-  its on"). On a timeline of the reader's own, "Generate voiceover" is in the three dots at the top right (`#tl-more`): the
-  function `voiceover` writes an opening that fits the title, a line for each entry in the order play meets
-  them (`told` lent by the page) and a closing, and Gemini's cheapest Flash text to speech says them a few
-  lines at a time. The page cuts each piece of speech at its pauses into one clip a line (`cuts()`), makes
-  MP3 of them (lamejs, from cdnjs only then) and keeps them in the account's own folder; the words, the
-  clips' names and lengths are written on the row (`voice`), so opening the timeline is still one request. It
-  counts as one of the day's requests. While play travels the line of the entry in front is said (`tell()`;
-  the opening on the first entry, the closing after the last), the music sinks to `MUSIC_UNDER`, and the
-  reader stops on each card until its line is said, then goes on to the next, like Arrow keys play (asked for, Nov 2026:
-  "we need to stop in the card"; a first version slowed down to fit the line instead). A pause holds the line where it is. "Voiceover" and "Subtitles"
-  in the three-dot menu (`cg-voice`, on; `cg-subs`, off) show only for a timeline that has one; the subtitle
-  is the line being said, at the foot (`#subs`; at the top on a phone, where the card stands at the foot).
-  Only a road of one view is told, and play by the arrow keys says a line as its entry arrives without
-  waiting. The script's prompt has many short examples by kind of timeline; add to them rather than cut them.
-  The voice is chosen in a dialog that lists the voices, each with Listen (asked for, Nov 2026: "to try which voice
-  is good"): a few words in that voice, spoken once ever by the function (`{ sample }`) and kept in the bucket
-  (`sampleOf()`), so a sample costs nothing after the first time. Who speaks is a provider (`PROVIDERS` in the
-  function, Gemini today; asked for, Nov 2026: other, cheaper or free ones will be added): one entry with its voices,
-  its secret and how it marks a pause, picked by `VOICE_PROVIDERS`; a voice of another provider is written
-  `provider:voice`. A voice's own limits (a free Gemini key allows a few requests a minute and a few a day) are
-  met by speaking up to `PART_LINES` lines a request, trying the next model when one is at its limit, and, when
-  the answer is `code: "wait"`, waiting the seconds it gives and going on by itself ("Waiting for the voice").
+  its on"). On a timeline of the reader's own, "Generate voiceover" is in the three dots at the top right (`#tl-more`).
+  It opens a dialog of voices, each with Listen (asked for: "to try which voice is good"). The function `voiceover`
+  writes an opening that fits the title, a line for each entry in the order play meets them (`told` lent by the
+  page) and a closing; only those words and the voice are kept, on the row (`voice`: `{ at, voice, style, lines }`),
+  so opening the timeline is still one request. It counts as one of the day's requests; changing the voice later
+  costs nothing. **The sound is made in the reader's own browser, never on the server and never stored there**
+  (asked for, Nov 2026, after a first version recorded MP3s with Gemini into Supabase: no files on the server, and a
+  cost that does not grow with the hours people listen). `createSpeaker()` runs Kokoro (82M, Apache 2.0; `kokoro-js`
+  from jsDelivr, the q8 model from Hugging Face, about 90 MB once, then kept by the browser) in a Web Worker, one
+  line at a time, the line asked for now first; each line made is kept in this browser's Cache Storage
+  (`lineKey()`), so playing again is instant. "This device" uses the browser's own voice instead (no download).
+  Kokoro speaks English only. While play travels every line is made in order from where play is (`prepare()`), the
+  line of the entry in front is said (`tell()`; the opening on the first entry, the closing after the last), the
+  music sinks to `MUSIC_UNDER`, and the reader stops on each card until its line is said, then goes on, like Arrow
+  keys play (asked for: "we need to stop in the card"). A line not made yet holds play at its card, and the foot
+  says "Preparing the voice" (`#subs.wait`). A pause holds the line where it is. "Voiceover" and "Subtitles" in the
+  settings (`cg-voice`, on; `cg-subs`, off) show only for a timeline that has one; the subtitle is the line being
+  said, at the foot (`#subs`; at the top on a phone, where the card stands at the foot). Only a road of one view is
+  told, and play by the arrow keys says a line as its entry arrives without waiting. The script's prompt has many
+  short examples by kind of timeline; add to them rather than cut them. Another engine (a cheaper paid voice, or
+  another free model) would go beside Kokoro and the device voice in `voice.js`, with its voices in `VOICES`.
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound
@@ -600,9 +599,8 @@ How the page is put together:
   Turn round are still done by the page: `#pdf` and `#reverse` are kept as two unseen buttons that the menu
   presses. The button at the foot (`#more-btn`) is a gear and its menu (`#more-menu`) holds settings only:
   Play, Globe, Appearance and How to read the timeline. While a voiceover is made the three dots become a
-  pill that says how far it has come ("Recording 7 of 17", `#vo-pill`), and under it a panel (`#vo-panel`,
-  `drawVoicing()`) shows the script with each line ticked as it is recorded; pressing the pill hides or shows
-  the panel, and the timeline can be used meanwhile. The year on the road stands under the button.
+  pill ("Writing the script…", `#vo-pill`), with a note under it (`#vo-panel`, `drawVoicing()`); pressing the
+  pill hides or shows the note, and the timeline can be used meanwhile. The year on the road stands under the button.
 - **The three-dot menu** (`#more-btn`, `#more-menu`) is at the bottom right, under play, at the
   right end of the strip (asked for, Nov 2026, after it stood at the foot of the bar on the left).
   It is in groups under small headings (restructured on request, Nov 2026, after a first list was found

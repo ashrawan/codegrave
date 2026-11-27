@@ -830,6 +830,7 @@ body.fullscreen:not(.peek) .tsearch:not(:focus-within), body.fullscreen:not(.pee
 #more-menu .set[hidden] { display: none; }
 #subs { position: fixed; left: calc(var(--sb) + (100vw - var(--sb)) / 2); bottom: 96px; z-index: 18; width: max-content; max-width: min(760px, calc(100vw - var(--sb) - 48px)); margin: 0; padding: 8px 16px; transform: translateX(-50%); font-size: 17px; line-height: 1.45; text-align: center; text-wrap: balance; color: #fff; background: rgba(8, 10, 16, .72); border-radius: 10px; opacity: 0; pointer-events: none; transition: opacity .25s; }
 #subs.on { opacity: 1; }
+#subs.wait { font-size: 13.5px; color: rgba(255, 255, 255, .8); }
 body.globe:has(.g-shelf:not([hidden])):not(.film) #subs { bottom: 150px; }
 body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 @media (max-width: 699px) {

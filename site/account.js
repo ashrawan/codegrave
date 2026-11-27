@@ -10,7 +10,7 @@ import { EFFORTS, MODELS, findPictures, partialSpec, specToView } from './ai.js'
 import { createEditor } from './editor.js';
 
 // Public by design: the key only allows what the database's row level security allows.
-import { VOICES, sampleOf, pcmOf, cuts, voiceOf } from './voice.js';
+import { VOICES, DEFAULT_VOICE, isVoice, voiceLabel, voiceOf, listen as hear } from './voice.js';
 export const CONFIG = {
   url: 'https://wwgmelafchslapxiccot.supabase.co',
   key: 'sb_publishable_IykysSfgNLw4CfaqxP2CqA_YNcfq0SW',
@@ -141,7 +141,7 @@ export function createAccount(app) {
     delete view.topic;
     // Its voiceover, if it has one, with the full address of its clips.
     const vo = voiceOf(d.voice);
-    if (vo) view.voice = { ...vo, base: CLIPS + 'public/voice/' + vo.base };
+    if (vo) view.voice = vo;
     return { view, entries: d.entries || [] };
   }
   // One stored timeline by "t/<id>" or "<username>/<slug>": what loadView() asks for.
@@ -538,108 +538,55 @@ export function createAccount(app) {
   }
   // The requests offered under one kind: pressing the kind again folds them away.
   // ---- voiceover (site/voice.js, the function `voiceover`): a timeline of the reader's own, told aloud.
-  // The function writes the script and speaks it a few lines at a time; here each piece of speech is cut into
-  // one clip a line, made into MP3 (lamejs, fetched from cdnjs only now) and kept in the account's own folder,
-  // and the words and the clips' names are written on the timeline's row. It counts as one of the day's requests.
-  const CLIPS = CONFIG.url + '/storage/v1/object/';
-  const LAME = 'https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.1/lame.min.js';
+  // The function writes the script (one of the day's requests) and only the words are kept on the row, with
+  // the voice; the sound is made in the reader's browser while play goes, so nothing else is stored.
   const MIC = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3.5" width="6" height="11" rx="3"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0M12 18v2.5"/></svg>';
-  let voicing = null, lameReady = null;
-  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
-  // `tries`: how often a part is asked for again when the voice says to wait (it allows only a few
-  // requests a minute); `waiting(secs)` is told how long each wait is.
-  async function voiceFn(body, tries = 1, waiting = null) {
-    for (let i = 0; ; i++) {
-      const t = await token();
-      const r = await fetch(CONFIG.url + '/functions/v1/voiceover', { method: 'POST', headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-      const d = await r.json().catch(() => null);
-      if (r.ok && d) return d;
-      if (i + 1 < tries && d?.code === 'wait') { const secs = Math.max(5, Math.min(90, Number(d.wait) || 30)); waiting?.(secs); await wait(secs * 1000); waiting?.(0); continue; }
-      if (i + 1 < tries && r.status >= 500 && d?.code !== 'not_configured') { await wait(5000 * (i + 1)); continue; }
-      const err = new Error(d?.error || (r.status === 404 ? 'Voiceover is not switched on yet.' : 'That did not work. Try again.')); err.status = r.status; err.code = d?.code; throw err;
-    }
-  }
-  function lame() {
-    if (!lameReady) lameReady = new Promise((res, rej) => { const s = document.createElement('script'); s.src = LAME; s.onload = () => (window.lamejs ? res(window.lamejs) : rej(new Error('The sound could not be packed.'))); s.onerror = () => { lameReady = null; rej(new Error('The sound could not be packed. Check the connection and try again.')); }; document.head.appendChild(s); });
-    return lameReady;
-  }
-  // One line as an MP3 file: its ends eased so a cut is never heard.
-  function mp3(L, pcm, rate) {
-    const fade = Math.min(Math.round(rate * 0.012), pcm.length >> 1);
-    for (let i = 0; i < fade; i++) { pcm[i] = pcm[i] * i / fade; pcm[pcm.length - 1 - i] = pcm[pcm.length - 1 - i] * i / fade; }
-    const enc = new L.Mp3Encoder(1, rate, 48), out = [];
-    for (let i = 0; i < pcm.length; i += 1152) { const b = enc.encodeBuffer(pcm.subarray(i, i + 1152)); if (b.length) out.push(new Uint8Array(b)); }
-    const end = enc.flush(); if (end.length) out.push(new Uint8Array(end));
-    return new Blob(out, { type: 'audio/mpeg' });
-  }
-  async function putClip(path, blob) {
+  let voicing = null;
+  async function voiceFn(body) {
     const t = await token();
-    const r = await fetch(CLIPS + 'voice/' + path, { method: 'POST', headers: { apikey: CONFIG.key, Authorization: 'Bearer ' + t, 'Content-Type': 'audio/mpeg', 'cache-control': 'max-age=31536000', 'x-upsert': 'true' }, body: blob });
-    if (!r.ok) throw new Error(r.status === 404 || r.status === 400 ? 'Voiceover is not switched on yet.' : 'A clip could not be saved. Try again.');
+    const r = await fetch(CONFIG.url + '/functions/v1/voiceover', { method: 'POST', headers: { apikey: CONFIG.key, ...(t ? { Authorization: 'Bearer ' + t } : {}), 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    const d = await r.json().catch(() => null);
+    if (r.ok && d) return d;
+    throw new Error(d?.error || (r.status === 404 ? 'Voiceover is not switched on yet.' : 'That did not work. Try again.'));
   }
-  // The clips of one timeline are taken away, but for those of the voiceover in use (`keep`: the start of their names).
-  async function clips(id, keep = null) {
-    const prefix = `${user.id}/${id}/`;
-    const got = await api('/storage/v1/object/list/voice', { method: 'POST', body: { prefix, limit: 1000 } });
-    const old = (got || []).map((o) => o.name).filter((n) => n && (keep == null || !n.startsWith(keep)));
-    if (old.length) await api('/storage/v1/object/voice', { method: 'DELETE', body: { prefixes: old.map((n) => prefix + n) } });
-  }
+  const keepVoice = (v) => { try { localStorage.setItem('cg-voice-name', v); } catch (x) { /* private window */ } };
   async function voiceover(row, voice) {
     if (voicing || working) return;
-    const st = voicing = { row, note: '', voice, lines: null, done: 0, to: 0, open: true };
-    const say = (note) => { st.note = note; draw(); };
+    voicing = { row, note: 'Writing the script…', open: true };
+    draw();
     try {
       const src = app.told();
       if (!src || !src.entries.length) throw new Error('There is nothing to tell yet.');
-      say('Writing the script…');
-      const [script, L] = await Promise.all([voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } }), lame()]);
-      const at = Date.now(), base = `${user.id}/${row.id}/`, lines = [];
-      st.lines = script.parts.flatMap((p) => p.texts);
-      for (let k = 0; k < script.parts.length; k++) {
-        const part = script.parts[k];
-        st.done = lines.length; st.to = st.done + part.texts.length;
-        const rec = `Recording ${st.done + 1} of ${st.lines.length}`;
-        say(rec);
-        const got = await voiceFn({ speak: { texts: part.texts, sig: part.sig }, voice, style: script.style }, 8, (secs) => { st.held = secs; say(secs ? 'Waiting for the voice' : rec); });
-        const bytes = new Uint8Array(await (await fetch('data:application/octet-stream;base64,' + got.audio)).arrayBuffer());
-        const m = /rate=(\d+)/.exec(got.mime || ''), { pcm, rate } = pcmOf(bytes, m ? Number(m[1]) : 24000);
-        const at2 = cuts(pcm, rate, part.texts.map((t) => t.length + 12));
-        const first = lines.length;
-        lines.push(...await Promise.all(part.ids.map((id, i) => {
-          const [a, b] = at2[i], name = `${at}-${first + i}.mp3`;
-          return putClip(base + name, mp3(L, pcm.slice(a, b), rate)).then(() => ({ id, text: part.texts[i], src: name, secs: Math.round((b - a) / rate * 100) / 100 }));
-        })));
-      }
-      st.done = st.to = lines.length;
-      say('Saving…');
+      const script = await voiceFn({ script: { title: row.title, description: row.description || '', entries: src.entries } });
       const data = JSON.parse(row.text);
-      await patch(row, { data: { ...data, voice: { at, voice, style: script.style, base, lines } } });
-      clips(row.id, at + '-').catch(() => {});
+      await patch(row, { data: { ...data, voice: { at: Date.now(), voice, style: script.style || '', lines: script.lines } } });
       toast('The voiceover is ready. Press play to hear it.');
     } catch (e) {
       toast(e.message || 'The voiceover could not be made. Try again.');
     } finally { voicing = null; draw(true); }
   }
+  // Another voice for the same words: nothing is asked of the server but the change to the row.
+  async function revoice(row, voice) {
+    try {
+      const data = JSON.parse(row.text);
+      await patch(row, { data: { ...data, voice: { ...data.voice, at: Date.now(), voice } } });
+      toast(`${voiceLabel(voice)} will tell this timeline.`);
+    } catch (e) { toast(e.message); } finally { draw(true); }
+  }
   async function unvoice(row) {
     try {
       const data = JSON.parse(row.text); delete data.voice;
       await patch(row, { data });
-      clips(row.id).catch(() => {});
       toast('The voiceover is removed.');
     } catch (e) { toast(e.message); } finally { draw(true); }
   }
-  // The script under the pill while it is recorded: the lines said, the ones being said, the ones to come.
+  // Under the pill while the script is written.
   function drawVoicing(on) {
-    const p = $('vo-panel'), v = voicing;
-    p.hidden = !on || !v.open;
-    if (p.hidden) { p.innerHTML = ''; return; }
-    const n = v.lines ? v.lines.length : 0;
-    p.innerHTML = `<div class="vp-head"><b>Voiceover</b><small>${esc(v.voice)}${n ? ` · ${n} lines` : ''}</small></div>
-      <div class="vp-bar"><i style="width: ${n ? Math.round(v.done / n * 100) : 4}%"></i></div>
-      ${n ? `<ol class="vp-lines">${v.lines.map((t, i) => `<li class="${i < v.done ? 'done' : i < v.to ? 'now' : 'next'}"><i>${i < v.done ? ICON.check : ''}</i><span>${esc(t)}</span></li>`).join('')}</ol>` : '<p class="vp-note">Writing a script that fits the title and every entry<span class="dots"><i></i><i></i><i></i></span></p>'}
-      <p class="vp-foot">${v.held ? 'The voice takes only a few requests a minute. It goes on by itself in under a minute and a half.' : n ? 'You can keep using the timeline while it records.' : 'This takes a moment.'}</p>`;
-    const now = p.querySelector('.now'), ol = p.querySelector('.vp-lines');
-    if (now && ol) ol.scrollTop = now.offsetTop - ol.offsetTop - 44;
+    const p = $('vo-panel');
+    p.hidden = !on || !voicing.open;
+    p.innerHTML = p.hidden ? '' : `<div class="vp-head"><b>Voiceover</b></div><div class="vp-bar run"><i></i></div>
+      <p class="vp-note">Writing a script that fits the title and every entry<span class="dots"><i></i><i></i><i></i></span></p>
+      <p class="vp-foot">This takes a few seconds. The voice is made on your device when you press play.</p>`;
   }
   // The three dots at the top right: what can be done with the timeline on show (asked for, Nov 2026: Publish
   // and the voiceover moved in here, and the menu at the foot became settings only).
@@ -675,47 +622,37 @@ export function createAccount(app) {
     });
   }
   // The voiceover of one timeline: the voices, each with a few words to hear before choosing (asked for,
-  // Nov 2026: "to try which voice is good"), then Generate.
+  // Nov 2026: "to try which voice is good"), then Generate. The words are spoken in this browser.
   const PLAY = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z"/></svg>', HALT = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="5.5" y="5" width="4.5" height="14" rx="1"/><rect x="14" y="5" width="4.5" height="14" rx="1"/></svg>';
   let sample = null;
-  function hush() { if (sample) { sample.a.pause(); sample.b.classList.remove('on', 'wait'); sample.b.innerHTML = PLAY + '<span>Listen</span>'; sample = null; } }
-  async function listen(b, fail) {
-    const v = b.dataset.sample, same = sample && sample.b === b;
+  function hush() { if (sample) { sample.stop(); sample.b.classList.remove('on', 'wait'); sample.b.innerHTML = PLAY + '<span>Listen</span>'; sample = null; } }
+  function sampleOf(b, fail) {
+    const same = sample && sample.b === b;
     hush();
     if (same) return;
-    const a = new Audio(), me = sample = { a, b };
-    b.classList.add('wait'); b.innerHTML = '<span>Loading…</span>';
-    const start = (url) => new Promise((ok, no) => { a.oncanplay = ok; a.onerror = no; a.src = url; });
-    try {
-      // The kept sample; where there is none yet the function speaks it once, and keeps it.
-      try { await start(CLIPS + 'public/voice/' + sampleOf(v)); } catch (e) { await start((await voiceFn({ sample: v }, 2)).url); }
-      if (sample !== me) return;
-      a.onended = () => { if (sample === me) hush(); };
-      await a.play();
-      b.classList.remove('wait'); b.classList.add('on'); b.innerHTML = HALT + '<span>Stop</span>';
-    } catch (e) {
-      if (sample === me) { hush(); fail(e.code === 'quota' ? 'No sample of this voice yet: the voice has reached its limit for today.' : e.code === 'wait' ? 'The voice is busy. Try the sample again in a minute.' : 'The sample could not be played. Try again.'); }
-    }
+    const me = { b, stop: () => {} };
+    sample = me;
+    const loaded = app.speaker().ready() || b.dataset.sample === 'device';
+    b.classList.add(loaded ? 'on' : 'wait'); b.innerHTML = loaded ? HALT + '<span>Stop</span>' : '<span>Loading…</span>';
+    me.stop = hear(app.speaker(), b.dataset.sample, app.audio, () => { if (sample === me) hush(); }, (e) => { if (sample === me) { hush(); fail(e.message === 'no voice' ? 'The voice could not be loaded on this device. Try “This device”.' : 'The voice could not be played. Try again.'); } });
+    if (!loaded) { const t = setInterval(() => { if (sample !== me) return clearInterval(t); if (app.speaker().ready()) { clearInterval(t); b.classList.replace('wait', 'on'); b.innerHTML = HALT + '<span>Stop</span>'; } }, 300); }
   }
   function voiceMenu(anchor, row) {
     if (voicing) return;
-    const has = voiceOf(JSON.parse(row.text).voice), was = has?.voice || (() => { try { return localStorage.getItem('cg-voice-name'); } catch (e) { return null; } })() || VOICES[0][0];
+    const has = voiceOf(JSON.parse(row.text).voice), was = has?.voice || (() => { try { const v = localStorage.getItem('cg-voice-name'); return isVoice(v) ? v : null; } catch (e) { return null; } })() || DEFAULT_VOICE;
     const d = modal(`<form class="vo-form"><h2>${has ? 'Voiceover' : 'Generate a voiceover'}</h2>
-      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays, in ${has.lines.length} lines. Record it again after you change the timeline, or to try another voice.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}</p>
+      <p class="dlg-sub">${has ? `This timeline is told aloud while it plays, in ${has.lines.length} lines. Change the voice for free, or write the script again after you change the timeline.` : 'A narrator tells this timeline while it plays: an opening that fits its title, a line for each entry, and a closing. The music plays softly under the voice.'}</p>
       <div class="cap">Choose a voice</div>
-      <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map(([v, w]) => `<label class="vo-voice"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><i></i><span><b>${v}</b><small>${w}</small></span><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${v}">${PLAY}<span>Listen</span></button></label>`).join('')}</div>
+      <div class="vo-voices" role="radiogroup" aria-label="Voice">${VOICES.map(([v, name, w]) => `<label class="vo-voice${v === 'device' ? ' dev' : ''}"><input type="radio" name="voice" value="${v}"${v === was ? ' checked' : ''}><i></i><span><b>${esc(name)}</b><small>${esc(w)}</small></span><button type="button" class="vo-listen" data-sample="${v}" aria-label="Listen to ${esc(name)}">${PLAY}<span>Listen</span></button></label>`).join('')}</div>
       <p class="dlg-err" role="alert"></p>
-      <div class="dlg-row">${has ? '<button type="button" class="big" data-unvoice>Remove</button>' : '<button type="button" class="big" data-close>Cancel</button>'}<button type="submit" class="big pri">${has ? 'Record again' : 'Generate voiceover'}</button></div>
-      <p class="dlg-fine center">Uses one of today's requests. A long timeline takes a few minutes to record.</p></form>`, 'small vo');
-    const err = d.querySelector('.dlg-err');
-    d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; listen(b, (m) => { err.textContent = m; }); } });
-    d.querySelector('form').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const v = d.querySelector('input[name=voice]:checked')?.value || VOICES[0][0];
-      try { localStorage.setItem('cg-voice-name', v); } catch (x) { /* private window */ }
-      hush(); closeLayer(); voiceover(row, v);
-    });
-    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { hush(); closeLayer(); unvoice(row); });
+      <div class="dlg-row">${has ? '<button type="button" class="big" data-revoice>Use this voice</button><button type="submit" class="big pri">Write again</button>' : '<button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Generate voiceover</button>'}</div>
+      ${has ? '<button type="button" class="linkish" data-unvoice>Remove the voiceover</button>' : ''}
+      <p class="dlg-fine center">Writing the script uses one of today's requests. The voices are made on your device for free; the first one downloads once (about 90 MB).</p></form>`, 'small vo');
+    const err = d.querySelector('.dlg-err'), pick = () => d.querySelector('input[name=voice]:checked')?.value || DEFAULT_VOICE;
+    d.addEventListener('click', (e) => { const b = e.target.closest('[data-sample]'); if (b) { e.preventDefault(); e.stopPropagation(); err.textContent = ''; app.audio(); sampleOf(b, (m) => { err.textContent = m; }); } });
+    d.querySelector('form').addEventListener('submit', (e) => { e.preventDefault(); const v = pick(); keepVoice(v); closeLayer(); voiceover(row, v); });
+    d.querySelector('[data-revoice]')?.addEventListener('click', () => { const v = pick(); keepVoice(v); closeLayer(); revoice(row, v); });
+    d.querySelector('[data-unvoice]')?.addEventListener('click', () => { closeLayer(); unvoice(row); });
   }
   function showKind(id) {
     const list = $('cr-list'), k = KINDS.find((x) => x.id === id), same = !list.hidden && list.dataset.kind === id;
@@ -761,7 +698,6 @@ export function createAccount(app) {
     a.busy();
     try {
       await api(`/rest/v1/timelines?id=eq.${row.id}`, { method: 'DELETE' });
-      clips(row.id).catch(() => {});
       const id = 't/' + row.id, on = app.views().includes(id);
       rows.delete(row.id); app.forget(id);
       closeLayer();

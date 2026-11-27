@@ -12,7 +12,7 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice } from './voice.js';
+import { createVoice, createSpeaker } from './voice.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -1000,7 +1000,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     road.gcur = undefined;
     globe.show(steps);
     globePanes(steps);
-    voice.set(voiceNow(), ''); drawTold();
+    voice.set(voiceNow()); drawTold();
   }
   // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
   // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
@@ -2393,7 +2393,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   }
   // While play travels the top bar steps aside so the road has the whole screen. It comes back when the
   // pointer nears the top edge, when anything in it has focus, and when play stops.
-  function drawPlay() { if (L) roadHud(true); tune(); if (play.on) voice.resume(); else voice.pause(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
+  function drawPlay() { if (L) roadHud(true); tune(); if (play.on) { voice.resume(); if (telling()) voice.prepare(told.cue); } else voice.pause(); document.body.classList.toggle('playing', !!play.on); if (!play.on) { document.body.classList.remove('peek', 'idle'); if (innerWidth < 700) document.body.classList.remove('film'); } else dispatchEvent(new Event('pointermove')); }
   // On the globe a pause stops dead, exactly where play was (asked for, Nov 2026); the road eased to a stop.
   function pausePlay() { play.on = false; road.stepEnd = null; if (GLOBE) road.vel = 0; drawPlay(); }
   // Play by the arrow keys ("Play" in the three-dot menu, `cg-step` in this browser; asked for, Nov 2026): play
@@ -2513,17 +2513,22 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     }, 50);
   }
   // The voiceover (voice.js): a timeline someone keeps may be told aloud, a line for each entry. While play
-  // travels the line of the entry in front is said, the music sinks under it, and the reader waits where a
-  // line is not over yet. "Voiceover" in the three-dot menu turns it off (`cg-voice` in this browser), and
+  // travels the line of the entry in front is said, the music sinks under it, and the reader stops on each card
+  // until its line is over. The speech is made in this browser (voice.js), all the lines in order from where play
+  // starts; a line not made yet holds play at its card, with "Preparing the voice" at the foot. "Voiceover" in the three-dot menu turns it off (`cg-voice` in this browser), and
   // "Subtitles" writes each line at the foot while it is said (`cg-subs`). Only a road of one view is told.
-  const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '' };
-  const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), said: (text) => { told.text = text; drawSubs(); } });
+  const told = { on: store.get('cg-voice') !== '0', subs: store.get('cg-subs') === '1', cue: undefined, then: null, text: '', wait: false, load: null };
+  const speaker = createSpeaker((s) => { if ('loading' in s) told.load = s.loading; if (s.ready) told.load = null; if (told.wait) drawSubs(); });
+  const voice = createVoice({ ctx: () => (sound.on ? sound.ctx : null), speaker, said: (text, wait = false) => { told.text = text; told.wait = wait; drawSubs(); } });
   const voiceNow = () => (state.views.length === 1 && viewById.get(state.views[0])?.voice) || null;
   const telling = () => told.on && sound.on && voice.any();
   function drawSubs() {
-    const el = $('subs'), on = told.subs && !!told.text;
-    if (on) el.textContent = told.text;
+    // While the voice is made ready the foot says so, subtitles or not, since play waits for it.
+    const el = $('subs'), wait = told.wait && play.on && telling(), on = wait || (told.subs && !!told.text);
+    if (wait) el.textContent = told.load != null ? `Preparing the voice: ${Math.round(told.load * 100)}%` : 'Preparing the voice…';
+    else if (on) el.textContent = told.text;
     el.classList.toggle('on', on);
+    el.classList.toggle('wait', wait);
   }
   // Called whenever the reader moves: `id` is the entry in front (null before the first), `next` the one after.
   function tell(id, next) {
@@ -3104,6 +3109,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     replace: replaceView, forget: forgetView, home: () => location.assign('/'),
     focusSearch: () => $('q').focus(),
     // What a voiceover tells: the entries in the order play meets them.
+    // The voice made in this browser, and an audio context for hearing a voice before choosing it.
+    speaker: () => speaker,
+    audio: () => { try { const AC = window.AudioContext || window.webkitAudioContext; if (!sound.ctx && AC) sound.ctx = new AC(); if (sound.ctx?.state === 'suspended') sound.ctx.resume(); } catch { sound.ctx = null; } return sound.ctx; },
     told: () => { const seen = new Set(); return { entries: (road.gorder || []).filter((p) => !seen.has(p.t.id) && seen.add(p.t.id)).map((p) => ({ id: p.t.id, name: p.t.name, when: spanOf(p.t), summary: p.t.summary || '' })) }; },
     redraw: () => { if (state.views.length) changed(); }, detailChars: () => boot.detail.chars,
   });

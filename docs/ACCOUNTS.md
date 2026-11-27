@@ -128,33 +128,28 @@ unverified and carry a link to their Wikipedia article as the source.
 
 ## Voiceover
 
-A timeline of your own can be told aloud while it plays. "Generate voiceover", in the three dots at the top right, asks for a
-voice (six of Gemini's) and then:
+A timeline of your own can be told aloud while it plays. "Generate voiceover", in the three dots at the top
+right, opens a list of voices, each with Listen, and then:
 
 1. The function `voiceover` has a model write the script: an opening that fits the title, one line for each
    entry in the order play meets them, and a closing, in a tone that suits the subject. This counts as one of
    the day's requests.
-2. The same function has Gemini's text to speech say the script, a few lines at a time with a long pause
-   between lines. It speaks only words it wrote itself: each part of the script is signed.
-3. The page cuts each piece of speech at the pauses into one clip a line (`cuts()` in `site/voice.js`),
-   makes a small MP3 of each and keeps them in the account's own folder of the `voice` bucket. Anyone who
-   can open the timeline can hear them; only the owner can write there.
-4. The words, and each clip's name and length, are written on the timeline's row under `voice`.
+2. The words and the chosen voice are written on the timeline's row under `voice`. Nothing else is kept on
+   the server: there are no sound files.
+3. When anyone plays the timeline, their own browser speaks the lines. The voices are Kokoro's, a small free
+   voice model that runs on the device (downloaded once, about 90 MB, then kept by the browser), or the
+   device's own voice, which needs no download. Each line made is kept in that browser, so playing again is
+   instant. It costs nothing however many hours people listen.
 
-The voice is picked in a dialog where each voice has Listen: a few words in that voice, made once and kept
-for everyone. Who speaks is a provider in the function (Gemini today); others can be added there with their
-own secret. A free Gemini key allows only a few requests a minute and a few a day: the page speaks up to ten
-lines a request and waits by itself when the voice asks it to, but the daily limit needs a paid key.
-
-Recording again replaces the clips; "Remove voiceover" takes them away. A change to the timeline keeps the
-voiceover: an entry without a line is simply shown without one, so record again after a large change.
+Changing the voice later is free ("Use this voice"); "Write again" writes a new script after the timeline
+changes; "Remove the voiceover" takes the words away. An entry without a line is simply shown without one.
 
 While play travels, the line of the entry in front is said, the music plays softly under it, and play stops on
-each card until its line is said, then goes on to the next. "Voiceover" and "Subtitles" in the settings
-menu turn the voice off and write each line at the foot while it is said.
+each card until its line is said, then goes on to the next. A line that is not ready yet holds play at its card
+with "Preparing the voice" at the foot. "Voiceover" and "Subtitles" in the settings menu turn the voice off and
+write each line at the foot while it is said. Kokoro speaks English only.
 
-The function needs the secrets `GEMINI_API_KEY` and `OPENROUTER_API_KEY`. `VOICE_MODEL` names another
-text-to-speech model; by default the cheapest Flash one is tried first.
+The function needs the secret `OPENROUTER_API_KEY`; `VOICE_SCRIPT_MODEL` names another model for the script.
 
 ## Who is signed in, and where they publish
 

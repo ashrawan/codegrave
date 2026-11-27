@@ -472,6 +472,8 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vp-head small { font-size: 12px; color: var(--faint); }
 .vp-bar { height: 3px; margin: 10px 0 8px; background: var(--raised); border-radius: 2px; overflow: hidden; }
 .vp-bar i { display: block; height: 100%; background: var(--acc); border-radius: 2px; transition: width .5s ease; }
+.vp-bar.run i { width: 35%; animation: vprun 1.4s ease-in-out infinite; }
+@keyframes vprun { from { transform: translateX(-100%); } to { transform: translateX(290%); } }
 .vp-lines { max-height: min(300px, 42vh); margin: 0; padding: 0; overflow-y: auto; list-style: none; position: relative; }
 .vp-lines li { display: flex; gap: 8px; padding: 5px 2px; font-size: 13px; line-height: 1.4; color: var(--faint); }
 .vp-lines li i { flex: none; width: 14px; height: 14px; margin-top: 2px; color: var(--acc); }
@@ -507,4 +509,8 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .vo-form .dlg-err { margin: 10px 0 0; }
 .vo-form .dlg-row { margin-top: 16px; }
 .vo-form .dlg-fine { margin: 12px 0 0; }
+.vo-form .linkish { display: block; margin: 12px auto 0; padding: 4px 8px; font-size: 13px; color: var(--muted); background: none; border: 0; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+.vo-form .linkish:hover { color: #e58f8f; }
+.vo-voices { max-height: min(430px, 52vh); overflow-y: auto; }
+.vo-voice.dev { border-style: dashed; }
 
