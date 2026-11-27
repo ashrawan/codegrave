@@ -970,6 +970,11 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // entries there are, in the order play meets them (globeShow), and which one stands in front (globeFrame).
   let globe = null, places = {};
   const AHEAD = 0.3;                           // focal lengths ahead of the reader at which an entry is the one in front
+  function stepOf(p) {
+    const t = p.t, P = roadPalette();
+    return { id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
+      mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null };
+  }
   function globeShow() {
     if (!globe) {
       document.body.classList.add('globe');
@@ -982,12 +987,40 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       const t = p.t;
       if (seen.has(t.id)) continue;
       seen.add(t.id);
-      steps.push({ id: t.id, name: t.name, kind: t.cat.short || t.cat.name, when: spanOf(t), summary: t.summary || '', img: t.image && !t.noImage ? mediaUrl(t.image.src) : '',
-        mark: shortYear(writtenOf(t.born)), col: colVar(p.lane.col), rgb: `rgb(${colRgb(P, p.lane.col).join(',')})`, place: t.where ? [t.where[0], t.where[1], 'city', ''] : !RANKED && t.born > DEEP ? places[t.id] || null : null });
+      steps.push(stepOf(p));
     }
     road.gsteps = new Map(road.gorder.map((p) => [p.t.id, p]).reverse());
     road.gcur = undefined;
     globe.show(steps);
+    globePanes(steps);
+  }
+  // With several views each has a globe and cards of its own, in a grid, and the one time line runs below them
+  // (asked for, Nov 2026). A pane is kept while its view stays, so its map is not made again.
+  const panes = new Map();
+  let grid = null;
+  function globePanes(steps) {
+    // 'Several views' in the three-dot menu: a grid (the default), or all on one globe (`cg-grid` in this browser).
+    const lanes = L.lanes.length > 1 && store.get('cg-grid') !== 'one' ? L.lanes : [];
+    document.body.classList.toggle('multi', lanes.length > 0);
+    globe.bare(lanes.length > 0);
+    if (!grid) { grid = document.createElement('div'); grid.className = 'g-grid'; $('globe').appendChild(grid); }
+    grid.hidden = !lanes.length; grid.dataset.n = lanes.length;
+    for (const [id, pn] of panes) if (!lanes.some((ln) => ln.view.id === id)) { pn.g.remove(); panes.delete(id); }
+    const byStep = new Map(steps.map((s) => [s.id, s])), dir = camDir();
+    lanes.forEach((ln, i) => {
+      let pn = panes.get(ln.view.id);
+      if (!pn) {
+        const el = document.createElement('div');
+        pn = { el, g: createGlobe(el, { esc, calm, pane: true, open: (id) => openThing(id), goTo: (id) => roadToThing(id), seek: () => {} }) };
+        panes.set(ln.view.id, pn);
+      }
+      if (grid.children[i] !== pn.el) grid.insertBefore(pn.el, grid.children[i] || null);
+      pn.order = L.shown.filter((p) => p.lane === ln && p.a >= L.tMin && p.a <= L.tMax).sort((p, q) => dir * (p.a - q.a) || (p.key < q.key ? -1 : 1));
+      pn.cur = undefined;
+      pn.g.title(ln.view.name, colVar(ln.col));
+      pn.g.show(pn.order.map((p) => ({ ...(byStep.get(p.t.id) || {}), ...stepOf(p) })));
+    });
+    requestAnimationFrame(() => { for (const pn of panes.values()) pn.g.resize(); });
   }
   // The time line at the foot was dragged: the reader goes to `frac` of the way from this entry to the next
   // (null: from before the first). An open entry no longer holds the globe once the reader drags away from it.
@@ -1017,6 +1050,13 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     const from = cur ? cur.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
     road.gleg = next && next.a !== from ? Math.abs(next.a - from) : 0;
     const fresh = globe.at(id, road.gleg ? clamp((edge - from) / (next.a - from), 0, 1) : 0, play.on);
+    // Each view's own globe goes by the same reader: its entry in front is the last of its own the reader has come to.
+    for (const pn of panes.values()) {
+      let c = !play.on && state.open && state.open !== road.gfree ? pn.order.find((p) => p.t.id === state.open) || null : null, n = null;
+      if (!c) for (const p of pn.order) { if (dir * (p.a - edge) > 0) { n = p; break; } c = p; }
+      const f = c ? c.a : dir > 0 ? L.tMin - AHEAD * L.D : L.tMax + AHEAD * L.D;
+      pn.g.at(c ? c.t.id : null, n && n.a !== f ? clamp((edge - f) / (n.a - f), 0, 1) : 0, play.on);
+    }
     if (id === road.gcur) return;
     road.gcur = id;
     road.gshows = cur && wallMedia(cur.t).length ? [{ id, name: cur.t.name, side: 0, col: null, media: wallMedia(cur.t) }] : [];
@@ -1708,7 +1748,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       e.preventDefault();
       roadBy(e.key === 'ArrowUp' || e.key === 'ArrowRight' ? 0.3 : -0.3, 8);
     });
-    if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) globe.resize(); }).observe(box);
+    if (window.ResizeObserver) new ResizeObserver(() => { if (L && (box.clientWidth !== L.G.SW || box.clientHeight !== L.G.SH || $('axis').clientHeight !== L.barH)) render(); if (globe) { globe.resize(); for (const pn of panes.values()) pn.g.resize(); } }).observe(box);
   }
 
   // ---------------------------------------------------------------- search the timeline
@@ -2605,17 +2645,27 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');
       if (!b) return;
-      if (globe) globe.mode(b.dataset.v); else store.set('cg-stage', b.dataset.v);
+      if (globe) { globe.mode(b.dataset.v); for (const pn of panes.values()) pn.g.mode(b.dataset.v); } else store.set('cg-stage', b.dataset.v);
       modeShow(b.dataset.v);
     });
     // How much the map says (Less, Medium, Full; cg-detail in this browser, kept by the globe).
     const detailShow = (v) => { for (const b of $('detail').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
     { const d = store.get('cg-detail'); detailShow(d === 'medium' || d === 'full' ? d : 'less'); }
+    // Several views: each on a globe of its own in a grid, or all on one globe.
+    const gridShow = (v) => { for (const b of $('grid-seg').children) b.setAttribute('aria-pressed', String(b.dataset.v === v)); };
+    gridShow(store.get('cg-grid') === 'one' ? 'one' : 'grid');
+    $('grid-row').addEventListener('click', (e) => {
+      e.stopPropagation();
+      const b = e.target.closest('button[data-v]');
+      if (!b) return;
+      store.set('cg-grid', b.dataset.v); gridShow(b.dataset.v);
+      if (state.views.length) render();
+    });
     $('detail-row').addEventListener('click', (e) => {
       e.stopPropagation();
       const b = e.target.closest('button[data-v]');
       if (!b) return;
-      if (globe) globe.detail(b.dataset.v); else store.set('cg-detail', b.dataset.v);
+      if (globe) { globe.detail(b.dataset.v); for (const pn of panes.values()) pn.g.detail(b.dataset.v); } else store.set('cg-detail', b.dataset.v);
       detailShow(b.dataset.v);
     });
     $('theme').addEventListener('click', () => {

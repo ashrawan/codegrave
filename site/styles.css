@@ -773,3 +773,32 @@ body.playing.idle #film-menu { opacity: 0; pointer-events: none; }
   body.globe.playing:not(.peek) #axisbar { bottom: 14px; }
   body.globe #axisbar .ends.foot { flex-direction: column-reverse; gap: 4px; }
 }
+
+/* Several views: each has a globe and cards of its own, in a grid over the one time line (asked for, Nov 2026).
+   Two stand side by side, three as two over one, then two rows of two, three or four. */
+#globe.bare > .g-map, #globe.bare > .g-ov, #globe.bare > .g-back, #globe.bare > .g-space { display: none; }
+#globe .g-grid { position: absolute; left: 0; right: 0; top: 56px; bottom: 116px; z-index: 2; display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 1fr; gap: 1px; }
+#globe .g-grid[hidden] { display: none; }
+#globe .g-pane { position: relative; grid-column: span 6; min-width: 0; min-height: 0; overflow: hidden; container-type: size; border: 1px solid rgba(200, 215, 255, .08); border-radius: 6px; }
+#globe .g-grid[data-n="3"] .g-pane:nth-child(3) { grid-column: 4 / span 6; }
+#globe .g-grid[data-n="5"] .g-pane, #globe .g-grid[data-n="6"] .g-pane { grid-column: span 4; }
+#globe .g-grid[data-n="5"] .g-pane:nth-child(4) { grid-column: 3 / span 4; }
+#globe .g-grid[data-n="7"] .g-pane, #globe .g-grid[data-n="8"] .g-pane { grid-column: span 3; }
+#globe .g-pane .g-shelf, #globe .g-pane .g-past, #globe .g-pane .g-note { display: none; }
+#globe .g-title { position: absolute; left: 12px; top: 8px; z-index: 3; max-width: calc(100% - 24px); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--serif); font-size: clamp(15px, 5cqw, 24px); line-height: 1.1; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 12px rgba(0, 0, 0, .8); pointer-events: none; }
+#globe[data-card] .g-pane .g-card, #globe[data-card][data-stage] .g-pane .g-card { display: block; width: min(52cqw, 400px); padding: 0; text-align: center; background: none; border: 0; border-radius: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; text-shadow: 0 1px 2px rgba(0, 0, 0, .9), 0 0 16px rgba(0, 0, 0, .9); }
+#globe[data-card] .g-pane .g-card::before { content: ''; position: absolute; inset: -8px -10px; z-index: -1; border-radius: 6px; background: rgba(6, 8, 13, .8); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+#globe[data-card] .g-pane .g-card img { display: block; width: auto; height: auto; max-width: 100%; max-height: 40cqh; margin: 0 auto 8px; background: none; border-radius: 3px; }
+#globe[data-card] .g-pane .g-k { justify-content: center; gap: 10px; }
+#globe[data-card] .g-pane .g-k b { font-size: 9.5px; } #globe[data-card] .g-pane .g-k small { font-size: 10.5px; }
+#globe[data-card] .g-pane .g-card strong { font-size: clamp(16px, 5.4cqw, 34px); margin: 2px 0 4px; }
+#globe[data-card] .g-pane .g-s { -webkit-line-clamp: 2; font-size: 12px; line-height: 1.4; color: #d7dbe4; }
+body.multi #road-views, body.multi #wall .w-scene { display: none; }
+@media (max-width: 699px) {
+  #globe .g-grid { top: 96px; bottom: 100px; }
+  #globe .g-grid[data-n="2"] .g-pane { grid-column: span 12; }
+  #globe .g-grid .g-pane { grid-column: span 6 !important; }
+  #globe .g-grid[data-n="2"] .g-pane { grid-column: span 12 !important; }
+  #globe .g-grid[data-n="3"] .g-pane:nth-child(3) { grid-column: 4 / span 6 !important; }
+  #globe[data-card] .g-pane .g-s { display: none; }
+}

@@ -386,3 +386,12 @@ body.fine #filters { display: none; }
 .ex-fopt span { display: flex; flex-direction: column; gap: 2px; }
 .ex-fopt b { font-size: 14px; font-weight: 600; }
 .ex-fopt small { font-size: 12.5px; color: var(--faint); line-height: 1.4; }
+/* Several views, each with its own globe: the year stands small at the top, over the grid. */
+body.multi #road-head { top: 10px; right: auto; left: 50%; transform: translateX(-50%); align-items: center; }
+body.multi #road-year { font-size: 36px; }
+body.multi #road-unit { display: none; }
+@media (max-width: 699px) {
+  body.multi #road-head { top: 12px; left: auto; right: 14px; transform: none; }
+  body.multi #road-year { font-size: 26px; }
+  body.multi #globe .g-grid { top: 56px; }
+}

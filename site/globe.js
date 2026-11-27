@@ -97,7 +97,10 @@ function styleOf() {
   };
 }
 
-export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
+// With `pane`, this is one view's own globe in a grid of several (asked for, Nov 2026: each view its own globe and
+// cards, the one time line below): it has no time line of its own, and its card and camera suit a small box.
+export function createGlobe(host, { open, goTo, seek, credit, esc, calm, pane }) {
+  if (pane) host.classList.add('g-pane');
   host.dataset.card = 'b';      // the card is a label written on the map (design B, picked from three)
   host.innerHTML = '<canvas class="g-space"></canvas><div class="g-back"><img class="g-bimg" alt="" hidden><div class="g-past"></div></div><div class="g-map"></div><div class="g-ov"><span class="g-lead"></span><button type="button" class="g-card" hidden></button></div>' +
     '<button type="button" class="g-mode" hidden></button><div class="g-shelf" hidden><div class="g-rows"><div class="g-ax"></div><div class="g-track"></div><i class="g-now"></i></div></div><p class="g-note" hidden></p>';
@@ -149,7 +152,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     map.setLayoutProperty('country', 'visibility', full ? 'visible' : 'none');
     if (map.getLayer('c-fill')) for (const id of ['c-fill', 'c-edge', 'c-name']) map.setFilter(id, ['in', ['get', 'n'], ['literal', names]]);
   }
-  const far = () => (S.phone ? 0.9 : LEVELS.globe);
+  const far = () => (pane ? LEVELS.globe + Math.log2(Math.max(150, size()) / 820) : S.phone ? 0.9 : LEVELS.globe);
   const size = () => Math.min(box.clientWidth, box.clientHeight);
 
   // ---- the map
@@ -227,7 +230,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     for (let k = zs.length - 2; k >= 0; k--) zs[k] = Math.min(zs[k], zs[k + 1] + STEP);
     S.cam = S.steps.map(() => null);
     pl.forEach((p, k) => { S.cam[S.placed[k]] = { at: p, zoom: Math.max(farAt(f, p[0]), zs[k]) }; });
-    S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * 0.36) }) };
+    S.pad = { top: 0, left: 0, right: 0, bottom: 0, ...(S.phone ? { bottom: Math.round(box.clientHeight * 0.3) } : { right: Math.round(box.clientWidth * (pane ? 0.44 : 0.36)) }) };
   }
   // Between which places a reader at `pos` is, and how far: by the count of entries (u), and as the camera goes (e),
   // which rests at each place and is quickest half way.
@@ -298,17 +301,17 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   function put() { card.style.transform = `translate(${S.tx || 0}px, ${((S.ty || 0) + (S.drop || 0)).toFixed(1)}px) scale(${(S.sc || 1).toFixed(3)})`; }
   // The text stands under the picture: in the middle of the sky in full view, to the right of the middle on the
   // globe, so the place it belongs to shows beside it. On a phone it rests above the strip.
-  const midX = () => (S.phone ? 0.5 : 0.62 - 0.12 * S.spv);
+  const midX = () => (S.phone ? 0.5 : pane ? 0.71 - 0.21 * S.spv : 0.62 - 0.12 * S.spv);
   function place() {
     const s = S.steps[S.cardFor];
     lead.hidden = true;
     if (!s || card.hidden) return;
     const W = host.clientWidth, H = host.clientHeight, cw = card.offsetWidth, ch = card.offsetHeight, foot = shelf.hidden ? 0 : shelf.offsetHeight;
     if (S.phone) { S.tx = 12; S.ty = Math.max(60, H - foot - ch - 10); put(); return; }
-    const low = H - foot - ch - 30;
+    const low = H - foot - ch - (pane ? 8 : 30);
     S.tx = Math.round(Math.max(12, Math.min(W - cw - 12, W * midX() - cw / 2)));
     // The card stands in the middle of the stage, top to bottom (asked for, Nov 2026), clear of the strip.
-    S.ty = Math.round(Math.max(70, Math.min(low, (H - ch) / 2))); put();
+    S.ty = Math.round(Math.max(pane ? 8 : 70, Math.min(low, (H - ch) / 2))); put();
   }
 
   // ---- the time line at the foot: it slides under a marker that stands still, near the left
@@ -387,7 +390,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
     const c = Math.max(-1, Math.min(S.steps.length - 1, Math.floor(S.pos + early))), g = S.pos - c;
     if (c !== S.now) {
       S.now = c;
-      S.stage = S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.stage;
+      S.stage = S.mode === 'full' ? 'space' : stageFor(S.steps.map((s) => !!s.place), c); host.dataset.stage = S.bare ? 'bare' : S.stage;
       pins(); markShelf(); build(c);
     }
 
@@ -399,7 +402,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       box.style.filter = dim > 0.01 ? `brightness(${(1 - 0.5 * dim).toFixed(3)}) saturate(${(1 - 0.4 * dim).toFixed(3)})` : '';
       sky.style.opacity = sp.toFixed(3); host.style.setProperty('--sp', sp.toFixed(3));
     }
-    if (S.ready && sp < 0.995) {
+    if (S.ready && !S.bare && sp < 0.995) {
       const cam = camAt(S.pos);
       if (cam) { S.map.jumpTo(cam); host.classList.toggle('close', cam.zoom > 4.6); }
       trail(S.pos);
@@ -493,21 +496,35 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
   // A drag turns the globe; it must not also carry the reader through time, which the stage under it does.
   for (const ev of ['pointerdown', 'pointermove', 'pointerup']) box.addEventListener(ev, (e) => e.stopPropagation());
 
+  function needMap() {
+    if (S.bare || S.map || S.asked || !S.steps.some((s) => s.place)) return;
+    S.asked = true; note.hidden = true;
+    loadLib().then((gl) => { if (!S.map && !S.gone) S.map = make(gl); }).catch(() => { S.asked = false; if (!pane) { note.hidden = false; note.textContent = 'The map could not be loaded. The entries are in the strip below.'; } });
+  }
+  const title = pane ? host.appendChild(document.createElement('span')) : null;
+  if (title) title.className = 'g-title';
+
   return {
+    // With several views each has a globe of its own, and this one, the page's, keeps only the time line.
+    bare(on) {
+      if (!!S.bare === !!on) return;
+      S.bare = !!on; host.classList.toggle('bare', S.bare); host.classList.remove('close');
+      S.now = -2; needMap(); run();
+    },
+    // A pane's heading: the name of its view, in its colour.
+    title(name, col) { if (title) { title.textContent = name; title.style.color = col; } },
+    remove() { S.gone = true; if (S.raf) cancelAnimationFrame(S.raf); S.raf = -1; if (S.map) S.map.remove(); host.remove(); },
     // The entries on the timeline, in the order play meets them. Each step: id, name, kind, when, mark (its year, short),
     // summary, img, col (a CSS colour), rgb (the same for the map), place ([lat, lon, level, name] or null).
     show(steps) {
       const sig = steps.map((s) => s.id + (s.place ? 1 : 0) + s.rgb).join();
-      S.phone = host.clientWidth < 700;
+      S.phone = !pane && host.clientWidth < 700;
       if (sig === S.sig) { this.resize(); return; }
       S.sig = sig; S.steps = steps; S.index = new Map(steps.map((s, i) => [s.id, i]));
       S.cur = -1; S.frac = 0; S.pos = null; S.trail = null; S.now = -2; S.cardFor = -2; S.vis = 0; card.hidden = true; lead.hidden = true;
       drawShelf(); cams(); drawMode(); past.innerHTML = ''; homes();
       if (steps.some((s) => s.place)) loadLands();
-      if (!S.map && steps.some((s) => s.place)) {
-        note.hidden = true;
-        loadLib().then((gl) => { if (!S.map) S.map = make(gl); }).catch(() => { note.hidden = false; note.textContent = 'The map could not be loaded. The entries are in the strip below.'; });
-      }
+      needMap();
       run();
     },
     // The entry in front of the reader (null before the first), and how far on they are towards the next (0 to 1).
@@ -528,7 +545,7 @@ export function createGlobe(host, { open, goTo, seek, credit, esc, calm }) {
       return 3.2 + 1.6 * Math.min(1, distance(A.at, B.at) / 6000);
     },
     resize() {
-      S.phone = host.clientWidth < 700;
+      S.phone = !pane && host.clientWidth < 700;
       if (S.map) S.map.resize();
       if (!shelf.hidden) measure();
       cams(); place(); run();

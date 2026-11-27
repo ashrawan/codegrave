@@ -410,6 +410,16 @@ How the page is put together:
   end (`nowAt()`: 16 % of the strip, 20 % on a phone), not in the middle, so a view opens with its line running
   from the left. Showing another view alone closes the open entry and takes its id out of the link
   (`showOnly()`), or a reload would bring that entry's view back beside the new one.
+- **Several views are a grid of globes** (asked for, Nov 2026: "each one may have their own globe and own cards",
+  "while the timeline runs a single one below"). With more than one view, each gets a pane of its own in
+  `.g-grid` inside `#globe` (`globePanes()` in `site/app.js`; a pane is `createGlobe(el, { pane: true })`, with
+  no time line, a smaller card sized by the pane with container units, and its view's name in its colour): two
+  side by side, three as two over one, then two rows of two, three or four (CSS on `data-n`); on a phone two
+  stand one over the other and more go two across. The page's own globe keeps only the time line
+  (`globe.bare(true)`). Every pane goes by the same reader: `globeFrame()` tells each the last of its own
+  entries the reader has come to. "Several views" in the three-dot menu (`cg-grid` in this browser) switches
+  between Grid, the default, and One globe, which is all the views on the page's one globe. The small pictures
+  at the left of a single globe are pressed to go back to their entry.
 - **Globe detail** (three-dot menu: Less, Medium, Full; `cg-detail` in this browser; asked
   for, Nov 2026, so the globe is less crowded). Full names every country, as the map's tiles do. Medium names
   and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
