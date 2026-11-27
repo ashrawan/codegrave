@@ -156,7 +156,7 @@
   <div class="ends foot">
     <button id="full" class="sbtn" type="button" aria-pressed="false" aria-label="Full screen" title="Full screen (double click)" hidden><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
     <button id="vo-chip" class="vochip" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="vo-menu"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.3"/><path d="M2.8 20c0-3.6 2.8-6 6.2-6s6.2 2.4 6.2 6"/><path d="M16.6 5.6a4.2 4.2 0 0 1 0 5.2M19.3 3.6a7.6 7.6 0 0 1 0 9.2"/></svg><b id="vo-x">1x</b><i></i></button>
-    <button id="sound" class="sbtn" type="button" aria-pressed="true" aria-label="Sound: a quiet breath of air as each card opens"></button>
+    <button id="sound" class="sbtn" type="button" hidden aria-pressed="true" aria-label="Sound: a quiet breath of air as each card opens"></button>
     <!-- Play, and for a view with its own music (a country's anthem) a second play beside it, in its flag -->
     <div id="plays" class="plays">
       <button id="play" class="abtn solid" type="button" aria-label="Play: travel along the road"><svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l12.5-7.5z" fill="currentColor"/></svg></button>
@@ -183,11 +183,12 @@
 <!-- Beside play: the voiceover of this timeline and how fast it plays (moved here from the settings on request, Nov 2026) -->
 <div id="vo-menu" role="menu" hidden>
   <p class="cap" id="vo-cap">Play</p>
+  <div id="sound-row" class="set"><span class="lbl">Sound</span><span id="sound-seg" class="seg" role="group" aria-label="Sound"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
   <div id="gen-row" class="set" hidden><span class="lbl">Voiceover</span><button type="button" id="vo-gen" class="vo-gen">Generate</button></div>
   <div id="pick-row" class="set" hidden><span class="lbl">Voice</span><button type="button" id="vo-change" class="vo-gen quiet"><span id="vo-name"></span> · Change</button></div>
   <div id="voice-row" class="set" hidden><span class="lbl">Voiceover</span><span id="voice-seg" class="seg" role="group" aria-label="Voiceover"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
   <div id="subs-row" class="set" hidden><span class="lbl">Subtitles</span><span id="subs-seg" class="seg" role="group" aria-label="Subtitles"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
-  <label id="pace-row" class="set"><span class="lbl">Speed</span><span class="rng"><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small></span></label>
+  <label id="pace-row" class="set"><span class="lbl">Play speed</span><span class="rng"><input id="pace" type="range" min="0.25" max="2" step="0.25" value="1" aria-label="Play speed"><small id="pace-now" class="state">1x</small></span></label>
   <div id="gpu-row" class="set" hidden title="Uses your graphics card: a one-time 326 MB download instead of 92 MB"><span class="lbl">Faster voice</span><span id="gpu-seg" class="seg" role="group" aria-label="Faster voice"><button type="button" data-v="on">On</button><button type="button" data-v="off">Off</button></span></div>
 </div>
 

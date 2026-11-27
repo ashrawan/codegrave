@@ -747,10 +747,12 @@ export function createAccount(app) {
     ['square', 'Square', '1:1', 'A feed', 1, 1],
   ];
   const SCENES = [
-    ['globe', 'Globe', 'The map travels from place to place', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>'],
-    ['full', 'Full view', 'Each card large, among the stars', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 15h8M10 9.5h4"/></svg>'],
+    ['globe', 'Default', 'As play shows it: the globe from place to place, the stars where there is none', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c3 3 3 14 0 17M12 3.5c-3 3-3 14 0 17"/></svg>'],
+    ['full', 'Full view', 'Every card large, among the stars', '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 15h8M10 9.5h4"/></svg>'],
   ];
+  const QUALITY = [[720, '720p'], [1080, '1080p'], [2160, '4K'], [4320, '8K']];
   const EX_STEP = { voice: 'Making the voice', sound: 'Mixing the sound', pictures: 'Fetching the pictures', map: 'Getting the map ready', video: 'Drawing the video', saving: 'Saving the file' };
+  const LOCK = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>';
   const exKept = () => { try { return JSON.parse(localStorage.getItem('cg-export')) || {}; } catch (e) { return {}; } };
   // Export (asked for, Nov 2026, twice: first the choices, then "a standard UI ... like the Canva standard"):
   // the film as it will look on the left, drawn from the timeline's own first entry and following every choice;
@@ -760,9 +762,8 @@ export function createAccount(app) {
     const can = app.canExport(), cur = holder(), has = !!cur && voiceOf(cur.get()), dev = has && has.voice === 'device', told = !!has && !dev;
     const was = exKept(), first = app.first() || {}, count = app.told()?.entries.length || 0;
     const st = {
-      mode: !can ? 'audio' : was.kind === 'voice' && told ? 'audio' : 'video',
       voice: told && was.kind !== 'video', subs: !!was.subs,
-      shape: SHAPES.some(([k]) => k === was.shape) ? was.shape : 'wide', scene: was.scene === 'full' ? 'full' : 'globe', short: was.short === 720 ? 720 : 1080,
+      shape: SHAPES.some(([k]) => k === was.shape) ? was.shape : 'wide', scene: was.scene === 'full' ? 'full' : 'globe', short: QUALITY.some(([n]) => n === was.short) ? was.short : 1080,
     };
     const sw = (name, label, hint) => `<div class="ex-opt"><span><b>${label}</b><small data-hint="${name}">${hint}</small></span><button type="button" class="ex-sw" role="switch" data-sw="${name}" aria-label="${label}"><i></i></button></div>`;
     const d = modal(`<form class="ex">
@@ -778,7 +779,6 @@ export function createAccount(app) {
       </div>
       <div class="ex-side">
         <h2>Export</h2>
-        <div class="ex-tabs" role="tablist"><button type="button" role="tab" data-mode="video"${can ? '' : ' disabled'}>Video</button><button type="button" role="tab" data-mode="audio"${told ? '' : ' disabled'}>Audio only</button></div>
         <div class="ex-video">
           <h3>Format</h3>
           <div class="ex-shapes" role="radiogroup" aria-label="Format">${SHAPES.map(([k, name, ratio, where, w, h]) => `<button type="button" role="radio" class="ex-tile" data-shape="${k}" title="${where}"><span class="ex-fr"><i style="aspect-ratio: ${w} / ${h}; ${w >= h ? 'width: 30px' : 'height: 30px'}"></i></span><b>${name}</b><small>${ratio}</small></button>`).join('')}</div>
@@ -787,17 +787,20 @@ export function createAccount(app) {
           <h3>Sound and text</h3>
           ${sw('voice', 'Voiceover', '')}
           ${sw('subs', 'Subtitles', 'Each line written at the foot while it is said')}
-          <div class="ex-opt"><span><b>Quality</b><small>720p is quicker to make</small></span><div class="ex-q" role="radiogroup" aria-label="Quality"><button type="button" role="radio" data-short="1080">1080p</button><button type="button" role="radio" data-short="720">720p</button></div></div>
+          <h3>Quality</h3>
+          <div class="ex-q" role="radiogroup" aria-label="Quality">${QUALITY.map(([n, label]) => `<button type="button" role="radio" data-short="${n}">${label}</button>`).join('')}</div>
+          <p class="ex-qnote"></p>
         </div>
-        <div class="ex-audio"><p>The narration alone, every line in order, as a WAV sound file. Use it in your own editor, or to check how the script sounds.</p></div>
         <p class="dlg-err" role="alert">${!can ? 'This browser cannot make a video file. Try Chrome or Edge.' : ''}</p>
-        <div class="ex-foot"><span>Made on your device. Nothing is uploaded.</span><button type="button" class="big" data-close>Cancel</button><button type="submit" class="big pri">Export</button></div>
+      </div>
+      <div class="exf"><i class="ex-run"><u></u></i>
+        <span class="ex-say">${LOCK}<span>Made on your device. Nothing is uploaded.</span></span>
+        <button type="button" class="big" data-ex-cancel>Cancel</button><button type="submit" class="big pri"${can ? '' : ' disabled'}>Export video</button>
       </div></form>`, 'exdlg');
     const q = (x) => d.querySelector(x), all = (x) => d.querySelectorAll(x);
+    let busy = false;
     function show() {
-      const audio = st.mode === 'audio', voiceOn = st.voice && told, subsOn = voiceOn && st.subs;
-      all('[data-mode]').forEach((b) => b.setAttribute('aria-selected', b.dataset.mode === st.mode));
-      q('.ex-video').hidden = audio; q('.ex-audio').hidden = !audio; q('.ex-prev').classList.toggle('audio', audio);
+      const audio = false, voiceOn = st.voice && told, subsOn = voiceOn && st.subs;
       all('[data-shape]').forEach((b) => b.setAttribute('aria-checked', b.dataset.shape === st.shape));
       all('[data-scene]').forEach((b) => b.setAttribute('aria-checked', b.dataset.scene === st.scene));
       all('[data-short]').forEach((b) => b.setAttribute('aria-checked', Number(b.dataset.short) === st.short));
@@ -809,35 +812,48 @@ export function createAccount(app) {
       const [, , , , w, h] = SHAPES.find(([k]) => k === st.shape), k = st.short / Math.min(w, h), secs = count * (voiceOn || audio ? 9 : 4.2);
       const long = secs < 90 ? `about ${Math.max(5, Math.round(secs / 5) * 5)} seconds` : `about ${Math.round(secs / 60)} minutes`;
       q('.ex-meta').innerHTML = audio ? `<b>WAV</b> · the voice alone · ${long}` : `<b>${Math.round(w * k)} × ${Math.round(h * k)}</b> · MP4 · ${long}`;
-      q('button[type=submit]').textContent = audio ? 'Export audio' : 'Export video';
+      q('.ex-qnote').textContent = st.short >= 4320 ? '8K is a very large file and takes long to make. Few devices can play it.' : st.short >= 2160 ? '4K takes about four times as long to make as 1080p.' : st.short === 720 ? '720p is the quickest to make.' : '';
+      // What this device's encoder cannot make at this shape is not offered (asked for, Nov 2026: 4K and 8K).
+      const shape = st.shape;
+      for (const [n] of QUALITY) app.canSize(shape, n).then((ok) => { if (!d.isConnected || st.shape !== shape) return; const b = q(`[data-short="${n}"]`); b.disabled = !ok; b.title = ok ? '' : 'This device cannot make a video of this size'; if (!ok && st.short === n) { st.short = 1080; show(); } });
     }
     show();
     d.addEventListener('click', (e) => {
-      const b = e.target.closest('[data-mode], [data-shape], [data-scene], [data-short], [data-sw]');
-      if (!b || b.disabled) return;
-      if (b.dataset.mode) st.mode = b.dataset.mode; else if (b.dataset.shape) st.shape = b.dataset.shape; else if (b.dataset.scene) st.scene = b.dataset.scene;
+      // The left button of the foot: Cancel before the export, then the way to stop it.
+      if (e.target.closest('[data-ex-cancel]')) { if (busy && voicing) { voicing.stop = true; q('.ex-say span').textContent = 'Stopping…'; } else closeLayer(); return; }
+      const b = e.target.closest('[data-shape], [data-scene], [data-short], [data-sw]');
+      if (!b || b.disabled || busy) return;
+      if (b.dataset.shape) st.shape = b.dataset.shape; else if (b.dataset.scene) st.scene = b.dataset.scene;
       else if (b.dataset.short) st.short = Number(b.dataset.short); else st[b.dataset.sw] = !(b.getAttribute('aria-checked') === 'true');
       show();
     });
     d.querySelector('form').addEventListener('submit', async (e) => {
       e.preventDefault();
-      const voiceOn = st.voice && told, kind = st.mode === 'audio' ? 'voice' : voiceOn ? 'both' : 'video';
+      if (busy) { closeLayer(); return; }      // "Hide": the export goes on, and the pill at the top right says how far
+      const voiceOn = st.voice && told, kind = voiceOn ? 'both' : 'video';
       const o = { kind, shape: st.shape, scene: st.scene, subs: voiceOn && st.subs, short: st.short };
       try { localStorage.setItem('cg-export', JSON.stringify(o)); } catch (x) { /* private window */ }
-      closeLayer();
-      voicing = { key: onNow(), exporting: true, note: 'Exporting…', part: 0, open: true, stop: false };
+      // The dialog stays and its foot says how far the export has come, with a line along the foot's edge
+      // (asked for, Nov 2026). It can be hidden: the export goes on behind the pill at the top right.
+      busy = true; d.querySelector('form').classList.add('busy');
+      q('[data-ex-cancel]').textContent = 'Stop'; q('button[type=submit]').textContent = 'Hide';
+      const say = (text, part) => { if (!d.isConnected) return; q('.ex-say span').textContent = text; q('.ex-run u').style.width = Math.round(part * 100) + '%'; };
+      say('Starting…', 0);
+      voicing = { key: onNow(), exporting: true, note: 'Exporting…', part: 0, open: false, stop: false };
       draw();
       let last = 0;
       try {
         const name = await app.exportVideo(o, (what, part) => {
           if (!voicing) return;
           voicing.note = `${EX_STEP[what] || 'Exporting'}${what === 'map' ? '…' : ': ' + Math.round(part * 100) + '%'}`; voicing.what = what; voicing.part = part;
+          const order = ['voice', 'sound', 'pictures', 'map', 'video', 'saving'];
+          if (!voicing.stop) say(`Step ${order.indexOf(what) + 1} of ${order.length} · ${voicing.note}`, part);
           if (Date.now() - last > 250) { last = Date.now(); draw(); }
         }, () => !voicing || voicing.stop);
         toast(`Saved ${name}.`);
       } catch (x) {
         if (x.message !== 'stopped') toast(x.message || 'The export could not be made.');
-      } finally { voicing = null; draw(true); }
+      } finally { voicing = null; if (d.isConnected && busy) closeLayer(); draw(true); }
     });
   }
   function showKind(id) {

@@ -70,8 +70,16 @@ export function wav(channels, rate) {
 export const canExport = () => typeof VideoEncoder !== 'undefined' && typeof AudioEncoder !== 'undefined' && typeof OfflineAudioContext !== 'undefined';
 
 // ---- the encoders the browser has. H.264 and AAC first (what every player and YouTube take), then the free ones.
-const VIDEO = [['avc1.640028', 'avc'], ['avc1.4d0028', 'avc'], ['avc1.42e028', 'avc'], ['vp09.00.40.08', 'vp9'], ['av01.0.08M.08', 'av1']];
+const VIDEO = [['avc1.640034', 'avc'], ['avc1.640028', 'avc'], ['avc1.4d0028', 'avc'], ['avc1.42e028', 'avc'], ['hvc1.1.6.L186.B0', 'hevc'], ['vp09.00.61.08', 'vp9'], ['vp09.00.40.08', 'vp9'], ['av01.0.16M.08', 'av1'], ['av01.0.08M.08', 'av1']];
 const AUDIO = [['mp4a.40.2', 'aac'], ['opus', 'opus']];
+// The bits a second a frame of this size is given: 8 Mbit for 1080p, more for more, within what players take.
+export const bitsFor = (w, h) => Math.round(Math.min(120e6, Math.max(4e6, 8e6 * (w * h) / (1920 * 1080))));
+// Whether this browser can encode a film of that shape and size (asked for, Nov 2026: 4K and 8K where the device can).
+export async function canSize(shape, short) {
+  if (!canExport()) return false;
+  const { w, h } = sizeOf(shape, short);
+  return !!(await pick(VIDEO, (codec) => VideoEncoder.isConfigSupported({ codec, width: w, height: h, bitrate: bitsFor(w, h), framerate: FPS })));
+}
 async function pick(list, test) { for (const [codec, name] of list) { try { if ((await test(codec)).supported) return { codec, name }; } catch (e) { /* not this one */ } } return null; }
 
 function save(blob, name) {
@@ -97,7 +105,7 @@ async function mix({ total, cues, sounds, music, voiced }) {
   if (music) {
     try {
       const data = await ctx.decodeAudioData(await (await fetch(music)).arrayBuffer());
-      const src = ctx.createBufferSource(), g = ctx.createGain(), vol = voiced ? 0.1 : 0.45;
+      const src = ctx.createBufferSource(), g = ctx.createGain(), vol = voiced ? 0.22 : 0.45;
       src.buffer = data; src.loop = true;
       g.gain.setValueAtTime(0, 0); g.gain.linearRampToValueAtTime(vol, 1.2);
       g.gain.setValueAtTime(vol, Math.max(1.2, total - 1.6)); g.gain.linearRampToValueAtTime(0, total);
@@ -246,13 +254,16 @@ function painter(cv, { title, steps, scenes, fonts, subsOf, globe }) {
 // "even in the export, we should see the option to export in full view or as a globe"). `make(host, opts)` is
 // lent by the page. Gives null when no entry has a place or the map cannot be had.
 async function stageGlobe(make, steps, w, h, lay) {
+  // The stage is about 540 across its short side whatever the film's size, so the map's names and pins keep
+  // their size in the frame; the map is drawn finer by `ratio` (the map library caps its own canvas).
+  const ratio = Math.min(w, h) / 540, sw = Math.round(w / ratio), sh = Math.round(h / ratio);
   if (!make || !steps.some((s) => s.place)) return null;
   const host = document.createElement('div');
   host.className = 'g-pane'; host.setAttribute('aria-hidden', 'true');
-  host.style.cssText = `position: fixed; left: -20000px; top: 0; width: ${w / 2}px; height: ${h / 2}px; pointer-events: none; contain: strict;`;
+  host.style.cssText = `position: fixed; left: -20000px; top: 0; width: ${sw}px; height: ${sh}px; pointer-events: none; contain: strict;`;
   document.body.appendChild(host);
   const clock = { t: 0, now: () => clock.t * 1000, raf: () => 1, caf: () => {} };
-  const globe = make(host, { clock, ratio: 2, pane: true });
+  const globe = make(host, { clock, ratio, pane: true });
   host.querySelector('.g-map').style.cssText = 'position: absolute; inset: 0;';
   globe.show(steps);
   const until = Date.now() + 20000;
@@ -261,7 +272,7 @@ async function stageGlobe(make, steps, w, h, lay) {
   if (!map) { globe.remove(); return null; }
   const idle = (ms) => new Promise((done) => { const to = setTimeout(() => done(false), ms); map.once('idle', () => { clearTimeout(to); done(true); }); map.triggerRepaint(); });
   let late = false;
-  const pad = { top: 0, left: 0, right: Math.round((w / 2) * lay.pad.right), bottom: Math.round((h / 2) * lay.pad.bottom) };
+  const pad = { top: 0, left: 0, right: Math.round(sw * lay.pad.right), bottom: Math.round(sh * lay.pad.bottom) };
   return {
     // One frame: the map is put where the reader is, given a moment for what it still has to fetch (longer
     // when the camera rests, so a place is never shown half drawn), and drawn now.
@@ -313,7 +324,8 @@ export async function exportFilm({ kind, title, steps, voice, speaker, music, fo
     return name;
   }
   if (!canExport()) throw new Error('This browser cannot make a video file. Try Chrome or Edge.');
-  const vc = await pick(VIDEO, (codec) => VideoEncoder.isConfigSupported({ codec, width: W, height: H, bitrate: 8e6, framerate: FPS }));
+  const bitrate = bitsFor(W, H);
+  const vc = await pick(VIDEO, (codec) => VideoEncoder.isConfigSupported({ codec, width: W, height: H, bitrate, framerate: FPS }));
   const ac = await pick(AUDIO, (codec) => AudioEncoder.isConfigSupported({ codec, sampleRate: RATE, numberOfChannels: 2, bitrate: 160000 }));
   if (!vc || !ac) throw new Error('This browser cannot make a video file. Try Chrome or Edge.');
   step('pictures', 0);
@@ -326,7 +338,7 @@ export async function exportFilm({ kind, title, steps, voice, speaker, music, fo
   const muxer = new Muxer({ target: new ArrayBufferTarget(), fastStart: 'in-memory', video: { codec: vc.name, width: W, height: H, frameRate: FPS }, audio: { codec: ac.name, numberOfChannels: 2, sampleRate: RATE } });
   let failed = null;
   const venc = new VideoEncoder({ output: (chunk, meta) => muxer.addVideoChunk(chunk, meta), error: (e) => { failed = e; } });
-  venc.configure({ codec: vc.codec, width: W, height: H, bitrate: 8e6, framerate: FPS, latencyMode: 'quality', ...(vc.name === 'avc' ? { avc: { format: 'avc' } } : {}) });
+  venc.configure({ codec: vc.codec, width: W, height: H, bitrate, framerate: FPS, latencyMode: 'quality', ...(vc.name === 'avc' ? { avc: { format: 'avc' } } : {}) });
   const aenc = new AudioEncoder({ output: (chunk, meta) => muxer.addAudioChunk(chunk, meta), error: (e) => { failed = e; } });
   aenc.configure({ codec: ac.codec, sampleRate: RATE, numberOfChannels: 2, bitrate: 160000 });
 

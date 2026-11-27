@@ -848,6 +848,7 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 .vochip.ready i { background: var(--acc); }
 .vochip:not(.voiced):not(.can) svg, .vochip:not(.voiced) i { display: none; }
 .vochip.can svg { opacity: .55; }
+.vochip.mute svg { opacity: .4; }
 .vochip.can.x1 b { display: none; }
 .vo-gen { justify-self: end; height: 28px; padding: 0 14px; font-size: 12.5px; font-weight: 600; color: var(--bg); background: var(--acc); border: 0; border-radius: 8px; cursor: pointer; }
 .vo-gen:hover { filter: brightness(1.08); }
@@ -861,3 +862,4 @@ body.exploring #subs, body.creating #subs, body.editing #subs { display: none; }
 #vo-menu .set { grid-template-columns: minmax(0, 1fr) 170px; }
 #vo-menu :is(#gen-row, #pick-row) { grid-template-columns: minmax(0, 1fr) auto; }
 @media (max-width: 699px) { #vo-menu { bottom: 150px; } }
+#sound[hidden] { display: none !important; }

@@ -396,6 +396,17 @@ How the page is put together:
   `data-scene`), with its size and length under it; on the right the tabs Video and Audio only, Format and
   Scene as tiles, Voiceover and Subtitles as switches, Quality as a pair, and one lit button. Keep new export
   choices in those shapes.
+- **Voiceover and export, round 5 (Nov 2026, asked for), which replaces the rounds above where they differ.**
+  The sound switch is a row in the menu by play ("Sound", `#sound-seg`), not a button of its own beside play
+  (`#sound` is kept, unseen); the menu is headed "Sound and voice" and its one speed is "Play speed", which the
+  voice follows. Under a voice the music is louder than it first was (`MUSIC_UNDER` 0.2 on the page, 0.22 in a
+  film; it was found "a little bit too subtle"). The export dialog has no "Audio only" (the engine can still
+  make the WAV). Scene is "Default" (as play shows it: the globe, and the stars where entries have no place)
+  or "Full view". Quality is 720p, 1080p, 4K or 8K (`QUALITY`; `canSize()` in `site/export.js` asks the
+  browser's encoder, and a size it cannot make is not offered). The dialog has a foot of its own (`.exf`):
+  "Made on your device. Nothing is uploaded." at its left, Cancel and Export at its right. The dialog stays
+  open while the film is made: a line runs along the foot's top edge, the note becomes the step and how far
+  it has come, and the buttons become Stop and Hide (hidden, the export goes on behind the pill at the top right).
 - **The sound of play.** A card that opens while play travels gets a ring
   in its view's colour that fades (`.rc.full.ring`) and a quiet breath of
   air (`breath()`): noise through a filter that closes as the sound

@@ -12,8 +12,8 @@ import { createAccount } from './account.js';
 import { createViewer } from './picture.js';
 import { axisLabel } from './ai.js';
 import { createGlobe } from './globe.js';
-import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk } from './voice.js';
-import { exportFilm, canExport } from './export.js';
+import { createVoice, createSpeaker, MODEL_MB, isSlow, gpuOk, voiceLabel } from './voice.js';
+import { exportFilm, canExport, canSize } from './export.js';
 import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tracks, stageOf, zoneOf, labelRect, openFrom, placeLabels, yearMarks, ruler, paceFor, orderOf, inWindow, windowPace, OPEN_AT } from './road.js';
 
 (() => {
@@ -2484,7 +2484,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
   // when play is first pressed with the sound on, it eases in and out so nothing starts or stops with a
   // jolt, and pausing keeps its place. Showing another view, or playing again from the beginning, starts
   // the track from its beginning too. The sound button silences it.
-  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.09;   // under a voiceover the music is only a background
+  const MUSIC = 'media/gallery-of-glass.mp3', MUSIC_VOL = 0.4, MUSIC_UNDER = 0.2;   // under a voiceover the music is only a background
   const music = { el: null, src: '', vol: 0, want: 0, tick: 0, fresh: false };
   // The track for what is on the road: the view's own when its play was pressed, else the house track.
   function trackNow() {
@@ -2591,7 +2591,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     el.classList.toggle('voiced', any); el.classList.toggle('ready', ready); el.classList.toggle('off', any && !told.on);
     el.classList.toggle('x1', play.speed === 1); el.classList.toggle('can', one && !any);
     $('vo-x').textContent = String(play.speed) + 'x';
-    $('vo-cap').textContent = any ? 'Voiceover' : 'Play';
+    $('vo-cap').textContent = 'Sound and voice';
     el.title = !any ? (one ? `No voiceover yet. Play speed: ${play.speed}x.` : `Play speed: ${play.speed}x`) : !told.on ? 'This timeline has a voiceover. It is off.' : ready ? 'This timeline has a voiceover, ready on this device.' : `This timeline has a voiceover. Its voice is made on this device as it plays (${told.kept || 0} of ${told.lines || 0} lines ready).`;
     el.setAttribute('aria-label', el.title + ' Open the voiceover and speed.');
   }
@@ -2601,7 +2601,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // With no voiceover yet, the menu by play offers to make one there and then (asked for, Nov 2026: "the user
     // doesn't even need to go over click on the 3 dot").
     $('gen-row').hidden = any || state.views.length !== 1;
-    if (any) $('vo-name').textContent = voice.name() || 'Voice';
+    if (any) $('vo-name').textContent = voiceLabel(voice.name());
     drawChip(); keptSoon();
     $('gpu-row').hidden = !any || !told.gpuOk || voice.device();
     for (const b of $('gpu-seg').children) b.setAttribute('aria-pressed', String((b.dataset.v === 'on') === speaker.gpu()));
@@ -2625,6 +2625,9 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     b.setAttribute('aria-pressed', sound.on);
     b.title = sound.on ? 'Sound is on: music while play travels, and a quiet breath of air as each card opens' : 'Sound is off';
     b.innerHTML = sound.on ? ICON_SOUND : ICON_MUTED;
+    // The switch itself is in the menu by play (asked for, Nov 2026: "that can go inside that voiceover option").
+    for (const x of $('sound-seg').children) x.setAttribute('aria-pressed', String((x.dataset.v === 'on') === sound.on));
+    $('vo-chip').classList.toggle('mute', !sound.on);
   }
   function toggleSound() {
     sound.on = !sound.on;
@@ -2830,6 +2833,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     };
     $('vo-chip').addEventListener('click', (e) => { e.stopPropagation(); const on = $('vo-menu').hidden; document.body.click(); voMenu(on); });
     $('vo-menu').addEventListener('click', (e) => e.stopPropagation());
+    $('sound-seg').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b && (b.dataset.v === 'on') !== sound.on) toggleSound(); });
     for (const id of ['vo-gen', 'vo-change']) $(id).addEventListener('click', () => { voMenu(false); account.voiceQuick(); });
     document.addEventListener('click', () => voMenu(false));
     $('gpu-row').addEventListener('click', (e) => {
@@ -3183,7 +3187,7 @@ import { NEAR, GONE, FAR, FINE, calMarks, dayText, sizeAt, warp, focalYears, tra
     // The voice made in this browser, and an audio context for hearing a voice before choosing it.
     speaker: () => speaker,
     exportVideo: (kind, step, stop) => exportVideo(kind, step, stop),
-    canExport,
+    canExport, canSize,
     one: () => { const v = state.views.length === 1 ? viewById.get(state.views[0]) : null; return v ? { id: v.id, title: v.name || '', description: v.description || '', voice: voiceNow() } : null; },
     keepVoice: keepLocalVoice,
     first: () => { const p = (road.gorder || [])[0]; return p ? stepOf(p) : null; },

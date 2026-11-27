@@ -539,7 +539,7 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 /* Export: the film as it will look on the left, the choices on the right (asked for, Nov 2026: a professional
    dialog, "like the Canva standard"). Every choice is a tile, a switch or a pair, and the preview follows it. */
 #layer.exdlg .dlg { width: min(860px, 100%); max-height: calc(100vh - 32px); padding: 0; overflow: hidden; border-radius: 18px; }
-.ex { display: grid; grid-template-columns: minmax(0, 1fr) 380px; min-height: 0; max-height: calc(100vh - 34px); }
+.ex { display: grid; grid-template-columns: minmax(0, 1fr) 380px; grid-template-rows: minmax(0, 1fr) auto; min-height: 0; max-height: calc(100vh - 34px); }
 .ex-prev { display: flex; flex-direction: column; min-width: 0; background: radial-gradient(120% 90% at 20% 0%, #151b2b 0%, #090c14 70%); border-right: 1px solid var(--rule); }
 .ex-stage { flex: 1; display: grid; place-items: center; min-height: 380px; padding: 28px; }
 .ex-meta { margin: 0; padding: 12px 20px 16px; font-size: 12.5px; color: rgba(255, 255, 255, .6); text-align: center; }
@@ -569,14 +569,9 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .ex-frame.subs .ex-sub { opacity: 1; }
 .ex-bar { left: 5%; right: 5%; bottom: 4%; height: 1.5px; background: rgba(255, 255, 255, .16); }
 .ex-bar u { position: absolute; left: 0; top: 0; bottom: 0; width: 22%; background: var(--acc); }
-.ex-prev.audio .ex-frame { opacity: .25; filter: grayscale(1); }
 .ex-side { text-align: left; display: flex; flex-direction: column; min-width: 0; min-height: 0; padding: 22px 22px 18px; overflow-y: auto; }
 .ex-side h2 { margin: 0 0 14px; font-size: 18px; font-weight: 600; }
 .ex-side h3 { margin: 18px 0 8px; font-size: 12px; font-weight: 600; color: var(--muted); }
-.ex-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; padding: 3px; background: color-mix(in srgb, var(--text) 6%, transparent); border-radius: 11px; }
-.ex-tabs button { height: 32px; font-size: 13.5px; font-weight: 500; color: var(--muted); background: none; border: 0; border-radius: 8px; cursor: pointer; transition: background .15s, color .15s; }
-.ex-tabs button[aria-selected="true"] { color: var(--text); background: var(--raised); box-shadow: 0 1px 2px rgba(0, 0, 0, .35), inset 0 0 0 1px var(--rule2); }
-.ex-tabs button:disabled { opacity: .4; cursor: default; }
 .ex-shapes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .ex-scenes { display: grid; gap: 8px; }
 .ex-tile { display: grid; justify-items: center; gap: 1px; padding: 10px 6px 9px; color: var(--text); text-align: center; background: none; border: 1px solid var(--rule2); border-radius: 12px; cursor: pointer; transition: border-color .15s, background .15s; }
@@ -601,16 +596,26 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
 .ex-sw[aria-checked="true"] { background: var(--acc); }
 .ex-sw[aria-checked="true"] i { translate: 16px 0; }
 .ex-sw:disabled { opacity: .4; cursor: default; }
-.ex-q { flex: none; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border-radius: 9px; }
-.ex-q button { height: 26px; padding: 0 12px; font-size: 12px; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; }
+.ex-q { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; padding: 2px; background: color-mix(in srgb, var(--text) 6%, transparent); border-radius: 9px; }
+.ex-q button:disabled { opacity: .35; cursor: default; }
+.ex-qnote { min-height: 16px; margin: 6px 0 0; font-size: 11.5px; color: var(--muted); }
+.ex-q button { height: 30px; padding: 0 12px; font-size: 12px; color: var(--muted); background: none; border: 0; border-radius: 7px; cursor: pointer; }
 .ex-q button[aria-checked="true"] { font-weight: 600; color: var(--text); background: var(--raised); box-shadow: inset 0 0 0 1px var(--rule2); }
-.ex-audio p { margin: 18px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--muted); }
-.ex-video[hidden], .ex-audio[hidden] { display: none; }
-.ex-foot { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 10px; margin-top: auto; padding-top: 18px; }
-.ex-foot span { max-width: 150px; text-align: left; }
-.ex-foot span { font-size: 11.5px; line-height: 1.35; color: var(--faint); }
-.ex-foot .big { width: auto; height: 40px; margin: 0; padding: 0 18px; font-size: 14px; border-radius: 10px; }
-.ex-foot .big.pri { color: #1a1304; background: var(--acc); border-color: var(--acc); }
+
+.exf { grid-column: 1 / -1; position: relative; display: flex; align-items: center; gap: 10px; padding: 12px 18px; background: color-mix(in srgb, var(--text) 3%, transparent); border-top: 1px solid var(--rule); }
+.ex-say { flex: 1; display: flex; align-items: center; gap: 8px; min-width: 0; font-size: 12.5px; color: var(--muted); }
+.ex-say svg { flex: none; }
+.ex-say span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+.exf .big { flex: none; width: auto; height: 38px; margin: 0; padding: 0 18px; font-size: 14px; border-radius: 10px; }
+.exf .big.pri { min-width: 132px; color: #1a1304; background: var(--acc); border-color: var(--acc); }
+/* While it exports: a line along the foot's top edge, the status in place of the note, and the choices at rest. */
+.ex-run { position: absolute; left: 0; right: 0; top: -1px; height: 2px; opacity: 0; }
+.ex-run u { display: block; width: 0; height: 100%; background: var(--acc); box-shadow: 0 0 10px var(--acc); transition: width .25s linear; }
+.ex.busy .ex-run { opacity: 1; }
+.ex.busy .ex-say { color: var(--text); }
+.ex.busy .ex-say svg { display: none; }
+.ex.busy .ex-side { opacity: .45; pointer-events: none; }
+.ex.busy .exf .big.pri { color: var(--text); background: transparent; border-color: var(--rule2); }
 .ex :is(button, [role="radio"]):focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
 @media (max-width: 760px) {
   .ex { grid-template-columns: 1fr; overflow-y: auto; }
@@ -619,6 +624,7 @@ body.globe:has(.g-shelf:not([hidden])) #ai-live.low { bottom: 238px; }
   .ex-frame { zoom: .6; max-width: none; }
   .ex-meta { padding: 0 16px 10px; }
   .ex-side { overflow: visible; padding: 16px; }
-  .ex-foot { grid-template-columns: 1fr 1fr; }
-  .ex-foot span { grid-column: 1 / -1; }
+  .exf { position: sticky; bottom: 0; flex-wrap: wrap; background: var(--surf); }
+  .ex-say { flex-basis: 100%; }
+  .exf .big { flex: 1; }
 }
