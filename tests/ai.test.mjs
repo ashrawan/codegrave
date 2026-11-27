@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces } from '../site/ai.js';
+import { MODELS, EFFORTS, cleanDate, cleanSpec, partialSpec, specToView, yearOfDate, slug, readDate, showDate, readBound, chapterOf, specProblem, axisLabel, fmtValue, axisOfSpec, whereOf, findPlaces, kmBetween, linkPictures, pictureLink } from '../site/ai.js';
 import { parseDate } from '../site/rank.js';
 
 test('dates are kept only in the shapes the page reads', () => {
@@ -23,7 +23,7 @@ test('a spec is made safe: no undated entry, no twin, no chapter over another', 
       { name: 'No date', start: 'unknown' },
       { name: 'Early', start: '1900-01-02', end: '1890', events: [{ date: '1901', label: 'Kept' }, { date: 'x', label: 'Dropped' }] },
       { name: 'early', start: '1901' },
-      { name: 'Pic', start: '1920', image: { src: 'https://evil.example/x.png' } },
+      { name: 'Pic', start: '1920', image: { src: 'http://evil.example/x.png' } },
       'not an entry',
     ],
   });
@@ -68,12 +68,14 @@ test('a spec becomes a view file the page can draw', () => {
   assert.notEqual(specToView(f.spec, 'zzz').entries[0].id, a.id);
 });
 
-test('pictures from Wikimedia thumbnails are kept, others are not', () => {
+test('pictures are https links; Wikimedia thumbnails lose their tracking query', () => {
   const pic = (src) => specToView({ entries: [{ name: 'A', start: '1960', image: { src } }] }, 's').entries[0].image?.src;
   // Wikimedia serves thumbnails from thumb.wikimedia.org since 2026, with a tracking query that is dropped.
   assert.equal(pic('https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/A.jpg/500px-A.jpg?utm_source=en.wikipedia.org&utm_campaign=api'), 'https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a4/A.jpg/500px-A.jpg');
   assert.equal(pic('https://upload.wikimedia.org/wikipedia/commons/4/43/B.jpg'), 'https://upload.wikimedia.org/wikipedia/commons/4/43/B.jpg');
-  assert.equal(pic('https://example.com/c.jpg'), undefined);
+  assert.equal(pic('https://example.com/c.jpg'), 'https://example.com/c.jpg');   // a link the reader set, or one that was checked
+  assert.equal(pic('http://example.com/c.jpg'), undefined);
+  assert.equal(pic('javascript:alert(1)'), undefined);
 });
 
 test('names make ids, and there are three models to pick from', () => {
@@ -214,4 +216,83 @@ test('a place is read from Wikipedia, never taken from the model', async () => {
   assert.deepEqual(entries[1].where, [51.5072, -0.1275]);
   assert.equal(entries[2].where, undefined);
   assert.equal(entries[3].where, undefined);
+});
+
+test('an address gives the exact spot, and only near the place Wikipedia gave', async () => {
+  assert.ok(Math.abs(kmBetween([47.6062, -122.3321], [47.6101, -122.2015]) - 9.8) < 0.5);
+  const entries = [
+    { name: 'Ice rink opens', place: 'Bellevue, Washington', address: 'Bellevue Downtown Park, Bellevue, Washington, USA' },
+    { name: 'A namesake far away', place: 'Bellevue, Washington', address: 'Main Street Hall, Bellevue, Washington, USA' },
+    { name: 'No such hall', place: 'Bellevue, Washington', address: 'Nowhere Hall, Bellevue, Washington, USA' },
+    { name: 'A fair', wikipedia: 'Seattle', place: 'Seattle Center' },
+    { name: 'No wider place', address: 'Space Needle, Seattle, Washington, USA' },
+    { name: 'No wider place, wrong town', address: 'Old Museum, Seattle, Washington, USA' },
+  ];
+  const get = async () => ({ query: { pages: {
+    1: { title: 'Bellevue, Washington', coordinates: [{ lat: 47.6144, lon: -122.1536, type: 'city' }] },
+    2: { title: 'Seattle', coordinates: [{ lat: 47.6039, lon: -122.33, type: 'city' }] },
+    3: { title: 'Seattle Center', coordinates: [{ lat: 47.6213, lon: -122.3497, type: 'landmark' }] },
+  } } });
+  const hit = (lat, lon, city, name) => ({ geometry: { coordinates: [lon, lat] }, properties: { city, name } });
+  const asked = [];
+  const json = async (url) => {
+    const q = decodeURIComponent(url.split('&q=')[1].split('&')[0]); asked.push(q);
+    if (q.startsWith('Bellevue Downtown Park')) return { features: [hit(41.15, -95.9, 'Bellevue', 'Downtown Park'), hit(47.6125, -122.2046, 'Bellevue', 'Bellevue Downtown Park')] };
+    if (q.startsWith('Main Street Hall')) return { features: [hit(41.15, -95.9, 'Bellevue', 'Main Street Hall')] };
+    if (q.startsWith('Space Needle')) return { features: [hit(47.6205, -122.3493, 'Seattle', 'Space Needle')] };
+    if (q.startsWith('Old Museum')) return { features: [hit(32.86, -83.69, 'Macon', 'Museum')] };
+    if (q.startsWith('Seattle,')) return { features: [hit(47.6038, -122.3301, undefined, 'Seattle')] };
+    return { features: [] };
+  };
+  assert.equal(await findPlaces(entries, get, json), 6);
+  assert.deepEqual(entries[0].where, [47.6125, -122.2046]);   // the park, not the Bellevue in Nebraska
+  assert.deepEqual(entries[1].where, [47.6144, -122.1536]);   // too far: the city stands
+  assert.deepEqual(entries[2].where, [47.6144, -122.1536]);   // not found: the city stands
+  assert.deepEqual(entries[3].where, [47.6213, -122.3497]);   // the venue before the city its picture comes from
+  assert.deepEqual(entries[4].where, [47.6205, -122.3493]);
+  assert.deepEqual(entries[5].where, [47.6038, -122.3301]);   // the wrong town is refused, then the town itself is found
+  assert.ok(!asked.includes('Bellevue, Washington, USA'));
+});
+
+test("the model's coordinates only refine a place that is already known", async () => {
+  const entries = [
+    { name: 'A hall in town', place: 'Bellevue, Washington', coordinates: [47.6101, -122.2015] },
+    { name: 'Numbers in another city', place: 'Bellevue, Washington', coordinates: [45.52, -122.68] },
+    { name: 'Numbers with nothing to check them', coordinates: [47.61, -122.2] },
+    { name: 'A building with its own article', wikipedia: 'Space Needle', coordinates: [47.6, -122.3] },
+    { name: 'An address that is found', place: 'Bellevue, Washington', address: 'Downtown Park, Bellevue, Washington, USA', coordinates: [47.6101, -122.2015] },
+  ];
+  const get = async () => ({ query: { pages: {
+    1: { title: 'Bellevue, Washington', coordinates: [{ lat: 47.6144, lon: -122.1536, type: 'city' }] },
+    2: { title: 'Space Needle', coordinates: [{ lat: 47.6204, lon: -122.3491, type: 'landmark' }] },
+  } } });
+  const json = async () => ({ features: [{ geometry: { coordinates: [-122.2046, 47.6125] }, properties: { city: 'Bellevue' } }] });
+  assert.equal(await findPlaces(entries, get, json), 4);
+  assert.deepEqual(entries[0].where, [47.6101, -122.2015]);
+  assert.deepEqual(entries[1].where, [47.6144, -122.1536]);
+  assert.equal(entries[2].where, undefined);
+  assert.deepEqual(entries[3].where, [47.6204, -122.3491]);
+  assert.deepEqual(entries[4].where, [47.6125, -122.2046]);
+  assert.deepEqual(cleanSpec({ title: 'T', entries: [{ name: 'A', start: '2026', coordinates: [47.61012, -122.20151] }, { name: 'B', start: '2026', coordinates: 'Seattle' }] }).entries.map((e) => e.coordinates), [[47.6101, -122.2015], undefined]);
+});
+
+test("the model's picture links come after Wikipedia's and only when they open", async () => {
+  assert.deepEqual(pictureLink('https://commons.wikimedia.org/wiki/File:Space_Needle.jpg'), { src: 'https://commons.wikimedia.org/wiki/Special:FilePath/Space_Needle.jpg?width=500', source: 'https://commons.wikimedia.org/wiki/File:Space_Needle.jpg' });
+  assert.equal(pictureLink('http://example.com/a.jpg'), null);
+  const wiki = { src: 'https://upload.wikimedia.org/a.jpg', source: '' };
+  const entries = [
+    { name: 'Has one', image: wiki, pictures: ['https://example.com/good.jpg', 'https://example.com/dead.jpg'] },
+    { name: 'Has none', pictures: ['https://example.com/dead.jpg', 'https://example.com/good2.jpg', 'javascript:alert(1)'] },
+    { name: 'Nothing opens', pictures: ['https://example.com/dead.jpg'] },
+  ];
+  assert.equal(await linkPictures(entries, async (u) => u.includes('good')), 2);
+  assert.equal(entries[0].image, wiki);
+  assert.deepEqual(entries[0].more, [{ src: 'https://example.com/good.jpg', source: 'https://example.com/good.jpg' }]);
+  assert.equal(entries[1].image.src, 'https://example.com/good2.jpg');
+  assert.equal(entries[2].image, undefined);
+  assert.ok(entries.every((e) => !('pictures' in e)));
+  const f = specToView(cleanSpec({ title: 'T', entries: entries.map((e) => ({ ...e, start: '2026' })) }), 'abc');
+  assert.equal(f.entries[0].media[0].credit, 'example.com');
+  assert.equal(f.entries[0].image.credit, 'Wikimedia Commons');
+  assert.equal(f.entries[2].image, undefined);
 });

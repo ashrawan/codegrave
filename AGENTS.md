@@ -443,10 +443,28 @@ How the page is put together:
   and tints only the countries the timeline's entries fall in. Less names and tints only the country of the
   entry in front and shows only its pin. The countries are Natural Earth's (`site/media/countries.json`, public
   domain, names and label points included); `landOf()` in `site/globe.js` finds the one a place falls in.
-- **Places for timelines made with AI.** The model names a `place` in words where an entry has one;
-  `findPlaces()` in `site/ai.js` reads the coordinates of the entry's own Wikipedia article, else of the
-  article of that place, and writes `where: [lat, lon]` on the entry. Coordinates are never taken from the
-  model. The function does it after the pictures, and the editor when an entry's article changes.
+- **Places for timelines made with AI.** The model says where an entry is in words first:
+  `place`, the Wikipedia article of the most exact place (a venue before its city), and, for something at one
+  spot (an event, a restaurant, a stop on a trip), `address`, the venue's name with its city, region and
+  country. `findPlaces()` in `site/ai.js` writes `where: [lat, lon]` from the most exact of these it can
+  find: the address looked up in OpenStreetMap (Photon, free and without a key; only the function passes it,
+  and a hit counts only within `NEAR_KM` of the place Wikipedia gave, so a namesake is never drawn), else the
+  entry's own article when Wikipedia calls it one spot, else the model's own `coordinates` when they fall
+  within `GUESS_KM` of the place Wikipedia gave (asked for, Nov 2026: a model knows where famous spots are;
+  its numbers only refine a known place and never stand alone), else the article of `place`, else the
+  entry's article. An entry with no picture of its own shows the picture of its `place` (`findPictures()`).
+  Asked for, Nov 2026, after "events in Seattle and Bellevue" put every pin on the middle of its city. The
+  function does it after the pictures, and the editor (Wikipedia only) when an entry's article changes.
+- **The prompt for timelines made with AI** (`supabase/functions/ai-timeline/index.ts`) is written in sections
+  (time and dates, where things are, pictures, kinds of request, lists, always) with many short examples; the
+  examples were asked for (Nov 2026), so add to them rather than cut them. The Wikipedia reading before the
+  model is skipped for plans, local requests and lists (`NO_READING`), where it never helped.
+- **Pictures for timelines made with AI** (asked for, Nov 2026: "Wikipedia goes first", then the model's own
+  links, and the reader can always set one). `findPictures()` takes the article's free picture, else the picture
+  of the `place`. Then `linkPictures()` opens every link the model gave (`pictures`: a Commons file page or a
+  direct image) and keeps those that answer as a picture: the first is the entry's picture when Wikipedia had
+  none, the others stand beside it (`more` on the spec's entry, `media` on the view's, at most `MORE_PICS`).
+  In the editor "Picture link" sets any https picture. A picture that is not Wikimedia's is credited to its site.
 - **Explore is a page over the road** (`#explore`; asked for, Nov 2026:
   "think it is like community posted, meaning even the admin ones", after a
   list in the sidebar was found "not professional"). Explore in the bar on

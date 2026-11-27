@@ -146,16 +146,17 @@ export function cleanSpec(raw) {
     seen.add(name.toLowerCase());
     let end = ranked || scaled ? '' : cleanDate(e.end);
     if (end && order(end) < order(start)) end = '';
-    // Pictures only from Wikimedia's own servers (upload. and, since 2026, thumb.wikimedia.org), without the tracking query.
-    const img = e.image && typeof e.image === 'object' && /^https:\/\/(upload|thumb)\.wikimedia\.org\//.test(e.image.src || '')
-      ? { src: text(String(e.image.src).replace(/\?utm_[^#]*$/, ''), 400), source: /^https:\/\//.test(e.image.source || '') ? text(e.image.source, 400) : '' } : null;
+    const img = picOf(e.image), more = (Array.isArray(e.more) ? e.more : []).map(picOf).filter((m) => m && m.src !== img?.src).slice(0, MORE_PICS);
     entries.push({
       ...(ranked ? { rank: entries.length + 1 } : scaled ? { value: num(e.value) } : {}),
       name, kind: text(e.kind, 40) || 'Entry', type: TYPES.includes(e.type) ? e.type : 'events', start, end,
       summary: text(e.summary, 400), wikipedia: text(e.wikipedia, 120), importance: Math.min(5, Math.max(1, Math.round(Number(e.importance)) || 3)),
       events: (Array.isArray(e.events) ? e.events : []).map((x) => ({ date: cleanDate(x?.date), label: text(x?.label, 80), note: text(x?.note, 200) })).filter((x) => x.date && x.label).slice(0, 6),
       ...(img ? { image: img } : {}),
+      ...(img && more.length ? { more } : {}),
       ...(text(e.place, 120) ? { place: text(e.place, 120) } : {}),
+      ...(text(e.address, 160) ? { address: text(e.address, 160) } : {}),
+      ...(whereOf(e.coordinates) ? { coordinates: whereOf(e.coordinates) } : {}),
       ...(whereOf(e.where) ? { where: whereOf(e.where) } : {}),
     });
   }
@@ -198,7 +199,8 @@ export function specToView(raw, seed) {
       sources: wiki ? [{ title: 'Wikipedia: ' + e.wikipedia, url: wiki, kind: 'secondary' }] : [],
       verified: false,
       ...(e.where ? { where: e.where } : {}),
-      ...(e.image ? { image: { src: e.image.src, alt: e.name, credit: 'Wikimedia Commons', licence: 'See the source', source: e.image.source || wiki } } : {}),
+      ...(e.image ? { image: mediaOf(e.image, e.name, wiki) } : {}),
+      ...(e.image && e.more?.length ? { media: e.more.map((m) => mediaOf(m, e.name, wiki)) } : {}),
     };
   });
   const ids = new Set(), sc = spec.axis === 'scale' ? scaleOf(spec.entries.map((e) => e.value), spec.log) : null;
@@ -252,6 +254,48 @@ export function partialSpec(text) {
 // is not (a logo, a product shot), the picture Wikidata keeps for the subject (P18, else its logo P154),
 // always a file on Wikimedia Commons. About three requests for a whole timeline. `get(host, query)`
 // answers one API request (the server and the page each pass their own). Returns how many it found.
+// One picture of a spec's entry, { src, source }, or null: any https address (Wikimedia's own lose their tracking
+// query). It is found by the server on Wikipedia first; a link the model gave is kept only when it opened as a
+// picture (`linkPictures()`), and the reader may set any link in the editor.
+export const MORE_PICS = 3;
+export function picOf(v) {
+  const src = typeof v === 'string' ? v : v && typeof v === 'object' ? v.src : '';
+  if (typeof src !== 'string' || !/^https:\/\/[^\s"'<>]+$/.test(src.trim())) return null;
+  const source = v && typeof v === 'object' && /^https:\/\//.test(v.source || '') ? text(v.source, 400) : '';
+  return { src: text(src.replace(/\?utm_[^#]*$/, ''), 400), source };
+}
+const wikimedia = (u) => /^https:\/\/[a-z.]*wikimedia\.org\//.test(u);
+const hostOf = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
+const mediaOf = (m, name, wiki) => ({ src: m.src, alt: name, credit: wikimedia(m.src) ? 'Wikimedia Commons' : hostOf(m.source || m.src), licence: 'See the source', source: m.source || (wikimedia(m.src) ? wiki : m.src) });
+// A link the model gave, as the address of the picture itself: a file page on Wikimedia Commons becomes the file.
+export function pictureLink(u) {
+  if (typeof u !== 'string' || !/^https:\/\/[^\s"'<>]+$/.test(u.trim())) return null;
+  u = u.trim();
+  const file = u.match(/^https:\/\/(?:commons\.wikimedia|[a-z-]+\.wikipedia)\.org\/wiki\/File:([^?#]+)/);
+  return file ? { src: 'https://commons.wikimedia.org/wiki/Special:FilePath/' + file[1] + '?width=500', source: 'https://commons.wikimedia.org/wiki/File:' + file[1] } : { src: u, source: u };
+}
+// The pictures the model linked (`pictures` on an entry), after Wikipedia's: each link is opened (`check(url)`
+// answers whether it is a picture), since most addresses a model writes from memory do not exist. The first that
+// opens is the entry's picture when Wikipedia had none; the others stand beside it (`more`). Returns how many were kept.
+export async function linkPictures(entries, check, max = 60) {
+  const asks = [];
+  for (const e of entries) {
+    const links = (Array.isArray(e.pictures) ? e.pictures : []).map(pictureLink).filter(Boolean).slice(0, MORE_PICS);
+    delete e.pictures;
+    for (const m of links) if (asks.length < max) asks.push({ e, m });
+  }
+  let n = 0;
+  for (let i = 0; i < asks.length; i += 6) {
+    const ok = await Promise.all(asks.slice(i, i + 6).map(({ m }) => check(m.src).catch(() => false)));
+    asks.slice(i, i + 6).forEach(({ e, m }, j) => {
+      if (!ok[j] || e.image?.src === m.src) return;
+      if (!e.image) e.image = m; else if ((e.more ??= []).length < MORE_PICS && !e.more.some((x) => x.src === m.src)) e.more.push(m); else return;
+      n++;
+    });
+  }
+  return n;
+}
+
 // A place on the Earth, [lat, lon], or null: only what is a real pair of numbers in range.
 export function whereOf(w) {
   if (!Array.isArray(w) || w.length < 2) return null;
@@ -259,32 +303,95 @@ export function whereOf(w) {
   return Number.isFinite(lat) && Number.isFinite(lon) && Math.abs(lat) <= 90 && Math.abs(lon) <= 180 && w[0] !== null && w[1] !== null ? [Math.round(lat * 1e4) / 1e4, Math.round(lon * 1e4) / 1e4] : null;
 }
 // Where each entry is on the Earth, written onto the entries (`where`: [lat, lon]). It is never taken from the
-// model: it is the coordinates of the entry's own Wikipedia article, else of the article of the place it names
-// (`place`: a city, a building, a site). An entry with neither has no place, and none is guessed.
-// Returns how many were found.
-export async function findPlaces(entries, get) {
+// model, which only says where in words. From the most exact to the least:
+//   1. `address` ("Bellevue Downtown Park, Bellevue, Washington, USA"), looked up in OpenStreetMap (`json`, when
+//      given: Photon, a free geocoder that needs no key). It counts only when it falls within `NEAR_KM` of the
+//      place Wikipedia gave, so a namesake in another town is never drawn.
+//   2. The coordinates of its own Wikipedia article when that is one spot (a building, a campus, a station).
+//   3. Those of the article of the place it names (`place`: a venue, a neighbourhood, a city), else whatever
+//      its own article has. The place comes before the article because the article may only stand in for the
+//      picture (an event shown by its city's article).
+//   4. The model's own `coordinates`, the one thing taken from it, and only as a finer point inside a place that
+//      is already known: they count when they fall within `GUESS_KM` of the place Wikipedia gave (a venue in
+//      its town), never alone. A cheap model writes a confident pair of numbers for a hall it has never heard of.
+// An entry with none of these has no place. Returns how many were found.
+const NEAR_KM = 80, GUESS_KM = 30, GEO_MAX = 60, GEO_AT_ONCE = 3;
+const SPOTS = ['landmark', 'edu', 'airport', 'railwaystation', 'event'];   // Wikipedia's types of place that are one spot
+export function kmBetween(a, b) {
+  const r = Math.PI / 180, h = Math.sin((b[0] - a[0]) * r / 2) ** 2 + Math.cos(a[0] * r) * Math.cos(b[0] * r) * Math.sin((b[1] - a[1]) * r / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+export async function findPlaces(entries, get, json) {
   const title = (v) => (typeof v === 'string' ? v.trim() : '');
   for (const e of entries) delete e.where;
   const titles = [...new Set(entries.flatMap((e) => [title(e.wikipedia), title(e.place)]).filter(Boolean))].slice(0, 200);
   const at = new Map();
   for (let i = 0; i < titles.length; i += 50) {
     try {
-      const d = await get('en.wikipedia.org', 'action=query&redirects=1&prop=coordinates&coprimary=primary&colimit=50&titles=' + encodeURIComponent(titles.slice(i, i + 50).join('|')));
+      const d = await get('en.wikipedia.org', 'action=query&redirects=1&prop=coordinates&coprimary=primary&coprop=type%7Cglobe&colimit=50&titles=' + encodeURIComponent(titles.slice(i, i + 50).join('|')));
       const back = new Map();
       for (const n of d.query?.normalized ?? []) back.set(n.to, n.from);
       for (const n of d.query?.redirects ?? []) back.set(n.to, back.get(n.from) ?? n.from);
       for (const p of Object.values(d.query?.pages ?? {})) {
         const c = p.coordinates?.[0], w = c && (c.globe ?? 'earth') === 'earth' ? whereOf([c.lat, c.lon]) : null;
-        if (w) { at.set(p.title, w); at.set(back.get(p.title) ?? p.title, w); }
+        if (w) { const spot = { w, spot: SPOTS.includes(c.type) }; at.set(p.title, spot); at.set(back.get(p.title) ?? p.title, spot); }
       }
     } catch (e) { /* a timeline without places is still a timeline */ }
   }
+  const wide = new Map(), fine = new Map();
+  for (const e of entries) {
+    const own = at.get(title(e.wikipedia)), named = at.get(title(e.place));
+    const spot = own?.spot ? own : named ?? own, guess = whereOf(e.coordinates);
+    if (spot) wide.set(e, spot.w);
+    if (spot && !spot.spot && guess && kmBetween(guess, spot.w) <= GUESS_KM) fine.set(e, guess);
+  }
+  // The exact spot, from the address. Each address is asked once, a few at a time, near the place Wikipedia gave.
+  const exact = new Map();
+  if (json) {
+    const asks = new Map();
+    for (const e of entries) { const a = title(e.address); if (a && !asks.has(a) && asks.size < GEO_MAX) asks.set(a, wide.get(e) ?? null); }
+    const list = [...asks];
+    // A hit counts when it is near the place Wikipedia gave; with no such place, when it is in a town the address names.
+    const fits = (f, a, near) => {
+      const g = f?.geometry?.coordinates, w = g ? whereOf([g[1], g[0]]) : null, p = f?.properties ?? {};
+      if (!w) return null;
+      if (near) return kmBetween(w, near) <= NEAR_KM ? w : null;
+      const town = String(p.city || p.name || '').toLowerCase();
+      return town && a.toLowerCase().includes(town) ? w : null;
+    };
+    const one = async ([a, near]) => {
+      // The whole address first; then, with no wider place to fall back on, without its first part (the venue).
+      const tries = [a, ...(near || a.split(',').length < 3 ? [] : [a.split(',').slice(1).join(',').trim()])];
+      for (const q of tries) {
+        const url = 'https://photon.komoot.io/api/?limit=5&lang=en&q=' + encodeURIComponent(q) + (near ? `&lat=${near[0]}&lon=${near[1]}` : '');
+        for (let go = 0; go < 2; go++) {
+          try {
+            const d = await json(url);
+            for (const f of d?.features ?? []) { const w = fits(f, a, near); if (w) { exact.set(a, w); return; } }
+            break;
+          } catch (x) { /* once more, then the wider place stands */ }
+        }
+      }
+    };
+    for (let i = 0; i < list.length; i += GEO_AT_ONCE) await Promise.all(list.slice(i, i + GEO_AT_ONCE).map(one));
+  }
   let n = 0;
-  for (const e of entries) { const w = at.get(title(e.wikipedia)) ?? at.get(title(e.place)); if (w) { e.where = w; n++; } }
+  for (const e of entries) { const w = exact.get(title(e.address)) ?? fine.get(e) ?? wide.get(e); if (w) { e.where = w; n++; } }
   return n;
 }
 
 export async function findPictures(entries, get) {
+  const n = await picturesFor(entries, get);
+  // An entry with no picture of its own (a local event, a meeting) shows the place it names: its venue or town.
+  const bare = entries.filter((e) => !e.image && typeof e.place === 'string' && e.place.trim() && e.place.trim() !== (e.wikipedia ?? '').trim());
+  if (!bare.length) return n;
+  const stand = bare.map((e) => ({ wikipedia: e.place }));
+  await picturesFor(stand, get);
+  let m = 0;
+  bare.forEach((e, i) => { if (stand[i].image) { e.image = stand[i].image; m++; } });
+  return n + m;
+}
+async function picturesFor(entries, get) {
   const want = entries.filter((e) => !e.image && typeof e.wikipedia === 'string' && e.wikipedia.trim());
   const titles = [...new Set(want.map((e) => e.wikipedia.trim()))].slice(0, 100);
   const found = new Map(), item = new Map(), file = new Map();

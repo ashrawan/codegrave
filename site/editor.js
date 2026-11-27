@@ -5,7 +5,7 @@
    it into the view file with specToView() after every change, so the road, Ask AI and the export all
    read one thing. Every change is kept by itself (a moment after the last one) and can be undone.
    The page lends what it needs through `deps`; the editor never reaches into the page's state. */
-import { cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, findPlaces, yearOfDate, fmtValue, MAX_ENTRIES } from './ai.js';
+import { picOf, cleanSpec, specToView, specProblem, readDate, showDate, readBound, chapterOf, findPictures, findPlaces, yearOfDate, fmtValue, MAX_ENTRIES } from './ai.js';
 
 const SAVE_AFTER = 700;      // ms of quiet before a change is written to the database
 const KEEP = 100;            // steps of undo
@@ -140,6 +140,7 @@ export function createEditor(deps) {
       <div class="ed-grid">${pic(e)}${f('name', 'Name', e.name, 'grow')}${f('kind', 'Kind', e.kind)}${e.value != null ? f('value', 'Value' + (ed.spec.unit ? ` (${esc(ed.spec.unit)})` : ''), String(e.value)) : e.rank ? f('start', 'Rank', String(e.rank)) : f('start', 'Starts', showDate(e.start)) + f('end', 'Ends', e.end ? showDate(e.end) : '')}<div class="ed-f"><span>Weight</span>${dots(k, e.importance)}</div></div>
       <label class="ed-f"><span>Summary</span><textarea data-f="summary" rows="2" maxlength="400">${esc(e.summary)}</textarea></label>
       <div class="ed-line">${f('wikipedia', 'Wikipedia article', e.wikipedia, 'grow')}${e.image ? '<button type="button" class="btn" data-ed-nopic>Remove picture</button>' : `<button type="button" class="btn" data-ed-pic${e.wikipedia ? '' : ' disabled title="Name its Wikipedia article first"'}>Find a picture</button>`}</div>
+      <div class="ed-line">${f('picture', 'Picture link', e.image?.src ?? '', 'grow')}</div>
       <p class="ed-err" role="alert"></p>
       <div class="ed-line end"><button type="button" class="lnk danger" data-ed-del="${k}">Delete entry</button><span class="ed-hint">Enter or a click elsewhere keeps it. Ends empty means still going.</span><button type="button" class="btn" data-ed-close>Done</button></div>
     </div>`;
@@ -241,6 +242,11 @@ export function createEditor(deps) {
       if (!d && (f === 'start' || v.trim())) why = `“${v.trim()}” is not a date the timeline can read. Write 1969, Jul 1969, 20 Jul 1969 or 44 BCE.`;
       else why = change((s) => { entryAt(s, k)[f] = d; });
       if (!why) input.value = d ? showDate(d) : '';
+    } else if (f === 'picture') {
+      // Any picture by its link: the reader's own choice, in place of the one that was found.
+      const m = picOf(v.trim());
+      if (v.trim() && !m) why = 'Paste the https link of a picture.';
+      else why = change((s) => { const t = entryAt(s, k); if (m) t.image = { src: m.src, source: m.src }; else delete t.image; });
     } else {
       why = change((s) => { entryAt(s, k)[f] = v; });
       if (!why && f === 'wikipedia' && v.trim() && !entryAt(ed.spec, k)?.image) picture(k, true);
